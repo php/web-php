@@ -21,6 +21,11 @@ the server and bandwidth for CVS and mailing list services.
 </p>
 
 <p>
+<?php print_link("http://www.rackspace.com/", "Rackspace"); ?> provides
+the server and bandwidth for various php.net services.
+</p>
+
+<p>
 <?php print_link("http://valinux.com/", "VA Linux Systems"); ?> provides the server and 
 bandwidth that run various services for php.net.
 </p>
