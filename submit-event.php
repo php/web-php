@@ -6,8 +6,27 @@ require_once 'email-validation.inc';
 commonHeader("Submit an Event");
 
 $errors = array();
+$process = FALSE;
 
-if (isset($in)) {
+if (isset($in)) { $process = TRUE; }
+
+if (!isset($in['type'])) { $in['type'] = ""; }
+if (!isset($in['sday'])) { $in['sday'] = ""; }
+if (!isset($in['smonth'])) { $in['smonth'] = ""; }
+if (!isset($in['syear'])) { $in['syear'] = ""; }
+if (!isset($in['eday'])) { $in['eday'] = ""; }
+if (!isset($in['emonth'])) { $in['emonth'] = ""; }
+if (!isset($in['eyear'])) { $in['eyear'] = ""; }
+if (!isset($in['recur'])) { $in['recur'] = ""; }
+if (!isset($in['recur_day'])) { $in['recur_day'] = ""; }
+if (!isset($in['country'])) { $in['country'] = ""; }
+if (!isset($in['category'])) { $in['category'] = ""; }
+if (!isset($in['email'])) { $in['email'] = ""; }
+if (!isset($in['url'])) { $in['url'] = ""; }
+if (!isset($in['ldesc'])) { $in['ldesc'] = ""; }
+if (!isset($in['sdesc'])) { $in['sdesc'] = ""; }
+
+if (isset($in) && $process) {
   # clean up magic quotes, if they were inserted
   if (get_magic_quotes_gpc()) {
     foreach ($in as $k => $v) {
@@ -124,8 +143,9 @@ for ($i = 1; $i <= 12; $i++) {
 
 $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
 
-if (isset($in)) {
+if (isset($in) && $process) {
   echo "<p><b>Preview:</b></p>\n";
+
   display_event($in);
 ?>
 <p><b>Change:</b></p>
@@ -207,7 +227,7 @@ if (isset($in)) {
  <tr>
   <td align="center" colspan="2">
     <input type="submit" name="action" value="Preview" />
-<?php if (isset($in)) {?>
+<?php if (isset($in) && $process) {?>
     <input type="submit" name="action" value="Submit" />
 <?php }?>
   </td>
@@ -224,3 +244,5 @@ function display_options($options,$current) {
          '>', htmlentities($v), "</option>\n";
   }
 }
+
+/* vim: set noet ts=4 sw=4 ft=php: : */

@@ -3,6 +3,8 @@
 function posttohost($url, $data) {
   $url = parse_url($url);
   if (!$url) return "couldn't parse url";
+  if (!isset($url['port'])) { $url['port'] = ""; }
+  if (!isset($url['query'])) { $url['query'] = ""; }
 
   $encoded = "";
 
