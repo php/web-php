@@ -237,7 +237,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "bug_type";
 	$fields[] = "status as Status";
 	$fields[] = "assign as Assigned";
-#	$fields[] = "php_version as Version";
+	$fields[] = "php_version as Version";
 #	$fields[] = "php_os as OS";
 	$fields[] = "email as Originator";
 	$fields[] = "sdesc as Description";
