@@ -134,6 +134,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.0pre1 Released</h1>
+<p>
+<font class="newsdate">[10-Oct-2002]</font>
+<a href="http://qa.php.net/~andrei/php-4.3.0pre1.tar.bz2">PHP 4.3.0pre1</a>
+is available for download. PHP 4.3.0 incorporates a very large number of
+changes, new features, and bugfixes and thus requires extensive testing. This
+preliminary release is meant to kick-start this testing while the fixes are
+still being performed. Please join in and help us make this a high-quality
+release. You can use the build tracker at
+<a href="http://qa.php.net/buildtest-submit.php">http://qa.php.net/buildtest-submit.php</a>
+to report the your results.
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.3 Released</h1>
 <p>
 <font class="newsdate">[06-Sept-2002]</font>
