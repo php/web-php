@@ -204,8 +204,8 @@ function commonHeader($title="",$dont_enclose=0) {
   </tr>
 
   <tr bgcolor="#9999cc">
-    <td align="right" valign="bottom">
-      <form method="POST" action="/search.php">
+    <form method="POST" action="/search.php">
+      <td align="right" valign="bottom">
       <?php
 	print_link('/downloads.php','downloads',false,'class="small"');
 	echo delim();
@@ -221,8 +221,8 @@ function commonHeader($title="",$dont_enclose=0) {
 	echo ' <input class="small" type="text" name="what" size=10> ';
 	echo make_submit('small_submit.gif', 'search', 'bottom');
       ?>&nbsp;<br>
-      </form>
-    </td>
+      </td>
+    </form>
   </tr>
 
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
@@ -268,8 +268,8 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">
-    <td align="right" valign="bottom">
-      <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this)">
+    <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this)">
+      <td align="right" valign="bottom">
       <script language="javascript">
       <!--
         function gotomirror(form) {
@@ -298,8 +298,8 @@ function commonFooter() {
 	echo "</select> ";
 	echo make_submit('small_submit.gif', 'search', 'bottom' );
       ?>&nbsp;<br>
-      </form>
-    </td>
+      </td>
+    </form>
   </tr>
   <tr bgcolor="#333366"><td><?php spacer(1,1); ?><br></td></tr>
 </table>
