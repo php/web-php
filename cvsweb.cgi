@@ -14,6 +14,14 @@ $hsty_base = "";
 require 'cgi-style.pl';
 #&get_the_source;
 
+unless ($ENV{"SERVER_NAME"} eq "cvs.php.net") {
+  print "Status: 302 Redirect\n";
+  print "Location: http://cvs.php.net/\n";
+  print "Content-type: text/html\n\n";
+  print qq|Go <a href="http://cvs.php.net/">here</a>.|;
+  exit;
+}
+
 %CVSROOT = (
 	    'php3', '/repository/php3',
 	    'phpweb', '/repository/phpweb',
