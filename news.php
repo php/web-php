@@ -344,7 +344,7 @@ Submission ">online</a>.</p>
 <p>
 An idea who's time has come, don't miss this opportunity to attend the
 only conference in the US is placing PHP front and center as the language
-for solving web problems. PHPCon 2002, October 24 & 25, 2002, Millbrae,
+for solving web problems. PHPCon 2002, October 24 &amp; 25, 2002, Millbrae,
 California.</p>
 
 <?php echo hdelim(); ?>
@@ -402,8 +402,8 @@ release doesn't include other changes, so upgrading from 4.2.1 is safe and painl
 <p>
 <font class="newsdate">[09-Jul-2002]</font> comp.lang.php was created yesterday,
 after a two and a half month long process started in April by Ian Fette resulted
-in a <a href="http://groups.google.com/groups?q=comp.lang.php&hl=en&lr=&ie=UTF-8&sel
-m=1025483879.39561%40isc.org&rnum=3">177-11 vote</a> in favor of the group.
+in a <a href="http://groups.google.com/groups?q=comp.lang.php&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;sel
+m=1025483879.39561&amp;40isc.org&amp;rnum=3">177-11 vote</a> in favor of the group.
 The new group is already carried on most news servers, and should be carried
 on almost all news servers in the world within the next few days.
 </p>
@@ -463,11 +463,11 @@ Developer Kit site</a>. This version is based on the
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
 <font class="newsdate">[23-May-2002]</font> PHP will be attending 
-<a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&lang=en">LinuxTag</a> 
+<a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en">LinuxTag</a> 
 again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
 MySQL AB,  will create a "(L)AMP" day, focusing on web development with  the 3 core technologies.
 During the day there will be many <a
-href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=293&lang=en">interesting
+href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=293&amp;lang=en">interesting
 workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also, which will 
 be hosting several <a href="http://www.phpug.de/index_ka109.php">PHP related projects</a> (text in
 German).
