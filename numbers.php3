@@ -6,7 +6,7 @@ commonHeader("Interesting Numbers");
 <P>
 Perl rules the cgi scripting world.  No argument with that.  But when it comes to
 dedicated web scripting languages embedded in the web server the case can be made for
-this state to be true.
+this statement to be true.
 </P>
 <P>
 The latest <a href="/usage.php3">PHP usage numbers</a> from <a href="http://www.netcraft.com">Netcraft</a> are in.
