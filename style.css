@@ -136,12 +136,11 @@ h4 {
 	color: #000066;
 }
 
-small {
+small, .small {
 	font-size: 75%;
 }
 
 a.small {
-	font-size: 75%;
 	text-decoration: none;
 }
 
@@ -152,14 +151,6 @@ a.small {
 .tableExtras {
 	font-size: 85%;
 	color: #FFFFFF;
-}
-
-input.small, select.small {
-	font-size: 75%;
-}
-
-textarea.small {
-	font-size: 75%;
 }
 
 p.formerror {
