@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "The latest best-kept secret", "by <a href=\"mailto:glyn_moody@cix,co.uk\">Glyn Moody</a>", 
+	"http://www.computerweekly.com/cwarchive/gwfeat/19991209/cwcontainer.asp?name=F1.html", "December 9, 1999");?>
+With the same features as ASP and JSP, PHP is the fastest growing Apache add-on.
+<? endEntry(); ?>
+
 <? makeEntry( "Trio informale", "by Dirk Reichelt", 
 	"http://www.zdnet.de/internet/artikel/java/199912/phpdatenbank01_00-wc.html", "November 29, 1999");?>
 (In German.) &quot;Redaktionssystem für die Website mit PHP&quot;
