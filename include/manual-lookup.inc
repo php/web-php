@@ -1,5 +1,7 @@
 <?php // -*- C++ -*-
 
+// $Id$
+
 // Try to find some variations of keyword with $prefix in the $lang manual
 function tryprefix($lang, $keyword, $prefix)
 {

@@ -1,4 +1,6 @@
-<?php
+<?php // -*- C++ -*-
+
+// $Id$
 
 // Define $MIRRORS array, and some constants
 include_once 'mirrors.inc';

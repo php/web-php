@@ -1,4 +1,7 @@
-<?php
+<?php // -*- C++ -*-
+
+// $Id$
+
 /* 
    This PHP version of the GeoIP library was written in May 2002
    by Jim Winstead <jimw@apache.org>
