@@ -150,7 +150,6 @@ right away.</blockquote>
 	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("FilmNetwork","www.fnw.de");
-	site("Food Geeks","foodgeeks.com");
 	site("Granada","www.granada.co.uk");
 	site("Hip Hop Archives","www.hiphoparchives.com");
 	site("HitList","www.hitlist.com");
@@ -195,6 +194,8 @@ right away.</blockquote>
 	title("Food & Drink");
 	siteStart();
 	site("Bar-None Drink Recipes","psp.pair.com/barnone/");
+	site("Food Geeks","foodgeeks.com");
+	site("Foodstop.Com","www.foodstop.com");
 	siteEnd();
 
 /* Games */
@@ -220,6 +221,7 @@ right away.</blockquote>
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	site("National Chemical Laboratory - India","www.ncl-india.org");
 	site("Nigerian Television Authority","www.micro.com.ng/ntacsa");
+	site("The supreme court of Norway","www.domstol.no");
 	site("West Virginia Department of Education","wvde.state.wv.us");
 	siteEnd();
 
@@ -319,6 +321,7 @@ right away.</blockquote>
 	site("Careers 4 Teens","www.careers4teens.com");
 	site("Jobs & Career - The Times of India","www.timesjobsandcareers.com");
 	site("Little6","www.little6.com");
+	site("NettJobb","www.nettjobb.no");
 	siteEnd();
 
 /* Military */
@@ -348,10 +351,12 @@ right away.</blockquote>
 	site("Saarbrücker Zeitung","www.sz-newsline.de");
 	site("Spektrum der Wissenschaft","www.spektrum.de");
 	site("The Star - Kansas City","www.kcstar.com");
+	site("SZ Newsline","www.sz-newsline.de");
 	site("UPI Archives","upi.siteways.com");
 	site("The Village Voice","www.villagevoice.com");
 	site("Times Classifieds","www.timesclassifieds.com");
 	site("Ti-News Search","www.ti-news.ch/search/");
+	site("Topp","www.topp.no");
 	siteEnd();
 
 /* Not-for-Profit */
@@ -385,7 +390,10 @@ right away.</blockquote>
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
 	site("GAMESDomain","www.gamesdomain.com");
+	site("FreeBSD Rocks","www.freebsdrocks.com");
+	site("FreshMeat","freshmeat.net");
 	site("Ice Walkers","www.icewalk.com");
+	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("Indian Ballot","www.indianballot.com");
 	site("Israel Action Alert","www.israel-alert.com");
 	site("Legions.Com","legions.com");
@@ -394,14 +402,14 @@ right away.</blockquote>
 	site("Linux BBS","www.linuxbbs.org");
 	site("Linux.Com","linux.com");
 	site("Linux Dev Net","linuxdev.net");
+	site("Linux Iceland","linux.is");
 	site("Daily Linux News","www.kieser.net/linux.html");
 	site("Weekly Linux News","www.lwn.net");
 	site("Linux Power","linuxpower.org");
 	site("Linux PR","linuxpr.com");
+	site("Linux Start","www.linuxstart.com");
 	site("Linux Today","linuxtoday.com");
-	site("FreeBSD Rocks","www.freebsdrocks.com");
-	site("FreshMeat","freshmeat.net");
-	site("Incluso - online PHP Magazine","io.incluso.com");
+	site("Media Monitor (Romanian)","media.monitorul.ro");
 	site("MP3Bench","mp3bench.com");
 	site("MP3.com","www.mp3.com");
 	site("Online Gaming Review","www.ogr.com");
@@ -417,6 +425,7 @@ right away.</blockquote>
 	title("Publishing Industry");
 	siteStart();
 	site("Invisible Man Press","www.invisiblemanpress.com");
+	site("Mind's Eye Fiction","tale.com");
 	siteEnd();
 
 /* Real Estate */
@@ -435,6 +444,7 @@ right away.</blockquote>
 	siteStart();
 	site("Christian Cafe","www.christiancafe.com");
 	site("Christian Financial Concepts","cfcministry.org");
+	site("Finans Avisen","www.finansavisen.no");
 	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
 	site("Nicodemus Project","www.nicodemusproject.com");
@@ -452,6 +462,7 @@ right away.</blockquote>
 	site("Ballgirl Athletic","www.ballgirl.com");
 	site("BART's Water Sports","www.bartswatersports.com");
 	site("Bird Mansions","birdmansions.com");
+	site("Bowling-France","bowling-france.net");
 	site("Bruna bookstore","www.bruna.com");
 	site("BuyMP3.com","www.buymp3.com");
 	site("Cheap Bytes", "www.cheapbytes.com");
@@ -461,6 +472,7 @@ right away.</blockquote>
 	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Cookson's Tools","www.cooksons.com");
 	site("Delia*s Inc.","www.delias.com");
+	site("Drogheria.Com","www.drogheria.com");
 	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
 	site("freeBID Online Auctions","www.freebid.de");
@@ -572,6 +584,7 @@ right away.</blockquote>
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
 	site("ego Software","www.ego-software.com");
+	site("Electronic Spider","www.espider.com");
 	site("Espada Ltd.","www.espadanet.com");
 	site("FUMOT","www.fumot.com");
 	site("GreyZone","www.greyzone.com");
