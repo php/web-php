@@ -1,6 +1,11 @@
 <?php
 require_once 'prepend.inc';
 
+$lang = default_language();
+if (!@is_dir("$DOCUMENT_ROOT/manual/$lang")) {
+    $lang = "en"; // fall back to English
+}
+
 $SIDEBAR_DATA='
 <h3>More tutorials</h3>
 <p>
@@ -100,7 +105,7 @@ what sort of browser the person viewing the page is using.
 In order to do that we check the user agent string that the browser
 sends as part of its request. This information is stored in a variable.
 Variables always start with a dollar-sign in PHP. The variable we
-are interested in is <b>$HTTP_USER_AGENT</b>.  To display this
+are interested in is <b>$_SERVER["HTTP_USER_AGENT"]</b>.  To display this
 variable we can simply do:
 </p>
 
@@ -137,7 +142,8 @@ if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {
 ?>');?>
 
 <p>
-Here we introduce a couple of new concepts. We have an &quot;if&quot;
+Here we introduce a couple of new concepts. We have an
+&quot;<?php print_link ('/manual/' . $lang . '/control-structures.php#control-structures.if', 'if'); ?>&quot;
 statement. If you are familiar with the basic syntax used by the C
 language this should look logical to you. If you don't know enough
 C or some other language where the syntax used above is used, you
@@ -148,10 +154,10 @@ the basic syntax remains.
 </p>
 
 <p>
-The second concept we introduced was the strstr() function call.
+The second concept we introduced was the <?php print_link ('/manual/' . $lang . '/function.strstr.php', 'strstr()'); ?> function call.
 strstr() is a function built into PHP which searches a string for
 another string. In this case we are looking for &quot;MSIE&quot; inside
-$HTTP_USER_AGENT. If the string is found the function returns true
+$_SERVER["HTTP_USER_AGENT"]. If the string is found the function returns true
 and if it isn't, it returns false. If it returns true the following 
 statement is executed.
 </p>
@@ -165,11 +171,11 @@ of PHP mode even in the middle of a PHP block:
 if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {
 ?>
 <center><b>You are using Internet Explorer</b></center>
-<?
+<?php
 } else {
 ?>
 <center><b>You are not using Internet Explorer</b></center>
-<?
+<?php
 }
 ?>');?>
 
@@ -206,7 +212,7 @@ Assume you have a page with a form like this on it:
 
 <?php example('<form action="action.php" method="post">
 Your name: <input type="text" name="name">
-You age: <input type="text" name="age">
+Your age: <input type="text" name="age">
 <input type="submit">
 </form>');?>
 
@@ -217,19 +223,14 @@ and hits the submit button, the <i>action.php</i> page is called.
 In this file you would have something like this:
 </p>
 
-<?php example('Hi <?php echo $name; ?>.
-You are <?php echo $age; ?> years old.')?>
+<?php example('Hi <?php echo $HTTP_POST_VARS["name"]; ?>.
+You are <?php echo $HTTP_POST_VARS["age"]; ?> years old.')?>
 
 <p>
 It should be obvious what this does. There is nothing more to it.
-The $name and $age variables are automatically set for you by PHP.
+The $HTTP_POST_VARS["name"] and $HTTP_POST_VARS["age"] variables
+are automatically set for you by PHP.
 </p>
-
-<p>
-<b>NB:</b> Since PHP version 4.2.1, this functionality is disabled by default. 
-We chose to do this because with careless coding, it becomes possible to cause
-security holes in PHP scripts. You can read more about this 
-<a href="http://php.net/register.globals">here</a>.
 
 <h2>What's next?</h2>
 
