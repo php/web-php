@@ -132,12 +132,12 @@ deviennent partie de la portée globale d'un script [namespace], et
 ce automatiquement) sont très souvent exploitable à des degrés
 divers. Par exemple le code suivant:
 
-<?php
+&lt;?php
 if (authenticate_user()) {
    $authenticated = true;
 }
 ...
-?>
+?&gt;
 
 Peut être exploitable de la manière suivante, des utilisateurs
 distants peuvent simplement passer 'authenticated' comme variable
