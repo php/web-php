@@ -12,6 +12,21 @@ function indent($string, $prefix) {
     return $prefix . ereg_replace("\n", "\n$prefix", $string) . "\n";
 }
 
+function show_menu($state) {
+	global $PHP_SELF;
+
+	echo "<form method=POST action=\"$PHP_SELF\">\n";
+	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
+	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
+	if($state) { echo "<option>$state\n"; }
+	if($state!="Open") { echo "<option>Open\n"; }
+	if($state!="Closed") { echo "<option>Closed\n"; }
+	if($state!="All") { echo "<option>All\n"; }
+	echo "</select> bugs of type ";
+	show_types("Any");
+	echo "</form>\n";
+}
+
 function show_types($first_item) {
 	echo "
    <select name=\"bug_type\">
@@ -60,14 +75,8 @@ function addlinks($text) {
 }
 
 if (isset($cmd) && $cmd == "Send bug report") {
-?>
-<form method=POST action="<?echo $PHP_SELF?>">
-<input type=hidden name=cmd value="Display Bugs">
-<input type=submit value="Display"> <select name="status"><option>All<option>Open<option>Closed</select>
-bugs of type <?show_types("Any")?>.
-</form>
-<hr>
-<?
+	show_menu($status);
+	echo "<hr>\n";
     mysql_pconnect("localhost","nobody","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
@@ -102,9 +111,11 @@ bugs of type <?show_types("Any")?>.
     }
 
 } elseif(isset($cmd) && $cmd=="Display Bugs") { 
+	show_menu($status);
+	echo "<hr>\n";
+
     mysql_pconnect("localhost","nobody","");
     mysql_select_db("php3");
-	echo "<br><center>Showing $status bugs of type $bug_type</center>\n";
     echo "<center><table border=3><tr bgcolor=\"#aaaaaa\"><th>ID#</th><th>Status</th><th>Type</th><th>Version</th><th>OS</th><th>Originator</th><th>Description</th></tr>\n";
 	if($status=="All" && $bug_type=="Any") {
     	$result = mysql_query("SELECT * from bugdb order by id");
@@ -133,14 +144,9 @@ bugs of type <?show_types("Any")?>.
     echo "</table></center>\n";
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
-?>
-<form method=POST action="<?echo $PHP_SELF?>">
-<input type=hidden name=cmd value="Display Bugs">
-<input type=submit value="Display"> <select name="status"><option>All<option>Open<option>Closed</select>
-bugs of type <?show_types("Any")?>.
-</form>
-<hr>
-<?
+	show_menu($status);
+	echo "<hr>\n";
+
     mysql_pconnect("localhost","nobody","");
     mysql_select_db("php3");
 	if(isset($modify) && $modify=="Edit Bug") {
@@ -218,12 +224,9 @@ bugs of type <?show_types("Any")?>.
 	}
 	mysql_freeresult($result);
 } else {
+	show_menu($status);
 ?>
-<form method=POST action="<?echo $PHP_SELF?>">
-<input type=hidden name=cmd value="Display Bugs">
-<input type=submit value="Display"> <select name="status"><option>All<option>Open<option>Closed</select>
-bugs of type <?show_types("Any")?>, or use the form below to submit a new bug report.
-</form>
+Or use the form below to submit a new bug report.
 <hr>
 <form method=POST action="<? echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
