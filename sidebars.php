@@ -45,8 +45,8 @@ can see our bar displayed in place of your usual search bar. This
 link does not install our bar as your default search bar, so no
 modification is made to your system. <i>We used the _search target name
 supported by IE 5+ passed to the
-<a link="http://msdn.microsoft.com/workshop/author/dhtml/reference/methods/open_1.asp">open</a>
-function to make this sidebar available.</i>
+<a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/methods/open_1.asp">open()
+JavaScript function</a> to make this sidebar available.</i>
 </p>
 
 <p>
