@@ -277,7 +277,7 @@ function sendManualHeaders($charset,$lang) {
 function manualHeader($title,$id="") {
 	global $PRINT_PAGE;
     if ($PRINT_PAGE) {
-        manualPrintHeader();
+        manualPrintHeader($title);
     } else {
 	    makeBorderTOC($title);
 		commonHeader ($title. " - Manual");
@@ -311,8 +311,9 @@ function manualPrintHeader ($title = '') {
 <tr>
  <td><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
  <td>
-  Address of this page: <?php echo $REQUEST_URI; ?><br>
-  <small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br />All rights reserved.</small>
+  This is a printer friendly version of the PHP Manual.
+  Original address of this page: <?php echo "http://$SERVER_NAME/$REQUEST_URI"; ?><br>
+  <small><?php echo make_link('copyright.php', 'Copyright &copy; 1997-2002 The PHP Documentation Group'); ?><br />All rights reserved.</small>
  </td>
 </tr>
 </table><hr size="1" noshade>
