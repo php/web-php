@@ -29,7 +29,6 @@ function makeBorderTOC($this) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
     global $SIDEBAR_DATA, $LANG;
 
-    $SIDEBAR_DATA = '<!--UdmComment-->';
     $SIDEBAR_DATA.= '<form method="get" action="/manual-lookup.php">';
     $SIDEBAR_DATA.= '<table border="0" cellpadding="4" cellspacing="0">';
 
@@ -138,8 +137,9 @@ function makeEntry($date,$name,$blurb,$id=0) {
     $name = htmlspecialchars($name);
     if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
         if (ereg("(.+)@(.+)\.(.+)",$name)) {
-            echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
-        } else {
+	  str_replace('@', ' at ', $name);
+	  str_replace('.', ' dot ', $name);
+	}
             echo "<b>".$name."</b><br>\n";
         }
     }
