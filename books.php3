@@ -85,14 +85,27 @@ March/2000, Publisher Prima-Tech, ISBN 0-7615-2729-X<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
-><IMG SRC="/gifs/3827255244.m.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/book-php-german.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
 by Egon Schmid, Christian Cartus, Richard Blume<BR>
-<SMALL>in German</SMALL><BR>
+<SMALL>in German, April 1999, 477 pages, ISBN 3-8272-5524-4, Markt&Technik</SMALL><BR>
 <SMALL><A HREF="http://www.php-center.de/">weitere Informationen</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
+><IMG SRC="/gifs/book-php-dutch.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
+>PHP - Dynamische websites professioneel ondersteunen</A><BR>
+by Egon Schmid, Christian Cartus en Richard Blume<BR>
+<SMALL>in Dutch, April 2000, 482 pages, ISBN 90-430-0140-6, Addison Wesley Longman</SMALL><BR>
+<SMALL><BR>
 </TD>
 </TR>
 
