@@ -129,6 +129,39 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 </TD>
 </TR>
 
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/mini-logo1.gif" WIDTH=32 HEIGHT=32 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>32 x 32 pixels
+<LI>solid white background
+<LI>suitable as an icon
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/mini-logo1.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
+(not exactly as shown)<BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>Three 32 x 32 icons for Windows
+<LI>transparent backgrounds
+<LI>suitable as icons for your desktop
+<LI>Available in:
+<UL>
+<LI><A HREF="/logos/php-32-true.ico">16-million colours</A>
+<LI><A HREF="/logos/php-32-256.ico">256 colours</A>
+<LI><A HREF="/logos/php-32-16.ico">16 colours</A>
+<LI><A HREF="/logos/winicons.zip">Zip file of all three versions</A>
+</UL>
+</TD>
+</TR>
+
 </TABLE>
 </CENTER>
 
