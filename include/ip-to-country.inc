@@ -188,8 +188,8 @@ function i2c_search_in_db($ip, $idx = 0)
 // Check if the current country is valid
 function i2c_valid_country()
 {
-    global $COUNTRY;
-    return (!empty($COUNTRY) && $COUNTRY != "NA");
+    global $COUNTRY, $COUNTRIES;
+    return (!empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
 }
 
 /* vim: set noet ts=4 sw=4 ft=php: : */
