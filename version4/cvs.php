@@ -38,10 +38,8 @@ diff -u
 		<pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
 	<li>Obtain the PHP 4.0 CVS tree:<br>
 		<pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php4</pre>
-<!--
 	<li>Move to the PHP 4.0 source tree:<br>
 		<pre>cd php4</pre>
--->
 	<li>Login to the Zend CVS repository.  Use <strong>zend</strong> as the password.<br>
 		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository login</pre></li>
 	<li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
