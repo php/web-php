@@ -1,6 +1,6 @@
 <?
 	function example($text) {
-		echo "<blockquote><table border=1 cellpadding=3 cellspacing=3><tr bgcolor=#d0d0d0><td>";
+		echo "<blockquote><table border=1 cellpadding=3 cellspacing=3><tr bgcolor=#303030><td>";
 		highlight_string($text);
 		echo "</td></tr></table></blockquote>";
 	}
