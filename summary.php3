@@ -7,17 +7,17 @@ commonHeader("PDM Technical Summary");
 <p>The PHP Developers' Meeting was held at the Tel Aviv Hilton in Israel from January 20-24, 2000.  
 The following people attended:</p>
 <ul>
-<li> Thies C. Arntzen, CTO of Digital Collections in Hamburg Germany 
-<li> David Axmark, CEO of MySQL in Uppsala Sweden 
-<li> Stig Bakken, Systems Engineer for FAST Search and Transfer ASA of Trondheim Norway 
-<li> Andi Gutmans CTO of Zend Technologies, Ltd. in Ramat Gan Israel 
+<li> Thies C. Arntzen, CTO of Digital Collections in Hamburg, Germany 
+<li> David Axmark, CEO of MySQL in Uppsala, Sweden 
+<li> Stig Bakken, Systems Engineer for FAST Search and Transfer ASA of Trondheim, Norway 
+<li> Andi Gutmans CTO of Zend Technologies, Ltd. in Ramat Gan, Israel 
 <li> David Hahn, CEO of ISPI of Lincoln, Nebraska, USA 
-<li> Frank Kromann, VP Development of Swwwing A/S in Hellerup Denmark 
+<li> Frank Kromann, VP Development of Swwwing A/S in Hellerup, Denmark 
 <li> Rasmus Lerdorf, Senior OpenSource Researcher of Linuxcare Inc. in San Francisco, California, USA
 <li> Sascha Schumann, Independent Programmer in Germany 
-<li> Zeev Suraski, CTO of Zend Technologies, Ltd. in Ramat Gan Israel 
-<li> Colin Viebrock, Senior Developer of easyDNS of Toronto, Ontario Canada 
-<li> Michael Widenius, CTO of MySQL in Uppsala Sweden 
+<li> Zeev Suraski, CTO of Zend Technologies, Ltd. in Ramat Gan, Israel 
+<li> Colin Viebrock, Senior Developer of easyDNS of Toronto, Ontario, Canada 
+<li> Michael Widenius, CTO of MySQL in Uppsala, Sweden 
 <li> Andrei Zmievski, Sr.Internet Developer of ISPI of Lincoln Nebraska, USA 
 </ul>
 
@@ -65,7 +65,7 @@ this is a Linux kernel bug related to SMP.<p>
 <dd> We need to add some logic to the get_module code along with renaming the symbol to be able to
 check that we are loading compatible extensions.  There might be a way to be able to load an extensions
 compiled in debug mode into a non-debug server which could be handy. <p>
-<dt> <b>Fix foreach to support references (Andi)</b>
+<dt> <b>Fix foreach to use the original array and not a copy (Andi)</b>
 <dd> The original thought was to remove it for 4.0, but Andi sat down and fixed it so the semantics of it
 are now right.  The function is still no speed-deamon and this will be addressed later, but it is at least
 able to traverse an array without copying every element now.<p>
