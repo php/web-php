@@ -88,8 +88,6 @@ Smile, be happy, the world is good.  For the full legalese, see the
 official <a href="license.html">license</a>.
 </P>
 
-<h3><a href="oldinfo.php">Older information</a></h3>
-
 <?
 commonFooter();
 ?>
