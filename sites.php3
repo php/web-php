@@ -162,6 +162,7 @@ right away.</blockquote>
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
 	site("easyDNS","www.easydns.com");
+	site("FAST MP3 Search", "mp3.lycos.com");
 	site("InfoMak","www.infomak.com");
 	site("Mail Chek","mail.chek.com");
 	site("MegaDownload","megadownload.de");
