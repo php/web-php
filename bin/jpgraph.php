@@ -25,7 +25,7 @@ DEFINE("CACHE_DIR","/tmp/jpgraph_cache/");
 DEFINE("APACHE_CACHE_DIR","/jpgraph_cache/");
 
 // Directory for TTF fonts. Must end with '/'
-DEFINE("TTF_DIR",getcwd().'/');
+DEFINE("TTF_DIR",'/usr/share/fonts/truetype/');
 
 
 //------------------------------------------------------------------------
