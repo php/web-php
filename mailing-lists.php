@@ -56,7 +56,7 @@ if (isset($_POST['maillist'])) {
 ?>
 <p>
  A request has been entered into the mailing list processing queue. You
- should receive an email at <?php echo $_GET['email']; ?> shortly describing
+ should receive an email at <?php echo $_POST['email']; ?> shortly describing
  how to complete your request.
 </p>
 <?php
