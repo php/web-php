@@ -619,6 +619,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "PHP Professional Projects",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1931841535/wwwphpnet",
+    /* author[s]    */ array("Ashish Daniel Wilfred", "Meeta Gupta", "Kartik Bhatnagar"),
+    /* auth link[s] */ "",
+    /* image        */ "phpproproj.jpg",
+    /* information  */ "Premier Press, Apr 2002, ISBN 1-9318-4153-5, 896 pages",
+    /* inform. link */ "http://www.premierpressbooks.com/catalog/product.cfm?category=Web%20Development&isbn=1931841535",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
