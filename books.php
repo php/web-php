@@ -137,7 +137,7 @@ New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages<BR>
 ><IMG SRC="/jpgs/gilmore.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/cmvsstuff">PHP and MySQL Web Development</A><BR>
-by Luke Wellington and Laura Thomson<BR><SMALL>
+by Luke Welling and Laura Thomson<BR><SMALL>
 Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </SMALL>
 </TD>
