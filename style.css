@@ -195,3 +195,23 @@ img.flag {
 .md5sum {
 	color: #6666cc;
 }
+
+.e {
+	background-color: #ccccff; 
+	font-weight: bold;
+}
+
+.h {
+	background-color: #9999cc; 
+	font-weight: bold;
+}
+
+.v {
+	background-color: #cccccc;
+}
+
+.vr {
+	background-color: #cccccc; 
+	text-align: right;
+}
+
