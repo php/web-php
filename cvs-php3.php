@@ -46,16 +46,16 @@ to modify the PHP CVS tree.  It also allows you to comment on and close bugs in 
 as well as modifying the documentation notes in the annotated manual.  The relevant links for these
 three things are:
 <ul>
-<li><a href="http://cvs.php.net">CVS Web Interface for 3.0 Tree</a>
-<li><a href="http://bugs.php.net">PHP Bugs Database</a>
+<li><a href="http://viewcvs.php.net/">CVS Web Interface for our CVS repository</a>
+<li><a href="http://bugs.php.net/">PHP Bugs Database</a>
 <li><a href="http://www.php.net/manual/admin-notes.php3">Manual Errata Administration</a>
 </ul>
 
 If you are not familiar with CVS, you should have a look at the various documentation resources available
-at <a href="http://www.cyclic.com">www.cyclic.com</a>.  This is also where to get the most recent version
+at <a href="http://www.sourcegear.com/CVS/">SourceGear</a>.  This is also where to get the most recent version
 of the CVS client.<P>
 
-All CVS commit messages get sent to the php-dev mailing list.  You should subscribe yourself to this mailing
+All CVS commit messages get sent to the php-cvs mailing list.  You should subscribe yourself to this mailing
 list.  Instructions for subscribing are on the <a href="/support.php">Support</a> page.
 <P>
 CVS itself is quite easy to use.  Follow the steps listed on the <a href="http://cvs.php.net">CVS Web Interface</a>
