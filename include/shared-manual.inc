@@ -105,10 +105,11 @@ function navigationBar($title,$id,$loc) {
 	if ($loc != 'bottom') {
 		global $LANGUAGES;
 		$links = array();
-		$file = substr($id,0,-4);
-		if (file_exists("html/$file.html")) {
-			$links[] = make_link("html/$file.html", 'Plain HTML');
-		}
+		//$file = substr($id,0,-4);
+		//if (file_exists("html/$file.html")) {
+		//	$links[] = make_link("html/$file.html", 'Plain HTML');
+		//}
+		$links[] = make_link("print/$id", 'Printer friendly version');
 		foreach ($LANGUAGES as $code => $name) {
 			if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
 				$links[] = make_link("../$code/$id", $name);
