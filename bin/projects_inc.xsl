@@ -1,14 +1,3 @@
-<!DOCTYPE xsl:stylesheet [
-  <!ENTITY % iso-lat1 SYSTEM "iso-lat1.ent">
-  <!ENTITY % iso-lat2 SYSTEM "iso-lat2.ent">
-  <!ENTITY % iso-num  SYSTEM "iso-num.ent">
-  <!ENTITY % iso-pub  SYSTEM "iso-pub.ent">
-  %iso-lat1;
-  %iso-lat2;
-  %iso-num;
-  %iso-pub;
-]>
-
 <xsl:stylesheet version="1.0"
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -34,8 +23,9 @@
  <xsl:for-each select="match/*">
   <xsl:variable name="count" select="../match_count - 1" />
   <xsl:if test="name()!='match_count'">
-   $project[<xsl:value-of select="$count" />]["<xsl:value-of 
-   select="name()" />"]="<xsl:value-of select="." /><xsl:text>";</xsl:text>
+		 <xsl:variable name="stuff" select="." />
+    $project[<xsl:value-of select="$count" />]["<xsl:value-of 
+    select="name()" />"]="<xsl:value-of select="." /><xsl:text>";</xsl:text>
   </xsl:if>
  </xsl:for-each>
 </xsl:template>
