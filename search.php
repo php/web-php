@@ -116,7 +116,7 @@ if (isset($pattern)) {
         else {
             $location = "http://www.php.net/search.php";
             $query = "show=" . urlencode($show) . "&pattern=" . urlencode($pattern) .
-                     "&base=" . urlencode($MYSITE) "&lang=" . urlencode($lang);
+                     "&base=" . urlencode($MYSITE) . "&lang=" . urlencode($lang);
             header("Location: $location?$query");
             exit;
         }
