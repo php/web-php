@@ -43,6 +43,12 @@ Oh, if you're wondering about the font we used, it's called
 <a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel Gothic</a>.
 </p>
 
+<p>
+The images marked with a <?php print_image('star.gif','recommended');?> are the images 
+we recommend, although some combinations of browser/operating system don't handle 
+transparent PNG images very well.
+</p>
+
 <table border="0" width="90%" cellspacing="1" cellpadding="10" bgcolor="#f0f0f0" align="center">
 
 <tr valign="middle">
