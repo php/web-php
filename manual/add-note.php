@@ -4,9 +4,17 @@ require_once 'prepend.inc';
 #
 # Notes only available at main mirror site for now
 #
-if ($MYSITE!='http://www.php.net/') {
-	Header('Location: http://www.php.net' . $HTTP_SERVER_VARS['REQUEST_URI'] );
-	exit;
+if (!is_primary_site()) {
+  if (is_backup_primary()) {
+    commonHeader("Service Unavailable");?>
+<p>Sorry, you can't add a note to the manual right now.</p>
+<?php
+    commonFooter();
+    exit;
+  }
+
+  header('Location: http://www.php.net' . $HTTP_SERVER_VARS['REQUEST_URI'] );
+  exit;
 }
 
 $mailto = 'rasmus@php.net';
