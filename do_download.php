@@ -13,6 +13,11 @@ if (!isset($df)
 // Redirect to the particular file
 header('Location: ' . $mr . 'distributions/' . $df);
 
+// Try to flush output, and make the browser
+// really download the file, even is $LOG_SERVER is down..
+echo " ";
+flush();
+
 log_download();
 
 // Register the log function as a shutdown function to let the
