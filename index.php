@@ -204,7 +204,28 @@ extremely popular and widely used scripting language.
 This release contains a multitude of changes, bug fixes and improvements over
 the previous one, PHP 4.2.3. It further elevates PHP's standing as a serious
 contender in the general purpose scripting language arena. Please see
-the full <a href="ChangeLog-4.php">release announcement</a>.
+the full <a href="release_4_3_0.php">release announcement</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>New Release of the PHP Manual CHM Edition - Please Help Us</h1>
+<p>
+<font class="newsdate">[27-Dec-2002]</font>
+The 11th sample of the CHM edition is available for download from today. The
+sample hopefully fixed the missing page bugs forever, introduces a new
+integration method (see documentation inside) and contains actual manual
+text, mirrors list and user notes.
+<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for download"); ?>.
+</p>
+
+<p>
+We also would like to ask you to help out in testing our new on-the-fly
+syntax highlighter, which would make the CHM significantly smaller, and
+would give you more options in displaying the pages.
+<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for more information"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
@@ -313,21 +334,6 @@ We added a new option to access our site's content quickly. In addition to
 us to test this new service, and provide feedback via
 <a href="http://bugs.php.net/">the bug system</a> (categorize your bug
 as a PHP.net website bug please).
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
-
-<h1>10th Release of the PHP Manual CHM Edition</h1>
-<p>
-<font class="newsdate">[29-Oct-2002]</font>
-The 10th sample of the CHM edition is available for download from today. The
-sample probably fixes the copy to clipboard issues experienced by some users,
-and it's also a content update with actual manual text, mirrors list and user notes.
-<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for download"); ?>,
-and please send feedback to <?php print_link("mailto:php-doc-chm@lists.php.net",
-"the edition's dedicated mailing list"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
