@@ -76,6 +76,26 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>New Windows Manual Features - Survey!</h1>
+
+<p>
+<font class="newsDate">[15-Nov-2001]</font>
+While improving the functions and design of the CHM manual,
+we discovered that we need a professionaly designed
+interface. We would like to ask your help to complete
+a short survey about what environment you are using
+the help in, and what elements are important for you,
+so we can put them in hand for you. Feel free to make
+any suggestions using the text field in the form.
+<?php print_link("http://weblabor.hu/php/newchm.php",
+"Please complete our survey"); ?> 
+(there is no need to provide any personal details
+about yourself).
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php /* move this entry to the top when you update it! */ ?>
 
 <h1>
@@ -89,24 +109,6 @@ New Usage Stats For October available
 <?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
 published the <?php print_link("/usage.php", "current results"); ?> for their Web 
 Server surveys.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>New Windows Help Features Under Development</h1>
-
-<p>
-<font class="newsDate">[28-Oct-2001]</font>
-The Windows Help format of the PHP Manual is popular because
-of the full text search, index, TOC tree, and bookmarking
-features. We would like to go further and add more: user
-comments, online functions, and many visual enhancements.
-You can help us! Please download the sample, and tell us what
-you think about it. We are also looking for a graphics designer,
-who can help us out with a cool new design. 
-<?php print_link("http://weblabor.hu/php/newchm.html",
-"See the temporary page of the new CHM manual."); ?> 
 <br clear="all">
 </p>
 
