@@ -50,7 +50,7 @@ The PHP Code Exchange is a great place to start.  Here you'll find many example 
 useful functions, organized for easy finding.  Includes a search function.<BR>
 <LI><A HREF="http://webdev.berber.co.il/">Berber's PHP Example Page</A><BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
-<LI><A HREF="http://www.iometrics.com/php/phplist.php3/">ioMetrics Scripts</A><BR>
+<LI><A HREF="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</A><BR>
 A collection of PHP scripts.<BR>
 <LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
