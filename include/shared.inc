@@ -572,7 +572,7 @@ endif; ?>
 }
 
 function sect_to_file($string) {
-	$string = strtolowe($string);
+	$string = strtolower($string);
 	$func = "function.$string.php";
 	$chap = "ref.$string.php";
 	if(is_file($func)) return $func;
