@@ -15,12 +15,20 @@ Source of: <? echo $url; ?><BR>
 echo hdelim(); 
 
 $legal_dirs = array(
-    "/manual" => 1,
-    "/include" => 1,
-	"/stats" => 1);
+  "/manual"  => 1,
+  "/include" => 1,
+  "/stats"   => 1
+);
 
 $dir = dirname($url);
-if ($dir && $legal_dirs[$dir]) {
+
+// The separate manual language dirs are legal dirs
+if (preg_match("!^/manual/(en|pt_BR|cs|nl|fr|de|hu|it|ja|kr|es)$!", $dir) || $legal_dirs[$dir]) {
+      $legal_dir = TRUE;
+} else { $legal_dir = FALSE: }
+
+// If this is a legal dir, then it is under the docroot, else use basename
+if ($dir && $legal_dir) {
     $page_name = $DOCUMENT_ROOT . $url;
 } else {
     $page_name = basename($url);
