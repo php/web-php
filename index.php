@@ -52,8 +52,8 @@ You can go directly to PHP manual pages with a URL such as
 Check out our <A HREF="/tips.php">tips</A> page for some "neat" things, PHP-related.
 It's a little sparse right now, but feel free to make suggestions!
 
-<img src="ads/ZendOptimizer.gif" align="right">
-<h3>Zend Optimizer Beta Released!</h3>
+<img src="gifs/ZendOptimizer.gif" align="right">
+<h3>Zend Optimizer Released!</h3>
 <a href="http://www.zend.com">Zend Technologies</a> has announced the availability of
 the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <a href="http://www.zend.com/zend/optimizer.php">free download</a>.
