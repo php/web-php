@@ -119,6 +119,19 @@ $COUNTRIES = array(
    "xx" => "Other"
 );
 
+$LANGUAGES = array(
+    'en' => 'English',
+    'pt_BR' => 'Brazilian Portuguese',
+    'nl' => 'Dutch',
+    'fr' => 'French',
+    'de' => 'German',
+    'hu' => 'Hungarian',
+    'it' => 'Italian',
+    'ja' => 'Japanese',
+    'kr' => 'Korean',
+    'ru' => 'Russian',
+    'es' => 'Spanish',
+);
 
 $MYSITE='http://' . getenv("SERVER_NAME") . '/';
 

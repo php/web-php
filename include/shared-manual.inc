@@ -1,20 +1,6 @@
 <?php // -*- C++ -*-
 require_once 'prepend.inc';
 
-$LANGUAGES = array(
-    'en' => 'English',
-    'pt_BR' => 'Brazilian Portuguese',
-    'nl' => 'Dutch',
-    'fr' => 'French',
-    'de' => 'German',
-    'hu' => 'Hungarian',
-    'it' => 'Italian',
-    'ja' => 'Japanese',
-    'kr' => 'Korean',
-    'ru' => 'Russian',
-    'es' => 'Spanish',
-);
-
 $NEXT = $PREV = $UP = $HOME = array(false, false);
 $TOC = array();
 
