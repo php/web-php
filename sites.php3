@@ -142,6 +142,7 @@ right away.</blockquote>
 	siteStart();
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
+	site("Chump Change (a band)","foxx.richweb.com/chumpchange/");
 	site("Digital Theatre","www.dtheatre.com");
 	site("EduTest.Com","www.edutest.com");
 	site("film.at - movie listings for Austria","www.film.at");
@@ -179,6 +180,7 @@ right away.</blockquote>
 	site("BörsePlus","www.boerseplus.de");
 	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
+	site("Employee Benefit Placement System","ee-benefits.com/");
 	site("First USA Bank","www.firstusabank.com");
 	site("Insurance Bridge","www.insurancebridge.com");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
@@ -385,6 +387,7 @@ right away.</blockquote>
 	site("MP3Bench","mp3bench.com");
 	site("MP3.com","www.mp3.com");
 	site("Online Gaming Review","www.ogr.com");
+	site("PHP Center (German)","www.php-center.de");
 	site("PHP.CodeBase.Org","php.codebase.org");
 	site("Riffnet Scripts","www.cgiscripts.net");
 	site("SegFault","segfault.org");
@@ -454,6 +457,7 @@ right away.</blockquote>
 	site("LinkAlarm","www.linkalarm.com");
 	site("Linux-Books","www.linux-books.com");
 	site("The Longaberger Company","www.longaberger.com");
+	site("Mostly Zodiac","mostlyZodiac.com");
 	site("Neckermann","www.neckermann.de");
 	site("Para-Shop","www.para-shop.de");
 	site("Patagonia Clothing","www.patagonia.com");
@@ -566,7 +570,7 @@ right away.</blockquote>
 	site("RacersDirect","www.racersdirect.com");
 	site("Scour Net","www.scour.net");
 	site("Spell Web","www.spellweb.com");
-	site("STudentPilot","www.studentpilot.com");
+	site("StudentPilot","www.studentpilot.com");
 	site("Swatch AG","www.swatch.com");
 	site("Temperature Measurement site","www.jmrtech.com/temp");
 	site("TheMatrix","thematrix.com");
