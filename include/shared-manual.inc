@@ -69,7 +69,7 @@ function makeBorderTOC($this)
 	$file = basename($PHP_SELF);
 	echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
 	echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
-	echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a>";
+	echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
 	echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
 	echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
 
