@@ -71,6 +71,12 @@ $formats = array(
  use does otherwise.
 </p>
 
+<p>
+ The English version of the manual is <a
+ href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">also
+ available</a> for the increasingly popular ThoutReader.
+</p>
+
 <?php
 $files = array(); $found_formats = array();
 
