@@ -24,7 +24,7 @@ if (isset($pattern) && ($pattern)) {
 		exit;
 	}
 	if (!$HAVE_SEARCH) {
-		$location="http://ca.php.net/search.php3";
+		$location="http://uk.php.net/search.php3";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
 		Header("Location: ".$location."?".$query);
 		exit;
