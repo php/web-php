@@ -1215,7 +1215,7 @@ array (
 
   array(
     /* title[s]     */ "PostgreSQL: Grundlagen - Praxis - Anwendungsentwicklung mit PHP",
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/3898641759/wwwphpnet07",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898641759/wwwphpnet07",
     /* author[s]    */ "Cornelia Boenigk",
     /* auth link[s] */ "",
     /* image        */ "pgsql.jpg",
