@@ -61,6 +61,8 @@ $formats = array(
 and formats. Pick a language and format from the table below.
 Tip: If you are using Internet Explorer, the file size
 will show up, when you move the mouse above one link.
+If you use another browser you can 
+<a href="/docs.php?sizes=1">click here to see the file sizes</a>.
 </p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
@@ -94,6 +96,7 @@ will show up, when you move the mouse above one link.
          $size = @filesize($link_to);
          if ($size) {
            echo "<a href=\"$link_to\" title=\"" . (int) ($size/1024) . "Kb\">$details[1]</a>";
+           if ($sizes) { echo '<br><small>' . (int) ($size/1024) . '</small>'; }
          } else { 
            echo "&nbsp;";
          }
