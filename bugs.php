@@ -192,6 +192,11 @@ function show_types($first_item,$show_any,$var_name) {
                     "ICAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ICAP related",
                     "MCAL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MCAL related",
 
+					"*Compression related" => "&nbsp;&nbsp;&nbsp;&nbsp;Compression related",
+					"Bzip2 Related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bzip2 Related",
+					"ZZiplib Related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZZiplib Related",
+					"Zlib Related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zlib Related",
+
                     "Date/time related" => "&nbsp;&nbsp;&nbsp;&nbsp;Date/time related",
 
                     "*Directory/Filesystem functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Directory/Filesystem functions",
@@ -302,8 +307,6 @@ function show_types($first_item,$show_any,$var_name) {
                     "*URL Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;URL Functions",
                     "cURL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cURL related",
                     "URL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL related",
-
-                    "*Zlib related" => "&nbsp;&nbsp;&nbsp;&nbsp;Zlib related",
 
                     "Unknown/Other Function" => "Unknown/Other Function"
     );
