@@ -38,7 +38,7 @@ if (isset($_POST['maillist'])) {
         );
         
         // Provide error if unable to send mail
-        if (!$email_sent) {
+        if (!$mail_sent) {
             $error = "We were unable to subsribe you due to some technical problems.<br/ >" .
                      "Please try again later.";
         }
