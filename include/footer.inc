@@ -5,7 +5,8 @@
 	<tr>
 		<td align="left" width="33%">
 			<font size="-2">
-			All Rights Reserved &copy <a href="credits.php3">PHP 3.0 Development Team</a>
+			&copy <a href="/credits.php3">PHP 3.0 Development Team</a><br>
+			All Rights Reserved
 			</font>
 		</td>
 		<td align="center" width="33%">
