@@ -283,6 +283,7 @@ right away.</blockquote>
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
 	site("Linux BBS","www.linuxbbs.org");
+	site("Linux.Com","linux.com");
 	site("Daily Linux News","www.kieser.net/linux.html");
 	site("Linux Power","linuxpower.org");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
