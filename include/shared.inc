@@ -576,8 +576,10 @@ function sect_to_file($string) {
 	$string = str_replace(' ','-',$string);
 	$func = "function.$string.php";
 	$chap = "ref.$string.php";
+	$feat = "features.$string.php";
 	if(is_file($func)) return $func;
 	else if(is_file($chap)) return $chap;
+	else if(is_file($feat)) return $feat;
 	else return "$string.php";
 }
 
