@@ -8,7 +8,7 @@
 <p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently in a <a href="why_beta.php3">public BETA</a> testing period.
 
-<p>This server is currently running PHP version <? echo phpversion() ?> (PHP 3.0 is stable enough to distribute itself).
+<p>This server is currently running PHP version <? echo phpversion() ?>.
 
 <ul>
 <li><a href="register.php3">Register PHP 3.0</a> (completely free, required before downloading)
