@@ -114,6 +114,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
+
+<h1>Initial Alpha Release of PHP w/ the Zend Engine 2 Available</h1>
+<font class="newsdate">[9-Jun-2002]</font>
+The first alpha release of PHP w/ Zend Engine2 is
+<a href="distributions/php-4.3.0-dev-zend2-alpha1.tar.gz">now available</a>.
+It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
+scripting engine which greatly improves the object model, adds exception
+handling and provides a much better infrastructure for the integration
+of external technologies like Java or .NET.  For more details and
+examples you can check out the <a href="ZEND_CHANGES.txt">CHANGES file</a>
+and an <a href="http://www.php.net/source.php?url=/zend2_example.php">example script</a>
+which shows how some of these features can be used.
+
+<b>Note:</b>  This is an alpha version.  It should not be used in production
+or even semi-production web sites.  There are known bugs in it, and in
+addition, some of the features may change (based on feedback).  We
+encourage you to download and play with it (and report bugs if you find any!),
+but please don't expect it to replace your copy of PHP 4 at this stage. 
+
+<?php echo hdelim(); ?>
+
+
 <h1>ActiveState Awards</h1>
 <p>
 ActiveState is delighted to announce the second annual Programmers'
