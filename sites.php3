@@ -78,6 +78,7 @@
 	/* Computer Software */
 	site("Knowledge Adventure","www.adventure.com");
 	site("C2Net Software Inc.","www.c2.net");
+	site("RedHat Software","www.redhat.com");
 
 	echo "</tr><tr>\n";
 	title("Military");
@@ -96,6 +97,22 @@
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
 	site("The Psychology Place","www.psychplace.com");
+
+	echo "</tr><tr>\n";
+	title("Service Industry");
+	title("&nbsp;");
+	title("Miscellaneous");
+
+	echo "</tr><tr><td align=top>\n";
+	/* Service Industry */
+	site("SuperCuts","www.supercuts.com");
+
+	echo "<br></td><td align=top>\n";
+	/*  */
+
+	echo "<br></td><td align=top>\n";
+	/* Misc. */
+	site("Internet Weather Report","www.internetweather.com");
 
 	echo "</td></tr></table></center>\n";
 ?>
