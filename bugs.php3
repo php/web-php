@@ -119,7 +119,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $ebug_type\n";
     $report .= "Bug description:\n";
-	$ascii_report = indent($report.$ldesc,"    ");
+	$ascii_report = indent($report.$ldesc,"");
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
     $report .= indent($html_desc, "    ");
