@@ -141,7 +141,6 @@ site_header("Downloads");
   <?php download_link('php-5.0.3-Win32.zip', 'PHP 5.0.3 zip package'); ?> - 15 Dec 2004<br />
   <span class="md5sum">md5: 50f3d62e7bb4526fd1deefdb263f9fa7</span>
  </li>
-<!-- 
  <li>
   <?php download_link('pecl-5.0.3-Win32.zip', 'Collection of PECL modules for PHP 5.0.3'); ?> - 15 Dec 2004<br />
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
@@ -149,7 +148,6 @@ site_header("Downloads");
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
   <span class="md5sum">md5: 50f3d62e7bb4526fd1deefdb263f9fa7</span>
  </li>
--->
  <li>
   <?php download_link('php-5.0.3-installer.exe', 'PHP 5.0.3 installer'); ?> - 15 Dec 2004<br />
   (CGI only, packaged as Windows installer to install
