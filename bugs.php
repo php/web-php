@@ -181,9 +181,9 @@ elseif ($cmd == "display") {
 	$query .= " ORDER BY $order_by $direction";
 
 	if (!$begin) $begin = 0;
-	if (!$limit) $limit = 30;
+	if (!isset($limit)) $limit = 30;
 
-	$query .= " LIMIT $begin,$limit";
+	if($limit!='All') $query .= " LIMIT $begin,$limit";
 
 	$res = @mysql_query($query);
 	if (!$res) die(htmlspecialchars($query)."<br>".mysql_error());
@@ -193,7 +193,7 @@ elseif ($cmd == "display") {
 		echo "<h2 class=\"error\">No bugs with the specified criteria were found.</h2>";
 	}
 	else {
-		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;php_os=".htmlspecialchars(stripslashes($php_os))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver";
+		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;php_os=".htmlspecialchars(stripslashes($php_os))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver&amp;limit=$limit";
 ?>
 <table align="center" border="0" cellspacing="2" width="95%">
  <?php show_prev_next($begin,$rows,$link,$limit);?>
@@ -530,6 +530,7 @@ function show_limit_options($limit=30)
 		echo "<option value=\"$i\"", ($limit==$i ? " selected" : ""),">$i</option>\n";
 		$i=$i+10;
 	}
+	echo '<option value="All"', $limit=='All' ? " selected": ""),">All</option>\n";
 }
 
 function show_state_options($state, $user_mode=0, $default="") 
@@ -738,6 +739,7 @@ function get_row_color($row)
 
 function show_prev_next($begin,$rows,$link,$limit)
 {
+	if($limit=='All') return;
 	if ($begin == 0 && $rows < $limit) return;
 	echo "<tr bgcolor=\"#cccccc\"><td align=\"center\" colspan=\"9\">";
     echo '<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>';
