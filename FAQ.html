@@ -487,6 +487,27 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
   <P>
   </DD>
 
+  <DT><B>
+    <a name="5.8">5.8</a> My PHP script works on IE and Lynx, but on Netscape some of my output
+    is missing.  When I do a &quot;View Source&quot; I see the content in IE but not in Netscape.
+	Even when I telnet to port 80 directly the correct content shows up.  How can this be?  PHP 
+	is server-side and my browser can't possibly know that the content it is seeing is generated
+	by PHP, so what is going on?
+  </B></DT>
+  <DD>
+	Very good question!  ;)  This is a tricky little issue and it has come up twice in the
+	past month as of this writing.  Both times I ended up spending a good 20 minutes trying to
+	figure out what the heck was going on.  The answer is that both IE and Lynx ignore any NULs
+	(\0) in the HTML stream.  Netscape does not.  The best way to check for this is to compile
+	the command-line version of PHP (also known as the CGI version) and run your script from the
+	command line and pipe it through 'od -c' and look for any \0 characters.  (If you are on 
+	Windows you need to find an editor or some other program that lets you look at binary files)
+	When Netscape sees a NUL in a file it will typically not output anything else on that line
+	whereas both IE and Lynx will.  If this issue has bitten you, congratulations!  You are not
+	alone.
+  <P>
+  </DD>
+
 </DL>
 
 <H3>6. New Features</H3>
