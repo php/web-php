@@ -222,6 +222,7 @@ right away.</blockquote>
 	title("Sports");
 	siteStart();
 	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
+	site("The Internet Squash Federation","www.squash.org");
 	siteEnd();
 
 /* Telecommunications */
