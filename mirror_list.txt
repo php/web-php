@@ -40,6 +40,6 @@
 ? uk       uk2.php.net           David Sean McNicholl    dave@infonaut.net                         194.72.200.202
   us       www.php.net           Troy Cobb               tcobb@staff.circle.net                    209.95.65.70                    same as us.php.net
 ? us       php.he.net                                                                              ?                               same as us2.php.net
-  us       us3.php.net           Anton Olsen             aolsen@murl.com                           208.244.87.206
+  us       us3.php.net           Anton Olsen             aolsen@murl.com                           208.244.78.206
 ? us       php.calinet.com                               dave@calinet.com                          206.190.76.37
   za       za.php.net            Johan Eksteen           Johan.Eksteen@dent.mikom.csir.co.za       146.64.8.136
