@@ -23,7 +23,7 @@ echo "\n<!--$MYSITE-->\n";
   <li>The string "0" is now considered empty. This is known to have an effect on phpMyAdmin.</li>
   <li>In PHP4, multiple calls to setcookie() are performed in the order called, whereas in PHP3 they were performed in reverse order.</li>
   <li>unset() now breaks the association between a locally scoped variable and one that is globally scoped if the reference is made using the "global" keyword.</li>
-  <li>Associative array subscripts must be quoted. If you fail to quote them, they will be interpreted as constants. This can cause unpredictable results when using keywords such as "NULL" as an unquoted array subscript.</li>
+  <li>Associative array subscripts should be quoted. If you fail to quote them, they will be interpreted as constants. This can cause unpredictable results when using keywords such as "NULL" as an unquoted array subscript.</li>
 </ul>
 
 <p>If any more incompatibilities are discovered, we will add them here.</p>
