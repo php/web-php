@@ -37,7 +37,10 @@
 	<p>Search expression: <b><?echo $pattern?></b></p>
 	<?if(filesize("$gdir/.glimpse_messages")==0) { ?>
 		<p><b>SORRY</b> - Search index is currently being rebuilt, please try again in a few minutes.</p>
-		<?exit;
+		<?
+		commonFooter();
+		echo "</body></html>";
+		exit;
 	}
 	if(isset($words) && $words) {
 		$words="-w";
@@ -137,3 +140,4 @@
 } ?>
 <?commonFooter();?>
 </body></html>
+
