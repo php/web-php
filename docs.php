@@ -43,9 +43,12 @@ commonHeader("Documentation ");
 
 <H2>PDF Version</H2>
 <ul>
+<!--
 <li><? download_link("manual.pdf", "PHP PDF Manual - Indexed - May 23, 00"); ?>. In this PDF, where possible, the version of PHP in which the function first became supported is noted. Note this version of the manual tends to lag behind the other versions available here.
-<li><? download_link("manual.A4.en.pdf", "PHP PDF Manual - June 13, 00"); ?>. 873 pages
-<li><? download_link("manual.ts.A4.en.pdf", "PHP PDF Manual - June 13, 00"); ?>. 670 pages
+-->
+<li>PDF version of PHP Manual has been split to two parts due to its' size and bookmarks not working in documents that are over 999 pages.
+<li><? download_link("language.pdf", "PHP PDF Manual - November 21, 00"); ?>. 195 pages
+<li><? download_link("funcref.pdf", "PHP PDF Manual (Function reference) - November, 00"); ?>. 881 pages
 </ul>
 
 <H2>Other Versions</H2>
