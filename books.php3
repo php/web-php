@@ -59,6 +59,20 @@ by Jiri Kosek<BR>
 </SMALL></TD>
 </TR>
 
+<TR VALIGN="middle">
+<TD COLSPAN=2><B>Related Reading</B></TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
+><IMG SRC="/gifs/mysql-book.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
+>MySQL and mSQL (Nutshell Series)</A><BR>
+by Randy Jay Yarger, George Reese, and Tim King<BR>
+</TD>
+</TR>
+
 </TABLE>
 
 <P>
