@@ -478,6 +478,10 @@ To the global properties, or to the properties of the VirtualDomain you want to 
 <a name="3.3">3.3</a> I installed PHP3 using RPMS, but it doesn't compile with the database support I need! What's going on here?
 </B></DT>
 <DD>
+Due to the way PHP is currently built, it is not easy to build a complete flexible PHP RPM.  This
+issue will be addressed in PHP4.  For PHP3, we currently suggest you use the mechanism described
+in the INSTALL.REDHAT file in the PHP distribution.  If you insist on using an RPM version of PHP,
+read on...<BR>
 Currently the RPM packagers are setting up the RPMS to install without database support to simplify installations AND because RPMS use /usr/ instead of the standard /usr/local/ directory for files.
 You need to tell the RPM spec file which databases to support and the location of the <EM>top-level</EM> of your database server.<BR>
 This example will explain the process of adding support for the popular MySQL database server, using the mod installation for Apache.<BR>
