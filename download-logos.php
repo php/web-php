@@ -134,7 +134,7 @@ you use this for commercial purposes</li>
 </td></tr>
 
 <tr valign="middle">
-<td align="center" width="33%" bgcolor="#ffffff">
+<td align="center" width="33%" bgcolor="#000000">
 <img src="logos/zend-powered-by.gif" width="100" height="58" border="0" alt="Zend logo"><br>
 </td><td align="left" width="67%">
 <ul>
