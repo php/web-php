@@ -277,3 +277,16 @@ div.phpcode span.keyword {
 div.phpcode span.string {
     color: #DD0000;
 }
+
+.center {
+	text-align: center;
+}
+.center table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+.center th {
+	text-align: center;
+}
+
