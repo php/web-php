@@ -637,10 +637,10 @@ manual:<BR>
 <FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=25></FONT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
-or click on this button to get an alphabetical listing of all PHP functions.<BR>
+or click on this button to get an alphabetical listing of all PHP functions.
 <? if ($FRAMEMODE != "manual"): ?>
-(you can still click on the <B>documentation</B> button on the left for other documentation resources.)
-<? endif;?>
+ (you can still click on the <B>documentation</B> button on the left for other documentation resources.)
+<? endif;?><BR>
 <? kickFooter("qrefKick","qref",350);?>
 </DIV>
 
