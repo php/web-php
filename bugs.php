@@ -123,7 +123,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 
 function show_menu($state)
 {
-	global $PHP_SELF, $bug_type, $by;
+	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE;
 
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
@@ -153,7 +153,10 @@ function show_menu($state)
 	echo "<td colspan=3><input type=text name=\"search_for\"></td></tr></form>\n";
 	echo "<tr><td colspan=3 align=right><form method=GET action=\"$PHP_SELF\">\n";
 	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
-	echo "<input type='hidden' name='edit' value='2'>\n";
+	if (isset($MAGIC_COOKIE))
+		echo "<input type='hidden' name='edit' value='1'>\n";
+	else
+		echo "<input type='hidden' name='edit' value='2'>\n";
 	echo "</td><td><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
