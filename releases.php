@@ -28,52 +28,54 @@ $SIDEBAR_DATA = '
 </p>
  
 <form action="http://www.alltheweb.com/search" method="get">
- <input type="hidden" name="cat" value="ftp" />
- <input type="hidden" name="ftype" value="6" />
- <select name="query" onchange="this.form.submit()">
-  <option value="">-select version-</option>
-  <option value="php-3.0.tar.gz">3.0</option>
-  <option value="php-3.0.1.tar.gz">3.0.1</option>
-  <option value="php-3.0.2.tar.gz">3.0.2</option>
-  <option value="php-3.0.3.tar.gz">3.0.3</option>
-  <option value="php-3.0.4.tar.gz">3.0.4</option>
-  <option value="php-3.0.5.tar.gz">3.0.5</option>
-  <option value="php-3.0.6.tar.gz">3.0.6</option>
-  <option value="php-3.0.7.tar.gz">3.0.7</option>
-  <option value="php-3.0.8.tar.gz">3.0.8</option>
-  <option value="php-3.0.9.tar.gz">3.0.9</option>
-  <option value="php-3.0.10.tar.gz">3.0.10</option>
-  <option value="php-3.0.11.tar.gz">3.0.11</option>
-  <option value="php-3.0.12.tar.gz">3.0.12</option>
-  <option value="php-3.0.13.tar.gz">3.0.13</option>
-  <option value="php-3.0.14.tar.gz">3.0.14</option>
-  <option value="php-3.0.15.tar.gz">3.0.15</option>
-  <option value="php-3.0.16.tar.gz">3.0.16</option>
-  <option value="php-3.0.17.tar.gz">3.0.17</option>
-  <option value="php-3.0.18.tar.gz">3.0.18</option>
-  <option value="">--------</option>
-  <option value="php-4.0.0.tar.gz">4.0.0</option>
-  <option value="php-4.0.1.tar.gz">4.0.1</option>
-  <option value="php-4.0.1pl1.tar.gz">4.0.1pl1</option>
-  <option value="php-4.0.2.tar.gz">4.0.2</option>
-  <option value="php-4.0.3.tar.gz">4.0.3</option>
-  <option value="php-4.0.4.tar.gz">4.0.4</option>
-  <option value="php-4.0.4pl1.tar.gz">4.0.4pl1</option>
-  <option value="php-4.0.5.tar.gz">4.0.5</option>
-  <option value="php-4.0.6.tar.gz">4.0.6</option>
-  <option value="php-4.1.0.tar.gz">4.1.0</option>
-  <option value="php-4.1.1.tar.gz">4.1.1</option>
-  <option value="php-4.1.2.tar.gz">4.1.2</option>
-  <option value="php-4.2.0.tar.gz">4.2.0</option>
-  <option value="php-4.2.1.tar.gz">4.2.1</option>
-  <option value="php-4.2.2.tar.gz">4.2.2</option>
-  <option value="php-4.2.3.tar.gz">4.2.3</option>
-  <option value="php-4.3.0.tar.gz">4.3.0</option>
-  <option value="php-4.3.1.tar.gz">4.3.1</option>
-  <option value="php-4.3.2.tar.gz">4.3.2</option>
-  <option value="php-4.3.3.tar.gz">4.3.3</option>
-  <option value="php-4.3.4.tar.gz">4.3.4</option>
- </select>
+ <p>
+  <input type="hidden" name="cat" value="ftp" />
+  <input type="hidden" name="ftype" value="6" />
+  <select name="query" onchange="this.form.submit()">
+   <option value="">-select version-</option>
+   <option value="php-3.0.tar.gz">3.0</option>
+   <option value="php-3.0.1.tar.gz">3.0.1</option>
+   <option value="php-3.0.2.tar.gz">3.0.2</option>
+   <option value="php-3.0.3.tar.gz">3.0.3</option>
+   <option value="php-3.0.4.tar.gz">3.0.4</option>
+   <option value="php-3.0.5.tar.gz">3.0.5</option>
+   <option value="php-3.0.6.tar.gz">3.0.6</option>
+   <option value="php-3.0.7.tar.gz">3.0.7</option>
+   <option value="php-3.0.8.tar.gz">3.0.8</option>
+   <option value="php-3.0.9.tar.gz">3.0.9</option>
+   <option value="php-3.0.10.tar.gz">3.0.10</option>
+   <option value="php-3.0.11.tar.gz">3.0.11</option>
+   <option value="php-3.0.12.tar.gz">3.0.12</option>
+   <option value="php-3.0.13.tar.gz">3.0.13</option>
+   <option value="php-3.0.14.tar.gz">3.0.14</option>
+   <option value="php-3.0.15.tar.gz">3.0.15</option>
+   <option value="php-3.0.16.tar.gz">3.0.16</option>
+   <option value="php-3.0.17.tar.gz">3.0.17</option>
+   <option value="php-3.0.18.tar.gz">3.0.18</option>
+   <option value="">--------</option>
+   <option value="php-4.0.0.tar.gz">4.0.0</option>
+   <option value="php-4.0.1.tar.gz">4.0.1</option>
+   <option value="php-4.0.1pl1.tar.gz">4.0.1pl1</option>
+   <option value="php-4.0.2.tar.gz">4.0.2</option>
+   <option value="php-4.0.3.tar.gz">4.0.3</option>
+   <option value="php-4.0.4.tar.gz">4.0.4</option>
+   <option value="php-4.0.4pl1.tar.gz">4.0.4pl1</option>
+   <option value="php-4.0.5.tar.gz">4.0.5</option>
+   <option value="php-4.0.6.tar.gz">4.0.6</option>
+   <option value="php-4.1.0.tar.gz">4.1.0</option>
+   <option value="php-4.1.1.tar.gz">4.1.1</option>
+   <option value="php-4.1.2.tar.gz">4.1.2</option>
+   <option value="php-4.2.0.tar.gz">4.2.0</option>
+   <option value="php-4.2.1.tar.gz">4.2.1</option>
+   <option value="php-4.2.2.tar.gz">4.2.2</option>
+   <option value="php-4.2.3.tar.gz">4.2.3</option>
+   <option value="php-4.3.0.tar.gz">4.3.0</option>
+   <option value="php-4.3.1.tar.gz">4.3.1</option>
+   <option value="php-4.3.2.tar.gz">4.3.2</option>
+   <option value="php-4.3.3.tar.gz">4.3.3</option>
+   <option value="php-4.3.4.tar.gz">4.3.4</option>
+  </select>
+ </p>
 </form>
 ';
 
@@ -185,7 +187,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 6 September 2002</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&article=37">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=37">English</a></li>
  <li><a href="/ChangeLog-4.php#4.2.3">ChangeLog</a></li>
  <li>
   Download:
@@ -303,7 +305,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 19 December 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&article=28">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=28">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.4">ChangeLog</a></li>
  <li>
   Download:
@@ -321,8 +323,8 @@ site_header("Releases");
 <ul>
  <li>Released: 11 October 2000</li>
  <li>
-  Announcement: <a href="http://news.php.net/article.php?group=php.announce&article=26">English</a>,
-  <a href="http://news.php.net/article.php?group=php.announce&article=27">English (pl1)</a>,
+  Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=26">English</a>,
+  <a href="http://news.php.net/article.php?group=php.announce&amp;article=27">English (pl1)</a>,
  </li>
  <li><a href="/ChangeLog-4.php#4.0.3">ChangeLog</a></li>
  <li>
@@ -339,7 +341,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 29 August 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&article=24">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=24">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.2">ChangeLog</a></li>
  <li>
   Download:
@@ -353,7 +355,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 28 June 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&article=23">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=23">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.1">ChangeLog</a></li>
  <li>
   Download:
