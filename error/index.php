@@ -28,7 +28,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
     mirror_redirect("/manual/$lang/$array[1]");
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
-    preg_replace("!.html$!", ".php", $array[1]);
+    $array[1] = preg_replace("!.html$!", ".php", $array[1]);
     mirror_redirect("/manual/$lang/print/$array[1]");
 }
 
