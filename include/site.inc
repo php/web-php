@@ -27,6 +27,7 @@ $MIRRORS = array(
    "http://hu.php.net/"               => array("hu", "Externet", "externet", "http://www.externet.hu/", 1, 0, "hu"),
    "http://php.fmal.com/"             => array("it", "Open Technology Consulting", "sts", "http://otc.fmal.com/", 1, 0, "it"),
    "http://it2.php.net/"              => array("it", "Utility Line Italia S.r.l.", "utilina", "http://www.uli.it/", 1, 0, "it"),
+#   "http://it3.php.net/"              => array("it", "Italia OnLine", "", "http://www.iol.it/", 1, 0, "it"),
    "http://jp.php.net/"               => array("jp", "HappySize, Inc.", "happy", "http://jp.gigahit.com/", 1, 1, "jp"),
 #   "http://kr.php.net/"               => array("kr", "HolyNet", "holynet", "http://www.holywar.net/", 1, 1, "kr"),
    "http://mx.php.net/"               => array("mx", "Urbano.com.mx", "urbano", "http://web.urbano.com.mx/?in=php", 1, 0, "es"),
