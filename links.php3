@@ -66,6 +66,8 @@ German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a vi
 is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
+<LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
+<B> Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
 </UL>
 
 <h3>Funding PHP Development</h3>
