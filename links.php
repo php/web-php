@@ -55,6 +55,16 @@ Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server,
 HTML, PHP, MySQL ... and lots more<br></li>
 </ul>
 
+<h4>PHP FAQ sites</h4>
+
+<ul>
+<li><a href="http://php.faqts.com/">PHP Knowledge Base</a><br>
+A growing collection of PHP related information in a searchable
+question and answer format.<br></li>
+<li><a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br>
+A big faq and some links about PHP and SQL<br></li>
+</ul>
+
 <h4>Complex PHP Related Sites</h4>
 
 <ul>
