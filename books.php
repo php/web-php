@@ -33,7 +33,7 @@ $books = array (
 array(
     /* title[s]     */ "PHP 4.x. After Work. Für Einsteiger",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381557322X/wwwphpnet07",
-    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert", Clemens Gutweiler),
+    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert", "Clemens Gutweiler"),
     /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61", false),
     /* image        */ "afterworkphp.jpg",
     /* information  */ "Sybex, June 2002, ISBN 3-8155-7322-X, 352 pages",
