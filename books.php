@@ -373,7 +373,7 @@ by Paul DuBois<BR>
 Vorwort von <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
-in German, Markt&Technik, July 2000, ISBN 3-8272-5793-X, 864 Seiten 
+in German, Markt&Technik, July 2000, ISBN 3-8272-5793-X, 864 Seiten<BR> 
 Translation by Dorothea Reder and Judith Muhr<BR>
 </TD>
 </TR>
