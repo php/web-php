@@ -17,15 +17,6 @@ encouraged to begin upgrading their systems to use this version.
 <a href="downloads.php">Download it now!</a>  Some more PHP 4.0 related can be found
 <a href="/version4">here</a>.
 
-<h3>PHP 4 Release Candidate 2</h3>
-
-May 10, 2000. The PHP Group is proud to announce the release of the <a
-href="version4/">second release candidate of the upcoming PHP 4.0</a>. 
-Highlights of this release include
-support for new web servers (Zeus, Netscape Enterprise, Apache Win32 module),
-improved portability of the Unix build framework and tons of bug fixes.
-We expect this to be the final release candidate before PHP 4.0.
-
 <h3>PHP 3.0.16 released</h3>
 April 05, 2000. PHP 3.0.16 was released. This is mostly a bug fix release which
 adds support for gd-1.8, ucd-snmp 4.1, and high-resolution timers on OS/2.
@@ -34,12 +25,6 @@ Win32 binaries are available from the PHP homepage. The
 <a href="ChangeLog.php3">ChangeLog</a> contains a
 full list of changes.
 
-<h3>PHP 4 Release Candidate 1</h3>
-The real thing is getting closer and closer.  After a very successful Beta 4
-release that was extremely stable, <a href="version4/">PHP 4.0</a> shifts gears from the beta cycle into 
-<a href="version4/downloads.php">release-quality RC1.</a>
-If all goes well and no outstanding bugs are found in the RC, the final
-version of PHP will be released sometime.
 
 <h3>Improve your PHP skills</h3> 
 Looking for clear and useful guides to build dynamic web-sites using

@@ -7,6 +7,24 @@ commonHeader("Older News");
 <img src="gifs/php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 1 is out!</h3>
 
+
+<h3>PHP 4 Release Candidate 2</h3>
+May 10, 2000. The PHP Group is proud to announce the release of the <a
+href="version4/">second release candidate of the upcoming PHP 4.0</a>.
+Highlights of this release include
+support for new web servers (Zeus, Netscape Enterprise, Apache Win32 module),
+improved portability of the Unix build framework and tons of bug fixes.
+We expect this to be the final release candidate before PHP 4.0.
+
+<h3>PHP 4 Release Candidate 1</h3>
+The real thing is getting closer and closer.  After a very successful Beta 4
+release that was extremely stable, <a href="version4/">PHP 4.0</a> shifts gears from the beta cycle into
+<a href="version4/downloads.php">release-quality RC1.</a>
+If all goes well and no outstanding bugs are found in the RC, the final   
+version of PHP will be released sometime.
+
+
+<h3>PHP 4</h3>
 <p>
 The long awaited beta of the new generation of PHP is <a href="version4/">here</a>.
 </p>
