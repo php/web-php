@@ -76,7 +76,7 @@ unbeatable web hosting platform suitable for both small and large web
 sites.
 <? endEntry();?>
 
-<? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://www.unixworld.com/archives/95/tutorial/018.html","1998"); ?>
+<? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://netexpress.net/~cfisher/unixworld/018.html","1998"); ?>
 Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP3 to talk to each other.
 <? endEntry();?>
 
