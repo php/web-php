@@ -999,7 +999,7 @@ value arrays. Previously segfaulted or added wrong value. (Stig Venaas)</li>
 size. (Andrei)</li>
 <li>Fixed $HTTP_RAW_POST_DATA to be populated on a missing content-type when
 always_populate_raw_post_data is on. (Rasmus)</li>
-<li>Added session_cache_expire() function. (patch by &lt;<a href="mailto:anuradha@gnu.org">anuradha@gnu.org</a>&gt;) (Andrei)
+<li>Added session_cache_expire() function. (patch by &lt;<a href="mailto:anuradha@gnu.org">anuradha@gnu.org</a>&gt;) (Andrei)</li>
 <li>Added array_fill() function. (Rasmus)</li>
 <li>Made Authorization header to be hidden from phpinfo() output in safe_mode.
 (Rasmus)</li>
@@ -1847,7 +1847,7 @@ There is no separate announcement available for this release.<br />
   (Rasmus, Sascha)</li>
 <li>Virtualize realpath, chmod, chown and utime (Stas)</li>
 <li>Support content-encoding headers in file upload MIME parts
-  (Ragnar Kjørstad)</li>
+  (Ragnar Kjrstad)</li>
 <li>Fixed warning when shutting down OCINLogon() connections. (Thies)</li>
 <li>Fixed \n in session variables bug on Win32 (Stas)</li>
 <li>OCIError() would sometimes not report failed connections. (Thies)</li>
@@ -2050,7 +2050,7 @@ There is no separate announcement available for this release.<br />
 <li>fopen_wrappers() are now extensible via modules (Hartmut Holzgraefe)</li>
 <li>Make trim strip \0 to match php 3 (Rasmus)</li>
 <li>Added function imagecreatefromxbm(). (Jouni)</li>
-<li>Added function imagewbmp(). (Jouni, based on patch from Rune Nordbøe
+<li>Added function imagewbmp(). (Jouni, based on patch from Rune Nordbe
   Skillingstad)</li>
 <li>Added str_pad() for padding a string with an arbitrary string on left or
   right. (Andrei)</li>
@@ -2428,7 +2428,7 @@ There is no separate announcement available for this release.<br />
   over the server and environment variables, in addition to GET/POST/Cookies
   (Zeev)</li>
 <li>new function cpdf_set_document_limits() (Uwe)</li>
-<li>Applied safe-mode patch to popen(). (Patch by Kristian Köhntopp)</li>
+<li>Applied safe-mode patch to popen(). (Patch by Kristian Khntopp)</li>
 <li>str_repeat() now returns correct length. (Thies)</li>
 <li>Don't assume libz and libpng are installed for the GD checks (Rasmus)</li>
 <li>Implemented support for &lt;boolean&gt; and &lt;null&gt; types according
