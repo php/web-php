@@ -19,10 +19,11 @@ $oldkey="";
 $lastcat="";
 while ($c<count($MANUAL)):
 	$key=key($MANUAL);
-	
+
 	$category=$MANUAL[$key][1];
 	if ($category!=$lastcat):
 		$CAT_URLS[$category]=$MANUAL[$key][0];
+		$lastcat=$category;
 	endif;
 
 	$PREV[$key]=$oldkey;

@@ -2,6 +2,7 @@
 require("shared-manual.inc");
 manualHeader("Table of Contents");
 ?>
+
 by Stig Sæther Bakken, Alexander Aulbach, Egon Schmid, Jim Winstead, Lars Torben Wilson, Rasmus Lerdorf, and Zeev Suraski</P
 >
 Revision 3.0-dev<BR>

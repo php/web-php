@@ -20,6 +20,36 @@ function getNextPrevCat($function) {
 	endif;
 };
 
+function makeCatListing($function,$category) {
+	global $MANUAL, $FONTFACE, $CAT_URLS;
+	reset($MANUAL);
+	$cat_url=$CAT_URLS[$category];
+	echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=100%><TR VALIGN=top>\n";
+	echo "<TD>";
+	spc(10,10);
+	echo "</TD>\n";
+	echo "<TD COLSPAN=2><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\"><A HREF=\"$cat_url\" onMouseover=\"hide();\" CLASS=white><B>$category</B></A></TD></TR>\n";
+	$c=0;
+	while ($key=key($MANUAL)):
+		next($MANUAL);
+		if ($MANUAL[$key][1]==$category):
+			$url=$MANUAL[$key][0];
+			$type="p";
+			$out=0;
+			if ($key==$function):
+				$type="w";
+				$out=2;
+			endif;
+			echo "<TR VALIGN=top><TD>";
+			spc(10,10);
+			echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$c',1)\" onMouseout=\"changebullet('bullet$c',$out)\"><IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 BORDER=0 NAME=\"bullet$c\"></A>\n";
+			echo "</TD>\n<TD WIDTH=100%><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\" SIZE=-1><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$c',1)\" onMouseout=\"changebullet('bullet$c',$out)\" CLASS=white>$key<BR></A></TD></TR>\n";
+			$c++;
+		endif;
+	endwhile;
+	echo "</TABLE>\n";
+};
+
 function manualHeader($function) {
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE;
 	global $NEXT_FUNC, $NEXT_URL, $NEXT_CAT, $PREV_FUNC, $PREV_URL, $PREV_CAT, $THIS_CAT, $THIS_CAT_URL;
@@ -129,15 +159,29 @@ function LoadImgs () {
 		b_prev21 = new Image();
 		b_prev21.src = "/new/gifs/b-prev-c.gif";
 
+		b_bullet0 = new Image();
+		b_bullet0.src = "/new/gifs/b-bullet-p.gif";
+		b_bullet1 = new Image();
+		b_bullet1.src = "/new/gifs/b-bullet-c.gif";
+		b_bullet2 = new Image();
+		b_bullet2.src = "/new/gifs/b-bullet-w.gif";
+
 		loaded = 1;
 	}
 }
    
-function change(Name,No,Msg) {
+function change(Name,No) {
 	if (document.images && (loaded == 1)) {
 		document[Name].src = eval("b_" + Name + No + ".src");
 	}
 	lastbutton = Name;
+	return true
+}
+
+function changebullet(Name,No) {
+	if (document.images && (loaded == 1)) {
+		document[Name].src = eval("b_bullet" + No + ".src");
+	}
 	return true
 }
 
@@ -182,6 +226,7 @@ document.writeln("<STYLE TYPE='text/css'>");
 document.writeln("BODY { font-family: Tahoma, Arial, sans-serif }");
 document.writeln("TD { font-family: Tahoma, Arial, sans-serif }");
 document.writeln("A { text-decoration: none }");
+document.writeln("A.white { color: #FFFFFF }");
 document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
 document.write(mirrorPosTop);
 document.write("px; LEFT: ");
@@ -212,7 +257,7 @@ document.writeln("</STYLE>");
 
 <A HREF="index.php3" onMouseover="hide();change('cont',1);" ><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
 <A HREF="<? echo $THIS_CAT_URL;?>" onMouseover="hide();change('up',1);" ><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to front of the $THIS_CAT category" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
-
+<? makeCatListing($function,$THIS_CAT);?>
 </TD></TR>
 </TABLE>
 </TD>
