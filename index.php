@@ -17,7 +17,8 @@ files, and a memory leak that was discovered in the module versions of PHP.
 <h3>PHP 4.0.3 Released</h3>
 Oct 11, 2000.  <a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
 enhancements, as well as several new features and bug fixes.  It is strongly
-recommended for all users of PHP to upgrade to this version.
+recommended for all users of PHP to upgrade to this version.  You can read the 
+<a href="/ChangeLog-4.php#4.0.3">changelog</A> here.
 
 <h3>Manual Search Tip</h3>
 Oct. 6, 2000.  You can now go directly to PHP manual pages with a URL such as
@@ -25,7 +26,8 @@ Oct. 6, 2000.  You can now go directly to PHP manual pages with a URL such as
 
 <h3>PHP 4.0.2 Released!</h3>
 August 29, 2000.  The new version features new functions, many bug fixes, and increased
-performance.  <a href="downloads.php">Download now!</a>
+performance.  <a href="downloads.php">Download now!</a>  You can read the 
+<a href="/ChangeLog-4.php#4.0.2">changelog</A> here.
 
 <h3>PHP 4.0.1 Patch Level 2 available</h3>
 <a href="downloads.php">PHP 4.0.1pl2</a> addresses two bugs that were discovered in PHP 4.0.1, that
@@ -34,7 +36,7 @@ prevent error_reporting() and readdir() from working properly.
 <h3>PHP 4.0.1 Released!</h3>
 June 28, 2000.  The first maintenance release for PHP 4.0 is out.  The new release features increased
 stability under Windows, improved error handling, several new features and lots of bug fixes (the full list 
-of changes is <a href="ChangeLog-4.php">available</a>).  It's a
+of changes is <a href="ChangeLog-4.php#4.0.1">available</a>).  It's a
 recommended upgrade for all PHP users.  <a href="downloads.php">Download now!</a>
 
 <img src="gifs/php4zend-small-white.gif" align="right">
