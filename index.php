@@ -60,7 +60,7 @@ your ear to the ground for more info on ApacheCon 2001 Europe in
 Dublin, Ireland in October 2001! (And stay tuned for more info
 on the first PHP Conference coming July 2001, part of the <a
 href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
-Conference</a> in San Diego, California.</p>
+Conference</a> in San Diego, California.)</p>
 
 <? echo hdelim(); ?>
 
