@@ -15,7 +15,8 @@ $langs = array(
   'cn'  => 'Traditional Chinese',
   'pt'  => 'Portugese',
   'se'  => 'Swedish',
-  'hu'  => 'Hungarian'
+  'hu'  => 'Hungarian',
+  'dk'  => 'Danish'
 );
 
 // Book types
@@ -659,6 +660,17 @@ array (
     /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
     /* inform. link */ "http://http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
     /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "Start på PHP",
+    /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&vare_id=106131",
+    /* author[s]    */ "Thomas G. Kristensen",
+    /* auth link[s] */ "",
+    /* image        */ "startphpdk.gif",
+    /* information  */ "ISBN 87-7843-408-4",
+    /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&vare_id=106131",
+    /* language     */ "dk"
   )
   ),
 
