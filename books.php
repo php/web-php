@@ -509,6 +509,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Guide officiel PHP",
+    /* title_link   */ "http://www.nexen.net/manuelphp/bdc.php.pdf",
+    /* author[s]    */ array("PHP documentation Team","Damien Seguy"),
+    /* auth link[s] */ "",
+    /* image        */ "docfr.jpg",
+    /* information  */ "MicroApplication, Decembre 2001, ISBN 2-7429-2320-9, 904 pages",
+    /* inform. link */ "http://www.nexen.net/manuelphp/",
+    /* language     */ "fr"
+  ),
+
+  array(
     /* title[s]     */ "Pages Web dynamiques avec ASP, PHP, SQL",
     /* title_link   */ "http://www.amazon.fr/exec/obidos/ASIN/2744007099/wwwphpnet0f",
     /* author[s]    */ array("Jean-Marc Herellier","Philippe Merigod"),
