@@ -13,6 +13,7 @@ echo "\n<!--$MYSITE-->\n";
   <li><a href="http://bugs.php.net/version4/">Report bugs</a></li>
   <li><a href="cvs.php">CVS instructions</a></li>
   <li>Subscribe to the <a href="mailto:php4beta-subscribe@lists.php.net">PHP 4.0 Beta mailing list</a></li>
+  <li>Subscribe to the <a href="mailto:php-cvs-daily-subscribe@lists.php.net">PHP 4.0 daily ChangeLog and NEWS additions</a></li>
   <li>Download <a href="logos.php"> PHP 4.0 Logos</a></li>
   <li>Check out the <a href="http://www.zend.com"> Zend web site</a></li>
   <li>View the <a href="credits.php">Credits page</a></li>
