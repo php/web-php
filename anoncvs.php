@@ -60,8 +60,8 @@ diff -u
  
  <li>
   Obtain the latest PHP source from CVS.  There is a single <i>php-src</i> 
-  directory that contains all PHP 4 and PHP 5 branches.  PHP from CVS uses
-  the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
+  directory that contains all PHP 4 and PHP 5 branches.  To get PHP from CVS, 
+  use the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
   latest, consider the following CVS commands:<br /><br />
   <strong>PHP 4</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src</tt>
