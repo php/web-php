@@ -4,17 +4,6 @@ commonHeader("Links");
 ?>
 
 
-<h1>Sites using PHP</h1>
-<P>
-Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their
-web-sites.
-You can browse through a list of some companies using PHP <a href="/sites.php">here</a>.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
 <h1>Developers and Job Opportunities</h1>
 <P>
 Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.

@@ -38,16 +38,14 @@ Projects using PHP
 
 <p>
 An increasing number of projects, both commercial and Open Source, 
-are using PHP as their main development tool.  If you want to browse 
-through a list companies using PHP, you can go <? print_link("/sites.php", "here"); ?>.
-This page, however, is a listing of cool things based on PHP, available for download.
+are using PHP as their main development tool.
+This page is a listing of cool things based on PHP, available for download.
 </p>
 
 <p>
 If you have a project you feel belongs on this list, send us email us at
 <A HREF="mailto:projects@php.net">projects@php.net</A> (we consider a project to be
-a software package where the code is available for download).  If you have a site that
-uses PHP, you may want to add it to the <a href="/sites.php">sites page</a>.
+a software package where the code is available for download).
 </p>
 
 
