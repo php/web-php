@@ -101,11 +101,11 @@ Brian Platz and Robert Flannigan take a look at all the options out there and en
 Brian and Robert continue their project by focusing on using PHP as the middleware between a Web-server process and a back-end relational-database system.
 <? endEntry();?>
 
-<? makeEntry("A Contact Database using MySQL and PHP","from WebTechniques","http://www.webtechniques.com/features/1998/01/note/note.shtml","January 1998"); ?>
+<? makeEntry("A Contact Database using MySQL and PHP","from WebTechniques","http://www.webtechniques.com/archives/1998/01/note/","January 1998"); ?>
 Mike Miller builds a contact database with MySQL and PHP
 <? endEntry();?>
 
-<? makeEntry("Dynamic Web Pages with PHP 3","from WebTechniques","http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml","February 1998"); ?>
+<? makeEntry("Dynamic Web Pages with PHP 3","from WebTechniques","http://www.webtechniques.com/archives/1998/02/lerdorf/lerdorf/","February 1998"); ?>
 As PHP gets an upgrade and name change, Rasmus explains its history and shows us some new features
 by building a dynamic Web photo album.
 <? endEntry();?>
