@@ -172,8 +172,11 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 ><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="138"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet">PHP Developer's Cookbook</A><BR>
-by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and <A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes</A><BR><SMALL>
-MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
+by 
+<A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes, with contributions by</A>
+<A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A><BR><SMALL>
+Foreword by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
+Sams, November 2000, ISBN 0-6723-1924-1, 505 pages<BR>
 </SMALL>
 </TD>
 </TR>
@@ -183,7 +186,7 @@ MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 ><IMG SRC="/jpgs/allen_wyke.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet">PHP Developer's Dictionary</A><BR>
-by R. Allen Wyke, Michael J. Walker and Robert Cox<BR>
+by R. Allen Wyke, Michael J. Walker and Robert M. Cox<BR>
 <SMALL>
 Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
 </SMALL>
@@ -195,8 +198,11 @@ Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
 ><IMG SRC="/jpgs/till_gerken.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet">PHP Functions Essential Reference</A><BR>
-by <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A>, <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A>, Landon Bradshaw, <A HREF="http://zend.com/comm_person.php?id=32">Graeme Merral</A>, Stephen Wall (Editor)<BR><SMALL>
-New Riders Publishing, April 2001, ISBN 0-7357-0970-X, 500 pages<BR>
+by 
+Landon Bradshaw, 
+<A HREF="http://zend.com/comm_person.php?id=32">Graeme Merrall</A>, 
+Stephen Wall (Editor)<BR><SMALL>
+New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages<BR>
 </SMALL>
 </TD>
 </TR>
