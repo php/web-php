@@ -108,7 +108,7 @@ end tell
 
 <ol>
  <li>Press CTRL+D to add a bookmark</li>
- <li>Edit the bookmark, filling the folowing fields in:
+ <li>Edit the bookmark, filling the following fields in:
  <dl>
   <dt>Name</dt><dd>PHP</dd>
   <dt>URL</dt><dd><?php echo $MYSITE; ?></dd>
@@ -203,18 +203,18 @@ Search Type=0
  your bookmarks manually to give the bookmark an easy-to-remember title.
 </p>
 
-<?php tip_title('Adding the Quick Reference to Mozilla and Netscape 6', 'Andr&eacute; Langhorst', '16-Aug-2000'); ?>
+<?php tip_title('Adding the Quick Reference to Mozilla and Netscape 6/7', 'Andr&eacute; Langhorst', '16-Aug-2000'); ?>
 
 <p>
- Quick access to PHP documentation and site search for all Mozilla
- and Netscape 6 users:
+ Quick access to PHP documentation and site search for all Mozilla (including Firebird)
+ and Netscape 6/7 users:
 </p>
 
 <ol>
  <li>Click "Bookmarks &rarr; Manage Bookmarks"</li>
  <li>
   Create a bookmark in a folder of your choice on
-  the following URL: <tt><?php echo $MYSITE; ?>manual-lookup.php?function=%s</tt>
+  the following URL: <tt><?php echo $MYSITE; ?>%s</tt>
   and choose a name for it.
  </li>
  <li>
@@ -227,7 +227,9 @@ Search Type=0
  <li>Click "ok" and open a new browser window.</li>
  <li>
   Finished. Now you are able to enter eg. "php fgets" to look
-  up the manual entry on the function fgets()
+  up the manual entry on the function fgets(). You can also access
+  PHP.net pages with this shortcut. If you type "php links" you will
+  get to the links page on our site.
  </li>
 </ol>
 
