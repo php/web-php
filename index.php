@@ -145,28 +145,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<h1>DotGeek Certification Programme</h1>
-<p>
- <span class="newsdate">[19-Jan-2004]</span>
- Dotgeek (a community, non-business driven website made by developers
- for the PHP programmers community) is glad to announce
- "<a href="http://www.dotgeek.org/about.php?type=certify">The DotGeek
- Certified PHP Programmer Certification Programme</a>".
-</p>
-<p>
- The programme, which is independent, open source and totally free, is
- based on tutorials and code samples submission analyzed under a number
- of public criteria.
-</p>
-<p>
- The certification board includes well-accomplished professionals in
- their fields like David Costa, Anthony L. Faulds and Chris Shiflett.
- The open nature of the programme allows PHP professionals to join the
- certification board and contribute directly to the project.
-</p>
-
-<hr />
-
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
 <h1>PHP Conference 2004 Spring Edition Programme Online</h1>
