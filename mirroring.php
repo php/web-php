@@ -130,7 +130,7 @@ commonHeader("Mirroring The PHP Website");
      TransferLog logs/access_log
      
      # Set directory index
-     DirectoryIndex index.php
+     DirectoryIndex index.php index.html
      
      # Handle errors with local error handler script
      ErrorDocument 401 /error/index.php
