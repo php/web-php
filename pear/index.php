@@ -10,7 +10,11 @@ require_once 'manual-lookup.inc';
 $file = find_manual_page(default_language(), "pear");
 
 if ($file) {
-    header("Location: $file");
-} else { header("Location: /"); }
-
+header("Location: http://".$SERVER_NAME.$file);
+exit;
+}
+else { 
+header("Location: http://".$SERVER_NAME."/"); 
+exit;
+}
 ?>
