@@ -91,13 +91,12 @@ if(file_exists("backend/mirror.gif")) {
 	if($MIRRORS[$MYSITE]['4'] === 2) {
 		$RSIDEBAR_DATA .= "<img src='backend/mirror.gif' width='125' height='125' alt='mirror sponsor' border='0' /></a></center><br />";
 	} else {
-                $RSIDEBAR_DATA .= "<img src='backend/mirror.gif' width='120' height='60' alt='mirror sponsor' border='0' /></a></c\
-enter><br />";                         
-        }
-	sprintf("%s", hdelim());
+		$RSIDEBAR_DATA .= "<img src='backend/mirror.gif' width='120' height='60' alt='mirror sponsor' border='0' /></a></center><br />";
+	}
+	echo hdelim();
 }	 
 
-// Open events CVS file, and print out event title
+// Open events CSV file, and print out event title
 $fp = @fopen("backend/events.csv", "r");
 if ($fp) {
 	$cm = 0;
