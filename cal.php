@@ -10,7 +10,13 @@ require_once 'prepend.inc';
 
 $begun = 0;
 
-if ($id) {
+if (!is_numeric($id) || !is_numeric($cy) || !is_numeric($cd) || !is_numeric($cm)) {
+	$errors[] = "invalid data specified";
+	$hack = 1;
+}
+
+if (!$hack) {
+ if ($id) {
   if ($event = load_event($id)) {
     commonHeader("Event: ".htmlentities($event['sdesc']));
     display_event($event, 0);
@@ -19,8 +25,8 @@ if ($id) {
   else {
     $errors[] = "There is no event for specified id ('".htmlentities($id)."')";
   }
-}
-elseif ($cy && $cm && $cd) {
+ }
+ elseif ($cy && $cm && $cd) {
   if (checkdate($cm,$cd,$cy)) {
     $date = mktime(0,0,1,$cm,$cd,$cy);
     if ($events = load_events($date)) {
@@ -39,17 +45,18 @@ elseif ($cy && $cm && $cd) {
     $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd").") was not valid.";
     unset($cm); unset($cd); unset($cy);
   }
-}
+ }
 
-if ($cm && $cy && !checkdate($cm,1,$cy)) {
+ if ($cm && $cy && !checkdate($cm,1,$cy)) {
   $errors[] = "The specified year and month (".htmlentities("$cy, $cm").") are not valid.";
   unset($cm); unset($cy);
+ }
+
+ if (!$cm) $cm = date("m");
+ if (!$cy) $cy = date("Y");
+
+ $date = mktime(0,0,1,$cm,1,$cy);
 }
-
-if (!$cm) $cm = date("m");
-if (!$cy) $cy = date("Y");
-
-$date = mktime(0,0,1,$cm,1,$cy);
 
 if (!$begun) {
   commonHeader("Events: ".date("F Y", $date));
@@ -66,8 +73,12 @@ to get the details for all of the events taking place that day.</p>
 
 $events = load_events($date,1);
 
-if ($errors) display_errors($errors);
-
+if ($errors) {
+ display_errors($errors);
+ commonFooter();
+ exit(0);
+}
+	
 # beginning and end of this month
 $bom = mktime(0,0,1,$cm,  1,$cy);
 $eom = mktime(0,0,1,$cm+1,0,$cy);
