@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'thanks.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Thanks");
+site_header("Thanks");
 ?>
 
 <h1>Thanks</h1>
@@ -70,4 +70,4 @@ commonHeader("Thanks");
 
 <p>PHP.net is very grateful for all their support.</p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

@@ -1,0 +1,113 @@
+/* General page styles ---------------------------------------------------- */
+body, html {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    background-color: white;
+}
+
+body, input, textarea, select, option {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+#content, #headmenu, #footnav, #copyright, #thismirror,
+#headsearch span, #headsearch input, #headsearch select {
+    font-size: 85%;
+}
+
+a, a:visited, a:hover {
+    color: #000099;
+	background-color: transparent;
+}
+
+a:active {
+    color: #0000ff;
+	background-color: transparent;
+}
+
+h1 {
+    font-size: 130%;
+    font-weight: bold;
+    color: #000066;
+	background-color: transparent;
+}
+
+/* Content are styles ----------------------------------------------------- */
+#content {
+	padding: 10px;
+}
+#content h1 {
+	margin-top: 0px;
+}
+
+/* Header navigation area ------------------------------------------------- */
+#headnav {
+	color: inherit;
+    background-color: #9999cc;
+    height: 67px;
+    position: relative;
+}
+#headnav img {
+    border: 0px;
+    margin: 0px 3px;
+}
+#headmenu {
+    position: absolute;
+    bottom: 0px;
+	right: 5px;
+    text-align: right;
+	padding-left: 126px;
+}
+#headsearch {
+    background-color: #666699;
+    border-width: 1px 0px;
+    border-color: #333366;
+    border-style: solid;
+    text-align: right;
+    padding-right: 6px;
+    font-size: 75%;
+    color: white;
+}
+#headsearch input.submit {
+    vertical-align: baseline;
+}
+#headsearch form, #headsearch p {
+    margin: 0px;
+}
+#headsearch span.shortkey {
+	text-decoration: underline;
+}
+
+/* Footer navigation area ------------------------------------------------- */
+#footnav {
+    color: inherit;
+	background-color: #9999cc;
+    border-width: 1px 0px;
+    border-color: #333366;
+    border-style: solid;
+    text-align: right;
+    padding-right: 6px;
+}
+#pagefooter {
+    position: relative;
+    font-size: 75%;
+    color: inherit;
+	background-color: #cccccc;
+	width: 100%;
+}
+#thismirror {
+	text-align: right;
+    margin-left: 50%;
+	padding: 6px;
+}
+#copyright {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	padding: 6px;
+	margin-right: 50%;
+}
+#footnav a, #headmenu a {
+    font-size: 75%;
+    text-decoration: none;
+}
