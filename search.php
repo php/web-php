@@ -223,12 +223,14 @@ if (isset($pattern)) {
             // Make HTML output readable
             echo "\n";
             
+            // If the result element ended (a </div> or a </dl>
+            // depending on htdig version and setup), print out delimiter
+            if (preg_match("!(</div>|</dl>)$!", $result[$i])) {
+                echo hdelim("#cccccc");
+            }
+            
             // Go to next result element
             $i++;
-
-            // Print out delimiter between results
-            echo hdelim("#cccccc");
-
         }
         echo "<br />\n";
 
