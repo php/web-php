@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 if (isset($country)) {
   header("Location: http://$country.php.net/");
@@ -9,32 +9,34 @@ commonHeader("Mirrors Page");
 Mirror Sites
 </h1>
 <p>
-Pick a mirror site close to you:
+Here you can find more information about the mirrors
+of php.net. Pick a mirror site close to you, or visit
+the provider's homepage:
 </p>
 
 <p>
-<FORM ACTION="redirect.php" METHOD="POST">
-<SELECT NAME="URL"><?
-$mirror_sites=$MIRRORS;
-reset($mirror_sites);
-while ($site = key($mirror_sites)) {
-	next($mirror_sites);
-	$country=$mirror_sites[$site][0];
-	$place=$mirror_sites[$site][1];
-	$type=$mirror_sites[$site][4];
-	if ($type==1 && substr($site,0,7)=="http://") {
-		echo "<OPTION VALUE=\"$site\">$place ($COUNTRIES[$country])\n";
-	}
-}
-?></SELECT>
-<INPUT TYPE="submit" VALUE=" Go "><BR>
-</FORM>
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+ <tr bgcolor="#cccccc">
+  <th>Country</th>
+  <th>Provider</th>
+  <th>Default Language</th>
+ </tr>
+<?php
+  foreach ($MIRRORS as $murl => $mdata) {
+    if ($mdata[4] == 1) 
+    echo '<tr bgcolor="#e0e0e0"><td>' . 
+         make_link($murl, $COUNTRIES[$mdata[0]]) . '</td><td>' . 
+         make_link($mdata[3], $mdata[1]) . '</td><td>' .
+         $mdata[6] . '</td></tr>';
+  }
+?>
+</table>
 </p>
 
 <p>
 If you are interested in hosting a mirror of this site, 
-<? print_link("/README.mirror", "here's how"); ?>.
+<?php print_link("/README.mirror", "here's how"); ?>.
 </p>
-<?
+<?php
 commonFooter();
 ?>
