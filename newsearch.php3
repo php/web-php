@@ -44,11 +44,10 @@ if(!isset($pattern)) { ?>
 	<h1 align=center>Search Results</h1>
 	<?
 		if (!isset($base)) {
-			if (ereg("^(.+://[^/]+/)",$HTTP_REFERER,&$reg)) {
+			if (ereg("^(.+//[^/]+/)",$HTTP_REFERER,&$reg)) {
 				$base=$reg[1];
 			}
-			ereg("^(.+)/newsearch.php3",$PHP_SELF,&$reg);
-			if ($base==$reg[1]) {
+			if ($base==$MYSITE) {
 				$base="-";
 			}
 		}
