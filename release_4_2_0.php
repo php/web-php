@@ -93,7 +93,9 @@ PHP 4.2.0 Release Announcement
  due to be released in August, 2002, will be the first PHP
  release to officially support Mac OS X. It, along with future
  Mac OS X and Apache releases, will enable full feature parity
- with other PHP platforms.</p>
+ with other PHP platforms. <b>Update:</b> 
+ <a href="http://www.entropy.ch/software/macosx/php/">Instructions on
+ overcoming these limitations</a></p>
 
 <h2>Improvements</h2>
 <p>PHP 4.2.0 includes several improvements:</p>
