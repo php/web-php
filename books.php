@@ -684,7 +684,7 @@ array (
     /* image        */ "guiapg.gif",
     /* information  */ "novatec, ISBN 85-7522-012-8, 128 pages",
     /* inform. link */ "",
-    /* language     */ "pt_BR"
+    /* language     */ "pt"
   ),
 
   array(
