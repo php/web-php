@@ -9,10 +9,10 @@ require_once 'prepend.inc';
 # month (or the month of the requested day)
 
 $begun = 0;
-$id = (int)$id;
-$cy = (int)$cy;
-$cm = (int)$cm;
-$cd = (int)$cd;
+$id = isset($id) ? (int)$id : 0;
+$cy = isset($cy) ? (int)$cy : 0;
+$cm = isset($cm) ? (int)$cm : 0;
+$cd = isset($cd) ? (int)$cd : 0;
 
 if ($id) {
  if ($event = load_event($id)) {
@@ -70,7 +70,7 @@ to get the details for all of the events taking place that day.</p>
 
 $events = load_events($date,1);
 
-if ($errors) {
+if (isset($errors) && $errors) {
  display_errors($errors);
  commonFooter();
  exit(0);
@@ -187,7 +187,8 @@ function load_events($from, $whole_month=0) {
   while (!feof($fp)) {
     $event = read_event($fp);
 
-    if ($seen[$event['id']]++) continue; # only want each event once!
+	if(!isset($seen[$event['id']])) $seen[$event['id']] = 1;
+	else continue;
 
     switch ($event['type']) {
     case 3: /* recurring event */
@@ -214,9 +215,8 @@ function load_events($from, $whole_month=0) {
 
 /* read an event from the event listing */
 function read_event($fp) {
-  list(,,,,$sdesc,$id,$ldesc,$url,$recur,$tipo,$sdato,$edato)
-    = fgetcsv($fp,8192);
-  list($recur,$recur_day) = explode(":",$recur,2);
+  list(,,,,$sdesc,$id,$ldesc,$url,$recur,$tipo,$sdato,$edato) = fgetcsv($fp,8192);
+  @list($recur,$recur_day) = explode(":",$recur,2);
   return array(
     'id' => $id,
     'type' => $tipo,
