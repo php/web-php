@@ -21,6 +21,9 @@ commonHeader("Documentation ");
     is the same as the above, except there is a built-in errata/note system
     that users all around the world can (and have!) contributed to.
 
+<LI><A href="books.php3">Books on PHP</A>. Here you can find a
+    great selection of books on PHP and related themes.
+	
 <LI><A href="http://www.php.net/manual/browse-errata.php3">PHP Manual
     Errata</A>. This is the collected errata from the on-line errata/note
     system.
