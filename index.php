@@ -210,7 +210,7 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsdate">[04-May-2003]</font>
 We are proud to introduce you the latest addition to our <a href="/my.php">My
 PHP.net</a> service. The PHP.net site and mirror sites now autodetect
-your country using the <a href="http://www.ip-to-country.com/">Directi
+your country using the <a href="http://www.directi.com/?site=ip-to-country">Directi
 Ip-to-Country Database</a>. We use this information to present events in
 your country in bold letters on the frontpage, and to offer close mirror
 sites for downloads and your usual daily work.

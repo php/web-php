@@ -126,7 +126,7 @@ the <a href="/download-docs.php">manual download</a> or
 
 <p>
 The PHP.net site and mirror sites try to detect your country
-using the <a href="http://www.ip-to-country.com/">Directi
+using the <a href="http://www.directi.com/?site=ip-to-country">Directi
 Ip-to-Country Database</a>. This information is used to mark
 the events in your country specially and to offer close mirror
 sites if possible on the download page and on the mirror listing
