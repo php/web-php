@@ -12,8 +12,8 @@ $langs = $LANGUAGES; $options = array();
 // We have post data, and it is an available language
 if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
     
-    // Set the language in a cookie for a year and for all *.php.net servers
-    setcookie("MYPHPNET", $_POST['my_lang'], time() + 60*60*24*365, '/', '.php.net');
+    // Set the language in a cookie for a year
+    mirror_setcookie("MYPHPNET", $_POST['my_lang'], 60*60*24*365);
     
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
