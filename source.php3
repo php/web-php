@@ -27,6 +27,16 @@ if (file_exists($page_name)) {
     show_source($page_name);
 }
 
+if (!strstr($page_name,"include/shared.inc")) {
+?>
+<hr noshade>
+And if you're interested in what's behind the <B>commonHeader()</B> and <B>commonFooter</B> functions, 
+you can always take a look at the <A HREF="/source.php3?page_url=/include/shared.inc">source 
+of the shared.inc</A> file.
+<P>
+<?
+}
+
 commonFooter();
 ?>
 
