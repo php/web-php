@@ -122,10 +122,11 @@ right away.</blockquote>
 	siteEnd();
 
 /* Games */
-	title("Games");
+	title("Games & Gaming");
 	siteStart();
 	site("Battle - a PBeM Game","battle.pbem.net");
 	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
+	site("ClanBase","www.clanbase.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
