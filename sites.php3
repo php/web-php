@@ -146,6 +146,7 @@ right away.</blockquote>
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("Chump Change (a band)","foxx.richweb.com/chumpchange/");
+	site("Click2Music","www.click2music.nl");
 	site("Digital Theatre","www.dtheatre.com");
 	site("EduTest.Com","www.edutest.com");
 	site("film.at - movie listings for Austria","www.film.at");
@@ -266,6 +267,7 @@ right away.</blockquote>
 	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
 	site("Infoseek Investor Relations","www.ir-infoseek.com");
+	site("IRCmail.Net","www.ircmail.net");
 	site("Kattare's Virtual Web Service","www.kattare.com");
 	site("LocateIndia.com","www.locateindia.com");
 	site("Lookup!!","www.lookup.it");
@@ -285,6 +287,7 @@ right away.</blockquote>
 	site("West Central Ohio Marketplace","www.wcomarketplace.com");
 	site("WhereIs Street Atlas (Australia)","www.whereis.com.au");
 	site("WhoBuiltIt","www.whobuiltit.com");
+	site("Widesoft Internet","www.widesoft.com.br");
 	site("zcentral.com","www.zcentral.com");
 	site("Zorango.com","www.zorango.com");
 	siteEnd();
@@ -397,6 +400,7 @@ right away.</blockquote>
 	site("Deal-iMac","deal-imac.com");
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
+	site("DotComma.org","dotcomma.org");
 	site("GAMESDomain","www.gamesdomain.com");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
