@@ -8,6 +8,15 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h3>New usage stats for November available</h3>
+<p>
+<a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
+We just got the latest numbers from
+<a href="http://www.netcraft.com/">Netcraft</a>.
+Like we estimated last month, PHP has now passed one million (virtual) servers.
+<a href="usage.php3">Check out the usage page.</a>
+<br clear="all">
+
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 3 is out!</h3>
 
@@ -18,14 +27,6 @@ build system, Java support and lots of other stuff.
 All 4.0 beta users are encouraged to upgrade.
 <a href="http://www.php.net/version4/">Check it out here!</a>.
 </p>
-
-<h3>PHP soon used on 1,000,000 servers</h3>
-<p>
-<a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
-We just got the latest numbers from
-<a href="http://www.netcraft.com/">Netcraft</a>. If PHP usage keeps growing
-at this rate, we'll pass a million (virtual) servers during November.
-<a href="usage.php3">Check out the usage page.</a>
 
 <h3>PHP Talk at Atlanta Linux Showcase</h3>
 <p>
