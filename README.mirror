@@ -11,8 +11,8 @@ Fetch the web files with the following:
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
 
-Now, make sure your web server is set up to serve up .php3 files as PHP3 
-parsed files.  If it isn't, add the mime-type to your config.
+Now, make sure your web server is set up to serve up .php3 and .php
+files as PHP parsed files.  If it isn't, add the mime-type to your config.
 
 Rename the configuration.inc-dist file to configuration.inc and edit it
 appropriately.  
@@ -25,7 +25,7 @@ Once you create a virtualhost which looks something like:
    ServerName xx.php.net
    ErrorLog logs/error_log
    TransferLog logs/access_log
-   DirectoryIndex index.phtml index.php3 manual.php3 index.html index.htm
+   DirectoryIndex index.php index.php3 manual.php3 index.html index.htm
    php3_include_path .:./include:../include
    </VirtualHost>
 
