@@ -72,7 +72,9 @@ appropriate steps will be taken to integrate your mirror site:
 - The URL of the site that hosts the mirror.  This is where you want
   people will go when they click on the link for your mirror at the
   bottom of each page.
-- The preferred default language for your country.
+- The preferred default manual language for your country (only
+  the manuals are translated). See if there is a manual in your
+  language. If not, please choose one other from the list.
 
 Don't worry about graphics for your country's flag - we've got them all!
 
@@ -81,7 +83,7 @@ message to:
 
    php-mirrors-subscribe@lists.php.net
 
-Traffic is pretty light, and we need to be able to keep in touch with you!
+We need to be able to keep in touch with you!
 
 And finally, don't forget to put a nice little PHP logo somewhere on your 
 hosting company's site if possible.  Grab one of the logos from the 
