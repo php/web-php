@@ -5,8 +5,6 @@
 // Try to find some variations of keyword with $prefix in the $lang manual
 function tryprefix($lang, $keyword, $prefix)
 {
-    global $DOCUMENT_ROOT;
-
     // Replace all underscores with hyphens (phpdoc convention)
     $keyword = str_replace("_", "-", $keyword);
 
@@ -15,35 +13,36 @@ function tryprefix($lang, $keyword, $prefix)
 
     // Try the keyword with the prefix
     $try = "/manual/${lang}/${prefix}${keyword}.php";
-    if (@file_exists("$DOCUMENT_ROOT$try")) { return $try; }
+    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
 
     // Drop out spaces, and try that keyword (if different)
     $nosp = str_replace(" ", "", $keyword);
     if ($nosp != $keyword) {
         $try = "/manual/${lang}/${prefix}${nosp}.php";
-        if (@file_exists("$DOCUMENT_ROOT$try")) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Replace spaces with hyphens, and try that (if different)
     $dasp = str_replace(" ", "-", $keyword);
     if ($dasp != $keyword) {
         $try = "/manual/${lang}/${prefix}${dasp}.php";
-        if (@file_exists("$DOCUMENT_ROOT$try")) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Remove hyphens (and underscores), and try that (if different)
     $noul = str_replace("-", "", $keyword);
     if ($noul != $keyword) {
         $try = "/manual/${lang}/${prefix}${noul}.php";
-        if (@file_exists("$DOCUMENT_ROOT$try")) { return $try; }
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . $try)) { return $try; }
     }
 
     // Nothing found
     return "";
 }
 
-// Try to find a manual page in a specified
-// language for the specified "keyword"
+// Try to find a manual page in a specified language
+// for the specified "keyword". Using the sqlite is
+// better because then stat() calls are eliminated.
 function find_manual_page_slow($lang, $keyword)
 {
     // Possible prefixes to test
@@ -71,51 +70,78 @@ function find_manual_page_slow($lang, $keyword)
     return "";
 }
 
+// If sqlite is available on this mirror use that for manual
+// page shortcuts, so we avoid stat() calls on the server
 function find_manual_page($lang, $keyword)
 {
-	// Use open rather than popen to avoid any chance of confusion
-	// when rsync updates the database
-	if (!function_exists("sqlite_open") || !($s = @sqlite_open(dirname(__FILE__) . '/../backend/manual-lookup.sqlite'))) {
-		return find_manual_page_slow($lang, $keyword);
-	}
+    // If there is no sqlite support, or we are unable to
+    // open the database, fall back to normal search. Use
+    // open rather than popen to avoid any chance of confusion
+    // when rsync updates the database
+    if (!function_exists("sqlite_open") ||
+        !($s = @sqlite_open($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite'))) {
+        return find_manual_page_slow($lang, $keyword);
+    }
 
-	$keyword = str_replace('_', '-', $keyword);
-	if (strpos($keyword, '(') !== false) {
-		$keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
-	}
+    // Reformat keyword, drop anything in parenthesis
+    $keyword = str_replace('_', '-', $keyword);
+    if (strpos($keyword, '(') !== FALSE) {
+        $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+    }
 
-	if (strlen($keyword) == 0) {
-		return "";
-	}
+    // No keyword to search for
+    if (strlen($keyword) == 0) {
+        return "";
+    }
 
-	// NB: sqlite wants ' quoted as ''
-	$keyword = sqlite_escape_string($keyword);
+    // NB: sqlite wants ' quoted as ''
+    $keyword = sqlite_escape_string($keyword);
+    
+    // If there is a dot in the $keyword, then the prefix
+    // is spefied, so we need to carry that on into the SQL
+    // search [eg. function.echo or function.mysql-close]
+    if (strpos($keyword, ".") > 0) {
+        list($prefix, $keyword) = explode('.', $keyword);
+        $prefix_SQL = "prefix = '" . $prefix . ".' AND";
+    } else {
+        $prefix_SQL = "";
+    }
 
-	$keywords = array_unique(array(
-		$keyword,
-		str_replace(' ', '', $keyword),
-		str_replace(' ', '-', $keyword),
-		str_replace('-', '', $keyword),
-		metaphone($keyword)
-	));
+    // List a few variations, plus a metaphone version
+    $keywords = array_unique(array(
+        $keyword,
+        str_replace(' ', '',  $keyword),
+        str_replace(' ', '-', $keyword),
+        str_replace('-', '',  $keyword),
+        metaphone($keyword)
+    ));
 
-	$words = "'" . implode("','", $keywords) . "'";
+    // List of all the keywords in single quotes
+    $words = "'" . implode("','", $keywords) . "'";
 
-	$langs = ($lang != 'en') ?
-		array(sqlite_escape_string($lang), 'en') :
-		array('en');
+    // Try the preferred language first, then the
+    // English one in case no page is found
+    $langs = ($lang != 'en') ?
+        array(sqlite_escape_string($lang), 'en') :
+        array('en');
 
-	foreach ($langs as $lang) {
-		$q = sqlite_query($s, "SELECT name from fs where lang='" . $lang . "' and keyword in (" . $words . ") order by prio LIMIT 1");
-		if ($q) {
-			$r = sqlite_fetch_array($q, SQLITE_NUM);
-			if (isset($r[0])) {
-				return $r[0];
-			}
-		}
-	}
-	return "";
-
+    // Check for all the languages
+    foreach ($langs as $lang) {
+        $q = sqlite_query($s,
+                "SELECT name FROM fs WHERE $prefix_SQL lang = '" . $lang .
+                "' AND keyword IN (" . $words . ") ORDER BY prio LIMIT 1"
+             );
+        
+        // Successful query
+        if ($q) {
+            $r = sqlite_fetch_array($q, SQLITE_NUM);
+            if (isset($r[0])) {
+                // Match found
+                return $r[0];
+            }
+        }
+    }
+    
+    // No match found
+    return "";
 }
-
-?>
