@@ -171,6 +171,7 @@ right away.</blockquote>
 	site("easyDNS","www.easydns.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
 	site("InfoMak","www.infomak.com");
+	site("Kattare's Virtual Web Service","www.kattare.com");
 	site("Mail Chek","mail.chek.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
