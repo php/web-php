@@ -411,7 +411,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
     echo wrap($html_report);
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
+    // CC doc bugs to the doc list
+    if ($ebug_type == "Documentation problem") { $ccdoc = "\nCc: phpdoc@lists.php.net"; } else { $ccdoc = ""; }
+    
+    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid" . $ccdoc)) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
 		echo "Thank you for your help!<P>";
 		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
