@@ -2,28 +2,28 @@
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA='
-<b>Documentation</b>
+<h3>Documentation</h3>
 <p>
 A good place to start is by skimming through the ever-growing <a
 href="/FAQ.php">FAQ</a>.  Then have a look at the online manual and
 other resources in the <a href="/docs.php">documentation</a> section.
 </p>
 
-<b>Books</b>
+<h3>Books</h3>
 <p>
 <a href="/books.php">Books</a> are convenient resources to begin exploring 
 PHP. <a href="/books.php">The titles listed here</a> will help you to start 
 learning PHP, as well as extending your existing knowledge.
 </p>
 
-<b>User Groups</b>
+<h3>User Groups</h3>
 <p>
 PHP user groups have started popping up.  Christopher
 R. Moewes-Bystrom is running a PHP user group registry at <a
 href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
 </p>
 
-<b>Sample Code</b>
+<h3>Sample Code</h3>
 <p>
 Looking for some more sample PHP scripts?  Our <A
 HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
@@ -31,7 +31,7 @@ great places to find many example scripts and useful functions, organized for
 your searching pleasure!
 </p>
 
-<b>Knowledge Base</b>
+<h3>Knowledge Base</h3>
 <p>
 The knowledge base is a growing collection of PHP related information in
 a searchable question and answer format. Anyone can contribute, and
@@ -39,7 +39,7 @@ everyone is encouraged to do so. You can visit the Knowledge Base
 at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 </p>
 
-<b>Instant Resource Center</b>
+<h3>Instant Resource Center</h3>
 <p>
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel

@@ -3,15 +3,15 @@ require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
 <h3>What is PHP?</h3>
-<p><small>
+<p>
 PHP is a server-side, cross-platform, HTML embedded scripting
 language.  If you are completely new to PHP and want to get some idea
 of how it works, have a look at the ' . make_link("/tut.php", "introductory tutorial") . '.
 Once you get beyond that, have a look at the example archive sites and some of the 
 other resources available in the ' . make_link("/links.php", "links section") . '.
-</small></p>
+</p>
 <h3>So, How Much Does It Cost?</h3>
-<p><small>
+<p>
 This may sound a little foreign to all you folks coming from a non-Unix
 background, but PHP doesn\'t cost anything.  You can use it for commercial
 and/or non-commercial use all you want.  You can give it to your friends,
@@ -19,25 +19,20 @@ print it out and hang it on your wall or eat it for lunch.  Welcome to
 the world of ' . make_link("http://www.opensource.org/", "Open Source") . ' software!
 Smile, be happy, the world is good.  For the full legalese, see the ' .
 make_link("/license/", "official license") . '.
-</small></p>
+</p>
 <h3>' . make_link("/thanks.php", "Thanks To:") . '</h3>
-<small>
 &nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<BR>
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<BR>
 &nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<BR>
-</small>
 <h3>Related sites:</h3>
-<small>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<BR>
 &nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<BR>
 &nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<BR>
 &nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<BR>
-</small>
 <h3>Community:</h3>
-<small>
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<BR>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<BR>
-</small>';
+';
 
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";

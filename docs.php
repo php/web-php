@@ -2,20 +2,20 @@
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA='
-<b>FAQ</b>
+<h3>FAQ</h3>
 <p>
 The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
 information and those questions that seem to be on most people\'s minds.
 </p>
 
-<b>Books</b>
+<h3>Books</h3>
 <p>
 <a href="/books.php">Books</a> are convenient resources to begin exploring 
 PHP. <a href="/books.php">The titles listed here</a> will help you to start 
 learning PHP, as well as extending your existing knowledge.
 </p>
 
-<b>Sample Code</b>
+<h3>Sample Code</h3>
 <p>
 Looking for some more sample PHP scripts?  Our <A
 HREF="/links.php">links page</A> page lists some archives of sample PHP code - 

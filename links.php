@@ -2,14 +2,14 @@
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
-<b>Books</b>
+<h3>Books</h3>
 <p>
 <a href="/books.php">Books</a> are convenient resources to begin exploring 
 PHP. <a href="/books.php">The titles listed here</a> will help you to start 
 learning PHP, as well as extending your existing knowledge.
 </p>
 
-<b>Projects</b>
+<h3>Projects</h3>
 <p>
 An increasing number of projects, both commercial and open
 source, are using PHP as their main development tool. There
