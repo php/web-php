@@ -9,6 +9,10 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>Manual Search Tip</h3>
+Oct. 6, 2000.  You can now go directly to PHP manual pages with a URL such as
+<a href="http://php.net/strlen">php.net/strlen</a>.  
+
 <h3>PHP 4.0.2 Released!</h3>
 August 29, 2000.  The new version features new functions, many bug fixes, and increased
 performance.  <a href="downloads.php">Download now!</a>
