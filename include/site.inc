@@ -153,7 +153,11 @@ function mirror_redirect($absoluteURI, $remote = FALSE)
 function mirror_setcookie($name, $content, $exptime)
 {
     if (!headers_sent()) {
-        return setcookie($name, $content, time() + $exptime, '/', '.php.net');
+        if (is_official_mirror()) {
+            return setcookie($name, $content, time() + $exptime, '/', '.php.net');
+        } else {
+            return setcookie($name, $content, time() + $exptime, '/');
+        }
     } else {
         return FALSE;
     }

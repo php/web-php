@@ -71,15 +71,23 @@ site_header("My PHP.net");
 
 <p>
  This page allows you to customize the PHP.net site to some degree
- to your own liking. Currently you can only set the language you
- prefer, thus overriding any other automatic language selection.
+ to your own liking.
 </p>
 
+<?php if (!is_official_mirror()) { ?>
+<p class="warn">
+ This is not an official PHP.net mirror site, and therefore the settings
+ you set and see here will <strong>not</strong> be effective on any
+ official PHP.net mirror site. The settings you specify here are only
+ going to be active for this URL, and only if you have cookies enabled.
+</p>
+<?php } else { ?>
 <p>
  These settings will be active on all official PHP.net mirror sites,
  and are stored using cookies, so you need to have cookies enabled
  to let your settings work.
 </p>
+<?php } ?>
 
 <h2>Preferred language</h2>
 
