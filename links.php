@@ -355,6 +355,12 @@ site_header("Links");
   Macromedia created Dreamweaver MX, a rapid web application development
   tool supporting PHP.
  </li>
+ 
+ <li>
+  <a href="http://www.maguma.com/">Maguma</a><br />
+  Maguma produces an IDE with debugging to speed up the development of
+  PHP enabled websites and applications.
+ </li>
 
  <li>
   <a href="http://www.sourceguardian.com/">SourceGuardian</a><br />
