@@ -14,7 +14,7 @@ WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
 <h3>PHP in the News</h3>
 <P>
 <a href="http://www.netcraft.com">Netcraft's</a> February server survey results are
-out.  They don't actually have scripting language number online at Netcraft, but
+out.  They don't actually have scripting language numbers online at Netcraft, but
 they do a manual grep and email us this information monthly.  Here is a little 
 <a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
 couple of months.
