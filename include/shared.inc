@@ -1,5 +1,7 @@
 <?php // -*- C++ -*-
-require("site.inc");
+/* $Id$ */
+
+require_once 'site.inc';
 
 /* Check that browser! */
 
