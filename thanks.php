@@ -37,7 +37,7 @@ our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
 
 <p>
 Special 'legacy' thanks go to <?php print_link("http://www.synacor.com", "Synacor"); ?>. 
-Synacor provided us with many Terabytes of bandwidth and hosting for www.php.net and others for many years. 
+Synacor provided us with many terabytes of bandwidth and hosting for www.php.net and others for many years. 
 PHP.net is very grateful for all their support.
 </p>
 
