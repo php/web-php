@@ -150,6 +150,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>New Installation Instructions</h1>
+<p>
+ <span class="newsdate">[14-Aug-2004]</span>
+ The latest online version of the PHP Manual contains a completely reorganized
+ <a href="/install">Installation and Configuration</a> part, which is now
+ splitted up by platforms and servers to ease your first steps with PHP. The
+ manual Windows installation instructions are completely revised, and now
+ suggest you to set environment variables instead of moving files. This way
+ upgrades and configuration changes become more easier.
+</p>
+<p>
+ Hereby we would like to kindly ask everyone who published an article or howto
+ about installing PHP on Windows to revise those instructions according to our
+ latest guide. These new instructions got distributed with PHP 5.0.1 in
+ both the source code and binary versions, and will continue to be shipped
+ with future versions of PHP.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.1"></a>
 <h1>PHP 5.0.1 Released!</h1>
@@ -166,7 +186,6 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
-
 
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.9RC1 released!</h1>
