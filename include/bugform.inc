@@ -1,10 +1,10 @@
-<form method="POST" action="<?php echo $PHP_SELF;?>">
-<input type="hidden" name="cmd" value="send" />
-<table>
+<form method="post" action="<?php echo $PHP_SELF;?>">
+<input type="hidden" name="cmd" value="send">
+<table border="0">
  <tr>
   <th align="right">Your email address:</th>
   <td colspan="2">
-   <input type="text" size="20" maxlength="40" name="email" value="<?php echo htmlspecialchars(stripslashes($email));?>" />
+   <input type="text" size="20" maxlength="40" name="email" value="<?php echo htmlspecialchars(stripslashes($email));?>">
   </td>
  </tr><tr>
   <th align="right">PHP version:</th>
@@ -19,20 +19,20 @@
  </tr><tr>
   <th align="right">Operating system:</th>
   <td colspan="2">
-   <input type="text" size="20" maxlength="32" name="php_os" value="<?php echo htmlspecialchars(stripslashes($operating_system));?>" />
+   <input type="text" size="20" maxlength="32" name="php_os" value="<?php echo htmlspecialchars(stripslashes($operating_system));?>">
   </td>
  </tr><tr>
   <th align="right">Bug description:</th>
   <td colspan="2">
-   <input type="text" size="40" maxlength="79" name="sdesc" value="<?php echo htmlspecialchars(stripslashes($sdesc));?>" />
+   <input type="text" size="40" maxlength="79" name="sdesc" value="<?php echo htmlspecialchars(stripslashes($sdesc));?>">
   </td></tr>
  </tr><tr>
   <th align="right">Password:</th>
   <td>
-   <input type="text" size="20" maxlength="20" name="passwd" value="<?php echo htmlspecialchars(stripslashes($passwd));?>" />
+   <input type="text" size="20" maxlength="20" name="passwd" value="<?php echo htmlspecialchars(stripslashes($passwd));?>">
   </td>
   <td><font size="-2">
-    You may enter any password here.  This password allows you to come back and
+    You may enter any password here. This password allows you to come back and
     modify your submitted bug report at a later date. [<a
     href="/bug-pwd-finder.php">Lost your password?</a>]
   </font></td>

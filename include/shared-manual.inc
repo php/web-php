@@ -6,7 +6,6 @@ $TOC = array();
 
 $SIDEBAR_DATA = '';
 
-
 function setupNavigation($data) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $tstamp;
     $HOME = @$data["home"];
@@ -18,14 +17,12 @@ function setupNavigation($data) {
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
-
-
 function makeBorderTOC($this) {
 	global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
 	global $SIDEBAR_DATA, $LANG;
 
-	$SIDEBAR_DATA = '<form method="GET" action="/manual-lookup.php">' .
-	$SIDEBAR_DATA.= '<table border="0" CELLPADDING="4" CELLSPACING="0">';
+	$SIDEBAR_DATA = '<form method="get" action="/manual-lookup.php">' .
+	$SIDEBAR_DATA.= '<table border="0" cellpadding="4" cellspacing="0">';
 
 	$SIDEBAR_DATA.= '<tr valign="top"><td><small>' .
 		'<input type="hidden" name="lang" value="' . $LANG . '">' .
@@ -181,7 +178,7 @@ if (isset($MAGIC_COOKIE) && $id) {
 </td></tr>
 </table>
 </td>
-</tr>  
+</tr>
 <?php
 };
 
@@ -191,8 +188,8 @@ function manualGetUserNotes($title, $id)
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE;
 	$notes = array();
-	if(strstr($MYSITE,"www.php.net")) {
-#	if(strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
+	if (is_primary_site()) {
+#	if(is_primary_site() || strstr($MYSITE,"localhost")) {
 		$host = 'localhost';
 #		$host = '127.0.0.1';
 		$user = 'nobody';
@@ -235,7 +232,7 @@ function manualUserNotes($title, $id) {
 		(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
 		$PHP_SELF;
 
-	echo "<tr bgcolor=\"#d0d0d0\" VALIGN=\"top\">\n";
+	echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
 	echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
 	echo "<td align=\"right\">";
 	print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
@@ -288,7 +285,7 @@ function manualUserNotes($title, $id) {
 
 function manualLastModified($title, $id) {
     global $MYSITE, $SCRIPT_FILENAME;
-    if(strstr($MYSITE,"www.php.net")) {
+    if (is_primary_site()) {
         $host = 'localhost';
         $user = 'nobody';
         $pass = '';

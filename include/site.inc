@@ -46,11 +46,11 @@ function show_mirror_options ($current) {
   foreach ($MIRRORS as $url=>$mirror) {
     if ($mirror[4] == 1) { /* only list full mirrors here */
       if ($url==$current) {
-        echo '<option value="' . $url . '" SELECTED>' . $COUNTRIES[$mirror[0]] . 
-          ' (' . $mirror[1] . ") *\n";
+        echo '<option value="' . $url . '" selected>' . $COUNTRIES[$mirror[0]] . 
+          ' (' . $mirror[1] . ") *</option>\n";
       } else {
         echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
-          ' (' . $mirror[1] . ")\n";
+          ' (' . $mirror[1] . ")</option>\n";
       }
     }
   }

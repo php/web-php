@@ -5,13 +5,11 @@
  * $Id$
  */
 
-
 // checks that is an *outside* host, and tries to remove anti-SPAM bits
 function clean_AntiSPAM ($email) {
     $remove_spam = "[-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?";
     return eregi_replace($remove_spam,"",trim($email));
 }
-
 
 function is_emailable_address( $email) {
     $hosts_regex="lists\.php\.net|chek.*\.com";
@@ -23,4 +21,5 @@ function is_emailable_address( $email) {
         return false;
     }
 }
+
 ?>

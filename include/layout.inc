@@ -1,7 +1,6 @@
 <?php
 /* $Id$ */
 
-
 # spacer()
 # print a IMG tag for a sized spacer GIF
 #
@@ -15,8 +14,6 @@ function spacer($width=1, $height=1, $align=false, $extras=false) {
 	);
 }
 
-
-
 # resize_image()
 # tag the output of make_image() and resize it manually
 #
@@ -27,8 +24,6 @@ function resize_image($img, $width=1, $height=1) {
 	$str = substr($str,0,-1) . sprintf(' height="%s" width="%s">', $height, $width );
 	return $str;
 }
-
-
 
 # make_image()
 # return an IMG tag for a given file (relative to the images dir)
@@ -62,8 +57,6 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 	return $image;
 }
 
-
-
 # print_image()
 # print an IMG tag for a given file
 #
@@ -71,8 +64,6 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 function print_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	print make_image($file, $alt, $align, $extras, $dir);
 }
-
-
 
 # make_submit()
 #  - make a submit button image
@@ -90,8 +81,6 @@ function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false,
 	return $return;
 }
 
-
-
 # delim()
 # print a pipe delimiter
 #
@@ -103,8 +92,6 @@ function delim($color=false) {
 	return sprintf('<font color="%s">&nbsp;|&nbsp;</font>', $color );
 }
 
-
-
 # hdelim()
 # print a horizontal delimiter (just a wide line);
 #
@@ -115,8 +102,6 @@ function hdelim($color="#000000") {
 	}
 	return sprintf('<hr noshade size="1" color="%s">', $color );
 }
-
-
 
 # make_link()
 # return a hyperlink to something, within the site
@@ -131,8 +116,6 @@ function make_link ($url, $linktext=false, $target=false, $extras=false) {
 	);
 }
 
-
-
 # print_link()
 # echo a hyperlink to something, within the site
 #
@@ -140,7 +123,6 @@ function make_link ($url, $linktext=false, $target=false, $extras=false) {
 function print_link($url, $linktext=false, $target=false, $extras=false) {
 	echo make_link($url, $linktext, $target, $extras);
 }
-
 
 # download_link()
 # print a link for a downloadable file (including filesize)
@@ -164,9 +146,7 @@ function download_link($file, $title) {
 	if ($size) { echo " [" . number_format($size, 0, ".", ",") . "Kb]"; }
 }
 
-
 $enclosed = 0;
-
 
 # commonheader()
 #
@@ -183,15 +163,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <link rel="stylesheet" href="/style.css">
 </head>
 
-<body
-	topmargin="0" leftmargin="0"
-	marginheight="0" marginwidth="0"
-        bgcolor="#ffffff"
-        text="#000000"
-        link="#000099"
-        alink="#0000ff"
-        vlink="#000099"
-><a name="TOP"></a>
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
+  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
+  vlink="#000099"><a name="TOP"></a>
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
   <tr bgcolor="#9999cc">
     <td align="middle" rowspan="2" width="120">
@@ -228,21 +202,21 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
 
   <tr bgcolor="#666699">
-    <form method="POST" action="/search.php">
-      <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
+    <form method="post" action="/search.php">
+      <td align="right" valign="top" colspan="2"><font color="#ffffff">
         <small>search for</small>
-<INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<?php echo htmlspecialchars($prevsearch) ?>" SIZE="30">
+<input class="small" type="text" name="pattern" value="<?php echo htmlspecialchars($prevsearch) ?>" size="30">
 <small>in the</small>
-<SELECT NAME="show" CLASS="small">
-<OPTION VALUE="quickref" SELECTED>function list
-<OPTION VALUE="nosource">whole site
-<OPTION VALUE="manual">online documentation
-<OPTION VALUE="bugdb">bug database
-<OPTION VALUE="maillist">general mailing list
-<OPTION VALUE="devlist">developer mailing list
-<OPTION VALUE="phpdoc">documentation mailing list 
-<OPTION VALUE="source">website source code    
-</SELECT>
+<select name="show" class="small">
+<option value="quickref" selected>function list
+<option value="nosource">whole site
+<option value="manual">online documentation
+<option value="bugdb">bug database
+<option value="maillist">general mailing list
+<option value="devlist">developer mailing list
+<option value="phpdoc">documentation mailing list 
+<option value="source">website source code    
+</select>
 <?php	echo make_submit('small_submit_white.gif', 'search', 'bottom');
       ?>&nbsp;<br>
       </font></td>
@@ -278,8 +252,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 }
 
 
-
-
 # commonfooter()
 #
 #
@@ -294,7 +266,7 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">
-    <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this);">
+    <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);">
       <td align="right" valign="bottom">
       <script language="javascript">
       <!--
@@ -308,8 +280,8 @@ function commonFooter() {
         }
       //-->
       </script>
-      <input type="hidden" name="REDIRECT" value="1" />
-      <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>" />
+      <input type="hidden" name="REDIRECT" value="1">
+      <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>">
       <?php
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
@@ -334,14 +306,14 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
   <tr valign="top" bgcolor="#cccccc">
     <td><small>
-      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001 The PHP Group'); ?><BR>
-      All rights reserved.<BR>
+      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001 The PHP Group'); ?><br>
+      All rights reserved.<br>
       </small>
     </td>
     <td align="right"><small>
       This mirror generously provided by:
-      <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><BR>
-      Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore><BR>
+      <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br>
+      Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore><br>
       </small>
     </td>
   </tr>
@@ -378,4 +350,5 @@ function clean_note($text) {
     $text = "<tt>".nl2br($text)."</tt>";
     return $text;
 }
+
 ?>
