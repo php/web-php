@@ -150,7 +150,7 @@ if (isset($pattern)) {
             exit;
     }
 
-	header("Location: http://www.alltheweb.com/search?q=" . urlencode($pattern) .
+	header("Location: http://www.google.com/search?q=" . urlencode($pattern) .
 			"+site:" . urlencode(substr($MYSITE, 7)) . "&l=$lang");
 	exit;
 
