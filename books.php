@@ -475,6 +475,17 @@ array (
     /* language     */ "de"
    ),
 
+ array(
+    /* title[s]     */ "PHP Ge-Packt",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382660685X/wwwphpnet07",
+    /* author[s]    */ array("Christoph Aigner", "Thomas Strohmaier"),
+    /* auth link[s] */ array(""),
+    /* image        */ "aigner.jpg",
+    /* information  */ "MITP, 2001, ISBN 3-8266-0685-X, 512 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+   ),
+
   array(
     /* title[s]     */ "PHP 4 programmering",
     /* title_link   */ "http://pagina.se/bok.html?20660",
