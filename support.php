@@ -47,7 +47,8 @@ at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel
 on <a href="http://openprojects.nu">OpenProjects</a>. There are also many
-PHP related channels on <a href="http://www.efnet.org/channels.html?q=php&s=0">EFNet</a>.
+PHP related channels on EFNet and on <a href="http://www.ludd.luth.se/irc/main.html">IRCNet</a> 
+(like #php and <a href="http://php.de.jayniz.de">#php.de</a>).
 </p>
 ';
 
