@@ -188,7 +188,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
            $SEARCH_BASE, $ONLOAD, $BASE_FOR_MANPAGE;
 
     // If no onload event is specified, restore the last search
-    if (empty($ONLOAD)) { $ONLOAD = "searchHistory();"; }
+    if (empty($ONLOAD)) { $ONLOAD = "searchHistory(); tocImages();"; }
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>

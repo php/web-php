@@ -70,3 +70,32 @@ function searchHistory()
         }
     }
 }
+
+// Make images appear by the side of TOC items on the manual pages
+// This is not a user based function, but a mirror based one. Only
+// php.net has images on a different server. But for performance
+// reasons, the code is implemented to run on the client side.
+function tocImages()
+{
+    // If DOM is supported, get the <div>s
+    if (document.getElementsByTagName) {
+            
+        divs = document.getElementsByTagName("div");
+            
+        // Check if we are on the master site or not
+        staticContent = (location.hostname == "www.php.net" ||
+                         location.hostname == "php.net") ?
+                         "http://static.php.net/www.php.net/" : "/";
+        
+        // Change the style of every div tag which is in
+        // the "toci" or "toca" class, modifying the class
+        // according to the hostname
+        for (var i = 0; i < divs.length; i++) {
+            if (divs[i].className == "toci") {
+                divs[i].style.backgroundImage = "url(" + staticContent + "images/box-0.gif)";
+            } else if(divs[i].className == "toca") {
+                divs[i].style.backgroundImage = "url(" + staticContent + "images/box-1.gif)";
+            }
+        }
+    }
+}

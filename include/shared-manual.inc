@@ -22,9 +22,10 @@ function setupNavigation($data) {
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
-// Put all the border table of contents data to $SIDEBAR_DATA
-function makeBorderTOC($this) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT, $SIDEBAR_DATA;
+// Append all the table of contents data to $SIDEBAR_DATA
+function makeBorderTOC($id)
+{
+    global $UP, $HOME, $TOC, $SIDEBAR_DATA;
 
     $SIDEBAR_DATA .= '<!--UdmComment-->' . "\n" . 
                      '<table border="0" cellpadding="0" cellspacing="5" width="100%">';
@@ -41,28 +42,33 @@ function makeBorderTOC($this) {
             '</td></tr>';
     }
 
-    $SIDEBAR_DATA.= '<tr valign="top"><td><small class="sidetoc">';
+    $SIDEBAR_DATA.= '<tr valign="top"><td>';
 
-    for ($i = 0; $i < count($TOC); $i++) {
-        list($url, $title) = $TOC[$i];
-        if (!$url || !$title) {
-            continue;
+    // Print out one link for all TOC items on this page
+    foreach($TOC as $tocitem) {
+    
+        // Get URL and title component
+        list($url, $title) = $tocitem;
+
+        // Get the proper classname to use for this <div>
+        $divclass = ($url == $id) ? "toca" : "toci";
+        
+        // There are some very long function names, which
+        // make the TOC be too wide, so wrap them
+        // eg: xml_set_processing_instruction_handler 
+        if (strlen($title) > 30 && preg_match("!^[a-z0-9_]+$!", $title)) {
+            $title = str_replace("_", " ", $title);
+            $title = wordwrap($title, 30, "<br>");
+            $title = str_replace(array(" ", "<br>"), array("_", "<br />_"), $title);
         }
-        if ($UP[0] == 'funcref.php') {
-            $title = eregi_replace(" functions\$", "", $title);
-        }
-        $img = 'box-0.gif';
-        if ($title == $this) {
-            $img = 'box-1.gif';
-            $title = "<b>$title</b>";
-        }
-        $SIDEBAR_DATA .= '&nbsp;' . 
-            make_link($url, make_image($img, "&middot;") . $title ) .
-            "<br />\n";
+        
+        // Print out the TOC item using a div
+        $SIDEBAR_DATA .= "\n<div class=\"$divclass\">" .
+                         make_link($url, $title) . "</div>";
     }
 
-    $SIDEBAR_DATA .= '</small></td></tr>';
-    $SIDEBAR_DATA .= '</table><!--/UdmComment-->';
+    // End navigation table
+    $SIDEBAR_DATA .= "</td></tr></table><!--/UdmComment-->\n";
 }
 
 // Print out manual navigation bar
@@ -305,7 +311,7 @@ function manualHeader()
     if ($PRINT_PAGE) {
         manualPrintHeader($title);
     } else {
-        makeBorderTOC($title);
+        makeBorderTOC($id);
         commonHeader ($title. " - Manual");
         navigationBar($title, $id, "top");
     }
