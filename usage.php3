@@ -2,9 +2,9 @@
 require("shared.inc");
 commonHeader("PHP Usage Stats");
 ?>
-November 1999: 1114021 Domains, 357481 IP Addresses<br>
+December 1999: 1256216 Domains, 378301 IP Addresses<br>
 Source: <a href="http://www.netcraft.com">Netcraft</a><br>
-<img src="phpstats-199911.gif"><br clear=left>
+<img src="phpstats-199912.gif"><br clear=left>
 Note: We do not know what caused the sudden surge in the number
 of domains and then the subsequent drop-off in April-May 1999.
 The number of physical servers actually running PHP has been growing
