@@ -23,7 +23,7 @@ Archives for this list can be found at:
 <ul>
 <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
 <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List (Nice interface)</a>
-<li><a href="http://www.tryc.on.ca/php3.html">PHP3 List (going back further than the above)</a>
+<li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List (going back further than the above)</a>
 </ul>
 <b>Warning:</b> The PHP3 mailing list gets close to 2500 messages per month currently.  Do the math.  
 That translates to about 80 messages per day.  If your mailbox can't handle this sort of traffic you 
