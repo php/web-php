@@ -131,6 +131,7 @@ right away.</blockquote>
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
 	site("DataGuard AS - Security Consulting","www.dataguard.no");
+	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("PalmShop","www.palmshop.de");
 	siteEnd();
