@@ -41,7 +41,7 @@ if (isset($pattern) && ($pattern)) {
 		exit;
 	}
 	if (!$HAVE_SEARCH) {
-		$location="http://uk.php.net/search.php";
+		$location="http://www.php.net/search.php";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
 		Header("Location: ".$location."?".$query);
 		exit;
@@ -121,7 +121,7 @@ Restrict the search to: <BR>
 		if ($HAVE_SEARCH && isset($htsearch_prog)) {
 			$form=$PHP_SELF;
 		} else {
-			$form="http://uk.php.net/search.php";
+			$form="http://www.php.net/search.php";
 		}
 		if (!isset($base)) {
 			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
