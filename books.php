@@ -10,10 +10,10 @@ commonHeader("PHP Books");
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet"
 ><IMG SRC="/gifs/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet"
 >PHP Pocket Reference</A><BR>
 by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 <SMALL>
@@ -24,23 +24,23 @@ O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet"
 ><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP Programming</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet">Professional PHP Programming</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=9">Jesus Castagnetto</A>, Harish Rawat, <A HREF="http://zend.com/comm_person.php?id=21">Sascha Schumann</A>, Chris Scollo, Deepak Veliath<BR> 
 <SMALL>
 Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
-<A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
+<A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet"
 ><IMG SRC="/jpgs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet"
 >Core PHP Programming</A><BR>
 Using PHP to Build Dynamic Web Sites</BR>
 by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
@@ -53,10 +53,10 @@ Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/wwwphpnet"
 ><IMG SRC="/gifs/medinets.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/wwwphpnet"
 >PHP3: Programming Browser-Based Applications</A><BR>
 by David Medinets<BR>
 <SMALL>
@@ -67,10 +67,10 @@ MacGraw-Hill, 2000, ISBN 0-07-135342-9, 552 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/wwwphpnet"
 ><IMG SRC="/jpgs/hilton-willis.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/cmvsstuff">Building Database Applications on the Web Using PHP3</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/wwwphpnet">Building Database Applications on the Web Using PHP3</A><BR>
 by Craig Hilton and Jeff Willis<BR>
 <SMALL>
 Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages 
@@ -80,10 +80,10 @@ Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/wwwphpnet"
 ><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff">PHP Essentials</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/wwwphpnet">PHP Essentials</A><BR>
 <SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
 by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
 <SMALL>
@@ -94,10 +94,10 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/wwwphpnet"
 ><IMG SRC="/jpgs/php_fe.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/cmvsstuff">PHP Fast & Easy Web Development</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/wwwphpnet">PHP Fast & Easy Web Development</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
 <SMALL>
 Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
@@ -107,10 +107,10 @@ Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/wwwphpnet"
 ><IMG SRC="/jpgs/zandstra.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/cmvsstuff">SAMS Teach Yourself PHP4 in 24 Hours</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/wwwphpnet">SAMS Teach Yourself PHP4 in 24 Hours</A><BR>
 by Matt Zandstra<BR>
 <SMALL>
 Sams, June 2000, ISBN 0-6723-1804-0, 481 pages 
@@ -120,10 +120,10 @@ Sams, June 2000, ISBN 0-6723-1804-0, 481 pages
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/wwwphpnet"
 ><IMG SRC="/jpgs/ratschiller_gerken.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff">Web Application Development with PHP 4.0</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/wwwphpnet">Web Application Development with PHP 4.0</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR> 
 <SMALL>
 Contains Official Zend API Documentation<BR>
@@ -135,10 +135,10 @@ New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/wwwphpnet"
 ><IMG SRC="/jpgs/bible.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/cmvsstuff">PHP 4 Bible</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/wwwphpnet">PHP 4 Bible</A><BR>
 by Tim Converse and Joyce Park<BR><SMALL>
 IDG Books Worldwide, August 2000, ISBN 0-7645-4716-X<BR>
 </SMALL>
@@ -146,10 +146,10 @@ IDG Books Worldwide, August 2000, ISBN 0-7645-4716-X<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/wwwphpnet"
 ><IMG SRC="/jpgs/gilmore.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/cmvsstuff">PHP and MySQL Web Development</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/wwwphpnet">PHP and MySQL Web Development</A><BR>
 by Luke Welling and Laura Thomson<BR><SMALL>
 Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </SMALL>
@@ -157,10 +157,10 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet"
 ><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/cmvsstuff">Beginning PHP 4</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet">Beginning PHP 4</A><BR>
 by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
 Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </SMALL>
@@ -168,10 +168,10 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet"
 ><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff">PHP Developer's Cookbook</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet">PHP Developer's Cookbook</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and <A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes</A><BR><SMALL>
 MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </SMALL>
@@ -467,10 +467,10 @@ by Herbert G. Fischer<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet"
 ><IMG SRC="/gifs/mysql-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet"
 >MySQL and mSQL (Nutshell Series)</A><BR>
 by Randy Jay Yarger, George Reese and Tim King<BR>
 <SMALL>O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<BR>
@@ -480,10 +480,10 @@ Russian translation: <A HREF="http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/wwwphpnet"
 ><IMG SRC="/jpgs/dubois.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/wwwphpnet"
 >MySQL</A><BR>
 by Paul DuBois<BR>
 <SMALL>
@@ -513,10 +513,10 @@ Translation by Dorothea Reder and Judith Muhr<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/wwwphpnet"
 ><IMG SRC="/gifs/webmaster-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/wwwphpnet"
 >Webmaster in a Nutshell (Nutshell Series)</A><BR>
 <SMALL>includes a large chapter on PHP written by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A></SMALL><BR>
 by Stephen Spainhour and Robert Eckstein<BR>
@@ -528,10 +528,10 @@ O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/wwwphpnet"
 ><IMG SRC="/gifs/cvsbook.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/wwwphpnet"
 >Open Source Development with CVS</A><BR>
 <SMALL>Learn how to work with Open Source Software</SMALL><BR>
 by Karl Franz Fogel<BR>
@@ -543,10 +543,10 @@ Coriolis, 1999, ISBN 1-57610-490-7, 316 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/wwwphpnet"
 ><IMG SRC="/gifs/cvspr.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/wwwphpnet"
 >CVS Pocket Reference</A><BR>
 by Gregor N. Purdy<BR>
 <SMALL>
@@ -557,10 +557,10 @@ O'Reilly, August 2000, ISBN 0-5960-0003-0, 79 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/wwwphpnet"
 ><IMG SRC="/gifs/regex.s.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/wwwphpnet"
 >Mastering Regular Expressions</A><BR>
 by Jeffrey E. Friedl and Andy Oram<BR>
 <SMALL>
