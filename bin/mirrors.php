@@ -1,5 +1,7 @@
 <?php
 
+require_once 'prepend.inc';
+
 // This file is intended to be used on php.net only!
 if (!is_primary_site()) { exit; }
 
