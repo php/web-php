@@ -93,6 +93,9 @@ $uri_aliases = array (
     "whatis"      => "introduction",
     "whatisphp"   => "introduction",
     "what_is_php" => "introduction",
+    "windows"     => "install.windows",
+    "win32"       => "install.windows",
+    "globals"     => "security.registerglobals",
 
 );
 
