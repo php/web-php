@@ -214,7 +214,8 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 
 function manualGetUserNotes($title)
 {
-	// either get it from local db or www.php.net/manual/get.php
+	// if we're www.php.net, get it from the local DB
+	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE;
 	$notes = array();
 	if(strstr($MYSITE,"www.php.net")) {
