@@ -50,7 +50,7 @@ designed versions. Please pick a language and format from
 the table below.
 </p>
 
-<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<table border="0" cellpadding="3" cellspacing="2" width="100%">
 
 <tr bgcolor="#cccccc"><td>Format</td><td>Languages</td></tr>
 
