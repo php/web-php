@@ -36,13 +36,9 @@ acronym {
 	text-align: left !important;
 }
 
-code, pre {
+code, pre, tt {
 	font-family: Courier, "Courier New", monospace;
 	font-size: 90%;
-}
-
-pre.note {
-        font-size: 90%; /* font size of less than 90% is impossible to read */
 }
 
 h1 {
@@ -118,4 +114,11 @@ p.formerror {
         color: #000000;
         background: #ffeeee;
         padding: 2px 4px;
+}
+
+div.tip {
+        border: 1px solid #00c;
+        color: #006;
+        background: #eef;
+        padding: 0px 8px;
 }
