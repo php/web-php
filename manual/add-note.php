@@ -21,6 +21,16 @@ CREATE TABLE note (
 	$DISABLE_KICKOUTS=1;
 	commonHeader("Manual Notes");
 
+/* clean off leading and trailing whitespace */
+$user = trim($user);
+$note = trim($note);
+
+/* plug in general email address for blank email addresses
+on notes */
+if ($user == "") {
+    $user = "php-general@lists.php.net";
+    }
+
 # turn the POST data into GET data so we can do the redirect
 if(!strstr($MYSITE,"www.php.net")) {
         Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
@@ -79,7 +89,9 @@ are being edited and support questions are being <b>deleted</b> from them,
 so if you post a question, it will be removed. (But once you get an
 answer, feel free to come back and add it here!)
 <P>
-<A href="/support.php">Click here to go to the support pages.</A>
+<A href="/support.php">Click here to go to the support pages.</A><BR>
+<A href="http://bugs.php.net">Click here to submit a bug report.</A><BR>
+<A href="http://bugs.php.net">Click here to request a feature.</A>
 
 <?if (!isset($sect)):?>
 <p><b>To add a note, you must click on the 'Add Note' button
