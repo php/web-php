@@ -117,7 +117,7 @@ echo '</p>';
 <h2>Complete Source Code</h2>
 <ul>
   <li><?php download_link('php-4.2.3.tar.bz2','PHP 4.2.3 (tar.bz2)'); ?> - 6 September 2002<br />
-<tt>md5: a0c7531f3d53a7736742c780f72a0f41
+  md5: a0c7531f3d53a7736742c780f72a0f41
   </li>
   <li><?php download_link('php-4.2.3.tar.gz', 'PHP 4.2.3 (tar.gz)');  ?> - 6 September 2002<br />
   md5: 2a4a963d79d97ea2725c860c77e908a2
