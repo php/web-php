@@ -300,6 +300,10 @@ function manualFooter($title,$id="") {
     }
 }
 
+// =============================================================================
+// Printer friendly support functions under this line
+// =============================================================================
+
 // "Printer optimized" header for manual pages
 function manualPrintHeader ($title = '') {
     global $REQUEST_URI, $SERVER_NAME;
