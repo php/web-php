@@ -117,7 +117,7 @@ commonHeader("Mirroring php.net");
      # The next lines are only necessary if you would
      # like to provide local search support (see /Mirrors-htdig.tgz)
      SetEnv HTSEARCH_PROG /local/htdig/bin/htphp.sh
-     SetEnv HTSEARCH_EXCLUDE "/print/ /printwn/ /manual/howto /cal.php"
+     SetEnv HTSEARCH_EXCLUDE "/print/ /printwn/ /manual/howto/ /cal.php"
 
    &lt;/VirtualHost&gt;
 </pre>
