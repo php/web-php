@@ -8,11 +8,13 @@ $SIDEBAR_DATA = '
 <h3>What is PHP?</h3>
 
 <p>
-PHP is a server-side, cross-platform, HTML embedded scripting
-language.  If you are completely new to PHP and want to get some idea
+PHP (recursive acronym for PHP: Hypertext Preprocessor) 
+is a server-side, cross-platform, HTML embedded scripting
+language. If you are completely new to PHP and want to get some idea
 of how it works, have a look at the ' . make_link("/tut.php", "introductory tutorial") . '.
-Once you get beyond that, have a look at the example archive sites and some of the 
-other resources available in the ' . make_link("/links.php", "links section") . '.
+Once you get beyond that, please see our ' . make_link("/docs.php", "manual") . ',
+and the example archive sites and some of the other resources
+available in the ' . make_link("/links.php", "links section") . '.
 </p>
 
 <p>
@@ -23,11 +25,11 @@ PHP is a project of the '.make_link("http://www.apache.org/","Apache Software Fo
 
 <p>
 This may sound a little foreign to all you folks coming from a non-Unix
-background, but PHP doesn\'t cost anything.  You can use it for commercial
-and/or non-commercial use all you want.  You can give it to your friends,
-print it out and hang it on your wall or eat it for lunch.  Welcome to
-the world of ' . make_link("http://www.opensource.org/", "Open Source") . ' software!
-Smile, be happy, the world is good.  For the full legalese, see the ' .
+background, but PHP doesn\'t cost anything. You can use it for commercial
+and/or non-commercial use all you want. You can give it to your friends,
+print it out and hang it on your wall or eat it for lunch. Welcome to
+the world of ' . make_link("http://www.opensource.org/", "Open Source") . '
+software! Smile, be happy, the world is good. For the full legalese, see the ' .
 make_link("/license/", "official license") . '.
 </p>
 
@@ -49,13 +51,13 @@ make_link("/license/", "official license") . '.
 <h3>Contact</h3>
 
 <p>
-You can contact the webmaster at ' . 
-make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
-</p>
-<p>
 Please
 submit website bugs in the ' .
 make_link('http://bugs.php.net/', 'bug system') . '.
+</p>
+<p>
+You can contact the webmaster at ' . 
+make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
 </p>
 ';
 
