@@ -54,6 +54,11 @@ $formats = array(
  to start downloading.
 </p>
 
+<p class="tip">
+ Currently only the CHM versions are downloadable. We are going
+ to make the other formats available soon.
+</p>
+
 <p>
  Note that the packaged HTML version of the manual
  (tar.bz2) doesn't contain any directories,
