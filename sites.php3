@@ -159,6 +159,7 @@ right away.</blockquote>
 	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
 	site("ClanBase","www.clanbase.com");
 	site("GamePoint Shop","shop.gamepoint.net");
+	site("mplayer.com","www.mplayer.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
@@ -385,6 +386,7 @@ right away.</blockquote>
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("Arlberg Online","www.arlberg.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("Centro Turistico Studentesco","www.cts.it");
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
 	site("Oaxaca State Tourist Guide","oaxaca-travel.com");
