@@ -3,6 +3,17 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP 3.0.8 has been released!</h3>
+<p>
+May 22, 1999.  A number of bug fixes, including glibc-2.1 related issues
+that caused previous versions not to work with RedHat 6.0.  Also a lot of
+work on the oci8 Oracle module by Thies C. Arntzen, a bunch of optimizations
+by Sascha Schumann along with his cool new DBA module which makes it much 
+easier to deal with different types of dbm file formats.  Plus quite a few
+other things.  See the 
+<a href="ChangeLog.php3">ChangeLog</a> for the complete list of changes.
+</P>
+
 <h3>PHP Related Books are Available</h3>
 <P>
 Get ready for a wave of PHP related books to hit the shelves!  We don't know
@@ -17,14 +28,6 @@ out.  They don't actually have scripting language numbers online at Netcraft, bu
 they do a manual grep and email us this information monthly.  Here is a little 
 <a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
 couple of months.
-</P>
-
-<h3>PHP 3.0.7 has been released!</h3>
-<p>
-March 1, 1999.  A nice round date for version 3.0.7.  A number of bug fixes,
-a ton of RedHat and DSO related build fixes and a couple of new modules:
-WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
-<a href="ChangeLog.php3">ChangeLog</a> for the complete list of changes.
 </P>
 
 <a href="http://www.zend.com/"><img align="right" src="zend_rgb-on-white1.gif" border="0"></a>
