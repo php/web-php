@@ -143,9 +143,9 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, true, "php.pear.general"
     ),
     Array (
-      'php-gtk', 'PHP-GTK mailing list',
-      'A list for those who would like to use PHP to write client-side GUI applications' ,
-      false, true, true, "php.gtk"
+      'php-gtk-general', 'PHP-GTK general list',
+      'A list for users of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
+      false, true, true, "php.gtk.general"
     ),
     Array (
       'phplib', 'PHPLIB mailing list',
@@ -165,6 +165,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, false, "php.dev"
     ),
     Array (
+      'php-gtk-dev', 'PHP-GTK developers list',
+      'A list for the developers of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
+      false, true, true, "php.gtk.dev"
+    ),
+    Array (
       'pear-dev', 'PEAR developers list',
       'A list for developers of PEAR, an open-source common code library for PHP',
       false, true, true, "php.pear.dev"
@@ -178,6 +183,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'php-cvs-daily', 'Daily CVS commit summary',
       'Daily changelog and NEWS file updates',
       true, false, false
+    ),
+    Array (
+      'php-gtk-cvs', 'PHP-GTK CVS list',
+      'All the commits to the cvs PHP-GTK code repository are posted to this list automatically' ,
+      false, true, true, "php.gtk.cvs"
     ),
     Array (
       'pear-cvs', 'PEAR CVS list',
