@@ -153,8 +153,12 @@ function makeAddNote() {
 <TD ALIGN=right><?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 ?>
-<INPUT type=submit value="Add Note"><BR>
-<A HREF="/manual/about-notes.php3">About</A><BR>
+<INPUT TYPE=image VALUE="Add Note" onMouseover="change('addnote',1);" onMouseout="hide();"
+SRC='/gifs/b-addnote-p.gif' ALT='Add Note' WIDTH=100 HEIGHT=21 VSPACE=7 HSPACE=10 BORDER=0 NAME='addnote'
+align=absmiddle
+><A HREF="/manual/about-notes.php3" onMouseover="change('abnote',1);" onMouseout="hide();"
+><IMG SRC='/gifs/b-about-p.gif' ALT='About Notes' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='abnote' align=absmiddle
+></A><BR>
 </TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>

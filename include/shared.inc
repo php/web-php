@@ -109,6 +109,16 @@ function preloadImages() {
 		b_up1 = new Image();
 		b_up1.src = "/gifs/b-up-c.gif";
 
+		b_addnote0 = new Image();
+		b_addnote0.src = "/gifs/b-addnote-p.gif";
+		b_addnote1 = new Image();
+		b_addnote1.src = "/gifs/b-addnote-c.gif";
+
+		b_abnote0 = new Image();
+		b_abnote0.src = "/gifs/b-about-p.gif";
+		b_abnote1 = new Image();
+		b_abnote1.src = "/gifs/b-about-c.gif";
+
 		b_bullet0 = new Image();
 		b_bullet0.src = "/gifs/b-bullet-p.gif";
 		b_bullet1 = new Image();
