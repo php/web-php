@@ -167,7 +167,7 @@ if (count($found_formats) == 0) {
 
             // Quite bad looking code tweak to add a link to the extended CHM (en only!)
             if ($langcode == "en" && $extension == "chm") {
-                echo '<br /><a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
+                echo '<br /><a href="/docs-echm.php">extended chm</a>';
             }
        
             // End table cell
