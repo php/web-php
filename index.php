@@ -145,6 +145,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.3.11</h1>
+<p>
+ <span class="newsdate">[31-Mar-2005]</span>
+  The PHP Development Team would like to announce the immediate release of 
+  <a href="/downloads.php">PHP 4.3.11</a>. 
+  These are maintenance releases that in addition to non-critical bug fixes 
+  address several security issues. All Users of PHP are strongly 
+  encouraged to upgrade to one of these releases as soon as possible.
+</p>
+
+<p>
+ For changes since PHP 4.3.10, please consult the
+ <a href="/ChangeLog-4.php#4.3.11">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
+
 <h1>International PHP Conference 2005 Spring Edition</h1>
 
 <p>
