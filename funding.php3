@@ -69,10 +69,11 @@ to contribute any money towards the development of PHP.
 <?endEntry()?>
 
 <?makeEntry("Contributions have been received from the following:")?>
-<a href="http://www.tummy.com/">Tummy Com Ltd.</a><br>
-<a href="http://www.clearink.com/">ClearInk</a><br>
-<a href="http://www.fni.net/"><i>FishNet Inc.</i></a><br>
-<a href="http://www.netjet.com/">NetJet Communications, Inc.<br>
+<a href="http://www.clearink.com">ClearInk</a><br>
+<a href="http://www.fni.net"><i>FishNet Inc.</i></a><br>
+<a href="http://www.tool.net">Internet Tool &amp; Die Inc.</a><br>
+<a href="http://www.netjet.com">NetJet Communications, Inc.<br>
+<a href="http://www.tummy.com">Tummy Com Ltd.</a><br>
 <?endEntry()?>
 
 <TR bgcolor='#D0D0D0' valign=top>
