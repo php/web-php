@@ -173,37 +173,25 @@ if (isset($MAGIC_COOKIE) && $id) {
 function manualGetUserNotes($title, $id) {
 	// if we're www.php.net, get it from the local DB
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
-	global $MYSITE;
+	global $MYSITE, $DOCUMENT_ROOT;
 	$notes = array();
-	if (0 && is_primary_site() && @mysql_connect("localhost","nobody","")) {
-		mysql_select_db("php3");
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect='$id' AND NOT removed ORDER BY id";
-                $result_id = mysql_query($query);
-		if ($result_id && mysql_num_rows($result_id) > 0) {
-			while ($row = mysql_fetch_array($result_id)) {
-				$notes[] = $row;
-			}
+	$hash = substr(md5($id),0,16);
+	$notes_file = "$DOCUMENT_ROOT/backend/notes/".substr($hash,0,2)."/$hash";
+	if ($fp = @fopen($notes_file,"r")) {
+		while (!feof($fp)) {
+			$line = chop(fgets($fp,8096));
+			if ($line == "") continue;
+			list($id,$sect,$rate,$ts,$user,$note) = explode("|",$line);
+			$notes[] = array(
+				"id" => $id,
+				"sect" => $sect,
+				"rate" => $rate,
+				"xwhen" => $ts,
+				"user" => $user,
+				"note" => base64_decode($note)
+			);
 		}
-	} else {
-		global $DOCUMENT_ROOT;
-		$hash = substr(md5($id),0,16);
-		$notes_file = "$DOCUMENT_ROOT/backend/notes/".substr($hash,0,2)."/$hash";
-		if ($fp = @fopen($notes_file,"r")) {
-			while (!feof($fp)) {
-				$line = chop(fgets($fp,8096));
-				if ($line == "") continue;
-				list($id,$sect,$rate,$ts,$user,$note) = explode("|",$line);
-				$notes[] = array(
-					"id" => $id,
-					"sect" => $sect,
-					"rate" => $rate,
-					"xwhen" => $ts,
-					"user" => $user,
-					"note" => base64_decode($note)
-				);
-			}
-			fclose($fp);
-		}
+		fclose($fp);
 	}
 	return $notes;
 }
