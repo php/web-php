@@ -4,6 +4,9 @@ commonHeader("PHP in the News");
 ?>
 
 <DL>
+<dt><b>Notes from a Webmaster: <a href="http://browserwatch.internet.com/news/story/news-980608-7.html">Dave Garaffa sees the light!</a></b>
+<p>
+
 <dt><b>PHP 3.0 Press Release: <a href="/press-release-3.0.txt">Writing an article about PHP3? - read this</a></b>
 <p>
 
