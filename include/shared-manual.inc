@@ -119,6 +119,12 @@ function navigationBar($title,$id,$loc) {
 
 }
 
+// Try to make email address printing safe (protect from spammers)
+function safeEmail($email)
+{
+	  return str_replace(array('@', '.'), array(' at ', ' dot '), $email);
+}
+
 // Print out one user note entry
 function makeEntry($date,$name,$blurb,$id=0) {
     global $MAGIC_COOKIE;
@@ -134,10 +140,9 @@ function makeEntry($date,$name,$blurb,$id=0) {
     $name = htmlspecialchars($name);
     if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
         if (ereg("(.+)@(.+)\.(.+)",$name)) {
-	  $name = str_replace('@', ' at ', $name);
-	  $name = str_replace('.', ' dot ', $name);
-	}
-            echo "<b>".$name."</b><br>\n";
+            $name = safeEmail($name);
+        }
+        echo "<b>".$name."</b><br>\n";
     }
     echo date("d-M-Y h:i",$date);
 ?>
@@ -359,13 +364,11 @@ function manualPrintUserNotes($title, $id) {
 // Make manual user note entry for printing
 function makePrintEntry($date,$name,$blurb,$id=0) {
 
-    $name = htmlspecialchars($name);
     if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
         if (ereg("(.+)@(.+)\.(.+)",$name)) {
-            echo "<b><a href=\"mailto:".$name."\">".$name."</a></b><br>\n";
-        } else {
-            echo "<b>".$name."</b><br>\n";
+            $name = safeEmail($name);
         }
+        echo "<b>".$name."</b><br>\n";
     }
     echo date("d-M-Y h:i",$date) . "<br><br>";
     echo clean_note($blurb) . "<br><hr noshade size=\"1\" width=\"50%\" align=\"center\">";
