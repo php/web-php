@@ -208,7 +208,7 @@ function manualGetUserNotes($title, $id) {
 }
 
 // Print out all user notes for this manual page
-function manualUserNotes($title, $id) {
+function manualUserNotes($title, $id, $print) {
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
@@ -276,32 +276,35 @@ function sendManualHeaders($charset,$lang) {
 
 // Print out manual page header
 function manualHeader($title,$id="") {
-	global $PRINT_PAGE;
+    global $PRINT_PAGE;
     if ($PRINT_PAGE) {
         manualPrintHeader($title);
     } else {
-	    makeBorderTOC($title);
-		commonHeader ($title. " - Manual");
-		navigationBar($title, $id, "top");
-		echo "<!--/UdmComment-->";
+        makeBorderTOC($title);
+        commonHeader ($title. " - Manual");
+        navigationBar($title, $id, "top");
+        echo "<!--/UdmComment-->";
     }
 }
 
 // Print out manual footer
 function manualFooter($title,$id="") {
-	global $PRINT_PAGE;
+    global $PRINT_PAGE, $PRINT_NOTES;
     if ($PRINT_PAGE) {
-		manualPrintFooter();
+        if ($PRINT_NOTES) {
+            manualUserNotes($title, $id, TRUE);
+        }
+        manualPrintFooter();
     } else {
-	    manualUserNotes($title,$id);
-		navigationBar($title, $id, "bottom");
-		commonFooter();
+        manualUserNotes($title,$id);
+        navigationBar($title, $id, "bottom");
+        commonFooter();
     }
 }
 
 // "Printer optimized" header for manual pages
 function manualPrintHeader ($title = '') {
-	global $REQUEST_URI, $SERVER_NAME;
+    global $REQUEST_URI, $SERVER_NAME;
     $pageurl = "http://$SERVER_NAME$REQUEST_URI";
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
