@@ -64,7 +64,7 @@ if (preg_match("!Gecko!", $_SERVER['HTTP_USER_AGENT'])) {
  <tr>
   <td colspan="2">
    <div class="indented">
-   <a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002,2003 The PHP Group</a><br />All rights reserved.
+   <a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002, 2003 The PHP Group</a><br />All rights reserved.
    </div>
   </td>
  </tr>
