@@ -44,13 +44,26 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 <h3>Contact</h3>
 
 <p>
-Please
-submit website bugs in the ' .
+Please submit website bugs in the ' .
 make_link('http://bugs.php.net/', 'bug system') . '.
 </p>
 <p>
 You can contact the webmaster at ' . 
 make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
+</p>
+
+<h3>Other Links</h3>
+<p>
+You can view previous news ' .
+make_link('/news.php', 'here') . '.
+</p>
+<p>
+Find hints to improve your code on our ' .
+make_link('/tips.php', 'tips page') . '.
+</p>
+<p>
+Looking for a great PHP book? check out our ' .
+make_link('/books.php', 'Book resource center') . '.
 </p>
 ';
 
