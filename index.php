@@ -152,10 +152,10 @@ commonHeader("Hypertext Preprocessor");
 
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
-<h1> PHP 4.3.6RC1 released!</h1>
+<h1> PHP 4.3.6RC2 released!</h1>
 <p>
- <span class="newsdate">[02-Apr-2004]</span>
-In the spirit of release early, release often here is the first and hopefully the final
+ <span class="newsdate">[05-Apr-2004]</span>
+In the spirit of release early, release often here is the second and hopefully the final
 <a href="http://qa.php.net/">release candidate of PHP 4.3.6</a>. This release addresses
 2 major bugs introduced in the 4.3.5 release. One of these bugs caused problems when 
 loading dynamic extensions on Windows and thread-safe (ZTS) builds and the other involves
