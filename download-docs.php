@@ -38,7 +38,7 @@ formats, instead of .zip.
 
 commonHeader("Download documentation");
 
-$man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'es');
+$man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'pl', 'es');
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
