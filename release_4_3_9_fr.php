@@ -24,7 +24,7 @@ ajouts et am&eacute;liorations suivantes :
 </p>
 
 <ul>
- <li>Implementatoin d'un nettoyage périodique du cache de regex PCRE, pour éviter les problèmes de mémoire.</li>
+ <li>Implementation d'un nettoyage périodique du cache de regex PCRE, pour éviter les problèmes de mémoire.</li>
  <li>Correction de strip_tags() pour gérer correctement le caractère '\0'.</li>
  <li>Réécriture des fichiers d'installation sous UNIX et Windows.</li>
  <li>Correction d'une fuite mémoire avec phpinfo() et d'autres URL spéciales.</li>
