@@ -150,8 +150,8 @@ list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
 <font class="newsdate">[05-Sept-2002]</font>
-After the big success of last year’s first International PHP Conference this
-year’s show will be even bigger and better.</p>
+After the big success of last year's first International PHP Conference this
+year's show will be even bigger and better.</p>
 
 <p>
 <a href="http://www.php-conference.de/2002/index_en.php">Come to Frankfurt</a>
