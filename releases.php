@@ -2,34 +2,36 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Releases");
 
 // Tarball list generated with:
 // cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
-?>
-
-<h1>Releases</h1>
-
+$SIDEBAR_DATA = '
+<h3>PHP 5 Releases</h3>
 <p>
- We have collected all the official information and code available for
- past PHP releases. You can find more details on the current release
- on <a href="/downloads.php">our downloads page</a>. Even older releases,
- beta versions and release candidates can be found at the
- <a href="http://museum.php.net/">PHP Museum</a>.
+ There is no stable PHP 5 release yet. You can find the latest
+ beta as well as links to more information on
+ <a href="/downloads.php">our downloads page</a>.
 </p>
 
+<h3>Other PHP Releases</h3>
 <p>
- Please note that <em>older releases are listed for archaeological
- purposes only, and they are no longer supported</em>. In case you are
- unable to find a version here or at the PHP Museum, you might try to
- search for tarballs on AllTheWeb.com:
+ Release candidates and beta versions are not listed here.
+ You will be able to find those as well as even PHP 3 and
+ PHP 2 releases in the <a href="http://museum.php.net/">PHP
+ Museum</a>.
 </p>
 
+<h3>Still searching?</h3>
+<p>
+ If this page and the suggested links are unable to help you,
+ you might try to search for a PHP tarball on AllTheWeb:
+</p>
+ 
 <form action="http://www.alltheweb.com/search" method="get">
  <input type="hidden" name="cat" value="ftp" />
  <input type="hidden" name="ftype" value="6" />
  <select name="query" onchange="this.form.submit()">
-  <option value="">--select version--</option>
+  <option value="">-select version-</option>
   <option value="php-3.0.tar.gz">3.0</option>
   <option value="php-3.0.1.tar.gz">3.0.1</option>
   <option value="php-3.0.2.tar.gz">3.0.2</option>
@@ -73,6 +75,20 @@ site_header("Releases");
   <option value="php-4.3.4.tar.gz">4.3.4</option>
  </select>
 </form>
+';
+
+site_header("Releases");
+?>
+
+<h1>Releases</h1>
+
+<p>
+ We have collected all the official information and code available for
+ past PHP releases. You can find more details on the current release
+ on <a href="/downloads.php">our downloads page</a>. Please note that
+ <em>older releases are listed for archaeological purposes only, and
+ they are no longer supported</em>.
+</p>
 
 <a name="4.3.3"></a>
 <h2>4.3.3</h2>
@@ -113,6 +129,7 @@ site_header("Releases");
  <li><a href="/ChangeLog-4.php#4.3.2">ChangeLog</a></li>
  <li>
   Download:
+  <ul>
    <li>
     <?php download_link('php-4.3.2.tar.bz2','Source (tar.bz2)'); ?><br />
     <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
@@ -129,6 +146,7 @@ site_header("Releases");
     <?php download_link('php-4.3.2-installer.exe','Windows installer'); ?><br />
     <span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
    </li>
+  </ul>
  </li>
 </ul>
 
