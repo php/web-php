@@ -8,6 +8,17 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<img src="php4zend-small-white.gif" align="right">
+<h3>PHP 4.0 Beta 3 is out!</h3>
+
+<p>
+Three months after PHP 4.0 Beta 2 was released, Beta 3 is finally here.
+This release has a lot of changes, including a "pure" automake/libtool-based
+build system, Java support and lots of other stuff.
+All 4.0 beta users are encouraged to upgrade.
+<a href="http://www.php.net/version4/">Check it out here!</a>.
+</p>
+
 <h3>PHP soon used on 1,000,000 servers</h3>
 <p>
 <a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
