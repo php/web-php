@@ -166,8 +166,8 @@ commonHeader("Hypertext Preprocessor");
 
 <ul>
  <li>
-  The <a href="/zend-engine-2.php">Zend Engine II</a> with a new object
-  model and dozens of new features.
+  The <a href="http://www.zend.com/php5/zend-engine2.php">Zend Engine II</a>
+  with a new object model and dozens of new features.
  </li>
  <li>
   XML support has been completely redone in PHP 5, all extensions are now
