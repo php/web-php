@@ -1,6 +1,7 @@
 <?php
 
 require "shared.inc";
+require "configuration.inc";
 
 $lang = $MIRRORS[$MYSITE][6];
 
