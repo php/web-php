@@ -24,7 +24,7 @@ commonHeader("Information About This PHP Mirror Site");
 
 <ul>
  <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
- <li>Local search support is <?php echo have_search() ? "available" : "not available"; ?></li>
+ <?php //<li>Local search support is <?php echo have_search() ? "available" : "not available"; </li> ?>
  <li>Local visitor statistics is <?php echo have_stats() ? "available" : "not available"; ?></li>
 </ul>
 
