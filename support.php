@@ -143,6 +143,11 @@ lists. There are many PHP-related mailing lists available.
       false, true, true
     ),
     Array (
+      'php-gtk', 'PHP-GTK mailing list',
+      'A list for those who would like to use PHP to write client-side GUI applications' ,
+      false, true, false
+    ),
+    Array (
       'php-kb', 'Knowledge Base list',
       'This list receives daily mailings with summaries of topics on the user list, as well as others drawn from the <a href="#phpkb">Knowledge Base</a>',
       false, true, false

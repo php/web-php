@@ -10,12 +10,21 @@ Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employme
 PHP developers can post their resumes, and employers can post their job notices.
 </P>
 
-<P>
-You can also try searching at <A
-HREF="http://classifieds.yahoo.com/yc?cr=national&ce_f=&cpo=&cpj=&ck=PHP&g=&cs=time+2&cc=employment&cf=1&za=and"
->Yahoo Careers</A> for PHP-related jobs (US only for now).
-</P>
+<h4>Other Job Sites with PHP jobs:</h4>
 
+<ul>
+ <li><a href="http://www.dice.com/">dice.com</a>
+ <li><a href="http://www.gnujobs.com/">gnujobs.com</a>
+ <li><a href="http://www.hotjobs.com/">hotjobs.com</a>
+ <li><a href="http://www.jobs.com/">Jobs.com</a>
+ <li><a href="http://www.monster.com/">Monster.com</a>
+ <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a>
+</ul>
+
+<p>For a more exhaustive list of job
+search sites on the web, take a look at <a
+href="http://www.dmoz.org/Business/Employment/Job_Search/">dmoz.org's
+Job Search listings</a>.</p>
 
 <? echo hdelim(); ?>
 

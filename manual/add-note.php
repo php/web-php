@@ -18,7 +18,8 @@ CREATE TABLE note (
 */
 
 
-	commonHeader("Manual Notes");
+require("shared-manual.inc");
+commonHeader("Manual Notes");
 
 /* clean off leading and trailing whitespace */
 $user = trim($user);
@@ -28,99 +29,116 @@ $note = trim($note);
 on notes */
 if ($user == "") {
     $user = "php-general@lists.php.net";
-    }
+}
 
 if ($note == "") {
     unset ($note);
-    }
+}
 
 # turn the POST data into GET data so we can do the redirect
 if(!strstr($MYSITE,"www.php.net")) {
-        Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
+    Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
+    exit;
 }
 
-	mysql_pconnect("localhost","nobody", "");
-	mysql_select_db("php3");
+mysql_pconnect("localhost","nobody", "");
+mysql_select_db("php3");
 
-	if (isset($note)):
-		$now = date("Y-m-d H:i:s");
-		$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
-		# protect all HTML-like stuff (may be "Joe Blow <joe@blow.com>")
-		$query .= "('" . htmlspecialchars($user) . "',"; 
-		# only protect PHP-code start tags.
-		$query .= "'" . ereg_replace("<\\?", "&lt;?", $note) . "',";
-		# or we could protect all HTML
-		#$query .= "'" . htmlspecialchars(nl2br($note)) . "',";
-		$query .= "'" . $sect . "',";
-		$query .= "'" . $now . "',";
-		$query .= "'" . $lang . "')";
-		//echo "<!--$query-->\n";
-		if (mysql_query($query)):?>
+if (isset($note) && isset($action) && strtolower($action) != "preview"):
+	$now = date("Y-m-d H:i:s");
+	$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
+        # no need to call htmlspecialchars() -- we handle it on output
+        $query .= "('$user','$note','$sect','$now','$lang')";
+	//echo "<!--$query-->\n";
+	if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
-<?			$new_id = mysql_insert_id();	
-			$msg = stripslashes($note);
-			$msg .= "\n\n $redirect \n";
-			mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
-		else:
-			// mail it.
-			mail($mailto, "failed manual note query", $query);
+<?		$new_id = mysql_insert_id();	
+		$msg = stripslashes($note);
+		$msg .= "\n\n $redirect \n";
+		mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
+	else:
+		// mail it.
+		mail($mailto, "failed manual note query", $query);
 ?>
 <P>There was an error processing your submission. It has been automatically
 e-mailed to the developers.
-<?		endif;?>
+<?	endif;?>
 
 <P>You can <A href="<?echo $redirect?>">go back</A> from whence you came,
 or you can <A href="http://www.php.net/manual/">browse the manual with the
 on-line notes</A>.
 
-<?	else:?>
-
+<?else:
+        if (isset($note) && strtolower($action) == "preview"):?>
+<p>This is what your entry will look like, roughly:</p>
+<?
+                echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
+                makeEntry(time(),stripslashes($user),stripslashes($note));
+                echo "</table>";
+        else:?>
 <P>You can contribute to the PHP manual from the comfort of your browser!
-Just add your comment in the big field below (and your email address in the
-little one).
+Just add your comment in the big field below, and, optionally, your email 
+address in the little one (usual anti-spam practices are OK, e.g.
+johnNOSPAM@doe.NO_SPAM.com).</p>
 
-<P>Note that HTML tags are not allowed in the posts. We tried allowing them
-in the past, but people invariably made a mess of things making the manual
-hard to read for everybody.
+<p>Note that most HTML tags are not allowed in the posts. We tried
+allowing them in the past, but people invariably made a mess of
+things making the manual hard to read for everybody. You can include
+&lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
 
-<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a bug</A>, you're in the wrong place.
-If you are just commenting on the fact that something is not documented,
-save your breath. This is where <B>you</B> add to the documentation, not
-where you ask <B>us</B> to add the documentation. This is also not the
-correct place to <A href="/support.php">ask questions</A>. The notes
-are being edited and support questions are being <b>deleted</b> from them,
-so if you post a question, it will be removed. (But once you get an
-answer, feel free to come back and add it here!)
-<P>
-<A href="/support.php">Click here to go to the support pages.</A><BR>
-<A href="http://bugs.php.net">Click here to submit a bug report.</A><BR>
-<A href="http://bugs.php.net">Click here to request a feature.</A>
+<p>Read carefully the following note. If your post falls into one of the
+categories mentioned there, it will be rejected by one of the editors.</p>
 
-<?if (!isset($sect)):?>
+<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a
+bug</A>, or <a href="http://bugs.php.net/">request a new fature or language
+change</a> you're in the wrong place.  If you are just commenting on the fact
+that something is not documented, save your breath. This is where <B>you</B>
+add to the documentation, not where you ask <B>us</B> to add the
+documentation. This is also not the correct place to <A
+href="/support.php">ask questions</A> (even if you see others have done that
+before, we are editing the notes slowly but surely).  If you post a note in
+any of the categories above, it will edited and/or removed.
+</p>
+<p>
+Just to make the point once more. The notes are being edited and support
+questions/bug reports/feature request/comments on lack of documentation, are
+being <b>deleted</b> from them (and you may get a <b>rejection</b> email), so
+if you post a question/bug/feature/complain, it will be removed. (But once you
+get an answer/bug solution/function documentation, feel free to come back
+and add it here!)</p>
+<p>
+<a href="/support.php">Click here to go to the support pages.</a><br>
+<a href="http://bugs.php.net/">Click here to submit a bug report.</a><br>
+<a href="http://bugs.php.net/">Click here to request a feature.</a>
+</p>
+<?      endif;
+        if (!isset($sect)):?>
 <p><b>To add a note, you must click on the 'Add Note' button
-on the bottom of a manual page so we know where to add the note!</b>
-<?else:?>
-<FORM method="POST" action="/manual/add-note.php">
-<INPUT type=hidden name="sect" value="<?echo $sect;?>">
-<INPUT type=hidden name="redirect" value="<?echo $redirect;?>">
-<INPUT type=hidden name="lang" value="<?echo $lang;?>">
-<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0 BGCOLOR="#D0D0D0">
+on the bottom of a manual page so we know where to add the note!</b></p>
+<?      else:?>
+<form method="POST" action="/manual/add-note.php">
+<input type="hidden" name="sect" value="<?echo $sect;?>">
+<input type="hidden" name="redirect" value="<?echo $redirect;?>">
+<input type="hidden" name="lang" value="<?echo $lang;?>">
+<table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
 <TR VALIGN=top>
 <TD><B>Your email address:</B></TD>
-<TD><INPUT type=text name="user" size=40></TD>
+<td><input type="text" name="user" size="40" maxlength="40" value="<?echo htmlspecialchars(stripslashes($user))?>"></td>
 </TR>
 <TR VALIGN=top>
 <TD><B>Your notes:</B></TD>
-<TD><TEXTAREA name="note" rows=6 cols=40 wrap=virtual></TEXTAREA><BR>
+<td><textarea name="note" rows="6" cols="40" wrap="virtual"><?echo htmlspecialchars(stripslashes($note))?></textarea><br>
 </TD>
 </TR>
-<TR><TD colspan=2 align=right>
-<INPUT TYPE=image VALUE="Add Note" SRC='/gifs/b-addnote-p.gif' ALT='Add Note'
-WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle><BR>
-</TD></TR>
+<TR>
+ <td colspan="2" align="right">
+  <input type="submit" name="action" value="Preview">
+  <input type="submit" name="action" value="Add Note">
+ </td>
+</tr>
 </TABLE>
 </FORM>
-<?endif;
-	endif;
-	commonFooter();
+<?      endif;
+endif;
+commonFooter();
 ?>

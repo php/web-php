@@ -1,9 +1,34 @@
 #!/bin/sh
 
-lynx -source http://www.freshmeat.net/search/?q=php\&mode=xml > backend/projects.xml~
+lynx -source http://freshmeat.net/search-xml/?q=php\&filter=183 > backend/projects.xml~
 if [ $? -ne 0 ]; then
   echo problem getting results from freshmeat
   exit 1
 fi
 
 mv backend/projects.xml~ backend/projects.xml
+
+# won't be necessary when this is running on a machine that has php+sablotron
+# but for now is necessary to give time for projects.xml to get mirrored over
+# to www.php.net
+sleep 900
+
+lynx -source http://www.php.net/bin/projects.php > backend/projects.html~
+if [ $? -ne 0 ]; then
+  echo problem converting results to html
+  exit 1
+fi
+
+mv backend/projects.html~ backend/projects.html
+
+# generating the include file projects.inc
+sleep 900
+
+lynx -source http://www.php.net/bin/projects_inc.php > backend/projects.inc~
+if [ $? -ne 0 ]; then
+  echo problem generating the include file
+  exit 1
+fi
+
+mv backend/projects.inc~ backend/projects.inc
+

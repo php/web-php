@@ -155,7 +155,6 @@ function show_types($first_item,$show_any,$var_name) {
 				   "mhash related",
 				   "Misbehaving function",
 				   "FrontPage related",
-				   "Feature/Change Request",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
@@ -372,6 +371,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		$where_clause .= " dev_id = '$by' ";
 	}
+        $where_clause .= " and php_version like '3%'";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {

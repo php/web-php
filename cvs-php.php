@@ -83,11 +83,14 @@ you don't!
 <tr><th>&nbsp;</th><td><input type=submit value="Send It"></td></tr>
 </table>
 </form>
-</p>
-<?php
-} elseif ($fullname && $email && $password && $purpose && $checkread) {
-	mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
-	mail("php-dev@lists.php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPurpose: $purpose");
+<?php } elseif ($fullname && $email && $password && $purpose && $checkread) {
+mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
+mail("php-dev@lists.php.net", "CVS Account Request",
+		"Full name: $fullname\n".
+		"Email: $email\n".
+		"ID: $id\n".
+		"Purpose: $purpose", 
+		'From: "CVS Account Request" <donotemail@php.net>');
 ?>
 <p>
 Thank you.  Your request has been sent.

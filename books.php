@@ -75,12 +75,8 @@ function showBook($title, $title_link, $author, $author_link=false, $image=false
     echo "<br>\n";
     echo "</p>\n</small>\n";
     echo "</td>\n</tr>\n\n";
-
 }
-
 ?>
-
-
 <h1>
 PHP Books
 </h1>
@@ -424,6 +420,15 @@ showBook( array("PHP 4","Webserver-Programmierung f&uuml;r Um- und Einsteiger"),
     "de"  #lang
 );
 
+showBook( "PHP 4", # title(s)
+    "http://www.amazon.de/exec/obidos/ASIN/3826690044/wwwphpnet07", #title_link
+    "Dr. Susanne Wigard", #author(s)
+    "", #author_link(s)
+    "susanne_wigard.jpg", #img
+    "BHV, December 2000, ISBN 3-8266-9004-4, 448 pages", #info
+    "http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html", #info_link
+    "de"  #lang
+);
 
 showBook( "Das Einsteigerseminar PHP 4.0",    #title(s)
     "http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07", #title_link
@@ -501,6 +506,15 @@ showBook( "PHP 4 f&uuml;r Profis. Werkzeugkiste und Kochbuch",    #title(s)
     "de"  #lang
 );
 
+showBook( "PHP 4 programmering",    #title(s)
+    "http://pagina.se/bok.html?20660", #title_link
+    "Jesper Ek and Ulrika Eriksson", #author(s)
+    "", #author_link(s)
+    "ek-eriksson.gif", #img
+    "February 2001, ISBN 9-1636-0660-7, 220 pages", #info
+    "", #info_link
+    "se"  #lang
+);
 
 showBook( "Gu&iacute;a Pr&aacute;cticas PHP 4",    #title(s)
     "http://www.AnayaMultimedia.es/", #title_link
@@ -760,6 +774,6 @@ showBook( "Mastering Regular Expressions",    #title(s)
 
 
 
-<?
+<?php
 commonFooter();
 ?>

@@ -1,3 +1,11 @@
+NOTE: If you want to become an official PHP mirror, please sure to
+read and follow these instructions carefully. You should have the
+consent of your hosting company (if you aren't a hosting company
+yourself), and be prepared for some reasonably significant bandwidth
+usage (a reasonable estimate as of 2/2001 is 100MB/day). Also,
+we are currently only accepting new official mirrors in countries
+where we don't already have two active official mirrors.
+
 Here is how to mirror the PHP site:
 
 First, you need to have a rsync (http://rsync.samba.org/) installed.
@@ -19,17 +27,22 @@ to www.php.net to fetch user contributed manual notes.
 Once you create a virtualhost which looks something like:
 
    <VirtualHost xx.php.net>
-   ServerName     xx.php.net
-   ServerAdmin    yourname@yourdomain.com
-   DocumentRoot   /www/htdocs/phpweb
-   php_value      include_path         .:/www/htdocs/phpweb/include
-   php_flag       short_open_tag       on
-   ErrorLog       logs/error_log
-   TransferLog    logs/access_log
-   DirectoryIndex index.php index.php3 index.html index.htm
-   ErrorDocument  404   /error/
-   ErrorDocument  401   /error/
-   ErrorDocument  403   /error/
+   ServerName xx.php.net
+   ServerAlias www.xx.php.net
+   ServerAdmin yourname@yourdomain.com
+   DocumentRoot /www/htdocs/phpweb
+   <IfModule mod_php3.c>
+      php3_include_path .:/www/htdocs/phpweb/include
+   </IfModule>
+   <IfModule mod_php4.c>
+      php_value include_path .:/www/htdocs/phpweb/include
+   </IfModule>
+   ErrorLog logs/error_log
+   TransferLog logs/access_log
+   DirectoryIndex index.php index.html
+   ErrorDocument 404 /error/
+   ErrorDocument 401 /error/
+   ErrorDocument 403 /error/
    </VirtualHost>
 
 modified to reflect your local paths and country, of course, then your site
@@ -73,14 +86,11 @@ appropriate steps will be taken to integrate your mirror site:
   available in the preferred language yet, so long as English is
   an acceptable secondary default.
 
-Don't worry about graphics for your country's flag - we've got them all!
-
-You must also sign up to the mirrors mailing list, by sending an empty 
-message to:
-
-   php-mirrors-subscribe@lists.php.net
-
-We need to be able to keep in touch with you!
+It is *not* required to sign up to the mirrors mailing list, by
+sending an empty message to: php-mirrors-subscribe@lists.php.net
+as we are able to keep in touch with you using your given email
+address. The traffic on the mentioned mailing list is mainly
+interesting for the webmasters of php.net.
 
 And finally, don't forget to put a nice little PHP logo somewhere on your 
 hosting company's site if possible.  Grab one of the logos from the 

@@ -6,10 +6,17 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
-<h1>
-Patch Level 1 Released For PHP 4.0.4
-</h1>
-<p>
+<h1>Announcing PHP-GTK</h1>
+
+The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
+provides an object-oriented interface to GTK+ toolkit and enables you to write
+client-side cross-platform GUI applications. For more information, visit
+<a href="http://gtk.php.net/">http://gtk.php.net/</a>.
+
+<? echo hdelim(); ?>
+
+<h1>Patch Level 1 released for PHP 4.0.4</h1>
+
 Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
 has been released.  This bug-fix release also fixes a few party-crashing bugs that
 were discovered in PHP 4.0.4.
