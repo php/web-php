@@ -23,7 +23,7 @@ commonHeader('Get Download');
 You have chosen to download the following file:
 </p>
 
-<p align="center">
+<div align="center">
 <table border="0" cellpadding="10" cellspacing="1" width="500">
 <tr bgcolor="#cccccc"><td align="center">
 <?php 
@@ -36,7 +36,7 @@ if ($size) {
 }
 ?>
 </td></tr></table>
-</p>
+</div>
 
 <p>
  Please choose the mirror closest to you from which to download the file.  
@@ -46,7 +46,7 @@ if ($size) {
  convenience.
 </p>
 
-<p align="center">
+<div align="center">
 <table border="0" cellpadding="3" cellspacing="1" width="500">
 <?php
     
@@ -87,8 +87,9 @@ foreach ($MURLS as $murl) {
 
     // Print out mirror site download link
     echo '<td><small>';
-    $mirrorname = ($thismirror ? "this" : substr($murl, strpos($murl, '//') + 2, -1));
-    print_link("/get/$df/from/$mirrorname/mirror", $mirrorname);
+    $mirrorshort = substr($murl, strpos($murl, '//') + 2, -1);
+    $mirrorname  = ($thismirror ? "this" : $mirrorshort);
+    print_link("/get/$df/from/$mirrorname/mirror", $mirrorshort);
     echo '</small><br /></td>' . "\n";
 
     // Print out mirror provider's name
@@ -104,6 +105,6 @@ foreach ($MURLS as $murl) {
 }
 ?>
 </table>
-</p>
+</div>
 
 <?php commonFooter(); ?>
