@@ -40,7 +40,7 @@ $LANGUAGES = array(
 );
 
 $INACTIVE_ONLINE_LANGUAGES = array(
-	'el' => 'Greek',
+    'el' => 'Greek',
 );
 
 // Convert between language codes back and forth
@@ -65,4 +65,3 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
         }
     }
 }
-?>
