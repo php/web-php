@@ -216,7 +216,7 @@ function manualUserNotes($title, $id) {
 	echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
 	echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
 	echo "<td align=\"right\">";
-	print_link('../add-note.php?sect='.$id.'&redirect='.$back_url,
+	print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
 		make_image('notes-add.gif','add a note')
 	);      
 	echo "&nbsp;";
