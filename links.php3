@@ -29,6 +29,8 @@ There's also a searchable directory at
 Looking for some sample PHP scripts?  Try these sites:
 </P>
 <UL>
+<LI><A HREF="http://php.codebase.org">PHP.CodeBase.Org</A><BR>
+A nice all-around support site<BR>
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>

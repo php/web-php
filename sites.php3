@@ -220,6 +220,7 @@ right away.</blockquote>
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
 	site("Online Gaming Review","www.ogr.com");
+	site("PHP.CodeBase.Org","php.codebase.org");
 	site("The UNIX Network Archives","www.tuna.org");
 	siteEnd();
 
