@@ -107,18 +107,16 @@ function manual_sidebar()
     global $PGI, $SIDEBAR_DATA;
 
     // Start sidebar with its <div>
-    $BAR = "<!--UdmComment-->\n<div class=\"mtoc\">\n";
+    $BAR = "<!--UdmComment-->\n<ul id=\"manualtoc\">\n";
 
     // Link to manual home
-    $BAR .= '<div class="toch">' .
-        make_link($PGI['home'][0], make_image('caret-t.gif', '^') . $PGI['home'][1]) .
-        "</div>\n";
+    $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
+            $PGI['home'][1] . "</a></li>\n";
 
     // Link to one page up if titles does not match
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
-        $BAR .= '<div class="toch">' .
-            make_link($PGI['up'][0], make_image('caret-u.gif', '&lt;') . $PGI['up'][1]) .
-            "</div>\n";
+        $BAR .= ' <li class="header up"><a href="' . $PGI['up'][0] . '">' .
+                $PGI['up'][1] . "</a></li>\n";
     }
 
     // Print out one link for all siblings of this page
@@ -128,7 +126,7 @@ function manual_sidebar()
         list($url, $title) = $tocitem;
 
         // Get the proper classname to use for this <div>
-        $divclass = ($url == $PGI['this'][0]) ? "toca" : "toci";
+        $liclass = ($url == $PGI['this'][0]) ? ' class="active"' : "";
         
         // There are some very long function names, which
         // make the TOC be too wide, so wrap them
@@ -140,12 +138,12 @@ function manual_sidebar()
         }
         
         // Print out the TOC item using a <div>
-        $BAR .= "<div class=\"$divclass\">" .
-                make_link($url, $title) . "</div>\n";
+        $BAR .= " <li{$liclass}>" .
+                make_link($url, $title) . "</li>\n";
     }
 
     // Put navigation content into sidebar, end <div>
-    $SIDEBAR_DATA = "$BAR</div><!--/UdmComment-->\n";
+    $SIDEBAR_DATA = "$BAR</ul><!--/UdmComment-->\n";
 }
 
 // Print out manual navigation bar

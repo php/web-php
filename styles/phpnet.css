@@ -1,8 +1,14 @@
 /* TOC elements on manual pages ------------------------------------------- */
-div.toci {
+ul#manualtoc li {
 	background-image: url(http://static.php.net/www.php.net/images/box-0.gif);
 }
-div.toca {
+ul#manualtoc li.up {
+	background-image: url(http://static.php.net/www.php.net/images/caret-u.gif);
+}
+ul#manualtoc li.home {
+	background-image: url(http://static.php.net/www.php.net/images/caret-t.gif);
+}
+ul#manualtoc li.active {
 	background-image: url(http://static.php.net/www.php.net/images/box-1.gif);
 }
 
