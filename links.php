@@ -531,6 +531,7 @@ A Swedish PHP portal with articles, news, forums and much more</li>
  <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
  <li><a href="http://www.totalfreelance.com/">totalfreelance.com</a></li>
  <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
+ <li><a href="http://www.zend.com/jobs/index.php">Zend.com PHP Jobs</a></li>
 </ul>
 
 <p>
