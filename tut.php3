@@ -10,10 +10,17 @@
 <h1>Introductory Tutorial</h1>
 PHP is a tool that lets you create dynamic web pages.  
 PHP-enabled web pages are treated just like regular HTML pages and you can create 
-and edit them the same way you normally create regular HTML pages.  In this 
-tutorial we assume that your server has support for PHP activated and that all files
+and edit them the same way you normally create regular HTML pages.  
+
+<h2>What do I need?</h2>
+In this tutorial we assume that your server has support for PHP activated and that all files
 ending in <i>.php3</i> are handled by PHP.  On most servers this is the default 
-extension for PHP files, but ask your server administrator to be sure.
+extension for PHP files, but ask your server administrator to be sure.  If your server supports
+PHP then you don't need to do anything.  Just create your <i>.php3</i> files and put them in
+your web directory and the server will magically parse them for you.  There is no need to 
+compile anything nor do you need to install any extra tools.  Think of these PHP-enabled
+files as simple HTML files with a whole new family of magical tags that let you do all sorts of
+things.
 
 <h2>Your first PHP-enabled page</h2>
 Create a file named <i>hello.php3</i> and in it put the following lines:
