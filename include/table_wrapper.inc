@@ -114,7 +114,7 @@
     }
     echo ":<br>\n";
 
-    echo "<center><table border=1 width=\"95%\"><tr>\n";
+    echo "<center><table border=\"0\" cellspacing=\"2\" width=\"95%\"><tr>\n";
 
 # print table header
     global $conversion_table,$dont_display,$centering,$default_alignment,$coloring,$header_coloring,$dont_link;
@@ -220,7 +220,7 @@
 
     if ($num_rows!=$total_num_rows) {
       if ($limit_length && $limit_start!=-1) {
-        echo "<hr width=\"70%\"><center><table border><tr>\n";
+        echo "<hr width=\"70%\"><center><table><tr>\n";
         if ($limit_start>0) {
           $new_limit_start = $limit_start-$limit_length;
           if ($limit_start<0) {

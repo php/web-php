@@ -502,7 +502,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
-	$default_header_color="aaaaaa";
+	$default_header_color="dddddd";
 	$centering["id"] = $centering["Mod"] = "center";
 	$dont_link["Mod"]=1;
 	$dont_display["unchanged_days"] = 1;
