@@ -57,6 +57,8 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		$query .= " WHERE php_version LIKE '" . $phpver . "%'";
 	}
 
+	$query.= " ORDER BY bug_type";
+
 	$result=mysql_query($query);
 	while($row=mysql_fetch_row($result)) {
 		$bug_type['all'][$row[1]]++;
