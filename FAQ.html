@@ -899,11 +899,11 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
     by installing a glibc-devel package that matches your glibc.  This has absolutely nothing
     to do with PHP.  To prove this to yourself, try this simple test:
     <p><pre>
-    $ cat >test.c <<X
-    #include <sys/resource.h>
+    $ cat &gt;test.c &lt;&lt;X
+    #include &lt;sys/resource.h&gt;
     X
 
-    $ gcc -E test.c >/dev/null
+    $ gcc -E test.c &gt;/dev/null
 
     If that spews out errors, you know your include files are messed up. 
     </pre></p>
