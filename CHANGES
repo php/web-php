@@ -262,7 +262,7 @@ to break out of the switch, and the innermost loop in which is nested.
 
 Here's a pretty useless function which makes a good example:
 
-	cfunction concat($str1,$str2)
+	function concat($str1,$str2)
 	{
 		return $str1+$str2;
 	}
@@ -276,13 +276,13 @@ Here's how to declare a simple class:
 		var $property1,$property2;
 		var $property3=5;
 
-		cfunction display() {
+		function display() {
 			printf("p1=%d, p2=%d, p3=%d\n",
 				$this->property1,
 				$this->property2,
 				$this->property3);
 		}
-		cfunction init($p1,$p2) {
+		function init($p1,$p2) {
 			$this->property1 = $p1;
 			$this->property2 = $p2;
 		}
@@ -312,7 +312,7 @@ Inheritence is pretty simple too:
 	class complex_class extends simple_class {
 		var $property4="test";
 
-		cfunction display() {
+		function display() {
 			printf("p1=%d, p2=%d, p3=%d, p4=%d\n",
 				$this->property1,
 				$this->property2,
@@ -406,7 +406,7 @@ the function, or a copy of it.
 
 Example:
 
-	cfunction inc($arg)
+	function inc($arg)
 	{
 		$arg++;
 	}
