@@ -104,7 +104,7 @@ see the <?php print_link ("http://qa.php.net/", "PHP QA website"); ?>.
 
 <?php echo hdelim(); ?>
 
-<?php make_image("brain.gif", "PHPDoc Brain", "right"); ?>
+<?php echo make_image("brain.gif", "PHPDoc Brain", "right"); ?>
 
 <h1>PHP Documentation Team Meeting</h1>
 <p>
