@@ -86,6 +86,11 @@ body, ul, td, th {
     font-size: 85%;
 }
 
+/* Indented block */
+div.indent {
+    margin-left: 50px;
+}
+
 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
