@@ -84,7 +84,7 @@ foreach ($MURLS as $murl) {
 
     // Print out mirror site download link
     echo '<td><small>';
-    $mirrorname = substr($murl, strpos($murl, '//') + 2, -1)
+    $mirrorname = substr($murl, strpos($murl, '//') + 2, -1);
     print_link("/get/$df/from/$mirrorname", $mirrorname);
     echo '</small><br /></td>' . "\n";
 
