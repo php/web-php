@@ -5,6 +5,11 @@ if (file_exists("../configuration.inc")) {
   include_once "../configuration.inc";
 }
 
+if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
+  print "404 Not found";
+  exit;
+}
+
 $lang = $MIRRORS[$MYSITE][6];
 if (!is_dir("$DOCUMENT_ROOT/manual/$lang")) {
 	$lang = "en"; // fall back to English
