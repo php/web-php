@@ -66,7 +66,7 @@ commonHeader("Documentation ");
 <H2>Other Versions</H2>
 <ul>
 <li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
-<li><? download_link("manual.chm", "PHP Manual Windows Help File"); ?>
+<li><? download_link("manual.chm", "PHP Manual Windows Help File - January 5, 2001"); ?>
 <li><?php download_link("manual_isilo.pdb","PHP Manual - PalmPilot Isilo format"); ?>
 <li><?php download_link("manual_doc.pdb","PHP Manual - PalmPilot DOC format"); ?>
 </ul>
