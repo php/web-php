@@ -42,17 +42,17 @@ $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
- "manual.txt.gz"     => array("Plain text",          "txt.gz",    true),
- "bigmanual.html.gz" => array("Single HTML",         "html.gz",   true),
- "manual.tar.gz"     => array("Many HTML files",     "tar.gz",    true),
- "manual.tar.bz2"    => array("Many HTML files",     "tar.bz2",   true),
- "manual.zip"        => array("Many HTML files",     "zip",       true),
- "manual.pdf.gz"     => array("PDF",                 "pdf.gz",    true),
- "manual.pdf.bz2"    => array("PDF",                 "pdf.bz2",   true),
- "manual.pdf.zip"    => array("PDF",                 "pdf.zip",   true),
- "manual_doc.pdb"    => array("PalmPilot DOC",       "doc.pdb",   true),
- "manual_isilo.pdb"  => array("PalmPilot iSilo",     "isilo.pdb", true),
- "manual.chm"        => array("Windows HTML Help",   "chm",       true)
+ "manual.txt.gz"           => array("Plain text",          "txt.gz",    true),
+ "bigmanual.html.gz"       => array("Single HTML",         "html.gz",   true),
+ "manual.tar.gz"           => array("Many HTML files",     "tar.gz",    true),
+ "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2",   true),
+ "manual.zip"              => array("Many HTML files",     "zip",       true),
+ "php_manual_LANG.pdf.gz"  => array("PDF",                 "pdf.gz",    true),
+ "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2",   true),
+ "php_manual_LANG.pdf.zip" => array("PDF",                 "pdf.zip",   true),
+ "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb",   true),
+ "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb", true),
+ "manual.chm"              => array("Windows HTML Help",   "chm",       true)
 );
 ?>
 
@@ -88,21 +88,20 @@ use does otherwise.
      while (list($fn,$details) = each($formats)) {
        echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
 
-       # temporary hacks until pdf and chm are auto-generated
+       // temporary hacks until the manuals are at the correct
+       // places and with the correct package file names
        if ($fn == "manual.pdf.bz2") {
           $link_to = "distributions/manual/php_manual_$langcode.pdf.bz2";
-       } elseif ($fn == "manual.pdf.gz") {
-          $link_to = "distributions/manual/php_manual_$langcode.pdf.gz";
-       } elseif ($fn == "manual.pdf.zip") {
-          $link_to = "distributions/manual/php_manual_$langcode.pdf.zip";
+       } elseif (preg_match("/php_manual_LANG\.pdf\.(gz|bz2|zip)/", $fn, $mem)) {
+          $link_to = "distributions/manual/php_manual_$langcode.pdf." . $mem[1];
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual/manual-$langcode.chm";
        } else {
          $link_to = "manual/$langcode/$fn";
        }
        
-       # if no size required [pdf, online], then just print, else
-       # decide what to do according to the $size of the file
+       // if no size required [eg. external], then just print, else
+       // decide what to do according to the $size of the file
        if (!$details[2]) { 
          if ($link_to == 'down') echo "Format Unavailable";
          else echo "<a href=\"$link_to\">$details[1]</a>"; 
