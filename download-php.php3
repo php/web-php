@@ -1,7 +1,7 @@
 <?
 require("shared.inc");
 
-$current = "3.0.12";
+$current = "3.0.13";
 $win32_current = "3.0.11";
 #$rpm_current = "3.0.5-1";
 
