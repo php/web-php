@@ -1,10 +1,10 @@
 <?php
 require_once 'prepend.inc';
 
-
 function make404() {
 	global $REQUEST_URI;
 	header('HTTP/1.0 404 Not Found');
+	header("Cache-Control: public, max-age=600");
 	commonHeader('404 Not Found');
 	echo "<h1>Not Found</h1>\n";
 	echo "<p>the page <b>" . htmlspecialchars($request_uri) . "</b> could not be found.</p>\n";
