@@ -158,8 +158,8 @@ EOT;
 
 <table border="0" cellpadding="3" class="standard">
  <tr>
-  <th>Does Not Require CVS Account</td>
-  <th>Requires CVS Account</td>
+  <th>Does Not Require CVS Account</th>
+  <th>Requires CVS Account</th>
  </tr>
  <tr>
   <td class="sub">Learning PHP</td>
