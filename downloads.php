@@ -28,6 +28,14 @@ download site. Binaries available on external servers:
 </ul>
 </p>
 
+<h3>Wget Tip</h3>
+<p>
+Provide the URL parameter enclosed in qoutes on the
+command line, if you use wget or lynx or links to
+download. Some special characters in the URL may
+be interpreted by your shell otherwise.
+</p>
+
 <h3>Other Downloads</h3>
 <p>
 For downloadable manual packages, go to the '.
