@@ -17,12 +17,13 @@ PHP developers can post their resumes, and employers can post their job notices.
 
 <h3>ISPs that support PHP</h3>
 <P>
-Looking for an ISP or hosting service that supports PHP?  There's a growing list at 
-<A HREF="http://www.od-site.com/php">www.od-site.com/php</A>.
-</P><P>
-There's also a searchable directory at 
-<A HREF="http://phphosts.easydns.com/">phphosts.easydns.com</A>, complete with comments from users.
+Looking for an ISP or hosting service that supports PHP?  Try one of the following sites:
 </P>
+<UL>
+<LI><A HREF="http://www.od-site.com/php">www.od-site.com/php</A><BR>
+<LI><A HREF="http://hosts.php.net/">hosts.php.net</A><BR>
+(features a searchable directory and comments from users)<BR>
+</UL>
 
 <h3>Getting Started</h3>
 <P>On these sites you will find tutorials, articles and example scripts</P>
