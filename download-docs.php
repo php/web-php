@@ -122,6 +122,11 @@ foreach ($LANGUAGES as $langcode => $language) {
     // language => write out table row
     if ($formatnum > 0) {
 
+        // Additional link for special French version of the manual
+        if ($langcode == "fr") {
+            $language .= '<br /><a href="http://dev.nexen.net/docs/php/chargement.html">[Special French]</a>';
+        }
+        
         echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$language</b></td>\n";
         
         // Print out a table cell for all formats
@@ -171,25 +176,6 @@ HTML formatted docs from the XML sources, what conventions to follow when
 writing documentation, etc. If you are interested in the process, or would
 like to start/join a translation, this is a must read:
 <a href="http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz">http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz</a>
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>French PHP Manual</h1>
-
-<p>
-The French PHP manual is also available on an external site, in differents formats.
-Documentation is the official flavor, while formating and localization has 
-been worked some more (function and examples indexes, short version, search engine..). 
-Besides, those are compressed for faster download.
-<a href="http://dev.nexen.net/docs/php/chargement.html">Follow this link for
-more French downloads</a>
-</p>
-
-<p>
-La documentation Fran&ccedil;aise est disponible sur un site secondaire,
-dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
-francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;es.
 </p>
 
 <?php commonFooter(); ?>
