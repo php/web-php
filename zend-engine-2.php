@@ -411,9 +411,10 @@ echo "Foo::constant = " . Foo::constant . "\n";
 
 <h2>Exceptions</h2>
 <p>
- PHP 4 had no exception handling. PHP 5 introduces a exception model similar
- to that of other programming languages. Note that there is support for "catch
- all" and for the "finally" clause.
+ PHP 4 had no exception handling. PHP 5 introduces a exception model
+ similar to that of other programming languages. Note that there is
+ support for "catch all" but <strong>not</strong> for the "finally"
+ clause.
 </p>
 <p>
  Exceptions can be rethrown in catch blocks. Also it is possible to
