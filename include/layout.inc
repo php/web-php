@@ -223,8 +223,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	echo delim();
 	print_link('/docs.php', 'documentation', false, 'class="small"');
 	echo delim();
-	print_link ('/my.php', 'my php.net', false, 'class="small"');
-	echo delim();
 	print_link('/FAQ.php', 'faq', false, 'class="small"');
 	echo delim();
 	print_link('/support.php','getting help',false,'class="small"');
@@ -236,6 +234,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	print_link('/sites.php','php.net sites',false,'class="small"');
 	echo delim();
 	print_link('/links.php','links',false,'class="small"');
+	echo delim();
+	print_link ('/my.php', 'my php.net', false, 'class="small"');
       ?>&nbsp;
   </td>
  </tr>
