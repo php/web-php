@@ -541,7 +541,8 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="4.0B2" selected>4.0 Beta 2
+    <option name="4.0b3 selected">4.0 Beta 3
+    <option name="4.0B2">4.0 Beta 2
     <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
     <option name="4.0B1" selected>4.0 Beta 1
     <!--<option name="earlier">Earlier?  Upgrade first!-->
