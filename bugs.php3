@@ -96,7 +96,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 	
-    mysql_pconnect("localhost","nobody","");
+    mysql_pconnect("localhost","bourbon","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
     mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','')");
@@ -135,8 +135,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	echo "<hr>\n";
 
 	include("table_wrapper.inc");
-	$do_external_data_processing=1;
-	function External_Processing($fieldname,$tablename,$data,$row)
+	
+	function external_processing($fieldname,$tablename,$data,$row)
 	{
 		switch($fieldname) {
 			case "id":
@@ -150,7 +150,23 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				break;
 		}
 	}
-    mysql_pconnect("localhost","nobody","");
+	function row_coloring($row) {
+		switch($row["Status"]) {
+			case "Open":
+				return "#ffbbaa";
+				break;
+			case "Closed":
+				return "#aaffbb";
+				break;
+			default:
+				return "#aaaaaa";
+				break;
+		}
+	}
+	$external_processing_function="external_processing";
+	$row_coloring_function="row_coloring";
+	
+    mysql_pconnect("localhost","bourbon","");
     mysql_select_db("php3");
 
 	$tables[] = "bugdb";
@@ -163,7 +179,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$conversion_table["id"] = "ID#";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
 	$default_header_color="aaaaaa";
-	$default_color="ffbbaa";
+	$centering["id"] = "center";
 	
 	if (!isset($order_by)) {
 		$order_by = "id";
@@ -183,7 +199,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-    mysql_pconnect("localhost","nobody","");
+    mysql_pconnect("localhost","bourbon","");
     mysql_select_db("php3");
 	if(isset($modify) && $modify=="Edit Bug") {
 		$ok=0;

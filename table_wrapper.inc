@@ -118,7 +118,7 @@
 
 # print table header
     global $conversion_table,$dont_display,$centering,$default_alignment,$coloring,$header_coloring,$dont_link;
-    global $default_color,$default_header_color;
+    global $default_color,$default_header_color,$row_coloring_function;
     global $pass_on;
     $i=0;
     while ($field=mysql_fetch_field($result)) {
@@ -172,9 +172,13 @@
     echo "</tr>\n";
 
 # print table data
-    global $do_external_data_processing;
+    global $external_processing_function;
     while ($row=mysql_fetch_array($result)) {
-      echo "<tr>\n";
+      if (isset($row_coloring_function)) {
+      	print "<tr bgcolor=\"".$row_coloring_function($row)."\">";
+      } else {
+	    echo "<tr>\n";
+	  }
       for ($i=0; $i<$field_count; $i++) {
         if (strlen($row[$i])==0) {
           $row[$i]= " &nbsp; ";
@@ -199,8 +203,8 @@
             $add_attributes="";
           }
           echo "<td align=\"$align\" $add_attributes>";
-          if (isset($do_external_data_processing)) {
-            External_Processing($fieldnames[$i],$tablenames[$i],$row[$i],&$row);
+          if (isset($external_processing_function)) {
+            $external_processing_function($fieldnames[$i],$tablenames[$i],$row[$i],&$row);
           } else {
             echo "$row[$i]\n";
           }
