@@ -55,7 +55,7 @@ commonHeader("Documentation ");
 
 <H2>PDF Version</H2>
 <ul>
-<li><? download_link("manual.pdf", "PHP PDF Manual - December 5, 2000"); ?>. 1319 pages
+<li><? download_link("manual.pdf", "PHP PDF Manual - December 11, 2000"); ?>. 1007 pages
 </ul>
 
 <H2>Other Versions</H2>
