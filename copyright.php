@@ -20,7 +20,7 @@ site_header("License, Copyright and Contact");
 
 <p>
  The code, text, PHP logo, and graphical elements on this website 
- and the mirror websites (the "Site") are Copyright &copy; 2001-2003
+ and the mirror websites (the "Site") are Copyright &copy; 2001-2004
  The PHP Group. All rights reserved.
 </p>
 
