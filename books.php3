@@ -174,7 +174,7 @@ by Leon Atkinson<BR>
 >Programmation Web avec PHP</A><BR>
 by Laurent Lacroix, Christophe Lauer, Nicolas Leprince, Christophe Boggero<BR>
 <SMALL>in French</SMALL><BR>
-<SMALL>April 2000, ISBN 2-212-09113, 364 pages<BR>
+<SMALL>April 2000, ISBN 2-212-09113-3, 364 pages<BR>
 </TD>
 </TR>
 
