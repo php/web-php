@@ -1,0 +1,121 @@
+body, ul, td, th {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 85%;
+}
+
+p {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 85%;
+}
+
+em {
+	font-weight: bold;
+	font-style: italic;
+}
+
+acronym {
+        border-bottom: 1px dashed #00cc00;
+        cursor: help;
+}
+
+.error {
+        color: #cc0000;
+}
+
+.newsDate {
+	font-size: 85%;
+	font-style: italic;
+	color: #6666cc;
+}
+
+.sidebar {
+	font-size: 80%;
+}
+
+.sidebar p {
+	text-align: left !important;
+}
+
+code, pre {
+	font-family: Courier, "Courier New", monospace;
+	font-size: 90%;
+}
+
+pre.note {
+        font-size: 90%; /* font size of less than 90% is impossible to read */
+}
+
+h1 {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 140%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h2 {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 125%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h3 {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 110%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h4 {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #000066;
+}
+
+small {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 75%;
+}
+
+a.small {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 75%;
+	text-decoration: none;
+}
+
+.tableTitle {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-weight: bold;
+}
+
+.tableExtras {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 85%;
+	color: #FFFFFF;
+}
+
+input {
+	font-family: verdana,arial,helvetica,sans-serif;
+}
+
+textarea {
+	font-family: verdana,arial,helvetica,sans-serif;
+}
+
+input.small, select.small {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 75%;
+}
+
+textarea.small {
+	font-family: verdana,arial,helvetica,sans-serif;
+	font-size: 75%;
+}
+
+p.formerror {
+        border: 1px solid #ff0000;
+        color: #000000;
+        background: #ffeeee;
+        padding: 2px 4px;
+}

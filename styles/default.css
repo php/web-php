@@ -1,0 +1,96 @@
+body, ul, td, th {
+	font-size: 85%;
+}
+
+p {
+	font-size: 85%;
+}
+
+em {
+	font-weight: bold;
+	font-style: italic;
+}
+
+acronym {
+        border-bottom: 1px dashed #00cc00;
+        cursor: help;
+}
+
+.error {
+        color: #cc0000;
+}
+
+.newsDate {
+	font-size: 85%;
+	font-style: italic;
+	color: #6666cc;
+}
+
+.sidebar {
+	font-size: 80%;
+}
+
+.sidebar p {
+	text-align: left !important;
+}
+
+code, pre {
+	font-size: 90%;
+}
+
+pre.note {
+        font-size: 90%; /* font size of less than 90% is impossible to read */
+}
+
+h1 {
+	font-size: 140%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h2 {
+	font-size: 125%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h3 {
+	font-size: 110%;
+	font-weight: bold;
+	color: #000066;
+}
+
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+	color: #000066;
+}
+
+small {
+	font-size: 75%;
+}
+
+a.small {
+	font-size: 75%;
+	text-decoration: none;
+}
+
+.tableTitle {
+	font-weight: bold;
+}
+
+.tableExtras {
+	font-size: 85%;
+	color: #FFFFFF;
+}
+
+textarea,small, input.small, select.small {
+	font-size: 75%;
+}
+
+p.formerror {
+        border: 1px solid #ff0000;
+        color: #000000;
+        background: #ffeeee;
+        padding: 2px 4px;
+}

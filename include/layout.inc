@@ -57,6 +57,18 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 	return $image;
 }
 
+# set_style()
+# Set the default style according to stylesheet
+#
+
+function set_style($style) {
+	
+	if (isset($style)) {
+		setcookie("phpstyle", $style, time()+31449600, "", $HTTP_HOST);
+	}
+}	
+
+
 # print_image()
 # print an IMG tag for a given file
 #
@@ -179,12 +191,13 @@ $enclosed = 0;
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $enclosed;
 	global $SIDEBAR_DATA, $prevsearch;
+	global $phpstyle;
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="/style.css">
+ <link rel="stylesheet" href="styles/<?php echo ($phpstyle) ? $phpstyle . ".css" : "verdana.css";?>">
 </head>
 
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
@@ -201,8 +214,15 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
         <?php echo strftime("%A, %B %d, %Y"); ?>
         </url-minder-ignore>
       </b>&nbsp;<br>
-      </font>
-    </td>
+      </font><br>
+	Select Style:&nbsp;
+	<?php
+	print_link('/index.php?setstyle=verdana', 'verdana', 'false', 'clase="small"');
+	echo delim();
+	print_link('/index.php?setstyle=arial', 'arial', 'false', 'clase="small"');
+    	echo delim();
+	print_link('/index.php?setstyle=default', 'no style', 'false', 'clase="small"');
+    ?></td>
   </tr>
 
   <tr bgcolor="#9999cc">
