@@ -15,6 +15,78 @@ site_header("News Archive - 2003");
 
 <hr />
 
+<h1>PHP 5.0.0 Beta 2 released</h1>
+<p>
+ <span class="newsdate">[30-Oct-2003]</span>
+ <a href="/downloads.php">PHP 5.0.0 Beta 2</a> has been released.
+ This is the first feature complete version of PHP 5, and we recommend for PHP users
+ to try it. PHP 5 is still not ready for production use!
+</p>
+<p>
+ Some of the more major changes include:
+</p>
+<ul>
+ <li>
+  PHP 5 features the Zend Engine 2.
+ </li>
+ <li>
+  XML support has been completely redone in PHP 5, all extensions are now focused around the
+  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
+ </li>
+ <li>
+  SQLite has been bundled with PHP. For more information on SQLite, please visit their
+  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
+ </li>
+ <li>
+  A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can
+  also interface with the DOM extension and vice-versa.
+ </li>
+ <li>
+  Streams have been greatly improved, including the ability to access low-level socket
+  operations on streams.
+ </li>
+</ul>
+<p>
+ There have been many changes since Beta 1, some of them documented in the
+ <a href="/NEWS_PHP_5_0_0b2.txt">NEWS file</a> and most language
+ changes are documented on <a href="/zend-engine-2.php">our PHP 5/Zend Engine 2 page</a>.
+</p>
+
+<hr />
+
+<?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
+
+<h1>Forum PHP in Paris, November 26 & 27th</h1>
+<p>
+ <span class="newsdate">[26-Oct-2003]</span>
+ The French PHP User Group <a href="http://www.afup.org/">AFUP association</a>
+ is proud to announce the third annual PHP meeting in Paris,
+ on November 26th and 27th, 2003. Developers and managers will
+ gather to meet Zeev Suraski and other prominent community experts
+ for two days of sessions, packed with
+ <a href="http://www.afup.org/forumphp/">solutions and advanced techniques</a>
+ (in French).
+</p>
+
+<hr />
+
+<?php news_image("http://www.directionphp.biz/", "directionphp.png", "Direction|PHP"); ?>
+
+<h1>Monthly PHP Magazine in French launched!</h1>
+<p>
+ <span class="newsdate">[15-Oct-2003]</span>
+ <a href="http://www.nexen.net/">Nexen.net</a> has launched Direction|PHP,
+ the first PHP and MySQL dedicated magazine in French. This monthly publication
+ features indeep coverage of PHP industry, business and user cases and technical
+ articles from PHP|Architect.
+</p>
+<p>
+ For more information, read the <a 
+ href="http://www.directionphp.biz/index.php">Direction|PHP website</a> (in French).
+</p>
+
+<hr />
+
 <?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
 
 <h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
