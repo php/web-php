@@ -54,7 +54,7 @@ be a bug, a <a href="http://bugs.php.net">Bug Database</a> has
 been established for tracking bugs and ensuring that all reported bugs
 get addressed.  If you see a problem, please tell us so we can address it.
 Please read <a href="http://bugs.php.net/bugs-dos-and-donts.php3"
->before posting a report</a>.
+>Dos & Don'ts</a> before posting a report.
 </P>
 
 <h3>User Groups</h3>
