@@ -218,11 +218,12 @@ function display_events_for_day($day, $events)
         if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
-                 ($COUNTRY == $event['country'] ? "<b>" : ""),
-                 '<a href="/cal.php',"?id=$event[id]&amp;cm=$cm&amp;cy=$cy",'">',
+                 ($COUNTRY == $event['country'] ? "<strong>" : ""),
+                 '<a class="type_' . $event['category'] . '" href="/cal.php',
+                 "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
                  stripslashes(htmlentities($event['sdesc'])),
                  '</a>',
-                 ($COUNTRY == $event['country'] ? "</b>" : ""),
+                 ($COUNTRY == $event['country'] ? "</strong>" : ""),
                  '</div>';
         }
     }
@@ -326,21 +327,13 @@ function read_event($fp)
     }
     
     // Corrupt line in CSV file
-    if (count($linearr) < 12) { return FALSE; }
+    if (count($linearr) < 13) { return FALSE; }
    
-    if(count($linearr==12)) { 
-        // Put the array elements into variables
-        list(
-            $day, $month, $year, $country,
-            $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato
-        ) = $linearr;
-        $category = 0;
-    } elseif(count($linearr==13)) {
-        list(
-            $day, $month, $year, $country,
-            $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato, $category
-        ) = $linearr;
-    }
+    // Get components
+    list(
+        $day, $month, $year, $country,
+        $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato, $category
+    ) = $linearr;
 
     // Get info on recurring event
     @list($recur, $recur_day) = explode(":", $recur, 2);
