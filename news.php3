@@ -100,6 +100,15 @@ PHP3 as a scalable, easy-to-use, high-perfomance solution for server-side
 scripting. Features also an interview with Rasmus Lerdorf.
 <? endEntry(); ?>
 
+<? makeEntry("PHP 3.0 - Full-power Web Scripting","by Ted Brockwood", "http://nctweb.com/articles/php.html","Jan. 27, 1999");?>
+Ask most Web application developers their scripting language of choice,
+and you'll find that most are divided into two camps - the Microsoft
+Active Server Pages (ASP) folks, and the Cold Fusion users. If you do a
+little more research however, you'll find there are other options out
+there, and one of these, PHP 3.0, is in much wider use than one would
+think for an "alternative product".
+<? endEntry(); ?>
+
 <? makeEntry("Articles on phpbuilder.com","by Tim Perdue and Rasmus Lerdorf", "http://www.phpbuilder.com","Jan. 24, 1999");?>
 &quot;Building Dynamic Web Pages with Search Engines in Mind&quot; and &quot;Creating Dynamic Images with PHP&quot;
 <? endEntry(); ?>
