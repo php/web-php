@@ -54,8 +54,8 @@ function show_menu($state) {
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select>\n";
-
+	echo "</select><br>\n";
+	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
 	echo "</form>\n";
 }
 
@@ -253,6 +253,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$order_by_clause = "id";
 	}
 	if($status=="All" && $bug_type=="Any") {
+		$where_clause = "bug_type!='Feature/Change Request'";
 		/* nothing */
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
