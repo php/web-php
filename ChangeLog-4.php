@@ -851,13 +851,13 @@ example: socket_connect($sock, 'www.yahoo.com', 80);</li>
   <li>Added socket_clear_error() which clears the last error on a socket</li>
   <li>Removed all code pertaining to fd_sets (socket_fd_*)</li>
   <li>Modified/Improved socket_select() to accept array of resources instead of fd_sets. example:
-    <ul>
+    <pre>
     &lt;?php<br />
     $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br />
     $r=socket_select($rfds, $wfds, NULL, 1);<br />
     print "Ready to read:\n"; var_dump($rfds);<br />
     ?&gt;<br />
-    </ul></li>
+    </pre></li>
   </ul></li>
 <li>Fixed segfault in ibase_close() if user does not free the resultset.
 Bugs <a href="http://bugs.php.net/bug.php?id=15419">#15419</a>, <a href="http://bugs.php.net/bug.php?id=15992">#15992</a>. (daniela)</li>
