@@ -129,6 +129,7 @@
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("ClearInk Corporation","www.clearink.com");
+	site("Cigar.Com","www.cigar.com");
 
 	echo "</tr><tr>\n";
 	title("Financial Industry");
