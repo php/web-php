@@ -2,6 +2,14 @@
 /* $Id$ */
 
 include_once "prepend.inc";
+
+/* convert POST -> GET when dumping the user onto a mirror */
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$_SERVER['REQUEST_URI'] = "/search.php?show=$show&pattern=" .
+		urlencode($pattern) .
+		"&base=" . urlencode($MYSITE) . "&lang=$lang";
+}
+
 include 'loadavg.inc';
 
 /*

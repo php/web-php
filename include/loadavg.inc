@@ -11,16 +11,23 @@ function check_load()
 		return;
 	}
 	$l = getloadavg();
-	if (is_array($l) && $l[0] > 10) {
-		/* offload them to their favourite mirror */
-		foreach ($MIRRORS as $murl => $mirror) {
-			if ($murl != 'http://www.php.net' && mirror_country($murl) == $COUNTRY && mirror_status($murl) == MIRROR_OK && $mirror[5]) {
-				header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-				header("X-PHP-Load: [" . implode(", ", $l) . "] Too-high, try this mirror");
-				exit;
-			}
+	header("X-PHP-Load: " . implode(", ", $l));
+
+	/* offload them to their favourite mirror */
+	foreach ($MIRRORS as $murl => $mirror) {
+		if ($murl != 'http://www.php.net' &&
+				mirror_country($murl) == $COUNTRY &&
+				mirror_status($murl) == MIRROR_OK &&
+				$mirror[5] /* searchable */) {
+			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+			exit;
 		}
-		header("Status: 503 Server too busy, try again later");
+	}
+	/* no searchable mirror was found, allow the request through if the load
+	 * isn't really really high */
+	if ($l[0] > 20) {
+		header("HTTP/1.1 503 Too busy, try again later");
+		echo "Server too busy, please try again later, or <a href=\"/mirrors.php\">use a mirror</a>";
 		exit;
 	}
 }
