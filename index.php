@@ -97,39 +97,43 @@ $SIDEBAR_DATA = '
 
 $MIRROR_IMAGE = '';
 
-// Iterate through possible mirror provider logo types in priority order
-$types = array("gif", "jpg", "png");
-while (list(,$ext) = each($types)) {
+// Try to find a sponsor image in case this is an official mirror
+if (is_official_mirror()) {
 
-    // Check if file exists for this type
-    if (file_exists("backend/mirror." . $ext)) {
+    // Iterate through possible mirror provider logo types in priority order
+    $types = array("gif", "jpg", "png");
+    while (list(,$ext) = each($types)) {
 
-        // Add text to rigth sidebar
-        $MIRROR_IMAGE = "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
+        // Check if file exists for this type
+        if (file_exists("backend/mirror." . $ext)) {
 
-        // Create image HTML code
-        $img = make_image(
-            'mirror.' . $ext,
-            htmlspecialchars(mirror_provider()),
-            FALSE,
-            FALSE,
-            'backend',
-            0
-        );
+            // Add text to rigth sidebar
+            $MIRROR_IMAGE = "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
 
-        // Add size information depending on mirror type
-        if (is_primary_site() || is_backup_primary()) {
-            $img = resize_image($img, 125, 125);
-        } else {
-            $img = resize_image($img, 120, 60);
+            // Create image HTML code
+            $img = make_image(
+                'mirror.' . $ext,
+                htmlspecialchars(mirror_provider()),
+                FALSE,
+                FALSE,
+                'backend',
+                0
+            );
+
+            // Add size information depending on mirror type
+            if (is_primary_site() || is_backup_primary()) {
+                $img = resize_image($img, 125, 125);
+            } else {
+                $img = resize_image($img, 120, 60);
+            }
+
+            // End mirror specific part
+            $MIRROR_IMAGE .= '<a href="' . mirror_provider_url() . '">' .
+                             $img . "</a></div><br /><hr />\n";
+
+            // We have found an image
+            break;
         }
-
-        // End mirror specific part
-        $MIRROR_IMAGE .= '<a href="' . mirror_provider_url() . '">' .
-                         $img . "</a></div><br /><hr />\n";
-
-        // We have found an image
-        break;
     }
 }
 

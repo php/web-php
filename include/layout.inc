@@ -183,6 +183,9 @@ function site_footer($config = array())
     $stats = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
     $provider_url  = mirror_provider_url();
     $provider_name = mirror_provider();
+    $mirror_text   = (is_official_mirror() ?
+        "<a href=\"/mirror.php\">This mirror</a> generously provided by:" :
+        "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:"); 
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
     $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
     $functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
@@ -208,7 +211,7 @@ function site_footer($config = array())
  </div>
 
  <div id="thismirror">
-  <a href="/mirror.php">This mirror</a> generously provided by:
+  {$mirror_text}
   <a href="{$provider_url}">{$provider_name}</a><br />
   Last updated: {$last_updated}
  </div>
@@ -573,7 +576,11 @@ function commonFooter() {
  <tr valign="top" bgcolor="#cccccc">
   <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2004 The PHP Group'); ?><br />All rights reserved.</small></td>
   <td align="right"><small>
-   <a href="/mirror.php">This mirror</a> generously provided by:
+   <?php
+    echo (is_official_mirror() ?
+        "<a href=\"/mirror.php\">This mirror</a> generously provided by:" :
+        "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:"); 
+   ?>
    <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
    Last updated: <?php echo strftime("%c %Z", $LAST_UPDATED); ?>
    </small>
