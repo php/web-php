@@ -151,7 +151,7 @@ if (!isset($MIRRORS[$MYSITE])) {
     $MYSITE='http://' . ereg_replace("^www\\.","",$HTTP_HOST) . '/';
 }
 if (!isset($MIRRORS[$MYSITE])) {
-    $MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
+    $MIRRORS[$MYSITE] = array("xx", $MYSITE, 0, $MYSITE, 2, 0, "en");
 }
 
 ?>
