@@ -148,6 +148,16 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Spanish PHP Mailing List Now at PHP.net</h1>
+<p>
+ <span class="newsdate">[29-Feb-2004]</span>
+ The Spanish PHP mailing list was relocated to our list server. If you would like to subscribe
+ to the list, you can do it via our <a href="mailing-lists.php">mailing lists page</a>. To read
+ the archives, please see <a href="http://news.php.net/">our news server</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
 <h1>International PHP Conference 2004 Amsterdam: Timetable and Open Source PHP projects</h1>

@@ -187,6 +187,14 @@ if (isset($_POST['maillist'])) {
       'List for the SOAP developers',
       FALSE, FALSE, FALSE, 'php.soap'
     ),
+  
+    'Non-English language mailing lists',
+    array (
+      'php-es', 'Spanish PHP Mailing list',
+      'List for Spanish speaking people interested in PHP',
+      FALSE, FALSE, FALSE, 'php.general.es'
+    ),
+  
   );
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
@@ -331,7 +339,6 @@ function output_lists_table($mailing_lists)
  <li><a href="http://www.ziobudda.net/mailman/listinfo/php-it/">Italian Mailing List</a></li>
  <li><a href="http://cortesi.com/php/">Italian Mailing List (coordinating the translation of the PHP manual)</a></li>
  <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
- <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a></li>
  <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
 </ul>
 
