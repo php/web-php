@@ -67,7 +67,7 @@ function makeBorderTOC($this) {
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
-           $PHP_SELF, $LANGUAGES, $REQUEST_URI, $www_static_root;
+           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $REQUEST_URI, $www_static_root;
 
     echo '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
