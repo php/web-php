@@ -45,7 +45,7 @@ if (!isset($_GET['url'])) {
     exit;
 }
 
-echo "<h1>Source of: ", htmlentities($_GET['url']), "</h1>", hdelim(); 
+echo "<h1>Source of: " . htmlentities($_GET['url']) . "</h1>"; 
 
 // Get dirname of the specified URL part
 $dir = dirname($_GET['url']);
@@ -67,8 +67,6 @@ if (!empty($dir) && !preg_match("!^(\\.|/)$!", $dir)) {
 } else {
     $page_name = $_SERVER['DOCUMENT_ROOT'] . '/' . basename($_GET['url']);
 }
-
-echo "<!-- ", htmlentities($page_name), " -->\n";
 
 // Provide some feedback based on the file found
 if (!$page_name || @is_dir($page_name)) {
