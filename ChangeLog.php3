@@ -1,7 +1,76 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.6 Changes");
+commonHeader("PHP 3.0 -> 3.0.7 Changes");
 ?>
+<h3>March 1 1999, Version 3.0.7</h3>
+<ul>
+<li> Added pdf_put_image and pdf_execute_image
+<li> Initial work on an ImageMagick module - doesn't do anything yet
+<li> Make configure script detect Netscape's LDAP SDK automagically
+<li> Fixed Oracle-OCI8 module for windows.
+<li> Add OCIRowCount function. (Number of affected rows for update-statements) 
+<li> Add OCIDefineByName function.
+<li> Change the behaviour of open_basedir. It's now possible to supply more
+  than one directory. open_basedir paths from parent directories are now
+  automatically inherited.
+<li> fix rand() and mt_rand() to make the ranges work correctly
+<li> htmlspecialchars() and htmlentities() are now binary safe.
+<li> Add extract() function.
+<li> Oracle-OCI8 driver now supports BLOBS/CLOBS and IN/OUT binding of local php 
+  variables. 
+<li> Clean up apxs build
+<li> Add INSTALL.REDHAT file to walk RedHat users through the install
+<li> Added YP/NIS module from Stephanie Wehner
+<li> Added optional second argument to mysql_fetch_array();  MYSQL_ASSOC will
+  cause the resulting array to contain the associative indices only,
+  MYSQL_NUM will cause the array to contain the numeric indices only (like
+  mysql_fetch_row()) and MYSQL_BOTH would cause them both to be defined
+  (default).
+<li> Backport the Zend debugging memory manager into the PHP 3.0.x tree.
+<li> Add function_exists() function.
+<li> Add another version of WDDX module 
+  (we need to pick a single implementation here)
+<li> Fixed includes for iODBC to support both the old and the new LGPL version
+<li> Add flock() function
+<li> Fix implode() bug - When imploding an array that contained unset() elements
+  it wasn't correctly skipping past these
+<li> Add connection_status() function.  This returns the raw bitfield which 
+  indicates whether the script terminated due to a user abort, a timeout
+  or normally.  Note that if ignore_user_abort is enabled, then both the 
+  timeout state and the user abort state can be active
+<li> Add connection_timeout() function.  This one can be called in a shutdown
+  function to tell you if you got there because of a timeout
+<li> Add ignore_user_abort() function and .ini/.conf directive of same name
+<li> Fix connection abort detection code - It should now work reliably with 
+  Apache.  Also added a user-level connection_aborted() function designed to
+  let people check whether the user aborted the connection in a user-level
+  shutdown function.
+<li> Add pfsockopen() function
+<li> Improvements in FreeType support: Macintosh fonts work, and non-antialiased
+  output is considerably cleaner  <mka@satama.com>
+<li> Fixed checkdate() function, range of valid years is now 0 to 32767
+<li> Make sure XML element attributes have the right character encoding
+<li> hw_insertdocument() returns object id now
+<li> Add pdf_open() warning in configure and documentation
+<li> Add diskfreespace() function
+<li> Added aspell support
+<li> Iptcparse would sometimes find a wrong tag.
+<li> Force var_dump() to output headers
+<li> Add optional 3th parameter to ora_fetchinto.
+<li> Serialize and var_dump no longer show array elements that 
+  have been unset.
+<li> Add IptcEmbed() function (can replace an APP13-Marker in a JPEG file)
+<li> Add OCI8 module for Windows
+<li> Fix bug in pdf_close() function
+<li> Add WDDX support (see http://www.wddx.org for more info)
+<li> Add similar_text() function
+<li> Constructors of parent classes weren't accessible to derived classes (as
+  of 3.0.6).  Fixed.
+<li> Introduce simple regex compilation cache
+<li> Add gettimeofday() function
+<li> Add getrusage() function
+</ul>
+
 <h3>December 24 1998, Version 3.0.6</h3>
 <ul>
 <li> Fix GetImageSize() to work with non-standard jpg images

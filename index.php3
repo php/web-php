@@ -3,6 +3,14 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP 3.0.7 has been released!</h3>
+<p>
+March 1, 1998.  A nice round date for version 3.0.7.  A number of bug fixes,
+a tonne of RedHat and DSO related build fixes and a couple of new modules:
+WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
+<a href="ChangeLog.php3">ChangeLog</a> for the complete list of changes.
+</P>
+
 <h3>PHP in the News</h3>
 <P>
 <a href="http://www.netcraft.com">Netcraft's</a> February server survey results are
@@ -19,15 +27,6 @@ couple of months.
 on January 4th, 1999.<br>
 Visit the <a href="http://www.zend.com/">Zend Web site</a>!
 </p>
-
-<h3>PHP 3.0.6 has been released!</h3>
-<p>
-December 24th, 1998.  Merry Christmas!  3.0.6 is ready to go.  This is mostly
-a maintenance release.  Some new modules make their first apperance in this
-version.  Support for Adobe PDF and FDF as well as XML and an initial Interbase
-module are now available.  If you need any of these features, or if you see something
-in the <a href="ChangeLog.php3">ChangeLog</a> that might apply to you, then upgrade.
-</P>
 
 <h3>What is PHP?</h3>
 <P>
