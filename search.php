@@ -120,7 +120,7 @@ Restrict the search to: <BR>
 <OPTION VALUE="quickref">PHP Function List
 <OPTION VALUE="nosource" SELECTED>Whole site
 <OPTION VALUE="bugdb">Bug database
-<OPTION VALUE="manual">Online documentation
+<OPTION VALUE="manual">Online documentation (English only)
 <OPTION VALUE="maillist">PHP General Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
 <OPTION VALUE="phpdoc">PHP Documentation List
@@ -170,7 +170,7 @@ Restrict the search to: <BR>
 			$restrict=$MYSITE."source";
 			$where="Site source code";
 		} elseif ($show=="manual") {
-			$restrict=$MYSITE."manual";
+			$restrict=$MYSITE."manual/en";
 			$exclude="/source";
 			$where="PHP documentation";
 		} else {
