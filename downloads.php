@@ -68,32 +68,32 @@ site_header("Downloads");
 
 
 <a name="v5"></a>
-<h1>PHP 5.0.0</h1>
+<h1>PHP 5.0.1</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0.tar.bz2', 'PHP 5.0.0 (tar.bz2)'); ?> - 13 Jul 2004<br />
-  <span class="md5sum">md5: 562b7ad1e903248bbe77884cb904b8b7</span>
+  <?php download_link('php-5.0.1.tar.bz2', 'PHP 5.0.1 (tar.bz2)'); ?> - 12 Aug 2004<br />
+  <span class="md5sum">md5: b12042826ddba29fba3ae5a2eac3c391</span>
  </li>
  <li>
-  <?php download_link('php-5.0.0.tar.gz', 'PHP 5.0.0 (tar.gz)'); ?> - 13 Jul 2004<br />
-  <span class="md5sum">md5: d9df0d177fa62091a486f0e5cb5aaaca</span>
+  <?php download_link('php-5.0.1.tar.gz', 'PHP 5.0.1 (tar.gz)'); ?> - 12 Aug 2004<br />
+  <span class="md5sum">md5: 15c9f5a9848a9e8f32002c6731a31ca8</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0-Win32.zip', 'PHP 5.0.0 zip package'); ?> - 13 Jul 2004<br />
-  <span class="md5sum">md5: f8fb5676b6a32f7be1c8d8d373fbc2af</span>
+  <?php download_link('php-5.0.1-Win32.zip', 'PHP 5.0.1 zip package'); ?> - 12 Aug 2004<br />
+  <span class="md5sum">md5: 0447dcd6c4ca786619cefb1ae5cceba3</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.0-Win32.zip', 'Collection of PECL modules for PHP 5.0.0'); ?> - 13 Jul 2004<br />
+  <?php download_link('pecl-5.0.1-Win32.zip', 'Collection of PECL modules for PHP 5.0.1'); ?> - 12 Aug 2004<br />
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
   standard with PHP 4 Windows binaries but have since been moved into this 
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: ede9d837b3dc48a38ca992ca753ee114</span>
+  <span class="md5sum">md5: 4ad4c24c49d602fd26f373bd08627be4</span>
  </li>
  <li>
   <?php download_link('php-5.0.0-installer.exe', 'PHP 5.0.0 installer'); ?> - 26 July 2004<br />
