@@ -25,9 +25,9 @@ $timestamp = max($timestamps);
 $tsstring = gmdate("D, d M Y H:i:s ",$timestamp)."GMT";
 
 if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
-	/* The UA has the exact same page we have. */
-	header("HTTP/1.1 304 Not Modified");
-	exit();
+    /* The UA has the exact same page we have. */
+    header("HTTP/1.1 304 Not Modified");
+    exit();
 } else {
     header("Last-Modified: ".$tsstring);
 }
@@ -52,7 +52,7 @@ available in the ' . make_link("/links.php", "links section") . '.
 <p>
 Ever wondered how popular PHP is? see the ' .
 make_link("/usage.php", "Netcraft Survey") . '.
-</p>	
+</p>
 
 <p>
 PHP is a project of the ' . 
@@ -102,31 +102,30 @@ while (list(,$ext) = each(array("gif", "jpg", "png"))) {
     }
 }
 
-// Open events CSV file, and print out event title
+// Read events CSV file, and appanend event information to right sidebar
 $fp = @fopen("backend/events.csv", "r");
 if ($fp) {
-	$cm = 0;
-	while (!feof($fp)) {
-		list($d, $m, $y, $url, $desc, $id) = fgetcsv($fp, 8192);
-		// fgetcvs returns an array with a single null element for a blank line
+    $cm = 0;
+    while (!feof($fp)) {
+        list($d, $m, $y, $url, $desc, $id) = fgetcsv($fp, 8192);
+        // fgetcvs returns an array with a single null element for a blank line
         if ($d === NULL) { continue; }
         if ($cm != (int) $m) { 
-			if ($cm) {
+            if ($cm) {
                 $RSIDEBAR_DATA .= "<br />\n";
+            } else {
+                $RSIDEBAR_DATA .= '<center><h3>Upcoming Events<br /><a href="submit-event.php">[add event]</a></h3></center>';
             }
-			else {
-                $RSIDEBAR_DATA .= '<h3>Upcoming Events<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="submit-event.php">[add event]</a></h3>';
-            }
-			$cm = (int) $m;
-			$RSIDEBAR_DATA .= "<h4>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</h4>\n"; 
-			unset($seen);
-		}
-		if (!$seen[$desc]) {
-			$RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">". stripslashes($desc)."</a><br>\n";
-			$seen[$desc] = true;
-		}
-	}
-	fclose($fp);
+            $cm = (int) $m;
+            $RSIDEBAR_DATA .= "<h4>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</h4>\n"; 
+            unset($seen);
+        }
+        if (!$seen[$desc]) {
+            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">". stripslashes($desc)."</a><br>\n";
+            $seen[$desc] = true;
+        }
+    }
+    fclose($fp);
 }
 
 commonHeader("Hypertext Preprocessor");
