@@ -199,7 +199,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	}
 
 	if ($php_version=='earlier') {
-		echo "ERROR!  Please select a valid PHP version.  If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.");
+		echo "ERROR!  Please select a valid PHP version.  If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.";
 		commonFooter();
 		exit;
 	}
