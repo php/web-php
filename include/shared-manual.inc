@@ -276,7 +276,7 @@ function manualUserNotes($title, $id) {
 
 	}
 
-	echo "</table><br>\n";
+	echo "</table><br><br>\n";
 }
 
 function manualLastModified($title, $id) {
