@@ -6,13 +6,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 // Tarball list generated with:
 // cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
 $SIDEBAR_DATA = '
-<h3>PHP 5 Releases</h3>
-<p>
- There is no stable PHP 5 release yet. You can find the latest
- release candidate as well as links to more information on
- <a href="/downloads.php">our downloads page</a>.
-</p>
-
 <h3>Other PHP Releases</h3>
 <p>
  Release candidates and beta versions are not listed here.
@@ -78,6 +71,7 @@ $SIDEBAR_DATA = '
    <option value="php-4.3.6.tar.gz">4.3.6</option>
    <option value="php-4.3.7.tar.gz">4.3.7</option>
    <option value="php-4.3.8.tar.gz">4.3.8</option>
+   <option value="php-5.0.0.tar.gz">4.3.8</option>
   </select>
  </p>
 </form>
@@ -95,6 +89,36 @@ site_header("Releases");
  <em>older releases are listed for archaeological purposes only, and
  they are no longer supported</em>.
 </p>
+
+<a name="5.0.0"></a>
+<h2>5.0.0</h2>
+
+<ul>
+ <li>Released: 13 July 2004</li>
+ <li>Announcement: None</li>
+ <li><a href="/ChangeLog-5.php#5.0.0">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.0.0.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: 562b7ad1e903248bbe77884cb904b8b7</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.0.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: d9df0d177fa62091a486f0e5cb5aaaca</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.0-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: f8fb5676b6a32f7be1c8d8d373fbc2af</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.0-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: ffce859b5f72ffee00dbe4f013053247</span>
+   </li>
+  </ul>
+ </li>
+</ul>
 
 <a name="4.3.7"></a>
 <h2>4.3.7</h2>
