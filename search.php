@@ -88,6 +88,8 @@ else {
 
     // Print out common header
     site_header("Search");
+    echo "<p>The search feature is accessible via the form elements at the top right of this page.</p>";
+    if (FALSE) {
     if (isset($EXPL_LANG)) {
         $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
     } else {
@@ -126,5 +128,6 @@ foreach ($searchoptions as $key => $value) {
  </p>
 </form>
 <?php
+    }
     site_footer(array("functionsjs"));
 }
