@@ -11,8 +11,8 @@ and the accompanying press release.
 <h3>What is PHP?</h3>
 
 <P>PHP 3.0 is a server-side HTML embedded scripting language and it is a
-complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI
-2.0</a> language.  This rewrite is faster, more robust and uses less
+complete rewrite of the popular PHP/FI 2.0 language.
+This rewrite is faster, more robust and uses less
 memory than version 2.  All users of version 2 are encouraged to
 upgrade.
 
