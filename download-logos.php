@@ -8,7 +8,7 @@ site_header("Download Logos");
 function print_star()
 {
     echo "  <td class=\"star\">" .
-         make_image('star.gif', 'recommended', FALSE, 'title="recommended"');
+         make_image('star.gif', 'recommended', FALSE, 'title="recommended"') .
          "</td>\n";
 }
 function print_nostar()
