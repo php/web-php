@@ -91,7 +91,7 @@ function myphpnet_load()
     global $MYPHPNET;
 
     // Empty the preferences array
-    $MYPHPNET = array(FALSE, FALSE);
+    $MYPHPNET = array(FALSE, FALSE, "NONE");
     
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
@@ -129,10 +129,26 @@ function myphpnet_urlsearch($type = FALSE)
         $MYPHPNET[1] = $type;
     }
 
-    // Return code or FALSE
+    // Return code or NONE
     elseif (isset($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
+}
+
+// Set mirror site redirection
+function myphpnet_mirror($murl = FALSE)
+{
+    global $MYPHPNET;
+
+    // Set mirror URL if specified and if correct
+    if ($murl && ($murl == "AUTO" || mirror_status($murl) == MIRROR_OK)) {
+        $MYPHPNET[2] = $murl;
+    }
+
+    // Return code or NONE
+    elseif (isset($MYPHPNET[2])) {
+        return $MYPHPNET[2];
+    } else { return "NONE"; }
 }
 
 // Save user settings in cookie
@@ -141,7 +157,7 @@ function myphpnet_save()
     global $MYPHPNET;
     
     // Fill in values not specified
-    for ($i = 0; $i <= 1; $i++) {
+    for ($i = 0; $i <= 2; $i++) {
         if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
     }
     
