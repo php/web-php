@@ -8,6 +8,6 @@ header_nocache();
 
 // If we have a valid country, output a CSS rule
 // marking the events in the user's country specially
-if (!empty($COUNTRY) && $COUNTRY != "NA") {
+if (i2c_valid_country()) {
     echo ".event_$COUNTRY { font-weight: bold; }";
 }
