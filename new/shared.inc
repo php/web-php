@@ -93,7 +93,8 @@ function commonHeader($title) {
 <TITLE>PHP3: <? echo $title;?></TITLE>
 
 <SCRIPT LANGUAGE="JavaScript">
-<!--  
+<!--
+
 var bName = navigator.appName;
 var bVer = parseInt(navigator.appVersion);
 
@@ -101,6 +102,14 @@ var NS4 = (bName == "Netscape" && bVer >= 4);
 var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
 var NS3 = (bName == "Netscape" && bVer < 4);
 var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
+
+if (NS4) {
+	window.captureEvents(Event.RESIZE);
+	function ResizeHandler(e) {
+		window.location.reload(true);
+	}
+	window.onResize = ResizeHandler;
+}
 
 var loaded = 0;
 var layers = 0;
