@@ -162,7 +162,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP and Web Standards Conference - UK 2004</h1>
 <p>
  <span class="newsdate">[22-Dec-2003]</span>
- Call for Papers: PHP and Web Standards Conference - UK 2004
+ Call for Papers: PHP and Web Standards Conference - UK 2004<br />
  The PaWS Group is pleased to announce the first ever UK <a
  href="http://www.pawscon.com">PHP and Web Standards Conference</a>.
  PaWS Con will cover using PHP and Web Standards separately and in
@@ -171,7 +171,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 <p>
  The <a href="http://www.pawscon.com/speakers">Call for Papers</a> has
- been announced with a deadline of January 9th.
+ been announced with a deadline of January 17th.
  <a href="http://www.pawscon.com/register">Pre-Registration</a> for
  early-bird savers is now also open, so register to earn your
  discount and provide PaWS with valuable feedback.
