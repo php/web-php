@@ -81,6 +81,7 @@
 	site("Italia Online","www.iol.it");
 	site("XOOM Inc.","xoom.com");
 	site("Nederland.Net","www.nederland.net");
+	site("Pair Networks","www.pair.net");
 
 	echo "<br></td><td valign=top>\n";
 	/* Computer Software */
