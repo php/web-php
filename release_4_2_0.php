@@ -60,7 +60,9 @@ echo "\n<!--$MYSITE-->\n";
 PHP 4.2.0 Release Announcement
 </h1>
 
-<p>After an orderly QA process, PHP 4.2.0 is <a href="/downloads.php">out</a>!</p>
+
+<p>After an orderly QA process, PHP 4.2.0 is <a href="/downloads.php">out</a>!<br>
+[ <a href="/release_4_2_0_fr.php">Version Fran&ccedil;aise</a> ]&nbsp;</p>
 
 <h2>External variables</h2>
 

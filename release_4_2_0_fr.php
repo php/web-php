@@ -60,7 +60,7 @@ echo "\n<!--$MYSITE-->\n";
 Annonce de PHP 4.2.0
 </h1>
 
-<p>Apr&egrave;s avoir pass&eacute; avec succ&egrave;s le processus qualit&eacute;, PHP 4.2.0 est officiellement <a href="/downloads.php">publi&eacute;</a>!</p>
+<p>Apr&egrave;s avoir pass&eacute; avec succ&egrave;s le processus qualit&eacute;, PHP 4.2.0 est officiellement <a href="http://www.php.net/downloads.php">publi&eacute;</a>!</p>
 
 <h2>Variables externes</h2>
 
@@ -72,8 +72,8 @@ dans l'environnement d'ex&eacute;cution global par d&eacute;faut.</b> La m&eacut
 pour acc&eacute;der aux variables externes est d'utiliser les nouveaux tableaux globaux,
 introduits en PHP 4.1.0. Pour plus d'informations sur ces modifications : 
 <ul>
- <li><a href="/manual/en/language.variables.predefined.php">PHP Manual : Predefined variables</a></li>
- <li><a href="/release_4_1_0.php">Annonce de PHP 4.1.0</a></li>
+ <li><a href="http://www.php.net/manual/en/language.variables.predefined.php">PHP Manual : Predefined variables</a></li>
+ <li><a href="http://www.php.net/release_4_1_0.php">Annonce de PHP 4.1.0</a></li>
  <li><a href="http://www.zend.com/zend/art/art-oertli.php">Article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e en PHP</a></li>
  <li><a href="http://www.phpinfo.net/?p=articles&rub=globals">Article de Jean Pierre D&eacute;zelus sur les variables globales</a></li>
 </ul>
