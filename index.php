@@ -239,7 +239,7 @@ as the main topic for the conference.
 </p>
 <p>
 You can find the CfP <a href="http://www.phpconference.de/2003/cfp_en.php">on
-the website</a>.  The deadline is 17th July, 2003.</p>
+the website</a>.  The deadline is 14th July, 2003.</p>
 <p>
 The conference is also featuring an <b>OpenSource Exhibition</b> where PHP related
 OpenSource projects can present themselves for free.
