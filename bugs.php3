@@ -379,9 +379,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			/* mail bug originator */
 			if ($ephp_version[0] == '4') {
-				$prefix = 'PHP 4.0';
+				$prefix = 'PHP 4.0 ';
 			}
-    			Mail("$eemail, $destination", "$prefix Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail("$eemail, $destination", $prefix."Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
 	}
 
