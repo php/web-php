@@ -4,7 +4,7 @@ commonHeader("Older News");
 ?>
 
 
-<img src="php4zend-small-white.gif" align="right">
+<img src="gifs/php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 1 is out!</h3>
 
 <p>
@@ -47,7 +47,7 @@ they do a manual grep and email us this information monthly.  Here is a little
 year.
 </P>
 
-<a href="http://www.zend.com/"><img align="right" src="zend_rgb-on-white1.gif" border="0"></a>
+<a href="http://www.zend.com/"><img align="right" src="gifs/zend_rgb-on-white1.gif" border="0"></a>
 <h3><b>Zend</b> has been announced</h3>
 <p>
 <b>Zend</b>, a new optimized engine for PHP has been <a

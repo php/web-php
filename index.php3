@@ -17,7 +17,7 @@ Win32 binaries are available from the PHP homepage. The
 <a href="ChangeLog.php3">ChangeLog</a> contains a
 full list of changes.
 
-<img src="php4zend-small-white.gif" align="right">
+<img src="gifs/php4zend-small-white.gif" align="right">
 <h3>PHP 4 Release Candidate 1</h3>
 The real thing is getting closer and closer.  After a very successful Beta 4
 release that was extremely stable, <a href="version4/">PHP 4.0</a> shifts gears from the beta cycle into 
@@ -39,7 +39,7 @@ the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
 
 <h3>New usage stats for March available</h3>
 <p>
-<a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
+<a href="/usage.php3"><img align=right src="gifs/stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
 <a href="http://www.netcraft.com/">Netcraft</a> and <a
 href="http://www.securityspace.com/s_survey/">E-Soft</a> have
 published the March results for their Web Server surveys - both
