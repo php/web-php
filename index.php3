@@ -1,6 +1,7 @@
 <?
 require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
+
 ?>
 
 <h3>PHP in the News</h3>

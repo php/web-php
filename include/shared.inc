@@ -16,7 +16,6 @@ if (!isset($HTTP_USER_AGENT)) {
 }
 
 
-
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
