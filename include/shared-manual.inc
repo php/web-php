@@ -300,12 +300,15 @@ function manualFooter($title,$id="") {
 
 // "Printer optimized" header for manual pages
 function manualPrintHeader ($title = '') {
-    global $REQUEST_URI, $SERVER_NAME;
+    global $REQUEST_URI, $SERVER_NAME, $NEXT, $PREV, $HOME;
     $pageurl = "http://$SERVER_NAME$REQUEST_URI";
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
+ <link rel="prev" href="<?php echo $PREV[0]; ?>">
+ <link rel="next" href="<?php echo $NEXT[0]; ?>">
+ <link rel="start" href="<?php echo $HOME[0]; ?>">
 </head>
 <body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099">
 <table>
