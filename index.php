@@ -21,7 +21,7 @@ recommended for all users of PHP to upgrade to this version.  You can read the
 
 <h3>PHP 3.0.18 released</h3>
 October 21, 2000. PHP 3.0.18 was released. This is a bug-fix release, including
-fixes for file uploads and a backported imagetypes() function from PHP4. The
+fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
 <a href="http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854">ChangeLog</a>
 contains a full list of changes.
 
