@@ -78,15 +78,23 @@ lists.  There are a few PHP-related mailing lists available.
      (This is an unmoderated, high volume list, and is also available
      in a twice-daily digest.)
  <li>The list for discussing database topics is <b>php-db@lists.php.net</b>.
-     (This is an unmoderated list.)
+     (This is an unmoderated list and is also available in a twice-daily
+     digest.)
  <li>The list for discussing installation issues and problems
      is <b>php-install@lists.php.net</b>.
-     (This is an unmoderated list.)
+     (This is an unmoderated list and is also available in a twice-daily
+     digest.)
+ <li>The list for discussing internationalization (i18n) and localization
+     (l10n) issues and features is <b>php-i18n@lists.php.net</b>.
+     (This is an unmoderated list and is also available in a twice-daily
+     digest.)
  <li>The list for discussion migration from earlier versions of PHP 
      is <b>php-migration@lists.php.net</b>.
-     (This is an unmoderated list.)
+     (This is an unmoderated list and is also available in a twice-daily
+     digest.)
  <li>The list for Windows PHP users is <b>php-windows@lists.php.net</b>.
-     (This is an unmoderated list.)
+     (This is an unmoderated list and is also available in a twice-daily
+     digest.)
  <li>Users interested in early access to PHP releases so that they
      can provide feedback about bugs to the developers before releases
      go out to the world can subscribe to the Beta list. (This is an
@@ -119,6 +127,8 @@ To subscribe to one of these lists, use this simple form:
     <option value="phpdoc">Documentation List
     <option value="php-install">Installation List
     <option value="php-install-digest">Installation List Digest
+    <option value="php-i18n">Internationalization List
+    <option value="php-i18n-digest">Internationalization List Digest
     <option value="phplib">PHPLIB Mailing List
     <option value="phplib-dev">PHPLIB Developers List
     <option value="php-kb">Knowledge Base
