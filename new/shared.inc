@@ -2,12 +2,12 @@
 require("site.inc");
 
 $MIRRORS = array(
-   "http://ca.php.net/"         => array("ca", "Toronto, Canada"),
-   "http://il.php.net/"         => array("il", "Netvision, Israel"),
-   "http://machba.il.php.net/"  => array("il", "Technion, Israel"),
-   "http://no.php.net/"         => array("no", "Trondheim, Norway"),
-   "http://uk.php.net/"         => array("uk", "Norwich, United Kingdom"),
-   "http://www.php.net/"        => array("us", "Circle Net, United States")
+   "http://ca.php.net/"         => array("ca", "Toronto, Canada", "bellasf", "http://www.bell.ca/"),
+   "http://il.php.net/"         => array("il", "Netvision, Israel", "netvision", "http://www.netvision.net.il/"),
+   "http://machba.il.php.net/"  => array("il", "Technion, Israel", "none", "/"),
+   "http://no.php.net/"         => array("no", "Trondheim, Norway", "guardian", "http://www.guardian.no/"),
+   "http://uk.php.net/"         => array("uk", "Norwich, United Kingdom", "squid", "http://www.netcom.co.uk/"),
+   "http://www.php.net/"        => array("us", "Circle Net, United States", "besthost", "http://BestHost.net/")
 );
 
 function kickHeader($offset) {
@@ -286,11 +286,19 @@ function commonFooter() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=middle BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TD ALIGN=right width=100%>
+<TD ALIGN=right width=50%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+<TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
+<I>Site Hosted by:</I><BR></TD>
+<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 hspace=10></A><BR></TD>
+</TR></TABLE>
+
+</TD>
+<TD ALIGN=right width=50%>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
-<I>Site Hosted by:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
+<I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
 <TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
 <TD><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
