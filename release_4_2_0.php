@@ -99,7 +99,7 @@ PHP 4.2.0 Release Announcement
  <li>Register globals is <b>off!</b> by default</li>
  <li>Overhaul of the sockets extension</li>
  <li>Highly improved performance with file uploads</li>
- <li>The satelite and mailparse extensions were moved to PECL and are not longer 
+ <li>The satellite and mailparse extensions were moved to PECL and are not longer 
   bundled with the official PHP release.</li>
  <li>The posix extension has been cleaned up.</li>
  <li>iconv handling has been improved</li>
