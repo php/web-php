@@ -201,6 +201,18 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
+<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
+
+<h1>PHP 4.3.8 released!</h1>
+<p>
+ <span class="newsdate">[13-Jul-2004]</span>
+ PHP Development Team is would like to announce the immediate availability of <a href="/downloads.php">PHP 4.3.8</a>.
+ This release is made in response to several security issues that have been discovered since the
+ 4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
+</p>
+
+<hr />
+
 <?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
 <h1>International PHP Conference 2004</h1>
 <p>
@@ -314,28 +326,6 @@ commonHeader("Hypertext Preprocessor");
 <p>
  Lots of <a href="http://www.zend.com/php5/contest/prizes.php">prizes</a>
  are available!
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
-
-<h1>PHP 4.3.7 released!</h1>
-<p>
- <span class="newsdate">[03-Jun-2004]</span>
- PHP Development Team is proud to announce the release of PHP
- <a href="/downloads.php">PHP 4.3.7</a>. This is a maintenance release
- that in addition to several non-critical bug fixes, addresses an input
- validation vulnerability in <code>escapeshellcmd()</code> and
- <code>escapeshellarg()</code> functions on the Windows platform.
- Users of PHP on Windows are encouraged to upgrade to this release
- as soon as possible.
-</p>
-
-<p>
- All in all this release fixes over 30 bugs that have been discovered
- and resolved since the 4.3.6 release. For a full list of changes in
- PHP 4.3.7, see the <a href="/ChangeLog-4.php#4.3.7">ChangeLog</a>.
 </p>
 
 <hr />

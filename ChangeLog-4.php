@@ -11,6 +11,17 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.3.8"></a>
+<h3>Version 4.3.8</h3>
+<b>14-Jul-2004</b>
+<ul>
+<li>Various fixes including security fixes.</li>
+
+</ul>
+There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.7"></a>
 <h3>Version 4.3.7</h3>
 <b>03-Jun-2004</b>

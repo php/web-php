@@ -103,17 +103,17 @@ site_header("Downloads");
 <hr />
 
 <a name="v4">
-<h1>PHP 4.3.7</h1>
+<h1>PHP 4.3.8</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.3.7.tar.bz2','PHP 4.3.7 (tar.bz2)'); ?> - 02 June 2004<br />
-  <span class="md5sum">md5: 5293fdc909a306a2636e0fafcc79442c</span>
+  <?php download_link('php-4.3.8.tar.bz2','PHP 4.3.8 (tar.bz2)'); ?> - 13 July 2004<br />
+  <span class="md5sum">md5: e8ab484fcb94cd2e0d7ecfd0762cfd33</span>
  </li>
  <li>
-  <?php download_link('php-4.3.7.tar.gz', 'PHP 4.3.7 (tar.gz)');  ?> - 02 June 2004<br />
-  <span class="md5sum">md5: 20abcab34809146cb0f766a47187a957</span>
+  <?php download_link('php-4.3.8.tar.gz', 'PHP 4.3.8 (tar.gz)');  ?> - 13 July 2004<br />
+  <span class="md5sum">md5: dd69f8c89281f088eadf4ade3dbd39ee</span>
  </li>
 </ul>
 
@@ -132,19 +132,19 @@ site_header("Downloads");
 
 <ul>
  <li>
-  <?php download_link('php-4.3.7-Win32.zip', 'PHP 4.3.7 zip package'); ?> - 02 June 2004<br />
+  <?php download_link('php-4.3.8-Win32.zip', 'PHP 4.3.8 zip package'); ?> - 13 July 2004<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: 3362079d4d1aaaf0c146b0c376ceec4b</span>
+  <span class="md5sum">md5: dbf32bfa687e55dbc697d08c4ee09bf2</span>
  </li>
  <li>
-  <?php download_link('php-4.3.7-installer.exe', 'PHP 4.3.7 installer'); ?> - 02 June 2004<br />
+  <?php download_link('php-4.3.7-installer.exe', 'PHP 4.3.8 installer'); ?> - 13 July 2004<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 91115427bd112e5b96e5ac48fd8a9afd</span>
+  <span class="md5sum">md5: feea15b4405844fe44b17bd3973df674</span>
  </li>
 </ul>
 
