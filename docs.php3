@@ -36,6 +36,8 @@ commonHeader("Documentation ");
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
     >Japanese translation of the PHP manual</a>
 
+<li><a href="http://www.nexen.net/fr/aide/PHP/index.html">French translation of the PHP manual</a>
+
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
