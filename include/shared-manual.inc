@@ -268,6 +268,7 @@ function sendManualHeaders($charset,$lang) {
         global $LANG;
         $LANG = $lang;
 	Header("Cache-Control: public, max-age=600");
+	Header("Vary: Cookie");
 	Header("Content-type: text/html;charset=$charset");
 	Header("Content-language: $lang");
 }
