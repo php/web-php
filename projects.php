@@ -378,6 +378,11 @@ formatted comments from the PHP files to provide browsable documentation for the
 defined in the scripts.
 <? endEntry(); ?>
 
+<? makeEntry("eGrail", "http://www.egrail.org", "Al Brown", "abrown@egrail.com"); ?>
+eGrail is a comprehensive web management system with templates, and revision
+control.  It is based completely on open source products.
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
