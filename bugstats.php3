@@ -2,6 +2,7 @@
 require("shared.inc");
 if(!strstr($MYSITE,"ca.php.net")) {
         Header("Location: http://ca.php.net/bugstats.php3");
+		exit;
 }
 
 	function mydate($str) {
