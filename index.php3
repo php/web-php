@@ -26,7 +26,9 @@ WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
 <p>
 <b>Zend</b>, a new optimized engine for PHP has been <a href="http://www.zend.com/PR.html">announced</a>
 on January 4th, 1999.<br>
-Visit the <a href="http://www.zend.com/">Zend Web site</a>!
+Visit the <a href="http://www.zend.com/">Zend Web site</a>!  Note that Zend is not a new version
+of PHP.  Zend is the name of the engine that will be a critical component of PHP Version 4 which
+is still a couple of months away from being available in any form whatsoever.
 </p>
 
 <h3>What is PHP?</h3>
