@@ -3,7 +3,7 @@ require_once 'prepend.inc';
 
 // Set variable defaults
 $NEXT = $PREV = $UP = $HOME = $PGI = array(false, false);
-$TOC = array(); $SIDEBAR_DATA = ''; $BASE_FOR_MANPAGE = '';
+$TOC = array(); $SIDEBAR_DATA = '';
 
 // If we don't know anything about printing, set it to false
 if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
@@ -74,7 +74,7 @@ function makeBorderTOC($id)
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
-           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $BASE_FOR_MANPAGE;
+           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
     echo '<!--UdmComment-->' . "\n" . 
          '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
@@ -102,7 +102,7 @@ function navigationBar($title,$id,$loc) {
     // Print out language switch on top of manual pages
     if ($loc != 'bottom') {
         $links = array();
-        preg_match("!/manual/(.+)/!", $BASE_FOR_MANPAGE, $langcode);
+        preg_match("!/manual/(.+)/!", $_SERVER['BASE_HREF'], $langcode);
         $links[] = array("$langcode[1]/print/$id", "printer friendly");
         $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
         // Disable all 'inactive' languages
@@ -278,7 +278,7 @@ function manualUserNotes($title, $id) {
 
 // Send manual HTTP headers, provide accurate language data
 function sendManualHeaders($charset,$lang) {
-    global $LAST_UPDATED, $BASE_FOR_MANPAGE, $MYSITE;
+    global $LAST_UPDATED, $MYSITE;
     
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
@@ -286,34 +286,33 @@ function sendManualHeaders($charset,$lang) {
     header("Content-type: text/html;charset=$charset");
     header("Content-language: $lang");
     
-    // Set initial base for manual page
+    // Set initial base for this manual page
     // [will be extended in manualHeader()!]
-    $BASE_FOR_MANPAGE = $MYSITE . 'manual/' . language_convert($lang);
+    $_SERVER['BASE_HREF'] = $MYSITE . 'manual/' . language_convert($lang);
 }
 
 // Print out manual page header.
 function manualHeader()
 {
-    global $PRINT_PAGE, $PGI, $BASE_FOR_MANPAGE;
+    global $PRINT_PAGE, $PGI;
     
     // XSL [and new DSSSL] sheets provide params in the
     // 'this' array element configured above, while old
     // DSSSL sheets provide info via two parameters [title, id]
     if (func_num_args() > 0) {
-        list($title, $id) = func_get_args();
+        list($title, $filename) = func_get_args();
     } else {
-        list($id, $title) = $PGI;
+        list($filename, $title) = $PGI;
     }
     
-    // Finalize the manpage base with proper filename
-    $BASE_FOR_MANPAGE .= '/' . $id;
-    
     if ($PRINT_PAGE) {
+        $_SERVER['BASE_HREF'] .= "/print/$filename";
         manualPrintHeader($title);
     } else {
-        makeBorderTOC($id);
+        $_SERVER['BASE_HREF'] .= "/$filename";
+        makeBorderTOC($filename);
         commonHeader ($title. " - Manual");
-        navigationBar($title, $id, "top");
+        navigationBar($title, $filename, "top");
     }
 }
 
@@ -351,28 +350,29 @@ function manualFooter()
 // =============================================================================
 
 // "Printer optimized" header for manual pages
-function manualPrintHeader ($title = '') {
-    global $REQUEST_URI, $SERVER_NAME, $NEXT, $PREV, $HOME;
-    $pageurl = "http://$SERVER_NAME$REQUEST_URI";
+function manualPrintHeader($title = '') {
+    global $NEXT, $PREV, $HOME;
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="prev" href="<?php echo $PREV[0]; ?>">
- <link rel="next" href="<?php echo $NEXT[0]; ?>">
- <link rel="start" href="<?php echo $HOME[0]; ?>">
+ <link rel="prev" href="<?php  echo $PREV[0]; ?>" />
+ <link rel="next" href="<?php  echo $NEXT[0]; ?>" />
+ <link rel="start" href="<?php echo $HOME[0]; ?>" />
+ <base href="<?php echo $_SERVER['BASE_HREF']; ?>" />
 </head>
 <body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099">
 <table>
 <tr>
  <td><a href="/"><?php print_image('php.gif', 'PHP'); ?></a></td>
  <td>
-  This is a printer friendly version of the PHP Manual.<br>
-  Original address of this page: <a href="<?php echo $pageurl; ?>"><?php echo $pageurl; ?></a><br>
-  <small><?php echo make_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
+  This is a printer friendly version of the PHP Manual.<br />
+  Original address of this page: <?php print_link($_SERVER['BASE_HREF']); ?><br />
+  <small><?php print_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
  </td>
 </tr>
-</table><hr size="1" noshade>
+</table><hr size="1" noshade="noshade" />
 <?php
 }
 

@@ -185,7 +185,7 @@ $enclosed = 0;
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
-           $SEARCH_BASE, $ONLOAD, $BASE_FOR_MANPAGE;
+           $SEARCH_BASE, $ONLOAD;
 
     // If no onload event is specified, restore the last search
     if (empty($ONLOAD)) { $ONLOAD = "searchHistory(); tocImages();"; }
@@ -194,7 +194,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     // for BC reasons, until we migrate all the code to use the last one)
     unset($PBASE);
     if (!empty($SEARCH_BASE))          { $PBASE = $SEARCH_BASE; }
-    if (!empty($BASE_FOR_MANPAGE))     { $PBASE = $BASE_FOR_MANPAGE; }
     if (!empty($_SERVER['BASE_HREF'])) { $PBASE = $_SERVER['BASE_HREF']; }
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -287,18 +286,13 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
    </table>
   </td>
   <td bgcolor="#cccccc" background="<?php echo $_SERVER['STATIC_ROOT']; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
-<?php endif; ?>
+<?php endif; // sidebar printed ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="100%">
     <tr><td valign="top">
 <?php
-  endif;
-/* don't show this yet ... ?>
- <div class="mirror">
- You are using <?php echo $MYSITE; ?>. However, foo.php.net is closer. We would appreciate if you could use that mirror.
- </div>
-
-<?php */ }
+  endif; // enclosed in a multiple column layout
+}
 
 
 # commonfooter()
