@@ -376,6 +376,7 @@ var lastbutton='top';
 
 NS4 = (document.layers) ? 1 : 0;
 IE4 = (document.all) ? 1 : 0;
+DOM = (document.getElementById) ? 1 : 0;
 ver4 = (NS4 || IE4) ? 1 : 0;
 
 function moveLayers() {
@@ -390,7 +391,16 @@ function moveLayers() {
 			document.layers['qrefKick'].top = 80;
 			document.layers['searchKick'].left = screenWidth-350;
 			document.layers['searchKick'].top = 36;
-		} else {
+		} else if (DOM) {
+<? if ($FRAMEMODE!="manual"): ?>
+			document.getElementById('mirrorsKick').style.pixelLeft = 140;
+			document.getElementById('mirrorsKick').style.pixelTop = 215;
+<? endif; ?>
+			document.getElementById('qrefKick').style.pixelLeft = 140;
+			document.getElementById('qrefKick').style.pixelTop = 80;
+			document.getElementById('searchKick').style.pixelLeft = screenWidth-350;
+			document.getElementById('searchKick').style.pixelTop = 36;
+                } else {
 			screenWidth = document.body.clientWidth + 18;
 <? if ($FRAMEMODE!="manual"): ?>
 			document.all['mirrorsKick'].style.pixelLeft = 140;
@@ -410,12 +420,16 @@ function popUp(menuName,on) {
 			moveLayers();
 			if (NS4) {
 				document.layers[menuName].visibility = "show";
-			} else {
+			} else if (DOM) {
+				document.getElementById(menuName).style.visibility = "visible";
+                        } else {
 				document.all[menuName].style.visibility = "visible";
 			}
 		} else {
 			if (NS4) {
 				document.layers[menuName].visibility = "hide";
+			} else if (DOM) {
+				document.getElementById(menuName).style.visibility = "hidden";
 			} else {
 				document.all[menuName].style.visibility = "hidden";
 			}
