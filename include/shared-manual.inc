@@ -167,7 +167,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
         } else {
                 echo "<B>".$name."</B><BR>\n";
         }
-        echo date("d-M-Y h:i",$date)."<BR>\n";
+        echo date("d-M-Y h:ia",$date)."<BR>\n";
 ?>
 </TD></TR>
 <TR BGCOLOR="#F0F0F0"><TD>
