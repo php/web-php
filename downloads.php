@@ -54,7 +54,7 @@ $server = $SERVER_NAME;
 <h1>Latest version of PHP</h1>
 
 <p>
-Before you download, make sure you're using a mirror close to you. You can
+Before you download, make sure you are using a mirror close to you. You can
 change mirrors at the bottom of the page.
 </p>
 
@@ -128,6 +128,50 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
     </ul><br>
   </li>
   <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files</li>
+  <li>Search for PHP tarballs on AllTheWeb.com:
+    <form action="http://www.alltheweb.com/search" method="GET">
+      <input type="hidden" name="cat" value="ftp">
+      <input type="hidden" name="ftype" value="6">
+<?php /*
+
+cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
+*/?>
+      <select name="query" onchange="this.form.submit()">
+        <option value="">--select version--</option>
+        <option value="php-3.0.tar.gz">3.0</option>
+        <option value="php-3.0.1.tar.gz">3.0.1</option>
+        <option value="php-3.0.10.tar.gz">3.0.10</option>
+        <option value="php-3.0.11.tar.gz">3.0.11</option>
+        <option value="php-3.0.12.tar.gz">3.0.12</option>
+        <option value="php-3.0.13.tar.gz">3.0.13</option>
+        <option value="php-3.0.14.tar.gz">3.0.14</option>
+        <option value="php-3.0.15.tar.gz">3.0.15</option>
+        <option value="php-3.0.16.tar.gz">3.0.16</option>
+        <option value="php-3.0.17.tar.gz">3.0.17</option>
+        <option value="php-3.0.18.tar.gz">3.0.18</option>
+        <option value="php-3.0.2.tar.gz">3.0.2</option>
+        <option value="php-3.0.3.tar.gz">3.0.3</option>
+        <option value="php-3.0.4.tar.gz">3.0.4</option>
+        <option value="php-3.0.5.tar.gz">3.0.5</option>
+        <option value="php-3.0.6.tar.gz">3.0.6</option>
+        <option value="php-3.0.7.tar.gz">3.0.7</option>
+        <option value="php-3.0.8.tar.gz">3.0.8</option>
+        <option value="php-3.0.9.tar.gz">3.0.9</option>
+        <option value="php-4.0.0.tar.gz">4.0.0</option>
+        <option value="php-4.0.1.tar.gz">4.0.1</option>
+        <option value="php-4.0.1pl1.tar.gz">4.0.1pl1</option>
+        <option value="php-4.0.2.tar.gz">4.0.2</option>
+        <option value="php-4.0.3.tar.gz">4.0.3</option>
+        <option value="php-4.0.4.tar.gz">4.0.4</option>
+        <option value="php-4.0.4pl1.tar.gz">4.0.4pl1</option>
+        <option value="php-4.0.5.tar.gz">4.0.5</option>
+        <option value="php-4.0.6.tar.gz">4.0.6</option>
+        <option value="php-4.1.0.tar.gz">4.1.0</option>
+        <option value="php-4.1.1.tar.gz">4.1.1</option>
+        <option value="php-4.1.2.tar.gz">4.1.2</option>
+      </select>
+    </form>
+  </li>
 </ul>
 
 <p>
