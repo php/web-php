@@ -3,6 +3,7 @@ require("shared.inc");
 commonHeader("PHP 3.0 Development Credits"); 
 
 function makeMail($mail) {
+	$mail = ereg_replace('@', '&#64;', $mail);
 	echo "(<A HREF=\"mailto:$mail\">$mail</A>)";
 };
 ?>
