@@ -225,6 +225,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
         <option value="php-4.2.0.tar.gz">4.2.0</option>
         <option value="php-4.2.1.tar.gz">4.2.1</option>
         <option value="php-4.2.2.tar.gz">4.2.2</option>
+        <option value="php-4.2.3.tar.gz">4.2.3</option>
       </select>
     </form>
   </li>
