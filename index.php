@@ -9,6 +9,11 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 4.0.3 Released</h3>
+Oct 11, 2000.  <a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
+enhancements, as well as several new features and bug fixes.  It is strongly
+recommended for all users of PHP to upgrade to this version.
+
 <h3>Manual Search Tip</h3>
 Oct. 6, 2000.  You can now go directly to PHP manual pages with a URL such as
 <a href="http://php.net/strlen">php.net/strlen</a>.  
