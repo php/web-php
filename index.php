@@ -25,11 +25,11 @@ browser.</p>
 
 <h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
 
-<p>Registration for ApacheCon 2001 in Santa Clara on April 4-6, 2001
+<p>Registration for <a href="http://ApacheCon.Com/2001/US/">ApacheCon 2001</a> in Santa Clara on April 4-6, 2001
 is underway! There's sessions about PHP from Luis Argerich, Thies
 Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
 Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
-sessions on other cool open-source projects. Early registration
+sessions on other cool open-source projects. <a href="http://ApacheCon.Com/2001/US/html/registry.html">Early registration</a>
 ends March 9, so act fast for discounted prices!
 <br clear="all">
 </p>
