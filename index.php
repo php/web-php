@@ -78,6 +78,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Award 2002</h1>
+<p>
+<font class="newsDate">[27-Apr-2002]</font>
+The Association Française des Utilisateurs de PHP (AFUP) and
+the German PHP Association (PHP Verein) are organizing a PHP
+contest to give out the first PHP Award. The PHP Award will
+be given in three categories: Open Source, Freeware and
+Commercial Software, the submissin deadline is July, 15th 2002.
+If you are interested go to
+<a href="http://www.php-award.net/">http://www.php-award.net/</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP.net: A Tourist's Guide</h1>
 <p>
 <font class="newsDate">[26-Apr-2002]</font>
