@@ -69,6 +69,7 @@ right away.</blockquote>
 	title("City and Community Sites");
 	siteStart();
 	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
+	site("Du côté de","www.ducotede.com");
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
 	site("The Tri Cities Online","tri.xtn.net");
