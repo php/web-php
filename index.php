@@ -133,6 +133,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php echo make_image("phpconf2002.gif", "International PHP Conference 2002", "right"); ?>
+
+<h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
+<p>
+<font class="newsdate">[05-Sept-2002]</font>
+After the big success of last year’s first International PHP Conference this
+year’s show will be even bigger and better.</p>
+
+<p>
+Come to Frankfurt and meet the most excellent speakers of the PHP community
+on four following days packed with whole day tutorials on November 3 and 4
+and a great variety of sessions on November 5 and 6.</p>
+
+<p>
+The topics are PHP Applications, PHP &amp; Business, Database Topics, PHP &amp; GTK,
+PHP Internals / Extensions, PHP &amp; XML, and others.</p>
+
+<p><a href="https://www.entwickler.com/ssl/php2002/en/form_php2002.php">Early
+bird registration</a> will end on 30th of September. Students and private
+persons get special discounts.</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.php-con.com/", make_image("phpcon2002.png", "PHPCon 2002", "right") ); ?>
 
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
@@ -276,20 +299,6 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 
 <p>Windows binary version is also available for
 <?php download_link("php-4.3.0-dev-zend2-win32-alpha2.zip", "download"); ?>.</p>
-
-<?php echo hdelim(); ?>
-
-<?php echo make_image("phpconf2002.gif", "International PHP Conference 2002", "right"); ?>
-
-<h1>Call for Papers: International PHP Conference 2002</h1>
-<p>
-<font class="newsdate">[12-Jun-2002]</font>
-The <?php print_link('http://www.php-conference.de/2002/', 'International PHP Conference 2002'); ?> is looking for 
-people, who do talks and workshops at the conference. If you want to present your talk, please 
-<?php print_link('http://www.phpconference.de/2002/kt/input/', 'submit your proposals'); ?> to them. 
-The conference will be held in November in Frankfurt/Germany. For more information about dates and
-topics, visit the <?php print_link('http://www.phpconference.de/2002/cfp_en.php', 'Call for Papers page'); ?>.
-</p>
 
 <?php echo hdelim(); ?>
 
