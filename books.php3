@@ -82,8 +82,8 @@ Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages
 ><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/thephpdevelopmte">PHP Essentials</A><BR>
-A Better Way to Learn PHP - Includes Version 4
-by <A HREF="mailto:julie@thickbook.com">Julie Meloni</A><BR> 
+<SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
+by <A HREF="mailto:julie@thickbook.com">Julie C. Meloni</A><BR> 
 <SMALL>
 Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 <A HREF="http://www.thickbook.com/">more info</A>
@@ -103,7 +103,7 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
 by Egon Schmid, Christian Cartus, Richard Blume<BR>
-<SMALL>in German, April 1999, 477 pages, ISBN 3-8272-5524-4, Markt&Technik</SMALL><BR>
+<SMALL>in German, Markt&Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
 <SMALL><A HREF="http://www.php-center.de/">weitere Informationen</A><BR>
 </TD>
 </TR>
@@ -116,7 +116,7 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 <TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
 >PHP - Dynamische websites professioneel ondersteunen</A><BR>
 by Egon Schmid, Christian Cartus en Richard Blume<BR>
-<SMALL>in Dutch, April 2000, 482 pages, ISBN 90-430-0140-6, Addison Wesley Longman</SMALL><BR>
+<SMALL>in Dutch, Addison Wesley Longman, 482 pages, ISBN 90-430-0140-6, April 2000</SMALL><BR>
 <SMALL><BR>
 </TD>
 </TR>
