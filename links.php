@@ -203,8 +203,16 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li
 <ul>
 
 <li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
-Brazilian PHP Portal with many link and informations<br></li>
+Brazilian PHP Portal with many links and informations<br></li>
 </ul></li>
+
+<!--
+<li><b>Swedish</b>
+<ul>
+
+<li><a href="http://www.phpportalen.net/">phpportalen.net</a><br>
+A new Swedish PHP Portal with links and news about PHP<br></li>
+</ul></li> -->
 </ul>
 
 <?php echo hdelim(); ?>
