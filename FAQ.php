@@ -1425,7 +1425,7 @@ solution is to use PHP's
 
 
 <? echo hdelim(); ?>
-<a name="11">
+<a name="13">
 <h2>13. Miscellaneous Questions</h2>
 </a>
 
