@@ -226,7 +226,7 @@ input.max, textarea.max, select.max {
 
 /* PHP code syntax highlighting */
 div.phpcode, pre {
-   margin-top: 5px 0px;
+   margin: 5px 0;
 }
 div.phpcode span.html {
     color: black;	
@@ -274,7 +274,7 @@ ul.simple li {
 /* User notes display */
 div#usernotes {
 	background-color: #e0e0e0;
-	color; inherit;
+	color: inherit;
 }
 div#usernotes div.head, div#usernotes div.foot {
 	background-color: #d0d0d0;
