@@ -50,11 +50,11 @@ foreach ($MURLS as $murl) {
     // country header, if it is a new one
     $country = mirror_country($murl);
     if ($prevcc != $country) {
-        echo '<tr><td colspan="4"></td></tr>' . "\n";
+        echo '<tr><td colspan="5"></td></tr>' . "\n";
         echo '<tr bgcolor="#cccccc"><td width="40" align="center">';
         print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], FALSE, 'CLASS="flag"');
         echo '<br /></td>';
-        echo '<td colspan="3"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
+        echo '<td colspan="4"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
         echo '</tr>' . "\n";
     }
 
@@ -80,6 +80,11 @@ foreach ($MURLS as $murl) {
     // Print out mirror's default language
     echo '<td><small>';
     echo $LANGUAGES[default_language($murl)];
+    echo '</small><br /></td>' . "\n";
+
+    // Print out search support information
+    echo '<td><small>';
+    echo (have_search($murl) ? "with local search" : "&nbsp;");
     echo '</small><br /></td>' . "\n";
 
     // End row for this mirror
