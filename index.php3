@@ -3,7 +3,7 @@ require("shared.inc");
 commonHeader("PHP:  Hypertext Preprocessor");
 ?>
 
-<h3><a href="y2k.php3">Year 2000 Compliance Statement</a><h3>
+<h3><a href="y2k.php3">Year 2000 Compliance Statement</a></h3>
 
 <h3>PHP Meaning Vote</h3>
 
