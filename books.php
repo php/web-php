@@ -15,7 +15,7 @@ commonHeader("PHP Books");
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/cmvsstuff"
 >PHP Pocket Reference</A><BR>
-by Rasmus Lerdorf<BR>
+by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 <SMALL>
 O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 <A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
@@ -28,7 +28,7 @@ O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 ><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP Programming</A><BR>
-by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
+by <A HREF="http://zend.com/comm_person.php?id=9">Jesus Castagnetto</A>, Harish Rawat, <A HREF="http://zend.com/comm_person.php?id=21">Sascha Schumann</A>, Chris Scollo, Deepak Veliath<BR> 
 <SMALL>
 Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 <A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
@@ -42,7 +42,7 @@ Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 >Core PHP Programming</A><BR>
-by Leon Atkinson<BR>
+by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
 <SMALL>
 Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages<BR>
 <A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
@@ -83,7 +83,7 @@ Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff">PHP Essentials</A><BR>
 <SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
-by <A HREF="mailto:julie@thickbook.com">Julie C. Meloni</A><BR> 
+by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
 <SMALL>
 Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 <A HREF="http://www.thickbook.com/">more info</A>
@@ -101,9 +101,9 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/thephpdevelopmte"
 >PHP kurz & gut</A><BR>
-by Rasmus Lerdorf<BR>
+by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 <SMALL>
-Deutsche &Uuml;bersetzung von Ingo Marks<BR>
+Deutsche &Uuml;bersetzung von <A HREF="http://www.oreilly.de/catalog/phptbger/translator.html">Ingo Marks</A><BR>
 in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 <A HREF="http://www.oreilly.de/catalog/phptbger/index.html">weitere Informationen</A><BR>
 </SMALL>
@@ -117,9 +117,9 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
-by Egon Schmid, Christian Cartus, Richard Blume<BR>
+by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus, Richard Blume<BR>
 <SMALL>in German, Markt&Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
-<SMALL><A HREF="http://www.php-center.de/">weitere Informationen</A><BR>
+<SMALL><A HREF="http://www.dynamic-webpages.de/11.buecher.php3?buchID=2">weitere Informationen</A><BR>
 </TD>
 </TR>
 
@@ -130,7 +130,7 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 </TD>
 <TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
 >PHP - Dynamische websites professioneel ondersteunen</A><BR>
-by Egon Schmid, Christian Cartus en Richard Blume<BR>
+by <A HREF=http://zend.com/zend/hof/schmid.php"">Egon Schmid</A>, Christian Cartus en Richard Blume<BR>
 <SMALL>in Dutch, Addison Wesley Longman, April 2000, ISBN 90-430-0140-6, 477 pages</SMALL><BR>
 <SMALL><BR>
 </TD>
@@ -199,7 +199,7 @@ by Jean-Marc Herellier and Philippe Merigod<BR>
 </TD>
 <TD><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771"
 >Programmation PHP</A><BR>
-by Leon Atkinson<BR>
+by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
 <SMALL>French translation of Leon Atkinson's book</SMALL><BR>
 <SMALL><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771">more info</A><BR>
 </TD>
@@ -357,6 +357,7 @@ by Randy Jay Yarger, George Reese and Tim King<BR>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
 >MySQL</A><BR>
 by Paul DuBois<BR>
+foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
 </TD>
@@ -368,7 +369,7 @@ by Paul DuBois<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
 >Webmaster in a Nutshell (Nutshell Series)</A><BR>
-<SMALL>includes a large chapter on PHP written by Rasmus Lerdorf</SMALL><BR>
+<SMALL>includes a large chapter on PHP written by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A></SMALL><BR>
 by Stephen Spainhour and Robert Eckstein<BR>
 <SMALL><A HREF="http://www.oreilly.com/catalog/webmaster2/">more info</A><BR>
 </SMALL>
