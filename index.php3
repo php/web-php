@@ -8,6 +8,14 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h3>PHP Talk at Atlanta Linux Showcase</h3>
+<p>
+<a href="als99/"><img align=right src="gifs/als99.gif" border=0 width=64 height=61 alt="Atlanta Linux Showcase"></a>
+Jim Winstead gave a talk at the <a href="http://www.linuxshowcase.com/">Atlanta
+Linux Showcase</a> on October 16, 1999, in Atlanta, Georgia. You can view the slides from the talk
+<a href="als99/">here</a> (Only works with Netscape).
+</p>
+
 <img src="lilogo.gif" align="right">
 <h3>Network Computing takes a look at Web Server technologies</h3>
 <p>
@@ -30,17 +38,6 @@ of fixes, migrated modules and several enhancements over Beta 1.  All users of v
 4.0 are encouraged to upgrade to the new beta, and everybody else is invited
 to take a look at it!
 </p>
-
-<h3>PHP Tutorials at O'Reilly Open Source Software Convention</h3>
-<p>
-<a href="oreilly99/"><img align=right src="gifs/oss_conf_speaker.gif" border=0 width=72 height=117 alt="Open Source Software Convention"></a>
-Rasmus Lerdorf and Jim Winstead gave a pair of three-hour
-tutorials at <a href="http://conferences.oreilly.com/">O'Reilly's
-Open Source Software Convention</a> on August 21, 1999, in Monterey,
-California. You can see the slides from the tutorials
-<a href="oreilly99/">here</a> (Only works with Netscape).
-</p>
-
 
 <h3>CNET's Builder.com discovers PHP</h3>
 <p><img src="cnet.gif" align="right">
