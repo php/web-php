@@ -3,7 +3,7 @@ require_once 'prepend.inc';
 commonHeader("Download PHP Logos");
 ?>
 
-<h1>Download PHP Logos</h1>
+<h1>Download PHP Logos and Icons</h1>
 
 <p>
 Right click on one of the images and select "Save Image As" to save the
@@ -166,6 +166,20 @@ you use this for commercial purposes</li>
 <li>48x48, 32x32 and 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats ...
 all in one .ICO file</li>
 <li><a href="/logos/php.ico">download here</a>
+</ul>
+</td></tr>
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php_file_ico.gif" vspace="5" width="32" height="32" border="0" alt="PHP file icons"><br>
+(not exactly as shown)<br>
+</td><td align="left" width="67%">
+<ul>
+<li>PHP icon resource for Windows</li>
+<li>suitable as icons for file extensions like .php, .phtml and .php3</li>
+<li>32x32 and 16x16 sizes, in true colour format... all in one .ICO file</li>
+<li>these icons are made by Gonzalo de la Peña</li>
+<li><a href="/logos/php_file.ico">download here</a>
 </ul>
 </td></tr>
 
