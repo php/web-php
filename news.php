@@ -55,6 +55,16 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Are PHP and MySQL the Perfect Couple?", "by <a href=\"http://www.oreillynet.com/pub/au/77\">Jason Gilmore</a>",
+    "http://www.oreillynet.com/pub/a/network/2000/06/16/magazine/php_mysql.html", "June 16, 2000");?>
+MySQL and PHP have developed a special sort of relationship over the past few years, perhaps due in large part to the fact that they are both freely available for download. The increased popularity of this dynamic duo, coupled with boundless enthusiasm from core developers of both technologies, culminated in a "meeting of the minds" in Israel earlier this year. This resulted in the MySQL library being packaged with the PHP 4.0 distribution, in addition to an agreement to help each other improve the performance quality of product integration whenever the opportunity arises.
+<? endEntry(); ?>
+
+<? makeEntry( "Your SQL Database Might Just Be MySQL", "by <a href=\"http://www.oreillynet.com/pub/au/75\">John Paul Ashenfelter</a>",
+    "http://www.oreillynet.com/pub/a/network/2000/06/16/magazine/mysql.html", "June 16, 2000");?>
+So you need to build a database application that will be delivered over the Web. Your users have the browsers, you've got the web server and application software, but you need a database. What are your choices?
+<? endEntry(); ?>
+
 <? makeEntry( "Student Suspended Over Suspected Use of PHP", "by National News",
     "http://bbspot.com/News/2000/6/php_suspend.html", "June 14, 2000");?>
 "A teacher overheard him say that he was using PHP, and as part of our Zero-Tolerance policy against drug use, he was immediately suspended. No questions asked," said Principal Clyde Thurlow.  "We're not quite sure what PHP is, but we suspect it may be a derivative of PCP, or maybe a new designer drug like GHB."
