@@ -7,6 +7,10 @@ directions in there if you want to run the search engine on your
 mirror (or emulate it on your own website).
 */
 
+if (file_exists("configuration.inc")) {
+  include_once 'configuration.inc';
+}
+
 /* we don't want magic slashes in pattern or base */
 if (isset($pattern) && get_magic_quotes_gpc())
         $pattern = stripslashes($pattern);
@@ -53,17 +57,13 @@ if ($pattern) {
 		exit;
 	}
 
-	if (!have_search()) {
+	if (!have_search() && !isset(local_search_override)) {
 		$location="http://www.php.net/search.php";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
 		header("Location: ".$location."?".$query);
 		exit;
 	}
 }		
-
-if (file_exists("configuration.inc")) {
-  include_once 'configuration.inc';
-}
 
 function makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	$last = $next = '&nbsp;';
