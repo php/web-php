@@ -54,7 +54,7 @@ c/o Lerdorf Consultants Inc.
 Toronto, Ontario
 M5N 2G1
 CANADA
-<b>Note:<b> Pay to the order of: Lerdorf Consultants Inc.
+<b>Note:<b> Make it payable to: Lerdorf Consultants Inc.
 <?endEntry()?>
 
 <?makeEntry("Where does my money go?")?>
