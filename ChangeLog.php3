@@ -1,6 +1,6 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.14 Changes");
+commonHeader("PHP 3.0 -> 3.0.15 Changes");
 ?>
 
 <h3>February 25, 2000, Version 3.0.15</h3>
