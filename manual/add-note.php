@@ -22,7 +22,7 @@ if (isset($note) && strlen($note) >= 4096) {
   echo "<p>Your note is too long. You'll have to make it shorter before you can post it.</p>";
 }
 
-if (isset($note) && isset($action) && strlen($note) < 4096) && strtolower($action) != "preview"):
+if (isset($note) && isset($action) && strlen($note) < 4096 && strtolower($action) != "preview"):
   $result = posttohost("http://master.php.net/entry/user-note.php", array(
               "user" => stripslashes($user),
               "note" => stripslashes($note),
