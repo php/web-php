@@ -9,6 +9,55 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.1"></a>
+<h3>Version 5.0.1</h3>
+<b>12-Aug-2004</b>
+<ul>
+<li> Changed destructor mechanism so that destructors are called prior to request shutdown. (Marcus) </li>
+<li> Rewritten UNIX and Windows install help files. (Documentation Team) </li>
+<li> Updated several libraries bundled with the windows release which now includes libxml2-2.6.11, libxslt-1.1.7 and iconv-1.9.1. (Rob, Edin) </li>
+<li> Improved and moved ActiveScript SAPI to PECL.  (Wez) </li>
+<li> Fixed unloading of dynamically loaded extensions.  (Marcus, kameshj at fastmail dot fm) </li> 
+<li> Fixed ReflectionClass::getMethod() and ReflectionClass::getProperty() to raise an ReflectionException instead of returning NULL on failure.  (Sebastian) </li>
+<li> Fixed convert.* filters to consume remaining buckets_in on flush. (Sara) </li>
+<li> Fixed bug in mysqli->client_version. (Georg) </li>
+<li><?php bugfix(29606); ?> (php_strip_whitespace() prints to stdout rather then returning the value). (Ilia) </li>
+<li><?php bugfix(29577); ?> (MYSQLI_CLIENT_FOUND_ROWS undefined) (Georg) </li>
+<li><?php bugfix(29573); ?> (Segmentation fault, when exception thrown within PHP function called from XSLT). (Christian) </li>
+<li><?php bugfix(29522); ?> (accessing properties without connection) (Georg) </li>
+<li><?php bugfix(29505); ?> (get_class_vars() severely broken when used with arrays).  (Marcus) </li>
+<li><?php bugfix(29490); ?> (.Net object instantiation failed). (Michael Sisolak).  </li>
+<li><?php bugfix(29474); ?> (win32: usleep() doesn't work). (Wez) </li>
+<li><?php bugfix(29449); ?> (win32: feof() hangs on empty tcp stream). (Wez) </li>
+<li><?php bugfix(29437); ?> (Possible crash inside array_walk_recursive()). (Ilia) </li>
+<li><?php bugfix(29431); ?> (crash when parsing invalid address; invalid address returned by stream_socket_recvfrom(), stream_socket_getname()). (Wez) </li>
+<li><?php bugfix(29409); ?> (Segfault in PHP functions called from XSLT). (Rob) </li>
+<li><?php bugfix(29395); ?> (sqlite_escape_string() returns bogus data on empty strings). (Ilia, Tony) </li>
+<li><?php bugfix(29392); ?> (com_dotnet crashes when echo'ing an object). (Wez) </li>
+<li><?php bugfix(29368); ?> (The destructor is called when an exception is thrown from the constructor). (Marcus) </li>
+<li><?php bugfix(29354); ?> (Exception constructor marked as both public and protected).  (Marcus) </li>
+<li><?php bugfix(29342); ?> (strtotime() does not handle empty date string properly).  (Ilia) </li>
+<li><?php bugfix(29340); ?> (win32 build produces invalid php_ifx.dll). (Edin) </li>
+<li><?php bugfix(29335); ?> (fetch functions now use MYSQLI_BOTH as default) (Georg) </li>
+<li><?php bugfix(29291); ?> (get_class_vars() return names with NULLs). (Marcus) </li>
+<li><?php bugfix(29264); ?> (gettext extension not working). (Edin) </li>
+<li><?php bugfix(29258); ?> (variant_date_from_timestamp() does not honour timezone).  (Wez) </li>
+<li><?php bugfix(29256); ?> (error when sending large packets on a socket). (Dmitry) </li>
+<li><?php bugfix(29236); ?> (memory error when wsdl-cache is enabled). (Dmitry) </li>
+<li><?php bugfix(29147); ?> (Compile Error in mnoGoSearch functions). (Sergey, Antony) </li>
+<li><?php bugfix(29132); ?> ($_SERVER["PHP_AUTH_USER"] isn't defined). (Stefan) </li>
+<li><?php bugfix(29119); ?> (html_entity_decode() misbehaves with UTF-8). (Moriyoshi) </li>
+<li><?php bugfix(29109); ?> (SoapFault exception: [WSDL] Out of memory). (Dmitry) </li>
+<li><?php bugfix(29061); ?> (soap extension segfaults). (Dmitry) </li>
+<li><?php bugfix(28985); ?> (__getTypes() returning nothing on complex WSDL). (Dmitry) </li>
+<li><?php bugfix(28969); ?> (Wrong data encoding of special characters). (Dmitry) </li>
+<li><?php bugfix(28895); ?> (ReflectionClass::isAbstract always returns false). (Marcus) </li>
+<li><?php bugfix(28829); ?> (Thread-unsafety in bcmath elementary values). (Sara) </li>
+<li><?php bugfix(28464); ?> (catch() does not catch exceptions by interfaces). (Marcus) </li>
+</ul>
+
+<hr />
+
 <a name="5.0.0"></a>
 <h3>Version 5.0.0</h3>
 <b>13-Jul-2004</b>
