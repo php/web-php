@@ -39,3 +39,7 @@ TD,TH {
     font-size: 10pt;
     font-weight: normal;
 }
+
+PRE {
+    font-size : 10pt;
+}
