@@ -7,11 +7,15 @@ directions in there if you want to run the search engine on your
 mirror (or emulate it on your own website).
 */
 
-if (isset($pattern) && ($pattern)) {
-	setcookie("prevsearch",$pattern,0,"",".php.net");
-}
+/* we don't want magic slashes in pattern or prevsearch */
+if (isset($pattern) && get_magic_quotes_gpc())
+        $pattern = stripslashes($pattern);
+if (isset($prevsearch) && get_magic_quotes_gpc())
+        $prevsearch = stripslashes($prevsearch);
 
-if (isset($pattern) && ($pattern)) {
+if ($pattern) {
+	setcookie("prevsearch",$pattern,0,"",".php.net");
+
 	if ($show=="quickref") {
 		header("Location: manual-lookup.php?pattern=".urlencode($pattern));
 		exit;
@@ -43,7 +47,7 @@ if (isset($pattern) && ($pattern)) {
 		header("Location: $location?$query");
 		exit;
 	} else if ($show=="bugdb") {
-		$location = "http://www.php.net/bugs.php";
+		$location = "http://bugs.php.net/";
 		$query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=".urlencode($pattern);
 		header("Location: $location?$query");
 		exit;
@@ -102,7 +106,7 @@ if(!isset($pattern)) {
 <td align="right">
 Search for:<br></td>
 <td>
-<input type="text" name="pattern" value="<?php echo $prevsearch;?>" size="30">
+<input type="text" name="pattern" value="<?php echo htmlspecialchars($prevsearch);?>" size="30">
 <input type="submit" value=" Search "><br>
 </td></tr>
 <tr valign="top">
