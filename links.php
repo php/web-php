@@ -34,57 +34,88 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 <h3>Getting Started</h3>
 <P>On these sites you will find tutorials, articles and example scripts</P>
 <UL>
+
+<LI><a HREF="http://www.zend.com/">Zend.com</a><BR>
+Zend Technologies' Web site, with lots of PHP related resources 
+(articles, tutorials, case studies, PHP function table, etc.)<BR>
+
 <LI><a HREF="http://www.phpwizard.net/">phpWizard</a><BR>
 PHP Tutorials<BR>
+
 <LI><a HREF="http://www.phpbuilder.com/">PHPBuilder.Com</a><BR>
 A bunch of helpful PHP resources available here<BR>
-<LI><a HREF="http://www.zend.com/">Zend.com</a><BR>
-Zend Technologies' Web site, with lots of PHP related resources (articles, tutorials, case studies, PHP function table, etc.)<BR>
+
 <LI><a HREF="http://www.devshed.com/Server_Side/PHP/">PHP 3.0 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
+
 <LI><A HREF="http://php.codebase.org/">PHP.CodeBase.Org</A><BR>
 A nice all-around support site<BR>
-<!-- site is down as of 7/8/1999
+
 <LI><A HREF="http://www.314interactive.com/io/index.php3">IONLINE Programmer's Resource</A><BR>
 Another site with good articles on PHP basics and advanced topics.<BR>
--->
+
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>
+
 <LI><A HREF="http://www.weberdev.com/">Berber's PHP Example Page</A><BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
+
 <LI><A HREF="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</A><BR>
 A collection of PHP scripts.<BR>
+
 <LI><A HREF="http://phplib.netuse.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
+
 <LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more.<BR>
+
 <LI><A HREF="http://www.php-homepage.de/">PHP-Homepage</A><BR>
 German site about PHP with scripts, tips, forums, MyGuestBook, articles, news and more.<BR>
+
 <LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
-German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
+German site with installation guides, tips & scripts, BestOfGML, 
+WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
+
 <LI><A HREF="http://www.phpwelt.de/">PHPWelt</A><BR>
 a German website using PHP to offer free services, a huge script-archive, free scripts, tutorials and many more.<BR>
+
 <LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
 is a french gateway to PHP related contents.<BR>
+
 <LI><A HREF="http://www.phpinfo.net/">PHPInfo</A><BR>
 French site about PHP/MySQL: Links, Tips, Articles, Manuals, FAQ, Code Downloads, and much more!<BR>
+
 <LI><A HREF="http://php.pagina.nl/">Pagina</A><BR>
 A Dutch PHP portal that lists a lot of PHP links, including free hosting.<BR>
+
 <LI><A HREF="http://johng.free.fr/">FAQ of the French PHP newsgroup</A><BR>
+
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
-<LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
-<BR> Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
-<LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com PHP Scripts and Programs</A><BR>
-<LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">A comprehensive list of editors you can use to edit PHP programs.</A><BR>
+
+<LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A><BR>
+Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
+
+<LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com</A><BR>
+PHP Scripts and Programs<BR>
+
+<LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">Editor List</A><BR>
+A comprehensive list of editors you can use to edit PHP programs.<BR>
+
 <LI><A HREF="http://phpsearch.de/">PHPSearch</A><br>
 Searchengine for PHP related things.<BR>
 
-<LI><A HREF="http://www.evilwalrus.com/">Evil Walrus</A> has a growing list of PHP scripts<BR>
+<LI><A HREF="http://www.evilwalrus.com/">Evil Walrus</A><BR>
+A a growing list of PHP scripts<BR>
+
 <LI><A HREF="http://www.LinuxGuruz.org/">LinuxGuruz.org</A><BR>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server, HTML, PHP, MySQL ... and lots more.<BR>
+
+<LI><A HREF="http://php.resourceindex.com/">PHP Resource Index</A><BR>
+Hundreds of PHP resources, categorized and searchable.<BR>
+
 </UL>
 
 <h3>Funding PHP Development</h3>
