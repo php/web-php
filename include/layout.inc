@@ -161,6 +161,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">
+ <meta name="MSSmartTagsPreventParsing" content="TRUE">
 </head>
 
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
