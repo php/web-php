@@ -220,9 +220,8 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
  <font class="newsdate">[29-Jun-2003]</font>
- The PHP development community is proud to announce the release of PHP 5 Beta 1.  Both source packages 
- (<?php download_link('php-5.0.0b1.tar.bz2', 'bzip2'); ?> | <?php download_link('php-5.0.0b1.tar.gz', 'gzip'); ?>),
- and a Windows <?php download_link('php-5.0.0b1-Win32.zip', 'build'); ?> are available.  A list of changes 
+ The PHP development community is proud to announce the release of PHP 5 Beta 1.  Both source packages,
+ and a Windows build are available in the <a href="/downloads.php">Downloads Section</a>.  A list of changes 
  can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
 </p>
 <p>
