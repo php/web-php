@@ -74,9 +74,9 @@ if($fp) {
 		list($d,$m,$y,$url,$desc) = fgetcsv($fp,1024);
 		if($cm!=(int)$m) { 
 			if($cm) $RSIDEBAR_DATA.="<hr><br>\n"; 
-			else $RSIDEBAR_DATA.='<tt>UPCOMING EVENTS</tt><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/cal.php?a=1">[add event]</a><br>';
+			else $RSIDEBAR_DATA.='<h3>UPCOMING EVENTS</h3><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/cal.php?a=1">[add event]</a><br>';
 			$cm = (int)$m;  
-			$RSIDEBAR_DATA .= "<h3><u>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</u></h3>\n"; 
+			$RSIDEBAR_DATA .= "<h2>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</h2>\n"; 
 		}
 		if(!$seen[$desc]) {
 			$RSIDEBAR_DATA .= "$d. <a href=\"$url\">$desc</a><br>\n";
