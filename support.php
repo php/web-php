@@ -157,8 +157,8 @@ Archives for some of these mailing lists can be found at:
 </P>
 
 <ul>
- <li><a href="http://php.gotocity.com/mail/">PHP 3.0 List at www.phpbuilder.com</a>
- <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev">Developers' List</a>
+ <li><a href="http://php.phpbuilder.com/mail/">All PHP Lists at www.phpbuilder.com</a>
+ <li><a href="http://www.progressive-comp.com/Lists/?l=php-dev">Developers' List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general">PHP 3.0 List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=phpdoc">PHP Documentation List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=phplib">PHPLIB List</a>
