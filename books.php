@@ -71,7 +71,7 @@ $SIDEBAR_DATA = <<<SIDEBAR_END
 </p>
 SIDEBAR_END;
 
-commonHeader("Books");
+site_header("Books");
 
 // Show a table row for one book
 function book_show($one_book)
@@ -216,7 +216,7 @@ foreach ($books[$_GET['type']] as $one_book) {
 }
 echo "</table>\n";
 
-commonFooter();
+site_footer();
 
 /* vim: set noet ts=4 sw=4 ft=php: : */
 ?>
