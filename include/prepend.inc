@@ -157,7 +157,7 @@ function myphpnet_hidesuggest($hide = FALSE)
     global $MYPHPNET;
 
     // Set hiding preference, or return with value
-    if (is_int($hide)) {
+    if (is_numeric($hide)) {
         $MYPHPNET[3] = $hide;
     }
     elseif (isset($MYPHPNET[3])) {
