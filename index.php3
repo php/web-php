@@ -3,7 +3,6 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<!-- just testing -->
 
 <h3>PHP in the News</h3>
 <P>
