@@ -348,6 +348,10 @@ function commonHeader($title) {
 
 if (window != top) top.location.href = location.href;
 
+NS4 = (document.layers) ? 1 : 0;
+IE4 = (document.all) ? 1 : 0;
+DOM = (document.getElementById) ? 1 : 0;
+ver4 = (NS4 || IE4) ? 1 : 0;
 
 /*
 <? readfile($DOCUMENT_ROOT."/COPYRIGHT.txt"); ?>
@@ -373,11 +377,6 @@ var lastbutton='top';
 <? if (($NS4 || $IE4) && (!$DISABLE_KICKOUTS)):	/* Kick Outs */ ?>
 <SCRIPT LANGUAGE="JavaScript1.2">
 <!--
-
-NS4 = (document.layers) ? 1 : 0;
-IE4 = (document.all) ? 1 : 0;
-DOM = (document.getElementById) ? 1 : 0;
-ver4 = (NS4 || IE4) ? 1 : 0;
 
 function moveLayers() {
 	if (gotlayers) {
@@ -419,7 +418,11 @@ function popUp(menuName,on) {
 	if (gotlayers) {
 		if (on) {
 			moveLayers();
-			if (NS4) {
+			if (IE4) {
+				document.all[menuName].filters[0].Apply();
+				document.all[menuName].style.visibility = "visible";
+				document.all[menuName].filters[0].Play(); 
+			} else if (NS4) {
 				document.layers[menuName].visibility = "show";
 			} else if (DOM) {
 				document.getElementById(menuName).style.visibility = "visible";
@@ -427,7 +430,9 @@ function popUp(menuName,on) {
 				document.all[menuName].style.visibility = "visible";
 			}
 		} else {
-			if (NS4) {
+			if (IE4) {
+				document.all[menuName].style.visibility = "hidden";
+			} else if (NS4) {
 				document.layers[menuName].visibility = "hide";
 			} else if (DOM) {
 				document.getElementById(menuName).style.visibility = "hidden";
@@ -744,7 +749,8 @@ Only questions about the website should be directed to <A HREF="mailto:webmaster
 
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
-<DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
+filter:blendtrans(duration=0.5);">
 <? kickHeader(-20,'left',400);?>
 <FORM ACTION="/redirect.php" METHOD="POST">
 <B>Pick a mirror site close to you:</B><BR>
@@ -768,7 +774,8 @@ endwhile;
 <? kickFooter("mirrorsKick","mirr",400);?>
 </DIV>
 
-<DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
+filter:blendtrans(duration=0.5);">
 <? kickHeader(30,'left',400);?>
 <FORM ACTION="/manual-lookup.php" METHOD="POST">
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
@@ -794,7 +801,8 @@ else:
 endif;
 ?>
 
-<DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
+filter:blendtrans(duration=0.5);">
 <? kickHeader(-35,'top',300);
 if (!isset($prevsearch)):
 	$prevsearch[0]="";
