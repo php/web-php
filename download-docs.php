@@ -197,7 +197,7 @@ HTML formatted docs from the XML sources, what conventions to follow when
 writing documentation, etc. If you are interested in the process, or would
 like to start/join a translation, you can download the howto here:
 <a href="http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1">http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz</a>.
-Note, that <a href"/manual/howto">it is also readable online</a>.
+Note, that <a href="/manual/howto">it is also readable online</a>.
 </p>
 
 <?php commonFooter(); ?>
