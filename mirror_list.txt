@@ -1,5 +1,8 @@
-webmaster@www.nisu.flinders.edu.au au.php.net ??
+tcobb@staff.circle.net www.php.net 209.95.65.70
 rasmus@lerdorf.on.ca ca.php.net 207.164.55.5
+zeev@php.net il.php.net 199.203.100.253
+stig@guardian.no no.php.net 195.1.254.5
+webmaster@www.nisu.flinders.edu.au au.php.net ??
 bednar@isternet.sk sk.php.net 195.72.0.6
 webmaster@www.nisu.flinders.edu.au au.php.net 129.96.218.17
 petrus@linux.co.za za.php.net 160.124.133.230
