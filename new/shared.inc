@@ -293,7 +293,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><? space(10,36);?><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
+<TD><? space(10,36);?><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
 <TD><IMG SRC="gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR></TD>
 </TR></TABLE>
 
