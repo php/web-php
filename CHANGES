@@ -589,6 +589,6 @@ you can mess up here too :)
 [4] Name change.
 
 PHP/FI 2.0 was renamed to PHP 3.0, and the meaning has changed from
-'Personal Home Pages / Forms Interpreter' to 'Professional Home Pages'.
+'Personal Home Pages / Forms Interpreter' to 'PHP: Hypertext Preprocessor'.
 'Personal' home pages was an understatement for PHP/FI 2.0, and is
 definitely an understatement for PHP 3.0.
