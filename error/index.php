@@ -125,6 +125,8 @@ $uri_aliases = array (
     "windows"     => "install.windows",
     "win32"       => "install.windows",
     "globals"     => "security.registerglobals",
+    "tut"         => "tutorial",
+    "tut.php"     => "tutorial", // for backward compatibility with PHP page!
     
     # external shortcut aliases ;)
     "dochowto"    => "phpdochowto"
