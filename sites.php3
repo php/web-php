@@ -45,24 +45,24 @@ right away.</blockquote>
 /* Auto Industry */
 	title("Auto");
 	siteStart();
-	site("Mitsubishi Motors","www.mitsucars.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
+	site("Mitsubishi Motors","www.mitsucars.com");
 	siteEnd();
 
 /* City and Community Sites */
 	title("City and Community Sites");
 	siteStart();
-	site("City of Capelle aan den IJssel","www.capelle-ijssel.nl");
+	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
 	site("The Tri Cities Online","tri.xtn.net");
 	siteEnd();
 
 /* Computer Software */
 	title("Computer Software");
 	siteStart();
-	site("Knowledge Adventure","www.adventure.com");
 	site("C2Net Software Inc.","www.c2.net");
-	site("RedHat Software","www.redhat.com");
 	site("Flexform Software","www.flexform.de");
+	site("Knowledge Adventure","www.adventure.com");
+	site("RedHat Software","www.redhat.com");
 	siteEnd();
 
 /* Educational */
@@ -70,26 +70,26 @@ right away.</blockquote>
 	siteStart();
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
-	site("The Psychology Place","www.psychplace.com");
-	site("NativeWeb","www.nativeweb.org");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
+	site("NativeWeb","www.nativeweb.org");
+	site("The Psychology Place","www.psychplace.com");
 	siteEnd();
 
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
-	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("HitList","www.hitlist.com");
+	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	siteEnd();
 
 
 /* Financial Industry */
 	title("Financial Industry");
 	siteStart();
+	site("The Development Capital Exchange","www.equity-invest.com");
 	site("E*Trade","www.etrade.com");
 	site("First USA Bank","www.firstusabank.com");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
-	site("The Development Capital Exchange","www.equity-invest.com");
 	siteEnd();
 
 /* Games */
@@ -107,25 +107,25 @@ right away.</blockquote>
 /* Hi-Tech Industry */
 	title("Hi-Tech");
 	siteStart();
-	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
-	site("PalmShop","www.palmshop.de");
 	site("DataGuard AS - Security Consulting","www.dataguard.no");
+	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
+	site("PalmShop","www.palmshop.de");
 	siteEnd();
 
 /* ISP's */
 	title("ISP's");
 	siteStart();
-	site("Netvision","www.netvision.net.il");
+	site("Aidan Internet Solutions","www.aidan.net");
+	site("CocoNet Corporation","www.coconet.com");
+	site("Compmore.Net","www.compmore.net");
 	site("Italia Online","www.iol.it");
-	site("XOOM Inc.","xoom.com");
 	site("Nederland.Net","www.nederland.net");
+	site("Netvision","www.netvision.net.il");
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
-	site("Compmore.Net","www.compmore.net");
-	site("CocoNet Corporation","www.coconet.com");
-	site("Aidan Internet Solutions","www.aidan.net");
+	site("XOOM Inc.","xoom.com");
 	siteEnd();
 
 /* Military */
@@ -138,21 +138,21 @@ right away.</blockquote>
 	title("Newspapers & Magazines");
 	siteStart();
 	site("Børsen - Danish Business Daily","www.borsen.dk");
-	site("Computer Currents","www.computercurrents.com");
-	site("UPI Archives","upi.siteways.com");
 	site("CADALYST Magazine","www.cadonline.com");
+	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
+	site("Computer Currents","www.computercurrents.com");
+	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
 	site("The Star - Kansas City","www.kcstar.com");
-	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
-	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
+	site("UPI Archives","upi.siteways.com");
 	siteEnd();
 
 /* Not-for-Profit */
 	title("Not-for-Profit");
 	siteStart();
-	site("National Marrow Donor Program","www.marrow.org");
 	site("European Rotaract Information Center","www.rotaract.de/eric/");
-	site("the Jazz Journalists Association","www.jazzhouse.org");
+	site("The Jazz Journalists Association","www.jazzhouse.org");
+	site("National Marrow Donor Program","www.marrow.org");
 	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
 	siteEnd();
 
@@ -165,32 +165,32 @@ right away.</blockquote>
 /* Religious */
 	title("Religious");
 	siteStart();
-	site("Kenneth Copeland Ministries","kcm.org");
 	site("Christian Financial Concepts","cfcministry.org");
+	site("Kenneth Copeland Ministries","kcm.org");
 	siteEnd();
 
 /* Retail - Service Industry */
 	title("Retail & Service Industry");
 	siteStart();
-	site("Patagonia Clothing","www.patagonia.com");
-	site("Restoration Hardware","www.restorationhardware.com");
-	site("Froeschl - Online Auctions","www.froeschl.de");
-	site("USRentals","www.usrentals.com");
-	site("LinkAlarm","www.linkalarm.com");
-	site("Shipwreck Beads","www.shipwreck-beads.com");
-	site("The Longaberger Company","www.longaberger.com");
 	site("BART'S Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("Delia*s Inc.","www.delias.com");
+	site("Froeschl - Online Auctions","www.froeschl.de");
+	site("LinkAlarm","www.linkalarm.com");
+	site("The Longaberger Company","www.longaberger.com");
+	site("Patagonia Clothing","www.patagonia.com");
+	site("Restoration Hardware","www.restorationhardware.com");
+	site("Shipwreck Beads","www.shipwreck-beads.com");
+	site("USRentals","www.usrentals.com");
 	siteEnd();
 
 /* Telecommunications */
 	title("Telecommunications");
 	siteStart();
-	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
-	site("Southwestern Bell","WWW.SBWireless.COM");
 	site("The Public Payphone Database","wiw.org/wiw.org/payphone/");
+	site("Southwestern Bell","WWW.SBWireless.COM");
+	site("Sprint Canada","www.sprint.ca");
 	siteEnd();
 
 /* Travel */
@@ -198,31 +198,32 @@ right away.</blockquote>
 	siteStart();
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
+	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
-	site("Online Fares Travel, Inc.","www.onlinefares.com");
-	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
 	siteEnd();
 
 /* Web Development */
-	title("Web Developmenty Companies");
+	title("Web Development Companies");
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
+	site("Private World Communications","www.privateworld.com");
 	siteEnd();
 
 /* Misc. */
 	title("Miscellaneous");
 	siteStart();
-	site("Internet Weather Report","www.internetweather.com");
-	site("Metaindex of Law and Government","www.catalaw.com");
-	site("TVGrid.com","www.divein.tvgrid.com");
-	site("ClearInk Corporation","www.clearink.com");
 	site("Cigar.Com","www.cigar.com");
-	site("Spell Web","www.spellweb.com");
+	site("ClearInk Corporation","www.clearink.com");
+	site("Internet Weather Report","www.internetweather.com");
 	site("Mail Chek","mail.chek.com");
+	site("Metaindex of Law and Government","www.catalaw.com");
+	site("Spell Web","www.spellweb.com");
+	site("TVGrid.com","www.divein.tvgrid.com");
 	site("WebMasters Index","www.webmastersindex.com");
 	siteEnd();
 
