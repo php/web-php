@@ -227,7 +227,7 @@ if (isset($in) && $process) {
  <tr>
   <td align="center" colspan="2">
     <input type="submit" name="action" value="Preview" />
-<?php if (isset($in) && $process) {?>
+<?php if (isset($in) && $process && !$errors) {?>
     <input type="submit" name="action" value="Submit" />
 <?php }?>
   </td>
