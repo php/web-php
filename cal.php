@@ -2,6 +2,7 @@
   include_once 'prepend.inc';
 
   if (!is_primary_site()) {
+	/*
     if (is_backup_primary()) {
       commonHeader("Service Unavailable");?>
 <p>Sorry, the event calendar is temporarily unavailable.</p>
@@ -9,7 +10,8 @@
       commonFooter();
       exit;
     }
-  	header("Location: http://www.php.net/cal.php");
+	*/
+  	header("Location: http://php2.chek.com/cal.php");
   	exit;
   }
   if (!isset($format)) {
