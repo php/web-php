@@ -9,6 +9,11 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>Patch Level 1 available for PHP 4.0.3</h3>
+Oct 15, 2000.  Due to two problems discovered in PHP 4.0.3, <a href="downloads.php">PHP 4.0.3pl1 is now available</a>.
+This release fixes an issue that prevented the Apache php_value mechanism from working correctly with .conf
+files, and a memory leak that was discovered in the module versions of PHP.
+
 <h3>PHP 4.0.3 Released</h3>
 Oct 11, 2000.  <a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
 enhancements, as well as several new features and bug fixes.  It is strongly

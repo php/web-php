@@ -10,7 +10,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <b>Complete Source Code</b><BR>
 <UL>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.3</a> - 11 October 2000</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a> - 15 October 2000</li>
 </UL>
 
 <b>Win32 Binaries</b><BR>
