@@ -46,6 +46,7 @@ by David Medinets<BR>
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
 by Egon Schmid, Christian Cartus, Richard Blume<BR>
 <SMALL>in German</SMALL><BR>
+<SMALL><A HREF="http://www.php-center.de/">weitere Informationen</A><BR>
 </TD>
 </TR>
 
