@@ -2,6 +2,8 @@
 
 $try_files = array();
 
+$function = strtolower($function);
+
 function tryprefix($func, $prefix) {
     global $try_files;
 
