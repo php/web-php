@@ -183,6 +183,21 @@ all in one .ICO file</li>
 </ul>
 </td></tr>
 
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php_xpstyle_ico.gif" vspace="5" width="32" height="32" border="0" alt="XP Style PHP file icons"><br>
+(not exactly as shown)<br>
+</td><td align="left" width="67%">
+<ul>
+<li>XP Style PHP icon resource for Windows</li>
+<li>suitable as icons for file extensions like .php, .phtml and .php3</li>
+<li>48x48, 32x32, 24x24, 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats...
+all in one .ICO file</li>
+<li>these icons are made by Jonathan Metillon</li>
+<li><a href="/logos/php_xpstyle.ico">download here</a>
+</ul>
+</td></tr>
+
 </table>
 
 <?php commonFooter(); ?>
