@@ -37,10 +37,6 @@ Zend Technologies' Web site, with lots of PHP related resources
 Some PHP conference slide shows, presented at various meetings
 by PHP professionals</li>
 
-<li><a href="http://www.phpmag.de/">PHP Magazin</a><br>
-The one and only printed magazine on PHP in German</li>
-</ul>
-
 <h4>PHP Support Companies</h4>
 
 <ul>
