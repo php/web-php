@@ -42,7 +42,7 @@ if ($EXPL_LANG == '') { unset($EXPL_LANG); }
 
 function language_choose_code()
 {
-    global $_REQUEST, $_SERVER;
+    global $_REQUEST, $_SERVER, $COOKIE;
     
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
@@ -79,7 +79,10 @@ function language_choose_code()
         }
     }
     
-    // MYPHPNET handling should be added here
+    // Honor the users own language setting (if available)
+    if (isset($_COOKIE['MYPHPNET'])) {
+        language_add($_COOKIE['MYPHPNET'], $languages);
+    }
 
     // Specified by the user via the browser's Accept Language setting
     // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
