@@ -32,7 +32,7 @@ commonHeader("Mirror Sites");
  <?php print_link("/mirroring.php", "here's how"); ?>.
 </p>
 
-<p align="center">
+<div align="center">
 <table border="0" cellpadding="3" cellspacing="1" width="560">
 <?php
 
@@ -96,6 +96,6 @@ foreach ($MURLS as $murl) {
 
 ?>
 </table>
-</p>
+</div>
 
 <?php commonFooter(); ?>
