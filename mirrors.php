@@ -1,7 +1,8 @@
 <?php
 require_once 'prepend.inc';
-if (isset($country)) {
-  header("Location: http://$country.php.net/");
+if (isset($REDIRECT)) {
+  header("Location: $country$FROM");
+  exit;
 }
 commonHeader("Mirrors Page");
 ?>

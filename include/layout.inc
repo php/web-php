@@ -285,7 +285,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$enclosed;
+	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed;
 	if ($enclosed) {
 		echo "</td></tr></table></td></tr></table>\n";
 	}
@@ -301,16 +301,16 @@ function commonFooter() {
         function gotomirror(form) {
           url = form.country.options[form.country.selectedIndex].value;
           if (url != '<?php echo $MYSITE; ?>') {
-            window.location.href = url;
+            current = window.location.href;
+            window.location.href = url+current.substr(<?echo strlen($MYSITE)?>);
           }
 	  return false;
         }
       //-->
       </script>
-      <input type="hidden" name="REDIRECT" value="1">
+      <input type="hidden" name="REDIRECT" value="1" />
+      <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>" />
       <?php
-	# TODO: should send current url above, so we can redirect to
-	# the same page on the mirror, and do the same in our javascript.
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
