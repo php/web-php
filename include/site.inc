@@ -91,6 +91,7 @@ $COUNTRIES = array(
    "pt" => "Portugal",
    "ro" => "Romania",
    "ru" => "Russian Federation",
+   "se" => "Sweden",
    "sk" => "Slovakia",
    "sg" => "Singapore",
    "tr" => "Turkey",
