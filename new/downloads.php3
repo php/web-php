@@ -2,24 +2,6 @@
 require("site.inc");
 require("shared.inc");
 
-function download_link($file, $title) {
-	global $filesizes;
-	if ($tmp = strrchr($file, "/")) {
-		$local_file = substr($tmp, 1, strlen($tmp));
-	} else {
-		$file = "distributions/$file";
-		$local_file = $file;
-	}
-	echo("<a href=\"$file\">$title</a>");
-	$size = filesize($local_file)/1024;
-	echo("<!-- file=$file localfile=$local_file size-$size-->\n");
-	if ($size) {
-		printf(" (%dKB)", $size);
-	} elseif (isset($filesizes[$local_file])) {
-		echo " (".$filesizes[$local_file].")";
-	}
-}
-
 commonHeader("Downloads");
 ?>
 <center>
