@@ -12,10 +12,12 @@ if (isset($pattern) && get_magic_quotes_gpc())
         $pattern = stripslashes($pattern);
 if (isset($base) && get_magic_quotes_gpc())
         $base = stripslashes($base);
+if (isset($lang) && get_magic_quotes_gpc())
+       $lang = stripslashes($lang);
 
 if ($pattern) {
 	if ($show=="quickref") {
-		header("Location: manual-lookup.php?pattern=".urlencode($pattern));
+		header("Location: manual-lookup.php?pattern=".urlencode($pattern)."&lang=".urlencode($lang));
 		exit;
 	}
 	$location = "http://www.progressive-comp.com/Lists/";
@@ -99,6 +101,7 @@ if(!isset($pattern)) {
 ?>
 <h1>Search</h1>
 <form action="<?php echo $form;?>" method="post">
+<input type="hidden" name="lang" value="<?php echo htmlspecialchars($lang); ?>">
 <table cellspacing="0" cellpadding="2" border="0" align="center">
 <tr valign="top">
 <td align="right">

@@ -223,6 +223,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <tr bgcolor="#666699">
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
     <form method="post" action="/search.php" class="thin">
+<input type="hidden" name="lang" value="<?php echo htmlspecialchars($lang); ?>">
 <small>search for</small>
 <input class="small" type="text" name="pattern" value="" size="30" />
 <small>in the</small>
