@@ -493,6 +493,9 @@ PHP in Russian. Full Russian documentation.</li>
 
 <li><a href="http://www.lpsz.org">lpsz.org</a><br>
 PHP news, articles , and scripts.</li>
+
+<li><a href="http://zonephp.com">zonephp.com</a><br>
+News and tutorials</li>
 </ul></li>
 
 <li><b>Swedish</b>
