@@ -51,20 +51,6 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 You can contact the webmaster at ' . 
 make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
 </p>
-
-<h3>Other Links</h3>
-<p>
-You can view previous news ' .
-make_link('/news.php', 'here') . '.
-</p>
-<p>
-Find hints to improve your code on our ' .
-make_link('/tips.php', 'tips page') . '.
-</p>
-<p>
-Looking for a great PHP book? check out our ' .
-make_link('/books.php', 'book resource center') . '.
-</p>
 ';
 
 $fp = @fopen("backend/events.csv",'r');
@@ -199,5 +185,9 @@ described bugs. Read the full
 <a href="/release_4_1_1.php">release announcement</a>.
 <br clear="all">
 </p>
+
+<?php echo hdelim(); ?>
+
+<p align="center"><a href="/news.php">Old News</a></p>
 
 <?php commonFooter(); ?>

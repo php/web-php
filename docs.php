@@ -51,6 +51,11 @@ the table below.
 </p>
 
 <p>
+You can learn how to integrate our online manual with various tools, including
+your web browser, on our <a href="tips.php">quick reference tips</a> page.
+</p>
+
+<p>
 Note, that many languages are just under translation, and
 the untranslated parts are still in English. The translation
 teams are open to other contributors though.
