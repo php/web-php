@@ -87,7 +87,7 @@ if (preg_match("!^manual/(\\w+)/print/(.+\\.php)$!", $uri, $parts)) {
 }
 
 // BC: for old HTML directory (.html extension was used in that)
-elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.html$!", $uri, $parts)) {
+elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
     include "../manual/$parts[1]/$parts[2].php";
     exit;
