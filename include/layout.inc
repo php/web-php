@@ -31,12 +31,21 @@ function resize_image($img, $width=1, $height=1) {
 
 function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	global $HTTP_SERVER_VARS;
+	static $image_root = null;
+
+	if ($image_root === null) {
+		$image_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://64.246.30.196/www.php.net' : '';
+	}
+	
 	if (!$dir) {
 		$dir = '/images';
 	}
+
+	$webdir = $image_root .  ($dir{0} == '/' ? '' : '/') . $dir;
+	
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
 		$image = sprintf('<img src="%s/%s" border="%d" %s alt="%s" %s%s />',
-			$dir,
+			$webdir,
 			$file,
 			$border,
 			$size[3],
@@ -46,7 +55,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 		);
 	} else {
 		$image = sprintf('<img src="%s/%s" border="%d" alt="%s" %s%s />',
-			$dir,
+			$webdir,
 			$file,
 			$border,
 			($alt    ? $alt : ''),
