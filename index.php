@@ -20,6 +20,7 @@ lives this day.
 </TABLE>
 </CENTER>
 <P ALIGN="right">
+<FONT SIZE="-2"><A HREF="http://www.redcross.org/donate/donate.html">support the red cross</A></FONT><BR><BR>
 <FONT SIZE="-2"><A HREF="/index2.php">continue</A></FONT>
 </P>
 </BODY>
