@@ -301,6 +301,7 @@ right away.</blockquote>
 	siteStart();
 	site("All Brevard Houses for Sale","www.allbrevard.net");
 	site("BNF Homes","www.bnfhomes.com");
+	site("Real Estate Planet","www.realestateplanet.com");
 	site("Slater Realtors","www.slater-realtors.com");
 	siteEnd();
 
