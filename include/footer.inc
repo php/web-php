@@ -3,12 +3,12 @@
 <center>
 <table width="90%">
 	<tr>
-		<td align="left">
+		<td align="left" width="33%">
 			<font size="-2">
 			All Rights Reserved &copy <a href="credits.php3">PHP 3.0 Development Team</a>
 			</font>
 		</td>
-		<td align="center">
+		<td align="center" width="33%">
 <?
 mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
 @mysql_select_db($dbname) or die("Unable to select database");
@@ -18,7 +18,7 @@ if(@mysql_num_rows($sponsquery)>0) {
 }
 ?>
 		</td>
-		<td align="right">
+		<td align="right" width="33%">
 			<table><tr><td align="center">
 				<img src="jpgs/powered_by.jpg"><br>
 				<font size="-2">Running PHP <? echo phpversion(); ?></font>
