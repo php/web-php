@@ -34,10 +34,16 @@ CLASS="REFSECT1"
 >     Returns true on success, False on error.  Details about the error
      can be retrieved usign the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
 > and <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
 >
      functions.  Logs out the user and disconnects from the
      server.

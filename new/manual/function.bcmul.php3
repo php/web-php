@@ -50,7 +50,10 @@ CLASS="PARAMETER"
 ><P
 >	See also <A
 HREF="function.bcdiv.php3"
->bcdiv</A
+><B
+CLASS="FUNCTION"
+>bcdiv()</B
+></A
 >.
    </P
 ></DIV

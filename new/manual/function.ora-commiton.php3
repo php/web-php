@@ -31,23 +31,32 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ora_commiton(int conn);<P
->     This function turns on automatic commit after each <A
+>     This function turns on automatic commit after each
+     <A
 HREF="function.ora-exec.php3"
->Ora_Exec</A
-> on the given
-     connection.
+><B
+CLASS="FUNCTION"
+>ora_exec()</B
+></A
+> on the given connection.
 
     </P
 ><P
 >     Returns true on success, false on error.  Details about the error
      can be retrieved usign the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
-> and <A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
+> and
+     <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
->
-     functions.
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.
 
    </P
 ></DIV

@@ -32,13 +32,13 @@ manualHeader('ldap_get_dn');
 ?><H1
 >ldap_get_dn</H1
 ><P
->ldap_get_dn -- </P
+>ldap_get_dn -- Get the DN of a result entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >string ldap_get_dn(int link_identifier, int result_entry_identifier);<P
->    returns the dn of the result entry and false on error.
+>    Returns the DN of the result entry and false on error.
     </P
 ><P
 >  

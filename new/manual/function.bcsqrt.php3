@@ -43,7 +43,10 @@ CLASS="PARAMETER"
 ><P
 >	See also <A
 HREF="function.bcpow.php3"
->bcpow</A
+><B
+CLASS="FUNCTION"
+>bcpow()</B
+></A
 >.
    </P
 ></DIV

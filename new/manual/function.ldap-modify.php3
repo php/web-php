@@ -32,22 +32,24 @@ manualHeader('ldap_modify');
 ?><H1
 >ldap_modify</H1
 ><P
->ldap_modify -- </P
+>ldap_modify -- Modify an LDAP entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_modify(int link_identifier, string dn, array entry);<P
->    returns true on success and false on error.
+>    Returns true on success and false on error.
     </P
 ><P
 >  
-    ldap_modify() function is used to modify the existing entries in LDAP
-    directory. The structure of the entry is same as in ldap_add(). see
-	<A
+    ldap_modify() function is used to modify the existing entries in the LDAP
+    directory. The structure of the entry is same as in <A
 HREF="function.ldap-add.php3"
->ldap_add()</A
->
+><B
+CLASS="FUNCTION"
+>ldap_add()</B
+></A
+>.
    </P
 ></DIV
 ><?php manualFooter('ldap_modify');?>

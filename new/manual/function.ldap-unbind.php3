@@ -32,13 +32,13 @@ manualHeader('ldap_unbind');
 ?><H1
 >ldap_unbind</H1
 ><P
->ldap_unbind -- </P
+>ldap_unbind -- Unbind from LDAP directory</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_unbind(int link_identifier);<P
->    returns true on success and false on error.
+>    Returns true on success and false on error.
     </P
 ><P
 >  

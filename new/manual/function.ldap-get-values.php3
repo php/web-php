@@ -32,30 +32,39 @@ manualHeader('ldap_get_values');
 ?><H1
 >ldap_get_values</H1
 ><P
->ldap_get_values -- </P
+>ldap_get_values -- Get all value from a result entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_get_values(int link_identifier, int result_entry_identifier, string attribute);<P
->    returns an array of values for the attribute on success and false on error.
+>    Returns an array of values for the attribute on success and false on error.
     </P
 ><P
 >  
     ldap_get_values() function is used to read all the values of 
     the attribute in the entry in the result. entry is specified by the 
-    result_entry_identifier. The number of values can be found by indexing
-    "count" in the resultant array. Individual values are accessed by 
-    integer index in the array.  Index starts with 0.
+    <TT
+CLASS="PARAMETER"
+><I
+>result_entry_identifier</I
+></TT
+>. The number of values can 
+	be found by indexing "count" in the resultant array. Individual values are 
+	accessed by integer index in the array.  The first index is 0.
    	</P
 ><P
 > 
-	<PRE
-CLASS="PROGRAMLISTING"
->    return_value["count"] = number of values for attribute
-    return_value[0] = first value of attribute
-    return_value[i] = ith value of attribute
-	</PRE
+	<DIV
+CLASS="INFORMALEXAMPLE"
+><P
+></P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;return_value["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;values&nbsp;for&nbsp;attribute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[0]&nbsp;=&nbsp;first&nbsp;value&nbsp;of&nbsp;attribute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i]&nbsp;=&nbsp;ith&nbsp;value&nbsp;of&nbsp;attribute</P
+></DIV
 >
    </P
 ></DIV

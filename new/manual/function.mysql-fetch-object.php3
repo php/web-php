@@ -7,7 +7,7 @@ setupNavigation(array(
   'up'   => array('ref.mysql.php3', 'MySQL Functions'),
   'toc'  => array(
     array('ref.mysql.php3#I(REF.MYSQL)C(1,TITLE)', ''),
-    array('function.mysql.php3', 'mysql'),
+    array('function.mysql-db-query.php3', 'mysql_db_query'),
     array('function.mysql-affected-rows.php3', 'mysql_affected_rows'),
     array('function.mysql-close.php3', 'mysql_close'),
     array('function.mysql-connect.php3', 'mysql_connect'),

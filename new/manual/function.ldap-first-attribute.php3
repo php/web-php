@@ -38,21 +38,29 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_first_attribute(int link_identifier, int result_entry_identifier, int ber_identifier);<P
->    returns the first attribute in the entry on success and false on error.
+>    Returns the first attribute in the entry on success and false on error.
     </P
 ><P
 >  
     Similar to reading entries, attributes are also read one
-    by one from a particular entry. <A
-HREF="function.ldap-first-attribute.php3"
->	ldap_first_attribute()</A
+    by one from a particular entry. <B
+CLASS="FUNCTION"
+>ldap_first_attribute()</B
 > returns the
     first attribute in the entry pointed by the entry identifier.  Remaining
     attributes are retrieved by calling <A
 HREF="function.ldap-next-attribute.php3"
->	ldap_next_attribute() </A
+><B
+CLASS="FUNCTION"
+>ldap_next_attribute()</B
+></A
 > successively. 
-    ber_identifier is the identifier to internal memory location pointer. It 
+    <TT
+CLASS="PARAMETER"
+><I
+>ber_identifier</I
+></TT
+> is the identifier to internal memory location pointer. It 
     is passed by reference. The same <TT
 CLASS="PARAMETER"
 ><I
@@ -64,8 +72,10 @@ CLASS="PARAMETER"
 ><P
 >	see also <A
 HREF="function.ldap-get-attributes.php3"
-> ldap_get_attributes
-	</A
+><B
+CLASS="FUNCTION"
+>ldap_get_attributes()</B
+></A
 >
    </P
 ></DIV

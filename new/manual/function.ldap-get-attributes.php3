@@ -32,13 +32,13 @@ manualHeader('ldap_get_attributes');
 ?><H1
 >ldap_get_attributes</H1
 ><P
->ldap_get_attributes -- </P
+>ldap_get_attributes -- Get attributes from a search result entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_get_attributes(int link_identifier, int result_entry_identifier);<P
->    returns a comlete entry information in a multi-dimensional array on success
+>    Returns a comlete entry information in a multi-dimensional array on success
     and false on error.
     </P
 ><P
@@ -48,25 +48,35 @@ CLASS="REFSECT1"
     multi-dimensional array of attributes and values.
 	</P
 ><P
->	<PRE
-CLASS="PROGRAMLISTING"
->    return_value["count"] = number of attributes in the entry
-    return_value[0] = first attribute
-    return_value[n] = nth attribute
-
-    return_value["attribute"]["count"] = number of values for attribute
-    return_value["attribute"][0] = first value of the attribute
-    return_value["attribute"][i] = ith value of the attribute
-	</PRE
+>	<DIV
+CLASS="INFORMALEXAMPLE"
+><P
+></P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;return_value["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;attributes&nbsp;in&nbsp;the&nbsp;entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[0]&nbsp;=&nbsp;first&nbsp;attribute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[n]&nbsp;=&nbsp;nth&nbsp;attribute<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value["attribute"]["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;values&nbsp;for&nbsp;attribute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value["attribute"][0]&nbsp;=&nbsp;first&nbsp;value&nbsp;of&nbsp;the&nbsp;attribute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value["attribute"][i]&nbsp;=&nbsp;ith&nbsp;value&nbsp;of&nbsp;the&nbsp;attribute</P
+></DIV
 >
 
 	see also <A
 HREF="function.ldap-first-attribute.php3"
->	ldap_first_attribute() </A
+><B
+CLASS="FUNCTION"
+>ldap_first_attribute()</B
+></A
 > and 
 	<A
 HREF="function.ldap-next-attribute.php3"
->	ldap_next_attribute() </A
+><B
+CLASS="FUNCTION"
+>ldap_next_attribute()</B
+></A
 >
    </P
 ></DIV

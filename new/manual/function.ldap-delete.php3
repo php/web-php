@@ -38,7 +38,7 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_delete(int link_identifier, string dn);<P
->    returns true on success and false on error.
+>    Returns true on success and false on error.
     </P
 ><P
 >  

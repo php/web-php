@@ -42,20 +42,23 @@ CLASS="REFSECT1"
     </P
 ><P
 >  
-    ldap_add() function is used to add entries in the LDAP directory. The DN 
+    The ldap_add() function is used to add entries in the LDAP directory. The DN 
     of the entry to be added is specified by dn. Array entry specifies the
     information about the entry. The values in the entries are indexed by
     individual attributes. In case of multiple values for an attribute, they
     are indexed using integers starting with 0.
 	</P
 ><P
->	<PRE
-CLASS="PROGRAMLISTING"
->		entry["attribute1"] = value
-		
-		entry["attribute2"][0] = value1
-		entry["attribute2"][1] = value2
-	</PRE
+>	<DIV
+CLASS="INFORMALEXAMPLE"
+><P
+></P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;entry["attribute1"]&nbsp;=&nbsp;value<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entry["attribute2"][0]&nbsp;=&nbsp;value1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;entry["attribute2"][1]&nbsp;=&nbsp;value2</P
+></DIV
 >
    </P
 ></DIV

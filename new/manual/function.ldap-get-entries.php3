@@ -32,13 +32,13 @@ manualHeader('ldap_get_entries');
 ?><H1
 >ldap_get_entries</H1
 ><P
->ldap_get_entries -- </P
+>ldap_get_entries -- Get all result entries</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_get_entries(int link_identifier, int result_identifier);<P
->    returns a complete result information in a multi-dimenasional array on
+>    Returns a complete result information in a multi-dimenasional array on
     success and false on error.
     </P
 ><P
@@ -49,29 +49,38 @@ CLASS="REFSECT1"
     array. The structure of the array is as follows.
     </P
 ><P
->    <PRE
-CLASS="PROGRAMLISTING"
->    return_value["count"] = number of entries in the result
-    return_value[0] : refers to the details of first entry
-
-    return_value[i]["dn"] =  DN of the ith entry in the result
-
-    return_value[i]["count"] = number of attributes in ith entry
-    return_value[i][j] = jth attribute in the ith entry in the result
-
-    return_value[i]["attribute"]["count"] = number of values for attribute in ith entry
-    return_value[i]["attribute"][j] = jth value of attribute in ith entry
-    </PRE
+>    <DIV
+CLASS="INFORMALEXAMPLE"
+><P
+></P
+><P
+CLASS="LITERALLAYOUT"
+>&nbsp;&nbsp;&nbsp;&nbsp;return_value["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;entries&nbsp;in&nbsp;the&nbsp;result<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[0]&nbsp;:&nbsp;refers&nbsp;to&nbsp;the&nbsp;details&nbsp;of&nbsp;first&nbsp;entry<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i]["dn"]&nbsp;=&nbsp;&nbsp;DN&nbsp;of&nbsp;the&nbsp;ith&nbsp;entry&nbsp;in&nbsp;the&nbsp;result<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i]["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;attributes&nbsp;in&nbsp;ith&nbsp;entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i][j]&nbsp;=&nbsp;jth&nbsp;attribute&nbsp;in&nbsp;the&nbsp;ith&nbsp;entry&nbsp;in&nbsp;the&nbsp;result<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i]["attribute"]["count"]&nbsp;=&nbsp;number&nbsp;of&nbsp;values&nbsp;for&nbsp;attribute&nbsp;in&nbsp;ith&nbsp;entry<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return_value[i]["attribute"][j]&nbsp;=&nbsp;jth&nbsp;value&nbsp;of&nbsp;attribute&nbsp;in&nbsp;ith&nbsp;entry</P
+></DIV
 >
 	
 	see also <A
 HREF="function.ldap-first-entry.php3"
-> ldap_first_entry()
-	</A
-> and <A
+><B
+CLASS="FUNCTION"
+>ldap_first_entry()</B
+></A
+>
+	and <A
 HREF="function.ldap-next-entry.php3"
-> ldap_next_entry()
-	</A
+><B
+CLASS="FUNCTION"
+>ldap_next_entry()</B
+></A
 >
    </P
 ></DIV

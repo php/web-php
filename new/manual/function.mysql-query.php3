@@ -7,7 +7,7 @@ setupNavigation(array(
   'up'   => array('ref.mysql.php3', 'MySQL Functions'),
   'toc'  => array(
     array('ref.mysql.php3#I(REF.MYSQL)C(1,TITLE)', ''),
-    array('function.mysql.php3', 'mysql'),
+    array('function.mysql-db-query.php3', 'mysql_db_query'),
     array('function.mysql-affected-rows.php3', 'mysql_affected_rows'),
     array('function.mysql-close.php3', 'mysql_close'),
     array('function.mysql-connect.php3', 'mysql_connect'),
@@ -51,24 +51,41 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int mysql_query(string query, int link_identifier);<P
->Returns:     A positive MySQL result identifier on success, or false on error.
+> Returns: A positive MySQL result identifier on success, or
+    false on error.
   
-
-  mysql_query() sends a query to the currently active database on
-  the server that's associated with the specified link identifier.
-  If the link identifier isn't specified, the last opened link
-  is assumed.  If no link is open, the function tries to
-  establish a link as if mysql_connect() was called, and use it.
+    </P
+><P
+> mysql_query() sends a query to the currently active
+    database on the server that's associated with the specified link
+    identifier.  If the link identifier isn't specified, the last
+    opened link is assumed.  If no link is open, the function tries to
+    establish a link as if mysql_connect() was called, and use it.
   
-  See also:  <A
-HREF="function.mysql.php3"
->mysql</A
->, <A
+    </P
+><P
+>     See also:  
+     <A
+HREF="function.mysql-db-query.php3"
+><B
+CLASS="FUNCTION"
+>mysql-db-query()</B
+></A
+>, 
+     <A
 HREF="function.mysql-select-db.php3"
->mysql_select_db</A
->, <A
+><B
+CLASS="FUNCTION"
+>mysql-select-db()</B
+></A
+> and, 
+     <A
 HREF="function.mysql-connect.php3"
->mysql_connect</A
-></P
+><B
+CLASS="FUNCTION"
+>mysql-connect()</B
+></A
+>.
+   </P
 ></DIV
 ><?php manualFooter('mysql_query');?>

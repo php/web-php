@@ -31,23 +31,33 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ora_rollback(int connection);<P
->     This function undoes an Oracle transaction.  (See <A
+>     This function undoes an Oracle transaction.  (See
+     <A
 HREF="function.ora-commit.php3"
->Ora_Commit</A
-> for the
-     definition of a transaction.)
+><B
+CLASS="FUNCTION"
+>ora_commit()</B
+></A
+> for the definition of a
+     transaction.)
 
     </P
 ><P
 >     Returns true on success, false on error.  Details about the error
      can be retrieved usign the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
-> and <A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
+> and
+     <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
->
-     functions.
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.
 
    </P
 ></DIV

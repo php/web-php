@@ -34,7 +34,10 @@ CLASS="REFSECT1"
 >     Returns the column data.  If an error occurs, False is returned
      and <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
 >
      will return a non-zero value.  Note, however, that a test for False
      on the results from this function may be true in cases where there is

@@ -32,7 +32,7 @@ manualHeader('ldap_connect');
 ?><H1
 >ldap_connect</H1
 ><P
->ldap_connect -- COnnect to an LDAP server</P
+>ldap_connect -- Connect to an LDAP server</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

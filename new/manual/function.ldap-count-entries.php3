@@ -38,7 +38,7 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_count_entries(int link_identifier, int result_identifier);<P
->    returns number of entries in the result or false on error.
+>    Returns number of entries in the result or false on error.
     </P
 ><P
 >  

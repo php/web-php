@@ -32,13 +32,13 @@ manualHeader('ldap_free_entry');
 ?><H1
 >ldap_free_entry</H1
 ><P
->ldap_free_entry -- </P
+>ldap_free_entry -- Free entry result memory</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_free_entry(int result_entry_identifier);<P
->    returns true on success and false on error.
+>    Returns true on success and false on error.
     </P
 ><P
 >  

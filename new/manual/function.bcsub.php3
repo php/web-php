@@ -48,9 +48,9 @@ CLASS="PARAMETER"
 	place in the result.
 	</P
 ><P
->	See also <A
-HREF="function.bcadd.php3"
->bcadd</A
+>	See also <B
+CLASS="FUNCTION"
+>bcadd()</B
 >.
    </P
 ></DIV

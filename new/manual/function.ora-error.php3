@@ -56,6 +56,27 @@ CLASS="REPLACEABLE"
 ></TT
 > identifies the error
      message.
+    </P
+><P
+>     On UNIX versions of Oracle, you can find details about an error
+     message like this:
+     <TT
+CLASS="COMPUTEROUTPUT"
+><TT
+CLASS="PROMPT"
+>$</TT
+> <TT
+CLASS="USERINPUT"
+><B
+>oerr ora 00001</B
+></TT
+>
+00001, 00000, "unique constraint (%s.%s) violated"
+// *Cause: An update or insert statement attempted to insert a duplicate key
+//         For Trusted ORACLE configured in DBMS MAC mode, you may see
+//         this message if a duplicate entry exists at a different level.
+// *Action: Either remove the unique restriction or do not insert the key</TT
+>
 
    </P
 ></DIV

@@ -50,7 +50,10 @@ CLASS="PARAMETER"
 ><P
 >	See also <A
 HREF="function.bcmul.php3"
->bcmul</A
+><B
+CLASS="FUNCTION"
+>bcmul()</B
+></A
 >.
 	
    </P

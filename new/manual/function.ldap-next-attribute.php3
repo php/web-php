@@ -32,30 +32,45 @@ manualHeader('ldap_next_attribute');
 ?><H1
 >ldap_next_attribute</H1
 ><P
->ldap_next_attribute -- </P
+>ldap_next_attribute -- Get the next attribute in result</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_next_attribute(int link_identifier, int result_entry_identifier, int ber_identifier);<P
->    returns the next attribute in an entry on success and false on error.
+>    Returns the next attribute in an entry on success and false on error.
     </P
 ><P
 >  
     ldap_next_attribute() is called to retrieve the attributes in an entry.
-    The internal state of the pointer is maintained by the ber_identifier. It
-    is passed by reference to the function. The first call to
-	ldap_next_attribute() is made with the result_entry_identifier returned
+    The internal state of the pointer is maintained by the <TT
+CLASS="PARAMETER"
+><I
+>ber_identifier</I
+></TT
+>. 
+	It is passed by reference to the function. The first call to
+	ldap_next_attribute() is made with the <TT
+CLASS="PARAMETER"
+><I
+>result_entry_identifier</I
+></TT
+> returned
 	from <A
 HREF="function.ldap-first-attribute.php3"
->	ldap_first_attribute() </A
+><B
+CLASS="FUNCTION"
+>ldap_first_attribute()</B
+></A
 >.
 	</P
 ><P
 >	see also <A
 HREF="function.ldap-get-attributes.php3"
-> ldap_get_attributes
-	</A
+><B
+CLASS="FUNCTION"
+>ldap_get_attributes()</B
+></A
 >
    </P
 ></DIV

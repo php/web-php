@@ -7,7 +7,7 @@ setupNavigation(array(
   'up'   => array('ref.mysql.php3', 'MySQL Functions'),
   'toc'  => array(
     array('ref.mysql.php3#I(REF.MYSQL)C(1,TITLE)', ''),
-    array('function.mysql.php3', 'mysql'),
+    array('function.mysql-db-query.php3', 'mysql_db_query'),
     array('function.mysql-affected-rows.php3', 'mysql_affected_rows'),
     array('function.mysql-close.php3', 'mysql_close'),
     array('function.mysql-connect.php3', 'mysql_connect'),
@@ -51,15 +51,22 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int mysql_listtables(string database);<P
->    mysql_listtables takes a database name and result pointer much
-    like the <A
-HREF="function.mysql.php3"
->mysql</A
-> function. The <A
+> mysql_listtables takes a database name and result pointer
+    much like the <A
+HREF="function.mysql-db-query.php3"
+><B
+CLASS="FUNCTION"
+>mysql-db-query()</B
+></A
+> function.  The
+    <A
 HREF="function.mysql-tablename.php3"
->mysql_tablename</A
-> function should be used to extract the
-    actual table names from the result pointer.
-  </P
+><B
+CLASS="FUNCTION"
+>mysql-tablename()</B
+></A
+> function should be used to
+    extract the actual table names from the result pointer.
+   </P
 ></DIV
 ><?php manualFooter('mysql_listtables');?>

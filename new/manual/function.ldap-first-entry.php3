@@ -32,13 +32,13 @@ manualHeader('ldap_first_entry');
 ?><H1
 >ldap_first_entry</H1
 ><P
->ldap_first_entry -- </P
+>ldap_first_entry -- Return first result id</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_first_entry(int link_identifier, int result_identifier);<P
->    returns the result entry identifier for the first entry on success and
+>    Returns the result entry identifier for the first entry on success and
     false on error.
     </P
 ><P
@@ -46,17 +46,20 @@ CLASS="REFSECT1"
     Entries in the LDAP result are read sequentially using the ldap_first_entry()
     and ldap_next_entry() functions. ldap_first_entry() returns the entry
     identifier for first entry in the result. This entry identifier is then
-    supplied to <A
-HREF="function.ldap-next-entry.php3"
-> ldap_next_entry()
-	</A
-> routine to get successive entries from the result.
+    supplied to <B
+CLASS="FUNCTION"
+>lap_next_entry()</B
+> routine to get successive e
+	ntries from the result.
 	</P
 ><P
->	see also.<A
+>	see also <A
 HREF="function.ldap-get-entries.php3"
-> ldap_get_entries() </A
->
+><B
+CLASS="FUNCTION"
+>ldap_get_entries()</B
+></A
+>.
    </P
 ></DIV
 ><?php manualFooter('ldap_first_entry');?>

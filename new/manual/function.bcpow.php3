@@ -48,7 +48,10 @@ CLASS="PARAMETER"
 ><P
 >	See also <A
 HREF="function.bcsqrt.php3"
->bcsqrt</A
+><B
+CLASS="FUNCTION"
+>bcsqrt()</B
+></A
 >.
    </P
 ></DIV

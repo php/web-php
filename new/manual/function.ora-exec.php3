@@ -34,12 +34,18 @@ CLASS="REFSECT1"
 >     Returns true on success, false on error.  Details about the error
      can be retrieved usign the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
-> and <A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
+> and
+     <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
->
-     functions.
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.
 
    </P
 ></DIV

@@ -32,13 +32,13 @@ manualHeader('ldap_next_entry');
 ?><H1
 >ldap_next_entry</H1
 ><P
->ldap_next_entry -- </P
+>ldap_next_entry -- Get next result entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_next_entry(int link_identifier, int result_entry_identifier);<P
->    returns entry identifier for the next entry in the result whose entries
+>    Returns entry identifier for the next entry in the result whose entries
     are being read starting with ldap_first_entry(). If there are no more 
     entries in the result then it returns false.
     </P
@@ -49,14 +49,20 @@ CLASS="REFSECT1"
     by one till there are no more entries. The first call to ldap_next_entry()
 	is made after the call to <A
 HREF="function.ldap-first-entry.php3"
->	ldap_first_entry() </A
-> with the result_identifier as returned from
-	the ldap_first_entry().
+><B
+CLASS="FUNCTION"
+>ldap_first_entry()</B
+></A
+> with the 
+	result_identifier as returned from the ldap_first_entry().
 	</P
 ><P
->	see also.<A
+>	see also <A
 HREF="function.ldap-get-entries.php3"
-> ldap_get_entries() </A
+><B
+CLASS="FUNCTION"
+>ldap_get_entries()</B
+></A
 >
    </P
 ></DIV

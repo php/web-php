@@ -35,17 +35,26 @@ CLASS="REFSECT1"
      error occured).  If an error occured, details can be retrieved
      using the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
->
-     and <A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
+> and
+     <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
->
-     functions.  If there was no error, <A
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.  If there was no
+     error, <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
-> will
-     return 0.  Retrieves a row of data from the specified cursor.
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> will return 0.
+     Retrieves a row of data from the specified cursor.
 
    </P
 ></DIV

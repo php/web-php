@@ -32,13 +32,13 @@ manualHeader('ldap_list');
 ?><H1
 >ldap_list</H1
 ><P
->ldap_list -- </P
+>ldap_list -- Single-level search</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_list(int link_identifier, string base_dn, string filter);<P
->    reutrns a search result identifier or false on error.
+>    Returns a search result identifier or false on error.
     </P
 ><P
 >  

@@ -32,13 +32,13 @@ manualHeader('ldap_read');
 ?><H1
 >ldap_read</H1
 ><P
->ldap_read -- </P
+>ldap_read -- Read an entry</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_read(int link_identifier, string base_dn, string filter);<P
->    reutrns a search result identifier or false on error.
+>    Returns a search result identifier or false on error.
     </P
 ><P
 >  

@@ -3,7 +3,7 @@ require('shared-manual.inc');
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
   'prev' => array('function.msql-tablename.php3', 'msql_tablename'),
-  'next' => array('function.mysql.php3', 'mysql'),
+  'next' => array('function.mysql-db-query.php3', 'mysql_db_query'),
   'up'   => array('funcref.php3', 'Function Reference'),
   'toc'  => array(
     array('funcref.php3#I(FUNCREF)C(1,TITLE)', ''),
@@ -40,8 +40,8 @@ NAME="REF.MYSQL"
 ></DT
 ><DT
 ><A
-HREF="function.mysql.php3"
->mysql</A
+HREF="function.mysql-db-query.php3"
+>mysql_db_query</A
 ></DT
 ><DT
 ><A

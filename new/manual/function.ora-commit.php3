@@ -32,17 +32,23 @@ CLASS="REFSECT1"
 >Description</H2
 >int ora_commit(int conn);<P
 >Returns true on success, false on error.  Details about the
-     error can be retrieved usign the <A
+    error can be retrieved usign the <A
 HREF="function.ora-error.php3"
->Ora_Error</A
-> and <A
-HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
 >
-     functions.  This function commits an Oracle transaction.  A
-     transaction is defined as all the changes on a given connection
-     since the last commit/rollback, autocommit was turned off or when
-     the connection was established.
+    and <A
+HREF="function.ora-errorcode.php3"
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.  This function
+    commits an Oracle transaction.  A transaction is defined as all
+    the changes on a given connection since the last commit/rollback,
+    autocommit was turned off or when the connection was established.
 
    </P
 ></DIV

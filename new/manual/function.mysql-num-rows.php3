@@ -7,7 +7,7 @@ setupNavigation(array(
   'up'   => array('ref.mysql.php3', 'MySQL Functions'),
   'toc'  => array(
     array('ref.mysql.php3#I(REF.MYSQL)C(1,TITLE)', ''),
-    array('function.mysql.php3', 'mysql'),
+    array('function.mysql-db-query.php3', 'mysql_db_query'),
     array('function.mysql-affected-rows.php3', 'mysql_affected_rows'),
     array('function.mysql-close.php3', 'mysql_close'),
     array('function.mysql-connect.php3', 'mysql_connect'),
@@ -51,17 +51,32 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int mysql_num_rows(string result);<P
->  mysql_num_rows() returns the number of rows in a result set.
+>     mysql_num_rows() returns the number of rows in a result set.
   
-  See also:  <A
-HREF="function.mysql.php3"
->mysql</A
->, <A
+    </P
+><P
+>     See also:  
+     <A
+HREF="function.mysql-db-query.php3"
+><B
+CLASS="FUNCTION"
+>mysql-db-query()</B
+></A
+>, 
+     <A
 HREF="function.mysql-query.php3"
->mysql_query</A
->, <A
+><B
+CLASS="FUNCTION"
+>mysql-query()</B
+></A
+> and, 
+     <A
 HREF="function.mysql-fetch-row.php3"
->mysql_fetch_row</A
-></P
+><B
+CLASS="FUNCTION"
+>mysql-fetch-row()</B
+></A
+>.
+   </P
 ></DIV
 ><?php manualFooter('mysql_num_rows');?>

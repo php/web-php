@@ -32,19 +32,25 @@ manualHeader('ldap_search');
 ?><H1
 >ldap_search</H1
 ><P
->ldap_search -- </P
+>ldap_search -- Search LDAP tree</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ldap_search(int link_identifier, string base_dn, string filter);<P
->    reutrns a search result identifier or false on error.
+>    Returns a search result identifier or false on error.
     </P
 ><P
 >  
     ldap_search() performs the search for a specified filter on the directory
     with the scope of LDAP_SCOPE_SUBTREE. This is equivalent to searching 
-    the entire directory. base_dn specifies the base dn for the directory.
+    the entire directory. <TT
+CLASS="PARAMETER"
+><I
+>base_dn</I
+></TT
+> specifies the base DN 
+	for the directory.
    </P
 ></DIV
 ><?php manualFooter('ldap_search');?>

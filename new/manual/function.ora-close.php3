@@ -31,21 +31,32 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int ora_close(int cursor);<P
->Returns true if the close succeeds, otherwise false.
-     Details about the error can be retrieved usign the <A
+>     Returns true if the close succeeds, otherwise false.  Details
+     about the error can be retrieved usign the
+     <A
 HREF="function.ora-error.php3"
->Ora_Error</A
-> and <A
+><B
+CLASS="FUNCTION"
+>ora_error()</B
+></A
+> and
+     <A
 HREF="function.ora-errorcode.php3"
->Ora_ErrorCode</A
->
-     functions.
+><B
+CLASS="FUNCTION"
+>ora_errorcode()</B
+></A
+> functions.
 
     </P
 ><P
->     This function closes a data cursor opened with <A
+>     This function closes a data cursor opened with
+     <A
 HREF="function.ora-open.php3"
->Ora_Open</A
+><B
+CLASS="FUNCTION"
+>ora_open()</B
+></A
 >.
 
    </P

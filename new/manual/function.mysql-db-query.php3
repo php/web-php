@@ -2,8 +2,8 @@
 require('shared-manual.inc'); 
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
-  'prev' => array('function.mysql-dbname.php3', 'mysql_dbname'),
-  'next' => array('function.mysql-fetch-array.php3', 'mysql_fetch_array'),
+  'prev' => array('ref.mysql.php3', 'MySQL Functions'),
+  'next' => array('function.mysql-affected-rows.php3', 'mysql_affected_rows'),
   'up'   => array('ref.mysql.php3', 'MySQL Functions'),
   'toc'  => array(
     array('ref.mysql.php3#I(REF.MYSQL)C(1,TITLE)', ''),
@@ -41,26 +41,37 @@ setupNavigation(array(
     array('function.mysql-result.php3', 'mysql_result'),
     array('function.mysql-select-db.php3', 'mysql_select_db'),
     array('function.mysql-tablename.php3', 'mysql_tablename'))));
-manualHeader('mysql_drop_db');
+manualHeader('mysql_db_query');
 ?><H1
->mysql_drop_db</H1
+>mysql_db_query</H1
 ><P
->mysql_drop_db -- drop (delete) MySQL database</P
+>mysql_db_query -- send MySQL query</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
->int mysql_drop_db(string database_name, int link_identifier);<P
->Returns:     true on success, false on failure.
+>int mysql_db_query(string database, string query, int link_identifier);<P
+> Returns: A positive MySQL result identifier to the query
+    result, or false on error.
   
+    </P
+><P
+> mysql_db_query() selects a database and executes a query on
+    it.  If the optional link identifier isn't specified, the function
+    will try to find an open link to the MySQL server and if no such
+    link is found it'll try to create one as if mysql_connect() was
+    called with no arguments
 
-  mysql_drop_db() attempts to drop (remove) an entire
-  database from the server associated with the specified link
-  identifier.
-  
-  See also:  <A
-HREF="function.mysql-create-db.php3"
->mysql_create_db</A
-></P
+    </P
+><P
+> See also <A
+HREF="function.mysql-connect.php3"
+><B
+CLASS="FUNCTION"
+>mysql-connect()</B
+></A
+>.
+
+   </P
 ></DIV
-><?php manualFooter('mysql_drop_db');?>
+><?php manualFooter('mysql_db_query');?>
