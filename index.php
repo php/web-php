@@ -238,8 +238,8 @@ Some of the more major changes include:
 </ul>
 </p>
 <p>
-<b>Note</b>: This is a beta version. It should not be used in production or even semi-production
-web sites. There are known bugs in it, and in addition, some of the features may change (based on
+<b>Note</b>: <i>This is a beta version. It should not be used in production or even semi-production
+web sites.</i> There are known bugs in it, and in addition, some of the features may change (based on
 feedback). We encourage you to download and play with it (and <a href="http://bugs.php.net/">report bugs</a>
 if you find any!), but please do not replace your production installations of PHP 4 at this time.
 </p>
