@@ -29,17 +29,19 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 /* Cookie stuff has to come before the first header */
 if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) { 
 	if ($prevpattern) {
-		SetCookie("prevsearch[0]",$prevpattern,"",".php.net");
+		$p=$prevpattern;
 	} else {
-		SetCookie("prevsearch[0]",$pattern,0,"",".php.net");
+		$p=$pattern;
 	}
+	SetCookie("prevsearch[0]",$p,0,"",".php.net");
 	if (isset($prevsearch)) {
 		$i=count($prevsearch);
-		if ($i>9) {$i=9;}
-		$c=0;
-		while($c<$i) { 
-			$d=$c+1;
-			SetCookie("prevsearch[$d]",$prevsearch[$c],0,"",".php.net");
+		$c=0;$d=1;
+		while(($c<$i)&&($d<9)) { 
+			if ($prevsearch[$c]!=$p) {
+				SetCookie("prevsearch[$d]",$prevsearch[$c],0,"",".php.net");
+				$d++;
+			}
 			$c++;
 		}
 	}
