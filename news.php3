@@ -55,6 +55,10 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "PHP: a silent killer", "by <a href=\"mailto:jim.white@sreb.org\">Jim White</a>", 
+	"http://www.osopinion.com/Opinions/JimWhite/JimWhite5.html", "December 22, 1999");?>
+<? endEntry(); ?>
+
 <? makeEntry( "Welcome Zend", "by <a href=\"mailto:gmerrall@email.com\">Graeme Merral</a>", 
 	"http://hotwired.lycos.com/webmonkey/99/51/index3a.html", "December 16, 1999");?>
 Optimization - PHP vs. ASP - New Features - Geeky Features
