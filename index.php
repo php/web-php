@@ -166,18 +166,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<h1>Some services are temporarily unavailable</h1>
-<p>
- <span class="newsdate">[28-Jul-2004]</span>
- Due to server problems, some of the services provided by php.net
- and the mirror sites are not available currently. These include the
- documentation user notes (including their submission interface), the
- event submission, cvs account request and mailing list subscription
- forms. Please be a bit patient, while we sort out the issues.
-</p>
-
-<hr />
-
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.0"></a>
 <h1>PHP 5.0.0 Released!</h1>
