@@ -76,18 +76,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h1>Windows Manual Survey is Over</h1>
+<h1>Windows Manual Survey Results</h1>
 
 <p>
-<font class="newsDate">[24-Nov-2001]</font>
+<font class="newsDate">[27-Nov-2001]</font>
 After one week our Windows HTML Help Manual Survey
-is over now. We received more than six hundred
-completed forms, with many wishes and comments.
+is over now. We received nearly six hundred
+processable forms with many wishes and comments.
 Thanks for you all, who contributed to making
 the best help system for PHP on Windows.
 You can get more information about the ongoing
-project at <?php print_link("http://weblabor.hu/php/newchm.php",
-" its own page"); ?>.
+project, including the detailed results of the survey at
+<?php print_link("http://weblabor.hu/php/newchm.php",
+" the project's own page"); ?>.
 <br clear="all">
 </p>
 
