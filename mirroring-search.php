@@ -27,7 +27,7 @@ commonHeader("Setting Up Local Search");
    this path in all steps to a different one, if you choose some other directory.
    <pre>
        % ./configure --prefix=/usr/local/htdig --with-cgi-bin-dir=/usr/local/htdig/bin \
-       --with-image-dir=/usr/local/htdig/gifs --with-image-url-prefix=/gifs \
+       --with-image-dir=/usr/local/htdig/gifs --with-image-url-prefix=/images \
        --with-search-dir=/usr/local/htdig/conf
 
        % make
