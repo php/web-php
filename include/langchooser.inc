@@ -103,7 +103,7 @@ function language_choose_code()
 
     // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
     // it no longer breaks if you only have one language set :)
-	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
         $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
         // Go through all language preference specs
