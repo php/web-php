@@ -147,17 +147,20 @@ commonHeader("Hypertext Preprocessor");
 ?>
 
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.9RC3 released!</h1>
+<h1>PHP 4.3.9 released!</h1>
 <p>
- <span class="newsdate">[14-Sep-2004]</span>
-<a href="http://qa.php.net/">PHP 4.3.9RC3</a> has been released for testing.
-This is the last release candidate before the final release and should have 
-a very low number of problems and/or bugs. Nevertheless, please download and 
-test it as much as possible on real-life applications to uncover any remaining issues. 
+ <span class="newsdate">[22-Sep-2004]</span>
+ PHP Development Team is proud to announce the immediate release of PHP <a href="/downloads.php">PHP 4.3.9</a>.
+ This is a maintenance release that in addition to over 50 non-critical bug fixes, addresses a problem
+ with GPC input processing. This release also re-introduces ability to write
+ GIF images via the bundled GD extension.
+ All Users of PHP are encouraged to upgrade to this release as soon as possible.
 </p>
 
-<p>List of changes can be found in the 
-<a href="http://viewcvs.php.net/viewcvs.cgi/php-src/NEWS.diff?r1=1.1247.2.724&r2=1.1247.2.726">NEWS</a> file.</p>
+<p>
+ For changes since PHP 4.3.8, please consult the
+ <a href="/ChangeLog-4.php#4.3.9">ChangeLog</a>.
+</p>
 
 <hr />
 

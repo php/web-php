@@ -66,6 +66,53 @@ $SIDEBAR_DATA = '
 site_header("Downloads");
 ?>
 
+<a name="v4"></a>
+<h1>PHP 4.3.9</h1>
+
+<h2>Complete Source Code</h2>
+<ul>
+ <li>
+  <?php download_link('php-4.3.9.tar.bz2','PHP 4.3.9 (tar.bz2)'); ?> - 22 Sep 2004<br />
+  <span class="md5sum">md5: b799bbb330da60324d972641baab693c</span>
+ </li>
+ <li>
+  <?php download_link('php-4.3.9.tar.gz', 'PHP 4.3.9 (tar.gz)');  ?> - 22 Sep 2004<br />
+  <span class="md5sum">md5: c685cb76bff996a4dff87097c43e6987</span>
+ </li>
+</ul>
+
+<p>
+ See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
+ or the <a href="/release_4_3_8.php">release notes</a> for more information on
+ this particular release. Daily snapshots are also available from
+ <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
+</p>
+
+<h2>Windows Binaries</h2>
+
+<p>
+ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP/2003.
+</p>
+
+<ul>
+ <li>
+  <?php download_link('php-4.3.9-Win32.zip', 'PHP 4.3.9 zip package'); ?> - 22 Sep 2004<br />
+  (CGI binary plus server API versions for Apache, Apache2 (experimental),
+  ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
+  included, packaged as zip)<br />
+  <span class="md5sum">md5: c4a4c349e729b339a27c72abe833c58d</span>
+ </li>
+ <li>
+  <?php download_link('php-4.3.9-installer.exe', 'PHP 4.3.9 installer'); ?> - 22 Sep 2004<br />
+  (CGI only, MySQL support built-in, packaged as Windows installer to install
+  and configure PHP, and automatically configure IIS, PWS and Xitami, with
+  manual configuration for other servers. N.B. no external extensions
+  included)<br />
+  <span class="md5sum">md5: 4a2af567ba607e40e4ca4e58adba5cc0</span>
+ </li>
+</ul>
+
+<hr />
 
 <a name="v5"></a>
 <h1>PHP 5.0.1</h1>
@@ -110,54 +157,6 @@ site_header("Downloads");
  language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
  ChangeLog</a> details all the other changes.
 </p>
-
-<hr />
-
-<a name="v4"></a>
-<h1>PHP 4.3.8</h1>
-
-<h2>Complete Source Code</h2>
-<ul>
- <li>
-  <?php download_link('php-4.3.8.tar.bz2','PHP 4.3.8 (tar.bz2)'); ?> - 13 July 2004<br />
-  <span class="md5sum">md5: e8ab484fcb94cd2e0d7ecfd0762cfd33</span>
- </li>
- <li>
-  <?php download_link('php-4.3.8.tar.gz', 'PHP 4.3.8 (tar.gz)');  ?> - 13 July 2004<br />
-  <span class="md5sum">md5: dd69f8c89281f088eadf4ade3dbd39ee</span>
- </li>
-</ul>
-
-<p>
- See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_8.php">release notes</a> for more information on
- this particular release. Daily snapshots are also available from
- <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
-</p>
-
-<h2>Windows Binaries</h2>
-
-<p>
- All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP/2003.
-</p>
-
-<ul>
- <li>
-  <?php download_link('php-4.3.8-Win32.zip', 'PHP 4.3.8 zip package'); ?> - 13 July 2004<br />
-  (CGI binary plus server API versions for Apache, Apache2 (experimental),
-  ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
-  included, packaged as zip)<br />
-  <span class="md5sum">md5: dbf32bfa687e55dbc697d08c4ee09bf2</span>
- </li>
- <li>
-  <?php download_link('php-4.3.8-installer.exe', 'PHP 4.3.8 installer'); ?> - 13 July 2004<br />
-  (CGI only, MySQL support built-in, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
-  <span class="md5sum">md5: feea15b4405844fe44b17bd3973df674</span>
- </li>
-</ul>
 
 <hr />
 

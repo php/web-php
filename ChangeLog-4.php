@@ -11,6 +11,66 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.3.9"></a>
+<h3>Version 4.3.9</h3>
+<b>22-Sep-2004</b>
+<ul>
+<li>GPC input processing fixes.</li>
+<li>Implemented periodic PCRE compiled regexp cache cleanup, to avoid memory exhaustion.</li>
+<li>Fixed bug with raw_post_data not getting set.</li>
+<li>Fixed a file-descriptor leak with phpinfo() and other 'special' URLs.</li>
+<li>Rewritten UNIX and Windows install help files.</li>
+<li>Updated PCRE to provide better error handling in certain cases.</li>
+<li>NSAPI: added "bucket" parameter to list of non-php.ini-keys of php4_execute for doing performance stats without warnings in server-log.</li>
+<li>Fixed leap year checking with idate().</li>
+<li>Fixed strip_tags() to correctly handle '\0' characters.</li>
+<li>Fixed funny forking effect in FastCGI when PHP_FCGI_CHILDREN was not set.</li>
+<li><?php bugfix(30050); ?> (Possible crash inside php_shutdown_config()).</li>
+<li><?php bugfix(29882); ?> (isset crashes on arrays).</li>
+<li><?php bugfix(29753); ?> (mcal_fetch_event() allows 2nd argument to be optional).</li>
+<li><?php bugfix(29727); ?> (Added missing CURL authentication directives).</li>
+<li><?php bugfix(29719); ?> (fgetcsv() has problem parsing strings ending with escaped enclosures).</li>
+<li><?php bugfix(29607); ?> (highlighting code with HEREDOC produces invalid output).</li>
+<li><?php bugfix(29599); ?> (domxml_error segfaults another apache module).</li>
+<li><?php bugfix(29594); ?> (Use PHP's own tmpfile() implementation).</li>
+<li><?php bugfix(29581); ?> (Typo inside php.ini comments for mysql.trace_mode).</li>
+<li><?php bugfix(29493); ?> (extract(array, EXTR_REFS) misbehaves with elements referred twice or more times).</li>
+<li><?php bugfix(29443); ?> (Sanity check for wbmp detection).</li>
+<li><?php bugfix(29369); ?> (Uploaded files with ' or " in their names get their names truncated at those characters).</li>
+<li><?php bugfix(29349); ?> (imagecreatefromstring() crashes with external GD library).</li>
+<li><?php bugfix(29333); ?> (output_buffering+trans_sess_id can corrupt output).</li>
+<li><?php bugfix(29226); ?> (ctype_* functions missing validation of numeric string representations).</li>
+<li><?php bugfix(29209); ?> (imap_fetchbody() doesn't check message index).</li>
+<li><?php bugfix(29116); ?> (Zend constant warning uses memory after free).</li>
+<li><?php bugfix(29114); ?> (Potential double free in php_stat).</li>
+<li><?php bugfix(29075); ?> (strnatcmp() incorrectly handles whitespace).</li>
+<li><?php bugfix(29049); ?> (array sorting via user function/method does not validate it).</li>
+<li><?php bugfix(29038); ?> (extract() with EXTR_PREFIX_SAME prefixes empty strings).</li>
+<li><?php bugfix(29034); ?> (wordwrap() returns a boolean when passed empty string).</li>
+<li><?php bugfix(28974); ?> (overflow in array_slice(), array_splice(), substr, substr_replace(), strspn(), strcspn()).</li>
+<li><?php bugfix(28897); ?> (ibase: -1 returned as -0.000 for 64-bit scaled int).</li>
+<li><?php bugfix(28879); ?> (Implicit/Explicit array creation inconsistency when using Resources, Arrays, or Objects as indices).</li>
+<li><?php bugfix(28878); ?> (Setting of inikey's in obj.conf fails).</li>
+<li><?php bugfix(28868); ?> (Internal wrapper registry not thread safe).</li>
+<li><?php bugfix(28818); ?> (Apache 2 sapis do not export st_dev).</li>
+<li><?php bugfix(28800); ?> (strings beginning with "inf" improperly converted).</li>
+<li><?php bugfix(28723); ?> (Fixed mbstring config.m4 to work on OSes where test command does not support -e parameter).</li>
+<li><?php bugfix(28692); ?> (\0 in Authenticate header passed via safe_mode).</li>
+<li><?php bugfix(28670); ?> (WWW-Authentication header mangling with PCRE in safe_mode adds extra spaces).</li>
+<li><?php bugfix(28668); ?> (glob() does not work with relative paths on Windows).</li>
+<li><?php bugfix(28649); ?> (Proper glob() return value on Linux when there are no matches).</li>
+<li><?php bugfix(28633); ?> (sprintf incorrectly adding padding to floats).</li>
+<li><?php bugfix(28627); ?> (When multiple MySQL links are used default link is leaked).</li>
+<li><?php bugfix(28525); ?> (gmp_powm() does not work with hexadecimal string modulo represented as a string).</li>
+<li><?php bugfix(28512); ?> (Allocate enough space to store MSSQL data).</li>
+<li><?php bugfix(28466); ?> (mbstring_convert_variables() array separation problem).</li>
+<li><?php bugfix(28175); ?> (Allow bundled GD to compile against freetype 2.1.2).</li>
+
+</ul>
+There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.8"></a>
 <h3>Version 4.3.8</h3>
 <b>13-Jul-2004</b>
@@ -21,10 +81,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added missing safe_mode checks inside ftok and itpc. (Ilia)</li>
 <li><?php bugfix(28963); ?> Fixed address allocation routine in IMAP extension. (Ilia)</li>
 <li><?php bugfix(28632); ?> Prevent open_basedir bypass via MySQL's LOAD DATA LOCAL. (Ilia)</li>
-
 </ul>
-There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
 
+There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
 <hr />
 
 <a name="4.3.7"></a>

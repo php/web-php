@@ -121,6 +121,37 @@ site_header("Releases");
  </li>
 </ul>
 
+<a name="4.3.8"></a>
+<h2>4.3.8</h2>
+
+<ul>
+ <li>Released: 13 July 2004</li>
+ <li>Announcement: <a href="/release_4_3_8.php">English</a></li>
+ <li><a href="/ChangeLog-4.php#4.3.8">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-4.3.8.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: e8ab484fcb94cd2e0d7ecfd0762cfd33</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.8.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: dd69f8c89281f088eadf4ade3dbd39ee</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.8-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: dbf32bfa687e55dbc697d08c4ee09bf2</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.8-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: feea15b4405844fe44b17bd3973df674</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+
 <a name="4.3.7"></a>
 <h2>4.3.7</h2>
 
