@@ -327,7 +327,7 @@ function commonFooter() {
 <TR VALIGN=bottom>
 <TD ALIGN=left>
 <?spc(1,3);?><BR>
-<A HREF="#top" onMouseover="hide();change('cred',1);" ><IMG SRC="gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
+<A HREF="credits.php3" onMouseover="hide();change('cred',1);" ><IMG SRC="gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
 <A HREF="#top" onMouseover="hide();change('top',1);" ><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
 </TR>
