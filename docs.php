@@ -39,19 +39,19 @@ commonHeader("Documentation");
 
 $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'es');
 
-# array structure: (header, link text, show_size_in_link)
+# array structure: (header, link_text, show_size_for_package)
 $formats = array(
- ""                  => array("View Online", "view", false),
- "html/"             => array("View Online (plain)", "view", false),
- "manual.txt.gz"     => array("Plain text", "txt.gz", true),
- "bigmanual.html.gz" => array("Single HTML", "html.gz", true),
- "manual.tar.gz"     => array("Many HTML files", "tar.gz", true),
- "manual.tar.bz2"    => array("Many HTML files", "tar.bz2", true),
- "manual.zip"        => array("Many HTML files", "zip", true),
- "manual.pdf"        => array("PDF", "pdf", false),
- "manual_doc.pdb"    => array("PalmPilot DOC", "doc.pdb", true),
- "manual_isilo.pdb"  => array("PalmPilot iSilo", "isilo.pdb", true),
- "manual.chm"        => array("Windows HTML Help", "chm", true)
+ ""                  => array("View Online",         "view",      false),
+ "html/"             => array("View Online (plain)", "view",      false),
+ "manual.txt.gz"     => array("Plain text",          "txt.gz",    true),
+ "bigmanual.html.gz" => array("Single HTML",         "html.gz",   true),
+ "manual.tar.gz"     => array("Many HTML files",     "tar.gz",    true),
+ "manual.tar.bz2"    => array("Many HTML files",     "tar.bz2",   true),
+ "manual.zip"        => array("Many HTML files",     "zip",       true),
+ "manual.pdf"        => array("PDF",                 "pdf",       false),
+ "manual_doc.pdb"    => array("PalmPilot DOC",       "doc.pdb",   true),
+ "manual_isilo.pdb"  => array("PalmPilot iSilo",     "isilo.pdb", true),
+ "manual.chm"        => array("Windows HTML Help",   "chm",       true)
 );
 ?>
 
