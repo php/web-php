@@ -251,7 +251,7 @@ Here's a pretty useless function which makes a good example:
 
 	function concat($str1,$str2)
 	{
-		return $str1+$str2;
+		return $str1.$str2;
 	}
 
 * Old-style function declerations should be changed from function to old_function
@@ -363,7 +363,7 @@ In addition, one can use complex expressions to generate variable names
 using a perl-like notation:
 
 	$i="123";
-	${"test"+$i} = 5;
+	${"test".$i} = 5;
 
 would assign 5 to $test123.
 
