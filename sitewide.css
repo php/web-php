@@ -303,11 +303,11 @@ table#calnav td, table#cal td.notaday {
 	background-color: #d0d0d0;
 	color: inherit;
 }
-table#cal a.type_1 {
+table#cal a.cat1 {
 	color: green;
 	background-color: transparent;
 }
-table#cal a.type_3 {
+table#cal a.cat3 {
 	color: black;
 	background-color: transparent;
 }

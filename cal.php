@@ -219,7 +219,7 @@ function display_events_for_day($day, $events)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
                  ($COUNTRY == $event['country'] ? "<strong>" : ""),
-                 '<a class="type_' . $event['category'] . '" href="/cal.php',
+                 '<a class="cat' . $event['category'] . '" href="/cal.php',
                  "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
                  stripslashes(htmlentities($event['sdesc'])),
                  '</a>',
