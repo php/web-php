@@ -1,0 +1,27 @@
+/* Horizontal delimiter defaults */
+hr {
+    border: 0px;
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
+/* Clear floating objects */
+hr.topdivider {
+    clear: both;
+}
+
+/* Natural white background color */
+body, html {
+    background-color: white;
+    color: black;
+}
+
+/* Link colors for all links */
+a, a:visited {
+    color: #000099;
+}
+
+a:active {
+    color: #0000ff;
+}
