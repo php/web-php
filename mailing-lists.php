@@ -159,6 +159,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, true, "php.pear.dev"
     ),
     Array (
+      'pear-doc', 'PEAR documentation list',
+      'A list involving the documentation of PEAR, an open-source common code library for PHP',
+      false, true, true, "php.pear.doc"
+    ),
+    Array (
       'pear-cvs', 'PEAR CVS list',
       'All the commits of the cvs PEAR code repository are posted to this list automatically',
       false, true, true, "php.pear.cvs"
