@@ -65,10 +65,10 @@ that were fixed are not major ones but minor ones, which could be annoying
 if you get bitten by them.</p>
 
 <p>Our recommendation is that people who already upgraded to PHP 4.1.0 do
-*not* upgrade to <a href="http://www.php.net/downloads.php">PHP 4.1.1</a>,
+<b>not</b> upgrade to <a href="http://www.php.net/downloads.php">PHP 4.1.1</a>,
 unless they're experiencing one of the described bugs.</p>
 
-<p>*No* new features or security updates are available in this release.</p>
+<p><b>No</b> new features or security updates are available in this release.</p>
 
 <p>Full list of fixes:
 <ul>
