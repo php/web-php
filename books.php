@@ -157,12 +157,12 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet"
-><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1893115852/wwwphpnet"
+><IMG SRC="/jpgs/wjgilmore.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet">Beginning PHP 4</A><BR>
-by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
-Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1893115852/wwwphpnet">A Programmer's Introduction to PHP 4.0</A><BR>
+by W.J. Gilmore<BR><SMALL>
+APress, December 2000, ISBN 1-8931-1585-2, 450 pages<BR>
 </SMALL>
 </TD>
 </TR>
@@ -177,6 +177,17 @@ by
 <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A><BR><SMALL>
 Foreword by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 Sams, November 2000, ISBN 0-6723-1924-1, 505 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet"
+><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet">Beginning PHP 4</A><BR>
+by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
+Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </SMALL>
 </TD>
 </TR>
