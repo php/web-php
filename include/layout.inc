@@ -396,8 +396,8 @@ function display_errors($errors)
 
 function display_event($event,$include_date=1)
 {
-  for ($i = 0; $i < 7; $i++) {
-    $days[$i+1] = strftime('%A',mktime(12,0,0,4,$i,2001));
+  for ($i = 1; $i <= 7; $i++) {
+    $days[$i] = strftime('%A',mktime(12,0,0,4,$i,2001));
   }
 
   $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
