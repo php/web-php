@@ -1,4 +1,5 @@
 <?php // -*- C++ -*-
+header("Vary: User-Agent");
 require("site.inc");
 
 /* Check that browser! */
