@@ -38,8 +38,7 @@ if ($in && $checkread) {
   }
 
   if (!$error) {
-    #$result = posttohost("http://master.php.net/entry/cvs-account.php", array(
-    $error = posttohost("http://master.php.net/~jimw/php-master-web/entry/cvs-account.php", array(
+    $error = posttohost("http://master.php.net/entry/cvs-account.php", array(
                 "username" => $cleaned[id],
                 "name" => $cleaned[fullname],
                 "email" => $cleaned[email],
