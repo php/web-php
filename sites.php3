@@ -181,12 +181,13 @@ right away.</blockquote>
 	siteStart();
 	site("3D Linux","3dlinux.org");
 	site("FreshMeat","freshmeat.net");
+	site("Incluso - online PHP Magazine","io.incluso.com");
 	siteEnd();
 
 /* Publishing Industry */
 	title("Publishing Industry");
 	siteStart();
-	site("Invisible Man Press","www.insiblemanpress.com");
+	site("Invisible Man Press","www.invisiblemanpress.com");
 	siteEnd();
 
 /* Religious */
