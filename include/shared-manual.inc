@@ -187,7 +187,8 @@ function manualGetUserNotes($title, $id) {
 		$notes_file = "$DOCUMENT_ROOT/backend/notes/".substr($hash,0,2)."/$hash";
 		if ($fp = @fopen($notes_file,"r")) {
 			while (!feof($fp)) {
-                                $line = chop(fgets($fp,8096));
+				$line = chop(fgets($fp,8096));
+				if ($line == "") continue;
 				list($id,$sect,$rate,$ts,$user,$note) = explode("|",$line);
 				$notes[] = array(
 					"id" => $id,
