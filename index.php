@@ -9,6 +9,12 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>Patch Level 1 released for PHP 4.0.4</h3>
+
+Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
+has been released.  This bug-fix release also fixes a few party-crashing bugs that
+were discovered in PHP 4.0.4.
+
 <a href="http://conferences.oreilly.com/oscon2001/"><img src="gifs/osscon.gif" align="right" border=0></a>
 <h3>PHP Conference - <a href="cfp.php">Call for Participation</a></h3>
 The conference will be part of the <a
