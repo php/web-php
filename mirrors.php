@@ -12,12 +12,14 @@ commonHeader("Mirror Sites");
 <h1>Mirror Sites</h1>
 
 <p>
-Here you can find more information about the mirrors
-of php.net.
+Here you can find more information about the mirrors of php.net.
 </p>
 <p>
 Pick a mirror site close to you (the current mirror is highlighted), or visit
-the provider's homepage:
+the provider's homepage. If you are interested in hosting a mirror of this site, 
+<?php print_link("/mirroring.php", "here's how"); ?>.
+</p>
+
 </p>
 
 <p>
@@ -47,11 +49,6 @@ the provider's homepage:
   }
 ?>
 </table>
-</p>
-
-<p>
-If you are interested in hosting a mirror of this site, 
-<?php print_link("/README.mirror", "here's how"); ?>.
 </p>
 
 <?php commonFooter(); ?>
