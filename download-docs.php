@@ -22,8 +22,8 @@ $formats = array(
  "manual.tar.gz"     => array("Many HTML files",     "tar.gz",    true),
  "manual.tar.bz2"    => array("Many HTML files",     "tar.bz2",   true),
  "manual.zip"        => array("Many HTML files",     "zip",       true),
- "manual.pdf.bz2"    => array("PDF",                 "pdf.bz2",   true),
  "manual.pdf.gz"     => array("PDF",                 "pdf.gz",    true),
+ "manual.pdf.bz2"    => array("PDF",                 "pdf.bz2",   true),
  "manual.pdf.zip"    => array("PDF",                 "pdf.zip",   true),
  "manual_doc.pdb"    => array("PalmPilot DOC",       "doc.pdb",   true),
  "manual_isilo.pdb"  => array("PalmPilot iSilo",     "isilo.pdb", true),
@@ -71,7 +71,7 @@ use does otherwise.
           $link_to = "distributions/manual/manual-$langcode.pdf.bz2";
        } elseif ($fn == "manual.pdf.gz") {
           $link_to = "distributions/manual/manual-$langcode.pdf.gz";
-       } if ($fn == "manual.pdf.zip") {
+       } elseif ($fn == "manual.pdf.zip") {
           $link_to = "distributions/manual/manual-$langcode.pdf.zip";
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual_$langcode.chm";
