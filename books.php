@@ -37,14 +37,16 @@ Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/cmvsstuff"
 ><IMG SRC="/jpgs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/cmvsstuff"
 >Core PHP Programming</A><BR>
+Using PHP to Build Dynamic Web Sites</BR>
 by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
 <SMALL>
-Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages<BR>
+Foreword by <A HREF="http://www.zend.com/zend/hof/andi.php">Andi Gutmans</A><BR>
+Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages<BR>
 <A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
 </SMALL>
 </TD>
