@@ -31,7 +31,7 @@ if (strstr($MYSITE,"www.php.net")) {
 */
 
 commonHeader("Bug Reporting");
-echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
+//echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
 echo "<font size=-1>\n";
 
 function indent($string, $prefix) {
