@@ -102,7 +102,7 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 
 <li>Read the <a href="/version4/migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
 <li>Read about the (very few) <a href="/version4/incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
-<li>License questions?  See the <a href="/version4/license-FAQ.php">License FAQ</a></li>	
+<li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
 <H1>CVS Account</H1>
