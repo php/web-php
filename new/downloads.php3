@@ -47,7 +47,7 @@ while ($site = key($mirror_sites)) {
 		$method="unknown";
 	}
 	if ($lastcountry!=$country) {
-		echo "<TR><TD colspan=3>&nbsp;<BR></TD><TD BGCOLOR='#F0F0F0'>&nbsp;<BR><BR></TD><TD>&nbsp;<BR></TD></TR>\n";
+		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
 		echo "<TD><A NAME='$country'><IMG SRC='/new/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0></A><BR></TD>\n";
