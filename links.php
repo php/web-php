@@ -63,7 +63,7 @@ to push PHP, as well as to serve as a junction for all
 parties interested in PHP.</li>
 
 <li><a href="http://www.afup.org/">AFUP.org</a><br>
-(Association Française des Utilisateurs de PHP) : 
+(Association Fran&ccedil;aise des Utilisateurs de PHP) : 
 The AFUP was created to answer the growing need from
 companies to have one unique place for PHP solutions.</li>
 </ul>
