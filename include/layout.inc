@@ -197,7 +197,7 @@ function site_footer($config = array())
         "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:"); 
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
     $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
-    //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
+    $functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
     
     print <<<END_FOOTER
 
@@ -225,8 +225,8 @@ function site_footer($config = array())
   <a href="{$provider_url}">{$provider_name}</a><br />
   Last updated: {$last_updated}
  </div>
-</div>
-<script src="{$_SERVER['STATIC_ROOT']}/functions.js" type="text/javascript"></script>
+</div>{$functionsjs}
+<!--script src="{$_SERVER['STATIC_ROOT']}/functions.js" type="text/javascript"></script-->
 
 </body>
 </html>
@@ -607,7 +607,7 @@ function commonFooter() {
  </tr>
 </table>
 <!--/UdmComment-->
-<script src="<?php echo $_SERVER['STATIC_ROOT']; ?>/functions.js" type="text/javascript"></script>
+<!--script src="<?php echo $_SERVER['STATIC_ROOT']; ?>/functions.js" type="text/javascript"></script-->
 </body>
 </html>
 <?php
