@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'release_4_3_2_fr.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Annonce de publication de PHP 4.3.2");
+site_header("Annonce de publication de PHP 4.3.2", array("lang" => "fr"));
 ?>
 
 <h1>Annonce de publication de PHP 4.3.2</h1>
