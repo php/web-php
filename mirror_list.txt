@@ -6,3 +6,4 @@ bednar@isternet.sk sk.php.net 195.72.0.6
 webmaster@www.nisu.flinders.edu.au au.php.net 129.96.218.17
 petrus@linux.co.za za.php.net 160.124.133.230
 sgk@happysize.co.jp jp.php.net CNAME to jp-php-net.happysize.co.jp
+gareth@omnipotent.net uk.php.net 194.73.160.93
