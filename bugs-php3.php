@@ -101,7 +101,7 @@ function show_menu($state)
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select></td><td> <a href=\"/bugstats.php3\">Statistics</a></td></tr>\n";
+	echo "</select></td><td> <a href=\"/bugstats.php\">Statistics</a></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
 	echo "<td colspan=4><input type=text name=\"search_for\"></td></tr>\n";
 	echo "</table>\n";
