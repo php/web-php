@@ -10,3 +10,5 @@ gareth@omnipotent.net uk.php.net 194.73.160.93
 cmv@privateworld.com php.privateworld.com 205.210.42.153
 melo@co.telenet.pt pt.php.net CNAME to php.telenet.pt
 prochat@lbdsun.epfl.ch ch.php.net CNAME to lbdsun11.epfl.ch
+jguia@virtualoffice.es es.php.net ??
+terence@com5.net sg.php.net 202.169.237.18
