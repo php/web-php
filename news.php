@@ -13,6 +13,31 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<h1>New keyboard shortcuts</h1>
+<p>
+<font class="newsdate">[17-Oct-2002]</font>
+We introduced new keyboard shortcuts on the site today to make our pages
+even more comfortable to use. You can hit Alt+S on Microsoft Windows
+or Ctrl+S on Macintosh now to go right to the search box and type your
+search keyword. A similar shortcut with the letter "L" is also introduced
+on the manual pages to access the lookup input field. Thanks to Tommy Ipsen
+for the suggestion. You can read more about keyboard shortcuts on web pages
+<a href="http://www.w3.org/TR/html401/interact/forms.html#access-keys">in
+the HTML standard</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP 4.2.3 Released</h1>
+<p>
+<font class="newsdate">[06-Sept-2002]</font>
+<a href="downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
+release, and is a recommended update for all users of PHP, and Windows users in particular. A complete
+list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "PHP Conference 2002", "right")); ?>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>

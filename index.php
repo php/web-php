@@ -313,17 +313,6 @@ available on the magazine website
 
 <?php echo hdelim(); ?>
 
-<h1>PHP site server updates</h1>
-<p>
-<font class="newsdate">[12-Nov-2002]</font>
-We are in the process of moving to new server machines so there may
-be downtimes in some services, including site search, user note display
-and downloads. Please be patient until we finish our work, and everything
-will be back again.
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP Search Bars available for major browsers</h1>
 <p>
 <font class="newsdate">[29-Oct-2002]</font>
@@ -355,31 +344,6 @@ and related projects.
 <p>
 Visitors can take LAMP home, too, since there will be a CD with the necessary
 software available at the booth.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>New keyboard shortcuts</h1>
-<p>
-<font class="newsdate">[17-Oct-2002]</font>
-We introduced new keyboard shortcuts on the site today to make our pages
-even more comfortable to use. You can hit Alt+S on Microsoft Windows
-or Ctrl+S on Macintosh now to go right to the search box and type your
-search keyword. A similar shortcut with the letter "L" is also introduced
-on the manual pages to access the lookup input field. Thanks to Tommy Ipsen
-for the suggestion. You can read more about keyboard shortcuts on web pages
-<a href="http://www.w3.org/TR/html401/interact/forms.html#access-keys">in
-the HTML standard</a>.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.2.3 Released</h1>
-<p>
-<font class="newsdate">[06-Sept-2002]</font>
-<a href="downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
-release, and is a recommended update for all users of PHP, and Windows users in particular. A complete
-list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 </p>
 
 <?php echo hdelim(); ?>
