@@ -77,6 +77,22 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 <?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
 
+<h1>PHP Conference 2 - Call for Participation</h1>
+
+<p>
+<font class="newsDate">[10-Jan-2002]</font>
+The second official PHP Conference, part of the <a
+href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
+Convention</a>, has issued a <a
+href="http://conferences.oreillynet.com/cs/os2002/create/e_sess">call for
+participation</a> for those who would like to make a presentation or give a
+tutorial. The theme of this year's conference is "Doing More With Less".  The
+conference will be held at the Sheraton San Diego Hotel and Marina in San
+Diego, California between July 22-26, 2002.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>International PHP Conference slides available</h1>
 
 <p>
@@ -245,35 +261,6 @@ Frank Kromann at the 2001 O'Reilly Open Source Conference
 in San Diego. The slides from the talk can be
 <a href="http://conf.php.net/sd-gtk">viewed online</a>.
 For more information, visit <?php print_link("http://gtk.php.net/")?>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP Conference</h1>
-
-<p>
-<font class="newsDate">[29-Jul-2001]</font>
-The first official PHP Conference, part of the
-<a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>,
-brought the community together for
-<a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a>
-and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a>
-designed to explore and strengthen PHP in
-the open source space. The conference
-was at the Sheraton San Diego Hotel and Marina
-in San Diego, California between July 23-27, 2001.
-You can view some of the presentations online:</p>
-<ul>
-  <li>Rasmus Lerdorf's <a href="http://conf.php.net/or2001">PHP - Spinal Injection</a></li>
-  <li>Thies Arntzen on <a href="http://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
-  <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/sd-gtk">PHP-GTK</a></li>
-  <li>Jon Parise on <a href="http://conf.php.net/pear2">The PHP Extension and Application Repository</a></li>
-</ul>
-
-<p>
-You can also download some papers from the
-<a href="ftp://ftp.oreilly.com/pub/conference/os2001/">O'Reilly FTP site</a>
 <br clear="all">
 </p>
 
