@@ -1,15 +1,21 @@
-<?
-require_once 'prepend.inc';
+<?php
+include_once 'prepend.inc';
 commonHeader("Manual Notes");
 ?>
 
-<P>The manual notes interface allows you to add notes to the online
+<p>
+The manual notes interface allows you to add notes to the online
 version of the PHP manual. These notes are then shared with other
 PHP users when they browse the manual online.
+</p>
 
-<P>Periodically, the developers may go through the notes and incorporate
+<p>
+Periodically, the developers may go through the notes and incorporate
 the information in them into the documentation proper.
+</p>
 
-<P>These notes are <B>not</B> the place to report <A href="http://bugs.php.net">bugs</A>!
+<p>
+These notes are <b>not</b> the place to report <a href="http://bugs.php.net">bugs</a>!
+</p>
 
-<?commonFooter();?>
+<?php commonFooter(); ?>

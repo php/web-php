@@ -286,7 +286,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  You are using <?php echo $MYSITE; ?>. However, foo.php.net is closer. We would appreciate if you could use that mirror.
  </div>
 
-<? */ }
+<?php */ }
 
 
 # commonfooter()

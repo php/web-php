@@ -217,7 +217,7 @@ Example 6: Multiple derefencing of objects returned from methods
 Example 7: Exception handling
 =============================
 
-<?
+<?php
 	class MyException {
 		function MyException($_error) {
 			$this->error = $_error;	
@@ -253,7 +253,7 @@ Example 7: Exception handling
 Example 8: __clone()
 ===================
 
-<?
+<?php
 	class MyCloneable {
 		static $id = 0;
 		
@@ -293,7 +293,7 @@ Example 8: __clone()
 Example 9: Unified constructors
 ===============================
 
-<?
+<?php
 
 	class BaseClass {
 		function __construct()

@@ -1,5 +1,5 @@
-<?
-require_once 'prepend.inc';
+<?php
+include_once 'prepend.inc';
 commonHeader('PHP/FI Version 2.0 Documentation');
 ?>
 
@@ -5438,4 +5438,4 @@ memory anywhere in the code, with the one exception being memory allocated
 using a regular malloc call by various libraries that could be linked into
 PHP.  The gdbm library is one such example.<P>
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

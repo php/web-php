@@ -76,15 +76,15 @@ HostName	ca.php.net
 # You _MUST_ specify the <BODY> tag on the first one, do what you
 # want on the rest (if any). Default is shown below.
 
-HTMLPre		<? require("shared-stat.inc"); ?>
+HTMLPre		<?php require("shared-stat.inc"); ?>
 
 # Code for the Head
 
-HTMLHead	<? commonStatHeader("Stats"); ?>
+HTMLHead	<?php commonStatHeader("Stats"); ?>
 
 # Code for the body
 
-HTMLBody	<? commonStatBody("Stats"); ?>
+HTMLBody	<?php commonStatBody("Stats"); ?>
 
 # HTMLPost defines the HTML code to insert immediately before the
 # first <HR> on the document, which is just after the title and
@@ -105,7 +105,7 @@ HTMLBody	<? commonStatBody("Stats"); ?>
 
 # Code for HTMLEnd
 
-HTMLEnd		<? commonStatFooter(); ?>
+HTMLEnd		<?php commonStatFooter(); ?>
 
 # The Quiet option suppresses output messages... Useful when run
 # as a cron job to prevent bogus e-mails.  Values can be either
