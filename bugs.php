@@ -507,7 +507,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	}
 	// not supported by the HTML form yet : use the URL :)
 	if(isset($bug_age) && ($bug_age!="All")) {
-		$where_clause .= " and (TO_DAYS(NOW())-TO_DAYS(ts1))<=$bug_age";
+		$where_clause .= " and ts1 >= date_sub(now(), interval $bug_age day)";
 	}
 	if (strlen($where_clause)) {
 		$where_clause .= " and";
