@@ -1,259 +1,154 @@
 <?php // -*- C++ -*-
+
 require("shared.inc");
 require("manual.inc");
 
-function manualHeader($title) {
-    global $PHP_SELF, $HTTP_REFERER, $FONTFACE;
-    global $NEXT, $PREV, $UP, $HOME, $TOC;
-?>
-<HTML>
-<HEAD>
-<TITLE>PHP3: <? echo $title;?></TITLE>
+$navBarNo = "";
+$jsfunc['change'] = "manual_jsfunc_change";
+$jsfunc['LoadImgs'] = "manual_jsfunc_loadimgs";
+$func['sidebar'] = "manual_func_sidebar";
 
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-
-var bName = navigator.appName;
-var bVer = parseInt(navigator.appVersion);
-
-var NS4 = (bName == "Netscape" && bVer >= 4);
-var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
-var NS3 = (bName == "Netscape" && bVer < 4);
-var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
-
-var loaded = 0;
-var layers = 0;
-var lastbutton='top';
-
-if (NS4 || IE4) {
-	if (navigator.appName == "Netscape") {
-      		layerStyleRef="layer.";
-		layerRef="document.layers";
-		styleSwitch="";
-	}else{
-		layerStyleRef="layer.style.";
-		layerRef="document.all";
-		styleSwitch=".style";
-	}
-}
-
-function showLayer(layerName){
-	if ((NS4 || IE4) && (layers == 1)) {
-		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="visible"');
-	}	
-}
-        
-function hideLayer(layerName){
-	if ((NS4 || IE4) && (layers == 1)) {
-		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="hidden"');
-	}	
-}
-
-function LoadImgs () {
-	if (document.images) {
-		b_cont0 = new Image();
-		b_cont0.src = "/new/gifs/b-contents-p.gif";
-		b_cont1 = new Image();
-		b_cont1.src = "/new/gifs/b-contents-c.gif";
-
-		b_up0 = new Image();
-		b_up0.src = "/new/gifs/b-up-p.gif";
-		b_up1 = new Image();
-		b_up1.src = "/new/gifs/b-up-c.gif";
-
-		b_top0 = new Image();
-		b_top0.src = "/new/gifs/b-top-p.gif";
-		b_top1 = new Image();
-		b_top1.src = "/new/gifs/b-top-c.gif";
-
-		b_sear0 = new Image();
-		b_sear0.src = "/new/gifs/b-search-p.gif";
-		b_sear1 = new Image();
-		b_sear1.src = "/new/gifs/b-search-c.gif";
-
-		b_sour0 = new Image();
-		b_sour0.src = "/new/gifs/b-source-p.gif";
-		b_sour1 = new Image();
-		b_sour1.src = "/new/gifs/b-source-c.gif";
-
-		b_close0 = new Image();
-		b_close0.src = "/new/gifs/b-close-p.gif";
-		b_close1 = new Image();
-		b_close1.src = "/new/gifs/b-close-c.gif";
-
-		b_cred0 = new Image();
-		b_cred0.src = "/new/gifs/b-credits-p.gif";
-		b_cred1 = new Image();
-		b_cred1.src = "/new/gifs/b-credits-c.gif";
-
-		b_next0 = new Image();
-		b_next0.src = "/new/gifs/b-next-p.gif";
-		b_next1 = new Image();
-		b_next1.src = "/new/gifs/b-next-c.gif";
-
-		b_prev0 = new Image();
-		b_prev0.src = "/new/gifs/b-prev-p.gif";
-		b_prev1 = new Image();
-		b_prev1.src = "/new/gifs/b-prev-c.gif";
-
-		b_next20 = new Image();
-		b_next20.src = "/new/gifs/b-next-p.gif";
-		b_next21 = new Image();
-		b_next21.src = "/new/gifs/b-next-c.gif";
-
-		b_prev20 = new Image();
-		b_prev20.src = "/new/gifs/b-prev-p.gif";
-		b_prev21 = new Image();
-		b_prev21.src = "/new/gifs/b-prev-c.gif";
-
-		b_bullet0 = new Image();
-		b_bullet0.src = "/new/gifs/b-bullet-p.gif";
-		b_bullet1 = new Image();
-		b_bullet1.src = "/new/gifs/b-bullet-c.gif";
-		b_bullet2 = new Image();
-		b_bullet2.src = "/new/gifs/b-bullet-w.gif";
-
-		loaded = 1;
-	}
-}
-   
-function change(Name,No) {
-	if (document.images && (loaded == 1)) {
-		document[Name].src = eval("b_" + Name + No + ".src");
-	}
-	if (No == 1) {
-		if (NS4 || IE4 && (layers == 1)) {
-			hideLayer('searchKick');
-		}
-		if (Name != 'sear') {
-			change('sear',0);
-		}
-		lastbutton = Name;
-	}
-}
-
-function changebullet(Name,No) {
-	if (document.images && (loaded == 1)) {
-		document[Name].src = eval("b_bullet" + No + ".src");
-	}
-}
-
-function hide() {
-	if (document.images && (loaded == 1)) {
-		change(lastbutton,0);
-	}
-}
-
-if (IE4) LoadImgs();
-
-//--->
-</SCRIPT>
-</HEAD>
-
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0 OnLoad="LoadImgs();"><A NAME="top">
-<IMG SRC="/new/gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
-<!-- Kick outs -->
-
-<SCRIPT LANGUAGE="Javascript1.2">
-<!--
-screenWidth=document.bigspacer.width;
-searchPosLeft=screenWidth - 320;
-searchPosTop=40;
-mirrorPosLeft=143;
-mirrorPosTop=230;
-
-if (IE4) {
-	searchPosLeft+=4;
-	searchPosTop+=15;
-	mirrorPosLeft+=4;
-	mirrorPosTop+=16;
-}
-
-document.writeln("<STYLE TYPE='text/css'>");
-document.writeln("BODY { font-family: Tahoma, Arial, sans-serif }");
-document.writeln("TD { font-family: Tahoma, Arial, sans-serif }");
-document.writeln("A { text-decoration: none }");
-document.writeln("A.white { color: #FFFFFF }");
-document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
-document.write(mirrorPosTop);
-document.write("px; LEFT: ");
-document.write(mirrorPosLeft);
-document.writeln("px;}");
-document.write("#searchKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
-document.write(searchPosTop);
-document.write("px; LEFT: ");
-document.write(searchPosLeft);
-document.writeln("px;}");
-document.writeln("</STYLE>");
-//-->
-</SCRIPT>
-
-
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
-<TR valign=top>
-<TD ALIGN=left width=150 BGCOLOR="#5B69A6">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
-<TR VALIGN=top>
-<TD ALIGN=left>
-<IMG SRC="/new/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<?spc(15,67);?><A HREF="/new/index.php3"><IMG SRC="/new/gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
-<?spc(1,10);?><BR>
-</TD></TR>
-<TR VALIGN=top>
-<TD ALIGN=left>
-
-<A HREF="<? echo $HOME[0] ?>" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
-<A HREF="<? echo $UP[0];?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to <? echo $UP[1];?>" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
-<? makeBorderTOC($title);?>
-</TD></TR>
-</TABLE>
-</TD>
-<TD align=left width="100%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
-<TR VALIGN=middle BGCOLOR="#5B69A6">
-<TD ALIGN=left>
-<?
-	spc(5,1);
-	echo "<FONT FACE=\"$FONTFACE\" SIZE=+1><B>$title</B></FONT><BR></TD>\n";
-?>
-<TD ALIGN=right><?
-     if($title=="Show Source") {
-	 echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	 echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hide();\"><IMG SRC=\"/new/gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
-     } else {
-	 echo "<IMG SRC=\"/new/gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
-	 echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hide();\">";
-	 echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
-	 echo "</A>";
-    }
-?><A HREF="/new/search.php3" onMouseover="change('sear',1);showLayer('searchKick');"><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
-</TR></TABLE>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
-<TR VALIGN=top BGCOLOR="#FFFFFF">
-<TD ALIGN=left WIDTH="12"><IMG SRC="/new/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
-<TD ALIGN=left WIDTH="100%"><FONT FACE="<? echo $FONTFACE;?>"><BR>
-<!-- start next/prev -->
-<?
+function navigationBar() {
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACE;
+    global $navBarNo;
+    $no = $navBarNo;
     if ($title!="Show Source") {
+	echo("<!-- start next/prev -->\n");
 	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
 	echo "<TR VALIGN=middle>\n";
 	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	if ($PREV[0] && $PREV[1]) {
-	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev' align=absmiddle></A><BR></TD>\n";
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A><BR></TD>\n";
 	}
 	echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></TD>\n";
 	echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></TD>\n";
 	if ($NEXT[0] && $NEXT[1]) {
-	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next' align=absmiddle></A><BR></TD>\n";
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Next' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A><BR></TD>\n";
 	}
-	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "</TR></TABLE>\n";
 	echo "<BR>\n";
+	$navBarNo = (string)((int)$navBarNo + 2);
     }
-    echo "<!-- start body -->\n";
+}
+
+
+function manual_jsfunc_change() {
+    global $HAVE_LAYERS; ?>
+function change(Name,No) {
+    if (document.images && (loaded == 1)) {
+	document[Name].src = eval("b_" + Name + No + ".src");
+    }
+    if (No == 1) {
+        <? if ($HAVE_LAYERS) { ?> if (layers) {
+	    hideLayer('searchKick');
+	} <? } ?>
+        if (Name != 'sear') {
+	    change('sear',0);
+	}
+	lastbutton = Name;
+    }
+} <? } /* function manual_jsfunc_change() */
+
+
+function manual_jsfunc_loadimgs() { ?>
+function LoadImgs () {
+    if (document.images) {
+	b_cont0 = new Image();
+	b_cont0.src = "/new/gifs/b-contents-p.gif";
+	b_cont1 = new Image();
+	b_cont1.src = "/new/gifs/b-contents-c.gif";
+	
+	b_up0 = new Image();
+	b_up0.src = "/new/gifs/b-up-p.gif";
+	b_up1 = new Image();
+	b_up1.src = "/new/gifs/b-up-c.gif";
+	
+	b_top0 = new Image();
+	b_top0.src = "/new/gifs/b-top-p.gif";
+	b_top1 = new Image();
+	b_top1.src = "/new/gifs/b-top-c.gif";
+	
+	b_sear0 = new Image();
+	b_sear0.src = "/new/gifs/b-search-p.gif";
+	b_sear1 = new Image();
+	b_sear1.src = "/new/gifs/b-search-c.gif";
+	
+	b_sour0 = new Image();
+	b_sour0.src = "/new/gifs/b-source-p.gif";
+	b_sour1 = new Image();
+	b_sour1.src = "/new/gifs/b-source-c.gif";
+	
+	b_close0 = new Image();
+	b_close0.src = "/new/gifs/b-close-p.gif";
+	b_close1 = new Image();
+	b_close1.src = "/new/gifs/b-close-c.gif";
+	
+	b_cred0 = new Image();
+	b_cred0.src = "/new/gifs/b-credits-p.gif";
+	b_cred1 = new Image();
+	b_cred1.src = "/new/gifs/b-credits-c.gif";
+	
+	b_next0 = new Image();
+	b_next0.src = "/new/gifs/b-next-p.gif";
+	b_next1 = new Image();
+	b_next1.src = "/new/gifs/b-next-c.gif";
+	
+	b_prev0 = new Image();
+	b_prev0.src = "/new/gifs/b-prev-p.gif";
+	b_prev1 = new Image();
+	b_prev1.src = "/new/gifs/b-prev-c.gif";
+	
+	b_next20 = new Image();
+	b_next20.src = "/new/gifs/b-next-p.gif";
+	b_next21 = new Image();
+	b_next21.src = "/new/gifs/b-next-c.gif";
+	
+	b_prev20 = new Image();
+	b_prev20.src = "/new/gifs/b-prev-p.gif";
+	b_prev21 = new Image();
+	b_prev21.src = "/new/gifs/b-prev-c.gif";
+	
+	b_bullet0 = new Image();
+	b_bullet0.src = "/new/gifs/b-bullet-p.gif";
+	b_bullet1 = new Image();
+	b_bullet1.src = "/new/gifs/b-bullet-c.gif";
+	b_bullet2 = new Image();
+	b_bullet2.src = "/new/gifs/b-bullet-w.gif";
+	
+	loaded = 1;
+    }
+} <? } /* function manual_jsfunc_loadimgs() */
+
+
+function manual_func_sidebar() {
+?>
+   <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
+    <TR VALIGN=top>
+     <TD ALIGN=left>
+      <IMG SRC="/new/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
+      <?spc(15,67);?><A HREF="/new/index.php3"><IMG SRC="/new/gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+      <?spc(1,10);?><BR>
+     </TD>
+    </TR>
+    <TR VALIGN=top>
+     <TD ALIGN=left>
+      <A HREF="<? echo $HOME[0] ?>" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
+      <A HREF="<? echo $UP[0];?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to <? echo $UP[1];?>" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
+      <? makeBorderTOC($title);?>
+     </TD>
+    </TR>
+   </TABLE>
+<?
+}
+
+function manualHeader($title) {
+    commonHeader("Manual: $title");
+    navigationBar();
 }
 
 function manualFooter($title) {
+    navigationBar();
     commonFooter($title);
 }
 ?>
