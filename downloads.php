@@ -13,13 +13,6 @@ for RISC OS source and binaries, visit ' .
 make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "this site") . '
 </p>
 
-<h3>Download problems?</h3>
-<p>
-Our downloads on the main php.net server are hosted on port 8000.
-If your setup can\'t handle this, please choose another mirror
-site, and try the download page there.
-</p>
-
 <h3>Other Downloads</h3>
 <p>
 For downloadable manual packages, go to the '.
