@@ -88,10 +88,25 @@ else {
 
     // Print out common header
     site_header("Search");
-    echo "<p>The search feature is accessible via the form elements at the top right of this page.</p>";
-    echo "<p class=\"tip\">We have tried to reduce the size of the function list autocomplete script
-    to the minimum, so you don't need to wait for long to start using this feature. If you are interested
-    in the PHP and JavaScript sources we used to create this functionality, those are <a href=\"http://cvs.php.net/cvs.php/phpdoc/scripts/quickref\">available under the PHP license in phpdoc CVS</a>.</p>";
+?>
+<p>
+ The autocompleting search feature is accessible via the form elements at the top
+ right of this page. You should be able to use this feature in a reasonably modern
+ browser by selecting the 'function list' search option and typing in some letters
+ into the searchbox. Features:
+</p>
+<ul>
+ <li>Dynamically changing list of function names starting with the substring you typed</li>
+ <li>Navigate in the list with up and down keys</li>
+ <li>Autocomplete with pressing the space key</li>
+ <li>Go to a function by clicking on its name with your mouse</li>
+</ul>
+<p>
+ We are interested in detailed bug reports including JS error messages, operating system
+ and browser information. We are planning on deploying this feature to all PHP.net pages
+ if we can manage to make it work without errors for most of the comonly used browsers.
+</p>
+<?php
     if (FALSE) {
     if (isset($EXPL_LANG)) {
         $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
