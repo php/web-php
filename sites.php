@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+include_once 'prepend.inc';
 commonHeader("A Tourist's Guide");
 ?>
 
@@ -136,20 +136,7 @@ easy as possible to use for both programmers and template designers.
 <p>
 This is your first stop if you're looking for cutting edge development versions
 of PHP which are generated every day from the current stable and current
-development sources. The following snapshots are available:<br />
-<ul>
-<li><a href="http://snaps.php.net/php4-STABLE-latest.tar.bz2">Stable source snapshots [bz2]</a> <a href="http://snaps.php.net/php4-STABLE-latest.tar.gz">[gz]</a>
-based on the latest released version</li>
-<li><a href="http://snaps.php.net/win32/php4-win32-STABLE-latest.zip">Stable win32 binary snapshot [zip]</a>
-same as above, but win32 binaries only</li>
-<li><a href="http://snaps.php.net/php4-latest.tar.bz2">Development source snapshots [bz2]</a> <a href="http://snaps.php.net/php4-latest.tar.gz">[gz]</a>
-current development branch with the latest whiz-bang features</li>
-<li><a href="http://snaps.php.net/win32/php4-win32-latest.zip">Development win32 binary snapshot [zip]</a>
-same as above but win32 binaries only</li>
-<li><a href="http://snaps.php.net/win32/ze2/php4-ze2-win32-latest.zip">Development win32 binary snapshot based on ZE2 [zip]</a>
-current development branch with whiz-bang features <i>and</i> the upcomming <a href="http://www.php.net/ZEND_CHANGES.txt">Zend Engine 2</a> (Current changes, may be out of date), see also the <a href="http://www.zend.com/engine2/ZendEngine-2.0.pdf">Design draft</a></li>
-</ul>
-Source development snapshots based on ZE2 are currently not available. Please use <a href="anoncvs.php">Anonymous CVS</a> and check out the <tt>php4-ze2</tt> module.
+development sources.
 </p>
 
 <?php commonFooter(); ?>
