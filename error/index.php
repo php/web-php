@@ -135,8 +135,7 @@ $uri_aliases = array (
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // for backward compatibility with PHP page!
 
-    "icap"         => "mcal", // mcal is the successor of icap,
-    "ref.icap.php" => "mcal", // which is not supported by PHP anymore
+    "icap"         => "mcal", // mcal is the successor of icap
     
     # external shortcut aliases ;)
     "dochowto"    => "phpdochowto"
