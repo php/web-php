@@ -50,6 +50,12 @@ designed versions. Please pick a language and format from
 the table below.
 </p>
 
+<p>
+Note, that many languages are just under translation, and
+the untranslated parts are still in English. The translation
+teams are open to other contributors though.
+</p>
+
 <table border="0" cellpadding="3" cellspacing="2" width="100%">
 <tr bgcolor="#cccccc"><th>Formats</th><th>Languages</th></tr>
 <tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
