@@ -42,7 +42,15 @@ There's also a list of user groups in Germany, as well as news from those same
 user groups, at <a href="http://www.phpug.de/">http://www.phpug.de/</a>.  
 </p>
 
-<?/* link to events, explain that usergroup events are listed there */?>
+<h1>Events &amp; Training</h1>
+<p>
+A list of upcoming events (such as user group meetings and PHP training
+sessions) is included in the right-hand column of the front page.
+</p>
+<p>
+If you want to list an upcoming event, just fill out the form <a
+href="http://www.php.net/cal.php?a=1">at the bottom of this page</a>.
+</p>
 
 <h1>Sample Code</h1>
 <p>
