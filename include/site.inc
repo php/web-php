@@ -11,6 +11,7 @@
 $MIRRORS = array(
    "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1, 1),
    "http://at.php.net/"           => array("at", "Goodie Domain Service", "gds", "http://gd.tuwien.ac.at/", 1, 0),
+   "http://br.php.net/"           => array("br", "SST Internet", "sst", "http://www.sst.com.br/", 1, 0),
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://php.easydns.com/"      => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0),
    "http://ch.php.net/"           => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/" ,1 ,0),
@@ -59,6 +60,7 @@ $MIRRORS = array(
 $COUNTRIES = array(
    "au" => "Australia",
    "at" => "Austria",
+   "br" => "Brazil",
    "ca" => "Canada",
    "ch" => "Switzerland",
    "cl" => "Chile",
