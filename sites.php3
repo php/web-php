@@ -88,6 +88,7 @@ right away.</blockquote>
 /* Financial Industry */
 	title("Financial Industry");
 	siteStart();
+	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
 	site("E*Trade","www.etrade.com");
 	site("First USA Bank","www.firstusabank.com");
