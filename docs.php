@@ -67,7 +67,7 @@ commonHeader("Documentation ");
 <li><?php download_link("manual_pt_BR.chm", "PHP Manual (Portugese)"); ?>
 </ul>
 
-<H2>PDF Versions (February 04, 2001)</H2>
+<H2>PDF Versions (February 18, 2001)</H2>
 <ul>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-cs.pdf", "PHP PDF Manual (Czech)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-nl.pdf", "PHP PDF Manual (Dutch)"); ?>
