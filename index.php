@@ -103,8 +103,8 @@ should be available a little later.
 </p>
 <p>
 Note that previous versions require PHP 4.0.5/4.0.6,
-but <emp>0.1 requires the CVS version of PHP or
-upcoming 4.0.7</emp> due to non-backwards
+but <emphasis>0.1 requires the CVS version of PHP or
+upcoming 4.0.7</emphasis> due to non-backwards
 compatible changes in the Zend engine.
 </p>
 <p>
