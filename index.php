@@ -57,9 +57,14 @@ bugs that are surely lingering behind this new facade.
 </p>
 
 <p>
-Miss the <a href="/quickref.php">quickref</a> box? Use the 'search' box up there, instead. It will now take you directly to the manual page if you give it a valid function name, or fall back to doing a site search if it can't find a function with that name. Check out our <a href="tips.php">tips
-page</a> for tips on how to add a quick reference button to your
-browser.
+Looking for the <? print_link("/quickref.php", "quickref"); ?> box?  
+Use the 'search' feature, conveniently located in the top-right corner of every page. 
+If you search for something in the function list (and it's a valid
+PHP function), you will be directed to the appropriate manual page.
+If the function doesn't exist, you'll get a list of all the PHP functions,
+and and option to do a site-wide search for your phrase.
+And don't forget to visit the <? print_link("/tips.php", "tips and tricks"); ?>
+page to add 'quickref' functionality right into your web browser.
 </p>
 
 <br clear="all">
