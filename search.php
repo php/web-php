@@ -234,7 +234,7 @@ if (isset($pattern)) {
             echo "Sorry, no documents matched your search for <b>\"$htmlpt\"</b>.<br /><br />";
             echo "Continue your search at ";
             echo "<a href=\"http://www.alltheweb.com/search?q=$urlpt\">AllTheWeb</a> ";
-            echo "or <a href=\"http://www.google.com/search?q=$urlpt&amp;as_sitesearch=php.net\">Google</a><br /><br />";
+            echo "or <a href=\"http://www.google.com/search?q=$urlpt&amp;as_sitesearch=www.php.net\">Google</a><br /><br />";
             echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br /><br />\n";
             commonFooter();
             exit;
