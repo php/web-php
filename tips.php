@@ -32,14 +32,23 @@ function tip_title($title, $author = '', $date = '')
 </p>
 
 <p>
- For more description on PHP.net shortcut URLs (which work in any
- browser and on any mirror site), please visit our
- <a href="/urlhowto.php">URL Howto page</a>.
+ Most of the tips here utilize PHP.net URL shortcuts, so they allow you
+ more then just function lookups. For more information on what is possible
+ with our shortcuts, see the <a href="/urlhowto.php">URL Howto page</a>.
 </p>
  
 <p>
  Send your suggestions for tips to
- <a href="mailto:webmaster@php.net">the webmasters</a>.
+ <a href="/copyright.php#contact">the webmasters</a>.
+</p>
+
+<?php tip_title('Search from the Safari Search Bar', 'Gabor Hojtsy', '19-Jan-2004');?>
+
+<p>
+ You can point your search engine setting to a local script on your own webserver,
+ and set up a PHP script to allow you to use shortcuts provided by other browsers.
+ See the detailed explanation at
+ <a href="http://www.macosxhints.com/article.php?story=20030519070642235">MacOSXHints.com</a>.
 </p>
 
 <?php tip_title('Search from the WeberDev Toolbar', 'Boaz Yahav', '16-Aug-2003');?>
