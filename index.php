@@ -160,19 +160,17 @@ commonHeader("Hypertext Preprocessor");
  The PaWS Group is pleased to announce the first ever UK <a
  href="http://www.pawscon.com">PHP and Web Standards Conference</a>.
  PaWS Con will cover using PHP and Web Standards separately and in
- conjunction with each other.
- The conference will take place from February 20th - 24th 2004.
-</p><p>
+ conjunction with each other. The conference will take place
+ from February 20th - 24th 2004.
+</p>
+<p>
  The <a href="http://www.pawscon.com/speakers">Call for Papers</a> has
  been announced with a deadline of January 9th.
  <a href="http://www.pawscon.com/register">Pre-Registration</a> for
- early-bird savers is now also open, so <a
- href="http://www.pawscon.com/register">register</a> to earn your
+ early-bird savers is now also open, so register to earn your
  discount and provide PaWS with valuable feedback.
-</p><p>
- For more information on PaWS Con, visit <a
- href="http://www.pawscon.com/">http://www.pawscon.com</a>
 </p>
+
 <hr />
 
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
