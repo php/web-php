@@ -256,7 +256,7 @@ German PHP resource (especially for newbies)</li>
 <li><a href="http://develnet.org/">develnet.org</a><br>
 Some German tutorials about PHP</li>
 
-<li><a href="http://www.selfphp4.de/">SelfPHP</a><br>
+<li><a href="http://www.selfphp.info/">SelfPHP</a><br>
 German function reference for PHP like SelfHTML for HTML</li>
 
 <li><a href="http://www.phpgtk.de/">phpGTK.de</a><br>

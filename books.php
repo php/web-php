@@ -114,7 +114,7 @@ $books = array (
     /* auth link[s] */ "",
     /* image        */ "phpbefehlsreferenz.jpg",
     /* information  */ "Franzis, 2001, ISBN 3-7723-7184-1, 750 pages",
-    /* inform. link */ "http://www.selfphp4.de/",
+    /* inform. link */ "http://www.selfphp.info/",
     /* language     */ "de"
   ),
 
