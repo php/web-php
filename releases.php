@@ -123,7 +123,6 @@ site_header("Releases");
  </li>
 </ul>
 
-
 <a name="4.3.3"></a>
 <h2>4.3.3</h2>
 
@@ -163,24 +162,10 @@ site_header("Releases");
  <li><a href="/ChangeLog-4.php#4.3.2">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-4.3.2.tar.bz2','Source (tar.bz2)'); ?><br />
-    <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.2.tar.gz','Source (tar.gz)'); ?><br />
-    <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.2-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: e1afea6341d97e8160bd7d93712721ec</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.2-installer.exe','Windows installer'); ?><br />
-    <span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
-   </li>
-  </ul>
+  <a href="http://museum.php.net/php4/php-4.3.2.tar.gz">Source (tar.gz)</a>,
+  <a href="http://museum.php.net/php4/php-4.3.2.tar.bz2">Source (tar.bz2)</a>,
+  <a href="http://museum.php.net/win32/php-4.3.2-Win32.zip">Windows binary</a>,
+  <a href="http://museum.php.net/win32/php-4.3.2-installer.exe">Windows installer</a>
  </li>
 </ul>
 
