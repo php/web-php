@@ -212,7 +212,7 @@ Unter Mitwirkung von
 <A HREF="http://www.zend.com/comm_person.php?id=37">Uwe Steinmann</A> und
 Christian Wenz<BR>
 <SMALL>in German, Markt+Technik, Dec 2000, ISBN 3-8272-5877-4, 640 pages</SMALL><BR>
-<SMALL><A HREF="http://www.php-buch.de/">weitere Informationen</A><BR>
+<SMALL><A HREF="http://www.mut.de/shop/sh-info.asp?ID=3827258774">weitere Informationen</A><BR>
 </TD>
 </TR>
 
