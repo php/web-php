@@ -117,6 +117,8 @@ by our supporters.
 <br clear="all">
 </p>
 
+<?php echo hdelim(); ?>
+
 <h1>11.09.2001</h1>
 
 <p>
@@ -127,6 +129,8 @@ their lives. <a href="http://www.redcross.org/donate/donate.html">Support the
 Red Cross.</a>
 <br clear="all">
 </p>
+
+<?php echo hdelim(); ?>
 
 <h1>Manual notes are mirrored worldwide</h1>
 
