@@ -226,7 +226,6 @@ function site_footer($config = array())
   Last updated: {$last_updated}
  </div>
 </div>
-<script src="{$_SERVER['STATIC_ROOT']}/functions.js" type="text/javascript"></script>
 
 </body>
 </html>
@@ -607,7 +606,6 @@ function commonFooter() {
  </tr>
 </table>
 <!--/UdmComment-->
-<script src="<?php echo $_SERVER['STATIC_ROOT']; ?>/functions.js" type="text/javascript"></script>
 </body>
 </html>
 <?php

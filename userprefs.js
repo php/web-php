@@ -3,6 +3,7 @@ function runOnLoad()
 {
     searchHistory();
     resizeColumnsIE();
+    loadSuggestCode();
 }
 
 // Get a value of one cookie set by it's name
@@ -89,6 +90,36 @@ function resizeColumnsIE()
         }
         if (document.all["rightbar"] && contentH > document.all["rightbar"].offsetHeight) {
             document.all["rightbar"].style.pixelHeight = contentH;
+        }
+    }
+}
+
+function loadSuggestCode()
+{
+    searchEnabled = true;
+    // Force default turnoff for buggy Mac browsers
+    if (navigator.userAgent.toLowerCase().indexOf('mac') > 0) {
+      searchEnabled = false;
+    }
+    if (myphpnet = getCookie('MYPHPNET')) {
+        myphpnet_parts = myphpnet.split(",");
+        if (myphpnet_parts.length > 3) {
+            if (myphpnet_parts[3] == '1') {
+                searchEnabled = false;
+            }
+            // Enable if user explicity wanted to enable it
+            // Important for Mac users, who get disabled by default
+            else if (myphpnet_parts[3] == '0') {
+                searchEnabled = true;
+            }
+        }
+    }
+    if (searchEnabled && document.getElementsByTagName && document.createElement) {
+        if (head = document.getElementsByTagName("head") && head.length == 1) {
+          var scriptElem = document.createElement('script');
+          scriptElem.setAttribute('type', 'text/javascript');
+          scriptElem.setAttribute('src', '/functions.js');
+          head[0].appendChild(scriptElem);
         }
     }
 }
