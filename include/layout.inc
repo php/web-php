@@ -746,7 +746,7 @@ function display_event($event, $include_date = 1)
 function print_news_links()
 {
     $links = "";
-    for ($i = 1998; $i < 2004; $i++) {
+    for ($i = 1998; $i < 2005; $i++) {
         $pagename = "news-$i.php";
         if ($pagename == $_SERVER['BASE_PAGE']) { continue; }
         $links .= '<a href="/news-' . $i . '.php">' . $i . '</a>, ';
