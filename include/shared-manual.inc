@@ -152,7 +152,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
         else:
                 echo "<B>".$name."</B><BR>\n";
         endif;
-        echo date("d-M-Y h:m",$date)."<BR>\n";
+        echo date("d-M-Y h:i",$date)."<BR>\n";
 ?></FONT></TD>
 <TD ALIGN=left WIDTH=75%><?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
