@@ -26,7 +26,7 @@ this version.
 <a href="http://www.netcraft.com">Netcraft's</a> November server survey results are
 out.  PHP showed a massive jump from last month.  They don't actually have scripting
 language number online at Netcraft, but they do a manual grep and email us this
-information monthly.  Here is a little <a href="phpstats-199811.gif">bar chart</a> 
+information monthly.  Here is a little <a href="usage.php3">bar chart</a> 
 showing the growth of PHP usage over the past couple of months.
 </P>
 
