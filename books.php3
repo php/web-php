@@ -39,7 +39,7 @@ by David Medinets<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
 by Chris Scollo, Sascha Schumann, Jason T. McKnight<BR> 
-<SMALL><A HREF="http://www.amazon.com/">more info</A><BR>
+<SMALL><A HREF="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
