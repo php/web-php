@@ -26,7 +26,7 @@ their answers. If you have suggestions or additions, send them to
     What is PHP3?
   </B></DT>
   <DD>
-    From the <A href="http://www.php.net/manual/manual.html">manual</A>:
+    From the <A href="http://www.php.net/manual/">manual</A>:
 
     <BLOCKQUOTE>
     <P>PHP Version 3.0 is an HTML-embedded scripting
@@ -599,6 +599,24 @@ file.
    Operator overloading can be a source of great confusion, especially
    when variables aren't very strongly typed to begin with, as they are
    in PHP3.
+  <P>
+  </DD>
+
+  <DT><B>
+    When I use the chmod() function or mkdir(), the permissions are wrong!
+  </B></DT>
+  <DD>
+    Unlike PHP/FI 2, PHP3 does not interpret the numeric arguments for
+    these functions any differently than for any other function, which
+    means you need to pass in an octal value if you are specifying an
+    octal number, such as:
+<PRE>
+        chmod($myfile, 0600);
+</PRE>
+    <B>not</B>
+<PRE>
+        chmod($myfile, 600);
+</PRE>
   <P>
   </DD>
 
