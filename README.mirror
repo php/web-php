@@ -7,7 +7,7 @@ Fetch the web files with the following:
    rsync -avzC rsync.php.net::phpweb /your/local/path 
 
 If /your/local/path isn't in your web document tree (why isn't it?), 
-the symlink the phpweb/ directory to the correct place on your server.
+then symlink the phpweb/ directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 files as PHP3 
 parsed files.  If it isn't, add the mime-type to your config.
