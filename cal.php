@@ -1,10 +1,12 @@
 <?php
   include_once 'prepend.inc';
 
+/*
   if (!is_primary_site()) {
   	header("Location: http://www.php.net/cal.php");
   	exit;
   }
+*/
   if(!isset($format)) {
     $format = 'html';
   }
@@ -461,6 +463,7 @@ foreach($re as $k=>$v) {
 				}
 			}	
 			$nm--;
+			$cd = 1;
 			if($nm) {
 				$cm++;
 				if($cm==13) { $cy++; $cm=1; }
