@@ -52,11 +52,13 @@ the table below.
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
 
+<tr bgcolor="#cccccc"><td>Format</td><td>Languages</td></tr>
+
 <tr><td bgcolor=\"#dddddd\">View Online</td><td bgcolor="#eeeeee">
 <?php
 
-  foreach ($man_languages as $langnum => $langcode) {
-    echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a> ';
+  foreach ($man_languages as $langcode) {
+    echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>, ';
   }
 
 ?>
@@ -65,14 +67,14 @@ the table below.
 <tr><td bgcolor=\"#dddddd\">Printer friendly</td><td bgcolor="#eeeeee">
 <?php
 
-  foreach ($man_languages as $langnum => $langcode) {
-    echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a> ';
+  foreach ($man_languages as $langcode) {
+    echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>, ';
   }
 
 ?>
 </td></tr>
 
-<tr><td bgcolor=\"#dddddd\">Printer friendly</td><td bgcolor="#eeeeee">
+<tr><td bgcolor=\"#dddddd\">Downloads</td><td bgcolor="#eeeeee">
 For other downloadable formats, please visit our new
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
