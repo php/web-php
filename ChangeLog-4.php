@@ -333,7 +333,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 <li>Updated FDF extension to work with Adode fdftk 5.0. (Hartmut)</li>
 <li>Added mb_strtolower() and mb_strtoupper(). (Moriyoshi)</li>
 <li>Fixed an infinite loop in setlocale() when only invalid locale names
-  were passed in the array. (patch by Pal Loberg, pallo@initio.no)</li>
+  were passed in the array. (patch by Pal Loberg, pallo[at]initio.no)</li>
 <li>Fixed bugs <a href="http://bugs.php.net/19156">#19156</a> and <a href="http://bugs.php.net/19544">#19544</a> (COM extension leaks memory and keeps
   components referenced). (Harald)</li>
 <li>Added fribidi_get_charsets() and fribidi_charset_info() functions. (Tal)</li>
