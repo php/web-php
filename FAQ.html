@@ -83,12 +83,12 @@ their answers. If you have suggestions, corrections or additions, send them to
         <li><a href="#7.6">7.6. When I try to use authentication with IIS I get 'No Input file specified'.</a></li>
         <li><a href="#7.7">7.7. I've followed all the instructions, but still can't get PHP and IIS to work together!</a></li>
         <li><a href="#7.8">7.8. My PHP script works on IE and Lynx, but on Netscape some of my output is missing. When I do a "View Source" I see the content in IE but not in Netscape.</a></li>
-        <li><a href="#7.9">7.9. How do I get all the results from a SELECT MULTIPLE HTML tag?</a></li>
-        <li><a href="#7.10">7.10. How am I supposed to mix XML and PHP? It complains about my &lt;?xml&gt; tags!</a></li>
-        <li><a href="#7.11">7.11. How can I use PHP with FrontPage or Dreamweaver or some other HTML editor that insists on moving my code around?</a></li>
-        <li><a href="#7.12">7.12. Where can I find a complete list of pre-set variables available to me, and why are these not documented in the PHP documentation?</a></li>
-        <li><a href="#7.13">7.13. Why do I get an error that looks something like this: "Warning: 0 is not a MySQL result index in file on line 8"?</a></li>
-        <li><a href="#7.14">7.14. I'm trying to use an &lt;input type="image"&gt; tag, but the $foo.x and $foo.y variables aren't available. Where are they?</a></li>
+        <li><a href="#7.9">7.10. How am I supposed to mix XML and PHP? It complains about my &lt;?xml&gt; tags!</a></li>
+        <li><a href="#7.10">7.10. How can I use PHP with FrontPage or Dreamweaver or some other HTML editor that insists on moving my code around?</a></li>
+        <li><a href="#7.11">7.11. Where can I find a complete list of pre-set variables available to me, and why are these not documented in the PHP documentation?</a></li>
+        <li><a href="#7.12">7.12. Why do I get an error that looks something like this: "Warning: 0 is not a MySQL result index in file on line 8"?</a></li>
+        <li><a href="#7.13">7.13. I'm trying to use an &lt;input type="image"&gt; tag, but the $foo.x and $foo.y variables aren't available. Where are they?</a></li>
+        <li><a href="#7.14">7.14. How do I get all the results from a SELECT MULTIPLE HTML tag? </a></li>
     </ul>
 <li><b><a href="#8">8. PHP and HTML</a></b>
     <ul>
@@ -1087,7 +1087,44 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
    are replaced with underscores.
    <p>
   </dd>
+  <dt><b>
+    <a name="7.14">7.14.</a> How do I get all the results from a SELECT
+MULTIPLE HTML tag? 
+  </b></dt>
+  <DD>
+   The SELECT MULTIPLE tag in an HTML construct allows users to select multiple
+   items from a list.  These items are then passed to the action handler for the 
+   form. The problem is that they are all passed with the same widget name. ie.
+   <PRE>   &lt;SELECT NAME="var" MULTIPLE&gt;</PRE>
+   Each selected option will arrive at the action handler as:
 
+<PRE>   var=option1
+   var=option2
+   var=option3</PRE>
+
+   Each option will overwrite the contents of the previous $var variable. The
+solution is to use PHP's 
+   non-indexed array feature. The following should be used:
+
+<PRE>   &lt;SELECT NAME="var[]" MULTIPLE&gt;</PRE>
+
+   This tells PHP to treat <i>var</i> as an array and each assignment of a
+   value to var[] adds an item to the array. The first item becomes $var[0], 
+   the next $var[1], etc. The count() function can be used to determine how 
+   many options were selected, and the sort() function can be used to sort 
+   the option array if necessary.<P>
+
+   Note that if you are using JavaScript the <i>[]</i> on the element name
+   might cause you problems when you try to refer to the element by name.  
+   Use it's numerical form element id instead, or enclose the
+   variable name in single quotes and use that as the index to the
+<I>elements</I> array, for example:
+
+<PRE>   variable = documents.forms[0].elements['var[]'];
+</PRE>
+
+  <P>
+  </DD>
 </dl>
 
 <hr noshade>
