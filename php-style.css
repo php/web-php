@@ -34,7 +34,12 @@ TD,TH {
     background: #FFCCCC;
 }
 
-.author,.editor {
+.author {
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.editor {
     font-size: 10pt;
     font-weight: normal;
 }
