@@ -1,5 +1,7 @@
 <?php
-require_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonheader("PHP 4 ChangeLog");
 ?>
 
@@ -194,7 +196,7 @@ commonheader("PHP 4 ChangeLog");
 </ul>
 There is a <a href="release_4_3_2.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.3.1"></a>
 <h3>Version 4.3.1</h3>
@@ -204,7 +206,7 @@ There is a <a href="release_4_3_2.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_3_1.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.3.0"></a>
 <h3>Version 4.3.0</h3>
@@ -717,7 +719,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_3_0.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.2.3"></a>
 <h3>Version 4.2.3</h3>
@@ -756,7 +758,7 @@ There is a <a href="release_4_3_0.php">separate announcement</a> available for t
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.2.2"></a>
 <h3>Version 4.2.2</h3>
@@ -766,7 +768,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is a <a href="release_4_2_2.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.2.1"></a>
 <h3>Version 4.2.1</h3>
@@ -823,7 +825,7 @@ There is a <a href="release_4_2_2.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_2_1.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.2.0"></a>
 <h3>Version 4.2.0</h3>
@@ -1037,7 +1039,7 @@ or entries for the specified extension. (Jani)</li>
 </ul>
 There is a <a href="release_4_2_0.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.1.2"></a>
 <h3>Version 4.1.2</h3>
@@ -1054,7 +1056,7 @@ There is a <a href="release_4_2_0.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.1.1"></a>
 <h3>Version 4.1.1</h3>
@@ -1081,7 +1083,7 @@ There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> ava
 </ul>
 There is a <a href="release_4_1_1.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.1.0"></a>
 <h3>Version 4.1.0</h3>
@@ -1286,7 +1288,7 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_1_0.php">separate announcement</a> available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.6"></a>
 <h3>Version 4.0.6</h3>
@@ -1402,7 +1404,7 @@ There is a <a href="release_4_1_0.php">separate announcement</a> available for t
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.5"></a>
 <h3>Version 4.0.5</h3>
@@ -1549,7 +1551,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.4"></a>
 <h3>Version 4.0.4</h3>
@@ -1705,7 +1707,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.3"></a>
 <h3>Version 4.0.3</h3>
@@ -1788,7 +1790,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.2"></a>
 <h3>Version 4.0.2</h3>
@@ -1959,7 +1961,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.1"></a>
 <h3>Version 4.0.1</h3>
@@ -2123,7 +2125,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="4.0.0"></a>
 <h3>Version 4.0.0 Release</h3>
@@ -2146,7 +2148,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0, Release Candidate 2</h3>
 <b>08-May-2000</b>
@@ -2243,7 +2245,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0, Release Candidate 1</h3>
 <b>27-Mar-2000</b>
@@ -2332,7 +2334,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0, Beta 4 Patch Level 1</h3>
 <b>21-Feb-2000</b>
@@ -2342,7 +2344,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0, Beta 4</h3>
 <b>20-Feb-2000</b>
@@ -2517,7 +2519,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0 Beta 3</h3>
 <b>16-Nov-1999</b>
@@ -2743,7 +2745,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0 Beta 2</h3>
 <b>09-Aug-1999</b>
@@ -2826,7 +2828,7 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h3>Version 4.0 Beta 1</h3>
 <b>19-Jul-1999</b>
