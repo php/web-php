@@ -1,18 +1,24 @@
 MIRRORING OF THE PHP.NET WEBSITE
 ------------------------------------------------------------------------
 
-If you want to become an official PHP mirror, please sure to
+If you want to become an official PHP mirror, please be sure to
 read and follow these instructions carefully. You should have the
 consent of your hosting company (if you aren't a hosting company
 yourself), and be prepared for some reasonably significant bandwidth
-usage (a reasonable estimate as of 2/2001 is 100MB/day).
+usage (a reasonable estimate as of 2/2002 is 150MB/day).
 
 Also, we are currently only accepting new official mirrors in
 countries where we don't already have two active official mirrors.
 
 The PHP website requires PHP 4.
 
-HOW TO MIRROR THE PHP WEBSITE?
+If you are not an official mirror, you should not rsync from rsync.php.net
+more frequently than every three hours, or you may find your ip blocked.
+Also, please make an effort to only mirror those parts of the site that
+you actually need. (For example, exclude the manual in all of languages that
+you will not be using.)
+
+HOW TO MIRROR THE PHP WEBSITE
 ------------------------------------------------------------------------
 
 First, you need to have a rsync (http://rsync.samba.org/) installed.
@@ -24,8 +30,8 @@ Fetch the web files with the following:
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
 
-Now, make sure your web server is set up to serve up .php3 and .php
-files as PHP parsed files. If it isn't, add the mime-type to your config.
+Now, make sure your web server is set up to serve up .php files as PHP parsed
+files. If it isn't, add the mime-type to your config.
 
 Rename the configuration.inc-dist file to configuration.inc and edit it
 appropriately.
@@ -42,7 +48,6 @@ Once you create a virtualhost which looks something like:
      TransferLog logs/access_log
      DirectoryIndex index.php index.html
      ErrorDocument 404 /error/
-     ErrorDocument 401 /error/
      ErrorDocument 403 /error/
      # next line is only necessary if generating stats (see stats/README.stats)
      Alias /stats/ /path/to/local/stats
@@ -62,11 +67,10 @@ You must also set up a cron job that periodically does an rsync
 to refresh your web directory. This will ensure that your web site
 is up to date. Something like:
 
-   0,30 * * * * /usr/local/bin/rsync -avzC --delete rsync.php.net::phpweb /your/path
+   23 * * * * /usr/local/bin/rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path
 
-(You don't need to update every half-hour, although it shouldn't
-hurt. You should try to stagger your times a bit from the example
-to help spread the load on the rsync.php.net server.)
+(You should try to stagger your times a bit from the example to help spread the
+load on the rsync.php.net server.)
 
 DATA REGISTERED ABOUT THE MIRROR SITES
 ------------------------------------------------------------------------
