@@ -73,6 +73,7 @@ right away.</blockquote>
 	site("Du côté de","www.ducotede.com");
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
+	site("Tablelands Online","www.tablelandsonline.net");
 	site("The Tri Cities Online","tri.xtn.net");
 	site("Up My Street", "www.upmystreet.com");
 	site("White House 200th Anniversary site","www.wh200th.com");
@@ -131,7 +132,7 @@ right away.</blockquote>
 	siteStart();
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
-	site("Digital Theatre","http://www.dtheatre.com");
+	site("Digital Theatre","www.dtheatre.com");
 	site("EduTest.Com","www.edutest.com");
 	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
@@ -213,6 +214,7 @@ right away.</blockquote>
 /* Internet Services */
 	title("Internet Services");
 	siteStart();
+	site("Active Mind","www.activemind.com");
 	site("ActiveWeb Internet Solutions","www.activeweb.co.il");
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
@@ -221,6 +223,7 @@ right away.</blockquote>
 	site("Constructors","www.constructors.com");
 	site("easyDNS","www.easydns.com");
 	site("Exe-prod","www.exe-prod.com");
+	site("Fantaz","www.fantaz.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
 	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
@@ -378,6 +381,7 @@ right away.</blockquote>
 	site("Christian Financial Concepts","cfcministry.org");
 	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
+	site("Nicodemus Project","www.nicodemusproject.com");
 	site("University Christian Fellowship Vineyard","www.ucf.org");
 	site("ZoeHouse","www.zoehouse.com");
 	siteEnd();
