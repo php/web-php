@@ -57,6 +57,8 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 <li> Don't GPG/PGP sign your messages.  If you want people to be able to send you encrypted email, stick your key-locator in your .sig</li>
 <li> Don't hijack other peoples' threads.  To post on a new topic, start a new message, don't reply and just change the subject.</li>
 <li> Check the archives before posting a question, chances are it has already been asked and answered a few times.</li>
+<li> When asking a question, don't just tell us, &quot;it doesn't work&quot;.  Tell us what you are trying to
+accomplish, a <b>short</b> code snippet showing how you tried to solve it, what you expected to get and what you got instead.</li>
 </ul>
 </p>
 <?php
