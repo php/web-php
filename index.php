@@ -6,6 +6,7 @@ require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
 <h3>What is PHP?</h3>
+
 <p>
 PHP is a server-side, cross-platform, HTML embedded scripting
 language.  If you are completely new to PHP and want to get some idea
@@ -13,8 +14,13 @@ of how it works, have a look at the ' . make_link("/tut.php", "introductory tuto
 Once you get beyond that, have a look at the example archive sites and some of the 
 other resources available in the ' . make_link("/links.php", "links section") . '.
 </p>
-<p>PHP is a project of the '.make_link("http://www.apache.org/","Apache Software Foundation").'.</p>
+
+<p>
+PHP is a project of the '.make_link("http://www.apache.org/","Apache Software Foundation").
+'.</p>
+
 <h3>So, How Much Does It Cost?</h3>
+
 <p>
 This may sound a little foreign to all you folks coming from a non-Unix
 background, but PHP doesn\'t cost anything.  You can use it for commercial
@@ -24,6 +30,7 @@ the world of ' . make_link("http://www.opensource.org/", "Open Source") . ' soft
 Smile, be happy, the world is good.  For the full legalese, see the ' .
 make_link("/license/", "official license") . '.
 </p>
+
 <h3>' . make_link("/thanks.php", "Thanks To:") . '</h3>
 &nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<BR>
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<BR>
@@ -45,6 +52,7 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 <h1>Mailing lists and CVS are up!</h1>
 <?php print_link("http://www.pair.com/", make_image("pair.gif", "pair Networks", "right") ); ?>
+
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
@@ -73,25 +81,30 @@ full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 <?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right") ); ?>
 PHP conventions in Europe
 </h1>
+
 <p>
 <font class="newsDate">[14-Jun-2001]</font>
 The second International PHP Conference, taking place in Frankfurt, Germany this coming November
 has been announced.  Further details are available on the 
 <a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
 </p>
+
 <p>
 <?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 Also coming between July 5th-8th - 
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 in Stuttgart, Germany, with <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
 </p>
+
 <?php echo hdelim(); ?>
 
 <?php /* move this entry to the top when you update it! */ ?>
+
 <h1>
 <?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
 New Usage Stats For May available
 </h1>
+
 <p>
 <font class="newsDate">[02-Jun-2001]</font>
 <?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
@@ -105,6 +118,7 @@ of which continue to show impressive growth for PHP. Check out the
 <?php echo hdelim(); ?>
 
 <h1>PHP Conference</h1>
+
 <p>
 <font class="newsDate">[1-May-2001]</font>
 The first official PHP Conference, part of the <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>, will bring the community together for
@@ -127,15 +141,16 @@ in San Diego, California.
 You may have missed the conference, but you can see some of the
 presentations online. Check out:</p>
 <ul>
-<!-- <li>Luis Argerich on <a href="">The PXP project, using reusable PHP components and XML to develop dynamic web sites</a></li> -->
- <li>Thies Arntzen on <a href="http://conf.php.net/pres/index.php?p=slides%2Foci&id=oci">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
- <li>Stig Bakken on <a href="http://conf.php.net/pres/index.php?p=slides%2Fpear&id=pear">The PHP Extension and Application Repository</a></li>
- <li>Daniel Beckham and Brian Moon on <a href="http://dealnews.com/apachecon/">Caching Dynamic Web Content to Increase Dependability and Performance</a></li>
-<!-- <li>Tony Byrne with <a href="">High-Profile, High Speed: Case study in using PHP to build AlGore.com</a></li> -->
- <li>Rasmus Lerdorf's <a href="http://conf.php.net/pres/index.php?p=slides%2Fintro&id=ac2">Introduction to PHP</a></li>
-<li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li> 
-<li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
+  <!-- <li>Luis Argerich on <a href="">The PXP project, using reusable PHP components and XML to develop dynamic web sites</a></li> -->
+  <li>Thies Arntzen on <a href="http://conf.php.net/pres/index.php?p=slides%2Foci&id=oci">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+  <li>Stig Bakken on <a href="http://conf.php.net/pres/index.php?p=slides%2Fpear&id=pear">The PHP Extension and Application Repository</a></li>
+  <li>Daniel Beckham and Brian Moon on <a href="http://dealnews.com/apachecon/">Caching Dynamic Web Content to Increase Dependability and Performance</a></li>
+  <!-- <li>Tony Byrne with <a href="">High-Profile, High Speed: Case study in using PHP to build AlGore.com</a></li> -->
+  <li>Rasmus Lerdorf's <a href="http://conf.php.net/pres/index.php?p=slides%2Fintro&id=ac2">Introduction to PHP</a></li>
+  <li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li> 
+  <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
+
 <p>If you missed out on ApacheCon 2001 in Santa Clara, keep
 your ear to the ground for more info on ApacheCon 2001 Europe in
 Dublin, Ireland in October 2001! (And stay tuned for more info
@@ -147,8 +162,7 @@ Conference</a> in San Diego, California.)
 
 <?php echo hdelim(); ?>
 
-<h1>
-<?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
 Announcing PHP-GTK</h1>
 
 <p>
@@ -163,9 +177,8 @@ cross-platform GUI applications. For more information, visit
 
 <?php echo hdelim(); ?>
 
-<h1>
-PHP 3.0.18 Released
-</h1>
+<h1>PHP 3.0.18 Released</h1>
+
 <p>
 <font class="newsDate">[21-Oct-2000]</font>
 PHP 3.0.18 was released. This is a bug-fix release, including
@@ -177,9 +190,8 @@ contains a full list of changes.
 
 <?php echo hdelim(); ?>
 
-<h1>
-Improve Your PHP Skills
-</h1> 
+<h1>Improve Your PHP Skills</h1> 
+
 <p>
 Looking for clear and useful guides to build dynamic web-sites using
 PHP? Our <?php print_link("/books.php", "Books Resource Center"); ?> lists now
@@ -190,9 +202,8 @@ about more PHP-related books, tell us about them!
 
 <?php echo hdelim(); ?>
 
-<h1>
-Tips and Tricks Section
-</h1>
+<h1>Tips and Tricks Section</h1>
+
 <p>
 Check out our <?php print_link("/tips.php", "tips"); ?> page for some "neat" things, 
 PHP-related.  It's a little sparse right now, but feel free to make suggestions!
