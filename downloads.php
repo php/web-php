@@ -10,7 +10,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <b>Complete Source Code</b><BR>
 <UL>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a> - 15 October 2000</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.4</a> - 19 December 2000</li>
 </UL>
 
 <b>Win32 Binaries</b><BR>
@@ -50,6 +50,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <b>Complete Source Code</b><BR>
 <UL>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.3pl1 </a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.2 </a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1pl2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1pl2 </a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1RC2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Candidate 2</a></li>
