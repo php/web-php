@@ -8,7 +8,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <h2>Latest version of PHP4</h2><BR>
 
-<b>Linux/Unix Source</b><BR>
+<b>Complete Source Code</b><BR>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1pl2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1pl2</a> - 30 June 2000</li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1-4.0.1pl2.diff.gz&source_site=<?php echo $server; ?>">Diffs from PHP 4.0.1 to PHP 4.0.1pl2</a> - 30 June 2000</li>
@@ -33,7 +33,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <H3>Previous Releases of PHP4</H3>
 
-<b>Linux/Unix Source</b><BR>
+<b>Complete Source Code</b><BR>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1RC2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Candidate 2</a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1RC.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Candidate</a></li>
