@@ -11,7 +11,7 @@ function makeCap() {
 	GLOBAL $MIRRORS;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=left><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD align=center colspan=3 rowspan=2 NOWRAP>
 <?
 $mirror_sites=$MIRRORS;
@@ -34,11 +34,11 @@ while ($site = key($mirror_sites)) {
 }
 ?><BR>
 </TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
 <TR VALIGN=bottom bgcolor='#D0D0D0'>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=left><IMG alt=" " SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
 <?
 };
@@ -78,13 +78,13 @@ while ($site = key($mirror_sites)) {
 	if ($lastcountry!=$country) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
-		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
+		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0 ALT=' '></TD>\n";
 		echo "<TD><A NAME='$country' HREF=\"$site\">";
 		echo "<IMG SRC='/gifs/gflag-$country.gif' ALT='$site' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10>";
 		echo "</A><BR></TD>\n";
 		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
-		echo "<TD align=right><IMG SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+		echo "<TD align=right><IMG ALT=' ' SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		echo "</TR>\n";
 		$lastcountry=$country;
 	}
