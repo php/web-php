@@ -13,6 +13,7 @@
   $mirror_sites = array(
     "http://ca.php.net/"         => array("canada", "Toronto, Canada",$FULL_MIRROR),
     "http://il.php.net/"         => array("israel", "Netvision, Israel",$FULL_MIRROR),
+	"ftp://il.php.net/php/distributions/"	=> array("israel", "Netvision, Israel", $DL_ONLY),
     "http://machba.il.php.net/"  => array("israel", "Technion, Israel",$FULL_MIRROR),
     "http://no.php.net/"         => array("norway", "Trondheim, Norway",$FULL_MIRROR),
     "ftp://no.php.net/pub/free/php/dist/"         => array("norway", "Trondheim, Norway",$DL_ONLY),
