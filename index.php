@@ -235,9 +235,6 @@ Some of the more major changes include:
  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.</li>
  <li>Streams have been greatly improved, including the ability to access low-level socket 
  operations on streams.</li>
- <li>Due to issues surrounding the MySQL 4.0 license, the MySQL are no longer bundled with 
- PHP.  For more information on these licensing changes, please refer to the 
- <a href="http://www.mysql.com/products/licensing.html">MySQL Licensing Policy</a>.</li>
 </ul>
 </p>
 <p>
