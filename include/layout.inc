@@ -129,7 +129,7 @@ function site_footer()
 </div>
 
 <div id="footnav">
- <a href="/source.php?url=/{$SERVER['BASE_PAGE']}">show source</a> |
+ <a href="/source.php?url=/{$_SERVER['BASE_PAGE']}">show source</a> |
  <a href="/credits.php">credits</a> |$stats
  <a href="/mirrors.php">mirror sites</a>
 </div>
