@@ -102,13 +102,13 @@ function navigationBar($title) {
 function manualPrintNote(const $row, $num) {
        if ($num % 2 == 0) { $color = '#ccddee'; }
        else { $color = '#ddeeff'; }
-       echo "<TR><TD bgcolor=$color>";
+       echo "<TR><TD bgcolor=$color valign=top><B>";
         # turn email address into mailto: links (roughly)
        echo ereg_replace("([^;[:space:]]+@[^&[:space:]]+)", "<A href=\"mailto:\\1\">\\1</A>", $row[user]);
 	if (isset($row['ts'])) {
 		echo "<BR>$ts";
 	}
-       echo "</TD><TD bgcolor=$color>$row[note]</TD></TR>\n";
+       echo "</B></TD><TD bgcolor=$color>$row[note]</TD></TR>\n";
 }
 
 function manualUserNotes($title) {
@@ -122,6 +122,7 @@ function manualUserNotes($title) {
 	echo '<FORM method="POST" action="http://ca.php.net/manual/add-note.php3">';
 	echo '<TABLE width="100%">'."\n";
 	if ($result_id && mysql_num_rows($result_id) > 0) {
+		echo '<TD colspan=2 bgcolor="#aabbcc">User-contributed Notes</TD>',"\n";
 		$num = 0;
 		while ($result = mysql_fetch_array($result_id)) {
 			manualPrintNote($result, $num++);
