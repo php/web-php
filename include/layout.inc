@@ -119,7 +119,7 @@ function site_header($title = '', $config = array())
 <body onload="{$config['onload']}">
 
 <div id="headnav">
- <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
+ <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php_snow.gif"
  alt="PHP" width="120" height="67" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
