@@ -76,6 +76,7 @@ if (isset($_POST['maillist'])) {
  are searchable. There is an experimental web interface for the news
  server at <a href="http://news.php.net/">http://news.php.net/</a>, and
  there are also other archives provided by
+ <a href="http://marc.theaimsgroup.com/">Marc</a>,
  <a href="http://www.phparch.com/mailinglists">php|architect</a>,
  <a href="http://www.phpbuilder.com/mail/">PHPBuilder</a>
  and <a href="http://zend.com/lists.php">Zend</a>.
@@ -338,7 +339,7 @@ function output_lists_table($mailing_lists)
  <li><a href="news:dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
  <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a></li>
  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
- <li><a href="http://www.phpbar.de/">German Mailing List</a></li>
+ <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
  <li><a href="news:de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
  <li><a href="http://weblabor.hu/wl-phplista/etikett">Hungarian Mailing List</a></li>
  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
