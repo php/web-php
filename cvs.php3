@@ -16,8 +16,8 @@ own CVS account if you plan on committing things to the CVS tree.
 <P>
 The first thing you need to do is to get a CVS account.  If you are not
 previously known to the PHP Development Team, then this is not an automatic
-process.  Your best bet is to send mail to <a href="mailto: core@php.net">
-core@php.net</a> and explain what you have in mind and perhaps give a bit of
+process.  Your best bet is to send mail to <a href="mailto: group@php.net">
+group@php.net</a> and explain what you have in mind and perhaps give a bit of
 background on yourself.<P>
 
 If, you have already established yourself in the above manner you can submit
@@ -81,5 +81,5 @@ It would probably be a good idea to put the following in your ~/.cvsrc file:
 cvs -z4
 update -d -P
 checkout -P</pre>
-
+<P>Your CVS account also translates into a foo@php.net email address where <b>foo</b> is your CVS user id.
 <? commonFooter(); ?>
