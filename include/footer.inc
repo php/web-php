@@ -19,7 +19,7 @@
   $sponsquery = @mysql_query("SELECT code FROM sponsor " .
                              "WHERE server='$SERVER_NAME'");
   if (@mysql_num_rows($sponsquery) > 0) {
-      print mysql_result($sponsquery, 0, "code");	
+      print StripSlashes(mysql_result($sponsquery, 0, "code"));	
   }
 
 ?></td>
