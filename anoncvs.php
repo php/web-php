@@ -16,10 +16,10 @@ to wait for the official releases.</p>
 download clients for most major platforms, at <a
 href="http://www.cvshome.org/">CVShome.org</a>.</p>
 
-<p>Getting the PHP 4.0 CVS version to work is a bit more complicated
-than it is for PHP 3.0 for two main reasons - first, the engine,
+<p>Getting the PHP 4 CVS version to work is a bit more complicated
+than it is for PHP 3 for two main reasons - first, the engine,
 Zend, has been separated from the main language tree, and resides
-in a different CVS repository. And second, PHP 4.0 uses a much
+in a different CVS module. And second, PHP 4 uses a much
 more advanced configuration system, that requires you to have not
 only autoconf installed, but also automake and libtool.</p>
 
@@ -42,14 +42,12 @@ diff -u
 
   <li>Log in to the PHP anonymous CVS server. Use <strong>phpfi</strong> as the password.<br>
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
-  <li>Obtain the PHP 4.0 CVS tree:<br>
+  <li>Obtain the PHP 4 CVS tree:<br>
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php4</pre></li>
-	<li>Move to the PHP 4.0 source tree:<br>
+	<li>Move to the PHP 4 source tree:<br>
     <pre>cd php4</pre></li>
-  <li>Login to the Zend CVS repository. Use <strong>zend</strong> as the password.<br>
-    <pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository login</pre></li>
   <li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
-    <pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co Zend TSRM</pre></li>
+    <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co Zend TSRM</pre></li>
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
     1.4 or newer.
     <blockquote>
