@@ -85,7 +85,7 @@ $server = $SERVER_NAME;
 </p>
 
 <h2>Windows Binaries</h2>
-All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
+All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
 <ul>
   <li><?php download_link('php-4.3.1-Win32.zip', 'PHP 4.3.1 zip package'); ?> - 17 February 2003<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
