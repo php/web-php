@@ -59,16 +59,6 @@ article</a>.  Don't forget to check the links in the blue panel on the right for
 info on each system they tested.
 </p>
 
-<img src="php4zend-small-white.gif" align="right">
-<h3>PHP 4.0 Beta 2 is out!</h3>
-
-<p>
-After the successful Beta 1, <a href="http://www.php.net/version4/">Beta 2 of PHP 4.0</a> has been released.  It provides a lot
-of fixes, migrated modules and several enhancements over Beta 1.  All users of version
-4.0 are encouraged to upgrade to the new beta, and everybody else is invited
-to take a look at it!
-</p>
-
 <h3>CNET's Builder.com discovers PHP</h3>
 <p><img src="cnet.gif" align="right">
 CNET has put up an <a href="http://www.builder.com/Programming/PHPIntro/?dd.bu.bb.0805.03">
