@@ -60,7 +60,7 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
         $cnf = array(
             'width'    => 560,
             'virtual'  => FALSE,
-            'datacols' => 3,
+            'datacols' => 2,
             'download' => FALSE
         );
     }
@@ -144,9 +144,9 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
             echo '</small><br /></td>' . "\n";
 
             // Print out search support information
-            echo '<td><small>';
-            echo (have_search($murl) ? "with local search" : "&nbsp;");
-            echo '</small><br /></td>' . "\n";
+            // echo '<td><small>';
+            // echo (have_search($murl) ? "with local search" : "&nbsp;");
+            // echo '</small><br /></td>' . "\n";
         }
 
         // End row for this mirror
