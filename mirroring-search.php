@@ -7,7 +7,8 @@ commonHeader("Setting Up Local Search");
 
 <p>
  If you are hosting an official or unofficial mirror, and you would like
- to have local search support, follow these steps.
+ to have local search support, follow these steps. This document complements
+ the instructions found <a href="/mirroring.php">on the mirroring page</a>.
 </p>
 
 <ol>
