@@ -13,7 +13,10 @@ commonHeader("Mirror Sites");
 
 <p>
 Here you can find more information about the mirrors
-of php.net. Pick a mirror site close to you, or visit
+of php.net.
+</p>
+<p>
+Pick a mirror site close to you (the current mirror is highlighted), or visit
 the provider's homepage:
 </p>
 
@@ -28,10 +31,15 @@ the provider's homepage:
 <?php
   $mprevious = 'aa';
   foreach ($MIRRORS as $murl => $mdata) {
-    if ($mdata[4] != 1) { continue; }
-    echo '<tr bgcolor="#e0e0e0"><td>';
-    if ($mprevious != $mdata[0]) { echo $COUNTRIES[$mdata[0]]; }
-    else { echo "&nbsp;"; }
+    if ($mdata[4] != 1) { 
+      continue; 
+    }
+    echo '<tr bgcolor="' . ($MYSITE==$murl ? '#ffffcc' : '#e0e0e0') . '"><td>';
+    if ($mprevious != $mdata[0]) { 
+      echo $COUNTRIES[$mdata[0]]; 
+    } else { 
+      echo "&nbsp;"; 
+    }
     echo '</td><td>' . make_link($murl, $murl) .
          '</td><td>' . make_link($mdata[3], $mdata[1]) . 
          '</td><td>' . $LANGUAGES[$mdata[6]] . '</td></tr>';
