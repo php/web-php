@@ -65,6 +65,13 @@ MySQL, but hope to either have a database independent version or multiple versio
 different databases in the future.
 <? endEntry();?>
 
+<? makeEntry("Ministry of Truth","tomato.nvgc.vt.edu/~hroberts/mot/","Hal Roberts","hroberts@alumni.princeton.edu"); ?>
+The Ministry of Truth is a web-based job, equipment, and software
+tracking system that works via PHP and MySQL.  MOT is a handy way for
+an IT support department to keep track of its support calls in a way
+that also maintains change logs for all machines and software packages.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
