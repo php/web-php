@@ -32,7 +32,12 @@ related to PHP.  They aren't necessarily be related to actually coding in PHP
 Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.
 </P>
 
-<?php tipTitle('Adding the Quick Reference to most Javascript-capable Browsers', 'Jim Winstead', '07-Mar-2001'); ?>
+<?php tipTitle('Shortcut URLs for the Manual', '', '08-Mar-2001');?>
+
+<p>You can go directly to PHP manual pages by using a URL such as:
+<a href="/strlen">http://www.php.net/strlen</a>.</p>
+
+<?php tipTitle('Adding the Quick Reference to most Javascript-capable Browsers', '', '07-Mar-2001'); ?>
 
 <p>Just right-click (command-click for Macintosh users) on this link: <a href="javascript:void(q=prompt('PHP Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</A> and add it to your bookmarks. With some browsers, you may need to edit your bookmarks manually to give the bookmark an easy-to-remember title. You can also edit the bookmark to change the default language by changing 'lang=en' to whatever language you want to use by default. (For example, to pull up the German translation of the manual, you would replace "lang=en" with "lang=de".)
 </p>

@@ -1,6 +1,28 @@
 <?php
 require_once 'prepend.inc';
 
+$SIDEBAR_DATA = '
+<b>What is PHP?</b>
+<p>
+PHP is a server-side, cross-platform, HTML embedded scripting
+language.  If you are completely new to PHP and want to get some idea
+of how it works, have a look at the <a href="/tut.php">Introductory
+Tutorial</a>.  Once you get beyond that, have a look at the example
+archive sites and some of the other resources available in the <a
+href="/links.php">Links</a> section.
+</p>
+<b>So, How Much Does It Cost?</b>
+<p>
+This may sound a little foreign to all you folks coming from a non-Unix
+background, but PHP doesn\'t cost anything.  You can use it for commercial
+and/or non-commercial use all you want.  You can give it to your friends,
+print it out and hang it on your wall or eat it for lunch.  Welcome to
+the world of <a href="http://www.opensource.org/">Open Source</a> software!
+Smile, be happy, the world is good.  For the full legalese, see the 
+official <a href="/license/">license</a>.
+</p>
+';
+
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
@@ -124,17 +146,6 @@ about more PHP-related books, tell us about them!
 <? echo hdelim(); ?>
 
 <h1>
-Manual Search Tip
-</h1>
-<p>
-You can go directly to PHP manual pages with a URL such as
-<? print_link("http://www.php.net/strlen", "www.php.net/strlen"); ?>.  
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
-<h1>
 Tips and Tricks Section
 </h1>
 <p>
@@ -162,35 +173,6 @@ availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <? echo hdelim(); ?>
 
 
-<h1>
-What Is PHP?
-</h1>
-<p>
-PHP is a server-side, cross-platform, HTML embedded scripting language.  
-If you are completely new to PHP and want to get some idea of how it works, 
-have a look at the <? print_link("/tut.php", "Introductory Tutorial"); ?>.  
-Once you get beyond that, have a look at the example archive sites and some 
-of the other resources available in the <? print_link("/links.php", "Links"); ?> section.
-<br clear="all">
-</p>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>
-So, How Much Does It Cost?
-</h1>
-<p>
-This may sound a little foreign to all you folks coming from a non-Unix
-background, but PHP doesn't cost anything.  You can use it for commercial
-and/or non-commercial use all you want.  You can give it to your friends,
-print it out and hang it on your wall or eat it for lunch.  Welcome to
-the world of <? print_link("http://www.opensource.org", "Open Source"); ?> software!  
-Smile, be happy, the world is good.  For the full legalese, see the 
-official <? print_link("/license.html", "license"); ?>.
-<br clear="all">
-</p>
 
 <?
 commonFooter();
