@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
-commonHeader("Manual Notes");
+site_header("Manual Notes");
 
 // Copy over "sect" and "redirect" from GET to POST
 if (!isset($_POST['sect']) && isset($_GET['sect'])) {
@@ -228,7 +228,7 @@ else {?>
 <form method="post" action="/manual/add-note.php">
  <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>" />
  <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>" />
- <table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
+ <table border="0" cellpadding="3" class="standard">
   <tr>
    <td colspan="2">
     <b>
@@ -240,21 +240,21 @@ else {?>
     </b>
    </td>
   </tr>
-  <tr valign="top">
-   <td><b>Your email address (or name):</b></td>
+  <tr>
+   <th class="subr">Your email address (or name):</th>
    <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>" /></td>
   </tr>
-  <tr valign="top">
-   <td><b>Your notes:</b></td>
+  <tr>
+   <th class="subr">Your notes:</th>
    <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
    <br />
   </td>
   </tr>
   <tr>
-   <td colspan="2" align="right">
+   <th colspan="2">
     <input type="submit" name="action" value="Preview" />
     <input type="submit" name="action" value="Add Note" />
-   </td>
+   </th>
   </tr>
  </table>
 </form>
@@ -262,5 +262,5 @@ else {?>
 }
 
 // Print out common footer
-commonFooter();
+site_footer();
 ?>
