@@ -158,14 +158,7 @@ commonHeader("Hypertext Preprocessor");
  divided into sections for individual platforms and servers to ease your first
  steps with PHP. The Windows installation instructions are completely
  revised, and now suggest you to set environment variables instead of moving 
- files. This way upgrades and configuration changes become more easier.
-</p>
-<p>
- Hereby we would like to kindly ask everyone who published an article or howto
- about installing PHP on Windows to revise those instructions according to our
- latest guide. These new instructions got distributed with PHP 5.0.1 in
- both the source code and binary versions, and will continue to be shipped
- with future versions of PHP.
+ files. This way upgrades and configuration changes become easier.
 </p>
 
 <hr />
