@@ -61,11 +61,11 @@ function language_choose_code()
     if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
         
         // Put language into preference list
-        $flang = language_add($flang[1], $languages);
+        $rlang = language_add($flang[1], $languages);
         
         // Set explicity specified language
         if (empty($explicitly_specified)) {
-            $explicitly_specified = $flang;
+            $explicitly_specified = $rlang;
         }
         
         // Drop out langauge specification from URL, as this is already handled
