@@ -29,7 +29,7 @@ You should be all set.  Point your browser at www.yoursite.com/php3
 
 You may want to set up a cron job that periodically does a 'cvs update -d' in 
 your web directory.  This will ensure that your web site is up to date. 
-Something like: 0,15,30,45 * * * * (cd <your_path>; /usr/local/bin/cvs update -d)
+Something like: 0,15,30,45 * * * * (cd <your_path>; /usr/local/bin/cvs update -kb -d)
 
 In order to get the Search button to work, you need to have the Glimpse binaries
 installed.  They are available at ftp://ftp.cs.arizona.edu/pub/glimpse
