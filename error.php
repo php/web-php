@@ -17,11 +17,18 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 
-// Get URI for this request (without the leading slash, and
-// without any query string attached)
+// Get URI for this request, strip leading slash
 // See langchooser.inc for more info on STRIPPED_URI
-// Also decode special URL parts, eg %20 into a space
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
+
+// ============================================================================
+// BC: handle bugs.php moved completely to bugs.php.net
+if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
+    mirror_redirect("http://bugs.php.net/?$array[1]");
+}
+
+// ============================================================================
+// Omit query string from URL and urldecode special chars
 $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
@@ -36,12 +43,6 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/figures/(.+)$!", $URI,
 // BC: handle .php3 files that were renamed to .php
 if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
     mirror_redirect("/$array[1]");
-}
-
-// ============================================================================
-// BC: handle bugs.php moved completely to bugs.php.net
-if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
-    mirror_redirect("http://bugs.php.net/?$array[1]");
 }
 
 // ============================================================================
@@ -94,6 +95,10 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html|tableless)(/)?$!", $URI,
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php";
     exit;
 }
+
+// ============================================================================
+// The trailing slash only causes problems from now on
+$URI = preg_replace('!/+$!', '', $URI);
 
 // ============================================================================
 // Some nice URLs for getting something for download
