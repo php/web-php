@@ -31,7 +31,7 @@ if (!isset($url)) {
     exit;
 }
 
-echo "<h1>Source of: $url</h1>" . hdelim(); 
+echo "<h1>Source of: ", htmlentities($url), "</h1>", hdelim(); 
 
 $legal_dirs = array(
   "/manual"  => 1,
@@ -53,12 +53,15 @@ if ($dir && $legal_dir) {
     $page_name = basename($url);
 }
 
-echo("<!-- $page_name -->\n");
+echo "<!-- ", htmlentities($page_name), " -->\n";
 
 if (file_exists($page_name) && !is_dir($page_name)) {
     show_source($page_name);
 } else if (@is_dir($page_name)) {
     echo "<p>No file specified.  Can't show source for a directory.</p>\n";
+}
+else {
+    echo "<p>This file does not exist.</p>\n";
 }
 
 commonFooter();
