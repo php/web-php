@@ -1,3 +1,16 @@
+<?
+if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
+	$url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
+	$urle = urlencode($url);
+	
+	header("HTTP/1.0 301 Redirect");
+	header("Location: $url");
+
+	print "<html><title>Redirect to $urle</title><body>";
+	print "<a href=\"".$urle."\">Please click here</a></body></html>";
+	exit;
+}
+?>
 <?Header("http/1.0 404 Not Found")?>
 <html><title>404 - <?echo $REDIRECT_REDIRECT_ERROR_NOTES?></title>
 <body>
