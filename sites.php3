@@ -118,6 +118,7 @@ right away.</blockquote>
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("Miss USA 1999","www.missusa.com");
 	site("My Video Store","www.myvideostore.com");
+	site("O'Brien's Cafe","www.obrienscafe.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("Striving For Togetherness Records","www.striving.com");
