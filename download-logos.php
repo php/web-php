@@ -185,11 +185,11 @@ all in one .ICO file</li>
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
-<img src="logos/php_xpstyle_ico.gif" vspace="5" width="32" height="32" border="0" alt="XP Style PHP file icons"><br>
+<img src="logos/php_xpstyle_ico.gif" vspace="5" width="32" height="32" border="0" alt="Windows XP PHP file icons"><br>
 (not exactly as shown)<br>
 </td><td align="left" width="67%">
 <ul>
-<li>XP Style PHP icon resource for Windows</li>
+<li>Windows XP PHP icon resource for Windows [<b>use only on WinXP!</b>]</li>
 <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
 <li>48x48, 32x32, 24x24, 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats...
 all in one .ICO file</li>
