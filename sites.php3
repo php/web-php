@@ -76,9 +76,10 @@ right away.</blockquote>
 	siteEnd();
 
 /* Entertainment */
-        title("Entertainment");          
-        siteStart();
-        site("SummerWorks Theatre Festival","www.summerworks.on.ca");
+	title("Entertainment");          
+	siteStart();
+	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
+	site("HitList","www.hitlist.com");
 	siteEnd();
 
 
