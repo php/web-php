@@ -55,6 +55,14 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "PHP: eingebettete Skriptsprache", "by Niels Pollem","http://www.heise.de/ix/artikel/1999/07/076/", "July 19, 1999");?>
+(In German.) Dynamisch generierte Web-Seiten zu erstellen geh&ouml;rt
+l&auml;ngst zum normalen Handwerk. Werkzeuge und Sprachen daf&uuml;r
+stehen zur Verf&uuml;gung. Das derzeit noch in der Version&nbsp;3
+verf&uuml;gbare PHP bietet sich dabei f&uuml;r Anf&auml;nger wie Profis
+an - und PHP ist Open Source.
+<? endEntry(); ?>
+
 <? makeEntry( "Uncovering One of the Web's Secrets: Integrated Scripting with PHP", "by Leon Atkinson","http://webreview.com/wr/pub/1999/07/09/feature/index.html?wwwrrr_19990709.html", "July 9, 1999");?>
 A basic introduction to PHP, by the author of "Core PHP Programming".
 <? endEntry(); ?>
