@@ -227,5 +227,5 @@ if ($try) {
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-header('Location: http://'.$SERVER_NAME.'/search.php?show=nosource&auto=1&pattern='.urlencode(substr($REQUEST_URI,1)) );
+header('Location: http://'.$SERVER_NAME.'/search.php?show=nosource&pattern='.urlencode(substr($REQUEST_URI,1)) );
 ?>
