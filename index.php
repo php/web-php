@@ -114,18 +114,6 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
-
-<h1>LinuxTag 2002: Pictures available</h1>
-<p>
-<font class="newsDate">[09-Jun-2002]</font>
-<?php print_link('http://photos.l33t-h4x0r.de/LinuxTag%202002/',
-'Pictures'); ?> taken on <?php print_link('http://www.linuxtag.de',
-'LinuxTag'); ?> are now available.
-</p>
-
-<?php echo hdelim(); ?>
-
 
 <?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
 
