@@ -308,7 +308,9 @@ array (
     /* author[s]    */ "Peter Moulding",
     /* auth link[s] */ "",
     /* image        */ "moulding.jpg",
-    /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages",
+    /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages<br>" .
+                       "Also available in " .
+                       make_link("http://www.interbook.hu/index.php?op=ShowProduct&id=2213", "Hungarian"),
     /* inform. link */ "",
     /* language     */ "en"
   ),
@@ -679,7 +681,7 @@ array (
     /* author[s]    */ "C.C.J.",
     /* auth link[s] */ "",
     /* image        */ "db20023.gif",
-    /* information  */ "July 1999, ISBN 957-527-168-8",
+    /* information  */ "July 1999, ISBN 957-527-168-8", 
     /* inform. link */ "http://www.dw.com.tw/book.html",
     /* language     */ "cn"
   ),
@@ -714,6 +716,17 @@ array (
     /* image        */ "zandstra_hu.jpg",
     /* information  */ "Kiskapu, Aug 2001, ISBN 963-9301-30-2, 560 pages",
     /* inform. link */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
+    /* language     */ "hu"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Haladóknak",
+    /* title_link   */ "http://www.interbook.hu/index.php?op=ShowProduct&id=2213",
+    /* author[s]    */ "Peter Moulding",
+    /* auth link[s] */ "",
+    /* image        */ "phpblack_hu.jpg",
+    /* information  */ "Perfact-Pro, March 2002, ISBN 963-0095-58-0, 768 pages + CD",
+    /* inform. link */ "http://www.interbook.hu/index.php?op=ShowProduct&id=2213",
     /* language     */ "hu"
   ),
 
