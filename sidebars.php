@@ -20,7 +20,7 @@ as a php.net website bug).
 </p>
 
 <h2>Mozilla 0.9.4 and above</h2>
-<script language="JavaScript">
+<script language="JavaScript" type="text/javascript">
 function addPanel()
 {
     if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function"))
@@ -58,7 +58,7 @@ separate window. In that window, open the "Page Holder" tab on the left side
 of the window. Click "Add." If you want to keep it for future use, click on
 "Favorites" and select "Add to Page Holder Favorites." <i>If you would like to
 read more about the Page Holder, see
-<a href="http://www.microsoft.com/mac/products/ie/ie_main.asp?embfpath=howto&embfname=ie_1.asp">Microsoft's
+<a href="http://www.microsoft.com/mac/products/ie/ie_main.asp?embfpath=howto&amp;embfname=ie_1.asp">Microsoft's
 Macintosh IE page</a>.</i>
 </p>
 
