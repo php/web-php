@@ -2,9 +2,9 @@
 require("shared.inc");
 commonHeader("PHP Usage Stats");
 ?>
-June 2000: 2756002 Domains, 571610 IP Addresses<br>
+July 2000: PHP: 3121918 Domains, 598213 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
-<img src="gifs/phpstats-200006.gif" width=780 height=350 alt="Graph"
+<img src="gifs/phpstats-200007.gif" width=780 height=350 alt="Graph"
 ><br clear=left>
 
 <p>You can also see how popular PHP is relative to other Apache modules
