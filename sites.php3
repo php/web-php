@@ -45,12 +45,14 @@ removed right away.</blockquote>
 	title("Auto");
 	siteStart();
 	site("Mitsubishi Motors","www.mitsucars.com");
+	site("Hobby Caravaning","www.hobby-caravan.de");
 	siteEnd();
 
 /* City and Community Sites */
 	title("City and Community Sites");
 	siteStart();
 	site("City of Capelle aan den IJssel","www.capelle-ijssel.nl");
+	site("The Tri Cities Online","http://tri.xtn.net");
 	siteEnd();
 
 /* Computer Software */
@@ -152,6 +154,7 @@ removed right away.</blockquote>
 	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
 	site("Southwestern Bell","WWW.SBWireless.COM");
+	site("The Public Payphone Database","wiw.org/payphone");
 	siteEnd();
 
 /* Travel */
