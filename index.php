@@ -207,6 +207,18 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<h1>PHP 4.3.2 Released!</h1>
+<p>
+<font class="newsdate">[29-May-2003]</font>
+The PHP developers are proud to announce the immediate availability of
+<a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a huge number of bug fixes
+and is a <b>strongly</b> recommended update for all users of PHP.
+Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Automatic Mirror Select</h1>
 <p>
 <font class="newsdate">[23-May-2003]</font>

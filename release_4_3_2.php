@@ -17,7 +17,7 @@ PHP 4.3.2 Release Announcement
 <p>[ <a href="/release_4_3_2_fr.php">Version Fran&ccedil;aise</a> ]&nbsp;</p>
 
 <p>
- After a lengthy QA process, PHP 4.3.2 is <a href="http://www.php.net/downloads.php">finally out</a>!<br />
+ After a lengthy QA process, <a href="http://www.php.net/downloads.php">PHP 4.3.2</a> is finally out!<br />
  This maintenance release solves a lot of bugs found in earlier PHP versions
  and is a <b>strongly</b> recommended upgrade for all users of PHP.
 </p>

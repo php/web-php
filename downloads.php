@@ -71,11 +71,11 @@ $server = $SERVER_NAME;
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link('php-4.3.1.tar.bz2','PHP 4.3.1 (tar.bz2)'); ?> - 17 February 2003<br />
-  <span class="md5sum">md5: bbfe584acb3549c62bb61355165e2ca6</span>
+  <li><?php download_link('php-4.3.2.tar.bz2','PHP 4.3.2 (tar.bz2)'); ?> - 29 May 2003<br />
+  <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</code></span>
   </li>
-  <li><?php download_link('php-4.3.1.tar.gz', 'PHP 4.3.1 (tar.gz)');  ?> - 17 February 2003<br />
-  <span class="md5sum">md5: d4a34efe145b43ed10dbd95825686065</span>
+  <li><?php download_link('php-4.3.2.tar.gz', 'PHP 4.3.2 (tar.gz)');  ?> - 29 May 2003<br />
+  <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
   </li>
 </ul>
 
@@ -89,17 +89,18 @@ $server = $SERVER_NAME;
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link('php-4.3.1-Win32.zip', 'PHP 4.3.1 zip package'); ?> - 17 February 2003<br />
+  <li><?php download_link('php-4.3.2-Win32.zip', 'PHP 4.3.2 zip package'); ?> - 29 May 2003<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)<br />
-  <span class="md5sum">md5: 9c3304bbbc1c1603a3dfc60bf80ee04d</span>
+  <span class="md5sum">md5: e1afea6341d97e8160bd7d93712721ec</span>
+
   </li>
-  <li><?php download_link('php-4.3.1-installer.exe', 'PHP 4.3.1 installer'); ?> - 17 February 2003<br />
+  <li><?php download_link('php-4.3.2-installer.exe', 'PHP 4.3.2 installer'); ?> - 29 May 2003<br />
    (CGI only, MySQL support built-in, packaged as Windows installer to install
 	and configure PHP, and automatically configure IIS, PWS and Xitami, with
 	manual configuration for other servers. N.B. no external extensions
 	included)<br />
-  <span class="md5sum">md5: 736b116ca8c39037c5616b6f39d40c3d</span>
+  <span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
   </li>
 </ul>
 
@@ -157,6 +158,16 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
+  <li>PHP 4.3.0
+   <ul>
+    <li><?php download_link('php-4.3.1.tar.bz2','PHP 4.3.1 (tar.bz2)'); ?> - 17 February 2003<br />
+    <span class="md5sum">md5: bbfe584acb3549c62bb61355165e2ca6</span>
+    </li>
+    <li><?php download_link('php-4.3.1.tar.gz', 'PHP 4.3.1 (tar.gz)');  ?> - 17 February 2003<br />
+    <span class="md5sum">md5: d4a34efe145b43ed10dbd95825686065</span>
+    </li>
+   </ul>
+  </li>
   <li>PHP 4.3.0
    <ul>
     <li><?php download_link('php-4.3.0.tar.bz2','PHP 4.3.0 (tar.bz2)'); ?> - 27 December 2002<br />
@@ -236,6 +247,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
         <option value="php-4.2.3.tar.gz">4.2.3</option>
         <option value="php-4.3.0.tar.gz">4.3.0</option>
         <option value="php-4.3.1.tar.gz">4.3.1</option>
+        <option value="php-4.3.2.tar.gz">4.3.2</option>
       </select>
     </form>
   </li>
