@@ -4,7 +4,7 @@ commonHeader("Using CVS for PHP Development");
 ?>
 <h3>Using CVS for PHP Development</h3>
 
-<? if(!$fullname){ ?>
+<? if(empty($fullname)){ ?>
 All PHP development is done through a distributed revision control system called
 CVS.  This helps us track changes and it makes it possible for people located
 in all corners of the world to collaborate on a project without having to worry
