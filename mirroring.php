@@ -154,7 +154,7 @@ commonHeader("Mirroring php.net");
  bold above</a>.
 </p>
 
-<h2>Setup Regular updates</h2>
+<h2>Setup Regular Updates</h2>
 
 <p>
  You must also set up a cron job that periodically does an rsync
