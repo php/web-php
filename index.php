@@ -9,7 +9,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>New Site Design</h1>
 
 <p>
-<FONT CLASS="newsDate">[08-Mar-2001]</FONT>
+<font class="newsDate">[08-Mar-2001]</font>
 You might notice that things look a little different around
 here. We've streamlined the site, with a new design from the
 esteemed Colin Viebrock. Bear with us while we shake out the
@@ -17,7 +17,7 @@ bugs that are surely lingering behind this new facade.
 </p>
 
 <p>
-Miss the quickref box? It's still there on the pages of the <a
+Miss the <a href="/quickref.php">quickref</a> box? It's still there on the pages of the <a
 href="manual/">manual</a> (hint: its labeled 'lookup'). Check out our <a href="tips.php">tips
 page</a> for tips on how to add a quick reference button to your
 browser.
@@ -29,7 +29,9 @@ browser.
 
 <h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
 
-<p>Registration for <a href="http://ApacheCon.Com/2001/US/">ApacheCon 2001</a> in Santa Clara on April 4-6, 2001
+<p>
+<font class="newsDate">[07-Mar-2001]</font>
+Registration for <a href="http://ApacheCon.Com/2001/US/">ApacheCon 2001</a> in Santa Clara on April 4-6, 2001
 is underway! There's sessions about PHP from Luis Argerich, Thies
 Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
 Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
@@ -42,7 +44,9 @@ ends March 9, so act fast for discounted prices!
 
 <h1>Announcing PHP-GTK</h1>
 
-<p>The first release of PHP-GTK is now available. PHP-GTK is
+<p>
+<font class="newsDate">[03-Mar-2001]</font>
+The first release of PHP-GTK is now available. PHP-GTK is
 a PHP extension that provides an object-oriented interface
 to GTK+ toolkit and enables you to write client-side
 cross-platform GUI applications. For more information, visit
@@ -55,6 +59,7 @@ cross-platform GUI applications. For more information, visit
 <h1>Patch Level 1 released for PHP 4.0.4</h1>
 
 <p>
+<font class="newsDate">[11-Jan-2001]</font>
 Due to two security issues found in the Apache module version of
 PHP 4.0, PHP 4.0.4pl1 has been released.  This bug-fix release also
 fixes a few party-crashing bugs that were discovered in PHP 4.0.4.
@@ -68,6 +73,7 @@ fixes a few party-crashing bugs that were discovered in PHP 4.0.4.
 New Usage Stats For February Available
 </h1>
 <p>
+<font class="newsDate">[7-Mar-2001]</font>
 <? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
 <? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
 published the February results for their Web Server surveys - both
@@ -82,7 +88,8 @@ of which continue to show impressive growth for PHP. Check out the
 PHP 4.0.4 Released
 </h1>
 <p>
-19-Dec-2000 -- This release includes improvements for a large number of defects
+<font class="newsDate">[18-Dec-2000]</font>
+This release includes improvements for a large number of defects
 and numerous enhancements in the PHP core, the language implementation and
 extensions. <? print_link("/downloads.php", "Download"); ?> and
 <? print_link("/ChangeLog-4.php", "ChangeLog"); ?>.
@@ -95,7 +102,8 @@ extensions. <? print_link("/downloads.php", "Download"); ?> and
 PHP 3.0.18 Released
 </h1>
 <p>
-21-Oct-2000 -- PHP 3.0.18 was released. This is a bug-fix release, including
+<font class="newsDate">[21-Oct-2000]</font>
+PHP 3.0.18 was released. This is a bug-fix release, including
 fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
 <? print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?> contains a full list of changes.
 <br clear="all">
