@@ -73,6 +73,7 @@
 	site("Børsen - Danish Business Daily","www.borsen.dk");
 	site("Computer Currents","www.computercurrents.com");
 	site("UPI Archives","upi.siteways.com");
+	site("CADALYST Magazine","www.cadonline.com");
 
 	echo "<br></td><td valign=top>\n";
 	/* Large ISP's */
