@@ -121,23 +121,25 @@ function navigationBar($title,$id,$loc) {
 
 
 function makeEntry($date,$name,$blurb,$id=0) {
-	global $MAGIC_COOKIE;
+    global $MAGIC_COOKIE;
 ?>
 <tr valign="top">
 <td bgcolor="#e0e0e0" colspan="2">
+<?php
+    if ($id) { echo '<a name="#' . $id . '"></a>'; }
+?>
 <table border="0" cellpadding="2" cellspacing="0" width="100%">
 <tr valign="top"><td>
 <?php
-	$name = htmlspecialchars($name);
-        if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
-	  if (ereg("(.+)@(.+)\.(.+)",$name)) {
-	    echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
-	  }
-	  else {
-	    echo "<b>".$name."</b><br>\n";
-	  }
+    $name = htmlspecialchars($name);
+    if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
+        if (ereg("(.+)@(.+)\.(.+)",$name)) {
+            echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
+        } else {
+            echo "<b>".$name."</b><br>\n";
         }
-        echo date("d-M-Y h:i",$date);
+    }
+    echo date("d-M-Y h:i",$date);
 ?>
 </td>
 <td align="right">
