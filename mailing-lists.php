@@ -189,7 +189,7 @@ accomplish, a <b>short</b> code snippet showing how you tried to solve it, what 
     Array (
       'php-cvs-daily', 'Daily CVS commit summary',
       'Daily changelog and NEWS file updates',
-      true, false, false
+      true, false, false, ""
     ),
     Array (
       'zend-engine-cvs', 'Zend Engine CVS commit list',
