@@ -90,7 +90,7 @@ databases in the future.
 
 
 <? makeEntry("NeoBoard","www.neoqst.com/public/neoboard/neoboard.html","Wankyu Choi","wankyu@neoqst.com"); ?>
-NeoBoard is a web based threaded message board written in PHP3.
+NeoBoard is a web based threaded message board written in PHP 3.0.
 NeoBoard uses MySQL to manage its messages. If you have some knowlege on PHP,
 it won't be too much trouble to get it to work with other database engines.
 You need a PHP-enabled web server (or CGI PHP) and MySQL 3.22 or later to
@@ -105,7 +105,7 @@ that also maintains change logs for all machines and software packages.
 <? endEntry();?>
 
 <? makeEntry("IMP","horde.org/imp/","Chuck Hagenbuch","chuck@osmos.ml.org"); ?>
-IMP is a set of PHP3 scripts that implement an IMAP based webmail system. 
+IMP is a set of PHP 3.0 scripts that implement an IMAP based webmail system. 
 Assuming you have an account on a server that supports IMAP, you can theoretically 
 use an installation of IMP to check your mail from anywhere that you have web access. 
 <? endEntry();?>
@@ -137,7 +137,7 @@ come) and released under the terms of the GPL.
 
 <!-- site is down as of 7/8/1999
 <? makeEntry("MyAdServer","www.314interactive.com","3.14Interactive","wj@314interactive.com"); ?>
-This is a web adserver using PHP3.0 and MySQL  It includes the following features:
+This is a web adserver using PHP 3.0 and MySQL  It includes the following features:
 <ul>
 <li> &quot;random&quot; rotation of banners on web pages, done by inserting just one line
 of PHP code into each page that you would like a banner displayed.
@@ -269,18 +269,6 @@ computer at a time)
    </ul>
 <? endEntry();?>
 
-<? makeEntry("eShop","eshop.liquid-web.com","Brad Atkins" ,"batkins@tamrockcanada.ca"); ?>
-eShop is a browser based storefront and catalog development and
-management system.  Using nothing more than a web browser, developers
-can implement dynamic data driven storefronts with integrated shopping
-basket, catalog, hierarchal categories, boolean product search, and
-order processing. eShop's architecture lets developers prepare and
-market specialized look and feel, payment processing, and shipping
-modules. The full license comes complete with source codes in PHP so
-advanced developers can get &quot;under the hood&quot; with unlimited
-customization capabilities.
-<? endEntry();?>
-
 <? makeEntry("Bare Bones Bulletin Board (BBBB)","amber.he.net/~dsoft/bbbb/","Michael Kablitz" ,"mkab@fontane.net.eu.org"); ?>
 Another message forum implementation.  Multiple threading levels, no cookies, users may delete own postings, etc.
 <? endEntry();?>
@@ -302,7 +290,7 @@ existing order processing systems.
 
 <? makeEntry("EU-Webboard","www.eu-industries.com/produkt.html","EU-Industries","ulrich.eckardt@eu-industries.com"); ?>
 EU-Webboard is a Webboard solution for Internet and Intranet-Servers
-written in PHP3 with a MySQL-connection. Freeware. (This site is in German.)
+written in PHP 3.0 with a MySQL-connection. Freeware. (This site is in German.)
 <? endEntry();?>
 
 <? makeEntry("Bookmarker","renaghan.com/bookmarker/","Padraic Renaghan",""); ?>
