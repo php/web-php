@@ -145,6 +145,29 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP &amp; PEAR at FOSDEM 2005</h1>
+
+<p>
+ <span class="newsdate">[23-Feb-2005]</span>
+ This year PHP &amp; PEAR have a devroom at FOSDEM 2005 held in Brussels.  On
+ Sunday, 27th of February, several developers will talk about PHP &amp; PEAR.
+ Topics include Xdebug, eZ publish, SimpleTest, Horde and PEAR. A full schedule
+ can be found on the <a
+ href="http://fosdem.org/2005/index/dev_room_phppear/schedule">FOSDEM's
+ site</a>.
+</p>
+<p>
+ Along with giving the scheduled talks, the developers will be available during
+ the course of the day to chat with. The devroom is also open to all who want a
+ place to code and/or relax.
+</p>
+<p>
+ We hope to see you there !
+</p>
+
+<hr />
+
+
 <h1>php|symphony</h1>
 
 <p>
