@@ -187,14 +187,14 @@ if (!isset($book_langs[$_GET['lang']])) {
  in a random order.
 </p>
 
-<table border="0" cellpadding="3" cellspacing="2" width="100%">
-<tr bgcolor="#cccccc"><th>Types</th><th>Languages</th></tr>
+<table border="0" cellpadding="3" cellspacing="2" class="standard">
+<tr><th>Types</th><th>Languages</th></tr>
 <?php
 
 // Jumplist with types and languages
 foreach ($books as $btype => $book_list) {
-    echo "<tr>\n <th bgcolor=\"#dddddd\">" . $book_types[$btype] .
-         "</th>\n <td bgcolor=\"#eeeeee\">\n";
+    echo "<tr>\n <th class=\"sub\">" . $book_types[$btype] .
+         "</th>\n <td>\n";
     $book_stat = book_stats($books, $btype);
     $first = TRUE;
     foreach ($book_stat as $blang => $number) {
