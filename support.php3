@@ -87,6 +87,7 @@ To subscribe to one of these lists, use this simple form:
     <option value="php4beta">PHP4 Beta List
     <option value="php-kb">Knowledge Base
     <option value="php-dev">Developer List
+    <option value="phpdoc">Documentation List
     <option value="php-beta">Beta List
     <option value="phplib">PHPLIB Mailing List
     <option value="phplib-dev">PHPLIB Developers List
