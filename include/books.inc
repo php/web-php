@@ -282,7 +282,7 @@ array(
     /* title_link   */ "",
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
-    /* image        */ "1411601882.jpg",
+    /* image        */ "1411601882.gif",
     /* information  */ "Lulu Press, Inc., Sep 2003, ISBN 1-4116-0188-2, 201 pages",
     /* inform. link */ "http://www.lulu.com/intechrabooks",
     /* language     */ "en"
