@@ -50,11 +50,11 @@ designed versions. Please pick a language and format from
 the table below.
 </p>
 
-<table border="0" cellpadding="2" cellspacing="1" width="100%">
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
 
 <tr bgcolor="#cccccc"><td>Format</td><td>Languages</td></tr>
 
-<tr><td bgcolor=\"#dddddd\">View Online</td><td bgcolor="#eeeeee">
+<tr><td bgcolor="#dddddd">View Online</td><td bgcolor="#eeeeee">
 <?php
 
   foreach ($man_languages as $langcode) {
@@ -64,7 +64,7 @@ the table below.
 ?>
 </td></tr>
 
-<tr><td bgcolor=\"#dddddd\">Printer friendly</td><td bgcolor="#eeeeee">
+<tr><td bgcolor="#dddddd">Printer friendly</td><td bgcolor="#eeeeee">
 <?php
 
   foreach ($man_languages as $langcode) {
