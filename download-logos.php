@@ -3,20 +3,41 @@ require("shared.inc");
 commonHeader("Download PHP Logos ");
 ?>
 
-Right click on one of the images and select "Save Image As" to save the logo.  Then, link it to the main PHP site at <B>www.php.net</B>.
-<BR>
-<BR>
+<P>
+Right click on one of the images and select "Save Image As" to save the
+logo (except where otherwise indicated).  Then, link it to the main PHP
+site at <B>www.php.net</B>.
+</P>
+<P>
+If you need a large, scaleable logo (Illustrator or EPS format) for t-shirts,
+product packaging, etc., then contact <A HREF="mailto:logos@php.net">logos@php.net</A>
+for licencing information.
+</P>
 
 <CENTER>
 <TABLE BORDER=0 WIDTH=90% cellspacing=1 cellpadding=10 BGCOLOR="#F0F0F0">
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/big-logo1t.gif" WIDTH=96 HEIGHT=50 BORDER=0><BR>
+<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
-<LI>96 x 50 pixels
+<LI>250 x 132 pixels TIF
+<LI>white background
+<LI>large scale TIF for presentations, etc.
+<LI><A HREF="/logos/php-big.tif">click here to download</A>
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>95 x 50 pixels
 <LI>transparent background
 <LI>suitable for white/light backgrounds
 </UL>
@@ -24,20 +45,8 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 </TR>
 
 <TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/big-logo2.gif" WIDTH=96 HEIGHT=50 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
-<UL>
-<LI>96 x 50 pixels
-<LI>solid purple (#5B69A6) background
-</UL>
-</TD>
-</TR>
-
-<TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#404040">
-<IMG SRC="logos/big-logo3t.gif" WIDTH=96 HEIGHT=50 BORDER=0><BR>
+<IMG SRC="logos/php-med-trans-dark.gif" WIDTH=96 HEIGHT=50 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
@@ -50,12 +59,12 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/logo1.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
+<IMG SRC="logos/php-small-white.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP 3" logo
+<LI>"Powered by PHP" logo
 <LI>solid white background
 </UL>
 </TD>
@@ -63,12 +72,12 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/logo1t.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
+<IMG SRC="logos/php-small-trans-light.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP 3" logo
+<LI>"Powered by PHP" logo
 <LI>transparent background
 <LI>suitable for white/light backgrounds
 </UL>
@@ -77,25 +86,25 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/logo2.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
+<IMG SRC="logos/php-small-purple.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP 3" logo
-<LI>solid purple (#5B69A6) background
+<LI>"Powered by PHP" logo
+<LI>solid purple (#ADB4D3) background
 </UL>
 </TD>
 </TR>
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/logo3.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
+<IMG SRC="logos/php-small-black.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP 3" logo
+<LI>"Powered by PHP" logo
 <LI>solid black background
 </UL>
 </TD>
@@ -103,12 +112,12 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#404040">
-<IMG SRC="logos/logo3t.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
+<IMG SRC="logos/php-small-trans-dark.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP 3" logo
+<LI>"Powered by PHP" logo
 <LI>transparent background
 <LI>suitable for black/dark backgrounds
 </UL>
@@ -116,22 +125,8 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 </TR>
 
 <TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/php_lang.jpg" WIDTH=200 HEIGHT=74 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
-<UL>
-<LI>400 x 148 pixels (shown half-size here)
-<LI>"HTML-Embedded Scripting Language" image
-<LI>solid black background
-<LI>suitable for articles, reports, or presentations about PHP
-</UL>
-</TD>
-</TR>
-
-<TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/mini-logo1.gif" WIDTH=32 HEIGHT=32 BORDER=0><BR>
+<IMG SRC="logos/php-icon-white.gif" WIDTH=32 HEIGHT=32 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
@@ -149,7 +144,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
-<LI>Three 32 x 32 icons for Windows
+<LI>Three 32 x 32 PHP3 icons for Windows
 <LI>transparent backgrounds
 <LI>suitable as icons for your desktop
 <LI>Available in:
