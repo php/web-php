@@ -3,7 +3,7 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = false;
+$IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = $HTDIG = false;
 
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
@@ -24,6 +24,9 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
 endif;
 if (ereg("X11",$HTTP_USER_AGENT)):
 	$X11 = true;
+endif;
+if (ereg("htdig",$HTTP_USER_AGENT)):
+	$HTDIG = true;
 endif;
 
 /* Base variables */
@@ -244,7 +247,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 }
 
 function commonHeader($title) {
-	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR;
+	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR, $HTDIG;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
 	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
@@ -254,6 +257,7 @@ function commonHeader($title) {
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
 
+<? if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 var loaded = 0;
@@ -380,7 +384,11 @@ endif;
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
 <? endif; ?>
 
+<? endif;	/* don't be fancy for the search engine */ ?>
+
 </HEAD>
+
+<? if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
 
 <BODY MARGINHEIGHT=3 MARGINWIDTH=3 TOPMARGIN=3 LEFTMARGIN=3 BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#4040A0" ALINK="#00FF00"
 <? if ($NS4 || $NS3):
@@ -457,18 +465,19 @@ endif; ?>
       <? endif; ?>
       <BR CLEAR=ALL>
       <!-- start body -->
-<?
+<? else:		/* don't be fancy for the search engine */ ?>
+<BODY>
+<? endif;		/* don't be fancy for the search engine */
 }
 
 
-
-
 function commonFooter() {
-	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT;
+	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT, $HTDIG;
 	global $MIRRORS,$MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	$country=$MIRRORS[$MYSITE][0];
-?>
+
+if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
       <!-- end body -->
      </TD>
     </TR>
@@ -594,9 +603,10 @@ if (IE4) {
 
 //--->
 </SCRIPT>
-
-<? endif;	/* Kick outs */ ?>
-
+<?
+endif;		/* Kick outs */
+endif;		/* don't be fancy for the search engine */
+?>
 </BODY>
 </HTML>
 <?
