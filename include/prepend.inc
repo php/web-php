@@ -49,4 +49,25 @@ function import_vars(&$array, $keys)
     return TRUE;
 }
 
+// Unset all variables except common ones we use
+// to access request variables and the globals array
+// If all files are register_globals = off safe, then
+// this function can be called to get rid of all
+// variables, even if register_globals = on
+function unset_variables()
+{
+    // Protect some common variables
+    $protected = array(
+        '_GET', '_POST', '_COOKIE', '_SERVER',
+        '_ENV', '_REQUEST', 'GLOBALS',
+    );
+    
+    // Go through all global variables
+    foreach ($GLOBALS as $name => $value) {
+        if (!in_array($name, $protected)) {
+            unset($GLOBALS[$name]);
+        }
+    }
+}
+
 ?>
