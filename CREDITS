@@ -42,6 +42,8 @@
 <li>configure/install script work
 <li>sprintf reimplementation
 <li>SGML documentation framework
+<li>Loadable font support
+<li>ODBC work
 </ul>
 
 
