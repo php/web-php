@@ -141,7 +141,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <tr valign="top">
 <td bgcolor="#e0e0e0" colspan="2">
 <table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr><td>
+<tr valign="top"><td>
 <?
 	$name = htmlspecialchars($name);
         if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
@@ -154,14 +154,10 @@ function makeEntry($date,$name,$blurb,$id=0) {
         }
         echo date("d-M-Y h:i",$date);
 ?>
-</td></tr>
-<tr bgcolor="#f0f0f0"><td>
-<? echo clean_note($blurb); ?><br>
-</td></tr>
-<? 
-
+</td>
+<td align="right">
+<?
 if (isset($MAGIC_COOKIE) && $id) {
-	echo "<tr><td align=\"right\">";
 	print_link('/manual/admin-notes.php?action=edit+' . $id . '&brief=1',
 		make_image('notes-edit.gif', 'edit note'),
 		'admin'
@@ -176,10 +172,13 @@ if (isset($MAGIC_COOKIE) && $id) {
 		make_image('notes-delete.gif', 'delete note'),
 		'admin'
 	);
-	echo "<br></td></tr>\n";
 }
-
 ?>
+<br></td>
+</tr>
+<tr bgcolor="#f0f0f0"><td colspan="2">
+<? echo clean_note($blurb); ?><br>
+</td></tr>
 </table>
 </td>
 </tr>  
@@ -237,8 +236,8 @@ function manualUserNotes($title, $id) {
 			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
 			$PHP_SELF;
 
-                echo "<tr bgcolor=\"#d0d0d0\">\n";
-		echo "<td><b>User Contributed Notes: $title</b><br></td>\n";
+                echo "<tr bgcolor=\"#d0d0d0\" VALIGN=\"top\">\n";
+		echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
 		echo "<td align=\"right\">
                 print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
                         make_image('notes-add.gif','add a note')
@@ -254,7 +253,7 @@ function manualUserNotes($title, $id) {
 			makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'] );
 		}
 
-                echo "<tr bgcolor=\"#d0d0d0\">\n";
+                echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
 		echo "<td colspan=\"2\" align=\"right\">
                 print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
                         make_image('notes-add.gif','add a note')
