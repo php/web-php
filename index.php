@@ -151,6 +151,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.php-mag.net/", "php-mag.gif", "International PHP Magazine"); ?>
+
+<h1>PHP Magazine in PDF Format</h1>
+<p>
+ <span class="newsdate">[15-Dec-2003]</span>
+ <a href="http://software-support.biz/en">Software & Support Media</a>,
+ producers of the <a href="http://www.phpconference.de/2003/index_en.php">International
+ PHP Conference</a>, are pleased to announce a new monthly version of their
+ print publication, the "<a href="http://www.php-mag.net/">International
+ PHP Magazine</a>", published in PDF format and distributed
+ electronically. The first issue is available for free on
+ <a href="http://www.php-mag.net/">the magazine's website</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>First PHP dedicated DVD released!</h1>
