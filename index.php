@@ -44,12 +44,12 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 <h1>Mailing lists and CVS are up!</h1>
-<?php print_link("http://www.pair.com/", make_image("pair.gif", "Pair Networks", "right") ); ?>
+<?php print_link("http://www.pair.com/", make_image("pair.gif", "pair Networks", "right") ); ?>
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good.  This is thanks to a brand new server donated
-by <a href="http://www.pair.com/">Pair Networks</a>.  Thanks!
+by <a href="http://www.pair.com/">pair Networks</a>.  Thanks!
 </p>
 
 <?php echo hdelim(); ?>
