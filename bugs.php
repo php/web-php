@@ -229,6 +229,7 @@ function show_types($first_item,$show_any,$var_name) {
                     "YAZ related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YAZ related",
 
                     "*Extensibility Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Extensibility Functions",
+					"Java related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java related",
                     "COM related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COM related",
                     "Program Execution" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program Execution",
                     "Semaphore related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semaphore related",
