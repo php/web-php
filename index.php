@@ -85,7 +85,7 @@ echo "\n<!--$MYSITE-->\n";
 LinuxTag, Europe's most important Linux conference and exhibition, has
 issued a call for papers. <a href="http://www.linuxtag.org">LinuxTag</a>
 will be held at the fair in
-Karlsruhe/Germany 6. - 9. Juni 2002. Last year 15,000 visitors came to find
+Karlsruhe, Germany 6th - 9th June 2002. Last year 15,000 visitors came to find
 the latest information on Linux, Free Software, Open Source solutions and
 of course PHP. The event is aimed at professionals, enthusiasts,
 researchers, developers and the community at large.
