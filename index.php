@@ -87,8 +87,8 @@ New Usage Stats For September available
 <font class="newsDate">[01-Oct-2001]</font>
 <?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
 <?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
-published the current results for their Web Server surveys.
-<?php print_link("/usage.php", "usage page"); ?>.
+published the <?php print_link("/usage.php", "current results"); ?> for their Web 
+Server surveys.
 <br clear="all">
 </p>
 
