@@ -3,246 +3,172 @@ require_once 'prepend.inc';
 commonHeader("Download PHP Logos");
 ?>
 
+<h1>Download PHP Logos</h1>
+
 <P>
 Right click on one of the images and select "Save Image As" to save the
-logo (except where otherwise indicated).  Then, link it to the main PHP
+logo (except where otherwise indicated). Then, link it to the main PHP
 site at <B>www.php.net</B>.
-</P>
-<P>
-<B>Note:</B> If you are planning on making money off of our logo 
-(e.g. you want to make merchandise with the logo ... t-shirts, coffee mugs, 
-pocket protectors, etc.), then you need to contact 
-<A HREF="mailto:logos@php.net">logos@php.net</A> for licencing information.  
-For pretty much all other uses, there is no licensing requirement.  For 
+</p>
+
+<p>
+<b>Note:</b> If you are planning on making money off of our logo 
+(e.g. you want to make merchandise with the logo ... t-shirts,
+coffee mugs, pocket protectors, etc.), then you need to contact 
+<a href="mailto:logos@php.net">logos@php.net</a> for licencing information.  
+For pretty much all other uses, there is no licensing requirement. For 
 example: a logo on your website showing that you use/promote PHP, even 
 commercial websites; course materials; a t-shirt or two for your own use 
 and some friends; a PHP-related book; a banner for your computer group; etc..
-If in doubt, <A HREF="mailto:logos@php.net">ask</A>.
-</P>
-<p>
-<font color="#ff0000">Do not just include the graphic from our
-servers on your page! Copy the image to your site.</font>
+If in doubt, <a href="mailto:logos@php.net">ask</a>.
 </p>
 
-<CENTER>
-<TABLE BORDER=0 WIDTH=90% cellspacing=1 cellpadding=10 BGCOLOR="#F0F0F0">
+<p>
+<font color="#ff0000">Do not just include the graphic from our
+servers on your page! Copy the image to your site please.</font>
+</p>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>scaleable EPS
-<LI><A HREF="/logos/php-logo.eps">click here to download</A>
-<LI>email <A HREF="mailto:logos@php.net">logos@php.net</A> if you use this 
-for commercial purposes
-</UL>
-</TD>
-</TR>
+<table border="0" width="90%" cellspacing="1" cellpadding="10" bgcolor="#f0f0f0" align="center">
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>250 x 132 pixels TIF
-<LI>white background
-<LI>large scale TIF for presentations, etc.
-<LI><A HREF="/logos/php-big.tif">click here to download</A>
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>scaleable EPS</li>
+<li><a href="/logos/php-logo.eps">click here to download</a></li>
+<li>email <a href="mailto:logos@php.net">logos@php.net</a> if
+you use this for commercial purposes</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>95 x 50 pixels
-<LI>transparent background
-<LI>suitable for white/light backgrounds
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>250 x 132 pixels TIF</li>
+<li>white background</li>
+<li>large scale TIF for presentations, etc.</li>
+<li><a href="/logos/php-big.tif">click here to download</a></li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#404040">
-<IMG SRC="logos/php-med-trans-dark.gif" WIDTH=96 HEIGHT=50 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>96 x 50 pixels
-<LI>transparent background
-<LI>suitable for black/dark backgrounds
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>95 x 50 pixels</li>
+<li>transparent background</li>
+<li>suitable for white/light backgrounds</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/php-small-white.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>88 x 31 pixels
-<LI>"Powered by PHP" logo
-<LI>solid white background
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#404040">
+<img src="logos/php-med-trans-dark.gif" width="96" height="50" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>96 x 50 pixels</li>
+<li>transparent background</li>
+<li>suitable for black/dark backgrounds</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-small-trans-light.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>88 x 31 pixels
-<LI>"Powered by PHP" logo
-<LI>transparent background
-<LI>suitable for white/light backgrounds
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-small-white.gif" width="88" height="31" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>solid white background</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/php-small-purple.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>88 x 31 pixels
-<LI>"Powered by PHP" logo
-<LI>solid purple (#ADB4D3) background
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-small-trans-light.gif" width="88" height="31" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>transparent background</li>
+<li>suitable for white/light backgrounds</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33%>
-<IMG SRC="logos/php-small-black.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>88 x 31 pixels
-<LI>"Powered by PHP" logo
-<LI>solid black background
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#adb4d3">
+<img src="logos/php-small-purple.gif" width="88" height="31" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>solid purple (#adb4d3) background</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#404040">
-<IMG SRC="logos/php-small-trans-dark.gif" WIDTH=88 HEIGHT=31 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>88 x 31 pixels
-<LI>"Powered by PHP" logo
-<LI>transparent background
-<LI>suitable for black/dark backgrounds
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#000000">
+<img src="logos/php-small-black.gif" width="88" height="31" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>solid black background</li>
+</ul>
+</td></tr>
 
-<!--  disable old-skool logos
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#404040">
+<img src="logos/php-small-trans-dark.gif" width="88" height="31" border="0" alt="PHP logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>transparent background</li>
+<li>suitable for black/dark backgrounds</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php4-small.gif" WIDTH=143 HEIGHT=65 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>143 x 65 pixels
-<LI>solid white background
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/zend-powered-by.gif" width="100" height="58" border="0" alt="Zend logo"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>100 x 58 pixels</li>
+<li>"Powered by Zend" logo</li>
+<li>solid black background</li>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php4zend-small.gif" WIDTH=143 HEIGHT=65 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>143 x 65 pixels
-<LI>solid white background
-</UL>
-</TD>
-</TR>
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-icon-white.gif" width="32" height="32" border="0" alt="White PHP icon"><br>
+</td><td align="left" width="67%">
+<ul>
+<li>32 x 32 pixels</li>
+<li>solid white background</li>
+<li>suitable as an icon</li>
+</ul>
+</td></tr>
 
-//  disable old-skool logos -->
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="logos/php-icon-white.gif" vspace="5" width="32" height="32" border="0" alt="PHP icons"><br>
+(not exactly as shown)<br>
+</td><td align="left" width="67%">
+<ul>
+<li>PHP icon resource for Windows</li>
+<li>suitable as icons for your desktop</li>
+<li>48x48, 32x32 and 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats ...
+all in one .ICO file</li>
+<li><a href="/logos/php.ico">download here</a>
+</ul>
+</td></tr>
 
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/zend-powered-by.gif" WIDTH=100 HEIGHT=58 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>100 x 58 pixels
-<LI>"Powered by Zend" logo
-<LI>solid black background
-</UL>
-</TD>
-</TR>
-
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-icon-white.gif" WIDTH=32 HEIGHT=32 BORDER=0><BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>32 x 32 pixels
-<LI>solid white background
-<LI>suitable as an icon
-</UL>
-</TD>
-</TR>
-
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/php-icon-white.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
-(not exactly as shown)<BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>PHP icon resource for Windows
-<LI>suitable as icons for your desktop
-<LI>48x48, 32x32 and 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats ... 
-all in one .ICO file
-<LI><A HREF="/logos/php.ico">download here</A>
-</UL>
-</TD>
-</TR>
-
-<!--  disable old-skool logos
-
-<TR VALIGN=middle>
-<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
-<IMG SRC="logos/mini-logo1.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
-(not exactly as shown)<BR>
-</TD>
-<TD ALIGN=left WIDTH=67%><FONT FACE="<?php echo $FONTFACE; ?>">
-<UL>
-<LI>Three 32 x 32 PHP 3 icons for Windows
-<LI>transparent backgrounds
-<LI>suitable as icons for your desktop
-<LI>Available in:
-<UL>
-<LI><A HREF="/logos/php-32-true.ico">16-million colours</A>
-<LI><A HREF="/logos/php-32-256.ico">256 colours</A>
-<LI><A HREF="/logos/php-32-16.ico">16 colours</A>
-<LI><A HREF="/logos/winicons.zip">Zip file of all three versions</A>
-</UL>
-</TD>
-</TR>
-
-// disable old-skool logos -->
-
-</TABLE>
-</CENTER>
+</table>
 
 <?php commonFooter(); ?>
