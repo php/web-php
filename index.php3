@@ -8,6 +8,12 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h3>PHP soon used on 1,000,000 servers</h3>
+<p>
+We just got the latest numbers from
+<a href="http://www.netcraft.com/">Netcraft</a>. If PHP usage keeps growing
+at this rate, we'll pass a million (virtual) servers during November.
+
 <h3>PHP Talk at Atlanta Linux Showcase</h3>
 <p>
 <a href="als99/"><img align=right src="gifs/als99.gif" border=0 width=64 height=61 alt="Atlanta Linux Showcase"></a>
