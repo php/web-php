@@ -143,6 +143,7 @@ right away.</blockquote>
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
+	site("98 Degrees","www.98degrees.com");
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("Chump Change (a band)","foxx.richweb.com/chumpchange/");
