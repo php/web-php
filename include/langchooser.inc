@@ -17,6 +17,12 @@
  language, or will not exist if there are only implications
  on the preferred language.
  
+ $UA_LANGS will contain the user agent language settings
+ parsed as an array. The language names are corrected for
+ php.net usage in this array. This is just to present to
+ the user in case he would like to get information on the
+ parsed language information (see /my.php).
+
  The $_SERVER['STRIPPED_URI'] var is also set to the
  stripped request URI (in case of a shortcut, the
  language is stipped, so the shortcut handling code
@@ -29,7 +35,7 @@ $_SERVER['STRIPPED_URI'] = $_SERVER['REQUEST_URI'];
 
 // The code is encapsulated in a function,
 // so the variable namespace is not polluted
-list($LANG, $EXPL_LANG) = language_choose_code();
+list($LANG, $EXPL_LANG, $UA_LANGS) = language_choose_code();
 
 // Compatibility
 if ($EXPL_LANG == '') { unset($EXPL_LANG); }
@@ -72,11 +78,13 @@ function language_choose_code()
             $explicitly_specified = $flang;
         }
     }
+    
+    // MYPHPNET handling should be added here
 
     // Specified by the user via the browser's Accept Language setting
     // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
     $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-    $browser_langs = array();
+    $browser_langs = array(); $parsed_langs = array();
     
     // Go through all language preference specs
     foreach ($browser_accept as $langpref) {
@@ -113,7 +121,7 @@ function language_choose_code()
         }
         
         // Add language to priority order
-        language_add($langdata[0], $languages);
+        $parsed_langs[] = language_add($langdata[0], $languages);
     }
 
     // Language preferred by this mirror site
@@ -134,7 +142,7 @@ function language_choose_code()
     }
     
     // Return with all found data
-    return array($selected, $explicitly_specified);
+    return array($selected, $explicitly_specified, $parsed_langs);
 }
 
 
