@@ -149,6 +149,17 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Call for Papers Reminder: O'Reilly Open Source Convention</h1>
+<p>
+ <span class="newsdate">[03-Feb-2004]</span>
+ The <a href="http://conferences.oreillynet.com/os2004/">2004 O'Reilly Open
+ Source Convention</a> will be in Portland OR, July 26-30.
+ <a href="http://conferences.oreillynet.com/cs/os2004/create/e_sess">Submit</a>
+ your PHP-related talks and tutorials until the February 9 deadline.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
 <h1>PHP Conference 2004 Spring Edition Programme Online</h1>
