@@ -55,8 +55,8 @@ function language_choose_code()
     if (isset($_REQUEST['lang'])) {
         $explicitly_specified = language_add($_REQUEST['lang'], $languages);
 
-	    // Set the language in a cookie for a year and for all *.php.net servers
-	    setcookie("MYPHPNET", $_REQUEST['lang'], time() + 60*60*24*365, '/', '.php.net');
+        // Set the language in a cookie for a year and for all *.php.net servers
+        setcookie("MYPHPNET", $_REQUEST['lang'], time() + 60*60*24*365, '/', '.php.net');
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
