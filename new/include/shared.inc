@@ -134,7 +134,7 @@ function LoadImgs () {
 } <? } /* function default_jsfunc_loadimgs() */
 
 
-function default_func_sidebar()
+function default_func_sidebar($title)
 {
 ?>
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
@@ -335,7 +335,7 @@ function hide() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
-   <? $func['sidebar']() ?>
+   <? $func['sidebar']($title) ?>
   </TD>
   <TD align=left width="100%">
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">

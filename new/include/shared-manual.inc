@@ -30,8 +30,9 @@ function makeBorderTOC($this)
     spc(10, 10);
     echo "</TD>\n";
     echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\">";
-    echo "<A HREF=\"$cat_url\" onMouseover=\"hide();\" CLASS=sidebartoc>";
+    echo "<A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
     echo "<B>$UP[1]</B></A></TD></TR>\n";
+    $this = eregi_replace("^Manual: *", "", $this);
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
 	if (!$url || !$title) {
@@ -165,10 +166,17 @@ function LoadImgs () {
 	
 	loaded = 1;
     }
+}
+
+function changebullet(Name, No) {
+    if (document.images && (loaded == 1)) {
+	document[Name].src = eval('b_bullet' + No + '.src');
+    }
 } <? } /* function manual_jsfunc_loadimgs() */
 
 
-function manual_func_sidebar() {
+function manual_func_sidebar($title) {
+    global $NEXT, $PREV, $UP, $HOME, $TOC;
 ?>
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
     <TR VALIGN=top>
@@ -180,8 +188,10 @@ function manual_func_sidebar() {
     </TR>
     <TR VALIGN=top>
      <TD ALIGN=left>
-      <A HREF="<? echo $HOME[0] ?>" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
+      <A HREF="<? echo $HOME[0] ?>" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="up to <? echo $HOME[1] ?>" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
+      <? if ($UP[0] && $UP[1]) { ?>
       <A HREF="<? echo $UP[0];?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to <? echo $UP[1];?>" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
+      <? } ?>
       <? makeBorderTOC($title);?>
      </TD>
     </TR>
@@ -190,7 +200,7 @@ function manual_func_sidebar() {
 }
 
 function manualHeader($title) {
-    commonHeader("Manual: $title");
+    commonHeader("Manual: ".$title);
     navigationBar();
 }
 
