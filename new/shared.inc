@@ -1,4 +1,6 @@
 <?
+require("site.inc");
+
 $MIRRORS = array(
    "http://ca.php.net/"         => array("ca", "Toronto, Canada"),
    "http://il.php.net/"         => array("il", "Netvision, Israel"),
@@ -7,6 +9,29 @@ $MIRRORS = array(
    "http://uk.php.net/"         => array("uk", "Norwich, United Kingdom"),
    "http://www.php.net/"        => array("us", "Circle Net, United States")
 );
+
+function kickHeader($offset) {
+	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>";
+	echo "<TR VALIGN=top>";
+	echo "<TD rowspan=3><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=$offset BORDER=0><BR><IMG SRC='gifs/black.gif' WIDTH=13 HEIGHT=3 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bt.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "</TR>";
+	echo "<TR VALIGN=top>";
+	echo "<TD BACKGROUND='gifs/kick-bl.gif'><IMG SRC='gifs/spacer.gif' WIDTH=9 HEIGHT=1 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bg.gif'><FONT FACE='TAHOMA,ARIAL' SIZE=-1>";
+};
+
+function kickFooter() {
+	echo "</TD>";
+	echo "<TD BACKGROUND='gifs/kick-br.gif'><IMG SRC='gifs/spacer.gif' WIDTH=10 HEIGHT=1 BORDER=0><BR></TD></TR>";
+	echo "<TR VALIGN=top>";
+	echo "<TD><IMG SRC='gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bb.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "</TR></TABLE>";
+};
 
 function download_link($file, $title) {
 	global $filesizes;
@@ -51,6 +76,30 @@ var NS4 = (bName == "Netscape" && bVer >= 4);
 var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
 var NS3 = (bName == "Netscape" && bVer < 4);
 var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
+
+if (NS4 || IE4) {
+	if (navigator.appName == "Netscape") {
+      	layerStyleRef="layer.";
+		layerRef="document.layers";
+		styleSwitch="";
+	}else{
+		layerStyleRef="layer.style.";
+		layerRef="document.all";
+		styleSwitch=".style";
+	}
+}
+
+function showLayer(layerName){
+	if (NS4 || IE4) {
+		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="visible"');
+	}	
+}
+        
+function hideLayer(layerName){
+	if (NS4 || IE4) {
+		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="hidden"');
+	}	
+}
 
 loaded = 0
 
@@ -123,6 +172,9 @@ function hideAll () {
 	change('mirr',0);
 	change('top',0);
 	change('sear',0);
+	if (NS4 || IE4) {
+		hideLayer('mirrorsKick');
+	}
 }
 
 if (IE4) LoadImgs();
@@ -130,29 +182,34 @@ if (IE4) LoadImgs();
 //--->
 </SCRIPT>
 
+<STYLE TYPE="text/css">
+#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}
+</STYLE>
+
+
 </HEAD>
 
 <BODY OnLoad="LoadImgs()" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINHEIGHT=3 MARGINWIDTH=5>
 <A NAME="top">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR valign=top>
-<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150>
+<TD ALIGN=left width=150>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Main Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><IMG SRC="gifs/logo.gif" ALT="PHP3" WIDTH=130 HEIGHT=67 BORDER=0><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
-<TR VALIGN=top>
+<TR VALIGN=top BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TD ALIGN=left>
 <A HREF="downloads.php3" onMouseover="change('down',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-downloads-p.gif" ALT="downloads" WIDTH=129 HEIGHT=30 BORDER=0 NAME="down" hspace=10></A><BR>
-<A HREF="docs.php3" onMouseover="change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
-<A HREF="mail.php3" onMouseover="change('mail',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-mailing-p.gif" ALT="mailing list" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mail" hspace=10><BR>
-<A HREF="dev.php3" onMouseover="change('dev',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-development-p.gif" ALT="development" WIDTH=129 HEIGHT=30 BORDER=0 NAME="dev" hspace=10><BR>
-<A HREF="news.php3" onMouseover="change('news',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
-<A HREF="links.php3" onMouseover="change('link',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
-<A HREF="mirrors.php3" onMouseover="change('mirr',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-mirror-p.gif" ALT="mirror sites" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mirr" hspace=10><BR>
+<A HREF="docs.php3" onMouseover="hideAll();change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
+<A HREF="mail.php3" onMouseover="hideAll();change('mail',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-mailing-p.gif" ALT="mailing list" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mail" hspace=10><BR>
+<A HREF="dev.php3" onMouseover="hideAll();change('dev',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-development-p.gif" ALT="development" WIDTH=129 HEIGHT=30 BORDER=0 NAME="dev" hspace=10><BR>
+<A HREF="news.php3" onMouseover="hideAll();change('news',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
+<A HREF="links.php3" onMouseover="hideAll();change('link',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
+<A HREF="mirrors.php3" onMouseover="hideAll();change('mirr',1); showLayer('mirrorsKick')"><IMG SRC="gifs/b-mirror-p.gif" ALT="mirror sites" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mirr" hspace=10><BR>
 </TD></TR>
 </TABLE>
 </TD>
@@ -164,9 +221,7 @@ if (IE4) LoadImgs();
 <? echo $title;?>
 <!-- end title -->
 </B></FONT></TD>
-<TD ALIGN=right><A HREF="search.php3" onMouseover="change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=129 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORD
-
-ER=0><BR></TD></TR>
+<TD ALIGN=right><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=129 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD></TR>
 </TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=top>
@@ -199,7 +254,7 @@ function commonFooter() {
 <TR VALIGN=bottom>
 <TD ALIGN=left>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=9 BORDER=0><BR>
-<A HREF="#top" onMouseover="change('top',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
+<A HREF="#top" onMouseover="hideAll();change('top',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
 </TR>
 </TABLE>
@@ -222,6 +277,32 @@ function commonFooter() {
 
 </TD></TR>
 </TABLE>
+
+<!-- Kick outs -->
+<SCRIPT LANGUAGE="Javascript1.2">
+<!--  
+
+document.write("<DIV ID='mirrorsKick'>");
+document.write("<?kickHeader(62);?>");
+document.write("<FORM ACTION='redirect.php3' METHOD='POST'>");
+document.write("<B>Pick a mirror site close to you:</B><BR>");
+document.write("<SELECT NAME='URL'>");
+document.write("<?
+$mirror_sites=$MIRRORS;
+reset($mirror_sites);
+while ($site = key($mirror_sites)):
+	next($mirror_sites);
+	$place=$mirror_sites[$site][1];
+	echo "<OPTION VALUE='$site'>$place";
+endwhile;
+?>");
+document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>");
+document.write("</FORM>");
+document.write("<? kickFooter();?>");
+document.write("</DIV>");
+
+//-->
+</SCRIPT>
 
 </BODY>
 </HTML>

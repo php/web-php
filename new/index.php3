@@ -1,9 +1,8 @@
 <?
-require("site.inc");
 require("shared.inc");
-commonHeader("Test Page");
+commonHeader("PHP3 Main Page");
 ?>
-A test page for PHP3.
+PHP3 is cool.
 <?
-commonFooter("");
+commonFooter();
 ?>
