@@ -167,7 +167,6 @@ if(!isset($pattern)) {
 		makeBar(1,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
 
 		$i=7; #skip response header
-		echo "<TABLE BORDER=0><TR><TD>\n";
 		while($i<$rc) {
 			if ($base=="-") {
 				echo $result[$i];
@@ -177,7 +176,7 @@ if(!isset($pattern)) {
 			echo "\n";
 			$i++;
 		}
-		echo "</TD></TR></TABLE><BR>\n";
+		echo "<BR>\n";
 
 		makeBar(2,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
 
