@@ -55,7 +55,7 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
-<? makeEntry( "PHP: eingebettete Skriptsprache", "by Niels Pollem","http://www.heise.de/ix/artikel/1999/07/076/", "July 19, 1999");?>
+<? makeEntry( "PHP: One Size Fits All", "by Niels Pollem","http://www.heise.de/ix/artikel/1999/07/076/", "July 19, 1999");?>
 (In German.) Dynamisch generierte Web-Seiten zu erstellen geh&ouml;rt
 l&auml;ngst zum normalen Handwerk. Werkzeuge und Sprachen daf&uuml;r
 stehen zur Verf&uuml;gung. Das derzeit noch in der Version&nbsp;3
