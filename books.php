@@ -345,7 +345,7 @@ by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A 
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07"
-><IMG SRC="http://images-eu.amazon.com/images/P/3826680022.04.LZZZZZZZ.jpg">
+><IMG SRC="http://images-eu.amazon.com/images/P/3826680022.03.LZZZZZZZ.jpg">
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07"
