@@ -591,14 +591,10 @@ elseif ($cmd == "display") {
    <td><?php echo $original[php_version]?></td>
   <?php }?>
  </tr>
-<?php if ($original[assign] || $edit == 1) {?>
+<?php if ($original[assign] && !$edit) {?>
  <tr>
   <th align="right">Assigned To:</th>
-  <?php if ($edit == 1) {?>
-   <td><input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>" /></td>
-  <?php } else { ?>
-   <td><?php echo $original[assign]?></td>
-  <?php }?>
+  <td><?php echo $original[assign]?></td>
  </tr>
 <?php }?>
  <tr>
