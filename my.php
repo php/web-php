@@ -37,7 +37,7 @@ else {
 }
 
 // Add all other languages
-foreach ($lang as $code => $name) {
+foreach ($langs as $code => $name) {
     $options[] = '<option value="' . $code . '">' . $name . "</option>\n";
 }
 
