@@ -1,7 +1,16 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.13 Changes");
+commonHeader("PHP 3.0 -> 3.0.14 Changes");
 ?>
+
+<h3>January 11, 2000, Version 3.0.14</h3>
+
+<ul>
+<li> Fixed broken GD autoconf check - GIF support was not detected unless libpng
+  and libz were both installed on the system (Rasmus)
+<li> Fix safe-mode problem in popen() (Kristian)
+<li> Fix safe-mode problem when resource had multiple consecutive /'s (Rasmus)
+<li> Remove written permission clause from license
 
 <h3>January 1, 2000, Version 3.0.13</h3>
 

@@ -9,8 +9,11 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h3>Slight technical problem</h3>
-The 3.0.14 release announcement and files will be back shortly. Check back in 30 minutes.
+<h3>3.0.14 Released</h3>
+January 11, 2000.  3.0.14 is a minor bug-fix release to fix a safe-mode 
+problem reported on bugtraq along with an annoying gd configure problem.
+If you don't use safe-mode and your GD is working fine, there is no need
+to upgrade from 3.0.13.
 
 <h3>PHP 3.0.13 has been released</h3>
 
