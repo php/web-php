@@ -114,6 +114,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>ActiveState Awards</h1>
+<p>
+ActiveState is pleased to announce the winners of the 2002 Active
+Awards, presented at the O'Reilly Open Source Conference in San Diego,
+CA. The Active Awards are held annually to honor members of the PHP,
+Python, Perl, Tcl, and XSLT  communities, who <em>actively</em> contribute to
+open languages and display excellence in their programming efforts.
+Activators' Choice Award winners were chosen by ActiveState's
+development team.  Programmers' Choice Award winners were nominated and
+chosen by the open source community, the nominees were: Greg Allan; Stig
+Bakken; Bogomil Shopov; Philippe Thomassigny; and Andrei Zmievski. 
+</p><p>
+The Activators' Choice winners are Derrick Rethans and Jani Taskinen.
+Derrick is heavily involved in developing processes for QA and Release
+Management, and Jani has been one of the largest contributors to QA and
+support of the Bug database.  The Programmers' Choice winner is Greg
+Allen, who was the lead developer and founding member of the PostNuke
+project.  More details are available at 
+<?print_link('http://www.ActiveState.com/ActiveAwards2002', 'http://www.ActiveState.com/ActiveAwards2002')?>
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.2 released in response to vulnerability</h1>
 
 <p>
@@ -229,23 +252,6 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 
 <p>Windows binary version is also available for
 <?php download_link("php-4.3.0-dev-zend2-win32-alpha1.zip", "download"); ?>.</p>
-
-<?php echo hdelim(); ?>
-
-<h1>ActiveState Awards</h1>
-<p>
-ActiveState is delighted to announce the second annual Programmers'
-Choice and Activators' Choice Awards. The awards honor the unnamed
-heroes who <em>actively</em> contribute to open languages and display
-excellence in their programming efforts. The Programmers' Choice
-recipients are nominated and chosen by members of the programming
-community - like you.  Know someone who's really made a difference using
-these languages? Tell us about them!
-<?print_link('http://www.ActiveState.com/Corporate/Awards/ActiveAwards.html', 'Get out the vote')?> and stay
-tuned! Nominees will be announced July 2, 2002. Perl, PHP, Python and
-XSLT winners will be announced at OSCON July 23, 2002. Tcl winners will
-be announced at the Tcl 2002 conference in September.
-</p>
 
 <?php echo hdelim(); ?>
 
