@@ -98,9 +98,9 @@ function delim($color=false) {
 
 function hdelim($color="#000000") {
 	if (!$color) {
-		return '<hr noshade size="1" />';
+		return '<hr noshade="noshade" size="1" />';
 	}
-	return sprintf('<hr noshade size="1" color="%s" />', $color );
+	return sprintf('<hr noshade="noshade" size="1" color="%s" />', $color );
 }
 
 # make_link()
@@ -249,7 +249,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <input class="small" type="text" name="pattern" value="" size="30" accesskey="s" />
 <small>in the</small>
 <select name="show" class="small">
-<option value="quickref" selected>function list</option>
+<option value="quickref" selected="selected">function list</option>
 <option value="wholesite">whole site</option>
 <option value="manual">online documentation [en]</option>
 <option value="bugdb">bug database</option>
