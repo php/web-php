@@ -93,22 +93,7 @@ function navigationBar($title,$id,$loc) {
 	echo '<tr>';
 	echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp.'<br>';
 
-	if ($loc == 'bottom') {
-
-#		$back_url = 'http://' . $SERVER_NAME . 
-#			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
-#			$PHP_SELF;
-#		print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url, 
-#			make_image('notes-add.gif','add a note')
-#		);
-#		echo '&nbsp;';
-#		print_link('/manual/about-notes.php', 
-#			make_image('notes-about.gif', 'about notes')
-#		);
-#		echo '<br>';
-
-	} else {
-
+	if ($loc != 'bottom') {
 		global $LANGUAGES;
 		$links = array();
 		foreach($LANGUAGES as $code=>$name) {
@@ -182,39 +167,37 @@ if (isset($MAGIC_COOKIE) && $id) {
 <?php
 };
 
-function manualGetUserNotes($title, $id)
-{
-        $id = ereg_replace("\.php$","",$id);
+function manualGetUserNotes($title, $id) {
 	// if we're www.php.net, get it from the local DB
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE;
 	$notes = array();
-	if (is_primary_site()) {
-#	if(is_primary_site() || strstr($MYSITE,"localhost")) {
-		$host = 'localhost';
-#		$host = '127.0.0.1';
-		$user = 'nobody';
-		$pass = '';
-		$db_id = @mysql_connect($host, $user, $pass);
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect LIKE '$id%' ORDER BY id";
-		if ($db_id) $result_id = mysql_db_query("php3", $query, $db_id);
+	if (is_primary_site() && @mysql_connect("localhost","nobody","")) {
+		mysql_select_db("php3");
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE section='$id' AND NOT removed ORDER BY id";
+                $result_id = mysql_query($query);
 		if ($result_id && mysql_num_rows($result_id) > 0) {
 			while ($row = mysql_fetch_array($result_id)) {
 				$notes[] = $row;
 			}
 		}
 	} else {
-		$notes_file = "../usernotes/" . urlencode( $title ) . ".txt";
-		if ( @file_exists( $notes_file ) )
-		{
-			$fp = @fopen($notes_file,"r");
-			if ($fp) {
-				$body = fread($fp,filesize($notes_file));
-				if (strlen($body)) {
-					$notes = @unserialize($body);
-				}
-				fclose($fp);
+		global $DOCUMENT_ROOT;
+		$hash = substr(md5($id),0,16);
+		$notes_file = "$DOCUMENT_ROOT/backend/manual/".substr($hash,0,2)."/$hash";
+		if ($fp = @fopen($notes_file,"r")) {
+			while (!feof($fp)) {
+				list($id,$sect,$rate,$ts,$user,$note) = fgets($fp,8096);
+				$notes[] = array(
+					"id" => $id,
+					"sect" => $sect,
+					"rate" => $rate,
+					"ts" => $ts,
+					"user" => $user,
+					"note" => base64_decode($note)
+				);
 			}
+			fclose($fp);
 		}
 	}
 	return $notes;
@@ -224,6 +207,9 @@ function manualUserNotes($title, $id) {
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT, $LANG, $MYSITE;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
+
+	# don't want .php at the end of the id.
+	if (substr($id,-4) == '.php') $id = substr($id,0,-4);
 
 	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
 
@@ -246,23 +232,12 @@ function manualUserNotes($title, $id) {
 	echo "<br></td>\n";
 	echo "</tr>\n";
 
-	if ( sizeof($notes) == 0 ) {
-
-		if ( !strstr($MYSITE,"www.php.net") ) {
-  	  echo '<tr valign="top">';
-			echo '<td bgcolor="#e0e0e0" colspan="2">';
-			echo 'User contributed notes are not available on this mirror site; try ';
-			print_link('http://www.php.net/manual/'.$LANG.'/'.$id, 'here');
-			echo '.<br></td></tr>';
-		} else {
+	if (sizeof($notes) == 0) {
   	  echo '<tr valign="top">';
 			echo '<td bgcolor="#e0e0e0" colspan="2">';
 			echo 'There are no user contributed notes for this page.';
 			echo '<br></td></tr>';
-    }
-
 	} else {
-
 		foreach($notes as $note) {
 			makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'] );
 		}
@@ -284,27 +259,6 @@ function manualUserNotes($title, $id) {
 	echo "</table><br><br>\n";
 }
 
-function manualLastModified($title, $id) {
-    global $MYSITE, $SCRIPT_FILENAME;
-    if (is_primary_site()) {
-        $host = 'localhost';
-        $user = 'nobody';
-        $pass = '';
-        $db_id = @mysql_connect($host, $user, $pass);
-        $query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY ts DESC limit 1";
-        if ($db_id) $result_id = @mysql_db_query("php3", $query, $db_id);
-    } else {
-        $result_id = 0;
-    }
-    if($result_id && mysql_num_rows($result_id)) {
-        $t = mysql_fetch_row($result_id);
-        Header("Last-Modified: ".gmdate("D, d M Y H:i:s",$t[0])." GMT");
-    } else {
-        Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
-    }
-    if($result_id) mysql_free_result($result_id);
-}
-
 function sendManualHeaders($charset,$lang) {
         global $LANG;
         $LANG = $lang;
@@ -314,7 +268,6 @@ function sendManualHeaders($charset,$lang) {
 
 function manualHeader($title,$id="") {
 	global $HTDIG, $LANGUAGES, $LANG, $SIDEBAR_DATA;
-	manualLastModified($title,$id);
 	makeBorderTOC($title);
 	commonHeader('Manual: '.$title);
         # create links to plain html and other languages
