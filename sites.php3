@@ -59,6 +59,7 @@ right away.</blockquote>
 	site("Mitsubishi Motors","www.mitsucars.com");
 	site("MotoSite.Com","www.motosite.com");
 	site("Opel","www.opel.com");
+	site("PerformanceList.Com","www.performancelist.com");
 	site("Silver Bullet Motorcycles","www.silver-bullet.co.nz");
 	site("Subaru","www.subaru.com");
 	site("Volvo","www.volvo.com");
@@ -336,6 +337,7 @@ right away.</blockquote>
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
+	site("Linux-Books","www.linux-books.com");
 	site("The Longaberger Company","www.longaberger.com");
 	site("Neckermann","www.neckermann.de");
 	site("Para-Shop","www.para-shop.de");
