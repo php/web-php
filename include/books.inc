@@ -1,8 +1,42 @@
 <?php
 
+// $Id$
+
 /*
- This file contains books data for books.php,
- including languages and type information.
+ This file contains books data for books.php, including languages and type information.
+ 
+ How to add a book:
+ 
+   - First add the new book image to /images/books/ISBN-NUMBER-HERE.png
+     (or gif, or jpg) Make sure that the image is 111 pixels wide (how
+     tall it is will depend on the dimensions of the book)
+   - Make a copy one of the book array items, and edit it appropriately
+      - add the title as is
+      - if the book is available from amazon.(com|de|fr) use the
+        appropriate URL, modifying only the ISBN number part, otherwise
+        use the same URL for title link and inform. link
+      - if there are multiple authors, use an array for the author list,
+        otherwise use a string
+      - you can add author links (with a string or array) as you like,
+        the link(s) will be paired with the author(s)
+      - add the correct image name (ISBN-NUMBER-HERE.png (or gif, or jpg))
+      - provide as much information about the book as possible
+        (publisher, month and year of publication, ISBN, number of pages, and
+         also indicate if the book has a CD included)
+      - provide a link to the book's detailed page (most of the time on
+        the publisher's site) with errata, downloadable chapter, etc.
+      - specify the language (if that language is not yet in the $book_langs
+        array, add it to that too)
+        
+  If a new edition of a book comes out, replace the old edition
+  info with the new one (deleting the old image too, and adding
+  the new one).
+  
+  The order of books in the array below is irrelevant, the books are displayed
+  grouped by languages, and then randomly ordered. However it is good practice
+  to add books in the same language below each other to the array and not
+  completely mixed.
+ 
 */
 
 // Languages used in the book listing
