@@ -1,5 +1,8 @@
 <?
 
+Header("Location: http://bugs.php.net/");
+die();
+
 /* See the end of the script for the table layout. */
 
 require("shared.inc");

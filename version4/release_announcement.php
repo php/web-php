@@ -104,9 +104,9 @@ clutter the already over-flown PHP 3.0 mailing list with PHP 4.0 related
 questions.</p>
 <p align="left">&nbsp;</p>
 <h3 align="left">Reporting Bugs</h3>
-<p align="left">PHP 4.0 bugs should be reported at <a href="http://bugs.php.net/version4/">http://bugs.php.net/version4/</a>.&nbsp;
-Please, don't mix between <a href="http://bugs.php.net/">http://bugs.php.net/</a>
-(the PHP 3.0 bug report tool) and <a href="http://bugs.php.net/version4/">http://bugs.php.net/version4/</a>.</p>
+<p align="left">PHP 4.0 bugs should be reported at <a href="http://bugs.php.net/">http://bugs.php.net/</a>.&nbsp;
+Please, don't mix between <a href="http://bugs.php.net/bugs-php3.php">http://bugs.php.net/bugs-php3.php</a>
+(the PHP 3.0 bug report tool) and <a href="http://bugs.php.net/">http://bugs.php.net/</a>.</p>
 <p align="left">&nbsp;</p>
 <h3 align="left">For PHP Module Developers</h3>
 <p align="left">PHP 4.0's inner API has changed significantly since version
