@@ -106,9 +106,12 @@ if(strchr($uri,'/')) {
     $function = strtolower($uri);
 }
 
-// Quick access to revcheck output for manual writers
+// Quick access to revcheck output and build logs for manual writers
 if ($function == "rev") {
     header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html");
+    exit;
+} elseif ($function == "rev") {
+    header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
 }
 
