@@ -4,12 +4,12 @@ require("shared.inc");
 $current = "3.0.5";
 $win32_current = "3.0.5";
 
-$filesizes["php-3.0.5.tar.gz"]="~ 1270KB";
-$filesizes["php-3.0.4.tar.gz"]="~ 1215KB";
-$filesizes["php-3.0.3.tar.gz"]="~ 1107KB";
-$filesizes["php-3.0.5-win32.zip"]="~ 1513KB";
-$filesizes["mod_php-3.0.3-1.i386.rpm"]="~ 318KB";
-$filesizes["mod_php-3.0.3-1.src.rpm"]="~ 1304KB";
+$filesizes["php-3.0.5.tar.gz"]="~1,270 kb";
+$filesizes["php-3.0.4.tar.gz"]="~1,215 kb";
+$filesizes["php-3.0.3.tar.gz"]="~1,107 kb";
+$filesizes["php-3.0.5-win32.zip"]="~1,513 kb";
+$filesizes["mod_php-3.0.3-1.i386.rpm"]="~318 kb";
+$filesizes["mod_php-3.0.3-1.src.rpm"]="~1,304 kb";
 
 function makeCap() {
 	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF,$MYSITE;
