@@ -107,6 +107,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Coding Contest</h1>
+<p>
+<font class="newsDate">[16-May-2002]</font>
+CodeWalkers started a new bi-weekly PHP contest. Every two weeks, there
+is a new problem to solve, a new script to write. The winner receive
+prices provided by the sponsors, Zend Technologies and Sams Publishing.
+You can get on the challange visiting
+<a href="http://codewalkers.com/php-contest.php">http://codewalkers.com/php-contest.php</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.1 released</h1>
 <p>
 <font class="newsDate">[13-May-2002]</font>
