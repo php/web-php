@@ -77,7 +77,7 @@ function makeBorderTOC($this) {
 
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
-    global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
+    global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT, $PHP_SELF, $LANGUAGES;
 
     echo '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
@@ -102,7 +102,6 @@ function navigationBar($title,$id,$loc) {
     echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp;
 
     if ($loc != 'bottom') {
-        global $LANGUAGES;
         $links = array();
         foreach ($LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
