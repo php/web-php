@@ -82,6 +82,23 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.2.0 released</h1>
+<p>
+<font class="newsDate">[22-Apr-2002]</font>
+The PHP Group is happy to announce the
+<?php print_link ("/downloads.php", "immediate availability"); ?>
+of PHP 4.2.0, the latest version of the widely-used, general-purpose scripting language
+that is especially well-suited for Web development.</p>
+
+<p>This latest release contains over one hundred changes, bug fixes and improvements over
+the previous release, PHP 4.1.2. Among the highlights are experimental support for Apache 2,
+cleanups in variable handling and overhauls of various PHP components, including the
+domxml, posix, sockets and iconv extensions. For more information, see the
+<?php print_link ("/release_4_2_0.php", "PHP 4.2.0 release announcement"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
 <h1>Fifth sample of 'PHP Manual CHM Edition'</h1>
@@ -98,23 +115,6 @@ in examples, and of course updated content.
 <?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
 and send us your feedback to our
 <?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.2.0 RC 4 Released</h1>
-<p>
-<font class="newsDate">[15-Apr-2002]</font>
-A fourth <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
-PHP 4.2.0 has just been released, with <b>experimental</b> support for the
-recent Apache 2.0.35 release as well as numerous collected bug fixes. This
-build is used for testing the readiness of the release branch. By providing
-<?php print_link ("http://qa.php.net/buildtest-submit.php", "feedback"); ?> about
-this build, you can help make sure that the actual release (planned for
-April 22) has as few bugs as possible. This release candidate is <b>NOT</b>
-meant for production servers, only for helping out the PHP-QA Team finding weak
-spots. For more information, see the
-<?php print_link ("http://qa.php.net/", "PHP QA website"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
