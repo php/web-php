@@ -1,6 +1,6 @@
 <?
 require("shared.inc");
-commonHeader("Genearting a gdb backtrace");
+commonHeader("Generating a gdb backtrace");
 ?>
 
 
