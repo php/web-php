@@ -57,7 +57,7 @@ function show_menu($state) {
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select><br>\n";
+	echo "</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"/bugstats.php3\">Statistics</a><br>\n";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
 	echo "</form>\n";
 }
