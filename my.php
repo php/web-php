@@ -83,7 +83,7 @@ most of the time.
  </tr>
  <tr>
   <td bgcolor="#dddddd">Your Accept-Language browser setting (parsed)</td>
-  <td bgcolor="#eeeeee"><?php echo join(", ", $UA_LANGS); ?></td>
+  <td bgcolor="#eeeeee"><?php echo join(", ", array_unique ($UA_LANGS)); ?></td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">The mirror's default language</td>
