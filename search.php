@@ -89,10 +89,23 @@ if (isset($pattern)) {
     // If some local search is needed and we have no support for
     // it, send the user to the central search page on php.net
     if (!have_search() || !isset($htsearch_prog)) {
-        $location = "http://www.php.net/search.php";
-        $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
-        header("Location: $location?$query");
-        exit;
+        
+        // We cannot redirect to anywhere, absolute failure
+        if (is_primary_site()) {
+            commonHeader("Search Service");
+            echo "<b>The search service is currently not working</b>.<br />";
+            echo "Please try later.\n";
+            commonFooter();
+            exit();
+        }
+        
+        // We can redirect to the php.net search page
+        else {
+            $location = "http://www.php.net/search.php";
+            $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
+            header("Location: $location?$query");
+            exit;
+        }
     }
     
     // The local search engine is in place, and some
