@@ -1,6 +1,7 @@
 <?php
-include './include/prepend.inc';
-
+// $Id$
+$_SERVER['BASE_PAGE'] = 'news.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("News Archive");
 ?>
 
@@ -661,13 +662,14 @@ print_link("http://www.phpconference.de/2001/index_en.php",
 You can find an overview of all slides of the sessions from the International PHP Conference 2001 on the
 <a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>. 
 It is still not too late to check out some photos from the conference:
+</p>
+
 <ul>
     <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
     <li><?php print_link("http://www.phpconference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
 </ul>
 <br clear="all" />
-</p>
 
 <hr />
 
