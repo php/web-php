@@ -154,10 +154,10 @@ and Netscape 6 users:
   </li>
   <li>Right click the bookmark you´ve created and select "Properties..."</li>
   <li>Choose a "custom keyword" you want to enter in the URL bar,
-  eg. "phpman" and fill it in.</li>
+  eg. "php" and fill it in.</li>
   <li>Click "ok" and open a new browser window.</li>
-  <li>Finished. Now you´re able to enter eg. "phpman fgets" to look
-  up the manual entry on the function fgets() or eg. "phpman building
+  <li>Finished. Now you´re able to enter eg. "php fgets" to look
+  up the manual entry on the function fgets() or eg. "php building
   PHP 4" to search all available information how to build PHP 4.</li>
 </ol>
 
