@@ -44,6 +44,7 @@ tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
 ua	ua2.php.net	Max Khaikin <max@alkar.net>	php.ndot.com.ua
 uk	uk.php.net	Gareth Watts <gareth@omnipotent.net>	194.73.160.93
+uk	uk2.php.net	Daniel Andersson <daniel@avantnoise.com>	212.36.131.131
 us	www.php.net	core@php.net	208.247.106.167
 us	us.php.net	Troy Cobb <tcobb@staff.circle.net>	209.95.65.70
 us	us2.php.net	Gary Shaver <gshaver@he.net>, Mike Leber <mleber@he.net>	php.he.net

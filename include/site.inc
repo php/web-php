@@ -59,6 +59,7 @@ $MIRRORS = array(
    "http://ua2.php.net/"              => array("ua", "New Damage/Outline", "ndot", "http://www2.newdamage.com/", 1, 0, "ua"),
    "http://uk.php.net/"               => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 1, "en"),
    "ftp://uk.php.net/"                => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 0, 0, "en"),
+#   "http://uk2.php.net/"              => array("uk2", "On-Line PLC", "", "http://www.on-line.co.uk/", 1, 0, "en"),
    "http://www.php.net/"              => array("us", "chek.com", "chek", "http://www.chek.com/", 1, 1, "en"),
    "http://us.php.net/"               => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1, 0, "en"),
    "http://us4.php.net/"              => array("us", "Adgrafix", "adgrafix", "http://www.adgrafix.com/info/hkind", 1, 0, "en"),
