@@ -347,6 +347,7 @@ right away.</blockquote>
 	site("RacersDirect","www.racersdirect.com");
 	site("Scour Net","www.scour.net");
 	site("Spell Web","www.spellweb.com");
+	site("Temperature Measurement site","www.jmrtech.com/temp");
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("WebMasters Index","www.webmastersindex.com");
 	siteEnd();
