@@ -5,6 +5,9 @@
 
   $fd = fopen("FAQ.html", "r");
 
+  /* turn off magic quotes for broken mirrors... */
+  set_magic_quotes_runtime(0);
+
   /* drop everything until it tells us to stop chopping */
   while (!feof($fd)) {
     if (ereg("stop chopping", fgets($fd, 1024))) {
