@@ -319,7 +319,8 @@ function commonFooter() {
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
 	echo "<option value=\"-1\">--\n";
-	while (list($url,$mirror) = each($MIRRORS)) {
+	reset($MIRRORS);
+  while (list($url,$mirror) = each($MIRRORS)) {
           if ($mirror[4] == 1) { /* only list full mirrors here */
             echo "<option value=\"$url\">".$COUNTRIES[$mirror[0]]." ($mirror[1])\n";
           }
