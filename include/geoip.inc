@@ -1,6 +1,11 @@
 <?php
-/* this php version of the geoip library was written in may 2002
-   by jim winstead <jimw@apache.org> */
+/* 
+   This PHP version of the GeoIP library was written in May 2002
+   by Jim Winstead <jimw@apache.org>
+   
+   Note that it is currently not used in phpweb page displays,
+   but is here for future usage.
+*/
 
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 2; tab-width: 2 -*- */
 /* GeoIP.c

@@ -23,7 +23,6 @@ $MQ = (boolean) get_magic_quotes_gpc();
 // Load in always required parts
 include_once 'site.inc';
 include_once 'layout.inc';
-include_once 'geoip.inc';
 
 // This file is generated on rsync.php.net and propogated
 // from there. It just defines $LAST_UPDATED, which is the
