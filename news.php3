@@ -3,7 +3,7 @@ require("shared.inc");
 commonHeader("PHP in the News");
 ?>
 <DL>
-<dt><b>UnixWorld Online: <a href="http://www.unixworld.com/uworld/archives/98/tutorial/018.html">Linux, SQL, and the Web</a></b>
+<dt><b>UnixWorld Online: <a href="http://www.unixworld.com/archives/95/tutorial/018.html">Linux, SQL, and the Web</a></b>
 <dd>Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP3 to talk to each other.
 <p>
 
