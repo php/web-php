@@ -33,10 +33,9 @@ commonHeader("Manual Notes");
 $user = trim($user);
 $note = trim($note);
 
-/* plug in general email address for blank email addresses
-on notes */
-if ($user == "") {
-    $user = "php-general@lists.php.net";
+/* don't pass through example username */
+if ($user == "user@example.com") {
+    $user = "";
 }
 
 if ($note == "") {
@@ -63,6 +62,8 @@ if (isset($note) && isset($action) && strtolower($action) != "preview"):
 <?		$new_id = mysql_insert_id();	
 		$msg = stripslashes($note);
 		$msg .= "\n\n $redirect \n";
+                # make sure we have a return address.
+                if (!$user) $user = "php-general@lists.php.net";
 		mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
 	else:
 		// mail it.
@@ -120,6 +121,7 @@ and add it here!)</p>
 <a href="http://bugs.php.net/">Click here to request a feature.</a>
 </p>
 <?      endif;
+	if (!$user) $user = "user@example.com";
         if (!isset($sect)):?>
 <p><b>To add a note, you must click on the 'Add Note' button
 on the bottom of a manual page so we know where to add the note!</b></p>

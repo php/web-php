@@ -140,7 +140,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 	$name = htmlspecialchars($name);
         if (ereg("(.+)@(.+)\.(.+)",$name)) {
                 echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
-        } else {
+        } elseif ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
                 echo "<b>".$name."</b><br>\n";
         }
         echo date("d-M-Y h:i",$date);
