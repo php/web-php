@@ -136,7 +136,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>PHP Magazine - International Edition</h1>
 <p>
-<font class="newsdate">[16-Nov-2002]</font>
+<font class="newsdate">[17-Nov-2002]</font>
 <p>
 Software &amp; Support Verlag GmbH is going to publish an International version
 of the <a href="http://www.phpmag.de/">PHP Magazin</a>. This magazine was
@@ -152,7 +152,7 @@ developer is confronted in daily practice.
 </p>
 <p>
 The first issue will be published in December and the frequency of issues is
-two months. You can subscribe on the <a
+two months. You will be able to subscribe on the <a
 href="http://www.php-mag.net/">website</a> which will open shortly.
 </p>
 
