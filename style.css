@@ -290,3 +290,12 @@ div.phpcode span.string {
 	text-align: center;
 }
 
+/* Thanks listing on frontpage */
+ul.simple {
+	padding-left: 8px;
+}
+ul.simple li {
+	padding: 0px;
+	list-style-type: none;
+	font-size: 125%;
+}

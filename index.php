@@ -19,8 +19,8 @@ $timestamps[] = @getlastmod();
 */
 $timestamps[] = @filemtime("include/prepend.inc");
 
-// Calendar is the only dynamic feature on this page
-$timestamps[] = @filemtime("backend/events.csv");
+// Calendar is the only "dynamic" feature on this page
+$timestamps[] = @filemtime("include/pregen-events.inc");
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
@@ -39,7 +39,9 @@ else {
     header("Last-Modified: " . $tsstring);
 }
 
-include './include/prepend.inc';
+$_SERVER['BASE_PAGE'] = 'index.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
 
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
@@ -64,22 +66,28 @@ $SIDEBAR_DATA = '
 </p>
 
 <h3><a href="/thanks.php">Thanks To</a></h3>
-&nbsp; <a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a><br />
-&nbsp; <a href="http://www.directi.com/">Directi</a><br />
-&nbsp; <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a><br />
-&nbsp; <a href="http://www.rackshack.net/">RackShack</a><br />
-&nbsp; <a href="http://www.redundant.com/">Redundant Networks</a><br />
-&nbsp; <a href="http://www.simplicato.com/?a=1007">Simplicato</a><br />
-&nbsp; <a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a><br />
+<ul class="simple">
+ <li><a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></li>
+ <li><a href="http://www.directi.com/">Directi</a></li>
+ <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
+ <li><a href="http://www.rackshack.net/">RackShack</a></li>
+ <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
+ <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
+ <li><a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a></li>
+</ul>
 <h3>Related sites</h3>
-&nbsp; <a href="http://www.apache.org/">Apache</a><br />
-&nbsp; <a href="http://www.mysql.com/">MySQL</a><br />
-&nbsp; <a href="http://www.postgresql.org/">PostgreSQL</a><br />
-&nbsp; <a href="http://www.zend.com/">Zend Technologies</a><br />
+<ul class="simple">
+ <li><a href="http://www.apache.org/">Apache</a></li>
+ <li><a href="http://www.mysql.com/">MySQL</a></li>
+ <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
+ <li><a href="http://www.zend.com/">Zend Technologies</a></li>
+</ul>
 <h3>Community</h3>
-&nbsp; <a href="http://www.devnetwork.net/">PHP Developers Network</a><br />
-&nbsp; <a href="http://www.linuxfund.org/">LinuxFund.org</a><br />
-&nbsp; <a href="http://www.osdn.org/">OSDN</a><br />
+<ul class="simple">
+ <li><a href="http://www.devnetwork.net/">PHP Developers Network</a></li>
+ <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
+ <li><a href="http://www.osdn.org/">OSDN</a></li>
+</ul>
 
 <h3>Syndication</h3>
 <p>
@@ -93,28 +101,24 @@ $SIDEBAR_DATA = '
  <a href="http://bugs.php.net/">bug system</a>.
 </p>';
 
-// Possible mirror provider logo
-// image types in priority order
+$MIRROR_IMAGE = '';
+
+// Iterate through possible mirror provider logo types in priority order
 $types = array("gif", "jpg", "png");
-
-// Default right sidebar
-$RSIDEBAR_DATA = '';
-
-// Go through all possible types
 while (list(,$ext) = each($types)) {
 
     // Check if file exists for this type
     if (file_exists("backend/mirror." . $ext)) {
 
         // Add text to rigth sidebar
-        $RSIDEBAR_DATA .= "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
+        $MIRROR_IMAGE = "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
 
         // Create image HTML code
         $img = make_image(
             'mirror.' . $ext,
             htmlspecialchars(mirror_provider()),
-            false,
-            false,
+            FALSE,
+            FALSE,
             'backend',
             0
         );
@@ -127,78 +131,16 @@ while (list(,$ext) = each($types)) {
         }
 
         // End mirror specific part
-        $RSIDEBAR_DATA .= make_link(mirror_provider_url(), $img) .
-                          '</div><br /><hr />';
+        $MIRROR_IMAGE .= make_link(mirror_provider_url(), $img) .
+                         "</div><br /><hr />\n";
 
         // We have found an image
         break;
     }
 }
 
-// Read in events CSV file
-$fp = @fopen("backend/events.csv", "r");
-
-// If we were able to open the file
-if ($fp) {
-
-    // Current month number, current category and categories list
-    $cm = $ccat = 0;
-    $cats = array('unknown', 'User Group Events', 'Conferences', 'Training');
-
-    // Event duplication check hash
-    $seen = array();
-
-    $RSIDEBAR_DATA .= '<h3>Upcoming Events <a href="submit-event.php">[add]</a></h3>';
-
-    // While we can read the events file
-    while (true) {
-
-        // Get information event elements from file
-        $elems = fgetcsv($fp, 8192);
-        if($elems === false) { break; }
-        list($d, $m, $y, $ccode, $desc, $id, , , , , , , $cat) = $elems;
-
-        // Fgetcvs() returns an array with a single null element
-        // for a blank line, which we need to skip
-        if ($d === NULL) { continue; }
-
-        // If the month number changed
-        if ($cm != (int) $m) {
-
-            // Update current month information
-            $cm = (int) $m;
-
-            // Start month with a header
-            $RSIDEBAR_DATA .= '<h4 class="eventmonth">' .
-                              strftime('%B', mktime(12, 0, 0, $cm, $d, $y)) .
-                              "</h4>\n";
-
-            // We have not seen any events in this month
-            $seen = array();
-        }
-
-        // Start new category with a category header
-        if ($ccat != (int) $cat) {
-            $RSIDEBAR_DATA .= '<h4>' . $cats[$cat] . '</h4>';
-            $ccat = $cat;
-        }
-        
-        // There is no event with this description in this month already seen
-        if (!isset($seen[$desc])) {
-            
-            // Add event to sidebar
-            $RSIDEBAR_DATA .= "<span class=\"event_$ccode\">$d. <a href=\"cal.php?id=$id\">" .
-                              htmlspecialchars(stripslashes($desc)) .
-                              "</a></span><br />\n";
-            
-            // Set seen flag
-            $seen[$desc] = TRUE;
-        }
-    }
-
-    // Close file (all events displayed)
-    fclose($fp);
-}
+// Prepend mirror image to sidebar text
+$RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
 
 // Run the boldEvents() function on page load
 $ONLOAD = "boldEvents(); searchHistory();";
@@ -209,7 +151,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right")); ?>
+<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
 
 <h1>Active Awards 2003 Winners</h1>
 
@@ -263,7 +205,7 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php print_link("http://www.php-mag.net/", make_image("news/php-mag.gif", "PHP Magazine", "right")); ?> 
+<?php news_image("http://www.php-mag.net/", "php-mag.gif", "PHP Magazine"); ?> 
 
 <h1>PHP Magazine web site now with daily news</h1>
 
@@ -308,7 +250,7 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "right")); ?> 
+<?php news_image("http://www.phparch.com/", "phpa_logo_small.gif", "php|architect"); ?> 
 
 <h1>php|architect now in print</h1>
 
@@ -323,7 +265,7 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php print_link("http://www.linuxtag.org/2003/en/index.html", make_image("news/linuxtag2003.gif", "LinuxTag", "right") ); ?>
+<?php news_image("http://www.linuxtag.org/2003/en/index.html", "linuxtag2003.gif", "LinuxTag"); ?>
 
 <h1>PHP @ LinuxTag</h1>
 <p>
@@ -386,7 +328,7 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
+<?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>PHP Usage Survey</h1>
 <p>
@@ -401,7 +343,7 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php print_link("http://www.phpconference.de/2003/index_en.php", make_image("news/international_conference_2003.gif", "International PHP Conference", "right") ); ?>
+<?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
 
 <h1>International PHP Conference 2003</h1>
 <p>
