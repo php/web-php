@@ -11,7 +11,7 @@ examples you can try out:
  <li><a href="http://php.net/it/echo">http://php.net/it/echo</a></li>
  <li><a href="http://php.net/imap">http://php.net/imap</a></li>
  <li><a href="http://php.net/downloads">http://php.net/downloads</a></li>
- <li><a href="http://php.net/searchforthis">http://php.net/searchterm</a></li>
+ <li><a href="http://php.net/searchterm">http://php.net/searchterm</a></li>
 </ul>
 </p>
 
