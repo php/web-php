@@ -13,9 +13,9 @@ site_header("Annonce de publication de PHP 4.3.7");
 L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
 la publication de <a href="/downloads.php">PHP 4.3.7</a>. C'est une version 
 de maintenance, destin&eacute;e &agrave; corriger des bogues non-critiques,
-corriger une vulnérabilité de validation dans les fonctions escapeshellcmd() et
-escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encouragés
-à changer de versions aussitôt que possible.
+corriger une vuln&eacute;rabilit&eacute; de validation dans les fonctions escapeshellcmd() et
+escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encourag&eacute;s
+à changer de version aussit&ocirc;t que possible.
 </p>
 
 <h2>Version de correction de bogues</h2>
@@ -25,11 +25,11 @@ escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encour
 </p>
 
 <ul>
- <li>La bibliothèque GD est maintenant en version 2.0.23.</li>
- <li>Correction d'un bogue qui empéchait la compilation de GD avec FreeType 2.1.0-2.1.2.</li>
- <li>Correction d'un problème de sécurité thread avec l'identifiant de connexion informix.</li>
- <li>Correction de la résolution de chemin relatifs avec glob() sous Windows.</li>
- <li>Correction des entités HTML pour les caractèrs grecs.</li>
+ <li>La biblioth&eacute;que GD est maintenant en version 2.0.23.</li>
+ <li>Correction d'un bogue qui emp&ecirc;chait la compilation de GD avec FreeType 2.1.0-2.1.2.</li>
+ <li>Correction d'un probl&eacute;me de s&eacute;curit&eacute; thread avec l'identifiant de connexion informix.</li>
+ <li>Correction de la r&eacute;solution de chemin relatifs avec glob() sous Windows.</li>
+ <li>Correction des entit&eacute;s HTML pour les caract&eacute;res grecs.</li>
  <li>Correction d'un bug qui causait un crash avec Apache 2.0.49.</li>
  <li>Correction de nombreux crashs avec PostGreSQL, CPDF et GD.</li>
 
