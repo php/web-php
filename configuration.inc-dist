@@ -1,4 +1,4 @@
-<?
+<?php
 # you might need to change this for mirrors not on their own virtual host
 $root_url = "/";
 $base_url = ereg_replace("[^/]*\$","",$PHP_SELF);
