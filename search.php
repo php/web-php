@@ -93,7 +93,7 @@ if (isset($pattern)) {
         // We cannot redirect to anywhere, absolute failure
         if (is_primary_site()) {
             commonHeader("Search Service");
-            echo "<b>The search service is currently not working</b>.<br />";
+            echo "<b>The search service is currently not available.</b>.<br />";
             echo "Please try later.\n";
             commonFooter();
             exit();
@@ -194,7 +194,7 @@ if (isset($pattern)) {
         
         // We have matches, so grab the info from the output
         // (the template for this is phphead.html in Mirrors-htdig.tgz)
-        list($dc, $dc, $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
+        list(, , $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
         
         // String to carry on the search parameters in prev/next URLs
         $baseurl = htmlentities($PHP_SELF . "?pattern=$words&show=$show&base=$base");
@@ -284,13 +284,13 @@ else {
   <td>
 <? if (!isset($show)) { $show = 'quickref'; } ?>
    <select name="show">
-    <option value="quickref" <? echo ($show=='quickref') ? 'selected':''?>>function list
-    <option value="nosource" <? echo ($show=='nosource') ? 'selected':''?>>whole site
-    <option value="manual" <?   echo ($show=='manual')   ? 'selected':''?>>online documentation
-    <option value="bugdb" <?    echo ($show=='bugdb')    ? 'selected':''?>>bug database
-    <option value="maillist" <? echo ($show=='maillist') ? 'selected':''?>>general mailing list
-    <option value="devlist" <?  echo ($show=='devlist')  ? 'selected':''?>>developer mailing list
-    <option value="phpdoc" <?   echo ($show=='phpdoc')   ? 'selected':''?>>documentation mailing list
+    <option value="quickref" <?  echo ($show=='quickref') ? 'selected':''?>>function list
+    <option value="wholesite" <? echo ($show=='nosource') ? 'selected':''?>>whole site
+    <option value="manual" <?    echo ($show=='manual')   ? 'selected':''?>>online documentation
+    <option value="bugdb" <?     echo ($show=='bugdb')    ? 'selected':''?>>bug database
+    <option value="maillist" <?  echo ($show=='maillist') ? 'selected':''?>>general mailing list
+    <option value="devlist" <?   echo ($show=='devlist')  ? 'selected':''?>>developer mailing list
+    <option value="phpdoc" <?    echo ($show=='phpdoc')   ? 'selected':''?>>documentation mailing list
    </select><br />
   </td>
  </tr>
