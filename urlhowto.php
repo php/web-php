@@ -9,7 +9,7 @@ $SIDEBAR_DATA='
  We have many kind of URL shortcuts. Here are some
  examples you can try out:
 </p>
-<ul>
+<ul class="simple">
  <li><a href="'.$MYSITE.'echo">'.$MYSITE.'echo</a></li>
  <li><a href="'.$MYSITE.'it/echo">'.$MYSITE.'it/echo</a></li>
  <li><a href="'.$MYSITE.'imap">'.$MYSITE.'imap</a></li>
@@ -31,7 +31,7 @@ $SIDEBAR_DATA='
 </p>
 ';
 
-commonHeader("URL Howto");
+site_header("URL Howto");
 
 ?>
 
@@ -140,4 +140,4 @@ commonHeader("URL Howto");
  <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
