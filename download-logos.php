@@ -103,7 +103,7 @@ function random_bgcolor($min, $max)
     <li>250 x 134 pixels</li>
     <li>white background</li>
     <li>large scale for presentations, etc.</li>
-    <li><a href="/images/logos/php-big.tif">TIF format</a>
+    <li><a href="/images/logos/php-big.tif">TIF format</a></li>
    </ul>
   </td>
  </tr>
@@ -292,7 +292,7 @@ function random_bgcolor($min, $max)
      256 colour, and true colour formats ...
      all in one .ICO file
     </li>
-    <li><a href="/images/logos/php.ico">ICO format</a>
+    <li><a href="/images/logos/php.ico">ICO format</a></li>
    </ul>
   </td>
  </tr>
@@ -309,7 +309,7 @@ function random_bgcolor($min, $max)
     <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
     <li>32x32 and 16x16 sizes, in true colour format... all in one .ICO file</li>
     <li>these icons are made by Gonzalo de la Pea</li>
-    <li><a href="/images/logos/php_file.ico">ICO format</a>
+    <li><a href="/images/logos/php_file.ico">ICO format</a></li>
    </ul>
   </td>
  </tr>
@@ -329,7 +329,7 @@ function random_bgcolor($min, $max)
      and true colour formats... all in one .ICO file
     </li>
     <li>these icons are made by Jonathan Metillon</li>
-    <li><a href="/images/logos/php_xpstyle.ico">XP ICO format</a>
+    <li><a href="/images/logos/php_xpstyle.ico">XP ICO format</a></li>
    </ul>
   </td>
  </tr>
@@ -344,7 +344,10 @@ function random_bgcolor($min, $max)
     <li>100 x 58 pixels</li>
     <li>"Powered by Zend" logo</li>
     <li>solid black background</li>
-    <li><a href="/images/logos/zend-powered-by.gif">GIF format</a> | <a href="/images/logos/zend-powered-by.png">PNG format</a></li>
+    <li>
+     <a href="/images/logos/zend-powered-by.gif">GIF format</a> |
+     <a href="/images/logos/zend-powered-by.png">PNG format</a>
+    </li>
    </ul>
   </td>
  </tr>
