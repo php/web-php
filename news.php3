@@ -50,10 +50,18 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+
+<? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://www.webreview.com/wr/pub/Databases","June 22, 1998"); ?>
+"The substance of the Web is more and more residing in databases, and there are a variety of methods used to
+generate Web pages.  This year, we selected a pair of "free software" tools that
+work together quite nicely as a platform for building dynamic content. The award is also a tribute to the Open Source
+initiative; both products are used, developed and supported by interlocking communities of people on the Net."
+<? endEntry();?>
+
 <? makeEntry("Dave Garaffa at it again!","PHP Killer Apps & Huge Hit Usage!","http://browserwatch.internet.com/news/story/news-980610-7.html","June 10, 1998"); ?>
 "After my initial story I got a wave of email providing links to PHP enabled web apps. Here is a short list."
-
 <? endEntry();?>
+
 <? makeEntry("Dave Garaffa sees the light!","Notes from a Webmaster","http://browserwatch.internet.com/news/story/news-980608-7.html","June 8, 1998"); ?>
 "Boy what a weekend I've had! Why you ask? Well I found PHP3
 on Friday!! For those who already know about PHP3 now you
