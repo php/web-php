@@ -13,7 +13,8 @@ $langs = array(
   'kr'  => 'Korean',
   'jp'  => 'Japanese',
   'cn'  => 'Traditional Chinese',
-  'pt'  => 'Portugese'
+  'pt'  => 'Portugese',
+  'se'  => 'Sweedish'
 );
 
 // Book types
@@ -790,7 +791,25 @@ you are helping to support PHP development!
 Choose one category and/or a language from the ones below to go to
 a listing of books about that subject.
 </p>
-<?php } ?>
+<?php }
+
+echo "<p><br>Browse our listing of books:";
+
+// Jumplist with types and languages
+echo "<ul>\n";
+foreach ($books as $btype => $book_list) {
+  echo "  <li>" . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books total]") . "\n";
+  $book_stat = bookStats($books, $btype);
+  echo "    <ul>";
+  foreach ($book_stat as $blang => $number) {
+    echo "      <li>" . make_link("/books.php?type=$btype&lang=$blang", "in " . $langs[$blang] . " [$number]") . "</li>\n";
+  }
+  echo "    </ul>\n  </li>\n";
+  
+}
+echo '</ul>';
+
+?>
 
 <p>
 There may be more books available that we don't know of yet! You can search
@@ -835,25 +854,9 @@ about
 </form>
 </p>
 
-<p><br>Jump to:
-
 <?php
 
-// Jumplist with types and languages
-echo "<ul>\n";
-foreach ($books as $btype => $book_list) {
-  echo "  <li>" . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books total]") . "\n";
-  $book_stat = bookStats($books, $btype);
-  echo "    <ul>";
-  foreach ($book_stat as $blang => $number) {
-    echo "      <li>" . make_link("/books.php?type=$btype&lang=$blang", "in " . $langs[$blang] . " [$number]") . "</li>\n";
-  }
-  echo "    </ul>\n  </li>\n";
-  
-}
-echo '</ul>';
-
-// If the type is set, printing out books
+// If the type is set, print out the books
 if (isset($type)) {
 
   if (!isset($lang)) { $suffix = ' in all languages'; }
