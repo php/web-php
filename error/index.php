@@ -64,9 +64,12 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 }
 
 // prepare  URI for manual page and PHP page shortcuts
+$error_notes = $REDIRECT_REDIRECT_ERROR_NOTES
+             ? $REDIRECT_REDIRECT_ERROR_NOTES
+             : $REDIRECT_ERROR_NOTES;
 $uri = substr(
-    $REDIRECT_REDIRECT_ERROR_NOTES,
-    strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1
+    $error_notes,
+    strpos($error_notes,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1
 );
 
 // drop out leading slash
