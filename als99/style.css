@@ -1,0 +1,18 @@
+/* style.css: CSS1 style sheet for htmlpres HTML presentation template.
+   Eric Krock, Netscape Communications, 10 July 1997.  */
+
+#speakernotessection {position:absolute; visibility:hidden;}
+#tutorialsection {position:relative; visibility:hidden;}
+
+.example {
+    font-family: tahoma, verdana, arial, helvetica, sans-serif;
+    font-size: 16;
+    color: #000000;
+    background: #F0F0F0;
+    padding: 10px;
+    margin: 5px;
+}
+
+.message {
+    font-size: 12pt;
+}
