@@ -45,12 +45,12 @@ $formats = array(
  "" => array("View Online", "view", false),
  "html/" => array("View Online (plain)", "view", false),
  "bigmanual.html.gz" => array("Single HTML", "html.gz", true),
- "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb", true),
- "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb", true),
- "manual.pdf" => array("PDF", "pdf", true),
  "manual.txt.gz" => array("Plain text", "txt.gz", true),
  "manual.tar.gz" =>  array("Many HTML files", "tar.gz", true),
  "manual.zip" => array("Many HTML files", "zip", true),
+ "manual.pdf" => array("PDF", "pdf", true),
+ "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb", true),
+ "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb", true),
  "manual.chm" => array("Windows HTML Help", "chm", true)
 );
 ?>
