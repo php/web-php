@@ -75,6 +75,7 @@ in Stuttgart, Germany, with <a href="http://www.linuxtag.org/2001/english/showit
 <? echo hdelim(); ?>
 
 
+<!--
 <h1>
 Mailing Lists temporarily unavailable
 </h1>
@@ -94,6 +95,7 @@ so.
 </p>
 
 <? echo hdelim(); ?>
+-->
 
 
 <?/* move this entry to the top when you update it! */?>
