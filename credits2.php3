@@ -4,6 +4,7 @@ commonHeader("PHP 3.0 Development Credits");
 
 $KICKS=(($NS4 || $IE4) && !$DISABLE_KICKOUTS);
 
+$names_per_line = 3;
 $CORE = array(
 	"rasmus"	=> array ("Rasmus Lerdorf","rasmus@php.net"),
 	"andi"	=> array ("Andi Gutmans","andi@php.net"),
@@ -81,16 +82,30 @@ endif; ?>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 
+<? if ($KICKS): ?>
+<table cellppadding="5" cellspacing="10">
+<? endif; ?>
 <?
+$i=0;
 while (list($key,$value)=each($CORE)):
+	if ($KICKS && $i==0) {
+		print "<tr>\n";
+	}
 	if ($KICKS):
-		echo "<FONT SIZE=+1><A HREF=\"javascript:popUp('".$key."Kick',true);\">".$value[0]."</A></FONT><BR>\n";
+		echo "<TD align=\"center\"><FONT SIZE=+1><A HREF=\"javascript:popUp('".$key."Kick',true);\">".$value[0]."</A></FONT></TD>\n";
 	else:
 		makeName($value[0],$value[1],1);
 		makeFile($key);
 	endif;
+	if ($KICKS && $i%3 == 2) {
+		print "</tr>\n";
+	}
+	$i++;
 endwhile;
 ?>
+<? if ($KICKS): ?>
+</table>
+<? endif; ?>
 
 </TD><TD></TD></TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
