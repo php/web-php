@@ -20,6 +20,7 @@ echo "\n<!--$MYSITE-->\n";
   This incompatability is due to the full variable reference  within quoted strings feature added in Zend.</li>
   <li>The function short_tags() no longer works.  In future betas, there will be alternatives to this function, but currently, there is no way to change PHP's short tags behavior in runtime, only by using configuration parameters (.htaccess variables would work well).</li>
   <li>You can't used PHP3 dynamic extensions (php3_*.dll on Windows) with PHP4.</li>
+  <li>The string "0" is now considered empty. This is known to have an effect on phpMyAdmin.</li>
 </ul>
 
 <p>If any more incompatibilities are discovered, we will add them here.</p>
