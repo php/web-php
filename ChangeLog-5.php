@@ -16,24 +16,24 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Updated PCRE to provide better error handling in certain cases. (Andrei)</li>
 <li>Changed doc comments to require a single white space after '/**'. (Marcus)</li>
 <li>Fixed strip_tags() to correctly handle '\0' characters. (Stefan)</li>
-<li>Fixed bug #29019 (Database not closing). (Marcus)</li>
-<li>Fixed bug #29008 (array_combine() does not handle non-numeric/string keys). (Ilia)</li>
-<li>Fixed bug #28999 (fixed behaviour of exec() to work as it did in 4.X). (Ilia)</li>
-<li>Fixed bug #28895 (ReflectionClass::isAbstract always returns false). (Marcus)</li>
-<li>Fixed bug #28868 (Internal filter registry not thread safe). (Sara)</li>
-<li>Fixed bug #28851 (call_user_func_array has typo in error message). (Marcus)</li>
-<li>Fixed bug #28831 (ArrayObject::offsetGet() does the work of offsetUnset()). (Marcus)</li>
-<li>Fixed bug #28822 (ArrayObject::offsetExists() works inverted). (Marcus)</li>
-<li>Fixed bug #28789 (ReflectionProperty getValue() fails on public static members). (Marcus)</li>
-<li>Fixed bug #28771 (Segfault when using xslt and clone). (Rob)</li>
-<li>Fixed bug #28751 (SoapServer does not call _autoload()). (Dmitry)</li>
-<li>Fixed bug #28739 (array_*diff() and array_*intersect() not clearing the fci cache before work). (Andrey)</li>
-<li>Fixed bug #28721 (appendChild() and insertBefore() unset DOMText).(Rob)</li>
-<li>Fixed bug #28702 (SOAP does not parse WSDL service address correctly). (Dmitry)</li>
-<li>Fixed bug #28699 (Reflection api bugs). (Marcus)</li>
-<li>Fixed bug #28694 (ReflectionExtension::getFunctions() crashes PHP). (Marcus)</li>
-<li>Fixed bug #28512 (Allocate enough space to store MSSQL data). (Frank)</li>
-<li>Fixed bug #28325 (Circular references not properly serialised). (Moriyoshi)</li>
+<li><?php bugfix(29019); ?> (Database not closing). (Marcus)</li>
+<li><?php bugfix(29008); ?> (array_combine() does not handle non-numeric/string keys). (Ilia)</li>
+<li><?php bugfix(28999); ?> (fixed behaviour of exec() to work as it did in 4.X). (Ilia)</li>
+<li><?php bugfix(28895); ?> (ReflectionClass::isAbstract always returns false). (Marcus)</li>
+<li><?php bugfix(28868); ?> (Internal filter registry not thread safe). (Sara)</li>
+<li><?php bugfix(28851); ?> (call_user_func_array has typo in error message). (Marcus)</li>
+<li><?php bugfix(28831); ?> (ArrayObject::offsetGet() does the work of offsetUnset()). (Marcus)</li>
+<li><?php bugfix(28822); ?> (ArrayObject::offsetExists() works inverted). (Marcus)</li>
+<li><?php bugfix(28789); ?> (ReflectionProperty getValue() fails on public static members). (Marcus)</li>
+<li><?php bugfix(28771); ?> (Segfault when using xslt and clone). (Rob)</li>
+<li><?php bugfix(28751); ?> (SoapServer does not call _autoload()). (Dmitry)</li>
+<li><?php bugfix(28739); ?> (array_*diff() and array_*intersect() not clearing the fci cache before work). (Andrey)</li>
+<li><?php bugfix(28721); ?> (appendChild() and insertBefore() unset DOMText).(Rob)</li>
+<li><?php bugfix(28702); ?> (SOAP does not parse WSDL service address correctly). (Dmitry)</li>
+<li><?php bugfix(28699); ?> (Reflection api bugs). (Marcus)</li>
+<li><?php bugfix(28694); ?> (ReflectionExtension::getFunctions() crashes PHP). (Marcus)</li>
+<li><?php bugfix(28512); ?> (Allocate enough space to store MSSQL data). (Frank)</li>
+<li><?php bugfix(28325); ?> (Circular references not properly serialised). (Moriyoshi)</li>
 </ul>
 
 <hr />
