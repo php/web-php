@@ -207,7 +207,7 @@ if (isset($in) && $process) {
   <td>
    <select name="in[category]" width="20">
 <?php
-	$cat = array("- Select a category -", "regional", "national", "international");
+	$cat = array("- Select a category -", "User Group Event", "Conference", "Training");
         display_options($cat,$in['category']);
 ?>
    </select>
