@@ -222,6 +222,7 @@ $uri_aliases = array (
     "registerglobals"  => "security.globals",
     "manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
     "gd"               => "image",
+	"php5"             => "language.oop5",
 
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
