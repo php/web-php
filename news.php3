@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "PHP/MySQL Tutorial", "by Graeme Merrall","http://www.hotwired.com/webmonkey/99/21/index2a.html?tw=frontdoor", "May 19, 1999");?>
+A three-lesson tutorial on using PHP and MySQL together on Windows
+and Unix systems.
+<? endEntry(); ?>
+
 <? makeEntry( "A fun thing happened on the way to the Phorum", "by Joe Barr","http://www.linuxworld.com/linuxworld/lw-1999-05/lw-05-vcontrol2.html", "May 12, 1999");?>
 Slackware.com uses it. But have you heard of the freely available
 conferencing software called Phorum? Joe tells the story of Phorum,
