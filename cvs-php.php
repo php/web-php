@@ -263,7 +263,7 @@ EOT;
 <form action="/cvs-php.php" method="post">
 <table border="0" class="standard">
 <tr>
- <th class="subr">Full Name:</td>
+ <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
       class="max" value="<?php echo clean($_POST['fullname']);?>" /></td>
 </tr>
@@ -282,7 +282,7 @@ EOT;
       class="max" value="<?php echo clean($_POST['id']);?>" /></td>
 </tr>
 <tr>
- <th class="subr">Requested Password: </th>
+ <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
       class="max" value="<?php echo clean($_POST['password']);?>" /></td>
 </tr>
