@@ -325,6 +325,7 @@ right away.</blockquote>
 	site("Alabanza","www.alabanza.com");
 	site("BestHost","besthost.net");
 	site("Cable & Wireless ECRC GmBH","www.ecrc.de");
+	site("Claripoint","www.claripoint.com");
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("Digital Alchemy","www.digalch.com");
@@ -650,7 +651,7 @@ right away.</blockquote>
 	site("Cybersource Australia","www.cyber.com.au");
 	site("ego Software","www.ego-software.com");
 	site("Electronic Spider","www.espider.com");
-	site("Eraylis Technologies", "http://www.bluebrix.com/eraylis/Eraylis.html"); # Web Dev
+	site("Eraylis Technologies", "www.bluebrix.com/eraylis/Eraylis.html"); # Web Dev
 	site("Espada Ltd.","www.espadanet.com");
 	site("FUMOT","www.fumot.com");
 	site("GreyZone","www.greyzone.com");
