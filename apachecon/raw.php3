@@ -255,7 +255,7 @@
    used by reading mysql.c.  The functions you should look at are:
    php3_mysql_do_connect()
    php3_mysql_connect()
-   php3_mysql_connect()
+   php3_mysql_pconnect()
 
    The general idea of persistence modules is this:
    1.  Code all of your module to work with the regular resource list
@@ -288,10 +288,10 @@
    to be useless for you when trying to implement a persistent module.
    Typically, one would want to use the fact that the persistent resource
    list is really a hash table.  For instance, in the MySQL/mSQL modules,
-   when there's a connect() call (persistent connect), the function
+   when there's a pconnect() call (persistent connect), the function
    builds a string out of the host/user/passwd that were passed to the
    function, and hashes the SQL link with this string as a key.  The next
-   time someone calls a connect() with the same host/user/passwd, the
+   time someone calls a pconnect() with the same host/user/passwd, the
    same key would be generated, and the function would find the SQL link
    in the persistent list.
 

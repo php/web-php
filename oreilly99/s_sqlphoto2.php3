@@ -13,7 +13,7 @@
     if(!isset($PHP_AUTH_USER)) {
         authenticate();
     } else {
-        mysql_connect("localhost") or die("DB Unavailable");
+        mysql_pconnect("localhost") or die("DB Unavailable");
         mysql_select_db("mydb") or die("Unable to select database");
         $id=strtolower($PHP_AUTH_USER);
         $query = mysql_query("select * from users where id=\'$id\' and password=\'$PHP_AUTH_PW\'");
