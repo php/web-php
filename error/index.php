@@ -14,6 +14,7 @@
 
 // Ensure that our environment is set up
 include_once 'prepend.inc';
+include_once 'loadavg.inc';
 
 // Get URI for this request (without the leading slash)
 // See langchooser.inc for more info on STRIPPED_URI
@@ -203,7 +204,6 @@ if (isset($external_redirects[$URI])) {
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
-include_once 'loadavg.inc';
 include_once "manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) { mirror_redirect($try); }
