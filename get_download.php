@@ -84,8 +84,8 @@ foreach ($MURLS as $murl) {
 
     // Print out mirror site download link
     echo '<td><small>';
-    $ps = strpos($murl, '//') + 2;
-    print_link('/do_download.php?mr=' . urlencode($murl) . '&df=' . urlencode($df), substr($murl, $ps, -1));
+    $mirrorname = substr($murl, strpos($murl, '//') + 2, -1)
+    print_link("/get/$df/from/$mirrorname", $mirrorname);
     echo '</small><br /></td>' . "\n";
 
     // Print out mirror provider's name
