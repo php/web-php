@@ -9,7 +9,12 @@ commonHeader("Thanks");
 
 <p>
 <?php print_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS"); ?> provides
-DNS services for the php domains.
+DNS services for the PHP domains.
+</p>
+
+<p>
+<?php print_link("http://www.directi.com/", "Directi"); ?> provides
+IP address to country lookup information.
 </p>
 
 <p>
