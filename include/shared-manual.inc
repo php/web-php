@@ -99,6 +99,41 @@ function navigationBar($title) {
     }
 }
 
+function manualPrintNote(const $row, $num) {
+       if ($num % 2 == 0) { $color = 'turquoise'; }
+       else { $color = 'skyblue'; }
+       echo "<TR><TD bgcolor=$color>";
+        # turn email address into mailto: links (roughly)
+       echo ereg_replace("([^;[:space:]]+@[^&[:space:]]+)", "<A href=\"mailto:\\1\">\\1</A>", $row[user]);
+       echo "</TD><TD bgcolor=$color>$row[note]</TD></TR>\n";
+}
+
+function manualUserNotes($title) {
+	global $MYSITE;
+	if(strstr($MYSITE,"ca.php.net")) {
+		$host = 'localhost'; $user = ''; $pass = '';
+		$db_id = mysql_pconnect($host, $user, $pass);
+
+		$result_id = mysql_db_query("php3","SELECT * FROM note WHERE sect = '$title' ORDER BY id", $db_id);
+	} else $result_id = 0;
+	echo '<FORM method="POST" action="http://ca.php.net/manual/add-note.php3">';
+	echo '<TABLE width="100%">'."\n";
+	if ($result_id && mysql_num_rows($result_id) > 0) {
+		$num = 0;
+		while ($result = mysql_fetch_array($result_id)) {
+			manualPrintNote($result, $num++);
+		}
+	}
+	echo "<TR><TD colspan=2 align=right>";
+	echo '<INPUT type=hidden name="sect" value="'.$title.'">';
+	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
+	$back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
+	echo '<INPUT type=hidden name="redirect" value="'.$back_url.'">';
+	echo '<INPUT type=submit value="Add Note">';
+	echo "<SMALL><A href=\"/manual/about-notes.php3\">About</A></SMALL>\n";
+	echo "</TD></TR></TABLE></FORM>\n";
+}
+
 function manualHeader($title) {
 	global $FRAMEMODE, $HTDIG;
 	commonHeader("Manual: $title");
@@ -110,6 +145,7 @@ function manualHeader($title) {
 function manualFooter($title) {
 	global $HTDIG;
 	if (!$HTDIG):
+               manualUserNotes($title);
 		navigationBar($title);
 	endif;
 	commonFooter($title);
