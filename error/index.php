@@ -62,6 +62,25 @@ $uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES
 
 if ($uri[0] == "/") $uri = substr($uri,1);
 
+# shortcuts for PHP and manual pages
+$uri_aliases = array (
+
+    # PHP page shortcuts
+	"download"      => "downloads",
+	"documentation" => "docs",
+
+	# manual shortcuts
+	"ini"     => "configuration",
+	"install" => "installation",
+	"intro"   => "introduction"
+
+);
+
+# if the user typed an aliased URL, transform it
+if (isset($uri_aliases[$uri]])) {
+    $uri = $uri_aliases[$uri];
+}
+
 # handle common page shortcuts, like docs, links, support, etc.
 if (file_exists("$DOCUMENT_ROOT/$uri.php")) {
     header("Location: http://$SERVER_NAME/$uri.php");
@@ -74,9 +93,15 @@ require "manual-lookup.inc";
 if(strchr($uri,'/')) {
 	list($lang,$function) = explode('/',$uri,2);
 	$function = strtolower($function);
+
+    if (isset($uri_aliases[$function]])) {
+        $function = $uri_aliases[$function];
+    }
+
 	$lang = strtolower($lang);
+
 } else {
-        $function = strtolower($uri);
+    $function = strtolower($uri);
 }
 
 $try = find_manual_page($lang, $function);
