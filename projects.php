@@ -97,7 +97,7 @@ You need a PHP-enabled web server (or CGI PHP) and MySQL 3.22 or later to
 get NeoBoard working.
 <? endEntry();?>
 
-<? makeEntry("Ministry of Truth","tomato.nvgc.vt.edu/~hroberts/mot/","Hal Roberts","hroberts@alumni.princeton.edu"); ?>
+<? makeEntry("Ministry of Truth","http://mot.sourceforge.net/","Hal Roberts","hroberts@storystreet.com"); ?>
 The Ministry of Truth is a web-based job, equipment, and software
 tracking system that works via PHP and MySQL.  MOT is a handy way for
 an IT support department to keep track of its support calls in a way
@@ -116,7 +116,7 @@ A PHP based secure email reading interface for IMAP based servers.
 <? endEntry();?>
 <? */ ?>
 
-<? makeEntry("PHP Base Library","phplib.netuse.de","Boris Erdman & Kristian Köhntopp","kk@netuse.de"); ?>
+<? makeEntry("PHP Base Library","phplib.netuse.de","Boris Erdmann & Kristian Köhntopp","kk@netuse.de"); ?>
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
 <? endEntry();?>
 
