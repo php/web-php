@@ -15,6 +15,54 @@ site_header("News Archive - 2003");
 
 <hr />
 
+<?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
+
+<h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
+<p>
+ <span class="newsdate">[11-Oct-2003]</span>
+ The <a href="http://www.apachecon.com/">official conference
+ of the Apache Software Foundation</a> will be held November 16-20,
+ 2003 in Las Vegas. More than 60 sessions highlight core and
+ next-generation Apache server tools, offering a wide
+ range of beginner, intermediate and advanced sessions.
+ Learn firsthand the latest developments in Apache, as
+ well as key open source projects, including PHP, Perl,
+ XML, Java, MySQL, and WebDAV.
+</p>
+
+<hr />
+
+<?php news_image("http://www.phpcruise.com/", "phpcruise.png", "php|cruise"); ?>
+
+<h1>php|cruise: The World's First Ever PHP-only Cruise</h1>
+<p>
+ <span class="newsdate">[20-Sep-2003]</span>
+  The publishers of php|architect have announced <a
+  href="http://www.phparch.com/cruise/">php|cruise</a>, a five-day cruise to the
+  Bahamas Islands featuring a lot of fun and over thirty different
+  sessions dedicated to PHP from well known experts like Wez Furlong, Alan
+  Knowles and John Coggeshall. 
+</p>
+<p>
+ The cruise will take place March 1st to 5th, 2004. The organizers have
+ <a href="http://www.phparch.com/cruise/contest/">announced a contest</a> to
+ give away one free place on the cruise.
+</p>
+
+<hr />
+
+<?php news_image("http://www.zend.com/zend/php_survey_results.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>PHP Usage Survey Results</h1>
+<p>
+ <span class="newsdate">[18-Sep-2003]</span>
+ <a href="http://www.zend.com/zend/php_survey_results.php">Check out</a> the results
+ of the PHP Usage Survey conducted by Zend Technologies, including feedback
+ from thousands of PHP users around the world.  Thanks for all who contributed!
+</p>
+
+<hr />
+
 <?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
 
 <h1>PHP Manual CHM Edition - 12th build</h1>
