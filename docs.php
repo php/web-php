@@ -100,8 +100,6 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 
 <li><a href="/version4/win32build.php">Win32 build instructions</a></li>	
 
-<li>Read the <a href="/version4/migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
-<li>Read about the (very few) <a href="/version4/incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
@@ -117,7 +115,6 @@ with the development of PHP, read this.
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
-<li>Read what has <a href="changes.php3">changed since PHP/FI 2.0</a>
 </ul>
 
 
