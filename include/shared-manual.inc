@@ -269,9 +269,21 @@ function sendManualHeaders($charset,$lang) {
     header("Content-language: $lang");
 }
 
-// Print out manual page header
-function manualHeader($title,$id="") {
+// Print out manual page header.
+function manualHeader()
+{
     global $PRINT_PAGE;
+    
+    // XSL sheets provide params in [id, title]
+    // order, while old DSSSL sheets provide them
+    // in [title, id] order
+    $args = func_get_args();
+    if (strpos($args[0], ".php") > 0) {
+        $id = $args[0]; $title = $args[1];
+    } else {
+        $title = $args[0]; $id = $args[1];
+    }
+    
     if ($PRINT_PAGE) {
         manualPrintHeader($title);
     } else {
@@ -283,8 +295,20 @@ function manualHeader($title,$id="") {
 }
 
 // Print out manual footer
-function manualFooter($title,$id="") {
+function manualFooter()
+{
     global $PRINT_PAGE, $PRINT_NOTES;
+
+    // XSL sheets provide params in [id, title]
+    // order, while old DSSSL sheets provide them
+    // in [title, id] order
+    $args = func_get_args();
+    if (strpos($args[0], ".php") > 0) {
+        $id = $args[0]; $title = $args[1];
+    } else {
+        $title = $args[0]; $id = $args[1];
+    }
+    
     if ($PRINT_PAGE) {
         if ($PRINT_NOTES) {
             manualPrintUserNotes($title, $id);
