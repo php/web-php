@@ -249,7 +249,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
 </table>
-</form>
 
 <?php
   if (!$dont_enclose):
