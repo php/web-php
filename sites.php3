@@ -423,6 +423,7 @@ right away.</blockquote>
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
+	site("R U Sure","www.rusure.com");
 	site("Sellit-Here Online","www.sellit-here.com");
 	site("Schneider-electric","www.schneider-electric.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");

@@ -338,6 +338,12 @@ database-enabled Web services
 The Script Formerly Known As PHPMail. As features were added to PHPMail, its name became inaccurate, as it can now do so much more than just mailing form results, including sending an autoresponder, logging to a text file, and logging to a MySQL database. The next version will support validation of email addresses, credit card numbers and U.S. phone numbers. 
 <? endEntry();?>
 
+<? makeEntry("phpDB","http://phpdb.linuxbox.com/","Joe Thong","darkjoe@softhome.net"); ?>
+phpDB is a database wrapper that provides a consistent interface to
+various database servers thus eliminating the need to port PHP software
+to support another database specific server.  Supported database servers
+are MySQL, MSQL, PostgreSQL, Microsoft SQL Server, Sybase.
+<? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
