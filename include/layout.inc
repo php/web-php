@@ -306,22 +306,6 @@ function commonFooter() {
  <tr bgcolor="#333366"><td><?php spacer(1,1);?></td></tr>
  <tr bgcolor="#9999cc">
   <td align="right" valign="bottom">
-   <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);" class="thin">
-   <script language="javascript">
-   <!--
-   function gotomirror(form) {
-     mirror = form.country.options[form.country.selectedIndex].value;
-     if (mirror != 'http://' + window.location.hostname + '/') {
-                 window.location.href = mirror +
-                 window.location.pathname.substring(1) +
-                 window.location.hash +
-                 window.location.search;
-     }
-     return false;
-   }
-   //-->
-   </script>
-   <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>" />
 <?php
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
@@ -332,8 +316,7 @@ function commonFooter() {
 		echo delim();
 	}
 	print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
-      ?>&nbsp;
-   </form>
+?>
   </td>
  </tr>
  <tr bgcolor="#333366"><td><?php spacer(1,1); ?></td></tr>
