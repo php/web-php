@@ -60,7 +60,7 @@ function endEntry() {
 The literal translation of LinuxTag is LinuxDay. This title is a leftover from ancient times, when the event really lasted one day. This year the event occupied the fair in Stuttgart for four whole days, beginning at thurday with a business congress. For those commercially relevant lectures you had to pay. However, a total of over 100 hours of free lectures followed from friday to sunday, addressing the interests of end-users and developers. During all days companies and free software developers showed their Linux-products on an area of 6.000 m². An estimated number of 17.000 people visited the LinuxTag, making it a big success to be repeated next year. 
 <? endEntry(); ?>
 
-<? makeEntry ("Brennpunkt WWW", "by <a href=\"mailto:tobias@dnet.it\"">Tobias Ratschiller</a>",
+<? makeEntry ("Brennpunkt WWW", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>",
     "http://www.heise.de/ix/artikel/2000/07/052/", "June 23, 2000");?>
 (In German.) Maßgeschneidert für das Web: PHP 4.0.  Mit der am 22. Mai freigegebenen Version 4.0 wandelt sich PHP von der Skriptsprache für kleine und mittlere Webanwendungen zur umfangreichen Middleware-Technik.
 <? endEntry(); ?>
