@@ -355,21 +355,21 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <td align="right" valign="bottom">
 <?php
 	print_link('/downloads.php','downloads',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/docs.php', 'documentation', false, 'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/FAQ.php', 'faq', false, 'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/support.php','getting help',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/mailing-lists.php','mailing lists',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('http://bugs.php.net/','reporting bugs',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/sites.php','php.net sites',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/links.php','links',false,'class="small"');
-	echo delim();
+	echo " | ";
 	print_link ('/my.php', 'my php.net', false, 'class="small"');
       ?>&nbsp;
   </td>
@@ -462,15 +462,15 @@ function commonFooter() {
   <td align="right" valign="bottom">
 <?php
 	print_link("/source.php?url=$URL", 'show source', false, 'class="small"');
-	echo delim();
+	echo " | ";
 	print_link('/credits.php', 'credits', false, 'class="small"');
-	echo delim();
+	echo " | ";
 	if (have_stats()) {
 		print_link('/stats/', 'stats', false, 'class="small"');
-		echo delim();
+    	echo " | ";
 	}
 	print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
-        echo "&nbsp;";
+    echo "&nbsp;";
 ?>
   </td>
  </tr>
