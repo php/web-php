@@ -1,7 +1,7 @@
 Country  Mirror Site           Admin                   Email                                     IP/Alias                        Notes
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 at       at.php.net                                                                              192.35.244.50
-au       au.php.net:81                                 webmaster@www.nisu.flinders.edu.au        129.96.218.17                   port 81
+au       au.php.net:81         David Roble             webmaster@www.nisu.flinders.edu.au        129.96.218.17                   port 81
 br       br.php.net                                    accdias@sst.com.br                        200.223.126.4
 ca       ca.php.net            Rasmus Lerdorf          rasmus@lerdorf.on.ca                      207.164.55.5
 ca       php.easydns.com       Colin Viebrock          cmv@privateworld.com                      205.210.42.153
