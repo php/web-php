@@ -71,13 +71,15 @@ PHP 4.2.0 Release Announcement
  two things to use the variable:</p>
 <ol>
  <li>Access the form variable with $_GET['foo']</li>
- <li>Turn register_globals on in php.ini</li>
+ <li>Turn register_globals on in php.ini, but visit the resources
+  below first to give you a nice insight in why register_globals is bad.</li>
 </ol>
-<p>For more information on register_globals see the following resources:</p>
+<p>The following resources explain what the register_globals php.ini option
+ does and which problems may arise using it:</p>
 <ul>
- <li><?php make_link ("release_4_1_0.php", "The PHP 4.1.0 release announcement"); ?></li>
- <li><?php make_link ("/manual/en/html/configuration.html#ini.register-globals", "The Manual entry"); ?></li>
- <li><?php make_link ("http://www.zend.com/zend/art/art-oertli.php", "Thomas' article on secure programming"); ?></li>
+ <li><?php echo make_link ("release_4_1_0.php", "The PHP 4.1.0 release announcement"); ?></li>
+ <li><?php echo make_link ("http://www.zend.com/zend/art/art-oertli.php", "Thomas' article on secure programming"); ?></li>
+ <li><?php echo make_link ("/manual/en/html/configuration.html#ini.register-globals", "The Manual entry"); ?></li>
 </ul>
 
 <h2>Compability</h2>
@@ -85,8 +87,7 @@ PHP 4.2.0 Release Announcement
 <p>The Apache group released their first General Available version of Apache 2.
  PHP 4.2.0 will have <b>EXPERIMENTAL</b> support for this version. You can
  build a DSO module for Apache 2 with --with-apxs2. We do <b>not</b> recommend
- that you use this in a production environment, but feel free to test it out,
- and file eventual bugs at <?php make_link ('http://bugs.php.net', 'bugs.php.net'); ?>.
+ that you use this in a production environment.
 </p>
 <p>Support for MacOS X will be very limited in PHP 4.2.0. The new build process
  that will power future PHP 4.3.x versions made it possible to support DSO
