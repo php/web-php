@@ -54,7 +54,8 @@ $book_langs = array(
   'hu'  => 'Hungarian',
   'dk'  => 'Danish',
   'it'  => 'Italian',
-  'pl'  => 'Polish'
+  'pl'  => 'Polish',
+  'no'  => 'Norwegian'
 );
 
 // Book types
@@ -1417,6 +1418,17 @@ $books = array (
     /* information  */ "",
     /* inform. link */ "",
     /* language     */ "kr"
+  ),
+  
+  array(
+    /* title[s]     */ "Webprogrammering i PHP",
+    /* title_link   */ "http://tisip.no/public/bok/enBok.jsp?bokid=470",
+    /* author[s]    */ "Svend Andreas Horgen",
+    /* auth link[s] */ "",
+    /* image        */ "8205329834.jpg",
+    /* information  */ "August 2004, ISBN 82-05-32983-4, 384 pages",
+    /* inform. link */ "http://tisip.no/public/bok/enBok.jsp?bokid=470",
+    /* language     */ "no"
   ),
 
   array(
