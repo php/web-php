@@ -101,8 +101,8 @@ removed right away.</blockquote>
 	site("Developer Shed","www.devshed.com");
 	siteEnd();
 
-/* Large ISP's */
-	title("Large ISP's");
+/* ISP's */
+	title("ISP's");
 	siteStart();
 	site("Netvision","www.netvision.net.il");
 	site("Italia Online","www.iol.it");
@@ -110,6 +110,7 @@ removed right away.</blockquote>
 	site("Nederland.Net","www.nederland.net");
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
+	site("Compmore.Net","www.compmore.net");
 	siteEnd();
 
 /* Military */
@@ -176,6 +177,7 @@ removed right away.</blockquote>
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Cigar.Com","www.cigar.com");
+	site("Spell Web","www.spellweb.com");
 	siteEnd();
 
 /* blank bar at end. */

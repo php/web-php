@@ -21,7 +21,16 @@ by building a dynamic Web photo album.
 </dl>
 <p>
 
-<font size=-1>If you have written an article, or spot one on the Net somewhere that isn't listed here, please send a note
+<dt><b>SpellWeb Press Release: <a href="http://www.clearink.com/about.htmy?topic=pr_3_23_98">Clear Ink Announces SpellWeb</a></b>
+<dd>Walnut Creek, CA (March 23, 1998) - Clear Ink, an independent Internet
+strategy, technology and design services agency, announces today a new site
+called SpellWeb, <a href="http://www.spellweb.com">http://www.spellweb.com</a>, 
+designed to detect and compare patterns in word usage throughout the global 
+online community. 
+</dl>
+<p>
+
+<font size=-1>If you have written an article, or spot something on the Net somewhere that isn't listed here, please send a note
 to <a href="mailto:core@php.net">core@php.net</a> and we will be sure to add it to this list.</font>
 
 <?
