@@ -28,6 +28,9 @@ Once you create a virtualhost which looks something like:
    TransferLog logs/access_log
    DirectoryIndex index.php index.php3 manual.php3 index.html index.htm
    php3_include_path .:./include:../include
+   ErrorDocument 404 /error/
+   ErrorDocument 401 /error/
+   ErrorDocument 403 /error/
    </VirtualHost>
 
 modified to reflect your local paths and country, of course, then your site
