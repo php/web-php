@@ -116,6 +116,7 @@ removed right away.</blockquote>
 	site("Computer Currents","www.computercurrents.com");
 	site("UPI Archives","upi.siteways.com");
 	site("CADALYST Magazine","www.cadonline.com");
+	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
 	siteEnd();
 
 /* Not-for-Profit */
@@ -135,6 +136,7 @@ removed right away.</blockquote>
 	title("Service Industry");
 	siteStart();
 	site("Restoration Hardware","www.restorationhardware.com");
+	site("Froeschl - Online Auctions","www.froeschl.de");
 	siteEnd();
 
 /* Telecommunications */
