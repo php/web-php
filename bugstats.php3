@@ -48,6 +48,9 @@
 		if($row[7]=="Duplicate") {
 			$bug_type_duplicate[$row[1]]++;
 		}
+		if($row[7]=="Assigned") {
+			$bug_type_assigned[$row[1]]++;
+		}
 		$email[$row[2]]++;
 		$php_version[$row[5]]++;
 		$php_os[$row[6]]++;
@@ -61,9 +64,9 @@
 	}
 	mysql_freeresult($result);
 	echo "<table>\n";
-	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th></tr>\n";
+	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th></tr>\n";
 	while(list($type,$value)=each($bug_type_all)) {
-		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".$bug_type_closed[$type]."</td><td align=center bgcolor=#ccddee>".$bug_type_open[$type]."</td><td align=center bgcolor=#ddeeff>".$bug_type_analyzed[$type]."</td><td align=center bgcolor=#ccddee>".$bug_type_suspended[$type]."</td><td align=center bgcolor=#ddeeff>".$bug_type_duplicate[$type]."</td></tr>\n";
+		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".$bug_type_closed[$type]."</td><td align=center bgcolor=#ccddee>".$bug_type_open[$type]."</td><td align=center bgcolor=#ddeeff>".$bug_type_analyzed[$type]."</td><td align=center bgcolor=#ccddee>".$bug_type_suspended[$type]."</td><td align=center bgcolor=#ddeeff>".$bug_type_duplicate[$type]."</td><td align=center bgcolor=#ccddee>".$bug_type_assigned[$type]."</td></tr>\n";
 	}
 	echo "</table>\n";
 	
