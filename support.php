@@ -135,19 +135,9 @@ are searchable.
       false, true, true, "php.i18n"
     ),
     Array (
-      'php-migration', 'Migration from earlier versions',
-      'Discussion of migration from earlier versions of PHP',
-      false, true, true, "php.migration"
-    ),
-    Array (
       'pear-general', 'PEAR general list',
       'A list for users of PEAR, an open-source common code library for PHP',
       false, true, true, "php.pear.general"
-    ),
-    Array (
-      'php-template', 'Templates mailing list',
-      'A list for those working with template engines in PHP',
-      false, true, true, "php.template"
     ),
     Array (
       'php-gtk', 'PHP-GTK mailing list',
@@ -175,11 +165,6 @@ are searchable.
       'php-dev', 'Developer list',
       'A medium volume list for those who want to help out with the development of PHP',
       false, true, false, "php.dev"
-    ),
-    Array (
-      'php-beta', 'Beta list',
-      'A low volume list for users interested in early access to PHP releases',
-      false, false, false, "php.beta"
     ),
     Array (
       'pear-dev', 'PEAR developers list',
