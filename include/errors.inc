@@ -10,10 +10,11 @@
 // A 'good looking' 404 error message page
 function error_404()
 {
+    global $MYSITE;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
-    echo "<h1>Not Found</h1>\n" .
-         "<p><strong>" . htmlspecialchars($_SERVER['REQUEST_URI']) .
+    echo "<h1>Not Found</h1>\n<p><strong>" .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> not found on this server.</p>\n";
     site_footer();
     exit;
@@ -22,11 +23,12 @@ function error_404()
 // A 'good looking' 404 error message page for manual pages
 function error_404_manual()
 {
+    global $MYSITE;
     status_header(404);
     site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n" .
          "<p>The manual page you are looking for (<strong>" .
-         htmlspecialchars($_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is not available on this server right now. " .
          "Please check back later, or if the problem persist, " .
          "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
@@ -37,10 +39,11 @@ function error_404_manual()
 // This service is not working right now
 function error_noservice()
 {
+    global $MYSITE;
     site_header('Service not working', array("noindex"));
     echo "<h1>Service not working</h1>\n" .
          "<p>The service you tried to access with the URL: <strong>" .
-         htmlspecialchars($_SERVER['REQUEST_URI']) .
+         htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> is not available on this server right now. " .
          "Please check back later, or if the problem persist, " .
          "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
