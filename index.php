@@ -215,7 +215,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "left")); ?> 
+<?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "right")); ?> 
 
 <h1>php|architect now in print</h1>
 
