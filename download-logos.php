@@ -16,11 +16,14 @@ site at <b>www.php.net</b>.
 (e.g. you want to make merchandise with the logo ... t-shirts,
 coffee mugs, pocket protectors, etc.), then you need to contact 
 <a href="mailto:logos@php.net">logos@php.net</a> for licencing information.  
+</p>
+
+<p>
 For pretty much all other uses, there is no licensing requirement. For 
 example: a logo on your website showing that you use/promote PHP, even 
-commercial websites; course materials; a t-shirt or two for your own use 
-and some friends; a PHP-related book; a banner for your computer group; etc..
-If in doubt, <a href="mailto:logos@php.net">ask</a>.
+commercial websites; course materials; a bunch of t-shirts for your own use 
+and some friends, or your user group; a PHP-related book; a banner for your 
+computer group; etc..  If in doubt, <a href="mailto:logos@php.net">ask</a>.
 </p>
 
 <p>
@@ -33,6 +36,11 @@ servers on your page! Copy the image to your site please.</font>
 really neat PHP artwork, for the French PHP sites, and for the benefit
 of the whole community. You can download some of his works and use
 under a GPL licence.
+</p>
+
+<p>
+Oh, if you're wondering about the font we used, it's called 
+<a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel Gothic</a>.
 </p>
 
 <table border="0" width="90%" cellspacing="1" cellpadding="10" bgcolor="#f0f0f0" align="center">
