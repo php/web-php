@@ -157,6 +157,8 @@ removed right away.</blockquote>
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("USRentals","www.usrentals.com");
+	site("LinkAlarm","www.linkalarm.com");
+	site("Shipwreck Beads","www.shipwreck-beads.com");
 	siteEnd();
 
 /* Telecommunications */
