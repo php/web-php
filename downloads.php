@@ -4,11 +4,13 @@ require_once 'prepend.inc';
 $SIDEBAR_DATA = '
 <h3>Binaries for other systems</h3>
 <p>
-We do not distribute UNIX/Linux binaries.  Most Linux
+We do not distribute UNIX/Linux binaries. Most Linux
 distributions come with PHP these days, so if you do
 not want to compile your own, go to your distribution\'s
-download site.  For Mac OS X binaries, go to '.
-make_link("http://www.entropy.ch/software/macosx/php/", "this page").'
+download site. For Mac OS X binaries, go to '.
+make_link("http://www.entropy.ch/software/macosx/php/", "this page") . ',
+for RISC OS source and binaries, visit ' . 
+make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "this site") . '
 </p>
 
 <h3>Other Downloads</h3>
@@ -33,7 +35,7 @@ make_link("anoncvs.php","instructions on using anonymous CVS").'
 <p>'.
 make_link("http://www.zend.com/zend/optimizer.php", "Zend Optimizer").'
 for PHP 4.0.3 and later is
-available on Zend Technologies\' web site.
+available on Zend Technologies\' web site
 </p>
 ';
 
