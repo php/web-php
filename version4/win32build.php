@@ -110,9 +110,9 @@ before Microsoft Visual C++ will have anything to do with them.</P>
   dropdown to Executables, Includes, and Library files, and ensure that the
   Cygwin\bin, win32build\include, and win32build\lib files are in the list 
   below respectively. (To add an entry, select a blank line at the end of the 
-  list and begin typing).  My entries look like this:
+  list and begin typing).  Typical entries will look like this:
   <UL>
-    <LI><CODE>C:\Cygnus\cygwin-b20\H-i586-cygwin32\bin</CODE>
+    <LI><CODE>C:\Program Files\Cygnus\cygwin-b20\H-i586-cygwin32\bin</CODE>
     <LI><CODE>C:\php-win32build\include</CODE>
     <LI><CODE>C:\php-win32build\lib</CODE>
     </UL>
@@ -143,8 +143,8 @@ before Microsoft Visual C++ will have anything to do with them.</P>
   
   <LI>Create a Command window and change directory into your php4 source 
   directory.  The number.tar.gz file is packed using standard Unix utilites.
-  To unpack it, you will need to make use of the corresponding utilities found 
-  in Cygwin.
+  If you have WinZip, you can use that utility to unpack this file.  Otherwise,
+  you can use of the corresponding utilities found in Cygwin as follows:
   <UL>
     <LI><CODE>SETLOCAL</CODE>
     <LI><CODE>%CYGWIN%\cygnus</CODE>
@@ -171,9 +171,8 @@ standalone/CGI version.</P>
     Debug_TS&quot;</CODE>
       <LI><CODE>msdev php4ts.dsp /MAKE &quot;php4ts - Win32
     Release_TS&quot;</CODE>
-    <LI>At this point, you should have a usable resolv.lib in either your 
-    Debug or Release subdirectories.  Copy this file into your win32build\lib
-    directory over the file by the same name found in there.
+    <LI>At this point, you should have a usable php.exe in either your 
+    Debug_TS or Release_TS subdirectories.
     </UL>
   </UL>
 <P>Repeat the above steps with php4isapi.dsp
