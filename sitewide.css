@@ -255,3 +255,25 @@ table.mirrors td.caret {
 	background-color: white !important;
 	color: inherit;
 }
+
+/* Calendar table --------------------------------------------------------- */
+table#cal {
+	font-size: smaller;
+}
+table#cal a {
+	text-decoration: none;
+}
+table#cal a:hover {
+	text-decoration: underline;
+}
+table#cal a.day {
+	float: right;
+	font-weight: bold;
+	color: #666666;
+	background-color: transparent;
+}
+table#cal div.event {
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed #000000;
+}
