@@ -171,7 +171,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     Array (
       'smarty-general', 'General user list',
       'This is a medium volume general list for Smarty users',
-      false, true, true, "php.smarty.general"
+      false, false, true, "php.smarty.general"
     ),
     Array (
       'smarty-dev', 'Smarty developers list',
