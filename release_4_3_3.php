@@ -27,9 +27,9 @@ site_header("PHP 4.3.3 Release Announcement");
  <li>Fixed several potentially hazardous integer and buffer overflows.</li>
  <li>Fixed corruption of multibyte character including 0x5c as second byte in multipart/form-data.</li>
  <li>Fixed each() to be binary safe for keys.</li>
- <li>Major improvements to the NSAPI SAPI</li>
- <li>Improvements to the IMAP extension</li>
- <li>Improvements to the InterBase extension</li>
+ <li>Major improvements to the NSAPI SAPI.</li>
+ <li>Improvements to the IMAP extension.</li>
+ <li>Improvements to the InterBase extension.</li>
  <li>Added DBA handler 'inifile' to support ini files.</li>
  <li>Added long options into CLI & CGI (e.g. --version).</li>
  <li>Added a new parameter to preg_match*() that can be used to specify the starting offset in the subject string to match from.</li>
