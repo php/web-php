@@ -87,6 +87,7 @@ function makeName($name,$email,$size) {
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left WIDTH=18><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 <TD ALIGN=left WIDTH=100%><FONT FACE="<? echo $FONTFACE;?>"><FONT SIZE=+1><B>Core Developers</B></FONT>
+<?makeMail('core@php.net');?>
 <? if ($KICKS):
 	echo " - click on their name for more info</FONT>";
 endif; ?>
@@ -253,7 +254,7 @@ if ($KICKS):	/* Kick outs */
 		makeKick($key);
 		echo "<FONT SIZE=+1>".$value[0]."</FONT><BR>\n";
 		echo "<FONT SIZE=-1>";
-		makeMail($value[1]);
+#		makeMail($value[1]);
 		echo "</FONT><BR>\n";
 		makeFile($key);
 		endKick($key);
