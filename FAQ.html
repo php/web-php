@@ -29,7 +29,7 @@ their answers. If you have suggestions or additions, send them to
     From the <A href="http://www.php.net/manual/manual.html">manual</A>:
 
     <BLOCKQUOTE>
-    <P>Professional Home Pages Version 3.0 is an HTML-embedded scripting
+    <P>PHP Version 3.0 is an HTML-embedded scripting
     language. Much of its syntax is borrowed from C, Java and Perl with a
     couple of unique PHP-specific features thrown in. The goal of the language
     is to allow web developers to write dynamically generated pages quickly.
@@ -56,6 +56,7 @@ their answers. If you have suggestions or additions, send them to
     <UL>
       <LI>All-new parser.
       <LI>Persistent database connections.
+      <LI>A native Windows95/NT port.
       <LI>IMAP, SNMP, and LDAP extensions.
     </UL>
   <P>
@@ -341,6 +342,25 @@ README.WIN32 file.
 <HR>
 
 <H2>Using PHP3</H2>
+
+<DL>
+  <DT><B>
+    I would like to write a generic PHP script that can handle data coming
+    from any form.  How do I know which POST method variables are available?
+  </B></DT>
+  <DD>
+    You need to compile PHP with the "--enable-track-vars" configure switch.
+    This creates three associative arrays.  $HTTP_GET_VARS, $HTTP_POST_VARS
+    and $HTTP_COOKIE_VARS.  So, to write a generic script to handle POST
+    method variables you would need something similar to the following:<PRE>
+    reset($HTTP_POST_VARS);
+    $var=key($HTTP_POST_VARS);
+    $value=$HTTP_POST_VARS[$var];
+    do {
+        echo "$var = $value&lt;br&gt;\n";
+    } while (($value=next($HTTP_POST_VARS)) && ($var=key($HTTP_POST_VARS)));</PRE>
+  </DD>
+</DL>
 
 <H3>New Features</H3>
 
