@@ -41,7 +41,7 @@ commonHeader("Changes in PHP 5/Zend Engine 2.0");
  by the class they belong to.
 </p>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class MyClass {
     private $Hello = "Hello, World!\n";
     protected $Bar = "Hello, Foo!\n";
@@ -86,7 +86,7 @@ $obj->printHello();
 
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Foo {
     private function aPrivateMethod() {
         echo "Foo::aPrivateMethod() called.\n";
@@ -123,7 +123,7 @@ $o->aPublicMethod();
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 abstract class AbstractClass {
     abstract public function test();
 }
@@ -153,7 +153,7 @@ $o->test();
 
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 interface Throwable {
     public function getMessage();
 }
@@ -178,7 +178,7 @@ class Exception implements Throwable {
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 interface Foo {
     function a(Foo $foo);
 }
@@ -210,7 +210,7 @@ $a->b($b);
 </p>
 <p>
 <?php
-highlight_string('<?php
+highlight_php('<?php
 function foo(ClassName $object) {
     // ...
 }
@@ -222,7 +222,7 @@ function foo(ClassName $object) {
 </p>
 <p>
 <?php 
-highlight_string('<?php
+highlight_php('<?php
 function foo($object) {
     if (!($object instanceof ClassName)) {
         die("Argument 1 must be an instance of ClassName");
@@ -241,7 +241,7 @@ function foo($object) {
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Foo {
     final function bar() {
         // ...
@@ -274,7 +274,7 @@ class Foo {
  An object copy is created by calling the object's <code>__clone()</code> method:
 </p>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 $copy_of_object = $object->__clone();
 ?>'); ?>
 </p>
@@ -290,7 +290,7 @@ $copy_of_object = $object->__clone();
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class MyCloneable {
     static $id = 0;
 
@@ -342,7 +342,7 @@ print $obj->address . "\n";
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class BaseClass {
 	function __construct() {
 		print "In BaseClass constructor\n";
@@ -384,7 +384,7 @@ $obj = new SubClass();
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class MyDestructableClass {
 	function __construct() {
 		print "In constructor\n";
@@ -410,7 +410,7 @@ $obj = new MyDestructableClass();
  PHP 5 introduces per-class constants:
 </p>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Foo {
 	const constant = "constant";
 }
@@ -424,7 +424,7 @@ echo "Foo::constant = " . Foo::constant . "\n";
  rely on runtime information.
 </p>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Bar {
 	const a = 1<<0;
 	const b = 1<<1;
@@ -444,7 +444,7 @@ class Bar {
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class MyExceptionFoo extends Exception {
     function __construct($exception) {
         parent::__construct($exception);
@@ -470,7 +470,7 @@ try {
  Engine 2, the following is now possible:
 </p>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Circle {
     function draw() {
         print "Circle\n";
@@ -500,7 +500,7 @@ ShapeFactoryMethod("Square")->draw();
 <h2>Static member variables of static classes can now be initialized</h2>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class foo {
     static $my_static = 5;
 }
@@ -516,7 +516,7 @@ print foo::$my_static;
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Foo {
     public static function aStaticMethod() {
         // ...
@@ -539,7 +539,7 @@ Foo::aStaticMethod();
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class baseClass { }
 
 $a = new baseClass;
@@ -561,7 +561,7 @@ if ($a instanceof basicClass) {
 <h2>Parameters that are passed by reference to a function may now have default values</h2>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 function my_function(&$var = null) {
     if ($var === null) {
         die("$var needs to have a value");
@@ -578,7 +578,7 @@ function my_function(&$var = null) {
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 function __autoload($className) {
     include_once $className . ".php";
 }
@@ -595,7 +595,7 @@ $object = new ClassName;
 </p>
 <h3>Example: __get() and __set()</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Setter {
     public $n;
     public $x = array("a" => 1, "b" => 2, "c" => 3);
@@ -634,7 +634,7 @@ var_dump($foo);
 </p>
 <h3>Example: __call()</h3>
 <p>
-<?php highlight_string('<?php
+<?php highlight_php('<?php
 class Caller {
     var $x = array(1, 2, 3);
 
@@ -651,6 +651,4 @@ var_dump($a);
 ?>'); ?>
 </p>
 
-<?php
-commonFooter(); 
-?>
+<?php commonFooter(); ?>

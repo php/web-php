@@ -253,3 +253,24 @@ table.standard th.subr {
 input.max, textarea.max, select.max {
     width: 100%;
 }
+
+/* PHP code syntax highlighting */
+div.phpcode span.html {
+    color: black;	
+}
+
+div.phpcode span.comment {
+    color: #FF8000;
+}
+
+div.phpcode span.default {
+    color: #0000BB;
+}
+
+div.phpcode span.keyword {
+    color: #007700;
+}
+
+div.phpcode span.string {
+    color: #DD0000;
+}

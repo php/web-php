@@ -5,6 +5,42 @@
 $_SERVER['STATIC_ROOT'] = ($MYSITE == 'http://www.php.net/') ?
                           'http://static.php.net/www.php.net' : '';
 
+// Use class names instead of colors
+ini_set('highlight.comment', 'comment');
+ini_set('highlight.default', 'default');
+ini_set('highlight.keyword', 'keyword');
+ini_set('highlight.string',  'string');
+ini_set('highlight.html',    'html');
+
+// Highlight PHP code
+function highlight_php($code, $return = FALSE)
+{
+    // Using OB, as highlight_string() only supports
+    // returning the result from 4.2.0
+    ob_start();
+    highlight_string($code);
+    $highlighted = ob_get_contents();
+    ob_end_clean();
+    
+    // Fix output to use CSS classes and wrap well
+    $highlighted = '<div class="phpcode">' . preg_replace(
+        array(
+            '!<br />!',
+            '!<font color="([^"]+)">!',
+            '!</font>!',
+        ),
+        array(
+            "<br />\n",
+            '<span class="\\1">',
+            '</span>',
+		),
+        $highlighted
+    ) . '</div>';
+    
+    if ($return) { return $highlighted; }
+    else { echo $highlighted; }
+}
+
 // Print an image for a sized spacer
 function spacer($width = 1, $height = 1, $return = FALSE, $align = FALSE, $extras = FALSE)
 {
