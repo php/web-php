@@ -213,6 +213,21 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
+
+<h1>Active Awards Programmers' Choice Nominees are in!</h1>
+<p>
+<font class="newsdate">[6-June-2003]</font>
+Thanks to the community for recognizing their peers in ActiveState's
+third annual Active Awards.  The awards honor those individuals who
+<b>actively</b> contribute to open languages and display excellence in their
+programming efforts.  Please visit and help choose this years award winner!
+</p><p>
+More information and voting is at:
+<a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
+</p>
+
+<?php echo hdelim(); ?>
 
 <h1>PHP 4.3.2 Released!</h1>
 <p>
@@ -234,22 +249,6 @@ perform a search on www.php.net, you will be redirected onto a nearby mirror
 Ip-to-Country Database</a>). 
 You may experience a few quirks in the search until your mirrors have synced an up-to-date
 version of the site.
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
-
-<h1>ActiveState Active Awards</h1>
-<p>
-<font class="newsdate">[12-May-2003]</font>
-ActiveState is pleased to announce the third annual Programmers' Choice
-and Activators' Choice Awards. The awards honor those individuals who
-<b>actively</b> contribute to open languages and display excellence in their
-programming efforts. 
-</p><p>
-More information and voting is at:
-<a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
 </p>
 
 <?php echo hdelim(); ?>
