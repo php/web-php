@@ -255,7 +255,6 @@ right away.</blockquote>
 	site("Emedia Designs","emediadesigns.com");
 	site("Exe-prod","www.exe-prod.com");
 	site("Fantaz","www.fantaz.com");
-	site("FAST MP3 Search", "mp3.lycos.com");
 	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
 	site("Infoseek Investor Relations","www.ir-infoseek.com");
@@ -480,6 +479,15 @@ right away.</blockquote>
 	site("Vancouver Rentals","www.vancouverrentals.com");
 	site("Vermeer","www.vermeer.com");
 	siteEnd();
+
+/* Search Engines */
+	title("Search Engines");
+	siteStart();
+	site("FAST MP3 Search", "mp3.lycos.com");
+	site("Lycos RichMedia Search", "richmedia.lycos.com");
+	site("alltheweb.com", "alltheweb.com");
+	siteEnd();
+
 
 /* Sports */
 	title("Sports");
