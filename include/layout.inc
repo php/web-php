@@ -454,8 +454,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
  <tr bgcolor="#9999cc">
-  <td align="center" rowspan="2" width="126"><a href="/"><?php
-	print_image('/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42', 'PHP', false, 'hspace="3"'); ?></a></td>
+  <td align="center" rowspan="2" width="126"><a href="/">
+<img src="/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42"
+ alt="PHP" width="120" height="67" /></a></td>
   <td>&nbsp;</td>
  </tr>
  <tr bgcolor="#9999cc">
