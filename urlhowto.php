@@ -74,7 +74,7 @@ are searched for in the manual:
  <li>Class pages, like <tt>http://php.net/dir</tt></li>
  <li>Feature pages, like <tt>http://php.net/safe_mode</tt></li>
  <li>Control structure pages, like <tt>http://php.net/while</tt></li>
- <li>Other langauge pages, like <tt>http://php.net/oop</tt></li>
+ <li>Other language pages, like <tt>http://php.net/oop</tt></li>
 </ul>
 </p>
 
