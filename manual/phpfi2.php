@@ -211,7 +211,7 @@ the Apache src code directory location.<P></DD>
   a <EM>libphp.a</EM> file.<P>
 
 <P>
-<EM><STRONG>Step 4. (if you are <STRONG>not</STRONG> installing the Apache module
+<EM><STRONG>Step 4. (if you are not installing the Apache module
 version)</STRONG></EM><P>
 
 <P>
@@ -670,7 +670,7 @@ sections at the end of this document for further details.
 <P>
 The following directives can be placed either in the <EM>srm.conf</EM> file, or
 within &lt;Directory&gt;...&lt;/Directory&gt; tags in <EM>access.conf</EM> or in
-&lt;Location /path&gt;...&lt/Location&gt; tags in <EM>access.conf</EM> or in
+&lt;Location /path&gt;...&lt;/Location&gt; tags in <EM>access.conf</EM> or in
 individual <EM>.htaccess</EM> files. In order for the directives to work in
 .htaccess files, the Options override must be set on the AllowOverride Apache
 directive, with the exception of the phpEngine directive which is only 
@@ -727,7 +727,7 @@ the actual PHP/FI file has been parsed, similar to phpAutoPrependFile.
 this directive is only useful for sites that wish to allow directives from the AllowOverride Options
 list of directives to function in .htaccess files while at the same time restricting mod_php access.
 The common way to handle per-virtual host php installs is to enable the PHP mime type with an AddType
-directive on a per virtual host basis and then put &quote;phpEngine off&quot; in the non-PHP virtual
+directive on a per virtual host basis and then put &quot;phpEngine off&quot; in the non-PHP virtual
 host blocks.  If a non PHP customer tries to circumvent things by placing the PHP mime type in
 their .htaccess, the phpEngine off setting restricts the PHP parser from functioning.
 <DT><STRONG>phpLastModified <EM>on</EM>|<EM>off</EM></STRONG>
@@ -1710,11 +1710,11 @@ is valid:<P>
 <P>
 This is the same as writing:<P>
 <P>
-<PRE>	&lt?; $a = 5; echo $a &gt;</PRE>
+<PRE>	&lt;? $a = 5; echo $a &gt;</PRE>
 <P>
 Or even:<P>
 <P>
-<PRE>	&lt?;
+<PRE>	&lt;?
 	$a = 5;
 	echo $a;
 	&gt;</PRE><P>
@@ -1890,12 +1890,12 @@ The syntax of conditions are similar to that of the C language.
 <STRONG>==</STRONG> tests for equality.  <STRONG>!=</STRONG> means not equal.  Also
 supported are: <STRONG>&gt;</STRONG>, <STRONG>&lt;</STRONG>, <STRONG>&gt;=</STRONG>,
 <STRONG>&lt;=</STRONG>.
-Conditional AND is <STRONG>&&</STRONG>, conditional OR is <STRONG>||</STRONG>.<P>
+Conditional AND is <STRONG>&amp;&amp;</STRONG>, conditional OR is <STRONG>||</STRONG>.<P>
 
 Examples:
 <P>
 <PRE>    &lt;?
-      if($a==5 &&  $b!=0 );
+      if($a==5 &amp;&amp;  $b!=0 );
         $c = 100 + $a / $b;
       endif;
     &gt;</PRE><P>
@@ -1903,7 +1903,7 @@ Examples:
 In this case, there is no need for a semicolon after the closing curly brace.
 <P>
 <PRE>    &lt;?
-      if($a==5 && $b!=0) {
+      if($a==5 &amp;&amp; $b!=0) {
           $c = 100 + $a / $b;
       }
     &gt;</PRE><P>
@@ -1917,14 +1917,14 @@ on the organization of the script blocks within the code.  You can
 start an if expression in one block and have the end of the expression
 in another.  For example:<P>
 <P>
-<PRE>	&lt;?if($a==5 &&  $b!=0)>
+<PRE>	&lt;?if($a==5 &amp;&amp;  $b!=0)>
 		  &lt;b&gt;Normal html text&lt;/b&gt;
 	&lt;?endif&gt;</PRE><P>
 <P>In this example it is easy to see why it is sometimes more desirable to use
 the <TT>endif</TT> keyword as opposed to a closing brace.  The above is much more readable
 than the following:<P>
 <P>
-<PRE>	&lt;?if($a==5 &&  $b!=0) {>
+<PRE>	&lt;?if($a==5 &amp;&amp;  $b!=0) {>
 		  &lt;b&gt;Normal html text&lt;/b&gt;
 	&lt;? } &gt;</PRE><P>
 <P>Both version are valid and they will do exactly the same thing.<P>
@@ -2075,10 +2075,10 @@ This is equivalent to:<P>
 The C-like bit-wise operators <TT>&amp;=</TT>, <TT>|=</TT> and <TT>^=</TT> are
 supported. ie.<P>
 <P>
-<PRE>    &lt;? $a &= 4&gt;</PRE>
+<PRE>    &lt;? $a &amp;= 4&gt;</PRE>
 This is equivalent to:<P>
 <P>
-<PRE>    &lt;? $a = $a &  4&gt;</PRE><P>
+<PRE>    &lt;? $a = $a &amp;  4&gt;</PRE><P>
 <HR>
 <H3><A NAME="while">While Loops</A></H3>
 <P>
@@ -2094,7 +2094,7 @@ You can loop within a PHP script by using the <EM>while(); endwhile;</EM> constr
 <P>
 The above example shows the use of a while loop to display the contents of
 an array.  <STRONG>WARNING</STRONG> although the PHP language supports incremental
-operators such as <STRONG>++</STRONG> and <STRONG>-<!>-</STRONG> to increment and decrement
+operators such as <STRONG>++</STRONG> and <STRONG>-&lt;!&gt;-</STRONG> to increment and decrement
 a variable, they are not treated exactly like they would be in the
 C language.  The variable is incremented right away.  There is no
 concept of incrementing the variable before or after the operation
@@ -2142,7 +2142,7 @@ If you think about it, you may be able to envision a security issue.  For exampl
 if on a web page I have obtained some data from a database and I pass this
 data along in a variable called &quot;data&quot; in a POST method form.  In the
 ensuing page I can access this variable and do something with it.  However, if
-someone accessed this second page directly and put a &quot;?data=something&quot
+someone accessed this second page directly and put a &quot;?data=something&quot;
 
 right in the URL thereby doing a GET method variable set, they have effectively
 circumvented the original POST method form.<P>
@@ -3077,10 +3077,10 @@ in the returned array is a string containing, &quot;width=x height=y&quot; that
 is suitable for using directly in an IMG tag.  It is important to 
 note that the GD image library is not needed to use this function.  An example 
 follows:</P>
-<P><PRE>    &lt;?
+<PRE>    &lt;?
         $result = GetImageSize("img/flag.jpg");
     &gt;
-    &lt;IMG SRC=&quot;img/flag.jpg&quot; ?echo $result[3]&gt; &gt;</PRE></P>
+    &lt;IMG SRC=&quot;img/flag.jpg&quot; ?echo $result[3]&gt; &gt;</PRE>
 
 <DT><A NAME="getlastaccess"><FONT SIZE="+1">getLastAccess()</FONT></A>
 <DD>
@@ -3725,7 +3725,7 @@ is the result identifier returned by the msql() function.
 <DD>
 <P>msql_RegCase takes a string argument and converts it to the regular
 expression needed to send to mSQL in order to get a case insensitive
-match.  This turns a string like &quot;abc&quot  into &quot;[Aa][Bb][Cc]&quot;.
+match.  This turns a string like &quot;abc&quot;  into &quot;[Aa][Bb][Cc]&quot;.
 <BR>This function is only available if mSQL support has been enabled in PHP.<P>
 
 <DT><A NAME="msql_result"><FONT SIZE="+1">msql_Result($result,$i,field)</FONT></A>
@@ -4033,7 +4033,7 @@ Function parameters are:<BR>
 <VAR>php_variable_name</VAR> - variable name in PHP script without leading '$'<BR>
 <VAR>sql_variable_name</VAR> - variable name in SQL with leading colon<BR>
 <VAR>size</VAR> - maximal number of bytes to be taken into account at binding<BR><BR>
-</DT>
+
 <B>Notes:</B> <BR>
 1) PHP variable <B>SHOULD</B> be initialised with at least <B>size</B> bytes
 length string even it is return-only variable.<BR>
@@ -4120,7 +4120,7 @@ SIZE="+1">Ora_Logoff(conn_ind)</FONT></A>
 <DD>Ora_Logoff() disconnects the logon data area belonging to
 <var>conn_ind</var> and frees used Oracle resources. <P>
 
-<DT><A NAME="ora_logoff"><FONT
+<DT><A NAME="ora_logon"><FONT
 SIZE="+1">Ora_Logon(userid, password)</FONT></A>
 <DD>Ora_Logon() establishes a connection between PHP and an Oracle
 database with the given user id and password.  Returns 0 on success
@@ -4602,7 +4602,7 @@ with the given connection identifier.<P>
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_connect"><FONT SIZE="+1">$connection = Solid_Connect(data source name, username, password)</FONT>
+<DT><A NAME="solid_connect"><FONT SIZE="+1">$connection = Solid_Connect(data source name, username, password)</FONT></A>
 <DD>
 <P>Solid_Connect opens a connection to a Solid server. Each of the arguments
 should be a quoted string. The first parameter (data source name) can be an
@@ -4613,7 +4613,7 @@ will return <STRONG>0</STRONG> on error.
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_exec"><FONT SIZE="+1">$result = Solid_Exec(connection_id, query_string)</FONT>
+<DT><A NAME="solid_exec"><FONT SIZE="+1">$result = Solid_Exec(connection_id, query_string)</FONT></A>
 <DD>
 <P>Solid_Exec will send an SQL statement to the Solid server specified by
 the connection_id. The connection_id must be a valid identifier
@@ -4626,7 +4626,7 @@ return no data will still return a valid result greater than 1.
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_fetchrow"><FONT SIZE="+1">Solid_FetchRow(result_id)</FONT>
+<DT><A NAME="solid_fetchrow"><FONT SIZE="+1">Solid_FetchRow(result_id)</FONT></A>
 <DD>
 <P>Solid_FetchRow fetches a row of the data that was returned by Solid_Exec.
 After Solid_FetchRow is called, the fields of that row can be access with
@@ -4638,14 +4638,14 @@ the condition of a while loop.
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_fieldname"><FONT SIZE="+1">Solid_FieldName(result_id, field_number)</FONT>
+<DT><A NAME="solid_fieldname"><FONT SIZE="+1">Solid_FieldName(result_id, field_number)</FONT></A>
 <DD>
 <P>Solid_FieldName will return the name of the field occupying the given column
 number in the given Solid result identifier. Field numbering starts from 0.
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_fieldnum"><FONT SIZE="+1">Solid_FieldNum(result_id, field_name)</FONT>
+<DT><A NAME="solid_fieldnum"><FONT SIZE="+1">Solid_FieldNum(result_id, field_name)</FONT></A>
 <DD>
 <P>Solid_FieldNum will return the number of the column slot that corresponds to
 the named field in the given Solid result identifier. Field numbering starts at
@@ -4653,7 +4653,7 @@ the named field in the given Solid result identifier. Field numbering starts at
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_freeresult"><FONT SIZE="+1">Solid_FreeResult(result_id)</FONT>
+<DT><A NAME="solid_freeresult"><FONT SIZE="+1">Solid_FreeResult(result_id)</FONT></A>
 <DD>
 <P>Solid_FreeResult only needs to be called if you are worried about using too
 much memory while your script is running. All result memory will automatically
@@ -4664,7 +4664,7 @@ freed.
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_numfields"><FONT SIZE="+1">Solid_NumFields(result_id)</FONT>
+<DT><A NAME="solid_numfields"><FONT SIZE="+1">Solid_NumFields(result_id)</FONT></A>
 <DD>
 <P>Solid_NumFields will return the number of fields (columns) in a Solid
 result. The argument is a valid result identifier returned by Solid_Exec.
@@ -4672,7 +4672,7 @@ This function will return <STRONG>-1</STRONG> on error.<P>
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_numrows"><FONT SIZE="+1">Solid_NumRows(result_id)</FONT>
+<DT><A NAME="solid_numrows"><FONT SIZE="+1">Solid_NumRows(result_id)</FONT></A>
 <DD>
 <P>Solid_NumRows will return the number of rows in a Solid result. The argument
 is a valid result identifier returned by Solid_Exec. This function will return
@@ -4700,7 +4700,7 @@ you might try:<P>
 <P>
 This function is only available if Solid support has been enabled in PHP.<P>
 
-<DT><A NAME="solid_result"><FONT SIZE="+1">Solid_Result(result_id, field name/index)</FONT>
+<DT><A NAME="solid_result"><FONT SIZE="+1">Solid_Result(result_id, field name/index)</FONT></A>
 <DD>
 <P>Solid_Result will return values from a result identifier produced by
 Solid_Exec. The field name specify what cell in the row to return. Instead of
@@ -4768,7 +4768,7 @@ any integer as an argument.  One choice for a seed value is to use the
 past the minute.  Note that this function <B>does not return a value</B>!  
 This function simply seeds the random number generator for subsequent calls 
 to the <A HREF="#rand">rand()</A> function.  eg.<P>
-<PRE>	&lt;?srand(date(&quot;s&quot))&gt;</PRE><P>
+<PRE>	&lt;?srand(date(&quot;s&quot;))&gt;</PRE><P>
 
 <DT><A NAME="strchr"><FONT SIZE="+1">strchr(string,arg)</FONT></A>
 <DD>
@@ -4898,7 +4898,7 @@ with PHP/FI
 <p>
 The function returns 1 on success and 0 on failure.<P>
 
-<DT><A NAME="sybsql_fieldname"><FONT SIZE="+1">sybSQL_Exit()</FONT></A>
+<DT><A NAME="sybsql_exit"><FONT SIZE="+1">sybSQL_Exit()</FONT></A>
 <DD><P>
 This function forces a Sybase connection to be shut down.  If not called, the 
 connection will automatically be closed when the PHP page has been fully parsed, 
