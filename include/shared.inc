@@ -145,7 +145,7 @@ function preloadImages() {
 
 
 function spc($width, $height) {
-	echo "<IMG SRC='/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
+	echo "<IMG SRC='/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0 ALT=' '>";
 }
 
 function kickHeader($offset,$side,$width) {
