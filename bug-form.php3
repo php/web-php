@@ -10,7 +10,9 @@ if($email) {
 	mysql_select_db($dbname);
 
 	$query = mysql_query("SELECT os FROM users where email='$email'"); 
-	$operating_system = mysql_result($query,0,"os");
+	if (mysql_num_rows($query)>=1) {
+		$operating_system = mysql_result($query,0,"os");
+	}
 	mysql_free_result($query);
 }
 	
