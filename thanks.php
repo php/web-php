@@ -55,7 +55,7 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.spry.com/">Spry.com</a> provides a server and 
+ <a href="http://www.spry.com/">Spry VPS Hosting</a> provides a server and 
  bandwidth for various php.net services.
 </p>
 
