@@ -11,11 +11,12 @@ commonHeader("PHP Books");
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
-><IMG SRC="http://www.oreilly.com/catalog/covers/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
 >PHP Pocket Reference</A><BR>
 by Rasmus Lerdorf<BR>
+O'Reilly & Associates, Jan 2000, 114 pages
 <SMALL><A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
 </SMALL>
 </TD>
