@@ -70,8 +70,13 @@ site_header("Downloads");
 <h1>PHP 5.0.4</h1>
 
 <h2>Complete Source Code</h2>
- <b>Note:</b>The PHP 5.0.4 source packages were re-released due to a missing file in the embedded PEAR distribution.  There are <i>no</i> changes in this re-release
-<ul> other than the addition of the missing file.
+<p>
+ <strong>Note:</strong> The PHP 5.0.4 source packages were re-released
+ due to a missing file in the embedded PEAR distribution.  There are
+ <em>no changes</em> in this re-release other than the addition of the
+ missing file.
+</p>
+<ul>
  <li>
   <?php download_link('php-5.0.4.tar.bz2', 'PHP 5.0.4 (tar.bz2)'); ?> - 03 Apr 2005<br />
   <span class="md5sum">md5: fb1aac107870f897d26563a9cc5053c0</span>
