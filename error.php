@@ -21,7 +21,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 // See langchooser.inc for more info on STRIPPED_URI
 // Also decode special URL parts, eg %20 into a space
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
-$URI = urldecode(preg_replace("!(\\?.+$)!", "", $URI));
+$URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
