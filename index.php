@@ -31,6 +31,7 @@ make_link("/license/", "official license") . '.
 <h3>Related sites:</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<BR>
 &nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<BR>
+&nbsp; ' . make_link("http://www.pair.net/", "Pair Networks") . '<BR>
 &nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<BR>
 &nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<BR>
 <h3>Community:</h3>
@@ -42,6 +43,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
 ?>
+<h1>Mailing lists and CVS are up!</h1>
+<? print_link("http://www.pair.net/", make_image("pair.gif", "Pair Networks", "right") ); ?>
+<p>
+<font class="newsDate">[1-Jul-2001]</font>
+The disturbances in the mailing lists and CVS services that happened in the last
+few weeks are now gone, hopefully for good.  This is thanks to a brand new server donated
+by <a href="http://www.pair.net/">Pair Networks</a>.  Thanks!
+</p>
+
+<? echo hdelim(); ?>
+
 <h1>PHP 4.0.6 Released!</h1>
 
 <p>
