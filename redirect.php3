@@ -1,1 +1,1 @@
-<? Header("Location: $URL");>
+<? Header("Location: $URL"); ?>
