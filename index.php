@@ -135,15 +135,14 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
-<h1>7th Sample of PHP Documentation "New CHM Edition"</h1>
+<h1>New Release of the PHP Manual CHM Edition</h1>
 <p>
-<font class="newsdate">[15-Aug-2002]</font> The 7th sample of the CHM edition is out now.
-This adds many great new features including the ability to apply your own skins
-(with the option to modify style and layout). This sample also features more
-online functions, real context menus, a new quickref application and instant "copy
-example to clipboard" features. You should definitely check this sample out. Every
-designer is welcome to make their own skins and submit them for inclusion in the
-standard set or distribute in our soon-to-be online skin repository.
+<font class="newsdate">[04-Sept-2002]</font> The 9th sample of the CHM edition is out now.
+This sample includes a workaround for the most annoying IE6 bug we met so far,
+and also simplifies the skin choosing process putting all available skins to
+a dropdown list. Every designer is welcome to make their own skins and submit
+them for inclusion in the standard set or distribute in our soon-to-be online
+skin repository.
 <?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
 and please send us your feedback to our <?php print_link("mailto:php-doc-chm@lists.php.net",
 "dedicated mailing list"); ?>.
@@ -219,20 +218,6 @@ comp.lang.php represents PHP's coming to acceptance and maturity. Virtually
 all languages have a spot under the comp.lang.* hierarchy. Stop on by and
 become a part of the community - comp.lang.php is a great place to get help
 and to help others.
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
-
-<h1>New Sample of PHP Documentation "New CHM Edition"</h1>
-<p>
-<font class="newsdate">[04-Jul-2002]</font> The 6th sample of the CHM edition is out now.
-This sample is mainly a content update, but it also fixes some small bugs. We welcome
-any suggestions and bug reports.
-<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
-and please send us your feedback to our
-<?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
