@@ -35,10 +35,14 @@ $minute = rand(0, 59);
  <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
  an official mirror site, it is advisable to contact <a
  href="mailto:mirrors@php.net">mirrors@php.net</a>, and ask if you
- have chance to get your mirror site accepted. We would not like
- to put too much pressure on our rsync server, so we need to limit
- the number of mirror sites. Please also ensure that the mirror is
- located in the country you would like to register the mirror for.
+ have chance to get your mirror site accepted.  We have this limit in
+ place to avoid overloading our rsync server and monitoring infrastructure
+ as well as the people who actively assist mirror sites stay up to date and
+ correctly configured.  We have found that this 2 mirror limit per country
+ serves our users well, so please do not ask to be the 3rd in a country that
+ already has 2 unless you have a very good reason.  Please also ensure 
+ that the mirror is located in the country you would like to register the 
+ mirror for.
 </p>
 
 <p>
