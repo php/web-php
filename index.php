@@ -201,6 +201,25 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>My PHP.net</h1>
+
+<p>
+<font class="newsdate">[24-Apr-2003]</font>
+The PHP website and mirrors sites now have a
+'<a href="/my.php">My PHP.net</a>' page, which allows
+you to check what language settings you have, and enables
+you to set one which will override all the other detected
+parameters.
+</p>
+
+<p>
+However, normally this is not needed, as we remember the
+language you used last time. Be sure to have cookies turned
+on for PHP.net to let this feature work!
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
 
 <h1>International PHP Conference - Spring Edition Early Bird Discount runs out!</h1>
