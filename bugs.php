@@ -636,7 +636,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		mysql_freeresult($result);
 	}
 
-	/* HANDLE USER UDPATES */
+	/* HANDLE USER UPDATES */
 	if(isset($modify) && $modify=="User Edit Bug") {
 		$ts=date("Y-m-d H:i:s");
 		$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id and passwd='$pw'");
