@@ -66,18 +66,18 @@ site_header("Downloads");
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.3.3.tar.bz2','PHP 4.3.3 (tar.bz2)'); ?> - 25 August 2003<br />
-  <span class="md5sum">md5: 1171d96104e2ff2cff9e19789a4a1536</span>
+  <?php download_link('php-4.3.4.tar.bz2','PHP 4.3.4 (tar.bz2)'); ?> - 03 November 2003<br />
+  <span class="md5sum">md5: b9dd601863e08e52e3c4d5e02c2627cf</span>
  </li>
  <li>
-  <?php download_link('php-4.3.3.tar.gz', 'PHP 4.3.3 (tar.gz)');  ?> - 25 August 2003<br />
-  <span class="md5sum">md5: fe3fede4115354155fc6185522f7c6b2</span>
+  <?php download_link('php-4.3.4.tar.gz', 'PHP 4.3.4 (tar.gz)');  ?> - 03 November 2003<br />
+  <span class="md5sum">md5: ea377ce717a394a770b4650f23dcd68b</span>
  </li>
 </ul>
 
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_3.php">release notes</a> for more information on
+ or the <a href="/release_4_3_4.php">release notes</a> for more information on
  this particular release. Daily snapshots are also available from
  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
@@ -90,19 +90,19 @@ site_header("Downloads");
 
 <ul>
  <li>
-  <?php download_link('php-4.3.3-Win32.zip', 'PHP 4.3.3 zip package'); ?> - 25 August 2003<br />
+  <?php download_link('php-4.3.4-Win32.zip', 'PHP 4.3.4 zip package'); ?> - 03 November 2003<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: c3497c394b3f5829136eb2ff614da241</span>
+  <span class="md5sum">md5: 0c435d779cc61ed446fc69ee77f01abe</span>
  </li>
  <li>
-  <?php download_link('php-4.3.3-installer.exe', 'PHP 4.3.3 installer'); ?> - 27 August 2003<br />
+  <?php download_link('php-4.3.4-installer.exe', 'PHP 4.3.4 installer'); ?> - 03 November 2003<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 2720deb87e799ba88e041e99051e78ab</span>
+  <span class="md5sum">md5: d11743698c18cc62211f02724df3a04e</span>
  </li>
 </ul>
 
@@ -200,6 +200,19 @@ site_header("Downloads");
 </p>
 
 <ul>
+
+ <li>PHP 4.3.3
+  <ul>
+   <li>
+    <?php download_link('php-4.3.3.tar.bz2','PHP 4.3.3 (tar.bz2)'); ?> - 25 August 2003<br />
+    <span class="md5sum">md5: 1171d96104e2ff2cff9e19789a4a1536</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.3.tar.gz', 'PHP 4.3.3 (tar.gz)');  ?> - 25 August 2003<br />
+    <span class="md5sum">md5: fe3fede4115354155fc6185522f7c6b2</span>
+   </li>
+  </ul>
+ </li>
  <li>PHP 4.3.2
   <ul>
    <li>
@@ -304,6 +317,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
     <option value="php-4.3.1.tar.gz">4.3.1</option>
     <option value="php-4.3.2.tar.gz">4.3.2</option>
     <option value="php-4.3.3.tar.gz">4.3.3</option>
+    <option value="php-4.3.4.tar.gz">4.3.4</option>
    </select>
   </form>
  </li>

@@ -151,6 +151,18 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.3.4 released!</h1>
+<p>
+ <span class="newsdate">[03-Nov-2003]</span>
+ The PHP developers are proud to announce the immediate availability of
+ <a href="release_4_3_4.php">PHP 4.3.4</a>. This release contains a fair
+ number of bug fixes and we recommend that all users of PHP upgrade to 
+ this version. Full list of fixes can be found in the 
+ <a href="ChangeLog-4.php#4.3.4">NEWS</a> file.
+</p>
+
+<hr />
+
 <h1>PHP 5.0.0 Beta 2 released</h1>
 <p>
  <span class="newsdate">[30-Oct-2003]</span>
