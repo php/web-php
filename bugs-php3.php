@@ -1,4 +1,7 @@
 <?
+	if($save && $user && $pw) {
+		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
+	}
 
 /* See the end of the script for the table layout. */
 
@@ -62,14 +65,14 @@ function wrap($text,$margin=72) {
 
 function show_state_options($state, $show_all, $user_mode=0) {
 	if ($state) { echo "<option>$state\n"; }
-	if((string)$state!="Open") { echo "<option>Open\n"; }
-	if((string)$state!="Closed") { echo "<option>Closed\n"; }
-	if((string)$state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
-	if((string)$state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
-	if((string)$state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
-	if((string)$state!="Feedback") { echo "<option>Feedback\n"; }
-	if((string)$state!="Duplicate") { echo "<option>Duplicate\n"; }
-	if((string)$state!="All" && $show_all) { echo "<option>All\n"; }
+	if($state!="Open") { echo "<option>Open\n"; }
+	if($state!="Closed") { echo "<option>Closed\n"; }
+	if($state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
+	if($state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
+	if($state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
+	if($state!="Feedback") { echo "<option>Feedback\n"; }
+	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
+	if($state!="All" && $show_all) { echo "<option>All\n"; }
 }
 
 function show_menu($state)
@@ -101,16 +104,14 @@ function show_menu($state)
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select></td><td> <a href=\"/bugstats.php\">Statistics</a></td></tr>\n";
+	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
-	echo "<td colspan=4><input type=text name=\"search_for\"></td></tr>\n";
-	echo "</table>\n";
-	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
-	echo "</form>\n";
-	echo "<form method=GET action=\"$PHP_SELF\">\n";
-	echo "<input type='submit' value='Edit'> bug number <input type='text' name='id'>\n";
+	echo "<td colspan=3><input type=text name=\"search_for\"></form></td></tr>\n";
+	echo "<tr><td colspan=3 align=right><form method=GET action=\"$PHP_SELF\">\n";
+	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
 	echo "<input type='hidden' name='edit' value='1'>\n";
-	echo "</form><br>\n";
+	echo "</td><td><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
+	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
 
 
@@ -120,7 +121,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Installation problem",
 				   "Compile Failure",
 				   "Compile Warning",
-				   "Parser error",
+				   "Scripting Engine problem",
 				   "Reproduceable crash",
 				   "Performance problem",
 				   "Dynamic loading related",
@@ -194,6 +195,12 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	if($ebug_type=="--Please Select--") {
 		echo "ERROR!  Please select an appropriate bug type<P>\n";
+		commonFooter();
+		exit;
+	}
+
+	if ($php_version=='earlier') {
+		echo "ERROR!  Please select a valid PHP version.  If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.";
 		commonFooter();
 		exit;
 	}
@@ -284,11 +291,11 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Suspended":
 				return "#ffccbb";
 				break;
-			case "Feedback":
-				return "#bbeeff";
-				break;
 			case "Assigned":
 				return "#bbaaff";
+				break;
+			case "Feedback":
+				return "#bbeeff";
 				break;
 			case "Analyzed":
 				return "#99bbaa";
@@ -476,7 +483,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		if($edit==2) {
 			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
 		} else {
-			echo "<input type=hidden name=ephp_version value=\"".$row[5]."\">\n";
 			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
 		}
 		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
@@ -489,11 +495,15 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		if (isset($edit)) {
 			echo "<b>New Comment:</b><br>\n";
 			echo "<textarea cols=60 rows=15 name=\"ncomment\"></textarea><br>\n";
+			if(isset($MAGIC_COOKIE)) list($user, $pw) = explode(":", base64_decode($MAGIC_COOKIE));
 			if ($edit == 1) {
-				echo "CVS user id: <input type=text size=10 name=user>\n";
+				echo "CVS user id: <input type=text size=10 name=user value=\"$user\">\n";
 			}
-			echo "Password: <input type=password size=10 name=pw>\n";
-			echo "<input type=submit value=\"Commit Changes\">\n";
+			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
+			echo "<input type=submit value=\"Commit Changes\"><br>\n";
+			if(!$user || !$pw) {
+				echo "Remember my login/password: <input type=checkbox name=save>\n";
+			}
 			echo "</form>\n";
 		}
 
@@ -516,7 +526,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 
 		/* NEW-STYLE COMMENTS */
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS my_when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
 		if ($comresult = mysql_query($query)) {
 			while ($com = mysql_fetch_array($comresult)) {
 				echo "<b><i>[".$com['ts']."] ".$com['email']."</i></b><br>\n";
@@ -541,7 +551,7 @@ Or use the form below to submit a new bug report.
 <input type=hidden name=cmd value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong</p>
-<p><strong>To report bugs in PHP 4.0, please go <a href="http://bugs.php.net/version4/">here</a>.</strong></p>
+<p><strong>To report bugs in PHP 4.0, please go <a href="http://bugs.php.net/">here</a>.</strong></p>
 
 <table>
  <tr>
