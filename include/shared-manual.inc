@@ -145,7 +145,7 @@ function makeEntry($date,$name,$blurb) {
 <?
 };
 
-function makeAddNote();
+function makeAddNote() {
         global $FONTFACE;
 ?>
 <TR bgcolor='#D0D0D0' valign=middle>
