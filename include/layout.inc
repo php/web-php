@@ -387,6 +387,9 @@ function clean_note($text) {
     if (function_exists("wordwrap")) {
         $text = wordwrap($text);
     }
+    
+    // Preserve spacing of user notes
+    $text = str_replace("  ", " &nbsp;", $text);
 
     $text = "<code class=\"note\">".$text."</code>";
     return $text;
