@@ -293,6 +293,7 @@ right away.</blockquote>
 	site("Access Micro","www.accessmicro.com");
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("BART's Water Sports","www.bartswatersports.com");
+	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Delia*s Inc.","www.delias.com");
