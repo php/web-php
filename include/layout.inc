@@ -303,7 +303,9 @@ function commonFooter() {
       <!--
         function gotomirror(form) {
           url = form.country.options[form.country.selectedIndex].value;
-          window.location.href = url;
+          if (url != '<? echo $MYSITE; ?>') {
+            window.location.href = url;
+          }
 	  return false;
         }
       //-->
@@ -322,11 +324,17 @@ function commonFooter() {
 	endif;
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
-	echo "<option value=\"-1\">--\n";
+#	echo "<option value=\"-1\">--\n";
 	reset($MIRRORS);
   while (list($url,$mirror) = each($MIRRORS)) {
           if ($mirror[4] == 1) { /* only list full mirrors here */
-            echo "<option value=\"$url\">".$COUNTRIES[$mirror[0]]." ($mirror[1])\n";
+	    if ($url==$MYSITE) {
+              echo '<option value="' . $url . '" SELECTED>' . $COUNTRIES[$mirror[0]] . 
+		' (' . $mirror[1] . ") *\n";
+	    } else {
+              echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
+		' (' . $mirror[1] . ")\n";
+	    }
           }
 	}
 	echo "</select> ";
