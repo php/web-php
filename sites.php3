@@ -108,6 +108,7 @@
 	site("The Chemistry Place","www.chemplace.com");
 	site("The Psychology Place","www.psychplace.com");
 	site("NativeWeb","www.nativeweb.org");
+	site("The Internet Pilot to Physics","http://www.tp.umu.se/TIPTOP/");
 
 	echo "</tr><tr>\n";
 	title("Service Industry");
