@@ -115,6 +115,11 @@ A Beta version of PHP for NetWare is available on the
 Developer Kit site</a>. This version is based on the
 4.0.8 (development) version of the PHP source code.
 </p>
+<p>
+On NetWare, along with the standard features and extensions, it
+is also possible to access various Novell services, using the
+Novell specific UCS extension.
+</p>
 
 <?php echo hdelim(); ?>
 
