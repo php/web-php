@@ -65,7 +65,7 @@ your searching pleasure!
 <P>
 PHP is developed using CVS, so it's possible to obtain the latest
 development release at any time.  Further instructions can be found in
-the web interface to the <a href="http://ca.php.net/cvsweb.cgi">PHP 3.0
+the web interface to the <a href="http://cvs.php.net">PHP 3.0
 CVS tree</a>.
 </P>
 

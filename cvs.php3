@@ -46,10 +46,9 @@ to modify the PHP CVS tree.  It also allows you to comment on and close bugs in 
 as well as modifying the documentation notes in the annotated manual.  The relevant links for these
 three things are:
 <ul>
-<li><a href="http://ca.php.net/cvsweb.cgi">CVS Web Interface for 3.0 Tree</a>
-<li><a href="http://ca.php.net/cvsweb31.cgi">CVS Web Interface for 3.1 Tree</a>
-<li><a href="http://ca.php.net/bugs.php3">PHP Bugs Database</a>
-<li><a href="http://ca.php.net/manual/admin-notes.php3">Manual Errata Administration</a>
+<li><a href="http://cvs.php.net">CVS Web Interface for 3.0 Tree</a>
+<li><a href="http://bugs.php.net">PHP Bugs Database</a>
+<li><a href="http://www.php.net/manual/admin-notes.php3">Manual Errata Administration</a>
 </ul>
 
 If you are not familiar with CVS, you should have a look at the various documentation resources available
@@ -59,7 +58,7 @@ of the CVS client.<P>
 All CVS commit messages get sent to the php-dev mailing list.  You should subscribe yourself to this mailing
 list.  Instructions for subscribing are on the <a href="/support.php3">Support</a> page.
 <P>
-CVS itself is quite easy to use.  Follow the steps listed on the <a href="http://ca.php.net/cvsweb.cgi">CVS Web Interface</a>
+CVS itself is quite easy to use.  Follow the steps listed on the <a href="http://cvs.php.net">CVS Web Interface</a>
 page for checking out your tree.  Substitute your own user name and password for the cvsread/phpfi combination listed there.
 You will not be able to do this until you receive confirmation of your account having been created though.
 <P>

@@ -1,1 +1,1 @@
-<?Header("Location: http://ca.php.net/bugs.php3");?>
+<?Header("Location: http://bugs.php.net");?>

@@ -5,9 +5,9 @@ from your local GNU mirror.
 
 Fetch the web files with the following:
 
-   cvs -d:pserver:mirror@ca.php.net:/repository login
+   cvs -d:pserver:mirror@cvs.php.net:/repository login
    Password: mirror
-   cvs -d:pserver:mirror@ca.php.net:/repository co phpweb
+   cvs -d:pserver:mirror@cvs.php.net:/repository co phpweb
 
 Symbolic link the phpweb directory to the correct place on your server.
 

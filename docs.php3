@@ -18,11 +18,11 @@ commonHeader("Documentation ");
     same manual in a light-weight, HTML 3.2 version without any bells or
     whistles.
 
-<LI><A href="http://ca.php.net/manual/">PHP 3.0 Annotated Manual</A>. This
+<LI><A href="http://www.php.net/manual/">PHP 3.0 Annotated Manual</A>. This
     is the same as the above, except there is a built-in errata/note system
     that users all around the world can (and have!) contributed to.
 
-<LI><A href="http://ca.php.net/manual/browse-errata.php3">PHP 3.0 Manual
+<LI><A href="http://www.php.net/manual/browse-errata.php3">PHP 3.0 Manual
     Errata</A>. This is the collected errata from the on-line errata/note
     system.
 

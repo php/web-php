@@ -6,7 +6,7 @@ commonHeader("PHP 3.0 OS Support Tracking");
 We want to make sure that PHP3 compiles cleanly on as many platforms as possible.  Please help
 us out by entering the information for your particular build if it has not already been entered.
 If you are unable to build PHP on a certain platform, please report it as a bug in the
-<a href="http://ca.php.net/bugs.php3">Bugs Database</a>.
+<a href="http://bugs.php.net">Bugs Database</a>.
 </blockquote>
 <center><form action=os.php3 method=POST>
 <table border=1>
