@@ -68,7 +68,6 @@ if(!isset($pattern)) {
 		  Search for: 
 		  </FONT>
 		</TD><TD>
-	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  <input type="text" name="pattern" value="<?echo $prevsearch[0];?>" size=30>
 		  <INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
 		  <? if ($prevsearch[0]) { ?>
