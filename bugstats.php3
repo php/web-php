@@ -109,7 +109,9 @@ if(!strstr($MYSITE,"ca.php.net")) {
 	echo "<p><b>Who is submitting bug reports?</b>\n";
 	echo "<table>\n";
 	while(list($who,$value)=each($email)) {
-		echo "<tr bgcolor=#aabbcc><th>$who</th><td bgcolor=#ccddee>$value</td></tr>\n";
+		if ($value > 2) {
+			echo "<tr bgcolor=#aabbcc><th>$who</th><td bgcolor=#ccddee>$value</td></tr>\n";
+		}
 	}
 	echo "</table>\n";
 
