@@ -77,6 +77,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Parser error",
 				   "Reproduceable crash",
 				   "Performance problem",
+				   "Dynamic loading related",
 				   "MySQL related",
 				   "mSQL related",
 				   "PostgreSQL related",
