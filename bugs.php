@@ -539,7 +539,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		  }
 
 		if ($output)
-			return "\n\nPrevious Comments:\n\n" . $output;
+			return "\n\nPrevious Comments:\n$divider\n\n" . $output;
 	  }
 
 	show_menu($status);
