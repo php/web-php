@@ -98,6 +98,7 @@
 
 	echo "<br></td><td valign=top>\n";
 	/* Government */
+	site("National Institute of Ecology in Mexico","http://www.ine.gob.mx");
 
 	echo "<br></td><td valign=top>\n";
 	/* Educational */
