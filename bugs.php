@@ -601,7 +601,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				if(crypt($pw,substr($psw,0,2))==$psw) {
 					$ts=date("Y-m-d H:i:s");
 					$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id");
-					mysql_query("UPDATE bugdb set sdesc='$esdesc',status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+					mysql_query("UPDATE bugdb set sdesc='$esdesc',status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user', php_version='$ephp_version' where id=$id");
 					if (!empty($ncomment)) {
 						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
 					}
