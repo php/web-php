@@ -486,15 +486,26 @@ array (
     /* language     */ "de"
    ),
 
-  array(
-    /* title[s]     */ "PHP 4 programmering",
-    /* title_link   */ "http://pagina.se/bok.html?20660",
-    /* author[s]    */ "Jesper Ek and Ulrika Eriksson",
-    /* auth link[s] */ "",
-    /* image        */ "ek-eriksson.gif",
-    /* information  */ "February 2001, ISBN 9-1636-0660-7, 220 pages",
+ array(
+    /* title[s]     */ "PHP Ge-Packt",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382660685X/wwwphpnet07",
+    /* author[s]    */ array("Christoph Aigner", "Thomas Strohmaier"),
+    /* auth link[s] */ array(""),
+    /* image        */ "aigner.jpg",
+    /* information  */ "MITP, 2001, ISBN 3-8266-0685-X, 512 pages",
     /* inform. link */ "",
-    /* language     */ "se"
+    /* language     */ "de"
+   ),
+
+  array(
+    /* title[s]     */ "PHP 4 Developer's Guide - Anleitungen und Lösungen für einen professionellen Einsatz",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN//wwwphpnet07",
+    /* author[s]    */ array("Sterling Hughes", "Andrei Zmievski"),
+    /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php", "http://zend.com/zend/hof/andrei.php"),
+    /* image        */ "sterling.jpg",
+    /* information  */ "October 2001, ISBN 3-8272-6174-0, 538 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
   ),
 
   array(
