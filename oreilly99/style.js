@@ -436,7 +436,7 @@ function handleKeys(e) {
 // with <SCRIPT LANGUAGE="JavaScript1.2" SRC=...> are
 // loaded, even though they should be ignored.
 // Make sure this code is only executed by 4.x and later.
-if (parseInt(navigator.appVersion) > 3 && !ignore_keys) {
+if (parseInt(navigator.appVersion) > 3) {
 
    // support ESC key code  (*not* BS because of Goto field!)
    // BUG: *** not working in 4.04? was it ever working? hmmm ...
