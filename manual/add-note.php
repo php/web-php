@@ -86,7 +86,7 @@ allowing them in the past, but people invariably made a mess of
 things making the manual hard to read for everybody. You can include
 &lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
 
-<p>Read carefully the following note. If your post is falls into one of the
+<p>Read carefully the following note. If your post falls into one of the
 categories mentioned there, it will be rejected by one of the editors.</p>
 
 <P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a
