@@ -85,7 +85,7 @@ array (
     /* language     */ "en"
   ),
 
-  array( 
+  array(
     /* title[s]     */ array("PHP Essentials","A Better Way to Learn PHP - Includes Version 4"),
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/076152729X/wwwphpnet",
     /* author[s]    */ "Julie C. Meloni",
@@ -249,11 +249,11 @@ array (
   array(
     /* title[s]     */ "PHP Functions Essential Reference",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet",
-    /* author[s]    */ array("Landon Bradshaw","Graeme Merrall","Stephen Wall (Editor)"),
-    /* auth link[s] */ array(false,"http://zend.com/comm_person.php?id=32",false),
+    /* author[s]    */ array("Zak Greant","Graeme Merrall","Lars Torben Wilson","Brett Michlitsch"),
+    /* auth link[s] */ array("http://zend.com/comm_person.php?id=56","http://zend.com/comm_person.php?id=32","http://zend.com/comm_person.php?id=28",false),
     /* image        */ "till_gerken.jpg",
-    /* information  */ "New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages",
-    /* inform. link */ "",
+    /* information  */ "New Riders Publishing, September 2001, ISBN 0-7357-0970-X, 768 pages",
+    /* inform. link */ "http://www.newriders.com/books/title.cfm?isbn=073570970X",
     /* language     */ "en"
   ),
 
@@ -629,7 +629,7 @@ array (
   )
   ),
 
-  
+
   "Related" => array(
 
   array(
@@ -661,7 +661,7 @@ array (
     /* auth link[s] */ "",
     /* image        */ "mysql-book.gif",
     /* information  */ "O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<br>\n" .
-                       "Also available in " . 
+                       "Also available in " .
                        make_link("http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872","Russian"),
     /* inform. link */ "",
     /* language     */ "en"
@@ -699,7 +699,7 @@ array (
     /* author[s]    */ array("Stephen Spainhour","Robert Eckstein"),
     /* auth link[s] */ "",
     /* image        */ "webmaster-book.gif",
-    /* information  */ "Includes a large chapter on PHP written by " . 
+    /* information  */ "Includes a large chapter on PHP written by " .
                        make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<br>\n" .
                        "O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/webmaster2/",
@@ -764,7 +764,7 @@ function showBook($one_book) {
     // No link for the authors, simple author list
     if (!$author_link) {
       $temp = $author;
-    } 
+    }
     // Build links to the authors pages
     else {
       for ($i=0; $i < count ($author); $i++) {
