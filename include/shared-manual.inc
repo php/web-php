@@ -40,7 +40,7 @@ function manual_setup($page_data)
 // already set up
 function manual_header()
 {
-    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE;
+    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES;
     
     // Get values out of the config array
     list($filename, $title) = $PGI['this'];
@@ -52,18 +52,22 @@ function manual_header()
     header("Content-type: text/html;charset=$encoding");
     header("Content-language: $lang");
     
-    // Set initial base for this manual page
-    // [will be extended in manualHeader()!]
+    // Set base page and href for this manual page
     $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang);
+    if ($PRINT_PAGE) {
+        if ($PRINT_NOTES) {
+            $_SERVER['BASE_PAGE'] .= "/printwn/$filename";
+        } else {
+            $_SERVER['BASE_PAGE'] .= "/print/$filename";
+        }
+    } else {
+        $_SERVER['BASE_PAGE'] .= "/$filename";
+    }
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
     if ($PRINT_PAGE) {
-        $_SERVER['BASE_PAGE'] .= "/print/$filename";
-        $_SERVER['BASE_HREF'] .= "/print/$filename";
         manual_header_print();
     } else {
-        $_SERVER['BASE_PAGE'] .= "/$filename";
-        $_SERVER['BASE_HREF'] .= "/$filename";
         manual_sidebar();
         commonHeader("$title - Manual");
         manual_navbar();
