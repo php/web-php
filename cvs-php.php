@@ -289,12 +289,12 @@ account holder who can vouch for your contribution.
 <tr>
  <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
-      class="max" value="<?php echo clean($_POST['fullname']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['fullname'])) echo clean($_POST['fullname']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">Email:</th>
  <td><input type="text" size="50" name="email"
-      class="max" value="<?php echo clean($_POST['email']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">For what purpose do you require a CVS account:<br/ >
@@ -314,17 +314,17 @@ foreach ($purposes as $i => $p) { ?>
 </tr>
 <tr>
  <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
- <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php echo clean($_POST['realpurpose']);?></textarea></td>
+ <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
  <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>
  <td><input type="text" size="10" name="id"
-      class="max" value="<?php echo clean($_POST['id']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['id'])) echo clean($_POST['id']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
-      class="max" value="<?php echo clean($_POST['password']);?>" /></td>
+      class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>" /></td>
 </tr>
 <tr>
  <th colspan="2"><input type="submit" value="Send Request" /></th>
