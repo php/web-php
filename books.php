@@ -629,14 +629,25 @@ array (
   ),
 
   array(
-    /* title[s]     */ "Tanuljuk meg a PHP4 használatát 24 óra alatt",
-    /* title_link   */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
-    /* author[s]    */ "Matt Zandstra",
+    /* title[s]     */ "Desenvolvendo Websites com PHP 4",
+    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&isbn=8575220039&volume=1&ano_publ=2001&rnd=16354996126232",
+    /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
-    /* image        */ "zandstra_hu.jpg",
-    /* information  */ "Kiskapu, Aug 2001, ISBN 963-9301-30-2, 560 pages",
-    /* inform. link */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
-    /* language     */ "hu"
+    /* image        */ "niederauer.jpg",
+    /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
+    /* inform. link */ "http://www.cursophp.net/livro/",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
+    /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
+    /* author[s]    */ "Luke Welling", "Laura Thomson";
+    /* auth link[s] */ "",
+    /* image        */ "welling_br.gif",
+    /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
+    /* inform. link */ "http://http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
+    /* language     */ "pt"
   )
   ),
 
