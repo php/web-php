@@ -33,14 +33,12 @@ commonHeader("Changes in PHP 5/Zend Engine 2.0");
  PHP 5 introduces private and protected member variables, they allow you to
  define the visibility of class properties.
 </p>
-
 <h3>Example</h3>
 <p>
  Protected member variables can be accessed in classes extending the class 
  they are declared in, whereas private member variables can only be accessed 
  by the class they belong to.
 </p>
-<p>
 <?php highlight_php('<?php
 class MyClass {
     private $Hello = "Hello, World!\n";
@@ -77,15 +75,12 @@ print $obj->Bar;    /* Shouldn\'t print out anything */
 print $obj->Foo;    /* Shouldn\'t print out anything */
 $obj->printHello();
 ?>'); ?>
-</p>
 
 <h2>Private and protected methods</h2>
 <p>
  With PHP 5 (Zend Engine 2), private and protected methods are also introduced.
 </p>
-
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class Foo {
     private function aPrivateMethod() {
@@ -108,8 +103,6 @@ class Bar extends Foo {
 $o = new Bar;
 $o->aPublicMethod();
 ?>'); ?>
-</p>
-
 <p>
  Old code that has no user-defined classes or functions named "public",
  "protected" or "private" should run without modifications.
@@ -122,7 +115,6 @@ $o->aPublicMethod();
  A class that contains abstract methods needs to be declared abstract.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 abstract class AbstractClass {
     abstract public function test();
@@ -137,22 +129,17 @@ class ImplementedClass extends AbstractClass {
 $o = new ImplementedClass;
 $o->test();
 ?>'); ?>
-</p>
-
 <p>
  Abstract classes cannot be instantiated. Old code that has no user-defined
  classes or functions named 'abstract' should run without modifications.
 </p>
 
 <h2>Interfaces</h2>
-
 <p>
  The Zend Engine 2.0 introduces interfaces. A class may implement an arbitrary
  list of interfaces.
 </p>
-
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 interface Throwable {
     public function getMessage();
@@ -163,8 +150,6 @@ class Exception implements Throwable {
     // ...
 }
 ?>'); ?>
-</p>
-
 <p>
  Old code that has no user-defined classes or functions named 'interface' or 
  'implements' should run without modifications.
@@ -177,7 +162,6 @@ class Exception implements Throwable {
  to a method.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 interface Foo {
     function a(Foo $foo);
@@ -203,12 +187,10 @@ $b = new FooBar;
 $a->a($b);
 $a->b($b);
 ?>'); ?>
-</p>
 <p>
  These class type hints are not checked upon compilation, as would be the case 
  in a typed language, but during runtime. This means that:
 </p>
-<p>
 <?php
 highlight_php('<?php
 function foo(ClassName $object) {
@@ -216,11 +198,9 @@ function foo(ClassName $object) {
 }
 ?>');
 ?>
-</p>
 <p>
  is equivalent to:
 </p>
-<p>
 <?php 
 highlight_php('<?php
 function foo($object) {
@@ -229,7 +209,6 @@ function foo($object) {
     }
 }
 ?>'); ?>
-</p>
 <p>
  This syntax only applies to objects/classes, not built-in types.
 </p>
@@ -240,7 +219,6 @@ function foo($object) {
  Methods and members declared final cannot be overridden by sub-classes.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class Foo {
     final function bar() {
@@ -248,7 +226,6 @@ class Foo {
     }
 }
 ?>'); ?>
-</p>
 <p>
  Old code that has no user-defined classes or functions named 'final' should
  run without modifications.
@@ -273,11 +250,9 @@ class Foo {
 <p>
  An object copy is created by calling the object's <code>__clone()</code> method:
 </p>
-<p>
 <?php highlight_php('<?php
 $copy_of_object = $object->__clone();
 ?>'); ?>
-</p>
 <p>
  When the developer asks to create a new copy of an object, the Zend Engine will
  check if a <code>__clone()</code> method has been defined or not. If not, it
@@ -289,7 +264,6 @@ $copy_of_object = $object->__clone();
  source object, and only override properties that need to be changed. 
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class MyCloneable {
     static $id = 0;
@@ -319,7 +293,6 @@ print $obj->name . "\n";
 print $obj->address . "\n";
 ?>');
 ?>
-</p>
 
 <h2>Unified Constructors</h2>
 <p>
@@ -341,7 +314,6 @@ print $obj->address . "\n";
  them by the name <code>__construct()</code>.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class BaseClass {
 	function __construct() {
@@ -359,7 +331,6 @@ class SubClass extends BaseClass {
 $obj = new BaseClass();
 $obj = new SubClass();
 ?>'); ?>
-</p>
 <p>
  For backwards compatibility, if PHP 5 cannot find a <code>__construct()</code>
  function for a given class, it will search for the old-style constructor function,
@@ -383,7 +354,6 @@ $obj = new SubClass();
  that recieves no parameters, is called before the object is freed from memory.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class MyDestructableClass {
 	function __construct() {
@@ -398,7 +368,6 @@ class MyDestructableClass {
 
 $obj = new MyDestructableClass();
 ?>'); ?>
-</p>
 <p>
  Like constructors, parent destructors will not be called implicitly by the
  engine. In order to run a parent destructor, one would have to explicitly
@@ -409,7 +378,6 @@ $obj = new MyDestructableClass();
 <p>
  PHP 5 introduces per-class constants:
 </p>
-<p>
 <?php highlight_php('<?php
 class Foo {
 	const constant = "constant";
@@ -417,13 +385,11 @@ class Foo {
 
 echo "Foo::constant = " . Foo::constant . "\n";
 ?>'); ?>
-</p>
 <p>
  PHP 5 allows for expressions within constants, however, constants are
  evaluated at compile time, therefore no constants can be declared that
  rely on runtime information.
 </p>
-<p>
 <?php highlight_php('<?php
 class Bar {
 	const a = 1<<0;
@@ -431,7 +397,6 @@ class Bar {
     const c = a | b;
 }
 ?>'); ?>
-</p>
 <p>
  Old code that has no user-defined classes or functions named 'const'
  will run without modifications.
@@ -443,7 +408,6 @@ class Bar {
  to that of other programming languages.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class MyExceptionFoo extends Exception {
     function __construct($exception) {
@@ -457,7 +421,6 @@ try {
     print $exception->getMessage();
 }
 ?>'); ?>
-</p>
 <p>
  Old code that has no user-defined classes or functions 'catch', 'throw'
  and 'try' will run without modifications.
@@ -469,7 +432,6 @@ try {
  and make further method calls on those objects. With the advent of Zend
  Engine 2, the following is now possible:
 </p>
-<p>
 <?php highlight_php('<?php
 class Circle {
     function draw() {
@@ -495,11 +457,9 @@ function ShapeFactoryMethod($shape) {
 ShapeFactoryMethod("Circle")->draw();
 ShapeFactoryMethod("Square")->draw();
 ?>'); ?>
-</p>
 
 <h2>Static member variables of static classes can now be initialized</h2>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class foo {
     static $my_static = 5;
@@ -507,7 +467,6 @@ class foo {
 
 print foo::$my_static;
 ?>'); ?>
-</p>
 
 <h2>Static Methods</h2>
 <p>
@@ -515,7 +474,6 @@ print foo::$my_static;
  callable from outside the object context.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class Foo {
     public static function aStaticMethod() {
@@ -525,7 +483,6 @@ class Foo {
 
 Foo::aStaticMethod();
 ?>'); ?>
-</p>
 <p>
  The pseudo variable <code>$this</code> is not available inside a method
  that has been declared static.
@@ -538,7 +495,6 @@ Foo::aStaticMethod();
  a class, or implements an interface.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 class baseClass { }
 
@@ -548,7 +504,6 @@ if ($a instanceof basicClass) {
     echo "Hello World";
 }
 ?>'); ?>
-</p>
 
 <h2>Static function variables</h2>
 <p>
@@ -560,7 +515,6 @@ if ($a instanceof basicClass) {
 
 <h2>Parameters that are passed by reference to a function may now have default values</h2>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 function my_function(&$var = null) {
     if ($var === null) {
@@ -568,7 +522,6 @@ function my_function(&$var = null) {
     }
 }
 ?>'); ?>
-</p>
 
 <h2>__autoload()</h2>
 <p>
@@ -577,7 +530,6 @@ function my_function(&$var = null) {
  passed to the <code>__autoload()</code> interceptor function as its only argument.
 </p>
 <h3>Example</h3>
-<p>
 <?php highlight_php('<?php
 function __autoload($className) {
     include_once $className . ".php";
@@ -585,7 +537,6 @@ function __autoload($className) {
 
 $object = new ClassName;
 ?>'); ?>
-</p>
 
 <h2>Overloadable Method calls and Property accesses</h2> 
 <p>
@@ -594,7 +545,6 @@ $object = new ClassName;
  methods.
 </p>
 <h3>Example: __get() and __set()</h3>
-<p>
 <?php highlight_php('<?php
 class Setter {
     public $n;
@@ -631,9 +581,7 @@ $foo->a++;
 $foo->z++;
 var_dump($foo);
 ?>'); ?>
-</p>
 <h3>Example: __call()</h3>
-<p>
 <?php highlight_php('<?php
 class Caller {
     var $x = array(1, 2, 3);
@@ -649,6 +597,5 @@ $foo = new Caller();
 $a = $foo->test(1, "2", 3.4, true);
 var_dump($a);
 ?>'); ?>
-</p>
 
 <?php commonFooter(); ?>
