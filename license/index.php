@@ -11,9 +11,10 @@ PHP license <a href="2_02.txt">here</a>.
 <p><b>Q.</b> Why is PHP 4 not dual-licensed under the GNU General
 Public License (GPL) like PHP 3 was?</p>
 
-<p><b>A.</b> Because PHP 4 uses the Zend scripting engine library,
-which is under the QPL, and the developers of PHP chose to no longer
-continue releasing our code under a dual-license scheme.</p>
+<p><b>A.</b> GPL enforces many restrictions on what can and cannot
+be done with the licensed code.  The PHP developers decided to
+release PHP under a much more loose license (BSD style), to help
+PHP become as popular as possible.</p>
 
 <p><b>Q.</b> What does the PHP license mean then, in simple words?</p>
 
