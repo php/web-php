@@ -5,6 +5,8 @@ require("site.inc");
 
 $IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = $HTDIG = false;
 
+$DISABLE_KICKOUTS = false;
+
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
@@ -251,6 +253,7 @@ function commonHeader($title) {
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
 	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
+	global $DISABLE_KICKOUTS;
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 ?>
 <HTML>
@@ -263,7 +266,7 @@ var loaded = 0;
 var gotlayers = 0;
 var lastbutton='top';
 
-<? if ($NS4 || $IE4):	/* Kick Outs */ ?>
+<? if (($NS4 || $IE4) && (!$DISABLE_KICKOUTS)):	/* Kick Outs */ ?>
 
 NS4 = (document.layers) ? 1 : 0;
 IE4 = (document.all) ? 1 : 0;
@@ -470,6 +473,7 @@ function commonFooter() {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT, $HTDIG;
 	global $MIRRORS,$MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
+	global $DISABLE_KICKOUTS;
 	$country=$MIRRORS[$MYSITE][0];
 ?>
       <!-- end body -->
@@ -541,7 +545,7 @@ function commonFooter() {
  </TR>
 </TABLE>
 
-<? if ($NS4 || $IE4):	/* Kick outs */ ?>
+<? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
 <DIV ID='mirrorsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-20,'left',350);?>
