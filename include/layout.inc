@@ -178,7 +178,7 @@ $enclosed = 0;
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $enclosed;
-	global $SIDEBAR_DATA, $prevsearch;
+	global $SIDEBAR_DATA;
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
@@ -219,7 +219,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <form method="post" action="/search.php">
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
 <small>search for</small>
-<input class="small" type="text" name="pattern" value="<?php echo htmlspecialchars(get_magic_quotes_gpc()?stripslashes($prevsearch):$prevsearch) ?>" size="30">
+<input class="small" type="text" name="pattern" value="" size="30" />
 <small>in the</small>
 <select name="show" class="small">
 <option value="quickref" selected>function list
