@@ -166,8 +166,10 @@ if (isset($uri_aliases[strtolower($uri)])) {
 }
 
 // ============================================================================
-// Redirect if the entered URI was a PHP page name
-if (file_exists("$DOCUMENT_ROOT/$uri.php")) {
+// Redirect if the entered URI was a PHP page name (except the books page,
+// which we display in the mirror's language or the explicitly specified
+// language [see below])
+if ($uri !=  'books' && file_exists("$DOCUMENT_ROOT/$uri.php")) {
     header("Location: http://$SERVER_NAME/$uri.php");
     exit;
 }
@@ -184,14 +186,14 @@ if (isset($external_redirects[strtolower($uri)])) {
 require "manual-lookup.inc";
 if (strchr($uri,'/')) {
     
-	// Find language and function name part (eg. hu/ini)
-	list($lang,$function) = explode('/',$uri,2);
+    // Find language and function name part (eg. hu/ini)
+    list($lang,$function) = explode('/',$uri,2);
 
     $function = strtolower($function);
     if ($lang != 'pt_BR') { $lang = strtolower($lang); }
 
     // Transform function name, so it can be a shortcut
-	if (isset($uri_aliases[$function])) {
+    if (isset($uri_aliases[$function])) {
         $function = $uri_aliases[$function];
     }
 
@@ -208,11 +210,12 @@ if ($function == "rev") {
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
+} elseif ($function == "books") {
+    header("Location: http://$SERVER_NAME/books.php?type_lang=PHP_$lang");
+    exit;
 } elseif ($function == "phpdochowto") {
     header("Location: http://$SERVER_NAME/manual/howto/index.html");
     exit;
-}	elseif ($function == "books") {
-    header("Location: http://$SERVER_NAME/books.php?type_lang=PHP_$lang");
 }
 
 // ============================================================================
