@@ -132,9 +132,9 @@ and the community was split between multiple groups. This new group offers a
 chance to unite the PHP-Usenet community. Secondly, most servers have longer
 post-retention times for comp.* than alt.*. Finally, the creation of
 comp.lang.php represents PHP's coming to acceptance and maturity. Virtually
-all languages (except ASP) have a spot under the comp.lang.* heirarchy. Stop
-on by and become a part of the community - comp.lang.php is a great place to
-get help and to help others.
+all languages have a spot under the comp.lang.* hierarchy. Stop on by and
+become a part of the community - comp.lang.php is a great place to get help
+and to help others.
 </p>
 
 <?php echo hdelim(); ?>
