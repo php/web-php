@@ -245,7 +245,7 @@ by Laurent Lacroix, Christophe Lauer, Nicolas Leprince, Christophe Boggero<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.kosek.cz/php/index.html"
-><IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 PHP tvorba interaktivnich internetovych aplikaci<BR>
