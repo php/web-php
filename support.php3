@@ -10,7 +10,7 @@ if (isset($maillist)) {
 		echo "You forgot to specify an email address to be added to the list.  ";
 		echo "Go back and try again.";
 	} else {
-		$request = strtolower($action);
+		$request = strtolower($action) || "subscribe";
 		$sub = str_replace("@", "=", $email);
 		switch ($maillist) {
 		    case "phplib":
