@@ -126,6 +126,7 @@ with contributions by Patrice Bridoux and Pierre Carlier (and more to
 come) and released under the terms of the GPL.
 <? endEntry();?>
 
+<!-- site is down as of 7/8/1999
 <? makeEntry("MyAdServer","www.314interactive.com","3.14Interactive","wj@314interactive.com"); ?>
 This is a web adserver using PHP3.0 and MySQL  It includes the following features:
 <ul>
@@ -147,6 +148,7 @@ view/clicks.
 remaining on account" drops below a specified level.
 </ul>
 <? endEntry();?>
+-->
 
 <? makeEntry("W-Agora","www.araxe.fr/w-agora","Marc Druilhe","mdruilhe@araxe.fr"); ?>
 W-Agora is a web-based and customizable forum package. It allows you to install forums, BBS, guestbooks and all derived things.

@@ -128,7 +128,9 @@ Here is a list of other excellent PHP tutorials:
 <ul>
 <li><a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a>
 <li><a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a>
+<!-- site is down as of 7/8/1999
 <li><a href="http://www.314interactive.com/io/content.php3?sec=art&req=mysql&issue=4&pg=1">ionline</a>
+-->
 <li><a href="http://www.htmlwizard.net/phpTidbits/">phpTidbits</a>
 <li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a>
 </ul>
