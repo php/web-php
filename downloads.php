@@ -18,6 +18,7 @@ commonHeader("Downloads ");
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk122.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.2.2</a>,
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk13.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.3</a>,
   </ul>
+  <p>
   <LI>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
   <li>To download the latest development version, see the <a href="version4/cvs.php">instructions on using CVS</a>.</li>
   <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer Beta</a> for PHP 4.0.0 is available on Zend Technologies' web site.</li>
