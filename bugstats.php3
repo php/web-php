@@ -35,38 +35,46 @@
 
 	$result=mysql_query("SELECT * from bugdb");
 	while($row=mysql_fetch_row($result)) {
-		$bug_type_all[$row[1]]++;
+		$bug_type['all'][$row[1]]++;
 		if($row[7]=="Open") {
-			$bug_type_open[$row[1]]++;
+			$bug_type['open'][$row[1]]++;
 		}
 		if($row[7]=="Analyzed") {
-			$bug_type_analyzed[$row[1]]++;
+			$bug_type['analyzed'][$row[1]]++;
 		}
 		if($row[7]=="Suspended") {
-			$bug_type_suspended[$row[1]]++;
+			$bug_type['suspended'][$row[1]]++;
 		}
 		if($row[7]=="Duplicate") {
-			$bug_type_duplicate[$row[1]]++;
+			$bug_type['duplicate'][$row[1]]++;
 		}
 		if($row[7]=="Assigned") {
-			$bug_type_assigned[$row[1]]++;
+			$bug_type['assigned'][$row[1]]++;
 		}
 		$email[$row[2]]++;
 		$php_version[$row[5]]++;
 		$php_os[$row[6]]++;
 		$status[$row[7]]++;
 		if($row[7]=="Closed") {
-			$bug_type_closed[$row[1]]++;
+			$bug_type['closed'][$row[1]]++;
 			$time_to_close[] = mydate($row[10]) - mydate($row[9]);
 			$closed_by[$row[11]]++;
 		}	
 		$total++;	
 	}
+
+	function bugstats($status, $type) {
+		global $bug_type;
+		if ($bug_type[$status][$type] > 0) {
+			return '<A href="/bugs.php3?status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '">' . $bug_type[$status][$type] . '</A>\n';
+		}
+	}
+
 	mysql_freeresult($result);
 	echo "<table>\n";
 	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th></tr>\n";
-	while(list($type,$value)=each($bug_type_all)) {
-		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".$bug_type_closed[$type]."&nbsp;</td><td align=center bgcolor=#ccddee>".$bug_type_open[$type]."&nbsp;</td><td align=center bgcolor=#ddeeff>".$bug_type_analyzed[$type]."&nbsp;</td><td align=center bgcolor=#ccddee>".$bug_type_suspended[$type]."&nbsp;</td><td align=center bgcolor=#ddeeff>".$bug_type_duplicate[$type]."&nbsp;</td><td align=center bgcolor=#ccddee>".$bug_type_assigned[$type]."&nbsp;</td></tr>\n";
+	while(list($type,$value)=each($bug_type['all'])) {
+		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td></tr>\n";
 	}
 	echo "</table>\n";
 	
