@@ -84,12 +84,12 @@ right away.</blockquote>
 	title("Computer Software");
 	siteStart();
 	site("Apache Web Server","www.apache.org");
+	site("Be","www.be.com");
 	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("Cornado Internet Applications","www.cornado.com");
 	site("Flexform Software","www.flexform.de");
 	site("Freedows OS","freedows.netpedia.net/");
-	site("Knowledge Adventure","www.knowledgeadventure.com");
 	site("LCDproc", "lcdproc.omnipotent.net");
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
