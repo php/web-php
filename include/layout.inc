@@ -203,9 +203,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="$www_static_root/style.css" />
- <link rel="shortcut icon" href="$www_static_root/favicon.ico" />
- <script language="Javascript" type="text/javascript" src="$www_static_root/userprefs.js"></script>
+ <link rel="stylesheet" href="<?php echo $www_static_root; ?>/style.css" />
+ <link rel="shortcut icon" href="<?php echo $www_static_root; ?>/favicon.ico" />
+ <script language="Javascript" type="text/javascript" src="<?php echo $www_static_root; ?>/userprefs.js"></script>
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
 </head>
 <body bgcolor="#ffffff" text="#000000"
@@ -289,7 +289,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="$www_static_root/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
+  <td bgcolor="#cccccc" background="<?php echo $www_static_root; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="100%">
@@ -314,7 +314,7 @@ function commonFooter() {
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if (!empty($RSIDEBAR_DATA)) { ?>
-<td bgcolor="#cccccc" background="$www_static_root/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
+<td bgcolor="#cccccc" background="<?php echo $www_static_root; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <td width="175" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
