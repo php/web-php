@@ -13,7 +13,7 @@
   <td align="center" width="33%"><?
 
   $sponsor["www.php.net"] = "<a href=\"http://BestHost.net/\"><img src=\"http://BestHost.net/images/php_sponsor.gif\" border=0 alt=\"BestHost - proud sponsor of PHP.net\"></a>";
-  $sponsor["ca.php.net"] = "<a href=\"http://www.lerdorf.on.ca/\">Site hosted by Lerdorf Consultants Inc.</a>";
+  $sponsor["ca.php.net"] = "<a href=\"http://www.bell.ca/\"><img border=0 src=\"belllogo.gif\" alt=\"Site hosted by Bell Advanced Server Farm\"><br>Advanced Server Farm</a>";
   $sponsor["il.php.net"] = "<a href=\"http://www.netvision.net.il/\">Site hosted by Netvision LTD</a>";
   $sponsor["php.netvision.net.il"] = $sponsor["il.php.net"];
   $sponsor["php.technion.ac.il"] = "<a href=\"http://www.technion.ac.il/\">Site hosted by the Technion, Israel Institute of Technology</a>";
