@@ -317,6 +317,9 @@ $mirror_sites=$MIRRORS;
 reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
+	if (!$mirror_sites[$site][4]) {
+		continue;
+	}
 	$place=$mirror_sites[$site][1];
 	echo "<OPTION VALUE='$site'>$place";
 endwhile;
