@@ -10,6 +10,7 @@
 */
 
 require_once 'mirrors.inc';
+require_once 'countries.inc';
 
 function is_primary_site() {
   global $MYSITE;
@@ -60,60 +61,6 @@ function show_mirror_options ($current) {
     }
   }
 }
-
-$COUNTRIES = array(
-   "au" => "Australia",
-   "at" => "Austria",
-   "be" => "Belgium",
-   "bg" => "Bulgaria",
-   "br" => "Brazil",
-   "ca" => "Canada",
-   "ch" => "Switzerland",
-   "cl" => "Chile",
-   "cn" => "China",
-   "cr" => "Costa Rica",
-   "cz" => "Czech Republic",
-   "de" => "Germany",
-   "dk" => "Denmark",
-   "ee" => "Estonia",
-   "es" => "Spain",
-   "fi" => "Finland",
-   "fr" => "France",
-   "gr" => "Greece",
-   "hk" => "China (Hong Kong)",
-   "hu" => "Hungary",
-   "id" => "Indonesia",
-   "ie" => "Ireland",
-   "il" => "Israel",
-   "is" => "Iceland",
-   "it" => "Italy",
-   "jp" => "Japan",
-   "kr" => "Korea",
-   "li" => "Liechtenstein",
-   "lt" => "Lithuania",
-   "lv" => "Latvia",
-   "mx" => "Mexico",
-   "nl" => "Netherlands",
-   "no" => "Norway",
-   "nz" => "New Zealand",
-   "ph" => "Philippines",
-   "pl" => "Poland",
-   "pt" => "Portugal",
-   "ro" => "Romania",
-   "ru" => "Russian Federation",
-   "se" => "Sweden",
-   "sk" => "Slovakia",
-   "sg" => "Singapore",
-   "si" => "Slovenia",
-   "th" => "Thailand",
-   "tr" => "Turkey",
-   "tw" => "Taiwan",
-   "ua" => "Ukraine",
-   "uk" => "United Kingdom",
-   "us" => "United States",
-   "za" => "South Africa",
-   "xx" => "Other"
-);
 
 # http://www.unicode.org/unicode/onlinedat/languages.html
 $LANGUAGES = array(
