@@ -133,6 +133,8 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.php-con.com/", make_image("phpcon2002.png", "PHPCon 2002", "right") ); ?>
+
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
 <p>
 <font class="newsdate">[05-Sept-2002]</font> 
