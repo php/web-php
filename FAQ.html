@@ -76,6 +76,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#6.9">6.9. It says to use: --activate-module=src/modules/php3/libphp3.a, but that file doesn't exist, so I changed it to --activate-module=src/modules/php3/libmodphp3.a and it doesn't work!? What's going on?</a></li>
         <li><a href="#6.10">6.10. When I try to build Apache with PHP as a static module using --activate-module=src/modules/php3/libphp3.a it tells me that my compiler is not ANSI compliant.</a></li>
         <li><a href="#6.11">6.11. When I try to build PHP using --with-apxs I get strange error messages.</a></li>
+        <li><a href="#6.12">6.12. During 'make', I get errors in microtime, and a lot of 'RUSAGE_' stuff.</a></li>
     </ul>
 <li><b><a href="#7">7. Using PHP</a></b>
     <ul>
@@ -871,6 +872,41 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
     Last, if you reconfigure/reinstall Apache, add a 'make clean' to the process after
     './configure' and before 'make'.
     </dd>
+  <dt><b>
+    <a name="6.12">6.11.</a>During 'make', I get errors in microtime, and a lot of 'RUSAGE_' stuff.
+  </b></dt>
+   <dd>
+   During the 'make' portion of installation, if you encounter problems that look similar
+   to this:
+    <p><pre>
+    microtime.c: In function `php_if_getrusage':
+    microtime.c:94: storage size of `usg' isn't known
+    microtime.c:97: `RUSAGE_SELF' undeclared (first use in this function)
+    microtime.c:97: (Each undeclared identifier is reported only once
+    microtime.c:97: for each function it appears in.)
+    microtime.c:103: `RUSAGE_CHILDREN' undeclared (first use in this function)
+    make[3]: *** [microtime.lo] Error 1
+    make[3]: Leaving directory `/home/master/php-4.0.1/ext/standard'
+    make[2]: *** [all-recursive] Error 1
+    make[2]: Leaving directory `/home/master/php-4.0.1/ext/standard'
+    make[1]: *** [all-recursive] Error 1
+    make[1]: Leaving directory `/home/master/php-4.0.1/ext'
+    make: *** [all-recursive] Error 1
+    </pre></p>
+    Your system is broken.  You need to fix your /usr/include files either by making sure
+    your /usr/include/linux symlink is pointing to the right place in your kernel sources or
+    by installing a glibc-devel package that matches your glibc.  This has absolutely nothing
+    to do with PHP.  To prove this to yourself, try this simple test:
+    <p><pre>
+    $ cat >test.c <<X
+    #include <sys/resource.h>
+    X
+
+    $ gcc -E test.c >/dev/null
+   
+    If that spews out errors, you know your include files are messed up. 
+    </pre></p>
+   </dd>
 </dl>
 
 <hr noshade>
