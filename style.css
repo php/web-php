@@ -139,10 +139,10 @@ table#cal {
         font-size: smaller;
 }
 
-table#cal  a {
+table#cal a, .sidetoc a {
         text-decoration: none;
 }
-table#cal  a:hover {
+table#cal a:hover, .sidetoc a:hover {
         text-decoration: underline;
 }
 
