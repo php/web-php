@@ -215,8 +215,6 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
-
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
  <font class="newsdate">[29-Jun-2003]</font>
@@ -250,6 +248,8 @@ if you find any!), but please do not replace your production installations of PH
 </p>
 
 <?php echo hdelim(); ?>
+
+<?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
 
 <h1>PHP Usage Survey</h1>
 <p>
