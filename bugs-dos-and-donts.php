@@ -42,6 +42,7 @@ commonHeader("Bugs Database Dos and Don'ts");
     problem is, put the long script into some place where it can
     be accessed and add an URL for it into the report.</li>
 <li>Never submit the same bug report more than once.</li>
+<li>Always report bugs in the English language.</li>
 <li>If you are trying to report bugs in PHP 4.0, please
     go <a href="http://bugs.php.net/">here</a>.</li>
 </ul>
