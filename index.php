@@ -215,6 +215,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.php-mag.net/", make_image("news/php-mag.gif", "PHP Magazine", "right")); ?> 
+
+<h1>PHP Magazine web site now with daily news</h1>
+
+<p>
+ <span class="newsdate">[12-Aug-2003]</span>
+ <a href="http://www.php-mag.net/">The International PHP Magazine web site</a>
+ now offers daily news for PHP professionals and beginners from all over the
+ world, helping them to stay up-to-date with the latest news on PHP and
+ related technologies.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.3RC3 released</h1>
 <p>
  <span class="newsdate">[07-Aug-2003]</span>
