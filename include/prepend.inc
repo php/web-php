@@ -17,6 +17,9 @@ if (!isset($_SERVER)) {
     $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
 }
 
+// Put the magic quotes setting to $MQ
+$MQ = (boolean) get_magic_quotes_gpc();
+        
 // Load in always required parts
 include_once 'site.inc';
 include_once 'layout.inc';
