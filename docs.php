@@ -74,8 +74,13 @@ the table below.
 ?>
 </td></tr>
 <tr><th bgcolor="#dddddd">Downloads</th><td bgcolor="#eeeeee">
-For other downloadable formats, please visit our
+For downloadable formats, please visit our
 <a href="download-docs.php">documentation downloads</a> page.
+</td></tr>
+<tr><th bgcolor="#dddddd">Other manuals</th><td bgcolor="#eeeeee">
+<a href="http://gtk.php.net/docs.php">PHP-GTK</a> and
+<a href="http://pear.php.net/manual/">PEAR</a> manuals
+can be found on separate servers.
 </td></tr>
 </table>
 
