@@ -68,7 +68,7 @@ different databases in the future.
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
-If you have a project you feel belongs on this list, send us email us at <A HREF="projects@php.net">projects@php.net</A>.
+If you have a project you feel belongs on this list, send us email us at <A HREF="mailto: projects@php.net">projects@php.net</A>.
 <BR></TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
