@@ -154,7 +154,7 @@ function clean_AntiSPAM ($email) {
 
 
 function is_emailable_address( $email ) {
-    $hosts_regex="lists\.php\.net|check.*\.com";
+    $hosts_regex="lists\.php\.net|chek.*\.com";
     $excluded_hosts = ereg($hosts_regex,$email);
     if (!$excluded_hosts && $email != "") {
         $validator = new email_validation_class;
