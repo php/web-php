@@ -170,6 +170,7 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     
+    "news.php"           => "news-2003", // BC
     "README.mirror"      => "mirroring", // BC
     "ZEND_CHANGES.txt"   => "zend-engine-2.php", // BC
     "zend2_example.phps" => "zend-engine-2.php", // BC
