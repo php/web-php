@@ -361,6 +361,7 @@ function commonFooter() {
 </body>
 </html>
 <?php
+    echo "<!-- " . (getmicrotime() - $page_creation_start) . " -->\n";
 }
 
 function sect_to_file($string) {
@@ -476,5 +477,3 @@ function calc_distance($from,$to) {
   $t = pow(sin($dlat/2), 2) + cos($lat1)*cos($lat2)*pow(sin($dlon/2),2);
   return atan2(sqrt($t),sqrt(1-$t));
 }
-
-?>
