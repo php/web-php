@@ -158,6 +158,8 @@ commonHeader("Hypertext Preprocessor");
  to April 2, 2004. The Conference will happen from 3rd to 5th May, 2004.
 </p>
 
+<hr />
+
 <?php news_image("http://www.phparch.com/cruise", "phpcruise.png", "php|cruise"); ?>
 
 <h1>php|cruise deadline set for February 15th</h1>
