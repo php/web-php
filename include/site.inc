@@ -108,6 +108,25 @@ function mirror_status($site = FALSE)
     return $MIRRORS[$site][7];
 }
 
+// Count all mirrors or mirrors in a given country
+function count_mirrors($country = FALSE)
+{
+    global $MIRRORS;
+    
+    // This is a non-identified country
+    if ($country == "NA") { return 0; }
+    
+    // Count all mirror sites
+    elseif ($country === FALSE) { return count($MIRRORS); }
+    
+    // Count only the ones in the same country
+    $count = 0;
+    foreach ($MIRRORS as $murl => $mirror) {
+        if (mirror_country($murl) == $country) { $count++; }
+    }
+    return $count;
+}
+
 // Redirect to an URI on this mirror
 // site or outside this site
 function mirror_redirect($absoluteURI, $remote = FALSE)
