@@ -65,19 +65,19 @@ function rolloff(imgName) {
 <FONT FACE="Verdana, Arial, Helvetica">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>
-<td><font size=+2 color="#ffffff"><i>PHP3</i></font></td>
+<td>&nbsp;&nbsp;<img src="jpgs/powered_by.jpg"><br><font size=-2 color="#ffffff">Running PHP <?echo phpversion()?></font></td>
 <td><font size=+2 color="#ffffff"><?echo $title?></font></td>
 <td nowrap align="right">
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<? echo $base_url ?>"
+<a href="<? echo $base_url ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
 <img src="jpgs/sm_top.jpg" valign=top border=0 alt="Top" name=sm_top height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="search.php3"
+<a href="search.php3" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_search');return true" onMouseOut="rolloff('sm_search')"<? } ?>>
 <img src="jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>"
+<a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
 <img src="jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
 </td></tr>

@@ -1,4 +1,3 @@
-<? include "include/auth.inc" ?>
 <html><head><title>PHP3 Download</title>
 <? $title="Download";
    include "include/header.inc"; ?>

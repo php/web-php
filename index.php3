@@ -8,7 +8,6 @@
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently in a <a href="why_beta.php3">public BETA</a> testing period.
 
 <ul>
-<li><a href="register.php3">Register PHP 3.0!</a> <font size="-2">(Completely free, required before downloading;  Forgot your password?  <a href="oh_no.php3">Get it back here.</a>)</font>
 <li><a href="download.php3">Download PHP 3.0!</a>
 <li><a href="documentation.php3">Documentation Resources</a>
 <li><a href="config.php3">Configure PHP 3.0</a> online <font size="-2">(JavaScript required)</font>

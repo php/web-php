@@ -1,28 +1,9 @@
-<?
-	include "include/auth.inc";
-?>
 <html><head><title>PHP3 Configuration</title>
-<? $title="Configuration";
+<? $title="PHP 3.0 Configuration Generator";
    include "include/header.inc";
-
-/* try to see if we have a saved configuration here... */
 
 mysql_pconnect($dbhost,$dbuser,$dbpwd);
 mysql_select_db($dbname);
-	
-
-/* create hashed lookup tables */
-$bools[0]=$strs[0]=0;  /* initialize array */
-$query = mysql_query("select name,val from boolean_options,boolean_option_names where email='$email' and boolean_options.id=boolean_option_names.id");
-while ($row=mysql_fetch_row($query)) {
-	$bools[$row[0]]=$row[1];
-}
-mysql_free_result($query);
-$query = mysql_query("select name,val from string_options,string_option_names where email='$email' and string_options.id=string_option_names.id");
-while($row=mysql_fetch_row($query)) {
-	$strs[$row[0]]=$row[1];
-}
-mysql_free_result($query);
 
 cfunction print_checkbox($name)
 {
@@ -46,11 +27,6 @@ cfunction print_textbox($name,$default_value)
 
 ?>
 	
-<center>
-<h1>PHP 3.0 Configuration Generator</h1>
-</center>
-<br><br>
-
 <script language="javascript">
 <!--
 function generate_config()
