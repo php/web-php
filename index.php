@@ -191,6 +191,27 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Set your own language preference</h1>
+
+<p>
+<font class="newsdate">[01-Mar-2003]</font> Starting from today, your
+browser's "Accept Language" setting is also honored on language sensitive
+pages on the php.net site. If you would like to get to the documentation
+page of echo for example, you can use the <a href="/echo">/echo</a>
+shortcut on all mirror sites, if your browser is set to provide your
+language preference information to the server. This also makes the PHP
+error message links point to the documentation in your preferred language.
+</p>
+
+<p>
+You can set your preferences under Edit/Preferences/Navigator/Languages
+in Mozilla, and under Tools/Internet Options/Languages in Internet
+Explorer. This will probably also enhance your web experience on sites
+providing translated content.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://phpconf.hu/", make_image("news/hu_conf.gif", "PHPConf.hu", "right") ); ?>
 
 <h1>First Hungarian PHP Conference</h1>
