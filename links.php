@@ -53,7 +53,10 @@ Find PHP Sites within this webring!<br></li>
 <li><a href="http://www.LinuxGuruz.org/">LinuxGuruz.org</a><br>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server,
 HTML, PHP, MySQL ... and lots more<br></li>
+
+<li><a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a></li>
 </ul>
+
 
 <h4>PHP FAQ sites</h4>
 
