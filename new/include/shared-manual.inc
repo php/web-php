@@ -56,7 +56,7 @@ function makeBorderTOC($this)
     echo "</TABLE>\n";
 };
 
-function navigationBar() {
+function navigationBar($title) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACE;
     global $navBarNo;
     $no = $navBarNo;
@@ -201,11 +201,11 @@ function manual_func_sidebar($title) {
 
 function manualHeader($title) {
     commonHeader("Manual: ".$title);
-    navigationBar();
+    navigationBar($title);
 }
 
 function manualFooter($title) {
-    navigationBar();
+    navigationBar($title);
     commonFooter($title);
 }
 ?>
