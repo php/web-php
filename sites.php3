@@ -91,6 +91,7 @@ right away.</blockquote>
 	site("RedHat Software","www.redhat.com");
 	site("Skinz","www.skinz.org");
 	site("Sonic Spot","www.sonicspot.com");
+	site("Winamp", "www.winamp.com");
 	siteEnd();
 
 /* Educational/Research */
