@@ -5,6 +5,9 @@ include_once 'prepend.inc';
 // Define the posttohost() function
 include_once 'posttohost.inc';
 
+// Defines the makeEntry() function, which we use
+include_once 'shared-manual.inc';
+
 // Print out common header
 commonHeader("Manual Notes");
 
