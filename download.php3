@@ -32,15 +32,15 @@
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://php.guardian.no/php-3.0a3.tar.gz">PHP 3.0a4</a> (source) from the PHP main site in Trondheim, Norway
+		Download <a href="http://php.guardian.no/php-3.0a4.tar.gz">PHP 3.0a4</a> (source) from the PHP main site in Trondheim, Norway
 	</td>
 	<td align="center">
-		<a href="http://php.guardian.no/php-3.0a3.tar.gz"><img src="gifs/norway.gif" border="0"></a>
+		<a href="http://php.guardian.no/php-3.0a4.tar.gz"><img src="gifs/norway.gif" border="0"></a>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://www.caraveo.com/php/php3a3win32.zip">PHP 3.0a3</a> (Win32 binary) from the PHP Win32 site in the United States.  The
+		Download <a href="http://www.caraveo.com/php/php3a4win32.zip">PHP 3.0a4</a> (Win32 binary) from the PHP Win32 site in the United States.  The
 		<a href="http://www.caraveo.com/php/php3latest.zip">latest patched version</a> may also be downloaded.
 	</td>
 	<td align="center">
