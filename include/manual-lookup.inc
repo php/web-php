@@ -73,47 +73,41 @@ function find_manual_page_slow($lang, $keyword)
 
 function find_manual_page($lang, $keyword)
 {
-	if (!function_exists("sqlite_open")) {
+	if (!function_exists("sqlite_popen") || !($s = sqlite_popen('manual-lookup.sqlite'))) {
 		return find_manual_page_slow($lang, $keyword);
 	}
 
-	// In production, use sqlite_popen
-	$s = sqlite_popen("manual-lookup.sqlite");
-
-	/* generate keywords */
-
 	$keyword = str_replace('_', '-', $keyword);
-	$keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+	if (strpos($keyword, '(') !== false) {
+		$keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+	}
 
 	if (strlen($keyword) == 0) {
 		return "";
 	}
 
-	$keywords = array($keyword);
+	// NB: sqlite wants ' quoted as ''
+	$keyword = sqlite_escape_string($keyword);
 
-	$keywords[] = str_replace(' ', '', $keyword);
-	$keywords[] = str_replace(' ', '-', $keyword);
-	$keywords[] = str_replace('-', '', $keyword);
+	$keywords = array_unique(array(
+		$keyword,
+		str_replace(' ', '', $keyword),
+		str_replace(' ', '-', $keyword),
+		str_replace('-', '', $keyword),
+		metaphone($keyword)
+	));
 
-	$keywords = array_unique($keywords);
-	$words = "";
-	foreach ($keywords as $word) {
-		if (strlen($words)) {
-			$words .= ',';
-		}
-		$words .= "'" . sqlite_escape_string($word) . "'";
-	}
+	$words = "'" . implode("','", $keywords) . "'";
 
-	if ($lang != 'en') {
-		$langs = array(sqlite_escape_string($lang), 'en');
-	} else {
-		$langs = array('en');
-	}
+	$langs = ($lang != 'en') ?
+		array(sqlite_escape_string($lang), 'en') :
+		array('en');
+
 	foreach ($langs as $lang) {
-		$q = sqlite_query($s, "SELECT name from fs where lang='$lang' and keyword in ($words) order by prefix LIMIT 1");
+		$q = sqlite_query($s, "SELECT name from fs where lang='" . $lang . "' and keyword in (" . $words . ") order by prefix LIMIT 1");
 		if ($q) {
 			$r = sqlite_fetch_array($q, SQLITE_NUM);
-			if (is_array($r)) {
+			if (isset($r[0])) {
 				return $r[0];
 			}
 		}
