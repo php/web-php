@@ -1,31 +1,3 @@
-<<<<<<< index.php
-<HTML>
-<HEAD>
-<TITLE>11.09.2001</TITLE>
-<META HTTP-EQUIV="Refresh" CONTENT="15; url=/index2.php">
-<link rel="stylesheet" href="/style.css">
-</HEAD>
-<BODY BGCOLOR="#000000" TEXT="#ffffff" LINK="#cccccc" ALINK="#ffffff" VLINK="#cccccc">
-<CENTER>
-<TABLE WIDTH="60%" HEIGHT="90%">
-<TR VALIGN="middle"><TD ALIGN="center">
-<P>
-<FONT SIZE="+3" STYLE="letter-spacing: 5px;"><B>11.09.2001</B></FONT>
-</P>
-<P>
-The worldwide PHP community is horrified by recent events and would like to 
-offer its deepest sympathies to the friends and families of those who lost their 
-lives this day.
-</P>
-</TD></TR>
-</TABLE>
-</CENTER>
-<P ALIGN="right">
-<FONT SIZE="-2"><A HREF="/index2.php">continue</A></FONT>
-</P>
-</BODY>
-</HTML>
-=======
 <?php
 /* if you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn! */
@@ -357,4 +329,3 @@ PHP-related.  It's a little sparse right now, but feel free to make suggestions!
 </p>
 
 <?php commonFooter(); ?>
->>>>>>> 1.137
