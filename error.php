@@ -36,7 +36,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
-    mirror_redirect("http://bugs.php.net/?$array[1]", TRUE);
+    mirror_redirect("http://bugs.php.net/?$array[1]");
 }
 
 // ============================================================================
@@ -212,8 +212,7 @@ if (!in_array($URI, array('books', 'mirror-info', 'error')) &&
 // ============================================================================
 // Execute external redirect if a rule exists for the URI
 if (isset($external_redirects[$URI])) {
-    $true_external = (substr($external_redirects[$URI], 0, 1) != '/');
-    mirror_redirect($external_redirects[$URI], $true_external);
+    mirror_redirect($external_redirects[$URI]);
 }
 
 // Temporary hack for books and mirror-info, until all the pages

@@ -125,22 +125,20 @@ function count_mirrors($country = FALSE)
     return $count;
 }
 
-// Redirect to an URI on this mirror
-// site or outside this site
-function mirror_redirect($absoluteURI, $remote = FALSE)
+// Redirect to an URI on this mirror site or outside this site
+function mirror_redirect($absoluteURI)
 {
     global $MYSITE;
 
-    // A local or remote redirect is needed
-    if (!$remote) {
-        $URI = substr($MYSITE, 0, -1) . $absoluteURI;
-    } else {
-        $URI = $absoluteURI;
+    // Test if there is no protocol spec
+    // in the URL, then prepend local site URI
+    if (!preg_match("!^[a-z]+://!", $absoluteURI)) {
+        $absoluteURI = substr($MYSITE, 0, -1) . $absoluteURI;
     }
-
+    
     // Do a redirection, if headers are not sent
     if (!headers_sent()) {
-        header("Location: $URI");
+        header("Location: $absoluteURI");
     }
 
     // Always exit (the page is not to be displayed)
