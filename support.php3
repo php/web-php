@@ -61,6 +61,15 @@ You can search the mailing lists right from this website from <A HREF="/search.p
 or by using the search button on the top-right of every page.
 </P>
 
+<h3>Local Mailing Lists</h3>
+<p>
+There are also some mailing lists that have been set up by others in
+the community to host local discussions (particularly non-English
+discussions).
+<ul>
+  <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
+</ul>
+
 <h3>Sample Code</h3>
 <P>
 Looking for some more sample PHP scripts?  Our <A
