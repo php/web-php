@@ -4,7 +4,7 @@ au	au2.php.net	David Robley <webmaster@www.nisu.flinders.edu.au>	www.nisu.flinde
 bg	bg.php.net	Alexander Keremidarski <salle@online.bg>	php.online.bg
 br	br.php.net	Antonio Dias <accdias@sst.com.br>	200.223.199.4
 br2	br2.php.net	Nelson Junior <nelson@lunenetworks.com.br>	php-mirror.lunenetworks.com.br
-ca	ca.php.net	Colin Viebrock <colin@easydns.com>	207.35.219.104
+ca	ca.php.net	Colin Viebrock <colin@easydns.com>	php.easydns.ca
 ca	ca2.php.net	Len Chua <lenc@canreg.com>	phpweb.canreg.com
 ch	ch.php.net	prochat@lbdsun.epfl.ch	128.178.77.33
 cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.218
@@ -27,7 +27,7 @@ it	it2.php.net		www.php.uli.it
 it	it3.php.net	Dino Uras <dino.uras@iol.it>	php.iol.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
 jp	jp2.php.net	Hitachi BI Mirrors Administrator <mirrors-adm@hbi.co.jp>	php.hbi.ne.jp
-kr  kr.php.net  JunSeon Oh <holywar@holywar.net>        php.holywar.net
+kr	kr.php.net	JunSeon Oh <holywar@holywar.net>	php.holywar.net
 li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
 lv	lv.php.net	Kaspars Foigts <laacz@laacz.lv>	php.mediaparks.lv
 lv	lv2.php.net	Alex Petrov <sysman@sysman.net>	php.sysman.net
