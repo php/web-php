@@ -53,6 +53,7 @@ function find_password($user) {
 function addlinks($text) {
 	$new_text = ereg_replace("(http:[^ \n\t]*)","<a href=\"\1-=-\">\1</a>",$text);
 	$new_text = ereg_replace("[.,]-=-\"","\"",$new_text);
+	$new_text = ereg_replace("-=-\"","\"",$new_text);
 	return $new_text;
 }
 
