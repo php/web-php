@@ -29,19 +29,19 @@ echo <<<SEARCHBAR_END
 <h1>
  <a href="/"{$target}>php</a> search
 </h1>
-<form method="post" action="/search.php"{$target} name="sform">
+<form method="post" action="/search.php"{$target} id="sform">
  <p class="input">$lang_input
   Search for<br />
   <input type="text" name="pattern" value="" /><br />
   in the<br />
   <select name="show">
-   <option value="quickref" selected="selected">function list
-   <option value="wholesite">whole site
-   <option value="manual"   >online documentation [en]
-   <option value="bugdb"    >bug database
-   <option value="maillist" >general mailing list
-   <option value="devlist"  >developer mailing list
-   <option value="phpdoc"   >documentation mailing list 
+   <option value="quickref" selected="selected">function list</option>
+   <option value="wholesite">whole site</option>
+   <option value="manual"   >online documentation [en]</option>
+   <option value="bugdb"    >bug database</option>
+   <option value="maillist" >general mailing list</option>
+   <option value="devlist"  >developer mailing list</option>
+   <option value="phpdoc"   >documentation mailing list</option>
   </select><br />
   <input type="submit" value="Search" />
  </p>
