@@ -43,9 +43,7 @@ under a GPL licence.
 </td><td align="left" width="67%">
 <ul>
 <li>scaleable EPS</li>
-<li><a href="/logos/php-logo.eps">click here to download</a></li>
-<li>email <a href="mailto:logos@php.net">logos@php.net</a> if
-you use this for commercial purposes</li>
+<li><a href="/logos/php-logo.eps">EPS format</a></li>
 </ul>
 </td></tr>
 
@@ -54,10 +52,10 @@ you use this for commercial purposes</li>
 <img src="logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
 </td><td align="left" width="67%">
 <ul>
-<li>250 x 132 pixels TIF</li>
+<li>250 x 132 pixels</li>
 <li>white background</li>
-<li>large scale TIF for presentations, etc.</li>
-<li><a href="/logos/php-big.tif">click here to download</a></li>
+<li>large scale for presentations, etc.</li>
+<li><a href="/logos/php-big.tif">TIF format</a> | <a href="/logos/php-big.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -69,6 +67,7 @@ you use this for commercial purposes</li>
 <li>95 x 50 pixels</li>
 <li>transparent background</li>
 <li>suitable for white/light backgrounds</li>
+<li><a href="/logos/php-med-trans-light.gif">GIF format</a> | <a href="/logos/php-med-trans-light.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -80,6 +79,7 @@ you use this for commercial purposes</li>
 <li>96 x 50 pixels</li>
 <li>transparent background</li>
 <li>suitable for black/dark backgrounds</li>
+<li><a href="/logos/php-med-trans-dark.gif">GIF format</a> | <a href="/logos/php-med-trans-dark.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -91,6 +91,7 @@ you use this for commercial purposes</li>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
 <li>solid white background</li>
+<li><a href="/logos/php-small-white.gif">GIF format</a> | <a href="/logos/php-small-white.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -103,6 +104,7 @@ you use this for commercial purposes</li>
 <li>"Powered by PHP" logo</li>
 <li>transparent background</li>
 <li>suitable for white/light backgrounds</li>
+<li><a href="/logos/php-small-trans-light.gif">GIF format</a> | <a href="/logos/php-small-trans-light.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -114,6 +116,7 @@ you use this for commercial purposes</li>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
 <li>solid purple (#adb4d3) background</li>
+<li><a href="/logos/php-small-purple.gif">GIF format</a> | <a href="/logos/php-small-purple.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -125,6 +128,7 @@ you use this for commercial purposes</li>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
 <li>solid black background</li>
+<li><a href="/logos/php-small-black.gif">GIF format</a> | <a href="/logos/php-small-black.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -137,6 +141,7 @@ you use this for commercial purposes</li>
 <li>"Powered by PHP" logo</li>
 <li>transparent background</li>
 <li>suitable for black/dark backgrounds</li>
+<li><a href="/logos/php-small-trans-dark.gif">GIF format</a> | <a href="/logos/php-small-trans-dark.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -148,6 +153,7 @@ you use this for commercial purposes</li>
 <li>100 x 58 pixels</li>
 <li>"Powered by Zend" logo</li>
 <li>solid black background</li>
+<li><a href="/logos/zend-powered-by.gif">GIF format</a> | <a href="/logos/zend-powered-by.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -159,6 +165,7 @@ you use this for commercial purposes</li>
 <li>32 x 32 pixels</li>
 <li>solid white background</li>
 <li>suitable as an icon</li>
+<li><a href="/logos/php-icon-white.gif">GIF format</a> | <a href="/logos/php-icon-white.png">PNG format</a></li>
 </ul>
 </td></tr>
 
@@ -172,7 +179,7 @@ you use this for commercial purposes</li>
 <li>suitable as icons for your desktop</li>
 <li>48x48, 32x32 and 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats ...
 all in one .ICO file</li>
-<li><a href="/logos/php.ico">download here</a>
+<li><a href="/logos/php.ico">ICO format</a>
 </ul>
 </td></tr>
 
@@ -186,7 +193,7 @@ all in one .ICO file</li>
 <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
 <li>32x32 and 16x16 sizes, in true colour format... all in one .ICO file</li>
 <li>these icons are made by Gonzalo de la Peña</li>
-<li><a href="/logos/php_file.ico">download here</a>
+<li><a href="/logos/php_file.ico">ICO format</a>
 </ul>
 </td></tr>
 
@@ -201,7 +208,7 @@ all in one .ICO file</li>
 <li>48x48, 32x32, 24x24, 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats...
 all in one .ICO file</li>
 <li>these icons are made by Jonathan Metillon</li>
-<li><a href="/logos/php_xpstyle.ico">download here</a>
+<li><a href="/logos/php_xpstyle.ico">XP ICO format</a>
 </ul>
 </td></tr>
 
