@@ -14,7 +14,7 @@ $langs = array(
   'jp'  => 'Japanese',
   'cn'  => 'Traditional Chinese',
   'pt'  => 'Portugese',
-  'se'  => 'Sweedish'
+  'se'  => 'Swedish'
 );
 
 // Book types
