@@ -54,9 +54,18 @@ commonHeader("Documentation ");
 <li><?php download_link("http://snaps.php.net/manual/manual-fr-current.tar.gz", "PHP HTML Manual (French) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-es-current.tar.gz", "PHP HTML Manual (Spanish) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-hu-current.tar.gz", "PHP HTML Manual (Hungarian) .tar.gz File"); ?>
-
 </ul>
-
+<H2>WinHelp (CHM) versions (Januari 12, 2001)</H2>
+<ul>
+<li><?php download_link("manual.chm", "PHP Manual (English)"); ?>
+<li><?php download_link("manual_de.chm", "PHP Manual (German)"); ?>
+<li><?php download_link("manual_it.chm", "PHP Manual (Italian)"); ?>
+<li><?php download_link("manual_nl.chm", "PHP Manual (Dutch)"); ?>
+<li><?php download_link("manual_fr.chm", "PHP Manual (French)"); ?>
+<li><?php download_link("manual_es.chm", "PHP Manual (Spanish)"); ?>
+<li><?php download_link("manual_hu.chm", "PHP Manual (Hungarian)"); ?>
+<li><?php download_link("manual_pt_BR.chm", "PHP Manual (Portugese)"); ?>
+</ul>
 
 <H2>PDF Version</H2>
 <ul>
@@ -73,7 +82,6 @@ commonHeader("Documentation ");
 
 <H1>Translations</H1>
 <ul>
-<li><?php download_link("manual_hu.chm", "PHP Manual Windows Help File (Hungarian) - January 11, 2001"); ?>
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
     >Japanese translation of the PHP manual</a>
 
