@@ -17,3 +17,7 @@
     margin-left: 15px;
     font-family: courier;
 }
+
+.warning {
+    background: #FFCCCC;
+}
