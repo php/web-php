@@ -57,8 +57,8 @@ Once you create a virtualhost which looks something like:
      ErrorLog logs/error_log
      TransferLog logs/access_log
      DirectoryIndex index.php index.html
-     ErrorDocument 404 /error/
-     ErrorDocument 403 /error/
+     ErrorDocument 404 /error/index.php
+     ErrorDocument 403 /error/index.php
      AddType application/octet-stream .chm
      AddType application/octet-stream .bz2
      # next line is only necessary if generating stats (see stats/README.stats)
