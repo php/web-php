@@ -52,7 +52,7 @@ if($t=@filemtime("$tmp/php_cal_events.csv")) {
 	if(time()-$t > 21600) $t=false;
 }
 if(!$t) {
-	$url = 'http://www.php.net/cal.php?format=csv&nm=2';
+	$url = 'http://www.php.net/cal.php?format=csv&nm=3';
 	$fpo = @fopen("$tmp/php_cal_events.tmp",'w');
 	if($fpo) {
 		$fpi = @fopen($url,'r');
