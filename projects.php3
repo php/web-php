@@ -57,7 +57,7 @@ Keystone is the next generation of PTS, the project tracking system developed by
 a complete rewrite of the system, with a new user interface built from the ground up. 
 <? endEntry();?>
 
-<? makeEntry("Phorum","www.brian.threadnet.com/forum/","Brian Moon","brianlmoon@iname.com"); ?>
+<? makeEntry("Phorum","www.phorum.org/","Brian Moon","brianlmoon@iname.com"); ?>
 Forums and message boards are popping up all over the place. To this point the most 
 popular has been the free perl one at Matt's Script Archive. This project is trying
 to design a better forum with the use of PHP and a database. We are currently using
