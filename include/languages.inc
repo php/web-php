@@ -33,10 +33,8 @@ $LANGUAGES = array(
     'ro'    => 'Romanian',
     'ru'    => 'Russian',
     'sk'    => 'Slovak',
-    'sl'    => 'Slovenian',
     'es'    => 'Spanish',
     'sv'    => 'Swedish',
-    'tr'    => 'Turkish',
 );
 
 $INACTIVE_ONLINE_LANGUAGES = array(
