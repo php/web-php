@@ -18,35 +18,43 @@ $uri=strstr($REDIRECT_REDIRECT_ERROR_NOTES,'phpweb/');
 $uri = strchr($uri,'/');
 $uri = substr($uri,1);
 
-$try_files = array();
-$function = strtolower($uri);
+if(strchr($uri,'/')) {
+	list($lang,$function) = explode('/',$uri,2);
+	$lang .= '/';
+	$function = strtolower($function);
+	$lang = strtolower($lang);
+} else $function = strtolower($uri);
 
-function tryprefix($func, $prefix) {
+if($lang=='en') $lang = '';
+
+$try_files = array();
+
+function tryprefix($lang, $func, $prefix) {
     global $try_files;
 
     $func = ereg_replace("_","-",$func);
     $func = ereg_replace('\(.*\)',"-",$func);
-    $try_files[] = "/manual/${prefix}${func}.php";
+    $try_files[] = "/manual/${lang}${prefix}${func}.php";
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
-    $try_files[] = "/manual/${prefix}${nosp}.php";
+    $try_files[] = "/manual/${lang}${prefix}${nosp}.php";
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
-    $try_files[] = "/manual/${prefix}${dasp}.php";
+    $try_files[] = "/manual/${lang}${prefix}${dasp}.php";
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
-    $try_files[] = "/manual/${prefix}${noul}.php";
+    $try_files[] = "/manual/${lang}${prefix}${noul}.php";
     }
 }
 
-tryprefix($function, "function.");
-tryprefix($function, "class.");
-tryprefix($function, "ref.");
-tryprefix($function, "feature-");
-tryprefix($function, "construct.");
-tryprefix($function, "control-structures.");
+tryprefix($lang,$function, "function.");
+tryprefix($lang,$function, "class.");
+tryprefix($lang,$function, "ref.");
+tryprefix($lang,$function, "feature-");
+tryprefix($lang,$function, "construct.");
+tryprefix($lang,$function, "control-structures.");
 
 reset($try_files);
 while (list($dummy, $file) = each($try_files)) {
