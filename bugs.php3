@@ -171,13 +171,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	$tables[] = "bugdb";
 	$fields[] = "id";
-	$fields[] = "bug_type as 'Bug Type'";
+	$fields[] = "bug_type";
 	$fields[] = "status as Status";
 	$fields[] = "php_version as Version";
 	$fields[] = "php_os as OS";
 	$fields[] = "email as Originator";
 	$fields[] = "sdesc as Description";
 	$conversion_table["id"] = "ID#";
+	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
 	$default_header_color="aaaaaa";
 	$centering["id"] = "center";
