@@ -211,7 +211,7 @@ function commonHeader($title="",$dont_enclose=0) {
   </tr>
 
   <tr bgcolor="#9999cc">
-    <form method="POST" action="/search.php">
+    <form method="POST" action="/manual-lookup.php">
       <td align="right" valign="bottom">
       <?php
 	print_link('/downloads.php','downloads',false,'class="small"');

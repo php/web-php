@@ -17,8 +17,7 @@ bugs that are surely lingering behind this new facade.
 </p>
 
 <p>
-Miss the <a href="/quickref.php">quickref</a> box? It's still there on the pages of the <a
-href="manual/">manual</a> (hint: its labeled 'lookup'). Check out our <a href="tips.php">tips
+Miss the <a href="/quickref.php">quickref</a> box? Use the 'search' box up there, instead. It will now take you directly to the manual page if you give it a valid function name, or fall back to doing a site search if it can't find a function with that name. Check out our <a href="tips.php">tips
 page</a> for tips on how to add a quick reference button to your
 browser.
 </p>
