@@ -4,17 +4,20 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $false;
+$IE4 = $IE3 = $NS4 = $NS3 = $HAVE_STYLE = $false;
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
+		$HAVE_STYLE = true;
                 $IE4=true;
         elseif($ver==3):
+		$HAVE_STYLE = true;
                 $IE3=true;
         endif;
 elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):                                    
         $ver=(int)$version[1];
         if ($ver>=4):
+		$HAVE_STYLE = true;
                 $NS4=true;
         elseif($ver==3):  
                 $NS3=true;
@@ -24,7 +27,13 @@ endif;
 /* Base variables */
 
 $FONTFACE = "TAHOMA, ARIAL, HELVETICA, sans-serif";
-$FRAMEMODE=="standard";
+$FRAMEMODE = "standard";
+
+if ($HAVE_STYLE) {
+    $FONTFACEATTR = "";
+} else {
+    $FONTFACEATTR = " FACE=\"$FONTFACE\"";
+}
 
 /* Base functions */
 
@@ -55,7 +64,7 @@ function preloadImages($mode) {
 		b_sour0.src = "/new/gifs/b-source-p.gif";
 		b_sour1 = new Image();
 		b_sour1.src = "/new/gifs/b-source-c.gif";
-<?	if ($FRAMEMODE=="manual"): ?>
+<?	if ($FRAMEMODE == "manual"): ?>
 		b_cont0 = new Image();
 		b_cont0.src = "/new/gifs/b-contents-p.gif";
 		b_cont1 = new Image();
@@ -128,14 +137,15 @@ function preloadImages($mode) {
 		b_mirr1 = new Image();
 		b_mirr1.src = "/new/gifs/b-mirror-c.gif";
 <? endif;
-};
+}
 
 
 function spc($width, $height) {
 	echo "<IMG SRC='/new/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
-};
+}
 
 function kickHeader($offset,$side,$distance,$width) {
+	global $FONTFACEATTR;
 	$off=abs($offset);
 	$innerwidth=$width-40;
 	$innerwidth2=$innerwidth+21;
@@ -174,8 +184,8 @@ function kickHeader($offset,$side,$distance,$width) {
 	echo "</TR>";
 	echo "<TR VALIGN=top><TD BACKGROUND='/new/gifs/kick-bl.gif' width=9>";
 	spc(9,1);
-	echo "<BR></TD><TD BACKGROUND='/new/gifs/kick-bg.gif' width=$innerwidth><FONT FACE='TAHOMA,ARIAL' SIZE=-1>";
-};
+	echo "<BR></TD><TD BACKGROUND='/new/gifs/kick-bg.gif' width=$innerwidth><FONT${FONTFACEATTR} SIZE=-1>";
+}
 
 function kickFooter($kickname,$buttname) {
 	echo "</TD><TD BACKGROUND='/new/gifs/kick-bg.gif' width=21 VALIGN=top>";
@@ -188,7 +198,7 @@ function kickFooter($kickname,$buttname) {
 	spc(1,10);
 	echo "<BR></TD><TD width=10><IMG SRC='/new/gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR></TABLE>";
-};
+}
 
 function download_link($file, $title) {
 	global $filesizes;
@@ -232,11 +242,12 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 		echo "</A>";
 	endif;
 	echo $br;
-};
+}
 
 function commonHeader($title) {
-	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE;
+	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE, $FONTFACEATTR;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
+	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 ?>
 <HTML>
@@ -293,13 +304,13 @@ function change(Name,No) {
 	if (No == 1) {
 <?	if ($NS4 || $IE4): ?>
 		if (layers == 1) {
-<?		if ($FRAMEMODE!="manual"): ?>
+<?		if ($FRAMEMODE != "manual"): ?>
 			hideLayer('mirrorsKick');
 <?		endif; ?>
 			hideLayer('searchKick');
 		}
 <?	endif;?>
-<?		if ($FRAMEMODE!="manual"): ?>
+<?		if ($FRAMEMODE != "manual"): ?>
 		if (Name != 'mirr') {
 			change('mirr',0);
 		}
@@ -341,9 +352,9 @@ endif;
 //--->
 </SCRIPT>
 
-<? if ($NS4 || $IE4):
-	echo "<LINK REL=\"stylesheet\" HREF=\"/new/php-style.css\" TYPE=\"text/css\">\n\n";
-endif; ?>
+<? if ($HAVE_STYLE): ?>
+<LINK REL="stylesheet" HREF="/new/php-style.css" TYPE="text/css">
+<? endif; ?>
 
 </HEAD>
 
@@ -370,7 +381,7 @@ mirrorPosTop=230;
 <?	endif; ?>
 document.writeln("<STYLE TYPE='text/css'>");
 document.writeln("TD { font-family: <? echo $FONTFACE; ?> }");
-<?	if ($FRAMEMODE!="manual"): ?>
+<?	if ($FRAMEMODE != "manual"): ?>
 document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
 document.write(mirrorPosTop);
 document.write("px; LEFT: ");
@@ -402,7 +413,7 @@ document.writeln("</STYLE>");
     <TR VALIGN=top>
      <TD ALIGN=left>
       <?
-	if ($FRAMEMODE=="manual"):
+	if ($FRAMEMODE == "manual"):
 		makeSideButton("$HOME[0]","cont","","contents",129,30,0,10,"Manual Table of Contents","<BR>\n");
 		if ($UP[0] && $UP[1]):
 			makeSideButton($UP[0],"up","","up",129,30,0,10,"Up to $UP[1]","<BR>\n");
@@ -428,7 +439,7 @@ document.writeln("</STYLE>");
      <TD ALIGN=left>
       <?
 		spc(5,1);
-		echo "<FONT FACE=\"$FONTFACE\" SIZE=+1><B>$title</B></FONT><BR>\n";
+		echo "<FONT${FONTFACEATTR} SIZE=+1><B>$title</B></FONT><BR>\n";
       ?>
      </TD>
      <TD ALIGN=right>
@@ -451,14 +462,17 @@ document.writeln("</STYLE>");
       <IMG SRC="/new/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
      </TD>
      <TD ALIGN=left WIDTH="100%">
-      <FONT FACE="<? echo $FONTFACE;?>"><BR>
+      <? if ($FONTFACEATTR): ?>
+      <FONT<? echo $FONTFACEATTR;?>>
+      <? endif; ?>
+      <BR CLEAR=ALL>
       <!-- start body -->
 <?
-};
+}
 
 function commonFooter() {
-	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE;
-	global $MIRRORS,$MYSITE,$FONTFACE, $COUNTRIES;
+	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE, $FONTFACEATTR;
+	global $MIRRORS,$MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	$country=$MIRRORS[$MYSITE][0];
 ?>
@@ -499,7 +513,7 @@ function commonFooter() {
       <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
        <TR VALIGN=middle>
         <TD align=right>
-         <FONT FACE="<? echo $FONTFACE;?>" SIZE=-2>
+         <FONT<? echo $FONTFACEATTR ?> SIZE="-2">
          <I>Site<BR>Hosting:</I><BR>
         </TD>
         <TD>
@@ -515,18 +529,14 @@ function commonFooter() {
       <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
        <TR VALIGN=middle>
         <TD align=center>
-         <FONT FACE="<? echo $FONTFACE;?>" SIZE=-1>
-         <FONT SIZE=-2><I>Located in</I></FONT><BR><? echo $COUNTRIES[$country]; ?><BR>
-        </TD>
+         <FONT<? echo $FONTFACEATTR ?> SIZE="-1">
+         <FONT SIZE="-2"><I>Located in</I></FONT><BR><?
+           echo $COUNTRIES[$country]; ?></TD>
+        <TD><? spc(5,1);?></TD>
         <TD>
-         <? spc(5,1);?><BR>
-        </TD>
+         <IMG SRC="/new/gifs/flag-<? echo $country; ?>.gif" BORDER=0></TD>
         <TD>
-         <IMG SRC="/new/gifs/flag-<? echo $country; ?>.gif" BORDER=0><BR>
-        </TD>
-        <TD>
-         <IMG SRC="/new/gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR>
-        </TD>
+         <IMG SRC="/new/gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0></TD>
        </TR>
       </TABLE>
      </TD>
@@ -537,7 +547,7 @@ function commonFooter() {
 </TABLE>
 
 <? if ($NS4 || $IE4):	/* Kick outs */
-	if ($FRAMEMODE!="manual"):
+	if ($FRAMEMODE != "manual"):
 ?>
 <DIV ID='mirrorsKick'>
 <? kickHeader(-20,'left',25,300);?>
@@ -570,7 +580,7 @@ endwhile;
 <FORM ACTION='search.php3' METHOD='POST'>
 <B>What are you searching for:</B><BR>
 <FONT SIZE=+0><input type='text' name='pattern' size=20></FONT><BR>
-<FONT SIZE=-2>
+<FONT SIZE="-1">
 <input type='checkbox' name='icase'> case sensitive<BR>
 <input type='checkbox' name='words'> match whole words only<BR>
 <input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/new/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
@@ -589,5 +599,5 @@ layers = 1;
 </BODY>
 </HTML>
 <?
-};
+}
 ?>

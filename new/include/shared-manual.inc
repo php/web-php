@@ -15,25 +15,37 @@ function setupNavigation($data) {
     $PREV = @$data["prev"];
     $UP   = @$data["up"];
     $TOC =  @$data["toc"];
-};
+}
 
 function makeBullet($url,$number,$offtype,$offnum) {
 	echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n ";
 	echo "onMouseout=\"changebullet('bullet$number',$offnum)\">";
 	echo "<IMG SRC=\"/new/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n NAME=\"bullet$number\">";
 	echo "</A>";
-};
+}
 
-function makeBorderTOC($this) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACE;
+function makeBorderTOC($this)
+{
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACEATTR;
+    global $HAVE_STYLE, $HAVE_TD_BG;
+
+    $tocfontsize = "-1"; // replace with CSS?
+
+    if (!$HAVE_STYLE && $HAVE_TD_BG) {
+	$FONTCOL = " COLOR=\"#FFFFFF\"";
+    } else {
+	$FONTCOL = "";
+    }
+
     echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=\"100%\">\n";
     echo "<TR VALIGN=top>\n";
     echo "<TD WIDTH=10>";
     spc(10, 10);
-    echo "<BR></TD>\n";
-    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
-    echo "<A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
-    echo "<B>$UP[1]</B></A></TD></TR>\n";
+    echo "</TD>\n";
+    echo "<TD COLSPAN=2><A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
+    echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
+    echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
+    $this = eregi_replace("^Manual: *", "", $this);
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
 	if (!$url || !$title) {
@@ -51,9 +63,18 @@ function makeBorderTOC($this) {
 	}
 	echo "<TR VALIGN=top><TD WIDTH=10>";
 	spc(10,10);
-	echo "<BR>\n</TD>\n<TD WIDTH=15 ALIGN=left><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
-	makeBullet($url,$i,$type,$out);
-	echo "<BR>\n</TD>\n<TD WIDTH=100%><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\" SIZE=-1><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$i',1)\" onMouseout=\"changebullet('bullet$i',$out)\" CLASS=sidebartoc>$title<BR></A></TD></TR>\n";
+	echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" ";
+	echo "onMouseover=\"hide();changebullet('bullet$i',1)\" ";
+	echo "onMouseout=\"changebullet('bullet$i',$out)\">";
+	echo "<IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 ";
+	echo "BORDER=0 NAME=\"bullet$i\"></A>\n";
+	echo "</TD>\n<TD WIDTH=100%>";
+	echo "<A HREF=\"$url\" onMouseover=\"hide();";
+	echo "changebullet('bullet$i',1)\" ";
+	echo "onMouseout=\"changebullet('bullet$i',$out)\" ";
+	echo "CLASS=sidebartoc>";
+	echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
+	echo "$title</FONT></A></TD></TR>\n";
     }
     echo "</TABLE>\n";
 };
