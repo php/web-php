@@ -216,6 +216,7 @@ right away.</blockquote>
 	site("GamePoint Shop","shop.gamepoint.net");
 	site("The Galactic Empire","www.imperialnexus.net");
 	site("GibWorld","www.gibworld.com");
+	site("Loki Software","www.lokigames.com");
 	site("mplayer.com","www.mplayer.com");
 	site("Soldier of Fortune Files","www.soffiles.com");
 	site("Riot Publishing","riot.com.au");
