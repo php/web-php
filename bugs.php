@@ -392,9 +392,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	include("table_wrapper.inc");
 
-	function external_processing($fieldname,$tablename,$data,$row)
-	{
-		switch($fieldname) {
+	function external_processing($fieldname,$tablename,$data,$row){
+
+ 		switch($fieldname) {
 			case "id":
 				print "<a href=\"bugs.php?id=$data\">$data</a>\n";
 				break;
@@ -419,6 +419,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				break;
 		}
 	}
+
 	function row_coloring($row) {
 		if ($row["bug_type"]=="Feature/Change Request") {
 			return "#aaaaaa";
@@ -462,7 +463,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "status as Status";
 	$fields[] = "assign as Assigned";
 	$fields[] = "php_version as Version";
-#	$fields[] = "php_os as OS";
+/*	$fields[] = "php_os as OS"; */
 	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Mod";
@@ -512,7 +513,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
 
-	### Change made by j.a.greant 00/09/03
+
+	/* Change made by j.a.greant 00/09/03 */
+
 	function get_old_comments ($bug_id)
 	  {
 	  	$divider = '---------------------------------------------------------------------------';
@@ -752,8 +755,9 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-   <option name="4.0.2RC2">4.0.3RC2
-   <option name="4.0.2RC1">4.0.3RC1
+   <option name="4.0.3">4.0.3
+   <option name="4.0.3RC2">4.0.3RC2
+   <option name="4.0.3RC1">4.0.3RC1
    <option name="4.0.2">4.0.2
    <option name="4.0.1pl2">4.0.1pl2
    <option name="4.0.1">4.0.1
