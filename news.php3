@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "MySQL-Daten mit PHP ins Web bringen", "by <a href=\"mailto:hb@ix.heise.de\">Henning Behme</a>", 
+	"http://www.heise.de/ix/artikel/2000/06/056/", "May 17, 2000");?>
+(In German.) Dynamische Websites sind meist von Datenbanken abhängig. Deren Bestände lassen sich `on the fly' vom Server zu Surfer übertragen. PHP ist eine Skriptsprache, die die Integration von DBMS-Daten in HTML-Dateien erleichtert.
+<? endEntry(); ?>
+
 <? makeEntry( "Evolution of a Super Hero", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>", 
 	"http://www.webtechniques.com/archives/2000/05/ratschiller/", "April 7, 2000");?>
 What's that in the sky? Is it Perl? Is it ASP? Is it JSP? No, it's PHP 4.0!
