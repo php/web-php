@@ -21,6 +21,7 @@ it	it2.php.net		www.php.uli.it
 it	it3.php.net	Dino Uras <dino.uras@iol.it>	php.iol.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
 kr      kr.php.net      JunSeon Oh <holywar@holywar.net>        php.holywar.net
+li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
 nl	php.nederland.net	Sander Steffann <steffann@nederland.net>	193.67.110.5 
