@@ -22,12 +22,17 @@ the server and bandwidth for www.php.net.
 
 <p>
 <?php print_link("http://www.rackspace.com/", "Rackspace"); ?> provides
-the server and bandwidth for various php.net websites.
+the server and bandwidth for various php.net services and builds.
 </p>
 
 <p>
 <?php print_link("http://www.redundant.com/", "Redundant Networks"); ?> provides
-the server and bandwidth that run various services for php.net.
+the server and bandwidth that run various services and websites for php.net.
+</p>
+
+<p>
+<?php print_link("http://www.simplicato.com/?a=1007", "Simplicato"); ?> provides a
+server and resources to help php.net.
 </p>
 
 <p>
