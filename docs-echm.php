@@ -7,9 +7,9 @@ $SIDEBAR_DATA='
 <h3>Download</h3>
 <p>
  The <a href="/get/php_manual_chm_12.zip/from/a/mirror">latest (12th) build of
- the PHP Manual CHM Edition</a> fixes the known bugs from the previous build,
- introduces the brilliant new phpZ skin (see screenshots) and contains up to
- date content (released on the 6th September 2003).
+ the Extended CHM Format</a> of the PHP Manual fixes the known bugs from the
+ previous build, introduces the brilliant new phpZ skin (see screenshots)
+ and contains up to date content (released on the 6th September 2003).
 </p>
 
 <h3>Screenshots</h3>
