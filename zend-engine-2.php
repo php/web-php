@@ -1,11 +1,13 @@
 <?php
-require_once 'prepend.inc';
-
-commonHeader("Changes in PHP 5/Zend Engine 2.0", 1);
+// $Id$
+$_SERVER['BASE_PAGE'] = 'zend-engine-2.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+commonHeader("Changes in PHP 5/Zend Engine 2.0");
 ?>
+
 <h1>Changes in PHP 5/Zend Engine 2.0</h1>
 
-<p>[ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible en fran&ccedil;ais</a> ]&nbsp;</p>
+<p>[ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible en fran&ccedil;ais</a> ]</p>
 
 <h2>New Object Model.</h2>
 <p>
