@@ -16,7 +16,8 @@ $langs = array(
   'pt'  => 'Portugese',
   'se'  => 'Swedish',
   'hu'  => 'Hungarian',
-  'dk'  => 'Danish'
+  'dk'  => 'Danish',
+  'it'  => 'Italian
 );
 
 // Book types
@@ -983,6 +984,17 @@ array (
     /* information  */ "ISBN 87-7843-408-4",
     /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&vare_id=106131",
     /* language     */ "dk"
+  ),
+  
+  array(
+    /* title[s]     */ "PHP. Web scripting",
+    /* title_link   */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&isbn=8883780132",
+    /* author[s]    */ "Rasmus Lerdorf",
+    /* auth link[s] */ "http://lerdorf.com/bio.php",
+    /* image        */ "8883780132.jpg",
+    /* information  */ "Hops Libri, 2000, ISBN 8883780132, 148 pages",
+    /* inform. link */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&isbn=8883780132",
+    /* language     */ "it"
   )
   ),
 
