@@ -35,6 +35,30 @@ For a description of PHP.net shortcut URLs, please visit our
 <a href="urlhowto.php">URL Howto page</a>.
 </p>
 
+<?php tipTitle('Quick Reference for BBEdit', 'Stian Andersen', '27-July-2003');?>
+
+<p>
+ BBEdit users can put this little AppleScript into the Scripts folder of
+ BBEdit to look up functions on the PHP website as they type. This will
+ probably work in other AppleScript supporting text editors too, with
+ small modifications. The script uses the current selection, or prompts for
+ a function name, and uses the default browser to show the page at php.net.
+</p>
+<pre>
+tell application "BBEdit"
+    set my_function to selection of window 1 as string
+    if my_function = "" then
+        set my_function to text returned of
+            (display dialog "PHP Function:" default answer "")
+    end if
+
+    if my_function is not "" then
+        set target_URL to "http://www.php.net/" & my_function
+        open location target_URL
+    end if
+end tell
+</pre>
+
 <?php tipTitle('Quick Reference for iCab', 'Telcontar', '17-Jun-2003');?>
 
 <p>
