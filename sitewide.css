@@ -260,11 +260,11 @@ table.mirrors td.caret {
 /* Calendar table --------------------------------------------------------- */
 table#cal {
 	font-size: smaller;
-	background-color: #f0f0f0;
+	background-color: #a0a0a0;
 	color: inherit;
 }
 table#cal td {
-	background-color: #a0a0a0;
+	background-color: #f0f0f0;
 	color: inherit;
 	vertical-align: top;
 }
@@ -288,4 +288,12 @@ table#cal div.event {
 table#calnav td, table#cal td.notaday {
 	background-color: #d0d0d0;
 	color: inherit;
+}
+table#cal a.type_1 {
+	color: green;
+	background-color: transparent;
+}
+table#cal a.type_3 {
+	color: black;
+	background-color: transparent;
 }
