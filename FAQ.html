@@ -353,9 +353,9 @@ README.WIN32 file.
     This creates three associative arrays.  $HTTP_GET_VARS, $HTTP_POST_VARS
     and $HTTP_COOKIE_VARS.  So, to write a generic script to handle POST
     method variables you would need something similar to the following:<PRE>
-    for(reset($HTTP_POST_VARS); $var=key($HTTP_POST_VARS); next($HTTP_POST_VARS)) {
+    while (list($var, $value) = each($HTTP_POST_VARS)) {
         echo "$var = $value&lt;br&gt;\n";
-    } 
+    }</PRE>
   </DD>
 
   <DT><B>
