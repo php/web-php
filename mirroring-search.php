@@ -94,8 +94,8 @@ commonHeader("Setting Up Local Search");
 </p>
 
 <p>
- Originally written by <gareth (at) omnipotent.net> 1998-Apr-13
- Updated by Dejan Markic <dejan (at) php.net> 2003-Jan-17
+ Originally written by &lt;gareth (at) omnipotent.net&gt; 1998-Apr-13
+ Updated by Dejan Markic &lt;dejan (at) php.net&gt; 2003-Jan-17
  Last updated: 2003-Jan-18
 </p>
 
@@ -143,8 +143,8 @@ commonHeader("Setting Up Local Search");
 </ol>
 
 <p>
- Originally written by <Philippe.Rochat (at) epfl.ch> 1998-Apr-13
- Updated by Gabor Hojtsy <goba (at) php.net> 2003-Jan-18
+ Originally written by &lt;Philippe.Rochat (at) epfl.ch&gt; 1998-Apr-13
+ Updated by Gabor Hojtsy &lt;goba (at) php.net&gt; 2003-Jan-18
  Last updated: 2003-Jan-18
 </p>
 
