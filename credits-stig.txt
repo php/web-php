@@ -4,3 +4,4 @@ sprintf reimplementation
 SGML documentation framework
 Loadable font support
 ODBC work
+XML support
