@@ -1,12 +1,23 @@
 <?php
 require_once 'prepend.inc';
 
+
+function make404() {
+	global $REQUEST_URI;
+	header('HTTP/1.0 404 Not Found');
+	commonHeader('404 Not Found');
+	echo "<H1>Not Found</H1>\n";
+	echo "<P>The page <B>" . $REQUEST_URI . "</B> could not be found.</P>\n";
+	commonFooter();
+}
+
+
 if (file_exists("../configuration.inc")) {
   include_once "../configuration.inc";
 }
 
 if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
-  print "404 Not found";
+  make404();
   exit;
 }
 
@@ -50,6 +61,7 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 
 $uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1);
 
+
 # try to find the uri as a manual entry
 
 require "manual-lookup.inc";
@@ -71,10 +83,16 @@ if ($try) {
 }
 
 
-# If all else fails ... redirect to the search page with the pattern set to $uri
+# If all else fails ... redirect to the search page with the pattern set to $REQUEST_URI
 
-header('HTTP/1.0 302 Redirect');
-header('Location: /search.php?show=nosource&pattern='.urlencode($uri) );
+if ($REQUEST_URI) {
+	header('HTTP/1.0 302 Redirect');
+	header('Location: /search.php?show=nosource&pattern='.urlencode($REQUEST_URI) );
+	exit;
+}
+
+make404();
 exit;
+
 
 ?>
