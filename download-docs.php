@@ -10,6 +10,14 @@ in various languages, even in printer
 friendly HTML format.
 </p>
 
+<h3>Tip for Windows users</h3>
+<p>
+If you don\'t know how to handle bz2 compressed
+manuals on Windows, please read our
+<a href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
+on this subject.
+</p>
+
 <h3>File sizes and dates</h3>
 <p>
 If you are using a capable browser, the file size and
@@ -17,14 +25,6 @@ date will show up when you move the mouse above the link.
 If you use another browser, or would like to see all the
 information, you can <a href="/download-docs.php?sizes=1">click
 here to see all the file sizes and dates</a>.
-</p>
-
-<h3>Tip for Windows users</h3>
-<p>
-If you don\'t know how to handle bz2 compressed
-manuals on Windows, please read our
-<a href="http://www.php.net/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
-on this subject.
 </p>
 ';
 
