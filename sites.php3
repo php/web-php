@@ -46,8 +46,10 @@ right away.</blockquote>
 	title("Automotive Industry");
 	siteStart();
 	site("Cars Everything","www.carseverything.com");
+	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Mitsubishi Motors","www.mitsucars.com");
+	site("Opel","www.opel.com");
 	site("Silver Bullet Motorcycles","www.silver-bullet.co.nz");
 	site("Volvo","www.volvo.com");
 	siteEnd();
@@ -91,6 +93,7 @@ right away.</blockquote>
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
+	site("EduTest.Com","www.edutest.com");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("HitList","www.hitlist.com");
 	site("PromoPodium","www.promopodium.nl");
@@ -161,6 +164,7 @@ right away.</blockquote>
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
 	site("Rackspace.com","www.rackspace.com");
+	site("Richweb Inc.","www.richweb.com");
 	site("Total Information Management AG","www.timso.ch");
 	site("XOOM Inc.","xoom.com");
 	site("Yebo! Net","www.yebo.co.za");
@@ -222,6 +226,13 @@ right away.</blockquote>
 	title("Publishing Industry");
 	siteStart();
 	site("Invisible Man Press","www.invisiblemanpress.com");
+	siteEnd();
+
+/* Real Estate */
+	title("Real Estate");
+	siteStart();
+	site("BNF Homes","www.bnfhomes.com");
+	site("Slater Realtors","www.slater-realtors.com");
 	siteEnd();
 
 /* Religious */
