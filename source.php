@@ -61,7 +61,7 @@ if (!empty($dir) && !preg_match("!^(\\.|/)$!", $dir)) {
         "/error"   => 1,
         "/license" => 1
     );
-    if (preg_match("!^/manual/!", $dir) || isset($legal_dirs[$dir])) {
+    if ((preg_match("!^/manual/!", $dir) || isset($legal_dirs[$dir])) && strpos($dir, "..") === FALSE) {
         $page_name = $_SERVER['DOCUMENT_ROOT'] . $_GET['url'];
     } else { $page_name = FALSE; }
 } else {
