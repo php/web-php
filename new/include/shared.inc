@@ -281,6 +281,7 @@ function commonHeader($title) {
 <TITLE>PHP3: <? echo $title ?></TITLE>
 <STYLE TYPE="text/css">
 .sidebartoc {
+    font-family: tahoma, arial, helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none
 }
