@@ -47,7 +47,7 @@ endif;
 if (strstr($HTTP_USER_AGENT,"Opera")):
 #	$DISABLE_KICKOUTS = true;
 	$HAVE_STYLE=true;
-	$IE4=true;
+	$NS4=true;
 endif;
 
 if (strstr($HTTP_USER_AGENT,"X11")):
