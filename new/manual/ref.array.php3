@@ -45,7 +45,7 @@ HREF="function.arsort.php3"
 ><DT
 ><A
 HREF="function.asort.php3"
->arsort</A
+>asort</A
 ></DT
 ><DT
 ><A
@@ -85,12 +85,12 @@ HREF="function.reset.php3"
 ><DT
 ><A
 HREF="function.rsort.php3"
->arsort</A
+>rsort</A
 ></DT
 ><DT
 ><A
 HREF="function.sort.php3"
->arsort</A
+>sort</A
 ></DT
 ><DT
 ><A
