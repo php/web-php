@@ -165,11 +165,11 @@ HourlyStats	yes
 # Defaults are Sites=30, URL's=30, Referrers=30 and Agents=15, and
 # Countries=50.  Tables may be disabled by using zero (0) for the value.
 
-TopSites        30
-TopURLs         30
-TopReferrers    30
+TopSites        15
+TopURLs         15
+TopReferrers    15
 TopAgents       15
-TopCountries    50
+TopCountries    15
 
 # The Webalizer normally strips the string 'index.' off the end of
 # URL's in order to consolidate URL totals.  For example, the URL
@@ -219,6 +219,7 @@ HideURL		*.GIF
 HideURL		*.jpg
 HideURL		*.JPG
 HideURL		*.ra
+HideURL		*.css
 
 # Hiding agents is kind of futile
 #HideAgent	RealPlayer
