@@ -22,7 +22,7 @@
    <input type="text" size="20" maxlength="32" name="php_os" value="<?php echo htmlspecialchars(stripslashes($operating_system));?>" />
   </td>
  </tr><tr>
-  <th align="right">Bug description:</th>
+  <th align="right">Summary:</th>
   <td colspan="2">
    <input type="text" size="40" maxlength="79" name="sdesc" value="<?php echo htmlspecialchars(stripslashes($sdesc));?>" />
   </td></tr>
@@ -42,12 +42,13 @@
 <table>
  <tr>
   <td valign="top">
+   <b>Description:</b><br />
    Please supply any information that may be helpful in fixing the bug:
    <ul>
-    <li>A short script that reproduces the problem</li>
-    <li>The list of modules you compiled PHP with (your configure line)</li>
-    <li>Any other information unique or specific to your setup</li>
-    <li>A <a href="/bugs-generating-backtrace.php">gdb backtrace</a>.</li>
+    <li>A short script that reproduces the problem.</li>
+    <li>The list of modules you compiled PHP with (your configure line).</li>
+    <li>Any other information unique or specific to your setup.</li>
+    <li>A <a href="bugs-generating-backtrace.php">gdb backtrace</a>.</li>
    </ul>
    <div align="center"><input type="submit" value="Send bug report" /></div>
   </td>
