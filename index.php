@@ -91,7 +91,7 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 <h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
-PHP-GTK version 0.1 has been released</h1>
+PHP-GTK version 0.1 released</h1>
 
 <p>
 <font class="newsDate">[02-Aug-2001]</font>
@@ -104,7 +104,7 @@ should be available a little later.
 <p>
 Note that previous versions require PHP 4.0.5/4.0.6,
 but <emp>0.1 requires the CVS version of PHP or
-4.0.7 (in the future)</emp> due to non-backwards
+upcoming 4.0.7</emp> due to non-backwards
 compatible changes in the Zend engine.
 </p>
 <p>
