@@ -10,8 +10,9 @@ site_header("News Archive - 2001");
 <p>
  Here are the most important news items we have published in 2001 on PHP.net.
  For the latest news, <a href="/index.php">check the homepage</a>. For the 
- <a href="/news-2002.php">news archive of 2002</a> or
- <a href="/news-2003.php">2003</a>, see the respective pages.
+ <a href="/news-2000.php">news archive of 2000</a>,
+ <a href="/news-2002.php">2002</a>, or <a href="/news-2003.php">2003</a>
+ see the respective pages.
 </p>
 
 <hr />
@@ -96,6 +97,18 @@ site_header("News Archive - 2001");
 
 <hr />
 
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right")); ?>
+<h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
+<p>
+ <span class="newsdate">[17-Aug-2001]</span>
+ PHP enthusiasts from all over the world will meet three days to attend
+ powerworkshops and sessions presented by the inventors of PHP, members
+ of the core group and other well known people from the community.
+ More information at <a href="http://www.php-conference.de/2001/index_en.php">www.php-conference.de</a>.
+</p>
+
+<hr />
+
 <?php print_link("http://gtk.php.net/", make_image("news/php-gtk-white.gif", "PHP-GTK", "right")); ?>
 <h1>PHP-GTK version 0.1 released</h1>
 
@@ -119,6 +132,60 @@ site_header("News Archive - 2001");
 
 <hr />
 
+<h1>PHP Conference</h1>
+<p>
+ <span class="newsdate">[29-Jul-2001]</span>
+ The first official PHP Conference, part of the
+ <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>,
+ brought the community together for
+ <a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a>
+ and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a>
+ designed to explore and strengthen PHP in
+ the open source space. The conference
+ was at the Sheraton San Diego Hotel and Marina
+ in San Diego, California between July 23-27, 2001.
+ Some presentations, you can see online:
+</p>
+<ul>
+ <li>Rasmus Lerdorf's <a href="http://conf.php.net/or2001">PHP - Spinal Injection</a></li>
+ <li>Thies Arntzen on <a href="http://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+ <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/sd-gtk">PHP-GTK</a></li>
+ <li>Jon Parise on <a href="http://conf.php.net/pear2">The PHP Extension and Application Repository</a></li>
+</ul>
+
+<p>
+ You can also download some papers from the
+ <a href="ftp://ftp.oreilly.com/pub/conference/os2001/">O'Reilly FTP site</a>
+</p>
+
+<hr />
+
+<h1>Integrated FAQ in the PHP Manual</h1>
+<p>
+ <span class="newsdate">[29-Jul-2001]</span>
+ You don't need to go online anymore, to access the PHP FAQ,
+ because we integrated it for you in the PHP Manual, so you can
+ <a href="http://www.php.net/docs.php">download it</a> in
+ various formats with the Manual packages, and
+ <a href="http://www.php.net/manual/en/faq.php">annotate
+ the pages online</a>, as you wish.
+</p>
+
+<hr />
+
+<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("news/phplt.gif", "LinuxTag", "right")); ?>
+
+<h1>LinuxTag 2001 in Europe is over</h1>
+
+<p>
+ <span class="newsdate">[09-Jul-2001]</span>
+ <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>
+ took place in Stuttgart, Germany, between July 5th-8th. PHPUG.De has
+ <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
+</p>
+
+<hr />
+
 <?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("news/pair.gif", "pair Networks", "right")); ?>
 <h1>Mailing lists and CVS are up!</h1>
 
@@ -131,20 +198,65 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("news/phplt.gif", "LinuxTag", "right")); ?>
-
-<h1>LinuxTag 2001 in Europe</h1>
-
+<h1>PHP 4.0.6 Released!</h1>
 <p>
- <span class="newsdate">[14-Jun-2001]</span>
- <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>
- was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has
- <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
+ <span class="newsdate">[23-Jun-2001]</span>
+ <a href="/downloads.php">PHP 4.0.6</a> is a maintenance release, that features
+ many bug fixes from PHP 4.0.5, and is especially much more efficient in its
+ memory requirements. Users that skipped the 4.0.5 upgrade may wish to jump
+ directly from 4.0.4 to the much more stable 4.0.6. For a full list of changes,
+ check out the <a href="/ChangeLog-4.php#4.0.6">Change Log</a>.
 </p>
 
 <hr />
 
-<h1><?php print_link("http://apachecon.com/2001/US/", "ApacheCon 2001");?></h1>
+<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right")); ?>
+<h1>PHP conventions in Europe</h1>
+<p>
+ <span class="newsdate">[14-Jun-2001]</span>
+ The second International PHP Conference, taking place in Frankfurt, Germany
+ this coming November has been announced. Further details are available on the
+ <a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
+</p>
+<p>
+ Also coming between July 5th-8th - <a
+ href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
+ in Stuttgart, Germany, with
+ <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
+</p>
+
+<hr />
+
+<h1>PHP Conference</h1>
+<p>
+ <span class="newsdate">[01-May-2001]</span>
+ The first official PHP Conference, part of the <a
+ href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
+ Convention</a>, will bring the community together for
+ <a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a>
+ and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a>
+ designed to explore and strengthen PHP in the open source space. Take
+ a look under the hood at everything PHP &dash; from understanding PHP
+ on wireless devices to participating in a discussion on the future of
+ PHP featuring some of the core developers and luminaries from the PHP
+ community. The conference runs July 23-27, 2001, at the Sheraton San
+ Diego Hotel and Marina in San Diego, California.
+</p>
+
+<hr />
+
+<h1>PHP 4.0.5 Released!</h1>
+<p>
+ <span class="newsdate">[30-Apr-2001]</span>
+ <a href="/downloads.php">PHP 4.0.5</a> is a maintenance release, that
+ features many bug fixes from PHP 4.0.4, as well as output compression, new
+ experimental FastCGI support, and significantly improved thread-safe versions.
+ For a full list of changes, check out the <a href="/ChangeLog-4.php#4.0.5">ChangeLog</a>.
+</p>
+
+<hr />
+
+<h1>ApacheCon 2001 Over</h1>
 
 <p>
  <span class="newsdate">[11-Apr-2001]</span>
@@ -159,5 +271,51 @@ site_header("News Archive - 2001");
  <li>Zeev Suraski on <a href="http://conf.php.net/pres/other/internals/">PHP 4 Internals</a></li> 
  <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
+
+<hr />
+
+<h1><?php print_link("http://apachecon.com/2001/US/", "ApacheCon 2001");?></h1>
+<p> 
+ <span class="newsdate">[07-Mar-2001]</span>
+ Registration for ApacheCon 2001 in Santa Clara on April 4-6, 2001
+ is underway! There's sessions about PHP from Luis Argerich, Thies
+ Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
+ Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
+ sessions on other cool open-source projects. Early registration
+ ends March 9, so act fast for discounted prices!
+</p>
+
+<hr />
+
+<h1>New Site Design</h1>
+<p>
+ <span class="newsdate">[07-Mar-2001]</span>
+ You might notice that things look a little different around
+ here. We've streamlined the site, with a new design from the
+ esteemed Colin Viebrock. Bear with us while we shake out the
+ bugs that are surely lingering behind this new facade.
+</p>
+
+<hr />
+
+<?php print_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<h1>Announcing PHP-GTK</h1>
+<p>
+ <span class="newsdate">[01-Mar-2001]</span>
+ The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
+ provides an object-oriented interface to the GTK+ toolkit and enables you to write
+ client-side cross-platform GUI applications. For more information, visit
+ <a href="http://gtk.php.net/">http://gtk.php.net/</a>.
+</p>
+
+<hr />
+
+<h1>Patch Level 1 released for PHP 4.0.4</h1>
+<p>
+ <span class="newsdate">[11-Jan-2001]</span>
+ Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
+ has been released. This bug-fix release also fixes a few party-crashing bugs that
+ were discovered in PHP 4.0.4.
+</p>
 
 <?php site_footer(); ?>
