@@ -210,6 +210,10 @@ can get &quot;under the hood&quot; with unlimited customization capabilities.
 Another message forum implementation.  Multiple threading levels, no cookies, users may delete own postings, etc.
 <? endEntry();?>
 
+<? makeEntry("PHPGen","www.byggsoft.se/~mikaelu/","Mikael Ulfenborg" ,"mikael.ulfenborg@byggsoft.se"); ?>
+PHPGen is small PHP-script used to make a framework for a new PHP-application. 
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
