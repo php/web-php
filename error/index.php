@@ -150,7 +150,7 @@ $uri_aliases = array (
     "icap"         => "mcal", // mcal is the successor of icap
     
     # external shortcut aliases ;)
-    "dochowto"     => "phpdochowto"
+    "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // for backward compatibility with PHP page!
     
 );
