@@ -56,7 +56,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("news/rackspace.gif", "Rackspace", "right") ); ?>
+<?php news_image("http://www.rackspace.com/?supbid=php.net", "rackspace.gif", "Rackspace"); ?>
 <h1>Rackspace providing additional hosting for PHP project</h1>
 
 <p>
@@ -95,7 +95,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("news/international_conference.gif", "International PHP Conference 2001", "right")); ?>
+<?php news_image("http://www.php-conference.de/2001/index_en.php", "international_conference.gif", "International PHP Conference 2001"); ?>
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
 <p>
  <span class="newsdate">[17-Aug-2001]</span>
@@ -107,7 +107,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://gtk.php.net/", make_image("news/php-gtk-white.gif", "PHP-GTK", "right")); ?>
+<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>PHP-GTK version 0.1 released</h1>
 
 <p>
@@ -171,7 +171,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("news/phplt.gif", "LinuxTag", "right")); ?>
+<?php news_image("http://www.linuxtag.org/2001/english/30.html", "phplt.gif", "LinuxTag"); ?>
 
 <h1>LinuxTag 2001 in Europe is over</h1>
 
@@ -184,7 +184,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("news/pair.gif", "pair Networks", "right")); ?>
+<?php news_image("http://promote.pair.com/direct.pl?php.net", "pair.gif", "pair Networks"); ?>
 <h1>Mailing lists and CVS are up!</h1>
 
 <p>
@@ -208,7 +208,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("news/international_conference.gif", "PHP International Conference 2001", "right")); ?>
+<?php news_image("http://www.php-kongress.de/2001/index_en.php", "international_conference.gif", "PHP International Conference 2001"); ?>
 <h1>PHP conventions in Europe</h1>
 <p>
  <span class="newsdate">[14-Jun-2001]</span>
@@ -272,13 +272,13 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<h1><?php print_link("http://apachecon.com/2001/US/", "ApacheCon 2001");?></h1>
+<h1>ApacheCon 2001</h1>
 <p> 
  <span class="newsdate">[07-Mar-2001]</span>
- Registration for ApacheCon 2001 in Santa Clara on April 4-6, 2001
- is underway! There's sessions about PHP from Luis Argerich, Thies
- Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
- Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
+ Registration for <a href="http://apachecon.com/2001/US/">ApacheCon 2001</a>
+ in Santa Clara on April 4-6, 2001 is underway! There's sessions about PHP from
+ Luis Argerich, Thies Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus
+ Lerdorf, Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
  sessions on other cool open-source projects. Early registration
  ends March 9, so act fast for discounted prices!
 </p>
@@ -296,7 +296,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_image("news/php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<?php news_image("http://gtk.php.net/", "php-gtk-white.gif", "PHP-GTK"); ?>
 <h1>Announcing PHP-GTK</h1>
 <p>
  <span class="newsdate">[01-Mar-2001]</span>

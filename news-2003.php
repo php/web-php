@@ -384,7 +384,7 @@ site_header("News Archive - 2003");
 
 <hr />
 
-<?php print_link("http://phpconf.hu/", make_image("news/hu_conf.gif", "PHPConf.hu", "right") ); ?>
+<?php news_image("http://phpconf.hu/", "hu_conf.gif", "PHPConf.hu"); ?>
 
 <h1>First Hungarian PHP Conference</h1>
 
@@ -419,7 +419,7 @@ site_header("News Archive - 2003");
 
 <hr />
 
-<?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("news/phpcon_logo.png", "PHPCon East 2003", "right")); ?>
+<?php news_image("http://www.php-con.com/return.php?i=ph2", "phpcon_logo.png", "PHPCon East 2003"); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
@@ -456,7 +456,7 @@ site_header("News Archive - 2003");
  
 <hr />
 
-<?php print_link("http://phpconf.phpquebec.org/index.php", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+<?php news_image("http://phpconf.phpquebec.org/index.php", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
 <p>
@@ -481,7 +481,7 @@ site_header("News Archive - 2003");
 
 <hr />
 
-<?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
+<?php news_image("http://www.phpconference.com/", "international_conference_2003_spring.gif", "Int'l PHP Conference"); ?>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
 <p>
