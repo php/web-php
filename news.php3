@@ -50,6 +50,9 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry("Apache Gets Down to Business","WEBBuilder Magazine article by Bjørn Borud","http://www.devx.com/upload/free/features/webbuilder/1998/wb1098/bb1098/bb1098.htm","Sept. 24, 1998"); ?>
+"The world's most popular Web server has a reputation for performance and extensibility. You may not be aware of the rich programming environment that surrounds Apache, though. PHP gives you strong SQL connectivity, and mod_perl has powerful application integration facilities. Learn how to exploit these capabilities. Also, see our review of Apache."
+<? endEntry(); ?>
 
 <? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://webreview.com/wr/pub/wtawards","June 22, 1998"); ?>
 "The substance of the Web is more and more residing in databases, and there are a variety of methods used to
