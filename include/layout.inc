@@ -197,7 +197,8 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD, $www_static_root;
+    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
+           $SEARCH_BASE, $ONLOAD, $www_static_root, $BASE_FOR_MANPAGE;
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -207,6 +208,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <link rel="shortcut icon" href="<?php echo $www_static_root; ?>/favicon.ico" />
  <script language="Javascript" type="text/javascript" src="<?php echo $www_static_root; ?>/userprefs.js"></script>
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
+ <?php echo (!empty($BASE_FOR_MANPAGE) ? '<!-- base href="' . $BASE_FOR_MANPAGE . '" /-->' : ''); ?>
 </head>
 <body bgcolor="#ffffff" text="#000000"
       link="#000099" alink="#0000ff" vlink="#000099"

@@ -3,7 +3,7 @@ require_once 'prepend.inc';
 
 // Set variable defaults
 $NEXT = $PREV = $UP = $HOME = $PGI = array(false, false);
-$TOC = array(); $SIDEBAR_DATA = '';
+$TOC = array(); $SIDEBAR_DATA = ''; $BASE_FOR_MANPAGE = '';
 
 // If we don't know anything about printing, set it to false
 if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
@@ -270,18 +270,23 @@ function manualUserNotes($title, $id) {
 
 // Send manual HTTP headers, provide accurate language data
 function sendManualHeaders($charset,$lang) {
-    global $LAST_UPDATED;
+    global $LAST_UPDATED, $BASE_FOR_MANPAGE, $MYSITE;
+    
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
     header("Vary: Cookie");
     header("Content-type: text/html;charset=$charset");
     header("Content-language: $lang");
+    
+    // Set initial base for manual page
+    // [will be extended in manualHeader()!]
+    $BASE_FOR_MANPAGE = $MYSITE . 'manual/' . language_convert($lang);
 }
 
 // Print out manual page header.
 function manualHeader()
 {
-    global $PRINT_PAGE, $PGI;
+    global $PRINT_PAGE, $PGI, $BASE_FOR_MANPAGE;
     
     // XSL sheets provide params in the 'this' array
     // element configured above, while old DSSSL sheets
@@ -291,6 +296,9 @@ function manualHeader()
     } else {
         list($id, $title) = $PGI;
     }
+    
+    // Finalize the manpage base with proper filename
+    $BASE_FOR_MANPAGE .= '/' . $id;
     
     if ($PRINT_PAGE) {
         manualPrintHeader($title);
