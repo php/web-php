@@ -55,6 +55,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#4.1">4.1. I heard it's possible to access Microsoft SQL Server from PHP. How?</a></li>
         <li><a href="#4.2">4.2. Can I access Microsoft Access databases?</a></li>
         <li><a href="#4.3">4.3. I saw PHP offers persistent database connections. What does that mean?</a></li>
+        <li><a href="#4.4">4.4. I upgraded to php4, and now mysql keeps telling me "Warning: MySQL: Unable to save result set in ...". What's up?
     </ul>
 <li><b><a href="#5">5. Installation</a></b>
     <ul>
@@ -578,6 +579,27 @@ just hit the always prompt for new location checkbox before pressing ok.
     of the script, but not its behavior!
   <p>
   </dd>
+
+ <dt><b>
+    <a name="4.4">4.4.</a> I upgraded to php4, and now mysql keeps telling
+    me "Warning: MySQL: Unable to save result set in ...". What's up?
+  </b></dt>
+  <dd>
+    <p>
+    Most likely what has happened is, PHP4 was compiled with the '--with-mysql'
+    option, without specifying the path to mysql. This means PHP is using its
+    built-in mysql client library. If your system is running applications,
+    such as php3 as a concurrent Apache module, or auth-mysql, that use other
+    versions of mysql clients, then there is a conflict between the two
+    differing versions of those clients.
+    </p>
+    <p>
+    Recompiling php4, and adding the path to mysql to the flag,
+    '--with-mysql=/your/path/to/mysql' usually solves the problem.
+    </p>
+    <p>
+  </dd>
+
 </dl>
 
 <hr noshade>
