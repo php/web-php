@@ -27,7 +27,7 @@ what services they provide.</p>
 
 <h2>pair2.php.net (216.92.131.5)</h2>
 
-<p><b>machine:</b> ?, ?MB RAM, 27GB HD, freebsd 4.3</p>
+<p><b>machine:</b> p3/566, 128MB RAM, 27GB HD, freebsd 4.3</p>
 
 <h2>rack1.php.net (209.61.157.217)</h2>
 
