@@ -164,12 +164,13 @@ commonHeader("Hypertext Preprocessor");
  and <a href="http://zend.com">Zend</a>.
 </p>
 
-<p>Besides presentations from the above companies the LAMP area also presents
-over 40 sessions by Apache-, MySQL- and PHP-developers, such as Rasmus Lerdor,
-Ken Coar and Brian Aker. Entrance to LinuxTag is free if you
-<a href="https://www.linuxtag.org/2004/registrationform.html">pre-register</a>.
-For more information see <a href="http://lamparea.org/en">the LAMP Area</a>
-website.
+<p>
+ Besides presentations from the above companies the LAMP area also presents
+ over 40 sessions by Apache-, MySQL- and PHP-developers, such as Rasmus Lerdorf,
+ Ken Coar and Brian Aker. Entrance to LinuxTag is free if you
+ <a href="https://www.linuxtag.org/2004/registrationform.html">pre-register</a>.
+ For more information see <a href="http://lamparea.org/en">the LAMP Area</a>
+ website.
 </p>
 
 <hr />
