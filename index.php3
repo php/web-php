@@ -13,6 +13,7 @@ echo "\n<!--$MYSITE-->\n";
 We just got the latest numbers from
 <a href="http://www.netcraft.com/">Netcraft</a>. If PHP usage keeps growing
 at this rate, we'll pass a million (virtual) servers during November.
+<a href="usage.php3">Check out the usage page.</a>
 
 <h3>PHP Talk at Atlanta Linux Showcase</h3>
 <p>
