@@ -21,8 +21,8 @@ echo <<<SEARCHBAR_END
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
  <title>PHP: Search Sidebar</title>
- <link rel="shortcut icon" href="/favicon.ico" />
- <style type="text/css">@import url("/searchbar.css");</style>
+ <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
+ <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/styles/searchbar.css");</style>
  <base href="{$_SERVER['BASE_HREF']}" />
 </head>
 <body onload="document.sform.pattern.focus();">
