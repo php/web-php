@@ -30,4 +30,5 @@ if (isset($_SERVER['MIRROR_STATS'])) {
 echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language(), "|";
 
 // Test if there is a /manual alias
-virtual("/manual/noalias.txt");
+$correctmanual = @virtual("/manual/noalias.txt");
+if (!$correctmanual) { echo "manual-alias"; }
