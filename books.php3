@@ -46,7 +46,7 @@ by Chad Robinson, Graeme Merrall<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
-by Richard Blume, Christian Cartus, Egon Schmid<BR>
+by Egon Schmid, Christian Cartus, Richard Blume<BR>
 <SMALL>in German</SMALL><BR>
 </TD>
 </TR>
