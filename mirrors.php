@@ -22,12 +22,6 @@ commonHeader("Mirror Sites");
  is highlighted in the list below.
 </p>
 <p>
- Mirror sites also have default language settings, so shortcut navigation
- services provide you results in that language. See the
- <?php print_link("/urlhowto.php", "URL shortcuts page"); ?> for
- examples of this behaviour.
-</p>
-<p>
  If you are interested in hosting a mirror of this site,
  <?php print_link("/mirroring.php", "here's how"); ?>.
 </p>
@@ -50,11 +44,11 @@ foreach ($MURLS as $murl) {
     // country header, if it is a new one
     $country = mirror_country($murl);
     if ($prevcc != $country) {
-        echo '<tr><td colspan="5"></td></tr>' . "\n";
+        echo '<tr><td colspan="4"></td></tr>' . "\n";
         echo '<tr bgcolor="#cccccc"><td width="40" align="center">';
         print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], FALSE, 'CLASS="flag"');
         echo '<br /></td>';
-        echo '<td colspan="4"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
+        echo '<td colspan="3"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
         echo '</tr>' . "\n";
     }
 
@@ -75,11 +69,6 @@ foreach ($MURLS as $murl) {
     // Print out mirror provider's link
     echo '<td><small>';
     print_link(mirror_provider_url($murl), mirror_provider($murl));
-    echo '</small><br /></td>' . "\n";
-
-    // Print out mirror's default language
-    echo '<td><small>';
-    echo $LANGUAGES[default_language($murl)];
     echo '</small><br /></td>' . "\n";
 
     // Print out search support information
