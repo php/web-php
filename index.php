@@ -9,56 +9,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h3>Patch Level 1 available for PHP 4.0.3</h3>
+<img src="gifs/php4zend-small-white.gif" align="right">
+<h3>PHP 4.0.3pl1 Released</h3>
 Oct 15, 2000.  Due to two problems discovered in PHP 4.0.3, <a href="downloads.php">PHP 4.0.3pl1 is now available</a>.
 This release fixes an issue that prevented the Apache php_value mechanism from working correctly with .conf
 files, and a memory leak that was discovered in the module versions of PHP.
-
-<h3>PHP 4.0.3 Released</h3>
-Oct 11, 2000.  <a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
+<a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
 enhancements, as well as several new features and bug fixes.  It is strongly
 recommended for all users of PHP to upgrade to this version.  You can read the 
 <a href="/ChangeLog-4.php#4.0.3">changelog</A> here.
 
-<h3>Manual Search Tip</h3>
-Oct. 6, 2000.  You can now go directly to PHP manual pages with a URL such as
-<a href="http://php.net/strlen">php.net/strlen</a>.  
-
-<h3>PHP 4.0.2 Released!</h3>
-August 29, 2000.  The new version features new functions, many bug fixes, and increased
-performance.  <a href="downloads.php">Download now!</a>  You can read the 
-<a href="/ChangeLog-4.php#4.0.2">changelog</A> here.
-
-<h3>PHP 4.0.1 Patch Level 2 available</h3>
-<a href="downloads.php">PHP 4.0.1pl2</a> addresses two bugs that were discovered in PHP 4.0.1, that
-prevent error_reporting() and readdir() from working properly.
-
-<h3>PHP 4.0.1 Released!</h3>
-June 28, 2000.  The first maintenance release for PHP 4.0 is out.  The new release features increased
-stability under Windows, improved error handling, several new features and lots of bug fixes (the full list 
-of changes is <a href="ChangeLog-4.php#4.0.1">available</a>).  It's a
-recommended upgrade for all PHP users.  <a href="downloads.php">Download now!</a>
-
-<img src="gifs/php4zend-small-white.gif" align="right">
-<h3>PHP 4.0.0 Released!</h3>
-May 22, 2000.  It's here, it's ready, and it has the long awaited 'Release'
-tag.  The successor of PHP 3.0 has finally been released.  At this point, everyone is
-encouraged to begin upgrading their systems to use this version.
-<a href="downloads.php">Download it now!</a>  Some more PHP 4.0 related information
-can be found <a href="/version4">here</a>.
-
-<h3>PHP 3.0.16 released</h3>
-April 05, 2000. PHP 3.0.16 was released. This is mostly a bug fix release which
-adds support for gd-1.8, ucd-snmp 4.1, and high-resolution timers on OS/2.
-OpenBSD support has been improved considerably. The source package and
-Win32 binaries are available from the PHP homepage. The 
-<a href="ChangeLog.php3">ChangeLog</a> contains a
-full list of changes.
-
-<h3>New Tips and Tricks Section</h3>
-Check out our <A HREF="/tips.php">tips</A> page for some "neat" things, PHP-related.
-It's a little sparse right now, but feel free to make suggestions!
-
+<h3>PHP 3.0.18 released</h3>
+October 21, 2000. PHP 3.0.18 was released. This is a bug-fix release, including
+fixes for file uploads and a backported imagetypes() function from PHP4. The
+<a href="http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854">ChangeLog</a>
+contains a full list of changes.
 
 <h3>Improve your PHP skills</h3> 
 Looking for clear and useful guides to build dynamic web-sites using
@@ -66,10 +31,18 @@ PHP?  Our <a href="/books.php">Books Resource Center</a> lists now
 more than a dozen books in eight different languages. If you know
 about more PHP-related books, tell us about them!
 
+<h3>Manual Search Tip</h3>
+You can go directly to PHP manual pages with a URL such as
+<a href="http://php.net/strlen">php.net/strlen</a>.  
+
+<h3>Tips and Tricks Section</h3>
+Check out our <A HREF="/tips.php">tips</A> page for some "neat" things, PHP-related.
+It's a little sparse right now, but feel free to make suggestions!
+
 <img src="ads/ZendOptimizer.gif" align="right">
 <h3>Zend Optimizer Beta Released!</h3>
 <a href="http://www.zend.com">Zend Technologies</a> has announced the availability of
-the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
+the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <a href="http://www.zend.com/zend/optimizer.php">free download</a>.
 
 <h3>New usage stats for October available</h3>
@@ -77,7 +50,7 @@ the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
 <a href="/usage.php"><img align=right src="gifs/stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
 <a href="http://www.netcraft.com/">Netcraft</a> and <a
 href="http://www.securityspace.com/s_survey/">E-Soft</a> have
-published the September results for their Web Server surveys - both
+published the October results for their Web Server surveys - both
 of which continue to show impressive growth for PHP. Check out the <a
 href="usage.php">usage page</a>.
 <br clear="all">
