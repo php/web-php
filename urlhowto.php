@@ -80,7 +80,7 @@ are searched for in the manual:
 <p>
 This kind of URL will bring up the manual page in the mirror's
 default manual language. This is English for the main site,
-but can be a wide range of languages, depending of the mirror's
+but can be a wide range of languages, depending on the mirror's
 setup. You can see the list of languages used by mirrors at
 <a href="http://php.net/mirrors">http://php.net/mirrors</a>.
 This way if you would like to get an Italian manual page for
@@ -112,15 +112,17 @@ before the first step (PHP page search) mentioned above. Some examples
 of shortcut aliases: <tt>http://php.net/whatisphp</tt>,
 <tt>http://php.net/php4news</tt>. The latter is an external page alias,
 as it points to a file on the CVS server, containing information about
-changes in PHP.
+changes in PHP. There are also some convinient aliases, like
+<tt>http://php.net/de/books</tt> which displays the German PHP books'
+list.
 </p>
 
 <h1>Get it on your site</h1>
 
 <p>
-What enables PHP.net to have this feature is a combination of a 
-custom ".htaccess" file, which redirects the browser to another page
-in case of an "Error 401/3/4" and a little search page that looks up
+What enables PHP.net to have this feature is a combination of some
+ErrorDocument Apache settings, redirecting the browser to another page
+in case of an "Error 401/3/4" and a little search script that looks up
 page names or functions names in the manual corresponding to what
 you searched for in <tt>http://php.net/search_for_this</tt>.
 </p>
@@ -128,7 +130,7 @@ you searched for in <tt>http://php.net/search_for_this</tt>.
 <p>
 Everything behind this feature is available here:
 <ul>
- <li><a href="http://cvs.php.net/co.php/phpweb/.htaccess">http://cvs.php.net/co.php/phpweb/.htaccess</a></li>
+ <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
  <li><a href="http://cvs.php.net/co.php/phpweb/error/index.php">http://cvs.php.net/co.php/phpweb/error/index.php</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
