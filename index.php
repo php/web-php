@@ -201,6 +201,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.2RC2 Released</h1>
+<p>
+<font class="newsdate">[29-Apr-2003]</font>
+<a href="http://qa.php.net/">PHP 4.3.2RC2</a> has been released. 
+This is the second release candidate and should have no critical problems/bugs.
+Nevertheless, please download and test it as much as possible on real-life 
+applications to uncover any remaining issues.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>My PHP.net</h1>
 
 <p>
