@@ -573,9 +573,11 @@ endwhile;
 screenWidth = window.innerWidth;
 <? else: ?>
 screenWidth = document.body.clientWidth + 18;
-<? endif;?>
+<? endif;
 
+if ($FRAMEMODE != "manual"): ?>
 moveLayerTo('mirrorsKick',140,180);
+<? endif; ?>
 moveLayerTo('searchKick',screenWidth-350,36);
 
 do_layers = 1;
