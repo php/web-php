@@ -9,6 +9,7 @@
 ? cl       cl.php.net                                    dan@amerikanclaris.com                    php.labs.amerikanclaris.cl
 ? cz       www.php.cz                                    jap@maya.cz                               212.24.129.2
 ? de       www.php3.de                                   smartin@schlund.de                        62.104.64.10
+  de       de.php.net            Markus Wirtz            mw@globe.de                               php3.globe.de
 ? dk       dk.php.net                                    mkyed@borsen.dk                           194.239.128.56
 ? es       es.php.net                                    alfre@ibd.es                              195.55.198.14
 ? fi       fi.php.net                                    masa@netlife.fi                           195.170.139.154
