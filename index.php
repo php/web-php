@@ -75,6 +75,25 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h1>PHP 4.1.1 Released!</h1>
+
+<p>
+<font class="newsDate">[26-Dec-2001]</font> Due to a few bugs in PHP 4.1.0, we
+decided to release <a href="/downloads.php">PHP 4.1.1.</a>. The bugs that were
+fixed are not major ones but minor ones, which could be annoying  if you get
+bitten by them.
+</p>
+<p>
+Our recommendation is that people who already upgraded to PHP 4.1.0 do
+*not* upgrade to PHP 4.1.1, unless they're experiencing one of the
+described bugs. Read the full
+<a href="/release_4_1_1.php">release announcement</a>.
+Windows binaries will be available later.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.1.0 Released!</h1>
 
 <p>

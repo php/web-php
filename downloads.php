@@ -60,11 +60,12 @@ change mirrors at the bottom of the page.
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.1.0.tar.gz", "PHP 4.1.0"); ?> - 10 December 2001</li>
+  <li><?php download_link("php-4.1.1.tar.gz", "PHP 4.1.1"); ?> - 26 December 2001</li>
 </ul>
 
 <h2>Windows Binaries</h2>
-All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
+All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP. The Windows
+binaries for PHP 4.1.1 will be available at a later.
 <ul>
   <li><?php download_link("php-4.1.0-Win32.zip", "PHP 4.1.0 zip package"); ?> - 12 December 2001<br>
   (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
@@ -101,6 +102,13 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <h1>Older Versions of PHP</h1>
 
 <ul>
+  <li>PHP 4.1.0
+    <ul>
+      <li><?php download_link("php-4.1.0.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.1.0-Win32.zip", "PHP 4.1.0 zip package"); ?></li>
+      <li><?php download_link("php410-installer.exe", "PHP 4.1.0 installer"); ?></li>
+    </ul><br>
+  </li>
   <li>PHP 4.0.6
     <ul>
       <li><?php download_link("php-4.0.6.tar.gz", "Source Code"); ?></li>
