@@ -155,7 +155,7 @@ function addlinks($text) {
 	return $new_text;
 }
 
-if ($cmd == "show") {
+if ($cmd == "send") {
 	if(!ereg("@",$email)) {
 		echo "ERROR!  Please provide a valid email address<P>\n";
 		commonFooter();
