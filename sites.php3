@@ -131,7 +131,7 @@
 
 	echo "</tr><tr>\n";
 	title("Financial Industry");
-	title("&nbsp;");
+	title("Games");
 	title("&nbsp;");
 
 	echo "</tr><tr><td valign=top>\n";
@@ -139,6 +139,7 @@
 	site("E*Trade","www.etrade.com");
 
 	echo "<br></td><td valign=top>\n";
+	site("Worms2","www.worms2.com");
 
 	echo "<br></td><td valign=top>\n";
 
