@@ -1,3 +1,8 @@
-include_path .:./include
-DirectoryIndex index.php3
+<IfModule mod_php3.c>
+php3_include_path .:./include:../include
+</IfModule>
+<IfModule mod_php4.c>
+php_value include_path .:./include:../include
+</IfModule>
+DirectoryIndex index.php3 index.php
 AddType application/x-pilot .prc .pdb
