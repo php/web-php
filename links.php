@@ -54,6 +54,20 @@ full PHP support (single incidents, on-call duty), software
 development, training, and performance measurements.</li>
 </ul>
 
+<h4>PHP Professional association</h4>
+
+<ul>
+<li><a href="http://www.php-ev.de/">PHP Verein</a><br>
+The goal of the German PHP Association, PHP Verein, is 
+to push PHP, as well as to serve as a junction for all 
+parties interested in PHP.</li>
+
+<li><a href="http://www.afup.org/">AFUP.org</a><br>
+(Association Française des Utilisateurs de PHP) : 
+The AFUP was created to answer the growing need from
+companies to have one unique place for PHP solutions.</li>
+</ul>
+
 <h4>PHP Link Catalogs</h4>
 
 <ul>
@@ -108,6 +122,14 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 <li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl</li>
 
+<li><a href="http://www.devnetwork.net/">PHP developper network</a><br>
+PHPDN is a gathering of news, views and what's what in the PHP community 
+today with daily news updates and user comments. It was founded by 
+<a href="http://www.evilwalrus.com/">EvilWalrus</a>, 
+the <a href="http://www.newbienetwork.com/">Newbienetwork</a> and 
+<a href="http://www.phpdevelopper.org">PHPdevelopper.org</a>.
+</li>
+
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
@@ -131,8 +153,11 @@ a search function</li>
 <li><a href="http://www.evilwalrus.com/">Evil Walrus</a><br>
 A growing list of PHP scripts</li>
 
+<!--
+This is is not more reachable (dams@php.net). Is it dead?
 <li><a href="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</a><br>
 A collection of PHP scripts</li>
+-->
 
 <li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
 An exhaustive PHP scripts collection, with more 400 useful functions (English and French).</li>
@@ -141,6 +166,20 @@ An exhaustive PHP scripts collection, with more 400 useful functions (English an
 A base library for PHP sites and developers</li>
 
 </ul>
+
+<h4>PHP NewsPapers</h4>
+
+<ul>
+<li><a href="http://www.phpmag.de/">PHPmag</a><br>
+The Software & Support Verlag, based in Frankfurt,
+Germany, has now published a magazine on PHP as a 
+tribute to the steadily growing German PHP community (in German).</li>
+
+<li><a href="http://www.zephpmag.com/">ZePHPmag</a><br>
+ZePHPmag is a webzine (exclusively online distribution 
+newspaper), dedicated to PHP and its technologies (in French).</li>
+</ul>
+
 
 <h4>PHP Tutorials</h4>
 
@@ -186,6 +225,12 @@ some special modules</li>
 A graphical frontend to PHP's php.ini file with support for all the standard PHP
 functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
 </li>
+
+<li><a href="http://www.easyphp.org/">EasyPHP</a><br>
+Windows wizard installs the latest PHP, Apache and MySQL for Windows. Fast and
+efficient.
+</li>
+
 </ul>
 
 <h4>Non-English PHP Sites</h4>
@@ -215,6 +260,9 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
 
 <li><a href="http://www.nexen.net/">Nexen.net</a><br>
 Home of PHP French documentation, with comprehensive technical informations</li>
+
+<li><a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br>
+More than 500 PHP applications, listed and sorted.</li>
 
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A French gateway to PHP related contents</li>
