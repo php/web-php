@@ -44,6 +44,15 @@ make_link("/license/", "official license") . '.
 <h3>Community:</h3>
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
+
+<h3>Contact</h3>
+
+<p>
+You can contact the webmaster at ' . 
+make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '. Please
+submit website bugs in the ' .
+make_link('http://bugs.php.net/', 'bug system') . '.
+</p>
 ';
 
 $tmp = '/tmp'; /* hopefully writeable on all mirrors */
