@@ -238,7 +238,7 @@ by Dr. Susanne Wigard<BR>
 >PHP 4 + MySQL</A><BR>
 by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 <SMALL>in German, Data Becker, July 2000, ISBN 3-8158-2043-X, 439 pages<BR>
-<A HREF="http://www.leierer.de/">weitere Informationen</A></SMALL><BR>
+<A HREF="http://www.databecker.de/">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
 
