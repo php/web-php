@@ -80,7 +80,7 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &
 
 // ============================================================================
 // Some nice URLs for getting something for download
-if (preg_match("!^get/([^/]+)$", $URI, $what)) {
+if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
     switch ($what[1]) {
         case "php"           : $URI = "downloads"; break;
         case "docs"          : // intentional
