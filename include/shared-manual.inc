@@ -99,14 +99,14 @@ function navigationBar($title,$id,$loc) {
 	if ($loc != 'bottom') {
 		global $LANGUAGES;
 		$links = array();
-		foreach($LANGUAGES as $code=>$name) {
-			if (file_exists("../$code/$id")) {
-				$links[] = make_link("../$code/$id", $name);
-			}
-		}
 		$file = substr($id,0,-4);
 		if (file_exists("html/$file.html")) {
 			$links[] = make_link("html/$file.html", 'Plain HTML');
+		}
+		foreach ($LANGUAGES as $code => $name) {
+			if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
+				$links[] = make_link("../$code/$id", $name);
+			}
 		}
 		if (count($links)) {
 			echo 'view this page in ' . join (delim(), $links);
