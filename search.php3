@@ -34,6 +34,11 @@ if (isset($pattern) && ($pattern)) {
 		$query = "l=phplib-dev&w=2&r=1&q=b&s=".urlencode($pattern);
 		Header("Location: ".$location."?".$query);
 		exit;
+	} else if ($show=="php-kb") {
+		$location = "http://www.faqts.com/knowledge-base/search/index.phtml";
+		$query = "fid=51&search=".urlencode($pattern);
+		Header("Location: $location?$query");
+		exit;
 	}
 	if (!$HAVE_SEARCH) {
 		$location="http://uk.php.net/search.php3";
