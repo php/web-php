@@ -58,9 +58,11 @@ a full article on PHP3.  Pick up a copy!</i>
   reset($mirror_sites);
   while ($site = key($mirror_sites)) {
       next($mirror_sites);
-      echo('  <td align="center"><a href="' . $site . '"><img src="gifs/' .
+      if ($mirror_sites[$site][2]==$FULL_MIRROR) {
+        echo('  <td align="center"><a href="' . $site . '"><img src="gifs/' .
            $mirror_sites[$site][0] . '-small.gif" border="0"><br>' .
            '<font size="-2">' .$mirror_sites[$site][1]. "</font></a></td>\n");
+      }
   }
 
 ?>

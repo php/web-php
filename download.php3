@@ -4,54 +4,67 @@
   $title="Download";
   include "include/header.inc";
 
-?><table>
+?>
+<center>
+<H3>Please choose a mirror site close to you</H3>
+<I>(all mirrors are updated at least once per hour)</I><BR><BR>
 <?
 
   reset($mirror_sites);
+  $lastc="";
   while ($site = key($mirror_sites)) {
-      next($mirror_sites);
-      $src_file = "${site}distributions/php-${current}.tar.gz";
-      $win32_file = "${site}distributions/php-${win32_current}-win32.zip";
-      echo(" <tr>\n");
-      echo("  <td>Download via HTTP ");
-      download_link($src_file, "PHP $current source");
-      echo(" or ");
-      download_link($win32_file, "$win32_current Win32 binary");
-      echo(" from " . $mirror_sites[$site][1] . "</td>\n");
-      echo('  <td align="center"><a href="' . $src_file . '"><img src="gifs/' .
-           $mirror_sites[$site][0] . '-small.gif" border="0"></a></td>');
-      echo("\n </tr>\n");
-  }
-  reset($ftp_sites);
-  while ($site = key($ftp_sites)) {
-      next($ftp_sites);
-      $src_file = "${site}php-${current}.tar.gz";
-      $win32_file = "${site}php-${win32_current}-win32.zip";
-      echo (" <tr>\n");
-      echo (" <td>Download via FTP ");
-      download_link($src_file, "PHP $current source");
-      echo (" or ");
-      download_link($win32_file, "$win32_current Win32 binary");
-      echo (" from " . $ftp_sites[$site][1] . "</td>\n");
-      echo (' <td align="center"><a href="' . $src_file .'"><img src="gifs/' . $ftp_sites[$site][0] . '-small.gif" border="0"></a></td>');
-      echo ("\n </tr>\n");
+    next($mirror_sites);
+    $c=$mirror_sites[$site][0];
+    if ($c!=$lastc) { echo('<A HREF="#'.$c.'">['.$c.']</A> '); $lastc=$c;}
   }
 ?>
-
- <tr>
-  <td>
-   Download
-   <a href="http://www.caraveo.com/php/php-<?echo $current;?>-win32.zip">PHP
-   <?echo $win32_current;?> Win32 binary</a> from the United States.  The <a
-    href="http://www.caraveo.com/php/php3latest.zip">latest patched
-   version</a> may also be downloaded.
-  </td>
-  <td align="center">
-   <a href="http://www.caraveo.com/php/php-3.0b3-win32.zip"><img
-    src="gifs/usa-small.gif" border="0"></a>
-  </td>
- </tr>
-
-</table>
-
+<BR><BR>
+<table border=0 cellpadding=2><tr><td>
+<?
+  reset($mirror_sites);
+  while ($site = key($mirror_sites)) {
+      next($mirror_sites);
+      $country=$mirror_sites[$site][0];
+      $location=$mirror_sites[$site][1];
+      if (eregi("^http://",$site)) {
+	$method="HTTP";
+	$srcdir="distributions/";
+      } elseif (eregi("^ftp://",$site)) {
+	$method="FTP";
+	$srcdir="";
+      } else {
+	$method="unknown";
+      }
+      if (!isset($lastcountry)) {
+	echo('<A NAME="'.$country.'">');
+	echo('<table border=0 cellpadding=3><tr><td width=200><img src="'.gifurl("${country}.gif").'"></td><td bgcolor=#eeeeee>');
+	$lastcountry=$country;
+      } elseif ($lastcountry!=$country) {
+	echo('<A NAME="'.$country.'">');
+	echo('</td></table><hr><table border=0 cellpadding=3></tr><tr><td width=200><img src="'.gifurl("${country}.gif").'"></td><td bgcolor=#eeeeee>');
+	$lastcountry=$country;
+      }
+      if ((!isset($lastlocation))||($lastlocation!=$location)) {
+	echo("<B>$location</B><BR>\n");
+  	$lastlocation=$location;
+      }
+      $src_file = "${site}${srcdir}php-${current}.tar.gz";
+      $win32_file = "${site}${srcdir}php-${win32_current}-win32.zip";
+      echo("<UL>");
+      if (eregi("caraveo",$site)) { # special case ;-)
+	echo("<LI>");
+	download_link("${site}/php3latest.zip","Latest patched Windows version");
+        echo("<BR>\n");
+      } else {
+	echo("<LI>");
+      	download_link($src_file, "<FONT SIZE=-1>($method)</FONT> PHP $current source");
+      	echo("<BR>\n");
+     	echo("<LI>");
+      	download_link($win32_file, "<FONT SIZE=-1>($method)</FONT> $win32_current Win32 binary");
+      }
+      echo("</UL><BR>\n");
+  }
+?>
+</td></tr></table>
+</td></tr></table>
 <?include "include/footer.inc"; ?>

@@ -4,20 +4,27 @@
   $current = "3.0b4";
   $win32_current = "3.0b4";
 
+  $filesizes["php-3.0b4.tar.gz"]="~ 750kb";
+  $filesizes["php-3.0b4-win32.zip"]="~ 850kb";
+
+  $DL_ONLY=0;
+  $FULL_MIRROR=1;
+
   $mirror_sites = array(
-    "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
-    "http://il.php.net/"         => array("israel", "Netvision, Israel"),
-    "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
-    "http://no.php.net/"         => array("norway", "Guardian Networks, Norway"),
-    "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom"),
-	"http://www.php.net/"	 => array("usa", "Circle Net, United States")
-  );
-  $ftp_sites = array(
-   "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States"),
-   "ftp://no.php.net/pub/free/php/dist/"          => array("norway", "Guardian Networks, Norway")
+    "http://ca.php.net/"         => array("canada", "Toronto, Canada",$FULL_MIRROR),
+    "http://il.php.net/"         => array("israel", "Netvision, Israel",$FULL_MIRROR),
+    "http://machba.il.php.net/"  => array("israel", "Technion, Israel",$FULL_MIRROR),
+    "http://no.php.net/"         => array("norway", "Trondheim, Norway",$FULL_MIRROR),
+    "ftp://no.php.net/pub/free/php/dist/"         => array("norway", "Trondheim, Norway",$DL_ONLY),
+    "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom",$FULL_MIRROR),
+    "ftp://uk.php.net/"		=> array("uk","Norwich, United Kingdom",$DL_ONLY),
+    "http://www.php.net/"	 => array("usa", "Circle Net, United States",$FULL_MIRROR),
+    "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States",$DL_ONLY),
+    "http://www.caraveo.com/php" => array("usa", "Caraveo.com",$DL_ONLY)
   );
 
   function download_link($file, $title) {
+      global $filesizes;
       if ($tmp = strrchr($file, "/")) {
           $local_file = substr($tmp, 1, strlen($tmp));
       } else {
@@ -28,6 +35,8 @@
       echo("<!-- file=$file localfile=$local_file size-$size-->\n");
       if ($size) {
           printf(" (%dk)", $size);
+      } elseif (isset($filesizes[$local_file])) {
+	  echo " (".$filesizes[$local_file].")";
       }
   }
 
