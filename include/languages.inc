@@ -38,4 +38,26 @@ $LANGUAGES = array(
     'sv'    => 'Swedish',
     'tr'    => 'Turkish',
 );
-?>
+
+// Convert between language codes back and forth
+// [We use non standard languages codes and so conversion
+// is needed when communicating with the outside world]
+function language_convert($langcode, $to_phpweb_format = TRUE)
+{
+    if ($to_phpweb_format) {
+        switch ($langcode) {
+            case 'zh_cn': return 'zh';
+            case 'zh_hk': return 'hk';
+            case 'zh_tw': return 'tw';
+            default:      return $langcode;
+        }
+    }
+    else {
+        switch ($langcode) {
+            case 'cn': return 'zh_cn';
+            case 'hk': return 'zh_hk';
+            case 'tw': return 'zh_tw';
+            default:   return $langcode;
+        }
+    }
+}
