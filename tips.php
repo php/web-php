@@ -1,6 +1,6 @@
 <?php
 require_once 'prepend.inc';
-commonHeader("Cool PHP Tips");
+commonHeader("Cool Quick Reference Tips");
 
 function tipTitle($title,$author='',$date='') {
 	echo hdelim();
@@ -20,18 +20,12 @@ function tipTitle($title,$author='',$date='') {
 
 ?>
 
-<h1>Cool PHP Tips and Tricks</h1>
+<h1>Cool Quick Referenve Tips</h1>
 
 <p>
-This page is going to contain a collection of "neat" tips and tricks 
-related to PHP. They aren't necessarily be related to actually coding
-in PHP (as our first example shows), but they are, in our opinion,
-pretty cool.
-</p>
-
-<p>
-Send your suggestions for tips
-to <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
+On this page, you can find many neat tips and tricks to optimize
+your usage of our quick reference features. Send your suggestions
+for tips to <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
 </p>
 
 <?php tipTitle('Quick Reference for KDE 2.1', 'Christoph Luehr', '10-Mar-2001');?>
