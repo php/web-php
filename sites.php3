@@ -125,6 +125,7 @@ right away.</blockquote>
 	title("Internet Services");
 	siteStart();
 	site("easyDNS","www.easydns.com");
+	site("InfoMak","www.infomak.com");
 	siteEnd();
 
 /* ISP's */
