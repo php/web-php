@@ -8,12 +8,8 @@ site_header("PHP 4.1.0 Release Announcement");
 <h1>PHP 4.1.0 Release Announcement</h1>
 
 <p>
- A <a href="release_4_1_0_fr.php">French translation</a> of this
- announcement is also available.
-</p>
-
-<p>
- After a lengthy QA process, PHP 4.1.0 is <a href="/downloads.php">finally out</a>!
+ After a lengthy QA process, PHP 4.1.0 is <a href="/downloads.php">finally out</a>!<br />
+ [ <a href="/release_4_1_0_fr.php">Version Fran&ccedil;aise</a> ]
 </p>
 
 <p> PHP 4.1.0 includes several other key improvements:</p>
