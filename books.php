@@ -242,7 +242,9 @@ array (
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
     /* image        */ "schwendiman.jpg",
-    /* information  */ "Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages",
+    /* information  */ "Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<br>" .
+                       "Also available in " .
+                       make_link("http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094", "Hungarian"),
     /* inform. link */ "",
     /* language     */ "en"
   ),
@@ -727,6 +729,28 @@ array (
     /* image        */ "phpblack_hu.jpg",
     /* information  */ "Perfact-Pro, March 2002, ISBN 963-0095-58-0, 768 pages + CD",
     /* inform. link */ "http://www.interbook.hu/index.php?op=ShowProduct&id=2213",
+    /* language     */ "hu"
+  ),
+
+  array(
+    /* title[s]     */ "Webvilág PHP4 Fejlesztõk kézikönyve 1. kötet",
+    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094",
+    /* author[s]    */ "Blake Schwendiman",
+    /* auth link[s] */ "",
+    /* image        */ "blake_hu.jpg",
+    /* information  */ "Panem, Dec 2001, ISBN 963-5453-09-4, 422 pages",
+    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094",
+    /* language     */ "hu"
+  ),
+
+  array(
+    /* title[s]     */ "Webvilág PHP4 Referenciakönyv 2. kötet",
+    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453108",
+    /* author[s]    */ "Blake Schwendiman",
+    /* auth link[s] */ "",
+    /* image        */ "blake_hu.jpg",
+    /* information  */ "Panem, Feb 2002, ISBN 963-5453-10-8, 508 pages",
+    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453108",
     /* language     */ "hu"
   ),
 
