@@ -56,7 +56,7 @@ sessions) is included in the right-hand column of the front page.
 </p>
 <p>
 If you want to list an upcoming event, just fill out the form <a
-href="http://www.php.net/cal.php?a=1">at the bottom of this page</a>.
+href="http://www.php.net/submit-event.php">on this page</a>.
 </p>
 
 <h1>Sample Code</h1>
