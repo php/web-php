@@ -1,6 +1,6 @@
 #!/bin/sh
 
-lynx -source http://www.freshmeat.net/search/?q=php\&mode=xml > backend/projects.xml~
+lynx -source http://freshmeat.net/search-xml/?q=php\&filter=183 > backend/projects.xml~
 if [ $? -ne 0 ]; then
   echo problem getting results from freshmeat
   exit 1
