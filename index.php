@@ -153,6 +153,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>PHP 4.3.3 released!</h1>
 <p>
+ <span class="newsdate">[25-Aug-2003]</span>
  The PHP developers are proud to announce the immediate availability of
  <a href="release_4_3_3.php">PHP 4.3.3</a>. This release contains a large number of bug fixes
  and we <strong>strongly</strong> recommend that all users of PHP upgrade to this version.
