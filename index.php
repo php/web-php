@@ -150,6 +150,48 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+
+<h1>PHP 5 Release Candidate 2 Released!</h1>
+<p>
+ <span class="newsdate">[25-Apr-2004]</span>
+ The <a href="/downloads.php#v5">second Release Candidate of PHP 5</a> is now
+ available! This mostly bug fix release improves PHP 5's stability and irons out
+ some of the remaining issues before PHP 5 can be deemed release quality. Note
+ that it is still <i>not</i> recommended for mission-critical use but people are
+ encouraged to start playing with it and report any problems.
+</p>
+
+<p>Key changes since Release Candidate 1 include:</p>
+
+<ul>
+ <li>
+  The Zend Engine I compatibility mode (zend.ze1_compatibility_mode) has been
+  re-implemented to more accuratly support PHP 4's object auto-clone behavior.
+ </li>
+ <li>
+  All object-oriented extensions except for MySQLi have moved to studlyCaps.
+  This includes SQLite, SOAP, Reflection API, Ming and others.
+ </li>
+ <li>
+  Implementing an interfaces and/or abstract method with the wrong prototype is
+  now a fatal error. For backwards compatibility, re-implementing regular methods
+  with the wrong prototype will only result in an E_STRICT warning.
+ </li>
+ <li>
+  Features as described in the Release Candidate 1 <a href="/index.php#5.0.0RC1">release announcement</a>
+ </li>
+ <li>And lots more...</li>
+</ul>
+
+<p>
+ For changes since Release Candidate 1, please consult the
+ <a href="/ChangeLog-5.php#5.0.0RC2">ChangeLog</a>.
+</p>
+
+<hr />
+
+
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
 <h1>PHP 4.3.6 released!</h1>
@@ -182,7 +224,7 @@ commonHeader("Hypertext Preprocessor");
 <hr />
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
-
+<a name="5.0.0RC1"></a>
 <h1>PHP 5 Release Candidate 1 Released!</h1>
 <p>
  <span class="newsdate">[18-Mar-2004]</span>
