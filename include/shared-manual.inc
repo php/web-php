@@ -1,5 +1,5 @@
 <?php // -*- C++ -*-
-require("shared.inc");
+require_once 'prepend.inc';
 
 $LANGUAGES = array(
     'en' => 'English',
@@ -18,6 +18,9 @@ $LANGUAGES = array(
 $NEXT = $PREV = $UP = $HOME = array(false, false);
 $TOC = array();
 
+$SIDEBAR_DATA = '';
+
+
 function setupNavigation($data) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $tstamp;
     $HOME = @$data["home"];
@@ -29,81 +32,115 @@ function setupNavigation($data) {
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
-function makeBorderTOC($this)
-{
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
 
-    echo "Top: <b><a href=\"./\">$HOME[1]</a></b><br>\n";
-    echo '<form method="GET" action="../../manual-lookup.php">';
-?>
-    <b><a href="../../quickref.php">quickref:</a></b><br>
 
-    <input type="hidden" name="lang" value="$LANG">
-    <input type="text" class="small" name="function" size="10">
-    <?php echo make_submit('small_submit.gif', 'lookup', 'bottom');?>
-    </form>
-<?php
+function makeBorderTOC($this) {
+	global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
+	global $SIDEBAR_DATA, $LANG;
 
-    if ($HOME[1] != $UP[1] && $UP[1]) {
-      echo "Up: <b><a href=\"$UP[0]\">$UP[1]</a></b>\n";
-    }
+	$SIDEBAR_DATA = '<form method="GET" action="/manual-lookup.php">' .
+	$SIDEBAR_DATA.= '<table border="0" CELLPADDING="4" CELLSPACING="0">';
 
-    for ($i = 0; $i < count($TOC); $i++) {
-	list($url, $title) = $TOC[$i];
-	if (!$url || !$title) {
-	    continue;
+	$SIDEBAR_DATA.= '<tr valign="top"><td><small>' .
+		'<input type="hidden" name="lang" value="' . $LANG . '">' .
+		'lookup: <input type="text" class="small" name="function" size="10"> ' .
+		make_submit('small_submit.gif', 'lookup', 'bottom') .
+		'<br></small></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr valign="top"><td>' . 
+		make_link('./', make_image('caret-t.gif', $HOME[1]) . $HOME[1] ) . 
+		'<br></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
+
+	if (($HOME[1] != $UP[1]) && $UP[1]) {
+		$SIDEBAR_DATA.= '<tr valign="top"><td>' . 
+			make_link($UP[0], make_image('caret-u.gif', $UP[1]) . $UP[1] ) . 
+			'<br></td></tr>';
 	}
-	if ($title == $this) {
-	    $type = "w";
-	    $out = 2;
-	} else {
-	    $type = "p";
-	    $out = 0;
+
+	$SIDEBAR_DATA.= '<tr valign="top"><td><small>';
+
+	for ($i = 0; $i < count($TOC); $i++) {
+		list($url, $title) = $TOC[$i];
+		if (!$url || !$title) {
+			continue;
+		}
+		$img = 'box-0.gif';
+		if ($title == $this) {
+			$img = 'box-1.gif';
+		}
+		if ($UP[0] == 'funcref.php') {
+			$title = eregi_replace(" functions\$", "", $title);
+		}
+		$SIDEBAR_DATA .= '&nbsp;' . 
+			make_link($url, make_image($img, $title) . $title ) . 
+			'<br>';
 	}
-	if ($UP[0] == 'funcref.php') {
-	    $title = eregi_replace(" functions\$", "", $title);
-	}
-	echo "<li><a href=\"$url\">$title</a></li>";
-    }
-};
+
+	$SIDEBAR_DATA.= '</small></td></tr>';
+	$SIDEBAR_DATA.= '</table></form>';
+
+}
 
 function navigationBar($title,$id,$loc) {
-    global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
-    echo '<table border="0" width="800" bgcolor="#d0d0d0" cellpadding="4" cellspacing="1"><tr>';
-    if ($loc == "bottom") {
-      echo "<td align=\"middle\" colspan=\"3\">";
-      $back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
-      echo "<a href=\"../add-note.php?sect=$id&amp;redirect=$back_url\">add note</a> | ";
-      echo "<a href=\"../about-notes.php\">about notes</a>";
-      echo "</td></tr><tr>";
-    }
-    echo "<td align=\"left\" width=\"44%\">";
-    if ($PREV[1]) {
-      echo "Previous: <a href=\"$PREV[0]\">$PREV[1]</a>";
-    }
-    echo "&nbsp;</td>\n";
-    echo "<td align=\"center\" width=\"12%\">Updated<br>$tstamp</td>\n";
-    echo "<td align=\"right\" width=\"44%\">&nbsp;";
-    if ($NEXT[1]) {
-      echo "Next: <a href=\"$NEXT[0]\">$NEXT[1]</a>";
-    }
-    echo "</td>\n";
-    if ($loc == "top") {
-      echo "</tr><tr>";
-      echo "<td colspan=\"3\" align=\"center\">";
-      $file = substr($id,0,-4);
-      echo "View this page in: ";
-      global $LANGUAGES;
-      while (list($code,$name) = each($LANGUAGES)) {
-	if (file_exists("../$code/$id")) {
-	  echo "<a href=\"../$code/$id\">$name</a> | ";
+	global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
+
+	echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+
+	echo '<tr>';
+	echo '<td align="left">';
+	if ($PREV[1]) {
+		echo make_link( $PREV[0] , make_image('caret-l.gif', 'previous') . $PREV[1] ) ;
 	}
-      }
-      if (file_exists("html/$file.html")) {
-	echo "<a href=\"html/$file.html\">Plain HTML </a>";
-      }
-    }
-    echo "</tr></table>\n";
+	echo '<br></td>';
+
+	echo '<td align="right">';
+	if ($NEXT[1]) {
+		echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', 'next') ) ;
+	}
+	echo '<br></td>';
+	echo '</tr>';
+
+	echo '<tr bgcolor="#cccccc"><td colspan="2">';
+	spacer(1,1);
+	echo '<br></td></tr>';
+
+	echo '<tr>';
+	echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp.'<br>';
+
+	if ($loc == 'bottom') {
+
+		$back_url = 'http://' . $SERVER_NAME . 
+			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+			$PHP_SELF;
+		print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url, 'add note',false,'class="small"');
+		echo delim();
+		print_link('/manual/about-notes.php', 'about notes',false,'class="small"',false,'class="small"');
+
+	} else {
+
+		global $LANGUAGES;
+		$links = array();
+		foreach($LANGUAGES as $code=>$name) {
+			if (file_exists("../$code/$id")) {
+				$links[] = make_link("../$code/$id", $name);
+			}
+		}
+		$file = substr($id,0,-4);
+		if (file_exists("html/$file.html")) {
+			$links[] = make_link("html/$file.html", 'Plain HTML');
+		}
+		if (count($links)) {
+			echo 'view this page in ' . join (delim(), $links);
+		}
+	}
+
+	echo '<br></small></td></tr>';
+	echo "</table>\n";
+
 }
 
 
@@ -226,31 +263,23 @@ function sendManualHeaders($charset,$lang) {
 }
 
 function manualHeader($title,$id="") {
-	global $HTDIG, $LANGUAGES, $LANG;
+	global $HTDIG, $LANGUAGES, $LANG, $SIDEBAR_DATA;
 	manualLastModified($title,$id);
-	commonHeader("Manual: $title", 1);
+	makeBorderTOC($title);
+	commonHeader('Manual: '.$title);
         # create links to plain html and other languages
-	if (!$HTDIG):
+	if (!$HTDIG) {
 		navigationBar($title, $id, "top");
-	endif;
-        echo '<table width="800" border="0" cellpadding="4" cellspacing="1">';
-        echo '<tr>';
-        echo '<td valign="top">';
+	}
 }
 
 function manualFooter($title,$id="") {
-	if (!$HTDIG):
-		manualUserNotes($title,$id);
-	endif;
-        echo '</td>';
-        echo '<td valign="top" bgcolor="#e0e0e0">';
-	makeBorderTOC($title);
-        echo '</td>';
-        echo '</tr></table><!--HITHERE-->';
 	global $HTDIG;
-	if (!$HTDIG):
+	if (!$HTDIG) {
+		manualUserNotes($title,$id);
 		navigationBar($title, $id, "bottom");
-	endif;
-	commonFooter($title);
+	}
+	commonFooter();
+
 }
 ?>

@@ -71,7 +71,7 @@ function showBook($title, $title_link, $author, $author_link=false, $image=false
     }
     echo '<p>';
     echo make_link($info_link ? $info_link : $title_link,
-        make_image('caret-right.gif','>') . 'more info' );
+        make_image('caret-rg.gif','>') . 'more info' );
     echo "<br>\n";
     echo "</p>\n</small>\n";
     echo "</td>\n</tr>\n\n";

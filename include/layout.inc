@@ -6,11 +6,12 @@
 # print a IMG tag for a sized spacer GIF
 #
 
-function spacer($width=1, $height=1, $align=false) {
-	printf('<img src="/gifs/spacer.gif" width="%d" height="%d" border="0" alt="" %s>',
+function spacer($width=1, $height=1, $align=false, $extras=false) {
+	printf('<img src="/gifs/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s>',
 		$width,
 		$height,
-		($align ? $align : '')
+		($align ? 'align="'.$align.'" ' : ''),
+		($extras ? $extras : '')
 	);
 }
 
@@ -170,13 +171,13 @@ function download_link($file, $title) {
 $enclosed = 0;
 
 
-
 # commonheader()
 #
 #
 
 function commonHeader($title="",$dont_enclose=0) {
 	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
+	global $SIDEBAR_DATA;
 	header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 ?><html>
 <head>
@@ -239,18 +240,16 @@ function commonHeader($title="",$dont_enclose=0) {
     $enclosed = 1;
 ?>
 
-<table width="125" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
+<table width="150" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
 <tr valign="top">
 <td>
 
 <!-- sidebar table starts -->
-<table width="124" align="left" cellpadding="4" cellspacing="0">
+<table width="149" align="left" cellpadding="4" cellspacing="0">
 <tr valign="top">
-<td><small>
-<p>
-Stuff goes in here.
-</p>
-</small></td>
+<td>
+<? echo $SIDEBAR_DATA; ?>
+</td>
 </tr>
 </table>
 <!-- sidebar table ends -->
@@ -263,7 +262,7 @@ Stuff goes in here.
 
 <!-- main section -->
 
-<table width="650"
+<table width="625"
 	align="left"
 	cellpadding="10" cellspacing="0"
 ><tr><td valign="top">
@@ -382,5 +381,3 @@ function clean_note($text) {
     $text = "<tt>".nl2br($text)."</tt>";
     return $text;
 }
-
-
