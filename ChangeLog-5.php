@@ -9,6 +9,146 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0RC1"></a>
+<h3>Version 5.0.0 Release Candidate 1</h3>
+<b>18-Mar-2004</b>
+<ul>
+<li>Fixed numerous bugs with the just-in-time auto-global initialization, that
+  could cause $_SERVER, $argv/$argc and other variables not to work properly.
+  (Zeev)
+</li>
+<li>Fixed data corruption with constant assignments to object properties. (Zeev)
+</li>
+<li>Changed __toString() to be called automatically only with print and echo
+  statements. (Andi)
+</li>
+<li>Replaced the exec_finished hook by the zend_post_deactive hook for
+  extensions. The new hook will be run after the symbol table and destructors
+  are run. (Derick)
+</li>
+<li>Fixed possible crash when internal get_method() is not defined. (Andi)
+</li>
+<li>Fixed calling methods using call_user_func() in conjunction with 
+  the array("Class","Method") syntax to use the scope of the PHP user function.
+  (Dmitry)
+</li>
+<li>Fixed php-cgi to not ignore command-line switches when run in a web context.
+  This fixes our test cases allowing INI with GET sections to work. (Rasmus)
+</li>
+<li>Fixed getopt() so it works without $_SERVER. (Rasmus, bfrance)
+</li>
+<li>Added support for PHP 4 style object comparisons which is enabled in
+  ze1_compatiblity_mode. (Andi)
+</li>
+<li>Added support for PHP 4 style object conversion to long, double, and boolean
+  values which is enabled in ze1_compatibility_mode. (Andi, Stas)
+</li>
+<li>Allow object oriented extensions to overload comparison functions and other
+  operations. Solves problems using SimpleXML values. (Andi, Zeev)
+</li>
+<li>Fixed crash when accessing a class constant with a value which in turn is
+  also a constant. (Dmitry)
+</li>
+<li>Fixed object's truth value conversion. It is always true unless
+  ze1_compatibility_mode is on in which it behaves like in PHP 4. (Stas)
+</li>
+<li>Improved out of memory handling in new memory manager. (Stas)
+</li>
+<li>Fixed crash when an object references itself during destructor call. (Andi)
+</li>
+<li>Fixed crash in foreach() when iterating over object properties or a method's
+  return values. (Andi)
+</li>
+<li>Fixed crash when an exception is thrown in a destructor. Such exceptions are
+  now ignored as destruction happens out of context at no definite time. (Andi)
+</li>
+<li>Fixed crashes in exception handling. (Dmitry, Andi)
+</li>
+<li>Changed prototype checks so that they aren't done on constructors. (Andi)
+</li>
+<li>Changed prototype checks to output an E_STRICT message instead of
+  an E_COMPILE_ERROR. (Andi)
+</li>
+<li>Changed Iterator::has_more() to Iterator::valid(). (Marcus)
+</li>
+<li>Upgraded bundled oniguruma library to version 2.2.2. (Rui, Moriyoshi)
+</li>
+<li>Added mb_list_encoding() to return an array with all mbstring supported
+  encodings. (Derick)
+</li>
+<li>Added support for more ISO8601 datetime formats in strtotime(). (Moriyoshi)
+  . Timezone specifier (ex. "20040301T02:00:00+19:00")
+  . Week specifier (ex. "1997W021")
+</li>
+<li>Renamed php.ini option "zend2.implicit_clone" to 
+  "zend.ze1_compatibility_mode" as it doesn't only affect implicit cloning.
+  (Andi, Zeev)
+</li>
+<li>Methods that override parent methods are now subject to prototype checking,
+  and have to be compatible with the method they're overriding - this check is 
+  disabled in compatibility mode. (Andi, Zeev)
+</li>
+<li>Fixed crash in php_ini_scanned_files() when no additional INI files were
+  actually parsed. (Jon)
+</li>
+<li>Fixed bug in gdImageFilledRectangle in the bundled GD library, that required
+  x1 < x2 and y1 < y2 for coordinates. (Derick)
+</li>
+<li>Fixed crash with foreach() and temporary objects($obj->method()->a ...) where
+  method returns a non-referenced object. (Andi, Zeev)
+</li>
+<li>Fixed problem preventing startup errors from being displayed. (Marcus)
+</li>
+<li>Fixed start-up problem if both SPL and SimpleXML were enabled. The double
+  initialization of apache 1.3 was causing problems here. (Marcus, Derick)
+</li>
+<li>Fixed bug #27606 (Expression must be a modifiable lvalue compiler error).
+  (Derick)
+</li>
+<li>Fixed bug #27597 (pg_fetch_array not returning false). (Marcus)
+</li>
+<li>Fixed bug #27586 (ArrayObject::getIterator crashes with [] assignment). 
+  (Marcus)
+</li>
+<li>Fixed bug #27537 (Objects pointing to each other segfaults). (Dmitry)
+</li>
+<li>Fixed bug #27535 (Problem with object freeing mechanism). (Dmitry)
+</li>
+<li>Fixed bug #27504 (Visibility bugs in call_user_function()). (Dmitry)
+</li>
+<li>Fixed bug #27457 (handling of numeric indexes in strtr()). (Dmitry)
+</li>
+<li>Fixed bug #27338 (memory leak inside tsrm_virtual_cwd.c on win32). (Ilia)
+</li>
+<li>Fixed bug #27291 (get_browser matches browscap.ini patterns incorrectly). 
+  (Jay)
+</li>
+<li>Fixed bug #27287 (wddx segfaults during deserialization). (Moriyoshi)
+</li>
+<li>Fixed bug #27263 (session extension crashes when unserializing referenced
+  values / objects). (Moriyoshi)
+</li>
+<li>Fixed bug #27237 (Working with simplexml crashes apache2). (Rob)
+</li>
+<li>Fixed bug #27227 (Mixed case class names causes Fatal Error in Constructor 
+  call). (Marcus)
+</li>
+<li>Fixed bug #27125 (strval() doesn't work for objects with __toString()).
+  (Marcus)
+</li>
+<li>Fixed bug #27123 (Fix crash caused by bug in get_object_vars()). (Andi)
+</li>
+<li>Fixed bug #26677 (mbstring compile errors with IRIX compiler).
+  (K.Kosako <kosako at sofnec dot co dot jp>, Rui, Moriyoshi)
+</li>
+<li>Fixed bug #26206 (register_long_arrays breaks superglobals). (Zeev)
+</li>
+<li>Fixed bug #25724 (argv and argc not defined). (Zeev)
+</li>
+</ul>
+
+<hr />
+
 <a name="5.0.0b4"></a>
 <h3>Version 5.0.0 Beta 4</h3>
 <b>12-Feb-2004</b>
