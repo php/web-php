@@ -3,6 +3,8 @@ require_once "prepend.inc";
 commonHeader("License Information");
 ?>
 
+<h1>License Information</h1>
+
 <p>You can download the text of the latest version (2.02) of the
 PHP license <a href="2_02.txt">here</a>.
 
