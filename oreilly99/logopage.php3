@@ -16,10 +16,10 @@
 <TABLE>
 <TR><TD>Home page:</TD><TD>http://www.php.net</TD></TR>
 <TR><TD>These Slides:</TD><TD>http://www.php.net/oreilly99/</TD></TR>
-<TR><TD>Notables:</TD><TD>http://www.php.net/sites.php3</TD></TR>
+<TR><TD>Notables:</TD><TD>http://www.php.net/sites.php</TD></TR>
 <TR><TD>Manual:</TD><TD>http://www.php.net/manual/</TD></TR>
-<TR><TD VALIGN="top">Tutorials:</TD><TD>http://www.php.net/tut.php3<BR>
-http://www.php.net/links.php3</TD></TR>
+<TR><TD VALIGN="top">Tutorials:</TD><TD>http://www.php.net/tut.php<BR>
+http://www.php.net/links.php</TD></TR>
 </TABLE>
 </TD>
 </TR>
