@@ -105,7 +105,7 @@ function navigationBar($title) {
 
 function manualHeader($title) {
 	global $FRAMEMODE;
-	commonHeader("Manual");
+	commonHeader("Manual: $title");
 	navigationBar($title);
 }
 
