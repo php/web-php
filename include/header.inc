@@ -30,11 +30,12 @@
       } else {
           $local_file = $file;
       }
+      $local_file = "distributions/$local_file";
       echo("<a href=\"$file\">$title</a>");
       $size = filesize($local_file)/1024;
       echo("<!-- file=$file localfile=$local_file size-$size-->\n");
       if ($size) {
-          printf(" (%dk)", $size);
+          printf(" (%dkb)", $size);
       } elseif (isset($filesizes[$local_file])) {
 	  echo " (".$filesizes[$local_file].")";
       }
