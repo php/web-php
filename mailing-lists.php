@@ -93,8 +93,10 @@ if (isset($_POST['maillist'])) {
  Some PHP.net subsites have their own project specific pages about mailing
  lists. You can find the <a href="http://pear.php.net/support.php">PEAR
  mailing lists</a>, the <a href="http://pecl.php.net/support.php">PECL
- mailing lists</a> and the <a href="http://gtk.php.net/resources.php">PHP-GTK
- mailing lists</a> on their own pages.
+ mailing lists</a>, the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ mailing lists</a>, and the
+ <a href="http://smarty-web.ispi.net/resources.php?category=7">Smarty mailing
+ lists</a> on their own pages.
 </p> 
 
 <p>
@@ -184,23 +186,6 @@ if (isset($_POST['maillist'])) {
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
       FALSE, FALSE, FALSE, 'php.soap'
-    ),
-
-    'Smarty template engine project mailing lists',
-    array (
-      'smarty-general', 'Smarty general user list',
-      'This is a medium volume general list for Smarty users',
-      FALSE, TRUE, TRUE, "php.smarty.general"
-    ),
-    array (
-      'smarty-dev', 'Smarty developers list',
-      'A list for Smarty developers' ,
-      FALSE, TRUE, TRUE, "php.smarty.dev"
-    ),
-    array (
-      'smarty-cvs', 'Smarty CVS commit list',
-      'All the commits of the cvs Smarty code repository are posted to this list automatically',
-      TRUE, TRUE, FALSE, "php.smarty.cvs"
     ),
   );
 
