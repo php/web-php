@@ -145,6 +145,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>International PHP Conference 2005 Spring Edition</h1>
+
+<p>
+ <span class="newsdate">[23-Mar-2005]</span>
+ The <a href="http://www.phpconference.com/">International PHP
+ Conference 2005 Spring Edition</a> will take
+ place from May 2, 2005 to May 4, 2005. The Conference features
+ a PowerWorkshop day on May 2 with PHP/MySQL Best Practices,
+ XML/WebServices with PHP 5, Rapid Application Development and a
+ PHP Starter Workshop for Beginners. The main Conference days
+ will include sessions on PHP Internals, XML, Databases, Migration
+ to PHP 5 and others. Early bird discounts are available until April
+ 1, 2005.
+</p>
+<hr />
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?> 
 <h1>Call for Speakers: Zend/PHP Conference & Expo 2005</h1>
