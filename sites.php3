@@ -74,6 +74,13 @@ removed right away.</blockquote>
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	siteEnd();
 
+/* Entertainment */
+        title("Entertainment");          
+        siteStart();
+        site("SumemrWorks Theatre Festival","www.summerworks.on.ca");
+	siteEnd();
+
+
 /* Financial Industry */
 	title("Financial Industry");
 	siteStart();
