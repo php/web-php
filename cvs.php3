@@ -65,7 +65,7 @@ You will not be able to do this until you receive confirmation of your account h
 Next, once you have your CVS tree you need to know the following commands.  They should all be executed from within
 the checked out tree.  eg. cd php3
 <dl>
-<dt><b><tt>cvs update -d</tt></b>
+<dt><b><tt>cvs update -dP</tt></b>
 <dd>This fetches all updates made by others and brings your tree up to date.  Before starting to edit anything
 in the tree you should do this.  Generally you would do this whenever you see a CVS commit message on the php-dev
 mailing list.
@@ -75,4 +75,11 @@ mailing list.
 describe the changes you made.  Please provide a good description here as it may help people in the future when
 looking at your code changes.
 </dl>
+<P>
+It would probably be a good idea to put the following in your ~/.cvsrc file:
+<pre>diff -u
+cvs -z4
+update -d -P
+checkout -P</pre>
+
 <? commonFooter(); ?>
