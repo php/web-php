@@ -228,6 +228,9 @@ $uri_aliases = array (
     "htaccess"     => "configuration.changes",
     "php_value"    => "configuration.changes",
 
+    "ternary"      => "language.operators.comparison.ternary",
+    "instanceof"   => "language.operators.type",
+    
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
 
