@@ -145,6 +145,19 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
+<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<h1>PHP 4.3.10RC1 released!</h1>
+<p>
+ <span class="newsdate">[23-Nov-2004]</span>
+ <a href="http://qa.php.net/">PHP 4.3.10RC1</a> has been released for testing.
+ This is the first release candidate and should have a very low number of 
+ problems and/or bugs. Nevertheless, please download and test it as much as 
+ possible on real-life applications to uncover any remaining issues.
+</p>
+
+<hr />
+
 <?php news_image("http://conf.phpquebec.org/en/conf2005/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Call for Speakers: PHP Qu&eacute;bec 2005</h1>
