@@ -22,6 +22,10 @@ if (isset($pattern) && ($pattern)) {
 		$query = "l=php-dev&r=1&w=2&q=b&s=".urlencode($pattern);
 		Header("Location: ".$location."?".$query);
 		exit;
+	} else if ($show=="phpdoc") {
+		$query = "l=phpdoc&r=1&w=2&q=b&s=".urlencode($pattern);
+		Header("Location: ".$location."?".$query);
+		exit;
 	} else if ($show=="phplib") {
 		$query = "l=phplib&w=2&r=1&q=b&s=".urlencode($pattern);
 		Header("Location: ".$location."?".$query);
@@ -95,6 +99,7 @@ Restrict the search to: <BR>
 <OPTION VALUE="manual">Online documentation
 <OPTION VALUE="maillist">PHP 3.0 Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
+<OPTION VALUE="phpdoc">PHP Documentation List
 <OPTION VALUE="phplib">PHPLIB Mailing List
 <OPTION VALUE="phplib-dev">PHPLIB Developers' List
 <OPTION VALUE="source">Site PHP 3.0 source code
