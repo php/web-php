@@ -1,7 +1,7 @@
 <?$mod = GMDate("D, d M Y H:i:s",filemtime("FAQ.html"));
   Header("Last-Modified: $mod GMT"); ?>
 <html><head><title>PHP3 Frequently Asked Questions</title>
-<?$title="PHP3 Frequently Asked Questions";
+<?$title="Frequently Asked Questions";
   include "include/header.inc";
   $fd = fopen("FAQ.html", "r");
   /* drop everything until it tells us to stop chopping */

@@ -13,7 +13,6 @@
 
 <!-- The website should stop chopping. -->
 
-
 <P>This is a list of Frequently Asked Questions about PHP3 and
 their answers. If you have suggestions or additions, send them to
 <CODE>php3@php.il.eu.org</CODE>.
@@ -39,7 +38,7 @@ PHP3 is the successor to PHP/FI 2.0.
 
 <H3>What are the differences between PHP3 and PHP/FI 2.0?</H3>
 
-<P>For a complete list of the changes, read the <a href="changes.php3">CHANGES</a>
+<P>For a complete list of the changes, read the <A href="changes.php3">CHANGES</A>
 file included in the PHP3 distribution. Some highlights:
 
 <UL>
@@ -92,25 +91,29 @@ by registering!
 <H3>Where can I get libraries needed to compile some of the optional
 PHP3 extensions?</H3>
 
-<p>Those marked with * are not thread-safe libraries, and should not be
-used with a server module under the windows environment.  This does not matter
-on the unix environment.</p>
+<P>Note: Those marked with * are not thread-safe libraries, and should
+not be used with PHP3 as a server module in the multi-threaded Windows web
+servers (IIS, Netscape).  This does not matter in Unix environments, yet.
+
 <UL>
-<LI>LDAP (unix): <A href="ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z">ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z</A>
-<LI>LDAP* (win): <A href="ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip">ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip</A><br>
+  <LI>LDAP (unix): <A href="ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z">ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z</A>
+  <LI>LDAP* (win): <A href="ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip">ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip</A><br>
 	There is also a free LDAP server at: <A href="ftp://ftp.critical-angle.com/pub/cai/slapd/">ftp://ftp.critical-angle.com/pub/cai/slapd/</A>.
-<LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
-<LI>SNMP* (Unix/Win): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A>
-<LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
-<LI>MSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
-<LI>MSQL* (win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
-<LI>MySQL (Unix): <A href="http://www.tcx.se/">http://www.tcx.se/</A>
-<LI>IODBC:
+  <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
+  <LI>SNMP (Win): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
+  <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
+  <LI>MSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
+  <LI>MSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
+  <LI>MySQL (Unix): <A href="http://www.tcx.se/">http://www.tcx.se/</A>
 </UL>
 
 <H3>How do I get these libraries to work?</H3>
 
-<P>You will need to follow instructions provided with the library.
+<P>You will need to follow instructions provided with the library. Some of
+these libraries are detected automatically when you run the 'configure'
+script of PHP3 (such as the GD library), and others you will have to
+enable using '--with-EXTENSION' options to 'configure'. Run 'configure
+--help' for a listing of these.
 
 <H3>Are pre-compiled binary versions available?</H3>
 
@@ -139,10 +142,10 @@ README.WIN32 file.
     and <EM>not</EM> '<CODE>--with-apache=/path/to/apache/src</CODE>'.
   <P>
   </DD>
-  <DT><b>
+  <DT><B>
     When I run configure, it says that it can't find the include files or
     library for gdbm (or some other package)!
-  </b></DT>
+  </B></DT>
   <DD>
     You can make the configure script looks for header files and libraries
     in non-standard locations by specifying additional flags to pass to
@@ -157,19 +160,21 @@ README.WIN32 file.
   <P>
   </DD>
 
-  <DT><b>
+  <DT><B>
     When it is compiling the file language-parser.tab.c, it gives me errors
     that say 'yytname undeclared'.
-  </b></DT>
+  </B></DT>
   <DD>
-    You need to update your version of Bison.
+    You need to update your version of Bison. You can find the latest version
+    at <A href="ftp://prep.ai.mit.edu/pub/gnu/">ftp://prep.ai.mit.edu/pub/gnu/</A>.
   <P>
   </DD>
             
-  <DT><b>
-    When I run 'make', it seems to run fine but then fails when it tries
-    to link the final application complaining that it can't find some files.
-  </b></DT>
+  <DT><B>
+    When I run 'make', it seems to run fine but then fails when it
+    tries to link the final application complaining that it can't find
+    some files.
+  </B></DT>
   <DD>
     Some old versions of make that don't correctly put the compiled
     versions of the files in the functions directory into that same
@@ -179,9 +184,9 @@ README.WIN32 file.
   <P>
   </DD>
 
-  <DT><b>
+  <DT><B>
     When linking PHP3, it complains about a number of undefined references.
-  </b></DT>
+  </B></DT>
   <DD>
     Take a look at the link line and make sure that all of the appropriate
     libraries are being included at the end. Common ones that you might have
@@ -193,29 +198,28 @@ README.WIN32 file.
     file and re-rerun Apache's Configure script? See the INSTALL file that
     comes with the distribution for more information.
     <P>
-    Some people have reported that they had to add '-ldl' immediately
+    Some people have also reported that they had to add '-ldl' immediately
     following 'libphp3.a' when linking with Apache.
   <P>
   </DD>
 
-  <DT><b>
+  <DT><B>
 	I can't figure out how to build PHP3 with Apache 1.3.
-  </b></DT>
+  </B></DT>
   <DD>
-	This is actually quite easy.  Follow these steps carefully:<p>
-    <ul>
-	<li>Grab the latest Apache 1.3 .tar.gz file from <a href="http://www.apache.org/">www.apache.org</a>
-	<li>Unzip and untar it to /usr/local/src/apache_1.3b3 for example
-	<li>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache_1.3b3  (substitute 
-		<i>&lt;path&gt;</i> for the actual path to your apache_1.3b3 directory.
-	<li>Then type 'make' followed by 'make install' to build PHP3
-	<li>Then cd to your /<i>&lt;path&gt;</i>/apache_1.3b3/src directory and edit the <i>Configuration</i>
-		file.  At the end of the file, add: <tt>AddModule modules/extra/mod_php3.o</tt>
-	<li>Now type: './Configure' followed by 'make'
-	<li>You should now have a PHP3-enabled httpd binary
-	</ul>
-	<P>
-	</DD>
+    <P>This is actually quite easy.  Follow these steps carefully:
+    <UL>
+	<LI>Grab the latest Apache 1.3 distribution from <A href="http://www.apache.org/dist/">www.apache.org</A>.
+	<LI>Ungzip and untar it somewhere, for example /usr/local/src/apache_1.3b3.
+	<LI>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache_1.3b3  (substitute <i>&lt;path&gt;</i> for the actual path to your apache_1.3b3 directory.
+	<LI>Type 'make' followed by 'make install' to build PHP3 and copy the
+            necessary files to the Apache distribution tree.
+	<LI>Change directories into to your /<i>&lt;path&gt;</i>/apache_1.3b3/src directory and edit the <i>Configuration</i> file.  At the end of the file, add: <tt>AddModule modules/extra/mod_php3.o</tt>.
+	<LI>Type: './Configure' followed by 'make'.
+	<LI>You should now have a PHP3-enabled httpd binary!
+    </UL>
+  <P>
+  </DD>
 </DL>
 
 <HR>
@@ -237,7 +241,7 @@ README.WIN32 file.
     helpful when you can provide a backtrace with your bug report
     to help the developers pinpoint the problem.
     <P>
-    If your script using the regular expression functions (<CODE>ereg()</CODE>
+    If your script uses the regular expression functions (<CODE>ereg()</CODE>
     and friends), you should make sure that you compiled PHP3 and
     Apache with the same regular expression package. (This should
     happen automatically with PHP3 and Apache 1.3.)
@@ -312,6 +316,7 @@ href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
 <P>This FAQ was originally written by Jim Winstead. It is currently
 maintained by the PHP Development Team.
 
+<P>
 <SMALL>
 <CODE>$Id$</CODE>
 </SMALL>
