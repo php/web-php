@@ -185,7 +185,8 @@ function language_add($langcode, &$langs)
     // Append language code in priority order if it is not
     // there already and supported by the PHP site. Try to
     // lower number of file_exists() calls to the minumum...
-    if (!in_array($langcode, $langs) && isset($LANGUAGES[$langcode])) {
+    if (!in_array($langcode, $langs) && isset($LANGUAGES[$langcode])
+        && !isset($INACTIVE_ONLINE_LANGUAGES[$langcode])) {
         $langs[] = $langcode;
     }
     
