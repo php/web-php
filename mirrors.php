@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'mirrors.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
-commonHeader("Mirror Sites");
+site_header("Mirror Sites");
 ?>
 
 <h1>Mirror Sites</h1>
@@ -29,4 +29,4 @@ commonHeader("Mirror Sites");
 
 <?php
 mirror_list();
-commonFooter();
+site_footer();

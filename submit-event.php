@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'submit-event.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-commonHeader("Submit an Event");
+site_header("Submit an Event");
 
 // No errors, processing depends on POST data
 $errors = array();
@@ -239,7 +239,7 @@ if ($process) {
 </table>
 </form>
 <?php
-commonFooter();
+site_footer();
 
 // Display an option list with one selected
 function display_options($options, $current)

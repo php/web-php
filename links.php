@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'links.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Links");
+site_header("Links");
 ?>
 
 <h1>PHP Related Links</h1>
@@ -741,4 +741,4 @@ commonHeader("Links");
  <li><a href="http://phphosts.codewalkers.com">PHP Host Directory at Codewalkers</a></li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

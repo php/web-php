@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirror.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Information About This PHP Mirror Site");
+site_header("Information About This PHP Mirror Site");
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>
@@ -35,4 +35,4 @@ commonHeader("Information About This PHP Mirror Site");
  <li>The site was last updated at <?php echo strftime("%c %Z", $LAST_UPDATED); ?></li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

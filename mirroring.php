@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirroring.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Mirroring The PHP Website");
+site_header("Mirroring The PHP Website");
 
 // Get a minute to print out for the cron example
 srand(); $minute = rand(0, 59);
@@ -324,4 +324,4 @@ srand(); $minute = rand(0, 59);
  </em>
 </p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

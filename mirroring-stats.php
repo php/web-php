@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirroring-stats.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Setting Up Local Stats");
+site_header("Setting Up Local Stats");
 ?>
 
 <h1>Setting Up Local Stats</h1>
@@ -78,4 +78,4 @@ commonHeader("Setting Up Local Stats");
  Originally written by Colin Viebrock in 1998 --- Last updated: 2003-Jan-18
 </p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'news.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("News Archive");
+site_header("News Archive");
 ?>
 
 <h1>News Archives</h1>
@@ -820,4 +820,4 @@ presentations online. Check out:</p>
 	 <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
  </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

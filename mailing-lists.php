@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-commonHeader("Mailing Lists");
+site_header("Mailing Lists");
 
 // Some mailing list is selected for [un]subscription
 if (isset($_POST['maillist'])) {
@@ -374,4 +374,4 @@ function output_lists_table($mailing_lists)
  <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
