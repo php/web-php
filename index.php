@@ -77,6 +77,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Security Update</1>
+<p>
+<font class="newsDate">[27-Feb-2002]</font>
+Due to a security issue found in all versions of PHP (including 3.x and 4.x), a new version of PHP has been released.
+Details about the security issue are <a href="http://security.e-matters.de/advisories/012002.html">available here</a>.
+All users of PHP are strongly encouraged to either upgrade to <a href="/downloads.php">PHP 4.1.2</a>, or 
+install the patch (<a href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
 <h1>Fourth sample of 'PHP Manual CHM Edition'</h1>
