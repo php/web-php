@@ -84,7 +84,7 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 <font class="newsDate">[16-Feb-2002]</font>
 We released the fourth sample of the new CHM Edition. It was
-a long time to release this version, as we revampaed the design,
+a long time to release this version, as we revamped the design,
 optimized the HTML code, made the pages stretch to any window
 size, switched to use XSLT style sheets instead of DSSSL to
 generate the pages, and coded many improvements and fixes.
