@@ -348,12 +348,8 @@ German site about PHPGTK</li>
 <li><b>Hungarian</b>
 <ul>
 
-<li><a href="http://phpinfo.freephp.hu/">phpinfo()</a><br>
-Hungarian PHP portal, fearturing tips, forums and fresh news about PHP</li>
-
-
 <li><a href="http://php.lap.hu/">PHP.lap.hu</a><br>
-The most important Hungarian an International links</li>
+Starting point for Hungarian and International PHP sites</li>
 </ul></li>
 
 <li><b>Italian</b>
