@@ -391,7 +391,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 					$ts=date("Y-m-d H:i:s");
 					mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					if (!empty($ncomment)) {
-						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@cvs.php.net','$ts','$ncomment')");
+						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
 					}
 					$ok=1;
 				}
