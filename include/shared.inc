@@ -601,13 +601,14 @@ endwhile;
 </DIV>
 
 <DIV ID='docsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
-<? kickHeader(-30,'left',400);?>
+<? kickHeader(20,'left',400);?>
 <FORM ACTION='manual-lookup.php3' METHOD='POST'>
 <B>Quick Function Reference</B><BR>
-Type in a PHP function name to jump to that page of the manual:<BR>
+Type in a PHP function name to jump to that page of the online manual:<BR>
 <FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=20></FONT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
+... or, you can still click on the <B>documentation</B> button on the left for other documentation resources.
 <? kickFooter("docsKick","mirr",350);?>
 </DIV>
 
