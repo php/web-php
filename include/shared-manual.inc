@@ -223,7 +223,7 @@ function manualGetUserNotes($title, $id)
 }
 
 function manualUserNotes($title, $id) {
-	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT, $LANG;
+	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT, $LANG, $MYSITE;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
 
@@ -250,11 +250,18 @@ function manualUserNotes($title, $id) {
 
 	if ( sizeof($notes) == 0 ) {
 
-		echo '<tr valign="top">';
-		echo '<td bgcolor="#e0e0e0" colspan="2">';
-		echo 'User contributed notes are not available on this mirror site; try ';
-		print_link('http://www.php.net/manual/'.$LANG.'/'.$id, 'here');
-		echo '.<br></td></tr>';
+		if ( !strstr($MYSITE,"www.php.net") ) {
+  	  echo '<tr valign="top">';
+			echo '<td bgcolor="#e0e0e0" colspan="2">';
+			echo 'User contributed notes are not available on this mirror site; try ';
+			print_link('http://www.php.net/manual/'.$LANG.'/'.$id, 'here');
+			echo '.<br></td></tr>';
+		} else {
+  	  echo '<tr valign="top">';
+			echo '<td bgcolor="#e0e0e0" colspan="2">';
+			echo 'There are no user contributed notes for this page.';
+			echo '<br></td></tr>';
+    }
 
 	} else {
 
