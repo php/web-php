@@ -12,24 +12,42 @@ about stepping on each others' toes.
 <P>
 Please note that you do not need a CVS account to access the CVS tree.  See
 <a href="http://cvs.php.net">cvs.php.net</a> for details.  You only need your
-own CVS account if you plan on committing things to the CVS tree.  <P>
+own CVS account if you will be regularly committing things to the CVS tree.
+<P>
 And once again since people just don't seem to understand this point.
 You do <b>NOT</b> need a CVS account to study PHP.  You do <b>NOT</b> need
 a CVS account to learn PHP, to use PHP or to in any way do anything at all
 with PHP.  If you are sitting there wondering if you need a CVS account, then
 you don't!
+<table>
+<tr><td><b>Requires CVS Account</b></td><td><b>Does Not Require CVS Account</b></td></tr>
+<tr><td>Coding PHP source in C</td><td>Coding in PHP</td></tr>
+<tr><td>Writing to PHP source</td><td>Reading PHP source</td></tr>
+<tr><td>Adding notes to documentation</td><td>Authoring PHP documentaion</td></tr>
+<tr><td>Creating a PHP module</td><td>Using PHP modules</td></tr>
+<tr><td>Writing www.php.net web pages</td><td>Writing web pages with PHP</td></tr>
+</table>
 <P>
-Ok, if you are still reading, I assume you do actually need a CVS account.
+If you are contributing a patch, a small fix, or another minor change you
+are not required to obtain a CVS account before submitting it. If you are subscribed
+to <a href="mailto: php-dev@lists.php.net">php-dev@lists.php.net</a>,
+you can simply post your patch and request for it to be added to PHP. Submitting
+patches to the PHP-dev list <b>before</b> requesting full CVS access is
+suggested, so the PHP development team can develop a working relationship
+with you and your code. It is suggested that all PHP developers subscribe
+to this list.
+<P>
+Ok, if you are still reading, I assume you may actually need a CVS account.
 If you are not previously known to the PHP Development Team, then this is not 
 an automatic process.  Your best bet is to send mail to <a href="mailto: group@php.net">
 group@php.net</a> and explain what you have in mind and perhaps give a bit of
 background on yourself.  If you were told by a PHP developer to come here and 
-fill out this form, you can skip sending the email to group@php.net.<P>
-
+fill out this form, you can skip sending the email to group@php.net.
+<P>
 If, you have already established yourself in the above manner you can submit
 a CVS account request here: (only the encrypted version of the password is sent)
 In the purpose field, put a couple of words describing what you want to work on.
-This is mostly to jog my memory and allow me to match the account request with 
+This is mostly to jog our memories and allow us to match the account request with 
 whatever previous correspondence that may taken place.
 <form action="cvs-php3.php" method="POST">
 <table>
