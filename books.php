@@ -929,7 +929,7 @@ array (
     /* information  */ "O'Reilly, January 1997, ISBN 1-5659-2257-3, 368 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/regex/",
     /* language     */ "en"
-  )
+  ),
 
   array(
     /* title[s]     */ "PHP by Example",
