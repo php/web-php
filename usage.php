@@ -24,4 +24,4 @@ site_header("PHP Usage Stats");
  provided by TIOBE.
 </p>
 
-<?php site_header(); ?>
+<?php site_footer(); ?>

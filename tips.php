@@ -290,4 +290,4 @@ Search Type=0
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')</tt>
 </p>
 
-<?php site_header(); ?>
+<?php site_footer(); ?>

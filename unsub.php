@@ -138,4 +138,4 @@ site_header("Unsubscribing");
  at the other end of that last email address, so you'll have to be patient.
 </p>
 
-<?php site_header(); ?>
+<?php site_footer(); ?>
