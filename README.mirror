@@ -61,7 +61,7 @@ Once you create a virtualhost which looks something like:
      AddType application/octet-stream .chm
      AddType application/octet-stream .bz2
      # next line is only necessary if generating stats (see stats/README.stats)
-     Alias /stats/ /path/to/local/stats
+     Alias /stats/ /path/to/local/stats/
    </VirtualHost>
 
 modified to reflect your local paths and country, of course,
