@@ -10,6 +10,7 @@ if (isset($pattern) && ($pattern)) {
 }
 
 require("shared.inc");
+$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 if (isset($pattern) && ($pattern)) {
 	$location = "http://www.progressive-comp.com/Lists/";
@@ -22,7 +23,6 @@ if (isset($pattern) && ($pattern)) {
 		Header("Location: ".$location."?".$query);
 		exit;
 	}
-
 	if (!$HAVE_SEARCH) {
 		$location="http://uk.php.net/search.php3";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
