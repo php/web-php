@@ -120,10 +120,12 @@ ul.simple li {
 
 /* Layout styling and helpers --------------------------------------------- */
 #layout_2, #layout_3 {
-	background: url(/images/leftbar.png) top left repeat-y;
+	/* Background image will be set in client side script */
+	background-position top left;
+	background-repeat: repeat-y;
 }
 #layout_3_helper {
-	/* Background to the right */
+	/* TODO: Background to the right */
 }
 
 .cleaner {

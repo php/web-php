@@ -80,7 +80,7 @@ function site_header($title = '', $config = array())
     
     // Decide on onload event handler
     if (!isset($config['onload'])) {
-        $config['onload'] = "searchHistory(); tocImages();";
+        $config['onload'] = "runOnLoad();";
     }
     
     // Explicit language setting means that we should put that into the form
@@ -398,7 +398,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
            $SEARCH_BASE, $ONLOAD;
 
     // If no onload event is specified, restore the last search
-    if (empty($ONLOAD)) { $ONLOAD = "searchHistory(); tocImages();"; }
+    if (empty($ONLOAD)) { $ONLOAD = "runOnLoad();"; }
 
     // Guess what base to use for this page (the first two are just
     // for BC reasons, until we migrate all the code to use the last one)
