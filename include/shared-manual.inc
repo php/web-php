@@ -155,8 +155,15 @@ function makeEntry($date,$name,$blurb,$id=0) {
         echo date("d-M-Y h:m",$date)."<BR>\n";
 ?></FONT></TD>
 <TD ALIGN=left WIDTH=75%><?
-	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
-	$blurb = strip_tags($blurb,"<br><p><pre><tt>");
+        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+		$blurb=str_replace("&lt;pre&gt;","<pre>",$blurb);
+		$blurb=str_replace("&lt;/pre&gt;","</pre>",$blurb);
+		$blurb=str_replace("&lt;PRE&gt;","<PRE>",$blurb);
+		$blurb=str_replace("&lt;/PRE&gt;","</PRE>",$blurb);
+		$blurb=str_replace("&lt;tt&gt;","<tt>",$blurb);
+		$blurb=str_replace("&lt;/tt&gt;","</tt>",$blurb);
+		$blurb=str_replace("&lt;BR&gt;","<BR>",$blurb);
+		$blurb=str_replace("&lt;P&gt;","<P>",$blurb);
 	echo $blurb;
 ?><BR></TD>
 <?if (isset($MAGIC_COOKIE)):?>
@@ -216,7 +223,7 @@ function manualUserNotes($title) {
 	if ($result_id && mysql_num_rows($result_id) > 0) {
 		makeTitle("User Contributed Notes: ".$title);
 		while ($row = mysql_fetch_array($result_id)) {
-			makeEntry($row['when'],htmlspecialchars($row['user']),$row['note'],$row['id']);
+			makeEntry($row['when'],htmlspecialchars($row['user']),htmlspecialchars($row['note']),$row['id']);
 		}
 	}
 	makeAddNote();
