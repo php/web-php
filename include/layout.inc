@@ -381,14 +381,17 @@ function clean($var) {
 }
 
 function clean_note($text) {
-    $text = htmlspecialchars($text);
+    $text = htmlspecialchars(trim($text));
     $fixes = array('<br>','<p>','</p>');
     reset($fixes);
     while (list(,$f)=each($fixes)) {
         $text=str_replace(htmlspecialchars($f), $f, $text);
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
-    $text = "<tt>".nl2br(wordwrap(trim($text)))."</tt>";
+    if (function_exists("wordwrap")) {
+        $text = wordwrap($text);
+    }
+    $text = "<tt>".nl2br($text)."</tt>";
     return $text;
 }
 
