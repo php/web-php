@@ -189,21 +189,19 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-	global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE;
+	global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD;
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css" />
- <?php
- if (i2c_valid_country()) {
-    echo "<style>\n.event_$COUNTRY { font-weight: bold; }\</style>";
- }
- ?>
  <link rel="shortcut icon" href="/favicon.ico" />
+ <script language="Javascript" type="text/javascript" src="/userprefs.js"></script>
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
 </head>
-<body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099">
+<body bgcolor="#ffffff" text="#000000"
+      link="#000099" alink="#0000ff" vlink="#000099"
+      <?php if (!empty($ONLOAD)) { echo 'onload="' . $ONLOAD . '"'; } ?>>
 
 <!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">

@@ -198,6 +198,9 @@ if ($fp) {
     fclose($fp);
 }
 
+// Run the boldEvents() function on page load
+$ONLOAD = "boldEvents()";
+
 // Write out common header
 commonHeader("Hypertext Preprocessor");
 

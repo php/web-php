@@ -19,6 +19,7 @@ unset($SIDEBAR_DATA);
 unset($SEARCH_BASE);
 unset($LANG);
 unset($COUNTRY);
+unset($ONLOAD);
 
 // Backward compatible array creation. After this point, the
 // PHP 4.1.0+ arrays can be used to access variables coming
