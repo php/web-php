@@ -167,7 +167,7 @@ while (list(,$f)=each($fixes)) {
 	$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
 	$blurb=str_replace(htmlspecialchars(strtoupper($f)), $f, $blurb);
 }
-echo $blurb;
+echo "<tt>".nl2br($blurb)."</tt>";
 ?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
 <hr noshade size=1>
