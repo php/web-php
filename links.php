@@ -227,6 +227,13 @@ site_header("Links");
 
 <ul>
  <li>
+  <a href="http://www.directionphp.biz/">Direction|PHP</a><br />
+  Direction|PHP is a monthly magazine, dedicated to PHP and MySQL.
+  It covers industry news and technology reviews. It is mainly
+  downloaded by professionnals, in PDF format.
+ </li>
+
+ <li>
   <a href="http://www.phparch.com/">php|architect</a><br />
   The first monthly English magazine about PHP, distributed in PDF format
  </li>
@@ -245,9 +252,9 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.zephpmag.com/">ZePHPmag</a><br />
-  ZePHPmag is a webzine (exclusively online distribution 
-  newspaper), dedicated to PHP and its technologies (in French).
+  <a href="http://www.zpmag.com/">ZPmag</a><br />
+  ZPmag is a webzine (exclusively online distribution  newspaper), 
+  dedicated to PHP and its technologies (in French).
  </li>
 </ul>
 
