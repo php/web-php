@@ -3,20 +3,17 @@ require_once 'prepend.inc';
 commonHeader("Frequently Asked Questions");
 ?>
 
-<h1>
-PHP Frequently Asked Questions
-</h1>
-
-<!-- The website should stop chopping. -->
+<h1>Frequently Asked Questions</h1>
 
 <p>
-
 This is a list of Frequently Asked Questions about PHP and
-their answers. 
+their answers.
 <!--
 If you have suggestions, corrections or additions, send them to
 <a href="mailto:phpdoc@lists.php.net">phpdoc@lists.php.net</a>.
 -->
+</p> 
+
 <p>
 <?php echo hdelim(); ?>
 
@@ -28,6 +25,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#1.3">1.3. Can I run several versions of PHP at the same time?</a></li>
         <li><a href="#1.4">1.4. What are the differences between PHP 3 and PHP 4?</a></li>
     </ul>
+</li>
 <li><b><a href="#2">2. PHP mailing lists</a></b>
     <ul>
         <li><a href="#2.1">2.1. Is there a PHP mailing list?</a></li>
@@ -36,6 +34,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#2.4">2.4. What can I ask the mailing list?</a></li>
         <li><a href="#2.5">2.5. What information should I include when posting to the mailing list?</a></li>
     </ul>
+</li>
 <li><b><a href="#3">3. Obtaining PHP</a></b>
     <ul>
         <li><a href="#3.1">3.1. Where can I obtain PHP?</a></li>
@@ -45,6 +44,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#3.5">3.5. I got the latest version of the PHP source code from the CVS repository on my Windows 95/NT machine, what do I need to compile it?</a></li>
         <li><a href="#3.6">3.6. Where do I find the Browser Capabilities File?</a></li>
     </ul>
+</li>
 <li><b><a href="#4">4. Connecting to databases</a></b>
     <ul>
         <li><a href="#4.1">4.1. I heard it's possible to access Microsoft SQL Server from PHP. How?</a></li>
@@ -53,6 +53,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#4.4">4.4. I upgraded to php4, and now mysql keeps telling me "Warning: MySQL: Unable to save result set in ...". What's up?
         <li><a href="#4.5">4.5. After installing shared mysql support, Apache dumps core as soon as libphp4.so is loaded. Can this be fixed?
     </ul>
+</li>
 <li><b><a href="#5">5. Installation</a></b>
     <ul>
         <li><a href="#5.1">5.1. Where should my php3.ini file be located?</a></li>
@@ -60,6 +61,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#5.3">5.3. I installed PHP using RPMS, but it doesn't compile with the database support I need! What's going on here?</a></li>
         <li><a href="#5.4">5.4. How do I get these libraries to work?</a></li>
     </ul>
+</li>
 <li><b><a href="#6">6. Build Problems</a></b>
     <ul>
         <li><a href="#6.1">6.1. I got the latest version of PHP using the anonymous CVS service, but there's no configure script!</a></li>
@@ -75,6 +77,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#6.11">6.11. When I try to build PHP using --with-apxs I get strange error messages.</a></li>
         <li><a href="#6.12">6.12. During 'make', I get errors in microtime, and a lot of 'RUSAGE_' stuff.</a></li>
     </ul>
+</li>
 <li><b><a href="#7">7. Using PHP</a></b>
     <ul>
         <li><a href="#7.1">7.1. I would like to write a generic PHP script that can handle data coming from any form. How do I know which POST method variables are available?</a></li>
@@ -92,10 +95,12 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#7.13">7.13. I'm trying to use an &lt;input type="image"&gt; tag, but the $foo.x and $foo.y variables aren't available. Where are they?</a></li>
         <li><a href="#7.14">7.14. How do I get all the results from a SELECT MULTIPLE HTML tag? </a></li>
     </ul>
+</li>
 <li><b><a href="#8">8. PHP and HTML</a></b>
     <ul>
         <li><a href="#8.1">8.1. How do I create arrays in a HTML &lt;form&gt;?</a></li>
     </ul>
+</li>
 <li><b><a href="#9">9. PHP and other languages</a></b>
     <ul>
         <li><a href="#9.1">9.1. PHP vs. ASP?</a></li>
@@ -103,6 +108,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#9.3">9.3. PHP vs. Cold Fusion?</a></li>
         <li><a href="#9.4">9.4. PHP vs. Perl?</a></li>
     </ul>
+</li>
 <li><b><a href="#10">10. Common Problems</a></b>
     <ul>
         <li><a href="#10.1">10.1. I installed PHP, but every time I load a document, I get the message 'Document Contains No Data'! What's going on here?</a></li>
@@ -110,16 +116,19 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#10.3">10.3. I patched Apache with the FrontPage extensions patch, and suddenly PHP stopped working. Is PHP incompatible with the Apache FrontPage extensions?</a></li>
         <li><a href="#10.4">10.4. I think I found a bug! Who should I tell?</a></li>
     </ul>
+</li>
 <li><b><a href="#11">11. Migrating from PHP3 to PHP4</a></b>
     <ul>
         <li><a href="#11.1">11.1. General information</a></li>
         <li><a href="#11.2">11.2. Incompatible functions</a></li>
     </ul>
-<li><b><a href="#12">12. Migrating from PHP2 to PHP3</a></b>
+</li>
+<li><b><a href="#12">12. Migrating from PHP2 to PHP3</a></b></li>
 <li><b><a href="#13">13. Miscellaneous Questions</a></b>
     <ul>
         <li><a href="#13.1">13.1. Where did the pop-ups go on the website?  Can I have the code for that?</a></li>
     </ul>
+</li>
 </ul>
 
 <?php echo hdelim(); ?>
@@ -138,12 +147,12 @@ If you have suggestions, corrections or additions, send them to
       <p>PHP is an HTML-embedded scripting language. Much of
       its syntax is borrowed from C, Java and Perl with a couple of unique
       PHP-specific features thrown in. The goal of the language is to
-      allow web developers to write dynamically generated pages quickly.
+      allow web developers to write dynamically generated pages quickly.</p>
     </blockquote>
     A nice introduction to PHP by Stig Sæther Bakken can be found <a
     href="http://www.zend.com/zend/art/intro.php">here</a> on the Zend
     website.
-  <p>
+  <p></p>
   </dd>
 
   <dt><b>
@@ -154,32 +163,38 @@ If you have suggestions, corrections or additions, send them to
     is the successor to PHP/FI 2.0 and is a lot nicer. PHP 4 is the latest
     generation of PHP, which uses the <?php print_Link("http://www.zend.com/", "Zend engine"); ?>
     under the hood.
-  <p>
+  <p></p>
   </dd>
+
   <dt><b>
     <a name="1.3">1.3.</a> Can I run several versions of PHP at the same time?
   </b></dt>
   <dd>
     Yes. See the INSTALL file that is included in the PHP 4 source distribution.
-  <p>
+  <p></p>
+  </dd>
 
   <dt><b>
     <a name="1.4">1.4.</a> What are the differences between PHP 3 and PHP 4?
   </b></dt>
   <dd>
-    There are <a href="http://www.zend.com/zend/art/">a couple of articles</a> written on this by the authors of PHP4. Here's a list of some of the more important new features:
+    There are <a href="http://www.zend.com/zend/art/">a couple of
+    articles</a> written on this by the authors of PHP4. Here's a
+    list of some of the more important new features:
     <ul>
-      <li>Extended API module 
-      <li>Generalized build process under UNIX 
-      <li>Generic web server interface that also supports multi-threaded web servers 
-      <li>Improved syntax highlighter 
-      <li>Native HTTP session support 
-      <li>Output buffering support 
-      <li>More powerful configuration system 
-      <li>Reference counting 
+      <li>Extended API module</li>
+      <li>Generalized build process under UNIX</li>
+      <li>Generic web server interface that also supports multi-threaded web servers</li>
+      <li>Improved syntax highlighter</li>
+      <li>Native HTTP session support</li>
+      <li>Output buffering support</li>
+      <li>More powerful configuration system</li>
+      <li>Reference counting</li>
     </ul>
-    Please see the <a href="http://www.zend.com/zend/whats-new.php">What's new in PHP4 overview</a> for a detailed explanation of these features and more.
-  <p>
+    Please see the <a href="http://www.zend.com/zend/whats-new.php">What's
+    new in PHP4 overview</a> for a detailed explanation of these
+    features and more.
+  <p></p>
   </dd>
 </dl>
 
@@ -197,8 +212,8 @@ If you have suggestions, corrections or additions, send them to
     <code>php-general-subscribe@lists.php.net</code>. You don't need to include
     anything special in the subject or body of the message.
 
-    <p>To unsubscribe, send mail to <code>php-general-unsubscribe@lists.php.net</code>.
-  <p>
+    <p>To unsubscribe, send mail to <code>php-general-unsubscribe@lists.php.net</code>.</p>
+  <p></p>
   </dd>
 
   <dt><b>
