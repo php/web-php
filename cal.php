@@ -146,6 +146,28 @@ CREATE TABLE phpcal (
 		return $days;
 	}
 
+	function escape_to_full_width() {
+?>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+</table>
+<?
+	}
+
+	function restore_php_net_table_layout() {
+?>
+<table cellpadding="0" cellspacing="0">
+ <tr valign="top">
+  <td>
+   <table width="625" cellpadding="10" cellspacing="0">
+    <tr>
+     <td valign="top">
+<?
+	}
+
 	function draw_cal($y,$m) {
 		global $a, $err;
 		global $ap, $aerr;
@@ -168,6 +190,7 @@ CREATE TABLE phpcal (
 			$nm = 1;
 			$ny = $y+1;
 		}
+		escape_to_full_width();
 		?>
 <table border=0 cellspacing=0 cellpadding=3 width=100%><tr bgcolor=#d0d0d0>
 <th align=left>
@@ -223,6 +246,7 @@ if($a) draw_add();?>
 else echo "<font color=#f02020>$aerr</font>";
 if($ap) draw_app();
 echo "</table>\n";
+restore_php_net_table_layout();
 }
 
 function draw_event($ev) {
