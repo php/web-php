@@ -146,7 +146,7 @@ function print_link($url, $linktext=false, $target=false, $extras=false) {
 # print a link for a downloadable file (including filesize)
 #
 
-function download_link($file, $title, $size_in_link=false) {
+function download_link($file, $title) {
 	global $filesizes, $server;
 
 	if ($tmp = strrchr($file, "/")) {
@@ -158,10 +158,7 @@ function download_link($file, $title, $size_in_link=false) {
 	$size = @filesize($local_file)/1024;
 	echo("<!-- file=$file localfile=$local_file size-$size -->\n");
 
-  if ($size_in_link) { $extraparam = 'title="' . $size . '"'; }
-  else { $extraparam = false; }
-
-  print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title, false, $extraparam);
+  print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title);
 
 	if (!$size && isset($filesizes[$local_file])) { $size = $filesizes[$local_file]; }
   if ($size) { echo "[" . number_format($size, 0, ",", ".") . "Kb]"; }
