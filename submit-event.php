@@ -67,19 +67,19 @@ if (isset($in)) {
     }
   }
 
-  if ($in['type'] == 'recur' && !($recur && $recur_day)) {
+  if ($in['type'] == 'recur' && !($in['recur'] && $in['recur_day'])) {
     $errors[] = "You must specify a valid day of the month for a recurring event.";
   }
 
-  if (0 && preg_match("/submit/i", $action)) {
+  if (preg_match("/submit/i", $action)) {
     # submit to master.php.net
     $result = posttohost("http://master.php.net/entry/event.php", $in);
     if ($result) {
       $errors[] = "There was an error processing your submission: $result";
     }
     if (!$errors) {?>
-TODO: this is where the message thanking the user and telling them what will
-happen next goes.
+<p>Thank you for your submission! You should hear back soon as to whether your
+event has been accepted for inclusion in our calendar.</p>
 <?php
       commonFooter();
       exit;
@@ -87,12 +87,15 @@ happen next goes.
   }
 
   if (!$errors) {?>
-TODO: this is where the message about this being a preview goes.
+<p>The following is a preview of your event submission. Please double-check it
+to make sure all of the information is correct.</p>
 <?
   }
 }
 else {?>
-TODO: this is where text to explain event submission goes.
+<p>Have an upcoming PHP user group meeting? Holding a PHP training session?
+Submit your event here, and after it has been approved, it will be listed on
+the PHP.net homepage and appear in our full event listings.</p>
 <?php
 }
 
@@ -108,12 +111,33 @@ for ($i = 0; $i < 12; $i++) {
 
 $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
 
-if (isset($in)) {
-  # TODO: preview submission
+if (isset($in)) {?>
+<p><b>Preview:</b></p>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+ <tr bgcolor="#dddddd"><td>
+  <b><?php echo date("F j, Y", mktime(0,0,1,$in['smonth'],$in['sday'],$in['syear']))?></b>
+<?php
+  if ($in['url']) echo '<a href="', htmlentities($in['url']),'">';
+  echo htmlentities($in['sdesc']);
+  if ($in['url']) echo "</a>";
+  switch ($in['type']) {
+  case 'multi':
+    echo " ($in[syear]-$in[smonth]-$in[sday] to $in[eyear]-$in[emonth]-$in[eday])";
+    break;
+  case 'recur':
+    echo " (Every ", $re[$in['recur']], " ", $days[$in['recur_day']], " of the month)";
+    break;
+  }
+?>
+ </td></tr>
+ <tr bgcolor="#eeeeee"><td><?php echo $in['ldesc']?></td></tr>
+</table>
+<p><b>Change:</b></p>
+<?php
 }
 ?>
 <form action="<?php echo $PHP_SELF?>" method="post">
-<table bgcolor="#e0e0e0" border="0" cellspacing="0" cellpadding="3" width="100%">
+<table bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="3" width="100%">
  <tr>
   <th>Start Date</th>
   <td>
