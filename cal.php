@@ -1,4 +1,4 @@
-<?
+<?php
   require_once 'prepend.inc';
   commonHeader("Event Calendar");
 
@@ -172,13 +172,13 @@ CREATE TABLE phpcal (
 <table border=0 cellspacing=0 cellpadding=3 width=100%><tr bgcolor=#d0d0d0>
 <th align=left>
 <table width=100% border=0>
-<tr><td align=left><a href="cal.php?a=<?echo $a?>&ap=<?echo $ap?>&cm=<?echo $pm?>&cy=<?echo $py?>"><?echo $months[$pm].', '.$py?></a></td>
-<td align=center><b><?echo $month,', '.$y?></b></td>
-<td align=right><a href="cal.php?a=<?echo $a?>&ap=<?echo $ap?>&cm=<?echo $nm?>&cy=<?echo $ny?>"><?echo $months[$nm].', '.$ny?></a></td></tr></table></th>
+<tr><td align=left><a href="cal.php?a=<?phpecho $a?>&ap=<?phpecho $ap?>&cm=<?phpecho $pm?>&cy=<?phpecho $py?>"><?phpecho $months[$pm].', '.$py?></a></td>
+<td align=center><b><?phpecho $month,', '.$y?></b></td>
+<td align=right><a href="cal.php?a=<?phpecho $a?>&ap=<?phpecho $ap?>&cm=<?phpecho $nm?>&cy=<?phpecho $ny?>"><?phpecho $months[$nm].', '.$ny?></a></td></tr></table></th>
 </tr>
 <tr bgcolor=#d0d0d0><td>
 <table border=1 cellspacing=0 cellpadding=3 width=100%>
-<?
+<?php
 	$days = days();
 	$start = start_month($y,$m);
 	$last = last_day($y,$m);
@@ -212,14 +212,14 @@ CREATE TABLE phpcal (
 	}
 ?>
 </table>
-<?if($ev) draw_event($ev) ?>
-<tr bgcolor=#d0d0d0><th <?if($err) echo 'align=center'; else echo 'align=left';?>><?if(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event'; 
+<?phpif($ev) draw_event($ev) ?>
+<tr bgcolor=#d0d0d0><th <?phpif($err) echo 'align=center'; else echo 'align=left';?>><?phpif(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event'; 
 else echo "<font color=#f02020>$err</font>";
 echo "</th></tr>\n";
 if($a) draw_add();?>
-<? $result = mysql_query("select id from phpcal where approved=0");
+<?php $result = mysql_query("select id from phpcal where approved=0");
    $c = mysql_num_rows($result); ?>
-<tr bgcolor=#d0d0d0><th <?if($aerr) echo 'align=center'; else echo 'align=left';?>><?if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
+<tr bgcolor=#d0d0d0><th <?phpif($aerr) echo 'align=center'; else echo 'align=left';?>><?phpif(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
 else echo "<font color=#f02020>$aerr</font>";
 if($ap) draw_app();
 echo "</table>\n";
@@ -235,9 +235,9 @@ function draw_event($ev) {
 ?>
 <tr bgcolor=#d0d0d0><td>
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th><?echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?echo get_cfg_var('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
+<tr bgcolor=#a0a0a0><th><?phpecho $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
 <tr bgcolor=#a0a0a0><th>
-<? switch($event['tipo']) {
+<?php switch($event['tipo']) {
 	case 1:
 		echo $event['sdato'];
 		break;
@@ -251,20 +251,20 @@ function draw_event($ev) {
   }
 ?>
 </th></tr>
-<tr bgcolor=#a0a0a0><th>App. by: <?echo $event['app_by']?></th></tr>
+<tr bgcolor=#a0a0a0><th>App. by: <?phpecho $event['app_by']?></th></tr>
 </table>
 </td></tr>
-<?
+<?php
 }
 
 function draw_app() {
 	global $a,$cm,$cy, $user, $pw;
 ?>
 <tr bgcolor=#d0d0d0><td>
-<form action="cal.php?a=<?echo $a?>&cm=<?echo $cm?>&cy=<?echo $cy?>" method="POST">
+<form action="cal.php?a=<?phpecho $a?>&cm=<?phpecho $cm?>&cy=<?phpecho $cy?>" method="POST">
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
 <tr bgcolor=#a0a0a0><th>&nbsp;</th><th align=left>When</th><th align=left>Label</th><th align=left>Description</th><th align=left>URL</th></tr>
-<?
+<?php
 	
 	$events = load_unapproved_events();
 	$col = array('#e0e0e0','#f0f0f0'); $i=0;
@@ -280,7 +280,7 @@ function draw_app() {
 </table>
 </td></tr>
 </form>
-<?
+<?php
 }
 
 function draw_add() {
@@ -290,10 +290,10 @@ function draw_add() {
 	global $url, $sdesc, $ldesc, $ap, $re, $cm, $cy;
 ?>
 <tr bgcolor=#d0d0d0><td>
-<form action="cal.php?ap=<?echo $ap?>&cm=<?echo $cm?>&cy=<?echo $cy?>" method="POST">
+<form action="cal.php?ap=<?phpecho $ap?>&cm=<?phpecho $cm?>&cy=<?phpecho $cy?>" method="POST">
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
 <tr bgcolor=#e0e0e0><th>Start Date</th><td colspan=2><select name="smonth">
-<?
+<?php
 	$months = months(); $i=1;
 	if($smonth) echo "<option value=\"$smonth\">".$months[$smonth-1]."</option>\n";
 	foreach($months as $m) { 
@@ -302,13 +302,13 @@ function draw_add() {
 	}
 ?>
 </select>
-<input type=text name="sday" size=2 maxlength=2 value=<?echo $sday?>>
-<input type=text name="syear" size=4 maxlength=4 value="<?if($syear) echo $syear; else echo date("Y");?>">
+<input type=text name="sday" size=2 maxlength=2 value=<?phpecho $sday?>>
+<input type=text name="syear" size=4 maxlength=4 value="<?phpif($syear) echo $syear; else echo date("Y");?>">
 <input type="radio" name="type" value="single" CHECKED> Just one day (no end-date required)
 </td>
 </tr>
 <tr bgcolor=#e0e0e0><th>End Date</th><td colspan=2><select name="emonth">
-<?
+<?php
 	$i=1;
 	if($emonth) echo "<option value=\"$emonth\">".$months[$emonth-1]."</option>\n";
 	foreach($months as $m) { 
@@ -317,21 +317,21 @@ function draw_add() {
 	}
 ?>
 </select>
-<input type=text name="eday" size=2 maxlength=2 value="<?echo $eday?>">
-<input type=text name="eyear" size=4 maxlength=4 value="<?if($eyear) echo $eyear; else echo date("Y")?>">
+<input type=text name="eday" size=2 maxlength=2 value="<?phpecho $eday?>">
+<input type=text name="eyear" size=4 maxlength=4 value="<?phpif($eyear) echo $eyear; else echo date("Y")?>">
 <input type="radio" name="type" value="multi"> Multi-day event
 </td>
 </tr>
 <tr bgcolor=#e0e0e0><th>OR<br>Recurring</th><td colspan=2>
 <select name="recur">
-<?
+<?php
 if($recur) echo "<option value=\"$recur\">".$re[$recur]."</option>\n";
 foreach($re as $k=>$v) {
 	if($recur!=$k) echo "<option value=\"$k\">$v</option>\n";
 }?>
 </select>
 <select name="recur_day">
-<?
+<?php
 	$days = days(); $i=0;
 	if($recur_day) echo "<option value=\"$recur_day\">".$days[$recur_day]."</option>\n";
 	foreach($days as $i=>$d) { 
@@ -342,14 +342,14 @@ foreach($re as $k=>$v) {
 <input type="radio" name="type" value="recur"> Recurring (every month)
 </td>
 </tr>
-<tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?echo get_cfg_var('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
+<tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
 </td><td align=center><input type="submit" value=" Submit " name="new"></td></tr>
-<tr bgcolor=#e0e0e0><th>URL</th><td colspan=2><input type=text name="url" size=60 maxlength=128 value="<?echo $url?>"></td></tr>
-<tr bgcolor=#e0e0e0><th>Long<br>Description</th><td colspan=2><textarea name="ldesc" cols=78 rows=10 maxlength=78 wrap=virtual><?echo get_cfg_var('magic_quotes_gpc')?stripslashes($ldesc):$ldesc?></textarea></td></tr>
+<tr bgcolor=#e0e0e0><th>URL</th><td colspan=2><input type=text name="url" size=60 maxlength=128 value="<?phpecho $url?>"></td></tr>
+<tr bgcolor=#e0e0e0><th>Long<br>Description</th><td colspan=2><textarea name="ldesc" cols=78 rows=10 maxlength=78 wrap=virtual><?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($ldesc):$ldesc?></textarea></td></tr>
 </table>
 </td></tr>
 </form>
-<? 
+<?php 
 } /* end of draw_add() function */
 
 	if(isset($type)) {
