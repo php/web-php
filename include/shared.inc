@@ -9,17 +9,17 @@ if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
 		$HAVE_STYLE = true;
-            $IE4=true;
+                $IE4=true;
         elseif($ver==3):
-            $IE3=true;
+                $IE3=true;
         endif;
 elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):                                    
         $ver=(int)$version[1];
         if ($ver>=4):
 		$HAVE_STYLE = true;
-            $NS4=true;
+                $NS4=true;
         elseif($ver==3):  
-            $NS3=true;
+                $NS3=true;
         endif;
 	if (strstr($HTTP_USER_AGENT, "X11")):
 		$X11NS = true;
@@ -28,7 +28,7 @@ endif;
 
 /* Base variables */
 
-$FONTFACE = "TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif";
+$FONTFACE = "TAHOMA, ARIAL, HELVETICA, sans-serif";
 $FRAMEMODE = "standard";
 
 if ($HAVE_STYLE) {
@@ -258,8 +258,6 @@ function commonHeader($title) {
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
-NS4 = (document.layers) ? 1 : 0;
-
 var loaded = 0;
 var do_layers = 0;
 var lastbutton='top';
@@ -276,10 +274,6 @@ elseif ($IE4):
 endif;
 
 if ($NS4 || $IE4):
-	echo "function moveLayerTo(layerName,moveleft,movetop){\n";
-	echo "		$layerRef"."[layerName]".$styleSwitch.".top=movetop;\n";
-	echo "		$layerRef"."[layerName]".$styleSwitch.".left=moveleft;\n";
-	echo "}\n";
 	echo "function showLayer(layerName){\n";
 	echo "	if (do_layers == 1) {\n";
 	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"visible\";\n";
@@ -366,12 +360,49 @@ endif;
 
 </HEAD>
 
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#4040A0" ALINK="#00FF00"  
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#4040A0" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0 
 <? if ($NS4 || $NS3):
 	echo "OnLoad=\"LoadImgs();\"";
 endif; ?>
 ><A NAME="top">
+<IMG SRC="/gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
 
+<? if($NS4 || $IE4):	/* Kick outs */ ?>
+<SCRIPT LANGUAGE="Javascript1.2">
+<!--
+screenWidth=document.bigspacer.width;
+searchPosLeft=screenWidth - 320;
+searchPosTop=40;
+mirrorPosLeft=143;
+<?	if ($X11NS): ?>
+mirrorPosTop=190;
+<?	else: ?>
+mirrorPosTop=200;
+<?	endif; ?>
+<?	if ($IE4): ?>
+	searchPosLeft+=4;
+	searchPosTop+=15;
+	mirrorPosLeft+=4;
+	mirrorPosTop+=16;
+<?	endif; ?>
+document.writeln("<STYLE TYPE='text/css'>");
+document.writeln("TD { font-family: <? echo $FONTFACE; ?> }");
+<?	if ($FRAMEMODE != "manual"): ?>
+document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 999; VISIBILITY: hidden; TOP: ");
+document.write(mirrorPosTop);
+document.write("px; LEFT: ");
+document.write(mirrorPosLeft);
+document.writeln("px;}");
+<?	endif; ?>
+document.write("#searchKick {POSITION: absolute; Z-INDEX: 999; VISIBILITY: hidden; TOP: ");
+document.write(searchPosTop);
+document.write("px; LEFT: ");
+document.write(searchPosLeft);
+document.writeln("px;}");
+document.writeln("</STYLE>");
+//-->
+</SCRIPT>
+<? endif;	/* Kick outs */ ?>
 <!-- bogus comment to squash a Netscape bug --> 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
@@ -525,8 +556,7 @@ function commonFooter() {
 <? if ($NS4 || $IE4):	/* Kick outs */
 	if ($FRAMEMODE != "manual"):
 ?>
-
-<DIV ID='mirrorsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID='mirrorsKick'>
 <? kickHeader(-20,'left',25,300);?>
 <FORM ACTION='redirect.php3' METHOD='POST'>
 <B>Pick a mirror site close to you:</B><BR>
@@ -552,7 +582,7 @@ endwhile;
 
 <?	endif; ?>
 
-<DIV ID='searchKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID='searchKick'>
 <? kickHeader(-35,'top',25,300);?>
 <FORM ACTION='search.php3' METHOD='POST'>
 <B>What are you searching for:</B><BR>
@@ -568,21 +598,6 @@ endwhile;
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
-
-im = document.images["mirr"];
-yPos = (NS4) ? im.y : im.offsetTop;
-xPos = (NS4) ? im.x : im.offsetLeft;
-mirrorPosTop = yPos - 36;
-mirrorPosLeft = xPos + im.width;
-moveLayerTo('mirrorsKick',mirrorPosLeft,mirrorPosTop);
-
-im = document.images["sear"];
-yPos = (NS4) ? im.y : im.offsetTop;
-xPos = (NS4) ? im.x : im.offsetLeft;
-searchPosTop = yPos + im.height - 4;
-searchPosLeft = xPos - 225;
-moveLayerTo('searchKick',searchPosLeft,searchPosTop);
-
 do_layers = 1;
 //--->
 </SCRIPT>
