@@ -31,14 +31,14 @@ checkout -P
 diff -u
 </pre></li>
 
-  <li>Log in to the PHP anonymous CVS server. Use <strong>phpfi</strong> as the password.<br>
+  <li>Log in to the PHP anonymous CVS server. Use <strong>phpfi</strong> as the password.<br />
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
-  <li>Obtain the PHP 5 CVS tree:<br>
+  <li>Obtain the PHP 5 CVS tree:<br />
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php5</pre></li>
 
     <blockquote>
-     <strong style="color: #99000">Note:</strong> <br/>
-     <i>You can retrieve a specific release of PHP from CVS by using the -r flag in your cvs command. For example:<br><pre>
+     <strong style="color: #99000">Note:</strong> <br />
+     <i>You can retrieve a specific release of PHP from CVS by using the -r flag in your cvs command. For example:<br /><pre>
 cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
      </pre>
      Tags for major releases look like php_VERSION where version is the version number with periods replaced with underscores.</i>
@@ -47,7 +47,7 @@ cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
     1.4 or newer.
     <blockquote>
-     <strong style="color: #99000">Note:</strong> <br/>
+     <strong style="color: #99000">Note:</strong> <br />
      <i> Certain combinations of autoconf, automake and libtool may not work when used together.<br />
      See <a href="#buildconf_fail">below</a> for details.</i><br />
      Also, certain versions of autoconf may generate warnings of <i>AC_PROG_CPP called before AC_PROG_CC</i>. 

@@ -125,7 +125,7 @@ foreach ($books as $btype => $book_list) {
 ?>
 
 </select>
-<input type="submit" value="Show">
+<input type="submit" value="Show" />
 </form>
 
 <p>
@@ -139,36 +139,36 @@ and search there):
 
 <p>
 <form method="get" action="http://www.amazon.com/exec/obidos/external-search">
-<input type="hidden" name="tag" value="wwwphpnet">
+<input type="hidden" name="tag" value="wwwphpnet" />
 Search Amazon for
 <select name="mode">
-<option value="blended">All Products
-<option value="books" selected>Books
-<option value="music">Popular Music
-<option value="classical-music">Classical Music
-<option value="video">Video
-<option value="toys">Toys
-<option value="electronics">Electronics
+<option value="blended">All Products</option>
+<option value="books" selected>Books</option>
+<option value="music">Popular Music</option>
+<option value="classical-music">Classical Music</option>
+<option value="video">Video</option>
+<option value="toys">Toys</option>
+<option value="electronics">Electronics</option>
 </select>
 about
 <select name="keyword">
-<option selected>PHP
-<option>Apache
-<option>Linux
-<option>MySQL
-<option>PostgreSQL
-<option>mSQL
-<option>Oracle
-<option>IMAP
-<option>LDAP
-<option>XML
-<option>Adabas
-<option>Sybase
-<option>Microsoft SQL
-<option>Microsoft NT
-<option>ODBC
+<option selected>PHP</option>
+<option>Apache</option>
+<option>Linux</option>
+<option>MySQL</option>
+<option>PostgreSQL</option>
+<option>mSQL</option>
+<option>Oracle</option>
+<option>IMAP</option>
+<option>LDAP</option>
+<option>XML</option>
+<option>Adabas</option>
+<option>Sybase</option>
+<option>Microsoft SQL</option>
+<option>Microsoft NT</option>
+<option>ODBC</option>
 </select>
-<input type="submit" border="0" value="Search" name="Search">
+<input type="submit" border="0" value="Search" name="Search" />
 </form>
 </p>
 

@@ -15,11 +15,11 @@ commonheader("PHP 4 ChangeLog");
 <li>
   Improved dba extension (Marcus)
   <ul>
-   <li>Added support for internal error handling of Berkeley db libraries.
-   <li>Disallowed Berkeley db versions 4.1.0 to 4.1.24 due to locking problems.
-   <li>Disallowed linkage of Berkeley db submodules against libraries with different major versions.
-   <li>Disallowed configuring of more than one Berkeley db handler.
-   <li>Reenabled dba_popen() with new persistent STDIO streams.
+   <li>Added support for internal error handling of Berkeley db libraries.</li>
+   <li>Disallowed Berkeley db versions 4.1.0 to 4.1.24 due to locking problems.</li>
+   <li>Disallowed linkage of Berkeley db submodules against libraries with different major versions.</li>
+   <li>Disallowed configuring of more than one Berkeley db handler.</li>
+   <li>Reenabled dba_popen() with new persistent STDIO streams.</li>
   </ul>
 </li>
 <li>Added a new Apache 2.0 SAPI module (sapi/apache2handler) based on the old version (sapi/apache2filter). (Ian Holsman, Justin Erenkrantz)</li>
@@ -57,7 +57,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/23402">#23402</a> (crash with improper use of mssql_bind()). (Frank)</li>
 <li>Fixed bug <a href="http://bugs.php.net/23371">#23371</a> (configure falsely detects c-client using SSL). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/23340">#23340</a> (fopen on multiple URLs causes memory corruption). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23298">#23298</a> (serialize cuts off floats & doubles). (Ilia, Marcus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23298">#23298</a> (serialize cuts off floats &amp; doubles). (Ilia, Marcus)</li>
 <li>Fixed bug <a href="http://bugs.php.net/23232">#23232</a> (safe_mode does not honor PHP_AUTH_* in apache2). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/23225">#23225</a> (money_format() didn't handle erroneous return of strfmon). (Ilia, marcot@tabini.ca)</li>
 <li>Fixed bug <a href="http://bugs.php.net/23201">#23201</a> (set_file_buffer() crashes with stdio streams). (Ilia)</li>
@@ -102,7 +102,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/22382">#22382</a> (fgetcsv() did not handle \" correctly). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22376">#22376</a> (wrong httpd.conf modified when using INSTALL_ROOT). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22363">#22363</a> (combinations of fwrite(), fread() and fseek() produce unexpected results). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22355">#22355</a> (PHP would remove folding from Subject & To fields). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22355">#22355</a> (PHP would remove folding from Subject &amp; To fields). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22330">#22330</a> (overloaded strrpos() gives wrong results). (david@santinoli.com, Moriyoshi)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22312">#22312</a> (crash on failed connection when curl_getinfo() was called). (Phil Oleson <poleson@verio.net>)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22308">#22308</a> (optimized passthru, code is now ~40 times faster). (Ilia)</li>
@@ -127,7 +127,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/22059">#22059</a> (ftp_chdir() causes segfault). (Sara)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22048">#22048</a> (crash in imap_header() when the e-mail contains an abnormally large number of special characters). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22042">#22042</a> (pg_result_seek() would never seek to the 1st row in the result due to always seeking to row next to the one requested). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22031">#22031</a> (Made curl_write() & curl_write_header() binary safe). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22031">#22031</a> (Made curl_write() &amp; curl_write_header() binary safe). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22022">#22022</a> (Crash in imap_mail_compose() if the body is an empty array). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22017">#22017</a> (date() does not support negative timestamps on win32). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22008">#22008</a> (strip_tags() eliminates too much). (Moriyoshi)</li>
@@ -155,7 +155,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/21518">#21518</a> (imagecreatefromstring() crashed with invalid image files). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21511">#21511</a> (config.status warning). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21498">#21498</a> (mysql_pconnect connection problems). (Georg)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21453">#21453</a> (improper handling of non-terminated < by strip_tags()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21453">#21453</a> (improper handling of non-terminated &lt; by strip_tags()). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21445">#21445</a> (gd unable to open fonts). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21443">#21443</a> (improper handling of ? surrounded by spaces in get_browser()). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21442">#21442</a> (crash in mail() on Windows when 1st parameter is empty). (Edin)</li>
@@ -185,7 +185,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/17868">#17868</a> (multiple <!--include--> used to include PHP files crashes). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/17448">#17448</a> (Print the message when OCI_SUCCESS_WITH_INFO is returned). (Maxim)</li>
 <li>Fixed bug <a href="http://bugs.php.net/17098">#17098</a> (make Apache2 aware that PHP scripts should not be cached). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/16798">#16798</a> (Compile failure with LOB support for Oracle version < 8.1). (Maxim)</li>
+<li>Fixed bug <a href="http://bugs.php.net/16798">#16798</a> (Compile failure with LOB support for Oracle version &lt; 8.1). (Maxim)</li>
 <li>Fixed bug <a href="http://bugs.php.net/14532">#14532</a> (fixed connection_status() to return 2 for timeouts). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/14245">#14245</a> ('make install' fails on AIX when using --with-apxs). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/13757">#13757</a> (CGI: passing query string on command line broken). (Shane)</li>
@@ -1712,7 +1712,7 @@ There is no separate announcement available for this release.<br />
 <b>11-Oct-2000</b>
 <ul>
 <li>Fixed a possible crash in -a interactive mode (Zeev, Zend Engine)</li>
-<li>Added mysql_escape_string() (Peter A. Savitch and & Brian Wang)</li>
+<li>Added mysql_escape_string() (Peter A. Savitch and &amp; Brian Wang)</li>
 <li>Fixed many possible crash bugs with improper use of the printf() family of
   functions (Andi)</li>
 <li>Fixed a problem that allowed users to override admin_value's and admin_flag's
@@ -1831,9 +1831,9 @@ There is no separate announcement available for this release.<br />
   Apache cleanly without warnings. (Brendan W. McAdams)</li>
 <li>Fixed mSQL_close(). (nick@loman.net)</li>
 <li>Made return() in a require()'d file work like return() in an include()'d
-  file (Andi & Zeev, Zend Engine)</li>
+  file (Andi &amp; Zeev, Zend Engine)</li>
 <li>Changed require_once() to work using the same table as include_once()
-  (Andi & Zeev, Zend Engine)</li>
+  (Andi &amp; Zeev, Zend Engine)</li>
 <li>Fixed PostgreSQL module to work when the link handle is omitted (Zeev)</li>
 <li>Fixed the Sybase modules to work properly with PHP 4.0 (Zeev)</li>
 <li>Fixed CLOB handling in OCI8 driver when using variable-width
@@ -1922,7 +1922,7 @@ There is no separate announcement available for this release.<br />
 <li>Fixed leak when using string offsets in the array() construct.
   (Andi, Zend Engine)</li>
 <li>Fixed corruption problem when changing deeply nested values in objects.
-  (Andi & Zeev, Zend Engine)</li>
+  (Andi &amp; Zeev, Zend Engine)</li>
 <li>Improved array_multisort() to be able to specify sort type as well sort
   order. Incidentally, it can be used to sort multi-dimensional arrays
   as well. (Andrei)</li>
@@ -1988,7 +1988,7 @@ There is no separate announcement available for this release.<br />
 <li>Fixed erroneous file names and line numbers in error situations under the
   multithreaded version of PHP - most noticeably Win32 (Zeev, Zend Engine)</li>
 <li>Fixed problem with CGI crashing on certain servers especially Windows Apache
-  & O'Reilly website (Andi)</li>
+  &amp; O'Reilly website (Andi)</li>
 <li>Added Pi3Web SAPI module; run ./configure --with-pi3web to enable this.
   (Holger; zimpel@t-online.de)</li>
 <li>Enhanced WDDX functions to call __sleep() and __wakeup() when working on
@@ -2028,7 +2028,7 @@ There is no separate announcement available for this release.<br />
 <li>Added functions array_unique, array_intersect and array_diff (Stig Venaas)</li>
 <li>Fixed problem when using uninitialized values in comparisons with strings.
   They behave as empty strings again just like in PHP 3.
-  (Andi & Zeev, Zend Engine)</li>
+  (Andi &amp; Zeev, Zend Engine)</li>
 <li>Fixed 'Z' flag in date() to adjust for daylight savings time. (Andrei)</li>
 <li>Fixed var_dump() not to modify the internal order of array elements (Zeev)</li>
 <li>Fixed stripcslashes() to remove to strip \ in unknown escapes instead of
@@ -2057,7 +2057,7 @@ There is no separate announcement available for this release.<br />
   files. (Zeev)</li>
 <li>Added fflush() function. (Eric Huss)</li>
 <li>Fixed a problem with static variables, default function arguments and class
-  member variables, that contained array values. (Andi & Zeev, Zend Engine)</li>
+  member variables, that contained array values. (Andi &amp; Zeev, Zend Engine)</li>
 <li>Fixed virtual() when used with output buffering (Marc Pohl)</li>
 <li>Clean up constants in flock() function and add optional 3rd arg which
   is set to true on EWOULDBLOCK (Rasmus)</li>
@@ -2083,7 +2083,7 @@ There is no separate announcement available for this release.<br />
 <li>Cleaned up PCRE extension and made it binary-safe. (Andrei)</li>
 <li>Added third argument to in_array(). If it's true, then in_array()
   will use strict comparison instead of the default one. (Andrei)</li>
-<li>Added pg_trace() and pg_untrace (Dominic J. Eidson & Zeev)</li>
+<li>Added pg_trace() and pg_untrace (Dominic J. Eidson &amp; Zeev)</li>
 <li>ignore_user_abort=Off is now default. (Thies)</li>
 <li>Added array_merge_recursive() that will recursively merge values
   under the same keys. (Andrei)</li>
@@ -2106,11 +2106,11 @@ There is no separate announcement available for this release.<br />
   one additional character, usually the regex delimiter. (Andrei)</li>
 <li>Uncommitted outstanding OCI8 transactions are now rolled back
   before the connection is closed. (Thies)</li>
-<li>ignore_user_abort() & friends should now work in CGI mode as well.
+<li>ignore_user_abort() &amp; friends should now work in CGI mode as well.
   (Patch by daniel.braun@ercom.fr)</li>
 <li>Added extension YAZ (dickmeiss).</li>
 <li>Fixed a crash bug triggered by certain cases of class redeclarations
-  (Stas & Zeev, Zend Engine)</li>
+  (Stas &amp; Zeev, Zend Engine)</li>
 <li>Fixed min()/max() segfault. (Andrei)</li>
 <li>New module for reading EXIF header data from JPEG files.  Most digital
   cameras will embed all sorts of information about a picture inside the
@@ -2157,7 +2157,7 @@ There is no separate announcement available for this release.<br />
 <li>Put in safeguards in case dynamic code evaluation in assert() and
   preg_replace() with /e modifier fails. (Andrei)</li>
 <li>Fixed infinite recursion when serializing $GLOBALS[] in WDDX. (Andrei)</li>
-<li>Made WDDX serialization properly escape &lt;, &gt;, and &. Also speeded up
+<li>Made WDDX serialization properly escape &amp;lt;, &amp;gt;, and &amp;. Also speeded up
   the serialization in general. (Andrei)</li>
 <li>Moved install-local to install-sapi for clarity. (Joey)</li>
 <li>Improved extension build framework. Refer to README.SELF-CONTAINED-EXTENSIONS
@@ -2196,9 +2196,9 @@ There is no separate announcement available for this release.<br />
   for more info on natural sorting. (Andrei)</li>
 <li>Zeus Webserver support (version 3.3.6+) for ISAPI (Ben Mansell)</li>
 <li>Fixed several problems with the PATH_TRANSLATED and PHP_SELF under Apache
-  (Paul Gregg & Zeev)</li>
+  (Paul Gregg &amp; Zeev)</li>
 <li>Ported ldap_get_values_len() function from PHP3 to PHP4. (Sterling)</li>
-<li>Fixed a problem in include_once() with non constant arguments (Andi & Zeev,
+<li>Fixed a problem in include_once() with non constant arguments (Andi &amp; Zeev,
   Zend Engine)</li>
 <li>Added php.ini-optimized (Zeev)</li>
 <li>Ported ldap_errno(), ldap_err2str() and ldap_error() from PHP3 to PHP4.
@@ -2395,8 +2395,8 @@ There is no separate announcement available for this release.<br />
   message will now state the filename and line number at which the first output
   was made (Zeev)</li>
 <li>Added the XML Expat library to the standard PHP source distribution thanks
-  to its author James Clark (Andi & Zeev)</li>
-<li>Added XML support to the default Win32 build (Andi & Zeev)</li>
+  to its author James Clark (Andi &amp; Zeev)</li>
+<li>Added XML support to the default Win32 build (Andi &amp; Zeev)</li>
 <li>Added socket_get_status() function. Renamed set_socket_timeout() to 
   socket_set_timeout() and set_socket_blocking() to socket_set_blocking(). (Andrei)</li>
 <li>Added realpath() function. (Andrei)</li>
@@ -2434,7 +2434,7 @@ There is no separate announcement available for this release.<br />
 <li>Made var_dump()/serialize()/unserialize() NULL aware. (Thies)</li>
 <li>Added new NULL constant (Zeev, Zend Engine)</li>
 <li>Fixed -c support in the standalone CGI binary (Zeev)</li>
-<li>Increased PHP's performance by 5-15% using a new memory cache (Andi & Zeev,
+<li>Increased PHP's performance by 5-15% using a new memory cache (Andi &amp; Zeev,
   Zend Engine)</li>
 <li>Improved the php.ini reader to support constants and bitwise operators (Zeev)</li>
 <li>Fixed strrev() to no longer modify arg1. (Thies)</li>
@@ -2486,7 +2486,7 @@ There is no separate announcement available for this release.<br />
 <li>Make the global GET/POST/Cookie variables and their $HTTP_*_VARS[] counterparts
   be references to each other (Zeev)</li>
 <li>Added support for the 'use' keyword - behaves like 'require', but will not
-  use the same file more than once (Andi & Zeev, Zend Engine)</li>
+  use the same file more than once (Andi &amp; Zeev, Zend Engine)</li>
 <li>Added check to see if a persistent connection is still valid with the
   ODBC interface before reusing (nick@easysoft.com)</li>
 <li>Added DBMaker support (patch by Pax Tsai &lt;paxtsai@lion.syscom.com.tw&gt;)</li>
@@ -2501,9 +2501,9 @@ There is no separate announcement available for this release.<br />
 <li>Fixed a leak when using automatic output buffering (Zeev)</li>
 <li>Introduced PECL - PHP Extension and Code Library
   (prounounced "pickle") (Stig)</li>
-<li>Fixed inconsistencies in the implementation of here-docs (Andi & Zeev, Zend 
+<li>Fixed inconsistencies in the implementation of here-docs (Andi &amp; Zeev, Zend 
   library)</li>
-<li>Fixed a problem with constant class-member initializations (Andi & Zeev,
+<li>Fixed a problem with constant class-member initializations (Andi &amp; Zeev,
   Zend Engine)</li>
 <li>Fixed float-compare in min(),max(),a[r]sort(),[r]sort() (Thies)</li>
 <li>Implemented get_html_translation_table() function (Thies)</li>
@@ -2541,7 +2541,7 @@ There is no separate announcement available for this release.<br />
   Patch submitted by: neal@wanlink.com</li>
 <li>Added Microsoft SQL Server module for Win32 (Frank)</li>
 <li>Added support for forcing a variable number of internal function arguments
-  by reference. (Andi & Zeev, Zend Engine)</li>
+  by reference. (Andi &amp; Zeev, Zend Engine)</li>
 <li>Implemented getprotoby{name,number} (Evan)</li>
 <li>Added array_pad() function. (Andrei)</li>
 <li>Added new getservby{name,port} functions. (Evan)</li>
@@ -2597,7 +2597,7 @@ There is no separate announcement available for this release.<br />
 <li>Updated Zend garbage collection with a much more thorough method.
   (Andi, Zend Engine)</li>
 <li>Added the ability to use variable references in the array() construct.
-  For example, array("foo" => &$foo). (Andi, Zend Engine)</li>
+  For example, array("foo" => &amp;$foo). (Andi, Zend Engine)</li>
 <li>Added array_reverse() function (Andrei)</li>
 <li>Some more XML fixes/cleanups (Thies)</li>
 <li>Updated preg_replace() so that if any argument passed in is an array
@@ -2712,10 +2712,10 @@ There is no separate announcement available for this release.<br />
   a valid packet (Andrei)</li>
 <li>Fixed a bugglet when redefining a class at run-time (Andi, Zend Engine)</li>
 <li>Fixed sem_get() on AIX (Sascha)</li>
-<li>Fixed fopen() to work with URL's in Win32 (Andi & Zeev)</li>
+<li>Fixed fopen() to work with URL's in Win32 (Andi &amp; Zeev)</li>
 <li>Fixed include_path for Win32 (Andi, Zend Engine)</li>
 <li>Fixed bug in ISAPI header sending function (Charles)</li>
-<li>Fixed memory leak when using undefined values (Andi & Zeev, Zend Engine)</li>
+<li>Fixed memory leak when using undefined values (Andi &amp; Zeev, Zend Engine)</li>
 <li>Added output_buffering directive to php.ini, to enable output buffering
   for all PHP scripts - default is off (Zeev).</li>
 <li>Fixed some more class inheritance issues (Zeev, Zend Engine)</li>
@@ -2776,8 +2776,8 @@ There is no separate announcement available for this release.<br />
 <li>Fixed a problem with include()/require() of URLs (Sascha, Zeev)</li>
 <li>Fixed a bug in implode() that caused it to corrupt its arguments (Zeev)</li>
 <li>Added get_class($obj), get_parent_class($obj) and method_exists($obj,"name")
-  (Andi & Zeev)</li>
-<li>Fixed various inheritance problems (Andi & Zeev, Zend Engine)</li>
+  (Andi &amp; Zeev)</li>
+<li>Fixed various inheritance problems (Andi &amp; Zeev, Zend Engine)</li>
 <li>Children now inherit their parent's constructor, if they do not supply a
   constructor of their own.</li>
 <li>Fixed runtime inheritance of classes (parent methods/properties were
@@ -2793,9 +2793,9 @@ There is no separate announcement available for this release.<br />
 <li>Apache php_flag values only recognized 'On' (case sensitive) - changed
   to case insensitive (Zeev)</li>
 <li>Fixed a memory leak with switch statement containing return statements
-  (Andi & Zeev, Zend Engine)</li>
+  (Andi &amp; Zeev, Zend Engine)</li>
 <li>Fixed a crash problem in switch statements that had a string offset
-  as a conditional (Andi & Zeev, Zend Engine)</li>
+  as a conditional (Andi &amp; Zeev, Zend Engine)</li>
 <li>Imported PHP 3.0 fixes for rand() and mt_rand() (Rasmus)</li>
 <li>Added function entries for strip_tags() and similar_text() (Andrei)</li>
 <li>Fixed a bug in WDDX that would cause a crash if a number was passed in
