@@ -38,6 +38,18 @@ Some PHP conference slide shows, presented at various meetings
 by PHP professionals<br></li>
 </ul>
 
+<h4>PHP Support Companies</h4>
+
+<ul>
+<li><a href="http://www.zend.com/">Zend.com</a><br>
+Zend Technologies offers many PHP related products, support,
+and many more PHP related content.<br></li>
+
+<li><a href="http://www.thinkphp.de/">ThinkPHP.de</a><br>
+A German PHP support company, founded by some of the core
+PHP developers.<br></li>
+</ul>
+
 <h4>PHP Link Catalogs</h4>
 
 <ul>
@@ -137,7 +149,7 @@ Introductory tutorial<br></li>
 <li><a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br>
 Lots of tutorials/instructions related to Apache, PHP and MySQL<br></li>
 
-<li><a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a><br>
+<li><a href="http://www.melonfire.com/community/columns/trog/archives.php?category=PHP">Melonfire</a><br>
 A series of PHP tutorials for novices<br></li>
 
 <li><a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br>
