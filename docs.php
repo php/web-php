@@ -45,9 +45,9 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
 <H1>Downloadable PHP Manuals</H1>
 <H2>HTML Version</H2>
 <ul>
-<li><?php download_link("bigmanual.html", "PHP HTML Manual (one BIG file)"); ?>
-<li><?php download_link("manual.zip", "PHP HTML Manual ZIP File"); ?>
-<li><?php download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
+<li><?php download_link("manual/en/bigmanual.html", "PHP HTML Manual (one BIG file)"); ?>
+<li><?php download_link("manual/en/manual.zip", "PHP HTML Manual ZIP File"); ?>
+<li><?php download_link("manual/en/manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
 </ul>
 <H2>Latest versions (daily snapshots)</H2>
 <ul>
@@ -88,7 +88,7 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
 <ul>
 <li><?php download_link("manual.rtf", "PHP Manual RTF File"); ?>
 <li><?php download_link("manual_isilo.pdb","PHP Manual - PalmPilot Isilo format"); ?>
-<li><?php download_link("manual_doc.pdb","PHP Manual - PalmPilot DOC format"); ?>
+<li><?php download_link("manual/en/manual_doc.pdb","PHP Manual - PalmPilot DOC format"); ?>
 </ul>
 
 <H1>Translations</H1>
