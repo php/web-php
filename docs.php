@@ -51,14 +51,14 @@ the table below.
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2" width="100%">
-<tr bgcolor="#cccccc"><th>Format</th><th>Languages</th></tr>
+<tr bgcolor="#cccccc"><th>Formats</th><th>Languages</th></tr>
 <tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
 <?php
 
-  $langcount = count($man_languages);
+  $lastlang = count($man_languages);
   foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
-    echo ($langcount != $langnum) ? ", " : "";
+    echo ($lastlang != $langnum) ? ", " : "";
   }
 
 ?>
@@ -68,7 +68,7 @@ the table below.
 
   foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>';
-    echo ($langcount != $langnum) ? ", " : "";
+    echo ($lastlang != $langnum) ? ", " : "";
   }
 
 ?>
