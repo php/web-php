@@ -326,12 +326,12 @@ $books = array (
    ),
 
 
-   array( "PHP 4 + MySQL",    #title(s)
-      "http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet07", #title_link
+   array( "PHP 4 und MySQL",    #title(s)
+      "http://www.amazon.de/exec/obidos/ASIN/3815822033/wwwphpnet07", #title_link
       array("Rolf D. Stoll", "Gudrun Anna Leierer"), #author(s)
       "", #author_link(s)
       "databecker.gif", #img
-      "Data Becker, July 2000, ISBN 3-8158-2043-X, 439 pages", #info
+      "Data Becker, July 2001, ISBN 3-8158-2203-3, 414 pages", #info
       "http://www.databecker.de/", #info_link
       "de"  #lang
    ),
