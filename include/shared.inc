@@ -631,7 +631,17 @@ function commonFooter() {
    </TABLE>
   </TD>
  </TR>
+
+<TR>
+<TD ALIGN="right" COLSPAN=3>
+<FONT SIZE=-2>
+Some elements of this website are subject to <A HREF="/COPYRIGHT.txt">copyright</A>.<BR>
+</FONT>
+</TD>
+</TR>
+
 </TABLE>
+
 
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
