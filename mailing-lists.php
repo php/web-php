@@ -147,6 +147,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, false, "php.doc"
     ),
     Array (
+      'php-doc-chm', 'PHP CHM documentation list',
+      'List for developers of the Windows Help-format PHP documentation',
+      false, false, true, "php.doc.chm"
+    ),
+    Array (
       'php-gtk-doc', 'PHP-GTK documentation list',
       'List for the authors of the PHP-GTK documentation with CVS commits',
       false, true, false, "php.gtk.doc"
