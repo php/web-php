@@ -101,7 +101,7 @@ elseif (preg_match("!^manual/(\\w+)/(print|html)(/)?$!", $uri, $parts)) {
 }
 
 // ============================================================================
-// Define shortcuts for PHP and manual pages
+// Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
 
     # PHP page shortcuts
@@ -125,7 +125,15 @@ $uri_aliases = array (
     "windows"     => "install.windows",
     "win32"       => "install.windows",
     "globals"     => "security.registerglobals",
+    
+    # external manual shortcut aliases ;)
+    "dochowto"    => "phpdochowto"
+    
+);
 
+$external_redirects = array(
+    "phpdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz",
+    "php4news"    => "http://cvs.php.net/co.php/php4/NEWS?p=1"
 );
 
 // ============================================================================
@@ -142,6 +150,13 @@ if (file_exists("$DOCUMENT_ROOT/$uri.php")) {
 }
 
 // ============================================================================
+// Execute external redirect if a rule exists for the URI
+if (isset($external_redirects[strtolower($uri)])) {
+    header("Location: " . $external_redirects[strtolower($uri)]);
+    exit;
+}
+
+// ============================================================================
 // Try to find the URI as a manual entry
 require "manual-lookup.inc";
 if (strchr($uri,'/')) {
@@ -150,7 +165,7 @@ if (strchr($uri,'/')) {
 	list($lang,$function) = explode('/',$uri,2);
 
     $function = strtolower($function);
-    $lang     = strtolower($lang);
+    if ($lang != 'pt_BR') { $lang = strtolower($lang); }
 
     // Transform function name, so it can be a shortcut
 	if (isset($uri_aliases[$function])) {
@@ -162,22 +177,12 @@ if (strchr($uri,'/')) {
 }
 
 // ============================================================================
-// Quick access to revcheck output, build logs and howto for manual writers
+// Quick access to revcheck output and build logs for various languages
 if ($function == "rev") {
     header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html.gz");
     exit;
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
-    exit;
-} elseif (in_array($function, array("dochowto", "phpdochowto"))) {
-    header("Location: http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz");
-    exit;
-}
-
-// ============================================================================
-// Link to PHP4 NEWS file
-elseif ($function == "php4news") {
-    header("Location: http://cvs.php.net/co.php/php4/NEWS?p=1");
     exit;
 }
 
