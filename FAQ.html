@@ -377,6 +377,22 @@ README.WIN32 file.
     to <B>return</B> the value, not echo it.
   <P>
   </DD>
+
+  <DT><B>
+	I need to access information in the request header directly.  How can
+	I do this?
+  </B></DT>
+  <DD>
+	The getallheaders() function will do this if you are running PHP as a
+	module.  So, the following bit of code will show you all the request
+	headers:<PRE>
+    $headers = getallheaders();
+    do {
+        $key = key($headers);
+        echo "headers[$key] = ".$headers[$key]."&lt;br&gt;\n";
+    } while (next($headers));
+	</PRE>
+	</DD>
 </DL>
 
 <H3>New Features</H3>
