@@ -147,9 +147,10 @@ removed right away.</blockquote>
 	site("Christian Financial Concepts","cfcministry.org");
 	siteEnd();
 
-/* Service Industry */
-	title("Service Industry");
+/* Retail - Service Industry */
+	title("Retail & Service Industry");
 	siteStart();
+	site("Patagonia Clothing","www.patagonia.com");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	siteEnd();
