@@ -400,13 +400,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	  	$divider = '---------------------------------------------------------------------------';
 
 		#fetch comments
-		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug=$bug_id and id != '$last_comment_id' order by ts desc");
-		while ($temp = @ mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
+		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id and id != '$last_comment_id' order by ts desc");
+		while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
 			$comments[] = $temp;
 
 	  	#fetch original bug description
 		$result = mysql_query("SELECT ts1, email, comments from bugdb where id=$bug_id");
-		$comments[] = mysql_fetch_row($result);
+		$comments[] = mysql_fetch_row ($result);
 
 		foreach ($comments as $value)
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
@@ -445,7 +445,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 
-			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($bug_id, $last_comment_id);
+			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($id, $last_comment_id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
@@ -487,7 +487,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
 			$text .= "Description: $esdesc\n\n$ncomment";
-			$text .= get_old_comments ($bug_id, $last_comment_id);
+			$text .= get_old_comments ($id, $last_comment_id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
