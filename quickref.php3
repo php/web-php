@@ -1,7 +1,7 @@
 <?
 require("shared.inc");
 
-$NUMACROSS=3;
+$NUMACROSS=2;
 $d = dir("$DOCUMENT_ROOT/manual");
 while($entry=$d->read()) {
 	if (substr($entry, 0, 1) == ".") {
@@ -21,7 +21,7 @@ function makeTable($array) {
 	$limit=intval($c/$NUMACROSS)+1;
 	echo "<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0>\n";
 	echo "<TR VALIGN=top>\n";
-	echo "<TD><FONT FACE=$FONTFACE SIZE=-1>\n";
+	echo "<TD><FONT FACE=\"" . $FONTFACE . "\" SIZE=-1>\n";
 	while (list($file,$name)=each($array)):
 		if ($i%$limit==0):
 			echo "</TD><TD>\n";
