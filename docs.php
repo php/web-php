@@ -81,21 +81,6 @@ For other downloadable formats, please visit our
 
 <?php echo hdelim(); ?>
 
-<h1>Annotated PHP Manual</h1>
-<ul>
-<li>The <a href="http://www.php.net/manual/">Annotated PHP Manual</A> is
-    the same as the above, except there is a built-in errata/note system
-    that users all around the world can (and have!) contributed to. Of
-    all of the documentation, this will be the most current version,
-    as it is updated (and annotated) daily.</li>
-
-<li><a href="http://www.php.net/manual/browse-errata.php">PHP Manual
-    Errata</a>. This is the collected errata from the on-line
-    errata/note system.</li>
-</ul>
-
-<?php echo hdelim(); ?>
-
 <h1>French PHP Manual</h1>
 
 <p>
