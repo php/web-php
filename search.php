@@ -118,7 +118,7 @@ Restrict the search to: <BR>
 </FORM>
 <? } else {
 		commonHeader("Search Results");
-		if ($HAVE_SEARCH && is_set($htsearch_prog)) {
+		if ($HAVE_SEARCH && isset($htsearch_prog)) {
 			$form=$PHP_SELF;
 		} else {
 			$form="http://uk.php.net/search.php";
