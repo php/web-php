@@ -508,6 +508,7 @@ of grouping them all in one report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+    <option name="3.0.4">3.0.4
     <option name="3.0.3">3.0.3
     <option name="3.0.2a">3.0.2a
     <option name="3.0CVS">3.0 Latest CVS

@@ -3,7 +3,7 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<h3>PHP 3.0.3 has been released</h3>
+<h3>PHP 3.0.4 has been released</h3>
 
 Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
 what is new in this release. All users of earlier versions are encouraged 
