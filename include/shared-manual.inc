@@ -193,7 +193,7 @@ function manualGetUserNotes($title, $id) {
 					"id" => $id,
 					"sect" => $sect,
 					"rate" => $rate,
-					"ts" => $ts,
+					"xwhen" => $ts,
 					"user" => $user,
 					"note" => base64_decode($note)
 				);
