@@ -240,6 +240,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <OPTION VALUE="quickref" SELECTED>function list
 <OPTION VALUE="nosource">whole site
 <OPTION VALUE="manual">online documentation
+<OPTION VALUE="bugdb">bug database
 <OPTION VALUE="maillist">general mailing list
 <OPTION VALUE="devlist">developer mailing list
 <OPTION VALUE="phpdoc">documentation mailing list 
