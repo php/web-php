@@ -9,11 +9,12 @@ unset($SIDEBAR_DATA);
 // from outside PHP. But it should be noted that these variables
 // are not necessarily superglobals, so they need to be global-ed!
 if (!isset($_SERVER)) {
-    $_GET    = &$HTTP_GET_VARS;
-    $_POST   = &$HTTP_POST_VARS;
-    $_ENV    = &$HTTP_ENV_VARS;
-    $_SERVER = &$HTTP_SERVER_VARS;
-    $_COOKIE = &$HTTP_COOKIE_VARS;
+    $_GET     = &$HTTP_GET_VARS;
+    $_POST    = &$HTTP_POST_VARS;
+    $_ENV     = &$HTTP_ENV_VARS;
+    $_SERVER  = &$HTTP_SERVER_VARS;
+    $_COOKIE  = &$HTTP_COOKIE_VARS;
+    $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
 }
 
 // Load in always required parts
@@ -25,5 +26,24 @@ include_once 'geoip.inc';
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
 include_once 'last_updated.inc';
+
+// Function used to import request vars to global scope.
+// Walks through $array, and import all values associated
+// with elements listed in $keys to the global scope
+function import_vars(&$array, $keys)
+{
+    // Wrong parameters passed
+    if (!is_array($array) || !is_array($keys)) { return FALSE; }
+    
+    // Walk through all requested keys
+    foreach ($keys as $keyname) {
+        
+        // If there is a value in the arary for this key,
+        // import it to the global scope (without copying)
+        if (isset($array[$keyname])) {
+            $GLOBALS[$keyname] = &$array[$keyname];
+        }
+    }
+}
 
 ?>
