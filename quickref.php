@@ -82,7 +82,16 @@ good matches are in bold).  Perhaps you were looking for one of these:
 If you want to search the entire PHP website for the string &quot;<B><? echo $notfound; ?></B>&quot;, 
 then <? print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
 </P>
-<? } ?>
+
+<p>
+For a quick overview over all PHP functions, 
+<? print_link('quickref.php', 'click here') ?>.
+</p>
+<? 
+  commonFooter();
+  exit;
+} 
+?>
 
 <P>
 Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
