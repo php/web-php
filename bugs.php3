@@ -149,7 +149,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
 			case "modify":
-				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arraw.gif\" border=\"0\"></a>\n";
+				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
 			default:
 				print $data;
