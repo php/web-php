@@ -279,6 +279,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Mod":
 				print "<a href=\"bugs.php?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
+
+			case "Status":
+				if ($data == "Feedback") {
+					echo "Feedback<br>(".$row["unchanged_days"]." days)";
+					break;
+				}
+				/* otherwise fall through */
+
 			default:
 				$data = ereg_replace("<","&lt;",$data);
 				$data = ereg_replace(">","&gt;",$data);
@@ -342,20 +350,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$dont_link["Mod"]=1;
 	$dont_display["unchanged_days"] = 1;
 	
-	function processing_function($fieldname,$tablename,$data, &$row)
-	{
-		echo "<!-- $fieldname $tablename $data -->\n";
-		if ($fieldname == 'Status' and $data == 'Feedback') {
-			echo "Feedback<br>(".$row["unchanged_days"]." days)";
-		} else {
-			$df = ereg_replace("<", "&lt;", $data);
-                        $df = ereg_replace(">", "&gt;", $df);
-			echo "$df\n"; 
-		}
-	}
-
-	$external_processing_function = processing_function;
-
 	if (!isset($order_by_clause)) {
 		$order_by_clause = "id";
 	}
