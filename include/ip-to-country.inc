@@ -138,7 +138,7 @@ function i2c_search_in_db($ip, $idx)
     if (!$ipdb) { return $country; }
 
     // Jump to record $idx
-    fseek($ipdb, $idx[0]*24);
+    fseek($ipdb, ($idx[0] ? (($idx[0]-1)*24) : 0));
     
     // Read records until we hit the end of the file,
     // or we find the range where this IP is, or we
