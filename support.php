@@ -201,7 +201,7 @@ discussions).
   <li><a href="news:de.comp.lang.php">German PHP Newsgroup</a>
   <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
   <li><a href="http://www.egroups.com/group/php-pt/info.html">Portuguese PHP User's Mailing List</a>
-  <li><a href="mailto:php-subscribe@listserver.iwcc.com.ar">Spanish PHP User's Mailing List</a>
+  <li><a href="mailto:lista-subscribe@phpes.com">Spanish PHP User's Mailing List</a>
   <li><a href="http://phptr.baslangic.net/">Turkish PHP User's Mailing List</a>
 </ul>
 
