@@ -45,12 +45,17 @@ Once you have done the above and your site appears to work, send a message to
 mirrors@php.net with your information and appropriate steps will be taken to 
 integrate your mirror site.  You should also include in your email the following:
 
+- the name and email of the admin for the mirror
 - a logo for your hosting company, or the URL of where we can get one
   (the better the quality, the better)
 - the URL of the site that hosts the mirror (this is where people will go when 
   they click on the logo at the bottom of each page)
 
 Don't worry about graphics for your country's flag - we've got them all!
+
+You should also consider signing up to the mirrors mailing list (send an
+empty message to php-dev-subscribe@lists.php.net).  Traffic is pretty light ...
+and we *do* want to be able to keep in touch with you!
 
 And don't forget to put a nice little PHP logo on your hosting company's site 
 (if possible)!  Grab one of the logos from the "Downloads" page on the PHP site, 
