@@ -201,6 +201,7 @@ function show_types($first_item,$show_any,$var_name) {
                     "Program Execution" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program Execution",
                     "Semaphore related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semaphore related",
                     "Readline related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Readline related",
+                    "Satellite CORBA related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite CORBA related",
 
                     "*E-commerce functions" => "&nbsp;&nbsp;&nbsp;&nbsp;E-commerce functions",
                     "Cybercash related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cybercash related",
@@ -255,8 +256,6 @@ function show_types($first_item,$show_any,$var_name) {
                     "*Regular Expressions" => "&nbsp;&nbsp;&nbsp;&nbsp;Regular Expressions",
                     "PCRE related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCRE related",
                     "Regexps related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regexps related",
-
-					"Satellite CORBA related" => "Satellite CORBA related",
 
                     "*Session related" => "&nbsp;&nbsp;&nbsp;&nbsp;Session related",
 
