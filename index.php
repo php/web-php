@@ -150,6 +150,36 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
+<h1>php|works in Toronto, Canada</h1>
+<p>
+ <span class="newsdate">[16-Jun-2004]</span>
+ <a href="http://www.phparch.com">php|architect</a> magazine is proud to
+ introduce <a href="http://www.phparch.com/phpworks">php|works 2004</a>, a
+ three-day conference on PHP and the business of open-source software that
+ will be held in Toronto, Canada, September 22-24 2004.
+</p>
+<p>
+ The conference includes a total of over 30 hours of technical and
+ business-oriented presentations that range from Rasmus Lerdorf's "Best
+ Practices for PHP Developers" to "Getting your OSS Business Funded",
+ presented by venture capital specialist Christian Mayaud. Other sessions
+ include practical talks on PHP5, regular expressions, multilingual
+ development, PDO, XML and OOP. The business track includes sessions on the
+ use of PHP in the legal, financial and healthcare industry, growing your
+ business with OSS, the status of the PHP market and much, much more!
+</p>
+<p>
+ As an added bonus, attendees who sign up before July 20th are
+ eligible for up to $100 in early-bird savings.
+</p>
+<p>
+ For more information, visit the <a
+ href="http://www.phparch.com/phpworks">php|works website</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://lamparea.org/en", "lamparea.png", "Lamp Area"); ?>
 <h1>LAMP area at LinuxTag 2004 in Karlsruhe, Germany</h1>
 <p>
