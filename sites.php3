@@ -80,6 +80,7 @@ right away.</blockquote>
 	site("Knowledge Adventure","www.knowledgeadventure.com");
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
+	site("Skinz","www.skinz.org");
 	siteEnd();
 
 /* Educational/Research */
