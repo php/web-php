@@ -277,8 +277,8 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">
-    <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);">
       <td align="right" valign="bottom">
+<form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);">
       <script language="javascript">
       <!--
         function gotomirror(form) {
@@ -309,7 +309,6 @@ function commonFooter() {
 	echo make_submit('small_submit.gif', 'go', 'bottom' );
       ?>&nbsp;<br>
       </td>
-    </form>
   </tr>
   <tr bgcolor="#333366"><td><?php spacer(1,1); ?><br></td></tr>
 </table>
@@ -329,6 +328,8 @@ function commonFooter() {
     </td>
   </tr>
 </table>
+
+</form>
 
 </body>
 </html>
