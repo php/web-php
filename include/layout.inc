@@ -247,7 +247,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <select name="show" class="small">
 <option value="quickref" selected>function list
 <option value="wholesite">whole site
-<option value="manual">online documentation
+<option value="manual">online documentation [en]
 <option value="bugdb">bug database
 <option value="maillist">general mailing list
 <option value="devlist">developer mailing list
