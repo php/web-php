@@ -90,6 +90,25 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php /* move this entry to the top when you update it! */ ?>
+
+<h1>
+<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For July available
+</h1>
+
+<p>
+<font class="newsDate">[02-Aug-2001]</font>
+<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?>
+have published the current results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the 
+<?php print_link("/usage.php", "usage page"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
 PHP-GTK version 0.1 released</h1>
 
@@ -169,25 +188,6 @@ The <a href="/docs.php">manual page</a> now shows the new .tar.bz2 packaging
 for some languages, and we are also working to get the PDF format back, and update
 all the chm manuals soon. Check out our new <a href="/cal.php">Event Calendar</a>
 where you can add your groups PHP events, and see what is already there.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php /* move this entry to the top when you update it! */ ?>
-
-<h1>
-<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For June available
-</h1>
-
-<p>
-<font class="newsDate">[21-Jul-2001]</font>
-<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<?php print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
-published the current results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the 
-<?php print_link("/usage.php", "usage page"); ?>.
 <br clear="all">
 </p>
 
