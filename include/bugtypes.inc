@@ -1,6 +1,6 @@
 <?php
 $items = array (
-	"Any" => "Any",
+	"Any" => "Any (except Feature Requests)",
 
 	"*General Issues" => "General Issues",
 	"Feature/Change Request"   => "&nbsp;&nbsp;&nbsp;&nbsp;Feature/Change Request",

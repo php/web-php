@@ -56,8 +56,6 @@ echo "<font size=\"-1\">\n";
   </tr>
  </form>
 </table>
-<i>Feature/Change requests must be explicitly selected to be shown.</i>
-<p></p>
 <hr />
 <?php
 
@@ -565,7 +563,7 @@ function show_types($current,$show_any,$default="") {
 	}
 
 	while (list($key,$value) = each($items)) {
-		if ($show_any || $value != "Any") {
+		if ($show_any || $key != "Any") {
 			echo "<option value=\"$key\"",
 				 ($key == $current? " selected" : ""),
 				 ">$value</option>\n";
