@@ -108,6 +108,7 @@ right away.</blockquote>
 	site("AAA-CT La Salle","www.salleURL.edu/AnticsAlumnes/index.html");
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
+	site("ClassWorld","www.classworld.net");
 	site("DevilNet at Duke University", "devilnet.duke.edu");
 	site("Devry Technical Institute Financial Aid","finance.devry.edu");
 	site("Digital Metrics","www.digitalmetrics.com");
@@ -376,6 +377,7 @@ right away.</blockquote>
 	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
 	site("University Christian Fellowship Vineyard","www.ucf.org");
+	site("ZoeHouse","www.zoehouse.com");
 	siteEnd();
 
 /* Retail - Service Industry */
@@ -483,6 +485,7 @@ right away.</blockquote>
 	site("Albany New York PowerBuilder User Group","www.anypbug.org");
 	site("Lugistics - LUG Software","server.hellug.gr/LUGistics/en/pub/");
 	site("Maximilian Bayer","mb.users.de");
+	site("Melbourne Linux User Group","www.mlinux.org");
 	site("RC5.de","www.rc5.de");
 	siteEnd();
 
@@ -494,6 +497,7 @@ right away.</blockquote>
 	site("FUMOT","www.fumot.com");
 	site("GreyZone","www.greyzone.com");
 	site("I-D Gruppe","www.idgruppe.com");
+	site("NGenius","www.ngenius.com");
 	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
 	siteEnd();
