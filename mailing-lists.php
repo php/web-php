@@ -48,7 +48,8 @@ are searchable. There is an experimental web interface for the news
 server at <a href="http://news.php.net/">http://news.php.net/</a>.
 </p>
 <p>
-<b>Note:</b> When posting to mailing lists or newsgroups, please keep the following in mind:
+ <b>Note:</b> When posting to mailing lists or newsgroups, please keep the following in mind:
+</p>
 <ul>
 <li> Use a valid email address. Every new poster's email address is checked for validity through confirmation.</li>
 <li> Send plain ASCII messages, no HTML-formatted emails please.</li>
@@ -60,7 +61,6 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 <li> When asking a question, don't just tell us, &quot;it doesn't work&quot;.  Tell us what you are trying to
 accomplish, a <b>short</b> code snippet showing how you tried to solve it, what you expected to get and what you got instead.</li>
 </ul>
-</p>
 <?php
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
@@ -252,7 +252,6 @@ function output_lists_table($mailing_lists)
 ?>
 
 <form method="post" action="http://www.php.net/mailing-lists.php">
-<p>
 <h1><a name="local">General Mailing Lists</a></h1>
 <?php
 
@@ -260,9 +259,7 @@ function output_lists_table($mailing_lists)
 	output_lists_table($general_mailing_lists);
 
 ?>
-</p>
 
-<p>
 <h1><a name="local">Internals Mailing Lists</a></h1>
 <?php
 
@@ -270,11 +267,10 @@ function output_lists_table($mailing_lists)
 	output_lists_table($internals_mailing_lists);
 
 ?>
-</p>
 
 <p align="center">
 <b>Email:</b>
-<input type="text" name="email" width="40" value="user@example.com">
+<input type="text" name="email" size="40" value="user@example.com">
 <input type="submit" name="action" value="Subscribe">
 <input type="submit" name="action" value="Unsubscribe">
 </p>

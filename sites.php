@@ -57,7 +57,7 @@ commonHeader("A Tourist's Guide");
 <h2>
  <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials and
  <a href="http://conf.php.net/">conf.php.net</a>: Older Conference Materials
-</h3>
+</h2>
 
 <p>
  This is where speakers at various PHP-related conferences keep their slides.

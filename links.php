@@ -226,13 +226,13 @@ Site with information on a PHP course at a Dutch college.</li>
 <li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br />
 Web Programming Resource - PHP Tutorials</li>
 
-<li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&ob=3">Tutorialfind</a><br />
+<li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&amp;ob=3">Tutorialfind</a><br />
 A growing list of PHP tutorials at TutorialFind</li>
 
 <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br />
 The PHP section on the famous Webmonkey tutorial site</li>
 
-<li><a href="http://www.zend.com/zend/tut/">Zend.com DevZone<br />
+<li><a href="http://www.zend.com/zend/tut/">Zend.com DevZone</a><br />
 The tutorials section on the Zend.com developer zone</li>
 
 </ul>
@@ -311,10 +311,10 @@ Commercial accelerator available from Zend Technologies, Inc.</li>
 <h4>PHP Merchandise</h4>
 
 <ul>
-<li><a href="http://www.copyleft.net/search.phtml?search=1&lookup%5Bbrand_id%5D=47">Copyleft</a><br />
+<li><a href="http://www.copyleft.net/search.phtml?search=1&amp;lookup%5Bbrand_id%5D=47">Copyleft</a><br />
 Some t-shirts, hats and stickers with the Copyleft variant of the PHP logo on them.</li>
 
-<li><a href="http://www.cafeshops.com/cp/searchresults_x.aspx?criteria=storeid&searchstring=php">PHP projects' merchandise</a><br />
+<li><a href="http://www.cafeshops.com/cp/searchresults_x.aspx?criteria=storeid&amp;searchstring=php">PHP projects' merchandise</a><br />
 A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)</li>
 </ul>
 
@@ -402,7 +402,8 @@ More than 500 PHP applications, listed and sorted</li>
 Site traitant du PHP pour les professionels (php et flash, mysql, postgresql, pear,...)</li>
 
 <li><a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</A> :
-<a href="news://fr.comp.lang.php">fr.comp.lang.php</a></li> (anciennement fr.comp.infosystemes.www.auteurs.php).
+<a href="news://fr.comp.lang.php">fr.comp.lang.php</a><br />
+(was: fr.comp.infosystemes.www.auteurs.php)</li>
 
 </ul></li>
 <li><b>German</b>
