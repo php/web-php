@@ -1,14 +1,16 @@
 <?php
 	include_once 'prepend.inc';
-
-	$RSIDEBAR_DATA = <<<EOF
-<br><br>
-&nbsp;<a href="http://www.php.net/cal.php">Complete Event Calendar</a><br><br>
-&nbsp;<a href="http://www.php.net/cal.php?a=1">Add an Event</a><br><br>
-EOF;
 	commonHeader('Upcoming Events');
 ?>
 <h1>Upcoming Events</h1>
+
+<p>
+If you would like to see the list of events in a calendar format,
+visit the <a href="http://www.php.net/cal.php">complete event calendar</a>.
+You can also add events yourself with our "<a href="http://www.php.net/cal.php?a=1">Add
+an Event</a>" form.
+</p>
+
 <?
 
 	$re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
