@@ -61,3 +61,4 @@ us	us.php.net	Troy Cobb <tcobb@staff.circle.net>	209.95.65.70
 us	us2.php.net	Gary Shaver <gshaver@he.net>, Mike Leber <mleber@he.net>	php.he.net
 us	us4.php.net	Hans Kind <hans@kindserver.com>	208.230.143.24	same as php.myphp.net
 za	za.php.net	<php@mikom.csir.co.za>	146.64.8.136
+za	za2.php.net	Jacques Marneweck <jacques@sunnyline.co.za>	php.serenity.org.za

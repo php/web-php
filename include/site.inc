@@ -58,6 +58,7 @@ $MIRRORS = array(
    "http://sg.php.net/"               => array("sg", "Hwa Chong Junior College", 0, "http://www.hjc.edu.sg/", 1, 0, "en"),
    "http://sk.php.net/"               => array("sk", "Isternet SR", 0, "http://www.isternet.sk/", 1, 0, "sk"),
    "http://za.php.net/"               => array("za", "CSIR Mikomtek", 0, "http://www.mikom.csir.co.za/", 1, 0, "en"),
+#   "http://za2.php.net/"               => array("za", "Sunnyline Internet Services", 1, "http://www.sunnyline.co.za/", 1, 0, "en"),
    "http://es.php.net/"              => array("es", "GRN Serveis Telematics", 0, "http://www.grn.es/classic", 1, 0, "ca"),
    "http://se.php.net/"               => array("se", "Chalmers Lindholmen", 0, "http://www.chl.chalmers.se/", 1, 1, "se"),
    "http://se2.php.net/"              => array("se", "Burken.NU", 0, "http://www.burken.nu/", 1, 0, "en"),
