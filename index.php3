@@ -3,7 +3,12 @@ require("shared.inc");
 commonHeader("PHP:  Hypertext Preprocessor");
 ?>
 
-<h3><a href="y2k.php3">Year 2000 Compliance Statement</a></h3>
+<h3>Year 2000 Compliance</h3>
+
+Just like your C compiler or your favourite text editor, PHP is just about
+year 2000 compliant as your pencil.  If you're still worried (perhaps all
+pencils are built to break on December 31st 1999?) - 
+<a href="y2k.php3">read this</a>.
 
 <h3>PHP Meaning Vote</h3>
 
