@@ -13,7 +13,7 @@ if (isset($_SERVER['HTSEARCH_PROG'])) {
     $htsearch_prog = $_SERVER['HTSEARCH_PROG'];
     $searchtype = 1;
 }
-if (!is_executable($htsearch_prog)) {
+if (!@is_executable($htsearch_prog)) {
     unset($htsearch_prog);
 }
 if (!isset($htsearch_prog)) {

@@ -27,7 +27,7 @@ if (isset($_SERVER['HTSEARCH_PROG'])) {
 
 // If the program to use to search is not excutable, we cannot
 // get search results, regardless of what we do
-if (!is_executable($htsearch_prog)) {
+if (!@is_executable($htsearch_prog)) {
     unset($htsearch_prog);
 }
 
