@@ -14,7 +14,8 @@ So, if I could ask each of you to take a few moments out of your day
 sometime in the next couple of weeks and send a postcard from
 wherever you are to the address below.  I think it would be a fun way
 to give her an idea of just how many people PHP has reached around
-the world. <br> 
+the world. <br> No gifts, please.  Just a nice postcard with a nice
+picture of something in your area would be perfect.<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;<table><tr bgcolor=#CCCCCC><th align=left>
 Christine & Rasmus<br>

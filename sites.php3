@@ -85,6 +85,7 @@ right away.</blockquote>
 	siteStart();
 	site("Apache Web Server","www.apache.org");
 	site("Be","www.be.com");
+        site("BetaNews.Com","www.betanews.com");
 	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("Cornado Internet Applications","www.cornado.com");
@@ -130,6 +131,7 @@ right away.</blockquote>
 	siteStart();
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
+	site("Digital Theatre","http://www.dtheatre.com");
 	site("EduTest.Com","www.edutest.com");
 	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
@@ -493,6 +495,7 @@ right away.</blockquote>
 	title("Web Development Companies");
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
+	site("ego Software","www.ego-software.com");
 	site("Espada Ltd.","www.espadanet.com");
 	site("FUMOT","www.fumot.com");
 	site("GreyZone","www.greyzone.com");
