@@ -144,7 +144,7 @@ $books = array (
     /* title[s]     */ "Programmieren lernen in PHP 4. Ein kompakter Einstieg in die Webserverprogrammierung",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446217541/wwwphpnet07",
     /* author[s]    */ "Jörg Krause",
-    /* auth link[s] */ ,
+    /* auth link[s] */ "",
     /* image        */ "programmierenlernenphp4.jpg",
     /* information  */ "Hanser, 2001, ISBN 3-4462-1754-1, 394 pages",
     /* inform. link */ "http://www.php.comzept.de/",
