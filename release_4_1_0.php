@@ -109,12 +109,12 @@ being on (i.e., on form, server and environment variables becoming
 a part of the global namespace, automatically) are very often 
 exploitable to various degrees.  For example, the piece of code:</p>
 
-<?php highlight_string('
+<?php highlight_string('<?php
 if (authenticate_user()) {
   $authenticated = true;
 }
 ...
-');?>
+?>');?>
 
 <p>May be exploitable, as remote users can simply pass on 'authenticated'
 as a form variable, and then even if authenticate_user() returns false,
@@ -151,11 +151,12 @@ they're also special in another way - they're automatically global in any
 scope.  This means that you can access them anywhere, without having to
 'global' them first.  For example:</p>
 
-<?php highlight_string('
+<?php highlight_string('<?php
 function example1()
 {
 	print $_GET["name"];   // works, \'global $_GET;\' is not necessary!
-}');?>
+}
+?>');?>
 
 <p>would work fine!  We hope that this fact would ease the pain in migrating
 old code to new code a bit, and we're confident it's going to make writing
