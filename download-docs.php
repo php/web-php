@@ -160,7 +160,7 @@ if (count($found_formats) == 0) {
                 echo "<a href=\"$fileinfo[0]\"";
 
                 // Only print out tooltip, if explicit information is not printed
-                if (!$sizes && !$preflang) {
+                if (!isset($_GET['sizes']) && !$preflang) {
                     echo " title=\" Size: $fileinfo[1]Kb -- Date: $fileinfo[2]\"";
                 }
 
@@ -168,7 +168,7 @@ if (count($found_formats) == 0) {
                 echo ">$fileinfo[3]</a>";
 
                 // Sizes required to be printed out (URL parameter or preferred language)
-                if ($sizes || $preflang) {
+                if (isset($_GET['sizes']) || $preflang) {
                     echo "<br /><small>Size: $fileinfo[1]Kb<br />Date: $fileinfo[2]</small>";
                 }
             }
