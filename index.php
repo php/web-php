@@ -76,11 +76,25 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php /* move this entry to the top when you update it! */ ?>
+<h1>New Windows Help Features Under Development</h1>
 
-<h1>
-PHP-GTK Documentation Update
-</h1>
+<p>
+<font class="newsDate">[28-Oct-2001]</font>
+The Windows Help format of the PHP Manual is popular because
+of the full text search, index, TOC tree, and bookmarking
+features. We would like to go further and add more: user
+comments, online functions, and many visual enhancements.
+You can help us! Please download the sample, and tell us what
+you think about it. We are also looking for a graphics designer,
+who can help us out with a cool new design. 
+<?php print_link("http://weblabor.hu/php/newchm.html",
+"See the temporary page of the new CHM manual."); ?> 
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP-GTK Documentation Update</h1>
 
 <p>
 <font class="newsDate">[18-Oct-2001]</font>
@@ -95,6 +109,8 @@ let us know.
 </p>
 
 <?php echo hdelim(); ?>
+
+<?php /* move this entry to the top when you update it! */ ?>
 
 <h1>
 <?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
