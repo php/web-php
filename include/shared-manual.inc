@@ -71,13 +71,13 @@ function makeBorderTOC($this)
 	echo "<TR VALIGN=top>\n";	
     echo "<TD COLSPAN=3>";
 	if(substr($file,-5)=='.php3') $file = substr($file,0,-1);
-	if($cur!='ual') echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
-	if($cur!='/de' && is_file("$DOCUMENT_ROOT/manual/de/$file")) echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
-	if($cur!='/ja' && is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
-	if($cur!='/it' && is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
-	if($cur!='/fr' && is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
-	if($cur!='/hu' && is_file("$DOCUMENT_ROOT/manual/hu/$file")) echo "<a href=\"/manual/hu/$file\"><img src=\"/gifs/flag-hu.gif\" valign=bottom height=24 width=45 alt=\"Hungarian version of this page\"></a>";
-	if($cur!='/es' && is_file("$DOCUMENT_ROOT/manual/es/$file")) echo "<a href=\"/manual/es/$file\"><img src=\"/gifs/flag-es.gif\" valign=bottom height=24 width=45 alt=\"Spanish version of this page\"></a>";
+	echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
+	if(is_file("$DOCUMENT_ROOT/manual/de/$file")) echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
+	if(is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
+	if(is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
+	if(is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
+	if(is_file("$DOCUMENT_ROOT/manual/hu/$file")) echo "<a href=\"/manual/hu/$file\"><img src=\"/gifs/flag-hu.gif\" valign=bottom height=24 width=45 alt=\"Hungarian version of this page\"></a><br>";
+	if(is_file("$DOCUMENT_ROOT/manual/es/$file")) echo "<a href=\"/manual/es/$file\"><img src=\"/gifs/flag-es.gif\" valign=bottom height=24 width=45 alt=\"Spanish version of this page\"></a>";
 	echo "</TD></TR>\n";
 
     for ($i = 0; $i < count($TOC); $i++) {
