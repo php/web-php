@@ -138,6 +138,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Scripting Engine problem",
 				   "Reproduceable crash",
 				   "Performance problem",
+				   "cURL related",
 				   "Dynamic loading related",
 				   "MySQL related",
 				   "mSQL related",
@@ -405,7 +406,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	  	#fetch original bug description
 		$result = mysql_query("SELECT ts1, email, comments from bugdb where id=$bug_id");
-		$comments[] = mysql_result($result);
+		$comments[] = mysql_fetch_row($result);
 
 		foreach ($comments as $value)
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
