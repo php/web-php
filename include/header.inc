@@ -12,6 +12,9 @@
     "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom"),
 	"http://www.php.net/"	 => array("usa", "Circle Net, United States")
   );
+  $ftp_sites = array(
+   "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States")
+  );
 
   function download_link($file, $title) {
       if ($tmp = strrchr($file, "/")) {
