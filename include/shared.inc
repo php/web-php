@@ -180,7 +180,7 @@ function kickHeader($offset,$side,$width) {
 	echo "</TR>\n";
 	echo "<TR VALIGN=top><TD BACKGROUND='/gifs/kick-bl.gif' width=9>";
 	spc(9,1);
-	echo "<BR></TD>\n<TD BACKGROUND='/gifs/kick-bg.gif' width=$innerwidth><FONT $FONTFACEATTR SIZE=-1>\n";
+	echo "<BR></TD>\n<TD BGCOLOR='#EFEF52' width=$innerwidth><FONT $FONTFACEATTR SIZE=-1>\n";
 }
 
 function kickFooter($kickname,$buttname,$width) {
