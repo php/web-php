@@ -27,7 +27,9 @@ Archives for this list can be found at:
 </ul>
 <b>Warning:</b> The PHP3 mailing list gets close to 2500 messages per month currently.  Do the math.  
 That translates to about 80 messages per day.  If your mailbox can't handle this sort of traffic you 
-might want to consider reading the mailing list on the above web interface, or if you like reading
+might want to consider subscribing to the digest list instead, at
+<a href="mailto:php3-digest-subscribe@lists.php.net">php3-digest-subscribe@lists.php.net</a> (two messages per day).
+You can also read the mailing list on the above web interface, or if you like reading
 things with a news reader, you can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
 <P> If you are interested in helping out with the
 development of PHP3 you should join the developers'
