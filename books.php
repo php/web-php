@@ -208,7 +208,7 @@ array (
     /* author[s]    */ array("Sterling Hughes","Andrei Zmievski"),
     /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php","http://zend.com/comm_person.php?id=24"),
     /* image        */ "zmievski.jpg",
-    /* information  */ "Foreword by " . make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<br>\n" .
+    /* information  */ "Foreword by " . make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br>\n" .
                        "Sams, November 2000, ISBN 0-6723-1924-1, 505 pages",
     /* inform. link */ "",
     /* language     */ "en"
@@ -317,7 +317,7 @@ array (
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
-    /* auth link[s] */ array("http://zend.com/zend/hof/rasmus.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
+    /* auth link[s] */ array("http://lerdorf.com/bio.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
     /* image        */ "rasmus-kug.gif",
     /* information  */ "O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages",
     /* inform. link */ "http://www.oreilly.de/catalog/phptbger/index.html",
@@ -855,7 +855,7 @@ array (
     /* auth link[s] */ "",
     /* image        */ "webmaster-book.gif",
     /* information  */ "Includes a large chapter on PHP written by " .
-                       make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<br>\n" .
+                       make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br>\n" .
                        "O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/webmaster2/",
     /* language     */ "en"
