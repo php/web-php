@@ -16,6 +16,14 @@ if (isset($in)) {
   }
 
   # clean and validate data
+  
+  if(preg_match("/\btest\b/i", $in['sdesc'])) {
+    $errors[] = 'We know this works. Please do not test the system.';
+  }  	
+
+  if(preg_match("/\btest\b/i", $in['ldesc'])) {
+    $errors[] = 'We know this works. Please do not test the system.';
+  }
 
   if (!is_emailable_address($in['email'])) {
     $errors[] = 'You must supply a valid email address.';
