@@ -1235,7 +1235,7 @@ array(
 
   array(
     /* title[s]     */ "Desenvolvendo Websites com PHP 4",
-    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&amp;isbn=8575220039&amp;volume=1&amp;ano_publ=2001&amp;rnd=16354996126232",
+    /* title_link   */ "http://niederauer.com.br/livros/php4/",
     /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
     /* image        */ "8575220039.jpg",
