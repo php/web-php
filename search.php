@@ -46,19 +46,19 @@ if (isset($pattern)) {
         // PHP-General mailing list search
         case "maillist" :
             $query = "l=php-general&r=1&w=2&q=b&s=" . urlencode($pattern);
-            header("Location: " . $ml_url . "?" . $query);
+            header("Location: $ml_url?$query");
             exit;
 
         // PHP-Dev mailing list search
         case "devlist" :
             $query = "l=php-dev&r=1&w=2&q=b&s=" . urlencode($pattern);
-            header("Location: " . $ml_url . "?" . $query);
+            header("Location: $ml_url?$query");
             exit;
 
         // PHPDoc mailing list search
         case "phpdoc" :
             $query = "l=phpdoc&r=1&w=2&q=b&s=" . urlencode($pattern);
-            header("Location: " . $ml_url . "?" . $query);
+            header("Location: $ml_url?$query");
             exit;
             
         // Bug database search
@@ -301,6 +301,7 @@ function makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed)
     // This goes to the center
     $display = "<b>Displaying results $firstdisplayed to $lastdisplayed</b>";
 
+    // Print out navigation table
     echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
     echo '<tr>';
     echo '<td align="middle" colspan="2">' . $display . '<br></td>';
