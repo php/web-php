@@ -1,5 +1,7 @@
 <?php
-include_once "prepend.inc";
+// $Id$
+$_SERVER['BASE_PAGE'] = 'mirror.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("Information About This PHP Mirror Site");
 ?>
 
@@ -24,7 +26,6 @@ commonHeader("Information About This PHP Mirror Site");
 
 <ul>
  <li>Default language is <?php echo $LANGUAGES[default_language()]; ?></li>
- <?php //<li>Local search support is <?php echo have_search() ? "available" : "not available"; </li> ?>
  <li>Local visitor statistics is <?php echo have_stats() ? "available" : "not available"; ?></li>
 </ul>
 
