@@ -68,7 +68,7 @@ function show_mirror_options ($current) {
 // Find the closest mirror sites, and return with the addresses
 function find_closest_mirrors ()
 {
-    global $REMOTE_HOST, $REMOTE_ADDR, $HTTP_X_FORWARDED_FOR;
+    global $REMOTE_HOST, $REMOTE_ADDR, $HTTP_X_FORWARDED_FOR, $MIRRORS;
     
     // We do not know the country
     $country = '';
