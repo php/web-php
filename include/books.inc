@@ -1218,7 +1218,7 @@ array(
     /* auth link[s] */ "",
     /* image        */ "8535208216.gif",
     /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
-    /* inform. link */ "http://http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
+    /* inform. link */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
     /* language     */ "pt"
   ),
 
