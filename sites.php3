@@ -75,6 +75,7 @@ right away.</blockquote>
 	site("Du côté de","www.ducotede.com");
 	site("City of Escondido","www.ci.escondido.ca.us");
 	site("Greene County Online","greene.xtn.net");
+	site("Hull and East Yorkshire","www.humber.net/key/");
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
 	site("City of Sibiu - Romania","www.primbsb.ro");
@@ -86,8 +87,8 @@ right away.</blockquote>
 	site("Zone - Cultural sites in Rotterdam","www.cultuur.rotterdam.nl");
 	siteEnd();
 
-/* Computer Software */
-	title("Computer Software");
+/* Computer Hardware/Software */
+	title("Computer Hardware/Software");
 	siteStart();
 	site("Apache Web Server","www.apache.org");
 	site("Be","www.be.com");
@@ -104,6 +105,7 @@ right away.</blockquote>
 	site("Skinz","www.skinz.org");
 	site("Sonic Spot","www.sonicspot.com");
 	site("Type Euphoria","fonts.linuxpower.org");
+	site("VA Linux Systems","www.valinux.com");
 	site("VB World","www.vb-world.net");
 	site("Winamp", "www.winamp.com");
 	site("Xingtech.com","www.xingtech.com");
@@ -377,6 +379,7 @@ right away.</blockquote>
 	site("MP3.com","www.mp3.com");
 	site("Online Gaming Review","www.ogr.com");
 	site("PHP.CodeBase.Org","php.codebase.org");
+	site("Riffnet Scripts","www.cgiscripts.net");
 	site("SegFault","segfault.org");
 	site("The UNIX Network Archives","www.tuna.org");
 	site("Versions","www.versions.com");
@@ -392,6 +395,7 @@ right away.</blockquote>
 	title("Real Estate");
 	siteStart();
 	site("All Brevard Houses for Sale","www.allbrevard.net");
+	site("BidRealEstate.com","www.bidrealeaste.com");
 	site("BNF Homes","www.bnfhomes.com");
 	site("Real Estate Planet","www.realestateplanet.com");
 	site("ReallyNyce.Com","www.reallynyce.com");
@@ -467,6 +471,7 @@ right away.</blockquote>
 	site("GoASU.com","www.goasu.com");
 	site("Indianapolis 500 Web Site","www.indy500.com");
 	site("Jason Kidd's Site","www.jasonkidd.net");
+	site("Le Bilboquet","www.bilboquet.com");
 	site("New York Yankees","www.yankees.com");
 	site("Oakland Raiders","www.raiders.com");
 	site("Professional Disc Golf Association","www.pdga.com");
