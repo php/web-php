@@ -188,7 +188,23 @@ of $foo is replaced with "bar").  To use indirect reference in PHP3
 inside quoted strings, you should use the new notation: "${$foo}".
 The standard $$foo notation will work outside of the quoted string.
 
-[13] Other incompatibilities.
+
+[13]    Some functions have changed names, are missing, or have been deprecated
+        by other functions
+
+As a whole new rewrite, written by many more people and supporting many
+more APIs than it's predecessor, there's a good chance some of the functions
+you're used to from PHP/FI 2 aren't available in release 3, or have changed
+names.  Many functions that do exist behave a bit differently, mainly
+because they return different values for errors (false) but also for other
+reasons.  We can't list all of these functions here, simply because drawing
+a full comparison between the function sets of the two versions is way too
+much work.  If a converted PHP/FI 2 script doesn't work for you, nothing
+can replace the good old human eye going over the code, doublechecking
+with the online manual that each function still does what you expected it
+to do.
+
+[14] Other incompatibilities.
 
 It's not too unlikely that other documented behavior of PHP2 has changed
 in this release.  If you think you've found an example, please mail
