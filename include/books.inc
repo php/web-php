@@ -561,6 +561,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "PHP String Handbook",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/186100835X/wwwphpnet",
+    /* author[s]    */ array("Paul Wilton", "Syed Gilani", "Paul Adams", "Chris Cornutt", "Matt Wade"),
+    /* auth link[s] */ "",
+    /* image        */ "186100835x.gif",
+    /* information  */ "Wrox Press Inc, Mar 2003, ISBN 1-861008-35-X, 300 pages",
+    /* inform. link */ "http://www.wrox.com/books/186100835X.htm",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP Developer's Dictionary",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet/",
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
