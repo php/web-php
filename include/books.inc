@@ -539,6 +539,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "Professional PHP Web Services",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861008074/wwwphpnet",
+    /* author[s]    */ array("Daniel Solin", "Jon Stephens", "Ken Egervari", "James Fuller", "Bryan Waters", "Harry Fuecks"),
+    /* auth link[s] */ "",
+    /* image        */ "1861008074.gif",
+    /* information  */ "Wrox Press Inc, Jan 2003, ISBN 1-861008-07-4, 550 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861008074.htm",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP Developer's Dictionary",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet/",
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
