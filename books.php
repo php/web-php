@@ -234,11 +234,11 @@ by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cart
 ><IMG SRC="/jpgs/joerg_krause.jpg" BORDER=0 ALIGN="left" width="111" height="163"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet07"
->PHP - Grundlagen und Profiwissen</A><BR>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446215468/wwwphpnet07"
+>PHP 4: Grundlagen und Profiwissen</A><BR>
 Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
-<SMALL>in German, Hanser, Nov 2000, ISBN 3-446-21301-5, 1168 pages<BR>
+<SMALL>in German, Hanser, Nov 2000, ISBN 3-446-21546-8, 1168 pages<BR>
 <A HREF="http://www.php.comzept.de/">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
@@ -305,6 +305,18 @@ by Klaus Schmidt<BR>
 >Jetzt lerne ich PHP 4</A><BR>
 by Matt Zandstra<BR>
 <SMALL>in German, Markt+Technik, December 2000, ISBN 3-8272-5883-9, 515 pages<BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07"
+><IMG SRC="/jpgs/tobias_and_till.jpg" BORDER=0 ALIGN="left" width="111" height="157"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07"
+>Webanwendungen mit PHP 4.0 entwickeln</A><BR>
+by Tobias Ratschiller and Till Gerken<BR>
+<SMALL>in German, Addison-Wesley, Jan 2001, ISBN 3-8273-1730-4, 400 pages<BR>
 </TD>
 </TR>
 
