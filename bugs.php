@@ -239,7 +239,7 @@ elseif ($cmd == "display") {
     $success = 0;
 
     if ($modify == "user") {
-		if (!$row[passwd] || $row[passwd] != $pw) {
+		if (!$original[passwd] || $original[passwd] != stripslashes($pw)) {
 			echo "<h2 class=\"error\">The password you supplied was incorrect.</h2>\n";
 		}
 		elseif (incoming_details_are_valid()) {
@@ -248,7 +248,7 @@ elseif ($cmd == "display") {
 			
 			/* add comment */
 			if ($success && !empty($ncomment)) {
-				$success = @mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail',NOW(),'$ncomment')");
+				$success = @mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$email',NOW(),'$ncomment')");
 			}
 		}
 		$from = $email;
