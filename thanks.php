@@ -19,7 +19,7 @@ site_header("Thanks");
 
 <p>
  <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>
- provides the servers and bandwidth for CVS and mailing list services.
+ provides the servers and bandwidth for CVS, PEAR and mailing list services.
 </p>
 
 <p>
@@ -29,13 +29,18 @@ site_header("Thanks");
 
 <p>
  <a href="http://www.rackspace.com/">Rackspace</a> provides
- the server and bandwidth for various php.net services and builds.
+ the server and bandwidth for various php.net services.
 </p>
 
 <p>
  <a href="http://www.redundant.com/">Redundant Networks</a> provides
  the server and bandwidth that run various services and websites
  for php.net.
+</p>
+
+<p>
+ <a href="http://www.servercentral.net/">Server Central</a> provides 
+ a powerful box and connection which runs various services and sites for php.net
 </p>
 
 <p>

@@ -71,6 +71,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.directi.com/">Directi</a></li>
  <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
  <li><a href="http://www.rackshack.net/">RackShack</a></li>
+ <li><a href="http://www.servercentral.com/">Server Central</a></li>
  <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
  <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
  <li><a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a></li>
@@ -150,6 +151,19 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
+<?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
+
+<h1>Server Central Donates Server</h1>
+<p>
+ <span class="newsdate">[28-Aug-2003]</span>
+ Chicago-based company <a href="http://servercentral.net/">Server Central</a> has donated PHP.net a brand new 
+ server with a gigabit connection. The box is a dual 2.4Ghz machine with 2GB ram, so we're going to be using 
+ it to power our more resource-intensive tasks, including building the manual.  Thanks, Server Central!
+</p>
+
+<br />
+
 <h1>European Open Source Development Threatened!</h1>
 <p>
  <span class="newsdate">[27-Aug-2003]</span>
