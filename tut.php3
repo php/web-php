@@ -8,6 +8,7 @@
 <html><head><title>PHP Tutorial</title></head>
 <body>
 <h1>Introductory Tutorial</h1>
+PHP is a tool that lets you create dynamic web pages.  
 PHP-enabled web pages are treated just like regular HTML pages and you can create 
 and edit them the same way you normally create regular HTML pages.  In this 
 tutorial we assume that your server has support for PHP activated and that all files
@@ -22,9 +23,14 @@ Create a file named <i>hello.php3</i> and in it put the following lines:
 </body></html>
 ')?>
 The colours you see are just a visual aid to make it easier to see the PHP tags and the
-different parts of a PHP expression.  <P>
+different parts of a PHP expression.  Note also that this is not like a CGI script.  The
+file does not need to be executable or special in any way.  Think of it as a normal HTML
+file which happens to have a set of special tags available to you that do a lot of 
+interesting things.<P>
 This program is extremely simple and you really didn't need to use PHP to create a page
 like this.  All it does is display: <B>Hello World</B><P>
+If you tried this example and it didn't output anything, chances are that the server you
+are on does not have PHP enabled.  Ask your administrator to enable it for you.<P>
 The point of the example is to show the special PHP tag format.  In this example we used
 <b>&lt;?php</b> to indicate the start of a PHP tag.  Then we put the PHP statement and
 left PHP mode by adding the closing tag, <b>?&gt;</b>.  You may jump in and out of PHP

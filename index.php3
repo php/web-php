@@ -30,17 +30,11 @@ this month.  Check out <a href="http://io.incluso.com">http://io.incluso.com</a>
 
 <h3>What is PHP?</h3>
 <P>
-PHP 3.0 is a server-side HTML embedded scripting language and it is a
-complete rewrite of the popular PHP/FI 2.0 language.
-This rewrite is faster, more robust and uses less
-memory than version 2.  All users of version 2 are encouraged to
-upgrade.
-</P>
-<P>
-If you are new to PHP, a good place to start discovering the power of
-this language is by clicking on the &quot;Source&quot; button in the
-top right corner of all the pages on this site.  What you see is the
-actual PHP files that are behind each of the pages you are looking at.
+PHP is a server-side, cross-platform, HTML embedded scripting language.  
+If you are completely new to PHP and want to get some idea of how it works, 
+have a look at the <a href="tut.php3">Introductory Tutorial</a>.  Once you get
+beyond that have a look at the example archive sites and some of the other
+resources available in the <a href="links.php3">Links</a> section.
 </P>
 
 <h3>So, how much does it cost?</h3>
