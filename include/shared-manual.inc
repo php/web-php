@@ -1,57 +1,130 @@
 <?php // -*- C++ -*-
-require_once 'prepend.inc';
+
+// $Id$
+
+/*
+
+ This file is included directly on all manual pages,
+ and therefore is the entering point for all manual pages
+ to the website function collection. These functions display
+ the manual pages with headers and navigation.
+ 
+ The $PGI global variable is used to store all page related
+ information, including HTTP header related data.
+ 
+ The $PRINT_PAGE and $PRINT_NOTES vars determine the layout
+ of the manual page printed.
+ 
+*/
+
+// Ensure that our environment is set up
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Set variable defaults
-$NEXT = $PREV = $UP = $HOME = $PGI = array(false, false);
-$TOC = array(); $SIDEBAR_DATA = '';
+$PGI = array(); $SIDEBAR_DATA = '';
 
 // If we don't know anything about printing, set it to false
 if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
 
-// Set up variables containing navigational information
-// for this page and page part of the manual
-function setupNavigation($data) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $PGI, $tstamp;
-    $HOME = @$data["home"];
-    $HOME[0] = "./";
-    $NEXT = @$data["next"];
-    $PREV = @$data["prev"];
-    $UP   = @$data["up"];
-    $TOC  = @$data["toc"];
-    $PGI  = @$data["this"];
-    $tstamp = gmdate("D, d M Y",getlastmod());
+// Set up variables important for this page
+// including HTTP header information
+function manual_setup($page_data)
+{
+    global $PGI;
+    $PGI = array_merge($PGI, $page_data); // merge for BC reasons
+    $PGI['lastmod'] = gmdate("D, d M Y", getlastmod());
 }
 
-// Append all the table of contents data to $SIDEBAR_DATA
-function makeBorderTOC($id)
+// Print out HTTP headers and the HTML header
+// for this manual page, according to details
+// already set up
+function manual_header()
 {
-    global $UP, $HOME, $TOC, $SIDEBAR_DATA;
+    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE;
+    
+    // Get values out of the config array
+    list($filename, $title) = $PGI['this'];
+    list($encoding, $lang)  = $PGI['head'];
+    
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
+    //header("Cache-Control: public, max-age=600");
+    header("Vary: Cookie");
+    header("Content-type: text/html;charset=$encoding");
+    header("Content-language: $lang");
+    
+    // Set initial base for this manual page
+    // [will be extended in manualHeader()!]
+    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang);
+    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+    
+    if ($PRINT_PAGE) {
+        $_SERVER['BASE_PAGE'] .= "/print/$filename";
+        $_SERVER['BASE_HREF'] .= "/print/$filename";
+        manual_header_print();
+    } else {
+        $_SERVER['BASE_PAGE'] .= "/$filename";
+        $_SERVER['BASE_HREF'] .= "/$filename";
+        manual_sidebar();
+        commonHeader("$title - Manual");
+        manual_navbar();
+    }
+}
 
-    $SIDEBAR_DATA .= '<!--UdmComment-->' . "\n" . 
-                     '<table border="0" cellpadding="0" cellspacing="5" width="100%">';
+// Print out manual page footer
+function manual_footer()
+{
+    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
 
-    $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
-        make_link('./', make_image('caret-t.gif', '^') . $HOME[1] ) . 
-        '<br></td></tr>';
+    // Get vars for easy handling
+    list($filename, $title) = $PGI['this'];
+    
+    if ($PRINT_PAGE) {
+        if ($PRINT_NOTES) {
+            echo "<br /><br />";
+            manual_notes_print();
+        }
+        manual_footer_print();
+    } else {
+        echo "<br /><br />";
+        manual_notes();
+        echo "<br />";
+        manual_navbar("bottom");
+        commonFooter();
+    }
+}
 
-    $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td>' . spacer(1, 1, TRUE) . '</td></tr>';
+// =============================================================================
+// Manual page navigation parts
+// =============================================================================
 
-    if (($HOME[1] != $UP[1]) && $UP[1]) {
-        $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
-            make_link($UP[0], make_image('caret-u.gif', '&lt;') . $UP[1] ) . 
-            '</td></tr>';
+// Append all the table of contents data to $SIDEBAR_DATA
+function manual_sidebar()
+{
+    global $PGI, $SIDEBAR_DATA;
+
+    // Start sidebar with its <div>
+    $BAR = "<!--UdmComment-->\n<div class=\"mtoc\">\n";
+
+    // Link to manual home
+    $BAR .= '<div class="toch">' .
+        make_link($PGI['home'][0], make_image('caret-t.gif', '^') . $PGI['home'][1]) .
+        "</div>\n";
+
+    // Link to one page up if titles does not match
+    if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
+        $BAR .= '<div class="toch">' .
+            make_link($PGI['up'][0], make_image('caret-u.gif', '&lt;') . $PGI['up'][1]) .
+            "</div>\n";
     }
 
-    $SIDEBAR_DATA.= '<tr valign="top"><td>';
-
-    // Print out one link for all TOC items on this page
-    foreach($TOC as $tocitem) {
+    // Print out one link for all siblings of this page
+    foreach($PGI['toc'] as $tocitem) {
     
         // Get URL and title component
         list($url, $title) = $tocitem;
 
         // Get the proper classname to use for this <div>
-        $divclass = ($url == $id) ? "toca" : "toci";
+        $divclass = ($url == $PGI['this'][0]) ? "toca" : "toci";
         
         // There are some very long function names, which
         // make the TOC be too wide, so wrap them
@@ -62,169 +135,113 @@ function makeBorderTOC($id)
             $title = str_replace(array(" ", "<br>"), array("_", "<br />_"), $title);
         }
         
-        // Print out the TOC item using a div
-        $SIDEBAR_DATA .= "\n<div class=\"$divclass\">" .
-                         make_link($url, $title) . "</div>";
+        // Print out the TOC item using a <div>
+        $BAR .= "<div class=\"$divclass\">" .
+                make_link($url, $title) . "</div>\n";
     }
 
-    // End navigation table
-    $SIDEBAR_DATA .= "</td></tr></table><!--/UdmComment-->\n";
+    // Put navigation content into sidebar, end <div>
+    $SIDEBAR_DATA = "$BAR</div><!--/UdmComment-->\n";
 }
 
 // Print out manual navigation bar
-function navigationBar($title,$id,$loc) {
-    global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
-           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
+function manual_navbar($location = "top")
+{
+    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
     echo '<!--UdmComment-->' . "\n" . 
-         '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+         '<table border="0" width="100%" bgcolor="#e0e0e0" ' .
+         'cellpadding="0" cellspacing="4">';
 
+    // Print link to previous page if available
     echo '<tr><td>';
-    if ($PREV[1]) {
-        echo make_link($PREV[0] , make_image('caret-l.gif', '&lt;') . $PREV[1] ) ;
+    if ($PGI['prev'][1]) {
+        print_link(
+            $PGI['prev'][0],
+            make_image('caret-l.gif', '&lt;') . $PGI['prev'][1]
+        );
     }
     echo '</td>';
 
+    // Print link to next page if available
     echo '<td align="right">';
-    if ($NEXT[1]) {
-        echo make_link($NEXT[0] , $NEXT[1] . make_image('caret-r.gif', '&gt;') ) ;
+    if ($PGI['next'][1]) {
+        print_link(
+            $PGI['next'][0],
+            $PGI['next'][1] . make_image('caret-r.gif', '&gt;')
+        );
     }
-    echo '</td>';
-    echo '</tr>';
+    echo '</td></tr>';
 
+    // Print a spacer row
     echo '<tr bgcolor="#cccccc"><td colspan="2">';
     spacer(1,1);
     echo '</td></tr>';
 
-    echo '<tr>';
-    echo '<td>';
+    echo '<tr><td>';
 
     // Print out language switch on top of manual pages
-    if ($loc != 'bottom') {
-        $links = array();
-        preg_match("!/manual/(.+)/!", $_SERVER['BASE_HREF'], $langcode);
-        $links[] = array("$langcode[1]/print/$id", "printer friendly");
-        $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
-        // Disable all 'inactive' languages
+    if ($location != 'bottom') {
+        
+        // Quick access to filename
+        $filename = $PGI['this'][0];
+        
+        // Initial two dropdown menu items        
+        $links = array(
+            array("$LANG/print/$filename",   "printer friendly"),
+            array("$LANG/printwn/$filename", "printer friendly [+notes]")
+        );
+        
+        // Disable all languages without online content
         $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+        
+        // Add a dropdown item for all languages left
         foreach ($online_languages as $code => $name) {
-            if (!preg_match("!/$code/!", $PHP_SELF)
-                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$id")
+            if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
+                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$filename")
                ) {
-                $links[] = array("$code/$id", $name);
+                $links[] = array("$code/$filename", $name);
             }
         }
-        echo '<form action="/manual/change.php" method="GET" class="thin"><small>view the </small>' .
-             '<select name="page" class="small">'. "\n";
+        
+        // Print out the form with all the options
+        echo '<form action="/manual/change.php" method="GET" class="thin">' . "\n" .
+             '<small>view the </small><select name="page" class="small">'. "\n";
         foreach ($links as $link) {
             echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo '</select>';
-        echo '<input type="image" src="' . $_SERVER['STATIC_ROOT'] . '/images/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
+        echo '<input type="image" src="' . $_SERVER['STATIC_ROOT'] .
+             '/images/small_submit.gif" border="0" width="11" height="11"' .
+             'alt="" align="baseline"> <small>version of this page</small></form>';
        
     } else {
         echo "<small>&nbsp;</small>";
     }
 
-    echo '</td><td align="right" valign="bottom"><small>Last updated: ' . $tstamp . '</small></td></tr>';
+    // Provide last updated information on this page
+    echo '</td><td align="right" valign="bottom"><small>Last updated: ' .
+         $PGI['lastmod'] . '</small></td></tr>';
     echo "</table>\n<!--/UdmComment-->\n";
-
 }
 
-// Try to make email address printing safe (protect from spammers)
-function safeEmail($email)
-{
-    return str_replace(array('@', '.'), array(' at ', ' dot '), $email);
-}
-
-// Print out one user note entry
-function makeEntry($date,$name,$blurb,$id=0) {
-    global $MAGIC_COOKIE;
-?>
-<tr valign="top">
-<td bgcolor="#e0e0e0" colspan="2">
-<?php
-    if ($id) { echo '<a name="#' . $id . '"></a>'; }
-?>
-<table border="0" cellpadding="2" cellspacing="0" width="100%">
-<tr valign="top"><td>
-<?php
-    $name = htmlspecialchars($name);
-    if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
-        if (ereg("(.+)@(.+)\.(.+)",$name)) {
-            $name = safeEmail($name);
-        }
-        echo "<b>".$name."</b><br>\n";
-    }
-    echo date("d-M-Y h:i",$date);
-?>
-</td>
-<td align="right">
-<?php
-if (isset($MAGIC_COOKIE) && $id) {
-    print_popup_link('http://master.php.net/manage/user-notes.php?action=edit+' . $id,
-        make_image('notes-edit.gif', 'edit note'),
-        'admin',
-                'scrollbars=yes,width=650,height=400'
-    );
-    echo '&nbsp';
-    print_popup_link('http://master.php.net/manage/user-notes.php?action=reject+' . $id,
-        make_image('notes-reject.gif', 'reject note'),
-        'admin',
-                'scrollbars=no,width=300,height=200'
-    );
-    echo '&nbsp';
-    print_popup_link('http://master.php.net/manage/user-notes.php?action=delete+' . $id,
-        make_image('notes-delete.gif', 'delete note'),
-        'admin',
-                'scrollbars=no,width=300,height=200'
-    );
-}
-?>
-<br></td>
-</tr>
-<tr bgcolor="#f0f0f0"><td colspan="2">
-<?php echo clean_note($blurb); ?><br>
-</td></tr>
-</table>
-</td>
-</tr>
-<?php
-};
-
-// Get user notes from the appropriate text dump
-function manualGetUserNotes($title, $id) {
-    global $DOCUMENT_ROOT;
-    $notes = array();
-    $hash = substr(md5($id),0,16);
-
-    $notes_file = "$DOCUMENT_ROOT/backend/notes/".substr($hash,0,2)."/$hash";
-    if ($fp = @fopen($notes_file,"r")) {
-        while (!feof($fp)) {
-            $line = chop(fgets($fp,8096));
-            if ($line == "") continue;
-            list($id,$sect,$rate,$ts,$user,$note) = explode("|",$line);
-            $notes[] = array(
-                "id" => $id,
-                "sect" => $sect,
-                "rate" => $rate,
-                "xwhen" => $ts,
-                "user" => $user,
-                "note" => base64_decode($note)
-            );
-        }
-        fclose($fp);
-    }
-    return $notes;
-}
+// =============================================================================
+// User note display functions
+// =============================================================================
 
 // Print out all user notes for this manual page
-function manualUserNotes($title, $id) {
+function manual_notes()
+{
+    // Get needed values
+    list($filename, $title) = $GLOBALS['PGI']['this'];
+    
+    // Drop file extension from the name
+    if (substr($filename, -4) == '.php') {
+        $filename = substr($filename, 0, -4);
+    }
 
-    # don't want .php at the end of the id.
-    if (substr($id,-4) == '.php') $id = substr($id,0,-4);
-
-    $notes = manualGetUserNotes($title, $id);
+    // Load user note for this page
+    $notes = manual_notes_load($filename);
 
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
@@ -239,177 +256,198 @@ function manualUserNotes($title, $id) {
     echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
     echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
     echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
-    echo "<td align=\"right\">$addnotesnippet";
+    echo "<td align=\"right\">$addnotesnippet</td>\n</tr>\n";
 
-    /* This information has been included on add-note.php
-    echo "&nbsp;";
-    print_link('/manual/about-notes.php',
-        make_image('notes-about.gif', 'about notes')
-    );
-    */
-    echo "</td>\n</tr>\n";
-
+    // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
         echo '<tr valign="top">';
         echo '<td bgcolor="#e0e0e0" colspan="2">';
         echo 'There are no user contributed notes for this page.';
         echo '</td></tr>';
-    } else {
+    }
+     
+    // If we have notes, print them out
+    else {
+        
         foreach($notes as $note) {
-            makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id']);
+            manual_note_display(
+                $note['xwhen'], $note['user'], $note['note'], $note['id']
+            );
         }
 
         echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
         echo "<td colspan=\"2\" align=\"right\">\n$addnotesnippet";
-
-        /* This information has been included on add-note.php
-        echo "&nbsp;";
-        print_link('/manual/about-notes.php',
-            make_image('notes-about.gif', 'about notes')
-        );
-	*/
         echo "</td>\n</tr>\n";
     }
     echo "</table>\n";
 }
 
-// Send manual HTTP headers, provide accurate language data
-function sendManualHeaders($charset,$lang) {
-    global $LAST_UPDATED, $MYSITE;
-    
-    header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
-    //header("Cache-Control: public, max-age=600");
-    header("Vary: Cookie");
-    header("Content-type: text/html;charset=$charset");
-    header("Content-language: $lang");
-    
-    // Set initial base for this manual page
-    // [will be extended in manualHeader()!]
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang);
-    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-}
-
-// Print out manual page header.
-function manualHeader()
+// Get user notes from the appropriate text dump
+function manual_notes_load($id)
 {
-    global $PRINT_PAGE, $PGI;
-    
-    // XSL [and new DSSSL] sheets provide params in the
-    // 'this' array element configured above, while old
-    // DSSSL sheets provide info via two parameters [title, id]
-    if (func_num_args() > 0) {
-        list($title, $filename) = func_get_args();
-    } else {
-        list($filename, $title) = $PGI;
-    }
-    
-    if ($PRINT_PAGE) {
-        $_SERVER['BASE_PAGE'] .= "/print/$filename";
-        $_SERVER['BASE_HREF'] .= "/print/$filename";
-        manualPrintHeader($title);
-    } else {
-        $_SERVER['BASE_PAGE'] .= "/$filename";
-        $_SERVER['BASE_HREF'] .= "/$filename";
-        makeBorderTOC($filename);
-        commonHeader ($title. " - Manual");
-        navigationBar($title, $filename, "top");
-    }
-}
+    // Initialize values
+    $notes = array();
+    $hash = substr(md5($id), 0, 16);
+    $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
+                  substr($hash, 0, 2) . "/$hash";
 
-// Print out manual footer
-function manualFooter()
-{
-    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
-
-    // XSL [and new DSSSL] sheets provide params in the
-    // 'this' array element configured above, while old
-    // DSSSL sheets provide info via two parameters [title, id]
-    if (func_num_args() > 0) {
-        list($title, $id) = func_get_args();
-    } else {
-        list($id, $title) = $PGI;
-    }
-    
-    if ($PRINT_PAGE) {
-        if ($PRINT_NOTES) {
-            echo "<br /><br />";
-            manualPrintUserNotes($title, $id);
+    // Open the note file for reading and get the data
+    if ($fp = @fopen($notes_file, "r")) {
+        while (!feof($fp)) {
+            $line = chop(fgets($fp, 8096));
+            if ($line == "") { continue; }
+            list($id, $sect, $rate, $ts, $user, $note) = explode("|", $line);
+            $notes[] = array(
+                "id"    => $id,
+                "sect"  => $sect,
+                "rate"  => $rate,
+                "xwhen" => $ts,
+                "user"  => $user,
+                "note"  => base64_decode($note)
+            );
         }
-        manualPrintFooter();
-    } else {
-        echo "<br /><br />";
-        manualUserNotes($title, $id);
-        echo "<br />";
-        navigationBar($title, $id, "bottom");
-        commonFooter();
+        fclose($fp);
     }
+    return $notes;
+}
+
+// Print out one user note entry
+function manual_note_display($date, $name, $text, $id)
+{
+    // Start user note row, with anchor for external links
+    echo "<tr valign=\"top\">\n<td bgcolor=\"#e0e0e0\" colspan=\"2\">\n" .
+         "<a name=\"#$id\"></a>";
+    
+    // User note specific table
+    echo '<table border="0" cellpadding="2" cellspacing="0" width="100%">' . "\n" .
+         '<tr valign="top"><td>' . "\n";
+
+    // Print out obfuscated email address if available
+    if ($name) { echo "<b>" . htmlspecialchars($name) . "</b><br />\n"; }
+    
+    echo date("d-M-Y h:i", $date) .
+         "</td>\n<td align=\"right\">\n";
+
+    // If the viewer is logged in, show admin options
+    if (isset($_COOKIE['MAGIC_COOKIE'])) {
+    
+        print_popup_link(
+            'http://master.php.net/manage/user-notes.php?action=edit+' . $id,
+            make_image('notes-edit.gif', 'edit note'),
+            'admin',
+            'scrollbars=yes,width=650,height=400'
+        );
+    
+        echo '&nbsp';
+        print_popup_link(
+            'http://master.php.net/manage/user-notes.php?action=reject+' . $id,
+            make_image('notes-reject.gif', 'reject note'),
+            'admin',
+            'scrollbars=no,width=300,height=200'
+        );
+    
+        echo '&nbsp';
+        print_popup_link(
+            'http://master.php.net/manage/user-notes.php?action=delete+' . $id,
+            make_image('notes-delete.gif', 'delete note'),
+            'admin',
+            'scrollbars=no,width=300,height=200'
+        );
+    }
+
+    // Print out the contents of the note
+    echo "<br /></td>\n</tr>\n<tr bgcolor=\"#f0f0f0\"><td colspan=\"2\">\n" .
+         clean_note($text) . "<br />\n</td></tr>\n</table>\n</td>\n</tr>\n";
 }
 
 // =============================================================================
-// Printer friendly support functions under this line
+// Printer friendly support functions
 // =============================================================================
 
 // "Printer optimized" header for manual pages
-function manualPrintHeader($title = '') {
-    global $NEXT, $PREV, $HOME;
-
+function manual_header_print()
+{
+    global $PGI;
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
- <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="prev" href="<?php  echo $PREV[0]; ?>" />
- <link rel="next" href="<?php  echo $NEXT[0]; ?>" />
- <link rel="start" href="<?php echo $HOME[0]; ?>" />
+ <title>PHP: <?php echo $PGI['this'][1]; ?> - Manual</title>
+ <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/print.css" />
+ <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
+ <link rel="prev" href="<?php echo $PGI['prev'][0]; ?>" />
+ <link rel="next" href="<?php echo $PGI['next'][0]; ?>" />
+ <link rel="start" href="<?php echo $PGI['home'][0]; ?>" />
  <base href="<?php echo $_SERVER['BASE_HREF']; ?>" />
 </head>
-<body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099">
-<table>
-<tr>
- <td><a href="/"><?php print_image('php.gif', 'PHP'); ?></a></td>
- <td>
-  This is a printer friendly version of the PHP Manual.<br />
-  Original address of this page: <?php print_link($_SERVER['BASE_HREF']); ?><br />
-  <small><?php print_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
- </td>
-</tr>
-</table><hr size="1" noshade="noshade" />
+<body>
+<?php print_link("/", make_image('php.gif', 'PHP', 'left')); ?>
+This is a printer friendly version of the PHP Manual.<br />
+Original address of this page: <?php print_link($_SERVER['BASE_HREF']); ?><br />
+<small><?php print_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
+<hr class="topdivider" />
 <?php
 }
 
 // "Printer optimized" footer for manual pages
-function manualPrintFooter() {
+function manual_footer_print()
+{
     echo "</body>\n</html>";
 }
 
 // Print out all user notes for this manual page
-function manualPrintUserNotes($title, $id) {
+function manual_notes_print()
+{
+    // Get filename
+    list($filename) = $GLOBALS['PGI']['this'];
+    
+    // Drop file extension from the name
+    if (substr($filename, -4) == '.php') {
+        $filename = substr($filename, 0, -4);
+    }
 
-    // Don't want .php at the end of the id.
-    if (substr($id, -4) == '.php') { $id = substr($id, 0, -4); }
+    // Load user note for this page
+    $notes = manual_notes_load($filename);
 
-    $notes = manualGetUserNotes($title, $id);
+    echo "<hr /><h2>User Contributed Notes</h2>";
 
-    echo "<hr size=\"1\" noshade><h2>User Contributed Notes</h2>";
-
+    // Print notes or inform the user if there are no notes
     if (sizeof($notes) == 0) {
         echo "<p>There are no user contributed notes for this page</p>";
     } else {
         foreach($notes as $note) {
-            makePrintEntry($note['xwhen'], $note['user'], $note['note'], $note['id']);
+            if ($note['user']) {
+                echo "<b>" . htmlspecialchars($note['user']) . "</b><br />\n";
+            }
+            echo date("d-M-Y h:i", $note['xwhen']) . "<br /><br />" .
+                 clean_note($note['note']) . "<br />" .
+                 "<hr />";
         }
     }
 }
 
-// Make manual user note entry for printing
-function makePrintEntry($date,$name,$blurb,$id=0) {
+// =============================================================================
+// Compatibility functions with old function interface
+// =============================================================================
 
-    if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
-        if (ereg("(.+)@(.+)\.(.+)",$name)) {
-            $name = safeEmail($name);
-        }
-        echo "<b>".$name."</b><br>\n";
-    }
-    echo date("d-M-Y h:i",$date) . "<br><br>";
-    echo clean_note($blurb) . "<br><hr noshade size=\"1\" width=\"50%\" align=\"center\">";
-
+function sendManualHeaders($charset, $lang)
+{
+    $GLOBALS['PGI']['head'] = array($charset, $lang);
 }
+
+function manualHeader()
+{
+    // XSL [and new DSSSL] sheets provide params in the
+    // 'this' PGI array element, while old DSSSL sheets
+    // provide info via two parameters [title, id]
+    if (func_num_args() > 0) {
+        list($title, $id) = func_get_args();
+        $GLOBALS['PGI']['this'] = array($id, $title);
+    }
+
+    // This does the work of sendManualHeaders()
+    // and manualHeader() too
+    manual_header();
+}
+
+function manualFooter()         { manual_footer(); }
+function setupNavigation($data) { manual_setup($data); }
