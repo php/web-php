@@ -125,7 +125,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
-      <li><?php download_link("php-3.0.18.tar.gz", "PHP 1.0.18 Source Code"); ?></li>
+      <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?></li>
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
