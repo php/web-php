@@ -550,7 +550,8 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="4.0b4pl1" selected>4.0 Beta 4 Patch Level 1
+    <option name="4.0RC1" selected>4.0 Release Candidate 1
+    <option name="4.0b4pl1">4.0 Beta 4 Patch Level 1
     <option name="4.0b4">4.0 Beta 4
     <option name="4.0b3">4.0 Beta 3
     <option name="4.0B2">4.0 Beta 2
