@@ -13,16 +13,16 @@ de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
-fr	fr.php.net		web.montaigne.u-bordeaux.fr
+fr	fr.php.net	web.montaigne.u-bordeaux.fr
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
 ie	ie.php.net	Dave Rynne <ftpadmin@esat.net>	php.mirrors.esat.net
 it	it.php.net	fmal@fmal.com	php.fmal.com
-it	it2.php.net		www.php.uli.it
+it	it2.php.net www.php.uli.it
 it	it3.php.net	Dino Uras <dino.uras@iol.it>	php.iol.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
 jp	jp2.php.net	Hitachi BI Mirrors Administrator <mirrors-adm@hbi.co.jp>	php.hbi.ne.jp
-kr      kr.php.net      JunSeon Oh <holywar@holywar.net>        php.holywar.net
+kr  kr.php.net  JunSeon Oh <holywar@holywar.net>        php.holywar.net
 li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
@@ -37,7 +37,7 @@ pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
 ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@chl.chalmers.se>,Fredrik Öhrn <ohrn@chl.chalmers.se>	rampart.chl.chalmers.se
 se	se2.php.net	Anders Olausson <spacedump@burken.nu>	php.burken.nu
-sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
+sg  sg.php.net  Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
 tr	tr.php.net	Mustafa Akgul <akgul@bilkent.edu.tr>	php.bilkent.edu.tr
