@@ -426,6 +426,7 @@ New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/exec/obidos/ASIN/382725793X/thephpdevelopmte"
 >MySQL</A><BR>
+Entwicklung, Implementierung und Referenz<BR>
 by Paul DuBois<BR>
 Vorwort von <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
