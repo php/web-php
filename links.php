@@ -709,6 +709,16 @@ site_header("Links");
  </li>
 
  <li>
+  <strong>Romanian</strong>
+  <ul>
+   <li>
+    <a href="http://www.phpromania.net/">PHPromania.net</a><br />
+	Romanian PHP Community, articles, tutorials, online discussions and forums.
+   </li>
+  </ul>
+ </li>
+
+ <li>
   <strong>Russian</strong>
   <ul>
    <li>
