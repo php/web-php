@@ -59,21 +59,23 @@ $formats = array(
 
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below.
-Tip: If you are using Internet Explorer, Mozilla, Opera or Netscape 6,
-the file size and date will show up when you move the mouse
-above the link. If you use another browser, or would like to
-see all the information, you can <a href="/docs.php?sizes=1">click
-here to see the file sizes and dates</a>.
+Tip: If you are using a capable browser, the file size and
+date will show up when you move the mouse above the link.
+If you use another browser, or would like to see all the
+information, you can <a href="/docs.php?sizes=1">click
+here to see all the file sizes and dates</a>.
 </p>
 
-<p>Note that the packaged versions of the manual (tar.gz, tar.bz2 and zip)
+<p>
+Note that the packaged versions of the manual (tar.gz, tar.bz2 and zip)
 don't contain any directories, so all of the files will be dumped into
 your current working directory when you expand the archive unless
-the tool you use does otherwise.</p>
+the tool you use does otherwise.
+</p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
-  <td></td>
+  <td>&nbsp;</td>
   <?php 
     while (list($k,$v) = each($formats)) {
       echo "<th valign=\"bottom\">$v[0]</th>\n";
@@ -90,8 +92,7 @@ the tool you use does otherwise.</p>
        # temporary hacks until pdf and chm are auto-generated
        if ($fn == "manual.pdf") {
 #         $link_to = "http://snaps.php.net/~jah/pdf/manual-$langcode.pdf";
-		  $link_to = 'down';
-
+          $link_to = 'down';
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual_$langcode.chm";
        } else {
@@ -101,7 +102,7 @@ the tool you use does otherwise.</p>
        # if no size required [pdf, online], then just print, else
        # decide what to do according to the $size of the file
        if (!$details[2]) { 
-         if($link_to == 'down') echo "PDF Format Unavailable Temporarily";
+         if ($link_to == 'down') echo "PDF Format Unavailable Temporarily";
          else echo "<a href=\"$link_to\">$details[1]</a>"; 
        }
        else {
@@ -121,89 +122,59 @@ the tool you use does otherwise.</p>
    }?>
 </table>
 
-<h1>Manuel PHP</h1>
-
-<p>The French PHP manual is also available on an external site, in differents formats.
-Documentation is the official flavor, while formating and localization has 
-been worked some more (function and examples indexes, short version, search engine..). 
-Besides, those are compressed for faster download.
-</p>
-<p>La documentation Fran&ccedil;aise est disponible sur un site secondaire,
-dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
-francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute;es.
-</p>
-
-<table border="0" cellpadding="2" cellspacing="1" width="100%">
- <tr bgcolor="#cccccc">
-  <td></td>
-  <th valign="bottom">En ligne</th>
-<th valign="bottom">En ligne</th>
-<th valign="bottom">HTML</th>
-<th valign="bottom">Texte</th>
-<th valign="bottom">HTML</th>
-<th valign="bottom">HTML</th>
-<th valign="bottom">PDF</th>
-<th valign="bottom">PalmPilot DOC</th>
-<th valign="bottom">PalmPilot iSilo</th>
-<th valign="bottom">Windows HTML Help</th>
- </tr>
-<tr>
-<td bgcolor="#dddddd"><b>Fran&ccedil;ais</b></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">html.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">txt.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">tar.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">zip</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">pdf</a></td>
-<td align="center" bgcolor="#eeeeee">&nbsp;</td>
-<td align="center" bgcolor="#eeeeee">&nbsp;</td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">chm</a></td>
-</tr>
-<tr>
-<td bgcolor="#dddddd"><b>Version courte</b></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">html.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">txt.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">tar.gz</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">zip</a></td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">pdf</a></td>
-<td align="center" bgcolor="#eeeeee">&nbsp;</td>
-<td align="center" bgcolor="#eeeeee">&nbsp;</td>
-<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">chm</a></td>
-</tr>
-</table>
-
 <?php echo hdelim(); ?>
 
-<H1>PHP Annotated Manuals</H1>
+<h1>Annotated PHP Manual</h1>
 <ul>
-<LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
-    is the same as the above, except there is a built-in errata/note system
+<li>The <a href="http://www.php.net/manual/">Annotated PHP Manual</A> is
+    the same as the above, except there is a built-in errata/note system
     that users all around the world can (and have!) contributed to. Of
     all of the documentation, this will be the most current version,
-    as it is updated (and annotated) daily.
+    as it is updated (and annotated) daily.</li>
 
-<LI><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
-    Errata</A>. This is the collected errata from the on-line errata/note
-    system.
+<li><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
+    Errata</A>. This is the collected errata from the on-line
+    errata/note system.</li>
 </ul>
 
 <?php echo hdelim(); ?>
 
-<H1>CVS Account</H1>
+<h1>French PHP Manual</h1>
+
+<p>
+The French PHP manual is also available on an external site, in differents formats.
+Documentation is the official flavor, while formating and localization has 
+been worked some more (function and examples indexes, short version, search engine..). 
+Besides, those are compressed for faster download.
+</p>
+
+<p>
+La documentation Fran&ccedil;aise est disponible sur un site secondaire,
+dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
+francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;es.
+</p>
+
+<p>
+<ul>
+<li><a href="http://dev.nexen.net/docs/php/annotee/">Annotated version</a></li>
+<li><a href="http://dev.nexen.net/docs/php/chargement.html">Manual downloads</a></li>
+</ul>
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>CVS Account</h1>
 <ul>
 <li><a href="/anoncvs.php">CVS instructions</a></li>
-<li><A href="/cvs-php.php">Getting a CVS account</a>.  If you wish to help out
-with the development of PHP, read this.
+<li><A href="/cvs-php.php">Getting a CVS account</a>. If you
+wish to help out with the development of PHP, read this.</li>
 </ul>
 
 <?php echo hdelim(); ?>
 
 <h1>Old/Unsupported Information</h1>
 <ul>
-<li><a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>. 
+<li><a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>.</li>
 </ul>
 
 <?php commonFooter(); ?>
