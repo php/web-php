@@ -273,10 +273,12 @@ Connect.</li>
 <li><a href="http://php-accelerator.co.uk/">ionCube PHP Accelerator</a><br>
 A free accelerator available from ionCube.</li>
 
+<li><a href="http://www.turcksoft.com/en/e_mmc.htm">Turck MMCache for PHP</a><br>
+Free open source accelerator from TurckSoft.</li>
+
 <li><a href="http://www.zend.com/store/products/zend-accelerator.php">Zend Accelerator</a><br>
 Commercial accelerator available from Zend Technologies, Inc.</li>
 </ul>
-
 
 <h4>PHP Merchandise</h4>
 
