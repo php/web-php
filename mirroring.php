@@ -68,13 +68,14 @@ $minute = rand(0, 59);
 </p>
 
 <pre>
-    --include='manual/en/' --include='manual/en/**' --exclude='manual/**'
+    --include='manual/en/' --include='manual/en/**' --exclude='manual/**' --exclude='distributions/manual/'
 </pre>
 
 <p>
  after <tt>"--delete-after"</tt> in the command line above (substituting your
  prefered language code in place of <tt>'en'</tt>). You can also exclude the
- distributions directory by adding <tt>"--exclude='distributions/'"</tt>
+ whole distributions directory by replacing <tt>"--exclude='distributions/manual'"</tt>
+ with <tt>"--exclude='distributions/'"</tt>
 </p>
 
 <p>
