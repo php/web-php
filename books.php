@@ -801,7 +801,7 @@ Browse our listing of books:
 <?php
 // Jumplist with types and languages
 foreach ($books as $btype => $book_list) {
-  echo "  <option value=\"${btype}_all\">&nbsp;+" . $book_types[$btype] . " [" . count($book_list) . " books total]" . "</option>\n";
+  echo "  <option value=\"${btype}_all\">+&nbsp;" . $book_types[$btype] . " [" . count($book_list) . " books total]" . "</option>\n";
   $book_stat = bookStats($books, $btype);
   foreach ($book_stat as $blang => $number) {
     echo "    <option value=\"${btype}_${blang}\">" . "&nbsp;&nbsp; - in " . $langs[$blang] . " [$number]" . "</option>\n";
