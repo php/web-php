@@ -43,6 +43,20 @@ write permissions for the user who's running PHP.
 	</ul>
 </ul>
 
+<h3>If you can't get a core file:</h3>
+<ul>
+<li>Run httpd -X under gdb with something like:
+	<ul>
+	<li><code>gdb /usr/local/apache/sbin/httpd</code>
+	<li>(gdb) run -X
+	</ul>
+<li>Then use your web browser and access your server to force the crash.  You should see a gdb
+prompt appear and some message indicating that there was a crash.  At this gdb prompt, type:
+	<ul>
+	<li><code>(gdb) bt</code>
+	</ul>
+</ul>
+
 This should generate a backtrace, that you should submit in the bug report, along with any other
 details you can give us about your setup, and offending script.
 
