@@ -6,6 +6,8 @@ usage (a reasonable estimate as of 2/2001 is 100MB/day). Also,
 we are currently only accepting new official mirrors in countries
 where we don't already have two active official mirrors.
 
+The PHP website requires PHP 4.
+
 Here is how to mirror the PHP site:
 
 First, you need to have a rsync (http://rsync.samba.org/) installed.
@@ -26,17 +28,12 @@ to www.php.net to fetch user contributed manual notes.
 
 Once you create a virtualhost which looks something like:
 
-   <VirtualHost xx.php.net>
-   ServerName xx.php.net
-   ServerAlias www.xx.php.net
+   <VirtualHost your-hostname-here>
+   ServerName your-hostname-here
+   ServerAlias xx.php.net www.xx.php.net
    ServerAdmin yourname@yourdomain.com
    DocumentRoot /www/htdocs/phpweb
-   <IfModule mod_php3.c>
-      php3_include_path .:/www/htdocs/phpweb/include
-   </IfModule>
-   <IfModule mod_php4.c>
-      php_value include_path .:/www/htdocs/phpweb/include
-   </IfModule>
+   php_value include_path .:/www/htdocs/phpweb/include
    ErrorLog logs/error_log
    TransferLog logs/access_log
    DirectoryIndex index.php index.html
