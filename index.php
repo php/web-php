@@ -215,12 +215,13 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h1>PHP 4.3.3RC2 released</h1>
+<h1>PHP 4.3.3RC3 released</h1>
 <p>
- <span class="newsdate">[30-Jul-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.3RC2</a> has been released for testing.
- This is the second release candidate and should be nearly bug free. Please
- try this release, so that any remaining issues can be uncovered and resolved.
+ <span class="newsdate">[07-Aug-2003]</span>
+ <a href="http://qa.php.net/">PHP 4.3.3RC3</a> has been released for testing.
+ This is should be the last release candidate prior to the final 4.3.3 release.
+ Please test this release as much as possible, so that any remaining issues can
+ be uncovered and resolved.
 </p>
 <p>
  List of changes can be found in the 
