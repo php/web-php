@@ -1,73 +1,84 @@
 <?php # vim:ft=php
 
-/* Offload to the visitors nearest mirror if the load is too high.
- * getloadavg() function used here is currently only available on the www.php.net
- * machine. */
-function check_load()
+// $Id$
+
+/*
+
+ Offload to the visitor's nearest mirror if the load is too high.
+ The used getloadavg() function is currently only available on
+ the www.php.net machine.
+
+*/
+
+// Check load on mirror
+function load_check()
 {
-	global $COUNTRY, $MIRRORS, $MYSITE;
+    global $COUNTRY, $MIRRORS;
 
-	if (!function_exists("getloadavg")) {
-		return;
-	}
-	$l = getloadavg();
-	header("X-PHP-Load: " . implode(", ", $l));
+    // We cannot check the load here
+    if (!function_exists("getloadavg")) {
+        return;
+    }
 
-	if ($l[0] > 80) {
-		header("HTTP/1.1 503 Too busy, try again later");
-		echo "Server too busy, please try again later, or <a href=\"/mirrors.php\">use a mirror</a>";
-		exit;
-	}
+    // Get load and print it out in header
+    $load = getloadavg();
+    header("X-PHP-Load: " . implode(", ", $load));
+    $load = $load[0];
 
-	$mirrors = array();
-	$any_mirrors = array();
-	
-	/* find potential mirrors */
-	foreach ($MIRRORS as $murl => $mirror) {
-		if ($murl != 'http://www.php.net/' &&
-				$mirror[7] == MIRROR_OK /* mirror status */) {
+    // Load is very high, we won't even redirect
+    if ($load > 80) { load_toobusy(); }
 
-			if ($mirror[0] == $COUNTRY) {
-				$mirrors[] = $murl;
-			} else {
-				$any_mirrors[] = $murl;
-			}
-		}
-	}
+    $close_mirrors = array();
+    $other_mirrors = array();
 
-	$need_mirror = true;
+    // Find potential close mirrors 
+    foreach ($MIRRORS as $murl => $mirror) {
+        if ($murl != 'http://www.php.net/' && $mirror[7] == MIRROR_OK) {
+            if ($mirror[0] == $COUNTRY) {
+                $close_mirrors[] = $murl;
+            } else {
+                $other_mirrors[] = $murl;
+            }
+        }
+    }
 
-	/* randomly pick one of the mirrors in their country */
-	if (count($mirrors) > 0) {
-		$murl = $mirrors[array_rand($mirrors)];
-		
-		if ($murl == $MYSITE) {
-			$need_mirror = false; /* selected this site */
-		} else {
-			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-			exit;
-		}
-	}
+    $need_mirror = TRUE;
 
-	/* pick a random mirror if load is moderate */
-	if ($need_mirror && $l[0] > 10 && count($any_mirrors) > 0) {
-		$murl = $any_mirrors[array_rand($any_mirrors)];
+    // Randomly pick one of the close mirrors
+    if (count($close_mirrors) > 0) {
+        if (!load_random_redirect($close_mirrors)) {
+            $need_mirror = FALSE; // selected the same site
+        }
+    }
 
-		if ($murl != $MYSITE) {
-			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-			exit;
-		}
-	}
+    // Pick a random mirror if load is moderate
+    if ($need_mirror && $load > 10 && count($other_mirrors) > 0) {
+        load_random_redirect($other_mirrors);
+    }
 
-	/* no searchable mirror was found, allow the request through if the load
-	 * isn't really really high */
-	if ($l[0] > 20) {
-		header("HTTP/1.1 503 Too busy, try again later");
-		echo "Server too busy, please try again later, or <a href=\"/mirrors.php\">use a mirror</a>";
-		exit;
-	}
+    // No mirror was found, allow the request
+    // through if the load isn't really really high
+    if ($load > 20) { load_toobusy(); }
 }
 
-check_load();
+// Send reply to the client that we are too busy now
+function load_toobusy()
+{
+    header("HTTP/1.1 503 Too busy, try again later");
+    echo "Server too busy, please try again later, or <a href=\"/mirrors.php\">use a mirror</a>";
+    exit;
+}
 
-?>
+// Redirect to the same page on $mirror site
+function load_random_redirect($mirrors)
+{
+    global $MYSITE;
+    
+    $murl = $mirrors[array_rand($mirrors)];
+    if ($murl != $MYSITE) {
+        header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+        exit;
+    } else { return FALSE; }
+}
+
+load_check();
