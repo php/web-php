@@ -4,6 +4,7 @@
   $current = "3.0b3";
 
   $mirror_sites = array(
+    "http://www.php.net/"	 => array("usa", "Circle Net, USA"),
     "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
     "http://il.php.net/"         => array("israel", "Netvision, Israel"),
     "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
