@@ -136,6 +136,9 @@ endif;
 <? makeName("Jouni Ahto","jah@mork.net",0);?>
   <UL TYPE=DISC><li>Postgres, Informix</UL><BR>
 
+<? makeName("Thies C. Arntzen","thies@digicol.de",0);?>
+  <UL TYPE=DISC><li>OCI8, Oracle, IPTC</UL><BR>
+
 <? makeName("Alex Belits","abelits@phobos.illtel.denver.co.us",0);?>
   <UL TYPE=DISC><li>fhttpd support</UL><BR>
 
