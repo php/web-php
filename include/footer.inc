@@ -20,7 +20,7 @@ if(@mysql_num_rows($sponsquery)>0) {
 		</td>
 		<td align="right" width="33%">
 			<table><tr><td align="center">
-				<img src="jpgs/powered_by.jpg"><br>
+				<img src="<? echo $root_url; ?>jpgs/powered_by.jpg"><br>
 				<font size="-2">Running PHP <? echo phpversion(); ?></font>
 			</td></tr></table>
 		</td>

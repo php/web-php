@@ -1,5 +1,6 @@
 <?
   include "configuration.inc";
+  if (!$root_url) { $root_url = "/"; }
   $lynx=0;
   $js=0;
   if(ereg("Mozilla/[4-6]",$HTTP_USER_AGENT)) {
@@ -37,17 +38,17 @@ function nbsp() {document.write("&nbsp;");}
 function copy() {document.write("&copy;");}
 
 sm_topon = new Image();
-sm_topon.src = "jpgs/sm_topf.jpg";
+sm_topon.src = "<? echo $root_url; ?>jpgs/sm_topf.jpg";
 sm_topoff = new Image();
-sm_topoff.src = "jpgs/sm_top.jpg";
+sm_topoff.src = "<? echo $root_url; ?>jpgs/sm_top.jpg";
 sm_searchon = new Image();
-sm_searchon.src = "jpgs/sm_searchf.jpg";
+sm_searchon.src = "<? echo $root_url; ?>jpgs/sm_searchf.jpg";
 sm_searchoff = new Image();
-sm_searchoff.src = "jpgs/sm_search.jpg";
+sm_searchoff.src = "<? echo $root_url; ?>jpgs/sm_search.jpg";
 sm_vson = new Image();
-sm_vson.src = "jpgs/sm_vsf.jpg";
+sm_vson.src = "<? echo $root_url; ?>jpgs/sm_vsf.jpg";
 sm_vsoff = new Image();
-sm_vsoff.src = "jpgs/sm_vs.jpg";
+sm_vsoff.src = "<? echo $root_url; ?>jpgs/sm_vs.jpg";
 
 function rollon(imgName) {
         imgOn = eval(imgName + "on.src");
@@ -59,9 +60,12 @@ function rolloff(imgName) {
 }
 // -->
 </script>
-<? } ?>
-</head>
-<body background="jpgs/<?echo $bkg?>" bgcolor="#ffffff" text="#000000" link="#537492" vlink="#032F5B">
+<? }
+if (!$head_closed) {
+    echo("</head>");
+}
+?>
+<body background="<? echo "$root_url\jpgs/$bkg"; ?>" bgcolor="#ffffff" text="#000000" link="#537492" vlink="#032F5B">
 <FONT FACE="Verdana, Arial, Helvetica">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>
@@ -71,17 +75,18 @@ function rolloff(imgName) {
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="<? echo $base_url ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
-<img src="jpgs/sm_top.jpg" valign=top border=0 alt="Top" name=sm_top height=32 width=56></a>
+<img src="<? echo $root_url; ?>jpgs/sm_top.jpg" valign=top border=0 alt="Top" name=sm_top height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="search.php3" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_search');return true" onMouseOut="rolloff('sm_search')"<? } ?>>
-<img src="jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
+<img src="<? echo $root_url; ?>jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
-<img src="jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
+<img src="<? echo $root_url; ?>jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
 </nobr>
 </td></tr>
 </table>
 <!-- add in 30 more pixels to ensure we don't overlap the background -->
-<table width="100%" height="30" border="0"><tr><td>  </td></tr></table>
+<table width="100%" height="30" border="0"><tr><td>&nbsp;</td></tr></table>
+
