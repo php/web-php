@@ -215,6 +215,19 @@ Web browser anywhere in the world. You can also search inside your notebooks to 
 entries that interest you. 
 <? endEntry();?>
 
+<? makeEntry("Freemed","www.freemed.org","Jeff B","jeff@univrel.pr.uconn.edu"); ?>
+Freemed is a medical management system written using PHP and MySQL.
+<? endEntry();?>
+
+<? makeEntry("PHPGem","sptl.org/phpgem/","Nickolas Grebnev","nick@sptl.org"); ?>
+PHPGem is a program accelerates the process of creating of PHP scripts for
+working with tables.  It works with a variety of SQL servers (PostgreSQL,
+MySQL, mSQL, ODBC). You input a description and parameters of your
+table's fields (name, on/off searching in the field, etc.). The result
+is another PHP script which will work with this tables (view table,
+edit table, add/delete entries, search in the tables).
+<? endEntry();?>
+
 <? makeEntry("IRM","www.redshift.com/~yramin/atp/irm","Yann Ramin" ,"theatrus@usa.net"); ?>
 IRM is an easy to use and powerful web-based tracking utility for IT
 departments.  It stores detailed information on software and computers.
@@ -228,13 +241,14 @@ user security, as well as several security groups users can be in
 
 <? makeEntry("eShop","eshop.liquid-web.com","Brad Atkins" ,"batkins@tamrockcanada.ca"); ?>
 eShop is a browser based storefront and catalog development and
-management system.
-Using nothing more than a web browser, developers can implement dynamic
-data driven storefronts with integrated shopping basket, catalog, hierarchal
-categories, boolean product search, and order processing. eShop's architecture lets
-developers prepare and market specialized look and feel, payment processing, and shipping
-modules. The full license comes complete with source codes in PHP so advanced developers
-can get &quot;under the hood&quot; with unlimited customization capabilities. 
+management system.  Using nothing more than a web browser, developers
+can implement dynamic data driven storefronts with integrated shopping
+basket, catalog, hierarchal categories, boolean product search, and
+order processing. eShop's architecture lets developers prepare and
+market specialized look and feel, payment processing, and shipping
+modules. The full license comes complete with source codes in PHP so
+advanced developers can get &quot;under the hood&quot; with unlimited
+customization capabilities.
 <? endEntry();?>
 
 <? makeEntry("Bare Bones Bulletin Board (BBBB)","amber.he.net/~dsoft/bbbb/","Michael Kablitz" ,"mkab@fontane.net.eu.org"); ?>
