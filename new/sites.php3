@@ -20,7 +20,6 @@
 	echo "</tr><tr><td valign=top>\n";
 
 	/* Sports Teams */
-	site("NFL's Oakland Raiders","www.raiders.com");
 
 	echo "<br></td><td valign=top>\n";
 
@@ -139,6 +138,7 @@
 	/* Financial Industry */
 	site("E*Trade","www.etrade.com");
 	site("First USA Bank","www.firstusabank.com");
+	site("TFC Commodity Charts","tfc-charts2.w2d.com");
 
 	/* Games */
 	echo "<br></td><td valign=top>\n";
