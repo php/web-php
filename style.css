@@ -1,3 +1,14 @@
+/* Let no border around the body appear */
+body, html {
+    margin:  0px;
+    padding: 0px;
+}
+
+/* Quicksearch table cell on top of every page. */
+td.quicksearch {
+    color: white;
+}
+
 body, ul, td, th {
 	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 85%;
