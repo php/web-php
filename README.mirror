@@ -27,6 +27,15 @@ Fetch the web files with the following:
 
     rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path 
 
+Setting up an unofficial mirror, and want to only mirror one language of the
+manual? Add: 
+
+    --include='manual/en/' --include='manual/en/**' --exclude='manual/**'
+
+after "--delete-after" in the command line above (substituting your prefered
+language code for 'en'). You can also exclude the distributions directory by
+including "--exclude='distributions/'"..
+
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
 
