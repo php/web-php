@@ -14,7 +14,8 @@ $langs = array(
   'jp'  => 'Japanese',
   'cn'  => 'Traditional Chinese',
   'pt'  => 'Portugese',
-  'se'  => 'Swedish'
+  'se'  => 'Swedish',
+  'hu'  => 'Hungarian'
 );
 
 // Book types
@@ -112,7 +113,9 @@ array (
     /* author[s]    */ "Matt Zandstra",
     /* auth link[s] */ "",
     /* image        */ "zandstra.jpg",
-    /* information  */ "Sams, June 2000, ISBN 0-6723-1804-0, 481 pages",
+    /* information  */ "Sams, June 2000, ISBN 0-6723-1804-0, 481 pages<br>" .
+                       "Also available in " .
+                       make_link("http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801", "Hungarian"),
     /* inform. link */ "http://www.corrosive.co.uk/",
     /* language     */ "en"
    ),
@@ -427,20 +430,16 @@ array (
     /* language     */ "de"
   ),
 
-
-array(
-    /* title[s]     */"PHP Afterwork",    #title(s)
-    /* title_link   */      "http://www.amazon.de/exec/obidos/ASIN/3815505178/wwwphpnet07", #title_link
-    /* author[s]    */      array("Mark Kronsbein", "Clemens Gutweiler", "Thomas Weinert", "Peter Petermann"), #author(s)
-    /* auth link[s] */      array("http://www.zend.com/comm_person.php?id=36", false, "http://www.zend.com/comm_person.php?id=61", "http://www.zend.com/comm_person.php?id=60"),    
-    /* image        */       "afterworkphp.jpg",
-    /* information  */      "Sybex, July 2001, ISBN 3-8155-0517-8, 352 pages",
-    /* inform. link */      "http://www.phpbuch.de/",
-    /* language     */      "de"
+ array(
+    /* title[s]     */ "PHP Afterwork",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815505178/wwwphpnet07",
+    /* author[s]    */ array("Mark Kronsbein", "Clemens Gutweiler", "Thomas Weinert", "Peter Petermann"),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", false, "http://www.zend.com/comm_person.php?id=61", "http://www.zend.com/comm_person.php?id=60"),
+    /* image        */ "afterworkphp.jpg",
+    /* information  */ "Sybex, July 2001, ISBN 3-8155-0517-8, 352 pages",
+    /* inform. link */ "http://www.phpbuch.de/",
+    /* language     */ "de"
    ),
-
-
-
 
   array(
     /* title[s]     */ "PHP 4 programmering",
@@ -605,6 +604,17 @@ array(
     /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
     /* inform. link */ "http://www.cursophp.net/livro/",
     /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "Tanuljuk meg a PHP4 használatát 24 óra alatt",
+    /* title_link   */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
+    /* author[s]    */ "Matt Zandstra",
+    /* auth link[s] */ "",
+    /* image        */ "zandstra_hu.jpg",
+    /* information  */ "Kiskapu, Aug 2001, ISBN 963-9301-30-2, 560 pages",
+    /* inform. link */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
+    /* language     */ "hu"
   )
   ),
 
@@ -652,7 +662,7 @@ array(
     /* author[s]    */ "Michael Kofler",
     /* auth link[s] */ "",
     /* image        */ "mysqlkofler.jpg",
-    /* information  */ "Addison-Wesley - Pearson Education Deutschland, March 2001, ISBN 3-82731-762-2, 624 pages<br>\n" .
+    /* information  */ "Addison-Wesley - Pearson Education Deutschland, March 2001, ISBN 3-82731-762-2, 624 pages<br>\n",
     /* inform. link */ "http://www.kofler.cc/mysql/",
     /* language     */ "de"
   ),
@@ -664,8 +674,8 @@ array(
     /* auth link[s] */ "",
     /* image        */ "dubois.jpg",
     /* information  */ "Foreword by " . make_link("http://zend.com/zend/hof/widenius.php", "Michael \"Monty\" Widenius") .
-                       "New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages" .
-                       "Also available in " .
+                       "<br>New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages" .
+                       "<br>Also available in " .
                        make_link("http://www.amazon.fr/exec/obidos/ASIN/2744008826/wwwphpnet0f", "French") .
                        " and " . make_link("http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07", "German"),
     /* inform. link */ "http://www.newriders.com/books/title.cfm?isbn=0735709211",
