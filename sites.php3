@@ -191,7 +191,7 @@ right away.</blockquote>
 /* Military */
 	title("Military");
 	siteStart();
-	site("US Army Publishing Agency","www-usappc.hoffman.army.mil");
+	site("US Army Publishing Agency","www.usapa.army.mil");
 	siteEnd();
 
 /* Newspapers & Magazines */
