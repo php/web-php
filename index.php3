@@ -1,76 +1,14 @@
-<html><head><title>Professional Home Pages Version 3.0</title>
-<? $title="Welcome";
-   include "include/header.inc"; ?>
-
-<center><img src="gifs/php3logo.gif"><br><font size="-1">Professional Home Pages</font></center>
-
-<p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
-<a href="http://php.iquest.net/">PHP/FI 2.0</a>.<br>
-It is currently in a public beta testing period.  
-
-<ul>
-
-<li><a href="download.php3">Download PHP 3.0!</a>
-
-<li>Read about whether or not you should <a
-href="why_beta.php3">upgrade from PHP/FI 2.0</a>.
-
-<li><a href="documentation.php3">Documentation Resources</a>
-
-<!--
-<li><a href="http://il.php.net/config.php3">Configure PHP 3.0</a>
-online <font size="-2">(JavaScript required)</font>
--->
-
-<li>Report or check on bugs in the <a
-href="http://ca.php.net/bugs.php3">PHP3 Bug Database</a>
-
-<li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP
-3.0 mailing list</a>
-
-<li><a href="http://www.tryc.on.ca/php3.html">PHP 3.0 mailing list
-archive</a>
-
-<li><a href="http://ca.php.net/cvsweb.cgi">Web interface to CVS
-repository for PHP3 tree</a>
-
-<li>A list of <a href="sites.php3">Prominent Sites</a> running some
-version of PHP.
-
-<li>A list of <a href="articles.php3">Articles about PHP</a>.
-
-<li><a href="http://www.sklar.com/px/">PX (PHP Code Exchange)</a>
-
-<!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
-
-</ul>
-<br>
-<center><font size=-1>
-<i><b>Note:</b> The February issue of <font size=+1>WEB</font>Techniques has
-a full <a href="http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml">article on PHP3</a>.</i>
-</font></center>
-<br>
-
-<center>
-<table cellpadding="5">
- <tr>
-  <td><font size="-1">Mirror Sites:</font></td>
 <?
-
-  reset($mirror_sites);
-  while ($site = key($mirror_sites)) {
-      next($mirror_sites);
-      if ($mirror_sites[$site][2]==$FULL_MIRROR) {
-        echo('  <td align="center"><a href="' . $site . '"><img src="gifs/' .
-           $mirror_sites[$site][0] . '-small.gif" border="0"><br>' .
-           '<font size="-2">' .$mirror_sites[$site][1]. "</font></a></td>\n");
-      }
-  }
-
+require("shared.inc");
+commonHeader("PHP3 Main Page");
 ?>
- </tr>
-</table>
-</font>
-</center>
-
-<?include "include/footer.inc";?>
+PHP is server-side HTML embedded scripting language.<P>
+PHP 3.0 is a complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI 2.0</a> language.
+This rewrite is faster, more robust and uses less memory than version 2.  All users of version 2 are
+encouraged to upgrade.<P>
+If you are new to PHP, a good place to start discovering the power of this language is by clicking
+on the &quot;Source&quot; button in the top right corner of all the pages on this site.  What you
+see is the actual PHP files that are behind each of the pages you are looking at.
+<?
+commonFooter();
+?>

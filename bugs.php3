@@ -3,9 +3,9 @@
 
 /* See the end of the script for the table layout. */
 
-$title="PHP3 Bug Database";
-require "include/header.inc";
-
+require("shared.inc");
+commonHeader("PHP3 Main Page");
+echo "<font size=-1>\n";
 $destination = "php-dev@php.iquest.net";
 #$destination = "rasmus@lerdorf.on.ca";
 
@@ -420,8 +420,10 @@ Please supply any information that may be helpful in fixing the bug:
 </form>
 
 <? } ?>
-
-<? require("include/footer.inc"); ?>
+</font>
+<?
+commonFooter();
+?>
 <?
 /*
 # MySQL dump 4.0

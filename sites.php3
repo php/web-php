@@ -1,7 +1,6 @@
-<html><head><title>High-Profile sites running PHP</title>
 <?
-	$title="High-Profile sites running PHP";
-	require("include/header.inc");	
+	require("shared.inc");
+	commonHeader("High-Profile sites running PHP");
 
 	function site($name,$domain) {
 		echo "<a href=\"http://$domain\">$name</a><br>\n";
@@ -10,13 +9,6 @@
 	function title($text) {
 		echo "<td bgcolor=#032F5B><center><font size=+1 color=#ffffff><b>$text</b></font></center></td>\n";
 	}
-	echo "<font size=-1>\n";
-	echo "The presence of a company on this list is by no means indicative of any ";
-	echo "sort of endorsement of PHP by that company.  Sites are only added to ";
-	echo "this list per request, but we cannot guarantee that the person adding ";
-	echo "the site is entitled to do so.  If you own a site on this list and wish ";
-	echo "it removed, email: <a href=\"mailto: sites@php.net\">sites@php.net</a>.";
-	echo "</font>\n";
 
 	echo "<p><center><table border=1 cellpadding=15><tr>\n";
 
@@ -79,6 +71,7 @@
 	site("Børsen - Danish Business Daily","www.borsen.dk");
 	site("Computer Currents","www.computercurrents.com");
 	site("UPI Archives","upi.siteways.com");
+	site("CADALYST Magazine","www.cadonline.com");
 
 	echo "<br></td><td valign=top>\n";
 	/* Large ISP's */
@@ -134,6 +127,7 @@
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("ClearInk Corporation","www.clearink.com");
+	site("Cigar.Com","www.cigar.com");
 
 	echo "</tr><tr>\n";
 	title("Financial Industry");
@@ -164,5 +158,5 @@ of the Internet might have heard of.
 </tt></i></font>
 </blockquote></blockquote>
 <?
-	require("include/footer.inc");
+commonFooter();
 ?>
