@@ -38,8 +38,7 @@ commonHeader("Documentation ");
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
 
-<li><a href="http://rmgroup.on.ca/phpman/">PHP PDF Manual</a> This is
-a third-party conversion of the PHP manual to indexed PDF format.
+<li><?download_link("distributions/unsupported/manual_3_0_11.pdf", "PHP Manual in PDF format");?> This is a third-party conversion of the PHP manual to indexed PDF format. (This is completely unsupported, and lags behind the other formats of the documentation available here.)
 
 <li><A href="/cvs.php3">Getting a CVS account</a>.  If you wish to help out
 with the development of PHP, read this.
