@@ -5,6 +5,11 @@ commonHeader("Mirroring the PHP Web Site");
 
 <h2>Mirroring the PHP Web Site</h2>
 
+<P><b>Note:</b> We are currently re-thinking our mirroring scheme and 
+don't want to set up new mirrors at this time.  Please check back in a
+week or two for more news.  The old instructions are included below
+for informational purposes...</P>
+
 <p>The PHP site has a network of mirrors around the world, that duplicate
 most of the functionality.  Small parts of the site (e.g., the bugs
 database) are specific to one mirror, but all of the static content
@@ -18,12 +23,10 @@ can comply with the following terms:</p>
 <li>The mirror web server must be Apache 1.2.x or 1.3.x, running PHP
     version 3.0 or later as a module.  Sites running alpha, beta
     or release candidate versions of PHP 3.0 will not be accepted.
-<li>The box running the mirror would have to have the 'cvs' program
+<li>The box running the mirror would have to have the 'rsync' program
     set-up.
 <li>The box running the mirror would have to update its content
-    from the main PHP repository at least once per hour.  This means
-    it should have a reasonably quick access time to cvs.php.net,
-    which holds the repository of the PHP web site.
+    from the main PHP repository at least once every 12 hours.  
 <li>The box running the mirror would have to have approximately 30-50MB
     of free space.
 </ol>
