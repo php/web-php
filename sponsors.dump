@@ -1,0 +1,15 @@
+#
+# Table structure for table 'sponsor'
+#
+CREATE TABLE sponsor (
+  server varchar(75) DEFAULT '' NOT NULL,
+  code text NOT NULL,
+  PRIMARY KEY (server)
+);
+
+#
+# Dumping data for table 'sponsor'
+#
+
+INSERT INTO sponsor VALUES ('www.php.net','<a href="http://BestHost.net/"><img src="http://BestHost.net/images/php_sponsor.gif" border=0 alt="BestHost - proud sponsor of PHP.net"></a>');
+INSERT INTO sponsor VALUES ('www.ca.php.net','<a href="http://www.lerdorf.on.ca/">Site hosted by Lerdorf Consultants Inc.</a>');
