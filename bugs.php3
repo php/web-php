@@ -290,7 +290,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
 		echo "<tr><th align=right>PHP Version:</th><td></b>".$row[5]."</td></tr>\n";
 		echo "<tr><th align=right>Assigned To:</th><td></b>".$row[12]."</td></tr>\n";
-		echo "<tr><th align=right>Short Desc.:</th><td></b>".$row[3]."</td></tr>\n";
+		$sd = ereg_replace("<","&lt;",$row[3]);
+		$sd = ereg_replace(">","&gt;",$sd);
+		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd</td></tr>\n";
 		echo "</table>\n";
 		$text = addlinks($row[4]);
 		echo "<blockquote><blockquote><pre>".$text."</pre></blockquote></blockquote>\n";
