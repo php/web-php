@@ -4,7 +4,7 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $X11NS = $HAVE_STYLE = $false;
+$IE4 = $IE3 = $NS4 = $NS3 = $X11NS = $HAVE_STYLE = false;
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
@@ -40,7 +40,7 @@ if ($HAVE_STYLE) {
 
 /* Base functions */
 
-function preloadImages($mode) {
+function preloadImages() {
 	global $FRAMEMODE;
 ?>
 		b_close0 = new Image();
@@ -295,7 +295,7 @@ endif;
 if ($NS4 || $NS3 || $IE4):	/* OnOvers */ ?>
 function LoadImgs () {
 	if (document.images) {
-<? preloadImages($mode); ?>
+<? preloadImages(); ?>
 		loaded = 1;
 	}
 }

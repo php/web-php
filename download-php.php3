@@ -4,7 +4,7 @@ require("shared.inc");
 $current = "3.0RC";
 $win32_current = "3.0b6";
 
-$filesizes["php-3.0bRC.tar.gz"]="~ 900KB";
+$filesizes["php-3.0RC.tar.gz"]="~ 900KB";
 $filesizes["php-3.0b6-win32.exe"]="~ 959KB";
 
 commonHeader("Download PHP Engine");
@@ -74,7 +74,7 @@ while ($site = key($mirror_sites)) {
 	}
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
-	$win32_file = "${site}${srcdir}php-${win32_current}-win32.zip";
+	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
 		download_link("${site}/php3latest.zip","Latest patched Windows version");
