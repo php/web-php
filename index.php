@@ -506,7 +506,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php news_image("http://zend.kbconferences.com/", "conference_zend_php.gif", "Zend/PHP Conference & Expo"); ?>
 <?php news_image("http://conf.phpquebec.org/en/conf2005/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Call for Speakers: PHP Qu&eacute;bec 2005</h1>
