@@ -114,6 +114,28 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
     echo make_link($url, $linktext, $target, $extras);
 }
 
+// make_popup_link()
+// return a hyperlink to something, within the site, that pops up a new window
+//
+function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
+	return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
+		htmlspecialchars($url),
+		($target ? $target : "_new"),
+		htmlspecialchars($url),
+		($target ? $target : "_new"),
+                $windowprops,
+		($extras ? ' '.$extras : ''),
+		($linktext ? $linktext : $url)
+	);
+}
+
+// print_popup_link()
+// print a hyperlink to something, within the site, that pops up a new window
+//
+function print_popup_link($url, $linktext=false, $windowprops="", $target=false, $extras=false) {
+	echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
+}
+
 // Print a link for a downloadable file (including filesize)
 function download_link($file, $title, $showsize = TRUE, $mirror = '')
 {
