@@ -56,8 +56,7 @@ if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
 // We need to override the 404 status in these cases too.
 if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
     @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]")) {
-    @header('HTTP/1.1 200 OK');
-    @header('Status: 200 OK',1,200);
+    status_header(200);
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]";
@@ -67,8 +66,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
 // BC: for old HTML directory (.html extension was used in that)
 elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
         @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[2].php")) {
-    @header('HTTP/1.1 200 OK');
-    @header('Status: 200 OK',1,200);
+    status_header(200);
     $PRINT_PAGE = TRUE;
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[2].php";
     exit;
@@ -77,8 +75,7 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
 // The index file needs to be handled in a special way
 elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &&
         @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php")) {
-    @header('HTTP/1.1 200 OK');
-    @header('Status: 200 OK',1,200);
+    status_header(200);
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php";
@@ -106,6 +103,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     
     // Mirror selection page
     if ($dlinfo[2] == "a") {
+        status_header(200);
         include_once $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
         exit;
     }
@@ -117,6 +115,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     else { $mr = "http://{$dlinfo[2]}/"; }
     
     // Start the download process
+    status_header(200);
     include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
     download_file($mr, $df);
     exit;
@@ -218,6 +217,7 @@ if (isset($external_redirects[$URI])) {
 // Temporary hack for books and mirror-info, until all the pages
 // will be capable of being included from anywhere
 if (in_array($URI, array('books', 'mirror-info'))) {
+    status_header(200);
     include_once $_SERVER['DOCUMENT_ROOT'] . "/$URI.php";
 }
 
@@ -226,8 +226,7 @@ if (in_array($URI, array('books', 'mirror-info'))) {
 include_once $_SERVER['DOCUMENT_ROOT'] . "/include/manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
-    @header('HTTP/1.1 200 OK');
-    @header('Status: 200 OK',1,200);
+    status_header(200);
     include_once $_SERVER['DOCUMENT_ROOT'] . $try;
     exit;
 }
@@ -245,16 +244,30 @@ mirror_redirect(
 function make404()
 {
     global $_SERVER;
-    @header('HTTP/1.1 404 Not Found');
-    @header('Status: 404 Not Found',1,404);
-    header("Cache-Control: public, max-age=600");
+    status_header(404);
     site_header('404 Not Found');
-    echo "<h1>Not Found</h1>\n",
-         "<p>The page <b>",
-         htmlspecialchars($_SERVER['REQUEST_URI']),
-         "</b> could not be found.</p>\n";
+    echo "<h1>Not Found</h1>\n" .
+         "<p><strong>" . htmlspecialchars($_SERVER['REQUEST_URI']) .
+         "</strong> not found on this server.</p>\n";
     site_footer();
     exit;
+}
+
+// Send out a proper status header
+function status_header($num)
+{
+    // Set status text
+    switch ($num) {
+        case 404: $status = "Not Found"; break;
+        case 200: $status = "OK"; break;
+        default: return FALSE;
+    }
+    
+    // BC code for PHP < 4.3.0
+    @header("HTTP/1.1 $num $status");
+    @header("Status: $num $status", TRUE, $num);
+    
+    return TRUE;
 }
 
 ?>
