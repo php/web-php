@@ -78,7 +78,7 @@ $obj->printHello();
 
 <h2>Private and protected methods</h2>
 <p>
- With PHP 5 (Zend Engine 2), private and protected methods are also introduced.
+ With PHP 5, private and protected methods are also introduced.
 </p>
 <h3>Example</h3>
 <?php highlight_php('<?php
@@ -136,7 +136,7 @@ $o->test();
 
 <h2>Interfaces</h2>
 <p>
- The Zend Engine 2.0 introduces interfaces. A class may implement an arbitrary
+ PHP 5 introduces interfaces. A class may implement an arbitrary
  list of interfaces.
 </p>
 <h3>Example</h3>
@@ -147,7 +147,8 @@ interface Throwable {
 
 class Exception implements Throwable {
     public function getMessage() {
-    // ...
+        // ...
+    }
 }
 ?>'); ?>
 <p>
@@ -227,15 +228,33 @@ class Foo {
 }
 ?>'); ?>
 <p>
+ It is furthermore possible to make a class final. Doing this 
+ prevents a class from being specialized (it cannot be inherited 
+ by another class). There's no need to declare the methods of
+ a final class themselves as final.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+final class Foo {
+    // class definition
+}
+
+// the next line is impossible
+// class Bork extends Foo {}
+?>'); ?>
+<p>
+ Properties cannot be final.
+</p>
+<p>
  Old code that has no user-defined classes or functions named 'final' should
  run without modifications.
 </p>
 
 <h2>Object Cloning</h2>
 <p>
- PHP 4 (Zend Engine 1.0) offered no way a user could decide what copy constructor
- to run when an object is duplicated. During duplication, PHP 4 did a bit for bit
- copy making an identical replica of all the object's properties.
+ PHP 4 offered no way a user could decide what copy constructor to run when an
+ object is duplicated. During duplication, PHP 4 did a bit for bit copy making
+ an identical replica of all the object's properties.
 </p>
 <p>
  Creating a copy of an object with fully replicated properties is not always the
@@ -254,7 +273,7 @@ class Foo {
 $copy_of_object = $object->__clone();
 ?>'); ?>
 <p>
- When the developer asks to create a new copy of an object, the Zend Engine will
+ When the developer asks to create a new copy of an object, PHP 5 will
  check if a <code>__clone()</code> method has been defined or not. If not, it
  will call a default <code>__clone()</code> which will copy all of the object's
  properties. If a <code>__clone()</code> method is defined, then it will be
@@ -296,7 +315,7 @@ print $obj->address . "\n";
 
 <h2>Unified Constructors</h2>
 <p>
- The Zend Engine allows developers to declare constructor methods for classes.
+ PHP 5 allows developers to declare constructor methods for classes.
  Classes which have a constructor method call this method on each newly-created
  object, so it is suitable for any initialization that the object may need
  before it is used.
@@ -316,15 +335,15 @@ print $obj->address . "\n";
 <h3>Example</h3>
 <?php highlight_php('<?php
 class BaseClass {
-	function __construct() {
-		print "In BaseClass constructor\n";
-	}
+    function __construct() {
+        print "In BaseClass constructor\n";
+    }
 }
 
 class SubClass extends BaseClass {
-	function __construct() {
-		parent::__construct();
-		print "In SubClass constructor\n";
+    function __construct() {
+        parent::__construct();
+        print "In SubClass constructor\n";
     }
 }
 
@@ -356,13 +375,13 @@ $obj = new SubClass();
 <h3>Example</h3>
 <?php highlight_php('<?php
 class MyDestructableClass {
-	function __construct() {
-		print "In constructor\n";
+    function __construct() {
+        print "In constructor\n";
         $this->name = "MyDestructableClass";
     }
 
     function __destruct() {
-		print "Destroying " . $this->name . "\n";
+        print "Destroying " . $this->name . "\n";
     }
 }
 
@@ -380,7 +399,7 @@ $obj = new MyDestructableClass();
 </p>
 <?php highlight_php('<?php
 class Foo {
-	const constant = "constant";
+    const constant = "constant";
 }
 
 echo "Foo::constant = " . Foo::constant . "\n";
@@ -392,8 +411,8 @@ echo "Foo::constant = " . Foo::constant . "\n";
 </p>
 <?php highlight_php('<?php
 class Bar {
-	const a = 1<<0;
-	const b = 1<<1;
+    const a = 1<<0;
+    const b = 1<<1;
     const c = a | b;
 }
 ?>'); ?>
@@ -405,22 +424,120 @@ class Bar {
 <h2>Exceptions</h2>
 <p>
  PHP 4 had no exception handling. PHP 5 introduces a exception model similar
- to that of other programming languages.
+ to that of other programming languages. Note that there is support for "catch
+ all" and for the "finally" clause.
+</p>
+<p>
+ Exceptions can be rethrown in catch blocks. Also it is possible to
+ have multiple catch blocks. In that case the caught exception is 
+ compared with the classtype of each catch block from top to bottom
+ and the first block that has an 'instanceof' match gets executed.
+ When the catch block finishes, execution continues at the end of 
+ the last catch block. If no catch block has an 'instanceof' match
+ then the next try/catch block is searched until no more try/catch 
+ blocks are available. In that case the exception is an uncaught
+ exception and the program terminates with showing the exception.
 </p>
 <h3>Example</h3>
 <?php highlight_php('<?php
-class MyExceptionFoo extends Exception {
+class MyException {
     function __construct($exception) {
-        parent::__construct($exception);
+        $this->exception = $exception;
+    }
+
+    function Display() {
+        print "MyException: $this->exception\n";
+    }
+}
+
+class MyExceptionFoo extends MyException {
+    function __construct($exception) {
+        $this->exception = $exception;
+    }
+
+    function Display() {
+        print "MyException: $this->exception\n";
     }
 }
 
 try {
-    throw new MyExceptionFoo("Hello");
-} catch (MyExceptionFoo $exception) {
-    print $exception->getMessage();
+    throw new MyExceptionFoo(\'Hello\');
+}
+catch (MyException $exception) {
+    $exception->Display();
+}
+catch (Exception $exception) {
+    echo $exception;
 }
 ?>'); ?>
+<p>
+ Even though the above example shows that it is possible to define
+ exception classes that don't inherit from Exception it is best to
+ do so. This is because the internal Exception class can gather a
+ lot of information otherwise not available. The PHP code emulation
+ code would look something like shown below. The comments show the
+ meaning of each property and hence their getter methods. As the code
+ shows it is possible to read any available information by using the
+ getter methods. But since some of the methods are used internally
+ they are marked final. All in all the class is very restrictive 
+ because it must be ensured that anything used internally always
+ works as expected.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+class Exception {
+    function __construct(string $message=NULL, int code=0) {
+        if (func_num_args()) {
+            $this->message = $message;
+        }
+        $this->code = $code;
+        $this->file = __FILE__; // of throw clause
+        $this->line = __LINE__; // of throw clause
+        $this->trace = debug_backtrace();
+        $this->string = StringFormat($this);
+    }
+
+    protected $message = \'Unknown exception\';  // exception message
+    protected $code = 0; // user defined exception code
+    protected $file;     // source filename of exception
+    protected $line;     // source line of exception
+
+    private $trace;      // backtrace of exception
+    private $string;     // internal only!!
+
+    final function getMessage() {
+        return $this->message;
+    }
+    final function getCode() {
+        return $this->code;
+    }
+    final function getFile() {
+        return $this->file;
+    }
+    final function getTrace() {
+        return $this->trace;
+    }
+    final function getTraceAsString() {
+        return self::TraceFormat($this);
+    }
+    function _toString() {
+        return $this->string;
+    }
+    static private function StringFormat(Exception $exception) {
+        // ... a function not available in PHP scripts
+        // that returns all relevant information as a string
+    }
+    static private function TraceFormat(Exception $exception) {
+        // ... a function not available in PHP scripts
+        // that returns the backtrace as a string
+    }
+}
+?>'); ?>
+<p>
+ If you derive your exception classes from this Exception base class
+ your exceptions will be nicely shown in the builtin handler for 
+ uncaught exceptions.
+</p>
 <p>
  Old code that has no user-defined classes or functions 'catch', 'throw'
  and 'try' will run without modifications.
@@ -429,8 +546,8 @@ try {
 <h2>Dereferencing objects returned from functions</h2>
 <p>
  In PHP 4 it wasn't possible to dereference objects returned by functions
- and make further method calls on those objects. With the advent of Zend
- Engine 2, the following is now possible:
+ and make further method calls on those objects. With PHP 5, the following
+ is now possible:
 </p>
 <?php highlight_php('<?php
 class Circle {
@@ -463,9 +580,12 @@ ShapeFactoryMethod("Square")->draw();
 <?php highlight_php('<?php
 class foo {
     static $my_static = 5;
+    public $my_prop = \'bla\';
 }
 
 print foo::$my_static;
+$obj = new foo;
+print $obj->my_prop;
 ?>'); ?>
 
 <h2>Static Methods</h2>
@@ -597,5 +717,179 @@ $foo = new Caller();
 $a = $foo->test(1, "2", 3.4, true);
 var_dump($a);
 ?>'); ?>
+
+<h2>Iteration</h2>
+<p>
+ Objects may be iterated in an overloaded way when used with
+ foreach. The default behavior is to iterate over all properties.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+class Foo {
+    var $x = 1;
+    var $y = 2;
+}
+
+$obj = new Foo;
+
+foreach ($obj as $prp_name => $prop_value) {
+    // using the property
+}
+?>'); ?>
+<p>
+ Each class whose instances can be iterated with foreach should 
+ implement the empty interface <code>Traversable</code>. Hence any object
+ that says it implements <code>Traversable</code> can be used with foreach.
+</p>
+<p>
+ The interfaces <code>IteratorAggregate</code> and <code>Iterator</code>
+ allows you to specify how class objects are iterated in PHP code. The first
+ of them simply has a method <code>getIterator()</code> which must return
+ an array or an object that either implements the interface <code>Iterator</code>
+ or is instantiated from an internal class that can be iterated.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+class ObjectIterator implements Iterator {
+
+    private $obj;
+    private $num;
+
+    function __construct($obj) {
+        $this->obj = $obj;
+    }
+    function rewind() {
+        $this->num = 0;
+    }
+    function hasMore() {
+        return $this->num < $this->obj->max;
+    }
+    function key() {
+        return $this->num;
+    }
+    function current() {
+        switch($this->num) {
+            case 0: return "1st";
+            case 1: return "2nd";
+            case 2: return "3rd";
+            default: return $this->num."th";
+        }
+    }
+    function next() {
+        $this->num++;
+    }
+}
+
+class Object implements IteratorAggregate {
+
+    public $max = 3;
+
+    function getIterator() {
+        return new ObjectIterator($this);
+    }
+} 
+
+$obj = new Object;
+
+// this foreach ...
+foreach($obj as $key => $val) {
+    echo "$key = $val\n";
+}
+
+// matches the following 7 lines with the for directive.
+$it = $obj->getIterator();
+for($it->rewind(); $it->hasMore(); $it->next) {
+    $key = $it->current();
+    $val = $it->key();
+    echo "$key = $val\n";
+}
+unset($it);
+?>'); ?>
+<p>
+ The matching for directive is very intersting here since it shows 
+ the use of all abstract methods declared in the interfaces 
+ <code>Iterator</code> and <code>IteratorAggregate</code> respectively.
+</p>
+
+<h2>New <code>__METHOD__</code> constant</h2>
+<p>
+ The new <code>__METHOD__</code> pseudo constant shows the current class
+ and method when used inside a method and the function when used outside of a 
+ class.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+class Foo {
+    function Show() {
+        echo __FILE__ . \'(\' . __LINE__ . \')\' . __METHOD__;
+    }
+}
+function Test() {
+    echo __FILE__ . \'(\' . __LINE__ . \')\' . __METHOD__;
+}
+?>'); ?>
+
+<h2>New <code>__toString()</code> method</h2>
+
+<p>
+ The new <code>__toString()</code> magic method allows you to overload the
+ object to string conversion.
+</p>
+<h3>Example</h3>
+<?php highlight_php('<?php
+class Foo {
+    function __toString() {
+        return "What ever";
+    }
+}
+
+$obj = Foo;
+
+$str = (string) $obj; // call __toString()
+
+echo $obj; // call __toString()
+?>'); ?>
+
+<h2>Reflection API</h2>
+
+<p>
+ PHP 5 comes with a complete reflection API that adds the ability to
+ reverse-engineer classes, interfaces, functions and methods as well
+ as extensions.
+</p>
+
+<p>
+ The reflection API also offers ways of getting doc comments for
+ functions, classes and methods.
+</p>
+
+<p>
+ Nearly all aspects of object oriented code can be reflected by
+ using the reflection API which is
+ <a href="http://sitten-polizei.de/php/reflection_api/docs/language.reflection.html">documented
+ separatley</a>.
+</p>
+
+<h3>Example</h3>
+<?php highlight_php('<?php
+class Foo {
+    public $prop;
+    function Func($name) {
+        echo "Hello $name";
+}
+
+reflection_class::export(\'Foo\');
+reflection_object::export(new Foo);
+reflection_method::export(\'Foo\', \'func\');
+reflection_property::export(\'Foo\', \'prop\');
+reflection_extension::export(\'standard\');
+?>'); ?>
+
+<h2>New memory manager</h2>
+<p>
+ PHP 5 has a new memory manager which allows it to run efficiently in
+ multi-threaded environments as it doesn't need to use mutexes to lock
+ and unlock during allocation/deallocation.
+</p>
 
 <?php site_footer(); ?>
