@@ -68,7 +68,7 @@ if(!isset($pattern)) { ?>
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
 		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
-		exec("/usr/local/htdig/bin/htphp.sh \"$query\"",&$result);
+		exec("$htsearch_prog \"$query\"",&$result);
 		$rc=count($result);
 		if ($rc<2) {
 			echo "<H2>There was an error executing this query.  Please try later</H2>";
