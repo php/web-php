@@ -19,6 +19,12 @@ endwhile;
 ?></SELECT>
 <INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>
 </FORM>
+<P>
+<SMALL>
+If you are interested in hosting a mirror of this site, <A HREF="/README.mirror">here's
+how</A>.
+</SMALL>
+<P>
 <?
 commonFooter();
 ?>
