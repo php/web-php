@@ -42,11 +42,11 @@ if ($EXPL_LANG == '') { unset($EXPL_LANG); }
 
 function language_choose_code()
 {
-    global $_REQUEST, $_SERVER, $_COOKIE, $langs;
+    global $_REQUEST, $_SERVER, $_COOKIE;
     
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
-    $languages = array(); /* $langs = array(); */
+    $languages = array();
 
     // Default values for languages
     $explicitly_specified = ''; $selected = '';
@@ -162,7 +162,7 @@ function language_choose_code()
         }
     }
 */
-	$selected = $langs[0];
+    $selected = $languages[0];
     
     // Return with all found data
     return array($selected, $explicitly_specified, $parsed_langs);
