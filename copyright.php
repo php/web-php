@@ -30,23 +30,15 @@ view, download and print the documents and information available
 on this Site subject to the following conditions:
 </P>
 <UL>
-<LI>The documents and information may be used solely for personal, 
-informational, internal, non-commercial purposes. 
-<LI>The documents and information may not be modified or altered 
-in any way without giving credit to the original source.
-<LI>You may not remove any copyright or other proprietary notices 
-contained in the documents and information. 
-<LI>The PHP Group reserves the right to revoke the authorization 
-to view, download and print the documents and information available 
-on this Site at any time, and any such use shall be discontinued 
-immediately upon written notice from The PHP Group.
-<LI>The rights granted to you constitute a license and not a transfer 
-of title. 
-<LI>The rights specified above to view, download and print the 
-documents and information available on this Site are not applicable 
-to the graphical elements, design or layout of this Site. Elements 
-of this Site are protected by trade dress and other laws and may not 
-be copied or imitated in whole or in part. 
+<LI>You may not remove any copyright or other proprietary notices
+contained in the documents and information on this Site.
+<LI>The rights granted to you constitute a license and not a transfer
+of title.
+<LI>The rights specified above to view, download and print the
+documents and information available on this Site are not applicable
+to the graphical elements, design or layout of this Site.  These
+elements of the Site are protected by trade dress and other laws
+and may not be copied or imitated in whole or in part.
 </UL>
 
 <P>
