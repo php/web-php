@@ -315,6 +315,7 @@ table#cal a.cat3 {
 /* Logos table ------------------------------------------------------------ */
 table#logos {
 	background-color: #f0f0f0;
+	color: inherit;
 }
 table#logos td {
 	vertical-align: middle;
