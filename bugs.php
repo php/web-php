@@ -627,7 +627,7 @@ function incoming_details_are_valid($require_ldesc=0) {
     global $email,$bug_type,$php_version,$sdesc,$ldesc;
 
 	$valid = 1;
-	if(!preg_match("/[.\\w+-]+@[.\\w]+\\.\\w{2,}/i",$email)) {
+	if(!preg_match("/[.\\w+-]+@[.\\w-]+\\.\\w{2,}/i",$email)) {
 		echo "<h2 class=\"error\">Please provide a valid email address.</h2>";
 		$valid = 0;
 	}
