@@ -12,15 +12,6 @@ if (!isset($source_site)) {
 	$source_site="www.php.net";
 }
 
-switch($download_file) {
-	case "php-4.0b4.tar.gz":
-		$download_file = "php-4.0b4pl1.tar.gz";
-		break;
-	case "php-4.0b4-Win32.zip":
-		$download_file = "php-4.0b4pl1-Win32.zip";
-		break;
-}
-
 header("Location:  http://$source_site/distributions/$download_file");
 
 $log = @fopen("logs/download.log", "a");
