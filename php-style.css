@@ -43,3 +43,11 @@ TD,TH {
 PRE {
     font-size : 10pt;
 }
+
+LI {
+    margin-bottom: 4pt;
+}
+
+UL,OL {
+    margin-top: 4pt;
+}
