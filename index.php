@@ -106,7 +106,6 @@ A talk on PHP-GTK was presented by Andrei Zmievski and
 Frank Kromann at the 2001 O'Reilly Open Source Conference
 in San Diego. The slides from the talk can be
 <a href="http://conf.php.net/sd-gtk">viewed online</a>.
-</p>
 For more information, visit <?php print_link("http://gtk.php.net/")?>.
 <br clear="all">
 </p>
