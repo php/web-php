@@ -1,4 +1,6 @@
-<?
+<?php
+
+# handle .php3 files that were renamed to .php
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	if($SERVER_PORT!=80) {
 		$url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
@@ -14,60 +16,47 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	exit;
 }
 
-$uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1);
+# handle moving english manual down into its own directory
+if (eregi("/manual/([^/]+.php3?)", $REQUEST_URI, $array)) {
+	if($SERVER_PORT!=80) {
+		$url = "http://".$SERVER_NAME.":".$SERVER_PORT."/manual/$DEFAULT_LANG/".$array[1];
+	} else {
+		$url = "http://".$SERVER_NAME."/manual/$DEFAULT_LANG/".$array[1];
+	}
+	$urle = htmlspecialchars($url);
+	
+	header("Location: $url");
 
-if(strchr($uri,'/')) {
-	list($lang,$function) = explode('/',$uri,2);
-	$lang .= '/';
-	$function = strtolower($function);
-	$lang = strtolower($lang);
-} else $function = strtolower($uri);
-
-if($lang=='en') $lang = '';
-
-$try_files = array();
-
-function tryprefix($lang, $func, $prefix) {
-    global $try_files;
-
-    $func = ereg_replace("_","-",$func);
-    $func = ereg_replace('\(.*\)',"-",$func);
-    $try_files[] = "/manual/${lang}${prefix}${func}.php";
-    $nosp = ereg_replace(" ", "", $func);
-    if ($nosp != $func) {
-    $try_files[] = "/manual/${lang}${prefix}${nosp}.php";
-    }
-    $dasp = ereg_replace(" ", "-", $func);
-    if ($dasp != $func) {
-    $try_files[] = "/manual/${lang}${prefix}${dasp}.php";
-    }
-    $noul = ereg_replace("-", "", $func);
-    if ($noul != $func) {
-    $try_files[] = "/manual/${lang}${prefix}${noul}.php";
-    }
+	print "<html><title>Redirect to $urle</title><body>";
+	print "<a href=\"".$url."\">Please click here</a></body></html>";
+	exit;
 }
 
-tryprefix($lang,$function, "function.");
-tryprefix($lang,$function, "class.");
-tryprefix($lang,$function, "ref.");
-tryprefix($lang,$function, "feature-");
-tryprefix($lang,$function, "construct.");
-tryprefix($lang,$function, "control-structures.");
+$uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1);
 
-reset($try_files);
-while (list($dummy, $file) = each($try_files)) {
-    if (file_exists($DOCUMENT_ROOT.$file)) {
-    Header("Location: $file");
-    exit;
-    }
+# try to find the uri as a manual entry
+
+require "manual-lookup.inc";
+if(strchr($uri,'/')) {
+	list($lang,$function) = explode('/',$uri,2);
+	$function = strtolower($function);
+	$lang = strtolower($lang);
+} else {
+        $function = strtolower($uri);
+        $lang = $MIRRORS[$MYSITE][6];
+}
+
+$try = find_manual_page($lang, $function);
+if ($try) {
+	header("Location: $try");
+	exit;
 }
 
 ?>
-<?Header("http/1.0 404 Not Found")?>
+<?Header("HTTP/1.0 404 Not Found")?>
 <html><title>404 - <?echo $REDIRECT_REDIRECT_ERROR_NOTES?></title>
 <body>
 <?
-	require "../configuration.inc";
 	if(!isset($pattern)) {
 		$pattern = $uri;
 	}
