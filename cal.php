@@ -9,54 +9,51 @@ require_once 'prepend.inc';
 # month (or the month of the requested day)
 
 $begun = 0;
+$id = (int)$id;
+$cy = (int)$cy;
+$cm = (int)$cm;
+$cd = (int)$cd;
 
-if (!is_numeric($id) || !is_numeric($cy) || !is_numeric($cd) || !is_numeric($cm)) {
-	$errors[] = "invalid data specified";
-	$hack = 1;
+if ($id) {
+ if ($event = load_event($id)) {
+   commonHeader("Event: ".htmlentities($event['sdesc']));
+   display_event($event, 0);
+   $begun++;
+ }
+ else {
+   $errors[] = "There is no event for specified id ('".htmlentities($id)."')";
+ }
+}
+elseif ($cy && $cm && $cd) {
+ if (checkdate($cm,$cd,$cy)) {
+   $date = mktime(0,0,1,$cm,$cd,$cy);
+   if ($events = load_events($date)) {
+     commonHeader("Events: ".date("F j, Y", $date));
+     echo "<h2>", date("F j, Y", $date), "</h2>\n";
+     foreach ($events as $event) {
+       display_event($event, 0);
+     }
+     $begun++;
+   }
+   else {
+     $errors[] = "There are no events for the specified date (".date("F j, Y",$date).").";
+   }
+ }
+ else {
+   $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd").") was not valid.";
+   unset($cm); unset($cd); unset($cy);
+ }
 }
 
-if (!$hack) {
- if ($id) {
-  if ($event = load_event($id)) {
-    commonHeader("Event: ".htmlentities($event['sdesc']));
-    display_event($event, 0);
-    $begun++;
-  }
-  else {
-    $errors[] = "There is no event for specified id ('".htmlentities($id)."')";
-  }
- }
- elseif ($cy && $cm && $cd) {
-  if (checkdate($cm,$cd,$cy)) {
-    $date = mktime(0,0,1,$cm,$cd,$cy);
-    if ($events = load_events($date)) {
-      commonHeader("Events: ".date("F j, Y", $date));
-      echo "<h2>", date("F j, Y", $date), "</h2>\n";
-      foreach ($events as $event) {
-        display_event($event, 0);
-      }
-      $begun++;
-    }
-    else {
-      $errors[] = "There are no events for the specified date (".date("F j, Y",$date).").";
-    }
-  }
-  else {
-    $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd").") was not valid.";
-    unset($cm); unset($cd); unset($cy);
-  }
- }
-
- if ($cm && $cy && !checkdate($cm,1,$cy)) {
-  $errors[] = "The specified year and month (".htmlentities("$cy, $cm").") are not valid.";
-  unset($cm); unset($cy);
- }
-
- if (!$cm) $cm = date("m");
- if (!$cy) $cy = date("Y");
-
- $date = mktime(0,0,1,$cm,1,$cy);
+if ($cm && $cy && !checkdate($cm,1,$cy)) {
+ $errors[] = "The specified year and month (".htmlentities("$cy, $cm").") are not valid.";
+ unset($cm); unset($cy);
 }
+
+if (!$cm) $cm = date("m");
+if (!$cy) $cy = date("Y");
+
+$date = mktime(0,0,1,$cm,1,$cy);
 
 if (!$begun) {
   commonHeader("Events: ".date("F Y", $date));
