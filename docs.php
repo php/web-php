@@ -98,8 +98,6 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 <li><a href="books.php">Books on PHP</A>. Here you can find a
     great selection of books on PHP and related themes.
 
-<li><a href="/version4/win32build.php">Win32 build instructions</a></li>	
-
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
