@@ -56,8 +56,22 @@ $server = $SERVER_NAME;
 <h1>Latest version of PHP</h1>
 
 <p>
-Before you download, make sure you are using a mirror close to you. You can
-change mirrors at the bottom of the page.
+Before you download, make sure you are using a mirror close to you.
+<?php
+$cm = find_closest_mirrors();
+$cmn = count($cm);
+if ($cmn > 0) {
+    echo "We found ";
+    echo ($cmn > 1 ? "$cmn mirrors" : "a mirror");
+    echo " near you. We recommend you use nearby mirror sites.";
+    echo "Please visit: ";
+    foreach ($cm as $num => $mirror) {
+        echo '<a href="' . $mirror . '">' . $mirror . '</a>';
+        if ($num < $cmn) { echo " or "; }
+    }
+}
+?>
+You can change also mirrors at the bottom of the page.
 </p>
 
 <h2>Complete Source Code</h2>
