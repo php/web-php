@@ -24,4 +24,8 @@ useful functions, organized for easy finding.  Includes a search function.<BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
 </UL>
 
+<h3>Funding PHP Development</h3>
+Sometimes the various volunteer programmers responsible for PHP incur costs related to
+their work on PHP.  You can contribute money to help alleviate these costs <A HREF="funding.php3">HERE</A>.
+
 <? commonFooter(); ?>
