@@ -213,7 +213,7 @@ right away.</blockquote>
 	site("ClearInk Corporation","www.clearink.com");
 	site("Cigar.Com","www.cigar.com");
 	site("Spell Web","www.spellweb.com");
-	site("Mail Check","mail.chek.com");
+	site("Mail Chek","mail.chek.com");
 	siteEnd();
 
 /* blank bar at end. */
