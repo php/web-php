@@ -421,7 +421,7 @@ array (
     /* title[s]     */ "PHP 4 Webbook",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381550502X/wwwphpnet07",
     /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
-    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", false),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
     /* image        */ "mark_thomas.jpg",
     /* information  */ "Sybex, March 2001, ISBN 3-8984-2116-3, 500 pages",
     /* inform. link */ "http://www.phpbuch.de/",
@@ -432,7 +432,7 @@ array (
     /* title[s]     */ "PC Spicker PHP",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815500613/wwwphpnet07",
     /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
-    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", false),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
     /* image        */ "phpspicker.jpg",
     /* information  */ "Sybex, May 2001, ISBN 3-8155-0061-3 , 120 pages",
     /* inform. link */ "http://www.phpbuch.de/",
@@ -444,7 +444,7 @@ array(
     /* title[s]     */"PHP Afterwork",    #title(s)
     /* title_link   */      "http://www.amazon.de/exec/obidos/ASIN/3815505178/wwwphpnet07", #title_link
     /* author[s]    */      array("Mark Kronsbein", "Clemens Gutweiler", "Thomas Weinert", "Peter Petermann"), #author(s)
-    /* auth link[s] */      array("http://www.zend.com/comm_person.php?id=36", false, false, "http://www.zend.com/comm_person.php?id=60"),    
+    /* auth link[s] */      array("http://www.zend.com/comm_person.php?id=36", false, "http://www.zend.com/comm_person.php?id=61", "http://www.zend.com/comm_person.php?id=60"),    
     /* image        */       "afterworkphp.jpg",
     /* information  */      "Sybex, July 2001, ISBN 3-8155-0517-8, 352 pages",
     /* inform. link */      "http://www.phpbuch.de/",
