@@ -86,7 +86,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
   specified). (Tony)</li>
 <li>Fixed bug <?php bugfix(31710); ?> (Wrong return values for mysqli_autocommit/commit/rollback).
   (Georg)</li>
-<li>Fixed bug <?php bugfix(31705); ?> (parse_url() does not recognize http://foo.com<?php bugfix(); ?>bar). (Ilia)</li>
+<li>Fixed bug <?php bugfix(31705); ?> (parse_url() does not recognize http://foo.com#bar). (Ilia)</li>
 <li>Fixed bug <?php bugfix(31695); ?> (Cannot redefine endpoint when using WSDL). (Dmitry)</li>
 <li>Fixed bug <?php bugfix(31684); ?> (dio_tcsetattr(): misconfigured termios settings).
   (elod at itfais dot com)</li>
