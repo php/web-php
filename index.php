@@ -76,6 +76,24 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php /* move this entry to the top when you update it! */ ?>
+
+<h1>
+<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For September available
+</h1>
+
+<p>
+<font class="newsDate">[01-Oct-2001]</font>
+<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
+published the current results for their Web Server surveys.
+<?php print_link("/usage.php", "usage page"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Rackspace providing additional hosting for PHP project</h1>
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
 
@@ -135,24 +153,6 @@ More information at <a href="http://www.php-conference.de/2001/index_en.php">www
 
 <?php echo hdelim(); ?>
 
-<?php /* move this entry to the top when you update it! */ ?>
-
-<h1>
-<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For August available
-</h1>
-
-<p>
-<font class="newsDate">[02-Aug-2001]</font>
-<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
-published the current results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the 
-<?php print_link("/usage.php", "usage page"); ?>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
 
 <h1><?php print_link("http://gtk.php.net/", make_image("php-gtk-white.gif", "PHP-GTK", "right") ); ?>
 PHP-GTK version 0.1 released</h1>
