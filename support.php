@@ -214,16 +214,19 @@ lists. There are many PHP-related mailing lists available.
 You will be sent a confirmation mail at the address you wish to
 be subscribed or unsubscribed, and only added to the list after
 following the directions in that mail.
+</p>
 
 <p>
 There are a variety of commands you can use to modify your subscription.
 Either send a message to php-whatever-help@lists.php.net (as in,
 php-general-help@lists.php.net) or you can view the commands for
 ezmlm <a href="http://www.ezmlm.org/ezman-0.32/ezman1.html">here.</a>
+</p>
 
 <p>
 Archives for some of these mailing lists are also available at
 <a href="http://www.phpbuilder.com/mail/">http://www.phpbuilder.com/mail/</a>.
+</p>
 
 <p>
 <b>Warning:</b> The PHP users mailing list gets close to 2500 messages
@@ -233,25 +236,32 @@ want to consider subscribing to the digest list instead (two messages
 per day). You can also read the mailing list using the archives with
 a web interface, or if you like reading things with a news reader, you
 can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
+</p>
 
 <p>
 You can search the mailing lists right from this website from <A
 HREF="/search.php">the search page</A> or by using the search button
 on the top-right of every page.
+</p>
 
 <h3>Newsgroups</h3>
 <p>
 The mailing lists hosted at lists.php.net are also gatewayed to
 newsgroups on the server at <a href="news://news.php.net/">news.php.net</a>.
+</p>
+
 <p>
 You can both read and post to the mailing lists through the news
 interface.
+</p>
 
 <h3>Local Mailing Lists</h3>
 <p>
 There are also some mailing lists that have been set up by others in
 the community to host local discussions (particularly non-English
 discussions).
+</p>
+
 <ul>
   <li><a href="mailto:php3-france-subscribe@onelist.com">French PHP User's Mailing List</a>
   <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French PHP Newsgroup</a>
@@ -296,6 +306,7 @@ experienced PHP people sitting around doing nothing on the #php channel
 on <a href="http://openprojects.nu">OpenProjects</a>. There is also a #php
 channel on EFNet, but due to the difficulties many people have getting on and
 staying on that network we are migrating to the OpenProjects network.
+</p>
 
 <?php
 }
