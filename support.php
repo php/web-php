@@ -133,9 +133,9 @@ lists. There are many PHP-related mailing lists available.
       false, true, true
     ),
     Array (
-      'php-pear', 'PEAR common code library list',
-      'A list for those interested in PEAR, an open-source common code library for PHP',
-      false, true, true
+      'pear-general', 'PEAR general list',
+      'A list for users of PEAR, an open-source common code library for PHP',
+      false, false, true
     ),
     Array (
       'php-template', 'Templates mailing list',
@@ -175,14 +175,24 @@ lists. There are many PHP-related mailing lists available.
       false, false, false
     ),
     Array (
+      'pear-dev', 'PEAR developers list',
+      'A list for developers of PEAR, an open-source common code library for PHP',
+      false, false, true
+    ),
+    Array (
       'php-cvs', 'CVS commit list',
-      'All the commits of the cvs PHP code repository are posted to this list immediately',
+      'All the commits of the cvs PHP code repository are posted to this list automatically',
       true, true, false
     ),
     Array (
       'php-cvs-daily', 'Daily CVS commit summary',
       'Daily changelog and NEWS file updates',
       true, false, false
+    ),
+    Array (
+      'pear-cvs', 'PEAR CVS list',
+      'All the commits of the cvs PEAR code repository are posted to this list automatically',
+      false, false, true
     ),
     Array (
       'phpdoc', 'PHP documentation list',
