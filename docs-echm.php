@@ -126,14 +126,14 @@ site_header("Documentation - Extended CHM Format");
 
  <li>
   <p>
-   <strong><a href="http://www.fixedsys.com/context">Context</a>:</strong> Open the
+   <strong><a href="http://www.context.cx/">ConTEXT</a>:</strong> Open the
    "Options" menu and select "Environment Options". Open the "Miscellaneous"
    tab, select the desired language in the list and click the "Edit" button.
    Browse to the help file you want to associate with that language.
    When you're done, click "OK".
   </p>
   <p>
-   To use context sensitive help within ConText, go to Options -&gt; Environment
+   To use context sensitive help within ConTEXT, go to Options -&gt; Environment
    Options, and select the Execute Keys tab. Click Add, and type "php, php3,
    phtml" in the box that pops up. Now, select F9 in the list and put "HH"
    under Execute, the directory of the help file in Start In, and
