@@ -71,6 +71,7 @@ right away.</blockquote>
 	siteStart();
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
+	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	site("NativeWeb","www.nativeweb.org");
 	site("The Psychology Place","www.psychplace.com");
