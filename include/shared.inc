@@ -72,17 +72,6 @@ function preloadImages() {
 		b_mirr1 = new Image();
 		b_mirr1.src = "/gifs/b-mirror-c.gif";
 
-<?	if ($FRAMEMODE == "manual"): ?>
-		b_cont0 = new Image();
-		b_cont0.src = "/gifs/b-contents-p.gif";
-		b_cont1 = new Image();
-		b_cont1.src = "/gifs/b-contents-c.gif";
-
-		b_up0 = new Image();
-		b_up0.src = "/gifs/b-up-p.gif";
-		b_up1 = new Image();
-		b_up1.src = "/gifs/b-up-c.gif";
-
 		b_next0 = new Image();
 		b_next0.src = "/gifs/b-next-p.gif";
 		b_next1 = new Image();
@@ -102,6 +91,17 @@ function preloadImages() {
 		b_prev20.src = "/gifs/b-prev-p.gif";
 		b_prev21 = new Image();
 		b_prev21.src = "/gifs/b-prev-c.gif";
+
+<?	if ($FRAMEMODE == "manual"): ?>
+		b_cont0 = new Image();
+		b_cont0.src = "/gifs/b-contents-p.gif";
+		b_cont1 = new Image();
+		b_cont1.src = "/gifs/b-contents-c.gif";
+
+		b_up0 = new Image();
+		b_up0.src = "/gifs/b-up-p.gif";
+		b_up1 = new Image();
+		b_up1.src = "/gifs/b-up-c.gif";
 
 		b_bullet0 = new Image();
 		b_bullet0.src = "/gifs/b-bullet-p.gif";

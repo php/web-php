@@ -1,5 +1,5 @@
 <?
-function makeBar($no,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed) {
+function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	global $FONTFACE;
 	if ($page>1) {
 		$i=$page-1;
@@ -20,7 +20,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed) {
 	echo "<TR VALIGN=middle>\n";
 	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "<TD ALIGN=left WIDTH=75>$last<BR></TD>\n";
-	echo "<TD ALIGN=center WIDTH=100%><FONT FACE='$FONTFACE' SIZE=-1>$middle<BR></TD>\n";
+	echo "<TD ALIGN=center><FONT FACE='$FONTFACE' SIZE=-1>$middle<BR></TD>\n";
 	echo "<TD ALIGN=left WIDTH=75>$next<BR></TD>\n";
 	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "</TR></TABLE><BR>\n";
@@ -164,7 +164,7 @@ if(!isset($pattern)) {
 
 		echo "$matches documents match your search for '<B>$pattern</B>' in the $where.<BR><BR>\n";
 
-		makeBar(1,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
+		makeBar(1,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		$i=7; #skip response header
 		while($i<$rc) {
@@ -178,7 +178,7 @@ if(!isset($pattern)) {
 		}
 		echo "<BR>\n";
 
-		makeBar(2,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
+		makeBar(2,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		?>
 		<CENTER>
