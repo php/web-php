@@ -511,10 +511,10 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="3.0.6">3.0.6
+    <option name="3.0.7">3.0.7
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
+    <option name="3.0.6">3.0.6
     <option name="3.0.5">3.0.5
-    <option name="3.0.4">3.0.4
     <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
