@@ -12,3 +12,4 @@ melo@co.telenet.pt pt.php.net CNAME to php.telenet.pt
 prochat@lbdsun.epfl.ch ch.php.net CNAME to lbdsun11.epfl.ch
 jguia@virtualoffice.es es.php.net ??
 terence@com5.net sg.php.net 202.169.237.18
+paulj@ns.web-tic.com nl.php.net CNAME to php.webtic.com
