@@ -47,7 +47,7 @@ echo <<<SEARCHBAR_END
  </p>
 </form>
 <p class="copyright">
- <a href="/copyright.php"{$target}>Copyright &copy; 2002, 2003 The PHP Group</a><br />All rights reserved.
+ <a href="/copyright.php"{$target}>Copyright &copy; 2002 - 2004 The PHP Group</a><br />All rights reserved.
 </p>
 </body>
 </html>
