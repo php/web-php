@@ -52,6 +52,8 @@ commonHeader("PHP 3.0 -> 3.0.6 Changes");
 <li> Fixed some memory leaks and bogus error messages in the URL handler of
   the various file open functions.  Should only affect error handling
   in bad URLs.
+<li>Added support for Empress RDBMS using unified ODBC inteface and Empress
+  ODBC client driver (for Empress v8.10 and above).
 </ul>
 
 <h3>October 5 1998 Version 3.0.5</h3>
