@@ -7,7 +7,7 @@ while($entry=$d->read()) {
 	if (substr($entry, 0, 1) == ".") {
 		continue;
 	}
-	if (ereg('(function|class)\.(.+)\.php3',$entry,$x)):
+	if (ereg('(function|class)\.(.+)\.php',$entry,$x)):
 		$functions[$entry]=ereg_replace("-","_",$x[2]);
 	endif;
 }
@@ -36,7 +36,7 @@ function makeTable($array) {
 
 commonHeader("PHP Manual Quick Reference");
 ?>
-Here is a list of all the PHP 3.0 functions.  Click on any one of them to jump to that page in the manual.
+Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
 <P>
 
 <?
