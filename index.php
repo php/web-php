@@ -151,6 +151,23 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
+
+<h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
+<p>
+ <span class="newsdate">[11-Oct-2003]</span>
+ The <a href="http://www.apachecon.com/">official conference
+ of the Apache Software Foundation</a> will be held November 16-20,
+ 2003 in Las Vegas. More than 60 sessions highlight core and
+ next-generation Apache server tools, offering a wide
+ range of beginner, intermediate and advanced sessions.
+ Learn firsthand the latest developments in Apache, as
+ well as key open source projects, including PHP, Perl,
+ XML, Java, MySQL, and WebDAV.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.4RC1 released</h1>
 <p>
  <span class="newsdate">[29-Sep-2003]</span>
