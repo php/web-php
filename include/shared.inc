@@ -573,6 +573,7 @@ endif; ?>
 
 function sect_to_file($string) {
 	$string = strtolower($string);
+	$string = str_replace(' ','-',$string);
 	$func = "function.$string.php";
 	$chap = "ref.$string.php";
 	if(is_file($func)) return $func;
