@@ -6,9 +6,12 @@
 
 <ul>
 
-<li><a href="manual/manual.php3">PHP 3.0 Manual</a>.
+<li><a href="manual/manual.php3">PHP 3.0 Manual Online</a>.
     This is an early version.  A lot is still missing, but it is
     improving.
+
+<li><? download_link("manual.zip", "PHP 3.0 Manual ZIP File"); ?>
+<li><? download_link("manual.tar.gz", "PHP 3.0 Manual .tar.gz File"); ?>
 
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>.  Until the new
     manual is complete, you can get answers to many questions here.

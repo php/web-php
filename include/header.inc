@@ -1,5 +1,20 @@
 <?
   include "configuration.inc";
+
+  function download_link($file, $title) {
+      if ($tmp = strrchr($file, "/")) {
+          $local_file = substr($tmp, 1, strlen($tmp));
+      } else {
+          $local_file = $file;
+      }
+      echo("<a href=\"$file\">$title</a>");
+      $size = filesize($local_file)/1024;
+      echo("<!-- file=$file localfile=$local_file size-$size-->\n");
+      if ($size) {
+          printf(" (%dk)", $size);
+      }
+  }
+
   if (!$root_url) { $root_url = "/"; }
   $lynx=0;
   $js=0;
