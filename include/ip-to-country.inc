@@ -65,10 +65,16 @@ function i2c_go()
     $idx = i2c_search_in_index($ipn);
     // For some odd reason I need to remove 2 from the idx value to
     // get the country of rasmus and various other IP's to lookup.
-    $idx-=2;
+    $country = "NA";
+    $count = 1;
 
-    // Search in the database from the given index
-    $country = i2c_search_in_db($ipn, $idx);
+    // Search in the database from the given index and if not found
+    // we attempt 3 lookups in total moving the index down one.
+    while ($country == "NA" && $count < 4) {
+        $country = i2c_search_in_db($ipnum, $idx);
+        $idx--;
+        $count++;
+    }
 
     // Set global variable for further usage
     $COUNTRY = $country;
