@@ -35,6 +35,10 @@ Win32 binaries are available from the PHP homepage. The
 <a href="ChangeLog.php3">ChangeLog</a> contains a
 full list of changes.
 
+<h3>New Tips and Tricks Section</h3>
+Check out our <A HREF="/tips.php">tips</A> page for some "neat" things, PHP-related.
+It's a little sparse right now, but feel free to make suggestions!
+
 
 <h3>Improve your PHP skills</h3> 
 Looking for clear and useful guides to build dynamic web-sites using
