@@ -25,8 +25,8 @@ site_header("Sitemap");
 <h2>PHP Bugs</h2>
 
 <ul>
- <li><a href="http://bugs.php.net/">Submit a bug</a></li>
- <li><a href="http://bugs.php.net/">Submit a feature request</a></li>
+ <li><a href="http://bugs.php.net/">Submit a bug or a feature request</a></li>
+ <li><a href="http://bugs.php.net/search.php">Search for bugs</a></li>
 </ul>
 
 <h2>PHP Support</h2>
@@ -87,6 +87,7 @@ site_header("Sitemap");
 
 <ul>
  <li><a href="/download-logos.php">Download Logos</a></li>
+ <li><a href="/copyright.php#contact">Contact</a></li>
  <li><a href="/copyright.php">Copyright</a></li>
  <li><a href="/credits.php">Credits</a></li>
  <li><a href="/manual/howto">Documentation HOWTO</a></li>
