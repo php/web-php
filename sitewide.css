@@ -311,3 +311,28 @@ table#cal a.cat3 {
 	color: black;
 	background-color: transparent;
 }
+
+/* Logos table ------------------------------------------------------------ */
+table#logos {
+	background-color: #f0f0f0;
+}
+table#logos td {
+	vertical-align: middle;
+}
+table#logos td.logo, table#logos td.logob {
+	text-align: center;
+	width: 33%;
+	background-color: #ffffff;
+	color: inherit;
+}
+table#logos td.logob {
+	background-color: #000000;
+	color: inherit;
+}
+table#logos td.star {
+	width: 20px;
+}
+table#logos td ul {
+	padding-left: 15px;
+	list-style-type: square;
+}
