@@ -159,6 +159,11 @@ A series of PHP tutorials for novices</li>
 
 <li><a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br>
 A collection of external links to PHP tutorials</li>
+
+<li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a>
+Site with information on a PHP course at a Dutch college.</li>
+</li>
+
 </ul>
 
 <h4>PHP Setup tools for Windows</h4>
