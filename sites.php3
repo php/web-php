@@ -45,6 +45,7 @@ right away.</blockquote>
 /* Auto Industry */
 	title("Auto");
 	siteStart();
+	site("Cars Everything","www.carseverything.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Mitsubishi Motors","www.mitsucars.com");
 	siteEnd();
