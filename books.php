@@ -1170,7 +1170,7 @@ array(
     /* title_link   */ "http://www.niederauer.com.br/livros/phpxml/",
     /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
-    /* image        */ "phpxml_br.gif",
+    /* image        */ "phpxml_pt.gif",
     /* information  */ "Novatec Editora, ISBN 8-5752-2025-X, 96 pages",
     /* inform. link */ "http://www.niederauer.com.br/livros/phpxml/",
     /* language     */ "pt"
