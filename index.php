@@ -139,12 +139,14 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsdate">[29-Oct-2002]</font>
 We added a new option to access our site's content quickly. In addition to
 <a href="/urlhowto.php">URL shortcuts</a>, keyboard shortcuts and
-<a href="/tips.php">browser specific magic</a> you can know use our
+<a href="/tips.php">browser specific magic</a> you can now use our
 <a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
 us to test this new service, and provide feedback via
 <a href="http://bugs.php.net/">the bug system</a> (categorize your bug
 as a PHP.net website bug please).
 </p>
+
+<?php echo hdelim(); ?>
 
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
