@@ -492,7 +492,7 @@ array (
     /* author[s]    */ array ("Javier Gil", "Jorge Tejedore", "Augustin Yagüe"),
     /* auth link[s] */ "",
     /* image        */ "gil.jpg",
-    /* information  */ "McGraw Hill, October 2001, ISBN 8-4481-13209-2, 568 pages",
+    /* information  */ "McGraw Hill, October 2001, ISBN 84-481-3209-2, 568 pages",
     /* inform. link */ "http://www.mcgraw-hill.es/",
     /* language     */ "es"
   ),
