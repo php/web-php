@@ -1,7 +1,7 @@
 <?
 require("shared.inc");
-if(!strstr($MYSITE,"ca.php.net")) {
-        Header("Location: http://ca.php.net/bugstats.php3");
+if(!strstr($MYSITE,"beta.php.net")) {
+        Header("Location: http://beta.php.net/bugstats.php3");
 		exit;
 }
 
