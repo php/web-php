@@ -205,6 +205,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, false, "php.doc"
     ),
     Array (
+      'php-gtk-doc', 'PHP-GTK documentation list',
+      'List for the authors of the PHP-GTK documentation with CVS commits',
+      false, false, false, "php.gtk.doc"
+    ),
+    Array (
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       false, true, false, "php.qa"
