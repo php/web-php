@@ -110,6 +110,19 @@ use does otherwise.
 
 <?php echo hdelim(); ?>
 
+<h1>Documentation howto</h1>
+
+<p>
+The PHP Documentation Team has a documentation howto, including coverage
+on how to set up a working environment on Unix/Linux/Windows, how to build
+HTML formatted docs from the XML sources, what conventions to follow when
+writing documentation, etc. If you are interested in the process, or would
+like to start/join a translation, this is a must read:
+<a href="http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz">http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz</a>
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>French PHP Manual</h1>
 
 <p>
