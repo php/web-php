@@ -60,6 +60,13 @@ commonHeader("Setting Up Local Search");
   <p>
    Edit <tt>/usr/local/htdig/conf/php.conf</tt> and change the
    <tt>start_url</tt> line to whatever your mirror is (eg. uk.php.net)
+   Note that you'll need to run the indexing with this name, as the search
+   script limits the search results to the official name of your mirror
+   site. Therefore if you would like to go on to the next step before
+   being registered as an official mirror, you need to add the mirror
+   with it's soon to be official name to your <tt>/etc/hosts</tt> file.
+   After you are registered to be an official mirror, you can remove
+   this entry from <tt>/etc/hosts</tt> of course.
   </p>
  </li>
  <li>
