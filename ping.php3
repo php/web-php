@@ -7,7 +7,6 @@ function local_ping($ip) {
 	elseif(file_exists("/usr/bin/ping")) { $ping="/usr/bin/ping"; }
 	elseif(file_exists("/usr/local/bin/ping")) { $ping="/usr/local/bin/ping"; }
 	else { $ping="ping"; }
-	echo $ping;
 	$fp=popen("$ping -s -n $ip 32 5","r");
 	$i=0;
 	while(!feof($fp)) {
