@@ -102,16 +102,14 @@ site_header("Downloads");
   included, packaged as zip)<br />
   <span class="md5sum">md5: 3362079d4d1aaaf0c146b0c376ceec4b</span>
  </li>
-<!--
  <li>
   <?php download_link('php-4.3.7-installer.exe', 'PHP 4.3.7 installer'); ?> - 02 June 2004<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: </span>
+  <span class="md5sum">md5: 91115427bd112e5b96e5ac48fd8a9afd</span>
  </li>
--->
 </ul>
 
 <hr />
