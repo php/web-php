@@ -149,7 +149,7 @@ function show_types($first_item, $show_any, $var_name) {
 	                                   'Other web server'),
 	                         'Configuration Issues' =>
 	                             array('Dynamic Loading Related',
-	                                   'PHP options and information functions')
+	                                   'PHP options and information')
 	                        ),
 	               'Function Specific' => 
 	                   array (
