@@ -165,7 +165,7 @@ endif;
 <? makeName("Jaakko Hyvätti","jaakko@hyvatti.iki.fi",0);?>
   <UL TYPE=DISC><li>Prototype cop, regular expression code fixes and CGI security issues</UL><BR>
 
-<? makeName("Amitay Isaacs","amitay@pspl.co.in",0);?>
+<? makeName("Amitay Isaacs","amitay@w-o-i.com",0);?>
   <UL TYPE=DISC><li>LDAP</UL><BR>
 
 <? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de",0);?>
