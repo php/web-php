@@ -4,5 +4,6 @@
 <?$title="PHP3 Credits";
   include "include/header.inc";
   ReadFile("CREDITS");
+  echo "<br>";
+  include("include/footer.inc");
 ?>
-</body></html>

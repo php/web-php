@@ -65,9 +65,9 @@ function rolloff(imgName) {
 <FONT FACE="Verdana, Arial, Helvetica">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>
-<td>&nbsp;&nbsp;<img src="jpgs/powered_by.jpg"><br><font size=-2 color="#ffffff">Running PHP <?echo phpversion()?></font></td>
-<td><font size=+2 color="#ffffff"><?echo $title?></font></td>
-<td nowrap align="right">
+<td width="33%" align="left"><font size="+1" color="#ffffff"><strong><i>PHP3</i></strong></font></td>
+<td width="33%" align="center"><font size=+2 color="#ffffff"><?echo $title?></font></td>
+<td width="33%" nowrap align="right">
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="<? echo $base_url ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
