@@ -1,0 +1,49 @@
+--- /home/bourbon/php-3.0a2/functions/msql.c	Fri Nov  7 03:25:06 1997
++++ functions/msql.c	Sat Nov  8 04:14:03 1997
+@@ -912,7 +912,7 @@
+ 		my_phperror(ERRTYPE_WARNING,"Field %d is invalid for mSQL result index %d",offset->value.lval,result->value.lval);
+ 		RETURN_FALSE;
+ 	}
+-	msqlFieldSeek(msql_result,0);
++	msqlFieldSeek(msql_result,offset->value.lval);
+ 	RETURN_TRUE;
+ }
+ 
+@@ -947,7 +947,7 @@
+ 		my_phperror(ERRTYPE_WARNING,"Field %d is invalid for mSQL result index %d",field->value.lval,result->value.lval);
+ 		RETURN_FALSE;
+ 	}
+-	msqlFieldSeek(msql_result,0);
++	msqlFieldSeek(msql_result,field->value.lval);
+ 	if ((msql_field=msqlFetchField(msql_result))==NULL) {
+ 		RETURN_FALSE;
+ 	}
+--- /home/bourbon/php-3.0a2/functions/mysql.c	Fri Nov  7 03:25:07 1997
++++ functions/mysql.c	Sat Nov  8 04:13:41 1997
+@@ -1082,7 +1082,7 @@
+ 		my_phperror(ERRTYPE_WARNING,"Field %d is invalid for MySQL result index %d",offset->value.lval,result->value.lval);
+ 		RETURN_FALSE;
+ 	}
+-	mysql_field_seek(mysql_result,0);
++	mysql_field_seek(mysql_result,offset->value.lval);
+ 	RETURN_TRUE;
+ }
+ 
+@@ -1117,7 +1117,7 @@
+ 		my_phperror(ERRTYPE_WARNING,"Field %d is invalid for MySQL result index %d",field->value.lval,result->value.lval);
+ 		RETURN_FALSE;
+ 	}
+-	mysql_field_seek(mysql_result,0);
++	mysql_field_seek(mysql_result,field->value.lval);
+ 	if ((mysql_field=mysql_fetch_field(mysql_result))==NULL) {
+ 		RETURN_FALSE;
+ 	}
+@@ -1134,7 +1134,7 @@
+ 			return_value.type = IS_STRING;
+ 			break;
+ 		case PHP3_MYSQL_FIELD_LEN:
+-			return_value.value.lval = mysql_field->max_length;
++			return_value.value.lval = mysql_field->length;
+ 			return_value.type = IS_LONG;
+ 			break;
+ 		case PHP3_MYSQL_FIELD_TYPE:

@@ -2,6 +2,14 @@
 <? $title="Patches";
    include "include/header.inc"; ?>
 
+<p>In between official releases, we may release several small patches for problems
+that may be annoying, but don't warrant a whole new release.  If you're familiar
+with CVS, you can update to the latest code base using CVS (the CVS tree includes
+all of the patches, and usually other patches or additional functionality;  it may
+not be stable, though).
+<p>Each new release includes <strong>all</strong> of the patches for the previous release
+and more, so in case you have an older release than the latest official one, we strongly
+suggest to upgrade to the latest release and not settle for applying these patches.
 
 <p><strong>In order to apply any of these patches, you must:</strong>
 
@@ -11,6 +19,13 @@
 <li>Run:  '<b><code>patch -p0 < patchname.fix</code></b>'
 </ol>
 
+<h2>Patches for ALPHA 2</h2>
+<table border=1>
+	<tr>
+		<td><a href="patches/alpha2/mysql-fields.fix">field functions fix for mSQL/MySQL</td>
+		<td>This patch fixes a problem with all of the mysql_field* and msql_field* functions.</td>
+	</tr>
+</table>
 
 <h2>Patches for ALPHA 1</h2>
 
