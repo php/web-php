@@ -70,7 +70,6 @@ if(!isset($pattern)) {
 	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  <input type="text" name="pattern" value="<?echo $prevsearch[0];?>" size=30>
 		  <INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
-		  <input type="submit" value=" Search "><BR>
 		  <? if ($prevsearch[0]) { ?>
 		      <SELECT NAME="prevpattern">
 		      <OPTION VALUE="">-- Previous Searches --
