@@ -405,12 +405,13 @@ CREATE TABLE bugdb (
   sdesc varchar(80), 
   ldesc text,
   php_version char(16),
-  php_os char(32),
-  status char(16),
+  php_os varchar(32),
+  status varchar(16),
   comments text,
   ts1 datetime,
   ts2 datetime,
-  dev_id char(16),
+  dev_id varchar(16),
+  assign varchar(16),
   PRIMARY KEY (id)
 );
 */
