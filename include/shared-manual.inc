@@ -67,6 +67,7 @@ function makeBorderTOC($this)
     $this = eregi_replace("^Manual: *", "", $this);
 
 	$file = basename($PHP_SELF);
+	if(substr($file,-5)=='.php3') $file = substr($file,0,-1);
 	echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
 	echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
 	echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
