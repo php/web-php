@@ -26,8 +26,9 @@ This may sound a little foreign to all you folks coming from a non-Unix
 background, but PHP doesn't cost anything.  You can use it for commercial
 and/or non-commercial use all you want.  You can give it to your friends,
 print it out and hang it on your wall or eat it for lunch.  Welcome to
-the world of Open Source software!  Smile, be happy, the world is good.
-For the full legalese, see the official <a href="license.txt">license</a>.
+the world of <a href="http://www.opensource.org">Open Source</a> software!  
+Smile, be happy, the world is good.  For the full legalese, see the 
+official <a href="license.txt">license</a>.
 
 <h3>Year 2000 Compliance</h3>
 
