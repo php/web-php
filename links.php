@@ -36,6 +36,9 @@ Zend Technologies' Web site, with lots of PHP related resources
 <li><a href="http://conf.php.net/">PHP Conference Material</a><br>
 Some PHP conference slide shows, presented at various meetings
 by PHP professionals</li>
+
+<li><a href="http://www.phpmag.de/">PHP Magazin</a><br>
+The one and only printed magazine on PHP in German</li>
 </ul>
 
 <h4>PHP Support Companies</h4>
@@ -304,6 +307,13 @@ phpbuilder.com-like site in Polish.</li>
 <li><a href="http://www.cidadela.org/php/">Cidadela</a><br>
 The PHP section of Cidadela provides articles, tutorials,
 a help forum, and an Application Market.</li>
+</ul></li>
+
+<li><b>Spanish</b>
+<ul>
+
+<li><a href="http://infolibo.com/bci/php/php_documentacion.php">BCI PHP</a><br>
+PHP and server setup information, manuals, scripts, forums.</li>
 </ul></li>
 
 <li><b>Swedish</b>
