@@ -159,19 +159,23 @@ function kickHeader($offset,$side,$width) {
 	$innerwidth=$width-40;
 	$innerwidth2=$innerwidth+21;
 	$tablewidth=$width;
-	if ($side=="left" || $side=="none"):
+	if ($side=="left"):
 		$tablewidth=$tablewidth+50;
+	endif;
+	if ($side=="none"):
+		$tablewidth=$tablewidth+1;
 	endif;
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=$tablewidth>\n";
 	if ($side=="left" || $side=="none"):
 		echo "<TR>\n";
 		if ($offset>=0):
-			echo "<TD valign=top rowspan=3 width=30>";
 			if ($side=="left"):
+				echo "<TD valign=top rowspan=3 width=30>";
 				spc(1,$off);
 				echo "<BR><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD>\n";
 			else:
-				spc(50,50);
+				echo "<TD valign=top rowspan=3 width=1>";
+				spc(1,1);
 				echo "<BR></TD>\n";
 			endif;
 		else:

@@ -97,7 +97,7 @@ endif; ?>
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 <?
 if ($KICKS):
-	echo "<TABLE CELLPADDING=5 CELLSPACING=10 BORDER=0>\n";
+	echo "<TABLE CELLPADDING=5 CELLSPACING=0 BORDER=0>\n";
 endif;
 $i=0;
 reset($CORE);
