@@ -145,6 +145,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>International PHP Conference 2005 - Spring Edition (Amsterdam, May 2-4)</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+ The PHP Center and the Software &amp; Support Verlag are pleased
+ to announce the <a href="http://www.phpconference.com/">International
+ PHP Conference 2005 Spring Edition</a> in Amsterdam, Netherlands.
+ The dates for this event will be May 2-4, 2005. The conference venue
+ is the RAI conference center.
+</p>
+<p> 
+ Like last year the organizers would like to present an interesting and
+ various programme to the international PHP Community, so they are happy
+ to ask you to <a
+ href="http://www.phpconference.com/konferenzen/divers/psecom,id,191,nodeid,240.html">submit
+ your proposals</a> for the session programme.
+</p>
+
+<p>
+ The topics are General PHP, PHP &amp; Business/Integration,
+ PHP &amp; Databases, PHP Design, PHP Extensions, PHP &amp; XML
+ and PHP-GTK.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.10 released!</h1>
 <p>
@@ -161,9 +186,7 @@ commonHeader("Hypertext Preprocessor");
  <a href="/ChangeLog-4.php#4.3.10">ChangeLog</a>.
 </p>
 
-
 <hr />
-
 
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5.0.3RC2 released!</h1>
@@ -458,108 +481,6 @@ features in PHP 5 should be used.
 </p>
 
 <hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-
-<h1>PHP 4.3.8 released!</h1>
-<p>
- <span class="newsdate">[13-Jul-2004]</span>
- PHP Development Team would like to announce the immediate availability of <a href="/downloads.php">PHP 4.3.8</a>.
- This release is made in response to several security issues that have been discovered since the
- 4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
-</p>
-
-<hr />
-
-<?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
-<h1>International PHP Conference 2004</h1>
-<p>
- <span class="newsdate">[18-Jun-2004]</span>
- The traditional International PHP Conference 2004 will be taking
- place from 7th November to 10th November in Frankfurt (FFM). The
- Call for Papers has been issued, so if you have an interesting
- talk, the organizers would love to hear about it! You can expect
- a gathering of PHP experts and core developers.
-</p>
-<p>
- You can find the CfP <a href="http://www.phpconference.de/2004/cfp_en.php">on
- the website</a>. The deadline is 16th July, 2004.
-</p>
-<p>
- The conference is also featuring an <strong>OpenSource Exhibition</strong>
- where PHP related OpenSource projects can present themselves for free.
-</p>
-
-<hr />
-
-<?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
-<h1>php|works - early-bird discount now in effect</h1>
-<p>
- <span class="newsdate">[16-Jun-2004]</span>
- <a href="http://www.phparch.com">php|architect</a> magazine is proud to
- introduce <a href="http://www.phparch.com/phpworks">php|works 2004</a>, a
- three-day conference on PHP and the business of open-source software that
- will be held in Toronto, Canada, September 22-24 2004.
-</p>
-<p>
- The conference includes a total of over 30 hours of technical and
- business-oriented presentations that range from Rasmus Lerdorf's "Best
- Practices for PHP Developers" to "Getting your OSS Business Funded",
- presented by venture capital specialist Christian Mayaud. Other sessions
- include practical talks on PHP 5, regular expressions, multilingual
- development, PDO, XML and OOP. The business track includes sessions on the
- use of PHP in the legal, financial and healthcare industry, growing your
- business with OSS, the status of the PHP market and much, much more!
-</p>
-<p>
- As an added bonus, attendees who sign up before July 20th are
- eligible for up to $100 in early-bird savings.
-</p>
-<p>
- For more information, visit the <a
- href="http://www.phparch.com/phpworks">php|works website</a>.
-</p>
-
-<hr />
-
-<?php news_image("http://lamparea.org/en", "lamparea.png", "Lamp Area"); ?>
-<h1>LAMP area at LinuxTag 2004 in Karlsruhe, Germany</h1>
-<p>
- <span class="newsdate">[14-Jun-2004]</span>
- The LAMP area will highlight the use of Linux, Apache, MySQL and PHP as
- technologies for enterprise applications at <a
- href="http://linuxtag.de">LinuxTag 2004</a> in Karlsruhe, Germany from June 23
- to 26. The companies that are presenting in the speakers area of the 150
- square meters booth are: <a href="http://100days.de">100days</a>, <a
- href="http://ez.no">eZ systems</a>, <a
- href="http://thinkphp.de">Mayflower</a>, <a href="http://mysql.com">MySQL</a>
- and <a href="http://zend.com">Zend</a>.
-</p>
-
-<p>
- Besides presentations from the above companies the LAMP area also presents
- over 40 sessions by Apache-, MySQL- and PHP-developers, such as Rasmus Lerdorf,
- Ken Coar and Brian Aker. Entrance to LinuxTag is free if you
- <a href="https://www.linuxtag.org/2004/registrationform.html">pre-register</a>.
- For more information see <a href="http://lamparea.org/en">the LAMP Area</a>
- website.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
-<h1>PHP 5 Release Candidate 3 Released!</h1>
-<p>
- <span class="newsdate">[8-Jun-2004]</span>
- The <a href="/downloads.php#v5">third (and hopefully final) Release Candidate
- of PHP 5</a> is now available!  This mostly bug fix release improves PHP 5's
- stability and irons out some of the remaining issues before PHP 5 can be
- deemed release quality.  Everyone is now encouraged to start playing with it!
-</p>
-
-<p>There are few changes changes since Release Candidate 2, which can be found
-<a href="/ChangeLog-5.php#5.0.0RC3">here</a>.</p>
-</p>
 
 <p class="center"><a href="/news-2004.php">News Archive</a></p>
 
