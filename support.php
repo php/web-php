@@ -312,6 +312,7 @@ that have been set up by others in the community to host local
   <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
   <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a></li>
   <li><a href="http://phptr.baslangic.net/">Turkish Mailing List</a></li>
+  <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
 </ul>
 
 <?php
