@@ -160,6 +160,8 @@ function makeEntry($date,$name,$blurb,$id=0) {
 		$blurb=str_replace("&lt;/pre&gt;","</pre>",$blurb);
 		$blurb=str_replace("&lt;PRE&gt;","<PRE>",$blurb);
 		$blurb=str_replace("&lt;/PRE&gt;","</PRE>",$blurb);
+		$blurb=str_replace("&lt;tt&gt;","<tt>",$blurb);
+		$blurb=str_replace("&lt;/tt&gt;","</tt>",$blurb);
 	echo $blurb;
 ?><BR></TD>
 <?if (isset($MAGIC_COOKIE)):?>
