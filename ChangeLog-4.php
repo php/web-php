@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonheader("PHP 4 ChangeLog");
+site_header("PHP 4 ChangeLog");
 ?>
 
 <h1>PHP 4 ChangeLog</h1>
@@ -2837,4 +2837,4 @@ There is no separate announcement available for this release.<br />
 </ul>
 There is no separate announcement available for this release.<br />
 
-<?php commonfooter(); ?>
+<?php site_footer(); ?>

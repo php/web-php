@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonheader("PHP 5 ChangeLog");
+site_header("PHP 5 ChangeLog");
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
@@ -133,4 +133,4 @@ html_entity_decode(). (Moriyoshi)</li>
 contents). (Zeev)</li>
 </ul>
 
-<?php commonfooter(); ?>
+<?php site_footer(); ?>
