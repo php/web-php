@@ -137,7 +137,6 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP Magazine - International Edition</h1>
 <p>
 <font class="newsdate">[17-Nov-2002]</font>
-<p>
 Software &amp; Support Verlag GmbH is going to publish an International version
 of the <a href="http://www.phpmag.de/">PHP Magazin</a>. This magazine was
 initiated after growing interest for an English magazine after the German
