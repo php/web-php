@@ -24,7 +24,7 @@ if (!isset($csel)) {
 	$hostname=getenv("REMOTE_HOST");
 	$ipaddr=getenv("REMOTE_ADDR");
 	if ((!$hostname)||($hostname==$ipaddr)) {
-		$hostname=gethostbyaddr($ipaddr);
+		$hostname=@gethostbyaddr($ipaddr);
 		echo "<!-- no_remote_host\nipaddr=$ipaddr\nhostname=$hostname -->\n";
 		if ($hostname==$ipaddr) { $hostname=""; }
 	} else {
