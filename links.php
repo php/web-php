@@ -47,16 +47,12 @@ site_header("Links");
   The AFUP was created to answer the growing need from
   companies to have one unique place for PHP solutions.
  </li>
-<?php
-/* will come back soon
  <li>
   <a href="http://www.php-ev.de/">PHP Verein</a><br />
   The goal of the German PHP Association, PHP Verein, is 
   to push PHP, as well as to serve as a junction for all 
   parties interested in PHP.
  </li>
-*/
-?>
  <li>
   <a href="http://www.phpquebec.org/">PHP Qu&eacute;bec</a><br />
   PHP Qu&eacute;bec promotes PHP for professional users in Qu&eacute;bec, Canada.
