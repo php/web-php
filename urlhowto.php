@@ -135,7 +135,7 @@ commonHeader("URL Howto");
 <ul>
  <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
  <li><a href="http://cvs.php.net/co.php/phpweb/include/langchooser.inc">http://cvs.php.net/co.php/phpweb/include/langchooser.inc</a></li>
- <li><a href="http://cvs.php.net/co.php/phpweb/error/index.php">http://cvs.php.net/co.php/phpweb/error/index.php</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/error.php">http://cvs.php.net/co.php/phpweb/error.php</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
 </ul>
