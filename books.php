@@ -437,7 +437,7 @@ New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
 ><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/exec/obidos/ASIN/382725793X/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
 >MySQL</A><BR>
 Entwicklung, Implementierung und Referenz<BR>
 by Paul DuBois<BR>
