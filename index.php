@@ -134,6 +134,30 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Magazine - International Edition</h1>
+<p>
+<font class="newsdate">[16-Nov-2002]</font>
+<p>
+Software &amp; Support Verlag GmbH is going to publish an International version
+of the <a href="http://www.phpmag.de/">PHP Magazin</a>. This magazine was
+initiated after growing interest for an English magazine after the German
+version has been around for a few months.
+</p>
+<p>
+PHP Magazine not only informs about the script language itself, but also about
+related technologies such as the Apache Web Server, database technologies, XML
+and other innovative internet technologies.  Different sections within the
+magazine are oriented towards the specific question areas with which a web
+developer is confronted in daily practice.
+</p>
+<p>
+The first issue will be published in December and the frequency of issues is
+two months. You can subscribe on the <a
+href="http://www.php-mag.net/">website</a> which will open shortly.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>New Monthly PHP Magazine Launched</h1>
 <p>
 <font class="newsdate">[15-Nov-2002]</font>
