@@ -73,6 +73,13 @@ if (isset($_POST['maillist'])) {
 </p>
 
 <p>
+ If you have trouble getting off from any of our mailing lists, or
+ would like to unsubscribe from a mailing list not listed here, we
+ have more information for you on <a href="/unsub.php">the
+ unsubscription page</a>.
+</p>
+
+<p>
  <b>Note:</b> When posting to mailing lists or newsgroups, please keep 
  the following in mind:
 </p>
