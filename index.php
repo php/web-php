@@ -11,9 +11,11 @@ echo "\n<!--$MYSITE-->\n";
 
 <a href="http://conferences.oreilly.com/oscon2001/"><img src="gifs/osscon.gif" align="right" border=0></a>
 <h3>PHP Conference - <a href="cfp.php">Call for Participation</a></h3>
-The conference will be part of the O'Reilly Open Source
-Convention alongside the 5th annual Perl Conference at the Sheraton San
-Diego Hotel and Marina, San Diego, California, July 23-27, 2001.  All the
+The conference will be part of the <a
+href="http://conferences.oreilly.com/oscon2001/">O'Reilly Open Source
+Convention</a> alongside the 5th annual Perl Conference at the <a
+href="http://www.sheraton.com/property.taf?prop=127&lc=en">Sheraton San
+Diego Hotel and Marina</a>, San Diego, California, July 23-27, 2001.  All the
 details on submitting talks are in the full <a href="cfp.php">CFP</a>.
 
 <h3>PHP 4.0.4 Released</h3>
