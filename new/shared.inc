@@ -111,8 +111,6 @@ function change(Name,No,Msg) {
 	}
 	return true
 }
-  
- 
 
 
 function hideAll () {
@@ -146,7 +144,7 @@ if (IE4) LoadImgs();
 <IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><IMG SRC="gifs/logo.gif" ALT="PHP3" WIDTH=130 HEIGHT=67 BORDER=0><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
-<TR VALIGN=top>
+<TR VALIGN=top BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TD ALIGN=left>
 <A HREF="downloads.php3" onMouseover="change('down',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-downloads-p.gif" ALT="downloads" WIDTH=129 HEIGHT=30 BORDER=0 NAME="down" hspace=10></A><BR>
 <A HREF="docs.php3" onMouseover="change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
@@ -167,6 +165,7 @@ if (IE4) LoadImgs();
 <!-- end title -->
 </B></FONT></TD>
 <TD ALIGN=right><A HREF="search.php3" onMouseover="change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=129 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORD
+
 
 
 
