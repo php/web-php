@@ -149,6 +149,7 @@ right away.</blockquote>
 	site("Battle - a PBeM Game","battle.pbem.net");
 	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
 	site("ClanBase","www.clanbase.com");
+	site("GamePoint Shop","shop.gamepoint.net");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
