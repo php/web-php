@@ -134,6 +134,9 @@ Introductory tutorial<br></li>
 
 <li><a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br>
 Lots of tutorials/instructions related to Apache, PHP and MySQL<br></li>
+
+<li><a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a><br>
+A series of PHP tutorials for novices<br></li>
 </ul>
 
 <h4>Non-English PHP Sites</h4>
