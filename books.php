@@ -137,7 +137,6 @@ or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.f
 and search there):
 </p>
 
-<p>
 <form method="get" action="http://www.amazon.com/exec/obidos/external-search">
 <input type="hidden" name="tag" value="wwwphpnet" />
 Search Amazon for
@@ -168,9 +167,8 @@ about
 <option>Microsoft NT</option>
 <option>ODBC</option>
 </select>
-<input type="submit" border="0" value="Search" name="Search" />
+<input type="submit" value="Search" name="Search" />
 </form>
-</p>
 
 <?php
 
