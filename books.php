@@ -269,6 +269,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Build Your Own Database Driven Website Using PHP & MySQL",
+    /* title_link   */ "http://sitepoint.com/books/?bookid=BookInfoSP",
+    /* author[s]    */ "Kevin Yank",
+    /* auth link[s] */ "",
+    /* image        */ "sitepoint.gif",
+    /* information  */ "SitePoint, August 2001, ISBN 0-9579218-0-2, 242 pages",
+    /* inform. link */ "http://sitepoint.com/books/?bookid=BookInfoSP",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
