@@ -5,6 +5,8 @@ commonHeader("Changes in PHP 5/Zend Engine 2.0", 1);
 ?>
 <h1>Changes in PHP 5/Zend Engine 2.0</h1>
 
+<p>[ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible en fran&ccedil;ais</a> ]&nbsp;</p>
+
 <h2>New Object Model.</h2>
 <p>
 PHP's handling of objects has been completely rewritten, allowing for better performance and more
