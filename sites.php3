@@ -159,6 +159,7 @@ right away.</blockquote>
 	site("InfoMak","www.infomak.com");
 	site("Mail Chek","mail.chek.com");
 	site("My URLs", "murl.com");
+	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
 	siteEnd();
 
