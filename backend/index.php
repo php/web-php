@@ -1,8 +1,8 @@
 <?php
 
-// Simulate a /bin shortcut call
+// Simulate a /backend shortcut call
 include_once 'prepend.inc';
-$REQUEST_URI = '/bin';
+$REQUEST_URI = '/backend';
 include_once "$DOCUMENT_ROOT/error/index.php";
 
 ?>
