@@ -96,7 +96,7 @@ if (authenticate_user()) {
  trop facile, d'&eacute;crire du code PHP non s&eacute;curis&eacute; n'&eacute;tait pas
  acceptable, et nous avons d&eacute;cid&eacute; de tenter un changement tr&egrave;s grand
  et de rendre caduque register_globals.
- �idemment, &agrave; cause de la grande majorit&eacute; de code PHP dans le monde se
+ Evidemment, &agrave; cause de la grande majorit&eacute; de code PHP dans le monde se
  reposant sur l'existence de cette fonctionnalit&eacute;, nous ne la supprimerons
  jamais, mais nous avons d&eacute;cid&eacute;s d'encourager les utilisateurs de ne plus
  l'utiliser &agrave; chaque fois que cela est possible.
