@@ -77,22 +77,35 @@ on-line notes</A>.
                 echo "</table>";
         else:?>
 <P>You can contribute to the PHP manual from the comfort of your browser!
-Just add your comment in the big field below (and your email address in the
-little one).
+Just add your comment in the big field below, and, optionally, your email 
+address in the little one (usual anti-spam practices are OK, e.g.
+johnNOSPAM@doe.NO_SPAM.com).</p>
 
 <p>Note that most HTML tags are not allowed in the posts. We tried
 allowing them in the past, but people invariably made a mess of
 things making the manual hard to read for everybody. You can include
 &lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
 
-<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a bug</A>, you're in the wrong place.
-If you are just commenting on the fact that something is not documented,
-save your breath. This is where <B>you</B> add to the documentation, not
-where you ask <B>us</B> to add the documentation. This is also not the
-correct place to <A href="/support.php">ask questions</A>. The notes
-are being edited and support questions are being <b>deleted</b> from them,
-so if you post a question, it will be removed. (But once you get an
-answer, feel free to come back and add it here!)
+<p>Read carefully the following note. If your post is falls into one of the
+categories mentioned there, it will be rejected by one of the editors.</p>
+
+<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a
+bug</A>, or <a href="http://bugs.php.net/">request a new fature or language
+change</a> you're in the wrong place.  If you are just commenting on the fact
+that something is not documented, save your breath. This is where <B>you</B>
+add to the documentation, not where you ask <B>us</B> to add the
+documentation. This is also not the correct place to <A
+href="/support.php">ask questions</A> (even if you see others have done that
+before, we are editing the notes slowly but surely).  If you post a note in
+any of the categories above, it will edited and/or removed.
+</p>
+<p>
+Just to make the point once more. The notes are being edited and support
+questions/bug reports/feature request/comments on lack of documentation, are
+being <b>deleted</b> from them (and you may get a <b>rejection</b> email), so
+if you post a question/bug/feature/complain, it will be removed. (But once you
+get an answer/bug solution/function documentation, feel free to come back
+and add it here!)</p>
 <p>
 <a href="/support.php">Click here to go to the support pages.</a><br>
 <a href="http://bugs.php.net/">Click here to submit a bug report.</a><br>
