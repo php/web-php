@@ -293,7 +293,7 @@ array (
 
   array(
     /* title[s]     */ "Php Black Book",
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/158880539/wwwphpnet",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1588800539/wwwphpnet",
     /* author[s]    */ array("Peter Moulding"),
     /* auth link[s] */ "",
     /* image        */ "moulding.jpg",
