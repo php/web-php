@@ -462,6 +462,8 @@ a help forum, and an Application Market.</li>
 International PHPClub community based in Russia. Forums,
 articles, lessons, consulting.</li>
 
+<li><a href="http://php.net.ua/">php.net.ua</a><br>
+PHP in Russian. Full Russian documentation.</li>
 </ul></li>
 
 <li><b>Spanish</b>
