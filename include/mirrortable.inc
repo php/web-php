@@ -78,7 +78,7 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
 
         // If the mirror is not all right or it is virtual (not an official mirror), skip it
         if (mirror_status($murl) != MIRROR_OK ||
-            (!$cnf['virtaul'] && mirror_type($murl) == MIRROR_VIRTUAL)) { continue; }
+            (!$cnf['virtual'] && mirror_type($murl) == MIRROR_VIRTUAL)) { continue; }
 
         // Get the country code and check if it is
         // matching the country provided (or does not
