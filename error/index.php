@@ -59,7 +59,7 @@ if ($try) {
 
 ?>
 <?Header("HTTP/1.0 404 Not Found")?>
-<?commonHeader("Not Found - ".$REDIRECT_REDIRECT_ERROR_NOTES);
+<?commonHeader($REDIRECT_REDIRECT_ERROR_NOTES);
 
 	if(!isset($pattern)) {
 		$pattern = $uri;
