@@ -6,18 +6,18 @@ commonHeader("Cool Quick Reference Tips");
 
 function tipTitle($title,$author='',$date='') {
 	echo hdelim();
-	echo "<big><b>" . $title . "</b></big><br>\n";
+	echo "<big><b>" . $title . "</b></big><br />\n";
 	if ($author || $date) {
 		echo "<small>\n";
 		if ($author) {
-			echo "Submitted by " . $author . "<br>\n";
+			echo "Submitted by " . $author . "<br />\n";
 		}
 		if ($date) {
-			echo $date . "<br>\n";
+			echo $date . "<br />\n";
 		}
 		echo "</small>\n";
 	}
-	echo "<br>\n";
+	echo "<br />\n";
 }
 
 ?>
@@ -39,7 +39,7 @@ For a description of PHP.net shortcut URLs, please visit our
 
 <p>
 Just right-click on this link:
-<a href="javascript:q=document.selection.createRange().text;if(!q)void(q=prompt('PHP%20Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</A>
+<a href="javascript:q=document.selection.createRange().text;if(!q)void(q=prompt('PHP%20Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&amp;function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
 and add it to your bookmarks. You can edit the bookmark to change the
 default language by changing 'lang=en' to whatever language you want to
 use by default. (For example, to pull up the German translation of the
@@ -148,7 +148,7 @@ Voila!
 
 <p>
 Just right-click (control-click or click-and-hold for Macintosh users)
-on this link: <a href="javascript:q=document.getSelection();if(!q)void(q=prompt('PHP Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</A>
+on this link: <a href="javascript:q=document.getSelection();if(!q)void(q=prompt('PHP Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&amp;function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
 and add it to your bookmarks. With some browsers, you may need to edit
 your bookmarks manually to give the bookmark an easy-to-remember title.
 You can also edit the bookmark to change the default language by changing
@@ -196,9 +196,9 @@ and Netscape 6 users:
       <li>Search: <b>Custom URL</b></li>
       <li>URL: <b>http://www.php.net/manual-lookup.php?function=%s</b></li>
     </ul>
-  ... or substitute your favorite mirror site instead of <b>www.php.net</b><br>
+  ... or substitute your favorite mirror site instead of <b>www.php.net</b><br />
   <div align="center">
-  <img src="images/tips-quickref.gif" width="317" height="293" border="0" alt="Edit shortcut"><br>
+  <img src="images/tips-quickref.gif" width="317" height="293" border="0" alt="Edit shortcut" /><br />
   </div></li>
   <li>Click "Ok", then click "Save" to keep your new settings</li>
   <li>That's it! Try it by typing "php strlen" in the IE Address bar.
@@ -236,12 +236,12 @@ comes with the applet):
 <p>
 
 <p>
-<b>Regex:</b><br>
+<b>Regex:</b><br />
 ^php: *(.*)$
 </p>
 
 <p>
-<b>Macro:</b><br>
+<b>Macro:</b><br />
 gnome-moz-remote --newwin http://www.php.net/manual-lookup.php?function=$(echo<br>
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')
 </p>
