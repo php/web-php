@@ -13,7 +13,8 @@ echo "\n<!--$MYSITE-->\n";
 January 11, 2000.  3.0.14 is a minor bug-fix release to fix a safe-mode 
 problem reported on bugtraq along with an annoying gd configure problem.
 If you don't use safe-mode and your GD is working fine, there is no need
-to upgrade from 3.0.13.
+to upgrade from 3.0.13.  For the Windows users out there, the missing
+files in the 3.0.13 release has been addressed.
 
 <h3>PHP 3.0.13 has been released</h3>
 
