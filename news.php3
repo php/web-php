@@ -50,6 +50,10 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry("Dave Garaffa at it again!","PHP Killer Apps & Huge Hit Usage!","http://browserwatch.internet.com/news/story/news-980610-7.html","June 10, 1998"); ?>
+"After my initial story I got a wave of email providing links to PHP enabled web apps. Here is a short list."
+
+<? endEntry();?>
 <? makeEntry("Dave Garaffa sees the light!","Notes from a Webmaster","http://browserwatch.internet.com/news/story/news-980608-7.html","June 8, 1998"); ?>
 "Boy what a weekend I've had! Why you ask? Well I found PHP3
 on Friday!! For those who already know about PHP3 now you
