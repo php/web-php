@@ -14,9 +14,6 @@ download site. Binaries available on external servers:
 <li>' . make_link("http://silk.apana.org.au/php/", "OS/2") . '</li>
 <li>' . make_link("http://php.alexwaugh.com/", "RISC OS") . '</li>
 <li>' . make_link("http://freeware.sgi.com/index-by-alpha.html#php", "SGI IRIX 6.5.x") . '</li>
-<li>' . make_link("http://www.entropy.ch/software/macosx/php/", "Mac OS X") . '</li>
-<li>' . make_link("http://silk.apana.org.au/php/", "OS/2") . '</li>
-<li>' . make_link("http://php.alexwaugh.com/", "RISC OS (with source)") . '</li>
 </ul>
 </p>
 
