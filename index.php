@@ -199,9 +199,6 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP 4.3.2RC1 Released</h1>
 <p>
 <font class="newsdate">[13-Mar-2003]</font>
