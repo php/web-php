@@ -15,27 +15,6 @@ site_header("News Archive - 2003");
 
 <hr />
 
-<?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
-
-<h1>PHP and Web Standards Conference - UK 2004</h1>
-<p>
- <span class="newsdate">[22-Dec-2003]</span>
- The PaWS Group is pleased to announce the first ever UK <a
- href="http://www.pawscon.com">PHP and Web Standards Conference</a>.
- PaWS Con will cover using PHP and Web Standards separately and in
- conjunction with each other. The conference will take place
- from February 20th - 24th 2004.
-</p>
-<p>
- The <a href="http://www.pawscon.com/speakers">Call for Papers</a> has
- been announced with a deadline of January 17th.
- <a href="http://www.pawscon.com/register">Pre-Registration</a> for
- early-bird savers is now also open, so register to earn your
- discount and provide PaWS with valuable feedback.
-</p>
-
-<hr />
-
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
 
 <h1>Vancouver PHP Conference 2004</h1>
@@ -755,19 +734,6 @@ site_header("News Archive - 2003");
  the PHPCon website</a>.
 </p>
 
-<hr />
-
-<h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
-<p>
- <span class="newsdate">[30-January-2003]</span>
- LinuxTag e.V has once again put out a call for papers for this years conference
- event. Submit your ideas and proposals
- <a href="http://www.linuxtag.org/2003/en/conferences/cfp.html">here</a>. This
- year's theme looks at discussions that promote new ideas, delivers a broad
- overview, introduces new users to linux, or discusses the legal, moral and
- other implications of linux and free software.
-</p>
- 
 <hr />
 
 <?php news_image("http://phpconf.phpquebec.org/index.php", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>

@@ -315,27 +315,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
-<h1>php|works 2004 Call for Papers</h1>
-<p>
- <span class="newsdate">[07-May-2004]</span>
- <a href="http://phparch.com">php|architect</a> has announced php|works 2004, a
- three-day conference dedicated to PHP, its companion technologies and the
- business of open-source software that will be held in Toronto, Canada,
- September 22, 23 and 24, 2004.
-</p>
-<p>
- Effective now, and until May 21st, the php|works team is soliciting a Call
- for Papers for speakers who want to present at the conference. The CfP is
- open to the public, and your talk ideas are welcome!
-</p>
-<p>
- For more information, visit the <a
- href="http://www.phparch.com/phpworks">php|works website</a>.
-</p>
-
-<hr />
-
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5 Release Candidate 2 Released!</h1>
 <p>
@@ -376,9 +355,6 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
-
-
-
 
 <h1>Second PHP Marathon announced</h1>
 <p>
@@ -525,34 +501,6 @@ commonHeader("Hypertext Preprocessor");
  <a href="http://www.pawscon.com/pricing">pricing guide</a> for more information.
  <a href="http://www.pawscon.com/register">Purchase your tickets</a> today for this
  one of a kind conference!
-</p>
-
-<hr />
-
-<h1>Call for Papers Reminder: O'Reilly Open Source Convention</h1>
-<p>
- <span class="newsdate">[03-Feb-2004]</span>
- The <a href="http://conferences.oreillynet.com/os2004/">2004 O'Reilly Open
- Source Convention</a> will be in Portland OR, July 26-30.
- <a href="http://conferences.oreillynet.com/cs/os2004/create/e_sess">Submit</a>
- your PHP-related talks and tutorials until the February 9 deadline.
-</p>
-
-<hr />
-
-<?php news_image("http://www.phparch.com/cruise", "phpcruise.png", "php|cruise"); ?>
-
-<h1>php|cruise deadline set for February 15th</h1>
-
-<p>
- <span class="newsdate">[16-Jan-2004]</span>
- The organizers of the <a 
- href="http://www.phparch.com/cruise">php|cruise</a> conference (March 
- 1st through March 5th, 2004) have announced that February 15th will be 
- the deadline to <a href="http://www.phparch.com/cruise/signup.php">sign 
- up for the event</a>. php|cruise features over 30 sessions, covering 
- material from beginner to advanced level, and takes place onboard a 
- cruise ship bound for the Bahamas islands.
 </p>
 
 <hr />
