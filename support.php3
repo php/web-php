@@ -15,8 +15,8 @@ if (isset($maillist)) {
 		switch ($maillist) {
 		    case "phplib":
 		    case "phplib-dev":
-			mail("$maillist-$request-$sub@lists.netuse.de", "Website Subscription", 
-				"This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
+			mail("$maillist-request@lists.netuse.de", $request, $request, 
+				"From: $email\r\n");
 			break;
 		    default:
 			mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", 
