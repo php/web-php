@@ -352,6 +352,11 @@ with a small PHP section</li>
 An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources</li>
 
+<li><a href="http://risorse.net/php/">Risorse.net</a><br>
+Section of an italian site that provides tutorials about PHP,
+hundreds of scripts, books and a list of free and pay webhosts wich support
+PHP</li>
+
 </ul></li>
 
 <li><b>Norwegian</b>
