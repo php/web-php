@@ -32,7 +32,7 @@ function makeBorderTOC($this)
 
     $tocfontsize = "-1"; // replace with CSS?
 
-    if (!$HAVE_STYLE && $HAVE_TD_BG) {
+    if (!$HAVE_STYLE) {
 	$FONTCOL = " COLOR=\"#FFFFFF\"";
     } else {
 	$FONTCOL = "";
