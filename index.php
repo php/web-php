@@ -153,7 +153,7 @@ commonHeader("Hypertext Preprocessor");
 <span class="newsdate">[01-Nov-2004]</span>
 In order to boost more awareness of the pending software patent issues in the
 European Union&mdash;MySQL, ISP 1&amp;1, RedHat and other partners started
-a new portal "<a href="http://nosoftwarepatents.com">http://nosoftwarepatents.com</a>.
+a new portal "<a href="http://nosoftwarepatents.com">http://nosoftwarepatents.com</a>".
 The site is available in 10 different european languages and explains why
 software patents are bad, and how they might affect you. In order to learn
 more, or participate in events against software patents, have a look at the
