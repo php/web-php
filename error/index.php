@@ -1,6 +1,10 @@
 <?
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
-	$url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
+	if($SERVER_PORT!=80) {
+		$url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
+	} else {
+		$url = "http://".$SERVER_NAME.$array[1];
+	}
 	$urle = htmlspecialchars($url);
 	
 	header("Location: $url");
