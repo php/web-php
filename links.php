@@ -82,6 +82,10 @@ Hundreds of PHP resources, categorized and searchable</li>
 
 <li><a href="http://q.webring.com/hub?ring=php">PHP Sites Webring</a><br>
 Find PHP Sites within this webring!</li>
+
+<li><a href="http://phphosts.codewalkers.com">PHP Host Directory</a><br>
+A searchable directory of PHP hosts with a message board for user comments.
+All hosts are welcome to add their listing.</li>
 </ul>
 
 
