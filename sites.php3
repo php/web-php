@@ -143,6 +143,12 @@ removed right away.</blockquote>
 	site("the Jazz Journalists Association","www.jazzhouse.org");
 	siteEnd();
 
+/* Publishing Industry */
+	title("Publishing Industry");
+	siteStart();
+	site("Invisible Man Press","www.insiblemanpress.com");
+	siteEnd();
+
 /* Religious */
 	title("Religious");
 	siteStart();
