@@ -105,10 +105,10 @@ Prima-Tech, July 2000, ISBN 0-7615-3055-X, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff"
 ><IMG SRC="/jpgs/ratschiller.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/thephpdevelopmte">Web Application Development with PHP</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff">Web Application Development with PHP</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A> and <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A><BR> 
 <SMALL>
 New Riders Publishing, July 2000, ISBN 0-7345-0997-1, 416 pages<BR>
