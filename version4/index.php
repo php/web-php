@@ -1,13 +1,13 @@
 <?
 require("shared.inc");
-commonHeader("PHP 4.0 Beta 1");
+commonHeader("PHP 4.0 Beta 2");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
 <p>The long anticipated Beta version of the next generation of PHP is here!</p>
 <ul>
-  <li>Read the <a href="release_announcement.php">Release Announcement</a></li>
-  <li><a href="downloads.php">Download</a> PHP 4.0 Beta 1!</li>
+  <li>Read the <a href="release_announcement.php">Beta 1 Release Announcement</a></li>
+  <li><a href="downloads.php">Download</a> PHP 4.0 Beta 2!</li>
   <li>Read the <a href="migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
   <li>Read about the (very few) <a href="incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
   <li><a href="http://bugs.php.net/version4/">Report bugs</a></li>

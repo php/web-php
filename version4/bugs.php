@@ -100,7 +100,7 @@ function show_menu($state)
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select></td><td> <a href=\"/bugstats.php\">Statistics</a></td></tr>\n";
+	echo "</select></td><td> <a href=\"bugstats.php\">Statistics</a></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
 	echo "<td colspan=4><input type=text name=\"search_for\"></td></tr>\n";
 	echo "</table>\n";
@@ -541,8 +541,9 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="4.0B1" selected>4.0 Beta 1
+    <option name="4.0B2" selected>4.0 Beta 2
     <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
+    <option name="4.0B1" selected>4.0 Beta 1
     <!--<option name="earlier">Earlier?  Upgrade first!-->
    </select>
   </td>
