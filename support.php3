@@ -106,7 +106,7 @@ lists.  There are a few PHP-related mailing lists available.
      summaries of topics discussed on the user list, as well as
      other topics drawn from the Knowledge Base. More
      information about the Knowledge Base can be found at <a
-     href="http://e-gineer.com/phpkb/">http://e-gineer.com/phpkb/</a>.
+     href="http://www.faqts.com/">http://www.faqts.com/</a>.
 </ul>
 
 <p>
