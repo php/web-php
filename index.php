@@ -149,7 +149,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP West: Security Conference - Call for Speakers Announced</h1>
 
 <p>
- <span class="newsDate">[07-Mar-2005]</span>
+ <span class="newsDate">[14-Mar-2005]</span>
  <a href="http://www.phpwest.com">PHP West</a>, a division of Open Source
  Events, is holding their second conference in Vancouver, British Columbia on
  PHP and Open Source Security. The conference will be on June 11th, 2005 and
