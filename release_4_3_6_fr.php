@@ -29,12 +29,12 @@ version d&egrave;s que possible.
  <li>Mise &agrave; jour de la biblioth&egrave;que PDFLib en version 5.0.3p1 pour les versions Windows.</li>
  <li>Mise &agrave; jour de la biblioth&egrave;que GD 2.0.22.</li>
  <li>Correction d'un bogue qui emp&ecirc;chait la compilation de l'extension GD avec les versions 1.2-1.8 de la librairie externe GD.</li>
- <li>Correction d'un bogue avec les sessions : les configurations ne se propagaient pas entre les requ&ecirc;tes.</li>
+ <li>Correction d'un bogue avec les sessions : les configurations ne se propageaient pas entre les requ&ecirc;tes.</li>
  <li>Correction de plusieurs bogues li&eacute;s au changement d'heure d'hiver et d'&eacute;t&eacute; dans les fonctions mktime et strtotime.</li>
  <li>Correction d'un bogue qui emp&ecirc;chait la compilation de l'extension cURL avec libcurl 7.11.1</li>
  <li>Correction de plusieurs crashs avec les extensions domxml et mssql.</li>
 
- <li>Cette version corrige environs 25 bogues qui ont &eacute;t&eacute; d&eacute;couverts depuis
+ <li>Cette version corrige environ 25 bogues qui ont &eacute;t&eacute; d&eacute;couverts depuis
  la version 4.3.5.</li>
 </ul>
 
