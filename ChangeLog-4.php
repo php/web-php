@@ -5,7 +5,31 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
-<a name="4.1.0">
+<a name="4.1.1"></a>
+<h3>Version 4.1.1</h3>
+<b>26-Dec-2001</b>
+<ul>
+<li>Fixed incompatibility with Windows .NET / IIS 6 - may improve stability
+  under other versions of IIS. (Zeev)</li>
+<li>Fixed bug that caused crashes or error notices on shutdown on threaded
+  platforms. (Zeev)</li>
+<li> Fixed several crash bugs in the xslt extension. (Markus, Derick)</li>
+<li>Fixed problem with dbase not returning very large (larger than long)
+  integers properly. (Vlad)</li>
+<li>Fixed several bugs and memleaks in the domxml extension. (Markus)</li>
+<li>Fixed bug in gmmktime() which was one hour off during standard time -
+  bug #9878. Patch by bfoddy@mediaone.net. (jmoore)</li>
+<li>Fixed bug in gmdate() timezone handling on Windows - bug #13885. (jmoore)</li>
+<li>Fixed several crash bugs in the mcrypt extension. (Derick)</li>
+<li>Made the mcrypt extension compile with the libmcrypt 2.2 series again.
+  (Sterling)</li>
+<li>Fixed a bug where the is_file() family of functions would in-correctly give
+  an error when they were given filenames that didn't exist. (Sterling)</li>
+<li>Fixed a bug in the strtotime() function where it was incorrectly recognizing
+  GMT +0100 and GMT -0100. (Derick)</li>
+</ul>
+
+<a name="4.1.0"></a>
 <h3>Version 4.1.0</h3>
 <b>10-Dec-2001</b>
 <ul>
@@ -207,7 +231,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
 </ul>
 
-<a name="4.0.6">
+<a name="4.0.6"></a>
 <h3>Version 4.0.6</h3>
 <b>23-Jun-2001</b>
 <ul>
@@ -286,7 +310,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Added temporary LOB support in OCI8. (Patch by David Benson)</li>
 <li>Fixed crash in pathinfo()</li>
 <li>OCI8 now supports binding of collections. (Patch by Andy Sautins
-  <asautins@veripost.net>)</li>
+  &lt;asautins@veripost.net&gt;)</li>
 <li>Added GD 2.0.1 support for truecolor and alpha channels, plus some other gd
   functions, both old and new - see docs for more info. (Wez)</li>
 <li>Added S/MIME sign/verify encrypt/decrypt functions to openssl extension,
@@ -322,7 +346,7 @@ commonheader("PHP 4 ChangeLog");
 
 <?php echo hdelim(); ?>
 
-<a name="4.0.5">
+<a name="4.0.5"></a>
 <h3>Version 4.0.5</h3>
 <b>30-Apr-2001</b>
 <ul>
@@ -468,7 +492,7 @@ commonheader("PHP 4 ChangeLog");
 
 <?php echo hdelim(); ?>
 
-<a name="4.0.4">
+<a name="4.0.4"></a>
 <h3>Version 4.0.4</h3>
 <b>19-Dec-2000</b>
 <ul>
