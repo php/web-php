@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = '/manual/phpfi2.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader('PHP/FI Version 2.0 Documentation');
+site_header('PHP/FI Version 2.0 Documentation');
 ?>
 
 <!--
@@ -7658,4 +7658,4 @@ typedef struct Stack {
   various libraries that could be linked into PHP. The gdbm library
   is one such example.</p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
