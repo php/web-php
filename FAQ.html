@@ -1,0 +1,228 @@
+<HTML>
+<HEAD>
+  <TITLE>PHP3 Frequently Asked Questions</TITLE>
+  <STYLE type="text/css">
+    BODY {background: #FFFFFF}
+    H1,H2,H3 {color: blue}
+  </STYLE>
+</HEAD>
+
+<BODY>
+
+<H1>PHP3 Frequently Asked Questions</H1>
+
+<!-- The website should stop chopping. -->
+<SMALL>
+<CODE>$Id$</CODE>
+</SMALL>
+
+<P>This is a list of Frequently Asked Questions about PHP3 and
+their answers. If you have suggestions or additions, send them to
+<CODE>php3@php.il.eu.org</CODE>.
+
+<HR>
+
+<H2>General Information</H2>
+
+<H3>What is PHP3?</H3>
+
+<P>From the <A href="http://www.php.net/manual/manual.html">manual</A>:
+
+<BLOCKQUOTE>
+<P>Professional Home Pages Version 3.0 is an HTML-embedded scripting
+language. Much of its syntax is borrowed from C, Java and Perl with a
+couple of unique PHP-specific features thrown in. The goal of the language
+is to allow web developers to write dynamically generated pages quickly.
+</BLOCKQUOTE>
+
+<H3>What is its relation to PHP/FI?</H3>
+
+PHP3 is the successor to PHP/FI 2.0.
+
+<H3>What are the differences between PHP3 and PHP/FI 2.0?</H3>
+
+<P>For a complete list of the changes, read the CHANGES file
+included in the PHP3 distribution. Some highlights:
+
+<UL>
+  <LI>All-new parser.
+  <LI>Persistent database connections.
+</UL>
+
+<H3>Is there a PHP3 mailing list?</H3>
+
+<P>Of course! To subscribe, send mail to
+<CODE>php3-subscribe@php.il.eu.org</CODE>. You don't need to include
+anything special in the subject or body of the message.
+
+<P>To unsubscribe, send mail to
+<CODE>php3-unsubscribe@php.il.eu.org</CODE>.
+
+<H3>Help! I can't seem to subscribe to the mailing list!</H3>
+<H3>Help! I can't seem to unsubscribe from the mailing list!</H3>
+
+<P>If you have problems subscribing to or unsubscribing from the PHP3
+mailng list, it may be because the mailing list software can't figure
+out the correct mailing address to use. If your email address was
+<CODE>joeblow@example.com</CODE>, you can send your subscription request
+to <CODE>php3-subscribe-joeblow=example.com@php.il.eu.org</CODE>,
+or your unsubscription request to
+<CODE>php3-unsubscribe-joeblow=example.com@php.il.eu.org</CODE>.
+
+<H3>Is there an archive of the mailing list anywhere?</H3>
+
+<P>Yes, it's located at <A
+href="http://www.tryc.on.ca/php3.html">http://www.tryc.on.ca/php3.html</A>.
+
+<HR>
+
+<H2>Obtaining PHP3</H2>
+
+<H3>Where can I obtain PHP3?</H3>
+
+<P>You can download PHP3 from any of the members of the
+PHP3 network of sites. These can be found at <A
+href="http://www.php.net/">http://www.php.net/</A>.
+
+<H3>Why do I have to register to download PHP3?</H3>
+
+<P>This is so the development team can find out what operating systems
+and databases that people are using, and how many people are using PHP3
+in general. Don't worry, you aren't being added to any mailing lists
+by registering!
+
+<H3>Are pre-compiled binary versions available?</H3>
+
+<P>Yes, as long as you're looking for binaries for Windows 95 or NT.
+They're available in the same place as the source.
+
+<HR>
+
+<H2>Installation</H2>
+
+<P>To install PHP3, follow the instructions in the INSTALL file located
+in the distribution. Windows 95 and NT users should also read the
+README.WIN32 file.
+
+<H3>Common Problems</H3>
+
+<DL>
+  <DT>
+    When I run configure, it says that it can't find the include files or
+    library for gdbm (or some other package)!
+  </DT>
+  <DD>
+    You can make the configure script looks for header files and libraries
+    in non-standard locations by specifying additional flags to pass to
+    the C compiler, such as:
+    <PRE>
+            CFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
+    </PRE>
+    If you're using a csh-variant for your login shell (why?), it would be:
+    <PRE>
+            env CFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
+    </PRE>
+  <P>
+  </DD>
+
+  <DT>
+    When it is compiling the file language-parser.tab.c, it gives me errors
+    that say 'yytname undeclared'.
+  </DT>
+  <DD>
+    You need to update your version of Bison.
+  <P>
+  </DD>
+            
+  <DT>
+    When I run 'make', it seems to run fine but then fails when it tries
+    to link the final application complaining that it can't find some files.
+  </DT>
+  <DD>
+    Some old versions of make that don't correctly put the compiled
+    versions of the files in the functions directory into that same
+    directory. Try running "<CODE>cp *.o functions</CODE>" and then
+    re-running 'make' to see if that helps. If it does, you should really
+    upgrade to a recent version of GNU make.
+  <P>
+  </DD>
+
+  <DT>
+    When linking PHP3, it complains about a number of undefined references.
+  </DT>
+  <DD>
+    Take a look at the link line and make sure that all of the appropriate
+    libraries are being included at the end. Common ones that you might have
+    missed are '-ldl' and any libraries required for any database support
+    you included.
+    <P>
+    If you're linking with Apache 1.2.x, did you remember to add the
+    appropriate information to the EXTRA_LIBS line of the Configuration
+    file and re-rerun Apache's Configure script? See the INSTALL file that
+    comes with the distribution for more information.
+    <P>
+    Some people have reported that they had to add '-ldl' immediately
+    following 'libphp3.a' when linking with Apache.
+  <P>
+  </DD>
+</DL>
+
+<HR>
+
+<H2>Using PHP3</H2>
+
+<H3>Common Problems</H3>
+
+<DL>
+  <DT>
+    I installed PHP3, but every time I load a document, I get the
+    message 'Document Contains No Data'! What's going on here?
+  </DT>
+  <DD>
+    This probably means that PHP3 is having some sort of problem
+    and is core-dumping. Look in your server error log to see if
+    this is the case, and then try to reproduce the problem with
+    a small test case. If you know how to use 'gdb', it is very
+    helpful when you can provide a backtrace with your bug report
+    to help the developers pinpoint the problem.
+  <P>
+  </DD>
+</DL>
+
+<H3>I think I found a bug! Who should I tell?</H3>
+
+<P>You should use the bug-reporting form located on any
+of the PHP3 network members. For example, try going to <A
+href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
+
+<HR>
+
+<H2>Migrating from PHP/FI 2.0</H2>
+
+<H3>Common Problems</H3>
+
+<DL>
+  <DT>
+    I converted my script from PHP/FI 2.0 to PHP3 syntax, but now it just
+    hangs! When I looked at the processes running on my server, there was
+    one process that was chewing up all of the CPU cycles!
+  </DT>
+  <DD>
+    You probably missed the semi-colon on a <CODE>while
+    (condition);</CODE> statement. This will cause PHP3 to spin out of
+    control because it is simply executing an empty body for your while
+    loop!  Change the semi-colon to a colon and it should work correctly.
+  <P>
+  </DD>
+</DL>
+
+<HR>
+
+<H2>Credits</H2>
+
+<P>This FAQ was originally written by Jim Winstead. It is currently
+maintained by the PHP Development Team.
+
+<!-- The website should start chopping again. -->
+</BODY>
+</HTML>
