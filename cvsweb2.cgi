@@ -433,7 +433,7 @@ sub checkout {
 	local($filename, $rev) = @_;
 	$fullname =~ s|$cvsrepository||;
 
-	open(RCS, "cvs -q -d$cvsrepository co -p -r $rev '$filename' 2>&1 |") ||
+	open(RCS, "cvs -q -l -d$cvsrepository co -p -r $rev '$filename' 2>&1 |") ||
 	    &fail("500 Internal Error", "Couldn't co: $!");
 	$| = 1;
 	print "Content-type: text/plain\n\n";
