@@ -408,8 +408,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			unset ($comments[0]);	# Ditch the most recent comment
 
 	  	#fetch original bug description
-		print $query = "SELECT ts1, email, comments from bugdb where id=$bug_id";
-		$result = mysql_query ($query);
+		print $query = "SELECT ts1, email, ldesc from bugdb where id=$bug_id";
+		print $result = mysql_query ($query);
+		print mysql_error ();
 		$comments[] = mysql_fetch_row ($result);
 
 		foreach ($comments as $value)
