@@ -6,12 +6,12 @@ commonHeader("PHP Usage Stats");
 <h1>Usage Stats for February 2003</h1>
 
 <p>
-PHP: 10,519,623 Domains, 1,220,927 IP Addresses<br>
+PHP: 11,869,645 Domains, 1,316,288 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200302.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200303.png", "Graph"); ?>
 </p>
 
 <p>
