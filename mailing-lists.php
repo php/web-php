@@ -260,8 +260,8 @@ function output_lists_table($mailing_lists)
             if ($listinfo[4] !== FALSE) {
                 $larchive = ($listinfo[4] === TRUE ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = FALSE; }
-            echo '<td>' . ($larchive ? make_link("http://marc.theaimsgroup.com/?l=" . $larchive, 'yes') : 'n/a') . '</td>';
-            echo '<td>' . ($listinfo[6] ? make_link("news://news.php.net/" . $listinfo[6], 'yes') : 'n/a') . '</td>';
+            echo '<td>' . ($larchive ? "<a href=\"http://marc.theaimsgroup.com/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '" /></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest" />' : 'n/a' ) . '</td>';
             echo "</tr>\n";
