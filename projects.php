@@ -362,6 +362,14 @@ tags analogous to HTML &lt;a href="..."&gt; tags, so non-programmers can create 
 documents.  
 <? endEntry(); ?>
 
+<? makeEntry("xml2tree", "http://www.risource.org/phpTools/xml2tree/README.html", "Bill Softky", "bill@rsv.ricoh.com"); ?>
+xml2tree is a single PHP include file for manipulating XML "tree objects" (i.e. a
+PHP4 "treeNode" object which contains an array of attributes and an array of child-strings and
+child-treeNodes).  treeNodes can be  constructed from XML files,  created from
+scratch,  edited, copied, referenced, and written; smaller treeNodes can be extracted from larger
+treeNodes based on simple criteria.  No other libraries or software are needed; everything is 100% PHP.
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
