@@ -10,7 +10,8 @@ $TOC = array();
 
 function setupNavigation($data) {
     global $NEXT, $PREV, $UP, $HOME, $TOC;
-    $HOME = @$data["home"];
+    //$HOME = @$data["home"];
+    $HOME = "index.php3";
     $NEXT = @$data["next"];
     $PREV = @$data["prev"];
     $UP   = @$data["up"];
