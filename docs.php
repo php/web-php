@@ -103,7 +103,7 @@ foreach ($man_languages as $langnum => $langcode) {
 
     // Also link to the external special French version, after the French link
     if ($langcode == "fr") {
-        echo '<a href="http://dev.nexen.net/docs/php/annotee/">[Special French]</a>,' . "\n";
+        echo '<a href="http://www.nexen.net/docs/php/annotee/">[Special French]</a>,' . "\n";
     }
 
     if ($langcode == $LANG) { echo "</b>"; }
