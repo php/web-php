@@ -190,14 +190,14 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[20-Sep-2003]</span>
   The publishers of php|architect have announced <a
-  href="http://www.phpcruise.com">php|cruise</a>, a five-day cruise to the
+  href="http://www.phparch.com/cruise/">php|cruise</a>, a five-day cruise to the
   Bahamas Islands featuring a lot of fun and over thirty different
   sessions dedicated to PHP from well known experts like Wez Furlong, Alan
   Knowles and John Coggeshall. 
 </p>
 <p>
  The cruise will take place March 1st to 5th, 2004. The organizers have
- <a href="http://www.phpcruise.com/contest">announced a contest</a> to
+ <a href="http://www.phparch.com/cruise/contest/">announced a contest</a> to
  give away one free place on the cruise.
 </p>
 
