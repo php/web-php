@@ -21,7 +21,7 @@ endwhile;
 </FORM>
 <P>
 <SMALL>
-If you are interested in hosting a mirror of this site, <A HREF="/new_mirror.php3">here's
+If you are interested in hosting a mirror of this site, <A HREF="/README.mirror">here's
 how</A>.
 </SMALL>
 <P>
