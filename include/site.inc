@@ -172,7 +172,7 @@ $LANGUAGES = array(
 
 $MYSITE = 'http://' . getenv("SERVER_NAME") . '/'; 
 if (!isset($MIRRORS[$MYSITE])) {
-    $MYSITE='http://' . ereg_replace("^www\\.","",$HTTP_HOST") . '/';
+    $MYSITE='http://' . ereg_replace("^www\\.","",$HTTP_HOST) . '/';
 }
 if (!isset($MIRRORS[$MYSITE])) {
     $MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
