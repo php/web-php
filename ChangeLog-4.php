@@ -104,7 +104,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/22363">#22363</a> (combinations of fwrite(), fread() and fseek() produce unexpected results). (Wez)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22355">#22355</a> (PHP would remove folding from Subject &amp; To fields). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22330">#22330</a> (overloaded strrpos() gives wrong results). (david@santinoli.com, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22312">#22312</a> (crash on failed connection when curl_getinfo() was called). (Phil Oleson <poleson@verio.net>)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22312">#22312</a> (crash on failed connection when curl_getinfo() was called). (Phil Oleson &lt;poleson@verio.net&gt;)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22308">#22308</a> (optimized passthru, code is now ~40 times faster). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22306">#22306</a> (pg_lo_seek($h, 0, PGSQL_SEEK_SET) succeeds but returns false). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/22301">#22301</a> (htmlspecialchars() crashes Apache on Tru64). (Ilia)</li>
@@ -382,7 +382,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
   <li>Added more detailed error reporting to apache_lookup_uri() and virtual().</li>
   <li>Renamed getallheaders() to apache_request_headers() and made an alias for BC.</li>
   <li>Added php_apache_sapi_getenv() and php_apache_sapi_get_stat().</li>
-  <li>Added syntax-highlighting handling (.phps)</li></li>
+  <li>Added syntax-highlighting handling (.phps)</li>
   </ul>
 </li>
 <li>Fixed strstr(), strchr() and strrchr() to be binary safe. (Andrey)</li>
@@ -538,7 +538,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
   W3C specs (moving not copying nodes, accepting NULL as 2nd param). (chregu)</li>
 <li>Added DomNode-&gt;set_namespace(uri[,prefix]) (chregu)</li>
 <li>Fixed shuffle() to properly generate all possibilities. (Patch provided by
-  Adam <adam@trachtenberg.com>)</li>
+  Adam &lt;adam@trachtenberg.com&gt;)</li>
 <li>Fixed DomNode-&gt;insert_before() to behave according to W3C spec
   ie. new_child is moved, not copied. (chregu)</li>
 <li>Added some namespace support with DomNode-&gt;add_namespace(uri, prefix)
@@ -1126,7 +1126,7 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
   enumeration. (Alan, Harald)</li>
 <li>Fixed a bug in dbase_get_record() and dbase_get_record_with_names().
   boolean fields are now returned correctly.
-  Patch by Lawrence E. Widman <widman@cardiothink.com> (Jani)</li>
+  Patch by Lawrence E. Widman &lt;widman@cardiothink.com&gt; (Jani)</li>
 <li>Added --version option to php-config. (Stig)</li>
 <li>Improved support for thttpd-2.21b by incorporating patches for all known
   bugs. (Sascha)</li>
