@@ -141,8 +141,9 @@ $minute = rand(0, 59);
      # Set directory index
      DirectoryIndex index.php index.html
      
-     # Do not display directory listings if index is not present
-     Options -Indexes
+     # Do not display directory listings if index is not present,
+     # and do not try to match filenames if extension is omitted
+     Options -Indexes -MultiViews
      
      # Handle errors with local error handler script
      ErrorDocument 401 /error.php
