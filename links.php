@@ -140,9 +140,8 @@ and user submitted code. Home of the PHP Coding Contest.</li>
 <li><a href="http://www.itworks.demon.co.uk/phpeditors.htm">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs</li>
 
-<li><a href="http://phplib.netuse.de/">PHP Base Library</a><br>
-The start of what looks to be a promising collection of base code
-for developers of large PHP sites</li>
+<li><a href="http://phplib.sourceforge.net/">PHP Base Library</a><br>
+A collection of base code for developers of large PHP sites</li>
 
 <li><a href="http://phpclasses.upperdesign.com/">The PHP Classes Repository</a><br>
 Useful PHP classes in a categorized listing</li>
