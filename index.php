@@ -214,6 +214,27 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+<?php print_link("http://www.phpconference.de/2003/index_en.php", make_image("news/international_conference_2003.gif", "International PHP Conference", "right") ); ?>
+
+<h1>International PHP Conference 2003</h1>
+<p>
+ <font class="newsdate">[24-Jun-2003]</font>
+The traditional International PHP Conference 2003 will be taking place from
+2nd November to 5th November in Frankfurt (FFM).  The Call for Papers has
+been issued, so if you have an interesting talk, the organizers would
+love to hear about it!
+You can expect a gathering of PHP experts and core developers and to focus on PHP 5
+as the main topic for the conference.
+</p>
+<p>
+You can find the CfP <a href="http://www.phpconference.de/2003/cfp_en.php">on
+the website</a>.  The deadline is 17th July, 2003.</p>
+<p>
+The conference is also featuring an <b>OpenSource Exhibition</b> where PHP related
+OpenSource projects can present themselves for free.
+</p>
+
+<?php echo hdelim(); ?>
 
 <h1>PHP 4.3.3RC1 released</h1>
 <p>
