@@ -92,8 +92,9 @@ site_header("Getting Help");
 
 <p>
  Otherwise known as IRC or Internet Relay Chat. Here you can usually find
- experienced PHP people sitting around doing nothing on the #php channel.
- On <a href="http://oftc.net">OFTC</a> as well as on all major networks
+ experienced PHP people sitting around doing nothing on the #php and/or
+ #phphelp channels. Note that there is no single official IRC channel.
+ Check <a href="http://oftc.net">OFTC</a> or any other major network
  (<a href="http://www.efnet.org/">EFNet</a>,
  <a href="http://www.ircnet.com/">IRCNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
