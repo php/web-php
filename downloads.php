@@ -25,6 +25,8 @@ download site. Binaries available on external servers:
 <li>' . make_link("http://silk.apana.org.au/php/", "OS/2") . '</li>
 <li>' . make_link("http://php.alexwaugh.com/", "RISC OS") . '</li>
 <li>' . make_link("http://freeware.sgi.com/index-by-alpha.html#php", "SGI IRIX 6.5.x") . '</li>
+<li>' . make_link("http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html", "AS/400") . '</li>
+
 </ul>
 </p>
 
