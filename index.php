@@ -134,6 +134,16 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.0pre2 Released</h1>
+<p>
+<font class="newsdate">[27-Oct-2002]</font>
+<a href="http://qa.php.net/">PHP 4.3.0pre2</a>
+is available for download. This is the second pre-release version and
+incorporates a large number of bug fixes since the first pre-release. Still, to
+help us catch as many bugs as possible, please download it and start testing.
+
+<?php echo hdelim(); ?>
+
 <h1>New keyboard shortcuts</h1>
 <p>
 <font class="newsdate">[17-Oct-2002]</font>
