@@ -32,7 +32,7 @@ function tip_title($title, $author = '', $date = '')
 </p>
 
 <p>
- For a description of PHP.net shortcut URLs (which work in any
+ For more description on PHP.net shortcut URLs (which work in any
  browser and on any mirror site), please visit our
  <a href="/urlhowto.php">URL Howto page</a>.
 </p>
@@ -78,7 +78,7 @@ end tell
 <p>
  Open the Preferences dialog box, select Searches and then Internet Sites.
  Click New, add "PHP Quick Reference" as the Title, and
- <tt>"<?php echo $MYSITE; ?>manual-lookup.php?function="</tt> as the URL. If
+ <tt>"<?php echo $MYSITE; ?>"</tt> as the URL. If
  you add a letter in the Key column (eg. "p") you can search using the
  address bar with that letter (eg. "p str_replace"). Otherwise, use Edit
  &rarr; Find (Cmd-F) and select "On the Internet" under Find and choose
@@ -89,7 +89,7 @@ end tell
 
 <p>
  Just right-click on this link:
- <a href="javascript:q=document.selection.createRange().text;if(!q)void(q=prompt('PHP%20Reference:',''));if(q)location.href='<?php echo $MYSITE; ?>manual-lookup.php?function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
+ <a href="javascript:q=document.selection.createRange().text;if(!q)void(q=prompt('PHP%20Reference:',''));if(q)location.href='<?php echo $MYSITE; ?>'+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
  and add it to your bookmarks. Using this bookmark you can directly get to
  the documentation page of any function you have selected the name of
  on the page, or if there is no selection, you are prompted for a string to
@@ -112,7 +112,7 @@ end tell
  <dl>
   <dt>Name</dt><dd>PHP</dd>
   <dt>URL</dt><dd><?php echo $MYSITE; ?></dd>
-  <dt>Smart URL</dt><dd><?php echo $MYSITE; ?>manual-lookup.php?pattern=%s</dd>
+  <dt>Smart URL</dt><dd><?php echo $MYSITE; ?></dd>
   <dt>Nicknames</dt><dd>php</dd>
  </dl>
  </li>
@@ -128,7 +128,7 @@ end tell
  <li>Open the Preferences window in OmniWeb, and select Shortcuts.</li>
  <li>Click the + button to add a shortcut.</li>
  <li>In the Shortcut column type: <tt>php@</tt></li>
- <li>In the Destination URL column type: <tt><?php echo $MYSITE; ?>manual-lookup.php?function=%@</tt></li>
+ <li>In the Destination URL column type: <tt><?php echo $MYSITE; ?>%@</tt></li>
  <li>Close the Preferences window.</li>
 </ol>
 
@@ -158,7 +158,7 @@ end tell
 <pre>
 [Search Engine 4]
 Name=PHP
-URL=<?php echo $MYSITE; ?>manual-lookup.php?function=%s
+URL=<?php echo $MYSITE; ?>
 Query=
 Key=p
 Is post=0
@@ -186,7 +186,7 @@ Search Type=0
 
 <ul>
  <li>Search provider name: <b>"PHP Manual Quick Reference"</b></li>
- <li>Search URI: <b><?php echo $MYSITE; ?>manual-lookup.php?function=\1</b></li>
+ <li>Search URI: <b><?php echo $MYSITE; ?>\1</b></li>
  <li>URI Shortcuts: <b>php</b></li>
 </ul>
 
@@ -198,7 +198,7 @@ Search Type=0
 
 <p>
  Just right-click (control-click or click-and-hold for Macintosh users)
- on this link: <a href="javascript:q=document.getSelection();if(!q)void(q=prompt('PHP Reference:',''));if(q)location.href='<?php echo $MYSITE; ?>manual-lookup.php?function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
+ on this link: <a href="javascript:q=document.getSelection();if(!q)void(q=prompt('PHP Reference:',''));if(q)location.href='<?php echo $MYSITE; ?>'+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
  and add it to your bookmarks. With some browsers, you may need to edit
  your bookmarks manually to give the bookmark an easy-to-remember title.
 </p>
@@ -248,7 +248,7 @@ Search Type=0
   <ul>
    <li>Shortcut: <tt>php</tt></li>
    <li>Search: <strong>Custom URL</strong></li>
-   <li>URL: <tt><?php echo $MYSITE; ?>manual-lookup.php?function=%s</tt></li>
+   <li>URL: <tt><?php echo $MYSITE; ?>%s</tt></li>
   </ul>
  </li>
  <li>Click "Ok", then click "Save" to keep your new settings</li>
@@ -272,7 +272,7 @@ Search Type=0
   if necessary):
   <pre>
 #!/bin/sh
-/usr/bin/netscape <?php echo $MYSITE; ?>manual-lookup.php?function=$1
+/usr/bin/netscape <?php echo $MYSITE; ?>$1
   </pre>
  </li>
  <li>Save it and type <tt>chmod +x phpfind</tt> to make it executable</li>
@@ -296,7 +296,7 @@ Search Type=0
 
 <p>
  <strong>Macro:</strong><br />
- <tt>gnome-moz-remote --newwin <?php echo $MYSITE; ?>manual-lookup.php?function=$(echo<br />
+ <tt>gnome-moz-remote --newwin <?php echo $MYSITE; ?>$(echo<br />
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')</tt>
 </p>
 
