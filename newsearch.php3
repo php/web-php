@@ -1,11 +1,16 @@
 <?
-	require("shared.inc");
-	commonHeader("Site Search");
-	include "configuration.inc";
+require("shared.inc");
+commonHeader("Site Search");
+include "configuration.inc";
 
-	if(!isset($pattern)) { ?>
+if ($HAVE_SEARCH) {
+	$form=$PHP_SELF;
+} else {
+	$form="http://uk.php.net/newsearch.php3";
+}
+if(!isset($pattern)) { ?>
 	<h1 align=center>PHP3 Site Search</h1>
-	<form action="<?echo $PHP_SELF;?>" METHOD=POST>
+	<form action="<?echo $form;?>" METHOD=POST>
 	<CENTER>
 	<TABLE CELLSPACING=0 CELLPADDING=2>
 	<TR BGCOLOR=#CCCCCC>
@@ -38,7 +43,16 @@
 <? } else { ?>
 	<h1 align=center>Search Results</h1>
 	<?
-		$words=UrlEncode($pattern);
+		if (!isset($base)) {
+			if (ereg("^(.+://[^/]+/)",$HTTP_REFERER,&$reg)) {
+				$base=$reg[1];
+			}
+			ereg("^(.+)/newsearch.php3",$PHP_SELF,&$reg);
+			if ($base==$reg[1]) {
+				$base="-";
+			}
+		}
+		$words=EscapeShellCmd(UrlEncode($pattern));
 		$config="php";
 		if ($show=="source") {
 			$exclude="/manual";
@@ -54,9 +68,8 @@
 			$where="PHP3 web site";
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
-		putenv("QUERY_STRING=words=$words&config=$config&exclude=$exclude&restrict=$restrict$off");
-		putenv("REQUEST_METHOD=GET");
-		exec($htsearch_prog,&$result);
+		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
+		exec("/usr/local/htdig/bin/htphp.sh \"$query\"",&$result);
 		$rc=count($result);
 		if ($rc<2) {
 			echo "<H2>There was an error executing this query.  Please try later</H2>";
@@ -73,7 +86,7 @@
 		$lastdisplayed=$result[4];
 		$page=$result[5];
 		$pages=$result[6];
-		$baseurl=$PHP_SELF."?pattern=$words&show=$show";
+		$baseurl=$PHP_SELF."?pattern=$words&show=$show&base=$base";
 		if ($page>1) {
 			$i=$page-1;
 			$last="<A HREF=\"$baseurl&page=$i\">Last Page</A>";
@@ -96,7 +109,11 @@
 		$i=7; #skip response header
 		echo "<TABLE BORDER=0><TR><TD>\n";
 		while($i<$rc) {
-			echo $result[$i];
+			if ($base=="-") {
+				echo $result[$i];
+			} else {
+				echo eregi_replace("http://[^.]+\.php\.net/",$base,$result[$i]);
+			}
 			echo "\n";
 			$i++;
 		}
