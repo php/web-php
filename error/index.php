@@ -83,6 +83,8 @@ $uri_aliases = array (
     "changelog"     => "ChangeLog-4",
     "gethelp"       => "support",
     "help"          => "support",
+    "unsubscribe"   => "unsub",
+    "subscribe"     => "mailing-lists",
 
     # manual shortcuts
     "ini"         => "configuration",
