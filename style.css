@@ -225,6 +225,9 @@ input.max, textarea.max, select.max {
 */
 
 /* PHP code syntax highlighting */
+div.phpcode, pre {
+   margin-top: 5px 0px;
+}
 div.phpcode span.html {
     color: black;	
 }
