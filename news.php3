@@ -51,8 +51,7 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
-<? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at
-Web98","http://www.webreview.com/wr/pub/Databases","June 22, 1998"); ?>
+<? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://webreview.com/wr/pub/wtawards","June 22, 1998"); ?>
 "The substance of the Web is more and more residing in databases, and there are a variety of methods used to
 generate Web pages.  This year, we selected a pair of "free software" tools that
 work together quite nicely as a platform for building dynamic content. The award is also a tribute to the Open Source
