@@ -13,6 +13,93 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<h1>ActiveState Awards</h1>
+<p>
+<font class="newsdate">[31-Jul-2002]</font> ActiveState is pleased to announce
+the winners of the 2002 Active Awards, presented at the O'Reilly Open Source
+Conference in San Diego, CA. The Active Awards are held annually to honor
+members of the PHP, Python, Perl, Tcl, and XSLT  communities, who
+<em>actively</em> contribute to open languages and display excellence in
+their programming efforts. Activators' Choice Award winners were chosen by
+ActiveState's development team.  Programmers' Choice Award winners were
+nominated and chosen by the open source community, the nominees were:
+Greg Allan; Stig Bakken; Bogomil Shopov; Philippe Thomassigny; and
+Andrei Zmievski.
+</p><p>
+The Activators' Choice winners are Derick Rethans and Jani Taskinen.
+Derick is heavily involved in developing processes for QA and Release
+Management, and Jani has been one of the largest contributors to QA and
+support of the Bug database.  The Programmers' Choice winner is Greg
+Allen, who was the lead developer and founding member of the PostNuke
+project.  More details are available at 
+<?print_link('http://www.ActiveState.com/ActiveAwards2002', 'http://www.ActiveState.com/ActiveAwards2002')?>
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP 4.2.2 released in response to vulnerability</h1>
+
+<p>
+<font class="newsdate">[22-Jul-2002]</font> The PHP Group today announced
+the details of a serious <a href="release_4_2_2.php">vulnerability</a> in PHP versions 4.2.0 and 4.2.1.
+A security update, <a href="downloads.php">PHP 4.2.2</a>, fixes the issue. Everyone running
+affected versions of PHP is encouraged to upgrade immediately. The new 4.2.2
+release doesn't include other changes, so upgrading from 4.2.1 is safe and painless.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>New comp.lang.php newsgroup started</h1>
+
+<p>
+<font class="newsdate">[09-Jul-2002]</font> comp.lang.php was created yesterday,
+after a two and a half month long process started in April by Ian Fette resulted
+in a <a href="http://groups.google.com/groups?q=comp.lang.php&hl=en&lr=&ie=UTF-8&sel
+m=1025483879.39561%40isc.org&rnum=3">177-11 vote</a> in favor of the group.
+The new group is already carried on most news servers, and should be carried
+on almost all news servers in the world within the next few days.
+</p>
+
+<p>
+The new group is important for a few reasons: Firstly, the old alt.* php
+groups suffered from poor propagation - i.e. not all servers carried them,
+and the community was split between multiple groups. This new group offers a
+chance to unite the PHP-Usenet community. Secondly, most servers have longer
+post-retention times for comp.* than alt.*. Finally, the creation of
+comp.lang.php represents PHP's coming to acceptance and maturity. Virtually
+all languages have a spot under the comp.lang.* hierarchy. Stop on by and
+become a part of the community - comp.lang.php is a great place to get help
+and to help others.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
+
+<h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
+<p>
+<font class="newsdate">[30-Jun-2002]</font>
+The second alpha release of PHP w/ Zend Engine 2 is
+<?php download_link("php-4.3.0-dev-zend2-alpha2.tar.gz", "now available"); ?>.
+It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
+scripting engine which greatly improves the object model, adds exception
+handling and provides a much better infrastructure for the integration
+of external technologies like Java or .NET.  For more details and
+examples you can check out the <a href="ZEND_CHANGES.txt">CHANGES file</a>
+and an <a href="http://www.php.net/source.php?url=/zend2_example.phps">example script</a>
+which shows how some of these features can be used.</p>
+
+<p><b>Note:</b>  This is an alpha version.  It should not be used in production
+or even semi-production web sites.  There are known bugs in it, and in
+addition, some of the features may change (based on feedback).  We
+encourage you to download and play with it (and report bugs if you find any!),
+but please don't expect it to replace your copy of PHP 4 at this stage.</p>
+
+<p>Windows binary version is also available for
+<?php download_link("php-4.3.0-dev-zend2-win32-alpha2.zip", "download"); ?>.</p>
+
+<?php echo hdelim(); ?>
+
 <?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
 
 <h1>Initial Alpha Release of PHP w/ the Zend Engine 2 Available</h1>
