@@ -96,9 +96,9 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsDate">[29-Jul-2001]</font>
 You don't need to go online anymore, to access the PHP FAQ,
 because we integrated it for you in the PHP Manual, so you can
-<a href="http://www.php.net/docs.php">download it</a> in
+<a href="/docs.php">download it</a> in
 various formats with the Manual packages, and
-<a href="http://www.php.net/manual/en/faq.php">annotate
+<a href="/faq.php">annotate
 the pages online</a>, as you wish.
 <br clear="all">
 </p>
@@ -109,9 +109,9 @@ the pages online</a>, as you wish.
 
 <p>
 <font class="newsDate">[21-Jul-2001]</font>
-The <a href="docs.php">manual page</a> now shows the new .tar.bz2 packaging
+The <a href="/docs.php">manual page</a> now shows the new .tar.bz2 packaging
 for some languages, and we are also working to get the PDF format back, and update
-all the chm manuals soon. Check out our new <a href="cal.php">Event Calendar</a>
+all the chm manuals soon. Check out our new <a href="/cal.php">Event Calendar</a>
 where you can add your groups PHP events, and see what is already there.
 <br clear="all">
 </p>
@@ -154,7 +154,7 @@ by <a href="http://www.pair.com/">pair Networks</a>. Thanks!
 
 <p>
 <font class="newsDate">[23-Jun-2001]</font>
-<a href="downloads.php">PHP 4.0.6</a> is a maintenance release, that features many bug fixes from
+<a href="/downloads.php">PHP 4.0.6</a> is a maintenance release, that features many bug fixes from
 PHP 4.0.5, and is especially much more efficient in its memory requirements. Users that skipped
 the 4.0.5 upgrade may wish to jump directly from 4.0.4 to the much more stable 4.0.6. For a
 full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
