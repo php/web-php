@@ -1,10 +1,10 @@
 <?php
-require_once 'prepend.inc';
-commonHeader("PHP Credits");
+# require_once 'prepend.inc';
+# commonHeader("PHP Credits");
 
-print "<p align=\"center\">";
+# print "<p align=\"center\">";
 phpcredits();
-print "</p>";
+# print "</p>";
 
-commonFooter();
+# commonFooter();
 ?>

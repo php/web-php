@@ -313,7 +313,7 @@ function commonFooter() {
 	# the same page on the mirror, and do the same in our javascript.
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
-	print_link('/credits.php', 'credits', false, 'class="small"');
+	print_link('/credits.php', 'credits', '_blank', 'class="small"');
 	echo delim();
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
