@@ -11,7 +11,7 @@ function makeEntry($project,$url,$name,$email) {
 <?
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1><FONT SIZE=+0>\n";
 	echo "<B>$project</B><BR></FONT>\n";
-	$url2 = (substr(strtolower($url),0,4)=="http") ? $url : "http://".$url;
+	$url2 = strstr($url,'://') ? $url : "http://".$url;
 	echo "<A HREF=\"" . $url2."\" TARGET=\"_blank\">".$url2."</A><BR>\n";
 	if ($email):
 		echo "by <A HREF=\"mailto:".$email."\">".$name."</A><BR>\n";
@@ -110,6 +110,15 @@ A PHP based secure email reading interface for IMAP based servers.
 <? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
 <? endEntry();?>
+
+<? makeEntry("DJPIM","ftp://tcomtoo.tcomeng.com/djpim/","Daryl Jones","daryl@tcomeng.com"); ?>
+DJPIM is a very simple web-based interface to a MYSQL table that
+serves as a priortized list of reminders.  It's designed for rapid
+data entry of things to do, like telephone messages, prepare quotations,
+and send invoices.  The author uses it as a substitute for a paper
+&quot;to do&quot; list.
+<? endEntry();?>
+
 
 <? makeEntry("MyAdServer","www.314interactive.com","3.14Interactive","wj@314interactive.com"); ?>
 This is a web adserver using PHP3.0 and MySQL  It includes the following features:
