@@ -625,7 +625,8 @@ site_header("Links");
    </li>
    <li>
     <a href="http://weblabor.hu/">Weblabor</a><br />
-    Fresh news from the world of web development and PHP
+    Fresh news, articles, links and mailing lists from the
+    world of web development and PHP
    </li>
   </ul>
  </li>
@@ -725,6 +726,11 @@ site_header("Links");
    <li>
     <a href="http://www.php.com.ve/">php.com.ve</a><br />
     PHP dedicated site in Venezuela
+   </li>
+   <li>
+    <a href="http://www.programacion.com/php/">www.programacion.com/php/</a><br />
+    Spanish PHP community. Articles, tutorials, courses,
+    source code, forums, and more about PHP.
    </li>
    <li>
     <a href="http://zonaphp.com/">zonaphp.com</a><br />
