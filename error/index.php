@@ -13,6 +13,48 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	print "<a href=\"".$url."\">Please click here</a></body></html>";
 	exit;
 }
+
+$uri=strstr($REDIRECT_REDIRECT_ERROR_NOTES,'phpweb/');
+$uri = strchr($uri,'/');
+$uri = substr($uri,1);
+
+$try_files = array();
+$function = strtolower($uri);
+
+function tryprefix($func, $prefix) {
+    global $try_files;
+
+    $func = ereg_replace("_","-",$func);
+    $func = ereg_replace('\(.*\)',"-",$func);
+    $try_files[] = "/manual/${prefix}${func}.php";
+    $nosp = ereg_replace(" ", "", $func);
+    if ($nosp != $func) {
+    $try_files[] = "/manual/${prefix}${nosp}.php";
+    }
+    $dasp = ereg_replace(" ", "-", $func);
+    if ($dasp != $func) {
+    $try_files[] = "/manual/${prefix}${dasp}.php";
+    }
+    $noul = ereg_replace("-", "", $func);
+    if ($noul != $func) {
+    $try_files[] = "/manual/${prefix}${noul}.php";
+    }
+}
+
+tryprefix($function, "function.");
+tryprefix($function, "class.");
+tryprefix($function, "ref.");
+tryprefix($function, "feature-");
+tryprefix($function, "construct.");
+
+reset($try_files);
+while (list($dummy, $file) = each($try_files)) {
+    if (file_exists($DOCUMENT_ROOT.$file)) {
+    Header("Location: $file");
+    exit;
+    }
+}
+
 ?>
 <?Header("http/1.0 404 Not Found")?>
 <html><title>404 - <?echo $REDIRECT_REDIRECT_ERROR_NOTES?></title>
@@ -20,10 +62,7 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 <?
 	require "../configuration.inc";
 	if(!isset($pattern)) {
-	$uri=strstr($REDIRECT_REDIRECT_ERROR_NOTES,'phpweb/');
-	$uri = strchr($uri,'/');
-	$uri = substr($uri,1);
-	$pattern = $uri;
+		$pattern = $uri;
 	}
 
 function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
