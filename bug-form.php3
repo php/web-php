@@ -58,6 +58,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 <form method=POST action="<? echo $PHP_SELF;?>">
 
+<P><STRONG>Please make sure you have read our list of <A
+href="FAQ.php3">Frequently Asked Questions</A> to see whether your
+problem may already be a known issue.</STRONG>
+
 <table>
  <tr>
   <th align=right>Your email address:</th>
@@ -84,10 +88,12 @@ if (isset($cmd) && $cmd == "Send bug report") {
   <td>
    <input type=text size=20 name="osver" value="<?echo $operating_system;?>">
   </td>
- </tr>
+ </tr><tr>
+  <th align=right>Bug description:</th>
+  <td>
+   <input type=text size=40 name="bug_short_desc">
+  </td>
 </table>
-
-Bug description:  <input type="text" name="bug_short_desc"><br>
 
 <table>
 <tr>
