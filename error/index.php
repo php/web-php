@@ -78,9 +78,11 @@ if (preg_match("!^get/([^/]+)(/from/mirror)?$!", $URI, $filepart)) {
     include_once "$DOCUMENT_ROOT/get_download.php";
     exit;
 }
-elseif (preg_match("!^get/([^/]+)/from/([^/]+)$!", $URI, $dlinfo)) {
+elseif (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     $df = $dlinfo[1];
-    $mr = "http://{$dlinfo[2]}/";
+    if ($dlinfo[2] == "a") { include_once "$DOCUMENT_ROOT/get_download.php"; exit; }
+    if ($dlinfo[2] == "this") { $mr = $MYSITE; }
+    else { $mr = "http://{$dlinfo[2]}/"; }
     include_once "$DOCUMENT_ROOT/do_download.php";
     exit;
 }
