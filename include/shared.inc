@@ -389,13 +389,13 @@ mirrorPosTop=240;
 document.writeln("<STYLE TYPE='text/css'>");
 document.writeln("TD { font-family: <? echo $FONTFACE; ?> }");
 <?	if ($FRAMEMODE != "manual"): ?>
-document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 0; VISIBILITY: hidden; TOP: ");
+document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 999; VISIBILITY: hidden; TOP: ");
 document.write(mirrorPosTop);
 document.write("px; LEFT: ");
 document.write(mirrorPosLeft);
 document.writeln("px;}");
 <?	endif; ?>
-document.write("#searchKick {POSITION: absolute; Z-INDEX: 0; VISIBILITY: hidden; TOP: ");
+document.write("#searchKick {POSITION: absolute; Z-INDEX: 999; VISIBILITY: hidden; TOP: ");
 document.write(searchPosTop);
 document.write("px; LEFT: ");
 document.write(searchPosLeft);
@@ -413,7 +413,8 @@ document.writeln("</STYLE>");
      <TD ALIGN=left>
       <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
       <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" 
- ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+ ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67
+ BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
     </TR>
