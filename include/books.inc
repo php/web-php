@@ -1311,6 +1311,17 @@ array(
   ),
   
   array(
+    /* title[s]     */ "Advanceret PHP",
+    /* title_link   */ "http://www.gad.dk/bog.asp?id=176204",
+    /* author[s]    */ "Cristopher Cosentino",
+    /* auth link[s] */ "",
+    /* image        */ "8778435978.gif",
+    /* information  */ "2003, ISBN 87-7843-597-8",
+    /* inform. link */ "http://www.gad.dk/bog.asp?id=176204",
+    /* language     */ "dk"
+  ),
+  
+  array(
     /* title[s]     */ "PHP. Web scripting",
     /* title_link   */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&amp;isbn=8883780132",
     /* author[s]    */ "Rasmus Lerdorf",

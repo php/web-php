@@ -17,7 +17,9 @@ $SIDEBAR_DATA='
  A free CHM viewer is available for Linux, *BSD and Solaris,
  which is capable of reading the CHMs available here, except
  the extended CHMs. It is called
- <a href="http://xchm.sourceforge.net/">xCHM</a>.
+ <a href="http://xchm.sourceforge.net/">xCHM</a>. If you
+ use Gnome, you might also be interested in another fine
+ project named <a href="http://gnochm.sourceforge.net/">GnoCHM</a>.
 </p>
 
 <h3>File sizes and dates</h3>
