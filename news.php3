@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Trio informale", "by Dirk Reichelt", 
+	"http://www.zdnet.de/internet/artikel/java/199912/phpdatenbank01_00-wc.html", "November 29, 1999");?>
+(In German.) &quot;Redaktionssystem für die Website mit PHP
+<? endEntry(); ?>
+
 <? makeEntry( "Interview with the PHP Team", "by <a href=\"mailto:lpdevel@linuxpower.org\">Linuxpower Team</a>", 
 	"http://www.linuxpower.org/display_item.phtml?id=149", "November 17, 1999");?>
 An interview with the core PHP development team: Andi, Andrei, Jim, Rasmus, Sascha, Stig, Thies, and Zeev.
