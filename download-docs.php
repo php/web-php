@@ -27,7 +27,7 @@ development of a new CHM format based PHP manual at
 <p>
 If you are using a capable browser, the file size and
 date will show up when you move the mouse above a link.
-If you use cannot view this information, or would like to see all the
+If you cannot view this information, or would like to see all the
 information, you can <a href="/download-docs.php?sizes=1">click
 here to see all the file sizes and dates</a>.
 </p>
@@ -84,6 +84,10 @@ foreach ($formats as $formatname => $extension) {
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
 
+    // See if current language is preferred
+    if ($langcode == preferred_language()) { $preflang = TRUE; }
+    else { $preflang = FALSE; }
+
     // Reset files array and format counter
     $files = array(); $formatnum = 0;
     
@@ -128,7 +132,7 @@ foreach ($LANGUAGES as $langcode => $language) {
         }
         
         // Highlight manual in preferred language
-        if ($langcode == preferred_language()) {
+        if ($preflang) {
             $bgcolor = "#ffffcc";
         } else {
             $bgcolor = "#eeeeee";
@@ -148,17 +152,27 @@ foreach ($LANGUAGES as $langcode => $language) {
             
             // Format found, write out link
             else {
-                echo "<a href=\"$fileinfo[0]\" title=\" Size: $fileinfo[1]Kb\n Date: $fileinfo[2]\">$fileinfo[3]</a>";
 
-                // Sizes required to be printed out (URL parameter)
-                if ($sizes) {
-                    echo "<br><small>Size: $fileinfo[1]Kb<br>Date: $fileinfo[2]</small>";
+                // Start link tag
+                echo "<a href=\"$fileinfo[0]\"";
+
+                // Only print out tooltip, if explicit information is not printed
+                if (!$sizes && !$preflang) {
+                    echo " title=\" Size: $fileinfo[1]Kb\n Date: $fileinfo[2]\"";
+                }
+
+                // End link tag
+                echo ">$fileinfo[3]</a>";
+
+                // Sizes required to be printed out (URL parameter or preferred language)
+                if ($sizes || $preflang) {
+                    echo "<br /><small>Size: $fileinfo[1]Kb<br />Date: $fileinfo[2]</small>";
                 }
             }
 
             // Quite bad looking code tweak to add a link to the extended CHM (en only!)
             if ($langcode == "en" && preg_match("!.chm$!", $fileinfo[0])) {
-                echo ', <a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
+                echo '<br /><a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
             }
        
             // End table cell
