@@ -32,7 +32,6 @@ Une nouveaut&eacute; tr&egrave;s importante, mais cach&eacute;e a &eacute;t&eacu
 Cela signifie, pour les utilisateurs, est que les fonctions d'entr&eacute;es/sorties fonctionnent d&eacute;sormais avec les fl&ocirc;ts (c'est &agrave; dire presque toutes), peuvent utiliser des protocoles internes tels que HTTP/HTTPS et FTP/FTPS, ainsi que des protocoles personnalis&eacute;s, enregistr&eacute;s comme tels depuis les scripts PHP. Pour plus d'informations, voyez : 
 <ul>
 <li><a href="http://dev.nexen.net/docs/php/annotee/wrappers.php#wrappers">Liste des protocoles support&eacute;s</a></li>
-<li><a href="http://dev.nexen.net/docs/php/annotee/streams.php">API de fl&ocirc;ts les auteurs d'extensions</a></li>
 </ul>
 </p>
 <h2>Nouveaus syst&egrave;me de compilation</h2>

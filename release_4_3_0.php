@@ -53,7 +53,6 @@ HTTP/HTTPS and FTP/FTPS, as well as custom protocols registered from PHP
 scripts. For more information please see:
 <ul>
  <li><a href="/manual/en/wrappers.php">List of Supported Protocols/Wrappers</a></li>
- <li><a href="/manual/en/streams.php">Streams API</a></li>
 </ul>
 </p>
 

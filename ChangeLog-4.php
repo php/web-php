@@ -220,10 +220,10 @@ commonheader("PHP 4 ChangeLog");
   <li>Added memory stream support. (Marcus)</li>
   <li>Renamed:
     <ul>
-      <li>socket_set_timeout()  -&lt; stream_set_timeout()</li>
-      <li>socket_set_blocking() -&lt; stream_set_blocking()</li>
-      <li>set_file_buffer()     -&lt; stream_set_write_buffer()</li>
-      <li>socket_get_status()   -&lt; stream_get_meta_data()</li>
+      <li>socket_set_timeout()  -&gt; stream_set_timeout()</li>
+      <li>socket_set_blocking() -&gt; stream_set_blocking()</li>
+      <li>set_file_buffer()     -&gt; stream_set_write_buffer()</li>
+      <li>socket_get_status()   -&gt; stream_get_meta_data()</li>
 	</ul>
     As these functions can (in theory) work on any type of stream. (Wez)</li>
   <li>Raw POST data is now available as "php://input" stream. (Hartmut)</li>
