@@ -8,12 +8,13 @@
     "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
     "http://il.php.net/"         => array("israel", "Netvision, Israel"),
     "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
-    "http://no.php.net/"         => array("norway", "Trondheim, Norway"),
+    "http://no.php.net/"         => array("norway", "Guardian Networks, Norway"),
     "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom"),
 	"http://www.php.net/"	 => array("usa", "Circle Net, United States")
   );
   $ftp_sites = array(
    "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States")
+   "ftp://no.php.net/pub/free/php/dist/"          => array("norway", "Guardian Networks, Norway")
   );
 
   function download_link($file, $title) {
