@@ -87,7 +87,7 @@ if (!empty($_FORM['pattern'])) {
 else {
 
     // Print out common header
-    site_header("Search");
+    site_header("Search", array("noindex"));
     if (isset($EXPL_LANG)) {
         $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
     } else {
