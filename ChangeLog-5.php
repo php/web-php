@@ -7,6 +7,103 @@ site_header("PHP 5 ChangeLog");
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0b2"></a>
+<h3>Version 5.0.0 Beta 2</h3>
+<b>30-Oct-2003</b>
+<ul>
+<li>Lots and lots of changes in the Zend Engine 2 since beta 1:
+ <ul>
+  <li>Added Iterators</li>
+  <li>Improved memory manager</li>
+  <li>Added Reflection API</li>
+  <li>Removed the not so working namespaces support</li>
+  <li>Removed support for expressions within constant declerations.</li>
+  <li>You can read about most changes in ZEND_CHANGES under the Zend
+  directory.</li>
+ </ul>
+<li>Improved the DBX extension: (Marc)</li>
+ <ul>
+  <li>Added DBX_RESULT_UNBUFFERED flag for dbx_query().</li>
+  <li>Added dbx_fetch_row()</li>
+  <li>Added SQLite support.</li>
+ </ul>
+<li>Improved the Interbase extension: (Ard Biesheuvel)</li>
+ <ul>
+  <li>Added support for multiple databases into ibase_trans()</li>
+  <li>Added support for CREATE DATABASE, SET TRANSACTION and EXECUTE
+  PROCEDURE statements into ibase_query()</li>
+  <li>Added ibase_commit_ret() and ibase_rollback_ret()</li>
+  <li>Added ibase_drop_db()</li>
+  <li>Added ibase_gen_id()</li>
+  <li>Added ibase_name_result()</li>
+  <li>Added ibase_errcode()</li>
+  <li>Added ibase_affected_rows() and ibase_num_params()</li>
+  <li>Added ibase_param_info()</li>
+  <li>Added ibase_wait_event()</li>
+  <li>Added ibase_set_event_handler() and ibase_free_event_handler()</li>
+ </ul>
+<li>Added new COM extension with integrated .Net support. (Wez)</li>
+<li>Added new functions:</li>
+ <ul>
+  <li>setrawcookie(). (Brian)</li>
+  <li>pg_version(). (Marcus)</li>
+  <li>dbase_get_header_info(). (Zak)</li>
+  <li>snmp_read_mib(). (Jani)</li>
+  <li>http_build_query(). (Sara)</li>
+  <li>ftp_alloc(). (Sara)</li>
+  <li>array_udiff(). (Andrey)</li>
+  <li>array_udiff_assoc(). (Andrey)</li>
+  <li>array_udiff_uassoc(). (Andrey)</li>
+  <li>array_diff_uassoc(). (Andrey)</li>
+  <li>convert_uuencode(). (Ilia)</li>
+  <li>convert_uudecode(). (Ilia)</li>
+  <li>substr_compare(). (Ilia)</li>
+  <li>pcntl_wait(). (GeorgeS)</li>
+ </ul>
+<li>Added "resume_pos" context option to "ftp://" wrapper. (Sara)</li>
+<li>Added optional parameter to OCIWriteTemporaryLob() to specify
+the type of LOB (Patch by Novicky Marek &lt;novicky@aarongroup.cz&gt;).
+(Thies)</li>
+<li>Added reflection API. (Andrei, George, Timm)</li>
+<li>Changed length parameter in fgetcsv() to be optional. (Moriyoshi)</li>
+<li>Fixed IPv6 support in MacOSX Panther. (Dan, Marko)</li>
+<li>Fixed fgetcsv() to correctly handle international (non-ascii)
+characters. (Moriyoshi)</li>
+<li>Fixed support for &lt;![CDATA[]]&gt; fields within XML documents
+in ext/xml. (Sterling)</li>
+<li>Fixed visibility of __construct and __clone. (Marcus)</li>
+<li>Fixed bug #26003 (fgetcsv() not binary-safe on null bytes).
+(Moriyoshi)</li>
+<li>Fixed bug #25756 (SimpleXML's validate_schema_file() broken).
+(Moriyoshi)</li>
+<li>Fixed bug #25581 (getimagesize() returns incorrect values on
+bitmap (os2) files). (Marcus)</li>
+<li>Fixed bug #25494 (array_merge*() allows non-arrays as argument).
+(Jay)</li>
+<li>Fixed bug #24766 (strange result array from unpack()). (Moriyoshi)</li>
+<li>Fixed bug #24729 ($obj = new $className; causes crash when
+$className is not set). (Marcus)</li>
+<li>Fixed bug #24565 (cannot read array elements received via
+$_REQUEST). (Zeev)</li>
+<li>Fixed bug #24445 (get_parent_class() returns different values).
+(Sterling, Stanislav)</li>
+<li>Fixed bug #24403 (preg_replace() problem: Using $this when not
+in object context). (Zeev)</li>
+<li>Fixed bug #24399 (PEAR DB isError crash [instanceof_function
+fault?]).  (Sterling, Marcus)</li>
+<li>Fixed bug #24396 (foreach ($k=>$v), the key $k is missing). (Zeev)</li>
+<li>Fixed bug #24279 (__get() crash when no value is returned). (Ilia)</li>
+<li>Fixed bug #22367 (undefined variable has a value). (Zeev)</li>
+<li>Fixed bug #19859 (allow fast_call_user_function to support __call).
+(Stanislav)</li>
+<li>Fixed bug #17997 (Warning when switch() and reference are combined).
+(Zeev)</li>
+<li>Fixed bug #17988 (strtotime failed to parse postgresql timestamp).
+(Derick)</li>
+</ul>
+
+<hr />
+
 <a name="5.0.0b1"></a>
 <h3>Version 5.0.0 Beta 1</h3>
 <b>29-Jun-2003</b>
