@@ -68,10 +68,10 @@ by Craig Hilton and Jeff Willis<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.thickbook.com/order/"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/076152729X/thephpdevelopmte"
 ><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.thickbook.com/order/">PHP Essentials</A><BR>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/076152729X/thephpdevelopmte">PHP Essentials</A><BR>
 by <A HREF="mailto:julie@thickbook.com">Julie Meloni</A><BR> 
 <SMALL><A HREF="http://www.thickbook.com/">more info</A><BR>
 March/2000, Publisher Prima-Tech, ISBN 0-7615-2729-X<BR>
@@ -85,7 +85,7 @@ March/2000, Publisher Prima-Tech, ISBN 0-7615-2729-X<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
-><IMG SRC="http://www.amazon.de/de-covers/3/82/725/524/3827255244.m.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/3827255244.m.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
