@@ -3,6 +3,159 @@ require("shared.inc");
 commonHeader("PHP 4 ChangeLog");
 ?>
 
+<A NAME="4.0.4">
+<h3>Version 4.0.4</h3>
+<B>19-Nov-2000</B>
+<UL>
+<LI>Allow assigning a newly created object by reference. This is needed only if 
+  your constructor makes other data structures reference the $this object (for 
+  example, $GLOBALS["foobar"] =&amp; $this;)
+  The new syntax is $obj =&amp; new MyClass(); (Andi, Zend Engine)
+<LI><pre>Allow for three expression types to be sent to functions which are requesting
+  the function argument to be passed by reference (only c. was previously
+  supported):
+  a. func(new myclass());
+  b. func(func2()); where func2() returns a reference, i.e. is defined as
+     function &amp;func2(...)
+     {
+      ...
+     }
+  c. func($var); where func() is defined as function func(&amp;$var) {...}
+  You CAN'T count on any other expressions to be passable by reference.
+  (Andi, Zend Engine)</pre>
+<LI>Made ldap_get_entries() return an array even if there are no entries
+  in search result. (Jani)
+<LI>Fixed bad mod_perl interaction which caused segfaults when using LFS (Sascha)
+<LI>const CONSTNAME now gets recognized. Before the patch only @const CONSTNAME 
+  description was recognized.
+<LI>Added the is_null() function that will return true if a variable is of
+  type null. (Sterling)
+<LI>Fixed a bug which made readdir() unusable in some systems. (Jani)
+<LI>Added the get_defined_functions() function which returns a list of all 
+  currently defined functions. (Sterling)
+<LI>Added the get_defined_vars() function which returns an associative array
+  of all variables defined in the current scope and their subsequent values.
+  (Sterling) 
+<LI>Added the call_user_func_array() function which gives you the ability to
+  call a user function by passing an array of parameters as the second
+  argument. (Sterling)
+<LI>Added the constant() function which returns the value of a constant given
+  the constant's name. (Sterling)
+<LI>Implemented support for Perl-style matching regexp delimiters in PCRE.
+  You can use &lt;{[( and )]}&gt; to delimit your expressions now. (Andrei)
+<LI>Introduced new 'F' modifier in PCRE that lets you specify a function
+  name in the replacement argument to preg_replace() that will be called
+  at run-time to provide the replacement string. It is passed an array of
+  matched pattern and subpatterns. (Andrei)
+<LI>Put an end to BUG#4615 (kalowsky &amp; Eric Veldhuyzen)
+<LI>Fixed realpath() in Virtual Directory mode (Daniel)
+<LI>Integrated the Phil Nelson's bc math library routines into PHP, now that
+  the license allows it (Phil Nelson &lt;phil@cs.wwu.edu&gt;)
+<LI>Added the xslt_set_error_handler() function to the Sablotron extension.
+  (Sterling)
+<LI>Improved Sablotron's error handling system allowing you to catch all
+  errors before they are outputted to the screen. (Sterling)
+<LI>Added OpenSSL extension (Stig Venaas)
+<LI>Fixed/created support for Solid 3.0 databases (kalowsky)
+<LI>Fixed support for Solid 2.3 databases (kalowsky)
+<LI>quoted_printable_decode() function is made RFC-2045 compliant. (Kir)
+<LI>Modified preg_grep() to always return the results with keys from the original
+  array. (Andrei)
+<LI>Modified preg_replace() to accept Perl-style $n backreferences in addition
+  to \\n ones. (Andrei)
+<LI>Modified preg_replace() to ignore backreferences that refer to
+  non-existing subpatterns. (Andrei)
+<LI>Fixed column-title buffer-overflow in OCIFetchStatement(). (Thies)
+<LI>Added 'output_handler' INI directive (Zeev)
+<LI>Fixed some buglets in the output buffering mechanism (Zeev)
+<LI>Added transparent gzip compression support (Jade Nicoletti, Zeev)
+<LI>Major overhaul of domxml. Added basic XPath support as well (Uwe)
+<LI>Added 'r' flag to date() which generates an RFC822 formatted date, e.g.
+  "Thu,  9 Nov 2000 16:33:01 -0500" (Colin)
+<LI>In CGI mode, $HTTP_SERVER_VARS now includes all of the environment variables
+  as well (Zeev)
+<LI>Allow user to use mysql_use_result in mysql queries (Stas)
+<LI>Fixed a memory leak that would occur when restarting Apache often
+  (mookid@sigent.ru)
+<LI>Fixed a bug that prevented $argv and $argc from being defined in the command
+  line version of PHP (Stas)
+<LI>Fixed a bug that prevented a changed compile-time extension_dir from
+  affecting modules that were loaded via php.ini (Zeev)
+<LI>Fixed a bug in ftp_mkdir() when used on ftp server which doesn't return
+  the full path (Jani)
+<LI>Added ImageCreateFromString() which creates an image stream out of 
+  e.g. a MySQL blob. (Mathieu)
+<LI>Fixed a crash bug in imagewbmp() (Jani)
+<LI>Changed the sablot configuration file so that if you use any version of
+  Sablotron below 0.44 you must use Sablotron's built-in Expat libraries.
+  (Sterling)
+<LI>Added basic authentication support to thttpd (Sascha)
+<LI>Added support for the Caudium webserver (http://caudium.net/). It's based
+  on the Roxen SAPI module. Many bugs have been identified and fixed. (David)
+<LI>Fixed mysql_close(), pg_close(), msql_close() and sybase_close() - they
+  weren't properly closing the SQL connections (Zeev)
+<LI>Fixed crypt() to supply random seed if none is given (Andi)
+<LI>Made print_r() support recursive data structures, e.g. $GLOBALS. (Zeev)
+<LI>Fixed a bug that caused PHP not to properly flush its output buffer, if more
+  than one output buffer was used. (Zeev)
+<LI>Fixed a bug that could draw the shutdown sequence of the PHP Apache module
+  into an endless loop, under certain circumstances.  It could cause Apache
+  processes under Solaris to get stuck, especially when using output
+  buffering. (Zeev)
+<LI>Added support for serializing references (Stas)
+<LI>Fixed conflict with OpenLDAP and Oracle 8.1.x (Jani)
+<LI>parse_ini_file() supports a new optional 2nd argument that instructs it
+  to divide the directives to arrays according to the sections in which they
+  reside (Zeev)
+<LI>parse_ini_file() is now thread-safe, and supported under Windows (Zeev)
+<LI>Unified aborted-connection semantics of all SAPI modules (Sascha)
+<LI>URL-opened files now store the HTTP response header in $http_response_header
+  (Zeev)
+<LI>Fixed array_rand() to shuffle results when the number of requested
+  elements is the same as the number of elements in the array. (Andrei)
+<LI>Added replace parameter to header() (Sascha)
+<LI>Fixed handling of single quotes in transparent session-id mode (Sascha)
+<LI>Fixed "php://*" fopen handler (Sascha)
+<LI>Made rename work in threadsafe enviroments (Daniel)
+<LI>Made session_destroy() close files before unlinking (Daniel)
+<LI>Added array_sum() function. (Andrei)
+<LI>Fixed a bug in session.c. The php_session_save_current_state did not check
+  if mod_data is NULL and such situation is possible if the user calls 
+  session_module_name with a parameter. (alex@zend.com)
+<LI>Added IIS Admin extension. (Frank)
+<LI>OCIBindByName() now does better parameter-checking. (Thies)
+<LI>Made read() binary-safe in sockets.c (Chris Vandomelen)
+<LI>Made array_intersect() and array_diff() not alter order (Stig Venaas)
+<LI>Made ldap_connect() accept URL in host parameter when using OpenLDAP
+  2.x. To use SSL, use ldaps://host/ as URL. (Stig Venaas)
+<LI>Made resource type names visible, e.g. var_dump() and
+  get_resource_type() display "file" for file resources. (Andrei)
+<LI>Added the curl_getinfo() function to find out information about a CURL
+  transfer.  This function requires cURL 7.4.0 or above. (Sterling)
+<LI>Added the CURLOPT_KRB4, CURLOPT_INTERFACE, CURLOPT_QUOTE, CURLOPT_POSTQUOTE,
+  CURLOPT_QUOTE and CURLOPT_HTTPPROXYTUNNELL options. (Sterling)
+<LI>Renamed the shm_* functions to shmop_* (Derick)
+<LI>Updated ext/mysql/libmysql to version 3.23 (tim@mysql.com)
+<LI>Added ldap_get_option() and ldap_set_option() functions (Stig Venaas)
+<LI>Fixed a crash in CGI mode, in case no file was provided 
+  (Daniel Beulshausen&amp; Zeev)
+<LI>Fixed possible crash bug in imap_fetchstructure() (Jani)
+<LI>Fixed possible crash bug in imap_open() (Jani &amp; Mark Musone)
+<LI>Added url_rewriter.tags configuration directive (Sascha)
+<LI>Added CORBA client extension, ready for use (eriksson@php.net)
+<LI>Fixed memory leak in x-httpd-source mode (Jason Greene)
+<LI>Changed ext/gd not to be enabled by default (Jani)
+<LI>Make increment of empty string ("") behave like in PHP 3 and result in "1"
+  (Andi, Zend Engine)
+<LI>Added POST handler for Adobe FDF format (Hartmut)
+<LI>Added transparent read and write .gz-files on glibc based systems
+  using the 'zlib:' fopen wrapper (Hartmut)
+<LI>Fixed a problem in the configuration parser (two null bytes were added
+  to each ENCAPSULATED TC_STRING) (alex@zend.com)
+<LI>Added HMAC support in the mhash module (nmav@altera.gr)
+<LI>Added module for Ovrimos sql server (nmav@altera.gr)
+</UL>
+
 <A NAME="4.0.3"></A>
 <h3>Version 4.0.3</h3>
 <B>11-Oct-2000</B>
