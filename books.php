@@ -260,7 +260,7 @@ $books = array (
     /* auth link[s] */ "",
     /* image        */ "larry_php.jpg",
     /* information  */ "Peachpit Press, April 2001, ISBN 0-201-72787-0, 278 pages",
-    /* inform. link */ "http://www.DMCinsights.com/php"
+    /* inform. link */ "http://www.DMCinsights.com/php",
     /* language     */ "en"
   ),
 
