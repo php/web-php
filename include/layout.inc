@@ -308,7 +308,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
+	global $SCRIPT_NAME, $MYSITE, $LAST_UPDATED, $PHP_SELF,
+           $enclosed, $RSIDEBAR_DATA, $page_creation_start;
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
