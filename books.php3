@@ -16,8 +16,9 @@ commonHeader("PHP Books");
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
 >PHP Pocket Reference</A><BR>
 by Rasmus Lerdorf<BR>
+<SMALL>
 O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
-<SMALL><A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
+<A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
@@ -28,20 +29,23 @@ O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
 by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
+<SMALL>
 Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 850 pages<BR>
-<SMALL><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
+<A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
-><IMG SRC="/gifs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 >Core PHP Programming</A><BR>
 by Leon Atkinson<BR>
-<SMALL><A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
+<SMALL>
+Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages
+<A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
