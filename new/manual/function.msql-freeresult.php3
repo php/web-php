@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_freeresult(int result);<P
 >     <B
 CLASS="FUNCTION"
->msql_freeresult</B
+>msql_freeresult()</B
 > frees the memory associated
      with <TT
 CLASS="PARAMETER"

@@ -39,18 +39,33 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_autocommit(int connection_id, int OnOff);<P
->     Returns TRUE on success, FALSE on failure.
+>     Returns <TT
+CLASS="LITERAL"
+>true</TT
+> on success,
+     <TT
+CLASS="LITERAL"
+>false</TT
+> on failure.
     </P
 ><P
->     By default, autocommit is on for a connection.</P
+>     By default, autocommit is on for a connection.
+    </P
 ><P
->     See also <A
+>     See also
+     <A
 HREF="function.odbc-commit.php3"
->odbc_commit</A
->,
+><B
+CLASS="FUNCTION"
+>odbc_commit()</B
+></A
+> and
      <A
 HREF="function.odbc-rollback.php3"
->odbc_rollback</A
+><B
+CLASS="FUNCTION"
+>odbc_rollback()</B
+></A
 >.
    </P
 ></DIV

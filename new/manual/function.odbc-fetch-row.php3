@@ -39,28 +39,105 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_fetch_row(int result_id, int row_number);<P
->Returns:   If odbc_Fetch_Row was succesful (there was a row), 
-  1 is returned, if there are no more rows, odbc_Fetch_Row will 
-  return 0.
-  The return value of odbc_FetchRow can be used as the
-  condition of a while loop.
+>     If <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> was succesful (there was a
+     row), <TT
+CLASS="LITERAL"
+>true</TT
+> is returned.  If there are no more
+     rows, <TT
+CLASS="LITERAL"
+>false</TT
+> is returned.
  
-  odbc_Fetch_Row fetches a row of the data that was returned by 
-  <A
+    </P
+><P
+>     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> fetches a row of the data
+     that was returned by <A
+HREF="function.odbc-do.php3"
+><B
+CLASS="FUNCTION"
+>odbc_do()</B
+></A
+> /
+     <A
 HREF="function.odbc-exec.php3"
->odbc_do</A
-> / <A
-HREF="function.odbc-exec.php3"
->odbc_exec</A
+><B
+CLASS="FUNCTION"
+>odbc_exec()</B
+></A
+>.  After
+     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> is called, the fields of that
+     row can be accessed with <A
+HREF="function.odbc-result.php3"
+><B
+CLASS="FUNCTION"
+>odbc_result()</B
+></A
 >.
-  After odbc_Fetch_Row is called, the fields of that row can be accessed
-  with odbc_Result. If no rownumber is given, odbc_Fetch_Row will try to
-  fetch the next row in the result set. Calls to
-  odbc_Fetch_Row() with and without rownumber can be mixed. To step
-  through the result more than once, you can call odbc_Fetch_Row() with
-  rownumber 1 and then continue with odbc_Fetch_Row() without rownumber
-  to review the result. If a driver doesn't support fetching rows by number,
-  the rownumber parameter is ignored.
+
+    </P
+><P
+>     If <TT
+CLASS="PARAMETER"
+><I
+>row_number</I
+></TT
+> is not specified,
+     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> will try to fetch the next
+     row in the result set. Calls to
+     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> with and without
+     <TT
+CLASS="PARAMETER"
+><I
+>row_number</I
+></TT
+> can be mixed. 
+
+    </P
+><P
+>     To step through the result more than once, you can call
+     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> with
+     <TT
+CLASS="PARAMETER"
+><I
+>row_number</I
+></TT
+> 1, and then continue doing
+     <B
+CLASS="FUNCTION"
+>odbc_fetch_row()</B
+> without
+     <TT
+CLASS="PARAMETER"
+><I
+>row_number</I
+></TT
+> to review the result.  If a
+     driver doesn't support fetching rows by number, the
+     <TT
+CLASS="PARAMETER"
+><I
+>row_number</I
+></TT
+> parameter is ignored.
 
    </P
 ></DIV

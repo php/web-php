@@ -45,7 +45,7 @@ manualHeader('mysql_affected_rows');
 ?><H1
 >mysql_affected_rows</H1
 ><P
->mysql_affected_rows -- </P
+>mysql_affected_rows -- get number of affected rows in last query</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

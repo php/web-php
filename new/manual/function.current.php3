@@ -2,23 +2,25 @@
 require('shared-manual.inc'); 
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
-  'prev' => array('function.sizeof.php3', 'sizeof'),
-  'next' => array('function.next.php3', 'next'),
+  'prev' => array('function.count.php3', 'count'),
+  'next' => array('function.end.php3', 'end'),
   'up'   => array('ref.array.php3', 'Array Functions'),
   'toc'  => array(
     array('ref.array.php3#I(REF.ARRAY)C(1,TITLE)', ''),
+    array('function.array.php3', 'array'),
     array('function.arsort.php3', 'arsort'),
     array('function.asort.php3', 'asort'),
     array('function.count.php3', 'count'),
-    array('function.sizeof.php3', 'sizeof'),
     array('function.current.php3', 'current'),
+    array('function.end.php3', 'end'),
+    array('function.key.php3', 'key'),
+    array('function.list.php3', 'list'),
     array('function.next.php3', 'next'),
     array('function.prev.php3', 'prev'),
-    array('function.key.php3', 'key'),
     array('function.reset.php3', 'reset'),
     array('function.rsort.php3', 'rsort'),
-    array('function.sort.php3', 'sort'),
-    array('function.end.php3', 'end'))));
+    array('function.sizeof.php3', 'sizeof'),
+    array('function.sort.php3', 'sort'))));
 manualHeader('current');
 ?><H1
 >current</H1
@@ -29,11 +31,6 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >mixed current(array array);<P
->     Returns the array element that's currently being pointed by the
-     internal array pointer.
-  
-    </P
-><P
 >     Each array variable has an internal pointer that points to one of
      its elements.  In addition, all of the elements in the array are
      linked by a bidirectional linked list for traversing purposes.
@@ -43,10 +40,17 @@ CLASS="REFSECT1"
 
     </P
 ><P
->     The current() function simply returns the array element that's
-     currently being pointed by the internal pointer.  It does not
-     move the pointer in any way.  If the internal pointer points
-     beyond the end of the elements list, current() returns false.
+>     The <B
+CLASS="FUNCTION"
+>current()</B
+> function simply returns the
+     array element that's currently being pointed by the internal
+     pointer.  It does not move the pointer in any way.  If the
+     internal pointer points beyond the end of the elements list,
+     <B
+CLASS="FUNCTION"
+>current()</B
+> returns false.
 
     </P
 ><P
@@ -57,28 +61,26 @@ HREF="function.end.php3"
 CLASS="FUNCTION"
 >end()</B
 ></A
->
-     <A
+>, <A
 HREF="function.next.php3"
 ><B
 CLASS="FUNCTION"
 >next()</B
 ></A
->
+>,
      <A
 HREF="function.prev.php3"
 ><B
 CLASS="FUNCTION"
 >prev()</B
 ></A
->
-     <A
+> and <A
 HREF="function.reset.php3"
 ><B
 CLASS="FUNCTION"
 >reset()</B
 ></A
->
+>.
    </P
 ></DIV
 ><?php manualFooter('current');?>

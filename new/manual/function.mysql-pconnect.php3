@@ -45,7 +45,7 @@ manualHeader('mysql_pconnect');
 ?><H1
 >mysql_pconnect</H1
 ><P
->mysql_pconnect -- </P
+>mysql_pconnect -- open persistent MySQL connection</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -45,7 +45,7 @@ manualHeader('mysql_numrows');
 ?><H1
 >mysql_numrows</H1
 ><P
->mysql_numrows -- </P
+>mysql_numrows -- get number of rows in result</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

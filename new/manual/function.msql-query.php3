@@ -42,7 +42,7 @@ manualHeader('msql_query');
 ?><H1
 >msql_query</H1
 ><P
->msql_query -- do mSQL query</P
+>msql_query -- send mSQL query</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -50,15 +50,18 @@ CLASS="REFSECT1"
 >int msql_query(string query, int link_identifier);<P
 >     <B
 CLASS="FUNCTION"
->msql_query</B
+>msql_query()</B
 > sends a query to the currently
      active database on the server that's associated with the
      specified link identifier.  If the link identifier isn't
      specified, the last opened link is assumed.  If no link is open,
      the function tries to establish a link as if
-     <B
+     <A
+HREF="function.msql-connect.php3"
+><B
 CLASS="FUNCTION"
->msql_connect</B
+>msql_connect()</B
+></A
 > was called, and use it.
     </P
 ><P

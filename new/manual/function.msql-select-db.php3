@@ -42,7 +42,7 @@ manualHeader('msql_select_db');
 ?><H1
 >msql_select_db</H1
 ><P
->msql_select_db -- select database</P
+>msql_select_db -- select mSQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

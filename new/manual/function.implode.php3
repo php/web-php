@@ -46,7 +46,15 @@ CLASS="REFSECT1"
 >     Returns a string containing a string representation of all the
      array elements in the same order, with the glue string between
      each element.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -56,6 +64,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$colon_separated = join($array, ":");</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

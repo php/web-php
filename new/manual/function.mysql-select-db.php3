@@ -45,7 +45,7 @@ manualHeader('mysql_select_db');
 ?><H1
 >mysql_select_db</H1
 ><P
->mysql_select_db -- </P
+>mysql_select_db -- select MySQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

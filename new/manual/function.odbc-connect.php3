@@ -39,17 +39,20 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_connect(string dsn, string user, string password);<P
->Returns:   Returns an ODBC connection id or 0 (false) on error.
- 
-
-  The connection id returned by this functions is needed by other
-  ODBC functions. You can have multiple connections open at once.
-  For persistent connections see
-  
-  
-  <B
+>     Returns an ODBC connection id or 0 (<TT
+CLASS="LITERAL"
+>false</TT
+>) on error.
+    </P
+><P
+>     The connection id returned by this functions is needed by other
+     ODBC functions. You can have multiple connections open at once.
+     For persistent connections see <A
+HREF="function.odbc-pconnect.php3"
+><B
 CLASS="FUNCTION"
 >odbc_pconnect()</B
+></A
 >.
    </P
 ></DIV

@@ -39,10 +39,20 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_fetch_into(int result_id, int rownumber, array result_array);<P
->     Returns the number of columns in the result; FALSE on error.
-     result_array must be passed by reference, but it can be of any
-     type since it will be converted to type array. The array will
-     contain the column values starting at array index 0.
+>     Returns the number of columns in the result;
+     <TT
+CLASS="LITERAL"
+>false</TT
+> on error.
+     <TT
+CLASS="PARAMETER"
+><I
+>result_array</I
+></TT
+> must be passed by reference,
+     but it can be of any type since it will be converted to type
+     array. The array will contain the column values starting at array
+     index 0.
    </P
 ></DIV
 ><?php manualFooter('odbc_fetch_into');?>

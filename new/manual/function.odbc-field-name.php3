@@ -39,11 +39,17 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >string odbc_fieldname(int result_id, int field_number);<P
->Returns: odbc_Field_Name will return the name of the field 
-  occupying the given column number in the given ODBC result identifier.
-  Field numbering starts at 1. 
-  0 (false) is returned on error.
- 
+>     <B
+CLASS="FUNCTION"
+>odbc_field_name()</B
+> will return the name of the
+     field occupying the given column number in the given ODBC result
+     identifier.  Field numbering starts at 1.
+     <TT
+CLASS="LITERAL"
+>false</TT
+> is returned on error.
+     
    </P
 ></DIV
 ><?php manualFooter('odbc_field_name');?>

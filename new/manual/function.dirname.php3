@@ -74,7 +74,15 @@ CLASS="LITERAL"
 >).
     </P
 ><P
->     <DIV
+>     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -88,6 +96,9 @@ CLASS="PROGRAMLISTING"
 >$path = "/etc/passwd";
 $file = dirname($path); // $file is set to "/etc"</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
   
     </P

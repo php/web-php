@@ -45,7 +45,7 @@ manualHeader('mysql_freeresult');
 ?><H1
 >mysql_freeresult</H1
 ><P
->mysql_freeresult -- </P
+>mysql_freeresult -- free result memory</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

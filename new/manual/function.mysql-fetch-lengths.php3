@@ -45,7 +45,7 @@ manualHeader('mysql_fetch_lengths');
 ?><H1
 >mysql_fetch_lengths</H1
 ><P
->mysql_fetch_lengths -- </P
+>mysql_fetch_lengths -- get max data size of output columns</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -42,7 +42,7 @@ manualHeader('msql_fetch_array');
 ?><H1
 >msql_fetch_array</H1
 ><P
->msql_fetch_array -- get row as array</P
+>msql_fetch_array -- fetch row as array</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

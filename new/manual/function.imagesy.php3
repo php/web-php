@@ -3,7 +3,7 @@ require('shared-manual.inc');
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
   'prev' => array('function.imagesx.php3', 'ImageSX'),
-  'next' => array('ref.ldap.php3', 'LDAP Functions'),
+  'next' => array('ref.info.php3', 'PHP options & information'),
   'up'   => array('ref.image.php3', 'Image functions'),
   'toc'  => array(
     array('ref.image.php3#I(REF.IMAGE)C(1,TITLE)', ''),

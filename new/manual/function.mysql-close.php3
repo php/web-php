@@ -45,7 +45,7 @@ manualHeader('mysql_close');
 ?><H1
 >mysql_close</H1
 ><P
->mysql_close -- </P
+>mysql_close -- close MySQL connection</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

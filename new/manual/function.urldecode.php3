@@ -16,7 +16,7 @@ manualHeader('urldecode');
 ?><H1
 >urldecode</H1
 ><P
->urldecode -- </P
+>urldecode -- decodes URL-encoded string</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -32,7 +32,15 @@ CLASS="REPLACEABLE"
 ></TT
 >
      encoding in the given string.  The decoded string is returned.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -49,6 +57,9 @@ while ($i &#60; count ($a)) {
   $i++;
 }</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
  
     </P

@@ -2,7 +2,7 @@
 require('shared-manual.inc'); 
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
-  'prev' => array('function.base64-decode.php3', 'base64_decode'),
+  'prev' => array('function.settype.php3', 'settype'),
   'next' => array('migration.php3', 'Migrating from PHP/FI 2.0 to PHP 3.0'),
   'up'   => array('manual.php3', 'PHP3 Manual'),
   'toc'  => array(

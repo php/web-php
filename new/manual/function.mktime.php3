@@ -39,7 +39,15 @@ CLASS="REFSECT1"
      will automatically calculate the correct value for out-of-range
      input. For example, each of the following lines produces the
      string "Jan-01-1998".
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -51,6 +59,9 @@ CLASS="PROGRAMLISTING"
 echo date( "M-d-Y", mktime(0,0,0,13,1,1997) );
 echo date( "M-d-Y", mktime(0,0,0,1,1,1998) );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
     </P
 ><P

@@ -45,7 +45,7 @@ manualHeader('mysql_query');
 ?><H1
 >mysql_query</H1
 ><P
->mysql_query -- </P
+>mysql_query -- send MySQL query</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -39,13 +39,21 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_prepare(int connection_id, string query_string);<P
->Returns:   Returns 0 (false) on error. Returns an ODBC result
-   identifier if the SQL command was prepared successfully. The result
-   identifier can be used later to execute the statement with 
-   <A
+>     Returns <TT
+CLASS="LITERAL"
+>false</TT
+> on error.
+    </P
+><P
+>     Returns an ODBC result identifier if the SQL command was prepared
+     successfully.  The result identifier can be used later to execute
+     the statement with <A
 HREF="function.odbc-execute.php3"
->odbc_execute</A
->().
+><B
+CLASS="FUNCTION"
+>odbc_execute()</B
+></A
+>.
   </P
 ></DIV
 ><?php manualFooter('odbc_prepare');?>

@@ -17,7 +17,7 @@ manualHeader('sql_regcase');
 ?><H1
 >sql_regcase</H1
 ><P
->sql_regcase -- </P
+>sql_regcase -- make regular expression for case insensitive match</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -29,7 +29,15 @@ CLASS="REFSECT1"
      contains that character's uppercase and lowercase form if
      applicable, otherwise it contains the original character
      twice.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -39,6 +47,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >echo sql_regcase( "Foo bar" );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
      prints <PRE

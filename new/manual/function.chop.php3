@@ -44,7 +44,15 @@ CLASS="REFSECT1"
 >Description</H2
 >string chop(string str);<P
 >     Returns the argument string without trailing whitespace.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -54,6 +62,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$trimmed = Chop($line);</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

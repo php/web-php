@@ -45,7 +45,7 @@ manualHeader('mysql_fetch_object');
 ?><H1
 >mysql_fetch_object</H1
 ><P
->mysql_fetch_object -- </P
+>mysql_fetch_object -- fetch row as object</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

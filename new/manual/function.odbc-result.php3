@@ -33,19 +33,21 @@ manualHeader('odbc_result');
 ?><H1
 >odbc_result</H1
 ><P
->odbc_result -- </P
+>odbc_result -- get result data</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >string odbc_result(int result_id, mixed field);<P
->Returns:   Contents of the field.
- 
-  Field indices start from 1. If the requested field contains binary data or
-  is longer than 4096 bytes, the contents is not returned, instead it is sent
-  directly to the client. Hint: If you need to have binary data returned,
-  use the SQL function HEX() to retrieve the field in hexadecimal notation.
-  E.g. "SELECT HEX(binary_col) FROM mytable"
+>     Returns the contents of the field.
+    </P
+><P
+>     Field indices start from 1. If the requested field contains
+     binary data or is longer than 4096 bytes, the contents is not
+     returned, instead it is sent directly to the client. Hint: If you
+     need to have binary data returned, use the SQL function HEX() to
+     retrieve the field in hexadecimal notation.  E.g. "SELECT
+     HEX(binary_col) FROM mytable"
    </P
 ></DIV
 ><?php manualFooter('odbc_result');?>

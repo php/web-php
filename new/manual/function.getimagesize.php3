@@ -45,10 +45,18 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >array getimagesize(string filename);<P
->     The GetImageSize function will determine the size of any GIF, JPG
-     or PNG image file and return the dimensions along with the file
-     type and a height/width text string to be used inside a normal
-     HTML IMG tag.
+>     The <A
+HREF="function.getimagesize.php3"
+><B
+CLASS="FUNCTION"
+>GetImageSize()</B
+></A
+> function will determine the
+     size of any GIF, JPG or
+     PNG image file and return the dimensions along
+     with the file type and a height/width text string to be used
+     inside a normal HTML IMG
+     tag.
 
     </P
 ><P
@@ -57,7 +65,15 @@ CLASS="REFSECT1"
      indicating the type of the image.  1 = GIF, 2 = JPG, 3 = PNG.
      Index 3 is a text string with the correct  "height=xxx width=xxx"
      string that can be used directly in an IMG tag.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -68,6 +84,9 @@ CLASS="PROGRAMLISTING"
 >&#60;?php $size = GetImageSize("img/flag.jpg"); ?&#62;
 &#60;IMG SRC="img/flag.jpg" &#60;?php echo $size[3]; ?&#62;&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
      <BLOCKQUOTE

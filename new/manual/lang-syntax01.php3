@@ -26,7 +26,15 @@ NAME="I(LANG-SYNTAX)C(1,SECT1)"
 ><P
 >    There are three ways of escaping from HTML and entering "PHP code
     mode":
-    <DIV
+    <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -46,6 +54,9 @@ CLASS="PROGRAMLISTING"
 
     &#60;/script&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
   </P

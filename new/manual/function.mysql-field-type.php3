@@ -45,7 +45,7 @@ manualHeader('mysql_field_type');
 ?><H1
 >mysql_field_type</H1
 ><P
->mysql_field_type -- </P
+>mysql_field_type -- get field type</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -103,7 +103,15 @@ CLASS="PARAMETER"
 > is not a string, it is converted to 
      an integer and applied as the ordinal value of a character.
 
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -121,6 +129,9 @@ $last = substr( strrchr( $text, 10 ), 1 );
 ?&#62;       
       </PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

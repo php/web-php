@@ -45,7 +45,7 @@ manualHeader('mysql_fetch_array');
 ?><H1
 >mysql_fetch_array</H1
 ><P
->mysql_fetch_array -- </P
+>mysql_fetch_array -- fetch row as array</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -45,7 +45,7 @@ manualHeader('mysql_num_fields');
 ?><H1
 >mysql_num_fields</H1
 ><P
->mysql_num_fields -- </P
+>mysql_num_fields -- get number of fields in result</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

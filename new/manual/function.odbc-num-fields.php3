@@ -39,14 +39,19 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_num_fields(int result_id);<P
->Returns: Odbc_Num_Fields will return the number of fields 
-    (columns) in an ODBC result.
-    This function will return -1 on error.
-    The argument is a valid result identifier returned by 
-    <A
+>     <B
+CLASS="FUNCTION"
+>odbc_num_fields()</B
+> will return the number of
+     fields (columns) in an ODBC result.  This function will return -1
+     on error.  The argument is a valid result identifier returned by
+     <A
 HREF="function.odbc-exec.php3"
->odbc_exec</A
->().
+><B
+CLASS="FUNCTION"
+>odbc_exec()</B
+></A
+>.
    </P
 ></DIV
 ><?php manualFooter('odbc_num_fields');?>

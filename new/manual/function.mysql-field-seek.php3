@@ -45,7 +45,7 @@ manualHeader('mysql_field_seek');
 ?><H1
 >mysql_field_seek</H1
 ><P
->mysql_field_seek -- </P
+>mysql_field_seek -- set field offset</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

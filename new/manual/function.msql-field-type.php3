@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >string msql_fieldtype(string result, int i);<P
 >     <B
 CLASS="FUNCTION"
->msql_fieldtype</B
+>msql_fieldtype()</B
 > is similar to the <A
 HREF="function.msql-field-name.php3"
 >msql_fieldname</A

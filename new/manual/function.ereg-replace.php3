@@ -17,7 +17,7 @@ manualHeader('ereg_replace');
 ?><H1
 >ereg_replace</H1
 ><P
->ereg_replace -- </P
+>ereg_replace -- replace regular expression</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -48,7 +48,15 @@ CLASS="LITERAL"
      used.  Parentheses may be nested, in which case they are counted
      by the opening parenthesis.  For example, the following code
      snippet prints "This was a test" three times:
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -61,6 +69,9 @@ echo ereg_replace( " is", " was", $string );
 echo ereg_replace( "( )is", "\\1was", $string );
 echo ereg_replace( "(( )is)", "\\2was", $string );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
      See also <A

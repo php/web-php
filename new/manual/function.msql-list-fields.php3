@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_list_fields(string database, string tablename);<P
 >     <B
 CLASS="FUNCTION"
->msql_list_fields</B
+>msql_list_fields()</B
 > retrieves information about
      the given tablename. Arguments are the database name and the
      table name. A result pointer is returned which can be used with

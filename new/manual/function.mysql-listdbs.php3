@@ -45,7 +45,7 @@ manualHeader('mysql_listdbs');
 ?><H1
 >mysql_listdbs</H1
 ><P
->mysql_listdbs -- </P
+>mysql_listdbs -- list MySQL databases on server</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

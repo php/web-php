@@ -33,7 +33,7 @@ manualHeader('odbc_execute');
 ?><H1
 >odbc_execute</H1
 ><P
->odbc_execute -- </P
+>odbc_execute -- execute a prepated statement</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -43,9 +43,19 @@ CLASS="REFSECT1"
 >     Executes a statement prepared with
      <A
 HREF="function.odbc-prepare.php3"
->odbc_prepare()</A
->. Returns
-     TRUE on successful execution, FALSE otherwise.
+><B
+CLASS="FUNCTION"
+>odbc_prepare()</B
+></A
+>.  Returns
+     <TT
+CLASS="LITERAL"
+>true</TT
+> on successful execution,
+     <TT
+CLASS="LITERAL"
+>false</TT
+> otherwise.
   </P
 ></DIV
 ><?php manualFooter('odbc_execute');?>

@@ -17,7 +17,7 @@ manualHeader('split');
 ?><H1
 >split</H1
 ><P
->split -- </P
+>split -- split string into array by regular expression</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -34,7 +34,15 @@ CLASS="REFSECT1"
 CLASS="FILENAME"
 >/etc/passwd</TT
 >:
-    <DIV
+    <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -44,6 +52,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$passwd_list = split( ":", $passwd_line, 5 );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

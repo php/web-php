@@ -49,7 +49,7 @@ manualHeader('touch');
 ?><H1
 >touch</H1
 ><P
->touch -- </P
+>touch -- set modification time of file</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -17,7 +17,7 @@ manualHeader('eregi');
 ?><H1
 >eregi</H1
 ><P
->eregi -- </P
+>eregi -- case insensitive regular expression match</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

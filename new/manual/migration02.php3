@@ -29,7 +29,15 @@ CLASS="LITERAL"
 >&#60;? &#62;</TT
 > form has been
    replaced by three new possible forms:
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -39,11 +47,22 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >&#60;? echo "This is PHP/FI 2.0 code.\n"; &#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    As of version 2.0, PHP/FI also supports this variation:
 
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -53,6 +72,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >&#60;? echo "This is PHP 3.0 code!\n"; ?&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    Notice that the end tag now consists of a question mark and a
@@ -62,7 +84,15 @@ CLASS="PROGRAMLISTING"
    markup in XML documents as PHP code.  Because of this, the
    following variation was introduced:
 
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -72,6 +102,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >&#60;?php echo "This is PHP 3.0 code!\n"; ?&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    Some people have had problems with editors that don't understand
@@ -79,7 +112,15 @@ CLASS="PROGRAMLISTING"
    such editor, and as a workaround for these, the following variation
    was introduced as well:
 
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -93,6 +134,9 @@ CLASS="PROGRAMLISTING"
 
 &#60;/script&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
 

@@ -150,13 +150,13 @@ HREF="ref.filesystem.php3"
 ></DT
 ><DT
 >7. <A
-HREF="ref.html.php3"
->HTML functions</A
+HREF="ref.image.php3"
+>Image functions</A
 ></DT
 ><DT
 >8. <A
-HREF="ref.image.php3"
->Image functions</A
+HREF="ref.info.php3"
+>PHP options &#38; information</A
 ></DT
 ><DT
 >9. <A
@@ -212,6 +212,11 @@ HREF="ref.strings.php3"
 >19. <A
 HREF="ref.url.php3"
 >URL functions</A
+></DT
+><DT
+>20. <A
+HREF="ref.var.php3"
+>Variable functions</A
 ></DT
 ></DL
 ><DT

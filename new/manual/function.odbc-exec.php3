@@ -39,27 +39,56 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_exec(int connection_id, string query_string);<P
->Returns:   Returns 0 (false) on error. Returns an ODBC result
-  identifier if the SQL command was executed successfully.
- odbc_exec will send an SQL statement to the database server specified by
- the connection_id. The connection_id must be a valid identifier that
- was returned by <A
+>     Returns <TT
+CLASS="LITERAL"
+>false</TT
+> on error.  Returns an ODBC
+     result identifier if the SQL command was executed successfully.
+    </P
+><P
+>     <B
+CLASS="FUNCTION"
+>odbc_exec()</B
+> will send an SQL statement to the
+     database server specified by
+     <TT
+CLASS="PARAMETER"
+><I
+>connection_id</I
+></TT
+>.  This parameter must be a
+     valid identifier returned by <A
 HREF="function.odbc-connect.php3"
->odbc_connect</A
+><B
+CLASS="FUNCTION"
+>odbc_connect()</B
+></A
 > or
- <A
+     <A
 HREF="function.odbc-pconnect.php3"
->odbc_pconnect</A
->.</P
+><B
+CLASS="FUNCTION"
+>odbc_pconnect()</B
+></A
+>.
+    </P
 ><P
 > 
-See also: <A
+     See also: <A
 HREF="function.odbc-prepare.php3"
->odbc_prepare</A
-> and <A
+><B
+CLASS="FUNCTION"
+>odbc_prepare()</B
+></A
+> and
+     <A
 HREF="function.odbc-execute.php3"
->odbc_execute</A
-> for multiple execution of SQL statements.
+><B
+CLASS="FUNCTION"
+>odbc_execute()</B
+></A
+> for multiple execution of SQL
+     statements.
    </P
 ></DIV
 ><?php manualFooter('odbc_exec');?>

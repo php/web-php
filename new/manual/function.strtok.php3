@@ -47,7 +47,15 @@ CLASS="REFSECT1"
      string like "This is an example string" you could tokenize this
      string into its individual words by using the space character as
      the token.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -66,6 +74,9 @@ CLASS="PROGRAMLISTING"
 
 ?&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

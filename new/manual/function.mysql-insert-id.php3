@@ -45,7 +45,7 @@ manualHeader('mysql_insert_id');
 ?><H1
 >mysql_insert_id</H1
 ><P
->mysql_insert_id -- </P
+>mysql_insert_id -- get generated id from last INSERT</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

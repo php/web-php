@@ -45,7 +45,7 @@ manualHeader('mysql_createdb');
 ?><H1
 >mysql_createdb</H1
 ><P
->mysql_createdb -- </P
+>mysql_createdb -- create MySQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -42,7 +42,7 @@ manualHeader('msql_dbname');
 ?><H1
 >msql_dbname</H1
 ><P
->msql_dbname -- get current database name</P
+>msql_dbname -- get current mSQL database name</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

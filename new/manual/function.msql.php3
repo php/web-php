@@ -42,7 +42,7 @@ manualHeader('msql');
 ?><H1
 >msql</H1
 ><P
->msql -- do mSQL query</P
+>msql -- send mSQL query</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

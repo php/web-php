@@ -39,9 +39,12 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >string odbc_field_type(int result_id, mixed field);<P
->Returns: Odbc_FieldType will return the SQL type of the field 
-  referecend by name or number in the given ODBC result identifier.
-  Note: Field numbering starts from 1.
+>     <B
+CLASS="FUNCTION"
+>odbc_field_type()</B
+> will return the SQL type of
+     the field referecend by name or number in the given ODBC result
+     identifier.  Field numbering runs from 1.
  
    </P
 ></DIV

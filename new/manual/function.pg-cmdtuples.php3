@@ -27,7 +27,15 @@ CLASS="REFSECT1"
 >     pg_cmdtuples() returns the number of tuples (instances) affected
      by INSERT, UPDATE, and DELETE queries. If no tuple is affected the
      function will return 0.
-    <DIV
+    <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -39,6 +47,9 @@ CLASS="PROGRAMLISTING"
 $cmdtuples = pg_cmdtuples ($result);
 echo $cmdtuples . " &#60;- cmdtuples affected.";</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
    </P
 ></DIV

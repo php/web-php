@@ -27,7 +27,15 @@ NAME="I(MIGRATION)C(3,SECT1)"
    elseif(); else; endif; cannot be efficiently implemented without
    adding a large amount of complexity to the 3.0 parser.  Because of
    this, the syntax has been changed:
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -43,8 +51,19 @@ else;
     echo "nope\n";
 endif;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -60,6 +79,9 @@ else:
     echo "nope\n";
 endif;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    Notice that the semicolons have been replaced by colons in all

@@ -33,16 +33,22 @@ manualHeader('odbc_field_num');
 ?><H1
 >odbc_field_num</H1
 ><P
->odbc_field_num -- </P
+>odbc_field_num -- return column number</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_fieldnum(int result_id, string field_name);<P
->Returns: Odbc_Field_Num will return the number of the column
-   slot that corresponds to the named field in the given ODBC result
-   identifier.  Field numbering starts at 1. 0 (false) is returned
-    on error.
+>     <B
+CLASS="FUNCTION"
+>odbc_field_num()</B
+> will return the number of the
+     column slot that corresponds to the named field in the given ODBC
+     result identifier.  Field numbering starts at 1.
+     <TT
+CLASS="LITERAL"
+>false</TT
+> is returned on error.
  
    </P
 ></DIV

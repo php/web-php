@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >string msql_fieldflags(string result, int i);<P
 >     <B
 CLASS="FUNCTION"
->msql_fieldflags</B
+>msql_fieldflags()</B
 > returns the field flags of
      the specified field. Currently this is either, "not null",
      "primary key", a combination of the two or "" (an empty string).

@@ -79,7 +79,15 @@ CLASS="PARAMETER"
      different lengths, the extra characters in the longer of the two
      are ignored.
 
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -92,6 +100,9 @@ $addr = strtr( "дец", "aao", $addr );
 ?&#62;       
       </PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

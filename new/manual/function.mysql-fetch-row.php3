@@ -45,7 +45,7 @@ manualHeader('mysql_fetch_row');
 ?><H1
 >mysql_fetch_row</H1
 ><P
->mysql_fetch_row -- </P
+>mysql_fetch_row -- get row as enumerated array</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

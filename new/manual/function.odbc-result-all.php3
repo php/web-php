@@ -39,23 +39,32 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_result_all(int result_id, string format);<P
->     Returns the number of rows in the result or FALSE on error.
+>     Returns the number of rows in the result or <TT
+CLASS="LITERAL"
+>false</TT
+> on error.
 
     </P
 ><P
->     odbc_result_all() will print all rows from a result identifier
-     produced by <A
+>     <B
+CLASS="FUNCTION"
+>odbc_result_all()</B
+> will print all rows from a
+     result identifier produced by <A
 HREF="function.odbc-exec.php3"
->odbc_exec</A
->(). The result is
-     printed in HTML table format.  With the optional string argument
-     <TT
+><B
+CLASS="FUNCTION"
+>odbc_exec()</B
+></A
+>. The
+     result is printed in HTML table format.  With the optional string
+     argument <TT
 CLASS="PARAMETER"
 ><I
 >format</I
 ></TT
-> additional overall table additional
-     overall table formatting can be done.
+>, additional overall table
+     formatting can be done.
    </P
 ></DIV
 ><?php manualFooter('odbc_result_all');?>

@@ -3,7 +3,7 @@ require('shared-manual.inc');
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
   'prev' => array('function.ada-rollback.php3', 'ada_rollback'),
-  'next' => array('function.arsort.php3', 'arsort'),
+  'next' => array('function.array.php3', 'array'),
   'up'   => array('funcref.php3', 'Function Reference'),
   'toc'  => array(
     array('funcref.php3#I(FUNCREF)C(1,TITLE)', ''),
@@ -13,8 +13,8 @@ setupNavigation(array(
     array('ref.datetime.php3', 'Date/Time Functions'),
     array('ref.dir.php3', 'Directory Functions'),
     array('ref.filesystem.php3', 'Filesystem Functions'),
-    array('ref.html.php3', 'HTML functions'),
     array('ref.image.php3', 'Image functions'),
+    array('ref.info.php3', 'PHP options & information'),
     array('ref.ldap.php3', 'LDAP Functions'),
     array('ref.math.php3', 'Mathematical Functions'),
     array('ref.msql.php3', 'mSQL Functions'),
@@ -25,7 +25,8 @@ setupNavigation(array(
     array('ref.pgsql.php3', 'PostgreSQL functions'),
     array('ref.regex.php3', 'Regular expression functions'),
     array('ref.strings.php3', 'String functions'),
-    array('ref.url.php3', 'URL functions'))));
+    array('ref.url.php3', 'URL functions'),
+    array('ref.var.php3', 'Variable functions'))));
 manualHeader('Array Functions');
 ?><H1
 ><A
@@ -36,6 +37,11 @@ NAME="REF.ARRAY"
 ><DT
 ><B
 >Table of Contents</B
+></DT
+><DT
+><A
+HREF="function.array.php3"
+>array</A
 ></DT
 ><DT
 ><A
@@ -54,13 +60,23 @@ HREF="function.count.php3"
 ></DT
 ><DT
 ><A
-HREF="function.sizeof.php3"
->sizeof</A
+HREF="function.current.php3"
+>current</A
 ></DT
 ><DT
 ><A
-HREF="function.current.php3"
->current</A
+HREF="function.end.php3"
+>end</A
+></DT
+><DT
+><A
+HREF="function.key.php3"
+>key</A
+></DT
+><DT
+><A
+HREF="function.list.php3"
+>list</A
 ></DT
 ><DT
 ><A
@@ -74,11 +90,6 @@ HREF="function.prev.php3"
 ></DT
 ><DT
 ><A
-HREF="function.key.php3"
->key</A
-></DT
-><DT
-><A
 HREF="function.reset.php3"
 >reset</A
 ></DT
@@ -89,13 +100,13 @@ HREF="function.rsort.php3"
 ></DT
 ><DT
 ><A
-HREF="function.sort.php3"
->sort</A
+HREF="function.sizeof.php3"
+>sizeof</A
 ></DT
 ><DT
 ><A
-HREF="function.end.php3"
->end</A
+HREF="function.sort.php3"
+>sort</A
 ></DT
 ></DL
 ><?php manualFooter('Array Functions');?>

@@ -36,7 +36,15 @@ CLASS="LITERAL"
    2.0 to 3.0 convertor.
   </P
 ><P
->   <DIV
+>   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -49,8 +57,19 @@ if ($fp == -1);
     echo("Could not open $file for reading&#60;br&#62;\n");
 endif;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -60,6 +79,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$fp = @fopen($file, "r") or print("Could not open $file for reading&#60;br&#62;\n");</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    

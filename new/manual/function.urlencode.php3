@@ -16,7 +16,7 @@ manualHeader('urlencode');
 ?><H1
 >urlencode</H1
 ><P
->urlencode -- </P
+>urlencode -- URL-encodes string</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -50,7 +50,15 @@ HREF="function.rawurlencode.php3"
      a query part of an URL, as a convinient way to pass variables to
      the next page:
 
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -60,6 +68,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >echo '&#60;A HREF="mycgi?foo=', urlencode ($userinput), '"&#62;';</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
  
     </P

@@ -45,7 +45,7 @@ manualHeader('mysql_connect');
 ?><H1
 >mysql_connect</H1
 ><P
->mysql_connect -- </P
+>mysql_connect -- open MySQL server connection</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

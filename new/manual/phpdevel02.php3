@@ -20,13 +20,13 @@ NAME="I(PHPDEVEL)C(2,SECT1)"
 >   To report errors from an internal function, you should call the
    <B
 CLASS="FUNCTION"
->php3_error()</B
+>php3_error()()</B
 > function. This takes at least two
    parameters -- the first is the level of the error, the second is
    the format string for the error message (as in a standard
    <B
 CLASS="FUNCTION"
->printf()</B
+>printf()()</B
 > call), and any following arguments
    are the parameters for the format string. The error levels are:
   </P

@@ -45,7 +45,7 @@ manualHeader('mysql_field_name');
 ?><H1
 >mysql_field_name</H1
 ><P
->mysql_field_name -- </P
+>mysql_field_name -- get field name</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

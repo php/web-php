@@ -74,7 +74,15 @@ CLASS="LITERAL"
 >).
     </P
 ><P
->     <DIV
+>     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -88,6 +96,9 @@ CLASS="PROGRAMLISTING"
 >$path = "/home/httpd/html/index.php3";
 $file = basename($path); // $file is set to "index.php3"</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
   
     </P

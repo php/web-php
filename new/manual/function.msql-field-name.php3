@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >string msql_fieldname(int result, int field);<P
 >     <B
 CLASS="FUNCTION"
->msql_fieldname</B
+>msql_fieldname()</B
 > returns the name of the
      specified field.  <TT
 CLASS="PARAMETER"

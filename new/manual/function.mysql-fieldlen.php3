@@ -45,7 +45,7 @@ manualHeader('mysql_fieldlen');
 ?><H1
 >mysql_fieldlen</H1
 ><P
->mysql_fieldlen -- </P
+>mysql_fieldlen -- get field length</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

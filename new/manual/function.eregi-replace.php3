@@ -17,7 +17,7 @@ manualHeader('eregi_replace');
 ?><H1
 >eregi_replace</H1
 ><P
->eregi_replace -- </P
+>eregi_replace -- replace regular expression case insensitive</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

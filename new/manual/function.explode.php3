@@ -51,7 +51,15 @@ CLASS="REPLACEABLE"
 ></TT
 >.
      
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -62,6 +70,9 @@ CLASS="PROGRAMLISTING"
 >$pizza = "piece1 piece2 piece3 piece4 piece5 piece6";
 $pieces = explode(" ", $pizza);</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

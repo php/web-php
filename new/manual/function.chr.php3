@@ -45,7 +45,15 @@ CLASS="REFSECT1"
 >string chr(int ascii);<P
 >     Returns a one-character string containing the character specified
      by ascii.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -55,6 +63,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$str += chr(27); /* add an escape character at the end of $str */</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
      This function complements <A

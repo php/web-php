@@ -3,7 +3,7 @@ require('shared-manual.inc');
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
   'prev' => array('function.dirname.php3', 'dirname'),
-  'next' => array('ref.html.php3', 'HTML functions'),
+  'next' => array('ref.image.php3', 'Image functions'),
   'up'   => array('ref.filesystem.php3', 'Filesystem Functions'),
   'toc'  => array(
     array('ref.filesystem.php3#I(REF.FILESYSTEM)C(1,TITLE)', ''),
@@ -57,7 +57,15 @@ CLASS="REFSECT1"
 >int copy(string source, string dest);<P
 >     Makes a copy of a file.  Returns true if the copy succeeded,
      false otherwise.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -72,6 +80,9 @@ CLASS="PROGRAMLISTING"
     print("failed to copy $file...&#60;br&#62;\n");
 }</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
   
     </P

@@ -39,15 +39,53 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_free_result(int result_id);<P
->Returns:   True (1).
-   odbc_free_result only needs to be called if you are worried about using
-   too much memory while your script is running.  All result memory will
-   automatically be freed when the script is finished.  But, if you are
-   sure you are not going to need the result data anymore in a script,
-   you may call odbc_free_result with the result identifier as an argument
-   and the associated result memory will be freed. Note: If autocommit
-   has been turned off, all pending transactions are rolled back if you
-   call odbc_free_result prior to commiting. 
+>     Always returns <TT
+CLASS="LITERAL"
+>true</TT
+>.
+    </P
+><P
+>     <B
+CLASS="FUNCTION"
+>odbc_free_result()</B
+> only needs to be called if
+     you are worried about using too much memory while your script is
+     running.  All result memory will automatically be freed when the
+     script is finished.  But, if you are sure you are not going to
+     need the result data anymore in a script, you may call
+     <B
+CLASS="FUNCTION"
+>odbc_free_result()</B
+>, and the memory associated
+     with <TT
+CLASS="PARAMETER"
+><I
+>result_id</I
+></TT
+> will be freed.
+    </P
+><P
+>     <BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>NOTE: </B
+>       If auto-commit is disabled (see
+       <A
+HREF="function.odbc-autocommit.php3"
+><B
+CLASS="FUNCTION"
+>odbc_autocommit()</B
+></A
+>) and you call
+       <B
+CLASS="FUNCTION"
+>odbc_free_result()</B
+> before commiting, all
+       pending transactions are rolled back.
+      </P
+></BLOCKQUOTE
+>
    </P
 ></DIV
 ><?php manualFooter('odbc_free_result');?>

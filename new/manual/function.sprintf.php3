@@ -253,7 +253,15 @@ CLASS="REFSECT1"
 ><H2
 >Examples</H2
 ><P
->     <DIV
+>     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -263,6 +271,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$isodate = sprintf("%04d-%02d-%02d", $year, $month, $day);</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

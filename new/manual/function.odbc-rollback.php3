@@ -45,9 +45,15 @@ CLASS="PARAMETER"
 ><I
 >connection_id</I
 ></TT
->.  Returns TRUE on success,
-     FALSE
- on failure.
+>.  Returns
+     <TT
+CLASS="LITERAL"
+>true</TT
+> on success, <TT
+CLASS="LITERAL"
+>false</TT
+> on
+     failure.
    </P
 ></DIV
 ><?php manualFooter('odbc_rollback');?>

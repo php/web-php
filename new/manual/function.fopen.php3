@@ -98,6 +98,14 @@ CLASS="PARAMETER"
     
     </P
 ><P
+><TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
 ><DIV
 CLASS="EXAMPLE"
 ><P
@@ -109,6 +117,9 @@ CLASS="PROGRAMLISTING"
 >$fp = fopen( "/home/rasmus/file.txt", "r" );
 $fp = fopen( "http://www.php.net/", "r" );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

@@ -42,7 +42,7 @@ manualHeader('msql_num_rows');
 ?><H1
 >msql_num_rows</H1
 ><P
->msql_num_rows -- get number of rows in a result</P
+>msql_num_rows -- get number of rows in result</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_num_rows(string result);<P
 >     <B
 CLASS="FUNCTION"
->msql_num_rows</B
+>msql_num_rows()</B
 > returns the number of rows in
      a result set.
     </P

@@ -17,7 +17,7 @@ manualHeader('ereg');
 ?><H1
 >ereg</H1
 ><P
->ereg -- </P
+>ereg -- regular expression match</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -42,7 +42,15 @@ CLASS="REFSECT1"
 ><P
 >     The following code snippet takes a date in ISO format (YYYY-MM-DD)
      and prints it in DD.MM.YYYY format:
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -56,6 +64,9 @@ CLASS="PROGRAMLISTING"
     echo "Invalid date format: $date";
 }</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
     </P

@@ -60,7 +60,15 @@ HREF="function.msql-numrows.php3"
 > function
      may be used to determine the number of tables in the result
      pointer.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -78,6 +86,9 @@ CLASS="PROGRAMLISTING"
    }
 ?&#62;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
    </P
 ></DIV

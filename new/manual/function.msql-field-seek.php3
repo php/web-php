@@ -49,9 +49,12 @@ CLASS="REFSECT1"
 >Description</H2
 >int msql_field_seek(int result, int field_offset);<P
 >     Seeks to the specified field offset.  If the next call to
-     <B
+     <A
+HREF="function.msql-fetch-field.php3"
+><B
 CLASS="FUNCTION"
->msql_fetch_field</B
+>msql_fetch_field()</B
+></A
 > won't include a field
      offset, this field would be returned.
      

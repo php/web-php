@@ -39,9 +39,21 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_commit(int connection_id);<P
->Returns:   TRUE on success, FALSE on failure.
+>Returns:   <TT
+CLASS="LITERAL"
+>true</TT
+> on success, <TT
+CLASS="LITERAL"
+>false</TT
+> on failure.
  
- All pending transactions on connection_id are committed.
+     All pending transactions on <TT
+CLASS="PARAMETER"
+><I
+>connection_id</I
+></TT
+>
+     are committed.
    </P
 ></DIV
 ><?php manualFooter('odbc_commit');?>

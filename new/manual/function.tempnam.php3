@@ -49,7 +49,7 @@ manualHeader('tempnam');
 ?><H1
 >tempnam</H1
 ><P
->tempnam -- </P
+>tempnam -- create unique file name</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -62,7 +62,15 @@ CLASS="REFSECT1"
 >     Returns the new temporary filename, or the null string on
      failure.
     
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -72,6 +80,9 @@ CLASS="EXAMPLE"
 CLASS="PROGRAMLISTING"
 >$tmpfname = tempnam( "/tmp", "FOO" );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

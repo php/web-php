@@ -45,7 +45,7 @@ manualHeader('mysql_dbname');
 ?><H1
 >mysql_dbname</H1
 ><P
->mysql_dbname -- </P
+>mysql_dbname -- get current MySQL database name</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

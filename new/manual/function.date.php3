@@ -115,7 +115,15 @@ CLASS="PARAMETER"
 >
      Unrecognized characters in the format string will be printed as-is. 
      
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -126,6 +134,9 @@ CLASS="PROGRAMLISTING"
 >print(date( "l dS of F Y h:i:s A" ));
 print("July 1, 2000 is on a " . date("l", mktime(0,0,0,7,1,2000)));</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
      See also <A
 HREF="function.gmdate.php3"

@@ -30,7 +30,7 @@ CLASS="LITERAL"
 >, the
    function <B
 CLASS="FUNCTION"
->test_me()</B
+>test_me()()</B
 > would not be executed since
    the nothing can change the result of the expression after the
    <TT

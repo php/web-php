@@ -3,7 +3,7 @@ require('shared-manual.inc');
 setupNavigation(array(
   'home' => array('manual.php3', 'PHP3 Manual'),
   'prev' => array('function.base64-encode.php3', 'base64_encode'),
-  'next' => array('appendixes.php3', 'Appendixes'),
+  'next' => array('ref.var.php3', 'Variable functions'),
   'up'   => array('ref.url.php3', 'URL functions'),
   'toc'  => array(
     array('ref.url.php3#I(REF.URL)C(1,TITLE)', ''),

@@ -42,7 +42,7 @@ manualHeader('msql_listdbs');
 ?><H1
 >msql_listdbs</H1
 ><P
->msql_listdbs -- list databases</P
+>msql_listdbs -- list mSQL databases on server</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

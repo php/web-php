@@ -45,7 +45,7 @@ manualHeader('mysql_list_fields');
 ?><H1
 >mysql_list_fields</H1
 ><P
->mysql_list_fields -- </P
+>mysql_list_fields -- list result fields</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

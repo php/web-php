@@ -25,7 +25,15 @@ NAME="I(MIGRATION)C(4,SECT1)"
 ><P
 >   Just like with if..endif, the syntax of while..endwhile has changed
    as well:
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -37,8 +45,19 @@ CLASS="PROGRAMLISTING"
     ...
 endwhile;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
-   <DIV
+   <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -50,6 +69,9 @@ CLASS="PROGRAMLISTING"
     ...
 endwhile;</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
   </P
 ><TABLE

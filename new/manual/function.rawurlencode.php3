@@ -57,7 +57,15 @@ CLASS="LITERAL"
      for protecting URL's from being mangled by transmission media
      with character conversions (like some email systems).  For
      example, if you want to include a password in a ftp url:
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -68,11 +76,22 @@ CLASS="PROGRAMLISTING"
 >echo '&#60;A HREF="ftp://user:', rawurlencode ('foo @+%/'),
      '@ftp.my.com/x.txt"&#62;';</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
      Or, if you pass information in a path info component of the url:
 
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -83,6 +102,9 @@ CLASS="PROGRAMLISTING"
 >echo '&#60;A HREF="http://x.com/department_list_script/',
      rawurlencode ('sales and marketing/Miami'), '"&#62;';</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

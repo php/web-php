@@ -48,7 +48,15 @@ CLASS="REFSECT1"
 HREF="function.chr.php3"
 >chr</A
 >.
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -60,6 +68,9 @@ CLASS="PROGRAMLISTING"
     echo("The first character of \$str is a line feed.\n");
 }</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
 
    </P

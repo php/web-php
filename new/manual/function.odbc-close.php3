@@ -39,8 +39,12 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >void odbc_close(int connection_id);<P
->     odbc_close will close down the connection to the database server
-     associated with the given connection identifier.
+>     <B
+CLASS="FUNCTION"
+>odbc_close()</B
+> will close down the connection to
+     the database server associated with the given connection
+     identifier.
 
      <BLOCKQUOTE
 CLASS="NOTE"

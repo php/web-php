@@ -16,7 +16,7 @@ manualHeader('parse_url');
 ?><H1
 >parse_url</H1
 ><P
->parse_url -- </P
+>parse_url -- parse a query string like PHP does with form data</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

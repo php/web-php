@@ -42,7 +42,7 @@ manualHeader('msql_listtables');
 ?><H1
 >msql_listtables</H1
 ><P
->msql_listtables -- list tables in a database</P
+>msql_listtables -- list tables in an mSQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_listtables(string database);<P
 >     <B
 CLASS="FUNCTION"
->msql_listtables</B
+>msql_listtables()</B
 > takes a database name and
      result pointer much like the <A
 HREF="function.msql.php3"

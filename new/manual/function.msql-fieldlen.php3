@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_fieldlen(string result, int i);<P
 >     <B
 CLASS="FUNCTION"
->msql_fieldlen</B
+>msql_fieldlen()</B
 > returns the length of the
      specified field.
    </P

@@ -45,7 +45,7 @@ manualHeader('mysql_result');
 ?><H1
 >mysql_result</H1
 ><P
->mysql_result -- </P
+>mysql_result -- get result data</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

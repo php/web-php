@@ -50,7 +50,7 @@ CLASS="REFSECT1"
 >int msql_num_fields(int result);<P
 >     <B
 CLASS="FUNCTION"
->msql_num_fields</B
+>msql_num_fields()</B
 > returns the number of fields
      in a result set.
     </P

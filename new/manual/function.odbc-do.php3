@@ -35,7 +35,10 @@ manualHeader('odbc_do');
 ><P
 >odbc_do -- synonym for <A
 HREF="function.odbc-exec.php3"
->odbc_exec</A
+><B
+CLASS="FUNCTION"
+>odbc_exec()</B
+></A
 ></P
 ><DIV
 CLASS="REFSECT1"

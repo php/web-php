@@ -45,7 +45,7 @@ manualHeader('mysql_field_table');
 ?><H1
 >mysql_field_table</H1
 ><P
->mysql_field_table -- </P
+>mysql_field_table -- get table name for field</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

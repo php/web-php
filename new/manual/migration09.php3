@@ -39,14 +39,14 @@ NAME="I(MIGRATION)C(9,SECT1)"
 HREF="function.echo.php3"
 ><B
 CLASS="FUNCTION"
->echo()</B
+>echo()()</B
 ></A
 >
       no longer supports a format string.  Use the <A
 HREF="function.printf.php3"
 ><B
 CLASS="FUNCTION"
->printf()</B
+>printf()()</B
 ></A
 >
       function instead.
@@ -85,14 +85,14 @@ CLASS="LITERAL"
 HREF="function.current.php3"
 ><B
 CLASS="FUNCTION"
->current()</B
+>current()()</B
 ></A
 >
       and <A
 HREF="function.next.php3"
 ><B
 CLASS="FUNCTION"
->next()</B
+>next()()</B
 ></A
 >
       instead.

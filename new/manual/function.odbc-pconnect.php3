@@ -39,13 +39,64 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_pconnect(string dsn, string user, string password);<P
->Returns: Returns an ODBC connection id or 0 (false) on error.
-    This function is much like odbc_connect except that the connection
-    isn't closed when the script has finished. Future requests for
-    a connection with the same dsn, user, password combination (via
-    odbc_connect() and odbc_pconnect()) can reuse the persistent connection.
-    Note: Persistent connections don't work if PHP is used as a CGI.
-    For more information on persistent connections refer to the PHP3 FAQ.
-  </P
+>     Returns an ODBC connection id or 0 (<TT
+CLASS="LITERAL"
+>false</TT
+>) on error.  This
+     function is much like <A
+HREF="function.odbc-connect.php3"
+><B
+CLASS="FUNCTION"
+>odbc_connect()</B
+></A
+>, except
+     that the connection is not really closed when the script has
+     finished.  Future requests for a connection with the same
+     <TT
+CLASS="PARAMETER"
+><I
+>dsn</I
+></TT
+>, <TT
+CLASS="PARAMETER"
+><I
+>user</I
+></TT
+>,
+     <TT
+CLASS="PARAMETER"
+><I
+>password</I
+></TT
+> combination (via
+     <A
+HREF="function.odbc-connect.php3"
+><B
+CLASS="FUNCTION"
+>odbc_connect()</B
+></A
+> and
+     <B
+CLASS="FUNCTION"
+>odbc_pconnect()</B
+>) can reuse the persistent
+     connection.
+    </P
+><P
+>     <BLOCKQUOTE
+CLASS="NOTE"
+><P
+><B
+>NOTE: </B
+>       Persistent connections have no effect if PHP is used as a CGI
+       program.
+      </P
+></BLOCKQUOTE
+>
+    </P
+><P
+>     For more information on persistent connections, refer to the PHP3
+     FAQ.
+   </P
 ></DIV
 ><?php manualFooter('odbc_pconnect');?>

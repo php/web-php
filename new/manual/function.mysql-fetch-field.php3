@@ -45,7 +45,7 @@ manualHeader('mysql_fetch_field');
 ?><H1
 >mysql_fetch_field</H1
 ><P
->mysql_fetch_field -- </P
+>mysql_fetch_field -- get field information</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

@@ -45,7 +45,7 @@ manualHeader('mysql_data_seek');
 ?><H1
 >mysql_data_seek</H1
 ><P
->mysql_data_seek -- </P
+>mysql_data_seek -- move internal row pointer</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

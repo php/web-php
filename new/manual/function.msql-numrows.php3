@@ -42,7 +42,7 @@ manualHeader('msql_numrows');
 ?><H1
 >msql_numrows</H1
 ><P
->msql_numrows -- get number of rows in a result</P
+>msql_numrows -- get number of rows in result</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

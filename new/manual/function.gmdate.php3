@@ -32,7 +32,15 @@ HREF="function.date.php3"
      (GMT). For example, when run in Finland (GMT +0200), the first
      line below prints "Jan 01 1998 00:00:00", while the second prints
      "Dec 31 1997 22:00:00".
-     <DIV
+     <TABLE
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+CLASS="EXAMPLE"
+><TR
+><TD
+><DIV
 CLASS="EXAMPLE"
 ><P
 ><B
@@ -43,6 +51,9 @@ CLASS="PROGRAMLISTING"
 >echo date( "M d Y H:i:s",mktime(0,0,0,1,1,1998) );
 echo gmdate( "M d Y H:i:s",mktime(0,0,0,1,1,1998) );</PRE
 ></DIV
+></TD
+></TR
+></TABLE
 >
     </P
 ><P

@@ -39,13 +39,25 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >int odbc_num_rows(int result_id);<P
->Returns: odbc_num_rows will return the number of rows 
-    in an ODBC result.
-    This function will return -1 on error. 
-    For INSERT, UPDATE and DELETE statements odbc_num_rows() 
-    returns the number of rows affected. For a SELECT clause this can be 
-    the number of rows available. Note: Using odbc_num_rows() after
-    a SELECT is not supported by most ODBC drivers and thus returns -1. 
+>     <B
+CLASS="FUNCTION"
+>odbc_num_rows()</B
+> will return the number of rows
+     in an ODBC result.  This function will return -1 on error.  For
+     INSERT, UPDATE and DELETE statements
+     <B
+CLASS="FUNCTION"
+>odbc_num_rows()</B
+> returns the number of rows
+     affected.  For a SELECT clause this can be the number of rows
+     available.
+    </P
+><P
+>     Note: Using <B
+CLASS="FUNCTION"
+>odbc_num_rows()</B
+> after a SELECT is
+     not supported by most ODBC drivers and thus returns -1.
    </P
 ></DIV
 ><?php manualFooter('odbc_num_rows');?>

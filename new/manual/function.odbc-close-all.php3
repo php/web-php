@@ -39,7 +39,11 @@ CLASS="REFSECT1"
 ><H2
 >Description</H2
 >void odbc_close_all(void);<P
->     odbc_close_all will close down all connections to database server(s).
+>     <B
+CLASS="FUNCTION"
+>odbc_close_all()</B
+> will close down all
+     connections to database server(s).
 
      <BLOCKQUOTE
 CLASS="NOTE"

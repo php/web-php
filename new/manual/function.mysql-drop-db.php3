@@ -45,7 +45,7 @@ manualHeader('mysql_drop_db');
 ?><H1
 >mysql_drop_db</H1
 ><P
->mysql_drop_db -- </P
+>mysql_drop_db -- drop (delete) MySQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

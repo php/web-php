@@ -45,7 +45,7 @@ manualHeader('mysql_listtables');
 ?><H1
 >mysql_listtables</H1
 ><P
->mysql_listtables -- </P
+>mysql_listtables -- list tables in a MySQL database</P
 ><DIV
 CLASS="REFSECT1"
 ><H2

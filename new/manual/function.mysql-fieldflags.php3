@@ -45,7 +45,7 @@ manualHeader('mysql_fieldflags');
 ?><H1
 >mysql_fieldflags</H1
 ><P
->mysql_fieldflags -- </P
+>mysql_fieldflags -- get field flags</P
 ><DIV
 CLASS="REFSECT1"
 ><H2
