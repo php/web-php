@@ -65,6 +65,51 @@ function show_mirror_options ($current) {
   }
 }
 
+// Find the closest mirror sites, and return with the addresses
+function find_closest_mirrors ()
+{
+    global $REMOTE_HOST, $REMOTE_ADDR, $HTTP_X_FORWARDED_FOR;
+    
+    // We do not know the country
+    $country = '';
+
+    // Figure out IP address and hostname
+    $ipaddr = $HTTP_X_FORWARDED_FOR ? $HTTP_X_FORWARDED_FOR : $REMOTE_ADDR;
+    $hostname = $REMOTE_HOST;
+    
+    // If we have no hostname, or if it's an IP
+    // address, then try to get that hostname
+    if  (!$hostname || $hostname == $ipaddr) {
+        $hostname = @gethostbyaddr($ipaddr);
+        if ($hostname == $ipaddr) { $hostname = ""; }
+    }
+    
+    // If we have that hostname finnaly, get the TLD
+    if ($hostname) {
+        if (ereg('([a-zA-Z]+)$', $hostname, $reg)) {
+            $country = $reg[0];
+        }
+    }
+
+    // These two entires need to be checked
+    $check_mirrors = array(
+        "http://" . $country . ".php.net/",
+        "http://" . $country . "2.php.net/"
+    );
+    
+    // We do not know about any mirrors here
+    $found_mirrors = array();
+    
+    // Check for those mirrors
+    foreach ($check_mirrors as $mirror) {
+        if (isset($MIRRORS[$mirror])) {
+            $found_mirrors[] = $mirror;
+        }
+    }
+    
+    return $found_mirrors;
+}
+
 # http://www.unicode.org/unicode/onlinedat/languages.html
 $LANGUAGES = array(
     'en' => 'English',
