@@ -22,7 +22,7 @@ if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
 }
 
 $lang = default_language();
-if (!is_dir("$DOCUMENT_ROOT/manual/$lang")) {
+if (!@is_dir("$DOCUMENT_ROOT/manual/$lang")) {
 	$lang = "en"; // fall back to English
 }
 # handle .php3 files that were renamed to .php
