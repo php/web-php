@@ -150,6 +150,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://lamparea.org/en", "lamparea.png", "Lamp Area"); ?>
+<h1>LAMP area at LinuxTag 2004 in Karlsruhe, Germany</h1>
+<p>
+ <span class="newsdate">[14-Jun-2004]</span>
+ The LAMP area will highlight the use of Linux, Apache, MySQL and PHP as
+ technologies for enterprise applications at <a
+ href="http://linuxtag.de">LinuxTag 2004</a> in Karlsruhe, Germany from June 23
+ to 26. The companies that are presenting in the speakers area of the 150
+ square meters booth are: <a href="http://100days.de">100days</a>, <a
+ href="http://ez.no">eZ systems</a>, <a
+ href="http://thinkphp.de">Mayflower</a>, <a href="http://mysql.com">MySQL</a>
+ and <a href="http://zend.com">Zend</a>.
+</p>
+
+<p>Besides presentations from the above companies the LAMP area also presents
+over 40 sessions by Apache-, MySQL- and PHP-developers, such as Rasmus Lerdor,
+Ken Coar and Brian Aker. Entrance to LinuxTag is free if you
+<a href="https://www.linuxtag.org/2004/registrationform.html">pre-register</a>.
+For more information see <a href="http://lamparea.org/en">the LAMP Area</a>
+website.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5 Release Candidate 3 Released!</h1>
 <p>
