@@ -13,6 +13,176 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<h1>PHP Look Back 2002</h1>
+<p>
+<font class="newsdate">[31-Dec-2002]</font>
+We are at the end of 2002, and it seemed appropriate to look back on the
+development issues of the past year. So starts the first PHP Look Back! You can
+find it in on the non-official personal website of one of the PHP Developers <a
+href="http://www.derickrethans.nl/20021230.php">here</a>.
+</p>
+<p>
+Happy New Year!
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP 4.3.0 Released!</h1>
+<p>
+<font class="newsdate">[27-Dec-2002]</font>
+The PHP developers are pleased to announce the immediate availability of
+<a href="downloads.php">PHP 4.3.0</a>, the latest and greatest version of this
+extremely popular and widely used scripting language.
+</p>
+
+<p>
+This release contains a multitude of changes, bug fixes and improvements over
+the previous one, PHP 4.2.3. It further elevates PHP's standing as a serious
+contender in the general purpose scripting language arena. Please see
+the full <a href="release_4_3_0.php">release announcement</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("news/chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>New Release of the PHP Manual CHM Edition - Please Help Us</h1>
+<p>
+<font class="newsdate">[27-Dec-2002]</font>
+The 11th sample of the CHM edition is available for download from today. The
+sample hopefully fixed the missing page bugs forever, introduces a new
+integration method (see documentation inside) and contains actual manual
+text, mirrors list and user notes.
+<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for download"); ?>.
+</p>
+
+<p>
+We also would like to ask you to help out in testing our new on-the-fly
+syntax highlighter, which would make the CHM significantly smaller, and
+would give you more options in displaying the pages.
+<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for more information"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php print_link("http://www.mysql.com/events/uc2003/", make_image("news/mysqluc2003.png", "MySQL Users Conference and Expo 2003", "right") ); ?>
+
+<h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
+<p>
+<font class="newsdate">[16-Dec-2002]</font>
+MySQL AB is proud to host the world's First Annual MySQL User
+Conference, to be held in the heart of Silicon Valley, April 10-12,
+2003. This event promises to be the biggest gathering of MySQL database
+users ever in one location. Designed for both the MySQL developer and
+the corporate decision maker, this is the place to learn about the
+latest in MySQL technology, discover new business opportunities, take a
+pulse on industry direction and commune with like minds. 
+More information on <a href="http://www.mysql.com/events/uc2003/">the
+event's website</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP news feed available</h1>
+<p>
+<font class="newsdate">[01-Dec-2002]</font>
+The news of PHP.net is available now in RSS 1.0 format via our
+new <a href="/news.rss">news.rss file</a>. You can
+add this file to any news reader or portal site to get the latest
+official PHP news. We strongly recommend you to cache the contents
+locally on your side, as the newsfeed is updated daily. The RSS
+file is available on every mirror site.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php print_link("http://www.afup.org/", make_image("news/afup-logo.gif", "AFUP", "right") ); ?>
+
+<h1>Forum PHP 2002 in Paris, France</h1>
+<p>
+<font class="newsdate">[21-Nov-2002]</font>
+The French PHP User Group AFUP invites you to the "Forum PHP 2002" in
+Paris, on December 9th and 10th. Designed to meet the needs of PHP aware
+companies and all the French PHP developper's community alike, this
+event will provided you with valuable and up-to-date information.
+For more information (in French) see the
+<a href="http://www.afup.org/article.php3?id_article=136">PHP Forum</a>
+website.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP Magazine - International Edition</h1>
+<p>
+<font class="newsdate">[17-Nov-2002]</font>
+Software &amp; Support Verlag GmbH is going to publish an International version
+of the <a href="http://www.phpmag.de/">PHP Magazin</a>. This magazine was
+initiated after growing interest for an English magazine after the German
+version has been around for a few months.
+</p>
+<p>
+PHP Magazine not only informs about the scripting language itself, but also about
+related technologies such as the Apache Web Server, database technologies, XML
+and other innovative internet technologies.  Different sections within the
+magazine are oriented towards the specific question areas with which a web
+developer is confronted in daily practice.
+</p>
+<p>
+The first issue will be published in December and the frequency of issues is
+two months. You will be able to subscribe on the <a
+href="http://www.php-mag.net/">website</a> which will open shortly.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>New Monthly PHP Magazine Launched</h1>
+<p>
+<font class="newsdate">[15-Nov-2002]</font>
+php|architect, a new monthly magazine dedicated exclusively to PHP, has
+launched <a href="http://www.phparch.com/">its website</a>. php|a is published
+in PDF format and is available worldwide. It covers a variety of advanced
+topics ranging from day-to-day programming to the internals of PHP. A sample
+article on the creation of a web-based PDF converter is also
+available on the magazine website
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP Search Bars available for major browsers</h1>
+<p>
+<font class="newsdate">[29-Oct-2002]</font>
+We added a new option to access our site's content quickly. In addition to
+<a href="/urlhowto.php">URL shortcuts</a>, keyboard shortcuts and
+<a href="/tips.php">browser specific magic</a> you can now use our
+<a href="/sidebars.php">Search Bar</a> from the major browsers. Please help
+us to test this new service, and provide feedback via
+<a href="http://bugs.php.net/">the bug system</a> (categorize your bug
+as a PHP.net website bug please).
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
+<p>
+<font class="newsdate">[28-Oct-2002]</font>
+For the first time the Open Source projects comprising the popular LAMP
+platform (Linux, Apache, MySQL and PHP) will be present at the 
+<a href="http://www.linuxworldexpo.de">LinuxWorld Expo</a>
+with its own booth.
+</p>
+<p>
+At the booth, which is organized by the <a href="http://www.php-ev.de">German
+PHP Association</a> and the <a href="http://www.phpug.de">PHP Usergroup
+Frankfurt</a>, fair visitors can experience and learn about Apache, MySQL, PHP
+and related projects.
+</p>
+<p>
+Visitors can take LAMP home, too, since there will be a CD with the necessary
+software available at the booth.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>New keyboard shortcuts</h1>
 <p>
 <font class="newsdate">[17-Oct-2002]</font>
