@@ -52,8 +52,8 @@ if (i2c_valid_country()) {
     if ($close > 0) {
         $mnum = (($close > 1) ? "mirrors" : "mirror");
         echo "<p>We have automatically detected the following $mnum to be close\n" .
-             "to you. If you use a mirror close to you for downloads and for\n" .
-             "you usual daily work, you will get better response times.</p>\n";
+             "to you. If you use a mirror close to you for downloads and\n" .
+             "your usual daily work, you will get better response times.</p>\n";
         mirror_list($COUNTRY);
         echo "<p>Here is the list of all the other sites in case our detection\n" .
              "did something wrong, or the local mirror sites are busy.\n";
