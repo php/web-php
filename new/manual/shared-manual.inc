@@ -121,24 +121,24 @@ endif;
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% BGCOLOR="#C0C0C0">
 <TR valign=middle>
-<TD ALIGN=left width=24><IMG SRC="gifs/cap-left.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
-<TD ALIGN=left><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
+<TD ALIGN=left width=29><IMG SRC="gifs/cap-left.gif" WIDTH=24 HEIGHT=48 BORDER=0><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><BR></TD>
+<TD ALIGN=left nowrap><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
 <? if($PREV_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-prev-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"prev\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
 	echo "<A HREF=\"$PREV_URL\" onMouseover=\"hideAll();change('prev',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prev\"></A><BR>";
-	echo "$PREV_FUNC<BR>";
+	echo "&nbsp;$PREV_FUNC<BR>";
 endif;?></TD>
 <TD ALIGN=center width=100%><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1>
 <? echo $THIS_FUNC;?><BR></TD>
-<TD ALIGN=right><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
+<TD ALIGN=right nowrap><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
 <? if($NEXT_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-next-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"next\"><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
 	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"hideAll();change('next',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"next\"></A><BR>";
-	echo "$NEXT_FUNC<BR>";
+	echo "$NEXT_FUNC&nbsp;<BR>";
 endif;?></TD>
-<TD ALIGN=left width=24><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+<TD ALIGN=left width=29><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <BLOCKQUOTE>
 <?
@@ -149,24 +149,24 @@ function manualFooter($THIS_FUNC, $PREV_FUNC, $PREV_URL, $NEXT_FUNC, $NEXT_URL) 
 </BLOCKQUOTE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% BGCOLOR="#C0C0C0">
 <TR valign=middle>
-<TD ALIGN=left width=24><IMG SRC="gifs/cap-left.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
-<TD ALIGN=left><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
+<TD ALIGN=left width=29><IMG SRC="gifs/cap-left.gif" WIDTH=24 HEIGHT=48 BORDER=0><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><BR></TD>
+<TD ALIGN=left nowrap><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
 <? if($PREV_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-prev-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"prevb\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
 	echo "<A HREF=\"$PREV_URL\" onMouseover=\"hideAll();change('prevb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prevb\"></A><BR>";
-	echo "$PREV_FUNC<BR>";
+	echo "&nbsp;$PREV_FUNC<BR>";
 endif;?></TD>
 <TD ALIGN=center width=100%><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1>
 <? echo $THIS_FUNC;?><BR></TD>
-<TD ALIGN=right><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
+<TD ALIGN=right nowrap><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=-2>
 <? if($NEXT_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-next-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"nextb\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
 	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"hideAll();change('nextb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"nextb\"></A><BR>";
-	echo "$NEXT_FUNC<BR>";
+	echo "$NEXT_FUNC&nbsp;<BR>";
 endif;?></TD>
-<TD ALIGN=left width=24><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+<TD ALIGN=left width=29><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <BR>
 </BODY></HTML>
