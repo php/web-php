@@ -88,16 +88,18 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 $types = array("gif", "jpg", "png");
 while (list(,$ext) = each($types)) {
     if (file_exists("backend/mirror." . $ext)) {
-        $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n
-        <a href='" . $MIRRORS[$MYSITE][3] . "'><img src='backend/mirror.$ext' ";
-        if ($MIRRORS[$MYSITE][4] === 2) {
-            $RSIDEBAR_DATA .= "width='125' height='125'";
-        } else {
-            $RSIDEBAR_DATA .= "width='120' height='60'";
-        }
-        $RSIDEBAR_DATA .=
-            " alt='" . $MIRRORS[$MYSITE][1] .
-            "' border='0' /></a></center><br />" . hdelim();
+        $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n";
+
+		$img = make_image('mirror.'.$ext, mirror_provider(), false, false, 'backend', 0);
+        if (is_primary_site() || is_backup_primary()) {
+			$img = resize_image($img, 125, 125);
+		} else {
+			$img = resize_image($img, 120, 60);
+		}
+
+		$RSIDEBAR_DATA .= make_link( mirror_provider_url(), $img ) .
+			'</center><br />' . 
+			hdelim();
         break;
     }
 }
