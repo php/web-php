@@ -163,6 +163,11 @@ function LoadImgs () {
 		b_close1 = new Image();
 		b_close1.src = "gifs/b-close-c.gif";
 
+		b_cred0 = new Image();
+		b_cred0.src = "gifs/b-credits-p.gif";
+		b_cred1 = new Image();
+		b_cred1.src = "gifs/b-credits-c.gif";
+
 		loaded = 1;
 	}
 }
@@ -187,6 +192,7 @@ function hideAll () {
 		change('sear',0);
 		change('sour',0);
 		change('close',0);
+		change('cred',0);
 		if (NS4 || IE4 && (layers == 1)) {
 			hideLayer('mirrorsKick');
 		}
@@ -216,12 +222,12 @@ if (IE4) LoadImgs();
 <TR VALIGN=top>
 <TD ALIGN=left>
 <A HREF="downloads.php3" onMouseover="change('down',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-downloads-p.gif" ALT="downloads" WIDTH=129 HEIGHT=30 BORDER=0 NAME="down" hspace=10></A><BR>
-<A HREF="docs.php3" onMouseover="hideAll();change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
-<A HREF="mail.php3" onMouseover="hideAll();change('mail',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-mailing-p.gif" ALT="mailing list" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mail" hspace=10><BR>
-<A HREF="dev.php3" onMouseover="hideAll();change('dev',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-development-p.gif" ALT="development" WIDTH=129 HEIGHT=30 BORDER=0 NAME="dev" hspace=10><BR>
-<A HREF="news.php3" onMouseover="hideAll();change('news',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
-<A HREF="links.php3" onMouseover="hideAll();change('link',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
-<A HREF="mirrors.php3" onMouseover="hideAll();change('mirr',1); showLayer('mirrorsKick')"><IMG SRC="gifs/b-mirror-p.gif" ALT="mirror sites" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mirr" hspace=10><BR>
+<A HREF="docs.php3" onMouseover="change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
+<A HREF="mail.php3" onMouseover="change('mail',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-mailing-p.gif" ALT="mailing list" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mail" hspace=10><BR>
+<A HREF="dev.php3" onMouseover="change('dev',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-development-p.gif" ALT="development" WIDTH=129 HEIGHT=30 BORDER=0 NAME="dev" hspace=10><BR>
+<A HREF="news.php3" onMouseover="change('news',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
+<A HREF="links.php3" onMouseover="change('link',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
+<A HREF="mirrors.php3" onMouseover="change('mirr',1); showLayer('mirrorsKick')" onMouseout="hideAll();"><IMG SRC="gifs/b-mirror-p.gif" ALT="mirror sites" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mirr" hspace=10><BR>
 </TD></TR>
 </TABLE>
 </TD>
@@ -236,14 +242,14 @@ if (IE4) LoadImgs();
 <TD ALIGN=right><?
 if($title=="Show Source"):
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hideAll();change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0></A>";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0></A>";
 else:
 	echo "<IMG SRC=\"gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
-	echo "<A HREF=\"source.php3?page_url=$PHP_SELF\" onMouseover=\"hideAll();change('sour',1);\" onMouseout=\"hideAll();\">";
+	echo "<A HREF=\"source.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hideAll();\">";
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+?><A HREF="search.php3" onMouseover="change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=top>
@@ -275,8 +281,9 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TR VALIGN=bottom>
 <TD ALIGN=left>
-<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=9 BORDER=0><BR>
-<A HREF="#top" onMouseover="hideAll();change('top',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=3 BORDER=0><BR>
+<A HREF="#top" onMouseover="change('cred',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
+<A HREF="#top" onMouseover="change('top',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
 </TR>
 </TABLE>
@@ -298,8 +305,8 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
-<TD><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR></TD>
 </TR></TABLE>
 
 </TD></TR>
