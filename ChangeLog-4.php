@@ -3,6 +3,119 @@ require_once 'prepend.inc';
 commonHeader("PHP 4 ChangeLog");
 ?>
 
+<A NAME="4.0.6">
+<h3>Version 4.0.6</h3>
+<B>23-Jun-2001</B>
+<UL>
+<LI>Fixed memory fragmention problem which could lead to web server processes
+  growing much more than they should. (Andi, Zend Engine)
+<LI>Made $HTTP_SESSION_VARS['foo'] and $foo be references to the same value
+  when register_globals is on. (Andrei)
+<LI>Fixed disk_free_space() and disk_total_space() under FreeBSD. (Jon)
+<LI>Fixed readfile/passthru losing resources during connection abort (Sascha)
+<LI>Fixed bug in the mcrypt extension that caused segfaults when using a key
+  that is too large for the used algorithm, and a bug that caused
+  mcrypt_generic() to segfault PHP (Derick)
+<LI>Fixed getopt so that it accepts command line arguments in the form
+  -<opt><arg> and -<opt> <arg>. (Jmoore)
+<LI>Fixed race in writing session files (Sascha)
+<LI>Fixed a possible crash in the PHP CGI when no input file is
+  specified (Zeev)
+<LI>Added is_callable() function that can be used to find out whether
+  its argument is a valid callable construct. (Andrei)
+<LI>Fixed a rare possible crash when generating extended information. (Dmitri
+  Dmitrienko, Zend Engine)
+<LI>Improved virtual() to support PHP-enabled URIs. (Zeev)
+<LI>Fixed undefined behavior when using floating point keys in array()
+  expressions. (Zeev, Zend Engine)
+<LI>Fixed a possible crash in case of parse errors in include files or eval
+  statements. (Zeev, Zend Engine)
+<LI>Added --with-layout configure option. (Stig)
+<LI>Improved interactive mode - supports function calls, and works in
+  multithreaded builds. (Zeev, Zend Engine)
+<LI>Fixed a crash bug in interactive mode. (Zeev, Zend Engine)
+<LI>Added pg_last_notice() function. (Rasmus from suggestion by Dirk@rackspace.com)
+<LI>Fixed a bug in preg_split() that would incorrectly limit the number of
+  results when used along with PREG_SPLIT_NO_EMPTY flag. (Andrei)
+<LI>Added connection error support to mysql_error() and mysql_errno(). (Jason)
+<LI>Added support to getimagesize to return dimensions of BMP and PSD
+  files. (Derick)
+<LI>Added heuristic to kill stale IRC connections, message scanner caching, and
+  nickname escaping to IRCG, suppress option to ircg_msg(), and statistics to
+  IRCG phpinfo() output. (Sascha)
+<LI>Added Japanese multibyte string functions support. (Rui)
+<LI>Added Mac OS X "\r" line ending support. (Andi, Zend Engine)
+<LI>Fixed a bug regarding the $PHP_SELF being incorrectly registered when
+  force-cgi-redirect was not enabled. (Sterling)
+<LI>pfpro extension now supports version 3 of the Verisign SDK. (John Donagher)
+<LI>Udm_Cat_List and Udm_Cat_Path functions has been added.
+<LI>Added key_exists() to check if a given key or index exists in an
+  array or object. (David Croft)
+<LI>Modify the cURL extension to compile only with the latest cURL release.  
+  Backwards compatibility with regards to the extension api has not been 
+  broken. (Sterling)
+<LI>Added the ability to use user-defined callbacks with cURL. (Sterling)
+<LI>Added the SSL_VERIFYPEER, CAINFO, MAXREDIRS, FILETIME, RANDOM_FILE, EGDSOCKET
+  and CONNECTTIMEOUT options to curl_setopt(). (Sterling)
+<LI>Added support for persistent connections with cURL. (Sterling)
+<LI>Fixed a problem in cURL with file descriptors being allocated, but never 
+  closed. (Sterling)
+<LI>Fixed interactive mode (-a). It works again with the same limitations it
+  has always had. (Andi, Zend Engine)
+<LI>Improved memory manager to use less memory and provide better memory overflow
+  detection abilities in debug mode. (Andi, Zend Engine)
+<LI>Fixed resource leaks when resources were being cast to numbers. (Zeev, Zend
+  Engine)
+<LI>Fixed foreach() to not crash when being sent an invalid argument. (Andi, Zend
+  Engine)
+<LI>Fixed a bug in opendir() under Windows when trying to open a non-exisiting
+  directory. (Andi)
+<LI>Fixed popen() and the exec family under Win32 (Unable to fork issue). (Daniel)
+<LI>Make the printf family of functions binary clean. (Rasmus)
+<LI>Fixed WDDX serialization to HTML-escape key/variable names so as not to
+  break the XML packet. (Andrei)
+<LI>Made WDDX extension enabled by default. (Andrei)
+<LI>Added -C command-line option to avoid chdir to the script's directory. (Stig)
+<LI>Fixed a bug with /e modifier in preg_replace(), that would not correctly
+  replace two-digit references if single digit references were present
+  before them. This fixed bug #10218. (Andrei)
+<LI>Added temporary LOB support in OCI8. (Patch by David Benson)
+<LI>Fixed crash in pathinfo()
+<LI>OCI8 now supports binding of collections. (Patch by Andy Sautins
+  <asautins@veripost.net>)
+<LI>Added GD 2.0.1 support for truecolor and alpha channels, plus some other gd
+  functions, both old and new - see docs for more info. (Wez)
+<LI>Added S/MIME sign/verify encrypt/decrypt functions to openssl extension,
+  along with some other certificate manipulation and interrogation functions.
+  See docs for more info. (Wez)
+<LI>printf argnum (parameter swapping) support. (Morten Poulsen, Rasmus)
+<LI>Add DIRECTORY_SEPARATOR constant ('/' on UNIX, '\' on Windows). (Stig)
+<LI>Added small change to php_odbc module, to check for failed SQLDisconnects
+  and to close any outstanding transactions if the call fails, then disconnect
+  again. (lurcher)
+<LI>Modified get_parent_class() and get_class_methods() to accept a class name as
+  well as a class instance. (Andrei, Zend Engine)
+<LI>Added support for UNC style paths. (\\server\share\file,
+  //server/share/file). (Daniel, TSRM)
+<LI>Added dbx module (database abstraction) to the repository. (Marc)
+<LI>Using ITypeInfo instead of IDispatch if possible. This makes DCOM calls
+  and even COM calls much faster.
+  All ini settings are now prefixed by 'com.'.
+  Now you need not provide a path to the file containing the typelib, you can
+  also provide the GUID of the TypeLib - entry or an IID for preloading
+  type - information. (phanto)
+<LI>Rewrite of domxml. It's now mostly DOM Level 2 conform. (Uwe)
+<LI>Added array_map() function that applies a callback to the elements
+  of given arrays and returns the result. It can also be used with a
+  null callback to transpose arrays. (Andrei)
+<LI>Added array_filter(), which allows filtering of array elements via
+  the specified callback. (Andrei)
+<LI>Fixed all relevant array functions to avoid moving the internal array
+  pointer during operations. (Andrei)
+<LI>Added mysql_unbuffered_query(), which is useful for very large result sets.
+  (Zeev)
+</UL>
+
 <A NAME="4.0.5">
 <h3>Version 4.0.5</h3>
 <B>30-Apr-2001</B>
