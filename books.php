@@ -285,6 +285,17 @@ array(
     /* language     */ "en"
    ),
 
+  array (
+    /* title[s]     */ "PHP & MySQL for Dummies",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0764516507/wwwphpnet",
+    /* author[s]    */ "Janet Valade",
+    /* auth link[s] */ "",
+    /* image        */ "phpmysqldummy.jpg",
+    /* information  */ "John Wiley & Sons, Apr 2002, ISBN 0-7645-1650-7, 408 pages + CD-ROM",
+    /* inform. link */ "http://www.wiley.com/cda/product/0,,0764516507,00.html",
+    /* language     */ "en"
+   ),
+
   array(
     /* title[s]     */ array("Core PHP Programming", "Using PHP to Build Dynamic Web Sites"),
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet",
