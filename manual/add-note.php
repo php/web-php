@@ -226,8 +226,10 @@ if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
 // Everything is in place, so we can display the form
 else {?>
 <form method="post" action="/manual/add-note.php">
- <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>" />
- <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>" />
+ <p>
+  <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>" />
+  <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>" />
+ </p>
  <table border="0" cellpadding="3" class="standard">
   <tr>
    <td colspan="2">
