@@ -167,7 +167,7 @@ commonHeader("Hypertext Preprocessor");
 <ul>
  <li>
   The Zend Engine I compatibility mode (zend.ze1_compatibility_mode) has been
-  re-implemented to more accuratly support PHP 4's object auto-clone behavior.
+  re-implemented to more accurately support PHP 4's object auto-clone behavior.
  </li>
  <li>
   All object-oriented extensions except for MySQLi have moved to studlyCaps.
