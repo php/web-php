@@ -183,6 +183,45 @@ functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
 <h4>Non-English PHP Sites</h4>
 
 <ul>
+<li><b>Brazilian</b>
+<ul>
+
+<li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
+Brazilian PHP portal with many links and information</li>
+
+
+<li><a href="http://www.phpsite.com.br/">PHPsite.com.br</a><br>
+Brazilian PHP portal featuring tutorials, downloads, a forum and more</li>
+</ul></li>
+
+<li><b>Dutch</b>
+<ul>
+
+<li><a href="http://php.pagina.nl/">Pagina</a><br>
+A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
+
+</ul></li>
+
+<li><b>French</b>
+<ul>
+
+<li><a href="http://www.nexen.net/">Nexen.net</a><br>
+Home of PHP French documentation, with comprehensive technical informations</li>
+
+<li><a href="http://www.phpindex.com/">PHPIndex</a><br>
+A French gateway to PHP related contents</li>
+
+<li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
+French site about PHP/MySQL: Links, Tips, Articles, 
+FAQ, Code Downloads, and much more!</li>
+
+<li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
+A ring of French PHP Sites</li>
+
+<li><a href="http://faqfciwap.free.fr/">FAQ of the French PHP newsgroup</A> :
+<a href="news://fr.comp.infosystemes.www.auteurs.php">fr.comp.infosystemes.www.auteurs.php</a></li>
+
+</ul></li>
 <li><b>German</b>
 
 <ul>
@@ -213,48 +252,6 @@ Some German tutorials about PHP</li>
 German function reference for PHP like SelfHTML for HTML.</li>
 
 </ul></li>
-<li><b>French</b>
-<ul>
-
-<li><a href="http://www.nexen.net/">Nexen.net</a><br>
-Home of PHP French documentation, with comprehensive technical informations</li>
-
-<li><a href="http://www.phpindex.com/">PHPIndex</a><br>
-A French gateway to PHP related contents</li>
-
-<li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
-French site about PHP/MySQL: Links, Tips, Articles, 
-FAQ, Code Downloads, and much more!</li>
-
-<li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
-A ring of French PHP Sites</li>
-
-<li><a href="http://faqfciwap.free.fr/">FAQ of the French PHP newsgroup</A> :
-<a href="news://fr.comp.infosystemes.www.auteurs.php">fr.comp.infosystemes.www.auteurs.php</a></li>
-
-</ul></li>
-<li><b>Italian</b>
-<ul>
-
-<li><a href="http://www.tutorials.it/">Tutorials.it</a><br>
-An Italian site that provides a variety of developer tutorials,
-with a small PHP section</li>
-
-<li><a href="http://www.phpcenter.it/">PHPcenter.it</a><br>
-An Italian-language php site that features a variety of projects, reviews,
-courses, tutorials and other resources</li>
-
-</ul></li>
-<li><b>Brazilian</b>
-<ul>
-
-<li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
-Brazilian PHP portal with many links and information</li>
-
-
-<li><a href="http://www.phpsite.com.br/">PHPsite.com.br</a><br>
-Brazilian PHP portal featuring tutorials, downloads, a forum and more</li>
-</ul></li>
 
 <li><b>Hungarian</b>
 <ul>
@@ -267,12 +264,33 @@ Hungarian PHP portal, fearturing tips, forums and fresh news about PHP</li>
 The most important Hungarian an International links</li>
 </ul></li>
 
-<li><b>Dutch</b>
+<li><b>Italian</b>
 <ul>
 
-<li><a href="http://php.pagina.nl/">Pagina</a><br>
-A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
+<li><a href="http://www.tutorials.it/">Tutorials.it</a><br>
+An Italian site that provides a variety of developer tutorials,
+with a small PHP section</li>
 
+<li><a href="http://www.phpcenter.it/">PHPcenter.it</a><br>
+An Italian-language php site that features a variety of projects, reviews,
+courses, tutorials and other resources</li>
+
+</ul></li>
+
+<li><b>Norwegian</b>
+<ul>
+
+<li>PHP@sindrem.com (<a href="http://www.sindrem.com">http://www.sindrem.com</a>)<br>
+Norwegian site for newbies and intermediates. Installation help 
+and scripts.</li>
+</ul></li>
+
+<li><b>Polish</b>
+<ul>
+
+<li><a href="http://php.spinacz.pl">php.spinacz.pl</a><br>
+The biggest Polish site about programming in PHP -- A
+phpbuilder.com-like site in Polish.</li>
 </ul></li>
 
 <li><b>Portuguese</b>
@@ -288,22 +306,6 @@ a help forum, and an Application Market.</li>
 
 <li><a href="http://www.phpportalen.net/">phpportalen.net</a><br>
 A Swedish PHP portal with articles, news, forums and much more</li>
-</ul></li>
-
-<li><b>Polish</b>
-<ul>
-
-<li><a href="http://php.spinacz.pl">php.spinacz.pl</a><br>
-The biggest Polish site about programming in PHP -- A
-phpbuilder.com-like site in Polish.</li>
-</ul></li>
-
-<li><b>Norwegian</b>
-<ul>
-
-<li>PHP@sindrem.com (<a href="http://www.sindrem.com">http://www.sindrem.com</a>)<br>
-Norwegian site for newbies and intermediates. Installation help 
-and scripts.</li>
 </ul></li>
 </ul>
 
