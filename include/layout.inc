@@ -1,19 +1,17 @@
 <?php
 /* $Id$ */
 
+$www_static_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://static.php.net/www.php.net' : '';
+}
+
 // Print an image for a sized spacer
 function spacer($width = 1, $height = 1, $return = false, $align = false, $extras = false)
 {
-	global $HTTP_SERVER_VARS;
-	static $image_root = null;
-
-	if ($image_root === null) {
-		$image_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://64.246.30.196/www.php.net' : '';
-	}
+	global $HTTP_SERVER_VARS, $www_static_root;
 
 	$function = ($return ? "sprintf" : "printf");
 	return $function('<img src="%s/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
-		$image_root,
+		$www_static_root,
 		$width,
 		$height,
 		($align ? "align=\"$align\" " : ""),
@@ -37,18 +35,13 @@ function resize_image($img, $width=1, $height=1) {
 #
 
 function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
-	global $HTTP_SERVER_VARS;
-	static $image_root = null;
-
-	if ($image_root === null) {
-		$image_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://64.246.30.196/www.php.net' : '';
-	}
+	global $HTTP_SERVER_VARS, $www_static_root;
 	
 	if (!$dir) {
 		$dir = '/images';
 	}
 
-	$webdir = $image_root .  ($dir{0} == '/' ? '' : '/') . $dir;
+	$webdir = $www_static_root .  ($dir{0} == '/' ? '' : '/') . $dir;
 	
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
 		$image = sprintf('<img src="%s/%s" border="%d" %s alt="%s" %s%s />',
@@ -205,14 +198,15 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD;
+    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD, $www_static_root;
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="/style.css" />
- <link rel="shortcut icon" href="/favicon.ico" />
- <script language="Javascript" type="text/javascript" src="/userprefs.js"></script>
+ <link rel="stylesheet" href="$www_static_root/style.css" />
+ <link rel="shortcut icon" href="$www_static_root/favicon.ico" />
+ <script language="Javascript" type="text/javascript" src="$www_static_root/userprefs.js"></script>
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
 </head>
 <body bgcolor="#ffffff" text="#000000"
