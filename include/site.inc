@@ -10,12 +10,13 @@
 
 $MIRRORS = array(
    "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1, 1),
+   "http://at.php.net/"           => array("at", "Goodie Domain Service", "gds", "http://http://gd.tuwien.ac.at/", 1, 0),
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://php.privateworld.com/" => array("ca", "Private World", "pwc", "http://www.privateworld.com/", 1, 0),
    "http://ch.php.net/"           => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/" ,1 ,0),
    "http://dk.php.net/"           => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/",1,0),
    "http://fr.php.net/"           => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0),
-#   "http://id.php.net/"           => array("id", "IndoGlobal","indog","http://www.indoglobal.com/",1,0),
+   "http://id.php.net/"           => array("id", "IndoGlobal","indog","http://www.indoglobal.com/",1,0),
    "http://il.php.net/"           => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 1, 1),
    "ftp://il.php.net/"            => array("il", "Netvision", "netvision", "ftp://il.php.net/php/distributions/", 1, 0),
    "http://php.netvision.net.il/" => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 0, 1),
@@ -44,6 +45,7 @@ $MIRRORS = array(
 
 $COUNTRIES = array(
    "au" => "Australia",
+   "at" => "Austria",
    "ca" => "Canada",
    "ch" => "Switzerland",
    "dk" => "Denmark",
