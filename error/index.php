@@ -60,7 +60,7 @@ if ($try) {
 
 ?>
 <?Header("HTTP/1.0 404 Not Found")?>
-<?commonHeader("404: File not found: /$uri);
+<?commonHeader("404: File not found: /$uri");
 
 	if(!isset($pattern)) {
 		$pattern = $uri;
