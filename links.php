@@ -142,6 +142,9 @@ A series of PHP tutorials for novices<br></li>
 <h4>PHP Setup tools for Windows</h4>
 
 <ul>
+<li><a href="http://www.php4win.com/">php4win</a><br>
+The lates PHP packages and useful tools for Windows<br></li>
+
 <li><a href="http://www.firepages.com.au/dev4.htm">phpdev</a><br>
 Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl<br></li>
 
