@@ -7,7 +7,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 <h2>PHP 4</h2>
 <ul>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Source</a></li> - 28 June 2000</li>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Binaries for Win32</a> - 28 June 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Binaries for Win32</a> - 29 June 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
   <p>Other add-ons:
   <ul>
     <li>Servlet Server API:
