@@ -1,4 +1,9 @@
 <?
+if (isset($SERVER_NAME) && $SERVER_NAME=="www.php3.net") {
+        Header("Location: http://www.php.net/");
+        exit;
+}
+
 require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
