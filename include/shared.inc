@@ -35,14 +35,14 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
         endif;
 endif;
 
-if (strstr("Opera",$HTTP_USER_AGENT)):
+if (strstr($HTTP_USER_AGENT,"Opera")):
 	$DISABLE_KICKOUTS = true;
 endif;
 
-if (strstr("X11",$HTTP_USER_AGENT)):
+if (strstr($HTTP_USER_AGENT,"X11")):
 	$X11 = true;
 endif;
-if (strstr("htdig",$HTTP_USER_AGENT)):
+if (strstr($HTTP_USER_AGENT,"htdig")):
 	$HTDIG = true;
 endif;
 
