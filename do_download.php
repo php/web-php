@@ -6,7 +6,7 @@ $LOG_FILE = "log_download.php";
 // If there is no file, then drop out an invalid file error message
 if (!isset($df) 
 	|| !isset($mr)
-	|| !file_exists("distributions/$df")) {
+	|| !file_exists("$DOCUMENT_ROOT/distributions/$df")) {
 	exit("Invalid file requested for download!");
 }
 
