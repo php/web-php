@@ -1,25 +1,4 @@
 <?php // -*- C++ -*-
-function manualLastModified($title) {
-	global $MYSITE, $SCRIPT_FILENAME;
-	if(strstr($MYSITE,"www.php.net")) {
-		$host = 'localhost';
-		$user = 'nobody';
-		$pass = '';
-		$db_id = mysql_connect($host, $user, $pass);
-		$query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' ORDER BY ts DESC limit 1";
-		$result_id = mysql_db_query("php3", $query, $db_id);
-	} else {
-		$result_id = 0;
-	}
-	if($result_id && mysql_num_rows($result_id)) {
-		$t = mysql_fetch_row($result_id);
-		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",$t[0])." GMT");
-	} else {
-		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
-	}
-	if($result_id) mysql_free_result($result_id);
-}
-
 require("shared.inc");
 
 $FRAMEMODE="manual";
@@ -213,7 +192,7 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 <?
 };
 
-function manualGetUserNotes($title)
+function manualGetUserNotes($title, $id)
 {
 	// if we're www.php.net, get it from the local DB
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
@@ -226,7 +205,7 @@ function manualGetUserNotes($title)
 		$user = 'nobody';
 		$pass = '';
 		$db_id = mysql_connect($host, $user, $pass);
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' ORDER BY id";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY id";
 		$result_id = mysql_db_query("php3", $query, $db_id);
 		if ($result_id && mysql_num_rows($result_id) > 0) {
 			while ($row = mysql_fetch_array($result_id)) {
@@ -250,7 +229,7 @@ function manualGetUserNotes($title)
 	return $notes;
 }
 
-function manualUserNotes($title) {
+function manualUserNotes($title, $id) {
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
@@ -261,7 +240,7 @@ function manualUserNotes($title) {
 
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
 
-	$notes = manualGetUserNotes($title);
+	$notes = manualGetUserNotes($title, $id);
 	$num_notes = count($notes);
 	if ( $num_notes > 0 ) {
 		makeTitle("User Contributed Notes: ".$title);
@@ -274,19 +253,40 @@ function manualUserNotes($title) {
 	echo "</TABLE></FORM>\n";
 }
 
-function manualHeader($title) {
+function manualLastModified($title, $id) {
+	global $MYSITE, $SCRIPT_FILENAME;
+	if(strstr($MYSITE,"www.php.net")) {
+		$host = 'localhost';
+		$user = 'nobody';
+		$pass = '';
+		$db_id = mysql_connect($host, $user, $pass);
+		$query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY ts DESC limit 1";
+		$result_id = mysql_db_query("php3", $query, $db_id);
+	} else {
+		$result_id = 0;
+	}
+	if($result_id && mysql_num_rows($result_id)) {
+		$t = mysql_fetch_row($result_id);
+		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",$t[0])." GMT");
+	} else {
+		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
+	}
+	if($result_id) mysql_free_result($result_id);
+}
+
+function manualHeader($title,$id="") {
 	global $FRAMEMODE, $HTDIG;
-	manualLastModified($title);
+	manualLastModified($title,$id);
 	commonHeader("Manual: $title");
 	if (!$HTDIG):
 		navigationBar($title);
 	endif;
 }
 
-function manualFooter($title) {
+function manualFooter($title,$id="") {
 	global $HTDIG;
 	if (!$HTDIG):
-		manualUserNotes($title);
+		manualUserNotes($title,$id);
 		navigationBar($title);
 	endif;
 	commonFooter($title);
