@@ -431,6 +431,12 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
     // Choose name of mirror site specific CSS file
     $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
+    
+    $rssautodiscovery = '';
+    if (isset($_SERVER['BASE_PAGE']) && $_SERVER['BASE_PAGE'] == 'index.php') {
+      $rssautodiscovery = ' <link rel="alternate" type="application/rss+xml" title="PHP: Hypertext
+Preprocessor" href="' . $MYSITE . 'news.rss" />' . "\n";
+    }
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -439,6 +445,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/style.css" />
  <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT'] . "/styles/" . $mirror_specific_style; ?>.css" />
  <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
+<?php echo $rssautodiscovery; ?>
  <script language="Javascript" type="text/javascript" src="<?php echo $_SERVER['STATIC_ROOT']; ?>/userprefs.js"></script>
 <?php echo (isset($PBASE) ? ' <base href="' . $PBASE . '" />' : ''); ?></head>
 <body bgcolor="#ffffff" text="#000000"
