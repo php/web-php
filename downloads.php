@@ -121,11 +121,11 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link('php-5.0.0RC1.tar.bz2', 'PHP 5.0.0RC1 (tar.bz2)'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: fce84c013ff3a2a1e2136af0ea7ea6b8</span>
+  <span class="md5sum">md5: 7896bb1fb85247e2514b9faa5084ced7</span>
  </li>
  <li>
   <?php download_link('php-5.0.0RC1.tar.gz', 'PHP 5.0.0RC1 (tar.gz)'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: f407bc91ec3e6446fdce6a5c32e55dd</span>
+  <span class="md5sum">md5: f407bc91ec3e6446fdce6a5c32e55dd7</span>
  </li>
 </ul>
 
