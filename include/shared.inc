@@ -750,7 +750,7 @@ Only questions about the website should be directed to <A HREF="mailto:webmaster
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
 <DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.5);'; } ?>">
+<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
 <? kickHeader(-20,'left',400);?>
 <FORM ACTION="/redirect.php" METHOD="POST">
 <B>Pick a mirror site close to you:</B><BR>
@@ -775,7 +775,7 @@ endwhile;
 </DIV>
 
 <DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.5);'; } ?>">
+<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
 <? kickHeader(30,'left',400);?>
 <FORM ACTION="/manual-lookup.php" METHOD="POST">
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
@@ -802,7 +802,7 @@ endif;
 ?>
 
 <DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.5);'; } ?>">
+<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
 <? kickHeader(-35,'top',300);
 if (!isset($prevsearch)):
 	$prevsearch[0]="";
