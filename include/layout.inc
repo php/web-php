@@ -217,6 +217,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	echo delim();
 	print_link('/docs.php', 'documentation', false, 'class="small"');
 	echo delim();
+	print_link('/FAQ.php', 'faq', false, 'class="small"');
+	echo delim();
 	print_link('/support.php','support',false,'class="small"');
 	echo delim();
 	print_link('/bugs.php','reporting bugs',false,'class="small"');
