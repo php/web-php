@@ -32,7 +32,7 @@ function resize_image($img, $width=1, $height=1) {
 function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	global $HTTP_SERVER_VARS;
 	if (!$dir) {
-		$dir = '/gifs';
+		$dir = '/images';
 	}
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
 		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s />',
@@ -70,7 +70,7 @@ function print_image($file, $alt=false, $align=false, $extras=false, $dir=false,
 #
 function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	if (!$dir) {
-		$dir = '/gifs';
+		$dir = '/images';
 	}
 	$return = make_image($file, $alt, $align, $extras, $dir, $border);
 	if ($return != "<img>") {
@@ -274,7 +274,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(); ?></td>
+  <td bgcolor="#cccccc" background="/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="100%">
@@ -298,7 +298,7 @@ function commonFooter() {
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
-<td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(); ?></td>
+<td bgcolor="#cccccc" background="/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <td width="175" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>

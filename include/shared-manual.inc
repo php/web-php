@@ -106,7 +106,7 @@ function navigationBar($title,$id,$loc) {
             echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo '</select>';
-        echo '<input type="image" src="/gifs/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
+        echo '<input type="image" src="/images/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
        
     } else {
         echo "<small>&nbsp;</small>";
