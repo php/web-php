@@ -6,7 +6,7 @@ $SIDEBAR_DATA='
 <p>
 You can read the
 <a href="/docs.php">documentation online</a>
-is various languages, even in printer
+in various languages, even in printer
 friendly HTML format.
 </p>
 
