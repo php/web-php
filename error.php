@@ -22,6 +22,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 $URI = substr($_SERVER['STRIPPED_URI'], 1);
 
 // ============================================================================
+// Mozilla Search Sidebar plugin resource file handling (need to be mirror
+// dependent, so the search results will show up in the sidebar)
+if ($URI == 'phpnetsearch.src') {
+    status_header(200);
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozsearch.inc';
+	exit;
+}
+
+// ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
     mirror_redirect("http://bugs.php.net/?$array[1]");
