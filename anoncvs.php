@@ -29,7 +29,7 @@ site_header("Anonymous CVS Access");
 </p>
 
 <ul>
- <li><i>autoconf</i>: 2.13+</li>
+ <li><i>autoconf</i>: 2.13</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>bison</i>: 1.28 (preferred), 1.35, or 1.75</li>
@@ -65,8 +65,8 @@ diff -u
   directory that contains all PHP 4 and PHP 5 branches.  To get PHP from CVS, 
   use the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
   latest, consider the following CVS commands:<br /><br />
-  <strong>PHP 4</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src</tt>
+  <strong>PHP 4.3</strong>: 
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src</tt>
   <br />
   <strong>PHP 5</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</tt>
@@ -76,8 +76,8 @@ diff -u
   <div class="tip" style="margin: 10px 0 10px 20px;">
    You may retrieve a specific release of PHP from CVS by using the
    <i>-r</i> flag in your cvs command.  Some examples:<br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src</tt><br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3_2 php-src</tt>
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_2_1 php-src</tt><br />
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_3_2 php-src</tt>
   </div>
   <ul>
    <li>
@@ -86,8 +86,8 @@ diff -u
    <li>
     All of the above commands create a local directory named "php-src".  You can also 
     specify another directory name, for example, to put PHP 5 HEAD into a directory 
-    named myphp5:<br />
-    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 php-src</tt>
+    named php5dev:<br />
+    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php5dev php-src</tt>
    </li>
   </ul>
  </li>
@@ -148,8 +148,8 @@ diff -u
 
 <p>The following combinations are known to work:</p>
 <ul>
- <li>autoconf 2.13, automake 1.4 and libtool 1.4</li>
- <li>autoconf 2.13, automake 1.5 and libtool 1.4</li>
+ <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
+ <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
 </ul>
 
 <?php site_footer(); ?>
