@@ -161,7 +161,7 @@ some special modules<br></li>
 <h4>Other PHP related projects</h4>
 
 <ul>
-<li><a href"http://www.interakt.ro/products/PHAkt/">PHPAkt</a><br>
+<li><a href="http://www.interakt.ro/products/PHAkt/">PHAkt</a><br>
 An open-source PHP extension for Macromedia Ultradev 4.0, allowing PHP generation.<br></li>
 </ul>
 
