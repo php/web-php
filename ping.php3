@@ -29,8 +29,10 @@ function ping($server) {
 			$i++;
 		}
 		fclose($fp);
+		echo $lines[$i-4];
 		echo $lines[$i-3];
 		echo $lines[$i-2];
+		echo "<P>\n";
 		flush();
 	}
 }
