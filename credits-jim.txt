@@ -1,6 +1,0 @@
-Lots of PHP2 -> PHP3 porting
-dBase support
-URL parsing functions
-Makefile work
-Regex rewrite
-Win32 work

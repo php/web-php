@@ -1,7 +1,0 @@
-New language definition and implementation
-Internal functions API design
-General hash table implementation for symbol tables, arrays and objects
-Memory manager
-Token cache manager
-A lot of internal functions and migration from PHP 2.0
-BC arbitary precision math support
