@@ -12,10 +12,10 @@ commonHeader("Documentation ");
 
 <H1>The PHP Manual On-line</H1>
 <ul>
-<li><a href="manual/">PHP Manual Online</a>. Your reference
+<li><a href="http://www.php.net/manual/">PHP Manual Online</a>. Your reference
     to everything that's great about PHP.
 
-<li><a href="manual/html/">Plain HTML PHP Manual Online</a>. The very
+<li><a href="http://www.php.net/manual/html/">Plain HTML PHP Manual Online</a>. The very
     same manual in a light-weight, HTML 3.2 version without any bells or
     whistles.
 
