@@ -1,20 +1,8 @@
 <?php
 
-// This page tries to find the manual page for PEAR
-// because people can access that page by using
-// http://www.php.net/pear as a REQUEST_URI
+// Simulate a /pear shortcut call
+include_once 'prepend.inc';
+$REQUEST_URI = '/pear';
+include_once "$DOCUMENT_ROOT/error/index.php";
 
-require_once 'prepend.inc';
-require_once 'manual-lookup.inc';
-
-$file = find_manual_page(default_language(), "pear");
-
-if ($file) {
-header("Location: http://".$SERVER_NAME.$file);
-exit;
-}
-else { 
-header("Location: http://".$SERVER_NAME."/"); 
-exit;
-}
 ?>
