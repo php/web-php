@@ -213,7 +213,7 @@ commonHeader("Hypertext Preprocessor");
 
 <p>
  <span class="newsdate">[15-Aug-2003]</span>
- Ever wonder what was the original PHP 3.0 release annoucement, what
+ Ever wonder what was the original PHP 3.0 release announcement, what
  where the choices when the PHP: Hypertext Preprocessor name was
  choosen, or since when you can use URL shortcuts to access pieces
  of our site? We have digged up some of the most interesting news
