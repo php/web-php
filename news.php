@@ -24,7 +24,7 @@ You can find an overview of all slides of the sessions from the International PH
 <a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>. 
 It is still not too late to check out some photos from the conference:
 <ul>
-    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn")
+    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
     <li><?php print_link("http://www.phpconference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
 </ul>
