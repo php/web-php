@@ -30,8 +30,18 @@ if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
 if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
     language_add($flang[1]);
 }
+unset($flang);
 
 // USER PREFERENCE HANDLING SHOULD BE ADDED HERE IN THE FUTURE
+
+// Specified by the user via the browser's Accept Language setting
+// Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
+$browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+foreach ($browser_accept as $idx => $langcode) {
+    list($langcode) = @explode(";", trim($langcode));
+    language_add($langcode);
+}
+unset($browser_accept); unset($idx); unset($langcode);
 
 // Language preferred by this mirror site
 language_add(default_language());
@@ -64,9 +74,9 @@ function language_add($langcode)
     // The Brazilian Portuguese code needs special attention
     if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
 
-    // Append language code in priority order
-    // if it is not there already [try to lower number
-    // of file_exists() calls to minumum]
+    // Append language code in priority order if it is not
+    // there already and supported by the PHP site. Try to
+    // lower number of file_exists() calls to the minumum...
     if (!in_array($langcode, $LANGS) && isset($LANGUAGES[$langcode])) { $LANGS[] = $langcode; }
 }
 
