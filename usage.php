@@ -16,7 +16,7 @@ Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 
 <p>
 You can also see how popular PHP is relative to other Apache modules
-at <?php print_link("http://www.securityspace.com/s_survey/", "SecuritySPace's Web Survey"); ?>.
+at <?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace's Web Survey"); ?>.
 Spoiler: PHP is the most popular.
 </p>
 
