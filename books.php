@@ -503,7 +503,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "Professional PHP 4 Multimedia Programming",
+    /* title[s]     */ "Professional PHP4 Multimedia Programming",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861007647/wwwphpnet",
     /* author[s]    */ array("Kapil Apshankar", "Sanjay Abraham", "Jan Rosa", "Allan Kent", "Devon O'Dell", "Andy Chase", "Imam Suyoto"),
     /* auth link[s] */ "",
@@ -617,7 +617,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "Php Black Book",
+    /* title[s]     */ "PHP Black Book",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1588800539/wwwphpnet",
     /* author[s]    */ "Peter Moulding",
     /* auth link[s] */ "",
