@@ -192,13 +192,11 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
         alink="#0000ff"
         vlink="#000099"
 ><a name="TOP"></a>
+<form method="POST" action="/search.php">
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
   <tr bgcolor="#9999cc">
     <td align="middle" rowspan="2" width="120">
-<?php if ($GLOBALS["REQUEST_URI"] != "/") echo '<a href="/">';
-      print_image('php_logo.gif', 'PHP');
-      if ($GLOBALS["REQUEST_URI"] != "/") echo '</a>';
-?>
+      <a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a><br>
     </td>
     <td align="right" valign="top">
       <font color="#ffffff"><b>
@@ -229,9 +227,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
 
   <tr bgcolor="#666699">
-    <form method="POST" action="/search.php">
-      <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
-        <small>search for</small>
+    <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
+      <small>search for</small>
 <INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
 <small>in the</small>
 <SELECT NAME="show" CLASS="small">
@@ -245,13 +242,13 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <OPTION VALUE="source">website source code    
 </SELECT>
 <?	echo make_submit('small_submit_white.gif', 'search', 'bottom');
-      ?>&nbsp;<br>
-      </font></td>
-    </form>
+    ?>&nbsp;<br>
+    </font></td>
   </tr>
 
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
 </table>
+</form>
 
 <?php
   if (!$dont_enclose):
@@ -292,11 +289,11 @@ function commonFooter() {
 	}
 ?>
 
+<form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this);">
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">
-    <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this);">
-      <td align="right" valign="bottom">
+    <td align="right" valign="bottom">
       <script language="javascript">
       <!--
         function gotomirror(form) {
@@ -308,7 +305,7 @@ function commonFooter() {
         }
       //-->
       </script>
-      <input type="hidden" name="REDIRECT" value=1>
+      <input type="hidden" name="REDIRECT" value="1">
       <?php
 	# TODO: should send current url above, so we can redirect to
 	# the same page on the mirror, and do the same in our javascript.
@@ -322,9 +319,7 @@ function commonFooter() {
 	endif;
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
-#	echo "<option value=\"-1\">--\n";
-	reset($MIRRORS);
-  while (list($url,$mirror) = each($MIRRORS)) {
+        foreach($MIRRORS as $url=>$mirror) {
           if ($mirror[4] == 1) { /* only list full mirrors here */
 	    if ($url==$MYSITE) {
               echo '<option value="' . $url . '" SELECTED>' . $COUNTRIES[$mirror[0]] . 
@@ -338,11 +333,11 @@ function commonFooter() {
 	echo "</select> ";
 	echo make_submit('small_submit.gif', 'go', 'bottom' );
       ?>&nbsp;<br>
-      </td>
-    </form>
+    </td>
   </tr>
   <tr bgcolor="#333366"><td><?php spacer(1,1); ?><br></td></tr>
 </table>
+</form>
 
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
   <tr valign="top" bgcolor="#cccccc">
