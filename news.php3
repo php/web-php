@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "PHP: Past, Present, and Future", "by Rasmus Lerdorf, Stig Bakken, Andi Gutmans, and Zeev Suraski", 
+	"http://hotwired.lycos.com/webmonkey/radio/php.html", "February 27, 2000");?>
+You may already know that PHP is fast, stable, and easy to learn, but you may not know how it got that way. In this interview, Rasmus Lerdorf, the creator of PHP, talks about the unlikely origins of this open-source product. Then core developers Stig Bakken, Andi Gutmans, and Zeev Suraski explain how they came to work on PHP and discuss the evolution of the language. Plus, you'll hear about the planned support for XML and MySQL and what's going on with Zend.
+<? endEntry(); ?>
+
 <? makeEntry( "Authenticate and Track Users with PHP", "by <a href=\"mailto:jcm@i2ii.com\">Julie Meloni</a>", 
 	"http://hotwired.lycos.com/webmonkey/00/05/index2a.html", "February 2, 2000");?>
 Shows you the basics of PHP-based user authentication, the use of cookies, and a short glimpse (with working examples!) at the session functions of PHP4.  The article was written by Julie Meloni, author of <a href="http://www.thickbook.com/">PHP Essentials</a>, a book for the beginning or intermediate PHP user, available in March at a bookstore near you.
