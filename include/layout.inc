@@ -93,7 +93,7 @@ function delim($color=false) {
 }
 
 // A horizontal delimiter (parameter for backward compatibility)
-function hdelim($bc) { return '<hr />'; }
+function hdelim($bc=FALSE) { return '<hr />'; }
 
 # make_link()
 # return a hyperlink to something, within the site
