@@ -38,7 +38,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
   <li>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
   <li>Get some <A HREF="download-logos.php">PHP logos</A> for your site
   <li>To download the latest development version, see the <a href="version4/cvs.php">instructions on using CVS</a>
-  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer RC</a> for PHP 4.0.1 is available on Zend Technologies' web site.  A version for 4.0.2 will be available shortly.
+  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer RC</a> for PHP 4.0.2 is available on Zend Technologies' web site.
 </ul>
 
 
