@@ -1,6 +1,9 @@
 <?php
 require_once 'prepend.inc';
 
+header("Cache-Control: private");
+header("Pragma: no-cache");
+
 $SIDEBAR_DATA = '
 <h3>Binaries for other systems</h3>
 <p>
