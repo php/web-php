@@ -148,9 +148,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Originator":
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
-#			case "bug_type":
-#				print "<a href=\"bugs.php3?id=$data&edit=1\">$data</a>\n";
-#				break;
+			case "bug_type":
+				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\">$data</a>\n";
+				break;
 			default:
 				print $data;
 				break;
