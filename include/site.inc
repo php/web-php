@@ -158,7 +158,7 @@ if (!isset($MIRRORS[$MYSITE])) {
     // Try the hostname [without www]. In case the main name above is
     // not found, we try to find the mirror with the name provided by
     // the browser (in the Host HTTP header).
-    $MYSITE = 'http://' . ereg_replace("^www\\.", "", $_SERVER["HTTP_HOST"]) . '/';
+    $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["HTTP_HOST"]) . '/';
 
     // If the mirror is not registered with this name, provide defaults
     // (no country code, no search, no stats, English default language ...)
