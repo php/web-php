@@ -75,6 +75,8 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.spry.com/">Spry.com</a></li>
  <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
  <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
+ <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
+ <li><a href="http://www.ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">

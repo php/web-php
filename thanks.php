@@ -28,6 +28,12 @@ site_header("Thanks");
 </p>
 
 <p>
+ <a href="http://www.ez.no/">eZ Systems</a> together with
+ <a href="http://www.hit.no">HiT</a> provide a server and bandwidth for various
+ php.net services.
+</p>
+
+<p>
  <a href="http://www.rackspace.com/">Rackspace</a> provides
  the server and bandwidth for various php.net services.
 </p>
