@@ -833,6 +833,31 @@ should check to make sure that the configuration file you are adding the AddType
    try to refer to the element by name.  Use it's numerical form element id instead.
   <P>
   </DD>
+
+  <DT><B>
+   <a name="5.10">5.10</a> How am I supposed to mix XML and PHP? It complains about my &lt;?xml&gt tags!
+  </B></DT>
+  <DD>
+   You need to turn off the short tags by setting short_tags to 0 in your
+   php3.ini file, or by using the php3_short_tags Apache directive. (You
+   could even use a &lt;File&gt; section to do this selectively.) You can
+   also disable and re-enable the short tags in your script using the
+   short_tags() function.
+  <P>
+  </DD>
+
+  <DT><B>
+   <a name="5.11">5.11</a> How can I use PHP with FrontPage or Dreamweaver or some other HTML editor that insists on moving my code around?
+  </B></DT>
+  <DD>
+   One of the easiest things to do is to enable using ASP tags in your
+   PHP code. This allows you to use the ASP-style &lt% and %&gt; code
+   delimiters. Most of the popular HTML editors handle those more
+   intelligently (for now). To enable the ASP-style tags, you need
+   to set the asp_tags php3.ini variable, or use the php3_asp_tags
+   Apache directive.
+  <P>
+  </DD>
 </DL>
 
 <HR noshade>
