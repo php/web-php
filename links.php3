@@ -68,6 +68,7 @@ is a french gateway to PHP related contents.<BR>
 Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
 <BR> Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
+<LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com PHP Scripts and Programs</A><BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
