@@ -151,6 +151,25 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP Community Site Project Announced</h1>
+<p>
+ <span class="newsdate">[18-Dec-2003]</span>
+ Members of the PHP community are <a href="http://shiflett.org/archive/19">seeking
+ volunteers</a> to help develop the first Web site that is created both by
+ the community and for the community. The features of this project will be
+ driven by the needs and desires of the community as much as possible and
+ may include such things as blogs, news, FAQs, articles, links, and tutorials.
+</p>
+ <p>
+ If you would like to contribute, please <a
+ href="http://shiflett.org/contact">contact Chris Shiflett</a>, who is
+ coordinating this project. There is a need for every type of contributor,
+ including developers, translators, administrators, designers, writers, and
+ advocates.
+</p>
+
+<hr />
+
 <?php news_image("http://www.php-mag.net/", "php-mag.gif", "International PHP Magazine"); ?>
 
 <h1>PHP Magazine in PDF Format</h1>
