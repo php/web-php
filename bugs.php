@@ -231,7 +231,7 @@ elseif ($cmd == "display") {
     $success = 0;
 
     if ($modify == "user") {
-		if ($row[passwd] != $pw) {
+		if (!$row[passwd] || $row[passwd] != $pw) {
 			echo "<h2 class=\"error\">The password you supplied was incorrect.</h2>\n";
 		}
 		elseif (incoming_details_are_valid()) {
