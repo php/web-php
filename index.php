@@ -169,9 +169,9 @@ You can also download some papers from the
 <font class="newsDate">[29-Jul-2001]</font>
 You don't need to go online anymore, to access the PHP FAQ,
 because we integrated it for you in the PHP Manual, so you can
-<a href="/docs.php">download it</a> in
+<a href="/download-docs.php">download it</a> in
 various formats with the Manual packages, and
-<a href="/faq.php">annotate
+<a href="/FAQ.php">annotate
 the pages online</a>, as you wish.
 <br clear="all">
 </p>
@@ -182,10 +182,11 @@ the pages online</a>, as you wish.
 
 <p>
 <font class="newsDate">[21-Jul-2001]</font>
-The <a href="/docs.php">manual page</a> now shows the new .tar.bz2 packaging
-for some languages, and we are also working to get the PDF format back, and update
-all the chm manuals soon. Check out our new <a href="/cal.php">Event Calendar</a>
-where you can add your groups PHP events, and see what is already there.
+The <a href="/download-docs.php">manual download page</a> now shows the
+new .tar.bz2 packaging for some languages, and we are also working to
+get the PDF format back, and update all the chm manuals soon. Check
+out our new <a href="/cal.php">Event Calendar</a> where you can add
+your groups PHP events, and see what is already there.
 <br clear="all">
 </p>
 
