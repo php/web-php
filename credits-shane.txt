@@ -1,0 +1,3 @@
+Porting to Visual C++
+Generalization to support different server APIs
+Work on ISAPI and NSAPI APIs

@@ -159,16 +159,21 @@ function kickHeader($offset,$side,$width) {
 	$innerwidth=$width-40;
 	$innerwidth2=$innerwidth+21;
 	$tablewidth=$width;
-	if ($side=="left"):
+	if ($side=="left" || $side=="none"):
 		$tablewidth=$tablewidth+50;
 	endif;
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=$tablewidth>\n";
-	if ($side=="left"):
+	if ($side=="left" || $side=="none"):
 		echo "<TR>\n";
 		if ($offset>=0):
 			echo "<TD valign=top rowspan=3 width=30>";
-			spc(1,$off);
-			echo "<BR><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD>\n";
+			if ($side=="left"):
+				spc(1,$off);
+				echo "<BR><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD>\n";
+			else:
+				spc(50,50);
+				echo "<BR></TD>\n";
+			endif;
 		else:
 			echo "<TD valign=bottom rowspan=3 width=30><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR>";
 			spc(1,$off);
@@ -340,7 +345,7 @@ function LoadImgs () {
 }
 
 function change(Name,No) {
-	if (document.images && (loaded == 1)) {
+	if (document.images && (loaded == 1) && (document[Name])) {
 		document[Name].src = eval("b_" + Name + No + ".src");
 	}
 	if (No == 1) {

@@ -1,0 +1,6 @@
+Original language definition and implementation
+CGI loader and many internal functions
+Apache module support
+SNMP module
+Original mSQL, MySQL and Sybase modules
+Oracle module work
