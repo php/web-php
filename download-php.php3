@@ -1,13 +1,15 @@
 <?
 require("shared.inc");
 
-$current = "3.0.1";
-$win32_current = "3.0.1";
+$current = "3.0.2";
+$win32_current = "3.0.2";
 
 $filesizes["php-3.0.1.tar.gz"]="~ 1011KB";
+$filesizes["php-3.0.2.tar.gz"]="~ 1024KB";
 $filesizes["php-3.0.2-win32.exe"]="~ 1332KB";
 $filesizes["php-3.0.2-win32.zip"]="~ 1297KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
+$filesizes["php-3.0.2-patch.gz"]="~ 71KB";
 
 function makeCap() {
 	GLOBAL $MIRRORS, $COUNTRIES;
@@ -103,7 +105,8 @@ while ($site = key($mirror_sites)) {
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
 	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
 	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
-	$patch_file = "${site}${srcdir}php-3.0.1-patch.gz";
+	$patch_file_301 = "${site}${srcdir}php-3.0.1-patch.gz";
+	$patch_file_302 = "${site}${srcdir}php-3.0.2-patch.gz";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
 		download_link("${site}/php3latest.zip","Latest patched Windows version");
@@ -113,7 +116,10 @@ while ($site = key($mirror_sites)) {
 		download_link($src_file, "($method) PHP $current source");
 		echo "\n";
 		echo "<LI>";
-		download_link($patch_file, "($method) PHP 3.0 -> 3.0.1 patch");
+		download_link($patch_file_301, "($method) PHP 3.0 -> 3.0.1 patch");
+		echo "\n";
+		echo "<LI>";
+		download_link($patch_file_302, "($method) PHP 3.0.1 -> 3.0.2 patch");
 		echo "\n";
 		echo "<LI>";
 		download_link($win32_file, "($method) $win32_current Win32 binary+installer");
