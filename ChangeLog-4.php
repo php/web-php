@@ -884,7 +884,7 @@ There is no separate announcement available for this release.<br />
 <li>Put an end to BUG#4615 (kalowsky &amp; Eric Veldhuyzen)</li>
 <li>Fixed realpath() in Virtual Directory mode (Daniel)</li>
 <li>Integrated the Phil Nelson's bc math library routines into PHP, now that
-  the license allows it (Phil Nelson &lt;phil@cs.wwu.edu&gt;)</li>
+  the license allows it (Phil Nelson)</li>
 <li>Added the xslt_set_error_handler() function to the Sablotron extension.
   (Sterling)</li>
 <li>Improved Sablotron's error handling system allowing you to catch all
