@@ -139,8 +139,7 @@ track of how long they've worked.
 FocalMail is a web based email interface which allow you to manage your mail virtually anywhere with any Javascript enabled web browser.
 <? endEntry();?>
 
-<? makeEntry("Joe Rock's Beer Recipe Calculator","www.jrock.com/recipe_calc/","Joseph S. Sellinger"
-,"jss@jrock.com"); ?>
+<? makeEntry("Joe Rock's Beer Recipe Calculator","www.jrock.com/recipe_calc/","Joseph S. Sellinger","jss@jrock.com"); ?>
 A web based recipe calculator with a recipe database and other beer related goodies.<br>
 <b>Note from Rasmus:</b> This might sound like a trivial little thing, but go have a look.  It is
 a very complete and complex site and not your average, &quot;duh.. I like beer site&quot;.
@@ -212,6 +211,15 @@ Another message forum implementation.  Multiple threading levels, no cookies, us
 
 <? makeEntry("PHPGen","www.byggsoft.se/~mikaelu/","Mikael Ulfenborg" ,"mikael.ulfenborg@byggsoft.se"); ?>
 PHPGen is small PHP-script used to make a framework for a new PHP-application. 
+<? endEntry();?>
+
+<? makeEntry("FishCartSQL","www.fni.com/fcsql/","FishNet&reg;, Inc.","fcsql@fni.com"); ?>
+FishCartSQL(sm) is a catalog management system for online e-commerce
+solutions; it has been in active use since January 1998. A few of the key
+benefits include multiple parallel catalogs, multiple languages, timed
+sales, Associate ID tracking, and Web based catalog maintenance. The
+order output of FishCartSQL(sm) can be adapted to an existing order
+processing system so that system is not impacted.
 <? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
