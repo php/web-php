@@ -6,7 +6,14 @@ require("site.inc");
 $IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = $HTDIG = false;
 
 $DISABLE_KICKOUTS = false;
-
+if($SCRIPT_NAME=="/bugs.php3" || $SCRIPT_NAME=="/bugstats.php3") {
+#	$my_logo="/jpgs/logo-bug.jpg";
+	$my_logo="/gifs/logo-bug.gif";
+	$my_size="WIDTH=130 HEIGHT=73";
+} else {
+	$my_logo="/gifs/logo.gif";
+	$my_size="WIDTH=130 HEIGHT=67";
+}
 
 # prevent errors if the user is being paranoid
 # they should get the plain version of the site
@@ -486,7 +493,7 @@ endif; ?>
     <TR VALIGN=top>
      <TD ALIGN=left>
       <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="<?echo $GLOBALS[my_logo]?>" ALT="PHP3 Home Page" <?echo $GLOBALS[my_size]?> BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
     </TR>
