@@ -140,6 +140,42 @@ for commercial purposes
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/php4-small.gif" WIDTH=143 HEIGHT=65 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>143 x 65 pixels
+<LI>solid white background
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/php4zend-small.gif" WIDTH=143 HEIGHT=65 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>143 x 65 pixels
+<LI>solid white background
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/zend-powered-by.gif" WIDTH=100 HEIGHT=58 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>100 x 58 pixels
+<LI>solid black background
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
 <IMG SRC="logos/php-icon-white.gif" WIDTH=32 HEIGHT=32 BORDER=0><BR>
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">

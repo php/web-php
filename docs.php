@@ -99,7 +99,6 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
     great selection of books on PHP and related themes.
 
 <li><a href="/version4/win32build.php">Win32 build instructions</a></li>	
-<li>Download <a href="/version4/logos.php"> PHP 4.0 Logos</a></li>
 
 <li>Read the <a href="/version4/migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
 <li>Read about the (very few) <a href="/version4/incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
