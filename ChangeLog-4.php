@@ -172,6 +172,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/21224">#21224</a> (apache configure fails when using --enable-versioning). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21169">#21169</a> (Compile Failure and lots of warnings on UnixWare). (Derick)</li>
 <li>Fixed bug <a href="http://bugs.php.net/21131">#21131</a> (fopen() with mode 'a+' and rewind() doesn't work). (Wez)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21007">#21007</a> (html_errors off text-only output in phpinfo). (Marcus)</li>
 <li>Fixed bug <a href="http://bugs.php.net/20857">#20857</a> (snmpset() failed always, patch by: rs@epost.de). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/20802">#20802</a> (PHP would die silently when memory limit reached). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/20715">#20715</a> (odbc could not be compiled as shared extension). (Jani)</li>
