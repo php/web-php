@@ -15,7 +15,7 @@ if (isset($maillist)) {
 		switch ($maillist) {
 		    case "phplib":
 		    case "phplib-dev":
-			mail("$maillist-request@lists.netuse.de", $request, $request, 
+			mail("$maillist-$request-$sub@lists.netuse.de", $request, $request, 
 				"From: $email\r\n");
 			break;
 		    default:
@@ -97,15 +97,22 @@ To subscribe to one of these lists, use this simple form:
   <td><b>List:</b></td>
   <td><select name="maillist">
     <option value="php-announce">Announcements
-    <option value="php3">User List
-    <option value="php3-digest">User List Digest
-    <option value="php4beta">PHP4 Beta List
-    <option value="php-kb">Knowledge Base
+    <option value="php-general">General List
+    <option value="php-general-digest">General List Digest
+    <option value="php-beta">Beta List
+    <option value="php-db">Database List
+    <option value="php-db-digest">Database List Digest
     <option value="php-dev">Developer List
     <option value="phpdoc">Documentation List
-    <option value="php-beta">Beta List
+    <option value="php-install">Installation List
+    <option value="php-install-digest">Installation List Digest
     <option value="phplib">PHPLIB Mailing List
     <option value="phplib-dev">PHPLIB Developers List
+    <option value="php-kb">Knowledge Base
+    <option value="php-migration">Migration List
+    <option value="php-migration-digest">Migration List Digest
+    <option value="php-windows">Windows List
+    <option value="php-windows-digest">Windows List Digest
   </select></td>
   <td><input type=submit name="action" value="Subscribe"></td>
  </tr>
