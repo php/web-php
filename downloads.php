@@ -97,15 +97,12 @@ commonHeader("Downloads");
   <span class="md5sum">md5: c3497c394b3f5829136eb2ff614da241</span>
  </li>
  <li>
-  PHP 4.3.3 installer temporarily unavailable pending package update.
-<!--
-  <?php download_link('php-4.3.3-installer.exe', 'PHP 4.3.3 installer'); ?> - 25 August 2003<br />
+  <?php download_link('php-4.3.3-installer.exe', 'PHP 4.3.3 installer'); ?> - 27 August 2003<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 140b98d796e81402776a133f273f0b38</span>
--->
+  <span class="md5sum">md5: 2720deb87e799ba88e041e99051e78ab</span>
  </li>
 </ul>
 
