@@ -22,12 +22,17 @@ if ($bug_id) {
   // Clean up the bug id
   $bug_id = ereg_replace ("[^0-9]+", "", $bug_id);
 
-  // Try to find the email and the password
-  $query = "SELECT email, passwd FROM bugdb WHERE id = $bug_id";
+  if ($bug_id != "") {
+  
+    // Try to find the email and the password
+    $query = "SELECT email, passwd FROM bugdb WHERE id = $bug_id";
 
-  // Run the query
-  $result = mysql_query ($query)
-    or die ("Sorry. No information could be found for bug report #$bug_id");
+    // Run the query
+    $result = mysql_query ($query)
+      or die ("Sorry. No information could be found for bug report #$bug_id");
+  } else { 
+     $msg = "The provided #$bug_id bug id is invalid.";
+  }
 
   if (mysql_num_rows($result) != 1) {
     $msg = "No password found for #$bug_id bug report, sorry.";
