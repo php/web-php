@@ -11,12 +11,12 @@
   while ($site = key($mirror_sites)) {
       next($mirror_sites);
       $src_file = "${site}php-${current}.tar.gz";
-      $win32_file = "${site}php-${current}-win32.zip";
+      $win32_file = "${site}php-${win32_current}-win32.zip";
       echo(" <tr>\n");
       echo("  <td>Download ");
       download_link($src_file, "PHP $current source");
       echo(" or ");
-      download_link($win32_file, "$current Win32 binary");
+      download_link($win32_file, "$win32_current Win32 binary");
       echo(" from " . $mirror_sites[$site][1] . "</td>\n");
       echo('  <td align="center"><a href="' . $src_file . '"><img width="100" height="64" src="gifs/' .
            $mirror_sites[$site][0] . '.gif" border="0"></a></td>');
@@ -28,7 +28,7 @@
   <td>
    Download
    <a href="http://www.caraveo.com/php/php-<?echo $current;?>-win32.zip">PHP
-   <?echo $current;?> Win32 binary</a> from the United States.  The <a
+   <?echo $win32_current;?> Win32 binary</a> from the United States.  The <a
     href="http://www.caraveo.com/php/php3latest.zip">latest patched
    version</a> may also be downloaded.
   </td>

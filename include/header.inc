@@ -1,7 +1,8 @@
 <?
   include "configuration.inc";
 
-  $current = "3.0b3";
+  $current = "3.0b4";
+  $win32_current = "3.0b3";
 
   $mirror_sites = array(
     "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
