@@ -43,6 +43,7 @@ function makeBorderTOC($this)
     echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
     echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
     $this = eregi_replace("^Manual: *", "", $this);
+
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
 	if (!$url || !$title) {

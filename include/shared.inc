@@ -98,6 +98,11 @@ function preloadImages() {
 		b_prev21 = new Image();
 		b_prev21.src = "/gifs/b-prev-c.gif";
 
+		b_qref0 = new Image();
+		b_qref0.src = "/gifs/b-quickref-p.gif";
+		b_qref1 = new Image();
+		b_qref1.src = "/gifs/b-quickref-c.gif";
+
 <?	if ($FRAMEMODE == "manual"): ?>
 		b_cont0 = new Image();
 		b_cont0.src = "/gifs/b-contents-p.gif";
@@ -309,9 +314,9 @@ function moveLayers() {
 <? if ($FRAMEMODE!="manual"): ?>
 			document.layers['mirrorsKick'].left = 140;
 			document.layers['mirrorsKick'].top = 215;
-			document.layers['docsKick'].left = 140;
-			document.layers['docsKick'].top = 65;
 <? endif; ?>
+			document.layers['qrefKick'].left = 140;
+			document.layers['qrefKick'].top = 80;
 			document.layers['searchKick'].left = screenWidth-350;
 			document.layers['searchKick'].top = 36;
 		} else {
@@ -319,9 +324,9 @@ function moveLayers() {
 <? if ($FRAMEMODE!="manual"): ?>
 			document.all['mirrorsKick'].style.pixelLeft = 140;
 			document.all['mirrorsKick'].style.pixelTop = 215;
-			document.all['docsKick'].style.pixelLeft = 140;
-			document.all['docsKick'].style.pixelTop = 65;
 <? endif; ?>
+			document.all['qrefKick'].style.pixelLeft = 140;
+			document.all['qrefKick'].style.pixelTop = 80;
 			document.all['searchKick'].style.pixelLeft = screenWidth-350;
 			document.all['searchKick'].style.pixelTop = 36;
 		}
@@ -371,18 +376,18 @@ function change(Name,No) {
 		if (gotlayers) {
 <? if ($FRAMEMODE!="manual"): ?>
 			popUp('mirrorsKick',false);
-			popUp('docsKick',false);
 <? endif; ?>
+			popUp('qrefKick',false);
 			popUp('searchKick',false);
 		}
 <? if ($FRAMEMODE!="manual"): ?>
 		if (Name != 'mirr') {
 			change('mirr',0);
 		}
-		if (Name != 'docs') {
-			change('docs',0);
-		}
 <? endif; ?>
+		if (Name != 'qref') {
+			change('qref',0);
+		}
 		if (Name != 'sear') {
 			change('sear',0);
 		}
@@ -445,6 +450,7 @@ endif; ?>
 		if ($UP[0] && $UP[1]):
 			makeSideButton($UP[0],"up","","up",129,30,0,10,"Up to $UP[1]","<BR>\n");
 		endif;
+		makeSideButton("/quickref.php3","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
 		if (!$HTDIG):
 			makeBorderTOC($title);
 		endif;
@@ -456,7 +462,8 @@ endif; ?>
 			$lastnews="PHP in the News";
 		endif;
 		makeSideButton("/downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
-		makeSideButton("/docs.php3","docs","docsKick","docs",129,30,0,10,"Documentation","<BR>\n");
+		makeSideButton("/docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
+		makeSideButton("/quickref.php3","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
 #		makeSideButton("/mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("/support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("/news.php3","news","","news",129,30,0,10,$lastnews,"<BR>\n");
@@ -608,19 +615,22 @@ endwhile;
 </SELECT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
-<? kickFooter("mirrorsKick","mirr",350);?>
+<? kickFooter("mirrorsKick","mirr",400);?>
 </DIV>
 
-<DIV ID='docsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
-<? kickHeader(20,'left',400);?>
-<FORM ACTION='manual-lookup.php3' METHOD='POST'>
-<B>Quick Function Reference</B><BR>
+<DIV ID='qrefKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<? kickHeader(30,'left',400);?>
+<FORM ACTION='/manual-lookup.php3' METHOD='POST'>
+<FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
 Type in a PHP function name to jump to that page of the online manual:<BR>
-<FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=20></FONT>
+<FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=25></FONT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
-... or, you can still click on the <B>documentation</B> button on the left for other documentation resources.
-<? kickFooter("docsKick","mirr",350);?>
+or click on this button to get an alphabetical listing of all PHP functions.<BR>
+<? if ($FRAMEMODE != "manual"): ?>
+(you can still click on the <B>documentation</B> button on the left for other documentation resources.)
+<? endif;?>
+<? kickFooter("qrefKick","qref",350);?>
 </DIV>
 
 <?

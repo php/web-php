@@ -2,9 +2,14 @@
 $func=ereg_replace("_","-",$function);
 $func=ereg_replace("\(.*\)","-",$func);
 $filename="/manual/function.".$func.".php3";
+$classname="/manual/class.".$func.".php3";
 $refname="/manual/ref.".$func.".php3";
+
 if (file_exists($DOCUMENT_ROOT.$filename)):
 	Header("Location: $filename");
+	exit;
+elseif (file_exists($DOCUMENT_ROOT.$classname)):
+	Header("Location: $classname");
 	exit;
 elseif (file_exists($DOCUMENT_ROOT.$refname)):
 	Header("Location: $refname");
@@ -27,7 +32,8 @@ e.g. you should enter <B>mysql_result</B>, not <B>mysql_result($q1,0,"foobar");<
 </UL>
 <BR>
 
-If all else fails, just click <A HREF="/manual/">here</A> to go to the table of contents for the online documentation.
+If all else fails, just click <A HREF="/manual/">here</A> to go to the table of contents for the online documentation, 
+or click <A HREF="/quickref.php3">here</A> for an alphabetical list of all PHP functions.
 <P>
 
 <?
