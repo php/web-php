@@ -379,67 +379,6 @@ features in PHP 5 should be used.
 
 <hr />
 
-<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Quebec"); ?>
-
-<h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
-<p>
-<span class="newsdate">[12-Oct-2004]</span>
-<a href="http://www.phpquebec.com/">PHP Québec</a>, the profesional association of PHP users in Québec, will be part of the <a href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on Tuesday October 19th and Wednesday October 20th. PHP Québec will present <a href="http://www.php.net/">PHP</a>'s features, its capabilities for e-government and its support services in Canada. Come and meet us on the floor, booth 1610C.
-</p>
-
-<hr />
-
-<?php news_image("http://www.afup.org/forumphp/", "afup2004.jpg", "Forum PHP"); ?>
-
-<h1>Forum PHP in Paris, November 18 &amp; 19, 2004</h1>
-<p>
- <span class="newsdate">[28-Sep-2004]</span>
- The French <a href="http://www.afup.org/">AFUP association</a>
- is proud to announce the fourth annual PHP meeting in Paris,
- on November 18th and 19th, 2004. Developers and managers will
- gather to meet Zeev Suraski, Rasmus Lerdorf and other prominent community experts
- for two days of sessions, packed with
- <a href="http://www.afup.org/article.php3?id_article=253">enterprise solutions and advanced techniques</a>
- (in French).
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
-<h1>PHP 5.0.2 released!</h1>
-<p>
- <span class="newsdate">[23-Sep-2004]</span>
- The PHP Development Team is proud to announce the immediate release of <a href="/downloads.php#v5">PHP 5.0.2</a>.
- This is a maintenance release that in addition to many non-critical bug fixes, addresses a problem
- with GPC input processing. 
- All Users of PHP 5 are encouraged to upgrade to this release as soon as possible.
-</p>
-
-<p>
- For changes since PHP 5.0.1, please consult the
- <a href="/ChangeLog-5.php#5.0.2">ChangeLog</a>.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.9 released!</h1>
-<p>
- <span class="newsdate">[22-Sep-2004]</span>
- The PHP Development Team is proud to announce the immediate release of <a href="/downloads.php">PHP 4.3.9</a>.
- This is a maintenance release that in addition to over 50 non-critical bug fixes, addresses a problem
- with GPC input processing. This release also re-introduces ability to write
- GIF images via the bundled GD extension.
- All Users of PHP are encouraged to upgrade to this release as soon as possible.
-</p>
-
-<p>
- For changes since PHP 4.3.8, please consult the
- <a href="/ChangeLog-4.php#4.3.9">ChangeLog</a>.
-</p>
-
-<hr />
-
 <p class="center"><a href="/news-2004.php">News Archive</a></p>
 
 <?php commonFooter(); ?>
