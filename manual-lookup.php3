@@ -1,33 +1,43 @@
-<?
-$func=ereg_replace("_","-",$function);
-$func=ereg_replace("\(.*\)","-",$func);
-$filename="/manual/function.".$func.".php3";
-$classname="/manual/class.".$func.".php3";
-$refname="/manual/ref.".$func.".php3";
-$featname="/manual/feature-".$func.".php3";
-$constname="/manual/construct.".$func.".php3";
+<?php // -*- C++ -*-
 
-if (file_exists($DOCUMENT_ROOT.$filename)):
-	Header("Location: $filename");
+$try_files = array();
+
+function tryprefix($func, $prefix) {
+    global $try_files;
+
+    $func = ereg_replace("_","-",$func);
+    $func = ereg_replace("\(.*\)","-",$func);
+    $try_files[] = "/manual/${prefix}${func}.php3";
+    $nosp = ereg_replace(" ", "", $func);
+    if ($nosp != $func) {
+	$try_files[] = "/manual/${prefix}${nosp}.php3";
+    }
+    $dasp = ereg_replace(" ", "-", $func);
+    if ($dasp != $func) {
+	$try_files[] = "/manual/${prefix}${dasp}.php3";
+    }
+}
+
+tryprefix($function, "function.");
+tryprefix($function, "class.");
+tryprefix($function, "ref.");
+tryprefix($function, "feature-");
+tryprefix($function, "construct.");
+
+reset($try_files);
+while (list($dummy, $file) = each($try_files)) {
+    if (file_exists($DOCUMENT_ROOT.$file)) {
+	Header("Location: $file");
 	exit;
-elseif (file_exists($DOCUMENT_ROOT.$classname)):
-	Header("Location: $classname");
-	exit;
-elseif (file_exists($DOCUMENT_ROOT.$refname)):
-	Header("Location: $refname");
-	exit;
-elseif (file_exists($DOCUMENT_ROOT.$featname)):
-	Header("Location: $featname");
-	exit;
-elseif (file_exists($DOCUMENT_ROOT.$constname)):
-	Header("Location: $constname");
-	exit;
-else:
-	require("shared.inc");
-	CommonHeader("Quick Manual Reference");
+    }
+}
+
+require("shared.inc");
+CommonHeader("Quick Manual Reference");
+
 ?>
 <h3>Oops!</h3>
-The function <B><? echo $function;?></B> doesn't seem to exist.
+The function <B><?php echo $function;?></B> doesn't seem to exist.
 
 <h3>Why not?</h3>
 <UL>
@@ -44,7 +54,7 @@ If all else fails, just click <A HREF="/manual/">here</A> to go to the table of 
 or click <A HREF="/quickref.php3">here</A> for an alphabetical list of all PHP functions.
 <P>
 
-<?
+<?php
 endif;
 commonFooter();
 ?>

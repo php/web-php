@@ -632,7 +632,8 @@ endwhile;
 <? kickHeader(30,'left',400);?>
 <FORM ACTION='/manual-lookup.php3' METHOD='POST'>
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
-Type in a PHP function name to jump to that page of the online manual:<BR>
+Type in a PHP function name or feature to jump to that page of the online
+manual:<BR>
 <FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=25></FONT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
