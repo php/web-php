@@ -156,7 +156,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP Usage Survey Results</h1>
 <p>
  <span class="newsdate">[18-Sep-2003]</span>
- <a href="http://www.zend.com/survey/php_net.php">Check out</a> the results
+ <a href="http://www.zend.com/zend/php_survey_results.php">Check out</a> the results
  of the PHP Usage Survey conducted by Zend Technologies, including feedback
  from thousands of PHP users around the world.  Thanks for all who contributed!
 </p>
