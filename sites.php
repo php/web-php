@@ -25,7 +25,7 @@ also <a href="/mirrors.php">mirrored in dozens of countries worldwide</a>.
 This is the home of the <a href="/downloads.php">download page</a>, for everyone to
 get the latest version of the PHP source code and binaries for Windows. The current
 and next-to-current versions are available there. (There is also a <a
-href="http://ftp.proventum.net/pub/php/">PHP Museum</a>, which has all of the
+href="http://museum.php.net/">PHP Museum</a>, which has all of the
 source distributions since June 1996.)
 </p>
                                                                         
