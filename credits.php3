@@ -115,6 +115,9 @@ function makeName($name,$email,$size) {
 <? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de",0);?>
   <UL TYPE=DISC><li>Adabas D, ODBC, Oracle</UL><BR>
 
+<? makeName("Igor Kovalenko","owl@infomarket.ru",0);?>
+  <UL TYPE=DISC><li>QNX support issues</UL><BR>
+
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
   
