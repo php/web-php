@@ -199,8 +199,9 @@ CVS tree</a>.
 <P>
 Otherwise known as IRC or Internet Relay Chat.  Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel
-on EFNet.  If you don't know what IRC is you can learn more about it at
-<a href="http://www.irchelp.org">www.irchelp.org</a>.
+on <a href="http://openprojects.nu">OpenProjects</a>.  There is also a #php
+channel on EFNet, but due to the difficulties many people have getting on and
+staying on that network we are migrating to the OpenProjects network.
 
 <?
 }
