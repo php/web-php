@@ -215,7 +215,7 @@ Changes in the Zend Engine 2.0
 
           Example:
 
-            The following code prints "foobar", not "foo", because
+            The following code prints "foobar", not "bar", because
             the class constant overrides the "global" constant of
             the same name.
 
@@ -249,7 +249,6 @@ Changes in the Zend Engine 2.0
             }
 
             $obj = new FooClass;
-            $obj->foo();
             $obj->foo();
             ?>
 
