@@ -33,8 +33,8 @@ diff -u
 
   <li>Log in to the PHP anonymous CVS server. Use <strong>phpfi</strong> as the password.<br>
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
-  <li>Obtain the PHP 4 CVS tree:<br>
-    <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php4</pre></li>
+  <li>Obtain the PHP 5 CVS tree:<br>
+    <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php5</pre></li>
 
     <blockquote>
      <strong style="color: #99000">Note:</strong> <br/>
@@ -65,7 +65,7 @@ cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
 for the documentation, available via anonymous CVS. See <a
 href="http://cvs.php.net/">the web-based view</a> of the CVS server
 to see what is available, and substitute the appropriate name for
-"php4" in step 3 (and ignore the later steps).</p>
+"php5" in step 3 (and ignore the later steps).</p>
 
 <p>You can also mirror the PHP CVS repository using CVSup. See
 <a href="/cvsup.php">here</a> for more details.</p>
