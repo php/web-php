@@ -66,6 +66,7 @@ hr {
 	color: black;
 	background-color: black;
 	height: 1px;
+	clear: both;
 }
 
 .center {
@@ -78,6 +79,12 @@ hr {
 }
 .center th {
 	text-align: center;
+}
+
+.newsdate {
+	font-size: smaller;
+	font-style: italic;
+	color: #6666cc;
 }
 
 /* Content are styles ----------------------------------------------------- */
