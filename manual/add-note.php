@@ -78,23 +78,34 @@ address in the little one (usual anti-spam practices are OK, e.g.
 johnNOSPAM@doe.NO_SPAM.com).</p>
 
 <p>Note that HTML tags are not allowed in the posts, but the note is presented
-in side a &lt;pre&gt; element so formatting is preserved. URLs will be turned
-into clickable links automatically. (Double-check that your note appears as you
-want during the preview. That's why it is there!)</p>
+inside a &lt;pre&gt; element so formatting is preserved. URLs will be turned
+into clickable links automatically. <i>(Double-check that your note appears as you
+want during the preview. That's why it is there!)</i></p>
 
-<p>Read the following note carefully. If your post falls into one of the
-categories mentioned there, it will be rejected by one of the editors.</p>
+<p>Please read the following points carefully before submitting your comment. 
+If your post falls into one of the categories mentioned there, it will be 
+rejected by one of the editors.</p>
 
-<P><b>Note:</b> If you are trying to <A href="http://bugs.php.net/">report a
+<ul>
+<li> If you are trying to <A href="http://bugs.php.net/">report a
 bug</A>, or <a href="http://bugs.php.net/">request a new feature or language
-change</a> you're in the wrong place.  If you are just commenting on the fact
-that something is not documented, save your breath. This is where <b>you</b>
-add to the documentation, not where you ask <b>us</b> to add the
-documentation. This is also not the correct place to <A
-href="/support.php">ask questions</A> (even if you see others have done that
-before, we are editing the notes slowly but surely).  If you post a note in
-any of the categories above, it will edited and/or removed.
-</p>
+change</a> you're in the wrong place.</li>
+
+<li> If you are just commenting on the fact that something is not documented, 
+save your breath. This is where <b>you</b> add to the documentation, not where 
+you ask <b>us</b> to add the documentation. You may choose to email the 
+<a href="mailto:phpdoc@lists.php.net"> PHP Documentation Team</a> to discuss 
+the change.</li>
+
+<li>This is also not the correct place to <a href="/support.php">ask questions</a> 
+(even if you see others have done that before, we are editing the notes slowly 
+but surely). If you need support send email to the <a href="mailto:php-general@lists.php.net">
+php-general list</a>.</li>
+
+</ul>
+
+<h3>If you post a note in any of the categories above, it will edited and/or removed.</h3>
+
 <p>
 Just to make the point once more. The notes are being edited and support
 questions/bug reports/feature request/comments on lack of documentation, are
@@ -111,7 +122,7 @@ O'Reilly Mastering Regular Expressions book</a> for the gory details.)</p>
 
   if (!$user) $user = "user@example.com";
   if (!isset($sect)) {?>
-<p><b>To add a note, you must click on the 'Add Note' button
+<p><b>To add a note, you must click on the 'Add Note' button (the plus sign) 
 on the bottom of a manual page so we know where to add the note!</b></p>
 <?php
   }
