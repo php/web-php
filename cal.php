@@ -235,7 +235,7 @@ function draw_event($ev) {
 ?>
 <tr bgcolor=#d0d0d0><td>
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th><?php echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?php echo ini_get('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
+<tr bgcolor=#a0a0a0><th><?php echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?php echo ini_get('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']; if(strlen($event['url'])) echo "<br><b>URL</b>: <a href=\"".$event['url']."\">".$event['url']."</a>\n";?></td></tr>
 <tr bgcolor=#a0a0a0><th>
 <?php switch($event['tipo']) {
 	case 1:
