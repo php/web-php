@@ -23,7 +23,8 @@ commonHeader("Links");
 <h1>PHP Related Links</h1>
 
 <p>
-On these sites you will find tutorials, articles and example scripts
+On these sites you will find tutorials, articles, example scripts, PHP
+related tools, jobs, web hosting services, etc.
 </p>
 
 <h4>PHP Support Companies</h4>
