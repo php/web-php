@@ -55,6 +55,13 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "PHP-Einf&uuml;hrung", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>", 
+	"http://www.internetworld.de/iw/magazin_11phpeinfuehrung.htm", "October 20, 1999");?>
+(In German.) &quot;Over ten percent of all web servers have the scripting
+language PHP installed. Internet World shows you how to create dynamic
+web pages with PHP.&quot; Introduction to PHP in four parts.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP: One Size Fits All", "by Niels Pollem","http://www.heise.de/ix/artikel/1999/07/076/", "July 19, 1999");?>
 (In German.) Dynamisch generierte Web-Seiten zu erstellen geh&ouml;rt
 l&auml;ngst zum normalen Handwerk. Werkzeuge und Sprachen daf&uuml;r
