@@ -6,7 +6,6 @@
  * 
  **********************************************************************/
 
-
 require_once 'prepend.inc';
 
 header("Cache-Control: private");
@@ -67,53 +66,6 @@ $server = $SERVER_NAME;
 ?>
 
 <h1>Latest version of PHP</h1>
-
-<?php
-
-/* ******** DONT NEED THIS NOW, WITH THE NEW MIRROR LISTING PAGE
-
-echo '<p>';
-echo 'Before you download, please make sure you are using a <a href="mirrors.php">mirror</a> close to you.';
-
-$cm = find_closest_mirrors();
-$cmn = count($cm);
-if ($cmn > 0) {
-    if(!in_array("http://$server/", $cm)) {
-        echo "We found ";
-        echo ($cmn > 1 ? "$cmn mirrors" : "a mirror");
-        echo " near you. We recommend that you use one of these.\n";
-        echo " Please visit: ";
-        foreach ($cm as $num => $mirror) {
-            echo '<a href="' . $mirror . 'downloads.php">' . $mirror . '</a>';
-            if ($num < $cmn-1) { echo " or "; }
-        }
-        echo ". You can also change mirrors at the bottom of this page.";
-        if ($server == "www.php.net" || $server == "php.net") {
-            $mirror = $cm[0];
-        } else {
-            $mirror = "http://$server/";
-        }
-    } else {
-        echo "You can change mirrors at the bottom of the page.";
-        $mirror = "";
-    }
-} else {
-    echo "You can change mirrors at the bottom of the page.";
-        srand ((double)microtime()*1000000);
-    
-    if ($server == "www.php.net" || $server == "php.net") {
-        $default_mirrors = array("http://us2.php.net/", "http://us3.php.net/","http://rs1.php.net/");
-        $mirror = $default_mirrors[rand(0, count($default_mirrors)-1)];
-    } else {
-        $mirror = "";
-    }
-}
-echo '</p>';
-
-***************** */
-
-?>
-
 
 <h2>Complete Source Code</h2>
 <ul>
