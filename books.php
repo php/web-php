@@ -157,6 +157,17 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0789724405/wwwphpnet"
+><IMG SRC="/jpgs/maxfield.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="139"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/0789724405/wwwphpnet">MySQL and PHP from Scratch</A><BR>
+by Wade Maxfield<BR><SMALL>
+Que, November 2000, ISBN 0-7897-2440-5, 372 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1893115852/wwwphpnet"
 ><IMG SRC="/jpgs/wjgilmore.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
