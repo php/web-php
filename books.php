@@ -207,7 +207,7 @@ by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cart
 </TD>
 <TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
 >PHP - Dynamische websites professioneel ondersteunen</A><BR>
-by <A HREF=http://zend.com/zend/hof/schmid.php"">Egon Schmid</A>, Christian Cartus en Richard Blume<BR>
+by <A HREF=http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus en Richard Blume<BR>
 <SMALL>in Dutch, Addison Wesley Longman, April 2000, ISBN 90-430-0140-6, 477 pages</SMALL><BR>
 <SMALL><BR>
 </TD>
