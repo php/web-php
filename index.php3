@@ -21,7 +21,7 @@ Rasmus Lerdorf and Jim Winstead gave a pair of three-hour
 tutorials at <a href="http://conferences.oreilly.com/">O'Reilly's
 Open Source Software Convention</a> on August 21, 1999, in Monterey,
 California. You can see the slides from the tutorials
-<a href="oreilly99/">here</a>.
+<a href="oreilly99/">here</a> (Only works with Netscape).
 </p>
 
 
