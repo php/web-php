@@ -87,6 +87,7 @@ $COUNTRIES = array(
    "it" => "Italy",
    "jp" => "Japan",
    "kr" => "Korea",
+   "li" => "Liechtenstein",
    "lt" => "Lithuania",
    "lv" => "Latvia",
    "mx" => "Mexico",
