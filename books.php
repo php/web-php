@@ -17,7 +17,7 @@ $langs = array(
   'se'  => 'Swedish',
   'hu'  => 'Hungarian',
   'dk'  => 'Danish',
-  'it'  => 'Italian
+  'it'  => 'Italian'
 );
 
 // Book types
