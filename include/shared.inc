@@ -45,7 +45,9 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
 endif;
 
 if (strstr($HTTP_USER_AGENT,"Opera")):
-	$DISABLE_KICKOUTS = true;
+#	$DISABLE_KICKOUTS = true;
+	$HAVE_STYLE=true;
+	$IE4=true;
 endif;
 
 if (strstr($HTTP_USER_AGENT,"X11")):
