@@ -242,7 +242,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($psw)>0) {
 				if(crypt($pw,substr($psw,0,2))==$psw) {
 					$ts=date("Y-m-d H:i:s");
-					if($status=="Delete!") {
+					if($estatus=="Delete!") {
 						mysql_query("DELETE from bugdb where id=$id");
 					} else {
 						mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
@@ -256,7 +256,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
-			if($status=="Delete!") {
+			if($estatus=="Delete!") {
 				$text = "The bug has been deleted from the database\n";
 			} else {
 				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments: $comments\n";
@@ -323,7 +323,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "</form>\n";
 		}
 	} else {
-		if(isset($modify) && $status=="Delete!") {
+		if(isset($modify) && $estatus=="Delete!") {
 			echo "<br><h1>Bug id #$id has been deleted</h1>\n";
 		} else {
 			echo "<br><h1>Sorry bug id #$id does not exist</h1>\n";
