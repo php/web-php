@@ -16,7 +16,7 @@ function tryprefix($func, $prefix) {
     if ($dasp != $func) {
 	$try_files[] = "/manual/${prefix}${dasp}.php3";
     }
-    $noul = ereg_replace("_", "", $func);
+    $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
 	$try_files[] = "/manual/${prefix}${noul}.php3";
     }
