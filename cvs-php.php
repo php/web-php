@@ -60,7 +60,7 @@ with PHP.  If you are sitting there wondering if you need a CVS account, then
 you don't!
 </b>
 <P>
-<form action="cvs-php3.php" method="POST">
+<form action="cvs-php.php" method="POST">
 <table>
 <tr><th>Full Name: </th><td><input type=text size=50 name=fullname></td></tr>
 <tr><th>Email: </th><td><input type=text size=50 name=email></td></tr>
