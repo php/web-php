@@ -1293,6 +1293,7 @@ about
 <option>Apache
 <option>Linux
 <option>MySQL
+<option>PostgreSQL
 <option>mSQL
 <option>Oracle
 <option>IMAP
