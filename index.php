@@ -134,6 +134,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>New Monthly PHP Magazine Launched</h1>
+<p>
+<font class="newsdate">[15-Nov-2002]</font>
+php|architect, a new monthly magazine dedicated exclusively to PHP, has
+launched <a href="http://www.phparch.com/">its website</a>. php|a is published
+in PDF format and is available worldwide. It covers a variety of advanced
+topics ranging from day-to-day programming to the internals of PHP. A sample
+article on the creation of a web-based PDF converter is also
+available on the magazine website
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.0RC1 Released</h1>
 <p>
 <font class="newsdate">[14-Nov-2002]</font>
