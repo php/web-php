@@ -5,8 +5,10 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		exit;
 }
 
+	$version = (int) $version;
+
 	if ($version != 4 and $version != 3) {
-		$version = all;
+		$version = 0;
 	}
 
 	function mydate($str) {
