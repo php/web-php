@@ -205,7 +205,7 @@ if ($fp) {
 }
 
 // Run the boldEvents() function on page load
-$ONLOAD = "boldEvents()";
+$ONLOAD = "boldEvents(); searchHistory();";
 
 // Write out common header
 commonHeader("Hypertext Preprocessor");

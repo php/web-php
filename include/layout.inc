@@ -200,6 +200,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
            $SEARCH_BASE, $ONLOAD, $www_static_root, $BASE_FOR_MANPAGE;
 
+    // If no onload event is specified, restore the last search
+    if (empty($ONLOAD)) { $ONLOAD = "searchHistory();"; }
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -212,7 +215,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 </head>
 <body bgcolor="#ffffff" text="#000000"
       link="#000099" alink="#0000ff" vlink="#000099"
-      <?php if (!empty($ONLOAD)) { echo 'onload="' . $ONLOAD . '"'; } ?>>
+      onload="<?php echo $ONLOAD; ?>">
 
 <!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -247,7 +250,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <tr bgcolor="#333366"><td colspan="2"><?php spacer(); ?></td></tr>
  <tr bgcolor="#666699">
    <td align="right" valign="top" colspan="2" class="quicksearch">
-    <form method="post" action="/search.php" class="thin">
+    <form method="post" action="/search.php" class="thin" name="topsearch">
 <?php
     if (isset($EXPL_LANG)) {
         echo '<input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';

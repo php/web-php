@@ -21,15 +21,45 @@ function boldEvents()
     // Get cookie if possible
     country = getCookie("COUNTRY");
     if (typeof(country) == "string") {
+        
         // Get country code from cookie
         country = country.substring(0, 3);
+        
         // If DOM is supported, get <span>s
         if (document.getElementsByTagName) {
+            
             spans = document.getElementsByTagName("span");
+            
             // Style every span bold which is for this country
             for (var i = 0; i < spans.length; i++) {
                 if (spans[i].className == "event_" + country) {
                     spans[i].style.fontWeight = "bold";
+                }
+            }
+        }
+    }
+}
+
+// Restore the last search as stored in a cookie
+function searchHistory()
+{
+    // Try to get the lastsearch cookie
+    lastSearch = getCookie("LAST_SEARCH");
+    if (typeof(lastSearch) == "string") {
+        
+        // Get pattern and show information from cookie
+        pattern = lastSearch.substr(0, lastSearch.indexOf(","));
+        option  = lastSearch.substr(lastSearch.indexOf(",") + 1);
+        
+        // Set pattern in form
+        document.forms["topsearch"].pattern.value = pattern;
+        
+        // Set the last selected search method in the dropdown
+        with (document.forms["topsearch"]) {
+            for (var i = 0; i < show.length; i++) {
+                if (show[i].value == option) {
+                    show[i].selected = true;
+                    break;
                 }
             }
         }
