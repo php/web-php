@@ -11,7 +11,7 @@ commonHeader("PHP Books");
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet"
-><IMG SRC="/gifs/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/phppr.s.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="183"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet"
 >PHP Pocket Reference</A><BR>
@@ -25,10 +25,10 @@ O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet"
-><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet">Professional PHP Programming</A><BR>
-by <A HREF="http://zend.com/comm_person.php?id=9">Jesus Castagnetto</A>, Harish Rawat, <A HREF="http://zend.com/comm_person.php?id=21">Sascha Schumann</A>, Chris Scollo, Deepak Veliath<BR> 
+by <A HREF="http://zend.com/comm_person.php?id=9">Jesus Castagnetto</A>, Harish Rawat, <A HREF="http://zend.com/zend/hof/sascha.php">Sascha Schumann</A>, Chris Scollo, Deepak Veliath<BR> 
 <SMALL>
 Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 <A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet">more info</A><BR>
@@ -38,7 +38,7 @@ Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet"
-><IMG SRC="/jpgs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/core-book.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="145"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet"
 >Core PHP Programming</A><BR>
@@ -54,7 +54,7 @@ Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/wwwphpnet"
-><IMG SRC="/gifs/medinets.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/medinets.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/wwwphpnet"
 >PHP3: Programming Browser-Based Applications</A><BR>
@@ -68,7 +68,7 @@ MacGraw-Hill, 2000, ISBN 0-07-135342-9, 552 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/wwwphpnet"
-><IMG SRC="/jpgs/hilton-willis.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/hilton-willis.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/wwwphpnet">Building Database Applications on the Web Using PHP3</A><BR>
 by Craig Hilton and Jeff Willis<BR>
@@ -81,7 +81,7 @@ Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/wwwphpnet"
-><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="143"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/wwwphpnet">PHP Essentials</A><BR>
 <SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
@@ -95,7 +95,7 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/wwwphpnet"
-><IMG SRC="/jpgs/php_fe.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/php_fe.jpg" BORDER=0 ALIGN="left" WIDTH=111"" HEIGHT="138"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/wwwphpnet">PHP Fast & Easy Web Development</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
@@ -108,7 +108,7 @@ Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/wwwphpnet"
-><IMG SRC="/jpgs/zandstra.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/zandstra.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="138"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/wwwphpnet">SAMS Teach Yourself PHP4 in 24 Hours</A><BR>
 by Matt Zandstra<BR>
@@ -121,7 +121,7 @@ Sams, June 2000, ISBN 0-6723-1804-0, 481 pages
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/wwwphpnet"
-><IMG SRC="/jpgs/ratschiller_gerken.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/ratschiller_gerken.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="143"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/wwwphpnet">Web Application Development with PHP 4.0</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR> 
@@ -136,7 +136,7 @@ New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/wwwphpnet"
-><IMG SRC="/jpgs/bible.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/bible.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/wwwphpnet">PHP 4 Bible</A><BR>
 by Tim Converse and Joyce Park<BR><SMALL>
@@ -147,7 +147,7 @@ IDG Books Worldwide, August 2000, ISBN 0-7645-4716-X<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/wwwphpnet"
-><IMG SRC="/jpgs/gilmore.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/gilmore.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="137"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/wwwphpnet">PHP and MySQL Web Development</A><BR>
 by Luke Welling and Laura Thomson<BR><SMALL>
@@ -158,7 +158,7 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet"
-><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet">Beginning PHP 4</A><BR>
 by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
@@ -169,7 +169,7 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet"
-><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="138"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet">PHP Developer's Cookbook</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and <A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes</A><BR><SMALL>
@@ -191,7 +191,7 @@ Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/07357090X/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet"
 ><IMG SRC="/jpgs/till_gerken.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet">PHP Functions Essential Reference</A><BR>
@@ -207,7 +207,7 @@ New Riders Publishing, April 2001, ISBN 0-7357-0970-X, 500 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07"
-><IMG SRC="/gifs/rasmus-kug.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/rasmus-kug.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="182"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07"
 >PHP kurz & gut</A><BR>
@@ -222,7 +222,7 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07"
-><IMG SRC="/jpgs/schmid_cartus.jpg" BORDER=0 ALIGN="left"
+><IMG SRC="/jpgs/schmid_cartus.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="164"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07"
@@ -241,7 +241,7 @@ Christian Wenz<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
-><IMG SRC="/gifs/book-php-dutch.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/book-php-dutch.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="158"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
@@ -268,7 +268,7 @@ by J&ouml;rg Krause<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07"
-><IMG SRC="/gifs/theis.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/theis.gif" BORDER=0 ALIGN="left" WIDTH="119" HEIGHT="167"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07"
@@ -282,7 +282,7 @@ by Thomas Theis<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07"
-><IMG SRC="/gifs/susanne_wigard.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/susanne_wigard.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="155"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07"
@@ -295,7 +295,7 @@ by Dr. Susanne Wigard<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet07"
-><IMG SRC="/gifs/databecker.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/databecker.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="155"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet07"
@@ -308,7 +308,7 @@ by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07"
-><IMG SRC="/jpgs/klaus_schmidt.jpg" BORDER=0 ALIGN="left"
+><IMG SRC="/jpgs/klaus_schmidt.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07"
