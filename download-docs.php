@@ -84,8 +84,8 @@ foreach ($formats as $formatname => $extension) {
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
 
-    // See if current language is preferred
-    if ($langcode == preferred_language()) { $preflang = TRUE; }
+    // See if current language is the preferred one
+    if ($langcode == $LANG) { $preflang = TRUE; }
     else { $preflang = FALSE; }
 
     // Reset files array and format counter

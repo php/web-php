@@ -86,7 +86,7 @@ teams are open to contributions though.
 foreach ($man_languages as $langnum => $langcode) {
 
     // Make preferred language bold
-    if ($langcode == preferred_language()) { echo "<b>"; }
+    if ($langcode == $LANG) { echo "<b>"; }
 
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
@@ -96,7 +96,7 @@ foreach ($man_languages as $langnum => $langcode) {
         echo '<a href="http://dev.nexen.net/docs/php/annotee/">[Special French]</a>, ';
     }
 
-    if ($langcode == preferred_language()) { echo "</b>"; }
+    if ($langcode == $LANG) { echo "</b>"; }
 
 }
 
@@ -107,10 +107,10 @@ foreach ($man_languages as $langnum => $langcode) {
 
 // List printer friendly pages of all manual languages
 foreach ($man_languages as $langnum => $langcode) {
-    if ($langcode == preferred_language()) { echo "<b>"; }
+    if ($langcode == $LANG) { echo "<b>"; }
     echo '<a href="/manual/' . $langcode . '/print/index.php">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
-    if ($langcode == preferred_language()) { echo "</b>"; }
+    if ($langcode == $LANG) { echo "</b>"; }
 }
 
 ?>
@@ -120,10 +120,10 @@ foreach ($man_languages as $langnum => $langcode) {
 
 // List printer friendly pages with notes of all manual languages
 foreach ($man_languages as $langnum => $langcode) {
-    if ($langcode == preferred_language()) { echo "<b>"; }
+    if ($langcode == $LANG) { echo "<b>"; }
     echo '<a href="/manual/' . $langcode . '/printwn/index.php">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
-    if ($langcode == preferred_language()) { echo "</b>"; }
+    if ($langcode == $LANG) { echo "</b>"; }
 }
 
 ?>

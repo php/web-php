@@ -26,8 +26,13 @@ if (!isset($_SERVER)) {
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
         
-// Load in always required parts
+// Site details (mirror site information)
 include_once 'site.inc';
+
+// Choose language used for translated parts
+include_once 'langchooser.inc';
+
+// Common layout functions
 include_once 'layout.inc';
 
 // This file is generated on rsync.php.net and propogated
