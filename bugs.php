@@ -686,7 +686,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if($edit==1) {
 				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			} else {
- 				echo "<tr><td colspan=2><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td></tr>";
+ 				echo "<tr><td align=right colspan=2><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td></tr>";
 				echo "<input type=hidden name=modify value=\"User Edit Bug\">\n";
 			}
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
