@@ -25,12 +25,15 @@ a:active {
 	background-color: transparent;
 }
 
-h1 {
-	font-size: 130%;
+h1, h2, h3, h4 {
 	font-weight: bold;
 	color: #000066;
 	background-color: transparent;
 }
+h1 { font-size: 130%; }
+h2 { font-size: 125%; }
+h3 { font-size: 110%; }
+h4 { font-size: 100%; }
 
 img {
 	border: 0px;
