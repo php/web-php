@@ -7,10 +7,11 @@ $SIDEBAR_DATA = '
 We do not distribute UNIX/Linux binaries. Most Linux
 distributions come with PHP these days, so if you do
 not want to compile your own, go to your distribution\'s
-download site. For Mac OS X binaries, go to '.
-make_link("http://www.entropy.ch/software/macosx/php/", "this page") . ',
-for RISC OS source and binaries, visit ' . 
-make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "this site") . '
+download site. Binaries available on external servers:
+<ul>
+<li>' . make_link("http://www.entropy.ch/software/macosx/php/", "Mac OS X") . '</li>
+<li>' . make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "RISC OS (with source)") . '</li>
+</ul>
 </p>
 
 <h3>Other Downloads</h3>
