@@ -290,11 +290,11 @@ function manual_notes_load($id)
     $hash = substr(md5($id), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
-
-    // Open the note file for reading and get the data
+                  
+    // Open the note file for reading and get the data (12KB)
     if ($fp = @fopen($notes_file, "r")) {
         while (!feof($fp)) {
-            $line = chop(fgets($fp, 8096));
+            $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             list($id, $sect, $rate, $ts, $user, $note) = explode("|", $line);
             $notes[] = array(
