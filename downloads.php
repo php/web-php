@@ -6,8 +6,10 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <h2>PHP 4</h2>
 <ul>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.0.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.0 Release Source</a></li> - 22 May 2000</li>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.0 Release Binaries for Win32</a> - 22 May 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Source</a></li> - 28 June 2000</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.1 Release Binaries for Win32</a> - 28 June 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+  <p>Java add-ons will be posted shortly.</p>
+<!--
   <p>Other add-ons:
   <ul>
     <li>Servlet Server API:
@@ -20,9 +22,10 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk13.zip&source_site=<?php echo $server; ?>">jdk1.3</a>
   </ul>
   <p>
+-->
   <LI>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
   <li>To download the latest development version, see the <a href="version4/cvs.php">instructions on using CVS</a>.</li>
-  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer Beta</a> for PHP 4.0.0 is available on Zend Technologies' web site.</li>
+  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer RC</a> for PHP 4.0.1 is available on Zend Technologies' web site.</li>
 </ul>
 
 <hr>
