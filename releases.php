@@ -26,6 +26,7 @@ site_header("Releases");
   <?php download_link('php-4.3.3.tar.bz2','Source (tar.bz2)'); ?>,
   <?php download_link('php-4.3.3.tar.gz','Source (tar.gz)'); ?>,
   <a href="http://museum.php.net/win32/php-4.3.3-Win32.zip">Windows binary</a>
+ </li>
 </ul>
 
 <h2>4.3.2</h2>
@@ -40,6 +41,7 @@ site_header("Releases");
   <?php download_link('php-4.3.2.tar.gz','Source (tar.gz)'); ?>,
   <a href="http://museum.php.net/win32/php-4.3.2-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.3.2-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.3.1</h2>
@@ -53,6 +55,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.3.1.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.3.1-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.3.1-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.3.0</h2>
@@ -66,6 +69,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.3.0.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.3.0-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.3.0-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.2.3</h2>
@@ -79,6 +83,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.2.3.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.2.3-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.2.3-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.2.2</h2>
@@ -92,6 +97,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.2.2.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.2.2-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.2.2-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.2.1</h2>
@@ -105,6 +111,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.2.1.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.2.1-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.2.1-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.2.0</h2>
@@ -118,6 +125,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.2.0.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.2.0-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.2.0-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.1.2</h2>
@@ -131,6 +139,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.1.2.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.1.2-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.1.2-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.1.1</h2>
@@ -144,6 +153,7 @@ site_header("Releases");
   <a href="http://museum.php.net/php4/php-4.1.1.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.1.1-Win32.zip">Windows binary</a>,
   <a href="http://museum.php.net/win32/php-4.1.1-installer.exe">Windows installer</a>
+ </li>
 </ul>
 
 <h2>4.0.6</h2>
@@ -156,6 +166,7 @@ site_header("Releases");
   Download:
   <a href="http://museum.php.net/php4/php-4.0.6.tar.gz">Source (tar.gz)</a>,
   <a href="http://museum.php.net/win32/php-4.0.6-Win32.zip">Windows binary</a>
+ </li>
 </ul>
 
 <h2>4.0.5</h2>
