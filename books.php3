@@ -108,8 +108,8 @@ by Stephen Spainhour and Robert Eckstein<BR>
 ><IMG SRC="/gifs/cvsbook.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
->Open Source Development With Cvs</A><BR>
-<SMALL>Learn How to Work With Open Source Software</SMALL><BR>
+>Open Source Development with CVS</A><BR>
+<SMALL>Learn how to Work with Open Source Software</SMALL><BR>
 by Karl Franz Fogel<BR>
 <SMALL><A HREF="http://cvsbook.red-bean.com/">more info (and many free chapters)</A><BR>
 </SMALL>
