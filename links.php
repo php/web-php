@@ -169,13 +169,6 @@ A ring of French PHP Sites<br></li>
 <li><a href="http://johng.free.fr/">FAQ of the French PHP newsgroup</a><br></li>
 
 </ul></li>
-<li><b>Dutch</b>
-<ul>
-
-<li><a href="http://php.pagina.nl/">Pagina</a><br>
-A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li>
-
-</ul></li>
 <li><b>Italian</b>
 <ul>
 
@@ -186,6 +179,13 @@ with a small PHP section<br></li>
 <li><a href="http://www.phpcenter.it/">PHPcenter.it</a><br>
 An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources<br></li>
+
+</ul></li>
+<li><b>Dutch</b>
+<ul>
+
+<li><a href="http://php.pagina.nl/">Pagina</a><br>
+A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li>
 
 </ul></li>
 <li><b>Brazilian</b>
