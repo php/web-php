@@ -5,26 +5,21 @@ commonHeader("Changes in Zend Engine 2.0", 1);
 ?>
 <h2>New Object Model.</h2>
 <p>
-The Zend Engine's handling of objects has been completely changed in 
-order to allow for new features, but also to increase its performance.
-Objects were handled in previous versions like primitive types (for 
-instance integers and strings). The drawback of this method is, that 
-semantically the whole object was copied when a variable was assigned 
-or parameters were passed to a method. The new approach refers to 
-objects by handle and not by value (one can think of a handle as an 
-object's ID).
+PHP's handling of objects has been completely rewritten, allowing for better performance and more
+features.  In previous versions of PHP, objects were handled like primitive types (for 
+instance integers and strings).  The drawback of this method was that semantically the whole object 
+was copied when a variable was assigned, or pass as a parameter to a method.  In the new approach, 
+objects are referenced by handle, and not by value (one can think of a handle as an object's 
+identifier).
 </p>
 <p>
-Many PHP programmers aren't even aware of the copying quirks of the old 
-object model and, therefore, there is a relatively good chance that the 
-amount of PHP applications that will work out of the box or after a very 
-small amount of modifications would be high.
+Many PHP programmers aren't even aware of the copying quirks of the old object model and, therefore, 
+the majority of PHP applications will work out of the box, or with very few modifications.
 </p>
 <h2>Private and Protected Members</h2>
 <p>
-The Zend Engine 2.0 introduces private and protected member variables. 
-Note that for performance reasons no error message is emitted in case of an 
-illegal access to a private or protectecd member variable.
+PHP5 introduces private and protected member variables, they allow do define the visibility of class
+properties.
 </p>
 
 <h3>Example</h3>
@@ -74,7 +69,7 @@ $obj->printHello();
 
 <h2>Private and protected methods</h2>
 <p>
-The Zend Engine 2.0 introduces private and protected methods.
+With PHP5 (Zend Engine 2), private and protected methods are also introduced.
 </p>
 
 <h3>Example</h3>
@@ -110,10 +105,9 @@ or "private" should run without modifications.
 
 <h2>Abstract Classes and Methods</h2>
 <p>
-The Zend Engine 2.0 introduces abstract classes and methods. An abstract 
-method only declares the method's signature and does not provide an 
-implementation. A class that contains abstract methods needs to be declared 
-abstract.
+PHP5 also introduces abstract classes and methods. An abstract method only declares the 
+method's signature and does not provide an implementation. A class that contains abstract 
+methods needs to be declared abstract.
 </p>
 <h3>Example</h3>
 <p>
@@ -165,9 +159,8 @@ Old code that has no user-defined classes or functions named 'interface' or
 
 <h2>Class Type Hints</h2>
 <p>
-While remaining loosely typed the Zend Engine 2.0 introduces the ability to use 
-class type hints to declare the expected class of objects that are passed as 
-parameters to a method.
+While remaining loosely typed PHP5 introduces the ability to use class type hints to declare 
+the expected class of objects that are passed as parameters to a method.
 </p>
 <h3>Example</h3>
 <p>
@@ -224,8 +217,8 @@ This syntax only applies to objects/classes, not built-in types.
 
 <h2>final</h2>
 <p>
-The Zend Engine 2.0 introduces the "final" keyword to declare final members and 
-methods.  Those cannot be overridden by sub-classes.
+PHP5 introduces the "final" keyword to declare final members and methods.  Methods and 
+members declared final cannot be overridden by sub-classes.
 </p>
 <h3>Example</h3>
 <p>
@@ -240,9 +233,9 @@ without modifications.
 </p>
 <h2>Object Cloning</h2>
 <p>
-The Zend Engine 1.0 offered no way a user could decide what copy constructor to run 
-when an object is duplicated. During duplication, the Zend Engine 1.0 did a bitwise 
-copy making an identical replica of all the object's properties.
+PHP4 (Zend Engine 1.0) offered no way a user could decide what copy constructor to run 
+when an object is duplicated. During duplication, PHP4 did a bit for bit copy making an 
+identical replica of all the object's properties.
 </p>
 <p>
 Creating a copy of an object with fully replicated properties is not always the wanted 
@@ -304,19 +297,17 @@ print $obj->address . "\n";
 <p>
 The Zend Engine allows developers to declare constructor methods for classes. Classes 
 which have a constructor method call this method on each newly-created object, so it is 
-suitable for any initialization that the object may need before it can be used.
+suitable for any initialization that the object may need before it is used.
 </p>
 <p>
-With the Zend Engine 1.0, constructor methods were class methods that had the same name as 
-the class itself. Since it is very common to call parent constructors from derived classes, 
-the way the Zend Engine 1.0 worked made it a bit cumbersome to move classes around in a large 
-class hierarchy. If a class is moved to reside under a different parent, the constructor name 
-of that parent changes as well, and the code in the derived class that calls the parent 
-constructor has to be modified.
+With PHP4, constructor methods were class methods that had the same name as the class itself. Since 
+it is very common to call parent constructors from derived classes, the way PHP4 worked made it a bit 
+cumbersome to move classes around in a large class hierarchy. If a class is moved to reside under a 
+different parent, the constructor name of that parent changes as well, and the code in the derived class 
+that calls the parent constructor has to be modified.
 </p>
 <p>
-The Zend Engine 2.0 introduces a standard way of declaring constructor methods by calling them 
-by the name __construct().
+PHP5 introduces a standard way of declaring constructor methods by calling them by the name <code>__construct()</code>.
 </p>
 <h3>Example</h3>
 <?php highlight_string('<?php
@@ -337,7 +328,7 @@ $obj = new BaseClass();
 $obj = new SubClass();
 ?>'); ?>
 <p>
-For backwards compatibility, if the Zend Engine 2.0 cannot find a <code>__construct()</code> function 
+For backwards compatibility, if PHP5 cannot find a <code>__construct()</code> function 
 for a given class, it will search for the old-style constructor function, by the name of the 
 class. Effectively, it means that the only case that would have compatibility issues is if the 
 class had a method named <code>__construct()</code> which was used for different semantics.
@@ -346,11 +337,11 @@ class had a method named <code>__construct()</code> which was used for different
 <p>
 Having the ability to define destructors for objects can be very useful. Destructors can log messages 
 for debugging, close database connections and do other clean-up work. No mechanism for object destructors 
-existed in Zend Engine 1.0, although PHP had already support for registering functions which should be 
+existed in PHP4, although PHP had already support for registering functions which should be 
 run on request shutdown.
 </p>
 <p>
-Zend Engine 2.0 introduces a destructor concept similar to that of other object-oriented languages, such 
+PHP5 introduces a destructor concept similar to that of other object-oriented languages, such 
 as Java: When the last reference to an object is destroyed the object's destructor, which is a class method 
 name %__destruct()% that recieves no parameters, is called before the object is freed from memory.
 </p>
@@ -378,7 +369,7 @@ in the destructor body.
 </p>
 <h2>Constants</h2>
 <p>
-Zend Engine 2.0 introduces per-class constants:
+PHP5 introduces per-class constants:
 </p>
 <p>
 <?php highlight_string('<?php
@@ -390,7 +381,7 @@ echo "Foo::constant = " . Foo::constant . "\n";
 ?>'); ?>
 </p>
 <p>
-Zend Engine 2.0 allows for expressions within constants, however, constants are evaluated at compile time, therefore
+PHP5 allows for expressions within constants, however, constants are evaluated at compile time, therefore
 no constants can be declared that rely on runtime information.
 </p>
 <?php highlight_string('<?php
@@ -406,7 +397,7 @@ Old code that has no user-defined classes or functions named 'const' will run wi
 </p>
 <h2>Exceptions</h2>
 <p>
-Zend Engine 1.0 had no exception handling. Zend Engine 2.0 introduces a exception model similar to 
+PHP4 had no exception handling. PHP5 introduces a exception model similar to 
 that of other programming languages.
 </p>
 <h3>Example</h3>
@@ -431,7 +422,7 @@ without modifications.
 </p>
 <h2>Dereferencing objects returned from functions</h2>
 <p>
-In Zend Engine 1.0 it wasn't possible to dereference objects returned by functions and make further
+In PHP4 it wasn't possible to dereference objects returned by functions and make further
 method calls on those objects.  With the advent of Zend Engine 2, the following is now possible:
 </p>
 <p>
@@ -474,7 +465,7 @@ print foo::$my_static;
 </p>
 <h2>Static Methods</h2>
 <p>
-The Zend Engine 2.0 introduces the 'static' keyword to declare a method static, thus 
+PHP5 introduces the 'static' keyword to declare a method static, thus 
 callable from outside the object context.
 </p>
 <h3>Example</h3>
@@ -494,7 +485,7 @@ The pseudo variable $this is not available inside a method that has been declare
 </p>
 <h2>instanceof</h2>
 <p>
-Zend Engine 2 introduces the <code>instanceof</code> keyword, that allows you to ascertain whether
+PHP5 introduces the <code>instanceof</code> keyword, that allows you to ascertain whether
 or not an object is an instance of a class, or extends a class, or implements an interface.
 </p>
 <h3>Example</h3>
@@ -527,7 +518,7 @@ function my_function(&$var = null) {
 </p>
 <h2>__autoload()</h2>
 <p>
-The __autoload() interceptor function will be automatically called when an undeclared class 
+The <code>__autoload()</code> interceptor function will be automatically called when an undeclared class 
 is to be instantiated. The name of that class will be passed to the __autoload() interceptor function 
 as its only argument.
 </p>
