@@ -1,41 +1,48 @@
 <?php
-/* if you're reading this, it isn't because you've found a security hole.
-   this is an open source website. read and learn! */
+/* 
+   If you're reading this, it isn't because you've found a security hole.
+   this is an open source website. read and learn!
+*/
 
 /* ------------------------------------------------------------------------- */
 
-/* Get the modification dates of the main PHP file */
+// Get the modification date of this PHP file
 $timestamps[] = @getlastmod();
 
-/* The date of prepend.inc indicates the age of ALL
+/*
+   The date of prepend.inc represents the age of ALL
    included files. Please touch it if you modify an
-   another include file. The cost of stat'ing them
-   all is prohibitive. Also note the file path,
-   we aren't using the include path here. */
+   another include file (and the modification affects
+   the display of the index page). The cost of stat'ing
+   them all is prohibitive. Also note the file path,
+   we aren't using the include path here.
+*/
 $timestamps[] = @filemtime("include/prepend.inc");
 
-/* Calendar is the only dynamic feature on this page. */
+// Calendar is the only dynamic feature on this page
 $timestamps[] = @filemtime("backend/events.csv");
 
-/* The latest of these modification dates is our real
-   Last-Modified date. */
+// The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
 
-/* Note that this is not a RFC 822 date (the tz is always GMT) */
-$tsstring = gmdate("D, d M Y H:i:s ",$timestamp)."GMT";
+// Note that this is not a RFC 822 date (the tz is always GMT)
+$tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
+// Check if the client has the same page cached
 if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
-    /* The UA has the exact same page we have. */
     header("HTTP/1.1 304 Not Modified");
     exit();
-} else {
-    header("Last-Modified: ".$tsstring);
+}
+// Inform the user agent what is our last modification date
+else {
+    header("Last-Modified: " . $tsstring);
 }
 
-require_once 'prepend.inc';
+include_once 'prepend.inc';
 
+// This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
-<br>
+<br />
 <h3>What is PHP?</h3>
 
 <p>
@@ -60,25 +67,25 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
 
 <h3>' . make_link("/thanks.php", "Thanks To") . '</h3>
-&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
-&nbsp; ' . make_link("http://promote.pair.com/direct.pl?php.net", "pair Networks") . '<br>
-&nbsp; ' . make_link("http://www.rackshack.net/", "RackShack") . ' <br>
-&nbsp; ' . make_link("http://www.redundant.com/", "Redundant Networks") . '<br>
-&nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
+&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br />
+&nbsp; ' . make_link("http://promote.pair.com/direct.pl?php.net", "pair Networks") . '<br />
+&nbsp; ' . make_link("http://www.rackshack.net/", "RackShack") . ' <br />
+&nbsp; ' . make_link("http://www.redundant.com/", "Redundant Networks") . '<br />
+&nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br />
 <h3>Related sites</h3>
-&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
-&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br>
-&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br>
-&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br>
+&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br />
+&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br />
+&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br />
+&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br />
 <h3>Community</h3>
-&nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br>
-&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
-&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
+&nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br />
+&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br />
+&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br />
 
 <h3>Syndication</h3>
 
 <p>
-You can grab our news as an <img src="/gifs/rss10.gif" align="absmiddle">
+You can grab our news as an <img src="/gifs/rss10.gif" align="absmiddle" alt="XML" />
 (RSS) feed via a daily dump in a file named <a href="/news.rss">news.rss</a>.
 </p>
 
@@ -89,55 +96,102 @@ Please submit website bugs in the ' .
 make_link('http://bugs.php.net/', 'bug system') . '.
 </p>';
 
-// Find the type of logo provided and start the right
-// sidebar with it if a mirror banner is available
+// Possible mirror provider logo
+// image types in priority order
 $types = array("gif", "jpg", "png");
+
+// Go through all possible types
 while (list(,$ext) = each($types)) {
+    
+    // Check if file exists for this type
     if (file_exists("backend/mirror." . $ext)) {
-        $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n";
+        
+        // Add text to rigth sidebar
+        $RSIDEBAR_DATA .= "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
 
-		$img = make_image('mirror.'.$ext, mirror_provider(), false, false, 'backend', 0);
+        // Create image HTML code
+        $img = make_image('mirror.' . $ext, mirror_provider(), false, false, 'backend', 0);
+        
+        // Add size information depending on mirror type
         if (is_primary_site() || is_backup_primary()) {
-			$img = resize_image($img, 125, 125);
-		} else {
-			$img = resize_image($img, 120, 60);
-		}
+            $img = resize_image($img, 125, 125);
+        } else {
+            $img = resize_image($img, 120, 60);
+        }
 
-		$RSIDEBAR_DATA .= make_link( mirror_provider_url(), $img ) .
-			'</center><br />' . 
-			hdelim();
+        // End mirror specific part
+        $RSIDEBAR_DATA .= make_link(mirror_provider_url(), $img) . 
+                          '</div><br />' . hdelim();
+        
+        // We have found an image
         break;
     }
 }
 
-// Read events CSV file, and appanend event information to right sidebar
+// Read in events CSV file
 $fp = @fopen("backend/events.csv", "r");
+
+// If we were able to open the file
 if ($fp) {
+    
+    // Current month number (for delimiter additions)
     $cm = 0;
+    
+    // Event duplication check hash
+    $seen = array();
+    
+    // While we can read the events file
     while (!feof($fp)) {
+
+        // Get information event elements from file
         list($d, $m, $y, $url, $desc, $id) = fgetcsv($fp, 8192);
-        // fgetcvs returns an array with a single null element for a blank line
+
+        // Fgetcvs() returns an array with a single null element
+        // for a blank line, which we need to skip
         if ($d === NULL) { continue; }
+        
+        // If the month number changed
         if ($cm != (int) $m) { 
+            
+            // If we are not at the begining
             if ($cm) {
                 $RSIDEBAR_DATA .= "<br />\n";
-            } else {
-                $RSIDEBAR_DATA .= '<center><h3>Upcoming Events<br /><a href="submit-event.php">[add event]</a></h3></center>';
+            } 
+            // If we are at the begining
+            else {
+                $RSIDEBAR_DATA .= '<div align="center"><h3>Upcoming Events<br /><a href="submit-event.php">[add event]</a></h3></div>';
             }
+
+            // Update current month information
             $cm = (int) $m;
-            $RSIDEBAR_DATA .= "<h4>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</h4>\n"; 
-            unset($seen);
+            
+            // Add month name
+            $RSIDEBAR_DATA .= "<h4>" . strftime('%B', mktime(12, 0, 0, $cm, $d, $y)) . "</h4>\n"; 
+            
+            // We have not seen any events in this month
+            $seen = array();
         }
+        
+        // There is no event with this description in this month
         if (!$seen[$desc]) {
-            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">". stripslashes($desc)."</a><br>\n";
+            // Add event to sidebar
+            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">" . stripslashes($desc) . "</a><br />\n";
+            // Set seen flag
             $seen[$desc] = true;
         }
     }
+
+    // Close file (all events displayed)
     fclose($fp);
 }
 
+// Write out common header
 commonHeader("Hypertext Preprocessor");
+
+// Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
+
+// Here come the news items...
 ?>
 
 <?php print_link("http://www.mysql.com/events/uc2003/", make_image("mysqluc2003", "MySQL Users Conference and Expo 2003", "right") ); ?>
