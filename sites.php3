@@ -120,6 +120,7 @@ right away.</blockquote>
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
+	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("EduTest.Com","www.edutest.com");
 	site("film.at - movie listings for Austria","www.film.at");
@@ -132,6 +133,7 @@ right away.</blockquote>
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("Miss USA 1999","www.missusa.com");
 	site("My Video Store","www.myvideostore.com");
+	site("MysteryGuide.com","www.mysteryguide.com");
 	site("O'Brien's Cafe","www.obrienscafe.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
@@ -189,6 +191,7 @@ right away.</blockquote>
 	site("NASA - Jet Propulsion Laboratory");
 	site("PalmShop","www.palmshop.de");
 	site("Wildtangent","www.wildtangent.com");
+	site("ZeroKnowledge.com","josb.zeroknowledge.com");
 	siteEnd();
 
 /* Internet Services */
@@ -204,7 +207,9 @@ right away.</blockquote>
 	site("InfoMak","www.infomak.com");
 	site("Infoseek Investor Relations","www.ir-infoseek.com");
 	site("Kattare's Virtual Web Service","www.kattare.com");
+	site("LocateIndia.com","www.locateindia.com");
 	site("Mail Chek","mail.chek.com");
+	site("MailFriends.com","www.mailfriends.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
 	site("PBM Online Services","www.ndw.de");
@@ -213,6 +218,7 @@ right away.</blockquote>
 	site("Terra Firma Design","www.terrafirmadesign");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
+	site("WhereIs Street Atlas (Australia)","www.whereis.com.au");
 	site("WhoBuiltIt","www.whobuiltit.com");
 	site("zcentral.com","www.zcentral.com");
 	site("Zorango.com","www.zorango.com");
@@ -280,6 +286,7 @@ right away.</blockquote>
 	site("Association of Internet Professionals","www.association.org");
 	site("Global Rotaract Information Center", "www.rotaract.org/");
 	site("Humanities Web","humanitiesweb.org");
+	site("Scram.de","www.scram.de");
 	site("The Long Now Foundation","www.longnow.org");
 	site("The Jazz Journalists Association","www.jazzhouse.org");
 	site("National Marrow Donor Program","www.marrow.org");
@@ -345,6 +352,7 @@ right away.</blockquote>
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("Arena Fan","www.arenafan.com");
 	site("BART's Water Sports","www.bartswatersports.com");
+	site("BuyMP3.com","www.buymp3.com");
 	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("Coconut Beach","coconutbeach.com");
@@ -377,6 +385,7 @@ right away.</blockquote>
 	title("Sports");
 	siteStart();
 	site("Disc Golf Birmingham","discgolf.bham.al.us");
+	site("GoASU.com","www.goasu.com");
 	site("Indianapolis 500 Web Site","www.indy500.com");
 	site("Jason Kidd's Site","www.jasonkidd.net");
 	site("Oakland Raiders","www.raiders.com");
@@ -407,6 +416,7 @@ right away.</blockquote>
 	site("Centro Turistico Studentesco","www.cts.it");
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
+	site("LondonTown.com","www.londontown.com");
 	site("Oaxaca State Tourist Guide","oaxaca-travel.com");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
