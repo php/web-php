@@ -20,37 +20,45 @@ get addressed.  If you see a problem, please tell us so we can address it.
 <h3>Mailing Lists</h3>
 <P>
 One of the best resources is a very friendly and helpful mailing
-lists.  There are a couple of PHP-related mailing lists available.
-The main list for PHP3 is: <b>php3@lists.php.net</b>.  You may
+lists.  There are a few PHP-related mailing lists available.
+
+<p>The main list for PHP3 users is <b>php3@lists.php.net</b>.  You may
 subscribe to this list by sending a blank message to <a href="mailto:
 php3-subscribe@lists.php.net">php3-subscribe@lists.php.net</a>.
-</P>
+
+<p>If you are interested in helping out with the
+development of PHP3 you should join the developers'
+list by sending an empty message to <a href="mailto:
+php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>.
+
+<p>There is also a list for Italian PHP users, which you can subscribe
+to by sending a message with the word "subscribe" in the subject to <a
+href="mailto:php3-it-request@michel.enter.it">php3-it-request@michel.enter.it</a>.
+
 <P>
-Archives for this list can be found at: 
+Archives for some of these mailing lists can be found at: 
 </P>
+
 <ul>
 <li><a href="http://php.gotocity.com/mail/">PHP3 List at www.phpbuilder.com</a>
 <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
 <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List</a>
-<li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List (going back further than the above)</a>
+<li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List</a>
 </ul>
+
 <P>
-<b>Warning:</b> The PHP3 mailing list gets close to 2500 messages per month currently.  Do the math.  
-That translates to about 80 messages per day.  If your mailbox can't handle this sort of traffic you 
-might want to consider subscribing to the digest list instead, at
-<a href="mailto:php3-digest-subscribe@lists.php.net">php3-digest-subscribe@lists.php.net</a> (two messages per day).
-You can also read the mailing list on the above web interface, or if you like reading
-things with a news reader, you can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
-</P>
+<b>Warning:</b> The PHP users mailing list gets close to 2500 messages
+per month currently.  Do the math.  That translates to about 80
+messages per day.  If your mailbox can't handle this sort of traffic
+you might want to consider subscribing to the digest list instead, at <a
+href="mailto:php3-digest-subscribe@lists.php.net">php3-digest-subscribe@lists.php.net</a>
+(two messages per day).  You can also read the mailing list on the above
+web interface, or if you like reading things with a news reader, you can 
+read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
+
 <P>
 You can search the mailing lists right from this website from <A HREF="/search.php3">the search page</A>
 or by using the search button on the top-right of every page.
-</P>
-<P>
-If you are interested in helping out with the
-development of PHP3 you should join the developers'
-list by sending an empty message to <a href="mailto:
-php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>.
 </P>
 
 <h3>Sample Code</h3>
@@ -71,10 +79,10 @@ CVS tree</a>.
 
 <h3>Instant Resource Center</h3>
 <P>
-Otherwise known as IRC or Internet Relay Chat.  Here you can usually find experienced 
-PHP people sitting around doing nothing on the #php channel on EFNet.  If you don't know 
-what IRC is you can learn more about it at <a href="http://www.irchelp.org">www.irchelp.org</a>.
-</P>
+Otherwise known as IRC or Internet Relay Chat.  Here you can usually find
+experienced PHP people sitting around doing nothing on the #php channel
+on EFNet.  If you don't know what IRC is you can learn more about it at
+<a href="http://www.irchelp.org">www.irchelp.org</a>.
 
 <?
 commonFooter();
