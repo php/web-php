@@ -206,7 +206,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 4.3.8 released!</h1>
 <p>
  <span class="newsdate">[13-Jul-2004]</span>
- PHP Development Team is would like to announce the immediate availability of <a href="/downloads.php">PHP 4.3.8</a>.
+ PHP Development Team would like to announce the immediate availability of <a href="/downloads.php">PHP 4.3.8</a>.
  This release is made in response to several security issues that have been discovered since the
  4.3.7 release. All users of PHP are strongly encouraged to upgrade to PHP 4.3.8 as soon as possible.
 </p>
