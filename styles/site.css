@@ -97,6 +97,7 @@ div.indent {
 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
+	list-style-type: square;
 }
 
 em {
@@ -111,6 +112,11 @@ ul.simple {
 ul.simple li {
 	padding: 0px;
 	list-style-type: none;
+}
+
+.md5sum {
+	color: #6666cc;
+	background-color: transparent;
 }
 
 /* Content are styles ----------------------------------------------------- */
@@ -274,13 +280,21 @@ table.standard th {
 	background-color: #cccccc;
 	color: inherit;
 }
+table.standard td.highlight {
+	background-color: #ffffcc;
+	color: inherit;
+}
 table.standard td.sub, table.standard th.sub,
-table.standard th.subr {
+table.standard th.subr, table.standard th.subl {
 	background-color: #dddddd;
 	color: inherit;
 }
 table.standard th.subr {
 	text-align: right;
+	vertical-align: top;
+}
+table.standard th.subl {
+	text-align: left;
 	vertical-align: top;
 }
 
