@@ -17,18 +17,18 @@
 	title("Hi-Tech");
 
 
-	echo "</tr><tr><td align=top>\n";
+	echo "</tr><tr><td valign=top>\n";
 
 	/* Sports Teams */
 	site("NFL's Denver Broncos","www.denverbroncos.com");
 	site("NFL's Oakland Raiders","www.raiders.com");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 
 	/* Auto Industry */
 	site("Mitsubishi Motors","www.mitsucars.com");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 
 	/* Hi-Tech Industry */
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
@@ -42,14 +42,14 @@
 	title("Travel & Tourism");
 	title("Religious");
 
-	echo "</tr><tr><td align=top>\n";
+	echo "</tr><tr><td valign=top>\n";
 
 	/* Telecommunications */
 	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
 	site("Southwestern Bell","WWW.SBWireless.COM");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Travel */
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
@@ -58,7 +58,7 @@
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Religious */
 	site("Kenneth Copeland Ministries","kcm.org");
 	site("Christian Financial Concepts","cfcministry.org");
@@ -68,16 +68,17 @@
 	title("Large ISP's");
 	title("Computer Software");
 
-	echo "</tr><tr><td align=top>\n";
+	echo "</tr><tr><td valign=top>\n";
 	/* Newspapers & Magazines */
 	site("Børsen - Danish Business Daily","www.borsen.dk");
 	site("Computer Currents","www.computercurrents.com");
 	site("UPI Archives","upi.siteways.com");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Recreation */
+	site("Netvision","www.netvision.net.il");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Computer Software */
 	site("Knowledge Adventure","www.adventure.com");
 	site("C2Net Software Inc.","www.c2.net");
@@ -88,14 +89,14 @@
 	title("Government");
 	title("Educational");
 
-	echo "</tr><tr><td align=top>\n";
+	echo "</tr><tr><td valign=top>\n";
 	/* Military */
 	site("US Army Publishing Agency","www-usappc.hoffman.army.mil");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Government */
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Educational */
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
@@ -107,15 +108,15 @@
 	title("Not-for-Profit");
 	title("Miscellaneous");
 
-	echo "</tr><tr><td align=top>\n";
+	echo "</tr><tr><td valign=top>\n";
 	/* Service Industry */
 	site("SuperCuts","www.supercuts.com");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Not-for-Profit */
 	site("National Marrow Donor Program","www.marrow.org");
 
-	echo "<br></td><td align=top>\n";
+	echo "<br></td><td valign=top>\n";
 	/* Misc. */
 	site("Internet Weather Report","www.internetweather.com");
 
