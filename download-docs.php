@@ -10,6 +10,13 @@ is various languages, even in printer
 friendly HTML format.
 </p>
 
+<h3>Download problems?</h3>
+<p>
+Our downloads on the main php.net server are hosted on port 8000.
+If your setup can\'t handle this, please choose another mirror
+site, and try the download page there.
+</p>
+
 <h3>File sizes and dates</h3>
 <p>
 If you are using a capable browser, the file size and
