@@ -134,6 +134,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>10th Release of the PHP Manual CHM Edition</h1>
+<p>
+<font class="newsdate">[29-Oct-2002]</font> The 10th sample of the CHM edition
+is available for download from today. The sample probably fixes the copy
+to clipboard issues experienced by some users, and it's also a content update
+with actual manual text, mirrors list and user notes.
+<?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for download"); ?>,
+and please send feedback to <?php print_link("mailto:php-doc-chm@lists.php.net",
+"the edition's dedicated mailing list"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
 <p>
 <font class="newsdate">[28-Oct-2002]</font>
@@ -257,23 +272,6 @@ An idea who's time has come, don't miss this opportunity to attend the
 only conference in the US is placing PHP front and center as the language
 for solving web problems. PHPCon 2002, October 24 & 25, 2002, Millbrae,
 California.</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
-
-<h1>New Release of the PHP Manual CHM Edition</h1>
-<p>
-<font class="newsdate">[04-Sept-2002]</font> The 9th sample of the CHM edition is out now.
-This sample includes a workaround for the most annoying IE6 bug we met so far,
-and also simplifies the skin choosing process putting all available skins to
-a dropdown list. Every designer is welcome to make their own skins and submit
-them for inclusion in the standard set or distribute in our soon-to-be online
-skin repository.
-<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
-and please send us your feedback to our <?php print_link("mailto:php-doc-chm@lists.php.net",
-"dedicated mailing list"); ?>.
-</p>
 
 <?php echo hdelim(); ?>
 
