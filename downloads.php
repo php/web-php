@@ -68,10 +68,10 @@ change mirrors at the bottom of the page.
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link("php-4.2.0-Win32.zip", "PHP 4.2.0 zip package"); ?> - 12 March 2002<br>
+  <li><?php download_link("php-4.2.0-Win32.zip", "PHP 4.2.0 zip package"); ?> - 22 April 2002<br>
   (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
   support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php-4.2.0-installer.exe", "PHP 4.2.0 installer"); ?> - 12 March 2002<br>
+  <li><?php download_link("php-4.2.0-installer.exe", "PHP 4.2.0 installer"); ?> - 22 April 2002<br>
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
@@ -125,7 +125,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
-      <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?></li>
+      <li><?php download_link("php-3.0.18.tar.gz", "PHP 1.0.18 Smurce Code"); ?></li>
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
