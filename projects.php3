@@ -146,6 +146,13 @@ A web based recipe calculator with a recipe database and other beer related good
 a very complete and complex site and not your average, &quot;duh.. I like beer site&quot;.
 <? endEntry();?>
 
+<? makeEntry("phpMyAdmin","www.htmlwizard.net/phpMyAdmin/","Tobias Ratschiller"
+,"tobias@dnet.it"); ?>
+phpMyAdmin is intended to handle the basic adminstration of MySQL. Currently it can create and drop 
+databases and tables, modify, delete and add records and keys and execute any SQL-statement. It also 
+features an overview of MySQL's activity and can import flat-file databases.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
