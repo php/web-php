@@ -899,10 +899,12 @@ should check to make sure that the configuration file you are adding the AddType
     </PRE>
     <P>
     </DD>
+
   <DT><B>
     <a name="8.5">8.5</a> What happened to the securevar() function that was in PHP2?  How can
 	I make sure that a GET-method variable does not overwrite a POST-method one?
   </B></DT>
+  <DD>
 	The securevar() function on PHP2 was a badly named function.  It gave the impression that
 	when used the POST-method was secure.  It is not.  It is only slightly more difficult to
 	fake POST-method variables than GET-method ones.
