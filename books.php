@@ -50,7 +50,7 @@ $books = array (
       "Leon Atkinson",    #author(s)
       "http://zend.com/comm_person.php?id=30",    #author_link(s)
       "core-book.jpg",    #img
-      "Foreword by ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans")."<BR>".
+      "Foreword by ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans")."<br>".
           "Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages",    #info
       "http://www.leonatkinson.com/index.php3?screen=eng_book"    #info_link
    ),
@@ -111,10 +111,10 @@ $books = array (
       array("Tobias Ratschiller", "Till Gerken"), #author(s)
       array("http://zend.com/comm_person.php?id=7","http://zend.com/comm_person.php?id=11"),  #author_link(s)
       "ratschiller_gerken.jpg",   #img
-      "Contains Official Zend API Documentation<BR>" .
+      "Contains Official Zend API Documentation<br>" .
           "With contributions by Zend Technologies' " .
           make_link("http://zend.com/comm_person.php?id=12", "Zeev Suraski") . " and " .
-          make_link("http://zend.com/zend/hof/andi.php", "Andi Gutmans") . "<BR>\n" .
+          make_link("http://zend.com/zend/hof/andi.php", "Andi Gutmans") . "<br>\n" .
           "New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages",  #info
       "http://www.phpwizard.net/book/"    #info_link
    ),
@@ -175,7 +175,7 @@ $books = array (
       array("Sterling Hughes","Andrei Zmievski"), #author(s)
       array("http://zend.com/zend/hof/sterling.php","http://zend.com/comm_person.php?id=24"), #author_link(s)
       "zmievski.jpg", #img
-      "Foreword by " . make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<BR>\n" .
+      "Foreword by " . make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<br>\n" .
           "Sams, November 2000, ISBN 0-6723-1924-1, 505 pages", #info
       ""  #info_link
    ),
@@ -260,13 +260,13 @@ $books = array (
       array("http://zend.com/zend/hof/schmid.php", false), #author_link(s)
       "schmid_cartus.jpg", #img
       "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
-          " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<BR>\n" .
+          " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br>\n" .
           "Unter Mitarbeit von "
 	  . make_link("http://www.zend.com/comm_person.php?id=38", "Wofgang Drews, ")
 	  . make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") 
 	  . make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") 
 	  . " und "
-          . "Christian Wenz<BR>\n" .
+          . "Christian Wenz<br>\n" .
           "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages", #info
       "http://www.php-buch.de/",  #info_link
       "de" #lang
@@ -594,7 +594,7 @@ $books = array (
       array("Randy Jay Yarger","George Reese","Tim King"), #author(s)
       "", #author_link(s)
       "mysql-book.gif", #img
-      "O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<BR>\n" .
+      "O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<br>\n" .
           "Also available in ".make_link("http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872","Russian"), #info
       "", #info_link
       ""  #lang
@@ -621,7 +621,7 @@ $books = array (
       array("Stephen Spainhour","Robert Eckstein"), #author(s)
       "", #author_link(s)
       "webmaster-book.gif", #img
-      "Includes a large chapter on PHP written by ".make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<BR>\n" .
+      "Includes a large chapter on PHP written by ".make_link("http://zend.com/zend/hof/rasmus.php", "Rasmus Lerdorf") . "<br>\n" .
          "O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages", #info
       "http://www.oreilly.com/catalog/webmaster2/", #info_link
       ""  #lang
@@ -703,7 +703,7 @@ function showBook($one_book) {
     echo "<td>\n";
     print_link($title_link, make_image("books/".$image, $img_title, false, false, false, 1) );
     echo "<br>\n</td>\n";
-    echo "<td>\n";
+    echo "<td><p>\n";
     echo $title . "\n";
     echo 'by ';
     if ($author_link) {
@@ -715,7 +715,7 @@ function showBook($one_book) {
     if ($info || $lang!='en') {
         echo "<p>\n";
         if ($lang!='en') {
-            echo 'in ' . $langs[$lang] . "<BR>\n";
+            echo 'in ' . $langs[$lang] . "<br>\n";
         }
         echo $info . "</p>\n";
     }
@@ -747,51 +747,50 @@ about that subject.
 <?php } ?>
 
 <P>
-There may be more books available that we don't know of yet!  You can search
+There may be more books available that we don't know of yet! You can search
 <A HREF="http://www.amazon.com/exec/obidos/redirect-home/wwwphpnet">Amazon.com</A>
 for PHP related stuff by using this form (or go directly to
 <A HREF="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07"
 >Amazon.de</A> or
 <A HREF="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f"
->Amazon.fr</A> and
-search there):
+>Amazon.fr</A> and search there):
 </P>
 
 <p>
-<FORM METHOD="get" ACTION="http://www.amazon.com/exec/obidos/external-search">
-<INPUT TYPE="hidden" NAME="tag" VALUE="wwwphpnet">
+<form method="get" action="http://www.amazon.com/exec/obidos/external-search">
+<input type="hidden" name="tag" value="wwwphpnet">
 Search Amazon for
-<SELECT NAME="mode">
-<OPTION VALUE="blended">All Products
-<OPTION VALUE="books" SELECTED>Books
-<OPTION VALUE="music">Popular Music
-<OPTION VALUE="classical-music">Classical Music
-<OPTION VALUE="video">Video
-<OPTION VALUE="toys">Toys
-<OPTION VALUE="electronics">Electronics
-</SELECT>
+<select name="mode">
+<option value="blended">All Products
+<option value="books" selected>Books
+<option value="music">Popular Music
+<option value="classical-music">Classical Music
+<option value="video">Video
+<option value="toys">Toys
+<option value="electronics">Electronics
+</select>
 about
-<SELECT NAME="keyword">
-<OPTION SELECTED>PHP
-<OPTION>Apache
-<OPTION>Linux
-<OPTION>MySQL
-<OPTION>mSQL
-<OPTION>Oracle
-<OPTION>IMAP
-<OPTION>LDAP
-<OPTION>XML
-<OPTION>Adabas
-<OPTION>Sybase
-<OPTION>Microsoft SQL
-<OPTION>Microsoft NT
-<OPTION>ODBC
-</SELECT>
-<INPUT TYPE="submit" BORDER=0 VALUE="Search" NAME="Search">
-</FORM>
+<select name="keyword">
+<option selected>PHP
+<option>Apache
+<option>Linux
+<option>MySQL
+<option>mSQL
+<option>Oracle
+<option>IMAP
+<option>LDAP
+<option>XML
+<option>Adabas
+<option>Sybase
+<option>Microsoft SQL
+<option>Microsoft NT
+<option>ODBC
+</select>
+<input type="submit" border="0" value="Search" name="Search">
+</form>
 </p>
 
-<P><BR></P>Jump to:<?php
+<p><br></p>Jump to:<?php
 
   echo '<ul>';
   foreach ($books as $btype => $book_list) {
@@ -802,7 +801,7 @@ about
 
   if (isset($type)) {
     echo '<h1>' . $book_types[$type] . '</h1>';
-    echo '<table border=0 cellpadding=5>';
+    echo '<table border="0" cellpadding="5">';
     foreach ($books[$type] as $one_book) {
       showBook($one_book);
     }

@@ -1,29 +1,24 @@
 <?php
 require_once 'prepend.inc';
 
-if(isset($save) && isset($user) && isset($pw)) {
-    SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
+if (isset($save) && isset($user) && isset($pw)) {
+  setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 }
 
 /* See the end of the script for the table layout. */
 
-if(!isset($status)) $status = '';
-if(!isset($user))   $user   = '';
-if(!isset($pw))     $pw     = '';
+if (!isset($status)) $status = '';
+if (!isset($user))   $user   = '';
+if (!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
-
-if (strstr($MYSITE,"www.php.net")) {
-	$dbhost="localhost";
-	$dbuser="nobody";
-	$dbpwd="";
-} else if (strstr($MYSITE,"localhost")) {
-	$dbhost="localhost";
-	$dbuser="nobody";
-	$dbpwd="";
+if (strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
+	$dbhost = "localhost";
+	$dbuser = "nobody";
+	$dbpwd  = "";
 } else {
-	Header("Location: http://www.php.net/bugs.php" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
-	exit;
+  header("Location: http://www.php.net/bugs.php" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
+  exit;
 }
 
 /* if ($edit)
@@ -31,8 +26,7 @@ if (strstr($MYSITE,"www.php.net")) {
 */
 
 commonHeader("Bug Reporting");
-//echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
-echo "<font size=-1>\n";
+echo "<font size=\"-1\">\n";
 
 function indent($string, $prefix) {
     $string = ereg_replace(13, "", $string); /* get rid of Ctrl-M */
@@ -76,16 +70,16 @@ function list_ids($current) {
 	global $dbhost,$dbuser,$dbpwd;
 	mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
 	$result = mysql_db_query('php3', "select distinct dev_id from bugdb where dev_id not like '%@%' and dev_id not like '%.%' and php_version like '4%' order by dev_id");
-	if($current) echo "<option>$current\n";
+	if ($current) echo "<option>$current\n";
 	echo "<option>Any\n";
-	while($row = mysql_fetch_row($result)) {
-		if($row[0]!=$current) echo "<option>".$row[0]."\n";
+	while ($row = mysql_fetch_row($result)) {
+		if ($row[0]!=$current) { echo "<option>".$row[0]."\n"; }
 	}
 }
 
 function show_state_options($state, $show_all, $user_mode=0) {
 	
-	if(empty($state)) $state = "Open";
+	if (empty($state)) { $state = "Open"; }
 
 	$state_types = 	array (
 						"Open"        => 2, 
@@ -125,11 +119,11 @@ function show_menu($state)
 
 	if(!isset($search_for)) { $search_for=""; }
 	if(!isset($bug_type)) { $bug_type="Any"; }
-	echo "<form method=POST action=\"$PHP_SELF\">\n";
-	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
-	echo "<table bgcolor=\"#ccccff\"cellspacing=0><tr><td><input type=submit value=\"Display\"></td><td><select name=\"status\">\n";
+	echo "<form method=\"post\" action=\"$PHP_SELF\">\n";
+	echo "<input type=\"hidden\" name=\"cmd\" value=\"Display Bugs\">\n";
+	echo "<table bgcolor=\"#ccccff\" cellspacing=\"0\"><tr><td><input type=\"submit\" value=\"Display\"></td><td><select name=\"status\">\n";
 	show_state_options($state, 1);
-	echo "</select></td><td align=right>bugs of type: </td><td>";
+	echo "</select></td><td align=\"right\">bugs of type: </td><td>";
 	show_types($bug_type,1,"bug_type");
 
 	$fields = array( "id" => "Bug ID",
@@ -145,22 +139,20 @@ function show_menu($state)
 					"assign" => "Assigned To");
 
 	reset($fields);
-	echo "</td><td align=right>Last Comment By:</td><td> <select name=\"by\">\n";
+	echo "</td><td align=\"right\">Last Comment By:</td><td> <select name=\"by\">\n";
 	list_ids($by);
 	echo "</select></td></tr>\n";
-	echo "<tr><td colspan=3 align=right>Search for:</td>\n";
-	echo "<td colspan=3><input type=text name=\"search_for\" value=\"".$search_for."\"> in the bug database</td></tr></form>\n";
-	echo "<tr><td colspan=3 align=right><form method=\"GET\" action=\"$PHP_SELF\">\n";
-	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
+	echo "<tr><td colspan=\"3\" align=\"right\">Search for:</td>\n";
+	echo "<td colspan=\"3\"><input type=\"text\" name=\"search_for\" value=\"".$search_for."\"> in the bug database</td></tr></form>\n";
+	echo "<tr><td colspan=\"3\" align=\"right\"><form method=\"get\" action=\"$PHP_SELF\">\n";
+	echo "<input type=\"submit\" value=\"Edit\"> bug number:</td><td colspan=\"2\"><input type=\"text\" name=\"id\"></td>\n";
 	if (isset($MAGIC_COOKIE))
-		echo "<input type='hidden' name='edit' value='1'>\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"1\"\n";
 	else
-		echo "<input type='hidden' name='edit' value='2'>\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"2\">\n";
 	echo "</td><td align=\"center\"><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
-
-### show_types significantly modified by j.a.greant 00/09/05
 
 function show_types($first_item,$show_any,$var_name) {
     $items = array ("Any" => "Any",
@@ -324,7 +316,7 @@ function show_types($first_item,$show_any,$var_name) {
 	
 	foreach ($items as $key => $value) {
 		if ($show_any || $value != 'Any') {
-			$sel = ($key == $first_item) ? 'SELECTED' : '';
+			$sel = ($key == $first_item) ? 'selected' : '';
 			print "<option value=\"$key\" $sel>$value</option>\n";
 		}
 	}
@@ -372,7 +364,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	}
 
 	if ($php_version=='earlier') {
-		echo "ERROR!  Please select a valid PHP version.  If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.";
+		echo "ERROR!  Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.";
 		commonFooter();
 		exit;
 	}
@@ -417,17 +409,17 @@ if (isset($cmd) && $cmd == "Send bug report") {
     }
 
     if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
-        echo "<p><h2>Mail sent to $destination...</h2>\n";
-		echo "Thank you for your help!<P>";
-		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
+        echo "<p><h2>Mail sent to $destination...</h2></p>\n";
+		echo "<p>Thank you for your help!</p>";
+		echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 		echo "If the status of the bug report you submitted\n";
-		echo "changes, you will be notified.  You may return here and check on the status\n";
-		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
-		echo "http://bugs.php.net/?id=$cid</a>\n";
+		echo "changes, you will be notified. You may return here and check on the status\n";
+		echo "or update your report at any time. The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
+		echo "http://bugs.php.net/?id=$cid</a></p>\n";
     } else {
-        echo("<p><h2>Mail not sent!</h2>\n");
-        echo("Please send this page in a mail to " .
-	     "<a href=\"mailto:$destination\">$destination</a> manually.\n");
+        echo "<p><h2>Mail not sent!</h2>\n";
+        echo "Please send this page in a mail to " .
+	     "<a href=\"mailto:$destination\">$destination</a> manually.</p>\n";
     }
 
 } elseif(isset($cmd) && $cmd=="Display Bugs") {
@@ -714,71 +706,71 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<br><h1>Bug id #$id</h1>\n";
 		echo "<table>\n";
 		if(!isset($edit)) {
-			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
-			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>User Modify</tt></font></a> &nbsp; ";
-			echo "<a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td>";
+			echo "<tr><th align=\"right\">Status:</th><td>".$row[7]."</td>";
+			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=\"-1\"><tt>User Modify</tt></font></a> &nbsp; ";
+			echo "<a href=\"$PHP_SELF?id=$id&edit=1\"><font size=\"-1\"><tt>Dev Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=\"POST\" action=\"$PHP_SELF?id=$id\">\n";
+			echo "<form method=\"post\" action=\"$PHP_SELF?id=$id\">\n";
 			if($edit==1) {
-				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
+				echo "<input type=\"hidden\" name=\"modify\" value=\"Edit Bug\">\n";
 			} else {
- 				echo "<tr><td align=right colspan=2><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td></tr>";
-				echo "<input type=hidden name=modify value=\"User Edit Bug\">\n";
+ 				echo "<tr><td align=\"right\" colspan=\"2\"><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=\"-1\"><tt>Dev Modify</tt></font></a></td></tr>";
+				echo "<input type=\"hidden\" name=\"modify\" value=\"User Edit Bug\">\n";
 			}
-			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
+			echo "<tr><th align=\"right\">Status:</th><td><select name=\"estatus\">\n";
 			show_state_options($row[7], 0, ($edit==2)?2:0);
 			echo "</select>\n";
 			if($edit==1) {
-				echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
-				echo "<input type=submit value=\"Commit Changes\">\n";
+				echo "Assign to: <input type=\"text\" name=\"eassign\" value=\"$row[12]\">\n";
+				echo "<input type=\"submit\" value=\"Commit Changes\">\n";
 			}
 		}
 		echo "</tr>\n";
-		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
-		echo "<input type=hidden name=eemail value=\"$row[2]\"></td></tr>\n";
-		echo "<tr><th align=right>Date:</th><td>".$row[9]."</td></tr>\n";
+		echo "<tr><th align=\"right\">From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
+		echo "<input type=\"hidden\" name=\"eemail\" value=\"$row[2]\"></td></tr>\n";
+		echo "<tr><th align=\"right\">Date:</th><td>".$row[9]."</td></tr>\n";
 
 		if(!isset($edit)) {
-			echo "<tr><th align=right>Type:</th><td>".$row[1]."</td></tr>\n";
+			echo "<tr><th align=\"right\">Type:</th><td>".$row[1]."</td></tr>\n";
 		} else {
-			echo "<tr><th align=right>Type:</th><td>\n";
+			echo "<tr><th align=\"right\">Type:</th><td>\n";
 			show_types($row[1],0,"ebug_type");
 			echo "</td></tr>\n";
 		}
 
 		if(isset($edit) && $edit==2) {
-			echo "<tr><th align=right>OS:</th><td><input type=text size=20 name=ephp_os value=\"".$row[6]."\"></td></tr>\n";
+			echo "<tr><th align=\"right\">OS:</th><td><input type=\"text\" size=\"20\" name=\"ephp_os\" value=\"".$row[6]."\"></td></tr>\n";
 		} else {
-			echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
+			echo "<tr><th align=\"right\">OS:</th><td>".$row[6]."</td></tr>\n";
 		}
 		if(isset($edit) && ($edit==2 || $edit == 1)) {
-			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
+			echo "<tr><th align=\"right\">PHP Version:</th><td><input type=\"text\" size=\"20\" name=\"ephp_version\" value=\"".$row[5]."\"></td></tr>\n";
 		} else {
-			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
+			echo "<tr><th align=\"right\">PHP Version:</th><td>".$row[5]."</td></tr>\n";
 		}
-		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
+		echo "<tr><th align=\"right\">Assigned To:</th><td>".$row[12]."</td></tr>\n";
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
 		if(isset($edit) && $edit==1) {
-			echo "<tr><th align=right>Short Desc.:</th><td><input type=text size=40 name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+			echo "<tr><th align=\"right\">Short Desc.:</th><td><input type=\"text\" size=\"40\" name=\"esdesc\" value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
 		} else {
-			echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+			echo "<tr><th align=\"right\">Short Desc.:</th><td></b>$sd<input type=\"hidden\" name=\"esdesc\" value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
 		}
 		echo "</table>\n";
 
 		/* INSERT NEW COMMENT HERE */
 		if (isset($edit)) {
 			echo "<b>New Comment:</b><br>\n";
-			echo "<textarea cols=60 rows=15 name=\"ncomment\" wrap=physical></textarea><br>\n";
+			echo "<textarea cols=\"60\" rows=\"15\" name=\"ncomment\" wrap=\"physical\"></textarea><br>\n";
 			if(isset($MAGIC_COOKIE)) list($user, $pw) = explode(":", base64_decode($MAGIC_COOKIE));
 			if ($edit == 1) {
-				echo "CVS user id: <input type=text size=10 name=user value=\"$user\">\n";
+				echo "CVS user id: <input type=\"text\" size=\"10\" name=\"user\" value=\"$user\">\n";
 			}
-			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
-			echo "<input type=submit value=\"Commit Changes\">";
+			echo "Password: <input type=\"password\" size=\"10\" name=\"pw\" value=\"$pw\">\n";
+			echo "<input type=\"submit\" value=\"Commit Changes\">";
 			echo ($edit == 2) ? " [<a href=\"/bug-pwd-finder.php\">Lost your password?</a>]<br>\n" : "<br>\n";
 			if(!$user || !$pw) {
-				echo "Remember my login/password: <input type=checkbox name=save>\n";
+				echo "Remember my login/password: <input type=\"checkbox\" name=\"save\">\n";
 			}
 			echo "</form>\n";
 		}
@@ -825,8 +817,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method=POST action="<?php echo $PHP_SELF;?>">
-<input type=hidden name=cmd value="Send bug report">
+<form method="post" action="<?php echo $PHP_SELF;?>">
+<input type="hidden" name="cmd" value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
 <p><strong>To report bugs in PHP 3.0, please go <a href="/bugs-php3.php">here</a>.</strong></p>
@@ -837,12 +829,12 @@ You should then report the problem (and the mirror(s) that have it) to
 
 <table>
  <tr>
-  <th align=right>Your email address:</th>
+  <th align="right">Your email address:</th>
   <td colspan="2">
-   <input type=text size=20 name="email" value="<?php if(isset($email)) { echo $email; }?>">
+   <input type="text" size="20" name="email" value="<?php if(isset($email)) { echo $email; }?>">
   </td>
  </tr><tr>
-  <th align=right>PHP version:</th>
+  <th align="right">PHP version:</th>
   <td>
    <select name="php_version">
    <option name="4.0.6">4.0.6
@@ -854,24 +846,24 @@ You should then report the problem (and the mirror(s) that have it) to
    </select>
   </td>
  </tr><tr>
-  <th align=right>Type of bug:</th>
+  <th align="right">Type of bug:</th>
   <td colspan="2">
 	<?php show_types("--Please Select--",0,"ebug_type")?>
    </td>
   </tr><tr>
-  <th align=right>Operating system:</th>
+  <th align="right">Operating system:</th>
   <td colspan="2">
-   <input type=text size=20 name="php_os" value="<?php echo isset($operating_system)?$operating_system:"";?>">
+   <input type="text" size="20" name="php_os" value="<?php echo isset($operating_system)?$operating_system:"";?>">
   </td>
  </tr><tr>
-  <th align=right>Bug description:</th>
+  <th align="right">Bug description:</th>
   <td colspan="2">
-   <input type=text size=40 maxlength=79 name="sdesc">
+   <input type="text" size="40" maxlength="79" name="sdesc">
   </td></tr>
  </tr><tr>
-  <th align=right>Password:</th>
+  <th align="right">Password:</th>
   <td>
-   <input type=text size=20 maxlength=20 name="passwd"></td>
+   <input type="text" size="20" maxlength="20" name="passwd"></td>
     <td><font size="-2">
 You may enter any password here.  This password allows you to come back and modify your
 submitted bug report at a later date. [<a href="/bug-pwd-finder.php">Lost your password?</a>]
@@ -890,16 +882,16 @@ Please supply any information that may be helpful in fixing the bug:
 	<li>A <a href="/bugs-generating-backtrace.php">gdb backtrace</a>.
 </ul>
 <center>
-<input type=submit value="Send bug report">
+<input type="submit" value="Send bug report">
 </center>
 </td>
 <td>
-<textarea cols=60 rows=15 name="ldesc" wrap=physical></textarea>
+<textarea cols="60" rows="15" name="ldesc" wrap="physical"></textarea>
 </td>
 </tr>
 </table>
 
-<p>
+<p></p>
 
 </form>
 
@@ -907,8 +899,7 @@ Please supply any information that may be helpful in fixing the bug:
 </font>
 <?php
 commonFooter();
-?>
-<?php
+
 /*
 # MySQL dump 4.0
 #
