@@ -282,7 +282,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			case "Status":
 				if ($data == "Feedback") {
-					echo "Feedback<br>(".$row["unchanged_days"]." days)";
+					echo "Feedback<br>(".$row[unchanged_days]." days)";
 					break;
 				}
 				/* otherwise fall through */
@@ -341,7 +341,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Mod";
-	$fields[] = "TO_DAYS(NOW()-ts2) as unchanged_days";
+	$fields[] = "TO_DAYS(NOW())-TO_DAYS(ts2) as unchanged_days";
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
