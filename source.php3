@@ -17,7 +17,8 @@ You should read the <A HREF="/COPYRIGHT.txt">copyright</A>.<BR>
 <?
 $legal_dirs = array(
     "/manual" => 1,
-    "/include" => 1);
+    "/include" => 1,
+	"/stats" => 1);
 
 $dir = dirname($page_url);
 if ($dir && $legal_dirs[$dir]) {
