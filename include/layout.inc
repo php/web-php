@@ -225,7 +225,7 @@ function site_footer($config = array())
   <a href="{$provider_url}">{$provider_name}</a><br />
   Last updated: {$last_updated}
  </div>
-</div>{$functionsjs}
+</div>
 <script src="{$_SERVER['STATIC_ROOT']}/functions.js" type="text/javascript"></script>
 
 </body>
