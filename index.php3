@@ -14,6 +14,16 @@ of fixes, migrated modules and several enhancements over Beta 1.  All users of v
 to take a look at it!
 </p>
 
+<h3>PHP Tutorials at O'Reilly Open Source Software Convention</h3>
+<p>
+<a href="oreilly99/"><img align=right src="gifs/oss_conf_speaker.gif" border=0 width=72 height=117 alt="Open Source Software Convention"></a>
+Rasmus Lerdorf and Jim Winstead gave a pair of three-hour
+tutorials at <a href="http://conferences.oreilly.com/">O'Reilly's
+Open Source Software Convention</a> on August 21, 1999, in Monterey,
+California. You can see the slides from the tutorials
+<a href="oreilly99/">here</a>.
+</p>
+
 
 <h3>CNET's Builder.com discovers PHP</h3>
 <p><img src="cnet.gif" align="right">

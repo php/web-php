@@ -1,0 +1,69 @@
+								-*- outline -*-
+* Characteristics (s_chars)
+** HTML-embedded (s_htmlembed)
+*** Vs. traditional scripting
+*** SGML/XML embedding
+** Server-side (s_serverside)
+*** What are you trying to do?
+*** Where is your data?
+** Cross-platform
+** Server-embedded or CGI wrapper
+** Based on existing languages
+* Numbers
+** PHP stats
+* History
+** Conceived in fall of 1994
+** PHP Version 1 in spring 1995
+** PHP Version 2 1995-1997
+** PHP Version 3 1997-now
+** PHP Version 4 in summer 1999
+** Why Open Source?
+** Current core development team
+* Language Overview
+** Displaying a variable
+** Syntax and switching modes
+** Handling forms
+*** variable tracking
+*** gpc_order
+*** magic quotes
+** Loop control structures
+** Branching control structures
+** Basic data types
+** Arrays
+*** Ordered
+*** Associative
+*** Sorting
+*** Traversing
+** User-defined functions
+*** Pass by reference
+*** Default/optional values
+** Classes/objects
+*** Inheritance
+*** PHP an OO language?
+** Variable scoping
+** Variable variables
+* Built-in Functions
+** Date and Time Handling
+** String Handling
+** Regular Expressions
+** URL Parsing
+** Encoding
+** File Handling
+** Image Manipulation
+** Resource limits
+** SQL databases
+** Other extensions
+* Case Studies
+** mp3.lycos.com
+* Future Peep
+** 4.0b1 Features
+*** non-Apache modules
+*** Windows registry-based config
+*** Improved build process and SO handling
+*** Improved OO
+*** Database abstraction layer
+** Future versions
+*** Process and machine-spanning persistence mechanism
+*** Apache 2.0 threaded module
+*** UNIX NSAPI
+*** IDE integration
