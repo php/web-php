@@ -74,7 +74,7 @@ $formats = array(
 <p>
  The English version of the manual is <a
  href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">also
- available</a> for the increasingly popular ThoutReader.
+ available</a> for the ThoutReader.
 </p>
 
 <?php
@@ -134,11 +134,7 @@ if (count($found_formats) == 0) {
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
         if (!in_array($extension, array_values($found_formats))) { continue; }
-        if ($formatname === 'Extended HTML Help') {
-            echo "  <th valign=\"bottom\"><a href=\"/docs-echm.php\">$formatname</a></th>\n";
-        } else {
-            echo "  <th valign=\"bottom\">$formatname</th>\n";
-        }
+        echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
     echo " </tr>\n";
