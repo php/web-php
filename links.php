@@ -331,20 +331,12 @@ Apprendre le PHP par l'exemple, facilement et simplement. R&eacute;serv&eacute; 
 <li><a href="http://www.phpfr.org/">phpfr</a><br>
 Le site de r&eacute;f&eacute;rence sur PHP en France !</li>
 
-
 <li><a href="http://www.phpfrance.com/">phpfrance</a><br>
 Pour tout savoir sur le PHP, en fran&ccedil;ais. Vous trouverez un tutorial, des exemples, 
 des astuces, toute la documentation n&eacute;cessaire, ainsi que des forums pour poser des questions.</li>
 
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A French gateway to PHP related contents</li>
-
-<!--
-This web site is dead. It may come back some day as static...
-<li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
-French site about PHP/MySQL: Links, Tips, Articles, 
-FAQ, Code Downloads, and much more!</li>
--->
 
 <li><a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br>
 More than 500 PHP applications, listed and sorted</li>
@@ -476,7 +468,6 @@ A Swedish PHP portal with articles, news, forums and much more</li>
  <li><a href="http://mojolin.com/">Mojolin</a></li>
  <li><a href="http://www.monster.com/">Monster.com</a></li>
  <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
- <li><a href="http://www.schaffner.net/emp">PHP Employment Listing</a></li>
  <li><a href="http://www.totalfreelance.com/">totalfreelance.com</a></li>
  <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
 </ul>
