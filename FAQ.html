@@ -592,6 +592,34 @@ should check to make sure that the configuration file you are adding the AddType
   <P>
   </DD>
 
+  <DT><B>
+   <a name="5.9">5.9</a> How do I get all the results from a SELECT MULTIPLE HTML tag?
+  </B></DT>
+  <DD>
+   The SELECT MULTIPLE tag in an HTML construct allows users to select multiple items from a list. 
+   These items are then passed to the action handler for the form. The problem is that they are 
+   all passed with the same widget name. ie.
+   <PRE>   &lt;SELECT NAME="var" MULTIPLE&gt;</PRE>
+   Each selected option will arrive at the action handler as:
+
+<PRE>   var=option1
+   var=option2
+   var=option3</PRE>
+
+   Each option will overwrite the contents of the previous $var variable. The solution is to use PHP's 
+   non-indexed array feature. The following should be used:
+
+<PRE>   &lt;SELECT NAME="var[]" MULTIPLE&gt;</PRE>
+
+   This tells PHP to treat var as an array an each assignment of a value to var[] adds an item to 
+   the array. The first item becomes $var[0], the next $var[1], etc. The count() function can be used to 
+   determine how many options were selected, and the sort() function can be used to sort the option 
+   array if necessary.<P>
+
+   Note that if you are using JavaScript the [] on the element name might cause you problems when you
+   try to refer to the element by name.  Use it's numerical form element id instead.
+  <P>
+  </DD>
 </DL>
 
 <HR noshade>
