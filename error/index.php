@@ -128,6 +128,7 @@ $uri_aliases = array (
     "globals"     => "security.registerglobals",
     "tut"         => "tutorial",
     "tut.php"     => "tutorial", // for backward compatibility with PHP page!
+    "gd"          => "image",
     
     # external shortcut aliases ;)
     "dochowto"    => "phpdochowto"
