@@ -142,6 +142,7 @@ removed right away.</blockquote>
 	site("National Marrow Donor Program","www.marrow.org");
 	site("European Rotaract Information Center","www.rotaract.de/eric/");
 	site("the Jazz Journalists Association","www.jazzhouse.org");
+	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
 	siteEnd();
 
 /* Publishing Industry */
