@@ -9,7 +9,6 @@
 $book_langs = array(
   'en'  => 'English',
   'de'  => 'German',
-  'nl'  => 'Dutch',
   'es'  => 'Spanish',
   'fr'  => 'French',
   'cz'  => 'Czech',
@@ -780,17 +779,6 @@ array(
                        "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages",
     /* inform. link */ "http://www.php-buch.de/",
     /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP - Dynamische websites professioneel ondersteunen",
-    /* title_link   */ "http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406",
-    /* author[s]    */ array("Egon Schmid", "Christian Cartus", "Richard Blume"),
-    /* auth link[s] */ array("http://zend.com/zend/hof/schmid.php", false, false),
-    /* image        */ "9043001406.gif",
-    /* information  */ "Addison Wesley Longman, April 2000, ISBN 90-430-0140-6, 477 pages",
-    /* inform. link */ "",
-    /* language     */ "nl"
   ),
 
   array(
