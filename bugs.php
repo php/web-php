@@ -510,7 +510,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
 		}
-		if($edit==2) {
+		if($edit==2 ||$edit == 1) {
 			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
 		} else {
 			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
