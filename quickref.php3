@@ -36,7 +36,7 @@ function makeTable($array) {
 
 commonHeader("PHP Manual Quick Reference");
 ?>
-Here is a list of all the PHP3 functions.  Click on any one of them to jump to that page in the manual.
+Here is a list of all the PHP 3.0 functions.  Click on any one of them to jump to that page in the manual.
 <P>
 
 <?

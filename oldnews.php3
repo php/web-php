@@ -69,8 +69,8 @@ communities of people on the Net.&quot;
 <? endEntry();?>
 
 <? makeEntry("Dave Garaffa sees the light!","Notes from a Webmaster","http://browserwatch.internet.com/news/story/news-980608-7.html","June 8, 1998"); ?>
-"Boy what a weekend I've had! Why you ask? Well I found PHP3
-on Friday!! For those who already know about PHP3 now you
+"Boy what a weekend I've had! Why you ask? Well I found PHP 3.0
+on Friday!! For those who already know about PHP 3.0 now you
 know why I've been so busy. ;-) For those who don't know about
 it... all I can say is AWSOME!"
 <? endEntry();?>
@@ -81,7 +81,7 @@ PHP 3.0, the latest release of the server-side scripting solution already
 in use on over 70,000 World Wide Web sites.
 <? endEntry();?>
 
-<? makeEntry("PHP 3.0 Released","Writing an article about PHP3? - Read This","/release-3.0.txt","June 6, 1998"); ?>
+<? makeEntry("PHP 3.0 Released","Writing an article about PHP 3.0? - Read This","/release-3.0.txt","June 6, 1998"); ?>
 PHP 3.0 is finally here!  After 10 months of development PHP Version 3.0
 is ready for production environments.  Coupled with the release of the
 final version of Apache-1.3.0 today, the combination provides an
@@ -90,7 +90,7 @@ sites.
 <? endEntry();?>
 
 <? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://cs.sau.edu/~cfisher/uw/018.html","1998"); ?>
-Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP3 to talk to each other.
+Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP 3.0 to talk to each other.
 <? endEntry();?>
 
 <? makeEntry("Building A Cross-Platform Web Infrastructure","<B>Part One</B>, from UnixIntegration","http://www.performancecomputing.com/unixintegration/9802/9802f1.htm","February 1998"); ?>
@@ -105,7 +105,7 @@ Brian and Robert continue their project by focusing on using PHP as the middlewa
 Mike Miller builds a contact database with MySQL and PHP
 <? endEntry();?>
 
-<? makeEntry("Dynamic Web Pages with PHP3","from WebTechniques","http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml","February 1998"); ?>
+<? makeEntry("Dynamic Web Pages with PHP 3","from WebTechniques","http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml","February 1998"); ?>
 As PHP gets an upgrade and name change, Rasmus explains its history and shows us some new features
 by building a dynamic Web photo album.
 <? endEntry();?>

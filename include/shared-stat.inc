@@ -448,7 +448,7 @@ endif; ?>
     <TR VALIGN=top>
      <TD ALIGN=left>
       <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" ALT="PHP Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
     </TR>

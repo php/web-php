@@ -496,7 +496,7 @@ endif; ?>
     <TR VALIGN=top>
      <TD ALIGN=left>
       <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="<?echo $GLOBALS["my_logo"]?>" ALT="PHP3 Home Page" <?echo $GLOBALS["my_size"]?> BORDER=0></A><BR>
+      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="<?echo $GLOBALS["my_logo"]?>" ALT="PHP Home Page" <?echo $GLOBALS["my_size"]?> BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
     </TR>
@@ -729,7 +729,7 @@ endif;
 <SELECT NAME="show">
 <OPTION VALUE="nosource" SELECTED>Whole site
 <OPTION VALUE="manual">Documentation only
-<OPTION VALUE="maillist">PHP3 Mailing List
+<OPTION VALUE="maillist">PHP 3.0 Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
 <OPTION VALUE="source">Source code only
 </SELECT><INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HSPACE=5 HEIGHT=21 BORDER=0><BR>

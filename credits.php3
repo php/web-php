@@ -206,7 +206,7 @@ endif;
   <UL TYPE=DISC><li>Velocis Support</UL><BR>
   
 <? makeName("Brian Schaffner","brian@tool.net",0);?>
-  <UL TYPE=DISC><li>ODBC Support, PHP3 API testing</UL><BR>
+  <UL TYPE=DISC><li>ODBC Support, PHP 3.0 API testing</UL><BR>
 
 <? makeName("Egon Schmid","eschmid@delos.lf.net",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>

@@ -91,8 +91,8 @@ on the <a href="news.php3">In The News</a> page.<BR clear=all>
 
 <H3>Help DevShed Promote PHP Awareness, Literacy, and Development</h3>
 <a href="http://www.devshed.com"><img src="/gifs/devshed3.gif" border=0 hspace=5 align=left></a>
-DevShed.com will soon be creating a special section devoted to PHP3, and 
-they need your help.  DevShed is looking for PHP3 tutorials (2-3000 words) 
+DevShed.com will soon be creating a special section devoted to PHP 3.0, and 
+they need your help.  DevShed is looking for PHP 3.0 tutorials (2-3000 words) 
 for various topics.  DevShed will pay authors US$100, and will contribute 
 a matching $100 to the PHP Development Fund for each article published.  
 Contact <a href="mailto: php&#64;devshed.com">php&#64;devshed.com</a> for 

@@ -1,6 +1,6 @@
 <?$mod = GMDate("D, d M Y H:i:s",filemtime("CHANGES"));
   Header("Last-Modified: $mod GMT"); ?>
-<html><head><title>PHP3 Changes</title></head>
+<html><head><title>PHP 3.0 Changes</title></head>
 <body bgcolor="#ffffff" text="#032F5B" link="#537492" vlink="#000000">
 <FONT FACE="Verdana, Arial, Helvetica">
 <? 

@@ -1,5 +1,5 @@
 <?require "shared.inc";
-  commonHeader("Building Apache 1.3.0 with PHP2 and PHP3 modules");
+  commonHeader("Building Apache 1.3.0 with PHP/FI 2.0 and PHP 3.0 modules");
 ?>
 <b>Recipe for building php-2.0.1 with Apache-1.3.0 and PHP 3.0</b>
 <P>
@@ -10,15 +10,15 @@ Start in the Apache directory:
 ./Configure</PRE> 
 
 This is done so that a couple of auto-generated header files will be there
-when you configure PHP3.<P>
+when you configure PHP 3.0.<P>
 
-Next, follow the standard installation directions for PHP3.  Something like:
+Next, follow the standard installation directions for PHP 3.0.  Something like:
 <PRE>cd php-3.0
 ./configure --with-apache=../apache_1.3.0
 make
 make install</PRE>
 
-Now the tricky part.  PHP2 was written long before Apache-1.3.0 was released, so 
+Now the tricky part.  PHP/FI 2.0 was written long before Apache-1.3.0 was released, so 
 it isn't quite a smooth as it could be.  There is a bug in mod_php.module.in.  The
 trailing <b>&quot;</b> is missing.  Edit this file and add that.  Then run the
 <b>./install</b> program.
@@ -55,8 +55,8 @@ end add these two lines:
 AddModule modules/extra/mod_php.o</PRE>
 
 The type: <b>./Configure</b> followed by <b>make</b> and you should end up with an httpd binary
-that includes both the PHP2 and the PHP3 module.  You can then set your AddType lines in src.conf to
-poing <i>.phtml</i> files at PHP2 and </i>.php3</i> files at PHP3, for example.  
+that includes both the PHP/FI 2.0 and the PHP 3.0 module.  You can then set your AddType lines in src.conf to
+poing <i>.phtml</i> files at PHP/FI 2.0 and </i>.php3</i> files at PHP 3.0, for example.  
 <PRE>AddType application/x-httpd-php .phtml
 AddType application/x-httpd-php3 .php3</PRE>
 

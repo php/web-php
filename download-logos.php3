@@ -55,7 +55,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP3" logo
+<LI>"Powered by PHP 3" logo
 <LI>solid white background
 </UL>
 </TD>
@@ -68,7 +68,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP3" logo
+<LI>"Powered by PHP 3" logo
 <LI>transparent background
 <LI>suitable for white/light backgrounds
 </UL>
@@ -82,7 +82,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP3" logo
+<LI>"Powered by PHP 3" logo
 <LI>solid purple (#5B69A6) background
 </UL>
 </TD>
@@ -95,7 +95,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP3" logo
+<LI>"Powered by PHP 3" logo
 <LI>solid black background
 </UL>
 </TD>
@@ -108,7 +108,7 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>88 x 31 pixels
-<LI>"Powered by PHP3" logo
+<LI>"Powered by PHP 3" logo
 <LI>transparent background
 <LI>suitable for black/dark backgrounds
 </UL>

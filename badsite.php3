@@ -17,13 +17,13 @@ P		{ line-height: 150%; }
 <TD ALIGN="center">
 <FONT FACE="tahoma,arial,helvetica,sans-serif">
 <P>
-<FONT SIZE=+2><B>This site is no longer an official PHP3 mirror</B></FONT>
+<FONT SIZE=+2><B>This site is no longer an official PHP 3.0 mirror</B></FONT>
 </P>
 <P>
-<A HREF="http://www.php.net"><IMG SRC="logos/big-logo1t.gif" ALT="PHP3" BORDER=0></A>
+<A HREF="http://www.php.net"><IMG SRC="logos/big-logo1t.gif" ALT="PHP 3.0" BORDER=0></A>
 </P>
 <P>
-Please click on the above logo to go to the official PHP3 homepage:<BR>
+Please click on the above logo to go to the official PHP 3.0 homepage:<BR>
 <B><A HREF="http://www.php.net">http://www.php.net</A></B><BR>
 and choose another mirror site from there<BR>
 </P>
