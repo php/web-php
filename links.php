@@ -728,7 +728,7 @@ site_header("Links");
     PHP dedicated site in Venezuela
    </li>
    <li>
-    <a href="http://www.programacion.com/php/">www.programacion.com/php/</a><br />
+    <a href="http://www.programacion.com/php/">PHP en Castellano</a><br />
     Spanish PHP community. Articles, tutorials, courses,
     source code, forums, and more about PHP.
    </li>
