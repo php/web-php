@@ -46,10 +46,8 @@ at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 <p>
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel
-on <a href="http://openprojects.nu">OpenProjects</a>. There are also PHP
-channels on <a href="http://www.efnet.org/channels.html?q=php&s=0">EFNet</a>,
-but due to the difficulties many people have getting on and staying
-on that network we are migrating to the OpenProjects network.
+on <a href="http://openprojects.nu">OpenProjects</a>. There are also many
+PHP related channels on <a href="http://www.efnet.org/channels.html?q=php&s=0">EFNet</a>.
 </p>
 ';
 
@@ -96,7 +94,8 @@ complete your request.
 There are many PHP-related mailing lists available. Most of them
 have archives are available, and many are also available as newsgroups
 on our <a href="news://news.php.net">news server</a>. The archives
-are searchable.
+are searchable. There is an experimental web interface for the news
+server at <a href="http://news.php.net/">http://news.php.net/</a>.
 </p>
 
 <?php
