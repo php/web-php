@@ -1,7 +1,8 @@
-<?
-	if(isset($save) && isset($user) && isset($pw)) {
-		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
-	}
+<?php
+
+if(isset($save) && isset($user) && isset($pw)) {
+    SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
+}
 
 /* See the end of the script for the table layout. */
 
@@ -11,13 +12,10 @@ if(!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
 require("shared.inc");
+
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
-	$dbpwd="";
-} else if (strstr($MYSITE,"il.php.net")) {
-	$dbhost="bugs.php.net";
-	$dbuser="bourbon";
 	$dbpwd="";
 } else if (strstr($MYSITE,"localhost")) {
 	$dbhost="localhost";
