@@ -560,40 +560,19 @@ function clean($var) {
   return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var);
 }
 
-function clean_note($text) {
-    $text = htmlspecialchars(trim($text));
+// Clean out the content of one user note for printing to HTML
+function clean_note($text)
+{
+    // Highlight PHP source
+    $text = highlight_php(trim($text), TRUE);
 
-    /* turn urls into links */
-    $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\"|\\.\\s|$)/","<a href=\"\\1\">\\1</a>\\3",$text);
-
-    /* this 'fixing' code will go away eventually. */
-    $fixes = array('<br>', '<p>', '</p>');
-    reset($fixes);
-    while (list(,$f)=each($fixes)) {
-        $text=str_replace(htmlspecialchars($f), $f, $text);
-        $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
-    }
+    // Turn urls into links
+    $text = preg_replace(
+        '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\|\'|$)!',
+        '<a href="\1" target="_blank">\1</a>\4',
+        $text
+    );
     
-    /* <p> tags make things look awfully weird (breaks things out of the <code>
-       tag). Just convert them to <br>'s
-    */
-    $text = str_replace (array ('<P>', '<p>'), '<br>', $text);
-    
-    /* Remove </p> tags to prevent it from showing up in the note */
-    $text = str_replace (array ('</P>', '</p>'), '', $text);
-
-    /* preserve linebreaks */
-    $text = str_replace("\n", "<br>", $text);
-
-    /* this will only break long lines */
-    if (function_exists("wordwrap")) {
-        $text = wordwrap($text);
-    }
-    
-    // Preserve spacing of user notes
-    $text = str_replace("  ", " &nbsp;", $text);
-
-    $text = "<code class=\"note\">".$text."</code>";
     return $text;
 }
 
