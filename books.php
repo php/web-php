@@ -264,17 +264,6 @@ array (
    ),
 
   array(
-    /* title[s]     */ "Professional PHP Programming",
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet",
-    /* author[s]    */ array("Jesus Castagnetto", "Harish Rawat", "Sascha Schumann", "Chris Scollo", "Deepak Veliath"),
-    /* auth link[s] */ array("http://zend.com/comm_person.php?id=9", false, "http://zend.com/zend/hof/sascha.php", false, false),
-    /* image        */ "2963.gif",
-    /* information  */ "Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages",
-    /* inform. link */ "http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet",
-    /* language     */ "en"
-   ),
-
-  array(
     /* title[s]     */ array("Core PHP Programming", "Using PHP to Build Dynamic Web Sites"),
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet",
     /* author[s]    */ "Leon Atkinson",
@@ -426,13 +415,68 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Professional PHP Programming",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861002963/wwwphpnet",
+    /* author[s]    */ array("Jesus Castagnetto", "Harish Rawat", "Sascha Schumann", "Chris Scollo", "Deepak Veliath"),
+    /* auth link[s] */ array("http://zend.com/comm_person.php?id=9", false, "http://zend.com/zend/hof/sascha.php", false, false),
+    /* image        */ "2963.gif",
+    /* information  */ "Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861002963.htm",
+    /* language     */ "en"
+   ),
+
+  array(
     /* title[s]     */ "Beginning PHP 4",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet",
     /* author[s]    */ array("Jon Blan", "Wankyu Choi", "Allan Kent", "Ganesh Prasad", "Chris Ullmann"),
     /* auth link[s] */ "",
     /* image        */ "beginning_php4.jpg",
     /* information  */ "Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages",
-    /* inform. link */ "",
+    /* inform. link */ "http://www.wrox.com/books/1861003730.htm",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "Professional PHP4 XML",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861007213/wwwphpnet",
+    /* author[s]    */ array("Luis Argerich", "Chris Lea", "Ken Egervari", "Matt Anton", "Charlie Killian", "Chris Hubbard", "James Fuller"),
+    /* auth link[s] */ "",
+    /* image        */ "profphp4xml.jpg",
+    /* information  */ "Wrox Press Inc, June 2002, ISBN 1-8610-0721-3, 976 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861007213.htm",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "Professional PHP 4 Multimedia Programming",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861007647/wwwphpnet",
+    /* author[s]    */ array("Kapil Apshankar", "Sanjay Abraham", "Jan Rosa", "Allan Kent", "Devon O'Dell", "Andy Chase", "Imam Suyoto"),
+    /* auth link[s] */ "",
+    /* image        */ "profphp4mm.jpg",
+    /* information  */ "Wrox Press Inc, Aug 2002, ISBN 1-8610-0764-7, 592 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861007647.htm",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "Beginning PHP4 Databases",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861007825/wwwphpnet",
+    /* author[s]    */ array("Christopher Scollo", "Harish Rawat", "Deepak Thomas", "Chris Lea", "Sanjay Abraham", "Andrew Hill", "Jim Hubbard"),
+    /* auth link[s] */ "",
+    /* image        */ "begphp4db.jpg",
+    /* information  */ "Wrox Press Inc, Oct 2002, ISBN 1-8610-0782-5, 568 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861007825.htm",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "Professional PHP4 Web Development Solutions",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861007434/wwwphpnet",
+    /* author[s]    */ array("Matt Anton", "Raj Dash", "Bryan Waters", "Alison Gionetto", "Jo Henrik"),
+    /* auth link[s] */ "",
+    /* image        */ "profphp4wds.jpg",
+    /* information  */ "Wrox Press Inc, Nov 2002, ISBN 1-8610-0743-4, 640 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861007434.htm",
     /* language     */ "en"
   ),
 
