@@ -4,7 +4,7 @@
 require("./barchart.phl");
 
 $stats = array(
-	/*
+	/* numbers from http://www.netcraft.com/survey/Reports/200109/PHP.txt
     199806 => array(71360, 47329),
     199807 => array(81337, 53361),
     199808 => array(90641, 58078),
