@@ -153,7 +153,7 @@ if (isset($pattern)) {
 	$site = substr($MYSITE, 7, strlen($MYSITE) - 8);
 
 	header("Location: http://www.google.com/search?q=" . urlencode($pattern) .
-			"+site:" . urlencode($site) . "&l=$lang");
+			"+site:www.php.net&l=$lang");
 	exit;
 
     // If some local search is needed and we have no support for
