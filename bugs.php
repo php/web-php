@@ -691,7 +691,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			}
 			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
 			echo "<input type=submit value=\"Commit Changes\">";
-			echo ($edit == 2) ? " [<a href="http://bugs.php.net/bug-pwd-finder.php">Lost your password?</a>]<br>\n" : '<br>\n';
+			echo ($edit == 2) ? " [<a href=\"http://bugs.php.net/bug-pwd-finder.php\">Lost your password?</a>]<br>\n" : '<br>\n';
 			if(!$user || !$pw) {
 				echo "Remember my login/password: <input type=checkbox name=save>\n";
 			}
