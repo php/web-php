@@ -55,9 +55,19 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "The Soothingly Seamless Setup of Apache, SSL, MySQL, and PHP", "by <a href=\"mailto:idenis@ureach.com\">Israel Denis Jr.</a>", 
+	"http://www.devshed.com/Server_Side/PHP/SoothinglySeamless/", "March 2, 2000");?>
+This article will cover a lot of information. This guide is meant as an introductory guide to get you started to the world of e-commerce, web site scripting, and Secure Sockets Layer (SSL), for the purpose of helping you create secure web site driven by dynamic information stored in databases.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP: Past, Present, and Future", "by Rasmus Lerdorf, Stig Bakken, Andi Gutmans, and Zeev Suraski", 
 	"http://hotwired.lycos.com/webmonkey/radio/php.html", "February 27, 2000");?>
 You may already know that PHP is fast, stable, and easy to learn, but you may not know how it got that way. In this interview, Rasmus Lerdorf, the creator of PHP, talks about the unlikely origins of this open-source product. Then core developers Stig Bakken, Andi Gutmans, and Zeev Suraski explain how they came to work on PHP and discuss the evolution of the language. Plus, you'll hear about the planned support for XML and MySQL and what's going on with Zend.
+<? endEntry(); ?>
+
+<? makeEntry( "Template-Based Web Sites as Easy as P-H-P", "by <a href=\"http://www.webreview.com/pub/au/Gilmore_Jason\">Jason Gilmore</a>",
+	"http://www.webreview.com/pub/2000/02/11/php/index.html", "February 11, 2000");?>
+Tutorial for creating template-based Web sites with PHP.
 <? endEntry(); ?>
 
 <? makeEntry( "Authenticate and Track Users with PHP", "by <a href=\"mailto:jcm@i2ii.com\">Julie Meloni</a>", 
