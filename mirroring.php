@@ -3,6 +3,8 @@ include_once 'prepend.inc';
 commonHeader("Mirroring The PHP Website");
 ?>
 
+<h1>Mirroring The PHP Website</h1>
+
 <p>
  If you would like to become an official PHP mirror, please be sure to
  read and follow these instructions carefully. You should have the
@@ -36,8 +38,6 @@ commonHeader("Mirroring The PHP Website");
  (For example, <a href="#exclude">exclude the manual in all languages that you
  will not be using and exclude the distributions directory</a>.)
 </p>
-
-<h1>How To Mirror The PHP Website</h1>
 
 <h2>Get Files With Rsync</h2>
 
@@ -246,7 +246,7 @@ commonHeader("Mirroring The PHP Website");
  all automatically disabled mirror site owners every week.
 </p>
 
-<h1>Data Registered About Official Mirrors</h1>
+<h2>Data Registered About Official Mirrors</h2>
 
 <p>
  Once you have done the above and your site appears to work, send
