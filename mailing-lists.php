@@ -175,9 +175,9 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 
     'PHP and Zend Engine internals lists',
     Array (
-      'php-dev', 'Internals list',
+      'internals', 'Internals list',
       'A medium volume list for those who want to help out with the development of PHP',
-      false, true, false, "php.dev"
+      false, true, true, "internals"
     ),
     Array (
       'php-cvs', 'CVS commit list',
