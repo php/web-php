@@ -127,12 +127,12 @@ being on (i.e., on form, server and environment variables becoming
 a part of the global namespace, automatically) are very often 
 exploitable to various degrees.  For example, the piece of code:
 
-<?php
+&lt;?php
 if (authenticate_user()) {
   $authenticated = true;
 }
 ...
-?>
+?&gt;
 
 May be exploitable, as remote users can simply pass on 'authenticated'
 as a form variable, and then even if authenticate_user() returns false,
