@@ -73,7 +73,9 @@ function find_manual_page_slow($lang, $keyword)
 
 function find_manual_page($lang, $keyword)
 {
-	if (!function_exists("sqlite_popen") || !($s = sqlite_popen(dirname(__FILE__) . '/manual-lookup.sqlite'))) {
+	// Use open rather than popen to avoid any chance of confusion
+	// when rsync updates the database
+	if (!function_exists("sqlite_open") || !($s = sqlite_open(dirname(__FILE__) . '/../backend/manual-lookup.sqlite'))) {
 		return find_manual_page_slow($lang, $keyword);
 	}
 
