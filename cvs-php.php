@@ -95,7 +95,7 @@ three things are:
 </ul>
 
 If you are not familiar with CVS, you should have a look at the various documentation resources available
-at <a href="http://www.sourcegear.com/CVS/">SourceGear</a>.  This is also where to get the most recent version
+at <a href="http://www.cvshome.org/">CVShome.org</a>.  This is also where to get the most recent version
 of the CVS client.<P>
 
 All CVS commit messages get sent to the php-cvs mailing list.  You should subscribe yourself to this mailing
@@ -103,7 +103,7 @@ list.  Instructions for subscribing are on the <a href="/support.php">Support</a
 <P>
 CVS itself is quite easy to use.  Follow the steps listed on the <a href="anoncvs.php">anonymous CVS</a>
 page for checking out your tree.  Substitute your own user name and password for the cvsread/phpfi combination listed there.
-You will not be able to do this until you receive confirmation of your account having been created though.
+You will not be able to do this until you receive confirmation of your account having been created.
 <P>
 Next, once you have your CVS tree you need to know the following commands.  They should all be executed from within
 the checked out tree.  eg. cd php4
