@@ -71,10 +71,10 @@ Just add your comment in the big field below, and, optionally, your email
 address in the little one (usual anti-spam practices are OK, e.g.
 johnNOSPAM@doe.NO_SPAM.com).</p>
 
-<p>Note that most HTML tags are not allowed in the posts. We tried
-allowing them in the past, but people invariably made a mess of
-things making the manual hard to read for everybody. You can include
-&lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
+<p>Note that HTML tags are not allowed in the posts, but the note is presented
+in side a &lt;pre&gt; element so formatting is preserved. URLs will be turned
+into clickable links automatically. (Double-check that your note appears as you
+want during the preview. That's why it is there!)</p>
 
 <p>Read the following note carefully. If your post falls into one of the
 categories mentioned there, it will be rejected by one of the editors.</p>

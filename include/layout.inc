@@ -185,7 +185,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">
- <meta name="MSSmartTagsPreventParsing" content="TRUE">
 </head>
 
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
@@ -383,16 +382,24 @@ function clean($var) {
 
 function clean_note($text) {
     $text = htmlspecialchars(trim($text));
+
+    /* turn urls into links */
+    $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\\.\\s|$)/","<a href=\"\\1\">\\1</a>\\3",$text);
+
+    /* this 'fixing' code will go away eventually. */
     $fixes = array('<br>','<p>','</p>');
     reset($fixes);
     while (list(,$f)=each($fixes)) {
         $text=str_replace(htmlspecialchars($f), $f, $text);
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
+
+    /* this will only break long lines */
     if (function_exists("wordwrap")) {
         $text = wordwrap($text);
     }
-    $text = "<tt>".nl2br($text)."</tt>";
+
+    $text = "<pre class=\"note\">".$text."</pre>";
     return $text;
 }
 

@@ -36,6 +36,10 @@ code, pre {
 	font-size: 90%;
 }
 
+pre.note {
+        font-size: 80%;
+}
+
 h1 {
 	font-family: arial,helvetica,sans-serif;
 	font-size: 140%;
