@@ -37,7 +37,8 @@ $minute = rand(0, 59);
  href="mailto:mirrors@php.net">mirrors@php.net</a>, and ask if you
  have chance to get your mirror site accepted. We would not like
  to put too much pressure on our rsync server, so we need to limit
- the number of mirror sites.
+ the number of mirror sites. Please also ensure that the mirror is
+ located in the country you would like to register the mirror for.
 </p>
 
 <p>
