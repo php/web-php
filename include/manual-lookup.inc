@@ -10,7 +10,7 @@ function tryprefix($lang, $keyword, $prefix)
     // Replace all underscores with hyphens (phpdoc convention)
     $keyword = str_replace("_", "-", $keyword);
 
-    // Replace everything in parentheses with a hyphen
+    // Replace everything in parentheses with a hyphen (ie. function call)
     $keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
 
     // Try the keyword with the prefix
