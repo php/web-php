@@ -2,7 +2,7 @@
   include_once 'prepend.inc';
 
   // The calendar is hosted at php2.chek.com only!
-  if (getenv("SERVER_NAME") != "php2.chek.com") {
+  if (!is_primary_site()) {
 	/*
     if (is_backup_primary()) {
       commonHeader("Service Unavailable");?>
