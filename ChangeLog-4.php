@@ -13,7 +13,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <a name="4.3.11"></a>
 <h3>Version 4.3.11</h3>
-<b>31-Mar-2004</b>
+<b>31-Mar-2005</b>
 <ul>
 <li>Added Oracle Instant Client support</li>
 <li>Added checks for negative values to gmp_sqrt(), gmp_powm(), gmp_sqrtrem() and gmp_fact() to prevent SIGFPE</li>
