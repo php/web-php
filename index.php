@@ -74,7 +74,6 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br>
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
-&nbsp; ' . make_link("http://www.opensource.org/", "OpenSource") . '<br> 
 
 <h3>Contact</h3>
 
