@@ -106,6 +106,11 @@ else {
  and browser information. We are planning on deploying this feature to all PHP.net pages
  if we can manage to make it work without errors for most of the comonly used browsers.
 </p>
+<p>
+ The source code of this feature is released under the PHP License and is available
+ <a href="http://cvs.php.net/cvs.php/phpdoc/scripts/quickref">from the PHP CVS server</a>
+ without any support.
+</p>
 <?php
     if (FALSE) {
     if (isset($EXPL_LANG)) {
