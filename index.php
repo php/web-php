@@ -67,10 +67,10 @@ Conference</a> in San Diego, California.)</p>
 
 <h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For March Available
+New Usage Stats For April vailable
 </h1>
 <p>
-<font class="newsDate">[11-Apr-2001]</font>
+<font class="newsDate">[18-Apr-2001]</font>
 <? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
 <? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
 published the current results for their Web Server surveys - both
