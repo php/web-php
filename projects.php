@@ -433,6 +433,33 @@ Download : http://www.phpinfo.net/?p=fichiers&rub=applis
 PhpDocumentor is a php script that allows you to create javadoc style documentation from your php code.
 <? endEntry(); ?>
 
+
+<? makeEntry("phpGroupWare", "http://www.phpgroupware.org", "Joseph Engo", "jengo@phpgroupware.com"); ?>
+phpGroupWare is a multi-user web-based groupware suite written in PHP. It also provides an API for developing additional applications.<br />
+<? endEntry(); ?>
+
+
+<? makeEntry("phpCMS", "http://mcyra.homeip.net/homepage/phpcms/phpcms.htm", "Michael Brauchl", "michael.brauchl@chello.at"); ?>
+phpCMS is a PHP-Powered Content Management System.<br />
+Note: phpCMS is a German-language site.
+<? endEntry(); ?>
+
+
+<? makeEntry("SEARCpHp", "http://www.hansanderson.com/php/search/", "Hans H. Anderson", "me@hansanderson.com"); ?>
+Searcphp - a search engine written exclusively in PHP.  It does not require any database or external program.  Works with PHP3 and above.  Great for all sites, but especially for sites that can't use other search tools such as agrep, htdig, glimpse or swish.  Indexes information from any source that PHP can access -- local files, web pages, databases -- whatever.
+<? endEntry(); ?>
+
+
+<? makeEntry("PHP Time Tracking", "http://www.hansanderson.com/php/time/", "Hans H. Anderson", "me@hansanderson.com"); ?>
+PHP Time Tracking - Time Tracking tool for knowing what you did for whom. Good for programmers or web authors. Serves as a Journal for keeping track of what you did.
+<? endEntry(); ?>
+
+
+<? makeEntry("XML Class", "http://www.hansanderson.com/php/xml/", "Hans H. Anderson", "me@hansanderson.com"); ?>
+XML Class - An EXTREMELY easy to use XML Tree and statistic parser. You need PHP4 (even if you have XML if PHP3, this requires PHP4). Basically, in two lines, this class will turn XML Data into PHP objects with internal data arrays. This means you can access your XML data with minimal effort.
+<? endEntry(); ?>
+
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
