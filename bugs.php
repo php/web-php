@@ -89,8 +89,8 @@ function show_state_options($state, $show_all, $user_mode=0) {
 
 	$state_types = 	array (
 						"Open"        => 2, 
-						"Critical"    => 1, 
 						"Closed"      => 2,
+						"Critical"    => 1, 
 						"Duplicate"   => 2,
 						"Assigned"    => 1,
 						"Analyzed"    => 1,
