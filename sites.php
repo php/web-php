@@ -136,6 +136,7 @@ right away.</blockquote>
 	site("NativeWeb","www.nativeweb.org");
 	site("University of Bergen - Norway","www.uib.no");
 	site("Research Institute for electro-magnetic compatibility","www.femu.rwth-aachen.de");
+	site("Shekari: Follow Shawn Reed as he builds a kit plane","www.shekari.org");
 	site("Traffic School To Go","www.trafficschooltogo.com");
 	site("The Psychology Place","www.psychplace.com");
 	site("Vestfold College, Norway","www.hive.no");
@@ -143,9 +144,11 @@ right away.</blockquote>
 	siteEnd();
 
 /* Entertainment */
-	title("Entertainment");          
+	title("Entertainment");
 	siteStart();
 	site("98 Degrees","www.98degrees.com");
+	site("Big Brother - The TV Show","www.bigbrother.de");
+	site("The British Film Institute","www.bfi.org.uk");
 	site("BurnerKitty.com","www.burnerkitty.com");
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("Chump Change (a band)","foxx.richweb.com/chumpchange/");
@@ -169,6 +172,7 @@ right away.</blockquote>
 	site("PromoPodium","www.promopodium.nl");
 	site("Rubik's Online","www.rubiks.com");
 	site("Harald Schmidt Show", "www.schmidt.de");
+	site("SAT1 - A German television station","www.sat1.de");
 	site("Sony Music, Europe","www.sonymusic.de");
 	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
@@ -186,6 +190,7 @@ right away.</blockquote>
 	title("Financial Industry");
 	siteStart();
 	site("BörsePlus","www.boerseplus.de");
+	site("ComDirect - German Bank / Online Brokerage","www.comdirect.de");
 	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
 	site("Employee Benefit Placement System","ee-benefits.com/");
@@ -216,6 +221,7 @@ right away.</blockquote>
 	site("GamePoint Shop","shop.gamepoint.net");
 	site("The Galactic Empire","www.imperialnexus.net");
 	site("GibWorld","www.gibworld.com");
+	site("Internet Football Club","www.internetfootballclub.com/");
 	site("Loki Software","www.lokigames.com");
 	site("mplayer.com","www.mplayer.com");
 	site("Soldier of Fortune Files","www.soffiles.com");
@@ -242,7 +248,7 @@ right away.</blockquote>
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
 	site("DataGuard AS - Security Consulting","www.dataguard.no");
-	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
+	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");
 	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("NASA - Jet Propulsion Laboratory");
 	site("NASA - Mars Polar Lander","www.marspolarlander.com");
@@ -629,6 +635,7 @@ right away.</blockquote>
 	site("Private World Communications","www.privateworld.com");
 	site("Six Offene Systeme GmbH","www.six.de");
 	site("Munk &amp; Phyber Inc.","www.munkandphyber.com");
+	site("Insign Studio","insign.org");
 	siteEnd();
 
 /* Misc. */
@@ -665,8 +672,8 @@ echo "</table></center>\n";
 
 ?>
 <BR>
-<blockquote>If you have a site you feel belongs on this list, send us email at 
-<a href="mailto:sites@php.net">sites@php.net</a>.  Please include a suggested 
+<blockquote>If you have a site you feel belongs on this list, send us email at
+<a href="mailto:sites@php.net">sites@php.net</a>.  Please include a suggested
 category.  With well over 275,000 sites on the Internet running PHP, we cannot
 list them all and will add suggested sites at our discretion.</blockquote>
 <?

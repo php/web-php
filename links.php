@@ -5,18 +5,18 @@
 <h3>Sites using PHP</h3>
 <P>
 Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their
-web-sites.  
+web-sites.
 You can browse through a list of some companies using PHP <a href="/sites.php">here</a>.
 </P>
 
 <h3>Developers and Job Opportunities</h3>
 <P>
-Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.  
+Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.
 PHP developers can post their resumes, and employers can post their job notices.
 </P>
 
 <P>
-You can also try searching at <A 
+You can also try searching at <A
 HREF="http://classifieds.yahoo.com/yc?cr=national&ce_f=&cpo=&cpj=&ck=PHP&g=&cs=time+2&cc=employment&cf=1&za=and"
 >Yahoo Careers</A> for PHP-related jobs (US only for now).
 </P>
@@ -29,6 +29,7 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 <LI><A HREF="http://www.od-site.com/php">www.od-site.com/php</A><BR>
 <LI><A HREF="http://hosts.php.net/">hosts.php.net</A><BR>
 (features a searchable directory and comments from users)<BR>
+<LI>PMCW webservices (<a href="http://pmcw.dhs.org/">http://pmcw.dhs.org/</a>)
 </UL>
 
 <h3>Getting Started</h3>
@@ -36,7 +37,7 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 <UL>
 
 <LI><a HREF="http://www.zend.com/">Zend.com</a><BR>
-Zend Technologies' Web site, with lots of PHP related resources 
+Zend Technologies' Web site, with lots of PHP related resources
 (articles, tutorials, case studies, PHP function table, etc.)<BR>
 
 <LI><a HREF="http://www.phpwizard.net/">phpWizard</a><BR>
@@ -52,7 +53,7 @@ A good set of articles introducing various PHP concepts<BR>
 Another site with good articles on PHP basics and advanced topics.<BR>
 
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
-The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
+The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and
 useful functions, organized for easy finding.  Includes a search function.<BR>
 
 <LI><A HREF="http://www.weberdev.com/">WeberDev.com</A><BR>
@@ -72,7 +73,7 @@ German speaking portal site with tutorials, tips and tricks, job advertisements,
 German site about PHP with scripts, tips, forums, MyGuestBook, articles, news and more.<BR>
 
 <LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
-German site with installation guides, tips & scripts, BestOfGML, 
+German site with installation guides, tips & scripts, BestOfGML,
 WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
 
 <LI><A HREF="http://www.phpwelt.de/">PHPWelt</A><BR>
@@ -112,6 +113,14 @@ Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server, HTML,
 
 <LI><A HREF="http://php.resourceindex.com/">PHP Resource Index</A><BR>
 Hundreds of PHP resources, categorized and searchable.<BR>
+
+<LI><A HREF="http://www.tutorials.it/">Tutorials.it</A><BR>
+An Italian site that provides a variety of developer tutorials.
+Has a small PHP section.<BR>
+
+Motore di ricerca per i tutorials in lingua italiana.
+Ha una piccola sezione di PHP.
+<BR>
 
 </UL>
 
