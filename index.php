@@ -146,6 +146,27 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>Zend's PHP 5 Coding Contest winners announced</h1>
+<p>
+<span class="newsdate">[25-Oct-2004]</span>
+Congratulations to Qiang Xue, whose application 'PRADO' earned high votes both
+from the public and from the judges' panel!  There are 49 other prizewinning
+applications in Zend's
+<a href = "http://www.zend.com/php5/contest" target = "_blank">contest gallery</a>
+- too many to list here.  Some of them are ongoing projects, bringing PHP 5 a
+small armoury of useful open source tools.
+</p>
+
+<p>
+The top 50 applications will remain on display until the end of this year, giving
+you the chance to take a leisurely look through the code and see how the new
+features in PHP 5 should be used.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Quebec"); ?>
 
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
