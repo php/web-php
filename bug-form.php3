@@ -62,7 +62,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
  </tr><tr>
   <th align=right>PHP version:</th>
   <td>
-   <input type=text size=20 name="phpver" value="3.0a1">
+   <input type=text size=20 name="phpver" value="3.0a2">
   </td>
  </tr><tr>
   <th align=right>Operating system:</th>
