@@ -82,7 +82,7 @@ if(strstr($MYSITE,"www.php.net")) {
 	echo "</ol>";
 
 	echo "<li>Finished!\n";
-	echo "</ul>";
+	echo "</ul></body></html>";
 	
 }
 
