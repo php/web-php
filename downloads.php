@@ -17,7 +17,7 @@ $SIDEBAR_DATA = '
 We do not distribute UNIX/Linux binaries. Most Linux
 distributions come with PHP these days, so if you do
 not want to compile your own, go to your distribution\'s
-download site. Binaries available on external servers:
+download site. Binaries available on external servers:</p>
 <ul>
 <li>' . make_link("http://louise.amiga.hu/index.php?MENU=6", "AmigaOS") . '</li>
 <li>' . make_link("http://www.entropy.ch/software/macosx/php/", "Mac OS X") . '</li>
@@ -26,9 +26,7 @@ download site. Binaries available on external servers:
 <li>' . make_link("http://php.alexwaugh.com/", "RISC OS") . '</li>
 <li>' . make_link("http://freeware.sgi.com/index-by-alpha.html#php", "SGI IRIX 6.5.x") . '</li>
 <li>' . make_link("http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html", "AS/400") . '</li>
-
 </ul>
-</p>
 
 <h3>Other Downloads</h3>
 <p>
@@ -72,7 +70,7 @@ $server = $SERVER_NAME;
 <h2>Complete Source Code</h2>
 <ul>
   <li><?php download_link('php-4.3.2.tar.bz2','PHP 4.3.2 (tar.bz2)'); ?> - 29 May 2003<br />
-  <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</code></span>
+  <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
   </li>
   <li><?php download_link('php-4.3.2.tar.gz', 'PHP 4.3.2 (tar.gz)');  ?> - 29 May 2003<br />
   <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
@@ -175,6 +173,7 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
     </li>
     <li><?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
     <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
+    </li>
    </ul>
   </li>
   <li>PHP 4.2.3
@@ -200,9 +199,9 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
   
   <li>If you are searching for older versions of PHP, go to the <a href="http://museum.php.net/">"PHP Museum"</a>.</li>
   <li>Search for PHP tarballs on AllTheWeb.com:
-    <form action="http://www.alltheweb.com/search" method="GET">
-      <input type="hidden" name="cat" value="ftp">
-      <input type="hidden" name="ftype" value="6">
+    <form action="http://www.alltheweb.com/search" method="get">
+      <input type="hidden" name="cat" value="ftp" />
+      <input type="hidden" name="ftype" value="6" />
 <?php /*
 
 cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done

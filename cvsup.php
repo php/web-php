@@ -12,7 +12,6 @@ large trees, it is not as widely available as the standard cvs client.
 We will describe now how you can use CVSup.
 </p>
 
-<p>
 <ol>
 <li>Download the appropiate binary distribution from
 <a href="http://www.polstra.com/projects/freeware/CVSup/">the
@@ -38,6 +37,5 @@ This will cause the php3 and php4 trees to be stored in /usr/src/php
 <li>To build PHP, you need to install a few utilities (GNU autoconf,
 libtool, bison). Cd into php3 or php4 and run <code>./buildconf</code>.</li>
 </ol>
-</p>
 
 <?php commonFooter(); ?>

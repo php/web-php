@@ -137,7 +137,7 @@ And once again since people just don't seem to understand this point:
 <table border="0" cellpadding="3">
  <tr bgcolor="#cccccc">
   <td><b>Does <u>Not</u> Require CVS Account</b></td>
-  <td><b>Requires CVS Account</b></td></tr>
+  <td><b>Requires CVS Account</b></td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Learning PHP</td>
@@ -224,7 +224,7 @@ CVS user id. Feel free to use it!
 </p>
 
 <p>
-Please note:<br>
+Please note:<br />
 <b>
 You do <i>NOT</i> need a CVS account to study PHP. You do <i>NOT</i> need
 a CVS account to learn PHP, to use PHP or to in any way do anything at all

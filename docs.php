@@ -19,7 +19,7 @@ if you would like to look up changes between various versions of PHP.
 The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>
 has an overview about which pages are translated to the
 different languages and in which versions of PHP the functions
-are available.<br><br>
+are available.<br /><br />
 
 If you have license questions, see
 the <a href="/license/">License FAQ</a>.
@@ -34,8 +34,8 @@ learning PHP, as well as extending your existing knowledge.
 
 <h3>Sample Code</h3>
 <p>
-Looking for some more sample PHP scripts? Our <A
-HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
+Looking for some more sample PHP scripts? Our <a
+href="/links.php">links page</a> page lists some archives of sample PHP code - 
 great places to find many example scripts and useful functions, organized for 
 your searching pleasure!
 </p>

@@ -143,7 +143,7 @@ and search there):
 Search Amazon for
 <select name="mode">
 <option value="blended">All Products</option>
-<option value="books" selected>Books</option>
+<option value="books" selected="selected">Books</option>
 <option value="music">Popular Music</option>
 <option value="classical-music">Classical Music</option>
 <option value="video">Video</option>
@@ -152,7 +152,7 @@ Search Amazon for
 </select>
 about
 <select name="keyword">
-<option selected>PHP</option>
+<option selected="selected">PHP</option>
 <option>Apache</option>
 <option>Linux</option>
 <option>MySQL</option>
