@@ -10,6 +10,7 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 <h3>PHP soon used on 1,000,000 servers</h3>
 <p>
+<a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
 We just got the latest numbers from
 <a href="http://www.netcraft.com/">Netcraft</a>. If PHP usage keeps growing
 at this rate, we'll pass a million (virtual) servers during November.
@@ -32,9 +33,6 @@ fared much better than IIS/ASP and Netscape/Java in this <a href="http://www.nwc
 article</a>.  Don't forget to check the links in the blue panel on the right for more detailed
 info on each system they tested.
 </p>
-
-<h3>Interesting Numbers</h3>
-The latest <a href="/usage.php3">PHP usage numbers</a> from <a href="http://www.netcraft.com">Netcraft</a> are in.
 
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 2 is out!</h3>

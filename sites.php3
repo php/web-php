@@ -181,7 +181,7 @@ right away.</blockquote>
 
 /* Food and Drink */
 	title("Food & Drink");
-	siteSTart()
+	siteStart();
 	site("Bar-None Drink Recipes","psp.pair.com/barnone/");
 	siteEnd();
 
