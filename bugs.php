@@ -24,7 +24,7 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$dbuser="nobody";
 	$dbpwd="";
 } else {
-	Header("Location: http://bugs.php.net/" . ($QUERY_STRING ? "?$QUERY_STRING" : "");
+	Header("Location: http://bugs.php.net/" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
 	exit;
 }
 
