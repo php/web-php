@@ -607,7 +607,7 @@ function commonFooter() {
  </tr>
 </table>
 <!--/UdmComment-->
-<script src="{$_SERVER['STATIC_ROOT']}/functions.js" type="text/javascript"></script>
+<script src="<?php echo $_SERVER['STATIC_ROOT']; ?>/functions.js" type="text/javascript"></script>
 </body>
 </html>
 <?php
