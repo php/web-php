@@ -30,7 +30,8 @@ function load_check()
 
     // Adhere to user preferences if valid
     $user_mirror = myphpnet_mirror();
-    if (isset($MIRRORS[$user_mirror]) && $MIRRORS[$user_mirror][7] == MIRROR_OK) {
+    if (isset($MIRRORS[$user_mirror]) && $MIRRORS[$user_mirror][7] == MIRROR_OK
+        && $murl != "http://www.php.net/") {
         header("Location: $user_mirror" . substr($_SERVER['REQUEST_URI'], 1));
         exit;
     }
