@@ -436,6 +436,17 @@ should check to make sure that the configuration file you are adding the AddType
 	</UL>
   <P>
   </DD>
+
+  <DT><B>
+    <a name="4.9">4.9</a> It says to use: --activate-module=src/modules/php3/libphp3.a, but that file
+	doesn't exist, so I changed it to --activate-module=src/modules/php3/libmodphp3.a and it doesn't work!?
+	What's going on?
+  </B></DT>
+  <DD>
+	Well, you decided to try to outsmart the people who wrote those nice step-by-step instructions for you and you
+	have now discovered that these people cannot be outsmarted.  The libphp3.a file is not supposed to 
+	exist.  The Apache build process will create it.<P>
+  </DD>
 </DL>
 
 <HR noshade>
