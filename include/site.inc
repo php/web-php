@@ -130,6 +130,18 @@ function mirror_redirect($absoluteURI, $remote = FALSE)
     exit;
 }
 
+// Use this function to write out proper headers on
+// pages where the content should not be publicly cached
+function header_nocache()
+{
+    // Only try to send out headers in case
+    // those were not sent already
+    if (!headers_sent()) {
+        header("Cache-Control: private");
+        header("Pragma: no-cache");
+    }
+}
+
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is

@@ -8,8 +8,8 @@
 
 require_once 'prepend.inc';
 
-header("Cache-Control: private");
-header("Pragma: no-cache");
+// Try to make this page non-cached
+header_nocache();
 
 $SIDEBAR_DATA = '
 <h3>Binaries for other systems</h3>

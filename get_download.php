@@ -2,8 +2,7 @@
 include_once 'prepend.inc';
 
 // Try to make this page non-cached
-header("Cache-Control: private");
-header("Pragma: no-cache");
+header_nocache();
 
 // If there is no such file, then drop out an invalid file error message
 if (!isset($df) || !file_exists($DOCUMENT_ROOT . '/distributions/' . $df)) {
