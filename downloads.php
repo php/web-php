@@ -81,6 +81,12 @@ site_header("Downloads");
  </li>
 </ul>
 
+<p style="color: red">
+  <i>Note:</i> Due to a problem with earlier versions of Zend Optimizer, its users
+  are urged to upgrade to the <a href="http://zend.com/store/products/zend-optimizer.php">
+  latest version</a>.
+</p>
+
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
  or the <a href="/release_4_3_10.php">release notes</a> for more information on
