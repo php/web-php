@@ -46,7 +46,9 @@ Sorry, but the function <B><? echo $notfound; ?></B> is not in the online manual
 Perhaps you misspelled it, or it is a relatively new function that hasn't made it 
 into the online documentation yet.
 </P>
-
+<P>
+If you want to search the entire PHP website for <B><? echo $notfound; ?></B>, then
+<? print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
 <? } ?>
 
 <P>
