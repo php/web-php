@@ -5,6 +5,209 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.1.0">
+<h3>Version 4.1.0</h3>
+<b>10-Dec-2001</b>
+<ul>
+10 Dec 2001, Version 4.1.0
+<li>Worked around a bug in the MySQL client library that could cause PHP to hang
+  when using unbuffered queries. (Zeev)</li>
+<li>Fixed a bug which caused set_time_limit() to affect all subsequent requests
+  to running Apache child process. (Zeev)</li>
+<li>Removed the sablotron extension in favor of the new XSLT extension.
+  (Sterling)</li>
+<li>Fixed a bug in WDDX deserialization that would sometimes corrupt the root
+  element if it was a scalar one. (Andrei)</li>
+<li>Make ImageColorAt() and ImageColorsForIndex() work with TrueColor images.
+  (Rasmus)</li>
+<li>Fixed a bug in preg_match_all() that would return results under improper 
+  indices in certain cases. (Andrei)</li>
+<li>Fixed a crash in str_replace() that would happen if search parameter was an
+  array and one of the replacements resulted in subject string being empty.
+  (Andrei)</li>
+<li>Fixed MySQL extension to work with MySQL 4.0. (Jani)</li>
+<li>Fixed a crash bug within Cobalt systems. Patch by tomc@tripac.com.
+(Jani)</li>
+<li>Bundled Dan Libby's xmlrpc-epi extension.</li>
+<li>Introduced extension version numbers. (Stig)</li>
+<li>Added version_compare() function. (Stig)</li>
+<li>Fixed pg_last_notice() (could cause random crashes in PostgreSQL
+  applications, even if they didn't use pg_last_notice()). (Zeev)</li>
+<li>Fixed DOM-XML's error reporting, so E_WARNING errors are given instead of
+  E_ERROR error's, this allows you to trap errors thrown by DOMXML functions.
+  (Sterling)</li>
+<li>Fixed a bug in the mcrypt extension, where list destructors were not
+  properly being allocated. (Sterling)</li>
+<li>Better Interbase blob, null and error handling. (Patch by Jeremy Bettis)</li>
+<li>Fixed a crash bug in array_map() if the input arrays had string or
+  non-sequential keys. Also modified it so that if a single array is passed,
+  its keys are preserved in the resulting array. (Andrei)</li>
+<li>Fixed a crash in dbase_replace_record. (Patch by robin.marlow@dps-int.com)</li>
+<li>Fixed a crash in msql_result(). (Zeev)</li>
+<li>Added support for single dimensional SafeArrays and Enumerations.
+  Added an is_enum() function to check if a component implements an
+  enumeration. (Alan, Harald)</li>
+<li>Fixed a bug in dbase_get_record() and dbase_get_record_with_names().
+  boolean fields are now returned correctly.
+  Patch by Lawrence E. Widman <widman@cardiothink.com> (Jani)</li>
+<li>Added --version option to php-config. (Stig)</li>
+<li>Improved support for thttpd-2.21b by incorporating patches for all known
+  bugs. (Sascha)</li>
+<li>Added ircg_get_username, a roomkey argument to ircg_join, error fetching
+  infrastructure, a tokenizer to speed up message processing, and fixed
+  a lot of bugs in the IRCG extension. (Sascha)</li>
+<li>Improved speed of the serializer/deserializer. (Thies, Sascha)</li>
+<li>Floating point numbers are better detected when converting from strings.
+  (Zeev, Zend Engine)</li>
+<li>Replaced php.ini-optimized with php.ini-recommended.  As the name implies,
+  it's warmly recommended to use this file as the basis for your PHP
+  configuration, rather than php.ini-dist.  (Zeev)</li>
+<li>Restore xpath_eval() and php_xpathptr_eval() for 4.0.7. There
+  are still some known leaks. (Joey)</li>
+<li>Added import_request_variables(), to allow users to safely import form
+  variables to the global scope (Zeev)</li>
+<li>Introduced a new $_REQUEST array, which includes any GET, POST or COOKIE
+  variables.  Like the other new variables, this variable is also available
+  regardless of the context.  (Andi & Zeev)</li>
+<li>Introduced $_GET, $_POST, $_COOKIE, $_SERVER and $_ENV variables, which
+  deprecate the old $HTTP_*_VARS arrays.  In addition to be much shorter to
+  type - these variables are also available regardless of the scope, and 
+  there's no need to import them using the 'global' statement.  (Andi & Zeev)</li>
+<li>Added vprintf() and vsprintf() functions that allow passing all arguments
+  after format as an array. (Andrei)</li>
+<li>Added support for GD2 image type for ImageCreateFromString() (Jani)</li>
+<li>Added ImageCreateFromGD(), ImageCreateFromGD2(), ImageCreateFromGD2part(),
+  ImageGD() and ImageGD2() functions (Jani)</li>
+<li>addcslashes now warns when charlist is invalid. The returned string
+  remained the same (Jeroen)</li>
+<li>Added optional extra argument to gmp_init(). The extra argument
+  indicates which number base gmp should use when converting a
+  string to the gmp-number. (Troels)</li>
+<li>Added the Cyrus-IMAP extension, which allows a direct interface to Cyrus' 
+  more advanced capabilities. (Sterling)</li>
+<li>Enhance read_exif_data() to support multiple comment tags (Rasmus)</li>
+<li>Fixed a crash bug in array_map() when NULL callback was passed in. (Andrei)</li>
+<li>Change from E_ERROR to E_WARNING in the exif extension (Rasmus)</li>
+<li>New pow() implementation, which returns an integer when possible,
+  and warnings on wrong input (jeroen)</li>
+<li>Added optional second parameter to trim, chop and ltrim. You can
+  now specify which characters to trim (jeroen)</li>
+<li>Hugely improved the performance of the thread-safe version of PHP, especially
+  under Windows (Andi & Zeev)</li> 
+<li>Improved request-shutdown performance significantly (Andi & Zeev, Zend
+  Engine)</li>
+<li>Added a few new math functions. (Jesus)</li>
+<li>Bump bundled expat to 1.95.2 (Thies)</li>
+<li>Improved the stability of OCIPlogon() after a database restart. (Thies)</li>
+<li>Fixed __FILE__ in the CGI & Java servlet modes when used in the main script.
+  It only worked correctly in included files before this fix (Andi)</li>
+<li>Improved the Zend hash table implementation to be much faster (Andi, Zend
+  Engine)</li>
+<li>Updated PHP's file open function (used by include()) to check in the calling
+  script's directory in case the file can't be found in the include_path (Andi)</li>
+<li>Fixed a corruption bug that could cause constants to become corrupted, and
+  possibly prevent resources from properly being cleaned up at the end of
+  a request (Zeev)</li>
+<li>Added optional use of Boyer-Moore algorithm to str_replace() (Sascha)</li>
+<li>Fixed and improved shared-memory session storage module (Sascha)</li>
+<li>Add config option (always_populate_raw_post_data) which when enabled
+  will always populate $HTTP_RAW_POST_DATA regardless of the post mime
+  type (Rasmus)</li>
+<li>Added support for socket and popen file types to ftp_fput (Jason)</li>
+<li>Fixed various memory leaks in the LDAP extension (Stig Venaas)</li>
+<li>Improved interactive mode - it is now available in all builds of PHP, without
+  any significant slowdown (Zeev, Zend Engine)</li>
+<li>Fixed crash in iptcparse() if the supplied data was bogus. (Thies)</li>
+<li>Fixed return value for a failed snmpset() - now returns false  (Rasmus)</li>
+<li>Added hostname:port support to snmp functions (nbougues@axialys.net, Rasmus)</li>
+<li>Added fdf_set_encoding() function (Masaki YATSU, Rasmus)</li>
+<li>Reversed the destruction-order of resources.  This fixes the reported OCI8 
+  "failed to rollback outstanding transactions!" message (Thies, Zend Engine)</li>
+<li>Added option for returning XMLRPC fault packets. (Matt Allen, Sascha
+  Schumann)</li>
+<li>Improved range() function to support range('a','z') and range(9,0) types of
+  ranges. (Rasmus)</li>
+<li>Added getmygid() and safe_mode_gid ini directive to allow safe mode to do
+  a gid check instead of a uid check. (James E. Flemer, Rasmus)</li>
+<li>Made assert() accept the array(&$obj, 'methodname') syntax. (Thies)</li>
+<li>Made sure that OCI8 outbound variables are always zero-terminated. (Thies)</li>
+<li>Fixed a bug that allowed users to spawn processes while using the 5th
+  parameter to mail(). (Derick)</li>
+<li>Added nl_langinfo() (when OS provides it) that returns locale.
+<li>Fixed a major memory corruption bug in the thread safe version. (Zeev)</li>
+<li>Fixed a crash when using the CURLOPT_WRITEHEADER option. (Sterling)</li>
+<li>Added optional suffix removal parameter to basename(). (Hartmut)</li>
+<li>Added new parameter UDM_PARAM_VARDIR ha in Udm_Set_Agent_Param() function to
+  support alternative search data directory.  This requires mnogoSearch 3.1.13
+  or later.
+<li>Fixed references in sessions. This doesn't work when using the WDDX
+  session-serializer. Also improved speed of sessions. (Thies)</li>
+<li>Added new experimental module pcntl (Process Control). (Jason)</li>
+<li>Fixed a bug when com.allow_dcom is set to false. (phanto)</li>
+<li>Added a further parameter to the constructor to load typelibs from file when
+  instantiating components (e.g. DCOM Components without local registration).
+  (phanto)</li>
+<li>Added the possibility to specify typelibs by full name in the typelib file
+  (Alan Brown)</li>
+<li>Renamed the ZZiplib extension to the Zip extension, function names have also
+  changed accordingly, functionality, has stayed constant. (Sterling)</li>
+<li>Made the length argument (argument 2) to pg_loread() optional, if not
+  specified data will be read in 1kb chunks. (Sterling)</li>
+<li>Added a third argument to pg_lowrite() which is the length of the data to
+  write. (Sterling)</li>
+<li>Added the CONNECTION_ABORTED, CONNECTION_TIMEOUT and CONNECTION_NORMAL
+  constants. (Zak)</li>
+<li>Assigning to a string offset beyond the end of the string now automatically
+  increases the string length by padding it with spaces, and performs the
+  assignment. (Zeev, Zend Engine)</li>
+<li>Added warnings in case an uninitialized string offset is read. (Zeev, Zend
+  Engine)</li>
+<li>Fixed a couple of overflow bugs in case of very large negative integer
+  numbers. (Zeev, Zend Engine)</li>
+<li>Fixed a crash bug in the string-offsets implementation (Zeev, Zend Engine)</li>
+<li>Improved the implementation of parent::method_name() for classes which use
+  run-time inheritance. (Zeev, Zend Engine)</li>
+<li>Added 'W' flag to date() function to return week number of year using ISO
+  8601 standard. (Colin)</li>
+<li>Made the PostgreSQL driver do internal row counting when iterating through
+  result sets. (gvz@2scale.net)</li>
+<li>Updated ext/mysql/libmysql to version 3.23.39; Portability fixes, minor
+  bug fixes. (tim@mysql.com)</li>
+<li>Added get_defined_constants() function to return an associative array of
+  constants mapped to their values. (Sean)</li>
+<li>New mailparse extension for parsing and manipulating MIME mail. (Wez)</li>
+<li>Define HAVE_CONFIG_H when building standalone DSO extensions. (Stig)</li>
+<li>Added the 'u' modifier to printf/sprintf which prints unsigned longs.
+  (Derick)</li>
+<li>Improved IRIX compatibility. (Sascha)</li>
+<li>Fixed crash bug in bzopen() when specifying an invalid file. (Andi)</li>
+<li>Fixed bugs in the mcrypt extension that caused crashes. (Derick)</li>
+<li>Added the IMG_ARC_ROUNDED option for the ImageFilledArc() function, which
+  specified that the drawn curve should be rounded. (Sterling)</li>
+<li>Updated the sockets extension to use resources instead of longs for the
+  socket descriptors.  The socket functions have been renamed to conform with
+  the PHP standard instead of their C counterparts.  The sockets extension is 
+  now usable under Win32. (Daniel)</li>
+<li>Added disk_total_space() to return the total size of a filesystem.
+  (Patch from Steven Bower)</li>
+<li>Renamed diskfreespace() to disk_free_space() to conform to established
+  naming conventions. (Jon)</li>
+<li>Fixed #2181. Now zero is returned instead of an unset value for
+  7-bit encoding and plain text body type. (Vlad)</li>
+<li>Fixed a bug in call_user_*() functions that would not allow calling
+  functions/methods that accepted parameters by reference. (Andrei)</li>
+<li>Added com_release($obj) and com_addref($obj) functions and the related class
+  members $obj->Release() and $obj->AddRef() to gain more control over the used
+  COM components. (phanto)</li>
+<li>Added an additional parameter to dotnet_load to specify the codepage (phanto)</li>
+<li>Added peak memory logging. Use --enable-memory-limit to create a new Apache
+  1.x logging directive "{mod_php_memory_usage}n" which will log the peak
+  amount of memory used by the script. (Thies)</li>
+<li>Made fstat() and stat() provide identical output by returning a numerical and
+  string indexed array. (Jason)</li>
+<li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
+</ul>
+
 <a name="4.0.6">
 <h3>Version 4.0.6</h3>
 <b>23-Jun-2001</b>
