@@ -3,12 +3,12 @@ require("shared.inc");
 commonHeader("PHP 4.0 build instructions - Win32 platform");
 ?>
 
-<P>These build instructions were compiled from various postings on the php3 
-newsgroup, and tested on a WinNT 4.0 SP4, Win98, and Win2K machines with 
+<P>These build instructions were compiled from various postings on the php3
+newsgroup, and tested on a WinNT 4.0 SP4, Win98, and Win2K machines with
 Microsoft Visual C++ V6.  It also believed to work with Windows 95 and
 Visual C++ V5.</P>
 <P>
-If you have suggestions or additions, send them to 
+If you have suggestions or additions, send them to
 <A HREF="mailto:php3@lists.php.net">php3@lists.php.net</A>.</P>
 <HR noshade>
 
@@ -46,35 +46,35 @@ to mind:</P>
 <P>Before you get started, you have a lot to
 download...</P><UL>
   <LI>For starters, get the Cygwin toolkit from
-  the closes Cygnus <A href="http://sourceware.cygnus.com/cygwin/download.html">mirror</A> site. 
-  What you are looking for is cygwin-b20\full.exe.  This will provide you most 
-  of the popular GNU utilities used by the build process.  
-  <LI>Now download the rest of the PHP win32 build tools you will need from the 
+  the closes Cygnus <A href="http://sourceware.cygnus.com/cygwin/download.html">mirror</A> site.
+  What you are looking for is cygwin-b20\full.exe.  This will provide you most
+  of the popular GNU utilities used by the build process.
+  <LI>Now download the rest of the PHP win32 build tools you will need from the
   PHP <A href="http://www.php.net/extra/win32build.zip">extra</A> site.
-  <LI>Download bcmath (number) support from the PHP version 4 
-  <A href="http://www.php.net/version4/downloads/number.tar.gz">downloads</A> site. 
-  Licensing restrictions preclude this being bundled with the PHP source, but 
-  there is nothing which prevents you from downloading it yourself and building 
+  <LI>Download bcmath (number) support from the PHP version 4
+  <A href="http://www.php.net/version4/downloads/number.tar.gz">downloads</A> site.
+  Licensing restrictions preclude this being bundled with the PHP source, but
+  there is nothing which prevents you from downloading it yourself and building
   it as a part of the package.
-  <LI>Also at the 
-  <A href="http://www.php.net/version4/downloads/bindlib_w32.zip">downloads</A> site, 
-  is a replacement for the resolv.lib included within the win32build.zip. 
+  <LI>Also at the
+  <A href="http://www.php.net/version4/downloads/bindlib_w32.zip">downloads</A> site,
+  is a replacement for the resolv.lib included within the win32build.zip.
   This adds some necessary functionality for dns name resolution.
-  <LI>If you don't already have an unzip utility, you will need one. 
-  I use <A href="http://www.cdrom.com/pub/infozip/UnZip.html">InfoZip</A>, 
-  but others have had success with <A href="http://www.winzip.com/">WinZip</A> 
+  <LI>If you don't already have an unzip utility, you will need one.
+  I use <A href="http://www.cdrom.com/pub/infozip/UnZip.html">InfoZip</A>,
+  but others have had success with <A href="http://www.winzip.com/">WinZip</A>
   and <A href="http://www.pkware.com/">PkZip</A>.
 </UL>
-<p>Finally, you are going to need the source to PHP4 itself.  Your best bet is 
-to get is straight from <A href="http://www.php.net/version4/cvs.php">CVS</A>. 
+<p>Finally, you are going to need the source to PHP4 itself.  Your best bet is
+to get is straight from <A href="http://www.php.net/version4/cvs.php">CVS</A>.
 If you get a <A href="http://snaps.php.net/">snapshot</A> or
-a <A href="http://www.php.net/version4/downloads.php">source</A> tarball, you 
-not only will have to untar and ungzip it, but you will have to convert the 
-bare linefeeds to crlf's in the <CODE>*.dsp</CODE> and <CODE>*.dsw</CODE> files 
+a <A href="http://www.php.net/downloads.php">source</A> tarball, you
+not only will have to untar and ungzip it, but you will have to convert the
+bare linefeeds to crlf's in the <CODE>*.dsp</CODE> and <CODE>*.dsw</CODE> files
 before Microsoft Visual C++ will have anything to do with them.</P>
 <UL>
-  <LI><B>Note:</B> place the <CODE>Zend</CODE> and <CODE>TSRM</CODE> 
-  directories inside the <CODE>php4</CODE> directory in order for the projects 
+  <LI><B>Note:</B> place the <CODE>Zend</CODE> and <CODE>TSRM</CODE>
+  directories inside the <CODE>php4</CODE> directory in order for the projects
   to be found during the build process.
 </UL>
 
@@ -84,9 +84,9 @@ before Microsoft Visual C++ will have anything to do with them.</P>
 
   <LI>Follow the instructions for installing the
   unzip utility of your choosing.
-  
 
-  <LI>Execute the Cygwin full.exe and follow the installation instructions. 
+
+  <LI>Execute the Cygwin full.exe and follow the installation instructions.
   If you choose another path than <CODE>C:\Program Files\Cygnus</CODE>, let the build process know by setting the
   Cygwin environment variable. On Windows 95/98
   setting an environment variable can be done
@@ -97,19 +97,19 @@ before Microsoft Visual C++ will have anything to do with them.</P>
   <UL>
     <LI><STRONG>Important</STRONG>: make a temporary directory for Cygwin to
     use otherwise many commands (most notably bison) will fail. On Windows
-    95/98, <CODE>mkdir C:\TMP</CODE>. For WindowsNT, 
+    95/98, <CODE>mkdir C:\TMP</CODE>. For WindowsNT,
     <CODE>mkdir %SystemDrive%\tmp</CODE>.
   </UL>
-  
-  
-  <LI>Make a directory and unzip the win32build.zip file into it. 
-  
 
-  <LI>Launch Microsoft Visual C++, and from the menu select Tools =&gt; 
-  Options. In the dialog, select the directories tab. Sequentially change the 
+
+  <LI>Make a directory and unzip the win32build.zip file into it.
+
+
+  <LI>Launch Microsoft Visual C++, and from the menu select Tools =&gt;
+  Options. In the dialog, select the directories tab. Sequentially change the
   dropdown to Executables, Includes, and Library files, and ensure that the
-  Cygwin\bin, win32build\include, and win32build\lib files are in the list 
-  below respectively. (To add an entry, select a blank line at the end of the 
+  Cygwin\bin, win32build\include, and win32build\lib files are in the list
+  below respectively. (To add an entry, select a blank line at the end of the
   list and begin typing).  Typical entries will look like this:
   <UL>
     <LI><CODE>C:\Program Files\Cygnus\cygwin-b20\H-i586-cygwin32\bin</CODE>
@@ -118,14 +118,14 @@ before Microsoft Visual C++ will have anything to do with them.</P>
     </UL>
   <P>Press OK, and exit out of Visual C++.</P>
 
-  <LI>Make another directory and unzip bindlib_w32.zip into it. Decide whether 
-  you want to have debug symbols available (bindlib - Win32 Debug) or not 
+  <LI>Make another directory and unzip bindlib_w32.zip into it. Decide whether
+  you want to have debug symbols available (bindlib - Win32 Debug) or not
   (bindlib - Win32 Release).  Build the appropriate configuration:
   <UL>
-    <LI>For GUI users, launch VC++, and then select File =&gt; Open Workspace 
+    <LI>For GUI users, launch VC++, and then select File =&gt; Open Workspace
     and select bindlib.  Then select Build=&gt;Set Active Configuration
-    and select the desired configuration.  Finally select 
-    Build=&gt;Rebuild All.  
+    and select the desired configuration.  Finally select
+    Build=&gt;Rebuild All.
     <LI>For cmdline users, make sure that you either
     have the C++ environment variables registered,
     or have run <CODE>vcvars.bat</CODE>, and then execute on of the following:
@@ -135,13 +135,13 @@ before Microsoft Visual C++ will have anything to do with them.</P>
       <LI><CODE>msdev bindlib.dsp /MAKE &quot;bindlib - Win32
       Release&quot;</CODE>
     </UL>
-    <LI>At this point, you should have a usable resolv.lib in either your 
+    <LI>At this point, you should have a usable resolv.lib in either your
     Debug or Release subdirectories.  Copy this file into your win32build\lib
     directory over the file by the same name found in there.
   </UL>
-  
-  
-  <LI>Create a Command window and change directory into your php4 source 
+
+
+  <LI>Create a Command window and change directory into your php4 source
   directory.  The number.tar.gz file is packed using standard Unix utilites.
   If you have WinZip, you can use that utility to unpack this file.  Otherwise,
   you can use of the corresponding utilities found in Cygwin as follows:
@@ -152,7 +152,7 @@ before Microsoft Visual C++ will have anything to do with them.</P>
     <LI><CODE>gunzip -c number.tar.gz | tar xv</CODE>
     <LI><CODE>ENDLOCAL</CODE>
   </UL>
-  
+
   </ul>
 
 <H2><A NAME="4">4. Building</A></H2>
@@ -162,7 +162,7 @@ standalone/CGI version.</P>
   File =&gt; Open Workspace and select php4ts.
   Then select Build=&gt;Set Active Configuration
   and select the desired configuration. Finally
-  select Build=&gt;Rebuild All.  
+  select Build=&gt;Rebuild All.
     <LI>For cmdline users, make sure that you either
   have the C++ environment variables registered,
   or have run <CODE>vcvars.bat</CODE>, and then execute one of the following:
@@ -171,7 +171,7 @@ standalone/CGI version.</P>
     Debug_TS&quot;</CODE>
       <LI><CODE>msdev php4ts.dsp /MAKE &quot;php4ts - Win32
     Release_TS&quot;</CODE>
-    <LI>At this point, you should have a usable php.exe in either your 
+    <LI>At this point, you should have a usable php.exe in either your
     Debug_TS or Release_TS subdirectories.
     </UL>
   </UL>
