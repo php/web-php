@@ -341,8 +341,11 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-	mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
-    mysql_select_db("php3");
+	mysql_pconnect($dbhost,$dbuser,$dbpwd)
+		or die("Unable to connect to SQL server.");
+	mysql_select_db("php3");
+
+	/* HANDLE NORMAL DEVELOPER UPDATES */
 	if(isset($modify) && $modify=="Edit Bug") {
 		$ok=0;
 		if($user!="cvsread") {
@@ -350,10 +353,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($psw)>0) {
 				if(crypt($pw,substr($psw,0,2))==$psw) {
 					$ts=date("Y-m-d H:i:s");
-					if($estatus=="Delete!") {
-						mysql_query("DELETE from bugdb where id=$id");
-					} else {
-						mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+					mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+					if (!empty($ncomment)) {
+						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@cvs.php.net','$ts','$ncomment')");
 					}
 					$ok=1;
 				}
@@ -361,51 +363,61 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		if(!$ok) {
 			echo "<b>Sorry, incorrect user id/password pair.</b><br>\n";
-    		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
+    			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
-			if($estatus=="Delete!") {
-				$comments = stripslashes($comments);
-				$text = "Bug #$id has been deleted from the database by $user\nComments:\n\n$comments\n";
-			} else {
-				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$comments\n";
-				$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
-				$text = stripslashes($text);
-			}
+			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment\n";
+			$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
+			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
-    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    		Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+
+			/* mail bug originator */
+    			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
 	}
+
+	/* HANDLE USER UDPATES */
 	if(isset($modify) && $modify=="User Edit Bug") {
 		$ts=date("Y-m-d H:i:s");
 		$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id and passwd='$pw'");
 		$ok=mysql_numrows($result);
 		if(!$ok) {
 			echo "<b>Sorry, incorrect password.  The entry has not been changed.</b><br>\n";
-    		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
+    			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
 		} else {
 			$row=mysql_fetch_row($result);
+
+			/* update bug record */
 			if($estatus=="Closed" and $row[0]!="Closed")
-				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', ldesc='$eldesc', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts', dev_id='$eemail' where id=$id");
+				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts', dev_id='$eemail' where id=$id");
 			else
-				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', ldesc='$eldesc', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
+				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
+
+			/* add comment */
+			if (!empty($ncomment)) {
+				mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail','$ts','$ncomment')");
+			}
+
 			echo "<b>Database updated!</b><br>\n";
+
 			$text = "ID: $id\nUser Update by: $eemail\n";
 			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
 			$text .= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
-			$text .= "Description: $esdesc\n\n$eldesc\n";
+			$text .= "Description: $esdesc\n\n$ncomment\n";
 			$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
-    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    		Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 			mysql_freeresult($result);
 		}	
 	}
-    $result = mysql_query("SELECT * from bugdb where id=$id");
+
+	/* DISPLAY BUG */
+	$result = mysql_query("SELECT * from bugdb where id=$id");
 	if(mysql_numrows($result)>0) {
 		$row = mysql_fetch_row($result);	
 		echo "<br><h1>Bug id #$id</h1>\n";
@@ -451,48 +463,52 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$sd = ereg_replace(">","&gt;",$sd);
 		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"$row[3]\"></td></tr>\n";
 		echo "</table>\n";
+
+		/* INSERT NEW COMMENT HERE */
+		if (isset($edit)) {
+			echo "<b>New Comment:</b><br>\n";
+			echo "<textarea cols=60 rows=15 name=\"ncomment\"></textarea><br>\n";
+			if ($edit == 1) {
+				echo "CVS user id: <input type=text size=10 name=user>\n";
+			}
+			echo "Password: <input type=password size=10 name=pw>\n";
+			echo "<input type=submit value=\"Commit Changes\">\n";
+			echo "</form>\n";
+		}
+
+		echo "<hr>\n";
+
+		/* ORIGINAL REPORT */
+		echo "<b><i>[".$row[9]."] ".$row[2]."</i></b><br>\n";
 		$text = addlinks($row[4]);
-		if($edit==2) {
-			echo "<textarea cols=60 rows=15 name=\"eldesc\" wrap=virtual>$text</textarea>";
-		} else {
+		echo "<blockquote><blockquote><pre>";
+		echo wrap($text,90);
+		echo "</pre></blockquote></blockquote>\n";
+
+		/* OLD-STYLE DEVELOPER COMMENT */
+		if(strlen($row[8])) {
+			echo "<b><i>[".$row[10]."] ".$row[11]."</i></b><br>\n";
+			$text=addlinks($row[8]);
 			echo "<blockquote><blockquote><pre>";
-			echo wrap($text,90);
+			wrap($text,90);
 			echo "</pre></blockquote></blockquote>\n";
 		}
-		if(!isset($edit)) {
-			if(strlen($row[8])) {
-				echo "<b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
-				$text=addlinks($row[8]);
-				echo "<b><pre>";
+
+		/* NEW-STYLE COMMENTS */
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
+		if ($comresult = mysql_query($query)) {
+			while ($com = mysql_fetch_array($comresult)) {
+				echo "<b><i>[".$com['ts']."] ".$com['email']."</i></b><br>\n";
+				$text = addlinks($com['comment']);
+				echo "<blockquote><blockquote><pre>";
 				wrap($text,90);
-				echo "</pre></b>\n";
+				echo "</pre></blockquote></blockquote>\n";
 			}
-		} else 
-		if($edit==1) {
-			echo "<b><tt>Developer Comments:</tt></b><br>\n";
-			echo "<textarea cols=60 rows=15 name=\"comments\">".$row[8]."</textarea><br>\n";
-			echo "CVS user id: <input type=text size=10 name=user>\n";
-			echo "CVS password: <input type=password size=10 name=pw>\n";
-			echo "<input type=submit value=\"Commit Changes\">\n";
-			echo "</form>\n";
-		} else {
-			if(strlen($row[8])) {
-				echo "<P><b><tt>Developer Comments</tt></b><br>\n<br><b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
-				$text=addlinks($row[8]);
-				echo "<b><pre>";
-				wrap($text,90);
-				echo "</pre></b>\n";
-			}
-			echo "<br>Password: <input type=password size=20 name=pw>\n";
-			echo "<input type=submit value=\"Commit Changes\">\n";
-			echo "</form>\n";
+			mysql_freeresult($comresult);
 		}
+
 	} else {
-		if(isset($modify) && $estatus=="Delete!") {
-			echo "<br><h1>Bug id #$id has been deleted</h1>\n";
-		} else {
-			echo "<br><h1>Sorry bug id #$id does not exist</h1>\n";
-		}
+		echo "<br><h1>Sorry bug id #$id does not exist</h1>\n";
 	}
 	mysql_freeresult($result);
 } else {
@@ -599,7 +615,16 @@ CREATE TABLE bugdb (
   ts2 datetime,
   dev_id varchar(16),
   assign varchar(16),
-  passwd varchar(20);
+  passwd varchar(20),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE bugdb_comments (
+  id int(8) NOT NULL AUTO_INCREMENT,
+  bug int(8) NOT NULL,
+  email varchar(40) NOT NULL,
+  ts datetime NOT NULL,
+  comment text,
   PRIMARY KEY (id)
 );
 */
