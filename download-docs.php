@@ -35,14 +35,14 @@ here to see all the file sizes and dates</a>.
 
 commonHeader("Download documentation");
 
-// array structure: (filename => header, extension)
+// Available formats
 $formats = array(
- "bigmanual.html.bz2"      => array("Single HTML",         "html.bz2"),
- "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2"),
- //"php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
- "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb"),
- "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb"),
- "manual-LANG.chm"         => array("Windows HTML Help",   "chm")
+ "Single HTML"       => "html.bz2",
+ "Many HTML files"   => "tar.bz2",
+ //"PDF"               => "pdf.bz2",
+ "PalmPilot DOC"     => "doc.pdb",
+ "PalmPilot iSilo"   => "isilo.pdb",
+ "Windows HTML Help" => "chm"
 );
 ?>
 
@@ -74,8 +74,8 @@ $formats = array(
   <td>&nbsp;</td>
 <?php 
 // Print out the name of the formats
-foreach ($formats as $fname => $details) {
-    echo "  <th valign=\"bottom\">$details[0]</th>\n";
+foreach ($formats as $formatname => $extension) {
+    echo "  <th valign=\"bottom\">$formatname</th>\n";
 }
 ?>
  </tr>
@@ -88,41 +88,21 @@ foreach ($LANGUAGES as $langcode => $language) {
     $files = array(); $formatnum = 0;
     
     // Go through all possible manual formats
-    foreach ($formats as $fname => $details) {
+    foreach ($formats as $formatname => $extension) {
     
-        // Reset link target
-        $link_to = "";
-        
-        // File named after the format exists [old!]
-        if (file_exists("manual/$langcode/$fn")) {
-            $link_to = "manual/$langcode/$fn";
-        }
-        
         // File named after the language and format exists
-        elseif (file_exists("distributions/manual/php_manual_$langcode.$details[1]")) {
-            $link_to = "distributions/manual/php_manual_$langcode.$details[1]";
-        }
-        
-        // File named after the language and format exists [old!]
-        elseif (file_exists("distributions/manual/manual-$langcode.$details[1]")) {
-            $link_to = "distributions/manual/manual-$langcode.$details[1]";
-        }
-    
-        // Unable to find file
-        if (!$link_to) {
-            $files[] = '';
-        }
-        
-        // File found
-        else {
+        if (file_exists("distributions/manual/php_manual_$langcode.$extension")) {
             
+            // Relative file path from here
+            $link_to = "distributions/manual/php_manual_$langcode.$extension";
+
             // Try to get size and changed date
             $size    = @filesize($link_to);
             $changed = @filemtime($link_to);
             
             // Size available, collect information
             if ($size) {
-                $files[] = array($link_to, (int) ($size/1024),  date("j M Y", $changed), $details[1]);
+                $files[] = array($link_to, (int) ($size/1024),  date("j M Y", $changed), $formatname);
                 $formatnum++;
             }
             
@@ -130,6 +110,11 @@ foreach ($LANGUAGES as $langcode => $language) {
             else {
                 $files[] = '';
             }
+        }
+        
+        // Unable to find file
+        else (!$link_to) {
+            $files[] = '';
         }
     }
     
@@ -167,6 +152,9 @@ foreach ($LANGUAGES as $langcode => $language) {
             // End table cell
             echo "</td>\n";
         }
+        
+        // End table row
+        echo "</tr>\n";
     }
 }
 ?>
