@@ -31,6 +31,12 @@
 	}
 ?>
 
+<blockquote>The sites listed here are either submitted by site owners, or someone
+who has spotted PHP in use on a site.  The presence of a company on this list does
+not imply endorsement of PHP.  If you control a site that you do not wish listed 
+here please email <a href="mailto: sites@php.net">sites@php.net</a> and it will 
+removed right away.</blockquote>
+
 <CENTER>
 <TABLE border=0 cellpadding=0 cellspacing=0>
 
@@ -166,12 +172,11 @@
 echo "</table></center>\n";
 
 ?>
-<BR><BR>
-If you have a site you feel belongs on this list, please send us email at 
-<a href="mailto:sites@php.net">sites@php.net</a>.  With well over 60,000 sites 
-on the Internet running PHP, we cannot list them all.  This list is to help developers 
-justify their decision to use PHP.  It should thus contain high-profile sites that 
-someone not necessarily well-versed in the ways of the Internet might have heard of.
+<BR>
+<blockquote>If you have a site you feel belongs on this list, send us email at 
+<a href="mailto:sites@php.net">sites@php.net</a>.  Please include a suggested 
+category.  With well over 60,000 sites on the Internet running PHP, we cannot
+list them all and will add suggested sites at our discretion.</blockquote>
 <?
 commonFooter();
 ?>
