@@ -105,7 +105,10 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     
     // Some other mirror is selected
     else { $mr = "http://{$dlinfo[2]}/"; }
-    include_once "$DOCUMENT_ROOT/do_download.php";
+    
+    // Start the download process
+    include "do-download.inc";
+    download_file($mr, $df);
     exit;
 }
 
