@@ -2,42 +2,44 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'release_4_3_7.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4.3.7 Release Announcement");
+site_header("Annonce de publication de PHP 4.3.7");
 ?>
 
-<h1>PHP 4.3.7 Release Announcement</h1>
+<h1>Annonce de publication de PHP 4.3.7</h1>
 
 <p>[ <a href="/release_4_3_7.php">English Version</a> ]</p>
 
 <p>
- PHP Development Team is proud to announce the release of PHP <a href="/downloads.php">PHP 4.3.7</a>.
- This is a maintenance release that in addition to several non-critical bug fixes, addresses an input
- validation vulnerability in escapeshellcmd() and escapeshellarg() functions on the Windows platform.
- Users of PHP on Windows are encouraged to upgrade to this release as soon as possible.
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
+la publication de <a href="/downloads.php">PHP 4.3.7</a>. C'est une version 
+de maintenance, destin&eacute;e &agrave; corriger des bogues non-critiques,
+corriger une vulnérabilité de validation dans les fonctions escapeshellcmd() et
+escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encouragés
+à changer de versions aussitôt que possible.
 </p>
 
-<h2>Bugfix release</h2>
+<h2>Version de correction de bogues</h2>
 
 <p>
- Aside from the above mentioned issues this release includes the following important fixes:
+ PHP 4.3.7 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
 </p>
 
 <ul>
- <li>Synchronized bundled GD library with GD 2.0.23.</li>
- <li>Fixed a bug that prevented compilation of GD extensions against FreeType 2.1.0-2.1.2.</li>
- <li>Fixed thread safety issue with informix connection id.</li>
- <li>Fixed incorrect resolving of relative paths by glob() in windows.</li>
- <li>Fixed mapping of Greek letters to html entities.</li>
- <li>Fixed a bug that caused an on shutdown crash when using PHP with Apache 2.0.49.</li>
- <li>Fixed a number of crashes inside pgsql, cpdf and gd extensions.</li>
+ <li>La bibliothèque GD est maintenant en version 2.0.23.</li>
+ <li>Correction d'un bogue qui empéchait la compilation de GD avec FreeType 2.1.0-2.1.2.</li>
+ <li>Correction d'un problème de sécurité thread avec l'identifiant de connexion informix.</li>
+ <li>Correction de la résolution de chemin relatifs avec glob() sous Windows.</li>
+ <li>Correction des entités HTML pour les caractèrs grecs.</li>
+ <li>Correction d'un bug qui causait un crash avec Apache 2.0.49.</li>
+ <li>Correction de nombreux crashs avec PostGreSQL, CPDF et GD.</li>
 
- <li>All in all this release fixes over 30 bugs that have been discovered and resolved
- since the 4.3.6 release.</li>
+ <li>Cette version corrige environ 30 bogues qui ont &eacute;t&eacute; d&eacute;couverts depuis
+ la version 4.3.6.</li>
 </ul>
 
 <p>
- For a full list of changes in PHP 4.3.7, see the
- <a href="/ChangeLog-4.php#4.3.7">ChangeLog</a>.
+ Pour une liste exhaustive des modifications de PHP 4.3.6, voyez
+ <a href="/ChangeLog-4.php#4.3.7">le changelog</a>, en anglais.
  </p>
 
 <?php site_footer(); ?>
