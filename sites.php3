@@ -208,6 +208,7 @@ right away.</blockquote>
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("Italia Online","www.iol.it");
+	site("Kieser.Net","www.kieser.net");
 	site("Nederland.Net","www.nederland.net");
 	site("Netvision","www.netvision.net.il");
 	site("Pair Networks","www.pair.net");
@@ -274,6 +275,7 @@ right away.</blockquote>
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
 	site("Linux BBS","www.linuxbbs.org");
+	site("Daily Linux News","www.kieser.net/linux.html");
 	site("Linux Power","linuxpower.org");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
