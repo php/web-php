@@ -1,0 +1,9 @@
+#!/bin/sh
+
+lynx -source http://www.freshmeat.net/search/?q=php\&mode=xml > backend/projects.xml~
+if [ $? -ne 0 ]; then
+  echo problem getting results from freshmeat
+  exit 1
+fi
+
+mv backend/projects.xml~ backend/projects.xml
