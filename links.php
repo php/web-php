@@ -414,6 +414,9 @@ German site about PHPGTK</li>
 
 <li><a href="http://php.lap.hu/">PHP.lap.hu</a><br>
 Starting point for Hungarian and International PHP sites</li>
+
+<li><a href="http://phpinfo.wish.hu/">PHPinfo</a><br>
+Fresh news from the world of PHP and web development</li>
 </ul></li>
 
 <li><b>Italian</b>
