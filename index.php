@@ -161,7 +161,7 @@ commonHeader("Hypertext Preprocessor");
  figures of the PHP scene there. OSCOM.4 is a place for developers,
  vendors, integrators and users to mingle and learn from each other. <a
  href="http://oscom.org/events/oscom4/registration">Registration is
- now open</a>.
+ now open</a>!
 </p>
 
 <hr />
