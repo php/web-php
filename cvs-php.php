@@ -132,6 +132,11 @@ then you don't!
 </table>
 </form>
 <?php } elseif ($fullname && $email && $password && $purpose && $checkread) {
+
+	$stripit = array('fullname', 'email', 'password', 'purpose');
+	for (reset($stripit); $name = current($stripit); next($stripit))
+		$$name = stripslashes($$name);
+
 mail("group@php.net","CVS Account Request",
     "Full name: $fullname\n".
     "Email:     $email\nID: $id\n".
