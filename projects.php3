@@ -184,6 +184,17 @@ Web browser anywhere in the world. You can also search inside your notebooks to 
 entries that interest you. 
 <? endEntry();?>
 
+<? makeEntry("IRM","www.redshift.com/~yramin/atp/irm","Yann Ramin" ,"theatrus@usa.net"); ?>
+IRM is an easy to use and powerful web-based tracking utility for IT
+departments.  It stores detailed information on software and computers.
+It features a search engine to list, say, all computers running Windows
+95, and so on.  Another feature is the Tracking utility which stores a
+complete history of every computer, as well as outstanding repair jobs,
+prioritized and displayed in a variety of formats.  IRM also features
+user security, as well as several security groups users can be in
+(admin, normal, post-only).
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
