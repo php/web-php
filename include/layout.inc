@@ -6,7 +6,7 @@
 #
 
 function spacer($width=1, $height=1, $align=false, $extras=false) {
-	printf('<img src="/gifs/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
+	printf('<img src="/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
 		$width,
 		$height,
 		($align ? 'align="'.$align.'" ' : ''),
