@@ -173,6 +173,16 @@ The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally 
 For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.</p>
 <hr />
 
+<h1> PHP 4.3.5RC4 released!</h1>
+<p>
+ <span class="newsdate">[18-Mar-2004]</span>
+ <a href="http://qa.php.net/">PHP 4.3.5RC3</a> has been released for testing. This 
+ will be the last release candidate prior to the final release, so please test it
+ as much as possible. List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.566&amp;r2=1.1247.2.605">NEWS</a> file.
+</p>
+
+<br />
 
 <h1>Spanish PHP Mailing List Now at PHP.net</h1>
 <p>
