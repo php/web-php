@@ -3,4 +3,5 @@ Disallow: /backend/
 Disallow: /stats/
 Disallow: /source.php
 Disallow: /search.php
+Disallow: /mod.php
 Disallow: /manual/add-note.php

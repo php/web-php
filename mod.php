@@ -10,10 +10,20 @@
 $_SERVER['BASE_PAGE'] = 'mod.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-// Only run on www.php.net
-if ($MYSITE != "http://www.php.net/") { exit; }
-
 site_header("Email confirmation");
+
+// Only run on www.php.net
+if ($MYSITE != "http://www.php.net/") { 
+    echo <<<ERROR
+<h1>Email confirmation failed</h1>
+
+<p class="formerror">
+ This server is not capable of handling email confirmations.
+</p>
+ERROR;
+    site_footer();
+    exit;
+}
 
 // These sites are handled by automoderation
 $sites = array("php.net", "lists.php.net");
