@@ -101,9 +101,11 @@ Assuming you have an account on a server that supports IMAP, you can theoretical
 use an installation of IMP to check your mail from anywhere that you have web access. 
 <? endEntry();?>
 
+<? /* ?>
 <? makeEntry("SwellMail","https://www.swellmail.net","Angelos Karageorgiou","angelos@www.datatone.com"); ?>
 A PHP based secure email reading interface for IMAP based servers.
 <? endEntry();?>
+<? */ ?>
 
 <? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
@@ -236,8 +238,10 @@ existing order processing systems.
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
-If you have a project you feel belongs on this list, send us email us at <A HREF="mailto:projects@php.net">projects@php.net</A>.
-If you have a site that uses PHP, you may want to add it to the <a href="/sites.php3">sites page</a>.
+If you have a project you feel belongs on this list, send us email us at 
+<A HREF="mailto:projects@php.net">projects@php.net</A> (we consider a project to be 
+a software package where the code is available for download).  If you have a site that 
+uses PHP, you may want to add it to the <a href="/sites.php3">sites page</a>.
 <BR></TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
