@@ -58,12 +58,12 @@ HREF="http://www.tryc.on.ca/php3.html"
 >http://www.tryc.on.ca/php3.html</A
 >.  To subscribe to the
      PHP3 mailing list, send an empty mail to <A
-HREF="mailto:php3-subscribe@php.il.eu.org"
->php3-subscribe@php.il.eu.org</A
+HREF="mailto:php3-subscribe@lists.php.net"
+>php3-subscribe@lists.php.net</A
 >.  The mailing list address
      is <TT
 CLASS="LITERAL"
->php3@php.il.eu.org</TT
+>php3@lists.php.net</TT
 >.
 
     </P
