@@ -202,22 +202,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<h1>PHP 4.3.4RC1 released</h1>
-<p>
- <span class="newsdate">[29-Sep-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.4RC1</a> has been released for testing.
- This release candidate contains only bug fixes, so it should be quite stable.
- Please test this release as much as possible, so that any remaining issues
- can be uncovered and resolved prior to the final release.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.357&r2=1.1247.2.411">NEWS</a>
- file.
-</p>
-
-<hr />
-
 <?php news_image("http://www.phpcruise.com/", "phpcruise.png", "php|cruise"); ?>
 
 <h1>php|cruise: The World's First Ever PHP-only Cruise</h1>
@@ -404,22 +388,6 @@ commonHeader("Hypertext Preprocessor");
  now offers daily news for PHP professionals and beginners from all over the
  world, helping them to stay up-to-date with the latest news on PHP and
  related technologies.
-</p>
-
-<hr />
-
-<h1>PHP 4.3.3RC3 released</h1>
-<p>
- <span class="newsdate">[07-Aug-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.3RC3</a> has been released for testing.
- This is should be the last release candidate prior to the final 4.3.3 release.
- Please test this release as much as possible, so that any remaining issues can
- be uncovered and resolved.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&amp;r2=1.1247.2.329&amp;r1=1.1247.2.314">NEWS</a>
- file.
 </p>
 
 <hr />
