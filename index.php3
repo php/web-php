@@ -3,6 +3,12 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP 3.0.4 build problem</h3>
+There is a small error in the 3.0.4 configure script which affects some
+versions of BSD/OS and AIX.  If you get an error about <i>u_int</i> being 
+redefined when you build PHP replace your php-3.0.4/configure script with 
+<a href="http://ca.php.net/configure.gz">this file</a> and re-run configure.
+
 <h3>PHP 3.0.4 has been released</h3>
 
 Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
