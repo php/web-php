@@ -7,6 +7,7 @@ $dbuser="nobody";
 $dbpwd="";
 $glimpse_dir = "/u/www/servers/lerdorf/php3";
 $glimpse_prog = "/usr/local/bin/glimpse";
+$glimpse_url = "";
 #$glimpse_url_regexp = "^/php3";
 ?>
 
