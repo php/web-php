@@ -300,7 +300,7 @@ by Youn Sukbum<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://php.wilson.gs/bible"
-><IMG SRC="http://php.wilson.gs/bible/img/cover.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/wilson.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 PHP Bible<BR>
