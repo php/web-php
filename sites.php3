@@ -52,6 +52,7 @@ right away.</blockquote>
 	site("The Audi A4 web site","www.a4.org");
 	site("The Audi TT web site","www.audi-tt.org");
 	site("Audi World","www.audiworld.com");
+	site("Auto City","www.autocity.de");
 	site("Cars Everything","www.carseverything.com");
 	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
@@ -112,8 +113,10 @@ right away.</blockquote>
 	siteStart();
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("EduTest.Com","www.edutest.com");
+	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("FilmNetwork","www.fnw.de");
+	site("Hip Hop Archives","www.hiphoparchives.com");
 	site("HitList","www.hitlist.com");
 	site("Independent Musicians Guild","www.scimg.com");
 	site("Kentucky Lottery","www.kylottery.com");
@@ -140,6 +143,7 @@ right away.</blockquote>
 	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
 	site("First USA Bank","www.firstusabank.com");
+	site("Insurance Bridge","www.insurancebridge.com");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
 	siteEnd();
 
@@ -180,16 +184,20 @@ right away.</blockquote>
 	siteStart();
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
+	site("Constructors","www.constructors.com");
 	site("easyDNS","www.easydns.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
+	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
 	site("Kattare's Virtual Web Service","www.kattare.com");
 	site("Mail Chek","mail.chek.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
+	site("PBM Online Services","www.ndw.de");
 	site("TageBook.Com - Online Diary","tagebook.com");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
+	site("WhoBuiltIt","www.whobuiltit.com");
 	siteEnd();
 
 /* ISPs */
@@ -209,6 +217,12 @@ right away.</blockquote>
 	site("Total Information Management AG","www.timso.ch");
 	site("XOOM Inc.","xoom.com");
 	site("Yebo! Net","www.yebo.co.za");
+	siteEnd();
+
+/* Job & Career Sites */
+	title("Job & Career Sites");
+	siteStart();
+	site("Jobs & Career - The Time of India","www.timesjobsandcareers.com");
 	siteEnd();
 
 /* Military */
@@ -303,7 +317,9 @@ right away.</blockquote>
 	site("BART's Water Sports","www.bartswatersports.com");
 	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
+	site("Coconut Beach","coconutbeach.com");
 	site("COMP-U-BUY","www.comp-u-buy.com");
+	site("Cookson's Tools","www.cooksons.com");
 	site("Delia*s Inc.","www.delias.com");
 	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
@@ -313,6 +329,7 @@ right away.</blockquote>
 	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
+	site("Neckermann","www.neckermann.de");
 	site("Para-Shop","www.para-shop.de");
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
@@ -328,6 +345,8 @@ right away.</blockquote>
 	title("Sports");
 	siteStart();
 	site("Disc Golf Birmingham","discgolf.bham.al.us");
+	site("Jason Kidd's Site","www.jasonkidd.net");
+	site("Oakland Raiders","www.raiders.com");
 	site("Professional Disc Golf Association","www.pdga.com");
 	site("San Francisco Giants Baseball Club","www.sfgiants.com");
 	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
@@ -368,6 +387,9 @@ right away.</blockquote>
 	title("User Groups");
 	siteStart();
 	site("Albany New York PowerBuilder User Group","www.anypbug.org");
+	site("Lugistics - LUG Software","server.hellug.gr/LUGistics/en/pub/");
+	site("Maximilian Bayer","mb.users.de");
+	site("RC5.de","www.rc5.de");
 	siteEnd();
 
 /* Web Development */
@@ -384,6 +406,7 @@ right away.</blockquote>
 	siteStart();
 	site("Astrology Forum","www.astroforum.ch");
 	site("Banana Fish Bones","www.bananafishbones.de");
+	site("Bookmarklets","www.bookmarklets.com");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Distributed.Net","www.distributed.net");
