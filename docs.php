@@ -46,7 +46,9 @@ commonHeader("Documentation");
 
 // Check for really available manual languages
 $man_languages = array();
-foreach ($LANGUAGES as $code => $langname) {
+// Remove inactive online languages from the list to show
+$online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+foreach ($online_languages as $code => $langname) {
 // Avoid this stat call here for the moment
 //    if (file_exists("manual/$code/index.php")) {
         $man_languages[] = $code;

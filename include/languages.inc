@@ -39,6 +39,10 @@ $LANGUAGES = array(
     'tr'    => 'Turkish',
 );
 
+$INACTIVE_ONLINE_LANGUAGES = array(
+	'el' => 'Greek',
+);
+
 // Convert between language codes back and forth
 // [We use non standard languages codes and so conversion
 // is needed when communicating with the outside world]
@@ -61,3 +65,4 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
         }
     }
 }
+?>
