@@ -39,6 +39,22 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
 ?>
+<h1>PHP Conference</h1>
+<font class="newsDate">[1-May-2001]</font>
+<br clear="all">
+The first ever PHP Conference, part of the <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>, will bring the community together for
+<a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a> and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a> designed to explore and strengthen PHP in
+the open source space. Take a look under the hood at everything
+PHP--from understanding PHP on wireless devices to participating
+in a discussion on the future of PHP featuring some of the core
+developers and luminaries from the PHP community. The conference
+runs July 23-27, 2001, at the Sheraton San Diego Hotel and Marina
+in San Diego, California. <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/register.html">Register before June 22 to
+save up to $400!</a>.
+</p>
+
+<? echo hdelim(); ?>
+
 <h1>PHP 4.0.5 Released!</h1>
 
 <p>
