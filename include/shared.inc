@@ -257,7 +257,6 @@ function commonHeader($title) {
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
 
-<? if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 var loaded = 0;
@@ -384,11 +383,7 @@ endif;
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
 <? endif; ?>
 
-<? endif;	/* don't be fancy for the search engine */ ?>
-
 </HEAD>
-
-<? if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
 
 <BODY MARGINHEIGHT=3 MARGINWIDTH=3 TOPMARGIN=3 LEFTMARGIN=3 BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#4040A0" ALINK="#00FF00"
 <? if ($NS4 || $NS3):
@@ -413,7 +408,9 @@ endif; ?>
 		if ($UP[0] && $UP[1]):
 			makeSideButton($UP[0],"up","","up",129,30,0,10,"Up to $UP[1]","<BR>\n");
 		endif;
-		makeBorderTOC($title);
+		if (!$HTDIG):
+			makeBorderTOC($title);
+		endif;
 	else:
 		makeSideButton("downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
 		makeSideButton("docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
@@ -465,9 +462,7 @@ endif; ?>
       <? endif; ?>
       <BR CLEAR=ALL>
       <!-- start body -->
-<? else:		/* don't be fancy for the search engine */ ?>
-<BODY>
-<? endif;		/* don't be fancy for the search engine */
+<?
 }
 
 
@@ -476,8 +471,7 @@ function commonFooter() {
 	global $MIRRORS,$MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	$country=$MIRRORS[$MYSITE][0];
-
-if (!$HTDIG):	/* don't be fancy for the search engine */ ?>
+?>
       <!-- end body -->
      </TD>
     </TR>
@@ -605,7 +599,6 @@ if (IE4) {
 </SCRIPT>
 <?
 endif;		/* Kick outs */
-endif;		/* don't be fancy for the search engine */
 ?>
 </BODY>
 </HTML>
