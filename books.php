@@ -762,7 +762,6 @@ about
 <?php
 
   if (isset($type)) {
-    echo '<!--'; print_r($books[$type]); echo '-->';
     echo '<table border=0 cellpadding=5>';
     foreach ($books[$type] as $one_book) {
       showBook($one_book);
@@ -771,8 +770,7 @@ about
   } else {
     echo '<ul>';
     foreach ($books as $btype => $book_list) {
-      echo '<!-- $btype -->';
-      make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books]");
+      echo '<li>' . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books]");
     }
     echo '</ul>';
   }
