@@ -151,6 +151,20 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
+
+<h1>PHP Manual CHM Edition - 12th build</h1>
+<p>
+ <span class="newsdate">[06-Sep-2003]</span>
+ The 12th build of the extended CHM edition is out now, and available
+ <a href="http://weblabor.hu/php-doc-chm">for download</a>. This build
+ contains updated content and user notes, as well as fixes the bugs found
+ in the previous build. A new optional "phpZ" skin is also introduced in
+ this release, courtesy of Gonzalo De la Pena Andreu.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
 
 <h1>International PHP Conference 2003 program online</h1>
