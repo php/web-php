@@ -3,7 +3,7 @@ require("shared.inc");
 commonHeader("Downloads ");
 $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
-$server = 'ca.php.net';
+// $server = 'ca.php.net';
 ?>
 
 <h2>Latest version of PHP4</h2><BR>
