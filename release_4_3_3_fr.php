@@ -29,15 +29,15 @@ am&eacute;liorations et ajouts :
 <li>Corrections de plusieurs probl&egrave;mes de d&eacute;passement de capacit&eacute; avec les entiers et buffers.</li>
 <li>Correction des jeux de caract&egrave;res multi-octets qui incluent le caract&egrave;re 0x5c en tant que second octet des formulaires multipart/form-data.</li>
 <li>each() est d&eacute;sormais compatible avec les cl&eacute;s binaires.</li>
-<li>Am&eacute;liorations importante de NSAPI SAPI.</li>
+<li>Am&eacute;liorations importantes de NSAPI SAPI.</li>
 <li>Am&eacute;lioration de l'interface IMAP.</li>
 <li>Am&eacute;lioration de l'interface Interbase.</li>
 <li>Ajout d'un gestionnaire DBA 'infile' pour supporter les fichiers .ini.</li>
 <li>Ajout des options longues pour les versions CLI & CGI (i.e. --version).</li>
 <li>Ajout de nouveaux param&egrave;tres &agrave; preg_match*() pour indiquer l'offset de d&eacute;part dans la recherche de la cha&icirc;ne.</li>
-<li>La libraire Expat distribu&eacute;e passe en version 1.95.6</li>
-<li>La libraire PCRE distribu&eacute;e passe en version 4.3</li>
-<li>La libraire  GD distribu&eacute;e passe en version 2.0.15</li>
+<li>La librairie Expat distribu&eacute;e passe en version 1.95.6</li>
+<li>La librairie PCRE distribu&eacute;e passe en version 4.3</li>
+<li>La librairie GD distribu&eacute;e passe en version 2.0.15</li>
 <li>Plus de 100 corrections de bugs divers.</li>
 </ul>
 
