@@ -50,6 +50,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Manual additions, new event calendar</h1>
+
+<p>
+<font class="newsDate">[21-Jul-2001]</font>
+The <a href="docs.php">manual page</a> now shows the new .tar.bz2 packaging
+for some languages, and we are also working to get the PDF format back, and update
+all the chm manuals soon. Check out our new <a href="cal.php">Event Calendar</a>
+where you can add your groups PHP events, and see what is already there.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php /* move this entry to the top when you update it! */ ?>
 
 <h1>
@@ -75,8 +88,8 @@ of which continue to show impressive growth for PHP. Check out the
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
-few weeks are now gone, hopefully for good.  This is thanks to a brand new server donated
-by <a href="http://www.pair.com/">pair Networks</a>.  Thanks!
+few weeks are now gone, hopefully for good. This is thanks to a brand new server donated
+by <a href="http://www.pair.com/">pair Networks</a>. Thanks!
 <br clear="all">
 </p>
 
@@ -87,8 +100,8 @@ by <a href="http://www.pair.com/">pair Networks</a>.  Thanks!
 <p>
 <font class="newsDate">[23-Jun-2001]</font>
 <a href="downloads.php">PHP 4.0.6</a> is a maintenance release, that features many bug fixes from
-PHP 4.0.5, and is especially much more efficient in its memory requirements.  Users that skipped
-the 4.0.5 upgrade may wish to jump directly from 4.0.4 to the much more stable 4.0.6.  For a
+PHP 4.0.5, and is especially much more efficient in its memory requirements. Users that skipped
+the 4.0.5 upgrade may wish to jump directly from 4.0.4 to the much more stable 4.0.6. For a
 full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 <br clear="all">
 </p>
