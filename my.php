@@ -20,7 +20,7 @@ if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
                  $langs[$_POST['my_lang']] . "</option>\n";
     
     // Remove, so it is not listed two times
-    unset($langs[$_POST['lang']]);
+    unset($langs[$_POST['my_lang']]);
 }
 
 // We have recevied a cookie and it is an available language
@@ -90,7 +90,7 @@ $langinfo = array(
     (isset($_COOKIE['LAST_LANG']) ? $_COOKIE['LAST_LANG'] : "None"),
     
     "Your Accept-Language browser setting" =>
-    $_SERVER['HTTP_ACCEPT_LANGUAGE'],
+    (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : "None"),
     
     "The mirror's default language" =>
     default_language(),
