@@ -1,158 +1,193 @@
 <?php
-header("Cache-Control: public, max-age=600");
-require_once 'prepend.inc';
-header("Content-language: fr");
-commonHeader("Hypertext Preprocessor");
-echo "\n<!--$MYSITE-->\n";
+// $Id$
+$_SERVER['BASE_PAGE'] = 'release_4_1_0_fr.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+site_header("Annonce de publication de PHP 4.1.0", array("lang" => "fr"));
 ?>
 
-<h1>
-PHP 4.1.0 Release Announcement
-</h1>
+<h1>Annonce de publication de PHP 4.1.0</h1>
 
-<pre>
+<p>
+ Apr&egrave;s un long processus "QA", PHP 4.1.0 <a href="/downloads.php">est enfin sorti</a>!<br />
+ [ <a href="/release_4_1_0.php">English Version</a> ]
+</p>
 
-Après un long processus "QA", PHP 4.1.0 est enfin sorti.
-Télécharger-le sur:  http://www.php.net/downloads.php !
-
-PHP 4.1.0 inclut beaucoup d'améliorations importantes:
-- Une nouvelle interface d'entrée en général (voir plus bas)
-- Perfomance grandement accrue en général
-- Sous Windows une stabilité et une performance révolutionnaire. Les
+<p>
+ PHP 4.1.0 inclut beaucoup d'am&eacute;liorations importantes:
+</p>
+<ul>
+ <li>Une nouvelle interface d'entr&eacute;e en g&eacute;n&eacute;ral (voir plus bas)</li>
+ <li>Perfomance grandement accrue en g&eacute;n&eacute;ral</li>
+ <li>
+  Sous Windows une stabilit&eacute; et une performance r&eacute;volutionnaire. Les
   modules serveur multi-thread sous windows (ISAPI, Apache, etc...)
-  s'exécute jusqu'à 30 fois plus rapidement sous la charge! Nous
-  voulons remercier Brett Brewer et son équipe chez Microsoft pour
-  son travail avec nous pour améliorer PHP pour Windows.
-- Gestion des versions pour les extensions. A l'heure actuelle, ceci
-  est très peu utilisé, l'infrastructure était mise en place pour le
-  support séparé des numéros de versions pour différentes extensions.
-  L'effet de bord négatif est que le faite de charger des extensions
-  avec une ancienne version de PHP résultait d'un crash, à la place
-  d'un message correct et claire. Soyez sûre que vous utilisez
-  seulement des extensions intégrées à PHP 4.1.0.
-- Support "Turn-Key" de la compression des sorties
-- *ENORMEMENT* de corrections et de nouvelles fonctions
+  s'ex&eacute;cute jusqu'&agrave; 30 fois plus rapidement sous la charge! Nous
+  voulons remercier Brett Brewer et son &eacute;quipe chez Microsoft pour
+  son travail avec nous pour am&eacute;liorer PHP pour Windows.
+ </li>
+ <li>
+  Gestion des versions pour les extensions. A l'heure actuelle, ceci
+  est tr&egrave;s peu utilis&eacute;, l'infrastructure &eacute;tait mise en place pour le
+  support s&eacute;par&eacute; des num&eacute;ros de versions pour diff&eacute;rentes extensions.
+  L'effet de bord n&eacute;gatif est que le faite de charger des extensions
+  avec une ancienne version de PHP r&eacute;sultait d'un crash, &agrave; la place
+  d'un message correct et claire. Soyez s&ucirc;rs que vous utilisez
+  seulement des extensions int&eacute;gr&eacute;es &agrave; PHP 4.1.0.
+ </li>
+ <li>Support "Turn-Key" de la compression des sorties</li>
+ <li><strong>BEAUCOUP</strong> de corrections et de nouvelles fonctions</li>
+</ul>
 
-Comme certains l'ont noté, cette version est quelque peu historique,
-comme c'est la première fois dans l'histoire que nous incrémentons
-le numéro du milieu :).
-Les deux principales raisons à cela d'un côté les changements sans
-précédent de la nouvelle interface d'entrée, et de l'autre l'incompatibilité
-des modules dus au support des versions.
+<p>
+ Comme certains l'ont not&eacute;, cette version est quelque peu historique,
+ comme c'est la premi&egrave;re fois dans l'histoire que nous incr&eacute;mentons
+ le num&eacute;ro du milieu !
+ Les deux principales raisons &agrave; cela sont d'un c&ocirc;t&eacute; les changements sans
+ pr&eacute;c&eacute;dent de la nouvelle interface d'entr&eacute;e, et de l'autre l'incompatibilit&eacute;
+ des modules dus au support des versions.
+</p>
 
-Ce qui suit concerne une description du nouveau mécanisme d'entrée.
-Pour une liste complète des changements voir plus bas à la fin de
-cette section (Changelog).
+<p>
+ Ce qui suit concerne une description du nouveau m&eacute;canisme d'entr&eacute;e.
+ Pour une liste compl&egrave;te des changements voir le
+ <a href="ChangeLog-4.php#4.1.0">ChangeLog</a>.
+</p>
 
------------------------------------
+<hr />
 
-SECURITE:  NOUVEAU MECANISME D'ENTREE
+<h2>SECURITE: NOUVEAU MECANISME D'ENTREE</h2>
 
-Avant tout, il est important de signaler que, sans tenir compte de ce
-que vous pourriez lire dans les lignes qui suivent, PHP 4.1.0 *gère*
-les anciens mécanisme d'entrée des anciennes versions. D'anciennes
-applications devraient bien fonctionner sans modification.
+<p>
+ Avant tout, il est important de signaler que, sans tenir compte de ce
+ que vous pourriez lire dans les lignes qui suivent, PHP 4.1.0 <strong>g&egrave;re
+ encore</strong> les anciens m&eacute;canismes d'entr&eacute;e des anciennes versions.
+ D'anciennes applications devraient bien fonctionner sans modifications !
+</p>
 
-Maintenant que nous avons çà derrière nous, Let's move on :)
+<p>Passsons &agrave; la suite mainenant que cela est dit :)</p>
 
+<p>
+ Pour diff&eacute;rentes raisons, PHP qui se repose sur register_globals ON
+ (ex. sur les formulaires, les variables serveur et d'environnement
+ deviennent partie de la port&eacute;e globale d'un script [namespace], et
+ ce automatiquement) sont tr&egrave;s souvent exploitable &agrave; des degr&eacute;s
+ divers. Par exemple le code suivant:
+</p>
 
-Pour différentes raisons, PHP qui se repose sur register_globals ON
-(ex. sur les formulaires, les variables serveur et d'environnement
-deviennent partie de la portée globale d'un script [namespace], et
-ce automatiquement) sont très souvent exploitable à des degrés
-divers. Par exemple le code suivant:
-
-&lt;?php
+<?php highlight_php('<?php
 if (authenticate_user()) {
-   $authenticated = true;
+  $authenticated = true;
 }
 ...
-?&gt;
+?>');?>
 
-Peut être exploitable de la manière suivante, des utilisateurs
-distants peuvent simplement passer 'authenticated' comme variable
-d'un formulaire et même si authenticate_user() retourne false,
-$authentiticated va actuellement contenir true. Paraissant comme
-un exemple simple, en réalité, bien des applications terminées
-sont exploitable par ce dysfonctionnement (NDR:je dirais plutôt
-que c'est une erreur de conception et de programmation).
+<p>
+ Peut &ecirc;tre exploitable de la mani&egrave;re suivante, des utilisateurs
+ distants peuvent simplement passer 'authenticated' comme variable
+ d'un formulaire et m&ecirc;me si authenticate_user() retourne false,
+ $authentiticated va actuellement contenir true. Ce"la semble etre un 
+ exemple tr&egrave;s simple, mais en r&eacute;alit&eacute;, bien des applications PHP
+ sont exploitable par ce dysfonctionnement.
+</p>
 
-Tandis qu'il est parfaitement possible d'écrire du code PHP
-sécurisé, nous sentions le fait que PHP permet, de manière beaucoup
-trop facile, d'écrire du code php non sécurisé n'était pas
-acceptable, et nous avons décidé de tenter un changement très grand
-et de rendre caduque REGISTER_GLOBALS.
+<p>
+ Tandis qu'il est parfaitement possible d'&eacute;crire du code PHP
+ s&eacute;curis&eacute;, nous sentions que le fait que PHP permette, de mani&egrave;re beaucoup
+ trop facile, d'&eacute;crire du code PHP non s&eacute;curis&eacute; n'&eacute;tait pas
+ acceptable, et nous avons d&eacute;cid&eacute; de tenter un changement tr&egrave;s grand
+ et de rendre caduque register_globals.
+ ï¿½idemment, &agrave; cause de la grande majorit&eacute; de code PHP dans le monde se
+ reposant sur l'existence de cette fonctionnalit&eacute;, nous ne la supprimerons
+ jamais, mais nous avons d&eacute;cid&eacute;s d'encourager les utilisateurs de ne plus
+ l'utiliser &agrave; chaque fois que cela est possible.
+</p>
 
-Évidemment, la grande majorité du code PHP dans le monde se repose
-sur l'existence de cette fonctionnalité, cependant nous n'avons pas
-de plans pour la retirer de PHP ni maintenant ni à moyen terme, mais
-nous avons décidés d'encourager les utilisateurs de ne plus
-l'utiliser tant que faire se peut.
+<p>
+ Afin d'aider les utilisateurs &agrave; construire des applications PHP avec
+ register_globals &agrave; Off, nous avons ajout&eacute; quelques nouvelles
+ variables sp&eacute;ciales, variables qui peuvent &ecirc;tre utilis&eacute;es &agrave; la place
+ des anciennes variables globales. Il y a 7 nouveaux tableaux sp&eacute;ciaux:
+</p>
 
-Afin d'aider les utilisateurs à construire des applications PHP avec
-REGISTER_GLOBALS sur off, nous avons ajouté quelques nouvelles
-variables spéciales, variables qui peuvent être utilisé à la place
-des anciennes variables globales. Il y a 7 nouveaux tableaux spéciaux:
+<ul>
+ <li>$_GET - contient les variables pass&eacute;es par la m&eacute;thode GET</li>
+ <li>$_POST - contient les variables pass&eacute;es par la m&eacute;thode POST</li>
+ <li>$_COOKIE - contient les variables HTTP cookie</li>
+ <li>$_SERVER - contient les variables serveur (par ex. REMOTE_ADDR)</li>
+ <li>$_ENV - contient les variables d'environnement</li>
+ <li>
+  $_REQUEST - Une fusion des variables GET. POST, COOKIE. En d'autres
+  termes toutes les informations qui arrivent de l'utilisateur,
+  et qui d'un point de vue purement s&eacute;curitaire, ne sont pas s&ucirc;res
+ </li>
+ <li>
+  $_SESSION - contient toutes les variables HTTP enregistr&eacute;es par le
+  module des sessions
+ </li>
+</ul>
 
-$_GET - contient les variables passer par la méthode GET
-$_POST - contient les variables passer par la méthode POST
-$_COOKIE - contient les variables HTTP cookie
-$_SERVER - contient les variables serveur (par ex. REMOTE_ADDR)
-$_ENV - contient les variables d'environnement
-$_REQUEST - Une fusion des variables GET. POST, COOKIE. En d'autres
-            mots toutes les informations qui arrive de l'utilisateur.
-            Et d'un point de vue purement sécurité, ne sont pas sûre.
-$_SESSION - contient toutes les variables HTTP enregistrées par le
-            module de gestion de session
+<p>
+ Maintenant, entre autre le fait que ces variables contiennent ces
+ informations sp&eacute;ciales, elles sont aussi automatiquement globales
+ dans toutes les port&eacute;es. Cela signifie que vous pouvez y acc&eacute;der
+ de n'importe o&ugrave;, sans avoir &agrave; les d&eacute;clarer en globales. Par exemple:
+</p>
 
-Maintenant, entre autre le fait que ces variables contienne ces
-informations spéciales, elles sont aussi automatiquement globales
-dans toutes les portées. Cela signifie que vous pouvez y accéder
-de n'importe où, sans avoir to de les déclarer en global. Par exemple:
-
+<?php highlight_php('<?php
 function example1()
 {
-    print $_GET["name"]; // fonctionne, 'global $_GET' n'est pas nécessaire!!
+    print $_GET["name"];   // fonctionne, pas besoin de \'global $_GET;\' !
 }
+?>');?>
 
-va fonctionner très bien! Nous espérons que cela va faciliter la tâche
-durant la migration de vieux code vers le nouveau, et nous sommes sûre
-que cela vous simplifiera l'écriture de nouveaux codes.
+<p>
+ va fonctionner tr&egrave;s bien! Nous esp&eacute;rons que cela va faciliter la t&acirc;che
+ durant la migration de vieux code vers le nouveau, et nous sommes s&ucirc;rs
+ que cela vous simplifiera l'&eacute;criture de nouveaux codes.
+ Une autre astuce est que le fait de cr&eacute;er de nouvelles entr&eacute;es dans
+ $_SESSION va automatiquement les enregistrer comme variables de session, 
+ comme si vous auriez appel&eacute; session_register(). Cette astuce est limit&eacute;e
+ uniquement au module de gestion de session - par exemple, cr&eacute;er de
+ nouvelles entr&eacute;s dans $_ENV ne va <strong>pas</strong> ex&eacute;cuter un put_env()
+ implicite.
+</p>
 
-Une autre astuce est que le faite de créer de nouvelles entrées dans
-$_SESSION va automatiquement les enregistrer comme variables de session,
-comme si vous auriez appelé session_register(). Cet astuce est limitée
-uniquement au module de gestion de session - par exemple, créer de
-nouvelles entrés dans $_ENV ne va pas executer un put_env() implicite.
+<p>
+ PHP 4.1.0 doit toujours avoir register_globals mis a On par d&eacute;faut.
+ C'est une version de transition, et nous encourageons les auteurs
+ d'applications, sp&eacute;cialement les applications publiques qui sont utilis&eacute;es
+ par une large audience, de changer leurs applications pour fonctionner
+ avec un environnement o&ugrave; register_globals est &agrave; Off. Il est clair
+ qu'ils devraient profiter des nouvelles fonctionnalit&eacute;s fournies
+ avec PHP 4.1.0 qui font que cette transition est plus ais&eacute;e.
+</p>
+ 
+<p>
+ Dans la prochaine version "semi majeure" de PHP, de nouvelles installations
+ de PHP devrait avoir register_globals mis &agrave; Off par d&eacute;faut. Ne vous en
+ faites pas! Les installations existantes, qui ont d&eacute;j&agrave; un fichier php.ini
+ qui a register_globals &agrave; On, ne vont pas &ecirc;tre affect&eacute;es. Cela vous
+ affectera seulement si vous installez PHP sur une nouvelle machine
+ (typiquement si vous &ecirc;tes un nouvel utilisateur), et si vous le d&eacute;sirez
+ vous pourrez toujours le mettre &agrave; On.
+</p>
 
-PHP 4.1.0 doit toujours avoir REGISTER_GLOBALS mis a ON par défaut.
-C'est une version de transition, et nous encourageons les auteurs
-d'applications, spécialement les applications publics qui sont utilisés
-par une large audience, de changer leurs applications pour fonctionner
-avec un environnement où REGISTER_GLOBALS est à OFF. Il est clair
-qu'ils devraient profiter des nouvelles fonctionnalités fournies
-avec PHP 4.1.0 qui font cette transition plus aisée.
+<p>
+ Note: Certains de ces tableaux ont d'anciens noms, exemple : $HTTP_GET_VARS.
+ Ces noms fonctionnent toujours, mais nous encourageons les utilisateurs
+ de migrer vers le nouveaux noms, plus courts et qui sont des versions 
+ automatiquement globales.
+</p>
 
-Dans la prochaine version "demi majeur" de PHP, de nouvelles installations
-de PHP devrait avoir REGISTER_GLOBALS mis à OFF par défaut. Ne vous en
-faites pas! Les installations existantes, qui ont déjà un fichier php.ini
-qui a REGISTER_GLOBALS ON, ne vont pas être affectées. Cela vous
-affectera seulement si vous installez PHP sur une nouvelle machine
-(typiquement si vous êtes un nouvel utilisateur), et si vous le désirez
-toujours le mettre à ON.
+<p>
+ Les remerciements vont &agrave; Shaun Clowes (shaun at securereality dot com dot au)
+ pour avoir r&eacute;v&eacute;l&eacute; ce probl&egrave;me et avoir aid&eacute;
+ &agrave; l'analyser.
+</p>
 
-Note: Certains de ces tableaux ont d'anciens noms, p.e. $HTTP_GET_VARS.
-Ces noms fonctionnent toujours, mais nous encourageons les utilisateurs
-de changer vers le nouveaux noms, plus court et automatiquement globales.
+<p>
+ French translation is available courtesy of 
+ <a href="mailto:pierre-alain.joye@wanadoo.fr">Pierre-Alain Joye</a>.
+</p>
 
-Remerciement à Shaun Clowes (shaun@securereality.com.au) de mettre à jour
-ce problème et de l'avoir analysé.
-
------------------------------------
-
-Zeev
-</pre>
-
-French translation is available courtesy of <a href="mailto:pierre-alain.joye@wanadoo.fr">Pierre-Alain Joye</a>
-
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
