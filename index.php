@@ -145,7 +145,10 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<h1>DotGeek Certification Programme</h1>
+<?
+// Removed because the website was hacked.
+
+/*<h1>DotGeek Certification Programme</h1>
 <p>
  <span class="newsdate">[19-Jan-2003]</span>
  Dotgeek (a community, non-business driven website made by developers
@@ -166,6 +169,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
+*/?>
 
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
