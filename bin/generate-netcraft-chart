@@ -51,7 +51,8 @@ $stats = array(
     200112 => array(7261540, 1043328),
     200201 => array(7525142, 1079999),
     200202 => array(8586112, 1143239),
-    200203 => array(8861195, 1142955)
+    200203 => array(8861195, 1142955),
+    200204 => array(9091908, 1192687)
 );
 
 $months = array(1 => "Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -62,7 +63,8 @@ $i=1;
 foreach($stats as $key => $arr) {
 	$domains[] = $arr[0];
 	$ips[] = $arr[1];
-	$keys[] = ($i++%2) ? $months[(int)substr($key,4)].' '.substr($key,0,4) : '';
+	$date = $months[(int)substr($key,4)].' '.substr($key,0,4);
+	$keys[] = ($i++%2) ? $date : '';
 }
 
 $graph = new Graph(780,350,"auto");
@@ -72,7 +74,7 @@ $graph->xaxis->SetFont(FF_ARIAL,FS_NORMAL,10);
 $graph->xaxis->SetTickLabels($keys);
 $graph->xaxis->SetLabelAngle(45); 
 $graph->SetShadow();
-$graph->title->Set("PHP Usage for " . end($keys));
+$graph->title->Set("PHP Usage for " . $date);
 $graph->title->SetFont(FF_VERDANA,FS_NORMAL,16);
 $graph->legend->SetLayout(LEGEND_HOR);
 $graph->legend->Pos(0.20,0.18,"center","center");
