@@ -295,6 +295,7 @@ function commonHeader($title) {
 <HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
 
 <? if ($HAVE_STYLE): ?>
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
