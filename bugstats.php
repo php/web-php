@@ -119,7 +119,7 @@ if(!is_primary_site()) {
 			else {
 				$page = "bugs.php";
 			}
-			return '<A href="/' . $page . '?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
+			return '<a href="/' . $page . '?cmd=display&amp;status=' . ucfirst($status) . '&amp;bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&amp;by=Any">' . $bug_type[$status][$type] . "</a>\n";
 		}
 	}
 
