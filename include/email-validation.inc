@@ -15,7 +15,7 @@ function is_emailable_address($email)
     // Exclude our mailing list hosting servers
     $hosts_regex = "!(lists\.php\.net|chek[^\.*]\.com)!i";
     $excluded_hosts = preg_match($hosts_regex, $email);
-	
+
     // Email addresses need to match this pattern
     $email_regex = ":^([-!#\$%&'*+./0-9=?A-Z^_`a-z{|}~ ])+" .
                    "@([-!#\$%&'*+/0-9=?A-Z^_`a-z{|}~ ]+\\.)+" .
@@ -24,8 +24,9 @@ function is_emailable_address($email)
     // If address is not under excluded hosts, and fits the regex,
     // then we belive that it is a good email address
     if (!$excluded_hosts && !empty($email)) {
-		return preg_match($email_regex, $email);
+        return preg_match($email_regex, $email);
     } else {
         return FALSE;
     }
 }
+
