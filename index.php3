@@ -3,6 +3,40 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP Related Books are Available</h3>
+<P>
+Get ready for a wave of PHP related books to hit the shelves!  We don't know
+exactly how many there are going to be yet, but two are already available through
+Amazon.com:
+</P>
+
+<TABLE BORDER=0 CELLPADDING=5>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><SMALL>No image yet<SMALL><BR></TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
+>Core PHP Programming</A><BR>
+by Leon Atkinson<BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
+><IMG SRC="http://www.amazon.de/de-covers/3/82/725/524/3827255244.m.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
+>PHP - Dynamische Webauftritte professionell realisieren</A><BR>
+by Richard Blume, Christian Cartus, Egon Schmid<BR>
+<I>in German</I><BR>
+</TD>
+</TR>
+</TABLE>
+
+<P>
+Click on the links above for more information on the books.  And remember, if you
+buy the book using the above links, your helping to support PHP development!
+</P>
 
 <h3>PHP in the News</h3>
 <P>
