@@ -60,25 +60,23 @@ function i2c_go()
 
     // Convert the IP number to some useable form for searching
     $ipn = (float) sprintf("%u", ip2long($ipnum));
-
+    
     // Find the index to start search from
     $idx = i2c_search_in_index($ipn);
-    // For some odd reason I need to remove 2 from the idx value to
-    // get the country of rasmus and various other IP's to lookup.
-    $country = "NA";
-    $count = 1;
-
-    // Search in the database from the given index and if not found
-    // we attempt 3 lookups in total moving the index down one.
-    while ($country == "NA" && $count < 4) {
-        $country = i2c_search_in_db($ipnum, $idx);
-        $idx--;
-        $count++;
+    
+    // If we were unable to find any helpful entry
+    // in the index do not search, as it would take 
+    // a very long time. It is an error, if we have
+    // not found anything in the index
+    if ($idx !== FALSE) {
+        $country = i2c_search_in_db($ipn, $idx);
+    } else {
+        $country = 'NA';
     }
 
     // Set global variable for further usage
     $COUNTRY = $country;
-
+    
     // Set the country in a cookie for a week
     return mirror_setcookie("COUNTRY", "$country,$ipnum", 60*60*24*7);
     
@@ -97,7 +95,7 @@ function i2c_search_in_index($ip)
         $_SERVER['DOCUMENT_ROOT'] . "/backend/ip-to-country.idx",
         "r"
     );
-    if (!$dbidx) { return 0; }
+    if (!$dbidx) { return FALSE; }
 
     // Read in granularity from index file and
     // convert current IP to something useful
@@ -112,7 +110,7 @@ function i2c_search_in_index($ip)
 
         // Compare current index part with our IP
         if ($ip_chunk >= $idxpart && $ip_chunk <= (int) $data[0]) {
-            return $recnum;
+            return array($recnum, (int) $data[1]);
         }
 
         // Store for next compare
@@ -121,12 +119,12 @@ function i2c_search_in_index($ip)
     }
 
     // Return record number found
-    return $recnum;
+    return array($recnum, -1);
 }
 
 // Find the country searching from record $idx
 // $ip should be an IP number and not an IP address
-function i2c_search_in_db($ip, $idx = 0)
+function i2c_search_in_db($ip, $idx)
 {
     global $_SERVER;
 
@@ -144,15 +142,23 @@ function i2c_search_in_db($ip, $idx = 0)
     if (!$ipdb) { return $country; }
 
     // Jump to record $idx
-    fseek($ipdb, $idx*24);
-
+    fseek($ipdb, $idx[0]*24);
+    
     // Read records until we hit the end of the file,
-    // or we find the range where this IP is
+    // or we find the range where this IP is, or we
+    // reach the next indexed part [where the IP should
+    // not be found, so there is no point in searching further]
     while (!feof($ipdb) && !($range_start <= $ip && $range_end >= $ip)) {
             
+        // We had run out of the indexed region,
+        // where we expected to find the IP
+        if ($idx[1] != -1 && $idx[0] > $idx[1]) {
+            $country = "NA"; break;
+        }
+        
         // Try to read record
         $record = fread($ipdb, 24);
-
+        
         // Unable to read the record => error
         if (strlen($record) != 24) { $country = "NA"; break; }
 
@@ -160,6 +166,9 @@ function i2c_search_in_db($ip, $idx = 0)
         $range_start = (float) substr($record, 0, 10);
         $range_end   = (float) substr($record, 10, 10);
         $country     = substr($record, 20, 3);
+        
+        // Getting closer to the end of the indexed region
+        $idx[0] += 1;
     }
 
     // Close datafile
