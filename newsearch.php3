@@ -1,14 +1,37 @@
 <?
+/* Cookie stuff has to come before the first header */
+if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) { 
+	if ($prevpattern) {
+		SetCookie("prevsearch[0]",$prevpattern,"",".php.net");
+	} else {
+		SetCookie("prevsearch[0]",$pattern,0,"",".php.net");
+	}
+	if (isset($prevsearch)) {
+		$i=count($prevsearch);
+		if ($i>9) {$i=9;}
+		$c=0;
+		while($c<$i) { 
+			$d=$c+1;
+			SetCookie("prevsearch[$d]",$prevsearch[$c],0,"",".php.net");
+			$c++;
+		}
+	}
+
+}
 require("shared.inc");
-commonHeader("Site Search");
 include "configuration.inc";
+commonHeader("Site Search");
 
 if ($HAVE_SEARCH) {
 	$form=$PHP_SELF;
 } else {
 	$form="http://uk.php.net/newsearch.php3";
 }
-if(!isset($pattern)) { ?>
+if(!isset($pattern)) { 
+	if (!isset($prevsearch)) {
+		$prevsearch[0]="";
+	}
+	?>
 	<h1 align=center>PHP3 Site Search</h1>
 	<form action="<?echo $form;?>" METHOD=POST>
 	<CENTER>
@@ -20,8 +43,21 @@ if(!isset($pattern)) { ?>
 		  </FONT>
 		</TD><TD>
 	 	  <FONT FACE="TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif">
-		  <input type="text" name="pattern" size=30>
-		  <input type="submit" value=" Search ">
+		  <input type="text" name="pattern" value="<?echo $prevsearch[0];?>" size=30>
+		  <input type="submit" value=" Search "><BR>
+		  <? if ($prevsearch[0]) { ?>
+		      <SELECT NAME="prevpattern">
+		      <OPTION VALUE="">-- Previous Searches --
+			<?$i=0;while($i<count($prevsearch)) {
+				echo "<OPTION VALUE=\"";
+				echo $prevsearch[$i];
+				echo "\">";
+				echo $prevsearch[$i];
+				echo "\n";
+				$i++;
+			  } ?>
+		      </SELECT>
+		<?}?>
 		  </FONT>
 		</TD>
 	</TR><TR BGCOLOR=#AAAAAA>
@@ -40,17 +76,28 @@ if(!isset($pattern)) { ?>
 	</TABLE>
 	</CENTER>
 	</form>
-<? } else { ?>
-	<h1 align=center>Search Results</h1>
-	<?
+<? } else {
+		echo "<CENTER><FONT SIZE=+2><B>Search Results</B></FONT></CENTER>\n";
 		if (!isset($base)) {
-			if (ereg("^(.+//[^/]+/)",$HTTP_REFERER,&$reg)) {
+			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
 				$base=$reg[1];
+				$sourceurl=$base.$PHP_SELF;
 			}
 			if ($base==$MYSITE) {
 				$base="-";
+				$sourceurl=$PHP_SELF;
 			}
 		}
+		echo "<CENTER><A HREF=\"$sourceurl\">New Search</A></CENTER><BR><BR>\n";
+		if ((isset($prevpattern))&&($prevpattern)) {
+			$pattern=$prevpattern;
+		}
+		if ($pattern=="") {
+			echo "<CENTER>Error: No search words specified</CENTER>";
+			CommonFooter();
+			exit();
+		}
+			
 		$words=EscapeShellCmd(UrlEncode($pattern));
 		$config="php";
 		if ($show=="source") {
@@ -71,12 +118,12 @@ if(!isset($pattern)) { ?>
 		exec("$htsearch_prog \"$query\"",&$result);
 		$rc=count($result);
 		if ($rc<2) {
-			echo "<H2>There was an error executing this query.  Please try later</H2>";
+			echo "<CENTER>There was an error executing this query.<BR>Please try later</CENTER>";
 			commonFooter();
 			exit;
 		}
 		if ($result[2]=="NOMATCH") {
-			echo "No documents matched your query.<BR>";
+			echo "<CENTER>Error: No documents matched your query</CENTER>";
 			commonFooter();
 			exit;
 		}
@@ -111,7 +158,7 @@ if(!isset($pattern)) { ?>
 			if ($base=="-") {
 				echo $result[$i];
 			} else {
-				echo eregi_replace("http://[^.]+\.php\.net/",$base,$result[$i]);
+				echo eregi_replace("http://[^.]+\.php\.net/","$base/",$result[$i]);
 			}
 			echo "\n";
 			$i++;
