@@ -523,16 +523,17 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			unset ($comments[0]);	# Ditch the most recent comment
 
 	  	#fetch original bug description
-		$query = "SELECT ts1, email, ldesc from bugdb where id=$bug_id";
+		$query = "SELECT ts1, email, ldesc FROM bugdb WHERE id=$bug_id LIMIT 5";
 		$result = mysql_query ($query);
 		$comments[] = mysql_fetch_row ($result);
 
+		$counter = 0;
 		foreach ($comments as $value)
 		  {
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
-			if (strlen ($output) > $max_message_length)
+			if (strlen ($output) > $max_message_length || ++$counter > 4 )
 			  {
-				$output .= "The remainder of the comments for this report are over the " . round ($max_message_length/1024) . "k message limit.  To view the remainder of the comments, please review the bug report online.";
+				$output .= "The remainder of the comments for this report are too long.  To view the rest of the comments, please view the bug report online.\n";
 				break;
 			  }
 		  }
