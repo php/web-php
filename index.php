@@ -102,7 +102,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://www.php-conference.de/", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
 
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
 
@@ -111,7 +111,7 @@ echo "\n<!--$MYSITE-->\n";
 PHP enthusiasts from all over the world will meet three days to attend
 powerworkshops and sessions presented by the inventors of PHP, members
 of the core group and other well known people from the community.
-More information at <a href="http://www.php-conference.de/">www.php-conference.de</a>.
+More information at <a href="http://www.php-conference.de/2001/index_en.php">www.php-conference.de</a>.
 <br clear="all">
 </p>
 
@@ -268,7 +268,7 @@ full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 
 <p>
 <font class="newsDate">[14-Jun-2001]</font>
-<a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
+<a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
 
