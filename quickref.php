@@ -2,7 +2,7 @@
 require("shared.inc");
 
 $NUMACROSS=2;
-$d = dir("$DOCUMENT_ROOT/manual");
+$d = dir("$DOCUMENT_ROOT/manual/en");
 while($entry=$d->read()) {
 	if (substr($entry, 0, 1) == ".") {
 		continue;
