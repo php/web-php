@@ -13,7 +13,7 @@ worse, cause the server to crash.
 <p>Fortunately, the answer is that PHP 3.0 is never going to be as stable as PHP/FI 2.0, because PHP/FI 2.0 is
 never going to reach the stability of PHP 3.0.  PHP 3.0 and PHP/FI 2.0 are different by design and approach.
 Lessons learned from defficiencies in PHP/FI 2.0 were implemented in this complete rewrite.  The core language
-parser literally all new, designed and written from scratch to be more efficient, and more importantly, much
+parser is literally all new, designed and written from scratch to be more efficient, and more importantly, much
 more reliable and stable.  In addition, the new design made implementing new language features such as lists,
 for loops and more powerful functions feasable.
 
