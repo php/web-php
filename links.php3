@@ -64,6 +64,8 @@ German site about PHP with scripts, tips, foren, MyGuestBook, articles, news and
 German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
 <LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
 is a french gateway to PHP related contents.<BR>
+<LI><A HREF="http://www.phpinfo.net/">PHPInfo</A><BR>
+another french site about PHP.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
