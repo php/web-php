@@ -113,7 +113,7 @@ echo "\n<!--$MYSITE-->\n";
 CodeWalkers started a new bi-weekly PHP contest. Every two weeks, there
 is a new problem to solve, a new script to write. The winner receive
 prices provided by the sponsors, Zend Technologies and Sams Publishing.
-You can get on the challange visiting
+You can get on the challenge visiting
 <a href="http://codewalkers.com/php-contest.php">http://codewalkers.com/php-contest.php</a>.
 </p>
 

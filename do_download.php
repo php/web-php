@@ -15,13 +15,13 @@ log_download();
 // Register the log function as a shutdown function to let the
 // download starts before the log activates. This way if the
 // "log server" does not work, downloads are still working
-/* register_shutdown_function("log_download"); */
+ register_shutdown_function("log_download"); 
 
 // Log downloads in a shutdown function (do not disturb download)
 function log_download ()
 {
     global $HTTP_REFERER, $HTTP_X_FORWARDED_FOR,
-           $REMOTE_ADDR, $SERVER_NAME;
+           $REMOTE_ADDR, $SERVER_NAME, $LOG_SERVER, $LOG_FILE;
 
     // Default referer
     if (!isset($HTTP_REFERER)) {
@@ -36,8 +36,6 @@ function log_download ()
 
     $remote_log = @fopen($log_file, 'r');
    
-    mail("imajes@php.net", "download log info", $log_file); 
-
     if ($remote_log) {
         fread($remote_log, 1024);
         fclose($remote_log);
