@@ -21,10 +21,7 @@ if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) {
 }
 
 // ============================================================================
-// Get mirror specific configuration, and check for manual language existance
-if (file_exists("../configuration.inc")) {
-    include_once "../configuration.inc";
-}
+// Check for a manual in the mirror's default language
 $lang = default_language();
 if (!@is_dir("$DOCUMENT_ROOT/manual/$lang")) {
     $lang = "en"; // fall back to English
