@@ -239,7 +239,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <option value="maillist">general mailing list
 <option value="devlist">developer mailing list
 <option value="phpdoc">documentation mailing list 
-<option value="source">website source code    
 </select>
 <?php	echo make_submit('small_submit_white.gif', 'search', 'bottom');
       ?>&nbsp;<br>
