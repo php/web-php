@@ -3,30 +3,19 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<h3>PHP 3.0.4 build problems</h3>
-<P>
-<b>BSD/OS and AIX users:</b>
-There is a small error in the 3.0.4 configure script which affects some
-versions of BSD/OS and AIX.  If you get an error about <i>u_int</i> being 
-redefined when you build PHP replace your php-3.0.4/configure script with 
-<a href="http://ca.php.net/configure.gz">this file</a> and re-run configure.
-</P>
-<P>
-<b>IRIX, Solaris and perhaps other users:</b>
-If you're experiencing trouble compiling functions/basic_functions.c, please
-get an updated file <a href="http://il.php.net/basic_functions.c.gz">here</a>,
-and replace the one in your distribution with it.  The file included in
-the distribution contained a couple of non ANSI-C conforming statements, that
-confuse some compilers.  If you didn't have any problem compiling PHP 3.0.4,
-there's no need to download this update!
-</P>
+<h3>PHP 3.0.5 has been released!</h3>
 
-<h3>PHP 3.0.4 has been released</h3>
-<P>
-Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
-what is new in this release. All users of earlier versions are encouraged 
-to upgrade to this version.  
-</P>
+<p>Due to several annoying problems in version 3.0.4, version 3.0.5
+has been released.  It fixes all the compilation quirks that were
+reported in 3.0.4, as well as random problems in setups that included
+the MySQL module, due to bad settings.
+<p>In order to try and avoid such occurences in the future, we've assembled
+a beta testing team that would check out every new release before it's 
+announced.  If youare willing to beta test PHP releases on your servers
+before they're released, and have access to 'exotic' platforms, please
+mail as at <a href="mailto:core@php.net">core@php.net</a>.
+<p>All users of earlier versions of PHP are strongly encouraged to upgrade to
+this version.
 
 <h3>PHP in the News</h3>
 <P>

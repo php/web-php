@@ -24,7 +24,6 @@ $MIRRORS = array(
    "http://fr.php.net/"           => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0),
    "http://id.php.net/"           => array("id", "IndoGlobal","indog","http://www.indoglobal.com/",1,0),
    "http://il.php.net/"           => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 1, 1),
-   "ftp://il.php.net/"            => array("il", "Netvision", "netvision", "ftp://il.php.net/php/distributions/", 1, 0),
    "http://php.netvision.net.il/" => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 0, 1),
    "http://machba.il.php.net/"    => array("il", "Technion", "technion", "http://www.technion.ac.il/", 1, 0),
    "http://php.technion.ac.il/"   => array("il", "Technion", "technion", "http://www.technion.ac.il/", 0, 0),
