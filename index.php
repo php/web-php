@@ -63,28 +63,7 @@ make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
 </p>
 ';
 
-$tmp = '/tmp'; /* hopefully writeable on all mirrors */
-
-if($t=@filemtime("$tmp/php_cal_events.csv")) {
-	if(time()-$t > 21600) $t=false;
-}
-if(!$t) {
-	$url = 'http://www.php.net/cal.php?format=csv&nm=3';
-	$fpo = @fopen("$tmp/php_cal_events.tmp",'w');
-	if($fpo) {
-		$fpi = @fopen($url,'r');
-		if($fpi) {
-			while(!feof($fpi)) {
-				$line = fgets($fpi,1024);
-				fputs($fpo,$line);
-			}
-			fclose($fpi);
-			fclose($fpo);
-			@rename("$tmp/php_cal_events.tmp","$tmp/php_cal_events.csv");
-		}
-	}
-}
-$fp = @fopen("$tmp/php_cal_events.csv",'r');
+$fp = @fopen("backend/events.csv",'r');
 if($fp) {
 	$cm=0;
 	while(!feof($fp)) {
