@@ -108,6 +108,7 @@ right away.</blockquote>
 	site("HitList","www.hitlist.com");
 	site("Independent Musicians Guild","www.scimg.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
+	site("Miss USA 1999","www.missusa.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("Striving For Togetherness Records","www.striving.com");
