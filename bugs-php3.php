@@ -6,16 +6,12 @@ require_once 'prepend.inc';
 
 /* See the end of the script for the table layout. */
 
-if (strstr($MYSITE,"bugs.php.net")) {
+if (strstr($MYSITE,"www.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
-} else if (strstr($MYSITE,"il.php.net")) {
-	$dbhost="bugs.php.net";
-	$dbuser="bourbon";
-	$dbpwd="";
 } else {
-	Header("Location: http://bugs.php.net");
+	Header("Location: http://www.php.net/bugs-php3.php");
 	exit;
 }
 
