@@ -207,7 +207,7 @@ if (isset($in)) {
  <tr>
   <td align="center" colspan="2">
     <input type="submit" name="action" value="Preview" />
-<?php if (isset($in) && !count ($errors)) {?>
+<?php if (isset($in)) {?>
     <input type="submit" name="action" value="Submit" />
 <?php }?>
   </td>
