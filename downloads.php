@@ -115,40 +115,40 @@ site_header("Downloads");
 <hr />
 
 <a name="v5"></a>
-<h1>PHP 5.0.3</h1>
+<h1>PHP 5.0.4</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.3.tar.bz2', 'PHP 5.0.3 (tar.bz2)'); ?> - 15 Dec 2004<br />
-  <span class="md5sum">md5: fd26455febdddee0977ce226b9108d9c</span>
+  <?php download_link('php-5.0.4.tar.bz2', 'PHP 5.0.4 (tar.bz2)'); ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: 47727afde39329d5cebda4cb5e5ecee0</span>
  </li>
  <li>
-  <?php download_link('php-5.0.3.tar.gz', 'PHP 5.0.3 (tar.gz)'); ?> - 15 Dec 2004<br />
-  <span class="md5sum">md5: bf89557056ce34d502e20e24071616c7</span>
+  <?php download_link('php-5.0.4.tar.gz', 'PHP 5.0.4 (tar.gz)'); ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: c8f5fa441fd99c1b363bd2a071a0bd97</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.3-Win32.zip', 'PHP 5.0.3 zip package'); ?> - 15 Dec 2004<br />
-  <span class="md5sum">md5: 50f3d62e7bb4526fd1deefdb263f9fa7</span>
+  <?php download_link('php-5.0.4-Win32.zip', 'PHP 5.0.4 zip package'); ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.3-Win32.zip', 'Collection of PECL modules for PHP 5.0.3'); ?> - 15 Dec 2004<br />
+  <?php download_link('pecl-5.0.4-Win32.zip', 'Collection of PECL modules for PHP 5.0.4'); ?> - 31 Mar 2005<br />
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
   standard with PHP 4 Windows binaries but have since been moved into this 
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: 3db2706fda3a690efa675581745d3bf7</span>
+  <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
  </li>
  <li>
-  <?php download_link('php-5.0.3-installer.exe', 'PHP 5.0.3 installer'); ?> - 15 Dec 2004<br />
+  <?php download_link('php-5.0.4-installer.exe', 'PHP 5.0.4 installer'); ?> - 31 Mar 2005<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: f5aa879a4195cd62d33de9d73e0ec0e2</span>
+  <span class="md5sum">md5: 8f951136757600ce78d5e442cb5b1541</span>
  </li>
 </ul>
 
