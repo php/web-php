@@ -132,6 +132,7 @@ $LANGUAGES = array(
     'in' => 'Indonesian',
     'it' => 'Italian',
     'ja' => 'Japanese',
+    'ko' => 'Korean',
     'kr' => 'Korean', # this should be 'ko'. its wrong in phpdoc.
     'lv' => 'Latvian',
     'no' => 'Norwegian',
