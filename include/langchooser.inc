@@ -56,7 +56,7 @@ unset($LANGS); unset($language);
 // Add a language to the possible languages' list
 function language_add($langcode)
 {
-    global $LANGS;
+    global $LANGS, $LANGUAGES;
 
     // Make language code lowercase
     $langcode = strtolower($langcode);
@@ -67,7 +67,7 @@ function language_add($langcode)
     // Append language code in priority order
     // if it is not there already [try to lower number
     // of file_exists() calls to minumum]
-    if (!in_array($langcode, $LANGS)) { $LANGS[] = $langcode; }
+    if (!in_array($langcode, $LANGS) && isset($LANGUAGES[$langcode]) { $LANGS[] = $langcode; }
 }
 
 ?>
