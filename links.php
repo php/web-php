@@ -223,6 +223,14 @@ a help forum, and an Application Market.<br></li>
 <li><a href="http://www.phpportalen.net/">phpportalen.net</a><br>
 A Swedish PHP portal with articles, news, forums and much more<br></li>
 </ul></li>
+
+<li><b>Polish</b>
+<ul>
+
+<li><a href="http://php.spinacz.pl">php.spinacz.pl</a><br>
+The bigest polish site about programming in PHP, a
+phpbuilder.com like site in Polish.<br></li>
+</ul></li>
 </ul>
 
 <?php echo hdelim(); ?>
