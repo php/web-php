@@ -34,13 +34,14 @@ require 'cgi-style.pl';
 
 %CVSROOT = (
 	    'php3', '/repository/php3',
-#	    'phpweb', '/repository/phpweb',
-#	    'phpfi', '/repository/phpfi',
+	    'phpweb', '/repository/phpweb',
+	    'phpfi', '/repository/phpfi',
 	    );
 
 $cvstreedefault = 'php3';
 $cvstree = $cvstreedefault;
 $cvsroot = $CVSROOT{"$cvstree"} || "/repository";
+$cvsrepository = "/repository";
 
 
 $intro = "
@@ -290,7 +291,7 @@ if (-d $fullname) {
 	print &html_footer;
 	print "</BODY></HTML>\n";
 } elsif (-f $fullname . ',v') {
-	if ($input{'rev'} =~ /^[\d\.]+$/) {
+      if ($input{'rev'} =~ /^([\d\.]+|HEAD)$/) {
 		&checkout($fullname, $input{'rev'});
 		exit;
 	}
@@ -429,29 +430,11 @@ sub safeglob {
 }
 
 sub checkout {
-	local($fullname, $rev) = @_;
+	local($filename, $rev) = @_;
+	$filename =~ s|$cvsrepository||;
 
-	open(RCS, "co -p$rev '$fullname' 2>&1 |") ||
+	open(RCS, "cvs -q -l -d$cvsrepository co -p -r $rev '$filename' 2>&1 |") ||
 	    &fail("500 Internal Error", "Couldn't co: $!");
-# /home/ncvs/src/sys/netinet/igmp.c,v  -->  standard output
-# or
-# /home/ncvs/src/sys/netinet/igmp.c,v  -->  stdout
-# revision 1.1.1.2
-# /*
-	$_ = <RCS>;
-	if (/^(\S+),v\s+-->\s+st(andar)?d ?out(put)?\s*$/o && $1 eq $fullname) {
-	    # As expected
-	} else {
-	    &fatal("500 Internal Error",
-		"Unexpected output from co: $_");
-	}
-	$_ = <RCS>;
-	if (/^revision\s+$rev\s*$/) {
-	    # As expected
-	} else {
-	    &fatal("500 Internal Error",
-		"Unexpected output from co: $_");
-	}
 	$| = 1;
 	print "Content-type: text/plain\n\n";
 	print <RCS>;
