@@ -35,8 +35,8 @@ site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
 </ul>
 
 <p>
- Pour une liste exhaustive des modifications de PHP 4.3.4, voyez
- <a href="/ChangeLog-4.php#4.3.3">le changelog</a>, en anglais.
+ Pour la liste exhaustive des modifications de PHP 4.3.4, voyez
+ <a href="/ChangeLog-4.php#4.3.4">le changelog</a>, en anglais.
 </p>
 
 <?php site_footer(); ?>
