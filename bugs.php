@@ -870,7 +870,6 @@ Please supply any information that may be helpful in fixing the bug:
 <ul>
 	<li>A short script that reproduces the problem
 	<li>The list of modules you compiled PHP with (your configure line)
-	<li>A copy of your php.ini file (if it might be relevant)
 	<li>Any other information unique or specific to your setup
 	<li>A <a href="/bugs-generating-backtrace.php">gdb backtrace</a>.
 </ul>
