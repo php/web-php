@@ -17,7 +17,7 @@ PHP developers can post their resumes, and employers can post their job notices.
 <P>
 You can also try <A 
 HREF="http://classifieds.yahoo.com/yc?cr=national&ce_f=&cpo=&cpj=&ck=PHP&g=&cs=time+2&cc=employment&cf=1&za=and"
->clicking here</A> to seach Yahoo Careers for PHP-related jobs.
+>clicking here</A> to seach Yahoo Careers for PHP-related jobs (US only for now).
 </P>
 
 <h3>ISPs that support PHP</h3>
