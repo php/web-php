@@ -88,17 +88,6 @@ site_header("Documentation - Extended CHM Format");
  for those trying to view the contents in alternate viewers.
 </p>
 
-<p>
- The frontpage still has that &amp;nbsp; in the footer.
-</p>
-
-<p>
-  If you have problems running the preferences application, getting
-  an "A required .DLL file, MSVCP60.DLL, was not found." error
-  <a href="http://www.google.com/search?q=cache:IjPT5nzzj68C:216.136.1.66/2002Graphics/Graphics/MSVCP60%2520error.doc">this
-  page will help you</a>. This is not something to fix in our package.
-</p>
-
 <a name="ides"></a>
 <h2>IDE integration</h2>
 
