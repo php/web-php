@@ -59,17 +59,15 @@ function endEntry() {
 A very introductory look at LDAP and how to write a PHP interface to an LDAP server.
 <? endEntry(); ?>
 
+<? makeEntry("Search This","by Colin Viebrock","http://www.devshed.com/Server_Side/PHP/Search_This/","Mar. 15, 1999");?>
+&quot;Search This: Searching Your Dynamic Site with PHP3 and ht://Dig&quot;
+<? endEntry(); ?>
+
 <? makeEntry( "PHP3 - a Revolution for the Web", "Article in German Internet World by Tobias Ratschiller", false, "Feb. 15, 1999");?>
 &quot;Static HTML pages are boring, CGI-scripts too slow, ColdFusion etc to
 expensive? The solution is PHP3.&quot; This German introductory article presents
 PHP3 as a scalable, easy-to-use, high-perfomance solution for server-side
 scripting. Features also an interview with Rasmus Lerdorf.
-<? endEntry(); ?>
-
-
-
-<? makeEntry("Article on devshed.com","by Colin Viebrock","http://beta.devshed.com/Server_Side/PHP/search","Feb. 10, 1999");?>
-&quot;Search This: Searching Your Dynamic Site with PHP3 and ht://Dig&quot;
 <? endEntry(); ?>
 
 <? makeEntry("Articles on phpbuilder.com","by Tim Perdue and Rasmus Lerdorf", "http://www.phpbuilder.com","Jan. 24, 1999");?>
