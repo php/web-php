@@ -76,6 +76,28 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<?php print_link("http://www.linuxtag.org", make_image("linuxtag.gif", "LinuxTag", "right") ); ?>
+
+<h1>LinuxTag 2002 - Call for Papers</h1>
+
+<p>
+<font class="newsDate">[23-Jan-2002]</font>
+LinuxTag, Europe's most important Linux conference and exhibition, has
+issued a call for papers. <a href="http://www.linuxtag.org">LinuxTag</a>
+will be held at the fair in
+Karlsruhe/Germany 6. - 9. Juni 2002. Last year 15,000 visitors came to find
+the latest information on Linux, Free Software, Open Source solutions and
+of course PHP. The event is aimed at professionals, enthusiasts,
+researchers, developers and the community at large.
+<ul>
+    <li><?php print_link("http://www.linuxtag.org", "LinuxTag"); ?></li>
+    <li><?php print_link("http://www1.linuxtag.net/cfp/cfp3-en.html", "Call for papers"); ?></li>
+    <li><?php print_link("http://www.phpug.de/index_ka39.php", "PHP@LinuxTag 2001"); ?></li>
+</ul>
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Conference 2 - Call for Participation</h1>
 
 <p>
