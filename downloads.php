@@ -90,6 +90,9 @@ site_header("Downloads");
  </li>
  <li>
   <?php download_link('pecl-5.0.0-Win32.zip', 'Collection of PECL modules for PHP 5.0.0'); ?> - 13 Jul 2004<br />
+  (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
+  standard with PHP 4 Windows binaries but have since been moved into this 
+  separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)
   <span class="md5sum">md5: ede9d837b3dc48a38ca992ca753ee114</span>
  </li>
  <li>
