@@ -160,6 +160,7 @@ right away.</blockquote>
 	site("City of Escondido","www.ci.escondido.ca.us");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	site("City of Sibiu - Romania","www.primbsb.ro");
+	site("West Virginia Department of Education","wvde.state.wv.us");
 	siteEnd();
 
 /* Hi-Tech Industry */
