@@ -215,8 +215,8 @@ site_header("Documentation - Extended CHM Format");
  <li>
   <strong><a href="http://www.scintilla.org/SciTE.html">SciTE</a>:</strong>
   Place this in Scite config file:
-   <pre>*command.help.*.php=$(CurrentWord)!$(SciteDefaultHome)\help\php\php_manual_en.chm*
-*command.help.subsystem.*.php=4*</pre>
+   <pre>command.help.$(file.patterns.php)=$(CurrentWord)!$(SciteDefaultHome)\help\php\php_manual_en.chm
+command.help.subsystem.$(file.patterns.php)=4</pre>
   In this case the CHM Edition of the PHP Manual is placed in
   <tt>C:\Program Files\SciTE\help\php</tt>.
  </li>
