@@ -11,18 +11,23 @@ if (!isset($token) || md5($token) != "19a3ec370affe2d899755f005e5cd90e")
 mysql_connect("localhost","nobody","") or die("unable to connect to db");
 mysql_select_db("php3") or die("unable to select database");
 
+if ($since) {
+  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since) OR updated > FROM_UNIXTIME($since)")
+    or die("failed to create temporary table");
+  # purge entries marked for removal
+  mysql_query("DELETE FROM note WHERE removed");
+}
+
 $query  = "SELECT DISTINCT id,note.sect,user,note,UNIX_TIMESTAMP(ts) AS ts,";
 $query .= "IF(votes=0, 10, rating/votes) AS rate";
 $query .= " FROM note";
 if ($since) {
-  $query .= ",updated WHERE note.sect=updated.sect";
+  $query .= ",updated WHERE note.sect=updated.sect AND NOT removed";
+}
+else {
+  $query .= " WHERE NOT removed";
 }
 $query .= " ORDER BY sect,rate DESC,ts";
-
-if ($since) {
-  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since) OR updated > FROM_UNIXTIME($since)")
-    or die("failed to create temporary table");
-}
 
 $res = mysql_query($query) or die("query failed");
 
