@@ -151,7 +151,7 @@ commonHeader("Hypertext Preprocessor");
 ?>
 
 <?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
-<h1>php|works in Toronto, Canada</h1>
+<h1>php|works - early-bird discount now in effect</h1>
 <p>
  <span class="newsdate">[16-Jun-2004]</span>
  <a href="http://www.phparch.com">php|architect</a> magazine is proud to
