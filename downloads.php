@@ -65,7 +65,7 @@ commonHeader("Downloads");
 $server = $SERVER_NAME;
 ?>
 
-<h1>PHP5 Beta 1</h1>
+<h1>PHP 5 Beta 1</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -84,7 +84,7 @@ $server = $SERVER_NAME;
  </li>
 </ul>
 
-<h1>Latest version of PHP</h1>
+<h1>Latest stable version of PHP</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
