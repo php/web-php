@@ -3,28 +3,28 @@ require("shared.inc");
 commonHeader("Documentation ");
 
 $languages = array(
- "en" => "English"
-,"pt_BR" => "Brazilian Portuguese"
-,"cs" => "Czech"
-,"nl" => "Dutch"
-,"fr" => "French"
-,"de" => "German"
-,"hu" => "Hungarian"
-,"it" => "Italian"
-,"ja" => "Japanese"
-,"kr" => "Korean"
-,"es" => "Spanish"
+ "en" => "English",
+ "pt_BR" => "Brazilian Portuguese",
+ "cs" => "Czech",
+ "nl" => "Dutch",
+ "fr" => "French",
+ "de" => "German",
+ "hu" => "Hungarian",
+ "it" => "Italian",
+ "ja" => "Japanese",
+ "kr" => "Korean",
+ "es" => "Spanish"
 );
 
 $formats = array(
- "bigmanual.html.gz" => array("Single HTML file (compressed)", "html.gz")
-,"manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb")
-,"manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb")
-,"manual.pdf" => array("PDF", "pdf")
-,"manual.txt.gz" => array("Plain text (compressed)", "txt.gz")
-,"manual.tar.gz" =>  array("Seperate HTML files (compressed tar archive)", "tar.gz")
-,"manual.zip" => array("Seperate HTML files (zip archive)", "zip")
-,"manual.chm" => array("Windows HTML Help", "chm")
+ "bigmanual.html.gz" => array("Single HTML (compressed)", "html.gz"),
+ "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb"),
+ "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb"),
+ "manual.pdf" => array("PDF", "pdf"),
+ "manual.txt.gz" => array("Plain text (compressed)", "txt.gz"),
+ "manual.tar.gz" =>  array("Many HTML files (compressed tar)", "tar.gz"),
+ "manual.zip" => array("Many HTML files (zip)", "zip"),
+ "manual.chm" => array("Windows HTML Help", "chm")
 );
 ?>
 
@@ -35,7 +35,7 @@ $formats = array(
 
 </ul>
 
-<?
+<?php
 $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
 ?>
 
@@ -71,14 +71,16 @@ table below:</p>
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
   <td></td>
-  <?while (list($k,$v) = each($languages)) {
-      echo "<th>$v</th>\n";
+  <?php 
+    while (list($k,$v) = each($formats)) {
+      echo "<th>$v[0]</th>\n";
     }?>
  </tr>
- <?while (list($fn,$details) = each($formats)) {
-     echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$details[0]</b></td>\n";
-     reset($languages);
-     while (list($langcode,$language) = each($languages)) {
+ <?php
+   while (list($langcode,$language) = each($languages)) {
+     echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$language</b></td>\n";
+     reset($formats);
+     while (list($fn,$details) = each($formats)) {
        echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
        # temporary hack until pdf are auto-generated
        if ($fn == "manual.pdf") {
