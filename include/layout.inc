@@ -164,11 +164,8 @@ function download_link($file, $title, $size_in_link=false) {
 
   print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title, false, $extraparam);
 
-	if ($size && !$size_in_link) {
-		printf(" [%dKB]", $size);
-	} else if (isset($filesizes[$local_file])) {
-		echo " [".$filesizes[$local_file]."]";
-	}
+	if (!$size && isset($filesizes[$local_file])) { $size = $filesizes[$local_file]; }
+  if ($size) { echo "[" . number_format($size, 0, ",", ".") . "Kb]"; }
 }
 
 
