@@ -93,7 +93,7 @@ Once you create a virtualhost which looks something like:
      ErrorDocument 403 /error/index.php
      AddType application/octet-stream .chm
      AddType application/octet-stream .bz2
-     # next line is only necessary if generating stats (<a href="/stats/README.stats">see stats/README.stats</a>)
+     # next line is only necessary if generating stats (see stats/README.stats)
      Alias /stats/ /path/to/local/stats/
    &lt;/VirtualHost&gt;
 </pre>
@@ -148,7 +148,7 @@ appropriate steps will be taken to integrate your mirror site:
   <a href="/Mirrors-htdig.tgz">Mirrors-htdig.tgz</a></li>
  <li>Whether or not you've installed local stats support on your mirror.
   This uses webalizer, for which instructions for setting it up
-  can be found in <a href="/stats/README.stats">stats/README.stats</a></li>
+  can be found in stats/README.stats</li>
  <li>The name of your hosting company.</li>
  <li>The URL of the site that hosts the mirror. This is where you want
   people will go when they click on the link for your mirror at the
