@@ -74,13 +74,14 @@ right away.</blockquote>
 	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
 	site("Du côté de","www.ducotede.com");
 	site("City of Escondido","www.ci.escondido.ca.us");
+	site("City of Sibiu - Romania","www.primbsb.ro");
 	site("Fayetteville","www.fayetteville.com");
 	site("Greene County Online","greene.xtn.net");
 	site("Hull and East Yorkshire","www.humber.net/key/");
+	site("Kunsthalle Mannheim - Germany","www.kunsthalle-mannheim.de");
+	site("Landeshauptstadt Stuttgart - Germany","www.stuttgart.de");
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
-	site("City of Sibiu - Romania","www.primbsb.ro");
-	site("Landeshauptstadt Stuttgart - Germany","www.stuttgart.de");
 	site("Tablelands Online","www.tablelandsonline.net");
 	site("The Tri Cities Online","tri.xtn.net");
 	site("Up My Street", "www.upmystreet.com");
