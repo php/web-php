@@ -8,17 +8,6 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-<h3>The Mars Polar Lander and PHP</h3>
-<p>
-<a href="http://www.marspolarlander.com"><img align=right src="edl.gif" border=0 width=100 height=120 alt="Mars Polar Lander"></a>
-The web site <a href="http://www.marspolarlander.com">
-www.marspolarlander.com</a> is powered by a combination of PHP, MySQL and Perl scripts.
-There is an architecture description <a href="http://www.netapp.com/tech_library/3071.html">HERE</a>.  This architecture
-document doesn't say very much about PHP other than the fact that PHP is used as the Web scripting language, but it
-has an interesting description of how they built a large scaleable system and it proves nicely that PHP is up to the task
-of being part of such a large-scale deployment.
-<br clear="all">
-</p>
 
 <h3>New usage stats for November available</h3>
 <p>
