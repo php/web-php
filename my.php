@@ -49,7 +49,7 @@ foreach ($langs as $code => $name) {
 $langpref = "<select name=\"my_lang\">\n" .
             join("", $options) . "</select>\n";
             
-// Check URL shortcut fallback setting
+// Save URL shortcut fallback setting
 if (isset($_POST['urlsearch'])) {
     myphpnet_urlsearch($_POST['urlsearch']);
 }
@@ -60,6 +60,11 @@ if (isset($_POST['mirror'])) {
 }
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
+
+// Save suggestion hiding settings
+if (isset($_POST['hidesuggest'])) {
+    myphpnet_urlsearch($_POST['hidesuggest']);
+}
 
 myphpnet_save();
 
@@ -193,6 +198,25 @@ if ($type === MYPHPNET_URL_MANUAL) {
 }
 ?>
  /> PHP Documentation search
+</div>
+
+<h2>Search field suggestions</h2>
+
+<p>
+ Whenever you start a search on a PHP.net page, a list of suggested function
+ names starting with the letters you typed in are suggested. If your browser
+ has problems with this functionality or you are not interested in these
+ suggestions, you can turn them off here.
+</p>
+
+<div class="indent">
+ Your setting: <input type="radio" name="hidesuggest" value="0"
+<?php
+echo (myphpnet_hidesuggest() ? '' : ' checked="checked"');
+echo ' /> Show suggestions <input type="radio" name="hidesuggest" value="1"';
+echo (myphpnet_hidesuggest() ? ' checked="checked"' : '');
+?>
+ /> Hide suggestions
 </div>
 
 <h2>Mirror site redirection</h2>

@@ -91,7 +91,7 @@ function myphpnet_load()
     global $MYPHPNET;
 
     // Empty the preferences array
-    $MYPHPNET = array(FALSE, FALSE, "NONE");
+    $MYPHPNET = array(FALSE, FALSE, "NONE", 0);
     
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
@@ -151,13 +151,29 @@ function myphpnet_mirror($murl = FALSE)
     } else { return "NONE"; }
 }
 
+// Set suggestion hiding preference
+function myphpnet_hidesuggest($hide = FALSE)
+{
+    global $MYPHPNET;
+
+    // Set hiding preference, or return with value
+    if (is_int($hide)) {
+        $MYPHPNET[3] = $hide;
+    }
+    elseif (isset($MYPHPNET[3])) {
+        return $MYPHPNET[3];
+    } else {
+        return 0;
+    }
+}
+
 // Save user settings in cookie
 function myphpnet_save()
 {
     global $MYPHPNET;
     
     // Fill in values not specified
-    for ($i = 0; $i <= 2; $i++) {
+    for ($i = 0; $i <= 3; $i++) {
         if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
     }
     
