@@ -230,15 +230,15 @@ by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cart
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet07"
-><IMG SRC="/gifs/krause.gif" BORDER=0 ALIGN="left"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446215468/wwwphpnet07"
+><IMG SRC="/jpgs/joerg_krause.jpg" BORDER=0 ALIGN="left" width="111" height="163"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet07"
->PHP - Grundlagen und L&ouml;sungen</A><BR>
+>PHP - Grundlagen und Profiwissen</A><BR>
 Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
-<SMALL>in German, Hanser, Dec 1999, ISBN 3-446-21301-5, 1067 pages<BR>
+<SMALL>in German, Hanser, Nov 2000, ISBN 3-446-21301-5, 1168 pages<BR>
 <A HREF="http://www.php.comzept.de/">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
