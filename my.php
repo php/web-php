@@ -229,7 +229,7 @@ foreach ($mirror_sites as $murl => $mdata) {
 </div>
 
 <p class="center">
- <input type="submit" value="Set All Preferences">
+ <input type="submit" value="Set All Preferences" />
 </p>
 </form>
 
