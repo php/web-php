@@ -58,8 +58,8 @@ Another site with good articles on PHP basics and advanced topics.<BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>
 
-<LI><A HREF="http://www.weberdev.com/">Berber's PHP Example Page</A><BR>
-Another collection of sample PHP scripts.  Includes a search function.<BR>
+<LI><A HREF="http://www.weberdev.com/">WeberDev.com</A><BR>
+PHP related resources (articles, tutorials, forums, advanced search etc.)<BR>
 
 <LI><A HREF="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</A><BR>
 A collection of PHP scripts.<BR>
