@@ -871,6 +871,7 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
 <pre>my $CFG_LIBEXECDIR    = '/usr/lib/apache';        # substituted via APACI install</pre>
     Last, if you reconfigure/reinstall Apache, add a 'make clean' to the process after
     './configure' and before 'make'.
+    <p>
     </dd>
   <dt><b>
     <a name="6.12">6.11.</a>During 'make', I get errors in microtime, and a lot of 'RUSAGE_' stuff.
@@ -903,9 +904,10 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
     X
 
     $ gcc -E test.c >/dev/null
-   
+
     If that spews out errors, you know your include files are messed up. 
     </pre></p>
+    <p>
    </dd>
 </dl>
 
