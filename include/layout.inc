@@ -399,8 +399,8 @@ function clean_note($text) {
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
     
-    /* Make sure <p> tags stay in the CSS "code" class*/
-    $text = str_replace (array ('<P>', '<p>'), '<p class="code">', $text);
+    /* Make sure <p> tags stay in the CSS "note" class*/
+    $text = str_replace (array ('<P>', '<p>'), '<p class="note">', $text);
 
     /* preserve linebreaks */
     	$text = str_replace("\n", "<br>", $text);
