@@ -24,7 +24,7 @@ $minute = rand(0, 59);
  usage (a reasonable estimate as of 2/2002 is 150MB/day). The PHP
  website <strong>requires PHP 4.3.x</strong> with the settings
  <a href="#settings">outlined below</a>. The size of the full website
- is approximately 3/4 gigabytes.
+ is approximately one gigabyte.
 </p>
 
 <a name="rule"></a>
