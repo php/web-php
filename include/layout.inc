@@ -285,7 +285,6 @@ function commonFooter() {
 ?>
 
 <br clear="all">
-<br clear="all">
 
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
