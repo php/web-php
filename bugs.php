@@ -634,7 +634,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<table>\n";
 		if(!isset($edit)) {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
-			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>Modify</tt></font></a></td>";
+			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>User Modify</tt></font></a> &nbsp; ";
+			echo "<a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td>";
 		} else {
 			echo "<form method=POST action=\"http://bugs.php.net$PHP_SELF?id=$id\">\n";
 			if($edit==1)
