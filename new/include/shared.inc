@@ -8,7 +8,7 @@ header("Vary: User-Agent");
 
 $IE4 = false;
 $HAVE_LAYERS = $HAVE_IMG_SRC = $HAVE_TD_BG = $HAVE_CSS = false;
-$HAVE_FONT_COLOR = false;
+$HAVE_FONT_COLOR = $HAVE_STYLE = false;
 $HAVE_JS = 0;
 $FONTFACE = "tahoma, arial, helvetica, sans-serif";
 
@@ -17,7 +17,7 @@ if (eregi("Mozilla/([0-9]+)", $HTTP_USER_AGENT, &$verdata)) {
     $version = (int)$verdata[1];
     if ($version >= 4) {
 	$HAVE_LAYERS = $HAVE_TD_BG = $HAVE_CSS = $HAVE_TD_BG =
-	    $HAVE_FONT_COLOR = true;
+	    $HAVE_FONT_COLOR = $HAVE_STYLE = true;
 	$HAVE_JS = 12;
     } elseif ($version >= 3) {
 	$HAVE_IMG_SRC = true;
@@ -271,21 +271,17 @@ function jpgurl($img) {
 
 function commonHeader($title) {
     global $IE4, $HAVE_LAYERS, $HAVE_IMG_SRC, $HAVE_TD_BG, $HAVE_CSS;
-    global $HAVE_FONT_COLOR, $HAVE_JS;
+    global $HAVE_FONT_COLOR, $HAVE_JS, $HAVE_STYLE;
     global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
     global $jsfunc, $func;
-    // we're far from being conformant yet
+    // we're far from being conformant yet :-P
     //<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 ?><HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title ?></TITLE>
-<STYLE TYPE="text/css">
-.sidebartoc {
-    font-family: tahoma, arial, helvetica, sans-serif;
-    color: #FFFFFF;
-    text-decoration: none
-}
-</STYLE>
+<? if ($HAVE_STYLE) { ?>
+<LINK REL="stylesheet" HREF="/new/php-style.css" TYPE="text/css">
+<? } ?>
 <? if ($HAVE_JS >= 12) { ?>
 <SCRIPT LANGUAGE="JavaScript1.2">
 
