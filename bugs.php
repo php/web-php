@@ -348,6 +348,7 @@ elseif ($cmd == "display") {
    <td><select name="status"><?php show_state_options($status,$edit,$original[status])?></select>
    <?php if ($edit == 1) {?>
     <b>Assign To:</b> <input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>"> <input type="submit" value="Submit Changes"></td>
+     <small><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=2"><tt>User Modify</tt></a></small></td>
    <?php } else { ?>
      <small><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></small></td>
    <?php }?>
