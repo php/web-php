@@ -133,6 +133,7 @@ removed right away.</blockquote>
 	title("Not-for-Profit");
 	siteStart();
 	site("National Marrow Donor Program","www.marrow.org");
+	site("European Rotaract Information Center","www.rotaract.de/eric/");
 	siteEnd();
 
 /* Religious */
