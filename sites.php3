@@ -240,6 +240,7 @@ right away.</blockquote>
 	site("Deal-iMac","deal-imac.com");
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
+	site("GAMESDomain","www.gamesdomain.com");
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
 	site("Linux BBS","www.linuxbbs.org");
