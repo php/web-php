@@ -41,7 +41,6 @@ if ($size) {
  Please choose the mirror closest to you from which to download the file.  
  The current mirror is highlighted in yellow, mirror sites detected to be
  out of date or disfunctional are not listed for your convenience.
-</p>
 
 <?php
 
@@ -51,18 +50,19 @@ if (i2c_valid_country()) {
     $close = count_mirrors($COUNTRY);
     if ($close > 0) {
         $mnum = (($close > 1) ? "mirrors" : "mirror");
-        echo "<p>We have automatically detected the following $mnum to be close\n" .
+        echo "We have automatically detected the following $mnum to be close\n" .
              "to you. If you use a mirror close to you for downloads and\n" .
              "your usual daily work, you will get better response times.</p>\n";
         mirror_list($COUNTRY);
         echo "<p>Here is the list of all the other sites in case our detection\n" .
              "did something wrong, or the local mirror sites are busy.\n";
         mirror_list('', $COUNTRY);
-    } else { mirror_list(); }
-} else { mirror_list(); }
+    } else { echo "</p>\n"; mirror_list(); }
+} else { echo "</p>\n"; mirror_list(); }
 
 // List mirrors for download with a possible country matching
 function mirror_list($cmatch = '', $cnomatch = '') {
+    
     global $MIRRORS, $MYSITE, $df, $COUNTRIES;
     
     // Print out start of the table centered
