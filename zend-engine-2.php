@@ -608,7 +608,7 @@ class baseClass { }
 
 $a = new baseClass;
 
-if ($a instanceof basicClass) {
+if ($a instanceof baseClass) {
     echo "Hello World";
 }
 ?>'); ?>
