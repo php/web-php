@@ -241,31 +241,21 @@ function commonHeader($title="",$dont_enclose=0) {
 ?>
 
 <table width="150" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
-<tr valign="top">
-<td>
-
-<!-- sidebar table starts -->
-<table width="149" align="left" cellpadding="4" cellspacing="0">
-<tr valign="top">
-<td>
-<? echo $SIDEBAR_DATA; ?>
-</td>
-</tr>
-</table>
-<!-- sidebar table ends -->
-
-</td>
-    <td bgcolor="#cccccc" background="/gifs/checkerboard.gif">
-<?php spacer(1,1);?><br>
-    </td>
-</table>
-
-<!-- main section -->
-
-<table width="625"
-	align="left"
-	cellpadding="10" cellspacing="0"
-><tr><td valign="top">
+ <tr valign="top">
+<?php if (isset($SIDEBAR_DATA)):?>
+  <td>
+   <table width="149" align="left" cellpadding="4" cellspacing="0">
+    <tr valign="top">
+     <td><?php echo $SIDEBAR_DATA?></td>
+    </tr>
+   </table>
+  </td>
+  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
+<?php endif; ?>
+  <td>
+   <table width="625" align="left" cellpadding="10" cellspacing="0">
+    <tr>
+     <td valign="top">
 <?php
   endif;
 }
@@ -280,7 +270,7 @@ function commonHeader($title="",$dont_enclose=0) {
 function commonFooter() {
 	global $SCRIPT_NAME,$PHP_SELF,$MIRRORS,$MYSITE,$COUNTRIES,$enclosed;
 	if ($enclosed) {
-		echo "</td></tr></table>\n";
+		echo "</td></tr></table></td></tr></table>\n";
 	}
 ?>
 
