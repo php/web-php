@@ -111,6 +111,7 @@ removed right away.</blockquote>
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
 	site("Compmore.Net","www.compmore.net");
+	site("CocoNet Corporation","www.coconet.com");
 	siteEnd();
 
 /* Military */
