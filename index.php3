@@ -1,26 +1,34 @@
 <html><head><title>Professional Home Pages Version 3.0</title>
 <? $title="Welcome";
    include "include/header.inc"; ?>
-<blockquote>
-<p>Welcome to the PHP3 network of sites.<br>
-<?error_reporting(0); if(filesize("localtop.inc")) { include "localtop.inc"; } error_reporting(1);?>
+
+<center><img src="gifs/php3logo.gif"><br><font size="-1">Professional Home Pages</font></center>
 
 <p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently in a <a href="why_beta.php3">public BETA</a> testing period.
 
 <ul>
-<li><a href="register.php3">Register PHP 3.0</a> (completely free, required before downloading)
-<li>Lost your registration password?  <a href="oh_no.php3">Get it back here.</a>
+<li><a href="register.php3">Register PHP 3.0</a> <font size="-2">(Completely free, required before downloading;  Forgot your password?  <a href="oh_no.php3">Get it back here.</a>)</font>
 <li><a href="download.php3">Download PHP 3.0!</a>
-<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases
+<li><a href="documentation.php3">Documentation Resources</a>
 <li><a href="config.php3">Configure PHP 3.0</a> online (JavaScript required)
-<li>Read what has <a href="changes.php3">changed</a> since PHP/FI 2.0
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
-<li>A <a href="FAQ.php3">FAQ</a> has been started as well.  Skim this before asking questions.
-<li><a href="manual/manual.html">PHP 3.0 Manual</a>.  This is a <i>very</i> early version,
-     a lot is missing and the structure is horrible, it'll get better.
+<!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
 </ul>
 <br>
+
+<center>
+<table cellpadding="5">
+	<tr>
+		<td width="28%" align="center"><font size="-1">Mirror Sites:</font></td>
+		<td width="18%" align="center"><font size="-2"><a href="http://www.php.net/"><img src="gifs/canada-small.gif" border="0"><br>Canada</a></font></td>
+		<td width="18%" align="center"><font size="-2"><a href="http://php.netvision.net.il/"><img src="gifs/israel-small.gif" border="0"><br>Netvision, Israel</a></font></td>
+		<td width="18%" align="center"><font size="-2"><a href="http://php.technion.ac.il/"><img src="gifs/israel-small.gif" border="0"><br>Technion, Israel</a></font></td>
+		<td width="18%" align="center"><font size="-2"><a href="http://php.guardian.no/"><img src="gifs/norway-small.gif" border="0"><br><nobr>Guardian Networks, Norway</nobr></a></font></td>
+	</tr>
+</table>
+</font>
+</center>
 
 <?include "include/footer.inc";?>

@@ -63,11 +63,11 @@ function rolloff(imgName) {
 </head>
 <body background="jpgs/<?echo $bkg?>" bgcolor="#ffffff" text="#032F5B" link="#537492" vlink="#000000">
 <FONT FACE="Verdana, Arial, Helvetica">
-<table border=0 width=100% cellpadding=0 cellspacing=0 nowrap cols=3 frame=none>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>
 <td><font size=+2 color="#ffffff"><i>PHP3</i></font></td>
 <td><font size=+2 color="#ffffff"><?echo $title?></font></td>
-<td nowrap>
+<td nowrap align="right">
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="<? echo $base_url ?>"
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
@@ -82,4 +82,5 @@ function rolloff(imgName) {
 <img src="jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
 </td></tr>
 </table>
-<br><br><br>
+<!-- add in 30 more pixels to ensure we don't overlap the background -->
+<table width="100%" height="30" border="0"><tr><td>  </td></tr></table>
