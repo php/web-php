@@ -157,6 +157,18 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff"
+><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff">PHP Developer's Cookbook</A><BR>
+by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and Sterling Hughes<BR><SMALL>
+MacMillan, November 2000, ISBN 0-6723-1924-1<BR>
+</SMALL>
+</TD>
+</TR>
+
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
