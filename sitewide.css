@@ -88,6 +88,15 @@ hr {
 	background-color: transparent;
 }
 
+div.indent {
+	margin-left: 50px;
+}
+
+li {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;
