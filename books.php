@@ -161,7 +161,8 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 ><IMG SRC="/jpgs/cosentino.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/0130889032/wwwphpnet">Essential PHP for Web Professionals</A><BR>
-by Christopher Cosentino<BR><SMALL>
+by Christopher Cosentino<BR>
+<SMALL>
 Prentice Hall, October 2000, ISBN 0-1308-8903-2, 168 pages<BR>
 </SMALL>
 </TD>
@@ -172,7 +173,8 @@ Prentice Hall, October 2000, ISBN 0-1308-8903-2, 168 pages<BR>
 ><IMG SRC="/jpgs/maxfield.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="139"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/0789724405/wwwphpnet">MySQL and PHP from Scratch</A><BR>
-by Wade Maxfield<BR><SMALL>
+by Wade Maxfield<BR>
+<SMALL>
 Que, November 2000, ISBN 0-7897-2440-5, 372 pages<BR>
 </SMALL>
 </TD>
@@ -183,7 +185,8 @@ Que, November 2000, ISBN 0-7897-2440-5, 372 pages<BR>
 ><IMG SRC="/jpgs/wjgilmore.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1893115852/wwwphpnet">A Programmer's Introduction to PHP 4.0</A><BR>
-by W.J. Gilmore<BR><SMALL>
+by W.J. Gilmore<BR>
+<SMALL>
 APress, December 2000, ISBN 1-8931-1585-2, 450 pages<BR>
 </SMALL>
 </TD>
@@ -208,7 +211,8 @@ Sams, November 2000, ISBN 0-6723-1924-1, 505 pages<BR>
 ><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/wwwphpnet">Beginning PHP 4</A><BR>
-by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
+by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR>
+<SMALL>
 Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </SMALL>
 </TD>
@@ -232,6 +236,7 @@ Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet">PHP 4 Developer's Guide</A><BR>
 by Blake Schwendiman<BR>
+<SMALL>
 Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<BR>
 </SMALL>
 </TD>
@@ -243,6 +248,7 @@ Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet">MySWL/PHP Database Application</A><BR>
 by Jay Greenspan and Brad Bulger<BR>
+<SMALL>
 Hungry Minds, January 2001, ISBN 0-7645-3537-4, 500 pages<BR>
 </SMALL>
 </TD>
@@ -390,6 +396,7 @@ by Klaus Schmidt<BR>
 >Jetzt lerne ich PHP 4</A><BR>
 by Matt Zandstra<BR>
 <SMALL>in German, Markt+Technik Verlag, December 2000, ISBN 3-8272-5883-9, 515 pages<BR>
+</SMALL>
 </TD>
 </TR>
 
@@ -402,6 +409,7 @@ by Matt Zandstra<BR>
 >Webanwendungen mit PHP 4.0 entwickeln</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR>
 <SMALL>in German, Addison-Wesley, Jan 2001, ISBN 3-8273-1730-4, 400 pages<BR>
+</SMALL>
 </TD>
 </TR>
 
@@ -414,6 +422,20 @@ by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A 
 >PHP 4</A><BR>
 by Uwe Hess and G&uuml;nther Karl<BR>
 <SMALL>in German, bhv, Dec 2000, ISBN 3-8266-8002-2, 764 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3898421163/wwwphpnet07"
+><IMG SRC="/jpgs/dittrich.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="157"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3898421163/wwwphpnet07"
+>PHP 4 für Profis. Werkzeugkiste und Kochbuch</A><BR>
+by Helmut Dittrich and J&uuml;rgen Mellenthin<BR>
+<SMALL>in German, Galileo Press, January 2001, ISBN 3-8984-2116-3, 500 pages<BR>
+</SMALL>
 </TD>
 </TR>
 
