@@ -18,7 +18,11 @@ if ($note == "") {
     unset ($note);
 }
 
-if (isset($note) && isset($action) && strtolower($action) != "preview"):
+if (isset($note) && strlen($note) >= 4096) {
+  echo "<p>Your note is too long. You'll have to make it shorter before you can post it.</p>";
+}
+
+if (isset($note) && isset($action) && strlen($note) < 4096) && strtolower($action) != "preview"):
   $result = posttohost("http://master.php.net/entry/user-note.php", array(
               "user" => stripslashes($user),
               "note" => stripslashes($note),
@@ -40,7 +44,7 @@ in due time.</p>
 ?>
 <p>You can <a href="<?php echo $redirect?>">go back</a> from whence you came.</p>
 <?else:
-        if (isset($note) && strtolower($action) == "preview"):?>
+        if (isset($note)):?>
 <p>This is what your entry will look like, roughly:</p>
 <?
                 echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
