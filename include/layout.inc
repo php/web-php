@@ -231,9 +231,10 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <tr bgcolor="#666699">
     <form method="POST" action="/search.php">
       <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
-        <small>
-search for <INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
-in the <SELECT NAME="show" CLASS="small">
+        <small>search for</small>
+<INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
+<small>in the</small>
+<SELECT NAME="show" CLASS="small">
 <OPTION VALUE="quickref" SELECTED>function list
 <OPTION VALUE="nosource">whole site
 <OPTION VALUE="manual">online documentation
@@ -244,7 +245,6 @@ in the <SELECT NAME="show" CLASS="small">
 </SELECT>
 <?	echo make_submit('small_submit_white.gif', 'search', 'bottom');
       ?>&nbsp;<br>
-        </small>
       </font></td>
     </form>
   </tr>
@@ -296,7 +296,7 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">
-    <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this)">
+    <form method="GET" action="/mirrors.php" onsubmit="return gotomirror(this);">
       <td align="right" valign="bottom">
       <script language="javascript">
       <!--
@@ -317,7 +317,7 @@ function commonFooter() {
 	echo delim();
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
-	echo "<option value=-1>--\n";
+	echo "<option value=\"-1\">--\n";
 	while (list($url,$mirror) = each($MIRRORS)) {
           if ($mirror[4] == 1) { /* only list full mirrors here */
             echo "<option value=\"$url\">".$COUNTRIES[$mirror[0]]." ($mirror[1])\n";
