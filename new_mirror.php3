@@ -5,11 +5,14 @@ commonHeader("Mirroring the PHP Web Site");
 
 <h2>Mirroring the PHP Web Site</h2>
 
-<P><b>Note:</b> We are currently re-thinking our mirroring scheme and 
-don't want to set up new mirrors at this time.  Please check back in a
-week or two for more news.  The old instructions are included below
-for informational purposes...</P>
+<P><b>Note: We are currently re-thinking our mirroring scheme and 
+are not accepting any new mirrors at this time. Please check back
+later for updated news.</b></P>
 
+<P>Instructions on how to mirror the PHP web site can be found at
+<a href="http://www.php.net/README.mirror">http://www.php.net/README.mirror</a>.
+
+<!--
 <p>The PHP site has a network of mirrors around the world, that duplicate
 most of the functionality.  Small parts of the site (e.g., the bugs
 database) are specific to one mirror, but all of the static content
@@ -31,7 +34,6 @@ can comply with the following terms:</p>
     of free space.
 </ol>
 
-
 <p>If you think you can comply with these terms, please send us a note to
 core@php.net, with the subject line "Request for a new mirror".  In
 it, please inform us your name and contact Email, your company and its
@@ -47,6 +49,7 @@ take it personally, and thanks in advance for the support of PHP.</p>
 
 <p>We'd especially like mirrors in parts of the world that aren't covered yet (if
 there are any), high bandwidth sites and sites from countries with exotic flags :)</p>
+-->
 
 <p>Thanks for the interest in mirroring the PHP web site!</p>
 
