@@ -10,29 +10,18 @@ $SIDEBAR_DATA = '
 <h3>What is PHP?</h3>
 
 <p>
-PHP (recursive acronym for PHP: Hypertext Preprocessor) 
+<acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
 is a server-side, cross-platform, HTML embedded scripting
-language. If you are completely new to PHP and want to get some idea
-of how it works, have a look at the ' . make_link("/tut.php", "introductory tutorial") . '.
-Once you get beyond that, please see our ' . make_link("/docs.php", "manual") . ',
+language. If you are new to PHP and want to get some idea
+of how it works, try the ' . make_link("/tut.php", "introductory tutorial") . '.
+After that, check out the online ' . make_link("/docs.php", "manual") . ',
 and the example archive sites and some of the other resources
 available in the ' . make_link("/links.php", "links section") . '.
 </p>
 
 <p>
-PHP is a project of the '.make_link("http://www.apache.org/","Apache Software Foundation").
-'.</p>
-
-<h3>So, How Much Does It Cost?</h3>
-
-<p>
-This may sound a little foreign to all you folks coming from a non-Unix
-background, but PHP doesn\'t cost anything. You can use it for commercial
-and/or non-commercial use all you want. You can give it to your friends,
-print it out and hang it on your wall or eat it for lunch. Welcome to
-the world of ' . make_link("http://www.opensource.org/", "Open Source") . '
-software! Smile, be happy, the world is good. For the full legalese, see the ' .
-make_link("/license/", "official license") . '.
+PHP is a project of the ' . 
+make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
 
 <h3>' . make_link("/thanks.php", "Thanks To") . '</h3>

@@ -12,6 +12,11 @@ em {
 	font-style: italic;
 }
 
+acronym {
+        border-bottom: 1px dashed #00cc00;
+        cursor: help;
+}
+
 .error {
         color: #cc0000;
 }
