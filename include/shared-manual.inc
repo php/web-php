@@ -216,7 +216,7 @@ function manual_navbar($location = "top")
         }
         echo '</select>';
         echo '<input type="image" src="' . $_SERVER['STATIC_ROOT'] .
-             '/images/small_submit.gif" border="0" width="11" height="11"' .
+             '/images/small_submit.gif" border="0" width="11" height="11" ' .
              'alt="" align="baseline"> <small>version of this page</small></form>';
        
     } else {
@@ -250,7 +250,7 @@ function manual_notes()
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
-                   '&redirect=' . $_SERVER['BASE_HREF'];
+                   '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
         make_link($addnotelink, make_image('notes-add.gif', 'add a note', 'middle')) .
         ' <small>' .
