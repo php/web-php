@@ -4,7 +4,7 @@ require_once 'prepend.inc';
 $NUMACROSS = 2;
 $SHOW_CLOSE = 10;
 
-if (!isset($lang)) $lang = default_language();
+if (empty($lang)) $lang = default_language();
 if (!file_exists("$DOCUMENT_ROOT/manual/$lang")) $lang = "en";
 
 function makeTable($lang,$array) {
