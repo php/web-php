@@ -44,8 +44,10 @@ commonHeader("Documentation ");
 <H2>PDF Version</H2>
 <ul>
 <li>PDF version of PHP Manual has been split to two parts due to its' size and bookmarks not working in documents that are over 999 pages.
-<li><? download_link("language.pdf", "PHP PDF Manual - November 21, 00"); ?>. 195 pages
-<li><? download_link("funcref.pdf", "PHP PDF Manual (Function reference) - November, 00"); ?>. 881 pages
+<li><? download_link("language.pdf", "PHP PDF Manual - November 21, 2000"); ?>. 195 pages
+<li><? download_link("funcref.pdf", "PHP PDF Manual (Function reference) - November 21, 2000"); ?>. 881 pages
+<li>The PHP version in it's totality is available too:</li>
+<li><? download_link("manual.pdf", "PHP PDF Manual - November 22, 2000"); ?>. 1062 pages
 </ul>
 
 <H2>Other Versions</H2>
