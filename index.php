@@ -15,7 +15,7 @@ bugs that are surely lingering behind this new facade.
 </p>
 
 <p>Miss the quickref box? It's still there on the pages of the <a
-href="manual/">manual</a>. Check out our <a href="tips.php">tips
+href="manual/">manual</a> (hint: its labeled 'lookup'). Check out our <a href="tips.php">tips
 page</a> for tips on how to add a quick reference button to your
 browser.</p>
 
