@@ -116,12 +116,13 @@ if(!isset($pattern)) {
 		} else {
 			$sourceurl=$base.$PHP_SELF;
 		}
-		echo "<CENTER><A HREF=\"$sourceurl\">New Search</A></CENTER><BR><BR>\n";
+
 		if ((isset($prevpattern))&&($prevpattern)) {
 			$pattern=$prevpattern;
 		}
 		if ($pattern=="") {
-			echo "<CENTER>Error: No search words specified</CENTER>";
+			echo "<b>Error:</B> No search words specified.<BR><BR>";
+			echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
 			CommonFooter();
 			exit();
 		}
@@ -146,12 +147,13 @@ if(!isset($pattern)) {
 		exec("$htsearch_prog \"$query\"",&$result);
 		$rc=count($result);
 		if ($rc<2) {
-			echo "<CENTER>There was an error executing this query.<BR>Please try later</CENTER>";
+			echo "<B>There was an error executing this query.</B><BR><BR>Please try later<BR><BR>";
 			commonFooter();
 			exit;
 		}
 		if ($result[2]=="NOMATCH") {
-			echo "<CENTER>Error: No documents matched your query</CENTER>";
+			echo "<B>Sorry, no documents matched your query.</B><BR><BR>";
+			echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
 			commonFooter();
 			exit;
 		}
@@ -162,7 +164,7 @@ if(!isset($pattern)) {
 		$pages=$result[6];
 		$baseurl=$PHP_SELF."?pattern=$words&show=$show&base=$base";
 
-		echo "$matches documents match your search for '<B>$pattern</B>' in the $where.<BR><BR>\n";
+		echo "$matches documents match your search for '<B>$pattern</B>' in the $where:<BR><BR>\n";
 
 		makeBar(1,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
