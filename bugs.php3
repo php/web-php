@@ -35,14 +35,14 @@ function show_menu($state) {
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
-	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
+	echo "<table bgcolor=#aabbcc cellspacing=0><tr><td><input type=submit value=\"Display\"></td><td><select name=\"status\">\n";
 	show_state_options($state, 1);
-	echo "</select> bugs of type ";
+	echo "</select></td><td align=right>bugs of type: </td><td>";
 	show_types($bug_type,1,"bug_type");
 
 	$fields = array( "id" => "Bug ID",
 					"bug_type" => "Bug Type",
-					"email" => "Submitter's Email address",
+					"email" => "Email address",
 					"sdesc" => "Short Description",
 					"ldesc" => "Long Description",
 					"php_version" => "PHP Version",
@@ -54,13 +54,17 @@ function show_menu($state) {
 					"assign" => "Assigned");
 
 	reset($fields);
-	echo "Order by:  <select name='order_by_clause'>\n";
+	echo "</td><td align=right>Order by:</td><td> <select name='order_by_clause'>\n";
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href=\"/bugstats.php3\">Statistics</a><br>\n";
+	echo "</select></td><td> <a href=\"/bugstats.php3\">Statistics</a></td></tr>\n";
+	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
+	echo "<td colspan=4><input type=text name=\"search_for\"></td></tr>\n";
+	echo "</table>\n";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
 	echo "</form>\n";
+	
 }
 
 
@@ -276,6 +280,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			$where_clause = "status='$status' and bug_type='$bug_type'";
 		}
+	}
+	if(strlen($search_for)) {
+		$where_clause .= " and (sdesc like '%$search_for%' or ldesc like '%$search_for%')";
 	}
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
