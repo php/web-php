@@ -694,21 +694,20 @@ function showBook($one_book) {
 
 if (!isset($book_types[$type])) { unset($type); }
 
-if (isset($type)) {
-  echo '<h1>' . $book_types[$type] . '</h1>'; ?>
+echo '<h1>PHP Books</h1>';
+
+if (isset($type)) { ?>
 <p>
 Click on a book for more information or (in most cases) to purchase it.
-Remember, if you buy the book using the links on this page, you are helping
-to support PHP development!
+If you would like to jump to another category, choose one from the
+list below. Remember, if you buy the book using the links on this page,
+you are helping to support PHP development!
 </p>
 
 <?php } else { ?>
-<h1>
-PHP Books
-</h1>
 <p>
 Choose one category from the ones below to go to a listing of books
-about the subject.
+about that subject.
 </p>
 <?php } ?>
 
@@ -757,22 +756,22 @@ about
 </FORM>
 </p>
 
-<P><BR></P>
+<P><BR></P>Jump to:<?php
 
-<?php
+  echo '<ul>';
+  foreach ($books as $btype => $book_list) {
+    if ($btype == $type) { continue; }
+    echo '<li>' . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books]");
+  }
+  echo '</ul>';
 
   if (isset($type)) {
+    echo '<h1>' . $book_types[$type] . '</h1>';
     echo '<table border=0 cellpadding=5>';
     foreach ($books[$type] as $one_book) {
       showBook($one_book);
     }
     echo '</table>';
-  } else {
-    echo '<ul>';
-    foreach ($books as $btype => $book_list) {
-      echo '<li>' . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books]");
-    }
-    echo '</ul>';
   }
 
 commonFooter();
