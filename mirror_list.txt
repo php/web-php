@@ -46,6 +46,7 @@ se	se2.php.net	Anders Olausson <spacedump@burken.nu>	php.burken.nu
 sg	sg.php.net	Chen Shiyuan <csy@hjc.edu.sg>	php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
+th	th2.php.net	Kunawut Soubsen <kws@itr.co.th>	php.thainode.com
 tr	tr.php.net	Mustafa Akgul <akgul@bilkent.edu.tr>	php.bilkent.edu.tr
 tr	tr2.php.net	Emre Odabas <php@progen.com.tr>	php.progen.com.tr
 tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
