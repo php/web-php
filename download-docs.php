@@ -22,6 +22,12 @@ $SIDEBAR_DATA='
  project named <a href="http://gnochm.sourceforge.net/">GnoCHM</a>.
 </p>
 
+<h3>CHM reader for Mac OS X</h3>
+<p>
+ There is also a free CHM viewer available for Mac
+ OS X, named <a href="http://chmox.sourceforge.net/">Chmox</a>.
+</p>
+
 <h3>File sizes and dates</h3>
 <p>
  If you are using a capable browser, the file size and
