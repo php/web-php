@@ -485,6 +485,18 @@ in German: <A HREF="http://www.wsite.de/">more info</A>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201703319/wwwphpnet"
+><IMG SRC="/jpgs/postgresql.jpg" BORDER=0 ALIGN="left" width="111" height="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201703319/wwwphpnet"
+>PostgreSQL: Introduction and Concepts</A><BR>
+by Bruce Momjian<BR>
+<SMALL>Addison-Wesley Pub Co, Dec 2000, ISBN 0-2017-0331-9, 462 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet"
 ><IMG SRC="/gifs/mysql-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
