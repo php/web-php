@@ -4,8 +4,8 @@
   $current = "3.0b4";
   $win32_current = "3.0b4";
 
-  $filesizes["php-3.0b4.tar.gz"]="~ 750kb";
-  $filesizes["php-3.0b4-win32.zip"]="~ 850kb";
+  $filesizes["php-3.0b4.tar.gz"]="~ 750kB";
+  $filesizes["php-3.0b4-win32.zip"]="~ 850kB";
 
   $DL_ONLY=0;
   $FULL_MIRROR=1;
@@ -35,7 +35,7 @@
       $size = filesize($local_file)/1024;
       echo("<!-- file=$file localfile=$local_file size-$size-->\n");
       if ($size) {
-          printf(" (%dkb)", $size);
+          printf(" (%dkB)", $size);
       } elseif (isset($filesizes[$local_file])) {
 	  echo " (".$filesizes[$local_file].")";
       }
