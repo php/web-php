@@ -252,6 +252,13 @@ function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     echo make_image($file, $alt, $align, $extras, $dir, $border);
 }
 
+// Shortcut to usual news image printing (right floating
+// image from the news dir with an alt and an URL) 
+function news_image($URL, $image, $alt)
+{
+    echo "<a href=\"$URL\">" . make_image("news/$image", $alt, "right") . "</a>";
+}
+
 // Return HTML code for a submit button image
 function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                      $dir = '/images', $border = 0)
