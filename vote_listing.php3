@@ -16,10 +16,10 @@ $res3 = mysql_Result(mysql_query("select count(*) from name_vote where choice=3"
 <center>
 <table border="1" bgcolor="#eeeeee">
 <tr><th>Name</th><th>Votes</th></tr>
-<tr><td bgcolor="#cfefff">PHP HTML Preprocessor</td><td align="center" bgcolor="#cfefff"><? print $res1; ?></td></tr>
-<tr><td bgcolor="#ffefaf">PHP Hypertext Preprocessor</td><td align="center" bgcolor="#ffefaf"><? print $res2; ?></td></tr>
-<tr><td bgcolor="#cfffcf">PHP Hypermedia Preprocessor</td><td align="center" bgcolor="#cfffcf"><? print $res3; ?></td></tr>
-<tr><th>Total</th><td align="center"><? print $res1+$res2+$res3; ?></td></tr>
+<tr><td bgcolor="#cfefff">PHP HTML Preprocessor</td><td align="right" bgcolor="#cfefff"><? print $res1; ?></td></tr>
+<tr><td bgcolor="#ffefaf">PHP Hypertext Preprocessor</td><td align="right" bgcolor="#ffefaf"><? print $res2; ?></td></tr>
+<tr><td bgcolor="#cfffcf">PHP Hypermedia Preprocessor</td><td align="right" bgcolor="#cfffcf"><? print $res3; ?></td></tr>
+<tr><th>Total</th><td align="right"><? print $res1+$res2+$res3; ?></td></tr>
 </table>
 </center>
 <br>
