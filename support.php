@@ -208,7 +208,7 @@ lists. There are many PHP-related mailing lists available.
   <td><input type=submit name="action" value="Subscribe"></td>
   <td><input type=submit name="action" value="Unsubscribe"></td>
  </tr>
-</table></form>
+</table></form></p>
 
 <p>
 You will be sent a confirmation mail at the address you wish to
