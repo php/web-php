@@ -221,18 +221,15 @@ function manualGetUserNotes($title, $id) {
 // Print out all user notes for this manual page
 function manualUserNotes($title, $id) {
 
-    global $PHP_SELF, $MYSITE;
-
     # don't want .php at the end of the id.
     if (substr($id,-4) == '.php') $id = substr($id,0,-4);
 
     $notes = manualGetUserNotes($title, $id);
 
-    $back_url = substr($MYSITE, 0, -1) . $PHP_SELF;
-        
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
-    $addnotelink = '/manual/add-note.php?sect=' . $id . '&redirect=' . $back_url;
+    $addnotelink = '/manual/add-note.php?sect=' . $id .
+                   '&redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
         make_link($addnotelink, make_image('notes-add.gif', 'add a note')) .
         ' <small>' .
@@ -288,7 +285,8 @@ function sendManualHeaders($charset,$lang) {
     
     // Set initial base for this manual page
     // [will be extended in manualHeader()!]
-    $_SERVER['BASE_HREF'] = $MYSITE . 'manual/' . language_convert($lang);
+    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang);
+    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 }
 
 // Print out manual page header.
@@ -306,9 +304,11 @@ function manualHeader()
     }
     
     if ($PRINT_PAGE) {
+        $_SERVER['BASE_PAGE'] .= "/print/$filename";
         $_SERVER['BASE_HREF'] .= "/print/$filename";
         manualPrintHeader($title);
     } else {
+        $_SERVER['BASE_PAGE'] .= "/$filename";
         $_SERVER['BASE_HREF'] .= "/$filename";
         makeBorderTOC($filename);
         commonHeader ($title. " - Manual");

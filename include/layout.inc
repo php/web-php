@@ -302,6 +302,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 function commonFooter() {
 	global $SCRIPT_NAME, $MYSITE, $LAST_UPDATED, $PHP_SELF,
            $enclosed, $RSIDEBAR_DATA, $page_creation_start;
+           
+    $URL = (isset($_SERVER['BASE_PAGE']) ? "/" . $_SERVER['BASE_PAGE'] : $SCRIPT_NAME);
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if (!empty($RSIDEBAR_DATA)) { ?>
@@ -323,7 +325,7 @@ function commonFooter() {
  <tr bgcolor="#9999cc">
   <td align="right" valign="bottom">
 <?php
-	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
+	print_link("/source.php?url=$URL", 'show source', false, 'class="small"');
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
 	echo delim();
