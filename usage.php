@@ -2,7 +2,7 @@
 require("shared.inc");
 commonHeader("PHP Usage Stats");
 ?>
-August 2000: PHP: PHP: 3314634 Domains, 637746 IP Addresses<br>
+August 2000: PHP: 3314634 Domains, 637746 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 <img src="gifs/phpstats-200008.gif" width=780 height=350 alt="Graph"
 ><br clear=left>
