@@ -170,7 +170,7 @@ function preloadImages() {
 
 
 function spc($width, $height) {
-	echo "<IMG SRC='/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0 ALT=' '>";
+	echo "<IMG SRC=\"/gifs/spacer.gif\" WIDTH=$width HEIGHT=$height BORDER=0>";
 }
 
 function kickHeader($offset,$side,$width) {
@@ -192,14 +192,14 @@ function kickHeader($offset,$side,$width) {
 			if ($side=="left"):
 				echo "<TD valign=top rowspan=3 width=30>";
 				spc(1,$off);
-				echo "<BR><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD>\n";
+				echo "<BR><IMG SRC=\"/gifs/bubbles-up.gif\" WIDTH=50 HEIGHT=50 BORDER=0><BR></TD>\n";
 			else:
 				echo "<TD valign=top rowspan=3 width=1>";
 				spc(1,1);
 				echo "<BR></TD>\n";
 			endif;
 		else:
-			echo "<TD valign=bottom rowspan=3 width=30><IMG SRC='/gifs/bubbles-up.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR>";
+			echo "<TD valign=bottom rowspan=3 width=30><IMG SRC=\"/gifs/bubbles-up.gif\" WIDTH=50 HEIGHT=50 BORDER=0><BR>";
 			spc(1,$off);
 			echo "<BR></TD>\n";
 		endif;
@@ -207,36 +207,36 @@ function kickHeader($offset,$side,$width) {
 		if ($offset>=0):
 			echo "<TR>\n<TD colspan=4 align=left>";
 			spc($off,1);
-			echo "<IMG SRC='/gifs/bubbles-down.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD></TR>\n";
+			echo "<IMG SRC=\"/gifs/bubbles-down.gif\" WIDTH=50 HEIGHT=50 BORDER=0><BR></TD></TR>\n";
 		else:
-			echo "<TR><TD colspan=4 align=right width=$width><IMG SRC='/gifs/bubbles-down.gif' WIDTH=50 HEIGHT=50 BORDER=0>";
+			echo "<TR><TD colspan=4 align=right width=$width><IMG SRC=\"/gifs/bubbles-down.gif\" WIDTH=50 HEIGHT=50 BORDER=0>";
 			spc($off,1);
 			echo "<BR></TD>\n</TR>\n";
 		endif;	
 		echo "<TR VALIGN=top>\n";
 	endif;
-	echo "<TD width=9><IMG SRC='/gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
-	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bt.gif'>";
+	echo "<TD width=9><IMG SRC=\"/gifs/kick-ctl.gif\" WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
+	echo "<TD colspan=2 BACKGROUND=\"/gifs/kick-bt.gif\">";
 	spc(1,10);
-	echo "<BR></TD>\n<TD width=10><IMG SRC='/gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
+	echo "<BR></TD>\n<TD width=10><IMG SRC=\"/gifs/kick-ctr.gif\" WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
 	echo "</TR>\n";
-	echo "<TR VALIGN=top><TD BACKGROUND='/gifs/kick-bl.gif' width=9>";
+	echo "<TR VALIGN=top><TD BACKGROUND=\"/gifs/kick-bl.gif\" width=9>";
 	spc(9,1);
-	echo "<BR></TD>\n<TD BGCOLOR='#EFEF52' width=$innerwidth><FONT $FONTFACEATTR SIZE=2>\n";
+	echo "<BR></TD>\n<TD BGCOLOR=\"#EFEF52\" width=$innerwidth><FONT $FONTFACEATTR SIZE=2>\n";
 }
 
 function kickFooter($kickname,$buttname,$width) {
 	$innerwidth=$width-40;
 	$innerwidth2=$innerwidth+21;
-	echo "</TD>\n<TD BACKGROUND='/gifs/kick-bg.gif' width=21 VALIGN=top>";
-	echo "<A HREF=\"javascript:popUp('$kickname',false);change('$buttname',0);\"><IMG SRC='/gifs/kick-close.gif' ALT='Close this window' WIDTH=21 HEIGHT=21 BORDER=0></A><BR>";
-	echo "</TD>\n<TD BACKGROUND='/gifs/kick-br.gif' width=10>";
+	echo "</FONT></TD>\n<TD BACKGROUND=\"/gifs/kick-bg.gif\" width=21 VALIGN=top>";
+	echo "<A HREF=\"javascript:popUp('$kickname',false);change('$buttname',0);\"><IMG SRC=\"/gifs/kick-close.gif\" ALT=\"Close this window\" WIDTH=21 HEIGHT=21 BORDER=0></A><BR>";
+	echo "</TD>\n<TD BACKGROUND=\"/gifs/kick-br.gif\" width=10>";
 	spc(10,1);
 	echo "<BR></TD>\n</TR>\n<TR VALIGN=top>\n";
-	echo "<TD width=9><IMG SRC='/gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
-	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bb.gif' >";
+	echo "<TD width=9><IMG SRC=\"/gifs/kick-cbl.gif\" WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
+	echo "<TD colspan=2 BACKGROUND=\"/gifs/kick-bb.gif\">";
 	spc(1,10);
-	echo "<BR></TD>\n<TD width=10><IMG SRC='/gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
+	echo "<BR></TD>\n<TD width=10><IMG SRC=\"/gifs/kick-cbr.gif\" WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
 	echo "</TR>\n</TABLE>\n";
 }
 
@@ -639,9 +639,9 @@ function commonFooter() {
 
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
-<DIV ID='mirrorsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-20,'left',400);?>
-<FORM ACTION='redirect.php3' METHOD='POST'>
+<FORM ACTION=\"redirect.php3\" METHOD="POST">
 <B>Pick a mirror site close to you:</B><BR>
 <SELECT NAME="URL">
 <?
@@ -658,19 +658,19 @@ while ($site = key($mirror_sites)):
 endwhile;
 ?>
 </SELECT>
-<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
 <? kickFooter("mirrorsKick","mirr",400);?>
 </DIV>
 
-<DIV ID='qrefKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(30,'left',400);?>
-<FORM ACTION='/manual-lookup.php3' METHOD='POST'>
+<FORM ACTION="/manual-lookup.php3" METHOD="POST">
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
 Type in a PHP function name or feature to<BR>
 jump to that page of the online manual:<BR>
-<FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=25></FONT>
-<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+<FONT SIZE=3><INPUT NAME="function" TYPE="text" SIZE=25></FONT>
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
 or click on this button to get an alphabetical listing of all<BR>
 PHP functions.  
@@ -689,19 +689,19 @@ else:
 endif;
 ?>
 
-<DIV ID='searchKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-35,'top',300);
 if (!isset($prevsearch)):
 	$prevsearch[0]="";
 endif;
-echo "<form action='$form' METHOD='POST'>\n"; ?>
+echo "<form action=\"$form\" METHOD=\"POST\">\n"; ?>
 <B>What are you searching for:</B><BR>
-<FONT SIZE=3><input type='text' name='pattern' size=20 VALUE='<? echo $prevsearch[0];?>'></FONT><BR>
+<FONT SIZE=3><input type="text" name="pattern" size=20 VALUE="<? echo $prevsearch[0];?>"></FONT><BR>
 <FONT SIZE=2>
-<INPUT TYPE='RADIO' NAME='show' VALUE='nosource' CHECKED> Search whole site<BR>
-<INPUT TYPE='RADIO' NAME='show' VALUE='manual'> Search documentation only<BR>
-<INPUT TYPE='RADIO' NAME='show' VALUE='source'> Search source code only
-<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
+<INPUT TYPE="RADIO" NAME="show" VALUE="nosource" CHECKED> Search whole site<BR>
+<INPUT TYPE="RADIO" NAME="show" VALUE="manual"> Search documentation only<BR>
+<INPUT TYPE="RADIO" NAME="show" VALUE="source"> Search source code only
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
 </FORM>
 <? kickFooter("searchKick","sear",300);?>
 </DIV>
