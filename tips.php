@@ -196,7 +196,7 @@ and Netscape 6 users:
     </ul>
   ... or substitute your favorite mirror site instead of <b>www.php.net</b><br>
   <div align="center">
-  <img src="gifs/tips-quickref.gif" width="317" height="293" border="0" alt="Edit shortcut"><br>
+  <img src="images/tips-quickref.gif" width="317" height="293" border="0" alt="Edit shortcut"><br>
   </div></li>
   <li>Click "Ok", then click "Save" to keep your new settings</li>
   <li>That's it! Try it by typing "php strlen" in the IE Address bar.
