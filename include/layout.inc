@@ -184,7 +184,6 @@ $enclosed = 0;
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $enclosed;
 	global $SIDEBAR_DATA;
-
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
@@ -195,6 +194,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099">
+<!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="120"><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
@@ -242,6 +242,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  </tr>
  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
 </table>
+<!--/UdmComment-->
 
 <?php
   if (!$dont_enclose):
@@ -272,6 +273,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
 function commonFooter() {
 	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
+	echo "<!--UdmComment-->";
 	if ($enclosed) {
 		spacer(620);
 		echo "</td></tr></table></td>";
@@ -340,6 +342,7 @@ function commonFooter() {
   </td>
  </tr>
 </table>
+<!--/UdmComment-->
 </body>
 </html>
 <?php

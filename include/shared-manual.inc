@@ -24,7 +24,8 @@ function makeBorderTOC($this) {
 	global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
 	global $SIDEBAR_DATA, $LANG;
 
-	$SIDEBAR_DATA = '<form method="get" action="/manual-lookup.php">' .
+	$SIDEBAR_DATA = '<!--UdmComment-->';
+	$SIDEBAR_DATA.= '<form method="get" action="/manual-lookup.php">';
 	$SIDEBAR_DATA.= '<table border="0" cellpadding="4" cellspacing="0">';
 
 	$SIDEBAR_DATA.= '<tr valign="top"><td><small>' .
@@ -68,6 +69,7 @@ function makeBorderTOC($this) {
 
 	$SIDEBAR_DATA.= '</small></td></tr>';
 	$SIDEBAR_DATA.= '</table></form>';
+	$SIDEBAR_DATA.= '<!--/UdmComment-->';
 
 }
 
