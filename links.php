@@ -379,8 +379,8 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.turcksoft.com/en/e_mmc.htm">Turck MMCache for PHP</a><br />
-  Free open source accelerator from TurckSoft.
+  <a href="http://turck-mmcache.sourceforge.net/">Turck MMCache for PHP</a><br />
+  Free open source accelerator, optimizer, encoder and dynamic content cache from TurckSoft.
  </li>
 
  <li>
