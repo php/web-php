@@ -304,6 +304,21 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
 <P>If you are trying to install PHP for use with Netscape's web server on
 Unix see: <a href="http://www.webgenx.com/Kwazy/phpunix.html">http://www.webgenx.com/Kwazy/phpunix.html</a>
 
+<DL>
+  <DT><B>
+    <a name="3.1">3.1</a> Where should my <i>php3.ini</i> file be located?
+  </B></DT>
+  <DD>
+	By default on UNIX it should be in <i>/usr/local/lib</i>.  Most people will want
+	to change this at compile-time with the --with-config-file-path flag.  You would, for
+	example, set it to something like:
+  <PRE>
+	--with-config-file-path=/etc
+  </PRE>
+	And then you would copy <i>php3.ini-dist</i> from the distribution to <i>/etc/php3.ini</i> and
+	edit it to make any local changes you want.
+  </DD>
+</DL>
 <HR noshade>
 
 <A NAME="4">
@@ -884,6 +899,33 @@ should check to make sure that the configuration file you are adding the AddType
     </PRE>
     <P>
     </DD>
+  <DT><B>
+    <a name="8.5">8.5</a> What happened to the securevar() function that was in PHP2?  How can
+	I make sure that a GET-method variable does not overwrite a POST-method one?
+  </B></DT>
+	The securevar() function on PHP2 was a badly named function.  It gave the impression that
+	when used the POST-method was secure.  It is not.  It is only slightly more difficult to
+	fake POST-method variables than GET-method ones.
+  <P>
+	There are a couple of ways to achieve similar things in PHP3.  The most straightforward way is
+	to do it manually by using the <i>$HTTP_POST_VARS</i> array.  See <a href="#5.1">FAQ question 5.1</a>
+	for instructions on how to enable it.  To make sure that $foo, for example, comes from the POST data
+	and nowhere else you would do:
+	<PRE>
+		$foo = $HTTP_POST_VARS["foo"];
+	</PRE>
+	A second way to do this is to change the gpc_order setting in your php3.ini file.  The default setting is
+	&quot;GPC&quot; which means that GET variables are parsed first followed by POST variables and lastly by
+	COOKIE variables.  This means that GET vars are overwritten by POST vars which are in turn overwritten by 
+    COOKIE vars.  So, by default if you have the same variables in your GET and POST data the POST one will
+	be the one that shows up in the main PHP symbol table and you would have to use the <i>$HTTP_GET_VARS</i>
+	to get at it.  Along with changing the order from &quot;GPC&quot; to something like &quot;CGP&quot; which 
+	would make POST variables have the highest priority, you can leave out any of the letters to completely
+	disable PHP's ability to see a certain type of variable.  If you never wanted GET-method data to be turned
+	into PHP variables you could use a gpc_order setting of &quot;PC&quot;.
+  <DD>
+
+  </DD>
 </DL>
 
 <HR noshade>
