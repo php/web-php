@@ -502,7 +502,7 @@ array (
     /* information  */ "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
                        " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br>\n" .
                        "Unter Mitarbeit von " .
-                       make_link("http://www.zend.com/comm_person.php?id=38", "Wofgang Drews, ") .
+                       make_link("http://www.zend.com/comm_person.php?id=38", "Wolfgang Drews, ") .
                        make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") .
                        make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") .
                        " und Christian Wenz<br>\n" .
