@@ -109,7 +109,14 @@ while (list(,$ext) = each($types)) {
         $RSIDEBAR_DATA .= "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
 
         // Create image HTML code
-        $img = make_image('mirror.' . $ext, mirror_provider(), false, false, 'backend', 0);
+        $img = make_image(
+            'mirror.' . $ext,
+            htmlspecialchars(mirror_provider()),
+            false,
+            false,
+            'backend',
+            0
+        );
         
         // Add size information depending on mirror type
         if (is_primary_site() || is_backup_primary()) {
@@ -174,7 +181,9 @@ if ($fp) {
         // There is no event with this description in this month
         if (!$seen[$desc]) {
             // Add event to sidebar
-            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">" . stripslashes($desc) . "</a><br />\n";
+            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">" .
+                              htmlspecialchars(stripslashes($desc)) .
+                              "</a><br />\n";
             // Set seen flag
             $seen[$desc] = true;
         }
