@@ -136,13 +136,15 @@ mail("group@php.net","CVS Account Request",
     "Full name: $fullname\n".
     "Email:     $email\nID: $id\n".
     "Password:  ".crypt($password)."\n".
-    "Purpose:   $purpose");
+    "Purpose:   $purpose",
+     "From: \"CVS Account Request\" <$email>");
+     );
 mail("php-dev@lists.php.net", "CVS Account Request",
 		"Full name: $fullname\n".
 		"Email:     $email\n".
 		"ID:        $id\n".
 		"Purpose:   $purpose", 
-		'From: "CVS Account Request" <donotemail@php.net>');
+		"From: \"CVS Account Request\" <$email>");
 ?>
 <p>
 Thank you. Your request has been sent. You should hear something within the
