@@ -517,6 +517,21 @@ O'Reilly, August 2000, ISBN 0-5960-0003-0, 79 pages<BR>
 </TD>
 </TR>
 
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/cmvsstuff"
+><IMG SRC="/gifs/regex.s.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/cmvsstuff"
+>Mastering Regular Expressions</A><BR>
+by Jeffrey E. Friedl and Andy Oram<BR>
+<SMALL>
+O'Reilly, January 1997, ISBN 1-5659-2257-3, 368 pages<BR>
+<A HREF="http://www.oreilly.com/catalog/regex/">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+
 
 </TABLE>
 
