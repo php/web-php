@@ -11,7 +11,9 @@ site_header("Information About This PHP Mirror Site");
  Here you can get more information about this PHP Mirror site, as
  well as some details about the provider. The information you find
  here may be helpful in choosing your preferred mirror site for your
- everyday work.
+ everyday work. Note that the PHP.net webmaster team is only capable
+ of tracking official mirror sites, and trying to ensure that those
+ provide the best service possible.
 </p>
 
 <h2>General Information</h2>
@@ -19,7 +21,9 @@ site_header("Information About This PHP Mirror Site");
 <ul>
  <li>This site is <?php echo is_official_mirror() ? "" : "not"; ?> an official PHP.net mirror site</li>
  <li>The mirror site's address is <?php print_link($MYSITE); ?></li>
+ <?php if (is_official_mirror()) { ?>
  <li>The provider of this mirror is <?php print_link(mirror_provider_url(), mirror_provider()); ?></li>
+ <?php } ?>
 </ul>
 
 <h2>Mirror Services</h2>
