@@ -72,6 +72,7 @@ commonHeader("Documentation ");
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-cs.pdf", "PHP PDF Manual (Czech)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-nl.pdf", "PHP PDF Manual (Dutch)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-en.pdf", "PHP PDF Manual (English)"); ?>
+<li><?php download_link("http://snaps.php.net/~jah/pdf/manual-fr.pdf", "PHP PDF Manual (French)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-de.pdf", "PHP PDF Manual (German)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-hu.pdf", "PHP PDF Manual (Hungarian)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-it.pdf", "PHP PDF Manual (Italian)"); ?>
