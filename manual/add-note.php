@@ -1,6 +1,14 @@
 <?
 require_once 'prepend.inc';
 
+#
+# Notes only available at main mirror site for now
+#
+if ($MYSITE!='http://www.php.net/') {
+	Header('Location: http://www.php.net' . $HTTP_SERVER_VARS['REQUEST_URI'] );
+	exit;
+}
+
 $mailto = 'rasmus@php.net';
 
 /*
