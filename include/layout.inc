@@ -288,7 +288,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MIRRORS,$MYSITE,$COUNTRIES,$LAST_UPDATED,$enclosed;
+	global $SCRIPT_NAME,$MIRRORS,$MYSITE,$COUNTRIES,$LAST_UPDATED,$DOCUMENT_ROOT,$enclosed;
 	if ($enclosed) {
 		echo "</td></tr></table></td></tr></table>\n";
 	}
@@ -316,6 +316,10 @@ function commonFooter() {
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
 	echo delim();
+	if (file_exists("$DOCUMENT_ROOT/stats/index.php")):
+		print_link('/stats/', 'stats', false, 'class="small"');
+		echo delim();
+	endif;
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
 	echo "<option value=\"-1\">--\n";
