@@ -1030,7 +1030,161 @@ array (
     /* information  */ "Hops Libri, 2000, ISBN 8883780132, 148 pages",
     /* inform. link */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&isbn=8883780132",
     /* language     */ "it"
-  )
+  ),
+
+  array(
+    /* title[s]     */ "PHP - I compatti",
+    /* title_link   */ "http://212.90.7.34/mgh/catLibro.asp?item_id=1289",
+    /* author[s]    */ "Giovanni Branca",
+    /* auth link[s] */ "",
+    /* image        */ "8838642605.gif",
+    /* information  */ "McGraw-Hill, April 2002, ISBN 88 386 4260-5, 232 pages",
+    /* inform. link */ "http://www.mcgraw-hill.it/main.html",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Introduzione a PHP 4.0",
+    /* title_link   */ "http://education.mondadori.it/Libri/SchedaLibro.asp?IdLibro=88-8331-294-5",
+    /* author[s]    */ "W. J. Gilmore",
+    /* auth link[s] */ "http://education.mondadori.it/Libri/SchedaAutore.asp?IdAutore=521",
+    /* image        */ "8883312945.gif",
+    /* information  */ "Mondadori Informatica Education, 02 October 2001, ISBN 88-8331-294-5, 464 pages",
+    /* inform. link */ "http://education.mondadori.it/libri",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Per il World Wide Web",
+    /* title_link   */ "http://hpe.pearsoned.it/html/libri/PHPwww.htm",
+    /* author[s]    */ "Larry Ullman",
+    /* auth link[s] */ "",
+    /* image        */ "8871921216.gif",
+    /* information  */ "Addison-Wesley, September 2001, ISBN 88-7192-121-6, 300 pages",
+    /* inform. link */ "http://hpe.pearsoned.it/home2/home.htm",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP4 Guida per lo Sviluppatore",
+    /* title_link   */ "",
+    /* author[s]    */ array("Choi","Kent","Lea","Prasad","Ullman"),
+    /* auth link[s] */ "",
+    /* image        */ "8800000000.gif",
+    /* information  */ "Hoeply-Wrox, July 2001, 678 pages",
+    /* inform. link */ "",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Sviluppare applicazioni per database con MySQL/PHP",
+    /* title_link   */ "http://www.apogeonline.com/libri/00866/scheda",
+    /* author[s]    */ array("Greenspan","Bulger"),
+    /* auth link[s] */ "",
+    /* image        */ "8873038662.gif",
+    /* information  */ "Apogeo, July 2001, ISBN 88-7303-866-2, 576 pages",
+    /* inform. link */ "http://www.apogeonline.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Soluzioni professionali per lo sviluppatore",
+    /* title_link   */ "http://www.apogeonline.com/libri/00852/scheda",
+    /* author[s]    */ array("S. Hughes","A. Zmievski"),
+    /* auth link[s] */ "",
+    /* image        */ "8873038522.gif",
+    /* information  */ "Apogeo, May 2001, ISBN 88-7303-852-2, 448 pages",
+    /* inform. link */ "http://www.apogeonline.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Guida a PHP 4",
+    /* title_link   */ "http://212.90.7.34/mgh/catLibro.asp?item_id=572",
+    /* author[s]    */ array("Tim Converse","Joyce Park"),
+    /* auth link[s] */ "",
+    /* image        */ "8838641714.gif",
+    /* information  */ "McGraw-Hill, March 2001, ISBN 88 386 4171-4, 704 pages",
+    /* inform. link */ "http://www.mcgraw-hill.it/main.html",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Imparare PHP 4 in 6 ore",
+    /* title_link   */ "http://www.tecnichenuove.com/cgi-bin/tecnichenuove.storefront/3d7c9eea00f18c06273fc3787a0a06c4/Product/View/1251X",
+    /* author[s]    */ "Luca Cattaneo",
+    /* auth link[s] */ "",
+    /* image        */ "884811251X.gif",
+    /* information  */ "Tecniche Nuove, March 2001, ISBN 88-481-1251X, 192 pages",
+    /* inform. link */ "http://www.tecnichenuove.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP",
+    /* title_link   */ "http://www.tecnichenuove.com/cgi-bin/tecnichenuove.storefront/3d7c9eea00f18c06273fc3787a0a06c4/Product/View/12579",
+    /* author[s]    */ "Christopher Cosentino",
+    /* auth link[s] */ "http://www.tecnichenuove.com/cgi-bin/tecnichenuove.storefront/3d7c9eea00f18c06273fc3787a0a06c4/Product/View/12579#biografia",
+    /* image        */ "8848112579.gif",
+    /* information  */ "Tecniche Nuove, March 2001, ISBN 88-481-12579, 160 pages",
+    /* inform. link */ "http://www.tecnichenuove.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4.0 - Applicazioni Web",
+    /* title_link   */ "http://hpe.pearsoned.it/html/libri/php4.htm",
+    /* author[s]    */ array("Tobias Ratschiller","Till Gerken"),
+    /* auth link[s] */ "",
+    /* image        */ "8871921054.gif",
+    /* information  */ "Addison-Wesley, March 2001, ISBN 88-7192-105-4, 600 pages",
+    /* inform. link */ "http://hpe.pearsoned.it/home2/home.htm",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Programmare con PHP 4",
+    /* title_link   */ "http://www.apogeonline.com/libri/00778/scheda",
+    /* author[s]    */ "Thomas Theis",
+    /* auth link[s] */ "",
+    /* image        */ "887303778X.gif",
+    /* information  */ "Apogeo, February 2001, ISBN 88-7303-778-X, 312 pages",
+    /* inform. link */ "http://www.apogeonline.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Imparare PHP 4 in 24 ore",
+    /* title_link   */ "http://www.tecnichenuove.com/cgi-bin/tecnichenuove.storefront/3d7c9eea00f18c06273fc3787a0a06c4/Product/View/11726",
+    /* author[s]    */ "Matt Zandstra",
+    /* auth link[s] */ "http://www.tecnichenuove.com/cgi-bin/tecnichenuove.storefront/3d7c9eea00f18c06273fc3787a0a06c4/Product/View/11726#biografia",
+    /* image        */ "8848111726.gif",
+    /* information  */ "Tecniche Nuove, November 2000, ISBN 88-481-11726, 432 pages",
+    /* inform. link */ "http://www.tecnichenuove.com/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "PHP PER ESEMPI",
+    /* title_link   */ "http://www.jacksonlibri.it/servizi/Libri/schede/2590/",
+    /* author[s]    */ "Meloni Julie",
+    /* auth link[s] */ "",
+    /* image        */ "8825618778.gif",
+    /* information  */ "Jackson Libri, ISBN 8825618778, 416 pages",
+    /* inform. link */ "http://www.jacksonlibri.it/servizi/libri/",
+    /* language     */ "it"
+  ),
+
+  array(
+    /* title[s]     */ "Php Pocket Reference",
+    /* title_link   */ "http://www.hopslibri.com/store/hopm0013.shtml",
+    /* author[s]    */ "Rasmus Lerdorf",
+    /* auth link[s] */ "",
+    /* image        */ "8883780132.gif",
+    /* information  */ "O' Reilly, ISBN 88-8378-013-2, 128 pages",
+    /* inform. link */ "http://www.hopslibri.com/",
+    /* language     */ "it"
+  ),
   ),
 
 
