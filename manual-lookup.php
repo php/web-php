@@ -14,7 +14,7 @@ if ($file) {
     exit;
 }
 
-$notfound = $function;
+$notfound = $prevsearch = $function;
 include 'quickref.php';
 
 exit;

@@ -177,7 +177,8 @@ $enclosed = 0;
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
-	global $SIDEBAR_DATA;
+	global $SIDEBAR_DATA, $prevsearch;
+
 	if (!$headers_gone) header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 ?><html>
 <head>
