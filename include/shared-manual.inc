@@ -1,4 +1,25 @@
 <?php // -*- C++ -*-
+function manualLastModified($title) {
+	global $MYSITE, $SCRIPT_FILENAME;
+	if(strstr($MYSITE,"www.php.net")) {
+		$host = 'localhost';
+		$user = '';
+		$pass = '';
+		$db_id = mysql_pconnect($host, $user, $pass);
+		$query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' ORDER BY ts DESC limit 1";
+		$result_id = mysql_db_query("php3", $query, $db_id);
+	} else {
+		$result_id = 0;
+	}
+	if($result_id && mysql_num_rows($result_id)) {
+		$t = mysql_fetch_row($result_id);
+		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",$t[0])." GMT");
+	} else {
+		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",filemtime($SCRIPT_FILENAME))." GMT");
+	}
+	if($result_id) mysql_free_result($result_id);
+}
+
 require("shared.inc");
 
 $FRAMEMODE="manual";
@@ -171,7 +192,6 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 <?
 };
 
-
 function manualUserNotes($title) {
 	global $MYSITE;
 	if(strstr($MYSITE,"www.php.net")) {
@@ -204,6 +224,7 @@ function manualUserNotes($title) {
 
 function manualHeader($title) {
 	global $FRAMEMODE, $HTDIG;
+	manualLastModified($title);
 	commonHeader("Manual: $title");
 	if (!$HTDIG):
 		navigationBar($title);
