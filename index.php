@@ -211,22 +211,20 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP West Conferences: Web Services - Vancouver, BC</h1>
 <p>
  <span class="newsdate">[04-Dec-2004]</span>
- <a href="http://www.phpwest.com">PHP West</a> is holding a conference on
- Web Services on January 14th, 2005 hosted in the beautiful Vancouver,
- British Columbia, Canada. This is the first of many conferences to come on
- a four month orbit &ndash; each focusing on a unique genre. The conference
- will be a jam packed one day event with the most important topics PHP
- developers are faced with regarding Web Services. The conference has received
- talks from <a href="http://www.phpwest.com/?s=speakers">leading speakers</a>
- in the industry &ndash; speakers which have been chosen will be announced
- on December 16th.
+ <a href="http://www.phpwest.com">PHP West</a> is holding a conference
+ on January 14th, 2005 at the Vancouver Planetarium providing a great
+ environment for the promotion of PHP within the Vancouver area. With the
+ high impact level of <a href="http://www.phpwest.com/?s=schedule">speakers
+ scheduled for this event</a>, you can look forward to in depth talks from
+ the likes of Rasmus Lerdorf, Terry Chay, John Coggelshall, Ilia Alshanetsky,
+ and Cal Henderson speaking on a wide array of topics focused on Web Services.
 </p>
 
 <p>
- <a href="http://www.phpwest.com/?s=register">Early bird special 
- tickets are available</a> until December 26th and due to limited
- capacity for this event the organizers recommend you register soon 
- to reserve your seat. Online registration is now open!
+ <a href="http://www.phpwest.com/?s=register">Early Bird Specials</a> are
+ in effect right now, tickets are only $40 until December 26th! Due to
+ limited capacity for this event we recommend you register soon to
+ reserve your seat.
 </p>
 
 <hr />
