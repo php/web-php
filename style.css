@@ -117,17 +117,17 @@ p.formerror {
 }
 
 div.errors {
-        border: 1px dashed #660;
-        color: #600;
-        background: #fee;
+        border: 1px dashed #666600;
+        color: #660000;
+        background: #ffeeee;
         margin: 4px;
         padding: 6px;
 }
 
 div.tip {
         border: 1px solid #00c;
-        color: #006;
-        background: #eef;
+        color: #000066;
+        background: #eeeeff;
         padding: 0px 8px;
 }
 
@@ -145,17 +145,17 @@ table#cal  a:hover {
 table#cal a.day {
         float: right;
         font-weight: bold;
-        color: #666;
+        color: #666666;
 }
 
 table#cal div.event {
         margin-bottom: 2px;
         padding-bottom: 2px;
-        border-bottom: 1px dashed #000;
+        border-bottom: 1px dashed #000000;
 }
 
 form.thin {
-        margin-bottom: 0px;
+	margin-bottom: 0px;
 	margin-top: 0px;
 }
 
@@ -165,8 +165,12 @@ form.thin {
 
 div.mirror {  
 	border: 1px dashed #660000;
-	background: #fee;
+	background: #ffeeee;
 	color: #660000;
 	margin: 4px;
 	padding: 6px;
 } 
+
+img.flag {
+	border: 1px solid #000000;
+}
