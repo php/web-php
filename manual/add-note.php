@@ -91,9 +91,6 @@ on the bottom of a manual page so we know where to add the note!</b>
 <TR VALIGN=top>
 <TD><B>Your notes:</B></TD>
 <TD><TEXTAREA name="note" rows=6 cols=40 wrap=virtual></TEXTAREA><BR>
-If you are adding PHP code to your notes, and surrounding them with &lt;PRE&gt; tags,
-make sure to keep your lines of code relatively short.  Otherwise, they will run off
-the right side of most people's browsers.  Ugh.<BR>
 </TD>
 </TR>
 <TR><TD colspan=2 align=right>
