@@ -145,6 +145,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.php.net/", "logos/php-logo.gif", "Programming Language of 2004"); ?>
+<h1>PHP awarded Programming Language of 2004</h1>
+
+<p>
+PHP has been awarded the <a href="http://www.tiobe.com/tpci.htm">Programming
+Language of 2004</a>, according to the TIOBE Programming Community Index.
+This index uses information collected from the popular search engines, and
+are based on the world-wide availability of skilled engineers, courses and
+third party vendors.
+</p>
+<p>
+Congratulations to us all!
+</p>
+
+<hr />
+
 <h1>A Note on Security in PHP</h1>
 
 <p>
