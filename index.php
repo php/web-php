@@ -150,6 +150,48 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php", "php4_logo.gif", "PHP 4"); ?>
+
+<h1> PHP 4.3.5 released!</h1>
+<p>
+ <span class="newsdate">[26-Mar-2004]</span>
+ The PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.5</a>.
+ This is primarily a bug fix release, without any new features or additions. PHP 4.3.5
+ is by far the most stable release of PHP to date and it is recommended that 
+ all users upgrade to this release where possible.
+</p>
+
+<p>
+ PHP 4.3.5 contains, among others, the following important fixes, additions and improvements:
+</p>
+
+<ul>
+ <li>Fixed INI leak between Apache virtual hosts.</li>
+ <li>Fixed crashes inside fgetcsv() and make the function binary safe.</li>
+ <li>Fixed compilation with early versions of GCC 3.0.</li>
+ <li>Fixed a bug that prevented feof() from working correctly with sockets.</li>
+ <li>Improved the matching algorithm inside the get_browser() function.</li>
+ <li>Fixed resolving of open_basedir on Win32 systems.</li>
+ <li>Fixed incorrect errors for non-existent directories when safe_mode is enabled.</li>
+ <li>Bundled OpenSSL dlls on Win32 upgraded to 0.9.7c</li>
+ <li>Updated bundled PostgreSQL library to version 7.4 in Windows distribution.</li>
+ <li>Bundled PCRE library upgraded to 4.5</li>
+ <li>Synchronized bundled GD library with GD 2.0.17</li>
+ <li>A number of fixes for 64bit systems.</li>
+
+</ul>
+
+<p>
+Aside from the above mentioned fixes, this release resolves over 140 various bugs and implementational problems.
+</p>
+
+<p>
+ For a full list of changes in PHP 4.3.5, see the
+ <a href="/ChangeLog-4.php#4.3.5">ChangeLog</a>.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v5", "php5_logo.gif", "PHP 5"); ?>
 
 <h1>PHP 5 Release Candidate 1 Released!</h1>
@@ -201,19 +243,6 @@ commonHeader("Hypertext Preprocessor");
 <p>
  For changes since Beta 4, please consult the
  <a href="/ChangeLog-5.php#5.0.0RC1">ChangeLog</a>.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php", "php4_logo.gif", "PHP 4"); ?>
-
-<h1> PHP 4.3.5RC4 released!</h1>
-<p>
- <span class="newsdate">[18-Mar-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.5RC4</a> has been released for testing. This 
- will be the last release candidate prior to the final release, so please test it
- as much as possible. List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.566&amp;r2=1.1247.2.605">NEWS</a> file.
 </p>
 
 <hr />

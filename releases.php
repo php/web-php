@@ -74,6 +74,7 @@ $SIDEBAR_DATA = '
    <option value="php-4.3.2.tar.gz">4.3.2</option>
    <option value="php-4.3.3.tar.gz">4.3.3</option>
    <option value="php-4.3.4.tar.gz">4.3.4</option>
+   <option value="php-4.3.5.tar.gz">4.3.5</option>
   </select>
  </p>
 </form>
@@ -91,6 +92,37 @@ site_header("Releases");
  <em>older releases are listed for archaeological purposes only, and
  they are no longer supported</em>.
 </p>
+
+<a name="4.3.4"></a>
+<h2>4.3.4</h2>
+
+<ul>
+ <li>Released: 03 November 2003</li>
+ <li>Announcement: <a href="/release_4_3_4.php">English</a>, <a href="/release_4_3_4_fr.php">French</a></li>
+ <li><a href="/ChangeLog-4.php#4.3.4">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-4.3.4.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: b9dd601863e08e52e3c4d5e02c2627cf</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.4.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: c0e7f7388fadacbf4948391c6d93dc5e</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.4-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: 0c435d779cc61ed446fc69ee77f01abe</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.4-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 261fb88be82c3d32ae441b48555ba4a3</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 
 <a name="4.3.3"></a>
 <h2>4.3.3</h2>
