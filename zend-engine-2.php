@@ -244,8 +244,8 @@ without modifications.
 
 <h2>Object Cloning</h2>
 <p>
-PHP4 (Zend Engine 1.0) offered no way a user could decide what copy constructor to run 
-when an object is duplicated. During duplication, PHP4 did a bit for bit copy making an 
+PHP 4 (Zend Engine 1.0) offered no way a user could decide what copy constructor to run 
+when an object is duplicated. During duplication, PHP 4 did a bit for bit copy making an 
 identical replica of all the object's properties.
 </p>
 <p>
@@ -314,8 +314,8 @@ which have a constructor method call this method on each newly-created object, s
 suitable for any initialization that the object may need before it is used.
 </p>
 <p>
-With PHP4, constructor methods were class methods that had the same name as the class itself. Since 
-it is very common to call parent constructors from derived classes, the way PHP4 worked made it a bit 
+With PHP 4, constructor methods were class methods that had the same name as the class itself. Since 
+it is very common to call parent constructors from derived classes, the way PHP 4 worked made it a bit 
 cumbersome to move classes around in a large class hierarchy. If a class is moved to reside under a 
 different parent, the constructor name of that parent changes as well, and the code in the derived class 
 that calls the parent constructor has to be modified.
@@ -352,7 +352,7 @@ class had a method named <code>__construct()</code> which was used for different
 <p>
 Having the ability to define destructors for objects can be very useful. Destructors can log messages 
 for debugging, close database connections and do other clean-up work. No mechanism for object destructors 
-existed in PHP4, although PHP had already support for registering functions which should be 
+existed in PHP 4, although PHP had already support for registering functions which should be 
 run on request shutdown.
 </p>
 <p>
@@ -414,7 +414,7 @@ Old code that has no user-defined classes or functions named 'const' will run wi
 
 <h2>Exceptions</h2>
 <p>
-PHP4 had no exception handling. PHP 5 introduces a exception model similar to 
+PHP 4 had no exception handling. PHP 5 introduces a exception model similar to 
 that of other programming languages.
 </p>
 <h3>Example</h3>
@@ -440,7 +440,7 @@ without modifications.
 
 <h2>Dereferencing objects returned from functions</h2>
 <p>
-In PHP4 it wasn't possible to dereference objects returned by functions and make further
+In PHP 4 it wasn't possible to dereference objects returned by functions and make further
 method calls on those objects.  With the advent of Zend Engine 2, the following is now possible:
 </p>
 <p>
