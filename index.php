@@ -151,21 +151,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.directionphp.biz/", "directionphp.png", "Direction|PHP"); ?>
-
-<h1>Monthly PHP Magazine in French launched!</h1>
-<p>
- <span class="newsdate">[15-Oct-2003]</span>
- <a href="http://www.nexen.net/">Nexen.net</a> has launched Direction|PHP, 
- the first PHP and MySQL dedicated magazine in French. This monthly publication 
- features indeep coverage of PHP industry, business and user cases and technical 
- articles from PHP|Architect.<br />
-  For more information, read the <a href="http://www.directionphp.biz/index.php">
-  Direction|PHP website</a> (in French).
-</p>
-
-<hr />
-
 <?php news_image("http://www.apachecon.com/", "apachecon2003.jpg", "ApacheCon"); ?>
 
 <h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
