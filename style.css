@@ -62,13 +62,15 @@ div.toca a:hover, div.toci a:hover {
     text-decoration: underline;
 }
 
+/* Default font size for elements */
 body, ul, td, th {
-	font-family: verdana,arial,helvetica,sans-serif;
-	font-size: 85%;
+    font-size: 85%;
 }
 
-p {
-	font-family: verdana,arial,helvetica,sans-serif;
+/* We use this font setting for everything, except codes */
+body, ul, td, th, p, h1, h2, h3, h4, small, a.small,
+.tableTitle, .tableExtras, input, textarea, select {
+    font-family: verdana, arial, helvetica, sans-serif;
 }
 
 li {
@@ -111,70 +113,52 @@ code, pre, tt {
 }
 
 h1 {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 130%;
 	font-weight: bold;
 	color: #000066;
 }
 
 h2 {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 125%;
 	font-weight: bold;
 	color: #000066;
 }
 
 h3 {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 110%;
 	font-weight: bold;
 	color: #000066;
 }
 
 h4 {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 100%;
 	font-weight: bold;
 	color: #000066;
 }
 
 small {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 75%;
 }
 
 a.small {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 75%;
 	text-decoration: none;
 }
 
 .tableTitle {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-weight: bold;
 }
 
 .tableExtras {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 85%;
 	color: #FFFFFF;
 }
 
-input {
-	font-family: verdana,arial,helvetica,sans-serif;
-}
-
-textarea {
-	font-family: verdana,arial,helvetica,sans-serif;
-}
-
 input.small, select.small {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 75%;
 }
 
 textarea.small {
-	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 75%;
 }
 
@@ -185,7 +169,7 @@ p.formerror {
         padding: 2px 4px;
 }
 
-div.errors {
+div.errors, .warn {
         border: 1px dashed #666600;
         color: #660000;
         background: #ffeeee;
@@ -266,4 +250,25 @@ img.flag {
 .vr {
 	background-color: #cccccc; 
 	text-align: right;
+}
+
+/* Standard table formatting */
+table.standard td {
+    background-color: #eeeeee;
+}
+table.standard th {
+    background-color: #cccccc;
+}
+table.standard td.sub, table.standard th.sub,
+table.standard th.subr {
+    background-color: #dddddd;
+}
+table.standard th.subr {
+    text-align: right;
+    vertical-align: top;
+}
+
+/* Maximum width input fields */
+input.max, textarea.max {
+    width: 100%;
 }
