@@ -145,7 +145,7 @@ site_header("Documentation - Extended CHM Format");
   Users of this product can download an extension on
   <a href="http://www.tecnorama.org/document.php?id_doc=49">this Spanish page</a>.
   If one would like to know what the text reads in English, 
-  <a href="http://world.altavista.com/tr?lp=es_en&url=http://www.tecnorama.org/document.php?id_doc=49">Babel
+  <a href="http://world.altavista.com/tr?lp=es_en&amp;url=http://www.tecnorama.org/document.php?id_doc=49">Babel
   Fish is there to help</a>.
  </li>
 
@@ -177,7 +177,7 @@ if (textArea.getSelection().length > 0) {
 }
 exec("HH " + CHM_location);
 </pre>
- </list>
+ </li>
 
  <li>
   <strong><a href="http://www.pfersdorff.de/">Mr. Ed</a></strong>:
