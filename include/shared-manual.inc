@@ -167,12 +167,19 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 
 
 function manualUserNotes($title) {
+	echo "<P><B>Sorry .. the annotated manual is temporaraly unavailable.</B></P>";
+	return;
 	global $MYSITE;
 	if(strstr($MYSITE,"www.php.net")) {
-		$host = 'localhost'; $user = ''; $pass = '';
+		$host = 'localhost';
+		$user = '';
+		$pass = '';
 		$db_id = mysql_pconnect($host, $user, $pass);
-		$result_id = mysql_db_query("php3","SELECT *,UNIX_TIMESTAMP(ts) AS when FROM note WHERE sect = '$title' ORDER BY id", $db_id);
-	} else $result_id = 0;
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM note WHERE sect = '$title' ORDER BY id";
+		$result_id = mysql_db_query("php3", $query, $db_id);
+	} else {
+		$result_id = 0;
+	}
 	echo '<FORM method="POST" action="http://www.php.net/manual/add-note.php3">';
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
