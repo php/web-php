@@ -119,7 +119,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Installation problem",
 				   "Compile Failure",
 				   "Compile Warning",
-				   "Parser error",
+				   "Scripting Engine problem",
 				   "Reproduceable crash",
 				   "Performance problem",
 				   "Dynamic loading related",
