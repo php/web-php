@@ -10,7 +10,7 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 After the successful Beta 1, <a href="http://www.php.net/version4/">Beta 2 of PHP 4.0</a> has been released.  It provides a lot
 of fixes, migrated modules and several enhancements over Beta 1.  All users of version
-4.0 are encouraged to upgrade to the new beta, and everobody else is invited
+4.0 are encouraged to upgrade to the new beta, and everybody else is invited
 to take a look at it!
 </p>
 
