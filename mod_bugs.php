@@ -395,17 +395,21 @@ if (isset($cmd) && $cmd == "Send bug report") {
 } else if(!isset($cmd) && isset($id)) {
 
 	### Change made by j.a.greant 00/09/03
-	function get_old_comments ($bug_id, $last_comment_id)
+	function get_old_comments ($bug_id)
 	  {
 	  	$divider = '---------------------------------------------------------------------------';
 
 		#fetch comments
-		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id and id != '$last_comment_id' order by ts desc");
+		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id order by ts desc");
 		while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
 			$comments[] = $temp;
 
+		$comment[0]
+			and unset ($comments[0]);	# Ditch the most recent comment
+
 	  	#fetch original bug description
-		$result = mysql_query("SELECT ts1, email, comments from bugdb where id=$bug_id");
+		print $query = "SELECT ts1, email, comments from bugdb where id=$bug_id";
+		$result = mysql_query ($query);
 		$comments[] = mysql_fetch_row ($result);
 
 		foreach ($comments as $value)
@@ -433,7 +437,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 					mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					if (!empty($ncomment)) {
 						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
-						$last_comment_id = mysql_insert_id ();
 					}
 					$ok=1;
 				}
@@ -445,7 +448,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 
-			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($id, $last_comment_id);
+			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
@@ -476,7 +479,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			/* add comment */
 			if (!empty($ncomment)) {
 				mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail','$ts','$ncomment')");
-				$last_comment_id = mysql_insert_id ();
 			}
 
 			echo "<b>Database updated!</b><br>\n";
@@ -487,7 +489,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
 			$text .= "Description: $esdesc\n\n$ncomment";
-			$text .= get_old_comments ($id, $last_comment_id);
+			$text .= get_old_comments ($id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
