@@ -223,6 +223,7 @@ right away.</blockquote>
 	site("Der Spiegel","www.spiegel.de");
 	site("The Star - Kansas City","www.kcstar.com");
 	site("UPI Archives","upi.siteways.com");
+	site("The Village Voice","www.villagevoice.com");
 	siteEnd();
 
 /* Not-for-Profit */
