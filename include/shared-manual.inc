@@ -208,6 +208,3 @@ function manualFooter($title) {
 	commonFooter($title);
 }
 ?>
-
-
-
