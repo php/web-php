@@ -311,6 +311,7 @@ that have been set up by others in the community to host local
 </p>
 
 <ul>
+  <li><a href="news:dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
   <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a></li>
   <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
   <li><a href="http://www.php-center.de/">German Mailing List</a></li>
