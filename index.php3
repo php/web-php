@@ -3,6 +3,11 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP 3.0 Final is out!</h3>
+
+See the <a href="news.php3">in the News</a> page for the release announcement 
+and the accompanying press release.	
+ 
 <h3>What is PHP?</h3>
 
 <P>PHP 3.0 is a server-side HTML embedded scripting language and it is a
@@ -10,10 +15,6 @@ complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI
 2.0</a> language.  This rewrite is faster, more robust and uses less
 memory than version 2.  All users of version 2 are encouraged to
 upgrade.
-
-<P>The final version of PHP 3.0 has been released.  See the 
-<a href="news.php3">in the News</a> page for the release announcement 
-and the accompanying press release.
 
 <P>If you are new to PHP, a good place to start discovering the power of
 this language is by clicking on the &quot;Source&quot; button in the
