@@ -2,7 +2,6 @@
 /* $Id$ */
 
 $www_static_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://static.php.net/www.php.net' : '';
-}
 
 // Print an image for a sized spacer
 function spacer($width = 1, $height = 1, $return = false, $align = false, $extras = false)
