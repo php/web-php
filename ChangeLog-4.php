@@ -12,6 +12,7 @@ site_header("PHP 4 ChangeLog");
 <b>03-Nov-2003</b>
 <ul>
 <li>Made MCVE extension available on win32. (Jani)</li>
+<li>Upgraded bundled libfcgi and made FastCGI support viable on Win32. (Sascha)</li>
 <li>Added apache_get_version() function. (Ilia)</li>
 <li>Fixed disk_total_space() and disk_free_space() under FreeBSD. (Jon Parise)</li>
 <li>Fixed crash bug when non-existing save/serializer handler was used. (Jani)</li>
