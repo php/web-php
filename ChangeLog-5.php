@@ -9,6 +9,42 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0RC3"></a>
+<h3>Version 5.0.0 Release Candidate 3</h3>
+<b>8-Jun-2004</b>
+<ul>
+<li>Moved the PDFLib extension to PECL. (Wez)</li>
+<li>Added MySQL 4.1.2-alpha and 4.1.3-beta support to MySQLI extension. (Georg)</li>
+<li>Added support for dumping private/protected properties to var_dump().  (Andrey)</li>
+<li>Added count() support for COM arrays. (Wez)</li>
+<li>Added Firebird/InterBase UDF source that allows PHP functions to be called from SQL (Ard)</li>
+<li>Changed user error handler mechanism to relay to built-in error handler if it returns false. (Andrei) </li>
+<li>Changed class type hints for function parameters to not allow the passing of NULL values. (Andi)</li>
+<li>Changed tidy_node to tidyNode and removed tidy_exception. (John)</li>
+<li>Fixed ip2long() to return FALSE if an IP address passed to this function is not valid. (Derick)</li>
+<li>Fixed memory leak in memory manager. (Andi)</li>
+<li>Fixed problem with exceptions returning from include(). (Dmitry)</li>
+<li>Fixed bug #28641 (Instance of Interface). (Marcus)</li>
+<li>Fixed bug #28430 (Extending mysqli class). (Georg)</li>
+<li>Fixed bug #28311 (Transparency detection code is off by 1). (Ilia, pikeman at pikeman dot sytes dot net)</li>
+<li>Fixed bug #28304 (Missing bounds check inside imagefilter()). (Ilia)</li>
+<li>Fixed bug #28300 (Userspace stream/filter names forced to lowercase). (Sara)</li>
+<li>Fixed bug #28287 (stream_*_register() not calling __autoload()). (Sara)</li>
+<li>Fixed bug #28267 (php_image_filter_contrast calls gdImageBrightness). (Ilia)</li>
+<li>Fixed bug #28239 (No results returned on SOAP call, no error given). (Dmitry)</li>
+<li>Fixed bug #28205 (num_rows property for statement object). (Georg)</li>
+<li>Fixed bug #28161 (COM: Array style properties could not be accessed). (Wez)</li>
+<li>Fixed bug #28125 (ArrayObject leaks when accessing elements). (Marcus)</li>
+<li>Fixed bug #28100 (NULL parameter support for mysqli_ssl_set). (Georg)</li>
+<li>Fixed bug #28099 (ArrayObject doesn't implement ArrayAccess). (Marcus)</li>
+<li>Fixed bug #27929 (SPL: change visibility of ArrayIterator::__construct). (Marcus)</li>
+<li>Fixed bug #27640 (memory leak of registered_zend_ini_directives).  (Dmitry)</li>
+<li>Fixed bug #27063 (SPL: ArrayObject does not handle PPP correctly). (Marcus)</li>
+</ul>
+
+<hr />
+
+
 <a name="5.0.0RC2"></a>
 <h3>Version 5.0.0 Release Candidate 2</h3>
 <b>25-Apr-2004</b>

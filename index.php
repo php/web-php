@@ -150,6 +150,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<h1>PHP 5 Release Candidate 3 Released!</h1>
+<p>
+ <span class="newsdate">[8-Jun-2004]</span>
+ The <a href="/downloads.php#v5">third (and hopefully final) Release Candidate
+ of PHP 5</a> is now available!  This mostly bug fix release improves PHP 5's
+ stability and irons out some of the remaining issues before PHP 5 can be
+ deemed release quality.  Everyone is now encouraged to start playing with it!
+</p>
+
+<p>There are few changes changes since Release Candidate 2, which can be found
+<a href="/ChangeLog-5.php#5.0.0RC3">here</a>.</p>
+</p>
+
+<hr />
+
 <?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>Zend's PHP 5 Coding Contest</h1>
