@@ -256,7 +256,7 @@ right away.</blockquote>
 	site("MP3Bench","mp3bench.com");
 	site("Online Gaming Review","www.ogr.com");
 	site("PHP.CodeBase.Org","php.codebase.org");
-	site("SegFault","segfault.org"");
+	site("SegFault","segfault.org");
 	site("The UNIX Network Archives","www.tuna.org");
 	site("Versions","www.versions.com");
 	siteEnd();
