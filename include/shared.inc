@@ -320,9 +320,10 @@ function commonHeader($title) {
 	Header("Vary: User-Agent");
 	$lang = strtolower(substr(dirname($PHP_SELF),-2));
 	switch($lang) {
+		case 'kr':
 		case 'ja':
 			Header("Content-Type: text/html; charset=utf-8");
-			Header("Content-language: ja");
+			Header("Content-language: $lang");
 			break;
 		case 'hu':
 			Header("Content-Type: text/html; charset=iso-8859-2");
