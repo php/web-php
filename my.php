@@ -211,7 +211,7 @@ $mirror = myphpnet_mirror();
 foreach ($mirror_sites as $murl => $mdata) {
     
     // Skip inactive mirrors
-    if (!mirror_status($murl) == MIRROR_OK ||
+    if (mirror_status($murl) != MIRROR_OK ||
         $murl == "http://www.php.net/") { continue; }
     
     // Compute user friendly mirror name
