@@ -44,7 +44,7 @@ function makeBorderTOC($this) {
 	if (($HOME[1] != $UP[1]) && $UP[1]) {
 		$SIDEBAR_DATA.= '<tr valign="top"><td>' . 
 			make_link($UP[0], make_image('caret-u.gif', $UP[1]) . $UP[1] ) . 
-			'<br></td></tr>';
+			'</td></tr>';
 	}
 
 	$SIDEBAR_DATA.= '<tr valign="top"><td><small>';
@@ -62,8 +62,7 @@ function makeBorderTOC($this) {
 			$title = eregi_replace(" functions\$", "", $title);
 		}
 		$SIDEBAR_DATA .= '&nbsp;' . 
-			make_link($url, make_image($img, $title) . $title ) . 
-			'<br>';
+			make_link($url, make_image($img, $title) . $title );
 	}
 
 	$SIDEBAR_DATA.= '</small></td></tr>';
@@ -80,21 +79,21 @@ function navigationBar($title,$id,$loc) {
 	if ($PREV[1]) {
 		echo make_link( $PREV[0] , make_image('caret-l.gif', 'previous') . $PREV[1] ) ;
 	}
-	echo '<br></td>';
+	echo '</td>';
 
 	echo '<td align="right">';
 	if ($NEXT[1]) {
 		echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', 'next') ) ;
 	}
-	echo '<br></td>';
+	echo '</td>';
 	echo '</tr>';
 
 	echo '<tr bgcolor="#cccccc"><td colspan="2">';
 	spacer(1,1);
-	echo '<br></td></tr>';
+	echo '</td></tr>';
 
 	echo '<tr>';
-	echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp.'<br>';
+	echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp;
 
 	if ($loc != 'bottom') {
 		global $LANGUAGES;
@@ -109,9 +108,8 @@ function navigationBar($title,$id,$loc) {
 			}
 		}
 		if (count($links)) {
-			echo 'view this page in ' . join (delim(), $links);
+			echo '<br />view this page in ' . join (delim(), $links);
 		}
-		echo '<br>';
 	}
 
 	echo '</small></td></tr>';
@@ -179,6 +177,7 @@ function manualGetUserNotes($title, $id) {
 	global $MYSITE, $DOCUMENT_ROOT;
 	$notes = array();
 	$hash = substr(md5($id),0,16);
+
 	$notes_file = "$DOCUMENT_ROOT/backend/notes/".substr($hash,0,2)."/$hash";
 	if ($fp = @fopen($notes_file,"r")) {
 		while (!feof($fp)) {
@@ -216,7 +215,7 @@ function manualUserNotes($title, $id) {
 		$PHP_SELF;
 
 	echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-	echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
+	echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
 	echo "<td align=\"right\">";
 	print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
 		make_image('notes-add.gif','add a note')
@@ -225,14 +224,14 @@ function manualUserNotes($title, $id) {
 	print_link('/manual/about-notes.php',
 		make_image('notes-about.gif', 'about notes')
 	);
-	echo "<br></td>\n";
+	echo "</td>\n";
 	echo "</tr>\n";
 
 	if (sizeof($notes) == 0) {
   	  echo '<tr valign="top">';
 			echo '<td bgcolor="#e0e0e0" colspan="2">';
 			echo 'There are no user contributed notes for this page.';
-			echo '<br></td></tr>';
+			echo '</td></tr>';
 	} else {
 		foreach($notes as $note) {
 			makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'] );
@@ -247,12 +246,12 @@ function manualUserNotes($title, $id) {
                 print_link('/manual/about-notes.php',
                         make_image('notes-about.gif', 'about notes')
                 );
-		echo "<br></td>\n";
+		echo "</td>\n";
 		echo "</tr>\n";
 
 	}
 
-	echo "</table><br><br>\n";
+	echo "</table>\n";
 }
 
 function sendManualHeaders($charset,$lang) {
