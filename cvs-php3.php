@@ -16,13 +16,6 @@ own CVS account if you will be regularly committing things to the CVS tree.
 <P>
 And once again since people just don't seem to understand this point.
 <P>
-<b>
-You do <i>NOT</i> need a CVS account to study PHP.  You do <i>NOT</i> need
-a CVS account to learn PHP, to use PHP or to in any way do anything at all
-with PHP.  If you are sitting there wondering if you need a CVS account, then
-you don't!
-</b>
-<P>
 <table>
 <tr><td><b>Does Not Require CVS Account</b></td><td>&nbsp;</td><td><b>Requires CVS Account</b></td></tr>
 <tr><td>Learning PHP</td><td>&nbsp;</td><td>Coding PHP source in C</td></tr>
@@ -54,6 +47,14 @@ a CVS account request here: (only the encrypted version of the password is sent)
 In the purpose field, put a couple of words describing what you want to work on.
 This is mostly to jog our memories and allow us to match the account request with 
 whatever previous correspondence that may taken place.
+<P>
+<b>
+You do <i>NOT</i> need a CVS account to study PHP.  You do <i>NOT</i> need
+a CVS account to learn PHP, to use PHP or to in any way do anything at all
+with PHP.  If you are sitting there wondering if you need a CVS account, then
+you don't!
+</b>
+<P>
 <form action="cvs-php3.php" method="POST">
 <table>
 <tr><th>Full Name: </th><td><input type=text size=50 name=fullname></td></tr>
