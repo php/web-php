@@ -1,4 +1,4 @@
-             MIRRORING OF THE PHP.NET WEBSITE
+MIRRORING OF THE PHP.NET WEBSITE
 ------------------------------------------------------------------------
 
 If you want to become an official PHP mirror, please be sure to
@@ -10,7 +10,7 @@ usage (a reasonable estimate as of 2/2002 is 150MB/day).
 ** Also, we are currently only accepting new official mirrors in
 countries where we don't already have two active official mirrors. **
 
-The PHP website requires PHP 4.
+The PHP website requires PHP 4 with the settings outlined bellow.
 
 If you are not an official mirror, you should not rsync from rsync.php.net
 more frequently than every three hours, or you may find your ip blocked.
@@ -85,7 +85,7 @@ is up to date. Something like:
 (You should try to stagger your times a bit from the example to help spread the
 load on the rsync.php.net server.)
 
-DATA REGISTERED ABOUT THE MIRROR SITES
+DATA REGISTERED ABOUT OFFICIAL MIRROR SITES
 ------------------------------------------------------------------------
 
 Once you have done the above and your site appears to work, send
@@ -125,20 +125,20 @@ We would like to thank you for providing php.net with a mirror, so
 if you would like to display a logo on the site promoting your mirror,
 you are able to do so by following these steps:
 
-- Create a logo button 120 x 60 pixels.
-- copy it to your /local/path/to/phpweb/backend as "mirror.gif".
-- go visit your mirror url. 
+- Create a 120 x 60 pixel sized logo button.
+- Copy it to your /local/path/to/phpweb/backend as "mirror.gif".
+- Go visit your mirror URL and check if it's there.
 
 The PHP Group do reserve the right to refuse images based on content, but
 most things should be fine.
 
-We have chosen mirror sizes that go along with the Internet Advertising Bureau
+We have chosen a banner size that go along with the Internet Advertising Bureau
 standards < http://www.iab.net/iab_banner_standards/bannersizes.html >.
 
 And finally, don't forget to put a nice little PHP logo somewhere
 on your hosting company's site if possible. Grab one of the logos
-from the "Download PHP Logos and Icons" page on the PHP site,
-and link it to your mirror.
-
+from the http://php.net/download-logos.php page, and link it to
+your mirror.
 
 Thank you for being a mirror!
+
