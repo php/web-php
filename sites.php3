@@ -93,6 +93,8 @@ right away.</blockquote>
 	site("Skinz","www.skinz.org");
 	site("Sonic Spot","www.sonicspot.com");
 	site("Winamp", "www.winamp.com");
+	site("Xingtech.com","www.xingtech.com");
+	site("YellowDog Linux","www.yellowdoglinux.com");
 	siteEnd();
 
 /* Educational/Research */
@@ -151,6 +153,7 @@ right away.</blockquote>
 	site("First USA Bank","www.firstusabank.com");
 	site("Insurance Bridge","www.insurancebridge.com");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
+	site("Wallstreet:Online","www.wallstreet-online.de");
 	siteEnd();
 
 /* Games */
@@ -184,6 +187,7 @@ right away.</blockquote>
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("NASA - Jet Propulsion Laboratory");
 	site("PalmShop","www.palmshop.de");
+	site("Wildtangent","www.wildtangent.com");
 	siteEnd();
 
 /* Internet Services */
@@ -191,20 +195,25 @@ right away.</blockquote>
 	siteStart();
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
+	site("ClickAgents","www.clickagents.com");
 	site("Constructors","www.constructors.com");
 	site("easyDNS","www.easydns.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
 	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
+	site("Infoseek Investor Relations","www.ir-infoseek.com");
 	site("Kattare's Virtual Web Service","www.kattare.com");
 	site("Mail Chek","mail.chek.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
 	site("PBM Online Services","www.ndw.de");
+	site("Resourcepage.com","www.resourcepage.com");
 	site("TageBook.Com - Online Diary","tagebook.com");
+	site("Terra Firma Design","www.terrafirmadesign");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
 	site("WhoBuiltIt","www.whobuiltit.com");
+	site("Zorango.com","www.zorango.com");
 	siteEnd();
 
 /* ISPs */
@@ -226,6 +235,7 @@ right away.</blockquote>
 	site("Rackspace.com","www.rackspace.com");
 	site("Richweb Inc.","www.richweb.com");
 	site("Total Information Management AG","www.timso.ch");
+	site("w10.net","w10.net");
 	site("XOOM Inc.","xoom.com");
 	site("Yebo! Net","www.yebo.co.za");
 	siteEnd();
@@ -234,6 +244,7 @@ right away.</blockquote>
 	title("Job & Career Sites");
 	siteStart();
 	site("Jobs & Career - The Times of India","www.timesjobsandcareers.com");
+	site("Little6","www.little6.com");
 	siteEnd();
 
 /* Military */
@@ -377,6 +388,7 @@ right away.</blockquote>
 	title("Telecommunications");
 	siteStart();
 	site("Danish Yellow Pages","www.gulesider.dk");
+	site("onebox.com","www.onebox.com");
 	site("The Public Payphone Database","wiw.org/wiw.org/payphone/");
 	site("Southwestern Bell","WWW.SBWireless.COM");
 	site("Sprint Canada","www.sprint.ca");
