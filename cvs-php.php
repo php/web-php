@@ -72,7 +72,7 @@ you don't!
 </table>
 </form>
 <?php } elseif ($fullname && $email && $password && $purpose && $checkread) {
-mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
+mail("group@php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
 mail("php-dev@lists.php.net", "CVS Account Request",
 		"Full name: $fullname\n".
 		"Email: $email\n".
