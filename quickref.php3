@@ -7,7 +7,7 @@ while($entry=$d->read()) {
 	if (substr($entry, 0, 1) == ".") {
 		continue;
 	}
-	if (ereg("(function|class)\.(.+)\.php3",$entry,$x)):
+	if (ereg('(function|class)\.(.+)\.php3',$entry,$x)):
 		$functions[$entry]=ereg_replace("-","_",$x[2]);
 	endif;
 }
