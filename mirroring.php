@@ -188,7 +188,7 @@ most things should be fine.
 </p>
 
 <p>
-We have chosen a banner size that go along with the
+We have chosen a banner size which conforms with the
 <a href="http://www.iab.net/iab_banner_standards/bannersizes.html">Internet
 Advertising Bureau standards</a>.
 </p>
