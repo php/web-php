@@ -59,8 +59,7 @@ if ($try) {
 
 ?>
 <?Header("HTTP/1.0 404 Not Found")?>
-<html><title>404 - <?echo $REDIRECT_REDIRECT_ERROR_NOTES?></title>
-<body>
+<?commonHeader("Not Found - ".$REDIRECT_REDIRECT_ERROR_NOTES);
 <?
 	if(!isset($pattern)) {
 		$pattern = $uri;
@@ -142,6 +141,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 		if ($result[2]=="NOMATCH") {
 			echo "Sorry, that URL does not exist, and a quick search for the <b>$pattern</b> ";
 			echo "keyword did not turn anything up.<br><br>";
+			commonFooter();
 			exit;
 		}
 		$matches=$result[2];
@@ -175,4 +175,4 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 <BR><I>Search results courtesy of</I><BR>
 <A HREF="http://htdig.sdsu.edu/"><IMG SRC="/gifs/htdig.gif" BORDER=0 ALT="ht:dig"></A>
 </CENTER>
-</body></html>
+<?php commonFooter();?>
