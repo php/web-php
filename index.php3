@@ -11,6 +11,13 @@ to <a href="mailto:webmaster@php.net?subject=<?
 echo "New Look Feedback (browser:$HTTP_USER_AGENT, site:$SERVER_NAME)";
 ?>">webmaster@php.net</A>.<P>
 
+<I>Some users may experience a number of Javascript errors.  None of these 
+errors should completely prevent you from viewing the site ... but we know that 
+they are annoying, and we're working on a fix.  Help us by reporting your 
+errors to <a href="mailto:webmaster@php.net?subject=<?
+echo "New Look Feedback (browser:$HTTP_USER_AGENT, site:$SERVER_NAME)";
+?>">webmaster@php.net</A>.</I><P>
+
 PHP 3.0 is server-side HTML embedded scripting language and it is a
 complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI
 2.0</a> language.  This rewrite is faster, more robust and uses less
