@@ -20,7 +20,7 @@ an Event</a>" form.
 		$days = days();
 		$fp = @fopen("backend/events.csv",'r');
 		while(!feof($fp)) {
-			list($d,$m,$y,,$sdesc,$id,$ldesc,$url,$recur,$tipo,$sdato,$edato) = fgetcsv($fp,4096);
+			list($d,$m,$y,,$sdesc,$id,$ldesc,$url,$recur,$tipo,$sdato,$edato) = fgetcsv($fp,8192);
 			if(!$seen[$m][$id]) {
 				switch($tipo) {
 				case 1:

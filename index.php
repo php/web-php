@@ -56,7 +56,7 @@ $fp = @fopen("backend/events.csv",'r');
 if($fp) {
 	$cm=0;
 	while(!feof($fp)) {
-		list($d,$m,$y,$url,$desc) = fgetcsv($fp,4096);
+		list($d,$m,$y,$url,$desc) = fgetcsv($fp,8192);
 		if($cm!=(int)$m) { 
 			if($cm) $RSIDEBAR_DATA.= "<br>\n"; 
 			else $RSIDEBAR_DATA.='<h3>Upcoming Events<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/cal.php?a=1">[add event]</a></h3>';
