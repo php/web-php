@@ -172,7 +172,7 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 ><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff">PHP Developer's Cookbook</A><BR>
-by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and Sterling Hughes<BR><SMALL>
+by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and <A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes</A><BR><SMALL>
 MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </SMALL>
 </TD>
@@ -296,9 +296,9 @@ by Klaus Schmidt<BR>
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.AnayaMultimedia.es/"
->Guia Practica PHP 4</A><BR>
-by Esteban Trigo<BR>
-<SMALL>in Spanish, Anaya Multimedia, December 2000, 288 pages<BR>
+>Gu&iacute;a Pr&aacute;cticas PHP 4</A><BR>
+by Esteban Trigos<BR>
+<SMALL>in Spanish, Anaya Multimedia, December 2000, ISBN 8-4415-1079-2, 288 pages<BR>
 <A HREF="http://www.en-linea.net/">more information</A></SMALL><BR>
 </TD>
 </TR>
