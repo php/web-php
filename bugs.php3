@@ -3,9 +3,18 @@
 /* See the end of the script for the table layout. */
 
 require("shared.inc");
-if(!strstr($MYSITE,"ca.php.net")) {
+if (strstr($MYSITE,"ca.php.net")) {
+	$dbhost="localhost";
+	$dbuser=$dbpwd="";
+} else if (strstr($MYSITE,"il.php.net")) {
+	$dbhost="ca.php.net";
+	$dbuser="bourbon";
+	$dbpwd="";
+} else {
 	Header("Location: http://ca.php.net/bugs.php3");
+	exit;
 }
+
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
@@ -175,7 +184,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 	
-    mysql_pconnect("localhost","","");
+    mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
     $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
@@ -275,7 +284,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$external_processing_function="external_processing";
 	$row_coloring_function="row_coloring";
 	
-    mysql_pconnect("localhost","","");
+    mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
     mysql_select_db("php3");
 
 	$tables[] = "bugdb";
@@ -327,7 +336,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-    mysql_pconnect("localhost","","");
+	mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
     mysql_select_db("php3");
 	if(isset($modify) && $modify=="Edit Bug") {
 		$ok=0;

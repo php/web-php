@@ -61,7 +61,7 @@
 
 	if (!isset($total_num_rows)) {
 #		echo "$query<br>";
-		$result = mysql_query($query) or die("SQL query failed:  $query");
+		$result = mysql_query($query) or die("SQL query failed:  '$query' - ".mysql_error());
 		$total_num_rows = mysql_num_rows($result);
 		mysql_free_result($result);
 	}
