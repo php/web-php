@@ -1,0 +1,112 @@
+#!/usr/local/bin/php
+<?php // -*- C++ -*-
+
+// Jun 1998: PHP 71360/47329, mod_perl not listed
+// Jul 1998: PHP 81337/53361, mod_perl 47068/9904
+// Aug 1998: PHP 90641/58078, mod_perl 54450/12438
+// Sep 1998: PHP 108847/66010, mod_perl 57365/12540
+// Oct 1998: PHP 129757/73063, mod_perl 64171/15055
+// Nov 1998: PHP 220286/81141, mod_perl 63692/19239
+// Dec 1998: PHP 241924/87273
+// Jan 1999: PHP 278297/90264
+// Feb 1999: PHP 345549/101140
+// Mar 1999: PHP 409418/143667
+// Apr 1999: PHP 578221/169135
+// May 1999: PHP 406573/182316
+// Jun 1999: PHP 493294/222304
+// Jul 1999: PHP 574433/239925
+// Aug 1999: PHP 703212/265380
+// Sep 1999: PHP 795034/289162
+// Oct 1999: PHP 931122/321128
+// Nov 1999: PHP 1114021/357481
+// Dec 1999: PHP 1256216/378301
+// Jan 2000: PHP 1271060/391876
+// Feb 2000: PHP 1412822/428840
+
+require("./barchart.phl");
+
+$stats = array(
+		/*
+    199806 => array(71360, 47329),
+    199807 => array(81337, 53361),
+    199808 => array(90641, 58078),
+    199809 => array(108847, 66010),
+    199810 => array(129757, 73063),
+    199811 => array(220286, 81141),
+    199812 => array(241924, 87273),
+	*/
+    199901 => array(278297, 90264),
+    199902 => array(345549, 101140),
+    199903 => array(409418, 143667),
+    199904 => array(578221, 169135),
+    199905 => array(406573, 182316),
+    199906 => array(493294, 222304),
+    199907 => array(574433, 239925),
+    199908 => array(703212, 265380),
+    199909 => array(795034, 289162),
+    199910 => array(931122, 321128),
+    199911 => array(1114021, 357481),
+    199912 => array(1256216, 378301),
+    200001 => array(1271060, 391876),
+    200002 => array(1412822, 428840),
+    200003 => array(1783626, 462510),
+    200004 => array(2084312, 497866),
+    200005 => array(2347532, 532591),
+    200006 => array(2756002, 571610),
+    200007 => array(3121918, 598213),
+    200008 => array(3314634, 637746),
+    200009 => array(3602795, 681637),
+    200010 => array(3815440, 715283),
+    200011 => array(4253488, 762493),
+    200012 => array(4775580, 803889)
+);
+
+$rgb_colors = array(
+    array(205,85,85), // IndianRed3
+    array(72,61,139), // royal blue
+    array(139,58,98), // scarlet/purple
+    array(0,139,139), // green/gray/blue
+    array(238,118,0), // orange
+    array(139,69,19), // dark red-brown
+    array(65,105,225) // clear blue
+);
+$currcol = 0;
+$months = array(1 => "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+$data = array();
+$labels = array();
+$colors = array();
+$lastyear = 0;
+reset($stats);
+while (list($month, $stat) = each($stats)) {
+    $data[] = array($stat[0] - $stat[1], $stat[1]);
+    $year = substr($month, 0, 4);
+    $mon = (int)substr($month, 4);
+    if ($months[$mon]) {
+	$labels[0][] = $months[$mon];
+    } else {
+	$labels[0][] = '';
+    }
+    if ($year != $lastyear) {
+	$labels[1][] = "$year";
+    } else {
+	$labels[1][] = '';
+    }
+    $lastyear = $year;
+    $colors[] = $rgb_colors[$currcol++];
+    if ($currcol >= sizeof($rgb_colors)) {
+	$currcol = 0;
+    }
+}
+
+$max = 250000;
+
+$bar = new barchart;
+$bar->right = 170;
+$bar->bar_padding = 20;
+$bar->title = $bardata["title"];
+$bar->y_label = $graph["y_axis_label"];
+$bar->init(780, 350, $data, $colors, array('Total (Domains)', 'IP Addresses'));
+$bar->draw_x_labels($labels, 3);
+$bar->display();
+?>
