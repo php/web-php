@@ -61,13 +61,13 @@ $server = $SERVER_NAME;
   <li>PHP 4.0.4pl1
     <ul>
       <li><?php download_link("php-4.0.4pl1.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.0.4pl1-Win32.zip", "Windows Binary"); ?></li>
+      <li><?php download_link("php-4.0.4pl1-Win32.zip", "Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
       <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?></li>
-      <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary"); ?></li>
+      <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
   <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files</li>
