@@ -77,13 +77,30 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://photos.jdimedia.nl/phpdoc/", make_image("brain.gif", "PHPDoc Brain", "right") ); ?>
+<h1>PHP 4.2.0 RC 1 Released</h1>
+<p>
+<font class="newsDate">[21-Mar-2002]</font>
+A <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
+PHP 4.2.0 has just been packed. This build is used for testing the readiness of
+the release branch. By providing <?php print_link
+("http://qa.php.net/buildtest-submit.php", "feedback"); ?> to this build, we
+can make sure the actual release (planned for April, 22nd) has as few bugs as
+possible. This release candidate is <b>NOT</b> meant for production servers,
+only for helping out the PHP-QA Team finding weak spots. For more information
+see the <?php print_link ("http://qa.php.net/", "PHP QA website"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php make_image("brain.gif", "PHPDoc Brain", "right"); ?>
 
 <h1>PHP Documentation Team Meeting</h1>
 <p>
 <font class="newsDate">[13-Mar-2002]</font>
-The <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html', 'notes from the PHP Documentation Team Meeting'); ?> (Stuttgart, March 8th-10th) are now available.
-<?php print_link('http://photos.jdimedia.nl/phpdoc/', 'Pictures of the event'); ?> are also online.
+The <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html',
+'notes from the PHP Documentation Team Meeting'); ?> (Stuttgart, March
+8th-10th) are now available.
+Pictures of the event are currently not available.
 </p>
 
 <?php echo hdelim(); ?>
@@ -91,10 +108,12 @@ The <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html', 'not
 <h1>PHP Security Update - Windows Version</h1>
 <p>
 <font class="newsDate">[12-Mar-2002]</font>
-Following up from the previous annoucement, PHP 4.1.2 has been released for windows. The delayed release is due to 
-the fix of a further security issue only relating to the PHP for Windows version. More information on this change can
-be found <?php print_link('/release_4_1_2_win32.php', 'here'); ?>. All PHP - Windows users are encouraged to upgrade to
-the <?php print_link('/downloads.php', 'latest version'); ?>.
+Following up from the previous annoucement, PHP 4.1.2 has been released for
+windows. The delayed release is due to the fix of a further security issue only
+relating to the PHP for Windows version. More information on this change can be
+found <?php print_link('/release_4_1_2_win32.php', 'here'); ?>. All PHP -
+Windows users are encouraged to upgrade to the <?php
+print_link('/downloads.php', 'latest version'); ?>.
 </p>
 
 <?php echo hdelim(); ?>
@@ -102,10 +121,12 @@ the <?php print_link('/downloads.php', 'latest version'); ?>.
 <h1>PHP Security Update</h1>
 <p>
 <font class="newsDate">[27-Feb-2002]</font>
-Due to a security issue found in all versions of PHP (including 3.x and 4.x), a new version of PHP has been released.
-Details about the security issue are <a href="http://security.e-matters.de/advisories/012002.html">available here</a>.
-All users of PHP are strongly encouraged to either upgrade to <a href="/downloads.php">PHP 4.1.2</a>, or 
-install the patch (<a href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
+Due to a security issue found in all versions of PHP (including 3.x and 4.x), a
+new version of PHP has been released.  Details about the security issue are <a
+href="http://security.e-matters.de/advisories/012002.html">available here</a>.
+All users of PHP are strongly encouraged to either upgrade to <a
+href="/downloads.php">PHP 4.1.2</a>, or install the patch (<a
+href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
 </p>
 
 <?php echo hdelim(); ?>
@@ -143,9 +164,9 @@ mature and stable extension and can be used for a variety of applications
 </p>
 
 <p>
-Also taking this opportunity, we would like to ask if some of you would consider
-helping out with PHP-GTK documentation. It would be a great way to learn this
-exciting extension and also contribute to the project.
+Also taking this opportunity, we would like to ask if some of you would
+consider helping out with PHP-GTK documentation. It would be a great way to
+learn this exciting extension and also contribute to the project.
 </p>
 
 <?php echo hdelim(); ?>
