@@ -157,6 +157,7 @@ right away.</blockquote>
 	site("The Jazz Journalists Association","www.jazzhouse.org");
 	site("National Marrow Donor Program","www.marrow.org");
 	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
+	site("KidsCampaigns","www.kidscampaigns.org");
 	siteEnd();
 
 /* Publishing Industry */
