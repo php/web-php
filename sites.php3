@@ -137,6 +137,7 @@ removed right away.</blockquote>
 	siteStart();
 	site("National Marrow Donor Program","www.marrow.org");
 	site("European Rotaract Information Center","www.rotaract.de/eric/");
+	site("the Jazz Journalists Association","www.jazzhouse.org");
 	siteEnd();
 
 /* Religious */
