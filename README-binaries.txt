@@ -34,7 +34,7 @@ HOW TO INSTALL
 gunzip httpd-php-*.gz
 tar xvf httpd-php-*.tar
 cd httpd-php
-cp php3.ini-dist /usr/local/lib
+cp php3.ini-dist /usr/local/lib/php3.ini
 cd etc/apache
 <edit the httpd.conf file as per the instructions in that file>
 
