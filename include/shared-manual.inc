@@ -223,31 +223,40 @@ function manualGetUserNotes($title, $id)
 }
 
 function manualUserNotes($title, $id) {
-	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
+	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT, $LANG;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
 
 	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
 
 	$notes = manualGetUserNotes($title, $id);
-	if ( sizeof($notes) > 0 ) {
 
-		$back_url = 'http://' . $SERVER_NAME . 
-			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
-			$PHP_SELF;
+	$back_url = 'http://' . $SERVER_NAME . 
+		(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+		$PHP_SELF;
 
-                echo "<tr bgcolor=\"#d0d0d0\" VALIGN=\"top\">\n";
-		echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
-		echo "<td align=\"right\">";
-                print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
-                        make_image('notes-add.gif','add a note')
-                );      
-		echo "&nbsp;";
-                print_link('/manual/about-notes.php',
-                        make_image('notes-about.gif', 'about notes')
-                );
-		echo "<br></td>\n";
-		echo "</tr>\n";
+	echo "<tr bgcolor=\"#d0d0d0\" VALIGN=\"top\">\n";
+	echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
+	echo "<td align=\"right\">";
+	print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
+		make_image('notes-add.gif','add a note')
+	);      
+	echo "&nbsp;";
+	print_link('/manual/about-notes.php',
+		make_image('notes-about.gif', 'about notes')
+	);
+	echo "<br></td>\n";
+	echo "</tr>\n";
+
+	if ( sizeof($notes) == 0 ) {
+
+		echo '<tr valign="top">';
+		echo '<td bgcolor="#e0e0e0" colspan="2">';
+		echo 'User contributed notes are not available on this mirror site; try ';
+		print_link('http://www.php.net/manual/'.$LANG.'/'.$id, 'here');
+		echo '.<br></td></tr>';
+
+	} else {
 
 		foreach($notes as $note) {
 			makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'] );
@@ -266,7 +275,8 @@ function manualUserNotes($title, $id) {
 		echo "</tr>\n";
 
 	}
-	echo "</table>\n";
+
+	echo "</table><br>\n";
 }
 
 function manualLastModified($title, $id) {
