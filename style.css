@@ -3,9 +3,9 @@ body, td, th {
 	font-size: 13px;
 }
 
-p {
-	margin-top: 0px;
-	margin-bottom: 8px;
+dd,p {
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 em {
