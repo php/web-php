@@ -68,6 +68,7 @@ a German website using PHP to offer free services, a huge script-archive, free s
 is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.phpinfo.net/">PHPInfo</A><BR>
 French site about PHP/MySQL: Links, Tips, Articles, Manuals, FAQ, Code Downloads, and much more!<BR>
+<LI><A HREF="http://johng.free.fr/">FAQ of the French PHP newsgroup</A><BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
