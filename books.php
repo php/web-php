@@ -628,7 +628,9 @@ $books = array (
 );
 
 
-function showBook($title, $title_link, $author, $author_link=false, $image=false, $info=false, $info_link=false, $lang=false) {
+function showBook($one_book) {
+
+    list($title, $title_link, $author, $author_link=false, $image=false, $info=false, $info_link=false, $lang=false) = $one_book;
 
     global $langs;
 
