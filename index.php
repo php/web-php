@@ -107,6 +107,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP for NetWare (Beta) Released</h1>
+<p>
+<font class="newsDate">[27-May-2002]</font>
+A Beta version of PHP for NetWare is available on the
+<a href="http://developer.novell.com/ndk/leadedge.htm#le169">Novell
+Developer Kit site</a>. This version is based on the
+4.0.8 (development) version of the PHP source code.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
