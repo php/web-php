@@ -69,8 +69,12 @@ invariably made a mess of things making the manual hard to read for everybody.
 If you are just commenting on the fact that something is not documented,
 save your breath. This is where <B>you</B> add to the documentation, not
 where you ask <B>us</B> to add the documentation. This is also not the
-correct place to <A href="/support.php">ask questions</A>. (But once
-you get an answer, feel free to come back and add it here!)
+correct place to <A href="/support.php">ask questions</A>. The notes
+are being edited and support questions are being <b>deleted</b> from them,
+so if you post a question, it will be removed. (But once you get an
+answer, feel free to come back and add it here!)
+<P>
+<A href="/support.php">Click here to go to the support pages.</A>
 
 <?if (!isset($sect)):?>
 <p><b>To add a note, you must click on the 'Add Note' button
