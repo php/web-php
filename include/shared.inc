@@ -392,7 +392,7 @@ function moveLayers() {
 			document.layers['searchKick'].left = screenWidth-350;
 			document.layers['searchKick'].top = 36;
 		} else if (DOM) {
-			screenWidth = document.body.clientWidth + 18;
+			screenWidth = (document.body.clientWidth ? document.body.clientWidth : window.innerWidth) + 18;
 <? if ($FRAMEMODE!="manual"): ?>
 			document.getElementById('mirrorsKick').style.pixelLeft = 140;
 			document.getElementById('mirrorsKick').style.pixelTop = 215;
