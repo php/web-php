@@ -56,7 +56,7 @@ the table below.
 <?php
 
   $langcount = count($man_languages);
-  foreach ($man_languages as $langnum = $langcode) {
+  foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($langcount != $langnum) ? ", " : "";
   }
@@ -66,7 +66,7 @@ the table below.
 <tr><th bgcolor="#dddddd">Printer friendly</th><td bgcolor="#eeeeee">
 <?php
 
-  foreach ($man_languages as $langcode) {
+  foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($langcount != $langnum) ? ", " : "";
   }
