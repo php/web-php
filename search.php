@@ -12,7 +12,7 @@ mirror (or emulate it on your own website).
 unset($htsearch_prog);
 
 // Constant to specify when there is no base
-define(NO_BASE, "-");
+define("NO_BASE", "-");
 
 // Load in mirror specific configuration data (htdig path)
 if (file_exists("configuration.inc")) {
