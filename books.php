@@ -642,7 +642,7 @@ array (
   array(
     /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
     /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
-    /* author[s]    */ "Luke Welling", "Laura Thomson";
+    /* author[s]    */ "Luke Welling", "Laura Thomson",
     /* auth link[s] */ "",
     /* image        */ "welling_br.gif",
     /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
