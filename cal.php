@@ -1,5 +1,11 @@
 <?php
   require_once 'prepend.inc';
+
+  if (!is_primary_site() || !strstr($MYSITE,"localhost")) {
+	header("Location: http://www.php.net/cal.php");
+	exit;
+  }
+
   commonHeader("Event Calendar",1);
 
 	require_once 'cvs-auth.inc';
