@@ -75,7 +75,7 @@ $SIDEBAR_DATA = '
    <option value="php-4.3.3.tar.gz">4.3.3</option>
    <option value="php-4.3.4.tar.gz">4.3.4</option>
    <option value="php-4.3.5.tar.gz">4.3.5</option>
-   <option value="php-4.3.5.tar.gz">4.3.6</option>
+   <option value="php-4.3.6.tar.gz">4.3.6</option>
   </select>
  </p>
 </form>
