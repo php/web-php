@@ -121,6 +121,7 @@ function loadSuggestCode()
                 scriptElem.setAttribute('type', 'text/javascript');
                 scriptElem.setAttribute('src', '/functions.js');
                 elems[i].appendChild(scriptElem);
+                break;
             }
         }
     }
