@@ -161,16 +161,21 @@ elseif ($cmd == "display") {
 
 	$query .= " ORDER BY $order_by $direction";
 
+	if (!$begin) $begin = 0;
+	$query .= " LIMIT $begin,30";
+
 	$res = @mysql_query($query);
 	if (!$res) die(htmlspecialchars($query)."<br>".mysql_error());
 
-	if (!mysql_numrows($res)) {
+	$rows = mysql_numrows($res);
+	if (!$rows) {
 		echo "<h2 class=\"error\">No bugs with the specified criteria were found.</h2>";
 	}
 	else {
 		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction";
 ?>
 <table align="center" border="0" cellspacing="2" width="95%">
+ <?php show_prev_next($begin,$rows,$link);?>
  <tr bgcolor="#aaaaaa">
   <th><a href="<?php echo $link;?>&amp;reorder_by=id">ID#</a></th>
 <?php if ($bug_type == "Any") {?>
@@ -201,6 +206,8 @@ elseif ($cmd == "display") {
 			echo "<td>",$row[assigned] ? htmlspecialchars($row[assigned]) : "&nbsp;","</td>";
 			echo "</tr>\n";
 		}
+
+		show_prev_next($begin,$rows,$link);
 ?>
 </table>
 <?php
@@ -703,6 +710,19 @@ function get_row_color($row) {
 			return "#aaaaaa";
 			break;
 	}
+}
+
+function show_prev_next($begin,$rows,$link) {
+	if ($begin == 0 && $rows < 30) return;
+	echo "<tr bgcolor=\"#cccccc\"><td align=\"center\" colspan=\"9\">";
+    echo '<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>';
+	if ($begin > 0) {
+		echo "<td align=\"left\"><a href=\"$link&amp;begin=",max(0,$begin-30),"\">&laquo; Show Previous 30 Entries</a></td>";
+	}
+	if ($rows >= 30) {
+		echo "<td align=\"right\"><a href=\"$link&amp;begin=",$begin+30,"\">Show Next 30 Entries &raquo;</a></td>";
+	}
+	echo "</tr></table></td></tr>";
 }
 
 /*
