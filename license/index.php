@@ -13,7 +13,7 @@ Public License (GPL) like PHP 3 was?</p>
 
 <p><b>A.</b> GPL enforces many restrictions on what can and cannot
 be done with the licensed code.  The PHP developers decided to
-release PHP under a much more loose license (BSD style), to help
+release PHP under a much more loose license (Apache-style), to help
 PHP become as popular as possible.</p>
 
 <p><b>Q.</b> What does the PHP license mean then, in simple words?</p>
@@ -45,11 +45,11 @@ I be concerned about it?</p>
 First, if you publish patches to the Zend scriping engine library.
 The Zend license allows Zend Technologies, Ltd. to use those
 patches royalty-free (see the license for exact details). Second,
-the license prevents commercial use of the Zend scriping engine
+the license prevents commercial use of the Zend scripting engine
 library to build commercial applications.  If you want to use the
 Zend scriping engine library commercially (for example, as a macro
 language in a commercial word processor you're writing), you must
-contact Zend Technologies, Ltd. for licensing information.
+contact <a href="mailto:license@zend.com">Zend Technologies, Ltd.</a> for licensing information.
 
 <p><b>Q.</b> Where can I get more information on the QPL?</p>
 
