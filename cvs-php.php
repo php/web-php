@@ -33,7 +33,7 @@ And once again since people just don't seem to understand this point:
 <tr><td>Creating experimental PHP modules</td>			<td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr><td>One-time patch contributions</td>				<td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr><td>Adding notes to documentation</td>				<td>&nbsp;</td><td>Authoring PHP documentation</td></tr>
-<tr><td>Writing web pages with PHP</td>					<td>&nbsp;</td><td>Authoring www.php.net web pages</td></tr>
+<tr><td>Writing web pages with PHP</td>					<td>&nbsp;</td></tr>
 </table>
 </p>
 
