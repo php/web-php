@@ -76,6 +76,27 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
+
+<h1>The International PHP Conference is over</h1>
+
+<p>
+<font class="newsDate">[17-Nov-2001]</font>
+PHP enthusiasts from all over the world met three days to attend
+powerworkshops and sessions presented by the inventors of PHP, members
+of the core group and other well known people from the community.
+The conference is over now, but you can get some impressions
+by visting one of the photo galleries, attendees put together:
+<ul>
+    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
+    <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
+    <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
+</ul>
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>New Windows Manual Features - Survey!</h1>
 
 <p>
@@ -174,22 +195,6 @@ of our pages.
 </p>
 
 <?php echo hdelim(); ?>
-
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
-
-<h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
-
-<p>
-<font class="newsDate">[17-Aug-2001]</font>
-PHP enthusiasts from all over the world will meet three days to attend
-powerworkshops and sessions presented by the inventors of PHP, members
-of the core group and other well known people from the community.
-More information at <a href="http://www.php-conference.de/2001/index_en.php">www.php-conference.de</a>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
 
 <h1><?php print_link("http://gtk.php.net/", make_image("php-gtk-white.gif", "PHP-GTK", "right") ); ?>
 PHP-GTK version 0.1 released</h1>
