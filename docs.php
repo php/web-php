@@ -96,7 +96,7 @@ If you use another browser you can
          $size = @filesize($link_to);
          if ($size) {
            echo "<a href=\"$link_to\" title=\"" . (int) ($size/1024) . "Kb\">$details[1]</a>";
-           if ($sizes) { echo '<br><small>' . (int) ($size/1024) . '</small>'; }
+           if ($sizes) { echo '<br><small>' . (int) ($size/1024) . 'Kb</small>'; }
          } else { 
            echo "&nbsp;";
          }
