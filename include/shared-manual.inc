@@ -25,13 +25,13 @@ function setupNavigation($data) {
 function makeBorderTOC($this) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT, $SIDEBAR_DATA;
 
-    $SIDEBAR_DATA.= '<table border="0" cellpadding="4" cellspacing="0">';
+    $SIDEBAR_DATA.= '<table border="0" cellpadding="0" cellspacing="5">';
 
     $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
         make_link('./', make_image('caret-t.gif', '^') . $HOME[1] ) . 
         '<br></td></tr>';
 
-    $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td height="1">' . spacer(1, 1, TRUE) . '</td></tr>';
+    $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td>' . spacer(1, 1, TRUE) . '</td></tr>';
 
     if (($HOME[1] != $UP[1]) && $UP[1]) {
         $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
