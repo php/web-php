@@ -218,6 +218,8 @@ You may experience a few quirks in the search until your mirrors have synced an 
 version of the site.
 </p>
 
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.2RC4 Released</h1>
 <p>
 <font class="newsdate">[22-May-2003]</font>
