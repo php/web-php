@@ -5,6 +5,7 @@ $NUMACROSS=2;
 $SHOW_CLOSE=10;
 
 if (!isset($lang)) $lang = $MIRRORS[$MYSITE][6];
+if (!file_exists("$DOCUMENT_ROOT/manual/$lang")) $lang = "en";
 
 function makeTable($lang,$array) {
 	global $NUMACROSS;
