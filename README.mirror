@@ -54,6 +54,7 @@ Once you create a virtualhost which looks something like:
      ServerAdmin yourname@yourdomain.com
      DocumentRoot /www/htdocs/phpweb
      php_value include_path .:/www/htdocs/phpweb/include
+     php_flag register_globals on
      ErrorLog logs/error_log
      TransferLog logs/access_log
      DirectoryIndex index.php index.html
