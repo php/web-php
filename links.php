@@ -446,6 +446,15 @@ The PHP section of Cidadela provides articles, tutorials,
 a help forum, and an Application Market.</li>
 </ul></li>
 
+<li><b>Russian</b>
+<ul>
+
+<li><a href="http://phpclub.net/">phpclub.net</a><br>
+International PHPClub community based in Russia. Forums,
+articles, lessons, consulting.</li>
+
+</ul></li>
+
 <li><b>Spanish</b>
 <ul>
 
