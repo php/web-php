@@ -47,6 +47,7 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
 <li><a href="<?php echo $prefix; ?>/manual/html/">Plain HTML PHP Manual Online</a>. The very
     same manual in a light-weight, HTML 3.2 version without any bells or
     whistles.
+</ul>
 
 <H2>PHP Annotated Manuals</H2>
 <ul>
