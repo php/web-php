@@ -140,8 +140,8 @@ echo "\n<!--$MYSITE-->\n";
 <a href="http://qa.php.net/">PHP 4.3.0RC2</a>
 has been released, just in time for the Thanksgiving. And thanks indeed must
 be given to those who fixed bugs and pushed this release to be a lot closer
-to the final one. Please download and test it as much as possible on
-real-life applications to uncover remaining issues.
+to the final one. Please <a href="http://qa.php.net/">download</a> and test
+it as much as possible on real-life applications to uncover remaining issues.
 
 <?php echo hdelim(); ?>
 
