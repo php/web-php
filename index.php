@@ -215,15 +215,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<? print_link("http://www.phparch.com/", 
-	      make_image("http://www.phparch.com/images/phpa_logo_small.gif", "php|architect", "left")); ?> 
+<?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "left")); ?> 
 
 <h1>php|architect now in print</h1>
 
-<p>The publishers of <a href="http://www.phparch.com">php|architect</a>, the monthly 
-magazine dedicated exclusively to the world of PHP, have announced the availability 
-of a <a  href="http://www.phparch.com/print">print edition</a> of their publication. 
-Subscriptions are now available at a special introductory price for readers worldwide.</p>
+<p>
+ <font class="newsdate">[17-Jul-2003]</font>
+ The publishers of <a href="http://www.phparch.com">php|architect</a>, the
+ monthly magazine dedicated exclusively to the world of PHP, have announced the
+ availability of a <a  href="http://www.phparch.com/print">print edition</a> of
+ their publication. Subscriptions are now available at a special introductory
+ price for readers worldwide.
+</p>
 
 <?php echo hdelim(); ?>
 
