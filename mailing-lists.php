@@ -24,7 +24,7 @@ if (isset($maillist)) {
 			break;
 		    default:
 			mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", 
-				"This was a request generated from the form at http://www.php.net/support.php.", "From: $email\r\n");
+			"This was a request generated from the form at http://php.net/mailing-lists.php.", "From: $email\r\n");
 			break;
 		}
 ?>
