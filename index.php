@@ -145,6 +145,18 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<h1>PHP 4.3.10RC2 released!</h1>
+<p>
+ <span class="newsdate">[08-Dec-2004]</span>
+ <a href="http://qa.php.net/">PHP 4.3.10RC2</a> has been released for testing.
+ This is the second release candidate and should be very near production quality.
+ Nevertheless, please download and test it as much as possible on real-life 
+ applications to uncover any remaining issues.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
 <h1>PHP West Conferences: Web Services - Vancouver, BC</h1>
 <p>
@@ -174,18 +186,6 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[30-Nov-2004]</span>
  <a href="http://qa.php.net/">PHP 5.0.3RC1</a> has been released for testing.
- This is the first release candidate and should have a very low number of 
- problems and/or bugs. Nevertheless, please download and test it as much as 
- possible on real-life applications to uncover any remaining issues.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.10RC1 released!</h1>
-<p>
- <span class="newsdate">[23-Nov-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.10RC1</a> has been released for testing.
  This is the first release candidate and should have a very low number of 
  problems and/or bugs. Nevertheless, please download and test it as much as 
  possible on real-life applications to uncover any remaining issues.
