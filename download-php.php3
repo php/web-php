@@ -21,15 +21,16 @@ commonHeader("Download PHP Engine");
 <TD align=left colspan=3 NOWRAP>
 <?
 $mirror_sites=$MIRRORS;
-reset($mirror_sites);
+
 $lastc="";
-while ($site = key($mirror_sites)) {
-	next($mirror_sites);
-	$c=$mirror_sites[$site][0];
-	if ($c!=$lastc):
-		echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
-		$lastc=$c;
-	endif;
+reset($mirror_sites);
+while (list($site, $info) = each($mirror_sites)) {
+	$c = $info[0];
+	if ($c == $lastc || $c == 'xx') {
+		continue;
+	}
+	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
+	$lastc = $c;
 }
 ?><BR>
 </TD>
@@ -38,10 +39,11 @@ while ($site = key($mirror_sites)) {
 <?
 $lastcountry="xxxxx";
 reset($mirror_sites);
-while ($site = key($mirror_sites)) {
-	next($mirror_sites);
-	$country=$mirror_sites[$site][0];
-	$location=$mirror_sites[$site][1];
+while (list($site, $info) = each($mirror_sites)) {
+	list($country, $location, $shortname, $companyurl, $show) = $info;
+	if (!$show) {
+		continue;
+	}
 	if (eregi("^http://",$site)) {
 		$method="HTTP";
 		$srcdir="distributions/";
@@ -55,7 +57,9 @@ while ($site = key($mirror_sites)) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
-		echo "<TD><A NAME='$country'><IMG SRC='/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10></A><BR></TD>\n";
+		echo "<TD><A NAME='$country' HREF=\"$site\">";
+		echo "<IMG SRC='/gifs/gflag-$country.gif' ALT='$site' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10>";
+		echo "</A><BR></TD>\n";
 		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
 		echo "<TD align=right><IMG SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
