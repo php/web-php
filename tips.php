@@ -33,6 +33,21 @@ For a description of PHP.net shortcut URLs, please visit our
 <a href="urlhowto.php">URL Howto page</a>.
 </p>
 
+<?php tipTitle('Quick Reference for OmniWeb on Mac OS X', 'Steve Poole', '03-Oct-2002'); ?>
+
+<ol>
+  <li>In OmniWeb, open the Preferences window and select Shortcuts.</li>
+  <li>Click the  + button to add a shortcut.</li>
+  <li>In the Shortcut column type: <tt>php@</tt></li>
+  <li>In the Destination URL column type: <tt>http://www.php.net/manual-lookup.php?function=%@</tt></li>
+  <li>Close the Preferences window.</li>
+</ol>
+
+<p>
+Now you can search for PHP functions by typing into the URL well.
+For instance, <tt>php mysql</tt> or <tt>php strstr</tt>.
+</p>
+
 <?php tipTitle('Quick Reference for Opera', 'Paul Sculthorpe', '11-Jun-2002');?>
 
 <p>
