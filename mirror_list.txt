@@ -14,3 +14,4 @@ jguia@virtualoffice.es es.php.net ??
 terence@com5.net sg.php.net 202.169.237.18
 paulj@ns.web-tic.com nl.php.net CNAME to php.webtic.com
 mkyed@borsen.dk dk.php.net 194.239.128.56
+trurl@asteria.odtel.net ua.php.net CNAME to php.asteria.odtel.net
