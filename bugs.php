@@ -409,7 +409,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     echo wrap($html_report);
     echo("</pre>\n");
 
-    if (Mail($destination, "PHP 4.0 Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
+    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
 		echo "Thank you for your help!<P>";
 		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
@@ -625,6 +625,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text.= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text.= "Bug Type: $ebug_type\n";
+			$text.= "PHP Version: ephp_version\n";
 			$text.= "Assigned To: $eassign\n";
 			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
 			$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
@@ -634,8 +635,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			/* mail bug originator if status was changed or comment is not empty. */
 			if($estatus != $row[0] || $ncomment != "") {
-				Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-				Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
+				Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+				Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
 			}
 		}
 		mysql_freeresult($result);
