@@ -547,7 +547,6 @@ right away.</blockquote>
 	site("O'Neil Wetsuits", "www.oneill.com"); # Sports
 	site("Oresto.com", "www.oresto.com"); # Retail
 	site("Para-Shop","www.para-shop.de");
-	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Professional Pavement Products, Inc.","www.pppcatalog.com");
 	site("Rejuvenation Lamp and Fixture Co.","www.rejuvenation.com");
