@@ -69,17 +69,17 @@ $server = $SERVER_NAME;
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link('php-4.3.0.tar.bz2','PHP 4.3.0 (tar.bz2)'); ?> - 27 December 2002<br />
-  <span class="md5sum">md5: 6a3e1ad25cc912816c1f958cd4507767</span>
+  <li><?php download_link('php-4.3.1.tar.bz2','PHP 4.3.1 (tar.bz2)'); ?> - 17 February 2003<br />
+  <span class="md5sum">md5: bbfe584acb3549c62bb61355165e2ca6</span>
   </li>
-  <li><?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
-  <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
+  <li><?php download_link('php-4.3.1.tar.gz', 'PHP 4.3.1 (tar.gz)');  ?> - 17 February 2003<br />
+  <span class="md5sum">md5: d4a34efe145b43ed10dbd95825686065</span>
   </li>
 </ul>
 
 <p>
   See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes, or the
-  <a href="/release_4_3_0.php">release notes</a> for more information on this particular
+  <a href="/release_4_3_1.php">release notes</a> for more information on this particular
   release. Daily snapshots are also available from
   <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
@@ -87,17 +87,17 @@ $server = $SERVER_NAME;
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link('php-4.3.0-Win32.zip', 'PHP 4.3.0 zip package'); ?> - 27 December 2002<br />
+  <li><?php download_link('php-4.3.1-Win32.zip', 'PHP 4.3.1 zip package'); ?> - 17 February 2003<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)<br />
-  <span class="md5sum">md5: 64f6a4a5b7a27c98ef85bfa1f2dd604b</span>
+  <span class="md5sum">md5: 9c3304bbbc1c1603a3dfc60bf80ee04d</span>
   </li>
-  <li><?php download_link('php-4.3.0-installer.exe', 'PHP 4.3.0 installer'); ?> - 27 December 2002<br />
+  <li><?php download_link('php-4.3.1-installer.exe', 'PHP 4.3.1 installer'); ?> - 17 February 2003<br />
    (CGI only, MySQL support built-in, packaged as Windows installer to install
 	and configure PHP, and automatically configure IIS, PWS and Xitami, with
 	manual configuration for other servers. N.B. no external extensions
 	included)<br />
-  <span class="md5sum">md5: a64138b56c49df8a2b4ff099a6ee0611</span>
+  <span class="md5sum">md5: 736b116ca8c39037c5616b6f39d40c3d</span>
   </li>
 </ul>
 
@@ -119,6 +119,10 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 
 <h2>Patches</h2>
 <ul>
+  <li><?php download_link("php-4.3.0-to-4.3.1.patch.gz", "PHP 4.3.0 to 4.3.1 patch"); ?>  - 17 February 2003<br />
+  This unified diff will enable you to update your local PHP source to the latest version from 4.3.0.<br />
+  <span class="md5sum">md5: ffcce0d50a752fe00c3552f7fa68dc71</span>
+  </li>
   <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.<br />
   <span class="md5sum">md5: 254bccc245d65cece1f40f782b70ec6b</span>
@@ -151,6 +155,15 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
+  <li>PHP 4.3.0
+   <ul>
+    <li><?php download_link('php-4.3.0.tar.bz2','PHP 4.3.0 (tar.bz2)'); ?> - 27 December 2002<br />
+    <span class="md5sum">md5: 6a3e1ad25cc912816c1f958cd4507767</span>
+    </li>
+    <li><?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
+    <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
+   </ul>
+  </li>
   <li>PHP 4.2.3
     <ul>
       <li><?php download_link("php-4.2.3.tar.gz", "Source Code"); ?><br />
@@ -220,6 +233,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
         <option value="php-4.2.2.tar.gz">4.2.2</option>
         <option value="php-4.2.3.tar.gz">4.2.3</option>
         <option value="php-4.3.0.tar.gz">4.3.0</option>
+        <option value="php-4.3.1.tar.gz">4.3.1</option>
       </select>
     </form>
   </li>

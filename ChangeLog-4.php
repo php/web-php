@@ -5,6 +5,16 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.3.1"></a>
+<h3>Version 4.3.1</h3>
+<b>17-Feb-2003</b>
+<ul>
+<li>Fixed serious security vulnerability in CGI SAPI. (Shane)</li>
+</ul>
+There is a <a href="release_4_3_1.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
+
 <a name="4.3.0"></a>
 <h3>Version 4.3.0</h3>
 <b>27-Dec-2002</b>
@@ -32,7 +42,7 @@ commonheader("PHP 4 ChangeLog");
 </li>
 <li>Make PHP_AUTH_* variables not available in safe mode under Apache when an
   external basic auth mechanism is used. (Philip)</li>
-<li>Aliased dba_popen() to dba_open() until 4.3.1 when persistent STDIO streams
+<li>Aliased dba_popen() to dba_open() until 4.3.2 when persistent STDIO streams
   are introduced. (Andrei)</li>
 <li>Fixed a security bug in the bundled MySQL library. (Georg, Stefan)</li>
 <li>ZLIB extension is now built-in in the Windows distribution.

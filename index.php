@@ -191,6 +191,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
+
+<p>
+<font class="newsdate">[17-Feb-2003]</font> The PHP Group today announced
+the details of a serious <a href="release_4_3_1.php">CGI vulnerability</a> in PHP version 4.3.0.
+A security update, <a href="downloads.php">PHP 4.3.1</a>, fixes the issue. Everyone running
+affected version of PHP (as CGI) are encouraged to upgrade immediately. 
+The new 4.3.1 release does not include any other changes, so upgrading from 4.3.0 is safe and painless.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("news/phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
