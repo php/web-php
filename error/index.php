@@ -140,7 +140,7 @@ $uri_aliases = array (
     "windows"      => "install.windows",
     "win32"        => "install.windows",
 
-    "globals"      => "security.registerglobals",
+    "globals"      => "language.variables.predefined",
     "gd"           => "image",
 
     "tut"          => "tutorial",
