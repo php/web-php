@@ -69,16 +69,17 @@ $books = array (
 
   "PHP" => array (
 
-  array(
-    /* title[s]     */ "PHP Bible",
-    /* title_link   */ "http://php.wilson.gs/bible",
-    /* author[s]    */ "Wilson Peng",
-    /* auth link[s] */ "",
-    /* image        */ "wilson.jpg",
-    /* information  */ "",
-    /* inform. link */ "",
-    /* language     */ "cn"
-  ),
+// Host down (17/08/2004)
+//  array(
+//    /* title[s]     */ "PHP Bible",
+//    /* title_link   */ "http://php.wilson.gs/bible",
+//    /* author[s]    */ "Wilson Peng",
+//    /* auth link[s] */ "",
+//    /* image        */ "wilson.jpg",
+//    /* information  */ "",
+//    /* inform. link */ "",
+//    /* language     */ "cn"
+//  ),
 
   array(
     /* title[s]     */ array("Using PHP and MySQL", "With FreeBSD and Apache"),
@@ -1431,6 +1432,17 @@ $books = array (
     /* language     */ "no"
   ),
 
+  array(
+    /* title[s]     */ "PHP i MySQL",
+    /* title_link   */ "http://helion.pl/ksiazki/phms2v.htm",
+    /* author[s]    */ array("Luke Welling", "Laura Thomson"),
+    /* auth link[s] */ "",
+    /* image        */ "8373611401.jpg",
+    /* information  */ "Jul 2003, ISBN 83-7361-140-1",
+    /* inform. link */ "http://helion.pl/ksiazki/phms2v.htm",
+    /* language     */ "pl"
+  ),
+  
   array(
     /* title[s]     */ "PHP Guia de Consulta Rápida",
     /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
