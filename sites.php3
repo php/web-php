@@ -137,7 +137,9 @@
 	echo "</tr><tr><td valign=top>\n";
 	/* Financial Industry */
 	site("E*Trade","www.etrade.com");
+	site("First USA Bank","www.firstusabank.com");
 
+	/* Games */
 	echo "<br></td><td valign=top>\n";
 	site("Worms2","www.worms2.com");
 
