@@ -48,15 +48,32 @@ function highlight_php($code, $return = FALSE)
 /* These functions are only used on the new XHTML 1.0 Strict compatible
    pages, and are used as an experiment, but are going to replace the
    commonHeader and commonFooter functions in the future altogether */
-function site_header($title = '', $onload = '')
+function site_header($title = '', $config = array())
 {
     global $EXPL_LANG;
     
+    // Default to empty array if improper parameter passed
+    if (!is_array($config)) { $config = array(); }
+    
+    // Print out lang and charset headers
+    if (!isset($config["lang"]))    { $config["lang"] = "en"; }
+    if (!isset($config["charset"])) { $config["charset"] = "ISO-8859-1"; }
+    header("Content-type: text/html;charset={$config['charset']}");
+    header("Content-language: {$config['lang']}");
+    
     if (!empty($title)) { $title = ": $title"; }
-    if (empty($onload)) { $onload = "searchHistory(); tocImages();"; }
+    
+    // Decide on onload event handler
+    if (!isset($config['onload'])) {
+        $config['onload'] = "searchHistory(); tocImages();";
+    }
+    
+    // Explicit language setting means that we should put that into the form
     if (isset($EXPL_LANG)) {
         $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
     } else { $lang_input = ''; }
+    
+    // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
     } else { $base = ''; }
@@ -71,7 +88,7 @@ function site_header($title = '', $onload = '')
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base
 </head>
-<body onload="{$onload}">
+<body onload="{$config['onload']}">
 
 <div id="headnav">
  <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
