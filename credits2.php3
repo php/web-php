@@ -30,7 +30,7 @@ function makeName($name,$email,$size=0) {
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 
 <? makeName("Rasmus Lerdorf","rasmus@php.net",1);?>
-<ul>
+
 <li>Concept
 <li>Original language definition and implementation
 <li>CGI loader and many internal functions
@@ -38,11 +38,11 @@ function makeName($name,$email,$size=0) {
 <li>SNMP module
 <li>Original mSQL, MySQL and Sybase modules
 <li>Project Coordinator
-</ul>
+<BR><BR>
 
 <? makeName("Andi Gutmans","andi@php.net",1);?>
 <? makeName("&  Zeev Suraski","zeev@php.net",1);?>
-<ul>
+
 <li>New language definition and implementation
 <li>Internal functions API design
 <li>General hash table implementation for symbol tables, arrays and objects
@@ -52,34 +52,34 @@ function makeName($name,$email,$size=0) {
 <li>Syntax highlighting mode
 <li>Configuration file parser
 <li>New persistent/multilink MySQL, PosgresSQL, Sybase and mSQL modules
-</ul>
+<BR><BR>
 
 <? makeName("Stig Bakken","ssb@guardian.no",1);?>
-<ul>
+
 <li>Oracle support
 <li>configure/install script work
 <li>sprintf reimplementation
 <li>SGML documentation framework
 <li>Loadable font support
 <li>ODBC work
-</ul>
+<BR><BR>
 
 <? makeName("Shane Caraveo","shane@caraveo.com",1);?>
-<ul>
+
 <li>Porting to Visual C++
 <li>Generalization to support different server APIs
 <li>Work on ISAPI and NSAPI APIs
-</ul>
+<BR><BR>
 
 <? makeName("Jim Winstead","jimw@php.net",1);?>
-<ul>
+
 <li>Lots of PHP2 -> PHP3 porting
 <li>dBase support
 <li>URL parsing functions
 <li>Makefile work
 <li>Regex rewrite
 <li>Win32 work
-</ul>
+<BR><BR>
 
 </TD><TD></TD></TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
@@ -93,55 +93,55 @@ function makeName($name,$email,$size=0) {
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 
 <? makeName("Bjørn Borud","borud@guardian.no");?>
-  <ul><li>soundex code and lots of enthusiasm</ul>
+  <li>soundex code and lots of enthusiasm<BR><BR>
 
 <? makeName("Dean Gaudet","dgaudet@arctic.org");?>
-  <ul><li>Apache module debugging + helpful hints along the way</ul>
+  <li>Apache module debugging + helpful hints along the way<BR><BR>
 
 <? makeName("Mitch Golden","mgolden@interport.net");?>
-  <ul><li>Oracle testing and bug fixes</ul>
+  <li>Oracle testing and bug fixes<BR><BR>
 
 <? makeName("Simon Gornall","simon@oyster.co.uk");?>
-  <ul><li>Illustra</ul>
+  <li>Illustra<BR><BR>
 
 <? makeName("Mark Henderson","mark@togglemedia.com");?>
-  <ul><li>Various odds and ends</ul>
+  <li>Various odds and ends<BR><BR>
 
 <? makeName("Jaakko Hyvätti","jaakko@hyvatti.iki.fi");?>
-  <ul><li>Prototype cop, regular expression code fixes and CGI security issues</ul>
+  <li>Prototype cop, regular expression code fixes and CGI security issues<BR><BR>
 
 <? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de");?>
-  <ul><li>Adabas D, ODBC</ul>
+  <li>Adabas D, ODBC<BR><BR>
 
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed");?>
-  <ul><li>Original Sybase module</ul>
+  <li>Original Sybase module<BR><BR>
   
 <? makeName("Jeroen van der Most","jvdmost@digiface.nl");?>
-  <ul><li>Solid</ul>
+  <li>Solid<BR><BR>
   
 <? makeName("Chad Robinson","chadr@brttech.com");?>
-  <ul><li>Documentation, FilePro</ul>
+  <li>Documentation, FilePro<BR><BR>
 
 <? makeName("John Robinson","john@intelligent.co.uk");?>
-  <ul><li>Postgres</ul>
+  <li>Postgres<BR><BR>
 
 <? makeName("Lachlan Roche","lr@www.wwi.com.au");?>
-  <ul><li>MD5</ul>
+  <li>MD5<BR><BR>
   
 <? makeName("Brian Schaffner","brian@tool.net");?>
-  <ul><li>ODBC Support, PHP3 API testing</ul>
+  <li>ODBC Support, PHP3 API testing<BR><BR>
 
 <? makeName("sopwith@redhat.com","sopwith@redhat.com");?>
-  <ul><li>Solid</ul>
+  <li>Solid<BR><BR>
   
 <? makeName("Adam Sussman","asussman@vidya.com");?>
-  <ul><li>Postgres</ul>
+  <li>Postgres<BR><BR>
 
 <? makeName("Colin Viebrock","cmv@privateworld.com");?>
-  <ul><li>Website graphic design and layout, PHP logo</ul>
+  <li>Website graphic design and layout, PHP logo<BR><BR>
 
 <? makeName("Lars Torben Wilson","cslawi@uta.fi");?>
-  <ul><li>Documentation</ul>
+  <li>Documentation<BR><BR>
 
 <hr noshade width="100%" size=1>
 <font size="-1">
