@@ -15,6 +15,7 @@ $MIRRORS = array(
    "ftp://no.php.net/pub/free/php/dist/" => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 1),
    "http://sk.php.net/"           => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1),
    "http://uk.php.net/"           => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1),
+   "ftp://uk.php.net/"            => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1),
    "http://www.php.net/"          => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1),
    ""                             => array("xx", "", "none", "/")
 );
