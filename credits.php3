@@ -132,8 +132,17 @@ endif;
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 <DL>
 
+<? makeName("Jouni Ahto","jah@cultnet.fi",0);?>
+  <UL TYPE=DISC><li>Postgres, Informix/UL><BR>
+
+<? makeName("Alex Belits","abelits@phobos.illtel.denver.co.us",0);?>
+  <UL TYPE=DISC><li>fhttpd support</UL><BR>
+
 <? makeName("Bjørn Borud","borud@guardian.no",0);?>
   <UL TYPE=DISC><li>soundex code and lots of enthusiasm</UL><BR>
+
+<? makeName("John Ellson","ellson@lucent.com",0);?>
+  <UL TYPE=DISC><li>Freetype support</UL><BR>
 
 <? makeName("Dean Gaudet","dgaudet@arctic.org",0);?>
   <UL TYPE=DISC><li>Apache module debugging + helpful hints along the way</UL><BR>
@@ -144,17 +153,26 @@ endif;
 <? makeName("Simon Gornall","simon@oyster.co.uk",0);?>
   <UL TYPE=DISC><li>Illustra</UL><BR>
 
+<? makeName("Danny Heijl","Danny.Heijl@cevi.be",0);?>
+  <UL TYPE=DISC><li>Informix SE Support</UL><BR>
+
 <? makeName("Mark Henderson","mark@togglemedia.com",0);?>
   <UL TYPE=DISC><li>Various odds and ends</UL><BR>
 
 <? makeName("Jaakko Hyvätti","jaakko@hyvatti.iki.fi",0);?>
   <UL TYPE=DISC><li>Prototype cop, regular expression code fixes and CGI security issues</UL><BR>
 
+<? makeName("Amitay Isaacs","amitay@pspl.co.in",0);?>
+  <UL TYPE=DISC><li>LDAP</UL><BR>
+
 <? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de",0);?>
   <UL TYPE=DISC><li>Adabas D, ODBC, Oracle</UL><BR>
 
 <? makeName("Igor Kovalenko","owl@infomarket.ru",0);?>
   <UL TYPE=DISC><li>QNX support issues</UL><BR>
+
+<? makeName("Richard Lynch","lynch@lscorp.com",0);?>
+  <UL TYPE=DISC><li>Documentation</UL><BR>
 
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
@@ -165,23 +183,29 @@ endif;
 <? makeName("Chad Robinson","chadr@brttech.com",0);?>
   <UL TYPE=DISC><li>Documentation, FilePro</UL><BR>
 
-<? makeName("John Robinson","john@intelligent.co.uk",0);?>
-  <UL TYPE=DISC><li>Postgres</UL><BR>
-
 <? makeName("Lachlan Roche","lr@www.wwi.com.au",0);?>
   <UL TYPE=DISC><li>MD5</UL><BR>
+
+<? makeName("Stefan Roehrich","sr@linux.de",0);?>
+  <UL TYPE=DISC><li>zlib</UL><BR>
+
+<? makeName("Nikolay P. Romanyuk","mag@redcom.ru",0);?>
+  <UL TYPE=DISC><li>Velocis Support</UL><BR>
   
 <? makeName("Brian Schaffner","brian@tool.net",0);?>
   <UL TYPE=DISC><li>ODBC Support, PHP3 API testing</UL><BR>
 
+<? makeName("Egon Schmid","eschmid@delos.lf.net",0);?>
+  <UL TYPE=DISC><li>Documentation</UL><BR>
+
 <? makeName("sopwith@redhat.com","sopwith@redhat.com",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
-<? makeName("Adam Sussman","asussman@vidya.com",0);?>
-  <UL TYPE=DISC><li>Postgres</UL><BR>
-
 <? makeName("Colin Viebrock","cmv@privateworld.com",0);?>
   <UL TYPE=DISC><li>Website graphic design and layout, PHP logo</UL><BR>
+
+<? makeName("Eric Warnke","ericw@albany.edu",0);?>
+  <UL TYPE=DISC><li>LDAP</UL><BR>
 
 <? makeName("Lars Torben Wilson","cslawi@uta.fi",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
