@@ -63,7 +63,7 @@ make_link('/tips.php', 'tips page') . '.
 </p>
 <p>
 Looking for a great PHP book? check out our ' .
-make_link('/books.php', 'Book resource center') . '.
+make_link('/books.php', 'book resource center') . '.
 </p>
 ';
 
