@@ -48,7 +48,7 @@ site_header("News Archive - 2003");
 </ul>
 <p>
  There have been many changes since Beta 1, some of them documented in the
- <a href="/NEWS_PHP_5_0_0b2.txt">NEWS file</a> and most language
+ <a href="/ChangeLog-5.php#5.0.0b2">NEWS file</a> and most language
  changes are documented on <a href="/zend-engine-2.php">our PHP 5/Zend Engine 2 page</a>.
 </p>
 
@@ -354,7 +354,7 @@ site_header("News Archive - 2003");
  The PHP development community is proud to announce the release of PHP 5
  Beta 1. Both source packages, and a Windows build are available in the
  <a href="/downloads.php">Downloads Section</a>. A list of changes 
- can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
+ can be found in the <a href="/ChangeLog-5.php#5.0.0b1">ChangeLog</a> file.
 </p>
 <p>
  Some of the more major changes include:
