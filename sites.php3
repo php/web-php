@@ -128,6 +128,7 @@ right away.</blockquote>
 	site("EdSeek.com","www.edseek.com");
 	site("Évora's University in Portugal","www.uevora.pt");
 	site("GezondheidsNet","www.gezondheidsnet.nl");
+	site("iCivilEngineer","www.icivilengineer.com");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	site("The Lawson Institute","lriweb.stjosephs.london.on.ca");
 	site("Let's Find Out","www.letsfindout.com");
@@ -184,6 +185,7 @@ right away.</blockquote>
 	site("The Development Capital Exchange","www.equity-invest.com");
 	site("Employee Benefit Placement System","ee-benefits.com/");
 	site("First USA Bank","www.firstusabank.com");
+	site("HotPortfolios.Com","www.hotportfolios.com");
 	site("Insurance Bridge","www.insurancebridge.com");
 	site("Quicken.ca","www.quicken.ca");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
@@ -294,6 +296,7 @@ right away.</blockquote>
 	site("Active Studios","www.activestudios.net");
 	site("Alabanza","www.alabanza.com");
 	site("BestHost","besthost.net");
+	site("Cable & Wireless ECRC GmBH","www.ecrc.de");
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("DigitalDaze","www.digitaldaze.com");
@@ -308,8 +311,10 @@ right away.</blockquote>
 	site("Richweb Inc.","www.richweb.com");
 	site("SpaceNet","www.spacenet.de");
 	site("StormWeb","www.stormweb.net");
+	site("Surfrat Internet","www.surfrat.com");
 	site("Total Information Management AG","www.timso.ch");
 	site("w10.net","w10.net");
+	site("Webpipe.net","Webpipe.net");
 	site("Winther.Net","www.winther.net");
 	site("XOOM Inc.","xoom.com");
 	site("Yebo! Net","www.yebo.co.za");
@@ -318,10 +323,13 @@ right away.</blockquote>
 /* Job & Career Sites */
 	title("Job & Career Sites");
 	siteStart();
+	site("AutoEngineeringJobs.com","AutoEngineeringJobs.com");
 	site("Careers 4 Teens","www.careers4teens.com");
+	site("Catho Online","www.catho.com.br");
 	site("Jobs & Career - The Times of India","www.timesjobsandcareers.com");
 	site("Little6","www.little6.com");
 	site("NettJobb","www.nettjobb.no");
+	site("UJobs.com","www.UJobs.com");
 	siteEnd();
 
 /* Military */
@@ -417,6 +425,7 @@ right away.</blockquote>
 	site("PHP.CodeBase.Org","php.codebase.org");
 	site("Riffnet Scripts","www.cgiscripts.net");
 	site("SegFault","segfault.org");
+	site("TuxFiles.Com","www.tuxfiles.com");
 	site("The UNIX Network Archives","www.tuna.org");
 	site("Versions","www.versions.com");
 	siteEnd();
@@ -564,6 +573,7 @@ right away.</blockquote>
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("TopHotels.com","www.tophotels.com");
+	site("Travel-Italy.com","Travel-Italy.com");
 	site("TUI - Touristik Union International","www.tui.com");
 	site("Whereis Street Atlas","www.whereis.com.au");
 	site("Whistler Resort Guide","www.whistler.net");
