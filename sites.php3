@@ -185,7 +185,6 @@ right away.</blockquote>
 	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
 	site("Employee Benefit Placement System","ee-benefits.com/");
-	site("First USA Bank","www.firstusabank.com");
 	site("HotPortfolios.Com","www.hotportfolios.com");
 	site("Insurance Bridge","www.insurancebridge.com");
 	site("Quicken.ca","www.quicken.ca");
@@ -288,6 +287,7 @@ right away.</blockquote>
 	site("WhereIs Street Atlas (Australia)","www.whereis.com.au");
 	site("WhoBuiltIt","www.whobuiltit.com");
 	site("Widesoft Internet","www.widesoft.com.br");
+	site("The Widgetchuck","www.widgetchuck.com");
 	site("zcentral.com","www.zcentral.com");
 	site("Zorango.com","www.zorango.com");
 	siteEnd();
@@ -506,6 +506,7 @@ right away.</blockquote>
 	site("Para-Shop","www.para-shop.de");
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
+	site("Professional Pavement Products, Inc.","www.pppcatalog.com");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("R U Sure","www.rusure.com");
 	site("Sellit-Here Online","www.sellit-here.com");
