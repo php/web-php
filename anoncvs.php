@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'anoncvs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Anonymous CVS Access");
+site_header("Anonymous CVS Access");
 ?>
 
 <h1>Anonymous CVS Access</h1>
@@ -152,4 +152,4 @@ diff -u
  <li>autoconf 2.13, automake 1.5 and libtool 1.4</li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'copyright.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonheader("Copyright and License");
+site_header("Copyright and License");
 ?>
 
 <h1>Copyright and License</h1>
@@ -11,7 +11,7 @@ commonheader("Copyright and License");
 
 <p>
  For information on the PHP License (i.e. using the PHP language),
- <?php print_link('/license/', 'see our licensing information page'); ?>.
+ <a href="/license/">see our licensing information page</a>.
 </p>
 
 <h2>Website Copyright</h2>
@@ -50,14 +50,14 @@ commonheader("Copyright and License");
 
 <p>
  You can contact the webmaster at 
- <?php print_link('mailto:webmaster@php.net', 'webmaster@php.net'); ?>.
+ <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
  Note that this address is mapped to a mailing list and a newsgroup, so
  every message you send will be stored in public archives.
 </p>
 
 <p>
  For more information on the PHP Group and the PHP project, please see 
- <?php print_link('http://www.php.net/'); ?>.
+ <a href="http://www.php.net/">http://www.php.net/</a>.
 </p>
 
-<?php commonfooter(); ?>
+<?php site_footer(); ?>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("A Tourist's Guide");
+site_header("A Tourist's Guide");
 ?>
 
 <h1>
@@ -166,4 +166,4 @@ commonHeader("A Tourist's Guide");
  development sources.
 </p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

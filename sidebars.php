@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sidebars.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("PHP.net Search Bars");
+site_header("PHP.net Search Bars");
 ?>
 <h1>PHP.net Search Bars</h1>
 
@@ -17,7 +17,7 @@ commonHeader("PHP.net Search Bars");
 </p>
 
 <h2>Mozilla 0.9.4 and above</h2>
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript">
 function addPanel()
 {
     if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function")) {
@@ -71,4 +71,4 @@ function addPanel()
  more about Opera sidebars on this page</a>.</em>
 </p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sitemap.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Sitemap");
+site_header("Sitemap");
 ?>
 
 <h1>PHP.net Sitemap</h1>
@@ -77,4 +77,4 @@ commonHeader("Sitemap");
  </li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

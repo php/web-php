@@ -35,8 +35,27 @@ h2 { font-size: 125%; }
 h3 { font-size: 110%; }
 h4 { font-size: 100%; }
 
+input.max, textarea.max, select.max {
+	width: 100%;
+}
+
 img {
 	border: 0px;
+}
+
+div.tip {
+	border: 1px solid #0000cc;
+	color: #000066;
+	background-color: #eeeeff;
+	padding: 0px 8px;
+}
+
+p.formerror, div.warn {
+	border: 1px solid #666600;
+	color: #660000;
+	background-color: #ffeeee;
+	margin: 4px;
+	padding: 6px;
 }
 
 /* Content are styles ----------------------------------------------------- */
@@ -158,4 +177,23 @@ div.phpcode span.keyword {
 div.phpcode span.string {
 	color: #DD0000;
 	background-color: transparent;
+}
+
+/* Standard tables -------------------------------------------------------- */
+table.standard td {
+	background-color: #eeeeee;
+	color: inherit;
+}
+table.standard th {
+	background-color: #cccccc;
+	color: inherit;
+}
+table.standard td.sub, table.standard th.sub,
+table.standard th.subr {
+	background-color: #dddddd;
+	color: inherit;
+}
+table.standard th.subr {
+	text-align: right;
+	vertical-align: top;
 }

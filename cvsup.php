@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'cvsup.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Using CVSup to maintain a local CVS repository");
+site_header("Using CVSup to maintain a local CVS repository");
 ?>
 
 <h1>Using CVSup To Maintain A Local CVS Repository</h1>
@@ -52,4 +52,4 @@ php-src
  </li>
 </ol>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

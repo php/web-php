@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'cvs-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-commonHeader("Using CVS for PHP Development");
+site_header("Using CVS for PHP Development");
 ?>
 
 <h1>Using CVS for PHP Development</h1>
@@ -244,7 +244,7 @@ EOT;
  on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
  allows you to modify the documentation notes in the <a href="/manual/">annotated
  manual</a>. Your CVS account also translates into a foo@php.net forwarding email
- address where <b>foo</b> is your CVS user id. Feel free to use it!
+ address where <strong>foo</strong> is your CVS user id. Feel free to use it!
 </p>
 
 <h2>Request a CVS account</h2>
@@ -287,7 +287,7 @@ EOT;
       class="max" value="<?php echo clean($_POST['password']);?>" /></td>
 </tr>
 <?php
-# if checkread is set here, we're redisplaying the form because of an error.
+// if checkread is set here, we're redisplaying the form because of an error.
 if ($_POST['checkread']) {
     echo "<input type=\"hidden\" name=\"checkread\" value=\"1\" />\n";
 }
@@ -306,4 +306,4 @@ else {?>
 </table>
 </form>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
