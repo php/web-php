@@ -47,7 +47,7 @@ i2c_go();
 // cookie already storing this information)
 function i2c_go()
 {
-    global $_SERVER, $_COOKIE, $COUNTRY;
+    global $COUNTRY;
 
     // Get the real IP of the user
     $ipnum = i2c_realip();
@@ -85,8 +85,6 @@ function i2c_go()
 // Find nearest index entry for IP number 
 function i2c_search_in_index($ip)
 {
-    global $_SERVER;
-
     // Indexed part and record number to jump to
     $idxpart = 0; $recnum = 0;
     
@@ -126,8 +124,6 @@ function i2c_search_in_index($ip)
 // $ip should be an IP number and not an IP address
 function i2c_search_in_db($ip, $idx)
 {
-    global $_SERVER;
-
     // Default range and country
     $range_start = 0; $range_end = 0;
     $country = "NA";
@@ -188,8 +184,6 @@ function i2c_valid_country()
 // Returns the real IP address of the user
 function i2c_realip()
 {
-    global $_SERVER;
-    
     // No IP found (will be overwritten by for
     // if any IP is found behind a firewall)
     $ip = FALSE;

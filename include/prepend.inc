@@ -22,21 +22,6 @@ unset($COUNTRY);
 unset($ONLOAD);
 unset($MYPHPNET);
 
-// Backward compatible array creation. After this point, the
-// PHP 4.1.0+ arrays can be used to access variables coming
-// from outside PHP. But it should be noted that these variables
-// are not necessarily superglobals, so they need to be global-ed!
-/*
-if (!isset($_SERVER)) {
-    $_GET     = &$HTTP_GET_VARS;
-    $_POST    = &$HTTP_POST_VARS;
-    $_ENV     = &$HTTP_ENV_VARS;
-    $_SERVER  = &$HTTP_SERVER_VARS;
-    $_COOKIE  = &$HTTP_COOKIE_VARS;
-    $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
-}
-*/
-
 // Load the My PHP.net settings before any includes
 myphpnet_load();
 

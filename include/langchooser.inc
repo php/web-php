@@ -42,8 +42,6 @@ if ($EXPL_LANG == '') { unset($EXPL_LANG); }
 
 function language_choose_code()
 {
-    global $_REQUEST, $_SERVER, $_COOKIE;
-    
     // Contains all the languages picked up by the
     // process in priority order (without repeating codes)
     $languages = array();
