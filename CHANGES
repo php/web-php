@@ -271,7 +271,7 @@ Here's a pretty useless function which makes a good example:
 
 [6] OOP support
 
-Classes and inheritence are supported to a limited extent in PHP 3.0.
+Classes and inheritance are supported to a limited extent in PHP 3.0.
 Here's how to declare a simple class:
 
 	class simple_class {
@@ -309,7 +309,7 @@ would run the display() member function of $obj.  Note that the
 implementation of display() uses the special variable $this, which is
 replaced with the object the function is called on.
 
-Inheritence is pretty simple too:
+Inheritance is pretty simple too:
 
 	class complex_class extends simple_class {
 		var $property4="test";
