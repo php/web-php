@@ -123,6 +123,7 @@ right away.</blockquote>
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
 	site("TVN Entertainment","www.tvn.com");
+	site("United States of Hardcore (Music)","www.ush.net");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
 	siteEnd();
 
