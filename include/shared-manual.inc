@@ -175,7 +175,7 @@ function manualGetUserNotes($title, $id) {
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE;
 	$notes = array();
-	if (is_primary_site() && @mysql_connect("localhost","nobody","")) {
+	if (0 && is_primary_site() && @mysql_connect("localhost","nobody","")) {
 		mysql_select_db("php3");
 		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect='$id' AND NOT removed ORDER BY id";
                 $result_id = mysql_query($query);
