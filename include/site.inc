@@ -116,13 +116,11 @@ function count_mirrors($country = FALSE)
     // This is a non-identified country
     if ($country == "NA") { return 0; }
     
-    // Count all mirror sites
-    elseif ($country === FALSE) { return count($MIRRORS); }
-    
     // Count only the ones in the same country
     $count = 0;
     foreach ($MIRRORS as $murl => $mirror) {
-        if (mirror_country($murl) == $country) { $count++; }
+        if (mirror_status($murl)  != MIRROR_OK) { continue; }
+        if ($country === FALSE || mirror_country($murl) == $country) { $count++; }
     }
     return $count;
 }
