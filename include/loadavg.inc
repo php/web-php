@@ -24,7 +24,7 @@ function check_load()
 	
 	/* find potential mirrors */
 	foreach ($MIRRORS as $murl => $mirror) {
-		if ($murl != 'http://www.php.net' &&
+		if ($murl != 'http://www.php.net/' &&
 				$mirror[7] == MIRROR_OK /* mirror status */ &&
 				$mirror[5] /* searchable */) {
 
