@@ -197,6 +197,25 @@ README.WIN32 file.
     following 'libphp3.a' when linking with Apache.
   <P>
   </DD>
+
+  <DT><b>
+	I can't figure out how to build PHP3 with Apache 1.3.
+  </b></DT>
+  <DD>
+	This is actually quite easy.  Follow these steps carefully:<p>
+    <ul>
+	<li>Grab the latest Apache 1.3 .tar.gz file from <a href="http://www.apache.org/">www.apache.org</a>
+	<li>Unzip and untar it to /usr/local/src/apache_1.3b3 for example
+	<li>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache_1.3b3  (substitute 
+		<i>&lt;path&gt;</i> for the actual path to your apache_1.3b3 directory.
+	<li>Then type 'make' followed by 'make install' to build PHP3
+	<li>Then cd to your /<i>&lt;path&gt;</i>/apache_1.3b3/src directory and edit the <i>Configuration</i>
+		file.  At the end of the file, add: <tt>AddModule modules/extra/mod_php3.o</tt>
+	<li>Now type: './Configure' followed by 'make'
+	<li>You should now have a PHP3-enabled httpd binary
+	</ul>
+	<P>
+	</DD>
 </DL>
 
 <HR>
