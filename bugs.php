@@ -1,4 +1,7 @@
 <?
+	if($save && $user && $pw) {
+		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
+	}
 
 /* See the end of the script for the table layout. */
 
@@ -19,8 +22,8 @@ if (strstr($MYSITE,"bugs.php.net")) {
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
-$destination = "php-dev@lists.php.net";
-#$destination = "rasmus@lerdorf.on.ca";
+#$destination = "php-dev@lists.php.net";
+$destination = "rasmus@lerdorf.on.ca";
 
 function indent($string, $prefix) {
     $string = ereg_replace(13, "", $string); /* get rid of Ctrl-M */
@@ -101,16 +104,14 @@ function show_menu($state)
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
-	echo "</select></td><td> <a href=\"bugstats.php\">Statistics</a></td></tr>\n";
+	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
-	echo "<td colspan=4><input type=text name=\"search_for\"></td></tr>\n";
-	echo "</table>\n";
-	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
-	echo "</form>\n";
-	echo "<form method=GET action=\"$PHP_SELF\">\n";
-	echo "<input type='submit' value='Edit'> bug number <input type='text' name='id'>\n";
+	echo "<td colspan=3><input type=text name=\"search_for\"></form></td></tr>\n";
+	echo "<tr><td colspan=3 align=right><form method=GET action=\"$PHP_SELF\">\n";
+	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
 	echo "<input type='hidden' name='edit' value='1'>\n";
-	echo "</form><br>\n";
+	echo "</td><td><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
+	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
 
 
@@ -493,11 +494,15 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		if (isset($edit)) {
 			echo "<b>New Comment:</b><br>\n";
 			echo "<textarea cols=60 rows=15 name=\"ncomment\"></textarea><br>\n";
+			if(isset($MAGIC_COOKIE)) list($user, $pw) = explode(":", base64_decode($MAGIC_COOKIE));
 			if ($edit == 1) {
-				echo "CVS user id: <input type=text size=10 name=user>\n";
+				echo "CVS user id: <input type=text size=10 name=user value=\"$user\">\n";
 			}
-			echo "Password: <input type=password size=10 name=pw>\n";
-			echo "<input type=submit value=\"Commit Changes\">\n";
+			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
+			echo "<input type=submit value=\"Commit Changes\"><br>\n";
+			if(!$user || !$pw) {
+				echo "Remember my login/password: <input type=checkbox name=save>\n";
+			}
 			echo "</form>\n";
 		}
 
@@ -520,7 +525,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 
 		/* NEW-STYLE COMMENTS */
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS my_when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
 		if ($comresult = mysql_query($query)) {
 			while ($com = mysql_fetch_array($comresult)) {
 				echo "<b><i>[".$com['ts']."] ".$com['email']."</i></b><br>\n";
