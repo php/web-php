@@ -322,6 +322,12 @@ site_header("Links");
 
 <ul>
  <li>
+  <a href="http://www.activestate.com/">ActiveState</a><br />
+  ActiveState, a division of Sophos, produces Komodo, a professional
+  integrated development environment (IDE) for open source languages.
+ </li>
+
+ <li>
   <a href="http://www.interakt.ro/">InterAKT Online</a><br />
   InterAKT Online provides quality software development tools used by tens
   of thousands of PHP developers around the world, including PHAkt and
