@@ -69,12 +69,12 @@ is determined by checking for the following settings. The list is
 in priority order, the first is the most important.
 </p>
 
-<ul>
- <li>Your preferred language: <?php echo $langpref; ?></li>
- <li>Your Accept-Language browser setting: <?php echo join(", ", $UA_LANGS); ?></li>
- <li>The mirror's default language: <?php echo default_language(); ?></li>
- <li>English [en]</li>
-</ul>
+<table>
+ <tr><td>Your preferred language</td><td><?php echo $langpref; ?></td></tr>
+ <tr><td>Your Accept-Language browser setting (parsed)</td><td><?php echo join(", ", $UA_LANGS); ?></td></tr>
+ <tr><td>The mirror's default language</td><td><?php echo default_language(); ?></td></tr>
+ <tr><td>Default</td><td>en</td></tr>
+</table>
 
 <p>
 These settings are only overriden in case you have passed a language
