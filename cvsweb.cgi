@@ -27,7 +27,9 @@ $cvsrepository = "/repository";
 
 
 $intro = "
-<blockquote>This is a WWW interface to PHP Version 3.0 CVS Tree.  You can get your own copy of the
+<blockquote>This is a WWW interface to the PHP Version 3.0 CVS Tree.  There is also a
+<a href=\"/cvsweb31.cgi\">PHP Version 3.1 CVS Tree</a>.
+You can get your own copy of the
 tree by using a CVS client from your own system.  If you don't already have one, you will
 find one at <a href=\"http://www.cyclic.com/\">http://www.cyclic.com/</a>.  You can get your
 own copy of the tree with the commands:
