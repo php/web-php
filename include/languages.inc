@@ -4,8 +4,8 @@
  This is a list of all manual languages hosted
  on a full PHP.net mirror site
 
- Some codes, like "ko" and "tw" are not in conformance
- with the official language code standard!
+ Some codes, like "kr", "tw" and "hk" are not in
+ conformance with the official language code standard!
 
  http://www.unicode.org/unicode/onlinedat/languages.html
 */
