@@ -1,5 +1,7 @@
 <?php
-require_once 'prepend.inc';
+/* $Id$ */
+
+require_once './include/prepend.inc';
 
 commonHeader("PHP.net Search Bars");
 

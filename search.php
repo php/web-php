@@ -68,7 +68,7 @@ if (!isset($base)) {
     // The base is the referrer site. Check if it was a PHP mirror site,
     // and not some other site offering a direct PHP.net search form.
     // Links should not be pointed back to a non PHP.net mirror site
-    if (preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
+    if (isset($_SERVER['HTTP_REFERER']) && preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
         $matches[1] != 'qa') {
         $base = "http://{$matches[1]}.php.net/";
     }

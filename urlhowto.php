@@ -1,5 +1,7 @@
 <?php
-include_once 'prepend.inc';
+/* $Id: */
+
+include_once './include/prepend.inc';
 
 $SIDEBAR_DATA='
 <h3>URL examples</h3>

@@ -1,5 +1,7 @@
 <?php
-require_once 'prepend.inc';
+/* $Id: */
+
+require_once './include/prepend.inc';
 
 $NUMACROSS = 2;
 $SHOW_CLOSE = 10;

@@ -1,5 +1,7 @@
 <?php
-include_once 'prepend.inc';
+/* $Id$ */
+
+include_once './include/prepend.inc';
 commonHeader("A Tourist's Guide");
 ?>
 

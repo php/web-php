@@ -1,4 +1,6 @@
 <?php
+/* $Id$ */
+
 include './include/prepend.inc';
 
 commonHeader("Getting Help");

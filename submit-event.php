@@ -1,7 +1,9 @@
 <?php
-require_once 'prepend.inc';
-require_once 'posttohost.inc';
-require_once 'email-validation.inc';
+/* $Id$ */
+
+require_once './include/prepend.inc';
+require_once './include/posttohost.inc';
+require_once './include/email-validation.inc';
 
 commonHeader("Submit an Event");
 

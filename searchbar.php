@@ -1,5 +1,7 @@
 <?php
-include_once "prepend.inc";
+/* $Id$ */
+
+include_once "./include/prepend.inc";
 
 // Gecko would like to see the target to be _content, while IE would
 // like to see the target to be _main. Other browsers are not expected
