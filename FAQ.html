@@ -247,6 +247,77 @@ just hit the always prompt for new location checkbox before pressing ok.
 
   </DD>
 
+<DT><B>
+    <a name="1.11">1.11</a> Can I access Empress RDBMS databases?
+  </B></DT>
+  <DD>
+  Yes. PHP 3.0.6 and Empress RDBMS v8.10 and higher are compatible. 
+  <P>
+  You already have all the tools you need if you are running entirely under 
+  Windows 95/98 or NT, where you can use ODBC and the Empress ODBC driver for 
+  Windows.
+  <P>
+  If you are running PHP on a Unix box and want to access Empress databases, you
+  can link
+  the Empress ODBC client driver directly into the PHP unified ODBC API.
+  <BR>
+  <I>Note that does NOT make PHP an ODBC client. The unified ODBC interface
+  simplies uses the ODBC application program interface (API).</I> 
+  <P>
+  Because Empress uses the PHP unified ODBC interface it has very little explicit 
+  Empress specific syntax. It is of course possible to use Empress specific SQL
+  in the SQL statements themselves, but this does not affect the interface.
+  It is a good general policy to stick to ANSI standard SQL whenever 
+  possible.
+
+  <P>
+  <DL>
+  <DT><B>Empress Specifics: </B> The only item which is specific to Empress in
+  PHP is that there are two methods for specifying the DNS in the
+  <code>odbc_connect ()</code> and <code>odbc_pconnect ()</code> functions.
+  The connect syntax is:
+	<DL>
+	<DT><code>odbc_connect (dsn, user_id, password)</code>
+	<DT><code>odbc_pconnect (dsn, user_id, password)</code>
+	</DL> 
+  For Empress dsn can be specified as either:
+	<DL>
+	<DT>Data source name
+	     <DD>This is the logical database name specified in the ODBC.INI file.
+
+	<DT>A full connection string, as specified in the ODBC standard.
+	    <DD>
+	    eg<BR>	
+	    dsn="DATABASE=<i>db_name</i>;SERVER=<i>server_name</i>;PORT=<i>server_port</i>"
+	    <P>
+	    <i>Note that there are other options for this string. But the three shown
+	    above are the most important for use with PHP.</i>
+	</DL>
+  Which of these you use is up to you. There are advantages and disadvantages to both.
+  Using the full connection string means that you do NOT require an ODBC.INI file
+  to access the database. However, if you move the datasource, or change the port on
+  which the RDBMS server listens, you will have to modify every call to the
+  odbc_connect/pconnect function.
+  <BR>The choice is yours...
+  <P>
+  <DT><B>Empress Installation: </B> 
+      In order to add the Empress interface to PHP you require an Empress RDBMS with
+      the Empress Connectivity option. If you PHP installation is on the same
+      platform as the RDBMS then setting EMPRESS_PATH to the installation directory
+      will automatically locate the Empress ODBC client driver. However, if the
+      PHP installation is on a separate platform from the RDBMS you will also
+      require an ODBC client on that platform, and you will need to specify the 
+      location of the driver when configuring the PHP installation.
+  </DL>
+
+  </DD>
+
+</DL>
+
+</BODY>
+</HTML>
+
+
 </DL>
 
 <HR noshade>
