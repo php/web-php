@@ -698,11 +698,15 @@ site_header("Links");
   <strong>Spanish</strong>
   <ul>
    <li>
-    <a href="http://www.lpsz.org">lpsz.org</a><br />
+    <a href="http://www.lpsz.org/">lpsz.org</a><br />
     PHP news, articles , and scripts.
    </li>
    <li>
-    <a href="http://zonaphp.com">zonaphp.com</a><br />
+    <a href="http://www.php.com.ve/">php.com.ve</a><br />
+    PHP dedicated site in Venezuela
+   </li>
+   <li>
+    <a href="http://zonaphp.com/">zonaphp.com</a><br />
     News and tutorials
    </li>
   </ul>
