@@ -248,12 +248,12 @@ function make404()
     @header('HTTP/1.1 404 Not Found');
     @header('Status: 404 Not Found',1,404);
     header("Cache-Control: public, max-age=600");
-    commonHeader('404 Not Found');
+    site_header('404 Not Found');
     echo "<h1>Not Found</h1>\n",
          "<p>The page <b>",
          htmlspecialchars($_SERVER['REQUEST_URI']),
          "</b> could not be found.</p>\n";
-    commonFooter();
+    site_footer();
     exit;
 }
 
