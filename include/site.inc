@@ -12,6 +12,7 @@
 $MIRRORS = array(
    "http://au.php.net:81/"            => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1, 1, "en"),
    "http://at.php.net/"               => array("at", "Goodie Domain Service", "gds", "http://gd.tuwien.ac.at/", 1, 0, "de"),
+#   "http://bg.php.net/"               => array("bg", "Bulgaria Online", "", "http://online.bg/", 1, 0, "en"),
    "http://br.php.net/"               => array("br", "SST Internet", "sst", "http://www.sst.com.br/", 1, 0, "pt_BR"),
    "http://ca.php.net/"               => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0, "en"),
    "http://php3.globe.de/"            => array("de", "@GLOBE GmbH", "globe", "http://www.globe.de/", 1, 0, "de"),
@@ -24,6 +25,7 @@ $MIRRORS = array(
    "http://php.fmal.com/"             => array("it", "Open Technology Consulting", "sts", "http://otc.fmal.com/", 1, 0, "it"),
    "http://it2.php.net/"              => array("it", "Utility Line Italia S.r.l.", "utilina", "http://www.uli.it/", 1, 0, "it"),
    "http://jp.php.net/"               => array("jp", "HappySize, Inc.", "happy", "http://jp.gigahit.com/", 1, 1, "jp"),
+#   "http://kr.php.net/"               => array("kr", "HolyNet", "", "http://www.holywar.net/", 1, 0, "kr"),
    "http://mx.php.net/"               => array("mx", "Urbano.com.mx", "urbano", "http://web.urbano.com.mx/?in=php", 1, 0, "es"),
    "http://nl.php.net/"               => array("nl", "WEBtic Internet Consultancy", "webtic", "http://www.webtic.com/", 1, 0, "nl"),
    "http://php.nederland.net/"        => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 1, 0, "nl"),
@@ -35,6 +37,7 @@ $MIRRORS = array(
    "ftp://ftp.utt.ro/mirrors/php3/"   => array("ro", "University of Timisoara","upt", "http://www.utt.ro/", 0, 0, "ro"),
    "http://ru.php.net/"               => array("ru", "Direct Internet", "directnet", "http://www.dn.ru/", 1, 0, "ru"),
    "http://se.php.net/"               => array("se", "Chalmers Lindholmen", "cl", "http://www.ios.chalmers.se/", 1, 1, "se"),
+#   "http://sg.php.net/"               => array("sg", "Hwa Chong Junior College", "", "http://www.hjc.edu.sg/", 1, 0, "en"),
    "http://ch.php.net/"               => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/", 1, 1, "en"),
    "http://sk.php.net/"               => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1, 0, "sk"),
    "http://es.php.net/"               => array("es", "IBD Internet", "ibd", "http://www.ibd.es/", 1, 0, "es"),

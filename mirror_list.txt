@@ -22,7 +22,7 @@ hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
-#kr	kr.php.net		php.kimm.re.kr	disappeared
+kr      kr.php.net      JunSeon Oh <holywar@holywar.net>        php.holywar.net
 #lv	lv.php.net	Alex Petrov <sysman@pd.gov.lv>	159.148.45.25
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	200.36.127.163
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
@@ -34,7 +34,7 @@ pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
 #ro	ro.php.net	cbredi@timisoara.roedu.net	193.226.9.16
 ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@ios.chalmers.se>	129.16.214.87
-#sg	sg.php.net	terence@com5.net	202.169.237.18	inactive - removed from mirrors array
+sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 tr	tr.php.net		php.bilkent.edu.tr	inactive - removed from mirrors array
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
