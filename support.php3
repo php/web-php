@@ -166,9 +166,11 @@ discussions).
   <li><a href="mailto:php3-france-subscribe@onelist.com">French PHP User's Mailing List</a>
   <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French PHP Newsgroup</a>
   <li><a href="http://www.php-center.de/">German PHP User's Mailing List</a>
+  <li><a href="news:de.comp.lang.php">German PHP Newsgroup</a>
   <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
   <li><a href="http://www.egroups.com/group/php-pt/info.html">Portuguese PHP User's Mailing List</a>
   <li><a href="mailto:php-subscribe@listserver.iwcc.com.ar">Spanish PHP User's Mailing List</a>
+  <li><a href="http://phptr.baslangic.net/">Turkish PHP Mailing List</a>
 </ul>
 
 <h3>Sample Code</h3>
