@@ -252,22 +252,24 @@ function manual_notes()
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
-        make_link($addnotelink, make_image('notes-add.gif', 'add a note')) .
+        make_link($addnotelink, make_image('notes-add.gif', 'add a note', 'middle')) .
         ' <small>' .
-        make_link($addnotelink, 'add a note', false, 'style="color:#000000"') .
+        make_link($addnotelink, 'add a note') .
         '</small>';
 
-    echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
-    echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-    echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
-    echo "<td align=\"right\">$addnotesnippet</td>\n</tr>\n";
+    echo <<<END_USERNOTE_HEADER
 
+<div id="usernotes">
+ <div class="head">
+  <span class="action">{$addnotesnippet}</span>
+  <small>User Contributed Notes</small><br />
+  <strong>{$title}</strong>
+ </div>
+END_USERNOTE_HEADER;
+    
     // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
-        echo '<tr valign="top">';
-        echo '<td bgcolor="#e0e0e0" colspan="2">';
-        echo 'There are no user contributed notes for this page.';
-        echo '</td></tr>';
+        echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
     }
      
     // If we have notes, print them out
@@ -278,12 +280,11 @@ function manual_notes()
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
             );
         }
-
-        echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-        echo "<td colspan=\"2\" align=\"right\">\n$addnotesnippet";
-        echo "</td>\n</tr>\n";
+        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
     }
-    echo "</table>\n";
+    
+    // End of #usernotes
+    echo "</div>";
 }
 
 // Get user notes from the appropriate text dump
@@ -318,50 +319,49 @@ function manual_notes_load($id)
 // Print out one user note entry
 function manual_note_display($date, $name, $text, $id)
 {
-    // Start user note row, with anchor for external links
-    echo "<tr valign=\"top\">\n<td bgcolor=\"#e0e0e0\" colspan=\"2\">\n" .
-         "<a name=\"#$id\"></a>";
+    if ($name) { $name = "\n  <strong>" . htmlspecialchars($name) . "</strong><br />"; }
+    $datestr = "\n  " . date("d-M-Y h:i", $date);
     
-    // User note specific table
-    echo '<table border="0" cellpadding="2" cellspacing="0" width="100%">' . "\n" .
-         '<tr valign="top"><td>' . "\n";
-
-    // Print out obfuscated email address if available
-    if ($name) { echo "<b>" . htmlspecialchars($name) . "</b><br />\n"; }
-    
-    echo date("d-M-Y h:i", $date) .
-         "</td>\n<td align=\"right\">\n";
-
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['MAGIC_COOKIE']) && $id) {
     
-        print_popup_link(
+        $admin = "\n  <span class=\"action\">\n   " .
+        
+        make_popup_link(
             'http://master.php.net/manage/user-notes.php?action=edit+' . $id,
             make_image('notes-edit.gif', 'edit note'),
             'admin',
             'scrollbars=yes,width=650,height=400'
-        );
+        ) . "\n   " .
     
-        echo '&nbsp';
-        print_popup_link(
+        make_popup_link(
             'http://master.php.net/manage/user-notes.php?action=reject+' . $id,
             make_image('notes-reject.gif', 'reject note'),
             'admin',
             'scrollbars=no,width=300,height=200'
-        );
+        ) . "\n   " .
     
-        echo '&nbsp';
-        print_popup_link(
+        make_popup_link(
             'http://master.php.net/manage/user-notes.php?action=delete+' . $id,
             make_image('notes-delete.gif', 'delete note'),
             'admin',
             'scrollbars=no,width=300,height=200'
-        );
-    }
+        ) . "\n  </span>";
+        
+    } else { $admin = ''; }
+    
+    $text = clean_note($text);
+    
+    echo <<<USER_NOTE_TEXT
 
-    // Print out the contents of the note
-    echo "<br /></td>\n</tr>\n<tr bgcolor=\"#f0f0f0\"><td colspan=\"2\">\n" .
-         clean_note($text) . "<br />\n</td></tr>\n</table>\n</td>\n</tr>\n";
+ <a name="$id"></a>
+ <div class="note">{$admin}{$name}{$datestr}
+  <div class="text">
+{$text}
+  </div>
+ </div>
+USER_NOTE_TEXT;
+ 
 }
 
 // =============================================================================
