@@ -371,6 +371,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		$where_clause .= " dev_id = '$by' ";
 	}
+        $where_clause .= " and php_version like '3%'";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
