@@ -38,7 +38,7 @@ and formats. Pick a language and format from the table below.
 Tip: If you are using a capable browser, the file size and
 date will show up when you move the mouse above the link.
 If you use another browser, or would like to see all the
-information, you can <a href="/docs.php?sizes=1">click
+information, you can <a href="/download-docs.php?sizes=1">click
 here to see all the file sizes and dates</a>.
 </p>
 
