@@ -46,14 +46,13 @@ For a description of PHP.net shortcut URLs, please visit our
 </p>
 <pre>
 tell application "BBEdit"
-    set my_function to selection of window 1 as string
-    if my_function = "" then
-        set my_function to text returned of
-            (display dialog "PHP Function:" default answer "")
+    set fu to selection of window 1 as string
+    if fu = "" then
+        set fu to text returned of (display dialog "PHP Function:" default answer "")
     end if
 
-    if my_function is not "" then
-        set target_URL to "http://www.php.net/" & my_function
+    if fu is not "" then
+        set target_URL to "http://www.php.net/" & fu
         open location target_URL
     end if
 end tell
