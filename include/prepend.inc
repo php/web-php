@@ -101,10 +101,10 @@ function myphpnet_load()
     global $MYPHPNET;
 
     // Empty the preferences array
-    $MYPHPNET = array();
+    $MYPHPNET = array(FALSE, FALSE);
     
     // If we have a cookie, set the values in the array
-    if (isset($_COOKIE['MYPHPNET'])) {
+    if (!empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
 }
@@ -112,10 +112,10 @@ function myphpnet_load()
 // Get or set preferred language code
 function myphpnet_language($langcode = FALSE)
 {
-    global $MYPHPNET;
+    global $MYPHPNET, $LANGUAGES;
 
     // Set language code
-    if ($langcode) {
+    if ($langcode && isset($LANGUAGES[$langcode])) {
         $MYPHPNET[0] = $langcode;
     }
     // Return code or FALSE
@@ -149,6 +149,11 @@ function myphpnet_urlsearch($type = FALSE)
 function myphpnet_save()
 {
     global $MYPHPNET;
+    
+    // Fill in values not specified
+    for ($i = 0; $i <= 1; $i++) {
+        if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
+    }
     
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
