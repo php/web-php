@@ -6,6 +6,34 @@ body, html {
     background-color: white;
 }
 
+/* Font settings for page elements */
+body, ul, td, th, p, h1, h2, h3, h4, small, .small,
+.tableTitle, .tableExtras, input, textarea, select {
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+code, pre, tt {
+    font-family: Courier, "Courier New", monospace;
+}
+
+/* General header styles */
+h1, h2, h3, h4 {
+    font-weight: bold;
+    color: #000066;
+}
+h1 { font-size: 130%; }
+h2 { font-size: 125%; }
+h3 { font-size: 110%; }
+h4 { font-size: 100%; }
+
+/* Event month header on homepage */
+h4.eventmonth {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 1px 0px;
+    background-color: lightgray;
+    padding: 2px;
+}
+
 /* Quicksearch table cell on top of every page. */
 td.quicksearch {
     color: white;
@@ -17,15 +45,6 @@ hr {
     color: black;
     background-color: black;
     height: 1px;
-}
-
-/* Event month header on homepage */
-h4.eventmonth {
-    border-style: solid;
-    border-color: black;
-    border-width: 0px 1px 1px 0px;
-    background-color: lightgray;
-    padding: 2px;
 }
 
 /* Left sidebar TOC on manual pages */
@@ -67,12 +86,6 @@ body, ul, td, th {
     font-size: 85%;
 }
 
-/* We use this font setting for everything, except codes */
-body, ul, td, th, p, h1, h2, h3, h4, small, a.small,
-.tableTitle, .tableExtras, input, textarea, select {
-    font-family: verdana, arial, helvetica, sans-serif;
-}
-
 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -106,34 +119,6 @@ acronym {
 
 .sidebar p {
 	text-align: left !important;
-}
-
-code, pre, tt {
-	font-family: Courier, "Courier New", monospace;
-}
-
-h1 {
-	font-size: 130%;
-	font-weight: bold;
-	color: #000066;
-}
-
-h2 {
-	font-size: 125%;
-	font-weight: bold;
-	color: #000066;
-}
-
-h3 {
-	font-size: 110%;
-	font-weight: bold;
-	color: #000066;
-}
-
-h4 {
-	font-size: 100%;
-	font-weight: bold;
-	color: #000066;
 }
 
 small, .small {
@@ -260,6 +245,6 @@ table.standard th.subr {
 }
 
 /* Maximum width input fields */
-input.max, textarea.max {
+input.max, textarea.max, select.max {
     width: 100%;
 }
