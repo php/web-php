@@ -16,9 +16,12 @@ It is currently in a public beta testing period.
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
 <li><a href="http://www.tryc.on.ca/php3.html">PHP 3.0 mailing list archive</a>
-<li><a href="http://www.php.net/cvsweb.cgi">Web interface to CVS repository for PHP3 tree</a>
+<li><a href="http://ca.php.net/cvsweb.cgi">Web interface to CVS repository for PHP3 tree</a>
 <!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
 </ul>
+<br>
+<center><font size=-1><i><b>Note:</b> The February issue of <font size=+1>WEB</font>Techniques has
+a full article on PHP3.  Pick up a copy!</i></font></center>
 <br>
 
 <center>
