@@ -24,3 +24,5 @@ jap@maya.cz				www.php.cz	212.24.129.2
 dan@amerikanclaris.com			cl.php.net	CNAME to ??
 alfre@ibd.es				es.php.net	195.55.198.14
 webmaster@goliath.urbano.com.mx		mx.php.net	200.36.127.163
+accdias@sst.com.br			br.php.net	200.223.126.4
+
