@@ -39,6 +39,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
 ?>
+<h1>ApacheCon Europe 2001 Call for Participation</h1>
+
+<p>
+<font class="newsDate">[05-May-2001]</font>
+The <?make_link("http://apachecon.com/2001/EU/#cfp","call for
+participation"?> has gone out for ApacheCon Europe 2001, which will
+run October 15-17 in Dublin, Ireland. Have an idea for a session
+or tutorial you could present about PHP or other Apache Software
+Foundation projects? Submit it before June 2, 2001!
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 <h1>PHP Conference</h1>
 <p>
 <font class="newsDate">[1-May-2001]</font>
