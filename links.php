@@ -157,16 +157,17 @@ free scripts, tutorials and many more<br></li>
 Home of PHP French documentation, with comprehensive technical informations<br></li>
 
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
-A french gateway to PHP related contents<br></li>
+A French gateway to PHP related contents<br></li>
 
 <li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
-French site about PHP/MySQL: Links, Tips, Articles, Manuals,
+French site about PHP/MySQL: Links, Tips, Articles, 
 FAQ, Code Downloads, and much more!<br></li>
 
 <li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
 A ring of French PHP Sites<br></li>
 
-<li><a href="http://johng.free.fr/">FAQ of the French PHP newsgroup</a><br></li>
+<li><a href="http://faqfciwap.free.fr/">FAQ of the French PHP newsgroup</A> :
+<a href="news://fr.comp.infosystemes.www.auteurs.php">fr.comp.infosystemes.www.auteurs.php</a><br></li>
 
 </ul></li>
 <li><b>Italian</b>
