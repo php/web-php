@@ -43,6 +43,10 @@ echo "<font size=\"-1\">\n";
    <td><select name="bug_age"><?php show_byage_options($bug_age);?></select></td>
   </tr>
   <tr>
+   <td colspan=2 align=right>OS (substr search):</td>
+   <td colspan="4"><input type="text" name="php_os" value="<?echo htmlspecialchars($php_os);?>">
+  </tr>
+  <tr>
    <td align="right">with text:</td>
    <td colspan="3"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the report or email address</td>
    <td colspan="2">max. <select name="limit"><?php show_limit_options($limit);?></select> entries / page.</td>
@@ -146,6 +150,10 @@ elseif ($cmd == "display") {
 
 	if ($bug_age) {
 		$where_clause .= " AND ts1 >= DATE_SUB(NOW(), INTERVAL $bug_age DAY)";
+	}
+
+	if ($php_os) {
+		$where_clause .= " AND php_os like '%$php_os%'";
 	}
 
 	if (!isset($phpver)) $phpver = "4";
