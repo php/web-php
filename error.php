@@ -231,6 +231,7 @@ $uri_aliases = array (
     "bugstats.php" => "bugstats", // BC
 
     "icap"         => "mcal", // mcal is the successor of icap
+    "odbc"         => "uodbc", // BC
     
     "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
