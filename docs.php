@@ -41,7 +41,7 @@ $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 
 
 ?>
 
-<h1>PHP Manual</h1>
+<h1>Documentation</h1>
 
 <p>
 The PHP manual is available online in a selection of languages.
