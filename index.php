@@ -151,6 +151,25 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+
+<h1>First PHP dedicated DVD released!</h1>
+<p>
+ <span class="newsdate">[13-Dec-2003]</span>
+ The PHP Qu&eacute;bec is pleased to announce the immediate availability
+ of PHP Qu&eacute;bec DVD. Over 6 hours of conferences, recorded in
+ Montr&eacute;al, in March 2003. DVD is subtitled in English and French,
+ making legendary sessions from Rasmus and Zeev available anywhere 
+ in the world. 
+<br /> 
+  This DVD makes a nice christmas present for every PHP enthusiast.
+  Available in
+ <a href="http://conf.phpquebec.org/main.php/en/dvd2003/main">English</a> or 
+ <a href="http://conf.phpquebec.org/main.php/fr/dvd2003/main">French</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://mysql.com/events/uc2004", "mysqluc2004.png", "MySQL User Conference 2004"); ?>
 
 <h1>Call for Participation: MySQL User Conference 2004</h1>
