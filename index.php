@@ -154,7 +154,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>Call to speaker for Paris Forum 2004</h1>
 <p>
  <span class="newsdate">[17-May-2004]</span>
- The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française
+ The <a href="http://www.afup.org/index.php">AFUP</a>, Association Fran&ccedil;aise
  des Utilisateurs de PHP, is proud to announce the forum PHP 2004. For this 
  unique event in France, we are looking for the best French speaking experts, 
  who want to share their know-how and enthusiasm. 
