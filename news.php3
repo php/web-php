@@ -55,6 +55,18 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Evolution of a Super Hero", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>", 
+	"http://www.webtechniques.com/archives/2000/05/ratschiller/", "Aprin 7, 2000");?>
+What's that in the sky? Is it Perl? Is it ASP? Is it JSP? No, it's PHP 4.0!
+Tobias Ratschiller has the inside story on what you can expect from release
+candidate 1.
+<? endEntry(); ?>
+
+<? makeEntry( "PHP: Past, Present, and Future", "by Rasmus Lerdorf, Stig Bakken, Andi Gutmans, and Zeev Suraski", 
+	"http://hotwired.lycos.com/webmonkey/radio/php.html", "February 27, 2000");?>
+You may already know that PHP is fast, stable, and easy to learn, but you may not know how it got that way. In this interview, Rasmus Lerdorf, the creator of PHP, talks about the unlikely origins of this open-source product. Then core developers Stig Bakken, Andi Gutmans, and Zeev Suraski explain how they came to work on PHP and discuss the evolution of the language. Plus, you'll hear about the planned support for XML and MySQL and what's going on with Zend.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP and XML, technical or cultural gap?", "by <a href=\"http://www.xmlhack.com/author.php?id=8\">Eric van der Vlist</a>", 
 	"http://www.xmlhack.com/read.php?item=338", "March 14, 2000");?>
 Classified as "the most popular Apache module" by E-Soft, PHP is one of the least frequently mentioned languages amongst the XML discussion lists.
