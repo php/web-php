@@ -733,10 +733,10 @@ function show_prev_next($begin,$rows,$link,$limit)
 	echo "<tr bgcolor=\"#cccccc\"><td align=\"center\" colspan=\"9\">";
     echo '<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>';
 	if ($begin > 0) {
-		echo "<td align=\"left\"><a href=\"$link&amp;begin=",max(0,$begin-30),"\">&laquo; Show Previous $limit Entries</a></td>";
+		echo "<td align=\"left\"><a href=\"$link&amp;begin=",max(0,$begin-$limit),"\">&laquo; Show Previous $limit Entries</a></td>";
 	}
 	if ($rows >= $limit) {
-		echo "<td align=\"right\"><a href=\"$link&amp;begin=",$begin+30,"\">Show Next $limit Entries &raquo;</a></td>";
+		echo "<td align=\"right\"><a href=\"$link&amp;begin=",$begin+$limit,"\">Show Next $limit Entries &raquo;</a></td>";
 	}
 	echo "</tr></table></td></tr>";
 }
