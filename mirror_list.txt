@@ -19,7 +19,7 @@ il	machba.il.php.net		132.68.252.253	same as php.technion.ac.il
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
-kr	kr.php.net		php.kimm.re.kr
+#kr	kr.php.net		php.kimm.re.kr	disappeared
 lv	lv.php.net	Alex Petrov <sysman@pd.gov.lv>	159.148.45.25
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	200.36.127.163
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com

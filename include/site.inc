@@ -29,7 +29,7 @@ $MIRRORS = array(
    "http://php.fmal.com/"         => array("it", "STS", "sts", "http://sts.fmal.com/", 1, 0),
    "http://it2.php.net/"          => array("it", "Utility Line Italia S.r.l.", "utilina", "http://www.uli.it/", 1, 0),
    "http://jp.php.net/"           => array("jp", "HappySize, Inc.", "happy", "http://jp.gigahit.com/", 1, 1),
-   "http://kr.php.net/"           => array("kr", "Kimm ACLab", "kimm", "http://aclab.kimm.re.kr/", 1, 0),
+#   "http://kr.php.net/"           => array("kr", "Kimm ACLab", "kimm", "http://aclab.kimm.re.kr/", 1, 0),
    "http://lv.php.net/"           => array("lv", "Police Department - Republic of Latvia", "police", "http://www.pd.gov.lv/", 1, 0),
    "http://mx.php.net/"           => array("mx", "Urbano.com.mx", "urbano", "http://web.urbano.com.mx/?in=php", 1, 0),
    "http://nl.php.net/"           => array("nl", "WEBtic Internet Consultancy", "webtic", "http://www.webtic.com/", 1, 0),
