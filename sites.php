@@ -47,7 +47,8 @@ share of attention.
 Now, buckle up your seat belt, and stop smoking. Here are the no-light streets:
 </p>
 
-<h2><a href="http://conf.php.net/">conf.php.net</a>: Conference Materials</h2>
+<h2><a href="http://talks.php.net/">talks.php.net</a>: Conference Materials</h2>
+<h3><a href="http://conf.php.net/">conf.php.net</a>: Older Conference Materials</h3>
 <p>
 This is where speakers at various PHP-related conferencess keep their slides.
 It covers all sorts of topics, from the famous 'Rasmus' introduction to PHP to
