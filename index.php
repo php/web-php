@@ -9,6 +9,10 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 4.0.1 Patch Level 2 available</h3>
+PHP 4.0.1pl2 addresses two bugs that were discovered in PHP 4.0.1, that
+prevent error_reporting() and readdir() from working properly.
+
 <h3>PHP 4.0.1 Released!</h3>
 June 28, 2000.  The first maintenance release for PHP 4.0 is out.  The new release features increased
 stability under Windows, improved error handling, several new features and lots of bug fixes (the full list 
