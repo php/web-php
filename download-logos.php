@@ -306,10 +306,27 @@ function random_bgcolor($min, $max)
   <td>
    <ul>
     <li>PHP icon resource for Windows</li>
-    <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
+    <li>suitable as icons for file extensions like .php and .phtml</li>
     <li>32x32 and 16x16 sizes, in true colour format... all in one .ICO file</li>
     <li>these icons are made by Gonzalo de la Pea</li>
     <li><a href="/images/logos/php_file.ico">ICO format</a></li>
+   </ul>
+  </td>
+ </tr>
+
+ <tr>
+  <td class="logo">
+   <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br />
+   (not exactly as shown)
+  </td>
+  <?php print_nostar(); ?>
+  <td>
+   <ul>
+    <li>PHP icon resource for Windows</li>
+    <li>suitable as icons for file extensions like .php and .phtml</li>
+    <li>48x48, 32x32, 24x24, 16x16 sizes, in each of Windows XP Alpha, 256 colour, and 16 colour formats... all in one .ICO file</li>
+    <li>these icons are made by Travis Carden (AM)</li>
+    <li><a href="/images/logos/php_script.ico">ICO format</a></li>
    </ul>
   </td>
  </tr>
@@ -323,7 +340,7 @@ function random_bgcolor($min, $max)
   <td>
    <ul>
     <li>PHP icon resource for Windows XP [<b>use only on WinXP!</b>]</li>
-    <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
+    <li>suitable as icons for file extensions like .php and .phtml</li>
     <li>
      48x48, 32x32, 24x24, 16x16 sizes, in each of 16 colour, 256 colour,
      and true colour formats... all in one .ICO file
