@@ -49,7 +49,8 @@ Mailing Lists temporarily unavailable
 While the CVS repository has been reactivated, we are still
 working on reestablishing our mailing list infrastructure.
 We will keep you posted about the progress. Thank
-you for your patience.
+you for your patience.  Note also that the PDF version of the
+documentation is also unavailable until further notice.
 <br clear="all">
 </p>
 
