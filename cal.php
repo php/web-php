@@ -410,7 +410,7 @@ foreach($re as $k=>$v) {
 		if (verify_password($user,$pw)) {
 			if(isset($HTTP_POST_VARS['Approve_Selected_x']) || isset($HTTP_POST_VARS['Approve_Selected']) || isset($HTTP_POST_VARS['Approve_Selected_y'])) {
 				foreach($entries as $entry=>$val) {
-					$result = mysql_query("update phpcal set approved=1, app_by='rasmus' where id=$entry");
+					$result = mysql_query("update phpcal set approved=1, app_by='$user' where id=$entry");
 					if(!$result) echo mysql_error();
 				}
 			}
