@@ -129,8 +129,8 @@ PHP Learning Center site.</li>
 <li><a href="http://www.itworks.demon.co.uk/phpeditors.htm">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs</li>
 
-<li><a href="http://phplib.sourceforge.net/">PHP Base Library</a><br>
-A collection of base code for developers of large PHP sites</li>
+<li><a href="http://php.foundries.sourceforge.net/">PHP Foundry at SourceForge</a><br>
+A great number of open source PHP projects actively developed</li>
 
 <li><a href="http://www.phpclasses.org/">The PHP Classes Repository</a><br>
 Useful PHP classes in a categorized listing</li>
