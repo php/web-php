@@ -424,6 +424,10 @@ German function reference for PHP like SelfHTML for HTML</li>
 <li><a href="http://www.phpgtk.de/">phpGTK.de</a><br>
 German site about PHPGTK</li>
 
+<li><a href="http://www.php-resource.de/">php-resource.de</a><br>
+This german php community gives you everything you need. A large
+script-archive, lots of tutorials and a qualified moderated forum that
+answers nearly all your question</li>
 </ul></li>
 
 <li><b>Hungarian</b>
