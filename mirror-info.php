@@ -3,6 +3,9 @@
 // Define $MYSITE and $LAST_UPDATED variables
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+// Text/plain content type for better readability in browsers
+header("Content-type: text/plain;charset=ISO-8859-1");
+
 // Try to find out if local search is possible
 unset($htsearch_prog);
 if (file_exists("configuration.inc")) {
