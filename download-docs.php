@@ -87,15 +87,18 @@ foreach ($LANGUAGES as $langcode => $language) {
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
     
+        // Actual filename of the file
+        $actual_file = $_SERVER['DOCUMENT_ROOT'] . "/distributions/manual/php_manual_$langcode.$extension";
+        
         // File named after the language and format exists
-        if (file_exists("distributions/manual/php_manual_$langcode.$extension")) {
+        if (file_exists($actual_file)) {
             
-            // Relative file path from here
+            // Mirror selection download URL
             $link_to = "/get/php_manual_$langcode.$extension/from/a/mirror";
 
             // Try to get size and changed date
-            $size    = @filesize($link_to);
-            $changed = @filemtime($link_to);
+            $size    = @filesize($actual_file);
+            $changed = @filemtime($actual_file);
             
             // Size available, collect information
             if ($size) {
