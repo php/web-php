@@ -75,13 +75,19 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
 
+<h3>Syndication</h3>
+
+<p>
+You can grab our news as an <img src="/gifs/rss10.gif" align="absmiddle">
+(RSS) feed via a daily dump in a file named <a href="/news.rss">news.rss</a>.
+</p>
+
 <h3>Contact</h3>
 
 <p>
 Please submit website bugs in the ' .
 make_link('http://bugs.php.net/', 'bug system') . '.
-</p>
-';
+</p>';
 
 // Find the type of logo provided and start the right
 // sidebar with it if a mirror banner is available
@@ -133,6 +139,18 @@ if ($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<h1>PHP news feed available</h1>
+<p>
+<font class="newsdate">[01-Dec-2002]</font>
+The news of PHP.net is available now in RSS 1.0 format via our
+new statical <a href="/news.rss">news.rss file</a>. You can
+add this file to any news reader or portal site to get the latest
+official PHP news. We strongly recommend you to cache the contents
+locally on your side, as the newsfeed is updated daily. The RSS
+file is available on every mirror site.
+
+<?php echo hdelim(); ?>
 
 <h1>PHP 4.3.0RC2 Released</h1>
 <p>
@@ -312,75 +330,6 @@ to report your results.
 <a href="downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
 release, and is a recommended update for all users of PHP, and Windows users in particular. A complete
 list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
-</p>
-
-<?php echo hdelim(); ?>
-
-
-<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "PHP Conference 2002", "right")); ?>
-
-<h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
-<p>
-<font class="newsdate">[05-Sept-2002]</font>
-After the big success of last year's first International PHP Conference this
-year's show will be even bigger and better.</p>
-
-<p>
-<a href="http://www.php-conference.de/2002/index_en.php">Come to Frankfurt</a>
-and meet the most excellent speakers of the PHP community on four following days
-packed with <a href="http://www.php-conference.de/2002/pw_en.php">whole day
-tutorials</a> on November 3 and 4 and a great variety of sessions on November
-5 and 6.</p>
-
-<p>
-The topics are PHP Applications, PHP &amp; Business, Database Topics, PHP &amp; GTK,
-PHP Internals / Extensions, PHP &amp; XML, and others.</p>
-
-<p><a href="https://www.entwickler.com/ssl/php2002/en/form_php2002.php">Early
-bird registration</a> will end on 7th of October. Students and private
-persons get special discounts.</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://www.php-con.com/", make_image("phpcon2002.png", "PHPCon 2002", "right") ); ?>
-
-<h1>PHPCon 2002 (California, Oct 24-25)</h1>
-<p>
-<font class="newsdate">[05-Sept-2002]</font> 
-<a href="http://www.php-con.com" title="PHPCon 2002">PHPCon 2002</a>, a
-2-day technical conference devoted entirely to PHP, announced today the
-launch of the PHPCon 2002 website, online registration, and a call for
-participation.</p>
-
-<p>
-<a href="http://www.php-con.com/2002/register.php">Early Bird
-registration</a> is now open for PHPCon 2002. Strong technical tracks on
-Enterprise PHP, Application Development, and XML combined with speakers
-from Rackspace, Yahoo!, Macromedia, and MySQL make this the conference a
-must attend for anyone interested in expanding their PHP knowledge.</p>
-
-<p>
-Join PHPCon in delivering the PHP message with Birds of a Feather (BoFs)
-and Works in Process (WiPs) sessions. Submit your BoF and WiP topics <a
-href="http://www.php-con.com/2002/bof_form.php" title=" BoF - WiP
-Submission ">online</a>.</p>
-
-<p>
-An idea who's time has come, don't miss this opportunity to attend the
-only conference in the US is placing PHP front and center as the language
-for solving web problems. PHPCon 2002, October 24 & 25, 2002, Millbrae,
-California.</p>
-
-<?php echo hdelim(); ?>
-
-<h1>Printer friendly manual pages with notes</h1>
-<p>
-<font class="newsdate">[03-Aug-2002]</font>
-Starting from today, the manual pages are not only available in their
-printer friendly versions, but also in printer friendly versions with
-user notes included. Check the links at the <a href="/manual">top of
-the manual pages</a> to go to printer friendly manual pages, and
-change languages.
 </p>
 
 <?php echo hdelim(); ?>
