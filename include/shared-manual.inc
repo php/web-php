@@ -39,14 +39,14 @@ function makeBorderTOC($this) {
     $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
 
     $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
-        make_link('./', make_image('caret-t.gif', $HOME[1]) . $HOME[1] ) . 
+        make_link('./', make_image('caret-t.gif', '^') . $HOME[1] ) . 
         '<br></td></tr>';
 
     $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
 
     if (($HOME[1] != $UP[1]) && $UP[1]) {
         $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
-            make_link($UP[0], make_image('caret-u.gif', $UP[1]) . $UP[1] ) . 
+            make_link($UP[0], make_image('caret-u.gif', '&lt;') . $UP[1] ) . 
             '</td></tr>';
     }
 
@@ -81,13 +81,13 @@ function navigationBar($title,$id,$loc) {
 
     echo '<tr><td>';
     if ($PREV[1]) {
-        echo make_link( $PREV[0] , make_image('caret-l.gif', 'previous') . $PREV[1] ) ;
+        echo make_link( $PREV[0] , make_image('caret-l.gif', '&lt;') . $PREV[1] ) ;
     }
     echo '</td>';
 
     echo '<td align="right">';
     if ($NEXT[1]) {
-        echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', 'next') ) ;
+        echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', '&gt;') ) ;
     }
     echo '</td>';
     echo '</tr>';
