@@ -141,6 +141,9 @@ endif;
 <? makeName("Bjørn Borud","borud@guardian.no",0);?>
   <UL TYPE=DISC><li>soundex code and lots of enthusiasm</UL><BR>
 
+<? makeName("Christian Cartus","chc@idgruppe.de",0);?>
+<UL TYPE=DISC><li>Informix Universal Server support</UL><BR>
+
 <? makeName("John Ellson","ellson@lucent.com",0);?>
   <UL TYPE=DISC><li>Freetype support</UL><BR>
 
