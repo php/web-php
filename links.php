@@ -570,6 +570,10 @@ site_header("Links");
     script-archive, lots of tutorials and a qualified moderated forum that
     answers nearly all your question
    </li>
+   <li>
+    <a href="http://www.phpreferenz.de/workshops.html">www.phpreferenz.de</a><br />
+    Free printable workshops for PHP newcomers
+   </li>
   </ul>
  </li>
 
