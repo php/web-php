@@ -95,14 +95,16 @@ site_header("Downloads");
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
   <span class="md5sum">md5: 4ad4c24c49d602fd26f373bd08627be4</span>
  </li>
+<!--
  <li>
-  <?php download_link('php-5.0.0-installer.exe', 'PHP 5.0.0 installer'); ?> - 26 July 2004<br />
+  <?php download_link('php-5.0.1-installer.exe', 'PHP 5.0.1 installer'); ?> - 26 July 2004<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
   <span class="md5sum">md5: ffce859b5f72ffee00dbe4f013053247</span>
  </li>
+-->
 </ul>
 
 <p>
