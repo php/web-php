@@ -55,7 +55,7 @@ function site_header($title = '', $onload = '')
     if (!empty($title)) { $title = ": $title"; }
     if (empty($onload)) { $onload = "searchHistory(); tocImages();"; }
     if (isset($EXPL_LANG)) {
-        $lang_input = '<input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
+        $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
     } else { $lang_input = ''; }
     
     print <<<END_HEADER
@@ -63,13 +63,14 @@ function site_header($title = '', $onload = '')
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
- <title>PHP.net{$title}</title>
+ <title>PHP{$title}</title>
  <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/sitewide.css");</style>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>
  <base href="{$_SERVER['BASE_HREF']}" />
 </head>
 <body onload="{$onload}">
+
 <div id="headnav">
  <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
  alt="PHP" width="120" height="67" /></a>
@@ -105,8 +106,7 @@ function site_header($title = '', $onload = '')
    </select>
    <input type="image"
           src="{$_SERVER['STATIC_ROOT']}/images/small_submit_white.gif"
-          class="submit" alt="search" />
-   {$lang_input}
+          class="submit" alt="search" />{$lang_input}
   </p>
  </form>
 </div>
