@@ -6,9 +6,7 @@ site_header("PHP 4.3.9 Release Announcement");
 ?>
 
 <h1>PHP 4.3.9 Release Announcement</h1>
-<!--
 <p>[ <a href="/release_4_3_9_fr.php">Version Fran&ccedil;aise</a> ]</p>
--->
 <p>
  PHP Development Team is proud to announce the immediate release of PHP <a href="/downloads.php">PHP 4.3.9</a>.
  This is a maintenance release that in addition to over 50 non-critical bug fixes, addresses a problem
