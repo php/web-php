@@ -115,6 +115,14 @@ p.formerror {
         padding: 2px 4px;
 }
 
+div.errors {
+        border: 1px dashed #660;
+        color: #600;
+        background: #fee;
+        margin: 4px;
+        padding: 6px;
+}
+
 div.tip {
         border: 1px solid #00c;
         color: #006;

@@ -378,4 +378,20 @@ function clean_note($text) {
     return $text;
 }
 
+function display_errors($errors)
+{ 
+	echo '<div class="errors">';
+	if (count($errors) > 1) {
+		echo "You need to do the following before your submission will be accepted:<ul>";
+		foreach ($errors as $error) {
+			echo "<li>$error</li>\n";
+		}
+		echo "</ul>";
+	}
+	else {
+		echo $errors[0];
+	}
+	echo '</div>';
+}
+
 ?>
