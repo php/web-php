@@ -1,67 +1,75 @@
-NOTE: If you want to become an official PHP mirror, please sure to
+MIRRORING OF THE PHP.NET WEBSITE
+------------------------------------------------------------------------
+
+If you want to become an official PHP mirror, please sure to
 read and follow these instructions carefully. You should have the
 consent of your hosting company (if you aren't a hosting company
 yourself), and be prepared for some reasonably significant bandwidth
-usage (a reasonable estimate as of 2/2001 is 100MB/day). Also,
-we are currently only accepting new official mirrors in countries
-where we don't already have two active official mirrors.
+usage (a reasonable estimate as of 2/2001 is 100MB/day).
+
+Also, we are currently only accepting new official mirrors in
+countries where we don't already have two active official mirrors.
 
 The PHP website requires PHP 4.
 
-Here is how to mirror the PHP site:
+HOW TO MIRROR THE PHP WEBSITE?
+------------------------------------------------------------------------
 
 First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
 
-   rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path 
+    rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path 
 
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 and .php
-files as PHP parsed files.  If it isn't, add the mime-type to your config.
+files as PHP parsed files. If it isn't, add the mime-type to your config.
 
 Rename the configuration.inc-dist file to configuration.inc and edit it
-appropriately.  Set $failover_user_notes=true to enable a live query
-to www.php.net to fetch user contributed manual notes.
+appropriately.
 
 Once you create a virtualhost which looks something like:
 
    <VirtualHost your-hostname-here>
-   ServerName your-hostname-here
-   ServerAlias xx.php.net www.xx.php.net
-   ServerAdmin yourname@yourdomain.com
-   DocumentRoot /www/htdocs/phpweb
-   php_value include_path .:/www/htdocs/phpweb/include
-   ErrorLog logs/error_log
-   TransferLog logs/access_log
-   DirectoryIndex index.php index.html
-   ErrorDocument 404 /error/
-   ErrorDocument 401 /error/
-   ErrorDocument 403 /error/
-   # next line is only necessary if generating stats (see stats/README.stats)
-   Alias /stats/ /path/to/local/stats
+     ServerName your-hostname-here
+     ServerAlias xx.php.net www.xx.php.net
+     ServerAdmin yourname@yourdomain.com
+     DocumentRoot /www/htdocs/phpweb
+     php_value include_path .:/www/htdocs/phpweb/include
+     ErrorLog logs/error_log
+     TransferLog logs/access_log
+     DirectoryIndex index.php index.html
+     ErrorDocument 404 /error/
+     ErrorDocument 401 /error/
+     ErrorDocument 403 /error/
+     # next line is only necessary if generating stats (see stats/README.stats)
+     Alias /stats/ /path/to/local/stats
    </VirtualHost>
 
-modified to reflect your local paths and country, of course, then your site
-should start working.
+modified to reflect your local paths and country, of course,
+then your site should start working.
 
-Note: The official names for PHP mirrors are in the convention: "xx.php.net",
-where "xx" is replaced by the 2-letter country code of your mirror's location.
-If there already is a "xx.php.net", then you should set up your ServerName to
-be "xx2.php.net" (or "xx3.php.net", etc.).  For a list of what's available and
-what is taken, have a look at http://www.php.net/mirror_list.txt.
+Note: The official names for PHP mirrors are in the convention:
+"xx.php.net", where "xx" is replaced by the 2-letter country code
+of your mirror's location. If there already is a "xx.php.net",
+then you should set up your ServerName to be "xx2.php.net". For
+a list of what's available and what is taken, have a look at
+http://www.php.net/mirrors.php
 
-You must also set up a cron job that periodically does an rsync to refresh 
-your web directory.  This will ensure that your web site is up to date. 
-Something like:
+You must also set up a cron job that periodically does an rsync
+to refresh your web directory. This will ensure that your web site
+is up to date. Something like:
 
    0,30 * * * * /usr/local/bin/rsync -avzC --delete rsync.php.net::phpweb /your/path
 
 (You don't need to update every half-hour, although it shouldn't
 hurt. You should try to stagger your times a bit from the example
 to help spread the load on the rsync.php.net server.)
+
+DATA REGISTERED ABOUT THE MIRROR SITES
+------------------------------------------------------------------------
 
 Once you have done the above and your site appears to work, send
 a message to mirrors@php.net with the following information, and
@@ -80,7 +88,7 @@ appropriate steps will be taken to integrate your mirror site:
   This uses webalizer, for which instructions for setting it up
   can be found in stats/README.stats
 - The name of your hosting company.
-- The URL of the site that hosts the mirror.  This is where you want
+- The URL of the site that hosts the mirror. This is where you want
   people will go when they click on the link for your mirror at the
   bottom of each page.
 - The preferred default language for your country (currently only
@@ -88,12 +96,15 @@ appropriate steps will be taken to integrate your mirror site:
   available in the preferred language yet, so long as English is
   an acceptable secondary default.
 
-It is *not* required to sign up to the mirrors mailing list, by
-sending an empty message to: php-mirrors-subscribe@lists.php.net
-as we are able to keep in touch with you using your given email
-address. The traffic on the mentioned mailing list is mainly
-interesting for the webmasters of php.net.
+It is *not* required to sign up to our mailing list named
+"php-mirrors". Besides the name, the traffic on this mailing
+list is mainly interesting for the webmasters of php.net,
+and we are able to keep in touch with you using your given
+email address. Anyway if you would like to follow the things,
+you can subscribe, by sending an empty empty message to:
+php-mirrors-subscribe@lists.php.net
 
-And finally, don't forget to put a nice little PHP logo somewhere on your 
-hosting company's site if possible.  Grab one of the logos from the 
-"Downloads" page on the PHP site, and link it to your mirror.
+And finally, don't forget to put a nice little PHP logo somewhere
+on your hosting company's site if possible. Grab one of the logos
+from the "Download PHP Logos and Icons" page on the PHP site,
+and link it to your mirror.
