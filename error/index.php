@@ -150,12 +150,14 @@ $uri_aliases = array (
     "icap"         => "mcal", // mcal is the successor of icap
     
     # external shortcut aliases ;)
-    "dochowto"    => "phpdochowto"
+    "dochowto"     => "phpdochowto"
+    "projects.php" => "projects", // for backward compatibility with PHP page!
     
 );
 
 $external_redirects = array(
-    "php4news"    => "http://cvs.php.net/co.php/php4/NEWS?p=1"
+    "php4news" => "http://cvs.php.net/co.php/php4/NEWS?p=1",
+    "projects" => "http://freshmeat.net/browse/183/"
 );
 
 // ============================================================================
