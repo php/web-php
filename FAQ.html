@@ -360,6 +360,23 @@ README.WIN32 file.
         echo "$var = $value&lt;br&gt;\n";
     } while (($value=next($HTTP_POST_VARS)) && ($var=key($HTTP_POST_VARS)));</PRE>
   </DD>
+
+  <DT><B>
+    When I do the following, the output is printed in the wrong order:<PRE>
+      function myfunc($argument) {
+        echo $myfunc + 10;
+      }
+      $variable = 10;
+      echo "myfunc($variable) = " . myfunc($variable);
+    </PRE>
+    <P>What's going on?
+  </B></DT>
+  <DD>
+    To be able to use the results of your function in an expression (such
+    as concatenating it with other strings in the example above), you need
+    to <B>return</B> the value, not echo it.
+  <P>
+  </DD>
 </DL>
 
 <H3>New Features</H3>
