@@ -199,8 +199,10 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
-<h1>International PHP Conference - Spring Edition
-Early Bird Discount runs out!</h1>
+
+<?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
+
+<h1>International PHP Conference - Spring Edition Early Bird Discount runs out!</h1>
 
 <p>
 <font class="newsdate">[09-Apr-2003]</font>
