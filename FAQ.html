@@ -111,18 +111,75 @@ their answers. If you have suggestions or additions, send them to
   </B></DT>
   <DD>
     Yes. You already have all the tools you need if you are running
-    entirely under Windows 95 or NT, where you can use ODBC and Microsoft's
-    ODBC drivers for Microsoft Access databases. From other platforms, you
-    would need to have a server running Windows NT (or possibly Windows 95)
-    which you connected to using ODBC drivers from your other platform and
-    <A href="http://www.openlinksw.com/">OpenLink Software's ODBC Agent</A>
-    software, which runs US$4,000.
+    entirely under Windows 95/98 or NT, where you can use ODBC and Microsoft's
+    ODBC drivers for Microsoft Access databases.<P>
+	If you are running PHP on a Unix box and want to talk to MS-Acces on
+	a Windows box you will need Unix ODBC drivers. 
+	<A href="http://www.openlinksw.com/">OpenLink Software</A> has Unix-based
+	ODBC drivers that can do this.  There is a free pilot program where you 
+	can download an evaluation copy that doesn't expire and prices start at
+	$675 for the commercial supported version.
 
-    <P>Some better alternatives are to use an SQL server that has
+    <P>Another alternative is to use an SQL server that has
     Windows ODBC drivers and use that to store the data, which you can
     then access from Microsoft Access (using ODBC) and PHP3 (using the
     built-in drivers), or to use an intermediary file format that Access
     and PHP3 both understand, such as flat-files or dBase databases.
+	On this point Caroline Idehen from OpenLink software writes:
+<blockquote><blockquote>
+Intermediary is not a good Idea, you want ODBC from PHP3 straight to your
+database - i.e. with OpenLink.
+Incidentally, if you need to use an intermediary file format, we have now
+released Virtuoso (a virtual database engine) for both NT and Linux (other
+platforms are expected shortly). Please visit our
+<A href="http://www.openlinksw.com">website</A> for a free download.
+</blockquote></blockquote>
+
+	<P>One option that has proven successful is to use MySQL and its
+	MyODBC drivers on Windows and synchronizing the databases.  Steve Lawrence 
+	writes:
+<blockquote><blockquote>
+<ol>
+<li> Install MySQL on your platform according to instructions with MySQL.
+Latest available from www.mysql.org (get it from your mirror!). No special
+configuration required except when you set up a database, and configure the
+user account, you should put % in the host field, or the host name of the
+windows computer you wish to access MySQL with. Make a note of your server
+name, username, and password.<P>
+
+<li> Download the MyODBC for windows driver from the MySQL site. Latest
+release is myodbc-2_50_19-win95.zip (NT available too, as well as source
+code). Install it on your windows machine. You can test the operation with
+the utilities included with this program.<P>
+
+<li> Create a user or system dsn in your ODBC administrator, located in the
+control panel. Make up a dsn name, enter your hostname, user name, password,
+port, etc for you MySQL database configured in step 1.<P>
+
+<li> Install Access with a full install, this makes sure you get the proper
+add-ins.. at the least you will need ODBC support and the linked table
+manager.<P>
+
+<li> Now the fun part! Create a new access database. In the table window right
+click and select Link Tables, or under the file menu option, select Get
+External Data and then Link Tables. When the file browser box comes up,
+select files of type: ODBC. Select System dsn and the name of your dsn
+created in step 3. Select the table to link, press ok, and presto! you can
+now open the table and add/delete/edit data on your MySQL server! You can
+also build queries, import/export tables to MySQL, build forms and reports,
+etc.<P>
+</ol>
+<b>Tips and Tricks:</b>
+- You can construct your tables in access and export them to MySQL, then
+link them back in. That makes table creation quick.<br>
+- When creating tables in access, you must have a primary key defined in
+order to have write access to the table in access. Make sure you create a
+primary key in MySQL before linking in access.<br>
+- If you change a table in MySQL, you have to re-link it in access. Go to
+tools&gt;add-ins&gt;linked table manager, cruise to your ODBC DSN, and select the
+table to re-link from there. you can also move your dsn source around there,
+just hit the always prompt for new location checkbox before pressing ok.	
+</blockquote></blockquote>
   <P>
   </DD>
 
