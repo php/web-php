@@ -342,15 +342,15 @@ array(
    ),
 
   array(
-    /* title[s]     */ "SAMS Teach Yourself PHP4 in 24 Hours",
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672318040/wwwphpnet",
+    /* title[s]     */ "SAMS Teach Yourself PHP4 in 24 Hours (2nd edition)",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672323117/wwwphpnet",
     /* author[s]    */ "Matt Zandstra",
     /* auth link[s] */ "",
     /* image        */ "zandstra.jpg",
-    /* information  */ "Sams, June 2000, ISBN 0-6723-1804-0, 481 pages<br>" .
-                       "Also available in " .
-                       make_link("http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801", "Hungarian"),
-    /* inform. link */ "http://www.corrosive.co.uk/",
+    /* information  */ "Sams, Dec 2001, ISBN 0-6723-2311-7, 528 pages<br>" . 
+                       "There is also more information on the first edition on
+                       <a href=\"http://www.sams.com/catalog/product.asp?product_id={AC657B6D-7E41-457D-A203-906D91B0C088}\">it's webpage</a>",
+    /* inform. link */ "http://www.sams.com/catalog/product.asp?product_id={F90FC049-C258-4E7C-AAA5-CDF148BBB9A0}",
     /* language     */ "en"
    ),
 
