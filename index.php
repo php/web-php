@@ -99,7 +99,13 @@ The 0.1 release of PHP-GTK is now available. PHP-GTK is
 a PHP extension that provides an object-oriented interface
 to GTK+ toolkit and enables you to write client-side
 cross-platform GUI applications. Win32 binary version
-should be available a little later. 
+should be available a little later.
+</p>
+<p>
+Note that previous versions require PHP 4.0.5/4.0.6,
+but <emp>0.1 requires the CVS version of PHP or
+4.0.7 (in the future)</emp> due to non-backwards
+compatible changes in the Zend engine.
 </p>
 <p>
 A talk on PHP-GTK was presented by Andrei Zmievski and
