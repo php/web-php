@@ -189,7 +189,7 @@ most things should be fine.
 
 <p>
 We have chosen a banner size which conforms with the
-<a href="http://www.iab.net/iab_banner_standards/bannersizes.html">Internet
+<a href="http://www.iab.net/standards/adunits.asp">Internet
 Advertising Bureau standards</a>.
 </p>
 
