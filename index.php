@@ -211,8 +211,7 @@ $ONLOAD = "boldEvents(); searchHistory();";
 // Write out common header
 commonHeader("Hypertext Preprocessor");
 
-// Diagnostical echo, to see what the mirror thinks about itself
-echo "\n<!--$MYSITE-->\n";
+// DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
 <h1>Select mirror for redirection</h1>
