@@ -140,15 +140,15 @@ if(!isset($pattern)) {
 		$config="php";
 		if ($show=="source") {
 			$exclude="/manual";
-			$restrict=".php.net/source";
+			$restrict=$MYSITE."source";
 			$where="PHP3 site source code";
 		} elseif ($show=="manual") {
-			$restrict=".php.net/manual";
+			$restrict=$MYSITE."manual";
 			$exclude="/source";
 			$where="PHP documentation";
 		} else {
 			$exclude="/source";
-			$restrict=".php.net/";
+			$restrict=$MYSITE;
 			$where="PHP3 web site";
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
