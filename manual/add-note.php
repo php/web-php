@@ -46,10 +46,8 @@ mysql_select_db("php3");
 if (isset($note)):
 	$now = date("Y-m-d H:i:s");
 	$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
-	# protect all HTML-like stuff in email (for "Joe Blow <joe@blow.com>")
-	$query .= "('" . htmlspecialchars($user) . "',"; 
-        # we don't encode the rest because the output side handles things
-        $query .= "'$note','$sect','$now','$lang')";
+        # no need to call htmlspecialchars() -- we handle it on output
+        $query .= "('$user','$note','$sect','$now','$lang')";
 	//echo "<!--$query-->\n";
 	if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
