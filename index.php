@@ -78,6 +78,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP.net: A Tourist's Guide</h1>
+<p>
+<font class="newsDate">[26-Apr-2002]</font>
+Damien Seguy has written <a href="/sites.php">a tourist's guide</a> to the
+various sites that make up the PHP.net family of sites. Did you know you can
+browse a hyperlinked version of the PHP source code at <a
+href="http://lxr.php.net/">lxr.php.net</a>? View the archives of all of the
+mailing lists at <a href="http://news.php.net/">news.php.net</a>? See what else
+you've been missing.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.0 released</h1>
 <p>
 <font class="newsDate">[22-Apr-2002]</font>
