@@ -142,9 +142,6 @@ A growing list of PHP scripts</li>
 An exhaustive PHP scripts collection, with more 400 useful functions (English
 and French).</li>
 
-<li><a href="http://phpeditors.dancinghippo.com/">PHP Editors List</a><br>
-A comprehensive list of editors you can use to edit PHP programs</li>
-
 <li><a href="http://php.foundries.sourceforge.net/">PHP Foundry at SourceForge</a><br>
 A great number of open source PHP projects actively developed</li>
 
@@ -216,28 +213,14 @@ The PHP section on the famous Webmonkey tutorial site</li>
 </ul>
 
 
-<h4>PHP Setup tools for Windows</h4>
+<h4>PHP Setup and Authoring Tools</h4>
 
 <ul>
-<li><a href="http://www.analogx.com/contents/download/network/phpconf.htm">AnalogX PHPConfig</a><br>
-A graphical frontend to PHP's php.ini file with support for all the standard
-PHP functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
-</li>
+<li><a href="http://www.hotscripts.com/PHP/Software_and_Servers/Installation_Kits/">List of installation kits</a><br />
+An extensive list of installation kits setting up servers and PHP for you in minutes.</li>
 
-<li><a href="http://www.easyphp.org/">EasyPHP</a><br>
-Windows wizard installs the latest PHP, Apache and MySQL for Windows. Fast and
-efficient.
-</li>
-
-<li><a href="http://www.php4win.com/">php4win</a><br>
-The latest PHP packages and useful tools for Windows</li>
-
-<li><a href="http://www.firepages.com.au/dev4.htm">phpdev</a><br>
-Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl</li>
-
-<li><a href="http://www.phpgeek.com/phptriad.php">PHPTriad</a><br>
-Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin, Perl, and
-some special modules</li>
+<li><a href="http://phpeditors.dancinghippo.com/">PHP Editors List</a><br>
+A comprehensive list of editors you can use to edit PHP programs</li>
 
 </ul>
 
