@@ -104,6 +104,7 @@ right away.</blockquote>
 	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("EduTest.Com","www.edutest.com");
 	site("FilmFrenzy.com","filmfrenzy.com");
+	site("FilmNetwork","www.fnw.de");
 	site("HitList","www.hitlist.com");
 	site("Independent Musicians Guild","www.scimg.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
@@ -334,6 +335,7 @@ right away.</blockquote>
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
 	site("I-D Gruppe","www.idgruppe.com");
+	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
 	siteEnd();
 
@@ -341,6 +343,7 @@ right away.</blockquote>
 	title("Miscellaneous");
 	siteStart();
 	site("Astrology Forum","www.astroforum.ch");
+	site("Banana Fish Bones","www.bananafishbones.de");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Distributed.Net","www.distributed.net");
