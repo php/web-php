@@ -433,7 +433,7 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">Password:</th>
   <td>
-   <input type="<?php echo ($edit == 1) ? "password" : "text";?>" name="pw" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($pw));?>">
+   <input type="password" name="pw" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($pw));?>">
    <?php if ($edit == 2) {?>
    [<a href="bug-pwd-finder.php">Lost your password?</a>]
    <?php }?>
