@@ -55,7 +55,9 @@ function addPlugin()
  <a href="http://extensionroom.mozdev.org/">search extensions</a> as well as
  <a href="http://www.apple.com/macosx/features/sherlock/">Sherlock</a> on MacOSX.
  <a href="javascript:addPlugin();">Install our sidebar plugin</a>, and enjoy the
- integrated search in Mozilla.
+ integrated search in Mozilla. Sherlock users should save our
+ <a href="<?php echo $MYSITE; ?>phpnetsearch.src">phpnetsearch.src file</a> to
+ their 'Internet Search Sites' folder.
 </p>
 
 <h2>Internet Explorer 5 and above</h2>

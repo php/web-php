@@ -4,6 +4,8 @@
  method="GET"
  action="<?php echo $MYSITE; ?>manual-lookup.php"
  searchForm="<?php echo $MYSITE; ?>"
+ update="<?php echo $MYSITE; ?>phpnetsearch.src"
+ updateCheckDays="7"
 >
 
 <input name="sourceid" value="Mozilla-search">
