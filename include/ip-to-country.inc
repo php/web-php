@@ -52,10 +52,13 @@ i2c_go();
 // cookie already storing this information)
 function i2c_go()
 {
-    global $_SERVER, $_COOKIE;
+    global $_SERVER, $_COOKIE, $COUNTRY;
 
     // User already has a country detected
-    if (!empty($_COOKIE['COUNTRY'])) { return TRUE; }
+    if (!empty($_COOKIE['COUNTRY'])) {
+       $COUNTRY = $_COOKIE['COUNTRY'];
+       return TRUE;
+    }
 
     // User is behind a proxy
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -73,8 +76,8 @@ function i2c_go()
     // Search in the database from the given index
     $country = i2c_search_in_db($ipnum, $idx);
 
-    // Simulate cookie
-    $_COOKIE['COUNTRY'] = $country;
+    // Set global variable for futher usage
+    $COUNTRY = $country;
 
     // Set the country in a cookie for a week and for all *.php.net servers
     return setcookie("COUNTRY", $country, time() + 60*60*24*7, '/', '.php.net');
