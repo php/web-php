@@ -394,13 +394,13 @@ function moveLayers() {
 		} else if (DOM) {
 			screenWidth = (document.body.clientWidth ? document.body.clientWidth : window.innerWidth) + 18;
 <? if ($FRAMEMODE!="manual"): ?>
-			document.getElementById('mirrorsKick').style.pixelLeft = 140;
-			document.getElementById('mirrorsKick').style.pixelTop = 215;
+			document.getElementById('mirrorsKick').style.left = 140;
+			document.getElementById('mirrorsKick').style.top = 215;
 <? endif; ?>
-			document.getElementById('qrefKick').style.pixelLeft = 140;
-			document.getElementById('qrefKick').style.pixelTop = 80;
-			document.getElementById('searchKick').style.pixelLeft = screenWidth-350;
-			document.getElementById('searchKick').style.pixelTop = 36;
+			document.getElementById('qrefKick').style.left = 140;
+			document.getElementById('qrefKick').style.top = 80;
+			document.getElementById('searchKick').style.left = screenWidth-350;
+			document.getElementById('searchKick').style.top = 36;
                 } else {
 			screenWidth = document.body.clientWidth + 18;
 <? if ($FRAMEMODE!="manual"): ?>
