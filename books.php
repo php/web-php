@@ -349,6 +349,19 @@ by Thomas Theis<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826690044/wwwphpnet07"
+><IMG SRC="/jpgs/susanne_wigard.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="160"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826690044/wwwphpnet07"
+>PHP 4</A><BR>
+by Dr. Susanne Wigard<BR>
+<SMALL>in German, BHV, December 2000, ISBN 3-8266-9004-4, 448 pages<BR>
+<A HREF="http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html">weitere Informationen</A></SMALL><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07"
 ><IMG SRC="/gifs/susanne_wigard.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="155"
 ></A><BR>
