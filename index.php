@@ -150,6 +150,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
+
+<h1>PHP 4.3.7RC1 released!</h1>
+<p>
+ <span class="newsdate">[25-May-2004]</span>
+ <a href="http://qa.php.net/">PHP 4.3.7RC1</a> has been released for testing. 
+ This is the first release candidate and should have a very low number of problems 
+ and/or bugs. Nevertheless, please download and test it as much as possible on 
+ real-life applications to uncover any remaining issues.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.638&r2=1.1247.2.668">NEWS</a> file.
+</p>
+<hr />
+
 <?php news_image("http://www.afup.org/article.php3?id_article=242", "afup2004.jpg", "AFUP"); ?>
 <h1>Call to speaker for Paris Forum 2004</h1>
 <p>
