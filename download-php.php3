@@ -1,10 +1,10 @@
 <?
 require("shared.inc");
 
-$current = "3.0RC2";
+$current = "3.0RC3";
 $win32_current = "3.0RC2";
 
-$filesizes["php-3.0RC2.tar.gz"]="~ 935KB";
+$filesizes["php-3.0RC3.tar.gz"]="~ 951KB";
 $filesizes["php-3.0RC2-win32.exe"]="~ 1054KB";
 
 commonHeader("Download PHP Engine");
