@@ -113,11 +113,11 @@ if(!is_primary_site()) {
 	function bugstats($status, $type) {
 		global $bug_type, $phpver;
 		if ($bug_type[$status][$type] > 0) {
-			if ($phpver == 4) {
-				$page = "bugs.php";
+			if ($phpver == 3) {
+				$page = "bugs-php3.php";
 			}
 			else {
-				$page = "bugs-php3.php";
+				$page = "bugs.php";
 			}
 			return '<A href="/' . $page . '?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
 		}
