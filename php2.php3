@@ -19,9 +19,9 @@ make
 make install</PRE>
 
 Now the tricky part.  PHP2 was written long before Apache-1.3.0 was released, so 
-it isn't quite a smooth as it could be.  Do the following:
-<PRE>cd phpfi-2.0.1
-./install</PRE>
+it isn't quite a smooth as it could be.  There is a bug in mod_php.module.in.  The
+trailing <b>&quot;</b> is missing.  Edit this file and add that.  Then run the
+<b>./install</b> program.
 
 During the install it asks you for the Apache include directory.  It will be something
 like <i>&lt;path&gt;/apache_1.3.0/src/include</i>.  After the install program has finished you will need 
