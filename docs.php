@@ -51,34 +51,32 @@ the table below.
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2" width="100%">
-
 <tr bgcolor="#cccccc"><th>Format</th><th>Languages</th></tr>
-
 <tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
 <?php
 
-  foreach ($man_languages as $langcode) {
-    echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>, ';
+  $langcount = count($man_languages);
+  foreach ($man_languages as $langnum = $langcode) {
+    echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
+    echo ($langcount != $langnum) ? ", " : "";
   }
 
 ?>
 </td></tr>
-
 <tr><th bgcolor="#dddddd">Printer friendly</th><td bgcolor="#eeeeee">
 <?php
 
   foreach ($man_languages as $langcode) {
-    echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>, ';
+    echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>';
+    echo ($langcount != $langnum) ? ", " : "";
   }
 
 ?>
 </td></tr>
-
 <tr><th bgcolor="#dddddd">Downloads</th><td bgcolor="#eeeeee">
 For other downloadable formats, please visit our new
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
-
 </table>
 
 <?php echo hdelim(); ?>
