@@ -52,12 +52,12 @@ download...</P><UL>
   <LI>Now download the rest of the PHP win32 build tools you will need from the 
   PHP <A href="http://www.php.net/extra/win32build.zip">extra</A> site.
   <LI>Download bcmath (number) support from the PHP version 4 
-  <A href="http://www.php.net/downloads/number.tar.gz">downloads</A> site. 
+  <A href="http://www.php.net/version4/downloads/number.tar.gz">downloads</A> site. 
   Licensing restrictions preclude this being bundled with the PHP source, but 
   there is nothing which prevents you from downloading it yourself and building 
   it as a part of the package.
   <LI>Also at the 
-  <A href="http://www.php.net/downloads/bindlib_w32.zip">downloads</A> site, 
+  <A href="http://www.php.net/version4/downloads/bindlib_w32.zip">downloads</A> site, 
   is a replacement for the resolv.lib included within the win32build.zip. 
   This adds some necessary functionality for dns name resolution.
   <LI>If you don't already have an unzip utility, you will need one. 

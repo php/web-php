@@ -195,7 +195,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 	
-    mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
+    mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
     $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
@@ -295,7 +295,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$external_processing_function="external_processing";
 	$row_coloring_function="row_coloring";
 	
-    mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
+    mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
     mysql_select_db("php3");
 
 	$tables[] = "bugdb";
@@ -351,7 +351,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-	mysql_pconnect($dbhost,$dbuser,$dbpwd)
+	mysql_connect($dbhost,$dbuser,$dbpwd)
 		or die("Unable to connect to SQL server.");
 	mysql_select_db("php3");
 
