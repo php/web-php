@@ -255,13 +255,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	{
 		switch($fieldname) {
 			case "id":
-				print "<a href=\"bugs.php3?id=$data\">$data</a>\n";	
+				print "<a href=\"bugs-php3.php?id=$data\">$data</a>\n";	
 				break;
 			case "Originator":
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
 			case "Mod":
-				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
+				print "<a href=\"bugs-php3.php?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
 			default:
 				$data = ereg_replace("<","&lt;",$data);
