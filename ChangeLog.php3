@@ -1,7 +1,25 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.15 Changes");
+commonHeader("PHP 3.0 -> 3.0.16 Changes");
 ?>
+
+<h3>April 05, 2000, Version 3.0.16</h3>
+
+<ul>
+<li>Fixed semaphore problem (Sascha)<br>
+  Reported by: ilia@astrive.com
+<li>Fixed pcre, dbase dupe symbol problems (Sascha)
+<li>Fixed pcre, regex, dbase relocation problems (Sascha)
+<li>Added UCD-SNMP 4.1.x support (Sascha)
+<li>Make it possible to set both the socket and the port at the same time
+  in mysql_[p]connect() (Rasmus)
+<li>Fixed exec() and friends and make them return last line of output 
+  again.  (Rasmus)
+<li>Added check and support for JPEG format available in gd-1.8+ (Rasmus)
+<li>Fixed Solid 2.3 support on glibc2 systems (Stig)
+<li>Enhanced resolution of microtime() on OS/2 by using the high resolution timer
+  API. (Brian Havard)
+</ul>
 
 <h3>February 25, 2000, Version 3.0.15</h3>
 

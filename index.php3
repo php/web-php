@@ -9,6 +9,14 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 3.0.16 released</h3>
+April 05, 2000. PHP 3.0.16 was released. This is mostly a bug fix release which
+adds support for gd-1.8, ucd-snmp 4.1, and high-resolution timers on OS/2.
+OpenBSD support has been improved considerably. The source package and
+Win32 binaries are available from the PHP homepage. The 
+<a href="ChangeLog.php3">ChangeLog</a> contains a
+full list of changes.
+
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4 Release Candidate 1</h3>
 The real thing is getting closer and closer.  After a very successful Beta 4

@@ -1,12 +1,12 @@
 <?
 require("shared.inc");
 
-$current = "3.0.15";
-$win32_current = "3.0.15";
+$current = "3.0.16";
+$win32_current = "3.0.16";
 #$rpm_current = "3.0.5-1";
 
-$filesizes["php-${current}.tar.gz"]="1,963 kB";
-$filesizes["php-${win32_current}-win32.zip"]="1,818 kB";
+$filesizes["php-${current}.tar.gz"]="1,993 kB";
+$filesizes["php-${win32_current}-win32.zip"]="1,887 kB";
 #$filesizes["mod_php3-${rpm_current}.i386.rpm"]="294 kB";
 #$filesizes["mod_php3-${rpm_current}.src.rpm"]="1,503 kB";
 

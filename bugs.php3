@@ -552,7 +552,8 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="3.0.15" selected>3.0.15
+    <option name="3.0.16" selected>3.0.16
+    <option name="3.0.15">3.0.15
     <option name="3.0.14">3.0.14
     <option name="3.0.13">3.0.13
     <option name="3.0.12">3.0.12
