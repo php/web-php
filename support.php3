@@ -48,6 +48,12 @@ been established for tracking bugs and ensuring that all reported bugs
 get addressed.  If you see a problem, please tell us so we can address it.
 </P>
 
+<h3>User Groups</h3>
+
+PHP user groups have started popping up.  Christopher
+R. Moewes-Bystrom is running a PHP user group registry at <a
+href="http://www.moewes.com/phpug.php3">http://www.moewes.com/phpug.php3</a>.
+
 <h3>Mailing Lists</h3>
 <P>
 One of the best resources is the very friendly and helpful mailing
