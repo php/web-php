@@ -149,6 +149,7 @@ right away.</blockquote>
 	site("Netvision","www.netvision.net.il");
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
+	site("Rackspace.com","www.rackspace.com");
 	site("Total Information Management AG","www.timso.ch");
 	site("XOOM Inc.","xoom.com");
 	site("Yebo! Net","www.yebo.co.za");
