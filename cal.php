@@ -7,11 +7,11 @@
   	exit;
   }
 */
-  if(!isset($format)) {
+  if (!isset($format)) {
     $format = 'html';
   }
 
-  if($format=='html') {
+  if ($format == 'html') {
 	commonHeader("Event Calendar",1);
 
 	include_once 'cvs-auth.inc';
@@ -23,8 +23,8 @@
 	}
   }
 
-  mysql_connect('localhost') or die('unable to connect to database');
-  mysql_select_db('php3');
+  @mysql_connect('localhost') or die('unable to connect to database');
+  @mysql_select_db('php3');
 
   $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
 /*
