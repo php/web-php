@@ -95,7 +95,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right")); ?>
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("news/international_conference.gif", "International PHP Conference 2001", "right")); ?>
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
 <p>
  <span class="newsdate">[17-Aug-2001]</span>
@@ -208,7 +208,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right")); ?>
+<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("news/international_conference.gif", "PHP International Conference 2001", "right")); ?>
 <h1>PHP conventions in Europe</h1>
 <p>
  <span class="newsdate">[14-Jun-2001]</span>
@@ -296,7 +296,7 @@ site_header("News Archive - 2001");
 
 <hr />
 
-<?php print_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<?php print_image("news/php-gtk-white.gif", "PHP-GTK", "right"); ?>
 <h1>Announcing PHP-GTK</h1>
 <p>
  <span class="newsdate">[01-Mar-2001]</span>
