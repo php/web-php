@@ -7,14 +7,19 @@ include_once "prepend.inc";
 unset($htsearch_prog);
 if (file_exists("configuration.inc")) {
     include_once 'configuration.inc';
+    $searchtype = 2;
 }
 if (isset($_SERVER['HTSEARCH_PROG'])) {
     $htsearch_prog = $_SERVER['HTSEARCH_PROG'];
+    $searchtype = 1;
 }
 if (!is_executable($htsearch_prog)) {
     unset($htsearch_prog);
 }
+if (!isset($htsearch_prog)) {
+    $searchtype = 0;
+}
 
-echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|" . ((int) isset($htsearch_prog));
+echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype";
 
 ?>
