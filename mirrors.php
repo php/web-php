@@ -24,20 +24,16 @@ commonHeader("Mirror Sites");
 <p>
  Mirror sites also have default language settings, so shortcut navigation
  services provide you results in that language. See the
- <a href="/urlhowto.php">URL shortcuts page</a> for examples of this behaviour.
+ <?php print_link("/urlhowto.php", "URL shortcuts page"); ?> for
+ examples of this behaviour.
 </p>
 <p>
  If you are interested in hosting a mirror of this site,
  <?php print_link("/mirroring.php", "here's how"); ?>.
 </p>
 
-<table border="0" cellpadding="2" cellspacing="1" width="100%">
- <tr bgcolor="#cccccc">
-  <th>Country</th>
-  <th>Mirror Address</th>
-  <th>Provider</th>
-  <th>Default Language</th>
- </tr>
+<p align="center">
+<table border="0" cellpadding="3" cellspacing="1" width="500">
 <?php
 
 // Previous mirror country code
@@ -50,28 +46,51 @@ foreach ($MURLS as $murl) {
     // If the mirror is not all right or it is virtual (not an official mirror), skip it
     if (mirror_status($murl) != MIRROR_OK || mirror_type($murl) == MIRROR_VIRTUAL) { continue; }
 
-    // Print out table row, color it specially if current mirror
-    echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '"><td>';
-
-    // Check country code, and only print
-    // out country name, if it is a new one
+    // Get country code, print out a
+    // country header, if it is a new one
     $country = mirror_country($murl);
     if ($prevcc != $country) {
-        echo $COUNTRIES[$country];
-    } else {
-        echo "&nbsp;";
+        echo '<tr><td colspan="4"></td></tr>';
+        echo '<tr bgcolor="#cccccc"><td width="40" align="center">';
+        print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], FALSE, 'CLASS="flag"');
+        echo '<br /></td>';
+        echo '<td colspan="3"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
+        echo '</tr>';
     }
 
-    // Print out table cells with mirror information
-    echo '</td><td>' . make_link($murl, $murl) .
-         '</td><td>' . make_link(mirror_provider_url($murl), mirror_provider($murl)) .
-         '</td><td>' . $LANGUAGES[default_language($murl)] . '</td></tr>' . "\n";
+    // Highlight this mirror if it is the current one
+    echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '">';
 
-    // Preserve previous contry code
+    // Print out caret (in bold if current mirror)
+    echo '<td bgcolor="#ffffff" align="right">';
+    print_image( ($MYSITE == $murl ? 'caret-r.gif' : 'caret-rg.gif') );
+    echo '<br /></td>';
+
+    // Print out mirror site link
+    echo '<td><small>';
+    $ps = strpos($murl, '//') + 2;
+    print_link($murl, substr($murl, $ps, -1));
+    echo '</small><br /></td>';
+
+    // Print out mirror provider's link
+    echo '<td><small>';
+    print_link(mirror_provider_url($murl), mirror_provider($murl));
+    echo '</small><br /></td>';
+
+    // Print out mirror's default language
+    echo '<td><small>';
+    echo $LANGUAGES[default_language($murl)];
+    echo '</small><br /></td>';
+
+    // End row for this mirror
+    echo '</tr>';
+
+    // Maintain previous country code
     $prevcc = $country;
 }
 
 ?>
 </table>
+</p>
 
 <?php commonFooter(); ?>

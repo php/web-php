@@ -71,8 +71,8 @@ foreach ($MURLS as $murl) {
     $country = mirror_country($murl);
     if ($prevcc != $country) {
         echo '<tr><td colspan="3"></td></tr>';
-        echo '<tr bgcolor="cccccc"><td width="40" align="center">';
-        print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], false, 'CLASS="flag"');
+        echo '<tr bgcolor="#cccccc"><td width="40" align="center">';
+        print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], FALSE, 'CLASS="flag"');
         echo '<br /></td>';
         echo '<td colspan="2"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
         echo '</tr>';
