@@ -92,20 +92,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
-<!--
-  <li>Win32 binaries will be posted soon!</li>
--->
-<!--
-  <li>Java binaries will be posted soon!</li>
-  <li>Servlet Server API:
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-servlet-jdk118.zip&source_site=<?php echo $server; ?>">jdk1.1.8</a>,
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-servlet-jdk122.zip&source_site=<?php echo $server; ?>">jdk1.2.2</a>,
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-servlet-jdk13.zip&source_site=<?php echo $server; ?>">jdk1.3</a>
-  <li>Java extensions:
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-java-jdk118.zip&source_site=<?php echo $server; ?>">jdk1.1.8</a>,
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-java-jdk122.zip&source_site=<?php echo $server; ?>">jdk1.2.2</a>,
-    <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-java-jdk13.zip&source_site=<?php echo $server; ?>">jdk1.3</a>
--->
+<?php //  <li>Win32 binaries will be posted soon!</li> ?>
 </ul>
 
 <h2>File Uploads Security Fix</h2>
