@@ -48,6 +48,13 @@ h3 {
 	color: #000066;
 }
 
+h4 {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #000066;
+}
+
 small {
 	font-family: arial,helvetica,sans-serif;
 	font-size: 75%;
