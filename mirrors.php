@@ -6,8 +6,9 @@ if (isset($REDIRECT)) {
   exit;
 }
 
-commonHeader("Mirrors Page");
+commonHeader("Mirror Sites");
 ?>
+
 <h1>Mirror Sites</h1>
 
 <p>

@@ -5,7 +5,7 @@ $SIDEBAR_DATA='
 <h3>Documentation</h3>
 <p>
 A good place to start is by skimming through the ever-growing <a
-href="/FAQ.php">FAQ</a>.  Then have a look at the online manual and
+href="/FAQ.php">FAQ</a>. Then have a look at the online manual and
 other resources in the <a href="/docs.php">documentation</a> section.
 </p>
 
@@ -18,7 +18,7 @@ learning PHP, as well as extending your existing knowledge.
 
 <h3>User Groups</h3>
 <p>
-PHP user groups have started popping up.  Christopher
+PHP user groups have started popping up. Christopher
 R. Moewes-Bystrom is running a PHP user group registry at <a
 href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.<br>
 As Germanys PHP-community is quite busy, they have their own user groups.
@@ -28,7 +28,7 @@ at <a href="http://www.phpug.de/">http://www.phpug.de/</a>.
 
 <h3>Sample Code</h3>
 <p>
-Looking for some more sample PHP scripts?  Our <A
+Looking for some more sample PHP scripts? Our <A
 HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
 great places to find many example scripts and useful functions, organized for 
 your searching pleasure!
@@ -60,7 +60,7 @@ commonHeader("Support");
 if (isset($maillist)) {
 	# should really grab some email validating routine and use it here.
 	if (empty($email) || $email == 'user@example.com') {
-		echo "You forgot to specify an email address to be added to the list.  ";
+		echo "You forgot to specify an email address to be added to the list. ";
 		echo "Go back and try again.";
 	} else {
 		$request = strtolower($action);
@@ -198,9 +198,9 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 
 ?>
 
-<form method="POST" action="http://www.php.net/support.php">
+<form method="post" action="http://www.php.net/support.php">
 <p>
-<table cellpadding="5" cellspacing="1">
+<table cellpadding="5" cellspacing="1" border="0">
 <?php
 
 while ( list(, $listinfo) = each($mailing_lists)) {
@@ -235,9 +235,9 @@ while ( list(, $listinfo) = each($mailing_lists)) {
 
 <p align="center">
 <b>Email:</b>
-<input type=text name="email" width=40 value="user@example.com">
-<input type=submit name="action" value="Subscribe">
-<input type=submit name="action" value="Unsubscribe">
+<input type="text" name="email" width="40" value="user@example.com">
+<input type="submit" name="action" value="Subscribe">
+<input type="submit" name="action" value="Unsubscribe">
 </p>
 
 </form>
@@ -278,6 +278,7 @@ selecting the appropriate option on the top-right of every page.
 <?php echo hdelim(); ?>
 
 <h1>Local Mailing Lists</h1>
+
 <p>
 There are also some mailing lists and newsgroups for PHP users
 that have been set up by others in the community to host local
@@ -285,19 +286,20 @@ that have been set up by others in the community to host local
 </p>
 
 <ul>
-  <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a>
-  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a>
-  <li><a href="http://www.php-center.de/">German Mailing List</a>
-  <li><a href="news:de.comp.lang.php">German Newsgroup</a>
-  <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian Mailing List</a>
-  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a>
-  <li><a href="mailto:php3-it-request@michel.enter.it">Italian Mailing List</a>
-  <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a>
-  <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a>
-  <li><a href="http://phptr.baslangic.net/">Turkish Mailing List</a>
+  <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a></li>
+  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
+  <li><a href="http://www.php-center.de/">German Mailing List</a></li>
+  <li><a href="news:de.comp.lang.php">German Newsgroup</a></li>
+  <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian Mailing List</a></li>
+  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
+  <li><a href="mailto:php3-it-request@michel.enter.it">Italian Mailing List</a></li>
+  <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
+  <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a></li>
+  <li><a href="http://phptr.baslangic.net/">Turkish Mailing List</a></li>
 </ul>
 
 <?php
 }
+
 commonFooter();
 ?>
