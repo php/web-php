@@ -36,7 +36,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "Bug description:\n";
     $report .= indent($bugdesc, "    ");
 
-    echo $report;
+    $html_report = ereg_replace("<", "&lt;", $report);
+    $html_report = ereg_replace(">", "&gt;", $html_report);
+
+    echo $html_report;
 
     echo("</pre>\n");
 
