@@ -420,17 +420,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
-		
-			### Changes made by j.a.greant 00/09/02
-			
-			$result = mysql_query("SELECT ts, email, comment from bugdb where id=$id order by ts");
-			while ($temp = @ mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
-			  {
-			  	$prev_comments .= "[$temp[0]] $temp[1]\n$temp[2]\n\n" . str_repeat ('-', 76) . "\n\n";
-			  }
-
-			
-			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment\n\nPrevious Comments:\n\n$prev_comments";
+			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment\n";
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
