@@ -9,7 +9,7 @@ $X11 = false; $HAVE_STYLE = false;
 $HTDIG = false;
 
 $DISABLE_KICKOUTS = false;
-if($SCRIPT_NAME=="/bugs.php3" || $SCRIPT_NAME=="/bugstats.php3" || ($SERVER_NAME=="bugs.php.net" && $SCRIPT_NAME == "/")) {
+if($SCRIPT_NAME=="/bugs.php3" || $SCRIPT_NAME=="/bugstats.php3") {
 #	$my_logo="/jpgs/logo-bug.jpg";
 	$my_logo="/gifs/logo-bug.gif";
 	$my_size="WIDTH=130 HEIGHT=73";
