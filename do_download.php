@@ -9,17 +9,19 @@ if (!isset($download_file)
 	exit("Invalid file requested for download!");
 }
 
-if (!isset($source_site)) {
-	$source_site="www.php.net";
-}
+header("Location: http://$SERVER_NAME/distributions/$download_file");
 
-header("Location: http://$source_site/distributions/$download_file");
+$remote_log = 
+    @fopen("http://www.php.net/log_download.php".
+        "?download_file=" . urlencode($download_file).
+        "&mirror=" . urlencode($SERVER_NAME).
+        "&user_referer=" . urlencode($HTTP_REFERER).
+        "&user_ip=" . urlencode($REMOTE_ADDR), 
+    'r');
 
-$log = @fopen("logs/download.log", "a");
-if ($log) {
-	$log_line = sprintf("%s %s %s %s %s", date("H:i:s d-M-Y"), $HTTP_REFERER, $download_file, gethostbyaddr($REMOTE_ADDR), $source_site);
-	fputs($log, "$log_line\n");
-	fclose($log);
+if ($remote_log) {
+    fread($remote_log, 1024);
+    fclose($remote_log);
 }
 
 ?>
