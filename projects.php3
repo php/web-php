@@ -82,7 +82,7 @@ use an installation of IMP to check your mail from anywhere that you have web ac
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
 <? endEntry();?>
 
-<? makeEntry("MyAdServer","http://www.incluso.com","Incluso Networks","wj@incluso.com"); ?>
+<? makeEntry("MyAdServer","www.incluso.com","Incluso Networks","wj@incluso.com"); ?>
 This is a web adserver using PHP3.0 and MySQL  It includes the following features:
 <ul>
 <li> &quot;random&quot; rotation of banners on web pages, done by inserting just one line
