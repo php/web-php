@@ -195,9 +195,9 @@ The PHP Documentation Team has a documentation howto, including coverage
 on how to set up a working environment on Unix/Linux/Windows, how to build
 HTML formatted docs from the XML sources, what conventions to follow when
 writing documentation, etc. If you are interested in the process, or would
-like to start/join a translation, you can download the howto here:
-<a href="http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1">http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz</a>.
-Note, that <a href="/manual/howto">it is also readable online</a>.
+like to start/join a translation, you can <a href="/get/dochowto">download
+the howto</a>. Note, that <a href="/manual/howto">it is also readable
+online</a>.
 </p>
 
 <?php commonFooter(); ?>
