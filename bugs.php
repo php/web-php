@@ -805,6 +805,7 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+   <option name="4.0.4pl1">4.0.4pl1
    <option name="4.0.4">4.0.4
    <option name="4.0.3pl1">4.0.3pl1
    <option name="4.0.3">4.0.3
