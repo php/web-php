@@ -1,6 +1,6 @@
 <?
   require_once 'prepend.inc';
-  commonHeader("PHP Event Calendar");
+  commonHeader("Event Calendar");
 
 	require_once 'cvs-auth.inc';
 	if (isset($save) && isset($pw)) { # non-developers don't have $user set
