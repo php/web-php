@@ -154,7 +154,7 @@ function show_menu($state)
 		echo "<input type='hidden' name='edit' value='1'>\n";
 	else
 		echo "<input type='hidden' name='edit' value='2'>\n";
-	echo "</td><td><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
+	echo "</td><td align=\"center\"><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
 
@@ -502,7 +502,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
-	$default_header_color="dddddd";
+	$default_header_color="cccccc";
 	$centering["id"] = $centering["Mod"] = "center";
 	$dont_link["Mod"]=1;
 	$dont_display["unchanged_days"] = 1;
