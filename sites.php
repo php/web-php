@@ -115,8 +115,8 @@ site_header("A Tourist's Guide");
  The PHP project is organised with a CVS server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
- href="http://cvs.php.net/cvs.php/php4/">php4</a> module is the repository for
- the source code to the latest version of PHP itself.
+ href="http://cvs.php.net/cvs.php/php-src/">php-src</a> module is the 
+ repository for the source code to the latest version of PHP itself.
 </p>
 
 <h2><a href="http://bonsai.php.net">bonsai.php.net</a>: Bonsai</h2>
