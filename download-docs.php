@@ -113,7 +113,7 @@ foreach ($LANGUAGES as $langcode => $language) {
         }
         
         // Unable to find file
-        else (!$link_to) {
+        else {
             $files[] = '';
         }
     }
