@@ -26,11 +26,11 @@ development of PHP3 you should join the developers'
 list by sending an empty message to <a href="mailto:
 php-dev-subscribe@php.iquest.net">php-dev-subscribe@php.iquest.net</a>.
 
-<h3>PX - PHP Code Exchange</h3>
-Looking for some more sample PHP scripts?  <A
-HREF="http://www.sklar.com/px/">PX</A>, the PHP Code Exchange is a
-great place to start.  Here you'll find many example scripts and useful
-functions, organized for easy finding.
+<h3>Sample Code</h3>
+Looking for some more sample PHP scripts?  Our <A
+HREF="/links.php3">links page</A> page lists some archives of sample PHP code - 
+great places to find many example scripts and useful functions, organized for 
+your searching pleasure!
 
 <h3>Getting the Latest Development Version</h3>
 PHP is developed using CVS, so it's possible to obtain the latest
