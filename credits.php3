@@ -9,7 +9,7 @@ $CORE = array(
 	"rasmus"	=> array ("Rasmus Lerdorf","rasmus@php.net"),
 	"andi"	=> array ("Andi Gutmans","andi@zend.com"),
 	"zeev"	=> array ("Zeev Suraski","zeev@zend.com"),
-	"stig"	=> array ("Stig Bakken","ssb@guardian.no"),
+	"stig"	=> array ("Stig Bakken","ssb@fast.no"),
 	"shane"	=> array ("Shane Caraveo","shane@caraveo.com"),
 	"jim"		=> array ("Jim Winstead","jimw@php.net")
 );
@@ -138,7 +138,7 @@ endif;
 <? makeName("Alex Belits","abelits@phobos.illtel.denver.co.us",0);?>
   <UL TYPE=DISC><li>fhttpd support</UL><BR>
 
-<? makeName("Bjørn Borud","borud@guardian.no",0);?>
+<? makeName("Bjørn Borud","borud@fast.no",0);?>
   <UL TYPE=DISC><li>soundex code and lots of enthusiasm</UL><BR>
 
 <? makeName("Christian Cartus","chc@idgruppe.de",0);?>
