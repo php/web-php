@@ -82,6 +82,61 @@ $books = array (
 //  ),
 
   array(
+   /* title[s]     */ "Beginning PHP 5 and MySQL: From Novice to Professional",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1893115518/wwwphpnet",
+   /* author[s]    */ "W. Jason Gilmore",
+   /* auth link[s] */ "http://www.wjgilmore.com",
+   /* image        */ "1893115518.gif",
+   /* information  */ "Apress, 2004, ISBN 1-893115-51-8, 768 pages",
+   /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=143",
+   /* language     */ "en"
+  ),
+
+  array(
+   /* title[s]     */ "Beginning PHP 5 and MySQL: From Novice to Professional",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1590593928/wwwphpnet",
+   /* author[s]    */ array("Cristian Darie", "Mihai Bucica"),
+   /* auth link[s] */ "",
+   /* image        */ "1590593928.gif",
+   /* information  */ "Apress, 2004, ISBN 1-59059-392-8, 568 pages",
+   /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=356",
+   /* language     */ "en"
+  ),
+
+  array(
+   /* title[s]     */ "PHP 5 Objects, Patterns, and Practice",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1590593804/wwwphpnet",
+   /* author[s]    */ "Matt Zandstra",
+   /* auth link[s] */ "",
+   /* image        */ "1590593804.gif",
+   /* information  */ "Apress, 2004, ISBN 1-59059-380-4, 438 pages",
+   /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=358",
+   /* language     */ "en"
+  ),
+
+  array(
+   /* title[s]     */ "PHP Web Development with Macromedia Dreamweaver MX 2004",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1590593502/wwwphpnet",
+   /* author[s]    */ array("Allan Kent", "David Powers", "Rachel Andrew"),
+   /* auth link[s] */ "",
+   /* image        */ "1590593502.gif",
+   /* information  */ "Apress, 2004, ISBN 1-59059-350-2, 544 pages",
+   /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=306",
+   /* language     */ "en"
+  ),
+
+  array(
+   /* title[s]     */ "PHP MySQL Website Programming: Problem - Design - Solution",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/159059150X/wwwphpnet",
+   /* author[s]    */ array("Chris Lea", "Mike Buzzard", "Jessey White-Cinis", "Dilip Thomas"),
+   /* auth link[s] */ "",
+   /* image        */ "159059150X.gif",
+   /* information  */ "Apress, 2003, ISBN 1-59059-150-X, 528 pages",
+   /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=200",
+   /* language     */ "en"
+  ),
+  
+  array(
     /* title[s]     */ array("Using PHP and MySQL", "With FreeBSD and Apache"),
     /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20023",
     /* author[s]    */ "C.C.J.",
