@@ -23,7 +23,7 @@ the majority of PHP applications will work out of the box, or with very few modi
 
 <h2>Private and Protected Members</h2>
 <p>
-PHP 5 introduces private and protected member variables, they allow do define the visibility of class
+PHP 5 introduces private and protected member variables, they allow you to define the visibility of class
 properties.
 </p>
 
