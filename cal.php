@@ -63,7 +63,7 @@ CREATE TABLE phpcal (
 	 *            -2 = second-last
 	 */
 	function weekday($year, $month, $day, $which) {
-		$ts = mktime(12,0,0,$month+(($which>0)?0:1),($which>0)?1:0,$year);	
+		$ts = mktime(12,0,0,$month+(($which>0)?0:1),($which>0)?1:0,$year);
 		$done = false;
 		$match = 0;
 		$inc = 3600*24;
@@ -80,22 +80,22 @@ CREATE TABLE phpcal (
 	function load_unapproved_events() {
 		global $re;
 		$days = days();
-		$result = mysql_query("select * from phpcal where approved=0 order by sdato");
+		$result = mysql_query("select phpcal.*, country.name as name from phpcal, country where phpcal.country=country.id and approved=0 order by sdato");
 		if(!$result) echo mysql_error();
 		else {
 			while($row = mysql_fetch_array($result)) {
 				switch($row['tipo']) {
 					case 1:
-						$events[] = array($row['id'],$row['sdato'],$row['sdesc'],$row['ldesc'],$row['url']);
+						$events[] = array($row['id'],$row['sdato'],$row['sdesc'],$row['ldesc'],$row['url'], $row['name'], $row['category']);
 						break;
 					case 2:
-						$events[] = array($row['id'],$row['sdato'].' to '.$row['edato'],$row['sdesc'],$row['ldesc'],$row['url']);
+						$events[] = array($row['id'],$row['sdato'].' to '.$row['edato'],$row['sdesc'],$row['ldesc'],$row['url'], $row['name'], $row['category']);
 						break;
 					case 3:
 						list($which,$day) = explode(':',$row['recur']);
-						$events[] = array($row['id'],'Every '.$re[(int)$which].' '.$days[$day],$row['sdesc'],$row['ldesc'],$row['url']);
+						$events[] = array($row['id'],'Every '.$re[(int)$which].' '.$days[$day],$row['sdesc'],$row['ldesc'],$row['url'], $row['name'], $row['category']);
 						break;
-				}	
+				}
 			}
 		}
 		return $events;
@@ -192,7 +192,7 @@ CREATE TABLE phpcal (
 		?>
 <table border=0 cellspacing=0 cellpadding=3 width=100%><tr bgcolor=#d0d0d0>
 <th align=left>
-<table width=100% border=0>
+<table width=100% border=0
 <tr><td align=left><a href="cal.php?a=<?php echo $a?>&ap=<?php echo $ap?>&cm=<?php echo $pm?>&cy=<?php echo $py?>"><?php echo $months[$pm].', '.$py?></a></td>
 <td align=center><b><?php echo $month,', '.$y?></b></td>
 <td align=right><a href="cal.php?a=<?php echo $a?>&ap=<?php echo $ap?>&cm=<?php echo $nm?>&cy=<?php echo $ny?>"><?php echo $months[$nm].', '.$ny?></a></td></tr></table></th>
@@ -210,10 +210,10 @@ CREATE TABLE phpcal (
 			if($j==0) echo '<th width=14.2% bgcolor=#a0a0a0>'.$days[$i]."</th>\n";
 			else {
 				if($j==1 && ($i-1)==$start) $day = 1;
-				if($day && $day<=$last) { 
-					$label=$day; 
-					$col = '#f0f0f0'; 
-					$bcol=$col; 
+				if($day && $day<=$last) {
+					$label=$day;
+					$col = '#f0f0f0';
+					$bcol=$col;
 					$data = '&nbsp;';
 					if(is_array($events[$day])) {
 						$data = '';
@@ -229,18 +229,18 @@ CREATE TABLE phpcal (
 			}
 			if($day) $day++;
 		}
-		echo "</tr>\n";	
+		echo "</tr>\n";
 	}
 ?>
 </table>
 <?php if($ev) draw_event($ev) ?>
-<tr bgcolor=#d0d0d0><th <?php if($err) echo 'align=center'; else echo 'align=left';?>><?php if(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event'; 
+<tr bgcolor=#d0d0d0><th <?php if($err) echo 'align=center'; else echo 'align=left';?>><?php if(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event';
 else echo "<font color=#f02020>$err</font>";
 echo "</th></tr>\n";
 if($a) draw_add();?>
 <?php $result = mysql_query("select id from phpcal where approved=0");
    $c = mysql_num_rows($result); ?>
-<tr bgcolor=#d0d0d0><th <?php if($aerr) echo 'align=center'; else echo 'align=left';?>><?php if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
+<tr bgcolor=#d0d0d0><th <?php if($aerr) echo 'align=center'; else echo 'align=left';?>><?php if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)";
 else echo "<font color=#f02020>$aerr</font>";
 if($ap) draw_app();
 echo "</table>\n";
@@ -248,15 +248,43 @@ echo "</table>\n";
 
 function draw_event($ev) {
 	global $re;
-
-	$result = mysql_query("select * from phpcal where id=$ev");
+	$stmt = "select phpcal.*,country.name as cname from phpcal,country where phpcal.country = country.id and phpcal.id=$ev";
+	$result = mysql_query($stmt); 	
 	if(!$result) echo mysql_error();
 	else $event = mysql_fetch_array($result);
 	$days=days();
+	$cat = $event['category'];
+	switch($cat) {
+		case 1:	 
+			$category = "regional";
+			break;
+		case 2:
+			$category = "national";
+			break;
+		case 3:
+			$category = "international";
+			break;
+		default:
+			$category = "unknown";
+	}
 ?>
 <tr bgcolor=#d0d0d0><td>
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th><?php echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?php echo ini_get('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']; if(strlen($event['url'])) echo "<br><b>URL</b>: <a href=\"".$event['url']."\">".$event['url']."</a>\n";?></td></tr>
+<tr bgcolor=#a0a0a0><th><?php echo $event['sdesc']?></th>
+<td bgcolor=#f0f0f0 rowspan=3 width=80%>
+<?php 
+
+echo ini_get('magic_quotes_gpc') ? stripslashes($event['ldesc']) : $event['ldesc'] ; 
+
+echo ((!$event['country']) || ($event['country'] != 'XXX')) ? "<br><b>Country</b>: ". $event['cname'] : "" ; 
+
+echo ((!isset($category)) || ($category != "unknown")) ? "<br><b>Event Type</b>: ". $category : "" ;   
+
+if(strlen($event['url'])) {
+	echo "<br><b>URL</b>: <a href=\"".$event['url']."\">".$event['url']."</a>\n";
+}
+?>
+</td></tr>
 <tr bgcolor=#a0a0a0><th>
 <?php switch($event['tipo']) {
 	case 1:
@@ -272,7 +300,7 @@ function draw_event($ev) {
   }
 ?>
 </th></tr>
-<tr bgcolor=#a0a0a0><th>App. by: <?php echo $event['app_by']?></th></tr>
+<tr bgcolor=#a0a0a0><th>Approved by: <?php echo $event['app_by']?></th></tr>
 </table>
 </td></tr>
 <?php
@@ -284,17 +312,17 @@ function draw_app() {
 <tr bgcolor=#d0d0d0><td>
 <form action="cal.php?a=<?php echo $a?>&cm=<?php echo $cm?>&cy=<?php echo $cy?>" method="POST">
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th>&nbsp;</th><th align=left>When</th><th align=left>Label</th><th align=left>Description</th><th align=left>URL</th></tr>
+<tr bgcolor=#a0a0a0><th>&nbsp;</th><th align=left>When</th><th align=left>Label</th><th align=left>Description</th><th align=left>Country</th><th align=left>URL</th></tr>
 <?php
-	
+
 	$events = load_unapproved_events();
 	$col = array('#e0e0e0','#f0f0f0'); $i=0;
 	if(count($events)) {
 		foreach($events as $e) {
-			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>".(ini_get('magic_quotes_gpc')?stripslashes($e[3]):$e[3])."</td><td>$e[4]</td></tr>\n";	
+			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>".(ini_get('magic_quotes_gpc')?stripslashes($e[3]):$e[3])."</td><td>$e[5]</td><td>$e[4]</td></tr>\n";
 			$i++;
 		}
-		echo "<tr><td align=left colspan=5><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom> &nbsp; <b>CVS Login</b>: <input type=text name=user value=\"$user\"> <b>CVS Passwd</b>: <input type=password name=pw value=\"$pw\"></td></tr>";
+		echo "<tr><td align=left colspan=5><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom> &nbsp; <b>CVS Login</b>: <input type=text name=user value=\"$user\"> <b>&nbsp;CVS Password</b>: <input type=password name=pw value=\"$pw\"></td></tr>";
 	}
 	
 ?>
@@ -308,7 +336,7 @@ function draw_add() {
 	global $smonth, $sday, $syear;
 	global $emonth, $eday, $eyear;
 	global $recur, $recur_day, $type;
-	global $url, $sdesc, $ldesc, $ap, $re, $cm, $cy;
+	global $url, $sdesc, $ldesc, $ap, $re, $cm, $cy, $country, $category;
 ?>
 <tr bgcolor=#d0d0d0><td>
 <form action="cal.php?ap=<?php echo $ap?>&cm=<?php echo $cm?>&cy=<?php echo $cy?>" method="POST">
@@ -317,9 +345,9 @@ function draw_add() {
 <?php
 	$months = months(); $i=1;
 	if($smonth) echo "<option value=\"$smonth\">".$months[$smonth-1]."</option>\n";
-	foreach($months as $m) { 
-		if($i!=$smonth) echo "<option value=\"$i\">$m</option>\n"; 
-		$i++; 
+	foreach($months as $m) {
+		if($i!=$smonth) echo "<option value=\"$i\">$m</option>\n";
+		$i++;
 	}
 ?>
 </select>
@@ -332,9 +360,9 @@ function draw_add() {
 <?php
 	$i=1;
 	if($emonth) echo "<option value=\"$emonth\">".$months[$emonth-1]."</option>\n";
-	foreach($months as $m) { 
-		if($i!=$emonth) echo "<option value=\"$i\">$m</option>\n"; 
-		$i++; 
+	foreach($months as $m) {
+		if($i!=$emonth) echo "<option value=\"$i\">$m</option>\n";
+		$i++;
 	}
 ?>
 </select>
@@ -355,8 +383,8 @@ foreach($re as $k=>$v) {
 <?php
 	$days = days(); $i=0;
 	if($recur_day) echo "<option value=\"$recur_day\">".$days[$recur_day]."</option>\n";
-	foreach($days as $i=>$d) { 
-		if($i!=$recur_day) echo "<option value=\"$i\">$d</option>\n"; 
+	foreach($days as $i=>$d) {
+		if($i!=$recur_day) echo "<option value=\"$i\">$d</option>\n";
 	}
 ?>
 </select>
@@ -365,12 +393,32 @@ foreach($re as $k=>$v) {
 </tr>
 <tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?php echo ini_get('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
 </td><td align=center><input type="submit" value=" Submit " name="new"></td></tr>
+<tr bgcolor=#e0e0e0><th>Country<td colspan=2><select name="country" width="30"><option value=0>- Select a country -</option>
+<?php
+	$result = mysql_query ("select id, name from country order by name");
+	if ($result){
+		while ($row = mysql_fetch_row($result)){
+			$selected = ($row[0] == $country) ? "selected" : "";
+			echo "<option value=$row[0] $selected>$row[1]</option>";
+    }
+		mysql_free_result($result);
+	}
+?>
+<tr bgcolor=#e0e0e0><th>Event Category<td colspan=2><select name="category" width="20"></option>
+<?php
+	$cat = array("- Select a category -", "regional", "national", "international");
+	for ($i=0; $i < count($cat); $i++){
+		$selected = ($i == $category) ? "selected" : "";
+		echo "<option value=\"$i\">$cat[$i]</option>";
+	}
+?>
+</select></td></tr>
 <tr bgcolor=#e0e0e0><th>URL</th><td colspan=2><input type=text name="url" size=60 maxlength=128 value="<?php echo $url?>"></td></tr>
 <tr bgcolor=#e0e0e0><th>Long<br>Description</th><td colspan=2><textarea name="ldesc" cols=78 rows=10 maxlength=78 wrap=virtual><?php echo ini_get('magic_quotes_gpc')?stripslashes($ldesc):$ldesc?></textarea></td></tr>
 </table>
 </td></tr>
 </form>
-<?php 
+<?php
 } /* end of draw_add() function */
 
 	if(isset($type)) {
@@ -385,7 +433,15 @@ foreach($re as $k=>$v) {
 		$ldesc = nl2br($ldesc);
 		if(empty($sdesc)) {
 			$err = "You must provide a short description for your event - please correct this<br>\n";
-			$a=1;
+			$a = 1;
+		} else
+		if (!$country) {
+			$err = "You must specify a country - please correct this<br>\n";
+			$a = 1;
+		} else
+		if (!$category){
+			$err = "You must specifiy the event category - please correct this<br>\n";
+			$a = 1;
 		} else
 		switch($type) {
 			case 'single':
@@ -393,7 +449,9 @@ foreach($re as $k=>$v) {
 					$err = "Invalid start date - please correct it<br>\n";
 					$a=1;
 				} else {
-					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,'$syear-$smonth-$sday',NULL,NULL,'$sdesc','$url','$ldesc',1,0,NULL)") or $err=mysql_error();
+
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by,country,category) values (0,'$syear-$smonth-$sday',NULL,NULL,'$sdesc','$url','$ldesc',1,0,NULL,'$country','$category')") or $err=mysql_error();
+
 				}
 				break;
 			case 'multi':
@@ -408,14 +466,18 @@ foreach($re as $k=>$v) {
 				} elseif($smonth==$emonth && $sday==$eday && $syear==$eyear) {
 					$err = "Your start and end dates are identical - please correct this<br>\n"; $a=1;
 				} else {
-					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,'$syear-$smonth-$sday','$eyear-$emonth-$eday',NULL,'$sdesc','$url','$ldesc',2,0,NULL)") or $err=mysql_error();
+
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by,country,category) values (0,'$syear-$smonth-$sday','$eyear-$emonth-$eday',NULL,'$sdesc','$url','$ldesc',2,0,NULL,'$country','$category')") or $err=mysql_error();
+
 				}
 				break;
 			case 'recur':
 				if(!is_numeric($recur) || !is_numeric($recur_day)) {
 					$err = "Recurring event sequence is invalid - please correct it<br>\n"; $a=1;
 				} else {
-					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,NULL,NULL,'$recur:$recur_day','$sdesc','$url','$ldesc',3,0,NULL)") or $err=mysql_error();
+
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by,country,category) values (0,NULL,NULL,'$recur:$recur_day','$sdesc','$url','$ldesc',3,0,NULL,'$country','$category')") or $err=mysql_error();
+
 				}
 				break;
 		}
@@ -435,7 +497,7 @@ foreach($re as $k=>$v) {
 					if(!$result) echo mysql_error();
 				}
 			}
-			
+
 		} else {
 			echo "<h2 class=\"error\">The username or password you supplied was incorrect.</h2>\n";
 			$ap = 1;
@@ -469,7 +531,7 @@ foreach($re as $k=>$v) {
 					if($data) $data.="\n";
 					$data .= "$i,$cm,$cy,\"http://php.net/cal.php?cm=$cm&cy=$cy&ev=".$row['id']."\",\"".addslashes($row['sdesc']).'"';
 				}
-			}	
+			}
 			$nm--;
 			$cd = 1;
 			if($nm) {
@@ -479,5 +541,17 @@ foreach($re as $k=>$v) {
 		}
 		echo $data;
 		break;
-  }	
+  }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
