@@ -657,7 +657,7 @@ array(
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0321186486/wwwphpnet",
     /* author[s]    */ "Larry Ullman",
     /* auth link[s] */ "",
-    /* image        */ "0321186486.jpg",
+    /* image        */ "0321186486.gif",
     /* information  */ "Peachpit Press, May 2003, ISBN 0-321-18648-6, 572 pages",
     /* inform. link */ "http://www.DMCinsights.com/phpmysql/",
     /* language     */ "en"
