@@ -9,6 +9,107 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0b4"></a>
+<h3>Version 5.0.0 Beta 4</h3>
+<b>12-Feb-2004</b>
+<ul>
+<li>Changed exceptions so that they must now inherit from the built-in Exception
+class. This allows for a general catch(Exception $e) statement to catch all
+exceptions. (Andi, Zeev)</li>
+<li>Added SPL extension. (Marcus, Derick)</li>
+<li>Added checks for invalid characters in a cookie name and cookie data
+into set[raw]cookie(). (Brian)</li>
+<li>Added support for ++ and += (and similar) to SimpleXML. (Andi, Zeev)</li>
+<li>Added infrastructure for ++ and += (and similar) to object overloading
+modules. (Andi, Zeev)</li>
+<li>Added error message when trying to re-assign to $this variable. (Zeev, Andi)</li>
+<li>Added support for an interface to extend another interface. (Zeev)</li>
+<li>Added new pspell functions: (Brian)</li>
+  <ul>
+    <li>pspell_config_dict_dir()</li>
+    <li>pspell_config_data_dir()</li>
+  </ul>
+<li>Added new Interbase functions: (Ard)</li>
+  <ul>
+    <li>ibase_service_attach() and ibase_service_detach().</li>
+    <li>ibase_backup() and ibase_restore().</li>
+    <li>ibase_maintain_db(), ibase_db_info() and ibase_server_info().</li>
+  </ul>
+<li>Added context option "http"/"request_fulluri" to send entire URI in request
+which is required format for some proxies. (Sara)</li>
+<li>Added optional third parameter 'strict' to array_keys(). (Andrey)</li>
+<li>Added stream_lock() method to userspace streams interface. (Hartmut, Wez)</li>
+<li>Added xsltprocessor->registerPHPFunctions(). (Christian)</li>
+<li>Readded support for using classes before they are declared according to
+the behavior in PHP 4. This won't work with classes who are using PHP 5
+features such as interfaces. (Zeev, Andi)</li>
+<li>Completely overhauled SimpleXML extension. (Marcus, Rob, Sterling)</li>
+<li>Upgraded bundled SQLite library to version 2.8.11. (Ilia, Wez)</li>
+<li>Improved destructor implementation to always call destructors on clean
+shutdown. An order of destruction is not guaranteed. (Zeev, Andi)</li>
+<li>Redesigned exception support. This fixes many bugs in the previous design
+such as nested try's and problems with overloaded extensions. (Zeev, Andi)</li>
+<li>Redesigned clone by adding a clone keyword (clone $obj) and copying all
+properties before __clone() is called. Also allows calling parent __clone
+function by using parent::__clone(). (Zeev, Andi)</li>
+<li>Fixed interfaces to check for function return-by-reference equality when
+inheriting and implementing interfaces. (Andi, Zeev)</li>
+<li>Fixed foreach() to respect property visibility. (Marcus)</li>
+<li>Fixed problem with parse error in include() file not stopping PHP's
+execution. (Ilia)</li>
+<li>Fixed var_export() to show public, protected and private modifiers properly.
+(Derick)</li>
+<li>Fixed problems with longlong values in mysqli. (Georg)</li>
+<li>Fixed class name case preserving of user defined classes. (Marcus)</li>
+<li>Fixed bug #27145 (Unmangle private/protected property names before printing
+them inside error messages). (Ilia)</li>
+<li>Fixed bug #27103 (preg_split('//u') incorrectly splits UTF-8 strings into
+octets). (Moriyoshi)</li>
+<li>Fixed bug #27042 (SPL: SeekableIterator seek() broken). (Marcus)</li>
+<li>Fixed bug #27008 (Every class method can be called as static). (Marcus)</li>
+<li>Fixed bug #26938 (exec() has problems reading long lines).
+(Ilia, runekl[at]opoint[dot]com</li>
+<li>Fixed bug #26947 (ext/dom: Crash when using DomDocument::getElementById()).
+(Christian)</li>
+<li>Fixed bug #26911 (crash in sqlite extension when fetching data from empty
+queries). (Ilia)</li>
+<li>Fixed bug #26844 (ext/mime_magic: magic file validation broken). (Jani)</li>
+<li>Fixed bug #26819 (http_build_query() crashes on NULL output). (Ilia)</li>
+<li>Fixed bug #26817 (http_build_query() does not handle private & protected
+object properties correctly). (Ilia)</li>
+<li>Fixed bug #26815 (foreach of (DOM) childnodes crashes when Xinclude is used).
+(Rob)</li>
+<li>Fixed bug #26796 (SQLite causes crashes with other extensions *connect()
+calls). (Marcus)</li>
+<li>Fixed bug #26762 (unserialize() produces lowercase classnames). (Marcus)</li>
+<li>Fixed bug #26743 (getElementsByTagName doesn't work properly). (Rob)</li>
+<li>Fixed bug #26736 (__autoload not invoked for parent classes). (Marcus)</li>
+<li>Fixed bug #26723 (domNode::appendChild() changes child node namespace). (Rob)</li>
+<li>Fixed bug #26697 (calling class_exists() on a nonexistent class in __autoload
+results in segfault). (Marcus)</li>
+<li>Fixed bug #26696 (string index in a switch() crashes with multiple matches).
+(Andi)</li>
+<li>Fixed bug #26695 (Reflection API does not recognize mixed-case class hints).
+(Marcus)</li>
+<li>Fixed bug #26690 (make xsltProcessor->transformToUri use streams wrappers).
+(Ilia)</li>
+<li>Fixed bug #26680 (Added version check in mysqli_report_index). (Georg)</li>
+<li>Fixed bug #26675 (Segfault on ArrayAccess use). (Marcus)</li>
+<li>Fixed bug #26640 (__autoload() not invoked by Reflection classes). (Jani)</li>
+<li>Fixed bug #26543 (call_user_func() broken for self, parent). (Stanislav)</li>
+<li>Fixed bug #26077 (memory leak when new() result is not assigned and no
+constructor is defined). (Stanislav)</li>
+<li>Fixed bug #26065 (Crash when nesting classes). (Marcus)</li>
+<li>Fixed bug #25816 (disallow arrays in class constants). (Stanislav)</li>
+<li>Fixed bug #25329 (sqlite_create_function with method and reference to $this).
+(Marcus)</li>
+<li>Fixed bug #25038 (call_user_func() issues a warning if function throws an
+exception). (Marcus)</li>
+<li>Fixed bug #24608 (__set not triggered when overloading with array).
+(Stanislav)</li>
+<li>Fixed bug #24243 (enabling browscap causes segfault). (Wez)</li>
+</ul>
+
 <a name="5.0.0b3"></a>
 <h3>Version 5.0.0 Beta 3</h3>
 <b>21-Dec-2003</b>
