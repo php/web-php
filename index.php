@@ -134,6 +134,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>New keyboard shortcuts</h1>
+<p>
+<font class="newsdate">[17-Oct-2002]</font>
+We introduced new keyboard shortcuts on the site today to make our pages
+even more comfortable to use. You can hit Alt+S on Microsoft Windows
+or Cmd+S on Macintosh now to go right to the search box and type your
+search keyword. A similar shortcut with the letter "L" is also introduced
+on the manual pages to acess the lookup input field. Thanks to Tommy Ipsen
+for the suggestion. You can read more about keyboard shortcuts on web pages
+<a href="http://www.w3.org/TR/html401/interact/forms.html#access-keys">in
+the HTML standard</a>.
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.0pre1 Released</h1>
 <p>
 <font class="newsdate">[10-Oct-2002]</font>
