@@ -144,7 +144,7 @@ and to help others.
 <h1>New Sample of PHP Documentation "New CHM Edition"</h1>
 <p>
 <font class="newsdate">[04-Jul-2002]</font> The 6th sample of the CHM edition is out now.
-This sample is mainly and content update, but it also fixes some small bugs. We welcome
+This sample is mainly a content update, but it also fixes some small bugs. We welcome
 any suggestions and bug reports.
 <?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
 and please send us your feedback to our
