@@ -98,7 +98,9 @@ function navigationBar($title,$id,$loc) {
         $links[] = array("$langcode[1]/print/$id", "printer friendly");
         $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
         foreach ($LANGUAGES as $code => $name) {
-            if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
+            if (!preg_match("!/$code/!", $PHP_SELF)
+                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$id")
+               ) {
                 $links[] = array("$code/$id", $name);
             }
         }
