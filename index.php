@@ -217,7 +217,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>Active Awards Programmers' Choice Nominees are in!</h1>
 <p>
-<font class="newsdate">[6-June-2003]</font>
+<font class="newsdate">[06-June-2003]</font>
 Thanks to the community for recognizing their peers in ActiveState's
 third annual Active Awards.  The awards honor those individuals who
 <b>actively</b> contribute to open languages and display excellence in their
