@@ -22,12 +22,14 @@ the provider's homepage:
   <th>Default Language</th>
  </tr>
 <?php
+  $mprevious = 'aa';
   foreach ($MIRRORS as $murl => $mdata) {
-    if ($mdata[4] == 1) 
-    echo '<tr bgcolor="#e0e0e0"><td>' . 
-         make_link($murl, $COUNTRIES[$mdata[0]]) . '</td><td>' . 
-         make_link($mdata[3], $mdata[1]) . '</td><td>' .
-         $mdata[6] . '</td></tr>';
+    if ($mdata[4] != 1) { continue; }
+    echo '<tr bgcolor="#e0e0e0"><td>';
+    if ($mprevious != $mdata[0]) { echo make_link($murl, $COUNTRIES[$mdata[0]]); }
+    else { echo "&nbsp;"; }
+    echo '</td><td>' . make_link($mdata[3], $mdata[1]) . '</td><td>$mdata[6]</td></tr>';
+    $mprevious = $mdata[0];
   }
 ?>
 </table>
