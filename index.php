@@ -140,6 +140,8 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.mysql.com/events/uc2003/", make_image("mysqluc2003", "MySQL Users Conference and Expo 2003", "right") ); ?>
+
 <h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
 <p>
 <font class="newsdate">[16-Dec-2002]</font>
