@@ -385,7 +385,6 @@ endif;
 endif; ?>
 ><A NAME="top">
 
-<!-- bogus comment to squash a Netscape bug --> 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
@@ -393,9 +392,7 @@ endif; ?>
     <TR VALIGN=top>
      <TD ALIGN=left>
       <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" 
- ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67
- BORDER=0></A><BR>
+      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
     </TR>
