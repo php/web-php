@@ -28,7 +28,6 @@
 	echo "</tr><tr><td valign=top>\n";
 
 	/* Sports Teams */
-	site("NFL's Oakland Raiders","www.raiders.com");
 
 	echo "<br></td><td valign=top>\n";
 
