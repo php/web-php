@@ -100,7 +100,7 @@ if (isset($pattern)) {
 
     // If some local search is needed and we have no support for
     // it, send the user to the central search page on php.net
-    if (!have_search() || !isset($htsearch_prog)) {
+    if (!isset($htsearch_prog)) {
         
         // We cannot redirect to anywhere, absolute failure
         if (is_primary_site()) {
@@ -131,16 +131,18 @@ if (isset($pattern)) {
         
         // Guess what base is, if it is not specified
         if (!isset($base)) {
-            // The base is the referrer site, if it was a PHP mirror site,
-            // but not a special one, which carries non-indexed content
-            if (eregi("^http://([^.]+)\.php\.net/", $HTTP_REFERER, $matches) && 
-                !in_array($matches[1], array('bonsai', 'bugs', 'conf', 'cvs', 'gtk',
-                'lxr', 'master', 'news', 'pear', 'qa', 'smarty', 'snaps'))) {
+
+            // The base is the referrer site. Check if it was a PHP mirror site,
+            // and not some other site offering a direct PHP.net search form.
+            // Links should not be pointed back to a non PHP.net mirror site
+            if (preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
+                $matches[1] != 'qa') {
                 $base = "http://{$matches[1]}.php.net";
             }
             unset($matches);
+
             // If we are on the same site, there is no need for the base
-            if ($base == $MYSITE) {
+            if (isset($base) && $base == $MYSITE) {
                 $base = NO_BASE;
             }
         }
@@ -171,12 +173,12 @@ if (isset($pattern)) {
         }
         
         // If we have a page restriction, provide it for htdig
-        if (isset($page)) { $pgr = "&page=" . escapeshellcmd($page); } else { $pgr = ""; }
+        if (isset($page)) { $page = intval($page); $pgr = "&page=$page"; } else { $pgr = ""; }
         
         // Always exclude the printer friendly pages of both types
         // The last exclude is a fix for the bogus index database of php.net,
         // and may be removed if the index problems are resolved [see bug #20870]
-        $exclude = urlencode("/print/|/printwn/|.php/");
+        $exclude = escapeshellcmd(urlencode("/print/|/printwn/|.php/"));
 
         // Create the htdig query, and execute the engine
         $query = "words=$words&config=php&exclude=$exclude&restrict=$restrict$pgr";
@@ -193,15 +195,16 @@ if (isset($pattern)) {
             exit;
         }
 
-        // The pattern, which is insertable in HTML output too
+        // Create versions insertable in HTML output and URLs too
         $htmlpt = htmlspecialchars($pattern);
+        $urlpt  = urlencode($pattern);
 
         // If the third row says there is no match, then we need to inform the user
         if ($result[2] == "NOMATCH") {
             echo "Sorry, no documents matched your search for <b>\"$htmlpt\"</b>.<br /><br />";
             echo "Continue your search at ";
-            echo "<a href=\"http://www.alltheweb.com/search?q=$htmlpt\">AllTheWeb</a> ";
-            echo "or <a href=\"http://www.google.com/search?q=$htmlpt\">Google</a><br /><br />";
+            echo "<a href=\"http://www.alltheweb.com/search?q=$urlpt\">AllTheWeb</a> ";
+            echo "or <a href=\"http://www.google.com/search?q=$urlpt\">Google</a><br /><br />";
             echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br /><br />\n";
             commonFooter();
             exit;
@@ -232,7 +235,7 @@ if (isset($pattern)) {
             
             // Otherwise modify links to point to the referrer site
             else {
-                echo eregi_replace("http://[^.]+\.php\.net/", htmlspecialchars("$base/"), $result[$i]);
+                echo preg_replace("!http://[^.]+\\.php\\.net/!i", htmlspecialchars("$base/"), $result[$i]);
             }
             
             // Make HTML output readable
@@ -269,7 +272,7 @@ else {
     commonHeader("Site Search");
 
     // Choose the target for the search form
-    if (have_search() && isset($htsearch_prog)) {
+    if (isset($htsearch_prog)) {
         $target = $PHP_SELF;
     } else {
         $target = "http://www.php.net/search.php";
@@ -303,7 +306,7 @@ else {
    <select name="show">
     <option value="quickref" <?php  echo ($show=='quickref')  ? 'selected':''?>>function list
     <option value="wholesite" <?php echo ($show=='wholesite') ? 'selected':''?>>whole site
-    <option value="manual" <?php    echo ($show=='manual')    ? 'selected':''?>>online documentation
+    <option value="manual" <?php    echo ($show=='manual')    ? 'selected':''?>>online documentation [en]
     <option value="bugdb" <?php     echo ($show=='bugdb')     ? 'selected':''?>>bug database
     <option value="maillist" <?php  echo ($show=='maillist')  ? 'selected':''?>>general mailing list
     <option value="devlist" <?php   echo ($show=='devlist')   ? 'selected':''?>>developer mailing list
