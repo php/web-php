@@ -61,7 +61,7 @@ a complete rewrite of the system, with a new user interface built from the groun
 Forums and message boards are popping up all over the place. To this point the most 
 popular has been the free perl one at Matt's Script Archive. This project is trying
 to design a better forum with the use of PHP and a database. We are currently using
-mySQL, but hope to either have a database independent version or multiple versions for
+MySQL, but hope to either have a database independent version or multiple versions for
 different databases in the future.
 <? endEntry();?>
 
