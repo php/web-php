@@ -15,7 +15,7 @@ $SIDEBAR_DATA = '
  download site. Binaries available on external servers:
 </p>
 <ul class="simple">
- <!-- <li><a href="http://louise.amiga.hu/index.php?MENU=6">AmigaOS</a></li> -->
+ <li><a href="http://195.228.168.217/louise/index.php?MENU=6">AmigaOS</a></li>
  <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/ndk/php.htm">Novell NetWare</a></li>
  <li><a href="http://silk.apana.org.au/php/">OS/2</a></li>
@@ -91,7 +91,7 @@ site_header("Downloads");
 <h2>Windows Binaries</h2>
 
 <p>
- All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
+ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP/2003.
 </p>
 
 <ul>
@@ -174,17 +174,17 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link("php-4.3.0-to-4.3.1.patch.gz", "PHP 4.3.0 to 4.3.1 patch"); ?>  - 17 February 2003<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.3.0.<br />
+  This unified diff will enable you to update your local PHP source to version 4.3.1 from 4.3.0.<br />
   <span class="md5sum">md5: ffcce0d50a752fe00c3552f7fa68dc71</span>
  </li>
  <li>
   <?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.<br />
+  This unified diff will enable you to update your local PHP source to version 4.2.2 from 4.2.0.<br />
   <span class="md5sum">md5: 254bccc245d65cece1f40f782b70ec6b</span>
  </li>
  <li>
   <?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.<br />
+  This unified diff will enable you to update your local PHP source to version 4.2.2 from 4.2.1.<br />
   <span class="md5sum">md5: a725c3c9fada0b2e21336250faeca39b</span>
  </li>
  <li>
@@ -195,12 +195,12 @@ site_header("Downloads");
  </li>
  <li>
   <?php download_link("php-4.0.6-to-4.1.1.patch.gz", "PHP 4.0.6 to 4.1.1 patch"); ?>  - 03 January 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.0.6.<br />
+  This unified diff will enable you to update your local PHP source to version 4.1.1 from 4.0.6.<br />
   <span class="md5sum">md5: 408127b09d87932c5e0f2cd57133e939</span>
  </li>
  <li>
   <?php download_link("php-4.1.0-to-4.1.1.patch.gz", "PHP 4.1.0 to 4.1.1 patch"); ?>  - 03 January 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.1.0.<br />
+  This unified diff will enable you to update your local PHP source to version 4.1.1 from 4.1.0.<br />
   <span class="md5sum">md5: c3f73adfdbde3bfe5d0d51463432a07c</span>
  </li>
 </ul>
