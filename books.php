@@ -183,10 +183,10 @@ MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07"
 ><IMG SRC="/gifs/rasmus-kug.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07"
 >PHP kurz & gut</A><BR>
 by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 <SMALL>
@@ -198,11 +198,11 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07"
 ><IMG SRC="/jpgs/schmid_cartus.jpg" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07"
 >PHP 4. Dynamische Webauftritte professionell realisieren</A><BR>
 by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus<BR>
 Mit einem Vorwort von <A HREF="http://www.zend.com/zend/hof/andi.php">Andi Gutmans</A> und <A HREF="http://www.zend.com/comm_person.php?id=12">Zeev Suraski</A><BR>
@@ -230,11 +230,11 @@ by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cart
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet07"
 ><IMG SRC="/gifs/krause.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/wwwphpnet07"
 >PHP - Grundlagen und L&ouml;sungen</A><BR>
 Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
@@ -244,11 +244,11 @@ by J&ouml;rg Krause<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07"
 ><IMG SRC="/gifs/theis.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07"
 >PHP 4</A><BR>
 Webserver-Programmierung für Um- und Einsteiger<BR>
 by Thomas Theis<BR>
@@ -258,11 +258,11 @@ by Thomas Theis<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07"
 ><IMG SRC="/gifs/susanne_wigard.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07"
 >Das Einsteigerseminar PHP 4.0</A><BR>
 by Dr. Susanne Wigard<BR>
 <SMALL>in German, BHV, Juni 2000, ISBN 3-8287-1110-3, 382 pages<BR>
@@ -271,11 +271,11 @@ by Dr. Susanne Wigard<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet07"
 ><IMG SRC="/gifs/databecker.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/wwwphpnet07"
 >PHP 4 + MySQL</A><BR>
 by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 <SMALL>in German, Data Becker, July 2000, ISBN 3-8158-2043-X, 439 pages<BR>
@@ -284,11 +284,11 @@ by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07"
 ><IMG SRC="/jpgs/klaus_schmidt.jpg" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07"
 >PHP 4 - Tutorial & Referenz</A><BR>
 by Klaus Schmidt<BR>
 <SMALL>in German, Computer & Literatur Verlag GmbH, November 2000, ISBN 3-932-1179-5, 832 pages<BR>
@@ -472,10 +472,10 @@ by Herbert G. Fischer<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07"
 ><IMG SRC="/jpgs/dehnhardt.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07"
 >Scriptsprachen f&uuml;r dynamische Webauftritte: JavaScript, VBScript, ASP, Perl, PHP, XML</A><BR>
 by Prof. Dr. Wolfgang Dehnhardt<BR>
 <SMALL>Hanser Verlag, Dec 2000, ISBN 3-446-21413-5, 452 pages<BR>
@@ -514,10 +514,10 @@ French translation: <A HREF="http://www.campuspress.fr/store/book_info.asp?id=88
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07"
 ><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07"
 >MySQL</A><BR>
 Entwicklung, Implementierung und Referenz<BR>
 by Paul DuBois<BR>
@@ -601,7 +601,7 @@ buy the book using the above links, you are helping to support PHP development!
 There may be more books available that we don't know of yet!  You can search 
 <A HREF="http://www.amazon.com/exec/obidos/redirect-home/wwwphpnet">Amazon.com</A>
 for PHP related stuff by using this form (or go directly to 
-<A HREF="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet"
+<A HREF="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07"
 >Amazon.de</A> or
 <A HREF="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f"
 >Amazon.fr</A> and
