@@ -506,7 +506,8 @@ Changes in the Zend Engine 2.0
             $class = isset($step['class']) ? $step['class'] . '::' : '';
 
             printf(
-              "%s [%s:%s]\n",
+              "%s%s [%s:%s]\n",
+              $class,
               $step['function'],
               $step['file'],
               $step['line']
