@@ -33,9 +33,9 @@
   the new one).
   
   The order of books in the array below is irrelevant, the books are displayed
-  grouped by languages, and then randomly ordered. However it is good practice
-  to add books in the same language below each other to the array and not
-  completely mixed.
+  grouped by languages, and then randomly ordered. 
+  However it is good practice to add books in the same language below each other 
+  to the array and not completely mixed.
  
 */
 
@@ -68,7 +68,51 @@ $books = array (
 
   "PHP" => array (
 
-array(
+  array(
+    /* title[s]     */ "PHP Bible",
+    /* title_link   */ "http://php.wilson.gs/bible",
+    /* author[s]    */ "Wilson Peng",
+    /* auth link[s] */ "",
+    /* image        */ "wilson.jpg",
+    /* information  */ "",
+    /* inform. link */ "",
+    /* language     */ "cn"
+  ),
+
+  array(
+    /* title[s]     */ array("Using PHP and MySQL", "With FreeBSD and Apache"),
+    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20023",
+    /* author[s]    */ "C.C.J.",
+    /* auth link[s] */ "",
+    /* image        */ "9575271688.gif",
+    /* information  */ "July 1999, ISBN 957-527-168-8", 
+    /* inform. link */ "http://www.dw.com.tw/book.html",
+    /* language     */ "cn"
+  ),
+
+  array(
+    /* title[s]     */ "Examples of PHP and MySQL",
+    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20029",
+    /* author[s]    */ "C.C.J.",
+    /* auth link[s] */ "",
+    /* image        */ "9575272242.gif",
+    /* information  */ "February 2000, ISBN 957-527-224-2",
+    /* inform. link */ "http://www.dw.com.tw/book.html",
+    /* language     */ "cn"
+  ),
+
+  array(
+    /* title[s]     */ array("PHP tvorba interaktivnich internetovych aplikaci", "(PHP developing interactive internet applications)"),
+    /* title_link   */ "http://www.kosek.cz/php/",
+    /* author[s]    */ "Jiri Kosek",
+    /* auth link[s] */ "http://www.kosek.cz",
+    /* image        */ "8071693731.jpg",
+    /* information  */ "Grada Publishing, April 20 1999, ISBN 80-7169-373-1, 492 pages",
+    /* inform. link */ "http://www.kosek.cz/php/",
+    /* language     */ "cz"
+  ),
+
+  array(
     /* title[s]     */ "Einstieg in PHP 5",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898422607/wwwphpnet07",
     /* author[s]    */ "Thomas Theis",
@@ -79,7 +123,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "PHP 5 - Die Neuerungen",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898424901/wwwphpnet07",
     /* author[s]    */ array("Martin Goldmann", "Markus Schraudolph"),
@@ -90,7 +134,7 @@ array(
     /* language     */ "de"
   ),
   
-array(
+  array(
     /* title[s]     */ "Besser PHP programmieren",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898423816/wwwphpnet07",
     /* author[s]    */ "Carsten Möhrke",
@@ -101,7 +145,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "PHP - Der erfolgreiche Einstieg",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827262992/wwwphpnet07",
     /* author[s]    */ array("Christine Peyton", "Andre Möller"),
@@ -112,7 +156,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "Das LAMP Buch. Webserver mit Linux, Apache, MySQL und PHP",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3935922094/wwwphpnet07",
     /* author[s]    */ "Heiko Goller",
@@ -123,7 +167,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "PHP de Luxe - fortgeschrittene PHP-Programmierung",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826607996/wwwphpnet07",
     /* author[s]    */ array("Richard Samar", "Christian Stoker"),
@@ -134,7 +178,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "PHP 4.x. After Work. Für Einsteiger",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381557322X/wwwphpnet07",
     /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert", "Clemens Gutweiler"),
@@ -145,7 +189,7 @@ array(
     /* language     */ "de"
   ),
 
-array(
+  array(
     /* title[s]     */ "Praktikum PHP",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3831137412/wwwphpnet07",
     /* author[s]    */ "Dennis Möller",
@@ -309,8 +353,213 @@ array(
     /* inform. link */ "",
     /* language     */ "de"
   ),
+  
+  array(
+    /* title[s]     */ "PHP kurz & gut",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
+    /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche Übersetzung)"),
+    /* auth link[s] */ array("http://lerdorf.com/bio.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
+    /* image        */ "3897212250.gif",
+    /* information  */ "O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages",
+    /* inform. link */ "http://www.oreilly.de/catalog/phptbger/index.html",
+    /* language     */ "de"
+  ),
 
- array (
+  array(
+    /* title[s]     */ "PHP 4. Dynamische Webauftritte professionell realisieren",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07",
+    /* author[s]    */ array("Egon Schmid", "Christian Cartus"),
+    /* auth link[s] */ array("http://zend.com/zend/hof/schmid.php", false),
+    /* image        */ "3827258774.jpg",
+    /* information  */ "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
+                       " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br />\n" .
+                       "Unter Mitarbeit von " .
+                       make_link("http://www.zend.com/comm_person.php?id=38", "Wolfgang Drews, ") .
+                       make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") .
+                       make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") .
+                       " und Christian Wenz<br />\n" .
+                       "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages",
+    /* inform. link */ "http://www.php-buch.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ array("PHP 4: Grundlagen und Profiwissen","Webserver-Programmierung unter Windows und Linux"),
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446215468/wwwphpnet07",
+    /* author[s]    */ "Jörg Krause",
+    /* auth link[s] */ "",
+    /* image        */ "3446215468.jpg",
+    /* information  */ "Hanser, Nov 2000, ISBN 3-446-21546-8, 1168 pages",
+    /* inform. link */ "http://www.php.comzept.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ array("PHP 4","Webserver-Programmierung für Um- und Einsteiger"),
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07",
+    /* author[s]    */ "Thomas Theis",
+    /* auth link[s] */ "",
+    /* image        */ "3934358632.gif",
+    /* information  */ "Galileo Press, May 2000, ISBN 3-934358-63-2, 354 pages",
+    /* inform. link */ "http://www.galileo-press.de/katalog/einzel.asp?ID=202",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826690044/wwwphpnet07",
+    /* author[s]    */ "Dr. Susanne Wigard",
+    /* auth link[s] */ "",
+    /* image        */ "3826690044.jpg",
+    /* information  */ "BHV, December 2000, ISBN 3-8266-9004-4, 448 pages",
+    /* inform. link */ "http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 und MySQL",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815822033/wwwphpnet07",
+    /* author[s]    */ array("Rolf D. Stoll", "Gudrun Anna Leierer"),
+    /* auth link[s] */ "",
+    /* image        */ "3815822033.gif",
+    /* information  */ "Data Becker, July 2001, ISBN 3-8158-2203-3, 414 pages",
+    /* inform. link */ "http://www.databecker.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 - Tutorial & Referenz",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07",
+    /* author[s]    */ "Klaus Schmidt",
+    /* auth link[s] */ "",
+    /* image        */ "3932311795.jpg",
+    /* information  */ "Computer & Literatur Verlag GmbH, November 2000, ISBN 3-932-1179-5, 832 pages",
+    /* inform. link */ "http://www.ksweb.de/index.php?page=buch",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Jetzt lerne ich PHP 4",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827258839/wwwphpnet07",
+    /* author[s]    */ "Matt Zandstra",
+    /* auth link[s] */ "",
+    /* image        */ "3827258839.jpg",
+    /* information  */ "Markt+Technik Verlag, December 2000, ISBN 3-8272-5883-9, 515 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Webanwendungen mit PHP 4.0 entwickeln",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07",
+    /* author[s]    */ array("Tobias Ratschiller","Till Gerken"),
+    /* auth link[s] */ array("http://zend.com/comm_person.php?id=7","http://zend.com/comm_person.php?id=11"),
+    /* image        */ "3827317304.jpg",
+    /* information  */ "Addison-Wesley, Jan 2001, ISBN 3-8273-1730-4, 400 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07",
+    /* author[s]    */ array("Uwe Hess", "Günther Karl"),
+    /* auth link[s] */ "",
+    /* image        */ "3826680022.jpg",
+    /* information  */ "bhv, Dec 2000, ISBN 3-8266-8002-2, 764 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 für Profis. Werkzeugkiste und Kochbuch",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898421163/wwwphpnet07",
+    /* author[s]    */ array("Helmut Dittrich","Jürgen Mellenthin"),
+    /* auth link[s] */ "",
+    /* image        */ "3898421163.jpg",
+    /* information  */ "Galileo Press, January 2001, ISBN 3-8984-2116-3, 500 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 Webbook",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381550502X/wwwphpnet07",
+    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
+    /* image        */ "381550502X.jpg",
+    /* information  */ "Sybex, March 2001, ISBN 3-8984-2116-3, 500 pages",
+    /* inform. link */ "http://www.phpbuch.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PC Spicker PHP",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815500613/wwwphpnet07",
+    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
+    /* image        */ "3815500613.jpg",
+    /* information  */ "Sybex, May 2001, ISBN 3-8155-0061-3 , 120 pages",
+    /* inform. link */ "http://www.phpbuch.de/",
+    /* language     */ "de"
+  ),
+
+ array(
+    /* title[s]     */ "PHP Afterwork",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815505178/wwwphpnet07",
+    /* author[s]    */ array("Mark Kronsbein", "Clemens Gutweiler", "Thomas Weinert", "Peter Petermann"),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", false, "http://www.zend.com/comm_person.php?id=61", "http://www.zend.com/comm_person.php?id=60"),
+    /* image        */ "3815505178.jpg",
+    /* information  */ "Sybex, July 2001, ISBN 3-8155-0517-8, 352 pages",
+    /* inform. link */ "http://www.phpbuch.de/",
+    /* language     */ "de"
+   ),
+
+ array(
+    /* title[s]     */ "PHP Ge-Packt",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382660685X/wwwphpnet07",
+    /* author[s]    */ array("Christoph Aigner", "Thomas Strohmaier"),
+    /* auth link[s] */ "",
+    /* image        */ "382660685X.jpg",
+    /* information  */ "MITP, 2001, ISBN 3-8266-0685-X, 512 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+   ),
+
+  array(
+    /* title[s]     */ "PHP 4 Developer's Guide - Anleitungen und Lösungen für einen professionellen Einsatz",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827261740/wwwphpnet07",
+    /* author[s]    */ array("Sterling Hughes", "Andrei Zmievski"),
+    /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php", "http://zend.com/zend/hof/andrei.php"),
+    /* image        */ "3827261740.jpg",
+    /* information  */ "October 2001, ISBN 3-8272-6174-0, 538 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+  
+  array(
+    /* title[s]     */ "Start på PHP",
+    /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
+    /* author[s]    */ "Thomas G. Kristensen",
+    /* auth link[s] */ "",
+    /* image        */ "8778434084.gif",
+    /* information  */ "ISBN 87-7843-408-4",
+    /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
+    /* language     */ "dk"
+  ),
+  
+  array(
+    /* title[s]     */ "Advanceret PHP",
+    /* title_link   */ "http://www.gad.dk/bog.asp?id=176204",
+    /* author[s]    */ "Cristopher Cosentino",
+    /* auth link[s] */ "",
+    /* image        */ "8778435978.gif",
+    /* information  */ "2003, ISBN 87-7843-597-8",
+    /* inform. link */ "http://www.gad.dk/bog.asp?id=176204",
+    /* language     */ "dk"
+  ),
+ 
+  array (
     /* title[s]     */ "Developing Custom PHP Extensions",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1411601882/wwwphpnet",
     /* author[s]    */ "Blake Schwendiman",
@@ -321,7 +570,7 @@ array(
     /* language     */ "en"
    ),
 
- array (
+  array (
     /* title[s]     */ "Comprehensive PHP PEAR::DB",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1411603613/wwwphpnet",
     /* author[s]    */ "Blake Schwendiman",
@@ -828,213 +1077,7 @@ array(
     /* inform. link */ "http://www.friendsofed.com/books/flash_mx_titles/advanced_php/index.html",
     /* language     */ "en"
   ),
-
-  array(
-    /* title[s]     */ "PHP kurz & gut",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
-    /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche Übersetzung)"),
-    /* auth link[s] */ array("http://lerdorf.com/bio.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
-    /* image        */ "3897212250.gif",
-    /* information  */ "O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages",
-    /* inform. link */ "http://www.oreilly.de/catalog/phptbger/index.html",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4. Dynamische Webauftritte professionell realisieren",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07",
-    /* author[s]    */ array("Egon Schmid", "Christian Cartus"),
-    /* auth link[s] */ array("http://zend.com/zend/hof/schmid.php", false),
-    /* image        */ "3827258774.jpg",
-    /* information  */ "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
-                       " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br />\n" .
-                       "Unter Mitarbeit von " .
-                       make_link("http://www.zend.com/comm_person.php?id=38", "Wolfgang Drews, ") .
-                       make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") .
-                       make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") .
-                       " und Christian Wenz<br />\n" .
-                       "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages",
-    /* inform. link */ "http://www.php-buch.de/",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ array("PHP 4: Grundlagen und Profiwissen","Webserver-Programmierung unter Windows und Linux"),
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446215468/wwwphpnet07",
-    /* author[s]    */ "Jörg Krause",
-    /* auth link[s] */ "",
-    /* image        */ "3446215468.jpg",
-    /* information  */ "Hanser, Nov 2000, ISBN 3-446-21546-8, 1168 pages",
-    /* inform. link */ "http://www.php.comzept.de/",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ array("PHP 4","Webserver-Programmierung für Um- und Einsteiger"),
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07",
-    /* author[s]    */ "Thomas Theis",
-    /* auth link[s] */ "",
-    /* image        */ "3934358632.gif",
-    /* information  */ "Galileo Press, May 2000, ISBN 3-934358-63-2, 354 pages",
-    /* inform. link */ "http://www.galileo-press.de/katalog/einzel.asp?ID=202",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826690044/wwwphpnet07",
-    /* author[s]    */ "Dr. Susanne Wigard",
-    /* auth link[s] */ "",
-    /* image        */ "3826690044.jpg",
-    /* information  */ "BHV, December 2000, ISBN 3-8266-9004-4, 448 pages",
-    /* inform. link */ "http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4 und MySQL",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815822033/wwwphpnet07",
-    /* author[s]    */ array("Rolf D. Stoll", "Gudrun Anna Leierer"),
-    /* auth link[s] */ "",
-    /* image        */ "3815822033.gif",
-    /* information  */ "Data Becker, July 2001, ISBN 3-8158-2203-3, 414 pages",
-    /* inform. link */ "http://www.databecker.de/",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4 - Tutorial & Referenz",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3932311795/wwwphpnet07",
-    /* author[s]    */ "Klaus Schmidt",
-    /* auth link[s] */ "",
-    /* image        */ "3932311795.jpg",
-    /* information  */ "Computer & Literatur Verlag GmbH, November 2000, ISBN 3-932-1179-5, 832 pages",
-    /* inform. link */ "http://www.ksweb.de/index.php?page=buch",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "Jetzt lerne ich PHP 4",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827258839/wwwphpnet07",
-    /* author[s]    */ "Matt Zandstra",
-    /* auth link[s] */ "",
-    /* image        */ "3827258839.jpg",
-    /* information  */ "Markt+Technik Verlag, December 2000, ISBN 3-8272-5883-9, 515 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "Webanwendungen mit PHP 4.0 entwickeln",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07",
-    /* author[s]    */ array("Tobias Ratschiller","Till Gerken"),
-    /* auth link[s] */ array("http://zend.com/comm_person.php?id=7","http://zend.com/comm_person.php?id=11"),
-    /* image        */ "3827317304.jpg",
-    /* information  */ "Addison-Wesley, Jan 2001, ISBN 3-8273-1730-4, 400 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07",
-    /* author[s]    */ array("Uwe Hess", "Günther Karl"),
-    /* auth link[s] */ "",
-    /* image        */ "3826680022.jpg",
-    /* information  */ "bhv, Dec 2000, ISBN 3-8266-8002-2, 764 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-  ),
-
-
-  array(
-    /* title[s]     */ "PHP 4 für Profis. Werkzeugkiste und Kochbuch",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898421163/wwwphpnet07",
-    /* author[s]    */ array("Helmut Dittrich","Jürgen Mellenthin"),
-    /* auth link[s] */ "",
-    /* image        */ "3898421163.jpg",
-    /* information  */ "Galileo Press, January 2001, ISBN 3-8984-2116-3, 500 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4 Webbook",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381550502X/wwwphpnet07",
-    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
-    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
-    /* image        */ "381550502X.jpg",
-    /* information  */ "Sybex, March 2001, ISBN 3-8984-2116-3, 500 pages",
-    /* inform. link */ "http://www.phpbuch.de/",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PC Spicker PHP",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815500613/wwwphpnet07",
-    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
-    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
-    /* image        */ "3815500613.jpg",
-    /* information  */ "Sybex, May 2001, ISBN 3-8155-0061-3 , 120 pages",
-    /* inform. link */ "http://www.phpbuch.de/",
-    /* language     */ "de"
-  ),
-
- array(
-    /* title[s]     */ "PHP Afterwork",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815505178/wwwphpnet07",
-    /* author[s]    */ array("Mark Kronsbein", "Clemens Gutweiler", "Thomas Weinert", "Peter Petermann"),
-    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", false, "http://www.zend.com/comm_person.php?id=61", "http://www.zend.com/comm_person.php?id=60"),
-    /* image        */ "3815505178.jpg",
-    /* information  */ "Sybex, July 2001, ISBN 3-8155-0517-8, 352 pages",
-    /* inform. link */ "http://www.phpbuch.de/",
-    /* language     */ "de"
-   ),
-
- array(
-    /* title[s]     */ "PHP Ge-Packt",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382660685X/wwwphpnet07",
-    /* author[s]    */ array("Christoph Aigner", "Thomas Strohmaier"),
-    /* auth link[s] */ "",
-    /* image        */ "382660685X.jpg",
-    /* information  */ "MITP, 2001, ISBN 3-8266-0685-X, 512 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-   ),
-
-  array(
-    /* title[s]     */ "PHP 4 Developer's Guide - Anleitungen und Lösungen für einen professionellen Einsatz",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827261740/wwwphpnet07",
-    /* author[s]    */ array("Sterling Hughes", "Andrei Zmievski"),
-    /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php", "http://zend.com/zend/hof/andrei.php"),
-    /* image        */ "3827261740.jpg",
-    /* information  */ "October 2001, ISBN 3-8272-6174-0, 538 pages",
-    /* inform. link */ "",
-    /* language     */ "de"
-  ),
-
-  array(
-    /* title[s]     */ "PHP 4 Programmering",
-    /* title_link   */ "http://pagina.se/bok.html?20660",
-    /* author[s]    */ array("Jesper Ek", "Ulrika Eriksson"),
-    /* auth link[s] */ "",
-    /* image        */ "9163606607.gif",
-    /* information  */ "February 2001, ISBN 9-1636-0660-7, 220 pages",
-    /* inform. link */ "",
-    /* language     */ "se"
-  ),
-
-  array(
-    /* title[s]     */ "Webbprogrammering met PHP",
-    /* title_link   */ "http://www.studentlitteratur.se/shop/default.html?artnr=7844-01",
-    /* author[s]    */ "Viktor Jonsson",
-    /* auth link[s] */ "",
-    /* image        */ "9144019416.gif",
-    /* information  */ "September, 2001, ISBN 91-44-01941-6, 390 pages",
-    /* inform. link */ "",
-    /* language     */ "se"
-  ),
-
+  
   array(
     /* title[s]     */ "Guía Prácticas PHP 4",
     /* title_link   */ "http://www.AnayaMultimedia.es/",
@@ -1113,94 +1156,6 @@ array(
   ),
 
   array(
-    /* title[s]     */ array("PHP tvorba interaktivnich internetovych aplikaci", "(PHP developing interactive internet applications)"),
-    /* title_link   */ "http://www.kosek.cz/php/",
-    /* author[s]    */ "Jiri Kosek",
-    /* auth link[s] */ "http://www.kosek.cz",
-    /* image        */ "8071693731.jpg",
-    /* information  */ "Grada Publishing, April 20 1999, ISBN 80-7169-373-1, 492 pages",
-    /* inform. link */ "http://www.kosek.cz/php/",
-    /* language     */ "cz"
-  ),
-
-  array(
-    /* title[s]     */ "PHP Web-DB Programming Guide",
-    /* title_link   */ "http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D381%2D0239%2D4",
-    /* author[s]    */ "Jung Jinho",
-    /* auth link[s] */ "",
-    /* image        */ "8938102394.jpg",
-    /* information  */ "",
-    /* inform. link */ "",
-    /* language     */ "kr"
-  ),
-
-  array(
-    /* title[s]     */ "PHP Web Programming with ORACLE Database",
-    /* title_link   */ "http://www.wowbook.com/book/info/book_detail.asp?isbn=ISBN89-87939-26-X",
-    /* author[s]    */ "Kim Sung-Sik",
-    /* auth link[s] */ "",
-    /* image        */ "898793926X.gif",
-    /* information  */ "",
-    /* inform. link */ "",
-    /* language     */ "kr"
-  ),
-
-  array(
-    /* title[s]     */ "CGI & PHP",
-    /* title_link   */ "http://ychat.pe.kr/",
-    /* author[s]    */ "Youn Sukbum",
-    /* auth link[s] */ "",
-    /* image        */ "cgiphp.jpg",
-    /* information  */ "",
-    /* inform. link */ "",
-    /* language     */ "kr"
-  ),
-
-  array(
-    /* title[s]     */ "PHP Bible",
-    /* title_link   */ "http://php.wilson.gs/bible",
-    /* author[s]    */ "Wilson Peng",
-    /* auth link[s] */ "",
-    /* image        */ "wilson.jpg",
-    /* information  */ "",
-    /* inform. link */ "",
-    /* language     */ "cn"
-  ),
-
-  array(
-    /* title[s]     */ array("Using PHP and MySQL", "With FreeBSD and Apache"),
-    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20023",
-    /* author[s]    */ "C.C.J.",
-    /* auth link[s] */ "",
-    /* image        */ "9575271688.gif",
-    /* information  */ "July 1999, ISBN 957-527-168-8", 
-    /* inform. link */ "http://www.dw.com.tw/book.html",
-    /* language     */ "cn"
-  ),
-
-  array(
-    /* title[s]     */ "Examples of PHP and MySQL",
-    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20029",
-    /* author[s]    */ "C.C.J.",
-    /* auth link[s] */ "",
-    /* image        */ "9575272242.gif",
-    /* information  */ "February 2000, ISBN 957-527-224-2",
-    /* inform. link */ "http://www.dw.com.tw/book.html",
-    /* language     */ "cn"
-  ),
-
-  array(
-    /* title[s]     */ "PHP tettei kouryaku",
-    /* title_link   */ "http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument",
-    /* author[s]    */ array("Michihide Hotta","Tatsuo Ishii","Rui Hirokawa"),
-    /* auth link[s] */ array(false,false,"http://www.cityfujisawa.ne.jp/%7Elouis/"),
-    /* image        */ "4797308656.gif",
-    /* information  */ "Sep 1999, ISBN 4-7973-0865-6",
-    /* inform. link */ "",
-    /* language     */ "jp"
-  ),
-
-  array(
     /* title[s]     */ "Tanuljuk meg a PHP4 használatát 24 óra alatt",
     /* title_link   */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
     /* author[s]    */ "Matt Zandstra",
@@ -1253,94 +1208,6 @@ array(
     /* information  */ "Kossuth, May 2002, ISBN 963-0943-36-0, 573 pages + CD",
     /* inform. link */ "http://php.adatnet.hu/Kossuth.ShowIssue/Kossuth.showIssueEvent/415",
     /* language     */ "hu"
-  ),
-
-  array(
-    /* title[s]     */ "PHP Guia de Consulta Rápida",
-    /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
-    /* author[s]    */ "Herbert G. Fischer",
-    /* auth link[s] */ "",
-    /* image        */ "8585184698.jpg",
-    /* information  */ "Jan 2000, ISBN 8-5851-8469-8",
-    /* inform. link */ "http://phpclasses.UpperDesign.com/products.html/id/8585184698",
-    /* language     */ "pt"
-  ),
-
-  array(
-    /* title[s]     */ "Desenvolvendo Websites com PHP 4",
-    /* title_link   */ "http://niederauer.com.br/livros/php4/",
-    /* author[s]    */ "Juliano Niederauer",
-    /* auth link[s] */ "",
-    /* image        */ "8575220039.jpg",
-    /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
-    /* inform. link */ "http://niederauer.com.br/livros/php4/",
-    /* language     */ "pt"
-  ),
-
-  array(
-    /* title[s]     */ "PHP Guia Do Desenvolvedor",
-    /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
-    /* author[s]    */ "Sterling Hughes",
-    /* auth link[s] */ "",
-    /* image        */ "8572515844.gif",
-    /* information  */ "2001, ISBN 85-7251-584-4, 528 pages",
-    /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
-    /* language     */ "pt"
-  ),
-
-  array(
-    /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
-    /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
-    /* author[s]    */ array("Luke Welling", "Laura Thomson"),
-    /* auth link[s] */ "",
-    /* image        */ "8535208216.gif",
-    /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
-    /* inform. link */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
-    /* language     */ "pt"
-  ),
-
-  array(
-    /* title[s]     */ "PHP com XML - Guia de Consulta Rápida",
-    /* title_link   */ "http://www.niederauer.com.br/livros/phpxml/",
-    /* author[s]    */ "Juliano Niederauer",
-    /* auth link[s] */ "",
-    /* image        */ "857522025X.gif",
-    /* information  */ "Novatec Editora, ISBN 8-5752-2025-X, 96 pages",
-    /* inform. link */ "http://www.niederauer.com.br/livros/phpxml/",
-    /* language     */ "pt"
-  ),
-
-  array(
-    /* title[s]     */ "PHP para quem conhece PHP",
-    /* title_link   */ "http://novateceditora.com.br/livros/phpavancado/",
-    /* author[s]    */ "Juliano Niederauer",
-    /* auth link[s] */ "",
-    /* image        */ "8575220446.jpg",
-    /* information  */ "2003, ISBN 85-7522-044-6, 480 pages",
-    /* inform. link */ "http://novateceditora.com.br/livros/phpavancado/",
-    /* language     */ "pt"
-  ),
-  
-  array(
-    /* title[s]     */ "Start på PHP",
-    /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
-    /* author[s]    */ "Thomas G. Kristensen",
-    /* auth link[s] */ "",
-    /* image        */ "8778434084.gif",
-    /* information  */ "ISBN 87-7843-408-4",
-    /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
-    /* language     */ "dk"
-  ),
-  
-  array(
-    /* title[s]     */ "Advanceret PHP",
-    /* title_link   */ "http://www.gad.dk/bog.asp?id=176204",
-    /* author[s]    */ "Cristopher Cosentino",
-    /* auth link[s] */ "",
-    /* image        */ "8778435978.gif",
-    /* information  */ "2003, ISBN 87-7843-597-8",
-    /* inform. link */ "http://www.gad.dk/bog.asp?id=176204",
-    /* language     */ "dk"
   ),
   
   array(
@@ -1507,7 +1374,140 @@ array(
     /* inform. link */ "http://www.hopslibri.com/",
     /* language     */ "it"
   ),
+  
+  array(
+    /* title[s]     */ "PHP tettei kouryaku",
+    /* title_link   */ "http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument",
+    /* author[s]    */ array("Michihide Hotta","Tatsuo Ishii","Rui Hirokawa"),
+    /* auth link[s] */ array(false,false,"http://www.cityfujisawa.ne.jp/%7Elouis/"),
+    /* image        */ "4797308656.gif",
+    /* information  */ "Sep 1999, ISBN 4-7973-0865-6",
+    /* inform. link */ "",
+    /* language     */ "jp"
   ),
+  
+  array(
+    /* title[s]     */ "PHP Web-DB Programming Guide",
+    /* title_link   */ "http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D381%2D0239%2D4",
+    /* author[s]    */ "Jung Jinho",
+    /* auth link[s] */ "",
+    /* image        */ "8938102394.jpg",
+    /* information  */ "",
+    /* inform. link */ "",
+    /* language     */ "kr"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Web Programming with ORACLE Database",
+    /* title_link   */ "http://www.wowbook.com/book/info/book_detail.asp?isbn=ISBN89-87939-26-X",
+    /* author[s]    */ "Kim Sung-Sik",
+    /* auth link[s] */ "",
+    /* image        */ "898793926X.gif",
+    /* information  */ "",
+    /* inform. link */ "",
+    /* language     */ "kr"
+  ),
+
+  array(
+    /* title[s]     */ "CGI & PHP",
+    /* title_link   */ "http://ychat.pe.kr/",
+    /* author[s]    */ "Youn Sukbum",
+    /* auth link[s] */ "",
+    /* image        */ "cgiphp.jpg",
+    /* information  */ "",
+    /* inform. link */ "",
+    /* language     */ "kr"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Guia de Consulta Rápida",
+    /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
+    /* author[s]    */ "Herbert G. Fischer",
+    /* auth link[s] */ "",
+    /* image        */ "8585184698.jpg",
+    /* information  */ "Jan 2000, ISBN 8-5851-8469-8",
+    /* inform. link */ "http://phpclasses.UpperDesign.com/products.html/id/8585184698",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "Desenvolvendo Websites com PHP 4",
+    /* title_link   */ "http://niederauer.com.br/livros/php4/",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "8575220039.jpg",
+    /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
+    /* inform. link */ "http://niederauer.com.br/livros/php4/",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Guia Do Desenvolvedor",
+    /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
+    /* author[s]    */ "Sterling Hughes",
+    /* auth link[s] */ "",
+    /* image        */ "8572515844.gif",
+    /* information  */ "2001, ISBN 85-7251-584-4, 528 pages",
+    /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
+    /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
+    /* author[s]    */ array("Luke Welling", "Laura Thomson"),
+    /* auth link[s] */ "",
+    /* image        */ "8535208216.gif",
+    /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
+    /* inform. link */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP com XML - Guia de Consulta Rápida",
+    /* title_link   */ "http://www.niederauer.com.br/livros/phpxml/",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "857522025X.gif",
+    /* information  */ "Novatec Editora, ISBN 8-5752-2025-X, 96 pages",
+    /* inform. link */ "http://www.niederauer.com.br/livros/phpxml/",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP para quem conhece PHP",
+    /* title_link   */ "http://novateceditora.com.br/livros/phpavancado/",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "8575220446.jpg",
+    /* information  */ "2003, ISBN 85-7522-044-6, 480 pages",
+    /* inform. link */ "http://novateceditora.com.br/livros/phpavancado/",
+    /* language     */ "pt"
+  ),
+  
+  array(
+    /* title[s]     */ "PHP 4 Programmering",
+    /* title_link   */ "http://pagina.se/bok.html?20660",
+    /* author[s]    */ array("Jesper Ek", "Ulrika Eriksson"),
+    /* auth link[s] */ "",
+    /* image        */ "9163606607.gif",
+    /* information  */ "February 2001, ISBN 9-1636-0660-7, 220 pages",
+    /* inform. link */ "",
+    /* language     */ "se"
+  ),
+
+  array(
+    /* title[s]     */ "Webbprogrammering met PHP",
+    /* title_link   */ "http://www.studentlitteratur.se/shop/default.html?artnr=7844-01",
+    /* author[s]    */ "Viktor Jonsson",
+    /* auth link[s] */ "",
+    /* image        */ "9144019416.gif",
+    /* information  */ "September, 2001, ISBN 91-44-01941-6, 390 pages",
+    /* inform. link */ "",
+    /* language     */ "se"
+  ),
+
+ ),
 
 
   "Related" => array(
