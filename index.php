@@ -48,8 +48,27 @@ make_link("/license/", "official license") . '.
 
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
-
 ?>
+
+<?php /* move this entry to the top when you update it! */ ?>
+
+<h1>
+<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For June available
+</h1>
+
+<p>
+<font class="newsDate">[21-Jul-2001]</font>
+<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<?php print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
+published the current results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the 
+<?php print_link("/usage.php", "usage page"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Mailing lists and CVS are up!</h1>
 <?php print_link("http://www.pair.com/", make_image("pair.gif", "pair Networks", "right") ); ?>
 
@@ -94,25 +113,6 @@ has been announced.  Further details are available on the
 Also  
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php /* move this entry to the top when you update it! */ ?>
-
-<h1>
-<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For May available
-</h1>
-
-<p>
-<font class="newsDate">[02-Jun-2001]</font>
-<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<?php print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
-published the current results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the 
-<?php print_link("/usage.php", "usage page"); ?>.
-<br clear="all">
 </p>
 
 <?php echo hdelim(); ?>
