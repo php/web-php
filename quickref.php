@@ -4,8 +4,8 @@ require_once 'prepend.inc';
 $NUMACROSS = 2;
 $SHOW_CLOSE = 10;
 
-if (empty($lang)) $lang = default_language();
-if (!file_exists("$DOCUMENT_ROOT/manual/$lang")) $lang = "en";
+// A quick fix, the whole file needs a cleanup [Goba]
+$lang = $LANG;
 
 function makeTable($lang,$array) {
 	global $NUMACROSS;
