@@ -13,16 +13,26 @@ function check_load()
 	$l = getloadavg();
 	header("X-PHP-Load: " . implode(", ", $l));
 
-	/* offload them to their favourite mirror */
+	$mirrors = array();
+
+	/* find potential mirrors */
 	foreach ($MIRRORS as $murl => $mirror) {
 		if ($murl != 'http://www.php.net' &&
 				mirror_country($murl) == $COUNTRY &&
 				mirror_status($murl) == MIRROR_OK &&
 				$mirror[5] /* searchable */) {
-			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-			exit;
+
+			$mirrors[] = $murl;
 		}
 	}
+
+	/* randomly pick one of the mirrors in their country */
+	if (count($mirrors) > 0) {
+		$murl = $mirrors[array_rand($mirrors)];
+		header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+		exit;
+	}
+	
 	/* no searchable mirror was found, allow the request through if the load
 	 * isn't really really high */
 	if ($l[0] > 20) {
