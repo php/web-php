@@ -631,13 +631,35 @@ array(
   ),
 
   array(
-    /* title[s]     */ "PHP For the World Wide Web: A Visual QuickStart Guide",
+    /* title[s]     */ "PHP For the World Wide Web: Visual QuickStart Guide",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0201727870/wwwphpnet",
     /* author[s]    */ "Larry Ullman",
     /* auth link[s] */ "",
     /* image        */ "0201727870.jpg",
     /* information  */ "Peachpit Press, April 2001, ISBN 0-201-72787-0, 278 pages",
-    /* inform. link */ "http://www.DMCinsights.com/php",
+    /* inform. link */ "http://www.DMCinsights.com/php/",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "PHP Advanced For the World Wide Web: Visual QuickPro Guide",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0201775972/wwwphpnet",
+    /* author[s]    */ "Larry Ullman",
+    /* auth link[s] */ "",
+    /* image        */ "0201775972.jpg",
+    /* information  */ "Peachpit Press, December 2001, ISBN 0-201-77597-2, 500 pages",
+    /* inform. link */ "http://www.DMCinsights.com/phpadv/",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "PHP and MySQL for Dynamic Web Sites: Visual QuickPro Guide",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0321186486/wwwphpnet",
+    /* author[s]    */ "Larry Ullman",
+    /* auth link[s] */ "",
+    /* image        */ "0321186486.jpg",
+    /* information  */ "Peachpit Press, May 2003, ISBN 0-321-18648-6, 572 pages",
+    /* inform. link */ "http://www.DMCinsights.com/phpmysql/",
     /* language     */ "en"
   ),
 
@@ -1483,6 +1505,17 @@ array(
                        make_link("http://www.amazon.fr/exec/obidos/ASIN/2744008826/wwwphpnet0f", "French") .
                        " and " . make_link("http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07", "German"),
     /* inform. link */ "http://www.newriders.com/books/title.cfm?isbn=0735709211",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "MySQL: Visual QuickStart Guide",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0321127315/wwwphpnet",
+    /* author[s]    */ "Larry Ullman",
+    /* auth link[s] */ "",
+    /* image        */ "0321127315.gif",
+    /* information  */ "Peachpit Press, September 2002, ISBN 0-321-12731-5, 327 pages",
+    /* inform. link */ "",
     /* language     */ "en"
   ),
 
