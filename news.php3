@@ -57,6 +57,7 @@ function endEntry() {
 
 <? makeEntry( "PHP: a silent killer", "by <a href=\"mailto:jim.white@sreb.org\">Jim White</a>", 
 	"http://www.osopinion.com/Opinions/JimWhite/JimWhite5.html", "December 22, 1999");?>
+PHP is now running over a million web sites and with good reason. PHP is open ource, it runs equally well on NT and UNIX, it's well documented. PHP is no doubt stealing market share from Microsoft's Active Server Pages, but the media has been unusually quiet about the issue. Even as Apache's success has become front page news, PHP has gone largely unnoticed. Maybe Microsoft wants to keep it that way.
 <? endEntry(); ?>
 
 <? makeEntry( "Welcome Zend", "by <a href=\"mailto:gmerrall@email.com\">Graeme Merral</a>", 
