@@ -3,6 +3,15 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP in the News</h3>
+<P>
+<a href="http://www.netcraft.com">Netcraft's</a> February server survey results are
+out.  They don't actually have scripting language number online at Netcraft, but
+they do a manual grep and email us this information monthly.  Here is a little 
+<a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
+couple of months.
+</P>
+
 <a href="http://www.zend.com/"><img align="right" src="zend_rgb-on-white1.gif" border="0"></a>
 <h3><b>Zend</b> has been announced</h3>
 <p>
@@ -18,15 +27,6 @@ a maintenance release.  Some new modules make their first apperance in this
 version.  Support for Adobe PDF and FDF as well as XML and an initial Interbase
 module are now available.  If you need any of these features, or if you see something
 in the <a href="ChangeLog.php3">ChangeLog</a> that might apply to you, then upgrade.
-</P>
-
-<h3>PHP in the News</h3>
-<P>
-<a href="http://www.netcraft.com">Netcraft's</a> January server survey results are
-out.  They don't actually have scripting language number online at Netcraft, but
-they do a manual grep and email us this information monthly.  Here is a little 
-<a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
-couple of months.
 </P>
 
 <h3>What is PHP?</h3>
