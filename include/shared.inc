@@ -4,26 +4,26 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $X11NS = $HAVE_STYLE = false;
+$IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = false;
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
 		$HAVE_STYLE = true;
-            $IE4=true;
+		$IE4=true;
         elseif($ver==3):
-            $IE3=true;
+		$IE3=true;
         endif;
 elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):                                    
         $ver=(int)$version[1];
         if ($ver>=4):
 		$HAVE_STYLE = true;
-            $NS4=true;
+		$NS4=true;
         elseif($ver==3):  
-            $NS3=true;
+		$NS3=true;
         endif;
-	if (strstr($HTTP_USER_AGENT, "X11")):
-		$X11NS = true;
-	endif;
+endif;
+if (ereg("X11",$HTTP_USER_AGENT)):
+	$X11 = true;
 endif;
 
 /* Base variables */
@@ -247,7 +247,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 }
 
 function commonHeader($title) {
-	global $NS4, $NS3, $IE3, $IE4, $X11NS, $FRAMEMODE, $FONTFACEATTR;
+	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
 	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
@@ -275,7 +275,7 @@ elseif ($IE4):
 	$styleSwitch=".style";
 endif;
 
-if ($NS4 || $IE4):
+if (($NS4 || $IE4) && !$X11):
         echo "function moveLayerTo(layerName,moveleft,movetop){\n";
         echo "          $layerRef"."[layerName]".$styleSwitch.".top=movetop;\n";
         echo "          $layerRef"."[layerName]".$styleSwitch.".left=moveleft;\n";
@@ -447,8 +447,11 @@ endif; ?>
 <?
 }
 
+
+
+
 function commonFooter() {
-	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE, $FONTFACEATTR;
+	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT;
 	global $MIRRORS,$MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	$country=$MIRRORS[$MYSITE][0];
@@ -523,7 +526,7 @@ function commonFooter() {
  </TR>
 </TABLE>
 
-<? if ($NS4 || $IE4):	/* Kick outs */
+<? if (($NS4 || $IE4) && !$X11):	/* Kick outs */
 	if ($FRAMEMODE != "manual"):
 ?>
 
@@ -585,6 +588,29 @@ do_layers = 1;
 //--->
 </SCRIPT>
 <? endif;	/* Kick outs */ ?>
+
+<? if ($MYSITE="http://php.privateworld.com/"):?>
+<hr noshade>
+<FONT SIZE=-1 COLOR="#808080">
+This mirror is being used for development.  You may receive unexpected errors from this site if it is currently being
+modified.  <B>I recommend using another mirror.</B><BR>
+<hr noshade>
+<B>DEBUGGING:</B>
+<BR>
+<?
+	echo "Agent: ".$HTTP_USER_AGENT."<BR>\n";
+	echo "IE3: ".$IE3."<BR>\n";
+	echo "IE4: ".$IE4."<BR>\n";
+	echo "NS3: ".$NS3."<BR>\n";
+	echo "NS4: ".$NS4."<BR>\n";
+	echo "X11: ".$X11."<BR>\n";
+	echo "Style: ".$HAVE_STYLE."<BR>\n";
+endif;
+?>
+
+</FONT>
+
+
 
 </BODY>
 </HTML>
