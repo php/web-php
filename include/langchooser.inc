@@ -12,6 +12,11 @@
  After this script run, $LANG is set to the preferred
  language, or is the empty string, if no manual is
  available on the current mirror site.
+ 
+ The $_SERVER['STRIPPED_URI'] var is also set to the
+ stripped request URI (in case of a shortcut, the
+ language is stipped, so the shortcut handling code
+ is not bothered with it).
 
 */
 
@@ -23,7 +28,14 @@ if (isset($_REQUEST['lang'])) { language_add($_REQUEST['lang']); }
 
 // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
 if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
+    
+    // Put language into preference list
     language_add($flang[1]);
+    
+    // Drop out langauge specification from URL, as this is already handled
+    $_SERVER['STRIPPED_URI'] = preg_replace(
+        "!^/$flang[1]/!", "/", $_SERVER['REQUEST_URI']
+    );
 }
 
 // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
