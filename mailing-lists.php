@@ -34,7 +34,7 @@ if (isset($_POST['maillist'])) {
             "$maillist-$request-$sub@lists.php.net",
             "Website Subscription", 
             "This was a request generated from the form at http://php.net/mailing-lists.php by $remote_addr.",
-            "From: {$_GET['email']}\r\n"
+            "From: {$_POST['email']}\r\n"
         );
         
         // Provide error if unable to send mail
