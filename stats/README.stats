@@ -32,7 +32,7 @@ Adding A Stats Page To Your Mirror In 6.5 Easy Steps:
    I copied the final executable into /usr/bin.  Call me crazy.
 
 
-4. Edit php.conf
+4. Edit php.conf (copy it from php.conf-dist)
 
    This is the main conf file for Webalizer.  Specifically, you will want to 
    change the lines which define where your log file sits, and the name of your
@@ -58,17 +58,11 @@ Adding A Stats Page To Your Mirror In 6.5 Easy Steps:
 
    FWIW, I update things daily at 3 am:
 
-             0 3 * * * cd /www/php/stats;/usr/bin/webalizer -c php.conf -x php3
+   0 3 * * * (cd /www/php/stats;/usr/bin/webalizer -c php.conf -x php3) >/dev/null 2>&1
 
    The "cd" is important because Webalizer generates it's file in the current
    directory.
 
-
-6.5. Link it to your mirror
-
-   I haven't built in the code to figure out if you have stats working on your
-   mirror or not yet.  So basically this is just for the webmasters (and people
-   who are clever enough to try "xx.php.net/stats".  I'm working on it.
 
 
 If you have any questions you can email me, although I probably can't help with 
