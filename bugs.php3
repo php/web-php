@@ -252,15 +252,16 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
 	} elseif($status!="All" && $bug_type=="Any") {
-		/* Treat assigned bugs as open */
+		/* Treat assigned and analyzed bugs as open */
 		if($status=="Open") {
-			$where_clause = "status='Open' or status='Assigned'";
+			$where_clause = "status='Open' or status='Assigned' or status='Analyzed'";
 		} else {
 			$where_clause = "status='$status'";
 		}
 	} else {
+		/* Treat assigned and analyzed bugs as open */
 		if($status=="Open") {
-			$where_clause = "(status='Open' or status='Assigned') and bug_type='$bug_type'";
+			$where_clause = "(status='Open' or status='Assigned' or status='Analyzed') and bug_type='$bug_type'";
 		} else {
 			$where_clause = "status='$status' and bug_type='$bug_type'";
 		}
@@ -296,9 +297,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<b>Database updated!</b><br>\n";
 			if($estatus=="Delete!") {
 				$comments = stripslashes($comments);
-				$text = "Bug #$id has been deleted from the database by $user\nComments: $comments\n";
+				$text = "Bug #$id has been deleted from the database by $user\nComments:\n\n$comments\n";
 			} else {
-				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n $comments\n";
+				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$comments\n";
 				$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
 				$text = stripslashes($text);
 			}
