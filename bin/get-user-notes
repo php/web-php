@@ -26,12 +26,15 @@ while (!feof($fp)) {
     unlink($file);
   }
 
+  $mtime = filemtime($file);
   if (!($file = @fopen($file,"a"))) {
     echo "unable to open $notes file $hash\n";
     continue;
   }
   fputs($file,"$id|$sect|$rate|$ts|$user|".base64_encode($note)."\n");
   fclose($file);
+
+  touch($file, $mtime < $ts ? $ts : $mtime);
 }
 
 // vim: set ft=php3 : :
