@@ -10,11 +10,11 @@ $SIDEBAR_DATA='
  examples you can try out:
 </p>
 <ul class="simple">
- <li><a href="'.$MYSITE.'echo">'.$MYSITE.'echo</a></li>
- <li><a href="'.$MYSITE.'it/echo">'.$MYSITE.'it/echo</a></li>
- <li><a href="'.$MYSITE.'imap">'.$MYSITE.'imap</a></li>
- <li><a href="'.$MYSITE.'downloads">'.$MYSITE.'downloads</a></li>
- <li><a href="'.$MYSITE.'searchterm">'.$MYSITE.'searchterm</a></li>
+ <li><a href="'.$MYSITE.'echo">/echo</a></li>
+ <li><a href="'.$MYSITE.'it/echo">/it/echo</a></li>
+ <li><a href="'.$MYSITE.'imap">/imap</a></li>
+ <li><a href="'.$MYSITE.'downloads">/downloads</a></li>
+ <li><a href="'.$MYSITE.'searchterm">/searchterm</a></li>
 </ul>
 
 <h3>Quick reference tips</h3>
