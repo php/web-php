@@ -16,8 +16,7 @@ de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	Jesper Angelo <guru@borsen.dk>	194.239.128.56
 ee	ee.php.net	kalle kolkov <kalle@ok.ee>	php.mirror.ok.ee
 es	es.php.net	Jordi Fabregas <admin@grn.es>	php.grn.es
-fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
-fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
+fi	fi.php.net	Toni Viemerö <toni.viemero@iki.fi>	hosted.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 fr	fr2.php.net	Ghislain Seguy <bibi@php.net>	php.nexen.net
 gr	gr.php.net	Haris Manousaridis <xm@banet.gr>	ns.php.gr
