@@ -143,12 +143,12 @@ site_header("Downloads");
   <span class="md5sum">md5: 5a95c4bf9561d12ad992dfb4e6e60222</span>
  </li>
  <li>
-  <?php download_link('php-5.0.1-installer.exe', 'PHP 5.0.1 installer'); ?> - 13 Aug 2004<br />
+  <?php download_link('php-5.0.2-installer.exe', 'PHP 5.0.2 installer'); ?> - 24 Sep 2004<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 990982de151b6fcc5b093a8f5dcf5404</span>
+  <span class="md5sum">md5: 2528dcc6a8b6c6e5027e262ba35c5d12</span>
  </li>
 </ul>
 
