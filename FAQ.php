@@ -27,7 +27,6 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#1.2">1.2. What is the relation between the versions?</a></li>
         <li><a href="#1.3">1.3. Can I run several versions of PHP at the same time?</a></li>
         <li><a href="#1.4">1.4. What are the differences between PHP 3 and PHP 4?</a></li>
-        <li><a href="#1.5">1.5. How did you do those pop-out windows for the Search and Mirror buttons?</a></li>
     </ul>
 <li><b><a href="#2">2. PHP mailing lists</a></b>
     <ul>
@@ -177,32 +176,6 @@ If you have suggestions, corrections or additions, send them to
     </ul>
     Please see the <a href="http://www.zend.com/zend/whats-new.php">What's new in PHP4 overview</a> for a detailed explanation of these features and more.
   <p>
-  </dd>
-
-  <dt><b>
-    <a name="1.5">1.5.</a> How did you do those pop-out windows for the Search and Mirror buttons on the PHP site (www.php.net)?
-  </b></dt>
-  <dd>
-    Our site designer, Colin Viebrock (<A href="mailto:cmv@privateworld.com">cmv@privateworld.com</a>), says:
-
-    <BLOCKQUOTE>
-    <p>Those fancy pop-out layers are done with Dynamic HTML (DHTML), Cascading Style Sheets (CSS) and Javascript (version 1.2).<p>
-    There are plenty of references on the web about DHTML and CSS, including:
-    <p><ul>
-    <li>CSS Level 1 Spec: <a href="http://www.w3.org/TR/REC-CSS1">www.w3.org/TR/REC-CSS1</a>
-    <li>Macromedia's DHTML Zone: <a href="http://www.dhtmlzone.com/index.html">www.dhtmlzone.com/index.html</a>
-    <li>Webreference's DHTML Lab: <a href="http://www.webreference.com/dhtml/">www.webreference.com/dhtml/</a>
-    <li>Guide to Cascading Style Sheets: <a href="http://www.htmlhelp.com/reference/css/">www.htmlhelp.com/reference/css/</a>
-    <li>Dynamic Duo - Cross-Browser DHTML: <a href="http://www.dansteinman.com/dynduo/">www.dansteinman.com/dynduo/</a>
-    <li>Netscape's Guide to JS 1.2: <a href="http://developer.netscape.com/docs/manuals/communicator/jsguide/js1_2.htm">developer.netscape.com/docs/manuals/communicator/jsguide/js1_2.htm</a>
-    </ul>
-    <p>But your best source of information is to view the source code to the pages on the PHP site.
-    To see the actual DHTML/Javascript code, use your browser's "View Source" function.  To see how this code was
-    generated dynamically using PHP, click on the "Source" button in the upper-right corner of any PHP page.  You
-    will probably also want to view the source of the "shared.inc" file - there is a link to it at the bottom of every
-    source page.
-    </BLOCKQUOTE><p>
-
   </dd>
 </dl>
 
