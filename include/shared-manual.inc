@@ -3,7 +3,7 @@ function manualLastModified($title) {
 	global $MYSITE, $SCRIPT_FILENAME;
 	if(strstr($MYSITE,"www.php.net")) {
 		$host = 'localhost';
-		$user = '';
+		$user = 'nobody';
 		$pass = '';
 		$db_id = mysql_connect($host, $user, $pass);
 		$query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' ORDER BY ts DESC limit 1";
@@ -204,10 +204,10 @@ function manualUserNotes($title) {
 	global $MYSITE;
 	if(strstr($MYSITE,"www.php.net")) {
 		$host = 'localhost';
-		$user = '';
+		$user = 'nobody';
 		$pass = '';
 		$db_id = mysql_connect($host, $user, $pass);
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM note WHERE sect = '$title' ORDER BY id";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' ORDER BY id";
 		$result_id = mysql_db_query("php3", $query, $db_id);
 	} else {
 		$result_id = 0;
@@ -223,7 +223,7 @@ function manualUserNotes($title) {
 	if ($result_id && mysql_num_rows($result_id) > 0) {
 		makeTitle("User Contributed Notes: ".$title);
 		while ($row = mysql_fetch_array($result_id)) {
-			makeEntry($row['when'],htmlspecialchars($row['user']),htmlspecialchars($row['note']),$row['id']);
+			makeEntry($row['xwhen'],htmlspecialchars($row['user']),htmlspecialchars($row['note']),$row['id']);
 		}
 	}
 	makeAddNote();
