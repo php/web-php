@@ -40,7 +40,7 @@ if (isset($_SERVER['HTSEARCH_PROG'])) {
 */
 
 // If PHP added some quotes, get rid of them
-if (get_magic_quotes_gpc()) {
+if ($MQ) {
     if (isset($pattern)) { $pattern = stripslashes($pattern); }
     if (isset($base))    { $base = stripslashes($base); }
     if (isset($lang))    { $lang = stripslashes($lang); }
