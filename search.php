@@ -44,7 +44,13 @@ if (isset($pattern) && ($pattern)) {
 		$query = "fid=51&search=".urlencode($pattern);
 		Header("Location: $location?$query");
 		exit;
+	} else if ($show=="bugdb") {
+		$location = "http://www.php.net/bugs.php";
+		$query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=".urlencode($pattern);
+		Header("Location: $location?$query");
+		exit;
 	}
+
 	if (!$HAVE_SEARCH) {
 		$location="http://www.php.net/search.php";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
@@ -113,6 +119,7 @@ Restrict the search to: <BR>
 <SELECT NAME="show">
 <OPTION VALUE="quickref">PHP Function List
 <OPTION VALUE="nosource" SELECTED>Whole site
+<OPTION VALUE="bugdb">Bug database
 <OPTION VALUE="manual">Online documentation
 <OPTION VALUE="maillist">PHP General Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
