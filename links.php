@@ -46,7 +46,9 @@ Zend Technologies offers many PHP related products, support,
 and many more PHP related content.</li>
 
 <li><a href="http://www.thinkphp.de/">ThinkPHP.de</a><br>
-A German PHP support company.</li>
+A German and international PHP support company providing
+full PHP support (single incidents, on-call duty), software
+development, training, and performance measurements.</li>
 </ul>
 
 <h4>PHP Link Catalogs</h4>
