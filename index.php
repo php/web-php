@@ -145,6 +145,19 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
+
+<h1>PHP Conference 2004 Spring Edition Programme Online</h1>
+<p>
+ <span class="newsdate">[18-Jan-2003]</span>
+ The session programme of the <a href="http://www.phpconference.com/">International
+ PHP Conference 2004 Spring Edition Amsterdam</a> has now been published
+ by the organizers. It features 32 fine sessions from PHP core developers and
+ others within 5 tracks and 2 power workshops on the pre-conference day.
+ <strong>Early bird registrations</strong> have been opened now until prior
+ to April 2, 2004. The Conference will happen from 3rd to 5th May, 2004.
+</p>
+
 <?php news_image("http://www.phparch.com/cruise", "phpcruise.png", "php|cruise"); ?>
 
 <h1>php|cruise deadline set for February 15th</h1>
@@ -314,30 +327,6 @@ commonHeader("Hypertext Preprocessor");
  The call for papers closes on January 14th. The call for BoFs and
  lightning talks closes on February 14th. The conference will take
  place on April 14th to 16th in Orlando, Florida, USA.
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
-
-<h1>Call for Papers: PHP Conference 2004 - Spring Edition</h1>
-<p>
- <span class="newsdate">[10-Dec-2003]</span>
- The organizers of the International PHP Conference are proud
- to announce the second edition of the Intl PHP Conference 2004
- Spring Edition in Amsterdam. Again, we'll meet at the RAI Conference
- Center for three days: one day with hands-on power workshops and
- two days main conference. The conference will happen from May, 3rd
- to May, 5th 2004.
-</p>
-<p>
- The <a href="http://www.phpconference.com/">call for papers</a> has
- been announced now. Just submit your sessions at <a 
- href="http://www.phpconference.de/kt/input/">http://www.phpconference.de/kt/input/</a> -
- they'll be reviewed by the Chair Board which consists this year of:
- Bj&ouml;rn Schotte (chair), Zak Greant, Derick Rethans, George
- Schlossnagle, and Sascha Schumann. The full conference website will
- be online soon.
 </p>
 
 <hr />
