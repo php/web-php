@@ -92,6 +92,9 @@ lists.  There are a few PHP-related mailing lists available.
      is <b>php-migration@lists.php.net</b>.
      (This is an unmoderated list and is also available in a twice-daily
      digest.)
+ <li><b>php-pear@lists.php.net</b> is a mailing list for those interested
+     in PEAR, an open-source common code library for PHP (some people wanted
+     to call it "PHP Foundation Classes" ;-).
  <li>The list for Windows PHP users is <b>php-windows@lists.php.net</b>.
      (This is an unmoderated list and is also available in a twice-daily
      digest.)
