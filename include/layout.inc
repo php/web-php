@@ -310,7 +310,7 @@ function commonFooter() {
           url = form.country.options[form.country.selectedIndex].value;
           if (url != '<?php echo $MYSITE; ?>') {
             current = window.location.href;
-            window.location.href = url+current.substr(<?echo strlen($MYSITE)?>);
+            window.location.href = url+current.substr(<?echo strpos(substr($MYSITE, 7), "/")?>);
           }
 	  return false;
         }
