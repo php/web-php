@@ -167,6 +167,7 @@ right away.</blockquote>
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("Rubik's Online","www.rubiks.com");
+	site("Harald Schmidt Show", "www.schmidt.de");
 	site("Sony Music, Europe","www.sonymusic.de");
 	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
