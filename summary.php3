@@ -26,7 +26,7 @@ The following people attended:</p>
 <h3><u>Not Required before release</u></h3>
 <dl>
 <dt> <b>Announce snapshots</b>
-<dd> Create snaps.php.net site where Sascha's daily snapshots will be available<p>
+<dd> Create <a href="http://snaps.php.net">snaps.php.net</a> site where Sascha's daily snapshots will be available<p>
 <dt> <b>Automated Windows build</b>
 <dd> It would be interesting to be able to include snapshot Windows builds as well.  In order
 to do this we need an automated way of building the Windows version.  Monty and Andi both had
