@@ -78,26 +78,6 @@ echo "\n<!--$MYSITE-->\n";
 <h1>Rackspace providing additional hosting for PHP project</h1>
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
 
-<<<<<<< index.php
-<h1>Mailing Lists, CVS temporarily unavailable</h1>
-
-<p>
-<font class="newsDate">[24-May-2001]</font>
-The PHP mailing lists, news server, and CVS repository are all temporarily
-off-line. We hope to all of these services restored as soon as possible. Thank
-you for your patience!
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
-<?/* move this entry to the top when you update it! */?>
-<h1>
-<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For May available
-</h1>
-=======
->>>>>>> 1.143
 <p>
 <font class="newsDate">[17-Sep-2001]</font>
 Thanks to the generous folks at <a
