@@ -63,7 +63,7 @@ if (i2c_valid_country()) {
 
 // List mirrors for download with a possible country matching
 function mirror_list($cmatch = '', $cnomatch = '') {
-    global $MIRRORS;
+    global $MIRRORS, $MYSITE;
     
     // Print out start of the table centered
     echo '<div align="center">' . "\n" .
