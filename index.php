@@ -145,7 +145,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.php.net/", "logos/php-logo.gif", "Programming Language of 2004"); ?>
+<?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
 <h1>PHP awarded Programming Language of 2004</h1>
 
 <p>
