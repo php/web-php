@@ -74,7 +74,7 @@ the table below.
 ?>
 </td></tr>
 <tr><th bgcolor="#dddddd">Downloads</th><td bgcolor="#eeeeee">
-For other downloadable formats, please visit our new
+For other downloadable formats, please visit our
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
 </table>
