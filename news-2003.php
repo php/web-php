@@ -15,6 +15,45 @@ site_header("News Archive - 2003");
 
 <hr />
 
+<?php news_image("http://www.zend.com/survey/php_net.php", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>PHP Usage Survey</h1>
+<p>
+ <span class="newsdate">[24-Jun-2003]</span>
+ Zend Technologies is sponsoring a public PHP Usage Survey.
+ The results will be shared with the PHP Group, and will help
+ us to better understand the ways in which PHP is being used,
+ and what may need improvement.
+ <a href="http://www.zend.com/survey/php_net.php">Fill it out</a>
+ and get a chance to win one of 50 PHP T-shirts!
+</p>
+
+<hr />
+
+<h1>PHP 4.3.2 Released!</h1>
+<p>
+ <span class="newsdate">[29-May-2003]</span>
+ The PHP developers are proud to announce the immediate availability of
+ <a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
+ and is a <strong>strongly</strong> recommended update for all users of PHP.
+ Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.2">NEWS</a> file.
+</p>
+
+<hr />
+
+<h1>Automatic Mirror Select</h1>
+<p>
+ <span class="newsdate">[23-May-2003]</span>
+ In our ongoing battle to fight load and keep serving you content, whenever you
+ perform a search on www.php.net, you will be redirected onto a nearby mirror
+ (determined using the <a href="http://www.directi.com/?site=ip-to-country">Directi
+ Ip-to-Country Database</a>). 
+ You may experience a few quirks in the search until your mirrors have synced an up-to-date
+ version of the site.
+</p>
+
+<hr />
+
 <h1>Country Detection</h1>
 <p>
  <span class="newsdate">[04-May-2003]</span>
