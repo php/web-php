@@ -166,7 +166,7 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     
-    "README.mirror" => "mirroring" // BC with mirroring readme!
+    "README.mirror" => "mirroring", // BC with mirroring readme!
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
