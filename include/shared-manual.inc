@@ -343,8 +343,8 @@ END_USERNOTE_HEADER;
     
     // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
-        echo "\n <div class=\"note\">User notes are temporarily unavailable. Please read the related news item on <a href=\"/\">our frontpage</a>.</div>";
-        //echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
+        //echo "\n <div class=\"note\">User notes are temporarily unavailable. Please read the related news item on <a href=\"/\">our frontpage</a>.</div>";
+        echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
     }
      
     // If we have notes, print them out
