@@ -185,7 +185,7 @@ commonHeader("Hypertext Preprocessor");
  business-oriented presentations that range from Rasmus Lerdorf's "Best
  Practices for PHP Developers" to "Getting your OSS Business Funded",
  presented by venture capital specialist Christian Mayaud. Other sessions
- include practical talks on PHP5, regular expressions, multilingual
+ include practical talks on PHP 5, regular expressions, multilingual
  development, PDO, XML and OOP. The business track includes sessions on the
  use of PHP in the legal, financial and healthcare industry, growing your
  business with OSS, the status of the PHP market and much, much more!
