@@ -208,6 +208,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.2RC3 Released</h1>
+<p>
+<font class="newsdate">[16-May-2003]</font>
+<a href="http://qa.php.net/">PHP 4.3.2RC3</a> has been released.
+This is the third and final release candidate and should have no critical 
+problems/bugs. Nevertheless, please download and test it as much as possible 
+on real-life applications to uncover any remaining issues.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
 
 <h1>ActiveState Active Awards</h1>
