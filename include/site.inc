@@ -51,6 +51,7 @@ $MIRRORS = array(
    "http://sk.php.net/"               => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1, 0, "sk"),
    "http://za.php.net/"               => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0, "en"),
    "http://se.php.net/"               => array("se", "Chalmers Lindholmen", "cl", "http://www.chl.chalmers.se/", 1, 1, "se"),
+#   "http://se2.php.net/"              => array("se", "Burken.NU", "http://www.burken.nu/", 1, 0, "en"),
    "http://ch.php.net/"               => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/", 1, 1, "en"),
 #   "http://th.php.net/"               => array("th", "", "", "", 1, 0, "th"),
    "http://tw.php.net/"               => array("tw", "DW", "", "http://www.dw.com.tw", 1, 0, "en"),

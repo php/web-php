@@ -36,6 +36,7 @@ pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
 #ro	ro.php.net	cbredi@timisoara.roedu.net	193.226.9.16
 ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@chl.chalmers.se>,Fredrik Öhrn <ohrn@chl.chalmers.se>	rampart.chl.chalmers.se
+se	se2.php.net	Anders Olausson <spacedump@burken.nu>	php.burken.nu
 sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
