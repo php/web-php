@@ -10,15 +10,15 @@
   reset($mirror_sites);
   while ($site = key($mirror_sites)) {
       next($mirror_sites);
-      $src_file = "$site\php-$current\.tar.gz";
-      $win32_file = "$site\php-$current-win32.zip";
+      $src_file = "${site}php-${current}.tar.gz";
+      $win32_file = "${site}php-${current}-win32.zip";
       echo(" <tr>\n");
       echo("  <td>Download ");
       download_link($src_file, "PHP $current source");
       echo(" or ");
       download_link($win32_file, "$current Win32 binary");
       echo(" from " . $mirror_sites[$site][1] . "</td>\n");
-      echo('  <td align="center"><a href="' . $src_file . '"><img src="gifs/' .
+      echo('  <td align="center"><a href="' . $src_file . '"><img width="100" height="64" src="gifs/' .
            $mirror_sites[$site][0] . '.gif" border="0"></a></td>');
       echo("\n </tr>\n");
   }
