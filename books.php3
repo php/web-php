@@ -25,7 +25,7 @@ by Leon Atkinson<BR>
 <TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
 ><IMG SRC="http://www.amazon.com/images/P/0071353429.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF=http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
+<TD><A HREF=http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
 >PHP3: Programming Browser-Based Applications (McGraw-Hill Tools Series)</A><BR>
 by Dave Medinets<BR>
 </TD>
