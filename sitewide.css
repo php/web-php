@@ -97,6 +97,11 @@ li {
 	padding-bottom: 3px;
 }
 
+em {
+	font-weight: bold;
+	font-style: italic;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;
