@@ -307,10 +307,12 @@ function commonFooter() {
       <script language="javascript">
       <!--
         function gotomirror(form) {
-          url = form.country.options[form.country.selectedIndex].value;
-          if (url != '<?php echo $MYSITE; ?>') {
-            current = window.location.href;
-            window.location.href = url+current.substr(<?echo strpos(substr($MYSITE, 7), "/")?>);
+          mirror = form.country.options[form.country.selectedIndex].value;
+          if (mirror != 'http://' + window.location.hostname + '/') {
+            window.location.href = mirror +
+                      window.location.pathname +
+                      window.location.hash +
+                      window.location.search);
           }
 	  return false;
         }
