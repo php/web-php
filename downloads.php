@@ -167,16 +167,6 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
       </li>
     </ul>
   </li>
-  <li>PHP 4.1.2
-    <ul>
-      <li><?php download_link("php-4.1.2.tar.gz", "Source Code"); ?><br />
-      <span class="md5sum">md5: 75a62553076c20e91d3be575ce158be2</span>
-      </li>
-      <li><?php download_link("php-4.1.2-Win32.zip", "Windows Binary (zip)"); ?><br />
-      <span class="md5sum">md5: 7df7d0edac5c504adec87b9bd518d2df</span>
-      </li>
-    </ul>
-  </li>
   <li>PHP 3.0.x (latest)
     <ul>
       <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?><br />
@@ -235,6 +225,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
         <option value="php-4.2.1.tar.gz">4.2.1</option>
         <option value="php-4.2.2.tar.gz">4.2.2</option>
         <option value="php-4.2.3.tar.gz">4.2.3</option>
+        <option value="php-4.3.0.tar.gz">4.3.0</option>
       </select>
     </form>
   </li>
