@@ -377,8 +377,11 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
     from any form.  How do I know which POST method variables are available?
   </B></DT>
   <DD>
-    You need to compile PHP with the "--enable-track-vars" configure switch.
-    This creates three associative arrays.  $HTTP_GET_VARS, $HTTP_POST_VARS
+	Make sure that the <i>track_vars</i> feature is enabled in your php3.ini file.  If you 
+	compiled PHP with &quot;--enable-track-vars&quot; it will be on by default.
+	Alternatively you can enable it at run-time on a per-script basis by putting
+	&lt;?php_track_vars?&gt; at the top of your file.
+    When <i>track_vars</i> is on, it creates three associative arrays.  $HTTP_GET_VARS, $HTTP_POST_VARS
     and $HTTP_COOKIE_VARS.  So, to write a generic script to handle POST
     method variables you would need something similar to the following:<PRE>
     while (list($var, $value) = each($HTTP_POST_VARS)) {
