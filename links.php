@@ -261,12 +261,14 @@ site_header("Links");
   and dedicated to PHP and its related technologies. It's edited by the Tunisian PHP
   users group.
  </li>
- 
+<!-- 
+dead
  <li>
   <a href="http://www.zpmag.com/">ZPmag</a><br />
   ZPmag is a webzine (exclusively online distribution  newspaper), 
   dedicated to PHP and its technologies (in French).
  </li>
+ -->
 </ul>
 
 <a name="videos"></a>
@@ -529,11 +531,14 @@ site_header("Links");
     Home of PHP French documentation, with comprehensive
     technical information, and all PHP related news
    </li>
+<!--
+Not a French web site anymore
    <li>
     <a href="http://www.phpdebutant.com/">phpdebutant</a><br />
     Apprendre le PHP par l'exemple, facilement et simplement.
     R&eacute;serv&eacute; d'abord aux d&eacute;butants.
    </li>
+-->
    <li>
     <a href="http://www.phpfr.org/">phpfr</a><br />
     Le site de r&eacute;f&eacute;rence sur PHP en France!
