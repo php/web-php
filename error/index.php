@@ -138,8 +138,6 @@ $uri_aliases = array (
     "subscribe"     => "mailing-lists",
     "logos"         => "download-logos",
 
-    "README.mirror" => "mirroring", // backward compatibility
-
     # manual shortcuts
     "ini"          => "configuration",
 
@@ -159,19 +157,20 @@ $uri_aliases = array (
     "gd"           => "image",
 
     "tut"          => "tutorial",
-    "tut.php"      => "tutorial", // for backward compatibility with PHP page!
+    "tut.php"      => "tutorial", // BC
 
-    "faq.php"      => "faq",      // for backward compatibility with PHP page!
-    "bugs.php"     => "bugs",     // for backward compatibility with PHP page!
-    "bugstats.php" => "bugstats", // for backward compatibility with PHP page!
+    "faq.php"      => "faq",      // BC
+    "bugs.php"     => "bugs",     // BC
+    "bugstats.php" => "bugstats", // BC
 
     "icap"         => "mcal", // mcal is the successor of icap
     
-    "README.mirror" => "mirroring", // BC with mirroring readme!
+    "README.mirror" => "mirroring", // BC
+    "ZEND_CHANGES.txt" => "zend-engine-2.php", // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
-    "projects.php" => "projects", // for backward compatibility with PHP page!
+    "projects.php" => "projects", // BC
 );
 
 $external_redirects = array(
