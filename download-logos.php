@@ -28,6 +28,13 @@ If in doubt, <a href="mailto:logos@php.net">ask</a>.
 servers on your page! Copy the image to your site please.</font>
 </p>
 
+<p>
+<a href="http://vpontier.free.fr/">Vincent Pontier</a> also made some
+really neat PHP artwork, for the French PHP sites, and for the benefit
+of the whole community. You can download some of his works and use
+under a GPL licence.
+</p>
+
 <table border="0" width="90%" cellspacing="1" cellpadding="10" bgcolor="#f0f0f0" align="center">
 
 <tr valign="middle">
