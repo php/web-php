@@ -181,7 +181,7 @@ lists. There are many PHP-related mailing lists available.
 
   while ( list(, $listinfo) = each($mailing_lists)) {
 
-    if (!is_array($listinfo)) { echo '<tr bgcolor="#D0D0D0"><th colspan="2">' . $listinfo . '</th><th>Moderated</th><th>Archive</th><th>Normal</th><th>Digest</th></tr>'; }
+    if (!is_array($listinfo)) { echo '<tr bgcolor="#D0D0D0"><th colspan="2">' . $listinfo . '</th><th>Moderated</th><th>Archive</th><th>Normal</th><th>Digest</th></tr>' . "\n"; }
     else {
   
       echo '<tr align="center" bgcolor="#F0F0F0"><td><img src="/gifs/blank.gif" width="5" height="5"></td><td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td><td>';
@@ -192,7 +192,7 @@ lists. There are many PHP-related mailing lists available.
       echo '</td><td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td><td>';
       if ($listinfo[5]) { echo '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">'; }
       else { echo 'n/a'; }
-      echo '</td></tr>';
+      echo '</td></tr>' . "\n";
 
     }
   }
