@@ -155,7 +155,7 @@ commonHeader("Hypertext Preprocessor");
  <span class="newsdate">[14-Aug-2004]</span>
  The latest online version of the PHP Manual contains a completely reorganized
  <a href="/install">Installation and Configuration</a> part, which is now
- splitted up by platforms and servers to ease your first steps with PHP. The
+ split up by platforms and servers to ease your first steps with PHP. The
  manual Windows installation instructions are completely revised, and now
  suggest you to set environment variables instead of moving files. This way
  upgrades and configuration changes become more easier.
