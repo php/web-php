@@ -163,7 +163,7 @@ commonHeader("Hypertext Preprocessor");
   Knowles and John Coggeshall. 
 </p>
 <p>
- The cruise will take place March 1st to 5th, 2003. The organizers have
+ The cruise will take place March 1st to 5th, 2004. The organizers have
  <a href="http://www.phpcruise.com/contest">announced a contest</a> to
  give away one free place on the cruise.
 </p>
