@@ -99,8 +99,8 @@ by J&ouml;rg Krause<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center">
-<IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+<TD ALIGN="center"><A HREF="http://www.kosek.cz/php/index.html"
+><IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 PHP tvorba interaktivnich internetovych aplikaci<BR>
@@ -113,8 +113,8 @@ by Jiri Kosek<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center">
-<IMG SRC="/jpgs/korean-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+<TD ALIGN="center"><A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D381%2D0239%2D4"
+><IMG SRC="/jpgs/korean-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 PHP Web-DB Programming Guide<BR>
@@ -126,8 +126,23 @@ by Jung Jinho<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center">
-<IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
+<TD ALIGN="center"><A HREF="http://php.wilson.gs/bible"
+><IMG SRC="http://php.wilson.gs/bible/cover.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+PHP Bible<BR>
+by Wilson Peng<BR>
+<SMALL>in Traditional Chinese<BR>
+<A HREF="http://php.wilson.gs/bible">more info</A> 
+<!--
+| <A HREF="http://">purchase</A>
+-->
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument"
+><IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 <A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument">PHP tettei kouryaku</A><BR>
