@@ -47,7 +47,7 @@ version of PHP.
 <br>
 <center><font size=-1>
 <i><b>Note:</b> The February issue of <font size=+1>WEB</font>Techniques has
-a full article on PHP3.  Pick up a copy!</i>
+a full <a href="http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml">article on PHP3</a>.</i>
 </font></center>
 <br>
 
