@@ -1,7 +1,8 @@
 #!/bin/sh
 
 lynx -source http://freshmeat.net/search-xml/?q=php\&filter=183 > backend/projects.xml~
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 -o ! -s backend/projects.xml~ ]; then
+  rm -f backend/projects.xml~
   echo problem getting results from freshmeat
   exit 1
 fi
@@ -14,7 +15,8 @@ mv backend/projects.xml~ backend/projects.xml
 sleep 900
 
 lynx -source http://www.php.net/bin/projects.php > backend/projects.html~
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 -o ! -s backend/projects.html~ ]; then
+  rm -f backend/projects.html~
   echo problem converting results to html
   exit 1
 fi
@@ -23,10 +25,10 @@ mv backend/projects.html~ backend/projects.html
 
 # generating the include file projects.inc
 lynx -source http://www.php.net/bin/projects_inc.php > backend/projects.inc~
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 -o ! -s backend/projects.inc~ ]; then
+  rm -f backend/projects.inc~
   echo problem generating the include file
   exit 1
 fi
 
 mv backend/projects.inc~ backend/projects.inc
-
