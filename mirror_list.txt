@@ -5,6 +5,7 @@ bg	bg.php.net	Alexander Keremidarski <salle@online.bg>	php.online.bg
 br	br.php.net	Antonio Dias <accdias@sst.com.br>	200.223.199.4
 br2	br2.php.net	Nelson Junior <nelson@lunenetworks.com.br>	php-mirror.lunenetworks.com.br
 ca	ca.php.net	Colin Viebrock <colin@easydns.com>	207.35.219.104
+ca	ca2.php.net	Len Chua <lenc@canreg.com>	phpweb.canreg.com
 ch	ch.php.net	prochat@lbdsun.epfl.ch	128.178.77.33
 cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.218
 cz	cz.php.net	Karel SOMMER <karel.sommer@inway.cz>	www.php.cz
@@ -31,6 +32,7 @@ no	no.php.net	Stig Bakken <stig@guardian.no>	195.1.254.5	same as php.guardian.no
 nz	nz.php.net	Simon Garner <sgarner@expio.co.nz>	php.expio.co.nz
 ph	ph.php.net	Greg Montano <mirror@adzu.edu.ph>	208.142.136.230
 pl	pl.php.net	grych@tgr.com.pl	php.tgr.com.pl
+pl	pl2.php.net	Marian Witkowski <mw@service.net.pl>	212.180.132.70
 pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
 pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
 #ro	ro.php.net	cbredi@timisoara.roedu.net	193.226.9.16
