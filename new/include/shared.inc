@@ -35,9 +35,140 @@ if (eregi("MSIE ([0-9]+)\.", $HTTP_USER_AGENT, &$verdata)) {
     }
 }
 
+$jsfunc['change'] = "default_jsfunc_change";
+$jsfunc['LoadImgs'] = "default_jsfunc_loadimgs";
+$func['sidebar'] = "default_func_sidebar";
+
 function spc($width, $height) {
     echo "<IMG SRC='/new/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
 };
+
+
+function default_jsfunc_change() {
+    global $HAVE_LAYERS; ?>
+function change(Name,No) {
+    if (document.images && (loaded == 1)) {
+	document[Name].src = eval("b_" + Name + No + ".src");
+    }
+    if (No == 1) {
+        <? if ($HAVE_LAYERS) { ?> if (layers) {
+	    hideLayer('mirrorsKick');
+	    hideLayer('searchKick');
+	} <? } ?>
+	if (Name != 'mirr') {
+	    change('mirr',0);
+	}
+	if (Name != 'sear') {
+	    change('sear',0);
+	}
+	lastbutton = Name;
+    }
+} <? } /* function default_jsfunc_change() */
+
+
+function default_jsfunc_loadimgs() { ?>
+function LoadImgs () {
+    if (document.images) {
+	b_down0 = new Image();
+	b_down0.src = "/new/gifs/b-downloads-p.gif";
+	b_down1 = new Image();
+	b_down1.src = "/new/gifs/b-downloads-c.gif";
+
+	b_docs0 = new Image();
+	b_docs0.src = "/new/gifs/b-docs-p.gif";
+	b_docs1 = new Image();
+	b_docs1.src = "/new/gifs/b-docs-c.gif";
+
+	b_mail0 = new Image();
+	b_mail0.src = "/new/gifs/b-mailing-p.gif";
+	b_mail1 = new Image();
+	b_mail1.src = "/new/gifs/b-mailing-c.gif";
+
+	b_dev0 = new Image();
+	b_dev0.src = "/new/gifs/b-development-p.gif";
+	b_dev1 = new Image();
+	b_dev1.src = "/new/gifs/b-development-c.gif";
+
+	b_news0 = new Image();
+	b_news0.src = "/new/gifs/b-news-p.gif";
+	b_news1 = new Image();
+	b_news1.src = "/new/gifs/b-news-c.gif";
+
+	b_link0 = new Image();
+	b_link0.src = "/new/gifs/b-links-p.gif";
+	b_link1 = new Image();
+	b_link1.src = "/new/gifs/b-links-c.gif";
+
+	b_mirr0 = new Image();
+	b_mirr0.src = "/new/gifs/b-mirror-p.gif";
+	b_mirr1 = new Image();
+	b_mirr1.src = "/new/gifs/b-mirror-c.gif";
+
+	b_top0 = new Image();
+	b_top0.src = "/new/gifs/b-top-p.gif";
+	b_top1 = new Image();
+	b_top1.src = "/new/gifs/b-top-c.gif";
+
+	b_sear0 = new Image();
+	b_sear0.src = "/new/gifs/b-search-p.gif";
+	b_sear1 = new Image();
+	b_sear1.src = "/new/gifs/b-search-c.gif";
+
+	b_sour0 = new Image();
+	b_sour0.src = "/new/gifs/b-source-p.gif";
+	b_sour1 = new Image();
+	b_sour1.src = "/new/gifs/b-source-c.gif";
+
+	b_close0 = new Image();
+	b_close0.src = "/new/gifs/b-close-p.gif";
+	b_close1 = new Image();
+	b_close1.src = "/new/gifs/b-close-c.gif";
+
+	b_cred0 = new Image();
+	b_cred0.src = "/new/gifs/b-credits-p.gif";
+	b_cred1 = new Image();
+	b_cred1.src = "/new/gifs/b-credits-c.gif";
+
+	loaded = 1;
+    }
+} <? } /* function default_jsfunc_loadimgs() */
+
+
+function default_func_sidebar()
+{
+?>
+   <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
+    <TR VALIGN=top>
+     <TD ALIGN=left>
+      <IMG SRC="/new/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
+      <?spc(15,67);?>
+      <A HREF="index.php3"><IMG SRC="/new/gifs/logo.gif" ALT="PHP3 Home Page"
+                                WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+      <?spc(1,10);?><BR>
+     </TD>
+    </TR>
+    <TR VALIGN=top>
+     <TD ALIGN=left>
+      <? sidebarButton("downloads.php3", "down", "downloads", "downloads",
+ 		       false) ?>
+      <? sidebarButton("docs.php3", "docs", "docs", "documentation",
+ 		       false) ?>
+      <? sidebarButton("mail.php3", "mail", "mailing","mailing list",
+ 		       false) ?>
+      <? sidebarButton("dev.php3", "dev", "development", "development",
+ 		       false) ?>
+      <? sidebarButton("news.php3", "news", "news", "in the news",
+ 		       false) ?>
+      <? sidebarButton("sites.php3", "link", "links", "links",
+ 		       false) ?>
+      <? sidebarButton("mirrors.php3", "mirr", "mirror", "mirror sites",
+ 		       "mirrorsKick") ?>
+     </TD>
+    </TR>
+   </TABLE>
+<?    
+}
+
 
 function kickHeader($offset, $side, $distance, $width)
 {
@@ -142,12 +273,18 @@ function commonHeader($title) {
     global $IE4, $HAVE_LAYERS, $HAVE_IMG_SRC, $HAVE_TD_BG, $HAVE_CSS;
     global $HAVE_FONT_COLOR, $HAVE_JS;
     global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
+    global $jsfunc, $func;
     // we're far from being conformant yet
     //<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 ?><HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title ?></TITLE>
-
+<STYLE TYPE="text/css">
+.white {
+    color: #FFFFFF;
+    text-decoration: none
+}
+</STYLE>
 <? if ($HAVE_JS >= 12) { ?>
 <SCRIPT LANGUAGE="JavaScript1.2">
 
@@ -176,90 +313,8 @@ var lastbutton='top';
 	 "}\n");
 } /* $HAVE_LAYERS */ ?>
 
-function LoadImgs () {
-    if (document.images) {
-	b_down0 = new Image();
-	b_down0.src = "/new/gifs/b-downloads-p.gif";
-	b_down1 = new Image();
-	b_down1.src = "/new/gifs/b-downloads-c.gif";
-
-	b_docs0 = new Image();
-	b_docs0.src = "/new/gifs/b-docs-p.gif";
-	b_docs1 = new Image();
-	b_docs1.src = "/new/gifs/b-docs-c.gif";
-
-	b_mail0 = new Image();
-	b_mail0.src = "/new/gifs/b-mailing-p.gif";
-	b_mail1 = new Image();
-	b_mail1.src = "/new/gifs/b-mailing-c.gif";
-
-	b_dev0 = new Image();
-	b_dev0.src = "/new/gifs/b-development-p.gif";
-	b_dev1 = new Image();
-	b_dev1.src = "/new/gifs/b-development-c.gif";
-
-	b_news0 = new Image();
-	b_news0.src = "/new/gifs/b-news-p.gif";
-	b_news1 = new Image();
-	b_news1.src = "/new/gifs/b-news-c.gif";
-
-	b_link0 = new Image();
-	b_link0.src = "/new/gifs/b-links-p.gif";
-	b_link1 = new Image();
-	b_link1.src = "/new/gifs/b-links-c.gif";
-
-	b_mirr0 = new Image();
-	b_mirr0.src = "/new/gifs/b-mirror-p.gif";
-	b_mirr1 = new Image();
-	b_mirr1.src = "/new/gifs/b-mirror-c.gif";
-
-	b_top0 = new Image();
-	b_top0.src = "/new/gifs/b-top-p.gif";
-	b_top1 = new Image();
-	b_top1.src = "/new/gifs/b-top-c.gif";
-
-	b_sear0 = new Image();
-	b_sear0.src = "/new/gifs/b-search-p.gif";
-	b_sear1 = new Image();
-	b_sear1.src = "/new/gifs/b-search-c.gif";
-
-	b_sour0 = new Image();
-	b_sour0.src = "/new/gifs/b-source-p.gif";
-	b_sour1 = new Image();
-	b_sour1.src = "/new/gifs/b-source-c.gif";
-
-	b_close0 = new Image();
-	b_close0.src = "/new/gifs/b-close-p.gif";
-	b_close1 = new Image();
-	b_close1.src = "/new/gifs/b-close-c.gif";
-
-	b_cred0 = new Image();
-	b_cred0.src = "/new/gifs/b-credits-p.gif";
-	b_cred1 = new Image();
-	b_cred1.src = "/new/gifs/b-credits-c.gif";
-
-	loaded = 1;
-    }
-}
-   
-function change(Name,No) {
-    if (document.images && (loaded == 1)) {
-	document[Name].src = eval("b_" + Name + No + ".src");
-    }
-    if (No == 1) {
-        <? if ($HAVE_LAYERS) { ?>
-	    hideLayer('mirrorsKick');
-	    hideLayer('searchKick');
-	<? } ?>
-	if (Name != 'mirr') {
-	    change('mirr',0);
-	}
-	if (Name != 'sear') {
-	    change('sear',0);
-	}
-	lastbutton = Name;
-    }
-}
+<? $jsfunc['LoadImgs']() ?>
+<? $jsfunc['change']() ?>
 
 function hide() {
     if (document.images && (loaded == 1)) {
@@ -280,35 +335,7 @@ function hide() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
-   <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
-    <TR VALIGN=top>
-     <TD ALIGN=left>
-      <IMG SRC="/new/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?>
-      <A HREF="index.php3"><IMG SRC="/new/gifs/logo.gif" ALT="PHP3 Home Page"
-                                WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
-      <?spc(1,10);?><BR>
-     </TD>
-    </TR>
-    <TR VALIGN=top>
-     <TD ALIGN=left>
-      <? sidebarButton("downloads.php3", "down", "downloads", "downloads",
- 		       false) ?>
-      <? sidebarButton("docs.php3", "docs", "docs", "documentation",
- 		       false) ?>
-      <? sidebarButton("mail.php3", "mail", "mailing","mailing list",
- 		       false) ?>
-      <? sidebarButton("dev.php3", "dev", "development", "development",
- 		       false) ?>
-      <? sidebarButton("news.php3", "news", "news", "in the news",
- 		       false) ?>
-      <? sidebarButton("sites.php3", "link", "links", "links",
- 		       false) ?>
-      <? sidebarButton("mirrors.php3", "mirr", "mirror", "mirror sites",
- 		       "mirrorsKick") ?>
-     </TD>
-    </TR>
-   </TABLE>
+   <? $func['sidebar']() ?>
   </TD>
   <TD align=left width="100%">
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
@@ -344,11 +371,10 @@ function hide() {
      <TD ALIGN=left WIDTH="12"
       ><IMG SRC="/new/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
      <TD ALIGN=left WIDTH="100%"><FONT FACE="<? echo $FONTFACE;?>"><BR>
-
 <!-- start body -->
 
-<?
-};
+<? } /* function commonHeader() */
+
 
 function commonFooter() {
     global $IE4, $HAVE_LAYERS, $HAVE_IMG_SRC, $HAVE_TD_BG, $HAVE_CSS;
@@ -358,7 +384,6 @@ function commonFooter() {
 ?>
 
 <!-- end body -->
-
      </TD>
     </TR>
    </TABLE>
