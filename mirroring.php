@@ -1,8 +1,11 @@
 <?php
-/* $Id$ */
-
-include_once './include/prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'mirroring.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("Mirroring The PHP Website");
+
+// Get a minute to print out for the cron example
+srand(); $minute = rand(0, 59);
 ?>
 
 <h1>Mirroring The PHP Website</h1>
@@ -13,23 +16,22 @@ commonHeader("Mirroring The PHP Website");
  consent of your hosting company (if you aren't a hosting company
  yourself), and be prepared for some reasonably significant bandwidth
  usage (a reasonable estimate as of 2/2002 is 150MB/day). The PHP
- website requires PHP 4 with the settings <a href="#settings">outlined
- below</a>. The size of the full website is approximately 3/4 gigabytes.
+ website <strong>requires PHP 4.3.x</strong> with the settings
+ <a href="#settings">outlined below</a>. The size of the full website
+ is approximately 3/4 gigabytes.
 </p>
 
 <a name="rule"></a>
-<p>
- <strong>
-  Please note that we are currently only accepting new official
-  mirrors in countries where we don't already have two active official
-  mirrors. For a list of official mirrors have a look at
-  <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
-  an official mirror site, it is advisable to contact <a
-  href="mailto:mirrors@php.net">mirrors@php.net</a>, and ask if you
-  have chance to get your mirror site accepted. We would not like
-  to put too much pressure on our rsync server, so we need to limit
-  the number of mirror sites.
- </strong>
+<p class="warn">
+ Please note that we are currently only accepting new official
+ mirrors in countries where we don't already have two active official
+ mirrors. For a list of official mirrors have a look at
+ <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
+ an official mirror site, it is advisable to contact <a
+ href="mailto:mirrors@php.net">mirrors@php.net</a>, and ask if you
+ have chance to get your mirror site accepted. We would not like
+ to put too much pressure on our rsync server, so we need to limit
+ the number of mirror sites.
 </p>
 
 <p>
@@ -76,7 +78,7 @@ commonHeader("Mirroring The PHP Website");
 </p>
 
 <p>
- PHP mirror sites should provide the exact content coming from rsync.php.net,
+ PHP mirror sites should provide the exact content coming from <tt>rsync.php.net</tt>,
  and should not be altered in any way not described in the mirroring
  guidelines. Failing to do so can result in immediate removal of your mirror
  from our list.
@@ -85,10 +87,10 @@ commonHeader("Mirroring The PHP Website");
 <h2>Add SQLite Support</h2>
 
 <p>
- <?php print_link("http://www.sqlite.org", "SQLite"); ?> is an embedded
+ <a href="http://www.sqlite.org">SQLite</a> is an embedded
  SQL database implementation that has very high performance for applications
  with low write concurrency. PHP mirrors currently employ SQLite for URL
- shortcut lookups, and will use it for manual page displays and searches
+ shortcut lookups, and will use it for manual page displays and searching
  in the future.
 </p>
 
@@ -96,7 +98,7 @@ commonHeader("Mirroring The PHP Website");
  To install the SQLite PHP extension, you need to have PEAR installed, with
  which you can get SQLite: <tt>% pear install SQLite</tt>. Ensure that your
  <tt>php.ini</tt> has an extension line to load in the SQLite extension by
- default and restart your webserver.
+ default, while starting up the webserver.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>
@@ -132,10 +134,13 @@ commonHeader("Mirroring The PHP Website");
      # Set directory index
      DirectoryIndex index.php index.html
      
+     # Do not display directory listings if index is not present
+     Options -Indexes
+     
      # Handle errors with local error handler script
-     ErrorDocument 401 /error/index.php
-     ErrorDocument 403 /error/index.php
-     ErrorDocument 404 /error/index.php
+     ErrorDocument 401 /error.php
+     ErrorDocument 403 /error.php
+     ErrorDocument 404 /error.php
      
      # Add types not specified by Apache by default
      AddType application/octet-stream .chm .bz2 .tgz
@@ -144,15 +149,10 @@ commonHeader("Mirroring The PHP Website");
      # Set mirror's preferred language here
      SetEnv MIRROR_LANGUAGE "en"
 
-     # The next lines are only necessary if 
-     # generating stats (see below)
+     # The next lines are only necessary if generating
+     # stats (see below), otherwise you should comment them out
      Alias /stats/ /path/to/local/stats/
      SetEnv MIRROR_STATS 1
-
-     # The next lines are only necessary if you would
-     # like to provide local search support (see below)
-     SetEnv HTSEARCH_PROG /usr/local/htdig/bin/htphp.sh
-     SetEnv HTSEARCH_EXCLUDE "/print/ /printwn/ /manual/howto/ /cal.php"
 
    &lt;/VirtualHost&gt;
 </pre>
@@ -161,14 +161,14 @@ commonHeader("Mirroring The PHP Website");
  Provide an asterisk or a hostname in the VirtualHost container's
  header and in the ServerName directive. Consult
  <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
- documentation</a> for differences of the two methods. Change the
+ documentation</a> for the differences of the two methods. Change the
  DocumentRoot and include_path settings as appropriate, specify
  the mirror's preferred language, and provide settings according to
- your local search and stats setup, if your mirror is going to
- provide these. For the preferred language setting, choose one from
- those avilable as manual translations. If you provide something else,
- your default language will default to English. After you restart
- Apache, your mirror site should start working.
+ your stats setup, if your mirror is going to provide it. For the
+ preferred language setting, choose one from those avilable as
+ manual translations. If you provide something else, your default
+ language will be English. After you restart Apache, your mirror
+ site should start working.
 </p>
 
 <p>
@@ -176,19 +176,16 @@ commonHeader("Mirroring The PHP Website");
  <tt>"xx.php.net"</tt>, where <tt>"xx"</tt> is replaced by the
  2-letter country code of your mirror's location. If there already
  is a <tt>"xx.php.net"</tt>, then you will probably get
- <tt>"xx2.php.net"</tt>. <a href="#rule">Please read the note in
- bold above</a>.
+ <tt>"xx2.php.net"</tt>. <a href="#rule">Please read the note on
+ official mirrors above</a>.
 </p>
 
-<h2>Setup Search Or Stats</h2>
+<h2>Setup Local Stats</h2>
 
 <p>
- To provide better service to your visitors, you may definitely
- consider setting up local search support. The instruction on
- setting this up are <a href="/mirroring-search.php">detailed
- here</a>. Setting up local stats can also be a plus on your
- mirror. We also provide <a href="/mirroring-stats.php">some
- setup instructions for that</a>.
+ Setting up local stats can be a plus on your mirror. We
+ provide <a href="/mirroring-stats.php">some setup
+ instructions for that</a>.
 </p>
 
 <h2>Setup Regular Updates</h2>
@@ -200,7 +197,7 @@ commonHeader("Mirroring The PHP Website");
 </p>
 
 <pre>
-   23 * * * * /usr/local/bin/rsync -avzC --timeout=600 --delete --delete-after rsync.php.net::phpweb /your/local/path
+   <?php echo $minute; ?> * * * * /usr/local/bin/rsync -avzC --timeout=600 --delete --delete-after rsync.php.net::phpweb /your/local/path
 </pre>
 
 <p>
@@ -220,7 +217,7 @@ commonHeader("Mirroring The PHP Website");
 <ul>
  <li>Create a 120 x 60 pixel sized logo button.</li>
  <li>Copy it to your <tt>/www/htdocs/phpweb/backend</tt> folder as <tt>mirror.gif</tt>, <tt>mirror.jpg</tt> or <tt>mirror.png</tt>.</li>
- <li>Go visit your mirror URL and check if it's there.</li>
+ <li>Go visit your mirror URL and check if it is there.</li>
 </ul>
 
 <p>
@@ -259,18 +256,18 @@ commonHeader("Mirroring The PHP Website");
 <p>
  If the shortcut features [eg. xx.php.net/echo] are not working, check that
  the manual files are really under DOCUMENT_ROOT, you have register_globals on,
- and that at least the English manual is present. If the xx.php.net/include
- shortcut works, but xx.php.net/echo does not, then you have an improper
- ErrorDocument setting.
+ and that at least the English manual is present. Also make sure that you have
+ a correct ErrorDocument setting.
 </p>
 
 <p>
  If you have an offical mirror site but it is not listed on
  <a href="/mirrors.php">mirrors.php</a>, then your mirror is probably detected
  to be disfunctional for our users. Mirror sites inaccessible for more then
- three days or not updated for more then seven days are removed automatically
- from the listing for our user's convinience. We send out a notification to
- all automatically disabled mirror site owners every week.
+ three days, not updated for more then seven days, or having any major error in
+ their setup are removed automatically from the listing for our user's
+ convinience. We send out a notification to all automatically disabled mirror
+ site owners every week.
 </p>
 
 <h2>Data Registered About Official Mirrors</h2>
@@ -299,9 +296,6 @@ commonHeader("Mirroring The PHP Website");
   coordinating with us at all.
  </li>
  <li>
-  Whether or not you've installed local searching support on your mirror.
- </li>
- <li>
   Whether or not you've installed local stats support on your mirror.
  </li>
  <li>
@@ -317,9 +311,9 @@ commonHeader("Mirroring The PHP Website");
  There is a mailing list named <tt>"php-mirrors"</tt> at
  <tt>lists.php.net</tt>. It is not required to sign up to
  this mailing list. Besides the name, the traffic on this
- list is mainly interesting for the webmasters of php.net,
+ list is mainly interesting for the webmasters of PHP.net,
  and we are able to keep in touch with you using your given
- email address. Anyway if you would like to follow what's
+ email address. Anyway if you would like to follow what is
  happening, you can subscribe, by sending an empty message
  to: <a href="mailto:php-mirrors-subscribe@lists.php.net">php-mirrors-subscribe@lists.php.net</a>
 </p>
