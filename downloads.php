@@ -115,21 +115,21 @@ site_header("Downloads");
 <hr />
 
 <a name="v5">
-<h1>PHP 5 Beta 4</h1>
+<h1>PHP 5 Release Candidate 1</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b4.tar.bz2', 'PHP 5.0.0b4 (tar.bz2)'); ?> - 12 Feb 2004<br />
+  <?php download_link('php-5.0.0RC1.tar.bz2', 'PHP 5.0.0RC1 (tar.bz2)'); ?> - 18 Mar 2004<br />
   <span class="md5sum">md5: fce84c013ff3a2a1e2136af0ea7ea6b8</span>
  </li>
  <li>
-  <?php download_link('php-5.0.0b4.tar.gz', 'PHP 5.0.0b4 (tar.gz)'); ?> - 12 Feb 2004<br />
-  <span class="md5sum">md5: f4b8be40c22a0d6440a94a77beced556</span>
+  <?php download_link('php-5.0.0RC1.tar.gz', 'PHP 5.0.0RC1 (tar.gz)'); ?> - 18 Mar 2004<br />
+  <span class="md5sum">md5: f407bc91ec3e6446fdce6a5c32e55dd</span>
  </li>
 </ul>
 
-<h2>Windows Binaries</h2>
+<h2>Windows Binaries (Release Candidate 1 binaries will be posted soon)</h2>
 <ul>
  <li>
   <?php download_link('php-5.0.0b4-Win32.zip', 'PHP 5.0.0b4 zip package'); ?> - 12 Feb 2004<br />
