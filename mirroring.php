@@ -11,7 +11,7 @@ consent of your hosting company (if you aren't a hosting company
 yourself), and be prepared for some reasonably significant bandwidth
 usage (a reasonable estimate as of 2/2002 is 150MB/day). The PHP
 website requires PHP 4 with the settings <a href="#settings">outlined
-below</a>.
+below</a>. The size of the full website is approximately 3/4 gigabytes.
 </p>
 
 <p>
