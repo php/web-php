@@ -228,9 +228,9 @@ site_header("Links");
 <ul>
  <li>
   <a href="http://www.directionphp.biz/">Direction|PHP</a><br />
-  Direction|PHP is a monthly magazine, dedicated to PHP and MySQL.
-  It covers industry news and technology reviews. It is mainly
-  downloaded by professionnals, in PDF format.
+  Direction|PHP is a monthly French speaking magazine, dedicated 
+  to PHP and MySQL. It covers industry news and technology reviews. 
+  It is mainly downloaded by professionnals, in PDF format.
  </li>
 
  <li>
