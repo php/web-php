@@ -1091,7 +1091,7 @@ array(
 
   array(
     /* title[s]     */ array("Using PHP and MySQL", "With FreeBSD and Apache"),
-    /* title_link   */ "http://www.drmaster.com.tw/information.asp?書號=DB20023",
+    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20023",
     /* author[s]    */ "C.C.J.",
     /* auth link[s] */ "",
     /* image        */ "9575271688.gif",
@@ -1102,7 +1102,7 @@ array(
 
   array(
     /* title[s]     */ "Examples of PHP and MySQL",
-    /* title_link   */ "http://www.drmaster.com.tw/information.asp?書號=DB20029",
+    /* title_link   */ "http://www.drmaster.com.tw/info.asp?NO=DB20029",
     /* author[s]    */ "C.C.J.",
     /* auth link[s] */ "",
     /* image        */ "9575272242.gif",
