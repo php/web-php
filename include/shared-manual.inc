@@ -158,16 +158,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 </TD></TR>
 <TR BGCOLOR="#F0F0F0"><TD>
 <?
-#	$blurb = strip_tags($blurb,'<br><p>');
-$blurb = htmlspecialchars($blurb);
-#	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
-$fixes = array('<br>','<p>','</p>');
-reset($fixes);
-while (list(,$f)=each($fixes)) {
-	$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
-	$blurb=str_replace(htmlspecialchars(strtoupper($f)), $f, $blurb);
-}
-echo "<tt>".nl2br($blurb)."</tt>";
+echo clean_note($blurb);
 ?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
 <hr noshade size=1>
@@ -209,7 +200,9 @@ function manualGetUserNotes($title,$failover=true)
 	global $MYSITE;
 	$notes = array();
 	if(strstr($MYSITE,"www.php.net")) {
+#	if(strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
 		$host = 'localhost';
+#		$host = '127.0.0.1';
 		$user = 'nobody';
 		$pass = '';
 		$db_id = mysql_connect($host, $user, $pass);

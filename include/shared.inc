@@ -571,6 +571,17 @@ endif; ?>
 <?
 }
 
+function clean_note($text) {
+    $text = htmlspecialchars($text);
+    $fixes = array('<br>','<p>','</p>');
+    reset($fixes);
+    while (list(,$f)=each($fixes)) {
+        $text=str_replace(htmlspecialchars($f), $f, $text);
+        $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
+    }
+    $text = "<tt>".nl2br($text)."</tt>";
+    return $text;
+}
 
 function commonFooter() {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT, $HTDIG;
