@@ -9,7 +9,13 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<img src="gifs/php4zend-small-white.gif" align="right">
+<a href="http://conferences.oreilly.com/oscon2001/"><img src="gifs/osscon.gif" align="right" border=0></a>
+<h3>PHP Conference - <a href="cfp.php">Call for Participation</a></h3>
+The conference will be part of the O'Reilly Open Source
+Convention alongside the 5th annual Perl Conference at the Sheraton San
+Diego Hotel and Marina, San Diego, California, July 23-27, 2001.  All the
+details on submitting talks are in the full <a href="cfp.php">CFP</a>.
+
 <h3>PHP 4.0.4 Released</h3>
 Dec 19, 2000.  This release  includes
 improvements for a large number of defects
