@@ -20,6 +20,9 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
             $cleaned[$k] = stripslashes($v);
         }
     }
+    else {
+        $cleaned = $_POST;
+    }
 
     // No error found yet
     $error = "";
