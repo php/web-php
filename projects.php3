@@ -153,6 +153,14 @@ databases and tables, modify, delete and add records and keys and execute any SQ
 features an overview of MySQL's activity and can import flat-file databases.
 <? endEntry();?>
 
+<? makeEntry("SQLFusion","212.208.174.2/sqlfusion/","Philippe Lewicki" ,"plewicki@ixio.com"); ?>
+The SQLFusion project is a collection of components in java for
+netobject Fusion.
+It's an easy and fast way to build php3 and mSQL web sites with NetObject
+Fusion.
+Its all free under a GNU license.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
