@@ -5,9 +5,6 @@
 
 require getcwd()."/email-validation.inc";
 
-if (!$debug)
-	$debug = 0;
-
 $test_add = array (
     "wrong-email-address@lists.php.net","jmcastagnetto@yahoo.com", 
     "some-wrong@asdas.com", "jcastagnetto-NO-SPAM@yahoo.com", 
@@ -18,7 +15,7 @@ $test_add = array (
 
 while (list(,$v) = each($test_add)) {
     echo "The address: $v (".clean_AntiSpam($v).") is";
-    if (!is_emailable_address(clean_AntiSPAM($v), $debug))
+    if (!is_emailable_address(clean_AntiSPAM($v)))
         echo " not";
     echo " valid\n<br>";
 }
