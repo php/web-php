@@ -53,7 +53,7 @@ $formats = array(
 
 <p>
  Note that the packaged HTML version of the manual
- (tar.bz2) doesn't contain any directories,
+ (tar.gz) doesn't contain any directories,
  so all of the files will be dumped into your current working
  directory when you expand the archive unless the tool you
  use does otherwise.
