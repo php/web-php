@@ -5,10 +5,10 @@ commonHeader("Download PHP Logos");
 
 <h1>Download PHP Logos</h1>
 
-<P>
+<p>
 Right click on one of the images and select "Save Image As" to save the
 logo (except where otherwise indicated). Then, link it to the main PHP
-site at <B>www.php.net</B>.
+site at <b>www.php.net</b>.
 </p>
 
 <p>

@@ -34,8 +34,10 @@ $server = $SERVER_NAME;
 
 <h1>Latest version of PHP 4.0</h1>
 
-<p>Before you download, make sure you're using a mirror close to you. You can
-change mirrors at the bottom of the page.</p>
+<p>
+Before you download, make sure you're using a mirror close to you. You can
+change mirrors at the bottom of the page.
+</p>
 
 <h2>Complete Source Code</h2>
 <ul>
