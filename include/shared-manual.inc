@@ -146,13 +146,13 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	$name = htmlspecialchars($name);
-        if (ereg("(.+)@(.+)\.(.+)",$name)):
+        if (ereg("(.+)@(.+)\.(.+)",$name)) {
                 echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
         } else {
                 echo "<B>".$name."</B><BR>\n";
         }
         echo date("d-M-Y h:i",$date)."<BR>\n";
-	echo "<HR NOSHADE>\n";
+	echo "<HR NOSHADE SIZE=1>\n";
 	$blurb = htmlspecialchars($blurb);
 	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
 	reset($fixes);
