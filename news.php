@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry ("Why PHP?", "by <A HREF=\"mailto:the_jalal@yahoo.com\">Jalal Pushman</A>",
+    "http://www.WebDevelopersJournal.com/articles/why_php.html", "November 7, 2000");?>
+According to NetCraft surveys, PHP is now the most popular module for the Apache server and in total running on something like two million Web sites. Here are some of the reasons why PHP is such a popular server side scripting language.
+<? endEntry(); ?>
+
 <? makeEntry ("The Scoop on PHP - Want a Cure For the ASP Blues? Delve Into the Dynamic Web With This Popular Scripting Language", "by Craig Knudsen",
     "http://www.linux-mag.com/online/php_01.html", "September 14, 2000");?>
 I first discovered PHP a little over a year ago at Freshmeat.net. Because most non-commercial sites at that time used Perl CGI scripts for dynamic content, I found it interesting that Freshmeat's dynamic pages all ended with .php3 instead of the .pl or .cgi associated with Perl/CGI sites like Slashdot. I did a little exploring, quickly downloaded PHP version 3, and immediately became a PHP fan.
