@@ -228,6 +228,15 @@ $books = array (
       "till_gerken.jpg", #img
       "New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages", #info
       ""  #info_link
+   ),
+
+   array("PHP For the World Wide Web: A Visual QuickStart Guide", #title(s)
+      "http://www.amazon.com/exec/obidos/ASIN/0201727870/wwwphpnet", #title_link
+      "Larry Ullman", #author(s)
+      "", #author_link(s)
+      "larry_php.jpg", #img
+      "Peachpit Press, April 2001, ISBN 0-201-72787-0, 278 pages", #info
+      "http://www.DMCinsights.com/php", #info link
    )
   ),
 
