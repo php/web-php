@@ -194,6 +194,28 @@ Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet"
+><IMG SRC="/jpgs/schwendiman.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet">PHP 4 Developer's Guide</A><BR>
+by Blake Schwendiman<BR>
+Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet"
+><IMG SRC="/jpgs/greenspan.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet">MySWL/PHP Database Application</A><BR>
+by Jay Greenspan and Brad Bulger<BR>
+Hungry Minds, January 2001, ISBN 0-7645-3537-4, 500 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet"
 ><IMG SRC="/jpgs/till_gerken.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
@@ -207,15 +229,6 @@ New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages<BR>
 </TD>
 </TR>
 
-<TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet"
-><IMG SRC="/jpgs/schwendiman.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
-</TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet">PHP 4 Developer's Guide</A><BR>
-by Blake Schwendiman<BR>
-</SMALL>
-</TD>
-</TR>
 
 <TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
