@@ -60,7 +60,7 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
     
     header("Location: $url");
 
-    print "<html><title>Redirect to $urle</title><body>";
+    print "<html><title>Redirect to $url</title><body>";
     print "<a href=\"".$url."\">Please click here</a></body></html>";
     exit;
 }
@@ -80,6 +80,8 @@ if ($uri[0] == "/") { $uri = substr($uri,1); }
 // Printer friendly manual page handling. It's important that this is included,
 // and not redirected, as this way all relative URL's will retain their meaning
 // and point to pages relative to the print dir (which is nonexistent)
+// We need to override the 404 status in that case.
+header('HTTP/1.1 200 OK');
 if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
