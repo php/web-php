@@ -79,13 +79,13 @@ echo "\n<!--$MYSITE-->\n";
 
 <p>
 <font class="newsDate">[26-Dec-2001]</font> Due to a few bugs in PHP 4.1.0, we
-decided to release <a href="/downloads.php">PHP 4.1.1.</a>. The bugs that were
-fixed are not major ones but minor ones, which could be annoying  if you get
+decided to release <a href="/downloads.php">PHP 4.1.1</a>. The bugs that were
+fixed are not major ones but minor ones, which could be annoying if you get
 bitten by them.
 </p>
 <p>
 Our recommendation is that people who already upgraded to PHP 4.1.0 do
-not need to upgrade to PHP 4.1.1 unless you're experiencing one of the
+not need to upgrade to PHP 4.1.1 unless they're experiencing one of the
 described bugs. Read the full
 <a href="/release_4_1_1.php">release announcement</a>.
 Windows binaries will be available later.
