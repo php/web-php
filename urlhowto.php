@@ -7,7 +7,7 @@ $SIDEBAR_DATA='
 <h3>URL examples</h3>
 <p>
 We have many kind of URL shortcuts. Here are some
-examples you can try out:
+examples you can try out:</p>
 <ul>
  <li><a href="'.$MYSITE.'echo">'.$MYSITE.'echo</a></li>
  <li><a href="'.$MYSITE.'it/echo">'.$MYSITE.'it/echo</a></li>
@@ -15,7 +15,6 @@ examples you can try out:
  <li><a href="'.$MYSITE.'downloads">'.$MYSITE.'downloads</a></li>
  <li><a href="'.$MYSITE.'searchterm">'.$MYSITE.'searchterm</a></li>
 </ul>
-</p>
 
 <h3>Quick reference tips</h3>
 <p>
@@ -72,7 +71,7 @@ finds no page with this name, it tries to find a manual page.
 If your URL can't be matched with a page name, a manual page
 is searched for your query. This is the case for the 
 <tt><?php echo $MYSITE; ?>preg_match</tt> URL. The following pages
-are searched for in the manual:
+are searched for in the manual:</p>
 <ul>
  <li>Chapter pages, like <tt><?php echo $MYSITE; ?>installation</tt></li>
  <li>Reference pages, like <tt><?php echo $MYSITE; ?>imap</tt></li>
@@ -82,7 +81,6 @@ are searched for in the manual:
  <li>Control structure pages, like <tt><?php echo $MYSITE; ?>while</tt></li>
  <li>Other language pages, like <tt><?php echo $MYSITE; ?>oop</tt></li>
 </ul>
-</p>
 
 <p>
 This kind of URL will bring up the manual page in 
@@ -129,7 +127,7 @@ We also have a general language selection method.
 </p>
 
 <p>
-Everything behind this feature is available here:
+Everything behind this feature is available here:</p>
 <ul>
  <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
  <li><a href="http://cvs.php.net/co.php/phpweb/include/langchooser.inc">http://cvs.php.net/co.php/phpweb/include/langchooser.inc</a></li>
@@ -137,6 +135,5 @@ Everything behind this feature is available here:
  <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
 </ul>
-</p>
 
 <?php commonFooter(); ?>

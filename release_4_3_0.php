@@ -21,7 +21,7 @@ PHP 4.3.0 Release Announcement
 <p>After a long and arduous 8 months of development and testing, PHP 4.3.0 is
 <a href="/downloads.php">out</a>! With regard to scope, time, and effort, this
 is the largest 4.x release of PHP, and it further elevates PHP's standing as a
-serious contender in the general purpose scripting language arena.<br />
+serious contender in the general purpose scripting language arena.</p>
 
 <h2>Command line interface</h2>
 
@@ -34,10 +34,8 @@ switch during configuration. Alternatively, one can use <b>make install-cli</b>
 target. On Windows CLI can be found in <b>cli</b> folder.</p>
 <p>
 CLI has a number of differences compared to other server APIs. More information
-can be found here:
-<ul>
- <li><a href="/manual/en/features.commandline.php">PHP Manual: Using PHP from the command line</a></li>
-</ul>
+can be found in the PHP Manual:
+<a href="/manual/en/features.commandline.php">Using PHP from the command line</a>
 </p>
 
 <h2>Streams</h2>
@@ -50,10 +48,8 @@ resources in the PHP core and extensions.</p>
 What this means for users is that any I/O function that works with streams
 (and that is almost all of them) can access built-in protocols, such as
 HTTP/HTTPS and FTP/FTPS, as well as custom protocols registered from PHP
-scripts. For more information please see:
-<ul>
- <li><a href="/manual/en/wrappers.php">List of Supported Protocols/Wrappers</a></li>
-</ul>
+scripts. For more information please see: <a href="/manual/en/wrappers.php">List
+of Supported Protocols/Wrappers</a>
 </p>
 
 <h2>New build system</h2>

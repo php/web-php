@@ -336,7 +336,7 @@ else {
   <td align="right">Search for:<br /></td>
   <td>
   <input type="text" name="pattern" value="" size="30" />
-  <input type="submit" value=" Search " /><br>
+  <input type="submit" value=" Search " /><br />
   </td>
  </tr>
  <tr valign="top">

@@ -14,11 +14,11 @@ echo "\n<!--$MYSITE-->\n";
 PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
 </h1>
 
-<p><table border="0" cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0">
 <tr><td>Issued on:</td><td>&nbsp;&nbsp;</td><td><b>February 17, 2003</b></td></tr>
 <tr><td>Software:</td><td>&nbsp;&nbsp;</td><td><b>PHP version 4.3.0</b></td></tr>
 <tr><td>Platforms:</td><td>&nbsp;&nbsp;</td><td><b>All</b></td></tr>
-</table></p>
+</table>
 
 <p>
   The PHP Group has learned of a serious security vulnerability in 
@@ -36,7 +36,7 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
 </p>
 
 <p>
-  NOTE: This bug does NOT affect any of the other SAPI modules.<br>
+  NOTE: This bug does NOT affect any of the other SAPI modules.
   (such as the Apache or ISAPI modules, etc.)
 </p>
    
@@ -60,9 +60,7 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
   The PHP Group has released a new PHP version, 4.3.1, which incorporates
   a fix for the vulnerability. All users of affected PHP versions are
   encouraged to upgrade to this latest version. The downloads web site at
-
-  <ul><a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a></ul>
-   
+  <a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a>
   has the new 4.3.1 source tarballs, Windows binaries and source patch
   from 4.3.0 available for download. You will only need to upgrade if 
   you're using the CGI module of PHP 4.3.0. There are no other bugfixes

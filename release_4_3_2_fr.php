@@ -30,6 +30,7 @@ Annonce de publication de PHP 4.3.2
 
 <p>
  PHP 4.3.2 contient notamment les corrections, ajouts et am&eacute;liorations suivantes :
+</p>
  <ul>
   <li>Correction de plusieurs probl&egrave;mes dangereux de d&eacute;passement de capacit&eacute; avec les entiers.</li>
   <li>Correction de plusieurs probl&egrave;mes li&eacute;s aux plate-formes 64-bits.</li>
@@ -41,6 +42,7 @@ Annonce de publication de PHP 4.3.2
   <li>Le manuel man sous Unix pour la version CLI de PHP.</li>
   <li>Nouvelle option "disable_classes" pour permettre aux administrateurs de d&eacute;sactiver certaines classes pour des raisons de s&eacute;curit&eacute;.</li>
  </ul>
+<p> 
  Pour une liste compl&egrave;te des modifications de PHP 4.3.2, reportez-vous au fichier
  <a href="/ChangeLog-4.php">NEWS</a>.
 </p>

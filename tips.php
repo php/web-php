@@ -103,6 +103,7 @@ UK mirror of the PHP function list by typing 'p is_dir' in the
 address bar of any Opera window. Obviously the UK part can be 
 changed back to 'www' to access the main site instead of the 
 mirror.
+</p>
 
 <pre>
 [Search Engine 4]
@@ -115,7 +116,6 @@ Has endseparator=0
 Encoding=utf-8
 Search Type=0
 </pre>
-</p>
 
 <?php tipTitle('Quick Reference for KDE 2.1', 'Christoph Luehr', '10-Mar-2001');?>
 
@@ -233,7 +233,7 @@ Further to the example above for Windows/IE users, here's something Linux folk c
 Here's another search option for Linux users who use Gnome. This is a macro
 for gnome's mini-commander panel applet (modified from the Yahoo search that
 comes with the applet):
-<p>
+</p>
 
 <p>
 <b>Regex:</b><br />
@@ -242,7 +242,7 @@ comes with the applet):
 
 <p>
 <b>Macro:</b><br />
-gnome-moz-remote --newwin http://www.php.net/manual-lookup.php?function=$(echo<br>
+gnome-moz-remote --newwin http://www.php.net/manual-lookup.php?function=$(echo<br />
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')
 </p>
 

@@ -196,7 +196,7 @@ if (isset($in) && $process) {
  <tr>
   <th>Country</th>
   <td>
-   <select name="in[country]" width="30">
+   <select name="in[country]">
     <option value="">- Select a country -</option>
     <?php display_options($COUNTRIES,$in['country']);?>
    </select>
@@ -205,7 +205,7 @@ if (isset($in) && $process) {
  <tr>
   <th>Event Category</th>
   <td>
-   <select name="in[category]" width="20">
+   <select name="in[category]">
 <?php
 	$cat = array("- Select a category -", "User Group Event", "Conference", "Training");
         display_options($cat,$in['category']);
@@ -225,7 +225,7 @@ if (isset($in) && $process) {
   <th colspan="2" align="left">Long Description</th>
  </tr>
  <tr>
-  <td colspan="2"><textarea name="in[ldesc]" cols="60" rows="10" maxlength="78" wrap="virtual"><?php echo htmlentities($in['ldesc']);?></textarea></td>
+  <td colspan="2"><textarea name="in[ldesc]" cols="60" rows="10" wrap="virtual"><?php echo htmlentities($in['ldesc']);?></textarea></td>
  </tr>
  <tr>
   <td align="center" colspan="2">

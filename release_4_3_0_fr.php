@@ -11,25 +11,24 @@ Annonce de publication de PHP 4.3.0
 <p>
 [ <a href="/release_4_3_0.php">English version</a> ]&nbsp;
 </p>
-<p>Apr&egrave;s un long et difficile 8 mois de d&eacute;veloppement et de test, PHP 4.3.0 est <a href="/downloads.php">publi&eacute;</a>! Au vue des &eacute;volutions, du temps consacr&eacute; et des efforts consentis, cette version est la plus importante version de la s&eacute;rie des PHP 4.x. Elle contribue largement a am&eacute;liorer les capacit&eacute;s de PHP en tant que langage g&eacute;n&eacute;raliste de scripts.<br />
+<p>Apr&egrave;s un long et difficile 8 mois de d&eacute;veloppement et de test, PHP 4.3.0 est <a href="/downloads.php">publi&eacute;</a>! Au vue des &eacute;volutions, du temps consacr&eacute; et des efforts consentis, cette version est la plus importante version de la s&eacute;rie des PHP 4.x. Elle contribue largement a am&eacute;liorer les capacit&eacute;s de PHP en tant que langage g&eacute;n&eacute;raliste de scripts.</p>
+
 <h2>Utilisation en ligne de commande</h2>
 <p>
 PHP 4.3.0 ach&egrave;ve la s&eacute;paration du mode d'utilisation en ligne de commande (dit CLI) qui permet de d&eacute;velopper des applications shell ou graphiques (avec <a href="http://gtk.php.net/">PHP-GTK</a>). La version CLI de PHP est toujours compil&eacute;es, mais elle n'est install&eacute;e que si la version CGI est d&eacute;sactiv&eacute;e avec l'option --disable-cgi. De plus, vous pouvez utilisez la commande <b>make install-cli</b>. Sous Windows, la version CLI est disponible dans le dossier <b>cli</b>.</p>
 <p>
 CLI dispose de fonctionnalit&eacute;s diff&eacute;rentes, par rappot &agrave; la version interfac&eacute;e avec les serveurs web. Pour plus de d&eacute;tails, reportez vous &agrave; 
-<ul>
-<li><a href="http://dev.nexen.net/docs/php/annotee/features.commandline.php">Utiliser PHP en ligne de commande</a></li>
-</ul>
+<a href="http://dev.nexen.net/docs/php/annotee/features.commandline.php">Utiliser PHP en ligne de commande</a>
 </p>
+
 <h2>Fl&ocirc;ts (Streams)</h2>
 <p>
 Une nouveaut&eacute; tr&egrave;s importante, mais cach&eacute;e a &eacute;t&eacute; introduite : les fl&ocirc;ts. Les fl&ocirc;ts unifient la gestion des pipes, fichiers, sockets et autres ressources d'entr&eacute;es/sorties du coeur de PHP et de ses extensions.</p>
 <p>
 Cela signifie, pour les utilisateurs, est que les fonctions d'entr&eacute;es/sorties fonctionnent d&eacute;sormais avec les fl&ocirc;ts (c'est &agrave; dire presque toutes), peuvent utiliser des protocoles internes tels que HTTP/HTTPS et FTP/FTPS, ainsi que des protocoles personnalis&eacute;s, enregistr&eacute;s comme tels depuis les scripts PHP. Pour plus d'informations, voyez : 
-<ul>
-<li><a href="http://dev.nexen.net/docs/php/annotee/wrappers.php#wrappers">Liste des protocoles support&eacute;s</a></li>
-</ul>
+<a href="http://dev.nexen.net/docs/php/annotee/wrappers.php#wrappers">Liste des protocoles support&eacute;s</a>
 </p>
+
 <h2>Nouveaus syst&egrave;me de compilation</h2>
 <p>
 Cette version du syst&egrave;me de compilation de PHP, entre autre choses, remplace la version r&eacute;cursive lente par un Makefile global, et facilite l'int&eacute;gration des librairies connexes. Automake est uniquement n&eacute;cessaire pour l'utilitaire aclocal. Le processus de compilation est rendu plus portable, et moins consommateur de ressources.
