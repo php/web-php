@@ -120,6 +120,10 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 
 <h1>Older Versions of PHP</h1>
 
+<p>
+<i>Older releases are listed for archaeological purposes only. They are no longer supported.</i>
+</p>
+
 <ul>
   <li>PHP 4.2.0
     <ul>
@@ -188,9 +192,5 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
     </form>
   </li>
 </ul>
-
-<p>
-<i>Older releases are listed for archeological purposes only. They are no longer supported.</i>
-</p>
 
 <?php commonFooter(); ?>
