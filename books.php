@@ -1214,6 +1214,17 @@ array (
   "Related" => array(
 
   array(
+    /* title[s]     */ "PostgreSQL: Grundlagen - Praxis - Anwendungsentwicklung mit PHP",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/3898641759/wwwphpnet07",
+    /* author[s]    */ "Cornelia Boenigk",
+    /* auth link[s] */ "",
+    /* image        */ "pgsql.jpg",
+    /* information  */ "dpunkt.verlag, Sept 2002, ISBN 3-89864-175-9, 426 pages",
+    /* inform. link */ "http://www.pgsql.info/",
+    /* language     */ "de"
+  ),
+
+  array(
     /* title[s]     */ array("Scriptsprachen f&uuml;r dynamische Webauftritte", "JavaScript, VBScript, ASP, Perl, PHP, XML"),
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07",
     /* author[s]    */ "Prof. Dr. Wolfgang Dehnhardt",
