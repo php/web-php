@@ -165,6 +165,28 @@ by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7El
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument"
+><IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+<A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument">PHP tettei kouryaku</A><BR>
+by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7Elouis/">Rui Hirokawa</A><BR>
+<SMALL>in Japanese, Sep/1999, ISBN 4-7973-0865-6<BR></SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216"
+><IMG SRC="/jpgs/8585184698.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+<A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">PHP Guia de Consulta R&aacute;pida</A><BR>
+by Herbert G. Fischer<BR>
+<SMALL>in Portugese, Jan/2000, ISBN 8-5851-8469-8<BR></SMALL>
+<A HREF="http://phpclasses.UpperDesign.com/products.html/id/8585184698">more info</A> | <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">purchase</A>
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Related Reading</B></TD>
 </TR>
 
