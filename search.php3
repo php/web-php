@@ -1,6 +1,7 @@
 <html><head><title>PHP3 Glimpse Search</title>
-<?	$title="Glimpse Search";
-	include "include/header.inc";
+<?
+	require("shared.inc");
+	commonHeader("Glimpse Search");
 	include "configuration.inc";
 	/* Set this to the directory containing your .glimpse* files */
 	if (isset($glimpse_dir)) {
@@ -135,4 +136,5 @@
 		<?}
 	}
 } ?>
+<?commonFooter();?>
 </body></html>
