@@ -6,7 +6,7 @@
 
 <ul>
 
-<li><a href="manual/">PHP 3.0 Manual</a>.
+<li><a href="manual/manual.htm">PHP 3.0 Manual</a>.
     This is an early version, a lot is still missing, but it'll get
     better.
 
