@@ -1,11 +1,119 @@
 <?php
 require_once 'prepend.inc';
+require_once 'email-validation.inc';
+require_once 'posttohost.inc';
+
 commonHeader("Using CVS for PHP Development");
 ?>
 
 <h1>Using CVS for PHP Development</h1>
 
-<?php if(empty($fullname)){ ?>
+<?php
+
+if ($in && $checkread) {
+
+  $cleaned = array();
+  if (get_magic_quotes_gpc()) {
+    while (list($k,$v) = each($in)) {
+      $cleaned[$k] = stripslashes($v);
+    }
+  }
+
+  $error = "";
+
+  if (empty($in[id])) {
+    $error .= "You must supply a desired CVS id. ";
+  }
+  if (empty($in[fullname])) {
+    $error .= "You must supply your real name. ";
+  }
+  if (empty($in[purpose])) {
+    $error .= "You must supply a reason for requesting the CVS account. ";
+  }
+  if (empty($in[password])) {
+    $error .= "You must supply a desired password. ";
+  }
+  if (empty($in[email]) || !is_emailable_address($cleaned[email])) {
+    $error .= "You must supply a desired CVS id. ";
+  }
+
+  if (!$error) {
+    #$result = posttohost("http://master.php.net/entry/cvs-account.php", array(
+    $error = posttohost("http://master.php.net/~jimw/php-master-web/entry/cvs-account.php", array(
+                "username" => $cleaned[id],
+                "name" => $cleaned[fullname],
+                "email" => $cleaned[email],
+                "passwd" => $cleaned[password],
+                "note" => $cleaned[purpose]
+              ));
+    if ($error) {
+      $error = "When trying to create the account, an error occured: $error.";
+    }
+  }
+
+  if ($error) {
+    echo "<p class=\"formerror\">$error</p>";
+  }
+  else {
+?>
+<p>
+Thank you. Your request has been sent. You should hear something within the
+next week or so. If you haven't heard anything by then, send an email to <a
+href="mailto:group@php.net">group@php.net</a> to let us know that we've
+forgotten you, but you haven't forgotten us! (It happens. There's several of
+us, and sometimes we think that someone else has taken care of your request,
+and they think that we took care of it. Sorry.)
+</p>
+
+<p>
+If you are not familiar with CVS, you should have a look at the various
+documentation resources available at <a
+href="http://www.cvshome.org/">CVShome.org</a>. This is also where
+to get the most recent version of the CVS client.
+</p>
+
+<p>
+All CVS commit messages get sent to the php-cvs mailing list. You should
+subscribe yourself to this mailing list. Instructions for subscribing
+are on the <a href="/support.php">Support</a> page.
+</p>
+
+<p>
+CVS itself is quite easy to use. Follow the steps listed on the <a
+href="anoncvs.php">anonymous CVS</a> page for checking out your tree.
+Substitute your own user name for 'cvsread' and use the password you
+submitted. You will not be able to do this until
+you receive confirmation of your account having been created.
+</p>
+
+<p>
+Next, once you have your CVS tree you need to know the following commands.
+They should all be executed from within the checked out tree. eg. cd php4
+<dl>
+<dt><b><tt>cvs update -dP</tt></b></dt>
+<dd>This fetches all updates made by others and brings your tree up to date.
+Before starting to edit anything in the tree you should do this. Generally you
+would do this whenever you see a CVS commit message on the php-cvs mailing
+list.</dd>
+<dt><b><tt>cvs commit</tt></b></dt>
+<dd>This commits any changes you have made anywhere in the tree.  A text editor
+will pop up and you will need to describe the changes you made.  Please provide
+a good description here as it may help people in the future when looking at
+your code changes.</dd>
+</dl>
+</p>
+<?php
+    commonFooter();
+    exit;
+  }
+}
+else {
+  if ($in && !$checkread) {?>
+<p class="formerror">We could not have said it more clearly. Read everything on
+this page and look at the form you are submitting carefully.</p>
+<?php
+  }
+?>
 <p>
 All PHP development is done through a distributed revision control system
 called <a href="http://www.cvshome.org/">CVS</a>. This helps us track changes
@@ -101,12 +209,14 @@ someone told you you to fill out the form here, make sure to mention them here!
 
 <p>
 The CVS account, once granted and activated (which could take a while, so be
-patient!), gives you access to a number of things.  First, and most importantly,
-it gives you access to modify those parts of PHP CVS tree for which you have
-requested and been granted access. It also allows you to comment on and close
-bugs in our <a href="http://bugs.php.net/">bug database</a>, and allows you to
-<a href="http://www.php.net/manual/admin-notes.php">modify the documentation
-notes in the annotated manual</a>.
+patient!), gives you access to a number of things.  First, and most
+importantly, it gives you access to modify those parts of PHP CVS tree for
+which you have requested and been granted access. It also allows you to comment
+on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
+allows you to <a href="http://www.php.net/manual/admin-notes.php">modify the
+documentation notes in the annotated manual</a>.  Your CVS account also
+translates into a foo@php.net forwarding email address where <b>foo</b> is your
+CVS user id. Feel free to use it!
 </p>
 
 <p>
@@ -118,110 +228,42 @@ with PHP. If you are sitting there wondering if you need a CVS account,
 then you don't!
 </b>
 </p>
-
-<p>
-<form action="cvs-php.php" method="post">
-<table border="0">
-<tr><th>Full Name: </th><td><input type="text" size="50" name="fullname"></td></tr>
-<tr><th>Email: </th><td><input type="text" size="50" name="email"></td></tr>
-<tr><th valign="top">Purpose: </th><td><textarea cols="50" rows="5" name="purpose"></textarea></td></tr>
-<tr><th>User ID: </th><td><input type="text" size="10" name="id"></td></tr>
-<tr><th>Requested Password: </th><td><input type="password" size="10" name="password"></td></tr>
-<tr><th></th><td>By checking this box you are claiming that you have read <I>all</I> of the comments above <input type="checkbox" name="checkread" value="1"></td></tr>
-<tr><th>&nbsp;</th><td><input type="submit" value="Send It"></td></tr>
-</table>
-</form>
-<?php } elseif ($fullname && $email && $password && $purpose && $checkread) {
-
-	$stripit = array('fullname', 'email', 'password', 'purpose');
-	for (reset($stripit); $name = current($stripit); next($stripit))
-		$$name = stripslashes($$name);
-
-mail("group@php.net","CVS Account Request",
-    "Full name: $fullname\n".
-    "Email:     $email\nID: $id\n".
-    "Password:  ".crypt($password, substr(md5(time()), 0, 2))."\n".
-    "Purpose:   $purpose",
-     "From: \"CVS Account Request\" <$email>");
-mail("php-dev@lists.php.net", "CVS Account Request",
-		"Full name: $fullname\n".
-		"Email:     $email\n".
-		"ID:        $id\n".
-		"Purpose:   $purpose", 
-		"From: \"CVS Account Request\" <$email>");
-?>
-<p>
-Thank you. Your request has been sent. You should hear something within the
-next week or so. If you haven't heard anything by then, send an email to <a
-href="mailto:group@php.net">group@php.net</a> to let us know that we've
-forgotten you, but you haven't forgotten us! (It happens. There's several of
-us, and sometimes we think that someone else has taken care of your request,
-and they think that we took care of it. Sorry.)
-</p>
-<?php
-} elseif ($fullname && $email && $password && $purpose && !$checkread) { 
-?>
-<p>
-<h1><font color="#ff0000">PLEASE, read our comments about applying for CVS accounts.</font></h1>
-</p>
-<?php
-} else {
-?>
-<p>
-<h1><font color="#ff0000">INCOMPLETE FORM. PLEASE GO BACK AND RESUBMIT.</font></h1>
-</p>
 <?php
 }
 ?>
-<p>
-If you are not familiar with CVS, you should have a look at the various
-documentation resources available at <a
-href="http://www.cvshome.org/">CVShome.org</a>. This is also where
-to get the most recent version of the CVS client.
-</p>
-
-<p>
-All CVS commit messages get sent to the php-cvs mailing list. You should
-subscribe yourself to this mailing list. Instructions for subscribing
-are on the <a href="/support.php">Support</a> page.
-</p>
-
-<p>
-CVS itself is quite easy to use. Follow the steps listed on the <a
-href="anoncvs.php">anonymous CVS</a> page for checking out your tree.
-Substitute your own user name and password for the cvsread/phpfi
-combination listed there. You will not be able to do this until
-you receive confirmation of your account having been created.
-</p>
-
-<p>
-Next, once you have your CVS tree you need to know the following commands.
-They should all be executed from within the checked out tree. eg. cd php4
-<dl>
-<dt><b><tt>cvs update -dP</tt></b></dt>
-<dd>This fetches all updates made by others and brings your tree up to date.
-Before starting to edit anything in the tree you should do this. Generally you
-would do this whenever you see a CVS commit message on the php-cvs mailing
-list.</dd>
-<dt><b><tt>cvs commit</tt></b></dt>
-<dd>This commits any changes you have made anywhere in the tree.  A text editor
-will pop up and you will need to describe the changes you made.  Please provide
-a good description here as it may help people in the future when looking at
-your code changes.</dd>
-</dl>
-</p>
-
-<p>
-It would probably be a good idea to put the following in your ~/.cvsrc file:
-<pre>diff -u
-cvs -z4
-update -d -P
-checkout -P</pre>
-</p>
-
-<p>
-Your CVS account also translates into a foo@php.net forwarding email
-address where <b>foo</b> is your CVS user id. Feel free to use it!
-</p>
+<form action="<?php echo $PHP_SELF;?>" method="POST">
+<table border="0">
+<tr>
+ <th>Full Name: </th>
+ <td><input type="text" size="50" name="in[fullname]" value="<?php echo clean($in[fullname]);?>" /></td>
+</tr>
+<tr>
+ <th>Email: </th>
+ <td><input type="text" size="50" name="in[email]" value="<?php echo clean($in[email]);?>" /></td>
+</tr>
+<tr>
+ <th valign="top">Purpose: </th>
+ <td><textarea cols="50" rows="5" name="in[purpose]"><?php echo clean($in[purpose]);?></textarea></td>
+</tr>
+<tr>
+ <th>User ID: </th>
+ <td><input type="text" size="10" name="in[id]" value="<?php echo clean($in[id]);?>" /></td>
+</tr>
+<tr>
+ <th>Requested Password: </th>
+ <td><input type="password" size="10" name="in[password]" value="<?php echo clean($in[password]);?>" /></td>
+</tr>
+<?php
+# if checkread is set here, we're redisplaying the form because of an error.
+if ($checkread) {
+  echo "<input type=\"hidden\" name=\"checkread\" value=\"1\" />\n";
+}
+else {?>
+<tr><th></th><td>By checking this box you are claiming that you have read <I>all</I> of the comments above <input type="checkbox" name="checkread" value="1" /></td></tr>
+<?php
+}?>
+<tr><th>&nbsp;</th><td><input type="submit" value="Send It" /></td></tr>
+</table>
+</form>
 
 <?php commonFooter(); ?>
