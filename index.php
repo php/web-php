@@ -143,7 +143,7 @@ initiated after growing interest for an English magazine after the German
 version has been around for a few months.
 </p>
 <p>
-PHP Magazine not only informs about the script language itself, but also about
+PHP Magazine not only informs about the scripting language itself, but also about
 related technologies such as the Apache Web Server, database technologies, XML
 and other innovative internet technologies.  Different sections within the
 magazine are oriented towards the specific question areas with which a web
