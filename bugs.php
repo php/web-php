@@ -1,8 +1,6 @@
 <?php /* vim: set noet ts=4 sw=4: : */
 require_once 'prepend.inc';
 
-require 'format-text.inc';
-
 if (isset($save) && isset($pw)) { # non-developers don't have $user set
   setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 }
@@ -84,11 +82,11 @@ if ($cmd == "send") {
 
         echo htmlspecialchars($sdesc), "\n\n";
 
-        wrap(htmlspecialchars($ldesc));
+        echo wordwrap(htmlspecialchars($ldesc));
 
 		echo "</pre>\n";
 
-		$ascii_report = "$report$sdesc\n\n$ldesc";
+		$ascii_report = "$report$sdesc\n\n".wordwrap($ldesc);
 		$ascii_report.= "\n-- \nEdit bug report at: http://bugs.php.net/?id=$cid&edit=1\n";
 
         $mailto = $mail_bugs_to . (eregi("documentation",$bug_type) ? ",phpdoc@lists.php.net" : "");
@@ -443,7 +441,7 @@ elseif ($cmd == "display") {
 	/* ORIGINAL REPORT */
 	echo "<b><i>[$original[ts1]] $original[email]</i></b><br>\n";
 	echo "<blockquote><blockquote><pre>";
-	wrap(addlinks($original[ldesc]),90);
+	echo wordwrap(addlinks($original[ldesc]),90);
 	echo "</pre></blockquote></blockquote>\n";
 
 	/* OLD-STYLE DEVELOPER COMMENT */
@@ -451,7 +449,7 @@ elseif ($cmd == "display") {
 		echo "<b><i>[$original[ts2] $original[dev_id]@php.net</i></b><br>\n";
 		$text=addlinks($row[8]);
 		echo "<blockquote><blockquote><pre>";
-		wrap(addlinks($original[comments]),90);
+		echo wordwrap(addlinks($original[comments]),90);
 		echo "</pre></blockquote></blockquote>\n";
 	}
 
@@ -461,7 +459,7 @@ elseif ($cmd == "display") {
 		while ($com = mysql_fetch_array($comresult)) {
 			echo "<b><i>[$com[ts]] $com[email]</i></b><br>\n";
 			echo "<blockquote><blockquote><pre>";
-			wrap(addlinks($com[comment]),90);
+			echo wordwrap(addlinks($com[comment]),90);
 			echo "</pre></blockquote></blockquote>\n";
 		}
 	}
