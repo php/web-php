@@ -96,6 +96,21 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/thephpdevelopmte"
+><IMG SRC="/gifs/rasmus-kug.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/3897212250/thephpdevelopmte"
+>PHP kurz & gut</A><BR>
+by Rasmus Lerdorf<BR>
+<SMALL>
+Deutsche &Uuml;bersetzung von Ingo Marks<BR>
+in German, O'Reilly & Associates, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
+<A HREF="http://www.oreilly.de/catalog/phptbger/index.html">weitere Informationen</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 ><IMG SRC="/gifs/book-php-german.gif" BORDER=0 ALIGN="left"
 ></A><BR>
@@ -146,6 +161,19 @@ Webserver-Programmierung für Um- und Einsteiger<BR>
 by Thomas Theis<BR>
 <SMALL>in German</SMALL><BR>
 <SMALL><A HREF="http://www.galileo-press.de/">weitere Informationen</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/thephpdevelopmte"
+><IMG SRC="/gifs/susanne_wigard.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/thephpdevelopmte"
+>Das Einsteigerseminar PHP 4.0</A><BR>
+by Dr. Susanne Wigard, BHV, Juni 2000, 382 Seiten<BR>
+<SMALL>in German</SMALL><BR>
+<SMALL><A HREF="http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html">weitere Informationen</A><BR>
 </TD>
 </TR>
 
