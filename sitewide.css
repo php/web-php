@@ -285,7 +285,7 @@ table#cal div.event {
 	padding-bottom: 2px;
 	border-bottom: 1px dashed #000000;
 }
-table#calnav, table#cal td.notaday {
+table#calnav td, table#cal td.notaday {
 	background-color: #d0d0d0;
 	color: inherit;
 }
