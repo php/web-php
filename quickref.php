@@ -4,7 +4,9 @@ require_once 'prepend.inc';
 $NUMACROSS=2;
 $SHOW_CLOSE=10;
 
-function makeTable($array) {
+if (!isset($lang)) $lang = $MIRRORS[$MYSITE][6];
+
+function makeTable($lang,$array) {
 	global $NUMACROSS;
 
 	echo '<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="0" WIDTH="580">';
@@ -74,7 +76,7 @@ functions which seem to be closest in spelling to <B><? echo $notfound;?></B> (r
 good matches are in bold).  Perhaps you were looking for one of these:
 </P>
 
-<? makeTable($maybe); ?>
+<? makeTable($lang,$maybe); ?>
 
 <P>
 If you want to search the entire PHP website for the string &quot;<B><? echo $notfound; ?></B>&quot;, 
@@ -85,7 +87,7 @@ then <? print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'cl
 Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
 </P>
 
-<? makeTable($functions); ?>
+<? makeTable($lang,$functions); ?>
 
 </TD></TR>
 </TABLE>
