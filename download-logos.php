@@ -216,7 +216,8 @@ function random_bgcolor($min, $max)
  <tr>
   <td class="logo">
    <?php print_image("logos/php-power-micro.png", "PHP Powered"); ?><br /><br />
-   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?>
+   <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br /><br />
+   <?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
   </td>
   <?php print_nostar(); ?>
   <td>
@@ -227,6 +228,7 @@ function random_bgcolor($min, $max)
     <li>
      <a href="/images/logos/php-power-micro.png">PNG format (1)</a>,
      <a href="/images/logos/php-power-micro2.png">PNG format (2)</a>
+     <a href="/images/logos/php5-power-micro.png">PNG format (3)</a>
     </li>
    </ul>
   </td>
