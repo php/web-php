@@ -130,7 +130,7 @@ ul.simple li {
 /* Layout styling and helpers --------------------------------------------- */
 #layout_2, #layout_3 {
 	/* Background image will be set in a mirror specific CSS rule */
-	background-position top left;
+	background-position: top left;
 	background-repeat: repeat-y;
 }
 #layout_3_helper {
@@ -397,7 +397,7 @@ table#logos td ul {
 /* User notes on manual pages --------------------------------------------- */
 div#usernotes {
 	background-color: #e0e0e0;
-	color; inherit;
+	color: inherit;
 }
 div#usernotes div.head, div#usernotes div.foot {
 	background-color: #d0d0d0;
@@ -455,7 +455,7 @@ ul#manualtoc li a:hover {
 
 /* Top and bottom navigation controls on manual pages --------------------- */
 div.manualnavbar {
-	position: relative;
+	float: right;
 	background-color: #e0e0e0;
 	color: inherit;
 	padding: 4px;
