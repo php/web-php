@@ -316,7 +316,10 @@ function commonHeader($title) {
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 	Header("Vary: User-Agent");
-	Header("Content-Type: text/html; charset=iso-8859-1");
+    if(substr(dirname($PHP_SELF),-2)=='ja')
+        Header("Content-Type: text/html; charset=utf-8");
+	else 
+		Header("Content-Type: text/html; charset=iso-8859-1");
 
 ?>
 <HTML>
