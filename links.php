@@ -341,7 +341,7 @@ and scripts</li>
 <li><b>Croatian</b>
 <ul>
 
-<li><a href="http://php.monitor.hr">PHP.co.ba</a><br>
+<li><a href="http://php.monitor.hr">PHP.izvor (PHP.source)</a><br>
 Croatian site with news, source code, manuals, beginners guides, forums,
 questions &amp; answers, on-line help for programmers, polls, tools, etc.</li>
 </ul></li>
