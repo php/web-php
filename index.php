@@ -202,6 +202,7 @@ hence <a href="http://qa.php.net/">PHP 4.3.0RC4</a>. This one mainly corrects
 the CGI vs CLI SAPI naming and fixes a couple of bugs. It is supposed to have a
 short testing cycle, after which the final version will be put out, hopefully
 before the end of the year.
+</p>
 
 <?php echo hdelim(); ?>
 
