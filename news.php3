@@ -55,6 +55,12 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "A fun thing happened on the way to the Phorum", "by Joe Barr","http://www.linuxworld.com/linuxworld/lw-1999-05/lw-05-vcontrol2.html", "May 12, 1999");?>
+Slackware.com uses it. But have you heard of the freely available
+conferencing software called Phorum? Joe tells the story of Phorum,
+and how he came to try it out.
+<? endEntry(); ?>
+
 <? makeEntry( "Internet Publication System with GNU/Linux", "by &Aacute;lvaro del Castillo","http://www.openresources.com/magazine/publication-system-inet", "May 3, 1999");?>
 First in a series dedicated to the analysis, development and
 implementation of a very complete system for publishing data on the
