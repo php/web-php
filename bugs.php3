@@ -9,7 +9,8 @@ if(!strstr($MYSITE,"ca.php.net")) {
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
-$destination = "php-dev@php.iquest.net";
+$destination = "php3@lists.php.net";
+#$destination = "php-dev@php.iquest.net";
 #$destination = "rasmus@lerdorf.on.ca";
 
 function indent($string, $prefix) {
