@@ -20,6 +20,13 @@ if (!isset($htsearch_prog)) {
     $searchtype = 0;
 }
 
-echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype";
+// Provide information on local stats setup
+if (isset($_SERVER['MIRROR_STATS'])) {
+    $mirror_stats = 1; // Yes
+} else {
+    $mirror_stats = 2; // Don't know
+}
+
+echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language();
 
 ?>
