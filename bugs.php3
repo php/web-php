@@ -90,9 +90,8 @@ function show_menu($state) {
 					"php_os" => "Platform",
 					"status" => "Status",
 					"comments" => "Comments",
-					"ts1" => "TimeStamp 1",
-					"ts2" => "Timestamp 2",
-					"assign" => "Assigned");
+					"ts1" => "Opened",
+					"assign" => "Assigned To");
 
 	reset($fields);
 	echo "</td><td align=right>Order by:</td><td> <select name='order_by_clause'>\n";
@@ -610,12 +609,12 @@ CREATE TABLE bugdb (
   php_version char(16),
   php_os varchar(32),
   status varchar(16),
-  comments text,
-  ts1 datetime,
-  ts2 datetime,
-  dev_id varchar(16),
+  comments text,# developer comment (deprecated)
+  ts1 datetime, # bug created date
+  ts2 datetime, # developer comment date (deprecated)
+  dev_id varchar(16),# developer who commented (deprecated)
   assign varchar(16),
-  passwd varchar(20),
+  passwd varchar(20),# user password
   PRIMARY KEY (id)
 );
 
