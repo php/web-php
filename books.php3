@@ -10,6 +10,18 @@ commonHeader("PHP Books");
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
+><IMG SRC="http://images.amazon.com/images/P/1565927699.01.LZZZZZZZ.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
+>PHP Pocket Reference</A><BR>
+by Rasmus Lerdorf<BR>
+<SMALL><A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 ><IMG SRC="/gifs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
