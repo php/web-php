@@ -114,6 +114,7 @@ $uri_aliases = array (
     "help"          => "support",
     "unsubscribe"   => "unsub",
     "subscribe"     => "mailing-lists",
+    "logos"         => "download-logos",
 
     # manual shortcuts
     "ini"         => "configuration",
