@@ -15,10 +15,18 @@ The PHP site has been given a serious facelift recently.  The design is
 courtesy of Colin Viebrock at <a
 href="http://www.privateworld.com">Private World Communications</a>.
 Please let us know of any problems with the site by sending a message
-to <a href="mailto:webmaster@php.net?subject=<?
+to <a href="mailto:webmaster&#64;php.net?subject=<?
 echo "New Look Feedback (browser:$HTTP_USER_AGENT, site:$SERVER_NAME)";
-?>">webmaster@php.net</A>.<P>
-<br>
+?>">webmaster&#64;php.net</A>.<P>
+
+<h3><a href="http://www.devshed.com"><img src="/gifs/devshed3.gif" border=0 align=center></a>
+Help DevShed Promote PHP Awareness, Literacy, and Development</h3>
+DevShed.com will soon be creating a special section devoted to PHP3, and 
+they need your help.  DevShed is looking for PHP3 tutorials (2-3000 words) 
+for various topics.  DevShed will pay authors US$100, and will contribute 
+a matching $100 to the PHP Development Fund for each article published.  
+Contact <a href="mailto: php&#64;devshed.com">php&#64;devshed.com</a> for 
+more information.
 
 <h3>What is PHP?</h3>
 
