@@ -284,6 +284,7 @@ function manualFooter($title,$id="") {
         manualPrintFooter();
     } else {
         manualUserNotes($title,$id);
+        echo "<br />";
         navigationBar($title, $id, "bottom");
         commonFooter();
     }
