@@ -6,7 +6,7 @@
  searchForm="<?php echo $MYSITE; ?>"
 >
 
-<input name="souurceid" user="Mozilla-search">
+<input name="sourceid" value="Mozilla-search">
 <input name="pattern" user="">
 
 <interpret

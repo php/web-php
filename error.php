@@ -27,7 +27,7 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 if ($URI == 'phpnetsearch.src') {
     status_header(200);
     include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozsearch.inc';
-	exit;
+    exit;
 }
 
 // ============================================================================
