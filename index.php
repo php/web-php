@@ -6,11 +6,6 @@ header("Cache-Control: public, max-age=600");
 
 require_once 'prepend.inc';
 
-if (isset($setstyle)){
-	set_style($setstyle);
-	header("Location: http://$HTTP_HOST/");
-}
-
 $SIDEBAR_DATA = '
 <br>
 <h3>What is PHP?</h3>
