@@ -378,8 +378,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$esdesc = stripslashes($esdesc);
 
 			/* mail bug originator */
-    			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+			if ($ephp_version[0] == '4') {
+				$prefix = 'PHP4';
+			}
+    			Mail("$eemail, $destination", "$prefix Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
 	}
 
@@ -416,8 +418,11 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
-    			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+			/* mail bug originator */
+			if ($ephp_version[0] == '4') {
+				$prefix = 'PHP4';
+			}
+    			Mail("$eemail, $destination", "$prefix Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 			mysql_freeresult($result);
 		}	
 	}
@@ -462,6 +467,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		if($edit==2) {
 			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
 		} else {
+			echo "<input type=hidden name=ephp_version value=\"".$row[5]."\">\n";
 			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
 		}
 		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
