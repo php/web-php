@@ -37,7 +37,7 @@ function highlight_php($code, $return = FALSE)
             '</span>',
             "\n&nbsp;",
             '&nbsp; '
-		),
+        ),
         $highlighted
     ) . '</div>';
     
