@@ -2,7 +2,7 @@
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
-<b>What is PHP?</b>
+<h3>What is PHP?</h3>
 <p>
 PHP is a server-side, cross-platform, HTML embedded scripting
 language.  If you are completely new to PHP and want to get some idea
