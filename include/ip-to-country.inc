@@ -60,9 +60,28 @@ function i2c_go()
        return TRUE;
     }
 
-    // User is behind a proxy
+    // User is behind a proxy and check that we discard RFC1918 IP addresses
+	// if they are behind a proxy then only figure out which IP belongs to the
+	// user.  Might not need any more hackin if there is a squid reverse proxy
+    // infront of apache.
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ipnum = (float) sprintf("%u", ip2long($_SERVER['HTTP_X_FORWARDED_FOR']));
+		unset($ips);
+		unset($ip);
+
+		// Put the IP's into an array which we shall work with shortly.
+		$ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+
+		for ($i = 0; $i < count($ips); $i++) {
+			// Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
+			// 192.168.0.0/16 -- jim kill me later with my regexp pattern
+			// below.
+			if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
+				$ip = $ips[$i];
+				break;
+			}
+		}
+
+        $ipnum = (float) sprintf("%u", ip2long(($ip ? $ip : $_SERVER['REMOTE_ADDR'])));
     }
 
     // This is the real IP of the user
@@ -174,3 +193,5 @@ function i2c_valid_country()
     global $COUNTRY;
     return (!empty($COUNTRY) && $COUNTRY != "NA");
 }
+
+/* vim: set noet ts=4 sw=4 ft=php: : */
