@@ -498,14 +498,7 @@ Or use the form below to submit a new bug report.
 <form method=POST action="<? echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
-<P><STRONG>Please make sure you have read our list of <A
-href="FAQ.php3">Frequently Asked Questions</A> to see whether your
-problem may already be a known issue, and also check the bug database
-for any outstanding bug reports that match your bug.</STRONG>
-
-<P>If you are reporting more than one bug, or requesting more than
-one feature, or both, please open seperate reports for each instead
-of grouping them all in one report.
+<p><strong>Please read the <a href="bugs-dos-and-donts.php3">Dos & Don'ts</a> before submitting a bug report!</strong</p>
 
 <table>
  <tr>
@@ -523,13 +516,6 @@ of grouping them all in one report.
     <option name="3.0.3">3.0.3
     <option name="earlier">Earlier?  Upgrade first!
    </select>
-  </td>
-  <td>
-   <font size="-2">
-   <font color="#FF0000">Note:</font>
-   Please don't report bugs in versions earlier than 3.0.3, but instead,
-   upgrade first, and check if the bug still exists.
-   </font>
   </td>
  </tr><tr>
   <th align=right>Type of bug:</th>
