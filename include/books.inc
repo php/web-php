@@ -1186,7 +1186,7 @@ array(
     /* auth link[s] */ "",
     /* image        */ "8575220039.jpg",
     /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
-    /* inform. link */ "http://www.cursophp.net/livro/",
+    /* inform. link */ "http://niederauer.com.br/livros/php4/",
     /* language     */ "pt"
   ),
 
