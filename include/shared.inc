@@ -34,7 +34,7 @@ endif;
 
 /* Base variables */
 
-$FONTFACE = "tahoma, arial, helvetica, sans-serif";
+$FONTFACE = "tahoma, verdana, arial, helvetica, sans-serif";
 $FRAMEMODE = "standard";
 $FONTFACEATTR = " FACE=\"$FONTFACE\"";
 
