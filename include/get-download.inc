@@ -5,13 +5,43 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
 // Try to make this page non-cached
 header_nocache();
 
-// If there is no such file, then drop out an invalid file error message
-if (!isset($df) || !file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $df)) {
-    exit('Invalid file requested for download!');
+// No file to download
+if (!isset($df)) {
+    exit("No file requested for download");
+}
+
+// Could be a normal download or a manual download file
+$possible_files = array($df, "manual/$df"); 
+
+// Find out what is the exact file requested 
+$file = FALSE;
+foreach ($possible_files as $name) {
+    if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
+        $file = $name;
+        break;
+    }
+}
+    
+// No downloadable file found
+if ($file === FALSE) {
+    site_header("Download not found");
+    echo <<<EOT
+<h1>Download not found</h1>
+<p>
+ The file you requested (<strong>{$df}</strong>) is not found on
+ this server (<strong>{$MYSITE}</strong>). If this file is a recent
+ addition to our downloads, then it is possible that this particular
+ server is not yet updated to host that file for download. Please
+ come back to this server later, or start the download from another
+ mirror site.
+</p>
+EOT;
+    site_footer();
+    exit;
 }
 
 // Set local file name
-$local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $df;
+$local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file;
 
 // Print out common header
 site_header('Get Download');
