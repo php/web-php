@@ -652,6 +652,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "PHP Guia Do Desenvolvedor",
+    /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
+    /* author[s]    */ "Sterling Hughes",
+    /* auth link[s] */ "",
+    /* image        */ "phpguida_pt.jpg",
+    /* information  */ "2001, ISBN 85-7251-584-4, 528 pages",
+    /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
+    /* language     */ "pt"
+  ),
+
+  array(
     /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
     /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
     /* author[s]    */ array("Luke Welling", "Laura Thomson"),
