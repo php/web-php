@@ -10,6 +10,8 @@ $filesizes["php-3.0.2-win32.exe"]="~ 1332KB";
 $filesizes["php-3.0.2-win32.zip"]="~ 1297KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 $filesizes["php-3.0.2-patch.gz"]="~ 71KB";
+$filesizes["mod_php-3.0.1-1.i386.rpm"]="~ 260KB";
+$filesizes["mod_php-3.0.1-1.src.rpm"]="~ 984KB";
 
 function makeCap() {
 	GLOBAL $MIRRORS, $COUNTRIES;
