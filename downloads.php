@@ -4,9 +4,11 @@ require_once 'prepend.inc';
 $SIDEBAR_DATA = '
 <h3>Binaries for other systems</h3>
 <p>
-If you are looking for UNIX/Linux binaries, please
-go to your distributions package center. For MacOSX
-binaries, go to <a href="http://www.entropy.ch/software/macosx/">this
+We do not distribute UNIX/Linux binaries.  Most Linux
+distributions come with PHP these days, so if you do
+not want to compile your own, go to your distribution\'s
+download site.  For MacOSX binaries, go to 
+<a href="http://www.entropy.ch/software/macosx/">this
 page</a>.
 </p>
 
