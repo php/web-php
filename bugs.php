@@ -63,6 +63,17 @@ function wrap($text,$margin=72) {
 	echo substr($text,$printfrom);
 }
 
+function list_ids($current) {
+	global $dbhost,$dbuser,$dbpwd;
+	mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
+	$result = mysql_db_query('php3', "select distinct dev_id from bugdb where dev_id not like '%@%' order by dev_id");
+	if($current) echo "<option>$current\n";
+	echo "<option>Any\n";
+	while($row = mysql_fetch_row($result)) {
+		if($row[0]!=$current) echo "<option>".$row[0]."\n";
+	}
+}
+
 function show_state_options($state, $show_all, $user_mode=0) {
 	if ($state) { echo "<option>$state\n"; }
 	if($state!="Open") { echo "<option>Open\n"; }
@@ -77,7 +88,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 
 function show_menu($state)
 {
-	global $PHP_SELF, $bug_type;
+	global $PHP_SELF, $bug_type, $by;
 
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
@@ -98,12 +109,10 @@ function show_menu($state)
 					"comments" => "Comments",
 					"ts1" => "Opened",
 					"assign" => "Assigned To");
-
+	
 	reset($fields);
-	echo "</td><td align=right>Order by:</td><td> <select name='order_by_clause'>\n";
-	while(list($field,$name) = each($fields)) {
-		echo "<option value='$field'>$name\n";
-	}
+	echo "</td><td align=right>Last Comment By:</td><td> <select name='by'>\n";
+	list_ids($by);
 	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
 	echo "<td colspan=3><input type=text name=\"search_for\"></td></tr></form>\n";
@@ -361,6 +370,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$where_clause .= " and";
 	}
 	$where_clause .= " php_version like '4%'";
+	if($by!='Any') $where_clause .= " and dev_id = '$by' ";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
