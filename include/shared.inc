@@ -25,6 +25,11 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
 		$NS3=true;
         endif;
 endif;
+
+if (eref("Opera",$HTTP_USER_AGENT)):
+	$DISABLE_KICKOUTS = true;
+endif;
+
 if (ereg("X11",$HTTP_USER_AGENT)):
 	$X11 = true;
 endif;
