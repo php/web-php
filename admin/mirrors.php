@@ -149,6 +149,7 @@ while ($row = mysql_fetch_array($res)) {?>
 ?>
 </table>
 <?php
+commonFooter();
 
 function show_country_options($cc="") {
   global $COUNTRIES;
