@@ -108,8 +108,6 @@ use does otherwise.
    }?>
 </table>
 
-<?php echo hdelim(); ?>
-
 <h1>French PHP Manual</h1>
 
 <p>
