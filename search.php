@@ -1,18 +1,16 @@
 <?php
-include_once 'prepend.inc';
+
+include_once "prepend.inc";
 
 /*
-You need to grab http://www.php.net/Mirrors-htdig.tgz and follow the
-directions in there if you want to run the search engine on your
-mirror (or emulate it on your own website).
+ See http://php.net/mirroring-search for directions if you want
+ to run the search engine on your mirror site.
 */
 
+// ============================================================================
 // For safety reasons, we disallow the
 // setting of this variable from outside
 unset($htsearch_prog);
-
-// Constant to specify when there is no base
-define("NO_BASE", "-");
 
 // Load in mirror specific configuration data (htdig path)
 if (file_exists("configuration.inc")) {
@@ -31,6 +29,7 @@ if (!@is_executable($htsearch_prog)) {
     unset($htsearch_prog);
 }
 
+// ============================================================================
 /* Form parameters expected:
      pattern - search keywords
      lang    - language to limit search to [this is not
@@ -64,6 +63,26 @@ if (isset($show) && !preg_match("!^\\w+$!", $show)) {
     $show = "wholesite";
 }
 
+// Set base if it is not specified
+if (!isset($base)) {
+
+    // The base is the referrer site. Check if it was a PHP mirror site,
+    // and not some other site offering a direct PHP.net search form.
+    // Links should not be pointed back to a non PHP.net mirror site
+    if (preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
+        $matches[1] != 'qa') {
+        $base = "http://{$matches[1]}.php.net/";
+    }
+    unset($matches);
+}
+
+// If we are on the same site, there is no need for the base
+// This makes URLs shorter and POST data smaller
+if (isset($base) && $base == $MYSITE) {
+    unset($base);
+}
+
+// ============================================================================
 // We received something to search for
 if (isset($pattern)) {
 
@@ -123,7 +142,7 @@ if (isset($pattern)) {
             echo "<b>The search service is currently not available.</b>.<br />";
             echo "Please try later.\n";
             commonFooter();
-            exit();
+            exit;
         }
         
         // We can redirect to the php.net search page
@@ -144,26 +163,8 @@ if (isset($pattern)) {
         commonHeader("Search Results");
         echo "<h1>Search Results</h1>\n";
         
-        // Guess what base is, if it is not specified
-        if (!isset($base)) {
-
-            // The base is the referrer site. Check if it was a PHP mirror site,
-            // and not some other site offering a direct PHP.net search form.
-            // Links should not be pointed back to a non PHP.net mirror site
-            if (preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
-                $matches[1] != 'qa') {
-                $base = "http://{$matches[1]}.php.net/";
-            }
-            unset($matches);
-
-            // If we are on the same site, there is no need for the base
-            if (isset($base) && $base == $MYSITE) {
-                $base = NO_BASE;
-            }
-        }
-
         // This will be the link for new searches (a clean search page)
-        $sourceurl = htmlentities($base == NO_BASE ? $PHP_SELF : $base . substr($PHP_SELF, 1));
+        $sourceurl = htmlentities(!isset($base) ? $PHP_SELF : $base . substr($PHP_SELF, 1));
 
         // If the pattern is empty, print out an error, and exit
         $pattern = trim($pattern);
@@ -171,7 +172,7 @@ if (isset($pattern)) {
             echo "<b>Error:</b> No search words specified.<br /><br />";
             echo "Click here for a <a href=\"$sourceurl\">New Search</a><br /><br />\n";
             commonFooter();
-            exit();
+            exit;
         }
             
         // We have something to search for, now encode it as appropriate
@@ -230,7 +231,9 @@ if (isset($pattern)) {
         list(, , $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
         
         // String to carry on the search parameters in prev/next URLs
-        $baseurl = htmlentities($PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show&base=" . urlencode($base));
+        $baseurl = $PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show";
+        if (isset($base)) { $baseurl .= "&base=" . urlencode($base); }
+        $baseurl = htmlentities($baseurl);
 
         // Print out search results information header
         echo "$matches documents match your search for '<b>$htmlpt</b>' $where:<br /><br />\n";
@@ -244,7 +247,7 @@ if (isset($pattern)) {
         while ($i < $rc) {
             
             // If we have not performed a "remote search", leave the text as is
-            if ($base == NO_BASE) {
+            if (!isset($base)) {
                 echo $result[$i];
             }
             
