@@ -26,18 +26,6 @@ commonHeader("Links");
 On these sites you will find tutorials, articles and example scripts
 </p>
 
-<h4>Closely related to PHP</h4>
-
-<ul>
-<li><a href="http://www.zend.com/">Zend.com</a><br>
-Zend Technologies' Web site, with lots of PHP related resources
-(articles, tutorials, case studies, PHP function table, etc.)</li>
-
-<li><a href="http://conf.php.net/">PHP Conference Material</a><br>
-Some PHP conference slide shows, presented at various meetings
-by PHP professionals</li>
-</ul>
-
 <h4>PHP Support Companies</h4>
 
 <ul>
