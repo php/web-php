@@ -46,14 +46,14 @@ commonHeader("Documentation ");
 <li>PDF version of PHP Manual has been split to two parts due to its' size and bookmarks not working in documents that are over 999 pages.
 <li><? download_link("language.pdf", "PHP PDF Manual - November 21, 2000"); ?>. 195 pages
 <li><? download_link("funcref.pdf", "PHP PDF Manual (Function reference) - November 21, 2000"); ?>. 881 pages
-<li>The PHP version in it's totality is available too:</li>
+<li>The PDF version in it's totality is available too:</li>
 <li><? download_link("manual.pdf", "PHP PDF Manual - November 22, 2000"); ?>. 1062 pages
 </ul>
 
 <H2>Other Versions</H2>
 <ul>
 <li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
-<!-- <li><? download_link("manual.prc", "PHP Manual PalmPilot DOC File"); ?> -->
+<!-- <li><?notphp download_link("manual.prc", "PHP Manual PalmPilot DOC File"); ?> -->
 <li><?php download_link("manual_isilo.pdb","PHP Manual - PalmPilot Isilo format"); ?>
 <li><?php download_link("manual_poormojo_org.pdb","PHP Manual - PalmPilot DOC format (using www.poormojo.org)"); ?>
 <li><?php download_link("manual_screwdriver_net.pdb","PHP Manual - PalmPilot DOC format (using pilot.screwdriver.net)"); ?>
