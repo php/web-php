@@ -100,8 +100,8 @@ function navigationBar($title) {
 }
 
 function manualPrintNote(const $row, $num) {
-       if ($num % 2 == 0) { $color = 'turquoise'; }
-       else { $color = 'skyblue'; }
+       if ($num % 2 == 0) { $color = '#ccddee'; }
+       else { $color = '#ddeeff'; }
        echo "<TR><TD bgcolor=$color>";
         # turn email address into mailto: links (roughly)
        echo ereg_replace("([^;[:space:]]+@[^&[:space:]]+)", "<A href=\"mailto:\\1\">\\1</A>", $row[user]);
