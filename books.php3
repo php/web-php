@@ -34,6 +34,18 @@ by David Medinets<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
+><IMG SRC="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
+>PHP</A><BR>
+by Chris Scollo, Sascha Schumann, Jason T. McKnight 
+<SMALL><A HREF="http://www.amazon.com/">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
