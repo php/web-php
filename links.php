@@ -154,6 +154,9 @@ An exhaustive PHP scripts collection, with more 400 useful functions (English an
 <li><a href="http://phpj.com/">PHP Journal</a><br>
 A quarterly journal devoted to the PHP programming language.</li>
 
+<li><a href="http://www.phparch.com/">php|architect</a><br>
+The first monthly English magazine about PHP, distributed in PDF format</li>
+
 <li><a href="http://www.phpmag.de/">PHPmag</a><br>
 The Software &amp; Support Verlag, based in Frankfurt,
 Germany, has now published a magazine on PHP as a 
