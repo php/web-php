@@ -40,41 +40,41 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed a bug in ISO-8601 week calculation</li>
 <li>Fixed a crash when using invalid color index with imagecolortransparent()
   (Pierre-Alain Joye).</li>
-<li>Fixed bug #20987 (no handling for client certificates). (Ilia)</li>
-<li>Fixed bug #21039 (crash when not supplying an IV to mcrypt_generic_init).
+<li>Fixed bug <a href="http://bugs.php.net/20987">#20987</a> (no handling for client certificates). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21039">#21039</a> (crash when not supplying an IV to mcrypt_generic_init).
   (Derick)</li>
-<li>Fixed bug #20936 (openssl_pkey_get was broken). (jeroen@derks.it, Wez)</li>
-<li>Fixed bug #20927 (wordwrap crash). (Ilia)</li>
-<li>Fixed bug #20796 (when register_globals is on &amp; arrays with same names are
+<li>Fixed bug <a href="http://bugs.php.net/20936">#20936</a> (openssl_pkey_get was broken). (jeroen@derks.it, Wez)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20927">#20927</a> (wordwrap crash). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20796">#20796</a> (when register_globals is on &amp; arrays with same names are
   passed via get/post/cookie the data inside $_GET/$_POST/$_COOKIE can would be
   corrupted). (Ilia)</li>
-<li>Fixed bug #20725 (if the upload directory cannot be written to, the POST data
+<li>Fixed bug <a href="http://bugs.php.net/20725">#20725</a> (if the upload directory cannot be written to, the POST data
   after the uploaded file is lost). (Ilia)</li>
-<li>Fixed bug #20865 (array_key_exists() fails to find NULL key). (Ilia)</li>
-<li>Fixed bug #20812 (ftp_get returned NULL on success, instead of TRUE). (Ilia)</li>
-<li>Fixed bug #20785 (crash when using pdf_open_memory_image() to load a
+<li>Fixed bug <a href="http://bugs.php.net/20865">#20865</a> (array_key_exists() fails to find NULL key). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20812">#20812</a> (ftp_get returned NULL on success, instead of TRUE). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20785">#20785</a> (crash when using pdf_open_memory_image() to load a
   true-color image). (Ilia)</li>
 <li>Fixed a crash when converting between true-color images (png/jpeg) and
   gd1/gd2 image formats, png/jpeg -> gd1/gd2 -> png/jpeg conversion now
   works correctly. (Ilia, Pierre-Alain Joye).</li>
 <li>Fixed a memory leak in the bundled GD library inside 
   gdImageTrueColorToPalette(). (Ilia)</li>
-<li>Fixed bug #12776 (array_walk crash). (Moriyoshi)</li>
-<li>Fixed bug #20934 (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
-<li>Fixed bugs #20270, #15702, #18600 (segfaults in ext/java). (Tony J. White)</li>
+<li>Fixed bug <a href="http://bugs.php.net/12776">#12776</a> (array_walk crash). (Moriyoshi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20934">#20934</a> (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/20270">#20270</a>, <a href="http://bugs.php.net/15702">#15702</a>, <a href="http://bugs.php.net/18600">#18600</a> (segfaults in ext/java). (Tony J. White)</li>
 <li>Made bcmath extension thread safe. (Sander)</li>
-<li>Fixed bug #19566 (get_declared_classes() segfaults). (Moriyoshi, Marcus, Andi)</li>
-<li>Fixed bug #20381 (array_merge_recursive mangles input arrays). (Moriyoshi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19566">#19566</a> (get_declared_classes() segfaults). (Moriyoshi, Marcus, Andi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20381">#20381</a> (array_merge_recursive mangles input arrays). (Moriyoshi)</li>
 <li>Added -n command switch to cli and cgi version which allows to skip php.ini
   parsing at startup. (Marcus, Wez)</li>
-<li>Fixed bug #19689 (absolute paths like /test/dir/ not working correctly).
+<li>Fixed bug <a href="http://bugs.php.net/19689">#19689</a> (absolute paths like /test/dir/ not working correctly).
   (Ilia)</li>
 <li>Added "neutral" language entry to mbstring spec. (Moriyoshi)</li>
 <li>Changed bundled gd library to consider php.ini option memory_limit. (Marcus)</li>
 <li>Modified log() to accept multiple bases. (Jason)</li>
-<li>Fixed bugs #16190/18746 (ext/db: flatfile support with windows). (Marcus)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/16190">#16190</a>/18746 (ext/db: flatfile support with windows). (Marcus)</li>
 <li>Added gd_info() which returns an array of gd support information. (Marcus)</li>
-<li>Implemented features/changes requested in Bug #16960 (Timm):
+<li>Implemented features/changes requested in Bug <a href="http://bugs.php.net/16960">#16960</a> (Timm):
   <ul>
   <li>Added a new function sybase_unbuffered_query()</li>
   <li>Added a new function sybase_fetch_assoc()</li>
@@ -90,18 +90,18 @@ commonheader("PHP 4 ChangeLog");
   <li>Made sybase_query() error messages more verbose</li>
   </ul>
 </li>
-<li>Fixed bug #19935 (made OpenSSL file system operations abide by safe_mode
+<li>Fixed bug <a href="http://bugs.php.net/19935">#19935</a> (made OpenSSL file system operations abide by safe_mode
   &amp; open_basedir restrictions). (Ilia)</li>
-<li>Fixed bug #18868 (improved the check for availability of realpath()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/18868">#18868</a> (improved the check for availability of realpath()). (Ilia)</li>
 <li>Fixed width/height detection of bmp images using getimagesize() function on
   big endian systems and added code to retrieve bmp bit depth. (Ilia)</li>
-<li>Fixed bug #20035 (line counting error when script starts with #! in 
+<li>Fixed bug <a href="http://bugs.php.net/20035">#20035</a> (line counting error when script starts with #! in 
   cgi/cli/fastcgi sapis). (Ilia)</li>
-<li>Fixed bug #20235 (incorrect handling of symlinks on ZTS build). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20235">#20235</a> (incorrect handling of symlinks on ZTS build). (Ilia)</li>
 <li>Added sanity checks to headers_sent() &amp; image_type_to_mime_type(). (Ilia)</li>
 <li>Added an aditional parameter to the jdtojewish() function which makes
   the function return the symbolic hebrew name. (Moshe Doron, Derick)</li>
-<li>Fixed bug #20169 (implode() clobbers first argument). (Moriyoshi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20169">#20169</a> (implode() clobbers first argument). (Moriyoshi)</li>
 <li>Improved dba extension (Marcus)
   <ul>
   <li>Added dba_handlers() that returns an array of installed handlers and
@@ -117,22 +117,22 @@ commonheader("PHP 4 ChangeLog");
 </li>
 <li>Added imagerotate() which is available only when bundled libgd is used.
   (Pierre-Alain Joye, Ilia)</li>
-<li>Fixed bug #17497 (mssql extension crashes if magic_quotes_runtime is on).
+<li>Fixed bug <a href="http://bugs.php.net/17497">#17497</a> (mssql extension crashes if magic_quotes_runtime is on).
   (Sterling)</li>
 <li>Remove $_FILES from $_REQUEST (import_request_variables is not modified), 
   this didn't work properly in the first place, and added confusion. (Sterling)</li>
 <li>Fix the socket_read() function on win32 to work in normal mode (reading to
   the end of a line), as well as binary mode. (Sterling)</li>
-<li>Fixed bug #20110 (added sanity check to prevent include/require functions
+<li>Fixed bug <a href="http://bugs.php.net/20110">#20110</a> (added sanity check to prevent include/require functions
   from trying to include directories). (Ilia)</li>
-<li>Fixed bug #20108 (segmentation fault on printf("%1.1s", "string")). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20108">#20108</a> (segmentation fault on printf("%1.1s", "string")). (Ilia)</li>
 <li>Added dbx_escape_string() function to dbx module. (Marc)</li>
 <li>Added Oracle (oci8) support to dbx module. (Marc)</li>
 <li>Updated FDF extension to work with Adode fdftk 5.0. (Hartmut)</li>
 <li>Added mb_strtolower() and mb_strtoupper(). (Moriyoshi)</li>
 <li>Fixed an infinite loop in setlocale() when only invalid locale names
   were passed in the array. (patch by Pal Loberg, pallo@initio.no)</li>
-<li>Fixed bugs #19156 and #19544 (COM extension leaks memory and keeps
+<li>Fixed bugs <a href="http://bugs.php.net/19156">#19156</a> and <a href="http://bugs.php.net/19544">#19544</a> (COM extension leaks memory and keeps
   components referenced). (Harald)</li>
 <li>Added fribidi_get_charsets() and fribidi_charset_info() functions. (Tal)</li>
 <li>Added Oracle TIMESTAMP type to oci8 extension. (Thies)</li>
@@ -144,15 +144,15 @@ commonheader("PHP 4 ChangeLog");
 <li>Added PGSQL_CONNECT_FORCE_NEW option to pg_connect() (Yasuo)</li>
 <li>Added ICONV_IMPL and ICONV_VERSION constants to iconv extension to
   indicate which iconv implementation is used. (Moriyoshi)</li>
-<li>Fixed bug #4232 (Added %e &amp; %E support to printf/sprintf). (Ilia)</li>
-<li>Fixed bug #17580 (Allow ini parser to parse files &gt;16K). (Ilia)</li>
-<li>Fixed bug #19649 (Sanity checks for browscap.ini parser). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/4232">#4232</a> (Added %e &amp; %E support to printf/sprintf). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/17580">#17580</a> (Allow ini parser to parse files &gt;16K). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19649">#19649</a> (Sanity checks for browscap.ini parser). (Ilia)</li>
 <li>Added experimental patch to address problem with floats on various locales.
-  (Bug #17079). (Ilia)</li>
-<li>Fixed bug #19280 (imap_header fails with many To: addresses). (Ilia)</li>
+  (Bug <a href="http://bugs.php.net/17079">#17079</a>). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19280">#19280</a> (imap_header fails with many To: addresses). (Ilia)</li>
 <li>Added mb_regex_set_options(). The Options parameters of various mbregex
   functions are now deprecated. (Moriyoshi)</li>
-<li>Fixed bug #19482 (Segfault with PCRE and locale). (Andrei)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19482">#19482</a> (Segfault with PCRE and locale). (Andrei)</li>
 <li>Made ImageTruecolorToPalette() in bundled GD2 library actually work. (Rasmus)</li>
 <li>Fixed ImageCopy() in bundled GD2 library to handle copying from truecolor to
   palette-based. (Wez, Rasmus)</li>
@@ -185,19 +185,19 @@ commonheader("PHP 4 ChangeLog");
 </li>
 <li>Fixed strstr(), strchr() and strrchr() to be binary safe. (Andrey)</li>
 <li>Added array_diff_assoc() and array_intersect_assoc(). (Andrey)</li>
-<li>Fixed bug #17825 (ob_start() chunk size option didn't work well). (Yasuo)</li>
+<li>Fixed bug <a href="http://bugs.php.net/17825">#17825</a> (ob_start() chunk size option didn't work well). (Yasuo)</li>
 <li>Fixed output buffer infinite loop when buffer_size became 0. (Marcus, Wez)</li>
 <li>Added getopt() for parsing command line options and arguments. (Jon)</li>
 <li>Added pg_fetch_assoc(), pg_fetch_all(), pg_ping(), pg_meta_data(), pg_convert(), 
   pg_insert(), pg_select(), pg_update(), pg_delete(), pg_result_seek(),
   pg_unescape_bytea(), pg_get_notify() and pg_get_pid(). (Yasuo)</li>
-<li>Fixed bug #17281 (Sanity checks for encoding sessions). (Ilia)</li>
-<li>Fixed bug #16995 and #19392 (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
+<li>Fixed bug <a href="http://bugs.php.net/17281">#17281</a> (Sanity checks for encoding sessions). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/16995">#16995</a> and <a href="http://bugs.php.net/19392">#19392</a> (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
   (Ilia)</li>
-<li>Fixed bug #19292 (open_basedir restriction problem). (Rasmus)</li>
-<li>Fixed bug #19366 (gdImageFill crashes when x &amp; y are outside of 
+<li>Fixed bug <a href="http://bugs.php.net/19292">#19292</a> (open_basedir restriction problem). (Rasmus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19366">#19366</a> (gdImageFill crashes when x &amp; y are outside of 
   the image's boundries). (Ilia)</li>
-<li>Fixed bug #13936 (__FILE__ constant didn't contain full path). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/13936">#13936</a> (__FILE__ constant didn't contain full path). (Ilia)</li>
 <li>PHP now has a new stream system that allows it to do some clever stuff with
   fopen() and fsockopen().  As a result:
   <ul>
@@ -247,48 +247,48 @@ commonheader("PHP 4 ChangeLog");
     streams to their respective standard I/O counterparts. (Edin)</li>
   <li>Added php.ini option "auto_detect_line_endings" which enables PHP to
     detect Macintosh, Unix and Dos end-of-line characters in fgets() and
-	file(). Fixes bugs #16521 and #16708. (Wez)</li>
+	file(). Fixes bugs <a href="http://bugs.php.net/16521">#16521</a> and <a href="http://bugs.php.net/16708">#16708</a>. (Wez)</li>
   <li>Fixed include(), require() and GD functions to work with remote files
     under win32.</li>
-  <li>Fixed bug #18609 (ImageCreateFromJPEG can't fetch from a URL). (Wez)</li>
+  <li>Fixed bug <a href="http://bugs.php.net/18609">#18609</a> (ImageCreateFromJPEG can't fetch from a URL). (Wez)</li>
   </ul>
 </li>
-<li>Fixed bug #18022 (fopen does not work with php://stdin anymore on Solaris).
+<li>Fixed bug <a href="http://bugs.php.net/18022">#18022</a> (fopen does not work with php://stdin anymore on Solaris).
   (Wez)</li>
 <li>Added php.ini option "default_socket_timeout" to set the timeout limit for 
   PHP network streams. (kalowsky, ilia@prohost.org, Wez)</li>
 <li>Added file_get_contents() which returns the contents of a file as a string. 
   This function also supports the URL wrappers. (Wez)</li>
-<li>Fixed bug #19595 (Missing functions for GD2 format handling). (Edin)</li>
-<li>Fixed bug #19633 (Wrong directories in ext/ldap/config.m4). (Derick)</li>
-<li>Fixed bugs #17274 and #19627 (segfault in sem_remove). (Wez)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19595">#19595</a> (Missing functions for GD2 format handling). (Edin)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19633">#19633</a> (Wrong directories in ext/ldap/config.m4). (Derick)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/17274">#17274</a> and <a href="http://bugs.php.net/19627">#19627</a> (segfault in sem_remove). (Wez)</li>
 <li>Added mb_convert_case() function to the mbstring extension which can convert
   strings between upper, lower and title case using Unicode mappings.
-  Fixed bug #19257 (strtolower &amp; strtoupper does not work for UTF-8 strings).
+  Fixed bug <a href="http://bugs.php.net/19257">#19257</a> (strtolower &amp; strtoupper does not work for UTF-8 strings).
   (Wez)</li>
-<li>Fixed bug #18521 (htmlentities didn't warn about unsupported charsets). (Wez)</li>
-<li>Fixed bug #11643 (Session related, fix SID redefinition). (Ilia)</li>
-<li>Fixed bug #18556 (Scripting Engine, problem with locales like tr_TR). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/18521">#18521</a> (htmlentities didn't warn about unsupported charsets). (Wez)</li>
+<li>Fixed bug <a href="http://bugs.php.net/11643">#11643</a> (Session related, fix SID redefinition). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/18556">#18556</a> (Scripting Engine, problem with locales like tr_TR). (Ilia)</li>
 <li>Changed y2k_compliance to default to 1 now. (Sascha)</li>
 <li>Added platform independent socket error constants for better error handling. (Jason)</li>
 <li>Update output of phpinfo() to use more CSS to reduce the file size, do
   proper HTML escaping, and make it XHTML compliant. (Colin)</li>
-<li>Fixed compile errors in the FriBidi extension (Bug #16414). (Tal)</li>
-<li>Fixed bugs #7472, #12120 and #12989 as well as other potential problems
+<li>Fixed compile errors in the FriBidi extension (Bug <a href="http://bugs.php.net/16414">#16414</a>). (Tal)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/7472">#7472</a>, <a href="http://bugs.php.net/12120">#12120</a> and <a href="http://bugs.php.net/12989">#12989</a> as well as other potential problems
   with strip_tags() function. (Ilia)</li>
-<li>Fixed bugs #17570 and #17957 (Regexps related). (Andrei, Ilia)</li>
-<li>Fixed bugs #18167 and #16859 (SEGV with session_decode). (Ilia)</li>
-<li>Fixed bugs #19573 and #13472 (Session, XHTML compliance and trans_sid). 
+<li>Fixed bugs <a href="http://bugs.php.net/17570">#17570</a> and <a href="http://bugs.php.net/17957">#17957</a> (Regexps related). (Andrei, Ilia)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/18167">#18167</a> and <a href="http://bugs.php.net/16859">#16859</a> (SEGV with session_decode). (Ilia)</li>
+<li>Fixed bugs <a href="http://bugs.php.net/19573">#19573</a> and <a href="http://bugs.php.net/13472">#13472</a> (Session, XHTML compliance and trans_sid). 
   (Sascha)</li>
-<li>Fixed bug #19570 (last character was missing in get_html_translation_table). 
+<li>Fixed bug <a href="http://bugs.php.net/19570">#19570</a> (last character was missing in get_html_translation_table). 
   (Wez)</li>
 <li>Upgraded PCRE to version 3.9. (Wez)</li>
 <li>Fixed bug in OCIResult() which returned garbage when called on 
   empty result-sets. (Thies)</li>
 <li>Added ability to use Perl-style ${n} subpattern references in the
-  replacement string for preg_replace() (bug #18442). (Andrei)</li>
+  replacement string for preg_replace() (bug <a href="http://bugs.php.net/18442">#18442</a>). (Andrei)</li>
 <li>Fixed array_merge_recursive() to avoid problems with merging cyclical
-  arrays (bug #16064). (Andrei)</li>
+  arrays (bug <a href="http://bugs.php.net/16064">#16064</a>). (Andrei)</li>
 <li>Made function_exists() work properly with disabled functions. (Andrei)</li>
 <li>Added ability to extract() variables as references via OR'able EXTR_REFS
   flag. (Andrei)</li>
@@ -379,7 +379,7 @@ commonheader("PHP 4 ChangeLog");
   its glibc cousin. (Rasmus)</li>
 <li>Fixed str_rot13() to not mangle source string. (Rasmus)</li>
 <li>Fixed imap_get_quota() to work with multiple returned resources as per
-  the RFC 2087 and bug #14673. (kalowsky, Sander Steffann)</li>
+  the RFC 2087 and bug <a href="http://bugs.php.net/14673">#14673</a>. (kalowsky, Sander Steffann)</li>
 <li>Added MarkerNote decoding to exif_read_data() for several Cameras. (Marcus)</li>
 <li>Disabled zlib.output_compression for "image/" content-type
   headers which can be changed during script execution. (Stefan)</li>
