@@ -36,6 +36,13 @@ $server = $SERVER_NAME;
 -->
 </ul>
 
+<h2>Patches</h2>
+<ul>
+  <li><?php download_link("php-4.0.6-memlimit.diff.gz", "PHP 4.0.6 memory limit fix"); ?> - 1 July 2001<br>
+  (This patch fixes a bug in the 4.0.6 memory limit option. This is only needed when configuring
+  PHP with --enable-memory-limit)</li>
+</ul>
+
 <?php echo hdelim(); ?>
 
 <h1>Other Downloads</h1>
