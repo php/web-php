@@ -214,6 +214,17 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
+
+<h1>PHP Usage Survey</h1>
+<p>
+ <font class="newsdate">[24-Jun-2003]</font>
+Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be shared with the PHP Group, and will help us to better understand the ways in which PHP is being used, and what may need improvement.  <a href="http://www.zend.com/survey/php_net.php">Fill it out</a> and get a chance to win one of 50 PHP T-shirts!
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.phpconference.de/2003/index_en.php", make_image("news/international_conference_2003.gif", "International PHP Conference", "right") ); ?>
 
 <h1>International PHP Conference 2003</h1>
