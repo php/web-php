@@ -238,7 +238,11 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li
 <ul>
 
 <li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
-Brazilian PHP portal with many links and informations<br></li>
+Brazilian PHP portal with many links and information<br></li>
+
+
+<li><a href="http://www.phpsite.com.br/">PHPsite.com.br</a><br>
+Brazilian PHP portal featuring tutorials, downloads, a forum and more<br></li>
 </ul></li>
 
 <li><b>Portuguese</b>
