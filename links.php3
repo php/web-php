@@ -78,7 +78,7 @@ Introductory tutorial<BR>
 Searchengine for PHP related things.<BR>
 
 <LI><A HREF="http://www.evilwalrus.com/">Evil Walrus</A> has a growing list of PHP scripts<BR>
-<LI><A HREF='http://www.LinuxGuruz.org/">LinuxGuruz.org</A><BR>
+<LI><A HREF="http://www.LinuxGuruz.org/">LinuxGuruz.org</A><BR>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server, HTML, PHP, MySQL ... and lots more.<BR>
 </UL>
 
