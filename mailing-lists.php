@@ -23,8 +23,9 @@ if (isset($maillist)) {
 				"From: $email\r\n");
 			break;
 		    default:
+                        $remote_addr = $HTTP_X_FORWARDED_FOR ? $HTTP_X_FORWARDED_FOR : $REMOTE_ADDR;
 			mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", 
-			"This was a request generated from the form at http://php.net/mailing-lists.php by $REMOTE_ADDR.", "From: $email\r\n");
+			"This was a request generated from the form at http://php.net/mailing-lists.php by $remote_addr.", "From: $email\r\n");
 			break;
 		}
 ?>
