@@ -34,7 +34,7 @@ Zend Technologies' Web site, with lots of PHP related resources
 (articles, tutorials, case studies, PHP function table, etc.)<br></li>
 
 <li><a href="http://conf.php.net/">PHP Conference Material</a><br>
-Some PHP conference slide shows, presented at variuos meetings
+Some PHP conference slide shows, presented at various meetings
 by PHP professionals<br></li>
 </ul>
 
