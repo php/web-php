@@ -28,6 +28,8 @@
 require 'timelocal.pl';
 require 'ctime.pl';
 
+$ENV{"PATH"} = "/usr/local/bin:/usr/bin";
+
 $hsty_base = "";
 require 'cgi-style.pl';
 #&get_the_source;
