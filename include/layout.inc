@@ -1,17 +1,24 @@
 <?php
-
 /* $Id$ */
 
 // Print an image for a sized spacer
 function spacer($width = 1, $height = 1, $return = false, $align = false, $extras = false)
 {
-    $function = ($return ? "sprintf" : "printf");
-    return $function('<img src="/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
-        $width,
-        $height,
-        ($align ? "align=\"$align\" " : ""),
-        ($extras ? $extras : "")
-    );
+	global $HTTP_SERVER_VARS;
+	static $image_root = null;
+
+	if ($image_root === null) {
+		$image_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://64.246.30.196/www.php.net' : '';
+	}
+
+	$function = ($return ? "sprintf" : "printf");
+	return $function('<img src="%s/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
+		$image_root,
+		$width,
+		$height,
+		($align ? "align=\"$align\" " : ""),
+		($extras ? $extras : "")
+	);
 }
 
 # resize_image()
@@ -198,7 +205,7 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-	global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD;
+	global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD, $COUNTRY;
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -460,6 +467,15 @@ function display_event($event, $include_date = 1)
         -3 => '3rd Last'
     );
 
+    if (!isset($event['start'])) { $event['start'] = ""; }
+    if (!isset($event['end'])) { $event['end'] = ""; }
+    if (!isset($event['sday'])) { $event['sday'] = ""; } 
+    if (!isset($event['smonth'])) { $event['smonth'] = ""; }
+    if (!isset($event['syear'])) { $event['syear'] = ""; }
+    if (!isset($event['eday'])) { $event['eday'] = ""; }
+    if (!isset($event['emonth'])) { $event['emonth'] = ""; }
+    if (!isset($event['eyear'])) { $event['eyear'] = ""; }
+
     // Start and end day of this event
     $sday = $event['start'] ? strtotime($event['start'])
             : mktime(0, 0, 1, $event['smonth'], $event['sday'], $event['syear']);
@@ -515,3 +531,5 @@ function display_event($event, $include_date = 1)
 </table>
 <?php
 }
+
+/* vim: set noet ts=4 sw=4 ft=php: : */
