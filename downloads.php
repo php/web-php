@@ -75,12 +75,16 @@ if ($cmn > 0) {
         if ($num < $cmn-1) { echo " or "; }
     }
     echo ". You can also change mirrors at the bottom of this page.";
-	$mirror = $cm[0];
+    if ($server == "www.php.net" || $server == "php.net") {
+        $mirror = $cm[0];
+    } else {
+        $mirror = "http://$server/";
+    }
 } else {
     echo "You can change mirrors at the bottom of the page.";
         srand ((double)microtime()*1000000);
 	
-	if ($server == "www.php.net") {
+	if ($server == "www.php.net" || $server == "php.net") {
 		$default_mirrors = array("http://us2.php.net/", "http://ca.php.net", "http://us3.php.net","http://rs1.php.net");
 		$mirror = $default_mirrors[rand(0, count($default_mirrors)-1)];
 	} else {
