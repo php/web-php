@@ -215,6 +215,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.linuxtag.org/2003/en/index.html", make_image("news/linuxtag2003.gif", "LinuxTag", "right") ); ?>
 
 <h1>PHP @ LinuxTag</h1>
 <p>
