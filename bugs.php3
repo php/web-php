@@ -124,9 +124,9 @@ bugs of type <?show_types("Any")?>.
 		echo "<td> ".$row[7]." </td>";
         echo "<td>".$row[1]."</td>";
         echo "<td>".$row[5]."</td>";
-        echo "<td>".$row[6]."</td>";
-        echo "<td>".$row[2]."</td>";
-        echo "<td>".$row[3]."</td><tr>\n";
+        echo "<td>".$row[6]."&nbsp;</td>";
+        echo "<td>".$row[2]."&nbsp;</td>";
+        echo "<td>".$row[3]."&nbsp;</td><tr>\n";
     }
 	mysql_freeresult($result);
     echo "</table></center>\n";
