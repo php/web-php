@@ -334,6 +334,11 @@ creating, modifying and maintaining dynamic
 database-enabled Web services
 <? endEntry();?>
 
+<? makeEntry("Phorm","www.holotech.net/scripts.html","Alan Little","darguz@holotech.net"); ?>
+The Script Formerly Known As PHPMail. As features were added to PHPMail, its name became inaccurate, as it can now do so much more than just mailing form results, including sending an autoresponder, logging to a text file, and logging to a MySQL database. The next version will support validation of email addresses, credit card numbers and U.S. phone numbers. 
+<? endEntry();?>
+
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
