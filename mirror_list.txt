@@ -1,6 +1,7 @@
 at	at.php.net	Antonin Sprinzl <Antonin.Sprinzl@tuwien.ac.at>	192.35.244.50
 au	au.php.net	jason andrade <jason@planetmirror.com>	php.planetmirror.com
 au	au2.php.net	David Robley <webmaster@www.nisu.flinders.edu.au>	www.nisu.flinders.edu.au
+be	be.php.net	ftp@be.easynet.nbe	php.easynet.be
 bg	bg.php.net	Alexander Keremidarski <salle@online.bg>	php.online.bg
 br	br.php.net	Antonio Dias <accdias@sst.com.br>	200.223.199.4
 br2	br2.php.net	Nelson Junior <nelson@lunenetworks.com.br>	php-mirror.lunenetworks.com.br
@@ -41,10 +42,12 @@ pl	pl.php.net	grych@tgr.com.pl	php.tgr.com.pl
 pl	pl2.php.net	Marian Witkowski <mw@service.net.pl>	212.180.132.70
 pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
 pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
+ro	ro.php.net	"Cristian N. Bradiceanu" <cbredi@lasting.ro>	php.lasting.ro
 ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@chl.chalmers.se>,Fredrik Öhrn <ohrn@chl.chalmers.se>	rampart.chl.chalmers.se
 se	se2.php.net	Anders Olausson <spacedump@burken.nu>	php.burken.nu
 sg	sg.php.net	Chen Shiyuan <csy@hjc.edu.sg>	php.hjc.edu.sg
+sg	sg2.php.net	phpadmin@intermedia.com.sg	php.intermedia.com.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
 th	th2.php.net	Kunawut Soubsen <kws@itr.co.th>	php.thainode.com
