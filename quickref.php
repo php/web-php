@@ -98,7 +98,11 @@ if (count($temp) > 0) {
     unset($matches, $temp);
 }
 
-site_header("Manual Quick Reference");
+// Do not index page if presented as a search result
+if (count($maybe) > 0) { $head_options = array("noindex"); }
+else { $head_options = array(); }
+
+site_header("Manual Quick Reference", $head_options);
 ?>
 
 <h1>PHP Function List</h1>
