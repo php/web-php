@@ -33,6 +33,22 @@ For a description of PHP.net shortcut URLs, please visit our
 <a href="urlhowto.php">URL Howto page</a>.
 </p>
 
+<?php tipTitle('Search Box for Galeon', 'Carter Comunale', '31-Oct-2002'); ?>
+
+<ol>
+  <li>Press CTRL+D to add a bookmark</li>
+  <li>Edit the bookmark, filling the folowing fields in:
+  <dl>
+   <dt>Name</dt><dd>PHP</dd>
+   <dt>URL</dt><dd>http://php.net</dd>
+   <dt>Smart URL</dt><dd>http://www.php.net/manual-lookup.php?pattern=%s&lang=en</dd>
+   <dt>Nicknames</dt><dd>php</dd>
+  </dl>
+  </li>
+  <li>You can also add a logo to the bookmark, see our
+  <a href="/download-logos.php">logos page</a></li>
+</ol>
+
 <?php tipTitle('Quick Reference for OmniWeb on Mac OS X', 'Steve Poole', '03-Oct-2002'); ?>
 
 <ol>
