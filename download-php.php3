@@ -5,8 +5,8 @@ $current = "3.0.1";
 $win32_current = "3.0.1";
 
 $filesizes["php-3.0.1.tar.gz"]="~ 1011KB";
-$filesizes["php-3.0.1-win32.exe"]="~ 1150KB";
-$filesizes["php-3.0.1-win32.zip"]="~ 1114KB";
+$filesizes["php-3.0.2-win32.exe"]="~ 1332KB";
+$filesizes["php-3.0.2-win32.zip"]="~ 1297KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 
 function makeCap() {
