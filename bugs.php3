@@ -13,6 +13,17 @@ function indent($string, $prefix) {
     return $prefix . ereg_replace("\n", "\n$prefix", $string) . "\n";
 }
 
+function show_state_options($state, $show_all) {
+	if ($state) { echo "<option>?$state\n"; }
+	if($state!="Open") { echo "<option>Open\n"; }
+	if($state!="Closed") { echo "<option>Closed\n"; }
+	if($state!="Assigned") { echo "<option>Assigned\n"; }
+	if($state!="Analyzed") { echo "<option>Analyzed\n"; }
+	if($state!="Suspended") { echo "<option>Suspended\n"; }
+	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
+	if($state!="All" && $show_all) { echo "<option>All\n"; }
+}
+
 function show_menu($state) {
 	global $PHP_SELF, $bug_type;
 
@@ -20,12 +31,7 @@ function show_menu($state) {
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
 	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
-	if($state) { echo "<option>$state\n"; }
-	if($state!="Open") { echo "<option>Open\n"; }
-	if($state!="Closed") { echo "<option>Closed\n"; }
-	if($state!="Assigned") { echo "<option>Assigned\n"; }
-	if($state!="Analyzed") { echo "<option>Analyzed\n"; }
-	if($state!="All") { echo "<option>All\n"; }
+	show_state_options($state, 1);
 	echo "</select> bugs of type ";
 	show_types($bug_type,1,"bug_type");
 
@@ -198,11 +204,17 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Closed":
 				return "#aaffbb";
 				break;
+			case "Suspended":
+				return "#ffccbb";
+				break;
 			case "Assigned":
 				return "#bbaaff";
 				break;
 			case "Analyzed":
 				return "#99bbaa";
+				break;
+			case "Duplicate":
+				return "#bbbbbb";
 				break;
 			default:
 				return "#aaaaaa";
@@ -307,15 +319,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
-			if($row[7]=="Open") {
-				echo "<option>Open\n<option>Closed<option>Assigned<option>Analyzed<option>Delete!\n";
-			} elseif($row[7]=="Closed") {
-				echo "<option>Closed\n<option>Open<option>Assigned<option>Analyzed<option>Delete!\n";
-			} elseif($row[7]=="Analyzed") {
-				echo "<option>Analyzed\n<option>Open<option>Closed<option>Assigned<option>Analyzed<option>Delete!\n";
-			} else {
-				echo "<option>Assigned\n<option>Open<option>Closed<option>Analyzed<option>Delete!\n";
-			}
+			show_state_options($row[7], 0);
 			echo "</select>\n";
 			echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
 		}
