@@ -97,7 +97,9 @@ function navigationBar($title,$id,$loc) {
         preg_match("!^/manual/(.+)/!", $REQUEST_URI, $langcode);
         $links[] = array("$langcode[1]/print/$id", "printer friendly");
         $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
-        foreach ($LANGUAGES as $code => $name) {
+        // Disable all 'inactive' languages
+        $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+        foreach ($online_languages as $code => $name) {
             if (!preg_match("!/$code/!", $PHP_SELF)
                 // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$id")
                ) {
