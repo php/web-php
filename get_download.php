@@ -74,18 +74,21 @@ foreach ($MURLS as $murl) {
         echo '</tr>' . "\n";
     }
 
+    // We print out a line for the current mirror
+    $thismirror = ($MYSITE == $murl);
+
     // Highlight this mirror if it is the current one
-    echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '">' . "\n";
+    echo '<tr bgcolor="' . ($thismirror ? '#ffffcc' : '#e0e0e0') . '">' . "\n";
 
     // Print out caret (in bold if current mirror)
     echo '<td bgcolor="#ffffff" align="right">';
-    print_image( ($MYSITE == $murl ? 'caret-r.gif' : 'caret-rg.gif') );
+    print_image( ($thismirror ? 'caret-r.gif' : 'caret-rg.gif') );
     echo '<br /></td>' . "\n";
 
     // Print out mirror site download link
     echo '<td><small>';
-    $mirrorname = substr($murl, strpos($murl, '//') + 2, -1);
-    print_link("/get/$df/from/$mirrorname", $mirrorname);
+    $mirrorname = ($thismirror ? "this" : substr($murl, strpos($murl, '//') + 2, -1));
+    print_link("/get/$df/from/$mirrorname/mirror", $mirrorname);
     echo '</small><br /></td>' . "\n";
 
     // Print out mirror provider's name
