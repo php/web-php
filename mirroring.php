@@ -68,14 +68,14 @@ $minute = rand(0, 59);
 </p>
 
 <pre>
-    --include='manual/en/' --include='manual/en/**' --exclude='manual/**' --exclude='distributions/manual/'
+    --include='manual/en/' --include='manual/en/**' --exclude='manual/**' --exclude='distributions/manual/**'
 </pre>
 
 <p>
  after <tt>"--delete-after"</tt> in the command line above (substituting your
  prefered language code in place of <tt>'en'</tt>). You can also exclude the
- whole distributions directory by replacing <tt>"--exclude='distributions/manual'"</tt>
- with <tt>"--exclude='distributions/'"</tt>
+ whole distributions directory by replacing <tt>"--exclude='distributions/manual/**'"</tt>
+ with <tt>"--exclude='distributions/**'"</tt>
 </p>
 
 <p>
@@ -85,10 +85,10 @@ $minute = rand(0, 59);
 </p>
 
 <p>
- PHP mirror sites should provide the exact content coming from <tt>rsync.php.net</tt>,
- and should not be altered in any way not described in the mirroring
- guidelines. Failing to do so can result in immediate removal of your mirror
- from our list.
+ Official PHP mirror sites should provide the exact content coming from
+ <tt>rsync.php.net</tt>, and should not be altered in any way not described
+ in the mirroring guidelines. Failing to do so can result in immediate
+ removal of your mirror from our list.
 </p>
 
 <h2>Add SQLite Support</h2>
@@ -121,11 +121,11 @@ $minute = rand(0, 59);
 
 <a name="settings"></a>
 <pre>
-   &lt;VirtualHost *-or-your-hostname-here&gt;
+   &lt;VirtualHost *-or-your-hostname-or-your-ip-here&gt;
 
-     ServerName *-or-your-hostname-here
-     ServerAlias xx.php.net www.xx.php.net
-     ServerAdmin yourname@yourdomain.com
+     ServerName xx.php.net
+     ServerAlias the.cname.you.set.up.example.com www.xx.php.net
+     ServerAdmin yourname@example.com
      
      # Webroot of PHP mirror site
      DocumentRoot /www/htdocs/phpweb
@@ -165,26 +165,45 @@ $minute = rand(0, 59);
 </pre>
    
 <p>
- Provide an asterisk or a hostname in the VirtualHost container's
- header and in the ServerName directive. Consult
+ You should only start to set up an Apache virtualhost for an official
+ mirror, if you have <a href="#rule">contacted us first</a>, and asked
+ for a possible name for your mirror. The official names for PHP mirrors
+ are in the convention: <tt>"xx.php.net"</tt>, where <tt>"xx"</tt> is
+ replaced by the 2-letter country code of your mirror's location. If
+ there already is a <tt>"xx.php.net"</tt>, then you will probably get
+ <tt>"xx2.php.net"</tt>.
+</p>
+
+<p>
+ Before adding new official mirrors to our DNS, we require the maintainers
+ to set up the mirrors with an address we can use as a CNAME in the DNS.
+ This subdomain (<tt>the.cname.you.set.up.example.com</tt> in the above
+ example) will be checked by mirror admins before the mirror is added.
+ Therefore it is important that the mirror is capable of serving requests
+ for this name and the <tt>(www.)xx.php.net</tt> address provided by the
+ mirror administrators.
+</p>
+
+<p>
+ When setting up the vhost, provide an asterisk, a hostname or an IP
+ address in the VirtualHost container's header depending on whether
+ you would like to make the vhost work for all IPs handled by Apache,
+ or just a specific hostname/IP address. Consult
  <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
- documentation</a> for the differences of the two methods. Change the
- DocumentRoot and include_path settings as appropriate, specify
- the mirror's preferred language, and provide settings according to
- your stats setup, if your mirror is going to provide it. For the
+ documentation</a> for the differences of the two methods. It is very
+ important to use your <tt>xx.php.net</tt> address as the ServerName, so
+ URL redirections will keep the requests in the php.net domain, ensuring
+ that the My PHP.net service will work.
+</p>
+
+<p>
+ Change the DocumentRoot and include_path settings as appropriate,
+ specify the mirror's preferred language, and provide settings according
+ to your stats setup, if your mirror is going to provide it. For the
  preferred language setting, choose one from those avilable as
  manual translations. If you provide something else, your default
  language will be English. After you restart Apache, your mirror
  site should start working.
-</p>
-
-<p>
- The official names for PHP mirrors are in the convention:
- <tt>"xx.php.net"</tt>, where <tt>"xx"</tt> is replaced by the
- 2-letter country code of your mirror's location. If there already
- is a <tt>"xx.php.net"</tt>, then you will probably get
- <tt>"xx2.php.net"</tt>. <a href="#rule">Please read the note on
- official mirrors above</a>.
 </p>
 
 <h2>Setup Local Stats</h2>
@@ -291,16 +310,17 @@ $minute = rand(0, 59);
   Your country.
  </li>
  <li>
-  The xx.php.net address you used to set up the mirror site.
+  The xx.php.net address you used to set up the mirror site, which
+  you obtained previously in a conversation with the mirror admins.
  </li>
  <li>
   Your name and email address to be registered as the admin of the mirror.
  </li>
  <li>
   A hostname that we can use as a CNAME for the country-code-based
-  name of the mirror. Please do not provide an IP address. Using a name
-  means you can move the mirror to another IP address without
-  coordinating with us at all.
+  name of the mirror (<tt>the.cname.you.set.up.example.com</tt> in the
+  above setup example). Using a name means you can move the mirror to
+  another IP address without coordinating with us at all.
  </li>
  <li>
   Whether or not you've installed local stats support on your mirror.
@@ -310,7 +330,8 @@ $minute = rand(0, 59);
  </li>
  <li>
   The URL of the hosting company. This link is provided with the
-  companies name at the bottom of pages, and in the mirror listing.
+  company's name at the bottom of pages, with the sponsor image on
+  the frontpage and in the mirror listing.
  </li>
 </ul>
 
