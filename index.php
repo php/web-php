@@ -77,7 +77,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h1>PHP Security Update</1>
+<h1>PHP Security Update</h1>
 <p>
 <font class="newsDate">[27-Feb-2002]</font>
 Due to a security issue found in all versions of PHP (including 3.x and 4.x), a new version of PHP has been released.
