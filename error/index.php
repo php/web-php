@@ -1,15 +1,27 @@
 <?php
 
+// $Id$
+
+/*
+
+ This script handles all 401, 403 and 404 error redirects,
+ and some directory requests (like /images). Uses the $LANG
+ preferred language setting and the REQUEST_URI to guess what
+ page should be displayed. In case there is no page that can
+ be displayed, the user is redirected to a search page.
+
+*/
+
 // Ensure that our environment is set up
 include_once 'prepend.inc';
 
 // Get URI for this request (without the leading slash)
 // See langchooser.inc for more info on STRIPPED_URI
-$URI = substr($_SERVER['STRIPPED_URI'], 1);
+$URI  = substr($_SERVER['STRIPPED_URI'], 1);
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
-if (preg_match("!\\.(pdf|gif|jpg|png)$!", $URI)) { make404(); }
+if (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) { make404(); }
 
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
@@ -84,6 +96,8 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     exit;
 }
 
+// Work with lowercased URI from now
+$URI = strtolower($URI);
 
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
@@ -102,7 +116,6 @@ $uri_aliases = array (
     "logos"         => "download-logos",
 
     "README.mirror" => "mirroring", // backward compatibility
-    "dochowto"     => "phpdochowto",
 
     # manual shortcuts
     "ini"          => "configuration",
@@ -132,23 +145,26 @@ $uri_aliases = array (
     "icap"         => "mcal", // mcal is the successor of icap
     
     # external shortcut aliases ;)
+    "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // for backward compatibility with PHP page!
-
-    
 );
 
 $external_redirects = array(
-    "php4news" => "http://cvs.php.net/co.php/php4/NEWS?p=1",
-    "projects" => "http://freshmeat.net/browse/183/",
-    "pear"     => "http://pear.php.net/",
-    "bugs"     => "http://bugs.php.net/",
-    "bugstats" => "http://bugs.php.net/bugstats.php",
+    "php4news"    => "http://cvs.php.net/co.php/php4/NEWS?p=1",
+    "projects"    => "http://freshmeat.net/browse/183/",
+    "pear"        => "http://pear.php.net/",
+    "bugs"        => "http://bugs.php.net/",
+    "bugstats"    => "http://bugs.php.net/bugstats.php",
+    "phpdochowto" => "/manual/howto/index.html",
+    "rev"         => "/manual/$LANG/revcheck.html.gz",
+    "blog"        => "/manual/$LANG/build.log.gz",
+    "books"       => "/books.php?type_lang=PHP_$LANG"
 );
 
 // ============================================================================
 // "Rewrite" the URL, if it was a shortcut
-if (isset($uri_aliases[strtolower($URI)])) {
-    $URI = $uri_aliases[strtolower($URI)];
+if (isset($uri_aliases[$URI])) {
+    $URI = $uri_aliases[$URI];
 }
 
 // ============================================================================
@@ -161,19 +177,9 @@ if ($URI !=  'books' && file_exists("$DOCUMENT_ROOT/$URI.php")) {
 
 // ============================================================================
 // Execute external redirect if a rule exists for the URI
-if (isset($external_redirects[strtolower($URI)])) {
-    mirror_redirect($external_redirects[strtolower($URI)], TRUE);
-}
-
-// ============================================================================
-// Quick access to revcheck output, build logs, books for various languages and
-// the PHP Documentation Howto for backward compatibility [breaks left out intentionally]
-$URI = strtolower($URI);
-switch ($URI) {
-    case "rev"         : mirror_redirect("/manual/$LANG/revcheck.html.gz");
-    case "blog"        : mirror_redirect("/manual/$LANG/build.log.gz");
-    case "books"       : mirror_redirect("/books.php?type_lang=PHP_$LANG");
-    case "phpdochowto" : mirror_redirect("/manual/howto/index.html");
+if (isset($external_redirects[$URI])) {
+    $true_external = (substr($external_redirects[$URI], 0, 1) != '/');
+    mirror_redirect($external_redirects[$URI], $true_external);
 }
 
 // ============================================================================
