@@ -140,6 +140,16 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.0RC3 Released</h1>
+<p>
+<font class="newsdate">[11-Dec-2002]</font>
+<a href="http://qa.php.net/">PHP 4.3.0RC3</a> is out. This will be the last
+release candidate before the final release. From this point on, only crash and
+showstopper bugs will be fixed. Your help with thouroughly testing this RC is
+much appreciated.
+
+<?php echo hdelim(); ?>
+
 <h1>PHP news feed available</h1>
 <p>
 <font class="newsdate">[01-Dec-2002]</font>
