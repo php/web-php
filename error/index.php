@@ -79,11 +79,11 @@ if ($uri[0] == "/") $uri = substr($uri,1);
 // that this is included, and not redirected, as this way
 // all relative URL's will retain their meaning and point
 // to pages relative to the print dir (which is nonexistent)
-if (preg_match("!^manual/(\\w+)/print/(.+\\.php)$!", $uri, $parts)) {
+if (preg_match("!^manual/(\\w+)/(print|html)/(.+\\.php)$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
-    include "../manual/$parts[1]/$parts[2]";
+    include "../manual/$parts[1]/$parts[3]";
     exit;
-} elseif (preg_match("!^manual/(\\w+)/print(/)?$!", $uri, $parts)) {
+} elseif (preg_match("!^manual/(\\w+)/(print|html)(/)?$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
     include "../manual/$parts[1]/index.php";
     exit;
