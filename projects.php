@@ -394,7 +394,7 @@ PHP scripts to help manage a html form to admin data in MySQL. With only some li
 <? endEntry(); ?>
 
 
-<? makeEntry("SquirrelMail", "http://www.squirrelmail.org/", "SquirrelMail Development Team", "squirrelmail-list@sourceforge.net"); ?>
+<? makeEntry("SquirrelMail", "http://www.squirrelmail.org/", "SquirrelMail Development Team", ""); ?>
 SquirrelMail is a web-based mail program that will read and send your mail on IMAP-based mail servers.  This script is very easy to install and configure. The newest version supports plugins, which expand SquirrelMail's capabilities and allows developers to try their hand at developing new features.<br /><br />
 
 * It is written entirely in PHP 4.<br />
