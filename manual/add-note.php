@@ -219,7 +219,9 @@ else {?>
     <b>
      <a href="/support.php">Click here to go to the support pages.</a><br />
      <a href="http://bugs.php.net/">Click here to submit a bug report.</a><br />
-     <a href="http://bugs.php.net/">Click here to request a feature.</a>
+     <a href="http://bugs.php.net/">Click here to request a feature.</a><br />
+     (Again, please note, if you ask a question, report a bug, or request a feature,
+     your note <i>will be deleted</i>.)
     </b>
    </td>
   </tr>
