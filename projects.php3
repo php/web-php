@@ -195,6 +195,17 @@ user security, as well as several security groups users can be in
 (admin, normal, post-only).
 <? endEntry();?>
 
+<? makeEntry("eShop","eshop.liquid-web.com","Brad Atkins" ,"batkins@tamrockcanada.ca"); ?>
+eShop is a browser based storefront and catalog development and
+management system.
+Using nothing more than a web browser, developers can implement dynamic
+data driven storefronts with integrated shopping basket, catalog, hierarchal
+categories, boolean product search, and order processing. eShop's architecture lets
+developers prepare and market specialized look and feel, payment processing, and shipping
+modules. The full license comes complete with source codes in PHP so advanced developers
+can get &quot;under the hood&quot; with unlimited customization capabilities. 
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
