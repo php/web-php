@@ -33,19 +33,17 @@
    height="18" border="0" /><br /></td>
   <td align="left" rowspan="2">
    <font face="tahoma, verdana, arial, helvetica, sans-serif" size="-1">
-   <b><xsl:value-of select="projectname_full" /></b>
-   <xsl:text> -- </xsl:text>
-   <xsl:value-of select="desc_short" />
-   <br />
    <xsl:element name="a">
     <xsl:attribute name="href">
      <xsl:value-of select="url_homepage" />
     </xsl:attribute>
-    <xsl:value-of select="url_homepage" />
+    <b><xsl:value-of select="projectname_full" /></b>
    </xsl:element>
+   <xsl:text> -- </xsl:text>
+   <xsl:value-of select="desc_short" />
    <br />
    License: <xsl:value-of select="license" />
-   <xsl:text> - </xsl:text>
+   <xsl:text> -- </xsl:text>
    Updated: <i><xsl:value-of select="date_updated" /></i>
    </font>
   </td>
