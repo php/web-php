@@ -35,6 +35,9 @@ commonHeader("Documentation ");
 <li><? download_link("manual.pdf", "PHP 3.0 Manual PDF File"); ?>
 <li><? download_link("manual.prc", "PHP 3.0 Manual PalmPilot DOC File"); ?>
 
+<li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
+    >Japanese translation of the PHP manual</a>
+
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
