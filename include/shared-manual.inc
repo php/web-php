@@ -105,13 +105,18 @@ function navigationBar($title) {
 }
 
 function manualHeader($title) {
-	global $FRAMEMODE;
+	global $FRAMEMODE, $HTDIG;
 	commonHeader("Manual: $title");
-	navigationBar($title);
+	if (!$HTDIG):
+		navigationBar($title);
+	endif;
 }
 
 function manualFooter($title) {
-	navigationBar($title);
+	global $HTDIG;
+	if (!$HTDIG):
+		navigationBar($title);
+	endif;
 	commonFooter($title);
 }
 ?>
