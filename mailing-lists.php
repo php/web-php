@@ -76,7 +76,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     ),
     Array (
       'php-db', 'Databases and PHP',
-      'This list is for the discussin of PHP database topics',
+      'This list is for the discussion of PHP database topics',
       false, true, true, "php.db"
     ),
     Array (
