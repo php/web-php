@@ -134,8 +134,8 @@ $books = array (
       "http://www.amazon.com/exec/obidos/ASIN/0672317842/wwwphpnet", #title_link
       array("Luke Welling","Laura Thomson"), #author(s)
       "", #author_link(s)
-      "gilmore.jpg", #img
-      "Sams, October 2000, ISBN 0-6723-1784-2", #info
+      "welling.jpg", #img
+      "Sams, March 2001, ISBN 0-6723-1784-2", #info
       ""  #info_link
    ),
 
