@@ -14,6 +14,9 @@ echo "\n<!--$MYSITE-->\n";
 PHP 4.3.0 Release Announcement
 </h1>
 
+<p>
+[ <a href="/release_4_3_0_fr.php">Version Fran&ccedil;aise</a> ]&nbsp;
+</p>
 
 <p>After a long and arduous 8 months of development and testing, PHP 4.3.0 is
 <a href="/downloads.php">out</a>! With regard to scope, time, and effort, this
