@@ -148,7 +148,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Originator":
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
-			case "modify":
+			case "Modify":
 				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
 			default:
@@ -187,13 +187,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 #	$fields[] = "php_os as OS";
 	$fields[] = "email as Originator";
 	$fields[] = "sdesc as Description";
-	$fields[] = "id as modify";
+	$fields[] = "id as Modify";
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
 	$default_header_color="aaaaaa";
-	$centering["id"] = "center";
-	$dont_link["modify"]=1;
+	$centering["id"] = $centering["Modify"] = "center";
+	$dont_link["Modify"]=1;
 	
 	if (!isset($order_by)) {
 		$order_by = "id";
