@@ -32,7 +32,7 @@ function tryprefix($cc, $func, $prefix) {
 }
 
 function find_manual_page($lang, $function) {
-    $sections = array("function.", "class.", "ref.", "feature-", "construct.", "control-structures.");
+    $sections = array("", "function.", "class.", "ref.", "feature-", "construct.", "control-structures.");
     while (list($t,$section) = each($sections)) {
       $try = tryprefix($lang, $function, $section);
       if ($try) return $try;
