@@ -192,7 +192,7 @@ $books = array (
 
 
    array( "PHP Developer's Dictionary",    #title(s)
-      "", #title_link
+      "http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet/", #title_link
       array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"), #author(s)
       "", #author_link(s)
       "allen_wyke.jpg", #img
