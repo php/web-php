@@ -22,4 +22,6 @@ Christine & Rasmus<br>
 Cary, NC  27513<br>
 USA<br></th></table>
 </p>
+<hr>
+<font size="-2"><i>Rasmus Lerdorf is a member of the PHP development group, and the author of PHP/FI versions 1.0 and 2.0</font>
 <? commonFooter(); ?>
