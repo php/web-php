@@ -104,3 +104,10 @@ textarea.small {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
 	font-size: 75%;
 }
+
+p.formerror {
+        border: 1px solid #ff0000;
+        color: #000000;
+        background: #ffeeee;
+        padding: 2px 4px;
+}
