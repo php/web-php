@@ -193,6 +193,21 @@ by Kim Sung-Sik<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://ychat.pe.kr/"
+><IMG SRC="/jpgs/cgiphp.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+CGI & PHP<BR>
+by Youn Sukbum<BR>
+<SMALL>in Korean<BR>
+<A HREF="http://ychat.pe.kr/">more info</A>
+<!-- |
+<A HREF="">purchase</A>
+-->
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://php.wilson.gs/bible"
 ><IMG SRC="http://php.wilson.gs/bible/img/cover.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
