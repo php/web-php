@@ -94,11 +94,11 @@ site_header("Releases");
    </li>
    <li>
     <?php download_link('php-4.3.3-Win32.zip','Windows binary'); ?><br />
-	<span class="md5sum">md5: c3497c394b3f5829136eb2ff614da241</span>
+    <span class="md5sum">md5: c3497c394b3f5829136eb2ff614da241</span>
    </li>
    <li>
     <?php download_link('php-4.3.3-installer.exe','Windows installer'); ?><br />
-	<span class="md5sum">md5: 2720deb87e799ba88e041e99051e78ab</span>
+    <span class="md5sum">md5: 2720deb87e799ba88e041e99051e78ab</span>
    </li>
   </ul>
  </li>
@@ -123,11 +123,11 @@ site_header("Releases");
    </li>
    <li>
     <?php download_link('php-4.3.2-Win32.zip','Windows binary'); ?><br />
-	<span class="md5sum">md5: e1afea6341d97e8160bd7d93712721ec</span>
+    <span class="md5sum">md5: e1afea6341d97e8160bd7d93712721ec</span>
    </li>
    <li>
     <?php download_link('php-4.3.2-installer.exe','Windows installer'); ?><br />
-	<span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
+    <span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
    </li>
  </li>
 </ul>
