@@ -80,9 +80,13 @@ if (isset($note) && isset($user) &&
 
         // If there is any non-header result, then it is an error
         if ($result) {
-            echo "<!-- $result -->";
-            echo "<p class=\"error\">There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
-        }
+	    if (strpos ($result, '[TOO MANY NOTES]') !== false) {
+		print "<p class=\"error\">As a security precaution, we only allow a certain number of notes to be submitted per minute.  At this time, this number has been exceeded.  Please re-submit your note in about a minute.</p>";
+	    } else {
+                echo "<!-- $result -->";
+                echo "<p class=\"error\">There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
+            }
+	}
 
         // There was no error returned
         else { 
