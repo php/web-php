@@ -58,4 +58,7 @@ href="http://cvs.php.net/">the web-based view</a> of the CVS server
 to see what is available, and substitute the appropriate name for
 "php4" in step 3 (and ignore the later steps).</p>
 
+<p>You can also mirror the PHP CVS repository using CVSup. See
+<a href="cvsup.php">here</a> for more details.</p>
+
 <? commonFooter(); ?>
