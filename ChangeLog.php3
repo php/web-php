@@ -1,7 +1,45 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.8 Changes");
+commonHeader("PHP 3.0 -> 3.0.9 Changes");
 ?>
+<h3>June 6 1999, Version 3.0.9</h3>
+<ul>
+<li>added preg_quote() function (Andrey)
+<li>fixed OCI8 crash for "Fetch out of sequence". (Thies)
+<li>fix deallocation bug in dba's db2 module (Sascha)
+<li>add "--enable-dmalloc" option (Sascha)
+<li>added workaround for 1-digit numbers not returned correct  via OCI8 (Thies)
+<li>removed the limit for Ora_GetColumn/Ora_Fetch_Into again. (Thies C. Arntzen)
+<li>fix WDDX buffer bug (Sascha)
+<li>fixed Ora_GetColumn/Ora_Fetch_Into for LONG/LONG RAW (had to put in the 64K 
+  limit again). (Thies C. Arntzen)
+<li>added easter_date() function: returns timestamp of midnight on Easter
+  of the given year (valid for years 1970-2037) (Colin Viebrock)
+<li>added easter_days() function: returns number of days after March 21 on which
+  Easter falls for a given year (Colin Viebrock)
+<li>added 't' option to date() function: returns number of days in the
+  current month (Colin Viebrock)
+<li>enabled warning when header() is used after the headers have
+  been sent in in non-debug builds (Jim)
+<li>fixed connection and cursor shutdown in oracle-module (this is a fix for
+  the previous fix). (Thies C. Arntzen)
+<li>fixed shutting down of statements in OCI8 if user logs-off. (Thies C. Arntzen)
+<li>fixed very rare crash in shutdown of oracle-cursors. (Thies C. Arntzen)
+<li>added Perl Compatible Regular Expressions support (Andrey Zmievski)
+<li>fixed a couple of bugs in split()
+<li>cpdf module now supports adding hyperlinks, annotations and outline.
+  Some testing was suggesful. (U. Steinmann)
+<li>OCI8 now supports LONG/LONG RAW > 64K (Thies C. Arntzen)
+<li>add connection timeout to p?fsockopen (Sascha)
+<li>fix socket buffering subsystem for blocking sockets (Sascha)
+<li>fix fopen-wrappers.c for url's (danny)
+<li>fix fgets() semantics (Sascha)
+<li>fix segfault in wddx_serialize_value (Sascha)
+<li>add support for using PostScript Type 1 fonts for text in gd.c using T1lib
+  (ftp://sunsite.unc.edu/pub/Linux/libs/graphics/t1lib-0.?.tar.gz) (Jouni Ahto) 
+<li>add bin2hex (Sascha)
+<li>add mhash support (see http://sasweb.de/mhash/ ) (Sascha)
+</ul>
 <h3>May 22 1999, Version 3.0.8</h3>
 <ul>
 <li> OCI8 fix for RAW and LONG RAW (Binary data) - sorry currently limited to
