@@ -152,7 +152,7 @@ if (isset($in)) {
  </tr>
  <tr>
   <th>Short<br>Description</th>
-  <td><input type="text" name="in[sdesc]" value="<?php echo htmlentities($in['sdesc'])?>" size="16" maxlength="16" /></td>
+  <td><input type="text" name="in[sdesc]" value="<?php echo htmlentities($in['sdesc'])?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
   <th>Country</th>
