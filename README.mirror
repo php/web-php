@@ -19,10 +19,10 @@ appropriately.
 
 Once you create a virtualhost which looks something like:
 
- <VirtualHost ca.php.net>
+ <VirtualHost xx.php.net>
  ServerAdmin rasmus@lerdorf.on.ca
  DocumentRoot /www/htdocs/phpweb
- ServerName ca.php.net
+ ServerName xx.php.net
  ErrorLog logs/error_log
  TransferLog logs/access_log
  DirectoryIndex index.phtml index.php3 manual.php3 index.html index.htm
@@ -31,6 +31,11 @@ Once you create a virtualhost which looks something like:
 
 modified to reflect your local paths and country, of course, then your site
 should start working.
+
+Note: we're trying to keep the mirror names in the convention: "xx.php.net"
+where "xx" is replaced by the 2-letter country code of the mirror's location.
+If there already is a "xx.php.net", then you should set up your ServerName to
+be "xx2.php.net" (or "xx3.php.net", etc.).
 
 You should also set up a cron job that periodically does a 'cvs update -d' in 
 your web directory.  This will ensure that your web site is up to date. 
@@ -45,6 +50,7 @@ integrate your mirror site.  You should also include in your email the following
 - the URL of the site that hosts the mirror (this is where people will go when 
   they click on the logo at the bottom of each page)
 
+Don't worry about graphics for your country's flag - we've got them all!
 
 And don't forget to put a nice little PHP logo on your hosting companies site 
 (if possible)!  Grab one of the logos from the "Downloads" page on the PHP site, 
