@@ -23,7 +23,7 @@ here to see all the file sizes and dates</a>.
 <p>
 If you don\'t know how to handle bz2 compressed
 manuals on Windows, please read our
-<a href="http://www.php.net/manual/en/faq.misc.php#AEN79524">FAQ entry</a>
+<a href="http://www.php.net/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
 on this subject.
 </p>
 ';
