@@ -66,7 +66,7 @@ Annonce de PHP 4.2.0
 
 <p>
 Le changement le plus important de PHP 4.2.0 concerne la gestion des
-variables. Les <b>variables externes (issues de l'environnement d'ex&eacute;cution,
+ variables. Les <b>variables externes (issues de l'environnement d'ex&eacute;cution,
 des requ&ecirc;tes HTTP, des cookies ou du serveur web) ne sont plus enregistr&eacute;es
 dans l'environnement d'ex&eacute;cution global par d&eacute;faut.</b> La m&eacute;thode recommand&eacute;e
 pour acc&eacute;der aux variables externes est d'utiliser les nouveaux tableaux globaux,
@@ -91,13 +91,13 @@ version publique d'Apache 2. PHP 4.2.0 dispose du support
 </p>
 <p>Il manque encore &agrave; PHP 4.2.0 des fonctionnalit&eacute;s cl&eacute;s
 sur MacOSX et sur Darwin. PHP n'est donc pas officiellement
-support&eacute; par le PHP group sur ces plate-formes. Sp&eacute;cifiquement,
+support&eacute; par le PHP group sur ces plates-formes. Sp&eacute;cifiquement,
 compiler PHP comme module Apache dynamiquement charg&eacute; n'est pas
 encore support&eacute;. PHP 4.3.0, dont la publication est pr&eacute;vue pour
 Ao&ucirc;t 2002, sera la premi&egrave;re version qui supportera officiellement 
 Mac OS X. Cette version, aussi bien pour les futures versions de
  Mac OS X et Apache, sera totalement synchronis&eacute; avec les autres
- plate-formes PHP.</p>
+ plates-formes PHP.</p>
 
 <h2>Am&eacute;liorations</h2>
 <p>PHP 4.2.0 inclut de nombreuses innovations : </p>
