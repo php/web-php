@@ -28,14 +28,6 @@ download site. Binaries available on external servers:
 </ul>
 </p>
 
-<h3>Wget Tip</h3>
-<p>
-Provide the URL parameter enclosed in qoutes on the
-command line, if you use wget or lynx or links to
-download. Some special characters in the URL may
-be interpreted by your shell otherwise.
-</p>
-
 <h3>Other Downloads</h3>
 <p>
 For downloadable manual packages, go to the '.
@@ -86,16 +78,10 @@ $server = $SERVER_NAME;
 </ul>
 
 <p>
-  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes. Daily
-  snapshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
-  (not intended for production use!).
-</p>
-
-<p>
-  If you would like to download these files with wget or lynx or any command line
-  utility, be aware that the question mark and/or ampersand in the URL may be handled
-  specially by your shell. To overcome this problem, the easiest fix is to enclose
-  the whole URL parameter in quotes, and so there will be no problem with the download.
+  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes, or the
+  <a href="/release_4_3_0.php">release notes</a> for more information on this particular
+  release. Daily snapshots are also available from
+  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
 
 <h2>Windows Binaries</h2>
