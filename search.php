@@ -216,7 +216,7 @@ Restrict the search to:<br></td>
 		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		echo "<p>Search powered by<br>\n";
-		print_link("http://www.htdig.org/", make_image("htdig.gif", "ht:dig") );
+		print_link("http://www.htdig.org/", make_image("htdig.gif", "ht://Dig") );
 		echo "</p>\n";
 }
 
