@@ -13,7 +13,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <a name="4.3.6"></a>
 <h3>Version 4.3.6</h3>
-<b>15-Apr-2003</b>
+<b>15-Apr-2004</b>
 <ul>
 <li>Updated bundled PDFLib library to version 5.0.3p1 in Windows distribution. (Edin)</li>
 <li>Synchronized bundled GD library with GD 2.0.22. (Ilia)</li>
