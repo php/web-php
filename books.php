@@ -1,4 +1,4 @@
-<?
+<?php
 require("shared.inc");
 commonHeader("PHP Books");
 ?>
@@ -229,12 +229,12 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 >PHP 4. Dynamische Webauftritte professionell realisieren</A><BR>
 by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus<BR>
 Mit einem Vorwort von <A HREF="http://www.zend.com/zend/hof/andi.php">Andi Gutmans</A> und <A HREF="http://www.zend.com/comm_person.php?id=12">Zeev Suraski</A><BR>
-Unter Mitwirkung von 
+Unter Mitarbeit von 
 <A HREF="http://www.zend.com/comm_person.php?id=38">Wolfgang Drews</A>,
 <A HREF="http://www.zend.com/comm_person.php?id=33">Hartmut Holzgraefe</A>,
 <A HREF="http://www.zend.com/comm_person.php?id=37">Uwe Steinmann</A> und
 Christian Wenz<BR>
-<SMALL>in German, Markt+Technik, Dec 2000, ISBN 3-8272-5877-4, 640 pages</SMALL><BR>
+<SMALL>in German, Markt+Technik Verlag, new technology, Dec 2000, ISBN 3-8272-5877-4, 639 pages</SMALL><BR>
 <SMALL><A HREF="http://www.php-buch.de/">weitere Informationen</A><BR>
 </TD>
 </TR>
@@ -327,7 +327,7 @@ by Klaus Schmidt<BR>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258839/wwwphpnet07"
 >Jetzt lerne ich PHP 4</A><BR>
 by Matt Zandstra<BR>
-<SMALL>in German, Markt+Technik, December 2000, ISBN 3-8272-5883-9, 515 pages<BR>
+<SMALL>in German, Markt+Technik Verlag, December 2000, ISBN 3-8272-5883-9, 515 pages<BR>
 </TD>
 </TR>
 
