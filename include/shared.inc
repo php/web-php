@@ -457,7 +457,7 @@ endif;
 <? if ($NS4 || $NS3):
 	echo " OnLoad=\"LoadImgs();\"";
 endif; ?>
-><A NAME="top">
+><A NAME="tOpOfpAgE">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
@@ -574,7 +574,7 @@ function commonFooter() {
 		spc(1,3);
 		echo "<BR>\n";
 		makeSideButton("/credits.php3","cred","","credits",129,30,0,10,"Who's responsible for this?","<BR>\n");
-		makeSideButton("#top","top","","top",129,30,0,10,"Top of this page","<BR>\n");
+		makeSideButton("#tOpOfpAgE","top","","top",129,30,0,10,"Top of this page","<BR>\n");
       ?>
       <IMG SRC="/gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
      </TD>
