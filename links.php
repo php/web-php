@@ -589,8 +589,8 @@ site_header("Links");
     Starting point for Hungarian and International PHP sites
    </li>
    <li>
-    <a href="http://phpinfo.wish.hu/">PHPinfo</a><br />
-    Fresh news from the world of PHP and web development
+    <a href="http://weblabor.hu/">Weblabor</a><br />
+    Fresh news from the world of web development and PHP
    </li>
   </ul>
  </li>
