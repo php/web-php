@@ -63,7 +63,7 @@ commonHeader("PHP 4.0.0 -> 4.0.1 Changes");
   directive with extensions that were loaded from the php.ini file (Zeev)</li>
 <li>Changed set_error_handler() to return the name of the previously defined</li>
   error handler, if any (Zeev, Zend Engine)</li>
-<li>Declared <?php_track_vars?> officially dead.  It didn't work in PHP 4.0.0</li>
+<li>Declared &lt;?php_track_vars?&gt; officially dead.  It didn't work in PHP 4.0.0</li>
   either, but now it's gone for good (Zeev)</li>
 <li>Make convert_cyr_string() binary safe and stop it from corrupting other</li>
   PHP variables. (Andi)</li>
