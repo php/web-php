@@ -73,7 +73,7 @@ function find_manual_page_slow($lang, $keyword)
 
 function find_manual_page($lang, $keyword)
 {
-	if (!function_exists("sqlite_popen") || !($s = sqlite_popen('manual-lookup.sqlite'))) {
+	if (!function_exists("sqlite_popen") || !($s = sqlite_popen(dirname(__FILE__) . '/manual-lookup.sqlite'))) {
 		return find_manual_page_slow($lang, $keyword);
 	}
 
