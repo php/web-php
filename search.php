@@ -26,11 +26,10 @@ if (isset($_SERVER['HTSEARCH_PROG'])) {
 }
 
 // If the program to use to search is not excutable, we cannot
-// get search results, regardless of what we do (uncomment as the
-// real local search providers are known [Goba])
-//if (!is_executable($htsearch_prog)) {
-//    unset($htsearch_prog);
-//}
+// get search results, regardless of what we do
+if (!is_executable($htsearch_prog)) {
+    unset($htsearch_prog);
+}
 
 /* Form parameters expected:
      pattern - search keywords
