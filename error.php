@@ -221,6 +221,8 @@ $uri_aliases = array (
     "register_globals" => "security.globals",
     "registerglobals"  => "security.globals",
     "manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
+	"magic_quotes"     => "security.magicquotes",
+	"magicquotes"      => "security.magicquotes",
     "gd"               => "image",
 
     "tut"          => "tutorial",
