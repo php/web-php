@@ -91,7 +91,7 @@ else {
     echo "<p>The search feature is accessible via the form elements at the top right of this page.</p>";
     echo "<p class=\"tip\">We have tried to reduce the size of the function list autocomplete script
     to the minimum, so you don't need to wait for long to start using this feature. If you are interested
-    in the uncompressed JavaScript source code, look at <a href=\"functions.js.txt\">the functions.js.txt file</a></p>";
+    in the PHP and JavaScript sources we used to create this functionality, those are <a href=\"http://cvs.php.net/cvs.php/phpdoc/scripts/quickref\">available under the PHP license in phpdoc CVS</a>.</p>";
     if (FALSE) {
     if (isset($EXPL_LANG)) {
         $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";

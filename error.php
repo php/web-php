@@ -206,6 +206,7 @@ $external_redirects = array(
     "getdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
     "rev"         => "/manual/$LANG/revcheck.html.gz",
     "blog"        => "/manual/$LANG/build.log.gz",
+    "functions.js.txt" => "http://cvs.php.net/cvs.php/phpdoc/scripts/quickref",
 );
 
 // ============================================================================
