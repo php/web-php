@@ -1,6 +1,7 @@
 <?php // -*- C++ -*-
 
 require_once 'prepend.inc';
+require_once 'loadavg.inc';
 require_once 'manual-lookup.inc';
 
 if (!$function && $pattern) $function = $pattern;

@@ -203,6 +203,7 @@ if (isset($external_redirects[$URI])) {
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
+include_once 'loadavg.inc';
 include_once "manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) { mirror_redirect($try); }
