@@ -48,9 +48,6 @@ A bunch of helpful PHP resources available here<BR>
 <LI><a HREF="http://www.devshed.com/Server_Side/PHP/">PHP 3.0 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
 
-<LI><A HREF="http://php.codebase.org/">PHP.CodeBase.Org</A><BR>
-A nice all-around support site<BR>
-
 <LI><A HREF="http://www.314interactive.com/io/index.php3">IONLINE Programmer's Resource</A><BR>
 Another site with good articles on PHP basics and advanced topics.<BR>
 
