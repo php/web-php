@@ -18,6 +18,15 @@ If you use another browser, or would like to see all the
 information, you can <a href="/download-docs.php?sizes=1">click
 here to see all the file sizes and dates</a>.
 </p>
+
+<h3>Tip for Windows users</h3>
+<p>
+Note, that the recent versions of WinZip and other
+zip programs on Windows can handle .tar.gz compressed
+files. If you have such a program, you can save
+download time for yourself, if you choose the .tar.gz
+formats, instead of .zip.
+</p>
 ';
 
 commonHeader("Download documentation");
