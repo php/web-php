@@ -17,10 +17,10 @@ $query .= " FROM note";
 if ($since) {
   $query .= ",updated WHERE note.sect=updated.sect";
 }
-$query .= " ORDER BY sect";
+$query .= " ORDER BY sect,rate DESC,ts";
 
 if ($since) {
-  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since)")
+  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since) OR updated > FROM_UNIXTIME($since)")
     or die("failed to create temporary table");
 }
 
