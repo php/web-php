@@ -22,12 +22,13 @@ a CVS account request here: (only the encrypted version of the password is sent)
 <table>
 <tr><th>Full Name: </th><td><input type=text size=50 name=fullname></td></tr>
 <tr><th>Email: </th><td><input type=text size=50 name=email></td></tr>
-<tr><th>Requested Password: </th><td><input type=password size=10 name=password></thd</tr>
+<tr><th>User ID: </th><td><input type=text size=10 name=id></th></tr>
+<tr><th>Requested Password: </th><td><input type=password size=10 name=password></th></tr>
 <tr><th>&nbsp;</th><td><input type=submit value="Send It"></td></tr>
 </table>
 </form>
 <? else:
-mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nPassword: ".crypt($password));
+mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password));
 ?>
 Thank you.  Your request has been sent.
 <?endif;?>
