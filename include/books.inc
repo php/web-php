@@ -280,8 +280,8 @@ array(
  array (
     /* title[s]     */ "Developing Custom PHP Extensions",
     /* title_link   */ "",
-    /* author[s]    */ array("Blake Schwendiman"),
-    /* auth link[s] */ array(false),
+    /* author[s]    */ "Blake Schwendiman",
+    /* auth link[s] */ "",
     /* image        */ "1411601882.jpg",
     /* information  */ "Lulu Press, Inc., Sep 2003, ISBN 1-4116-0188-2, 201 pages",
     /* inform. link */ "http://www.lulu.com/intechrabooks",
