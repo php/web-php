@@ -23,17 +23,17 @@ jp       jp.php.net                                    sgk@happysize.co.jp      
 kr       kr.php.net                                                                              ?
 lv       lv.php.net            Alex Petrov             sysman@pd.gov.lv                          159.148.45.25
 mx       mx.php.net                                    webmaster@goliath.urbano.com.mx           200.36.127.163
-nl       nl.php.net                                    paulj@ns.web-tic.com                      php.webtic.com
+nl       nl.php.net                                    paulj@ns.web-tic.com                      php.webtic.com                  deactivated - running 3.0R-dev
 nl       php.nederland.net                                                                       193.67.110.5 ?
 no       no.php.net            Stig Bakken             stig@guardian.no                          195.1.254.5                     same as php.guardian.no
 nz       nz.php.net                                                                              php.manawatu.net.nz
 pl       pl.php.net                                    grych@tgr.com.pl                          ?
-pt       pt.php.net                                    melo@co.telenet.pt                        php.telenet.pt
+pt       pt.php.net                                    melo@co.telenet.pt                        php.telenet.pt                  deactivated - running 3.0b6
 ro       ro.php.net                                    cbredi@timisoara.roedu.net                193.226.9.16
 se       se.php.net            Kalle Kiviaho           kivi@ios.chalmers.se                      129.16.214.87
-sg       sg.php.net                                    terence@com5.net                          202.169.237.18                  inactive?
+sg       sg.php.net                                    terence@com5.net                          202.169.237.18                  inactive - removed from mirrors array
 sk       sk.php.net                                    bednar@isternet.sk                        195.72.0.6
-tr       tr.php.net                                                                              ?
+tr       tr.php.net                                                                              ?                               inactive?
 ua       ua.php.net            Alexander Ivanov        sander@paco.net                           php.paco.net.ua
 ua       ua2.php.net                                   trurl@asteria.odtel.net ?                 php.ndot.com.ua
 uk       uk.php.net            Gareth Watts            gareth@omnipotent.net                     194.73.160.93
