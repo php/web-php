@@ -55,6 +55,13 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Object-Oriented Programming with PHP", "by <a mailto:href=\"mailto:wj@unstrung.com\">Jason Gilmore</a>",
+    "http://www.webreview.com/pub/2000/06/02/feature/index03.html?wwwrrr_rss", "June 2, 2000");?>
+Couple Object-Oriented Programming with PHP and you've got features
+worth inheriting. From foundations to class to inheritance, Jason makes
+understanding objects within PHP easy--and practical.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP From an IT Manager's Perspective", "by <a mailto:href=\"mailto:tobias@phpwizard.net\">Tobias Ratschiller</a>",
     "http://idm.internet.com/articles/200005/php_05_30_00a.html", "May 31, 2000");?>
 What have sprint.ca, livebid.amazon.com, xoom.com, and mp3.lycos.com in
