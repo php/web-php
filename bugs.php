@@ -14,6 +14,10 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="bugs.php.net";
 	$dbuser="bourbon";
 	$dbpwd="";
+} else if (strstr($MYSITE,"localhost")) {
+	$dbhost="localhost";
+	$dbuser="nobody";
+	$dbpwd="";
 } else {
 	Header("Location: http://bugs.php.net");
 	exit;

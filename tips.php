@@ -80,7 +80,7 @@ if necessary):
 
 <PRE>
 #!/bin/sh
-/usr/bin/netscape http://www.php.net/manual-lookup.php?funtion=$1
+/usr/bin/netscape http://www.php.net/manual-lookup.php?function=$1
 </PRE>
 
 <LI>Save it and type <B>chmod +x phpfind</B> to make it executable
