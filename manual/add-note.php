@@ -1,6 +1,6 @@
 <?
 
-$mailto = 'core@php.net';
+$mailto = 'rasmus@php.net';
 
 /*
 #
@@ -44,8 +44,9 @@ if(!strstr($MYSITE,"www.php.net")) {
 		if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
 <?			$new_id = mysql_insert_id();	
-			$add = "\n\nhttp://www.php.net/manual/".sect_to_file($sect)."\n";
-			mail("php-notes@lists.php.net","note $new_id added to $sect",stripslashes($note).$add,"From: $user");
+			$msg = stripslashes($note);
+			$msg .= "\n\nhttp://www.php.net/manual/".sect_to_file($sect)."\n";
+			mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
 		else:
 			// mail it.
 			mail($mailto, "failed manual note query", $query);
