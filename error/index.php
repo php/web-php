@@ -82,6 +82,7 @@ if ($uri[0] == "/") $uri = substr($uri,1);
 if (preg_match("!^manual/(\\w+)/print/(.php)$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
     include "../manual/$parts[1]/$parts[2]";
+    exit;
 }
 
 // shortcuts for PHP and manual pages
