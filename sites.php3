@@ -114,6 +114,7 @@ right away.</blockquote>
 /* Games */
 	title("Games");
 	siteStart();
+	site("Battle - a PBeM Game","battle.pbem.net");
 	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
