@@ -6,9 +6,9 @@
 
 <ul>
 
-<li><a href="manual/manual.htm">PHP 3.0 Manual</a>.
-    This is an early version, a lot is still missing, but it'll get
-    better.
+<li><a href="manual/manual.php3">PHP 3.0 Manual</a>.
+    This is an early version.  A lot is still missing, but it is
+    improving.
 
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>.  Until the new
     manual is complete, you can get answers to many questions here.
