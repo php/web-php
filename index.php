@@ -145,6 +145,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+  PHP Development Team would like to announce the immediate release of 
+  <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>. 
+  These are maintenance releases that in addition to non-critical bug fixes 
+  address several very serious security issues. All Users of PHP are strongly 
+  encouraged to upgrade to one of these releases as soon as possible.
+</p>
+
+<p>
+ For changes since PHP 4.3.9, please consult the
+ <a href="/ChangeLog-4.php#4.3.10">ChangeLog</a>.
+</p>
+
+<p>
+ For changes since PHP 5.0.3, please consult the
+ <a href="/ChangeLog-5.php#5.0.3">ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>Second Bulgarian PHP Conference</h1>
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
@@ -184,36 +206,6 @@ commonHeader("Hypertext Preprocessor");
  The topics are General PHP, PHP &amp; Business/Integration,
  PHP &amp; Databases, PHP Design, PHP Extensions, PHP &amp; XML
  and PHP-GTK.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.10 released!</h1>
-<p>
- <span class="newsdate">[15-Dec-2004]</span>
-  PHP Development Team would like to announce the immediate release of 
-  <a href="/downloads.php">PHP 4.3.10</a>. This is a maintenance release 
-  that in addition to over 30 non-critical bug fixes addresses several very 
-  serious security issues. All Users of PHP are strongly encouraged to upgrade 
-  to this release as soon as possible.
-</p>
-
-<p>
- For changes since PHP 4.3.9, please consult the
- <a href="/ChangeLog-4.php#4.3.10">ChangeLog</a>.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
-<h1>PHP 5.0.3RC2 released!</h1>
-<p>
- <span class="newsdate">[10-Dec-2004]</span>
- <a href="http://qa.php.net/">PHP 5.0.3RC2</a> has been released for testing.
- This is the second release candidate and should have a very low number of 
- problems and/or bugs. Nevertheless, please download and test it as much as 
- possible on real-life applications to uncover any remaining issues.
 </p>
 
 <hr />
