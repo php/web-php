@@ -19,6 +19,7 @@ $LANGUAGES = array(
     'hk'    => 'Chinese (Hong Kong Cantonese)',
     'tw'    => 'Chinese (Traditional)',
     'cs'    => 'Czech',
+    'da'    => 'Danish',
     'nl'    => 'Dutch',
     'fi'    => 'Finnish',
     'fr'    => 'French',
