@@ -5,6 +5,13 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		exit;
 }
 
+	if (isset($version4)) {
+		$version4 = true;
+	}
+	else {
+		$version4 = false;
+	}
+
 	function mydate($str) {
 		$year = substr($str,0,4);
 		$month = substr($str,5,2);
@@ -38,7 +45,13 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	mysql_connect("localhost","nobody","");
 	mysql_select_db("php3");
 
-	$result=mysql_query("SELECT * from bugdb");
+	$query = "SELECT * from bugdb";
+
+	if ($version4) {
+		$query .= " WHERE php_version LIKE '4%'";
+	}
+
+	$result=mysql_query($query);
 	while($row=mysql_fetch_row($result)) {
 		$bug_type['all'][$row[1]]++;
 		if($row[7]=="Open") {
@@ -67,14 +80,20 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 			$bug_type['closed'][$row[1]]++;
 			$time_to_close[] = mydate($row[10]) - mydate($row[9]);
 			$closed_by[$row[11]]++;
-		}	
-		$total++;	
+		}
+		$total++;
 	}
 
 	function bugstats($status, $type) {
-		global $bug_type;
+		global $bug_type, $version4;
 		if ($bug_type[$status][$type] > 0) {
-			return '<A href="/bugs.php?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
+			if ($version4) {
+				$page = "bugs.php";
+			}
+			else {
+				$page = "bugs-php3.php";
+			}
+			return '<A href="/' . $page . '?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
 		}
 	}
 
