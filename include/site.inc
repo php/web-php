@@ -1,13 +1,14 @@
 <?
 $MIRRORS = array(
-   "http://au.php.net:81/"        => array("au", "Australia", "none", "/", 1),
+   "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rsic",
+"http://www.nisu.flinders.edu.au/", 1),
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1),
    "http://php.privateworld.com/" => array("ca", "Private World", "pwc", "http://www.privateworld.com/", 1),
    "http://il.php.net/"           => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 1),
    "http://php.netvision.net.il/" => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 0),
    "http://machba.il.php.net/"    => array("il", "Technion", "technion", "http://www.technion.ac.il/", 1),
    "http://php.technion.ac.il/"   => array("il", "Technion", "technion", "http://www.technion.ac.il/", 0),
-   "http://jp.php.net"            => array("jp", "Japan", "none", "/", 1),
+   "http://jp.php.net/"           => array("jp", "HappySize, Inc.", "happy", "http://jp.gigahit.com/", 1),
    "http://www.guardian.no/"      => array("no", "Trondheim", "guardian", "http://www.guardian.no/", 0),
    "http://php.guardian.no/"      => array("no", "Trondheim", "guardian", "http://www.guardian.no/", 0),
    "http://no.php.net/"           => array("no", "Trondheim", "guardian", "http://no.php.net/", 1),
