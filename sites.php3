@@ -321,6 +321,7 @@ right away.</blockquote>
 	siteStart();
 	site("Access Micro","www.accessmicro.com");
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
+	site("Arena Fan","www.arenafan.com");
 	site("BART's Water Sports","www.bartswatersports.com");
 	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
