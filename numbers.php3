@@ -26,7 +26,7 @@ this might give Cold Fusion another <b>200,000</b> potential domains if we are b
 <P>The marketshare percentages used here were completely pulled out of a hat (a red one, actually) and have
 no factual basis.  They might be completely different.  If either ASP or Cold Fusion is on more domains than
 the Apache module version of PHP, then the other is way behind.  But, if our rough estimates here are correct,
-PHP could very well be ahead of both ASP and Cold Fusion.  I don't know about you, but we think that is pretty
+PHP could very well be ahead of both ASP and Cold Fusion.  We don't know about you, but we think that is pretty
 cool.  
 </P>
 <? commonFooter(); ?>
