@@ -81,12 +81,15 @@ if(!isset($pattern)) {
 		if (!isset($base)) {
 			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
 				$base=$reg[1];
-				$sourceurl=$base.$PHP_SELF;
 			}
 			if ($base==$MYSITE) {
 				$base="-";
-				$sourceurl=$PHP_SELF;
 			}
+		}
+		if ($base=="-") {
+			$sourceurl=$PHP_SELF;
+		} else {
+			$sourceurl=$base.$PHP_SELF;
 		}
 		echo "<CENTER><A HREF=\"$sourceurl\">New Search</A></CENTER><BR><BR>\n";
 		if ((isset($prevpattern))&&($prevpattern)) {
