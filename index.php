@@ -94,7 +94,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <p>
 <font class="newsDate">[04-Aug-2001]</font>
-The long avaited PDF format of the manual is back again.
+The long awaited PDF format of the manual is back again.
 The PDF packages are better than ever, now compressed with
 gz, bz2 and zip to be smaller. We made the
 <a href="/docs.php">online documentation</a> and the
