@@ -82,7 +82,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed a crash in dbase_replace_record. (Patch by robin.marlow@dps-int.com)</li>
 <li>Fixed a crash in msql_result(). (Zeev)</li>
 <li>Added support for single dimensional SafeArrays and Enumerations.
-  Added an com_isenum() function to check if a component implements an
+  Added com_isenum() function to check if a component implements an
   enumeration. (Alan, Harald)</li>
 <li>Fixed a bug in dbase_get_record() and dbase_get_record_with_names().
   boolean fields are now returned correctly.
