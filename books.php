@@ -608,6 +608,19 @@ array(
     /* language     */ "pt"
   )
   ),
+
+  array(
+    /* title[s]     */ "Desenvolvendo Websites com PHP 4",
+    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&isbn=8575220039&volume=1&ano_publ=2001&rnd=16354996126232",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "niederauer.jpg",
+    /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
+    /* inform. link */ "http://www.cursophp.net/livro/",
+    /* language     */ "pt"
+  )
+  ),
+
   
   "Related" => array(
 
