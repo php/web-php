@@ -431,7 +431,7 @@ sub safeglob {
 
 sub checkout {
 	local($filename, $rev) = @_;
-	$fullname =~ s|$cvsrepository||;
+	$filename =~ s|$cvsrepository||;
 
 	open(RCS, "cvs -q -l -d$cvsrepository co -p -r $rev '$filename' 2>&1 |") ||
 	    &fail("500 Internal Error", "Couldn't co: $!");
