@@ -40,17 +40,18 @@ $languages = array(
  "es" => "Spanish"
 );
 
+# arrat structure: header, link text, show size in link
 $formats = array(
- "" => array("View Online", "view"),
- "html/" => array("View Online (plain)", "view"),
- "bigmanual.html.gz" => array("Single HTML", "html.gz"),
- "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb"),
- "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb"),
- "manual.pdf" => array("PDF", "pdf"),
- "manual.txt.gz" => array("Plain text", "txt.gz"),
- "manual.tar.gz" =>  array("Many HTML files", "tar.gz"),
- "manual.zip" => array("Many HTML files", "zip"),
- "manual.chm" => array("Windows HTML Help", "chm")
+ "" => array("View Online", "view", false),
+ "html/" => array("View Online (plain)", "view", false),
+ "bigmanual.html.gz" => array("Single HTML", "html.gz", true),
+ "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb", true),
+ "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb", true),
+ "manual.pdf" => array("PDF", "pdf", true),
+ "manual.txt.gz" => array("Plain text", "txt.gz", true),
+ "manual.tar.gz" =>  array("Many HTML files", "tar.gz", true),
+ "manual.zip" => array("Many HTML files", "zip", true),
+ "manual.chm" => array("Windows HTML Help", "chm", true)
 );
 ?>
 
@@ -86,7 +87,8 @@ and formats. Pick a language and format from the table below:
        }
        $size = @filesize("manual/$langcode/$fn");
        if ($size) {
-         echo "<a href=\"manual/$langcode/$fn\">$details[1]</a>";
+         $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . '"' : '');
+         echo "<a href=\"manual/$langcode/$fn\"$print_size>$details[1]</a>";
        }
        else {
          echo "&nbsp;";

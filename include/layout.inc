@@ -156,7 +156,7 @@ function download_link($file, $title) {
 	}
 
 	$size = @filesize($local_file)/1024;
-	echo("<!-- file=$file localfile=$local_file size-$size -->\n");
+	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
 
   print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title);
 
