@@ -82,11 +82,6 @@ Searchengine for PHP related things.<BR>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server, HTML, PHP, MySQL ... and lots more.<BR>
 </UL>
 
-<h3>Funding PHP Development</h3>
-<P>
-Sometimes the various volunteer programmers responsible for PHP incur costs related to
-their work on PHP.  You can contribute money to help alleviate these costs 
-<A HREF="funding.php3">here</A>.
 </P>
 
 <? commonFooter(); ?>

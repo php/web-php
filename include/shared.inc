@@ -535,6 +535,22 @@ endif; ?>
 	endif; ?>
      </TD>
     </TR>
+
+	<TR><TH align=left><br>&nbsp;&nbsp;<a href="/thanks.php" class=blacklink>Thanks to:</a></TH></TR>
+	<TR><TD>&nbsp;<a href="http://chek.com" class=whitelink>Chek.com</a></TD></TR>
+	<TR><TD>&nbsp;<a href="http://www.easydns.com/?V=698570efeb62a6e2" class=whitelink>easyDNS</a></TD></TR>
+	<TR><TD>&nbsp;<a href="http://valinux.com" class=whitelink>VA Linux Systems</a></TD></TR>
+
+	<TR><TH align=left><br>&nbsp;&nbsp;Related sites:</TH></TR>
+	<TR><TD><a href="http://www.apache.org" class=whitelink>Apache</a></TD></TR>
+	<TR><TD><a href="http://www.mysql.com" class=whitelink>MySQL</a></TD></TR>
+	<TR><TD><a href="http://www.postgresql.org" class=whitelink>PostgreSQL</a></TD></TR>
+	<TR><TD><a href="http://www.zend.com" class=whitelink>Zend Tech.</a></TD></TR>
+
+	<TR><TH align=left><br>&nbsp;&nbsp;Community:</TH></TR>
+	<TR><TD><a href="http://www.linuxfund.org" class=whitelink>LinuxFund.org</a></TD></TR>
+	<TR><TD><a href="http://www.osdn.org" class=whitelink>OSDN</a></TD></TR>
+
    </TABLE>
   </TD>
   <TD align=left width="100%">

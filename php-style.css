@@ -6,7 +6,6 @@ A {
     color: #5B69A6;
 }
 
-
 TD,TH {
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
 }
@@ -38,6 +37,19 @@ TD,TH {
 .author,.editor {
     font-size: 10pt;
     font-weight: normal;
+}
+
+.blacklink {
+    text-decoration: none;
+    color: #000000;
+}
+
+.whitelink {
+    font-weight: bold;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 80%;
+    margin-left: 15px;
 }
 
 PRE {
