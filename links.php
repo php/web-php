@@ -293,7 +293,7 @@ Try one of the following sites:
   <li><a href="http://www.od-site.com/php">www.od-site.com/php</a><br></li>
   <li><a href="http://hosts.php.net/">hosts.php.net</a><br>
     (features a searchable directory and comments from users)<br></li>
-  <li><a href="http://pmcw.dhs.org/">PMCW webservices</a></li>
+<!--  <li><a href="http://pmcw.dhs.org/">PMCW webservices</a></li> -->
 </ul>
 
 <?php commonFooter(); ?>
