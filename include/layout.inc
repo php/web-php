@@ -330,7 +330,7 @@ function commonFooter() {
           }
 	}
 	echo "</select> ";
-	echo make_submit('small_submit.gif', 'search', 'bottom' );
+	echo make_submit('small_submit.gif', 'go', 'bottom' );
       ?>&nbsp;<br>
       </td>
     </form>
