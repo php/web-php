@@ -19,6 +19,16 @@ SGML source.  For a more complete list of all of the changes, see the
 <a href="ChangeLog.php3">ChangeLog</a>.
 </P>
 
+<h3>PHP Tutorials at O'Reilly Open Source Software Convention</h3>
+<p>
+<a href="http://conferences.oreilly.com/"><img align=right src="gifs/oss_conf_speaker.gif" border=0 width=72 height=117 alt="Open Source Software Convention"></a>
+Rasmus Lerdorf and Jim Winstead will be giving a pair of three-hour
+tutorials at <a href="http://conferences.oreilly.com/">O'Reilly's
+Open Source Software Convention</a> on August 21, 1999, in Monterey,
+California. You can find more information about the tutorials
+<a href="http://conferences.oreilly.com/apache/tuts_desc.html">here</a>.
+</p>
+
 <h3>PHP Related Books are Available</h3>
 <P>
 Get ready for a wave of PHP related books to hit the shelves!  We don't
