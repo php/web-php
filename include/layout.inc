@@ -505,7 +505,13 @@ function display_event($event, $include_date = 1)
                  $days[$event['recur_day']], " of the month)";
             break;
     }
-    
+   
+    // Event category
+	if(isset($event['category']) && $event['category']) {
+    	$cat = array("unknown", "User Group Event", "Conference", "Training"); 
+		echo ' [' . $cat[$event['category']] . '] ';	
+	}
+	
     // Print out country information
     echo ' (' , $COUNTRIES[$event['country']] , ')';
 ?>
