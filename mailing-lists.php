@@ -132,6 +132,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       true, false, false
     ),
     Array (
+      'zend-engine-cvs', 'Zend Engine CVS commit list',
+      'All the commits of the Zend Engine CVS modules are posted to this list automatically',
+      false, true, true, "php.zend-engine.cvs"
+    ),
+    Array (
       'php-gtk-cvs', 'PHP-GTK CVS list',
       'All the commits to the cvs PHP-GTK code repository are posted to this list automatically' ,
       false, true, true, "php.gtk.cvs"
