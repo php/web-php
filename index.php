@@ -150,6 +150,30 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+<h1>European Open Source Development Threatened!</h1>
+<p>
+ <span class="newsdate">[27-Aug-2003]</span>
+ Today sees an international day of protest against the move by the EU to make obtaining a patent easier within 
+ Europe. Such patents may cause Open Source software such as PHP to infringe on existing licenses and new ones, 
+ meaning we would no longer be safe to distribute PHP within Europe. Contact your EU Representative to get this
+ cruicial vote blocked. Find out more at the <a href="http://swpat.ffii.org/">campaign website</a> 
+</p>
+ 
+<hr />
+
+<?php news_image("http://www.php-con.com", "phpcon_2003.gif", "php{con west 2003"); ?>  
+
+<h1>php{con west is announced</h1>
+<p>
+ <span class="newsdate">[26-Aug-2003]</span>
+ php{con returns to the San Francisco Bay Area with new sessions, PHP gurus and a whole new day of PHP-intensive 
+ learning. Their program features a full day of tutorials, three technical session tracks over two days, an all day 
+ coding marathon, Code Sprint, social events, works in progress, and presentations from PHP luminaries. Early Bird 
+ discounts end on September 26th. See the full program and register online at <a href="http://www.php-con.com">their
+ website</a>
+</p>
+
+<hr />
 
 <h1>PHP 4.3.3 released!</h1>
 <p>
