@@ -310,14 +310,13 @@ array(
    ),
 
   array(
-    /* title[s]     */ array("Core PHP Programming", "Using PHP to Build Dynamic Web Sites"),
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet",
-    /* author[s]    */ "Leon Atkinson",
-    /* auth link[s] */ "http://zend.com/comm_person.php?id=30",
-    /* image        */ "0130893986.jpg",
-    /* information  */ "Foreword by ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans")."<br />".
-                       "Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages",
-    /* inform. link */ "http://www.leonatkinson.com/index.php3?screen=eng_book",
+    /* title[s]     */ array("Core PHP Programming", "Third Edition"),
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130463469/wwwphpnet",
+    /* author[s]    */ array("Leon Atkinson", "Zeev Suraski"),
+    /* auth link[s] */ array("http://zend.com/comm_person.php?id=30","http://zend.com/comm_person.php?id=12"),
+    /* image        */ "0130463469.jpg",
+    /* information  */ "Prentice Hall, Third Edition, August 2003, ISBN 0-1304-6346-9, 1104 pages",
+    /* inform. link */ "http://www.phptr.com/browse/product.asp?product_id={625DDA9E-00CB-4726-BA86-A0C960071686}",
     /* language     */ "en"
   ),
 
