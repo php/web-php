@@ -300,7 +300,8 @@ function manualFooter($title,$id="") {
 
 // "Printer optimized" header for manual pages
 function manualPrintHeader ($title = '') {
-	global $REQUEST_URI;
+	global $REQUEST_URI, $SERVER_NAME;
+    $pageurl = "http://$SERVER_NAME$REQUEST_URI";
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
@@ -311,8 +312,8 @@ function manualPrintHeader ($title = '') {
 <tr>
  <td><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
  <td>
-  This is a printer friendly version of the PHP Manual.
-  Original address of this page: <?php echo "http://$SERVER_NAME/$REQUEST_URI"; ?><br>
+  This is a printer friendly version of the PHP Manual.<br>
+  Original address of this page: <a href="<?php echo $pageurl; ?>"><?php echo $pageurl; ?></a><br>
   <small><?php echo make_link('copyright.php', 'Copyright &copy; 1997-2002 The PHP Documentation Group'); ?><br />All rights reserved.</small>
  </td>
 </tr>
