@@ -199,7 +199,7 @@ right away.</blockquote>
 	site("PalmShop","www.palmshop.de");
 	site("Tab Products","www.tab.com");
 	site("Wildtangent","www.wildtangent.com");
-	site("ZeroKnowledge.com","josb.zeroknowledge.com");
+	site("ZeroKnowledge.com","jobs.zeroknowledge.com");
 	siteEnd();
 
 /* Internet Services */
