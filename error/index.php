@@ -209,7 +209,7 @@ if ($try) { mirror_redirect($try); }
 // search with the URI the user typed in
 mirror_redirect(
     '/search.php?show=manual&lang=' . urlencode($LANG) .
-    '&pattern=' . urlencode($_SERVER['REQUEST_URI'])
+    '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
 
 // A 'good looking' 404 error message page
