@@ -50,7 +50,7 @@ commonHeader("Downloads");
 $server = $SERVER_NAME;
 ?>
 
-<h1>Latest version of PHP 4.0</h1>
+<h1>Latest version of PHP</h1>
 
 <p>
 Before you download, make sure you're using a mirror close to you. You can
