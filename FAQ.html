@@ -91,7 +91,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#7.9">7.10. How am I supposed to mix XML and PHP? It complains about my &lt;?xml&gt; tags!</a></li>
         <li><a href="#7.10">7.10. How can I use PHP with FrontPage or Dreamweaver or some other HTML editor that insists on moving my code around?</a></li>
         <li><a href="#7.11">7.11. Where can I find a complete list of pre-set variables available to me, and why are these not documented in the PHP documentation?</a></li>
-        <li><a href="#7.12">7.12. Why do I get an error that looks something like this: "Warning: 0 is not a MySQL result index in file on line 8"?</a></li>
+        <li><a href="#7.12">7.12. Why do I get an error that looks something like this: "Warning: 0 is not a MySQL result index in &lt;file&gt; on line &lt;x&gt;" or "Warning: Supplied argument is not a valid MySQL result resource in &lt;file&gt; on line &lt;x&gt;?</a></li>
         <li><a href="#7.13">7.13. I'm trying to use an &lt;input type="image"&gt; tag, but the $foo.x and $foo.y variables aren't available. Where are they?</a></li>
         <li><a href="#7.14">7.14. How do I get all the results from a SELECT MULTIPLE HTML tag? </a></li>
     </ul>
@@ -1097,9 +1097,10 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
   </dd>
 
   <dt><b>
-    <a name="7.12">7.12.</a> Why do I always get an error that looks something like this:<br>
-<tt>Warning:  0 is not a MySQL result index in file on line 8</tt><br>
-    What am I doing wrong?
+    <a name="7.12">7.12.</a>Why do I get an error that looks something like this:
+<B><tt>Warning: 0 is not a MySQL result index in &lt;file&gt; on line &lt;x&gt;</tt></B> or 
+<B><tt>Warning: Supplied argument is not a valid MySQL result resource in &lt;file&gt; on line &lt;x&gt;</tt></B>?  
+What am I doing wrong?
   </b></dt>
   <dd>
    You are trying to use a result identifier that is 0.  The 0 indicates that your query failed
