@@ -6,8 +6,8 @@ commonHeader("Thanks");
 <h1>Thanks</h1>
 
 <p>
-<?php print_link("http://chek.com/", "Chek.com"); ?> provides the server and 
-bandwidth that run the main www.php.net mirror site.
+<?php print_link("http://chek.com/", "Chek.com"); ?> provides the servers and 
+bandwidth that run the main www.php.net mirror site and other services.
 </p>
 
 <p>
@@ -17,7 +17,7 @@ DNS services for the php.* domains.
 
 <p>
 <?php print_link("http://www.pair.com/", "pair Networks"); ?> provides
-the server and bandwidth for CVS and mailing list services.
+the servers and bandwidth for CVS and mailing list services.
 </p>
 
 <p>
