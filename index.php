@@ -1,14 +1,9 @@
-<?
-if (isset($SERVER_NAME) && $SERVER_NAME=="www.php3.net") {
-        Header("Location: http://www.php.net/");
-        exit;
-}
-Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
+<?php
+header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 require("shared.inc");
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-
 <h3>Patch Level 1 released for PHP 4.0.4</h3>
 
 Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
@@ -90,5 +85,3 @@ official <a href="license.html">license</a>.
 
 <?
 commonFooter();
-?>
-<!-- comment: 15-Jun-1999 16:35 EDT -->
