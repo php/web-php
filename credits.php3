@@ -27,7 +27,7 @@ function makeMail($mail) {
 <hr noshade width="80%" size=1>
 
 <table><tr><td>
-<h3>Andi Gutmans <? makeMail("andi@php.net</A>");?></h3>
+<h3>Andi Gutmans <? makeMail("andi@php.net");?></h3>
 &
 <h3>Zeev Suraski <? makeMail("zeev@php.net");?></h3>
 
