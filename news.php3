@@ -55,6 +55,12 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Internet Publication System with GNU/Linux", "by &Aacute;lvaro del Castillo","http://www.openresources.com/magazine/publication-system-inet", "May 3, 1999");?>
+First in a series dedicated to the analysis, development and
+implementation of a very complete system for publishing data on the
+Internet using GNU/Linux software (including PHP3).
+<? endEntry(); ?>
+
 <? makeEntry( "Web mail in PHP", "by Bj&#248;rn Borud", "http://www.opensourceit.com/tutorials/990416php.html", "April 28, 1999");?>
 Building a simple web-mail interface in PHP using the IMAP extension.
 <? endEntry(); ?>
