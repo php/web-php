@@ -110,8 +110,8 @@ while ($site = key($mirror_sites)) {
 	$linux21_file = "${site}${srcdir}httpd-php-linux21.tar.gz";
 	$irix63_file = "${site}${srcdir}httpd-php-irix63.tar.gz";
 	$freebsd225_file = "${site}${srcdir}httpd-php-freebsd225.tar.gz";
-	$rpm_i386_file = "${site}${srcdir}mod_php-3.0.1-1.i386.rpm";
-	$rpm_src_file = "${site}${srcdir}mod_php-3.0.1-1.src.rpm";
+	$rpm_i386_file = "${site}${srcdir}mod_php-3.0.3-1.i386.rpm";
+	$rpm_src_file = "${site}${srcdir}mod_php-3.0.3-1.src.rpm";
 	echo "<LI>";
 	download_link($solaris251_file, "($method) Solaris 2.5.1 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
@@ -134,7 +134,7 @@ while ($site = key($mirror_sites)) {
 	download_link($rpm_i386_file, "($method) i386 RPM, dynamically loadable Apache 1.3 module");
 	echo "\n";
 	echo "<LI>";
-	download_link($rpm_src_file, "($method) Source-RPM, dynamically loadable Apache 1.3 module");
+	download_link($rpm_src_file, "($method) Source RPM, dynamically loadable Apache 1.3 module");
 	echo "\n";
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }

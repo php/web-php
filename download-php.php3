@@ -10,8 +10,8 @@ $filesizes["php-3.0.3-win32.zip"]="~ 1481KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 $filesizes["php-3.0.1-3.0.2a-patch.gz"]="~ 52KB";
 $filesizes["php-3.0.2-3.0.2a-patch.gz"]="~ 15KB";
-$filesizes["mod_php-3.0.1-1.i386.rpm"]="~ 260KB";
-$filesizes["mod_php-3.0.1-1.src.rpm"]="~ 984KB";
+$filesizes["mod_php-3.0.3-1.i386.rpm"]="~ 318KB";
+$filesizes["mod_php-3.0.3-1.src.rpm"]="~ 1304KB";
 
 function makeCap() {
 	GLOBAL $MIRRORS, $COUNTRIES;
@@ -109,6 +109,8 @@ while ($site = key($mirror_sites)) {
 	$patch_file_301 = "${site}${srcdir}php-3.0.1-patch.gz";
 	$patch_file_302 = "${site}${srcdir}php-3.0.1-3.0.2a-patch.gz";
 	$patch_file_302a = "${site}${srcdir}php-3.0.2-3.0.2a-patch.gz";
+	$i386_rpm = "${site}${srcdir}mod_php-3.0.3-1.i386.rpm";
+	$src_rpm = "${site}${srcdir}mod_php-3.0.3-1.src.rpm";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
 		download_link("${site}/php3latest.zip","Latest patched Windows version");
@@ -129,6 +131,10 @@ while ($site = key($mirror_sites)) {
 		echo "<LI>";
 		download_link($win32_zfile, "($method) $win32_current Win32 binary");
 		echo "\n";
+		echo "<LI>";
+		download_link($src_rpm, "($method) PHP $current source RPM");
+		echo "\n";
+		echo "<LI>";
 	}
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }
