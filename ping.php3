@@ -1,7 +1,18 @@
 <?
 function local_ping($ip) {
 	global $SERVER_NAME;
-	$fp=popen("/usr/sbin/ping -s -n $ip 32 5","r");
+
+	echo file_exists("/bin/ping");
+	echo "<br>\n";
+	echo file_exists("/usr/sbin/ping");
+	echo "<br>\n";
+	if(file_exists("/bin/ping")) { $ping="/bin/ping"; }
+	elseif(file_exists("/usr/sbin/ping")) { $ping="/usr/sbin/ping"; }
+	elseif(file_exists("/usr/bin/ping")) { $ping="/usr/bin/ping"; }
+	elseif(file_exists("/usr/local/bin/ping")) { $ping="/usr/local/bin/ping"; }
+	else { $ping="ping"; }
+	echo $ping;
+	$fp=popen("$ping -s -n $ip 32 5","r");
 	$i=0;
 	while(!feof($fp)) {
 		$lines[]=fgets($fp,256);

@@ -79,6 +79,7 @@
 	/* Large ISP's */
 	site("Netvision","www.netvision.net.il");
 	site("Italia Online","www.iol.it");
+	site("XOOM Inc.","xoom.com");
 
 	echo "<br></td><td valign=top>\n";
 	/* Computer Software */
@@ -112,7 +113,7 @@
 
 	echo "</tr><tr><td valign=top>\n";
 	/* Service Industry */
-	site("SuperCuts","www.supercuts.com");
+	site("Restoration Hardware","www.restorationhardware.com");
 
 	echo "<br></td><td valign=top>\n";
 	/* Not-for-Profit */
@@ -123,6 +124,20 @@
 	site("Internet Weather Report","www.internetweather.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
+	site("ClearInk Corporation","www.clearink.com");
+
+	echo "</tr><tr>\n";
+	title("Financial Industry");
+	title("&nbsp;");
+	title("&nbsp;");
+
+	echo "</tr><tr><td valign=top>\n";
+	/* Financial Industry */
+	site("E*Trade","www.etrade.com");
+
+	echo "<br></td><td valign=top>\n";
+
+	echo "<br></td><td valign=top>\n";
 
 	echo "</td></tr></table></center>\n";
 ?>
