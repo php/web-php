@@ -150,6 +150,8 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php", "php4_logo.gif", "PHP 4"); ?>
+
 <h1> PHP 4.3.5 released!</h1>
 <p>
  <span class="newsdate">[26-Mar-2004]</span>
@@ -160,7 +162,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <p>
-This release resolves over a hundred various bugs and problems with previous versions.
+ This release resolves over a hundred various bugs and problems with previous versions.
  For a full list of changes in PHP 4.3.5, see the <a href="/ChangeLog-4.php#4.3.5">ChangeLog</a>.
 </p>
 
