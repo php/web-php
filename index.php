@@ -308,8 +308,9 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
  <span class="newsdate">[29-Jun-2003]</span>
- The PHP development community is proud to announce the release of PHP 5 Beta 1.  Both source packages,
- and a Windows build are available in the <a href="/downloads.php">Downloads Section</a>.  A list of changes 
+ The PHP development community is proud to announce the release of PHP 5
+ Beta 1. Both source packages, and a Windows build are available in the
+ <a href="/downloads.php">Downloads Section</a>. A list of changes 
  can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
 </p>
 <p>
@@ -365,15 +366,9 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[24-Jun-2003]</span>
  The traditional International PHP Conference 2003 will be taking place from
- 2nd November to 5th November in Frankfurt (FFM).  The Call for Papers has
- been issued, so if you have an interesting talk, the organizers would
- love to hear about it!
- You can expect a gathering of PHP experts and core developers and to focus on PHP 5
- as the main topic for the conference.
-</p>
-<p>
- You can find the CfP <a href="http://www.phpconference.de/2003/cfp_en.php">on
- the website</a>. The deadline is 14th July, 2003.
+ 2nd November to 5th November in Frankfurt (FFM). You can expect a gathering
+ of PHP experts and core developers and to focus on PHP 5 as the main topic
+ for the conference.
 </p>
 <p>
  The conference is also featuring an <strong>OpenSource Exhibition</strong>
@@ -388,7 +383,7 @@ commonHeader("Hypertext Preprocessor");
  The PHP developers are proud to announce the immediate availability of
  <a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
  and is a <strong>strongly</strong> recommended update for all users of PHP.
- Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
+ Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.2">NEWS</a> file.
 </p>
 
 <hr />
