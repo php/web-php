@@ -1,10 +1,7 @@
 <?php
 include_once "prepend.inc";
-include_once "ip-to-country.inc";
 commonHeader("Sitemap");
 ?>
-
-<!-- <?php echo $_COOKIE["COUNTRY"]; ?> -->
 
 <h1>PHP.net Sitemap</h1>
 
