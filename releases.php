@@ -321,6 +321,20 @@ site_header("Releases");
  </li>
 </ul>
 
+<a name="4.1.0"></a>
+<h2>4.1.0</h2>
+
+<ul>
+ <li>Released: 10 Dec 2001</li>
+ <li>Announcement: <a href="/release_4_1_0.php">English</a>, <a href="/release_4_1_0_fr.php">French</a></li>
+ <li><a href="/ChangeLog-4.php#4.1.0">ChangeLog</a></li>
+ <li>
+  Download:
+  <a href="http://museum.php.net/php4/php-4.1.0.tar.gz">Source (tar.gz)</a>,
+  <a href="http://museum.php.net/win32/php-4.1.0-Win32.zip">Windows binary</a>,
+ </li>
+</ul>
+
 <a name="4.0.6"></a>
 <h2>4.0.6</h2>
 
