@@ -149,14 +149,15 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP awarded Programming Language of 2004</h1>
 
 <p>
-PHP has been awarded the <a href="http://www.tiobe.com/tpci.htm">Programming
-Language of 2004</a>, according to the TIOBE Programming Community Index.
-This index uses information collected from the popular search engines, and
-are based on the world-wide availability of skilled engineers, courses and
-third party vendors.
+ <span class="newsdate">[05-Jan-2005]</span>
+ PHP has been awarded the <a href="http://www.tiobe.com/tpci.htm">Programming
+ Language of 2004</a>, according to the TIOBE Programming Community Index.
+ This index uses information collected from the popular search engines, and
+ are based on the world-wide availability of skilled engineers, courses and
+ third party vendors.
 </p>
 <p>
-Congratulations to us all!
+ Congratulations to us all!
 </p>
 
 <hr />
