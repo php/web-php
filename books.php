@@ -49,7 +49,7 @@ function showBook($one_book) {
 
   echo '<tr valign="top">' . "\n";
   echo "<td>\n";
-  print_link ($title_link, make_image ("books/".$image, $img_title, false, false, false, 0) );
+  print_link ($title_link, make_image ("books/$image", $img_title));
   echo "<br>\n</td><td><p>\n";
   echo "$title\nby ";
   echo $author;
