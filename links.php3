@@ -31,7 +31,7 @@ There's also a searchable directory at
 PHP Tutorials<BR>
 <LI><a HREF="http://www.phpbuilder.com/">PHPBuilder.Com</a><BR>
 A bunch of helpful PHP resources available here<BR>
-<LI><a HREF="http://www.devshed.com/resource/advanced/php3.phtml">PHP3 resources at DevShed</a><BR>
+<LI><a HREF="http://www.devshed.com/Server_Side/PHP/">PHP3 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
 <LI><A HREF="http://php.codebase.org/">PHP.CodeBase.Org</A><BR>
 A nice all-around support site<BR>
