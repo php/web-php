@@ -156,7 +156,7 @@ commonHeader("Hypertext Preprocessor");
  can submit a paper <a href="http://apachecon.com/html/login.html">here</a>.
 </p>
 
-<hr/>
+<hr />
 
 <?php news_image("http://phpsec.org/", "phpsc-logo.gif", "PHPSC Logo"); ?>
 
