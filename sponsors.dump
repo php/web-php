@@ -20,6 +20,6 @@ INSERT INTO sponsor VALUES ('www.php.net','<a href="http://BestHost.net/"><img s
 INSERT INTO sponsor VALUES ('www.ca.php.net','<a href="http://www.lerdorf.on.ca/">Site hosted by Lerdorf Consultants Inc.</a>');
 INSERT INTO sponsor VALUES ('il.php.net','<a href="http://www.netvision.net.il/">Site hosted by Netvision LTD</a>');
 INSERT INTO sponsor VALUES ('php.netvision.net.il','<a href="http://www.netvision.net.il/">Site hosted by Netvision LTD</a>');
-INSERT INTO sponsor VALUES ('php.technion.ac.il','<a href="http://www.technion.ac.il/">Sites hosted by the Technion, Israel Institute of Technology</a>');
-INSERT INTO sponsor VALUES ('machba.il.php.net','<a href="http://www.technion.ac.il/">Sites hosted by the Technion, Israel Institute of Technology</a>');
+INSERT INTO sponsor VALUES ('php.technion.ac.il','<a href="http://www.technion.ac.il/">Site hosted by the Technion, Israel Institute of Technology</a>');
+INSERT INTO sponsor VALUES ('machba.il.php.net','<a href="http://www.technion.ac.il/">Site hosted by the Technion, Israel Institute of Technology</a>');
 
