@@ -131,6 +131,7 @@ right away.</blockquote>
 /* Internet Services */
 	title("Internet Services");
 	siteStart();
+	site("All 4 One","www.all4one.com");
 	site("easyDNS","www.easydns.com");
 	site("InfoMak","www.infomak.com");
 	site("My URL's", "murl.com");
