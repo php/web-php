@@ -39,7 +39,7 @@
 
 	echo "</tr><tr>\n";
 	title("Telecommunications");
-	title("Travel");
+	title("Travel & Tourism");
 	title("Religious");
 
 	echo "</tr><tr><td align=top>\n";
@@ -47,11 +47,16 @@
 	/* Telecommunications */
 	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
+	site("Southwestern Bell","WWW.SBWireless.COM");
 
 	echo "<br></td><td align=top>\n";
 	/* Travel */
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("Texas Highways","WWW.TexasHighways.COM");
+	site("Texas Weekender","WWW.TexasWeekender.COM");
+	site("Whistler Networks","www.whistler.net");
+	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 
 	echo "<br></td><td align=top>\n";
 	/* Religious */
@@ -60,7 +65,7 @@
 
 	echo "</tr><tr>\n";
 	title("Newspapers & Magazines");
-	title("Recreation");
+	title("Large ISP's");
 	title("Computer Software");
 
 	echo "</tr><tr><td align=top>\n";
@@ -71,8 +76,6 @@
 
 	echo "<br></td><td align=top>\n";
 	/* Recreation */
-	site("Whistler Networks","www.whistler.net");
-	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 
 	echo "<br></td><td align=top>\n";
 	/* Computer Software */
@@ -97,6 +100,7 @@
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
 	site("The Psychology Place","www.psychplace.com");
+	site("NativeWeb","www.nativeweb.org");
 
 	echo "</tr><tr>\n";
 	title("Service Industry");
