@@ -1,4 +1,10 @@
 <?
+/*
+You need to grab http://www.php.net/Mirrors-htdig.tgz and follow the
+directions in there if you want to run the search engine on your
+mirror (or emulate it on your own website).
+*/
+
 function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	global $FONTFACE;
 	if ($page>1) {
