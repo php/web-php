@@ -212,6 +212,7 @@ right away.</blockquote>
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("Datastream","www.datastream.it");
+	site("ForeverNET","www.forevernet.de");
 	site("Italia Online","www.iol.it");
 	site("Kieser.Net","www.kieser.net");
 	site("Nederland.Net","www.nederland.net");
