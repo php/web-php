@@ -37,13 +37,14 @@ about more PHP-related books, tell us about them!
 the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
 <a href="http://www.zend.com/zend/optimizer.php">free download</a>.
 
-<h3>New usage stats for November available</h3>
+<h3>New usage stats for March available</h3>
 <p>
 <a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
-<a href="http://www.netcraft.com/">Netcraft</a> and <a href="http://www.e-softinc.com/">E-Soft</a>
-have published the November results for their Web Server surveys - both of which
-show an impressive jump for PHP.  As expected, PHP has passed the one million barrier 
-on Netcraft's survey!  Check out the <a href="usage.php3">usage page</a>.
+<a href="http://www.netcraft.com/">Netcraft</a> and <a
+href="http://www.securityspace.com/s_survey/">E-Soft</a> have
+published the March results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the <a
+href="usage.php3">usage page</a>.
 <br clear="all">
 
 <h3>What is PHP?</h3>
