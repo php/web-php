@@ -5,11 +5,17 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		exit;
 }
 
+	echo "<!--$version-->\n";
+
 	$version = (int) $version;
+
+	echo "<!--$version-->\n";
 
 	if ($version != 4 and $version != 3) {
 		$version = 0;
 	}
+
+	echo "<!--$version-->\n";
 
 	function mydate($str) {
 		$year = substr($str,0,4);
@@ -64,21 +70,27 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		$bug_type['all'][$row[1]]++;
 		if($row[7]=="Open") {
 			$bug_type['open'][$row[1]]++;
+			$bug_type['open']['all']++;
 		}
 		if($row[7]=="Analyzed") {
 			$bug_type['analyzed'][$row[1]]++;
+			$bug_type['analyzed']['all']++;
 		}
 		if($row[7]=="Feedback") {
 			$bug_type['feedback'][$row[1]]++;
+			$bug_type['feedback']['all']++;
 		}
 		if($row[7]=="Suspended") {
 			$bug_type['suspended'][$row[1]]++;
+			$bug_type['suspended']['all']++;
 		}
 		if($row[7]=="Duplicate") {
 			$bug_type['duplicate'][$row[1]]++;
+			$bug_type['duplicate']['all']++;
 		}
 		if($row[7]=="Assigned") {
 			$bug_type['assigned'][$row[1]]++;
+			$bug_type['assigned']['all']++;
 		}
 		$email[$row[2]]++;
 		$php_version[$row[5]]++;
@@ -86,7 +98,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		$status[$row[7]]++;
 		if($row[7]=="Closed") {
 			$bug_type['closed'][$row[1]]++;
-			$time_to_close[] = mydate($row[10]) - mydate($row[9]);
+			if (mydate($row[10]) > mydate($row[9])) {
+				$time_to_close[] = mydate($row[10]) - mydate($row[9]);
+			}
 			$closed_by[$row[11]]++;
 		}
 		$total++;
@@ -101,13 +115,17 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 			else {
 				$page = "bugs-php3.php";
 			}
-			return '<A href="/' . $page . '?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
+			return '<A href="/' . $page . '?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
 		}
 	}
 
 	mysql_freeresult($result);
 	echo "<table>\n";
+
 	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th><th>Feedback</th></tr>\n";
+
+	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
+
 	while(list($type,$value)=each($bug_type['all'])) {
 		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
 	}
