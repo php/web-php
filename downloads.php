@@ -51,6 +51,8 @@ $server = $SERVER_NAME;
 <h1>Older Versions of PHP</h1>
 
 <ul>
+  <li><?php download_link("php-4.0.4pl1.tar.gz", "PHP 4.0.4pl1"); ?> Source Code</li>
+  <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> Windows Binary</li>
   <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18"); ?> Source Code</li>
   <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17"); ?> Windows Binary</li>
   <!-- <li><a href="download-php3.php">PHP 3.0</a> Source code and Win32 binaries  !-->
