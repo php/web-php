@@ -192,7 +192,10 @@ free scripts, tutorials and many more<br></li>
 German PHP resource (especially for newbies)<br></li>
 
 <li><a href="http://develnet.org/">develnet.org</a><br>
-Some german tutorials about PHP<br></li>
+Some German tutorials about PHP<br></li>
+
+<li><a href="http://www.selfphp4.de/">SelfPHP</a><br>
+German function reference for PHP like SelfHTML for HTML.<br></li>
 
 </ul></li>
 <li><b>French</b>
