@@ -156,8 +156,8 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[02-Apr-2004]</span>
 In the spirit of release early, release often here is the first and hopefully the final
-<a href="http://qa.php.net/">release candidate of PHP 4.3.6</a>. This releases addresses
-2 major bugs introduced in the 4.3.5 release. One of these bugs causes problems when 
+<a href="http://qa.php.net/">release candidate of PHP 4.3.6</a>. This release addresses
+2 major bugs introduced in the 4.3.5 release. One of these bugs caused problems when 
 loading dynamic extensions on Windows and thread-safe (ZTS) builds and the other involves
 incorrect handling of daylight savings time. A few other minor bugs were fixed as well.
 </p>
