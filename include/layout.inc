@@ -427,7 +427,7 @@ function display_event($event,$include_date=1)
   }
 ?>
  </td></tr>
- <tr bgcolor="#eeeeee"><td><?php echo $event['ldesc']?></td></tr>
+ <tr bgcolor="#eeeeee"><td><?php echo preg_replace("/\r?\n\r?\n/","<br /><br />",trim($event['ldesc'])); if ($event['url']) {?><br /><br /><b>URL:</b> <?php echo '<a href="',htmlentities($event['url']),'">',htmlentities($event['url']),'</a>'; }?></td></tr>
 </table>
 <?php
 }
