@@ -175,9 +175,9 @@ function manualGetUserNotes($title, $id)
 #		$host = '127.0.0.1';
 		$user = 'nobody';
 		$pass = '';
-		$db_id = mysql_connect($host, $user, $pass);
+		$db_id = @mysql_connect($host, $user, $pass);
 		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY id";
-		$result_id = mysql_db_query("php3", $query, $db_id);
+		if ($db_id) $result_id = mysql_db_query("php3", $query, $db_id);
 		if ($result_id && mysql_num_rows($result_id) > 0) {
 			while ($row = mysql_fetch_array($result_id)) {
 				$notes[] = $row;
@@ -225,9 +225,9 @@ function manualLastModified($title, $id) {
         $host = 'localhost';
         $user = 'nobody';
         $pass = '';
-        $db_id = mysql_connect($host, $user, $pass);
+        $db_id = @mysql_connect($host, $user, $pass);
         $query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY ts DESC limit 1";
-        $result_id = mysql_db_query("php3", $query, $db_id);
+        if ($db_id) $result_id = @mysql_db_query("php3", $query, $db_id);
     } else {
         $result_id = 0;
     }
