@@ -206,7 +206,7 @@ modules. The full license comes complete with source codes in PHP so advanced de
 can get &quot;under the hood&quot; with unlimited customization capabilities. 
 <? endEntry();?>
 
-<? makeEntry("Bare Bones Bulletin Board (BBBB)","amber.he.net/~dsoft/bbbb/","Stephen Benjamin" ,"steve.benjamin@altavista.net"); ?>
+<? makeEntry("Bare Bones Bulletin Board (BBBB)","amber.he.net/~dsoft/bbbb/","Michael Kablitz" ,"mkab@fontane.net.eu.org"); ?>
 Another message forum implementation.  Multiple threading levels, no cookies, users may delete own postings, etc.
 <? endEntry();?>
 
