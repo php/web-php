@@ -182,7 +182,7 @@ For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">
  <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.566&amp;r2=1.1247.2.605">NEWS</a> file.
 </p>
 
-<br />
+<hr />
 
 <h1>Spanish PHP Mailing List Now at PHP.net</h1>
 <p>
