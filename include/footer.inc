@@ -18,7 +18,7 @@
   $sponsor["php.netvision.net.il"] = $sponsor["il.php.net"];
   $sponsor["php.technion.ac.il"] = "<a href=\"http://www.technion.ac.il/\">Site hosted by the Technion, Israel Institute of Technology</a>";
   $sponsor["machba.il.php.net"] = $sponsor["php.technion.ac.il"];
-  $sponsor["uk.php.net"] = "<a href=\"http://www.netcom.co.uk/\">Site hosted by Netcom Communications Ltd.</a>";
+  $sponsor["php.omnipotent.net"] = "<a href=\"http://www.netcom.co.uk/\">Site hosted by<BR>Net Communications Ltd.</a>";
   $sponsor["no.php.net"] = '<a href="http://www.guardian.no/"><img align=right alt="Site sponsored by<br>Guardian Networks AS" src="http://www.guardian.no/pics/gnphp.gif" border=0></a>';
   $sponsor["php.guardian.no"] = $sponsor["no.php.net"];
 
