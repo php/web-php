@@ -9,13 +9,27 @@ logo (except where otherwise indicated).  Then, link it to the main PHP
 site at <B>www.php.net</B>.
 </P>
 <P>
-If you need a large, scaleable logo (Illustrator or EPS format) for t-shirts,
-product packaging, etc., then contact <A HREF="mailto:logos@php.net">logos@php.net</A>
-for licencing information.
+If you are using the PHP logo for commercial purposes (t-shirts, coffee mugs,
+product packaging, etc.), then you need to contact 
+<A HREF="mailto:logos@php.net">logos@php.net</A> for licencing information.
 </P>
 
 <CENTER>
 <TABLE BORDER=0 WIDTH=90% cellspacing=1 cellpadding=10 BGCOLOR="#F0F0F0">
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/php-med-trans-light.gif" WIDTH=95 HEIGHT=50 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>scaleable EPS
+<LI><A HREF="/logos/php-logo.eps">click here to download</A>
+<LI>email <A HREF="mailto:logos@php.net">logos@php.net</A> if you use this 
+for commercial purposes
+</UL>
+</TD>
+</TR>
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
