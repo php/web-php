@@ -215,6 +215,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Select mirror for redirection</h1>
+
+<p>
+ <span class="newsdate">[13-Aug-2003]</span>
+ The www.php.net site tries to do the best to choose close mirrors based
+ on all available data when redirecting users to mirror sites. Sometimes
+ close mirror sites are unfortunately not the fastest. This is why we have
+ added the mirror site selection possibility to <a href="/my.php">our My
+ PHP.net service</a>, which enables users to select a specific mirror
+ site for redirections.
+</p>
+
+<hr />
+
 <?php print_link("http://www.php-mag.net/", make_image("news/php-mag.gif", "PHP Magazine", "right")); ?> 
 
 <h1>PHP Magazine web site now with daily news</h1>
