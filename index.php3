@@ -7,8 +7,12 @@ commonHeader("PHP: Hypertext Preprocessor");
 
 Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
 what is new in this release. All users of earlier versions are encouraged 
-to upgrade to this version.
- 
+to upgrade to this version.  
+
+<h3>PHP in the News</h3>
+A new online newsletter/magazine has two very nice stories about PHP 
+this month.  Check out <a href="http://io.incluso.com">http://io.incluso.com</a>.
+
 <h3>What is PHP?</h3>
 
 <P>PHP 3.0 is a server-side HTML embedded scripting language and it is a
