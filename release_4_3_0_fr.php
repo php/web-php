@@ -1,11 +1,7 @@
 <?php
-/* si vous lisez ceci, ce n'est pas parceque vous avez trouvi un 
- trou de sicurit&eacute;. 
- Ce site est un site ouvert. 
- Lisez et prenez en de la graine!
- */
 header("Cache-Control: public, max-age=600");
 require_once 'prepend.inc';
+header("Content-language: fr");
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
