@@ -3,6 +3,9 @@
 /* See the end of the script for the table layout. */
 
 require("shared.inc");
+if(!strstr($MYSITE,"ca.php.net")) {
+	Header("Location: http://ca.php.net/bugs.php3");
+}
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
