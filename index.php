@@ -14,8 +14,8 @@ echo "\n<!--$MYSITE-->\n";
 May 22, 2000.  It's here, it's ready, and it has the long awaited 'Release'
 tag.  The successor of PHP 3.0 has finally been released.  At this point, everyone is
 encouraged to begin upgrading their systems to use this version.
-<a href="downloads.php">Download it now!</a>  Some more PHP 4.0 related can be found
-<a href="/version4">here</a>.
+<a href="downloads.php">Download it now!</a>  Some more PHP 4.0 related information
+can be found <a href="/version4">here</a>.
 
 <h3>PHP 3.0.16 released</h3>
 April 05, 2000. PHP 3.0.16 was released. This is mostly a bug fix release which
