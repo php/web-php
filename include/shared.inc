@@ -252,7 +252,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 function commonHeader($title) {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR, $HTDIG;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
-	global $HAVE_STYLE;
+	global $HAVE_STYLE,$HAVE_SEARCH;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	global $DISABLE_KICKOUTS;
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
