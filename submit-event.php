@@ -1,8 +1,11 @@
 <?php
 require_once 'prepend.inc';
 require_once 'posttohost.inc';
+require_once 'email-validation.inc';
 
 commonHeader("Submit an Event");
+
+$errors = array();
 
 if (isset($in)) {
   # clean up magic quotes, if they were inserted
@@ -12,7 +15,61 @@ if (isset($in)) {
     }
   }
 
-  # TODO: validate data
+  # clean and validate data
+  if (!is_emailable_address($in['email'])) {
+    $errors[] = 'You must supply a valid email address.';
+  }
+  
+  $in['sdesc'] = trim($in['sdesc']);
+  if (!$in['sdesc']) {
+    $errors[] = "You must supply a short description of the event.";
+  }
+
+  $in['ldesc'] = trim($in['ldesc']);
+  if (!$in['ldesc']) {
+    $errors[] = "You must supply a long description of the event.";
+  }
+
+  $in['url'] = trim($in['url']);
+  if ($in['url'] && !preg_match('/^\w+:/',$in['url'])) {
+    $errors[] = "The URL you supplied was incomplete.";
+  }
+
+  if (!$in['country']) {
+    $errors[] = 'You must specify a country for the event.';
+  }
+
+  if (!$in['category']) {
+    $errors[] = 'You must specify a category for the event.';
+  }
+
+  if (!checkdate($in['smonth'], $in['sday'], $in['syear'])) {
+    $errors[] = "You must specify a valid start date.";
+  }
+  else {
+    $sdate = mktime(0,0,1,$in['smonth'], $in['sday'], $in['syear']);
+    if ($sdate < time()) {
+      $errors[] = "You must specify a start date that is in the future.";
+    }
+  }
+
+  if ($in['type'] == 'multi' && !checkdate($in['emonth'], $in['eday'], $in['eyear'])) {
+    $errors[] = "You must specify a valid end date for a multi-day event.";
+  }
+  elseif ($in['type'] == 'multi' && checkdate($in['smonth'], $in['sday'], $in['syear'])) {
+    $sdate = mktime(0,0,1,$in['smonth'], $in['sday'], $in['syear']);
+    $edate = mktime(0,0,1,$in['emonth'], $in['eday'], $in['eyear']);
+    if ($edate < time()) {
+      $errors[] = "You must specify an end date that is in the future.";
+    }
+    elseif ($edate < $sdate) {
+      $errors[] = "You must specify an end date that is after the start date.";
+    }
+  }
+
+  if ($in['type'] == 'recur' && !($recur && $recur_day)) {
+    $errors[] = "You must specify a valid day of the month for a recurring event.";
+  }
 
   if (0 && preg_match("/submit/i", $action)) {
     # submit to master.php.net
@@ -46,7 +103,7 @@ for ($i = 0; $i < 7; $i++) {
 }
 
 for ($i = 0; $i < 12; $i++) {
-  $months[$i] = strftime('%B',mktime(12,0,0,$i+1,1,2001));
+  $months[$i+1] = strftime('%B',mktime(12,0,0,$i+1,1,2001));
 }
 
 $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
@@ -60,17 +117,17 @@ if (isset($in)) {
  <tr>
   <th>Start Date</th>
   <td>
-   <select name="in[smonth]"><?php display_options($months,$in['smonth'])?></select>
+   <select name="in[smonth]"><option></option><?php display_options($months,$in['smonth'])?></select>
    <input type="text" name="in[sday]" size="2" maxlength="2" value="<?php echo htmlentities($in['sday'])?>" />
    <input type="text" name="in[syear]" size="4" maxlength="4" value="<?php echo $in['syear'] ? htmlentities($in['syear']) : date("Y")?>" />
    <input type="radio" id="single" name="in[type]" value="single"<?php if ($in['type'] == 'single' || !$in['type']) echo ' checked="checked"';?> />
-   <label for="single">Just one day (no end-date required)</label>
+   <label for="single">One day (no end-date required)</label>
   </td>
  </tr>
  <tr>
   <th>End Date</th>
   <td>
-   <select name="in[emonth]"><?php display_options($months,$in['emonth'])?></select>
+   <select name="in[emonth]"><option></option><?php display_options($months,$in['emonth'])?></select>
    <input type="text" name="in[eday]" size="2" maxlength="2" value="<?php echo htmlentities($in['eday'])?>" />
    <input type="text" name="in[eyear]" size="4" maxlength="4" value="<?php echo $in['eyear'] ? htmlentities($in['eyear']) : date("Y")?>" />
    <input type="radio" id="multi" name="in[type]" value="multi"<?php if ($in['type'] == 'multi') echo ' checked="checked"';?> />
@@ -80,8 +137,8 @@ if (isset($in)) {
  <tr>
   <th>OR<br>Recurring</th>
   <td>
-   <select name="in[recur]"><?php display_options($re,$in['recur'])?></select>
-   <select name="in[recur_day]"><?php display_options($days,$in['recur_day'])?></select>
+   <select name="in[recur]"><option></option><?php display_options($re,$in['recur'])?></select>
+   <select name="in[recur_day]"><option></option><?php display_options($days,$in['recur_day'])?></select>
    <input type="radio" id="recur" name="in[type]" value="recur"<?php if ($in['type'] == 'recur') echo ' checked="checked"';?> />
    <label for="recur">Recurring (every month)</label>
   </td>
@@ -115,12 +172,18 @@ if (isset($in)) {
   </td>
  </tr>
  <tr>
-  <th>URL</th>
-  <td><input type="text" name="in[url]" size="60" maxlength="128" value="<?php echo htmlentities($in['url'])?>" /></td>
+  <th>Email</th>
+  <td><input type="text" name="in[email]" size="40" maxlength="128" value="<?php echo htmlentities($in['email'])?>" /></td>
  </tr>
  <tr>
-  <th>Long<br>Description</th>
-  <td><textarea name="in[ldesc]" cols="78" rows="10" maxlength="78" wrap="virtual"><?php echo htmlentities($in['ldesc']);?></textarea></td>
+  <th>URL</th>
+  <td><input type="text" name="in[url]" size="40" maxlength="128" value="<?php echo htmlentities($in['url'])?>" /></td>
+ </tr>
+ <tr>
+  <th colspan="2" align="left">Long Description</th>
+ </tr>
+ <tr>
+  <td colspan="2"><textarea name="in[ldesc]" cols="60" rows="10" maxlength="78" wrap="virtual"><?php echo htmlentities($in['ldesc']);?></textarea></td>
  </tr>
  <tr>
   <td align="center" colspan="2">
