@@ -62,13 +62,6 @@ $formats = array(
  use does otherwise.
 </p>
 
-<p>
- <em>
-  Please note that due to some technical problems, we do not
-  distribute PDF versions of the manual right now.
- </em>
-</p>
-
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
   <td>&nbsp;</td>
