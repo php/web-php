@@ -152,3 +152,8 @@ table#cal div.event {
         padding-bottom: 2px;
         border-bottom: 1px dashed #000;
 }
+
+form.thin {
+        margin-bottom: 0px;
+		margin-top: 0px;
+}
