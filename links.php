@@ -206,6 +206,14 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li
 Brazilian PHP Portal with many links and informations<br></li>
 </ul></li>
 
+<li><b>Portuguese</b>
+<ul>
+
+<li><a href="http://www.cidadela.org/php/">Cidadela</a><br>
+The PHP section of Cidadela provides articles, tuturials,
+a help forum, and an Application Market.<br></li>
+</ul></li>
+
 <!--
 <li><b>Swedish</b>
 <ul>
