@@ -16,18 +16,20 @@
 <xsl:output
  method="html"
  indent="no"
- encoding="iso-8859-1"
+ encoding="ISO-8859-1"
 />
 
 <!-- To parse PHP projects in Freshmeat.net -->
-<!-- trying to match look of existing projects.php page -->
 <xsl:template match="/">
+  <table border="0" cellpadding="4" cellspacing="0" bgcolor="#e0e0e0">
   <xsl:apply-templates select="/search-results" />
+  </table>
 </xsl:template>
 
 <xsl:template match="/search-results">
  <!-- Loop through all the matches -->
  <xsl:for-each select="match">
+   <tr><td>
    <xsl:element name="a">
     <xsl:attribute name="href">
      <xsl:value-of select="url_homepage" />
@@ -36,14 +38,14 @@
    </xsl:element>
    <xsl:text> -- </xsl:text>
    <xsl:value-of select="desc_short" />
-   <br />
+   <br /><small>
    License: <xsl:value-of select="license" />
    <xsl:text> -- </xsl:text>
-   Updated: <i><xsl:value-of select="date_updated" /></i>
-   <br />
-   <br />
-   <xsl:value-of select="desc_full" />
-   <hr noshade="1" size="1" color="#000000" />
+   Updated: <i><xsl:value-of select="date_updated" /></i></small>
+   </td></tr><tr><td>
+   <table border="0" cellpadding="3" cellspacing="0" width="100%">
+   <tr><td bgcolor="#f0f0f0"><xsl:value-of select="desc_full" /><br /><br /></td></tr></table>
+   </td></tr>
  </xsl:for-each>
 </xsl:template>
 
