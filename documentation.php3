@@ -1,4 +1,4 @@
-<html><head><title>PHP3 Credits</title>
+<html><head><title>PHP3 Documentation</title>
 <?
   $title="Documentation Resources";
   include "include/header.inc";
