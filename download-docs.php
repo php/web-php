@@ -2,47 +2,21 @@
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA='
-<h3>FAQ</h3>
+<h3>Documentation online</h3>
 <p>
-The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
-information and those questions that seem to be on most people\'s minds.
-</p>
-
-<h3>More Information</h3>
-<p>
-The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>
-has an overview about which pages are translated to the
-different languages and in which versions of PHP the functions
-are available.<br><br>
-
-If you have license questions, see
-the <a href="/license/">License FAQ</a>
-</p>
-
-<h3>Books</h3>
-<p>
-<a href="/books.php">Books</a> are convenient resources to begin exploring 
-PHP. <a href="/books.php">The titles listed here</a> will help you to start 
-learning PHP, as well as extending your existing knowledge.
-</p>
-
-<h3>Sample Code</h3>
-<p>
-Looking for some more sample PHP scripts? Our <A
-HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
-great places to find many example scripts and useful functions, organized for 
-your searching pleasure!
+You can read the
+<a href="/docs.php">documentation online</a>
+is various languages, even in printer
+friendly HTML format.
 </p>
 ';
 
-commonHeader("Documentation");
+commonHeader("Download documentation");
 
 $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'es');
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
- ""                  => array("View Online",         "view",      false),
- "html/"             => array("View Online (plain)", "view",      false),
  "manual.txt.gz"     => array("Plain text",          "txt.gz",    true),
  "bigmanual.html.gz" => array("Single HTML",         "html.gz",   true),
  "manual.tar.gz"     => array("Many HTML files",     "tar.gz",    true),
@@ -57,7 +31,7 @@ $formats = array(
 );
 ?>
 
-<h1>PHP Manual</h1>
+<h1>Download documentation</h1>
 
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below.
@@ -69,10 +43,11 @@ here to see all the file sizes and dates</a>.
 </p>
 
 <p>
-Note that the packaged versions of the manual (tar.gz, tar.bz2 and zip)
-don't contain any directories, so all of the files will be dumped into
-your current working directory when you expand the archive unless
-the tool you use does otherwise.
+Note that the packaged HTML versions of the manual
+(tar.gz, tar.bz2 and zip) don't contain any directories,
+so all of the files will be dumped into your current working
+directory when you expand the archive unless the tool you
+use does otherwise.
 </p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
@@ -129,21 +104,6 @@ the tool you use does otherwise.
 
 <?php echo hdelim(); ?>
 
-<h1>Annotated PHP Manual</h1>
-<ul>
-<li>The <a href="http://www.php.net/manual/">Annotated PHP Manual</A> is
-    the same as the above, except there is a built-in errata/note system
-    that users all around the world can (and have!) contributed to. Of
-    all of the documentation, this will be the most current version,
-    as it is updated (and annotated) daily.</li>
-
-<li><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
-    Errata</A>. This is the collected errata from the on-line
-    errata/note system.</li>
-</ul>
-
-<?php echo hdelim(); ?>
-
 <h1>French PHP Manual</h1>
 
 <p>
@@ -151,6 +111,8 @@ The French PHP manual is also available on an external site, in differents forma
 Documentation is the official flavor, while formating and localization has 
 been worked some more (function and examples indexes, short version, search engine..). 
 Besides, those are compressed for faster download.
+<a href="http://dev.nexen.net/docs/php/chargement.html">Follow this link for
+more French downloads</a>
 </p>
 
 <p>
@@ -158,28 +120,5 @@ La documentation Fran&ccedil;aise est disponible sur un site secondaire,
 dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
 francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;es.
 </p>
-
-<p>
-<ul>
-<li><a href="http://dev.nexen.net/docs/php/annotee/">Annotated version</a></li>
-<li><a href="http://dev.nexen.net/docs/php/chargement.html">Manual downloads</a></li>
-</ul>
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>CVS Account</h1>
-<ul>
-<li><a href="/anoncvs.php">CVS instructions</a></li>
-<li><A href="/cvs-php.php">Getting a CVS account</a>. If you
-wish to help out with the development of PHP, read this.</li>
-</ul>
-
-<?php echo hdelim(); ?>
-
-<h1>Old/Unsupported Information</h1>
-<ul>
-<li><a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>.</li>
-</ul>
 
 <?php commonFooter(); ?>
