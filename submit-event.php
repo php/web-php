@@ -159,9 +159,9 @@ if ($process) {
 
 ?>
 <form action="/submit_event.php" method="post">
-<table bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="3" width="100%">
+<table border="0" cellspacing="0" cellpadding="3" class="standard">
  <tr>
-  <th>Start Date</th>
+  <th class="subr">Start Date</th>
   <td>
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
    <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'])?>" />
@@ -171,7 +171,7 @@ if ($process) {
   </td>
  </tr>
  <tr>
-  <th>End Date</th>
+  <th class="subr">End Date</th>
   <td>
    <select name="emonth"><option></option><?php display_options($months, $_POST['emonth'])?></select>
    <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'])?>" />
@@ -181,7 +181,7 @@ if ($process) {
   </td>
  </tr>
  <tr>
-  <th>OR<br />Recurring</th>
+  <th class="subr">OR Recurring</th>
   <td>
    <select name="recur"><option></option><?php display_options($re, $_POST['recur'])?></select>
    <select name="recur_day"><option></option><?php display_options($days, $_POST['recur_day'])?></select>
@@ -190,15 +190,15 @@ if ($process) {
   </td>
  </tr>
  <tr>
-  <th>Short<br />Description</th>
+  <th class="subr">Short Description</th>
   <td><input type="text" name="sdesc" value="<?php echo htmlentities($_POST['sdesc'])?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
-  <th>URL</th>
+  <th class="subr">URL</th>
   <td><input type="text" name="url" size="40" maxlength="128" value="<?php echo htmlentities($_POST['url'])?>" /></td>
  </tr>
  <tr>
-  <th>Country</th>
+  <th class="subr">Country</th>
   <td>
    <select name="country">
     <option value="">- Select a country -</option>
@@ -207,7 +207,7 @@ if ($process) {
   </td>
  </tr>
  <tr>
-  <th>Event Category</th>
+  <th class="subr">Event Category</th>
   <td>
    <select name="category">
 <?php
@@ -218,21 +218,18 @@ if ($process) {
   </td>
  </tr>
  <tr>
-  <th>Email</th>
-  <td><input type="text" name="email" size="40" maxlength="128" value="<?php echo htmlentities($_POST['email'])?>" /></td>
+  <th class="subr">Email</th>
+  <td>
+   <input type="text" name="email" size="40" maxlength="128" value="<?php echo htmlentities($_POST['email'])?>" /><br />
+   <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
+  </td>
  </tr>
  <tr>
-  <th>&nbsp;</th>
-  <td><small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small></td>
+  <th class="subr">Long Description</th>
+  <td><textarea name="ldesc" cols="60" rows="10" wrap="virtual"><?php echo htmlentities($_POST['ldesc']);?></textarea></td>
  </tr>
  <tr>
-  <th colspan="2" align="left">Long Description</th>
- </tr>
- <tr>
-  <td colspan="2"><textarea name="ldesc" cols="60" rows="10" wrap="virtual"><?php echo htmlentities($_POST['ldesc']);?></textarea></td>
- </tr>
- <tr>
-  <td align="center" colspan="2">
+  <th colspan="2">
     <input type="submit" name="action" value="Preview" />
 <?php if ($process && count($errors) == 0) {?>
     <input type="submit" name="action" value="Submit" />
