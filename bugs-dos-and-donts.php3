@@ -9,6 +9,8 @@ commonHeader("Bugs Database Dos and Don'ts");
 <li>Don't report missing functions in the documentation as a 'documentation problem', or as anything else.  We have an uptodate list of which functions are missing from the documentation, and the only reason they're missing from there is that nobody had the time to document them just yet.  Consult the PHP mailing list (<a href="mailto:php3@lists.php.net">php3@lists.php.net</a>) instead, and if you gather enough information - feel free to submit your own documentation of the function to us.
 <li>Don't group more than one issue (problem report or change request) in one problem report.  Instead, separate them into multiple problem reports.
 <li>Always check the <a href="/FAQ.php3">PHP FAQ</a> before submitting bug reports.
+<li>If PHP is crashing for you, please <a href="bugs-generating-backtrace.php3">generate a gdb backtrace</a> and submit it with your bug report.
+<li>Never submit bug reports when it is obvious that there aren't nearly enough details for us to solve it.  For example, "phpinfo() dumps core" makes a pretty useless bug report, unless you at least provide us with the gdb backtrace, the switches you've compiled PHP with, etc.
 <li>Never submit the same bug report more than once.
 </ul>
 
