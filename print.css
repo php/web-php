@@ -25,3 +25,7 @@ a, a:visited {
 a:active {
     color: #0000ff;
 }
+
+img {
+    border: 0px;
+}

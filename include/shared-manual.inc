@@ -385,10 +385,10 @@ function manual_header_print()
  <meta name="robots" content="noindex,nofollow" />
 </head>
 <body>
-<?php print_link("/", make_image('php.gif', 'PHP', 'left')); ?>
+<?php print_link("/", make_image('logos/php-med-trans-light.gif', 'PHP', 'left')); ?>
 This is a printer friendly version of the PHP Manual.<br />
 Original address of this page: <?php print_link($_SERVER['BASE_HREF']); ?><br />
-<small><?php print_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
+<small><?php print_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?> All rights reserved.</small>
 <hr class="topdivider" />
 <?php
 }
