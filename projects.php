@@ -233,10 +233,11 @@ phpAds is a free banner management system for PHP. Currently it can
 </UL>
 <? endEntry();?>
 
-<? makeEntry("The Diary","keilor.cs.umass.edu/diary/index.php3","Agustin Schapira" ,"schapira@cs.umass.edu"); ?>
-The Diary lets you keep notebooks and write notes in them. You can add notes or browse through your notes from any 
-Web browser anywhere in the world. You can also search inside your notebooks to find
-entries that interest you. 
+<? makeEntry ("The Diary", "none.cs.umass.edu/~schapira/thediary/", "Agustin Schapira", "schapira@cs.umass.edu"); ?>
+The Diary lets you keep notebooks and write notes in them. You can add
+notes or browse through your notes from any Web browser anywhere in
+the world. You can also search inside your notebooks to find entries
+that interest you.
 <? endEntry();?>
 
 <? makeEntry("Freemed","www.freemed.org","Jeff B","jeff@univrel.pr.uconn.edu"); ?>
