@@ -29,11 +29,10 @@ commonHeader("URL Howto");
 <h1>URL Howto</h1>
 
 <p>
-We have found, that many of our users would like to access
-the information on our site very quickly, so we decided to
-implement a system, where there is even no need to write
-something inside a search box, you can type in php.net
-URLs to access pages.
+Among the many smart access methods to get to information quickly
+on the PHP site, we decided to implement a system, where there
+is even no need to write something inside a search box, you can
+use short php.net URLs to access pages directly.
 </p>
 
 <p>
@@ -104,7 +103,19 @@ the query you typed into the URL. An example of this kind
 of URL is <tt>http://php.net/search_for_this</tt>.
 </p>
 
-<h2>Get it on your site</h2>
+<h2>Even smarter tricks</h2>
+
+<p>
+We also have shortcut aliases to access some resources more quickly,
+and with a nice URL. Aliases are translated to their relevant shortcuts
+before the first step (PHP page search) mentioned above. Some examples
+of shortcut aliases: <tt>http://php.net/whatisphp</tt>,
+<tt>http://php.net/php4news</tt>. The latter is an external page alias,
+as it points to a file on the CVS server, containing information about
+changes in PHP.
+</p>
+
+<h1>Get it on your site</h1>
 
 <p>
 What enables PHP.net to have this feature is a combination of a 
@@ -122,7 +133,6 @@ Everything behind this feature is available here:
  <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
 </ul>
-
 </p>
 
 <?php commonFooter(); ?>
