@@ -27,44 +27,43 @@ On these sites you will find tutorials, articles, example scripts, PHP
 related tools, jobs, web hosting services, etc.
 </p>
 
+
 <h4>PHP Support Companies</h4>
 
 <ul>
-<li><a href="http://www.zend.com/">Zend.com</a><br>
-Zend Technologies offers many PHP related products, support,
-and many more PHP related content.</li>
-
 <li><a href="http://www.thinkphp.de/">ThinkPHP.de</a><br>
 A German and international PHP support company providing
 full PHP support (single incidents, on-call duty), software
 development, training, and performance measurements.</li>
+
+<li><a href="http://www.zend.com/">Zend.com</a><br>
+Zend Technologies offers many PHP related products, support,
+and many more PHP related content.</li>
 </ul>
 
 <h4>Professional PHP Associations</h4>
 
 <ul>
-<li><a href="http://www.php-ev.de/">PHP Verein</a><br>
-The goal of the German PHP Association, PHP Verein, is 
-to push PHP, as well as to serve as a junction for all 
-parties interested in PHP.</li>
-
 <li><a href="http://www.afup.org/">AFUP.org</a><br>
 (Association Fran&ccedil;aise des Utilisateurs de PHP) : 
 The AFUP was created to answer the growing need from
 companies to have one unique place for PHP solutions.</li>
+
+<li><a href="http://www.php-ev.de/">PHP Verein</a><br>
+The goal of the German PHP Association, PHP Verein, is 
+to push PHP, as well as to serve as a junction for all 
+parties interested in PHP.</li>
 </ul>
 
 <h4>PHP Link Catalogs</h4>
 
 <ul>
+<li><a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a><br>
+The PHP category in the Open Directory Project.</li>
+
 <li><a href="http://www.hotscripts.com/PHP/">HotScripts.com</a><br>
-PHP Books, Magazine Articles, Communities, Scripts and Programs, Softwares, Tips</li>
-
-<li><a href="http://php.resourceindex.com/">PHP Resource Index</a><br>
-Hundreds of PHP resources, categorized and searchable</li>
-
-<li><a href="http://q.webring.com/hub?ring=php">PHP Sites Webring</a><br>
-Find PHP Sites within this webring!</li>
+PHP Books, Magazine Articles, Communities, Scripts and Programs, Softwares,
+Tips</li>
 
 <li><a href="http://www.LinuxGuruz.org/">LinuxGuruz.org</a><br>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server,
@@ -73,40 +72,42 @@ HTML, PHP, MySQL ... and lots more</li>
 <li><a href="http://php.weblogs.com/">PHP Everywhere</a><br>
 Links and news about PHP and related technologies.</li>
 
-<li><a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a><br>
-The PHP category in the Open Directory Project.</li>
+<li><a href="http://php.resourceindex.com/">PHP Resource Index</a><br>
+Hundreds of PHP resources, categorized and searchable</li>
+
+<li><a href="http://q.webring.com/hub?ring=php">PHP Sites Webring</a><br>
+Find PHP Sites within this webring!</li>
 </ul>
 
 
 <h4>PHP FAQ sites</h4>
 
 <ul>
-<li><a href="http://php.faqts.com/">PHP Knowledge Base</a><br>
-A growing collection of PHP related information in a searchable
-question and answer format.</li>
 <li><a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br>
 A big faq and some links about PHP and SQL</li>
 <li><a href="http://www.dclp-faq.de/">de.comp.lang.php FAQ</a><br>
 Excellent german language FAQ about PHP</li>
+<li><a href="http://php.faqts.com/">PHP Knowledge Base</a><br>
+A growing collection of PHP related information in a searchable
+question and answer format.</li>
 </ul>
+
 
 <h4>Complex PHP Related Sites</h4>
 
 <ul>
-<li><a href="http://www.phpwizard.net/">phpWizard</a><br>
-PHP tutorials and programs</li>
-
-<li><a href="http://www.phpbuilder.com/">PHPBuilder.com</a><br>
-A bunch of helpful PHP resources available here</li>
+<li><a href="http://codewalkers.com/">Codewalkers</a><br>
+A community site dedicated to PHP developers. Includes forums, tutorials,
+and user submitted code. Home of the PHP Coding Contest.</li>
 
 <li><a href="http://www.devshed.com/Server_Side/PHP/">Developers Shed</a><br>
 A good set of articles introducing various PHP concepts</li>
 
-<li><a href="http://www.weberdev.com/">WeberDev.com</a><br>
-PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
-
 <li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl</li>
+
+<li><a href="http://www.phpbuilder.com/">PHPBuilder.com</a><br>
+A bunch of helpful PHP resources available here</li>
 
 <li><a href="http://www.devnetwork.net/">PHP Developers' network</a><br>
 The PHP Developers' Network was founded to provide the PHP Community with
@@ -114,53 +115,62 @@ a set of solid sites that work together to promote the PHP language and
 provide a large resource for the community as a whole.
 </li>
 
-<li><a href="http://codewalkers.com/">Codewalkers</a><br>
-A community site dedicated to PHP developers. Includes forums, tutorials,
-and user submitted code. Home of the PHP Coding Contest.</li>
-
 <li><a href="http://www.phpfreaks.com/">PHP Freaks</a><br>
 PHP Learning Center site.</li>
 
+<li><a href="http://www.phpwizard.net/">phpWizard</a><br>
+PHP tutorials and programs</li>
+
+<li><a href="http://www.weberdev.com/">WeberDev.com</a><br>
+PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
+
 </ul>
+
 
 <h4>PHP Scripts and Programs</h4>
 
 <ul>
+<li><a href="http://www.evilwalrus.com/">Evil Walrus</a><br>
+A growing list of PHP scripts</li>
+
+<li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
+An exhaustive PHP scripts collection, with more 400 useful functions (English
+and French).</li>
+
 <li><a href="http://www.itworks.demon.co.uk/phpeditors.htm">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs</li>
 
 <li><a href="http://php.foundries.sourceforge.net/">PHP Foundry at SourceForge</a><br>
 A great number of open source PHP projects actively developed</li>
 
-<li><a href="http://www.phpclasses.org/">The PHP Classes Repository</a><br>
-Useful PHP classes in a categorized listing</li>
-
 <li><a href="http://px.sklar.com/">PX - PHP Code Exchange</a><br>
 The PHP Code Exchange is a great place to start. Here you'll find many
 example scripts and useful functions, organized for easy finding. Includes
 a search function</li>
 
-<li><a href="http://www.evilwalrus.com/">Evil Walrus</a><br>
-A growing list of PHP scripts</li>
-
-<li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
-An exhaustive PHP scripts collection, with more 400 useful functions (English and French).</li>
+<li><a href="http://www.phpclasses.org/">The PHP Classes Repository</a><br>
+Useful PHP classes in a categorized listing</li>
 
 </ul>
+
 
 <h4>PHP Magazines</h4>
 
 <ul>
-<li><a href="http://phpj.com/">PHP Journal</a><br>
-A quarterly journal devoted to the PHP programming language.</li>
-
 <li><a href="http://www.phparch.com/">php|architect</a><br>
 The first monthly English magazine about PHP, distributed in PDF format</li>
 
-<li><a href="http://www.phpmag.de/">PHPmag</a><br>
+<li><a href="http://phpj.com/">PHP Journal</a><br>
+A quarterly journal devoted to the PHP programming language.</li>
+
+<li><a href="http://www.phpmag.de/">PHP Magazin</a><br>
 The Software &amp; Support Verlag, based in Frankfurt,
 Germany, has now published a magazine on PHP as a 
 tribute to the steadily growing German PHP community (in German).</li>
+
+<li><a href="http://www.php-mag.net/">PHP Magazine</a><br>
+An English edition of the magazine mentioned above. The PHP Magazine
+is published bimonthly and aimed at professional PHP users.</li>
 
 <li><a href="http://www.zephpmag.com/">ZePHPmag</a><br>
 ZePHPmag is a webzine (exclusively online distribution 
@@ -171,38 +181,49 @@ newspaper), dedicated to PHP and its technologies (in French).</li>
 <h4>PHP Tutorials</h4>
 
 <ul>
-<li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&ob=3">Tutorialfind</a><br>
-A growing list of PHP tutorials at TutorialFind</li>
-
-<li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br>
-Web Programming Resource - PHP Tutorials</li>
+<li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
+Introductory tutorial</li>
 
 <li><a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br>
 Lots of tutorials/instructions related to Apache, PHP and MySQL</li>
 
-<li><a href="http://www.melonfire.com/community/columns/trog/archives.php?category=PHP">Melonfire</a><br>
-A series of PHP tutorials for novices</li>
-
 <li><a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br>
 A collection of external links to PHP tutorials</li>
+
+<li><a href="http://www.melonfire.com/community/columns/trog/archives.php?category=PHP">Melonfire</a><br>
+A series of PHP tutorials for novices</li>
 
 <li><a href="http://www.onlamp.com/php/">ONLamp</a><br>
 Great collection of tutorials from O'Reilly</li>
 
-<li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br>
-The PHP section on the famous Webmonkey tutorial site</li>
-
 <li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a><br>
 Site with information on a PHP course at a Dutch college.</li>
 
-<li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
-Introductory tutorial</li>
+<li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br>
+Web Programming Resource - PHP Tutorials</li>
+
+<li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&ob=3">Tutorialfind</a><br>
+A growing list of PHP tutorials at TutorialFind</li>
+
+<li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br>
+The PHP section on the famous Webmonkey tutorial site</li>
 
 </ul>
+
 
 <h4>PHP Setup tools for Windows</h4>
 
 <ul>
+<li><a href="http://www.analogx.com/contents/download/network/phpconf.htm">AnalogX PHPConfig</a><br>
+A graphical frontend to PHP's php.ini file with support for all the standard
+PHP functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
+</li>
+
+<li><a href="http://www.easyphp.org/">EasyPHP</a><br>
+Windows wizard installs the latest PHP, Apache and MySQL for Windows. Fast and
+efficient.
+</li>
+
 <li><a href="http://www.php4win.com/">php4win</a><br>
 The latest PHP packages and useful tools for Windows</li>
 
@@ -213,32 +234,42 @@ Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl</li>
 Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin, Perl, and
 some special modules</li>
 
-<li><a href="http://www.analogx.com/contents/download/network/phpconf.htm">AnalogX PHPConfig</a><br>
-A graphical frontend to PHP's php.ini file with support for all the standard PHP
-functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
-</li>
-
-<li><a href="http://www.easyphp.org/">EasyPHP</a><br>
-Windows wizard installs the latest PHP, Apache and MySQL for Windows. Fast and
-efficient.
-</li>
-
 </ul>
+
+
+<h4>Companies that provide commercial tools for PHP</h4>
+
+<ul>
+<li><a href="http://www.ioncube.com/">ionCube</a><br>
+ionCube produces PHP development and end-user tools, including the popular
+free PHP Accelerator and affordable encoding solutions for code protection.
+</li>
+
+<li><a href="http://www.nusphere.com/products/index.htm">NuSphere</a><br>
+NuSphere delivers products and services that allow companies to deploy
+reliable, cost-effective database-driven Internet applications and sites.</li>
+
+<li><a href="http://www.zend.com/store/">Zend Technologies, Inc.</a><br>
+Zend Technologies, Inc. provides tools to Devel, Protect and Scale your
+PHP Applications.</li>
+</ul>
+
 
 <h4>PHP Accelerators</h4>
 
 <ul>
-<li><a href="http://www.zend.com/store/products/zend-accelerator.php">Zend Accelerator</a><br>
-Commercial accelerator available from Zend Technologies, Inc.</li>
-
-<li><a href="http://php-accelerator.co.uk/">PHP Accelerator</a><br>
-A free accelerator available from Nick Lindridge.</li>
-
-<li><a href="http://apc.communityconnect.com/">APC</a><br>
-Alternative PHP Cache, Free open source accelerator available from Community Connect.</li>
-
 <li><a href="http://afterburner.bware.it/">After Burner</a><br>
 Free open source accelerator available from Bware Technologies.</li>
+
+<li><a href="http://apc.communityconnect.com/">APC</a><br>
+Alternative PHP Cache, Free open source accelerator available from Community
+Connect.</li>
+
+<li><a href="http://php-accelerator.co.uk/">ionCube PHP Accelerator</a><br>
+A free accelerator available from ionCube.</li>
+
+<li><a href="http://www.zend.com/store/products/zend-accelerator.php">Zend Accelerator</a><br>
+Commercial accelerator available from Zend Technologies, Inc.</li>
 </ul>
 
 
@@ -424,16 +455,16 @@ A Swedish PHP portal with articles, news, forums and much more</li>
 <p>Here's a list of sites with that publish PHP-related job listings:</p>
 
 <ul>
- <li><a href="http://www.schaffner.net/emp">PHP Employment Listing</a></li>
- <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
  <li><a href="http://www.dice.com/">dice.com</a></li>
  <li><a href="http://www.gnujobs.com/">gnujobs.com</a></li>
  <li><a href="http://www.hotjobs.com/">hotjobs.com</a></li>
  <li><a href="http://www.jobs.com/">Jobs.com</a></li>
- <li><a href="http://www.monster.com/">Monster.com</a></li>
- <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
  <li><a href="http://mojolin.com/">Mojolin</a></li>
+ <li><a href="http://www.monster.com/">Monster.com</a></li>
+ <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
+ <li><a href="http://www.schaffner.net/emp">PHP Employment Listing</a></li>
  <li><a href="http://www.totalfreelance.com/">totalfreelance.com</a></li>
+ <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
 </ul>
 
 <p>
@@ -453,9 +484,9 @@ Try one of the following sites:
 </p>
 
 <ul>
+  <li><a href="http://dmoz.org/Computers/Internet/Web_Design_and_Development/Hosting/">dmoz.org's web hosting index</a></li>
   <li><a href="http://www.free-php-hosting.com/">free-php-hosting.com</a></li>
   <li><a href="http://www.oinko.net/freephp/">Oinko free PHP hosting directory</a></li>
-  <li><a href="http://dmoz.org/Computers/Internet/Web_Design_and_Development/Hosting/">dmoz.org's web hosting index</a></li>
 </ul>
 
 <?php commonFooter(); ?>
