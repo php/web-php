@@ -138,7 +138,6 @@ mail("group@php.net","CVS Account Request",
     "Password:  ".crypt($password)."\n".
     "Purpose:   $purpose",
      "From: \"CVS Account Request\" <$email>");
-     );
 mail("php-dev@lists.php.net", "CVS Account Request",
 		"Full name: $fullname\n".
 		"Email:     $email\n".
