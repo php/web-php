@@ -214,13 +214,12 @@ The PHP section of Cidadela provides articles, tutorials,
 a help forum, and an Application Market.<br></li>
 </ul></li>
 
-<!--
 <li><b>Swedish</b>
 <ul>
 
 <li><a href="http://www.phpportalen.net/">phpportalen.net</a><br>
 A new Swedish PHP Portal with links and news about PHP<br></li>
-</ul></li> -->
+</ul></li>
 </ul>
 
 <?php echo hdelim(); ?>
