@@ -43,7 +43,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <p>
 <font class="newsDate">[05-May-2001]</font>
-The <?make_link("http://apachecon.com/2001/EU/#cfp","call for
+The <?echo make_link("http://apachecon.com/2001/EU/#cfp","call for
 participation")?> has gone out for ApacheCon Europe 2001, which will
 run October 15-17 in Dublin, Ireland. Have an idea for a session
 or tutorial you could present about PHP or other Apache Software
