@@ -67,29 +67,23 @@ site_header("Downloads");
 ?>
 
 <a name="v4"></a>
-<h1>PHP 4.3.10</h1>
+<h1>PHP 4.3.11</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.3.10.tar.bz2','PHP 4.3.10 (tar.bz2)'); ?> - 15 Dec 2004<br />
-  <span class="md5sum">md5: 7e56824dae9679c59a8234eb848aa542</span>
+  <?php download_link('php-4.3.11.tar.bz2','PHP 4.3.11 (tar.bz2)'); ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: fbc67d240812136a9842bc1f2a217b7a</span>
  </li>
  <li>
-  <?php download_link('php-4.3.10.tar.gz', 'PHP 4.3.10 (tar.gz)');  ?> - 15 Dec 2004<br />
-  <span class="md5sum">md5: 73f5d1f42e34efa534a09c6091b5a21e</span>
+  <?php download_link('php-4.3.11.tar.gz', 'PHP 4.3.11 (tar.gz)');  ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: 5de2ba1aababb5868d55ea43cf3bebef</span>
  </li>
 </ul>
 
-<p style="color: red">
-  <i>Note:</i> Due to an incompatibility between earlier versions of Zend
-  Optimizer and PHP 4.3.10, it's recommended to upgrade to the <a
-  href="http://zend.com/store/products/zend-optimizer.php">latest version</a>.
-</p>
-
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_10.php">release notes</a> for more information on
+ or the <a href="/release_4_3_11.php">release notes</a> for more information on
  this particular release. Daily snapshots are also available from
  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
@@ -102,19 +96,19 @@ site_header("Downloads");
 
 <ul>
  <li>
-  <?php download_link('php-4.3.10-Win32.zip', 'PHP 4.3.10 zip package'); ?> - 15 Dec 2004<br />
+  <?php download_link('php-4.3.11-Win32.zip', 'PHP 4.3.11 zip package'); ?> - 31 Mar 2005<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: 0bb30525512ea686abf22c8fe61e1bb6</span>
+  <span class="md5sum">md5: 3f2586bc27ac7eae3a5a1decf4d9b5b5</span>
  </li>
  <li>
-  <?php download_link('php-4.3.10-installer.exe', 'PHP 4.3.10 installer'); ?> - 15 Dec 2004<br />
+  <?php download_link('php-4.3.11-installer.exe', 'PHP 4.3.11 installer'); ?> - 31 Mar 2005<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 6d60129d738e16ea0b69f3fd6646bf3a</span>
+  <span class="md5sum">md5: 07523a6a56441a8eb382114f1933af52</span>
  </li>
 </ul>
 

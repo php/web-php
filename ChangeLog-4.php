@@ -11,6 +11,91 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.3.11"></a>
+<h3>Version 4.3.11</h3>
+<b>31-Mar-2004</b>
+<ul>
+<li>Added Oracle Instant Client support</li>
+<li>Added checks for negative values to gmp_sqrt(), gmp_powm(), gmp_sqrtrem() and gmp_fact() to prevent SIGFPE</li>
+<li>Changed phpize not to require libtool</li>
+<li>Updated bundled libmbfl library (used for multibyte functions)</li>
+<li>Fixed several leaks in ext/browscap and sapi/embed</li>
+<li>Fixed several leaks in ext/filepro</li>
+<li>Fixed build system to always use bundled libtool files</li>
+<li>Fixed MacOSX shared extensions crashing on Apache startup</li>
+<li><?php bugfix(32373); ?> (segfault in bzopen() if supplied path to non-existent file).</li>
+<li><?php bugfix(32340); ?> (insert_before($node,NULL) does not return).</li>
+<li><?php bugfix(32200); ?> (Prevent using both --with-apxs2 and --with-apxs2filter).</li>
+<li><?php bugfix(32114); ?> (DOM crashing when attribute appended to Document).</li>
+<li><?php bugfix(32063); ?> (mb_convert_encoding ignores named entity 'alpha').</li>
+<li><?php bugfix(31960); ?> (msql_fetch_row() and msql_fetch_array() dropping columns with NULL values).</li>
+<li><?php bugfix(31936); ?> (set_h_errno() is redefined incompatibly).</li>
+<li><?php bugfix(31911); ?> (mb_decode_mimeheader() is case-sensitive to hex escapes).</li>
+<li><?php bugfix(31858); ?> (--disable-cli does not force --without-pear).</li>
+<li><?php bugfix(31842); ?> (*date('r') does not return RFC2822 conforming date string).</li>
+<li><?php bugfix(31797); ?> (exif_read_data() uses too low nesting limit).</li>
+<li><?php bugfix(31796); ?> (readline completion handler does not handle empty return values).</li>
+<li><?php bugfix(31792); ?> (getrusage() does not provide ru_nswap value).</li>
+<li><?php bugfix(31754); ?> (dbase_open() fails for mode = 1).</li>
+<li><?php bugfix(31705); ?> (parse_url() does not recognize http://foo.com#bar).</li>
+<li><?php bugfix(31684); ?> (dio_tcsetattr(): misconfigured termios settings).</li>
+<li><?php bugfix(31699); ?> (unserialize() float problem on non-English locales).</li>
+<li><?php bugfix(31623); ?> (OCILogin does not support password grace period).</li>
+<li><?php bugfix(31580); ?> (fgetcsv() problematic with "" escape sequences).</li>
+<li><?php bugfix(31527); ?> (crash in msg_send() when non-string is stored without being serialized).</li>
+<li><?php bugfix(31514); ?> (open_basedir uses path_translated rather then cwd for . translation).</li>
+<li><?php bugfix(31480); ?> (Possible infinite loop in imap_mail_compose()).</li>
+<li><?php bugfix(31479); ?> (Fixed crash in chunk_split(), when chunklen > strlen).</li>
+<li><?php bugfix(31465); ?> (False warning in unpack() when working with *).</li>
+<li><?php bugfix(31454); ?> (session_set_save_handler crashes PHP when supplied non-existent object ref).</li>
+<li><?php bugfix(31444); ?> (Memory leak in zend_language_scanner.c).</li>
+<li><?php bugfix(31442); ?> (unserialize broken on 64-bit systems).</li>
+<li><?php bugfix(31440); ?> ($GLOBALS can be overwritten via GPC when  register_globals is enabled).</li>
+<li><?php bugfix(31413); ?> (curl POSTFIELDS crashes on 64-bit platforms).</li>
+<li><?php bugfix(31396); ?> (compile fails with gd 2.0.33 without freetype).</li>
+<li><?php bugfix(31371); ?> (highlight_file() trims new line after heredoc).</li>
+<li><?php bugfix(31270); ?> (missing safe_mode/open_basedir check in swf_openfile()).</li>
+<li><?php bugfix(31174); ?> (compile warning in url.c).</li>
+<li><?php bugfix(31159); ?> (COM object access is not working).</li>
+<li><?php bugfix(31142); ?> (imap_mail_compose() fails to generate correct output).</li>
+<li><?php bugfix(31398); ?> (When magic_guotes_gpc are enabled filenames with ' get cutoff).</li>
+<li><?php bugfix(31288); ?> (Possible crash in mysql_fetch_field(), if mysql_list_fields() was not called previously).</li>
+<li><?php bugfix(31120); ?> (mssql_query returns false on successful inserts and  stored procedures).</li>
+<li><?php bugfix(31107); ?>, <?php bugfix(31110); ?>, <?php bugfix(31111); ?>, <?php bugfix(31249); ?> (Compile failure of zend_strtod.c).</li>
+<li><?php bugfix(31106); ?> (Fixed crash in overloaded objects).</li>
+<li><?php bugfix(31103); ?> (Better error message when c-client cannot be found).</li>
+<li><?php bugfix(31101); ?> (missing kerberos header file path with --with-openssl).</li>
+<li><?php bugfix(31072); ?> (var_export() does not output an array element with an empty string key).</li>
+<li><?php bugfix(31060); ?> (imageftbbox() does not use linespacing parameter).</li>
+<li><?php bugfix(31056); ?> (php_std_date() returns invalid formatted date if  y2k_compliance is On).</li>
+<li><?php bugfix(31055); ?> (apache2filter: per request leak proportional to the full path of the request URI).</li>
+<li><?php bugfix(30726); ?> (-.1 like numbers are not being handled correctly).</li>
+<li><?php bugfix(30609); ?> (cURL functions bypass open_basedir).</li>
+<li><?php bugfix(30573); ?> (compiler warnings in libmbfl due to invalid type cast).</li>
+<li><?php bugfix(30549); ?> (incorrect character translations for some ISO8859 charsets).</li>
+<li><?php bugfix(30446); ?> (apache2handler: virtual() includes files out of sequence)
+<li><?php bugfix(30430); ?> (odbc_next_result() doesn't bind values and that results  in segfault).</li>
+<li><?php bugfix(30120); ?> (imagettftext() and imagettfbbox() accept too many parameters).</li>
+<li><?php bugfix(29733); ?> (printf() handles repeated placeholders wrong).</li>
+<li><?php bugfix(29424); ?> (width and height inverted for JPEG2000 files).</li>
+<li><?php bugfix(28976); ?> (mail(): use "From:" from headers if sendmail_from is empty).</li>
+<li><?php bugfix(28930); ?> (PHP sources pick wrong header files generated by bison).</li>
+<li><?php bugfix(28804); ?> (ini-file section parsing pattern is buggy).</li>
+<li><?php bugfix(28803); ?> (enabled debug causes bailout errors with CLI on AIX because of fflush() called on already closed filedescriptor).</li>
+<li><?php bugfix(28451); ?> (corrupt EXIF headers have unlimited recursive IFD directory entries).</li>
+<li><?php bugfix(28220); ?> (mb_strwidth() returns wrong width values for some handful chars).</li>
+<li><?php bugfix(28086); ?> (crash inside overload() function).</li>
+<li><?php bugfix(28074); ?> (FastCGI: stderr should be written in a FCGI stderr stream).</li>
+<li><?php bugfix(28067); ?> (partially incorrect utf8 to htmlentities mapping).</li>
+<li><?php bugfix(27633); ?> (Double \r problem on ftp_get in ASCII mode on Win32).</li>
+<li><?php bugfix(18613); ?> (Multiple OUs in x509 certificate not handled properly).</li>
+<li><?php bugfix(7782); ?> (Cannot use PATH_INFO fully with php isapi).</li>
+</ul>
+
+There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.10"></a>
 <h3>Version 4.3.10</h3>
 <b>14-Dec-2004</b>
