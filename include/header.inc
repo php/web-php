@@ -66,8 +66,8 @@ function rolloff(imgName) {
 <table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>
 <td width="33%" align="left"><font size="+1" color="#ffffff"><strong><i>PHP3</i></strong></font></td>
-<td width="33%" align="center"><font size=+2 color="#ffffff"><?echo $title?></font></td>
-<td width="33%" nowrap align="right">
+<td width="33%" align="center"><font size=+2 color="#ffffff"><nobr><?echo $title?></nobr></font></td>
+<td width="33%" align="right"><nobr>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
 <a href="<? echo $base_url ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
@@ -80,6 +80,7 @@ function rolloff(imgName) {
 <a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
 <img src="jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
+</nobr>
 </td></tr>
 </table>
 <!-- add in 30 more pixels to ensure we don't overlap the background -->
