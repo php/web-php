@@ -42,7 +42,6 @@ include_once 'prepend.inc';
 
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
-<br />
 <h3>What is PHP?</h3>
 
 <p>
