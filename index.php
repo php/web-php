@@ -151,8 +151,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
-
 <h1>PHP 4.3.3RC4 released</h1>
 <p>
  <span class="newsdate">[18-Aug-2003]</span>
@@ -168,6 +166,8 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
+
+<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
 
 <h1>Active Awards 2003 Winners</h1>
 
