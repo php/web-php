@@ -215,6 +215,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.3RC2 released</h1>
+<p>
+ <span class="newsdate">[30-Jul-2003]</span>
+ <a href="http://qa.php.net/">PHP 4.3.3RC2</a> has been released for testing.
+ This is the second release candidate and should be nearly bug free. Please
+ try this release, so that any remaining issues can be uncovered and resolved.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&r1=1.1247.2.261&amp;r2=1.1247.2.314">NEWS</a>
+ file.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>URL Shortcuts and Site Search</h1>
 
 <p>
