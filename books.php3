@@ -113,6 +113,16 @@ by Jiri Kosek<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center">
+<IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+<A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument">PHP tettei kouryaku</A><BR>
+by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7Elouis/">Rui Hirokawa</A><BR>
+<SMALL>in Japanese, Sep/1999, ISBN 4-7973-0865-6<BR></SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Related Reading</B></TD>
 </TR>
 
