@@ -4,26 +4,26 @@ commonHeader("Documentation ");
 
 $languages = array(
  "en" => "English"
+,"pt_BR" => "Brazilian Portuguese"
 ,"cs" => "Czech"
-,"de" => "German"
-,"es" => "Spanish"
+,"nl" => "Dutch"
 ,"fr" => "French"
+,"de" => "German"
 ,"hu" => "Hungarian"
 ,"it" => "Italian"
 ,"ja" => "Japanese"
 ,"kr" => "Korean"
-,"nl" => "Dutch"
-,"pt_BR" => "Brazilian Portuguese"
+,"es" => "Spanish"
 );
 
 $formats = array(
  "bigmanual.html.gz" => array("Single HTML file (compressed)", "html.gz")
-,"manual.zip" => array("Seperate HTML files (zip archive)", "zip")
-,"manual.tar.gz" =>  array("Seperate HTML files (compressed tar archive)", "tar.gz")
 ,"manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb")
 ,"manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb")
-,"manual.txt.gz" => array("Plain text (compressed)", "txt.gz")
 ,"manual.pdf" => array("PDF", "pdf")
+,"manual.txt.gz" => array("Plain text (compressed)", "txt.gz")
+,"manual.tar.gz" =>  array("Seperate HTML files (compressed tar archive)", "tar.gz")
+,"manual.zip" => array("Seperate HTML files (zip archive)", "zip")
 ,"manual.chm" => array("Windows HTML Help", "chm")
 );
 ?>
