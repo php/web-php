@@ -90,9 +90,10 @@ here to see the file sizes and dates</a>.
        else {
          $size = @filesize($link_to);
          $changed = @filemtime($link_to);
+         $date_format = "j M Y"; // Part of the RFC date type (to be short)
          if ($size) {
-           echo "<a href=\"$link_to\" title=\" Size: " . (int) ($size/1024) . "Kb\n Date: " . date ("r", $changed) . "\">$details[1]</a>";
-           if ($sizes) { echo "<br><small>Size: " . (int) ($size/1024) . "Kb<br>Date: " . date ("r", $changed) . "</small>"; }
+           echo "<a href=\"$link_to\" title=\" Size: " . (int) ($size/1024) . "Kb\n Date: " . date ($date_format, $changed) . "\">$details[1]</a>";
+           if ($sizes) { echo "<br><small>Size: " . (int) ($size/1024) . "Kb<br>Date: " . date ($date_format, $changed) . "</small>"; }
          } else {
            echo "&nbsp;";
          }
