@@ -102,6 +102,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.php-conference.de/", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
+
+<h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
+
+<p>
+<font class="newsDate">[17-Aug-2001]</font>
+PHP enthusiasts from all over the world will meet three days to attend
+powerworkshops and sessions presented by the inventors of PHP, members
+of the core group and other well known people from the community.
+More information at <a href="http://www.php-conference.de/">www.php-conference.de</a>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Manual PDFs are available again</h1>
 
 <p>
@@ -247,22 +262,12 @@ full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 
 <?php echo hdelim(); ?>
 
+<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 
-<h1>
-<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right") ); ?>
-PHP conventions in Europe
-</h1>
+<h1>LinuxTag 2001 in Europe</h1>
 
 <p>
 <font class="newsDate">[14-Jun-2001]</font>
-The second International PHP Conference, taking place in Frankfurt, Germany this coming November
-has been announced.  Further details are available on the 
-<a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
-</p>
-
-<p>
-<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
-Also  
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
@@ -289,19 +294,6 @@ presentations online. Check out:</p>
 <p>If you missed out on ApacheCon 2001 in Santa Clara, keep
 your ear to the ground for more info on ApacheCon 2001 Europe in
 Dublin, Ireland in October 2001!
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 3.0.18 Released</h1>
-
-<p>
-<font class="newsDate">[21-Oct-2000]</font>
-PHP 3.0.18 was released. This is a bug-fix release, including
-fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
-<?php print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?>
-contains a full list of changes.
 <br clear="all">
 </p>
 
