@@ -41,6 +41,7 @@ $LANGUAGES = array(
 
 $INACTIVE_ONLINE_LANGUAGES = array(
     'el' => 'Greek',
+    'ar' => 'Arabic',
 );
 
 // Convert between language codes back and forth
