@@ -133,8 +133,6 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "International PHP Conference 2002", "right")); ?>
-
 <h1>PHP 4.2.3 Released</h1>
 <p>
 <font class="newsdate">[06-Sept-2002]</font>
@@ -142,6 +140,9 @@ echo "\n<!--$MYSITE-->\n";
 release, and is a recommended update for all users of PHP, and Windows users in particular.</p>
 
 <?php echo hdelim(); ?>
+
+
+<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "PHP Conference 2002", "right")); ?>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
