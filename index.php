@@ -209,6 +209,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right")); ?>
+
+<h1>Active Awards 2003 Winners</h1>
+
+<p>
+ <span class="newsdate">[15-Aug-2003]</span>
+ The <a href="http://www.activestate.com/Corporate/ActiveAwards/">Active Awards</a>
+ are held annually to honor members of the open source community who actively
+ contribute to open source languages and display excellence in their programming
+ efforts. Programmers' Choice Award winners were nominated and chosen by the open
+ source community. Activators' Choice Award winners were chosen by ActiveState's
+ development team.
+</p>
+<p>
+ This year's nominees were: Monte Ohrt, Paul S. Owen, Stanislav Malyshev,
+ Stig Bakken and Wez Furlong. The Programmers' Choice winner is
+ <strong>Stig Bakken</strong>, the father of PEAR. The Activators' Choice
+ winner is <strong>Ilia Alshanetsky</strong>, member of the PHP Quality
+ Assurance team, developer of the fudforum package, and a major contributor
+ to PHP development.
+</p>
+
+<hr />
+
 <h1>PHP.net news history</h1>
 
 <p>
@@ -412,23 +436,6 @@ commonHeader("Hypertext Preprocessor");
  List of changes can be found in the 
  <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.215.2.1&amp;r2=1.1247.2.261">NEWS</a>
  file.
-</p>
-
-<hr />
-
-<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
-
-<h1>Active Awards Programmers' Choice Nominees are in!</h1>
-<p>
- <span class="newsdate">[06-June-2003]</span>
- Thanks to the community for recognizing their peers in ActiveState's
- third annual Active Awards. The awards honor those individuals who
- <strong>actively</strong> contribute to open languages and display excellence in their
- programming efforts. Please visit and help choose this years award winner!
-</p>
-<p>
- More information and voting is at:
- <a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
 </p>
 
 <hr />
