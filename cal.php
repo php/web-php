@@ -403,6 +403,13 @@ foreach($re as $k=>$v) {
 					if(!$result) echo mysql_error();
 				}
 			}
+			if(isset($HTTP_POST_VARS['Reject_Selected_x']) || isset($HTTP_POST_VARS['Reject_Selected']) || isset($HTTP_POST_VARS['Reject_Selected_y'])) {
+				foreach($entries as $entry=>$val) {
+					$result = mysql_query("delete from phpcal where id=$entry");
+					if(!$result) echo mysql_error();
+				}
+			}
+			
 		} else {
 			echo "<h2 class=\"error\">The username or password you supplied was incorrect.</h2>\n";
 			$ap = 1;
