@@ -32,6 +32,25 @@ related to PHP.  They aren't necessarily be related to actually coding in PHP
 Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.
 </P>
 
+<?php tipTitle('Quick Reference for KDE 2.1', 'Christoph Luehr', '10-Mar-2001');?>
+
+<p>With <a href="http://www.kde.org/">KDE</a> 2.1, it is possible
+to configure the Konqueror web browser to recognize quick reference
+URIs, for example: "php:mysql_connect".</p>
+
+<p>Just open the Konqueror menu "Settings-&gt;Configure Konqueror",
+select the tab "Enhanced Browsing", check "Enable Web Shortcuts".
+
+<p>Then click on "Add..." and fill the dialog:</p>
+
+<ul>
+ <li>Search provider name: <b>"PHP Manual Quick Reference"</b></li>
+ <li>Search URI: <b>http://www.php.net/manual-lookup.php?function=\1</b></li>
+ <li>URI Shortcuts:  <b>php</b></li>
+</ul>
+
+<p>Voila!</p>
+
 <?php tipTitle('Shortcut URLs for the Manual', '', '08-Mar-2001');?>
 
 <p>You can go directly to PHP manual pages by using a URL such as:
@@ -51,7 +70,7 @@ Quick access to PHP documentation and site search for all Mozilla and Netscape 6
 
 <OL>
 
-<LI>Click "Bookmarks -> Manage Bookmarks"
+<LI>Click "Bookmarks -&gt; Manage Bookmarks"
 <LI>Create a bookmark in a folder of your choice on the following URL: http://www.php.net/manual-lookup.php?function=%s (or mirror site of your choice)
 <UL>
 <LI>Choose a name for your bookmark.
