@@ -19,9 +19,9 @@ function makeTable($array) {
 	$i=0;
 	$c=count($array);
 	$limit=intval($c/$NUMACROSS)+1;
-	echo "<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0>\n";
-	echo "<TR VALIGN=top>\n";
-	echo "<TD><FONT FACE=\"" . $FONTFACE . "\" SIZE=-1>\n";
+	echo "<TABLE BORDER=\"0\" CELLPADDING=\"5\" CELLSPACING=\"0\">\n";
+	echo "<TR VALIGN=\"top\">\n";
+	echo "<TD>\n";
 	while (list($file,$name)=each($array)):
 		if ($i%$limit==0):
 			echo "</TD><TD>\n";
@@ -36,8 +36,22 @@ function makeTable($array) {
 
 commonHeader("PHP Manual Quick Reference");
 ?>
-Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
+
+<h1>PHP Function List</h1>
+
+<? if ($notfound) { ?>
+
 <P>
+Sorry, but the function <B><? echo $notfound; ?></B> is not in the online manual.
+Perhaps you misspelled it, or it is a relatively new function that hasn't made it 
+into the online documentation yet.
+</P>
+
+<? } ?>
+
+<P>
+Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
+</P>
 
 <?
 makeTable($functions);

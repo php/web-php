@@ -13,6 +13,8 @@ if ($file) {
     header("Location: $file");
     exit;
 }
-  
-header("Location: search.php?pattern=".urlencode($function)."&show=nosource");
+
+$notfound = $function;
+include 'quickref.php';
+
 exit;
