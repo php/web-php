@@ -42,7 +42,8 @@ You can also read the mailing list on the above web interface, or if you like re
 things with a news reader, you can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
 </P>
 <P>
-You can search the mailing lists right from this website from <A HREF="/mailsearch.php3">here</A>.
+You can search the mailing lists right from this website from <A HREF="/search.php3">the search page</A>
+or by using the search button on the top-right of every page.
 </P>
 <P>
 If you are interested in helping out with the
