@@ -11,10 +11,10 @@ echo "\n<!--$MYSITE-->\n";
 <h3>New usage stats for November available</h3>
 <p>
 <a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
-We just got the latest numbers from
-<a href="http://www.netcraft.com/">Netcraft</a>.
-Like we estimated last month, PHP has now passed one million (virtual) servers.
-<a href="usage.php3">Check out the usage page.</a>
+<a href="http://www.netcraft.com/">Netcraft</a> and <a href="http://www.e-softinc.com/">E-Soft</a>
+have published the November results for their Web Server surveys - both of which
+show an impressive jump for PHP.  As expected, PHP has passed the one million barrier 
+on Netcraft's survey!  Check out the <a href="usage.php3">usage page</a>.
 <br clear="all">
 
 <img src="php4zend-small-white.gif" align="right">
