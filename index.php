@@ -107,14 +107,28 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
+
+<h1>LinuxTag 2002</h1>
+<font class="newsdate">[23-May-2002]</font> PHP will be attending 
+<a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&lang=en">LinuxTag</a> 
+again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
+MySQL AB,  will create a "(L)AMP" day, focusing on web development with  the 3 core technologies.
+During the day there will be many <a
+href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=293&lang=en">interesting
+workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also, which will 
+be hosting several <a href="http://www.phpug.de/index_ka109.php">PHP related projects</a> (text in
+German).
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Coding Contest</h1>
 <p>
 <font class="newsDate">[16-May-2002]</font>
-CodeWalkers started a new bi-weekly PHP contest. Every two weeks, there
-is a new problem to solve, a new script to write. The winner receive
+CodeWalkers have started a new fortnightly PHP contest. Every two weeks, there
+is a new problem to solve, a new script to write. The winner will receive
 prizes provided by the sponsors, Zend Technologies and Sams Publishing.
-You can get on the challenge visiting
-<a href="http://codewalkers.com/php-contest.php">http://codewalkers.com/php-contest.php</a>.
+You can enter the challenge by visiting <a href="http://codewalkers.com/php-contest.php">their site</a>.
 </p>
 
 <?php echo hdelim(); ?>
