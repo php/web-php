@@ -94,6 +94,7 @@ if ($cmd == "send") {
         $mailto = $mail_bugs_to . (eregi("documentation",$bug_type) ? ",phpdoc@lists.php.net" : "");
 
 		if (mail($mailto, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>")) {
+		    @mail($email, "Bug #$cid: $sdesc", $ascii_report, "From: PHP Bug Database <$mail_bugs_to>\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>");
 			echo "<p><h2>Mail sent to $mailto...</h2></p>\n";
 			echo "<p>Thank you for your help!</p>";
 			echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
