@@ -102,7 +102,7 @@ foreach ($LANGUAGES as $langcode => $language) {
             
             // Size available, collect information
             if ($size) {
-                $files[] = array($link_to, (int) ($size/1024),  date("j M Y", $changed), $formatname);
+                $files[] = array($link_to, (int) ($size/1024),  date("j M Y", $changed), $extension);
                 $formatnum++;
             }
             
