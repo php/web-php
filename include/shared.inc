@@ -326,6 +326,14 @@ function commonHeader($title) {
 
 	For more information on the PHP Development Team and the PHP
 	project, please see <http://www.php.net>.
+
+	$IE4 = <? echo $IE4; ?>
+	$IE3 =  <? echo $IE3; ?>
+	$NS4 =  <? echo $NS4; ?>
+	$NS3 =  <? echo $NS3; ?>
+	$X11 =  <? echo $X11; ?>
+	$HAVE_STYLE = <? echo $HAVE_STYLE; ?>
+
 */
 
 var loaded = 0;
@@ -706,6 +714,15 @@ if (IE4) {
 
 //--->
 </SCRIPT>
+
+<SCRIPT LANGUAGE="JavaScript1.3">
+<!--
+if (IE4) {
+	gotlayers = 1;
+}
+//--->
+</SCRIPT>
+
 <?
 endif;		/* Kick outs */
 ?>
