@@ -1,4 +1,5 @@
 <?
+error_reporting(1023);
 require("site.inc");
 require("shared.inc");
 commonHeader("Downloads");

@@ -136,15 +136,15 @@ if (IE4) LoadImgs();
 <A NAME="top">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR valign=top>
-<TD ALIGN=left width=150>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150>
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><IMG SRC="gifs/logo.gif" ALT="PHP3" WIDTH=130 HEIGHT=67 BORDER=0><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Main Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
-<TR VALIGN=top BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TR VALIGN=top>
 <TD ALIGN=left>
 <A HREF="downloads.php3" onMouseover="change('down',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-downloads-p.gif" ALT="downloads" WIDTH=129 HEIGHT=30 BORDER=0 NAME="down" hspace=10></A><BR>
 <A HREF="docs.php3" onMouseover="change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
@@ -165,16 +165,6 @@ if (IE4) LoadImgs();
 <!-- end title -->
 </B></FONT></TD>
 <TD ALIGN=right><A HREF="search.php3" onMouseover="change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=129 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORD
-
-
-
-
-
-
-
-
-
-
 
 ER=0><BR></TD></TR>
 </TABLE>
@@ -223,8 +213,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Site Hosted by:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo
-$MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
 <TD><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 
