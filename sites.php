@@ -14,17 +14,17 @@ Come with me, I'll show you.</p>
 <h2><a href="http://www.php.net/">www.php.net</a>: Main Website</h2>
 
 <p>
-This is the primary web site.  The front page is where major news is published:
+This is the primary web site.  The front page is where major news are published:
 new PHP versions, security updates, and new projects launched. This site is
 also <a href="/mirrors.php">mirrored in dozens of countries worldwide</a>.
 </p>
 
 <p>
-This is home to the <a href="/downloads.php">download page</a>, for everyone to
-get the latest version of the PHP source code and binaries Windows. The current
-and next-to-current version are available there. (There is also a <a
+This is the home of the <a href="/downloads.php">download page</a>, for everyone to
+get the latest version of the PHP source code and binaries for Windows. The current
+and next-to-current versions are available there. (There is also a <a
 href="http://ftp.proventum.net/pub/php/">PHP Museum</a>, which has all of the
-source distribution since June 1996.)
+source distributions since June 1996.)
 </p>
                                                                         
 <p>
@@ -32,7 +32,7 @@ The next most visited section is the <a href="/docs.php">documentation</a>. The
 documentation is translated into twelve different languages, and is available
 in <a href="/download-docs.php">a variety of different formats</a>. Users are
 able to read notes on the documentation left by other users, and contribute
-their own notes.  The documentation is a real community project by itself!
+their own notes. The documentation is a real community project by itself!
 </p>
 
 <p>
