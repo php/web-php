@@ -47,7 +47,6 @@ our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
 
 <p><?php print_link("http://www.synacor.com", "Synacor"); ?> provided us with many terabytes of 
 bandwidth and hosting for www.php.net and others for many years.</p>
-</p>
 
 <p><?php print_link("http://www.vasoftware.com", "VA Software Corp."); ?> helped us by donating a server and resources
 to enable us to build manuals and distribute our content via rsync.</p>
