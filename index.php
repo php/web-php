@@ -145,6 +145,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
+<h1>PHP West Conferences: Web Services - Vancouver, BC</h1>
+<p>
+ <span class="newsdate">[04-Dec-2004]</span>
+ <a href="http://www.phpwest.com">PHP West</a> is holding a conference on
+ Web Services on January 14th, 2005 hosted in the beautiful Vancouver,
+ British Columbia, Canada. This is the first of many conferences to come on
+ a four month orbit &ndash; each focusing on a unique genre. The conference
+ will be a jam packed one day event with the most important topics PHP
+ developers are faced with regarding Web Services. The conference has received
+ talks from <a href="http://www.phpwest.com/?s=speakers">leading speakers</a>
+ in the industry &ndash; speakers which have been chosen will be announced
+ on December 16th.
+</p>
+
+<p>
+ <a href="http://www.phpwest.com/?s=register">Early bird special 
+ tickets are available</a> until December 26th and due to limited
+ capacity for this event the organizers recommend you register soon 
+ to reserve your seat. Online registration is now open!
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5.0.3RC1 released!</h1>
 <p>
