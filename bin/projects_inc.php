@@ -15,6 +15,8 @@ if (!xslt_process($xsl, $xml, &$result)) {
   echo "ERROR ".$php_error_msg;
   exit;
 } else {
+  echo $result;
+  /*
   if ($fp = fopen("../include/projects.inc", "w")) {
 	  fwrite($fp, $result);
 	  flush();
@@ -24,6 +26,7 @@ if (!xslt_process($xsl, $xml, &$result)) {
   } else {
 	  echo "Error while saving ../include/projects.inc";
   }
+  */
 }
 
 ?>
