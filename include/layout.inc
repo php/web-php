@@ -16,13 +16,13 @@ function spacer($width = 1, $height = 1, $return = false, $align = false, $extra
 
 # resize_image()
 # tag the output of make_image() and resize it manually
+# (considering possible HTML/XHTML image tag endings)
 #
 
 function resize_image($img, $width=1, $height=1) {
-	$str = preg_replace('/width=\"([0-9]+?)\"/i', '', $img );
-	$str = preg_replace('/height=\"([0-9]+?)\"/i', '', $str );
-	$str = substr($str,0,-1) . sprintf(' height="%s" width="%s" />', $height, $width );
-	return $str;
+	$str = preg_replace('!width=\"([0-9]+?)\"!i', '', $img );
+	$str = preg_replace('!height=\"([0-9]+?)\"!i', '', $str );
+	return preg_replace('!/?>$!', sprintf(' height="%s" width="%s" />', $height, $width), $str);
 }
 
 # make_image()
@@ -35,7 +35,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 		$dir = '/images';
 	}
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
-		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s />',
+		$image = sprintf('<img src="%s/%s" border="%d" %s alt="%s" %s%s />',
 			$dir,
 			$file,
 			$border,
@@ -45,7 +45,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 			($extras ? ' '.$extras            : '')
 		);
 	} else {
-		$image = sprintf('<img src="%s/%s" border="%d" ALT="%s" %s%s />',
+		$image = sprintf('<img src="%s/%s" border="%d" alt="%s" %s%s />',
 			$dir,
 			$file,
 			$border,
@@ -249,13 +249,13 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <input class="small" type="text" name="pattern" value="" size="30" accesskey="s" />
 <small>in the</small>
 <select name="show" class="small">
-<option value="quickref" selected>function list
-<option value="wholesite">whole site
-<option value="manual">online documentation [en]
-<option value="bugdb">bug database
-<option value="maillist">general mailing list
-<option value="devlist">developer mailing list
-<option value="phpdoc">documentation mailing list 
+<option value="quickref" selected>function list</option>
+<option value="wholesite">whole site</option>
+<option value="manual">online documentation [en]</option>
+<option value="bugdb">bug database</option>
+<option value="maillist">general mailing list</option>
+<option value="devlist">developer mailing list</option>
+<option value="phpdoc">documentation mailing list </option>
 </select>
 <?php echo make_submit('small_submit_white.gif', 'search', 'bottom'); ?>&nbsp;
 </form>
