@@ -257,9 +257,20 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed;
+	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
 	if ($enclosed) {
-		echo "</td></tr></table></td></tr></table>\n";
+		echo "</td></tr></table></td>";
+		if(isset($RSIDEBAR_DATA)) {?>
+  			<td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
+  			<td bgcolor="#f0f0f0">
+   			<table width="100%" cellpadding="4" cellspacing="0">
+    		<tr valign="top">
+     		<td class="sidebar"><?php echo $RSIDEBAR_DATA?></td>
+    		</tr>
+   			</table>
+  			</td>
+		<?}
+		echo "</tr></table>\n";
 	}
 ?>
 
