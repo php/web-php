@@ -2,7 +2,7 @@
 /* Structure of MIRRORS array:
   0	"country code",
   1	"Mirror Name",
-  2	flag for whetehr local stats work (1) or not (0) on this mirror
+  2	flag for whether local stats work (1) or not (0) on this mirror
   3	"url for hosting company",
   4	flag for whether site is a full mirror (1) or just a download site (0), or just a placeholder (2),
   5	flag for whether search engine works (1) or not (0) on the site
