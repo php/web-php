@@ -3,11 +3,11 @@
 
 include_once "prepend.inc";
 
-/* convert POST -> GET when dumping the user onto a mirror */
+// Convert POST -> GET when dumping the user onto a mirror
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$_SERVER['REQUEST_URI'] = "/search.php?show=$show&pattern=" .
-		urlencode($pattern) .
-		"&base=" . urlencode($MYSITE) . "&lang=$lang";
+    $_SERVER['REQUEST_URI'] = "/search.php?show=$show&pattern=" .
+        urlencode($pattern) .
+        "&base=" . urlencode($MYSITE) . "&lang=$lang";
 }
 
 include 'loadavg.inc';
@@ -55,11 +55,9 @@ if ($MQ) {
     if (isset($lang))    { $lang = stripslashes($lang); }
 }
 
-// Set language to the preferred one if not set
-// (also preserves $lang if provided in POST/GET)
-if (!isset($lang) && isset($LANG)) {
-    $lang = $LANG;
-}
+// Fallack to preferred language, preserving any
+// language provided in the request
+if (empty($lang)) { $lang = $LANG; }
 
 // Only allow alphabetical chars in lang (security)
 if (!preg_match("!^\\w+$!", $lang)) {
