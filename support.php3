@@ -69,6 +69,14 @@ great places to find many example scripts and useful functions, organized for
 your searching pleasure!
 </P>
 
+<h3>Knowledge Base</h3>
+<P>
+The knowledge base is a growing collection of PHP related information in
+a searchable question and answer format.  Anyone can contribute, and
+everyone is encouraged to do so. You can visit the Knowledge Base
+at <a href="http://e-gineer.com/phpkb/">http://e-gineer.com/phpkb/</a>.
+</P>
+
 <h3>Getting the Latest Development Version</h3>
 <P>
 PHP is developed using CVS, so it's possible to obtain the latest
