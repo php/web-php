@@ -55,7 +55,7 @@ if (isset($in) && $process) {
     $errors[] = "You must supply a short description of the event.";
   }
 
-  $in['ldesc'] = trim(strip_tags($in['ldesc'],'<a><i><b><br><p>'));
+  $in['ldesc'] = trim(strip_tags($in['ldesc'],'<a><i><b><br /><p>'));
   $in['ldesc'] = preg_replace("/(style|on\\w+?)\s*=\s*(\"|').+?\\2/i","",$in['ldesc']);
   if (!$in['ldesc']) {
     $errors[] = "You must supply a long description of the event.";
@@ -177,7 +177,7 @@ if (isset($in) && $process) {
   </td>
  </tr>
  <tr>
-  <th>OR<br>Recurring</th>
+  <th>OR<br />Recurring</th>
   <td>
    <select name="in[recur]"><option></option><?php display_options($re,$in['recur'])?></select>
    <select name="in[recur_day]"><option></option><?php display_options($days,$in['recur_day'])?></select>
@@ -186,7 +186,7 @@ if (isset($in) && $process) {
   </td>
  </tr>
  <tr>
-  <th>Short<br>Description</th>
+  <th>Short<br />Description</th>
   <td><input type="text" name="in[sdesc]" value="<?php echo htmlentities($in['sdesc'])?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
@@ -216,6 +216,7 @@ if (isset($in) && $process) {
  <tr>
   <th>Email</th>
   <td><input type="text" name="in[email]" size="40" maxlength="128" value="<?php echo htmlentities($in['email'])?>" /></td>
+ </tr>
  <tr>
   <th>&nbsp;</th>
   <td><small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small></td>
