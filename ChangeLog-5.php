@@ -1,5 +1,7 @@
 <?php
-require_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonheader("PHP 5 ChangeLog");
 ?>
 
@@ -130,4 +132,5 @@ html_entity_decode(). (Moriyoshi)</li>
 <li>Fixed bug #21600 (Assign by reference function call changes variable 
 contents). (Zeev)</li>
 </ul>
+
 <?php commonfooter(); ?>
