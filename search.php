@@ -147,7 +147,7 @@ if (isset($pattern)) {
         
         // We can redirect to the php.net search page
         else {
-            $location = "http://www.php.net/search.php";
+            $location = "http://ch.php.net/search.php";
             $query = "show=$show&pattern=" . urlencode($pattern) .
                      "&base=" . urlencode($MYSITE) . "&lang=$lang";
             header("Location: $location?$query");
@@ -291,7 +291,7 @@ else {
     if (isset($htsearch_prog)) {
         $target = $PHP_SELF;
     } else {
-        $target = "http://www.php.net/search.php";
+        $target = "http://ch.php.net/search.php";
     }
 ?>
 <h1>Search</h1>
