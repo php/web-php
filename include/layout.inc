@@ -380,7 +380,7 @@ function clean_note($text) {
         $text = wordwrap($text);
     }
 
-    $text = "<p class=\"note\">".$text."</p>";
+    $text = "<code class=\"note\">".$text."</code>";
     return $text;
 }
 
