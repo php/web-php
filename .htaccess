@@ -1,5 +1,5 @@
 <IfModule mod_php3.c>
-php3_include_path .:./include:../include
+php3_include_path .:./include:../include:../../include
 </IfModule>
 <IfModule mod_php4.c>
 php_value include_path .:./include:../include:../../include
