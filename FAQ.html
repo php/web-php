@@ -56,6 +56,7 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#4.2">4.2. Can I access Microsoft Access databases?</a></li>
         <li><a href="#4.3">4.3. I saw PHP offers persistent database connections. What does that mean?</a></li>
         <li><a href="#4.4">4.4. I upgraded to php4, and now mysql keeps telling me "Warning: MySQL: Unable to save result set in ...". What's up?
+        <li><a href="#4.5">4.5. After installing shared mysql support, Apache dumps core as soon as libphp4.so is loaded. Can this be fixed?
     </ul>
 <li><b><a href="#5">5. Installation</a></b>
     <ul>
@@ -600,6 +601,21 @@ just hit the always prompt for new location checkbox before pressing ok.
     <p>
   </dd>
 
+ <dt><b>
+    <a name="4.5">4.5.</a> After installing shared mysql support, Apache dumps
+    core as soon as libphp4.so is loaded. Can this be fixed?
+  </b></dt>
+  <dd>
+    <p>
+    If your MySQL libs are linked against pthreads this will happen.  Check
+    using ldd.  If they are, grab the MySQL tarball and compile from source,
+    or recompile from the source rpm and remove the switch in the spec file
+    that turns on the threaded client code. Either of these suggestions will
+    fix this. Then recompile PHP with the new mysql libs.
+    </p>
+    <p>
+    </p>
+  </dd>
 </dl>
 
 <hr noshade>
