@@ -45,6 +45,113 @@ function highlight_php($code, $return = FALSE)
     else { echo $highlighted; }
 }
 
+/* These functions are only used on the new XHTML 1.0 Strict compatible
+   pages, and are used as an experiment, but are going to replace the
+   commonHeader and commonFooter functions in the future altogether */
+function site_header($title = '', $onload = '')
+{
+    global $EXPL_LANG;
+    
+    if (!empty($title)) { $title = ": $title"; }
+    if (empty($onload)) { $onload = "searchHistory(); tocImages();"; }
+    if (isset($EXPL_LANG)) {
+        $lang_input = '<input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
+    } else { $lang_input = ''; }
+    
+    print <<<END_HEADER
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+ <title>PHP.net{$title}</title>
+ <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/sitewide.css");</style>
+ <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
+ <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>
+ <base href="{$_SERVER['BASE_HREF']}" />
+</head>
+<body onload="{$onload}">
+<div id="headnav">
+ <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
+ alt="PHP" width="120" height="67" /></a>
+ <div id="headmenu">
+  <a href="/downloads.php">downloads</a> |
+  <a href="/docs.php">documentation</a> |
+  <a href="/FAQ.php">faq</a> |
+  <a href="/support.php">getting help</a> |
+  <a href="/mailing-lists.php">mailing lists</a> |
+  <a href="http://bugs.php.net/">reporting bugs</a> |
+  <a href="/sites.php">php.net sites</a> |
+  <a href="/links.php">links</a> |
+  <a href="/my.php">my php.net</a>
+ </div>
+</div>
+
+<div id="headsearch">
+ <form method="post" action="/search.php" id="topsearch">
+  <p>
+   <span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)">
+    <span class="shortkey">s</span>earch for
+   </span>
+   <input type="text" name="pattern" value="" size="30" accesskey="s" />
+   <span>in the</span>
+   <select name="show">
+    <option value="quickref" selected="selected">function list</option>
+    <option value="wholesite">whole site</option>
+    <option value="manual"   >online documentation [en]</option>
+    <option value="bugdb"    >bug database</option>
+    <option value="maillist" >general mailing list</option>
+    <option value="devlist"  >developer mailing list</option>
+    <option value="phpdoc"   >documentation mailing list </option>
+   </select>
+   <input type="image"
+          src="{$_SERVER['STATIC_ROOT']}/images/small_submit_white.gif"
+          class="submit" alt="search" />
+   {$lang_input}
+  </p>
+ </form>
+</div>
+
+<div id="content">
+END_HEADER;
+}
+
+// See the comment for site_header() above
+function site_footer()
+{
+    global $LAST_UPDATED;
+    
+    $stats = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
+    $provider_url  = mirror_provider_url();
+    $provider_name = mirror_provider();
+    $last_updated  = strftime("%c %Z", $LAST_UPDATED);
+    
+    print <<<END_FOOTER
+</div>
+
+<div id="footnav">
+ <a href="/source.php?url=/{$SERVER['BASE_PAGE']}">show source</a> |
+ <a href="/credits.php">credits</a> |$stats
+ <a href="/mirrors.php">mirror sites</a>
+</div>
+
+<div id="pagefooter">
+ <div id="copyright">
+  <a href="/copyright.php">Copyright &copy; 2001-2003 The PHP Group</a><br />
+  All rights reserved.
+ </div>
+
+ <div id="thismirror">
+  <a href="/mirror.php">This mirror</a> generously provided by:
+  <a href="{$provider_url}">{$provider_name}</a><br />
+  Last updated: {$last_updated}
+ </div>
+</div>
+
+</body>
+</html>
+END_FOOTER;
+}
+
 // Print an image for a sized spacer
 function spacer($width = 1, $height = 1, $return = FALSE, $align = FALSE, $extras = FALSE)
 {
@@ -396,7 +503,6 @@ function commonFooter() {
 </body>
 </html>
 <?php
-    echo "<!-- " . (getmicrotime() - $page_creation_start) . " -->\n";
 }
 
 function sect_to_file($string) {

@@ -2,9 +2,6 @@
 
 // $Id$
 
-// Start measuring time spent on page
-$page_creation_start = getmicrotime();
-
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
 
@@ -86,13 +83,6 @@ function unset_variables()
             unset($GLOBALS[$name]);
         }
     }
-}
-
-// Utility function used for time measuring
-function getmicrotime()
-{
-    list($usec, $sec) = explode(" ", microtime());
-    return ((float) $usec + (float) $sec);
 }
 
 // Load in the user preferences
