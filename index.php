@@ -146,6 +146,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
+
+<h1>Forum PHP in Paris, November 18 &amp; 19, 2004</h1>
+<p>
+ <span class="newsdate">[26-Oct-2003]</span>
+ The French <a href="http://www.afup.org/">AFUP association</a>
+ is proud to announce the fourth annual PHP meeting in Paris,
+ on November 18th and 19th, 2004. Developers and managers will
+ gather to meet Zeev Suraski, Rasmus Lerdorf and other prominent community experts
+ for two days of sessions, packed with
+ <a href="http://www.afup.org/article.php3?id_article=253">enterprise solutions and advanced techniques</a>
+ (in French).
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5.0.2 released!</h1>
 <p>
