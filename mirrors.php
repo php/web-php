@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 if (isset($country)) {
   header("Location: http://$country.php.net/");
 }

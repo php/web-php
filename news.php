@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("PHP in the News");
 
 function makeEntry($title,$subtitle,$url=false,$date="") {

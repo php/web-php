@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("Manual Notes");
 ?>
 

@@ -1,5 +1,6 @@
 <?
-	commonHeader("High-Profile sites running PHP");
+require_once 'prepend.inc';
+commonHeader("High-Profile sites running PHP");
 
 	function site($name,$domain=false) {
 		if ($domain) {

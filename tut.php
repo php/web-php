@@ -1,5 +1,5 @@
 <?
-
+require_once 'prepend.inc';
 commonHeader('PHP Tutorial');
 
 	function example($text) {

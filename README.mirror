@@ -23,7 +23,6 @@ Once you create a virtualhost which looks something like:
    ServerAdmin    yourname@yourdomain.com
    DocumentRoot   /www/htdocs/phpweb
    php_value      include_path         .:/www/htdocs/phpweb/include
-   php_value      auto_prepend_file    shared.inc
    php_flag       short_open_tag       on
    ErrorLog       logs/error_log
    TransferLog    logs/access_log

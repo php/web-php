@@ -1,4 +1,5 @@
 <?php
+require_once 'prepend.inc';
 commonHeader("PHP 4 ChangeLog");
 ?>
 

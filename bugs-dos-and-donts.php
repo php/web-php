@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("Bugs Database Dos and Don'ts");
 ?>
 

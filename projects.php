@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("Projects");
 
 function makeEntry($project,$url,$name,$email) {

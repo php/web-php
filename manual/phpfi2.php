@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader('PHP/FI Version 2.0 Documentation');
 ?>
 

@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("PHP Usage Stats");
 ?>
 Jan 2001: PHP: 5104536 Domains, 832457 IP Addresses<br>

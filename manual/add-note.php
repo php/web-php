@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 
 $mailto = 'rasmus@php.net';
 

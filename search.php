@@ -1,4 +1,6 @@
 <?
+require_once 'prepend.inc';
+
 /*
 You need to grab http://www.php.net/Mirrors-htdig.tgz and follow the
 directions in there if you want to run the search engine on your

@@ -1,5 +1,6 @@
 <?
-commonHeader("Downloads ");
+require_once 'prepend.inc';
+commonHeader("Downloads");
 $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 ?>
 

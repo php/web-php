@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 commonHeader("Generating a gdb backtrace");
 ?>
 

@@ -1,5 +1,6 @@
 <?php // -*- C++ -*-
 
+require_once 'prepend.inc';
 require_once 'manual-lookup.inc';
 
 $function = strtolower($function);

@@ -1,6 +1,5 @@
 <IfModule mod_php4.c>
 php_value	include_path		.:./include:../include:../../include
-php_value	auto_prepend_file	shared.inc
 php_flag	short_open_tag		on
 </IfModule>
 DirectoryIndex index.php

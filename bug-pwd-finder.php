@@ -1,4 +1,6 @@
 <?
+require_once 'prepend.inc';
+
 /* See bugs.php for the table layout of bugdb. */
 
 if (strstr($MYSITE,"bugs.php.net")) {

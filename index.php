@@ -1,4 +1,6 @@
 <?php
+require_once 'prepend.inc';
+
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 

@@ -1,4 +1,5 @@
 <?
+require_once 'prepend.inc';
 	if($save && $user && $pw) {
 		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 	}

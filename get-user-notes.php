@@ -1,4 +1,5 @@
 <?php 
+require_once 'prepend.inc';
 require_once 'shared-manual.inc';
 
 // a tool for
