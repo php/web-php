@@ -14,7 +14,7 @@ if (!isset($df) || !file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . 
 $local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $df;
 
 // Print out common header
-commonHeader('Get Download');
+site_header('Get Download');
 ?>
 
 <h1>Choose mirror site for download</h1>
@@ -46,4 +46,4 @@ if ($size) {
  
 <?php
 mirror_list($df);
-commonFooter();
+site_footer();

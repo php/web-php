@@ -226,3 +226,32 @@ table.standard th.subr {
 	text-align: right;
 	vertical-align: top;
 }
+
+/* Mirror listing tables -------------------------------------------------- */
+table.mirrors td {
+	background-color: #eeeeee;
+	color: inherit;
+	font-size: smaller;
+}
+table.mirrors th {
+	background-color: #cccccc;
+	color: inherit;
+}
+table.mirrors th.ch {
+	text-align: left; 
+}
+table.mirrors th img {
+	border: 1px solid #000000;
+}
+table.mirrors th.flag {
+	width: 45px;
+}
+table.mirrors tr.this td {
+	background-color: #ffffcc;
+	color: inherit;
+}
+table.mirrors td.caret {
+	text-align: right;
+	background-color: white !important;
+	color: inherit;
+}
