@@ -1278,6 +1278,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "PHP para quem conhece PHP",
+    /* title_link   */ "http://novateceditora.com.br/livros/phpavancado/",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "8575220446.jpg",
+    /* information  */ "2003, ISBN 85-7522-044-6",
+    /* inform. link */ "http://novateceditora.com.br/livros/phpavancado/",
+    /* language     */ "pt"
+  ),
+  
+  array(
     /* title[s]     */ "Start på PHP",
     /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
     /* author[s]    */ "Thomas G. Kristensen",
