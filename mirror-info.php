@@ -21,7 +21,7 @@ if (!isset($htsearch_prog)) {
 }
 
 // Provide information on local stats setup
-if (isset($_SERVER['MIRROR_STATS'])) {
+if (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1') {
     $mirror_stats = 1; // Yes
 } else {
     $mirror_stats = 2; // Don't know
