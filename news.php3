@@ -82,7 +82,7 @@ and how he came to try it out.
 <? makeEntry( "Internet Publication System with GNU/Linux", "by &Aacute;lvaro del Castillo","http://www.openresources.com/magazine/publication-system-inet", "May 3, 1999");?>
 First in a series dedicated to the analysis, development and
 implementation of a very complete system for publishing data on the
-Internet using GNU/Linux software (including PHP3).
+Internet using GNU/Linux software (including PHP 3.0).
 <? endEntry(); ?>
 
 <? makeEntry( "Web mail in PHP", "by Bj&#248;rn Borud", "http://www.opensourceit.com/tutorials/990416php.html", "April 28, 1999");?>
@@ -94,13 +94,13 @@ A very introductory look at LDAP and how to write a PHP interface to an LDAP ser
 <? endEntry(); ?>
 
 <? makeEntry("Search This","by Colin Viebrock","http://www.devshed.com/Server_Side/PHP/Search_This/","Mar. 15, 1999");?>
-&quot;Search This: Searching Your Dynamic Site with PHP3 and ht://Dig&quot;
+&quot;Search This: Searching Your Dynamic Site with PHP and ht://Dig&quot;
 <? endEntry(); ?>
 
-<? makeEntry( "PHP3 - a Revolution for the Web", "Article in German Internet World by Tobias Ratschiller", false, "Feb. 15, 1999");?>
+<? makeEntry( "PHP 3 - a Revolution for the Web", "Article in German Internet World by Tobias Ratschiller", false, "Feb. 15, 1999");?>
 &quot;Static HTML pages are boring, CGI-scripts too slow, ColdFusion etc to
-expensive? The solution is PHP3.&quot; This German introductory article presents
-PHP3 as a scalable, easy-to-use, high-perfomance solution for server-side
+expensive? The solution is PHP 3.&quot; This German introductory article presents
+PHP 3 as a scalable, easy-to-use, high-perfomance solution for server-side
 scripting. Features also an interview with Rasmus Lerdorf.
 <? endEntry(); ?>
 
@@ -117,8 +117,8 @@ think for an "alternative product".
 &quot;Building Dynamic Web Pages with Search Engines in Mind&quot; and &quot;Creating Dynamic Images with PHP&quot;
 <? endEntry(); ?>
 
-<? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de/internet/artikel/java/199902/php3mysql_00-wf.html", "Jan. 18, 1999"); ?>
-&quot;PHP3 is the most powerful tool on the market for building dynamic,
+<? makeEntry( "Classified ads with PHP 3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de/internet/artikel/java/199902/php3mysql_00-wf.html", "Jan. 18, 1999"); ?>
+&quot;PHP 3 is the most powerful tool on the market for building dynamic,
 database-driven websites. Internet Pro shows how to realize a classified ads
 site with PHP and MySQL.&quot;
 <? endEntry(); ?>
