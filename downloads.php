@@ -102,16 +102,14 @@ site_header("Downloads");
   included, packaged as zip)<br />
   <span class="md5sum">md5: fc4adb16b0bbff5089efc10a02240f81</span>
  </li>
-<!-- 
  <li>
   <?php download_link('php-4.3.6-installer.exe', 'PHP 4.3.6 installer'); ?> - 15 April 2004<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: </span>
+  <span class="md5sum">md5: 76b4ba2bfa93ce7c4df7447285c71815</span>
  </li>
-//-->
 </ul>
 
 <hr />
