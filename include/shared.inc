@@ -764,7 +764,7 @@ while ($site = key($mirror_sites)):
 	$place=$mirror_sites[$site][1];
 	$type=$mirror_sites[$site][4];
 	if ($type==1 && substr($site,0,7)=="http://"):
-		echo "<OPTION VALUE=\"$site\">$place ($COUNTRIES[$country])\n";
+		echo "<OPTION VALUE=\"$site\">$COUNTRIES[$country] ($place)\n";
 	endif;
 endwhile;
 ?>
