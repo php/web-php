@@ -3,7 +3,6 @@ require_once 'prepend.inc';
 commonHeader("PHP in the News");
 
 function makeEntry($title,$author=false,$url=false,$date=false) {
-	global $first;
 	echo '<DT>';
 
 	echo hdelim();

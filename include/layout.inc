@@ -33,8 +33,11 @@ function resize_image($img, $width=1, $height=1) {
 # return an IMG tag for a given file (relative to the images dir)
 #
 
-function make_image($file, $alt=false, $align=false, $extras=false, $dir='/gifs', $border=0) {
+function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	global $HTTP_SERVER_VARS;
+	if (!$dir) {
+		$dir = '/gifs';
+	}
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
 		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s>',
 			$dir,
@@ -64,7 +67,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir='/gifs'
 # print an IMG tag for a given file
 #
 
-function print_image($file, $alt=false, $align=false, $extras=false, $dir='/gifs', $border=0) {
+function print_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
 	print make_image($file, $alt, $align, $extras, $dir);
 }
 
@@ -73,7 +76,10 @@ function print_image($file, $alt=false, $align=false, $extras=false, $dir='/gifs
 # make_submit()
 #  - make a submit button image
 #
-function make_submit($file, $alt=false, $align=false, $extras=false, $dir='/gifs', $border=0) {
+function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
+	if (!$dir) {
+		$dir = '/gifs';
+	}
 	$return = make_image($file, $alt, $align, $extras, $dir, $border);
 	if ($return != "<img>") {
 		$return = '<input type="image"'.substr($return,4);

@@ -5,7 +5,7 @@ body, td, th {
 
 dd,p {
 	margin-top: 4px;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
 }
 
 em {
@@ -47,6 +47,11 @@ h2 {
 	color: #000066;
 	margin-top: 8px;
 	margin-bottom: 8px;
+}
+
+.condensed {
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 h3 {
