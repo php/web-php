@@ -232,7 +232,7 @@ right away.</blockquote>
 	site("Soldier of Fortune Files","www.soffiles.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
-	site("wotmud.org", "http://wotmud.org/boards/Board.News.php"); # Games
+	site("wotmud.org", "wotmud.org/boards/Board.News.php"); # Games
 	siteEnd();
 
 /* Government */
