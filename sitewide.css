@@ -32,6 +32,10 @@ h1 {
 	background-color: transparent;
 }
 
+img {
+	border: 0px;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;

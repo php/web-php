@@ -205,6 +205,9 @@ div.mirror {
 	padding: 6px;
 } 
 
+img {
+	border: 0px;
+}
 img.flag {
 	border: 1px solid #000000;
 }
