@@ -149,6 +149,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conf.phpquebec.org/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+
+<h1>Conf&eacute;rence PHP Qu&eacute;bec 2004 - (Montr&eacute;al, March 25&amp;26rst, 2004)</h1>
+<p>
+ <span class="newsdate">[11-Feb-2004]</span>
+ The PHP Qu&eacute;bec Association announces the <a
+ href="http://conf.phpquebec.com/">Conference PHP Qu&eacute;bec 2004</a>.
+ The conference features 20 sessions over 2 days, in English and French.
+ 3 tracks : PHP advanced technics, PHP professionnal and Open Source technologies.
+ It will take place downtown Montr&eacute;al, Qu&eacute;bec, Canada.
+</p>
+<p>
+ We are currently offering <a 
+ href="http://conf.phpquebec.org/main.php/en/conf2004/tarif">early bird prices</a>.
+ Students and Small Businesses are eligible for reduced prices.
+ Buy your tickets early to get rebates and discount with the DVD!
+</p>
+<p>
+ Learn more about those exciting days at 
+ <a href="http://conf.phpquebec.org/">conf.phpquebec.com</a>.
+</p>
+
+<hr />
+
+
 <?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
 
 <h1>PaWS Tickets Now On Sale!</h1>
