@@ -9,6 +9,17 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 3.0.13 has been released</h3>
+
+<p>
+January 1, 2000. The long-awaited release of PHP 3.0 contains numerous
+bug fixes and a bonus of new features. Support for GNU recode, portable
+access to stdio streams, enhanced FTP support, support for Mcal and IMSP,
+as well as PNG functions for gd make this release a must for every
+user of PHP. The <a href="ChangeLog.php3">ChangeLog</a> provides a complete
+list of changes.
+<br clear="all">
+
 <h3>New usage stats for November available</h3>
 <p>
 <a href="/usage.php3"><img align=right src="stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
