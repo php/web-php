@@ -83,13 +83,14 @@ function book_show($one_book)
 
     // Min. one title, max two titles
     if (is_array($title)) {
-        $img_title = $title[0];
-        $title = '<h2 class="condensed">' .
-                 make_link($title_link, $title[0]) . '</h2>' . $title[1];
+        $img_title = htmlspecialchars($title[0]);
+        $title = '<h2>' .
+                 make_link($title_link, $img_title) . '<br />' .
+                 htmlspecialchars($title[1]) . '</h2>';
     } else {
-        $img_title = $title;
-        $title = '<h2 class="condensed">' .
-                 make_link($title_link, $title) . '</h2>';
+        $img_title = htmlspecialchars($title);
+        $title = '<h2>' .
+                 make_link($title_link, $img_title) . '</h2>';
     }
 
     // More than one author for this book
@@ -125,21 +126,21 @@ function book_show($one_book)
     // Information row for the book
     echo "<tr valign=\"top\">\n<td>\n" .
          make_link($title_link, make_image("books/$image", $img_title)) .
-         "<br>\n</td><td><p>\n$title\nby $author</p>\n<small>\n";
+         "<br />\n</td><td>\n$title\n<p>by $author</p>\n<small>\n";
 
     // Print any book information and more info link
     if ($info || $lang != "en") {
         echo "<p>\n";
         if ($lang != "en") {
-            echo "in " . $book_langs[$lang] . "<br>\n";
+            echo "in " . $book_langs[$lang] . "<br />\n";
         }
-        echo $info . "</p>\n";
+        echo htmlspecialchars($info) . "</p>\n";
     }
     echo "<p>" . make_link(
         $info_link ? $info_link : $title_link,
         make_image("caret-rg.gif",">") . "more info"
     );
-    echo "<br>\n</p>\n</small>\n</td>\n</tr>\n\n";
+    echo "<br />\n</p>\n</small>\n</td>\n</tr>\n\n";
 }
 
 // Generate book statistics (book numbers by languages)
