@@ -424,22 +424,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<h1>PHP 4.3.3RC1 released</h1>
-<p>
- <span class="newsdate">[19-Jun-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.3RC1</a> has been released for testing.
- This is the first release candidate and should have a very low number of problems
- and/or bugs. Nevertheless, please download and test it as much as possible on real-life 
- applications to uncover any remaining issues.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.215.2.1&amp;r2=1.1247.2.261">NEWS</a>
- file.
-</p>
-
-<hr />
-
 <h1>PHP 4.3.2 Released!</h1>
 <p>
  <span class="newsdate">[29-May-2003]</span>
