@@ -131,6 +131,8 @@ To subscribe to one of these lists, use this simple form:
     <option value="php-install-digest">Installation List Digest
     <option value="php-i18n">Internationalization List
     <option value="php-i18n-digest">Internationalization List Digest
+    <option value="php-pear">PHP Extension and Application Repository List
+    <option value="php-pear-digest">PHP Extension and Application Repository List Digest
     <option value="phplib">PHPLIB Mailing List
     <option value="phplib-dev">PHPLIB Developers List
     <option value="php-kb">Knowledge Base
