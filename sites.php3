@@ -151,6 +151,7 @@ right away.</blockquote>
 	site("United States of Hardcore (Music)","www.ush.net");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
 	site("VRT - Vlaamse Radio - en Televisieomroep","www.vrt.be");
+	site("WorldClubs.Net","www.worldclubs.net");
 	siteEnd();
 
 
@@ -172,6 +173,7 @@ right away.</blockquote>
 	site("Battle - a PBeM Game","battle.pbem.net");
 	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
 	site("ClanBase","www.clanbase.com");
+	site("Gameplayer","www.gameplayer.com");
 	site("GamePoint Shop","shop.gamepoint.net");
 	site("mplayer.com","www.mplayer.com");
 	site("Riot Publishing","riot.com.au");
@@ -182,6 +184,7 @@ right away.</blockquote>
 	title("Government");
 	siteStart();
 	site("City of Escondido","www.ci.escondido.ca.us");
+	site("Iowa Division of Tourism","www.state.ia.us/tourism/");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	site("City of Sibiu - Romania","www.primbsb.ro");
 	site("West Virginia Department of Education","wvde.state.wv.us");
@@ -221,6 +224,7 @@ right away.</blockquote>
 	site("Infoseek Investor Relations","www.ir-infoseek.com");
 	site("Kattare's Virtual Web Service","www.kattare.com");
 	site("LocateIndia.com","www.locateindia.com");
+	site("Lookup!!","www.lookup.it");
 	site("Mail Chek","mail.chek.com");
 	site("MailFriends.com","www.mailfriends.com");
 	site("MegaDownload","megadownload.de");
@@ -229,7 +233,7 @@ right away.</blockquote>
 	site("PBM Online Services","www.ndw.de");
 	site("Resourcepage.com","www.resourcepage.com");
 	site("TageBook.Com - Online Diary","tagebook.com");
-	site("Terra Firma Design","www.terrafirmadesign");
+	site("Terra Firma Design","www.terrafirmadesign.com");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
 	site("West Central Ohio Marketplace","www.wcomarketplace.com");
@@ -294,9 +298,12 @@ right away.</blockquote>
 	site("Maximum PC Magazine","www.maximumpcmag.com");
 	site("Mercattel","mercattel.interwatts.com");
 	site("Der Spiegel","www.spiegel.de");
+	site("Saarbrücker Zeitung","www.sz-newsline.de");
 	site("The Star - Kansas City","www.kcstar.com");
 	site("UPI Archives","upi.siteways.com");
 	site("The Village Voice","www.villagevoice.com");
+	site("Times Classifieds","www.timesclassifieds.com");
+	site("Ti-News Search","www.ti-news.ch/search/");
 	siteEnd();
 
 /* Not-for-Profit */
@@ -324,6 +331,7 @@ right away.</blockquote>
 	site("Deal-Pc","deal-pc.com");
 	site("GAMESDomain","www.gamesdomain.com");
 	site("Indian Ballot","www.indianballot.com");
+	site("Israel Action Alert","www.israel-alert.com");
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
 	site("Linux BBS","www.linuxbbs.org");
@@ -372,6 +380,7 @@ right away.</blockquote>
 	title("Retail & Service Industry");
 	siteStart();
 	site("Access Micro","www.accessmicro.com");
+	site("Almetaal B.V.","www.almetaal.com");
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("Arena Fan","www.arenafan.com");
 	site("BART's Water Sports","www.bartswatersports.com");
@@ -385,8 +394,11 @@ right away.</blockquote>
 	site("Delia*s Inc.","www.delias.com");
 	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
+	site("FrenchToast.com","www.frenchtoast.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("HomePoint.com","www.homepoint.com");
+	site("IMT","www.imt.com");
+	site("Jennifer Furniture","www.jenniferfurniture.com");
 	site("Kellymoore Paints","www.kellymoore.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("Levolor Blinds","www.levolor.com");
@@ -403,8 +415,10 @@ right away.</blockquote>
 	site("Shipwreck Beads","www.shipwreck-beads.com");
 	site("Sunset Systems","www.sunsetsystems.com");
 	site("Swiss Online Bookstore","www.editore.ch");
+	site("TonerStop","www.tonerstop.com");
 	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
+	site("Vermeer","www.vermeer.com");
 	siteEnd();
 
 /* Sports */
@@ -452,7 +466,8 @@ right away.</blockquote>
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("TopHotels.com","www.tophotels.com");
-	site("Whistler Networks","www.whistler.net");
+	site("Whereis Street Atlas","www.whereis.com.au");
+	site("Whistler Resort Guide","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 	siteEnd();
 
@@ -484,6 +499,7 @@ right away.</blockquote>
 	site("Astrology Forum","www.astroforum.ch");
 	site("Banana Fish Bones","www.bananafishbones.de");
 	site("Bookmarklets","www.bookmarklets.com");
+	site("BuggEr.NeT","bugger.net");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Distributed.Net","www.distributed.net");

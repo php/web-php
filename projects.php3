@@ -71,12 +71,21 @@ activity is a requirement.
 </ul>
 <? endEntry();?>
 
+<? makeEntry("Double Choco Latte","http://dcl.netpedia.net/","Michael Dean & Tim Norman","mdean@kcnet.com"); ?>
+Double Choco Latte is a system for tracking bugs, changes,
+enhancements, requests for software. The system is suited for multiple
+products and multiple accounts (clients). It is in its infancy now and
+should only be downloaded by experienced users. Once the web interface
+is completed, a Java 2/Swing enabled version will be started.
+<? endEntry();?>
+
 <? makeEntry("Phorum","www.phorum.org/","Brian Moon","brianlmoon@iname.com"); ?>
-Forums and message boards are popping up all over the place. To this point the most 
-popular has been the free perl one at Matt's Script Archive. This project is trying
-to design a better forum with the use of PHP and a database. We are currently using
-MySQL, but hope to either have a database independent version or multiple versions for
-different databases in the future.
+Forums and message boards are popping up all over the place. To this
+point the most popular has been the free perl one at Matt's Script
+Archive. This project is trying to design a better forum with the use
+of PHP and a database. We are currently using MySQL, but hope to either
+have a database independent version or multiple versions for different
+databases in the future.
 <? endEntry();?>
 
 
@@ -177,9 +186,19 @@ a very complete and complex site and not your average, &quot;duh.. I like beer s
 <? endEntry();?>
 
 <? makeEntry("phpMyAdmin","www.htmlwizard.net/phpMyAdmin/","Tobias Ratschiller","tobias@dnet.it"); ?>
-phpMyAdmin is intended to handle the basic adminstration of MySQL. Currently it can create and drop 
-databases and tables, modify, delete and add records and keys and execute any SQL-statement. It also 
-features an overview of MySQL's activity and can import flat-file databases.
+phpMyAdmin is intended to handle the adminstration of MySQL over the
+web. Currently it can:
+<UL>
+<LI>create and drop databases
+<LI>create, copy, drop and alter tables
+<LI>delete, edit and add fields
+<LI>execute any SQL-statement, even batch-queries
+<LI>manage keys on fields
+<LI>load text files into tables
+<LI>create and read dumps of tables
+<LI>export data to CSV values
+<LI>administer multiple servers and single databases
+</UL>
 <? endEntry();?>
 
 <? makeEntry("DBE","edseek.com/developers.shtml","Jason Boxman","jasonb@edseek.com"); ?>
@@ -201,14 +220,19 @@ practical for them to use. Muppet works in every browser we've tested so far, in
 <? endEntry();?>
 
 <? makeEntry("phpAds","www.htmlwizard.net/phpAds/","Tobias Ratschiller" ,"tobias@dnet.it"); ?>
-phpAds is a banner management and tracking system written in PHP3. Currently it can:
-<ul>
-<li> manage multiple banners (any size) per client
-<li> view daily, overall and summary statistics , send stats via email
-<li> use HTML, GIF, JPEG and PNG-banners
-<li> show random, predefined or HTML/image banners
-<li> activate and de-activate individual banners
-</ul>
+phpMyAdmin is intended to handle the adminstration of MySQL over the
+web. Currently it can:
+<UL>
+<LI>create and drop databases
+<LI>create, copy, drop and alter tables
+<LI>delete, edit and add fields
+<LI>execute any SQL-statement, even batch-queries
+<LI>manage keys on fields
+<LI>load text files into tables
+<LI>create and read dumps of tables
+<LI>export data to CSV values
+<LI>administer multiple servers and single databases
+</UL>
 <? endEntry();?>
 
 <? makeEntry("The Diary","keilor.cs.umass.edu/diary/index.php3","Agustin Schapira" ,"schapira@cs.umass.edu"); ?>
@@ -230,15 +254,21 @@ is another PHP script which will work with this tables (view table,
 edit table, add/delete entries, search in the tables).
 <? endEntry();?>
 
-<? makeEntry("IRM","www.redshift.com/~yramin/atp/irm","Yann Ramin" ,"theatrus@usa.net"); ?>
-IRM is an easy to use and powerful web-based tracking utility for IT
-departments.  It stores detailed information on software and computers.
-It features a search engine to list, say, all computers running Windows
-95, and so on.  Another feature is the Tracking utility which stores a
-complete history of every computer, as well as outstanding repair jobs,
-prioritized and displayed in a variety of formats.  IRM also features
-user security, as well as several security groups users can be in
-(admin, normal, post-only).
+<? makeEntry("IRM","www.redshift.com/~yramin/atp/irm","Yann Ramin" ,"atrus@montereyhigh.com"); ?>
+IRM is a powerful tracking utility for computers and software.  Demos have
+been set up where IRM successfully tracked thousands of records. Features
+include:
+   <ul>
+   <li>A complete tracking utility with new and old jobs, followups, and more
+   <li>Software to computer relationships: Track the number of licenses of a
+piece of software.
+   <li>Search utilities that get better every day.
+   <li>A comprehensive number of fields, everything from Contact Person to the
+NIC brand.
+   <li>Multi-user, easy to use and light weight interface, user preferences
+   <li>Adding from templates and batch update support (update more than one
+computer at a time)
+   </ul>
 <? endEntry();?>
 
 <? makeEntry("eShop","eshop.liquid-web.com","Brad Atkins" ,"batkins@tamrockcanada.ca"); ?>
@@ -294,6 +324,22 @@ several languages.
 <? makeEntry("PHP3Domo","gateway.digitaria.com/users/chris/php3domo/","Chris Adams","chris@digitaria.com"); ?>
 Provides full SMTP validation of a mailing list subscription before forwarding
 the request on to Majordomo.
+<? endEntry();?>
+
+<? makeEntry("phpHoo","www.webreference.com/perl/xhoo/php1/","CDI","cdi@thewebmasters.net"); ?>
+Xhoo is a collaborative project whose goal is to create Open Source
+Web Catalog software for various platforms and languages that can
+selectively import data from the Open Directory Project. This project
+is currently being supported by Webreference.com. Early releases are
+currently available for Perl, ASP, and PHP.
+<? endEntry();?>
+
+<? makeEntry("kidSister","kidsister.tjw.org","Tony J. White","tjw@tjw.org"); ?>
+kidSister is a to-do list and a time logger. It was designed to help
+programmers organize many intricate tasks pertaining to multiple projects
+as well as keep track of the completion of such tasks. kidSister also has
+workgroup-like features that give its users the ability to &quot;spy&quot;  
+on each other when granted the proper permission.
 <? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
