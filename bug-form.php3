@@ -43,7 +43,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     echo("</pre>\n");
 
-    if (Mail($destination, "PHP3 bug-form report", $report, "From: $email")) {
+    if (Mail($destination, "Bug report:  $bug_short_desc", $report, "From: $email")) {
         echo("<p><h2>Mail sent to $destination...</h2>\n");
 	echo("Thank you for your help!\n");
     } else {
@@ -85,24 +85,34 @@ if (isset($cmd) && $cmd == "Send bug report") {
  </tr>
 </table>
 
-<h2>Bug description</h2>
+Bug description:  <input type="text" name="bug_short_desc"><br>
 
-Please remember to include the following:
+<table>
+<tr>
+<td valign="top">
+Please supply any information that may be helpful in fixing the bug:
 <ul>
- <li> Your configuration (such as the configure command and your
-      php3.ini file)
- <li> How the error can be reproduced
+	<li>A short script that reproduces the problem
+	<li>The list of modules you compiled PHP with (your configure line)
+	<li>A copy of your php3.ini file
+	<li>Any other information unique or specific to your setup
 </ul>
-
+</td>
+<td>
 <textarea cols=60 rows=15 name="bugdesc"></textarea>
+</td>
+</tr>
+</table>
 
 <p>
 
 <input type=hidden name=cmd value="Send bug report">
+<center>
 <input type=submit value="Send bug report">
+</center>
 
 </form>
 
 <? } ?>
 
-</body>
+<? include("include/footer.inc"); ?>
