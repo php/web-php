@@ -14,7 +14,7 @@ big guys.
 </dl>
 <p>
 
-<dt><b>WebTechniques: <a href="http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml">Dynamic Web Pages with PHP3</a>
+<dt><b>WebTechniques: <a href="http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml">Dynamic Web Pages with PHP3</a></b>
 <dd>As PHP gets an upgrade and name change, Rasmus explains its history and shows us some new features
 by building a dynamic Web photo album.
 </dl>
