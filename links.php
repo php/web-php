@@ -321,6 +321,13 @@ Brazilian PHP portal with many links and information</li>
 Brazilian PHP portal featuring tutorials, downloads, a forum and more</li>
 </ul></li>
 
+<li><b>Chinese</b>
+<ul>
+<li><a href="http://www.hooday.com">Exceed PHP</a><br>
+Opensource site with PHP, MySQL and Apache tutorials, articles
+and scripts</li>
+</ul></li>
+
 <li><b>Dutch</b>
 <ul>
 
