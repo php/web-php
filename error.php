@@ -16,10 +16,12 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 
-// Get URI for this request (without the leading slash)
+// Get URI for this request (without the leading slash, and
+// without any query string attached)
 // See langchooser.inc for more info on STRIPPED_URI
 // Also decode special URL parts, eg %20 into a space
-$URI  = urldecode(substr($_SERVER['STRIPPED_URI'], 1));
+$URI = substr($_SERVER['STRIPPED_URI'], 1);
+$URI = urldecode(preg_replace("!(\\?.+$)!", "", $URI));
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
@@ -221,7 +223,7 @@ if (in_array($URI, array('books', 'mirror-info'))) {
 
 // ============================================================================
 // Try to find the page using the preferred language as a manual page
-include_once "manual-lookup.inc";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/include/manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
     @header('HTTP/1.1 200 OK');
