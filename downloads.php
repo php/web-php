@@ -15,8 +15,8 @@ $SIDEBAR_DATA = '
  download site. Binaries available on external servers:
 </p>
 <ul class="simple">
- <li><a href="http://195.228.168.217/louise/index.php?MENU=6">AmigaOS</a></li>
- <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
+' .// <li><a href="http://195.228.168.217/louise/index.php?MENU=6">AmigaOS</a></li>
+ '<li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/ndk/php.htm">Novell NetWare</a></li>
  <li><a href="http://silk.apana.org.au/php/">OS/2</a></li>
  <li><a href="http://php.alexwaugh.com/">RISC OS</a></li>
