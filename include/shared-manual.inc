@@ -153,7 +153,7 @@ function makeAddNote();
 <TD ALIGN=right><?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 ?>
-<INPUT type=submit value "Add Note"><BR>
+<INPUT type=submit value="Add Note"><BR>
 <A HREF="/manual/about-notes.php3">About</A><BR>
 </TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
