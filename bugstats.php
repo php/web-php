@@ -61,6 +61,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 	$query.= " ORDER BY bug_type";
 
 	$result=mysql_unbuffered_query($query);
+
 	while($row=mysql_fetch_row($result)) {
 		$bug_type['all'][$row[1]]++;
 		if($row[7]=="Open") {
@@ -123,7 +124,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 	echo "<table>\n";
 
 	/* prepare for sorting by bug report count */
-	while(list($type,$value)=each($bug_type['all'])) {
+	foreach($bug_type['all'] as $type => $value) {
 		if(!isset($bug_type['closed'][$type]))    $bug_type['closed'][$type] = 0;
 		if(!isset($bug_type['open'][$type]))      $bug_type['open'][$type] = 0;
 		if(!isset($bug_type['critical'][$type]))  $bug_type['critical'][$type] = 0;
@@ -166,7 +167,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 	echo "<th>".sort_url('feedback')."</th></tr>\n";
 
 	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('critical', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
-	while(list($type,$value)=each($bug_type[$sort_by])) {
+	foreach($bug_type[$sort_by] as $type) {
 		if(($bug_type['open'][$type] > 0 || 
 			$bug_type['critical'][$type] > 0 ||
 			$bug_type['analyzed'][$type] > 0 ||
@@ -195,21 +196,15 @@ if(!strstr($MYSITE,"www.php.net")) {
 	echo "<tr bgcolor=#aabbcc><th align=right>Slowest report closure:</th><td bgcolor=#ccddee>".ShowTime($time_to_close[$c-1])."</td></tr>\n";
 	echo "<tr bgcolor=#aabbcc><th align=right>Quickest report closure:</th><td bgcolor=#ccddee>".ShowTime($time_to_close[0])."</td></tr>\n";
 	echo "</table>\n";
-	arsort($closed_by);
+
 	echo "<p><b>Who is closing the bug reports?</b>\n";
 	echo "<table>\n";
-	while(list($who,$value)=each($closed_by)) {
+	arsort($closed_by);
+	$i=0;
+	while($i < 20) {
+		list($who,$value)=each($closed_by);
 		echo "<tr bgcolor=#aabbcc><th>$who</th><td bgcolor=#ccddee>$value</td></tr>\n";
-	}
-	echo "</table>\n";
-
-	arsort($email);
-	echo "<p><b>Who is submitting bug reports?</b>\n";
-	echo "<table>\n";
-	while(list($who,$value)=each($email)) {
-		if ($value > 2) {
-			echo "<tr bgcolor=#aabbcc><th>$who</th><td bgcolor=#ccddee>$value</td></tr>\n";
-		}
+		$i++;			
 	}
 	echo "</table>\n";
 
