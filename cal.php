@@ -1,7 +1,7 @@
 <?php
   require_once 'prepend.inc';
 
-  if (!is_primary_site() || !strstr($MYSITE,"localhost")) {
+  if (!is_primary_site()) {
 	header("Location: http://www.php.net/cal.php");
 	exit;
   }
