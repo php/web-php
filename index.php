@@ -150,25 +150,52 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
-<?php print_link("http://conf.phpquebec.org/index.html", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+
+<?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
+
+<h1>First Bulgarian and Second Hungarian PHP Conference</h1>
+<p>
+ <span class="newsdate">[01-Dec-2003]</span>
+ The <a href="http://webdevmagazine.co.uk/conf/index_n.php">First Bulgarian
+ PHP conference</a> will be held within the framework of the 2004 Web Technology
+ Conference in Sofia in March. The goal of the meeting is to discuss the trends and
+ to popularize PHP among the business, education and services sectors. The organizers
+ welcome proposals for sessions and company presentations.
+</p>
+<?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
+<p>
+ Also coming in March 2004 is the <a href="http://www.phpconf.hu/">Second Hungarian
+ PHP Conference</a> building on last year's successful event. The Call For Papers is
+ open for the conference, speakers are welcome to hold sessions and workshops ranging
+ from PHP internals to web standard compliance. The event is exclusively in Hungarian.
+</p>
+
+<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Call for Speakers : PHP Qu&eacute;bec 2004</h1>
 <p>
  <span class="newsdate">[11-Nov-2003]</span>
-The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
-conference 2004, which will be held on March, 25th&amp;26th 2004. 
-We are looking for the best speakers, willing to 
-share their experience and skills with the educated crowd of PHP 
-programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
-2004 features 3 distinct tracks:<ul>
-<li>Professional PHP, dealing with php usage in professional 
-  environment and unusual businesses.</li>
-<li>Technical PHP, covering indeep details of PHP technics.</li>
-<li>Free software, about any free software, closely related to PHP.</li>
-</ul>
-<a href="http://conf.phpquebec.com/">Sessions</a> will be held in
-<a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
-<a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
+ The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
+ conference 2004, which will be held on March, 25th&amp;26th 2004. 
+ We are looking for the best speakers, willing to 
+ share their experience and skills with the educated crowd of PHP 
+ programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
+ 2004 features 3 distinct tracks:
+ <ul>
+  <li>
+   Professional PHP, dealing with php usage in professional 
+   environment and unusual businesses.
+  </li>
+  <li>
+   Technical PHP, covering indeep details of PHP technics.
+  </li>
+  <li>
+   Free software, about any free software, closely related to PHP.
+  </li>
+ </ul>
+ <a href="http://conf.phpquebec.com/">Sessions</a> will be held in
+ <a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
+ <a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
  For more information, read the <a 
  href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
 </p>
