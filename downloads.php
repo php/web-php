@@ -66,11 +66,11 @@ change mirrors at the bottom of the page.
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link("php-4.1.1-Win32.zip", "PHP 4.1.1 zip package"); ?> - 03 January 2002<br>
-  (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
+  <li><?php download_link("php-4.1.2-Win32.zip", "PHP 4.1.2 zip package"); ?> - 12 March 2002<br>
+  (CGI binary (with security fixes) plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
   support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php-4.1.1-installer.exe", "PHP 4.1.1 installer"); ?> - 03 January 2002<br>
-  (CGI only, MySQL support built-in, packaged as Windows installer to install and
+  <li><?php download_link("php-4.1.2-installer.exe", "PHP 4.1.2 installer"); ?> - 12 March 2002<br>
+  (CGI only (with fixes), MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
 <!--

@@ -77,6 +77,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+
+<h1>PHP Security Update - Windows Version</h1>
+<p>
+<font class="newsDate">[12-Mar-2002]</font>
+Following up from the previous annoucement, PHP 4.1.2 has been released for windows. The delayed release is due to 
+the fix of a further security issue only relating to the PHP for Windows version. More information on this change can
+be found <?php print_link('/release_4_1_2_win32.php', 'here'); ?>. All PHP - Windows users are encouraged to upgrade to
+the <?php print_link('/downloads.php', 'latest version'); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Security Update</h1>
 <p>
 <font class="newsDate">[27-Feb-2002]</font>
