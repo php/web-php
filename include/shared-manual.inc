@@ -161,7 +161,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 #	$blurb = strip_tags($blurb,'<br><p>');
 $blurb = htmlspecialchars($blurb);
 #	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
-$fixes = array('<br>','<p>');
+$fixes = array('<br>','<p>','</p>');
 reset($fixes);
 while (list(,$f)=each($fixes)) {
 	$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
