@@ -160,7 +160,7 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
 by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus, Richard Blume<BR>
 <SMALL>in German, Markt&Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
-<SMALL><A HREF="http://www.dynamic-webpages.de/11.buecher.php3?buchID=2">weitere Informationen</A><BR>
+<SMALL><A HREF="http://www.dynamic-webpages.de/11.buecher.php?buchID=2">weitere Informationen</A><BR>
 </TD>
 </TR>
 
@@ -412,8 +412,8 @@ by Randy Jay Yarger, George Reese and Tim King<BR>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
 >MySQL</A><BR>
 by Paul DuBois<BR>
-foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 <SMALL>
+Foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
 <A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
@@ -428,11 +428,12 @@ New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
 >MySQL</A><BR>
 Entwicklung, Implementierung und Referenz<BR>
 by Paul DuBois<BR>
+<SMALL>
 Vorwort von <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
-<SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
-</SMALL>
+<A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 in German, Markt&Technik, July 2000, ISBN 3-8272-5793-X, 864 Seiten<BR> 
 Translation by Dorothea Reder and Judith Muhr<BR>
+</SMALL>
 </TD>
 </TR>
 
