@@ -44,17 +44,19 @@
 	} else {
 		$words="";
 	}
-	if(isset($icase)) {
-		$icase="";
+	if(isset($icase) && $icase) {
+		$caseopt="";
+		$icase="1";
 	} else {
-		$icase="-i";
+		$caseopt="-i";
+		$icase="";
 	}
 	if(isset($fuzzy) && $fuzzy) {
 		$fuzzy="-2";
 	} else {
 		$fuzzy="";
 	}
-	exec("$glimpse -c $icase $words $fuzzy -y -H $gdir '$pattern' | /usr/bin/sort -r -t: -n -k 2,2",&$result);
+	exec("$glimpse -c $caseopt $words $fuzzy -y -H $gdir '$pattern' | /usr/bin/sort -r -t: -n -k 2,2",&$result);
 	$num = count($result);
 	if($num==0) {
 		echo "<p align=center>No matches found!</p>";
