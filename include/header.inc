@@ -81,7 +81,7 @@ if (!$head_closed) {
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_search');return true" onMouseOut="rolloff('sm_search')"<? } ?>>
 <img src="<? echo $root_url; ?>jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
+<a href="<?echo "$root_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
 <img src="<? echo $root_url; ?>jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
 </nobr>
