@@ -930,6 +930,17 @@ array (
     /* inform. link */ "http://www.oreilly.com/catalog/regex/",
     /* language     */ "en"
   )
+
+  array(
+    /* title[s]     */ "PHP by Example",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0789725681/wwwphpnet",
+    /* author[s]    */ array("Toby Butzon"),
+    /* auth link[s] */ "",
+    /* image        */ "phpexample.jpg",
+    /* information  */ "Que Publishing, November 2001, ISBN 0-7897-2568-1, 450 pages",
+    /* inform. link */ "",
+    /* language     */ "en"
+  )
   )
 );
 
