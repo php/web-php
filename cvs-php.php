@@ -101,12 +101,12 @@ of the CVS client.<P>
 All CVS commit messages get sent to the php-cvs mailing list.  You should subscribe yourself to this mailing
 list.  Instructions for subscribing are on the <a href="/support.php">Support</a> page.
 <P>
-CVS itself is quite easy to use.  Follow the steps listed on the <a href="http://cvs.php.net">CVS Web Interface</a>
+CVS itself is quite easy to use.  Follow the steps listed on the <a href="anoncvs.php">anonymous CVS</a>
 page for checking out your tree.  Substitute your own user name and password for the cvsread/phpfi combination listed there.
 You will not be able to do this until you receive confirmation of your account having been created though.
 <P>
 Next, once you have your CVS tree you need to know the following commands.  They should all be executed from within
-the checked out tree.  eg. cd php3
+the checked out tree.  eg. cd php4
 <dl>
 <dt><b><tt>cvs update -dP</tt></b>
 <dd>This fetches all updates made by others and brings your tree up to date.  Before starting to edit anything
