@@ -282,7 +282,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
 <table border="0" cellpadding="0" cellspacing="0">
  <tr valign="top">
-<?php if (isset($SIDEBAR_DATA)):?>
+<?php if (!empty($SIDEBAR_DATA)):?>
   <td width="200" bgcolor="#f0f0f0">
    <table width="100%" cellpadding="2" cellspacing="0" border="0">
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
@@ -312,7 +312,7 @@ function commonFooter() {
            $enclosed, $RSIDEBAR_DATA, $page_creation_start;
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
-		if(isset($RSIDEBAR_DATA)) {?>
+		if (!empty($RSIDEBAR_DATA)) { ?>
 <td bgcolor="#cccccc" background="/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <td width="175" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">

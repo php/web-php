@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
    If you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn!
 */
@@ -11,8 +11,8 @@ $timestamps[] = @getlastmod();
 
 /*
    The date of prepend.inc represents the age of ALL
-   included files. Please touch it if you modify an
-   another include file (and the modification affects
+   included files. Please touch it if you modify any
+   other include file (and the modification affects
    the display of the index page). The cost of stat'ing
    them all is prohibitive. Also note the file path,
    we aren't using the include path here.
@@ -29,7 +29,8 @@ $timestamp = max($timestamps);
 $tsstring = gmdate("D, d M Y H:i:s ", $timestamp) . "GMT";
 
 // Check if the client has the same page cached
-if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
+if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
+    ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring)) {
     header("HTTP/1.1 304 Not Modified");
     exit();
 }
@@ -61,7 +62,7 @@ make_link("/usage.php", "Netcraft Survey") . '.
 </p>
 
 <p>
-PHP is a project of the ' . 
+PHP is a project of the ' .
 make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
 
@@ -100,12 +101,15 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 // image types in priority order
 $types = array("gif", "jpg", "png");
 
+// Default right sidebar
+$RSIDEBAR_DATA = '';
+
 // Go through all possible types
 while (list(,$ext) = each($types)) {
-    
+
     // Check if file exists for this type
     if (file_exists("backend/mirror." . $ext)) {
-        
+
         // Add text to rigth sidebar
         $RSIDEBAR_DATA .= "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
 
@@ -118,7 +122,7 @@ while (list(,$ext) = each($types)) {
             'backend',
             0
         );
-        
+
         // Add size information depending on mirror type
         if (is_primary_site() || is_backup_primary()) {
             $img = resize_image($img, 125, 125);
@@ -127,9 +131,9 @@ while (list(,$ext) = each($types)) {
         }
 
         // End mirror specific part
-        $RSIDEBAR_DATA .= make_link(mirror_provider_url(), $img) . 
+        $RSIDEBAR_DATA .= make_link(mirror_provider_url(), $img) .
                           '</div><br />' . hdelim();
-        
+
         // We have found an image
         break;
     }
@@ -140,13 +144,13 @@ $fp = @fopen("backend/events.csv", "r");
 
 // If we were able to open the file
 if ($fp) {
-    
+
     // Current month number (for delimiter additions)
     $cm = 0;
-    
+
     // Event duplication check hash
     $seen = array();
-    
+
     // While we can read the events file
     while (!feof($fp)) {
 
@@ -156,14 +160,14 @@ if ($fp) {
         // Fgetcvs() returns an array with a single null element
         // for a blank line, which we need to skip
         if ($d === NULL) { continue; }
-        
+
         // If the month number changed
-        if ($cm != (int) $m) { 
-            
+        if ($cm != (int) $m) {
+
             // If we are not at the begining
             if ($cm) {
                 $RSIDEBAR_DATA .= "<br />\n";
-            } 
+            }
             // If we are at the begining
             else {
                 $RSIDEBAR_DATA .= '<div align="center"><h3>Upcoming Events<br /><a href="submit-event.php">[add event]</a></h3></div>';
@@ -171,22 +175,22 @@ if ($fp) {
 
             // Update current month information
             $cm = (int) $m;
-            
+
             // Add month name
-            $RSIDEBAR_DATA .= "<h4>" . strftime('%B', mktime(12, 0, 0, $cm, $d, $y)) . "</h4>\n"; 
-            
+            $RSIDEBAR_DATA .= "<h4>" . strftime('%B', mktime(12, 0, 0, $cm, $d, $y)) . "</h4>\n";
+
             // We have not seen any events in this month
             $seen = array();
         }
-        
+
         // There is no event with this description in this month
-        if (!$seen[$desc]) {
+        if (!isset($seen[$desc])) {
             // Add event to sidebar
             $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">" .
                               htmlspecialchars(stripslashes($desc)) .
                               "</a><br />\n";
             // Set seen flag
-            $seen[$desc] = true;
+            $seen[$desc] = TRUE;
         }
     }
 
@@ -204,9 +208,9 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP 4.3.2RC2 Released</h1>
 <p>
 <font class="newsdate">[29-Apr-2003]</font>
-<a href="http://qa.php.net/">PHP 4.3.2RC2</a> has been released. 
+<a href="http://qa.php.net/">PHP 4.3.2RC2</a> has been released.
 This is the second release candidate and should have no critical problems/bugs.
-Nevertheless, please download and test it as much as possible on real-life 
+Nevertheless, please download and test it as much as possible on real-life
 applications to uncover any remaining issues.
 </p>
 
