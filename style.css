@@ -155,5 +155,9 @@ table#cal div.event {
 
 form.thin {
         margin-bottom: 0px;
-		margin-top: 0px;
+	margin-top: 0px;
+}
+
+.parameter:after {
+	content: " ";
 }
