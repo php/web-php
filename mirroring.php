@@ -59,6 +59,7 @@ $minute = rand(0, 59);
 
 <pre>
     rsync -avzC --timeout=600 --delete --delete-after \
+      --include='distributions/*.exe' \
       rsync.php.net::phpweb /your/local/path 
 </pre>
 
