@@ -61,7 +61,7 @@ German speaking portal site with tutorials, tips and tricks, job advertisements,
 <LI><A HREF="http://www.php-homepage.de/">PHP-Homepage</A><BR>
 German site about PHP with scripts, tips, foren, MyGuestBook, articles, news and more.<BR>
 <LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
-German site with installation guides, tips & scripts, BestOfGML, book reviews, german manual, links and more.<BR>
+German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
 <LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
 is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
