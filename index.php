@@ -145,6 +145,33 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
+<h1>PHP West: Security Conference - Call for Speakers Announced</h1>
+
+<p>
+ <span class="newsDate">[07-Mar-2005]</span>
+ <a href="http://www.phpwest.com">PHP West</a>, a division of Open Source
+ Events, is holding their second conference in Vancouver, British Columbia on
+ PHP and Open Source Security. The conference will be on June 11th, 2005 and
+ will be a one day, single track event. Open Source Events has published a
+ call for speakers on there website for anyone interested to submit a
+ talk.
+</p>
+<p>
+ <a href="http://www.osevents.com">Open Source Event's</a>
+ last conference was focused on PHP Web Services which hosted more than 160
+ attendees in the Vancouver Planetarium and had the pleasure of welcoming
+ Rasmus Lerdorf, among many other industry experts into Vancouver to speak on
+ variant topics of Web Services geared towards application usage within a
+ enterprise business environment.
+</p>
+<p>
+ You can look forward to the same caliber of speakers to grace the PHP
+ and Open Source Security conference on June 11th, 2005.
+</p>
+
+<hr />
+
 <h1>PHP &amp; PEAR at FOSDEM 2005</h1>
 
 <p>
@@ -166,7 +193,6 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
-
 
 <h1>php|symphony</h1>
 
