@@ -133,7 +133,7 @@ endif;
 <DL>
 
 <? makeName("Jouni Ahto","jah@cultnet.fi",0);?>
-  <UL TYPE=DISC><li>Postgres, Informix/UL><BR>
+  <UL TYPE=DISC><li>Postgres, Informix</UL><BR>
 
 <? makeName("Alex Belits","abelits@phobos.illtel.denver.co.us",0);?>
   <UL TYPE=DISC><li>fhttpd support</UL><BR>
