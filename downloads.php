@@ -5,8 +5,8 @@ commonHeader("Downloads ");
 
 <h2>PHP 4</h2>
 <ul>
-  <li><a href="do_download.php?download_file=php-4.0.0.tar.gz">PHP 4.0.0 Release Source</a></li> - 22 May 2000</li>
-  <li><a href="do_download.php?download_file=php-4.0.0-Win32.zip">PHP 4.0.0 Release Binaries for Win32</a> - 22 May 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+  <li><a href="do_download.php?download_file=php-4.0.0.tar.gz&source_site=<?php echo $SERVER_NAME; ?>">PHP 4.0.0 Release Source</a></li> - 22 May 2000</li>
+  <li><a href="do_download.php?download_file=php-4.0.0-Win32.zip&source_site=<?php echo $SERVER_NAME; ?>">PHP 4.0.0 Release Binaries for Win32</a> - 22 May 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
   <LI>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
   <li>To download the latest development version, see the <a href="version4/cvs.php">instructions on using CVS</a>.</li>
   <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer Beta</a> for PHP 4.0.0 is available on Zend Technologies' web site.</li>
