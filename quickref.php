@@ -16,6 +16,7 @@
 */
 
 // Ensure that our environment is set up
+$_SERVER['BASE_PAGE'] = 'quickref.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Constant values for the display
