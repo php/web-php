@@ -39,6 +39,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
 ?>
+<h1>PHP 4.0.5 Released!</h1>
+
+<p>
+<font class="newsDate">[30-Apr-2001]</font>
+<a href="downloads.php">PHP 4.0.5</a> is a maintenance release, that features many bug fixes from
+PHP 4.0.4, as well as output compression, new experimental
+FastCGI support, and significantly improved thread-safe versions.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 
 <?/* move this entry to the top when you update it! */?>
 <h1>

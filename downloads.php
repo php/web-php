@@ -9,13 +9,13 @@ $server = $SERVER_NAME;
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.0.4pl1.tar.gz", "PHP 4.0.4pl1"); ?> - 11 January 2001</li>
+  <li><?php download_link("php-4.0.5.tar.gz", "PHP 4.0.5"); ?> - 30 April 2001</li>
 </ul>
 
 <h2>Win32 Binaries</h2>
 <ul>
-  <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> - 13 January 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php404pl1-installer.exe", "PHP 4.0.4pl1"); ?> - 13 January 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
+  <li><?php download_link("php-4.0.5-Win32.zip", "PHP 4.0.5"); ?> - 30 April 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
+  <li><?php download_link("php405-installer.exe", "PHP 4.0.5"); ?> - 30 April 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
 -->
@@ -42,7 +42,7 @@ $server = $SERVER_NAME;
   <li>For downloadable documentation, go to the <a href="docs.php">documentation</a> page
   <li>Get some <a href="download-logos.php">PHP logos</A> for your site
   <li>To download the latest development version, see the <a href="anoncvs.php">instructions on using anonymous CVS</a>
-  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer 1.0.0</a> for PHP 4.0.3 and later is available on Zend Technologies' web site.
+  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer</a> for PHP 4.0.3 and later is available on Zend Technologies' web site.
 </ul>
 
 <? echo hdelim(); ?>
