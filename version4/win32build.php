@@ -4,8 +4,8 @@ commonHeader("PHP 4.0 build instructions - Win32 platform");
 ?>
 
 <P>These build instructions were compiled from various postings on the php3 
-newsgroup, and tested on a freshly formatted WinNT 4.0 SP4 machine with 
-Microsoft Visual C++ V6.  It also believed to work on Windows 95/98 or
+newsgroup, and tested on a WinNT 4.0 SP4, Win98, and Win2K machines with 
+Microsoft Visual C++ V6.  It also believed to work with Windows 95 and
 Visual C++ V5.</P>
 <P>
 If you have suggestions or additions, send them to 
