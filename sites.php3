@@ -89,6 +89,7 @@ right away.</blockquote>
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
+	site("FilmFrenzy.com","filmfrenzy.com");
 	site("HitList","www.hitlist.com");
 	site("PromoPodium","www.promopodium.nl");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
