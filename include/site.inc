@@ -12,7 +12,7 @@ $MIRRORS = array(
    "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1, 1),
    "http://at.php.net/"           => array("at", "Goodie Domain Service", "gds", "http://gd.tuwien.ac.at/", 1, 0),
    "http://br.php.net/"           => array("br", "SST Internet", "sst", "http://www.sst.com.br/", 1, 0),
-   "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
+#  "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://php.easydns.com/"      => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0),
    "http://cl.php.net/"           => array("cl", "Amerikanclaris Internet", "amerikanclaris", "http://wwww.amerikanclaris.com/", 1 ,0),
    "http://www.php.cz/"           => array("cz", "Inway", "inway1", "http://www.inway.cz/", 1 , 0),
@@ -61,7 +61,7 @@ $MIRRORS = array(
    "http://bugs.php.net/"         => array("us", "chek.com", "chek", "http://www.chek.com/", 2, 1),
    "http://php.he.net/"           => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0),
    "http://php.calinet.com/"      => array("us", "California Internet Connection", "calinet", "http://home.calinet.com/", 1, 0),
-   "http://za.php.net/"      => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0),
+   "http://za.php.net/"           => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0),
    ""                             => array("xx", "Unknown", "none", "/", 1, 0)
 );
 
