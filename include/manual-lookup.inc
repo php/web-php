@@ -11,22 +11,22 @@ function tryprefix($cc, $func, $prefix) {
     $func = ereg_replace('\(.*\)',"-",$func);
 
     $try = "/manual/${cc}/${prefix}${func}.php";
-    if (file_exists("$DOCUMENT_ROOT$try")) return $try;
+    if (@file_exists("$DOCUMENT_ROOT$try")) return $try;
 
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
     $try = "/manual/${cc}/${prefix}${nosp}.php";
-        if (file_exists("$DOCUMENT_ROOT$try")) return $try;
+        if (@file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
     $try = "/manual/${cc}/${prefix}${dasp}.php";
-        if (file_exists("$DOCUMENT_ROOT$try")) return $try;
+        if (@file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
     $try = "/manual/${cc}/${prefix}${noul}.php";
-        if (file_exists("$DOCUMENT_ROOT$try")) return $try;
+        if (@file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     return "";
 }
