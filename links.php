@@ -134,7 +134,7 @@ German site about PHP with scripts, tips, forums, MyGuestBook, articles, news an
 German site with installation guides, tips &amp; scripts, BestOfGML,
 WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more<br>
 
-<li><a href="http://www.phpcrawler.de.de/">PHPCrawler</a><br>
+<li><a href="http://www.phpcrawler.de/">PHPCrawler</a><br>
 Searchengine over German PHP-sites with webaccess to newsgroups<br>
 
 <li><a href="http://www.phpwelt.de/">PHPWelt</a><br>
