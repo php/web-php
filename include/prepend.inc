@@ -6,6 +6,7 @@
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);
+unset($LANG);
 
 // Backward compatible array creation. After this point, the
 // PHP 4.1.0+ arrays can be used to access variables coming
