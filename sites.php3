@@ -100,7 +100,7 @@
 
 	echo "</tr><tr>\n";
 	title("Service Industry");
-	title("&nbsp;");
+	title("Not-for-Profit");
 	title("Miscellaneous");
 
 	echo "</tr><tr><td align=top>\n";
@@ -108,7 +108,8 @@
 	site("SuperCuts","www.supercuts.com");
 
 	echo "<br></td><td align=top>\n";
-	/*  */
+	/* Not-for-Profit */
+	site("National Marrow Donor Program","www.marrow.org");
 
 	echo "<br></td><td align=top>\n";
 	/* Misc. */
