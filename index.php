@@ -159,13 +159,13 @@ commonHeader("Hypertext Preprocessor");
  function list search option selected, you will get a list of suggested
  functions starting with the letters you typed in. You can browse the list
  with the up/down keys, and you will be able to autocomplete the function
- name, once there is only one suggestion left, with the spacebar.
+ name with the spacebar.
 </p>
 <p>
  If you are not interested in this feature, you can turn it
  off for yourself on the <a href="/my.php">My PHP.net</a> page.
- <a href="/search.php">More information</a> about this feature is
- available on the search page.
+ <a href="/search.php">More information</a> about is available on
+ the search page.
 </p>
 
 <hr />
