@@ -14,13 +14,11 @@ $MIRRORS = array(
    "http://br.php.net/"           => array("br", "SST Internet", "sst", "http://www.sst.com.br/", 1, 0),
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://php.easydns.com/"      => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0),
-   "http://ch.php.net/"           => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/" ,1 ,0),
    "http://cl.php.net/"           => array("cl", "Amerikanclaris Internet", "amerikanclaris", "http://wwww.amerikanclaris.com/", 1 ,0),
    "http://www.php.cz/"           => array("cz", "Inway", "inway1", "http://www.inway.cz/", 1 , 0),
    "http://de.php.net/"           => array("de", "@GLOBE GmbH", "globe", "http://www.globe.de/", 1, 0),
    "http://www.php3.de/"          => array("de", "Schlund + Partner", "schlund", "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1),
    "http://dk.php.net/"           => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/",1,0),
-   "http://es.php.net/"           => array("es", "IBD Internet", "ibd", "http://www.ibd.es/",1,0),
    "http://fi.php.net/"           => array("fi", "Netlife Oy", "netlife", "http://www.netlife.fi/",1,0),
    "http://fi2.php.net/"          => array("fi", "NIC Finland", "nic", "http://www.nic.fi/",1,0),
    "http://fr.php.net/"           => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0),
@@ -46,9 +44,11 @@ $MIRRORS = array(
    "http://pt.php.net/"           => array("pt", "Telenet", "telenet", "http://www.telenet.pt/", 1, 1),
    "http://ro.php.net/"           => array("ro", "Politehnica University of Timisoara","upt", "http://www.utt.ro/",1,0),
    "ftp://ftp.utt.ro/mirrors/php3/" => array("ro", "University of Timisoara","upt", "http://www.utt.ro/",1,0),
-#   "http://sg.php.net/"           => array("sg", "Com5 Productions", "comnet", "http://www.com5.net/", 1, 0),
    "http://ru.php.net/"           => array("ru", "Direct Internet", "directnet", "http://www.dn.ru/", 1, 0),
+#   "http://sg.php.net/"           => array("sg", "Com5 Productions", "comnet", "http://www.com5.net/", 1, 0),
    "http://sk.php.net/"           => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1, 0),
+   "http://es.php.net/"           => array("es", "IBD Internet", "ibd", "http://www.ibd.es/",1,0),
+   "http://ch.php.net/"           => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/" ,1 ,0),
    "http://tr.php.net/"           => array("tr", "Bilkent Sunsite", "sunsite", "http://sunsite.bilkent.edu.tr/", 1, 0),
    "http://ua.php.net/"           => array("ua", "PACOnet", "paco", "http://www.paco.net.ua/", 1, 0),
    "ftp://ua.php.net/"            => array("ua", "PACOnet", "paco", "http://www.paco.net.ua/", 1, 0),
@@ -97,6 +97,7 @@ $COUNTRIES = array(
    "za" => "South Africa",
    "xx" => "Other"
 );
+
 
 $MYSITE='http://'.getenv("SERVER_NAME").'/';
 
