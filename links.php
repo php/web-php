@@ -99,11 +99,13 @@ A growing list of PHP scripts<br>
 <li><a href="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</a><br>
 A collection of PHP scripts<br>
 
+<li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
+An exhaustive PHP scripts collection, with more 400 useful functions (English and French).<br>
+
 <li><a href="http://www.roadsend.com/siteManager/">SiteManager</a><br>
 A base library for PHP sites and developers<br>
 
 </ul>
-
 
 <h4>PHP Tutorials</h4>
 
@@ -124,6 +126,9 @@ Lots of tutorials/instructions related to Apache, PHP and MySQL<br>
 <h4>Non-English PHP Sites</h4>
 
 <ul>
+<li><b>German</b>
+
+<ul>
 <li><a href="http://www.php-center.de/">PHP Center</a><br>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more<br>
 
@@ -141,6 +146,13 @@ Searchengine over German PHP-sites with webaccess to newsgroups<br>
 A German website using PHP to offer free services, a huge script-archive,
 free scripts, tutorials and many more<br>
 
+</ul>
+<li><b>French (Fran&ccedil;ais)</b>
+<ul>
+
+<li><a href="http://www.nexen.net/">Nexen.net</a><br>
+Home of PHP French documentation, with comprehensive technical informations<br>
+
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A french gateway to PHP related contents<br>
 
@@ -153,8 +165,16 @@ A ring of French PHP Sites<br>
 
 <li><a href="http://johng.free.fr/">FAQ of the French PHP newsgroup</a><br>
 
+</ul>
+<li><b>Dutch</b>
+<ul>
+
 <li><a href="http://php.pagina.nl/">Pagina</a><br>
 A Dutch PHP portal that lists a lot of PHP links, including free hosting<br>
+
+</ul>
+<li><b>Italian</b>
+<ul>
 
 <li><a href="http://www.tutorials.it/">Tutorials.it</a><br>
 An Italian site that provides a variety of developer tutorials,
@@ -164,10 +184,14 @@ with a small PHP section<br>
 An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources<br>
 
+</ul>
+<li><b>Brazilian</b>
+<ul>
+
 <li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
 Brazilian PHP Portal with many link and informations<br>
 </ul>
-
+</ul>
 <?php echo hdelim(); ?>
 
 <h1>Developers and Job Opportunities</h1>
