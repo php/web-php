@@ -34,7 +34,7 @@ new internal fast_call_user_function() function. (Sterling)</li>
    <li>"register_long_arrays". (Zeev)</li>
   </ul>
 </li>
-<li>Improved the streams support: (Wez, Sarah, Ilia)
+<li>Improved the streams support: (Wez, Sara, Ilia)
  <ul>
   <li>Improved performance of readfile(), fpassthru() and some internal streams
   operations under Win32.</li>
@@ -53,6 +53,9 @@ new internal fast_call_user_function() function. (Sterling)</li>
   all platforms.</li>
   <li>Added 'string.base64' stream filter.</li>
   <li>Renamed stream_register_wrapper() to stream_wrapper_register().</li>
+  <li>Added "ftp://" wrapper support to opendir(), stat() and unlink().</li>
+  <li>Added context options 'method', 'header' and 'content' for "http://" fopen 
+  wrapper.</li>
  </ul>
 </li>
 <li>Improved the GD extension: (Pierre-Alain Joye, Ilia)
@@ -118,9 +121,6 @@ the line endings and to skip empty lines. (Ilia)</li>
 <li>Added missing multibyte (unicode) support and numeric entity support to 
 html_entity_decode(). (Moriyoshi)</li>
 <li>Added IPv6 support to ext/sockets. (Sara)</li>
-<li>Added "ftp://" wrapper support to opendir(), stat() and unlink(). (Sara)</li>
-<li>Added context options 'method', 'header' and 'content' for "http://" fopen 
-wrapper. (Sara)</li>
 <li>Added input filter support. See README.input_filter for more info. (Rasmus)</li>
 <li>Added a replace count for str_[i]replace(), see bug #8218. (Sara)</li>
 <li>Fixed is_executable() to be available also on Windows. (Shane)</li>
