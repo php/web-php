@@ -2,8 +2,8 @@
 header("Vary: User-Agent");
 require_once 'prepend.inc';
 
-function commonStatHeader($title,0,1) {
-	commonHeader($title);
+function commonStatHeader($title) {
+	commonHeader($title,0,1);
 }
 
 function commonStatBody($title) {
