@@ -158,7 +158,7 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
-  <li>PHP 4.3.0
+  <li>PHP 4.3.1
    <ul>
     <li><?php download_link('php-4.3.1.tar.bz2','PHP 4.3.1 (tar.bz2)'); ?> - 17 February 2003<br />
     <span class="md5sum">md5: bbfe584acb3549c62bb61355165e2ca6</span>
