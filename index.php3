@@ -8,10 +8,10 @@
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently in a <a href="why_beta.php3">public BETA</a> testing period.
 
 <ul>
-<li><a href="register.php3">Register PHP 3.0</a> <font size="-2">(Completely free, required before downloading;  Forgot your password?  <a href="oh_no.php3">Get it back here.</a>)</font>
+<li><a href="register.php3">Register PHP 3.0!</a> <font size="-2">(Completely free, required before downloading;  Forgot your password?  <a href="oh_no.php3">Get it back here.</a>)</font>
 <li><a href="download.php3">Download PHP 3.0!</a>
 <li><a href="documentation.php3">Documentation Resources</a>
-<li><a href="config.php3">Configure PHP 3.0</a> online (JavaScript required)
+<li><a href="config.php3">Configure PHP 3.0</a> online <font size="-2">(JavaScript required)</font>
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
 <!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
