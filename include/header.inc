@@ -64,7 +64,8 @@ function rolloff(imgName) {
 <body background="jpgs/<?echo $bkg?>" bgcolor="#ffffff" text="#032F5B" link="#537492" vlink="#000000">
 <FONT FACE="Verdana, Arial, Helvetica">
 <table border=0 width=100% cellpadding=0 cellspacing=0 nowrap cols=3 frame=none>
-<tr><td><font size=+2 color="#ffffff"><i>PHP3</i></font></td>
+<tr>
+<td><font size=+2 color="#ffffff"><i>PHP3</i></font></td>
 <td><font size=+2 color="#ffffff"><?echo $title?></font></td>
 <td nowrap>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
