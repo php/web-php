@@ -191,6 +191,26 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://php-con.com/", make_image("phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
+
+<h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
+<p>
+<font class="newsdate">[01-Feb-2003]</font>
+PHPCon announces PHPCon East 2003 in New York City. This conference
+features two days of technical learning with speakers such as
+Rasmus Lerdorf, Michael Radwin, and Jeremy Zawodny. PHPCon East also
+adds a third, full day of tutorials offering practical, cogent PHP
+solutions and ideas including: MySQL and PHP; Building and Consuming Web
+Services with SOAP; Getting Started with PHP; High Performance PHP:
+Profiling and Benchmarking; and more!</p>
+
+<p>PHPCon East has discounts for early registration, students, non-profits,
+and Tutorial/Conference packages. Early Bird Deadline is March 31st. For
+more program information, <a href="http://www.php-con.com/return.php?i=ph2">visit
+the PHPCon website</a>.</p>
+
+<?php echo hdelim(); ?>
+
 <h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
 <p>
 <font class="newsdate">[30-January-2003]</font>
