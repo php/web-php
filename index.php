@@ -190,7 +190,7 @@ commonHeader("Hypertext Preprocessor");
  <a href="/downloads.php">PHP 5.0 Beta 3</a> has been released.  The third beta of PHP is also scheduled
  to be the last one (barring unexpected surprises).  This beta incorporates
  dozens of bug fixes since Beta 2, better XML support and many other
- improvements, some of which are documented in the <a href="/ChangeLog-5.php#5.0.0b3">NEWS file</a>.
+ improvements, some of which are documented in the <a href="/ChangeLog-5.php#5.0.0b3">ChangeLog</a>.
 </p>
 <p>
  Some of the key features of PHP 5 include:
@@ -398,7 +398,7 @@ commonHeader("Hypertext Preprocessor");
  <a href="release_4_3_4.php">PHP 4.3.4</a>. This release contains a fair
  number of bug fixes and we recommend that all users of PHP upgrade to 
  this version. Full list of fixes can be found in the 
- <a href="ChangeLog-4.php#4.3.4">NEWS</a> file.
+ <a href="ChangeLog-4.php#4.3.4">ChangeLog</a>.
 </p>
 
 <hr />
