@@ -3,7 +3,7 @@ require("shared.inc");
 
 $current = "3.0.5";
 $win32_current = "3.0.5";
-$rpm_current = "3.0.4";
+$rpm_current = "3.0.5";
 
 $filesizes["php-3.0.5.tar.gz"]="1,270 kB";
 $filesizes["php-3.0.4.tar.gz"]="1,215 kB";
@@ -146,13 +146,13 @@ while ($site = current($showsites)) {
 		echo "\n";
 	} else {
 		echo "<LI>";
-		download_link($src_file, "($method) PHP $rpm_current source");
+		download_link($src_file, "($method) PHP $current source");
 		echo "\n";
 		echo "<LI>";
 		download_link($win32_zfile, "($method) $win32_current Win32 binary");
 		echo "\n";
 		echo "<LI>";
-		download_link($src_rpm, "($method) PHP $current source RPM");
+		download_link($src_rpm, "($method) PHP $rpm_current source RPM");
 		echo "\n";
 	}
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
