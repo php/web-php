@@ -185,7 +185,7 @@ A web based recipe calculator with a recipe database and other beer related good
 a very complete and complex site and not your average, &quot;duh.. I like beer site&quot;.
 <? endEntry();?>
 
-<? makeEntry("phpMyAdmin","www.htmlwizard.net/phpMyAdmin/","Tobias Ratschiller","tobias@dnet.it"); ?>
+<? makeEntry("phpMyAdmin","www.phpwizard.net/phpMyAdmin/","Tobias Ratschiller","tobias@dnet.it"); ?>
 phpMyAdmin is intended to handle the adminstration of MySQL over the
 web. Currently it can:
 <UL>
@@ -219,7 +219,7 @@ TWIG (formerly known as Muppet) came about because several of our users were run
 practical for them to use. Muppet works in every browser we've tested so far, including lynx.
 <? endEntry();?>
 
-<? makeEntry("phpAds","www.htmlwizard.net/phpAds/","Tobias Ratschiller" ,"tobias@dnet.it"); ?>
+<? makeEntry("phpAds","www.phpwizard.net/phpAds/","Tobias Ratschiller" ,"tobias@dnet.it"); ?>
 phpAds is a free banner management system for PHP. Currently it can
 <UL>
 <LI>manage multiple clients (each with own login)
