@@ -372,12 +372,15 @@ function clean_note($text) {
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
 
+    /* preserve linebreaks */
+    	$text = str_replace("\n", "<br>", $text);
+
     /* this will only break long lines */
     if (function_exists("wordwrap")) {
         $text = wordwrap($text);
     }
 
-    $text = "<pre class=\"note\">".$text."</pre>";
+    $text = "<p class=\"note\">".$text."</p>";
     return $text;
 }
 
