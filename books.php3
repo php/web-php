@@ -195,6 +195,35 @@ by Wilson Peng<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="
+http://www.drmaster.com.tw/information.asp?書號=DB20023"
+><IMG SRC="/gifs/db20023" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+Using PHP and MySQL (with FreeBSD and Apache)<BR>
+by C.C.J.<BR>
+<SMALL>in Traditional Chinese<BR>
+<A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20023">more info</A>
+| <A HREF="http://www.dw.com.tw/book.html">purchase</A><BR>
+July 1999, ISBN 957-527-168-8
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20029"
+><IMG SRC="/gifs/db20029.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+Examples of PHP and MySQL<BR>
+by C.C.J.<BR>
+<SMALL>in Traditional Chinese<BR>
+<A HREF="http://www.dw.com.tw/book.html">more info</A>
+| <A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20029">purchase</A><BR>
+February 2000, ISBN 957-527-224-2
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument"
 ><IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
