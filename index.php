@@ -109,7 +109,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
 
-<h1>LinuxTag 2002, 6 - 9th June</h1>
+<h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
 <font class="newsdate">[23-May-2002]</font> PHP will be attending 
 <a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&lang=en">LinuxTag</a> 
 again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
