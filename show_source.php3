@@ -1,8 +1,10 @@
+<? isset($page_url) or die("No page URL specified."); ?>
 <html>
-<body>
+<head>
+<title>Source of <? echo $page_url ?></title>
 <?
-
-isset($page_url) or die("No page URL specified.");
+  $title="Source of $page_url";
+  include "header";
 
 /* remove path prefix if exists */
 if ($tmp=strrchr($page_url,"/")) {
