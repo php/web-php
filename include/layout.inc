@@ -55,6 +55,9 @@ function site_header($title = '', $config = array())
     // Default to empty array if improper parameter passed
     if (!is_array($config)) { $config = array(); }
     
+    // String defaults
+    $lang_input = $base = $meta = '';
+    
     // Print out lang and charset headers
     if (!isset($config["lang"]))    { $config["lang"] = "en"; }
     if (!isset($config["charset"])) { $config["charset"] = "ISO-8859-1"; }
@@ -62,6 +65,11 @@ function site_header($title = '', $config = array())
     header("Content-language: {$config['lang']}");
     
     if (!empty($title)) { $title = ": $title"; }
+    
+    // This page should not be indexed by robots
+    if (in_array("noindex", $config)) {
+        $meta .= "\n <meta name=\"robots\" content=\"noindex\" />";
+    }
     
     // Decide on onload event handler
     if (!isset($config['onload'])) {
@@ -71,12 +79,12 @@ function site_header($title = '', $config = array())
     // Explicit language setting means that we should put that into the form
     if (isset($EXPL_LANG)) {
         $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
-    } else { $lang_input = ''; }
+    }
     
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
-    } else { $base = ''; }
+    }
     
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -86,7 +94,7 @@ function site_header($title = '', $config = array())
  <title>PHP{$title}</title>
  <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/sitewide.css");</style>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base
+ <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base$meta
 </head>
 <body onload="{$config['onload']}">
 
