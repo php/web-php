@@ -228,8 +228,40 @@ You are <?php echo $HTTP_POST_VARS["age"]; ?> years old.')?>
 
 <p>
 It should be obvious what this does. There is nothing more to it.
-The $HTTP_POST_VARS["name"] and $HTTP_POST_VARS["age"] variables
-are automatically set for you by PHP.
+The $_POST["name"] and $_POST["age"] variables
+are automatically set for you by PHP. (<b>Note:</b> On versions 
+previous to PHP 4.1.0, one needed to use the $HTTP_POST_VARS array
+instead of the $_POST superglobal array. See the section on "<a
+href="/manual/language.variables.predefined.php">Predefined
+variables</a>" in the manual for more information).
+</p>
+
+<h2>Using old code with new versions of PHP</h2>
+
+<p>
+Now that PHP has grown to be a popular scripting language, there are
+more resources out there that have listings of code you can reuse
+in your own scripts. For the most part the developers of the PHP
+language have tried to be backwards compatible, so a script written
+for an older version should run (ideally) without changes in a newer
+version of PHP, in practice some changes will usually be needed.
+</p>
+<p>
+Two of the most important recent changes that affect old code are:
+<ol>
+<li>The deprecation of the old $HTTP_*_VARS arrays (which need to be
+indicated as global when used inside a function or method), for the
+superglobal arrays $_GET, $_POST, $_COOKIE, $_SERVER, $_ENV, $_REQUEST,
+and $_SESSION, which are always accessible even from inside a function
+scope. (PHP &gt;= 4.1.0)</li>
+<li>External variables are no longer registered in the global scope by
+default (in other words, "register_globals=off" by defaults in php.ini),
+which means that the preferred method of accessing those values is via
+the superglobal arrays mentioned above. (PHP &gt;= 4.2.0)
+</ol>
+For more details on these changes see the manual section on <a
+href="/manual/language.variables.predefined.php">predefined
+variables</a> and links therein.
 </p>
 
 <h2>What's next?</h2>
