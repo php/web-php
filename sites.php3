@@ -45,6 +45,8 @@ right away.</blockquote>
 /* Automotive Industry */
 	title("Automotive Industry");
 	siteStart();
+	site("The Audi A4 web site","www.a4.org");
+	site("The Audi TT web site","www.audi-tt.org");
 	site("Cars Everything","www.carseverything.com");
 	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
