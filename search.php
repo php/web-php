@@ -175,7 +175,7 @@ Restrict the search to:<br></td>
 		if ($result[2] == "NOMATCH") {
 			echo "Sorry, no documents matched your search for <b>&quot;".htmlspecialchars($pattern)."&quot;</b>.<br><br>";
 			echo "Continue your search at ";
-			echo "<a href=\"http://www.alltheweb.com/seatch?q=".htmlspecialchars($pattern)."\">AllTheWeb</a> ";
+			echo "<a href=\"http://www.alltheweb.com/search?q=".htmlspecialchars($pattern)."\">AllTheWeb</a> ";
 			echo "or <a href=\"http://www.google.com/search?q=".htmlspecialchars($pattern)."\">Google</a><br><br>";
 			echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br><br>\n";
 			commonFooter();
