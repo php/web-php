@@ -14,11 +14,15 @@ $MIRRORS = array(
 );
 
 $COUNTRIES = array(
+   "au" => "Australia",
    "ca" => "Canada",
    "il" => "Israel",
+   "sk" => "Slovakia",
    "no" => "Norway",
+   "nz" => "New Zealand",
    "uk" => "United Kingdom",
    "us" => "United States",
+   "za" => "South Africa",
    "xx" => "Other"
 );
 
