@@ -196,7 +196,7 @@ if (isset($_POST['maillist'])) {
     array (
       'internals', 'Internals list',
       'A medium volume list for those who want to help out with the development of PHP',
-      FALSE, 'php-dev', TRUE, "internals"
+      FALSE, 'php-dev', TRUE, "php.internals"
     ),
     array (
       'php-cvs', 'CVS commit list',
