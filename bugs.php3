@@ -18,6 +18,39 @@ function indent($string, $prefix) {
     return $prefix . ereg_replace("\n", "\n$prefix", $string) . "\n";
 }
 
+function wrap($text,$margin=72) {
+	$i=0;
+	$last_space=0;
+	$printfrom=0;
+	$len=strlen($text);
+	$line_len=0;
+	while($i<$len) {
+		if($text[$i]==chr(32) || $text[$i]==chr(7)) {
+			$last_space=$i;
+			$line_len++;
+		} else
+		if($text[$i]==chr(10) || $text[$i]==chr(13)) {
+			$line_len=0;
+		} else {
+			$line_len++;
+		}
+		if($line_len>$margin) {
+			if($last_space==0 || $last_space<$printfrom) {
+				echo substr($text,$printfrom,$margin);
+				echo "\n";
+				$printfrom+=$margin+1;	
+			} else {
+				echo substr($text,$printfrom,$last_space-$printfrom);
+				echo "\n";
+				$printfrom=$last_space+1;	
+			}
+			$line_len=0;
+		}
+		$i++;
+	}
+	echo substr($text,$printfrom);
+}
+
 function show_state_options($state, $show_all) {
 	if ($state) { echo "<option>$state\n"; }
 	if($state!="Open") { echo "<option>Open\n"; }
@@ -167,7 +200,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $html_report = ereg_replace("<", "&lt;", $report);
     $html_report = ereg_replace(">", "&gt;", $html_report);
 
-    echo $html_report;
+    echo wrap($html_report);
 
     echo("</pre>\n");
 
@@ -362,7 +395,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"$row[3]\"></td></tr>\n";
 		echo "</table>\n";
 		$text = addlinks($row[4]);
-		echo "<blockquote><blockquote><pre>".$text."</pre></blockquote></blockquote>\n";
+		echo "<blockquote><blockquote><pre>";
+		echo wrap($text,90);
+		echo "</pre></blockquote></blockquote>\n";
 		if(!isset($edit)) {
 			if(strlen($row[8])) {
 				echo "<b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
