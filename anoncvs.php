@@ -52,7 +52,10 @@ diff -u
     <pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co Zend TSRM</pre></li>
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
     1.4 or newer.</li>
-  <li>Run ./buildconf. After a while, the configure script should be generated.</li>
+  <li>Run ./buildconf. After a while, the configure script should be generated.<br />
+    <strong style="color: #99000">Caution:</strong> 
+    <i> Certain combinations of autoconf, automake and libtool may cause the 
+    buildconf script to fail. See <a href="#buildconf_fail">below</a> for details.</i>
   <li>From this point onwards, installation is similar to the installation of one of
     the official packages with one main difference - you must have bison 1.28 or later
     and flex 2.54 or later to compile, because the pre-generated scanner and parser
@@ -67,5 +70,17 @@ to see what is available, and substitute the appropriate name for
 
 <p>You can also mirror the PHP CVS repository using CVSup. See
 <a href="/cvsup.php">here</a> for more details.</p>
+
+<p><strong><a name="buildconf_fail">Possible buildconf troubles</a></strong></p>
+
+<p> Certain combinations of autoconf, automake and libtool may cause the 
+buildconf script to fail.</p>
+
+<p>Under SuSE 7.1 (Linux kernal 2.2.18 i686) autoconf version 2.13, 
+automake version 1.4 (ok) and libtool version 1.4.2 are suspected not 
+to work.</p>
+
+<p>libtool 1.4.2 may not work with any current (as of 2001/09/30) versions 
+of autoconf and automake.</p>
 
 <?php commonFooter(); ?>
