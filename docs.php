@@ -18,6 +18,11 @@ commonHeader("Documentation ");
 <li><a href="manual/html/">Plain HTML PHP Manual Online</a>. The very
     same manual in a light-weight, HTML 3.2 version without any bells or
     whistles.
+
+<li><a href="http://snaps.php.net/manual/">Latest Version and Internation Versions</a>.
+    Depending on how industrious the documentation team has been, you may find more
+    up-to-date info in this version of the manual than you will at one of the above
+    links.  You can also browse or download translated versions here.
 </ul>
 
 <H2>PHP Annotated Manuals</H2>
