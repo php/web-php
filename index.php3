@@ -44,8 +44,8 @@ introductory PHP article</a> that is an interesting read.
 
 <h3>LinuxWorld Editors' Choice Awards</h3>
 <p><img src="lwedchoice-200.gif" align="right">
-PHP is a Finalist in the <a href="http://www.wpi.com/linuxworld/lw-ec-finalists.html">
-LinuxWorld Editors' Choice Awards</a> to be presented on Aug.11 in San Jose, CA.  PHP is
+PHP was a Finalist in the <a href="http://www.wpi.com/linuxworld/lw-ec-winners.html">
+LinuxWorld Editors' Choice Awards</a> presented on Aug.11 in San Jose, CA.  PHP was
 up against QT from Troll Tech in the &quot;Programming Library/Tools&quot; category.
 </p>
 
@@ -54,7 +54,8 @@ up against QT from Troll Tech in the &quot;Programming Library/Tools&quot; categ
 Graeme Merrall has written a 3-part tutorial on PHP/MySQL that is worth a
 read if you are new to PHP.  Head on over to 
 <a href="http://www.hotwired.com/webmonkey/databases/tutorials/tutorial4.html">
-HotWired's WebMonkey Site</a> to read it.
+HotWired's WebMonkey Site</a> to read it.  For other tutorials and interesting
+articles check out <a href="http://www.phpbuilder.com">PHPBuilder.com</a> as well.
 </p>
 
 
