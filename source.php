@@ -57,7 +57,7 @@ echo("<!-- $page_name -->\n");
 
 if (file_exists($page_name) && !is_dir($page_name)) {
     show_source($page_name);
-} else if (is_dir($page_name)) {
+} else if (@is_dir($page_name)) {
     echo "<p>No file specified.  Can't show source for a directory.</p>\n";
 }
 
