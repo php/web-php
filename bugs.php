@@ -206,17 +206,18 @@ elseif ($cmd == "display") {
 			echo '<tr bgcolor="', get_row_color($row), '">';
 			echo "<td><a href=\"$PHP_SELF?id=$row[id]\">$row[id]</a></td>";
 			if ($bug_type == "Any") {
-				echo "<td>" . htmlspecialchars($row[bug_type]) . "</td>";
+				echo "<td>", htmlspecialchars($row[bug_type]), "</td>";
 			}
-			echo "<td>" . htmlspecialchars($row[status]);
+			echo "<td>", htmlspecialchars($row[status]);
 			if ($row[status] == "Feedback" && $row[unchanged] > 0) {
 				printf ("<br>%d day%s", $row[unchanged], $row[unchanged] > 1 ? "s" : "");
 			}
-			echo "<td>" . htmlspecialchars($row[php_version]) . "</td>";
-			echo "<td>" . $row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;" . "</td>";
-			echo "<td>" . $row[sdesc]  ? htmlspecialchars($row[sdesc]) : "&nbsp;"  . "</td>";
+			echo "</td>";
+			echo "<td>", htmlspecialchars($row[php_version]), "</td>";
+			echo "<td>", $row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;", "</td>";
+			echo "<td>", $row[sdesc]  ? htmlspecialchars($row[sdesc]) : "&nbsp;",  "</td>";
 			echo "<td align=\"center\"><a href=\"$PHP_SELF?id=$row[id]&amp;edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\" alt=\"edit\" /></a></td>";
-			echo "<td>" . $row[assign] ? htmlspecialchars($row[assign]) : "&nbsp;" . "</td>";
+			echo "<td>", $row[assign] ? htmlspecialchars($row[assign]) : "&nbsp;", "</td>";
 			echo "</tr>\n";
 		}
 
