@@ -1444,6 +1444,28 @@ $books = array (
   ),
   
   array(
+    /* title[s]     */ "PHP 4. Tworzenie stron WWW",
+    /* title_link   */ "http://helion.pl/ksiazki/cwphp4.htm",
+    /* author[s]    */ "Andrzej Kierzkowski",
+    /* auth link[s] */ "",
+    /* image        */ "8371975058.jpg",
+    /* information  */ "Jul 2003, ISBN 83-7197-505-8",
+    /* inform. link */ "http://helion.pl/ksiazki/cwphp4.htm",
+    /* language     */ "pl"
+  ),
+  
+  array(
+    /* title[s]     */ "PHP4. Kompendium programisty",
+    /* title_link   */ "http://helion.pl/ksiazki/php4ko.htm",
+    /* author[s]    */ "Blake Schwendiman",
+    /* auth link[s] */ "",
+    /* image        */ "837197521x.jpg",
+    /* information  */ "May 2002, ISBN 83-7197-521-X",
+    /* inform. link */ "http://helion.pl/ksiazki/php4ko.htm",
+    /* language     */ "pl"
+  ),
+  
+  array(
     /* title[s]     */ "PHP Guia de Consulta Rápida",
     /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
     /* author[s]    */ "Herbert G. Fischer",
