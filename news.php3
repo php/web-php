@@ -55,6 +55,10 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Authenticate and Track Users with PHP", "by <a href=\"mailto:jcm@i2ii.com\">Julie Meloni</a>", 
+	"http://hotwired.lycos.com/webmonkey/00/05/index2a.html", "February 2, 2000");?>
+<? endEntry(); ?>
+
 <? makeEntry( "What you should know about PHP", "by <a href=\"mailto:gilmore@cob.ohio-state.edu\">Jason Gilmore</a>", 
 	"http://webreview.com/pub/2000/01/21/feature/index.html", "January 21, 2000");?>
 PHP can help you look like a web-wunderkid while saving you hours of drudgery.
