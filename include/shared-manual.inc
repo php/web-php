@@ -143,7 +143,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
 
 <TD ALIGN=left BGCOLOR="#E0E0E0">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=5>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=5 WIDTH=100%>
 <TR><TD>
 <?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
@@ -156,7 +156,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
         echo date("d-M-Y h:i",$date)."<BR>\n";
 ?>
 </TD></TR>
-<TR BGCOLOR="#E0E0E0"><TD>
+<TR BGCOLOR="#F0F0F0"><TD>
 <?
 	$blurb = htmlspecialchars($blurb);
 	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
