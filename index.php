@@ -197,7 +197,7 @@ commonHeader("Hypertext Preprocessor");
 
 <p>
  For changes since Release Candidate 3, please consult the
- <a href="/ChangeLog-5.php#5.0.0RC3">ChangeLog</a>.
+ <a href="/ChangeLog-5.php#5.0.0">ChangeLog</a>.
 </p>
 
 <hr />
