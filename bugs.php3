@@ -257,7 +257,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 			if($estatus=="Delete!") {
-				$text = "The bug has been deleted from the database\n";
+				$text = "Bug #$id has been deleted from the database by $user\nComments: $comments\n";
 			} else {
 				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments: $comments\n";
 				$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
