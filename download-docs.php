@@ -21,15 +21,10 @@ here to see all the file sizes and dates</a>.
 
 <h3>Tip for Windows users</h3>
 <p>
-Note that there are software to handle .tar.gz
-and .bz2 archives for Windows. WinZip includes
-support for .tar.gz, WinRAR supports .bz2, and
+<a href="http://www.rarsoft.com/">WinRAR</a> supports .bz2, and
 Redhat also hosts
 <a href="http://sources.redhat.com/bzip2/">free
 downloads of .bz2 tools for Windows</a>.
-You can save download time for yourself, if you
-choose the .tar.gz or .bz2 formats, instead of
-.zip.
 </p>
 ';
 
@@ -39,14 +34,10 @@ $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
- "manual.txt.gz"           => array("Plain text",          "txt.gz"),
- "bigmanual.html.gz"       => array("Single HTML",         "html.gz"),
- "manual.tar.gz"           => array("Many HTML files",     "tar.gz"),
+ "manual.txt.bz2"          => array("Plain text",          "txt.bz2"),
+ "bigmanual.html.bz2"      => array("Single HTML",         "html.bz2"),
  "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2"),
- "manual.zip"              => array("Many HTML files",     "zip"),
- "php_manual_LANG.pdf.gz"  => array("PDF",                 "pdf.gz"),
  "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
- "php_manual_LANG.pdf.zip" => array("PDF",                 "pdf.zip"),
  "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb"),
  "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb"),
  "manual-LANG.chm"         => array("Windows HTML Help",   "chm")
@@ -62,8 +53,8 @@ to start downloading.
 </p>
 
 <p>
-Note that the packaged HTML versions of the manual
-(tar.gz, tar.bz2 and zip) don't contain any directories,
+Note that the packaged HTML version of the manual
+(tar.bz2) don't contain any directories,
 so all of the files will be dumped into your current working
 directory when you expand the archive unless the tool you
 use does otherwise.
