@@ -171,7 +171,7 @@ commonHeader("Hypertext Preprocessor");
   </li>
  </ul>
  For more information, read the 
- <a href="http://conf.phpquebec.com/fr/conf2005/appel">PHP Qu&eacute;bec web site</a>.
+ <a href="http://conf.phpquebec.com/en/conf2005/appel">PHP Qu&eacute;bec web site</a>.
 </p>
 
 <hr />
