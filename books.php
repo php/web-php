@@ -128,21 +128,21 @@ function book_show($one_book)
     // Information row for the book
     echo "<tr valign=\"top\">\n<td>\n" .
          make_link($title_link, make_image("books/$image", $img_title)) .
-         "<br />\n</td><td>\n$title\n<p>by $author</p>\n<small>\n";
+         "<br />\n</td><td>\n$title\n<p>by $author</p>\n";
 
     // Print any book information and more info link
     if ($info || $lang != "en") {
-        echo "<p>\n";
+        echo "<p><small>\n";
         if ($lang != "en") {
             echo "in " . $book_langs[$lang] . "<br />\n";
         }
-        echo str_replace("& ", "&amp; ", $info) . "</p>\n";
+        echo str_replace("& ", "&amp; ", $info) . "</small></p>\n";
     }
-    echo "<p>" . make_link(
+    echo "<p><small>" . make_link(
         $info_link ? $info_link : $title_link,
         make_image("caret-rg.gif",">") . "more info"
     );
-    echo "<br />\n</p>\n</small>\n</td>\n</tr>\n\n";
+    echo "<br />\n</small></p>\n</td>\n</tr>\n\n";
 }
 
 // Generate book statistics (book numbers by languages)
