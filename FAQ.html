@@ -558,10 +558,11 @@ should check to make sure that the configuration file you are adding the AddType
   </B></DT>
   <DD>
     First off, take a look at the <A href="manual/function.addslashes.php3">addslashes()</A> function. It will do
-    exactly what you want.
+    exactly what you want.  You should also have a look at the magic_quotes_gpc directive in your php3.ini
+	file.  
   <P>
     The ereg_replace magic you're looking for, however, is simply:<PRE>
-    $escaped = ereg_replace("'", "\\'", $input);</PRE>
+    $escaped = ereg_replace(&quot;'&quot;, &quot;\\'&quot;, $input);</PRE>
   <P>
   </DD>
 

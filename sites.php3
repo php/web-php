@@ -90,6 +90,7 @@ right away.</blockquote>
 	site("HitList","www.hitlist.com");
 	site("PromoPodium","www.promopodium.nl");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
+	site("Transcasts","www.transcasts.com");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
 	siteEnd();
 
@@ -198,10 +199,12 @@ right away.</blockquote>
 	site("Deal-iMac","deal-imac.com");
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
+	site("Linux Power","linuxpower.org");
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
 	site("Online Gaming Review","www.ogr.com");
+	site("The UNIX Network Archives","www.tuna.org");
 	siteEnd();
 
 /* Publishing Industry */
