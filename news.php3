@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Welcome Zend", "by <a href=\"mailto:gmerrall@email.com\">Graeme Merral</a>", 
+	"http://hotwired.lycos.com/webmonkey/99/51/index3a.html", "December 16, 1999");?>
+Optimization - PHP vs. ASP - New Features - Geeky Features
+<? endEntry(); ?>
+
 <? makeEntry( "The latest best-kept secret", "by <a href=\"mailto:glyn_moody@cix,co.uk\">Glyn Moody</a>", 
 	"http://www.computerweekly.com/cwarchive/gwfeat/19991209/cwcontainer.asp?name=F1.html", "December 9, 1999");?>
 With the same features as ASP and JSP, PHP is the fastest growing Apache add-on.
