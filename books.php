@@ -454,7 +454,7 @@ array (
 
   array(
     /* title[s]     */ "Webbprogrammering met PHP",
-    /* title_link   */ "http://www.studentlitterature.se/shop/default.html?artnr=7844-01",
+    /* title_link   */ "http://www.studentlitteratur.se/shop/default.html?artnr=7844-01",
     /* author[s]    */ "Viktor Jonsson",
     /* auth link[s] */ "",
     /* image        */ "jonsson.gif",
