@@ -72,18 +72,18 @@ site_header("Downloads");
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.3.5.tar.bz2','PHP 4.3.5 (tar.bz2)'); ?> - 26 March 2004<br />
-  <span class="md5sum">md5: 29e61c125ac6278897c6c219f5d100d1</span>
+  <?php download_link('php-4.3.6.tar.bz2','PHP 4.3.6 (tar.bz2)'); ?> - 15 April 2004<br />
+  <span class="md5sum">md5: 79cde484e31871176137eb78014657fa</span>
  </li>
  <li>
-  <?php download_link('php-4.3.5.tar.gz', 'PHP 4.3.5 (tar.gz)');  ?> - 26 March 2004<br />
-  <span class="md5sum">md5: da564d33f6fb2b8174a318b154c07c79</span>
+  <?php download_link('php-4.3.6.tar.gz', 'PHP 4.3.6 (tar.gz)');  ?> - 15 April 2004<br />
+  <span class="md5sum">md5: 4848331288d6eaffcec0323a852d1082</span>
  </li>
 </ul>
 
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_5.php">release notes</a> for more information on
+ or the <a href="/release_4_3_6.php">release notes</a> for more information on
  this particular release. Daily snapshots are also available from
  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
@@ -96,20 +96,22 @@ site_header("Downloads");
 
 <ul>
  <li>
-  <?php download_link('php-4.3.5-Win32.zip', 'PHP 4.3.5 zip package'); ?> - 26 March 2004<br />
+  <?php download_link('php-4.3.6-Win32.zip', 'PHP 4.3.6 zip package'); ?> - 15 April 2004<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: a08af865d41c92d0023dd4db7370d9f7</span>
+  <span class="md5sum">md5: fc4adb16b0bbff5089efc10a02240f81</span>
  </li>
+<!-- 
  <li>
-  <?php download_link('php-4.3.5-installer.exe', 'PHP 4.3.5 installer'); ?> - 26 March 2004<br />
+  <?php download_link('php-4.3.6-installer.exe', 'PHP 4.3.6 installer'); ?> - 15 April 2004<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 12760b31f94733075539e7aeacce6316</span>
+  <span class="md5sum">md5: </span>
  </li>
+//-->
 </ul>
 
 <hr />

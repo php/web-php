@@ -9,10 +9,48 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 4 ChangeLog</h1>
 
+<hr />
+
+<a name="4.3.6"></a>
+<h3>Version 4.3.6</h3>
+<b>15-Apr-2003</b>
+<ul>
+<li>Updated bundled PDFLib library to version 5.0.3p1 in Windows distribution. (Edin)</li>
+<li>Synchronized bundled GD library with GD 2.0.22. (Ilia)</li>
+<li>Fixed a crash in multi-threaded environments when a thread is shutdown by the web server. (Stas)</li>
+<li>Fixed a bug that prevented building of the GD extension against external GD lib 1.X. (Ilia, Edin, Nick Talbott).</li>
+<li><?php bugfix(27963); ?> (Session lifetime setting may leak between requests). (Ilia)</li>
+<li><?php bugfix(27849); ?> (configure craps out on trivial syntax error). (Derick)</li>
+<li><?php bugfix(27822); ?> (is_resource() returns TRUE for closed resources). (Derick)</li>
+<li><?php bugfix(27819); ?> (problems returning reference to a reference parameter). (Ilia)</li>
+<li><?php bugfix(27809); ?> (ftp_systype returns null on some ftp servers). (Ilia)</li>
+<li><?php bugfix(27802); ?> (default number of children to 8 when PHP_FCGI_CHILDREN is not defined). (Ilia)</li>
+<li><?php bugfix(27780); ?> (strtotime(+1 xxx) returns a wrong date/time). (Derick)</li>
+<li><?php bugfix(27769); ?> (domxml_xmltree crashes). (Rob)</li>
+<li><?php bugfix(27764); ?> (Get return value from a stored procedure not returning any result sets). (Frank)</li>
+<li><?php bugfix(27762); ?> (SCO Openserver doesn't have S_ISSOCK). (Wez)</li>
+<li><?php bugfix(27743); ?> (Make sure Money types are converted and returned correctly). (Frank)</li>
+<li><?php bugfix(27732); ?> (Fixed compilation bug inside php_sab_info.h). (Ilia)</li>
+<li><?php bugfix(27731); ?> (error_reporting() inside @ block fails to set error_reporting level). (Ilia)</li>
+<li><?php bugfix(27719); ?> (mktime issues on and around DST changeover). (Rasmus)</li>
+<li><?php bugfix(27717); ?> (Test Failures when compiled on 64-bit mode). (Ard, Derick)</li>
+<li><?php bugfix(27687); ?> (Bug Adding Default Charset to 'text/*' Content-Type Header). (Marcus)</li>
+<li><?php bugfix(27663); ?> (compile failure with cURL 7.11.1). (Ilia)</li>
+<li><?php bugfix(27646); ?> (Cannot serialize/unserialize non-finite numeric values). (Marcus)</li>
+<li><?php bugfix(26757); ?> (session.save_path default is bogus for win32). (Wez)</li>
+<li><?php bugfix(26589); ?> (Crash inside mssql extension when selecting many columns of type money). (Frank)</li>
+<li><?php bugfix(25547); ?> (error_handler and array index with function call). cschneid at cschneid dot com)</li>
+
+</ul>
+There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.5"></a>
 <h3>Version 4.3.5</h3>
 <b>26-Mar-2004</b>
 <ul>
+
 <li>Fixed possible crash using an invalid color index with a palette image in imagecolortransparent (Pierre)</li>
 <li>Fixed php-cgi to not ignore command-line switches when run in a web context. This fixes our test cases allowing INI with GET sections to work (Rasmus)</li>
 <li>Fixed getopt() so it works without $_SERVER (Rasmus, bfrance)</li>
@@ -173,6 +211,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 </ul>
 There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br />
+
 
 <hr />
 

@@ -152,16 +152,19 @@ commonHeader("Hypertext Preprocessor");
 
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
-<h1>PHP 4.3.6RC3 released!</h1>
+<h1>PHP 4.3.6 released!</h1>
 <p>
- <span class="newsdate">[08-Apr-2004]</span>
- In the spirit of release early, release often here is the third and
- hopefully the final <a href="http://qa.php.net/">release candidate of
- PHP 4.3.6</a>. This release addresses 2 major bugs introduced in the
- 4.3.5 release. One of these bugs caused problems when loading dynamic
- extensions on Windows and thread-safe (ZTS) builds and the other involves
- incorrect handling of daylight savings time. A few other minor bugs
- were fixed as well.
+ <span class="newsdate">[15-Apr-2004]</span>
+ The PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.6</a>.
+ This is is a bug fix release whose primary goal is to address two bugs which may 
+ result in crashes in PHP builds with thread-safety enabled. All users of PHP 
+ in a threaded environment (Windows) are strongly encouraged to upgrade to 
+ this release.
+</p>
+
+<p>
+ All in all this release fixes approximately 25 bugs that have been discovered since the 4.3.5 release.
+ For a full list of changes in PHP 4.3.6, see the <a href="/ChangeLog-4.php#4.3.6">ChangeLog</a>.
 </p>
 
 <hr />
@@ -174,24 +177,6 @@ commonHeader("Hypertext Preprocessor");
  problems and composing your solutions offline, it all takes place online and within
  a specific timeframe. The Marathon is kindly sponsored by Zend Technologies and will
  now feature a problem on PHP 5. Participation is free of charge.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
-
-<h1>PHP 4.3.5 released!</h1>
-<p>
- <span class="newsdate">[26-Mar-2004]</span>
- The PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.5</a>.
- This is a bug fix release, without any new features or additions. It
- is by far the most stable release of PHP to date and it is recommended that 
- all users upgrade to this release where possible.
-</p>
-
-<p>
- This release resolves over a hundred various bugs and problems with previous versions.
- For a full list of changes in PHP 4.3.5, see the <a href="/ChangeLog-4.php#4.3.5">ChangeLog</a>.
 </p>
 
 <hr />
