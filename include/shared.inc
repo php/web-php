@@ -572,10 +572,12 @@ endif; ?>
 }
 
 function sect_to_file($string) {
+	$string = strtolowe($string);
 	$func = "function.$string.php";
 	$chap = "ref.$string.php";
-	if(is_file("function.$string.php")) return $func;
-	else return $chap;
+	if(is_file($func)) return $func;
+	else if(is_file($chap)) return $chap;
+	else return "$string.php";
 }
 
 function clean_note($text) {
