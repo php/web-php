@@ -67,7 +67,7 @@ function language_add($langcode)
     // Append language code in priority order
     // if it is not there already [try to lower number
     // of file_exists() calls to minumum]
-    if (!in_array($langcode, $LANGS) && isset($LANGUAGES[$langcode]) { $LANGS[] = $langcode; }
+    if (!in_array($langcode, $LANGS) && isset($LANGUAGES[$langcode])) { $LANGS[] = $langcode; }
 }
 
 ?>
