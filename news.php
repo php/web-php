@@ -13,6 +13,64 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
+
+<h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
+<font class="newsdate">[23-May-2002]</font> PHP will be attending 
+<a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&lang=en">LinuxTag</a> 
+again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
+MySQL AB,  will create a "(L)AMP" day, focusing on web development with  the 3 core technologies.
+During the day there will be many <a
+href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=293&lang=en">interesting
+workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also, which will 
+be hosting several <a href="http://www.phpug.de/index_ka109.php">PHP related projects</a> (text in
+German).
+
+<?php echo hdelim(); ?>
+
+<h1>PHP Coding Contest</h1>
+<p>
+<font class="newsDate">[16-May-2002]</font>
+CodeWalkers have started a new fortnightly PHP contest. Every two weeks, there
+is a new problem to solve, a new script to write. The winner will receive
+prizes provided by the sponsors, Zend Technologies and Sams Publishing.
+You can enter the challenge by visiting <a href="http://codewalkers.com/php-contest.php">their site</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP 4.2.1 released</h1>
+<p>
+<font class="newsDate">[13-May-2002]</font>
+The PHP Group is happy to announce the
+<?php print_link ("/downloads.php", "immediate availability"); ?> of
+PHP 4.2.1, the latest version of the widely-used, general-purpose scripting language
+that is especially well-suited for Web development.</p>
+
+<p>This latest release contains several bug fixes as found in PHP 4.2.0. These include
+fixes for the session, com and mbstring extensions, as well as a major upgrade of the DomXML
+extension. Also a few extra checks for safe_mode were added. For more information, see the
+<?php print_link ("/release_4_2_1.php", "PHP 4.2.1 release announcement"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
+<?php echo make_image("phpaward_100.gif", "PHP Award", "right"); ?>
+
+<h1>PHP Award 2002</h1>
+<p>
+<font class="newsDate">[27-Apr-2002]</font>
+The Association Française des Utilisateurs de PHP (AFUP) and
+the German PHP Association (PHP Verein) are organizing a PHP
+contest to give out the first PHP Award. The PHP Award will
+be given in three categories: Open Source, Freeware and
+Commercial Software, the submission deadline is July, 15th 2002.
+If you are interested go to
+<a href="http://www.php-award.net/">http://www.php-award.net/</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP.net: A Tourist's Guide</h1>
 <p>
 <font class="newsDate">[26-Apr-2002]</font>
