@@ -411,9 +411,9 @@ of grouping them all in one report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+    <option name="3.0.1">3.0.1
     <option name="3.0">3.0 Final Release
     <option name="3.0CVS">3.0 Latest CVS
-    <option name="3.0RC5">3.0 Release Candidate 5
     <option name="other">other
    </select>
   </td>
