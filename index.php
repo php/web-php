@@ -147,6 +147,9 @@ addition, some of the features may change (based on feedback).  We
 encourage you to download and play with it (and report bugs if you find any!),
 but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 
+<p>Windows binary version is also available for
+<?php download_link("php-4.3.0-dev-zend2-win32-alpha1.zip", "download"); ?>.</p>
+
 <?php echo hdelim(); ?>
 
 
