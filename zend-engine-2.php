@@ -206,6 +206,7 @@ function foo(ClassName $object) {
 }
 ?>');
 ?>
+</p>
 <p>
 is equivalent to:
 </p>
