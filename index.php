@@ -4,9 +4,9 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
-<h2>
+<h1>
 Patch Level 1 Released For PHP 4.0.4
-</h2>
+</h1>
 <p>
 Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
 has been released.  This bug-fix release also fixes a few party-crashing bugs that
@@ -18,10 +18,10 @@ were discovered in PHP 4.0.4.
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
 New Usage Stats For January Available
-</h2>
+</h1>
 <p>
 <? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
 <? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
@@ -35,10 +35,10 @@ of which continue to show impressive growth for PHP. Check out the
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 <? print_link("http://conferences.oreilly.com/oscon2001/", make_image("osscon.gif", "OSSCon", "right") ); ?>
 PHP Conference - Call For Participation
-</h2>
+</h1>
 <p>
 The conference will be part of the <? print_link("http://conferences.oreilly.com/oscon2001/",
 "O'Reilly Open Source Convention"); ?> alongside the 5th annual Perl Conference at the 
@@ -52,9 +52,9 @@ All the details on submitting talks are in the full <? print_link("/cfp.php", "C
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 PHP 4.0.4 Released
-</h2>
+</h1>
 <p>
 19-Dec-2000 -- This release includes improvements for a large number of defects
 and numerous enhancements in the PHP core, the language implementation and
@@ -67,9 +67,9 @@ extensions. <? print_link("/downloads.php", "Download"); ?> and
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 PHP 3.0.18 Released
-</h2>
+</h1>
 <p>
 21-Oct-2000 -- PHP 3.0.18 was released. This is a bug-fix release, including
 fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
@@ -82,9 +82,9 @@ contains a full list of changes.
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 Improve Your PHP Skills
-</h2> 
+</h1> 
 <p>
 Looking for clear and useful guides to build dynamic web-sites using
 PHP?  Our <? print_link("/books.php", "Books Resource Center"); ?> lists now
@@ -97,9 +97,9 @@ about more PHP-related books, tell us about them!
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 Manual Search Tip
-</h2>
+</h1>
 <p>
 You can go directly to PHP manual pages with a URL such as
 <? print_link("http://www.php.net/strlen", "www.php.net/strlen"); ?>.  
@@ -110,9 +110,9 @@ You can go directly to PHP manual pages with a URL such as
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 Tips and Tricks Section
-</h2>
+</h1>
 <p>
 Check out our <? print_link("/tips.php", "tips"); ?> page for some "neat" things, 
 PHP-related.  It's a little sparse right now, but feel free to make suggestions!
@@ -123,10 +123,10 @@ PHP-related.  It's a little sparse right now, but feel free to make suggestions!
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 <? print_image("ZendOptimizer.gif", "Zend", "right"); ?>
 Zend Optimizer Released
-</h2>
+</h1>
 <p>
 <? print_link("http://www.zend.com", "Zend Technologies"); ?> has announced the 
 availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
@@ -138,9 +138,9 @@ availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 What Is PHP?
-</h2>
+</h1>
 <p>
 PHP is a server-side, cross-platform, HTML embedded scripting language.  
 If you are completely new to PHP and want to get some idea of how it works, 
@@ -154,9 +154,9 @@ of the other resources available in the <? print_link("/links.php", "Links"); ?>
 <? echo hdelim(); ?>
 
 
-<h2>
+<h1>
 So, How Much Does It Cost?
-</h2>
+</h1>
 <p>
 This may sound a little foreign to all you folks coming from a non-Unix
 background, but PHP doesn't cost anything.  You can use it for commercial

@@ -1,18 +1,17 @@
 <?
 commonHeader("Downloads ");
 $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
-
-// $server = 'ca.php.net';
 ?>
 
-<h2>Latest version of PHP 4.0</h2><BR>
+<h1>Latest version of PHP 4.0</h1>
 
-<b>Complete Source Code</b><BR>
+
+<h2>Complete Source Code</h2>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4pl1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.4pl1</a> - 11 January 2001</li>
 </UL>
 
-<b>Win32 Binaries</b><BR>
+<h2>Win32 Binaries</h2>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4pl1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.4pl1</a> - 13 January 2001<br>(3.64 Mb CGI binary plus server API versions for Apache, AOL server, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
   <li><a href="http://www.php.net/do_download.php?download_file=php404pl1-installer.exe&source_site=<?php echo $server; ?>">PHP 4.0.4pl1</a> - 13 January 2001<br>(735 Kb CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
@@ -33,9 +32,10 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 </UL>
 
 
-<hr noshade>
+<? echo hdelim(); ?>
 
-<h3>Other Downloads</h3>
+
+<h1>Other Downloads</h1>
 
 <UL>
   <li>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
@@ -45,9 +45,13 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 </ul>
 
 
-<H3>Previous Releases of PHP 4.0</H3>
 
-<b>Complete Source Code</b><BR>
+<? echo hdelim(); ?>
+
+
+<H1>Previous Releases of PHP 4.0</H1>
+
+<h2>Complete Source Code</h2>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.3pl1 </a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.2.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.2</a></li>
@@ -57,7 +61,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.0.tar.gz&source_site=<?php echo $server; ?>">PHP 4.0.0</a></li>
 </UL>
 
-<b>Win32 Binaries</b><BR>
+<h2>Win32 Binaries</h2>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a></li>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.2</a></li>
@@ -79,10 +83,11 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 <I>Previous releases are listed for informational purposes only.  You should being using the latest release.</I>
 </P>
 
-<hr noshade>
+
+<? echo hdelim(); ?>
 
 
-<h3>Older Versions of PHP</h3>
+<h1>Older Versions of PHP</h1>
 
 <UL>
   <li><a href="download-php3.php">PHP 3.0</a> Source code and Win32 binaries
@@ -93,7 +98,6 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 <I>Older releases are listed for archeological purposes only.  They are no longer supported.</I>
 </P>
 
-<hr noshade>
 
 
 <?

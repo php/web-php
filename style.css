@@ -5,7 +5,7 @@ body, td, th {
 
 p {
 	margin-top: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 em {
@@ -18,7 +18,7 @@ form {
 }
 
 ul, ol {
-	margin-top: 5px;
+	margin-top: 8px;
 }
 
 ul.compact, ol.compact {
@@ -106,6 +106,10 @@ dt {
 	margin-top: 20px;
 }
 
+hr {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
 
 // manual stuff
 

@@ -2,11 +2,12 @@
 commonHeader("PHP Books");
 ?>
 
-<TABLE BORDER=0 CELLPADDING=5>
 
-<TR VALIGN="middle">
-<TD COLSPAN=2><B>Books in English</B></TD>
-</TR>
+<h1>
+Books in English
+</h1>
+
+<TABLE BORDER=0 CELLPADDING=5>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet"
@@ -267,10 +268,13 @@ New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages<BR>
 </TD>
 </TR>
 
+</TABLE>
 
-<TR VALIGN="middle">
-<TD COLSPAN=2><B>Other Languages</B></TD>
-</TR>
+<h1>
+Other Languages
+</h1>
+
+<TABLE BORDER=0 CELLPADDING=5>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07"
@@ -742,9 +746,8 @@ O'Reilly, January 1997, ISBN 1-5659-2257-3, 368 pages<BR>
 </TD>
 </TR>
 
-
-
 </TABLE>
+
 
 <P>
 Click on the links above for more information on the books.  And remember, if you
@@ -762,12 +765,11 @@ for PHP related stuff by using this form (or go directly to
 search there):
 </P>
 
+<p>
 <FORM METHOD="get" ACTION="http://www.amazon.com/exec/obidos/external-search">
 <INPUT TYPE="hidden" NAME="tag" VALUE="wwwphpnet">
-<TABLE BORDER=0 CELLPADDING=3 cellspacing=0 align="center" BGCOLOR="#E0E0E0">
-<TR VALIGN="middle">
-<TD align="right">Search what:<BR></TD>
-<TD><SELECT NAME="mode">
+Search Amazon for 
+<SELECT NAME="mode">
 <OPTION VALUE="blended">All Products
 <OPTION VALUE="books" SELECTED>Books
 <OPTION VALUE="music">Popular Music
@@ -776,11 +778,8 @@ search there):
 <OPTION VALUE="toys">Toys
 <OPTION VALUE="electronics">Electronics
 </SELECT>
-</TD>
-</TR>
-<TR VALIGN="middle">
-<TD align="right">Search for:<BR></TD>
-<TD><SELECT NAME="keyword">
+about
+<SELECT NAME="keyword">
 <OPTION SELECTED>PHP
 <OPTION>Apache
 <OPTION>Linux
@@ -797,10 +796,8 @@ search there):
 <OPTION>ODBC
 </SELECT>
 <INPUT TYPE="submit" BORDER=0 VALUE="Search" NAME="Search">
-</TD>
-</TR>
-</TABLE>
 </FORM>
+</p>
 
 <?
 commonFooter();

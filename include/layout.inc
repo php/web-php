@@ -231,7 +231,7 @@ function commonHeader($title="",$dont_enclose=0) {
   if (!$dont_enclose):
     $enclosed = 1;?>
 <!-- sidebar -->
-<table width="20" height="100%" 
+<table width="20" 
 	bgcolor="#ffffff"
 	align="left"
 	cellpadding="2" cellspacing="0" 
@@ -256,13 +256,15 @@ function commonHeader($title="",$dont_enclose=0) {
 #
 
 function commonFooter() {
-  global $SCRIPT_NAME,$PHP_SELF,$MIRRORS,$MYSITE,$COUNTRIES,$enclosed;
-  if ($enclosed):?>
-</td></tr></table>
-<br clear=all>
-<?php
-  endif;
+	global $SCRIPT_NAME,$PHP_SELF,$MIRRORS,$MYSITE,$COUNTRIES,$enclosed;
+	if ($enclosed) {
+		echo "</td></tr></table>\n";
+	}
 ?>
+
+<br clear="all">
+<br clear="all">
+
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
   <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
   <tr bgcolor="#9999cc">

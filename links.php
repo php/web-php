@@ -2,14 +2,19 @@
 commonHeader("Links");
 ?>
 
-<h3>Sites using PHP</h3>
+
+<h1>Sites using PHP</h1>
 <P>
 Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their
 web-sites.
 You can browse through a list of some companies using PHP <a href="/sites.php">here</a>.
 </P>
 
-<h3>Developers and Job Opportunities</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Developers and Job Opportunities</h1>
 <P>
 Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.
 PHP developers can post their resumes, and employers can post their job notices.
@@ -21,7 +26,11 @@ HREF="http://classifieds.yahoo.com/yc?cr=national&ce_f=&cpo=&cpj=&ck=PHP&g=&cs=t
 >Yahoo Careers</A> for PHP-related jobs (US only for now).
 </P>
 
-<h3>ISPs that support PHP</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>ISPs that support PHP</h1>
 <P>
 Looking for an ISP or hosting service that supports PHP?  Try one of the following sites:
 </P>
@@ -32,7 +41,11 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 <LI>PMCW webservices (<a href="http://pmcw.dhs.org/">http://pmcw.dhs.org/</a>)
 </UL>
 
-<h3>Getting Started</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Getting Started</h1>
 <P>On these sites you will find tutorials, articles and example scripts</P>
 <UL>
 

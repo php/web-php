@@ -48,7 +48,7 @@ function endEntry() {
 
 
 ?>
-<h3>PHP in the News</h3>
+<h1>PHP in the News</h1>
 
 <P>
 

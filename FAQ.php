@@ -2,7 +2,9 @@
 commonHeader("Frequently Asked Questions");
 ?>
 
-<h1>PHP Frequently Asked Questions</h1>
+<h1>
+PHP Frequently Asked Questions
+</h1>
 
 <!-- The website should stop chopping. -->
 
@@ -15,7 +17,7 @@ If you have suggestions, corrections or additions, send them to
 <a href="mailto:phpdoc@lists.php.net">phpdoc@lists.php.net</a>.
 -->
 <p>
-<hr noshade>
+<? echo hdelim(); ?>
 
 <ul>
 <li><b><a href="#1">1. General Information</a></b>
@@ -116,7 +118,7 @@ If you have suggestions, corrections or additions, send them to
 <li><b><a href="#12">12. Migrating from PHP2 to PHP3</a></b>
 </ul>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="1">
 <h2>1. General Information</h2>
 </a>
@@ -203,7 +205,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="2">
 <h2>2. PHP mailing lists</h2>
 </a>
@@ -283,7 +285,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="3">
 <h2>3. Obtaining PHP</h2>
 </a>
@@ -385,7 +387,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="4">
 <h2>4. Connecting to databases</h2>
 </a>
@@ -611,7 +613,7 @@ just hit the always prompt for new location checkbox before pressing ok.
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="5">
 <h2>5. Installation</h2>
 </a>
@@ -725,7 +727,7 @@ AddType application/x-httpd-php .php      /* for PHP 4 */
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="6">
 <h2>6. Build Problems</h2>
 </a>
@@ -946,7 +948,7 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
    </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="7">
 <h2>7. Using PHP</h2>
 </a>
@@ -1211,7 +1213,7 @@ solution is to use PHP's
   </DD>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="8">
 <h2>8. PHP and HTML</h2>
 </a>
@@ -1249,7 +1251,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 
 <a name="9">
 <h2>9. PHP and other languages</h2>
@@ -1326,7 +1328,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="10">
 <h2>10. Common Problems</h2>
 </a>
@@ -1404,7 +1406,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="11">
 <h2>11. Migrating from PHP3 to PHP4</h2>
 </a>
@@ -1430,7 +1432,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 <a name="12">
 <h2>12. Migrating from PHP2 to PHP3</h2>
 </a>
@@ -1445,7 +1447,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<hr noshade>
+<? echo hdelim(); ?>
 
 <h2>Credits</h2>
 

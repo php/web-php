@@ -2,12 +2,18 @@
 commonHeader("Documentation");
 ?>
 
-<H1>PHP FAQ</H1>
+<H1>
+PHP FAQ
+</H1>
 <ul>
 <li>The <a href="FAQ.php">PHP FAQ</a> is your first stop for general
     information and those questions that seem to be on most people's minds.
 
 </ul>
+
+
+<? echo hdelim(); ?>
+
 
 <H1>The PHP Manual On-line</H1>
 <ul>
@@ -24,7 +30,12 @@ commonHeader("Documentation");
     links.  You can also browse or download translated versions here.
 </ul>
 
-<H2>PHP Annotated Manuals</H2>
+
+
+<? echo hdelim(); ?>
+
+
+<H1>PHP Annotated Manuals</H1>
 <ul>
 <LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
     is the same as the above, except there is a built-in errata/note system
@@ -37,6 +48,11 @@ commonHeader("Documentation");
     system.
 </ul>
 
+
+
+<? echo hdelim(); ?>
+
+
 <H1>Downloadable PHP Manuals</H1>
 <H2>HTML Version</H2>
 <ul>
@@ -44,7 +60,7 @@ commonHeader("Documentation");
 <li><?php download_link("manual.zip", "PHP HTML Manual ZIP File"); ?>
 <li><?php download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
 </ul>
-<H2>Latest versions (daily snapshots)</H2>
+<H2>Latest Versions (Daily Snapshots)</H2>
 <ul>
 <li><?php download_link("http://snaps.php.net/manual/manual-en-current.tar.gz", "PHP HTML Manual (English) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-de-current.tar.gz", "PHP HTML Manual (German) .tar.gz File"); ?>
@@ -86,6 +102,11 @@ commonHeader("Documentation");
 <li><?php download_link("manual_doc.pdb","PHP Manual - PalmPilot DOC format"); ?>
 </ul>
 
+
+
+<? echo hdelim(); ?>
+
+
 <H1>Translations</H1>
 <ul>
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
@@ -95,7 +116,12 @@ commonHeader("Documentation");
 Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/chargement.html">disponibles</a>. (PDF, HTML, doc, ps, palm).
 </ul>
 
-<H1>More information</H1>
+
+
+<? echo hdelim(); ?>
+
+
+<H1>More Information</H1>
 <ul>
 <li><a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>.
     This page has a overview about which pages are translated to the
@@ -108,6 +134,11 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
+
+
+<? echo hdelim(); ?>
+
+
 <H1>CVS Account</H1>
 <ul>
 <li><a href="anoncvs.php">CVS instructions</a></li>
@@ -115,7 +146,12 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 with the development of PHP, read this.
 </ul>
 
-<H1>Old/unsupported information</H1>
+
+
+<? echo hdelim(); ?>
+
+
+<H1>Old/Unsupported Information</H1>
 <ul>
 <li><a href="manual/phpfi2.php">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
