@@ -37,11 +37,11 @@ unset($flang);
 // Specified by the user via the browser's Accept Language setting
 // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
 $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-foreach ($browser_accept as $idx => $langcode) {
+foreach ($browser_accept as $langcode) {
     list($langcode) = @explode(";", trim($langcode));
     language_add($langcode);
 }
-unset($browser_accept); unset($idx); unset($langcode);
+unset($browser_accept); unset($langcode);
 
 // Language preferred by this mirror site
 language_add(default_language());
