@@ -14,7 +14,7 @@ Come with me, I'll show you.</p>
 <h2><a href="http://www.php.net/">www.php.net</a>: Main Website</h2>
 
 <p>
-This is the primary web site.  The front page is where major news are published:
+This is the primary web site.  The front page is where major news is published:
 new PHP versions, security updates, and new projects launched. This site is
 also <a href="/mirrors.php">mirrored in dozens of countries worldwide</a>.
 </p>
