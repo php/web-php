@@ -380,6 +380,13 @@ In short, ingoteam is a Web-based groupware giving your company everything
 it needs to communicate with itself - and with the outside world. 
 <? endEntry(); ?>
 
+<? makeEntry("PHPXref", "http://phpxref.sourceforge.net/", "Gareth Watts", "gareth@omnipotent.net"); ?>
+PHPXref is a small Perl script that cross-references functions, variables, and SQL tables used 
+in a PHP-based Web site and generates HTML output. In addition, it can extract inline 
+formatted comments from the PHP files to provide browsable documentation for the functions 
+defined in the scripts.
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
