@@ -5,6 +5,20 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.1.2"></a>
+<h3>Version 4.1.2</h3>
+<b>27-Feb-2001</b>
+<ul>
+<li>Fixed start up failure when mm save handler is used and there is multiple 
+  SAPIs are working at the same time. (Yasuo)</li>
+<li>Fixed the Roxen SAPI (Yasuo)</li>
+<li>Fixed a buffer overflow in the RFC-1867 file upload code (Stefan)</li>
+<li>Fixed a crash in the session module (Yasuo)</li>
+<li>Fixed a crash in the pspell module (Yasuo)</li>
+<li>Changed the default output encoding of mbstring 'pass' to fix 
+  initialization problem (Rui)</li>
+</ul>
+
 <a name="4.1.1"></a>
 <h3>Version 4.1.1</h3>
 <b>26-Dec-2001</b>
