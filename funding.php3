@@ -73,6 +73,7 @@ to contribute any money towards the development of PHP.
 
 <?makeEntry("Contributions have been received from the following:")?>
 <a href="http://www.clearink.com">ClearInk</a><br>
+<a href="http://www.infowest.com">Infowest Global Internet Services, Inc.</a>
 <a href="http://www.fni.net">FishNet Inc.</a><br>
 <a href="http://www.tool.net">Internet Tool &amp; Die Inc.</a><br>
 <a href="http://www.netjet.com">NetJet Communications, Inc.<br>
