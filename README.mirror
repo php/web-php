@@ -1,3 +1,11 @@
+NOTE: If you want to become an official PHP mirror, please sure to
+read and follow these instructions carefully. You should have the
+consent of your hosting company (if you aren't a hosting company
+yourself), and be prepared for some reasonably significant bandwidth
+usage (a reasonable estimate as of 2/2001 is 100MB/day). Also,
+we are currently only accepting new official mirrors in countries
+where we don't already have two active official mirrors.
+
 Here is how to mirror the PHP site:
 
 First, you need to have a rsync (http://rsync.samba.org/) installed.
