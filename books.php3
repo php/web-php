@@ -66,10 +66,12 @@ MacGraw-Hill, 2000, ISBN 0-07-135342-9, 552 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte"
-><IMG SRC="http://images.amazon.com/images/P/0201657716.01.MZZZZZZZ.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/hilton-willis.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte">Building Database Applications on the Web Using PHP3</A><BR>
-by Craig Hilton and Jeff Willis<BR> 
+by Craig Hilton and Jeff Willis<BR>
+<SMALL>
+Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages 
 <!-- <SMALL><A HREF="no information found">no more info</A><BR> -->
 </SMALL>
 </TD>
@@ -80,9 +82,11 @@ by Craig Hilton and Jeff Willis<BR>
 ><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/thephpdevelopmte">PHP Essentials</A><BR>
+A Better Way to Learn PHP - Includes Version 4
 by <A HREF="mailto:julie@thickbook.com">Julie Meloni</A><BR> 
-<SMALL><A HREF="http://www.thickbook.com/">more info</A><BR>
-March/2000, Publisher Prima-Tech, ISBN 0-7615-2729-X<BR>
+<SMALL>
+Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
+<A HREF="http://www.thickbook.com/">more info</A>
 </SMALL>
 </TD>
 </TR>
