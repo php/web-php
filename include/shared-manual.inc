@@ -223,13 +223,13 @@ function manualUserNotes($title, $id) {
 
     echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
     echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-    echo "<td><small>User Contributed Notes ";
-    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'(Add a Note)');
-    echo "</small><br /><b>$title</b></td>\n";
+    echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
     echo "<td align=\"right\">";
     print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
         make_image('notes-add.gif','add a note')
-    );      
+    );
+    echo ' ';
+    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note');
 
     /* This information has been included on add-note.php
     echo "&nbsp;";
@@ -255,6 +255,8 @@ function manualUserNotes($title, $id) {
         print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
             make_image('notes-add.gif','add a note')
         );
+        echo ' ';
+        print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note');
 
         /* This information has been included on add-note.php
         echo "&nbsp;";
