@@ -33,6 +33,38 @@ For a description of PHP.net shortcut URLs, please visit our
 <a href="urlhowto.php">URL Howto page</a>.
 </p>
 
+<?php tipTitle('Quick Reference for Opera', 'Paul Sculthorpe', '11-Jun-2002');?>
+
+<p>
+Add this stuff to search.ini in your Opera directory.
+</p>
+
+<p>
+I replaced one of the existing search engine entries 
+(number 4 in this case), but there are tools around 
+that allow you to fully manage the search features of Opera.
+</p>
+
+<p>
+After adding, saving and restarting Opera, I can access the 
+UK mirror of the PHP function list by typing 'p is_dir' in the 
+address bar of any Opera window. Obviously the UK part can be 
+changed back to 'www' to access the main site instead of the 
+mirror.
+
+<pre>
+[Search Engine 4]
+Name=PHP
+URL=http://uk.php.net/manual-lookup.php?function=%s
+Query=
+Key=p
+Is post=0
+Has endseparator=0
+Encoding=utf-8
+Search Type=0
+</pre>
+</p>
+
 <?php tipTitle('Quick Reference for KDE 2.1', 'Christoph Luehr', '10-Mar-2001');?>
 
 <p>
