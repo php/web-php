@@ -13,7 +13,7 @@ while ($site = key($mirror_sites)):
 	$place=$mirror_sites[$site][1];
 	$type=$mirror_sites[$site][4];
 	if ($type==1):
-		echo "<OPTION VALUE=\"$site\">$place ($country)\n";
+		echo "<OPTION VALUE=\"$site\">$place ($COUNTRIES[$country])\n";
 	endif;
 endwhile;
 ?></SELECT>
