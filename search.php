@@ -81,7 +81,7 @@ if (isset($pattern)) {
 
     // If some local search is needed and we have no support for
     // it, send the user to the central search page on php.net
-    if (!have_search()) {
+    if (!have_search() || !isset($htsearch_prog)) {
         $location = "http://www.php.net/search.php";
         $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
         header("Location: $location?$query");
