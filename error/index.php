@@ -1,7 +1,9 @@
 <?php
 
 require "shared.inc";
-require "configuration.inc";
+if (file_exists("../configuration.inc")) {
+  include "../configuration.inc";
+}
 
 $lang = $MIRRORS[$MYSITE][6];
 
@@ -120,7 +122,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 		if ($show=="source") {
 			$exclude="/manual";
 			$restrict=$MYSITE."source";
-			$where="PHP 3.0 site source code";
+			$where="PHP site source code";
 		} elseif ($show=="manual") {
 			$restrict=$MYSITE."manual";
 			$exclude="/source";
@@ -128,7 +130,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 		} else {
 			$exclude="/source";
 			$restrict=$MYSITE;
-			$where="PHP 3.0 web site";
+			$where="PHP web site";
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
 		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";

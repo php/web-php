@@ -48,7 +48,9 @@ if (isset($pattern) && ($pattern)) {
 	}
 }		
 
-include("configuration.inc");
+if (file_exists("configuration.inc")) {
+  include("configuration.inc");
+}
 
 function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	global $FONTFACE;
@@ -116,7 +118,7 @@ Restrict the search to: <BR>
 </FORM>
 <? } else {
 		commonHeader("Search Results");
-		if ($HAVE_SEARCH) {
+		if ($HAVE_SEARCH && is_set($htsearch_prog)) {
 			$form=$PHP_SELF;
 		} else {
 			$form="http://uk.php.net/search.php";
