@@ -230,8 +230,10 @@ of beta-quality.
 <p>
 <font class="newsdate">[31-Dec-2002]</font>
 We are at the end of 2002, and it seemed appropriate to look back on the
-development issues of the past year. So starts the first PHP Look Back! You can
-find it <a href="http://www.derickrethans.nl/20021230.php">here</a>.
+development issues of the past year. So starts the first PHP Look Back! 
+Note that this is a personal, subjective paper by an individual
+and does not necessarily reflect the views of the broader PHP community.
+You can find it <a href="http://www.derickrethans.nl/20021230.php">here</a>.
 </p>
 <p>
 Happy New Year!
