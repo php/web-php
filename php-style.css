@@ -34,3 +34,8 @@ TD,TH {
 .warning {
     background: #FFCCCC;
 }
+
+.author,.editor {
+    font-size: 10pt;
+    font-weight: normal;
+}
