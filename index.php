@@ -11,7 +11,7 @@ echo "\n<!--$MYSITE-->\n";
 The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
 provides an object-oriented interface to GTK+ toolkit and enables you to write
 client-side cross-platform GUI applications. For more information, visit
-<a href="http://gtk.php.net/">http://gtk.php.net/</a>.
+<?print_link("http://gtk.php.net/")?>.
 
 <? echo hdelim(); ?>
 
@@ -82,8 +82,7 @@ PHP 3.0.18 Released
 <p>
 21-Oct-2000 -- PHP 3.0.18 was released. This is a bug-fix release, including
 fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
-<? print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?>
-contains a full list of changes.
+<? print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?> contains a full list of changes.
 <br clear="all">
 </p>
 
