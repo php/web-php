@@ -228,8 +228,9 @@ function manualUserNotes($title, $id) {
     print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
         make_image('notes-add.gif','add a note')
     );      
-    echo "&nbsp;";
+
     /* This information has been included on add-note.php
+    echo "&nbsp;";
     print_link('/manual/about-notes.php',
         make_image('notes-about.gif', 'about notes')
     );
@@ -252,8 +253,9 @@ function manualUserNotes($title, $id) {
         print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
             make_image('notes-add.gif','add a note')
         );
-        echo "&nbsp;";
+
         /* This information has been included on add-note.php
+        echo "&nbsp;";
         print_link('/manual/about-notes.php',
             make_image('notes-about.gif', 'about notes')
         );
