@@ -58,13 +58,13 @@ commonHeader("Setting Up Local Search");
  </li>
  <li>
   <p>
-   Edit <tt>/usr/local/htdig/conf/htdig.conf</tt> and change the
+   Edit <tt>/usr/local/htdig/conf/php.conf</tt> and change the
    <tt>start_url</tt> line to whatever your mirror is (eg. uk.php.net)
   </p>
  </li>
  <li>
   <p>
-   Run <tt>/usr/local/htdig/bin/rundig</tt><br /><br />
+   Run <tt>/usr/local/htdig/bin/rundig -c /usr/local/htdig/conf/php.conf</tt><br /><br />
    You'll probably want to have cron run it once a week.
    If you get an error like: 'Unable to open word list file
    '/usr/local/htdig/db/db.wordlist' while running "rundig",
@@ -87,6 +87,12 @@ commonHeader("Setting Up Local Search");
  Make sure that you index the mirror site with the URL it knows about
  itself. For official mirror sites it is the name the mirror site is 
  registered under (eg. uk.php.net), without the www prefix.
+</p>
+
+<p>
+ If the search is not perfomed on your mirror, check twice that the
+ htphp.sh script is excutable by PHP. This is vital to the search to
+ work.
 </p>
 
 <p>
