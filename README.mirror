@@ -9,6 +9,9 @@ Fetch the web files with the following:
    Password: mirror
    cvs -d:pserver:mirror@cvs.php.net:/repository co phpweb
 
+Alternatively, you can use rsync (http://rsync.samba.org/) to mirror
+the website. Instructions are at http://rsync.php.net/.
+
 Symbolic link the phpweb directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 files as PHP3 
