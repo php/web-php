@@ -61,7 +61,7 @@ Before you download, make sure you are using a mirror close to you.
 $cm = find_closest_mirrors();
 $cmn = count($cm);
 if ($cmn > 0) {
-    echo "We found ";
+    echo " We found ";
     echo ($cmn > 1 ? "$cmn mirrors" : "a mirror");
     echo " near you. We recommend you use nearby mirror sites.";
     echo "Please visit: ";
@@ -69,9 +69,11 @@ if ($cmn > 0) {
         echo '<a href="' . $mirror . '">' . $mirror . '</a>';
         if ($num < $cmn) { echo " or "; }
     }
+    echo ". You can also change mirrors at the bottom of the page.";
+} else {
+    echo " You can change mirrors at the bottom of the page.";
 }
 ?>
-You can change also mirrors at the bottom of the page.
 </p>
 
 <h2>Complete Source Code</h2>
