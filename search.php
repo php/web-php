@@ -196,7 +196,7 @@ if (isset($pattern)) {
         if (isset($page)) { $page = intval($page); $pgr = "&page=$page"; } else { $pgr = ""; }
         
         // Always exclude the printer friendly pages of both types
-        // The last exclude is a fix for the bogus index database of php.net,
+        // The '.php/' exclude is a fix for the bogus index database of php.net,
         // and may be removed if the index problems are resolved [see bug #20870]
         $exclude = escapeshellcmd(urlencode("/print/|/printwn/|.php/|/manual/howto/"));
 
