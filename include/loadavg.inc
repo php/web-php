@@ -13,16 +13,26 @@ function check_load()
 	$l = getloadavg();
 	header("X-PHP-Load: " . implode(", ", $l));
 
-	$mirrors = array();
+	if ($l[0] > 80) {
+		header("HTTP/1.1 503 Too busy, try again later");
+		echo "Server too busy, please try again later, or <a href=\"/mirrors.php\">use a mirror</a>";
+		exit;
+	}
 
+	$mirrors = array();
+	$any_mirrors = array();
+	
 	/* find potential mirrors */
 	foreach ($MIRRORS as $murl => $mirror) {
 		if ($murl != 'http://www.php.net' &&
-				mirror_country($murl) == $COUNTRY &&
 				mirror_status($murl) == MIRROR_OK &&
 				$mirror[5] /* searchable */) {
 
-			$mirrors[] = $murl;
+			if (mirror_country($murl) == $COUNTRY) {
+				$mirrors[] = $murl;
+			} else {
+				$any_mirrors[] = $murl;
+			}
 		}
 	}
 
@@ -32,7 +42,14 @@ function check_load()
 		header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
 		exit;
 	}
-	
+
+	/* pick a random mirror if load is moderate */
+	if ($l[0] > 10 && count($any_mirrors) > 0) {
+		$murl = $any_mirrors[array_rand($any_mirrors)];
+		header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+		exit;
+	}
+
 	/* no searchable mirror was found, allow the request through if the load
 	 * isn't really really high */
 	if ($l[0] > 20) {
