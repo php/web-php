@@ -12,6 +12,10 @@
  After this script run, $LANG is set to the preferred
  language, or is the empty string, if no manual is
  available on the current mirror site.
+  
+ $EXPL_LANG will also be set to the explicitly provided
+ language, or will not exist if there are only implications
+ on the preferred language.
  
  The $_SERVER['STRIPPED_URI'] var is also set to the
  stripped request URI (in case of a shortcut, the
@@ -25,6 +29,9 @@ $LANGS = array(); $LANG = '';
 
 // Default STRIPPED_URI
 $_SERVER['STRIPPED_URI'] = $_SERVER['REQUEST_URI'];
+
+// Explicit language is not specified
+unset($EXPL_LANG);
 
 // Specified for the request (GET/POST parameter)
 if (isset($_REQUEST['lang'])) { language_add($_REQUEST['lang']); }
@@ -43,7 +50,7 @@ if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
 
 // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
 if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
-    language_add($flang[1]);
+    $EXPL_LANG = language_add($flang[1]);
 }
 unset($flang);
 
@@ -93,6 +100,9 @@ function language_add($langcode)
     // there already and supported by the PHP site. Try to
     // lower number of file_exists() calls to the minumum...
     if (!in_array($langcode, $LANGS) && isset($LANGUAGES[$langcode])) { $LANGS[] = $langcode; }
+    
+    // Return with language code
+    return $langcode;
 }
 
 ?>
