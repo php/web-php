@@ -53,7 +53,7 @@ div.tip {
 	padding: 0px 8px;
 }
 
-p.formerror, div.warn {
+p.formerror, p.warn {
 	border: 1px solid #666600;
 	color: #660000;
 	background-color: #ffeeee;
