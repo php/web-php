@@ -5,7 +5,7 @@ include_once 'prepend.inc';
 // Define the posttohost() function
 include_once 'posttohost.inc';
 
-// Defines the makeEntry() function, which we use
+// Defines the manual_note_display() function, which we use
 include_once 'shared-manual.inc';
 
 // Print out common header
@@ -113,8 +113,8 @@ if (isset($note) && isset($user) &&
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
-        makeEntry(time(),stripslashes($user),stripslashes($note));
-        echo '</table>';
+        manual_note_display(time(),stripslashes($user),stripslashes($note), false);
+        echo '</table><br/><br/>';
     }
 }
 
