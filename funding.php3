@@ -7,7 +7,7 @@ function makeEntry($heading) {
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
-<TD ALIGN=left rowspan=2>
+<TD ALIGN=left rowspan=2 valign=middle>
 <?
     echo "<FONT FACE=\"$FONTFACE\" SIZE=-1><FONT SIZE=+0>\n";
     echo "<B>$heading</B><BR></FONT>\n";
