@@ -507,26 +507,26 @@ endif; ?>
 		if ($UP[0] && $UP[1]):
 			makeSideButton($UP[0],"up","","up",129,30,0,10,"Up to $UP[1]","<BR>\n");
 		endif;
-		makeSideButton("/quickref.php3","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
+		makeSideButton("/quickref.php","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
 		if (!$HTDIG):
 			makeBorderTOC($title);
 		endif;
 	else:
-		$lastnews=filemtime($DOCUMENT_ROOT."/news.php3");
+		$lastnews=filemtime($DOCUMENT_ROOT."/news.php");
 		if ($lastnews):
 			$lastnews="PHP News last updated: ".date("M d, Y",$lastnews);
 		else:
 			$lastnews="PHP in the News";
 		endif;
-		makeSideButton("downloads.php","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
-		//makeSideButton("/docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
-		//makeSideButton("/quickref.php3","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
+		makeSideButton("/downloads.php","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
+		//makeSideButton("/docs.php","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
+		//makeSideButton("/quickref.php","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
 #		//makeSideButton("/mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
-		//makeSideButton("/support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
-		//makeSideButton("/news.php3","news","","news",129,30,0,10,$lastnews,"<BR>\n");
-		//makeSideButton("/projects.php3","proj","","projects",129,30,0,10,"Projects using PHP","<BR>\n");
-		//makeSideButton("/links.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
-		//makeSideButton("/mirrors.php3","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
+		//makeSideButton("/support.php","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
+		//makeSideButton("/news.php","news","","news",129,30,0,10,$lastnews,"<BR>\n");
+		//makeSideButton("/projects.php","proj","","projects",129,30,0,10,"Projects using PHP","<BR>\n");
+		//makeSideButton("/links.php","link","","links",129,30,0,10,"PHP Links","<BR>\n");
+		//makeSideButton("/mirrors.php","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
 	endif; ?>
      </TD>
     </TR>
@@ -550,7 +550,7 @@ endif; ?>
 			makeSideButton("","close","","close",1,1,0,0,"","");
 			makeSideButton("source.php?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
 		endif;
-		makeSideButton("/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
+		makeSideButton("/search.php","sear","searchKick","search",75,30,9,5,"Search the site","");
       ?><IMG SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
     </TR>
    </TABLE>
@@ -604,7 +604,7 @@ function commonFooter() {
       <?
 		spc(1,3);
 		echo "<BR>\n";
-		makeSideButton("credits.php","cred","","credits",129,30,0,10,"Who's responsible for this?","<BR>\n");
+		makeSideButton("/credits.php","cred","","credits",129,30,0,10,"Who's responsible for this?","<BR>\n");
 		makeSideButton("#tOpOfpAgE","top","","top",129,30,0,10,"Top of this page","<BR>\n");
       ?>
       <IMG SRC="/gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
@@ -668,7 +668,7 @@ Some elements of this website are subject to <A HREF="/COPYRIGHT.txt">copyright<
 
 <DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-20,'left',400);?>
-<FORM ACTION="/redirect.php3" METHOD="POST">
+<FORM ACTION="/redirect.php" METHOD="POST">
 <B>Pick a mirror site close to you:</B><BR>
 <SELECT NAME="URL">
 <?
@@ -692,7 +692,7 @@ endwhile;
 
 <DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(30,'left',400);?>
-<FORM ACTION="/manual-lookup.php3" METHOD="POST">
+<FORM ACTION="/manual-lookup.php" METHOD="POST">
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
 Type in a PHP function name or feature to<BR>
 jump to that page of the online manual:<BR>
@@ -710,9 +710,9 @@ button on the left for other documentation resources.)
 
 <?
 if ($HAVE_SEARCH):
-	$form="/search.php3";
+	$form="/search.php";
 else:
-	$form="http://uk.php.net/search.php3";
+	$form="http://uk.php.net/search.php";
 endif;
 ?>
 
@@ -722,7 +722,7 @@ if (!isset($prevsearch)):
 	$prevsearch[0]="";
 endif;
 ?>
-<FORM ACTION="/search.php3" METHOD="POST">
+<FORM ACTION="/search.php" METHOD="POST">
 <B>What are you searching for:</B><BR>
 <input type="text" name="pattern" size=20 VALUE="<? echo $prevsearch[0];?>"><BR>
 <B>Where do you want to look:</B><BR>
