@@ -67,10 +67,13 @@ $server = $SERVER_NAME;
 
 <h1>Latest version of PHP</h1>
 
-<p>
-Before you download, please make sure you are using a <a
-href="mirrors.php">mirror</a> close to you.
 <?php
+
+/* ******** DONT NEED THIS NOW, WITH THE NEW MIRROR LISTING PAGE
+
+echo '<p>';
+echo 'Before you download, please make sure you are using a <a href="mirrors.php">mirror</a> close to you.';
+
 $cm = find_closest_mirrors();
 $cmn = count($cm);
 if ($cmn > 0) {
@@ -104,8 +107,12 @@ if ($cmn > 0) {
 		$mirror = "";
 	}
 }
+echo '</p>';
+
+***************** */
+
 ?>
-</p>
+
 
 <h2>Complete Source Code</h2>
 <ul>
