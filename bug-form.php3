@@ -67,7 +67,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
  </tr><tr>
   <th align=right>Operating system:</th>
   <td>
-   <input type=text size=20 name="os" value="<?echo $operating_system;?>">
+   <input type=text size=20 name="osver" value="<?echo $operating_system;?>">
   </td>
  </tr>
 </table>
