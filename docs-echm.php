@@ -6,10 +6,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 $SIDEBAR_DATA='
 <h3>Download</h3>
 <p>
- The <a href="/get/php_manual_chm_12.zip/from/a/mirror">latest (12th) build of
- the Extended CHM Format</a> of the PHP Manual fixes the known bugs from the
- previous build, introduces the brilliant new phpZ skin (see screenshots)
- and contains up to date content (released on the 6th September 2003).
+ Get the latest build of the Extended CHM Format from our
+ <a href="/download-docs.php">documentation downloads page</a>.
 </p>
 
 <h3>Screenshots</h3>

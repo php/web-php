@@ -42,12 +42,13 @@ site_header("Download documentation");
 
 // Format to look for
 $formats = array(
-    "Single HTML"       => "html.gz",
-    "Many HTML files"   => "tar.gz",
-    "PDF"               => "pdf.bz2",
-    "PalmPilot DOC"     => "doc.pdb",
-    "PalmPilot iSilo"   => "isilo.pdb",
-    "Windows HTML Help" => "chm"
+    "Single HTML"        => "html.gz",
+    "Many HTML files"    => "tar.gz",
+    "PDF"                => "pdf.bz2",
+    "PalmPilot DOC"      => "doc.pdb",
+    "PalmPilot iSilo"    => "isilo.pdb",
+    "Windows HTML Help"  => "chm",
+    "Extended HTML Help" => "chm.zip"
 );
 ?>
 
@@ -79,15 +80,23 @@ foreach ($LANGUAGES as $langcode => $language) {
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
     
+        // Skip chm.zip if we are not dealing with the English manual
+        if ($extension == 'chm.zip' && $langcode != 'en') {
+            continue;
+        }
+
         // Actual filename of the file
         $actual_file = $_SERVER['DOCUMENT_ROOT'] . 
-                       "/distributions/manual/php_manual_$langcode.$extension";
+                       "/distributions/manual/php_manual_" .
+                       ($extension == 'chm.zip' ? $extension : "$langcode.$extension");
         
         // File named after the language and format exists
         if (file_exists($actual_file)) {
             
             // Mirror selection download URL
-            $link_to = "/get/php_manual_$langcode.$extension/from/a/mirror";
+            $link_to = '/get/php_manual_' .
+                ($extension == 'chm.zip' ? $extension : "$langcode.$extension") .
+                '/from/a/mirror';
 
             // Try to get size and changed date
             $size    = @filesize($actual_file);
@@ -173,11 +182,6 @@ if (count($found_formats) == 0) {
                 }
             }
 
-            // Quite bad looking code tweak to add a link to the extended CHM (en only!)
-            if ($langcode == "en" && $extension == "chm") {
-                echo '<br /><a href="/docs-echm.php">extended chm</a>';
-            }
-       
             // End table cell
             echo "</td>\n";
 
