@@ -1,4 +1,12 @@
 <?php
+
+/*********************************************************************
+ *
+ * USE download_link('filename','desc') for all local download links
+ * 
+ **********************************************************************/
+
+
 require_once 'prepend.inc';
 
 header("Cache-Control: private");
@@ -90,7 +98,7 @@ if ($cmn > 0) {
         srand ((double)microtime()*1000000);
 	
 	if ($server == "www.php.net" || $server == "php.net") {
-		$default_mirrors = array("http://us2.php.net/", "http://ca.php.net/", "http://us3.php.net/","http://rs1.php.net/");
+		$default_mirrors = array("http://us2.php.net/", "http://us3.php.net/","http://rs1.php.net/");
 		$mirror = $default_mirrors[rand(0, count($default_mirrors)-1)];
 	} else {
 		$mirror = "";
@@ -101,8 +109,8 @@ if ($cmn > 0) {
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3.tar.bz2">PHP 4.2.3 (tar.bz2)</a> [2,694KB] - 6 September 2002</li>
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3.tar.gz">PHP 4.2.3 (tar.gz)</a> [3,334KB] - 6 September 2002</li>
+  <li><?php download_link('php-4.2.3.tar.bz2','PHP 4.2.3 (tar.bz2)'); ?> - 6 September 2002</li>
+  <li><?php download_link('php-4.2.3.tar.gz', 'PHP 4.2.3 (tar.gz)');  ?> - 6 September 2002</li>
 </ul>
 
 <p>
@@ -120,14 +128,15 @@ if ($cmn > 0) {
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3-Win32.zip">PHP 4.2.3 zip package</a> [5,417KB] - 6 September 2002<br />
+  <li><?php download_link('php-4.2.3-Win32.zip', 'PHP 4.2.3 zip package'); ?> - 6 September 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
 
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3-installer.exe">PHP 4.2.3 installer</a> [928KB]- 6 September 2002<br />
+  <li><?php download_link('php-4.2.3-installer.exe', 'PHP 4.2.3 installer'); ?> - 6 September 2002<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
+
 <?php /*  <li>Win32 binaries will be posted soon!</li> */ ?>
 </ul>
 

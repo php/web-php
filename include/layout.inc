@@ -152,35 +152,43 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 # print a link for a downloadable file (including filesize)
 #
 
-function download_link($file, $title, $mirror = '') {
+function download_link($file, $title, $showsize = true, $mirror = '') {
 
-	if ($tmp = strrchr($file, "/")) {
-		$local_file = substr($tmp, 1, strlen($tmp));
+	$download_link = "get_download.php?df=$file";
+	if ($mirror != '') {
+		$download_link = $mirror . $download_link;
 	} else {
-		$local_file = "distributions/$file";
+		$download_link = "/" . $download_link;
 	}
-
-	$size = @filesize($local_file);
-	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
- 
- $download_link = "do_download.php?download_file=$file";
- if ($mirror != '') {
-    $download_link = $mirror . $download_link;
- } else {
-    $download_link = "/" . $download_link;
- }
 
     print_link($download_link, $title);
-#   print_link("/distributions/$file", $title);
 
-	// Print out size in bytes (if size is less the 1Kb, or else in Kb)
-	if ($size) {
-	    echo " [";
-		if ($size < 1024) { echo number_format($size, 0, ".", ",") . "b"; }
-	    else { echo number_format($size/1024, 0, ".", ",") . "Kb"; }
-		echo "]";
+	if ($showsize) {
+
+		if ($tmp = strrchr($file, "/")) {
+			$local_file = substr($tmp, 1, strlen($tmp));
+		} else {
+			$local_file = "distributions/$file";
+		}
+
+		$size = @filesize($local_file);
+
+		/*  Print out size in bytes (if size is less the 1Kb, or else in Kb)  */
+
+		if ($size) {
+			echo ' [';
+			if ($size < 1024) { 
+				echo number_format($size, 0, '.', ',') . 'b'; 
+			} else { 
+				echo number_format($size/1024, 0, '.', ',') . 'Kb'; 
+			}
+			echo ']';
+		}
 	}
+
 }
+
+
 
 $enclosed = 0;
 
