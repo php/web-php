@@ -128,7 +128,7 @@ while ($site = @current($showsites)) {
 		$lastcountry=$country;
 	}
 	echo "<TR><TD colspan=3>";
-	spc(75,1);
+	spacer(75,1);
 	echo "<BR></TD>\n<TD>";
 	echo "<TABLE border=0 cellpadding=5 cellspacing=0 bgcolor=\"#F0F0F0\" width=100%>\n";
 	echo "<TR><TD><FONT FACE='$FONTFACE'>\n";
