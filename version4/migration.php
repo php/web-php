@@ -11,25 +11,29 @@ list</a> to make sure that you're indeed not affected by them (the chances
 you're affected by these incompatibilities are extremely slim).</p>
 <p>&nbsp;</p>
 <h2>Running PHP 3.0 and PHP 4.0 concurrently</h2>
-<p>Many of you are probably interested to know whether it's possible to run both
-PHP 3.0 and PHP 4.0 in the same server, for the duration of the transition
-period.&nbsp; Well, the simple answer is that you can't.&nbsp; PHP 3.0 and PHP
-4.0 share a lot of common code (not in the language itself, but in the module
-code) and for many technical reasons, compiling the two versions into the same
-server is not possible.&nbsp; We don't expect this to change in future betas or
-the final release.</p>
-<p>However, this shouldn't have too much impact on you, for two reasons:</p>
+<p>Recent operating systems provide the ability to perform versioning and 
+scoping. This features make it possible to let PHP3 and PHP4 run as concurrent
+modules in one Apache server.</p>
+<p>
+This feature is known to work on the following platforms:
+</p>
 <ol>
-  <li>The close to 100% compatibility PHP 4.0 features mean that most chances
-    are that your web site would run with PHP 4.0 without requiring any
-    additional work on your side.&nbsp; Note that PHP 4.0 Beta 1 is, as its name
-    implies, still a beta, so there'll probably be bugs - don't try PHP 4.0 Beta
-    1 on your production web site before testing it offline on a different
-    machine or port!</li>
-  <li>If you're still not sure, and want to slowly migrate from PHP 3.0 to PHP
-    4.0 - you can run PHP 4.0 as a server module, and PHP 3.0 as a CGI binary
-    (or vice versa).</li>
+  <li>Linux with recent binutils (binutils 2.9.1.0.25 tested)</li>
+  <li>Solaris 2.5 or better</li>
+  <li>FreeBSD (3.2, 4.0 tested)</li>
 </ol>
+<p>To enable it, configure PHP3 and PHP4 to use APXS (--with-apxs) and the necessary
+link extensions (--enable-versioning). Otherwise, all standard installations
+instructions apply. For example:</p>
+<pre>
+            $ ./configure \
+                   --with-apxs=/apache/bin/apxs \
+                   --enable-versioning \
+                   --with-mysql \
+                   --enable-track-vars
+</pre></p>
+<p>If this also works on your platform or if you know a way to do it, please report
+it to our bug database at http://bugs.php.net</p>
 <p>&nbsp;</p>
 <h2>Migrating Configuration Files</h2>
 <h3>Global Configuration File</h3>
@@ -88,4 +92,3 @@ in the scripts/apache/ directory as well):</p>
 <p>The conversion scripts require awk to be installed.</p>
 
 <? commonFooter(); ?>
-
