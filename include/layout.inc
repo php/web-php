@@ -217,7 +217,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
  <tr bgcolor="#666699">
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
-    <form method="post" action="/search.php">
+    <form method="post" action="/search.php" class="thin">
 <small>search for</small>
 <input class="small" type="text" name="pattern" value="" size="30" />
 <small>in the</small>
@@ -287,7 +287,7 @@ function commonFooter() {
  <tr bgcolor="#333366"><td><?php spacer(1,1);?></td></tr>
  <tr bgcolor="#9999cc">
   <td align="right" valign="bottom">
-   <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);" style="margin-bottom:0;">
+   <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);" class="thin">
    <script language="javascript">
    <!--
    function gotomirror(form) {
