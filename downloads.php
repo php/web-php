@@ -14,7 +14,7 @@ $SIDEBAR_DATA = '
  not want to compile your own, go to your distribution\'s
  download site. Binaries available on external servers:
 </p>
-<ul>
+<ul class="simple">
  <li><a href="http://louise.amiga.hu/index.php?MENU=6">AmigaOS</a></li>
  <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/ndk/php.htm">Novell NetWare</a></li>
@@ -57,7 +57,7 @@ $SIDEBAR_DATA = '
 </p>
 ';
 
-commonHeader("Downloads");
+site_header("Downloads");
 ?>
 
 
@@ -309,4 +309,4 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
  </li>
 </ul>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
