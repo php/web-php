@@ -470,6 +470,7 @@ right away.</blockquote>
 	site("Sunset Systems","www.sunsetsystems.com");
 	site("Swiss Online Bookstore","www.editore.ch");
 	site("TonerStop","www.tonerstop.com");
+	site("Toronto Eaton Centre","www.centreoftheuniverse.com");
 	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
 	site("Vermeer","www.vermeer.com");
