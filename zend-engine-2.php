@@ -1,8 +1,9 @@
 <?php
 require_once 'prepend.inc';
 
-commonHeader("Changes in Zend Engine 2.0", 1);
+commonHeader("Changes in PHP5/Zend Engine 2.0", 1);
 ?>
+<h1>Changes in PHP5/Zend Engine 2.0</h1>
 <h2>New Object Model.</h2>
 <p>
 PHP's handling of objects has been completely rewritten, allowing for better performance and more
@@ -196,20 +197,24 @@ in a typed language, but during runtime.  This means that:
 </p>
 <p>
 <?php
-highlight_string('function foo(ClassName $object) {
+highlight_string('<?php
+function foo(ClassName $object) {
     // ...
-}');
+}
+?>');
 ?>
 <p>
 is equivalent to:
 </p>
 <p>
 <?php 
-highlight_string('function foo($object) {
+highlight_string('<?php
+function foo($object) {
     if (!($object instanceof ClassName)) {
         die("Argument 1 must be an instance of ClassName");
     }
-}'); ?>
+}
+?>'); ?>
 </p>
 <p>
 This syntax only applies to objects/classes, not built-in types.
@@ -222,11 +227,13 @@ members declared final cannot be overridden by sub-classes.
 </p>
 <h3>Example</h3>
 <p>
-<?php highlight_string('class Foo {
+<?php highlight_string('<?php
+class Foo {
     final function bar() {
         // ...
     }
-}'); ?>
+}
+?>'); ?>
 <p>
 Old code that has no user-defined classes or functions named 'final' should run 
 without modifications.
@@ -250,7 +257,9 @@ to create a new instance of this other object so that the replica has its own se
 An object copy is created by calling the object's <code>__clone()</code> method:
 </p>
 <p>
-<?php highlight_string('$copy_of_object = $object->__clone();'); ?>
+<?php highlight_string('<?php
+$copy_of_object = $object->__clone();
+?>'); ?>
 </p>
 <p>
 When the developer asks to create a new copy of an object, the Zend Engine will check if a 
