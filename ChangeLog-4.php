@@ -9,7 +9,6 @@ commonheader("PHP 4 ChangeLog");
 <h3>Version 4.1.0</h3>
 <b>10-Dec-2001</b>
 <ul>
-10 Dec 2001, Version 4.1.0
 <li>Worked around a bug in the MySQL client library that could cause PHP to hang
   when using unbuffered queries. (Zeev)</li>
 <li>Fixed a bug which caused set_time_limit() to affect all subsequent requests
