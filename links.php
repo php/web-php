@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+include_once "prepend.inc";
 
 $SIDEBAR_DATA = '
 <h3>Books</h3>
@@ -245,9 +245,20 @@ some special modules</li>
 <h4>Companies that provide commercial tools for PHP</h4>
 
 <ul>
+<li><a href="http://www.interakt.ro/">InterAKT Online</a><br />
+InterAKT Online provides quality software development tools used by tens
+of thousands of PHP developers around the world, including PHAkt and
+Krysalis.
+</li>
+
 <li><a href="http://www.ioncube.com/">ionCube</a><br>
 ionCube produces PHP development and end-user tools, including the popular
 free PHP Accelerator and affordable encoding solutions for code protection.
+</li>
+
+<li><a href="http://www.macromedia.com/">Macromedia</a><br />
+Macromedia created Dreamweaver MX, a rapid web application development
+tool supporting PHP.
 </li>
 
 <li><a href="http://www.nusphere.com/products/index.htm">NuSphere</a><br>
