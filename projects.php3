@@ -46,7 +46,7 @@ function endEntry() {
 ?>
 <h3>Projects using PHP</h3>
 
-An increasing number of projects, both commercial and open source, are using PHP as their main development
+An increasing number of projects, both commercial and Open Source, are using PHP as their main development
 tool.  If you want to browse through a list companies using PHP, you can go <a href="/sites.php3">here</a>. 
 This page, however, is a listing of cool things based on PHP, available for download.
 <P>
@@ -80,6 +80,28 @@ use an installation of IMP to check your mail from anywhere that you have web ac
 
 <? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
+<? endEntry();?>
+
+<? makeEntry("MyAdServer","http://www.incluso.com","Incluso Networks","wj@incluso.com"); ?>
+This is a web adserver using PHP3.0 and MySQL  It includes the following features:
+<ul>
+<li> &quot;random&quot; rotation of banners on web pages, done by inserting just one line
+of PHP code into each page that you would like a banner displayed.
+<li> password protected entry into restricted area for both clients and administrator.
+<li> within this restricted area, the clients have access to statistics
+relevant to their banner, including overall and daily clicks, views, ads
+remaining in account, as well as ratio calculations pertaining to banner
+view/clicks.
+<li> The administrator has the power to:
+<ul>
+    <li> add client
+    <li> modify client
+    <li> view overall stats of ad server.
+    <li> View each client statistics, both overall and daily.
+</ul>
+<li> In addition, each client is automatically emailed when their "ads
+remaining on account" drops below a specified level.
+</ul>
 <? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
