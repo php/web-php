@@ -23,6 +23,10 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	exit;
 }
 
+if ($edit)
+	$edit = $MAGIC_COOKIE ? 1 : 2;
+
+
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
