@@ -245,7 +245,7 @@ function gifurl($img) {
 
 function jpgurl($img) {
 	global $root_url;
-	return $root_url . "jpgs/" . $img;
+	return $root_url . "/jpgs/" . $img;
 }
 
 function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$alt,$br) {
