@@ -111,6 +111,7 @@ right away.</blockquote>
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
 	site("PalmShop","www.palmshop.de");
+	site("DataGuard AS - Security Consulting","www.dataguard.no");
 	siteEnd();
 
 /* ISP's */
