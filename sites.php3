@@ -101,6 +101,7 @@ removed right away.</blockquote>
 	site("XOOM Inc.","xoom.com");
 	site("Nederland.Net","www.nederland.net");
 	site("Pair Networks","www.pair.net");
+	site("SpaceNet","www.spacenet.de");
 	siteEnd();
 
 /* Military */
@@ -156,6 +157,12 @@ removed right away.</blockquote>
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
+	siteEnd();
+
+/* City and Community Sites */
+	title("City and Community Sites");
+	siteStart();
+	site("City of Capelle aan den IJssel","www.capelle-ijssel.nl");
 	siteEnd();
 
 /* Misc. */
