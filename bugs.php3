@@ -119,7 +119,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $bug_type\n";
     $report .= "Bug description:\n";
-    $report .= indent($ldesc, "    ");
+    $html_desc = ereg_replace("<", "&lt;", $ldesc);
+    $html_desc = ereg_replace(">", "&gt;", $html_desc);
+    $report .= indent($html_desc, "    ");
 
     $html_report = ereg_replace("<", "&lt;", $report);
     $html_report = ereg_replace(">", "&gt;", $html_report);
@@ -156,6 +158,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				print "<a href=\"bugs.php3?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
 			default:
+				$data = ereg_replace("<","&lt;",$data);
+				$data = ereg_replace(">","&gt;",$data);
 				print $data;
 				break;
 		}

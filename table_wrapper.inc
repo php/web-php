@@ -161,7 +161,9 @@
         if ($link) {
           echo "<a href=\"$url$pass_on&order_by_clause=$fullnames[$i]&$last_order_by\">";
         }
-        echo $display_fieldname;
+		$df = ereg_replace("<", "&lt;", $display_fieldname);
+ 		$df = ereg_replace(">", "&gt;", $df);
+        echo $df;
         if ($link) {
           echo "</a>";
         }
@@ -206,7 +208,9 @@
           if (isset($external_processing_function)) {
             $external_processing_function($fieldnames[$i],$tablenames[$i],$row[$i],&$row);
           } else {
-            echo "$row[$i]\n";
+			$df = ereg_replace("<", "&lt;", $row[$i]);
+ 			$df = ereg_replace(">", "&gt;", $df);
+            echo "$df\n";
           }
           echo "</td>";
         }
