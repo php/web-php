@@ -224,17 +224,6 @@ event's website</a>.
 
 <?php echo hdelim(); ?>
 
-<h1>PHP 4.3.0RC3 Released</h1>
-<p>
-<font class="newsdate">[11-Dec-2002]</font>
-<a href="http://qa.php.net/">PHP 4.3.0RC3</a> is out. This will be the last
-release candidate before the final release. From this point on, only crash and
-showstopper bugs will be fixed. Your help with thouroughly testing this RC is
-much appreciated.
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP news feed available</h1>
 <p>
 <font class="newsdate">[01-Dec-2002]</font>
@@ -244,18 +233,6 @@ add this file to any news reader or portal site to get the latest
 official PHP news. We strongly recommend you to cache the contents
 locally on your side, as the newsfeed is updated daily. The RSS
 file is available on every mirror site.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.3.0RC2 Released</h1>
-<p>
-<font class="newsdate">[27-Nov-2002]</font>
-<a href="http://qa.php.net/">PHP 4.3.0RC2</a>
-has been released, just in time for the Thanksgiving. And thanks indeed must
-be given to those who fixed bugs and pushed this release to be a lot closer
-to the final one. Please <a href="http://qa.php.net/">download</a> and test
-it as much as possible on real-life applications to uncover remaining issues.
 </p>
 
 <?php echo hdelim(); ?>
@@ -308,17 +285,6 @@ in PDF format and is available worldwide. It covers a variety of advanced
 topics ranging from day-to-day programming to the internals of PHP. A sample
 article on the creation of a web-based PDF converter is also
 available on the magazine website
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.3.0RC1 Released</h1>
-<p>
-<font class="newsdate">[14-Nov-2002]</font>
-<a href="http://qa.php.net/">PHP 4.3.0RC1</a>
-has been released. This is the first release candidate and should have a very
-low number of problems and/or bugs. Nevertheless, please download and test it as
-much as possible on real-life applications to uncover remaining issues.
 </p>
 
 <?php echo hdelim(); ?>
@@ -384,17 +350,6 @@ software available at the booth.
 
 <?php echo hdelim(); ?>
 
-<h1>PHP 4.3.0pre2 Released</h1>
-<p>
-<font class="newsdate">[27-Oct-2002]</font>
-<a href="http://qa.php.net/">PHP 4.3.0pre2</a>
-is available for download. This is the second pre-release version and
-incorporates a large number of bug fixes since the first pre-release. Still, to
-help us catch as many bugs as possible, please download it and start testing.
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>New keyboard shortcuts</h1>
 <p>
 <font class="newsdate">[17-Oct-2002]</font>
@@ -406,21 +361,6 @@ on the manual pages to access the lookup input field. Thanks to Tommy Ipsen
 for the suggestion. You can read more about keyboard shortcuts on web pages
 <a href="http://www.w3.org/TR/html401/interact/forms.html#access-keys">in
 the HTML standard</a>.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.3.0pre1 Released</h1>
-<p>
-<font class="newsdate">[10-Oct-2002]</font>
-<a href="http://www.php.net/~andrei/php-4.3.0pre1.tar.bz2">PHP 4.3.0pre1</a>
-is available for download. PHP 4.3.0 incorporates a very large number of
-changes, new features, and bugfixes and thus requires extensive testing. This
-preliminary release is meant to kick-start this testing while the fixes are
-still being performed. Please join in and help us make this a high-quality
-release. You can use the build tracker at
-<a href="http://qa.php.net/buildtest-submit.php">http://qa.php.net/buildtest-submit.php</a>
-to report your results.
 </p>
 
 <?php echo hdelim(); ?>

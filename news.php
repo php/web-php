@@ -168,32 +168,6 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
-
-<h1>Initial Alpha Release of PHP w/ the Zend Engine 2 Available</h1>
-<p>
-<font class="newsdate">[9-Jun-2002]</font>
-The first alpha release of PHP w/ Zend Engine 2 is
-<a href="distributions/php-4.3.0-dev-zend2-alpha1pl1.tar.gz">now available</a>.
-It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
-scripting engine which greatly improves the object model, adds exception
-handling and provides a much better infrastructure for the integration
-of external technologies like Java or .NET.  For more details and
-examples you can check out the <a href="ZEND_CHANGES.txt">CHANGES file</a>
-and an <a href="http://www.php.net/source.php?url=/zend2_example.phps">example script</a>
-which shows how some of these features can be used.</p>
-
-<p><b>Note:</b>  This is an alpha version.  It should not be used in production
-or even semi-production web sites.  There are known bugs in it, and in
-addition, some of the features may change (based on feedback).  We
-encourage you to download and play with it (and report bugs if you find any!),
-but please don't expect it to replace your copy of PHP 4 at this stage.</p>
-
-<p>Windows binary version is also available for
-<?php download_link("php-4.3.0-dev-zend2-win32-alpha1.zip", "download"); ?>.</p>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP for NetWare (Beta) Released</h1>
 <p>
 <font class="newsDate">[27-May-2002]</font>
