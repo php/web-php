@@ -266,6 +266,7 @@ that have been set up by others in the community to host local
   <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian Mailing List</a></li>
   <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
   <li><a href="http://www.ziobudda.net/mailman/listinfo/php-it/">Italian Mailing List</a></li>
+  <li><a href="http://cortesi.com/php/">Italian Mailing List (coordinating the translation of the PHP manual)</a></li>
   <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
   <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a></li>
   <li><a href="http://phptr.baslangic.net/">Turkish Mailing List</a></li>
