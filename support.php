@@ -238,8 +238,7 @@ at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
 <P>
 PHP is developed using CVS, so it's possible to obtain the latest
 development release at any time.  Further instructions can be found in
-the web interface to the <a href="http://cvs.php.net">PHP 3.0
-CVS tree</a>.
+the web interface to the <a href="http://cvs.php.net">PHP CVS tree</a>.
 </P>
 
 <h3>Instant Resource Center</h3>
