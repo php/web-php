@@ -34,7 +34,9 @@ $_SERVER['STRIPPED_URI'] = $_SERVER['REQUEST_URI'];
 unset($EXPL_LANG);
 
 // Specified for the request (GET/POST parameter)
-if (isset($_REQUEST['lang'])) { language_add($_REQUEST['lang']); }
+if (isset($_REQUEST['lang'])) {
+    $EXPL_LANG = language_add($_REQUEST['lang']);
+}
 
 // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
 if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
@@ -46,11 +48,17 @@ if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
     $_SERVER['STRIPPED_URI'] = preg_replace(
         "!^/$flang[1]/!", "/", $_SERVER['REQUEST_URI']
     );
+    
+    // No need to set $EXPL_LANG here, as no page will be displayed,
+    // only a Location header is sent back to the user.
 }
 
 // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
 if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
-    $EXPL_LANG = language_add($flang[1]);
+    $flang = language_add($flang[1]);
+    if (!isset($EXPL_LANG)) {
+        $EXPL_LANG = $flang;
+    }
 }
 unset($flang);
 
