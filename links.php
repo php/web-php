@@ -475,10 +475,6 @@ site_header("Links");
     <a href="http://phpbrasil.com/">PHPBrasil.com</a><br />
     Brazilian PHP portal with many links and information
    </li>
-   <li>
-    <a href="http://www.phpsite.com.br/">PHPsite.com.br</a><br />
-    Brazilian PHP portal featuring tutorials, downloads, a forum and more
-   </li>
   </ul>
  </li>
 
