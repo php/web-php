@@ -140,6 +140,22 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
+<p>
+<font class="newsdate">[16-Dec-2002]</font>
+MySQL AB is proud to host the world's First Annual MySQL User
+Conference, to be held in the heart of Silicon Valley, April 10-12,
+2003. This event promises to be the biggest gathering of MySQL database
+users ever in one location. Designed for both the MySQL developer and
+the corporate decision maker, this is the place to learn about the
+latest in MySQL technology, discover new business opportunities, take a
+pulse on industry direction and commune with like minds. 
+More information on <a href="http://www.mysql.com/events/uc2003/">the
+event's website</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.0RC3 Released</h1>
 <p>
 <font class="newsdate">[11-Dec-2002]</font>
@@ -147,6 +163,7 @@ echo "\n<!--$MYSITE-->\n";
 release candidate before the final release. From this point on, only crash and
 showstopper bugs will be fixed. Your help with thouroughly testing this RC is
 much appreciated.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -159,6 +176,7 @@ add this file to any news reader or portal site to get the latest
 official PHP news. We strongly recommend you to cache the contents
 locally on your side, as the newsfeed is updated daily. The RSS
 file is available on every mirror site.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -170,6 +188,7 @@ has been released, just in time for the Thanksgiving. And thanks indeed must
 be given to those who fixed bugs and pushed this release to be a lot closer
 to the final one. Please <a href="http://qa.php.net/">download</a> and test
 it as much as possible on real-life applications to uncover remaining issues.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -232,6 +251,7 @@ available on the magazine website
 has been released. This is the first release candidate and should have a very
 low number of problems and/or bugs. Nevertheless, please download and test it as
 much as possible on real-life applications to uncover remaining issues.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -303,6 +323,7 @@ software available at the booth.
 is available for download. This is the second pre-release version and
 incorporates a large number of bug fixes since the first pre-release. Still, to
 help us catch as many bugs as possible, please download it and start testing.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -317,6 +338,7 @@ on the manual pages to access the lookup input field. Thanks to Tommy Ipsen
 for the suggestion. You can read more about keyboard shortcuts on web pages
 <a href="http://www.w3.org/TR/html401/interact/forms.html#access-keys">in
 the HTML standard</a>.
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -331,6 +353,7 @@ still being performed. Please join in and help us make this a high-quality
 release. You can use the build tracker at
 <a href="http://qa.php.net/buildtest-submit.php">http://qa.php.net/buildtest-submit.php</a>
 to report your results.
+</p>
 
 <?php echo hdelim(); ?>
 
