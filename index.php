@@ -12,7 +12,7 @@ echo "\n<!--$MYSITE-->\n";
 <h3>PHP 4.0.1 Released!</h3>
 June 29, 2000.  The first maintenance release for PHP 4.0 is out.  The new release features increased
 stability under Windows, improved error handling, several new features and lots of bug fixes.  It's a
-recommended upgrade for all PHP users.  <a href="downloads.php">Download now!</a>.
+recommended upgrade for all PHP users.  <a href="downloads.php">Download now!</a>
 
 <img src="gifs/php4zend-small-white.gif" align="right">
 <h3>PHP 4.0.0 Released!</h3>
