@@ -32,19 +32,6 @@ commonHeader("Information About This PHP Mirror Site");
 
 <ul>
  <li>The site was last updated at <?php echo strftime("%c %Z", $LAST_UPDATED); ?></li>
- <li>
-  The mirror is currently
-<?php
-    $status = mirror_status();
-    if ($status == MIRROR_OK) { echo "listed in the mirrors' list"; }
-    else {
-        echo "not listed in the mirrors' list, becuase it ";
-        if ($status == MIRROR_OUTDATED)        { echo "is outdated"; }
-        elseif ($status == MIRROR_DOESNOTWORK) { echo "has accessibility problems"; }
-        elseif ($status == MIRROR_NOTACTIVE)   { echo "is disabled"; }
-    }
-?>
-  </li>
 </ul>
 
 <?php commonFooter(); ?>
