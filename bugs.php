@@ -533,7 +533,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 	}
 	if(strlen($search_for)) {
-		$where_clause .= " and (sdesc like '%$search_for%' or ldesc like '%$search_for%' or comments like '%$search_for%')";
+		$where_clause .= " and (email like '%$search_for%' or sdesc like '%$search_for%' or ldesc like '%$search_for%' or comments like '%$search_for%')";
 	}
 	// not supported by the HTML form yet : use the URL :)
 	if(isset($bug_age) && ($bug_age!="All")) {
@@ -546,8 +546,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	if(strlen($by) and $by!='Any') $where_clause .= " and dev_id = '$by' ";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
-} else if(!isset($cmd) && isset($id)) {
 
+} else if(!isset($cmd) && isset($id)) {
 
 	/* Change made by j.a.greant 00/09/03 */
 
