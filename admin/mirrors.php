@@ -170,7 +170,7 @@ function show_language_options($lang="") {
 function show_mirrortype_options($type="") {
   $types = array(1 => "standard", 2 => "special", 0 => "download" );
   while (list($k,$v) = each($types)) {
-    echo "<option value=\"$k\"", $type === $k ? " selected" : "", ">$v</option>";
+    echo "<option value=\"$k\"", $type == $k ? " selected" : "", ">$v</option>";
   }
 }
 ?>
