@@ -30,7 +30,8 @@ page
 <p>
 Get some '.
 make_link("download-logos.php", "PHP logos").'
-for your site
+for your site, and some PHP icons to use on
+your computer
 </p>
 
 <p>
