@@ -9,6 +9,10 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 4.0.2 Released!</h3>
+August 29, 2000.  The new version features new functions, many bug fixes, and increased
+performance.  <a href="downloads.php">Download now!</a>
+
 <h3>PHP 4.0.1 Patch Level 2 available</h3>
 <a href="downloads.php">PHP 4.0.1pl2</a> addresses two bugs that were discovered in PHP 4.0.1, that
 prevent error_reporting() and readdir() from working properly.
