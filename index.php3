@@ -9,6 +9,13 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<img src="php4zend-small-white.gif" align="right">
+<h3>PHP 4.0 Beta 4 is out!</h3>
+February 20, 2000.  The fourth beta of <a href="/version4/">PHP 4.0</a> has been released.  
+With built-in XML support and a load of new features, as well as a large number of bug fixes, this Beta 
+is expected to be the last on the beta cycle of PHP 4.0. 
+<a href="/version4/downloads.php">Download it now!</a>
+
 <h3>PHP Developers' Meeting</h3>
 On January 20th, 2000 the primary developers of PHP met for a
 4-day session in Tel Aviv, Israel.  The main goal was to organize the 
