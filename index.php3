@@ -25,7 +25,7 @@ It is currently in a public beta testing period.
 <table cellpadding="5">
 	<tr>
 		<td width="28%" align="center"><font size="-1">Mirror Sites:</font></td>
-		<td width="18%" align="center"><font size="-2"><a href="http://www.php.net/"><img src="gifs/canada-small.gif" border="0"><br>Canada</a></font></td>
+		<td width="18%" align="center"><font size="-2"><a href="http://www.ca.php.net/"><img src="gifs/canada-small.gif" border="0"><br>Canada</a></font></td>
 		<td width="18%" align="center"><font size="-2"><a href="http://il.php.net/"><img src="gifs/israel-small.gif" border="0"><br>Netvision, Israel</a></font></td>
 		<td width="18%" align="center"><font size="-2"><a href="http://machba.il.php.net/"><img src="gifs/israel-small.gif" border="0"><br>Technion, Israel</a></font></td>
 		<td width="18%" align="center"><font size="-2"><a href="http://no.php.net/"><img src="gifs/norway-small.gif" border="0"><br><nobr>Guardian Networks, Norway</nobr></a></font></td>
