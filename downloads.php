@@ -22,7 +22,7 @@ site, and try the download page there.
 
 <h3>Other Downloads</h3>
 <p>
-For downloadable manual formats, go to the '.
+For downloadable manual packages, go to the '.
 make_link("download-docs.php", "documentation download").'
 page
 </p>
