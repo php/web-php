@@ -248,6 +248,11 @@ Macromedia created Dreamweaver MX, a rapid web application development
 tool supporting PHP.
 </li>
 
+<li><a href="http://www.sourceguardian.com/">SourceGuardian</a><br>
+SourceGuardian produces tools to help commercial developers distribute their
+scripts safely including the popular SourceGuardian Pro for encrypting and
+obfuscating PHP source code.</li>
+
 <li><a href="http://www.nusphere.com/products/index.htm">NuSphere</a><br>
 NuSphere delivers products and services that allow companies to deploy
 reliable, cost-effective database-driven Internet applications and sites.</li>
