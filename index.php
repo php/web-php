@@ -145,6 +145,33 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/tropics", "php_tropics.jpg", "php|tropics"); ?>
+<h1>php|tropics</h1>
+
+<p>
+ <span class="newsdate">[06-Jan-2005]</span>
+ On the heels of last year's php|cruise, this year
+ <a href="http://www.phparch.com">php|architect magazine</a> has
+ announced <a href="http://www.phparch.com/tropics">php|tropics</a>, a
+ 5-day conference event that will take place between May 11 and 15, 2005 at the
+ Moon Palace All-inclusive Resort in wonderful Cancun, Mexico.
+</p>
+<p>
+ With sessions and hands-on tutorials held by many leading PHP experts,
+ including Ilia Alshanetsky, Wez Furlong, Derick Rethans, George Schlossnagle
+ and many others, php|tropics is an excellent and inexpensive way to learn lots
+ about PHP in a fun-filled and exciting atmosphere. This year, the conference
+ also sports "bring your own laptop" tutorials, where the audience is encourage
+ to participate in hands-on exercises throughout the event.
+</p>
+<p>
+ A special early-bird discount is in effect until February 28, and attendees
+ who sign up before that date receive a $100 discount. In addition,
+ php|architect will sponsor and cover all examination fees for conference
+ attendees interested in trying their hand at the Zend Certification Exam.
+</p>
+
+
 <?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
 <h1>PHP awarded Programming Language of 2004</h1>
 
