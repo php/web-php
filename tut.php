@@ -15,19 +15,19 @@ and edit them the same way you normally create regular HTML pages.
 
 <h2>What do I need?</h2>
 In this tutorial we assume that your server has support for PHP activated and that all files
-ending in <i>.php3</i> are handled by PHP.  On most servers this is the default
+ending in <i>.php</i> are handled by PHP.  On most servers this is the default
 extension for PHP files, but ask your server administrator to be sure.  If your server supports
-PHP then you don't need to do anything.  Just create your <i>.php3</i> files and put them in
+PHP then you don't need to do anything.  Just create your <i>.php</i> files and put them in
 your web directory and the server will magically parse them for you.  There is no need to
 compile anything nor do you need to install any extra tools.  Think of these PHP-enabled
 files as simple HTML files with a whole new family of magical tags that let you do all sorts of
 things.
 
 <h2>Your first PHP-enabled page</h2>
-Create a file named <i>hello.php3</i> and in it put the following lines:
+Create a file named <i>hello.php</i> and in it put the following lines:
 <?example('<html><head><title>PHP Test</title></head>
 <body>
-<?php echo "Hello World<P>"; ?>
+<?php echo "Hello World<p>"; ?>
 </body></html>
 ')?>
 The colours you see are just a visual aid to make it easier to see the PHP tags and the
@@ -55,7 +55,7 @@ For the browser that you are using right now to view this page, this displays:
 <blockquote><?php echo $HTTP_USER_AGENT; ?></blockquote>
 There are many other variables that are automatically set by your web server.  You can get a
 complete list of them by creating a file that looks like this:
-<?example('<?php phpinfo()?>');?>
+<?example('<?php phpinfo(); ?>');?>
 Then load up this file in your browser and you will see a page full of information about PHP along with
 a list of all the variables available to you.<P>
 
@@ -109,31 +109,29 @@ One of the most powerful features of PHP is the way it handles HTML forms.  The 
 is important to understand is that any form element in a form will automatically result in a variable
 with the same name as the element being created on the target page.  This probably sounds confusing, so
 here is a simple example.  Assume you have a page with a form like this on it:
-<?example('<form action="action.php3" method="POST">
-Your name: <input type=text name=name>
-You age: <input type=text name=age>
-<input type=submit>
+<?example('<form action="action.php" method="post">
+Your name: <input type="text" name="name">
+You age: <input type="text" name="age">
+<input type="submit"">
 </form>');?>
 There is nothing special about this form.  It is a straight HTML form with no special tags of any kind.
-When the user fills in this form and hits the submit button, the <i>action.php3</i> page is called.  In this
+When the user fills in this form and hits the submit button, the <i>action.php</i> page is called.  In this
 file you would have something like this:
-<?example('Hi <?php echo $name?>.  You are <?php echo $age?> years old.')?>
+<?example('Hi <?php echo $name; ?>.  You are <?php echo $age; ?> years old.')?>
 It should be obvious what this does.  There is nothing more to it.  The $name and $age variables are
 automatically set for you by PHP.
 <h2>More?</h2>
 This tutorial will get expanded, but at this time this is all there is.  With what you know now
 you should be able to understand the online manual and also the various example scripts available
 in the example archives.
-<P>
+<p>
 Here is a list of other excellent PHP tutorials:
 <ul>
-<li><a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a>
-<li><a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a>
-<!-- site is down as of 7/8/1999
-<li><a href="http://www.314interactive.com/io/content.php3?sec=art&req=mysql&issue=4&pg=1">ionline</a>
--->
-<li><a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a>
-<li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a>
+<li><a href="http://conf.php.net/">PHP conference materials</a></li>
+<li><a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a></li>
+<li><a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a></li>
+<li><a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a></li>
+<li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a></li>
 </ul>
 
 <? commonfooter(); ?>
