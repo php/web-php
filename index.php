@@ -86,30 +86,6 @@ in Stuttgart, Germany, with <a href="http://www.linuxtag.org/2001/english/showit
 </p>
 <? echo hdelim(); ?>
 
-
-<!--
-<h1>
-Mailing Lists temporarily unavailable
-</h1>
-<p>
-<font class="newsDate">[15-Jun-2001]</font>
-While the CVS repository has been reactivated, we are still
-working on reestablishing our mailing list infrastructure.
-We will keep you posted about the progress. Thank
-you for your patience.  Note also that the PDF version of the
-documentation is also unavailable until further notice.
-<br clear="all">
-These services are down due to the machine being hosted on a
-network that was hacked a couple of weeks ago.  We are working
-on securing alternate hosting facilities for these services.
-We will hopefully have everything back up within a week or
-so.
-</p>
-
-<? echo hdelim(); ?>
--->
-
-
 <?/* move this entry to the top when you update it! */?>
 <h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
