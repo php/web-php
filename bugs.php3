@@ -23,7 +23,7 @@ function show_menu($state) {
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
 	if($state!="All") { echo "<option>All\n"; }
-	echo "</select> bugs of type $bug_type ";
+	echo "</select> bugs of type ";
 	show_types($bug_type);
 	echo "</form>\n";
 }
