@@ -151,6 +151,8 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://mysql.com/events/uc2004", "mysqluc2004.png", "MySQL User Conference 2004"); ?>
+
 <h1>Call for Participation: MySQL User Conference 2004</h1>
 <p>
  <span class="newsdate">[12-Dec-2003]</span>
