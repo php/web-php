@@ -155,7 +155,11 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5 Release Candidate 1 Released!</h1>
 <p>
  <span class="newsdate">[18-Mar-2004]</span>
-The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally here!  The move from Beta stage to RC stage means that PHP 5 is now feature complete, and is quite stable - stable enough for everyone to start playing with.  Note that it is still <i>not</i> recommended for mission-critical use.</p>
+The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally
+here!  The move from Beta stage to RC stage means that PHP 5 is now feature
+complete, and is quite stable - stable enough for everyone to start playing
+with.  Note that it is still <i>not</i> recommended for mission-critical
+use.</p>
 
 <p>Some of the key features of PHP 5 include:
 
@@ -170,7 +174,7 @@ The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally 
 <li>And lots more...</li>
 </ul>
 
-For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.</p>
+For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0RC1">ChangeLog</a>.</p>
 <hr />
 
 <?php news_image("/downloads.php", "php4_logo.gif", "PHP 4"); ?>
