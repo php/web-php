@@ -10,7 +10,7 @@
     This is an early version.  A lot is still missing, but it is
     improving.
 
-<li><? download_link("manual.zip", "PHP 3.0 HTML Manual (one BIG file)"); ?>
+<li><? download_link("bigmanual.htm", "PHP 3.0 HTML Manual (one BIG file)"); ?>
 
 <li><? download_link("manual.zip", "PHP 3.0 HTML Manual ZIP File"); ?>
 <li><? download_link("manual.tar.gz", "PHP 3.0 HTML Manual .tar.gz File"); ?>
