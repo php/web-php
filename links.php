@@ -60,7 +60,7 @@ PHP Books, Magazine Articles, Communities, Scripts and Programs, Softwares, Tips
 <li><a href="http://php.resourceindex.com/">PHP Resource Index</a><br>
 Hundreds of PHP resources, categorized and searchable</li>
 
-<li><a href="http://nav.webring.yahoo.com/hub?ring=php&list">PHP Sites Webring</a><br>
+<li><a href="http://q.webring.com/hub?ring=php">PHP Sites Webring</a><br>
 Find PHP Sites within this webring!</li>
 
 <li><a href="http://www.LinuxGuruz.org/">LinuxGuruz.org</a><br>
