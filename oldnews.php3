@@ -75,20 +75,6 @@ know why I've been so busy. ;-) For those who don't know about
 it... all I can say is AWSOME!"
 <? endEntry();?>
 
-<? makeEntry("PHP 3.0 Press Release","Read the release announcement here.","/press-release-3.0.txt","June 6, 1998"); ?>
-Toronto, Canada (June 6, 1998) -- The PHP Development Team announced the release of
-PHP 3.0, the latest release of the server-side scripting solution already
-in use on over 70,000 World Wide Web sites.
-<? endEntry();?>
-
-<? makeEntry("PHP 3.0 Released","Writing an article about PHP 3.0? - Read This","/release-3.0.txt","June 6, 1998"); ?>
-PHP 3.0 is finally here!  After 10 months of development PHP Version 3.0
-is ready for production environments.  Coupled with the release of the
-final version of Apache-1.3.0 today, the combination provides an
-unbeatable web hosting platform suitable for both small and large web
-sites.
-<? endEntry();?>
-
 <? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://cs.sau.edu/~cfisher/uw/018.html","1998"); ?>
 Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP 3.0 to talk to each other.
 <? endEntry();?>
