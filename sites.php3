@@ -209,6 +209,7 @@ right away.</blockquote>
 	site("Deal-Pc","deal-pc.com");
 	site("Legions.Com","legions.com");
 	site("Linux Power","linuxpower.org");
+	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
