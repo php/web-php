@@ -165,7 +165,7 @@ databases and tables, modify, delete and add records and keys and execute any SQ
 features an overview of MySQL's activity and can import flat-file databases.
 <? endEntry();?>
 
-<? makeEntry("SQLFusion","212.208.174.2/sqlfusion/","Philippe Lewicki" ,"plewicki@ixio.com"); ?>
+<? makeEntry("SQLFusion","www.sqlfusion.org","Philippe Lewicki" ,"plewicki@ixio.com"); ?>
 The SQLFusion project is a collection of components in java for
 netobject Fusion.
 It's an easy and fast way to build php3 and mSQL web sites with NetObject
