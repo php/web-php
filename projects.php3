@@ -289,6 +289,11 @@ This is a simple guestbook application that uses MySQL and supports
 several languages.
 <? endEntry();?>
 
+<? makeEntry("PHP3Domo","gateway.digitaria.com/users/chris/php3domo/","Chris Adams","chris@digitaria.com"); ?>
+Provides full SMTP validation of a mailing list subscription before forwarding
+the request on to Majordomo.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
