@@ -2,7 +2,15 @@
 require("shared.inc");
 commonHeader("PHP Usage Stats");
 ?>
-April 1999: 578221 Domains, 169135 IP Addresses<br>
+June 1999: 493294 Domains, 222304 IP Addresses<br>
 Source: <a href="http://www.netcraft.com">Netcraft</a><br>
-<img src="phpstats-199904.gif">
+<img src="phpstats-199906.gif"><br clear=left>
+Note: We do not know what caused the sudden surge in the number
+of domains and then the subsequent drop-off.  The number of physical
+servers actually running PHP has ben growing steadily as witnessed
+by the steady climb in the number of unique IP's identifying themselves
+as being PHP servers.<P>
+One possible explanation for the domain bubble is that a couple of large ISP's
+switched from running the module version to the CGI version.  Servers that
+run the CGI version of PHP are not reflected in these stats.
 <? commonFooter(); ?>
