@@ -292,7 +292,8 @@ elseif ($cmd == "display") {
 
 		if ($assign != $original[assign])
 			$text .= "Old Assigned To: $original[assign]\n";
-		$text.= "Assigned To: $assign\n";
+		if ($assign || $original[assign])
+			$text.= "Assigned To: $assign\n";
 
 		if ($ncomment)
 			$text .= "New Comment:\n\n".stripslashes($ncomment);
