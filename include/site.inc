@@ -29,6 +29,13 @@ function is_backup_primary($site = FALSE)
     return $site == "http://download.php.net/";
 }
 
+// Returns true if the current (or specified)
+// mirror site is an official mirror site
+function is_official_mirror($site = FALSE)
+{
+    return (mirror_type($site) != MIRROR_VIRTUAL);
+}
+
 // Returns the current (or specified)
 // mirror site's default language
 function default_language($site = FALSE)
@@ -173,6 +180,11 @@ if (isset($_SERVER['MIRROR_LANGUAGE'])) {
     if (isset($LANGUAGES[$_SERVER['MIRROR_LANGUAGE']])) {
         $MIRRORS[$MYSITE][6] = $_SERVER['MIRROR_LANGUAGE'];
     }
+}
+
+// Override central stats information if specified in vhost
+if (isset($_SERVER['MIRROR_STATS'])) {
+    $MIRRORS[$MYSITE][2] = TRUE;
 }
 
 ?>
