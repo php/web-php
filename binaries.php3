@@ -140,6 +140,7 @@ while ($site = current($showsites)) {
 	$freebsd225_file = "${site}${srcdir}httpd-php-freebsd225.tar.gz";
 	$rpm_i386_file = "${site}${srcdir}mod_php3-3.0.5-1.i386.rpm";
 	$rpm_src_file = "${site}${srcdir}mod_php3-3.0.5-1.src.rpm";
+	$amiga_file = "${site}${srcdir}Apache-1.3.3-PHP-3.0.6.lha";
 	echo "<LI>";
 	download_link($solaris251_file, "($method) Solaris 2.5.1 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
@@ -163,6 +164,9 @@ while ($site = current($showsites)) {
 	echo "\n";
 	echo "<LI>";
 	download_link($rpm_src_file, "($method) Source RPM, dynamically loadable Apache 1.3 module");
+	echo "\n";
+	echo "<LI>";
+	download_link($amiga_file, "($method) Apache-1.3.3 w/ PHP-3.0.6 + XML,GD,PDF,mSQL,MySQL");
 	echo "\n";
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }
