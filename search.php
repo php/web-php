@@ -34,7 +34,8 @@ if (isset($_SERVER['HTSEARCH_PROG'])) {
 
 /* Form parameters expected:
      pattern - search keywords
-     lang    - language to limit search to [this is not used currently!!!]
+     lang    - language to limit search to [this is not
+               used currently in searches, only for redirection!!!]
      show    - target of search action
      base    - base URL to point result links to
 */
@@ -45,6 +46,9 @@ if ($MQ) {
     if (isset($base))    { $base = stripslashes($base); }
     if (isset($lang))    { $lang = stripslashes($lang); }
 }
+
+// Set language to the preferred one if not set
+if (!isset($lang)) { $lang = preferred_language(); }
 
 // We received something to search for
 if (isset($pattern)) {
@@ -80,9 +84,18 @@ if (isset($pattern)) {
             
         // Bug database search
         case "bugdb" :
-            $location = "http://bugs.php.net/search.php";
-            $query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=" . urlencode($pattern);
-            header("Location: $location?$query");
+            
+            // Redirect to bug page in case of exact number
+            if (preg_match("!^\\d+$!", $pattern)) {
+                header("Location: http://bugs.php.net/$pattern");
+            }
+
+            // Redirect to bug search page in case of some other pattern
+            else {
+                $location = "http://bugs.php.net/search.php";
+                $query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=" . urlencode($pattern);
+                header("Location: $location?$query");
+            }
             exit;
     }
 
@@ -102,7 +115,8 @@ if (isset($pattern)) {
         // We can redirect to the php.net search page
         else {
             $location = "http://www.php.net/search.php";
-            $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
+            $query = "show=" . urlencode($show) . "&pattern=" . urlencode($pattern) .
+                     "&base=" . urlencode($MYSITE) "&lang=" . urlencode($lang);
             header("Location: $location?$query");
             exit;
         }
