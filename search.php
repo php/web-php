@@ -102,12 +102,12 @@ Restrict the search to: <BR>
 <SELECT NAME="show">
 <OPTION VALUE="nosource" SELECTED>Whole site
 <OPTION VALUE="manual">Online documentation
-<OPTION VALUE="maillist">PHP 3.0 Mailing List
+<OPTION VALUE="maillist">PHP General Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
 <OPTION VALUE="phpdoc">PHP Documentation List
 <OPTION VALUE="phplib">PHPLIB Mailing List
 <OPTION VALUE="phplib-dev">PHPLIB Developers' List
-<OPTION VALUE="source">Site PHP 3.0 source code
+<OPTION VALUE="source">Site source code
 </SELECT><BR>
 </FONT></TD>
 </TR>
@@ -148,7 +148,7 @@ Restrict the search to: <BR>
 		if ($show=="source") {
 			$exclude="/manual";
 			$restrict=$MYSITE."source";
-			$where="PHP 3.0 site source code";
+			$where="Site source code";
 		} elseif ($show=="manual") {
 			$restrict=$MYSITE."manual";
 			$exclude="/source";
@@ -156,7 +156,7 @@ Restrict the search to: <BR>
 		} else {
 			$exclude="/source";
 			$restrict=$MYSITE;
-			$where="PHP 3.0 web site";
+			$where="PHP Web site";
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
 		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";

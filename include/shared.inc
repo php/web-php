@@ -9,7 +9,7 @@ $X11 = false; $HAVE_STYLE = false;
 $HTDIG = false;
 
 $DISABLE_KICKOUTS = false;
-if($SCRIPT_NAME=="/bugs.php3" || $SCRIPT_NAME=="/bugstats.php3") {
+if($SCRIPT_NAME=="/bugs.php" || $SCRIPT_NAME=="/bugstats.php") {
 #	$my_logo="/jpgs/logo-bug.jpg";
 	$my_logo="/gifs/logo-bug.gif";
 	$my_size="WIDTH=130 HEIGHT=73";
@@ -524,7 +524,6 @@ endif; ?>
 		makeSideButton("/downloads.php","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
 		makeSideButton("/docs.php","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
 		makeSideButton("/quickref.php","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
-#		makeSideButton("/mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("/support.php","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("/news.php","news","","news",129,30,0,10,$lastnews,"<BR>\n");
 		makeSideButton("/projects.php","proj","","projects",129,30,0,10,"Projects using PHP","<BR>\n");
@@ -617,8 +616,8 @@ function commonFooter() {
 <?
 	spc(150,1);
 	echo "<BR>\n";
-	if (file_exists($DOCUMENT_ROOT."/stats/index.php3")):
-		makeSideButton("/stats/index.php3","stat","","stats",129,30,0,10,"Site Statistics","<BR>\n");
+	if (file_exists($DOCUMENT_ROOT."/stats/index.php")):
+		makeSideButton("/stats/index.php","stat","","stats",129,30,0,10,"Site Statistics","<BR>\n");
 	endif;
 ?></TD>
   <TD ALIGN=left width="100%" BGCOLOR="#FFFFFF">
@@ -761,7 +760,7 @@ endif;
 <SELECT NAME="show">
 <OPTION VALUE="nosource" SELECTED>Whole site
 <OPTION VALUE="manual">Documentation only
-<OPTION VALUE="maillist">PHP 3.0 Mailing List
+<OPTION VALUE="maillist">PHP General Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
 <OPTION VALUE="phplib">PHPLIB Mailing List
 <OPTION VALUE="phplib-dev">PHPLIB Developers' List
