@@ -55,7 +55,7 @@ the table below.
 <tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
 <?php
 
-  $lastlang = count($man_languages);
+  $lastlang = count($man_languages) - 1;
   foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
