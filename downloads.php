@@ -71,7 +71,7 @@ site_header("Downloads");
  </li>
  <li>
   <?php download_link('php-4.3.4.tar.gz', 'PHP 4.3.4 (tar.gz)');  ?> - 03 November 2003<br />
-  <span class="md5sum">md5: ea377ce717a394a770b4650f23dcd68b</span>
+  <span class="md5sum">md5: c0e7f7388fadacbf4948391c6d93dc5e</span>
  </li>
 </ul>
 
