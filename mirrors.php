@@ -1,7 +1,7 @@
 <?php
 require_once 'prepend.inc';
 
-if (isset($REDIRECT)) {
+if (isset($FROM) && isset($country)) {
   header("Location: $country$FROM");
   exit;
 }

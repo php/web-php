@@ -186,28 +186,17 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">
 </head>
-
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
-  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
-  vlink="#000099"><a name="TOP"></a>
+ bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
+ vlink="#000099">
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
-  <tr bgcolor="#9999cc">
-    <td align="middle" rowspan="2" width="120">
-      <a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a><br>
-    </td>
-    <td align="right" valign="top">
-      <font color="#ffffff"><b>
-        <url-minder-ignore>
-        <?php echo strftime("%A, %B %d, %Y"); ?>
-        </url-minder-ignore>
-      </b>&nbsp;<br>
-      </font>
-    </td>
-  </tr>
-
-  <tr bgcolor="#9999cc">
-    <td align="right" valign="bottom">
-      <?php
+ <tr bgcolor="#9999cc">
+  <td align="middle" rowspan="2" width="120"><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
+  <td>&nbsp;</td>
+ </tr>
+ <tr bgcolor="#9999cc">
+  <td align="right" valign="bottom">
+<?php
 	print_link('/downloads.php','downloads',false,'class="small"');
 	echo delim();
 	print_link('/docs.php', 'documentation', false, 'class="small"');
@@ -219,16 +208,14 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	print_link('http://bugs.php.net/','reporting bugs',false,'class="small"');
 	echo delim();
 	print_link('/links.php','links',false,'class="small"');
-      ?>&nbsp;<br>
-    </td>
-  </tr>
-
-  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
-
-  <tr bgcolor="#666699">
-    <form method="post" action="/search.php">
-      <td align="right" valign="top" colspan="2"><font color="#ffffff">
-        <small>search for</small>
+      ?>&nbsp;
+  </td>
+ </tr>
+ <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
+ <tr bgcolor="#666699">
+  <form method="post" action="/search.php">
+   <td align="right" valign="top" colspan="2"><font color="#ffffff">
+<small>search for</small>
 <input class="small" type="text" name="pattern" value="<?php echo htmlspecialchars(get_magic_quotes_gpc()?stripslashes($prevsearch):$prevsearch) ?>" size="30">
 <small>in the</small>
 <select name="show" class="small">
@@ -240,13 +227,12 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <option value="devlist">developer mailing list
 <option value="phpdoc">documentation mailing list 
 </select>
-<?php	echo make_submit('small_submit_white.gif', 'search', 'bottom');
-      ?>&nbsp;<br>
-      </font></td>
-    </form>
-  </tr>
-
-  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
+<?php echo make_submit('small_submit_white.gif', 'search', 'bottom'); ?>&nbsp;
+</font>
+   </td>
+  </form>
+ </tr>
+ <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
 </table>
 
 <?php
@@ -257,19 +243,16 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <table cellpadding="0" cellspacing="0">
  <tr valign="top">
 <?php if (isset($SIDEBAR_DATA)):?>
-  <td width=200 bgcolor="#f0f0f0">
-   <table width="100%" cellpadding="2" cellspacing="0" border=0>
-    <tr valign="top">
-     <td class="sidebar"><?php echo $SIDEBAR_DATA?></td>
-    </tr>
+  <td width="200" bgcolor="#f0f0f0">
+   <table width="100%" cellpadding="2" cellspacing="0" border="0">
+    <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
+  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="620">
-    <tr>
-     <td valign="top">
+    <tr><td valign="top">
 <?php
   endif;
 }
@@ -283,43 +266,40 @@ function commonFooter() {
 	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
 	if ($enclosed) {
 		spacer(620);
-  echo "</td></tr></table></td>";
+		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
-  			<td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
-  			<td width=175 bgcolor="#f0f0f0">
-   			<table width="100%" cellpadding="4" cellspacing="0">
-    		<tr valign="top">
-     		<td class="sidebar"><?php echo $RSIDEBAR_DATA?></td>
-    		</tr>
-   			</table>
-  			</td>
-		<?}
+<td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?></td>
+<td width=175 bgcolor="#f0f0f0">
+ <table width="100%" cellpadding="4" cellspacing="0">
+  <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
+ </table>
+</td>
+<?		}
 		echo "</tr></table>\n";
 	}
 ?>
 
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
-  <tr bgcolor="#333366"><td><?php spacer(1,1);?><br></td></tr>
-  <tr bgcolor="#9999cc">
-    <td align="right" valign="bottom">
-      <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);" style="margin-bottom:0;">
-      <script language="javascript">
-      <!--
-        function gotomirror(form) {
-          mirror = form.country.options[form.country.selectedIndex].value;
-          if (mirror != 'http://' + window.location.hostname + '/') {
-            window.location.href = mirror +
-                      window.location.pathname.substring(1) +
-                      window.location.hash +
-                      window.location.search;
-          }
-	  return false;
-        }
-      //-->
-      </script>
-      <input type="hidden" name="REDIRECT" value="1">
-      <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>">
-      <?php
+ <tr bgcolor="#333366"><td><?php spacer(1,1);?></td></tr>
+ <tr bgcolor="#9999cc">
+  <td align="right" valign="bottom">
+   <form method="get" action="/mirrors.php" onsubmit="return gotomirror(this);" style="margin-bottom:0;">
+   <script language="javascript">
+   <!--
+   function gotomirror(form) {
+     mirror = form.country.options[form.country.selectedIndex].value;
+     if (mirror != 'http://' + window.location.hostname + '/') {
+                 window.location.href = mirror +
+                 window.location.pathname.substring(1) +
+                 window.location.hash +
+                 window.location.search;
+     }
+     return false;
+   }
+   //-->
+   </script>
+   <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>">
+<?php
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
@@ -333,30 +313,24 @@ function commonFooter() {
 	show_mirror_options($MYSITE);
 	echo "</select> ";
 	echo make_submit('small_submit.gif', 'go', 'bottom' );
-      ?>&nbsp;<br>
-      </form>
-    </td>
-  </tr>
-  <tr bgcolor="#333366"><td><?php spacer(1,1); ?><br></td></tr>
+      ?>&nbsp;
+   </form>
+  </td>
+ </tr>
+ <tr bgcolor="#333366"><td><?php spacer(1,1); ?></td></tr>
 </table>
 
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
-  <tr valign="top" bgcolor="#cccccc">
-    <td><small>
-      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br>
-      All rights reserved.<br>
-      </small>
-    </td>
-    <td align="right"><small>
-      This mirror generously provided by:
-      <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br>
-      Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore><br>
-      </small>
-    </td>
-  </tr>
+ <tr valign="top" bgcolor="#cccccc">
+  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br />All rights reserved.</small></td>
+  <td align="right"><small>
+   This mirror generously provided by:
+   <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
+   Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore>
+   </small>
+  </td>
+ </tr>
 </table>
-
-
 </body>
 </html>
 <?php
