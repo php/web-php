@@ -92,6 +92,14 @@ site_header("Downloads");
   <?php download_link('pecl-5.0.0-Win32.zip', 'Collection of PECL modules for PHP 5.0.0'); ?> - 13 Jul 2004<br />
   <span class="md5sum">md5: ede9d837b3dc48a38ca992ca753ee114</span>
  </li>
+ <li>
+  <?php download_link('php-5.0.0-installer.exe', 'PHP 5.0.0 installer'); ?> - 26 July 2004<br />
+  (CGI only, packaged as Windows installer to install
+  and configure PHP, and automatically configure IIS, PWS and Xitami, with
+  manual configuration for other servers. N.B. no external extensions
+  included)<br />
+  <span class="md5sum">md5: ffce859b5f72ffee00dbe4f013053247</span>
+ </li>
 </ul>
 
 <p>
