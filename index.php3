@@ -55,7 +55,7 @@ year 2000 compliant as your pencil.  If you're still worried (perhaps all
 pencils are built to break on December 31st 1999?) -
 <a href="y2k.php3">read this</a>.
 
-<h3><a href="old_news.php3">Older news</a></h3>
+<h3><a href="oldinfo.php3">Older information</a></h3>
 
 <?
 commonFooter();

@@ -2,7 +2,7 @@
 require("shared.inc");
 commonHeader("Older PHP News");
 
-function makeEntry($title,$subtitle,$url,$date="") {
+function makeEntry($title,$subtitle,$url=false,$date="") {
 	global $FONTFACE;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
@@ -22,7 +22,11 @@ function makeEntry($title,$subtitle,$url,$date="") {
 <TD ALIGN=left COLSPAN=2><?
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	echo "$subtitle<BR>\n";
-	echo "<A HREF=\"".$url."\" TARGET=\"_blank\">".$url."</A><BR></FONT>\n";
+	if ($url) {
+		echo "<A HREF=\"".$url."\" TARGET=\"_blank\">".$url."</A><BR></FONT>\n";
+	} else {
+		echo "<I>This article is not available on line</I><BR></FONT>\n";
+	}
 ?></TD>
 <TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
@@ -50,6 +54,15 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+
+<? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://webreview.com/wr/pub/wtawards","June 22, 1998"); ?>
+&quot;The substance of the Web is more and more residing in databases, and there
+are a variety of methods used to generate Web pages.  This year, we selected a
+pair of &quot;free software&quot; tools that work together quite nicely as a
+platform for building dynamic content. The award is also a tribute to the Open Source
+initiative; both products are used, developed and supported by interlocking
+communities of people on the Net.&quot;
+<? endEntry(); ?>
 
 <? makeEntry("Dave Garaffa at it again!","PHP Killer Apps & Huge Hit Usage!","http://browserwatch.internet.com/news/story/news-980610-7.html","June 10, 1998"); ?>
 "After my initial story I got a wave of email providing links to PHP enabled web apps. Here is a short list."

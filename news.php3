@@ -2,7 +2,7 @@
 require("shared.inc");
 commonHeader("PHP in the News");
 
-function makeEntry($title,$subtitle,$url,$date="") {
+function makeEntry($title,$subtitle,$url=false,$date="") {
 	global $FONTFACE;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
@@ -22,7 +22,11 @@ function makeEntry($title,$subtitle,$url,$date="") {
 <TD ALIGN=left COLSPAN=2><?
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	echo "$subtitle<BR>\n";
-	echo "<A HREF=\"".$url."\" TARGET=\"_blank\">".$url."</A><BR></FONT>\n";
+	if ($url) {
+		echo "<A HREF=\"".$url."\" TARGET=\"_blank\">".$url."</A><BR></FONT>\n";
+	} else {
+		echo "<I>This article is not available online</I><BR></FONT>\n";
+	}
 ?></TD>
 <TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
@@ -50,6 +54,15 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry( "PHP3 - a Revolution for the Web", "Article in German Internet World by Tobias Ratschiller", false, "Feb. 15, 1999");?>
+&quot;Static HTML pages are boring, CGI-scripts too slow, ColdFusion etc to
+expensive? The solution is PHP3.&quot; This German introductory article presents
+PHP3 as a scalable, easy-to-use, high-perfomance solution for server-side
+scripting. Features also an interview with Rasmus Lerdorf.
+<? endEntry(); ?>
+
+
+
 <? makeEntry("Article on devshed.com","by Colin Viebrock","http://beta.devshed.com/Server_Side/PHP/search","Feb. 10, 1999");?>
 &quot;Search This: Searching Your Dynamic Site with PHP3 and ht://Dig&quot;
 <? endEntry(); ?>
@@ -69,15 +82,6 @@ site with PHP and MySQL.&quot;
 You may not be aware of the rich programming environment that surrounds Apache, 
 though. PHP gives you strong SQL connectivity, and mod_perl has powerful application 
 integration facilities. Learn how to exploit these capabilities. Also, see our review of Apache.&quot;
-<? endEntry(); ?>
-
-<? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://webreview.com/wr/pub/wtawards","June 22, 1998"); ?>
-&quot;The substance of the Web is more and more residing in databases, and there
-are a variety of methods used to generate Web pages.  This year, we selected a 
-pair of &quot;free software&quot; tools that work together quite nicely as a 
-platform for building dynamic content. The award is also a tribute to the Open Source
-initiative; both products are used, developed and supported by interlocking 
-communities of people on the Net.&quot;
 <? endEntry(); ?>
 
 <TR bgcolor='#D0D0D0' valign=top>
