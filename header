@@ -76,7 +76,7 @@ function rolloff(imgName) {
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_search');return true" onMouseOut="rolloff('sm_search')"<? } ?>>
 <img src="jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
 <?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<?echo ereg_replace("[^.]*\$","",$PHP_SELF)."phps"?>"
+<a href="<?echo "$base_url\show_source.php3?page_url=$PHP_SELF" ?>"
 <?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
 <img src="jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
 </td></tr>
