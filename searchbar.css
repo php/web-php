@@ -1,0 +1,47 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+	color: black;
+}
+select, input, body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+}
+input, select {
+	width: 95%;
+	margin: 2px;
+}
+p.input {
+	margin: 5px;
+}
+p.copyright {
+	font-size: 70%;
+	padding: 5px;
+	background-color: #cccccc;
+	color: inherit;
+	border-top: 1px solid #333366;
+}
+h1 {
+	font-size: 25px;
+	color: black;
+	background-color: #9999cc;
+	font-weight: bold;
+	padding: 5px;
+	margin: 0px;
+	border-bottom: 1px solid #333366;
+}
+h1 a {
+	font-style: italic;
+	text-decoration: none;
+	color: black;
+	background-color: transparent;
+}
+a, a:visited {
+	color: #000099
+	background-color: transparent;
+}
+a:active {
+	color: #0000ff;
+	background-color: transparent;
+}

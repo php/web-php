@@ -1,79 +1,54 @@
 <?php
-/* $Id$ */
+// $Id$
+$_SERVER['BASE_PAGE'] = 'searchbar.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . "/include/prepend.inc";
 
-include_once "./include/prepend.inc";
-
-// Gecko would like to see the target to be _content, while IE would
+// Gecko would like to see the target to be _content, while IE/Opera would
 // like to see the target to be _main. Other browsers are not expected
 // to visit this page, or support for them will be added in the future.
 if (preg_match("!Gecko!", $_SERVER['HTTP_USER_AGENT'])) {
-    $target = "_content"; 
+    $target = ' target="_content"'; 
 } else {
-    $target = "_main";
+    $target = ' target="_main"';
 }
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+if (isset($EXPL_LANG)) {
+    $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
+} else { $lang_input = ""; }
+
+echo <<<SEARCHBAR_END
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
- <title>PHP.net Search Sidebar</title>
+ <title>PHP: Search Sidebar</title>
  <link rel="shortcut icon" href="/favicon.ico" />
- <style>
-  select, input, button, body, p, td {
-      font-family: Verdana, Arial, Helvetica, Sans Serif;
-      font-size: 75%;
-  }
-  .title {
-      font-size: 25px;
-      color: black;
-      font-weight: bold;
-  }
-  .indented {
-      margin: 5px 5px 5px 5px;
-  }
- </style>
+ <style type="text/css">@import url("/searchbar.css");</style>
+ <base href="{$_SERVER['BASE_HREF']}" />
 </head>
-<body topmargin="0" leftmargin="0"
- bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
- vlink="#000099" onload="document.sform.pattern.focus();">
-<table border="0" cellspacing="2" cellpadding="0">
- <tr>
-  <td width="69"><a href="/" target="<?php echo $target ?>"><img src="/images/logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
-  <td class="title" align="left">Search</td>
- </tr>
- <tr bgcolor="#333366"><td colspan="2"><?php spacer(); ?></td></tr>
- <tr>
-  <td colspan="2">
-   <div class="indented">
-   <form method="post" action="/search.php" target="<?php echo $target ?>" name="sform">
-<?php
-    if (isset($EXPL_LANG)) {
-        echo '   <input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
-    }
-?>
-   Search for<br />
-   <input type="text" name="pattern" value="" style="width: 95%"/><br />
-   in the<br />
-   <select name="show" style="width: 95%">
-   <option value="quickref" selected>function list
+<body onload="document.sform.pattern.focus();">
+<h1>
+ <a href="/"{$target}>php</a> search
+</h1>
+<form method="post" action="/search.php"{$target} name="sform">
+ <p class="input">$lang_input
+  Search for<br />
+  <input type="text" name="pattern" value="" /><br />
+  in the<br />
+  <select name="show">
+   <option value="quickref" selected="selected">function list
    <option value="wholesite">whole site
-   <option value="manual">online documentation [en]
-   <option value="bugdb">bug database
-   <option value="maillist">general mailing list
-   <option value="devlist">developer mailing list
-   <option value="phpdoc">documentation mailing list 
-   </select><br />
-   <input type="submit" value="Search">
-   </form>
-   </div>
-  </td>
- </tr>
- <tr bgcolor="#333366"><td colspan="2"><?php spacer(); ?></td></tr>
- <tr>
-  <td colspan="2">
-   <div class="indented">
-   <a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002, 2003 The PHP Group</a><br />All rights reserved.
-   </div>
-  </td>
- </tr>
-</table>
+   <option value="manual"   >online documentation [en]
+   <option value="bugdb"    >bug database
+   <option value="maillist" >general mailing list
+   <option value="devlist"  >developer mailing list
+   <option value="phpdoc"   >documentation mailing list 
+  </select><br />
+  <input type="submit" value="Search" />
+ </p>
+</form>
+<p class="copyright">
+ <a href="/copyright.php"{$target}>Copyright &copy; 2002, 2003 The PHP Group</a><br />All rights reserved.
+</p>
 </body>
 </html>
+SEARCHBAR_END;
