@@ -134,7 +134,9 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Solid related",
 				   "Adabas-D related",
 				   "dBase related",
-				   "DBM related",
+				   "DBM/DBA related",
+				   "mcrypt related",
+				   "mhash related",
 				   "Misbehaving function",
 				   "FrontPage related",
 				   "Feature/Change Request",
@@ -535,6 +537,8 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+    <option name="3.0.11">3.0.11
+    <option name="3.0.10" selected>3.0.10
     <option name="3.0.9">3.0.9
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
     <option name="3.0.8">3.0.8
