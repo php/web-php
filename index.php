@@ -82,6 +82,23 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.2.0 RC 3 Released</h1>
+<p>
+<font class="newsDate">[12-Apr-2002]</font>
+A third <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
+PHP 4.2.0 has just been released, with support for the recent Apache
+2.0.35 release as well as numerous collected bug fixes. This build is used for
+testing the readiness of the release branch. By providing
+<?php print_link ("http://qa.php.net/buildtest-submit.php", "feedback"); ?> about
+this build, you can help make sure that the actual release (planned for
+April 22) has as few bugs as possible. This release candidate is <b>NOT</b>
+meant for production servers, only for helping out the PHP-QA Team finding weak
+spots. For more information, see the
+<?php print_link ("http://qa.php.net/", "PHP QA website"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php echo make_image("phpmag.gif", "PHP Magazin", "right"); ?>
 
 <h1>PHP Magazin out now!</h1>
@@ -104,21 +121,6 @@ field to access a php.net page? Many of you already know
 We gathered some information about how the URLs are parsed,
 and what are your possibilities. Read it in our new
 <a href="urlhowto.php">URL Howto</a>.
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.2.0 RC 1 Released</h1>
-<p>
-<font class="newsDate">[21-Mar-2002]</font>
-A <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
-PHP 4.2.0 has just been packed. This build is used for testing the readiness of
-the release branch. By providing <?php print_link
-("http://qa.php.net/buildtest-submit.php", "feedback"); ?> to this build, we
-can make sure the actual release (planned for April, 22nd) has as few bugs as
-possible. This release candidate is <b>NOT</b> meant for production servers,
-only for helping out the PHP-QA Team finding weak spots. For more information
-see the <?php print_link ("http://qa.php.net/", "PHP QA website"); ?>.
-</p>
 
 <?php echo hdelim(); ?>
 
