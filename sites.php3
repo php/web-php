@@ -170,6 +170,7 @@ right away.</blockquote>
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
 	site("FocalPress","www.focalpress.com.hk");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
+	site("Maximum PC Magazine","www.maximumpcmag.com");
 	site("Mercattel","mercattel.interwatts.com");
 	site("Der Spiegel","www.spiegel.de");
 	site("The Star - Kansas City","www.kcstar.com");
