@@ -7,7 +7,7 @@ commonHeader("Mailing Lists");
 <?php
 if (isset($maillist)) {
 	# should really grab some email validating routine and use it here.
-	if (empty($email) || $email == 'user@example.com') {
+	if (empty($email) || $email == 'user@example.com' || $email == 'fake@from.net') {
 		echo "You forgot to specify an email address to be added to the list. ";
 		echo "Go back and try again.";
 	} else {
@@ -24,7 +24,7 @@ if (isset($maillist)) {
 			break;
 		    default:
 			mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", 
-			"This was a request generated from the form at http://php.net/mailing-lists.php.", "From: $email\r\n");
+			"This was a request generated from the form at http://php.net/mailing-lists.php by $REMOTE_ADDR.", "From: $email\r\n");
 			break;
 		}
 ?>
