@@ -1,23 +1,35 @@
 <?php
-// Sitewide functions
-include_once 'prepend.inc';
-
-// Define the posttohost() function
-include_once 'posttohost.inc';
-
-// Defines the manual_note_display() function, which we use
-include_once 'shared-manual.inc';
-
-// Print out common header
+// $Id$
+$_SERVER['BASE_PAGE'] = 'manual/add-note.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 commonHeader("Manual Notes");
 
+// Copy over "sect" and "redirect" from GET to POST
+if (!isset($_POST['sect']) && isset($_GET['sect'])) {
+    $_POST['sect'] = $_GET['sect'];
+}
+if (!isset($_POST['redirect']) && isset($_GET['redirect'])) {
+    $_POST['redirect'] = $_GET['redirect'];
+}
+
+// Decide on whether all vars are present for processing 
+$process = TRUE;
+$needed_vars = array('note', 'user', 'sect', 'redirect', 'action');
+foreach ($needed_vars as $varname) {
+    if (!isset($_POST[$varname])) {
+        $process = FALSE;
+        break;
+    }
+}
+
 // We have a submitted form to process
-if (isset($note) && isset($user) &&
-    isset($sect) && isset($redirect) && isset($action)) {
+if ($process) {
 
     // Clean off leading and trailing whitespace 
-    $user = trim($user);
-    $note = trim($note);
+    $user = trim($_POST['user']);
+    $note = trim($_POST['note']);
     
     // Convert all line-endings to unix format,
     // and don't allow out-of-control blank lines
@@ -60,12 +72,13 @@ if (isset($note) && isset($user) &&
         foreach (preg_split("/\\s+/", $note) as $chunk) {
             if (strlen($chunk) > 70) {
                 $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
+                break;
             }
         }
     }
 
     // No error was found, and the submit action is required
-    if (!$error && strtolower($action) != "preview") {
+    if (!$error && strtolower($_POST['action']) != "preview") {
 
         // Post the variables to the central user note script
         // ($MQ is defined in prepend.inc)
@@ -74,19 +87,19 @@ if (isset($note) && isset($user) &&
             array(
                 "user" => ($MQ ? stripslashes($user) : $user),
                 "note" => ($MQ ? stripslashes($note) : $note),
-                "sect" => ($MQ ? stripslashes($sect) : $sect)
+                "sect" => ($MQ ? stripslashes($_POST['sect']) : $_POST['sect'])
             )
         );
 
         // If there is any non-header result, then it is an error
         if ($result) {
-	    if (strpos ($result, '[TOO MANY NOTES]') !== false) {
-		print "<p class=\"error\">As a security precaution, we only allow a certain number of notes to be submitted per minute.  At this time, this number has been exceeded.  Please re-submit your note in about a minute.</p>";
-	    } else {
+            if (strpos($result, '[TOO MANY NOTES]') !== FALSE) {
+                print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
+            } else {
                 echo "<!-- $result -->";
-                echo "<p class=\"error\">There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
+                echo "<p class=\"formerror\">There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
             }
-	}
+        }
 
         // There was no error returned
         else { 
@@ -97,7 +110,7 @@ if (isset($note) && isset($user) &&
         }
         
         // Provide a backlink for the page the user is coming from
-        echo '<p>You can <a href="' . $redirect . '">go back</a> from whence you came.</p>';
+        echo '<p>You can <a href="' . $_POST['redirect'] . '">go back</a> from whence you came.</p>';
         
         // Print out common footer, and end page
         commonFooter();
@@ -108,13 +121,13 @@ if (isset($note) && isset($user) &&
     else {
 
         // If there was an error, print out
-        if ($error) { echo "<p class=\"error\">$error</p>\n"; }
+        if ($error) { echo "<p class=\"formerror\">$error</p>\n"; }
         
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
-        manual_note_display(time(),stripslashes($user),stripslashes($note), false);
-        echo '</table><br/><br/>';
+        manual_note_display(time(), stripslashes($user), stripslashes($note), FALSE);
+        echo '</table><br /><br />';
     }
 }
 
@@ -122,8 +135,8 @@ if (isset($note) && isset($user) &&
 else { ?>
 <p>
  You can contribute your notes to the PHP  manual from the comfort of your
- browser! Just add your comment in the  big field below, and, optionally,
- your email address or name in the little one.  After submission, your note
+ browser! Just add your comment in the big field below, and, optionally,
+ your email address or name in the little one. After submission, your note
  will appear under the documentation as a part of the manual.
 </p>
 
@@ -142,8 +155,8 @@ else { ?>
 <p>
  Note that HTML tags are not allowed in the posts, but the note is presented
  inside a &lt;pre&gt; element so formatting is preserved. URLs will be turned
- into clickable links automatically. <i>(Double-check that your note appears
- as you want during the preview. That's why it is there!)</i>
+ into clickable links automatically. <em>(Double-check that your note appears
+ as you want during the preview. That's why it is there!)</em>
 </p>
 
 <p>
@@ -161,9 +174,9 @@ else { ?>
  
  <li>
   If you are just commenting on the fact that something is not documented, 
-  save your breath. This is where <b>you</b> add to the documentation, not
-  where you ask <b>us</b> to add the documentation. You may choose to email
-  the <a href="mailto:phpdoc@lists.php.net">PHP Documentation Team</a> to
+  save your breath. This is where <strong>you</strong> add to the documentation,
+  not where you ask <strong>us</strong> to add the documentation. You may choose
+  to email the <a href="mailto:phpdoc@lists.php.net">PHP Documentation Team</a> to
   discuss the change.
  </li>
  
@@ -181,10 +194,10 @@ else { ?>
 <p>
  Just to make the point once more. The notes are being edited and support
  questions/bug reports/feature request/comments on lack of documentation, are
- being <b>deleted</b> from them (and you may get a <b>rejection</b> email), so
- if you post a question/bug/feature/complaint, it will be removed. (But once you
- get an answer/bug solution/function documentation, feel free to come back
- and add it here!)
+ being <strong>deleted</strong> from them (and you may get a <strong>rejection</strong>
+ email), so if you post a question/bug/feature/complaint, it will be removed.
+ (But once you get an answer/bug solution/function documentation, feel free to
+ come back and add it here!)
 </p>
 <p>
  (And if you're posting an example of validating email addresses, please
@@ -202,19 +215,19 @@ else { ?>
 }
 
 // If the user name was not specified, provide a default
-if (!isset($user) || !strlen($user)) { $user = "user@example.com"; }
+if (empty($_POST['user'])) { $_POST['user'] = "user@example.com"; }
 
 // There is no section to add note to
-if (!isset($sect)) {
-    echo '<p><b>To add a note, you must click on the "Add Note" button (the plus sign)  ',
-         'on the bottom of a manual page so we know where to add the note!</b></p>';
+if (!isset($_POST['sect']) || !isset($_POST['redirect'])) {
+    echo '<p class="formerror">To add a note, you must click on the "Add Note" button (the plus sign)  ',
+         'on the bottom of a manual page so we know where to add the note!</p>';
 }
 
 // Everything is in place, so we can display the form
 else {?>
-<form method="post" action="<?php echo $PHP_SELF; ?>">
- <input type="hidden" name="sect" value="<?php echo clean($sect); ?>" />
- <input type="hidden" name="redirect" value="<?php if (isset($redirect)) { echo clean($redirect); } ?>" />
+<form method="post" action="/manual/add-note.php">
+ <input type="hidden" name="sect" value="<?php echo clean($_POST['sect']); ?>" />
+ <input type="hidden" name="redirect" value="<?php echo clean($_POST['redirect']); ?>" />
  <table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
   <tr>
    <td colspan="2">
@@ -229,11 +242,11 @@ else {?>
   </tr>
   <tr valign="top">
    <td><b>Your email address (or name):</b></td>
-   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($user); ?>" /></td>
+   <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($_POST['user']); ?>" /></td>
   </tr>
   <tr valign="top">
    <td><b>Your notes:</b></td>
-   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($note)) { echo clean($note); } ?></textarea>
+   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($_POST['note'])) { echo clean($_POST['note']); } ?></textarea>
    <br />
   </td>
   </tr>
