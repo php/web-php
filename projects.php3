@@ -345,6 +345,13 @@ to support another database specific server.  Supported database servers
 are MySQL, MSQL, PostgreSQL, Microsoft SQL Server, Sybase.
 <? endEntry();?>
 
+<? makeEntry("Dominion","http://dominion.styx.net/","Master Phil","philippe@styx.net"); ?>
+Dominion is a "Universal Database Administration System Generator". It allows creation of
+multifunctional lists, and forms to insert, update and delete data against any kind of
+database, just by changing one variable. It just reduces administration time developement
+from 10 to 1.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
