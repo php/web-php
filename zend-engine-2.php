@@ -417,7 +417,7 @@ class MyExceptionFoo extends Exception {
 
 try {
     throw new MyExceptionFoo("Hello");
-} catch (MyException $exception) {
+} catch (MyExceptionFoo $exception) {
     print $exception->getMessage();
 }
 ?>'); ?>
