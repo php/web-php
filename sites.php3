@@ -137,6 +137,7 @@ right away.</blockquote>
 	site("Netvision","www.netvision.net.il");
 	site("Pair Networks","www.pair.net");
 	site("SpaceNet","www.spacenet.de");
+	site("Total Information Management AG","www.timso.ch");
 	site("XOOM Inc.","xoom.com");
 	siteEnd();
 
