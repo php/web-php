@@ -49,7 +49,8 @@ function manual_header()
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
     header("Vary: Cookie");
-    header("Content-type: text/html;charset=$encoding");
+    //header("Content-type: text/html;charset=$encoding");
+    header("Content-type: text/html;charset=utf-8");
     header("Content-language: $lang");
     
     // Set base page and href for this manual page
