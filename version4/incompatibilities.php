@@ -21,6 +21,8 @@ echo "\n<!--$MYSITE-->\n";
   <li>The function short_tags() no longer works.  In future betas, there will be alternatives to this function, but currently, there is no way to change PHP's short tags behavior in runtime, only by using configuration parameters (.htaccess variables would work well).</li>
   <li>You can't used PHP3 dynamic extensions (php3_*.dll on Windows) with PHP4.</li>
   <li>The string "0" is now considered empty. This is known to have an effect on phpMyAdmin.</li>
+  <li>In PHP4, multiple calls to setcookie() are performed in the order called, whereas in PHP3 they were performed in reverse order.</li>
+
 </ul>
 
 <p>If any more incompatibilities are discovered, we will add them here.</p>
