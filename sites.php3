@@ -64,6 +64,7 @@
 	/* Newspapers & Magazines */
 	site("Børsen - Danish Business Daily","www.borsen.dk");
 	site("Computer Currents","www.computercurrents.com");
+	site("UPI Archives","upi.siteways.com");
 
 	echo "<br></td><td align=top>\n";
 	/* Computer Hardware */
