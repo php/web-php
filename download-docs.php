@@ -9,6 +9,15 @@ You can read the
 is various languages, even in printer
 friendly HTML format.
 </p>
+
+<h3>File sizes and dates</h3>
+<p>
+If you are using a capable browser, the file size and
+date will show up when you move the mouse above the link.
+If you use another browser, or would like to see all the
+information, you can <a href="/download-docs.php?sizes=1">click
+here to see all the file sizes and dates</a>.
+</p>
 ';
 
 commonHeader("Download documentation");
@@ -33,13 +42,10 @@ $formats = array(
 
 <h1>Download documentation</h1>
 
-<p>The PHP manual is available in a selection of languages
-and formats. Pick a language and format from the table below.
-Tip: If you are using a capable browser, the file size and
-date will show up when you move the mouse above the link.
-If you use another browser, or would like to see all the
-information, you can <a href="/download-docs.php?sizes=1">click
-here to see all the file sizes and dates</a>.
+<p>
+The PHP manual is available in a selection of languages
+and formats. Pick a language and format from the table below
+to start downloading.
 </p>
 
 <p>
