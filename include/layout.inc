@@ -435,39 +435,80 @@ function display_errors($errors)
 	echo '</div>';
 }
 
-function display_event($event,$include_date=1)
+// Displays an event. Used in event submission
+// previews and event information displays
+function display_event($event, $include_date = 1)
 {
-  for ($i = 1; $i <= 7; $i++) {
-    $days[$i] = strftime('%A',mktime(12,0,0,4,$i,2001));
-  }
+    global $COUNTRIES;
+    
+    // Weekday names array
+    for ($i = 1; $i <= 7; $i++) {
+        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2001));
+    }
 
-  $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
+    // Recurring possibilities
+    $re = array(
+         1 => 'First',
+         2 => 'Second',
+         3 => 'Third',
+         4 => 'Fourth',
+        -1 => 'Last',
+        -2 => '2nd Last',
+        -3 => '3rd Last'
+    );
 
-  $sday = $event['start'] ? strtotime($event['start'])
-          : mktime(0,0,1,$event['smonth'],$event['sday'],$event['syear']);
-  $eday = $event['end'] ? strtotime($event['end'])
-          : mktime(0,0,1,$event['emonth'],$event['eday'],$event['eyear']);
+    // Start and end day of this event
+    $sday = $event['start'] ? strtotime($event['start'])
+            : mktime(0, 0, 1, $event['smonth'], $event['sday'], $event['syear']);
+    $eday = $event['end'] ? strtotime($event['end'])
+            : mktime(0, 0, 1, $event['emonth'], $event['eday'], $event['eyear']);
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%">
  <tr bgcolor="#dddddd"><td>
 <?php
-  if ($include_date && ($event['start'] || $event['smonth'])) echo "<b>", date("F j, Y", $sday), "</b>\n";
-  if ($event['url']) echo '<a href="', htmlentities($event['url']),'">';
-  echo "<b>", stripslashes(htmlentities($event['sdesc'])), "</b>";
-  if ($event['url']) echo "</a>";
-  switch ($event['type']) {
-  case 2:
-  case 'multi':
-    echo " (", date("Y-m-d",$sday), " to ", date("Y-m-d",$eday), ")";
-    break;
-  case 3:
-  case 'recur':
-    echo " (Every ", $re[$event['recur']], " ", $days[$event['recur_day']], " of the month)";
-    break;
-  }
+    
+    // Print out date if needed
+    if ($include_date && ($event['start'] || $event['smonth'])) {
+        echo "<b>", date("F j, Y", $sday), "</b>\n";
+    }
+    
+    // Print link in case we have one
+    if ($event['url']) { echo '<a href="', htmlentities($event['url']),'">'; }
+    // Print event description
+    echo "<b>", stripslashes(htmlentities($event['sdesc'])), "</b>";
+    // End link
+    if ($event['url']) { echo "</a>"; }
+  
+    // Print extra date info for recurring and multiday events
+    switch ($event['type']) {
+        case 2:
+        case 'multi':
+            echo " (", date("Y-m-d",$sday), " to ", date("Y-m-d",$eday), ")";
+            break;
+        case 3:
+        case 'recur':
+            echo " (Every ", $re[$event['recur']], " ",
+                 $days[$event['recur_day']], " of the month)";
+            break;
+    }
+    
+    // Print out country information
+    echo ' (' , $COUNTRIES[$event['country']] , ')';
 ?>
  </td></tr>
- <tr bgcolor="#eeeeee"><td><?php echo preg_replace("/\r?\n\r?\n/","<br /><br />",trim($event['ldesc'])); if ($event['url']) {?><br /><br /><b>URL:</b> <?php echo '<a href="',htmlentities($event['url']),'">',htmlentities($event['url']),'</a>'; }?></td></tr>
+ <tr bgcolor="#eeeeee"><td>
+<?php
+
+    // Print long description
+    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim($event['ldesc']));
+    // If we have an URL, print it out
+    if ($event['url']) {
+        echo '<br /><br /><b>URL:</b> ',
+             '<a href="', htmlentities($event['url']), '">',
+             htmlentities($event['url']), '</a>';
+    }
+?>
+ </td></tr>
 </table>
 <?php
 }

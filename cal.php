@@ -207,9 +207,8 @@ function date_for_recur($recur, $day, $bom, $eom)
 // Display a <div> for each of the events that are on a given day
 function display_events_for_day($day, $events)
 {
-    
     // For preservation of state in the links
-    global $PHP_SELF, $cm, $cy;
+    global $PHP_SELF, $cm, $cy, $COUNTRY;
     
     // For all events, try to find the events for this day
     foreach ($events as $event) {
@@ -218,9 +217,12 @@ function display_events_for_day($day, $events)
         if (($event['type'] == 2 && $event['start'] <= $day && $event['end'] >= $day)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
+                 ($COUNTRY == $event['country'] ? "<b>" : ""),
                  '<a href="',$PHP_SELF,"?id=$event[id]&amp;cm=$cm&amp;cy=$cy",'">',
                  stripslashes(htmlentities($event['sdesc'])),
-                 '</a></div>';
+                 '</a>',
+                 ($COUNTRY == $event['country'] ? "</b>" : ""),
+                 '</div>';
         }
     }
 }
@@ -327,7 +329,7 @@ function read_event($fp)
     
     // Put the array elements into variables
     list(
-        , , , ,
+        $day, $month, $year, $country,
         $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato
     ) = $linearr;
 
@@ -345,6 +347,7 @@ function read_event($fp)
         'sdesc'     => $sdesc,
         'url'       => $url,
         'ldesc'     => base64_decode($ldesc),
+        'country'   => $country,
     );
 }
 
