@@ -158,7 +158,7 @@ if ($process) {
 }
 
 ?>
-<form action="/submit_event.php" method="post">
+<form action="/submit-event.php" method="post">
 <table border="0" cellpadding="3" class="standard">
  <tr>
   <th class="subr">Start Date</th>
