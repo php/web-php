@@ -1,7 +1,7 @@
 <?php
-/* $Id$ */
-
-include_once "prepend.inc";
+// $Id$
+$_SERVER['BASE_PAGE'] = 'my.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Try to make this page non-cached
 header_nocache();
