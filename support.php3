@@ -29,8 +29,9 @@ php3-subscribe@lists.php.net">php3-subscribe@lists.php.net</a>.
 Archives for this list can be found at: 
 </P>
 <ul>
+<li><a href="http://php.gotocity.com/mail/">PHP3 List at www.phpbuilder.com</a>
 <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
-<li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List (Nice interface)</a>
+<li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List</a>
 <li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List (going back further than the above)</a>
 </ul>
 <P>
