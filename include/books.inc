@@ -372,9 +372,7 @@ array(
     /* author[s]    */ "Matt Zandstra",
     /* auth link[s] */ "",
     /* image        */ "0672323117.jpg",
-    /* information  */ "Sams, Dec 2001, ISBN 0-6723-2311-7, 528 pages<br>" . 
-                       "There is also more information on the first edition on
-                       <a href=\"http://www.sams.com/catalog/product.asp?product_id={AC657B6D-7E41-457D-A203-906D91B0C088}\">it's webpage</a>",
+    /* information  */ "Sams, Dec 2001, ISBN 0-6723-2311-7, 528 pages" . 
     /* inform. link */ "http://www.sams.com/catalog/product.asp?product_id={F90FC049-C258-4E7C-AAA5-CDF148BBB9A0}",
     /* language     */ "en"
    ),
