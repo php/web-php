@@ -8,34 +8,34 @@
 <table>
 	<tr>
 	<td>
-		Download <a href="http://www.lerdorf.on.ca/php3/php-3.0a2.tar.gz">PHP 3.0a2</a> (source) from the PHP main site in Toronto, Canada 
+		Download <a href="http://www.lerdorf.on.ca/php3/php-3.0a3.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in Toronto, Canada 
 	</td>
 	<td>
-		<a href="http://www.lerdorf.on.ca/php3/php-3.0a2.tar.gz"><img src="gifs/canada.gif" border="0"></a>
+		<a href="http://www.lerdorf.on.ca/php3/php-3.0a3.tar.gz"><img src="gifs/canada.gif" border="0"></a>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://php.netvision.net.il/php-3.021.tar.gz">PHP 3.0a2</a> (source) from the PHP main site in Netvision, Israel
+		Download <a href="http://php.netvision.net.il/php-3.021.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in Netvision, Israel
 	</td>
 	<td align="center">
-		<a href="http://php.netvision.net.il/php-3.0a2.tar.gz"><img src="gifs/israel.gif" border="0"></a>
+		<a href="http://php.netvision.net.il/php-3.0a3.tar.gz"><img src="gifs/israel.gif" border="0"></a>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://php.technion.ac.il/php-3.0a2.tar.gz">PHP 3.0a2</a> (source) from the PHP main site in the Technion, Israel
+		Download <a href="http://php.technion.ac.il/php-3.0a3.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in the Technion, Israel
 	</td>
 	<td align="center">
-		<a href="http://php.technion.ac.il/php-3.0a2.tar.gz"><img src="gifs/israel.gif" border="0"></a>
+		<a href="http://php.technion.ac.il/php-3.0a3.tar.gz"><img src="gifs/israel.gif" border="0"></a>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://php.guardian.no/php-3.0a2.tar.gz">PHP 3.0a2</a> (source) from the PHP main site in Trondheim, Norway
+		Download <a href="http://php.guardian.no/php-3.0a3.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in Trondheim, Norway
 	</td>
 	<td align="center">
-		<a href="http://php.guardian.no/php-3.0a2.tar.gz"><img src="gifs/norway.gif" border="0"></a>
+		<a href="http://php.guardian.no/php-3.0a3.tar.gz"><img src="gifs/norway.gif" border="0"></a>
 	</td>
 	</tr>
 	<tr>
