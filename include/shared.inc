@@ -681,7 +681,7 @@ button on the left for other documentation resources.)
 if ($HAVE_SEARCH):
 	$form="/search.php3";
 else:
-	$form="http://uk.php.net/search.php3";
+	$form="http://ca.php.net/search.php3";
 endif;
 ?>
 
