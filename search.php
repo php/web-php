@@ -104,7 +104,7 @@ else {
 <p>
  We are interested in detailed bug reports including JS error messages, operating system
  and browser information. We are planning on deploying this feature to all PHP.net pages
- if we can manage to make it work without errors for most of the comonly used browsers.
+ if we can manage to make it work without errors for most of the commonly used browsers.
 </p>
 <p>
  The source code of this feature is released under the PHP License and is available
