@@ -10,7 +10,8 @@ de	www.php3.de	smartin@schlund.de	62.104.64.10
 de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
 es	es.php.net	alfre@ibd.es	195.55.198.14
-fi	fi.php.net	masa@netlife.fi	195.170.139.154	contact unreachable (bounces)
+#fi	fi.php.net	masa@netlife.fi	195.170.139.154	contact unreachable (bounces)
+fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
