@@ -210,3 +210,9 @@ if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
 if (isset($_SERVER['MIRROR_STATS'])) {
     $MIRRORS[$MYSITE][2] = TRUE;
 }
+
+// Provide base href information to make relative links on
+// shortcut URL accessed pages work without redirection
+if (isset($_SERVER['BASE_PAGE'])) {
+    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+} else { unset($_SERVER['BASE_HREF']); }

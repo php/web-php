@@ -190,6 +190,13 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     // If no onload event is specified, restore the last search
     if (empty($ONLOAD)) { $ONLOAD = "searchHistory(); tocImages();"; }
 
+    // Guess what base to use for this page (the first two are just
+    // for BC reasons, until we migrate all the code to use the last one)
+    unset($PBASE);
+    if (!empty($SEARCH_BASE))          { $PBASE = $SEARCH_BASE; }
+    if (!empty($BASE_FOR_MANPAGE))     { $PBASE = $BASE_FOR_MANPAGE; }
+    if (!empty($_SERVER['BASE_HREF'])) { $PBASE = $_SERVER['BASE_HREF']; }
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
@@ -197,9 +204,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/style.css" />
  <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
  <script language="Javascript" type="text/javascript" src="<?php echo $_SERVER['STATIC_ROOT']; ?>/userprefs.js"></script>
- <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
- <?php echo (!empty($BASE_FOR_MANPAGE) ? '<base href="' . $BASE_FOR_MANPAGE . '" />' : ''); ?>
-</head>
+<?php echo (isset($PBASE) ? ' <base href="' . $PBASE . '" />' : ''); ?></head>
 <body bgcolor="#ffffff" text="#000000"
       link="#000099" alink="#0000ff" vlink="#000099"
       onload="<?php echo $ONLOAD; ?>">
