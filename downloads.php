@@ -92,8 +92,8 @@ if ($cmn > 0) {
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><a href="<?php echo $mirror; ?>/distributions/php-4.2.2.tar.bz2">PHP 4.2.2 (tar.bz2)</a> [2,654Kb] - 22 July 2002</li>
-  <li><a href="<?php echo $mirror; ?>/distributions/php-4.2.2.tar.gz">PHP 4.2.2 (tar.gz)</a> [3,319Kb] - 22 July 2002</li>
+  <li><a href="<?php echo $mirror; ?>/do_download.php?download_file=php-4.2.2.tar.bz2">PHP 4.2.2 (tar.bz2)</a> [2,654Kb] - 22 July 2002</li>
+  <li><a href="<?php echo $mirror; ?>/do_download.php?download_file=php-4.2.2.tar.gz">PHP 4.2.2 (tar.gz)</a> [3,319Kb] - 22 July 2002</li>
 </ul>
 
 <h2>Patches to latest version</h2>
@@ -107,7 +107,7 @@ if ($cmn > 0) {
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><a href="<?php echo $mirror; ?>/distributions/php-4.2.2-Win32.zip">PHP 4.2.2 zip package</a> [5,275Kb] - 22 July 2002<br>
+  <li><a href="<?php echo $mirror; ?>/do_download.php?download_file=php-4.2.2-Win32.zip">PHP 4.2.2 zip package</a> [5,275Kb] - 22 July 2002<br>
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
 <?php /*
@@ -148,6 +148,12 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
+  <li>PHP 4.2.1
+    <ul>
+      <li><?php download_link("php-4.2.1.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.2.1-Win32.zip", "Windows Binary (zip)"); ?></li>
+    </ul><br>
+  </li>
   <li>PHP 4.1.2
     <ul>
       <li><?php download_link("php-4.1.2.tar.gz", "Source Code"); ?></li>
