@@ -217,13 +217,19 @@ and hits the submit button, the <i>action.php</i> page is called.
 In this file you would have something like this:
 </p>
 
-<?php example('Hi <?php echo $_POST["name"]; ?>.
-You are <?php echo $_POST["age"]; ?> years old.')?>
+<?php example('Hi <?php echo $name; ?>.
+You are <?php echo $age; ?> years old.')?>
 
 <p>
 It should be obvious what this does. There is nothing more to it.
 The $name and $age variables are automatically set for you by PHP.
 </p>
+
+<p>
+<b>NB:</b> Since PHP version 4.2.1, this functionality is disabled by default. 
+We chose to do this because with careless coding, it becomes possible to cause
+security holes in PHP scripts. You can read more about this 
+<a href="http://php.net/register.globals">here</a>.
 
 <h2>What's next?</h2>
 
