@@ -453,6 +453,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Webbprogrammering met PHP",
+    /* title_link   */ "http://www.studentlitterature.se/shop/default.html?artnr=7844-01",
+    /* author[s]    */ "Viktor Jonsson",
+    /* auth link[s] */ "",
+    /* image        */ "jonsson.gif",
+    /* information  */ "September, 2001, ISBN 91-44-01941-6, 390 pages",
+    /* inform. link */ "",
+    /* language     */ "se"
+  ),
+
+  array(
     /* title[s]     */ "Gu&iacute;a Pr&aacute;cticas PHP 4",
     /* title_link   */ "http://www.AnayaMultimedia.es/",
     /* author[s]    */ "Esteban Trigos",
