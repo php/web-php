@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+include_once 'prepend.inc';
 
 $SIDEBAR_DATA='
 <h3>URL examples</h3>
