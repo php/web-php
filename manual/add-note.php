@@ -189,7 +189,7 @@ else { ?>
  </li>
 </ul>
 
-<h3>If you post a note in any of the categories above, it will edited and/or removed.</h3>
+<h3>If you post a note in any of the categories above, it will be edited or removed.</h3>
 
 <p>
  Just to make the point once more. The notes are being edited and support
