@@ -29,9 +29,9 @@ the provider's homepage:
     echo '<tr bgcolor="#e0e0e0"><td>';
     if ($mprevious != $mdata[0]) { echo $COUNTRIES[$mdata[0]]; }
     else { echo "&nbsp;"; }
-    echo '</td><td>' . make_link($murl, $murl); .
+    echo '</td><td>' . make_link($murl, $murl) .
          '</td><td>' . make_link($mdata[3], $mdata[1]) . 
-         '</td><td>' . $mdata[6] . '</td></tr>';
+         '</td><td>' . $LANGUAGES[$mdata[6]] . '</td></tr>';
     $mprevious = $mdata[0];
   }
 ?>
