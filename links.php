@@ -350,12 +350,12 @@ An Italian site that provides a variety of developer tutorials,
 with a small PHP section</li>
 
 <li><a href="http://www.phpcenter.it/">PHPcenter.it</a><br>
-An Italian-language php site that features a variety of projects, reviews,
+An Italian-language PHP site that features a variety of projects, reviews,
 courses, tutorials and other resources</li>
 
 <li><a href="http://www.risorse.net/php/">Risorse.net</a><br>
-Section of an italian site that provides tutorials about PHP,
-hundreds of scripts, books and a list of free and pay webhosts wich support
+Section of an Italian site that provides tutorials about PHP,
+hundreds of scripts, books and a list of free and pay webhosts which support
 PHP</li>
 
 </ul></li>
@@ -444,8 +444,6 @@ Try one of the following sites:
 
 <ul>
   <li><a href="http://www.od-site.com/php">www.od-site.com/php</a></li>
-  <li><a href="http://hosts.php.net/">hosts.php.net</a><br>
-    (features a searchable directory and comments from users)</li>
 <!--  <li><a href="http://pmcw.dhs.org/">PMCW webservices</a></li> -->
 </ul>
 

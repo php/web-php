@@ -115,15 +115,6 @@ are linked to their definition, and all their usage locations. This will help
 you build your code, and understand the PHP source.
 </p>
                                                                        
-<h2><a href="http://hosts.php.net/">hosts.php.net</a>: Hosting Companies</h2>
-<p>
-If you are looking for a hosting company which will provide
-outstanding PHP support, this is your destination. There are currently
-about 2000 hosting companies, from over thirty countries. You can register
-your company there. There are also message boards that allow people to
-share their experiences with particular companies.
-</p>
-
 <h2><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
 <p>
 This web site is the home of the PHP-GTK project: this allows PHP to be used to
