@@ -213,8 +213,7 @@ patient!), gives you access to a number of things.  First, and most
 importantly, it gives you access to modify those parts of PHP CVS tree for
 which you have requested and been granted access. It also allows you to comment
 on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
-allows you to <a href="http://www.php.net/manual/admin-notes.php">modify the
-documentation notes in the annotated manual</a>.  Your CVS account also
+allows you to modify the documentation notes in the <a href="/manual/">annotated manual</a>.  Your CVS account also
 translates into a foo@php.net forwarding email address where <b>foo</b> is your
 CVS user id. Feel free to use it!
 </p>
