@@ -29,12 +29,12 @@ were discovered in PHP 4.0.4.
 
 <h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For January Available
+New Usage Stats For February Available
 </h1>
 <p>
 <? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
 <? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
-published the January results for their Web Server surveys - both
+published the February results for their Web Server surveys - both
 of which continue to show impressive growth for PHP. Check out the 
 <? print_link("/usage.php", "usage page"); ?>.
 <br clear="all">
@@ -56,7 +56,6 @@ The conference will be part of the <? print_link("http://conferences.oreilly.com
 All the details on submitting talks are in the full <? print_link("/cfp.php", "CFP"); ?>.
 <br clear="all">
 </p>
-
 
 <? echo hdelim(); ?>
 
