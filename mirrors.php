@@ -50,40 +50,40 @@ foreach ($MURLS as $murl) {
     // country header, if it is a new one
     $country = mirror_country($murl);
     if ($prevcc != $country) {
-        echo '<tr><td colspan="4"></td></tr>';
+        echo '<tr><td colspan="4"></td></tr>' . "\n";
         echo '<tr bgcolor="#cccccc"><td width="40" align="center">';
         print_image('flags/' . strtolower($country) . '.png', $COUNTRIES[$country], FALSE, 'CLASS="flag"');
         echo '<br /></td>';
         echo '<td colspan="3"><b>' . $COUNTRIES[$country] . '</b><br /></td>';
-        echo '</tr>';
+        echo '</tr>' . "\n";
     }
 
     // Highlight this mirror if it is the current one
-    echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '">';
+    echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '">' . "\n";
 
     // Print out caret (in bold if current mirror)
     echo '<td bgcolor="#ffffff" align="right">';
     print_image( ($MYSITE == $murl ? 'caret-r.gif' : 'caret-rg.gif') );
-    echo '<br /></td>';
+    echo '<br /></td>' . "\n";
 
     // Print out mirror site link
     echo '<td><small>';
     $ps = strpos($murl, '//') + 2;
     print_link($murl, substr($murl, $ps, -1));
-    echo '</small><br /></td>';
+    echo '</small><br /></td>' . "\n";
 
     // Print out mirror provider's link
     echo '<td><small>';
     print_link(mirror_provider_url($murl), mirror_provider($murl));
-    echo '</small><br /></td>';
+    echo '</small><br /></td>' . "\n";
 
     // Print out mirror's default language
     echo '<td><small>';
     echo $LANGUAGES[default_language($murl)];
-    echo '</small><br /></td>';
+    echo '</small><br /></td>' . "\n";
 
     // End row for this mirror
-    echo '</tr>';
+    echo "</tr>\n";
 
     // Maintain previous country code
     $prevcc = $country;
