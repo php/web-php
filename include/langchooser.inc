@@ -23,6 +23,9 @@
 // Empty languages array, and preferred language
 $LANGS = array(); $LANG = '';
 
+// Default STRIPPED_URI
+$_SERVER['STRIPPED_URI'] = $_SERVER['REQUEST_URI'];
+
 // Specified for the request (GET/POST parameter)
 if (isset($_REQUEST['lang'])) { language_add($_REQUEST['lang']); }
 
