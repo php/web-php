@@ -25,9 +25,9 @@ if (!isset($htsearch_prog)) {
 
 // Provide information on local stats setup
 if (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1') {
-    $mirror_stats = 1; // Yes
+    $mirror_stats = 1;
 } else {
-    $mirror_stats = 2; // Don't know
+    $mirror_stats = 0;
 }
 
 echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language(), "|";
