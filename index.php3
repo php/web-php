@@ -9,6 +9,22 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP Talks at ApacheCon</h3>
+February 24, 2000.  <a href="http://php.faqts.com">Nathan Wallace</a>, <a
+href="http://www.covalent.com/apachecon.php">Craig Kohtz</a> and <a
+href="http://phpwizard.net">Tobias Ratschiller</a> are all giving
+presentations on PHP at ApacheCon, 8-10th March 2000, in Orlando,
+Florida.  The topics include sessions and authentication, advanced PHP
+techniques, migrating from ASP to PHP and web design patterns.  You can
+find more information about these talks <a
+href="http://www.apachecon.com/html/sessions.html">here</a>.
+
+<h3>Patch Level 1 available for PHP 4.0 Beta 4</h3>
+February 21, 2000.  Unfortunately, a last-minute buglet crept into Beta 4, which prevented
+PHP from working properly if the 'magic quotes' feature was turned off.  This has been fixed,
+and Beta 4 was repackaged (as Beta 4 patch level 1).  The new release is <a href="/version4/downloads.php">available</a>
+as both new packages, and as a diff file against the original Beta 4.
+
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 4 is out!</h3>
 February 20, 2000.  The fourth beta of <a href="/version4/">PHP 4.0</a> has been released.  
