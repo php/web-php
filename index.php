@@ -25,7 +25,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
 
 <h3>' . make_link("/thanks.php", "Thanks To") . '</h3>
-&nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<br>
+&nbsp; ' . make_link("http://www.synacor.com/", "Synacor") . '<br>
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
 &nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>

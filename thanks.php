@@ -6,7 +6,7 @@ commonHeader("Thanks");
 <h1>Thanks</h1>
 
 <p>
-<?php print_link("http://chek.com/", "Chek.com"); ?> provides the servers and 
+<?php print_link("http://www.synacor.com/", "Synacor"); ?> provides the servers and 
 bandwidth that run the main www.php.net mirror site and other services.
 </p>
 
