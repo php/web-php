@@ -187,6 +187,18 @@ README.WIN32 file.
     to help the developers pinpoint the problem.
   <P>
   </DD>
+  <DT><B>
+    I'm trying to access one of the standard CGI variables (such
+    as $DOCUMENT_ROOT or $HTTP_REFERER) in a user-defined function,
+    and it can't seem to find it. What's wrong?
+  </B></DT>
+  <DD>
+    Environment variables are now normal global variables, so you must
+    either declare them as global variables in your function (by using
+    "<CODE>global $DOCUMENT_ROOT;</CODE>", for example) or by using
+    the global variable array (ie, "<CODE>$GLOBAL["DOCUMENT_ROOT"]</CODE>".
+  <P>
+  </DD>
 </DL>
 
 <H3>I think I found a bug! Who should I tell?</H3>
