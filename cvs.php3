@@ -18,22 +18,26 @@ background on yourself.<P>
 
 If, you have already established yourself in the above manner you can submit
 a CVS account request here: (only the encrypted version of the password is sent)
+In the purpose field, put a couple of words describing what you want to work on.
+This is mostly to jog my memory and allow me to match the account request with 
+whatever previous correspondence that may taken place.
 <form action="cvs.php3" method="POST">
 <table>
 <tr><th>Full Name: </th><td><input type=text size=50 name=fullname></td></tr>
 <tr><th>Email: </th><td><input type=text size=50 name=email></td></tr>
+<tr><th>Purpose: </th><td><input type=text size=50 name=purpose></th></tr>
 <tr><th>User ID: </th><td><input type=text size=10 name=id></th></tr>
 <tr><th>Requested Password: </th><td><input type=password size=10 name=password></th></tr>
 <tr><th>&nbsp;</th><td><input type=submit value="Send It"></td></tr>
 </table>
 </form>
 <? else:
-mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password));
+mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
 ?>
 Thank you.  Your request has been sent.
 <?endif;?>
 <P>
-The CVS account gives you access to a number of things.  First, and most important it gives you access
+The CVS account, once activated, gives you access to a number of things.  First, and most important it gives you access
 to modify the PHP CVS tree.  It also allows you to comment on and close bugs in the PHP bugs interface
 as well as modifying the documentation notes in the annotated manual.  The relevant links for these
 three things are:
