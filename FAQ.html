@@ -100,7 +100,7 @@ servers (IIS, Netscape).  This does not matter in Unix environments, yet.
   <LI>LDAP* (win): <A href="ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip">ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip</A><br>
 	There is also a free LDAP server at: <A href="ftp://ftp.critical-angle.com/pub/cai/slapd/">ftp://ftp.critical-angle.com/pub/cai/slapd/</A>.
   <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
-  <LI>SNMP (Win): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
+  <LI>SNMP (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
   <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
   <LI>MSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
   <LI>MSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
@@ -119,6 +119,16 @@ enable using '--with-EXTENSION' options to 'configure'. Run 'configure
 
 <P>Yes, as long as you're looking for binaries for Windows 95 or NT.
 They're available in the same place as the source.
+
+<h3>I got the latest cvs on my Windows 95/NT machine, what do I need to compile it?</h3>
+
+<p>First, you will need Microsoft VisualC++ v5 (v4 may do it also, but we do it with
+v5), and you will need to <a href="win32/makeparser.zip">download Bison and Flex</a>.  You will need to put Bison and Flex
+somewhere IN your path, or add their location to your path.  Then run the batch file 'makeparser'
+before compiling with MSVC.  You also may need to edit some settings in the project settings.  You should
+be familier enough with MSVC to know what to do ;).  But look at the include and lib paths, they will probably be
+wrong for your system.
+</p>
 
 <HR>
 
