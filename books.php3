@@ -11,7 +11,7 @@ commonHeader("PHP Books");
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
-><IMG SRC="http://images.amazon.com/images/P/1565927699.01.LZZZZZZZ.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="http://www.oreilly.com/catalog/covers/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
 >PHP Pocket Reference</A><BR>
