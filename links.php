@@ -234,11 +234,6 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://phpj.com/">PHP Journal</a><br />
-  A quarterly journal devoted to the PHP programming language.
- </li>
-
- <li>
   <a href="http://www.phpmag.de/">PHP Magazin</a><br />
   The Software &amp; Support Verlag, based in Frankfurt,
   Germany, has now published a magazine on PHP as a 
