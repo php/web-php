@@ -78,6 +78,15 @@ MySQL, but hope to either have a database independent version or multiple versio
 different databases in the future.
 <? endEntry();?>
 
+
+<? makeEntry("NeoBoard","www.neoqst.com/public/neoboard/neoboard.html","Wankyu Choi","wankyu@neoqst.com"); ?>
+NeoBoard is a web based threaded message board written in PHP3.
+NeoBoard uses MySQL to manage its messages. If you have some knowlege on PHP,
+it won't be too much trouble to get it to work with other database engines.
+You need a PHP-enabled web server (or CGI PHP) and MySQL 3.22 or later to
+get NeoBoard working.
+<? endEntry();?>
+
 <? makeEntry("Ministry of Truth","tomato.nvgc.vt.edu/~hroberts/mot/","Hal Roberts","hroberts@alumni.princeton.edu"); ?>
 The Ministry of Truth is a web-based job, equipment, and software
 tracking system that works via PHP and MySQL.  MOT is a handy way for
