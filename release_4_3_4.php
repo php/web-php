@@ -23,6 +23,7 @@ site_header("PHP 4.3.4 Release Announcement");
 
 <ul>
  <li>Fixed disk_total_space() and disk_free_space() under FreeBSD.</li>
+ <li>Fixed FastCGI support on Win32.</li>
  <li>Fixed FastCGI being unable to bind to a specific IP.</li>
  <li>Fixed several bugs in mail() implementation on win32.</li>
  <li>Fixed crashes in a number of functions.</li>
