@@ -1,4 +1,4 @@
-<?
+<?php
 require("shared.inc");
 commonHeader("Cool PHP Tips");
 
@@ -32,9 +32,30 @@ related to PHP.  They aren't necessarily be related to actually coding in PHP
 Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.
 </P>
 
+<?php tipTitle('Adding the Quick Reference to Mozilla and Netscape 6', 'Andr&eacute; Langhorst', '16-Aug-2000'); ?>
+
+<P>
+Quick access to PHP documentation and site search for all Mozilla and Netscape 6 users:
+</P>
+
+<OL>
+
+<LI>Click "Bookmarks -> Manage Bookmarks"
+<LI>Create a bookmark in a folder of your choice on the following URL: http://www.php.net/manual-lookup.php?function=%s (or mirror site of your choice)
+<UL>
+<LI>Choose a name for your bookmark.
+</UL>
+<LI>Right click the bookmark you´ve created and select "Properties..."
+<LI>Choose a "custom keyword" you want to enter in the URL bar, eg. "phpman" and fill it in.
+<LI>That's it!  Try it by typing "php strlen" in the IE Address bar.  You should
+<LI>Click "ok" and open a new browser window.
+<LI>Finished. Now you´re able to enter eg. "phpman fgets" to look up the manual entry on the function fgets() or
+ eg. "phpman building php4" to search all available information how to build php4.
+</OL>
 
 
-<? tipTitle('Adding the Quick Reference to Internet Explorer 5', 'Colin Viebrock', '28-Jul-2000'); ?>
+
+<?php tipTitle('Adding the Quick Reference to Internet Explorer 5', 'Colin Viebrock', '28-Jul-2000'); ?>
 
 <OL>
 
