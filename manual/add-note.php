@@ -153,9 +153,9 @@ else { ?>
 </p>
 
 <p>
- Note that HTML tags are not allowed in the posts, but the note is presented
- inside a &lt;pre&gt; element so formatting is preserved. URLs will be turned
- into clickable links automatically. <em>(Double-check that your note appears
+ Note that HTML tags are not allowed in the posts, but the note formatting
+ is preserved. URLs will be turned into clickable links, PHP code blocks will
+ be source highlighted automatically. <em>(Double-check that your note appears
  as you want during the preview. That's why it is there!)</em>
 </p>
 
