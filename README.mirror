@@ -68,11 +68,11 @@ appropriate steps will be taken to integrate your mirror site:
 - Whether or not you've installed local searching support on your mirror.
   This uses ht://Dig (http://www.htdig.org), for which instructions for 
   setting it up can be found in Mirrors-htdig.tgz
-- A logo for your hosting company, or the URL of where we can get one.
-  The bigger and better the quality, the better.  We will do the fancy 
-  graphics stuff to make it fit into the look of the site.
+- The name of your hosting company.
 - The URL of the site that hosts the mirror.  This is where you want
-  people will go when they click on the logo at the bottom of each page.
+  people will go when they click on the link for your mirror at the
+  bottom of each page.
+- The preferred default language for your country.
 
 Don't worry about graphics for your country's flag - we've got them all!
 
