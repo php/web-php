@@ -92,6 +92,35 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff"
+><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff">PHP Essentials</A><BR>
+<SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
+by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
+<SMALL>
+Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
+<A HREF="http://www.thickbook.com/">more info</A>
+</SMALL>
+</TD>
+</TR>
+
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/cmvsstuff"
+><IMG SRC="/jpgs/php_fe.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/cmvsstuff">PHP Fast & Easy Web Development</A><BR>
+<SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
+by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
+<SMALL>
+Prima-Tech, July 2000, ISBN 0-7615-3055-X, 500 pages<BR>
+<A HREF="http://www.thickbook.com/">more info</A>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/thephpdevelopmte"
 ><IMG SRC="/jpgs/ratschiller.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
