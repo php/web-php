@@ -378,6 +378,7 @@ function manual_header_print()
  <link rel="next" href="<?php echo $PGI['next'][0]; ?>" />
  <link rel="start" href="<?php echo $PGI['home'][0]; ?>" />
  <base href="<?php echo $_SERVER['BASE_HREF']; ?>" />
+ <meta name="robots" content="noindex,nofollow" />
 </head>
 <body>
 <?php print_link("/", make_image('php.gif', 'PHP', 'left')); ?>
