@@ -665,7 +665,7 @@ It is still not too late to check out some photos from the conference:
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
     <li><?php print_link("http://www.phpconference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
 </ul>
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -679,7 +679,7 @@ highly-improved performance, especially under Windows; a more security-friendly
 way of accepting form variables; output compression; and much, much more.  Read the full
 <a href="/release_4_1_0.php">release announcement</a>, or check out the
 <a href="/ChangeLog-4.php">changelog</a>. Windows binaries are also available.
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -693,7 +693,7 @@ processable forms with many wishes and comments. Thanks for you all, who contrib
 the best help system for PHP on Windows. You can get more information about the ongoing
 project, including the detailed results of the survey at 
 <?php print_link("http://weblabor.hu/php/newchm.php", "the project's own page"); ?>.
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -709,7 +709,7 @@ to be more filled out. The manual is now rebuilt every night and
 of it in different formats are also available. If you have been working with
 PHP-GTK and would like to contribute to the documentation effort, please
 let us know. 
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -725,7 +725,7 @@ capacity for hosting the PHP project's efforts. Currently, the machine they
 have provided is serving downloads for www.php.net and snaps.php.net. We will
 continue to re-balance our resource needs across all of the machines provided
 by our supporters.
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -738,7 +738,7 @@ The worldwide PHP community is horrified by recent events and would like to
 offer its deepest sympathies to the friends and families of those who lost
 their lives. <a href="http://www.redcross.org/donate/donate.html">Support the
 Red Cross.</a>
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -750,7 +750,7 @@ Red Cross.</a>
 There is no need now to come to the main php.net server, if you would like to read the manual notes,
 as they are mirrored worldwide, and you can read them on all our mirror sites. You can get better response
 times by visiting the closest mirror. See the bottom of our pages.
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -772,7 +772,7 @@ under 4.0.5 and later.
 A talk on PHP-GTK was presented by Andrei Zmievski and Frank Kromann at the 2001 O'Reilly Open Source Conference
 in San Diego. The slides from the talk can be <a href="http://conf.php.net/sd-gtk">viewed online</a>.
 For more information, visit <?php print_link("http://gtk.php.net/")?>.
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>
@@ -785,7 +785,7 @@ For more information, visit <?php print_link("http://gtk.php.net/")?>.
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good. This is thanks to a brand new server donated
 by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks!
-<br clear="all">
+<br clear="all" />
 </p>
 
 <?php echo hdelim(); ?>

@@ -6,8 +6,8 @@ commonHeader("PHP Usage Stats");
 <h1>Usage Stats for May 2003</h1>
 
 <p>
-PHP: 12,487,030 Domains, 1,321,203 IP Addresses<br>
-Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
+PHP: 12,487,030 Domains, 1,321,203 IP Addresses<br />
+Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br />
 </p>
 
 <p>
@@ -21,7 +21,5 @@ Spoiler: PHP is the most popular. There is also a
 <a href="http://www.tiobe.com/tpci.htm">Programming Community Index</a>
 provided by TIOBE.
 </p>
-
-<?php include_once "langchooser.inc"; echo "<!-- $LANG -->"; ?>
 
 <?php commonFooter(); ?>
