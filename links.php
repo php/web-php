@@ -140,6 +140,11 @@ site_header("Links");
  </li>
 
  <li>
+  <a href="http://www.dotgeek.org/">Dotgeek</a><br />
+  A PHP and PostgreSQL community site with tutorials, articles, programming marathon and news.
+ </li>
+
+ <li>
   <a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br />
   Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl
  </li>
