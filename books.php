@@ -31,6 +31,29 @@ $books = array (
 
   "PHP" => array (
 
+
+array(
+    /* title[s]     */ "PHP - Der erfolgreiche Einstieg",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827262992/wwwphpnet07",
+    /* author[s]    */ array("Christine Peyton", "Andre Möller"),
+    /* auth link[s] */ "",
+    /* image        */ "einstieg.jpg",
+    /* information  */ "Markt & Technik, 2002, ISBN 3-8272-6299-2, 384 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+array(
+    /* title[s]     */ "Das LAMP Buch. Webserver mit Linux, Apache, MySQL und PHP",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3935922094/wwwphpnet07",
+    /* author[s]    */ "Heiko Goller",
+    /* auth link[s] */ "",
+    /* image        */ "lamp.jpg",
+    /* information  */ "SuSE Press, 2002, ISBN 3-9359-2209-4, 478 pages",
+    /* inform. link */ "http://www.susepress.de/de/katalog/3_935922_09_4/index.html",
+    /* language     */ "de"
+  ),
+
 array(
     /* title[s]     */ "PHP de Luxe - fortgeschrittene PHP-Programmierung",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826607996/wwwphpnet07",
@@ -57,10 +80,10 @@ array(
     /* title[s]     */ "Praktikum PHP",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3831137412/wwwphpnet07",
     /* author[s]    */ "Dennis Möller",
-    /* auth link[s] */ "",
+    /* auth link[s] */ "http://www.praktikum-php.de/autor.php",
     /* image        */ "praktikum.gif",
     /* information  */ "BoD, April 2002, ISBN 3-8311-3741-2, 296 pages",
-    /* inform. link */ "",
+    /* inform. link */ "http://www.praktikum-php.de/",
     /* language     */ "de"
   ),
 
