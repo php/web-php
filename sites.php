@@ -92,6 +92,20 @@ site_header("A Tourist's Guide");
  library.
 </p>
 
+<h2>
+ <a href="http://pecl.php.net/">pecl.php.net</a>:
+ The PHP Extension Community Library
+</h2>
+
+<p>
+ PECL is a repository for PHP Extensions, providing a directory of all known 
+ extensions and hosting facilities for downloading and development of PHP 
+ extensions. <br />
+
+ The packaging and distribution system used by PECL is shared with 
+ its sister, PEAR.
+</p>
+
 <h2><a href="http://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
 
 <p>
