@@ -156,35 +156,46 @@ commonHeader("Hypertext Preprocessor");
 
 <p>
  <span class="newsdate">[06-Jun-2004]</span>
-<a href="http://www.zend.com/php5/contest/">Zend's PHP 5 Coding Contest</a> is underway and accepting submissions.  This is every developer's chance to flaunt their PHP 5 skills and let their application shine!
+ <a href="http://www.zend.com/php5/contest/">Zend's
+ PHP 5 Coding Contest</a> is underway and accepting submissions. 
+ This is every developer's chance to flaunt their PHP 5 skills
+ and let their application shine!
 </p>
 
 <p>
-Applications will be rated both by your peers and by a panel of judges assembled from among the most known and well-respected names in the PHP community. 
+ Applications will be rated both by your peers and by a panel of
+ judges assembled from among the most known and well-respected
+ names in the PHP community. 
 </p>
 
 <p>
-Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a> are available!
+ Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a>
+ are available!
 </p>
+
+<hr />
 
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
 <h1>PHP 4.3.7 released!</h1>
 <p>
- <span class="newsdate">[02-Jun-2004]</span>
- PHP Development Team is proud to announce the release of PHP <a href="/downloads.php">PHP 4.3.7</a>.
- This is a maintenance release that in addition to several non-critical bug fixes, addresses an input
- validation vulnerability in escapeshellcmd() and escapeshellarg() functions on the Windows platform.
- Users of PHP on Windows are encouraged to upgrade to this release as soon as possible.
+ <span class="newsdate">[03-Jun-2004]</span>
+ PHP Development Team is proud to announce the release of PHP
+ <a href="/downloads.php">PHP 4.3.7</a>. This is a maintenance release
+ that in addition to several non-critical bug fixes, addresses an input
+ validation vulnerability in <code>escapeshellcmd()</code> and
+ <code>escapeshellarg()</code> functions on the Windows platform.
+ Users of PHP on Windows are encouraged to upgrade to this release
+ as soon as possible.
 </p>
 
 <p>
- All in all this release fixes over 30 bugs that have been discovered and resolved since the 4.3.6 
- release. For a full list of changes in PHP 4.3.7, see the <a href="/ChangeLog-4.php#4.3.7">ChangeLog</a>.
+ All in all this release fixes over 30 bugs that have been discovered
+ and resolved since the 4.3.6 release. For a full list of changes in
+ PHP 4.3.7, see the <a href="/ChangeLog-4.php#4.3.7">ChangeLog</a>.
 </p>
 
 <hr />
-
 
 <?php news_image("http://www.afup.org/article.php3?id_article=242", "afup2004.jpg", "AFUP"); ?>
 <h1>Call to speaker for Paris Forum 2004</h1>
@@ -261,7 +272,8 @@ Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a> are available!
   with the wrong prototype will only result in an E_STRICT warning.
  </li>
  <li>
-  Features as described in the Release Candidate 1 <a href="/index.php#5.0.0RC1">release announcement</a>
+  Features as described in the Release Candidate 1
+  <a href="/index.php#5.0.0RC1">release announcement</a>
  </li>
  <li>And lots more...</li>
 </ul>
@@ -346,9 +358,11 @@ Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a> are available!
 <h1>Spanish PHP Mailing List Now at PHP.net</h1>
 <p>
  <span class="newsdate">[29-Feb-2004]</span>
- The Spanish PHP mailing list was relocated to our list server. If you would like to subscribe
- to the list, you can do it via our <a href="mailing-lists.php">mailing lists page</a>. To read
- the archives, please see <a href="http://news.php.net/">our news server</a>.
+ The Spanish PHP mailing list was relocated to our list server.
+ If you would like to subscribe to the list, you can do it via our
+ <a href="mailing-lists.php">mailing lists page</a>. To read
+ the archives, please see <a href="http://news.php.net/">our
+ news server</a>.
 </p>
 
 <hr />
