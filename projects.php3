@@ -53,8 +53,21 @@ This page, however, is a listing of cool things based on PHP, available for down
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <? makeEntry("Keystone","www.stonekeep.com/keystone.php3","Dave Belfer-Shevett","shevett@pobox.com"); ?>
-Keystone is the next generation of PTS, the project tracking system developed by Dave Belfer-Shevett. It is
-a complete rewrite of the system, with a new user interface built from the ground up. 
+Keystone is a web-based application designed to help a workgroup keep
+track of issues and tasks via a shared central resource. The system was
+designed specifically with the IT department in mind, where quick access
+to shared data and history is a requirement. This centralized model works
+to help organize the department, as well as giving the group the
+information it needs to best serve its customers.
+
+Keystone can be used for:
+<ul>
+<li>Bug tracking on software projects
+<li>Problem ticketing for helpdesk operations
+<li>IT department trouble ticketing
+<li>Any environment where quick access to historical data on workgroup
+activity is a requirement.
+</ul>
 <? endEntry();?>
 
 <? makeEntry("Phorum","www.phorum.org/","Brian Moon","brianlmoon@iname.com"); ?>
