@@ -41,6 +41,7 @@ require 'cgi-style.pl';
 $cvstreedefault = 'php3';
 $cvstree = $cvstreedefault;
 $cvsroot = $CVSROOT{"$cvstree"} || "/repository";
+$cvsrepository = "/repository";
 
 
 $intro = "
@@ -291,7 +292,7 @@ if (-d $fullname) {
 	print "</BODY></HTML>\n";
 } elsif (-f $fullname . ',v') {
       if ($input{'rev'} =~ /^([\d\.]+|HEAD)$/) {
-		&checkout($where, $input{'rev'});
+		&checkout($fullname, $input{'rev'});
 		exit;
 	}
 	if ($input{'r1'} && $input{'r2'}) {
@@ -429,9 +430,10 @@ sub safeglob {
 }
 
 sub checkout {
-	local($where, $rev) = @_;
+	local($filename, $rev) = @_;
+	$fullname =~ s|$cvsrepository||;
 
-	open(RCS, "cvs -q -d$cvsroot co -p -r $rev '$where' 2>&1 |") ||
+	open(RCS, "cvs -q -d$cvsrepository co -p -r $rev '$filename' 2>&1 |") ||
 	    &fail("500 Internal Error", "Couldn't co: $!");
 	$| = 1;
 	print "Content-type: text/plain\n\n";
