@@ -198,6 +198,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 	}
 	function row_coloring($row) {
+		if ($row["bug_type"]=="Feature/Change Request") {
+			return "#aaaaaa";
+		}
 		switch($row["Status"]) {
 			case "Open":
 				return "#ffbbaa";
