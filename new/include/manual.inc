@@ -22,7 +22,7 @@ function makeBorderTOC($this)
     echo "<TD>";
     spc(10, 10);
     echo "</TD>\n";
-    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
+    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\">";
     echo "<A HREF=\"$cat_url\" onMouseover=\"hide();\" CLASS=white>";
     echo "<B>$UP[1]</B></A></TD></TR>\n";
     for ($i = 0; $i < count($TOC); $i++) {
@@ -36,6 +36,9 @@ function makeBorderTOC($this)
 	} else {
 	    $type = "p";
 	    $out = 0;
+	}
+	if ($UP[0] == 'funcref.php3') {
+	    $title = eregi_replace(" functions\$", "", $title);
 	}
 	echo "<TR VALIGN=top><TD>";
 	spc(10,10);
