@@ -320,7 +320,7 @@ by Klaus Schmidt<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3-8272-5883-9/wwwphpnet07"
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258839/wwwphpnet07"
 ><IMG SRC="/jpgs/matt_zandstra.jpg" BORDER=0 ALIGN="left" width="111" height="157"
 ></A><BR>
 </TD>
@@ -345,7 +345,7 @@ by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A 
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.AnayaMultimedia.es/"
-><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="187" 
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.AnayaMultimedia.es/"
@@ -358,7 +358,7 @@ by Esteban Trigos<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.fr/exec/obidos/ASIN/2744007099/wwwphpnet0f"
-><IMG SRC="/gifs/herellier.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/herellier.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="163"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.fr/exec/obidos/ASIN/2744007099/wwwphpnet0f"
@@ -372,7 +372,7 @@ by Jean-Marc Herellier and Philippe Merigod<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.fr/exec/obidos/ASIN/2744009237/wwwphpnet0f"
-><IMG SRC="/gifs/atkinson_fr.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/atkinson_fr.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="160"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.fr/exec/obidos/ASIN/2744009237/wwwphpnet0f"
@@ -386,7 +386,7 @@ by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
-><IMG SRC="/gifs/lacroix.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/lacroix.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="150"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
@@ -398,7 +398,7 @@ by Laurent Lacroix, Christophe Lauer, Nicolas Leprince, Christophe Boggero<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.kosek.cz/php/index.html"
-><IMG SRC="/jpgs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/czech-book.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="154"></A><BR>
 </TD>
 <TD>
 PHP tvorba interaktivnich internetovych aplikaci<BR>
@@ -412,7 +412,7 @@ by Jiri Kosek<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D381%2D0239%2D4"
-><IMG SRC="/jpgs/korean-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/korean-book.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="152"></A><BR>
 </TD>
 <TD>
 PHP Web-DB Programming Guide<BR>
@@ -425,7 +425,7 @@ by Jung Jinho<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.wowbook.com/book/info/book_detail.asp?isbn=ISBN89-87939-26-X"
-><IMG SRC="/gifs/korean_book.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/korean_book.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="155"></A><BR>
 </TD>
 <TD>
 PHP Web Programming with ORACLE Database<BR>
@@ -438,7 +438,7 @@ by Kim Sung-Sik<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://ychat.pe.kr/"
-><IMG SRC="/jpgs/cgiphp.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/cgiphp.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="142"></A><BR>
 </TD>
 <TD>
 CGI & PHP<BR>
@@ -453,7 +453,7 @@ by Youn Sukbum<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://php.wilson.gs/bible"
-><IMG SRC="/jpgs/wilson.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/wilson.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="134"></A><BR>
 </TD>
 <TD>
 PHP Bible<BR>
@@ -468,7 +468,7 @@ by Wilson Peng<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20023"
-><IMG SRC="/gifs/db20023.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/db20023.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="152"></A><BR>
 </TD>
 <TD>
 Using PHP and MySQL (with FreeBSD and Apache)<BR>
@@ -481,7 +481,7 @@ by C.C.J.<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20029"
-><IMG SRC="/gifs/db20029.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/db20029.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="148"></A><BR>
 </TD>
 <TD>
 Examples of PHP and MySQL<BR>
@@ -494,7 +494,7 @@ by C.C.J.<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument"
-><IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="141"></A><BR>
 </TD>
 <TD>
 <A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument">PHP tettei kouryaku</A><BR>
@@ -504,7 +504,7 @@ by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7El
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216"
-><IMG SRC="/jpgs/fischer.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/fischer.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="209"></A><BR>
 </TD>
 <TD>
 <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">PHP Guia de Consulta R&aacute;pida</A><BR>
@@ -520,7 +520,7 @@ by Herbert G. Fischer<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07"
-><IMG SRC="/jpgs/dehnhardt.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/dehnhardt.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="162"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07"
 >Scriptsprachen f&uuml;r dynamische Webauftritte: JavaScript, VBScript, ASP, Perl, PHP, XML</A><BR>
@@ -533,7 +533,7 @@ in German: <A HREF="http://www.wsite.de/">more info</A>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201703319/wwwphpnet"
-><IMG SRC="/jpgs/postgresql.jpg" BORDER=0 ALIGN="left" width="111" height="140"></A><BR>
+><IMG SRC="/jpgs/postgresql.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201703319/wwwphpnet"
 >PostgreSQL: Introduction and Concepts</A><BR>
@@ -545,7 +545,7 @@ by Bruce Momjian<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet"
-><IMG SRC="/gifs/mysql-book.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/mysql-book.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="147"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet"
 >MySQL and mSQL (Nutshell Series)</A><BR>
@@ -558,7 +558,7 @@ Russian translation: <A HREF="http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/wwwphpnet"
-><IMG SRC="/jpgs/dubois.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/dubois.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/wwwphpnet"
 >MySQL</A><BR>
@@ -574,7 +574,7 @@ French translation: <A HREF="http://www.campuspress.fr/store/book_info.asp?id=88
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07"
-><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="160"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07"
 >MySQL</A><BR>
@@ -591,7 +591,7 @@ Translation by Dorothea Reder and Judith Muhr<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/wwwphpnet"
-><IMG SRC="/gifs/webmaster-book.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/webmaster-book.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/wwwphpnet"
 >Webmaster in a Nutshell (Nutshell Series)</A><BR>
@@ -606,7 +606,7 @@ O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/wwwphpnet"
-><IMG SRC="/gifs/cvsbook.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/cvsbook.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/wwwphpnet"
 >Open Source Development with CVS</A><BR>
@@ -621,7 +621,7 @@ Coriolis, 1999, ISBN 1-57610-490-7, 316 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/wwwphpnet"
-><IMG SRC="/gifs/cvspr.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/cvspr.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="183"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/wwwphpnet"
 >CVS Pocket Reference</A><BR>
@@ -635,7 +635,7 @@ O'Reilly, August 2000, ISBN 0-5960-0003-0, 79 pages<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/wwwphpnet"
-><IMG SRC="/gifs/regex.s.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/regex.s.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="145"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565922573/wwwphpnet"
 >Mastering Regular Expressions</A><BR>
