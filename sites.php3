@@ -181,6 +181,7 @@ right away.</blockquote>
 	site("The Longaberger Company","www.longaberger.com");
 	site("BART'S Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
+	site("Delia*s Inc.","www.delias.com");
 	siteEnd();
 
 /* Telecommunications */
@@ -202,6 +203,7 @@ right away.</blockquote>
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
+	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	siteEnd();
 
 /* Misc. */
