@@ -203,12 +203,13 @@ PHP developers can post their resumes, and employers can post their job notices.
 <h4>Other Job Sites with PHP jobs:</h4>
 
 <ul>
- <li><a href="http://www.dice.com/">dice.com</a>
- <li><a href="http://www.gnujobs.com/">gnujobs.com</a>
- <li><a href="http://www.hotjobs.com/">hotjobs.com</a>
- <li><a href="http://www.jobs.com/">Jobs.com</a>
- <li><a href="http://www.monster.com/">Monster.com</a>
- <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a>
+ <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
+ <li><a href="http://www.dice.com/">dice.com</a></li>
+ <li><a href="http://www.gnujobs.com/">gnujobs.com</a></li>
+ <li><a href="http://www.hotjobs.com/">hotjobs.com</a></li>
+ <li><a href="http://www.jobs.com/">Jobs.com</a></li>
+ <li><a href="http://www.monster.com/">Monster.com</a></li>
+ <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
 </ul>
 
 <p>For a more exhaustive list of job
