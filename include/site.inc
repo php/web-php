@@ -1,71 +1,81 @@
 <?php
-/* Structure of MIRRORS array:
-  0	"country code",
-  1	"Mirror Name",
-  2	flag for whether local stats work (1) or not (0) on this mirror
-  3	"url for hosting company",
-  4	flag for whether site is a full mirror (1) or just a download site (0), or just a placeholder (2),
-  5	flag for whether search engine works (1) or not (0) on the site
-  6 default language code
+/* Structure of MIRRORS array (in mirrors.inc):
+  0  Country code,
+  1  Mirror provider name,
+  2  Flag for whether local stats work (1) or not (0) on this mirror
+  3  URL for hosting company,
+  4  Flag for whether site is a standard mirror (1) a special one (2) or just a download site (0)
+  5  Flag for whether search engine works (1) or not (0) on the site
+  6  Default language code
 */
 
 require_once 'mirrors.inc';
 require_once 'countries.inc';
 
 function is_primary_site() {
-  global $MYSITE;
-  return $MYSITE == "http://www.php.net/";
+    global $MYSITE;
+    return $MYSITE == "http://www.php.net/";
 }
 
 function is_backup_primary() {
-  global $MYSITE;
-  return $MYSITE == "http://download.php.net/";
+    global $MYSITE;
+    return $MYSITE == "http://download.php.net/";
 }
 
 function default_language() {
-  global $MIRRORS,$MYSITE;
-  return $MIRRORS[$MYSITE][6];
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][6];
 }
 
 function have_search() {
-  global $MIRRORS,$MYSITE;
-  return $MIRRORS[$MYSITE][5];
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][5];
 }
 
 function have_stats() {
-  global $MIRRORS,$MYSITE;
-  return $MIRRORS[$MYSITE][2];
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][2];
 }
 
 function mirror_provider() {
-  global $MIRRORS,$MYSITE;
-  return $MIRRORS[$MYSITE][1];
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][1];
 }
 
 function mirror_provider_url() {
-  global $MIRRORS,$MYSITE;
-  return $MIRRORS[$MYSITE][3];
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][3];
+}
+
+define("MIRROR_DOWNLOAD", 0);
+define("MIRROR_STANDARD", 1);
+define("MIRROR_SPECIAL", 2);
+
+function mirror_type() {
+    global $MIRRORS,$MYSITE;
+    return $MIRRORS[$MYSITE][4];
 }
 
 function show_mirror_options ($current) {
-  global $MIRRORS, $COUNTRIES, $REQUEST_URI;
-  foreach ($MIRRORS as $url=>$mirror) {
-    if ($mirror[4] == 1) { /* only list full mirrors here */
-      // If this is the current one, or the REQUEST_URI starts with the URL 
-	  // (the server provides a different name as it's name then what is
-	  // used to access it} => selected it by default
-	  if ($url == $current || preg_match("!^$url!", $REQUEST_URI)) {
-        echo '<option value="' . $url . '" selected>' . $COUNTRIES[$mirror[0]] . 
-          ' (' . $mirror[1] . ") *</option>\n";
-      } else {
-        echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
-          ' (' . $mirror[1] . ")</option>\n";
-      }
+    global $MIRRORS, $COUNTRIES, $REQUEST_URI;
+    foreach ($MIRRORS as $url => $mirror) {
+        if ($mirror[4] == 1) { /* only list full mirrors here */
+            // If this is the current one, or the REQUEST_URI starts with the URL
+            // (the server provides a different name as it's name then what is
+            // used to access it} => selected it by default
+    	       if ($url == $current || preg_match("!^$url!", $REQUEST_URI)) {
+                echo '<option value="' . $url . '" selected>' . $COUNTRIES[$mirror[0]] . 
+                  ' (' . $mirror[1] . ") *</option>\n";
+            } else {
+                echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
+                  ' (' . $mirror[1] . ")</option>\n";
+            }
+        }
     }
-  }
 }
 
-// Find the closest mirror sites, and return with the addresses
+// Find the closest mirror sites (based on mirror country info
+// and user TLD), and return with the addresses
 function find_closest_mirrors ()
 {
     global $REMOTE_HOST, $REMOTE_ADDR, $HTTP_X_FORWARDED_FOR, $MIRRORS;
