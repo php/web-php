@@ -150,8 +150,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("/downloads.php", "php4_logo.gif", "PHP 4"); ?>
-
 <h1> PHP 4.3.5 released!</h1>
 <p>
  <span class="newsdate">[26-Mar-2004]</span>
