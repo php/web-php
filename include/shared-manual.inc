@@ -229,9 +229,11 @@ function manualUserNotes($title, $id) {
         make_image('notes-add.gif','add a note')
     );      
     echo "&nbsp;";
+    /* This information has been included on add-note.php
     print_link('/manual/about-notes.php',
         make_image('notes-about.gif', 'about notes')
     );
+    */
     echo "</td>\n";
     echo "</tr>\n";
 
@@ -251,9 +253,11 @@ function manualUserNotes($title, $id) {
             make_image('notes-add.gif','add a note')
         );
         echo "&nbsp;";
+        /* This information has been included on add-note.php
         print_link('/manual/about-notes.php',
             make_image('notes-about.gif', 'about notes')
         );
+	*/
         echo "</td>\n";
         echo "</tr>\n";
     }

@@ -118,10 +118,10 @@ if (isset($note) && isset($user) && isset($lang) &&
 // Any needed variable was missing => display instructions
 else { ?>
 <p>
- You can contribute <a href="about-notes.php">your notes</a> to the PHP
- manual from the comfort of your browser! Just add your comment in the
- big field below, and, optionally, your email address or name in the
- little one.
+ You can contribute your notes to the PHP  manual from the comfort of your
+ browser! Just add your comment in the  big field below, and, optionally,
+ your email address or name in the little one.  After submission, your note
+ will appear under the documentation as a part of the manual.
 </p>
 
 <p>
@@ -188,6 +188,12 @@ else { ?>
  don't bother. Your example is almost certainly wrong for some small subset of
  cases. See <a href="http://examples.oreilly.com/regex/">this information from
  O'Reilly Mastering Regular Expressions book</a> for the gory details.)
+</p>
+<p>
+  Please note that periodically, the developers may go through the notes and
+  incorporate the information in them into the documentation. This means
+  that any note submitted here becomes the property of the PHP Documentation
+  Group.
 </p>
 <?php
 }
