@@ -72,6 +72,8 @@ Introductory tutorial<BR>
 <BR> Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
 <LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com PHP Scripts and Programs</A><BR>
 <LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">A comprehensive list of editors you can use to edit PHP programs.</A><BR>
+<LI><A HREF="http://phpsearch.de/">PHPSearch</A><br>
+Searchengine for PHP related things.<BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
