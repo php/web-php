@@ -1,5 +1,5 @@
 <?
-	include "auth.inc";
+	include "include/auth.inc";
 ?>
 <html>
 <head>

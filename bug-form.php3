@@ -3,7 +3,7 @@
 
 include "configuration.inc";
 $title="PHP3 Bug Report Form";
-include "header";
+include "include/header.inc";
 
 if($email) {
 	mysql_pconnect($dbhost,$dbuser,$dbpwd);

@@ -1,6 +1,6 @@
 <html><head><title>PHP3 Glimpse Search</title>
 <?	$title="Glimpse Search";
-	include "header";
+	include "include/header.inc";
 	include "configuration.inc";
 	/* Set this to the directory containing your .glimpse* files */
 	if (isset($glimpse_dir)) {

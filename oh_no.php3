@@ -2,7 +2,7 @@
 <?
 	if(!isset($sendit)) {	
 		$title="Yes, I lost my password ;(";
-		include "header";
+		include "include/header.inc";
 		?>
 		<blockquote>
 		Simply fill in your email address here:
@@ -36,5 +36,5 @@
 			<?
 		}
 	}	
-	include "footer";
+	include "include/footer.inc";
 ?>

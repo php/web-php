@@ -2,7 +2,7 @@
   Header("Last-Modified: $mod GMT"); ?>
 <html><head><title>PHP3 Credits</title></head><body>
 <?$title="PHP3 Credits";
-  include "header";
+  include "include/header.inc";
   ReadFile("CREDITS");
 ?>
 </body></html>

@@ -16,14 +16,14 @@
 			Header("HTTP/1.0 401 Unauthorized");
 			echo "<html><head>";
 			$title="How to get a PHP3 Site login";
-			include "header";?>
+			include "include/header.inc";?>
 			<blockquote>
 			If you have forgotten your password, you can have it mailed directly
 			to you <a href="oh_no.php3">HERE</a>.<P>If you do not have an account,
 			you may <a href="register.php3">Register Here</a>.
 			</blockquote>
 			<?
-			include "footer";
+			include "include/footer.inc";
 			exit;
 		} else {
    	     	mysql_pconnect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
@@ -36,14 +36,14 @@
 				Header("HTTP/1.0 401 Unauthorized");
 				echo "<html><head>";
 				$title="How to get a PHP3 Site login";
-				include "header"; ?>
+				include "include/header.inc"; ?>
 				<blockquote>
 				If you have forgotten your password, you can have it mailed directly
 				to you <a href="oh_no.php3">HERE</a>.<P>If you do not have an account,
 				you may <a href="register.php3">Register Here</a>.
 				</blockquote>
 				<?
-				include "footer";
+				include "include/footer.inc";
 				exit;
 			}
 		}

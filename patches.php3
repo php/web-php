@@ -1,6 +1,6 @@
 <html><head><title>PHP3 Patches</title>
 <? $title="Patches";
-   include "header"; ?>
+   include "include/header.inc"; ?>
 
 
 <p><strong>In order to apply any of these patches, you must:</strong>
@@ -34,4 +34,4 @@
 </table>
 
 <p>NOTE: See the downloads page for the latest patched win32 binary!</p>
-<?include "footer"; ?>
+<?include "include/footer.inc"; ?>

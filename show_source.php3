@@ -4,7 +4,7 @@
 <title>Source of <? echo $page_url ?></title>
 <?
   $title="Source of $page_url";
-  include "header";
+  include "include/header.inc";
 
 /* remove path prefix if exists */
 if ($tmp=strrchr($page_url,"/")) {

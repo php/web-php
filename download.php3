@@ -1,6 +1,6 @@
 <html><head><title>PHP3 Download</title>
 <? $title="Download";
-   include "header"; ?>
+   include "include/header.inc"; ?>
 
 
 
@@ -48,4 +48,4 @@
 	</tr>
 </table>
 
-<?include "footer"; ?>
+<?include "include/footer.inc"; ?>

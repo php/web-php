@@ -1,5 +1,5 @@
 <?
-include "auth.inc";
+include "include/auth.inc";
 
 mysql_pconnect($dbhost,$dbuser,$dbpwd);
 mysql_select_db("php3");

@@ -31,7 +31,7 @@ if (!$reg) {
 ?>
 <html><head><title>PHP3 Login</title>
 <? $title="PHP3 Registration";
-   include "header"; 
+   include "include/header.inc"; 
 ?>
 <script language="javascript">
 <!--
@@ -116,4 +116,4 @@ You may alter your current profile here.
 <input type="submit" value="Continue">
 </center>
 
-<?include "footer"; ?>
+<?include "include/footer.inc"; ?>

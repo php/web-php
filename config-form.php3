@@ -1,9 +1,9 @@
 <?
-	include "auth.inc";
+	include "include/auth.inc";
 ?>
 <html><head><title>PHP3 Configuration</title>
 <? $title="Configuration";
-   include "header";
+   include "include/header.inc";
 
 /* try to see if we have a saved configuration here... */
 
