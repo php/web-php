@@ -278,13 +278,13 @@ README.WIN32 file.
   <DD>
     You can make the configure script looks for header files and libraries
     in non-standard locations by specifying additional flags to pass to
-    the C compiler, such as:
+    the C preprocessor and linker, such as:
     <PRE>
-            CFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
+            CPPFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
     </PRE>
     If you're using a csh-variant for your login shell (why?), it would be:
     <PRE>
-            env CFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
+            env CPPFLAGS=-I/path/to/include LDFLAGS=-L/path/to/library ./configure
     </PRE>
   <P>
   </DD>
