@@ -96,7 +96,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   <li><?php download_link('php-4.3.0-Win32.zip', 'PHP 4.3.0 zip package'); ?> - 27 December 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)<br />
-  <span class="md5sum">md5: 62c2158250d1681b983149b2074df482</span>
+  <span class="md5sum">md5: 64f6a4a5b7a27c98ef85bfa1f2dd604b</span>
   </li>
   <li><?php download_link('php-4.3.0-installer.exe', 'PHP 4.3.0 installer'); ?> - 27 December 2002<br />
    (CGI only, MySQL support built-in, packaged as Windows installer to install
