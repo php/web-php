@@ -150,9 +150,11 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php", "php4_logo.gif", "PHP 5"); ?>
+
 <h1> PHP 4.3.6RC1 released!</h1>
 <p>
- <span class="newsdate">[01-Apr-2004]</span>
+ <span class="newsdate">[02-Apr-2004]</span>
 In the spirit of release early, release often here is the first and hopefully the final
 <a href="http://qa.php.net/">release candidate of PHP 4.3.6</a>. This releases addresses
 2 major bugs introduced in the 4.3.5 release. One of these bugs causes problems when 
