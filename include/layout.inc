@@ -185,6 +185,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">
+<link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
