@@ -96,6 +96,47 @@ If you use another browser you can
    }?>
 </table>
 
+<h1>Manuel PHP</h1>
+
+<p>The French PHP manual is also available on an external site, in differents formats.
+Documentation is the official flavor, while formating and localization has 
+been worked some more (function and examples indexes, short version, search engine..). 
+Besides, those are compressed for faster download.
+</p>
+<p>La documentation Fran&ccedil;aise est disponible sur un site secondaire,
+dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
+francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute;es.
+</p>
+
+<table border="0" cellpadding="2" cellspacing="1" width="100%">
+ <tr bgcolor="#cccccc">
+  <td></td>
+  <th valign="bottom">En ligne</th>
+<th valign="bottom">En ligne</th>
+<th valign="bottom">HTML</th>
+<th valign="bottom">Texte</th>
+<th valign="bottom">HTML</th>
+<th valign="bottom">HTML</th>
+<th valign="bottom">PDF</th>
+<th valign="bottom">PalmPilot DOC</th>
+<th valign="bottom">PalmPilot iSilo</th>
+<th valign="bottom">Windows HTML Help</th>
+ </tr>
+<tr>
+<td bgcolor="#dddddd"><b>Fran&ccedil;ais</b></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">html.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">txt.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">tar.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">zip</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">pdf</a></td>
+<td align="center" bgcolor="#eeeeee">&nbsp;</td>
+<td align="center" bgcolor="#eeeeee">&nbsp;</td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">chm</a></td>
+</tr>
+</table>
+
 <? echo hdelim(); ?>
 
 <H1>PHP Annotated Manuals</H1>
