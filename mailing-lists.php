@@ -337,6 +337,7 @@ function output_lists_table($mailing_lists)
  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
  <li><a href="http://weblabor.hu/levlistak">Hungarian Mailing List</a></li>
  <li><a href="http://groups.or.id/mailman/listinfo/php-id">Indonesian Mailing List</a></li>
+ <li><a href="http://www.domeus.it/circles/php">Italian Mailing List (at PHPItalia)</a></li>
  <li><a href="http://www.ziobudda.net/mailman/listinfo/php-it/">Italian Mailing List</a></li>
  <li><a href="http://cortesi.com/php/">Italian Mailing List (coordinating the translation of the PHP manual)</a></li>
  <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
