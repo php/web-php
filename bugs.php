@@ -125,7 +125,7 @@ function show_menu($state)
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
-	echo "<table bgcolor=#aabbcc cellspacing=0><tr><td><input type=submit value=\"Display\"></td><td><select name=\"status\">\n";
+	echo "<table bgcolor=\"#ccccff\"cellspacing=0><tr><td><input type=submit value=\"Display\"></td><td><select name=\"status\">\n";
 	show_state_options($state, 1);
 	echo "</select></td><td align=right>bugs of type: </td><td>";
 	show_types($bug_type,1,"bug_type");
