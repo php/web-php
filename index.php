@@ -160,7 +160,7 @@ commonHeader("Hypertext Preprocessor");
  September 22, 23 and 24, 2004.
 </p>
 <p>
- Effective now, and until May 24th, the php|works team is soliciting a Call
+ Effective now, and until May 21st, the php|works team is soliciting a Call
  for Papers for speakers who want to present at the conference. The CfP is
  open to the public, and your talk ideas are welcome!
 </p>
