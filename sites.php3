@@ -256,6 +256,7 @@ right away.</blockquote>
 	site("Delia*s Inc.","www.delias.com");
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
+	site("FurniturePoint.com","www.furniturepoint.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
