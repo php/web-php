@@ -145,6 +145,32 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>O'Reilly Open Source Convention 2005</h1>
+
+<p>
+ <span class="newsdate">[27-Jan-2005]</span>
+ Circle August 1-5 on your calendar and join in at the O'Reilly
+ Open Source Convention in beautiful Portland, Oregon. OSCON 2005
+ will be at the Oregon Convention Center, where there will be
+ tutorials, sessions, parties, BOFs, and a huge exhibit
+ hall. The <a href="http://conferences.oreillynet.com/os2005/">Call
+ for Proposals</a> is now open, and registration and hotel
+ information will be available soon. Get the details as soon
+ as they're available by signing up for the <a
+ href="http://www.oreillynet.com/cs/nl/home#conferences">OSCON
+ newsletter</a>.
+</p>
+<p>
+ You're invited to submit a proposal to lead tutorials and sessions.
+ Visit the submissions page for all the details on tracks and proposal
+ guidelines. The committee is particularly interested in talks on PHP
+ 5: migration, new developments, security, case studies, large-scale
+ applications development, and best practices. Proposals are due no
+ later than February 13, 2005.
+</p>
+
+<hr />
+
 <?php news_image("http://phpconf.hu/2005/", "hu_conf.gif", "PHPConf.hu"); ?>
 
 <h1>Third Hungarian PHP Conference</h1>
