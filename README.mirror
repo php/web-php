@@ -28,6 +28,7 @@ Once you create a virtualhost which looks something like:
 
    <VirtualHost xx.php.net>
    ServerName xx.php.net
+   ServerAlias www.xx.php.net
    ServerAdmin yourname@yourdomain.com
    DocumentRoot /www/htdocs/phpweb
    <IfModule mod_php3.c>
