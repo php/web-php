@@ -41,7 +41,7 @@ $man_languages = array('en', 'pt_BR', 'zh_cn', 'cs', 'nl', 'fr', 'de', 'hu', 'it
 $formats = array(
  "bigmanual.html.bz2"      => array("Single HTML",         "html.bz2"),
  "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2"),
- "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
+ //"php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
  "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb"),
  "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb"),
  "manual-LANG.chm"         => array("Windows HTML Help",   "chm")
@@ -66,9 +66,8 @@ use does otherwise.
 
 <p>
 <em>
-Please note that due to some technical problems, the PDF
-version of the manual is not complete, but only the first 45 
-chapters are available. Other formats hold the complete manual.
+Please note that due to some technical problems, we do not
+distribute PDF versions of the manual right now.
 </em>
 </p>
 
