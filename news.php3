@@ -3,7 +3,9 @@ require("shared.inc");
 commonHeader("PHP in the News");
 ?>
 <dl>
-<dt><b>UnixIntegration: <a href="http://www.unixintegration.com/9802/9802f1.htm">Building A Cross-Platform Web Infrastructure, Part I</a></b>
+<dt>
+<b>UnixIntegration:
+<a href="http://www.unixintegration.com/9802/9802f1.htm">Building A Cross-Platform Web Infrastructure, Part I</a></b>
 <dd>Brian Platz and Robert Flannigan take a look at all the options out there and end up choosing PHP over all the
 big guys.
 <p>
