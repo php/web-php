@@ -148,7 +148,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
-  PHP Development Team would like to announce the immediate release of 
+  The PHP Development Team would like to announce the immediate release of 
   <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>. 
   These are maintenance releases that in addition to non-critical bug fixes 
   address several very serious security issues. All Users of PHP are strongly 
@@ -157,12 +157,9 @@ commonHeader("Hypertext Preprocessor");
 
 <p>
  For changes since PHP 4.3.9, please consult the
- <a href="/ChangeLog-4.php#4.3.10">ChangeLog</a>.
-</p>
-
-<p>
+ <a href="/ChangeLog-4.php#4.3.10">PHP 4 ChangeLog</a>.
  For changes since PHP 5.0.3, please consult the
- <a href="/ChangeLog-5.php#5.0.3">ChangeLog</a>.
+ <a href="/ChangeLog-5.php#5.0.3">PHP 5 ChangeLog</a>.
 </p>
 
 <hr />
