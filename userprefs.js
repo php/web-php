@@ -67,12 +67,10 @@ function searchHistory()
         document.forms["topsearch"].pattern.value = pattern;
         
         // Set the last selected search method in the dropdown
-        with (document.forms["topsearch"]) {
-            for (var i = 0; i < show.length; i++) {
-                if (show[i].value == option) {
-                    show[i].selected = true;
-                    break;
-                }
+        for (var i = 0; i < document.forms["topsearch"].show.length; i++) {
+            if (document.forms["topsearch"].show[i].value == option) {
+                document.forms["topsearch"].show[i].selected = true;
+                break;
             }
         }
     }
