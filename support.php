@@ -64,7 +64,7 @@ Please read <a href="http://bugs.php.net/bugs-dos-and-donts.php"
 
 PHP user groups have started popping up.  Christopher
 R. Moewes-Bystrom is running a PHP user group registry at <a
-href="http://www.moewes.com/phpug.php3">http://www.moewes.com/phpug.php3</a>.
+href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
 
 <h3>Mailing Lists</h3>
 <P>
