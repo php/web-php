@@ -209,10 +209,10 @@ as a PHP.net website bug please).
 
 <h1>10th Release of the PHP Manual CHM Edition</h1>
 <p>
-<font class="newsdate">[29-Oct-2002]</font> The 10th sample of the CHM edition
-is available for download from today. The sample probably fixes the copy
-to clipboard issues experienced by some users, and it's also a content update
-with actual manual text, mirrors list and user notes.
+<font class="newsdate">[29-Oct-2002]</font>
+The 10th sample of the CHM edition is available for download from today. The
+sample probably fixes the copy to clipboard issues experienced by some users,
+and it's also a content update with actual manual text, mirrors list and user notes.
 <?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for download"); ?>,
 and please send feedback to <?php print_link("mailto:php-doc-chm@lists.php.net",
 "the edition's dedicated mailing list"); ?>.
@@ -348,11 +348,12 @@ California.</p>
 
 <h1>Printer friendly manual pages with notes</h1>
 <p>
-<font class="newsdate">[03-Aug-2002]</font> Starting from today, the
-manual pages are not only available in their printer friendly versions,
-but also in printer friendly versions with user notes included. Check
-the links at the <a href="/manual">top of the manual pages</a> to go
-to printer friendly manual pages, and change languages.
+<font class="newsdate">[03-Aug-2002]</font>
+Starting from today, the manual pages are not only available in their
+printer friendly versions, but also in printer friendly versions with
+user notes included. Check the links at the <a href="/manual">top of
+the manual pages</a> to go to printer friendly manual pages, and
+change languages.
 </p>
 
 <?php echo hdelim(); ?>
