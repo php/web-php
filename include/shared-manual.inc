@@ -117,9 +117,9 @@ function navigationBar($title) {
 	if ($PREV[0] && $PREV[1]) {
 	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A><BR></TD>\n";
 	}
-	echo "<TD ALIGN=left WIDTH=45%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></FONT></TD>\n";
-	echo "<TD ALIGN=center WIDTH=10%><FONT FACE='$FONTFACE' SIZE=-2>&nbsp;Updated<br>$tstamp<BR></FONT></TD>\n";
-	echo "<TD ALIGN=right WIDTH=45%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></FONT></TD>\n";
+	echo "<TD ALIGN=left WIDTH=44%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></FONT></TD>\n";
+	echo "<TD ALIGN=center WIDTH=12%><FONT FACE='$FONTFACE' SIZE=-2>&nbsp;Updated<br>$tstamp<BR></FONT></TD>\n";
+	echo "<TD ALIGN=right WIDTH=44%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></FONT></TD>\n";
 	if ($NEXT[0] && $NEXT[1]) {
 	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A><BR></TD>\n";
 	}
