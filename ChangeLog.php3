@@ -3,6 +3,32 @@ require("shared.inc");
 commonHeader("PHP 3.0 -> 3.0.14 Changes");
 ?>
 
+<h3>February 25, 2000, Version 3.0.15</h3>
+
+<ul>
+<li>Fixed crash in preg_match_all(). (Andrei)
+<li>Backported safe_mode_protected_env_vars and safe_mode_allowed_env_vars INI
+  directives from PHP 4.0 (Zeev)
+<li>Added Matthew Herman's FTP module patch for compatibility with Microsoft
+  FTP service. (Andrew Skalski)
+<li>Fixed crash in strip_tags() and related functions.
+<li>Fixed passthru() to no longer return any value. (Andrei)
+<li>base64_decode() will decode POST data correct. (Thies)
+  Patch submitted by: Turadg Aleahmad <turadg@wise.berkeley.edu>
+<li>Fixed a bug in the XML module that could cause crashes (Zeev)
+<li>Fixed a long historical bug in the API function call_user_function(),
+  that could cause crashes in functions that made use of it (e.g.,
+  XML module functions) (Zeev)
+<li>Fixed possible buffer-overflow in base64_decode(). (Thies)
+<li>Fixed possible buffer-overflow in setcookie(). (Thies)
+<li>Added ImageWbmp() for outputting WAP's Wireless Bitmaps (markonen)
+<li>Support for LZW-compressed GIFs with gd 1.5, gd/freetype cleanups (markonen)
+<li>Added IMAP modified UTF-7 encode/decode routines (Andrew Skalski)
+<li>Add .ini option to set the default charset for the default text/html mime
+  type that php serves up (Rasmus)
+</ul>
+
+
 <h3>January 11, 2000, Version 3.0.14</h3>
 
 <ul>
@@ -11,6 +37,7 @@ commonHeader("PHP 3.0 -> 3.0.14 Changes");
 <li> Fix safe-mode problem in popen() (Kristian)
 <li> Fix safe-mode problem when resource had multiple consecutive /'s (Rasmus)
 <li> Remove written permission clause from license
+</ul>
 
 <h3>January 1, 2000, Version 3.0.13</h3>
 

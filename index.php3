@@ -9,6 +9,13 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 3.0.15 released</h3>
+February 25, 2000. PHP 3.0.15 fixes a couple of issues and addresses some
+security concerns. If you are using PHP's safe mode feature, you are urged
+to upgrade to the latest release. More information will be posted later.
+PHP 3.0.15 is available in source form and binary form (for Win32). See
+the <a href="ChangeLog.php3">ChangeLog</a> for a complete list of changes.
+
 <h3>PHP Talks at ApacheCon</h3>
 <a href="http://ApacheCon.Com/"><img align="right"
 src="http://ApacheCon.Com/images/ac2k-speaker-logo_110x46.gif"
