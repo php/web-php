@@ -324,6 +324,16 @@ workgroup-like features that give its users the ability to &quot;spy&quot;
 on each other when granted the proper permission.
 <? endEntry();?>
 
+<? makeEntry("Midgard","www.midgard-project.org","The Midgard Project","midgard@greywolves.org"); ?>
+Midgard is a freely-available Web application
+development and publishing platform based on the popular
+PHP scripting language. It is an Open Source development
+project, giving you the freedom to create your solutions
+in an open environment. Midgard is the tool for
+creating, modifying and maintaining dynamic
+database-enabled Web services
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
