@@ -80,7 +80,7 @@ $uri_aliases = array (
 );
 
 # if the user typed an aliased URL, transform it
-if (isset($uri_aliases[strtolower($uri)]])) {
+if (isset($uri_aliases[strtolower($uri)])) {
     $uri = $uri_aliases[strtolower($uri)];
 }
 
