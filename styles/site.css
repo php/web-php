@@ -143,6 +143,10 @@ ul.simple li {
 	padding: 5px;
 	font-size: smaller;
 }
+#leftbar p, #leftbar h3 {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
 
 #layout_2 #content {
 	margin-left: 196px;
