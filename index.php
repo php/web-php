@@ -224,7 +224,7 @@ echo "\n<!--$MYSITE-->\n";
 </p>
 <p>
  List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&r1=1.1247.2.261&amp;r2=1.1247.2.314">NEWS</a>
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&amp;r1=1.1247.2.261&amp;r2=1.1247.2.314">NEWS</a>
  file.
 </p>
 
