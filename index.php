@@ -84,7 +84,7 @@ PHP-GTK Documentation Update
 
 <p>
 <font class="newsDate">[18-Oct-2001]</font>
-<?php print_link("http://gtk.php.net/", "PHP-GTK"); ?>
+<?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> 
 <?php print_link("http://gtk.php.net/docs.php", "documentation"); ?> is starting
 to be more filled out. The manual is now rebuilt every night and
 <?php print_link("http://gtk.php.net/download-docs.php", "downloadable versions"); ?>
