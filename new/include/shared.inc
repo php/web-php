@@ -1,7 +1,7 @@
 <?
 require("site.inc");
 
-$FONTFACE="TAHOMA,ARIAL";
+$FONTFACE="Tahoma,Arial,Helvetica,sans-serif";
 
 function spc($width, $height) {
 	echo "<IMG SRC='/new/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
