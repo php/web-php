@@ -50,6 +50,8 @@ A collection of PHP scripts.<BR>
 <LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
+<LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
+Introductory tutorial<BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
