@@ -240,7 +240,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     $enclosed = 1;
 ?>
 
-<table cellpadding="0" cellspacing="0">
+<table border="0" cellpadding="0" cellspacing="0">
  <tr valign="top">
 <?php if (isset($SIDEBAR_DATA)):?>
   <td width="200" bgcolor="#f0f0f0">
@@ -248,7 +248,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?></td>
+  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="620">
@@ -268,13 +268,14 @@ function commonFooter() {
 		spacer(620);
 		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
-<td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?></td>
-<td width=175 bgcolor="#f0f0f0">
+<td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
+<td width="175" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
  </table>
+<?php spacer(175);?>
 </td>
-<?		}
+<?php		}
 		echo "</tr></table>\n";
 	}
 ?>
