@@ -1,3 +1,0 @@
-<?
-phpinfo(INFO_ALL&~INFO_ENVIRONMENT);
-?>
