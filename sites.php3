@@ -624,7 +624,7 @@ right away.</blockquote>
 	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
 	site("Six Offene Systeme GmbH","www.six.de");
-	site("WAM!design","www.wamdesign.com");
+	site("Munk &amp; Phyber Inc.","www.munkandphyber.com");
 	siteEnd();
 
 /* Misc. */
