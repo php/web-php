@@ -60,7 +60,7 @@ function endEntry() {
 With the same features as ASP and JSP, PHP is the fastest growing Apache add-on.
 <? endEntry(); ?>
 
-<? makeEntry( "Trio informale", "by Dirk Reichelt", 
+<? makeEntry( "Trio informale", "by <a href=\"mailto:Dirk_Reichelt@zd.com\">Dirk Reichelt</a>", 
 	"http://www.zdnet.de/internet/artikel/java/199912/phpdatenbank01_00-wc.html", "November 29, 1999");?>
 (In German.) &quot;Redaktionssystem für die Website mit PHP&quot;
 <? endEntry(); ?>
