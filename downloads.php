@@ -146,7 +146,7 @@ site_header("Downloads");
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
   standard with PHP 4 Windows binaries but have since been moved into this 
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: 50f3d62e7bb4526fd1deefdb263f9fa7</span>
+  <span class="md5sum">md5: 3db2706fda3a690efa675581745d3bf7</span>
  </li>
  <li>
   <?php download_link('php-5.0.3-installer.exe', 'PHP 5.0.3 installer'); ?> - 15 Dec 2004<br />
