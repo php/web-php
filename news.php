@@ -61,15 +61,6 @@ let us know.
 
 <?php echo hdelim(); ?>
 
-<h1>PHP News Archive</h1>
-
-<p>
-Find all previous PHP related news and announcements <?php print_link("/news.php", "here"); ?>.
-<br clear ="all">
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>Rackspace providing additional hosting for PHP project</h1>
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
 
