@@ -1,18 +1,13 @@
-Here is how to mirror the PHP3 site.
+Here is how to mirror the PHP3 site:
 
-First, you need to have a cvs client.  See http://www.cyclic.com, or grab one
-from your local GNU mirror.
+First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
 
-   cvs -d:pserver:mirror@cvs.php.net:/repository login
-   Password: mirror
-   cvs -d:pserver:mirror@cvs.php.net:/repository co phpweb
+   rsync -avzC rsync.php.net::phpweb /your/local/path 
 
-Alternatively, you can use rsync (http://rsync.samba.org/) to mirror
-the website. Instructions are at http://rsync.php.net/.
-
-Symbolic link the phpweb directory to the correct place on your server.
+If /your/local/path isn't in your web document tree (why isn't it?), 
+the symlink the phpweb/ directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 files as PHP3 
 parsed files.  If it isn't, add the mime-type to your config.
@@ -22,47 +17,58 @@ appropriately.
 
 Once you create a virtualhost which looks something like:
 
- <VirtualHost xx.php.net>
- ServerAdmin rasmus@lerdorf.on.ca
- DocumentRoot /www/htdocs/phpweb
- ServerName xx.php.net
- ErrorLog logs/error_log
- TransferLog logs/access_log
- DirectoryIndex index.phtml index.php3 manual.php3 index.html index.htm
- php3_include_path .:./include:../include
- </VirtualHost>
+   <VirtualHost xx.php.net>
+   ServerAdmin yourname@yourdomain.com
+   DocumentRoot /www/htdocs/phpweb
+   ServerName xx.php.net
+   ErrorLog logs/error_log
+   TransferLog logs/access_log
+   DirectoryIndex index.phtml index.php3 manual.php3 index.html index.htm
+   php3_include_path .:./include:../include
+   </VirtualHost>
 
 modified to reflect your local paths and country, of course, then your site
 should start working.
 
-Note: we're trying to keep the mirror names in the convention: "xx.php.net",
+Note: The official names for PHP mirrors are in the convention: "xx.php.net",
 where "xx" is replaced by the 2-letter country code of your mirror's location.
 If there already is a "xx.php.net", then you should set up your ServerName to
 be "xx2.php.net" (or "xx3.php.net", etc.).  For a list of what's available and
 whats taken, have a look at the mirror_list.txt file.
 
-You should also set up a cron job that periodically does a 'cvs update -d' in 
+You must also set up a cron job that periodically does an rsync to refresh 
 your web directory.  This will ensure that your web site is up to date. 
-Something like: 0,30 * * * * (cd <your_path>; /usr/local/bin/cvs update -d)
+Something like:
+
+   0,30 * * * * /usr/local/bin/rsync -avzC rsync.php.net::phpweb /your/path
 
 Once you have done the above and your site appears to work, send a message to
-mirrors@php.net with your information and appropriate steps will be taken to 
-integrate your mirror site.  You should also include in your email the following:
+mirrors@php.net with the following information, and appropriate steps will be 
+taken to integrate your mirror site:
 
-- the name and email of the admin for the mirror
-- whether or not you've installed local searching support on your mirror (using
-  ht://dig)
-- a logo for your hosting company, or the URL of where we can get one
-  (the better the quality, the better)
-- the URL of the site that hosts the mirror (this is where people will go when 
-  they click on the logo at the bottom of each page)
+- Your name and email address as the admin for the mirror.
+- Your country (we will update the DNS for php.net).
+- Whether or not you've installed local searching support on your mirror.
+  This uses ht://Dig (http://www.htdig.org), for which instructions for 
+  setting it up can be found in Mirrors-htdig.tgz
+- A logo for your hosting company, or the URL of where we can get one.
+  The big and better the quality, the better.  We will do the fancy 
+  graphics stuff to make it fit into the look of the site.
+- The URL of the site that hosts the mirror.  This is where you want
+  people will go when they click on the logo at the bottom of each page.
 
 Don't worry about graphics for your country's flag - we've got them all!
 
-You should also consider signing up to the mirrors mailing list (send an
-empty message to php-dev-subscribe@lists.php.net).  Traffic is pretty light ...
-and we *do* want to be able to keep in touch with you!
+You must also sign up to the mirrors mailing list, by sending an empty 
+message to:
 
-And finally, don't forget to put a nice little PHP logo on your hosting company's site 
-(if possible)!  Grab one of the logos from the "Downloads" page on the PHP site, 
-and link it to your mirror.
+   php-dev-subscribe@lists.php.net
+
+Traffic is pretty light, and we need to be able to keep in touch with you!
+
+And finally, don't forget to put a nice little PHP logo somewhere on your 
+hosting company's site if possible.  Grab one of the logos from the 
+"Downloads" page on the PHP site, and link it to your mirror.
+
+
+25-Jun-1999
