@@ -82,6 +82,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if($state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
 	if($state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
 	if($state!="Feedback") { echo "<option>Feedback\n"; }
+	if($state!="OldFeedback") { echo "<option>OldFeedback\n"; }
 	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
 	if($state!="All" && $show_all) { echo "<option>All\n"; }
 }
@@ -358,21 +359,21 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		/* nothing */
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
-	} elseif ($status == "OldFeedback") {
-		$where_clause = "status='Feedback' and TO_DAYS(NOW())-TO_DAYS(ts2)>60";
-	} elseif($status!="All" && $bug_type=="Any") {
-		/* Treat assigned and analyzed bugs as open */
-		if($status=="Open") {
-			$where_clause = "bug_type!='Feature/Change Request' and (status='Open' or status='Assigned' or status='Analyzed')";
-		} else {
-			$where_clause = "status='$status' and bug_type!='Feature/Change Request'";
-		}
 	} else {
-		/* Treat assigned and analyzed bugs as open */
-		if($status=="Open") {
-			$where_clause = "(status='Open' or status='Assigned' or status='Analyzed') and bug_type='$bug_type'";
+		if($bug_type=="Any") {
+			$where_clause = "bug_type!='Feature/Change Request'";
 		} else {
-			$where_clause = "status='$status' and bug_type='$bug_type'";
+			$where_clause = "bug_type='$bug_type'"
+		}
+
+		/* Treat assigned and analyzed bugs as open */
+
+ 		if($status=="Open") {
+			$where_clause .= " and (status='Open' or status='Assigned' or status='Analyzed')";
+		} elseif($status=="OldFeedback") {
+			$where_clause .= " and status='Feedback' and TO_DAYS(NOW())-TO_DAYS(ts2)>60";
+		} else {
+			$where_clause .= " and status='$status'";
 		}
 	}
 	if(strlen($search_for)) {
