@@ -22,7 +22,7 @@ as a php.net website bug).
 function addPanel()
 {
     if ((typeof window.sidebar == "object") && (typeof window.sidebar.addPanel == "function"))
-        window.sidebar.addPanel("PHP.net Search Bar","/searchbar.php","");
+        window.sidebar.addPanel("PHP.net Search Bar","<?php echo $MYSITE; ?>searchbar.php","");
     else
         alert('Sidebar cannot be added! You must use Mozilla 0.9.4 or later!');
 }
@@ -39,7 +39,7 @@ Howto</a>.</i>
 
 <p>
 If you use Internet Explorer 5 or above on Windows, you can add the
-<a href="javascript:void(open('/searchbar.php','_search'))">PHP.net Search Bar</a>
+<a href="javascript:void(open('<?php echo $MYSITE; ?>searchbar.php','_search'))">PHP.net Search Bar</a>
 to your Links toolbar (dragging the link there) or you can add it to your 
 favorites and clicking on it you can see our bar displayed in place of your
 usual search bar. This link does not install our bar as your default search bar,
@@ -50,22 +50,24 @@ JavaScript function</a> to make this sidebar available.</i>
 </p>
 
 <p>
-If you use Internet Explorer 5 or above on MacOS, <a href="/searchbar.php">open
-our sidebar page</a> in a separate window. In that window, open the "Page Holder"
-tab on the left side of the window. Click "Add." If you want to keep it for
-future use, click on "Favorites" and select "Add to Page Holder Favorites."
-<i>If you would like to read more about the Page Holder, see
+If you use Internet Explorer 5 or above on MacOS,
+<a href="<?php echo $MYSITE; ?>searchbar.php">open our sidebar page</a> in a
+separate window. In that window, open the "Page Holder" tab on the left side
+of the window. Click "Add." If you want to keep it for future use, click on
+"Favorites" and select "Add to Page Holder Favorites." <i>If you would like to
+read more about the Page Holder, see
 <a href="http://www.microsoft.com/mac/products/ie/ie_main.asp?embfpath=howto&embfname=ie_1.asp">Microsoft's
-Macintosh page</a>.</i>
+Macintosh IE page</a>.</i>
 </p>
 
 <h2>Opera 6 and above</h2>
 
 <p>
-If you are using Opera, you can <a href="/searchbar.php" rel="sidebar"
-title="PHP.net Search Bar">click on this link to add our sidebar to your set</a>.
-You can uninstall the sidebar by right clicking on it's tab and choosing "Delete"
-from the context menu. <i><a href="http://www.tntluoma.com/opera/lover/day16-sidebars/">Read
+If you are using Opera, you can <a href="<?php echo $MYSITE; ?>searchbar.php"
+rel="sidebar" title="PHP.net Search Bar">click on this link to add our sidebar
+to your set</a>. You can uninstall the sidebar by right clicking on it's tab
+and choosing "Delete" from the context menu.
+<i><a href="http://www.tntluoma.com/opera/lover/day16-sidebars/">Read
 more about Opera sidebars on this page</a>.</i>
 </p>
 
