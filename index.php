@@ -133,6 +133,24 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>7th Sample of PHP Documentation "New CHM Edition"</h1>
+<p>
+<font class="newsdate">[15-Aug-2002]</font> The 7th sample of the CHM edition is out now.
+This adds many great new features including the ability to apply your own skins
+(with the option to modify style and layout). This sample also features more
+online functions, real context menus, a new quickref application and instant "copy
+example to clipboard" features. You should definitely check this sample out. Every
+designer is welcome to make their own skins and submit them for inclusion in the
+standard set or distribute in our soon-to-be online skin repository.
+<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
+and please send us your feedback to our <?php print_link("mailto:php-doc-chm@lists.php.net",
+"dedicated mailing list"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Printer friendly manual pages with notes</h1>
 <p>
 <font class="newsdate">[03-Aug-2002]</font> Starting from today, the
