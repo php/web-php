@@ -1,5 +1,4 @@
 <?
-
 	require("shared.inc");
 	commonHeader("High-Profile sites running PHP");
 
@@ -709,4 +708,3 @@ list them all and will add suggested sites at our discretion.</blockquote>
 <?
 commonFooter();
 ?>
-
