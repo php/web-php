@@ -2,10 +2,11 @@
 require("shared.inc");
 
 $current = "3.0.1";
-$win32_current = "3.0";
+$win32_current = "3.0.1";
 
 $filesizes["php-3.0.1.tar.gz"]="~ 1011KB";
-$filesizes["php-3.0-win32.exe"]="~ 1148KB";
+$filesizes["php-3.0.1-win32.exe"]="~ 1148KB";
+$filesizes["php-3.0.1-win32.zip"]="~ 1148KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 
 function makeCap() {
@@ -101,6 +102,7 @@ while ($site = key($mirror_sites)) {
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
 	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
+	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
 	$patch_file = "${site}${srcdir}php-3.0.1-patch.gz";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
@@ -114,7 +116,10 @@ while ($site = key($mirror_sites)) {
 		download_link($patch_file, "($method) PHP 3.0 -> 3.0.1 patch");
 		echo "\n";
 		echo "<LI>";
-		download_link($win32_file, "($method) $win32_current Win32 binary");
+		download_link($win32_file, "($method) $win32_current Win32 binary+installer");
+		echo "\n";
+		echo "<LI>";
+		download_link($win32_zfile, "($method) $win32_current Win32 binary");
 		echo "\n";
 	}
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
