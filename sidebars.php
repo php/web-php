@@ -96,4 +96,11 @@ function addPlugin()
  more about Opera sidebars on this page</a>.</em>
 </p>
 
+<p>
+ The Mozilla search plugin mentioned above also works with Opera if
+ <a href="http://nontroppo.org/wiki/SearchPluginsHelp">OpSed is installed</a>.
+ You just need to <a href="<?php echo $MYSITE; ?>phpnetsearch.src">click on
+ this link</a> to add it to your set.
+</p>
+
 <?php site_footer(); ?>
