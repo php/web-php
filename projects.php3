@@ -178,6 +178,12 @@ phpAds is a banner management and tracking system written in PHP3. Currently it 
 </ul>
 <? endEntry();?>
 
+<? makeEntry("The Diary","keilor.cs.umass.edu/diary/index.php3","Agustin Schapira" ,"schapira@cs.umass.edu"); ?>
+The Diary lets you keep notebooks and write notes in them. You can add notes or browse through your notes from any 
+Web browser anywhere in the world. You can also search inside your notebooks to find
+entries that interest you. 
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
