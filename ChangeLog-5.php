@@ -110,6 +110,8 @@ exception). (Marcus)</li>
 <li>Fixed bug #24243 (enabling browscap causes segfault). (Wez)</li>
 </ul>
 
+<hr />
+
 <a name="5.0.0b3"></a>
 <h3>Version 5.0.0 Beta 3</h3>
 <b>21-Dec-2003</b>
