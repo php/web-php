@@ -204,11 +204,7 @@ if (isset($pattern)) {
         
         // This means that some error occured (the output templates are in
         // Mirrors-htdig.tgz, and one of those should appear on the output)
-        if ($rc < 2) {
-            echo "<b>There was an error executing this query.</b><br /><br />Please try later.<br /><br />";
-            commonFooter();
-            exit;
-        }
+        if ($rc < 2) { searchError(); }
 
         // Create versions insertable in HTML output and URLs too
         $htmlpt = htmlspecialchars($pattern);
@@ -224,6 +220,13 @@ if (isset($pattern)) {
             commonFooter();
             exit;
         }
+        
+        // If we have not received the NOMATCH sign, then there need to
+        // be at least one result. The first 7 rows are meta information,
+        // the 8th row is the first result. Htdig seems to have a bug to
+        // return valid meta information even if there are no results
+        // returned, we would like to avoid that here...
+        if ($rc < 8) { searchError(); }
         
         // We have matches, so grab the info from the output
         // (the template for this is phphead.html in Mirrors-htdig.tgz)
@@ -371,6 +374,17 @@ function makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed)
     echo '<td align="right">' . $next . '<br></td>';
     echo '</tr>';
     echo '</table><br>' . "\n";
+}
+
+// This message is printed out if an error
+// is encountered while searching the site
+function searchError()
+{
+    echo '<b>There was an error executing this query.</b><br /><br />
+          Please try later, or <a href="/mirrors.php">use another mirror
+          with local search support</a>.<br /><br />';
+    commonFooter();
+    exit;
 }
 
 ?>
