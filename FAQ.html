@@ -409,7 +409,6 @@ just hit the always prompt for new location checkbox before pressing ok.
     with MSVC to know what to do ;).
   <P>
   </DD>
-</DL>
 
   <DT><B>
     <a name="2.6">2.6</a> Where do I find the Browser Capabilities File?
@@ -419,6 +418,7 @@ just hit the always prompt for new location checkbox before pressing ok.
 	There is also another browscap.ini file at <a href="http://www.cyscape.com/asp/browscap/">http://www.cyscape.com/asp/browscap/</a>.
   <P>
   </DD>
+</DL>
 
 <HR noshade>
 
@@ -450,7 +450,69 @@ Unix see: <a href="http://www.webgenx.com/Kwazy/phpunix.html">http://www.webgenx
   </PRE>
 	And then you would copy <i>php3.ini-dist</i> from the distribution to <i>/etc/php3.ini</i> and
 	edit it to make any local changes you want.
+  <P>
   </DD>
+
+  <DT><B>
+    <a name="3.2">3.2</a> I installed PHP3 using RPMS, but Apache isn't processing the php3 pages! What's going on here?
+  </B></DT>
+  <DD>
+  <UL>        
+<LI>Assuming you installed Apache PHP completely with RPMS, you need to uncomment or add some or all of the following lines in your http.conf file:<BR>
+<CODE># Extra Modules</CODE><BR>
+<CODE>AddModule mod_php.c</CODE><BR>
+<CODE>AddModule mod_php3.c</CODE><BR>
+<CODE>AddModule mod_perl.c</CODE><BR>
+      
+<CODE># Extra Modules</CODE><BR>
+<CODE>LoadModule php_module         modules/mod_php.so</CODE><BR>
+<CODE>LoadModule php3_module        modules/libphp3.so</CODE><BR>
+<CODE>LoadModule perl_module        modules/libperl.so</CODE><BR>
+
+<LI>And add:<BR>
+<CODE>AddType application/x-httpd-php3 .php3</CODE><BR>
+To the global properties, or to the properties of the VirtualDomain you want to have PHP3 support added to.
+</UL><P></DD>
+
+<DT><B>
+<a name="3.3">3.3</a> I installed PHP3 using RPMS, but it doesn't compile with the database support I need! What's going on here?
+</B></DT>
+<DD>
+Currently the RPM packagers are setting up the RPMS to install without database support to simplify installations AND because RPMS use /usr/ instead of the standard /usr/local/ directory for files.
+You need to tell the RPM spec file which databases to support and the location of the <EM>top-level</EM> of your database server.<BR>
+This example will explain the process of adding support for the popular MySQL database server, using the mod installation for Apache.<BR>
+Of course all of this information can be adjusted for any database server that PHP3 supports.
+I will assume you installed MySQL and Apache completely with RPMS for this example as well.
+
+<UL>
+<LI>First remove mod_php3<BR>
+<CODE>rpm -e mod_php3</CODE><BR>
+       
+<LI>Then get the source rpm and INSTALL it, NOT --rebuild<BR>
+<CODE>rpm -Uvh mod_php3-3.0.5-2.src.rpm</CODE><BR>
+<LI>Then edit the /usr/src/redhat/SPECS/mod_php3.spec file<BR>
+In the %build section add the database support you want, and the path.<BR>
+For MySQL  you would add <CODE>--with-mysql=/usr \</CODE><BR>
+The %build section will look something like this:<BR>
+        
+<CODE>
+    ./configure --prefix=/usr \<BR>
+    --with-apxs=/usr/sbin/apxs \<BR>
+    --with-config-file-path=/usr/lib \<BR>
+    --enable-debug=no \<BR>
+    --enable-safe-mode \<BR>
+    --with-exec-dir=/usr/bin \<BR>
+    --with-mysql=/usr \<BR>
+    --with-system-regex<BR>
+</CODE>
+<LI>Once this modification is made then build the binary rpm as follows:<BR>
+<CODE>rpm --bb /usr/src/redhat/SPECS/mod_php3.spec </CODE><BR>
+<LI>Then install the rpm<BR>
+<CODE>rpm -ivh /usr/src/redhat/RPMS/i386/mod_php3-3.0.5-2.i386.rpm</CODE><BR>
+</UL>
+Make sure you restart Apache, and you now have PHP with MySQL support using RPM's.
+<P>
+</DD>
 </DL>
 <HR noshade>
 
