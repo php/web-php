@@ -60,6 +60,8 @@
   }
 
   if (!$root_url) { $root_url = "/"; }
+  if (!$glimpse_url) { $glimpse_url = ""; }
+
   $lynx=0;
   $js=0;
   if(ereg("Mozilla/[4-6]",$HTTP_USER_AGENT)) {
