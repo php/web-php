@@ -34,7 +34,7 @@ $MIRRORS = array(
    "http://kr.php.net/"           => array("kr", "Kimm ACLab", "kimm", "http://aclab.kimm.re.kr/", 1, 0),
    "http://lv.php.net/"           => array("lv", "Police Department - Republic of Latvia", "police", "http://www.pd.gov.lv/", 1, 0),
    "http://mx.php.net/"           => array("mx", "Urbano.com.mx", "urbano", "http://web.urbano.com.mx/?in=php", 1, 0),
-#   "http://nl.php.net/"           => array("nl", "WEBtic Internet Consultancy", "webtic", "http://www.webtic.com/", 1, 0),
+   "http://nl.php.net/"           => array("nl", "WEBtic Internet Consultancy", "webtic", "http://www.webtic.com/", 1, 0),
    "http://php.nederland.net/"    => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 1, 0),
    "ftp://ftp.nederland.net/pub/php/" => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 1, 0),
    "http://php.guardian.no/"      => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 0, 0),
