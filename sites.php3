@@ -13,8 +13,9 @@
 	echo "<p><center><table border=1 cellpadding=15><tr>\n";
 
 	title("Sports Teams");
-	title("Auto Industry");
-	title("Hi-Tech Industry");
+	title("Auto");
+	title("Hi-Tech");
+
 
 	echo "</tr><tr><td align=top>\n";
 
@@ -33,6 +34,23 @@
 	
 
 	echo "<br></td>\n";
+
+	echo "</tr><tr>\n";
+	title("Telecommunications");
+	title("Computer Hardware");
+	title("Entertainment");
+
+	echo "</tr><tr><td align=top>\n";
+
+	/* Telecommunications */
+	site("Sprint Canada","www.sprint.ca");
+
+	echo "<br></td><td align=top>\n";
+	/* Computer Hardware */
+
+	echo "<br></td><td align=top>\n";
+	/* Entertainment */
+
 	echo "</tr></table></center>\n";
 
 	require("include/footer.inc");
