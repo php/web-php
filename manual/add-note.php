@@ -1,23 +1,6 @@
 <?
 require_once 'prepend.inc';
-
-#
-# Notes only available at main mirror site for now
-#
-if (!is_primary_site()) {
-  if (is_backup_primary()) {
-    commonHeader("Service Unavailable");?>
-<p>Sorry, you can't add a note to the manual right now.</p>
-<?php
-    commonFooter();
-    exit;
-  }
-
-  header('Location: http://www.php.net' . $HTTP_SERVER_VARS['REQUEST_URI'] );
-  exit;
-}
-
-$mailto = 'rasmus@php.net';
+require_once 'posttohost.inc';
 
 require("shared-manual.inc");
 commonHeader("Manual Notes");
@@ -35,44 +18,27 @@ if ($note == "") {
     unset ($note);
 }
 
-# turn the POST data into GET data so we can do the redirect
-if(!strstr($MYSITE,"www.php.net")) {
-    Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
-    exit;
-}
-
 if (isset($note) && isset($action) && strtolower($action) != "preview"):
-        mysql_pconnect("localhost","nobody", "");
-        mysql_select_db("php3");
+  $result = posttohost("http://master.php.net/entry/user-note.php", array(
+              "user" => stripslashes($user),
+              "note" => stripslashes($note),
+              "lang" => stripslashes($lang),
+              "sect" => stripslashes($sect)
+            ));
 
-	$now = date("Y-m-d H:i:s");
-	$sect = ereg_replace("\.php$","",$sect);
-	$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
-        # no need to call htmlspecialchars() -- we handle it on output
-        $query .= "('$user','$note','$sect','$now','$lang')";
-	//echo "<!--$query-->\n";
-	if (mysql_query($query)):?>
-<P>Your submission was successful -- thanks for contributing! Note that it may
-not show up for a few hours on some of the <a href="/mirrors.php">mirrors</a>,
-but it will find its way to all of our mirrors in due time.
-<?		$new_id = mysql_insert_id();	
-		$msg = stripslashes($note);
-		$msg .= "\n\n $redirect \n";
-                # make sure we have a return address.
-                if (!$user) $user = "php-general@lists.php.net";
-		mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
-	else:
-		// mail it.
-		mail($mailto, "failed manual note query", $query);
+  if ($result) {
+    echo "<!-- $result -->";
+    echo "<p>There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
+  }
+  else {?>
+<p>Your submission was successful -- thanks for contributing! Note that it will
+not show up for up to a few hours on some of the <a
+href="/mirrors.php">mirrors</a>, but it will find its way to all of our mirrors
+in due time.</p>
+<?php
+  }
 ?>
-<P>There was an error processing your submission. It has been automatically
-e-mailed to the developers.
-<?	endif;?>
-
-<P>You can <A href="<?echo $redirect?>">go back</A> from whence you came,
-or you can <A href="http://www.php.net/manual/">browse the manual with the
-on-line notes</A>.
-
+<p>You can <a href="<?php echo $redirect?>">go back</a> from whence you came.</p>
 <?else:
         if (isset($note) && strtolower($action) == "preview"):?>
 <p>This is what your entry will look like, roughly:</p>
@@ -122,12 +88,12 @@ and add it here!)</p>
 <p><b>To add a note, you must click on the 'Add Note' button
 on the bottom of a manual page so we know where to add the note!</b></p>
 <?      else:?>
-<form method="POST" action="/manual/add-note.php">
-<input type="hidden" name="sect" value="<?echo $sect;?>">
-<input type="hidden" name="redirect" value="<?echo $redirect;?>">
-<input type="hidden" name="lang" value="<?echo $lang;?>">
+<form method="post" action="<?php echo $PHP_SELF;?>">
+<input type="hidden" name="sect" value="<?echo $sect;?>" />
+<input type="hidden" name="redirect" value="<?echo $redirect;?>" />
+<input type="hidden" name="lang" value="<?echo $lang;?>" />
 <table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
-<TR VALIGN=top>
+<tr valign="top">
 <TD><B>Your email address:</B></TD>
 <td><input type="text" name="user" size="40" maxlength="40" value="<?echo htmlspecialchars(stripslashes($user))?>"></td>
 </TR>

@@ -4,7 +4,7 @@ require_once 'prepend.inc';
 if (isset($user) && isset($pass)) {
   $MAGIC_COOKIE = base64_encode("$user:$pass");
   # we set a cookie good for five years
-  SetCookie("MAGIC_COOKIE", base64_encode("$user:$pass"), time()+157248000);
+  SetCookie("MAGIC_COOKIE", base64_encode("$user:$pass"), time()+157248000, '/', '.php.net');
   echo "<b>Cookie set</b>.<br>";
 }
 if (isset($MAGIC_COOKIE)) {
