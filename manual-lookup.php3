@@ -54,7 +54,4 @@ If all else fails, just click <A HREF="/manual/">here</A> to go to the table of 
 or click <A HREF="/quickref.php3">here</A> for an alphabetical list of all PHP functions.
 <P>
 
-<?php
-endif;
-commonFooter();
-?>
+<?php commonFooter(); ?>
