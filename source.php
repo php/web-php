@@ -18,6 +18,8 @@ files.<br><br>
 
 Of course, if you want to see the source of this page, have a look ' .
 make_link("/source.php?url=/source.php", "here") . '.
+You can also browse the cvs repository for this website ' .
+make_link("http://cvs.php.net/cvs.php/phpweb/", "here") . '.
 </p>
 ';
 
