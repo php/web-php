@@ -603,7 +603,7 @@ array(
     /* image        */ "0072127317.jpg",
     /* information  */ "Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<br>" .
                        "Also available in " .
-                       make_link("http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094", "Hungarian"),
+                       make_link("http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453094", "Hungarian"),
     /* inform. link */ "",
     /* language     */ "en"
   ),
@@ -693,7 +693,7 @@ array(
     /* image        */ "1588800539.jpg",
     /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages<br>" .
                        "Also available in " .
-                       make_link("http://www.interbook.hu/index.php?op=ShowProduct&id=2213", "Hungarian"),
+                       make_link("http://www.interbook.hu/index.php?op=ShowProduct&amp;id=2213", "Hungarian"),
     /* inform. link */ "",
     /* language     */ "en"
   ),
@@ -727,7 +727,7 @@ array(
     /* auth link[s] */ "",
     /* image        */ "1931841535.jpg",
     /* information  */ "Premier Press, Apr 2002, ISBN 1-9318-4153-5, 896 pages",
-    /* inform. link */ "http://www.premierpressbooks.com/catalog/product.cfm?category=Web%20Development&isbn=1931841535",
+    /* inform. link */ "http://www.premierpressbooks.com/catalog/product.cfm?category=Web%20Development&amp;isbn=1931841535",
     /* language     */ "en"
   ),
 
@@ -756,7 +756,7 @@ array(
   array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
-    /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
+    /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche Übersetzung)"),
     /* auth link[s] */ array("http://lerdorf.com/bio.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
     /* image        */ "3897212250.gif",
     /* information  */ "O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages",
@@ -796,7 +796,7 @@ array(
   array(
     /* title[s]     */ array("PHP 4: Grundlagen und Profiwissen","Webserver-Programmierung unter Windows und Linux"),
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446215468/wwwphpnet07",
-    /* author[s]    */ "J&ouml;rg Krause",
+    /* author[s]    */ "Jörg Krause",
     /* auth link[s] */ "",
     /* image        */ "3446215468.jpg",
     /* information  */ "Hanser, Nov 2000, ISBN 3-446-21546-8, 1168 pages",
@@ -805,7 +805,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ array("PHP 4","Webserver-Programmierung f&uuml;r Um- und Einsteiger"),
+    /* title[s]     */ array("PHP 4","Webserver-Programmierung für Um- und Einsteiger"),
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3934358632/wwwphpnet07",
     /* author[s]    */ "Thomas Theis",
     /* auth link[s] */ "",
@@ -873,7 +873,7 @@ array(
   array(
     /* title[s]     */ "PHP 4",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07",
-    /* author[s]    */ array("Uwe Hess", "G&uuml;nther Karl"),
+    /* author[s]    */ array("Uwe Hess", "Günther Karl"),
     /* auth link[s] */ "",
     /* image        */ "3826680022.jpg",
     /* information  */ "bhv, Dec 2000, ISBN 3-8266-8002-2, 764 pages",
@@ -883,9 +883,9 @@ array(
 
 
   array(
-    /* title[s]     */ "PHP 4 f&uuml;r Profis. Werkzeugkiste und Kochbuch",
+    /* title[s]     */ "PHP 4 für Profis. Werkzeugkiste und Kochbuch",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898421163/wwwphpnet07",
-    /* author[s]    */ array("Helmut Dittrich","J&uuml;rgen Mellenthin"),
+    /* author[s]    */ array("Helmut Dittrich","Jürgen Mellenthin"),
     /* auth link[s] */ "",
     /* image        */ "3898421163.jpg",
     /* information  */ "Galileo Press, January 2001, ISBN 3-8984-2116-3, 500 pages",
@@ -971,7 +971,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "Gu&iacute;a Pr&aacute;cticas PHP 4",
+    /* title[s]     */ "Guía Prácticas PHP 4",
     /* title_link   */ "http://www.AnayaMultimedia.es/",
     /* author[s]    */ "Esteban Trigos",
     /* auth link[s] */ "",
@@ -1043,7 +1043,7 @@ array(
     /* auth link[s] */ "",
     /* image        */ "2744011746.gif",
     /* information  */ "Campus Press, ISBN 2-7440-1174-6, July 24 2001, 930 pages",
-    /* inform. link */ "http://www.campuspress.net/store/book_info.asp?ref=4&nav=&maincat=&id=1174",
+    /* inform. link */ "http://www.campuspress.net/store/book_info.asp?ref=4&amp;nav=&amp;maincat=&amp;id=1174",
     /* language     */ "fr"
   ),
 
@@ -1148,34 +1148,34 @@ array(
 
   array(
     /* title[s]     */ "PHP Haladóknak",
-    /* title_link   */ "http://www.interbook.hu/index.php?op=ShowProduct&id=2213",
+    /* title_link   */ "http://www.interbook.hu/index.php?op=ShowProduct&amp;id=2213",
     /* author[s]    */ "Peter Moulding",
     /* auth link[s] */ "",
     /* image        */ "9630095580.jpg",
     /* information  */ "Perfact-Pro, March 2002, ISBN 963-0095-58-0, 768 pages + CD",
-    /* inform. link */ "http://www.interbook.hu/index.php?op=ShowProduct&id=2213",
+    /* inform. link */ "http://www.interbook.hu/index.php?op=ShowProduct&amp;id=2213",
     /* language     */ "hu"
   ),
 
   array(
     /* title[s]     */ "Webvilág PHP4 Fejlesztõk kézikönyve 1. kötet",
-    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094",
+    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453094",
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
     /* image        */ "9635453094.jpg",
     /* information  */ "Panem, Dec 2001, ISBN 963-5453-09-4, 422 pages",
-    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453094",
+    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453094",
     /* language     */ "hu"
   ),
 
   array(
     /* title[s]     */ "Webvilág PHP4 Referenciakönyv 2. kötet",
-    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453108",
+    /* title_link   */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453108",
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
     /* image        */ "9635453108.jpg",
     /* information  */ "Panem, Feb 2002, ISBN 963-5453-10-8, 508 pages",
-    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&lap=9635453108",
+    /* inform. link */ "http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453108",
     /* language     */ "hu"
   ),
 
@@ -1191,7 +1191,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "PHP Guia de Consulta R&aacute;pida",
+    /* title[s]     */ "PHP Guia de Consulta Rápida",
     /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
     /* author[s]    */ "Herbert G. Fischer",
     /* auth link[s] */ "",
@@ -1203,7 +1203,7 @@ array(
 
   array(
     /* title[s]     */ "Desenvolvendo Websites com PHP 4",
-    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&isbn=8575220039&volume=1&ano_publ=2001&rnd=16354996126232",
+    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&amp;isbn=8575220039&amp;volume=1&amp;ano_publ=2001&amp;rnd=16354996126232",
     /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
     /* image        */ "8575220039.jpg",
@@ -1214,12 +1214,12 @@ array(
 
   array(
     /* title[s]     */ "PHP Guia Do Desenvolvedor",
-    /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
+    /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
     /* author[s]    */ "Sterling Hughes",
     /* auth link[s] */ "",
     /* image        */ "8572515844.gif",
     /* information  */ "2001, ISBN 85-7251-584-4, 528 pages",
-    /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
+    /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&amp;Tipo=2&amp;ID=241501",
     /* language     */ "pt"
   ),
 
@@ -1235,7 +1235,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "PHP com XML - Guia de Consulta R&aacute;pida",
+    /* title[s]     */ "PHP com XML - Guia de Consulta Rápida",
     /* title_link   */ "http://www.niederauer.com.br/livros/phpxml/",
     /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
@@ -1247,23 +1247,23 @@ array(
 
   array(
     /* title[s]     */ "Start på PHP",
-    /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&vare_id=106131",
+    /* title_link   */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
     /* author[s]    */ "Thomas G. Kristensen",
     /* auth link[s] */ "",
     /* image        */ "8778434084.gif",
     /* information  */ "ISBN 87-7843-408-4",
-    /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&vare_id=106131",
+    /* inform. link */ "http://www.ibooks.dk/default.asp?mode=show_item&amp;vare_id=106131",
     /* language     */ "dk"
   ),
   
   array(
     /* title[s]     */ "PHP. Web scripting",
-    /* title_link   */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&isbn=8883780132",
+    /* title_link   */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&amp;isbn=8883780132",
     /* author[s]    */ "Rasmus Lerdorf",
     /* auth link[s] */ "http://lerdorf.com/bio.php",
     /* image        */ "8883780132.jpg",
     /* information  */ "Hops Libri, 2000, ISBN 8883780132, 148 pages",
-    /* inform. link */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&isbn=8883780132",
+    /* inform. link */ "http://www.internetbookshop.it/ser/serdsp.asp?shop=1415&amp;isbn=8883780132",
     /* language     */ "it"
   ),
 
@@ -1437,7 +1437,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ array("Scriptsprachen f&uuml;r dynamische Webauftritte", "JavaScript, VBScript, ASP, Perl, PHP, XML"),
+    /* title[s]     */ array("Scriptsprachen für dynamische Webauftritte", "JavaScript, VBScript, ASP, Perl, PHP, XML"),
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446214135/wwwphpnet07",
     /* author[s]    */ "Prof. Dr. Wolfgang Dehnhardt",
     /* auth link[s] */ "",
@@ -1483,7 +1483,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "MySQL. Einf&uuml;hrung, Programmierung, Referenz",
+    /* title[s]     */ "MySQL. Einführung, Programmierung, Referenz",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827317622/wwwphpnet07",
     /* author[s]    */ "Michael Kofler",
     /* auth link[s] */ "",
