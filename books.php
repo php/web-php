@@ -606,7 +606,6 @@ array(
     /* information  */ "Jan 2000, ISBN 8-5851-8469-8",
     /* inform. link */ "http://phpclasses.UpperDesign.com/products.html/id/8585184698",
     /* language     */ "pt"
-  )
   ),
 
   array(
