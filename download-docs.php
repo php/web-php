@@ -13,8 +13,8 @@ friendly HTML format.
 <h3>Tip for Windows users</h3>
 <p>
 If you don\'t know how to handle bz2 compressed
-manuals on Windows, please read our
-<a href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
+manuals on Windows, please read our <a
+href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
 on this subject.
 </p>
 
