@@ -102,12 +102,39 @@ em {
 	font-style: italic;
 }
 
+ul.simple {
+	padding-left: 8px;
+}
+ul.simple li {
+	padding: 0px;
+	list-style-type: none;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;
 }
 #content h1 {
 	margin-top: 0px;
+}
+
+/* Layout styling and helpers --------------------------------------------- */
+#layout_2, #layout_3 {
+	background: url(/images/leftbar.png) top left repeat-y;
+}
+#layout_3_helper {
+	/* Background to the right */
+}
+
+#leftbar {
+	float: left;
+	width: 186px;
+	padding: 5px;
+	font-size: smaller;
+}
+
+#layout_2 #content {
+	margin-left: 196px;
 }
 
 /* Header navigation area ------------------------------------------------- */
