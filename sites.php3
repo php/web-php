@@ -70,6 +70,7 @@ right away.</blockquote>
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
 	site("The Tri Cities Online","tri.xtn.net");
+	site("Up My Street", "www.upmystreet.com");
 	site("XOOM.com Inc.","xoom.com");
 	site("Zone - Cultural sites in Rotterdam","www.cultuur.rotterdam.nl");
 	siteEnd();
@@ -81,6 +82,7 @@ right away.</blockquote>
 	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("Flexform Software","www.flexform.de");
+	site("Freedows OS","freedows.netpedia.net/");
 	site("Knowledge Adventure","www.knowledgeadventure.com");
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
@@ -234,7 +236,7 @@ right away.</blockquote>
 	title("Not-for-Profit");
 	siteStart();
 	site("Association of Internet Professionals","www.association.org");
-	site("European Rotaract Information Center","www.rotaract.de/eric/");
+	site("Global Rotaract Information Center", "www.rotaract.org/");
 	site("Humanities Web","humanitiesweb.org");
 	site("The Long Now Foundation","www.longnow.org");
 	site("The Jazz Journalists Association","www.jazzhouse.org");
