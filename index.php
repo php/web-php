@@ -159,7 +159,9 @@ commonHeader("Hypertext Preprocessor");
  <a href="http://www.nexen.net/">Nexen.net</a> has launched Direction|PHP,
  the first PHP and MySQL dedicated magazine in French. This monthly publication
  features indeep coverage of PHP industry, business and user cases and technical
- articles from PHP|Architect.<br />
+ articles from PHP|Architect.
+</p>
+<p>
  For more information, read the <a 
  href="http://www.directionphp.biz/index.php">Direction|PHP website</a> (in French).
 </p>
