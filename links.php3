@@ -52,7 +52,7 @@ useful functions, organized for easy finding.  Includes a search function.<BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
 <LI><A HREF="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</A><BR>
 A collection of PHP scripts.<BR>
-<LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
+<LI><A HREF="http://phplib.netuse.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
 <LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
