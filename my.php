@@ -69,11 +69,23 @@ is determined by checking for the following settings. The list is
 in priority order, the first is the most important.
 </p>
 
-<table>
- <tr><td>Your preferred language</td><td><?php echo $langpref; ?></td></tr>
- <tr><td>Your Accept-Language browser setting (parsed)</td><td><?php echo join(", ", $UA_LANGS); ?></td></tr>
- <tr><td>The mirror's default language</td><td><?php echo default_language(); ?></td></tr>
- <tr><td>Default</td><td>en</td></tr>
+<table border="0" cellpadding="3" cellspacing="2">
+ <tr>
+  <td bgcolor="#dddddd">Your preferred language</td>
+  <td bgcolor="#eeeeee"><?php echo $langpref; ?></td>
+ </tr>
+ <tr>
+  <td bgcolor="#dddddd">Your Accept-Language browser setting (parsed)</td>
+  <td bgcolor="#eeeeee"><?php echo join(", ", $UA_LANGS); ?></td>
+ </tr>
+ <tr>
+  <td bgcolor="#dddddd">The mirror's default language</td>
+  <td bgcolor="#eeeeee"><?php echo default_language(); ?></td>
+ </tr>
+ <tr>
+  <td bgcolor="#dddddd">Default</td>
+  <td bgcolor="#eeeeee">en</td>
+ </tr>
 </table>
 
 <p>
