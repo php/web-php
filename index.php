@@ -85,7 +85,6 @@ $SIDEBAR_DATA = '
 </ul>
 <h3>Community</h3>
 <ul class="simple">
- <li><a href="http://www.devnetwork.net/">PHP Developers Network</a></li>
  <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
  <li><a href="http://www.osdn.org/">OSDN</a></li>
 </ul>
