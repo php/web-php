@@ -54,6 +54,7 @@ if ($HAVE_SEARCH) {
 	$form="http://uk.php.net/newsearch.php3";
 }
 if(!isset($pattern)) { 
+	$DISABLE_KICKOUTS = true;
 	commonHeader("Site Search");
 	if (!isset($prevsearch)) {
 		$prevsearch[0]="";
