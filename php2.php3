@@ -25,13 +25,16 @@ trailing <b>&quot;</b> is missing.  Edit this file and add that.  Then run the
 
 During the install it asks you for the Apache include directory.  It will be something
 like <i>&lt;path&gt;/apache_1.3.0/src/include</i>.  After the install program has finished you will need 
-to edit 2 files.  First, edit <b>src/php.h</b> and down around line 95 you will find a line that
+to edit 3 files.  First, edit <b>src/php.h</b> and down around line 95 you will find a line that
 says:
 <PRE>#include "httpd.h"</PRE>
 Just before this line, add a line that says:
 <PRE>#include "compat.h"</PRE>
 
-The second file you need to edit is <b>src/Makefile</b>.  On the CPPFLAGS line around line 47
+Do the same thing in <i>mod_php.c</i>.  Just before the <b>#include &quot;httpd.h&quot;</b> line add
+<b>#include &quot;compat.h&quot;</b><P>
+
+The third file you need to edit is <b>src/Makefile</b>.  On the CPPFLAGS line around line 47
 you will see a line which among other things has a -I followed by the Apache include directory 
 you specified earlier.  Add another -I entry with the same path but instead of ending in
 <i>src/include</i> it needs to end in <i>src/os/unix</i>.  For example, on my system this line
