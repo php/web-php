@@ -169,11 +169,6 @@ availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <br clear="all">
 </p>
 
-
-<? echo hdelim(); ?>
-
-
-
 <?
 commonFooter();
 ?>
