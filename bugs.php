@@ -89,6 +89,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 
 	$state_types = 	array (
 						"Open"        => 2, 
+						"Critical"    => 1, 
 						"Closed"      => 2,
 						"Duplicate"   => 2,
 						"Assigned"    => 1,
@@ -463,6 +464,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		switch($row["Status"]) {
 			case "Open":
+			case "Critical":
 				return "#ffbbaa";
 				break;
 			case "Closed":
@@ -527,10 +529,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$where_clause = "bug_type='$bug_type'";
 		}
 
-		/* Treat assigned and analyzed bugs as open */
+		/* Treat assigned, analyzed and critical bugs as open */
 
  		if($status=="Open") {
-			$where_clause .= " and (status='Open' or status='Assigned' or status='Analyzed')";
+			$where_clause .= " and (status='Open' or status='Assigned' or status='Analyzed' or status='Critical')";
 		} elseif($status=="OldFeedback") {
 			$where_clause .= " and status='Feedback' and TO_DAYS(NOW())-TO_DAYS(ts2)>60";
 		} else {
