@@ -120,7 +120,7 @@ echo "\n<!--$MYSITE-->\n";
 manual pages are not only available in their printer friendly versions,
 but also in printer friendly versions with user notes included. Check
 the links at the <a href="/manual">top of the manual pages</a> to go
-to printer friendly manual pages, and change langauges.
+to printer friendly manual pages, and change languages.
 </p>
 
 <?php echo hdelim(); ?>
