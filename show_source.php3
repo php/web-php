@@ -15,6 +15,5 @@ if ($tmp=strrchr($page_url,"/")) {
 
 show_source($page_name);
 
+include "include/footer.inc";
 ?>
-</body>
-</html>
