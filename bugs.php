@@ -44,7 +44,8 @@ echo "<font size=\"-1\">\n";
   </tr>
   <tr>
    <td align="right">with text:</td>
-   <td colspan="5"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the report or email address</td>
+   <td colspan="3"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the report or email address</td>
+   <td colspan="2">max. <select name="limit"><?php show_limit_options($limit);?></select> entries / page.</td>
   </tr>
  </form>
  <tr>
@@ -172,7 +173,9 @@ elseif ($cmd == "display") {
 	$query .= " ORDER BY $order_by $direction";
 
 	if (!$begin) $begin = 0;
-	$query .= " LIMIT $begin,30";
+	if (!$limit) $limit = 30;
+
+	$query .= " LIMIT $begin,$limit";
 
 	$res = @mysql_query($query);
 	if (!$res) die(htmlspecialchars($query)."<br>".mysql_error());
@@ -185,7 +188,7 @@ elseif ($cmd == "display") {
 		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver";
 ?>
 <table align="center" border="0" cellspacing="2" width="95%">
- <?php show_prev_next($begin,$rows,$link);?>
+ <?php show_prev_next($begin,$rows,$link,$limit);?>
  <tr bgcolor="#aaaaaa">
   <th><a href="<?php echo $link;?>&amp;reorder_by=id">ID#</a></th>
 <?php if ($bug_type == "Any") {?>
@@ -203,21 +206,21 @@ elseif ($cmd == "display") {
 			echo '<tr bgcolor="', get_row_color($row), '">';
 			echo "<td><a href=\"$PHP_SELF?id=$row[id]\">$row[id]</a></td>";
 			if ($bug_type == "Any") {
-				echo "<td>",htmlspecialchars($row[bug_type]),"</td>";
+				echo "<td>" . htmlspecialchars($row[bug_type]) . "</td>";
 			}
-			echo "<td>",htmlspecialchars($row[status]);
+			echo "<td>" . htmlspecialchars($row[status]);
 			if ($row[status] == "Feedback" && $row[unchanged] > 0) {
 				printf ("<br>%d day%s", $row[unchanged], $row[unchanged] > 1 ? "s" : "");
 			}
-			echo "<td>",htmlspecialchars($row[php_version]),"</td>";
-			echo "<td>",$row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;","</td>";
-			echo "<td>",$row[sdesc] ? htmlspecialchars($row[sdesc]) : "&nbsp;","</td>";
+			echo "<td>" . htmlspecialchars($row[php_version]) . "</td>";
+			echo "<td>" . $row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;" . "</td>";
+			echo "<td>" . $row[sdesc]  ? htmlspecialchars($row[sdesc]) : "&nbsp;"  . "</td>";
 			echo "<td align=\"center\"><a href=\"$PHP_SELF?id=$row[id]&amp;edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\" alt=\"edit\" /></a></td>";
-			echo "<td>",$row[assign] ? htmlspecialchars($row[assign]) : "&nbsp;","</td>";
+			echo "<td>" . $row[assign] ? htmlspecialchars($row[assign]) : "&nbsp;" . "</td>";
 			echo "</tr>\n";
 		}
 
-		show_prev_next($begin,$rows,$link);
+		show_prev_next($begin,$rows,$link,$limit);
 ?>
 </table>
 <?php
@@ -496,7 +499,8 @@ commonFooter();
 
 # FUNCTIONS
 
-function show_byage_options($current) {
+function show_byage_options($current)
+{
 	$opts = array(
 		"0"   => "the beginning",
 		"1"   => "yesterday",
@@ -511,7 +515,16 @@ function show_byage_options($current) {
 	}
 }
 
-function show_state_options($state, $user_mode=0, $default="") {
+function show_limit_options($limit=30)
+{
+	for($i=10;$i<100;) {
+		echo "<option value=\"$i\"", ($limit==$i ? " selected" : ""),">$i</option>\n";
+		$i=$i+10;
+	}
+}
+
+function show_state_options($state, $user_mode=0, $default="") 
+{
 	if (!$state && !$default) {
 		$state = "Open";
 	}
@@ -549,7 +562,8 @@ function show_state_options($state, $user_mode=0, $default="") {
 	}
 }
 
-function show_version_options($current,$default="") {
+function show_version_options($current,$default="") 
+{
 	$versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
 	while (list(,$v) = each($versions)) {
 		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
@@ -559,7 +573,8 @@ function show_version_options($current,$default="") {
 	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
 }
 
-function show_types($current,$show_any,$default="") {
+function show_types($current,$show_any,$default="") 
+{
 	include 'bugtypes.inc';
 
 	if (!$current && !$default && !$show_any) {
@@ -585,7 +600,8 @@ function show_types($current,$show_any,$default="") {
 	}
 }
 
-function get_old_comments ($bug_id) {
+function get_old_comments ($bug_id) 
+{
 	$divider = str_repeat("-", 72);
 	$max_message_length = 10 * 1024;
     $max_comments = 5;
@@ -617,7 +633,8 @@ function get_old_comments ($bug_id) {
     return "";
 }
 
-function addlinks($text) {
+function addlinks($text) 
+{
 	$text = htmlspecialchars($text);
     $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\\.\\s|$)/i","<a href=\"\\1\">\\1</a>\\3",$text);
     # what the heck is this for?
@@ -626,7 +643,8 @@ function addlinks($text) {
 }
 
 /* validate an incoming bug report */
-function incoming_details_are_valid($require_ldesc=0) {
+function incoming_details_are_valid($require_ldesc=0) 
+{
     global $email,$bug_type,$php_version,$sdesc,$ldesc;
 
 	$valid = 1;
@@ -658,8 +676,10 @@ function incoming_details_are_valid($require_ldesc=0) {
 	return $valid;
 }
 
-function get_bugtype_mail($bug_type) {
+function get_bugtype_mail($bug_type) 
+{
 	global $mail_bugs_to;
+
 	if (eregi("documentation", $bug_type)) {
 		return array("$mail_bugs_to,phpdoc@lists.php.net",$mail_bugs_to);
 	}
@@ -671,7 +691,8 @@ function get_bugtype_mail($bug_type) {
 	}
 }
 
-function get_row_color($row) {
+function get_row_color($row) 
+{
 	if ($row["bug_type"]=="Feature/Change Request") {
 		return "#aaaaaa";
 	}
@@ -706,15 +727,16 @@ function get_row_color($row) {
 	}
 }
 
-function show_prev_next($begin,$rows,$link) {
-	if ($begin == 0 && $rows < 30) return;
+function show_prev_next($begin,$rows,$link,$limit)
+{
+	if ($begin == 0 && $rows < $limit) return;
 	echo "<tr bgcolor=\"#cccccc\"><td align=\"center\" colspan=\"9\">";
     echo '<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>';
 	if ($begin > 0) {
-		echo "<td align=\"left\"><a href=\"$link&amp;begin=",max(0,$begin-30),"\">&laquo; Show Previous 30 Entries</a></td>";
+		echo "<td align=\"left\"><a href=\"$link&amp;begin=",max(0,$begin-30),"\">&laquo; Show Previous $limit Entries</a></td>";
 	}
-	if ($rows >= 30) {
-		echo "<td align=\"right\"><a href=\"$link&amp;begin=",$begin+30,"\">Show Next 30 Entries &raquo;</a></td>";
+	if ($rows >= $limit) {
+		echo "<td align=\"right\"><a href=\"$link&amp;begin=",$begin+30,"\">Show Next $limit Entries &raquo;</a></td>";
 	}
 	echo "</tr></table></td></tr>";
 }
