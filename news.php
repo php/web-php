@@ -55,7 +55,7 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
-<? makeEntry( "PHP From an IT Manager's Perspective", "by <a mailto:href=\"mailto:tobias@phpwizard.net"\>Tobias Ratschiller</a>",
+<? makeEntry( "PHP From an IT Manager's Perspective", "by <a mailto:href=\"mailto:tobias@phpwizard.net\">Tobias Ratschiller</a>",
     "http://idm.internet.com/articles/200005/php_05_30_00a.html", "May 31, 2000");?>
 What have sprint.ca, livebid.amazon.com, xoom.com, and mp3.lycos.com in
 common? All employ one of the Web's hottest server side technologies: PHP,
