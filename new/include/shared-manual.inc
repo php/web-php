@@ -1,63 +1,10 @@
-<?
+<?php // -*- C++ -*-
 require("shared.inc");
 require("manual.inc");
 
-function getNextPrevCat($function) {
-	global $NEXT_FUNC, $NEXT_URL, $NEXT_CAT, $PREV_FUNC, $PREV_URL, $PREV_CAT, $THIS_CAT, $MANUAL, $PREV, $NEXT, $CAT_URLS;
-	if ($function!="Show Source"):
-		$THIS_CAT=$MANUAL[$function][1];
-		$THIS_CAT_URL=$CAT_URLS[$THIS_CAT];
-		$PREV_FUNC=$PREV[$function];
-		$NEXT_FUNC=$NEXT[$function];
-		if($PREV_FUNC!=""):
-			$PREV_URL=$MANUAL[$PREV_FUNC][0];
-			$PREV_CAT=$MANUAL[$PREV_FUNC][1];
-		endif;
-		if($NEXT_FUNC!=""):
-			$NEXT_URL=$MANUAL[$NEXT_FUNC][0];
-			$NEXT_CAT=$MANUAL[$NEXT_FUNC][1];
-		endif;
-	endif;
-};
-
-function makeCatListing($function,$category) {
-	global $MANUAL, $FONTFACE, $CAT_URLS;
-	reset($MANUAL);
-	$cat_url=$CAT_URLS[$category];
-	echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=100%><TR VALIGN=top>\n";
-	echo "<TD>";
-	spc(10,10);
-	echo "</TD>\n";
-	echo "<TD COLSPAN=2><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\"><A HREF=\"$cat_url\" onMouseover=\"hide();\" CLASS=white><B>$category</B></A></TD></TR>\n";
-	$c=0;
-	while ($key=key($MANUAL)):
-		next($MANUAL);
-		if ($MANUAL[$key][1]==$category):
-			$url=$MANUAL[$key][0];
-			$type="p";
-			$out=0;
-			if ($key==$function):
-				$type="w";
-				$out=2;
-			endif;
-			echo "<TR VALIGN=top><TD>";
-			spc(10,10);
-			echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$c',1)\" onMouseout=\"changebullet('bullet$c',$out)\"><IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 BORDER=0 NAME=\"bullet$c\"></A>\n";
-			echo "</TD>\n<TD WIDTH=100%><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\" SIZE=-1><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$c',1)\" onMouseout=\"changebullet('bullet$c',$out)\" CLASS=white>$key<BR></A></TD></TR>\n";
-			$c++;
-		endif;
-	endwhile;
-	echo "</TABLE>\n";
-};
-
-function manualHeader($function) {
-	global $PHP_SELF, $HTTP_REFERER, $FONTFACE;
-	global $NEXT_FUNC, $NEXT_URL, $NEXT_CAT, $PREV_FUNC, $PREV_URL, $PREV_CAT, $THIS_CAT, $THIS_CAT_URL;
-	getNextPrevCat($function);
-	$title="Show Source";
-	if ($function!="Show Source"):
-		$title="Manual";
-	endif;
+function manualHeader($title) {
+    global $PHP_SELF, $HTTP_REFERER, $FONTFACE;
+    global $NEXT, $PREV, $UP, $HOME, $TOC;
 ?>
 <HTML>
 <HEAD>
@@ -255,9 +202,9 @@ document.writeln("</STYLE>");
 <TR VALIGN=top>
 <TD ALIGN=left>
 
-<A HREF="index.php3" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
-<A HREF="<? echo $THIS_CAT_URL;?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to front of the <? echo $THIS_CAT;?> category" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
-<? makeCatListing($function,$THIS_CAT);?>
+<A HREF="<? echo $HOME[0] ?>" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
+<A HREF="<? echo $UP[0];?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to <? echo $UP[1];?>" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
+<? makeBorderTOC($title);?>
 </TD></TR>
 </TABLE>
 </TD>
@@ -270,15 +217,15 @@ document.writeln("</STYLE>");
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=+1><B>$title</B></FONT><BR></TD>\n";
 ?>
 <TD ALIGN=right><?
-if($function=="Show Source"):
-	echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hide();\"><IMG SRC=\"/new/gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
-else:
-	echo "<IMG SRC=\"/new/gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
-	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hide();\">";
-	echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
-	echo "</A>";
-endif;
+     if($title=="Show Source") {
+	 echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
+	 echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hide();\"><IMG SRC=\"/new/gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
+     } else {
+	 echo "<IMG SRC=\"/new/gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
+	 echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hide();\">";
+	 echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
+	 echo "</A>";
+    }
 ?><A HREF="/new/search.php3" onMouseover="change('sear',1);showLayer('searchKick');"><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
@@ -287,46 +234,46 @@ endif;
 <TD ALIGN=left WIDTH="100%"><FONT FACE="<? echo $FONTFACE;?>"><BR>
 <!-- start next/prev -->
 <?
-if ($function!="Show Source"):
-		echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
-		echo "<TR VALIGN=middle>\n";
-		echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-		if ($PREV_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"change('prev',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev' align=absmiddle></A><BR></TD>\n";
-		endif;
-		echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV_FUNC<BR></TD>\n";
-		echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT_FUNC&nbsp;<BR></TD>\n";
-		if ($NEXT_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"change('next',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next' align=absmiddle></A><BR></TD>\n";
-		endif;
-		echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-		echo "</TR></TABLE>\n";
-		echo "<BR>\n";
-endif;
-echo "<!-- start body -->\n";
-};
+    if ($title!="Show Source") {
+	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
+	echo "<TR VALIGN=middle>\n";
+	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	if ($PREV[0] && $PREV[1]) {
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev' align=absmiddle></A><BR></TD>\n";
+	}
+	echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></TD>\n";
+	echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></TD>\n";
+	if ($NEXT[0] && $NEXT[1]) {
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next' align=absmiddle></A><BR></TD>\n";
+	}
+	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "</TR></TABLE>\n";
+	echo "<BR>\n";
+    }
+    echo "<!-- start body -->\n";
+}
 
-function manualFooter($function) {
-	global $MIRRORS, $MYSITE, $COUNTRIES, $FONTFACE, $NEXT_FUNC, $NEXT_URL, $PREV_FUNC, $PREV_URL;
-	$country=$MIRRORS[$MYSITE][0];
-	echo "<!-- start next/prev -->\n";
-	getNextPrevCat($function);
-	if ($function!="Show Source"):
-		echo "<BR><BR>\n";
-		echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
-		echo "<TR VALIGN=middle>\n";
-		echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-		if ($PREV_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"change('prev2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev2' align=absmiddle></A><BR></TD>\n";
-		endif;
-		echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV_FUNC<BR></TD>\n";
-		echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT_FUNC&nbsp;<BR></TD>\n";
-		if ($NEXT_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"change('next2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next2' align=absmiddle></A><BR></TD>\n";
-		endif;
-		echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-		echo "</TR></TABLE>\n";
-	endif;
+function manualFooter($title) {
+    global $MIRRORS, $MYSITE, $COUNTRIES, $FONTFACE;
+    global $NEXT, $PREV, $UP, $HOME, $TOC;
+    $country = $MIRRORS[$MYSITE][0];
+    echo "<!-- start next/prev -->\n";
+    if ($title!="Show Source") {
+	echo "<BR><BR>\n";
+	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
+	echo "<TR VALIGN=middle>\n";
+	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	if ($PREV[0] && $PREV[1]) {
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev2' align=absmiddle></A><BR></TD>\n";
+	}
+	echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></TD>\n";
+	echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></TD>\n";
+	if ($NEXT[0] && $NEXT[1]) {
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next2' align=absmiddle></A><BR></TD>\n";
+	}
+	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "</TR></TABLE>\n";
+    }
 ?>
 <!-- end body -->
 </TD></TR>
@@ -407,5 +354,5 @@ layers = 1;
 </BODY>
 </HTML>
 <?
-};
+}
 ?>
