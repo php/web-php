@@ -15,7 +15,8 @@ Now, make sure your web server is set up to serve up .php3 and .php
 files as PHP parsed files.  If it isn't, add the mime-type to your config.
 
 Rename the configuration.inc-dist file to configuration.inc and edit it
-appropriately.  
+appropriately.  Set $failover_user_notes=true to enable a live query
+to www.php.net to fetch user contributed manual notes.
 
 Once you create a virtualhost which looks something like:
 
