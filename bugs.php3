@@ -419,7 +419,7 @@ of grouping them all in one report.
   </td>
   <td>
    <font size="-2">
-   Please don't report bugs in versions earlier than the Release Candidate, but instead,
+   Please don't report bugs in versions earlier than the final 3.0 release, but instead,
    upgrade first, and check if the bug still exists.
    </font>
   </td>
