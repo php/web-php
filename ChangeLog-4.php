@@ -5,6 +5,217 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.2.0"></a>
+<h3>Version 4.2.0</h3>
+<b>22-Apr-2002</b>
+<ul>
+<li>ATTENTION!! register_globals defaults to 'off' now !!!</li>
+<li>Note: Apache2 support is EXPERIMENTAL.</li>
+<li>Moved ext/mailparse to PECL. See <a href="http://thebrainroom.com/opensource/php/">http://thebrainroom.com/opensource/php/</a>
+for more information and to download the extension. (Wez/Jim)</li>
+<li>Fixed pg_last_notice() crash. (Yasuo)</li>
+<li>Modified the mysql extension to disable 'LOAD LOCAL' when safe mode is
+enabled. (Jason)</li>
+<li>Fixed HTTP file upload support to handle big files better. (Jani)</li>
+<li>Major modifications to the Sockets Extension and its API (Jason):
+  <ul>
+  <li>Fixed numerous bugs.</li>
+  <li>Added automatic host lookup capability to all functions that take addr's.
+example: socket_connect($sock, 'www.yahoo.com', 80);</li>
+  <li>Corrected and standardized host lookup errors</li>
+  <li>Modified socket_recv() behavior. [$r=socket_recv($sock, $buf, $len, $flags)]</li>
+  <li>Added socket_set_block() which changes a socket into blocking IO mode</li>
+  <li>Modified socket_last_error() to not clear the last error</li>
+  <li>Added socket_clear_error() which clears the last error on a socket</li>
+  <li>Removed all code pertaining to fd_sets (socket_fd_*)</li>
+  <li>Modified/Improved socket_select() to accept array of resources instead of fd_sets. example:
+    <ul>
+    &lt;?php<br />
+    $wfds=$rfds=array($sock1, $sock2, $sock3, $sock7);<br />
+    $r=socket_select($rfds, $wfds, NULL, 1);<br />
+    print "Ready to read:\n"; var_dump($rfds);<br />
+    ?&gt;<br />
+    </ul></li>
+  </ul></li>
+<li>Fixed segfault in ibase_close() if user does not free the resultset.
+Bugs <a href="http://bugs.php.net/bug.php?id=15419">#15419</a>, <a href="http://bugs.php.net/bug.php?id=15992">#15992</a>. (daniela)</li>
+<li>Fixed pg_last_notice() crash. (Yasuo)</li>
+<li>Added optional 3rd parameter "int encoding_mode" to gzencode() and fixed
+parameters to conform documentation. (Stefan)</li>
+<li>Changed read_exif_data() to be an alias of exif_read_data(). (Marcus)</li>
+<li>Added exif_tagname() function which returns the names of tags and
+exif_thumbnail() function to extract embedded thumbnails. (Marcus)</li>
+<li>Fixed iconv support with FreeBSD. (kalowsky)</li>
+<li>Cleaned up the posix extension: (Markus)
+<ul>
+  <li>Removed unwanted warning messages</li>
+  <li>Added posix_errno() and posix_strerror() for fetching error messages</li>
+  <li>Changed the way posix_getgrnam() and posix_getgrgid() return their values
+(breaks BC but makes more sense)</li>
+  <li>Does not include functions in symbol table which aren't supported on host
+system.</li>
+</ul></li>
+<li>Added TIFF support for getimagesize() and read_exif_data(). (Marcus)</li>
+<li>Changed the Velocis extension namespace to Birdstep to reflect new product
+name. Added aliases for BC. (James)</li>
+<li>Added safe_mode checks for opendir(). (jflemer)</li>
+<li>Changed the 2nd parameter in pgsql_fetch_*() functions to support NULL if
+all 3 parameters are supplied, but you do not want to provide a row number.
+(Derick)</li>
+<li>Improved iconv() when using libc's iconv. (Yasuo)</li>
+<li>Added PHP_SAPI constant which contains the name of running SAPI. (Edin)</li>
+<li>Added ob_get_status() which returns an array of buffers with their status.
+(Yasuo)</li>
+<li>Fixed a crash bug in ob_end_*() functions. ob_end_*() will not delete
+buffers that may not be deleted. (Yasuo)</li>
+<li>Added 3rd parameter "bool erase" to ob_start(). If FALSE, the buffer may not
+be deleted until script finishes. (Yasuo)</li>
+<li>Changed ob_*() functions to return TRUE for success, FALSE for failure.
+(Yasuo)</li>
+<li>Added sybase_ct support to dbx module. (Marc)</li>
+<li>Fixed error message handling with PostgreSQL 7.2. (Rui)</li>
+<li>Added object aggregation capability, see aggregation_*() functions. (Andrei)</li>
+<li>Added debug_zval_dump() which works similarly to var_dump, but displays
+extra internal information such as refcounts and true type names. (Jason)</li>
+<li>Added Andrei's tokenizer extension. (Stig)</li>
+<li>Fixed a bug in the COM extension which caused php to crash in
+php_COM_get_ids_of_names(). (Paul, Harald)</li>
+<li>Removed ext/satellite. It is now part of PEAR. (eriksson)</li>
+<li>Changed php.ini directive 'safe_mode_include_dir' to accept a (semi)colon
+separated path (like 'include_path') rather than a single directory.
+(jflemer)</li>
+<li>Added is_a() function that can be used to test whether object is of a certain
+class or is derived from it. (Andrei, Zend Engine)</li>
+<li>Added optional parameter to highlight_string() and highlight_file() which
+makes these functions to return a highlighted string instead of dumping
+it to standard output. (Derick)</li>
+<li>Added EXTR_IF_EXISTS and EXTR_PREFIX_IF_EXISTS flags to extract(). (Rasmus)</li>
+<li>Fixed a segfault in pg_pconnect(). If PostgreSQL server is restarted, broken
+connection is detected and reconnected. (Yasuo)</li>
+<li>Fixed --enable-safe-mode configure option. (Yasuo)</li>
+<li>Added function domxml_dump_node($doc,$node). Dumps a node plus all children
+into a string. (chregu)</li>
+<li>Added function domxml_node_get_content(). (chregu)</li>
+<li>Added function domxml_dump_file($filename,[$compression]). Dumps XML to
+a file and uses compression, if specified. (chregu)</li>
+<li>Added exslt integration to domxml extension (<a href="http://exslt.org/">http://exslt.org/</a> for details).
+Configure with --with-dom-exslt[=DIR] (and --with-dom-xslt).
+(chregu,jaroslaw)</li>
+<li>Fixed session_unset() to not touch any globals if register_globals is off.
+(Thies)</li>
+<li>Added 3 new optional parameters to OCIFetchStatement(). They control
+the number of rows to skip at the beginning of the cursor, the
+maximun numer of rows that should be fetched and the format of the
+returned array. (Thies)</li>
+<li>Updated the XSLT extension to support Sablotron 0.8. (Petr Cimprich)</li>
+<li>Fixed a bug in preg_match() and preg_match_all() when matching strings
+contain null bytes. (Andrei)</li>
+<li>Added xpath_register_ns() function. This makes it possible to issue XPath
+queries with namespaces like for example: "//namespace:sampletag".
+(Chris Jarecki)</li>
+<li>Added multi-byte enabled regular expression functions. (Rui)</li>
+<li>Added optional second parameter to count() which can be used to specify
+either normal or recursive counting. (patch by Vlad Bosinceanu &lt;<a href="mailto:glipy@fx.ro">glipy@fx.ro</a>&gt;)</li>
+<li>Added mb_get_info() to get internal settings of mbstring. (Rui)</li>
+<li>Added async query functions to PostgreSQL module. (Yasuo)</li>
+<li>Added pg_copy_to()/pg_copy_from() for PostgreSQL module. (Youichi, Yasuo)</li>
+<li>Added IPv6 support for FTP extension. (Stig Venaas)</li>
+<li>Improved the speed of wordwrap() significantly. (Jim)</li>
+<li>Fixed pow()'s incorrect behaviour when dealing with powers of 0. (Jim)</li>
+<li>Added is_finite(), is_infinite() and is_nan(). (Jim)</li>
+<li>Fixed segfault in wordwrap() when wrapping to zero width and using
+multi-character break or trying to force cut (bug <a href="http://bugs.php.net/bug.php?id=12768">#12768</a>). (Jim)</li>
+<li>Fixed several bugs in dbase extension (dbase_pack() truncate file to right
+size, fix <a href="http://bugs.php.net/bug.php?id=6852">6852 #1 and 6852 #2</a>). (Vlad)</li>
+<li>Fixed bug in krsort() where an extra character was being compared. (Andi)</li>
+<li>Fixed bug that made pspell include pspell.h from a wrong location. (Vlad)</li>
+<li>Added function overload in mbstring to add multibyte support for
+string and mail functions. (Rui)</li>
+<li>Added flags parameter to preg_grep(). The only flag currently is
+PREG_GREP_INVERT that will make the function return entries that
+did not match. (Andrei)</li>
+<li>Fixed several crash bugs in the xslt extension. (Markus, Derick)</li>
+<li>Fixed problem with dbase not returning very large (larger than long)
+integers properly. (Vlad)</li>
+<li>Added concepts to IRCG: bailout-on-trivial issue, write output to
+files, fetch a resource upon connection end. (Sascha)</li>
+<li>Fixed POST-related bugs in thttpd, added QUERY_STRING, HTTP_HOST,
+HTTP_ACCEPT_LANGUAGE to the script environment, improved patch
+to send correct MIME types, and added support for /nocache/. (Sascha)</li>
+<li>Fixed several bugs and memleaks in the domxml extension. (Markus)</li>
+<li>Added var_export() which outputs a representation of a variable as reusable
+PHP code. (Derick)</li>
+<li>Added -w option to the CGI-version to strip all comments and whitespace
+from the script. (Thies)</li>
+<li>Added support for SO_RCVTIMEO and SO_SNDTIMEO to ext/sockets. (Jason)</li>
+<li>Added ob_get_level() which returns the nesting level of the output buffering
+mechanism. (Yasuo, Derick)</li>
+<li>Added ob_flush() and ob_clean() functions which flush and clean an output
+buffer without destroying the buffer. (Derick)</li>
+<li>Added new optional parameter to mysql_connect() which forces a new database
+link to be created. (Markus, Derick)</li>
+<li>Added ldap_sort() function. (Stig Venaas)</li>
+<li>Added md5_file() function which calculates the MD5 sum of a file.
+Patch by Alessandro Astarita &lt;<a href="mailto:aleast@capri.it">aleast@capri.it</a>&gt; (Derick)</li>
+<li>Added support for parsing recordsets contained in WDDX packets. (Andrei)</li>
+<li>Renamed key_exists() to array_key_exists(). (Derick)</li>
+<li>Fixed ImageColorsForIndex() and ImageColorAt() to work for TrueColor
+images. (Rasmus)</li>
+<li>Added support for bind_textdomain_codeset(). &lt;<a href="mailto:rudib@email.si">rudib@email.si</a>&gt;</li>
+<li>Added generic Win 32 API extension. (jmoore)</li>
+<li>Removed warning message about NONEXISTENT character set from mysql_connect()
+when the server's default character set != latin1. (MySQL Team)</li>
+<li>Added Direct I/O extension for lowlevel access to the POSIX layer. (Sterling)</li>
+<li>Added SAPI module for the WebJames server on RISC OS. (Alex Waugh)</li>
+<li>Fixed ldap_add() and ldap_modify() functions to throw a warning with illegal
+value arrays. Previously segfaulted or added wrong value. (Stig Venaas)</li>
+<li>Added udm_check_charset() function into mnoGoSearch extension. (gluke)</li>
+<li>Fixed mnoGoSearch extension to support mnogosearch-3.2.x. (gluke)</li>
+<li>Made fbsql_num_rows() to return the correct value on all select statements.
+(Frank)</li>
+<li>Added array_chunk() function which splits an array into chunks of specified
+size. (Andrei)</li>
+<li>Fixed $HTTP_RAW_POST_DATA to be populated on a missing content-type when
+always_populate_raw_post_data is on. (Rasmus)</li>
+<li>Added session_cache_expire() function. (patch by &lt;<a href="mailto:anuradha@gnu.org">anuradha@gnu.org</a>&gt;) (Andrei)
+<li>Added array_fill() function. (Rasmus)</li>
+<li>Made Authorization header to be hidden from phpinfo() output in safe_mode.
+(Rasmus)</li>
+<li>Re-instated safe-mode realm mangling. (Rasmus)</li>
+<li>Fixed a bug in preg_replace() that would change the type of the replacement
+array entries to string. (Andrei)</li>
+<li>Added user-space object overloading extension. (Andrei)</li>
+<li>Added ldap_start_tls() function. (Stig Venaas, patch by &lt;<a href="mailto:kuenne@rentec.com">kuenne@rentec.com</a>&gt;)
+<li>Changed rand() and mt_rand() to be seed automatically if srand() or
+mt_srand() has not been called. (Sterling)</li>
+<li>Changed the seed options to srand() and mt_srand() to be optional. If the
+seed is not specified the most random seed possible is generated. (Sterling)</li>
+<li>Added array_change_key_case() function which returns an array with all
+string keys lowercased or uppercased. (Edin)</li>
+<li>Added parameter to ircg_pconnect to suppress treating non-fatal errors
+as fatal, and added conversion of Windows quotes to &amp;quot;. (Sascha)</li>
+<li>Added pcntl_exec() function which behaves similar to the system execve.
+(Jason)</li>
+<li>Fixed segfault and check for truecolor image in ImageColorAt(). (Rasmus)</li>
+<li>Fixed nl2br() to handle all styles of line-endings in one string.
+(Boian, Derick)</li>
+<li>Added mcrypt_generic_deinit() to replace mcrypt_generic_end(). (Derick)</li>
+<li>Added apache_setenv() function for injecting variables into Apache's
+subprocess_env table. (Rasmus)</li>
+<li>Added support for 'int', 'bool', 'float' and 'null' in settype(). (Jeroen)</li>
+<li>Added IPv6 support to gethostbyaddr().
+(Patch by Matthias Wimmer &lt;<a href="mailto:matthias@charente.de">matthias@charente.de</a>&gt; and venaas)</li>
+<li>Fixed LONG_VARCHAR type crashing in ODBC extension. Patch by Walter Franzini.
+(kalowsky)</li>
+<li>Changed in_array() and search_array() to allow the needle to be an array
+in itself. (Andrei)</li>
+<li>Added ini_get_all() function which returns all registered ini entries
+or entries for the specified extension. (Jani)</li>
+<li>Added support for chinese encodings in htmlentities() and htmlspecialchars().
+(Patch by Alan Knowles &lt;<a href="mailto:alan_k@hklc.com">alan_k@hklc.com</a>&gt; and Wez)</li>
+<li>Improved support for autoconf-2.50+/libtool 1.4b+. (Jan Kneschke, Sascha)</li>
+</ul>
+
 <a name="4.1.2"></a>
 <h3>Version 4.1.2</h3>
 <b>27-Feb-2002</b>
@@ -105,11 +316,11 @@ commonheader("PHP 4 ChangeLog");
   variables to the global scope (Zeev)</li>
 <li>Introduced a new $_REQUEST array, which includes any GET, POST or COOKIE
   variables.  Like the other new variables, this variable is also available
-  regardless of the context.  (Andi & Zeev)</li>
+  regardless of the context.  (Andi &amp; Zeev)</li>
 <li>Introduced $_GET, $_POST, $_COOKIE, $_SERVER and $_ENV variables, which
   deprecate the old $HTTP_*_VARS arrays.  In addition to be much shorter to
   type - these variables are also available regardless of the scope, and 
-  there's no need to import them using the 'global' statement.  (Andi & Zeev)</li>
+  there's no need to import them using the 'global' statement.  (Andi &amp; Zeev)</li>
 <li>Added vprintf() and vsprintf() functions that allow passing all arguments
   after format as an array. (Andrei)</li>
 <li>Added support for GD2 image type for ImageCreateFromString() (Jani)</li>
@@ -130,13 +341,13 @@ commonheader("PHP 4 ChangeLog");
 <li>Added optional second parameter to trim, chop and ltrim. You can
   now specify which characters to trim (jeroen)</li>
 <li>Hugely improved the performance of the thread-safe version of PHP, especially
-  under Windows (Andi & Zeev)</li> 
-<li>Improved request-shutdown performance significantly (Andi & Zeev, Zend
+  under Windows (Andi &amp; Zeev)</li> 
+<li>Improved request-shutdown performance significantly (Andi &amp; Zeev, Zend
   Engine)</li>
 <li>Added a few new math functions. (Jesus)</li>
 <li>Bump bundled expat to 1.95.2 (Thies)</li>
 <li>Improved the stability of OCIPlogon() after a database restart. (Thies)</li>
-<li>Fixed __FILE__ in the CGI & Java servlet modes when used in the main script.
+<li>Fixed __FILE__ in the CGI &amp; Java servlet modes when used in the main script.
   It only worked correctly in included files before this fix (Andi)</li>
 <li>Improved the Zend hash table implementation to be much faster (Andi, Zend
   Engine)</li>
@@ -166,7 +377,7 @@ commonheader("PHP 4 ChangeLog");
   ranges. (Rasmus)</li>
 <li>Added getmygid() and safe_mode_gid ini directive to allow safe mode to do
   a gid check instead of a uid check. (James E. Flemer, Rasmus)</li>
-<li>Made assert() accept the array(&$obj, 'methodname') syntax. (Thies)</li>
+<li>Made assert() accept the array(&amp;$obj, 'methodname') syntax. (Thies)</li>
 <li>Made sure that OCI8 outbound variables are always zero-terminated. (Thies)</li>
 <li>Fixed a bug that allowed users to spawn processes while using the 5th
   parameter to mail(). (Derick)</li>

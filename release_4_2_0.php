@@ -60,7 +60,7 @@ echo "\n<!--$MYSITE-->\n";
 PHP 4.2.0 Release Announcement
 </h1>
 
-<p>After an ordered QA process, PHP 4.2.0 is <a href="http://www.php.net/downloads.php">out</a>!</p>
+<p>After an orderly QA process, PHP 4.2.0 is <a href="http://www.php.net/downloads.php">out</a>!</p>
 
 <h2>External variables</h2>
 
@@ -78,8 +78,9 @@ PHP 4.2.0 Release Announcement
 
 <h2>Compatibility</h2>
 
-<p>The Apache group released their first General Availability version of Apache
- 2.  PHP 4.2.0 will have <b>EXPERIMENTAL</b> support for this version. You can
+<p>The Apache Software Foundation recently released their first
+ General Availability version of Apache 2. PHP 4.2.0 will have
+ <b>EXPERIMENTAL</b> support for this version. You can
  build a DSO module for Apache 2 with --with-apxs2. We do <b>not</b> recommend
  that you use this in a production environment.
 </p>
@@ -93,7 +94,7 @@ PHP 4.2.0 Release Announcement
  with other PHP platforms.</p>
 
 <h2>Improvements</h2>
-<p>PHP 4.2.0 includes several other improvements:</p>
+<p>PHP 4.2.0 includes several improvements:</p>
 <ul>
  <li><b>External variables (from the environment, the HTTP request, cookies or
   the web server) are no longer registered as global variables</b></li>
@@ -112,7 +113,7 @@ PHP 4.2.0 Release Announcement
 
 <p>
 For a full list of changes in PHP 4.2.0, see the
-<a href="http://cvs.php.net/co.php/php4/NEWS?r=1.885.2.19">NEWS</a> file.
+<a href="/ChangeLog-4.php">NEWS</a> file.
 </p>
 
 <?php commonFooter(); ?>
