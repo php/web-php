@@ -185,7 +185,7 @@ function kickHeader($offset,$side,$width) {
 	if ($side=="none"):
 		$tablewidth=$tablewidth+1;
 	endif;
-	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=$tablewidth>\n";
+	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>\n";
 	if ($side=="left" || $side=="none"):
 		echo "<TR>\n";
 		if ($offset>=0):
@@ -205,7 +205,7 @@ function kickHeader($offset,$side,$width) {
 		endif;
 	else:
 		if ($offset>=0):
-			echo "<TR>\n<TD colspan=4 align=left width=$width>";
+			echo "<TR>\n<TD colspan=4 align=left>";
 			spc($off,1);
 			echo "<IMG SRC='/gifs/bubbles-down.gif' WIDTH=50 HEIGHT=50 BORDER=0><BR></TD></TR>\n";
 		else:
@@ -216,7 +216,7 @@ function kickHeader($offset,$side,$width) {
 		echo "<TR VALIGN=top>\n";
 	endif;
 	echo "<TD width=9><IMG SRC='/gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
-	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bt.gif' width=$innerwidth2>";
+	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bt.gif'>";
 	spc(1,10);
 	echo "<BR></TD>\n<TD width=10><IMG SRC='/gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
 	echo "</TR>\n";
@@ -234,7 +234,7 @@ function kickFooter($kickname,$buttname,$width) {
 	spc(10,1);
 	echo "<BR></TD>\n</TR>\n<TR VALIGN=top>\n";
 	echo "<TD width=9><IMG SRC='/gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>\n";
-	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bb.gif' width=$innerwidth2>";
+	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bb.gif' >";
 	spc(1,10);
 	echo "<BR></TD>\n<TD width=10><IMG SRC='/gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>\n";
 	echo "</TR>\n</TABLE>\n";
@@ -666,16 +666,18 @@ endwhile;
 <? kickHeader(30,'left',400);?>
 <FORM ACTION='/manual-lookup.php3' METHOD='POST'>
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
-Type in a PHP function name or feature to jump to that page of the online
-manual:<BR>
+Type in a PHP function name or feature to<BR>
+jump to that page of the online manual:<BR>
 <FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=25></FONT>
 <INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
-or click on this button to get an alphabetical listing of all PHP functions.
+or click on this button to get an alphabetical listing of all<BR>
+PHP functions.  
 <? if ($FRAMEMODE != "manual"): ?>
- (you can still click on the <B>documentation</B> button on the left for other documentation resources.)
+(You can still click on the <B>documentation</B><BR>
+button on the left for other documentation resources.)
 <? endif;?><BR>
-<? kickFooter("qrefKick","qref",350);?>
+<? kickFooter("qrefKick","qref",400);?>
 </DIV>
 
 <?
