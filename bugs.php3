@@ -228,8 +228,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 		echo "If the status of the bug report you submitted\n";
 		echo "changes, you will be notified.  You may return here and check on the status\n";
-		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://bugs.php.net?id=$cid\">";
-		echo "http://bugs.php.net?id=$cid</a>\n";
+		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
+		echo "http://bugs.php.net/?id=$cid</a>\n";
     } else {
         echo("<p><h2>Mail not sent!</h2>\n");
         echo("Please send this page in a mail to " .
@@ -370,7 +370,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment\n";
-			$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
+			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
 
@@ -410,7 +410,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
 			$text .= "Description: $esdesc\n\n$ncomment\n";
-			$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
+			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
