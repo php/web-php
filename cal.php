@@ -172,9 +172,9 @@ CREATE TABLE phpcal (
 <table border=0 cellspacing=0 cellpadding=3 width=100%><tr bgcolor=#d0d0d0>
 <th align=left>
 <table width=100% border=0>
-<tr><td align=left><a href="cal.php?a=<?phpecho $a?>&ap=<?phpecho $ap?>&cm=<?phpecho $pm?>&cy=<?phpecho $py?>"><?phpecho $months[$pm].', '.$py?></a></td>
-<td align=center><b><?phpecho $month,', '.$y?></b></td>
-<td align=right><a href="cal.php?a=<?phpecho $a?>&ap=<?phpecho $ap?>&cm=<?phpecho $nm?>&cy=<?phpecho $ny?>"><?phpecho $months[$nm].', '.$ny?></a></td></tr></table></th>
+<tr><td align=left><a href="cal.php?a=<?php echo $a?>&ap=<?php echo $ap?>&cm=<?php echo $pm?>&cy=<?php echo $py?>"><?php echo $months[$pm].', '.$py?></a></td>
+<td align=center><b><?php echo $month,', '.$y?></b></td>
+<td align=right><a href="cal.php?a=<?php echo $a?>&ap=<?php echo $ap?>&cm=<?php echo $nm?>&cy=<?php echo $ny?>"><?php echo $months[$nm].', '.$ny?></a></td></tr></table></th>
 </tr>
 <tr bgcolor=#d0d0d0><td>
 <table border=1 cellspacing=0 cellpadding=3 width=100%>
@@ -235,7 +235,7 @@ function draw_event($ev) {
 ?>
 <tr bgcolor=#d0d0d0><td>
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th><?phpecho $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
+<tr bgcolor=#a0a0a0><th><?php echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?php echo ini_get('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
 <tr bgcolor=#a0a0a0><th>
 <?php switch($event['tipo']) {
 	case 1:
@@ -251,7 +251,7 @@ function draw_event($ev) {
   }
 ?>
 </th></tr>
-<tr bgcolor=#a0a0a0><th>App. by: <?phpecho $event['app_by']?></th></tr>
+<tr bgcolor=#a0a0a0><th>App. by: <?php echo $event['app_by']?></th></tr>
 </table>
 </td></tr>
 <?php
@@ -261,7 +261,7 @@ function draw_app() {
 	global $a,$cm,$cy, $user, $pw;
 ?>
 <tr bgcolor=#d0d0d0><td>
-<form action="cal.php?a=<?phpecho $a?>&cm=<?phpecho $cm?>&cy=<?phpecho $cy?>" method="POST">
+<form action="cal.php?a=<?php echo $a?>&cm=<?php echo $cm?>&cy=<?php echo $cy?>" method="POST">
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
 <tr bgcolor=#a0a0a0><th>&nbsp;</th><th align=left>When</th><th align=left>Label</th><th align=left>Description</th><th align=left>URL</th></tr>
 <?php
@@ -270,7 +270,7 @@ function draw_app() {
 	$col = array('#e0e0e0','#f0f0f0'); $i=0;
 	if(count($events)) {
 		foreach($events as $e) {
-			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>".(get_cfg_var('magic_quotes_gpc')?stripslashes($e[3]):$e[3])."</td><td>$e[4]</td></tr>\n";	
+			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>".(ini_get('magic_quotes_gpc')?stripslashes($e[3]):$e[3])."</td><td>$e[4]</td></tr>\n";	
 			$i++;
 		}
 		echo "<tr><td align=left colspan=5><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom> &nbsp; <b>CVS Login</b>: <input type=text name=user value=\"$user\"> <b>CVS Passwd</b>: <input type=password name=pw value=\"$pw\"></td></tr>";
@@ -290,7 +290,7 @@ function draw_add() {
 	global $url, $sdesc, $ldesc, $ap, $re, $cm, $cy;
 ?>
 <tr bgcolor=#d0d0d0><td>
-<form action="cal.php?ap=<?phpecho $ap?>&cm=<?phpecho $cm?>&cy=<?phpecho $cy?>" method="POST">
+<form action="cal.php?ap=<?php echo $ap?>&cm=<?php echo $cm?>&cy=<?php echo $cy?>" method="POST">
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
 <tr bgcolor=#e0e0e0><th>Start Date</th><td colspan=2><select name="smonth">
 <?php
@@ -302,7 +302,7 @@ function draw_add() {
 	}
 ?>
 </select>
-<input type=text name="sday" size=2 maxlength=2 value=<?phpecho $sday?>>
+<input type=text name="sday" size=2 maxlength=2 value=<?php echo $sday?>>
 <input type=text name="syear" size=4 maxlength=4 value="<?phpif($syear) echo $syear; else echo date("Y");?>">
 <input type="radio" name="type" value="single" CHECKED> Just one day (no end-date required)
 </td>
@@ -317,7 +317,7 @@ function draw_add() {
 	}
 ?>
 </select>
-<input type=text name="eday" size=2 maxlength=2 value="<?phpecho $eday?>">
+<input type=text name="eday" size=2 maxlength=2 value="<?php echo $eday?>">
 <input type=text name="eyear" size=4 maxlength=4 value="<?phpif($eyear) echo $eyear; else echo date("Y")?>">
 <input type="radio" name="type" value="multi"> Multi-day event
 </td>
@@ -342,10 +342,10 @@ foreach($re as $k=>$v) {
 <input type="radio" name="type" value="recur"> Recurring (every month)
 </td>
 </tr>
-<tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
+<tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?php echo ini_get('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
 </td><td align=center><input type="submit" value=" Submit " name="new"></td></tr>
-<tr bgcolor=#e0e0e0><th>URL</th><td colspan=2><input type=text name="url" size=60 maxlength=128 value="<?phpecho $url?>"></td></tr>
-<tr bgcolor=#e0e0e0><th>Long<br>Description</th><td colspan=2><textarea name="ldesc" cols=78 rows=10 maxlength=78 wrap=virtual><?phpecho get_cfg_var('magic_quotes_gpc')?stripslashes($ldesc):$ldesc?></textarea></td></tr>
+<tr bgcolor=#e0e0e0><th>URL</th><td colspan=2><input type=text name="url" size=60 maxlength=128 value="<?php echo $url?>"></td></tr>
+<tr bgcolor=#e0e0e0><th>Long<br>Description</th><td colspan=2><textarea name="ldesc" cols=78 rows=10 maxlength=78 wrap=virtual><?php echo ini_get('magic_quotes_gpc')?stripslashes($ldesc):$ldesc?></textarea></td></tr>
 </table>
 </td></tr>
 </form>
@@ -355,8 +355,8 @@ foreach($re as $k=>$v) {
 	if(isset($type)) {
 
 		/* Assuming track_vars is on */
-		$rg = get_cfg_var('register_globals');
-		$mq = get_cfg_var('magic_quotes_gpc');
+		$rg = ini_get('register_globals');
+		$mq = ini_get('magic_quotes_gpc');
 		foreach($HTTP_POST_VARS as $k=>$v) {
 			if(!$mq) $$k = addslashes($v);
 			elseif(!$rg) $$k = $v;
