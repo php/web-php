@@ -79,7 +79,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
-<h1>Fouth sample of 'PHP Manual CHM Edition' available</h1>
+<h1>Fourth sample of 'PHP Manual CHM Edition'</h1>
 
 <p>
 <font class="newsDate">[16-Feb-2002]</font>
