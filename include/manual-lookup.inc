@@ -134,7 +134,7 @@ function find_manual_page($lang, $keyword)
 
     // Check for all the languages
     foreach ($langs as $lang) {
-        $q = sqlite_query($s, str_replace('LANG_HERE', $lang, $SQL));
+        $q = @sqlite_query($s, str_replace('LANG_HERE', $lang, $SQL));
         
         // Successful query
         if ($q) {
