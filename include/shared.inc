@@ -606,13 +606,9 @@ modified.  <B>I recommend using another mirror.</B><BR>
 	echo "NS3: ".$NS3."<BR>\n";
 	echo "NS4: ".$NS4."<BR>\n";
 	echo "X11: ".$X11."<BR>\n";
-	echo "Style: ".$HAVE_STYLE."<BR>\n";
+	echo "Style: ".$HAVE_STYLE."<BR>\n</FONT>\n";
 endif;
 ?>
-
-</FONT>
-
-
 
 </BODY>
 </HTML>
