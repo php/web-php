@@ -184,10 +184,9 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <p>
- <a href="http://shop.phpwest.com/product_info.php/products_id/28">Early Bird
- Specials</a> are in effect right now, tickets are only $40 until December 26th!
- Due to limited capacity for this event we recommend you register soon to
- reserve your seat.
+ <a href="http://shop.phpwest.com/product_info.php/products_id/28">Tickets
+ are only 50$!</a> Due to limited capacity for this event we recommend
+ you register soon to reserve your seat.
 </p>
 
 <hr />
