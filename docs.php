@@ -138,7 +138,7 @@ with the development of PHP, read this.
 
 <h1>Old/Unsupported Information</h1>
 <ul>
-<li><a href="/manual/phpfi2.html">PHP/FI 2.0 Manual</a>. 
+<li><a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>. 
 </ul>
 
 
