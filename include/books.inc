@@ -572,6 +572,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "PHP MySQL Website Programming",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861008279/wwwphpnet",
+    /* author[s]    */ array("Chris Lea", "Mike Buzzard", "Jessey White-Cinis", "Dilip Thomas"),
+    /* auth link[s] */ "",
+    /* image        */ "1861008279.gif",
+    /* information  */ "Wrox Press Inc, Mar 2003, ISBN 1-861008-27-9, 500 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861008279.htm",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP Developer's Dictionary",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet/",
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
