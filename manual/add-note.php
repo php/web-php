@@ -65,9 +65,9 @@ on-line notes</A>.
 Just add your comment in the big field below (and your email address in the
 little one).
 
-<P>Note that only <b>&lt;BR&gt;</b> and <b>&lt;P&gt;</b> tags are allowed in
-the user notes.  We tried allowing a much broader range in the past, but people
-invariably made a mess of things making the manual hard to read for everybody.
+<P>Note that HTML tags are not allowed in the posts. We tried allowing them
+in the past, but people invariably made a mess of things making the manual
+hard to read for everybody.
 
 <P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a bug</A>, you're in the wrong place.
 If you are just commenting on the fact that something is not documented,
