@@ -37,6 +37,8 @@ commonHeader("Documentation ");
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
+<li><? download_link("manual_a-l.pdf", "PHP PDF Manual Part 1"); ?>. Function Reference I (Adabas) - XXVI (LDAP).
+<li><? download_link("manual_m-x.pdf", "PHP PDF Manual Part 2"); ?>. Function Reference XXVII (Mail) - LV (XML).
 
 <li><?download_link("distributions/unsupported/manual-3_0_11.pdf", "PHP Manual in PDF format");?> This is a third-party conversion of the PHP manual to indexed PDF format. (This is completely unsupported, and lags behind the other formats of the documentation available here.)
 
