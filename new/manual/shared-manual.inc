@@ -112,14 +112,14 @@ if (IE4) LoadImgs();
 <?
 if($THIS_FUNC=="Show Source"):
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hideAll();change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Back to the manual\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"close\"></A>";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Back to the manual\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"close\"></A>";
 else:
 	echo "<IMG SRC=\"gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
-	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"hideAll();change('sour',1);\" onMouseout=\"hideAll();\">";
+	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hideAll();\">";
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="../search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME="sear"></A><IMG SRC="gifs/p-cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+?><A HREF="../search.php3" onMouseover="change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME="sear"></A><IMG SRC="gifs/p-cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% BGCOLOR="#C0C0C0">
 <TR valign=middle>
@@ -128,7 +128,7 @@ endif;
 <? if($PREV_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-prev-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"prev\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
-	echo "<A HREF=\"$PREV_URL\" onMouseover=\"hideAll();change('prev',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prev\"></A><BR>";
+	echo "<A HREF=\"$PREV_URL\" onMouseover=\"change('prev',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prev\"></A><BR>";
 	echo "&nbsp;$PREV_FUNC<BR>";
 endif;?></TD>
 <TD ALIGN=center width=100%><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1>
@@ -137,7 +137,7 @@ endif;?></TD>
 <? if($NEXT_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-next-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"next\"><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
-	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"hideAll();change('next',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"next\"></A><BR>";
+	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"change('next',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"next\"></A><BR>";
 	echo "$NEXT_FUNC&nbsp;<BR>";
 endif;?></TD>
 <TD ALIGN=left width=29><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
@@ -156,7 +156,7 @@ function manualFooter($THIS_FUNC, $PREV_FUNC, $PREV_URL, $NEXT_FUNC, $NEXT_URL) 
 <? if($PREV_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-prev-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"prevb\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
-	echo "<A HREF=\"$PREV_URL\" onMouseover=\"hideAll();change('prevb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prevb\"></A><BR>";
+	echo "<A HREF=\"$PREV_URL\" onMouseover=\"change('prevb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-prev-p.gif\" ALT=\"prev\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"prevb\"></A><BR>";
 	echo "&nbsp;$PREV_FUNC<BR>";
 endif;?></TD>
 <TD ALIGN=center width=100%><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1>
@@ -165,7 +165,7 @@ endif;?></TD>
 <? if($NEXT_FUNC==""):
 	echo "<IMG SRC=\"gifs/b-next-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"nextb\"><BR><IMG SRC=\"gifs/spacer.gif\" WIDTH=100 HEIGHT=1 BORDER=0><BR>";
 else:
-	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"hideAll();change('nextb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"nextb\"></A><BR>";
+	echo "<A HREF=\"$NEXT_URL\" onMouseover=\"change('nextb',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-next-p.gif\" ALT=\"next\" WIDTH=75 HEIGHT=21 BORDER=0 NAME=\"nextb\"></A><BR>";
 	echo "$NEXT_FUNC&nbsp;<BR>";
 endif;?></TD>
 <TD ALIGN=left width=29><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=48 BORDER=0><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
