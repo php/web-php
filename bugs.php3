@@ -386,7 +386,7 @@ for any outstanding bug reports that match your bug.</STRONG>
 <table>
  <tr>
   <th align=right>Your email address:</th>
-  <td>
+  <td colspan="2">
    <input type=text size=20 name="email" value="<?if(isset($email)) { echo $email; }?>">
   </td>
  </tr><tr>
@@ -398,33 +398,28 @@ for any outstanding bug reports that match your bug.</STRONG>
     <option name="3.0RC3">3.0 Release Candidate 3
     <option name="3.0RC2">3.0 Release Candidate 2
 	<option name="3.0RC">3.0 Release Candidate
-	<option name="3.0b6">3.0b6
-	<option name="3.0b5">3.0b5
-	<option name="3.0b4">3.0b4
-	<option name="3.0b3">3.0b3
-	<option name="3.0b2a">3.0b2a
-	<option name="3.0b2">3.0b2
-    <option name="3.0b1">3.0b1
-    <option name="3.0a4">3.0a4
-    <option name="3.0a3">3.0a3
-    <option name="3.0a2">3.0a2
-    <option name="3.0a1">3.0a1
     <option name="other">other
    </select>
   </td>
+  <td>
+   <font size="-2">
+   Please don't report bugs in versions earlier than the Release Candidate, but instead,
+   upgrade first, and check if the bug still exists.
+   </font>
+  </td>
  </tr><tr>
   <th align=right>Type of bug:</th>
-  <td>
+  <td colspan="2">
 	<?show_types("--Please Select--",0,"ebug_type")?>
    </td>
   </tr><tr>
   <th align=right>Operating system:</th>
-  <td>
+  <td colspan="2">
    <input type=text size=20 name="php_os" value="<?echo isset($operating_system)?$operating_system:"";?>">
   </td>
  </tr><tr>
   <th align=right>Bug description:</th>
-  <td>
+  <td colspan="2">
    <input type=text size=40 maxlength=79 name="sdesc">
   </td>
 </table>
