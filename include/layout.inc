@@ -37,13 +37,13 @@ function resize_image($img, $width = 1, $height = 1)
 
 // Return an <img /> tag for a given image file available on the server
 function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                    $dir = '/images', $border = 0)
+                    $dir = '/images', $border = 0, $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
     $webdir = $_SERVER['STATIC_ROOT'] . ($dir{0} == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
-    if ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file")) {
+    if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
         $sizeparams = ' ' . trim($size[3]);
     } else {
         $sizeparams = '';
@@ -73,8 +73,18 @@ function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                      $dir = '/images', $border = 0)
 {
-    return '<input type="image"' .
-           substr(make_image($file, $alt, $align, $extras, $dir, $border), 4);
+    // Get an image without size info and convert the
+    // border attribute to use CSS, as border="" is not
+    // supported on <input> elements in [X]HTML
+    $img = make_image($file, $alt, $align, $extras, $dir, 0, FALSE);
+    $img = str_replace(
+        "border=\"$border\"",
+        "style=\"border: {$border}px;\"",
+        $img
+    );
+
+    // Return with ready input image
+    return '<input type="image"' . substr($img, 4);
 }
 
 // Return a pipe delimiter
