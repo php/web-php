@@ -2,6 +2,8 @@
 /* if you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn! */
 
+header("Cache-Control: public, max-age=600");
+
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
