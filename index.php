@@ -114,11 +114,26 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>New Sample of PHP Documentation "New CHM Edition"</h1>
+<p>
+The 6th sample of the CHM edition is out now. This sample is mainly
+and content update, but it also fixes some small bugs. We welcome
+any suggestions and bug reports.
+<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
+and please send us your feedback to our
+<?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
 
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
+<p>
 <font class="newsdate">[30-Jun-2002]</font>
-<p>The second alpha release of PHP w/ Zend Engine 2 is
+The second alpha release of PHP w/ Zend Engine 2 is
 <?php download_link("php-4.3.0-dev-zend2-alpha2.tar.gz", "now available"); ?>.
 It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
 scripting engine which greatly improves the object model, adds exception
@@ -142,8 +157,9 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 <?php echo make_image("phpconf2002.gif", "International PHP Conference 2002", "right"); ?>
 
 <h1>Call for Papers: International PHP Conference 2002</h1>
+<p>
 <font class="newsdate">[12-Jun-2002]</font>
-<p>The <?php print_link('http://www.php-conference.de/2002/', 'International PHP Conference 2002'); ?> is looking for 
+The <?php print_link('http://www.php-conference.de/2002/', 'International PHP Conference 2002'); ?> is looking for 
 people, who do talks and workshops at the conference. If you want to present your talk, please 
 <?php print_link('http://www.phpconference.de/2002/kt/input/', 'submit your proposals'); ?> to them. 
 The conference will be held in November in Frankfurt/Germany. For more information about dates and
@@ -156,8 +172,9 @@ topics, visit the <?php print_link('http://www.phpconference.de/2002/cfp_en.php'
 <?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
 
 <h1>Initial Alpha Release of PHP w/ the Zend Engine 2 Available</h1>
+<p>
 <font class="newsdate">[9-Jun-2002]</font>
-<p>The first alpha release of PHP w/ Zend Engine 2 is
+The first alpha release of PHP w/ Zend Engine 2 is
 <a href="distributions/php-4.3.0-dev-zend2-alpha1pl1.tar.gz">now available</a>.
 It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
 scripting engine which greatly improves the object model, adds exception
@@ -177,7 +194,6 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 <?php download_link("php-4.3.0-dev-zend2-win32-alpha1.zip", "download"); ?>.</p>
 
 <?php echo hdelim(); ?>
-
 
 <h1>ActiveState Awards</h1>
 <p>
