@@ -33,7 +33,7 @@ commonHeader("Documentation ");
 <li><? download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
 <li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
 <li><? download_link("manual.prc", "PHP Manual PalmPilot DOC File"); ?>
-<li><? download_link("manual_a-l.pdf", "PHP PDF Manual Part 1"); ?>. Function Reference I (Adabas) - XXVI (LDAP).
+<li><? download_link("manual.pdf", "PHP PDF Manual - Indexed - May 23, 00"); ?>. In this PDF, all functions have been documented, and where possible the version of PHP in which the function first became supported is noted.
 <li><? download_link("manual_m-x.pdf", "PHP PDF Manual Part 2"); ?>. Function Reference XXVII (Mail) - LV (XML).
 
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
@@ -44,8 +44,6 @@ commonHeader("Documentation ");
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
-
-<li><?download_link("distributions/unsupported/manual-3_0_11.pdf", "PHP Manual in PDF format");?> This is a third-party conversion of the PHP manual to indexed PDF format. (This is completely unsupported, and lags behind the other formats of the documentation available here.)
 
 <li><A href="/cvs-php3.php">Getting a CVS account</a>.  If you wish to help out
 with the development of PHP, read this.
