@@ -150,6 +150,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>OSCOM.4 with Apache Track</h1>
+<p>
+ <span class="newsdate">[14-Aug-2004]</span>
+ OSCOM, the international association for Open Source Content Management
+ is arranging the <a href="http://oscom.org/events/oscom4/program/">Fourth
+ Open Source Content Management Conference</a> from 29th September to 1st
+ October in Zürich. This fall, the event features Apache Software Foundation
+ projects, including PHP, so you have a chance to meet some prominent
+ figures of the PHP scene there. OSCOM.4 is a place for developers,
+ vendors, integrators and users to mingle and learn from each other. <a
+ href="http://oscom.org/events/oscom4/registration">Registration is
+ now open</a>.
+</p>
+
+<hr />
+
 <h1>New Installation Instructions</h1>
 <p>
  <span class="newsdate">[14-Aug-2004]</span>
