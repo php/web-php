@@ -6,7 +6,7 @@ header("Cache-Control: private");
 header("Pragma: no-cache");
 
 // If there is no such file, then drop out an invalid file error message
-if (!isset($df) || !file_exists('distributions/' . $df)) {
+if (!isset($df) || !file_exists($DOCUMENT_ROOT . '/distributions/' . $df)) {
     exit('Invalid file requested for download!');
 }
 
