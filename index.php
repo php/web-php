@@ -153,6 +153,22 @@ commonHeader("Hypertext Preprocessor");
 
 <?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
 
+<h1>PHP 4.3.3RC4 released</h1>
+<p>
+ <span class="newsdate">[18-Aug-2003]</span>
+ <a href="http://qa.php.net/">PHP 4.3.3RC4</a> has been released for testing.
+ This is should be the last release candidate prior to the final 4.3.3 release.
+ Please test this release as much as possible, so that any remaining issues can
+ be uncovered and resolved.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&amp;r1=1.1247.2.329&amp;r2=1.1247.2.354">NEWS</a>
+ file.
+</p>
+
+<hr />
+
 <h1>Active Awards 2003 Winners</h1>
 
 <p>
