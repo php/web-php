@@ -50,6 +50,10 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry("Articles on phpbuilder.com","by Tim Perdue and Rasmus Lerdorf", "http://www.phpbuilder.com","Jan. 24, 1999");?>
+&quot;Building Dynamic Web Pages with Search Engines in Mind&quot; and &quot;Creating Dynamic Images with PHP&quot;
+<? endEntry(); ?>
+
 <? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de", "Jan. 18, 1999"); ?>
 "PHP3 is the most powerful tool on the market for building dynamic,
 database-driven websites. Internet Pro shows how to realize a classified ads
