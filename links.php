@@ -100,7 +100,7 @@ A growing collection of PHP related information in a searchable
 question and answer format.</li>
 <li><a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br>
 A big faq and some links about PHP and SQL</li>
-<li><a href="http://www.koehntopp.de/php/">de.comp.lang.php FAQ</a><br>
+<li><a href="http://www.dclp-faq.de/">de.comp.lang.php FAQ</a><br>
 Excellent german language FAQ about PHP</li>
 </ul>
 
