@@ -5,6 +5,13 @@ commonHeader("Setting Up Local Search");
 
 <h1>Setting Up Local Search</h1>
 
+<div class="tip">
+Please note that mirror sites are not using their local search setup.
+All mirror sites employ Google for searches. This is a temporary measure,
+while we are working towards adding a better (Mnogosearch based) search
+setup option for mirror sites.
+</div>
+
 <p>
  If you are hosting an official or unofficial mirror, and you would like
  to have local search support, follow these steps. This document complements
