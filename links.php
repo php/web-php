@@ -117,7 +117,7 @@ site_header("Links");
   A big faq and some links about PHP and SQL
  </li>
  <li>
-  <a href="http://www.dclp-faq.de/">de.comp.lang.php FAQ</a><br />
+  <a href="http://www.php-faq.de/">de.comp.lang.php FAQ</a><br />
   Excellent german language FAQ about PHP
  </li>
  <li>
