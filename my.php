@@ -63,7 +63,7 @@ $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
 // Save suggestion hiding settings
 if (isset($_POST['hidesuggest'])) {
-    myphpnet_urlsearch($_POST['hidesuggest']);
+    myphpnet_hidesuggest($_POST['hidesuggest']);
 }
 
 myphpnet_save();
