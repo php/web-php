@@ -291,6 +291,19 @@ by Klaus Schmidt<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.AnayaMultimedia.es/"
+><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.AnayaMultimedia.es/"
+>Guia Practica PHP 4</A><BR>
+by Esteban Trigo<BR>
+<SMALL>in Spanish, Anaya Multimedia, December 2000, 288 pages<BR>
+<A HREF="http://www.en-linea.net/">more information</A></SMALL><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709"
 ><IMG SRC="/gifs/herellier.gif" BORDER=0 ALIGN="left"
 ></A><BR>
