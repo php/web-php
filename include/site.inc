@@ -119,9 +119,4 @@ if(strstr($MYSITE,"au.php.net")) {
 	$MYSITE = ereg_replace("au.php.net", "au.php.net:81", $MYSITE);
 }
 
-if (!isset($MIRRORS[$MYSITE])) {
-	$MYSITE="";
-	include("badsite.php3");
-	exit;
-}
 ?>
