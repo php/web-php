@@ -48,140 +48,199 @@ Oh, if you're wondering about the font we used, it's called
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+</td>
+<td width="15"><?php print_image('star.gif','recommended',false,'title="recommended"');?></td>
+<td align="left" width="67%">
 <ul>
-<li>scaleable EPS</li>
-<li><a href="/images/logos/php-logo.eps">EPS format</a></li>
+<li>scaleable vector image</li>
+<li><a href="/images/logos/php-logo.eps">EPS format</a> | 
+    <a href="/images/logos/php-logo.ai">AI (Adobe Illustrator) format</a></li>
 </ul>
 </td></tr>
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
-<li>250 x 132 pixels</li>
+<li>250 x 134 pixels</li>
 <li>white background</li>
 <li>large scale for presentations, etc.</li>
-<li><a href="/images/logos/php-big.tif">TIF format</a> | <a href="/images/logos/php-big.png">PNG format</a></li>
+<li><a href="/images/logos/php-big.tif">TIF format</a>
+</ul>
+</td></tr>
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#<?php 
+printf('%02x%02x%02x', 
+	rand(0,5)*51, rand(0,5)*51, rand(0,5)*51
+); ?>">
+<img src="/images/logos/php-med-trans.png" width="95" height="51" border="0" alt="PHP logo"><br>
+</td>
+<td width="15"><?php print_image('star.gif','recommended',false,'title="recommended"');?></td>
+<td align="left" width="67%">
+<ul>
+<li>95 x 51 pixels</li>
+<li>transparent background</li>
+<li>suitable for any background</li>
+<li><a href="/images/logos/php-med-trans.png">PNG format</a></li>
 </ul>
 </td></tr>
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php-med-trans-light.gif" width="95" height="50" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
-<li>95 x 50 pixels</li>
+<li>95 x 51 pixels</li>
 <li>transparent background</li>
 <li>suitable for white/light backgrounds</li>
-<li><a href="/images/logos/php-med-trans-light.gif">GIF format</a> | <a href="/images/logos/php-med-trans-light.png">PNG format</a></li>
+<li><a href="/images/logos/php-med-trans-light.gif">GIF format</a></li>
 </ul>
 </td></tr>
 
 <tr valign="middle">
-<td align="center" width="33%" bgcolor="#404040">
-<img src="/images/logos/php-med-trans-dark.gif" width="96" height="50" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+<td align="center" width="33%" bgcolor="#333333">
+<img src="/images/logos/php-med-trans-dark.gif" width="95" height="50" border="0" alt="PHP logo"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
-<li>96 x 50 pixels</li>
+<li>95 x 51 pixels</li>
 <li>transparent background</li>
 <li>suitable for black/dark backgrounds</li>
-<li><a href="/images/logos/php-med-trans-dark.gif">GIF format</a> | <a href="/images/logos/php-med-trans-dark.png">PNG format</a></li>
+<li><a href="/images/logos/php-med-trans-dark.gif">GIF format</a></li>
+</ul>
+</td></tr>
+
+
+
+
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#<?php 
+printf('%02x%02x%02x', 
+	rand(3,5)*51, rand(3,5)*51, rand(3,5)*51
+); ?>">
+<img src="/images/logos/php-power-white.png" width="88" height="31" border="0" alt="Powered by PHP"><br>
+</td>
+<td width="15"><?php print_image('star.gif','recommended',false,'title="recommended"');?></td>
+<td align="left" width="67%">
+<ul>
+<li>88 x 31 pixels</li>
+<li>"Powered by PHP" logo</li>
+<li>black text on transparent background</li>
+<li><a href="/images/logos/php-power-white.png">PNG format</a></li>
 </ul>
 </td></tr>
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
-<img src="/images/logos/php-small-white.gif" width="88" height="31" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+<img src="/images/logos/php-power-white.gif" width="88" height="31" border="0" alt="Powered by PHP"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
-<li>solid white background</li>
-<li><a href="/images/logos/php-small-white.gif">GIF format</a> | <a href="/images/logos/php-small-white.png">PNG format</a></li>
+<li>black text on solid white background</li>
+<li><a href="/images/logos/php-power-white.gif">GIF format</a></li>
 </ul>
 </td></tr>
 
-<tr valign="middle">
-<td align="center" width="33%" bgcolor="#ffffff">
-<img src="/images/logos/php-small-trans-light.gif" width="88" height="31" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
-<ul>
-<li>88 x 31 pixels</li>
-<li>"Powered by PHP" logo</li>
-<li>transparent background</li>
-<li>suitable for white/light backgrounds</li>
-<li><a href="/images/logos/php-small-trans-light.gif">GIF format</a> | <a href="/images/logos/php-small-trans-light.png">PNG format</a></li>
-</ul>
-</td></tr>
 
 <tr valign="middle">
-<td align="center" width="33%" bgcolor="#adb4d3">
-<img src="/images/logos/php-small-purple.gif" width="88" height="31" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+<td align="center" width="33%" bgcolor="#<?php 
+printf('%02x%02x%02x', 
+	rand(0,2)*51, rand(0,2)*51, rand(0,2)*51
+); ?>">
+<img src="/images/logos/php-power-black.png" width="88" height="31" border="0" alt="Powered by PHP"><br>
+</td>
+<td width="15"><?php print_image('star.gif','recommended',false,'title="recommended"');?></td>
+<td align="left" width="67%">
 <ul>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
-<li>solid purple (#adb4d3) background</li>
-<li><a href="/images/logos/php-small-purple.gif">GIF format</a> | <a href="/images/logos/php-small-purple.png">PNG format</a></li>
+<li>white text on transparent background</li>
+<li><a href="/images/logos/php-power-black.png">PNG format</a></li>
 </ul>
 </td></tr>
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#000000">
-<img src="/images/logos/php-small-black.gif" width="88" height="31" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
+<img src="/images/logos/php-power-black.gif" width="88" height="31" border="0" alt="Powered by PHP"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
 <li>88 x 31 pixels</li>
 <li>"Powered by PHP" logo</li>
-<li>solid black background</li>
-<li><a href="/images/logos/php-small-black.gif">GIF format</a> | <a href="/images/logos/php-small-black.png">PNG format</a></li>
+<li>white text on solid black background</li>
+<li><a href="/images/logos/php-power-black.gif">GIF format</a></li>
 </ul>
 </td></tr>
 
-<tr valign="middle">
-<td align="center" width="33%" bgcolor="#404040">
-<img src="/images/logos/php-small-trans-dark.gif" width="88" height="31" border="0" alt="PHP logo"><br>
-</td><td align="left" width="67%">
-<ul>
-<li>88 x 31 pixels</li>
-<li>"Powered by PHP" logo</li>
-<li>transparent background</li>
-<li>suitable for black/dark backgrounds</li>
-<li><a href="/images/logos/php-small-trans-dark.gif">GIF format</a> | <a href="/images/logos/php-small-trans-dark.png">PNG format</a></li>
-</ul>
-</td></tr>
+
 
 <tr valign="middle">
-<td align="center" width="33%" bgcolor="#000000">
-<img src="/images/logos/zend-powered-by.gif" width="100" height="58" border="0" alt="Zend logo"><br>
-</td><td align="left" width="67%">
-<ul>
-<li>100 x 58 pixels</li>
-<li>"Powered by Zend" logo</li>
-<li>solid black background</li>
-<li><a href="/images/logos/zend-powered-by.gif">GIF format</a> | <a href="/images/logos/zend-powered-by.png">PNG format</a></li>
-</ul>
-</td></tr>
-
-<tr valign="middle">
-<td align="center" width="33%" bgcolor="#ffffff">
-<img src="/images/logos/php-icon-white.gif" width="32" height="32" border="0" alt="White PHP icon"><br>
-</td><td align="left" width="67%">
+<td align="center" width="33%" bgcolor="#<?php 
+printf('%02x%02x%02x', 
+	rand(0,5)*51, rand(0,5)*51, rand(0,5)*51
+); ?>">
+<img src="/images/logos/php-icon.png" width="32" height="32" border="0" alt="PHP icon"><br>
+</td>
+<td width="15"><?php print_image('star.gif','recommended',false,'title="recommended"');?></td>
+<td align="left" width="67%">
 <ul>
 <li>32 x 32 pixels</li>
-<li>solid white background</li>
-<li>suitable as an icon</li>
-<li><a href="/images/logos/php-icon-white.gif">GIF format</a> | <a href="/images/logos/php-icon-white.png">PNG format</a></li>
+<li>transparent background</li>
+<li>suitable for any background</li>
+<li><a href="/images/logos/php-icon.png">PNG format</a></li>
 </ul>
 </td></tr>
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#ffffff">
+<img src="/images/logos/php-icon-white.gif" width="32" height="32" border="0" alt="PHP icon"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
+<ul>
+<li>32 x 32 pixels</li>
+<li>transparent background</li>
+<li>suitable for white/light backgrounds</li>
+<li><a href="/images/logos/php-icon-white.gif">GIF format</a></li>
+</ul>
+</td></tr>
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#000000">
+<img src="/images/logos/php-icon-black.gif" width="32" height="32" border="0" alt="PHP icon"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
+<ul>
+<li>32 x 32 pixels</li>
+<li>transparent background</li>
+<li>suitable for black/dark backgrounds</li>
+<li><a href="/images/logos/php-icon-black.gif">GIF format</a></li>
+</ul>
+</td></tr>
+
+
+
 
 <tr valign="middle">
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php-icon-white.gif" vspace="5" width="32" height="32" border="0" alt="PHP icons"><br>
 (not exactly as shown)<br>
-</td><td align="left" width="67%">
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
 <li>PHP icon resource for Windows</li>
 <li>suitable as icons for your desktop</li>
@@ -195,7 +254,9 @@ all in one .ICO file</li>
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php_file_ico.gif" vspace="5" width="32" height="32" border="0" alt="PHP file icons"><br>
 (not exactly as shown)<br>
-</td><td align="left" width="67%">
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
 <li>PHP icon resource for Windows</li>
 <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
@@ -209,7 +270,9 @@ all in one .ICO file</li>
 <td align="center" width="33%" bgcolor="#ffffff">
 <img src="/images/logos/php_xpstyle_ico.gif" vspace="5" width="32" height="32" border="0" alt="Windows XP PHP file icons"><br>
 (not exactly as shown)<br>
-</td><td align="left" width="67%">
+</td>
+<td></td>
+<td align="left" width="67%">
 <ul>
 <li>PHP icon resource for Windows XP [<b>use only on WinXP!</b>]</li>
 <li>suitable as icons for file extensions like .php, .phtml and .php3</li>
@@ -219,6 +282,22 @@ all in one .ICO file</li>
 <li><a href="/images/logos/php_xpstyle.ico">XP ICO format</a>
 </ul>
 </td></tr>
+
+
+<tr valign="middle">
+<td align="center" width="33%" bgcolor="#000000">
+<img src="/images/logos/zend-powered-by.gif" width="100" height="58" border="0" alt="Zend logo"><br>
+</td>
+<td></td>
+<td align="left" width="67%">
+<ul>
+<li>100 x 58 pixels</li>
+<li>"Powered by Zend" logo</li>
+<li>solid black background</li>
+<li><a href="/images/logos/zend-powered-by.gif">GIF format</a> | <a href="/images/logos/zend-powered-by.png">PNG format</a></li>
+</ul>
+</td></tr>
+
 
 </table>
 
