@@ -44,58 +44,53 @@ include './include/prepend.inc';
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
 <h3>What is PHP?</h3>
-
 <p>
-<acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
-is a widely-used general-purpose scripting language that is
-especially suited for Web development and can be embedded into HTML.
-If you are new to PHP and want to get some idea
-of how it works, try the ' . make_link("/tut.php", "introductory tutorial") . '.
-After that, check out the online ' . make_link("/docs.php", "manual") . ',
-and the example archive sites and some of the other resources
-available in the ' . make_link("/links.php", "links section") . '.
+ <acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
+ is a widely-used general-purpose scripting language that is
+ especially suited for Web development and can be embedded into HTML.
+ If you are new to PHP and want to get some idea
+ of how it works, try the <a href="/tut.php">introductory tutorial</a>.
+ After that, check out the online <a href="/docs.php">manual</a>,
+ and the example archive sites and some of the other resources
+ available in the <a href="/links.php">links section</a>.
+</p>
+<p>
+ Ever wondered how popular PHP is? see the
+ <a href="/usage.php">Netcraft Survey</a>.
+</p>
+<p>
+ PHP is a project of the
+ <a href="http://www.apache.org/">Apache Software Foundation</a>.
 </p>
 
-<p>
-Ever wondered how popular PHP is? see the ' .
-make_link("/usage.php", "Netcraft Survey") . '.
-</p>
-
-<p>
-PHP is a project of the ' .
-make_link("http://www.apache.org/","Apache Software Foundation") . '.
-</p>
-
-<h3>' . make_link("/thanks.php", "Thanks To") . '</h3>
-&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br />
-&nbsp; ' . make_link("http://www.directi.com/", "Directi") . '<br />
-&nbsp; ' . make_link("http://promote.pair.com/direct.pl?php.net", "pair Networks") . '<br />
-&nbsp; ' . make_link("http://www.rackshack.net/", "RackShack") . ' <br />
-&nbsp; ' . make_link("http://www.redundant.com/", "Redundant Networks") . '<br />
-&nbsp; ' . make_link("http://www.simplicato.com/?a=1007", "Simplicato") . '<br />
-&nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br />
+<h3><a href="/thanks.php">Thanks To</a></h3>
+&nbsp; <a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a><br />
+&nbsp; <a href="http://www.directi.com/">Directi</a><br />
+&nbsp; <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a><br />
+&nbsp; <a href="http://www.rackshack.net/">RackShack</a><br />
+&nbsp; <a href="http://www.redundant.com/">Redundant Networks</a><br />
+&nbsp; <a href="http://www.simplicato.com/?a=1007">Simplicato</a><br />
+&nbsp; <a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a><br />
 <h3>Related sites</h3>
-&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br />
-&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br />
-&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br />
-&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br />
+&nbsp; <a href="http://www.apache.org/">Apache</a><br />
+&nbsp; <a href="http://www.mysql.com/">MySQL</a><br />
+&nbsp; <a href="http://www.postgresql.org/">PostgreSQL</a><br />
+&nbsp; <a href="http://www.zend.com/">Zend Technologies</a><br />
 <h3>Community</h3>
-&nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br />
-&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br />
-&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br />
+&nbsp; <a href="http://www.devnetwork.net/">PHP Developers Network</a><br />
+&nbsp; <a href="http://www.linuxfund.org/">LinuxFund.org</a><br />
+&nbsp; <a href="http://www.osdn.org/">OSDN</a><br />
 
 <h3>Syndication</h3>
-
 <p>
-You can grab our news as an RSS feed via a daily dump in a file
-named <a href="/news.rss">news.rss</a>.
+ You can grab our news as an RSS feed via a daily dump in a file
+ named <a href="/news.rss">news.rss</a>.
 </p>
 
 <h3>Contact</h3>
-
 <p>
-Please submit website bugs in the ' .
-make_link('http://bugs.php.net/', 'bug system') . '.
+ Please submit website bugs in the
+ <a href="http://bugs.php.net/">bug system</a>.
 </p>';
 
 // Possible mirror provider logo
