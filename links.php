@@ -63,6 +63,8 @@ A growing collection of PHP related information in a searchable
 question and answer format.<br></li>
 <li><a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br>
 A big faq and some links about PHP and SQL<br></li>
+<li><a href="http://www.koehntopp.de/php/">de.comp.lang.php FAQ</a><br>
+Excellent german language FAQ about PHP<br></li>
 </ul>
 
 <h4>Complex PHP Related Sites</h4>
@@ -178,6 +180,12 @@ Searchengine over German PHP-sites with webaccess to newsgroups<br></li>
 <li><a href="http://www.phpwelt.de/">PHPWelt</a><br>
 A German website using PHP to offer free services, a huge script-archive,
 free scripts, tutorials and many more<br></li>
+
+<li><a href="http://php.martin-jansen.de/">php.martin-jansen.de</a><br>
+German PHP resource (especially for newbies)<br></li>
+
+<li><a href="http://develnet.org/">develnet.org</a><br>
+Some german tutorials about PHP<br></li>
 
 </ul></li>
 <li><b>French</b>
