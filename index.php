@@ -116,15 +116,16 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>ActiveState Awards</h1>
 <p>
-ActiveState is pleased to announce the winners of the 2002 Active
-Awards, presented at the O'Reilly Open Source Conference in San Diego,
-CA. The Active Awards are held annually to honor members of the PHP,
-Python, Perl, Tcl, and XSLT  communities, who <em>actively</em> contribute to
-open languages and display excellence in their programming efforts.
-Activators' Choice Award winners were chosen by ActiveState's
-development team.  Programmers' Choice Award winners were nominated and
-chosen by the open source community, the nominees were: Greg Allan; Stig
-Bakken; Bogomil Shopov; Philippe Thomassigny; and Andrei Zmievski. 
+<font class="newsdate">[31-Jul-2002]</font> ActiveState is pleased to announce
+the winners of the 2002 Active Awards, presented at the O'Reilly Open Source
+Conference in San Diego, CA. The Active Awards are held annually to honor
+members of the PHP, Python, Perl, Tcl, and XSLT  communities, who
+<em>actively</em> contribute to open languages and display excellence in
+their programming efforts. Activators' Choice Award winners were chosen by
+ActiveState's development team.  Programmers' Choice Award winners were
+nominated and chosen by the open source community, the nominees were:
+Greg Allan; Stig Bakken; Bogomil Shopov; Philippe Thomassigny; and
+Andrei Zmievski.
 </p><p>
 The Activators' Choice winners are Derick Rethans and Jani Taskinen.
 Derick is heavily involved in developing processes for QA and Release
