@@ -23,6 +23,9 @@ Adding A Stats Page To Your Mirror In 6.5 Easy Steps:
    future release (here's hoping), so this step may become obsolete at some
    point.
 
+   UPDATE: As of Webalizer version 1.22-01, my patches have been incorporated
+   in the code, so this step is no longer required!
+
 
 3. Make it
 
