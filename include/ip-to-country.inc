@@ -62,12 +62,12 @@ function i2c_go()
 
     // User is behind a proxy
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        $ipnum = i2c_ip2num($_SERVER['HTTP_X_FORWARDED_FOR']);
+        $ipnum = (float) sprintf("%u", ip2long($_SERVER['HTTP_X_FORWARDED_FOR']));
     }
 
     // This is the real IP of the user
     else {
-        $ipnum = i2c_ip2num($_SERVER['REMOTE_ADDR']);
+        $ipnum = (float) sprintf("%u", ip2long($_SERVER['REMOTE_ADDR']));
     }
 
     // Find the index to start search from
@@ -81,18 +81,6 @@ function i2c_go()
 
     // Set the country in a cookie for a week and for all *.php.net servers
     return setcookie("COUNTRY", $country, time() + 60*60*24*7, '/', '.php.net');
-}
-
-// Convert a dotted IP address to a number.
-// (float) is important, as otherwise we would
-// get a signed value, which is not appropriate
-function i2c_ip2num($dotted)
-{
-    $dotted = preg_split("/[.]+/", $dotted);
-    return (float) ($dotted[0] * 16777216) +
-                   ($dotted[1] * 65536) +
-                   ($dotted[2] * 256) +
-                   ($dotted[3]);
 }
 
 // Find nearest index entry for IP number 
