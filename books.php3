@@ -35,11 +35,11 @@ by David Medinets<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
-><IMG SRC="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
 by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
-<SMALL><A HREF="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif">more info</A><BR>
+<SMALL><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
