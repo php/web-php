@@ -175,10 +175,10 @@ $enclosed = 0;
 #
 #
 
-function commonHeader($title="",$dont_enclose=0) {
+function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
 	global $SIDEBAR_DATA;
-	header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
+	if (!$headers_gone) header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 ?><html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
@@ -344,7 +344,7 @@ function commonFooter() {
     <td align="right"><small>
       This mirror generously provided by:
       <a href="<?php echo $MIRRORS[$MYSITE][3];?>"><?php echo $MIRRORS[$MYSITE][1];?></a><BR>
-      Last updated: <?php echo strftime("%c", $LAST_UPDATED); ?><BR>
+      Last updated: <?php echo strftime("%c %Z", $LAST_UPDATED); ?><BR>
       </small>
     </td>
   </tr>
