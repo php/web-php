@@ -223,6 +223,7 @@ right away.</blockquote>
 	site("San Diego Zoo", "www.sandiegozoo.org");
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
+	site("TopHotels.com","www.tophotels.com");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 	siteEnd();
