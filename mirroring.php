@@ -119,13 +119,13 @@ commonHeader("Mirroring The PHP Website");
      SetEnv MIRROR_LANGUAGE "en"
 
      # The next lines are only necessary if 
-     # generating stats (see /stats/README.stats)
+     # generating stats (see below)
      Alias /stats/ /path/to/local/stats/
      SetEnv MIRROR_STATS 1
 
      # The next lines are only necessary if you would
-     # like to provide local search support (see /Mirrors-htdig.tgz)
-     SetEnv HTSEARCH_PROG /local/htdig/bin/htphp.sh
+     # like to provide local search support (see below)
+     SetEnv HTSEARCH_PROG /usr/local/htdig/bin/htphp.sh
      SetEnv HTSEARCH_EXCLUDE "/print/ /printwn/ /manual/howto/ /cal.php"
 
    &lt;/VirtualHost&gt;
@@ -152,6 +152,17 @@ commonHeader("Mirroring The PHP Website");
  is a <tt>"xx.php.net"</tt>, then you will probably get
  <tt>"xx2.php.net"</tt>. <a href="#rule">Please read the note in
  bold above</a>.
+</p>
+
+<h2>Setup Search Or Stats</h2>
+
+<p>
+ To provide better service to your visitors, you may definitely
+ consider setting up local search support. The instruction on
+ setting this up are <a href="/mirroring-search.php">detailed
+ here</a>. Setting up local stats can also be a plus on your
+ mirror. We also provide <a href="/mirroring-stats.php">some
+ setup instructions for that</a>.
 </p>
 
 <h2>Setup Regular Updates</h2>
@@ -262,16 +273,10 @@ commonHeader("Mirroring The PHP Website");
   coordinating with us at all.
  </li>
  <li>
-  Whether or not you've installed local searching support on
-  your mirror. This uses <a href="http://www.htdig.org">ht://Dig</a>,
-  for which setup instructions can be found in
-  <a href="/Mirrors-htdig.tgz">Mirrors-htdig.tgz</a>
+  Whether or not you've installed local searching support on your mirror.
  </li>
  <li>
   Whether or not you've installed local stats support on your mirror.
-  This uses <a href="http://www.mrunix.net/webalizer/">webalizer</a>,
-  for which instructions for setting it up can be found in
-  stats/README.stats.
  </li>
  <li>
   The name of the hosting company.
