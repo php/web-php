@@ -252,6 +252,8 @@ function show_types($first_item,$show_any,$var_name) {
                     "PCRE related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCRE related",
                     "Regexps related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regexps related",
 
+					"Satellite CORBA related" => "Satellite CORBA related",
+
                     "*Session related" => "&nbsp;&nbsp;&nbsp;&nbsp;Session related",
 
                     "*Spelling functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Spelling functions",
