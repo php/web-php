@@ -75,8 +75,9 @@
 	site("UPI Archives","upi.siteways.com");
 
 	echo "<br></td><td valign=top>\n";
-	/* Recreation */
+	/* Large ISP's */
 	site("Netvision","www.netvision.net.il");
+	site("Italia Online","www.iol.it");
 
 	echo "<br></td><td valign=top>\n";
 	/* Computer Software */
