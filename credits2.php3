@@ -14,8 +14,22 @@ $CORE = array(
 	"jim"		=> array ("Jim Winstead","jimw@php.net")
 );
 
+if ($KICKS):
+	echo "<SCRIPT LANGUAGE=\"JavaScript\"><!--\n";
+	echo "function popUpCore(name) {\n";
+	reset($CORE);
+	while (list($key,$value)=each($CORE)):
+		echo "	popUp('".$key."Kick',false);\n";
+	endwhile;
+	echo "	popUp(name,true);\n";
+	echo "}\n";
+	echo "// -->\n";
+	echo "</SCRIPT>\n\n";
+endif;
+
+
 function makeKick($name) {
-	echo "<DIV ID='".$name."Kick' STYLE=\"POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 90px; LEFT: 0px;\">\n";
+	echo "<DIV ID='".$name."Kick' STYLE=\"POSITION: absolute; Z-INDEX: 10; VISIBILITY: hidden; TOP: 90px; LEFT: 0px;\">\n";
 	kickHeader(20,'none',350);
 };
 
@@ -29,7 +43,7 @@ function endKick($name) {
 	echo "} else {\n";
 	echo "	screenWidth = document.body.clientWidth + 18;\n";
 	echo "	document.all['".$name."Kick'].style.pixelLeft = screenWidth-430;\n";
-	echo "}";
+	echo "}\n";
 	echo "// -->\n";
 	echo "</SCRIPT>\n\n";
 };
@@ -81,18 +95,18 @@ endif; ?>
 </TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
-
-<? if ($KICKS): ?>
-<table cellppadding="5" cellspacing="10">
-<? endif; ?>
 <?
+if ($KICKS):
+	echo "<TABLE CELLPADDING=5 CELLSPACING=10 BORDER=0>\n";
+endif;
 $i=0;
+reset($CORE);
 while (list($key,$value)=each($CORE)):
 	if ($KICKS && $i==0) {
 		print "<tr>\n";
 	}
 	if ($KICKS):
-		echo "<TD align=\"center\"><FONT SIZE=+1><A HREF=\"javascript:popUp('".$key."Kick',true);\">".$value[0]."</A></FONT></TD>\n";
+		echo "<TD align=\"center\"><FONT SIZE=+1><A HREF=\"javascript:popUpCore('".$key."Kick',true);\">".$value[0]."</A></FONT></TD>\n";
 	else:
 		makeName($value[0],$value[1],1);
 		makeFile($key);
@@ -102,11 +116,10 @@ while (list($key,$value)=each($CORE)):
 	}
 	$i++;
 endwhile;
+if ($KICKS):
+	echo "</TABLE>\n";
+endif;
 ?>
-<? if ($KICKS): ?>
-</table>
-<? endif; ?>
-
 </TD><TD></TD></TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
 
