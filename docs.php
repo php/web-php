@@ -40,18 +40,18 @@ $languages = array(
  "es" => "Spanish"
 );
 
-# arrat structure: header, link text, show size in link
+# array structure: (header, link text, show_size_in_link)
 $formats = array(
- "" => array("View Online", "view", false),
- "html/" => array("View Online (plain)", "view", false),
+ ""                  => array("View Online", "view", false),
+ "html/"             => array("View Online (plain)", "view", false),
  "bigmanual.html.gz" => array("Single HTML", "html.gz", true),
- "manual.txt.gz" => array("Plain text", "txt.gz", true),
- "manual.tar.gz" =>  array("Many HTML files", "tar.gz", true),
- "manual.zip" => array("Many HTML files", "zip", true),
- "manual.pdf" => array("PDF", "pdf", true),
- "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb", true),
- "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb", true),
- "manual.chm" => array("Windows HTML Help", "chm", true)
+ "manual.txt.gz"     => array("Plain text", "txt.gz", true),
+ "manual.tar.gz"     => array("Many HTML files", "tar.gz", true),
+ "manual.zip"        => array("Many HTML files", "zip", true),
+ "manual.pdf"        => array("PDF", "pdf", false),
+ "manual_doc.pdb"    => array("PalmPilot DOC", "doc.pdb", true),
+ "manual_isilo.pdb"  => array("PalmPilot iSilo", "isilo.pdb", true),
+ "manual.chm"        => array("Windows HTML Help", "chm", true)
 );
 ?>
 
@@ -77,28 +77,28 @@ will show up, when you move the mouse above one link.
      reset($formats);
      while (list($fn,$details) = each($formats)) {
        echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
-       # temporary hack until pdf are auto-generated
+
+       # temporary hacks until pdf and chm are auto-generated
        if ($fn == "manual.pdf") {
-         echo "<a href=\"http://snaps.php.net/~jah/pdf/manual-$langcode.pdf\">$details[1]</a></td>";
-         continue;
+         $link_to = "http://snaps.php.net/~jah/pdf/manual-$langcode.pdf";
+       } elseif ($fn == "manual.chm") {
+         $link_to = "distributions/manual_$langcode.chm";
+       } else {
+         $link_to = "manual/$langcode/$fn";
        }
-       # temporary hack until chm are auto-generated
-       if ($fn == "manual.chm") {
-         $size = @filesize("distributions/manual_$langcode.chm");
-         if ($size) { 
-          $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . 'Kb"' : '');
-         }
-         echo "<a href=\"distributions/manual_$langcode.chm\"$print_size>$details[1]</a></td>";
-         continue;
-       }
-       $size = @filesize("manual/$langcode/$fn");
-       if ($size) {
-         $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . 'Kb"' : '');
-         echo "<a href=\"manual/$langcode/$fn\"$print_size>$details[1]</a>";
-       }
+       
+       # if no size required [pdf, online], then just print, else
+       # decide what to do according to the $size of the file
+       if (!$details[2]) { echo "<a href=\"$link_to\">$details[1]</a>"; }
        else {
-         echo "&nbsp;";
+         $size = @filesize($link_to);
+         if ($size) {
+           echo "<a href=\"$link_to\" title=\"" . (int) ($size/1024) . "Kb\">$details[1]</a>";
+         } else { 
+           echo "&nbsp;";
+         }
        }
+
        echo "</td>\n";
      }
    }?>
