@@ -1,9 +1,14 @@
+# MySQL dump 4.0
+#
+# Host: localhost    Database: php3
+#--------------------------------------------------------
+
 #
 # Table structure for table 'sponsor'
 #
 CREATE TABLE sponsor (
   server varchar(75) DEFAULT '' NOT NULL,
-  code text NOT NULL,
+  code text DEFAULT '' NOT NULL,
   PRIMARY KEY (server)
 );
 
@@ -13,3 +18,6 @@ CREATE TABLE sponsor (
 
 INSERT INTO sponsor VALUES ('www.php.net','<a href="http://BestHost.net/"><img src="http://BestHost.net/images/php_sponsor.gif" border=0 alt="BestHost - proud sponsor of PHP.net"></a>');
 INSERT INTO sponsor VALUES ('www.ca.php.net','<a href="http://www.lerdorf.on.ca/">Site hosted by Lerdorf Consultants Inc.</a>');
+INSERT INTO sponsor VALUES ('il.php.net','<a href="http://www.netvision.net.il/">Site hosted by Netvision LTD</a>');
+INSERT INTO sponsor VALUES ('php.netvision.net.il','<a href="http://www.netvision.net.il/">Site hosted by Netvision LTD</a>');
+
