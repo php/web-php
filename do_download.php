@@ -1,5 +1,8 @@
 <?php
 
+$LOG_SERVER = "http://master.php.net/";
+$LOG_FILE = "log_download.php";
+
 // If there is no file, then drop out an invalid file error message
 if (!isset($download_file)
 	|| !file_exists("distributions/$download_file")) {
@@ -30,14 +33,14 @@ function log_download ()
     
     // Try to open remote log on php.net
     $remote_log = 
-        @fopen("http://www.php.net/log_download.php".
+        @fopen($LOG_SERVER . $LOG_FILE . 
             "?download_file=" . urlencode($download_file).
             "&mirror=" . urlencode($SERVER_NAME).
             "&user_referer=" . urlencode($HTTP_REFERER).
             "&user_ip=" . urlencode($remote_addr), 
         'r');
     
-    // If we can open it, read from it, and close (jut to make sure it runs)
+    // If we can open it, read from it, and close (just to make sure it runs) ??? 
     if ($remote_log) {
         fread($remote_log, 1024);
         fclose($remote_log);
