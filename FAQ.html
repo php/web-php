@@ -654,13 +654,9 @@ If you don't see <b>mod_php3.c</b> listed then you are not running the right bin
 Also make sure that this AddType line is not hidden away inside a &lt;Virtualhost&gt; or &lt;Directory&gt; block which would 
 prevent it from applying to the location of your test script.
 	<LI> Finally, the default location of the Apache configuration files changed between Apache 1.2 and Apache 1.3.  You
-should check to make sure that the configuration file you are adding the AddType line to is actually being read.  You can put an obvious syntax error into your httpd.conf file or some other obvious change that will tell you if the file is being read corre
-
-
-
-
-
-ctly.
+should check to make sure that the configuration file you are adding the AddType line to is actually being read.  
+You can put an obvious syntax error into your httpd.conf file or some other obvious change that will tell you if 
+the file is being read correctly.
 	</UL>
   <P>
   </DD>
@@ -689,6 +685,27 @@ ctly.
 	and now re-run the Apache configure script.  It will now show you the actual errors
 	that caused your build to fail.  It is usually due to a missing library.
   </DD>
+  <DT><B>
+    <a name="4.11">4.11</a> When I try to build PHP using --with-apxs I get strange error messages
+  </B></DT>
+  <DD>
+	There are two things to check here.  First, for some reason when Apache builds the apxs Perl
+	script, it sometimes ends up getting built without the proper compiler and flags variables.
+	Edit your apxs (sometimes found in /usr/local/apache/bin/apxs or /usr/sbin/apxs) and check
+	for these lines:
+<pre>my $CFG_CFLAGS_SHLIB  = '&nbsp;';      # substituted via Makefile.tmpl
+my $CFG_LD_SHLIB      = '&nbsp;';          # substituted via Makefile.tmpl
+my $CFG_LDFLAGS_SHLIB = '&nbsp;';      # substituted via Makefile.tmpl</pre>
+	If this is what you see, you have found your problem.  Change these lines to say:
+<pre>my $CFG_CFLAGS_SHLIB  = '-fpic -DSHARED_MODULE';      # substituted via Makefile.tmpl
+my $CFG_LD_SHLIB      = 'gcc';          # substituted via Makefile.tmpl
+my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
+	The second possible problem should only be an issue on RedHat-6.1.  The apxs script RedHat
+	ships is broken.  Look for this line:
+<pre>my $CFG_LIBEXECDIR    = 'modules';        # substituted via APACI install</pre>
+	If you see the above line, change it to this:
+<pre>my $CFG_LIBEXECDIR    = '/usr/lib/apache';        # substituted via APACI install</pre>
+	</DD>
 </DL>
 
 <HR noshade>
