@@ -254,7 +254,7 @@ function manualUserNotes($title, $id) {
 		}
 
                 echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-		echo "<td colspan=\"2\" align=\"right\">
+		echo "<td colspan=\"2\" align=\"right\">\n";
                 print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
                         make_image('notes-add.gif','add a note')
                 );      
