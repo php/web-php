@@ -129,7 +129,13 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
+
+<!--
+Seems to be down/broken
   <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files</li>
+-->
+  
+  <li>If you are searching for older versions of PHP, go to new <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
   <li>Search for PHP tarballs on AllTheWeb.com:
     <form action="http://www.alltheweb.com/search" method="GET">
       <input type="hidden" name="cat" value="ftp">
