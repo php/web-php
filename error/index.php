@@ -61,6 +61,7 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 
 $uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1);
 
+if ($uri[0] == "/") $uri = substr($uri,1);
 
 # try to find the uri as a manual entry
 
