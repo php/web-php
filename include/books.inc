@@ -1575,6 +1575,17 @@ $books = array (
     /* language     */ "de"
   ),
 
+  array(
+    /* title[s]     */ "PHP 5 für Fortgeschrittene",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/389864300X/wwwphpnet07",
+    /* author[s]    */ "Harry Fuecks, Sandro Zic, Cornelia Boenigk",
+    /* auth link[s] */ "",
+    /* image        */ "389864300X.jpg",
+    /* information  */ "November, 2004, ISBN 3-89864-300-X, 383 pages",
+    /* inform. link */ "http://www.dpunkt.de/buch/3-89864-300-X.html",
+    /* language     */ "de"
+  ),
+
  ),
 
 
