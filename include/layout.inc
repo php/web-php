@@ -351,7 +351,7 @@ function commonFooter() {
     <td align="right"><small>
       This mirror generously provided by:
       <a href="<?php echo $MIRRORS[$MYSITE][3];?>"><?php echo $MIRRORS[$MYSITE][1];?></a><BR>
-      Last updated: <?php echo strftime("%c %Z", $LAST_UPDATED); ?><BR>
+      Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore><BR>
       </small>
     </td>
   </tr>
