@@ -146,6 +146,23 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
+<h1>PHP 5.0.2 released!</h1>
+<p>
+ <span class="newsdate">[23-Sep-2004]</span>
+ PHP Development Team is proud to announce the immediate release of PHP <a href="/downloads.php">PHP 5.0.2</a>.
+ This is a maintenance release that in addition to many non-critical bug fixes, addresses a problem
+ with GPC input processing. 
+ All Users of PHP 5 are encouraged to upgrade to this release as soon as possible.
+</p>
+
+<p>
+ For changes since PHP 5.0.1, please consult the
+ <a href="/ChangeLog-5.php#5.0.2">ChangeLog</a>.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.9 released!</h1>
 <p>
