@@ -257,11 +257,11 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     $enclosed = 1;
 ?>
 
-<table align="left" cellpadding="0" cellspacing="0">
+<table cellpadding="0" cellspacing="0">
  <tr valign="top">
 <?php if (isset($SIDEBAR_DATA)):?>
   <td bgcolor="#f0f0f0">
-   <table width="149" align="left" cellpadding="4" cellspacing="0">
+   <table width="149" cellpadding="4" cellspacing="0">
     <tr valign="top">
      <td><?php echo $SIDEBAR_DATA?></td>
     </tr>
@@ -270,7 +270,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
 <?php endif; ?>
   <td>
-   <table width="625" align="left" cellpadding="10" cellspacing="0">
+   <table width="625" cellpadding="10" cellspacing="0">
     <tr>
      <td valign="top">
 <?php

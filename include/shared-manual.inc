@@ -90,8 +90,7 @@ function navigationBar($title,$id,$loc) {
 
 	echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
-	echo '<tr>';
-	echo '<td align="left">';
+	echo '<tr><td>';
 	if ($PREV[1]) {
 		echo make_link( $PREV[0] , make_image('caret-l.gif', 'previous') . $PREV[1] ) ;
 	}
@@ -148,7 +147,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 	global $MAGIC_COOKIE;
 ?>
 <tr valign="top">
-<td align="left" bgcolor="#e0e0e0">
+<td bgcolor="#e0e0e0">
 <table border="0" cellpadding="2" cellspacing="0" width="100%">
 <tr><td>
 <?
