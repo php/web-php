@@ -1,5 +1,6 @@
 <?
 $dbname = "php3";
+$root_url = "/";
 $base_url = ereg_replace("[^/]*\$","",$PHP_SELF);
 $dbhost="localhost";
 $dbuser="nobody";
