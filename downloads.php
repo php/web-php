@@ -61,17 +61,18 @@ change mirrors at the bottom of the page.
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.1.2.tar.gz", "PHP 4.1.2"); ?> - 27 February 2002</li>
+  <li><?php download_link("php-4.2.0.tar.bz2", "PHP 4.2.0 (tar.bz2)"); ?> - 22 April 2002</li>
+  <li><?php download_link("php-4.2.0.tar.gz", "PHP 4.2.0 (tar.gz)"); ?> - 22 April 2002</li>
 </ul>
 
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link("php-4.1.2-Win32.zip", "PHP 4.1.2 zip package"); ?> - 12 March 2002<br>
-  (CGI binary (with security fixes) plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
+  <li><?php download_link("php-4.2.0-Win32.zip", "PHP 4.2.0 zip package"); ?> - 12 March 2002<br>
+  (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
   support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php-4.1.2-installer.exe", "PHP 4.1.2 installer"); ?> - 12 March 2002<br>
-  (CGI only (with fixes), MySQL support built-in, packaged as Windows installer to install and
+  <li><?php download_link("php-4.2.0-installer.exe", "PHP 4.2.0 installer"); ?> - 12 March 2002<br>
+  (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
 <!--
@@ -116,10 +117,10 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <h1>Older Versions of PHP</h1>
 
 <ul>
-  <li>PHP 4.0.6
+  <li>PHP 4.1.2
     <ul>
-      <li><?php download_link("php-4.0.6.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.0.6-Win32.zip", "Windows Binary (zip)"); ?></li>
+      <li><?php download_link("php-4.1.2.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.1.2-Win32.zip", "Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
   <li>PHP 3.0.x (latest)
