@@ -97,8 +97,8 @@ makeCap();
 $thisurl=substr($PHP_SELF,1); /* strip leading slash */
 $mirror_sites=$MIRRORS;
 $lastcountry="xxxxx";
-reset($showsites);
-while ($site = current($showsites)) {
+@reset($showsites);
+while ($site = @current($showsites)) {
 	next($showsites);
 	$info = $mirror_sites[$site];
 	list($country, $location, $shortname, $companyurl, $show) = $info;
