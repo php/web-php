@@ -10,7 +10,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("No Stats");
 ?>
 
-<h1>No Stat</h1>
+<h1>No Stats</h1>
 <p>
  No visitor statistics information is available on this mirror site.
 </p>
