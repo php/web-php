@@ -298,6 +298,8 @@ function moveLayers() {
 <? if ($FRAMEMODE!="manual"): ?>
 			document.layers['mirrorsKick'].left = 140;
 			document.layers['mirrorsKick'].top = 215;
+			document.layers['docsKick'].left = 140;
+			document.layers['docsKick'].top = 65;
 <? endif; ?>
 			document.layers['searchKick'].left = screenWidth-350;
 			document.layers['searchKick'].top = 36;
@@ -306,6 +308,8 @@ function moveLayers() {
 <? if ($FRAMEMODE!="manual"): ?>
 			document.all['mirrorsKick'].style.pixelLeft = 140;
 			document.all['mirrorsKick'].style.pixelTop = 215;
+			document.all['docsKick'].style.pixelLeft = 140;
+			document.all['docsKick'].style.pixelTop = 65;
 <? endif; ?>
 			document.all['searchKick'].style.pixelLeft = screenWidth-350;
 			document.all['searchKick'].style.pixelTop = 36;
@@ -356,12 +360,16 @@ function change(Name,No) {
 		if (gotlayers) {
 <? if ($FRAMEMODE!="manual"): ?>
 			popUp('mirrorsKick',false);
+			popUp('docsKick',false);
 <? endif; ?>
 			popUp('searchKick',false);
 		}
 <? if ($FRAMEMODE!="manual"): ?>
 		if (Name != 'mirr') {
 			change('mirr',0);
+		}
+		if (Name != 'docs') {
+			change('docs',0);
 		}
 <? endif; ?>
 		if (Name != 'sear') {
@@ -437,7 +445,7 @@ endif; ?>
 			$lastnews="PHP in the News";
 		endif;
 		makeSideButton("downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
-		makeSideButton("docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
+		makeSideButton("docs.php3","docs","docsKick","docs",129,30,0,10,"Documentation","<BR>\n");
 #		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("news.php3","news","","news",129,30,0,10,$lastnews,"<BR>\n");
@@ -592,6 +600,17 @@ endwhile;
 <? kickFooter("mirrorsKick","mirr",350);?>
 </DIV>
 
+<DIV ID='docsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
+<? kickHeader(-30,'left',400);?>
+<FORM ACTION='manual-lookup.php3' METHOD='POST'>
+<B>Quick Function Reference</B><BR>
+Type in a PHP function name to jump to that page of the manual:<BR>
+<FONT SIZE=3><INPUT NAME='function' TYPE='text' SIZE=20></FONT>
+<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+</FORM>
+<? kickFooter("docsKick","mirr",350);?>
+</DIV>
+
 <?
 if ($HAVE_SEARCH):
 	$form="/search.php3";
@@ -620,7 +639,7 @@ echo "<form action='$form' METHOD='POST'>\n"; ?>
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 if (NS4) {
-	gotlayers = (document.layers.length == 2) ? 1 : 0;
+	gotlayers = (document.layers.length == 3) ? 1 : 0;
 }
 if (IE4) {
 	gotlayers = 1;
