@@ -215,6 +215,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+
+<h1>PHP @ LinuxTag</h1>
+<p>
+ <font class="newsdate">[06-Jul-2003]</font>
+ From July, 10th to 13th 2003
+ <a href="http://www.linuxtag.org/2003/en/index.html">LinuxTag</a>, Europe's
+ largest Fair and Congress dedicated to Open Source in general and Linux in
+ particular, takes place in Karlsruhe, Germany.
+</p>
+<p>
+ Under the motto "PHP and Friends" the PHP Project showcases PHP and related
+ projects, like MySQL, SQLite, Midgard, osCommerce or DB Designer, at booth
+ F21.  In addition to the booth "PHP and Friends" offer an interesting
+ programme of
+ <a href="http://www.infodrom.org/Debian/events/LinuxTag2003/workshops.php3">technical talks and workshops</a>
+ which are held by 24 speakers from 11 nations and cover the latest trends and
+ technologies related to PHP, Apache and MySQL.  Among the speakers are core
+ developers of the discussed Open Source projects, for instance Ken Coar
+ (Apache), Rasmus Lerdorf (PHP) or Kaj Arn&ouml; (MySQL).
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
  <font class="newsdate">[29-Jun-2003]</font>
