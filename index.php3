@@ -3,21 +3,21 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP in the News</h3>
+<P>
+<a href="http://www.netcraft.com">Netcraft's</a> March server survey results are
+out.  They don't actually have scripting language numbers online at Netcraft, but
+they do a manual grep and email us this information monthly.  Here is a little 
+<a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
+couple of months.
+</P>
+
 <h3>PHP 3.0.7 has been released!</h3>
 <p>
 March 1, 1999.  A nice round date for version 3.0.7.  A number of bug fixes,
 a ton of RedHat and DSO related build fixes and a couple of new modules:
 WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
 <a href="ChangeLog.php3">ChangeLog</a> for the complete list of changes.
-</P>
-
-<h3>PHP in the News</h3>
-<P>
-<a href="http://www.netcraft.com">Netcraft's</a> February server survey results are
-out.  They don't actually have scripting language numbers online at Netcraft, but
-they do a manual grep and email us this information monthly.  Here is a little 
-<a href="usage.php3">bar chart</a> showing the growth of PHP usage over the past
-couple of months.
 </P>
 
 <a href="http://www.zend.com/"><img align="right" src="zend_rgb-on-white1.gif" border="0"></a>
