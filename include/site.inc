@@ -54,7 +54,7 @@ function show_mirror_options ($current) {
       // If this is the current one, or the REQUEST_URI starts with the URL 
 	  // (the server provides a different name as it's name then what is
 	  // used to access it} => selected it by default
-	  if ($url == $current || preg_match("!^$url!", $REQUEST_URI) {
+	  if ($url == $current || preg_match("!^$url!", $REQUEST_URI)) {
         echo '<option value="' . $url . '" selected>' . $COUNTRIES[$mirror[0]] . 
           ' (' . $mirror[1] . ") *</option>\n";
       } else {
