@@ -50,7 +50,7 @@ commonHeader("Documentation ");
 <li><?php download_link("http://snaps.php.net/manual/manual-en-current.tar.gz", "PHP HTML Manual (English) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-de-current.tar.gz", "PHP HTML Manual (German) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-it-current.tar.gz", "PHP HTML Manual (Italian) .tar.gz File"); ?>
-<li><?php download_link("http://snaps.php.net/manual/manual-jp-current.tar.gz", "PHP HTML Manual (Japanese) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-ja-current.tar.gz", "PHP HTML Manual (Japanese) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-fr-current.tar.gz", "PHP HTML Manual (French) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-es-current.tar.gz", "PHP HTML Manual (Spanish) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-hu-current.tar.gz", "PHP HTML Manual (Hungarian) .tar.gz File"); ?>
