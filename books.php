@@ -813,13 +813,13 @@ array (
   ),
 
   array(
-    /* title[s]     */ array("PHP tvorba interaktivnich internetovych aplikaci", "(PHP development interactive internet applications)"),
-    /* title_link   */ "http://www.kosek.cz/php/index.html",
+    /* title[s]     */ array("PHP tvorba interaktivnich internetovych aplikaci", "(PHP developing interactive internet applications)"),
+    /* title_link   */ "http://www.kosek.cz/php/",
     /* author[s]    */ "Jiri Kosek",
-    /* auth link[s] */ "",
+    /* auth link[s] */ "http://www.kosek.cz",
     /* image        */ "czech-book.jpg",
-    /* information  */ "",
-    /* inform. link */ "",
+    /* information  */ "Grada Publishing, April 20 1999, ISBN 80-7169-373-1, 492 pages",
+    /* inform. link */ "http://www.kosek.cz/php/",
     /* language     */ "cz"
   ),
 
