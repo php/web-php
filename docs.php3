@@ -32,7 +32,7 @@ commonHeader("Documentation ");
 <li><? download_link("manual.zip", "PHP 3.0 HTML Manual ZIP File"); ?>
 <li><? download_link("manual.tar.gz", "PHP 3.0 HTML Manual .tar.gz File"); ?>
 <li><? download_link("manual.rtf", "PHP 3.0 Manual RTF File"); ?>
-<li><? download_link("manual.pdf", "PHP 3.0 Manual PDF File"); ?>
+<li><? download_link("manual-3.0.6.pdf", "PHP 3.0.6 Manual PDF File - now indexed"); ?>
 <li><? download_link("manual.prc", "PHP 3.0 Manual PalmPilot DOC File"); ?>
 
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
