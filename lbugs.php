@@ -57,7 +57,7 @@ function addlinks($text) {
 					echo "$s</b>\n";
 				}
 				printf("<a href=\"%s?id=%d\">%4d</a>",$PHP_SELF,$row[id],$row[id]);
-				sprintf("%-9s ",$row[status]);
+				printf("%-9s ",$row[status]);
 				echo " ".htmlspecialchars($row[sdesc])."\n";
 			}
 			mysql_free_result($result);
