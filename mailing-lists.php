@@ -50,11 +50,11 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 <p>
 <b>Note:</b> When posting to mailing lists or newsgroups, please keep the following in mind:
 <ul>
-<li> Use a valid email adress. Every new poster's email address is checked for validity through confirmation.</li>
-<li> Send plain ascii messages, no HTML-formatted emails please.</li>
+<li> Use a valid email address. Every new poster's email address is checked for validity through confirmation.</li>
+<li> Send plain ASCII messages, no HTML-formatted emails please.</li>
 <li> Turn on wordwrapping so your entire message doesn't show up on a single line.</li>
 <li> No attachments please, just post a URL if you want someone to look at something.</li>
-<li> Don't gpg/pgp sign your messages.  If you want people to be able to send you encrypted email, stick your key-locator in your .sig</li>
+<li> Don't GPG/PGP sign your messages.  If you want people to be able to send you encrypted email, stick your key-locator in your .sig</li>
 <li> Don't hijack other peoples' threads.  To post on a new topic, start a new message, don't reply and just change the subject.</li>
 <li> Check the archives before posting a question, chances are it has already been asked and answered a few times.</li>
 </ul>
