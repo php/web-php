@@ -145,6 +145,36 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+
+<h1>Call for Speakers: PHP Qu&eacute;bec 2005</h1>
+<p>
+ <span class="newsdate">[09-Nov-2004]</span>
+ The PHP Qu&eacute;bec is proud to announce the PHP Qu&eacute;bec 
+ conference 2005, which will be held on March, 30th&amp;31th and
+ April 1rst 2005.   We are looking for the best speakers, willing to 
+ share their experience and skills with the educated crowd of PHP 
+ programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
+ 2005 features 4 distinct tracks:
+ <ul>
+  <li>
+   Professional PHP
+  </li>
+  <li>
+   PHP advanced technics
+  </li>
+  <li>
+   MySQL 
+  </li>
+  <li>
+   Apache and ASF projects 
+  </li>
+ </ul>
+ For more information, read the 
+ <a href="http://conf.phpquebec.com/fr/conf2005/appel">PHP Qu&eacute;bec web site</a>.
+</p>
+
+<hr />
 
 <?php news_image("http://nosoftwarepatents.com/", "90x40_3.jpg", "No Software Patents"); ?>
 
