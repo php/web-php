@@ -33,11 +33,6 @@ and the accompanying press release.
 Read all about the winning combination of PHP and <A HREF="http://www.tcx.se">MySQL</A>
 on the <a href="news.php3">In The News</a> page.<BR clear=all>
 
-<h3>Year 2000 Compliance</h3>
-Just like your C compiler or your favourite text editor, PHP is just about as
-year 2000 compliant as your pencil.  If you're still worried (perhaps all
-pencils are built to break on December 31st 1999?) - 
-<a href="y2k.php3">read this</a>.
 
 <H3>Help DevShed Promote PHP Awareness, Literacy, and Development</h3>
 <a href="http://www.devshed.com"><img src="/gifs/devshed3.gif" border=0 hspace=5 align=left></a>
