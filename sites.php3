@@ -264,7 +264,7 @@ right away.</blockquote>
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
-	site("USRentals","www.usrentals.com");
+	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
 	siteEnd();
 
