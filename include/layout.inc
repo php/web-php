@@ -87,9 +87,9 @@ function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false,
 
 function delim($color=false) {
 	if (!$color) {
-		return '&nbsp;|&nbsp;';
+		return ' | ';
 	}
-	return sprintf('<font color="%s">&nbsp;|&nbsp;</font>', $color );
+	return sprintf('<font color="%s"> | </font>', $color );
 }
 
 # hdelim()
