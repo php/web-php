@@ -191,6 +191,26 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://phpconf.hu/", make_image("news/hu_conf.gif", "PHPConf.hu", "right") ); ?>
+
+<h1>First Hungarian PHP Conference</h1>
+
+<p>
+<font class="newsdate">[25-Feb-2003]</font> The members of the Hungarian PHP
+community announce <a href="http://phpconf.hu/">the first Hungarian PHP
+Conference</a> which will take place in Budapest, on Saturday March 29th,
+sponsored by several international and local companies. The conference offers
+an entirely free one-day activity with several presentations addressing basic
+and advanced topics, as well, exclusively in Hungarian. Moreover, a five
+kilobyte-limited PHP contest has been started to discover the most talented
+PHP programmers in our country. The programme includes the first session of
+the so-called PHP Division which will be established with the set purpose
+of representing the community itself and promoting their interests in any
+national business and official phorums.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
 
 <p>
