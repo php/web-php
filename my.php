@@ -43,7 +43,7 @@ foreach ($langs as $code => $name) {
 
 // Assemble form from collected data
 $langpref = "<form action=\"/my.php\" method=\"POST\">\n<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n</form>";
+            join("", $options) . "</select>\n<input type=\"submit\" value=\"Set\">\n</form>";
 
 ?>
 
