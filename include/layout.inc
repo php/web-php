@@ -153,7 +153,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 #
 
 function download_link($file, $title) {
-	global $filesizes, $server;
+	global $filesizes;
 
 	if ($tmp = strrchr($file, "/")) {
 		$local_file = substr($tmp, 1, strlen($tmp));
@@ -164,7 +164,7 @@ function download_link($file, $title) {
 	$size = @filesize($local_file)/1024;
 	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
 
-  print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title);
+  print_link("/do_download.php?download_file=$file", $title);
 
 	if (!$size && isset($filesizes[$local_file])) { $size = $filesizes[$local_file]; }
 	if ($size) { echo " [" . number_format($size, 0, ".", ",") . "Kb]"; }
