@@ -2,6 +2,70 @@
 require("shared.inc");
 commonHeader("PHP 3.0 -> 3.0.7 Changes");
 ?>
+<h3>May 22 1999, Version 3.0.8</h3>
+<ul>
+<li> OCI8 fix for RAW and LONG RAW (Binary data) - sorry currently limited to
+  64K (Thies C. Arntzen)
+<li> Added support for pdf creation lib from FastIO, www.fastio.com
+  This has not been tested, yet (U. Steinmann)
+<li> Rewrite socket buffering subsystem (Sascha)
+<li> Fix semaphore support on glibc-2.1 systems (Sascha)
+<li> Add headers_sent() function which returns true if the http headers have been
+  sent out already
+<li> Ora_GetColumn and Ora_Fetch_Into can now return "LONG" and "LONG RAW"
+  columns &gt; 64K (Thies C. Arntzen)
+<li> Another str_replace() fix to check for a 0-length haystack (RL)
+<li> Add range() and shuffle() functions (Jim)
+<li> Fix glibc-2.1.x (RH6) related crashes (ssb)
+<li> Fix md5 on 64-bit platforms (Sascha)
+<li> Let exit/die set exit status in CGI version (Sascha)
+<li> Make substr() binary-safe (RL)
+<li> OCIError can now be called without any arguments to check the error of a failed
+  OCILogon. (Thies C. Arntzen)
+<li> added XML_Parse_Into_Struct. Parse XML without using callbacks - This makes
+  life far easier when using the XML-Parser from classes etc.  (Thies C. Arntzen)
+<li> Small fix in configure.in: doesn't try to add in Informix support anymore
+  if INFORMIXDIR is set but --with-informix not specified (Jouni Ahto)
+<li> add mcrypt module (Sascha)
+<li> added REFCURSOR (including nested table) handling for OCI8. (Thies C. Arntzen)
+<li> finalized new behaviour of hw_modifyobject() (U. Steinmann)
+<li> added OCINLogon function (New-Logon) - if you need you "own-private" transaction context. (Thies C. Arntzen)
+<li> GetImageSize now also returns the bits/sample ("bits") and samples/pixel ("cannels") -&gt;
+  currently only works for JPEGs (Thies C. Arntzen)
+<li> changed parameter evaluation of hw_modifyobject() (see docs) (U. Steinmann)
+<li> fixed a sporadic crash when shutting down a request that used the ora_** calls. (Thies C. Arntzen)
+<li> Add fgetcsv() function (RL from Nick Talbott)
+<li> fixed mem-leak in ora_bind (Thies C. Arntzen)
+<li> fixed length of bound variables returned from ora_bind. (Thies C. Arntzen)
+<li> Added V1 of DBA (Sascha)
+<li> made strtr() binary safe and faster. (Thies C. Arntzen)
+<li> added Oracle-OCI8 persistent connections (Thies C. Arntzen)
+<li> fixed OCIDefineByName crash. (Thies C. Arntzen)
+<li> fixed some NULL-column related problems in OCI8-module. (Thies C. Arntzen)
+<li> avoid stripping double slashes when fopen'ing files (Sascha)
+<li> sql_regcase() change: only apply to alphabetic characters (Sascha)
+<li> add snmprealwalk() (Sascha Schumann)
+<li> fix serious bug in strftime() (Sascha Schumann)
+<li> fix bug in ucwords() (Sascha Schumann)
+<li> optimized fgets() and fread() (ssb)
+<li> memory leak in operators.c fixed
+<li> socket leak fixed (Sascha Schumann) 
+<li> Fixed the XML bug that caused garbage behind attributes
+<li> Some Informix driver improvements.
+<li> PUT method support (RL from mlemos@acm.org)
+<li> Add ldap_mod_add(), ldap_mod_del() and ldap_mod_replace() (Gerritt Thomson)
+<li> Fix parameter count problem in odbc_setoption()
+<li> Replace broken str_replace(). The fix in 3.0.7 was bogus (Sascha Schumann)
+<li> Really fix implode() this time.  The fix in 3.0.7 was bogus (RL)
+<li> Added more option to the date() function: (Colin Viebrock)
+  'g' - hour, 12-hour format, no leading zeros
+  'G' - hour, 24-hour format, no leading zeros
+  'n' - month, numeric, no leading zeros
+<li> Make fgetss() slightly smarter (RL)
+<li> Add strip_tags() which uses the fgetss state-machine but acts on a string (RL)
+<li> Add CRYPT_SALT_LENGTH constant (RL) 
+</ul>
+
 <h3>March 1 1999, Version 3.0.7</h3>
 <ul>
 <li> Added pdf_put_image and pdf_execute_image
