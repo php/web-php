@@ -131,6 +131,7 @@ removed right away.</blockquote>
 	site("UPI Archives","upi.siteways.com");
 	site("CADALYST Magazine","www.cadonline.com");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
+	site("The Star - Kansas City","www.kcstar.com");
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
 	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
 	siteEnd();
