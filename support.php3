@@ -31,10 +31,6 @@ development of PHP3 you should join the developers'
 list by sending an empty message to <a href="mailto:
 php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>.
 
-<p>There is also a list for Italian PHP users, which you can subscribe
-to by sending a message with the word "subscribe" in the subject to <a
-href="mailto:php3-it-request@michel.enter.it">php3-it-request@michel.enter.it</a>.
-
 <P>
 Archives for some of these mailing lists can be found at: 
 </P>
@@ -68,6 +64,7 @@ the community to host local discussions (particularly non-English
 discussions).
 <ul>
   <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
+  <li><a href="mailto:php-subscribe@listserver.iwcc.com.ar">Spanish PHP User's Mailing List</a>
 </ul>
 
 <h3>Sample Code</h3>
