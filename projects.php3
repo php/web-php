@@ -119,6 +119,12 @@ and send invoices.  The author uses it as a substitute for a paper
 &quot;to do&quot; list.
 <? endEntry();?>
 
+<? makeEntry("OBM","http://www.aliacom.fr/obm/","Pierre Baudracco","pierre.baudracco@aliacom.fr"); ?>
+OBM is an Intranet application which goal is to help manage a company,
+but can be used as a contact database. It is written by Pierre Baudracco,
+with contributions by Patrice Bridoux and Pierre Carlier (and more to
+come) and released under the terms of the GPL.
+<? endEntry();?>
 
 <? makeEntry("MyAdServer","www.314interactive.com","3.14Interactive","wj@314interactive.com"); ?>
 This is a web adserver using PHP3.0 and MySQL  It includes the following features:
@@ -264,6 +270,10 @@ e-mail directly from your browser (quik-mark, mail-this-link) using
 javascript functions that link directly to the application.
 <? endEntry();?>
 
+<? makeEntry("MyGuestbook","www.html-design.com/MyGuestbook/","Mark Kronsbein","mk@html-design.com"); ?>
+This is a simple guestbook application that uses MySQL and supports
+several languages.
+<? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
