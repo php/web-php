@@ -22,6 +22,9 @@ The PHP Code Exchange is a great place to start.  Here you'll find many example 
 useful functions, organized for easy finding.  Includes a search function.<BR>
 <LI><A HREF="http://php.netvision.net.il/examples/">PHP Example Archive</A><BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
+<LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
+The start of what looks to be a promising collection of base code
+for developers of large PHP sites.<BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
