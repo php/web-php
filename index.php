@@ -148,6 +148,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
+
+<h1>International PHP Conference 2004 Amsterdam: Timetable and Open Source PHP projects</h1>
+<p>
+ <span class="newsdate">[27-Feb-2004]</span>
+ Having the CfP over now, the organizers of the
+ <a href="http://www.phpconference.com/">International PHP Conference
+ 2004 Spring Edition Amsterdam</a> have published the
+ <a href="http://www.phpconference.com/proxy/proxy.php?CatID=0&amp;NewsID=374">session
+ and workshop timetable</a>. The Conference features 32 sessions and two
+ power workshops. It will happen again at <a
+ href="http://www.phpconference.com/content/content2.php?CatID=0&amp;NewsID=356">the
+ RAI Conference Centre, Amsterdam</a>.
+</p>
+<p>
+ <strong>Open Source PHP projects</strong> can present themselves, like in
+ the last years, for free on the Conference at the exhibition area between
+ the commercial exhibitors. Take your chance and contact
+ <a href="mailto:fstepan@entwickler.com">Frank Stepan</a> from
+ Software &amp; Support.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.5RC3 released!</h1>
 <p>
  <span class="newsdate">[16-Feb-2004]</span>
@@ -196,8 +220,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-
-
 <?php news_image("http://conf.phpquebec.org/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2004 - (Montr&eacute;al, March 25&amp;26rst, 2004)</h1>
@@ -221,7 +243,6 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
-
 
 <?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
 
@@ -252,21 +273,6 @@ commonHeader("Hypertext Preprocessor");
  Source Convention</a> will be in Portland OR, July 26-30.
  <a href="http://conferences.oreillynet.com/cs/os2004/create/e_sess">Submit</a>
  your PHP-related talks and tutorials until the February 9 deadline.
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
-
-<h1>PHP Conference 2004 Spring Edition Programme Online</h1>
-<p>
- <span class="newsdate">[18-Jan-2004]</span>
- The session programme of the <a href="http://www.phpconference.com/">International
- PHP Conference 2004 Spring Edition Amsterdam</a> has now been published
- by the organizers. It features 32 fine sessions from PHP core developers and
- others within 5 tracks and 2 power workshops on the pre-conference day.
- <strong>Early bird registrations</strong> have been opened now until prior
- to April 2, 2004. The Conference will happen from 3rd to 5th May, 2004.
 </p>
 
 <hr />
