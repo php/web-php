@@ -1,3 +1,4 @@
+<html><head><title>Articles about PHP</title>
 <?
 	$title="Articles about PHP";
 	require("include/header.inc");	

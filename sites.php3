@@ -1,3 +1,4 @@
+<html><head><title>High-Profile sites running PHP</title>
 <?
 	$title="High-Profile sites running PHP";
 	require("include/header.inc");	
