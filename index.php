@@ -151,6 +151,19 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Forum PHP in Paris, November 26 & 27th</h1>
+<p>
+ <span class="newsdate">[26-Oct-2003]</span>
+ The French PHP User Group <a href="http://www.afup.org/">AFUP association</a>
+ is proud to announce the third annual PHP meeting in Paris, 
+ on November 26th and 27th, 2003. Developpers and managers will 
+ gather to meet PHP inventor Zeev Suraski and other community 
+ proeminent experts for two days of conferences, packed with 
+ <a href="http://www.afup.org/forumphp/">solutions and advanced technics</a>
+</p>
+
+<hr />
+
 <h1>PHP 4.3.4RC2 released</h1>
 <p>
  <span class="newsdate">[20-Oct-2003]</span>
