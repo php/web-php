@@ -12,6 +12,7 @@
 
 <li><? download_link("distributions/manual.zip", "PHP 3.0 Manual ZIP File"); ?>
 <li><? download_link("distributions/manual.tar.gz", "PHP 3.0 Manual .tar.gz File"); ?>
+<li><? download_link("distributions/manual.rtf", "PHP 3.0 Manual RTF File"); ?>
 
 <li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>.  Until the new
     manual is complete, you can get answers to many questions here.
