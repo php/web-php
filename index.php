@@ -50,6 +50,7 @@ echo "\n<!--$MYSITE-->\n";
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good.  This is thanks to a brand new server donated
 by <a href="http://www.pair.com/">pair Networks</a>.  Thanks!
+<br clear="all">
 </p>
 
 <?php echo hdelim(); ?>
@@ -140,32 +141,9 @@ your ear to the ground for more info on ApacheCon 2001 Europe in
 Dublin, Ireland in October 2001! (And stay tuned for more info
 on the first PHP Conference coming July 2001, part of the <a
 href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
-Conference</a> in San Diego, California.)</p>
-
-<?php echo hdelim(); ?>
-
-<h1>New Site Design</h1>
-
-<p>
-<font class="newsDate">[08-Mar-2001]</font>
-You might notice that things look a little different around
-here. We've streamlined the site, with a new design from the
-esteemed Colin Viebrock. Bear with us while we shake out the
-bugs that are surely lingering behind this new facade.
-</p>
-
-<p>
-Looking for the <?php print_link("/quickref.php", "quickref"); ?> box?  
-Use the "search" feature, conveniently located in the top-right corner of every page. 
-If you search for something in the function list (and it's a valid
-PHP function), you will be directed to the appropriate manual page.
-If the function doesn't exist, you'll get a list of all the PHP functions,
-and and option to do a site-wide search for your phrase.
-And don't forget to visit the <?php print_link("/tips.php", "tips and tricks"); ?> page 
-to add "quickref" functionality right into your web browser.
-</p>
-
+Conference</a> in San Diego, California.)
 <br clear="all">
+</p>
 
 <?php echo hdelim(); ?>
 
@@ -192,7 +170,8 @@ PHP 3.0.18 Released
 <font class="newsDate">[21-Oct-2000]</font>
 PHP 3.0.18 was released. This is a bug-fix release, including
 fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
-<?php print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?> contains a full list of changes.
+<?php print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?>
+contains a full list of changes.
 <br clear="all">
 </p>
 
@@ -203,7 +182,7 @@ Improve Your PHP Skills
 </h1> 
 <p>
 Looking for clear and useful guides to build dynamic web-sites using
-PHP?  Our <?php print_link("/books.php", "Books Resource Center"); ?> lists now
+PHP? Our <?php print_link("/books.php", "Books Resource Center"); ?> lists now
 more than 50 books in eleven different languages. If you know
 about more PHP-related books, tell us about them!
 <br clear="all">
