@@ -124,7 +124,7 @@ accomplish, a <b>short</b> code snippet showing how you tried to solve it, what 
     Array (
       'pear-doc', 'PEAR documentation list',
       'A list involving the documentation of PEAR, an open-source common code library for PHP',
-      false, true, true, "php.pear.doc"
+      false, false, true, "php.pear.doc"
     ),
     Array (
       'pear-cvs', 'PEAR CVS list',
@@ -194,7 +194,7 @@ accomplish, a <b>short</b> code snippet showing how you tried to solve it, what 
     Array (
       'zend-engine-cvs', 'Zend Engine CVS commit list',
       'All the commits of the Zend Engine CVS modules are posted to this list automatically',
-      false, true, true, "php.zend-engine.cvs"
+      false, false, true, "php.zend-engine.cvs"
     ),
     Array (
       'php-qa', 'Quality Assurance list',
