@@ -47,10 +47,9 @@ function endEntry() {
 ?>
 <h3>Projects using PHP</h3>
 
-An increasing number of projects, both commercial and Open Source, are using PHP as their main development
-tool.  If you want to browse through a list companies using PHP, you can go <a href="/sites.php">here</a>.
-This page, however, is a listing of cool things based on PHP, available for download.
-<P>
+<p>An increasing number of projects, both commercial and open source,
+are using PHP as their main development tool. This is a listing of
+some of the open-source PHP applications available.</p>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <? makeEntry("Keystone","www.stonekeep.com/keystone.php3","Dave Belfer-Shevett","shevett@pobox.com"); ?>
@@ -482,8 +481,7 @@ else is on the mailing list.
 <TD VALIGN=middle ALIGN=left rowspan=2>
 If you have a project you feel belongs on this list, send us email us at
 <A HREF="mailto:projects@php.net">projects@php.net</A> (we consider a project to be
-a software package where the code is available for download).  If you have a site that
-uses PHP, you may want to add it to the <a href="/sites.php">sites page</a>.
+a software package where the code is available for download).
 <BR></TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>

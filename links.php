@@ -2,12 +2,6 @@
 	require("shared.inc");
 	commonHeader("Links");
 ?>
-<h3>Sites using PHP</h3>
-<P>
-Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their
-web-sites.
-You can browse through a list of some companies using PHP <a href="/sites.php">here</a>.
-</P>
 
 <h3>Developers and Job Opportunities</h3>
 <P>
