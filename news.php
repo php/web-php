@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry ("The Scoop on PHP - Want a Cure For the ASP Blues? Delve Into the Dynamic Web With This Popular Scripting Language", "by Craig Knudsen",
+    "http://www.linux-mag.com/online/php_01.html", "September 14, 2000");?>
+I first discovered PHP a little over a year ago at Freshmeat.net. Because most non-commercial sites at that time used Perl CGI scripts for dynamic content, I found it interesting that Freshmeat's dynamic pages all ended with .php3 instead of the .pl or .cgi associated with Perl/CGI sites like Slashdot. I did a little exploring, quickly downloaded PHP version 3, and immediately became a PHP fan.
+<? endEntry(); ?>
+
 <? makeEntry( "LinuxTag - some impressions", "by <a href=\"mailto:winni@xpilot.org\">Winfried Tr&uuml;mper</a>",
     "http://www.guug.de:8080/fotos/linuxtag/story/index.html", "July, 2000");?>
 The literal translation of LinuxTag is LinuxDay. This title is a leftover from ancient times, when the event really lasted one day. This year the event occupied the fair in Stuttgart for four whole days, beginning at thurday with a business congress. For those commercially relevant lectures you had to pay. However, a total of over 100 hours of free lectures followed from friday to sunday, addressing the interests of end-users and developers. During all days companies and free software developers showed their Linux-products on an area of 6.000 m². An estimated number of 17.000 people visited the LinuxTag, making it a big success to be repeated next year. 
