@@ -36,12 +36,12 @@ $SIDEBAR_DATA = '
 </p>
 ';
 
-commonHeader("Show Source");
+site_header("Show Source");
 
 // No file param specified
 if (!isset($_GET['url'])) {
     echo "<h1>No page URL specified</h1>";
-    commonFooter();
+    site_footer();
     exit;
 }
 
@@ -77,6 +77,6 @@ if (!$page_name || @is_dir($page_name)) {
     echo "<p>This file does not exist.</p>\n";
 }
 
-commonFooter();
+site_footer();
 
 ?>
