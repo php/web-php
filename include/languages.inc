@@ -40,7 +40,6 @@ $LANGUAGES = array(
 );
 
 $INACTIVE_ONLINE_LANGUAGES = array(
-    'el' => 'Greek',
     'ar' => 'Arabic',
 );
 
