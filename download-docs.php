@@ -90,11 +90,11 @@ use does otherwise.
 
        # temporary hacks until pdf and chm are auto-generated
        if ($fn == "manual.pdf.bz2") {
-          $link_to = "distributions/manual/manual-$langcode.pdf.bz2";
+          $link_to = "distributions/manual/php_manual_$langcode.pdf.bz2";
        } elseif ($fn == "manual.pdf.gz") {
-          $link_to = "distributions/manual/manual-$langcode.pdf.gz";
+          $link_to = "distributions/manual/php_manual_$langcode.pdf.gz";
        } elseif ($fn == "manual.pdf.zip") {
-          $link_to = "distributions/manual/manual-$langcode.pdf.zip";
+          $link_to = "distributions/manual/php_manual_$langcode.pdf.zip";
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual/manual-$langcode.chm";
        } else {
