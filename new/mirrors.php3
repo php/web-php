@@ -9,10 +9,11 @@ $mirror_sites=$MIRRORS;
 reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
+	$country=$mirror_sites[$site][0];
 	$place=$mirror_sites[$site][1];
 	$type=$mirror_sites[$site][4];
 	if ($type==1):
-		echo "<OPTION VALUE=\"$site\">$place\n";
+		echo "<OPTION VALUE=\"$site\">$place ($country)\n";
 	endif;
 endwhile;
 ?></SELECT>
