@@ -1,14 +1,14 @@
 <?
 require("shared.inc");
 commonHeader("Projects");
-
 ?>
 <h3>Projects using PHP</h3>
 
 <p>An increasing number of projects, both commercial and open source,
 are using PHP as their main development tool. This is a listing of
 some of the open-source PHP applications available, courtesy of
-<a href="http://freshmeat.net">freshmeat</a>.</p>
+<a href="http://freshmeat.net">freshmeat</a>.</p> (Last updated:
+<?date("M d, Y h:ia", filemtime("backend/projects.html"))?>.)
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 
