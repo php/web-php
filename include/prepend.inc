@@ -1,6 +1,10 @@
 <?php // -*- C++ -*-
 
+// Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
+unset($SIDEBAR_DATA);
+
+// Load in requires parts
 require_once 'site.inc';
 require_once 'layout.inc';
 require_once 'geoip.inc';
