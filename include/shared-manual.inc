@@ -175,7 +175,7 @@ if (isset($MAGIC_COOKIE) && $id) {
 };
 
 function manualGetUserNotes($title, $id) {
-	global $MYSITE, $DOCUMENT_ROOT;
+	global $DOCUMENT_ROOT;
 	$notes = array();
 	$hash = substr(md5($id),0,16);
 
@@ -200,7 +200,7 @@ function manualGetUserNotes($title, $id) {
 }
 
 function manualUserNotes($title, $id) {
-	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT, $LANG, $MYSITE;
+	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
 
@@ -265,23 +265,16 @@ function sendManualHeaders($charset,$lang) {
 }
 
 function manualHeader($title,$id="") {
-	global $HTDIG, $LANGUAGES, $LANG, $SIDEBAR_DATA;
 	makeBorderTOC($title);
 	commonHeader($title. " - Manual");
         # create links to plain html and other languages
-	if (!$HTDIG) {
-		navigationBar($title, $id, "top");
-	}
+	navigationBar($title, $id, "top");
         echo "<!--/UdmComment-->";
 }
 
 function manualFooter($title,$id="") {
-	global $HTDIG;
-	if (!$HTDIG) {
-		manualUserNotes($title,$id);
-		navigationBar($title, $id, "bottom");
-	}
+	manualUserNotes($title,$id);
+	navigationBar($title, $id, "bottom");
 	commonFooter();
-
 }
 ?>
