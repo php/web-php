@@ -32,6 +32,17 @@ $books = array (
   "PHP" => array (
 
 array(
+    /* title[s]     */ "PHP de Luxe - fortgeschrittene PHP-Programmierung",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826607996/wwwphpnet07",
+    /* author[s]    */ array("Richard Samar", "Christian Stoker"),
+    /* auth link[s] */ array("http://www.php-de-luxe.ch/team/", "http://www.php-de-luxe.ch/team/"),
+    /* image        */ "phpdeluxe.jpg",
+    /* information  */ "mitp, May 2002, ISBN 3-8266-0799-6, 750 pages",
+    /* inform. link */ "http://www.php-de-luxe.de/",
+    /* language     */ "de"
+  ),
+
+array(
     /* title[s]     */ "PHP 4.x. After Work. Für Einsteiger",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/381557322X/wwwphpnet07",
     /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert", "Clemens Gutweiler"),
