@@ -32,14 +32,13 @@ cross-platform GUI applications. For more information, visit
 <h1>Patch Level 1 released for PHP 4.0.4</h1>
 
 <p>
-Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
-has been released.  This bug-fix release also fixes a few party-crashing bugs that
-were discovered in PHP 4.0.4.
+Due to two security issues found in the Apache module version of
+PHP 4.0, PHP 4.0.4pl1 has been released.  This bug-fix release also
+fixes a few party-crashing bugs that were discovered in PHP 4.0.4.
 <br clear="all">
 </p>
 
 <? echo hdelim(); ?>
-
 
 <h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
@@ -54,25 +53,7 @@ of which continue to show impressive growth for PHP. Check out the
 <br clear="all">
 </p>
 
-
 <? echo hdelim(); ?>
-
-
-<h1>
-<? print_link("http://conferences.oreilly.com/oscon2001/", make_image("osscon.gif", "OSSCon", "right") ); ?>
-PHP Conference - Call For Participation
-</h1>
-<p>
-The conference will be part of the <? print_link("http://conferences.oreilly.com/oscon2001/",
-"O'Reilly Open Source Convention"); ?> alongside the 5th annual Perl Conference at the 
-<? print_link("http://www.sheraton.com/property.taf?prop=127&lc=en", 
-"Sheraton San Diego Hotel and Marina"); ?>, San Diego, California, July 23-27, 2001.
-All the details on submitting talks are in the full <? print_link("/cfp.php", "CFP"); ?>.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
 
 <h1>
 PHP 4.0.4 Released
@@ -85,9 +66,7 @@ extensions. <? print_link("/downloads.php", "Download"); ?> and
 <br clear="all">
 </p>
 
-
 <? echo hdelim(); ?>
-
 
 <h1>
 PHP 3.0.18 Released
@@ -99,9 +78,7 @@ fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
 <br clear="all">
 </p>
 
-
 <? echo hdelim(); ?>
-
 
 <h1>
 Improve Your PHP Skills
@@ -114,9 +91,7 @@ about more PHP-related books, tell us about them!
 <br clear="all">
 </p>
 
-
 <? echo hdelim(); ?>
-
 
 <h1>
 Manual Search Tip
@@ -127,9 +102,7 @@ You can go directly to PHP manual pages with a URL such as
 <br clear="all">
 </p>
 
-
 <? echo hdelim(); ?>
-
 
 <h1>
 Tips and Tricks Section
