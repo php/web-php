@@ -224,54 +224,6 @@ For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0RC1"
 
 <hr />
 
-<h1>PHP 4.3.5RC3 released!</h1>
-<p>
- <span class="newsdate">[16-Feb-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.5RC3</a> has been released for testing. This 
- will be the last release candidate prior to the final release, so please test it
- as much as possible. List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.522&amp;r2=1.1247.2.566">NEWS</a> file.
-</p>
-
-<hr />
-
-<h1>PHP 5.0 Beta 4 released!</h1>
-<p>
- <span class="newsdate">[12-Feb-2004]</span>
- <a href="/downloads.php#v5">PHP 5.0 Beta 4</a> has been released.  This fourth beta 
- of PHP 5 is also scheduled to be the last one (barring unexpected surprises, that
- did occur with beta 3).  This beta incorporates dozens of bug fixes since Beta 3,
- rewritten exceptions support, improved interfaces support, new <i>experimental</i>
- SOAP support, as well as lots of other improvements, some of which are documented
- in the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.
-</p>
-<p>
- Some of the key features of PHP 5 include:
-</p>
-<ul>
- <li>
-  PHP 5 features the <a href="/zend-engine-2.php">Zend Engine 2</a>.
- </li>
- <li>
-  XML support has been completely redone in PHP 5, all extensions are now focused around the
-  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
- </li>
- <li>
-  SQLite has been bundled with PHP. For more information on SQLite, please visit their
-  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
- </li>
- <li>
-  A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can
-  also interface with the DOM extension and vice-versa.
- </li>
- <li>
-  Streams have been greatly improved, including the ability to access low-level socket
-  operations on streams.
- </li>
-</ul>
-
-<hr />
-
 <?php news_image("http://conf.phpquebec.org/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2004 - (Montr&eacute;al, March 25&amp;26rst, 2004)</h1>
