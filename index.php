@@ -90,6 +90,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+PHP-GTK version 0.1 has been released</h1>
+
+<p>
+<font class="newsDate">[02-Aug-2001]</font>
+The 0.1 release of PHP-GTK is now available. PHP-GTK is
+a PHP extension that provides an object-oriented interface
+to GTK+ toolkit and enables you to write client-side
+cross-platform GUI applications. Win32 binary version
+should be available a little later. 
+</p>
+<p>
+A talk on PHP-GTK was presented by Andrei Zmievski and
+Frank Kromann at the 2001 O'Reilly Open Source Conference
+in San Diego. The slides from the talk can be
+<a href="http://conf.php.net/sd-gtk">viewed online</a>.
+</p>
+For more information, visit <?php print_link("http://gtk.php.net/")?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Conference</h1>
 
 <p>
@@ -233,21 +256,6 @@ presentations online. Check out:</p>
 <p>If you missed out on ApacheCon 2001 in Santa Clara, keep
 your ear to the ground for more info on ApacheCon 2001 Europe in
 Dublin, Ireland in October 2001!
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
-Announcing PHP-GTK</h1>
-
-<p>
-<font class="newsDate">[03-Mar-2001]</font>
-The first release of PHP-GTK is now available. PHP-GTK is
-a PHP extension that provides an object-oriented interface
-to GTK+ toolkit and enables you to write client-side
-cross-platform GUI applications. For more information, visit
-<?php print_link("http://gtk.php.net/")?>.
 <br clear="all">
 </p>
 
