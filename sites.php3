@@ -80,6 +80,7 @@
 	site("Netvision","www.netvision.net.il");
 	site("Italia Online","www.iol.it");
 	site("XOOM Inc.","xoom.com");
+	site("Nederland.Net","www.nederland.net");
 
 	echo "<br></td><td valign=top>\n";
 	/* Computer Software */
