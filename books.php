@@ -100,7 +100,7 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076153055X/cmvsstuff">PHP Fast & Easy Web Development</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=10">Julie C. Meloni</A><BR> 
 <SMALL>
-Prima-Tech, July 2000, ISBN 0-7615-3055-X, 500 pages<BR>
+Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
 <A HREF="http://www.thickbook.com/">more info</A>
 </SMALL>
 </TD>
