@@ -11,7 +11,7 @@ function tryprefix($func, $prefix) {
 
     // Get the country code, to find native
     // language manual entries first
-    $cc = $MIRRORS[$MYSITE][2];
+    $cc = $MIRRORS[$MYSITE][0];
     $int_manual_try = array();
     $en_manual_try = array();
 
