@@ -77,7 +77,7 @@ function makeBorderTOC($this)
 	    $type = "p";
 	    $out = 0;
 	}
-	if ($UP[0] == 'funcref.php3') {
+	if ($UP[0] == 'funcref.php') {
 	    $title = eregi_replace(" functions\$", "", $title);
 	}
 	echo "<TR VALIGN=top><TD WIDTH=10>";
@@ -171,8 +171,8 @@ echo $blurb;
 ?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
 <hr noshade size=1>
-<A href="/manual/admin-notes.php3?action=delete+<?echo $id?>&brief=1" target="admin">delete</A> | 
-<A href="/manual/admin-notes.php3?action=edit+<?echo $id?>&brief=1" target="admin">edit</A>
+<A href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1" target="admin">delete</A> | 
+<A href="/manual/admin-notes.php?action=edit+<?echo $id?>&brief=1" target="admin">edit</A>
 <BR>
 <?endif;?>
 </TD></TR>
@@ -194,7 +194,7 @@ function makeAddNote() {
 onMouseover="change('addnote',1);" onMouseout="hide();"
 WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 ></A
->&nbsp;<A HREF="/manual/about-notes.php3" onMouseover="change('abnote',1);" onMouseout="hide();"
+>&nbsp;<A HREF="/manual/about-notes.php" onMouseover="change('abnote',1);" onMouseout="hide();"
 ><IMG SRC='/gifs/b-about-p.gif' ALT='About Notes' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='abnote' align=absmiddle
 ></A><BR>
 </TD>
