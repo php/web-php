@@ -137,7 +137,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP 4.3.0pre1 Released</h1>
 <p>
 <font class="newsdate">[10-Oct-2002]</font>
-<a href="http://qa.php.net/~andrei/php-4.3.0pre1.tar.bz2">PHP 4.3.0pre1</a>
+<a href="http://www.php.net/~andrei/php-4.3.0pre1.tar.bz2">PHP 4.3.0pre1</a>
 is available for download. PHP 4.3.0 incorporates a very large number of
 changes, new features, and bugfixes and thus requires extensive testing. This
 preliminary release is meant to kick-start this testing while the fixes are
