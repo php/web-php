@@ -97,7 +97,7 @@ teams are open to other contributors though.
 <?php
 
   foreach ($man_languages as $langnum => $langcode) {
-    echo '<a href="/manual/' . $langcode . '/html/index.html">' . $LANGUAGES[$langcode] . '</a>';
+    echo '<a href="/manual/' . $langcode . '/print/index.php">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
   }
 
