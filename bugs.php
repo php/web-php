@@ -413,7 +413,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     // Send doc bugs also to the doc list (jeroen)
     if ($ebug_type == "Documentation problem") {
-      @mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) 
+      @mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
     }
 
     if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
