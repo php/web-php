@@ -151,6 +151,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>New function list auto completion</h1>
+<p>
+ <span class="newsdate">[04-Nov-2003]</span>
+ You can probably name at least one IDE providing support for PHP function name
+ code completion. PHP.net is just <em>beta testing</em> the same feature
+ <a href="/search.php">on the search page</a>. Try selecting the 'function
+ list' lookup option and start typing in a function name in the search field.
+ You can autocomplete the name with the space key and navigate in the dropdown
+ with the up and down cursor keys. We welcome feedback on this feature at
+ <a href="/copyright.php#contact">the webmasters email address</a>, but
+ please submit any bugs you find <a href="http://bugs.php.net/">in the
+ bug system</a>.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.4 released!</h1>
 <p>
  <span class="newsdate">[03-Nov-2003]</span>
