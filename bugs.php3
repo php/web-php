@@ -467,7 +467,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
-		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"$row[3]\"></td></tr>\n";
+		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
 		echo "</table>\n";
 
 		/* INSERT NEW COMMENT HERE */
