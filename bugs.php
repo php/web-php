@@ -454,7 +454,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	/* DISPLAY BUG */
 	$result = mysql_query("SELECT * from bugdb where id=$id");
-	if(mysql_numrows($result)>0) {
+	if($result and mysql_numrows($result)>0) {
 		$row = mysql_fetch_row($result);	
 		echo "<br><h1>Bug id #$id</h1>\n";
 		echo "<table>\n";
@@ -550,7 +550,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} else {
 		echo "<br><h1>Sorry bug id #$id does not exist</h1>\n";
 	}
-	mysql_freeresult($result);
+	if ($result) {
+		mysql_freeresult($result);
+	}
 } else {
 	show_menu($status);
 ?>
