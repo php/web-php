@@ -638,7 +638,7 @@ To the global properties, or to the properties of the VirtualDomain you want to 
   </b></dt>
   <dd>
     Due to the way PHP is currently built, it is not easy to build a
-    complete flexible PHP RPM.  This issue will be addressed in PHP4.
+    complete flexible PHP RPM.  This issue will be addressed in PHP 4.
     For PHP, we currently suggest you use the mechanism described in the
     INSTALL.REDHAT file in the PHP distribution.  If you insist on using
     an RPM version of PHP, read on...
@@ -863,7 +863,7 @@ my $CFG_LDFLAGS_SHLIB = '&nbsp;';      # substituted via Makefile.tmpl</pre>
 <pre>my $CFG_CFLAGS_SHLIB  = '-fpic -DSHARED_MODULE';      # substituted via Makefile.tmpl
 my $CFG_LD_SHLIB      = 'gcc';          # substituted via Makefile.tmpl
 my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
-    The second possible problem should only be an issue on RedHat-6.1.
+    The second possible problem should only be an issue on RedHat-6.1/6.2.
     The apxs script RedHat ships is broken.  Look for this line:
 <pre>my $CFG_LIBEXECDIR    = 'modules';        # substituted via APACI install</pre>
     If you see the above line, change it to this:
