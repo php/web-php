@@ -128,6 +128,17 @@ README.WIN32 file.
 <H3>Common Problems</H3>
 
 <DL>
+  <DT><B>
+    I'm having problems configuring PHP3 to work with Apache. It says
+    it can't find httpd.h, but it's right where I said it is!
+  </B></DT>
+  <DD>
+    You need to tell the configure/setup script the location of the
+    <EM>top-level</EM> of your Apache source tree. This means that
+    you want to specify '<CODE>-with-apache=/path/to/apache</CODE>'
+    and <EM>not</EM> '<CODE>-with-apache=/path/to/apache/src</CODE>'.
+  <P>
+  </DD>
   <DT><b>
     When I run configure, it says that it can't find the include files or
     library for gdbm (or some other package)!
