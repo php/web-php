@@ -15,8 +15,8 @@ make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "this site") . '
 
 <h3>Other Downloads</h3>
 <p>
-For downloadable documentation, go to the '.
-make_link("docs.php", "documentation").'
+For downloadable manual formats, go to the '.
+make_link("download-docs.php", "documentation download").'
 page
 </p>
 
