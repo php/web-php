@@ -71,6 +71,7 @@ Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
 <BR> Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
 <LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com PHP Scripts and Programs</A><BR>
+<LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">A comprehensive list of editors you can use to edit PHP programs.</A><BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
