@@ -101,7 +101,7 @@ function navigationBar($title,$id,$loc) {
             }
         }
         echo '<form action="/manual/change.php" method="GET" class="thin">view the ' .
-             '<select name="page" class="small>'. "\n";
+             '<select name="page" class="small">'. "\n";
         foreach ($links as $link) {
             echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
