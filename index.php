@@ -146,7 +146,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2004.png", "Forum PHP"); ?>
+<?php news_image("http://www.afup.org/forumphp/", "afup2004.jpg", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 18 &amp; 19, 2004</h1>
 <p>
