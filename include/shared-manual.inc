@@ -184,6 +184,7 @@ if (isset($MAGIC_COOKIE) && $id) {
 
 function manualGetUserNotes($title, $id)
 {
+        $id = ereg_replace("\.php$","",$id);
 	// if we're www.php.net, get it from the local DB
 	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE;
@@ -195,7 +196,7 @@ function manualGetUserNotes($title, $id)
 		$user = 'nobody';
 		$pass = '';
 		$db_id = @mysql_connect($host, $user, $pass);
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY id";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect LIKE '$id%' ORDER BY id";
 		if ($db_id) $result_id = mysql_db_query("php3", $query, $db_id);
 		if ($result_id && mysql_num_rows($result_id) > 0) {
 			while ($row = mysql_fetch_array($result_id)) {
