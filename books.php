@@ -212,20 +212,7 @@ Unter Mitwirkung von
 <A HREF="http://www.zend.com/comm_person.php?id=37">Uwe Steinmann</A> und
 Christian Wenz<BR>
 <SMALL>in German, Markt+Technik, Dec 2000, ISBN 3-8272-5877-4, 640 pages</SMALL><BR>
-<SMALL><A HREF="http://www.mut.de/shop/sh-info.asp?ID=3827258774">weitere Informationen</A><BR>
-</TD>
-</TR>
-
-<TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/wwwphpnet"
-><IMG SRC="/gifs/book-php-german.gif" BORDER=0 ALIGN="left"
-></A><BR>
-</TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/wwwphpnet"
->PHP - Dynamische Webauftritte professionell realisieren</A><BR>
-by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus, Richard Blume<BR>
-<SMALL>in German, Markt+Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
-<SMALL><A HREF="http://www.dynamic-webpages.de/11.buecher.php?buchID=2">weitere Informationen</A><BR>
+<SMALL><A HREF="http://www.php-buch.de/">weitere Informationen</A><BR>
 </TD>
 </TR>
 
