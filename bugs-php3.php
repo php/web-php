@@ -155,7 +155,6 @@ function show_types($first_item,$show_any,$var_name) {
 				   "mhash related",
 				   "Misbehaving function",
 				   "FrontPage related",
-				   "Feature/Change Request",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
