@@ -7,7 +7,7 @@ function make404() {
 	header("Cache-Control: public, max-age=600");
 	commonHeader('404 Not Found');
 	echo "<h1>Not Found</h1>\n";
-	echo "<p>the page <b>" . htmlspecialchars($request_uri) . "</b> could not be found.</p>\n";
+	echo "<p>the page <b>" . htmlspecialchars($REQUEST_URI) . "</b> could not be found.</p>\n";
 	commonFooter();
 }
 
