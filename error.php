@@ -182,10 +182,11 @@ $uri_aliases = array (
     "windows"      => "install.windows",
     "win32"        => "install.windows",
 
-    "globals"      => "language.variables.predefined",
-    "register_globals" => "security.registerglobals",
-    "registerglobals" => "security.registerglobals",
-    "gd"           => "image",
+    "globals"          => "language.variables.predefined",
+    "register_globals" => "security.globals",
+    "registerglobals"  => "security.globals",
+    "manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
+    "gd"               => "image",
 
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
