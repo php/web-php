@@ -204,6 +204,7 @@ right away.</blockquote>
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
+	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
 	siteEnd();
 
 /* Misc. */
