@@ -29,7 +29,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
 &nbsp; ' . make_link("http://www.synacor.com/", "Synacor") . '<br>
-&nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<br>
+&nbsp; ' . make_link("http://vasoftware.com/", "VA Software Corporation") . '<br>
 <h3>Related sites</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
 &nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br>
