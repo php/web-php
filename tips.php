@@ -20,7 +20,7 @@ function tipTitle($title,$author='',$date='') {
 
 ?>
 
-<h1>Cool Quick Referenve Tips</h1>
+<h1>Cool Quick Reference Tips</h1>
 
 <p>
 On this page, you can find many neat tips and tricks to optimize
