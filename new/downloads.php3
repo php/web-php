@@ -10,7 +10,7 @@ commonHeader("Downloads ");
 <CENTER>
 <TABLE border=0 cellpadding=0 cellspacing=0>
 <TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=left><IMG SRC="/new/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 <TD align=center colspan=3 NOWRAP>
 <CENTER>
 <?
@@ -21,14 +21,14 @@ while ($site = key($mirror_sites)) {
 	next($mirror_sites);
 	$c=$mirror_sites[$site][0];
 	if ($c!=$lastc):
-		echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
+		echo "<A HREF=\"#$c\"><IMG SRC=\"/new/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
 		$lastc=$c;
 	endif;
 }
 ?><BR>
 </CENTER>
 </TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG SRC="/new/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>
 <?
 $lastcountry="xxxxx";
@@ -49,12 +49,12 @@ while ($site = key($mirror_sites)) {
 	if ($lastcountry!=$country) {
 		echo "<TR><TD colspan=3>&nbsp;<BR></TD><TD BGCOLOR='#F0F0F0'>&nbsp;<BR><BR></TD><TD>&nbsp;<BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
-		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
-		echo "<TD><A NAME='$country'><IMG SRC='/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0></A><BR></TD>\n";
+		echo "<TD><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
+		echo "<TD><A NAME='$country'><IMG SRC='/new/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0></A><BR></TD>\n";
 		echo "<TD>";
 		spc(10,1);
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
-		echo "<TD align=right colspan=2><IMG SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+		echo "<TD align=right colspan=2><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		echo "</TR>\n";
 		$lastcountry=$country;
 	}
@@ -85,7 +85,7 @@ while ($site = key($mirror_sites)) {
 ?>
 <TR><TD colspan=3>&nbsp;<BR></TD><TD BGCOLOR='#F0F0F0'>&nbsp;<BR><BR></TD><TD>&nbsp;<BR></TD></TR>
 <TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=left><IMG SRC="/new/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 <TD align=center colspan=3 NOWRAP>
 <CENTER>
 <?
@@ -96,14 +96,14 @@ while ($site = key($mirror_sites)) {
 	next($mirror_sites);
 	$c=$mirror_sites[$site][0];
 	if ($c!=$lastc):
-		echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
+		echo "<A HREF=\"#$c\"><IMG SRC=\"/new/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
 		$lastc=$c;
 	endif;
 }
 ?><BR>
 </CENTER>
 </TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG SRC="/new/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>
 </TABLE>
 <?

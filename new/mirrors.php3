@@ -16,7 +16,7 @@ while ($site = key($mirror_sites)):
 	endif;
 endwhile;
 ?></SELECT>
-<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>
+<INPUT TYPE="image" SRC="/new/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>
 </FORM>
 <?
 commonFooter();
