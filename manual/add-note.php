@@ -76,7 +76,7 @@ allowing them in the past, but people invariably made a mess of
 things making the manual hard to read for everybody. You can include
 &lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
 
-<p>Read carefully the following note. If your post falls into one of the
+<p>Read the following note carefully. If your post falls into one of the
 categories mentioned there, it will be rejected by one of the editors.</p>
 
 <P><b>Note:</b> If you are trying to <A href="http://bugs.php.net/">report a
@@ -96,6 +96,10 @@ being <b>deleted</b> from them (and you may get a <b>rejection</b> email), so
 if you post a question/bug/feature/complaint, it will be removed. (But once you
 get an answer/bug solution/function documentation, feel free to come back
 and add it here!)</p>
+<p>(And if you're posting an example of validating email addresses, please
+don't bother. Your example is almost certainly wrong for some small subset of
+cases. See <a href="http://examples.oreilly.com/regex/">this information from
+O'Reilly Mastering Regular Expressions book</a> for the gory details.)</p>
 <?php
   }
 
