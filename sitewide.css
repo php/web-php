@@ -1,34 +1,34 @@
 /* General page styles ---------------------------------------------------- */
 body, html {
-    margin: 0px;
-    padding: 0px;
-    color: black;
-    background-color: white;
+	margin: 0px;
+	padding: 0px;
+	color: black;
+	background-color: white;
 }
 
 body, input, textarea, select, option {
-    font-family: verdana, arial, helvetica, sans-serif;
+	font-family: verdana, arial, helvetica, sans-serif;
 }
 
 #content, #headmenu, #footnav, #copyright, #thismirror,
 #headsearch span, #headsearch input, #headsearch select {
-    font-size: 85%;
+	font-size: 85%;
 }
 
 a, a:visited, a:hover {
-    color: #000099;
+	color: #000099;
 	background-color: transparent;
 }
 
 a:active {
-    color: #0000ff;
+	color: #0000ff;
 	background-color: transparent;
 }
 
 h1 {
-    font-size: 130%;
-    font-weight: bold;
-    color: #000066;
+	font-size: 130%;
+	font-weight: bold;
+	color: #000066;
 	background-color: transparent;
 }
 
@@ -43,36 +43,36 @@ h1 {
 /* Header navigation area ------------------------------------------------- */
 #headnav {
 	color: inherit;
-    background-color: #9999cc;
-    height: 67px;
-    position: relative;
+	background-color: #9999cc;
+	height: 67px;
+	position: relative;
 }
 #headnav img {
-    border: 0px;
-    margin: 0px 3px;
+	border: 0px;
+	margin: 0px 3px;
 }
 #headmenu {
-    position: absolute;
-    bottom: 0px;
+	position: absolute;
+	bottom: 0px;
 	right: 5px;
-    text-align: right;
+	text-align: right;
 	padding-left: 126px;
 }
 #headsearch {
-    background-color: #666699;
-    border-width: 1px 0px;
-    border-color: #333366;
-    border-style: solid;
-    text-align: right;
-    padding-right: 6px;
-    font-size: 75%;
-    color: white;
+	background-color: #666699;
+	border-width: 1px 0px;
+	border-color: #333366;
+	border-style: solid;
+	text-align: right;
+	padding-right: 6px;
+	font-size: 75%;
+	color: white;
 }
 #headsearch input.submit {
-    vertical-align: baseline;
+	vertical-align: baseline;
 }
 #headsearch form, #headsearch p {
-    margin: 0px;
+	margin: 0px;
 }
 #headsearch span.shortkey {
 	text-decoration: underline;
@@ -80,46 +80,46 @@ h1 {
 
 /* Footer navigation area ------------------------------------------------- */
 #footnav {
-    color: inherit;
+	color: inherit;
 	background-color: #9999cc;
-    border-width: 1px 0px;
-    border-color: #333366;
-    border-style: solid;
-    text-align: right;
-    padding-right: 6px;
+	border-width: 1px 0px;
+	border-color: #333366;
+	border-style: solid;
+	text-align: right;
+	padding-right: 6px;
 }
 #pagefooter {
-    position: relative;
-    font-size: 75%;
-    color: inherit;
+	position: relative;
+	font-size: 75%;
+	color: inherit;
 	background-color: #cccccc;
 	width: 100%;
 }
 #thismirror {
 	text-align: right;
-    margin-left: 50%;
+	margin-left: 50%;
 	padding: 6px;
 }
 #copyright {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	padding: 6px;
 	margin-right: 50%;
 }
 #footnav a, #headmenu a {
-    font-size: 75%;
-    text-decoration: none;
+	font-size: 75%;
+	text-decoration: none;
 }
 
 /* Credits page styles ---------------------------------------------------- */
 .e {
-	background-color: #ccccff; 
+	background-color: #ccccff;
 	color: inherit;
 	font-weight: bold;
 }
 .h {
-	background-color: #9999cc; 
+	background-color: #9999cc;
 	color: inherit;
 	font-weight: bold;
 }
@@ -129,4 +129,26 @@ h1 {
 }
 .vr {
 	text-align: right;
+}
+
+/* PHP source code highlighting ------------------------------------------- */
+div.phpcode span.html {
+	color: black;
+	background-color: transparent;
+}
+div.phpcode span.comment {
+	color: #FF8000;
+	background-color: transparent;
+}
+div.phpcode span.default {
+	color: #0000BB;
+	background-color: transparent;
+}
+div.phpcode span.keyword {
+	color: #007700;
+	background-color: transparent;
+}
+div.phpcode span.string {
+	color: #DD0000;
+	background-color: transparent;
 }
