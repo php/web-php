@@ -39,7 +39,7 @@ function find_manual_page($lang, $function) {
     }
     if ($lang != "en") {
       while (list($t,$section) = each($sections)) {
-	$try = tryprefix($lang, $function, $section);
+	$try = tryprefix("en", $function, $section);
 	if ($try) return $try;
       }
     }
