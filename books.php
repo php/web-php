@@ -297,6 +297,18 @@ by Klaus Schmidt<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3-8272-5883-9/wwwphpnet07"
+><IMG SRC="/jpgs/matt_zandstra.jpg" BORDER=0 ALIGN="left" width="111" height="157"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258839/wwwphpnet07"
+>Jetzt lerne ich PHP 4</A><BR>
+by Matt Zandstra<BR>
+<SMALL>in German, Markt+Technik, December 2000, ISBN 3-8272-5883-9, 515 pages<BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.AnayaMultimedia.es/"
 ><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left"
 ></A><BR>
