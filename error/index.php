@@ -185,7 +185,6 @@ $external_redirects = array(
     "getdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
     "rev"         => "/manual/$LANG/revcheck.html.gz",
     "blog"        => "/manual/$LANG/build.log.gz",
-    "books"       => "/books.php?type_lang=PHP_$LANG"
 );
 
 // ============================================================================
@@ -207,6 +206,12 @@ if ($URI !=  'books' && file_exists("$DOCUMENT_ROOT/$URI.php")) {
 if (isset($external_redirects[$URI])) {
     $true_external = (substr($external_redirects[$URI], 0, 1) != '/');
     mirror_redirect($external_redirects[$URI], $true_external);
+}
+
+// Temporary hack for books, until all the pages will be
+// capable of being included from anywhere
+if ($URI == 'books') {
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/books.php";
 }
 
 // ============================================================================
