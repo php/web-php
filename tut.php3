@@ -123,4 +123,13 @@ automatically set for you by PHP.
 This tutorial will get expanded, but at this time this is all there is.  With what you know now
 you should be able to understand the online manual and also the various example scripts available
 in the example archives.
+<P>
+Here is a list of other excellent PHP tutorials:
+<ul>
+<li><a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a>
+<li><a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a>
+<li><a href="http://www.314interactive.com/io/content.php3?sec=art&req=mysql&issue=4&pg=1">ionline</a>
+<li><a href="http://www.htmlwizard.net/phpTidbits/">phpTidbits</a>
+<li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a>
+</ul>
 </body></html>
