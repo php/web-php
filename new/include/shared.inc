@@ -14,6 +14,7 @@ $FONTFACE = "tahoma, arial, helvetica, sans-serif";
 
 /* this browser logic is really ugly :-P */
 if (eregi("Mozilla/([0-9]+)", $HTTP_USER_AGENT, &$verdata)) {
+    $browser = "Netscape";
     $version = (int)$verdata[1];
     if ($version >= 4) {
 	$HAVE_LAYERS = $HAVE_TD_BG = $HAVE_CSS = $HAVE_TD_BG =
@@ -22,6 +23,7 @@ if (eregi("Mozilla/([0-9]+)", $HTTP_USER_AGENT, &$verdata)) {
     } elseif ($version >= 3) {
 	$HAVE_IMG_SRC = true;
 	$HAVE_TD_BG = true;
+	$HAVE_FONT_COLOR = true;
 	$HAVE_JS = 11;
     } elseif ($versjon >= 2) {
 	$HAVE_JS = 10;
@@ -29,9 +31,12 @@ if (eregi("Mozilla/([0-9]+)", $HTTP_USER_AGENT, &$verdata)) {
 }
 
 if (eregi("MSIE ([0-9]+)\.", $HTTP_USER_AGENT, &$verdata)) {
+    $browser = "MSIE";
     $version = (int)$verdata[1];
     if ($version >= 4) {
 	$IE4 = true;
+    } elseif ($version >= 3) {
+	$HAVE_STYLE = true;
     }
 }
 
@@ -229,13 +234,17 @@ function kickFooter($kickname, $buttname)
 }
 
 function sidebarButton($href, $imgname, $icon, $alt, $kickout) {
+    global $HAVE_JS;
     echo("<A HREF=\"$href\" ".
 	 "onMouseover=\"change('$imgname',1)");
-    if ($kickout) {
+    if ($kickout && $HAVE_JS >= 12) {
 	echo(";showLayer('$kickout')");
     }
-    echo("\" onMouseout=\"hide()\">".
-	 "<IMG SRC=\"/new/gifs/b-$icon-p.gif\" ALT=\"$alt\" ".
+    echo("\"");
+    if ($HAVE_JS >= 11) {
+	echo(" onMouseout=\"hide()\"");
+    }
+    echo("><IMG SRC=\"/new/gifs/b-$icon-p.gif\" ALT=\"$alt\" ".
 	 "WIDTH=129 HEIGHT=30 BORDER=0 NAME=\"$imgname\" hspace=10>".
 	 "</A><BR>");
 }
@@ -278,7 +287,7 @@ function commonHeader($title) {
     //<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 ?><HTML>
 <HEAD>
-<TITLE>PHP3: <? echo $title ?></TITLE>
+<TITLE>PHP3: <? echo $title; ?></TITLE>
 <? if ($HAVE_STYLE) { ?>
 <LINK REL="stylesheet" HREF="/new/php-style.css" TYPE="text/css">
 <? } ?>
@@ -310,19 +319,26 @@ var lastbutton='top';
 	 "}\n");
 } /* $HAVE_LAYERS */ ?>
 
-<? $jsfunc['LoadImgs']() ?>
-<? $jsfunc['change']() ?>
+<? if ($IE4) { echo("LoadImgs();\n"); } ?>
+
+</SCRIPT>
+<? } /* $HAVE_JS >= 12 */
+
+if ($HAVE_JS >= 11) {
+    ?><SCRIPT LANGUAGE="Javascript1.1">
 
 function hide() {
     if (document.images && (loaded == 1)) {
 	change(lastbutton,0);
     }
 }
+<?
+    $jsfunc['LoadImgs']();
+    $jsfunc['change']();
+    ?></SCRIPT><?
+}
+?>
 
-<? if ($IE4) { echo("LoadImgs();\n"); } ?>
-
-</SCRIPT>
-<? } /* $HAVE_JS >= 12 */ ?>
 
 </HEAD>
 
@@ -347,18 +363,22 @@ function hide() {
       <? if ($title == "Show Source") { ?>
        <IMG SRC="/new/gifs/b-source-p.gif" WIDTH=1 HEIGHT=1 BORDER=0
  	    NAME="sour"><A
-            HREF="<? echo $HTTP_REFERER ?>" onMouseover="change('close',1);"
-            onMouseout="hide();"><IMG SRC="/new/gifs/b-close-p.gif"
+            HREF="<? echo $HTTP_REFERER ?>" onMouseover="change('close',1);"<?
+            if ($HAVE_JS >= 11) {?> onMouseout="hide()"<?}
+            ?>><IMG SRC="/new/gifs/b-close-p.gif"
             ALT="Close this source page" WIDTH=75 HEIGHT=30 VSPACE=9 HSPACE=5
             BORDER=0 NAME="close"></A><? } else { /* !Show Source */
        ?><IMG SRC="/new/gifs/b-close-p.gif" WIDTH=1 HEIGHT=1 BORDER=0
               NAME="close"><A HREF="source.php3?page_url=<? echo $PHP_SELF ?>"
-              onMouseover="change('sour',1);" onMouseout="hide();"><IMG
+              onMouseover="change('sour',1);"<?
+	      if ($HAVE_JS >= 11) {?> onMouseout="hide()"<?}
+              ?>><IMG
               SRC="/new/gifs/b-source-p.gif" ALT="View source code for page"
               WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME="sour"></A><?
          } /* Show Source */ ?><A HREF="search.php3"
-            onMouseover="change('sear',1);showLayer('searchKick');"><IMG
-            SRC="/new/gifs/b-search-p.gif" ALT="Search site" WIDTH=75
+            onMouseover="change('sear',1);<?
+            if ($HAVE_JS >= 12) {?>showLayer('searchKick');<?}
+            ?>"><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search site" WIDTH=75
             HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG
             SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0></TD>
     </TR>
