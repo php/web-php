@@ -348,6 +348,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		/* nothing */
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
+	} elseif ($status == "OldFeedback") {
+		$where_clause = "status='Feedback' and TO_DAYS(NOW()-ts2)>60";
 	} elseif($status!="All" && $bug_type=="Any") {
 		/* Treat assigned and analyzed bugs as open */
 		if($status=="Open") {
