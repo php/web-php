@@ -126,7 +126,7 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
  </dd>
 </dl>
 <?php
-        commonFooter();
+        site_footer();
         exit;
     } // endif: no error found
 } // endif: no data or checkread not checked
