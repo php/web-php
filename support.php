@@ -142,7 +142,7 @@ are searchable.
     Array (
       'php-gtk', 'PHP-GTK mailing list',
       'A list for those who would like to use PHP to write client-side GUI applications' ,
-      false, true, false, "php.gtk"
+      false, true, true, "php.gtk"
     ),
     Array (
       'phplib', 'PHPLIB mailing list',
