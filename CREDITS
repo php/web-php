@@ -94,7 +94,7 @@
   <ul><li>Various odds and ends</ul>
 
 <li>Jaakko Hyvätti (jaakko@hyvatti.iki.fi)
-  <ul><li>Prototype cop and regular expression code fixes</ul>
+  <ul><li>Prototype cop, regular expression code fixes and CGI security issues</ul>
 
 <li>Andreas Karajannis (Andreas.Karajannis@gmd.de) 
   <ul><li>Adabas D, ODBC</ul>
