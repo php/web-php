@@ -145,6 +145,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://phpconf.hu/2005/", "hu_conf.gif", "PHPConf.hu"); ?>
+
+<h1>Third Hungarian PHP Conference</h1>
+
+<p>
+ <span class="newsdate">[17-Jan-2005]</span>
+ The Web Application Development Division of the John von Neumann Computer
+ Society is proud to present the <a href="http://phpconf.hu/2005/">Third
+ Hungarian PHP Conference</a> which will take place in Budapest, on Saturday
+ March 12th, sponsored by several international and local companies.
+ The conference offers an entirely free one day activity with several
+ presentations addressing basic and advanced topics as well, mostly in
+ Hungarian. This year, the organizers are also happy to welcome Derick
+ Rethans and Lukas Smith speaking. Continuing on the success of previous
+ years, a five+five kilobyte-limited PHP 5 contest has been started to
+ discover the most talented PHP programmers in the country.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phparch.com/tropics", "php_tropics.jpg", "php|tropics"); ?>
 <h1>php|tropics</h1>
 
