@@ -859,7 +859,7 @@ if (isset($type)) {
   if (!isset($lang)) { $suffix = ' in all languages'; }
   else { $suffix = ' in ' . $langs[$lang]; }
 
-  echo '<h1>' . $book_types[$type] . $suffix '</h1>';
+  echo '<h1>' . $book_types[$type] . $suffix . '</h1>';
   echo '<table border="0" cellpadding="5">';
   foreach ($books[$type] as $one_book) {
     if (isset($lang) && $lang != $one_book[7]) { continue; }
