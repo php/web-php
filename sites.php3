@@ -289,6 +289,7 @@ right away.</blockquote>
 	site("El Mundo","www.el-mundo.es");
 	site("FocalPress","www.focalpress.com.hk");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
+	site("Independent Online (South Africa)","www.iol.co.za");
 	site("LA Weekly","www.laweekly.com");
 	site("Maximum PC Magazine","www.maximumpcmag.com");
 	site("Mercattel","mercattel.interwatts.com");
