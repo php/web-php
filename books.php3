@@ -22,6 +22,17 @@ by Rasmus Lerdorf<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
+><IMG SRC="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
+by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
+<SMALL><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 ><IMG SRC="/gifs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
@@ -41,17 +52,6 @@ by Leon Atkinson<BR>
 >PHP3: Programming Browser-Based Applications (McGraw-Hill Tools Series)</A><BR>
 by David Medinets<BR>
 <SMALL><A HREF="http://www.mtolive.com/phpbook">more info</A><BR>
-</SMALL>
-</TD>
-</TR>
-
-<TR VALIGN="middle">
-<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
-><IMG SRC="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif" BORDER=0 ALIGN="left"></A><BR>
-</TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
-by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
-<SMALL><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
