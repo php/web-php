@@ -340,14 +340,16 @@ file.
     <P>This is actually quite easy.  Follow these steps carefully:
     <UL>
 	<LI>Grab the latest Apache 1.3 distribution from <A href="http://www.apache.org/dist/">www.apache.org</A>.
-	<LI>Ungzip and untar it somewhere, for example /usr/local/src/apache_1.3b3.
-	<LI>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache_1.3b3  (substitute <i>&lt;path&gt;</i> for the actual path to your apache_1.3b3 directory.
+	<LI>Ungzip and untar it somewhere, for example /usr/local/src/apache-1.3.
+	<LI>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache-1.3  (substitute <i>&lt;path&gt;</i> for the actual path to your apache-1.3 directory.
 	<LI>Type 'make' followed by 'make install' to build PHP3 and copy the
             necessary files to the Apache distribution tree.
-	<LI>Change directories into to your /<i>&lt;path&gt;</i>/apache_1.3b3/src directory and edit the <i>Configuration</i> file.  At the end of the file, add: <tt>AddModule modules/extra/mod_php3.o</tt>.
+	<LI>Change directories into to your /<i>&lt;path&gt;</i>/apache-1.3/src directory and edit the <i>Configuration</i> file.  At the end of the file, add: <tt>AddModule modules/php3/libphp3.a</tt>.
 	<LI>Type: './Configure' followed by 'make'.
 	<LI>You should now have a PHP3-enabled httpd binary!
     </UL>
+    <b>Note:</b> You can also use the new Apache ./configure script.  See the instructions in the README.configure file
+    which is part of your Apache distribution.  Also have a look at the INSTALL file in the PHP distribution.
   <P>
   </DD>
 </DL>
