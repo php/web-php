@@ -28,9 +28,10 @@ subscribe to the lists.
 
 <h1>Newsgroups</h1>
 <p>
-The PHP language newsgroup is <tt>comp.lang.php</tt>. In addition
-to this many of our mailing lists are also reflected onto the news
-server at <a href="news://news.php.net">news://news.php.net/</a>. The
+The PHP language newsgroup is <tt>comp.lang.php</tt>, available on any
+news server around the globe. In addition to this many of our mailing
+lists are also reflected onto the news server at
+<a href="news://news.php.net">news://news.php.net/</a>. The
 server also has a read only web interface at
 <a href="http://news.php.net/">http://news.php.net/</a>.
 </p>
@@ -42,19 +43,19 @@ that these newsgroups are only available on this server.
 
 <h1>User Groups</h1>
 <p>
-PHP user groups have started popping up. Christopher
-R. Moewes-Bystrom is running a PHP user group registry at <a
+Christopher R. Moewes-Bystrom is running a PHP user group registry at <a
 href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
-There's also a list of user groups in Germany, as well as news from those same
-user groups, at <a href="http://www.phpug.de/">http://www.phpug.de/</a>.  
+There's also a list of user groups in Germany, as well as news from them,
+and link to other countries user groups at
+<a href="http://www.phpug.de/">http://www.phpug.de/</a>.
+<a href="http://php.meetup.com/">PHP Meetup</a> is another great
+opportunity to get together.
 </p>
 
 <h1>Events &amp; Training</h1>
 <p>
 A list of upcoming events (such as user group meetings and PHP training
 sessions) is included in the right-hand column of the front page.
-</p>
-<p>
 If you want to list an upcoming event, just fill out the form <a
 href="http://www.php.net/submit-event.php">on this page</a>.
 </p>
@@ -62,7 +63,7 @@ href="http://www.php.net/submit-event.php">on this page</a>.
 <h1>Sample Code</h1>
 <p>
 Looking for some more sample PHP scripts? Our <A
-HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
+HREF="/links.php">links page</A> lists some archives of sample PHP code - 
 great places to find many example scripts and useful functions, organized for 
 your searching pleasure!
 </p>
