@@ -61,21 +61,30 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	$last = $next = '&nbsp;';
 	if ($page>1) {
 		$i=$page-1;
-		$last=make_link($baseurl.'&page='.$i, 'prev page');
+		$last=make_link($baseurl.'&page='.$i, make_image('caret-l.gif', 'previous').'previous');
 	}
 	if ($page<$pages) {
 		$i=$page+1;
-		$next=make_link($baseurl.'&page='.$i, 'next page');
+		$next=make_link($baseurl.'&page='.$i, make_image('caret-r.gif', 'next').'next page');
 	}
 
 	$middle="<B>Displaying results $firstdisplayed to $lastdisplayed</B>";
 
-	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#cccccc' CELLPADDING=0 CELLSPACING=0>\n";
-	echo "<TR VALIGN=middle>\n";
-	echo "<TD ALIGN=left WIDTH=75>$last<BR></TD>\n";
-	echo "<TD ALIGN=center WIDTH=100%>$middle<BR></TD>\n";
-	echo "<TD ALIGN=right WIDTH=75>$next<BR></TD>\n";
-	echo "</TR></TABLE><BR>\n";
+
+        echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+	echo '<tr>';
+        echo '<td align="middle" colspan="2">' . $middle . '<br></td>';
+	echo '</tr>';
+
+        echo '<tr bgcolor="#cccccc"><td colspan="2">';
+        spacer(1,1);
+        echo '<br></td></tr>';
+
+        echo '<tr>';
+        echo '<td align="left">' . $last . '<br></td>';
+        echo '<td align="right">' . $next . '<br></td>';
+        echo '</tr>';
+	echo '</table><BR>' . "\n";
 }
 
 if(!isset($pattern)) { 
@@ -206,12 +215,9 @@ Restrict the search to: <BR>
 
 		makeBar("2",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
-		?>
-		<p>
-		Search powered by<BR>
-		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="/gifs/htdig.gif" BORDER=0 ALT="ht:dig">
-		</p>
-		<?
+		echo "<p>Search powered by<BR>\n";
+		print_link("http://htdig.sdsu.edu/", make_image("htdig.gif", "ht:dig") );
+		echo "</p>\n";
 }
 commonFooter();
 ?>

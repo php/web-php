@@ -1,49 +1,28 @@
 <?
 require_once 'prepend.inc';
 commonHeader("Thanks");
-
-function makeEntry($heading) {
-    global $FONTFACE;
-?>
-<TR bgcolor='#D0D0D0' valign=top>
-<TD ALIGN=left rowspan=2 valign=middle>
-<?
-    echo "<FONT FACE=\"$FONTFACE\" SIZE=-1><FONT SIZE=+0>\n";
-    echo "<B>$heading</B><BR></FONT>\n";
-?>
-</TD>
-</TR>
-<TR VALIGN=top>
-<TD WIDTH=18><BR></TD>
-<TD ALIGN=left>
-<TABLE border=0 cellpadding=5 cellspacing=0 bgcolor="#F0F0F0" width=100%>
-<TR><TD><FONT FACE="<? echo $FONTFACE;?>" SIZE=-1>
-<?
-};
-
-function endEntry() {
-?>
-<BR><BR></TD></TR></TABLE>
-</TD>
-<TD width=18><BR></TD>
-</TR>
-<?
-};
 ?>
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
-<?makeEntry("Chek.com")?>
-For providing the server and bandwidth that runs www.php.net.
-<?endEntry()?>
+<h1>Thanks</h1>
 
-<?makeEntry("easyDNS")?>
-For providing DNS services for the php.* domains.
-<?endEntry()?>
+<p>
+<? print_link("http://chek.com/", "Chek.com"); ?> provides the server and 
+bandwidth that run the main www.php.net mirror site.
+</p>
 
-<?makeEntry("VA Linux Systems")?>
-For providing the server and bandwidth that runs the PHP mailing lists, CVS server, 
-snapshot site and a number of other services.
-<?endEntry()?>
+<p>
+<? print_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS"); ?> provides
+DNS services for the php.* domains.
+</p>
 
-</TABLE>
+<p>
+<? print_link("http://valinux.com/", "VA Linux Systems"); ?> provides the server and 
+bandwidth that run the PHP mailing lists, CVS server, snapshot site and a number of other services.
+</p>
+
+<p>
+And special thanks to all the companies who donate server space and bandwidth to host
+our international array of <? print_link("/mirrors.php", "mirror sites");?>.
+</p>
+
 <? commonFooter(); ?>
