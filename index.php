@@ -139,7 +139,7 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 <font class="newsdate">[06-Sept-2002]</font>
 <a href="/downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
-release, and is a recommended update for all users of PHP.</p>
+release, and is a recommended update for all users of PHP, and Windows users in particular.</p>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
