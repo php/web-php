@@ -217,6 +217,7 @@ right away.</blockquote>
 	site("Cigar.Com","www.cigar.com");
 	site("Spell Web","www.spellweb.com");
 	site("Mail Chek","mail.chek.com");
+	site("WebMasters Index","www.webmastersindex.com");
 	siteEnd();
 
 /* blank bar at end. */
