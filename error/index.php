@@ -3,7 +3,7 @@ require_once 'prepend.inc';
 
 function make404() {
 	global $REQUEST_URI;
-	header('HTTP/1.0 404 Not Found');
+	header('Status: 404 Not Found');
 	header("Cache-Control: public, max-age=600");
 	commonHeader('404 Not Found');
 	echo "<h1>Not Found</h1>\n";
@@ -34,7 +34,6 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	}
 	$urle = htmlspecialchars($url);
 	
-	header("HTTP/1.0 302 Redirect");
 	header("Location: $url");
 
 	print "<html><title>Redirect to $urle</title><body>";
@@ -51,7 +50,6 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 	}
 	$urle = htmlspecialchars($url);
 	
-	header("HTTP/1.0 302 Redirect");
 	header("Location: $url");
 
 	print "<html><title>Redirect to $urle</title><body>";
@@ -76,22 +74,11 @@ if(strchr($uri,'/')) {
 
 $try = find_manual_page($lang, $function);
 if ($try) {
-	header("HTTP/1.0 302 Redirect");
 	header("Location: $try");
 	exit;
 }
 
 
-# If all else fails ... redirect to the search page with the pattern set to $REQUEST_URI
-
-if ($REQUEST_URI) {
-	header('HTTP/1.0 302 Redirect');
-	header('Location: /search.php?show=nosource&pattern='.urlencode(substr($REQUEST_URI,1)) );
-	exit;
-}
-
-make404();
-exit;
-
-
+# redirect to the search page with the pattern set to $REQUEST_URI
+header('Location: /search.php?show=nosource&pattern='.urlencode(substr($REQUEST_URI,1)) );
 ?>
