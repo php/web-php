@@ -389,7 +389,7 @@ function clean_note($text) {
     }
     
     // Preserve spacing of user notes
-    $text = str_replace("  ", " &nbsp;", $text);
+    $text = str_replace("  ", "&nbsp; ", $text);
 
     $text = "<code class=\"note\">".$text."</code>";
     return $text;
