@@ -19,7 +19,9 @@ commonHeader("Documentation ");
 
 <LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
     is the same as the above, except there is a built-in errata/note system
-    that users all around the world can (and have!) contributed to.
+    that users all around the world can (and have!) contributed to. Of
+    all of the documentation, this will be the most current version,
+    as it it updated (and annotated) daily.
 
 <LI><A href="books.php">Books on PHP</A>. Here you can find a
     great selection of books on PHP and related themes.
