@@ -126,6 +126,7 @@ right away.</blockquote>
 	siteStart();
 	site("easyDNS","www.easydns.com");
 	site("InfoMak","www.infomak.com");
+	site("My URL's", "murl.com");
 	site("Webex - Russia","www.webex.ru");
 	siteEnd();
 
