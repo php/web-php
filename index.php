@@ -191,6 +191,16 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
+<p>
+<font class="newsdate">[30-January-2003]</font>
+LinuxTag e.V has once again put out a call for papers for this years conference event. Submit your ideas
+and proposals <a href="http://www.linuxtag.org/2003/en/conferences/cfp.html">here</a>. This year's theme 
+looks at discussions that promote new ideas, delivers a broad overview, introduces new users to linux, or 
+discusses the legal, moral and other implications of linux and free software.</p>
+ 
+<?php echo hdelim(); ?>
+
 <?php print_link("http://phpconf.phpquebec.org/index.php", make_image("conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&21rst, 2003)</h1>
