@@ -389,18 +389,18 @@ Using a module based approach it is easy to adopt into various organisations wit
 <? endEntry(); ?>
 
 
-<? makeEntry("phpDBForm", "http://sourceforge.net/projects/phpdbform/", "Paulo Assis", "ottani@uol.com.br"); ?>
+<? makeEntry("phpDBForm", "http://phpdbform.sourceforge.net", "Paulo Assis", "ottani@uol.com.br"); ?>
 PHP scripts to help manage a html form to admin data in MySQL. With only some lines of PHP code you get a html form. Features: easy management, customizations, drop down lists easy, and others.
 <? endEntry(); ?>
 
 
-<? makeEntry("SquirrelMail", "http://www.squirrelmail.org/", "Tyler Akins", "tyler@boas.anthro.mnsu.edu"); ?>
+<? makeEntry("SquirrelMail", "http://www.squirrelmail.org/", "SquirrelMail Development Team", "squirrelmail-list@sourceforge.net"); ?>
 SquirrelMail is a web-based mail program that will read and send your mail on IMAP-based mail servers.  This script is very easy to install and configure. The newest version supports plugins, which expand SquirrelMail's capabilities and allows developers to try their hand at developing new features.<br /><br />
 
 * It is written entirely in PHP 4.<br />
 * It has its own IMAP implementation (you don't need it compiled into PHP)<br />
 * Address book supports LDAP (if compiled in)<br />
-* Source (and CVS) available on SourceForge.net)<br />
+* Source (and CVS) available on SourceForge.net<br />
 * Works with a wide variety of IMAP servers
 <? endEntry(); ?>
 
