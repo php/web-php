@@ -25,8 +25,8 @@ function download_file($mirror, $file)
         exit("Unable to serve you the requested file for download");
     }
 
-    // Try to flush output, and make the browser
-    // really download the file, even is $LOG_SERVER is down..
+    // Try to flush output, and make the browser really
+    // download the file, even if the log server is down
     echo " ";
     flush();
     
