@@ -4,16 +4,19 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h3>PHP 3.0.10 has been released!</h3>
+<h3>PHP 3.0.11 has been released!</h3>
 <p>
-June 25, 1999. Many more bug fixes, including the last of the fsockopen()
-and URL fopen() problems, we hope. The dbm database abstraction layer
-had the mode flag for dba_open() brought into line with dbm_open(),
-which means "w" will not create a non-existent database (use "c"
-instead). The documentation has also been moved into its own repository,
-and the generated HTML documentation is included in the tar.gz instead
-of the SGML source.  For a more complete list of all of the changes,
-see the <a href="ChangeLog.php3">ChangeLog</a>.
+June 27, 1999. Hot on the heels of 3.0.10, along comes another release
+to fix a few problems on Windows and some Unix platforms. If 3.0.10
+worked for you, there's probably no need to upgrade. 3.0.10 featured
+bug fixes, including the last of the fsockopen() and URL fopen()
+problems, we hope. The dbm database abstraction layer had the mode
+flag for dba_open() brought into line with dbm_open(), which means
+"w" will not create a non-existent database (use "c" instead). The
+documentation has also been moved into its own repository, and the
+generated HTML documentation is included in the tar.gz instead of the
+SGML source.  For a more complete list of all of the changes, see the
+<a href="ChangeLog.php3">ChangeLog</a>.
 </P>
 
 <h3>PHP Related Books are Available</h3>

@@ -1,7 +1,18 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.10 Changes");
+commonHeader("PHP 3.0 -> 3.0.11 Changes");
 ?>
+<h3>June 27, 1999, Version 3.0.11</h3>
+<ul>
+<li>detect missing getpgid function, fix posix_getsid (Jim)
+<li>fix diskspacefree() on Win95 pre-OSR2 (Jim)
+<li>fix APXS argument order (Sascha)
+<li>decrease lexer memory footprint (see #1600) (alanc@soar.berkeley.edu, Sascha)
+<li>add dbase_replace_record() (Greg <greg@darkphoton.com>, Sascha)
+<li>bringing preg_split() behavior in line with split() (Andrey)
+<li>fix APXS build on AIX (Rasmus)
+</ul>
+
 <h3>June 25, 1999, Version 3.0.10</h3>
 <ul>
 <li>fix base64_decode to match RFC 2045 semantics (Sascha & bfranklin@dct.com)
