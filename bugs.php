@@ -89,10 +89,10 @@ if ($cmd == "send") {
 		$ascii_report = "$report$sdesc\n\n".wordwrap($ldesc);
 		$ascii_report.= "\n-- \nEdit bug report at: http://bugs.php.net/?id=$cid&edit=1\n";
 
-		$mailto = get_bugtype_mailto($bug_type);
+		list($mailto,$mailfrom) = get_bugtype_mail($bug_type);
 
 		if (mail($mailto, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>")) {
-		    @mail($email, "Bug #$cid: $sdesc", $ascii_report, "From: PHP Bug Database <$mail_bugs_to>\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>");
+		    @mail($email, "Bug #$cid: $sdesc", $ascii_report, "From: PHP Bug Database <$mailfrom>\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>");
 			echo "<p><h2>Mail sent to $mailto...</h2></p>\n";
 			echo "<p>Thank you for your help!</p>";
 			echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
@@ -302,11 +302,11 @@ elseif ($cmd == "display") {
 		$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
 		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=1\n";
 
-		$mailto = get_bugtype_mailto($bug_type);
+		list($mailto,$mailfrom) = get_bugtype_mail($bug_type);
 
 		/* send mail if status was changed or there is a comment */
 		if ($status != $original[status] || $ncomment != "") {
-			@mail($original[email], "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: Bug Database <$mail_bugs_to>\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
+			@mail($original[email], "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: Bug Database <$mailfrom>\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
 			@mail($mailto, "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: $from\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
 		}
 
@@ -648,16 +648,16 @@ function incoming_details_are_valid($require_ldesc=0) {
 	return $valid;
 }
 
-function get_bugtype_mailto($bug_type) {
+function get_bugtype_mail($bug_type) {
 	global $mail_bugs_to;
 	if (eregi("documentation", $bug_type)) {
-		return "$mail_bugs_to,phpdoc@lists.php.net";
+		return array("$mail_bugs_to,phpdoc@lists.php.net",$mail_bugs_to);
 	}
 	elseif (eregi("website", $bug_type)) {
-		return "php-mirrors@lists.php.net";
+		return array("php-mirrors@lists.php.net","php-mirrors@lists.php.net");
 	}
 	else {
-		return $mail_bugs_to;
+		return array($mail_bugs_to,$mail_bugs_to);
 	}
 }
 
