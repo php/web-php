@@ -9,6 +9,13 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP Developers' Meeting</h3>
+On January 20th, 2000 the primary developers of PHP are meeting for a
+4-day session in Tel Aviv, Israel.  The main goal is to organize the 
+development effort.  The developers of MySQL will also be in attendance
+to explore how the two projects can cooperate further to make the 
+PHP/MySQL combination even stronger than it already is.
+
 <h3>3.0.14 Released</h3>
 January 11, 2000.  3.0.14 is a minor bug-fix release to fix a safe-mode 
 problem reported on bugtraq along with an annoying gd configure problem.
