@@ -27,6 +27,8 @@ There's also a searchable directory at
 <h3>Getting Started</h3>
 <P>On these sites you will find tutorials, articles and example scripts</P>
 <UL>
+<LI><a HREF="http://www.phpbuilder.com">PHPBuilder.Com</a><BR>
+A bunch of helpful PHP resources available here<BR>
 <LI><a HREF="http://www.devshed.com/resource/advanced/php3.phtml">PHP3 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
 <LI><A HREF="http://php.codebase.org">PHP.CodeBase.Org</A><BR>
