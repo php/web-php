@@ -232,38 +232,12 @@ function manualGetUserNotes($title,$failover=true)
 				fclose($fp);
 			}
 		}
-		else
-		{
-			/*
-			// test code
-			$notes = array(
-				array( 
-					"id" => 123,
-					"sect" => "sect1",
-					"user" => "simon1",
-					"note" => "note1",
-					"xwhen" => time() 
-				)
-			);
-			*/
-		}
 	}
 	return $notes;
 }
 
 
 function manualUserNotes($title) {
-	global $MYSITE;
-	if(strstr($MYSITE,"www.php.net")) {
-		$host = 'localhost';
-		$user = 'nobody';
-		$pass = '';
-		$db_id = mysql_connect($host, $user, $pass);
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' ORDER BY id";
-		$result_id = mysql_db_query("php3", $query, $db_id);
-	} else {
-		$result_id = 0;
-	}
 	echo '<FORM method="POST" action="http://www.php.net/manual/add-note.php">';
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
