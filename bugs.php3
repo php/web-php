@@ -541,6 +541,7 @@ Or use the form below to submit a new bug report.
 <input type=hidden name=cmd value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php3">Dos & Don'ts</a> before submitting a bug report!</strong</p>
+<p><strong>To report bugs in PHP 4.0, please go <a href="http://bugs.php.net/version4/">here</a>.</strong></p>
 
 <table>
  <tr>
