@@ -40,12 +40,21 @@ href="/FAQ.php3">FAQ</a>.  Then have a look at the online manual and
 other resources in the <a href="/docs.php3">documentation</a> section.
 </P>
 
+<h3>Books</h3>
+<P>
+<a href="books.php3">Books</a> are convenient resources to begin exploring 
+PHP. <a href="books.php3">The titles listed here</a> will help you to start 
+learning PHP, as well as extending your existing knowledge.
+</P>
+
 <h3>Reporting Bugs</h3>
 <P>If you can't resolve your problem from the
 available documentation or mailing list archives, and you think it might
 be a bug, a <a href="http://bugs.php.net">Bug Database</a> has
 been established for tracking bugs and ensuring that all reported bugs
 get addressed.  If you see a problem, please tell us so we can address it.
+Please read <a href="http://bugs.php.net/bugs-dos-and-donts.php3"
+>before posting a report</a>.
 </P>
 
 <h3>User Groups</h3>
