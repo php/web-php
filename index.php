@@ -86,8 +86,8 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 <font class="newsDate">[22-Apr-2002]</font>
 The PHP Group is happy to announce the
-<?php print_link ("/downloads.php", "immediate availability"); ?>
-of PHP 4.2.0, the latest version of the widely-used, general-purpose scripting language
+<?php print_link ("/downloads.php", "immediate availability"); ?> of
+PHP 4.2.0, the latest version of the widely-used, general-purpose scripting language
 that is especially well-suited for Web development.</p>
 
 <p>This latest release contains over one hundred changes, bug fixes and improvements over
