@@ -1,5 +1,5 @@
 <?
-	if($save && $user && $pw) {
+	if(isset($save) && isset($user) && isset($pw)) {
 		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 	}
 
