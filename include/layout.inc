@@ -469,16 +469,3 @@ function display_event($event,$include_date=1)
 </table>
 <?php
 }
-
-function calc_distance($from,$to) {
-  $lat1 = pi()/180 * $from['lat'];
-  $lat2 = pi()/180 * $to['lat'];
-  $lon1 = pi()/180 * $from['lon'];
-  $lon2 = pi()/180 * $to['lon'];
-
-  $dlat = $lat2 - $lat1;
-  $dlon = $lon2 - $lon1;
-
-  $t = pow(sin($dlat/2), 2) + cos($lat1)*cos($lat2)*pow(sin($dlon/2),2);
-  return atan2(sqrt($t),sqrt(1-$t));
-}
