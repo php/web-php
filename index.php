@@ -75,6 +75,27 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
+
+<h1>International PHP Conference slides available</h1>
+
+<p>
+<font class="newsDate">[10-Jan-2002]</font>
+You can find an overview of all slides of the sessions from the
+International PHP Conference 2001 on the
+<a href="http://www.phpconference.de/2001/slides_en.php">conference
+slides page</a>. It is still not too late to check out some photos
+from the conference:
+<ul>
+    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
+    <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
+    <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
+</ul>
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.1.1 Released!</h1>
 
 <p>
@@ -138,27 +159,6 @@ You can get more information about the ongoing
 project, including the detailed results of the survey at
 <?php print_link("http://weblabor.hu/php/newchm.php",
 " the project's own page"); ?>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
-
-<h1>The International PHP Conference is over</h1>
-
-<p>
-<font class="newsDate">[17-Nov-2001]</font>
-PHP enthusiasts from all over the world met three days to attend
-powerworkshops and sessions presented by the inventors of PHP, members
-of the core group and other well known people from the community.
-The conference is over now, but you can get some impressions
-by visiting one of the photo galleries put together by attendees:
-<ul>
-    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
-    <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
-    <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
-</ul>
 <br clear="all">
 </p>
 
