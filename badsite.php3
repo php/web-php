@@ -2,11 +2,13 @@
 <HEAD>
 <TITLE>PHP: Hypertext Preprocessor</TITLE>
 <!-- comment: 22-Jun-1999 10:30 EDT -->
+
 <STYLE TYPE="text/css">
 A		{ font-weight: bold; text-decoration: none; }
 A:hover         { text-decoration: underline; }
 P		{ line-height: 150%; }
 </STYLE>
+
 </HEAD>
 
 <BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#5B69A6" VLINK="#5B69A6" ALINK="#00FF00">
