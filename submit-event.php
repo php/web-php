@@ -186,11 +186,7 @@ if (isset($in)) {?>
    <select name="in[category]" width="20">
 <?php
 	$cat = array("- Select a category -", "regional", "national", "international");
-        foreach ($cat as $name) {
-                echo '<option',
-                     ($name == $in['category'] ? ' selected="selected"' : ''),
-                     '>', htmlentities($name), "</option>\n";
-	}
+        display_options($cat,$in['category']);
 ?>
    </select>
   </td>
