@@ -97,7 +97,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     Array (
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
-      true, false, true, "php.evangelism"
+      true, true, true, "php.evangelism"
     ),	
     Array (
       'phplib', 'PHPLIB mailing list',
