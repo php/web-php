@@ -6,7 +6,7 @@ First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
 
-   rsync -avzC rsync.php.net::phpweb /your/local/path 
+   rsync -avzC --delete rsync.php.net::phpweb /your/local/path 
 
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
@@ -43,7 +43,11 @@ You must also set up a cron job that periodically does an rsync to refresh
 your web directory.  This will ensure that your web site is up to date. 
 Something like:
 
-   0,30 * * * * /usr/local/bin/rsync -avzC rsync.php.net::phpweb /your/path
+   0,30 * * * * /usr/local/bin/rsync -avzC --delete rsync.php.net::phpweb /your/path
+
+(You don't need to update every half-hour, although it shouldn't
+hurt. You should try to stagger your times a bit from the example
+to help spread the load on the rsync.php.net server.)
 
 Once you have done the above and your site appears to work, send a message to
 mirrors@php.net with the following information, and appropriate steps will be 
@@ -67,7 +71,7 @@ Don't worry about graphics for your country's flag - we've got them all!
 You must also sign up to the mirrors mailing list, by sending an empty 
 message to:
 
-   php-dev-subscribe@lists.php.net
+   php-mirrors-subscribe@lists.php.net
 
 Traffic is pretty light, and we need to be able to keep in touch with you!
 
