@@ -1,60 +1,72 @@
 <?php
-/* $Id$ */
-
-require_once './include/prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'thanks.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("Thanks");
 ?>
 
 <h1>Thanks</h1>
 
 <p>
-<?php print_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS"); ?> provides
-DNS services for the PHP domains.
+ <a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a>
+ provides DNS services for the PHP domains.
 </p>
 
 <p>
-<?php print_link("http://www.directi.com/", "Directi"); ?> provides
-IP address to country lookup information.
+ <a href="http://www.directi.com/">Directi</a> provides
+ IP address to country lookup information.
 </p>
 
 <p>
-<?php print_link("http://promote.pair.com/direct.pl?php.net", "pair Networks"); ?> provides
-the servers and bandwidth for CVS and mailing list services.
+ <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>
+ provides the servers and bandwidth for CVS and mailing list services.
 </p>
 
 <p>
-<?php print_link("http://www.rackshack.net/", "RackShack"); ?> provides
-the server and bandwidth for www.php.net.
+ <a href="http://www.rackshack.net/">RackShack</a> provides
+ the server and bandwidth for www.php.net.
 </p>
 
 <p>
-<?php print_link("http://www.rackspace.com/", "Rackspace"); ?> provides
-the server and bandwidth for various php.net services and builds.
+ <a href="http://www.rackspace.com/">Rackspace</a> provides
+ the server and bandwidth for various php.net services and builds.
 </p>
 
 <p>
-<?php print_link("http://www.redundant.com/", "Redundant Networks"); ?> provides
-the server and bandwidth that run various services and websites for php.net.
+ <a href="http://www.redundant.com/">Redundant Networks</a> provides
+ the server and bandwidth that run various services and websites
+ for php.net.
 </p>
 
 <p>
-<?php print_link("http://www.simplicato.com/?a=1007", "Simplicato"); ?> provides a
-server and resources to help php.net.
+ <a href="http://www.simplicato.com/?a=1007">Simplicato</a> provides a
+ server and resources to help php.net.
 </p>
 
 <p>
-And special thanks to all the companies who donate server space and bandwidth to host
-our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
+ And special thanks to all the companies who donate server space and
+ bandwidth to host our international array of 
+ <a href="/mirrors.php">mirror sites</a>.
 </p>
 
 <h1>Thanks Emeritus</h1>
-<p>Special 'legacy' thanks go to the people and companies who have helped us in our past.</p>
 
-<p><?php print_link("http://www.synacor.com", "Synacor"); ?> provided us with many terabytes of 
-bandwidth and hosting for www.php.net and others for many years.</p>
+<p>
+ Special 'legacy' thanks go to the people and companies who have helped
+ us in our past.
+</p>
 
-<p><?php print_link("http://www.vasoftware.com", "VA Software Corp."); ?> helped us by donating a server and resources
-to enable us to build manuals and distribute our content via rsync.</p>
+<p>
+ <a href="http://www.synacor.com">Synacor</a> provided us with many
+ terabytes of bandwidth and hosting for www.php.net and others for
+ many years.
+</p>
+
+<p>
+ <a href="http://www.vasoftware.com">VA Software Corp.</a> helped us
+ by donating a server and resources to enable us to build manuals
+ and distribute our content via rsync.
+</p>
 
 <p>PHP.net is very grateful for all their support.</p>
 
