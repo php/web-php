@@ -51,6 +51,19 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/thephpdevelopmte"
+><IMG SRC="http://www.hanser.de/cover/1999/3-446-21301-5.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/thephpdevelopmte"
+>PHP - Grundlagen und L&ouml;sungen unter Windows und Linux</A><BR>
+by J&ouml;rg Krause<BR>
+<SMALL>in German</SMALL><BR>
+<SMALL><A HREF="http://www.php-center.de/">weitere Informationen</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center">
 <IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
