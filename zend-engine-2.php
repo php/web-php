@@ -1,9 +1,10 @@
 <?php
 require_once 'prepend.inc';
 
-commonHeader("Changes in PHP5/Zend Engine 2.0", 1);
+commonHeader("Changes in PHP 5/Zend Engine 2.0", 1);
 ?>
-<h1>Changes in PHP5/Zend Engine 2.0</h1>
+<h1>Changes in PHP 5/Zend Engine 2.0</h1>
+
 <h2>New Object Model.</h2>
 <p>
 PHP's handling of objects has been completely rewritten, allowing for better performance and more
@@ -17,9 +18,10 @@ identifier).
 Many PHP programmers aren't even aware of the copying quirks of the old object model and, therefore, 
 the majority of PHP applications will work out of the box, or with very few modifications.
 </p>
+
 <h2>Private and Protected Members</h2>
 <p>
-PHP5 introduces private and protected member variables, they allow do define the visibility of class
+PHP 5 introduces private and protected member variables, they allow do define the visibility of class
 properties.
 </p>
 
@@ -70,7 +72,7 @@ $obj->printHello();
 
 <h2>Private and protected methods</h2>
 <p>
-With PHP5 (Zend Engine 2), private and protected methods are also introduced.
+With PHP 5 (Zend Engine 2), private and protected methods are also introduced.
 </p>
 
 <h3>Example</h3>
@@ -106,7 +108,7 @@ or "private" should run without modifications.
 
 <h2>Abstract Classes and Methods</h2>
 <p>
-PHP5 also introduces abstract classes and methods. An abstract method only declares the 
+PHP 5 also introduces abstract classes and methods. An abstract method only declares the 
 method's signature and does not provide an implementation. A class that contains abstract 
 methods needs to be declared abstract.
 </p>
@@ -152,6 +154,7 @@ class Exception implements Throwable {
     // ...
 }
 ?>'); ?>
+</p>
 
 <p>
 Old code that has no user-defined classes or functions named 'interface' or 
@@ -160,7 +163,7 @@ Old code that has no user-defined classes or functions named 'interface' or
 
 <h2>Class Type Hints</h2>
 <p>
-While remaining loosely typed PHP5 introduces the ability to use class type hints to declare 
+While remaining loosely typed PHP 5 introduces the ability to use class type hints to declare 
 the expected class of objects that are passed as parameters to a method.
 </p>
 <h3>Example</h3>
@@ -222,7 +225,7 @@ This syntax only applies to objects/classes, not built-in types.
 
 <h2>final</h2>
 <p>
-PHP5 introduces the "final" keyword to declare final members and methods.  Methods and 
+PHP 5 introduces the "final" keyword to declare final members and methods.  Methods and 
 members declared final cannot be overridden by sub-classes.
 </p>
 <h3>Example</h3>
@@ -238,6 +241,7 @@ class Foo {
 Old code that has no user-defined classes or functions named 'final' should run 
 without modifications.
 </p>
+
 <h2>Object Cloning</h2>
 <p>
 PHP4 (Zend Engine 1.0) offered no way a user could decide what copy constructor to run 
@@ -302,6 +306,7 @@ print $obj->address . "\n";
 ?>');
 ?>
 </p>
+
 <h2>Unified Constructors</h2>
 <p>
 The Zend Engine allows developers to declare constructor methods for classes. Classes 
@@ -316,7 +321,7 @@ different parent, the constructor name of that parent changes as well, and the c
 that calls the parent constructor has to be modified.
 </p>
 <p>
-PHP5 introduces a standard way of declaring constructor methods by calling them by the name <code>__construct()</code>.
+PHP 5 introduces a standard way of declaring constructor methods by calling them by the name <code>__construct()</code>.
 </p>
 <h3>Example</h3>
 <?php highlight_string('<?php
@@ -337,11 +342,12 @@ $obj = new BaseClass();
 $obj = new SubClass();
 ?>'); ?>
 <p>
-For backwards compatibility, if PHP5 cannot find a <code>__construct()</code> function 
+For backwards compatibility, if PHP 5 cannot find a <code>__construct()</code> function 
 for a given class, it will search for the old-style constructor function, by the name of the 
 class. Effectively, it means that the only case that would have compatibility issues is if the 
 class had a method named <code>__construct()</code> which was used for different semantics.
 </p>
+
 <h2>Destructors</h2>
 <p>
 Having the ability to define destructors for objects can be very useful. Destructors can log messages 
@@ -350,7 +356,7 @@ existed in PHP4, although PHP had already support for registering functions whic
 run on request shutdown.
 </p>
 <p>
-PHP5 introduces a destructor concept similar to that of other object-oriented languages, such 
+PHP 5 introduces a destructor concept similar to that of other object-oriented languages, such 
 as Java: When the last reference to an object is destroyed the object's destructor, which is a class method 
 name %__destruct()% that recieves no parameters, is called before the object is freed from memory.
 </p>
@@ -376,9 +382,10 @@ Like constructors, parent destructors will not be called implicitly by the engin
 order to run a parent destructor, one would have to explicitly call <code>parent::__destruct()</code> 
 in the destructor body.
 </p>
+
 <h2>Constants</h2>
 <p>
-PHP5 introduces per-class constants:
+PHP 5 introduces per-class constants:
 </p>
 <p>
 <?php highlight_string('<?php
@@ -390,7 +397,7 @@ echo "Foo::constant = " . Foo::constant . "\n";
 ?>'); ?>
 </p>
 <p>
-PHP5 allows for expressions within constants, however, constants are evaluated at compile time, therefore
+PHP 5 allows for expressions within constants, however, constants are evaluated at compile time, therefore
 no constants can be declared that rely on runtime information.
 </p>
 <?php highlight_string('<?php
@@ -404,9 +411,10 @@ class Bar {
 <p>
 Old code that has no user-defined classes or functions named 'const' will run without modifications.
 </p>
+
 <h2>Exceptions</h2>
 <p>
-PHP4 had no exception handling. PHP5 introduces a exception model similar to 
+PHP4 had no exception handling. PHP 5 introduces a exception model similar to 
 that of other programming languages.
 </p>
 <h3>Example</h3>
@@ -429,6 +437,7 @@ try {
 Old code that has no user-defined classes or functions 'catch', 'throw' and 'try' will run 
 without modifications.
 </p>
+
 <h2>Dereferencing objects returned from functions</h2>
 <p>
 In PHP4 it wasn't possible to dereference objects returned by functions and make further
@@ -461,6 +470,7 @@ ShapeFactoryMethod("Circle")->draw();
 ShapeFactoryMethod("Square")->draw();
 ?>'); ?>
 </p>
+
 <h2>Static member variables of static classes can now be initialized</h2>
 <h3>Example</h3>
 <p>
@@ -472,9 +482,10 @@ class foo {
 print foo::$my_static;
 ?>'); ?>
 </p>
+
 <h2>Static Methods</h2>
 <p>
-PHP5 introduces the 'static' keyword to declare a method static, thus 
+PHP 5 introduces the 'static' keyword to declare a method static, thus 
 callable from outside the object context.
 </p>
 <h3>Example</h3>
@@ -492,9 +503,10 @@ Foo::aStaticMethod();
 <p>
 The pseudo variable $this is not available inside a method that has been declared static.
 </p>
+
 <h2>instanceof</h2>
 <p>
-PHP5 introduces the <code>instanceof</code> keyword, that allows you to ascertain whether
+PHP 5 introduces the <code>instanceof</code> keyword, that allows you to ascertain whether
 or not an object is an instance of a class, or extends a class, or implements an interface.
 </p>
 <h3>Example</h3>
@@ -508,12 +520,14 @@ if ($a instanceof basicClass) {
 }
 ?>'); ?>
 </p>
+
 <h2>Static function variables</h2>
 <p>
 Statics are now treated at compile-time which allows developers to assign variables to statics by 
 reference. This change also greatly improves their performance but means that indirect references to 
 statics will not work anymore.
 </p>
+
 <h2>Parameters that are passed by reference to a function may now have default values</h2>
 <h3>Example</h3>
 <p>
@@ -525,6 +539,7 @@ function my_function(&$var = null) {
 }
 ?>'); ?>
 </p>
+
 <h2>__autoload()</h2>
 <p>
 The <code>__autoload()</code> interceptor function will be automatically called when an undeclared class 
@@ -541,6 +556,7 @@ function __autoload($className) {
 $object = new ClassName;
 ?>'); ?>
 </p>
+
 <h2>Overloadable Method calls and Property accesses</h2> 
 <p>
 Both method calls and property accesses can be overloaded via the <code>__call()</code>, 
