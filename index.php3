@@ -6,7 +6,7 @@
 
 <p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.<br>
-It is currently in a public beta testing testing period.  
+It is currently in a public beta testing period.  
 
 <ul>
 <li><a href="download.php3">Download PHP 3.0!</a>
