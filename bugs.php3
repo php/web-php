@@ -157,7 +157,7 @@ bugs of type <?show_types("Any")?>.
 			}
 		}
 		if(!$ok) {
-			echo "<b>Sorry, unable to modify database.</b><br>\n";
+			echo "<b>Sorry, incorrect user id/password pair.</b><br>\n";
     		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
