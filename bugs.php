@@ -1,4 +1,4 @@
-<?php
+<?php /* vim: set noet ts=4 sw=4: : */
 require_once 'prepend.inc';
 
 if (isset($save) && isset($user) && isset($pw)) {
@@ -41,17 +41,17 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if (empty($state)) { $state = "Open"; }
 
 	$state_types = 	array (
-				"Open"	=> 2, 
-				"Closed"      => 2,
-				"Critical"    => 1, 
-				"Duplicate"   => 2,
-				"Assigned"    => 1,
-				"Analyzed"    => 1,
-				"Suspended"   => 1,
-				"Feedback"    => 3,
-				"OldFeedback" => 3,
-				"Bogus"       => 1	
- 			);
+		"Open" => 2, 
+		"Closed" => 2,
+		"Critical" => 1, 
+		"Duplicate" => 2,
+		"Assigned" => 1,
+		"Analyzed" => 1,
+		"Suspended" => 1,
+		"Feedback" => 3,
+		"OldFeedback" => 3,
+		"Bogus" => 1	
+	);
 	
 	/* regular users can only pick states with type = 1 for unclosed bugs */
 	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
@@ -73,11 +73,11 @@ function show_state_options($state, $show_all, $user_mode=0) {
 }
 
 function show_version_options($current) {
-  $versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
-  while (list(,$v) = each($versions)) {
-    echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
-  }
-  echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
+	$versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
+	while (list(,$v) = each($versions)) {
+		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
+	}
+	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
 }
 
 function show_types($current,$show_any) {
@@ -156,78 +156,89 @@ function addlinks($text) {
 }
 
 if ($cmd == "send") {
-	if(!ereg("@",$email)) {
-		echo "ERROR!  Please provide a valid email address<P>\n";
-		commonFooter();
-		exit;
+	/* validate the incoming bug report */
+	$valid = 1;
+	if(!preg_match("/[.\\w+-]+@[.\\w]+\\.\\w{2,}/i",$email)) {
+		echo "<p class=\"error\">Please provide a valid email address.</p>";
+		$valid = 0;
 	}
 
-	if($ebug_type=="none") {
-		echo "ERROR!  Please select an appropriate bug type<P>\n";
-		commonFooter();
-		exit;
+	if ($ebug_type=="none") {
+		echo "<p class=\"error\">Please select an appropriate bug type.</p>";
+		$valid = 0;
 	}
 
 	if ($php_version=='earlier') {
-		echo "ERROR!  Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.";
-		commonFooter();
-		exit;
+		echo "<p class=\"error\">Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.</p>";
+		$valid = 0;
 	}
 
-	show_menu($status);
-	echo "<hr>\n";
-
-	$ts=date("Y-m-d H:i:s");
-	$ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
-	$cid = mysql_insert_id();
-
-	$report = "";
-	echo("<pre>\n");
-
-	$ldesc = stripslashes($ldesc);
-	$sdesc = stripslashes($sdesc);
-	$report .= "From:	     $email\n";
-	$report .= "Operating system: $php_os\n";
-	$report .= "PHP version:      $php_version\n";
-	$report .= "PHP Bug Type:     $ebug_type\n";
-	$report .= "Bug description:  ";
-	$html_sdesc = ereg_replace("<", "&lt;", $sdesc);
-	$html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
-	$report .= $html_sdesc."\n\n";
-	$ascii_report = indent($report.$ldesc,"");
-	$ascii_report.= "\n\n-- \nEdit Bug report at: http://bugs.php.net/?id=$cid&edit=1\n\n";
-	$html_desc = ereg_replace("<", "&lt;", $ldesc);
-	$html_desc = ereg_replace(">", "&gt;", $html_desc);
-	$report .= $html_desc."\n";
-
-	$html_report = ereg_replace("<", "&lt;", $report);
-	$html_report = ereg_replace(">", "&gt;", $html_report);
-
-	echo wrap($html_report);
-	echo("</pre>\n");
-
-	// Send doc bugs also to the doc list (jeroen)
-	if ($ebug_type == "Documentation problem") {
-		@mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
+    if (!$sdesc) {
+		echo "<p class=\"error\">You must supply a short description of the bug you are reporting.</p>";
+		$valid = 0;
 	}
 
-	if (mail($mail_bugs_to, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
-		echo "<p><h2>Mail sent to $mail_bugs_to...</h2></p>\n";
-		echo "<p>Thank you for your help!</p>";
-		echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
-		echo "If the status of the bug report you submitted\n";
-		echo "changes, you will be notified. You may return here and check on the status\n";
-		echo "or update your report at any time. The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
-		echo "http://bugs.php.net/?id=$cid</a></p>\n";
-	} else {
-		echo "<p><h2>Mail not sent!</h2>\n";
-		echo "Please send this page in a mail to " .
-		     "<a href=\"mailto:$mail_bugs_to\">$mail_bugs_to</a> manually.</p>\n";
-    }
+    if (!$ldesc) {
+		echo "<p class=\"error\">You must supply a long description of the bug you are reporting.</p>";
+		$valid = 0;
+	}
+
+	if ($valid) {
+		show_menu($status);
+		echo "<hr />\n";
+
+		$ts=date("Y-m-d H:i:s");
+		$ret = mysql_query("INSERT INTO bugdb VALUES (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
+		$cid = mysql_insert_id();
+
+		$report = "";
+		echo "<pre>\n";
+
+		$ldesc = stripslashes($ldesc);
+		$sdesc = stripslashes($sdesc);
+		$report .= "From:	     $email\n";
+		$report .= "Operating system: $php_os\n";
+		$report .= "PHP version:      $php_version\n";
+		$report .= "PHP Bug Type:     $ebug_type\n";
+		$report .= "Bug description:  ";
+		$html_sdesc = ereg_replace("<", "&lt;", $sdesc);
+		$html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
+		$report .= $html_sdesc."\n\n";
+		$ascii_report = indent($report.$ldesc,"");
+		$ascii_report.= "\n\n-- \nEdit Bug report at: http://bugs.php.net/?id=$cid&edit=1\n\n";
+		$html_desc = ereg_replace("<", "&lt;", $ldesc);
+		$html_desc = ereg_replace(">", "&gt;", $html_desc);
+		$report .= $html_desc."\n";
+
+		$html_report = ereg_replace("<", "&lt;", $report);
+		$html_report = ereg_replace(">", "&gt;", $html_report);
+
+		echo wrap($html_report);
+		echo("</pre>\n");
+
+		// Send doc bugs also to the doc list (jeroen)
+		if ($ebug_type == "Documentation problem") {
+			@mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
+		}
+
+		if (mail($mail_bugs_to, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
+			echo "<p><h2>Mail sent to $mail_bugs_to...</h2></p>\n";
+			echo "<p>Thank you for your help!</p>";
+			echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
+			echo "If the status of the bug report you submitted\n";
+			echo "changes, you will be notified. You may return here and check on the status\n";
+			echo "or update your report at any time. The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
+			echo "http://bugs.php.net/?id=$cid</a></p>\n";
+		} else {
+			echo "<p><h2>Mail not sent!</h2>\n";
+			echo "Please send this page in a mail to " .
+			     "<a href=\"mailto:$mail_bugs_to\">$mail_bugs_to</a> manually.</p>\n";
+	    }
+	}
 
 } elseif ($cmd == "display") {
 	show_menu($status);
-	echo "<hr>\n";
+	echo "<hr />\n";
 
 	include("table_wrapper.inc");
 
@@ -246,15 +257,13 @@ if ($cmd == "send") {
 
 			case "Status":
 				if ($data == "Feedback") {
-					echo "Feedback<br>(".$row[unchanged_days]." days)";
+					echo "Feedback<br>($row[unchanged_days] days)";
 					break;
 				}
 				/* otherwise fall through */
 
 			default:
-				$data = ereg_replace("<","&lt;",$data);
-				$data = ereg_replace(">","&gt;",$data);
-				print $data;
+				echo htmlspecialchars($data);
 				break;
 		}
 	}
@@ -388,7 +397,7 @@ if ($cmd == "send") {
 	}
 
 	show_menu($status);
-	echo "<hr>\n";
+	echo "<hr />\n";
 
 	/* HANDLE NORMAL DEVELOPER UPDATES */
 	if(isset($modify) && $modify=="Edit Bug") {
@@ -409,7 +418,7 @@ if ($cmd == "send") {
 		}
 		if(!$ok) {
 			echo "<b>Sorry, incorrect user id/password pair.</b><br>\n";
-			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
+			mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 			$row=mysql_fetch_row($result);
@@ -428,12 +437,12 @@ if ($cmd == "send") {
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
 
-      // mail phpdoc if old or new type is documentation (jeroen)
-      if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
-	@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
-      }
+			// mail phpdoc if old or new type is documentation (jeroen)
+			if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
+				@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
+			}
 
-			/* mail bug originator if status was changed or comment is not empty. */
+			/* mail originator if status was changed or there is a comment */
 			if($estatus != $row[0] || $ncomment != "") {
 				@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$mail_bugs_to>");
 				@mail($mail_bugs_to, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
@@ -449,7 +458,7 @@ if ($cmd == "send") {
 		$ok=mysql_numrows($result);
 		if(!$ok) {
 			echo "<b>Sorry, incorrect password.  The entry has not been changed.</b><br>\n";
-			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
+			mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
 		} else {
 			$row=mysql_fetch_row($result);
 
@@ -492,8 +501,8 @@ if ($cmd == "send") {
 	}
 
 	/* DISPLAY BUG */
-	$result = mysql_query("SELECT * from bugdb where id=$id");
-	if($result and mysql_numrows($result)>0) {
+	$result = mysql_query("SELECT * FROM bugdb WHERE id=$id");
+	if ($result and mysql_numrows($result) > 0) {
 		$row = mysql_fetch_row($result);
 		echo "<br><h1>Bug id #$id</h1>\n";
 		echo "<table>\n";
@@ -568,7 +577,7 @@ if ($cmd == "send") {
 			echo "</form>\n";
 		}
 
-		echo "<hr>\n";
+		echo "<hr />\n";
 
 		/* ORIGINAL REPORT */
 		echo "<b><i>[".$row[9]."] ".$row[2]."</i></b><br>\n";
@@ -600,18 +609,30 @@ if ($cmd == "send") {
 		}
 
 	} else {
-		echo "<br><h1>Sorry bug id #$id does not exist</h1>\n";
+		echo "<br /><h1>Sorry, bug id #$id does not exist</h1>\n";
 	}
 	if ($result) {
 		mysql_freeresult($result);
 	}
-} else {
+} elseif (!isset($cmd)) {
 	show_menu($status);
 ?>
 Or use the form below to submit a new bug report.
-<hr>
-<?php include 'bugform.inc'; ?>
-<?php } ?>
+
+<p><strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</p>
+<p>To report bugs in <strong>PHP 3.0</strong>, please go <a href="/bugs-php3.php">here</a>.</p>
+<p>To report problems with the <strong>PHP website</strong>, you should first try visiting another
+<a href="/mirrors.php">mirror site</a> in case the problem is only with a specific mirror.
+You should then report the problem (and the mirror(s) that have it) to 
+<a href="mailto:webmaster@php.net">webmaster@php.net</a>.</p>
+
+<?php
+}
+
+echo "<hr />\n";
+
+include 'bugform.inc';
+?>
 </font>
 <?php
 commonFooter();
