@@ -293,7 +293,7 @@ selecting the appropriate option on the top-right of every page.
 
 <?php echo hdelim(); ?>
 
-<h1>Local Mailing Lists</h1>
+<h1><a name="local">Local Mailing Lists</a></h1>
 
 <p>
 There are also some mailing lists and newsgroups for PHP users
