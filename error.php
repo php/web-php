@@ -68,7 +68,7 @@ if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
 // BC: handle documentation howto moved to the doc.php.net server
 // (redirect to index page)
 if (preg_match("!^manual/howto/!", $URI, $array)) {
-    mirror_redirect("http://doc.php.net/dochowto/");
+    mirror_redirect("http://doc.php.net/php/dochowto/");
 }
 
 // ============================================================================
@@ -278,8 +278,8 @@ $external_redirects = array(
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
-    "phpdochowto" => "http://doc.php.net/dochowto/",
-    "getdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
+    "phpdochowto" => "http://doc.php.net/php/dochowto/",
+    "getdochowto" => "http://doc.php.net/php/dochowto/howto.html.tar.gz",
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
     //"blog"        => "/manual/$LANG/build.log.gz",
     "functions.js.txt" => "http://cvs.php.net/cvs.php/phpdoc/scripts/quickref",
