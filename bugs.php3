@@ -99,7 +99,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 	
-    mysql_pconnect("localhost","bourbon","");
+    mysql_pconnect("localhost","","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
     mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','')");
