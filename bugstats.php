@@ -104,6 +104,9 @@ if(!strstr($MYSITE,"www.php.net")) {
 			}
 			$closed_by[$row[11]]++;
 		}
+		if($row[7]=="Bogus") {
+			$closed_by[$row[11]]++;
+		}
 		$total++;
 	}
 
