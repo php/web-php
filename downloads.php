@@ -85,7 +85,7 @@ if ($cmn > 0) {
         srand ((double)microtime()*1000000);
 	
 	if ($server == "www.php.net" || $server == "php.net") {
-		$default_mirrors = array("http://us2.php.net/", "http://ca.php.net", "http://us3.php.net","http://rs1.php.net");
+		$default_mirrors = array("http://us2.php.net/", "http://ca.php.net/", "http://us3.php.net/","http://rs1.php.net/");
 		$mirror = $default_mirrors[rand(0, count($default_mirrors)-1)];
 	} else {
 		$mirror = "";
