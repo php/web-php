@@ -690,7 +690,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				echo "CVS user id: <input type=text size=10 name=user value=\"$user\">\n";
 			}
 			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
-			echo "<input type=submit value=\"Commit Changes\"><br>\n";
+			echo "<input type=submit value=\"Commit Changes\">";
+			echo ($edit == 2) ? '[<a href="http://bugs.php.net/bug-pwd-finder.php">Lost your password?</a>]<br>\n' : '<br>\n';
 			if(!$user || !$pw) {
 				echo "Remember my login/password: <input type=checkbox name=save>\n";
 			}
@@ -786,7 +787,7 @@ Or use the form below to submit a new bug report.
    <input type=text size=20 maxlength=20 name="passwd"></td>
     <td><font size="-2">
 You may enter any password here.  This password allows you to come back and modify your
-submitted bug report at a later date.
+submitted bug report at a later date. [<a href="http://bugs.php.net/bug-pwd-finder.php">Lost your password?</a>]
 	</font>
   </td></tr>
 </table>
