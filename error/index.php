@@ -126,7 +126,7 @@ $uri_aliases = array (
     "win32"       => "install.windows",
     "globals"     => "security.registerglobals",
     
-    # external manual shortcut aliases ;)
+    # external shortcut aliases ;)
     "dochowto"    => "phpdochowto"
     
 );
