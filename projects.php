@@ -370,6 +370,16 @@ scratch,  edited, copied, referenced, and written; smaller treeNodes can be extr
 treeNodes based on simple criteria.  No other libraries or software are needed; everything is 100% PHP.
 <? endEntry(); ?>
 
+<? makeEntry("ingoteam", "http://www.streamdesign.com", "streamdesign gmbh", "info@streamdesign.de"); ?>
+ingoteam consists of high-performance hardware and Internet-based software.
+This do-it-all package provides everything you'd expect from groupware:
+scheduling of appointments and of work, management of address books and of
+other information, and the provision of E-mail services. Ingoteam is run on
+corporate Intranets - or via the Internet.<BR>
+In short, ingoteam is a Web-based groupware giving your company everything
+it needs to communicate with itself - and with the outside world. 
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
