@@ -231,9 +231,11 @@ can get &quot;under the hood&quot; with unlimited customization capabilities.
 Another message forum implementation.  Multiple threading levels, no cookies, users may delete own postings, etc.
 <? endEntry();?>
 
+<?/* site disappeared -- June 12 1999
 <? makeEntry("PHPGen","www.byggsoft.se/~mikaelu/","Mikael Ulfenborg" ,"mikael.ulfenborg@byggsoft.se"); ?>
 PHPGen is small PHP-script used to make a framework for a new PHP-application. 
 <? endEntry();?>
+*/?>
 
 <? makeEntry("FishCartSQL","www.fni.com/fcsql/","FishNet&reg;, Inc.","fcsql@fni.com"); ?>
 FishCartSQL(sm) is a catalog management system for online e-commerce
