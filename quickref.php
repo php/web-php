@@ -18,6 +18,7 @@
 // Ensure that our environment is set up
 $_SERVER['BASE_PAGE'] = 'quickref.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 
 // Constant values for the display
 define("COLUMNS",    3);
@@ -53,7 +54,7 @@ function quickref_table($functions)
 // if there is no dir for that language
 $dirh = @opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG");
 if (!$dirh) {
-    $dirh = opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/en");
+    error_noservice();
 }
 
 $functions = $maybe = $temp = $parts = array();
