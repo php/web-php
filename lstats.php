@@ -20,17 +20,15 @@
 						"bogus"
 				);
 
-
+	if(!isset($phpver)) {
+		echo "<h3>Bug stats for both <a href='lstats.php?phpver=3'>PHP 3</a> and <a href='lstats.php?phpver=3'>PHP 4</a>:</h3><pre>\n";	
+	} else {
+		echo "<h3>Bug stats for PHP $phpver:</h3><pre>\n";	
+	}
+	
 	mysql_connect("localhost","nobody","");
 	mysql_select_db("php3");
 
-
-	/* REMOVE THIS!!! */
-	if(isset($create_index_for_status) && $create_index_for_status == "please") {
-		mysql_query("CREATE INDEX idx_status on bugdb(status)");
-	}
-
-	echo "<h3>Bug stats:</h3><pre>\n";	
 	foreach($statuses as $status) {
 		$query = "SELECT count(id) from bugdb WHERE";
 		if ($phpver > 0) {
