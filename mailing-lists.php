@@ -74,7 +74,11 @@ if (isset($_POST['maillist'])) {
  Most of them are archived, and all of them are available as newsgroups
  on our <a href="news://news.php.net">news server</a>. The archives
  are searchable. There is an experimental web interface for the news
- server at <a href="http://news.php.net/">http://news.php.net/</a>.
+ server at <a href="http://news.php.net/">http://news.php.net/</a>, and
+ there are also other archives provided by
+ <a href="http://www.phparch.com/mailinglists">php|architect</a>,
+ <a href="http://www.phpbuilder.com/mail/">PHPBuilder</a>
+ and <a href="http://zend.com/lists.php">Zend</a>.
 </p>
 
 <p>
@@ -303,11 +307,6 @@ function output_lists_table($mailing_lists)
  Either send a message to php-whatever-help@lists.php.net (as in,
  php-general-help@lists.php.net) or you can view the commands for
  ezmlm <a href="http://www.ezmlm.org/ezman-0.32/ezman1.html">here.</a>
-</p>
-
-<p>
- Archives for some of these mailing lists are also available at
- <a href="http://www.phpbuilder.com/mail/">http://www.phpbuilder.com/mail/</a>.
 </p>
 
 <p>
