@@ -1,26 +1,26 @@
-tcobb@staff.circle.net www.php.net 209.95.65.70
-rasmus@lerdorf.on.ca ca.php.net 207.164.55.5
-zeev@php.net il.php.net 199.203.100.253
-stig@guardian.no no.php.net 195.1.254.5
-bednar@isternet.sk sk.php.net 195.72.0.6
-webmaster@www.nisu.flinders.edu.au au.php.net 129.96.218.17
-petrus@linux.co.za za.php.net 160.124.133.230
-sgk@happysize.co.jp jp.php.net CNAME to jp-php-net.happysize.co.jp
-gareth@omnipotent.net uk.php.net 194.73.160.93
-cmv@privateworld.com php.easydns.com 205.210.42.153
-melo@co.telenet.pt pt.php.net CNAME to php.telenet.pt
-prochat@lbdsun.epfl.ch ch.php.net CNAME to lbdsun11.epfl.ch
-jguia@virtualoffice.es es.php.net ??
-terence@com5.net sg.php.net 202.169.237.18
-paulj@ns.web-tic.com nl.php.net CNAME to php.webtic.com
-mkyed@borsen.dk dk.php.net 194.239.128.56
-trurl@asteria.odtel.net ua.php.net CNAME to php.asteria.odtel.net
-fmal@fmal.com it.php.net CNAME to php.fmal.com
-cbredi@timisoara.roedu.net ro.php.net CNAME to 193.226.9.16
-grych@tgr.com.pl pl.php.net CNAME to ??
-smartin@schlund.de www.php3.de ??
-masa@netlife.fi fi.php.net CNAME to 195.170.139.154
-jap@maya.cz www.php.cz 212.24.129.2
-dan@amerikanclaris.com cl.php.net CNAME to ??
-alfre@ibd.es es.php.net 195.55.198.14
-
+tcobb@staff.circle.net			www.php.net	209.95.65.70
+rasmus@lerdorf.on.ca			ca.php.net	207.164.55.5
+zeev@php.net				il.php.net	199.203.100.253
+stig@guardian.no			no.php.net	195.1.254.5
+bednar@isternet.sk			sk.php.net	195.72.0.6
+webmaster@www.nisu.flinders.edu.au	au.php.net	129.96.218.17
+petrus@linux.co.za			za.php.net	160.124.133.230
+sgk@happysize.co.jp			jp.php.net	CNAME to jp-php-net.happysize.co.jp
+gareth@omnipotent.net			uk.php.net	194.73.160.93
+cmv@privateworld.com			php.easydns.com	205.210.42.153
+melo@co.telenet.pt			pt.php.net	CNAME to php.telenet.pt
+prochat@lbdsun.epfl.ch			ch.php.net	CNAME to lbdsun11.epfl.ch
+jguia@virtualoffice.es			es.php.net	??
+terence@com5.net			sg.php.net	202.169.237.18
+paulj@ns.web-tic.com			nl.php.net	CNAME to php.webtic.com
+mkyed@borsen.dk				dk.php.net	194.239.128.56
+trurl@asteria.odtel.net			ua.php.net	CNAME to php.asteria.odtel.net
+fmal@fmal.com				it.php.net	CNAME to php.fmal.com
+cbredi@timisoara.roedu.net		ro.php.net	CNAME to 193.226.9.16
+grych@tgr.com.pl			pl.php.net	CNAME to ??
+smartin@schlund.de			www.php3.de	??
+masa@netlife.fi				fi.php.net	CNAME to 195.170.139.154
+jap@maya.cz				www.php.cz	212.24.129.2
+dan@amerikanclaris.com			cl.php.net	CNAME to ??
+alfre@ibd.es				es.php.net	195.55.198.14
+webmaster@goliath.urbano.com.mx		mx.php.net	200.36.127.163
