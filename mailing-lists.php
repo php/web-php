@@ -95,7 +95,7 @@ if (isset($_POST['maillist'])) {
  mailing lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  mailing lists</a>, the <a href="http://gtk.php.net/resources.php">PHP-GTK
  mailing lists</a>, and the
- <a href="http://smarty-web.ispi.net/resources.php?category=7">Smarty mailing
+ <a href="http://smarty.php.net/resources.php?category=7">Smarty mailing
  lists</a> on their own pages.
 </p> 
 
