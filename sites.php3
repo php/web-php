@@ -42,12 +42,13 @@ right away.</blockquote>
 <TABLE border=0 cellpadding=0 cellspacing=0>
 
 <?
-/* Auto Industry */
-	title("Auto");
+/* Automotive Industry */
+	title("Automotive Industry");
 	siteStart();
 	site("Cars Everything","www.carseverything.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Mitsubishi Motors","www.mitsucars.com");
+	site("Silver Bullet Motorcycles","www.silver-bullet.co.nz");
 	site("Volvo","www.volvo.com");
 	siteEnd();
 
