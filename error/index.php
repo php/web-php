@@ -78,6 +78,13 @@ if (preg_match("!^get/([^/]+)$!", $URI, $filepart)) {
     include_once "$DOCUMENT_ROOT/get_download.php";
     exit;
 }
+elseif (preg_match("!^get/([^/]+)/from/([^/]+)$!", $URI, $dlinfo)) {
+    $df = $dlinfo[1];
+    $mr = "http://{$dlinfo[2]}/";
+    include_once "$DOCUMENT_ROOT/do_download.php";
+    exit;
+}
+
 
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
