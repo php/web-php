@@ -95,9 +95,11 @@ right away.</blockquote>
 /* Entertainment */
 	title("Entertainment");          
 	siteStart();
+	site("CD93 Radio Station","www.cd93.com/index_hi.htm");
 	site("EduTest.Com","www.edutest.com");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("HitList","www.hitlist.com");
+	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("PromoPodium","www.promopodium.nl");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
