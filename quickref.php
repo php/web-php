@@ -24,7 +24,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 define("COLUMNS",    3);
 define("SHOW_CLOSE", 20);
 
-// Print out the table of found (or all) functions
+// Print out the table of found (or all) functions. The HTML comments are
+// needed to support MyCroft search (Mozilla browser family and Sherlock for MacOSX)
 function quickref_table($functions)
 {
     global $LANG;
@@ -45,7 +46,7 @@ function quickref_table($functions)
         if ($i > 0 && $i % $limit==0) {
             echo "</td><td>\n";
         }
-        echo "<a href=\"/manual/$LANG/$file\">$name</a><br />\n";
+        echo "<!--i--><a href=\"/manual/$LANG/$file\">$name</a><br />\n";
         $i++;
     }
     echo "</td></tr></table>\n";
