@@ -191,6 +191,19 @@ by Dr. Susanne Wigard<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/thephpdevelopmte"
+><IMG SRC="/gifs/databecker.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/381582043X/thephpdevelopmte"
+>PHP 4 + MySQL</A><BR>
+by Rolf D. Stoll and Gudrun Anna Leierer<BR>
+<SMALL>in German, Data Becker, July 2000, ISBN 3-8158-2043-X, 439 pages<BR>
+<A HREF="http://www.leierer.de/">weitere Informationen</A></SMALL><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709"
 ><IMG SRC="/gifs/709.gif" BORDER=0 ALIGN="left"
 ></A><BR>
