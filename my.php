@@ -75,6 +75,10 @@ in priority order, the first is the most important.
   <td bgcolor="#eeeeee"><?php echo $langpref; ?></td>
  </tr>
  <tr>
+  <td bgcolor="#dddddd">Last seen language</td>
+  <td bgcolor="#eeeeee"><?php echo (isset($_COOKIE['LAST_LANG']) ? $_COOKIE['LAST_LANG'] : "None"); ?></td>
+ </tr>
+ <tr>
   <td bgcolor="#dddddd">Your Accept-Language browser setting (parsed)</td>
   <td bgcolor="#eeeeee"><?php echo join(", ", $UA_LANGS); ?></td>
  </tr>
