@@ -7,9 +7,14 @@ if (!isset($page_url)) {
     commonFooter();
     exit;
 }
+?>
+Source of: <? echo $page_url; ?><BR>
+<FONT SIZE=-1>
+<B>IMPORTANT:</B> There are some restrictions on your use of the code and graphics on this site.<BR>
+You should read the <A HREF="/COPYRIGHT.txt">copyright</A>.<BR>
 
-echo "Source of: $page_url<BR><hr noshade><FONT SIZE=-1>\n";
-
+<hr noshade>
+<?
 $legal_dirs = array(
     "/manual" => 1,
     "/include" => 1);

@@ -26,9 +26,9 @@
 	   time, and any such use shall be discontinued immediately upon notice from the PHP
 	   Development Team.
 
-	Documents specified above do not include the graphical elements, design, or layout 
+	Documents specified above DO NOT include the graphical elements, design, or layout 
 	of this Web site.  Elements of this Web site are protected by trade dress and other 
-	laws and may not be copied or imitated in whole or in part.
+	laws and MAY NOT BE COPIED OR IMITATED IN WHOLE OR IN PART.
 
 	You can contact the webmaster at <webmaster@php.net>.
 
