@@ -28,6 +28,11 @@ your usage of our quick reference features. Send your suggestions
 for tips to <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
 </p>
 
+<p>
+For a description of PHP.net shortcut URLs, please visit our
+<a href="urlhowto.php">URL Howto page</a>.
+</p>
+
 <?php tipTitle('Quick Reference for KDE 2.1', 'Christoph Luehr', '10-Mar-2001');?>
 
 <p>
@@ -53,13 +58,6 @@ Then click on "Add..." and fill the dialog:
 
 <p>
 Voila!
-</p>
-
-<?php tipTitle('Shortcut URLs for the Manual', '', '08-Mar-2001');?>
-
-<p>
-You can go directly to PHP manual pages by using a URL such as:
-<a href="/strlen">http://www.php.net/strlen</a>.
 </p>
 
 <?php tipTitle('Adding the Quick Reference to most Javascript-capable Browsers', '', '07-Mar-2001'); ?>
