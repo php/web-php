@@ -31,25 +31,45 @@
 	echo "<br></td><td align=top>\n";
 
 	/* Hi-Tech Industry */
-	
+	site("Fujitsu","www.fujitsu.com");	
 
 	echo "<br></td>\n";
 
 	echo "</tr><tr>\n";
 	title("Telecommunications");
-	title("Computer Hardware");
-	title("Entertainment");
+	title("Travel");
+	title("Religious");
 
 	echo "</tr><tr><td align=top>\n";
 
 	/* Telecommunications */
 	site("Sprint Canada","www.sprint.ca");
+	site("Danish Yellow Pages","www.gulesider.dk");
+
+	echo "<br></td><td align=top>\n";
+	/* Travel */
+	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
+
+	echo "<br></td><td align=top>\n";
+	/* Religious */
+	site("Kenneth Copeland Ministries","kcm.org");
+	site("Christian Financial Concepts","cfcministry.org");
+
+	echo "</tr><tr>\n";
+	title("Newspapers");
+	title("Computer Hardware");
+	title("Computer Software");
+
+	echo "</tr><tr><td align=top>\n";
+	/* Newspapers*/
+	site("Børsen - Danish Business Daily","www.borsen.dk");
 
 	echo "<br></td><td align=top>\n";
 	/* Computer Hardware */
 
 	echo "<br></td><td align=top>\n";
-	/* Entertainment */
+	/* Computer Software */
+	site("C2Net Software Inc.","www.c2.net");
 
 	echo "</tr></table></center>\n";
 
