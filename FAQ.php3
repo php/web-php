@@ -14,7 +14,7 @@
   /* now print everything until it tells us to start chopping again */
   while (!feof($fd)) {
     if (!ereg("start chopping", $line = fgets($fd, 1024))) {
-      echo stripslashes($line);
+      echo $line;
     } else {
       break;
     }
