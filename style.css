@@ -294,6 +294,7 @@ div.phpcode span.string {
 /* Thanks listing on frontpage */
 ul.simple {
 	padding-left: 8px;
+	margin: 0 0 1em 0;
 }
 ul.simple li {
 	padding: 0px;
