@@ -418,11 +418,7 @@ function popUp(menuName,on) {
 	if (gotlayers) {
 		if (on) {
 			moveLayers();
-			if (IE4) {
-				document.all[menuName].filters[0].Apply();
-				document.all[menuName].style.visibility = "visible";
-				document.all[menuName].filters[0].Play(); 
-			} else if (NS4) {
+			if (NS4) {
 				document.layers[menuName].visibility = "show";
 			} else if (DOM) {
 				document.getElementById(menuName).style.visibility = "visible";
@@ -430,9 +426,7 @@ function popUp(menuName,on) {
 				document.all[menuName].style.visibility = "visible";
 			}
 		} else {
-			if (IE4) {
-				document.all[menuName].style.visibility = "hidden";
-			} else if (NS4) {
+			if (NS4) {
 				document.layers[menuName].visibility = "hide";
 			} else if (DOM) {
 				document.getElementById(menuName).style.visibility = "hidden";
@@ -749,8 +743,7 @@ Only questions about the website should be directed to <A HREF="mailto:webmaster
 
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
-<DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
+<DIV ID="mirrorsKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;>
 <? kickHeader(-20,'left',400);?>
 <FORM ACTION="/redirect.php" METHOD="POST">
 <B>Pick a mirror site close to you:</B><BR>
@@ -774,8 +767,7 @@ endwhile;
 <? kickFooter("mirrorsKick","mirr",400);?>
 </DIV>
 
-<DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
+<DIV ID="qrefKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;>
 <? kickHeader(30,'left',400);?>
 <FORM ACTION="/manual-lookup.php" METHOD="POST">
 <FONT SIZE=+1><B>Quick Function Reference</B></FONT><BR>
@@ -801,8 +793,7 @@ else:
 endif;
 ?>
 
-<DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;
-<? if ($IE4) { echo ' filter:blendtrans(duration=0.3);'; } ?>">
+<DIV ID="searchKick" STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;>
 <? kickHeader(-35,'top',300);
 if (!isset($prevsearch)):
 	$prevsearch[0]="";
