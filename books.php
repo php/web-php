@@ -138,7 +138,7 @@ by Egon Schmid, Christian Cartus en Richard Blume<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/thephpdevelopmte"
-><IMG SRC="/jpgs/krause_book.jpg" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/krause.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/thephpdevelopmte"
@@ -146,7 +146,7 @@ by Egon Schmid, Christian Cartus en Richard Blume<BR>
 Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
 <SMALL>in German, Hanser, Dec 1999, ISBN 3-446-21301-5, 1067 pages<BR>
-<A HREF="http://www.dynamic-webpages.de/books.php">weitere Informationen</A></SMALL><BR>
+<A HREF="http://www.php.comzept.de/">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
 
@@ -159,8 +159,8 @@ by J&ouml;rg Krause<BR>
 >PHP 4</A><BR>
 Webserver-Programmierung für Um- und Einsteiger<BR>
 by Thomas Theis<BR>
-<SMALL>in German</SMALL><BR>
-<SMALL><A HREF="http://www.galileo-press.de/">weitere Informationen</A><BR>
+<SMALL>in German, Galileo Press, May 2000, ISBN 3-934358-63-2, 354 pages</SMALL><BR>
+<SMALL><A HREF="http://www.galileo-press.de/katalog/einzel.asp?ID=202">weitere Informationen</A><BR>
 </TD>
 </TR>
 
