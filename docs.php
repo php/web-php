@@ -47,12 +47,17 @@ $formats = array(
 
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below.
-Tip: If you are using Internet Explorer, Opera or Netscape 6,
-the file size and date will show up, when you move the mouse
-above one link. If you use another browser, or would like to
+Tip: If you are using Internet Explorer, Mozilla, Opera or Netscape 6,
+the file size and date will show up when you move the mouse
+above the link. If you use another browser, or would like to
 see all the information, you can <a href="/docs.php?sizes=1">click
 here to see the file sizes and dates</a>.
 </p>
+
+<p>Note that the packaged versions of the manual (tar.gz, zip) don't contain
+any directories, so all of the files will be dumped into your current working
+directory when you expand the archive unless the tool you use does
+otherwise.</p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
