@@ -1,16 +1,5 @@
 <?php
-$ts = getlastmod();
-$tsstring = gmdate("D, d M Y H:i:s",$ts)." GMT";
-if ($tsstring != $HTTP_IF_MODIFIED_SINCE) {
-    header("Last-Modified: ".$tsstring);
-    /* output the page here */
-} else {
-    header("HTTP/1.1 304 Not Modified");
-    /* do nothing */
-	exit();
-}
-
-require_once 'prepend.inc';
+include_once 'prepend.inc';
 
 $SIDEBAR_DATA='
 <h3>FAQ</h3>
@@ -52,9 +41,17 @@ your searching pleasure!
 </p>
 ';
 
+// Start page with common header
 commonHeader("Documentation");
 
-$man_languages = array('en', 'pt_BR', 'zh', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'pl', 'es');
+// Check for really available manual languages
+$man_languages = array();
+foreach ($LANGUAGES as $code => $langname) {
+    if (file_exists("manual/$code/index.php")) {
+        $man_languages[] = $code;
+    }
+}
+$lastlang = count($man_languages) - 1;
 
 ?>
 
@@ -77,7 +74,7 @@ You can also get more information about php.net URL shortcuts by visiting our
 <p>
 Note, that many languages are just under translation, and
 the untranslated parts are still in English. The translation
-teams are open to other contributors though.
+teams are open to contributions though.
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2" width="100%">
@@ -85,21 +82,38 @@ teams are open to other contributors though.
 <tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
 <?php
 
-  $lastlang = count($man_languages) - 1;
-  foreach ($man_languages as $langnum => $langcode) {
+// List all manual languages viewable online
+foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
-  }
+
+    // Also link to the external special French version, after the French link
+    if ($langcode == "fr") {
+        echo '<a href="http://dev.nexen.net/docs/php/annotee/">Special French</a>, ';
+    }
+}
 
 ?>
 </td></tr>
 <tr><th bgcolor="#dddddd">Printer friendly</th><td bgcolor="#eeeeee">
 <?php
 
-  foreach ($man_languages as $langnum => $langcode) {
+// List printer friendly pages of all manual languages
+foreach ($man_languages as $langnum => $langcode) {
     echo '<a href="/manual/' . $langcode . '/print/index.php">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
-  }
+}
+
+?>
+</td></tr>
+<tr><th bgcolor="#dddddd">Printer friendly<br />with notes</th><td bgcolor="#eeeeee">
+<?php
+
+// List printer friendly pages with notes of all manual languages
+foreach ($man_languages as $langnum => $langcode) {
+    echo '<a href="/manual/' . $langcode . '/printwn/index.php">' . $LANGUAGES[$langcode] . '</a>';
+    echo ($lastlang != $langnum) ? ", " : "";
+}
 
 ?>
 </td></tr>
@@ -113,25 +127,6 @@ For downloadable formats, please visit our
 can be found on separate servers.
 </td></tr>
 </table>
-
-<?php echo hdelim(); ?>
-
-<h1>French PHP Manual</h1>
-
-<p>
-The French PHP manual is also available on an external site, in differents formats.
-Documentation is the official flavor, while formating and localization has 
-been worked some more (function and examples indexes, short version, search engine..). 
-Besides, those are compressed for faster download.
-<a href="http://dev.nexen.net/docs/php/annotee/">Follow this link for
-the annotated French manual</a>
-</p>
-
-<p>
-La documentation Fran&ccedil;aise est disponible sur un site secondaire,
-dans diff&eacute;rents formats. C'est la version officielle, compl&egrave;tement 
-francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;es.
-</p>
 
 <?php echo hdelim(); ?>
 
