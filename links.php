@@ -258,6 +258,18 @@ site_header("Links");
  </li>
 </ul>
 
+<a name="videos"></a>
+<h4>PHP Video</h4>
+
+<ul>
+ <li>
+  <a href="http://dvd.phpquebec.com/">DVD PHP Qu&eacute;bec</a><br />
+  The PHP Qu&eacute;bec DVD was shot during the Montr&eacute;al sessions, in 2003.
+  It gathers 6 hours of advanced technics sessions, subtitled in French
+  and English.
+ </li>
+</ul>
+
 <a name="tutorials"></a>
 <h4>PHP Tutorials</h4>
 
