@@ -79,6 +79,17 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &
 }
 
 // ============================================================================
+// Some nice URLs for getting something for download
+if (preg_match("!^get/([^/]+)$", $URI, $what)) {
+    switch ($what[1]) {
+        case "php"         : $URI = "downloads"; break;
+        case "dochowto"    : // intentional
+        case "phpdochowto" : $URI = "getdochowto"; break;
+    }
+}
+
+
+// ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
 if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     
@@ -105,6 +116,7 @@ $uri_aliases = array (
 
     # PHP page shortcuts
     "download"      => "downloads",
+    "getphp"        => "downloads",
     "documentation" => "docs",
     "mailinglists"  => "mailing-lists",
     "mailinglist"   => "mailing-lists",
@@ -156,6 +168,7 @@ $external_redirects = array(
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
     "phpdochowto" => "/manual/howto/index.html",
+    "getdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
     "rev"         => "/manual/$LANG/revcheck.html.gz",
     "blog"        => "/manual/$LANG/build.log.gz",
     "books"       => "/books.php?type_lang=PHP_$LANG"
