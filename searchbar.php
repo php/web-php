@@ -48,7 +48,7 @@ if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
    in the<br />
    <select name="show" style="width: 95%">
    <option value="quickref" selected>function list
-   <option value="nosource">whole site
+   <option value="wholesite">whole site
    <option value="manual">online documentation
    <option value="bugdb">bug database
    <option value="maillist">general mailing list

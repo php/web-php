@@ -284,13 +284,13 @@ else {
   <td>
 <? if (!isset($show)) { $show = 'quickref'; } ?>
    <select name="show">
-    <option value="quickref" <?  echo ($show=='quickref') ? 'selected':''?>>function list
-    <option value="wholesite" <? echo ($show=='nosource') ? 'selected':''?>>whole site
-    <option value="manual" <?    echo ($show=='manual')   ? 'selected':''?>>online documentation
-    <option value="bugdb" <?     echo ($show=='bugdb')    ? 'selected':''?>>bug database
-    <option value="maillist" <?  echo ($show=='maillist') ? 'selected':''?>>general mailing list
-    <option value="devlist" <?   echo ($show=='devlist')  ? 'selected':''?>>developer mailing list
-    <option value="phpdoc" <?    echo ($show=='phpdoc')   ? 'selected':''?>>documentation mailing list
+    <option value="quickref" <?  echo ($show=='quickref')  ? 'selected':''?>>function list
+    <option value="wholesite" <? echo ($show=='wholesite') ? 'selected':''?>>whole site
+    <option value="manual" <?    echo ($show=='manual')    ? 'selected':''?>>online documentation
+    <option value="bugdb" <?     echo ($show=='bugdb')     ? 'selected':''?>>bug database
+    <option value="maillist" <?  echo ($show=='maillist')  ? 'selected':''?>>general mailing list
+    <option value="devlist" <?   echo ($show=='devlist')   ? 'selected':''?>>developer mailing list
+    <option value="phpdoc" <?    echo ($show=='phpdoc')    ? 'selected':''?>>documentation mailing list
    </select><br />
   </td>
  </tr>

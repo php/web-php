@@ -81,7 +81,7 @@ you were looking for one of these:
 <p>
 If you want to search the entire PHP website for the string
 &quot;<b><?php echo htmlspecialchars($notfound); ?></b>&quot;, then
-<?php print_link('search.php?show=nosource&amp;pattern='.urlencode(htmlspecialchars($notfound)), 'click here'); ?>.
+<?php print_link('search.php?show=wholesite&amp;pattern='.urlencode(htmlspecialchars($notfound)), 'click here'); ?>.
 </p>
 
 <p>
