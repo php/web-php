@@ -1531,9 +1531,4 @@ commonHeader("PHP 4 ChangeLog");
 <LI>First public beta of PHP 4.0
 </UL>
 
-
-
-<?
-commonFooter();
-?>
-
+<?php commonFooter(); ?>
