@@ -203,6 +203,55 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 <?
 };
 
+function manualGetUserNotes($title,$failover=true)
+{
+	// either get it from local db or www.php.net/manual/get.php
+	global $MYSITE;
+	$notes = array();
+	if(strstr($MYSITE,"www.php.net")) {
+		$host = 'localhost';
+		$user = 'nobody';
+		$pass = '';
+		$db_id = mysql_connect($host, $user, $pass);
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' ORDER BY id";
+		$result_id = mysql_db_query("php3", $query, $db_id);
+		if ($result_id && mysql_num_rows($result_id) > 0) {
+			while ($row = mysql_fetch_array($result_id)) {
+				$notes[] = $row;
+			}
+		}
+	} else {
+		if ($failover) {
+			$url = "http://www.php.net/manual/get-user-notes.php?title=".urlencode($title);
+			$fp = @fopen($url,"r");
+			if ($fp) {
+				$body = fread($fp,100000);
+				if (strlen($body)) {
+					$notes = @unserialize($body);
+				}
+				fclose($fp);
+			}
+		}
+		else
+		{
+			/*
+			// test code
+			$notes = array(
+				array( 
+					"id" => 123,
+					"sect" => "sect1",
+					"user" => "simon1",
+					"note" => "note1",
+					"xwhen" => time() 
+				)
+			);
+			*/
+		}
+	}
+	return $notes;
+}
+
+
 function manualUserNotes($title) {
 	global $MYSITE;
 	if(strstr($MYSITE,"www.php.net")) {
@@ -223,10 +272,17 @@ function manualUserNotes($title) {
 
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
 
-	if ($result_id && mysql_num_rows($result_id) > 0) {
+	// is this the correct way to do this?
+	@include("../configuration.inc");
+	$failover = isset($failover_user_notes) && $failover_user_notes;
+	$notes = manualGetUserNotes($title,$failover);
+
+	$num_notes = count($notes);
+	if ( $num_notes > 0 ) {
 		makeTitle("User Contributed Notes: ".$title);
-		while ($row = mysql_fetch_array($result_id)) {
-			makeEntry($row['xwhen'],$row['user'],$row['note'],$row['id']);
+		for ($i=0; $i<$num_notes; $i++) {
+			$note = $notes[$i]; // should use foreach? 
+			makeEntry($note['xwhen'],$note['user'],$note['note'],$note['id']);
 		}
 	}
 	makeAddNote();
