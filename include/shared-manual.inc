@@ -261,8 +261,7 @@ function manualUserNotes($title, $id) {
 
 // Send manual HTTP headers, provide accurate language data
 function sendManualHeaders($charset,$lang) {
-    global $LANG, $LAST_UPDATED;
-    $LANG = $lang;
+    global $LAST_UPDATED;
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
     header("Vary: Cookie");
