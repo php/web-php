@@ -49,7 +49,7 @@ function makeBullet($url,$number,$offtype,$offnum) {
 
 function makeBorderTOC($this)
 {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACEATTR, $PHP_SELF;
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACEATTR, $PHP_SELF, $DOCUMENT_ROOT;
     global $HAVE_STYLE, $HAVE_TD_BG;
 
     $tocfontsize = "-1"; // replace with CSS?
@@ -66,13 +66,14 @@ function makeBorderTOC($this)
     echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
     $this = eregi_replace("^Manual: *", "", $this);
 
+	$cur = substr(dirname($PHP_SELF),-3);
 	$file = basename($PHP_SELF);
 	if(substr($file,-5)=='.php3') $file = substr($file,0,-1);
-	echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
-	echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
-	echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
-	echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
-	echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
+	if($cur!='ual') echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
+	if($cur!='/de' && is_file("$DOCUMENT_ROOT/manual/de/$file")) echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
+	if($cur!='/ja' && is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a>";
+	if($cur!='/it' && is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
+	if($cur!='/fr' && is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
 
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
