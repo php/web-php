@@ -250,7 +250,7 @@ elseif ($cmd == "display") {
 		}
 		elseif (incoming_details_are_valid()) {
 			/* update bug record */
-			$success = @mysql_query("UPDATE bugdb SET status='$estatus', bug_type='$bug_type', php_version='$php_version', php_os='$php_os', ts2=NOW(), email='$email' WHERE id=$id");
+			$success = @mysql_query("UPDATE bugdb SET status='$status', bug_type='$bug_type', php_version='$php_version', php_os='$php_os', ts2=NOW(), email='$email' WHERE id=$id");
 			
 			/* add comment */
 			if ($success && !empty($ncomment)) {
@@ -284,7 +284,7 @@ elseif ($cmd == "display") {
 
 		$text.= "Reported By: $original[email]\n";
 
-		if ($sdesc != $original[sdesc])
+		if (stripslashes($sdesc) != $original[sdesc])
 			$text .= "Old Summary: $original[sdesc]\n";
 
 		if ($status!=$original[status])
