@@ -59,7 +59,7 @@ for developers of large PHP sites.<BR>
 <LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more.<BR>
 <LI><A HREF="http://www.php-homepage.de/">PHP-Homepage</A><BR>
-German site about PHP with scripts, tips, foren, MyGuestBook, articles, news and more.<BR>
+German site about PHP with scripts, tips, forums, MyGuestBook, articles, news and more.<BR>
 <LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
 German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
 <LI><A HREF="http://www.phpwelt.de/">PHPWelt</A><BR>
