@@ -38,4 +38,9 @@ Something like: 0,30 * * * * (cd <your_path>; /usr/local/bin/cvs update -d)
 
 Once you have done the above and your site appears to work, send a message to
 mirrors@php.net with your information and appropriate steps will be taken to 
-integrate your mirror site.
+integrate your mirror site.  You should also include in your email the following:
+
+- a logo for your hosting company, or the URL of where we can get one
+  (the better the quality, the better)
+- the URL of the site that hosts the mirror (this is where people will go when 
+  they click on the logo at the bottom of each page)
