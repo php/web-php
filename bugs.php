@@ -624,7 +624,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user <$user@php.net>");
+    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $eemail");
 			mysql_freeresult($result);
 		}
 	}
@@ -755,6 +755,7 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+   <option name="4.0.3pl1">4.0.3pl1
    <option name="4.0.3">4.0.3
    <option name="4.0.3RC2">4.0.3RC2
    <option name="4.0.3RC1">4.0.3RC1
