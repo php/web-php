@@ -330,8 +330,6 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 <li>Made mime_magic and ZIP extensions available on Windows. (Edin)</li>
 <li>Added xslt_backend_version() and xslt_backend_name() for getting
   information about the processor backend. (chregu)</li>
-<li>Added php.ini option "allow_webdav_methods" to allow handling of
-  WebDAV http requests within PHP scripts. (chregu)</li>
 <li>Added ImageColorMatch() and ImageLayerEffect() functions which are only 
   available when using the bundled GD library. (ttoohey)</li>
 <li>Made major improvents to the pcntl extension. (Jason)
