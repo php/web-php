@@ -16,7 +16,7 @@ site_header("PHP.net Search Bars");
  an email to <a href="mailto:webmaster@php.net">the webmasters</a>.
 </p>
 
-<h2>Mozilla, Firebird, Netscape 6+ and Sherlock for MacOSX</h2>
+<h2>Mozilla, Firefox, Netscape 6+ and Sherlock for MacOSX</h2>
 <script type="text/javascript">
 function addPanel()
 {
@@ -51,7 +51,7 @@ function addPlugin()
 <p>
  We also offer a plugin for the built-in <a href="http://mycroft.mozdev.org/">Mozilla
  Search Sidebar</a>, and this plugin will also work with the several Mozilla and
- <a href="http://www.mozilla.org/products/firebird/">Firebird</a> 
+ <a href="http://www.mozilla.org/products/firefox/">Firefox</a> 
  <a href="http://extensionroom.mozdev.org/">search extensions</a> as well as
  <a href="http://www.apple.com/macosx/features/sherlock/">Sherlock</a> on MacOSX.
  <a href="javascript:addPlugin();">Install our sidebar plugin</a>, and enjoy the
