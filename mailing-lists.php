@@ -299,11 +299,11 @@ function output_lists_table($mailing_lists)
 
 <form method="post" action="http://www.php.net/mailing-lists.php">
 
-<h1><a name="general">General Mailing Lists</a></h1>
+<h2><a name="general">General Mailing Lists</a></h2>
 
 <?php output_lists_table($general_mailing_lists); ?>
 
-<h1><a name="internals">Internals Mailing Lists</a></h1>
+<h2><a name="internals">Internals Mailing Lists</a></h2>
 
 <?php output_lists_table($internals_mailing_lists); ?>
 
@@ -351,7 +351,7 @@ function output_lists_table($mailing_lists)
 
 <hr />
 
-<h1><a name="local">Local Mailing Lists</a></h1>
+<h2><a name="local">Local Mailing Lists</a></h2>
 
 <p>
  There are also some mailing lists and newsgroups for PHP users
