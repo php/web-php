@@ -470,7 +470,7 @@ endif; ?>
 		else:
 			$lastnews="PHP in the News";
 		endif;
-		makeSideButton("/downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
+		makeSideButton("/downloads.php","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
 		makeSideButton("/docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
 		makeSideButton("/quickref.php3","qref","qrefKick","quickref",129,30,0,10,"Quick Reference","<BR>\n");
 #		makeSideButton("/mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");

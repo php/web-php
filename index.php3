@@ -5,9 +5,17 @@ if (isset($SERVER_NAME) && $SERVER_NAME=="www.php3.net") {
 }
 Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 require("shared.inc");
-commonHeader("PHP: Hypertext Preprocessor");
+commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<img src="php4zend-small-white.gif" align="right">
+<h3>PHP 4 Release Candidate 1</h3>
+The real thing is getting closer and closer.  After a very successful Beta 4
+release that was extremely stable, <a href="version4/">PHP 4.0</a> shifts gears from the beta cycle into 
+<a href="version4/downloads.php">release-quality RC1.</a>
+If all goes well and no outstanding bugs are found in the RC, the final
+version of PHP will be released in early April 2000.
 
 <h3>Improve your PHP skills</h3> 
 Looking for clear and useful guides to build dynamic web-sites using
@@ -47,7 +55,6 @@ PHP from working properly if the 'magic quotes' feature was turned off.  This ha
 and Beta 4 was repackaged (as Beta 4 patch level 1).  The new release is <a href="/version4/downloads.php">available</a>
 as both new packages, and as a diff file against the original Beta 4.
 
-<img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 4 is out!</h3>
 February 20, 2000.  The fourth beta of <a href="/version4/">PHP 4.0</a> has been released.  
 With built-in XML support and a load of new features, as well as a large number of bug fixes, this Beta 
