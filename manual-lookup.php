@@ -12,26 +12,31 @@ function tryprefix($func, $prefix) {
     // Get the country code, to find native
     // language manual entries first
     $cc = $MIRRORS[$MYSITE][2];
+    $int_manual_try = array();
+    $en_manual_try = array();
 
     $func = ereg_replace("_","-",$func);
     $func = ereg_replace('\(.*\)',"-",$func);
-    $try_files[] = "/manual/${cc}/${prefix}${func}.php";
-    $try_files[] = "/manual/${prefix}${func}.php";
+
+    $int_manual_try[] = "/manual/${cc}/${prefix}${func}.php";
+    $en_manual_try[] = "/manual/${prefix}${func}.php";
+
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
-	$try_files[] = "/manual/${cc}/${prefix}${nosp}.php";
-	$try_files[] = "/manual/${prefix}${nosp}.php";
+	$int_manual_try[] = "/manual/${cc}/${prefix}${nosp}.php";
+	$en_manual_try[] = "/manual/${prefix}${nosp}.php";
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
-	$try_files[] = "/manual/${cc}/${prefix}${dasp}.php";
-	$try_files[] = "/manual/${prefix}${dasp}.php";
+	$int_manual_try[] = "/manual/${cc}/${prefix}${dasp}.php";
+	$en_manual_try[] = "/manual/${prefix}${dasp}.php";
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
-	$try_files[] = "/manual/${cc}/${prefix}${noul}.php";
-	$try_files[] = "/manual/${prefix}${noul}.php";
+	$int_manual_try[] = "/manual/${cc}/${prefix}${noul}.php";
+	$en_manual_try[] = "/manual/${prefix}${noul}.php";
     }
+    $try_files = array_merge($try_files, $int_manual_try, $en_manual_try);
 }
 
 tryprefix($function, "function.");
