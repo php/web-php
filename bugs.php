@@ -363,7 +363,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		if($bug_type=="Any") {
 			$where_clause = "bug_type!='Feature/Change Request'";
 		} else {
-			$where_clause = "bug_type='$bug_type'"
+			$where_clause = "bug_type='$bug_type'";
 		}
 
 		/* Treat assigned and analyzed bugs as open */
