@@ -68,7 +68,10 @@ diff -u
   <strong>PHP 4.3</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src</tt>
   <br />
-  <strong>PHP 5</strong>: 
+  <strong>PHP 5.0</strong>:
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_0 php-src</tt>
+  <br />
+  <strong>PHP 5.1</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</tt>
   <br /><br />
   Some tips and notes:
