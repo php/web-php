@@ -78,6 +78,10 @@ Assuming you have an account on a server that supports IMAP, you can theoretical
 use an installation of IMP to check your mail from anywhere that you have web access. 
 <? endEntry();?>
 
+<? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
+The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
