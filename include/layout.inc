@@ -163,8 +163,8 @@ function download_link($file, $title) {
 	$size = @filesize($local_file);
 	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
 
-#    print_link("/do_download.php?download_file=$file", $title);
-    print_link("/distributions/$file", $title);
+    print_link("/do_download.php?download_file=$file", $title);
+#    print_link("/distributions/$file", $title);
 
 	// Print out size in bytes (if size is less the 1Kb, or else in Kb)
 	if ($size) {
