@@ -93,8 +93,10 @@ Once you create a virtualhost which looks something like:
      ErrorDocument 403 /error/index.php
      AddType application/octet-stream .chm
      AddType application/octet-stream .bz2
-     # next line is only necessary if generating stats (see stats/README.stats)
+     # next line is only necessary if generating stats (see /stats/README.stats)
      Alias /stats/ /path/to/local/stats/
+     # next line only necessary if providing local search support (see /Mirrors-htdig.tgz)
+     SetEnv HTSEARCH_PROG /local/htdig/bin/htphp.sh
    &lt;/VirtualHost&gt;
 </pre>
    
