@@ -11,7 +11,7 @@ consent of your hosting company (if you aren't a hosting company
 yourself), and be prepared for some reasonably significant bandwidth
 usage (a reasonable estimate as of 2/2002 is 150MB/day). The PHP
 website requires PHP 4 with the settings <a href="#settings">outlined
-bellow</a>.
+below</a>.
 </p>
 
 <p>
