@@ -151,6 +151,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
+
+<h1>International PHP Conference 2003 program online</h1>
+<p>
+ <span class="newsdate">[05-Sep-2003]</span>
+ The organisers of the
+ <a href="http://www.phpconference.de/2003/index_en.php">International
+ PHP Conference</a> which will take place for the third time in Frankfurt,
+ Germany from Nov. 2 to 5, 2003 have announced the conference program.
+ The conference board which consists of Bjoern Schotte, Zak
+ Greant, Zeev Suraski, Thies Arntzen and Jan Lehnardt has chosen more than
+ 40 sessions for the main program on Nov. 4 and 5 and 7 in-depth
+ Power Workshops for the pre conference program on Nov. 2 and 3. Among the
+ prominent speaking crowd is Zeev Suraski, Ken Coar and many others. See
+ <a href="http://www.phpconference.de/2003/index_en.php">the conference
+ website</a> for more information.
+</p>
+
+<hr />
+
 <?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
 
 <h1>Server Central Donates Server</h1>
