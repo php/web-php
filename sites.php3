@@ -234,6 +234,7 @@ right away.</blockquote>
 	site("Deal-Pc","deal-pc.com");
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
+	site("Linux BBS","www.linuxbbs.org");
 	site("Linux Power","linuxpower.org");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
