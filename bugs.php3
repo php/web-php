@@ -297,4 +297,4 @@ Please supply any information that may be helpful in fixing the bug:
 
 <? } ?>
 
-<? include("include/footer.inc"); ?>
+<? require("include/footer.inc"); ?>
