@@ -26,8 +26,8 @@ $MIRRORS = array(
    "http://hk2.php.net/"               => array("hk", "xcyber.org", 0, "http://www.xcyber.org", 1, 0, "en"),
    "http://dk.php.net/"               => array("dk", "B&oslash;rsen Online", 0, "http://www.borsen.dk/", 1, 0, "da"),
    "http://ee.php.net/"               => array("ee", "OK Interactive", 0, "http://www.okia.ee/", 1, 0, "en"),
-   "http://fi.php.net/"               => array("fi", "NIC Finland", 0, "http://www.nic.fi/", 1, 0, "fi"),
-   "http://fi2.php.net/"              => array("fi", "IMG-Multimedia", 0, "http://www.img-media.com/", 1, 0, "fi"),
+   "http://fi.php.net/"              => array("fi", "IMG-Multimedia", 0, "http://www.img-media.com/", 1, 0, "fi"),
+   "http://fi2.php.net/"              => array("fi", "IMG-Multimedia", 0, "http://www.img-media.com/", 2, 0, "fi"),
    "http://fr.php.net/"               => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III",0, "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0, "fr"),
    "http://fr2.php.net/"               => array("fr", "nexen.net", 1, "http://www.nexen.net/", 1, 0, "fr"),
    "http://php3.globe.de/"            => array("de", "@GLOBE GmbH", 0, "http://www.globe.de/", 1, 0, "de"),
@@ -170,11 +170,12 @@ $LANGUAGES = array(
     'uk' => 'Ukranian',
 );
 
-$MYSITE='http://' . getenv("SERVER_NAME") . '/';
-
+$MYSITE = 'http://' . getenv("SERVER_NAME") . '/'; 
 if (!isset($MIRRORS[$MYSITE])) {
-	$MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
+    $MYSITE='http://' . ereg_replace("^www\\.","",getenv("HTTP_HOST")) . '/';
 }
-
+if (!isset($MIRRORS[$MYSITE])) {
+    $MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
+}
 
 ?>
