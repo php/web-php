@@ -56,7 +56,7 @@ if (i2c_valid_country()) {
              "you usual daily work, you will get better response times.</p>\n";
         mirror_list($COUNTRY);
         echo "<p>Here is the list of all the other sites in case our detection\n" .
-             "done something wrong, or the local mirror sites are busy.\n";
+             "did something wrong, or the local mirror sites are busy.\n";
         mirror_list('', $COUNTRY);
     } else { mirror_list(); }
 } else { mirror_list(); }
