@@ -45,3 +45,5 @@ function find_manual_page($lang, $function) {
     }
     return "";
 }
+
+?>

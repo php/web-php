@@ -1,4 +1,4 @@
-<?
+<?php
 #+-------------------------------------+
 #| Table Wrapper for SQL Engines       |
 #| By Zeev Suraski                     |

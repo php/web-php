@@ -1,4 +1,5 @@
 <?php
+
 require_once 'prepend.inc';
 
 $lang = $MIRRORS[$MYSITE][6];

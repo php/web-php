@@ -231,7 +231,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <form method="POST" action="/search.php">
       <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
         <small>search for</small>
-<INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
+<INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<?php echo htmlspecialchars($prevsearch) ?>" SIZE="30">
 <small>in the</small>
 <SELECT NAME="show" CLASS="small">
 <OPTION VALUE="quickref" SELECTED>function list
@@ -243,7 +243,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <OPTION VALUE="phpdoc">documentation mailing list 
 <OPTION VALUE="source">website source code    
 </SELECT>
-<?	echo make_submit('small_submit_white.gif', 'search', 'bottom');
+<?php	echo make_submit('small_submit_white.gif', 'search', 'bottom');
       ?>&nbsp;<br>
       </font></td>
     </form>
@@ -300,7 +300,7 @@ function commonFooter() {
       <!--
         function gotomirror(form) {
           url = form.country.options[form.country.selectedIndex].value;
-          if (url != '<? echo $MYSITE; ?>') {
+          if (url != '<?php echo $MYSITE; ?>') {
             window.location.href = url;
           }
 	  return false;
@@ -388,3 +388,4 @@ function clean_note($text) {
     $text = "<tt>".nl2br($text)."</tt>";
     return $text;
 }
+?>

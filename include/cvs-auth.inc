@@ -1,4 +1,4 @@
-<?
+<?php
 /* $Id$ */
 
 $ignore_password = false;
@@ -30,3 +30,5 @@ function verify_password($user, $pass) {
 	}
 	return false;
 }
+
+?>

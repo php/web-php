@@ -1,4 +1,4 @@
-<?
+<?php
 /* Structure of MIRRORS array:
   0	"country code",
   1	"Mirror Name",
