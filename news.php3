@@ -60,16 +60,6 @@ function endEntry() {
 PHP can help you look like a web-wunderkid while saving you hours of drudgery.
 <? endEntry(); ?>
 
-<? makeEntry( "PHP 3/4: Dynamische Webseiten-Generierung", "by Marco Zierl", 
-	"http://www.zdnet.de/internet/artikel/java/200002/dynamik05_00-wc.html", "January 19, 2000");?>
-(In German.) &quot;Der Newcomer unter den Web-Applikationssprachen ist kostenlos erhältlich.&quot;
-<? endEntry(); ?>
-
-<? makeEntry( "Seitendynamik: Dynamische Webseiten-Generierung", "by Marco Zierl", 
-	"http://www.zdnet.de/internet/artikel/java/200002/dynamik02_00-wc.html", "January 19, 2000");?>
-(In German.) &quot;Mit PHP, ASP und Cold Fusion konkurrieren drei unterschiedliche Lösungen um die Vorherrschaft beim Programmieren von dynamischen Webseiten. Wir zeigen Ihnen die Stärken und Schwächen der Testkandidaten.&quot;
-<? endEntry(); ?>
-
 <? makeEntry( "PHP: a silent killer", "by <a href=\"mailto:jim.white@sreb.org\">Jim White</a>", 
 	"http://www.osopinion.com/Opinions/JimWhite/JimWhite5.html", "December 22, 1999");?>
 PHP is now running over a million web sites and with good reason. PHP is open ource, it runs equally well on NT and UNIX, it's well documented. PHP is no doubt stealing market share from Microsoft's Active Server Pages, but the media has been unusually quiet about the issue. Even as Apache's success has become front page news, PHP has gone largely unnoticed. Maybe Microsoft wants to keep it that way.
