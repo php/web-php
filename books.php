@@ -178,7 +178,6 @@ MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </TD>
 </TR>
 
-
 <TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
@@ -275,6 +274,19 @@ by Dr. Susanne Wigard<BR>
 by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 <SMALL>in German, Data Becker, July 2000, ISBN 3-8158-2043-X, 439 pages<BR>
 <A HREF="http://www.databecker.de/">weitere Informationen</A></SMALL><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/thephpdevelopmte"
+><IMG SRC="/jpgs/klaus_schmidt.jpg" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3932311795/thephpdevelopmte"
+>PHP 4 - Tutorial & Referenz</A><BR>
+by Klaus Schmidt<BR>
+<SMALL>in German, Computer & Literatur Verlag GmbH, November 2000, ISBN 3-932-1179-5, 832 pages<BR>
+<A HREF="http://www.ksweb.de/index.php?page=buch">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
 
