@@ -54,6 +54,13 @@ if (isset($_POST['urlsearch'])) {
     myphpnet_urlsearch($_POST['urlsearch']);
 }
 
+// Set preferred mirror site, prepare mirror array
+if (isset($_POST['mirror'])) {
+    myphpnet_mirror($_POST['mirror']);
+}
+$mirror_sites = $MIRRORS;
+$mirror_sites["NONE"] = array(7 => MIRROR_OK);
+
 myphpnet_save();
 
 commonHeader("My PHP.net");
@@ -63,26 +70,26 @@ commonHeader("My PHP.net");
 <h1>My PHP.net</h1>
 
 <p>
-This page allows you to customize the PHP.net site to some degree
-to your own liking. Currently you can only set the language you
-prefer, thus overriding any other automatic language selection.
+ This page allows you to customize the PHP.net site to some degree
+ to your own liking. Currently you can only set the language you
+ prefer, thus overriding any other automatic language selection.
 </p>
 
 <p>
-These settings will be active on all official PHP.net mirror sites,
-and are stored using cookies, so you need to have cookies enabled
-to let your settings work.
+ These settings will be active on all official PHP.net mirror sites,
+ and are stored using cookies, so you need to have cookies enabled
+ to let your settings work.
 </p>
 
 <h2>Preferred language</h2>
 
 <p>
-If you use a shortcut or search for a function, the language used
-is determined by checking for the following settings. The list is
-in priority order, the first is the most important. Normally you don't
-need to set your preferred language, as your last seen language is
-always remembered, and is a good estimate on your preferred language
-most of the time.
+ If you use a shortcut or search for a function, the language used
+ is determined by checking for the following settings. The list is
+ in priority order, the first is the most important. Normally you don't
+ need to set your preferred language, as your last seen language is
+ always remembered, and is a good estimate on your preferred language
+ most of the time.
 </p>
 
 <div class="indent">
@@ -118,29 +125,29 @@ foreach ($langinfo as $lin => $lid) {
 </div>
 
 <p>
-These settings are only overriden in case you have passed a language
-setting URL parameter or POST data to a page or you are viewing a manual
-page in a particular language. In these cases, the explicit specification
-overrides the language selected from the above list.
+ These settings are only overriden in case you have passed a language
+ setting URL parameter or POST data to a page or you are viewing a manual
+ page in a particular language. In these cases, the explicit specification
+ overrides the language selected from the above list.
 </p>
 
 <p>
-The language setting is honored when you use an
-<a href="/urlhowto.php">URL shortcut</a>, when you start
-a function list search on a non-manual page, when you visit
-the <a href="/download-docs.php">manual download</a> or
-<a href="/docs.php">language selection</a> pages, etc.
+ The language setting is honored when you use an
+ <a href="/urlhowto.php">URL shortcut</a>, when you start
+ a function list search on a non-manual page, when you visit
+ the <a href="/download-docs.php">manual download</a> or
+ <a href="/docs.php">language selection</a> pages, etc.
 </p>
 
 <h2>Your country</h2>
 
 <p>
-The PHP.net site and mirror sites try to detect your country
-using the <a href="http://www.directi.com/?site=ip-to-country">Directi
-Ip-to-Country Database</a>. This information is used to mark
-the events in your country specially and to offer close mirror
-sites if possible on the download page and on the mirror listing
-page.
+ The PHP.net site and mirror sites try to detect your country
+ using the <a href="http://www.directi.com/?site=ip-to-country">Directi
+ Ip-to-Country Database</a>. This information is used to mark
+ the events in your country specially and to offer close mirror
+ sites if possible on the download page and on the mirror listing
+ page.
 </p>
 
 <div class="indent">
@@ -156,17 +163,17 @@ if (i2c_valid_country()) {
 <h2>URL search fallback</h2>
 
 <p>
-When you try to access a PHP.net page via an URL shortcut, and
-the site is unable to find that particular page, it falls back
-to a documentation search, or a function list lookup, depending on
-your choice. The default is a function list lookup, as most of
-the URL shortcut users try to access function documentation pages.
-<em>Note that documentation searches are currently [temporarily]
-done through Google.</em>
+ When you try to access a PHP.net page via an URL shortcut, and
+ the site is unable to find that particular page, it falls back
+ to a documentation search, or a function list lookup, depending on
+ your choice. The default is a function list lookup, as most of
+ the URL shortcut users try to access function documentation pages.
+ <em>Note that documentation searches are currently [temporarily]
+ done through Google.</em>
 </p>
 
 <div class="indent">
-Your setting: <input type="radio" name="urlsearch" value="quickref"
+ Your setting: <input type="radio" name="urlsearch" value="quickref"
 <?php
 $type = myphpnet_urlsearch();
 if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
@@ -178,6 +185,46 @@ if ($type === MYPHPNET_URL_MANUAL) {
 }
 ?>
  /> PHP Documentation search
+</div>
+
+<h2>Mirror site redirection</h2>
+
+<p>
+ The www.php.net site redirects users to mirror sites in several cases
+ automatically. It tries to find a close mirror first (a mirror in the
+ user's country), and if no such mirror is found, it selects one mirror
+ randomly. Here you can set one preferred mirror site for yourself in
+ case you are not satisfied with the automatic selection.
+</p>
+
+<p>
+ Please note that in case the site finds your preferred mirror site disabled
+ for some reason, it will fall back to the automatic selection procedure, but
+ will not alter your preferences, so next time when your selected server works,
+ the redirections will lead you there. 
+</p>
+
+<div class="indent">
+ <select name="mirror">
+<?php
+$mirror = myphpnet_mirror();
+foreach ($mirror_sites as $murl => $mdata) {
+    
+    // Skip inactive mirrors
+    if (!mirror_status($murl) == MIRROR_OK) { continue; }
+    
+    // Compute user friendly mirror name
+    $mname = ($murl == "NONE" ? "Automatic selection (default)" :
+                                substr($murl, strpos($murl, '//') + 2, -1));
+    
+    // Print out mirror option with selection if needed
+    printf (
+        "  <option value=\"$murl\"%s>$mname</option>\n",
+        ($mirror == $murl ? ' selected="selected"' : '')
+    );
+}
+?>
+ </select>
 </div>
 
 <p class="center">

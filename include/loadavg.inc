@@ -28,6 +28,13 @@ function load_check()
     // Load is very high, we won't even redirect
     if ($load > 80) { load_toobusy(); }
 
+    // Adhere to user preferences if valid
+    $user_mirror = myphpnet_mirror();
+    if (isset($MIRRORS[$user_mirror]) && $MIRRORS[$user_mirror][7] == MIRROR_OK) {
+        header("Location: $user_mirror" . substr($_SERVER['REQUEST_URI'], 1));
+        exit;
+    }
+    
     $close_mirrors = array();
     $other_mirrors = array();
 
