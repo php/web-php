@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
-site_header("Manual Notes");
+site_header("Add Manual Note");
 
 // Copy over "sect" and "redirect" from GET to POST
 if (!isset($_POST['sect']) && isset($_GET['sect'])) {
@@ -125,9 +125,9 @@ if ($process) {
         
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
-        echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
+        echo '<div id="usernotes">';
         manual_note_display(time(), stripslashes($user), stripslashes($note), FALSE);
-        echo '</table><br /><br />';
+        echo '</div><br /><br />';
     }
 }
 

@@ -337,3 +337,33 @@ table#logos td ul {
 	padding-left: 15px;
 	list-style-type: square;
 }
+
+/* User notes on manual pages --------------------------------------------- */
+div#usernotes {
+	background-color: #e0e0e0;
+	color; inherit;
+}
+div#usernotes div.head, div#usernotes div.foot {
+	background-color: #d0d0d0;
+	color: inherit;
+	padding: 4px;
+}
+div#usernotes div.foot {
+	text-align: right;
+}
+div#usernotes div.foot a, div#usernotes div.head a {
+	color: black;
+	background-color: transparent;
+}
+div#usernotes span.action {
+	float: right;
+}
+div#usernotes div.note {
+	padding: 4px;
+}
+div#usernotes div.text {
+	background-color: #f0f0f0;
+	color: inherit;
+	padding: 2px;
+	margin-top: 4px;
+}
