@@ -48,6 +48,17 @@ diff -u
     <pre>cd php4</pre></li>
   <li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co Zend TSRM</pre></li>
+
+    <blockquote>
+     <strong style="color: #99000">Note:</strong> <br/>
+     <i>You can retrieve a specific release of PHP from CVS by using the -r flag in your cvs command. For example:<br><pre>
+cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
+cd php4
+cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 Zend TSRM
+     </pre>
+     Tags for major releases include: php_4_0_0, php_4_0_1, php_4_0_1pl1, php_4_0_2, php_4_0_3, php_4_0_4, php_4_0_4pl1, php_4_0_5, php_4_0_6, php_4_1_0, php_4_1_1</i>
+    </blockquote>
+    
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
     1.4 or newer.
     <blockquote>
