@@ -89,10 +89,14 @@ PHP 4.2.0 Release Announcement
  build a DSO module for Apache 2 with --with-apxs2. We do <b>not</b> recommend
  that you use this in a production environment.
 </p>
-<p>Support for MacOS X will be very limited in PHP 4.2.0. The new build process
- that will power future PHP 4.3.x versions made it possible to support DSO
- modules and shared extensions for MacOS X, unfortunately this is not the case
- in PHP 4.2.0, where only the CGI and static Apache module work.</p>
+<p>PHP 4.2.0 still lacks certain key features on Mac OS X and
+ Darwin, and isn't officially supported by the PHP Group on
+ these platforms. Specifically, building PHP as a dynamically
+ loaded Apache module isn't supported at this time. PHP 4.3.0,
+ due to be released in August, 2002, will be the first PHP
+ release to officially support Mac OS X. It, along with future
+ Mac OS X and Apache releases, will enable full feature parity
+ with other PHP platforms.</p>
 
 <h2>Improvements</h2>
 <p>PHP 4.2.0 includes several other improvements:</p>
