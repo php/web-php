@@ -2,6 +2,24 @@
 require("shared.inc");
 commonHeader("Support");
 ?>
+
+<?
+if (isset($maillist)):
+  # should really grab some email validating routine and use it here.
+  if (empty($email) || $email == 'user@example.com'):?>
+You forgot to specify an email address to be added to the list.
+Go back and try again.
+<?else:
+    $request = strtolower($action);
+    $sub = str_replace("@", "=", $email);
+    mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", "This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
+?>
+<p>
+A request has been entered into the mailing list processing queue. You
+should receive an email at <?echo $email;?> shortly describing how to
+complete your request.
+<?endif;
+else:?>
 <h3>Documentation</h3>
 <P>
 A good place to start is by skimming through the ever-growing <a
@@ -19,43 +37,83 @@ get addressed.  If you see a problem, please tell us so we can address it.
 
 <h3>Mailing Lists</h3>
 <P>
-One of the best resources is a very friendly and helpful mailing
+One of the best resources is the very friendly and helpful mailing
 lists.  There are a few PHP-related mailing lists available.
 
-<p>The main list for PHP3 users is <b>php3@lists.php.net</b>.  You may
-subscribe to this list by sending a blank message to <a href="mailto:
-php3-subscribe@lists.php.net">php3-subscribe@lists.php.net</a>.
+<ul>
+ <li>Announcements of new PHP releases are sent the php-announce
+     list. (This is a very low-volume, moderated list.)
+ <li>The main list for PHP users is <b>php3@lists.php.net</b>.
+     (This is an unmoderated, high volume list, and is also available
+     in a twice-daily digest.)
+ <li>Users interested in early access to PHP releases so that they
+     can provide feedback about bugs to the developers before releases
+     go out to the world can subscribe to the Beta list. (This is an
+     unmoderated, low-volume list.)
+ <li>The list for those who want to help out with the development
+     of PHP is <b>php-dev@lists.php.net</b>. (This is an unmoderated,
+     medium-volume list.)
+ <li>The Knowledge Base list receives daily mailings that contain
+     summaries of topics discussed on the user list, as well as
+     other topics drawn from the Knowledge Base. More
+     information about the Knowledge Base can be found at <a
+     href="http://e-gineer.com/phpkb/">http://e-gineer.com/phpkb/</a>.
+</ul>
 
-<p>If you are interested in helping out with the
-development of PHP3 you should join the developers'
-list by sending an empty message to <a href="mailto:
-php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>.
+<p>
+To subscribe to one of these lists, use this simple form:
+
+<form method="POST" action="http://www.php.net/support.php3">
+<table>
+ <tr>
+  <td><b>List:</b></td>
+  <td><select name="maillist">
+    <option value="php-announce">Announcements
+    <option value="php3">User List
+    <option value="php3-digest">User List Digest
+    <option value="php-kb">Knowledge Base
+    <option value="php-dev">Developer List
+    <option value="php-beta">Beta List
+  </select></td>
+  <td><input type=submit name="action" value="Subscribe"></td>
+ </tr>
+ <tr>
+  <td><b>Email:</b></td>
+  <td><input type=text name="email" width=40 value="user@example.com"></td>
+  <td><input type=submit name="action" value="Unsubscribe"></td>
+ </tr>
+</table>
+</form>
+
+<p>
+You will be sent a confirmation mail at the address you wish to
+be subscribed or unsubscribed, and only added to the list after
+following the directions in that mail.
 
 <P>
 Archives for some of these mailing lists can be found at: 
 </P>
 
 <ul>
-<li><a href="http://php.gotocity.com/mail/">PHP3 List at www.phpbuilder.com</a>
-<li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
-<li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List</a>
-<li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List</a>
+ <li><a href="http://php.gotocity.com/mail/">PHP3 List at www.phpbuilder.com</a>
+ <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
+ <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP3 List</a>
+ <li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP3 List</a>
 </ul>
 
 <P>
 <b>Warning:</b> The PHP users mailing list gets close to 2500 messages
-per month currently.  Do the math.  That translates to about 80
-messages per day.  If your mailbox can't handle this sort of traffic
-you might want to consider subscribing to the digest list instead, at <a
-href="mailto:php3-digest-subscribe@lists.php.net">php3-digest-subscribe@lists.php.net</a>
-(two messages per day).  You can also read the mailing list on the above
-web interface, or if you like reading things with a news reader, you can 
-read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
+per month currently.  Do the math.  That translates to about 80 messages
+per day.  If your mailbox can't handle this sort of traffic you might
+want to consider subscribing to the digest list instead (two messages
+per day).  You can also read the mailing list on the above web interface,
+or if you like reading things with a news reader, you can read it at
+<a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
 
 <P>
-You can search the mailing lists right from this website from <A HREF="/search.php3">the search page</A>
-or by using the search button on the top-right of every page.
-</P>
+You can search the mailing lists right from this website from <A
+HREF="/search.php3">the search page</A> or by using the search button
+on the top-right of every page.
 
 <h3>Local Mailing Lists</h3>
 <p>
@@ -98,6 +156,6 @@ experienced PHP people sitting around doing nothing on the #php channel
 on EFNet.  If you don't know what IRC is you can learn more about it at
 <a href="http://www.irchelp.org">www.irchelp.org</a>.
 
-<?
+<?endif;
 commonFooter();
 ?>
