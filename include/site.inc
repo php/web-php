@@ -118,7 +118,7 @@ if(strstr($MYSITE,"au.php.net")) {
 
 if (!isset($MIRRORS[$MYSITE])) {
 	$MYSITE="";
-	include("badsite.php3);
+	include("badsite.php3");
 	exit;
 }
 ?>
