@@ -62,31 +62,24 @@ PHP 4.2.0 Release Announcement
 
 <p>After an ordered QA process, PHP 4.2.0 is <a href="http://www.php.net/downloads.php">out</a>!</p>
 
-<h2>Form variables</h2>
+<h2>External variables</h2>
 
-<p>PHP 4.2.0 has some big changes regarding the use of form variables. As
- of PHP 4.2.0 the register globals configuration setting defaults to <b>off</b>.
- This means that for instance the following GET request "example.com/example.php?foo=bar"
- does <b>NOT</b> make the variable $foo available in your script. You can do
- two things to use the variable:</p>
-<ol>
- <li>Access the form variable with $_GET['foo']</li>
- <li>Turn register_globals on in php.ini, but visit the resources below first
-  to give you a nice insight why register_globals can lead to security
-  issues.</li>
-</ol>
-<p>The following resources explain what the register_globals php.ini option
- does and which problems may arise using it:</p>
+<p>The biggest change in PHP 4.2.0 concerns variable handling. <b>External
+ variables (from the environment, the HTTP request, cookies or the web server)
+ are no longer registered in the global scope by default.</b> The preferred
+ method of accessing these external variables is by using the new Superglobal
+ arrays, introduced in PHP 4.1.0. More information about this change:
 <ul>
- <li><?php echo make_link ("release_4_1_0.php", "The PHP 4.1.0 release announcement"); ?></li>
- <li><?php echo make_link ("http://www.zend.com/zend/art/art-oertli.php", "Thomas' article on secure programming"); ?></li>
- <li><?php echo make_link ("/manual/en/html/configuration.html#ini.register-globals", "The Manual entry"); ?></li>
+ <li><a href="http://www.php.net/manual/en/html/language.variables.predefined.html">PHP Manual: Predefined variables</a></li>
+ <li><a href="http://www.php.net/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
+ <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
 </ul>
+</p>
 
-<h2>Compability</h2>
+<h2>Compatibility</h2>
 
-<p>The Apache group released their first General Available version of Apache 2.
- PHP 4.2.0 will have <b>EXPERIMENTAL</b> support for this version. You can
+<p>The Apache group released their first General Availability version of Apache
+ 2.  PHP 4.2.0 will have <b>EXPERIMENTAL</b> support for this version. You can
  build a DSO module for Apache 2 with --with-apxs2. We do <b>not</b> recommend
  that you use this in a production environment.
 </p>
@@ -102,16 +95,17 @@ PHP 4.2.0 Release Announcement
 <h2>Improvements</h2>
 <p>PHP 4.2.0 includes several other improvements:</p>
 <ul>
- <li>Register globals is <b>off!</b> by default</li>
+ <li><b>External variables (from the environment, the HTTP request, cookies or
+  the web server) are no longer registered as global variables</b></li>
  <li>Overhaul of the sockets extension</li>
  <li>Highly improved performance with file uploads</li>
  <li>The satellite and mailparse extensions were moved to PECL and are no longer 
-  bundled with the official PHP release.</li>
- <li>The posix extension has been cleaned up.</li>
+  bundled with the official PHP release</li>
+ <li>The posix extension has been cleaned up</li>
  <li>iconv handling has been improved</li>
  <li>Output buffering support, which was introduced in PHP 4.1.0 has
-  been stabilized.</li>
- <li>Improved performance and stability of the domxml extension.</li>
+  been stabilized</li>
+ <li>Improved performance and stability of the domxml extension</li>
  <li>New multibyte regular expression support</li>
  <li><b>LOTS</b> of fixes and new functions</li>
 </ul>
