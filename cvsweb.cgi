@@ -18,6 +18,7 @@ require 'cgi-style.pl';
 	    'php3', '/repository/php3',
 	    'phpweb', '/repository/phpweb',
 	    'phpfi', '/repository/phpfi',
+            'php4', '/repository/php4',
 	    );
 
 $cvstreedefault = 'php3';

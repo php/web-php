@@ -380,7 +380,7 @@ right away.</blockquote>
 	site("BackPackers.Com","www.backpackers.com");
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
-	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
+	site("Oaxaca State Tourist Guide","oaxaca-travel.com");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
 	site("Spirit Journeys","www.spiritjourneys.com");
