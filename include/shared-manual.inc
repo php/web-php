@@ -31,7 +31,7 @@ function makeBorderTOC($this) {
         make_link('./', make_image('caret-t.gif', '^') . $HOME[1] ) . 
         '<br></td></tr>';
 
-    $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td>' . spacer(1, 1, TRUE) . '</td></tr>';
+    $SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td height="1">' . spacer(1, 1, TRUE) . '</td></tr>';
 
     if (($HOME[1] != $UP[1]) && $UP[1]) {
         $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
@@ -55,7 +55,7 @@ function makeBorderTOC($this) {
         }
         $SIDEBAR_DATA .= '&nbsp;' . 
             make_link($url, make_image($img, "&middot;") . $title ) .
-            "<br />";
+            "<br />\n";
     }
 
     $SIDEBAR_DATA.= '</small></td></tr>';
