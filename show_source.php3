@@ -6,14 +6,25 @@
   $title="Source of $page_url";
   include "include/header.inc";
 
-/* remove path prefix if exists */
-if ($tmp=strrchr($page_url,"/")) {
-  $page_name = substr($tmp,1,strlen($tmp));
+/* remove other path prefixes than /manual/ */
+
+$legal_paths = array("/manual" => 1);
+$tmp = strrchr($page_url, "/");
+if ($tmp) {
+    $path = substr($page_url, 0, strlen($page_url)-strlen($tmp));
+    if ($legal_paths[$path]) {
+	$page_name = $page_url;
+    } else {
+	$page_name = substr($tmp, 1, strlen($tmp));
+    }
 } else {
   $page_name = $page_url;
 }
 
 show_source($page_name);
 
+// "abcde/foo"
+
 include "include/footer.inc";
+
 ?>
