@@ -208,8 +208,17 @@ function i2c_realip()
             // 192.168.0.0/16 -- jim kill me later with my regexp pattern
             // below.
             if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
-                $ip = $ips[$i];
-                break;
+                if (version_compare(phpversion(), "5.0.0", ">=")) {
+                    if (ip2long($ips[$i]) != false) {
+                        $ip = $ips[$i];
+                        break;
+                    }
+                } else {
+                    if (ip2long($ips[$i]) != -1) {
+                        $ip = $ips[$i];
+                        break;
+                    }
+                }
             }
         }
     }
@@ -218,4 +227,4 @@ function i2c_realip()
     return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
 }
 
-/* vim: set noet ts=4 sw=4 ft=php: : */
+/* vim: set et ts=4 sw=4 ft=php: : */
