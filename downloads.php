@@ -40,7 +40,7 @@ available on Zend Technologies\' web site
 
 <p> For '.
 make_link("http://gtk.php.net/", "PHP-GTK").'
-downloads, please visit out site dedicated
+downloads, please visit our site dedicated
 to ' . make_link("http://gtk.php.net/", "PHP-GTK").'.
 </p>
 ';
