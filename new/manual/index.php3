@@ -1,6 +1,6 @@
 <?
 require("shared-manual.inc");
-manualHeader("Table of Contents", "", "", "Preface", "preface.php3");
+manualHeader("Table of Contents");
 ?>
 <H1>PHP3 Manual</H1
 ><H2
@@ -191,5 +191,4 @@ HREF="phpdevel.php3"
 ></DL
 ></DL
 >
-<? manualFooter("Table of Contents", "", "", "Preface", "preface.php3");?>
-
+<? manualFooter("Table of Contents");?>

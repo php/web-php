@@ -1,10 +1,10 @@
 <?
 require("shared-manual.inc");
-manualHeader("Show Source","","","","");
+manualHeader("Show Source");
 
 if (!isset($page_url)):
 	echo "No page URL specified.";
-	manualFooter("Show Source","","","","");
+	manualFooter("Show Source");
 	exit;
 endif;
 
@@ -27,5 +27,5 @@ if ($tmp) {
 
 show_source($page_name);
 
-manualFooter("Show Source","","","","");
+manualFooter("Show Source");
 ?>
