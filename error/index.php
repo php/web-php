@@ -80,7 +80,7 @@ if ($uri[0] == "/") { $uri = substr($uri,1); }
 // We need to override the 404 status in that case.
 if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts) &&
     @file_exists("../manual/$parts[1]/$parts[3]")) {
-    header('HTTP/1.1 200 OK');
+    header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include "../manual/$parts[1]/$parts[3]";
@@ -90,7 +90,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts) &&
 // BC: for old HTML directory (.html extension was used in that)
 elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts) &&
         @file_exists("../manual/$parts[1]/$parts[2].php")) {
-    header('HTTP/1.1 200 OK');
+    header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
     include "../manual/$parts[1]/$parts[2].php";
     exit;
@@ -99,7 +99,7 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts) &&
 // The index file needs to be handled in a special way
 elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $uri, $parts) &&
         @file_exists("../manual/$parts[1]/index.php")) {
-    header('HTTP/1.1 200 OK');
+    header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include "../manual/$parts[1]/index.php";
