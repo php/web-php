@@ -19,7 +19,7 @@ $cd = isset($cd) ? (int) $cd : 0;
 
 // If the year is not valid, set it to the current year
 // This excludes all the "too old", or "too far in the future"
-// calendar to displays (so search engines can handle this page too)
+// calendar displays (so search engines can handle this page too)
 if ($cy != 0 && !valid_year($cy)) {
     $cy = date("Y");
 }
@@ -355,9 +355,8 @@ function valid_year($year)
     // Get current year and compare to one sent in
     $current_year = date("Y");
     
-    // We only allow two years back (for historical reasons) and two
-    // years forth (to plan your schedule for the next year)
-    if (($year < $current_year - 2) || ($year > $current_year + 2)) {
+    // We only allow this year for displays
+    if ($year != $current_year) {
         return FALSE;
     }
     
