@@ -212,7 +212,7 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 <font class="newsdate">[29-May-2003]</font>
 The PHP developers are proud to announce the immediate availability of
-<a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a huge number of bug fixes
+<a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
 and is a <b>strongly</b> recommended update for all users of PHP.
 Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
 </p>
