@@ -106,6 +106,8 @@ commonHeader("Downloads");
  </li>
 </ul>
 
+<hr />
+
 <h1>PHP 5 Beta 1</h1>
 
 <h2>Complete Source Code</h2>
@@ -128,6 +130,9 @@ commonHeader("Downloads");
  </li>
 </ul>
 
+<hr />
+
+<h1>Security fixes and patches</h1>
 
 <h2>File Uploads Security Fix</h2>
 <ul>
