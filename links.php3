@@ -76,6 +76,10 @@ Introductory tutorial<BR>
 <LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">A comprehensive list of editors you can use to edit PHP programs.</A><BR>
 <LI><A HREF="http://phpsearch.de/">PHPSearch</A><br>
 Searchengine for PHP related things.<BR>
+
+<LI><A HREF="http://www.evilwalrus.com/">Evil Walrus</A> has a growing list of PHP scripts<BR>
+<LI><A HREF='http://www.LinuxGuruz.org/">LinuxGuruz.org</A><BR>
+Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server, HTML, PHP, MySQL ... and lots more.<BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
