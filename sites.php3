@@ -200,6 +200,7 @@ right away.</blockquote>
 	siteStart();
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
@@ -225,6 +226,7 @@ right away.</blockquote>
 /* Misc. */
 	title("Miscellaneous");
 	siteStart();
+	site("Astrology Forum","www.astroforum.ch");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Internet Weather Report","www.internetweather.com");
