@@ -1016,7 +1016,7 @@ array (
     /* title_link   */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
     /* author[s]    */ "Sterling Hughes",
     /* auth link[s] */ "",
-    /* image        */ "phpguida_pt.jpg",
+    /* image        */ "phpguida_pt.gif",
     /* information  */ "2001, ISBN 85-7251-584-4, 528 pages",
     /* inform. link */ "http://www.siciliano.com.br/livro.asp?orn=LSE&Tipo=2&ID=241501",
     /* language     */ "pt"
@@ -1030,6 +1030,17 @@ array (
     /* image        */ "welling_br.gif",
     /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
     /* inform. link */ "http://http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?589959",
+    /* language     */ "pt"
+  ),
+
+  array(
+    /* title[s]     */ "PHP com XML - Guia de Consulta R&aacute;pida",
+    /* title_link   */ "http://www.niederauer.com.br/livros/phpxml/",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "phpxml_br.gif",
+    /* information  */ "Novatec Editora, ISBN 8-5752-2025-X, 96 pages",
+    /* inform. link */ "http://www.niederauer.com.br/livros/phpxml/",
     /* language     */ "pt"
   ),
 
