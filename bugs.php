@@ -587,10 +587,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$counter = 0;
 		foreach ($comments as $value)
 		  {
-			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
+			$output .= "[$value[0]] $value[1]\n\n$value[2]\n\n$divider\n\n";
 			if (strlen ($output) > $max_message_length || ++$counter > 4 )
 			  {
-				$output .= "The remainder of the comments for this report are too long.  To view the rest of the comments, please view the bug report online.\n";
+				$output .= "The remainder of the comments for this report are too long.\nTo view the rest of the comments, please\nview the bug report online.\n";
 				break;
 			  }
 		  }
