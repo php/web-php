@@ -42,6 +42,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 </li>
 <li>Make PHP_AUTH_* variables not available in safe mode under Apache when an
   external basic auth mechanism is used. (Philip)</li>
+<li>Added sha1() and sha1_file() for US Secure Hash Algorithm 1. (Stefan Esser)</li>
 <li>Aliased dba_popen() to dba_open() until 4.3.2 when persistent STDIO streams
   are introduced. (Andrei)</li>
 <li>Fixed a security bug in the bundled MySQL library. (Georg, Stefan)</li>
