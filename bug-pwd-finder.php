@@ -3,20 +3,16 @@ require_once 'prepend.inc';
 
 /* See bugs.php for the table layout of bugdb. */
 
-if (strstr($MYSITE,"bugs.php.net")) {
+if (strstr($MYSITE,"www.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
-	$dbpwd="";
-} else if (strstr($MYSITE,"il.php.net")) {
-	$dbhost="bugs.php.net";
-	$dbuser="bourbon";
 	$dbpwd="";
 } else if (strstr($MYSITE,"localhost")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
 } else {
-	Header("Location: http://bugs.php.net");
+	Header("Location: http://www.php.net/bug-pwd-finder.php");
 	exit;
 }
 

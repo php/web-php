@@ -148,7 +148,7 @@ function show_menu($state)
 	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
 	echo "<td colspan=3><input type=text name=\"search_for\"></td></tr></form>\n";
-	echo "<tr><td colspan=3 align=right><form method=GET action=\"$PHP_SELF\">\n";
+	echo "<tr><td colspan=3 align=right><form method=\"GET\" action=\"$PHP_SELF\">\n";
 	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
 	if (isset($MAGIC_COOKIE))
 		echo "<input type='hidden' name='edit' value='1'>\n";
@@ -688,7 +688,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>User Modify</tt></font></a> &nbsp; ";
 			echo "<a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Dev Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=POST action=\"http://bugs.php.net$PHP_SELF?id=$id\">\n";
+			echo "<form method=\"POST\" action=\"$PHP_SELF?id=$id\">\n";
 			if($edit==1) {
 				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			} else {
@@ -746,7 +746,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			}
 			echo "Password: <input type=password size=10 name=pw value=\"$pw\">\n";
 			echo "<input type=submit value=\"Commit Changes\">";
-			echo ($edit == 2) ? " [<a href=\"http://bugs.php.net/bug-pwd-finder.php\">Lost your password?</a>]<br>\n" : "<br>\n";
+			echo ($edit == 2) ? " [<a href=\"/bug-pwd-finder.php\">Lost your password?</a>]<br>\n" : "<br>\n";
 			if(!$user || !$pw) {
 				echo "Remember my login/password: <input type=checkbox name=save>\n";
 			}
@@ -799,7 +799,7 @@ Or use the form below to submit a new bug report.
 <input type=hidden name=cmd value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
-<p><strong>To report bugs in PHP 3.0, please go <a href="http://bugs.php.net/bugs-php3.php">here</a>.</strong></p>
+<p><strong>To report bugs in PHP 3.0, please go <a href="/bugs-php3.php">here</a>.</strong></p>
 
 <table>
  <tr>
@@ -844,7 +844,7 @@ Or use the form below to submit a new bug report.
    <input type=text size=20 maxlength=20 name="passwd"></td>
     <td><font size="-2">
 You may enter any password here.  This password allows you to come back and modify your
-submitted bug report at a later date. [<a href="http://bugs.php.net/bug-pwd-finder.php">Lost your password?</a>]
+submitted bug report at a later date. [<a href="/bug-pwd-finder.php">Lost your password?</a>]
 	</font>
   </td></tr>
 </table>
@@ -858,7 +858,7 @@ Please supply any information that may be helpful in fixing the bug:
 	<li>The list of modules you compiled PHP with (your configure line)
 	<li>A copy of your php.ini file (if it might be relevant)
 	<li>Any other information unique or specific to your setup
-	<li>A <a href="http://bugs.php.net/bugs-generating-backtrace.php">gdb backtrace</a>.
+	<li>A <a href="/bugs-generating-backtrace.php">gdb backtrace</a>.
 </ul>
 <center>
 <input type=submit value="Send bug report">
