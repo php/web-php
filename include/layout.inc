@@ -186,7 +186,10 @@ function site_footer($config = array())
 {
     global $LAST_UPDATED, $PAGE_COLUMNS;
     
-    $stats = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
+    $stats         = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
+    $viewsource    = (isset($_SERVER['BASE_PAGE']) ?
+        "<a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a> |" :
+        "");
     $provider_url  = mirror_provider_url();
     $provider_name = mirror_provider();
     $mirror_text   = (is_official_mirror() ?
@@ -203,7 +206,7 @@ function site_footer($config = array())
 {$layout_helper}</div>
 
 <div id="footnav">
- <a href="/source.php?url=/{$_SERVER['BASE_PAGE']}">show source</a> |
+ $viewsource
  <a href="/credits.php">credits</a> |$stats
  <a href="/sitemap.php">sitemap</a> |
  <a href="/contact.php">contact</a> |
