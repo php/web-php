@@ -8,7 +8,7 @@ function tryprefix($func, $prefix) {
     global $try_files;
 
     $func = ereg_replace("_","-",$func);
-    $func = ereg_replace("\(.*\)","-",$func);
+    $func = ereg_replace('\(.*\)',"-",$func);
     $try_files[] = "/manual/${prefix}${func}.php3";
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
