@@ -234,14 +234,12 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
         <small>
 search for <INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
 in the <SELECT NAME="show" CLASS="small">
-<OPTION VALUE="quickref" SELECTED>PHP function list
+<OPTION VALUE="quickref" SELECTED>function list
 <OPTION VALUE="nosource">whole site
 <OPTION VALUE="manual">online documentation
-<OPTION VALUE="maillist">PHP general mailing list
-<OPTION VALUE="devlist">PHP developers' list
-<OPTION VALUE="phpdoc">PHP documentation list 
-<OPTION VALUE="phplib">PHPLIB mailing list
-<OPTION VALUE="phplib-dev">PHPLIB developers' list
+<OPTION VALUE="maillist">general mailing list
+<OPTION VALUE="devlist">developer mailing list
+<OPTION VALUE="phpdoc">documentation mailing list 
 <OPTION VALUE="source">website source code    
 </SELECT>
 <?	echo make_submit('small_submit_white.gif', 'search', 'bottom');
