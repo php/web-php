@@ -116,6 +116,14 @@ You can search the mailing lists right from this website from <A
 HREF="/search.php3">the search page</A> or by using the search button
 on the top-right of every page.
 
+<h3>Newsgroups</h3>
+<p>
+The mailing lists hosted at lists.php.net are also gatewayed to
+newsgroups on the server at <a href="news://news.php.net/">news.php.net</a>.
+<p>
+You can both read and post to the mailing lists through the news
+interface.
+
 <h3>Local Mailing Lists</h3>
 <p>
 There are also some mailing lists that have been set up by others in
