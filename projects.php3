@@ -246,6 +246,12 @@ order output of FishCartSQL(sm) can be adapted for easy integration with
 existing order processing systems.
 <? endEntry();?>
 
+<? makeEntry("EU-Webboard","www.eu-industries.com/produkt.html","EU-Industries","ulrich.eckardt@eu-industries.com"); ?>
+EU-Webboard is a Webboard solution for Internet and Intranet-Servers
+written in PHP3 with a MySQL-connection. Freeware. (This site is in German.)
+<? endEntry();?>
+
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
