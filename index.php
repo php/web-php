@@ -132,8 +132,8 @@ while (list(,$ext) = each($types)) {
         }
 
         // End mirror specific part
-        $MIRROR_IMAGE .= make_link(mirror_provider_url(), $img) .
-                         "</div><br /><hr />\n";
+        $MIRROR_IMAGE .= '<a href="' . mirror_provider_url() . '">' .
+                         $img . "</a></div><br /><hr />\n";
 
         // We have found an image
         break;
