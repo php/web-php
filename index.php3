@@ -8,7 +8,7 @@ commonHeader("PHP:  Hypertext Preprocessor");
 <strong>PHP:  Hypertext Preprocessor</strong> was chosen as the official
 meaning of the PHP acronym with 53% of the votes.  You can see the votes
 as well as some ideas to plenty of other unofficial meanings
-<a href="vote_listing.php3">here</a>.
+<a href="http://il.php.net/vote_listing.php3">here</a>.
 
 <br>
 
