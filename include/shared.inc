@@ -621,6 +621,7 @@ function commonFooter() {
         <TD align=right>
          <FONT<? echo $FONTFACEATTR ?> SIZE=1>
          <I>Site<BR>Hosting:</I><BR>
+		 </FONT>
         </TD>
         <TD>
          <? spc(5,1);?><BR>
