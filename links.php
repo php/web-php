@@ -203,7 +203,7 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting<br></li
 <ul>
 
 <li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
-Brazilian PHP Portal with many links and informations<br></li>
+Brazilian PHP portal with many links and informations<br></li>
 </ul></li>
 
 <li><b>Portuguese</b>
@@ -218,7 +218,7 @@ a help forum, and an Application Market.<br></li>
 <ul>
 
 <li><a href="http://www.phpportalen.net/">phpportalen.net</a><br>
-A new Swedish PHP Portal with links and news about PHP<br></li>
+A Swedish PHP portal with articles, news, forums and much more<br></li>
 </ul></li>
 </ul>
 
