@@ -8,6 +8,12 @@ The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
 information and those questions that seem to be on most people\'s minds.
 </p>
 
+<h3>Changelog</h3>
+<p>
+You can also find the <a href="/ChangeLog-4.php">PHP Changelog</a> useful,
+if you would like to look up changes between various versions of PHP.
+</p>
+
 <h3>More Information</h3>
 <p>
 The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>
