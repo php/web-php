@@ -1,0 +1,9 @@
+#!/bin/sh
+
+lynx -source http://www.php.net/bin/mirrors.php > include/mirrors.inc~
+if [ $? -ne 0 ]; then
+  echo problem converting results to html
+  exit 1
+fi
+
+mv include/mirrors.inc~ include/mirrors.inc
