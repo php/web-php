@@ -16,7 +16,7 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 <b>Win32 Binaries</b><BR>
 <UL>
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a> - 11 October 2000<br>(CGI binary and ISAPI module included, MySQL support built-in, packaged as zip)</li>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1-installer.exe&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a> - 11 October 2000<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers)</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3pl1-installer.exe&source_site=<?php echo $server; ?>">PHP 4.0.3pl1</a> - 11 October 2000<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
 -->
