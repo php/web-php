@@ -40,6 +40,22 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
+
+<h1>
+Mailing Lists temporarily unavailable
+</h1>
+<p>
+<font class="newsDate">[02-Jun-2001]</font>
+While the CVS repository has been reactivated, we are still
+working on reestablishing our mailing list infrastructure.
+We will keep you posted about the progress. Thank
+you for your patience.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
+
 <?/* move this entry to the top when you update it! */?>
 <h1>
 <? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
