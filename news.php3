@@ -71,28 +71,28 @@ unbeatable web hosting platform suitable for both small and large web
 sites.
 <? endEntry();?>
 
-<? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://www.unixworld.com/archives/95/tutorial/018.html"); ?>
+<? makeEntry("Linux, SQL, and the Web","from UnixWorld Online","http://www.unixworld.com/archives/95/tutorial/018.html","1995"); ?>
 Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP3 to talk to each other.
 <? endEntry();?>
 
-<? makeEntry("Building A Cross-Platform Web Infrastructure","<B>Part One</B>, from UnixIntegration","http://www.performancecomputing.com/unixintegration/9802/9802f1.htm"); ?>
+<? makeEntry("Building A Cross-Platform Web Infrastructure","<B>Part One</B>, from UnixIntegration","http://www.performancecomputing.com/unixintegration/9802/9802f1.htm","February 1998"); ?>
 Brian Platz and Robert Flannigan take a look at all the options out there and end up choosing PHP over all the big guys.
 <? endEntry();?>
 
-<? makeEntry("Building A Cross-Platform Web Infrastructure","<B>Part Two</B>, from UnixIntegration","http://www.performancecomputing.com/unixintegration/9803/9803f1.htm"); ?>
+<? makeEntry("Building A Cross-Platform Web Infrastructure","<B>Part Two</B>, from UnixIntegration","http://www.performancecomputing.com/unixintegration/9803/9803f1.htm","March 1998"); ?>
 Brian and Robert continue their project by focusing on using PHP as the middleware between a Web-server process and a back-end relational-database system.
 <? endEntry();?>
 
-<? makeEntry("A Contact Database using MySQL and PHP","from WebTechniques","http://www.webtechniques.com/features/1998/01/note/note.shtml"); ?>
+<? makeEntry("A Contact Database using MySQL and PHP","from WebTechniques","http://www.webtechniques.com/features/1998/01/note/note.shtml","January 1998"); ?>
 Mike Miller builds a contact database with MySQL and PHP
 <? endEntry();?>
 
-<? makeEntry("Dynamic Web Pages with PHP3","from WebTechniques","http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml"); ?>
+<? makeEntry("Dynamic Web Pages with PHP3","from WebTechniques","http://www.webtechniques.com/features/1998/02/lerdorf/lerdorf.shtml","February 1998"); ?>
 As PHP gets an upgrade and name change, Rasmus explains its history and shows us some new features
 by building a dynamic Web photo album.
 <? endEntry();?>
 
-<? makeEntry("Clear Ink Announces SpellWeb","SpellWeb Press Release","http://www.clearink.com/about.htmy?topic=pr_3_23_98"); ?>
+<? makeEntry("Clear Ink Announces SpellWeb","SpellWeb Press Release","http://www.clearink.com/about.htmy?topic=pr_3_23_98","March 23, 1998"); ?>
 Walnut Creek, CA (March 23, 1998) -- Clear Ink, an independent Internet
 strategy, technology and design services agency, announces today a new site
 called SpellWeb, <a href="http://www.spellweb.com">http://www.spellweb.com</a>, 
