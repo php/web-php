@@ -31,17 +31,17 @@ d'adopter cette version d&egrave;s que possible.
 <li>Am&eacute;lioration de l'algorithme d'analyse de la fonction get_browser().</li>
 <li>Correction de open_basedir sur Win32.</li>
 <li>Correction de messages erron&eacute;s pour les dossiers inexistants, en mode safe_mode.</li>
-<li>Ajout des DLL OpenSSL sur Win32, en version 0.9.7c</li>
+<li>Ajout des DLL OpenSSL sur Win32, en version 0.9.7c.</li>
 <li>Mise &agrave; jour de la biblioth&egrave;que PostgreSQL en version 7.4 dans la distribution Windows.</li>
 <li>Mise &agrave; jour de la biblioth&egrave;que PCRE en version 4.5.</li>
 <li>Mise &agrave; jour de la biblioth&egrave;que GD en version 2.0.17.</li>
-<li>Corrections de bugs sur les syst&egrave;mes 64 bits.</li>
-<li>En plus de ces corrections, cette version inclut 140 corrections de bugs et probl&egrave;mes divers.</li>
+<li>Corrections de bogues sur les syst&egrave;mes 64 bits.</li>
+<li>En plus de ces corrections, cette version inclut 140 corrections de bogues et probl&egrave;mes divers.</li>
 </ul>
 
 <p>
  Pour une liste exhaustive des modifications de PHP 4.3.5, voyez
  <a href="/ChangeLog-4.php#4.3.5">le changelog</a>, en anglais.
- </p>
+</p>
 
 <?php site_footer(); ?>
