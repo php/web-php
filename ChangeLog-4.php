@@ -5,6 +5,55 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.2.3"></a>
+<h3>Version 4.2.3</h3>
+<b>06-Sep-2002</b>
+<ul>
+<li>Enable UTF8 modifier support for PCRE on win32. (Wez, Edin)</li>
+<li>Enabled strcoll() on win32. (Markus)</li>
+<li>Fixed possible ASCII control char injection in mail(). (Stefan Esser)</li>
+<li>Fixed a potential crash bug in import_request_variables() (Zeev)</li>
+<li>Fixed several problems with directory functions on Windows. (Steph)</li>
+<li>Fixed xbithack bug in Apache module. (Rasmus)</li>
+<li>Fixed a bug that prevented touch() from working on various platforms.  (Steph)</li>
+<li>Fixed ob_gzhandler()'s handling of requests that do have the Accept-Encoding header, but do not allow compression. (Zeev)</li>
+<li>Fixed several bugs in the multithreaded version that could cause random parse errors, especially on machines with multiple CPUs. (Zeev, Zend Engine)</li>
+<li>Fixed a build problem in bcmath. (Alan)</li>
+<li>Fixed several bzip2 issues. (Andrei, kalowsky)</li>
+<li>Fixed several COM issues. (Harald)</li>
+<li>Various exif fixes. (Marcus)</li>
+<li>Fixed domxml_xslt_process() and domxml_get_element_by_id() and several other issues in DOMXML. (Christian)</li>
+<li>Fixed DOMXML crash on removing previously created attributes. (Christian)</li>
+<li>Fixed crash when converting $GLOBALS to an object. (Zeev, Zend Engine)</li>
+<li>Fixed ImageCreateFromGD2Part() (Jani)</li>
+<li>Fixed a build issue in the IMAP extension under IRIX. (kalowsky)</li>
+<li>Fixed a bug in imap_last_error() (Jani)</li>
+<li>Various mbstring fixes. (Yasuo, Rui)</li>
+<li>Fixed a build problem in the mcal extension. (Jani)</li>
+<li>Made MySQL rollback open transactions when the request ends. (Georg)</li>
+<li>Fixed a crash in the shutdown order of the ODBC module. (kalowsky)</li>
+<li>Fixed PCRE build problems. (troels@arvin.dk)</li>
+<li>Fixed a crash in pg_lo_write() (Yasuo)</li>
+<li>Fixed posix_isatty() and posix_ttyname(). (Markus)</li>
+<li>Fixed accidental pg_lo_import() API change. (Yasuo)</li>
+<li>Fixed ereg_replace() crash when the backreference number was greater than the number of captured subpatterns. (oliver@billix.franken.de)</li>
+<li>Fixed array_rand() on thread-safe platforms such as Windows. (Edin)</li>
+<li>Report the right exit code after a call to exit(). (Edin)</li>
+</ul>
+There is no separate announcement available for this release.<br />
+
+<?php echo hdelim(); ?>
+
+<a name="4.2.2"></a>
+<h3>Version 4.2.2</h3>
+<b>22-Jul-2002</b>
+<ul>
+<li>Fixed serious security vulnerability. (Stefan Esser)</li>
+</ul>
+There is a <a href="release_4_2_2.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
+
 <a name="4.2.1"></a>
 <h3>Version 4.2.1</h3>
 <b>13-May-2002</b>
@@ -58,6 +107,9 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed a bug in the COM extension that caused outproc servers to 'hang'
   because of a missing Release() call. (Alan, Harald)</li>
 </ul>
+There is a <a href="release_4_2_1.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
 
 <a name="4.2.0"></a>
 <h3>Version 4.2.0</h3>
@@ -269,6 +321,9 @@ or entries for the specified extension. (Jani)</li>
 (Patch by Alan Knowles &lt;<a href="mailto:alan_k@hklc.com">alan_k@hklc.com</a>&gt; and Wez)</li>
 <li>Improved support for autoconf-2.50+/libtool 1.4b+. (Jan Kneschke, Sascha)</li>
 </ul>
+There is a <a href="release_4_2_0.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
 
 <a name="4.1.2"></a>
 <h3>Version 4.1.2</h3>
@@ -283,6 +338,9 @@ or entries for the specified extension. (Jani)</li>
 <li>Changed the default output encoding of mbstring 'pass' to fix 
   initialization problem (Rui)</li>
 </ul>
+There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
 
 <a name="4.1.1"></a>
 <h3>Version 4.1.1</h3>
@@ -307,6 +365,9 @@ or entries for the specified extension. (Jani)</li>
 <li>Fixed a bug in the strtotime() function where it was incorrectly recognizing
   GMT +0100 and GMT -0100. (Derick)</li>
 </ul>
+There is a <a href="release_4_1_1.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
 
 <a name="4.1.0"></a>
 <h3>Version 4.1.0</h3>
@@ -509,6 +570,9 @@ or entries for the specified extension. (Jani)</li>
   string indexed array. (Jason)</li>
 <li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
 </ul>
+There is a <a href="release_4_1_0.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
 
 <a name="4.0.6"></a>
 <h3>Version 4.0.6</h3>
@@ -622,6 +686,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Added mysql_unbuffered_query(), which is useful for very large result sets.
   (Zeev)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -768,6 +833,7 @@ or entries for the specified extension. (Jani)</li>
 <li>ext/odbc: IBM DB2 patch by Walter Franzini. (walter@sys-net.it)</li>
 <li>Added extension for the cracklib library. (Alexander Feldman)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -923,6 +989,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Added HMAC support in the mhash module (nmav@altera.gr)</li>
 <li>Added module for Ovrimos sql server (nmav@altera.gr)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1005,6 +1072,7 @@ or entries for the specified extension. (Jani)</li>
   method. Instead define yourself a method such as toString() and use
   print $obj->toString() (Andi, Zend Engine)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1175,6 +1243,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Added an optional parameter to preg_replace() that can be used to
   specify how many replacements to make. (Andrei)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1338,6 +1407,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Moved to virtual current working directory support. This highly improves the
   functionality and stability of multi-threaded versions of PHP (Andi, Sascha)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1360,6 +1430,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Ported imagegammacorrect from PHP3 to PHP4. (Sterling)</li>
 <li>Added array_rand() function. (Andrei)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1456,6 +1527,7 @@ or entries for the specified extension. (Jani)</li>
   FreeBSD and OpenBSD (Sascha, TSRM)</li>
 <li>Added !== operator support. (Torben, Zend Engine)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1544,6 +1616,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Fixed getrusage() (Sascha)</li>
 <li>Fixed OCI8 crash when returning cursors from stored-procedures. (Thies)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1553,6 +1626,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Fixed crash when magic_quotes were switched off. (Thies)</li>
 <li>Support for pdflib 2.30 (Uwe)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1727,6 +1801,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Fixed mem-overwrite in XML_Parse_Into_Struct (Thies)</li>
 <li>Added substr_replace() function (Andrei)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -1952,6 +2027,7 @@ or entries for the specified extension. (Jani)</li>
 <li>Fixed thread-safe support for dynamic modules (Zeev)</li>
 <li>Fixed Sybase CT build process (Zeev)</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php echo hdelim(); ?>
 
@@ -2034,7 +2110,8 @@ or entries for the specified extension. (Jani)</li>
   modules (Zeev)</li>
 <li>Gave PHP 4.0's SNMP extension all the functionality of PHP 3.0.12 (SteveL)</li>
 </ul>
-  
+There is no separate announcement available for this release.<br />
+
 <?php echo hdelim(); ?>
 
 <h3>Version 4.0 Beta 1</h3>
@@ -2042,5 +2119,6 @@ or entries for the specified extension. (Jani)</li>
 <ul>
 <li>First public beta of PHP 4.0</li>
 </ul>
+There is no separate announcement available for this release.<br />
 
 <?php commonfooter(); ?>

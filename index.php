@@ -136,8 +136,10 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP 4.2.3 Released</h1>
 <p>
 <font class="newsdate">[06-Sept-2002]</font>
-<a href="/downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
-release, and is a recommended update for all users of PHP, and Windows users in particular.</p>
+<a href="downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
+release, and is a recommended update for all users of PHP, and Windows users in particular. A complete
+list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
+</p>
 
 <?php echo hdelim(); ?>
 

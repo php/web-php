@@ -105,6 +105,10 @@ if ($cmn > 0) {
   <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3.tar.gz">PHP 4.2.3 (tar.gz)</a> [3,334KB] - 6 September 2002</li>
 </ul>
 
+<p>
+  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
+</p>
+
 <h2>Patches to latest version</h2>
 <ul>
   <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
