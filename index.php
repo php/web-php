@@ -93,7 +93,7 @@ generate the pages, and coded many improvements and fixes.
 <p>
 <?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
 and send us your feedback to our
-<?php print_link("php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
+<?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
