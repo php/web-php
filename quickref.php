@@ -46,7 +46,7 @@ function quickref_table($functions)
         if ($i > 0 && $i % $limit==0) {
             echo "</td><td>\n";
         }
-        echo "<!--i--><a href=\"/manual/$LANG/$file\">$name</a><br />\n";
+        echo "<a href=\"/manual/$LANG/$file\">$name</a><br />\n";
         $i++;
     }
     echo "</td></tr></table>\n";
