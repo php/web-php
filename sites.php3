@@ -76,6 +76,7 @@
 
 	echo "<br></td><td align=top>\n";
 	/* Computer Software */
+	site("Knowledge Adventure","www.adventure.com");
 	site("C2Net Software Inc.","www.c2.net");
 
 	echo "</tr><tr>\n";
