@@ -171,6 +171,7 @@ commonHeader("Hypertext Preprocessor");
  attendees interested in trying their hand at the Zend Certification Exam.
 </p>
 
+<hr />
 
 <?php news_image("http://www.php.net/", "php-logo.gif", "Programming Language of 2004"); ?>
 <h1>PHP awarded Programming Language of 2004</h1>
