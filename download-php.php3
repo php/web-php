@@ -3,13 +3,14 @@ require("shared.inc");
 
 $current = "3.0.5";
 $win32_current = "3.0.5";
+$rpm_current = "3.0.4";
 
-$filesizes["php-3.0.5.tar.gz"]="~1,270 kb";
-$filesizes["php-3.0.4.tar.gz"]="~1,215 kb";
-$filesizes["php-3.0.3.tar.gz"]="~1,107 kb";
-$filesizes["php-3.0.5-win32.zip"]="~1,513 kb";
-$filesizes["mod_php-3.0.3-1.i386.rpm"]="~318 kb";
-$filesizes["mod_php-3.0.3-1.src.rpm"]="~1,304 kb";
+$filesizes["php-3.0.5.tar.gz"]="1,270 kB";
+$filesizes["php-3.0.4.tar.gz"]="1,215 kB";
+$filesizes["php-3.0.5-win32.zip"]="1,513 kB";
+$filesizes["mod_php3-3.0.4-1.i386.rpm"]="325 kB";
+$filesizes["mod_php3-3.0.4-1.src.rpm"]="1,449 kB";
+
 
 function makeCap() {
 	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF,$MYSITE;
@@ -82,7 +83,9 @@ while ($site = key($mirror_sites)) {
 commonHeader("Download PHP Engine");
 ?>
 <FONT SIZE=+1><B>Choose a country to download from:</B></FONT><BR>
+<?php if (!$csel) { ?>
 <I>(the closest has automagically been selected for you)</I><BR>
+<?php } ?>
 <BR>
 <BR>
 
@@ -135,15 +138,15 @@ while ($site = current($showsites)) {
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
 	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
-	$i386_rpm = "${site}${srcdir}mod_php-3.0.3-1.i386.rpm";
-	$src_rpm = "${site}${srcdir}mod_php-3.0.3-1.src.rpm";
+	$i386_rpm = "${site}${srcdir}mod_php3-3.0.4-1.i386.rpm";
+	$src_rpm = "${site}${srcdir}mod_php3-3.0.4-1.src.rpm";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
 		download_link("${site}/php3latest.zip","Latest patched Windows version");
 		echo "\n";
 	} else {
 		echo "<LI>";
-		download_link($src_file, "($method) PHP $current source");
+		download_link($src_file, "($method) PHP $rpm_current source");
 		echo "\n";
 		echo "<LI>";
 		download_link($win32_zfile, "($method) $win32_current Win32 binary");
