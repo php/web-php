@@ -174,6 +174,10 @@ databases and tables, modify, delete and add records and keys and execute any SQ
 features an overview of MySQL's activity and can import flat-file databases.
 <? endEntry();?>
 
+<? makeEntry("DBE","edseek.com/developers.php3","Jason Boxman","jasonb@edseek.com"); ?>
+DBE is a web-based database interface.
+<? endEntry();?>
+
 <? makeEntry("SQLFusion","www.sqlfusion.org","Philippe Lewicki" ,"plewicki@ixio.com"); ?>
 The SQLFusion project is a collection of components in java for
 netobject Fusion.
