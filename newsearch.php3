@@ -183,7 +183,7 @@ if(!isset($pattern)) {
 		?>
 		<CENTER>
 		<BR><I>Search results courtesy of</I><BR>
-		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="gifs/htdig.gif" BORDER=0 ALT="ht:dig"></A>
+		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="/gifs/htdig.gif" BORDER=0 ALT="ht:dig"></A>
 		</CENTER>
 		<?
 }
