@@ -222,7 +222,7 @@ right away.</blockquote>
 /* Job & Career Sites */
 	title("Job & Career Sites");
 	siteStart();
-	site("Jobs & Career - The Time of India","www.timesjobsandcareers.com");
+	site("Jobs & Career - The Times of India","www.timesjobsandcareers.com");
 	siteEnd();
 
 /* Military */
