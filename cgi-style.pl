@@ -23,7 +23,7 @@ sub html_header {
 
     return "Content-type: text/html\n\n" . 
 	"<html>\n<title>$title</title>\n</head>\n$t_body\n" .
-	"<img src=\"/logos/big-logo1t.gif\">	<a href=\"http://www.cyclic.com\"><img src=\"cvssmall.gif\" border=0></a><h1><font color=\"#660000\">$title</font></h1>\n";
+	"<img src=\"/logos/big-logo1t.gif\">	<a href=\"http://www.cyclic.com\"><img src=\"/cvssmall.gif\" border=0></a><h1><font color=\"#660000\">$title</font></h1>\n";
 }
 
 sub short_html_header {
@@ -31,7 +31,7 @@ sub short_html_header {
 
     return "Content-type: text/html\n\n" .
 	"<html>\n<title>$title</title>\n</head>\n$t_body\n" .
-        "<img src=\"/logos/big-logo1t.gif\">	<a href=\"http://www.cyclic.com\"><img src=\"cvssmall.gif\" border=0></a>";
+        "<img src=\"/logos/big-logo1t.gif\">	<a href=\"http://www.cyclic.com\"><img src=\"/cvssmall.gif\" border=0></a>";
 }
 
 sub html_footer {
