@@ -361,7 +361,7 @@ site_header("Links");
 
  <li>
   <a href="http://www.zend.com/store/">Zend Technologies, Inc.</a><br />
-  Zend Technologies, Inc. provides tools to Devel, Protect and Scale your
+  Zend Technologies, Inc. provides tools to Develop, Protect and Scale your
   PHP Applications.
  </li>
 </ul>
