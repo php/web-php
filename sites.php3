@@ -58,6 +58,7 @@ right away.</blockquote>
 	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Honda","www.honda.com");
+	site("Mazda Canada","www.mazda.ca");
 	site("Mitsubishi Motors","www.mitsucars.com");
 	site("MotoSite.Com","www.motosite.com");
 	site("Nickels Performance Products","www.automaxx.com");
@@ -202,6 +203,7 @@ right away.</blockquote>
 	site("Gameplayer","www.gameplayer.com");
 	site("GamePoint Shop","shop.gamepoint.net");
 	site("The Galactic Empire","www.imperialnexus.net");
+	site("GibWorld","www.gibworld.com");
 	site("mplayer.com","www.mplayer.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
@@ -238,6 +240,7 @@ right away.</blockquote>
 /* Internet Services */
 	title("Internet Services");
 	siteStart();
+	site("AbsolutChat.Com","www.absolutechat.com");
 	site("Active Mind","www.activemind.net");
 	site("ActiveWeb Internet Solutions","www.activeweb.co.il");
 	site("All 4 One","www.all4one.com");
@@ -432,6 +435,7 @@ right away.</blockquote>
 	site("Almetaal B.V.","www.almetaal.com");
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("Arena Fan","www.arenafan.com");
+	site("Ballgirl Athletic","www.ballgirl.com");
 	site("BART's Water Sports","www.bartswatersports.com");
 	site("Bird Mansions","birdmansions.com");
 	site("Bruna bookstore","www.bruna.com");
