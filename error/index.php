@@ -154,7 +154,7 @@ $uri_aliases = array (
 );
 
 $external_redirects = array(
-    "phpdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz",
+    "phpdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
     "php4news"    => "http://cvs.php.net/co.php/php4/NEWS?p=1"
 );
 
