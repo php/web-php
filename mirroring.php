@@ -82,6 +82,23 @@ commonHeader("Mirroring The PHP Website");
  from our list.
 </p>
 
+<h2>Add SQLite Support</h2>
+
+<p>
+ <?php print_link("http://www.sqlite.org", "SQLite"); ?> is an embedded
+ SQL database implementation that has very high performance for applications
+ with low write concurrency. PHP mirrors currently employ SQLite for URL
+ shortcut lookups, and will use it for manual page displays and searches
+ in the future.
+</p>
+
+<p>
+ To install the SQLite PHP extension, you need to have PEAR installed, with
+ which you can get SQLite: <tt>% pear install SQLite</tt>. Ensure that your
+ <tt>php.ini</tt> has an extension line to load in the SQLite extension by
+ default and restart your webserver.
+</p>
+
 <h2>Setup Apache VirtualHost</h2>
 
 <p>
