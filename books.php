@@ -663,6 +663,28 @@ array(
   ),
 
   array(
+    /* title[s]     */ "Foundation PHP for Flash",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1903450160/wwwphpnet",
+    /* author[s]    */ "Steve Webster",
+    /* auth link[s] */ "",
+    /* image        */ "fnd_php_for_flash.jpg",
+    /* information  */ "friends of Ed, Sep 2001, ISBN 1-9034-5016-0, 500 pages",
+    /* inform. link */ "http://www.friendsofed.com/books/foundation/php/index.html",
+    /* language     */ "en"
+  ),
+
+  array(
+    /* title[s]     */ "Advanced PHP for Flash",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1904344038/wwwphpnet",
+    /* author[s]    */ array("Havard Eide", "Jacob Hanson", "James Palmer", "Kev Sutherland", "Matt Rice", "Steve Webster", "Todd Marks"),
+    /* auth link[s] */ "",
+    /* image        */ "adv_php_for_flash.jpg",
+    /* information  */ "friends of Ed, Sep 2002, ISBN 1-9043-4403-8, 600 pages",
+    /* inform. link */ "http://www.friendsofed.com/books/flash_mx_titles/advanced_php/index.html",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
