@@ -145,6 +145,8 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/cruise", "phpcruise.png", "php|cruise"); ?>
+
 <h1>php|cruise deadline set for February 15th</h1>
 
 <p>
