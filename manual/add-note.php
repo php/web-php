@@ -143,11 +143,11 @@ on the bottom of a manual page so we know where to add the note!</b></p>
 </tr>
 <tr valign="top">
 <td><b>Your email address:</b></td>
-<td><input type="text" name="user" size="40" maxlength="40" value="<?php echo clean($user)?>"></td>
+<td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($user)?>"></td>
 </tr>
 <tr valign="top">
 <td><b>Your notes:</b></td>
-<td><textarea name="note" rows="6" cols="40" wrap="virtual"><?php echo clean($note)?></textarea><br>
+<td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php echo clean($note)?></textarea><br>
 </td>
 </tr>
 <tr>
