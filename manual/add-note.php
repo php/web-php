@@ -195,10 +195,10 @@ else { ?>
  O'Reilly Mastering Regular Expressions book</a> for the gory details.)
 </p>
 <p>
-  Please note that periodically, the developers may go through the notes and
-  incorporate the information in them into the documentation. This means
-  that any note submitted here becomes the property of the PHP Documentation
-  Group.
+ Please note that periodically, the developers may go through the notes and
+ incorporate the information in them into the documentation. This means
+ that any note submitted here becomes the property of the PHP Documentation
+ Group.
 </p>
 <?php
 }
