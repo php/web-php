@@ -62,10 +62,20 @@ function jpgurl($img) {
 }
 
 function commonHeader($title) {
+	global $PHP_SELF;
 ?>
 <HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
+
+<!-- Kick outs -->
+<SCRIPT LANGUAGE="Javascript1.2">
+<!--  
+document.write("<STYLE TYPE='text/css'>");
+document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}");
+document.write("</STYLE>");
+//--->
+</SCRIPT>
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--  
@@ -77,9 +87,12 @@ var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
 var NS3 = (bName == "Netscape" && bVer < 4);
 var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
 
+var loaded = 0;
+var layers = 0;
+
 if (NS4 || IE4) {
 	if (navigator.appName == "Netscape") {
-      	layerStyleRef="layer.";
+      		layerStyleRef="layer.";
 		layerRef="document.layers";
 		styleSwitch="";
 	}else{
@@ -90,18 +103,17 @@ if (NS4 || IE4) {
 }
 
 function showLayer(layerName){
-	if (NS4 || IE4) {
+	if ((NS4 || IE4) && (layers == 1)) {
 		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="visible"');
 	}	
 }
         
 function hideLayer(layerName){
-	if (NS4 || IE4) {
+	if ((NS4 || IE4) && (layers == 1)) {
 		eval(layerRef+'["'+layerName+'"]'+styleSwitch+'.visibility="hidden"');
 	}	
 }
 
-loaded = 0
 
 function LoadImgs () {
 	if (document.images) {
@@ -155,7 +167,7 @@ function LoadImgs () {
 		b_sour1 = new Image();
 		b_sour1.src = "gifs/b-source-c.gif";
 
-		loaded = 1
+		loaded = 1;
 	}
 }
    
@@ -167,32 +179,25 @@ function change(Name,No,Msg) {
 }
 
 function hideAll () {
-	change('down',0);
-	change('docs',0);
-	change('mail',0);
-	change('dev',0);
-	change('news',0);
-	change('link',0);
-	change('mirr',0);
-	change('top',0);
-	change('sear',0);
-	change('sour',0);
-	if (NS4 || IE4) {
-		hideLayer('mirrorsKick');
+	if (document.images && (loaded == 1)) {
+		change('down',0);
+		change('docs',0);
+		change('mail',0);
+		change('dev',0);
+		change('news',0);
+		change('link',0);
+		change('mirr',0);
+		change('top',0);
+		change('sear',0);
+		change('sour',0);
+		if (NS4 || IE4 && (layers == 1)) {
+			hideLayer('mirrorsKick');
+		}
 	}
 }
 
 if (IE4) LoadImgs();
 
-//--->
-</SCRIPT>
-
-<!-- Kick outs -->
-<SCRIPT LANGUAGE="Javascript1.2">
-<!--  
-document.write("<STYLE TYPE='text/css'>");
-document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}");
-document.write("</STYLE>");
 //--->
 </SCRIPT>
 
@@ -203,15 +208,15 @@ document.write("</STYLE>");
 <A NAME="top">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR valign=top>
-<TD ALIGN=left width=150>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150>
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
-<TR VALIGN=top BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TR VALIGN=top>
 <TD ALIGN=left>
 <A HREF="downloads.php3" onMouseover="change('down',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-downloads-p.gif" ALT="downloads" WIDTH=129 HEIGHT=30 BORDER=0 NAME="down" hspace=10></A><BR>
 <A HREF="docs.php3" onMouseover="hideAll();change('docs',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
@@ -231,9 +236,16 @@ document.write("</STYLE>");
 <? echo $title;?>
 <!-- end title -->
 </B></FONT></TD>
-<TD ALIGN=right><A HREF="source.php3" onMouseover="hideAll();change('sour',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-source-p.gif" ALT="View the source code for this page" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME="sour"></A><A HREF="search.p
-hp3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD></TR>
-</TABLE>
+<TD ALIGN=right><?
+if($title=="Show Source"):
+	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=1 HEIGHT=1 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
+else:
+	echo "<A HREF=\"source.php3?page_url=$PHP_SELF\" onMouseover=\"hideAll();change('sour',1);\" onMouseout=\"hideAll();\">";
+	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
+	echo "</A>";
+endif;
+?><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+</TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=top>
 <TD ALIGN=left WIDTH=12><IMG SRC="gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
@@ -309,6 +321,8 @@ endwhile;
 ?>");
 document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0></FORM>");
 document.write("<? kickFooter();?></DIV>");
+
+layers = 1;
 
 //-->
 </SCRIPT>
