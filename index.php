@@ -76,6 +76,23 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Windows Manual Survey is Over</h1>
+
+<p>
+<font class="newsDate">[24-Nov-2001]</font>
+After one week our Windows HTML Help Manual Survey
+is over now. We received more than six hundred
+completed forms, with many wishes and comments.
+Thanks for you all, who contributed to making
+the best help system for PHP on Windows.
+You can get more information about the ongoing
+project at <?php print_link("http://weblabor.hu/php/newchm.php",
+" it's own page"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
 
 <h1>The International PHP Conference is over</h1>
@@ -92,27 +109,6 @@ by visting one of the photo galleries, attendees put together:
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
     <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
 </ul>
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>New Windows Manual Features - Survey!</h1>
-
-<p>
-<font class="newsDate">[15-Nov-2001]</font>
-While improving the functions and design of the CHM manual,
-we discovered that we need a professionaly designed
-interface. We would like to ask your help to complete
-a short survey about what environment you are using
-the help in, and what elements are important for you,
-so we can put them in hand for you. Feel free to make
-any suggestions using the text field in the form.
-<?php print_link("http://weblabor.hu/php/newchm.php",
-"Please complete our survey"); ?> 
-(there is no need to provide any personal details
-about yourself). We also included links to proposed
-designs. See and mail us your opinions.
 <br clear="all">
 </p>
 
