@@ -384,6 +384,10 @@ href="FAQ.php3">Frequently Asked Questions</A> to see whether your
 problem may already be a known issue, and also check the bug database
 for any outstanding bug reports that match your bug.</STRONG>
 
+<P>If you are reporting more than one bug, or requesting more than
+one feature, or both, please open seperate reports for each instead
+of grouping them all in one report.
+
 <table>
  <tr>
   <th align=right>Your email address:</th>
