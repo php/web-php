@@ -50,6 +50,10 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry("Article on devshed.com","by Colin Viebrock","http://beta.devshed.com/Server_Side/PHP/search","Feb. 10, 1999");?>
+&quot;Search This: Searching Your Dynamic Site with PHP3 and ht://Dig&quot;
+<? endEntry(); ?>
+
 <? makeEntry("Articles on phpbuilder.com","by Tim Perdue and Rasmus Lerdorf", "http://www.phpbuilder.com","Jan. 24, 1999");?>
 &quot;Building Dynamic Web Pages with Search Engines in Mind&quot; and &quot;Creating Dynamic Images with PHP&quot;
 <? endEntry(); ?>
@@ -62,6 +66,7 @@ site with PHP and MySQL." <I>This article isn't available online yet.</I>
 
 <? makeEntry("Apache Gets Down to Business","WEBBuilder Magazine article by Bjørn Borud","http://www.devx.com/upload/free/features/webbuilder/1998/wb1098/bb1098/bb1098.htm","Sept. 24, 1998"); ?>
 "The world's most popular Web server has a reputation for performance and extensibility. You may not be aware of the rich programming environment that surrounds Apache, though. PHP gives you strong SQL connectivity, and mod_perl has powerful application i
+
 ntegration facilities. Learn how to exploit these capabilities. Also, see our review of Apache."
 <? endEntry(); ?>
 
