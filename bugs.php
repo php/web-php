@@ -361,6 +361,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
     $report .= $html_sdesc."\n\n";
 	$ascii_report = indent($report.$ldesc,"");
+	$ascii_report.= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n\n";
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
     $report .= $html_desc."\n";
