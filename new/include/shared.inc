@@ -4,7 +4,7 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $HAVE_STYLE = $false;
+$IE4 = $IE3 = $NS4 = $NS3 = $X11NS = $HAVE_STYLE = $false;
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
@@ -22,6 +22,9 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
         elseif($ver==3):  
                 $NS3=true;
         endif;
+	if (strstr($HTTP_USER_AGENT, "X11")):
+		$X11NS = true;
+	endif;
 endif;
 
 /* Base variables */
@@ -245,7 +248,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 }
 
 function commonHeader($title) {
-	global $NS4, $NS3, $IE3, $IE4, $FRAMEMODE, $FONTFACEATTR;
+	global $NS4, $NS3, $IE3, $IE4, $X11NS, $FRAMEMODE, $FONTFACEATTR;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
 	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
@@ -372,7 +375,11 @@ screenWidth=document.bigspacer.width;
 searchPosLeft=screenWidth - 320;
 searchPosTop=40;
 mirrorPosLeft=143;
-mirrorPosTop=230;
+<?	if ($X11NS): ?>
+mirrorPosTop=220;
+<?	else: ?>
+mirrorPosTop=240;
+<?	endif; ?>
 <?	if ($IE4): ?>
 	searchPosLeft+=4;
 	searchPosTop+=15;
