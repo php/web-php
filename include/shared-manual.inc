@@ -26,7 +26,8 @@ function setupNavigation($data) {
 function makeBorderTOC($this) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT, $SIDEBAR_DATA;
 
-    $SIDEBAR_DATA.= '<table border="0" cellpadding="0" cellspacing="5" width="100%">';
+    $SIDEBAR_DATA .= '<!--UdmComment-->' . "\n" . 
+                     '<table border="0" cellpadding="0" cellspacing="5" width="100%">';
 
     $SIDEBAR_DATA.= '<tr valign="top"><td>' . 
         make_link('./', make_image('caret-t.gif', '^') . $HOME[1] ) . 
@@ -60,8 +61,8 @@ function makeBorderTOC($this) {
             "<br />\n";
     }
 
-    $SIDEBAR_DATA.= '</small></td></tr>';
-    $SIDEBAR_DATA.= '</table>';
+    $SIDEBAR_DATA .= '</small></td></tr>';
+    $SIDEBAR_DATA .= '</table><!--/UdmComment-->';
 }
 
 // Print out manual navigation bar
@@ -69,7 +70,8 @@ function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
            $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $REQUEST_URI, $www_static_root;
 
-    echo '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+    echo '<!--UdmComment-->' . "\n" . 
+         '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
     echo '<tr><td>';
     if ($PREV[1]) {
@@ -119,7 +121,7 @@ function navigationBar($title,$id,$loc) {
     }
 
     echo '</td><td align="right" valign="bottom"><small>Last updated: ' . $tstamp . '</small></td></tr>';
-    echo "</table>\n";
+    echo "</table>\n<!--/UdmComment-->\n";
 
 }
 
@@ -213,18 +215,14 @@ function manualGetUserNotes($title, $id) {
 // Print out all user notes for this manual page
 function manualUserNotes($title, $id) {
 
-    global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
-    $cur = substr(dirname($PHP_SELF),-2);
-    if($cur=='al') $cur='en';
+    global $PHP_SELF, $MYSITE;
 
     # don't want .php at the end of the id.
     if (substr($id,-4) == '.php') $id = substr($id,0,-4);
 
     $notes = manualGetUserNotes($title, $id);
 
-    $back_url = 'http://' . $SERVER_NAME . 
-        (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
-        $PHP_SELF;
+    $back_url = substr($MYSITE, 0, -1) . $PHP_SELF;
         
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
@@ -380,18 +378,10 @@ function manualPrintFooter() {
 // Print out all user notes for this manual page
 function manualPrintUserNotes($title, $id) {
 
-    global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
-    $cur = substr(dirname($PHP_SELF),-2);
-    if ($cur=='al') $cur='en';
-
-    # don't want .php at the end of the id.
-    if (substr($id,-4) == '.php') $id = substr($id,0,-4);
+    // Don't want .php at the end of the id.
+    if (substr($id, -4) == '.php') { $id = substr($id, 0, -4); }
 
     $notes = manualGetUserNotes($title, $id);
-
-    $back_url = 'http://' . $SERVER_NAME . 
-        (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
-        $PHP_SELF;
 
     echo "<hr size=\"1\" noshade><h2>User Contributed Notes</h2>";
 
