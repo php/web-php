@@ -434,7 +434,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
 			case "Mod":
-				print "<a href=\"bugs.php?id=${row['id']}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
+				print "<a href=\"bugs.php?id=${row['id']}&edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\"></a>\n";
 				break;
 
 			case "Status":
