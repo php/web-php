@@ -38,7 +38,7 @@ escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encour
 </ul>
 
 <p>
- Pour une liste exhaustive des modifications de PHP 4.3.6, voyez
+ Pour une liste exhaustive des modifications de PHP 4.3.7, voyez
  <a href="/ChangeLog-4.php#4.3.7">le changelog</a>, en anglais.
  </p>
 
