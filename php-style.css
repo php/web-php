@@ -35,12 +35,12 @@ TD,TH {
 }
 
 .author {
-    font-size: 10pt;
+    font-size: 13px;
     font-weight: normal;
 }
 
 .editor {
-    font-size: 10pt;
+    font-size: 13px;
     font-weight: normal;
 }
 
@@ -58,13 +58,13 @@ TD,TH {
 }
 
 PRE {
-    font-size : 10pt;
+    font-size : 13px;
 }
 
 LI {
-    margin-bottom: 4pt;
+    margin-bottom: 5px;
 }
 
 UL,OL {
-    margin-top: 4pt;
+    margin-top: 5px;
 }
