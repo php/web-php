@@ -1,3 +1,2 @@
-<?php
-header("http://pear.php.net/");
-?>
+<?php header("Location: http://pear.php.net/"); ?>
+
