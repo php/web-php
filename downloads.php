@@ -128,18 +128,6 @@ echo '</p>';
   See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
 </p>
 
-<h2>Patches to latest version</h2>
-<ul>
-  <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.<br />
-  md5: 254bccc245d65cece1f40f782b70ec6b
-  </li>
-  <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br />
-  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.<br />
-  md5: a725c3c9fada0b2e21336250faeca39b
-  </li>
-</ul>
-
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
@@ -177,6 +165,14 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 
 <h2>Patches</h2>
 <ul>
+  <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
+  This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.<br />
+  md5: 254bccc245d65cece1f40f782b70ec6b
+  </li>
+  <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br />
+  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.<br />
+  md5: a725c3c9fada0b2e21336250faeca39b
+  </li>
   <li><?php download_link("php-4.0.6-memlimit.diff.gz", "PHP 4.0.6 memory limit fix"); ?> - 1 July 2001<br />
   (This patch fixes a bug in the 4.0.6 memory limit option. This is only needed when configuring
   PHP with --enable-memory-limit). If you have problems applying the patch try using GNU patch.<br />
