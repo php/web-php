@@ -280,7 +280,7 @@ discusses the legal, moral and other implications of linux and free software.</p
 
 <?php print_link("http://phpconf.phpquebec.org/index.php", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
 
-<h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&21rst, 2003)</h1>
+<h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
 <p>
 <font class="newsdate">[28-Jan-2003]</font>
 The PHP Qu&eacute;bec association announces the <a
@@ -313,7 +313,7 @@ conference center in Amsterdam.</p>
 <p>Like the International PHP Conferences in Frankfurt this conference will
 offer a first class program  to an international audience of PHP enthusiasts.
 We are happy to ask you to submit your <a
-href="http://www.phpconference.com/content/content2.php?CatID=0&NewsID=354">proposals</a>
+href="http://www.phpconference.com/content/content2.php?CatID=0&amp;NewsID=354">proposals</a>
 for the session program.</p>
 
 <p>The topics are General PHP, PHP &amp; Business, PHP &amp; Databases, PHP
