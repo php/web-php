@@ -125,11 +125,16 @@ echo '</p>';
 </ul>
 
 <p>
-  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
-</p>
-<p>
-  Daily snapshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
+  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes. Daily
+  snapshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
   (not intended for production use!).
+</p>
+
+<p>
+  If you would like to download these files with wget or lynx or any command line
+  utility, be aware that the question mark in the URL may be handled specially
+  by your shell. If you escape that character with a backslash, then the download
+  will work well.
 </p>
 
 <h2>Windows Binaries</h2>
