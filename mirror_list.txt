@@ -1,5 +1,6 @@
 at	at.php.net	Antonin Sprinzl <Antonin.Sprinzl@tuwien.ac.at>	192.35.244.50
 au	au.php.net:81	David Robley <webmaster@www.nisu.flinders.edu.au>	129.96.218.17	port 81
+au	au2.php.net	jason andrade <jason@planetmirror.com>	php.planetmirror.com
 bg	bg.php.net	Alexander Keremidarski <salle@online.bg>
 php.online.bg
 br	br.php.net	<accdias@sst.com.br>	200.223.126.4
