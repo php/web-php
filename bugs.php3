@@ -5,7 +5,8 @@
 require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
-	$dbuser=$dbpwd="";
+	$dbuser="nobody";
+	$dbpwd="";
 } else if (strstr($MYSITE,"il.php.net")) {
 	$dbhost="bugs.php.net";
 	$dbuser="bourbon";
@@ -534,8 +535,9 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="3.0.8">3.0.8
+    <option name="3.0.9">3.0.9
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
+    <option name="3.0.8">3.0.8
     <option name="3.0.7">3.0.7
     <option name="3.0.6">3.0.6
     <option name="earlier">Earlier?  Upgrade first!
