@@ -62,7 +62,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
 <?php
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
-  $mailing_lists = Array(
+  $general_mailing_lists = Array(
 
     'General mailing lists for PHP users',
     Array (
@@ -106,45 +106,6 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
       false, false, false
-    ),
-
-    'PHP and Zend Engine internals lists',
-    Array (
-      'php-dev', 'Internals list',
-      'A medium volume list for those who want to help out with the development of PHP',
-      false, true, false, "php.dev"
-    ),
-    Array (
-      'php-cvs', 'CVS commit list',
-      'All the commits of the cvs PHP code repository are posted to this list automatically',
-      true, true, false, "php.cvs"
-    ),
-    Array (
-      'php-cvs-daily', 'Daily CVS commit summary',
-      'Daily changelog and NEWS file updates',
-      true, false, false
-    ),
-    Array (
-      'zend-engine-cvs', 'Zend Engine CVS commit list',
-      'All the commits of the Zend Engine CVS modules are posted to this list automatically',
-      false, true, true, "php.zend-engine.cvs"
-    ),
-    Array (
-      'php-qa', 'Quality Assurance list',
-      'List for the members of the PHP-QA Team',
-      false, true, false, "php.qa"
-    ),
-
-    'PHP documentation mailing lists',
-    Array (
-      'phpdoc', 'PHP documentation list',
-      'List for the authors of the PHP documentation with CVS commits',
-      false, true, false, "php.doc"
-    ),
-    Array (
-      'php-doc-chm', 'PHP CHM documentation list',
-      'List for developers of the Windows Help-format PHP documentation',
-      false, false, true, "php.doc.chm"
     ),
 
     'PEAR mailing lists',
@@ -207,55 +168,99 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'All the commits of the cvs Smarty code repository are posted to this list automatically',
       true, true, false, "php.smarty.cvs"
     ),
+  );
 
-/*    'PHPLIB mailing lists',
+  // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
+  $internals_mailing_lists = Array(
+
+    'PHP and Zend Engine internals lists',
     Array (
-      'phplib', 'PHPLIB mailing list',
-      'List of the open source PHP code library',
-      false, true, false
+      'php-dev', 'Internals list',
+      'A medium volume list for those who want to help out with the development of PHP',
+      false, true, false, "php.dev"
     ),
     Array (
-      'phplib-dev', 'PHPLIB developers list',
-      'List for the PHPLIB developers',
-      false, true, false
-    ), */
+      'php-cvs', 'CVS commit list',
+      'All the commits of the cvs PHP code repository are posted to this list automatically',
+      true, true, false, "php.cvs"
+    ),
+    Array (
+      'php-cvs-daily', 'Daily CVS commit summary',
+      'Daily changelog and NEWS file updates',
+      true, false, false
+    ),
+    Array (
+      'zend-engine-cvs', 'Zend Engine CVS commit list',
+      'All the commits of the Zend Engine CVS modules are posted to this list automatically',
+      false, true, true, "php.zend-engine.cvs"
+    ),
+    Array (
+      'php-qa', 'Quality Assurance list',
+      'List for the members of the PHP-QA Team',
+      false, true, false, "php.qa"
+    ),
+
+    'PHP documentation mailing lists',
+    Array (
+      'phpdoc', 'PHP documentation list',
+      'List for the authors of the PHP documentation with CVS commits',
+      false, true, false, "php.doc"
+    ),
+    Array (
+      'php-doc-chm', 'PHP CHM documentation list',
+      'List for developers of the Windows Help-format PHP documentation',
+      false, false, true, "php.doc.chm"
+    ),
   );
+
+function output_lists_table($mailing_lists)
+{
+	echo '<table cellpadding="5" cellspacing="1" border="0">', "\n";
+	while ( list(, $listinfo) = each($mailing_lists)) {
+		if (!is_array($listinfo)) {
+			echo '<tr bgcolor="#cccccc">';
+			echo "<th>{$listinfo}</th>";
+			echo '<th>Moderated</th>';
+			echo '<th>Archive</th>';
+			echo '<th>Newsgroup</th>';
+			echo '<th>Normal</th>';
+			echo '<th>Digest</th>';
+			echo "</tr>\n";
+		} else {
+			echo '<tr align="center" bgcolor="#e0e0e0">';
+			echo '<td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td>';
+			echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
+			echo '<td>' . ($listinfo[4] ? make_link("http://marc.theaimsgroup.com/?l=".$listinfo[0], 'yes') : 'n/a') . '</td>';
+			echo '<td>' . ($listinfo[6] ? make_link("news://news.php.net/".$listinfo[6], 'yes') : 'n/a') . '</td>';
+			echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
+			echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="'.$listinfo[0].'-digest">' : 'n/a' ) . '</td>';
+			echo "</tr>\n";
+		}
+	}
+	echo "</table>\n";
+}
 
 ?>
 
 <form method="post" action="http://www.php.net/mailing-lists.php">
 <p>
-<table cellpadding="5" cellspacing="1" border="0">
+<h1><a name="local">General Mailing Lists</a></h1>
 <?php
 
-while ( list(, $listinfo) = each($mailing_lists)) {
-	if (!is_array($listinfo)) {
-
-		echo '<tr bgcolor="#cccccc">';
-		echo '<th>' . $listinfo . '</th>';
-		echo '<th>Moderated</th>';
-		echo '<th>Archive</th>';
-		echo '<th>Newsgroup</th>';
-		echo '<th>Normal</th>';
-		echo '<th>Digest</th>';
-		echo '</tr>' . "\n";
-
-	} else {
-  
-		echo '<tr align="center" bgcolor="#e0e0e0">';
-		echo '<td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td>';
-		echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
-		echo '<td>' . ($listinfo[4] ? make_link("http://marc.theaimsgroup.com/?l=".$listinfo[0], 'yes') : 'n/a') . '</td>';
-		echo '<td>' . ($listinfo[6] ? make_link("news://news.php.net/".$listinfo[6], 'yes') : 'n/a') . '</td>';
-		echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
-		echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="'.$listinfo[0].'-digest">' : 'n/a' ) . '</td>';
-		echo '</tr>' . "\n";
-
-	}
-}
+	/* General lists */
+	output_lists_table($general_mailing_lists);
 
 ?>
-</table>
+</p>
+
+<p>
+<h1><a name="local">Internals Mailing Lists</a></h1>
+<?php
+
+	/* General lists */
+	output_lists_table($internals_mailing_lists);
+
+?>
 </p>
 
 <p align="center">
