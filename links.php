@@ -28,7 +28,7 @@ related tools, jobs, web hosting services, etc.
 </p>
 
 
-<h4>PHP Support Companies</h4>
+<a name="companies"><h4>PHP Support Companies</h4></a>
 
 <ul>
 <li><a href="http://www.thinkphp.de/">ThinkPHP.de</a><br>
@@ -41,7 +41,7 @@ Zend Technologies offers many PHP related products, support,
 and many more PHP related content.</li>
 </ul>
 
-<h4>Professional PHP Associations</h4>
+<a name="associations"><h4>Professional PHP Associations</h4></a>
 
 <ul>
 <li><a href="http://www.afup.org/">AFUP.org</a><br>
@@ -64,7 +64,7 @@ International community supporting PHP adoption, projects and
 development.</li>
 </ul>
 
-<h4>PHP Link Catalogs</h4>
+<a name="links"><h4>PHP Link Catalogs</h4></a>
 
 <ul>
 <li><a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a><br>
@@ -89,7 +89,7 @@ Find PHP Sites within this webring!</li>
 </ul>
 
 
-<h4>PHP FAQ sites</h4>
+<a name="faq"><h4>PHP FAQ sites</h4></a>
 
 <ul>
 <li><a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br>
@@ -102,7 +102,7 @@ question and answer format.</li>
 </ul>
 
 
-<h4>Complex PHP Related Sites</h4>
+<a name="complex"><h4>Complex PHP Related Sites</h4></a>
 
 <ul>
 <li><a href="http://codewalkers.com/">Codewalkers</a><br>
@@ -140,7 +140,7 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 </ul>
 
 
-<h4>PHP Scripts and Programs</h4>
+<a name="scripts"><h4>PHP Scripts and Programs</h4></a>
 
 <ul>
 <li><a href="http://www.evilwalrus.com/">Evil Walrus</a><br>
@@ -164,7 +164,7 @@ Useful PHP classes in a categorized listing</li>
 </ul>
 
 
-<h4>PHP Magazines</h4>
+<a name="magazines"><h4>PHP Magazines</h4></a>
 
 <ul>
 <li><a href="http://www.phparch.com/">php|architect</a><br>
@@ -188,7 +188,7 @@ newspaper), dedicated to PHP and its technologies (in French).</li>
 </ul>
 
 
-<h4>PHP Tutorials</h4>
+<a name="tutorials"><h4>PHP Tutorials</h4></a>
 
 <ul>
 <li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
@@ -221,7 +221,7 @@ The PHP section on the famous Webmonkey tutorial site</li>
 </ul>
 
 
-<h4>PHP Setup and Authoring Tools</h4>
+<a name="setup"><h4>PHP Setup and Authoring Tools</h4></a>
 
 <ul>
 <li><a href="http://www.hotscripts.com/PHP/Software_and_Servers/Installation_Kits/">List of installation kits</a><br />
@@ -233,7 +233,7 @@ A comprehensive list of editors you can use to edit PHP programs</li>
 </ul>
 
 
-<h4>Companies that provide commercial tools for PHP</h4>
+<a name="commercialtools"><h4>Companies that provide commercial tools for PHP</h4></a>
 
 <ul>
 <li><a href="http://www.interakt.ro/">InterAKT Online</a><br />
@@ -267,7 +267,7 @@ PHP Applications.</li>
 </ul>
 
 
-<h4>PHP Accelerators</h4>
+<a name="accelerators"><h4>PHP Accelerators</h4></a>
 
 <ul>
 <li><a href="http://afterburner.bware.it/">After Burner</a><br>
@@ -287,7 +287,7 @@ Free open source accelerator from TurckSoft.</li>
 Commercial accelerator available from Zend Technologies, Inc.</li>
 </ul>
 
-<h4>PHP Merchandise</h4>
+<a name="merchandise"><h4>PHP Merchandise</h4></a>
 
 <ul>
 <li><a href="http://www.copyleft.net/search.phtml?search=1&lookup%5Bbrand_id%5D=47">Copyleft</a><br>
@@ -298,7 +298,7 @@ A search result page with various PHP related projects' shops (not all results a
 </ul>
 
 
-<h4>Non-English PHP Sites</h4>
+<a name="nonenglish"><h4>Non-English PHP Sites</h4></a>
 
 <ul>
 <li><b>Bosnian</b>
@@ -505,7 +505,7 @@ A Swedish PHP portal with articles, news, forums and much more</li>
 
 <?php echo hdelim(); ?>
 
-<h1>Developers and Job Opportunities</h1>
+<a name="jobs"><h1>Developers and Job Opportunities</h1></a>
 
 <p>Here's a list of sites with that publish PHP-related job listings:</p>
 
@@ -530,7 +530,7 @@ Job Search listings</a>.
 
 <?php echo hdelim(); ?>
 
-<h1>ISPs that support PHP</h1>
+<a name="hosts"><h1>ISPs that support PHP</h1></a>
 
 <p>
 Looking for an ISP or hosting service that supports PHP?
