@@ -150,7 +150,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 4.3.9RC3 released!</h1>
 <p>
  <span class="newsdate">[14-Sep-2004]</span>
-<a href="http://qa.php.net/">PHP 4.3.9RC2</a> has been released for testing.
+<a href="http://qa.php.net/">PHP 4.3.9RC3</a> has been released for testing.
 This is the last release candidate before the final release and should have 
 a very low number of problems and/or bugs. Nevertheless, please download and 
 test it as much as possible on real-life applications to uncover any remaining issues. 
