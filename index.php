@@ -49,7 +49,7 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good.  This is thanks to a brand new server donated
-by <a href="http://www.pair.net/">Pair Networks</a>.  Thanks!
+by <a href="http://www.pair.com/">Pair Networks</a>.  Thanks!
 </p>
 
 <? echo hdelim(); ?>
