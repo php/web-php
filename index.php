@@ -194,13 +194,14 @@ echo "\n<!--$MYSITE-->\n";
 <h1>Set your own language preference</h1>
 
 <p>
-<font class="newsdate">[01-Mar-2003]</font> Starting from today, your
-browser's "Accept Language" setting is also honored on language sensitive
-pages on the php.net site. If you would like to get to the documentation
-page of echo for example, you can use the <a href="/echo">/echo</a>
-shortcut on all mirror sites, if your browser is set to provide your
-language preference information to the server. This also makes the PHP
-error message links point to the documentation in your preferred language.
+<font class="newsdate">[01-Mar-2003]</font>
+Starting from today, your browser's "Accept Language" setting is also
+honored on language sensitive pages on the php.net site. If you would
+like to get to the documentation page of echo for example, you can use
+the <a href="/echo">/echo</a> shortcut on all mirror sites, if your
+browser is set to provide your language preference information to the
+server. This also makes the PHP error message links point to the
+documentation in your preferred language.
 </p>
 
 <p>
@@ -217,17 +218,18 @@ providing translated content.
 <h1>First Hungarian PHP Conference</h1>
 
 <p>
-<font class="newsdate">[25-Feb-2003]</font> The members of the Hungarian PHP
-community announce <a href="http://phpconf.hu/">the first Hungarian PHP
-Conference</a> which will take place in Budapest, on Saturday March 29th,
-sponsored by several international and local companies. The conference offers
-an entirely free one-day activity with several presentations addressing basic
-and advanced topics, as well, exclusively in Hungarian. Moreover, a five
-kilobyte-limited PHP contest has been started to discover the most talented
-PHP programmers in our country. The programme includes the first session of
-the so-called PHP Division which will be established with the set purpose
-of representing the community itself and promoting their interests in any
-national business and official phorums.
+<font class="newsdate">[25-Feb-2003]</font>
+The members of the Hungarian PHP community announce
+<a href="http://phpconf.hu/">the first Hungarian PHP Conference</a> which
+will take place in Budapest, on Saturday March 29th, sponsored by several
+international and local companies. The conference offers an entirely free one
+day activity with several presentations addressing basic and advanced topics,
+as well, exclusively in Hungarian. Moreover, a five kilobyte-limited PHP
+contest has been started to discover the most talented PHP programmers in
+our country. The programme includes the first session of the so-called PHP
+Division which will be established with the set purpose of representing the
+community itself and promoting their interests in any national business and
+official phorums.
 </p>
 
 <?php echo hdelim(); ?>
@@ -235,11 +237,13 @@ national business and official phorums.
 <h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
 
 <p>
-<font class="newsdate">[17-Feb-2003]</font> The PHP Group today announced
-the details of a serious <a href="release_4_3_1.php">CGI vulnerability</a> in PHP version 4.3.0.
-A security update, <a href="downloads.php">PHP 4.3.1</a>, fixes the issue. Everyone running
-affected version of PHP (as CGI) are encouraged to upgrade immediately. 
-The new 4.3.1 release does not include any other changes, so upgrading from 4.3.0 is safe and painless.
+<font class="newsdate">[17-Feb-2003]</font>
+The PHP Group today announced the details of a serious
+<a href="release_4_3_1.php">CGI vulnerability</a> in PHP version 4.3.0. A
+security update, <a href="downloads.php">PHP 4.3.1</a>, fixes the issue.
+Everyone running affected version of PHP (as CGI) are encouraged to upgrade
+immediately. The new 4.3.1 release does not include any other changes,
+so upgrading from 4.3.0 is safe and painless.
 </p>
 
 <?php echo hdelim(); ?>
