@@ -90,6 +90,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Integrated FAQ in the PHP Manual</h1>
+
+<p>
+<font class="newsDate">[29-Jul-2001]</font>
+You don't need to go online anymore, to access the PHP FAQ,
+because we integrated it for you in the PHP Manual, so you can
+<a href="http://www.php.net/docs.php">download it</a> in
+various formats with the Manual packages, and
+<a href="http://www.php.net/manual/en/faq.php">annotate
+the pages online</a>, as you wish.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Manual additions, new event calendar</h1>
 
 <p>
