@@ -275,6 +275,11 @@ function manualLastModified($title, $id) {
 	if($result_id) mysql_free_result($result_id);
 }
 
+function sendManualHeaders($charset,$lang) {
+	Header("Content-type: text/html;charset=$charset");
+	Header("Content-language: $lang");
+}
+
 function manualHeader($title,$id="") {
 	global $FRAMEMODE, $HTDIG;
 	manualLastModified($title,$id);
