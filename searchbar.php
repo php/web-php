@@ -1,5 +1,15 @@
-<?php require_once 'prepend.inc'; ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<?php
+require_once 'prepend.inc';
+
+// Gecko would like to see the target to be _content, while IE would
+// like to see the target to be _main. Other browsers are not expected
+// to visit this page, or support for them will be added in the future.
+if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
+    $target = "_content"; 
+} else {
+    $target = "_main";
+}
+?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html>
 <head>
  <title>PHP.net Search Sidebar</title>
@@ -24,14 +34,14 @@
  vlink="#000099" onload="document.sform.pattern.focus();">
 <table border="0" cellspacing="2" cellpadding="0">
  <tr>
-  <td width="69"><a href="/" target="_main"><img src="logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
-  <td class="title" align="left">Search Bar</td>
+  <td width="69"><a href="/" target="<?php echo $target ?>"><img src="logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
+  <td class="title" align="left">Search</td>
  </tr>
  <tr bgcolor="#333366"><td colspan="2"><img src="gifs/spacer.gif" width="1" height="1" border="0" alt="" /></td></tr>
  <tr>
   <td colspan="2">
    <div class="indented">
-   <form method="post" action="/search.php" target="_main" name="sform">
+   <form method="post" action="/search.php" target="<?php echo $target ?>" name="sform">
    <input type="hidden" name="lang" value="<?php if(empty($LANG)) echo htmlspecialchars(default_language()); else echo htmlspecialchars($LANG); ?>">
    Search for<br />
    <input type="text" name="pattern" value="" style="width: 95%"/><br />
@@ -54,7 +64,7 @@
  <tr>
   <td colspan="2">
    <div class="indented">
-   <small><a href="/copyright.php" target="_main">Copyright &copy; 2002 The PHP Group</a><br />All rights reserved.</small>
+   <small><a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002 The PHP Group</a><br />All rights reserved.</small>
    </div>
   </td>
  </tr>
