@@ -165,7 +165,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 	echo "<th>".sort_url('assigned')."</th>";
 	echo "<th>".sort_url('feedback')."</th></tr>\n";
 
-	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('critical', 'all')."&nbsp;</td><td align=center bgcolor=#cceedd>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#cceedd>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#cceedd>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
+	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('critical', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
 	while(list($type,$value)=each($bug_type[$sort_by])) {
 		if(($bug_type['open'][$type] > 0 || 
 			$bug_type['critical'][$type] > 0 ||
