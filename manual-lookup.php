@@ -9,18 +9,18 @@ function tryprefix($func, $prefix) {
 
     $func = ereg_replace("_","-",$func);
     $func = ereg_replace('\(.*\)',"-",$func);
-    $try_files[] = "/manual/${prefix}${func}.php3";
+    $try_files[] = "/manual/${prefix}${func}.php";
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
-	$try_files[] = "/manual/${prefix}${nosp}.php3";
+	$try_files[] = "/manual/${prefix}${nosp}.php";
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
-	$try_files[] = "/manual/${prefix}${dasp}.php3";
+	$try_files[] = "/manual/${prefix}${dasp}.php";
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
-	$try_files[] = "/manual/${prefix}${noul}.php3";
+	$try_files[] = "/manual/${prefix}${noul}.php";
     }
 }
 
