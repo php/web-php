@@ -315,10 +315,10 @@ function commonFooter() {
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
 	echo delim();
-	if ($MIRRORS[$MYSITE][2]):
+	if (have_stats()) {
 		print_link('/stats/', 'stats', false, 'class="small"');
 		echo delim();
-	endif;
+	}
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
         foreach($MIRRORS as $url=>$mirror) {
@@ -350,7 +350,7 @@ function commonFooter() {
     </td>
     <td align="right"><small>
       This mirror generously provided by:
-      <a href="<?php echo $MIRRORS[$MYSITE][3];?>"><?php echo $MIRRORS[$MYSITE][1];?></a><BR>
+      <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><BR>
       Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore><BR>
       </small>
     </td>

@@ -11,8 +11,6 @@ if (isset($pattern) && ($pattern)) {
 	SetCookie("prevsearch",$pattern,0,"",".php.net");
 }
 
-$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
-
 if (isset($pattern) && ($pattern)) {
 	if ($show=="quickref") {
 		header("Location: manual-lookup.php?pattern=".urlencode($pattern));
@@ -51,7 +49,7 @@ if (isset($pattern) && ($pattern)) {
 		exit;
 	}
 
-	if (!$HAVE_SEARCH) {
+	if (!have_search()) {
 		$location="http://www.php.net/search.php";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
 		Header("Location: ".$location."?".$query);
@@ -136,7 +134,7 @@ Restrict the search to: <BR>
 <?php } else {
 		commonHeader("Search Results");
 		echo "<h1>Search Results</h1>\n";
-		if ($HAVE_SEARCH && isset($htsearch_prog)) {
+		if (have_search() && isset($htsearch_prog)) {
 			$form=$PHP_SELF;
 		} else {
 			$form="http://www.php.net/search.php";

@@ -1,8 +1,8 @@
 <?php
 require_once 'prepend.inc';
 
-if(!strstr($MYSITE,"www.php.net")) {
-        Header("Location: http://www.php.net/bugstats.php");
+if(!is_primary_site()) {
+        header("Location: http://www.php.net/bugstats.php");
 		exit;
 }
 

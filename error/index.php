@@ -21,7 +21,7 @@ if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
   exit;
 }
 
-$lang = $MIRRORS[$MYSITE][6];
+$lang = default_language();
 if (!is_dir("$DOCUMENT_ROOT/manual/$lang")) {
 	$lang = "en"; // fall back to English
 }
@@ -72,8 +72,6 @@ if(strchr($uri,'/')) {
 } else {
         $function = strtolower($uri);
 }
-
-if (!$lang) $lang = $MIRRORS[$MYSITE][6];
 
 $try = find_manual_page($lang, $function);
 if ($try) {

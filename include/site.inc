@@ -11,6 +11,36 @@
 
 require_once 'mirrors.inc';
 
+function is_primary_site() {
+  global $MYSITE;
+  return $MYSITE == "http://www.php.net/";
+}
+
+function default_language() {
+  global $MIRRORS,$MYSITE;
+  return $MIRRORS[$MYSITE][6];
+}
+
+function have_search() {
+  global $MIRRORS,$MYSITE;
+  return $MIRRORS[$MYSITE][5];
+}
+
+function have_stats() {
+  global $MIRRORS,$MYSITE;
+  return $MIRRORS[$MYSITE][2];
+}
+
+function mirror_provider() {
+  global $MIRRORS,$MYSITE;
+  return $MIRRORS[$MYSITE][1];
+}
+
+function mirror_provider_url() {
+  global $MIRRORS,$MYSITE;
+  return $MIRRORS[$MYSITE][3];
+}
+
 $COUNTRIES = array(
    "au" => "Australia",
    "at" => "Austria",

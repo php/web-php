@@ -6,7 +6,7 @@ require_once 'prepend.inc';
 
 /* See the end of the script for the table layout. */
 
-if (strstr($MYSITE,"www.php.net")) {
+if (is_primary_site()) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";

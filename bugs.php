@@ -12,7 +12,7 @@ if (!isset($user))   $user   = '';
 if (!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
-if (strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
+if (is_primary_site() || strstr($MYSITE,"localhost")) {
 	$dbhost = "localhost";
 	$dbuser = "nobody";
 	$dbpwd  = "";
