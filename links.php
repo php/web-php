@@ -318,6 +318,10 @@ site_header("Links");
   A growing list of PHP tutorials at TutorialFind
  </li>
 
+ <li><a href="http://www.vtc.com/products/php.htm">Video tutorials</a><br />
+  Video tutorials at Virtaul Training Company
+ </li>
+
  <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br />
   The PHP section on the famous Webmonkey tutorial site
  </li>
