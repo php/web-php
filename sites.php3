@@ -61,6 +61,7 @@ removed right away.</blockquote>
 	site("Knowledge Adventure","www.adventure.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("RedHat Software","www.redhat.com");
+	site("Flexform Software","www.flexform.de");
 	siteEnd();
 
 /* Educational */
