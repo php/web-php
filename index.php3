@@ -30,10 +30,12 @@ the world of <a href="http://www.opensource.org">Open Source</a> software!
 Smile, be happy, the world is good.  For the full legalese, see the 
 official <a href="license.html">license</a>.
 
+<? /*
 <h3>PHP & MySQL wins Database of the Year at Web98</h3>
 <img src="/gifs/wtawards.gif" border=0 align=left hspace=5>
 Read all about the winning combination of PHP and <A HREF="http://www.tcx.se">MySQL</A>
 on the <a href="news.php3">In The News</a> page.<BR clear=all>
+*/?>
 
 <h3>Year 2000 Compliance</h3>
 Just like your C compiler or your favourite text editor, PHP is just about as
