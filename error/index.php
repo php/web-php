@@ -191,7 +191,10 @@ if (strchr($uri,'/')) {
     list($lang,$function) = explode('/',$uri,2);
 
     $function = strtolower($function);
-    if ($lang != 'pt_BR') { $lang = strtolower($lang); }
+    $lang     = strtolower($lang);
+    
+    // Proper case for Brazilian Portuguese
+    if ($lang == 'pt_br') { $lang = 'pt_BR'; }
 
     // Transform function name, so it can be a shortcut
     if (isset($uri_aliases[$function])) {
@@ -231,5 +234,5 @@ if ($try) {
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-header('Location: http://'.$SERVER_NAME.'/search.php?show=manual&pattern='.urlencode(substr($REQUEST_URI,1)) );
+header('Location: http://'.$SERVER_NAME.'/search.php?show=manual&lang='.urlencode($lang).'&pattern='.urlencode(substr($REQUEST_URI,1)) );
 ?>
