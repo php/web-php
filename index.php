@@ -151,7 +151,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
 <p>
 <span class="newsdate">[12-Oct-2004]</span>
-<a href="http://www.afup.org/">PHP Québec</a>, the profesional association of PHP users in Québec, will be part of the <a href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on Tuesday October 19th and Wednesday October 20th. PHP Québec will present <a href="http://www.php.net/">PHP</a>'s features, its capabilities for e-government and its support services in Canada. Come and meet us on the floor, booth 1610C.
+<a href="http://www.phpquebec.com/">PHP Québec</a>, the profesional association of PHP users in Québec, will be part of the <a href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on Tuesday October 19th and Wednesday October 20th. PHP Québec will present <a href="http://www.php.net/">PHP</a>'s features, its capabilities for e-government and its support services in Canada. Come and meet us on the floor, booth 1610C.
 </p>
 
 <hr />
