@@ -379,7 +379,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			/* mail bug originator */
 			if ($ephp_version[0] == '4') {
-				$prefix = 'PHP4';
+				$prefix = 'PHP 4.0';
 			}
     			Mail("$eemail, $destination", "$prefix Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
@@ -420,7 +420,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$esdesc = stripslashes($esdesc);
 			/* mail bug originator */
 			if ($ephp_version[0] == '4') {
-				$prefix = 'PHP4';
+				$prefix = 'PHP 4.0';
 			}
     			Mail("$eemail, $destination", "$prefix Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 			mysql_freeresult($result);
