@@ -249,7 +249,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "assign as Assigned";
 	$fields[] = "php_version as Version";
 #	$fields[] = "php_os as OS";
-	$fields[] = "email as Originator";
+	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Modify";
 	$conversion_table["id"] = "ID#";
