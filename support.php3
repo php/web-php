@@ -46,6 +46,10 @@ development release at any time.  Further instructions can be found in
 the web interface to the <a href="http://ca.php.net/cvsweb.cgi">PHP 3.0
 CVS tree</a>.
 
+<h3>Instant Resource Center</h3>
+Otherwise known as IRC or Internet Relay Chat.  Here you can usually find experienced 
+PHP people sitting around doing nothing on the #php channel on EFNet.  If you don't know 
+what IRC is you can learn more about it at <a href="http://www.irchelp.org">www.irchelp.org</a>.
 
 <?
 commonFooter();
