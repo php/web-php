@@ -45,7 +45,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 <P>Your submission was successful -- thanks for contributing!
 <?			$new_id = mysql_insert_id();	
 			$msg = stripslashes($note);
-			$msg .= "\n\nhttp://www.php.net/manual/".sect_to_file($sect)."\n";
+			$msg .= "\n\n $redirect \n";
 			mail("php-notes@lists.php.net","note $new_id added to $sect",$msg,"From: $user");
 		else:
 			// mail it.
