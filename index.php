@@ -90,14 +90,14 @@ $types = array("gif", "jpg", "png");
 while (list(,$ext) = each($types)) {
     if (file_exists("backend/mirror." . $ext)) {
         $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n
-        <a href='" . $MIRRORS[$MYSITE]['3'] . "'><img src='backend/mirror.$ext' ";
-        if ($MIRRORS[$MYSITE]['4'] === 2) {
+        <a href='" . $MIRRORS[$MYSITE][3] . "'><img src='backend/mirror.$ext' ";
+        if ($MIRRORS[$MYSITE][5] === 2) {
             $RSIDEBAR_DATA .= "width='125' height='125'";
         } else {
             $RSIDEBAR_DATA .= "width='120' height='60'";
         }
         $RSIDEBAR_DATA .=
-            " alt='" . $MIRRORS[$MYSITE]['1'] .
+            " alt='" . $MIRRORS[$MYSITE][1] .
             "' border='0' /></a></center><br />" . hdelim();
         break;
     }
