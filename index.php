@@ -274,19 +274,6 @@ by <a href="http://www.pair.com/">pair Networks</a>. Thanks!
 
 <?php echo hdelim(); ?>
 
-<h1>PHP 4.0.6 Released!</h1>
-
-<p>
-<font class="newsDate">[23-Jun-2001]</font>
-<a href="/downloads.php">PHP 4.0.6</a> is a maintenance release, that features many bug fixes from
-PHP 4.0.5, and is especially much more efficient in its memory requirements. Users that skipped
-the 4.0.5 upgrade may wish to jump directly from 4.0.4 to the much more stable 4.0.6. For a
-full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
 <?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 
 <h1>LinuxTag 2001 in Europe</h1>
@@ -330,11 +317,11 @@ about more PHP-related books, tell us about them!
 
 <?php echo hdelim(); ?>
 
-<h1>Tips and Tricks Section</h1>
+<h1>Quick reference tips</h1>
 
 <p>
-Check out our <?php print_link("/tips.php", "tips"); ?> page for some "neat" things, 
-PHP-related.  It's a little sparse right now, but feel free to make suggestions!
+Check out our <?php print_link("/tips.php", "tips"); ?> page for some "neat" tips, 
+about how you can optimize your usage of our quick reference features.
 <br clear="all">
 </p>
 
