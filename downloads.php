@@ -128,7 +128,7 @@ echo '</p>';
   See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
 </p>
 <p>
-  Daily spanshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
+  Daily snapshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
   (not intended for production use!).
 </p>
 
