@@ -115,5 +115,5 @@ if ($try) {
 
 
 # redirect to the search page with the pattern set to $REQUEST_URI
-header('Location: http://$SERVER_NAME/search.php?show=nosource&auto=1&pattern='.urlencode(substr($REQUEST_URI,1)) );
+header('Location: http://'.$SERVER_NAME.'/search.php?show=nosource&auto=1&pattern='.urlencode(substr($REQUEST_URI,1)) );
 ?>
