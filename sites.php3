@@ -183,6 +183,7 @@ right away.</blockquote>
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
+	site("Online Gaming Review","www.ogr.com");
 	siteEnd();
 
 /* Publishing Industry */
