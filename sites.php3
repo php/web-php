@@ -226,6 +226,7 @@ right away.</blockquote>
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("NASA - Jet Propulsion Laboratory");
+	site("NASA - Mars Polar Lander","www.marspolarlander.com");
 	site("Nuance Communication Extranet","www.nuance.com");
 	site("ONE TOUCH Systems Inc.","www.onetouch.com");
 	site("PalmShop","www.palmshop.de");
