@@ -68,6 +68,18 @@ by Craig Hilton and Jeff Willis<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.thickbook.com/order/"
+><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.thickbook.com/order/">PHP Essentials</A><BR>
+by <A HREF="mailto:julie@thickbook.com">Julie Meloni</A><BR> 
+<SMALL><A HREF="http://www.thickbook.com/">more info</A><BR>
+March/2000, Publisher Prima-Tech, ISBN 0-7615-2729-X<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
