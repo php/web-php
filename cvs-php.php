@@ -12,7 +12,7 @@ site_header("Using CVS for PHP Development");
 <?php
 
 // We have a form submitted, and the user have read all the comments
-if (count($_POST) && isset($_POST['checkread'])) {
+if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))) {
 
     // Clean up incoming POST vars
     if (get_magic_quotes_gpc()) {
@@ -34,7 +34,7 @@ if (count($_POST) && isset($_POST['checkread'])) {
     if (empty($_POST['fullname'])) {
         $error .= "You must supply your real name. ";
     }
-    if (empty($_POST['purpose'])) {
+    if (empty($_POST['realpurpose'])) {
         $error .= "You must supply a reason for requesting the CVS account. ";
     }
     if (empty($_POST['password'])) {
@@ -53,7 +53,7 @@ if (count($_POST) && isset($_POST['checkread'])) {
                 "name"     => $cleaned['fullname'],
                 "email"    => $cleaned['email'],
                 "passwd"   => $cleaned['password'],
-                "note"     => $cleaned['purpose']
+                "note"     => $cleaned['realpurpose']
             )
         );
         // Error while posting
@@ -127,7 +127,7 @@ if (count($_POST) && isset($_POST['checkread'])) {
 } // endif: no data or checkread not checked
 
 else {
-    if (count($_POST) && !isset($_POST['checkread'])) {
+	if (count($_POST)) {
         print <<<EOT
 <p class="formerror">
  We could not have said it more clearly. Read everything on
@@ -273,8 +273,24 @@ EOT;
       class="max" value="<?php echo clean($_POST['email']);?>" /></td>
 </tr>
 <tr>
- <th class="subr">Purpose:</th>
- <td><textarea cols="50" rows="5" name="purpose" class="max"><?php echo clean($_POST['purpose']);?></textarea></td>
+ <th class="subr">For what purpose do you require a CVS account:<br/ >
+ (check all that apply)</th>
+ <td>
+<?php 
+$purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
+	"Using PHP extensions", "Creating experimental PHP extensions",
+	"Submitting a patch to PHP", "Adding notes to the documentation",
+	"Writing web pages with PHP", "Setting up a php.net mirror site");
+
+foreach ($purposes as $i => $p) { ?>
+  <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
+	checked="checked"><?php echo $p; ?><br />
+<?php } ?>
+ </td>
+</tr>
+<tr>
+ <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
+ <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
  <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>
@@ -286,20 +302,6 @@ EOT;
  <td><input type="password" size="10" name="password"
       class="max" value="<?php echo clean($_POST['password']);?>" /></td>
 </tr>
-<?php
-// if checkread is set here, we're redisplaying the form because of an error.
-if ($_POST['checkread']) {
-    echo "<input type=\"hidden\" name=\"checkread\" value=\"1\" />\n";
-}
-else {?>
-<tr>
- <th class="subr">You have read <em>all</em> the comments above:</th>
- <td>
-  <input type="checkbox" name="checkread" value="1" />
- </td>
-</tr>
-<?php
-}?>
 <tr>
  <th colspan="2"><input type="submit" value="Send Request" /></th>
 </tr>
