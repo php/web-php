@@ -139,13 +139,14 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	reset($bug_type);
 	
 	function sort_url($type) {
-		global $sort_by,$rev;
+		global $sort_by,$rev,$phpver;
 		if($type == $sort_by) { 
 			$reve = ($rev == 1) ? 0 : 1;		
 		} else {
 			$reve = 1;
 		}	
-		return '<A href="./bugstats.php?sort_by='.$type.'&amp;rev='.$reve.'">'.ucfirst($type).'</a>';
+		$ver = ($phpver != 0) ? "phpver=$phpver&amp;" : '';
+		return '<A href="./bugstats.php?'.$ver.'sort_by='.$type.'&amp;rev='.$reve.'">'.ucfirst($type).'</a>';
 	}
 	
 	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td>";
