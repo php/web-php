@@ -530,7 +530,7 @@ function show_limit_options($limit=30)
 		echo "<option value=\"$i\"", ($limit==$i ? " selected" : ""),">$i</option>\n";
 		$i=$i+10;
 	}
-	echo '<option value="All"', $limit=='All' ? " selected": ""),">All</option>\n";
+	echo '<option value="All"', ($limit=='All' ? " selected": ""),">All</option>\n";
 }
 
 function show_state_options($state, $user_mode=0, $default="") 
