@@ -134,6 +134,22 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.afup.org/", make_image("afup-logo.gif", "AFUP", "right") ); ?>
+
+<h1>Forum PHP 2002 in Paris, France</h1>
+<p>
+<font class="newsdate">[21-Nov-2002]</font>
+The French PHP User Group AFUP invites you to the "Forum PHP 2002" in
+Paris, on December 9th and 10th. Designed to meet the needs of PHP aware
+companies and all the French PHP developper's community alike, this
+event will provided you with valuable and up-to-date information.
+For more information (in French) see the
+<a href="http://www.afup.org/article.php3?id_article=136">PHP Forum</a>
+website.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Magazine - International Edition</h1>
 <p>
 <font class="newsdate">[17-Nov-2002]</font>
