@@ -81,7 +81,7 @@ at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel.
 On <a href="http://oftc.net">OFTC</a> as well as on all major networks(<a href="http://www.efnet.org/">EFNet</a>,
-<a href="http://www.ircnet.com/">IRCNet</a> and <a href="http://www.dal.net/">DALNet</a>).
+<a href="http://www.ircnet.com/">IRCNet</a>, <a href="http://www.quakenet.org">QuakeNet</a> and <a href="http://www.dal.net/">DALNet</a>).
 </p>
 
 <h1>PHP.net webmasters</h1>
