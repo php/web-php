@@ -151,6 +151,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
+
+<h1>PHP and Web Standards Conference - UK 2004</h1>
+<p>
+ <span class="newsdate">[22-Dec-2003]</span>
+ Call for Papers: PHP and Web Standards Conference - UK 2004
+ The PaWS Group is pleased to announce the first ever UK <a
+ href="http://www.pawscon.com">PHP and Web Standards Conference</a>.
+ PaWS Con will cover using PHP and Web Standards separately and in
+ conjunction with each other.
+ The conference will take place from February 20th - 24th 2004.
+</p><p>
+ The <a href="http://www.pawscon.com/speakers">Call for Papers</a> has
+ been announced with a deadline of January 9th.
+ <a href="http://www.pawscon.com/register">Pre-Registration</a> for
+ early-bird savers is now also open, so <a
+ href="http://www.pawscon.com/register">register</a> to earn your
+ discount and provide PaWS with valuable feedback.
+</p><p>
+ For more information on PaWS Con, visit <a
+ href="http://www.pawscon.com/">http://www.pawscon.com</a>
+</p>
+<hr />
+
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
 
 <h1>Vancouver PHP Conference 2004</h1>
