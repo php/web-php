@@ -545,8 +545,8 @@ function show_state_options($state, $user_mode=0, $default="")
 	$state_types = 	array (
 		"Open" => 2, 
 		"Closed" => 2,
-		"Critical" => 1, 
 		"Duplicate" => 2,
+		"Critical" => 1, 
 		"Assigned" => 1,
 		"Analyzed" => 1,
 		"Suspended" => 1,
@@ -557,9 +557,14 @@ function show_state_options($state, $user_mode=0, $default="")
 		"All" => 0
 	);
 	
-	/* regular users can only pick states with type = 1 for unclosed bugs */
+	/* regular users can only pick states with type 2 for unclosed bugs */
 	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
-		echo "<option>$state</option>\n";
+		/* If state was 'Feedback', set state to 'Open' automatically. */
+		if($state == "Feedback") {
+			echo "<option>Open</option>\n";
+		} else {
+			echo "<option>$state</option>\n";
+		}
 		if($state != "Bogus") echo "<option>Closed</option>\n";
 	} else {
 		foreach($state_types as $type => $mode) {
