@@ -108,13 +108,12 @@
 
     $field_count = mysql_num_fields($result);
     
-    /*
     echo "$num_rows entries";
     if ($total_num_rows>$num_rows) {
       echo " (out of $total_num_rows total)";
     }
     echo ":<br>\n";
-    */
+
     echo "<center><table border=1 width=\"95%\"><tr>\n";
 
 # print table header
