@@ -1,3 +1,3 @@
 <?php
-header("http://freshmeat.net/browse/183/");
+header("Location: http://freshmeat.net/browse/183/");
 ?>
