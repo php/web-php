@@ -34,7 +34,6 @@ commonHeader("Documentation ");
 <li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
 <li><? download_link("manual.prc", "PHP Manual PalmPilot DOC File"); ?>
 <li><? download_link("manual.pdf", "PHP PDF Manual - Indexed - May 23, 00"); ?>. In this PDF, where possible, the version of PHP in which the function first became supported is noted. Note this version of the manual tends to lag behind the other versions available here.
-<li><? download_link("manual_m-x.pdf", "PHP PDF Manual Part 2"); ?>. Function Reference XXVII (Mail) - LV (XML).
 
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
     >Japanese translation of the PHP manual</a>
