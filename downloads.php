@@ -92,8 +92,11 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <h2>File Uploads Security Fix</h2>
 <ul>
   <li><?php download_link("rfc1867.c.diff-4.0.x.gz", "for PHP 4.1.0/4.1.1"); ?> - 27 February 2002<br>
+  (Apply in php-4.1.x/main)</li>
   <li><?php download_link("rfc1867.c.diff-4.0.6.gz", "for PHP 4.0.6"); ?> - 27 February 2002<br>
+  (Apply in php-4.0.6/main)</li>
   <li><?php download_link("mime.c.diff-3.0.gz", "for PHP 3.0"); ?> - 27 February 2002<br>
+  (Apply in php-3.0.x/functions)</li>
 </ul>
 
 <h2>Patches</h2>
