@@ -167,7 +167,7 @@ function manualUserNotes($title) {
 	if(strstr($MYSITE,"ca.php.net")) {
 		$host = 'localhost'; $user = ''; $pass = '';
 		$db_id = mysql_pconnect($host, $user, $pass);
-		$result_id = mysql_db_query("php3","SELECT * FROM note WHERE sect = '$title' ORDER BY id", $db_id);
+		$result_id = mysql_db_query("php3","SELECT * FROM note,UNIX_TIMESTAMP(ts) AS when WHERE sect = '$title' ORDER BY id", $db_id);
 	} else $result_id = 0;
 	echo '<FORM method="POST" action="http://ca.php.net/manual/add-note.php3">';
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
