@@ -15,7 +15,7 @@ fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
-id	id.php.net		202.146.0.241
+#id	id.php.net		202.146.0.241
 #il	il.php.net	Zeev Suraski <zeev@php.net>	199.203.100.253	same as php.netvision.net.il
 #il	machba.il.php.net		132.68.252.253	same as php.technion.ac.il
 it	it.php.net	fmal@fmal.com	php.fmal.com
