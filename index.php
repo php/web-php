@@ -84,7 +84,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 <h3>Syndication</h3>
 
 <p>
-You can grab our news as an <img src="/gifs/rss10.gif" align="absmiddle" alt="XML" />
+You can grab our news as an <img src="/images/rss10.gif" align="absmiddle" alt="XML" />
 (RSS) feed via a daily dump in a file named <a href="/news.rss">news.rss</a>.
 </p>
 
@@ -191,7 +191,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
+<?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("news/phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
@@ -221,7 +221,7 @@ discusses the legal, moral and other implications of linux and free software.</p
  
 <?php echo hdelim(); ?>
 
-<?php print_link("http://phpconf.phpquebec.org/index.php", make_image("conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+<?php print_link("http://phpconf.phpquebec.org/index.php", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&21rst, 2003)</h1>
 <p>
@@ -242,7 +242,7 @@ showroom professional solutions.</p>
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.phpconference.com/", make_image("international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
+<?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
 <p>
@@ -307,7 +307,7 @@ the full <a href="release_4_3_0.php">release announcement</a>.
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("news/chmhelp.gif", "CHM", "right") ); ?>
 
 <h1>New Release of the PHP Manual CHM Edition - Please Help Us</h1>
 <p>
@@ -328,7 +328,7 @@ would give you more options in displaying the pages.
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.mysql.com/events/uc2003/", make_image("mysqluc2003.png", "MySQL Users Conference and Expo 2003", "right") ); ?>
+<?php print_link("http://www.mysql.com/events/uc2003/", make_image("news/mysqluc2003.png", "MySQL Users Conference and Expo 2003", "right") ); ?>
 
 <h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
 <p>
@@ -359,7 +359,7 @@ file is available on every mirror site.
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.afup.org/", make_image("afup-logo.gif", "AFUP", "right") ); ?>
+<?php print_link("http://www.afup.org/", make_image("news/afup-logo.gif", "AFUP", "right") ); ?>
 
 <h1>Forum PHP 2002 in Paris, France</h1>
 <p>

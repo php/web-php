@@ -38,7 +38,7 @@ list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "PHP Conference 2002", "right")); ?>
+<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("news/phpconf2002.gif", "PHP Conference 2002", "right")); ?>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
@@ -63,7 +63,7 @@ persons get special discounts.</p>
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.php-con.com/", make_image("phpcon2002.png", "PHPCon 2002", "right") ); ?>
+<?php print_link("http://www.php-con.com/", make_image("news/phpcon2002.png", "PHPCon 2002", "right") ); ?>
 
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
 <p>
@@ -167,7 +167,7 @@ and to help others.
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
+<?php echo make_image("news/engine.gif", "Zend Engine 2", "right"); ?>
 
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
 <p>
@@ -204,7 +204,7 @@ Developer Kit site</a>. This version is based on the
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("linuxtag3.gif", "LinuxTag", "right"); ?>
+<?php echo make_image("news/linuxtag3.gif", "LinuxTag", "right"); ?>
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
 <font class="newsdate">[23-May-2002]</font> PHP will be attending 
@@ -246,7 +246,7 @@ extension. Also a few extra checks for safe_mode were added. For more informatio
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("phpaward_100.gif", "PHP Award", "right"); ?>
+<?php echo make_image("news/phpaward_100.gif", "PHP Award", "right"); ?>
 
 <h1>PHP Award 2002</h1>
 <p>
@@ -292,7 +292,7 @@ domxml, posix, sockets and iconv extensions. For more information, see the
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("news/chmhelp.gif", "CHM", "right") ); ?>
 
 <h1>Fifth sample of 'PHP Manual CHM Edition'</h1>
 
@@ -312,7 +312,7 @@ and send us your feedback to our
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("phpmag.gif", "PHP Magazin", "right"); ?>
+<?php echo make_image("news/phpmag.gif", "PHP Magazin", "right"); ?>
 
 <h1>PHP Magazin out now!</h1>
 <p>
@@ -337,7 +337,7 @@ and what are your possibilities. Read it in our new
 
 <?php echo hdelim(); ?>
 
-<?php echo make_image("brain.gif", "PHPDoc Brain", "right"); ?>
+<?php echo make_image("news/brain.gif", "PHPDoc Brain", "right"); ?>
 
 <h1>PHP Documentation Team Meeting</h1>
 <p>
@@ -395,7 +395,7 @@ learn this exciting extension and also contribute to the project.
 
 <?php echo hdelim();
 
-print_link("http://www.phpconference.de/2001/index_en.php", make_image("international_conference.gif", 
+print_link("http://www.phpconference.de/2001/index_en.php", make_image("news/international_conference.gif", 
 							"International PHP Conference 2001", "right") ); ?>
 
 <h1>International PHP Conference slides available</h1>
@@ -460,7 +460,7 @@ let us know.
 <?php echo hdelim(); ?>
 
 <h1>Rackspace providing additional hosting for PHP project</h1>
-<?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
+<?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("news/rackspace.gif", "Rackspace", "right") ); ?>
 
 <p>
 <font class="newsDate">[17-Sep-2001]</font>
@@ -500,7 +500,7 @@ times by visiting the closest mirror. See the bottom of our pages.
 
 <?php echo hdelim(); ?>
 
-<h1><?php print_link("http://gtk.php.net/", make_image("php-gtk-white.gif", "PHP-GTK", "right") ); ?>
+<h1><?php print_link("http://gtk.php.net/", make_image("news/php-gtk-white.gif", "PHP-GTK", "right") ); ?>
 PHP-GTK version 0.1 released</h1>
 
 <p>
@@ -523,7 +523,7 @@ For more information, visit <?php print_link("http://gtk.php.net/")?>.
 <?php echo hdelim(); ?>
 
 <h1>Mailing lists and CVS are up!</h1>
-<?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("pair.gif", "pair Networks", "right") ); ?>
+<?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("news/pair.gif", "pair Networks", "right") ); ?>
 
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
@@ -535,7 +535,7 @@ by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
+<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("news/phplt.gif", "LinuxTag", "right") ); ?>
 
 <h1>LinuxTag 2001 in Europe</h1>
 
