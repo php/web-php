@@ -202,25 +202,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<h1>PHP 4.3.4RC3 released</h1>
-<p>
- <span class="newsdate">[29-Oct-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.4RC3</a> has been released for testing.
- This release candidate is hopefully the final release candidate prior to the
- 4.3.4 release and should be very stable. Please test this release as much as 
- possible, so that any remaining issues can be uncovered and resolved prior to 
- the final release. Users of the mbstring extension are especially encouraged to
- try and test this release candidate as the underlying library used by mbstring
- was changed.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.443&r2=1.1247.2.447">NEWS</a>
- file.
-</p>
-
-<hr />
-
 <?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 26 & 27th</h1>
@@ -389,89 +370,6 @@ commonHeader("Hypertext Preprocessor");
  number of bug fixes and we <strong>strongly</strong> recommend that all
  users of PHP upgrade to this version. Full list of fixes can be found in
  the <a href="ChangeLog-4.php#4.3.3">NEWS</a> file.
-</p>
-
-<hr />
-
-<?php news_image("http://www.ActiveState.com/Corporate/ActiveAwards/", "activestate_logo.gif", "ActiveState"); ?>
-
-<h1>Active Awards 2003 Winners</h1>
-
-<p>
- <span class="newsdate">[15-Aug-2003]</span>
- The <a href="http://www.activestate.com/Corporate/ActiveAwards/">Active Awards</a>
- are held annually to honor members of the open source community who actively
- contribute to open source languages and display excellence in their programming
- efforts. Programmers' Choice Award winners were nominated and chosen by the open
- source community. Activators' Choice Award winners were chosen by ActiveState's
- development team.
-</p>
-<p>
- This year's nominees were: Monte Ohrt, Paul S. Owen, Stanislav Malyshev,
- Stig Bakken and Wez Furlong. The Programmers' Choice winner is
- <strong>Stig Bakken</strong>, the father of PEAR. The Activators' Choice
- winner is <strong>Ilia Alshanetsky</strong>, member of the PHP Quality
- Assurance team, developer of the fudforum package, and a major contributor
- to PHP development.
-</p>
-
-<hr />
-
-<h1>PHP.net news history</h1>
-
-<p>
- <span class="newsdate">[15-Aug-2003]</span>
- Ever wonder what was the original PHP 3.0 release announcement, what
- where the choices when the PHP: Hypertext Preprocessor name was
- choosen, or since when you can use URL shortcuts to access pieces
- of our site? We have digged up some of the most interesting news
- items published on PHP.net since January 1998, when the site started
- to serve its visitors. You can find these <a href="/news-2003.php">in
- the news archives</a>. There is also some historical information in
- <a href="/history">the manual's history appendix</a>.
-</p>
-
-<hr />
-
-<h1>Select mirror for redirection</h1>
-
-<p>
- <span class="newsdate">[13-Aug-2003]</span>
- The www.php.net site tries to do the best to choose close mirrors based
- on all available data when redirecting users to mirror sites. Sometimes
- close mirror sites are unfortunately not the fastest. This is why we have
- added the mirror site selection possibility to <a href="/my.php">our My
- PHP.net service</a>, which enables users to select a specific mirror
- site for redirections.
-</p>
-
-<hr />
-
-<?php news_image("http://www.php-mag.net/", "php-mag.gif", "PHP Magazine"); ?> 
-
-<h1>PHP Magazine web site now with daily news</h1>
-
-<p>
- <span class="newsdate">[12-Aug-2003]</span>
- <a href="http://www.php-mag.net/">The International PHP Magazine web site</a>
- now offers daily news for PHP professionals and beginners from all over the
- world, helping them to stay up-to-date with the latest news on PHP and
- related technologies.
-</p>
-
-<hr />
-
-<h1>URL Shortcuts and Site Search</h1>
-
-<p>
- <span class="newsdate">[29-Jul-2003]</span>
- After many of our users requested a change in how
- <a href="/urlhowto.php">our URL shortcuts</a> behave when someone mistypes
- a shortcut, the default behaviour now is to look for a function name
- instead of performing a documentation search on Google. Those, who were
- satisfied with the Google search, can <a href="/my.php">set their
- preference at the My PHP.net page</a>. We are working on a better
- onsite search solution, Google is used temporarily to search our site.
 </p>
 
 <hr />
