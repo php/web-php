@@ -392,18 +392,23 @@ function clean_note($text) {
     $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\"|\\.\\s|$)/","<a href=\"\\1\">\\1</a>\\3",$text);
 
     /* this 'fixing' code will go away eventually. */
-    $fixes = array('<br>','<p>','</p>');
+    $fixes = array('<br>', '</p>');
     reset($fixes);
     while (list(,$f)=each($fixes)) {
         $text=str_replace(htmlspecialchars($f), $f, $text);
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
     
-    /* Make sure <p> tags stay in the CSS "note" class*/
-    $text = str_replace (array ('<P>', '<p>'), '<p class="note">', $text);
+    /* <p> tags make things look awfully weird (breaks things out of the <code>
+       tag). Just convert them to <br>'s
+    */
+    $text = str_replace (array ('<P>', '<p>'), '<br>', $text);
+    
+    /* Remove </p> tags to prevent it from showing up in the note */
+    $text = str_replace (array ('</P>', '</p>'), '', $text);
 
     /* preserve linebreaks */
-    	$text = str_replace("\n", "<br>", $text);
+    $text = str_replace("\n", "<br>", $text);
 
     /* this will only break long lines */
     if (function_exists("wordwrap")) {
