@@ -3,9 +3,18 @@ require_once 'prepend.inc';
 commonHeader("Unsubscribing");
 ?>
 
+<h1>Unsubscribing From a Mailing List</h1>
+
 <p>All of the mailing lists hosted at <a
 href="http://lists.php.net/">lists.php.net</a> are managed using the <a
 href="http://www.ezmlm.org/">ezmlm-idx</a> mailing list software.</p>
+
+<p><b>If the mailing list you would like to unsubscribe from is listed
+in the list on our <a href="/mailing-lists.php">mailing lists page</a>,
+then you don't need to use your mail client to unsubscribe, you can do
+so on the web, using the form on the page.</b> If you still need to find
+out what email address you used to subscribe, the instructions on this
+page can help.</p>
 
 <p>First off, if your email address has changed since you subscribed, don't
 panic! If you are still able to receive mail at your old email address, you can
