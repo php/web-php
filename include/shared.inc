@@ -548,7 +548,7 @@ function commonFooter() {
 <? if (($NS4 || $IE4) && !$DISABLE_KICKOUTS):	/* Kick outs */ ?>
 
 <DIV ID='mirrorsKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
-<? kickHeader(-20,'left',350);?>
+<? kickHeader(-20,'left',400);?>
 <FORM ACTION='redirect.php3' METHOD='POST'>
 <B>Pick a mirror site close to you:</B><BR>
 <SELECT NAME="URL">
