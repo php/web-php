@@ -119,7 +119,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>LinuxTag 2002: Pictures available</h1>
 <p>
 <font class="newsDate">[09-Jun-2002]</font>
-<?php print_link('http://photoalbum.nohn.net/Linuxtag2002',
+<?php print_link('http://photos.l33t-h4x0r.de/LinuxTag%202002/',
 'Pictures'); ?> taken on <?php print_link('http://www.linuxtag.de',
 'LinuxTag'); ?> are now available.
 </p>
