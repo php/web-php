@@ -1,0 +1,98 @@
+<!--
+     $Id: package.dtd,v 1.1 2001-04-17 01:17:09 ssb Exp $
+
+     This is the PEAR package description, version 1.0.
+     It should be used with the informal public identifier:
+
+         "-//PHP Group//DTD PEAR Package 1.0//EN//XML"
+
+     Copyright (c) 1997-2001 The PHP Group             
+
+     This source file is subject to version 2.02 of the PHP license,
+     that is bundled with this package in the file LICENSE, and is
+     available at through the world-wide-web at
+     http://www.php.net/license/2_02.txt.
+     If you did not receive a copy of the PHP license and are unable to
+     obtain it through the world-wide-web, please send a note to
+     license@php.net so we can mail you a copy immediately.
+
+     Authors:
+         Stig S. Bakken <ssb@fast.no>
+
+  -->
+<!--============== attributes present in all elements ======================-->
+<!ENTITY % global.atts "id		ID	#IMPLIED">
+<!--============== attributes common to several elements ===================-->
+<!ENTITY % role.atts "Role		(php|ext|test|doc) 'php'">
+<!ENTITY % extension.atts "Debug	(on|off) 'off'
+			   ThreadSafe	(on|off) 'off'">
+<!ENTITY % format.atts "Format		CDATA	#IMPLIED">
+<!--=============== ELEMENT: Package =======================================-->
+<!ELEMENT Package (Name, Summary, Maintainer, Release, FileList)>
+<!ATTLIST Package
+	%global.atts; 
+	Type (Source | Binary | Empty) "Empty"
+>
+<!--=============== ELEMENT: Name ==========================================-->
+<!ELEMENT Name (#PCDATA)>
+<!ATTLIST Name
+	%global.atts; 
+>
+<!--=============== ELEMENT: Summary =======================================-->
+<!ELEMENT Summary (#PCDATA)>
+<!ATTLIST Summary
+	%global.atts; 
+>
+<!--=============== ELEMENT: Maintainer ====================================-->
+<!ELEMENT Maintainer (Initials, Name, Email)>
+<!ATTLIST Maintainer
+	%global.atts; 
+>
+<!--=============== ELEMENT: Initials ======================================-->
+<!ELEMENT Initials (#PCDATA)>
+<!ATTLIST Initials
+	%global.atts; 
+>
+<!--=============== ELEMENT: Email =========================================-->
+<!ELEMENT Email (#PCDATA)>
+<!ATTLIST Email
+	%global.atts; 
+>
+<!--=============== ELEMENT: Release =======================================-->
+<!ELEMENT Release (Version, Date, Notes?)>
+<!ATTLIST Release
+	%global.atts; 
+>
+<!--=============== ELEMENT: Version =======================================-->
+<!ELEMENT Version (#PCDATA)>
+<!ATTLIST Version
+	%global.atts; 
+>
+<!--=============== ELEMENT: Date =========================================-->
+<!ELEMENT Date (#PCDATA)>
+<!ATTLIST Date
+	%global.atts; 
+>
+<!--=============== ELEMENT: Notes =========================================-->
+<!ELEMENT Notes (#PCDATA)>
+<!ATTLIST Notes
+	%global.atts; 
+>
+<!--=============== ELEMENT: FileList ======================================-->
+<!ELEMENT FileList (Dir | File)*>
+<!ATTLIST FileList
+	%global.atts; 
+>
+<!--=============== ELEMENT: Dir ===========================================-->
+<!ELEMENT Dir (#PCDATA)>
+<!ATTLIST Dir
+	%global.atts; 
+>
+<!--=============== ELEMENT: File ==========================================-->
+<!ELEMENT File (#PCDATA)>
+<!ATTLIST File
+	%global.atts; 
+	%role.atts; 
+	%extension.atts; 
+	%format.atts; 
+>
