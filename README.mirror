@@ -4,7 +4,7 @@ First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
 
-   rsync -avzC --delete rsync.php.net::phpweb /your/local/path 
+   rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path 
 
 If /your/local/path isn't in your web document tree (why isn't it?), 
 then symlink the phpweb/ directory to the correct place on your server.
