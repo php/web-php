@@ -32,7 +32,6 @@ make_link("/license/", "official license") . '.
 <h3>Related sites:</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<BR>
 &nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<BR>
-&nbsp; ' . make_link("http://www.pair.net/", "Pair Networks") . '<BR>
 &nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<BR>
 &nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<BR>
 <h3>Community:</h3>
