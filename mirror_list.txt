@@ -29,6 +29,7 @@ jp	jp2.php.net	Hitachi BI Mirrors Administrator <mirrors-adm@hbi.co.jp>	php.hbi.
 kr  kr.php.net  JunSeon Oh <holywar@holywar.net>        php.holywar.net
 li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
 lv	lv.php.net	Kaspars Foigts <laacz@laacz.lv>	php.mediaparks.lv
+lv	lv2.php.net	Alex Petrov <sysman@sysman.net>	php.sysman.net
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
 nl	php.nederland.net	Sander Steffann <steffann@nederland.net>	193.67.110.5 
