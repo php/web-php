@@ -402,6 +402,20 @@ file.
     }
 	</PRE>
 	</DD>
+  <DT><B>
+    When I try to use authentication with IIS I get 'No Input file specified'
+  </B></DT>
+  <DD>
+    The security model of IIS is at fault here, this is a problem common to all CGI
+	programes running under IIS.  A workaround is to create a plain HTML file (not parsed
+	by php) as the entry page into an authenticated directory.  Then use a meta tag to redirect
+	to the php page, or have a link to the php page.  PHP will then recognize the authentication
+	correctly.  When the ISAPI module is ready, this will no longer be a problem.  This should
+	not effect other NT web servers.  For more information, see:
+	<a href="http://www.microsoft.com/support/kb/articles/q160/4/22.asp" target="_new">http://www.microsoft.com/support/kb/articles/q160/4/22.asp</a>.
+  </DD>
+
+
 </DL>
 
 <H3>New Features</H3>
