@@ -173,7 +173,7 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
+	global $MYSITE, $enclosed;
 	global $SIDEBAR_DATA, $prevsearch;
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
@@ -285,7 +285,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MIRRORS,$MYSITE,$COUNTRIES,$LAST_UPDATED,$enclosed;
+	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$enclosed;
 	if ($enclosed) {
 		echo "</td></tr></table></td></tr></table>\n";
 	}
@@ -321,17 +321,7 @@ function commonFooter() {
 	}
 	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
 	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
-        foreach($MIRRORS as $url=>$mirror) {
-          if ($mirror[4] == 1) { /* only list full mirrors here */
-	    if ($url==$MYSITE) {
-              echo '<option value="' . $url . '" SELECTED>' . $COUNTRIES[$mirror[0]] . 
-		' (' . $mirror[1] . ") *\n";
-	    } else {
-              echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
-		' (' . $mirror[1] . ")\n";
-	    }
-          }
-	}
+	show_mirror_options($MYSITE);
 	echo "</select> ";
 	echo make_submit('small_submit.gif', 'go', 'bottom' );
       ?>&nbsp;<br>

@@ -41,6 +41,21 @@ function mirror_provider_url() {
   return $MIRRORS[$MYSITE][3];
 }
 
+function show_mirror_options ($current) {
+  global $MIRRORS, $COUNTRIES;
+  foreach ($MIRRORS as $url=>$mirror) {
+    if ($mirror[4] == 1) { /* only list full mirrors here */
+      if ($url==$current) {
+        echo '<option value="' . $url . '" SELECTED>' . $COUNTRIES[$mirror[0]] . 
+          ' (' . $mirror[1] . ") *\n";
+      } else {
+        echo '<option value="' . $url . '">' . $COUNTRIES[$mirror[0]] . 
+          ' (' . $mirror[1] . ")\n";
+      }
+    }
+  }
+}
+
 $COUNTRIES = array(
    "au" => "Australia",
    "at" => "Austria",
