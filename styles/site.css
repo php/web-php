@@ -48,7 +48,7 @@ img {
 	border: 0px;
 }
 
-div.tip {
+div.tip, p.tip {
 	border: 1px solid #0000cc;
 	color: #000066;
 	background-color: #eeeeff;
