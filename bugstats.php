@@ -2,22 +2,12 @@
 require_once 'prepend.inc';
 
 if(!is_primary_site()) {
-        header("Location: http://www.php.net/bugstats.php");
+	header("Location: http://www.php.net/bugstats.php");
 	exit;
 }
 
 if ($phpver != 4 and $phpver != 3) {
 	$phpver = 0;
-}
-
-function mydate($str) {
-	$year = substr($str,0,4);
-	$month = substr($str,5,2);
-	$day = substr($str,8,2);
-	$hour = substr($str,11,2);
-	$min = substr($str,14,2);
-	$sec = substr($str,17,2);
-	return mktime($hour,$min,$sec,$month,$day,$year);
 }
 
 function ShowTime($sec) {
@@ -52,61 +42,34 @@ else {
 mysql_connect("localhost","nobody","");
 mysql_select_db("php3");
 
-$query = "SELECT * from bugdb";
+$query = "SELECT *,UNIX_TIMESTAMP(ts2)-UNIX_TIMESTAMP(ts1) AS timetoclose FROM bugdb";
 
 if ($phpver > 0) {
 	$query .= " WHERE php_version LIKE '" . $phpver . "%'";
 }
 
-$query.= " ORDER BY bug_type";
+$query .= " ORDER BY bug_type";
 
-$result=mysql_unbuffered_query($query);
+$result = mysql_unbuffered_query($query);
 
-while($row=mysql_fetch_row($result)) {
-	$bug_type['all'][$row[1]]++;
-	if($row[7]=="Open") {
-		$bug_type['open'][$row[1]]++;
-		$bug_type['open']['all']++;
-	}
-	if($row[7]=="Critical") {
-		$bug_type['critical'][$row[1]]++;
-		$bug_type['critical']['all']++;
-	}
-	if($row[7]=="Analyzed") {
-		$bug_type['analyzed'][$row[1]]++;
-		$bug_type['analyzed']['all']++;
-	}
-	if($row[7]=="Feedback" || $row[7]=="OldFeedback") {
-		$bug_type['feedback'][$row[1]]++;
-		$bug_type['feedback']['all']++;
-	}
-	if($row[7]=="Suspended") {
-		$bug_type['suspended'][$row[1]]++;
-		$bug_type['suspended']['all']++;
-	}
-	if($row[7]=="Duplicate") {
-		$bug_type['duplicate'][$row[1]]++;
-		$bug_type['duplicate']['all']++;
-	}
-	if($row[7]=="Assigned") {
-		$bug_type['assigned'][$row[1]]++;
-		$bug_type['assigned']['all']++;
-	}
-	$email[$row[2]]++;
-	$php_version[$row[5]]++;
-	$php_os[$row[6]]++;
-	$status[$row[7]]++;
-	if($row[7]=="Closed") {
-		$bug_type['closed'][$row[1]]++;
-		$bug_type['closed']['all']++;
-		if (mydate($row[10]) > mydate($row[9])) {
-			$time_to_close[] = mydate($row[10]) - mydate($row[9]);
+while($row=mysql_fetch_array($result)) {
+	$bug_type['all'][$row[bug_type]]++;
+	switch (strtolower($row[status])) {
+	case "closed":
+		if ($row[timetoclose] > 0) {
+			$time_to_close[] = $row[timetoclose];
 		}
-		$closed_by[$row[11]]++;
+                /* falls through */
+	case "bogus":
+		$closed_by[$row[dev_id]]++;
+		break;
 	}
-	if($row[7]=="Bogus") {
-		$closed_by[$row[11]]++;
-	}
+	$bug_type[strtolower($row[status])][$row[bug_type]]++;
+	$bug_type[strtolower($row[status])]['all']++;
+	$email[$row[email]]++;
+	$php_version[$row[php_version]]++;
+	$php_os[$row[php_os]]++;
+	$status[$row[status]]++;
 	$total++;
 }
 
@@ -129,6 +92,7 @@ echo "<table>\n";
 /* prepare for sorting by bug report count */
 foreach($bug_type['all'] as $type => $value) {
 	if(!isset($bug_type['closed'][$type]))    $bug_type['closed'][$type] = 0;
+	if(!isset($bug_type['bogus'][$type]))     $bug_type['bogus'][$type] = 0;
 	if(!isset($bug_type['open'][$type]))      $bug_type['open'][$type] = 0;
 	if(!isset($bug_type['critical'][$type]))  $bug_type['critical'][$type] = 0;
 	if(!isset($bug_type['analyzed'][$type]))  $bug_type['analyzed'][$type] = 0;
@@ -167,10 +131,24 @@ echo "<th>".sort_url('analyzed')."</th>";
 echo "<th>".sort_url('suspended')."</th>";
 echo "<th>".sort_url('duplicate')."</th>";
 echo "<th>".sort_url('assigned')."</th>";
-echo "<th>".sort_url('feedback')."</th></tr>\n";
+echo "<th>".sort_url('feedback')."</th>";
+echo "<th>".sort_url('bogus')."</th>";
+echo "</tr>\n";
 
-echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('critical', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
-foreach($bug_type[$sort_by] as $type => $value) {
+echo "<tr><th align=right bgcolor=#aabbcc>All:</th>",
+     "<td align=center bgcolor=#ccddee>$total</td>",
+     "<td align=center bgcolor=#ddeeff>".bugstats('closed','all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ddeeff>".bugstats('critical', 'all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ccddee>".bugstats('analyzed', 'all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ddeeff>".bugstats('suspended','all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ccddee>".bugstats('duplicate', 'all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ddeeff>".bugstats('assigned','all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ccddee>".bugstats('feedback','all')."&nbsp;</td>",
+     "<td align=center bgcolor=#ddeeff>".bugstats('bogus', 'all')."&nbsp;</td>",
+     "</tr>\n";
+
+foreach ($bug_type[$sort_by] as $type => $value) {
 	if(($bug_type['open'][$type] > 0 || 
 		$bug_type['critical'][$type] > 0 ||
 		$bug_type['analyzed'][$type] > 0 ||
@@ -179,9 +157,21 @@ foreach($bug_type[$sort_by] as $type => $value) {
 		$bug_type['assigned'][$type] > 0 ||
 		$bug_type['feedback'][$type] > 0 ) && $type != 'all') 
 	{ 
-		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>".$bug_type['all'][$type]."</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('critical',$type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
+		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th>",
+		     "<td align=center bgcolor=#ccddee>".$bug_type['all'][$type]."</td>",
+		     "<td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ddeeff>".bugstats('critical',$type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ccddee>".bugstats('analyzed', $type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ddeeff>".bugstats('suspended',$type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ccddee>".bugstats('duplicate', $type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ddeeff>".bugstats('assigned',$type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ccddee>".bugstats('feedback',$type)."&nbsp;</td>",
+		     "<td align=center bgcolor=#ddeeff>".bugstats('bogus', $type)."&nbsp;</td>",
+		     "</tr>\n";
 	}
 }
+
 echo "</table>\n";
 
 sort($time_to_close);
