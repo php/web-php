@@ -40,6 +40,7 @@ se	se.php.net	Kalle Kiviaho <kivi@ios.chalmers.se>	129.16.214.87
 sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 tr	tr.php.net		php.bilkent.edu.tr	inactive - removed from mirrors array
+tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
 ua	ua2.php.net	Max Khaikin <max@alkar.net>	php.ndot.com.ua
 uk	uk.php.net	Gareth Watts <gareth@omnipotent.net>	194.73.160.93
