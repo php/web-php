@@ -27,47 +27,38 @@ And once again since people just don't seem to understand this point:
 <table>
  <tr bgcolor="#cccccc">
   <td><b>Does <u>Not</u> Require CVS Account</b></td>
-  <td>&nbsp;</td>
   <td><b>Requires CVS Account</b></td></tr>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Learning PHP</td>
-  <td>&nbsp;</td>
   <td bgcolor="#eeeeee">Developing the PHP runtime</td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Coding in PHP</td>
-  <td>&nbsp;</td>
   <td bgcolor="#eeeeee">Maintaining an official, bundled PHP extension</td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Reading the PHP source</td>
-  <td>&nbsp;</td>
-  <td bgcolor="#eeeeee"></td>
+  <td bgcolor="#eeeeee">Maintaining the documentation</td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Using PHP extensions</td>
-  <td>&nbsp;</td>
-  <td bgcolor="#eeeeee"></td>
+  <td bgcolor="#eeeeee">Translating the documentation</td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Creating experimental PHP extensions</td>
-  <td>&nbsp;</td>
-  <td bgcolor="#eeeeee"></td>
+  <td bgcolor="#eeeeee">Maintaining www.php.net</td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Submitting a patch to PHP</td>
-  <td>&nbsp;</td>
   <td bgcolor="#eeeeee"></td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Adding notes to the documentation</td>
-  <td>&nbsp;</td>
   <td bgcolor="#eeeeee"></td>
  </tr>
  <tr>
   <td bgcolor="#dddddd">Writing web pages with PHP</td>
-  <td>&nbsp;</td>
   <td bgcolor="#eeeeee"></td>
  </tr>
 </table>
