@@ -233,12 +233,12 @@ function commonHeader($title="",$dont_enclose=0) {
     $enclosed = 1;
 ?>
 
-<table width="150" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
+<table width="125" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
 <tr valign="top">
 <td>
 
 <!-- sidebar table starts -->
-<table width="150" align="left" cellpadding="4" cellspacing="0">
+<table width="124" align="left" cellpadding="4" cellspacing="0">
 <tr valign="top">
 <td><small>
 <p>
@@ -257,7 +257,7 @@ Stuff goes in here.
 
 <!-- main section -->
 
-<table width="620"
+<table width="650"
 	align="left"
 	cellpadding="10" cellspacing="0"
 ><tr><td valign="top">
