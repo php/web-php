@@ -1,4 +1,6 @@
 <?
+require_once 'prepend.inc';
+
 if (isset($user) && isset($pass)) {
   $MAGIC_COOKIE = base64_encode("$user:$pass");
   # we set a cookie good for five years

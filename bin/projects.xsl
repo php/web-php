@@ -28,11 +28,6 @@
 <xsl:template match="/search-results">
  <!-- Loop through all the matches -->
  <xsl:for-each select="match">
- <tr bgcolor="#D0D0D0" valign="top">
-  <td align="left"><img alt=" " src="/gifs/gcap-lefttop.gif" width="18" 
-   height="18" border="0" /><br /></td>
-  <td align="left" rowspan="2">
-   <font face="tahoma, verdana, arial, helvetica, sans-serif" size="-1">
    <xsl:element name="a">
     <xsl:attribute name="href">
      <xsl:value-of select="url_homepage" />
@@ -45,33 +40,10 @@
    License: <xsl:value-of select="license" />
    <xsl:text> -- </xsl:text>
    Updated: <i><xsl:value-of select="date_updated" /></i>
-   </font>
-  </td>
-  <td align="right"><img alt=" " src="/gifs/gcap-righttop.gif" width="18"
-   height="18" border="0" /><br /></td>
- </tr>
- <tr valign="bottom" bgcolor="#D0D0D0">
-  <td align="left"><img alt=" " src="/gifs/gcap-leftbot.gif" width="18" 
-   height="18" border="0" /><br /></td>
-  <td align="right"><img alt=" " src="/gifs/gcap-rightbot.gif" width="18"
-   height="18" border="0" /><br /></td>
- </tr>
- <tr valign="top">
-  <td width="18"><br /></td>
-  <td align="left">
-   <table border="0" cellpadding="5" cellspacing="0" bgcolor="#F0F0F0" width="100%">
-     <tr>
-      <td>
-       <font face="tahoma, verdana, arial, helvetica, sans-serif" size="-1">
-       <xsl:value-of select="desc_full" />
-       </font>
-      <br/>
-     </td>
-    </tr>
-   </table>
-  </td>
-  <td width="18"><br /></td>
- </tr>
+   <br />
+   <br />
+   <xsl:value-of select="desc_full" />
+   <hr noshade="1" size="1" color="#000000" />
  </xsl:for-each>
 </xsl:template>
 

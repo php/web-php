@@ -1,6 +1,6 @@
 <?php
-require("shared.inc");
-commonHeader("Documentation ");
+require_once 'prepend.inc';
+commonHeader("Documentation");
 
 $languages = array(
  "en" => "English",
@@ -17,6 +17,8 @@ $languages = array(
 );
 
 $formats = array(
+ "" => array("View Online", "view"),
+ "html/" => array("View Online (plain)", "view"),
  "bigmanual.html.gz" => array("Single HTML (compressed)", "html.gz"),
  "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb"),
  "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb"),
@@ -28,12 +30,17 @@ $formats = array(
 );
 ?>
 
-<H1>PHP FAQ</H1>
+<H1>
+PHP FAQ
+</H1>
 <ul>
 <li>The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
     information and those questions that seem to be on most people's minds.
 
 </ul>
+
+
+<? echo hdelim(); ?>
 
 <?php
 $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
@@ -49,7 +56,12 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
     whistles.
 </ul>
 
-<H2>PHP Annotated Manuals</H2>
+
+
+<? echo hdelim(); ?>
+
+
+<H1>PHP Annotated Manuals</H1>
 <ul>
 <LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
     is the same as the above, except there is a built-in errata/note system
@@ -62,7 +74,11 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
     system.
 </ul>
 
-<H1>Downloadable PHP Manuals</H1>
+
+
+<? echo hdelim(); ?>
+
+<h1>Downloadable PHP Manuals</h1>
 
 <p>The PHP manual is also available in a selection of downloadable
 formats for off-line use. Pick your format and language from the
@@ -104,7 +120,8 @@ table below:</p>
    }?>
 </table>
 
-<H1>More information</H1>
+<h1>More Information</h1>
+
 <ul>
 <li><a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>.
     This page has a overview about which pages are translated to the
@@ -117,6 +134,11 @@ table below:</p>
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
+
+
+<? echo hdelim(); ?>
+
+
 <H1>CVS Account</H1>
 <ul>
 <li><a href="/anoncvs.php">CVS instructions</a></li>
@@ -124,7 +146,12 @@ table below:</p>
 with the development of PHP, read this.
 </ul>
 
-<H1>Old/unsupported information</H1>
+
+
+<? echo hdelim(); ?>
+
+
+<h1>Old/Unsupported Information</h1>
 <ul>
 <li><a href="/manual/phpfi2.html">PHP/FI 2.0 Manual</a>. 
 </ul>

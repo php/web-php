@@ -1,0 +1,82 @@
+body, td, th {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+}
+
+em {
+	font-weight: bold;
+	font-style: italic;
+}
+
+pre,code {
+	font-family: "andale mono", "monotype.com", "courier new", monospace;
+	font-size: 12px;
+}
+
+h1 {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #000066;
+}
+
+h2 {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000066;
+}
+
+h3 {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000066;
+}
+
+small {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+}
+
+a.small {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.tableTitle {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.tableExtras {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+}
+
+
+input {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 13px;
+}
+
+textarea {
+	font-family: "andale mono", "monotype.com", "courier new", monospace;
+	font-size: 13px;
+}
+
+input.small, select.small {
+	font-family: arial,helvetica,sans-serif;
+	font-size: 11px;
+}
+
+textarea.small {
+	font-family: "andale mono", "monotype.com", "courier new", monospace;
+	font-size: 11px;
+}
+
+// manual stuff
+

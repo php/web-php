@@ -1,4 +1,6 @@
 <?
+require_once 'prepend.inc';
+
 /*
 You need to grab http://www.php.net/Mirrors-htdig.tgz and follow the
 directions in there if you want to run the search engine on your
@@ -9,7 +11,6 @@ if (isset($pattern) && ($pattern)) {
 	SetCookie("prevsearch",$pattern,0,"",".php.net");
 }
 
-require("shared.inc");
 $HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 if (isset($pattern) && ($pattern)) {
@@ -49,33 +50,27 @@ if (isset($pattern) && ($pattern)) {
 }		
 
 if (file_exists("configuration.inc")) {
-  include("configuration.inc");
+  include_once 'configuration.inc';
 }
 
 function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
-	global $FONTFACE;
+	$last = $next = '&nbsp;';
 	if ($page>1) {
 		$i=$page-1;
-		$last="<A HREF=\"$baseurl&page=$i\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A>";
-	} else {
-		$last="&nbsp;";
+		$last=make_link($baseurl.'&page='.$i, 'prev page');
 	}
 	if ($page<$pages) {
 		$i=$page+1;
-		$next="<A HREF=\"$baseurl&page=$i\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A>";
-	} else {
-		$next="&nbsp;";
+		$next=make_link($baseurl.'&page='.$i, 'next page');
 	}
 
 	$middle="<B>Displaying results $firstdisplayed to $lastdisplayed</B>";
 
-	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
+	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#cccccc' CELLPADDING=0 CELLSPACING=0>\n";
 	echo "<TR VALIGN=middle>\n";
-	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "<TD ALIGN=left WIDTH=75>$last<BR></TD>\n";
-	echo "<TD ALIGN=center WIDTH=100%><FONT FACE='$FONTFACE' SIZE=-1>$middle<BR></TD>\n";
+	echo "<TD ALIGN=center WIDTH=100%>$middle<BR></TD>\n";
 	echo "<TD ALIGN=right WIDTH=75>$next<BR></TD>\n";
-	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "</TR></TABLE><BR>\n";
 }
 
@@ -84,22 +79,23 @@ if(!isset($pattern)) {
 	commonHeader("Site Search");
 	$form=$PHP_SELF;
 ?>
+<h1>Search</h1>
 <FORM ACTION="<?echo $form;?>" METHOD="POST">
 <CENTER>
 <TABLE CELLSPACING=0 CELLPADDING=2>
 <TR VALIGN=top>
-<TD ALIGN=RIGHT><FONT FACE="<? echo $FONTFACE;?>">
+<TD ALIGN=RIGHT>
 Search for: <BR>
-</FONT></TD>
+</TD>
 <TD>
 <INPUT TYPE="text" NAME="pattern" VALUE="<?echo $prevsearch;?>" SIZE=30>
-<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
+<INPUT TYPE="submit" VALUE=" Search "><BR>
 </FONT></TD>
 </TR>
 <TR VALIGN=top>
-<TD ALIGN=RIGHT><FONT FACE="<? echo $FONTFACE;?>">
+<TD ALIGN=RIGHT>
 Restrict the search to: <BR>
-</FONT></TD>
+</TD>
 <TD>
 <SELECT NAME="show">
 <OPTION VALUE="nosource" SELECTED>Whole site
@@ -118,13 +114,14 @@ Restrict the search to: <BR>
 </FORM>
 <? } else {
 		commonHeader("Search Results");
+		echo "<h1>Search Results</h1>\n";
 		if ($HAVE_SEARCH && isset($htsearch_prog)) {
 			$form=$PHP_SELF;
 		} else {
 			$form="http://www.php.net/search.php";
 		}
 		if (!isset($base)) {
-			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
+			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,$reg)) {
 				$base=$reg[1];
 			}
 			if ($base==$MYSITE) {
@@ -162,7 +159,7 @@ Restrict the search to: <BR>
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
 		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
-		exec("$htsearch_prog \"$query\"",&$result);
+		exec("$htsearch_prog \"$query\"",$result);
 		$rc=count($result);
 		if ($rc<2) {
 			echo "<B>There was an error executing this query.</B><BR><BR>Please try later<BR><BR>";
@@ -196,16 +193,20 @@ Restrict the search to: <BR>
 			}
 			echo "\n";
 			$i++;
+
+			echo hdelim("#cccccc");
+
 		}
 		echo "<BR>\n";
+
 
 		makeBar("2",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		?>
-		<CENTER>
-		<BR><I>Search results courtesy of</I><BR>
-		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="/gifs/htdig.gif" BORDER=0 ALT="ht:dig"></A>
-		</CENTER>
+		<p>
+		Search powered by<BR>
+		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="/gifs/htdig.gif" BORDER=0 ALT="ht:dig">
+		</p>
 		<?
 }
 commonFooter();

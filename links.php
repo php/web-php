@@ -1,9 +1,19 @@
 <?
-	require("shared.inc");
-	commonHeader("Links");
+require_once 'prepend.inc';
+commonHeader("Links");
 ?>
 
-<h3>Developers and Job Opportunities</h3>
+<h1>Projects</h1>
+
+<p>
+An increasing number of projects, both commercial and open
+source, are using PHP as their main development tool. There
+is <a href="/projects.php">a listing of some of the
+open-source PHP applications available</a>, courtesy of <a
+href="http://freshmeat.net/">freshmeat</a>.  </p>
+
+
+<h1>Developers and Job Opportunities</h1>
 <P>
 Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.
 PHP developers can post their resumes, and employers can post their job notices.
@@ -25,7 +35,10 @@ search sites on the web, take a look at <a
 href="http://www.dmoz.org/Business/Employment/Job_Search/">dmoz.org's
 Job Search listings</a>.</p>
 
-<h3>ISPs that support PHP</h3>
+<? echo hdelim(); ?>
+
+
+<h1>ISPs that support PHP</h1>
 <P>
 Looking for an ISP or hosting service that supports PHP?  Try one of the following sites:
 </P>
@@ -36,7 +49,11 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 <LI>PMCW webservices (<a href="http://pmcw.dhs.org/">http://pmcw.dhs.org/</a>)
 </UL>
 
-<h3>Getting Started</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Getting Started</h1>
 <P>On these sites you will find tutorials, articles and example scripts</P>
 <UL>
 
@@ -77,7 +94,7 @@ German speaking portal site with tutorials, tips and tricks, job advertisements,
 German site about PHP with scripts, tips, forums, MyGuestBook, articles, news and more.<BR>
 
 <LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
-German site with installation guides, tips & scripts, BestOfGML,
+German site with installation guides, tips &amp; scripts, BestOfGML,
 WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and more.<BR>
 
 <LI><A HREF="http://www.phpwelt.de/">PHPWelt</A><BR>

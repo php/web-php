@@ -11,9 +11,9 @@
 
 $MIRRORS = array(
    "http://au.php.net:81/"            => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1, 1, "en"),
-#   "http://au2.php.net/"              => array("au", "Planet Mirror", "", "http://www.planetmirror.com/", 1, 0, "en"),
+   "http://au2.php.net/"              => array("au", "Planet Mirror", "", "http://www.planetmirror.com/", 1, 0, "en"),
    "http://at.php.net/"               => array("at", "Goodie Domain Service", "gds", "http://gd.tuwien.ac.at/", 1, 0, "de"),
-#   "http://bg.php.net/"               => array("bg", "Bulgaria Online", "", "http://online.bg/", 1, 0, "en"),
+   "http://bg.php.net/"               => array("bg", "Bulgaria Online", "", "http://online.bg/", 1, 0, "en"),
    "http://br.php.net/"               => array("br", "SST Internet", "sst", "http://www.sst.com.br/", 1, 0, "pt_BR"),
 #   "http://br2.php.net/"               => array("br", "Lune Networks", "", "http://www.lunenetworks.com.br/", 1, 0, "pt_BR"),
    "http://ca.php.net/"               => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0, "en"),
@@ -41,7 +41,7 @@ $MIRRORS = array(
    "http://no.php.net/"               => array("no", "Fast Search &amp; Transfer ASA", "fast", "http://www.fast.no/", 1, 0, "no"),
    "http://pl.php.net/"               => array("pl", "TGR", "tgr", "http://www.tgr.com.pl/", 1, 0, "pl"),
    "http://pt.php.net/"               => array("pt", "Telenet", "telenet", "http://www.telenet.pt/", 1, 1, "pt"),
-#   "http://pt2.php.net/"               => array("pt", "SONET", "", "http://www.sonet.pt/", 1, 0, "pt"),
+   "http://pt2.php.net/"               => array("pt", "SONET", "", "http://www.sonet.pt/", 1, 0, "pt"),
    "ftp://ftp.utt.ro/mirrors/php3/"   => array("ro", "University of Timisoara","upt", "http://www.utt.ro/", 0, 0, "ro"),
    "http://ru.php.net/"               => array("ru", "Direct Internet", "directnet", "http://www.dn.ru/", 1, 0, "ru"),
    "http://se.php.net/"               => array("se", "Chalmers Lindholmen", "cl", "http://www.chl.chalmers.se/", 1, 1, "se"),
@@ -63,6 +63,7 @@ $MIRRORS = array(
    "http://bugs.php.net/"             => array("us", "chek.com", "chek", "http://www.chek.com/", 2, 1, "en"),
    "http://php.he.net/"               => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0, "en"),
    "http://za.php.net/"               => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0, "en"),
+   "http://news.php.net/"              => array("us", "VA Linux", "va", "http://www.valinux.com/", 2, 1, "en"),
    ""                                 => array("xx", "Unknown", "none", "/", 1, 0, "en")
 );
 

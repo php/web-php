@@ -1,5 +1,5 @@
 <?
-require("shared.inc");
+require_once 'prepend.inc';
 commonHeader("Thanks");
 
 function makeEntry($heading) {

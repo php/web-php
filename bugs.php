@@ -1,4 +1,5 @@
 <?php
+require_once 'prepend.inc';
 
 if(isset($save) && isset($user) && isset($pw)) {
     SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
@@ -11,13 +12,16 @@ if(!isset($user))   $user   = '';
 if(!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
-require("shared.inc");
 
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
 } else if (strstr($MYSITE,"localhost")) {
+	$dbhost="localhost";
+	$dbuser="nobody";
+	$dbpwd="";
+} else if (strstr($MYSITE,"news.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
@@ -30,7 +34,6 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$edit = $MAGIC_COOKIE ? 1 : 2;
 */
 
-$DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
 echo "<font size=-1>\n";

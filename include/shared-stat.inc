@@ -1,6 +1,6 @@
 <?php // -*- C++ -*-
 header("Vary: User-Agent");
-require("site.inc");
+require_once 'prepend.inc';
 
 /* Check that browser! */
 

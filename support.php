@@ -1,5 +1,5 @@
 <?php
-require("shared.inc");
+require_once 'prepend.inc';
 commonHeader("Support");
 ?>
 
@@ -31,26 +31,35 @@ if (isset($maillist)) {
 A request has been entered into the mailing list processing queue. You
 should receive an email at <?php echo $email;?> shortly describing how to
 complete your request.
+</p>
 <?php
 	}
 } else {
 
 ?>
-<h3>Documentation</h3>
+<h1>Documentation</h1>
 <P>
 A good place to start is by skimming through the ever-growing <a
 href="/FAQ.php">FAQ</a>.  Then have a look at the online manual and
 other resources in the <a href="/docs.php">documentation</a> section.
 </P>
 
-<h3>Books</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Books</h1>
 <P>
 <a href="/books.php">Books</a> are convenient resources to begin exploring 
 PHP. <a href="/books.php">The titles listed here</a> will help you to start 
 learning PHP, as well as extending your existing knowledge.
 </P>
 
-<h3>Reporting Bugs</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Reporting Bugs</h1>
 <P>If you can't resolve your problem from the
 available documentation or mailing list archives, and you think it might
 be a bug, a <a href="http://bugs.php.net">Bug Database</a> has
@@ -60,13 +69,22 @@ Please read <a href="http://bugs.php.net/bugs-dos-and-donts.php"
 >Dos & Don'ts</a> before posting a report.
 </P>
 
-<h3>User Groups</h3>
 
+<? echo hdelim(); ?>
+
+
+<h1>User Groups</h1>
+<p>
 PHP user groups have started popping up.  Christopher
 R. Moewes-Bystrom is running a PHP user group registry at <a
 href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
+</p>
 
-<h3>Mailing Lists</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Mailing Lists</h1>
 <P>
 One of the best resources is the very friendly and helpful mailing
 lists. There are many PHP-related mailing lists available.
@@ -181,39 +199,47 @@ lists. There are many PHP-related mailing lists available.
 
 ?>
 
-<form method="post" action="http://www.php.net/support.php"><table cellspacing="2" cellpadding="3">
+<form method="post" action="http://www.php.net/support.php">
+<p>
+<table cellpadding="5" cellspacing="1">
 <?php
 
-  while ( list(, $listinfo) = each($mailing_lists)) {
+while ( list(, $listinfo) = each($mailing_lists)) {
+	if (!is_array($listinfo)) {
 
-    if (!is_array($listinfo)) { echo '<tr bgcolor="#D0D0D0"><th colspan="2">' . $listinfo . '</th><th>Moderated</th><th>Archive</th><th>Normal</th><th>Digest</th></tr>' . "\n"; }
-    else {
+		echo '<tr bgcolor="#cccccc">';
+		echo '<th>' . $listinfo . '</th>';
+		echo '<th>Moderated</th>';
+		echo '<th>Archive</th>';
+		echo '<th>Normal</th>';
+		echo '<th>Digest</th>';
+		echo '</tr>' . "\n";
+
+	} else {
   
-      echo '<tr align="center" bgcolor="#F0F0F0"><td><img src="/gifs/blank.gif" width="5" height="5"></td><td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td><td>';
-      if ($listinfo[3]) { echo 'yes'; } else { echo "no"; }
-      echo '</td><td>';
-      if ($listinfo[4]) { echo '<a href="http://marc.theaimsgroup.com/?l=' . $listinfo[0] . '">available</a>'; } 
-      else { echo 'n/a'; }
-      echo '</td><td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td><td>';
-      if ($listinfo[5]) { echo '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">'; }
-      else { echo 'n/a'; }
-      echo '</td></tr>' . "\n";
+		echo '<tr align="center" bgcolor="#e0e0e0">';
+		echo '<td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td>';
+		echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
+		echo '<td>' . ($listinfo[4] ? make_link("http://marc.theaimsgroup.com/?l=".$listinfo[0], 'yes') : 'n/a') . '</td>';
+		echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
+		echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="'.$listinfo[0].'-digest">' : 'n/a' ) . '</td>';
+		echo '</tr>' . "\n";
 
-    }
-  }
+	}
+}
 
 ?>
-
 </table>
+</p>
 
-<p><table align="center">
- <tr>
-  <td><b>Email:</b></td>
-  <td><input type=text name="email" width=40 value="user@example.com"></td>
-  <td><input type=submit name="action" value="Subscribe"></td>
-  <td><input type=submit name="action" value="Unsubscribe"></td>
- </tr>
-</table></p></form>
+<p align="center">
+<b>Email:</b>
+<input type=text name="email" width=40 value="user@example.com">
+<input type=submit name="action" value="Subscribe">
+<input type=submit name="action" value="Unsubscribe">
+</p>
+
+</form>
 
 <p>
 You will be sent a confirmation mail at the address you wish to
@@ -249,7 +275,12 @@ HREF="/search.php">the search page</A> or by using the search button
 on the top-right of every page.
 </p>
 
-<h3>Newsgroups</h3>
+
+
+<? echo hdelim(); ?>
+
+
+<h1>Newsgroups</h1>
 <p>
 The mailing lists hosted at lists.php.net are also gatewayed to
 newsgroups on the server at <a href="news://news.php.net/">news.php.net</a>.
@@ -260,7 +291,12 @@ You can both read and post to the mailing lists through the news
 interface.
 </p>
 
-<h3>Local Mailing Lists</h3>
+
+
+<? echo hdelim(); ?>
+
+
+<h1>Local Mailing Lists</h1>
 <p>
 There are also some mailing lists that have been set up by others in
 the community to host local discussions (particularly non-English
@@ -280,7 +316,12 @@ discussions).
   <li><a href="http://phptr.baslangic.net/">Turkish PHP User's Mailing List</a>
 </ul>
 
-<h3>Sample Code</h3>
+
+
+<? echo hdelim(); ?>
+
+
+<h1>Sample Code</h1>
 <P>
 Looking for some more sample PHP scripts?  Our <A
 HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
@@ -288,8 +329,12 @@ great places to find many example scripts and useful functions, organized for
 your searching pleasure!
 </P>
 
+
+<? echo hdelim(); ?>
+
+
 <a name="phpkb"></a>
-<h3>Knowledge Base</h3>
+<h1>Knowledge Base</h1>
 <P>
 The knowledge base is a growing collection of PHP related information in
 a searchable question and answer format. Anyone can contribute, and
@@ -297,14 +342,22 @@ everyone is encouraged to do so. You can visit the Knowledge Base
 at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
 </P>
 
-<h3>Getting the Latest Development Version</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Getting the Latest Development Version</h1>
 <P>
 PHP is developed using CVS, so it's possible to obtain the latest
 development release at any time. Further instructions can be found in
 the web interface of the <a href="http://cvs.php.net">PHP CVS tree</a>.
 </P>
 
-<h3>Instant Resource Center</h3>
+
+<? echo hdelim(); ?>
+
+
+<h1>Instant Resource Center</h1>
 <P>
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel

@@ -1,7 +1,7 @@
 <?php // -*- C++ -*-
 
-require("shared.inc");
-require("manual-lookup.inc");
+require_once 'prepend.inc';
+require_once 'manual-lookup.inc';
 
 $function = strtolower($function);
 if (!isset($lang)) $lang = $MIRRORS[$MYSITE][6];

@@ -1,11 +1,11 @@
 <?
+require_once 'prepend.inc';
 	if($save && $user && $pw) {
 		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 	}
 
 /* See the end of the script for the table layout. */
 
-require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";

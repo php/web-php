@@ -1,10 +1,8 @@
-<IfModule mod_php3.c>
-php3_include_path .:./include:../include:../../include
-</IfModule>
 <IfModule mod_php4.c>
-php_value include_path .:./include:../include:../../include
+php_value	include_path		.:./include:../include:../../include
+php_flag	short_open_tag		on
 </IfModule>
-DirectoryIndex index.php index.php3
+DirectoryIndex index.php
 AddType application/x-pilot .prc .pdb
 ErrorDocument 404 /error/
 ErrorDocument 401 /error/

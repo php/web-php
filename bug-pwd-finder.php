@@ -1,7 +1,8 @@
 <?
+require_once 'prepend.inc';
+
 /* See bugs.php for the table layout of bugdb. */
 
-require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";

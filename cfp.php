@@ -1,6 +1,6 @@
 <?
-require("shared.inc");
-commonHeader("Hypertext Preprocessor");
+require_once 'prepend.inc';
+commonHeader("Call For Participation");
 ?>
 
 <h1>Call for Participation</h1>

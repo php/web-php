@@ -1,6 +1,6 @@
 <?
-require("shared.inc");
-commonHeader("Download PHP Logos ");
+require_once 'prepend.inc';
+commonHeader("Download PHP Logos");
 ?>
 
 <P>

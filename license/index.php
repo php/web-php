@@ -1,5 +1,5 @@
 <?php
-require("shared.inc");
+require_once "prepend.inc";
 commonHeader("License Information");
 ?>
 

@@ -1,5 +1,5 @@
 <?
-require("shared.inc");
+require_once 'prepend.inc';
 
 $NUMACROSS=2;
 $d = dir("$DOCUMENT_ROOT/manual/en");

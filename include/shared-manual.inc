@@ -1,12 +1,25 @@
 <?php // -*- C++ -*-
-require("shared.inc");
+require_once 'prepend.inc';
 
-$FRAMEMODE="manual";
-
-$navBarNo = "";
+$LANGUAGES = array(
+    'en' => 'English',
+    'pt_BR' => 'Brazilian Portuguese',
+    'nl' => 'Dutch',
+    'fr' => 'French',
+    'de' => 'German',
+    'hu' => 'Hungarian',
+    'it' => 'Italian',
+    'ja' => 'Japanese',
+    'kr' => 'Korean',
+    'ru' => 'Russian',
+    'es' => 'Spanish',
+);
 
 $NEXT = $PREV = $UP = $HOME = array(false, false);
 $TOC = array();
+
+$SIDEBAR_DATA = '';
+
 
 function setupNavigation($data) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $tstamp;
@@ -19,254 +32,206 @@ function setupNavigation($data) {
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
-function makeBullet($url,$number,$offtype,$offnum) {
-    echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n";
-    echo "onMouseout=\"changebullet('bullet$number',$offnum)\">";
-    echo "<IMG SRC=\"/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n ALT=\"*\" NAME=\"bullet$number\">";
-    echo "</A>";
+
+
+function makeBorderTOC($this) {
+	global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
+	global $SIDEBAR_DATA, $LANG;
+
+	$SIDEBAR_DATA = '<form method="GET" action="/manual-lookup.php">' .
+	$SIDEBAR_DATA.= '<table border="0" CELLPADDING="4" CELLSPACING="0">';
+
+	$SIDEBAR_DATA.= '<tr valign="top"><td><small>' .
+		'<input type="hidden" name="lang" value="' . $LANG . '">' .
+		'lookup: <input type="text" class="small" name="function" size="10"> ' .
+		make_submit('small_submit.gif', 'lookup', 'bottom') .
+		'<br></small></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr valign="top"><td>' . 
+		make_link('./', make_image('caret-t.gif', $HOME[1]) . $HOME[1] ) . 
+		'<br></td></tr>';
+
+	$SIDEBAR_DATA.= '<tr bgcolor="#cccccc"><td></td></tr>';
+
+	if (($HOME[1] != $UP[1]) && $UP[1]) {
+		$SIDEBAR_DATA.= '<tr valign="top"><td>' . 
+			make_link($UP[0], make_image('caret-u.gif', $UP[1]) . $UP[1] ) . 
+			'<br></td></tr>';
+	}
+
+	$SIDEBAR_DATA.= '<tr valign="top"><td><small>';
+
+	for ($i = 0; $i < count($TOC); $i++) {
+		list($url, $title) = $TOC[$i];
+		if (!$url || !$title) {
+			continue;
+		}
+		$img = 'box-0.gif';
+		if ($title == $this) {
+			$img = 'box-1.gif';
+		}
+		if ($UP[0] == 'funcref.php') {
+			$title = eregi_replace(" functions\$", "", $title);
+		}
+		$SIDEBAR_DATA .= '&nbsp;' . 
+			make_link($url, make_image($img, $title) . $title ) . 
+			'<br>';
+	}
+
+	$SIDEBAR_DATA.= '</small></td></tr>';
+	$SIDEBAR_DATA.= '</table></form>';
+
 }
 
-function makeBorderTOC($this)
-{
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACEATTR, $PHP_SELF, $DOCUMENT_ROOT;
-    global $HAVE_STYLE, $HAVE_TD_BG;
+function navigationBar($title,$id,$loc) {
+	global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
 
-    $tocfontsize = "-1"; // replace with CSS?
+	echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
-    $FONTCOL = " COLOR=\"#FFFFFF\"";
+	echo '<tr>';
+	echo '<td align="left">';
+	if ($PREV[1]) {
+		echo make_link( $PREV[0] , make_image('caret-l.gif', 'previous') . $PREV[1] ) ;
+	}
+	echo '<br></td>';
 
-    echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=\"100%\">\n";
-    $this = eregi_replace("^Manual: *", "", $this);
+	echo '<td align="right">';
+	if ($NEXT[1]) {
+		echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', 'next') ) ;
+	}
+	echo '<br></td>';
+	echo '</tr>';
 
-    $cur = substr(dirname($PHP_SELF),-3);
-    $file = basename($PHP_SELF);
-    echo "<TR VALIGN=top>\n";
-    echo "<TD COLSPAN=3>";
-    if(substr($file,-5)=='.php3') $file = substr($file,0,-1);
-    
-    // manual languages array [directory, flag code, language]
-    $manual_languages = Array (
-      Array("en",    "uk", "English"),
-      Array("de",    "de", "German"),
-      Array("ja",    "jp", "Japanese"),
-      
-      Array("it",    "it", "Italian"),
-      Array("fr",    "fr", "French"),
-      Array("hu",    "hu", "Hungarian"),
-      
-      Array("es",    "es", "Spanish"),
-      Array("nl",    "nl", "Dutch"),
-      Array("pt_BR", "br", "Brazilian Portuguese"),
-      
-      Array("kr",    "kr", "Korean"),
-      Array("cs",    "cz", "Czech")
-    );
-    
-    while (list($lang_num, $lang_data) = each ($manual_languages)) {
-      if (@is_file("$DOCUMENT_ROOT/manual/$lang_data[0]/$file")) echo "<a href=\"/manual/$lang_data[0]/$file\"><img src=\"/gifs/flag-$lang_data[1].gif\" valign=bottom height=24 width=45 alt=\"$lang_data[2] version of this page\"></a>";
-      else echo "<img src=\"/gifs/blank.gif\" valign=bottom height=24 width=45 alt=\"$lang_data[2] version of this page is not available\">";
-      if ($lang_num % 3 == 2) { echo '<br>'; }
-    }
-    
-    echo "</TD></TR>\n";
+	echo '<tr bgcolor="#cccccc"><td colspan="2">';
+	spacer(1,1);
+	echo '<br></td></tr>';
 
-    echo "<TR VALIGN=top>\n";
-    echo "<TD WIDTH=10>";
-    spc(10, 10);
-    echo "</TD>\n";
-    echo "<TD COLSPAN=2><A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
-    echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
-    echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
+	echo '<tr>';
+	echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp.'<br>';
 
-    for ($i = 0; $i < count($TOC); $i++) {
-    list($url, $title) = $TOC[$i];
-    if (!$url || !$title) {
-        continue;
-    }
-    if ($title == $this) {
-        $type = "w";
-        $out = 2;
-    } else {
-        $type = "p";
-        $out = 0;
-    }
-    if ($UP[0] == 'funcref.php') {
-        $title = eregi_replace(" functions\$", "", $title);
-    }
-    echo "<TR VALIGN=top><TD WIDTH=10>";
-    spc(10,10);
-    echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" ";
-    echo "onMouseover=\"hide();changebullet('bullet$i',1)\" \n";
-    echo "onMouseout=\"changebullet('bullet$i',$out)\">";
-    echo "<IMG SRC=\"/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 ALT=\"*\" BORDER=0 NAME=\"bullet$i\"></A>\n";
-    echo "</TD>\n<TD WIDTH=100%>";
-    echo "<A HREF=\"$url\" onMouseover=\"hide();";
-    echo "changebullet('bullet$i',1)\" \n ";
-    echo "onMouseout=\"changebullet('bullet$i',$out)\" \n";
-    echo "CLASS=sidebartoc>";
-    echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
-    echo "$title</FONT></A></TD></TR>\n";
-    }
-    echo "</TABLE>\n";
-};
+	if ($loc == 'bottom') {
 
-function navigationBar($title) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACE, $tstamp;
-    global $navBarNo;
-    $no = $navBarNo;
-    if ($title!="Show Source") {
-    echo("<!-- start next/prev -->\n");
-    echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
-    echo "<TR VALIGN=middle>\n";
-    echo "<TD ALIGN=left WIDTH=18><IMG SRC='/gifs/gcap-left.gif' ALT=' ' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-    if ($PREV[0] && $PREV[1]) {
-        echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A><BR></TD>\n";
-    }
-    echo "<TD ALIGN=left WIDTH=44%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></FONT></TD>\n";
-    echo "<TD ALIGN=center WIDTH=12% nobr><FONT FACE='$FONTFACE' SIZE=-2>&nbsp;Updated<br>$tstamp<BR></FONT></TD>\n";
-    echo "<TD ALIGN=right WIDTH=44%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></FONT></TD>\n";
-    if ($NEXT[0] && $NEXT[1]) {
-        echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A><BR></TD>\n";
-    }
-    echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' alt=' ' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
-    echo "</TR></TABLE>\n";
-    echo "<BR>\n";
-    $navBarNo = (string)((int)$navBarNo + 2);
-    }
+		$back_url = 'http://' . $SERVER_NAME . 
+			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+			$PHP_SELF;
+		print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url, 'add note',false,'class="small"');
+		echo delim();
+		print_link('/manual/about-notes.php', 'about notes',false,'class="small"',false,'class="small"');
+
+	} else {
+
+		global $LANGUAGES;
+		$links = array();
+		foreach($LANGUAGES as $code=>$name) {
+			if (file_exists("../$code/$id")) {
+				$links[] = make_link("../$code/$id", $name);
+			}
+		}
+		$file = substr($id,0,-4);
+		if (file_exists("html/$file.html")) {
+			$links[] = make_link("html/$file.html", 'Plain HTML');
+		}
+		if (count($links)) {
+			echo 'view this page in ' . join (delim(), $links);
+		}
+	}
+
+	echo '<br></small></td></tr>';
+	echo "</table>\n";
+
 }
 
-
-function makeTitle($title) {
-        global $FONTFACE;
-?>
-<TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD ALIGN=left><?
-        echo "<FONT FACE=\"$FONTFACE\">\n";
-        echo "<B>$title</B><BR></FONT>\n";
-?></TD>
-<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-</TR>
-<?
-};
 
 function makeEntry($date,$name,$blurb,$id=0) {
-    global $FONTFACE, $MAGIC_COOKIE;
+	global $MAGIC_COOKIE;
 ?>
-<TR VALIGN=top>
-<TD ALIGN=left><? spc(18,18);?><BR></TD>
-
-<TD ALIGN=left BGCOLOR="#E0E0E0">
-<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=3 WIDTH=100%>
-<TR><TD>
+<tr valign="top">
+<td align="left" bgcolor="#e0e0e0">
+<table border="0" cellpadding="2" cellspacing="0" width="100%">
+<tr><td>
 <?
-    echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
-    $name = htmlspecialchars($name);
-    if (ereg("(.+)@(.+)\.(.+)",$name)) {
-       echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
-    } else {
-       echo "<B>".$name."</B><BR>\n";
-    }
-    echo date("d-M-Y h:ia",$date)."<BR>\n";
+	$name = htmlspecialchars($name);
+        if (ereg("(.+)@(.+)\.(.+)",$name)) {
+                echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
+        } else {
+                echo "<b>".$name."</b><br>\n";
+        }
+        echo date("d-M-Y h:i",$date);
 ?>
-</TD></TR>
-<TR BGCOLOR="#F0F0F0"><TD>
-<?echo clean_note($blurb);?><BR>
+</td></tr>
+<tr bgcolor="#f0f0f0"><td>
+<?
+echo clean_note($blurb);
+?><BR>
 <?if (isset($MAGIC_COOKIE) && $id):?>
 <hr noshade size=1>
-<A href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1&popup=1" target="admin">delete</A> | 
-<A href="/manual/admin-notes.php?action=reject+<?echo $id?>&brief=1&popup=1" target="admin">reject</A> | 
-<A href="/manual/admin-notes.php?action=edit+<?echo $id?>&brief=1" target="admin">edit</A>
-<BR>
+<a href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1&popup=1" target="admin">delete</a> | 
+<a href="/manual/admin-notes.php?action=reject+<?echo $id?>&brief=1&popup=1" target="admin">reject</a> | 
+<a href="/manual/admin-notes.php?action=edit+<?echo $id?>&brief=1" target="admin">edit</a>
 <?endif;?>
-</TD></TR>
-</TABLE>
-
-</TD>
-<TD ALIGN=left bgcolor='#ffffff'><? spc(18,18);?><BR></TD>
-</TR>  
-<?
-};
-
-function makeAddNote() {
-        global $FONTFACE;
-?>
-<TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD ALIGN=right WIDTH=100%
-><INPUT TYPE=image name="addnote" VALUE="Add Note" SRC="/gifs/b-addnote-p.gif" ALT="Add a Note" 
-onMouseover="change('addnote',1);" onMouseout="hide();"
-WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
-></A
->&nbsp;<A HREF="/manual/about-notes.php" onMouseover="change('abnote',1);" onMouseout="hide();"
-><IMG SRC='/gifs/b-about-p.gif' ALT='About Notes' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='abnote' align=absmiddle
-></A><BR>
-</TD>
-<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-</TR>
+</td></tr>
+</table>
+</td>
+</tr>  
 <?
 };
 
 function manualGetUserNotes($title, $id)
 {
-    // if we're www.php.net, get it from the local DB
-    // otherwise look in "/manual/usernotes/$title.txt" (if present)
-    global $MYSITE;
-    $notes = array();
-    if(strstr($MYSITE,"www.php.net")) {
-#    if(strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
-        $host = 'localhost';
-#        $host = '127.0.0.1';
-        $user = 'nobody';
-        $pass = '';
-        $db_id = mysql_connect($host, $user, $pass);
-        $query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY id";
-        $result_id = mysql_db_query("php3", $query, $db_id);
-        if ($result_id && mysql_num_rows($result_id) > 0) {
-            while ($row = mysql_fetch_array($result_id)) {
-                $notes[] = $row;
-            }
-        }
-    } else {
-        $notes_file = "usernotes/" . urlencode( $title ) . ".txt";
-        if ( @file_exists( $notes_file ) )
-        {
-            $fp = @fopen($notes_file,"r");
-            if ($fp) {
-                $body = fread($fp,filesize($notes_file));
-                if (strlen($body)) {
-                    $notes = @unserialize($body);
-                }
-                fclose($fp);
-            }
-        }
-    }
-    return $notes;
+	// if we're www.php.net, get it from the local DB
+	// otherwise look in "/manual/usernotes/$title.txt" (if present)
+	global $MYSITE;
+	$notes = array();
+	if(strstr($MYSITE,"www.php.net")) {
+#	if(strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
+		$host = 'localhost';
+#		$host = '127.0.0.1';
+		$user = 'nobody';
+		$pass = '';
+		$db_id = mysql_connect($host, $user, $pass);
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect = '$title' OR sect = '$id' ORDER BY id";
+		$result_id = mysql_db_query("php3", $query, $db_id);
+		if ($result_id && mysql_num_rows($result_id) > 0) {
+			while ($row = mysql_fetch_array($result_id)) {
+				$notes[] = $row;
+			}
+		}
+	} else {
+		$notes_file = "../usernotes/" . urlencode( $title ) . ".txt";
+		if ( @file_exists( $notes_file ) )
+		{
+			$fp = @fopen($notes_file,"r");
+			if ($fp) {
+				$body = fread($fp,filesize($notes_file));
+				if (strlen($body)) {
+					$notes = @unserialize($body);
+				}
+				fclose($fp);
+			}
+		}
+	}
+	return $notes;
 }
 
 function manualUserNotes($title, $id) {
-    global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
-    $cur = substr(dirname($PHP_SELF),-2);
-    if($cur=='al') $cur='en';
-    echo '<FORM method="POST" action="http://www.php.net/manual/add-note.php">';
-    $back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
-    echo '<INPUT type="hidden" name="redirect" value="'.$back_url.'">';
-    echo '<INPUT type="hidden" name="sect" value="'.$title.'">';
-    echo '<INPUT type="hidden" name="lang" value="'.$cur.'">';
+	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
+	$cur = substr(dirname($PHP_SELF),-2);
+	if($cur=='al') $cur='en';
 
-    echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
+	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"1\" width=\"100%\">\n";
 
-    $notes = manualGetUserNotes($title, $id);
-    $num_notes = count($notes);
-    if ( $num_notes > 0 ) {
-        makeTitle("User Contributed Notes: ".$title);
-        for ($i=0; $i<$num_notes; $i++) {
-            $note = $notes[$i]; // should use foreach? 
-            makeEntry($note['xwhen'],$note['user'],$note['note'],$note['id']);
-        }
-    }
-    makeAddNote();
-    echo "</TABLE></FORM>\n";
+	$notes = manualGetUserNotes($title, $id);
+	$num_notes = count($notes);
+	if ( $num_notes > 0 ) {
+                echo "<tr bgcolor=\"#d0d0d0\"><td><b>User Contributed Notes: $title</b></td></tr>";
+		for ($i=0; $i<$num_notes; $i++) {
+			$note = $notes[$i]; // should use foreach? 
+			makeEntry($note['xwhen'],$note['user'],$note['note'],$note['id']);
+		}
+	}
+	echo "</table>\n";
 }
 
 function manualLastModified($title, $id) {
@@ -291,25 +256,30 @@ function manualLastModified($title, $id) {
 }
 
 function sendManualHeaders($charset,$lang) {
-    Header("Content-type: text/html;charset=$charset");
-    Header("Content-language: $lang");
+        global $LANG;
+        $LANG = $lang;
+	Header("Content-type: text/html;charset=$charset");
+	Header("Content-language: $lang");
 }
 
 function manualHeader($title,$id="") {
-    global $FRAMEMODE, $HTDIG;
-    manualLastModified($title,$id);
-    commonHeader("Manual: $title");
-    if (!$HTDIG):
-        navigationBar($title);
-    endif;
+	global $HTDIG, $LANGUAGES, $LANG, $SIDEBAR_DATA;
+	manualLastModified($title,$id);
+	makeBorderTOC($title);
+	commonHeader('Manual: '.$title);
+        # create links to plain html and other languages
+	if (!$HTDIG) {
+		navigationBar($title, $id, "top");
+	}
 }
 
 function manualFooter($title,$id="") {
-    global $HTDIG;
-    if (!$HTDIG):
-        manualUserNotes($title,$id);
-        navigationBar($title);
-    endif;
-    commonFooter($title);
+	global $HTDIG;
+	if (!$HTDIG) {
+		manualUserNotes($title,$id);
+		navigationBar($title, $id, "bottom");
+	}
+	commonFooter();
+
 }
 ?>
