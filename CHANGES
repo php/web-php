@@ -157,7 +157,37 @@ as the last entry of $array1 (see the multidimensional array support).
 
 The apache module requires apache 1.2 or later (1.3-beta is supported).
 
-[10] Other incompatibilities.
+[10] Page logging and access restrictions are no longer supported
+
+The development team believes that this functionality does not belong
+in the core of PHP, and thus, it's been dropped in version 3.0.
+Page logging can be implemented using auto-appended or prepended
+scripts without internal support in the core (a DBM logging script
+is available).
+Access restrictions are available internally in just about any
+modern web server.
+
+[11] Indirect references inside quoted strings
+
+    PHP2-style indirect reference inside quoted strings is no longer
+    supported.  That is, if $foo="bar", and $bar="abc", in PHP2,
+    "$$foo" would print out "abc".  In PHP3, this would print
+    "$bar" (the contents of $foo is replaced with "bar").
+    To use indirect reference in PHP3 inside quoted strings, you should use
+    the new notation: "${$foo}".  The standard $$foo notation will work
+    outside of the quoted string.
+
+[12]
+
+The development team believes that this functionality does not belong
+in the core of PHP, and thus, it's been dropped in version 3.0.
+Page logging can be implemented using auto-appended or prepended
+scripts without internal support in the core (a DBM logging script
+is available).
+Access restrictions are available internally in just about any
+modern web server.    
+
+[12] Other incompatibilities.
 
 It's not too unlikely that other documented behavior of PHP2 has changed
 in this release.  If you think you've found an example, please mail
