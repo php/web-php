@@ -12,7 +12,7 @@ $SIDEBAR_DATA = '
 <p>
  If you\'re interested in what\'s behind the several functions we
  used, you can always take a look at the source of the
- <ul>
+ <ul class="simple">
   <li><a href="/source.php?url=/include/prepend.inc">prepend.inc</a></li>
   <li><a href="/source.php?url=/include/site.inc">site.inc</a></li>
   <li><a href="/source.php?url=/include/mirrors.inc">mirrors.inc</a></li>
