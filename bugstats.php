@@ -41,7 +41,7 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 
 	if ($phpver > 0) {
 		$other = ($phpver == 4 ? 3 : 4);
-		echo '<p>Currently displaying PHP'. $phpver . ' bugs only. Display <a href="bugstats.php">all bugs</a> or <a href="bugstats.php?ver=' . $other . '">only PHP' . $other . ' bugs</a>.</p>' . "\n";
+		echo '<p>Currently displaying PHP'. $phpver . ' bugs only. Display <a href="bugstats.php">all bugs</a> or <a href="bugstats.php?phpver=' . $other . '">only PHP' . $other . ' bugs</a>.</p>' . "\n";
 	}
 	else {
 		echo '<p>Currently displaying all bugs. Display <a href="bugstats.php?phpver=3">only PHP3 bugs</a> or <a href="bugstats.php?phpver=4">only PHP4 bugs</a>.</p>' . "\n";
