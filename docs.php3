@@ -8,7 +8,7 @@ commonHeader("Documentation ");
 <li><a href="manual/">PHP 3.0 Manual Online</a>.
     Still in the works.  Not all functions are documented yet.
 
-<li><? download_link("bigmanual.htm", "PHP 3.0 HTML Manual (one BIG file)"); ?>
+<li><? download_link("bigmanual.html", "PHP 3.0 HTML Manual (one BIG file)"); ?>
 
 <li><? download_link("manual.zip", "PHP 3.0 HTML Manual ZIP File"); ?>
 <li><? download_link("manual.tar.gz", "PHP 3.0 HTML Manual .tar.gz File"); ?>
