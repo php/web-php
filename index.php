@@ -207,6 +207,16 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h1>PHP 4.3.2RC4 Released</h1>
+<p>
+<font class="newsdate">[22-May-2003]</font>
+<a href="http://qa.php.net/">PHP 4.3.2RC4</a> has been released.
+This is the fourth and final release candidate and should have no critical
+problems/bugs. Nevertheless, please download and test it as much as possible
+on real-life applications to uncover any remaining issues.
+</p>
+
+<?php echo hdelim(); ?>
 
 <h1>PHP 4.3.2RC3 Released</h1>
 <p>
