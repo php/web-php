@@ -5,6 +5,11 @@
 
 /* See the end of the script for the table layout. */
 
+if(!isset($status)) $status = '';
+if(!isset($user))   $user   = '';
+if(!isset($pw))     $pw     = '';
+$destination = "php-dev@lists.php.net";
+
 require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
@@ -31,8 +36,6 @@ $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
 echo "<font size=-1>\n";
-$destination = "php-dev@lists.php.net";
-#$destination = "zak@php.net";
 
 function indent($string, $prefix) {
     $string = ereg_replace(13, "", $string); /* get rid of Ctrl-M */
@@ -84,16 +87,38 @@ function list_ids($current) {
 }
 
 function show_state_options($state, $show_all, $user_mode=0) {
-	if ($state) { echo "<option>$state\n"; }
-	if($state!="Open") { echo "<option>Open\n"; }
-	if($state!="Closed") { echo "<option>Closed\n"; }
-	if($state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
-	if($state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
-	if($state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
-	if($state!="Feedback") { echo "<option>Feedback\n"; }
-	if($state!="OldFeedback") { echo "<option>OldFeedback\n"; }
-	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
-	if($state!="All" && $show_all) { echo "<option>All\n"; }
+	
+	if(empty($state)) $state = "Open";
+
+	$state_types = 	array (
+						"Open"        => 2, 
+						"Closed"      => 2,
+						"Duplicate"   => 2,
+						"Assigned"    => 1,
+						"Analyzed"    => 1,
+						"Suspended"   => 1,
+						"Feedback"    => 3,
+						"OldFeedback" => 3,
+						"Bogus"       => 1        
+ 					);
+	
+	/* Restricted status's have value 1, i.e. User can only close the report (except Bogus). */
+	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
+		echo "<option>$state\n";
+		if($state != "Bogus") echo "<option>Closed\n";
+	} else {
+		foreach($state_types as $type => $mode) {
+			if($mode == $user_mode || $user_mode == 1 || $user_mode == 0) {
+				echo "<option";
+				if($type == $state) echo " SELECTED";
+				echo ">$type\n";
+			}
+		}
+		if($show_all) {
+			$sel = ($state == "All") ? "SELECTED" : "";
+			echo "<option $sel>All\n";		
+		}
+	}
 }
 
 function show_menu($state)
@@ -222,7 +247,7 @@ function show_types($first_item,$show_any,$var_name) {
 
                     "*Mail Related" => "&nbsp;&nbsp;&nbsp;&nbsp;Mail Related",
                     "IMAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAP related",
-                    "Mail related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mail related",
+                    "Mail related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mail function related",
                     "Vmailmgr related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vmailmgr related",
 
                     "*Math Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Math Functions",
@@ -281,14 +306,17 @@ function show_types($first_item,$show_any,$var_name) {
                     "Unknown/Other Function" => "Unknown/Other Function"
     );
 
-	$selected[$first_item] = ' SELECTED';
 
 	print "<select name=\"$var_name\">\n";
-
-	foreach ($items as $key => $value)
-	  {
+	
+	if($first_item == '--Please Select--') {
+		print "<option value\"$first_item\">$first_item\n"; 
+	}
+	
+	foreach ($items as $key => $value) {
 		if ($show_any || $value != 'Any') {
-			print "<option value=\"$key\"$selected[$key]>$value</option>\n";
+			$sel = ($key == $first_item) ? 'SELECTED' : '';
+			print "<option value=\"$key\" $sel>$value</option>\n";
 		}
 	}
 
@@ -404,7 +432,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				print "<a href=\"mailto:$data\">$data</a>\n";
 				break;
 			case "Mod":
-				print "<a href=\"bugs.php?id=${row[id]}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
+				print "<a href=\"bugs.php?id=${row['id']}&edit=1\"><img src=\"gifs/circular_arrow.gif\" border=\"0\"></a>\n";
 				break;
 
 			case "Status":
@@ -465,7 +493,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "status as Status";
 	$fields[] = "assign as Assigned";
 	$fields[] = "php_version as Version";
-/*	$fields[] = "php_os as OS"; */
 	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Mod";
@@ -570,7 +597,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($psw)>0) {
 				if(crypt($pw,substr($psw,0,2))==$psw) {
 					$ts=date("Y-m-d H:i:s");
-					mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+					mysql_query("UPDATE bugdb set sdesc='$esdesc',status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					if (!empty($ncomment)) {
 						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
 					}
@@ -629,8 +656,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
-    			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $eemail");
+   			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+   			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $eemail");
 			mysql_freeresult($result);
 		}
 	}
@@ -671,12 +698,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			show_types($row[1],0,"ebug_type");
 			echo "</td></tr>\n";
 		}
-		if($edit==2) {
+
+		if(isset($edit) && $edit==2) {
 			echo "<tr><th align=right>OS:</th><td><input type=text size=20 name=ephp_os value=\"".$row[6]."\"></td></tr>\n";
 		} else {
 			echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
 		}
-		if($edit==2 ||$edit == 1) {
+		if(isset($edit) && ($edit==2 || $edit == 1)) {
 			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
 		} else {
 			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
@@ -684,7 +712,11 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
-		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+		if(isset($edit) && $edit==1) {
+			echo "<tr><th align=right>Short Desc.:</th><td><input type=text size=30 name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+		} else {
+			echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+		}
 		echo "</table>\n";
 
 		/* INSERT NEW COMMENT HERE */
@@ -749,7 +781,7 @@ Or use the form below to submit a new bug report.
 <form method=POST action="<? echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
-<p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong</p>
+<p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
 <p><strong>To report bugs in PHP 3.0, please go <a href="http://bugs.php.net/bugs-php3.php">here</a>.</strong></p>
 
 <table>
