@@ -13,6 +13,10 @@ If you are using the PHP logo for commercial purposes (t-shirts, coffee mugs,
 product packaging, etc.), then you need to contact 
 <A HREF="mailto:logos@php.net">logos@php.net</A> for licencing information.
 </P>
+<p>
+<font color="#ff0000">Do not just include the graphic from our
+servers on your page! Copy the image to your site.</font>
+</p>
 
 <CENTER>
 <TABLE BORDER=0 WIDTH=90% cellspacing=1 cellpadding=10 BGCOLOR="#F0F0F0">
