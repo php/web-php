@@ -3,6 +3,7 @@ require("shared.inc");
 commonHeader("PHP 3.0 -> 3.0.4 Changes");
 ?>
 <h3>Sept. 22, 1998 Version 3.0.4</h3>
+<ul>
 <li> Added uksort() - array key sort using a user defined comparison function.
 <li> Added 'j' support to date() - generates the day of the month, without
   possible leading zeros.
