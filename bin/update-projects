@@ -22,8 +22,6 @@ fi
 mv backend/projects.html~ backend/projects.html
 
 # generating the include file projects.inc
-sleep 900
-
 lynx -source http://www.php.net/bin/projects_inc.php > backend/projects.inc~
 if [ $? -ne 0 ]; then
   echo problem generating the include file
