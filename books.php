@@ -208,6 +208,16 @@ New Riders Publishing, January 2001, ISBN 0-7357-0970-X, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet"
+><IMG SRC="/jpgs/schwendiman.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0072127317/wwwphpnet">PHP 4 Developer's Guide</A><BR>
+by Blake Schwendiman<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
