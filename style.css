@@ -76,7 +76,8 @@ acronym {
         color: #cc0000;
 }
 
-.newsDate {
+/* News date info on frontpage and in the archives */
+.newsdate {
 	font-size: 75%;
 	font-style: italic;
 	color: #6666cc;

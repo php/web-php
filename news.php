@@ -17,7 +17,7 @@ information useful.
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
-<font class="newsdate">[01-Feb-2003]</font>
+<span class="newsdate">[01-Feb-2003]</span>
 PHPCon announces PHPCon East 2003 in New York City. This conference
 features two days of technical learning with speakers such as
 Rasmus Lerdorf, Zeev Suraski, Michael Radwin, George Schlossnagle and Jeremy Zawodny. PHPCon East also
@@ -35,7 +35,7 @@ the PHPCon website</a>.</p>
 
 <h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
 <p>
-<font class="newsdate">[30-January-2003]</font>
+<span class="newsdate">[30-January-2003]</span>
 LinuxTag e.V has once again put out a call for papers for this years conference event. Submit your ideas
 and proposals <a href="http://www.linuxtag.org/2003/en/conferences/cfp.html">here</a>. This year's theme 
 looks at discussions that promote new ideas, delivers a broad overview, introduces new users to linux, or 
@@ -47,7 +47,7 @@ discusses the legal, moral and other implications of linux and free software.</p
 
 <h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
 <p>
-<font class="newsdate">[28-Jan-2003]</font>
+<span class="newsdate">[28-Jan-2003]</span>
 The PHP Qu&eacute;bec association announces the <a
 href="http://phpconf.phpquebec.com/">Conf&eacute;rence PHP Qu&eacute;bec 2003</a>.
 The conference will take place in the &Eacute;cole Polytechnique de Montr&eacute;al, 
@@ -68,7 +68,7 @@ showroom professional solutions.</p>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
 <p>
-<font class="newsdate">[13-Jan-2003]</font>
+<span class="newsdate">[13-Jan-2003]</span>
 Software &amp; Support Verlag announced the <a
 href="http://www.phpconference.com/">International PHP Conference 2003 - Spring
 Edition</a> - in Amsterdam. The dates for this event for PHP enthusiasts from
@@ -88,7 +88,7 @@ Design, PHP Extensions, PHP &amp; XML and PHP-GTK.</p>
 
 <h1>PEAR Out of Beta!</h1>
 <p>
-<font class="newsdate">[11-Jan-2003]</font>
+<span class="newsdate">[11-Jan-2003]</span>
 The PEAR development team is proud to announce that
 <a href="http://pear.php.net/">PEAR</a> is finally out of its long
 beta period. As of PHP 4.3, the PEAR installer is installed by default.
@@ -100,7 +100,7 @@ of beta-quality.
 
 <h1>PHP Look Back 2002</h1>
 <p>
-<font class="newsdate">[31-Dec-2002]</font>
+<span class="newsdate">[31-Dec-2002]</span>
 We are at the end of 2002, and it seemed appropriate to look back on the
 development issues of the past year. So starts the first PHP Look Back! You can
 find it in on the non-official personal website of one of the PHP Developers <a
@@ -114,7 +114,7 @@ Happy New Year!
 
 <h1>PHP 4.3.0 Released!</h1>
 <p>
-<font class="newsdate">[27-Dec-2002]</font>
+<span class="newsdate">[27-Dec-2002]</span>
 The PHP developers are pleased to announce the immediate availability of
 <a href="downloads.php">PHP 4.3.0</a>, the latest and greatest version of this
 extremely popular and widely used scripting language.
@@ -133,7 +133,7 @@ the full <a href="release_4_3_0.php">release announcement</a>.
 
 <h1>New Release of the PHP Manual CHM Edition - Please Help Us</h1>
 <p>
-<font class="newsdate">[27-Dec-2002]</font>
+<span class="newsdate">[27-Dec-2002]</span>
 The 11th sample of the CHM edition is available for download from today. The
 sample hopefully fixed the missing page bugs forever, introduces a new
 integration method (see documentation inside) and contains actual manual
@@ -154,7 +154,7 @@ would give you more options in displaying the pages.
 
 <h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
 <p>
-<font class="newsdate">[16-Dec-2002]</font>
+<span class="newsdate">[16-Dec-2002]</span>
 MySQL AB is proud to host the world's First Annual MySQL User
 Conference, to be held in the heart of Silicon Valley, April 10-12,
 2003. This event promises to be the biggest gathering of MySQL database
@@ -170,7 +170,7 @@ event's website</a>.
 
 <h1>PHP news feed available</h1>
 <p>
-<font class="newsdate">[01-Dec-2002]</font>
+<span class="newsdate">[01-Dec-2002]</span>
 The news of PHP.net is available now in RSS 1.0 format via our
 new <a href="/news.rss">news.rss file</a>. You can
 add this file to any news reader or portal site to get the latest
@@ -185,7 +185,7 @@ file is available on every mirror site.
 
 <h1>Forum PHP 2002 in Paris, France</h1>
 <p>
-<font class="newsdate">[21-Nov-2002]</font>
+<span class="newsdate">[21-Nov-2002]</span>
 The French PHP User Group AFUP invites you to the "Forum PHP 2002" in
 Paris, on December 9th and 10th. Designed to meet the needs of PHP aware
 companies and all the French PHP developper's community alike, this
@@ -199,7 +199,7 @@ website.
 
 <h1>PHP Magazine - International Edition</h1>
 <p>
-<font class="newsdate">[17-Nov-2002]</font>
+<span class="newsdate">[17-Nov-2002]</span>
 Software &amp; Support Verlag GmbH is going to publish an International version
 of the <a href="http://www.phpmag.de/">PHP Magazin</a>. This magazine was
 initiated after growing interest for an English magazine after the German
@@ -222,7 +222,7 @@ href="http://www.php-mag.net/">website</a> which will open shortly.
 
 <h1>New Monthly PHP Magazine Launched</h1>
 <p>
-<font class="newsdate">[15-Nov-2002]</font>
+<span class="newsdate">[15-Nov-2002]</span>
 php|architect, a new monthly magazine dedicated exclusively to PHP, has
 launched <a href="http://www.phparch.com/">its website</a>. php|a is published
 in PDF format and is available worldwide. It covers a variety of advanced
@@ -235,7 +235,7 @@ available on the magazine website
 
 <h1>PHP Search Bars available for major browsers</h1>
 <p>
-<font class="newsdate">[29-Oct-2002]</font>
+<span class="newsdate">[29-Oct-2002]</span>
 We added a new option to access our site's content quickly. In addition to
 <a href="/urlhowto.php">URL shortcuts</a>, keyboard shortcuts and
 <a href="/tips.php">browser specific magic</a> you can now use our
@@ -249,7 +249,7 @@ as a PHP.net website bug please).
 
 <h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
 <p>
-<font class="newsdate">[28-Oct-2002]</font>
+<span class="newsdate">[28-Oct-2002]</span>
 For the first time the Open Source projects comprising the popular LAMP
 platform (Linux, Apache, MySQL and PHP) will be present at the 
 <a href="http://www.linuxworldexpo.de">LinuxWorld Expo</a>
@@ -270,7 +270,7 @@ software available at the booth.
 
 <h1>New keyboard shortcuts</h1>
 <p>
-<font class="newsdate">[17-Oct-2002]</font>
+<span class="newsdate">[17-Oct-2002]</span>
 We introduced new keyboard shortcuts on the site today to make our pages
 even more comfortable to use. You can hit Alt+S on Microsoft Windows
 or Ctrl+S on Macintosh now to go right to the search box and type your
@@ -285,7 +285,7 @@ the HTML standard</a>.
 
 <h1>PHP 4.2.3 Released</h1>
 <p>
-<font class="newsdate">[06-Sept-2002]</font>
+<span class="newsdate">[06-Sept-2002]</span>
 <a href="downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
 release, and is a recommended update for all users of PHP, and Windows users in particular. A complete
 list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
@@ -297,7 +297,7 @@ list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
-<font class="newsdate">[05-Sept-2002]</font>
+<span class="newsdate">[05-Sept-2002]</span>
 After the big success of last year's first International PHP Conference this
 year's show will be even bigger and better.</p>
 
@@ -322,7 +322,7 @@ persons get special discounts.</p>
 
 <h1>PHPCon 2002 (California, Oct 24-25)</h1>
 <p>
-<font class="newsdate">[05-Sept-2002]</font> 
+<span class="newsdate">[05-Sept-2002]</span> 
 <a href="http://www.php-con.com" title="PHPCon 2002">PHPCon 2002</a>, a
 2-day technical conference devoted entirely to PHP, announced today the
 launch of the PHPCon 2002 website, online registration, and a call for
@@ -351,7 +351,7 @@ California.</p>
 
 <h1>Printer friendly manual pages with notes</h1>
 <p>
-<font class="newsdate">[03-Aug-2002]</font>
+<span class="newsdate">[03-Aug-2002]</span>
 Starting from today, the manual pages are not only available in their
 printer friendly versions, but also in printer friendly versions with
 user notes included. Check the links at the <a href="/manual">top of
@@ -363,7 +363,7 @@ change languages.
 
 <h1>ActiveState Awards</h1>
 <p>
-<font class="newsdate">[31-Jul-2002]</font> ActiveState is pleased to announce
+<span class="newsdate">[31-Jul-2002]</span> ActiveState is pleased to announce
 the winners of the 2002 Active Awards, presented at the O'Reilly Open Source
 Conference in San Diego, CA. The Active Awards are held annually to honor
 members of the PHP, Python, Perl, Tcl, and XSLT  communities, who
@@ -388,7 +388,7 @@ project.  More details are available at
 <h1>PHP 4.2.2 released in response to vulnerability</h1>
 
 <p>
-<font class="newsdate">[22-Jul-2002]</font> The PHP Group today announced
+<span class="newsdate">[22-Jul-2002]</span> The PHP Group today announced
 the details of a serious <a href="release_4_2_2.php">vulnerability</a> in PHP versions 4.2.0 and 4.2.1.
 A security update, <a href="downloads.php">PHP 4.2.2</a>, fixes the issue. Everyone running
 affected versions of PHP is encouraged to upgrade immediately. The new 4.2.2
@@ -400,7 +400,7 @@ release doesn't include other changes, so upgrading from 4.2.1 is safe and painl
 <h1>New comp.lang.php newsgroup started</h1>
 
 <p>
-<font class="newsdate">[09-Jul-2002]</font> comp.lang.php was created yesterday,
+<span class="newsdate">[09-Jul-2002]</span> comp.lang.php was created yesterday,
 after a two and a half month long process started in April by Ian Fette resulted
 in a <a href="http://groups.google.com/groups?q=comp.lang.php&amp;hl=en&amp;lr=&amp;ie=UTF-8&amp;sel
 m=1025483879.39561&amp;40isc.org&amp;rnum=3">177-11 vote</a> in favor of the group.
@@ -426,7 +426,7 @@ and to help others.
 
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
 <p>
-<font class="newsdate">[30-Jun-2002]</font>
+<span class="newsdate">[30-Jun-2002]</span>
 The second alpha release of PHP w/ Zend Engine 2 is
 <?php download_link("php-4.3.0-dev-zend2-alpha2.tar.gz", "now available"); ?>.
 It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
@@ -450,7 +450,7 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 
 <h1>PHP for NetWare (Beta) Released</h1>
 <p>
-<font class="newsDate">[27-May-2002]</font>
+<span class="newsdate">[27-May-2002]</span>
 A Beta version of PHP for NetWare is available on the
 <a href="http://developer.novell.com/ndk/leadedge.htm#le169">Novell
 Developer Kit site</a>. This version is based on the
@@ -462,7 +462,7 @@ Developer Kit site</a>. This version is based on the
 <?php echo make_image("news/linuxtag3.gif", "LinuxTag", "right"); ?>
 
 <h1>LinuxTag 2002: 6 - 9th June, Karlsruhe, Germany</h1>
-<font class="newsdate">[23-May-2002]</font> PHP will be attending 
+<span class="newsdate">[23-May-2002]</span> PHP will be attending 
 <a href="http://www.linuxtag.org/2002/deutsch/showitem.php3?item=30&amp;lang=en">LinuxTag</a> 
 again this year. The combined efforts of the PHP Verein, the Apache Software Foundation and
 MySQL AB,  will create a "(L)AMP" day, focusing on web development with  the 3 core technologies.
@@ -476,7 +476,7 @@ German).
 
 <h1>PHP Coding Contest</h1>
 <p>
-<font class="newsDate">[16-May-2002]</font>
+<span class="newsdate">[16-May-2002]</span>
 CodeWalkers have started a new fortnightly PHP contest. Every two weeks, there
 is a new problem to solve, a new script to write. The winner will receive
 prizes provided by the sponsors, Zend Technologies and Sams Publishing.
@@ -487,7 +487,7 @@ You can enter the challenge by visiting <a href="http://codewalkers.com/php-cont
 
 <h1>PHP 4.2.1 released</h1>
 <p>
-<font class="newsDate">[13-May-2002]</font>
+<span class="newsdate">[13-May-2002]</span>
 The PHP Group is happy to announce the
 <?php print_link ("/downloads.php", "immediate availability"); ?> of
 PHP 4.2.1, the latest version of the widely-used, general-purpose scripting language
@@ -505,7 +505,7 @@ extension. Also a few extra checks for safe_mode were added. For more informatio
 
 <h1>PHP Award 2002</h1>
 <p>
-<font class="newsDate">[27-Apr-2002]</font>
+<span class="newsdate">[27-Apr-2002]</span>
 The Association Française des Utilisateurs de PHP (AFUP) and
 the German PHP Association (PHP Verein) are organizing a PHP
 contest to give out the first PHP Award. The PHP Award will
@@ -519,7 +519,7 @@ If you are interested go to
 
 <h1>PHP.net: A Tourist's Guide</h1>
 <p>
-<font class="newsDate">[26-Apr-2002]</font>
+<span class="newsdate">[26-Apr-2002]</span>
 Damien Seguy has written <a href="/sites.php">a tourist's guide</a> to the
 various sites that make up the PHP.net family of sites. Did you know you can
 browse a hyperlinked version of the PHP source code at <a
@@ -532,7 +532,7 @@ you've been missing.
 
 <h1>PHP 4.2.0 released</h1>
 <p>
-<font class="newsDate">[22-Apr-2002]</font>
+<span class="newsdate">[22-Apr-2002]</span>
 The PHP Group is happy to announce the
 <?php print_link ("/downloads.php", "immediate availability"); ?> of
 PHP 4.2.0, the latest version of the widely-used, general-purpose scripting language
@@ -552,7 +552,7 @@ domxml, posix, sockets and iconv extensions. For more information, see the
 <h1>Fifth sample of 'PHP Manual CHM Edition'</h1>
 
 <p>
-<font class="newsDate">[20-Apr-2002]</font>
+<span class="newsdate">[20-Apr-2002]</span>
 We released the fifth sample of the new CHM Edition. New in
 this sample: user preferences application, a new optional
 design, custom context menu support, linked functions
@@ -571,7 +571,7 @@ and send us your feedback to our
 
 <h1>PHP Magazin out now!</h1>
 <p>
-<font class="newsDate">[26-Mar-2002]</font>
+<span class="newsdate">[26-Mar-2002]</span>
 The Software &amp; Support Verlag, based in Frankfurt,
 Germany, has now published a magazine on PHP as a
 tribute to the steadily growing German PHP community.
@@ -582,7 +582,7 @@ More information can be found at
 
 <h1>New PHP.net URL Howto</h1>
 <p>
-<font class="newsDate">[23-Mar-2002]</font>
+<span class="newsdate">[23-Mar-2002]</span>
 Ever wondered what you can type in your browsers location
 field to access a php.net page? Many of you already know
 <a href="http://php.net/echo">http://php.net/echo</a>.
@@ -596,7 +596,7 @@ and what are your possibilities. Read it in our new
 
 <h1>PHP Documentation Team Meeting</h1>
 <p>
-<font class="newsDate">[13-Mar-2002]</font>
+<span class="newsdate">[13-Mar-2002]</span>
 The <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html',
 'notes from the PHP Documentation Team Meeting'); ?> (Stuttgart, March
 8th-10th) are now available.
@@ -607,7 +607,7 @@ Pictures of the event are currently not available.
 
 <h1>PHP Security Update - Windows Version</h1>
 <p>
-<font class="newsDate">[12-Mar-2002]</font>
+<span class="newsdate">[12-Mar-2002]</span>
 Following up from the previous annoucement, PHP 4.1.2 has been released for
 windows. The delayed release is due to the fix of a further security issue only
 relating to the PHP for Windows version. More information on this change can be
@@ -620,7 +620,7 @@ print_link('/downloads.php', 'latest version'); ?>.
 
 <h1>PHP Security Update</h1>
 <p>
-<font class="newsDate">[27-Feb-2002]</font>
+<span class="newsdate">[27-Feb-2002]</span>
 Due to a security issue found in all versions of PHP (including 3.x and 4.x), a
 new version of PHP has been released.  Details about the security issue are <a
 href="http://security.e-matters.de/advisories/012002.html">available here</a>.
@@ -634,7 +634,7 @@ href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
 <h1>PHP-GTK 0.5.0 released</h1>
 
 <p>
-<font class="newsDate">[24-Jan-2002]</font>
+<span class="newsdate">[24-Jan-2002]</span>
 <?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> has reached version
 0.5.0, also known as <em>"monday starts on saturday"</em>. The version number
 was bumped from 0.1.1 to this one to indicate that PHP-GTK is now a fairly
@@ -656,7 +656,7 @@ print_link("http://www.phpconference.de/2001/index_en.php", make_image("news/int
 <h1>International PHP Conference slides available</h1>
 
 <p>
-<font class="newsDate">[10-Jan-2002]</font>
+<span class="newsdate">[10-Jan-2002]</span>
 You can find an overview of all slides of the sessions from the International PHP Conference 2001 on the
 <a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>. 
 It is still not too late to check out some photos from the conference:
@@ -673,7 +673,7 @@ It is still not too late to check out some photos from the conference:
 <h1>PHP 4.1.0 Released!</h1>
 
 <p>
-<font class="newsDate">[10-Dec-2001]</font>
+<span class="newsdate">[10-Dec-2001]</span>
 <a href="/downloads.php">PHP 4.1.0</a> is a key new release in the PHP 4 family.  It includes
 highly-improved performance, especially under Windows; a more security-friendly
 way of accepting form variables; output compression; and much, much more.  Read the full
@@ -687,7 +687,7 @@ way of accepting form variables; output compression; and much, much more.  Read 
 <h1>Windows Manual Survey Results</h1>
 
 <p>
-<font class="newsDate">[27-Nov-2001]</font>
+<span class="newsdate">[27-Nov-2001]</span>
 After one week our Windows HTML Help Manual Survey is over now. We received nearly six hundred
 processable forms with many wishes and comments. Thanks for you all, who contributed to making
 the best help system for PHP on Windows. You can get more information about the ongoing
@@ -701,7 +701,7 @@ project, including the detailed results of the survey at
 <h1>PHP-GTK Documentation Update</h1>
 
 <p>
-<font class="newsDate">[18-Oct-2001]</font>
+<span class="newsdate">[18-Oct-2001]</span>
 <?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> 
 <?php print_link("http://gtk.php.net/docs.php", "documentation"); ?> is starting
 to be more filled out. The manual is now rebuilt every night and
@@ -718,7 +718,7 @@ let us know.
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("news/rackspace.gif", "Rackspace", "right") ); ?>
 
 <p>
-<font class="newsDate">[17-Sep-2001]</font>
+<span class="newsdate">[17-Sep-2001]</span>
 Thanks to the generous folks at <a
 href="http://www.rackspace.com/?supbid=php.net">Rackspace</a>, we have added additional
 capacity for hosting the PHP project's efforts. Currently, the machine they
@@ -733,7 +733,7 @@ by our supporters.
 <h1>11.09.2001</h1>
 
 <p>
-<font class="newsDate">[11-Sep-2001]</font>
+<span class="newsdate">[11-Sep-2001]</span>
 The worldwide PHP community is horrified by recent events and would like to
 offer its deepest sympathies to the friends and families of those who lost
 their lives. <a href="http://www.redcross.org/donate/donate.html">Support the
@@ -746,7 +746,7 @@ Red Cross.</a>
 <h1>Manual notes are mirrored worldwide</h1>
 
 <p>
-<font class="newsDate">[28-Aug-2001]</font>
+<span class="newsdate">[28-Aug-2001]</span>
 There is no need now to come to the main php.net server, if you would like to read the manual notes,
 as they are mirrored worldwide, and you can read them on all our mirror sites. You can get better response
 times by visiting the closest mirror. See the bottom of our pages.
@@ -759,7 +759,7 @@ times by visiting the closest mirror. See the bottom of our pages.
 PHP-GTK version 0.1 released</h1>
 
 <p>
-<font class="newsDate">[02-Aug-2001]</font>
+<span class="newsdate">[02-Aug-2001]</span>
 The 0.1 release of PHP-GTK is now available. PHP-GTK is a PHP extension that provides an object-oriented interface
 to GTK+ toolkit and enables you to write client-side cross-platform GUI applications. Win32 binary version
 should be available a little later.
@@ -781,7 +781,7 @@ For more information, visit <?php print_link("http://gtk.php.net/")?>.
 <?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("news/pair.gif", "pair Networks", "right") ); ?>
 
 <p>
-<font class="newsDate">[1-Jul-2001]</font>
+<span class="newsdate">[1-Jul-2001]</span>
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good. This is thanks to a brand new server donated
 by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks!
@@ -795,7 +795,7 @@ by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks
 <h1>LinuxTag 2001 in Europe</h1>
 
 <p>
-<font class="newsDate">[14-Jun-2001]</font>
+<span class="newsdate">[14-Jun-2001]</span>
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
@@ -805,7 +805,7 @@ was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://ww
 <h1><?php print_link("http://apachecon.com/2001/US/", "ApacheCon 2001");?></h1>
 
 <p>
-<font class="newsDate">[11-Apr-2001]</font>
+<span class="newsdate">[11-Apr-2001]</span>
 You may have missed the conference, but you can see some of the
 presentations online. Check out:</p>
 <ul>

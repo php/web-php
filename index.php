@@ -220,7 +220,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>php|architect now in print</h1>
 
 <p>
- <font class="newsdate">[17-Jul-2003]</font>
+ <span class="newsdate">[17-Jul-2003]</span>
  The publishers of <a href="http://www.phparch.com/">php|architect</a>, a
  monthly magazine dedicated exclusively to the world of PHP, have announced the
  availability of a <a href="http://www.phparch.com/print/">print edition</a> of 
@@ -234,7 +234,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>PHP @ LinuxTag</h1>
 <p>
- <font class="newsdate">[06-Jul-2003]</font>
+ <span class="newsdate">[06-Jul-2003]</span>
  From July, 10th to 13th 2003
  <a href="http://www.linuxtag.org/2003/en/index.html">LinuxTag</a>, Europe's
  largest Fair and Congress dedicated to Open Source in general and Linux in
@@ -256,7 +256,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
- <font class="newsdate">[29-Jun-2003]</font>
+ <span class="newsdate">[29-Jun-2003]</span>
  The PHP development community is proud to announce the release of PHP 5 Beta 1.  Both source packages,
  and a Windows build are available in the <a href="/downloads.php">Downloads Section</a>.  A list of changes 
  can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
@@ -287,7 +287,7 @@ if you find any!), but please do not replace your production installations of PH
 
 <h1>PHP Usage Survey</h1>
 <p>
- <font class="newsdate">[24-Jun-2003]</font>
+ <span class="newsdate">[24-Jun-2003]</span>
 Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be shared with the PHP Group, and will help us to better understand the ways in which PHP is being used, and what may need improvement.  <a href="http://www.zend.com/survey/php_net.php">Fill it out</a> and get a chance to win one of 50 PHP T-shirts!
 </p>
 
@@ -297,7 +297,7 @@ Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be 
 
 <h1>International PHP Conference 2003</h1>
 <p>
- <font class="newsdate">[24-Jun-2003]</font>
+ <span class="newsdate">[24-Jun-2003]</span>
 The traditional International PHP Conference 2003 will be taking place from
 2nd November to 5th November in Frankfurt (FFM).  The Call for Papers has
 been issued, so if you have an interesting talk, the organizers would
@@ -317,7 +317,7 @@ OpenSource projects can present themselves for free.
 
 <h1>PHP 4.3.3RC1 released</h1>
 <p>
- <font class="newsdate">[19-Jun-2003]</font>
+ <span class="newsdate">[19-Jun-2003]</span>
  <a href="http://qa.php.net/">PHP 4.3.3RC1</a> has been released for testing.
  This is the first release candidate and should have a very low number of problems
  and/or bugs. Nevertheless, please download and test it as much as possible on real-life 
@@ -335,7 +335,7 @@ OpenSource projects can present themselves for free.
 
 <h1>Active Awards Programmers' Choice Nominees are in!</h1>
 <p>
-<font class="newsdate">[06-June-2003]</font>
+<span class="newsdate">[06-June-2003]</span>
 Thanks to the community for recognizing their peers in ActiveState's
 third annual Active Awards.  The awards honor those individuals who
 <b>actively</b> contribute to open languages and display excellence in their
@@ -349,7 +349,7 @@ More information and voting is at:
 
 <h1>PHP 4.3.2 Released!</h1>
 <p>
-<font class="newsdate">[29-May-2003]</font>
+<span class="newsdate">[29-May-2003]</span>
 The PHP developers are proud to announce the immediate availability of
 <a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
 and is a <b>strongly</b> recommended update for all users of PHP.
@@ -360,7 +360,7 @@ Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
 
 <h1>Automatic Mirror Select</h1>
 <p>
-<font class="newsdate">[23-May-2003]</font>
+<span class="newsdate">[23-May-2003]</span>
 In our ongoing battle to fight load and keep serving you content, whenever you
 perform a search on www.php.net, you will be redirected onto a nearby mirror
 (determined using the <a href="http://www.directi.com/?site=ip-to-country">Directi
@@ -373,7 +373,7 @@ version of the site.
 
 <h1>Country Detection</h1>
 <p>
-<font class="newsdate">[04-May-2003]</font>
+<span class="newsdate">[04-May-2003]</span>
 We are proud to introduce you the latest addition to our <a href="/my.php">My
 PHP.net</a> service. The PHP.net site and mirror sites now autodetect
 your country using the <a href="http://www.directi.com/?site=ip-to-country">Directi
@@ -387,7 +387,7 @@ sites for downloads and your usual daily work.
 <h1>My PHP.net</h1>
 
 <p>
-<font class="newsdate">[24-Apr-2003]</font>
+<span class="newsdate">[24-Apr-2003]</span>
 The PHP website and mirrors sites now have a
 '<a href="/my.php">My PHP.net</a>' page, which allows
 you to check what language settings you have, and enables
@@ -406,7 +406,7 @@ on for PHP.net to let this feature work!
 <h1>Grant Program</h1>
 
 <p>
-<font class="newsdate">[06-Mar-2003]</font>
+<span class="newsdate">[06-Mar-2003]</span>
 <a href="http://www.phparch.com">php|architect</a>, is proud to
 announce the creation of the php|architect Grant Program, whose goal is
 to provide financial support to best-of-breed PHP-related projects.
@@ -429,7 +429,7 @@ href="http://www.phparch.com/grant/">program's website</a>.
 <h1>Set your own language preference</h1>
 
 <p>
-<font class="newsdate">[01-Mar-2003]</font>
+<span class="newsdate">[01-Mar-2003]</span>
 Starting from today, your browser's "Accept Language" setting is also
 honored on language sensitive pages on the php.net site. If you would
 like to get to the documentation page of echo for example, you can use
@@ -453,7 +453,7 @@ providing translated content.
 <h1>First Hungarian PHP Conference</h1>
 
 <p>
-<font class="newsdate">[25-Feb-2003]</font>
+<span class="newsdate">[25-Feb-2003]</span>
 The members of the Hungarian PHP community announce
 <a href="http://phpconf.hu/">the first Hungarian PHP Conference</a> which
 will take place in Budapest, on Saturday March 29th, sponsored by several
@@ -472,7 +472,7 @@ official phorums.
 <h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
 
 <p>
-<font class="newsdate">[17-Feb-2003]</font>
+<span class="newsdate">[17-Feb-2003]</span>
 The PHP Group today announced the details of a serious
 <a href="release_4_3_1.php">CGI vulnerability</a> in PHP version 4.3.0. A
 security update, <a href="downloads.php">PHP 4.3.1</a>, fixes the issue.
