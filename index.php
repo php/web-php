@@ -161,9 +161,6 @@ commonHeader("Hypertext Preprocessor");
  <a href="http://mysqlcomconeurope.com">http://mysqlcomconeurope.com/</a>.
 </p>
 
-<p>List of changes can be found in the 
-<a href="http://viewcvs.php.net/viewcvs.cgi/php-src/NEWS.diff?r1=1.1247.2.724&r2=1.1247.2.714">NEWS</a> file.</p>
-
 <hr />
 
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
