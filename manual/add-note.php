@@ -31,6 +31,10 @@ if ($user == "") {
     $user = "php-general@lists.php.net";
     }
 
+if ($note == "") {
+    unset ($note);
+    }
+
 # turn the POST data into GET data so we can do the redirect
 if(!strstr($MYSITE,"www.php.net")) {
         Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
