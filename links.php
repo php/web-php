@@ -30,7 +30,7 @@ commonHeader("Links");
 Zend Technologies' Web site, with lots of PHP related resources
 (articles, tutorials, case studies, PHP function table, etc.)<br>
 
-<li><a href="http://conf.php.net/">PHP Conference material</a><br>
+<li><a href="http://conf.php.net/">PHP Conference Material</a><br>
 Some PHP conference slide shows, presented at variuos meetings
 by PHP professionals<br>
 </ul>
@@ -69,6 +69,9 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)<br>
 
 <li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl<br>
+
+<li><a href="http://www.deskcode.com/">DeskCode</a><br>
+Community-based programming site, featuring <a href="http://www.deskcode.com/phpcompiler/">PHPCompiler</a><br>
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
