@@ -176,6 +176,13 @@ right away.</blockquote>
 	site("KidsCampaigns","www.kidscampaigns.org");
 	siteEnd();
 
+/* Online News Sites */
+	title("Online News Sites");
+	siteStart();
+	site("3D Linux","3dlinux.org");
+	site("FreshMeat","freshmeat.net");
+	siteEnd();
+
 /* Publishing Industry */
 	title("Publishing Industry");
 	siteStart();
