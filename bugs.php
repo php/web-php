@@ -310,6 +310,7 @@ elseif ($cmd == "display") {
 		# display a happy success message
 		echo "<h2>Bug #$id updated successfully.</h2>\n";
 
+		unset($ncomment);
     }
 	elseif ($modify && !$success) {
 		echo "<h2 class=\"error\">Something went wrong updating the database.</h2>";
