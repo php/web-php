@@ -170,7 +170,7 @@ discussions).
   <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
   <li><a href="http://www.egroups.com/group/php-pt/info.html">Portuguese PHP User's Mailing List</a>
   <li><a href="mailto:php-subscribe@listserver.iwcc.com.ar">Spanish PHP User's Mailing List</a>
-  <li><a href="http://phptr.baslangic.net/">Turkish PHP Mailing List</a>
+  <li><a href="http://phptr.baslangic.net/">Turkish PHP User's Mailing List</a>
 </ul>
 
 <h3>Sample Code</h3>
@@ -186,7 +186,7 @@ your searching pleasure!
 The knowledge base is a growing collection of PHP related information in
 a searchable question and answer format.  Anyone can contribute, and
 everyone is encouraged to do so. You can visit the Knowledge Base
-at <a href="http://e-gineer.com/phpkb/">http://e-gineer.com/phpkb/</a>.
+at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
 </P>
 
 <h3>Getting the Latest Development Version</h3>
