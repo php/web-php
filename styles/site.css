@@ -423,3 +423,65 @@ div#usernotes div.text {
 	padding: 2px;
 	margin-top: 4px;
 }
+
+/* Left sidebar TOC on manual pages --------------------------------------- */
+ul#manualtoc {
+	margin: 0px 5px 5px 5px;
+	padding: 0px;
+}
+ul#manualtoc li {
+	font-size: 85%;
+	margin: 1px 0 1px 1px;
+	padding: 1px 0 1px 11px;
+	list-style-type: none;
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+ul#manualtoc li.header {
+	font-size: 115%;
+	padding: 5px 0px 5px 11px;
+	border-bottom: 1px solid #cccccc;
+	margin-bottom: 5px;
+}
+ul#manualtoc li.active {
+	font-weight: bold;
+}
+ul#manualtoc li a {
+	text-decoration: none;
+}
+ul#manualtoc li a:hover {
+	text-decoration: underline;
+}
+
+/* Top and bottom navigation controls on manual pages --------------------- */
+div.manualnavbar {
+	background-color: #e0e0e0;
+	color: inherit;
+	padding: 4px;
+	margin-bottom: 10px;
+}
+div.manualnavbar a {
+	text-decoration: none;
+}
+div.manualnavbar a:hover {
+	text-decoration: underline;
+}
+div.manualnavbar .prev, div.manualnavbar .langchooser {
+	float: left;
+	padding-right: 4px;
+}
+div.manualnavbar .next, div.manualnavbar .lastupdated {
+	float: right;
+	padding-left: 4px;
+}
+div.manualnavbar hr {
+	color: #cccccc;
+	background-color: #cccccc;
+}
+div.manualnavbar form {
+	margin: 0px;
+	font-size: 75%;
+}
+div.manualnavbar .lastupdated {
+	font-size: 75%;
+}
