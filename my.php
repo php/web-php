@@ -37,7 +37,7 @@ elseif (isset($langs[myphpnet_language()])) {
 // We have no cookie and no form submitted
 else {
     // Add this as first option, selected
-    $options[] = "<option value=\"not_set\" selected>Not Set</option>\n";
+    $options[] = "<option value=\"not_set\" selected=\"selected\">Not Set</option>\n";
 }
 
 // Add all other languages
@@ -59,7 +59,7 @@ myphpnet_save();
 commonHeader("My PHP.net");
 ?>
 
-<form action="/my.php" method="POST">
+<form action="/my.php" method="post">
 <h1>My PHP.net</h1>
 
 <p>
