@@ -42,7 +42,7 @@ function error_noservice()
     global $MYSITE;
     site_header('Service not working', array("noindex"));
     echo "<h1>Service not working</h1>\n" .
-         "<p>The service you tried to access with the URL: <strong>" .
+         "<p>The service you tried to access with <strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> is not available on this server right now. " .
          "Please check back later, or if the problem persist, " .
