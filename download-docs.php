@@ -1,48 +1,50 @@
 <?php
-include_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'download-docs.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 $SIDEBAR_DATA='
 <h3>Documentation online</h3>
 <p>
-You can read the
-<a href="/docs.php">documentation online</a>
-in various languages, even in printer
-friendly formats.
+ You can read the
+ <a href="/docs.php">documentation online</a>
+ in various languages, even in printer
+ friendly formats.
 </p>
 
 <h3>Tips for Windows users</h3>
 <p>
-If you don\'t know how to handle bz2 compressed
-manuals on Windows, please read our <a
-href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
-on this subject.
+ If you don\'t know how to handle bz2 compressed
+ manuals on Windows, please read our <a
+ href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
+ on this subject.
 </p>
 <p>
-You may also check out the still in progress
-development of a new CHM format based PHP manual at
-<a href="http://weblabor.hu/php-doc-chm">http://weblabor.hu/php-doc-chm</a>.
+ Windows users are also suggested to check out the extended
+ CHM version of the PHP manual: More information is available
+ on <a href="http://weblabor.hu/php-doc-chm">its own site</a>.
 </p>
 
 <h3>File sizes and dates</h3>
 <p>
-If you are using a capable browser, the file size and
-date will show up when you move the mouse above a link.
-If you cannot view this information, or would like to see all the
-information, you can <a href="/download-docs.php?sizes=1">click
-here to see all the file sizes and dates</a>.
+ If you are using a capable browser, the file size and
+ date will show up when you move the mouse above a link.
+ If you cannot view this information, or would like to see all the
+ information, you can <a href="/download-docs.php?sizes=1">click
+ here to see all the file sizes and dates</a>.
 </p>
 ';
 
-commonHeader("Download documentation");
+site_header("Download documentation");
 
-// Available formats
+// Format to look for
 $formats = array(
- "Single HTML"       => "html.bz2",
- "Many HTML files"   => "tar.bz2",
- "PDF"               => "pdf.bz2",
- "PalmPilot DOC"     => "doc.pdb",
- "PalmPilot iSilo"   => "isilo.pdb",
- "Windows HTML Help" => "chm"
+    "Single HTML"       => "html.bz2",
+    "Many HTML files"   => "tar.bz2",
+    "PDF"               => "pdf.bz2",
+    "PalmPilot DOC"     => "doc.pdb",
+    "PalmPilot iSilo"   => "isilo.pdb",
+    "Windows HTML Help" => "chm"
 );
 ?>
 
@@ -67,25 +69,25 @@ $formats = array(
  use does otherwise.
 </p>
 
-<table border="0" cellpadding="2" cellspacing="1" width="100%">
- <tr bgcolor="#cccccc">
-  <td>&nbsp;</td>
+<table border="0" cellpadding="3" cellspacing="2" class="standard">
+ <tr>
+  <th>&nbsp;</th>
 <?php 
+
 // Print out the name of the formats
 foreach ($formats as $formatname => $extension) {
     echo "  <th valign=\"bottom\">$formatname</th>\n";
 }
-?>
- </tr>
-<?php
 
+echo " </tr>\n";
+ 
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
 
     // See if current language is the preferred one
     if ($langcode == $LANG) { $preflang = TRUE; }
     else { $preflang = FALSE; }
-
+    
     // Reset files array and format counter
     $files = array(); $formatnum = 0;
     
@@ -93,7 +95,8 @@ foreach ($LANGUAGES as $langcode => $language) {
     foreach ($formats as $formatname => $extension) {
     
         // Actual filename of the file
-        $actual_file = $_SERVER['DOCUMENT_ROOT'] . "/distributions/manual/php_manual_$langcode.$extension";
+        $actual_file = $_SERVER['DOCUMENT_ROOT'] . 
+                       "/distributions/manual/php_manual_$langcode.$extension";
         
         // File named after the language and format exists
         if (file_exists($actual_file)) {
@@ -107,19 +110,13 @@ foreach ($LANGUAGES as $langcode => $language) {
             
             // Size available, collect information
             if ($size) {
-                
-                // The PDF file was changed in 2002, skip it
-                if ($formatname == "PDF" && $changed < mktime(0, 0, 0, 1, 1, 2003)) {
-                    $files[] = '';
-                } else {
-                    $files[] = array(
-                        $link_to,
-                        (int) ($size/1024),
-                        date("j M Y", $changed),
-                        $extension
-                    );
-                    $formatnum++;
-                }
+                $files[] = array(
+                    $link_to,
+                    (int) ($size/1024),
+                    date("j M Y", $changed),
+                    $extension
+                );
+                $formatnum++;
             }
             
             // Size is not available, we won't list the file
@@ -145,17 +142,17 @@ foreach ($LANGUAGES as $langcode => $language) {
         
         // Highlight manual in preferred language
         if ($preflang) {
-            $bgcolor = "#ffffcc";
+            $cellclass = ' class="highlight"';
         } else {
-            $bgcolor = "#eeeeee";
+            $cellclass = "";
         }
 
-        echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$language</b></td>\n";
+        echo "<tr>\n<th class=\"subl\">$language</td>\n";
         
         // Print out a table cell for all formats
         foreach ($files as $fileinfo) {
             
-            echo "<td align=\"center\" bgcolor=\"$bgcolor\">";
+            echo "<td align=\"center\"$cellclass>";
             
             // Missing format
             if ($fileinfo == '') {
@@ -203,13 +200,13 @@ foreach ($LANGUAGES as $langcode => $language) {
 <h1>Documentation howto</h1>
 
 <p>
-The PHP Documentation Team has a documentation howto, including coverage
-on how to set up a working environment on Unix/Linux/Windows, how to build
-HTML formatted docs from the XML sources, what conventions to follow when
-writing documentation, etc. If you are interested in the process, or would
-like to start/join a translation, you can <a href="/get/dochowto">download
-the howto</a>. Note, that <a href="/manual/howto">it is also readable
-online</a>.
+ The PHP Documentation Team has a documentation howto, including coverage
+ on how to set up a working environment on Unix/Linux/Windows, how to build
+ HTML formatted docs from the XML sources, what conventions to follow when
+ writing documentation, etc. If you are interested in the process, or would
+ like to start/join a translation, you can <a href="/get/dochowto">download
+ the howto</a>. Note, that <a href="/manual/howto">it is also readable
+ online</a>.
 </p>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>
