@@ -9,6 +9,7 @@ $MIRRORS = array(
    "http://www.guardian.no/"      => array("no", "Trondheim", "guardian", "http://www.guardian.no/", 0),
    "http://php.guardian.no/"      => array("no", "Trondheim", "guardian", "http://www.guardian.no/", 0),
    "http://no.php.net/"           => array("no", "Trondheim", "guardian", "http://www.guardian.no/", 1),
+   "http://sk.php.net/"           => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1),
    "http://uk.php.net/"           => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1),
    "http://www.php.net/"          => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1),
    ""                             => array("xx", "", "none", "/")
