@@ -337,6 +337,7 @@ right away.</blockquote>
 	site("Linux BBS","www.linuxbbs.org");
 	site("Linux.Com","linux.com");
 	site("Daily Linux News","www.kieser.net/linux.html");
+	site("Weekly Linux News","www.lwn.net");
 	site("Linux Power","linuxpower.org");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
@@ -394,10 +395,12 @@ right away.</blockquote>
 	site("Delia*s Inc.","www.delias.com");
 	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
+	site("freeBID Online Auctions","www.freebid.de");
 	site("FrenchToast.com","www.frenchtoast.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("HomePoint.com","www.homepoint.com");
 	site("IMT","www.imt.com");
+	site("JC Whitney","www.jcwhitney.com");
 	site("Jennifer Furniture","www.jenniferfurniture.com");
 	site("Kellymoore Paints","www.kellymoore.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
