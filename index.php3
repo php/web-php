@@ -12,7 +12,7 @@ It is currently in a public beta testing period.
 <li><a href="download.php3">Download PHP 3.0!</a>
 <li>Read about whether or not you should <a href="why_beta.php3">upgrade from PHP/FI 2.0</a>.
 <li><a href="documentation.php3">Documentation Resources</a>
-<li><a href="config.php3">Configure PHP 3.0</a> online <font size="-2">(JavaScript required)</font>
+<li><a href="http://il.php.net/config.php3">Configure PHP 3.0</a> online <font size="-2">(JavaScript required)</font>
 <li>Report or check on bugs in the <a href="http://ca.php.net/bugs.php3">PHP3 Bug Database</a>
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
 <li><a href="http://www.tryc.on.ca/php3.html">PHP 3.0 mailing list archive</a>
