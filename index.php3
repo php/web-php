@@ -3,6 +3,25 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+
+<h3>Browscap module fix</h3>
+
+A small yet important bug has been found in the browscap module of PHP 3.0 and 3.0.1,
+which effectively, renders this module useless.  If you want to use the browscap
+feature and don't want to wait until PHP 3.0.2, a patch is
+<a href="browscap-patch.php3">available</a>.  The bug does <strong>not</strong> affect
+any other part of PHP.
+
+
+<h3>PHP 3.0.1 has been released</h3>
+
+Version 3.0.1 is a service release for version 3.0.  It mainly includes fixes
+to minor problems, and a small amount of new features.  You can download the
+whole package or a patch against version 3.0 from the
+<a href="download-php.php3">downloads page</a>, or see
+<a href="ChangeLog-3.0.1.php3">what has changed since version 3.0</a>.
+
+
 <h3>PHP 3.0 Final is out!</h3>
 
 See the <a href="news.php3">In The News</a> page for the release announcement 
