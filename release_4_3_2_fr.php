@@ -23,7 +23,7 @@ Annonce de publication de PHP 4.3.2
  est finalement disponible!<br />
  Cette version de maintenance r&eacute;soud un grand nombre de bugs trouv&eacute;s dans
  des versions plus anciennes de PHP, et il est <b>recommand&eacute;</b> 
- de faire la mise ˆ jour pour tous les utilisateurs PHP.
+ de faire la mise &agrave; jour pour tous les utilisateurs PHP.
 </p>
 
 <h2>Version mineure, corrections de bugs</h2>
