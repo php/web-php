@@ -219,11 +219,12 @@ echo "\n<!--$MYSITE-->\n";
 
 <p>
  <span class="newsdate">[29-Jul-2003]</span>
- After many of our users requested a change in how our URL shortcuts behave
- when someone mistypes a shortcut, the default behaviour now is to look for
- a function name instead of performing a documentation search on Google.
- Those, who were satisfied with the Google search, can <a href="/my.php">set
- their preference at the My PHP.net page</a>. We are working on a better
+ After many of our users requested a change in how
+ <a href="/urlhowto.php">our URL shortcuts</a> behave when someone mistypes
+ a shortcut, the default behaviour now is to look for a function name
+ instead of performing a documentation search on Google. Those, who were
+ satisfied with the Google search, can <a href="/my.php">set their
+ preference at the My PHP.net page</a>. We are working on a better
  onsite search solution, Google is used temporarily to search our site.
 </p>
 
