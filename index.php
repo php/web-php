@@ -250,6 +250,8 @@ feedback). We encourage you to download and play with it (and <a href="http://bu
 if you find any!), but please do not replace your production installations of PHP 4 at this time.
 </p>
 
+<?php echo hdelim(); ?>
+
 <h1>PHP Usage Survey</h1>
 <p>
  <font class="newsdate">[24-Jun-2003]</font>
