@@ -280,7 +280,7 @@ function commonHeader($title) {
 <HEAD>
 <TITLE>PHP3: <? echo $title ?></TITLE>
 <STYLE TYPE="text/css">
-.white {
+.sidebartoc {
     color: #FFFFFF;
     text-decoration: none
 }
