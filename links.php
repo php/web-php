@@ -158,6 +158,13 @@ Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin, Perl, and
 some special modules<br></li>
 </ul>
 
+<h4>Other PHP related projects</h4>
+
+<ul>
+<li><a href"http://www.interakt.ro/products/PHAkt/">PHPAkt</a><br>
+An open-source PHP extension for Macromedia Ultradev 4.0, allowing PHP generation.<br></li>
+</ul>
+
 <h4>Non-English PHP Sites</h4>
 
 <ul>
