@@ -53,7 +53,7 @@ commonHeader("Bug Reporting");
 <p>If you need to modify a bug report that you submitted, but have forgotten what password you used, this utility can help you.</p>
 <p>Enter in the number of the bug report, press the Send button and the password will be mailed to the email address specified in the bug report.</p>
 
-<?php $msg and print "<p><font color="#CC0000">$msg</font></p>";?>
+<?php $msg and print "<p><font color=\"#CC0000\">$msg</font></p>";?>
 
 <p><b>Bug Report ID:</b> #<input type=text size=20 name="bug_id" /> <input type="submit" value="Send" /></p>
 </form>
