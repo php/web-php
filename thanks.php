@@ -6,11 +6,6 @@ commonHeader("Thanks");
 <h1>Thanks</h1>
 
 <p>
-<?php print_link("http://www.synacor.com/", "Synacor"); ?> provides the servers and 
-bandwidth that run the main www.php.net mirror site and other services.
-</p>
-
-<p>
 <?php print_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS"); ?> provides
 DNS services for the php.* domains.
 </p>
@@ -18,6 +13,11 @@ DNS services for the php.* domains.
 <p>
 <?php print_link("http://promote.pair.com/direct.pl?php.net", "pair Networks"); ?> provides
 the servers and bandwidth for CVS and mailing list services.
+</p>
+
+<p>
+<?php print_link("http://www.rackshack.net/", "RackShack"); ?> provides
+the server and bandwidth for www.php.net.
 </p>
 
 <p>
