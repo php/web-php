@@ -57,7 +57,7 @@ $fp = @fopen("backend/events.csv",'r');
 if($fp) {
 	$cm=0;
 	while(!feof($fp)) {
-		list($d,$m,$y,$url,$desc) = fgetcsv($fp,8192);
+		list($d,$m,$y,$url,$desc,$id) = fgetcsv($fp,8192);
 		if($cm!=(int)$m) { 
 			if($cm) $RSIDEBAR_DATA.= "<br />\n"; 
 			else $RSIDEBAR_DATA.='<h3>Upcoming Events<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="submit-event.php">[add event]</a></h3>';
@@ -66,7 +66,7 @@ if($fp) {
 			unset($seen);
 		}
 		if(!$seen[$desc]) {
-			$RSIDEBAR_DATA .= "$d. <a href=\"$url\">$desc</a><br>\n";
+			$RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">$desc</a><br>\n";
 			$seen[$desc] = true;
 		}
 	}

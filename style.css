@@ -129,3 +129,26 @@ div.tip {
         background: #eef;
         padding: 0px 8px;
 }
+
+table#cal {
+        font-size: smaller;
+}
+
+table#cal  a {
+        text-decoration: none;
+}
+table#cal  a:hover {
+        text-decoration: underline;
+}
+
+table#cal a.day {
+        float: right;
+        font-weight: bold;
+        color: #666;
+}
+
+table#cal div.event {
+        margin-bottom: 2px;
+        padding-bottom: 2px;
+        border-bottom: 1px dashed #000;
+}

@@ -394,4 +394,41 @@ function display_errors($errors)
 	echo '</div>';
 }
 
+function display_event($event,$include_date=1)
+{
+  for ($i = 0; $i < 7; $i++) {
+    $days[$i+1] = strftime('%A',mktime(12,0,0,4,$i,2001));
+  }
+
+  $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
+
+  $sday = $event['start'] ? strtotime($event['start'])
+          : mktime(0,0,1,$event['smonth'],$event['sday'],$event['syear']);
+  $eday = $event['end'] ? strtotime($event['end'])
+          : mktime(0,0,1,$event['emonth'],$event['eday'],$event['eyear']);
+?>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+ <tr bgcolor="#dddddd"><td>
+<?php
+  if ($include_date && ($event['start'] || $event['smonth'])) echo "<b>", date("F j, Y", $sday), "</b>\n";
+  if ($event['url']) echo '<a href="', htmlentities($event['url']),'">';
+  echo "<b>", htmlentities($event['sdesc']), "</b>";
+  if ($event['url']) echo "</a>";
+  switch ($event['type']) {
+  case 2:
+  case 'multi':
+    echo " (", date("Y-m-d",$sday), " to ", date("Y-m-d",$eday), ")";
+    break;
+  case 3:
+  case 'recur':
+    echo " (Every ", $re[$event['recur']], " ", $days[$event['recur_day']], " of the month)";
+    break;
+  }
+?>
+ </td></tr>
+ <tr bgcolor="#eeeeee"><td><?php echo $event['ldesc']?></td></tr>
+</table>
+<?php
+}
+
 ?>

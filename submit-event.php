@@ -111,27 +111,10 @@ for ($i = 0; $i < 12; $i++) {
 
 $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
 
-if (isset($in)) {?>
-<p><b>Preview:</b></p>
-<table border="0" cellspacing="0" cellpadding="3" width="100%">
- <tr bgcolor="#dddddd"><td>
-  <b><?php echo date("F j, Y", mktime(0,0,1,$in['smonth'],$in['sday'],$in['syear']))?></b>
-<?php
-  if ($in['url']) echo '<a href="', htmlentities($in['url']),'">';
-  echo htmlentities($in['sdesc']);
-  if ($in['url']) echo "</a>";
-  switch ($in['type']) {
-  case 'multi':
-    echo " ($in[syear]-$in[smonth]-$in[sday] to $in[eyear]-$in[emonth]-$in[eday])";
-    break;
-  case 'recur':
-    echo " (Every ", $re[$in['recur']], " ", $days[$in['recur_day']], " of the month)";
-    break;
-  }
+if (isset($in)) {
+  echo "<p><b>Preview:</b></p>\n";
+  display_event($in);
 ?>
- </td></tr>
- <tr bgcolor="#eeeeee"><td><?php echo $in['ldesc']?></td></tr>
-</table>
 <p><b>Change:</b></p>
 <?php
 }
