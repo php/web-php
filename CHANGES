@@ -60,9 +60,7 @@ Note that the endif is followed by a semicolon and not a colon even in
 PHP 3.0, which marks the end of the entire IF sentence.
 
 Also note that the implementation of the colon-mode and curly-braces
-mode in PHP 3.0 is identical, one isn't buggier than the other (note
-that I'm not saying they're not buggy, though :)
-
+mode in PHP 3.0 is identical, one isn't buggier than the other.
 
 [3] Semicolons in while loops must also be replaced with colons.
 
@@ -134,60 +132,63 @@ types. For example, you could use:
 
 	while ("" != (string)$key) {
 
+[6] The plus (+) and minus (-) operators are no longer overloaded for
+    string operations.
 
-[6] The structure of error messages has changed.
+In PHP2, you could add two strings together to get their concatenation,
+and subtract them to remove all occurences of one from the other.
+
+In PHP3, you should use the string concatenation operator (.) to
+concatenate strings, and the ereg_replace function to replace or
+remove substrings from a string. For example:
+
+	$a = 123;
+	$string = "This is as easy as " . $a;
+	$string = ereg_replace("This is as easy as ", "", $string);
+
+[7] The structure of error messages has changed.
 
 Although the error messages are usually more accurate, you won't be shown
 the actual line of text and actual place in which the error occured.
 You'll be supplied with the line number in which the error has occured,
 though.
 
-[7] The format string argument to echo is no longer supported.
+[8] The format string argument to echo is no longer supported.
 
 Use printf(format,arg1,arg2,arg3,...) instead (unlimited arguments).
 
-[8] The use of read-mode $array[] is no longer supported.
+[9] The use of read-mode $array[] is no longer supported.
 
 That is, you cannot traverse an array by having a loop that does $data =
 $array[].  Use current() and next() instead.  Also, $array1[] = $array2
 does not append the values of $array2 to $array1, but appends $array2
 as the last entry of $array1 (see the multidimensional array support).
 
-[9] Apache versions older than 1.2 are not supported anymore.
+[10] Apache versions older than 1.2 are no longer supported.
 
-The apache module requires apache 1.2 or later (1.3-beta is supported).
+The Apache module requires Apache 1.2 or later (1.3-beta is supported).
 
-[10] Page logging and access restrictions are no longer supported
+[11] Page logging and access restrictions are no longer supported
 
 The development team believes that this functionality does not belong
 in the core of PHP, and thus, it's been dropped in version 3.0.
 Page logging can be implemented using auto-appended or prepended
 scripts without internal support in the core (a DBM logging script
 is available).
+
 Access restrictions are available internally in just about any
 modern web server.
 
-[11] Indirect references inside quoted strings
+[12] Indirect references inside quoted strings
 
-    PHP2-style indirect reference inside quoted strings is no longer
-    supported.  That is, if $foo="bar", and $bar="abc", in PHP2,
-    "$$foo" would print out "abc".  In PHP3, this would print
-    "$bar" (the contents of $foo is replaced with "bar").
-    To use indirect reference in PHP3 inside quoted strings, you should use
-    the new notation: "${$foo}".  The standard $$foo notation will work
-    outside of the quoted string.
+PHP2-style indirect reference inside quoted strings is no longer
+supported.  That is, if $foo="bar", and $bar="abc", in PHP2, "$$foo"
+would print out "abc".  In PHP3, this would print "$bar" (the contents
+of $foo is replaced with "bar").  To use indirect reference in PHP3
+inside quoted strings, you should use the new notation: "${$foo}".
+The standard $$foo notation will work outside of the quoted string.
 
-[12]
-
-The development team believes that this functionality does not belong
-in the core of PHP, and thus, it's been dropped in version 3.0.
-Page logging can be implemented using auto-appended or prepended
-scripts without internal support in the core (a DBM logging script
-is available).
-Access restrictions are available internally in just about any
-modern web server.    
-
-[12] Other incompatibilities.
+[13] Other incompatibilities.
 
 It's not too unlikely that other documented behavior of PHP2 has changed
 in this release.  If you think you've found an example, please mail
@@ -196,7 +197,6 @@ feature of PHP2 that stopped working in PHP3, we'd like to know about it
 (although it's more than likely that it will not be supported).
 
 And now, the fun part.
-
 
 <h2>New Language Features</h2>
 
