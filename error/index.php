@@ -127,7 +127,7 @@ if ($function == "rev") {
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
-} else if ($function == "dochowto") {
+} else if (in_array($function, array("dochowto", "phpdochowto"))) {
     header("Location: http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz");
     exit;
 }
