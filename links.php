@@ -23,7 +23,7 @@ commonHeader("Links");
 <h1>Getting Started</h1>
 <p>On these sites you will find tutorials, articles and example scripts</p>
 
-<h4>Official PHP Sites</h4>
+<h4>Closely related to PHP</h4>
 
 <ul>
 <li><a href="http://www.zend.com/">Zend.com</a><br>
@@ -31,7 +31,8 @@ Zend Technologies' Web site, with lots of PHP related resources
 (articles, tutorials, case studies, PHP function table, etc.)<br>
 
 <li><a href="http://conf.php.net/">PHP Conference material</a><br>
-Some PHP conference slide shows, presented at variuos meetings<br>
+Some PHP conference slide shows, presented at variuos meetings
+by PHP professionals<br>
 </ul>
 
 <h4>PHP Link Catalogs</h4>
@@ -114,7 +115,7 @@ Lots of tutorials/instructions related to Apache, PHP and MySQL<br>
 <h4>Non-English PHP Sites</h4>
 
 <ul>
-<ul><a href="http://www.php-center.de/">PHP Center</a><br>
+<li><a href="http://www.php-center.de/">PHP Center</a><br>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more<br>
 
 <li><a href="http://www.php-homepage.de/">PHP-Homepage</a><br>
