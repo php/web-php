@@ -77,8 +77,7 @@ Registration for <a href="http://ApacheCon.Com/2001/US/">ApacheCon 2001</a> in S
 is underway! There's sessions about PHP from Luis Argerich, Thies
 Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
 Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
-sessions on other cool open-source projects. <a href="http://ApacheCon.Com/2001/US/html/registry.html">Early registration</a>
-ends March 9, so act fast for discounted prices!
+sessions on other cool open-source projects.
 <br clear="all">
 </p>
 
