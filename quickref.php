@@ -24,6 +24,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 define("COLUMNS",    3);
 define("SHOW_CLOSE", 20);
 
+// Set empty $notfound if called directly
+if (!isset($notfound)) {
+    $notfound = '';
+}
+
 // Print out the table of found (or all) functions. The HTML comments are
 // needed to support MyCroft search (Mozilla browser family and Sherlock for MacOSX)
 function quickref_table($functions)
@@ -75,7 +80,7 @@ while (($entry = readdir($dirh)) !== FALSE) {
         $functions[$entry] = $funcname;
 
         // Compute similarity of the name to the requested one
-        if (function_exists('similar_text') && $notfound) {
+        if (function_exists('similar_text') && !empty($notfound)) {
             similar_text($funcname, $notfound, $p); 
             $temp[$entry] = $p;
         }
@@ -117,7 +122,7 @@ site_header("Manual Quick Reference", $head_options);
 
 <h1>PHP Function List</h1>
 
-<?php if ($notfound && count($maybe) > 0) { ?>
+<?php if (!empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
  Sorry, but the function <b><?php echo htmlspecialchars($notfound); ?></b>
