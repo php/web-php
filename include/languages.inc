@@ -23,6 +23,7 @@ $LANGUAGES = array(
     'fi'    => 'Finnish',
     'fr'    => 'French',
     'de'    => 'German',
+    'el'    => 'Greek',
     'he'    => 'Hebrew',
     'hu'    => 'Hungarian',
     'it'    => 'Italian',
