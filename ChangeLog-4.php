@@ -1212,13 +1212,13 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
 <li>Made sure that OCI8 outbound variables are always zero-terminated. (Thies)</li>
 <li>Fixed a bug that allowed users to spawn processes while using the 5th
   parameter to mail(). (Derick)</li>
-<li>Added nl_langinfo() (when OS provides it) that returns locale.
+<li>Added nl_langinfo() (when OS provides it) that returns locale.</li>
 <li>Fixed a major memory corruption bug in the thread safe version. (Zeev)</li>
 <li>Fixed a crash when using the CURLOPT_WRITEHEADER option. (Sterling)</li>
 <li>Added optional suffix removal parameter to basename(). (Hartmut)</li>
 <li>Added new parameter UDM_PARAM_VARDIR ha in Udm_Set_Agent_Param() function to
   support alternative search data directory.  This requires mnogoSearch 3.1.13
-  or later.
+  or later.</li>
 <li>Fixed references in sessions. This doesn't work when using the WDDX
   session-serializer. Also improved speed of sessions. (Thies)</li>
 <li>Added new experimental module pcntl (Process Control). (Jason)</li>
