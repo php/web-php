@@ -318,7 +318,7 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
   <tr valign="top" bgcolor="#cccccc">
     <td><small>
-      Copyright &copy; 1998,1999,2000,2001 The PHP Association, Inc.<BR>
+      Copyright &copy; 1998-2001 The PHP Group<BR>
       All rights reserved.<BR>
       </small>
     </td>
