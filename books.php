@@ -162,7 +162,7 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/cmvsstuff">Beginning PHP 4</A><BR>
 by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
-Wrox Press Inc, October 2000, ISBN 1-8610-0373-0<BR>
+Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </SMALL>
 </TD>
 </TR>
@@ -173,7 +173,7 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff">PHP Developer's Cookbook</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A> and Sterling Hughes<BR><SMALL>
-MacMillan, November 2000, ISBN 0-6723-1924-1<BR>
+MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </SMALL>
 </TD>
 </TR>
@@ -449,7 +449,7 @@ by Herbert G. Fischer<BR>
 >MySQL and mSQL (Nutshell Series)</A><BR>
 by Randy Jay Yarger, George Reese and Tim King<BR>
 <SMALL>O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<BR>
-Russian translation: <A HREF="http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872</A>
+Russian translation: <A HREF="http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872">more info</A>
 </SMALL>
 </TD>
 </TR>
