@@ -2,10 +2,10 @@
   include "configuration.inc";
 
   $current = "3.0b6";
-  $win32_current = "3.0b5";
+  $win32_current = "3.0b6";
 
   $filesizes["php-3.0b6.tar.gz"]="~ 860KB";
-  $filesizes["php-3.0b5-win32.zip"]="~ 660KB";
+  $filesizes["php-3.0b6-win32.exe"]="~ 959KB";
 
   $DL_ONLY=0;
   $FULL_MIRROR=1;

@@ -47,7 +47,7 @@ while ($site = key($mirror_sites)) {
 		$lastlocation=$location;
 	}
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
-	$win32_file = "${site}${srcdir}php-${win32_current}-win32.zip";
+	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
 	echo("<UL>");
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
