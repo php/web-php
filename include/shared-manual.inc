@@ -290,7 +290,6 @@ function manualHeader()
         makeBorderTOC($title);
         commonHeader ($title. " - Manual");
         navigationBar($title, $id, "top");
-        echo "<!--/UdmComment-->";
     }
 }
 

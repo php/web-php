@@ -210,6 +210,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099">
 
+<!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="126"><a href="/"><?php
@@ -272,6 +273,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  </tr>
  <tr bgcolor="#333366"><td colspan="3"><?php spacer(); ?></td></tr> 
 </table>
+<!--/UdmComment-->
 
 <?php
   if (!$dont_enclose):
@@ -322,6 +324,7 @@ function commonFooter() {
 	}
 ?>
 
+<!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
  <tr bgcolor="#333366"><td><?php spacer(); ?></td></tr>
  <tr bgcolor="#9999cc">
@@ -349,7 +352,7 @@ function commonFooter() {
   <td align="right"><small>
    <a href="/mirror.php">This mirror</a> generously provided by:
    <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
-   Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore>
+   Last updated: <?php echo strftime("%c %Z", $LAST_UPDATED); ?>
    </small>
   </td>
  </tr>
