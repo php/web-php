@@ -64,7 +64,7 @@ whatever previous correspondence that may taken place.
 <tr><th>&nbsp;</th><td><input type=submit value="Send It"></td></tr>
 </table>
 </form>
-<? } elseif ($fullname && $email && $password && $purpose){ ?>
+<? } elseif ($fullname && $email && $password && $purpose) {
 mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
 mail("php-dev@lists.php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPurpose: $purpose");
 ?>
