@@ -31,7 +31,7 @@
 	echo "<br></td><td align=top>\n";
 
 	/* Hi-Tech Industry */
-	site("Fujitsu","www.fujitsu.com");	
+	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
 
