@@ -91,7 +91,7 @@ else {
 ?>
 <p>
  The autocompleting search feature is accessible via the form elements at the top
- right of this page. You should be able to use this feature in a reasonably modern
+ right of php.net pages. You should be able to use this feature in a reasonably modern
  browser by selecting the 'function list' search option and typing in some letters
  into the searchbox. Features:
 </p>
@@ -102,14 +102,15 @@ else {
  <li>Go to a function by clicking on its name with your mouse</li>
 </ul>
 <p>
- We are interested in detailed bug reports including JS error messages, operating system
- and browser information. We are planning on deploying this feature to all PHP.net pages
- if we can manage to make it work without errors for most of the commonly used browsers.
+ If you are not interested in this feature, you can turn it
+ off for yourself on the <a href="/my.php">My PHP.net</a> page.
 </p>
 <p>
- The source code of this feature is released under the PHP License and is available
- <a href="http://cvs.php.net/cvs.php/phpdoc/scripts/quickref">from the PHP CVS server</a>
- without any support.
+ In case you find any bugs, <a href="http://bugs.php.net/">we are interested</a>
+ in a detailed writeup, including JS error messages, operating system and browser
+ information. The source code of this feature is released under the PHP License and
+ is available <a href="http://cvs.php.net/cvs.php/phpdoc/scripts/quickref">from the
+ PHP CVS server</a> without any support.
 </p>
 <?php
     if (FALSE) {

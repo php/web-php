@@ -145,6 +145,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Function list suggestions available</h1>
+<p>
+ <span class="newsdate">[27-Dec-2004]</span>
+ Surely, some of our visitors are back at work for a few days between
+ holidays, and hopefully they will find our post-christmas gift useful.
+ The function list suggestions we started to test a year ago seemed to
+ be working better as some bugs were found and fixed, so it was time to
+ make the result available on all php.net pages.
+</p>
+<p>
+ Whenever you type something into the search file, while having the
+ function list search option selected, you will get a list of suggested
+ functions starting with the letters you typed in. You can browse the list
+ with the up/down keys, and you will be able to autocomplete the function
+ name, once there is only one suggestion left, with the spacebar.
+</p>
+<p>
+ If you are not interested in this feature, you can turn it
+ off for yourself on the <a href="/my.php">My PHP.net</a> page.
+ <a href="/search.php">More information</a> about this feature is
+ available on the search page.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
 <h1>Speakers Announced for PHP West Conference on Web Services</h1>
 <p>
