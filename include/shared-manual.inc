@@ -34,7 +34,8 @@ function makeBorderTOC($this) {
 
     $SIDEBAR_DATA.= '<tr valign="top"><td><small>' .
         '<input type="hidden" name="lang" value="' . $LANG . '">' .
-        'lookup: <input type="text" class="small" name="function" size="10"> ' .
+        '<span title="Keyboard shortcut: Alt+L (Win), Cmd+L (Apple)"><u>l</u>ookup:</span> ' .
+        '<input type="text" class="small" name="function" size="10" accesskey="l"> ' .
         make_submit('small_submit.gif', 'lookup', 'bottom') .
         '<br></small></td></tr>';
 

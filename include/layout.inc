@@ -241,8 +241,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
     <form method="post" action="/search.php" class="thin">
 <input type="hidden" name="lang" value="<?php if(empty($LANG)) echo htmlspecialchars(default_language()); else echo htmlspecialchars($LANG); ?>">
-<small>search for</small>
-<input class="small" type="text" name="pattern" value="" size="30" />
+<small><span title="Keyboard shortcut: Alt+S (Win), Cmd+S (Apple)"><u>s</u>earch for</span></small>
+<input class="small" type="text" name="pattern" value="" size="30" accesskey="s"/>
 <small>in the</small>
 <select name="show" class="small">
 <option value="quickref" selected>function list
