@@ -134,7 +134,7 @@ elseif ($cmd == "display") {
 	}
 
 	if (strlen($search_for)) {
-		$where_clause .= " AND (email like '%$search_for%' OR sdesc LIKE '%$search_for%' OR ldesc LIKE '%$search_for%' OR comments LIKE '%$search_for%')";
+		$where_clause .= " AND (email like '%$search_for%' OR sdesc LIKE '%$search_for%' OR ldesc LIKE '%$search_for%')";
 	}
 
 	// not supported by the HTML form yet : use the URL :)
@@ -451,17 +451,8 @@ elseif ($cmd == "display") {
 	echo wordwrap(addlinks($original[ldesc]),90);
 	echo "</pre></blockquote></blockquote>\n";
 
-	/* OLD-STYLE DEVELOPER COMMENT */
-	if(strlen($original[comments])) {
-		echo "<b><i>[$original[ts2] $original[dev_id]@php.net</i></b><br>\n";
-		$text=addlinks($row[8]);
-		echo "<blockquote><blockquote><pre>";
-		echo wordwrap(addlinks($original[comments]),90);
-		echo "</pre></blockquote></blockquote>\n";
-	}
-
-	/* NEW-STYLE COMMENTS */
-	$query = "SELECT *,UNIX_TIMESTAMP(ts) AS my_when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
+	/* COMMENTS */
+	$query = "SELECT * FROM bugdb_comments WHERE bug=$id ORDER BY ts";
 	if ($comresult = mysql_query($query)) {
 		while ($com = mysql_fetch_array($comresult)) {
 			echo "<b><i>[$com[ts]] $com[email]</i></b><br>\n";
