@@ -74,20 +74,20 @@ function makeBorderTOC($id)
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
-           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $REQUEST_URI;
+           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $BASE_FOR_MANPAGE;
 
     echo '<!--UdmComment-->' . "\n" . 
          '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
     echo '<tr><td>';
     if ($PREV[1]) {
-        echo make_link( $PREV[0] , make_image('caret-l.gif', '&lt;') . $PREV[1] ) ;
+        echo make_link($PREV[0] , make_image('caret-l.gif', '&lt;') . $PREV[1] ) ;
     }
     echo '</td>';
 
     echo '<td align="right">';
     if ($NEXT[1]) {
-        echo make_link( $NEXT[0] , $NEXT[1] . make_image('caret-r.gif', '&gt;') ) ;
+        echo make_link($NEXT[0] , $NEXT[1] . make_image('caret-r.gif', '&gt;') ) ;
     }
     echo '</td>';
     echo '</tr>';
@@ -102,7 +102,7 @@ function navigationBar($title,$id,$loc) {
     // Print out language switch on top of manual pages
     if ($loc != 'bottom') {
         $links = array();
-        preg_match("!^/manual/(.+)/!", $REQUEST_URI, $langcode);
+        preg_match("!^/manual/(.+)/!", $BASE_FOR_MANPAGE, $langcode);
         $links[] = array("$langcode[1]/print/$id", "printer friendly");
         $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
         // Disable all 'inactive' languages
