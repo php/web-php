@@ -14,9 +14,9 @@ $SIDEBAR_DATA='
 
 <h3>Screenshots</h3>
 <div class="center">
- <a href="/images/echm/shot1.png"><img src="/images/echm/shot1_mini.png" alt="PHP documentation displayed with 'low' skin" title="PHP documentation displayed with 'low' skin" /></a>
- <a href="/images/echm/shot3.png"><img src="/images/echm/shot3_mini.png" alt="PHP documentation displayed with 'headernostalgia' skin" title="PHP documentation displayed with 'headernostalgia' skin" /></a>
- <a href="/images/echm/shot2.png"><img src="/images/echm/shot2_mini.png" alt="PHP documentation displayed with 'phpz' skin" title="PHP documentation displayed with 'phpz' skin" /></a>
+ <a href="/images/echm/shot1.png"><img src="/images/echm/shot1_mini.png" alt="PHP documentation displayed with \'low\' skin" title="PHP documentation displayed with \'low\' skin" /></a>
+ <a href="/images/echm/shot3.png"><img src="/images/echm/shot3_mini.png" alt="PHP documentation displayed with \'headernostalgia\' skin" title="PHP documentation displayed with \'headernostalgia\' skin" /></a>
+ <a href="/images/echm/shot2.png"><img src="/images/echm/shot2_mini.png" alt="PHP documentation displayed with \'phpz\' skin" title="PHP documentation displayed with \'phpz\' skin" /></a>
  <a href="/images/echm/prefs.png"><img src="/images/echm/prefs_mini.png" alt="Setting preferences" title="Setting preferences" /></a>
 </div>
 ';
