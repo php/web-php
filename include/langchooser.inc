@@ -174,7 +174,7 @@ function language_choose_code()
 // Add a language to the possible languages' list
 function language_add($langcode, &$langs)
 {
-    global $LANGUAGES;
+    global $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
     // Make language code lowercase
     $langcode = strtolower($langcode);
