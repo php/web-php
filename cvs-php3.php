@@ -10,11 +10,11 @@ CVS.  This helps us track changes and it makes it possible for people located
 in all corners of the world to collaborate on a project without having to worry
 about stepping on each others' toes.
 <P>
-Please note that you do not need a CVS account to access the CVS tree.  See
+Please note that you do <b>not</b> need a CVS account to <b>access</b> the CVS tree.  See
 <a href="http://cvs.php.net">cvs.php.net</a> for details.  You only need your
 own CVS account if you will be regularly committing things to the CVS tree.
 <P>
-And once again since people just don't seem to understand this point.
+And once again since people just don't seem to understand this point:
 <P>
 <table>
 <tr><td><b>Does Not Require CVS Account</b></td><td>&nbsp;</td><td><b>Requires CVS Account</b></td></tr>
