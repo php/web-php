@@ -150,6 +150,26 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
+<h1>PHP 4.3.4RC3 released</h1>
+<p>
+ <span class="newsdate">[20-Oct-2003]</span>
+ <a href="http://qa.php.net/">PHP 4.3.4RC3</a> has been released for testing.
+ This release candidate is hopefully the final release candidate prior to the
+ 4.3.4 release and should be very stable. Please test this release as much as 
+ possible, so that any remaining issues can be uncovered and resolved prior to 
+ the final release. Users of the mbstring extension are especially encouraged to
+ try and test this release candidate as the underlying library used by mbstring
+ was changed.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.443&r2=1.1247.2.447">NEWS</a>
+ file.
+</p>
+
+<hr />
+
 <?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 26 & 27th</h1>
@@ -162,23 +182,6 @@ commonHeader("Hypertext Preprocessor");
  for two days of sessions, packed with
  <a href="http://www.afup.org/forumphp/">solutions and advanced techniques</a>
  (in French).
-</p>
-
-<hr />
-
-<h1>PHP 4.3.4RC2 released</h1>
-<p>
- <span class="newsdate">[20-Oct-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.4RC2</a> has been released for testing.
- This release candidate is hopefully the final release candidate prior to the
- 4.3.4 release and should be very stable. Please test this release as much as 
- possible, so that any remaining issues can be uncovered and resolved prior to 
- the final release.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.412&r2=1.1247.2.442">NEWS</a>
- file.
 </p>
 
 <hr />
