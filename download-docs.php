@@ -21,10 +21,10 @@ here to see all the file sizes and dates</a>.
 
 <h3>Tip for Windows users</h3>
 <p>
-<a href="http://www.rarsoft.com/">WinRAR</a> supports .bz2, and
-Redhat also hosts
-<a href="http://sources.redhat.com/bzip2/">free
-downloads of .bz2 tools for Windows</a>.
+If you don\'t know how to handle bz2 compressed
+manuals on Windows, please read our
+<a href="http://www.php.net/manual/en/faq.misc.php#AEN79524">FAQ entry</a>
+on this subject.
 </p>
 ';
 
