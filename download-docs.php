@@ -34,7 +34,6 @@ $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
- "manual.txt.bz2"          => array("Plain text",          "txt.bz2"),
  "bigmanual.html.bz2"      => array("Single HTML",         "html.bz2"),
  "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2"),
  "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
