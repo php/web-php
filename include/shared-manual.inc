@@ -371,7 +371,7 @@ function makePrintEntry($date,$name,$blurb,$id=0) {
         }
     }
     echo date("d-M-Y h:i",$date) . "<br><br>";
-    echo clean_note($blurb) . "<br><br>";
+    echo clean_note($blurb) . "<br><hr noshade size=\"1\" width=\"50%\" align=\"center\">";
 
 }
     
