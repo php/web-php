@@ -1,7 +1,7 @@
 <?php /* vim: set noet ts=4 sw=4: : */
 require_once 'prepend.inc';
 
-if (isset($save) && isset($user) && isset($pw)) {
+if (isset($save) && isset($pw)) { # non-developers don't have $user set
   setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 }
 
@@ -36,9 +36,13 @@ function show_id_options($current) {
 	}
 }
 
-function show_state_options($state, $show_all, $user_mode=0) {
-	
-	if (empty($state)) { $state = "Open"; }
+function show_state_options($state, $show_all, $user_mode=0, $default="") {
+	if (!$state && !$default) {
+		$state = "Open";
+	}
+	elseif (!$state) {
+		$state = $default;
+	}
 
 	$state_types = 	array (
 		"Open" => 2, 
@@ -72,32 +76,44 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	}
 }
 
-function show_version_options($current) {
+function show_version_options($current,$default="") {
 	$versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
 	while (list(,$v) = each($versions)) {
 		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
+		if ($current == $v) $use++;
 	}
+	if (!$use) echo "<option selected>$current</option>\n";
 	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
 }
 
-function show_types($current,$show_any) {
+function show_types($current,$show_any,$default="") {
 	include 'bugtypes.inc';
 
-	if (!$current) {
+	if (!$current && !$default && !$show_any) {
 		echo "<option value=\"unknown\">--Please Select--</option>\n";
+	}
+	elseif (!$current && $show_any) {
+		$current = "Any";
+	}
+	elseif (!$current) {
+		$current = $default;
 	}
 
 	while (list($key,$value) = each($items)) {
-		if (!$show_any && $value == "Any") continue;
-		echo "<option value=\"$key\"",
-		     ($key == $selected ? " selected" : ""),
-		     ">$value</option>\n";
+		if ($show_any || $value != "Any") {
+			echo "<option value=\"$key\"",
+				 ($key == $current? " selected" : ""),
+				 ">$value</option>\n";
+			if ($key == $current) $use++;
+		}
+	}
+	if (!$use) {
+		echo "<option selected>$current</option>\n";
 	}
 }
 
 function show_menu($state) {
-	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE, $search_for;
-	if(!isset($bug_type)) { $bug_type="Any"; }
+	global $PHP_SELF, $id, $bug_type, $by, $MAGIC_COOKIE, $search_for;
 ?>
 <table bgcolor="#ccccff" border="0" cellspacing="1">
  <form method="POST" action="<?php echo $PHP_SELF?>">
@@ -118,7 +134,7 @@ function show_menu($state) {
  <form method="GET" action="<?php echo $PHP_SELF;?>">
   <tr>
    <td colspan="3" align="right"><input type="submit" value="Edit" /> bug number:</td>
-   <td colspan="2"><input type="text" name="id"></td>
+   <td colspan="2"><input type="text" name="id" value="<?echo $id?>" /></td>
    <input type="hidden" name="edit" value="<?php echo isset($MAGIC_COOKIE) ? 1 : 2;?>" />
    <td align="center"><a href="bugstats.php">Statistics</a></td>
   </tr>
@@ -146,83 +162,126 @@ function find_password($user) {
 	return("");
 }
 
-function addlinks($text) {
-	$text = htmlspecialchars($text);
-	$new_text = ereg_replace("(http:[^ \n\t]*)","<a href=\"\\1\">\\1</a>",$text);
-	$new_text = ereg_replace("(ftp:[^ \n\t]*)","<a href=\"\\1\">\\1</a>",$text);
-	$new_text = ereg_replace("[.,]-=-\"","\"",$new_text);
-	$new_text = ereg_replace("-=-\"","\"",$new_text);
-	return $new_text;
+function valid_login($user,$pass) {
+	if($user!="cvsread") {
+		$psw=find_password($user);
+		if(strlen($psw)>0) {
+			return crypt($pass,substr($psw,0,2)) == $psw;
+		}
+	}
+	return false;
 }
 
-if ($cmd == "send") {
-	/* validate the incoming bug report */
+function get_old_comments ($bug_id) {
+	$divider = str_repeat("-", 72);
+	$max_message_length = 10 * 1024;
+    $max_comments = 5;
+    $output = ""; $count = 0;
+
+	$res = @mysql_query("SELECT ts, email, comment FROM bugdb_comments WHERE bug=$bug_id ORDER BY ts DESC");
+
+    if (!$res) return "";
+    
+    # skip the most recent (this is get_old_comments, not get_all_comments!)
+    $row = mysql_fetch_row($res);
+    if (!$row) return "";
+
+    while ($row = mysql_fetch_row($res) && strlen($output) < $max_message_length && $count++ < $max_comments) {
+		$output .= "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n";
+    }
+
+    if (strlen($output) < $max_message_length && $count < $max_comments) {
+    	$res=@mysql_query("SELECT ts1,email,ldesc FROM bugdb WHERE id=$bug_id");
+    	if (!$res) return $output;
+    	$row = mysql_fetch_row($res);
+    	if (!$row) return $output;
+		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n");
+    }
+    else {
+		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "The remainder of the comments for this report are too long. To view\nthe rest of the comments, please view the bug report online at\n    http://bugs.php.net/?id=$bug_id\n");
+    }
+
+    return "";
+}
+
+function addlinks($text) {
+	$text = htmlspecialchars($text);
+    $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\\.\\s|$)/i","<a href=\"\\1\">\\1</a>\\3",$text);
+    # what the heck is this for?
+    $text = preg_replace("/[.,]?-=-\"/", '"', $text);
+	return $text;
+}
+
+/* validate an incoming bug report */
+function incoming_details_are_valid($require_ldesc=0) {
+    global $email,$bug_type,$php_version,$sdesc,$ldesc;
+
 	$valid = 1;
 	if(!preg_match("/[.\\w+-]+@[.\\w]+\\.\\w{2,}/i",$email)) {
-		echo "<p class=\"error\">Please provide a valid email address.</p>";
+		echo "<h2 class=\"error\">Please provide a valid email address.</h2>";
 		$valid = 0;
 	}
 
-	if ($ebug_type=="none") {
-		echo "<p class=\"error\">Please select an appropriate bug type.</p>";
+	if ($bug_type=="none") {
+		echo "<h2 class=\"error\">Please select an appropriate bug type.</h2>";
 		$valid = 0;
 	}
 
 	if ($php_version=='earlier') {
-		echo "<p class=\"error\">Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.</p>";
+		echo "<h2 class=\"error\">Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.</h2>";
 		$valid = 0;
 	}
 
     if (!$sdesc) {
-		echo "<p class=\"error\">You must supply a short description of the bug you are reporting.</p>";
+		echo "<h2 class=\"error\">You must supply a short description of the bug you are reporting.</h2>";
 		$valid = 0;
 	}
 
-    if (!$ldesc) {
-		echo "<p class=\"error\">You must supply a long description of the bug you are reporting.</p>";
+    if ($require_ldesc && !$ldesc) {
+		echo "<h2 class=\"error\">You must supply a long description of the bug you are reporting.</h2>";
 		$valid = 0;
 	}
 
-	if ($valid) {
+	return $valid;
+}
+
+if ($cmd == "send") {
+	if (incoming_details_are_valid(1)) {
 		show_menu($status);
 		echo "<hr />\n";
 
-		$ts=date("Y-m-d H:i:s");
-		$ret = mysql_query("INSERT INTO bugdb VALUES (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
+		$ret = mysql_query("INSERT INTO bugdb (bug_type,email,sdesc,ldesc,php_version,php_os,status,ts1,passwd) VALUES ('$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','',NOW(),'$passwd')");
+
 		$cid = mysql_insert_id();
 
 		$report = "";
-		echo "<pre>\n";
 
 		$ldesc = stripslashes($ldesc);
 		$sdesc = stripslashes($sdesc);
-		$report .= "From:	     $email\n";
+
+		echo "<pre>\n";
+
+		$report .= "From:             $email\n";
 		$report .= "Operating system: $php_os\n";
 		$report .= "PHP version:      $php_version\n";
-		$report .= "PHP Bug Type:     $ebug_type\n";
+		$report .= "PHP Bug Type:     $bug_type\n";
 		$report .= "Bug description:  ";
-		$html_sdesc = ereg_replace("<", "&lt;", $sdesc);
-		$html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
-		$report .= $html_sdesc."\n\n";
-		$ascii_report = indent($report.$ldesc,"");
-		$ascii_report.= "\n\n-- \nEdit Bug report at: http://bugs.php.net/?id=$cid&edit=1\n\n";
-		$html_desc = ereg_replace("<", "&lt;", $ldesc);
-		$html_desc = ereg_replace(">", "&gt;", $html_desc);
-		$report .= $html_desc."\n";
 
-		$html_report = ereg_replace("<", "&lt;", $report);
-		$html_report = ereg_replace(">", "&gt;", $html_report);
+		echo $report;
 
-		echo wrap($html_report);
-		echo("</pre>\n");
+        echo htmlspecialchars($sdesc), "\n\n";
 
-		// Send doc bugs also to the doc list (jeroen)
-		if ($ebug_type == "Documentation problem") {
-			@mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
-		}
+        wrap(htmlspecialchars($ldesc));
 
-		if (mail($mail_bugs_to, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
-			echo "<p><h2>Mail sent to $mail_bugs_to...</h2></p>\n";
+		echo "</pre>\n";
+
+		$ascii_report = $report.$sdesc."\n\n".wrap($ldesc);
+		$ascii_report.= "\n-- \nEdit bug report at: http://bugs.php.net/?id=$cid&edit=1\n";
+
+        $mailto = $mail_bugs_to . (eregi("documentation",$bug_type) ? ",phpdoc@lists.php.net" : "");
+
+		if (mail($mailto, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>")) {
+			echo "<p><h2>Mail sent to $mailto...</h2></p>\n";
 			echo "<p>Thank you for your help!</p>";
 			echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 			echo "If the status of the bug report you submitted\n";
@@ -232,13 +291,15 @@ if ($cmd == "send") {
 		} else {
 			echo "<p><h2>Mail not sent!</h2>\n";
 			echo "Please send this page in a mail to " .
-			     "<a href=\"mailto:$mail_bugs_to\">$mail_bugs_to</a> manually.</p>\n";
+			     "<a href=\"mailto:$mailto\">$mailto</a> manually.</p>\n";
 	    }
 	}
 
-} elseif ($cmd == "display") {
+}
+elseif ($cmd == "display") {
 	show_menu($status);
 	echo "<hr />\n";
+	if (!$bug_type) $bug_type = "Any";
 
 	include("table_wrapper.inc");
 
@@ -365,255 +426,264 @@ if ($cmd == "send") {
 
 } elseif (!isset($cmd) && isset($id)) {
 
-	function get_old_comments ($bug_id) {
-	  	$divider = '---------------------------------------------------------------------------';
-		$max_message_length = 10 * 1024;
-
-		#fetch comments
-		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id order by ts desc");
-		while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
-			$comments[] = $temp;
-
-		if ($comments[0])
-			unset ($comments[0]);	# Ditch the most recent comment
-
-	  	#fetch original bug description
-		$query = "SELECT ts1, email, ldesc FROM bugdb WHERE id=$bug_id LIMIT 5";
-		$result = mysql_query ($query);
-		$comments[] = mysql_fetch_row ($result);
-
-		$counter = 0;
-		foreach ($comments as $value) {
-			$output .= "[$value[0]] $value[1]\n\n$value[2]\n\n$divider\n\n";
-			if (strlen ($output) > $max_message_length || ++$counter > 4 ) {
-				$output .= "The remainder of the comments for this report are too long.\nTo view the rest of the comments, please\nview the bug report online.\n";
-				break;
-			}
-		}
-
-		if ($output) {
-			return "\n\nPrevious Comments:\n$divider\n\n" . $output;
-		}
-	}
-
 	show_menu($status);
 	echo "<hr />\n";
 
-	/* HANDLE NORMAL DEVELOPER UPDATES */
-	if(isset($modify) && $modify=="Edit Bug") {
-		$ok=0;
-		if($user!="cvsread") {
-			$psw=find_password($user);
-			if(strlen($psw)>0) {
-				if(crypt($pw,substr($psw,0,2))==$psw) {
-					$ts=date("Y-m-d H:i:s");
-					$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id");
-					mysql_query("UPDATE bugdb set sdesc='$esdesc',status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user', php_version='$ephp_version' where id=$id");
-					if (!empty($ncomment)) {
-						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
-					}
-					$ok=1;
-				}
-			}
+    # fetch the original bug into $original
+    $res = mysql_query("SELECT * FROM bugdb WHERE id=$id");
+    if ($res) $original = mysql_fetch_array($res);
+    if (!$res || !$original) {
+      echo "<h1 class=\"error\">No such bug #$id!</h1>";
+      commonFooter();
+      exit;
+    }
+
+    # handle any updates, displaying errors if there were any
+    $success = 0;
+
+    if ($modify == "user") {
+		if ($row[passwd] != $pw) {
+			echo "<h2 class=\"error\">The password you supplied was incorrect.</h2>\n";
 		}
-		if(!$ok) {
-			echo "<b>Sorry, incorrect user id/password pair.</b><br>\n";
-			mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
-		} else {
-			echo "<b>Database updated!</b><br>\n";
-			$row=mysql_fetch_row($result);
-			$text = "ID: $id\nUpdated by: $user\n";
-			$text.= "Reported By: $eemail\n";
-			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
-			$text.= "Status: $estatus\n";
-			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
-			$text.= "Bug Type: $ebug_type\n";
-			$text.= "Operating system: $ephp_os\n";
-			$text.= "PHP Version: $ephp_version\n";
-			$text.= "Assigned To: $eassign\n";
-			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
-			$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
-			$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=2\n";
-			$text = stripslashes($text);
-			$esdesc = stripslashes($esdesc);
-
-			// mail phpdoc if old or new type is documentation (jeroen)
-			if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
-				@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
-			}
-
-			/* mail originator if status was changed or there is a comment */
-			if($estatus != $row[0] || $ncomment != "") {
-				@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$mail_bugs_to>");
-				@mail($mail_bugs_to, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
-			}
-		}
-		mysql_freeresult($result);
-	}
-
-	/* HANDLE USER UPDATES */
-	if(isset($modify) && $modify=="User Edit Bug") {
-		$ts=date("Y-m-d H:i:s");
-		$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id and passwd='$pw'");
-		$ok=mysql_numrows($result);
-		if(!$ok) {
-			echo "<b>Sorry, incorrect password.  The entry has not been changed.</b><br>\n";
-			mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
-		} else {
-			$row=mysql_fetch_row($result);
-
+		elseif (incoming_details_are_valid()) {
 			/* update bug record */
-			if($estatus=="Closed" and $row[0]!="Closed") {
-				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts', dev_id='$eemail' where id=$id");
-			} else {
- 				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
-			}
+			$success = @mysql_query("UPDATE bugdb SET status='$estatus', bug_type='$bug_type', php_version='$php_version', php_os='$php_os', ts2=NOW(), email='$email' WHERE id=$id");
 			
 			/* add comment */
-			if (!empty($ncomment)) {
-				mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail','$ts','$ncomment')");
+			if ($success && !empty($ncomment)) {
+				$success = @mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail',NOW(),'$ncomment')");
 			}
-
-			echo "<b>Database updated!</b><br>\n";
-
-			$text = "ID: $id\nUser Update by: $eemail\n";
-			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
-			$text .= "Status: $estatus\n";
-			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
-			$text .= "Bug Type: $ebug_type\n";
-			$text .= "Operating system: $ephp_os\n";
-			$text .= "PHP Version: $ephp_version\n";
-			$text .= "Description: $esdesc\n\n$ncomment";
-			$text .= get_old_comments ($id);
-			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
-			$text = stripslashes($text);
-			$esdesc = stripslashes($esdesc);
-
-			// mail phpdoc if old or new type is documentation
-			if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
-      				@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
-			}
-
-			@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$mail_bugs_to>");
-			@mail($mail_bugs_to, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
-			mysql_freeresult($result);
 		}
+		$from = $email;
+    }
+    elseif ($modify == "developer") {
+		if (!valid_login($user,$pw)) {
+			echo "<h2 class=\"error\">The username or password you supplied was incorrect.</h2>\n";
+		}
+		elseif (incoming_details_are_valid()) {
+			$success = @mysql_query("UPDATE bugdb SET sdesc='$sdesc',status='$status', bug_type='$bug_type', assign='$assign', dev_id='$user', php_version='$php_version', php_os='$php_os', ts2=NOW() WHERE id=$id");
+			if ($success && !empty($ncomment)) {
+				$success = @mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$user@php.net',NOW(),'$ncomment')");
+			}
+		}
+		$from = "$user@php.net";
+    }
+
+	if ($modify && $success) {
+		# mail out the updated bug
+		$text = "ID: $id\n";
+		if ($modify == "developer") {
+			$text .= "Updated by: $user\n";
+		}
+		else {
+			$text .= "User updated by: $email\n";
+		}
+
+		$text.= "Reported By: $original[email]\n";
+
+		if ($sdesc != $original[sdesc])
+			$text .= "Old Summary: $original[sdesc]\n";
+
+		if ($status!=$original[status])
+			$text .= "Old Status: $original[status]\n";
+		$text.= "Status: $status\n";
+
+		if ($bug_type != $original[bug_type])
+			$text .= "Old Bug Type: $original[bug_type]\n";
+		$text.= "Bug Type: $bug_type\n";
+
+		if ($php_os != $original[php_os])
+			$text .= "Old Operating System: $original[php_os]\n";
+		$text.= "Operating System: $php_os\n";
+
+		if ($php_version != $original[php_version])
+			$text .= "Old PHP Version: $original[php_version]\n";
+		$text.= "PHP Version: $php_version\n";
+
+		if ($assign != $original[assign])
+			$text .= "Old Assigned To: $original[assign]\n";
+		$text.= "Assigned To: $assign\n";
+
+		if ($ncomment)
+			$text .= "New Comment:\n\n".stripslashes($ncomment);
+
+		$text.= get_old_comments($id);
+
+		$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
+		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=2\n";
+
+		$mailto = $mail_bugs_to . (eregi("documentation",$bug_type.$row[1]) ? ",phpdoc@lists.php.net" : "");
+
+		/* send mail if status was changed or there is a comment */
+		if ($status != $original[status] || $ncomment != "") {
+			@mail($original[email], "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: Bug Database <$mail_bugs_to>\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
+			@mail($mailto, "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: $from\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
+		}
+
+		# display a happy success message
+		echo "<h2>Bug #$id updated successfully.</h2>\n";
+
+    }
+	elseif ($modify && !$success) {
+		echo "<h2 class=\"error\">Something went wrong updating the database.</h2>";
 	}
 
 	/* DISPLAY BUG */
-	$result = mysql_query("SELECT * FROM bugdb WHERE id=$id");
-	if ($result and mysql_numrows($result) > 0) {
-		$row = mysql_fetch_row($result);
-		echo "<br><h1>Bug id #$id</h1>\n";
-		echo "<table>\n";
-		if(!isset($edit)) {
-			echo "<tr><th align=\"right\">Status:</th><td>".$row[7]."</td>";
-			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=\"-1\"><tt>User Modify</tt></font></a> &nbsp; ";
-			echo "<a href=\"$PHP_SELF?id=$id&edit=1\"><font size=\"-1\"><tt>Dev Modify</tt></font></a></td>";
-		} else {
-			echo "<form method=\"post\" action=\"$PHP_SELF?id=$id\">\n";
-			if($edit==1) {
-				echo "<input type=\"hidden\" name=\"modify\" value=\"Edit Bug\">\n";
-			} else {
- 				echo "<tr><td align=\"right\" colspan=\"2\"><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=\"-1\"><tt>Dev Modify</tt></font></a></td></tr>";
-				echo "<input type=\"hidden\" name=\"modify\" value=\"User Edit Bug\">\n";
-			}
-			echo "<tr><th align=\"right\">Status:</th><td><select name=\"estatus\">\n";
-			show_state_options($row[7], 0, ($edit==2)?2:0);
-			echo "</select>\n";
-			if($edit==1) {
-				echo "Assign to: <input type=\"text\" name=\"eassign\" value=\"$row[12]\">\n";
-				echo "<input type=\"submit\" value=\"Commit Changes\">\n";
-			}
-		}
-		echo "</tr>\n";
-		echo "<tr><th align=\"right\">From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
-		echo "<input type=\"hidden\" name=\"eemail\" value=\"$row[2]\"></td></tr>\n";
-		echo "<tr><th align=\"right\">Date:</th><td>".$row[9]."</td></tr>\n";
+    if ($edit) {
+		echo "<form method=\"POST\" action=\"$PHP_SELF?id=$id\">\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"$edit\" />\n";
+	}
+    if ($edit==1)
+		echo '<input type="hidden" name="modify" value="developer" />',"\n";
+    if ($edit==2)
+		echo '<input type="hidden" name="modify" value="user" />',"\n";
+?>
+<br />
+<h1>Bug id #<?php echo $id?></h1>
+<table>
+ <tr>
+  <th align="right">Status:</th>
+  <?php if ($edit) {?>
+   <td><select name="status"><?php show_state_options($status,0,$edit,$original[status])?></select>
+   <?php if ($edit == 1) {?>
+    <b>Assign To:</b> <input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>" /> <input type="submit" value="Submit Changes" /></td>
+   <?php } else { ?>
+     <font size="-1"><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></font></td>
+   <?php }?>
+  <?php } else { ?>
+   <td><?php echo $original[status]?></td>
+   <td><td><font size="-1"><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=2"><tt>User Modify</tt></a> &nbsp; <a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></font></td>
+  <?php }?>
+ </tr>
+ <tr>
+  <th align="right">From:</th>
+  <?php if ($edit) {?>
+   <td><input type="text" name="email" size="20" maxlength="40" value="<?php echo $email ? htmlspecialchars(stripslashes($email)) : htmlspecialchars($original[email])?>" /></td>
+  <?php } else { ?>
+   <td><?php echo $original[email]?></td>
+  <?php }?>
+ </tr>
+ <tr>
+  <th align="right">Reported:</th>
+  <td><?php echo $original[ts1]?></td>
+ </tr>
+ <tr>
+  <th align="right">Type:</th>
+  <?php if ($edit) {?>
+   <td><select name="bug_type"><?php show_types($bug_type,0,$original[bug_type])?></select></td>
+  <?php } else { ?>
+   <td><?php echo $original[bug_type]?></td>
+  <?php }?>
+ </tr>
+ <tr>
+  <th align="right">OS:</th>
+  <?php if ($edit) {?>
+   <td><input type="text" name="php_os" size="20" maxlength="32" value="<?php echo $php_os ? htmlspecialchars(stripslashes($php_os)) : htmlspecialchars($original[php_os])?>" /></td>
+  <?php } else { ?>
+   <td><?php echo $original[php_os]?></td>
+  <?php }?>
+ </tr>
+ <tr>
+  <th align="right">PHP Version:</th>
+  <?php if ($edit) {?>
+   <td><input type="text" name="php_version" size="20" maxlength="100" value="<?php echo $php_version ? htmlspecialchars(stripslashes($php_version)) : htmlspecialchars($original[php_version])?>" /></td>
+  <?php } else { ?>
+   <td><?php echo $original[php_version]?></td>
+  <?php }?>
+ </tr>
+<?php if ($original[assign] || $edit == 1) {?>
+ <tr>
+  <th align="right">Assigned To:</th>
+  <?php if ($edit == 1) {?>
+   <td><input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>" /></td>
+  <?php } else { ?>
+   <td><?php echo $original[assign]?></td>
+  <?php }?>
+ </tr>
+<?php }?>
+ <tr>
+  <th align="right">Summary:</th>
+  <?php if ($edit) {?>
+   <td><input type="text" name="sdesc" size="40" maxlength="80" value="<?php echo $sdesc ? htmlspecialchars(stripslashes($sdesc)) : htmlspecialchars($original[sdesc])?>" /></td>
+  <?php } else { ?>
+   <td><?php echo $original[sdesc]?></td>
+  <?php }?>
+ </tr>
+<?php if ($edit) {?>
+ <tr>
+  <th align="right">New Comment:</th>
+ </tr>
+ <tr>
+  <td colspan="2">
+   <textarea name="ncomment" wrap="physical" cols="60" rows="15"><?php echo htmlspecialchars(stripslashes($ncomment));?></textarea>
+  </td>
+ </tr>
+<?php   if ($edit == 1) { /* developer */?>
+ <tr>
+  <th align="right">CVS Username:</th>
+  <td>
+   <input type="text" name="user" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($user));?>" />
+  </td>
+ </tr>
+<?php   }?>
+ <tr>
+  <th align="right">Password:</th>
+  <td>
+   <input type="<?php echo ($edit == 1) ? "password" : "text";?>" name="pw" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($pw));?>" />
+   <?php if ($edit == 2) {?>
+   [<a href="bug-pwd-finder.php">Lost your password?</a>]
+   <?php }?>
+  </td>
+ </tr>
+ <tr>
+  <th align="right">Remember me:</th>
+  <td>
+   <input type="checkbox" name="save" />
+   (Check here to remember your password for next time.)
+  </td>
+ </tr>
+ <tr>
+  <td colspan="2">
+   &nbsp; &nbsp; &nbsp;
+   <input type="submit" value="Submit Changes" />
+  </td>
+ </tr>
+<?php }?>
+</table>
+<?php
+	if ($edit) echo "</form>\n";
 
-		if(!isset($edit)) {
-			echo "<tr><th align=\"right\">Type:</th><td>".$row[1]."</td></tr>\n";
-		} else {
-			echo "<tr><th align=\"right\">Type:</th><td>\n";
-			echo "<select name=\"ebug_type\">";
-			show_types($row[1],0);
-			echo "</select></td></tr>\n";
-		}
+	echo "<hr />\n";
 
-		if(isset($edit) && $edit==2) {
-			echo "<tr><th align=\"right\">OS:</th><td><input type=\"text\" size=\"20\" name=\"ephp_os\" value=\"".$row[6]."\"></td></tr>\n";
-		} else {
-			echo "<tr><th align=\"right\">OS:</th><td>".$row[6]."</td></tr>\n";
-		}
-		if(isset($edit) && ($edit==2 || $edit == 1)) {
-			echo "<tr><th align=\"right\">PHP Version:</th><td><input type=\"text\" size=\"20\" name=\"ephp_version\" value=\"".$row[5]."\"></td></tr>\n";
-		} else {
-			echo "<tr><th align=\"right\">PHP Version:</th><td>".$row[5]."</td></tr>\n";
-		}
-		echo "<tr><th align=\"right\">Assigned To:</th><td>".$row[12]."</td></tr>\n";
-		$sd = ereg_replace("<","&lt;",$row[3]);
-		$sd = ereg_replace(">","&gt;",$sd);
-		if(isset($edit) && $edit==1) {
-			echo "<tr><th align=\"right\">Short Desc.:</th><td><input type=\"text\" size=\"40\" name=\"esdesc\" value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
-		} else {
-			echo "<tr><th align=\"right\">Short Desc.:</th><td></b>$sd<input type=\"hidden\" name=\"esdesc\" value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
-		}
-		echo "</table>\n";
+	/* ORIGINAL REPORT */
+	echo "<b><i>[$original[ts1]] $original[email]</i></b><br>\n";
+	echo "<blockquote><blockquote><pre>";
+	wrap(addlinks($original[ldesc]),90);
+	echo "</pre></blockquote></blockquote>\n";
 
-		/* INSERT NEW COMMENT HERE */
-		if (isset($edit)) {
-			echo "<b>New Comment:</b><br>\n";
-			echo "<textarea cols=\"60\" rows=\"15\" name=\"ncomment\" wrap=\"physical\"></textarea><br>\n";
-			if(isset($MAGIC_COOKIE)) list($user, $pw) = explode(":", base64_decode($MAGIC_COOKIE));
-			if ($edit == 1) {
-				echo "CVS user id: <input type=\"text\" size=\"10\" name=\"user\" value=\"$user\">\n";
-			}
-			echo "Password: <input type=\"password\" size=\"10\" name=\"pw\" value=\"$pw\">\n";
-			echo "<input type=\"submit\" value=\"Commit Changes\">";
-			echo ($edit == 2) ? " [<a href=\"/bug-pwd-finder.php\">Lost your password?</a>]<br>\n" : "<br>\n";
-			if(!$user || !$pw) {
-				echo "Remember my login/password: <input type=\"checkbox\" name=\"save\">\n";
-			}
-			echo "</form>\n";
-		}
-
-		echo "<hr />\n";
-
-		/* ORIGINAL REPORT */
-		echo "<b><i>[".$row[9]."] ".$row[2]."</i></b><br>\n";
-		$text = addlinks($row[4]);
+	/* OLD-STYLE DEVELOPER COMMENT */
+	if(strlen($original[comments])) {
+		echo "<b><i>[$original[ts2] $original[dev_id]@php.net</i></b><br>\n";
+		$text=addlinks($row[8]);
 		echo "<blockquote><blockquote><pre>";
-		echo wrap($text,90);
+		wrap(addlinks($original[comments]),90);
 		echo "</pre></blockquote></blockquote>\n";
+	}
 
-		/* OLD-STYLE DEVELOPER COMMENT */
-		if(strlen($row[8])) {
-			echo "<b><i>[".$row[10]."] ".$row[11]."</i></b><br>\n";
-			$text=addlinks($row[8]);
+	/* NEW-STYLE COMMENTS */
+	$query = "SELECT *,UNIX_TIMESTAMP(ts) AS my_when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
+	if ($comresult = mysql_query($query)) {
+		while ($com = mysql_fetch_array($comresult)) {
+			echo "<b><i>[$com[ts]] $com[email]</i></b><br>\n";
 			echo "<blockquote><blockquote><pre>";
-			wrap($text,90);
+			wrap(addlinks($com[comment]),90);
 			echo "</pre></blockquote></blockquote>\n";
 		}
-
-		/* NEW-STYLE COMMENTS */
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS my_when FROM bugdb_comments WHERE bug=$id ORDER BY ts";
-		if ($comresult = mysql_query($query)) {
-			while ($com = mysql_fetch_array($comresult)) {
-				echo "<b><i>[".$com['ts']."] ".$com['email']."</i></b><br>\n";
-				$text = addlinks($com['comment']);
-				echo "<blockquote><blockquote><pre>";
-				wrap($text,90);
-				echo "</pre></blockquote></blockquote>\n";
-			}
-			mysql_freeresult($comresult);
-		}
-
-	} else {
-		echo "<br /><h1>Sorry, bug id #$id does not exist</h1>\n";
 	}
-	if ($result) {
-		mysql_freeresult($result);
-	}
+
+	commonFooter();
+	exit;
+
 } elseif (!isset($cmd)) {
 	show_menu($status);
 ?>

@@ -4,7 +4,7 @@
  <tr>
   <th align="right">Your email address:</th>
   <td colspan="2">
-   <input type="text" size="20" name="email" value="<?php echo htmlspecialchars(stripslashes($email));?>" />
+   <input type="text" size="20" maxlength="40" name="email" value="<?php echo htmlspecialchars(stripslashes($email));?>" />
   </td>
  </tr><tr>
   <th align="right">PHP version:</th>
@@ -14,12 +14,12 @@
  </tr><tr>
   <th align="right">Type of bug:</th>
   <td colspan="2">
-    <select name="ebug_type"><?php show_types($ebug_type,0);?></select>
+    <select name="bug_type"><?php show_types($bug_type,0);?></select>
   </td>
  </tr><tr>
   <th align="right">Operating system:</th>
   <td colspan="2">
-   <input type="text" size="20" name="php_os" value="<?php echo htmlspecialchars(stripslashes($operating_system));?>" />
+   <input type="text" size="20" maxlength="32" name="php_os" value="<?php echo htmlspecialchars(stripslashes($operating_system));?>" />
   </td>
  </tr><tr>
   <th align="right">Bug description:</th>
