@@ -48,8 +48,9 @@ are searchable. There is an experimental web interface for the news
 server at <a href="http://news.php.net/">http://news.php.net/</a>.
 </p>
 <p>
-<b>Note:</b> When posting to mailing lists, please keep the following in mind:
+<b>Note:</b> When posting to mailing lists or newsgroups, please keep the following in mind:
 <ul>
+<li> Use a valid email adress. Every new poster's email address is checked for validity through confirmation.</li>
 <li> Send plain ascii messages, no HTML-formatted emails please.</li>
 <li> Turn on wordwrapping so your entire message doesn't show up on a single line.</li>
 <li> No attachments please, just post a URL if you want someone to look at something.</li>
