@@ -333,8 +333,9 @@ for any outstanding bug reports that match your bug.</STRONG>
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-	<option name="3.0b4">3.0b4
+	<option name="3.0b5">3.0b5
     <option name="3.0CVS">3.0 Latest CVS
+	<option name="3.0b4">3.0b4
 	<option name="3.0b3">3.0b3
 	<option name="3.0b2a">3.0b2a
 	<option name="3.0b2">3.0b2

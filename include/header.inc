@@ -1,10 +1,10 @@
 <?
   include "configuration.inc";
 
-  $current = "3.0b4";
+  $current = "3.0b5";
   $win32_current = "3.0b4";
 
-  $filesizes["php-3.0b4.tar.gz"]="~ 750KB";
+  $filesizes["php-3.0b5.tar.gz"]="~ 850KB";
   $filesizes["php-3.0b4-win32.zip"]="~ 850KB";
 
   $DL_ONLY=0;
