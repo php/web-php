@@ -625,6 +625,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text.= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text.= "Bug Type: $ebug_type\n";
+			$text.= "Operating system: $ephp_os\n";
 			$text.= "PHP Version: $ephp_version\n";
 			$text.= "Assigned To: $eassign\n";
 			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
@@ -672,13 +673,15 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text .= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
+			$text .= "Operating system: $ephp_os\n";
+			$text .= "PHP Version: $ephp_version\n";
 			$text .= "Description: $esdesc\n\n$ncomment";
 			$text .= get_old_comments ($id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
-   			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-   			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $eemail");
+   			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+   			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail");
 			mysql_freeresult($result);
 		}
 	}
@@ -834,7 +837,7 @@ You should then report the problem (and the mirror(s) that have it) to
    <option name="4.0.0">4.0.0
 */
 ?>
-   <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
+   <option name="4.0CVS-<? print date("Y-m-d"); ?>">4.0 Latest CVS (<? print date("Y-m-d"); ?>)
    <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
