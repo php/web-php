@@ -1,30 +1,24 @@
 Here is how to mirror the PHP3 site.
 
 First, you need to have a cvs client.  See http://www.cyclic.com, or grab one from your
-local GNU mirror.  You will also need MySQL installed and working.  See http://www.tcx.se/
+local GNU mirror.
 
 Fetch the web files with the following:
 
-   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository login
-   Password: phpfi
-   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository co phpweb
+   cvs -d:pserver:mirror@inet-dev.bellglobal.com:/repository login
+   Password: mirror
+   cvs -d:pserver:mirror@inet-dev.bellglobal.com:/repository co phpweb
 
 Symbolic link the phpweb directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 files as PHP3 parsed files.
 If it isn't, add the mime-type to your config.
 
-Create a mysql database with: mysqladmin create php3
-
-Make sure your "nobody" user has access to it.  Then cd into your php3 directory and type:
-
-   mysql php3 <schema.mysql
-
 You should be all set.  Point your browser at www.yoursite.com/php3
 
-You may want to set up a cron job that periodically does a 'cvs update -d' in 
+You should also set up a cron job that periodically does a 'cvs update -d' in 
 your web directory.  This will ensure that your web site is up to date. 
-Something like: 0,15,30,45 * * * * (cd <your_path>; /usr/local/bin/cvs update -kb -d)
+Something like: 0,30 * * * * (cd <your_path>; /usr/local/bin/cvs update -d)
 
 In order to get the Search button to work, you need to have the Glimpse binaries
 installed.  They are available at ftp://ftp.cs.arizona.edu/pub/glimpse
@@ -34,14 +28,12 @@ the following command:
 
 /usr/local/bin/glimpseindex -b -i -t -H <path> <path>; chmod a+r <path>/.gli*
 
-Replace <path> with whatever the path is to your php3 directory.  Note that
-the search script assumes all files are reachable with a URL of: /php3/filename.ext
-(this needs to be fixed)
+Replace <path> with whatever the path is to your php3 directory.  
 
-In order for the patches to download when you click on them, add this line to your
-srm.conf file:
+(We may get rid of this Glimpse requirement and simply point the search button
+ at one of the mirror sites that has a working search button if it turns out
+ to be problematic for mirror sites)
 
-  AddType application/octet-stream .fix 
-
-(instructions for database synchronization will follow when we figure out how
- to do it)
+Once you have done the above and your site appears to work, send a message to
+mirrors@php.net with your URL and appropriate steps will be taken to integrate
+your mirror site.
