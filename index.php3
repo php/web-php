@@ -17,6 +17,7 @@ It is currently in a public beta testing period.
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
 <li><a href="http://www.tryc.on.ca/php3.html">PHP 3.0 mailing list archive</a>
 <li><a href="http://ca.php.net/cvsweb.cgi">Web interface to CVS repository for PHP3 tree</a>
+<li>A list of <a href="sites.php3">Prominent Sites</a> running some version of PHP.
 <!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
 </ul>
 <br>
