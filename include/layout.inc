@@ -6,7 +6,7 @@
 #
 
 function spacer($width=1, $height=1, $align=false, $extras=false) {
-	printf('<img src="/gifs/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s>',
+	printf('<img src="/gifs/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
 		$width,
 		$height,
 		($align ? 'align="'.$align.'" ' : ''),
@@ -21,7 +21,7 @@ function spacer($width=1, $height=1, $align=false, $extras=false) {
 function resize_image($img, $width=1, $height=1) {
 	$str = preg_replace('/width=\"([0-9]+?)\"/i', '', $img );
 	$str = preg_replace('/height=\"([0-9]+?)\"/i', '', $str );
-	$str = substr($str,0,-1) . sprintf(' height="%s" width="%s">', $height, $width );
+	$str = substr($str,0,-1) . sprintf(' height="%s" width="%s" />', $height, $width );
 	return $str;
 }
 
@@ -35,7 +35,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 		$dir = '/gifs';
 	}
 	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
-		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s>',
+		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s />',
 			$dir,
 			$file,
 			$border,
@@ -45,7 +45,7 @@ function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, 
 			($extras ? ' '.$extras            : '')
 		);
 	} else {
-		$image = sprintf('<img src="%s/%s" border="%d" ALT="%s" %s%s>',
+		$image = sprintf('<img src="%s/%s" border="%d" ALT="%s" %s%s />',
 			$dir,
 			$file,
 			$border,
@@ -76,7 +76,7 @@ function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false,
 	if ($return != "<img>") {
 		$return = '<input type="image"'.substr($return,4);
 	} else {
-		$return = '<input type="submit">';
+		$return = '<input type="submit" />';
 	}
 	return $return;
 }
@@ -98,9 +98,9 @@ function delim($color=false) {
 
 function hdelim($color="#000000") {
 	if (!$color) {
-		return '<hr noshade size="1">';
+		return '<hr noshade size="1" />';
 	}
-	return sprintf('<hr noshade size="1" color="%s">', $color );
+	return sprintf('<hr noshade size="1" color="%s" />', $color );
 }
 
 # make_link()
@@ -184,15 +184,15 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="/style.css">
-<link rel="shortcut icon" href="/favicon.ico" />
+ <link rel="stylesheet" href="/style.css" />
+ <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099">
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
  <tr bgcolor="#9999cc">
-  <td align="middle" rowspan="2" width="120"><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
+  <td align="center" rowspan="2" width="120"><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
   <td>&nbsp;</td>
  </tr>
  <tr bgcolor="#9999cc">
@@ -216,8 +216,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
  </tr>
  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
  <tr bgcolor="#666699">
-  <form method="post" action="/search.php">
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
+    <form method="post" action="/search.php">
 <small>search for</small>
 <input class="small" type="text" name="pattern" value="" size="30" />
 <small>in the</small>
@@ -231,9 +231,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <option value="phpdoc">documentation mailing list 
 </select>
 <?php echo make_submit('small_submit_white.gif', 'search', 'bottom'); ?>&nbsp;
+</form>
 </font>
    </td>
-  </form>
  </tr>
  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
 </table>
@@ -302,7 +302,7 @@ function commonFooter() {
    }
    //-->
    </script>
-   <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>">
+   <input type="hidden" name="FROM" value="<?php echo htmlspecialchars($PHP_SELF)?>" />
 <?php
 	print_link('/source.php?url='.$SCRIPT_NAME, 'show source', false, 'class="small"');
 	echo delim();
