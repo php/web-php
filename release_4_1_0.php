@@ -115,7 +115,10 @@ Following is a description of the new input mechanism.  For a full list of chang
 
 SECURITY:  NEW INPUT MECHANISM
 
-For various reasons, PHP setups which rely on register_globals being on (i.e., on form, server and environment variables becoming a part of the global namespace, automatically) are very often exploitable to various degrees.  For example, the piece of code:
+For various reasons, PHP setups which rely on register_globals 
+being on (i.e., on form, server and environment variables becoming 
+a part of the global namespace, automatically) are very often 
+exploitable to various degrees.  For example, the piece of code:
 
 <?php
 if (authenticate_user()) {
@@ -124,36 +127,72 @@ if (authenticate_user()) {
 ...
 ?>
 
-May be exploitable, as remote users can simply pass on 'authenticated' as a form variable, and then even if authenticate_user() returns false, $authenticated will actually be set to true.  While this looks like a simple example, in reality, quite a few PHP applications ended up being exploitable by things related to this misfeature.
+May be exploitable, as remote users can simply pass on 'authenticated'
+as a form variable, and then even if authenticate_user() returns false,
+$authenticated will actually be set to true.  While this looks like a
+simple example, in reality, quite a few PHP applications ended up being
+exploitable by things related to this misfeature.
 
-While it is quite possible to write secure code in PHP, we felt that the fact that PHP makes it too easy to write insecure code was bad, and we've decided to attempt a far-reaching change, and deprecate register_globals.  Obviously, because the vast majority of the PHP code in the world relies on the existence of this feature, we have no plans to actually remove it from PHP anytime in the foreseeable future, but we've decided to encourage people to shut it off whenever possible.  
+While it is quite possible to write secure code in PHP, we felt that the
+fact that PHP makes it too easy to write insecure code was bad, and we've
+decided to attempt a far-reaching change, and deprecate register_globals.
+Obviously, because the vast majority of the PHP code in the world relies
+on the existence of this feature, we have no plans to actually remove it
+from PHP anytime in the foreseeable future, but we've decided to encourage
+people to shut it off whenever possible.  
 
-To help users build PHP applications with register_globals being off, we've added several new special variables that can be used instead of the old global variables.  There are 7 new special arrays:
+To help users build PHP applications with register_globals being off,
+we've added several new special variables that can be used instead of the
+old global variables.  There are 7 new special arrays:
 
 $_GET - contains form variables sent through GET
 $_POST - contains form variables sent through POST
 $_COOKIE - contains HTTP cookie variables
 $_SERVER - contains server variables (e.g., REMOTE_ADDR)
 $_ENV - contains the environment variables
-$_REQUEST - a merge of the GET variables, POST variables and Cookie variables.  In other words - all the information that is coming from the user, and that from a security point of view, cannot be trusted.
+$_REQUEST - a merge of the GET variables, POST variables and Cookie variables.
+            In other words - all the information that is coming from the user,
+            and that from a security point of view, cannot be trusted.
 $_SESSION - contains HTTP variables registered by the session module
 
-Now, other than the fact that these variables contain this special information, they're also special in another way - they're automatically global in any scope.  This means that you can access them anywhere, without having to 'global' them first.  For example:
+Now, other than the fact that these variables contain this special information,
+they're also special in another way - they're automatically global in any
+scope.  This means that you can access them anywhere, without having to
+'global' them first.  For example:
 
 function example1()
 {
 	print $_GET["name"];   // works, 'global $_GET;' is not necessary!
 }
 
-would work fine!  We hope that this fact would ease the pain in migrating old code to new code a bit, and we're confident it's going to make writing new code easier.  Another neat trick is that creating new entries in the $_SESSION array will automatically register them as session variables, as if you called session_register().  This trick is limited to the session module only - for example, setting new entries in $_ENV will *not* perform an implicit putenv().
+would work fine!  We hope that this fact would ease the pain in migrating
+old code to new code a bit, and we're confident it's going to make writing
+new code easier.  Another neat trick is that creating new entries in the
+$_SESSION array will automatically register them as session variables, as
+if you called session_register().  This trick is limited to the session
+module only - for example, setting new entries in $_ENV will *not* perform
+an implicit putenv().
 
-PHP 4.1.0 still defaults to have register_globals set to on.  It's a transitional version, and we encourage application authors, especially public ones which are used by a wide audience, to change their applications to work in an environment where register_globals is set to off.  Of course, they should take advantage of the new features supplied in PHP 4.1.0 that make this transition much easier.
+PHP 4.1.0 still defaults to have register_globals set to on.  It's a
+transitional version, and we encourage application authors, especially
+public ones which are used by a wide audience, to change their applications
+to work in an environment where register_globals is set to off.  Of course,
+they should take advantage of the new features supplied in PHP 4.1.0 that
+make this transition much easier.
  
-As of the next semi-major version of PHP, new installations of PHP will default to having register_globals set to off.  No worries!  Existing installations, which already have a php.ini file that has register_globals set to on, will not be affected.  Only when you install PHP on a brand new machine (typically, if you're a brand new user), will this affect you, and then too - you can turn it on if you choose to.
+As of the next semi-major version of PHP, new installations of PHP will
+default to having register_globals set to off.  No worries!  Existing
+installations, which already have a php.ini file that has register_globals
+set to on, will not be affected.  Only when you install PHP on a brand new
+machine (typically, if you're a brand new user), will this affect you, and
+then too - you can turn it on if you choose to.
 
-Note:  Some of these arrays had old names, e.g. $HTTP_GET_VARS.  These names still work, but we encourage users to switch to the new shorter, and auto-global versions.
+Note:  Some of these arrays had old names, e.g. $HTTP_GET_VARS.  These names
+still work, but we encourage users to switch to the new shorter, and
+auto-global versions.
 
-Thanks go to Shaun Clowes (shaun@securereality.com.au) for pointing out this problem and for analyzing it.
+Thanks go to Shaun Clowes (shaun@securereality.com.au) for pointing out this
+problem and for analyzing it.
 
 -------------------------------------
 
