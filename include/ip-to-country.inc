@@ -109,7 +109,7 @@ function i2c_search_in_index($ip)
 
     // Read in granularity from index file and
     // convert current IP to something useful
-    $granularity = intval(fgets($dbidx));
+    $granularity = intval(fgets($dbidx, 64));
     $ip_chunk = intval($ip / $granularity);
 
     // Loop till we can read the file
