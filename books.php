@@ -31,10 +31,21 @@ $books = array (
   "PHP" => array (
 
 array (
+    /* title[s]     */ "Programming PHP",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926102/wwwphpnet",
+    /* author[s]    */ array("Rasmus Lerdorf","Kevin Tatroe"),
+    /* auth link[s] */ array("http://lerdorf.com/bio.php",false),
+    /* image        */ "opphp.jpg",
+    /* information  */ "O'Reilly & Associates, Mar 2002, ISBN 1-56592-610-2, 500 pages",
+    /* inform. link */ "http://www.oreilly.com/catalog/progphp/",
+    /* language     */ "en"
+   ),
+
+array (
     /* title[s]     */ "PHP Pocket Reference",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet",
     /* author[s]    */ "Rasmus Lerdorf",
-    /* auth link[s] */ "http://zend.com/zend/hof/rasmus.php",
+    /* auth link[s] */ "http://lerdorf.com/bio.php",
     /* image        */ "phppr.s.gif",
     /* information  */ "O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/phppr/",
@@ -1058,6 +1069,7 @@ if (isset($type)) {
 
   echo '<h1>' . $book_types[$type] . $suffix . '</h1>';
   echo '<table border="0" cellpadding="5">';
+  shuffle($books[$type]);
   foreach ($books[$type] as $one_book) {
     if (isset($lang) && $lang != $one_book[7]) { continue; }
     showBook($one_book);
