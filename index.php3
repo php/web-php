@@ -6,7 +6,7 @@ commonHeader("PHP: Hypertext Preprocessor");
 <h3>PHP 3.0.7 has been released!</h3>
 <p>
 March 1, 1998.  A nice round date for version 3.0.7.  A number of bug fixes,
-a tonne of RedHat and DSO related build fixes and a couple of new modules:
+a ton of RedHat and DSO related build fixes and a couple of new modules:
 WDDX, ASpell, along with a much improved Oracle OCI8 module.  See the
 <a href="ChangeLog.php3">ChangeLog</a> for the complete list of changes.
 </P>
