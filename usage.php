@@ -6,22 +6,20 @@ commonHeader("PHP Usage Stats");
 <h1>Usage Stats for September 2001</h1>
 
 <p>
-PHP: 6,930,758 Domains, 957,249 IP Addresses<br>
+PHP: 6,624,340 Domains, 979,572 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200109.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200110.png", "Graph"); ?>
 </p>
 <p>
-The drop-off in August is related to the .com crash with a number of sites
-and ISP's disappearing.  Netcraft's total number of sites found dropped in 
-August from 31,299,592 to 30,775,624.  PHP's percentage actually rose from 22.2%
-to 22.4%.
+There have been some shakeout in the large-scale shared hosting space 
+related to the .com crash and combine with some routing issues in 
+Germany which caused 5-10% of German servers not being able to
+respond to the Netcraft queries.  This hurt the PHP total domain
+numbers a bit, but the number of unique ips seen running PHP is still up.
 
-In September the numbers are back up somewhat.  Netcraft found 32,398,046 domains and PHP's
-marketshare percentage has dropped to 21.4%.  This is mostly due to the fact that homestead.com 
-sent Netcraft their site list of over a million domains running IIS.
 </p>
 <p>
 You can also see how popular PHP is relative to other Apache modules
