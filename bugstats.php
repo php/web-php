@@ -74,7 +74,7 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	function bugstats($status, $type) {
 		global $bug_type;
 		if ($bug_type[$status][$type] > 0) {
-			return '<A href="/bugs.php?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '">' . $bug_type[$status][$type] . "</A>\n";
+			return '<A href="/bugs.php?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '&by=Any">' . $bug_type[$status][$type] . "</A>\n";
 		}
 	}
 
