@@ -26,7 +26,7 @@ commonHeader("Documentation ");
     is the same as the above, except there is a built-in errata/note system
     that users all around the world can (and have!) contributed to. Of
     all of the documentation, this will be the most current version,
-    as it it updated (and annotated) daily.
+    as it is updated (and annotated) daily.
 
 <LI><A href="http://www.php.net/manual/browse-errata.php3">PHP Manual
     Errata</A>. This is the collected errata from the on-line errata/note
