@@ -35,6 +35,7 @@ $formats = array(
  "bigmanual.html.gz" => array("Single HTML", "html.gz", true),
  "manual.txt.gz"     => array("Plain text", "txt.gz", true),
  "manual.tar.gz"     => array("Many HTML files", "tar.gz", true),
+ "manual.tar.bz2"    => array("Many HTML files", "tar.bz2", true),
  "manual.zip"        => array("Many HTML files", "zip", true),
  "manual.pdf"        => array("PDF", "pdf", false),
  "manual_doc.pdb"    => array("PalmPilot DOC", "doc.pdb", true),
