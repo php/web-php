@@ -120,6 +120,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $ebug_type\n";
     $report .= "Bug description:\n";
+	$ascii_report = indent($report.$ldesc,"    ");
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
     $report .= indent($html_desc, "    ");
@@ -131,7 +132,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug #$cid: $sdesc", $report, "From: $email")) {
+    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
 		echo "Thank you for your help!<P>If the status of the bug report you submitted\n";
 		echo "changes, you will be notified.  You may return here and check on the status\n";
@@ -261,12 +262,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 			if($estatus=="Delete!") {
+				$comments = stripslashes($comments);
 				$text = "Bug #$id has been deleted from the database by $user\nComments: $comments\n";
 			} else {
 				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments: $comments\n";
 				$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
 				$text = stripslashes($text);
 			}
+			$esdesc = stripslashes($esdesc);
     		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
     		Mail("php-dev@php.iquest.net", "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
 		}

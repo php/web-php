@@ -25,6 +25,7 @@ function show_menu($state) {
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
 	if($state!="Assigned") { echo "<option>Assigned\n"; }
+	if($state!="Analized") { echo "<option>Analized\n"; }
 	if($state!="All") { echo "<option>All\n"; }
 	echo "</select> bugs of type ";
 	show_types($bug_type,1,"bug_type");
@@ -179,6 +180,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Assigned":
 				return "#bbaaff";
 				break;
+			case "Analized":
+				return "#99bbaa";
+				break;
 			default:
 				return "#aaaaaa";
 				break;
@@ -283,11 +287,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			if($row[7]=="Open") {
-				echo "<option>Open\n<option>Closed<option>Assigned<option>Delete!\n";
+				echo "<option>Open\n<option>Closed<option>Assigned<option>Analized<option>Delete!\n";
 			} elseif($row[7]=="Closed") {
-				echo "<option>Closed\n<option>Open<option>Assign<option>Delete!\n";
+				echo "<option>Closed\n<option>Open<option>Assigned<option>Analized<option>Delete!\n";
+			} elseif($row[7]=="Analized") {
+				echo "<option>Analized\n<option>Open<option>Closed<option>Assigned<option>Analized<option>Delete!\n";
 			} else {
-				echo "<option>Assigned<option>Closed\n<option>Open<option>Delete!\n";
+				echo "<option>Assigned\n<option>Open<option>Closed<option>Analized<option>Delete!\n";
 			}
 			echo "</select>\n";
 			echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
