@@ -21,6 +21,14 @@ this language is by clicking on the &quot;Source&quot; button in the
 top right corner of all the pages on this site.  What you see is the
 actual PHP files that are behind each of the pages you are looking at.
 
+<h3>So, how much does it cost?</h3>
+This may sound a little foreign to all you folks coming from a non-Unix
+background, but PHP doesn't cost anything.  You can use it for commercial
+and/or non-commercial use all you want.  You can give it to your friends,
+print it out and hang it on your wall or eat it for lunch.  Welcome to
+the world of Open Source software!  Smile, be happy, the world is good.
+For the full legalese, see the official <a href="license.txt">license</a>.
+
 <h3>Year 2000 Compliance</h3>
 
 <P>Just like your C compiler or your favourite text editor, PHP is just about as
