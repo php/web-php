@@ -1,0 +1,14 @@
+<?php require "header.inc"?>
+<H1>
+Agenda</H1>
+
+<UL>
+<li>Basic Language Overview
+<li>Built-in Functions
+<li>Advanced Language Features
+<li>Configuration
+<li>Extending PHP
+<li>The Future
+</UL>
+
+<?php require "footer.inc"?>
