@@ -14,7 +14,7 @@ if (isset($MAGIC_COOKIE) && !isset($user) && !isset($pw)) {
 
 $mail_bugs_to = "php-dev@lists.php.net";
 
-if (is_primary_site() || strstr($MYSITE,"localhost")) {
+if (is_primary_site() || strstr($MYSITE,"localhost") || strstr($MYSITE,"bugs.php.net")) {
 	$dbhost = "localhost";
 	$dbuser = "nobody";
 	$dbpwd  = "";
