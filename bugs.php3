@@ -203,7 +203,7 @@ bugs of type <?show_types("Any")?>.
 			echo "<b><tt>Developer Comments:</tt></b><br>\n";
 			echo "<textarea cols=60 rows=15 name=\"comments\">".$row[8]."</textarea><br>\n";
 			echo "CVS user id: <input type=text size=10 name=user>\n";
-			echo "CVS password: <input type=text size=10 name=pw>\n";
+			echo "CVS password: <input type=password size=10 name=pw>\n";
 			echo "<input type=submit value=\"Commit Changes\">\n";
 			echo "</form>\n";
 		}
