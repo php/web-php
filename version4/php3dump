@@ -1,0 +1,108 @@
+# MySQL dump 5.13
+#
+# Host: localhost    Database: php4
+#--------------------------------------------------------
+# Server version	3.22.21
+
+#
+# Table structure for table 'bugdb'
+#
+CREATE TABLE bugdb (
+  id int(8) DEFAULT '0' NOT NULL auto_increment,
+  bug_type varchar(32),
+  email varchar(40) DEFAULT '' NOT NULL,
+  sdesc varchar(80),
+  ldesc text,
+  php_version varchar(100),
+  php_os varchar(32),
+  status varchar(16),
+  comments text,
+  ts1 datetime,
+  ts2 datetime,
+  dev_id varchar(16),
+  assign varchar(16),
+  passwd varchar(20),
+  PRIMARY KEY (id)
+);
+
+#
+# Table structure for table 'bugdb_comments'
+#
+CREATE TABLE bugdb_comments (
+  id int(8) DEFAULT '0' NOT NULL auto_increment,
+  bug int(8) DEFAULT '0' NOT NULL,
+  email varchar(40) DEFAULT '' NOT NULL,
+  ts datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+  comment text,
+  PRIMARY KEY (id)
+);
+
+#
+# Table structure for table 'content'
+#
+CREATE TABLE content (
+  cat int(4) DEFAULT '0' NOT NULL,
+  data_table varchar(16) DEFAULT '' NOT NULL,
+  long_cat varchar(60) DEFAULT '' NOT NULL,
+  cat_desc varchar(255) DEFAULT '' NOT NULL,
+  buttons varchar(255) DEFAULT '' NOT NULL,
+  auth int(4),
+  ts timestamp(14),
+  PRIMARY KEY (cat)
+);
+
+#
+# Table structure for table 'dummy'
+#
+CREATE TABLE dummy (
+  test char(60)
+);
+
+#
+# Table structure for table 'form_fields'
+#
+CREATE TABLE form_fields (
+  field_name char(16) DEFAULT '' NOT NULL,
+  field_desc char(60) DEFAULT '' NOT NULL,
+  field_type char(255) DEFAULT '' NOT NULL,
+  field_cat char(16) DEFAULT '' NOT NULL,
+  field_size int(4),
+  field_max int(4),
+  PRIMARY KEY (field_name,field_cat)
+);
+
+#
+# Table structure for table 'note'
+#
+CREATE TABLE note (
+  id mediumint(9) DEFAULT '0' NOT NULL auto_increment,
+  sect varchar(80),
+  user varchar(80),
+  note text,
+  ts datetime,
+  PRIMARY KEY (id)
+);
+
+#
+# Table structure for table 'site_categories'
+#
+CREATE TABLE site_categories (
+  id mediumint(9) DEFAULT '0' NOT NULL auto_increment,
+  site_category varchar(255),
+  PRIMARY KEY (id)
+);
+
+#
+# Table structure for table 'sites'
+#
+CREATE TABLE sites (
+  id int(8) DEFAULT '0' NOT NULL auto_increment,
+  site_name varchar(60) DEFAULT '' NOT NULL,
+  site_url varchar(60) DEFAULT '' NOT NULL,
+  site_text text,
+  site_email varchar(40) DEFAULT '' NOT NULL,
+  ts timestamp(14),
+  site_cat mediumint(9) DEFAULT '0' NOT NULL,
+  PRIMARY KEY (id)
+);
+
