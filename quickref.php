@@ -68,11 +68,11 @@ commonHeader("PHP Manual Quick Reference");
 <?php if ($notfound) { ?>
 
 <p>
-Sorry, but the function <b><?php echo $notfound; ?></b> is not in the online manual.
+Sorry, but the function <b><?php echo htmlspecialchars($notfound); ?></b> is not in the online manual.
 Perhaps you misspelled it, or it is a relatively new function that hasn't
 made it into the online documentation yet. The following are the
 <?php echo $SHOW_CLOSE; ?> functions which seem to be closest in spelling
-to <b><?php echo $notfound; ?></b> (really good matches are in bold). Perhaps
+to <b><?php echo htmlspecialchars($notfound); ?></b> (really good matches are in bold). Perhaps
 you were looking for one of these:
 </p>
 
@@ -80,8 +80,8 @@ you were looking for one of these:
 
 <p>
 If you want to search the entire PHP website for the string
-&quot;<b><?php echo $notfound; ?></b>&quot;, then
-<?php print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
+&quot;<b><?php echo htmlspecialchars($notfound); ?></b>&quot;, then
+<?php print_link('search.php?show=nosource&amp;pattern='.urlencode(htmlspecialchars($notfound)), 'click here'); ?>.
 </p>
 
 <p>

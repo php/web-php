@@ -176,7 +176,7 @@ Restrict the search to:<br></td>
 			exit;
 		}
 		if ($result[2] == "NOMATCH") {
-			echo "Sorry, no documents matched your search for<b>&quot;".$pattern."&quot;</b>.<br><br>";
+			echo "Sorry, no documents matched your search for<b>&quot;".htmlspecialchars($pattern)."&quot;</b>.<br><br>";
 			echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
 			commonFooter();
 			exit;
@@ -188,7 +188,7 @@ Restrict the search to:<br></td>
 		$pages = $result[6];
 		$baseurl = $PHP_SELF."?pattern=$words&show=$show&base=$base";
 
-		echo "$matches documents match your search for '<b>$pattern</b>' in the $where:<br><br>\n";
+		echo "$matches documents match your search for '<b>",htmlspecialchars($pattern),"</b>' in the $where:<br><br>\n";
 		echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
 
 		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
