@@ -123,11 +123,9 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl</li>
 
 <li><a href="http://www.devnetwork.net/">PHP developper network</a><br>
-PHPDN is a gathering of news, views and what's what in the PHP community 
-today with daily news updates and user comments. It was founded by 
-<a href="http://www.evilwalrus.com/">EvilWalrus</a>, 
-the <a href="http://www.newbienetwork.com/">Newbienetwork</a> and 
-<a href="http://www.phpdevelopper.org">PHPdevelopper.org</a>.
+The PHP Developer's Network was founded to provide the PHP Community with
+a set of solid sites that work together to promote the PHP language and 
+provide a large resource for the community as a whole.
 </li>
 
 </ul>
