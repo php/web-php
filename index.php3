@@ -10,6 +10,9 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 <h3>PHP Talks at ApacheCon</h3>
+<a href="http://ApacheCon.Com/"><img align="right"
+src="http://ApacheCon.Com/images/ac2k-speaker-logo_110x46.gif"
+alt="ApacheCon 2000 Speaker" width="110" height="46" border="0"></a>
 February 24, 2000.  <a href="http://php.faqts.com">Nathan Wallace</a>, <a
 href="http://www.covalent.com/apachecon.php">Craig Kohtz</a> and <a
 href="http://phpwizard.net">Tobias Ratschiller</a> are all giving
