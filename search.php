@@ -271,8 +271,8 @@ if (isset($pattern)) {
         makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed);
 
         // Indicate what search engine we use
-        echo "<p>Search powered by<br />\n";
-        print_link("http://www.htdig.org/", make_image("htdig.gif", "ht://Dig") );
+        echo "<p>Website search powered by<br />\n";
+        print_link("http://www.htdig.org/", "ht://Dig");
         echo "</p>\n";
     
         // End HTML page with footer
