@@ -145,6 +145,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Second Bulgarian PHP Conference</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+ The second Web Technology conference in Bulgaria will be held in March 2005
+ at the city of Sofia. Within its framework, the <a
+ href="http://webtech2005.info/index.php?/archives/19-PHP-iioaaioee.html">Second
+ Bulgarian PHP Conference</a> and first IT Business conference will be held.
+ The purpose of this meeting is to discuss the new tendencies in this direction
+ and to popularize the internet technologies in the spheres of business,
+ education, and services. The range of subjects includes technologies like
+ PHP, Perl, business systems through web, education through the internet, and
+ others. The <a
+ href="http://webtech2005.info/index.php?/archives/9-Call-for-Papers.html">Call
+ For Papers</a> is open, if you would like to have a speach at this event.
+</p>
+
+<hr />
+
 <h1>International PHP Conference 2005 - Spring Edition (Amsterdam, May 2-4)</h1>
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
