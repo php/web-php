@@ -16,6 +16,14 @@ if (isset($in)) {
   }
 
   # clean and validate data
+
+if (!is_numeric($id) || !is_numeric($cy) || !is_numeric($cd) || !is_numeric($cm)) {
+        $errors[] = "invalid data specified";
+        $hack = 1;
+}
+
+if (!$hack) {
+
   if (!is_emailable_address($in['email'])) {
     $errors[] = 'You must supply a valid email address.';
   }
@@ -85,7 +93,7 @@ event has been accepted for inclusion in our calendar.</p>
       exit;
     }
   }
-
+}
   if (!$errors) {?>
 <p>The following is a preview of your event submission. Please double-check it
 to make sure all of the information is correct.</p>
@@ -99,7 +107,11 @@ the PHP.net homepage and appear in our full event listings.</p>
 <?php
 }
 
-if ($errors) display_errors($errors);
+if ($errors) {
+	display_errors($errors);
+	commonFooter();
+	exit();
+}
 
 for ($i = 1; $i <= 7; $i++) {
   $days[$i] = strftime('%A',mktime(12,0,0,4,$i,2001));
