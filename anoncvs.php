@@ -47,7 +47,7 @@ diff -u
 		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository login</pre></li>
 	<li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
 		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co Zend TSRM</pre>
-	<li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool 1.3.3 or newer.</li>
+	<li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool 1.4 or newer.</li>
 	<li>Run ./buildconf.  After a while, the configure script should be generated.</li>
 	<li>From this point onwards, installation is similar to the installation of one of the official packages with one main difference - you must have bison 1.28 or later and flex 2.54 or later to compile, because the pre-generated scanner and parser files are not included in CVS.</li>
 </ul>
