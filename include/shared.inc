@@ -439,11 +439,6 @@ endif; ?>
      </TD>
      <TD ALIGN=right>
       <?
-		if ($HAVE_SEARCH):
-			$form="/search.php3";
-		else:
-			$form="http://uk.php.net/search.php3";
-		endif;
 		if($title=="Show Source"):
 			makeSideButton("","sour","","source",1,1,0,0,"","");
 			makeSideButton($HTTP_REFERER,"close","","close",75,30,9,5,"Close this source page","");
@@ -451,7 +446,7 @@ endif; ?>
 			makeSideButton("","close","","close",1,1,0,0,"","");
 			makeSideButton("/source.php3?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
 		endif;
-		makeSideButton("$form","sear","searchKick","search",75,30,9,5,"Search the site","");
+		makeSideButton("/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
       ?><IMG SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
     </TR>
    </TABLE>
