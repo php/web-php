@@ -69,7 +69,7 @@ PHP Security Advisory: CGI vulnerability in PHP version 4.3.0
   contained in this release.
 </p>
 
-<h2>Workarounds/h2>
+<h2>Workarounds</h2>
 
 <p>None.</p>
 
