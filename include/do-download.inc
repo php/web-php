@@ -11,9 +11,38 @@
 // Download a file from a mirror site
 function download_file($mirror, $file)
 {
-    // Quit if the requested file is not availabe localy
-    if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file)) {
-        exit("Invalid file requested for download!");
+    // Could be a normal download or a manual download file
+    $possible_files = array($file => TRUE, "manual/$file" => FALSE); 
+    
+    // Find out what is the exact file requested 
+    $file = FALSE;
+    foreach ($possible_files as $name => $log) {
+        if (@file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $name)) {
+            $file = $name;
+            break;
+        }
+    }
+    
+    // No downloadable file found
+    if ($file === FALSE) {
+        site_header("Download not found");
+        
+        // If user comes from a mirror selection page, provide a backlink
+        if (isset($_SERVER['HTTP_REFERER']) && preg_match("!/from/a/mirror$!", $_SERVER['HTTP_REFERER'])) {
+            $moreinfo = ", or <a href=\"{$_SERVER['HTTP_REFERER']}\">reconsider your mirror selection</a>"; 
+        } else { $moreinfo = ""; }
+        
+        echo <<<EOT
+<h1>Download not found</h1>
+<p>
+ The file you requested is not found on this server. If this file is a
+ recent addition to our downloads, then it is possible that this
+ particular server is not yet updated to host that file for download.
+ Please come back to this server later{$moreinfo}.
+</p>
+EOT;
+        site_footer();
+        exit;
     }
     
     // Redirect to the particular file
@@ -31,7 +60,7 @@ function download_file($mirror, $file)
     // Log download on master server (may be a registered
     // shutdown function to really run after the file is
     // started to download)
-    download_log($mirror, $file);
+    if ($log) { download_log($mirror, $file); }
 }
 
 // Log downloads on the master server
