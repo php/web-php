@@ -208,6 +208,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	echo delim();
 	print_link('http://bugs.php.net/','reporting bugs',false,'class="small"');
 	echo delim();
+	print_link('/sites.php','php.net sites',false,'class="small"');
+	echo delim();
 	print_link('/links.php','links',false,'class="small"');
       ?>&nbsp;
   </td>
