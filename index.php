@@ -97,7 +97,7 @@ echo "\n<!--$MYSITE-->\n";
 The long avaited PDF format of the manual is back again.
 The PDF packages are better than ever, now compressed with
 gz, bz2 and zip to be smaller. We made the
-<a herf="/docs.php">online documentation</a> and the
+<a href="/docs.php">online documentation</a> and the
 <a href="/download-docs.php">manual download</a> pages separate,
 so you don't need to wait for a whole download page to
 load, if you would like to read the manuals online.
