@@ -220,7 +220,7 @@ by Jean-Marc Herellier and Philippe Merigod<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771"
-><IMG SRC="/gifs/771.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/atkinson_fr.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771"
