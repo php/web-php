@@ -150,6 +150,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP Tunisie Magazine</h1>
+<p>
+ <span class="newsdate">[02-Aug-2004]</span>
+ <a href="http://www.phptunisie.net/">PHP Tunisie</a> has just released the 
+ <a href="http://www.phptunisie.net/formation/downloadmagazine/2/1/">second 
+ issue</a> of its monthly french PHP Magazine. In this issue you'll find
+ a large plan on PostgreSQL, Databases abstractions with PHP, your mini
+ template engine, an article on images generation with PHP, the migration
+ towards PHP5 with EasyPHP1.7...  And many other articles and latests PHP news.
+</p>
+<p>
+ PHP Tunisie Magazine is edited by the Tunisian PHP Users Group.
+</p>
+
+<hr />
+
 <h1>Some services are temporarily unavailable</h1>
 <p>
  <span class="newsdate">[28-Jul-2004]</span>

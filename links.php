@@ -254,6 +254,14 @@ site_header("Links");
   An English edition of the magazine mentioned above. The PHP Magazine
   is published bimonthly and aimed at professional PHP users.
  </li>
+
+ <li>
+  <a href="http://www.phptunisie.net/formation/home/1/1/">PHP Tunisie Magazine</a><br />
+  PHP Tunisie Magazine is a monthly French speaking magazine, distributed in PDF format
+  and dedicated to PHP and its related technologies. It's edited by the Tunisian PHP
+  users group.
+ </li>
+ 
  <li>
   <a href="http://www.zpmag.com/">ZPmag</a><br />
   ZPmag is a webzine (exclusively online distribution  newspaper), 
