@@ -245,7 +245,6 @@ right away.</blockquote>
 	site("BestHost","besthost.net");
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
-	site("Datastream","www.datastream.it");
 	site("DigitalDaze","www.digitaldaze.com");
 	site("ForeverNET","www.forevernet.de");
 	site("Italia Online","www.iol.it");

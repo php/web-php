@@ -4,6 +4,13 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<img src="php4zend-small-white.gif" align="right">
+<h3>PHP 4.0 Beta 1 is out!</h3>
+
+<p>
+The long awaited beta of the new generation of PHP is <a href="version4/">here</a>.
+</p>
+
 <h3>PHP 3.0.11 has been released!</h3>
 <p>
 June 27, 1999. Hot on the heels of 3.0.10, along comes another release

@@ -37,10 +37,10 @@ $cvsrepository = "/repository";
 
 $intro = "
 <blockquote>This is a WWW interface to the PHP Version 3.0 CVS Tree.
-You can get your own copy of the
-tree by using a CVS client from your own system.  If you don't already have one, you will
-find one at <a href=\"http://www.cyclic.com/\">http://www.cyclic.com/</a>.  You can get your
-own copy of the tree with the commands:
+You can fetch a copy of the tree either by using <a href=\"http://rsync.php.net\">
+rsync</a> or by using a CVS client from your own system.  If you don't already 
+have one, you will find one at <a href=\"http://www.cyclic.com/\">http://www.cyclic.com/</a>.  
+You can get your own copy of the tree with the commands:
 <PRE>   cvs -d :pserver:cvsread\@cvs.php.net:/repository login</PRE>
 When it asks you for a password enter: <b>phpfi</b><P>
 Then type:
