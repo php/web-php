@@ -139,6 +139,17 @@ Lots of tutorials/instructions related to Apache, PHP and MySQL<br></li>
 A series of PHP tutorials for novices<br></li>
 </ul>
 
+<h4>PHP Setup tools for Windows</h4>
+
+<ul>
+<li><a href="http://www.firepages.com.au/dev4.htm">phpdev</a><br>
+Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl<br></li>
+
+<li><a href="http://www.phpgeek.com/phptriad.php">PHPTriad</a><br>
+Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl, and
+some special modules<br></li>
+</ul>
+
 <h4>Non-English PHP Sites</h4>
 
 <ul>
