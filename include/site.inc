@@ -57,6 +57,7 @@ $MIRRORS = array(
    "http://bugs.php.net/"             => array("us", "chek.com", "chek", "http://www.chek.com/", 2, 1, "en"),
    "http://php.he.net/"               => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0, "en"),
    "http://za.php.net/"               => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0, "en"),
+   "http://news.php.net/"              => array("us", "VA Linux", "va", "http://www.valinux.com/", 2, 1, "en"),
    ""                                 => array("xx", "Unknown", "none", "/", 1, 0, "en")
 );
 

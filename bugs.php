@@ -21,6 +21,10 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
+} else if (strstr($MYSITE,"news.php.net")) {
+	$dbhost="localhost";
+	$dbuser="nobody";
+	$dbpwd="";
 } else {
 	Header("Location: http://bugs.php.net/" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
 	exit;
@@ -30,7 +34,6 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$edit = $MAGIC_COOKIE ? 1 : 2;
 */
 
-$DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
 echo "<font size=-1>\n";

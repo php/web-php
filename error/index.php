@@ -97,7 +97,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 
 		$form=$PHP_SELF;
 		if (!isset($base)) {
-			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
+			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,$reg)) {
 				$base=$reg[1];
 			}
 			if ($base==$MYSITE) {
@@ -134,7 +134,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 		}
 		if (isset($page)) {$off="&page=$page";} else {$off="";}
 		$query="words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
-		exec("$htsearch_prog \"$query\"",&$result);
+		exec("$htsearch_prog \"$query\"",$result);
 		$rc=count($result);
 		if ($rc<2) {
 			echo "<B>There was an error executing this query.</B><BR><BR>Please try later<BR><BR>";

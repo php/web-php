@@ -1,4 +1,7 @@
 <?
+if (isset($country) {
+  header("Location: http://$country.php.net/");
+}
 require("shared.inc");
 commonHeader("Mirrors Page");
 ?>
