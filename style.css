@@ -26,12 +26,7 @@ em {
 	font-size: 85%;
 }
 
-pre {
-	font-family: "andale mono", "monotype.com", "courier new", monospace;
-	font-size: 90%;
-}
-
-code {
+code, pre {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
 	font-size: 90%;
 }
