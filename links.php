@@ -443,9 +443,9 @@ Try one of the following sites:
 </p>
 
 <ul>
-  <li><a href="http://www.oinko.net/freephp/">Free PHP hosting directory</a></li>
-  <li><a href="http://www.od-site.com/php">www.od-site.com/php</a></li>
-<!--  <li><a href="http://pmcw.dhs.org/">PMCW webservices</a></li> -->
+  <li><a href="http://www.free-php-hosting.com/">free-php-hosting.com</a></li>
+  <li><a href="http://www.oinko.net/freephp/">Oinko free PHP hosting directory</a></li>
+  <li><a href="http://dmoz.org/Computers/Internet/Web_Design_and_Development/Hosting/">dmoz.org's web hosting index</a></li>
 </ul>
 
 <?php commonFooter(); ?>
