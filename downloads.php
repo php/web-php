@@ -125,7 +125,9 @@ echo '</p>';
 </ul>
 
 <p>
-  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.<br>
+  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
+</p>
+<p>
   Daily spanshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
   (not intended for production use!).
 </p>
@@ -207,7 +209,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
       <li><?php download_link("php-4.2.2-Win32.zip", "Windows Binary (zip)"); ?><br />
       <span class="md5sum">md5: aae616caf02c9d7af930c605f616e86a</span>
       </li>
-    </ul><br>
+    </ul>
   </li>
   <li>PHP 4.1.2
     <ul>
@@ -217,7 +219,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
       <li><?php download_link("php-4.1.2-Win32.zip", "Windows Binary (zip)"); ?><br />
       <span class="md5sum">md5: 7df7d0edac5c504adec87b9bd518d2df</span>
       </li>
-    </ul><br>
+    </ul>
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
@@ -227,7 +229,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?><br />
       <span class="md5sum">md5: 29029ac1c3c2075dce38bbd804c42f72</span>
       </li>
-    </ul><br>
+    </ul>
   </li>
   
   <li>If you are searching for older versions of PHP, go to the <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>

@@ -7,6 +7,11 @@ p {
 	font-family: verdana,arial,helvetica,sans-serif;
 }
 
+li {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
 em {
 	font-weight: bold;
 	font-style: italic;
