@@ -2,8 +2,12 @@
 $func=ereg_replace("_","-",$function);
 $func=ereg_replace("\(.*\)","-",$func);
 $filename="/manual/function.".$func.".php3";
+$refname="/manual/ref.".$func.".php3";
 if (file_exists($DOCUMENT_ROOT.$filename)):
 	Header("Location: $filename");
+	exit;
+elseif (file_exists($DOCUMENT_ROOT.$refname)):
+	Header("Location: $refname");
 	exit;
 else:
 	require("shared.inc");
