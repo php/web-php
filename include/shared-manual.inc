@@ -252,12 +252,13 @@ function manualUserNotes($title, $id) {
 
 // Send manual HTTP headers, provide accurate language data
 function sendManualHeaders($charset,$lang) {
-    global $LANG;
+    global $LANG, $LAST_UPDATED;
     $LANG = $lang;
-    Header("Cache-Control: public, max-age=600");
-    Header("Vary: Cookie");
-    Header("Content-type: text/html;charset=$charset");
-    Header("Content-language: $lang");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
+    //header("Cache-Control: public, max-age=600");
+    header("Vary: Cookie");
+    header("Content-type: text/html;charset=$charset");
+    header("Content-language: $lang");
 }
 
 // Print out manual page header
