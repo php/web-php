@@ -10,14 +10,13 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 <img src="gifs/php4zend-small-white.gif" align="right">
-<h3>PHP 4.0.3pl1 Released</h3>
-Oct 15, 2000.  Due to two problems discovered in PHP 4.0.3, <a href="downloads.php">PHP 4.0.3pl1 is now available</a>.
-This release fixes an issue that prevented the Apache php_value mechanism from working correctly with .conf
-files, and a memory leak that was discovered in the module versions of PHP.
-<a href="downloads.php">Version 4.0.3</a> includes several security-oriented fixes and
-enhancements, as well as several new features and bug fixes.  It is strongly
-recommended for all users of PHP to upgrade to this version.  You can read the 
-<a href="/ChangeLog-4.php#4.0.3">changelog</A> here.
+<h3>PHP 4.0.4 Released</h3>
+Dec 19, 2000.  This release  includes
+improvements for a large number of defects
+and numerous enhancements in the PHP core,
+the language implementation and
+extensions. <a href="downloads.php">Download</a>,
+<a href="ChangeLog-4.php">ChangeLog</a>.
 
 <h3>PHP 3.0.18 released</h3>
 October 21, 2000. PHP 3.0.18 was released. This is a bug-fix release, including
