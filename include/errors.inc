@@ -56,8 +56,9 @@ function status_header($num)
 {
     // Set status text
     switch ($num) {
-        case 404: $status = "Not Found"; break;
         case 200: $status = "OK"; break;
+        case 301: $status = "Moved Permanently"; break;
+        case 404: $status = "Not Found"; break;
         default: return FALSE;
     }
     

@@ -152,6 +152,43 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
 $URI = strtolower($URI);
 
 // ============================================================================
+// Major manual page modifications (need to handle shortcuts and pages in all languages)
+// Used permanent HTTP redirects, so search engines will be able to pick up the correct
+// new URLs for these pages.
+$manual_page_moves = array(
+    // entry point changed
+    'installation'               => 'install',
+    
+    // was splitted among platforms (don't know where to redirect)
+    'install.apache'             => 'install', 
+    'install.apache2'            => 'install',
+    'install.netscape-enterprise'=> 'install',
+    'install.otherhttpd'         => 'install',
+    
+    // moved to platform sections
+    'install.caudium'            => 'install.unix.caudium',
+    'install.commandline'        => 'install.unix.commandline',
+    'install.fhttpd'             => 'install.unix.fhttpd',
+    'install.hpux'               => 'install.unix.hpux',
+    'install.iis'                => 'install.windows.iis',
+    'install.linux'              => 'install.unix',
+    'install.omnihttpd'          => 'install.windows.omnihttpd',
+    'install.openbsd'            => 'install.unix.openbsd',
+    'install.sambar'             => 'install.windows.sambar',
+    'install.solaris'            => 'install.unix.solaris',
+    'install.xitami'             => 'install.windows.xitami',
+);
+
+if (isset($manual_page_moves[$URI])) {
+    status_header(301);
+    mirror_redirect("/" . $manual_page_moves[$URI]);
+} elseif (preg_match("!^manual/([^/]+)/([^/]+).php$!", $URI, $match) &&
+          isset($manual_page_moves[$match[2]])) {
+    status_header(301);
+    mirror_redirect("/manual/$match[1]/" . $manual_page_moves[$match[2]] . ".php");
+}
+
+// ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
 
@@ -171,8 +208,6 @@ $uri_aliases = array (
 
     # manual shortcuts
     "ini"          => "configuration",
-
-    "install"      => "installation",
 
     "intro"        => "introduction",
     "whatis"       => "introduction",
@@ -197,7 +232,7 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     
-    "news.php"                     => "news-2003", // BC
+    "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
     "zend_changes.txt"             => "zend-engine-2", // BC
     "zend2_example.phps"           => "zend-engine-2", // BC
