@@ -146,6 +146,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<h1>PHP 4.3.9RC3 released!</h1>
+<p>
+ <span class="newsdate">[14-Sep-2004]</span>
+<a href="http://qa.php.net/">PHP 4.3.9RC2</a> has been released for testing.
+This is the last release candidate before the final release and should have 
+a very low number of problems and/or bugs. Nevertheless, please download and 
+test it as much as possible on real-life applications to uncover any remaining issues. 
+</p>
+
+<p>List of changes can be found in the 
+<a href="http://viewcvs.php.net/viewcvs.cgi/php-src/NEWS.diff?r1=1.1247.2.724&r2=1.1247.2.726">NEWS</a> file.</p>
+
+<hr />
+
 <?php news_image("http://mysqlcomconeurope.com", "MySQLcomcon_logo.gif", "MySQL"); ?>
 <h1>MySQL ComCon Europe</h1>
 <p>
@@ -160,21 +175,6 @@ commonHeader("Hypertext Preprocessor");
  leaders. For more details on the event, please visit
  <a href="http://mysqlcomconeurope.com">http://mysqlcomconeurope.com/</a>.
 </p>
-
-<hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.9RC2 released!</h1>
-<p>
- <span class="newsdate">[31-Aug-2004]</span>
-<a href="http://qa.php.net/">PHP 4.3.9RC2</a> has been released for testing.
-This is the last release candidate before the final release and should have 
-a very low number of problems and/or bugs. Nevertheless, please download and 
-test it as much as possible on real-life applications to uncover any remaining issues. 
-</p>
-
-<p>List of changes can be found in the 
-<a href="http://viewcvs.php.net/viewcvs.cgi/php-src/NEWS.diff?r1=1.1247.2.724&r2=1.1247.2.714">NEWS</a> file.</p>
 
 <hr />
 
