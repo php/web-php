@@ -1,7 +1,7 @@
 <?php
 
 // Define $MYSITE and $LAST_UPDATED variables
-include_once "prepend.inc";
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Try to find out if local search is possible
 unset($htsearch_prog);
