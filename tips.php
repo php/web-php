@@ -41,7 +41,7 @@ For a description of PHP.net shortcut URLs, please visit our
   <dl>
    <dt>Name</dt><dd>PHP</dd>
    <dt>URL</dt><dd>http://php.net</dd>
-   <dt>Smart URL</dt><dd>http://www.php.net/manual-lookup.php?pattern=%s&lang=en</dd>
+   <dt>Smart URL</dt><dd>http://www.php.net/manual-lookup.php?pattern=%s&amp;lang=en</dd>
    <dt>Nicknames</dt><dd>php</dd>
   </dl>
   </li>
