@@ -41,10 +41,10 @@ if(!strstr($MYSITE,"www.php.net")) {
     exit;
 }
 
-mysql_pconnect("localhost","nobody", "");
-mysql_select_db("php3");
-
 if (isset($note) && isset($action) && strtolower($action) != "preview"):
+        mysql_pconnect("localhost","nobody", "");
+        mysql_select_db("php3");
+
 	$now = date("Y-m-d H:i:s");
 	$sect = ereg_replace("\.php$","",$sect);
 	$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
