@@ -8,7 +8,7 @@ commonHeader("Projects");
 are using PHP as their main development tool. This is a listing of
 some of the open-source PHP applications available, courtesy of
 <a href="http://freshmeat.net/">freshmeat</a>. (Last updated:
-<?date("M d, Y h:ia", filemtime("backend/projects.html"))?>.)</p>
+<?echo date("M d, Y h:ia", filemtime("backend/projects.html"))?>.)</p>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 
