@@ -82,6 +82,15 @@ again, but has an Error
 (like #php and <a href="http://php.de.jayniz.de">#php.de</a>).
 </p>
 
+<h1>PHP.net webmasters</h1>
+<p>
+If you have a problem or suggestion with the PHP.net website,
+please contact the webmasters mailing list at
+<a href="mailto:webmaster@php.net">webmaster@php.net</a>.
+This mailing list is archived and also available as a newsgroup,
+much like all the other lists.
+</p>
+
 <?php
 commonFooter();
 ?>
