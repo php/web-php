@@ -47,7 +47,7 @@ to mind:</P>
 download...</P><UL>
   <LI>For starters, get the Cygwin toolkit from
   the closes Cygnus <A href="http://sourceware.cygnus.com/cygwin/download.html">mirror</A> site.
-  What you are looking for is cygwin-b20\full.exe.  This will provide you most
+  What you are looking for is cygwin.exe file.  This will provide you most
   of the popular GNU utilities used by the build process.
   <LI>Now download the rest of the PHP win32 build tools you will need from the
   PHP <A href="http://www.php.net/extra/win32build.zip">extra</A> site.
@@ -86,8 +86,8 @@ before Microsoft Visual C++ will have anything to do with them.</P>
   unzip utility of your choosing.
 
 
-  <LI>Execute the Cygwin full.exe and follow the installation instructions.
-  If you choose another path than <CODE>C:\Program Files\Cygnus</CODE>, let the build process know by setting the
+  <LI>Execute the Cygwin.exe and follow the installation instructions.
+  If you choose another path than <CODE>C:\Cygnus</CODE>, let the build process know by setting the
   Cygwin environment variable. On Windows 95/98
   setting an environment variable can be done
   by placing a line in your autoexec.bat. On
@@ -112,7 +112,7 @@ before Microsoft Visual C++ will have anything to do with them.</P>
   below respectively. (To add an entry, select a blank line at the end of the
   list and begin typing).  Typical entries will look like this:
   <UL>
-    <LI><CODE>C:\Program Files\Cygnus\cygwin-b20\H-i586-cygwin32\bin</CODE>
+    <LI><CODE>C:\Cygnus\bin</CODE>
     <LI><CODE>C:\php-win32build\include</CODE>
     <LI><CODE>C:\php-win32build\lib</CODE>
     </UL>
