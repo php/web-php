@@ -52,7 +52,7 @@ $formats = array(
  "php_manual_LANG.pdf.zip" => array("PDF",                 "pdf.zip",   true),
  "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb",   true),
  "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb", true),
- "manual.chm"              => array("Windows HTML Help",   "chm",       true)
+ "manual_LANG.chm"         => array("Windows HTML Help",   "chm",       true)
 );
 ?>
 
@@ -90,12 +90,10 @@ use does otherwise.
 
        // temporary hacks until the manuals are at the correct
        // places and with the correct package file names
-       if ($fn == "manual.pdf.bz2") {
-          $link_to = "distributions/manual/php_manual_$langcode.pdf.bz2";
+       if ($fn == "manual_LANG.chm") {
+         $link_to = "distributions/manual/manual-$langcode.chm";
        } elseif (preg_match("/php_manual_LANG\.pdf\.(gz|bz2|zip)/", $fn, $mem)) {
           $link_to = "distributions/manual/php_manual_$langcode.pdf." . $mem[1];
-       } elseif ($fn == "manual.chm") {
-         $link_to = "distributions/manual/manual-$langcode.chm";
        } else {
          $link_to = "manual/$langcode/$fn";
        }
