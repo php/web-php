@@ -367,7 +367,7 @@ foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Wide
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
 ><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/exec/obidos/ASIN/382725793X/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.de/exec/obidos/exec/obidos/ASIN/382725793X/thephpdevelopmte"
 >MySQL</A><BR>
 by Paul DuBois<BR>
 Vorwort von <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
