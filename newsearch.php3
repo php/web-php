@@ -165,8 +165,9 @@ if(!isset($pattern)) {
 		$baseurl=$PHP_SELF."?pattern=$words&show=$show&base=$base";
 
 		echo "$matches documents match your search for '<B>$pattern</B>' in the $where:<BR><BR>\n";
+		echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
 
-		makeBar(1,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
+		makeBar("",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		$i=7; #skip response header
 		while($i<$rc) {
@@ -180,7 +181,7 @@ if(!isset($pattern)) {
 		}
 		echo "<BR>\n";
 
-		makeBar(2,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
+		makeBar("2",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		?>
 		<CENTER>
