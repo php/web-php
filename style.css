@@ -14,6 +14,10 @@ em {
 	color: #6666cc;
 }
 
+.sidebar {
+	font-size: 85%;
+}
+
 pre,code {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
 	font-size: 90%;

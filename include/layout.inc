@@ -264,7 +264,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <td bgcolor="#f0f0f0">
    <table width="149" cellpadding="4" cellspacing="0">
     <tr valign="top">
-     <td><?php echo $SIDEBAR_DATA?></td>
+     <td class="sidebar"><?php echo $SIDEBAR_DATA?></td>
     </tr>
    </table>
   </td>
@@ -347,7 +347,7 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
   <tr valign="top" bgcolor="#cccccc">
     <td><small>
-      Copyright &copy; 1998-2001 The PHP Group<BR>
+      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001 The PHP Group'); ?><BR>
       All rights reserved.<BR>
       </small>
     </td>
