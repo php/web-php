@@ -1219,7 +1219,7 @@ commonHeader("PHP 4 ChangeLog");
 <HR noshade>
 
 <H3>Version 4.0 Beta 3</H3>
-<B>16-Nov-1999<B>
+<B>16-Nov-1999</B>
 <UL>
 <LI>ucfirst()/ucwords() no longer modify arg1 (Thies)
 <LI>Fixed strtr() not to modify arg1 (Thies)
