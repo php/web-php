@@ -412,7 +412,7 @@ endif; ?>
 #		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("news.php3","news","","news",129,30,0,10,"PHP in the News","<BR>\n");
-		makeSideButton("sites.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
+		makeSideButton("links.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
 		makeSideButton("mirrors.php3","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
 	endif; ?>
      </TD>
