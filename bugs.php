@@ -560,7 +560,7 @@ function show_types($current,$show_any,$default="") {
 	include 'bugtypes.inc';
 
 	if (!$current && !$default && !$show_any) {
-		echo "<option value=\"unknown\">--Please Select--</option>\n";
+		echo "<option value=\"Unknown/Other Function\">--Please Select--</option>\n";
 	}
 	elseif (!$current && $show_any) {
 		$current = "Any";
