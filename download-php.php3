@@ -23,8 +23,9 @@ function makeCap() {
 <?
 if (!isset($csel)) {
 	$csel='';
-	if (!($hostname=getenv("REMOTE_HOST"))) {
-		$ipaddr=getenv("REMOTE_ADDR");
+	$hostname=getenv("REMOTE_HOST");
+	$ipaddr=getenv("REMOTE_ADDR");
+	if ((!$hostname)||($hostname==$ipaddr)) {
 		$hostname=gethostbyaddr($ipaddr);
 		echo "<!-- no_remote_host\nipaddr=$ipaddr\nhostname=$hostname -->\n";
 		if ($hostname==$ipaddr) { $hostname=""; }
