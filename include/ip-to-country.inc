@@ -109,7 +109,7 @@ function i2c_search_in_index($ip)
         $data = fgetcsv($dbidx, 100);
 
         // Compare current index part with our IP
-        if ($ip_chunk >= $idxpart && $ip_chunk <= (int) $data[0]) {
+        if ($ip_chunk >= $idxpart && $ip_chunk < (int) $data[0]) {
             return array($recnum, (int) $data[1]);
         }
 
