@@ -137,7 +137,9 @@ to add "quickref" functionality right into your web browser.
 
 <? echo hdelim(); ?>
 
-<h1>Announcing PHP-GTK</h1>
+<h1>
+<? echo make_image("php-gtk-white.gif", "PHP-GTK", "right") ); ?>
+Announcing PHP-GTK</h1>
 
 <p>
 <font class="newsDate">[03-Mar-2001]</font>
