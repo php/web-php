@@ -187,7 +187,6 @@ Zend Optimizer Released
 <? print_link("http://www.zend.com", "Zend Technologies"); ?> has announced the 
 availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <? print_link("http://www.zend.com/zend/optimizer.php", "free download"); ?>.
-<br clear="all">
 </p>
 
 <?
