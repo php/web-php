@@ -172,11 +172,21 @@ Archives for some of these mailing lists can be found at:
 
 <ul>
  <li><a href="http://www.phpbuilder.com/mail/">All PHP Lists at www.phpbuilder.com</a>
- <li><a href="http://www.progressive-comp.com/Lists/?l=php-dev">Developers' List</a>
- <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general">PHP 3.0 List</a>
- <li><a href="http://www.progressive-comp.com/Lists/?l=phpdoc">PHP Documentation List</a>
- <li><a href="http://www.progressive-comp.com/Lists/?l=phplib">PHPLIB List</a>
- <li><a href="http://www.progressive-comp.com/Lists/?l=phplib-dev">PHPLIB Developers' List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-dev">Developers' List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-general">PHP General List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-pear">PEAR List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-cvs">CVS Commits List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-db">Database List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-i18n">Internationalization List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-install">Installation List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-kb">PHP Knowledge Base List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-migration">PHP Migration List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-qa">Quality Assurance List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-template">PHP Template List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=php-windows">PHP on Windows List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=phpdoc">PHP Documentation List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=phplib">PHPLIB List</a>
+ <li><a href="http://marc.theaimsgroup.com/?l=phplib-dev">PHPLIB Developers' List</a>
 </ul>
 
 <P>
