@@ -204,10 +204,12 @@ commonHeader("Mirroring php.net");
   companies name at the bottom of pages, and in the mirror listing.
  </li>
  <li>
-  The preferred default language for your country (currently only
-  the manuals are translated). Don't worry if there is no content
-  available in the preferred language yet, as long as English is
-  an acceptable secondary default.
+  The preferred default language for your country. Currently only
+  the manuals are translated. If there is no manual in your language,
+  then we will set the default language for your mirror to English for
+  now. If you see a new manual language showing up, which fits your
+  mirror better, then please contact us to modify your mirror
+  information.
  </li>
 </ul>
 
