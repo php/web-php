@@ -29,8 +29,9 @@ function quickref_table($functions)
 {
     global $LANG;
 
-    echo '<table border="0" cellpadding="5" cellspacing="0" width="100%">';
-    echo '<tr valign="top"><td>';
+    echo "<!-- result list start -->\n";
+	echo "<table border=\"0\" cellpadding=\"5\" cellspacing=\"0\" width=\"100%\">\n";
+    echo "<tr valign=\"top\"><td>\n";
     
     // Prepare the data
     $i = 0;
@@ -47,7 +48,8 @@ function quickref_table($functions)
         echo "<a href=\"/manual/$LANG/$file\">$name</a><br />\n";
         $i++;
     }
-    echo '</td></tr></table>';
+    echo "</td></tr></table>\n";
+    echo "<!-- result list end -->\n";
 }
 
 // Open directory, fall back to English,
