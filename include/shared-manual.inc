@@ -52,6 +52,7 @@ function makeBorderTOC($this)
 	if(@is_file("$DOCUMENT_ROOT/manual/es/$file")) echo "<a href=\"/manual/es/$file\"><img src=\"/gifs/flag-es.gif\" valign=bottom height=24 width=45 alt=\"Spanish version of this page\"></a>";
 	if(@is_file("$DOCUMENT_ROOT/manual/nl/$file")) echo "<a href=\"/manual/nl/$file\"><img src=\"/gifs/flag-nl.gif\" valign=bottom height=24 width=45 alt=\"Dutch version of this page\"></a>";
 	if(@is_file("$DOCUMENT_ROOT/manual/pt_BR/$file")) echo "<a href=\"/manual/pt_BR/$file\"><img src=\"/gifs/flag-br.gif\" valign=bottom height=24 width=45 alt=\"Brazilian Portuguese version of this page\"></a>";
+	if(@is_file("$DOCUMENT_ROOT/manual/kr/$file")) echo "<a href=\"/manual/kr/$file\"><img src=\"/gifs/flag-kr.gif\" valign=bottom height=24 width=45 alt=\"Korean version of this page\"></a>";
 	echo "</TD></TR>\n";
 
     echo "<TR VALIGN=top>\n";
