@@ -32,6 +32,11 @@ if (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1') {
 
 echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language(), "|";
 
+// Try to flush an output buffer which was
+// started in php.ini, so the virtual() is really
+// output after the info above
+ob_flush();
+
 // Test if there is a /manual alias
 $correctmanual = @virtual("/manual/noalias.txt");
 if (!$correctmanual) { echo "manual-alias"; }
