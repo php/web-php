@@ -115,6 +115,20 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 
+<?php echo make_image("phpconf2002.gif", "International PHP Conference 2002", "right"); ?>
+
+<h1>Call for Papers: International PHP Conference 2002</h1>
+<font class="newsdate">[12-Jun-2002]</font>
+<p>The <?php print_link('http://www.php-conference.de/2002/', 'International PHP Conference 2002'); ?> is looking for 
+people, who do talks and workshops at the conference. If you want to present your talk, please 
+<?php print_link('http://www.phpconference.de/2002/kt/input/', 'submit your proposals'); ?> to them. 
+The conference will be held in November in Frankfurt/Germany. For more information about dates and
+topics, visit the <?php print_link('http://www.phpconference.de/2002/cfp_en.php', 'Call for Papers page'); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
+
 <?php echo make_image("engine.gif", "Zend Engine 2", "right"); ?>
 
 <h1>Initial Alpha Release of PHP w/ the Zend Engine 2 Available</h1>
