@@ -72,7 +72,7 @@ function manual_header()
     } else {
         manual_sidebar();
         if ($NOTABLES) {
-            site_header("$title - Manual");
+            site_header("$title - Manual", array("noindex"));
             manual_navbar_notables();
         } else {
             commonHeader("$title - Manual");
