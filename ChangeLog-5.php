@@ -47,55 +47,55 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li> Fixed handling of return values from storred procedures in mssql_execute()
   with multiple result sets returned. (Frank)
 </li>
-<li> Fixed bug #28096 (stream_socket_accept() doesn't work with ssl). (Wez)
+<li> <?php bugfix(28096); ?> (stream_socket_accept() doesn't work with ssl). (Wez)
 </li>
-<li> Fixed bug #28007 (compile mssql extension with old versions of FreeTDS
+<li> <?php bugfix(28007); ?> (compile mssql extension with old versions of FreeTDS
   fails). (Frank)
 </li>
-<li> Fixed bug #27997 (SPL: Crash with getInnerIterator()). (Marcus)
+<li> <?php bugfix(27997); ?> (SPL: Crash with getInnerIterator()). (Marcus)
 </li>
-<li> Fixed bug #27974 (COM doesn't pass array parameters). (Wez)
+<li> <?php bugfix(27974); ?> (COM doesn't pass array parameters). (Wez)
 </li>
-<li> Fixed bug #27928 (sqlite incorrectly handles invalid filenames). (Ilia)
+<li> <?php bugfix(27928); ?> (sqlite incorrectly handles invalid filenames). (Ilia)
 </li>
-<li> Fixed bug $27923 (in some cases using foreach() to iterate over values
+<li> <?php bugfix(27923); ?> (in some cases using foreach() to iterate over values
   led to a false error message about the key being a reference). (Adam)
 </li>
-<li> Fixed bug #27865 (STDIN, STDOUT, STDERR are dup()d under CLI). (Wez)
+<li> <?php bugfix(27865); ?> (STDIN, STDOUT, STDERR are dup()d under CLI). (Wez)
 </li>
-<li> Fixed bug #27821 (xml_parse() segfaults when xml_set_object() is called from
+<li> <?php bugfix(27821); ?> (xml_parse() segfaults when xml_set_object() is called from
   class method). (Andi, Rob)
 </li>
-<li> Fixed bug #27742 (WDSL SOAP Parsing Schema bug). (Dmitry)
+<li> <?php bugfix(27742); ?> (WDSL SOAP Parsing Schema bug). (Dmitry)
 </li>
-<li> Fixed bug #27722 (Segfault on schema without targetNamespace). (Dmitry)
+<li> <?php bugfix(27722); ?> (Segfault on schema without targetNamespace). (Dmitry)
 </li>
-<li> Fixed bug #27719 (mktime issues on and around DST changeover). (Rasmus)
+<li> <?php bugfix(27719); ?> (mktime issues on and around DST changeover). (Rasmus)
 </li>
-<li> Fixed bug #27681 (soap extension fails without HAVE_TM_GMTOFF). (Dmitry)
+<li> <?php bugfix(27681); ?> (soap extension fails without HAVE_TM_GMTOFF). (Dmitry)
 </li>
-<li> Fixed bug #27641 (Object cloning in ze1_compatibility_mode was reimplemented)
+<li> <?php bugfix(27641); ?> (Object cloning in ze1_compatibility_mode was reimplemented)
   (Dmitry, Andi)
 </li>
-<li> Fixed bug #27628 (Simplify the process of making a POST request via stream
+<li> <?php bugfix(27628); ?> (Simplify the process of making a POST request via stream
   context). (Ilia)
 </li>
-<li> Fixed bug #27619 (filters not applied to pre-buffered stream data). (Sara)
+<li> <?php bugfix(27619); ?> (filters not applied to pre-buffered stream data). (Sara)
 </li>
-<li> Fixed bug #27519 (Reflection_Function constructor crashes with non-existant 
+<li> <?php bugfix(27519); ?> (Reflection_Function constructor crashes with non-existant 
   function's name). (Marcus)
 </li>
-<li> Fixed bug #27469 (serialize() objects of incomplete class). (Dmitry)
+<li> <?php bugfix(27469); ?> (serialize() objects of incomplete class). (Dmitry)
 </li>
-<li> Fixed bug #27457 (handling of numeric indexes in strtr()). (Dmitry)
+<li> <?php bugfix(27457); ?> (handling of numeric indexes in strtr()). (Dmitry)
 </li>
-<li> Fixed bug #27397 (debug_backtrace() not showing function arguments). (Zeev)
+<li> <?php bugfix(27397); ?> (debug_backtrace() not showing function arguments). (Zeev)
 </li>
-<li> Fixed bug #27283 (The last catch statement was sometimes skipped). (Andi)
+<li> <?php bugfix(27283); ?> (The last catch statement was sometimes skipped). (Andi)
 </li>
-<li> Fixed bug #26441 (When __set() returned a value it corrupted it). (Andi)
+<li> <?php bugfix(26441); ?> (When __set() returned a value it corrupted it). (Andi)
 </li>
-<li> Fixed bug #19749 (shouldn't mmap() files larger than memory_limit). (Wez)
+<li> <?php bugfix(19749); ?> (shouldn't mmap() files larger than memory_limit). (Wez)
 </li>
 </ul>
 
@@ -194,48 +194,48 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed start-up problem if both SPL and SimpleXML were enabled. The double
   initialization of apache 1.3 was causing problems here. (Marcus, Derick)
 </li>
-<li>Fixed bug #27606 (Expression must be a modifiable lvalue compiler error).
+<li><?php bugfix(27606); ?> (Expression must be a modifiable lvalue compiler error).
   (Derick)
 </li>
-<li>Fixed bug #27597 (pg_fetch_array not returning false). (Marcus)
+<li><?php bugfix(27597); ?> (pg_fetch_array not returning false). (Marcus)
 </li>
-<li>Fixed bug #27586 (ArrayObject::getIterator crashes with [] assignment). 
+<li><?php bugfix(27586); ?> (ArrayObject::getIterator crashes with [] assignment). 
   (Marcus)
 </li>
-<li>Fixed bug #27537 (Objects pointing to each other segfaults). (Dmitry)
+<li><?php bugfix(27537); ?> (Objects pointing to each other segfaults). (Dmitry)
 </li>
-<li>Fixed bug #27535 (Problem with object freeing mechanism). (Dmitry)
+<li><?php bugfix(27535); ?> (Problem with object freeing mechanism). (Dmitry)
 </li>
-<li>Fixed bug #27504 (Visibility bugs in call_user_function()). (Dmitry)
+<li><?php bugfix(27504); ?> (Visibility bugs in call_user_function()). (Dmitry)
 </li>
-<li>Fixed bug #27457 (handling of numeric indexes in strtr()). (Dmitry)
+<li><?php bugfix(27457); ?> (handling of numeric indexes in strtr()). (Dmitry)
 </li>
-<li>Fixed bug #27338 (memory leak inside tsrm_virtual_cwd.c on win32). (Ilia)
+<li><?php bugfix(27338); ?> (memory leak inside tsrm_virtual_cwd.c on win32). (Ilia)
 </li>
-<li>Fixed bug #27291 (get_browser matches browscap.ini patterns incorrectly). 
+<li><?php bugfix(27291); ?> (get_browser matches browscap.ini patterns incorrectly). 
   (Jay)
 </li>
-<li>Fixed bug #27287 (wddx segfaults during deserialization). (Moriyoshi)
+<li><?php bugfix(27287); ?> (wddx segfaults during deserialization). (Moriyoshi)
 </li>
-<li>Fixed bug #27263 (session extension crashes when unserializing referenced
+<li><?php bugfix(27263); ?> (session extension crashes when unserializing referenced
   values / objects). (Moriyoshi)
 </li>
-<li>Fixed bug #27237 (Working with simplexml crashes apache2). (Rob)
+<li><?php bugfix(27237); ?> (Working with simplexml crashes apache2). (Rob)
 </li>
-<li>Fixed bug #27227 (Mixed case class names causes Fatal Error in Constructor 
+<li><?php bugfix(27227); ?> (Mixed case class names causes Fatal Error in Constructor 
   call). (Marcus)
 </li>
-<li>Fixed bug #27125 (strval() doesn't work for objects with __toString()).
+<li><?php bugfix(27125); ?> (strval() doesn't work for objects with __toString()).
   (Marcus)
 </li>
-<li>Fixed bug #27123 (Fix crash caused by bug in get_object_vars()). (Andi)
+<li><?php bugfix(27123); ?> (Fix crash caused by bug in get_object_vars()). (Andi)
 </li>
-<li>Fixed bug #26677 (mbstring compile errors with IRIX compiler).
+<li><?php bugfix(26677); ?> (mbstring compile errors with IRIX compiler).
   (K.Kosako <kosako at sofnec dot co dot jp>, Rui, Moriyoshi)
 </li>
-<li>Fixed bug #26206 (register_long_arrays breaks superglobals). (Zeev)
+<li><?php bugfix(26206); ?> (register_long_arrays breaks superglobals). (Zeev)
 </li>
-<li>Fixed bug #25724 (argv and argc not defined). (Zeev)
+<li><?php bugfix(25724); ?> (argv and argc not defined). (Zeev)
 </li>
 </ul>
 
@@ -293,53 +293,53 @@ execution. (Ilia)</li>
 (Derick)</li>
 <li>Fixed problems with longlong values in mysqli. (Georg)</li>
 <li>Fixed class name case preserving of user defined classes. (Marcus)</li>
-<li>Fixed bug #27145 (Unmangle private/protected property names before printing
+<li><?php bugfix(27145); ?> (Unmangle private/protected property names before printing
 them inside error messages). (Ilia)</li>
-<li>Fixed bug #27103 (preg_split('//u') incorrectly splits UTF-8 strings into
+<li><?php bugfix(27103); ?> (preg_split('//u') incorrectly splits UTF-8 strings into
 octets). (Moriyoshi)</li>
-<li>Fixed bug #27042 (SPL: SeekableIterator seek() broken). (Marcus)</li>
-<li>Fixed bug #27008 (Every class method can be called as static). (Marcus)</li>
-<li>Fixed bug #26938 (exec() has problems reading long lines).
+<li><?php bugfix(27042); ?> (SPL: SeekableIterator seek() broken). (Marcus)</li>
+<li><?php bugfix(27008); ?> (Every class method can be called as static). (Marcus)</li>
+<li><?php bugfix(26938); ?> (exec() has problems reading long lines).
 (Ilia, runekl[at]opoint[dot]com</li>
-<li>Fixed bug #26947 (ext/dom: Crash when using DomDocument::getElementById()).
+<li><?php bugfix(26947); ?> (ext/dom: Crash when using DomDocument::getElementById()).
 (Christian)</li>
-<li>Fixed bug #26911 (crash in sqlite extension when fetching data from empty
+<li><?php bugfix(26911); ?> (crash in sqlite extension when fetching data from empty
 queries). (Ilia)</li>
-<li>Fixed bug #26844 (ext/mime_magic: magic file validation broken). (Jani)</li>
-<li>Fixed bug #26819 (http_build_query() crashes on NULL output). (Ilia)</li>
-<li>Fixed bug #26817 (http_build_query() does not handle private &amp; protected
+<li><?php bugfix(26844); ?> (ext/mime_magic: magic file validation broken). (Jani)</li>
+<li><?php bugfix(26819); ?> (http_build_query() crashes on NULL output). (Ilia)</li>
+<li><?php bugfix(26817); ?> (http_build_query() does not handle private &amp; protected
 object properties correctly). (Ilia)</li>
-<li>Fixed bug #26815 (foreach of (DOM) childnodes crashes when Xinclude is used).
+<li><?php bugfix(26815); ?> (foreach of (DOM) childnodes crashes when Xinclude is used).
 (Rob)</li>
-<li>Fixed bug #26796 (SQLite causes crashes with other extensions *connect()
+<li><?php bugfix(26796); ?> (SQLite causes crashes with other extensions *connect()
 calls). (Marcus)</li>
-<li>Fixed bug #26762 (unserialize() produces lowercase classnames). (Marcus)</li>
-<li>Fixed bug #26743 (getElementsByTagName doesn't work properly). (Rob)</li>
-<li>Fixed bug #26736 (__autoload not invoked for parent classes). (Marcus)</li>
-<li>Fixed bug #26723 (domNode::appendChild() changes child node namespace). (Rob)</li>
-<li>Fixed bug #26697 (calling class_exists() on a nonexistent class in __autoload
+<li><?php bugfix(26762); ?> (unserialize() produces lowercase classnames). (Marcus)</li>
+<li><?php bugfix(26743); ?> (getElementsByTagName doesn't work properly). (Rob)</li>
+<li><?php bugfix(26736); ?> (__autoload not invoked for parent classes). (Marcus)</li>
+<li><?php bugfix(26723); ?> (domNode::appendChild() changes child node namespace). (Rob)</li>
+<li><?php bugfix(26697); ?> (calling class_exists() on a nonexistent class in __autoload
 results in segfault). (Marcus)</li>
-<li>Fixed bug #26696 (string index in a switch() crashes with multiple matches).
+<li><?php bugfix(26696); ?> (string index in a switch() crashes with multiple matches).
 (Andi)</li>
-<li>Fixed bug #26695 (Reflection API does not recognize mixed-case class hints).
+<li><?php bugfix(26695); ?> (Reflection API does not recognize mixed-case class hints).
 (Marcus)</li>
-<li>Fixed bug #26690 (make xsltProcessor-&gt;transformToUri use streams wrappers).
+<li><?php bugfix(26690); ?> (make xsltProcessor-&gt;transformToUri use streams wrappers).
 (Ilia)</li>
-<li>Fixed bug #26680 (Added version check in mysqli_report_index). (Georg)</li>
-<li>Fixed bug #26675 (Segfault on ArrayAccess use). (Marcus)</li>
-<li>Fixed bug #26640 (__autoload() not invoked by Reflection classes). (Jani)</li>
-<li>Fixed bug #26543 (call_user_func() broken for self, parent). (Stanislav)</li>
-<li>Fixed bug #26077 (memory leak when new() result is not assigned and no
+<li><?php bugfix(26680); ?> (Added version check in mysqli_report_index). (Georg)</li>
+<li><?php bugfix(26675); ?> (Segfault on ArrayAccess use). (Marcus)</li>
+<li><?php bugfix(26640); ?> (__autoload() not invoked by Reflection classes). (Jani)</li>
+<li><?php bugfix(26543); ?> (call_user_func() broken for self, parent). (Stanislav)</li>
+<li><?php bugfix(26077); ?> (memory leak when new() result is not assigned and no
 constructor is defined). (Stanislav)</li>
-<li>Fixed bug #26065 (Crash when nesting classes). (Marcus)</li>
-<li>Fixed bug #25816 (disallow arrays in class constants). (Stanislav)</li>
-<li>Fixed bug #25329 (sqlite_create_function with method and reference to $this).
+<li><?php bugfix(26065); ?> (Crash when nesting classes). (Marcus)</li>
+<li><?php bugfix(25816); ?> (disallow arrays in class constants). (Stanislav)</li>
+<li><?php bugfix(25329); ?> (sqlite_create_function with method and reference to $this).
 (Marcus)</li>
-<li>Fixed bug #25038 (call_user_func() issues a warning if function throws an
+<li><?php bugfix(25038); ?> (call_user_func() issues a warning if function throws an
 exception). (Marcus)</li>
-<li>Fixed bug #24608 (__set not triggered when overloading with array).
+<li><?php bugfix(24608); ?> (__set not triggered when overloading with array).
 (Stanislav)</li>
-<li>Fixed bug #24243 (enabling browscap causes segfault). (Wez)</li>
+<li><?php bugfix(24243); ?> (enabling browscap causes segfault). (Wez)</li>
 </ul>
 
 <hr />
