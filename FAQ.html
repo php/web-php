@@ -847,7 +847,7 @@ the file is being read correctly.
     <a name="6.11">6.11.</a> When I try to build PHP using --with-apxs I get strange error messages
   </b></dt>
   <dd>
-    There are two things to check here.  First, for some reason
+    There are three things to check here.  First, for some reason
     when Apache builds the apxs Perl script, it sometimes ends up
     getting built without the proper compiler and flags variables.
     Edit your apxs (sometimes found in /usr/local/apache/bin/apxs
@@ -864,6 +864,8 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
 <pre>my $CFG_LIBEXECDIR    = 'modules';        # substituted via APACI install</pre>
     If you see the above line, change it to this:
 <pre>my $CFG_LIBEXECDIR    = '/usr/lib/apache';        # substituted via APACI install</pre>
+    Last, if you reconfigure/reinstall Apache, add a 'make clean' to the process after
+    './configure' and before 'make'.
     </dd>
 </dl>
 
