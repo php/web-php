@@ -269,7 +269,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
 <?php endif; ?>
   <td>
-   <table cellpadding="10" cellspacing="0">
+   <table cellpadding="10" cellspacing="0" width="620">
     <tr>
      <td valign="top">
 <?php
@@ -388,7 +388,7 @@ function clean_note($text) {
         $text=str_replace(htmlspecialchars($f), $f, $text);
         $text=str_replace(htmlspecialchars(strtoupper($f)), $f, $text);
     }
-    $text = "<tt>".nl2br($text)."</tt>";
+    $text = "<tt>".nl2br(wordwrap(trim($text)))."</tt>";
     return $text;
 }
 

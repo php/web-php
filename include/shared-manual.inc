@@ -207,7 +207,7 @@ function manualUserNotes($title, $id) {
 	# don't want .php at the end of the id.
 	if (substr($id,-4) == '.php') $id = substr($id,0,-4);
 
-	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
+	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"620\">\n";
 
 	$notes = manualGetUserNotes($title, $id);
 
