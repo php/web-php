@@ -231,6 +231,8 @@ $uri_aliases = array (
     "ternary"      => "language.operators.comparison.ternary",
     "instanceof"   => "language.operators.type",
     "if"           => "language.control-structures",
+    "static"       => "language.variables.scope",
+    "global"       => "language.variables.scope",
     
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
