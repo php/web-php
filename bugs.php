@@ -145,7 +145,8 @@ elseif ($cmd == "display") {
 		$where_clause .= " AND ts1 >= DATE_SUB(NOW(), INTERVAL $bug_age DAY)";
 	}
 
-	$where_clause .= " AND php_version LIKE '4%'";
+	if (!isset($phpver)) $phpver = "4";
+	if ($phpver) $where_clause .= " AND php_version LIKE '$phpver%'";
 
 	/* not in the header, but someone can build a query manually with it. */
 	if(strlen($by) and $by!='Any')
@@ -179,7 +180,7 @@ elseif ($cmd == "display") {
 		echo "<h2 class=\"error\">No bugs with the specified criteria were found.</h2>";
 	}
 	else {
-		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction";
+		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver";
 ?>
 <table align="center" border="0" cellspacing="2" width="95%">
  <?php show_prev_next($begin,$rows,$link);?>

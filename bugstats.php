@@ -76,13 +76,7 @@ while($row=mysql_fetch_array($result)) {
 function bugstats($status, $type) {
 	global $bug_type, $phpver;
 	if ($bug_type[$status][$type] > 0) {
-		if ($phpver == 3) {
-			$page = "bugs-php3.php";
-		}
-		else {
-			$page = "bugs.php";
-		}
-		return '<a href="/' . $page . '?cmd=display&amp;status=' . ucfirst($status) . '&amp;bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&amp;by=Any">' . $bug_type[$status][$type] . "</a>\n";
+		return '<a href="bugs.php?cmd=display&amp;status=' . ucfirst($status) . "&amp;phpver=" . $phpver . '&amp;bug_type=' . ($type == 'all' ? 'Any' : urlencode($type)) . '&amp;by=Any">' . $bug_type[$status][$type] . "</a>\n";
 	}
 }
 
