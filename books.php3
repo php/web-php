@@ -104,7 +104,7 @@ by Stephen Spainhour and Robert Eckstein<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
 ><IMG SRC="/gifs/cvsbook.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
