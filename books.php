@@ -294,7 +294,7 @@ array (
   array(
     /* title[s]     */ "Php Black Book",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1588800539/wwwphpnet",
-    /* author[s]    */ array("Peter Moulding"),
+    /* author[s]    */ "Peter Moulding",
     /* auth link[s] */ "",
     /* image        */ "moulding.jpg",
     /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages",
@@ -499,13 +499,24 @@ array (
 
   array(
     /* title[s]     */ "PHP 4 Developer's Guide - Anleitungen und Lösungen für einen professionellen Einsatz",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN//wwwphpnet07",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827261740/wwwphpnet07",
     /* author[s]    */ array("Sterling Hughes", "Andrei Zmievski"),
     /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php", "http://zend.com/zend/hof/andrei.php"),
     /* image        */ "sterling.jpg",
     /* information  */ "October 2001, ISBN 3-8272-6174-0, 538 pages",
     /* inform. link */ "",
     /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 Programmering",
+    /* title_link   */ "http://pagina.se/bok.html?20660",
+    /* author[s]    */ array("Jesper Ek", "Ulrika Eriksson"),
+    /* auth link[s] */ "",
+    /* image        */ "ek-eriksson.gif",
+    /* information  */ "February 2001, ISBN 9-1636-0660-7, 220 pages",
+    /* inform. link */ "",
+    /* language     */ "se"
   ),
 
   array(
