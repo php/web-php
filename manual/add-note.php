@@ -17,7 +17,7 @@ CREATE TABLE note (
 */
 
 
-require("shared.inc");
+require("shared-manual.inc");
 $DISABLE_KICKOUTS=1;
 commonHeader("Manual Notes");
 
@@ -37,13 +37,14 @@ if ($note == "") {
 
 # turn the POST data into GET data so we can do the redirect
 if(!strstr($MYSITE,"www.php.net")) {
-        Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
+    Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
+    exit;
 }
 
 mysql_pconnect("localhost","nobody", "");
 mysql_select_db("php3");
 
-if (isset($note)):
+if (isset($note) && isset($action) && strtolower($action) != "preview"):
 	$now = date("Y-m-d H:i:s");
 	$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
         # no need to call htmlspecialchars() -- we handle it on output
@@ -67,15 +68,22 @@ e-mailed to the developers.
 or you can <A href="http://www.php.net/manual/">browse the manual with the
 on-line notes</A>.
 
-<?else:?>
-
+<?else:
+        if (isset($note) && strtolower($action) == "preview"):?>
+<p>This is what your entry will look like, roughly:</p>
+<?
+                echo '<table border="0" cellpadding="0" cellspacing="0" width="100%">';
+                makeEntry(time(),stripslashes($user),stripslashes($note));
+                echo "</table>";
+        else:?>
 <P>You can contribute to the PHP manual from the comfort of your browser!
 Just add your comment in the big field below (and your email address in the
 little one).
 
-<P>Note that HTML tags are not allowed in the posts. We tried allowing them
-in the past, but people invariably made a mess of things making the manual
-hard to read for everybody.
+<p>Note that most HTML tags are not allowed in the posts. We tried
+allowing them in the past, but people invariably made a mess of
+things making the manual hard to read for everybody. You can include
+&lt;p&gt;, &lt;/p&gt;, and &lt;br&gt; tags.</p>
 
 <P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a bug</A>, you're in the wrong place.
 If you are just commenting on the fact that something is not documented,
@@ -90,8 +98,8 @@ answer, feel free to come back and add it here!)
 <a href="http://bugs.php.net/">Click here to submit a bug report.</a><br>
 <a href="http://bugs.php.net/">Click here to request a feature.</a>
 </p>
-
-<?      if (!isset($sect)):?>
+<?      endif;
+        if (!isset($sect)):?>
 <p><b>To add a note, you must click on the 'Add Note' button
 on the bottom of a manual page so we know where to add the note!</b></p>
 <?      else:?>
@@ -102,17 +110,19 @@ on the bottom of a manual page so we know where to add the note!</b></p>
 <table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
 <TR VALIGN=top>
 <TD><B>Your email address:</B></TD>
-<TD><INPUT type=text name="user" size=40></TD>
+<td><input type="text" name="user" size="40" maxlength="40" value="<?echo htmlspecialchars(stripslashes($user))?>"></td>
 </TR>
 <TR VALIGN=top>
 <TD><B>Your notes:</B></TD>
-<TD><TEXTAREA name="note" rows=6 cols=40 wrap=virtual></TEXTAREA><BR>
+<td><textarea name="note" rows="6" cols="40" wrap="virtual"><?echo htmlspecialchars(stripslashes($note))?></textarea><br>
 </TD>
 </TR>
-<TR><TD colspan=2 align=right>
-<INPUT TYPE=image VALUE="Add Note" SRC='/gifs/b-addnote-p.gif' ALT='Add Note'
-WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle><BR>
-</TD></TR>
+<TR>
+ <td colspan="2" align="right">
+  <input type="submit" name="action" value="Preview">
+  <input type="submit" name="action" value="Add Note">
+ </td>
+</tr>
 </TABLE>
 </FORM>
 <?      endif;
