@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Site Navigation with PHP", "by Brad Bulger","http://www.hotwired.com/webmonkey/99/25/index2a.html", "June 16, 1999");?>
+Another Webmonkey article on using PHP, this time explaining how to use
+PHP to make it easier for users to navigate your website.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP/MySQL Tutorial", "by Graeme Merrall","http://www.hotwired.com/webmonkey/99/21/index2a.html?tw=frontdoor", "May 19, 1999");?>
 A three-lesson tutorial on using PHP and MySQL together on Windows
 and Unix systems.
