@@ -122,7 +122,7 @@ The PHP Base Library is a toolkit of extremely useful functions needed in many w
 
 <? makeEntry("DJPIM","ftp://tcomtoo.tcomeng.com/djpim/","Daryl Jones","daryl@tcomeng.com"); ?>
 DJPIM is a very simple web-based interface to a MYSQL table that
-serves as a priortized list of reminders.  It's designed for rapid
+serves as a prioritized list of reminders.  It's designed for rapid
 data entry of things to do, like telephone messages, prepare quotations,
 and send invoices.  The author uses it as a substitute for a paper
 &quot;to do&quot; list.
@@ -458,6 +458,15 @@ PHP Time Tracking - Time Tracking tool for knowing what you did for whom. Good f
 <? makeEntry("XML Class", "http://www.hansanderson.com/php/xml/", "Hans H. Anderson", "me@hansanderson.com"); ?>
 XML Class - An EXTREMELY easy to use XML Tree and statistic parser. You need PHP4 (even if you have XML if PHP3, this requires PHP4). Basically, in two lines, this class will turn XML Data into PHP objects with internal data arrays. This means you can access your XML data with minimal effort.
 <? endEntry(); ?>
+
+<? makeEntry("PHPLOT","http://www.phplot.com/","Afan Ottenheimer","afan@jeo.net"); ?>
+PHPLOT is a graphics class for generating graphics on the fly and now
+used in several countries for graphing things like GPS skiing routes in
+the alps and stock market graphs.  Its released under the PHP license and
+supports all versions of GD, TTF &amp; non-TTF systems, PHP3, PHP4, PNG, GIF,
+JPEG, and data in text-linear, linear-linear, and linear-linear-error
+formats.
+<? endEntry();?>
 
 
 <TR bgcolor='#D0D0D0' valign=top>
