@@ -151,6 +151,17 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
+
+<h1>Vancouver PHP Conference 2004</h1>
+<p>
+ <span class="newsdate">[22-Dec-2003]</span>
+ The Vancouver PHP Users Association presents <a href="http://vancouver.php.net/">The PHP Vancouver Conference</a>
+ on January 22-23, a professional and technical conference focused on the PHP scripting language.
+ The goal of this conference is to bring together some of the world's leading PHP developers and
+ business professionals to share their experience with both students and PHP professionals in a series of talks.</p>
+<hr />
+
 <h1>PHP 5.0 Beta 3 released!</h1>
 <p>
  <span class="newsdate">[21-Dec-2003]</span>
