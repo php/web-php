@@ -3,15 +3,15 @@
 /* See the end of the script for the table layout. */
 
 require("shared.inc");
-if (strstr($MYSITE,"beta.php.net")) {
+if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser=$dbpwd="";
 } else if (strstr($MYSITE,"il.php.net")) {
-	$dbhost="beta.php.net";
+	$dbhost="bugs.php.net";
 	$dbuser="bourbon";
 	$dbpwd="";
 } else {
-	Header("Location: http://beta.php.net/bugs.php3");
+	Header("Location: http://bugs.php.net");
 	exit;
 }
 
@@ -222,8 +222,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 		echo "If the status of the bug report you submitted\n";
 		echo "changes, you will be notified.  You may return here and check on the status\n";
-		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://beta.php.net/bugs.php3?id=$cid\">";
-		echo "http://beta.php.net/bugs.php3?id=$cid</a>\n";
+		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://bugs.php.net?id=$cid\">";
+		echo "http://bugs.php.net?id=$cid</a>\n";
     } else {
         echo("<p><h2>Mail not sent!</h2>\n");
         echo("Please send this page in a mail to " .
@@ -366,7 +366,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				$text = "Bug #$id has been deleted from the database by $user\nComments:\n\n$comments\n";
 			} else {
 				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$comments\n";
-				$text .= "\nFull Bug description available at: http://beta.php.net/bugs.php3?id=$id\n";
+				$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
 				$text = stripslashes($text);
 			}
 			$esdesc = stripslashes($esdesc);
@@ -394,7 +394,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
 			$text .= "Description: $esdesc\n\n$eldesc\n";
-			$text .= "\nFull Bug description available at: http://beta.php.net/bugs.php3?id=$id\n";
+			$text .= "\nFull Bug description available at: http://bugs.php.net?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
@@ -411,7 +411,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
 			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=POST action=\"http://beta.php.net$PHP_SELF?id=$id\">\n";
+			echo "<form method=POST action=\"http://bugs.php.net$PHP_SELF?id=$id\">\n";
 			if($edit==1)
 				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			else

@@ -12,7 +12,7 @@ other resources in the <a href="/docs.php3">documentation</a> section.
 <h3>Reporting Bugs</h3>
 <P>If you can't resolve your problem from the
 available documentation or mailing list archives, and you think it might
-be a bug, a <a href="http://beta.php.net/bugs.php3">Bug Database</a> has
+be a bug, a <a href="http://bugs.php.net">Bug Database</a> has
 been established for tracking bugs and ensuring that all reported bugs
 get addressed.  If you see a problem, please tell us so we can address it.
 </P>

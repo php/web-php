@@ -4,7 +4,7 @@
   1	"Mirror Name",
   2	"filename prefix for hosting company graphic",
   3	"url for hosting company",
-  4	flag for whether site is a full mirror (1) or just a download site (0),
+  4	flag for whether site is a full mirror (1) or just a download site (0), or just a placeholder (2),
   5	flag for whether search engine works (1) or not (0) on the site
 */
 
@@ -57,6 +57,7 @@ $MIRRORS = array(
    "ftp://uk.php.net/"            => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 0),
    "http://www.php.net/"          => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1, 0),
    "http://beta.php.net/"         => array("us", "chek.com", "chek", "http://www.chek.com/", 1, 1),
+   "http://bugs.php.net/"         => array("us", "chek.com", "chek", "http://www.chek.com/", 2, 1),
    "http://php.he.net/"           => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0),
    "http://php.calinet.com/"      => array("us", "California Internet Connection", "calinet", "http://home.calinet.com/", 1, 0),
    ""                             => array("xx", "Unknown", "none", "/", 1, 0)
