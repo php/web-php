@@ -161,11 +161,10 @@ Fusion.
 Its all free under a GNU license.
 <? endEntry();?>
 
-<? makeEntry("Muppet","screwdriver.net/muppet/","Christopher Heschong" ,"chris@wiw.org"); ?>
-Muppet came about because several of our users were running Windows 3.x with non-javascript browsers 
+<? makeEntry("TWIG","screwdriver.net/twig/","Christopher Heschong" ,"chris@wiw.org"); ?>
+TWIG (formerly known as Muppet) came about because several of our users were running Windows 3.x with non-javascript browsers 
 (specifically MSIE 3.x for Win3.x). Although we like IMP (http://web.horde.org/imp/), it wasn't exactly 
-practical for them to use. Muppet works in every browser we've tested so far, including lynx. The name 
-is only here because for some reason it was the first word that I thought of that started with "M" (to match "M"ail). 
+practical for them to use. Muppet works in every browser we've tested so far, including lynx.
 <? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
