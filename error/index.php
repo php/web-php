@@ -53,7 +53,7 @@ if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
 // We need to override the 404 status in these cases too.
 if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
     @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[3]")) {
-    header('Status: 200 OK',1,200);
+    @header('Status: 200 OK',1,200);
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include "$DOCUMENT_ROOT/manual/$parts[1]/$parts[3]";
@@ -63,7 +63,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
 // BC: for old HTML directory (.html extension was used in that)
 elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
         @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[2].php")) {
-    header('Status: 200 OK',1,200);
+    @header('Status: 200 OK',1,200);
     $PRINT_PAGE = TRUE;
     include "$DOCUMENT_ROOT/manual/$parts[1]/$parts[2].php";
     exit;
@@ -72,7 +72,7 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
 // The index file needs to be handled in a special way
 elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &&
         @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/index.php")) {
-    header('Status: 200 OK',1,200);
+    @header('Status: 200 OK',1,200);
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include "$DOCUMENT_ROOT/manual/$parts[1]/index.php";
@@ -207,7 +207,7 @@ if (isset($external_redirects[$URI])) {
 include_once "manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
 if ($try) {
-    header('Status: 200 OK',1,200);
+    @header('Status: 200 OK',1,200);
     include_once $_SERVER['DOCUMENT_ROOT'] . $try;
     exit;
 }
@@ -224,7 +224,7 @@ mirror_redirect(
 function make404()
 {
     global $_SERVER;
-    header('Status: 404 Not Found',1,404);
+    @header('Status: 404 Not Found',1,404);
     header("Cache-Control: public, max-age=600");
     commonHeader('404 Not Found');
     echo "<h1>Not Found</h1>\n",
