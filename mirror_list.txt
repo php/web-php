@@ -16,6 +16,7 @@ fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
+ie	ie.php.net	Dave Rynne <ftpadmin@esat.net>	php.mirrors.esat.net
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
 it	it3.php.net	Dino Uras <dino.uras@iol.it>	php.iol.it
