@@ -152,7 +152,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5.0 Beta 4 released!</h1>
 <p>
  <span class="newsdate">[12-Feb-2004]</span>
- <a href="/downloads.php">PHP 5.0 Beta 4</a> has been released.  This fourth beta 
+ <a href="/downloads.php#v5">PHP 5.0 Beta 4</a> has been released.  This fourth beta 
  of PHP 5 is also scheduled to be the last one (barring unexpected surprises, that
  did occur with beta 3).  This beta incorporates dozens of bug fixes since Beta 3,
  rewritten exceptions support, improved interfaces support, new <i>experimental</i>
