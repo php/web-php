@@ -13,7 +13,7 @@ if(!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
 
-if (strstr($MYSITE,"bugs.php.net")) {
+if (strstr($MYSITE,"www.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
@@ -21,12 +21,8 @@ if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";
 	$dbpwd="";
-} else if (strstr($MYSITE,"news.php.net")) {
-	$dbhost="localhost";
-	$dbuser="nobody";
-	$dbpwd="";
 } else {
-	Header("Location: http://bugs.php.net/" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
+	Header("Location: http://www.php.net/bugs.php" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
 	exit;
 }
 
