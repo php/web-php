@@ -13,7 +13,7 @@
 	"http://www.php.net/"	 => array("usa", "Circle Net, United States")
   );
   $ftp_sites = array(
-   "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States")
+   "ftp://ftp.php.net/pub/distributions/"          => array("usa", "Circle Net, United States"),
    "ftp://no.php.net/pub/free/php/dist/"          => array("norway", "Guardian Networks, Norway")
   );
 
