@@ -180,9 +180,9 @@ And once again since people just don't seem to understand this point:
 <p>
 If you are contributing a patch, a small fix, or another minor change you do
 not need to ask for a CVS account before submitting it. Just send your patch to
-<a href="mailto:php-dev@lists.php.net">php-dev@lists.php.net</a>. You should
+<a href="mailto:internals@lists.php.net">internals@lists.php.net</a>. You should
 subscribe to that list (send a blank mail to <a
-href="mailto:php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>)
+href="mailto:internals-subscribe@lists.php.net">internals-subscribe@lists.php.net</a>)
 to participate in any discussion your patch generates! Your patch may not get
 noticed the first time. Make sure that when you send your patch, you explain
 what it does. Make sure you use a clear subject when sending your patch (you
