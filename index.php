@@ -78,7 +78,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php echo make_image("http://www.php-ev.de/award/images/phpaward_100.gif", "PHP Award", "right"); ?>
+<?php echo make_image("phpaward_100.gif", "PHP Award", "right"); ?>
 
 <h1>PHP Award 2002</h1>
 <p>
