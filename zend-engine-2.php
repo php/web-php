@@ -8,7 +8,7 @@ site_header("Changes in PHP 5/Zend Engine 2.0");
 <h1>Changes in PHP 5/Zend Engine 2.0</h1>
 
 <p>
- [ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible
+ [ <a href="http://www.nexen.net/interview/index.php?id=32">Disponible
  en fran&ccedil;ais</a> ]
 </p>
 

@@ -228,7 +228,7 @@ Search Type=0
 <ol>
  <li>
   If you don't already have the IE5 Tools package, download and install it from
-  <a href="http://www.microsoft.com/Windows/IE/WebAccess/ie5tools.asp" target="_blank"
+  <a href="http://www.microsoft.com/Windows/IE/WebAccess/ie5tools.asp"
   >www.microsoft.com/Windows/IE/WebAccess/ie5tools.asp</a>
  </li>
  <li>Launch the QuickSearch utility (you'll find it on your Links bar)</li>

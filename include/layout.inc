@@ -197,10 +197,9 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     }
     
     // Return with image built up
-    return sprintf('<img src="%s/%s" border="%d" alt="%s"%s%s%s />',
+    return sprintf('<img src="%s/%s" alt="%s"%s%s%s />',
         $webdir,
         $file,
-        $border,
         ($alt    ? $alt : ''),
         $sizeparams,
         ($align  ? ' align="' . $align . '"'  : ''),
