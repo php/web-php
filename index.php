@@ -191,7 +191,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php print_link("http://php-con.com/", make_image("phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
+<?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
 
 <h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
 <p>
