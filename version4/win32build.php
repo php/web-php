@@ -67,7 +67,7 @@ download...</P><UL>
 </UL>
 <p>Finally, you are going to need the source to PHP4 itself.  Your best bet is 
 to get is straight from <A href="http://www.php.net/version4/cvs.php">CVS</A>. 
-If you get a <A href="http://bonsai.php.net/~sas/snapshots/">snapshot</A> or
+If you get a <A href="http://snaps.php.net/">snapshot</A> or
 a <A href="http://www.php.net/version4/downloads.php">source</A> tarball, you 
 not only will have to untar and ungzip it, but you will have to convert the 
 bare linefeeds to crlf's in the <CODE>*.dsp</CODE> and <CODE>*.dsw</CODE> files 
