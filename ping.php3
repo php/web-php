@@ -2,10 +2,6 @@
 function local_ping($ip) {
 	global $SERVER_NAME;
 
-	echo file_exists("/bin/ping");
-	echo "<br>\n";
-	echo file_exists("/usr/sbin/ping");
-	echo "<br>\n";
 	if(file_exists("/bin/ping")) { $ping="/bin/ping"; }
 	elseif(file_exists("/usr/sbin/ping")) { $ping="/usr/sbin/ping"; }
 	elseif(file_exists("/usr/bin/ping")) { $ping="/usr/bin/ping"; }
