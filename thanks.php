@@ -23,7 +23,7 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.rackshack.net/">RackShack</a> provides
+ <a href="http://www.ev1servers.net/">EV1Servers</a> provides
  the server and bandwidth for www.php.net.
 </p>
 
