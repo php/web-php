@@ -174,8 +174,6 @@ if (isset($MAGIC_COOKIE) && $id) {
 };
 
 function manualGetUserNotes($title, $id) {
-	// if we're www.php.net, get it from the local DB
-	// otherwise look in "/manual/usernotes/$title.txt" (if present)
 	global $MYSITE, $DOCUMENT_ROOT;
 	$notes = array();
 	$hash = substr(md5($id),0,16);
@@ -218,7 +216,7 @@ function manualUserNotes($title, $id) {
 	echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
 	echo "<td><small>User Contributed Notes<br></small><b>$title</b><br></td>\n";
 	echo "<td align=\"right\">";
-	print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
+	print_link('../add-note.php?sect='.$id.'&redirect='.$back_url,
 		make_image('notes-add.gif','add a note')
 	);      
 	echo "&nbsp;";
