@@ -34,8 +34,8 @@ require 'cgi-style.pl';
 
 %CVSROOT = (
 	    'php3', '/repository/php3',
-	    'phpweb', '/repository/phpweb',
-	    'phpfi', '/repository/phpfi',
+#	    'phpweb', '/repository/phpweb',
+#	    'phpfi', '/repository/phpfi',
 	    );
 
 $cvstreedefault = 'php3';
