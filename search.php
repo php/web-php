@@ -76,9 +76,14 @@ if (!isset($base)) {
 }
 
 // If we are on the same site, there is no need for the base
-// This makes URLs shorter and POST data smaller
+// This makes URLs shorter and POST data smaller. If we have
+// a base, and not on the same site, we need to make relative
+// links be relative to the original server
+unset($SEARCH_BASE);
 if (isset($base) && $base == $MYSITE) {
     unset($base);
+} else {
+    $SEARCH_BASE = $base . "search.php";
 }
 
 // ============================================================================
