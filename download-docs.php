@@ -12,17 +12,12 @@ $SIDEBAR_DATA='
  friendly formats.
 </p>
 
-<h3>Tips for Windows users</h3>
+<h3>Tip for Linux and BSD users</h3>
 <p>
- If you don\'t know how to handle bz2 compressed
- manuals on Windows, please read our <a
- href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
- on this subject.
-</p>
-<p>
- Windows users are also suggested to check out the extended
- CHM version of the PHP manual: More information is available
- on <a href="http://weblabor.hu/php-doc-chm">its own site</a>.
+ A free CHM viewer is available for Linux, *BSD and Solaris,
+ which is capable of reading the CHMs available here, except
+ the extended CHMs. It is called
+ <a href="http://xchm.sourceforge.net/">xCHM</a>.
 </p>
 
 <h3>File sizes and dates</h3>
@@ -54,11 +49,6 @@ $formats = array(
  The PHP manual is available in a selection of languages
  and formats. Pick a language and format from the table below
  to start downloading.
-</p>
-
-<p class="tip">
- Currently only the CHM versions are downloadable. We are going
- to make the other formats available soon.
 </p>
 
 <p>
