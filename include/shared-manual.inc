@@ -143,19 +143,22 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <td align="right">
 <?php
 if (isset($MAGIC_COOKIE) && $id) {
-	print_link('/manual/admin-notes.php?action=edit+' . $id . '&brief=1',
+	print_popup_link('http://master.php.net/manage/user-notes.php?action=edit+' . $id,
 		make_image('notes-edit.gif', 'edit note'),
-		'admin'
+		'admin',
+                'scrollbars=no,width=650,height=400'
 	);
 	echo '&nbsp';
-	print_link('/manual/admin-notes.php?action=reject+' . $id . '&brief=1&popup=1',
+	print_popup_link('http://master.php.net/manage/user-notes.php?action=reject+' . $id,
 		make_image('notes-reject.gif', 'reject note'),
-		'admin'
+		'admin',
+                'scrollbars=no,width=300,height=200'
 	);
 	echo '&nbsp';
-	print_link('/manual/admin-notes.php?action=delete+' . $id . '&brief=1&popup=1',
+	print_popup_link('http://master.php.net/manage/user-notes.php?action=delete+' . $id,
 		make_image('notes-delete.gif', 'delete note'),
-		'admin'
+		'admin',
+                'scrollbars=no,width=300,height=200'
 	);
 }
 ?>
