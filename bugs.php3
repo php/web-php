@@ -455,7 +455,7 @@ Please supply any information that may be helpful in fixing the bug:
 </center>
 </td>
 <td>
-<textarea cols=60 rows=15 name="ldesc"></textarea>
+<textarea cols=60 rows=15 name="ldesc" wrap=virtual></textarea>
 </td>
 </tr>
 </table>
