@@ -87,6 +87,7 @@ if (isset($_POST['maillist'])) {
 <p>
  Some PHP.net subsites have their own project specific pages about mailing
  lists. You can find the <a href="http://pear.php.net/support.php">PEAR
+ mailing lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  mailing lists</a> and the <a href="http://gtk.php.net/resources.php">PHP-GTK
  mailing lists</a> on their own pages.
 </p> 
@@ -261,7 +262,7 @@ function output_lists_table($mailing_lists)
                 $larchive = ($listinfo[4] === TRUE ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = FALSE; }
             echo '<td>' . ($larchive ? "<a href=\"http://marc.theaimsgroup.com/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
-            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '" /></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest" />' : 'n/a' ) . '</td>';
             echo "</tr>\n";
