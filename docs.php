@@ -74,7 +74,7 @@ the table below.
 ?>
 </td></tr>
 
-<tr><td bgcolor=\"#dddddd\">Downloads</td><td bgcolor="#eeeeee">
+<tr><td bgcolor="#dddddd">Downloads</td><td bgcolor="#eeeeee">
 For other downloadable formats, please visit our new
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
@@ -91,8 +91,8 @@ For other downloadable formats, please visit our new
     all of the documentation, this will be the most current version,
     as it is updated (and annotated) daily.</li>
 
-<li><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
-    Errata</A>. This is the collected errata from the on-line
+<li><a href="http://www.php.net/manual/browse-errata.php">PHP Manual
+    Errata</a>. This is the collected errata from the on-line
     errata/note system.</li>
 </ul>
 
@@ -120,7 +120,7 @@ francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;
 <h1>CVS Account</h1>
 <ul>
 <li><a href="/anoncvs.php">Anonymous CVS access instructions</a></li>
-<li><A href="/cvs-php.php">Getting a CVS account</a>. If you
+<li><a href="/cvs-php.php">Getting a CVS account</a>. If you
 wish to help out with the development of PHP, read this.</li>
 </ul>
 
