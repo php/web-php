@@ -278,6 +278,17 @@ Commercial accelerator available from Zend Technologies, Inc.</li>
 </ul>
 
 
+<h4>PHP Merchandise</h4>
+
+<ul>
+<li><a href="http://www.copyleft.net/search.phtml?search=1&lookup%5Bbrand_id%5D=47">Copyleft</a><br>
+Some t-shirts, hats and stickers with the Copyleft variant of the PHP logo on them.</li>
+
+<li><a href="http://www.cafeshops.com/cp/searchresults_x.aspx?criteria=storeid&searchstring=php">PHP projects' merchandise</a><br>
+A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)</li>
+</ul>
+
+
 <h4>Non-English PHP Sites</h4>
 
 <ul>
