@@ -1283,7 +1283,7 @@ array(
     /* author[s]    */ "Juliano Niederauer",
     /* auth link[s] */ "",
     /* image        */ "8575220446.jpg",
-    /* information  */ "2003, ISBN 85-7522-044-6",
+    /* information  */ "2003, ISBN 85-7522-044-6, 480 pages",
     /* inform. link */ "http://novateceditora.com.br/livros/phpavancado/",
     /* language     */ "pt"
   ),
