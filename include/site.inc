@@ -23,7 +23,7 @@ $MIRRORS = array(
    "http://php3.de/"                  => array("de", "Schlund + Partner", "schlund", "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1, "de"),
    "http://dk.php.net/"               => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/", 1, 0, "dk"),
    "http://fi.php.net/"               => array("fi", "NIC Finland", "nic", "http://www.nic.fi/", 1, 0, "fi"),
-#   "http://fi2.php.net/"              => array("fi", "IMG-Multimedia", "", "http://www.img-media.com/", 1, 0, "fi"),
+   "http://fi2.php.net/"              => array("fi", "IMG-Multimedia", "", "http://www.img-media.com/", 1, 0, "fi"),
    "http://fr.php.net/"               => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0, "fr"),
    "http://hu.php.net/"               => array("hu", "Externet", "externet", "http://www.externet.hu/", 1, 0, "hu"),
    "http://php.fmal.com/"             => array("it", "Open Technology Consulting", "sts", "http://otc.fmal.com/", 1, 0, "it"),
@@ -64,7 +64,7 @@ $MIRRORS = array(
    "http://php.he.net/"               => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0, "en"),
    "http://za.php.net/"               => array("za", "CSIR Mikomtek", "mikomtek", "http://www.mikom.csir.co.za/", 1, 0, "en"),
    "http://news.php.net/"              => array("us", "VA Linux", "va", "http://www.valinux.com/", 2, 1, "en"),
-   ""                                 => array("xx", "Unknown", "none", "/", 1, 0, "en")
+   ""                                 => array("xx", "Unknown", "none", "/", 2, 0, "en")
 );
 
 $COUNTRIES = array(
@@ -115,7 +115,7 @@ $COUNTRIES = array(
 $MYSITE='http://'.getenv("SERVER_NAME").'/';
 
 if (!isset($MIRRORS[$MYSITE])) {
-	$MIRRORS[$MYSITE] = array("xx", "Unknown", "none", $MYSITE, 1, 0, "en");
+	$MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
 }
 
 # fix for non-standard port in Australian mirror
