@@ -49,6 +49,7 @@ $MIRRORS = array(
    "http://sk.php.net/"               => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1, 0, "sk"),
 #   "http://th.php.net/"               => array("th", "", "", "", 1, 0, "th"),
    "http://tr.php.net/"               => array("tr", "Bilkent Sunsite", "sunsite", "http://sunsite.bilkent.edu.tr/", 1, 0, "tr"),
+#   "http://tr2.php.net/"              => array("tr", "proGEN Internet ve Bilisim Teknolojileri", "", "http://www.progen.com.tr/", 1, 1, "tr"),
 #   "http://tw.php.net/"               => array("tw", "DW", "", "http://www.dw.com.tw", 1, 0, "en"),
    "http://ua.php.net/"               => array("ua", "PACOnet", "paco", "http://www.paco.net.ua/", 1, 0, "ua"),
    "ftp://ua.php.net/"                => array("ua", "PACOnet", "paco", "http://www.paco.net.ua/", 0, 0, "ua"),
