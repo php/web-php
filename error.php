@@ -15,6 +15,7 @@
 // Ensure that our environment is set up
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 
 // Get URI for this request (without the leading slash, and
 // without any query string attached)
@@ -25,7 +26,7 @@ $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
-if (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) { make404(); }
+if (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) { error_404(); }
 
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
@@ -234,7 +235,7 @@ if ($try) {
 // ============================================================================
 // 404 page for manual pages (eg. not built language)
 if (strpos($URI, "manual/") === 0) {
-    manual404();
+    error_404_manual();
 }
 
 // ============================================================================
@@ -245,51 +246,5 @@ mirror_redirect(
     '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
-
-// A 'good looking' 404 error message page
-function make404()
-{
-    global $_SERVER;
-    status_header(404);
-    site_header('404 Not Found', array("noindex"));
-    echo "<h1>Not Found</h1>\n" .
-         "<p><strong>" . htmlspecialchars($_SERVER['REQUEST_URI']) .
-         "</strong> not found on this server.</p>\n";
-    site_footer();
-    exit;
-}
-
-// A 'good looking' 404 error message page for manual pages
-function manual404()
-{
-    global $_SERVER;
-    status_header(404);
-    site_header('404 Not Found', array("noindex"));
-    echo "<h1>Not Found</h1>\n" .
-         "<p>The manual page you are looking for (<strong>" .
-         htmlspecialchars($_SERVER['REQUEST_URI']) .
-         "</strong>) is not available on this server right now. " .
-         "Please check back later, or if the problem persist, " .
-         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
-    site_footer();
-    exit;
-}
-
-// Send out a proper status header
-function status_header($num)
-{
-    // Set status text
-    switch ($num) {
-        case 404: $status = "Not Found"; break;
-        case 200: $status = "OK"; break;
-        default: return FALSE;
-    }
-    
-    // BC code for PHP < 4.3.0
-    @header("HTTP/1.1 $num $status");
-    @header("Status: $num $status", TRUE, $num);
-    
-    return TRUE;
-}
 
 ?>

@@ -1,0 +1,66 @@
+<?php
+// $Id$
+
+/*
+  This script provides functions to print out
+  error messages for users in case something is
+  not available.
+*/
+
+// A 'good looking' 404 error message page
+function error_404()
+{
+    status_header(404);
+    site_header('404 Not Found', array("noindex"));
+    echo "<h1>Not Found</h1>\n" .
+         "<p><strong>" . htmlspecialchars($_SERVER['REQUEST_URI']) .
+         "</strong> not found on this server.</p>\n";
+    site_footer();
+    exit;
+}
+
+// A 'good looking' 404 error message page for manual pages
+function error_404_manual()
+{
+    status_header(404);
+    site_header('404 Not Found', array("noindex"));
+    echo "<h1>Not Found</h1>\n" .
+         "<p>The manual page you are looking for (<strong>" .
+         htmlspecialchars($_SERVER['REQUEST_URI']) .
+         "</strong>) is not available on this server right now. " .
+         "Please check back later, or if the problem persist, " .
+         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
+    site_footer();
+    exit;
+}
+
+// This service is not working right now
+function error_noservice()
+{
+    site_header('Service not working', array("noindex"));
+    echo "<h1>Service not working</h1>\n" .
+         "<p>The service you tried to access with the URL: <strong>" .
+         htmlspecialchars($_SERVER['REQUEST_URI']) .
+         "</strong> is not available on this server right now. " .
+         "Please check back later, or if the problem persist, " .
+         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
+    site_footer();
+    exit;
+}
+
+// Send out a proper status header
+function status_header($num)
+{
+    // Set status text
+    switch ($num) {
+        case 404: $status = "Not Found"; break;
+        case 200: $status = "OK"; break;
+        default: return FALSE;
+    }
+    
+    // BC code for PHP < 4.3.0
+    @header("HTTP/1.1 $num $status");
+    @header("Status: $num $status", TRUE, $num);
+    
+    return TRUE;
+}
