@@ -1,4 +1,30 @@
 <?
+function makeBar($no,$page,$matches,$pattern,$where) {
+	global $FONTFACE;
+	if ($page>1) {
+		$i=$page-1;
+		$last="<A HREF=\"$baseurl&page=$i\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A>";
+	} else {
+		$last="&nbsp;";
+	}
+	if ($page<$pages) {
+		$i=$page+1;
+		$next="<A HREF=\"$baseurl&page=$i\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A>";
+	} else {
+		$next="&nbsp;";
+	}
+	$middle="$matches documents match your search for '<B>$pattern</B>' in the $where\n";
+
+	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
+	echo "<TR VALIGN=middle>\n";
+	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "<TD ALIGN=left WIDTH=75>$last<BR></TD>\n";
+	echo "<TD ALIGN=center WIDTH=100%><FONT FACE='$FONTFACE' SIZE=-1>$middle<BR></TD>\n";
+	echo "<TD ALIGN=left WIDTH=75>$next<BR></TD>\n";
+	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "</TR></TABLE><BR>\n";
+};
+
 /* Cookie stuff has to come before the first header */
 if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) { 
 	if ($prevpattern) {
@@ -19,8 +45,7 @@ if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) {
 
 }
 require("shared.inc");
-include "configuration.inc";
-commonHeader("Site Search");
+include("configuration.inc");
 
 if ($HAVE_SEARCH) {
 	$form=$PHP_SELF;
@@ -28,22 +53,23 @@ if ($HAVE_SEARCH) {
 	$form="http://uk.php.net/newsearch.php3";
 }
 if(!isset($pattern)) { 
+	commonHeader("Site Search");
 	if (!isset($prevsearch)) {
 		$prevsearch[0]="";
 	}
 	?>
-	<h1 align=center>PHP3 Site Search</h1>
 	<form action="<?echo $form;?>" METHOD=POST>
 	<CENTER>
 	<TABLE CELLSPACING=0 CELLPADDING=2>
-	<TR BGCOLOR=#CCCCCC>
-		<TD VALIGN=TOP ALIGN=RIGHT>
-	 	  <FONT FACE="TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif">
+	<TR VALIGN=top>
+		<TD ALIGN=RIGHT>
+	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  Search for: 
 		  </FONT>
 		</TD><TD>
-	 	  <FONT FACE="TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif">
+	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  <input type="text" name="pattern" value="<?echo $prevsearch[0];?>" size=30>
+		  <INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
 		  <input type="submit" value=" Search "><BR>
 		  <? if ($prevsearch[0]) { ?>
 		      <SELECT NAME="prevpattern">
@@ -60,13 +86,13 @@ if(!isset($pattern)) {
 		<?}?>
 		  </FONT>
 		</TD>
-	</TR><TR BGCOLOR=#AAAAAA>
-		<TD VALIGN=TOP ALIGN=RIGHT>
-	 	  <FONT FACE="TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif">
+	</TR><TR VALIGN=top>
+		<TD ALIGN=RIGHT>
+	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  Restrict the search to:
 		  </FONT>
 		</TD><TD>
-	 	  <FONT FACE="TAHOMA, ARIAL, GENEVA, HELVETICA, sans-serif">
+	 	  <FONT FACE="<? echo $FONTFACE;?>">
 		  <INPUT TYPE="RADIO" NAME="show" VALUE="nosource" CHECKED>Whole site<BR>
 		  <INPUT TYPE="RADIO" NAME="show" VALUE="manual">Online documentation<BR>
 		  <INPUT TYPE="RADIO" NAME="show" VALUE="source">Site PHP3 source code<BR>
@@ -77,7 +103,7 @@ if(!isset($pattern)) {
 	</CENTER>
 	</form>
 <? } else {
-		echo "<CENTER><FONT SIZE=+2><B>Search Results</B></FONT></CENTER>\n";
+	commonHeader("Search Results");
 		if (!isset($base)) {
 			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
 				$base=$reg[1];
@@ -136,25 +162,9 @@ if(!isset($pattern)) {
 		$page=$result[5];
 		$pages=$result[6];
 		$baseurl=$PHP_SELF."?pattern=$words&show=$show&base=$base";
-		if ($page>1) {
-			$i=$page-1;
-			$last="<A HREF=\"$baseurl&page=$i\">Last Page</A>";
-		} else {
-			$last="<STRIKE>Last Page</STRIKE>";
-		}
-		if ($page<$pages) {
-			$i=$page+1;
-			$next="<A HREF=\"$baseurl&page=$i\">Next Page</A>";
-		} else {
-			$next="<STRIKE>Next Page</STRIKE>";
-		}
-		echo "<CENTER>$matches documents match your search for '<B>$pattern</B>' in the $where</CENTER><BR><BR>\n";
 
-		$bar= "<TABLE BORDER=0 BGCOLOR=#EEEEEE WIDTH=95% CELLPADDING=0 CELLSPACING=0><TR><TD>$last</TD><TD>";
-		$bar.= "<CENTER><B>Displaying results $firstdisplayed to $lastdisplayed</B></CENTER>";
-		$bar.= "</TD><TD ALIGN=RIGHT>$next</TD></TR></TABLE><BR>\n";
+		makeBar(1,$page,$matches,$pattern,$where);
 
-		echo $bar;
 		$i=7; #skip response header
 		echo "<TABLE BORDER=0><TR><TD>\n";
 		while($i<$rc) {
@@ -167,7 +177,9 @@ if(!isset($pattern)) {
 			$i++;
 		}
 		echo "</TD></TR></TABLE><BR>\n";
-		echo $bar;
+
+		makeBar(2,$page,$matches,$pattern,$where);
+
 		?>
 		<CENTER>
 		<BR><I>Search results courtesy of</I><BR>
