@@ -352,7 +352,7 @@ by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7El
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216"
-><IMG SRC="/jpgs/8585184698.jpg" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/jpgs/fischer.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">PHP Guia de Consulta R&aacute;pida</A><BR>
