@@ -62,6 +62,8 @@ $MURLS = array_keys($MIRRORS);
 foreach ($MURLS as $murl) {
 
     // If the mirror is not all right, skip it
+    // Virtual mirrors *are listed* here, because local unofficial
+    // mirrors can be used in this way for download.
     if (mirror_status($murl) != MIRROR_OK) { continue; }
 
     // Get country code, print out a

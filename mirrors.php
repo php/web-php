@@ -47,8 +47,8 @@ $prevcc = 'aa';
 $MURLS = array_keys($MIRRORS);
 foreach ($MURLS as $murl) {
 
-    // If the mirror is not all right, skip it
-    if (mirror_status($murl) != MIRROR_OK) { continue; }
+    // If the mirror is not all right or it is virtual (not an official mirror), skip it
+    if (mirror_status($murl) != MIRROR_OK || mirror_type($murl) == MIRROR_VIRTUAL) { continue; }
 
     // Print out table row, color it specially if current mirror
     echo '<tr bgcolor="' . ($MYSITE == $murl ? '#ffffcc' : '#e0e0e0') . '"><td>';
