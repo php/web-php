@@ -47,7 +47,17 @@ on our <a href="news://news.php.net">news server</a>. The archives
 are searchable. There is an experimental web interface for the news
 server at <a href="http://news.php.net/">http://news.php.net/</a>.
 </p>
-
+<p>
+<b>Note:</b> When posting to mailing lists, please keep the following in mind:
+<ul>
+<li> Send plain ascii messages, no HTML-formatted emails please.</li>
+<li> Turn on wordwrapping so your entire message doesn't show up on a single line.</li>
+<li> No attachments please, just post a URL if you want someone to look at something.</li>
+<li> Don't gpg/pgp sign your messages.  If you want people to be able to send you encrypted email, stick your key-locator in your .sig</li>
+<li> Don't hijack other peoples' threads.  To post on a new topic, start a new message, don't reply and just change the subject.</li>
+<li> Check the archives before posting a question, chances are it has already been asked and answered a few times.</li>
+</ul>
+</p>
 <?php
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
