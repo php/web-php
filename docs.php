@@ -10,7 +10,7 @@ information and those questions that seem to be on most people\'s minds.
 
 <h3>More Information</h3>
 <p>
-The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>.
+The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>
 has an overview about which pages are translated to the
 different languages and in which versions of PHP the functions
 are available.<br><br>
