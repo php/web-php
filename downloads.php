@@ -69,11 +69,11 @@ $server = $SERVER_NAME;
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link('php-4.2.3.tar.bz2','PHP 4.2.3 (tar.bz2)'); ?> - 6 September 2002<br />
-  <span class="md5sum">md5: a0c7531f3d53a7736742c780f72a0f41</span>
+  <li><?php download_link('php-4.3.0.tar.bz2','PHP 4.3.0 (tar.bz2)'); ?> - 27 December 2002<br />
+  <span class="md5sum">md5: 6a3e1ad25cc912816c1f958cd4507767</span>
   </li>
-  <li><?php download_link('php-4.2.3.tar.gz', 'PHP 4.2.3 (tar.gz)');  ?> - 6 September 2002<br />
-  <span class="md5sum">md5: 2a4a963d79d97ea2725c860c77e908a2</span>
+  <li><?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
+  <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
   </li>
 </ul>
 
@@ -93,20 +93,18 @@ $server = $SERVER_NAME;
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link('php-4.2.3-Win32.zip', 'PHP 4.2.3 zip package'); ?> - 6 September 2002<br />
+  <li><?php download_link('php-4.3.0-Win32.zip', 'PHP 4.3.0 zip package'); ?> - 27 December 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)<br />
-  <span class="md5sum">md5: cc65371d6f6252bb7fecc979fd4cf60e</span>
+  <span class="md5sum">md5: 62c2158250d1681b983149b2074df482</span>
   </li>
-
-  <li><?php download_link('php-4.2.3-installer.exe', 'PHP 4.2.3 installer'); ?> - 6 September 2002<br />
-  (CGI only, MySQL support built-in, packaged as Windows installer to install and
-  configure PHP, and automatically configure IIS, PWS and Xitami, with manual
-  configuration for other servers. N.B. no external extensions included)<br />
-  <span class="md5sum">md5: d872eaad5ae1c0b333f1b8b342e83807</span>
+  <li><?php download_link('php-4.3.0-installer.exe', 'PHP 4.3.0 installer'); ?> - 27 December 2002<br />
+   (CGI only, MySQL support built-in, packaged as Windows installer to install
+	and configure PHP, and automatically configure IIS, PWS and Xitami, with
+	manual configuration for other servers. N.B. no external extensions
+	included)<br />
+  <span class="md5sum">md5: a64138b56c49df8a2b4ff099a6ee0611</span>
   </li>
-
-<?php /*  <li>Win32 binaries will be posted soon!</li> */ ?>
 </ul>
 
 <h2>File Uploads Security Fix</h2>
@@ -159,13 +157,13 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
-  <li>PHP 4.2.2
+  <li>PHP 4.2.3
     <ul>
-      <li><?php download_link("php-4.2.2.tar.gz", "Source Code"); ?><br />
-      <span class="md5sum">md5: 2c3c803152878c799cdf551d56bd142b</span>
+      <li><?php download_link("php-4.2.3.tar.gz", "Source Code"); ?><br />
+      <span class="md5sum">md5: 2a4a963d79d97ea2725c860c77e908a2</span>
       </li>
-      <li><?php download_link("php-4.2.2-Win32.zip", "Windows Binary (zip)"); ?><br />
-      <span class="md5sum">md5: aae616caf02c9d7af930c605f616e86a</span>
+      <li><?php download_link("php-4.2.3-Win32.zip", "Windows Binary (zip)"); ?><br />
+      <span class="md5sum">md5: cc65371d6f6252bb7fecc979fd4cf60e</span>
       </li>
     </ul>
   </li>

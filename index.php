@@ -192,14 +192,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<h1>PHP 4.3.0RC4 Released</h1>
+<h1>PHP 4.3.0 Released!</h1>
 <p>
-<font class="newsdate">[20-Dec-2002]</font>
-Despite our best efforts, it was necessary to make one more release candidate,
-hence <a href="http://qa.php.net/">PHP 4.3.0RC4</a>. This one mainly corrects
-the CGI vs CLI SAPI naming and fixes a couple of bugs. It is supposed to have a
-short testing cycle, after which the final version will be put out, hopefully
-before the end of the year.
+<font class="newsdate">[27-Dec-2002]</font>
+The PHP developers are pleased to announce the immediate availability of
+<a href="downloads.php">PHP 4.3.0</a>, the latest and greatest version of this
+extremely popular and widely used scripting language.
+</p>
+
+<p>
+This release contains a multitude of changes, bug fixes and improvements over
+the previous one, PHP 4.2.3. It further elevates PHP's standing as a serious
+contender in the general purpose scripting language arena. Please see
+the full <a href="ChangeLog-4.php">release announcement</a>.
 </p>
 
 <?php echo hdelim(); ?>

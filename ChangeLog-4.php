@@ -5,6 +5,520 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.3.0"></a>
+<h3>Version 4.3.0</h3>
+<b>27-Dec-2002</b>
+<ul>
+<li>If you don't specify building any other SAPI "make install" will install the
+  CGI SAPI binary in {PREFIX}/bin/php. If you want to install CLI SAPI in that
+  location use "make install-cli" after "make install" or add --disable-cgi
+  to your configure options. In the Windows distribution CLI SAPI is included
+  in the "cli" folder. (Edin)</li>
+<li>Removed extensions: (Jan, Jani, Sebastian)
+  <ul>
+  <li>ext/aspell</li>
+  <li>ext/ccvs</li>
+  <li>ext/cybercash</li>
+  <li>ext/icap</li>
+  <li>sapi/fastcgi</li>
+  <li>sapi/fhttpd</li>
+  </ul>
+</li>
+<li>Moved extensions to PECL (http://pear.php.net/): (James, Derick)
+  <ul>
+  <li>ext/vpopmail</li>
+  <li>ext/cybermut</li>
+  </ul>
+</li>
+<li>Make PHP_AUTH_* variables not available in safe mode under Apache when an
+  external basic auth mechanism is used. (Philip)</li>
+<li>Aliased dba_popen() to dba_open() until 4.3.1 when persistent STDIO streams
+  are introduced. (Andrei)</li>
+<li>Fixed a security bug in the bundled MySQL library. (Georg, Stefan)</li>
+<li>ZLIB extension is now built-in in the Windows distribution.
+  External extension (php_zlib.dll) has been removed. (Edin)</li>
+<li>Fixed a bug in ISO-8601 week calculation</li>
+<li>Fixed a crash when using invalid color index with imagecolortransparent()
+  (Pierre-Alain Joye).</li>
+<li>Fixed bug #20987 (no handling for client certificates). (Ilia)</li>
+<li>Fixed bug #21039 (crash when not supplying an IV to mcrypt_generic_init).
+  (Derick)</li>
+<li>Fixed bug #20936 (openssl_pkey_get was broken). (jeroen@derks.it, Wez)</li>
+<li>Fixed bug #20927 (wordwrap crash). (Ilia)</li>
+<li>Fixed bug #20796 (when register_globals is on &amp; arrays with same names are
+  passed via get/post/cookie the data inside $_GET/$_POST/$_COOKIE can would be
+  corrupted). (Ilia)</li>
+<li>Fixed bug #20725 (if the upload directory cannot be written to, the POST data
+  after the uploaded file is lost). (Ilia)</li>
+<li>Fixed bug #20865 (array_key_exists() fails to find NULL key). (Ilia)</li>
+<li>Fixed bug #20812 (ftp_get returned NULL on success, instead of TRUE). (Ilia)</li>
+<li>Fixed bug #20785 (crash when using pdf_open_memory_image() to load a
+  true-color image). (Ilia)</li>
+<li>Fixed a crash when converting between true-color images (png/jpeg) and
+  gd1/gd2 image formats, png/jpeg -> gd1/gd2 -> png/jpeg conversion now
+  works correctly. (Ilia, Pierre-Alain Joye).</li>
+<li>Fixed a memory leak in the bundled GD library inside 
+  gdImageTrueColorToPalette(). (Ilia)</li>
+<li>Fixed bug #12776 (array_walk crash). (Moriyoshi)</li>
+<li>Fixed bug #20934 (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
+<li>Fixed bugs #20270, #15702, #18600 (segfaults in ext/java). (Tony J. White)</li>
+<li>Made bcmath extension thread safe. (Sander)</li>
+<li>Fixed bug #19566 (get_declared_classes() segfaults). (Moriyoshi, Marcus, Andi)</li>
+<li>Fixed bug #20381 (array_merge_recursive mangles input arrays). (Moriyoshi)</li>
+<li>Added -n command switch to cli and cgi version which allows to skip php.ini
+  parsing at startup. (Marcus, Wez)</li>
+<li>Fixed bug #19689 (absolute paths like /test/dir/ not working correctly).
+  (Ilia)</li>
+<li>Added "neutral" language entry to mbstring spec. (Moriyoshi)</li>
+<li>Changed bundled gd library to consider php.ini option memory_limit. (Marcus)</li>
+<li>Modified log() to accept multiple bases. (Jason)</li>
+<li>Fixed bugs #16190/18746 (ext/db: flatfile support with windows). (Marcus)</li>
+<li>Added gd_info() which returns an array of gd support information. (Marcus)</li>
+<li>Implemented features/changes requested in Bug #16960 (Timm):
+  <ul>
+  <li>Added a new function sybase_unbuffered_query()</li>
+  <li>Added a new function sybase_fetch_assoc()</li>
+  <li>Added sybase_set_message_handler() which enables users to handle
+    server messages in a callback function</li>
+  <li>Added an ini entry for deadlock retries - retrying deadlocks can cause
+    transaction state to break (sybct.deadlock_retry_count,
+    defaults to -1 "forever").</li>
+  <li>Fixed sybase_fetch_object() not to return objects with numeric members</li>
+  <li>Fixed issues with identical fieldnames</li>
+  <li>Made sybase_fetch_*() functions return correct datatypes</li>
+  <li>Made phpinfo() section more verbose</li>
+  <li>Made sybase_query() error messages more verbose</li>
+  </ul>
+</li>
+<li>Fixed bug #19935 (made OpenSSL file system operations abide by safe_mode
+  &amp; open_basedir restrictions). (Ilia)</li>
+<li>Fixed bug #18868 (improved the check for availability of realpath()). (Ilia)</li>
+<li>Fixed width/height detection of bmp images using getimagesize() function on
+  big endian systems and added code to retrieve bmp bit depth. (Ilia)</li>
+<li>Fixed bug #20035 (line counting error when script starts with #! in 
+  cgi/cli/fastcgi sapis). (Ilia)</li>
+<li>Fixed bug #20235 (incorrect handling of symlinks on ZTS build). (Ilia)</li>
+<li>Added sanity checks to headers_sent() &amp; image_type_to_mime_type(). (Ilia)</li>
+<li>Added an aditional parameter to the jdtojewish() function which makes
+  the function return the symbolic hebrew name. (Moshe Doron, Derick)</li>
+<li>Fixed bug #20169 (implode() clobbers first argument). (Moriyoshi)</li>
+<li>Improved dba extension (Marcus)
+  <ul>
+  <li>Added dba_handlers() that returns an array of installed handlers and
+    dba_list() that returns an associative array of open database files. </li>
+  <li>Added bundled cdb support wich can be activated by --with-cdb without a
+    path. The bundled version supports cdb_make that allows writing cdb files.</li>
+  <li>Added optional skip parameter to dba_fetch() to support multiple key-value
+    pairs with the same key for cdb handler.</li>
+  <li>Added locking for those handlers that do not have their own locking.</li>
+  <li>Added support for magic_quotes_runtime php.ini option.</li>
+  <li>Added flatfile support what finally makes ext/db deprecated.</li>
+  </ul>
+</li>
+<li>Added imagerotate() which is available only when bundled libgd is used.
+  (Pierre-Alain Joye, Ilia)</li>
+<li>Fixed bug #17497 (mssql extension crashes if magic_quotes_runtime is on).
+  (Sterling)</li>
+<li>Remove $_FILES from $_REQUEST (import_request_variables is not modified), 
+  this didn't work properly in the first place, and added confusion. (Sterling)</li>
+<li>Fix the socket_read() function on win32 to work in normal mode (reading to
+  the end of a line), as well as binary mode. (Sterling)</li>
+<li>Fixed bug #20110 (added sanity check to prevent include/require functions
+  from trying to include directories). (Ilia)</li>
+<li>Fixed bug #20108 (segmentation fault on printf("%1.1s", "string")). (Ilia)</li>
+<li>Added dbx_escape_string() function to dbx module. (Marc)</li>
+<li>Added Oracle (oci8) support to dbx module. (Marc)</li>
+<li>Updated FDF extension to work with Adode fdftk 5.0. (Hartmut)</li>
+<li>Added mb_strtolower() and mb_strtoupper(). (Moriyoshi)</li>
+<li>Fixed an infinite loop in setlocale() when only invalid locale names
+  were passed in the array. (patch by Pal Loberg, pallo@initio.no)</li>
+<li>Fixed bugs #19156 and #19544 (COM extension leaks memory and keeps
+  components referenced). (Harald)</li>
+<li>Added fribidi_get_charsets() and fribidi_charset_info() functions. (Tal)</li>
+<li>Added Oracle TIMESTAMP type to oci8 extension. (Thies)</li>
+<li>Fixed fgets($fp) to read until EOL when length parameter is not set. (Wez)</li>
+<li>Changed registry entries under "HKLM\SOFTWARE\PHP\Per Directory Values" to
+  work also with administrative directives such as safe_mode, open_basedir,
+  etc. (Claudio Felber)</li>
+<li>Added str_word_count() function which counts words inside a string. (Ilia)</li>
+<li>Added PGSQL_CONNECT_FORCE_NEW option to pg_connect() (Yasuo)</li>
+<li>Added ICONV_IMPL and ICONV_VERSION constants to iconv extension to
+  indicate which iconv implementation is used. (Moriyoshi)</li>
+<li>Fixed bug #4232 (Added %e &amp; %E support to printf/sprintf). (Ilia)</li>
+<li>Fixed bug #17580 (Allow ini parser to parse files &gt;16K). (Ilia)</li>
+<li>Fixed bug #19649 (Sanity checks for browscap.ini parser). (Ilia)</li>
+<li>Added experimental patch to address problem with floats on various locales.
+  (Bug #17079). (Ilia)</li>
+<li>Fixed bug #19280 (imap_header fails with many To: addresses). (Ilia)</li>
+<li>Added mb_regex_set_options(). The Options parameters of various mbregex
+  functions are now deprecated. (Moriyoshi)</li>
+<li>Fixed bug #19482 (Segfault with PCRE and locale). (Andrei)</li>
+<li>Made ImageTruecolorToPalette() in bundled GD2 library actually work. (Rasmus)</li>
+<li>Fixed ImageCopy() in bundled GD2 library to handle copying from truecolor to
+  palette-based. (Wez, Rasmus)</li>
+<li>Added read-only GIF support for bundled GD2 library. (Rasmus)</li>
+<li>Made several adjustments to xslt extension (David Viner, Lehnar, Melvyn)
+  <ul>
+  <li>Added xslt_set_object and xslt_setopt function</li>
+  <li>Changed backend interaction with Sablotron library</li>
+  <li>Fixed leak with error_print</li>
+  <li>Made xslt_make_array() always set NULL on last index to signal array end.</li>
+  </ul>
+</li>
+<li>Changed the glue argument in implode() to be optional. If not specified,
+  defaults to "". (Sterling)</li>
+<li>Fixed fields argument to contain correct info for xslt_set_error_handler().
+  (Patch by Lenar Lohmus)</li>
+<li>Added --with-config-file-scan-dir compile-time switch which specifies a
+  directory which will be scanned for *.ini files. (Rasmus)</li>
+<li>Added ob_get_clean() and ob_get_flush(). (Yasuo)</li>
+<li>Added ftp_ssl_connect() to ext/ftp for FTP over SSL support. (Stefan Esser)</li>
+<li>Made a few additions and changes to Apache 2 sapi. (Ilia)
+  <ul>
+  <li>Added apache_response_headers(), apache_note(), apache_getenv() and
+    apache_setenv() functions.</li>
+  <li>Added more detailed error reporting to apache_lookup_uri() and virtual().</li>
+  <li>Renamed getallheaders() to apache_request_headers() and made an alias for BC.</li>
+  <li>Added php_apache_sapi_getenv() and php_apache_sapi_get_stat().</li>
+  <li>Added syntax-highlighting handling (.phps)</li></li>
+  </ul>
+</li>
+<li>Fixed strstr(), strchr() and strrchr() to be binary safe. (Andrey)</li>
+<li>Added array_diff_assoc() and array_intersect_assoc(). (Andrey)</li>
+<li>Fixed bug #17825 (ob_start() chunk size option didn't work well). (Yasuo)</li>
+<li>Fixed output buffer infinite loop when buffer_size became 0. (Marcus, Wez)</li>
+<li>Added getopt() for parsing command line options and arguments. (Jon)</li>
+<li>Added pg_fetch_assoc(), pg_fetch_all(), pg_ping(), pg_meta_data(), pg_convert(), 
+  pg_insert(), pg_select(), pg_update(), pg_delete(), pg_result_seek(),
+  pg_unescape_bytea(), pg_get_notify() and pg_get_pid(). (Yasuo)</li>
+<li>Fixed bug #17281 (Sanity checks for encoding sessions). (Ilia)</li>
+<li>Fixed bug #16995 and #19392 (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
+  (Ilia)</li>
+<li>Fixed bug #19292 (open_basedir restriction problem). (Rasmus)</li>
+<li>Fixed bug #19366 (gdImageFill crashes when x &amp; y are outside of 
+  the image's boundries). (Ilia)</li>
+<li>Fixed bug #13936 (__FILE__ constant didn't contain full path). (Ilia)</li>
+<li>PHP now has a new stream system that allows it to do some clever stuff with
+  fopen() and fsockopen().  As a result:
+  <ul>
+  <li>URL wrappers natively supports https:// URLs if you have compiled
+    OpenSSL support into PHP (shared extension does not support this).</li>
+  <li>Added support for fopen("ftps://...", ...) which allows to connect to FTP 
+    servers via SSL. (Stefan Esser)</li>
+  <li>fsockopen() adds support for ssl:// and tls:// connections via TCP/IP</li>
+  <li>copy($srcfilename, $destfilename) can now be used with URL wrappers</li>
+  <li>zlib wrappers/streams can be used even on systems without
+  fopencookie()</li>
+  <li>Changed 'zlib:' fopen wrapper to 'compress.zlib://' and deprecate
+    'zlib:' to avoid ambiguities when filenames have ':' characters. (Wez)</li>
+  <li>Added 'compress.bzip2://' stream and wrapper support.</li>
+  <li>Added user-space streams - it is now possible to define a class in PHP
+    code and register it as a URL wrapper. (stream_register_wrapper)</li>
+  <li>Most extensions now support streams when passing files, which means
+    that those extensions will now also support URL wrappers. (Wez)</li>
+  <li>Added URL-wrapper support to exif. (Marcus)</li>
+  <li>Added memory stream support. (Marcus)</li>
+  <li>Renamed:
+    <ul>
+      <li>socket_set_timeout()  -&lt; stream_set_timeout()</li>
+      <li>socket_set_blocking() -&lt; stream_set_blocking()</li>
+      <li>set_file_buffer()     -&lt; stream_set_write_buffer()</li>
+      <li>socket_get_status()   -&lt; stream_get_meta_data()</li>
+	</ul>
+    As these functions can (in theory) work on any type of stream. (Wez)</li>
+  <li>Raw POST data is now available as "php://input" stream. (Hartmut)</li>
+  <li>fopen("php://output", "wb") returns a stream that writes to the output
+    buffer (like echo and print). (Wez)</li>
+  <li>Added stream_context_create(), stream_context_set_params() and
+    stream_context_set_option and added an optional fourth parameter to
+    fopen() which accepts a stream context.  Contexts allow sharing of
+    information between streams (a kind of "session") and setting
+	notification callbacks. (Wez)</li>
+  <li>Made the "User-Agent" header sent by http:// and https:// wrappers
+	configurable in php.ini or via a stream context. (Sterling)</li>
+  <li>Added stream_filter_prepend() and stream_filter_append() which apply
+    a filter to either the top or the bottom of a stream filter stack.
+    Implemented "string.rot13" filter as an example; more filters are
+	expected to follow in later releases and other extensions. (Wez)</li>
+  <li>Added stream_select() which works like socket_select but works on
+    streams returned by fopen(), fsockopen() and pfsockopen() instead.
+	(Wez)</li>
+  <li>Added STDIN, STDOUT and STDERR constants for CLI sapi reflecting opened
+    streams to their respective standard I/O counterparts. (Edin)</li>
+  <li>Added php.ini option "auto_detect_line_endings" which enables PHP to
+    detect Macintosh, Unix and Dos end-of-line characters in fgets() and
+	file(). Fixes bugs #16521 and #16708. (Wez)</li>
+  <li>Fixed include(), require() and GD functions to work with remote files
+    under win32.</li>
+  <li>Fixed bug #18609 (ImageCreateFromJPEG can't fetch from a URL). (Wez)</li>
+  </ul>
+</li>
+<li>Fixed bug #18022 (fopen does not work with php://stdin anymore on Solaris).
+  (Wez)</li>
+<li>Added php.ini option "default_socket_timeout" to set the timeout limit for 
+  PHP network streams. (kalowsky, ilia@prohost.org, Wez)</li>
+<li>Added file_get_contents() which returns the contents of a file as a string. 
+  This function also supports the URL wrappers. (Wez)</li>
+<li>Fixed bug #19595 (Missing functions for GD2 format handling). (Edin)</li>
+<li>Fixed bug #19633 (Wrong directories in ext/ldap/config.m4). (Derick)</li>
+<li>Fixed bugs #17274 and #19627 (segfault in sem_remove). (Wez)</li>
+<li>Added mb_convert_case() function to the mbstring extension which can convert
+  strings between upper, lower and title case using Unicode mappings.
+  Fixed bug #19257 (strtolower &amp; strtoupper does not work for UTF-8 strings).
+  (Wez)</li>
+<li>Fixed bug #18521 (htmlentities didn't warn about unsupported charsets). (Wez)</li>
+<li>Fixed bug #11643 (Session related, fix SID redefinition). (Ilia)</li>
+<li>Fixed bug #18556 (Scripting Engine, problem with locales like tr_TR). (Ilia)</li>
+<li>Changed y2k_compliance to default to 1 now. (Sascha)</li>
+<li>Added platform independent socket error constants for better error handling. (Jason)</li>
+<li>Update output of phpinfo() to use more CSS to reduce the file size, do
+  proper HTML escaping, and make it XHTML compliant. (Colin)</li>
+<li>Fixed compile errors in the FriBidi extension (Bug #16414). (Tal)</li>
+<li>Fixed bugs #7472, #12120 and #12989 as well as other potential problems
+  with strip_tags() function. (Ilia)</li>
+<li>Fixed bugs #17570 and #17957 (Regexps related). (Andrei, Ilia)</li>
+<li>Fixed bugs #18167 and #16859 (SEGV with session_decode). (Ilia)</li>
+<li>Fixed bugs #19573 and #13472 (Session, XHTML compliance and trans_sid). 
+  (Sascha)</li>
+<li>Fixed bug #19570 (last character was missing in get_html_translation_table). 
+  (Wez)</li>
+<li>Upgraded PCRE to version 3.9. (Wez)</li>
+<li>Fixed bug in OCIResult() which returned garbage when called on 
+  empty result-sets. (Thies)</li>
+<li>Added ability to use Perl-style ${n} subpattern references in the
+  replacement string for preg_replace() (bug #18442). (Andrei)</li>
+<li>Fixed array_merge_recursive() to avoid problems with merging cyclical
+  arrays (bug #16064). (Andrei)</li>
+<li>Made function_exists() work properly with disabled functions. (Andrei)</li>
+<li>Added ability to extract() variables as references via OR'able EXTR_REFS
+  flag. (Andrei)</li>
+<li>Fixed a build failure with the OCI8 extension on Tru64.
+  (Patch by Michael Mauch, micahel.mauch@gmx.de)</li>
+<li>Added --disable-all configure option. (Jani)</li>
+<li>Backported debug_backtrace() from ZendEngine2. (Thies)</li>
+<li>Added html-free phpinfo() output for CLI. (Jan)</li>
+<li>Fixed socket_recvfrom() to be binary safe. (Jason)</li>
+<li>Changed mail() to use escape_shell_cmd() to allow multiple extra parameters 
+  to the invocation of the mailer as used in the fifth parameter. (Derick)</li>
+<li>Changed cURL extension to require cURL version 7.9.8 (Derick)</li>
+<li>Added zend_execute_internal which is called like zend_execute but for
+  internal functions. (Thies)</li>
+<li>Changed pg_connection_status(), pg_connection_reset(), pg_connection_busy(),
+  pg_result_status() and pg_result_error() to silently return FALSE when 
+  resource is not passed to them. (Yasuo)</li>
+<li>Fixed some mysql compile failures on 64 bit-OS. (Georg)</li>
+<li>Added warnings for deprecated mysql functions:
+  <ul>
+  <li>mysql_create_db() </li>
+  <li>mysql_drop_db() </li>
+  <li>mysql_escape_string()</li>
+  </ul>
+</li>
+<li>Added XsltObject-&lt;result_dump_mem($result) for returning xslt-result directly
+  into a string and XsltObject-&lt;result_dump_file($result,$file[,$compression]) 
+  for dumping into a file. (morus.walter@web.de, chregu)</li>
+<li>Made mime_magic and ZIP extensions available on Windows. (Edin)</li>
+<li>Added xslt_backend_version() and xslt_backend_name() for getting
+  information about the processor backend. (chregu)</li>
+<li>Added php.ini option "allow_webdav_methods" to allow handling of
+  WebDAV http requests within PHP scripts. (chregu)</li>
+<li>Added ImageColorMatch() and ImageLayerEffect() functions which are only 
+  available when using the bundled GD library. (ttoohey)</li>
+<li>Made major improvents to the pcntl extension. (Jason)
+  <ul>
+  <li>Greatly improved performance (signal callback mechanism uses ticks)</li>
+  <li>Implemented object signal callback ability by using array($obj, $method)</li>
+  <li>Added a restart parameter to pcntl_signal, which allows you to disable
+    the default of system call restarting</li>
+  </ul>
+</li>
+<li>Changed DomNode-&gt;next_sibling() and DomNode-&gt;previous_sibling() to return
+  NULL instead of false (W3C specs). (chregu)</li>
+<li>Changed DomNode-&gt;insert_before() and DomNode-&gt;append_child() to conform to
+  W3C specs (moving not copying nodes, accepting NULL as 2nd param). (chregu)</li>
+<li>Added DomNode-&gt;set_namespace(uri[,prefix]) (chregu)</li>
+<li>Fixed shuffle() to properly generate all possibilities. (Patch provided by
+  Adam <adam@trachtenberg.com>)</li>
+<li>Fixed DomNode-&gt;insert_before() to behave according to W3C spec
+  ie. new_child is moved, not copied. (chregu)</li>
+<li>Added some namespace support with DomNode-&gt;add_namespace(uri, prefix)
+  and DomDocument-&gt;create_element_ns(uri, nodename) (chregu)</li>
+<li>Added optional parameter to DomElement-&gt;node_name() for retrieving fully 
+  qualified name (ie. namespace prefix). (chregu)</li>
+<li>Changed DomNode-&gt;child_nodes() to return empty array instead of false if no
+  child nodes are found. (chregu)</li>
+<li>Fixed a bug with handling the Expect header. (Patch by ilia@prohost.org)</li>
+<li>Fixed a bug in ODBC where closing the module caused a crash in the Windows 
+  executable. (kalowsky)</li>
+<li>Fixed memory leaks in pack() and unpack(). (Patch by ilia@prohost.org)</li>
+<li>Added URLs to error messages which direct to a page describing the error or 
+  function in question. (Derick, Wez, Marcus)</li>
+<li>Added odbc_data_source() functionality to identify DB ServerName, and a 
+  description of it gathered from the DSN. (kalowsky)</li>
+<li>Fixed copy() to return TRUE with 0 byte files. (Patch by ilia@prohost.org)</li>
+<li>Added ob_list_handlers() which returns an array of all active output
+  handlers. (Marcus)</li>
+<li>Added mbstring encoding/decoding "HTML-ENTITIES". (Marcus)</li>
+<li>Added parameter 'L' for mb_http_input() to retrieve input encoding as a
+  comma separated string. (Marcus)</li>
+<li>Added the ability for declare() compiler modifications to occur globally
+  by using an empty statement. (Jason, Zend Engine)
+  i.e.  
+  <pre>
+        //Globally enables the ticks modifier for the whole program
+        declare (ticks=1);
+
+        //Enables the ticks modifier for just the lexical block containing
+        //"statement".
+        declare (ticks=1) {
+           statement;
+        }
+  </pre>
+</li>
+<li>Brought strtotime() "next" keyword handling in line with documentation and
+  its glibc cousin. (Rasmus)</li>
+<li>Fixed str_rot13() to not mangle source string. (Rasmus)</li>
+<li>Fixed imap_get_quota() to work with multiple returned resources as per
+  the RFC 2087 and bug #14673. (kalowsky, Sander Steffann)</li>
+<li>Added MarkerNote decoding to exif_read_data() for several Cameras. (Marcus)</li>
+<li>Disabled zlib.output_compression for "image/" content-type
+  headers which can be changed during script execution. (Stefan)</li>
+<li>Added new asynchronous FTP functions. (Stefan)</li>
+<li>Added optional 5th parameter to FTP functions to support resuming. (Stefan)</li>
+<li>Added optional 2nd parameter to print_r() to make it return the variable
+  representation instead of echoing it. (Derick)</li>
+<li>Added mysql_ping(), mysql_real_escape_string(), mysql_character_set_name(), 
+  mysql_thread_id(), mysql_stat() and mysql_list_processes(). (Zak, Georg)</li>
+<li>Added safe_mode &amp; open_basedir checks for pg_lo_export(). (Yasuo)</li>
+<li>Added open_basedir check for pg_lo_import(). (Yasuo)</li>
+<li>Fixed infinite recursion crash bug in ticks. (Jason)</li>
+<li>Added php.ini option "mysql.connect_timeout" to set the timeout limit for 
+  mysql_connect() and mysql_pconnect(). (Georg)</li>
+<li>Added optional parameter "flags" to mysql_connect() and mysql_pconnect() 
+  which can be used to set usage of idle timeout and different protocols,
+  SSL and compressed. (Georg)</li>
+<li>Added automatic rollback to ext/mysql for non committed transactions. (Georg)</li>
+<li>Fixed cases where preg_split() incorrectly terminated final element if it 
+  contained null bytes. (Andrei)</li>
+<li>Added persistent connections/pipelining to thttpd. (Sascha)</li>
+<li>Fixed two potential blocking issues in thttpd. (Sascha)</li>
+<li>Fixed broken header file detection on Solaris. (Sascha)</li>
+<li>Improved nss/socket-related symbol/library detection. (Jani, Sascha)</li>
+<li>Made iconv() work well with both libiconv and libgconv. (Moriyoshi, Yasuo)</li>
+<li>Fixed socket_set_timeout() on win32. (Jason, Edin, Jani)</li>
+<li>Added domxml_node_namespace_uri(). (Rui Lopes)</li>
+<li>Fixed win32 memory leak in /ext/sockets that would occur on any error 
+  condition. Also fixed host resolution error messages on win32. (Jason)</li>
+<li>Added optional 3rd parameter 'recursive' to ftp_rawlist() which will
+  do 'LIST -R' instead of 'LIST'. (Jani)</li>
+<li>Changed getimagesize() to always set unknown fields to 0 and added support
+  for iff imagetype. (Marcus)</li>
+<li>Added runtime Apache2 thread check to ensure we don't run a non-threaded
+  PHP inside a threaded Apache2 MPM.  (Rasmus)</li>
+<li>Made getimagesize() and exif_read_data() to return also the mime-type and 
+  exif_thumbnail() to return also the image-type. (Marcus)</li>
+<li>Added image_type_to_mime_type() which converts image-types to mime-types.
+  (Marcus)</li>
+<li>Made GD functions to only exist if they are available in libgd. Now the 
+  availability can be tested with function_exists(). (Derick)</li>
+<li>Added an optional parameter to the header() function which overrides the HTTP
+  response code. (Derick)</li>
+<li>Changed the order of which modules are unloaded to the reverse order of
+  which they were loaded. (Derick, Zend Engine)</li>
+<li>Added preliminary SAX-Input support. It's now possible to build a DomDocument
+  with SAX-Events. (chregu)</li>
+<li>Bundled GD library 2.0.1 with php (ext/gd/libgd) (Rasmus, Jani, Markus, Edin)</li>
+<li>Fixed bzopen() crash in thread-safe mode. (Andrei)</li>
+<li>Added better error-messages (3rd parameter) and validating of DTDs (2nd
+  parameter) to domxml_open_mem() and domxml_open_file(). (Christian)</li>
+<li>Added domxml_doc_validate() for validating existing DomDocuments with a DTD.
+  (Christian)</li>
+<li>Added ability to capture string offsets in preg_match_*() results.
+  (David Brown, Andrei)</li>
+<li>Fixed set_error_handler() to accept methods as callbacks and also report
+  invalid callbacks. (Andrei)</li>
+<li>Fixed a memory corruption bug in overload extension. (Andrei)</li>
+<li>Fixed error handling in fsockopen() on win32. (Jason)</li>
+<li>Added win32 support for the timeout parameter of fsockopen(). (Jason)</li>
+<li>Fixed shuffle() to provide equal distribution of values. (Andrei)</li>
+<li>Added --with-mysql-sock configure option which can be used to override
+  the unix socket location. (e.g. NFS compiles, etc.) (James Cox)</li>
+<li>Fixed is_a() to properly work on extension registered classes. (Andrei)</li>
+<li>Added new constants: PHP_PREFIX and PHP_SHLIB_SUFFIX. (Stig)</li>
+<li>Added pctnl_alarm() function. (Edin)</li>
+<li>If zlib.output_compression is enabled and a page is compressed 
+  a "Vary: Accept-Encoding" header is now added. (Stefan)</li>
+<li>Renamed getallheaders() to apache_request_headers() and kept getallheaders() 
+  as an alias to it. Also added apache_response_headers() which returns the 
+  current response headers from Apache. (Rasmus)</li>
+<li>Added missing AddRef() calls in the COM extension. This should fix weird 
+  behaviour (in particular with ADODB). (Harald)</li>
+<li>Fixed segfault in version_compare(). (Stig)</li>
+<li>Added compressed Flash MX files support to getimagesize(). (Derick)</li>
+<li>Added ability to capture string offsets in preg_split() results.
+  (David Brown, Andrei)</li>
+<li>Fixed a crash bug in token_get_all(). (Andrei)</li>
+<li>Implemented glob() for Unix/Win32. (Hartmut, Edin, Markus)</li>
+<li>Added domxml_doc_set_root() to change the root node. (Lukas Schroeder)</li>
+<li>Fixed a crash bug in stripslashes() when working in sybase mode. (Rasmus)</li>
+<li>Added experimental support for Simplified Chinese, Traditional Chinese and
+  Korean encodings into mbstring. (Rui)</li>
+<li>Misc. Win32 mail() enhancements: support 'From:' header (msisolak@yahoo.com),
+  support Bcc header, case-insensitive headers, enhanced error reporting,
+  automatic proper line ending conversion, fixed crash with Cc, fixed buffer
+  overflows with $header. (Markus)</li>
+<li>Improved IMAP extension performance. (adam.kauffman@mindspring.com,
+  rjs3@andrew.cmu.edu, Jon)</li>
+<li>Added optional 5th parameter to domxml_xslt_process(). When set, profiling
+  information is saved to the specified file. (chregu)</li>
+<li>Added MD5 support for crypt() on Windows. (Edin)</li>
+<li>Fixed resource bug in LDAP extension. (Stig Venaas)</li>
+<li>Fixed crash in output buffering when buffer is overwritten in a callback. 
+  (Yasuo)</li>
+<li>Added output_add_rewrite_var() and output_remove_rewrite_var() to inject
+  and remove variables from the URL-Rewriter. (Thies)</li>
+<li>The Windows build can now be configured more comfortably, for example 
+  when dealing with built-in extensions. (Sebastian)</li>
+<li>Added large OID value (2^31 to 2^32) support for pg_lo_import(),
+  pg_lo_unlink(), pg_lo_open() and pg_lo_export(). (Yasuo)</li>
+<li>Fixed mixing OCIPlogon() and OCINLogon() to not leak Oracle-Sessions. (Thies)</li>
+<li>Added php.ini options for EXIF extension to encode and decode Unicode/JIS
+  user comments. (Marcus)</li>
+<li>Changed the "-c" CLI/CGI option to allow both 'filename' and 
+  'path to php.ini'. (Yasuo)</li>
+<li>Added version information to the .dll and .exe files created under Windows.
+  (jtate)</li>
+<li>Added __FUNCTION__ and __CLASS__ constants. (Jani, Zend Engine)</li>
+<li>Added optional 2nd parameter for pg_result_status() to specify return type. 
+  (Yasuo)</li>
+<li>Added "log_errors_max_len" php.ini option which controls maximum length for 
+  error messages. (Marcus)</li>
+<li>Added "ignore_repeated_errors" and "ignore_repeated_source" php.ini options
+  which can be used to disable logging of repeated error messages. (Marcus)</li>
+<li>Made pg_last_notice() work correctly. (Yasuo)</li>
+<li>Added "pgsql.ignore_notice" and "pgsql.log_notice" php.ini options. (Yasuo)</li>
+<li>Added "zlib.output_compression_level" php.ini option. (Stig)</li>
+<li>Added support for --with-apxs build on Mac OS X / Darwin. (markonen)</li>
+<li>Added support for dynamically loaded extensions on OS X / Darwin. 
+  NOTE: This requires Apache 1.3.25 or later. (kalowsky, markonen)</li>
+<li>Fixed CR/LF processing in quoted_printable_decode() on Win32. (kir)</li>
+<li>Made crack extension available on Win32. Cracklib libraries for Win32 are
+  available at http://www.jtatesoftware.com/cracklib/. (jtate)</li>
+<li>Added mysql_info() function. (Jan)</li>
+<li>Added mysql_list_processes() and mysql_stat() functions. (Georg)</li>
+<li>Fixed memory allocation problem on systems that have iconv() support in libc.
+  (Yasuo)</li>
+<li>Made var_dump() handle recursive structures better. (Yasuo, Derick)</li>
+<li>Added exif_imagetype() function. (Marcus)</li>
+<li>New improved build system. Among other improvements, replaces the slow 
+  recursive make with one global Makefile and eases the integration of proper
+  dependencies. Automake is only needed for its aclocal tool. The build 
+  process is now more portable and less resource-consuming. (Sascha)</li>
+</ul>
+There is a <a href="release_4_3_0.php">separate announcement</a> available for this release.<br />
+
+<?php echo hdelim(); ?>
+
 <a name="4.2.3"></a>
 <h3>Version 4.2.3</h3>
 <b>06-Sep-2002</b>
