@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Bugs Database Dos and Don'ts");
 ?>
@@ -19,4 +19,4 @@ commonHeader("Bugs Database Dos and Don'ts");
 <li>If you are trying to report bugs in PHP 4.0, please go <a href="http://bugs.php.net/">here</a>.
 </ul>
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

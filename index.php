@@ -44,7 +44,7 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 <h1>Mailing lists and CVS are up!</h1>
-<? print_link("http://www.pair.com/", make_image("pair.gif", "Pair Networks", "right") ); ?>
+<?php print_link("http://www.pair.com/", make_image("pair.gif", "Pair Networks", "right") ); ?>
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
@@ -52,7 +52,7 @@ few weeks are now gone, hopefully for good.  This is thanks to a brand new serve
 by <a href="http://www.pair.com/">Pair Networks</a>.  Thanks!
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>PHP 4.0.6 Released!</h1>
 
@@ -65,11 +65,11 @@ full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <h1>
-<? print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right") ); ?>
+<?php print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right") ); ?>
 PHP conventions in Europe
 </h1>
 <p>
@@ -79,29 +79,29 @@ has been announced.  Further details are available on the
 <a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
 </p>
 <p>
-<? print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
+<?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 Also coming between July 5th-8th - 
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 in Stuttgart, Germany, with <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
 </p>
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
-<?/* move this entry to the top when you update it! */?>
+<?php /* move this entry to the top when you update it! */ ?>
 <h1>
-<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
 New Usage Stats For May available
 </h1>
 <p>
 <font class="newsDate">[02-Jun-2001]</font>
-<? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
+<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<?php print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
 published the current results for their Web Server surveys - both
 of which continue to show impressive growth for PHP. Check out the 
-<? print_link("/usage.php", "usage page"); ?>.
+<?php print_link("/usage.php", "usage page"); ?>.
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>PHP Conference</h1>
 <p>
@@ -118,9 +118,9 @@ save up to $400!</a>.
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
-<h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
+<h1><?php print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
 
 <p>
 <font class="newsDate">[11-Apr-2001]</font>
@@ -143,7 +143,7 @@ on the first PHP Conference coming July 2001, part of the <a
 href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
 Conference</a> in San Diego, California.)</p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>New Site Design</h1>
 
@@ -156,22 +156,22 @@ bugs that are surely lingering behind this new facade.
 </p>
 
 <p>
-Looking for the <? print_link("/quickref.php", "quickref"); ?> box?  
+Looking for the <?php print_link("/quickref.php", "quickref"); ?> box?  
 Use the "search" feature, conveniently located in the top-right corner of every page. 
 If you search for something in the function list (and it's a valid
 PHP function), you will be directed to the appropriate manual page.
 If the function doesn't exist, you'll get a list of all the PHP functions,
 and and option to do a site-wide search for your phrase.
-And don't forget to visit the <? print_link("/tips.php", "tips and tricks"); ?> page 
+And don't forget to visit the <?php print_link("/tips.php", "tips and tricks"); ?> page 
 to add "quickref" functionality right into your web browser.
 </p>
 
 <br clear="all">
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>
-<? echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
 Announcing PHP-GTK</h1>
 
 <p>
@@ -180,11 +180,11 @@ The first release of PHP-GTK is now available. PHP-GTK is
 a PHP extension that provides an object-oriented interface
 to GTK+ toolkit and enables you to write client-side
 cross-platform GUI applications. For more information, visit
-<?print_link("http://gtk.php.net/")?>.
+<?php print_link("http://gtk.php.net/")?>.
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>
 PHP 3.0.18 Released
@@ -193,34 +193,32 @@ PHP 3.0.18 Released
 <font class="newsDate">[21-Oct-2000]</font>
 PHP 3.0.18 was released. This is a bug-fix release, including
 fixes for file uploads and a backported imagetypes() function from PHP 4.0. The
-<? print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?> contains a full list of changes.
+<?php print_link("http://cvs.php.net/viewcvs.cgi/php3/ChangeLog?rev=1.854", "ChangeLog"); ?> contains a full list of changes.
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>
 Improve Your PHP Skills
 </h1> 
 <p>
 Looking for clear and useful guides to build dynamic web-sites using
-PHP?  Our <? print_link("/books.php", "Books Resource Center"); ?> lists now
+PHP?  Our <?php print_link("/books.php", "Books Resource Center"); ?> lists now
 more than a dozen books in eight different languages. If you know
 about more PHP-related books, tell us about them!
 <br clear="all">
 </p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>
 Tips and Tricks Section
 </h1>
 <p>
-Check out our <? print_link("/tips.php", "tips"); ?> page for some "neat" things, 
+Check out our <?php print_link("/tips.php", "tips"); ?> page for some "neat" things, 
 PHP-related.  It's a little sparse right now, but feel free to make suggestions!
 <br clear="all">
 </p>
 
-<?
-commonFooter();
-?>
+<?php commonFooter(); ?>

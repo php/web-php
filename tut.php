@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader('PHP Tutorial');
 
@@ -25,7 +25,7 @@ things.
 
 <h2>Your first PHP-enabled page</h2>
 Create a file named <i>hello.php</i> and in it put the following lines:
-<?example('<html><head><title>PHP Test</title></head>
+<?php example('<html><head><title>PHP Test</title></head>
 <body>
 <?php echo "Hello World<p>"; ?>
 </body></html>
@@ -50,19 +50,19 @@ the person viewing the page is using.  In order to do that we check the user age
 that the browser sends as part of its request.  This information is stored in a variable.
 Variables always start with a dollar-sign in PHP.  The variable we are interested in is
 <b>$HTTP_USER_AGENT</b>.  To display this variable we can simply do:
-<?example('<?php echo $HTTP_USER_AGENT; ?>')?>
+<?php example('<?php echo $HTTP_USER_AGENT; ?>')?>
 For the browser that you are using right now to view this page, this displays:
 <blockquote><?php echo $HTTP_USER_AGENT; ?></blockquote>
 There are many other variables that are automatically set by your web server.  You can get a
 complete list of them by creating a file that looks like this:
-<?example('<?php phpinfo(); ?>');?>
+<?php example('<?php phpinfo(); ?>');?>
 Then load up this file in your browser and you will see a page full of information about PHP along with
 a list of all the variables available to you.<P>
 
 You can put multiple PHP statements inside a PHP tag and create little blocks of code that do
 more than just a single echo.  For example, if we wanted to check for Internet Explorer we could
 do something like this:
-<?example('<?php
+<?php example('<?php
 if(strstr($HTTP_USER_AGENT,"MSIE")) {
 	echo "You are using Internet Explorer<br>";
 }
@@ -78,7 +78,7 @@ $HTTP_USER_AGENT.  If the string is found the function returns true and if it is
 If it returns true the following statement is executed.<P>
 We can take this a step further and show how you can jump in and out of PHP mode even in the middle of
 a PHP block:
-<?example('<?php
+<?php example('<?php
 if(strstr($HTTP_USER_AGENT,"MSIE")) {
 ?>
 <center><b>You are using Internet Explorer</b></center>
@@ -97,11 +97,11 @@ viewer.  Running this script right now results in:<P>
 if(strstr($HTTP_USER_AGENT,"MSIE")) {
 ?>
 <center><b>You are using Internet Explorer</b></center>
-<?
+<?php
 } else {
 ?>
 <center><b>You are not using Internet Explorer</b></center>
-<?
+<?php
 }
 ?>
 <h2>Dealing with Forms</h2>
@@ -109,7 +109,7 @@ One of the most powerful features of PHP is the way it handles HTML forms.  The 
 is important to understand is that any form element in a form will automatically result in a variable
 with the same name as the element being created on the target page.  This probably sounds confusing, so
 here is a simple example.  Assume you have a page with a form like this on it:
-<?example('<form action="action.php" method="post">
+<?php example('<form action="action.php" method="post">
 Your name: <input type="text" name="name">
 You age: <input type="text" name="age">
 <input type="submit">
@@ -117,7 +117,7 @@ You age: <input type="text" name="age">
 There is nothing special about this form.  It is a straight HTML form with no special tags of any kind.
 When the user fills in this form and hits the submit button, the <i>action.php</i> page is called.  In this
 file you would have something like this:
-<?example('Hi <?php echo $name; ?>.
+<?php example('Hi <?php echo $name; ?>.
 You are <?php echo $age; ?> years old.')?>
 It should be obvious what this does.  There is nothing more to it.  The $name and $age variables are
 automatically set for you by PHP.
@@ -137,4 +137,4 @@ Here is a list of other excellent PHP tutorials:
 <li><a href="http://www.zend.com/zend/tut/">Zend</a></li>
 </ul>
 
-<? commonfooter(); ?>
+<?php commonfooter(); ?>

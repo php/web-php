@@ -18,3 +18,5 @@ $notfound = $prevsearch = $function;
 include 'quickref.php';
 
 exit;
+
+?>

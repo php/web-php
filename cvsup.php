@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Using CVSup to maintain local CVS repository");
 ?>
@@ -41,4 +41,4 @@ libtool, bison). Cd into php3 or php4 and run <code>./buildconf</code>.
 </ol>
 </p>
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 function addlinks($text) {
     $text = htmlspecialchars($text);
     $new_text = ereg_replace("(http:[^ \n\t]*)","<a href=\"\1-=-\">\1</a>",$text);

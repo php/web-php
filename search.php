@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 /*
@@ -99,7 +99,7 @@ if(!isset($pattern)) {
 	$form=$PHP_SELF;
 ?>
 <h1>Search</h1>
-<FORM ACTION="<?echo $form;?>" METHOD="POST">
+<FORM ACTION="<?php echo $form;?>" METHOD="POST">
 <CENTER>
 <TABLE CELLSPACING="0" CELLPADDING="2">
 <TR VALIGN="top">
@@ -107,7 +107,7 @@ if(!isset($pattern)) {
 Search for: <BR>
 </TD>
 <TD>
-<INPUT TYPE="text" NAME="pattern" VALUE="<?echo $prevsearch;?>" SIZE="30">
+<INPUT TYPE="text" NAME="pattern" VALUE="<?php echo $prevsearch;?>" SIZE="30">
 <INPUT TYPE="submit" VALUE=" Search "><BR>
 </FONT></TD>
 </TR>
@@ -133,7 +133,7 @@ Restrict the search to: <BR>
 </TABLE>
 </CENTER>
 </FORM>
-<? } else {
+<?php } else {
 		commonHeader("Search Results");
 		echo "<h1>Search Results</h1>\n";
 		if ($HAVE_SEARCH && isset($htsearch_prog)) {

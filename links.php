@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
@@ -168,7 +168,7 @@ courses, tutorials and other resources<br>
 Brazilian PHP Portal with many link and informations<br>
 </ul>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>Developers and Job Opportunities</h1>
 <P>
@@ -192,7 +192,7 @@ search sites on the web, take a look at <a
 href="http://www.dmoz.org/Business/Employment/Job_Search/">dmoz.org's
 Job Search listings</a>.</p>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <h1>ISPs that support PHP</h1>
@@ -207,4 +207,4 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 </UL>
 
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

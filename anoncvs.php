@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Anonymous CVS Access");
 ?>
@@ -61,4 +61,4 @@ to see what is available, and substitute the appropriate name for
 <p>You can also mirror the PHP CVS repository using CVSup. See
 <a href="cvsup.php">here</a> for more details.</p>
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

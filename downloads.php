@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Downloads");
 $server = $SERVER_NAME;
@@ -33,7 +33,7 @@ $server = $SERVER_NAME;
 </ul>
 
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <h1>Other Downloads</h1>
@@ -45,7 +45,7 @@ $server = $SERVER_NAME;
   <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer</a> for PHP 4.0.3 and later is available on Zend Technologies' web site.
 </ul>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <h1>Older Versions of PHP</h1>
@@ -66,6 +66,4 @@ $server = $SERVER_NAME;
 </p>
 
 
-<?
-commonFooter();
-?>
+<?php commonFooter(); ?>

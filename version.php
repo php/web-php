@@ -1,3 +1,1 @@
-<?
-print phpversion();
-?>
+<?php print phpversion(); ?>

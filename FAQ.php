@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Frequently Asked Questions");
 ?>
@@ -18,7 +18,7 @@ If you have suggestions, corrections or additions, send them to
 <a href="mailto:phpdoc@lists.php.net">phpdoc@lists.php.net</a>.
 -->
 <p>
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <ul>
 <li><b><a href="#1">1. General Information</a></b>
@@ -122,7 +122,7 @@ If you have suggestions, corrections or additions, send them to
     </ul>
 </ul>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="1">
 <h2>1. General Information</h2>
 </a>
@@ -152,7 +152,7 @@ If you have suggestions, corrections or additions, send them to
   <dd>
     PHP/FI 2.0 is an early and no longer supported version of PHP. PHP 3
     is the successor to PHP/FI 2.0 and is a lot nicer. PHP 4 is the latest
-    generation of PHP, which uses the <? print_Link("http://www.zend.com/", "Zend engine"); ?>
+    generation of PHP, which uses the <?php print_Link("http://www.zend.com/", "Zend engine"); ?>
     under the hood.
   <p>
   </dd>
@@ -183,7 +183,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="2">
 <h2>2. PHP mailing lists</h2>
 </a>
@@ -263,7 +263,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="3">
 <h2>3. Obtaining PHP</h2>
 </a>
@@ -365,7 +365,7 @@ If you have suggestions, corrections or additions, send them to
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="4">
 <h2>4. Connecting to databases</h2>
 </a>
@@ -589,7 +589,7 @@ just hit the always prompt for new location checkbox before pressing ok.
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="5">
 <h2>5. Installation</h2>
 </a>
@@ -703,7 +703,7 @@ AddType application/x-httpd-php .php      /* for PHP 4 */
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="6">
 <h2>6. Build Problems</h2>
 </a>
@@ -923,7 +923,7 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
    </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="7">
 <h2>7. Using PHP</h2>
 </a>
@@ -1188,7 +1188,7 @@ solution is to use PHP's
   </DD>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="8">
 <h2>8. PHP and HTML</h2>
 </a>
@@ -1226,7 +1226,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <a name="9">
 <h2>9. PHP and other languages</h2>
@@ -1303,7 +1303,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="10">
 <h2>10. Common Problems</h2>
 </a>
@@ -1381,7 +1381,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="11">
 <h2>11. Migrating from PHP3 to PHP4</h2>
 </a>
@@ -1406,7 +1406,7 @@ solution is to use PHP's
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="12">
 <h2>12. Migrating from PHP2 to PHP3</h2>
 </a>
@@ -1422,7 +1422,7 @@ solution is to use PHP's
 </dl>
 
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 <a name="13">
 <h2>13. Miscellaneous Questions</h2>
 </a>
@@ -1439,11 +1439,11 @@ solution is to use PHP's
     All the code for previous versions of the website is still available
     through CVS.  Specifically, the last version of shared.inc (that had
     all the Javascript and DHTML to do the popups) is available 
-    <? print_link("http://cvsweb.php.net/viewcvs.cgi/phpweb/include/shared.inc?rev=1.123&content-type=text/vnd.viewcvs-markup", "here"); ?>.
+    <?php print_link("http://cvsweb.php.net/viewcvs.cgi/phpweb/include/shared.inc?rev=1.123&content-type=text/vnd.viewcvs-markup", "here"); ?>.
   </dd>
 </dl>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h2>Credits</h2>
 
@@ -1452,6 +1452,4 @@ This FAQ was originally written by Jim Winstead. It is currently
 maintained by the PHP Documentation Team.
 </p>
 
-<?
-commonFooter();
-?>
+<?php commonFooter(); ?>

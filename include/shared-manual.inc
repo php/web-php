@@ -142,7 +142,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <td bgcolor="#e0e0e0" colspan="2">
 <table border="0" cellpadding="2" cellspacing="0" width="100%">
 <tr valign="top"><td>
-<?
+<?php
 	$name = htmlspecialchars($name);
         if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
 	  if (ereg("(.+)@(.+)\.(.+)",$name)) {
@@ -156,7 +156,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 ?>
 </td>
 <td align="right">
-<?
+<?php
 if (isset($MAGIC_COOKIE) && $id) {
 	print_link('/manual/admin-notes.php?action=edit+' . $id . '&brief=1',
 		make_image('notes-edit.gif', 'edit note'),
@@ -177,12 +177,12 @@ if (isset($MAGIC_COOKIE) && $id) {
 <br></td>
 </tr>
 <tr bgcolor="#f0f0f0"><td colspan="2">
-<? echo clean_note($blurb); ?><br>
+<?php echo clean_note($blurb); ?><br>
 </td></tr>
 </table>
 </td>
 </tr>  
-<?
+<?php
 };
 
 function manualGetUserNotes($title, $id)

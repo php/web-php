@@ -158,7 +158,7 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
 </tr>
 </table>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <H1>PHP Annotated Manuals</H1>
 <ul>
@@ -173,7 +173,7 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
     system.
 </ul>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 <h1>More Information</h1>
 
@@ -185,7 +185,7 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <H1>CVS Account</H1>
@@ -197,7 +197,7 @@ with the development of PHP, read this.
 
 
 
-<? echo hdelim(); ?>
+<?php echo hdelim(); ?>
 
 
 <h1>Old/Unsupported Information</h1>

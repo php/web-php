@@ -825,7 +825,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method=POST action="<? echo $PHP_SELF;?>">
+<form method=POST action="<?php echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
@@ -839,7 +839,7 @@ You should then report the problem (and the mirror(s) that have it) to
  <tr>
   <th align=right>Your email address:</th>
   <td colspan="2">
-   <input type=text size=20 name="email" value="<?if(isset($email)) { echo $email; }?>">
+   <input type=text size=20 name="email" value="<?php if(isset($email)) { echo $email; }?>">
   </td>
  </tr><tr>
   <th align=right>PHP version:</th>
@@ -849,19 +849,19 @@ You should then report the problem (and the mirror(s) that have it) to
    <option name="4.0.5">4.0.5
    <option name="4.0.4pl1">4.0.4pl1
    <option name="4.0.4">4.0.4
-   <option name="4.0CVS-<? print date("Y-m-d"); ?>">4.0 Latest CVS (<? print date("Y-m-d"); ?>)
+   <option name="4.0CVS-<?php print date("Y-m-d"); ?>">4.0 Latest CVS (<?php print date("Y-m-d"); ?>)
    <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
  </tr><tr>
   <th align=right>Type of bug:</th>
   <td colspan="2">
-	<?show_types("--Please Select--",0,"ebug_type")?>
+	<?php show_types("--Please Select--",0,"ebug_type")?>
    </td>
   </tr><tr>
   <th align=right>Operating system:</th>
   <td colspan="2">
-   <input type=text size=20 name="php_os" value="<?echo isset($operating_system)?$operating_system:"";?>">
+   <input type=text size=20 name="php_os" value="<?php echo isset($operating_system)?$operating_system:"";?>">
   </td>
  </tr><tr>
   <th align=right>Bug description:</th>
@@ -903,12 +903,12 @@ Please supply any information that may be helpful in fixing the bug:
 
 </form>
 
-<? } ?>
+<?php } ?>
 </font>
-<?
+<?php
 commonFooter();
 ?>
-<?
+<?php
 /*
 # MySQL dump 4.0
 #

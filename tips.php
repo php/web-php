@@ -114,9 +114,7 @@ example, try typing "php file upload" in your browser.
 
 </OL>
 
-
-
-<? tipTitle('Adding the Quick Reference to Netscape on Linux', 'David Rose', '28-Jul-2000'); ?>
+<?php tipTitle('Adding the Quick Reference to Netscape on Linux', 'David Rose', '28-Jul-2000'); ?>
 
 <P>
 Further to the example above for Windows/IE users, here's something Linux folk can do:
@@ -141,8 +139,7 @@ Netscape will open the proper URL for you.
 
 </OL>
 
-
-<? tipTitle('Quick Reference for Gnome Users', 'Benjamin Curtis', '29-Jul-2000'); ?>
+<?php tipTitle('Quick Reference for Gnome Users', 'Benjamin Curtis', '29-Jul-2000'); ?>
 
 <P>
 Here's another search option for Linux users who use Gnome.  This is a macro
@@ -162,6 +159,4 @@ gnome-moz-remote --newwin http://www.php.net/manual-lookup.php?function=$(echo <
 </P>
 
 
-<?
-commonFooter();
-?>
+<?php commonFooter(); ?>

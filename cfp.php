@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Call For Participation");
 ?>
@@ -151,6 +151,6 @@ Tutorial presentations due: <b>May 1, 2001 </b>
 <p>
 Conference presentations due: <b>June 1, 2001 </b>
 </p>
-<?
+<?php
 commonFooter();
 ?>

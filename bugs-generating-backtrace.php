@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 commonHeader("Generating a gdb backtrace");
 ?>
@@ -63,4 +63,4 @@ prompt appear and some message indicating that there was a crash.  At this gdb p
 This should generate a backtrace, that you should submit in the bug report, along with any other
 details you can give us about your setup, and offending script.
 
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

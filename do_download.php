@@ -1,4 +1,4 @@
-<?
+<?php
 if (!isset($HTTP_REFERER)) {
 	$HTTP_REFERER="-";
 }

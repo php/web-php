@@ -1,1 +1,1 @@
-<? Header("Location: $URL"); ?>
+<?php Header("Location: $URL"); ?>

@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 $current = "3.0.18";
@@ -18,7 +18,7 @@ function makeCap() {
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD align=center colspan=3 rowspan=2 NOWRAP>
-<?
+<?php
 if (!isset($csel)) {
 	$csel='';
 	$hostname=getenv("REMOTE_HOST");
@@ -77,7 +77,7 @@ while ($site = key($mirror_sites)) {
 <TD ALIGN=left><IMG alt=" " SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
-<?
+<?php
 };
 
 
@@ -168,6 +168,4 @@ while ($site = @current($showsites)) {
 
 
 </TABLE>
-<?
-commonFooter();
-?>
+<?php commonFooter(); ?>

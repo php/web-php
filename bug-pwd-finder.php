@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 /* See bugs.php for the table layout of bugdb. */
@@ -44,7 +44,7 @@ $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 
 ?>
-<form method=POST action="<? echo $PHP_SELF;?>">
+<form method=POST action="<?php echo $PHP_SELF;?>">
 <p><b>Bugs Report Password Finder</b></p>
 
 <p>If you need to modify a bug report that you submitted, but have forgotten what password you used, this utility can help you.</p>
@@ -55,4 +55,4 @@ commonHeader("Bug Reporting");
 <p><b>Bug Report ID:</b> #<input type=text size=20 name="bug_id" /> <input type="submit" value="Send" /></p>
 </form>
 </font>
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

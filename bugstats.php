@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 if(!strstr($MYSITE,"www.php.net")) {

@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 
 $NUMACROSS=2;
@@ -67,28 +67,28 @@ commonHeader("PHP Manual Quick Reference");
 
 <h1>PHP Function List</h1>
 
-<? if ($notfound) { ?>
+<?php if ($notfound) { ?>
 
 <P>
-Sorry, but the function <B><? echo $notfound; ?></B> is not in the online manual.
+Sorry, but the function <B><?php echo $notfound; ?></B> is not in the online manual.
 Perhaps you misspelled it, or it is a relatively new function that hasn't made it 
-into the online documentation yet.  The following are the <? echo $SHOW_CLOSE;?> 
-functions which seem to be closest in spelling to <B><? echo $notfound;?></B> (really
+into the online documentation yet.  The following are the <?php echo $SHOW_CLOSE;?> 
+functions which seem to be closest in spelling to <B><?php echo $notfound;?></B> (really
 good matches are in bold).  Perhaps you were looking for one of these:
 </P>
 
-<? makeTable($lang,$maybe); ?>
+<?php makeTable($lang,$maybe); ?>
 
 <P>
-If you want to search the entire PHP website for the string &quot;<B><? echo $notfound; ?></B>&quot;, 
-then <? print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
+If you want to search the entire PHP website for the string &quot;<B><?php echo $notfound; ?></B>&quot;, 
+then <?php print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
 </P>
 
 <p>
 For a quick overview over all PHP functions, 
-<? print_link('quickref.php', 'click here') ?>.
+<?php print_link('quickref.php', 'click here') ?>.
 </p>
-<? 
+<?php
   commonFooter();
   exit;
 } 
@@ -98,11 +98,9 @@ For a quick overview over all PHP functions,
 Here is a list of all the PHP functions.  Click on any one of them to jump to that page in the manual.
 </P>
 
-<? makeTable($lang,$functions); ?>
+<?php makeTable($lang,$functions); ?>
 
 </TD></TR>
 </TABLE>
 
-<?
-commonFooter(); 
-?>
+<?php commonFooter(); ?>

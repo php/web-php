@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'prepend.inc';
 	if($save && $user && $pw) {
 		SetCookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
@@ -558,7 +558,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method=POST action="<? echo $PHP_SELF;?>">
+<form method=POST action="<?php echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong</p>
@@ -568,7 +568,7 @@ Or use the form below to submit a new bug report.
  <tr>
   <th align=right>Your email address:</th>
   <td colspan="2">
-   <input type=text size=20 name="email" value="<?if(isset($email)) { echo $email; }?>">
+   <input type=text size=20 name="email" value="<?php if(isset($email)) { echo $email; }?>">
   </td>
  </tr><tr>
   <th align=right>PHP version:</th>
@@ -579,19 +579,19 @@ Or use the form below to submit a new bug report.
     <option name="3.0.15">3.0.15
     <option name="3.0.14">3.0.14
     <option name="3.0.13">3.0.13
-    <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
+    <option name="3.0CVS-<?php print date("d/m/Y"); ?>">3.0 Latest CVS (<?php print date("d/m/Y"); ?>)
     <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
  </tr><tr>
   <th align=right>Type of bug:</th>
   <td colspan="2">
-	<?show_types("--Please Select--",0,"ebug_type")?>
+	<?php show_types("--Please Select--",0,"ebug_type")?>
    </td>
   </tr><tr>
   <th align=right>Operating system:</th>
   <td colspan="2">
-   <input type=text size=20 name="php_os" value="<?echo isset($operating_system)?$operating_system:"";?>">
+   <input type=text size=20 name="php_os" value="<?php echo isset($operating_system)?$operating_system:"";?>">
   </td>
  </tr><tr>
   <th align=right>Bug description:</th>
@@ -633,12 +633,12 @@ Please supply any information that may be helpful in fixing the bug:
 
 </form>
 
-<? } ?>
+<?php } ?>
 </font>
-<?
+<?php
 commonFooter();
 ?>
-<?
+<?php
 /*
 # MySQL dump 4.0
 #
