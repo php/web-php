@@ -18,8 +18,7 @@ commonHeader("Download PHP Engine");
 <TABLE border=0 cellpadding=0 cellspacing=0>
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD align=center colspan=3 NOWRAP>
-<CENTER>
+<TD align=left colspan=3 NOWRAP>
 <?
 $mirror_sites=$MIRRORS;
 reset($mirror_sites);
@@ -33,7 +32,6 @@ while ($site = key($mirror_sites)) {
 	endif;
 }
 ?><BR>
-</CENTER>
 </TD>
 <TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>
@@ -57,16 +55,17 @@ while ($site = key($mirror_sites)) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
-		echo "<TD><A NAME='$country'><IMG SRC='/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0></A><BR></TD>\n";
-		echo "<TD>";
-		spc(10,1);
+		echo "<TD><A NAME='$country'><IMG SRC='/gifs/gflag-$country.gif' ALT='$country' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10></A><BR></TD>\n";
+		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
-		echo "<TD align=right colspan=2><IMG SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+		echo "<TD align=right><IMG SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		echo "</TR>\n";
 		$lastcountry=$country;
 	}
-	echo "<TR><TD colspan=3>&nbsp;<BR></TD>\n<TD>";
-	echo "<TABLE border=0 cellpadding=5 cellspacing=0 bgcolor=\"#F0F0F0\">\n";
+	echo "<TR><TD colspan=3>";
+	spc(75,1);
+	echo "<BR></TD>\n<TD>";
+	echo "<TABLE border=0 cellpadding=5 cellspacing=0 bgcolor=\"#F0F0F0\" width=100%>\n";
 	echo "<TR><TD><FONT FACE='$FONTFACE'>\n";
 	if ((!isset($lastlocation))||($lastlocation!=$location)) {
 		echo("$location<BR>\n");
@@ -93,8 +92,7 @@ while ($site = key($mirror_sites)) {
 <TR><TD colspan=3>&nbsp;<BR></TD><TD BGCOLOR='#F0F0F0'>&nbsp;<BR><BR></TD><TD>&nbsp;<BR></TD></TR>
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD align=center colspan=3 NOWRAP>
-<CENTER>
+<TD align=left colspan=3 NOWRAP>
 <?
 $mirror_sites=$MIRRORS;
 reset($mirror_sites);
@@ -108,7 +106,6 @@ while ($site = key($mirror_sites)) {
 	endif;
 }
 ?><BR>
-</CENTER>
 </TD>
 <TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>

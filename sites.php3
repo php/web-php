@@ -3,160 +3,175 @@
 	commonHeader("High-Profile sites running PHP");
 
 	function site($name,$domain) {
-		echo "<a href=\"http://$domain\">$name</a><br>\n";
+		echo "<LI><a href=\"http://$domain\">$name</a><br>\n";
+	}
+
+	function siteStart() {
+		echo "<TR valign=middle>\n";
+		echo "<TD>&nbsp;<BR></TD>\n";
+		echo "<TD ALIGN=left>";
+		spc(50,1);
+		echo "<BR></TD>\n";
+		echo "<TD align=left bgcolor='#F0F0F0'><FONT SIZE=-1><UL>\n";
+	}
+
+	function siteEnd() {
+		echo "</UL><BR></TD>\n";
+		echo "<TD>&nbsp;<BR></TD>\n";
+		echo "</TR>\n";
+
 	}
 
 	function title($text) {
-		echo "<td bgcolor=#032F5B><center><font size=+1 color=#ffffff><b>$text</b></font></center></td>\n";
+		echo "<TR bgcolor='#D0D0D0' valign=middle>\n";
+		echo "<TD ALIGN=left width=18><IMG SRC=\"/gifs/gcap-left.gif\" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+		echo "<TD align=left colspan=2 NOWRAP><font size=+1><b>$text</b></font></TD>\n";
+		echo "<TD ALIGN=right width=18><IMG SRC=\"/gifs/gcap-right.gif\" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+		echo "</TR>\n";
 	}
+?>
 
-	echo "<p><center><table border=1 cellpadding=15><tr>\n";
+<CENTER>
+<TABLE border=0 cellpadding=0 cellspacing=0>
 
-	title("Sports Teams");
+<?
+/* Auto Industry */
 	title("Auto");
-	title("Hi-Tech");
-
-
-	echo "</tr><tr><td valign=top>\n";
-
-	/* Sports Teams */
-
-	echo "<br></td><td valign=top>\n";
-
-	/* Auto Industry */
+	siteStart();
 	site("Mitsubishi Motors","www.mitsucars.com");
+	siteEnd();
 
-	echo "<br></td><td valign=top>\n";
+/* Computer Software */
+	title("Computer Software");
+	siteStart();
+	site("Knowledge Adventure","www.adventure.com");
+	site("C2Net Software Inc.","www.c2.net");
+	site("RedHat Software","www.redhat.com");
+	siteEnd();
 
-	/* Hi-Tech Industry */
+/* Educational */
+	title("Educational");
+	siteStart();
+	site("The Biology Place","www.biology.com");
+	site("The Chemistry Place","www.chemplace.com");
+	site("The Psychology Place","www.psychplace.com");
+	site("NativeWeb","www.nativeweb.org");
+	site("The Internet Pilot to Physics","http://www.tp.umu.se/TIPTOP/");
+	siteEnd();
+
+/* Financial Industry */
+	title("Financial Industry");
+	siteStart();
+	site("E*Trade","www.etrade.com");
+	site("First USA Bank","www.firstusabank.com");
+	site("TFC Commodity Charts","tfc-charts2.w2d.com");
+	siteEnd();
+
+/* Games */
+	title("Games");
+	siteStart();
+	site("Worms2","www.worms2.com");
+	siteEnd();
+
+/* Government */
+	title("Government");
+	siteStart();
+	site("National Institute of Ecology in Mexico","http://www.ine.gob.mx");
+	siteEnd();
+
+/* Hi-Tech Industry */
+	title("Hi-Tech");
+	siteStart();
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
+	siteEnd();
 
-	echo "<br></td>\n";
+/* Large ISP's */
+	title("Large ISP's");
+	siteStart();
+	site("Netvision","www.netvision.net.il");
+	site("Italia Online","www.iol.it");
+	site("XOOM Inc.","xoom.com");
+	site("Nederland.Net","www.nederland.net");
+	site("Pair Networks","www.pair.net");
+	siteEnd();
 
-	echo "</tr><tr>\n";
-	title("Telecommunications");
-	title("Travel & Tourism");
+/* Military */
+	title("Military");
+	siteStart();
+	site("US Army Publishing Agency","www-usappc.hoffman.army.mil");
+	siteEnd();
+
+/* Newspapers & Magazines */
+	title("Newspapers & Magazines");
+	siteStart();
+	site("Børsen - Danish Business Daily","www.borsen.dk");
+	site("Computer Currents","www.computercurrents.com");
+	site("UPI Archives","upi.siteways.com");
+	site("CADALYST Magazine","www.cadonline.com");
+	siteEnd();
+
+/* Not-for-Profit */
+	title("Not-for-Profit");
+	siteStart();
+	site("National Marrow Donor Program","www.marrow.org");
+	siteEnd();
+
+/* Religious */
 	title("Religious");
+	siteStart();
+	site("Kenneth Copeland Ministries","kcm.org");
+	site("Christian Financial Concepts","cfcministry.org");
+	siteEnd();
 
-	echo "</tr><tr><td valign=top>\n";
+/* Service Industry */
+	title("Service Industry");
+	siteStart();
+	site("Restoration Hardware","www.restorationhardware.com");
+	siteEnd();
 
-	/* Telecommunications */
+/* Telecommunications */
+	title("Telecommunications");
+	siteStart();
 	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
 	site("Southwestern Bell","WWW.SBWireless.COM");
+	siteEnd();
 
-	echo "<br></td><td valign=top>\n";
-	/* Travel */
+/* Travel */
+	title("Travel & Tourism");
+	siteStart();
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
+	siteEnd();
 
-	echo "<br></td><td valign=top>\n";
-	/* Religious */
-	site("Kenneth Copeland Ministries","kcm.org");
-	site("Christian Financial Concepts","cfcministry.org");
-
-	echo "</tr><tr>\n";
-	title("Newspapers & Magazines");
-	title("Large ISP's");
-	title("Computer Software");
-
-	echo "</tr><tr><td valign=top>\n";
-	/* Newspapers & Magazines */
-	site("Børsen - Danish Business Daily","www.borsen.dk");
-	site("Computer Currents","www.computercurrents.com");
-	site("UPI Archives","upi.siteways.com");
-	site("CADALYST Magazine","www.cadonline.com");
-
-	echo "<br></td><td valign=top>\n";
-	/* Large ISP's */
-	site("Netvision","www.netvision.net.il");
-	site("Italia Online","www.iol.it");
-	site("XOOM Inc.","xoom.com");
-	site("Nederland.Net","www.nederland.net");
-	site("Pair Networks","www.pair.net");
-
-	echo "<br></td><td valign=top>\n";
-	/* Computer Software */
-	site("Knowledge Adventure","www.adventure.com");
-	site("C2Net Software Inc.","www.c2.net");
-	site("RedHat Software","www.redhat.com");
-
-	echo "</tr><tr>\n";
-	title("Military");
-	title("Government");
-	title("Educational");
-
-	echo "</tr><tr><td valign=top>\n";
-	/* Military */
-	site("US Army Publishing Agency","www-usappc.hoffman.army.mil");
-
-	echo "<br></td><td valign=top>\n";
-	/* Government */
-	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
-
-	echo "<br></td><td valign=top>\n";
-	/* Educational */
-	site("The Biology Place","www.biology.com");
-	site("The Chemistry Place","www.chemplace.com");
-	site("The Psychology Place","www.psychplace.com");
-	site("NativeWeb","www.nativeweb.org");
-	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
-
-	echo "</tr><tr>\n";
-	title("Service Industry");
-	title("Not-for-Profit");
+/* Misc. */
 	title("Miscellaneous");
-
-	echo "</tr><tr><td valign=top>\n";
-	/* Service Industry */
-	site("Restoration Hardware","www.restorationhardware.com");
-
-	echo "<br></td><td valign=top>\n";
-	/* Not-for-Profit */
-	site("National Marrow Donor Program","www.marrow.org");
-
-	echo "<br></td><td valign=top>\n";
-	/* Misc. */
+	siteStart();
 	site("Internet Weather Report","www.internetweather.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("ClearInk Corporation","www.clearink.com");
 	site("Cigar.Com","www.cigar.com");
+	siteEnd();
 
-	echo "</tr><tr>\n";
-	title("Financial Industry");
-	title("Games");
-	title("&nbsp;");
+/* blank bar at end. */
+	title("");
 
-	echo "</tr><tr><td valign=top>\n";
-	/* Financial Industry */
-	site("E*Trade","www.etrade.com");
-	site("First USA Bank","www.firstusabank.com");
-	site("TFC Commodity Charts","tfc-charts2.w2d.com");
+echo "</table></center>\n";
 
-	/* Games */
-	echo "<br></td><td valign=top>\n";
-	site("Worms2","www.worms2.com");
-
-	echo "<br></td><td valign=top>\n";
-
-	echo "</td></tr></table></center>\n";
 ?>
-<blockquote><blockquote>
-<font size=+1><i><tt>If you have a site you feel belongs on this list, please
-send us email at <a href="mailto:sites@php.net">sites@php.net</a>.  With well
-over 60,000 sites on the Internet running PHP, we cannot list them all.  This
-list is to help developers justify their decision to use PHP.  It should thus
-contain high-profile sites that someone not necessarily well-versed in the ways
-of the Internet might have heard of.
-</tt></i></font>
-</blockquote></blockquote>
+<BR><BR>
+If you have a site you feel belongs on this list, please send us email at 
+<a href="mailto:sites@php.net">sites@php.net</a>.  With well over 60,000 sites 
+on the Internet running PHP, we cannot list them all.  This list is to help developers 
+justify their decision to use PHP.  It should thus contain high-profile sites that 
+someone not necessarily well-versed in the ways of the Internet might have heard of.
 <?
 commonFooter();
 ?>
