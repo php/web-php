@@ -337,7 +337,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://phpeditors.linuxbackup.co.uk/">PHP Editors List</a><br />
+  <a href="http://www.thelinuxconsultancy.co.uk/phpeditors/">PHP Editors List</a><br />
   A comprehensive list of editors you can use to edit PHP programs
  </li>
 </ul>
