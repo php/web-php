@@ -10,6 +10,7 @@ not want to compile your own, go to your distribution\'s
 download site. Binaries available on external servers:
 <ul>
 <li>' . make_link("http://www.entropy.ch/software/macosx/php/", "Mac OS X") . '</li>
+<li>' . make_link("http://silk.apana.org.au/php/", "OS/2") . '</li>
 <li>' . make_link("http://www.ecs.soton.ac.uk/~ajw498/internet/php/", "RISC OS (with source)") . '</li>
 </ul>
 </p>
