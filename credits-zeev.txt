@@ -7,3 +7,4 @@ A lot of internal functions (including hebrev :) and migration from PHP 2.0
 Syntax highlighting mode
 Configuration file parser
 New persistent/multilink MySQL, PosgresSQL, Sybase and mSQL modules
+Win32 COM module
