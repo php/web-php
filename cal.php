@@ -2,8 +2,8 @@
   require_once 'prepend.inc';
 
   if (!is_primary_site()) {
-	header("Location: http://www.php.net/cal.php");
-	exit;
+  	header("Location: http://www.php.net/cal.php");
+  	exit;
   }
 
   commonHeader("Event Calendar",1);
@@ -437,5 +437,6 @@ foreach($re as $k=>$v) {
   if (!isset($cy)) $cy = strftime('%Y');
   draw_cal($cy,$cm);
 
+  echo "<br>";
   commonFooter();
 ?>
