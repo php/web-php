@@ -69,10 +69,11 @@ commonHeader("PHP Manual Quick Reference");
 
 <p>
 Sorry, but the function <b><?php echo $notfound; ?></b> is not in the online manual.
-Perhaps you misspelled it, or it is a relatively new function that hasn't made it
-into the online documentation yet. The following are the <?php echo $SHOW_CLOSE; ?>
-functions which seem to be closest in spelling to <b><?php echo $notfound; ?></b>
-(really good matches are in bold). Perhaps you were looking for one of these:
+Perhaps you misspelled it, or it is a relatively new function that hasn't
+made it into the online documentation yet. The following are the
+<?php echo $SHOW_CLOSE; ?> functions which seem to be closest in spelling
+to <b><?php echo $notfound; ?></b> (really good matches are in bold). Perhaps
+you were looking for one of these:
 </p>
 
 <?php makeTable($lang,$maybe); ?>
