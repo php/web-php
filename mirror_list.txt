@@ -34,6 +34,7 @@ se	se.php.net	Kalle Kiviaho <kivi@chl.chalmers.se>,Fredrik Öhrn <ohrn@chl.chalme
 sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
 th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
+tr	tr.php.net	Mustafa Akgul <akgul@bilkent.edu.tr>	php.bilkent.edu.tr
 tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
 ua	ua2.php.net	Max Khaikin <max@alkar.net>	php.ndot.com.ua
