@@ -42,7 +42,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP Conference</h1>
 <p>
 <font class="newsDate">[1-May-2001]</font>
-The first ever PHP Conference, part of the <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>, will bring the community together for
+The first official PHP Conference, part of the <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>, will bring the community together for
 <a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a> and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a> designed to explore and strengthen PHP in
 the open source space. Take a look under the hood at everything
 PHP--from understanding PHP on wireless devices to participating
