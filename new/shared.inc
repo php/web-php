@@ -150,6 +150,11 @@ function LoadImgs () {
 		b_sear1 = new Image();
 		b_sear1.src = "gifs/b-search-c.gif";
 
+		b_sour0 = new Image();
+		b_sour0.src = "gifs/b-source-p.gif";
+		b_sour1 = new Image();
+		b_sour1.src = "gifs/b-source-c.gif";
+
 		loaded = 1
 	}
 }
@@ -172,6 +177,7 @@ function hideAll () {
 	change('mirr',0);
 	change('top',0);
 	change('sear',0);
+	change('sour',0);
 	if (NS4 || IE4) {
 		hideLayer('mirrorsKick');
 	}
@@ -182,9 +188,14 @@ if (IE4) LoadImgs();
 //--->
 </SCRIPT>
 
-<STYLE TYPE="text/css">
-#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}
-</STYLE>
+<!-- Kick outs -->
+<SCRIPT LANGUAGE="Javascript1.2">
+<!--  
+document.write("<STYLE TYPE='text/css'>");
+document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}");
+document.write("</STYLE>");
+//--->
+</SCRIPT>
 
 
 </HEAD>
@@ -198,7 +209,7 @@ if (IE4) LoadImgs();
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><IMG SRC="gifs/logo.gif" ALT="PHP3" WIDTH=130 HEIGHT=67 BORDER=0><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
 <IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
 <TR VALIGN=top BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
@@ -221,7 +232,7 @@ if (IE4) LoadImgs();
 <? echo $title;?>
 <!-- end title -->
 </B></FONT></TD>
-<TD ALIGN=right><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=129 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD></TR>
+<TD ALIGN=right><A HREF="source.php3" onMouseover="hideAll();change('sour',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-source-p.gif" ALT="View the source code for this page" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME="sour"></A><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD></TR>
 </TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=top>
@@ -296,10 +307,8 @@ while ($site = key($mirror_sites)):
 	echo "<OPTION VALUE='$site'>$place";
 endwhile;
 ?>");
-document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>");
-document.write("</FORM>");
-document.write("<? kickFooter();?>");
-document.write("</DIV>");
+document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0></FORM>");
+document.write("<? kickFooter();?></DIV>");
 
 //-->
 </SCRIPT>
