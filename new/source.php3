@@ -25,7 +25,7 @@ if ($tmp) {
   $page_name = $page_url;
 }
 
-show_source($page_name);
+highlight_file($page_name);
 
 commonFooter();
 ?>
