@@ -11,6 +11,51 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.3.10"></a>
+<h3>Version 4.3.10</h3>
+<b>14-Dec-2004</b>
+<ul>
+<li>Added the %F modifier to *printf to render a non-locale-aware representation of a float with the . as decimal separator.</li>
+<li>Fixed a bug in addslashes() handling of the '\0' character.</li>
+<li>Backported Marcus' foreach() speedup patch from PHP 5.x.</li>
+<li>Fixed potential problems with unserializing invalid serialize data.</li>
+<li><?php bugfix(31034); ?> (Problem with non-existing iconv header file).</li>
+<li><?php bugfix(31024); ?> (Crash in fgetcsv() with negative length).</li>
+<li><?php bugfix(31019); ?> (Logic error mssql library checking).</li>
+<li><?php bugfix(30995); ?> (snmp extension does not build with net-snmp 5.2).</li>
+<li><?php bugfix(30990); ?> (allow popen() on *NIX to accept 'b' flag).</li>
+<li><?php bugfix(30826); ?> (Certain reference relations cannot be unserialized properly).</li>
+<li><?php bugfix(30750); ?> (Meaningful error message when upload directory is not  accessible).</li>
+<li><?php bugfix(30739); ?> (imagefill does not set back alphablending mode).</li>
+<li><?php bugfix(30672); ?> (Problem handling exif data in jpeg images at unusual places).</li>
+<li><?php bugfix(30658); ?> (Ensure that temporary files created by GD are removed).</li>
+<li><?php bugfix(30654); ?> (oci8 persistent connection is deleted from hash if there was exclusive connection with the same credentials).</li>
+<li><?php bugfix(30613); ?> (Prevent infinite recursion in url redirection).</li>
+<li><?php bugfix(30587); ?> (array_multisort doesn't separate zvals before changing them).</li>
+<li><?php bugfix(30475); ?> (curl_getinfo() may crash in some situations).</li>
+<li><?php bugfix(30442); ?> (segfault when parsing ?getvariable[][ ).</li>
+<li><?php bugfix(30388); ?> (rename across filesystems loses ownership and permission info).</li>
+<li><?php bugfix(30282); ?> (segfault when using unknown/unsupported session.save_handler and/or session.serialize_handler).</li>
+<li><?php bugfix(30281); ?> (Prevent non-wbmp images from being detected as such).</li>
+<li><?php bugfix(30276); ?> (Possible crash in ctype_digit on large numbers).</li>
+<li><?php bugfix(30229); ?> (imagerectangle and imagefilledrectangle do work well with alpha channel, corners are drawn twice).</li>
+<li><?php bugfix(30224); ?> (Sybase date strings are sometimes not null terminated).</li>
+<li><?php bugfix(30133); ?> (get_current_user() crashes on Windows).</li>
+<li><?php bugfix(30057); ?> (did not detect IPV6 on FreeBSD 4.1).</li>
+<li><?php bugfix(30027); ?> (Possible crash inside ftp_get()).</li>
+<li><?php bugfix(29805); ?> (HTTP Authentication Issues).</li>
+<li><?php bugfix(29418); ?> (double free when openssl_csr_new fails)..</li>
+<li><?php bugfix(28598); ?> (Lost support for MS Symbol fonts).</li>
+<li><?php bugfix(28325); ?> (Circular references not properly serialized).</li>
+<li><?php bugfix(28228); ?> (NULL decimal separator is not being handled correctly).</li>
+<li><?php bugfix(27469); ?> (serialize() objects of incomplete class).</li>
+
+</ul>
+
+There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.9"></a>
 <h3>Version 4.3.9</h3>
 <b>22-Sep-2004</b>

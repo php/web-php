@@ -145,6 +145,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
+<h1>PHP 4.3.10 released!</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+  PHP Development Team would like to announce the immediate release of 
+  <a href="/downloads.php">PHP 4.3.10</a>. This is a maintenance release 
+  that in addition to over 30 non-critical bug fixes addresses several very 
+  serious security issues. All Users of PHP are strongly encouraged to upgrade 
+  to this release as soon as possible.
+</p>
+
+<p>
+ For changes since PHP 4.3.9, please consult the
+ <a href="/ChangeLog-4.php#4.3.10">ChangeLog</a>.
+</p>
+
+
+<hr />
+
+
 <?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5.0.3RC2 released!</h1>
 <p>
@@ -153,18 +173,6 @@ commonHeader("Hypertext Preprocessor");
  This is the second release candidate and should have a very low number of 
  problems and/or bugs. Nevertheless, please download and test it as much as 
  possible on real-life applications to uncover any remaining issues.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
-<h1>PHP 4.3.10RC2 released!</h1>
-<p>
- <span class="newsdate">[08-Dec-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.10RC2</a> has been released for testing.
- This is the second release candidate and should be very near production quality.
- Nevertheless, please download and test it as much as possible on real-life 
- applications to uncover any remaining issues.
 </p>
 
 <hr />
