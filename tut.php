@@ -9,7 +9,6 @@ There are other excellent PHP tutorials available:<br><br>
 &nbsp; <a href="http://www.zend.com/zend/art/intro.php">Zend Intro to PHP</a><br>
 &nbsp; <a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a><br>
 &nbsp; <a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a><br>
-&nbsp; <a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a><br>
 &nbsp; <a href="http://www.phpbuilder.com/getit/">PHP Builder</a><br>
 &nbsp; <a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a><br>
 
