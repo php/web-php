@@ -14,9 +14,9 @@ function check_load()
 	if (is_array($l) && $l[0] > 10) {
 		/* offload them to their favourite mirror */
 		foreach ($MIRRORS as $murl => $mirror) {
-			if (mirror_country($murl) == $COUNTRY && mirror_status($murl) == MIRROR_OK) {
-				header("Location: $murl" . $_SERVER['REQUEST_URI']);
-				header("X-PHP-Load: Too-high, try this mirror");
+			if ($murl != 'http://www.php.net' && mirror_country($murl) == $COUNTRY && mirror_status($murl) == MIRROR_OK && $mirror[5]) {
+				header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+				header("X-PHP-Load: [" . implode(", ", $l) . "] Too-high, try this mirror");
 				exit;
 			}
 		}
