@@ -1,5 +1,5 @@
 <?
-function makeBar($no,$page,$matches,$pattern,$where) {
+function makeBar($no,$page,$firstdisplated,$lastdisplayed) {
 	global $FONTFACE;
 	if ($page>1) {
 		$i=$page-1;
@@ -13,7 +13,8 @@ function makeBar($no,$page,$matches,$pattern,$where) {
 	} else {
 		$next="&nbsp;";
 	}
-	$middle="$matches documents match your search for '<B>$pattern</B>' in the $where\n";
+
+	$middle="<B>Displaying results $firstdisplayed to $lastdisplayed</B>";
 
 	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
 	echo "<TR VALIGN=middle>\n";
@@ -162,7 +163,9 @@ if(!isset($pattern)) {
 		$pages=$result[6];
 		$baseurl=$PHP_SELF."?pattern=$words&show=$show&base=$base";
 
-		makeBar(1,$page,$matches,$pattern,$where);
+		echo "$matches documents match your search for '<B>$pattern</B>' in the $where.<BR><BR>\n";
+
+		makeBar(1,$page,$firstdisplayed,$lastdisplayed);
 
 		$i=7; #skip response header
 		echo "<TABLE BORDER=0><TR><TD>\n";
@@ -177,7 +180,7 @@ if(!isset($pattern)) {
 		}
 		echo "</TD></TR></TABLE><BR>\n";
 
-		makeBar(2,$page,$matches,$pattern,$where);
+		makeBar(2,$page,$firstdisplayed,$lastdisplayed);
 
 		?>
 		<CENTER>
