@@ -1553,6 +1553,17 @@ $books = array (
     /* language     */ "se"
   ),
 
+  array(
+    /* title[s]     */ "PHP 5 Power Programming",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/013147149X/wwwphpnet",
+    /* author[s]    */ array("Andi Gutmans", "Stig Sæther Bakken", "Derick Rethans"),
+    /* auth link[s] */ "",
+    /* image        */ "013147149X.jpg",
+    /* information  */ "October, 2004, ISBN 0-13-147149-X, 720 pages with CD",
+    /* inform. link */ "http://php5powerprogramming.com",
+    /* language     */ "en"
+  ),
+
  ),
 
 
