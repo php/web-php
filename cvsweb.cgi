@@ -25,6 +25,7 @@ unless ($ENV{"SERVER_NAME"} eq "cvs.php.net") {
 %CVSROOT = (
 	    'php3', '/repository/php3',
 	    'phpweb', '/repository/phpweb',
+	    'phpdoc', '/repository/phpdoc',
 	    'phpfi', '/repository/phpfi',
             'php4', '/repository/php4',
 	    );
