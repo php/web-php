@@ -1,59 +1,40 @@
 <?
 require("site.inc");
 
-function spc($width, $height) {
-	echo "<IMG SRC='gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
-};
-
-function kickHeader($offset,$side,$distance,$width) {
+function kickHeader($offset,$side,$distance) {
 	$off=abs($offset);
-	$innerwidth=$width-19;
-	$tablewidth=$width;
-	if ($side=="left"):
-		$tablewidth=$tablewidth+$distance;
-	endif;
-	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=$tablewidth>";
+	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>";
 	if ($side=="left"):
 		echo "<TR>";
 		if ($offset>=0):
-			echo "<TD valign=top rowspan=3 width=$distance>";
-			spc(1,$off);
-			echo "<BR><IMG SRC='gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR></TD>";
+			echo "<TD valign=top rowspan=3><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=$off BORDER=0><BR><IMG SRC='gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR></TD>";
 		else:
-			echo "<TD valign=bottom rowspan=3 width=$distance><IMG SRC='gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR>";
-			spc(1,$off);
-			echo "<BR></TD>";
+			echo "<TD valign=bottom rowspan=3><IMG SRC='gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=$off BORDER=0><BR></TD>";
 		endif;
 	else:
 		if ($offset>=0):
-			echo "<TR><TD colspan=3 align=left width=$width>";
-			spc($off,1);
-			echo "<IMG SRC='gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0><BR></TD></TR>";
+			echo "<TR><TD colspan=3 align=left><IMG SRC='gifs/spacer.gif' WIDTH=$off HEIGHT=1 BORDER=0><IMG SRC='gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0><BR></TD></TR>";
 		else:
-			echo "<TR><TD colspan=3 align=right width=$width><IMG SRC='gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0>";
-			spc($off,1);
-			echo "<BR></TD></TR>";
+			echo "<TR><TD colspan=3 align=right><IMG SRC='gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0><IMG SRC='gifs/spacer.gif' WIDTH=$off HEIGHT=1 BORDER=0><BR></TD></TR>";
 		endif;	
 		echo "<TR VALIGN=top>";
 	endif;
-	echo "<TD width=9><IMG SRC='gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD BACKGROUND='gifs/kick-bt.gif' width=$innerwidth>";
-	spc(1,10);
-	echo "<BR></TD><TD width=10><IMG SRC='gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bt.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR>";
-	echo "<TR VALIGN=top><TD BACKGROUND='gifs/kick-bl.gif' width=9>";
-	spc(9,1);
-	echo "<BR></TD><TD BACKGROUND='gifs/kick-bg.gif' width=$innerwidth><FONT FACE='TAHOMA,ARIAL' SIZE=-1>";
+	echo "<TR VALIGN=top>";
+	echo "<TD BACKGROUND='gifs/kick-bl.gif'><IMG SRC='gifs/spacer.gif' WIDTH=9 HEIGHT=1 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bg.gif'><FONT FACE='TAHOMA,ARIAL' SIZE=-1>";
 };
 
 function kickFooter() {
-	echo "</TD><TD BACKGROUND='gifs/kick-br.gif' width=10>";
-	spc(10,1);
-	echo "<BR></TD></TR><TR VALIGN=top>";
-	echo "<TD width=9><IMG SRC='gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD BACKGROUND='gifs/kick-bb.gif' width=$innerwidth>";
-	spc(1,10);
-	echo "<BR></TD><TD width=10><IMG SRC='gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "</TD>";
+	echo "<TD BACKGROUND='gifs/kick-br.gif'><IMG SRC='gifs/spacer.gif' WIDTH=10 HEIGHT=1 BORDER=0><BR></TD></TR>";
+	echo "<TR VALIGN=top>";
+	echo "<TD><IMG SRC='gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bb.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD><IMG SRC='gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR></TABLE>";
 };
 
@@ -91,6 +72,16 @@ function commonHeader($title) {
 <HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
+
+<!-- Kick outs -->
+<SCRIPT LANGUAGE="Javascript1.2">
+<!--  
+document.writeln("<STYLE TYPE='text/css'>");
+document.writeln("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 220 px; LEFT: 144px;}");
+document.writeln("#searchKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 38 px; LEFT: 200px;}");
+document.writeln("</STYLE>");
+//--->
+</SCRIPT>
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--  
@@ -222,38 +213,7 @@ if (IE4) LoadImgs();
 </SCRIPT>
 </HEAD>
 
-<BODY OnLoad="LoadImgs()" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0><A NAME="top">
-<IMG SRC="gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
-<!-- Kick outs -->
-<SCRIPT LANGUAGE="Javascript1.2">
-<!--
-screenWidth=document.bigspacer.width;
-searchPosLeft=screenWidth - 320;
-searchPosTop=40;
-mirrorPosLeft=143;
-mirrorPosTop=230;
-
-if (IE4) {
-	searchPosLeft+=4;
-	searchPosTop+=15;
-	mirrorPosLeft+=4;
-	mirrorPosTop+=16;
-}
-
-document.writeln("<STYLE TYPE='text/css'>");
-document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
-document.write(mirrorPosTop);
-document.write("px; LEFT: ");
-document.write(mirrorPosLeft);
-document.writeln("px;}");
-document.write("#searchKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
-document.write(searchPosTop);
-document.write("px; LEFT: ");
-document.write(searchPosLeft);
-document.writeln("px;}");
-document.writeln("</STYLE>");
-//-->
-</SCRIPT>
+<BODY OnLoad="LoadImgs()" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINHEIGHT=3 MARGINWIDTH=5><A NAME="top">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 <TR valign=top>
 <TD ALIGN=left width=150>
@@ -261,8 +221,8 @@ document.writeln("</STYLE>");
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<?spc(15,67);?><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
-<?spc(1,10);?><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=67 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
 <TR VALIGN=top>
 <TD ALIGN=left>
@@ -279,7 +239,7 @@ document.writeln("</STYLE>");
 <TD align=left width="100%">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=middle BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TD ALIGN=left><?spc(5,1);?><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1><B>
+<TD ALIGN=left><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=1 BORDER=0><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1><B>
 <!-- start title -->
 <? echo $title;?>
 <!-- end title -->
@@ -316,7 +276,7 @@ function commonFooter() {
 </TR>
 
 <TR valign=top>
-<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><?spc(150,1);?></TD>
+<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><IMG SRC="gifs/spacer.gif" WIDTH=150 HEIGHT=1 BORDER=0></TD>
 <TD ALIGN=left width=100%><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
 </TR>
 
@@ -326,7 +286,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TR VALIGN=bottom>
 <TD ALIGN=left>
-<?spc(1,3);?><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=3 BORDER=0><BR>
 <A HREF="#top" onMouseover="hide();change('cred',1);" ><IMG SRC="gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
 <A HREF="#top" onMouseover="hide();change('top',1);" ><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
@@ -350,7 +310,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><?spc(10,36);?><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
 <TD><IMG SRC="gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR></TD>
 </TR></TABLE>
 
@@ -362,10 +322,10 @@ function commonFooter() {
 
 <!-- Kick outs -->
 <SCRIPT LANGUAGE="Javascript1.2">
-<!--
+<!--  
 
 document.write("<DIV ID='mirrorsKick'>");
-document.write("<? kickHeader(-20,'left',25,300);?>");
+document.write("<? kickHeader(62,'left',13);?>");
 document.write("<FORM ACTION='redirect.php3' METHOD='POST'>");
 document.write("<B>Pick a mirror site close to you:</B><BR>");
 document.write("<SELECT NAME='URL'>");
@@ -379,13 +339,14 @@ while ($site = key($mirror_sites)):
 	if ($type==1):
 		echo "<OPTION VALUE='$site'>$place";
 	endif;
-endwhile;?>");
+endwhile;
+?>");
 document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0></FORM>");
 document.writeln("<? kickFooter();?></DIV>");
 
 document.write("<DIV ID='searchKick'>");
-document.write("<? kickHeader(-35,'top',25,300);?>");
-document.write("<FORM ACTION='search.php3' METHOD='POST'>");
+document.write("<? kickHeader(-15,'top',25);?>");
+document.write("<FORM ACTION='search.php' METHOD='POST'>");
 document.write("<B>What are you searching for:</B><BR>");
 document.write("<FONT SIZE=+0><input type='text' name='pattern' size=20></FONT><BR>");
 document.write("<FONT SIZE=-2>");
@@ -397,7 +358,7 @@ document.writeln("<? kickFooter();?></DIV>");
 
 layers = 1;
 
-//--->
+//-->
 </SCRIPT>
 
 </BODY>
