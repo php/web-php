@@ -7,7 +7,7 @@
 
 <p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
 <a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently
-in a public ALPHA testing period, which means you should go ahead and play with it, but probably shouldn't use it
+in a public BETA testing period, which means you should go ahead and play with it, but probably shouldn't use it
 in your production site just yet.  We highly recommend you try this version (it can run alongside PHP/FI 2.0)
 in order to help us find bugs, and in order for you to see what's new and improved.
 
