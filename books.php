@@ -677,6 +677,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "PostgreSQL - Guia de Consulta Rapida",
+    /* title_link   */ "http://www.niederauer.com.br/livros.php#postgres",
+    /* author[s]    */ "Juliano Niederauer",
+    /* auth link[s] */ "",
+    /* image        */ "guiapg.gif",
+    /* information  */ "novatec, ISBN 85-7522-012-8, 128 pages",
+    /* inform. link */ "",
+    /* language     */ "pt_BR"
+  ),
+
+  array(
     /* title[s]     */ "MySQL and mSQL (Nutshell Series)",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565924347/wwwphpnet",
     /* author[s]    */ array("Randy Jay Yarger","George Reese","Tim King"),
