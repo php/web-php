@@ -122,8 +122,8 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 <li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl</li>
 
-<li><a href="http://www.devnetwork.net/">PHP developper network</a><br>
-The PHP Developer's Network was founded to provide the PHP Community with
+<li><a href="http://www.devnetwork.net/">PHP Developers' network</a><br>
+The PHP Developers' Network was founded to provide the PHP Community with
 a set of solid sites that work together to promote the PHP language and 
 provide a large resource for the community as a whole.
 </li>
