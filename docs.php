@@ -67,7 +67,7 @@ the table below.
 <?php
 
   foreach ($man_languages as $langnum => $langcode) {
-    echo '<a href="/manual/' . $langcode . '/html/">' . $LANGUAGES[$langcode] . '</a>';
+    echo '<a href="/manual/' . $langcode . '/html/index.html">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ", " : "";
   }
 
