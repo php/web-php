@@ -200,7 +200,7 @@ Restrict the search to:<br></td>
 			if ($base == "-") {
 				echo $result[$i];
 			} else {
-				echo eregi_replace("http://[^.]+\.php\.net/","$base/",$result[$i]);
+				echo eregi_replace("http://[^.]+\.php\.net/",htmlspecialchars("$base/"),$result[$i]);
 			}
 			echo "\n";
 			$i++;
