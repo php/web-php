@@ -7,7 +7,7 @@ function makeMail($mail) {
 	echo "<A HREF=\"mailto:$mail\">$mail</A>";
 };
 
-function makeName($name,$email,$size=0) {
+function makeName($name,$email,$size) {
 	echo "<DT>";
 	if ($size!=0):
 		echo "<FONT SIZE=+$size><B>$name</B></FONT> - \n";
@@ -95,55 +95,55 @@ function makeName($name,$email,$size=0) {
 <TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
 <DL>
 
-<? makeName("Bjørn Borud","borud@guardian.no");?>
+<? makeName("Bjørn Borud","borud@guardian.no",0);?>
   <UL TYPE=DISC><li>soundex code and lots of enthusiasm</UL><BR>
 
-<? makeName("Dean Gaudet","dgaudet@arctic.org");?>
+<? makeName("Dean Gaudet","dgaudet@arctic.org",0);?>
   <UL TYPE=DISC><li>Apache module debugging + helpful hints along the way</UL><BR>
 
-<? makeName("Mitch Golden","mgolden@interport.net");?>
+<? makeName("Mitch Golden","mgolden@interport.net",0);?>
   <UL TYPE=DISC><li>Oracle testing and bug fixes</UL><BR>
 
-<? makeName("Simon Gornall","simon@oyster.co.uk");?>
+<? makeName("Simon Gornall","simon@oyster.co.uk",0);?>
   <UL TYPE=DISC><li>Illustra</UL><BR>
 
-<? makeName("Mark Henderson","mark@togglemedia.com");?>
+<? makeName("Mark Henderson","mark@togglemedia.com",0);?>
   <UL TYPE=DISC><li>Various odds and ends</UL><BR>
 
-<? makeName("Jaakko Hyvätti","jaakko@hyvatti.iki.fi");?>
+<? makeName("Jaakko Hyvätti","jaakko@hyvatti.iki.fi",0);?>
   <UL TYPE=DISC><li>Prototype cop, regular expression code fixes and CGI security issues</UL><BR>
 
-<? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de");?>
+<? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de",0);?>
   <UL TYPE=DISC><li>Adabas D, ODBC</UL><BR>
 
-<? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed");?>
+<? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
   
-<? makeName("Jeroen van der Most","jvdmost@digiface.nl");?>
+<? makeName("Jeroen van der Most","jvdmost@digiface.nl",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
-<? makeName("Chad Robinson","chadr@brttech.com");?>
+<? makeName("Chad Robinson","chadr@brttech.com",0);?>
   <UL TYPE=DISC><li>Documentation, FilePro</UL><BR>
 
-<? makeName("John Robinson","john@intelligent.co.uk");?>
+<? makeName("John Robinson","john@intelligent.co.uk",0);?>
   <UL TYPE=DISC><li>Postgres</UL><BR>
 
-<? makeName("Lachlan Roche","lr@www.wwi.com.au");?>
+<? makeName("Lachlan Roche","lr@www.wwi.com.au",0);?>
   <UL TYPE=DISC><li>MD5</UL><BR>
   
-<? makeName("Brian Schaffner","brian@tool.net");?>
+<? makeName("Brian Schaffner","brian@tool.net",0);?>
   <UL TYPE=DISC><li>ODBC Support, PHP3 API testing</UL><BR>
 
-<? makeName("sopwith@redhat.com","sopwith@redhat.com");?>
+<? makeName("sopwith@redhat.com","sopwith@redhat.com",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
-<? makeName("Adam Sussman","asussman@vidya.com");?>
+<? makeName("Adam Sussman","asussman@vidya.com",0);?>
   <UL TYPE=DISC><li>Postgres</UL><BR>
 
-<? makeName("Colin Viebrock","cmv@privateworld.com");?>
+<? makeName("Colin Viebrock","cmv@privateworld.com",0);?>
   <UL TYPE=DISC><li>Website graphic design and layout, PHP logo</UL><BR>
 
-<? makeName("Lars Torben Wilson","cslawi@uta.fi");?>
+<? makeName("Lars Torben Wilson","cslawi@uta.fi",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
 
 </DL>
