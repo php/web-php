@@ -2,7 +2,7 @@
 require_once 'prepend.inc';
 
 // Set variable defaults
-$NEXT = $PREV = $UP = $HOME = array(false, false);
+$NEXT = $PREV = $UP = $HOME = $PGI = array(false, false);
 $TOC = array(); $SIDEBAR_DATA = '';
 
 // If we don't know anything about printing, set it to false
@@ -11,13 +11,14 @@ if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
 // Set up variables containing navigational information
 // for this page and page part of the manual
 function setupNavigation($data) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $tstamp;
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $PGI, $tstamp;
     $HOME = @$data["home"];
     $HOME[0] = "./";
     $NEXT = @$data["next"];
     $PREV = @$data["prev"];
     $UP   = @$data["up"];
-    $TOC =  @$data["toc"];
+    $TOC  = @$data["toc"];
+    $PGI  = @$data["this"];
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
@@ -272,16 +273,15 @@ function sendManualHeaders($charset,$lang) {
 // Print out manual page header.
 function manualHeader()
 {
-    global $PRINT_PAGE;
+    global $PRINT_PAGE, $PGI;
     
-    // XSL sheets provide params in [id, title]
-    // order, while old DSSSL sheets provide them
-    // in [title, id] order
-    $args = func_get_args();
-    if (strpos($args[0], ".php") > 0) {
-        $id = $args[0]; $title = $args[1];
+    // XSL sheets provide params in the 'this' array
+    // element configured above, while old DSSSL sheets
+    // provide info via two parameters [title, id]
+    if (func_num_args() > 0) {
+        list($title, $id) = func_get_args();
     } else {
-        $title = $args[0]; $id = $args[1];
+        list($id, $title) = $PGI;
     }
     
     if ($PRINT_PAGE) {
@@ -297,16 +297,15 @@ function manualHeader()
 // Print out manual footer
 function manualFooter()
 {
-    global $PRINT_PAGE, $PRINT_NOTES;
+    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
 
-    // XSL sheets provide params in [id, title]
-    // order, while old DSSSL sheets provide them
-    // in [title, id] order
-    $args = func_get_args();
-    if (strpos($args[0], ".php") > 0) {
-        $id = $args[0]; $title = $args[1];
+    // XSL sheets provide params in the 'this' array
+    // element configured above, while old DSSSL sheets
+    // provide info via two parameters [title, id]
+    if (func_num_args() > 0) {
+        list($title, $id) = func_get_args();
     } else {
-        $title = $args[0]; $id = $args[1];
+        list($id, $title) = $PGI;
     }
     
     if ($PRINT_PAGE) {
