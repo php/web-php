@@ -13,10 +13,10 @@ $server = $SERVER_NAME;
 
 <h2>Win32 Binaries</h2>
 <ul>
-  <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6"); ?> - 23 June 2001<br>
+  <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6 zip package"); ?> - 23 June 2001<br>
   (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
   support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php406-installer.exe", "PHP 4.0.6"); ?> - 23 June 2001<br>
+  <li><?php download_link("php406-installer.exe", "PHP 4.0.6 installer"); ?> - 23 June 2001<br>
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
@@ -56,19 +56,19 @@ $server = $SERVER_NAME;
     <ul>
       <li><?php download_link("php-4.0.5.tar.gz", "Source Code"); ?></li>
       <li><?php download_link("php-4.0.5-Win32.zip", "Windows Binary (zip)"); ?></li>
-    </ul>
+    </ul><br>
   </li>
   <li>PHP 4.0.4pl1
     <ul>
       <li><?php download_link("php-4.0.4pl1.tar.gz", "Source Code"); ?></li>
       <li><?php download_link("php-4.0.4pl1-Win32.zip", "Windows Binary"); ?></li>
-    </ul>
+    </ul><br>
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
       <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?></li>
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary"); ?></li>
-    </ul>
+    </ul><br>
   </li>
   <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files</li>
 </ul>
