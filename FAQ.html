@@ -609,6 +609,18 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
   <P>
   </DD>
 
+  <TD><B>
+    I patched Apache with the FrontPage extensions patch, and suddenly PHP stopped
+    working.  Is PHP incompatible with the Apache FrontPage extensions?
+  </B></DT>
+  <DD>
+    No, PHP works fine with the FrontPage extensions.
+    The problem is that the FrontPage patch modifies several Apache structures,
+    that PHP relies on.
+    Recompiling PHP (using 'make clean ; make') after the FP patch is applied
+    would solve the problem.
+  </DD>
+
   <DT><B>
     I think I found a bug! Who should I tell?
   </B></DT>
