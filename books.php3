@@ -99,6 +99,34 @@ by J&ouml;rg Krause<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709"
+><IMG SRC="/gifs/709.jpg" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709
+"
+>Pages Web dynamiques avec ASP, PHP, SQL</A><BR>
+by Jean-Marc Herellier and Philippe Merigod<BR>
+<SMALL>in French</SMALL><BR>
+<SMALL><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709
+">more info</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771"
+><IMG SRC="/gifs/771.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771"
+>Programmation PHP</A><BR>
+by Leon Atkinson<BR>
+<SMALL>French translation of Leon Atkinson's book</SMALL><BR>
+<SMALL><A HREF="http://www.campuspress.fr/store/book_info.asp?id=771">more info</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.kosek.cz/php/index.html"
 ><IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
