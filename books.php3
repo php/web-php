@@ -130,7 +130,7 @@ by Jung Jinho<BR>
 ><IMG SRC="/gifs/korean_book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
-PHP Web-DB Programming Guide<BR>
+PHP Web Programming with ORACLE Database<BR>
 by Kim SungSik<BR>
 <SMALL>in Korean<BR>
 <A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D87939%2D26%2DX">more info</A> |
