@@ -25,7 +25,7 @@ or at the <a href="http://il.php.net/vote_listing.php3">votes so far</a>.
 		<select name="choice" size="3">
 			<option value="1">PHP HTML Preprocessor
 			<option value="2">PHP Hypertext Preprocessor
-			<option vlaue="3">PHP Hypermedia Preprocessor
+			<option value="3">PHP Hypermedia Preprocessor
 		</select>
 	</td>
 </tr>

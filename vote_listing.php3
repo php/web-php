@@ -44,6 +44,22 @@ $external_processing_function="external_processing";
 
 table_wrapper();
 
+$res1 = mysql_result(mysql_query("select count(*) from name_vote where choice=1"),0,0);
+$res2 = mysql_result(mysql_query("select count(*) from name_vote where choice=2"),0,0);
+$res3 = mysql_Result(mysql_query("select count(*) from name_vote where choice=3"),0,0);
+
+?>
+
+<h3>Summary</h3>
+<table border="1">
+<tr><th>Name</th><th>Votes</th></tr>
+<tr><td>PHP HTML Preprocessor</td><td align="center"><? print $res1; ?></td></tr>
+<tr><td>PHP Hypertext Preprocessor</td><td align="center"><? print $res2; ?></td></tr>
+<tr><td>PHP Hypermedia Preprocessor</td><td align="center"><? print $res3; ?></td></tr>
+<tr><th>Total</th><td align="center"><? print $res1+$res2+$res3; ?></td></tr>
+</table>
+
+<?
 
 commonFooter();
 
