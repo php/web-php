@@ -34,6 +34,8 @@ commonHeader("Documentation ");
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
 
+<li><A href="/cvs.php3">Getting a CVS account</a>.  If you wish to help out
+with the development of PHP, read this.
 </ul>
 
 <? commonFooter("") ?>

@@ -32,7 +32,7 @@ things with a news reader, you can read it at <a href="news://news.netimages.com
 <P> If you are interested in helping out with the
 development of PHP3 you should join the developers'
 list by sending an empty message to <a href="mailto:
-php-dev-subscribe@php.iquest.net">php-dev-subscribe@php.iquest.net</a>.
+php-dev-subscribe@lists.php.net">php-dev-subscribe@lists.php.net</a>.
 
 <h3>Sample Code</h3>
 Looking for some more sample PHP scripts?  Our <A
