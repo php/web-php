@@ -105,10 +105,10 @@ was at the Sheraton San Diego Hotel and Marina
 in San Diego, California between July 23-27, 2001.
 Some presentations, you can see online:</p>
 <ul>
-  <li>Rasmus Lerdorf's <a href="http://conf.php.net/pres/index.php?p=slides%2Fintro&id=or2001">PHP - Spinal Injection</a></li>
-  <li>Thies Arntzen on <a href="http://conf.php.net/pres/index.php?p=slides%2Foci&id=oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
-  <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/pres/index.php?p=slides%2Fgtk&id=sd-gtk">PHP-GTK</a></li>
-  <li>Jon Parise on <a href="http://conf.php.net/pres/index.php?p=slides%2Fpear&id=pear2">The PHP Extension and Application Repository</a></li>
+  <li>Rasmus Lerdorf's <a href="http://conf.php.net/or2001">PHP - Spinal Injection</a></li>
+  <li>Thies Arntzen on <a href="http://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+  <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/sd-gtk">PHP-GTK</a></li>
+  <li>Jon Parise on <a href="http://conf.php.net/pear2">The PHP Extension and Application Repository</a></li>
 </ul>
 
 <p>
