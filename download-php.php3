@@ -2,7 +2,7 @@
 require("shared.inc");
 
 $current = "3.0RC4";
-$win32_current = "3.0RC3";
+$win32_current = "3.0RC4";
 
 $filesizes["php-3.0RC4.tar.gz"]="~ 960KB";
 $filesizes["php-3.0RC4-win32.exe"]="~ 1090KB";
