@@ -13,6 +13,7 @@ site_header("News Archive - 1998");
  See more archives for <?php print_news_links(); ?>.
 </p>
 
+<div class="newspage">
 <hr />
 
 <h1>PHP 3.0.6 has been released!</h1>
@@ -92,5 +93,7 @@ site_header("News Archive - 1998");
  <span class="newsdate">[25-Jan-1998]</span>
  Report or check on bugs in the PHP 3 Bug Database.
 </p>
+
+</div>
 
 <?php site_footer(); ?>

@@ -13,6 +13,7 @@ site_header("News Archive - 1999");
  See more archives for <?php print_news_links(); ?>.
 </p>
 
+<div class="newspage">
 <hr />
 
 <h1>The Mars Polar Lander and PHP</h1>
@@ -118,5 +119,7 @@ site_header("News Archive - 1999");
  <a href="http://www.zend.com/">Zend Web site</a> for more
  information!
 </p>
+
+</div>
 
 <?php site_footer(); ?>

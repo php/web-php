@@ -13,6 +13,7 @@ site_header("News Archive - 2000");
  See more archives for <?php print_news_links(); ?>.
 </p>
 
+<div class="newspage">
 <hr />
 
 <h1>PHP 4.0.4 Released</h1>
@@ -166,5 +167,7 @@ site_header("News Archive - 2000");
  functions for gd make this release a must for every user of PHP. The
  ChangeLog provides a complete list of changes.
 </p>
+
+</div>
 
 <?php site_footer(); ?>

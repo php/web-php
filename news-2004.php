@@ -13,6 +13,7 @@ site_header("News Archive - 2004");
  See more archives for <?php print_news_links(); ?>.
 </p>
 
+<div class="newspage">
 <hr />
 
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
@@ -149,5 +150,7 @@ site_header("News Archive - 2004");
  <a href="http://www.pawscon.com/register">Purchase your tickets</a> today for this
  one of a kind conference!
 </p>
+
+</div>
 
 <?php site_footer(); ?>

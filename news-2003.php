@@ -13,6 +13,7 @@ site_header("News Archive - 2003");
  See more archives for <?php print_news_links(); ?>.
 </p>
 
+<div class="newspage">
 <hr />
 
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
@@ -797,5 +798,7 @@ site_header("News Archive - 2003");
  Unix support is considered stable, while Windows and Darwin are still
  of beta-quality.
 </p>
+
+</div>
 
 <?php site_footer(); ?>

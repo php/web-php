@@ -70,6 +70,9 @@ hr {
 	height: 1px;
 	/* clear: both; has problems in IE and Opera */
 }
+.newspage .hr {
+	clear: both;
+}
 
 .center {
 	text-align: center;
