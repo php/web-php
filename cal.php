@@ -393,7 +393,7 @@ foreach($re as $k=>$v) {
 					$err = "Invalid start date - please correct it<br>\n";
 					$a=1;
 				} else {
-					mysql_query("insert into phpcal values (0,'$syear-$smonth-$sday',NULL,NULL,'$sdesc','$url','$ldesc',1,0,NULL)") or $err=mysql_error();
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,'$syear-$smonth-$sday',NULL,NULL,'$sdesc','$url','$ldesc',1,0,NULL)") or $err=mysql_error();
 				}
 				break;
 			case 'multi':
@@ -408,14 +408,14 @@ foreach($re as $k=>$v) {
 				} elseif($smonth==$emonth && $sday==$eday && $syear==$eyear) {
 					$err = "Your start and end dates are identical - please correct this<br>\n"; $a=1;
 				} else {
-					mysql_query("insert into phpcal values (0,'$syear-$smonth-$sday','$eyear-$emonth-$eday',NULL,'$sdesc','$url','$ldesc',2,0,NULL)") or $err=mysql_error();
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,'$syear-$smonth-$sday','$eyear-$emonth-$eday',NULL,'$sdesc','$url','$ldesc',2,0,NULL)") or $err=mysql_error();
 				}
 				break;
 			case 'recur':
 				if(!is_numeric($recur) || !is_numeric($recur_day)) {
 					$err = "Recurring event sequence is invalid - please correct it<br>\n"; $a=1;
 				} else {
-					mysql_query("insert into phpcal values (0,NULL,NULL,'$recur:$recur_day','$sdesc','$url','$ldesc',3,0,NULL)") or $err=mysql_error();
+					mysql_query("insert into phpcal (id,sdato,edato,recur,sdesc,url,ldesc,tipo,approved,app_by) values (0,NULL,NULL,'$recur:$recur_day','$sdesc','$url','$ldesc',3,0,NULL)") or $err=mysql_error();
 				}
 				break;
 		}
