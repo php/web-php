@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /source.php
+Disallow: /manual/add-note.php
