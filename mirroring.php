@@ -111,8 +111,7 @@ commonHeader("Mirroring The PHP Website");
      ErrorDocument 404 /error/index.php
      
      # Add types not specified by Apache by default
-     AddType application/octet-stream .chm
-     AddType application/octet-stream .bz2
+     AddType application/octet-stream .chm .bz2 .tgz
      AddType application/x-pilot .prc .pdb 
 
      # Set mirror's preferred language here
