@@ -53,26 +53,29 @@ i2c_go();
 function i2c_go()
 {
     global $_SERVER, $_COOKIE;
-    
+
     // User already has a country detected
     if (!empty($_COOKIE['COUNTRY'])) { return TRUE; }
-    
+
     // User is behind a proxy
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
         $ipnum = i2c_ip2num($_SERVER['HTTP_X_FORWARDED_FOR']);
     }
-     
+
     // This is the real IP of the user
     else {
         $ipnum = i2c_ip2num($_SERVER['REMOTE_ADDR']);
     }
-    
+
     // Find the index to start search from
     $idx = i2c_search_in_index($ipnum);
-    
+
     // Search in the database from the given index
     $country = i2c_search_in_db($ipnum, $idx);
-    
+
+    // Simulate cookie
+    $_COOKIE['COUNTRY'] = $country;
+
     // Set the country in a cookie for a week and for all *.php.net servers
     return setcookie("COUNTRY", $country, time() + 60*60*24*7, '/', '.php.net');
 }
