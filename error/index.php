@@ -80,9 +80,10 @@ if ($uri[0] == "/") { $uri = substr($uri,1); }
 // Printer friendly manual page handling. It's important that this is included,
 // and not redirected, as this way all relative URL's will retain their meaning
 // and point to pages relative to the print dir (which is nonexistent)
-if (preg_match("!^manual/(\\w+)/print/(.+\\.php)$!", $uri, $parts)) {
+if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
-    include "../manual/$parts[1]/$parts[2]";
+    if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
+    include "../manual/$parts[1]/$parts[3]";
     exit;
 }
 
@@ -94,8 +95,9 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts)) {
 }
 
 // The index file needs to be handled in a special way
-elseif (preg_match("!^manual/(\\w+)/(print|html)(/)?$!", $uri, $parts)) {
+elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $uri, $parts)) {
     $PRINT_PAGE = TRUE;
+    if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
     include "../manual/$parts[1]/index.php";
     exit;
 }
