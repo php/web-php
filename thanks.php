@@ -39,7 +39,7 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.redundant.com/">Redundant Networks</a> provides
+ <a href="http://www.hostedsolutions.com/">Hosted Solutions</a> provides
  the server and bandwidth that run various services and websites
  for php.net.
 </p>
@@ -47,11 +47,6 @@ site_header("Thanks");
 <p>
  <a href="http://www.servercentral.net/">Server Central</a> provides 
  a powerful box and connection which runs various services and sites for php.net
-</p>
-
-<p>
- <a href="http://www.simplicato.com/?a=1007">Simplicato</a> provides a
- server and resources to help php.net.
 </p>
 
 <p>
