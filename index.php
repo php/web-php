@@ -146,6 +146,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://nosoftwarepatents.com/", "90x40_3.jpg", "No Software Patents"); ?>
+
+<h1>MySQL, RedHat and other partners started a new campaign against software patents</h1>
+<p>
+<span class="newsdate">[01-Nov-2004]</span>
+In order to boost more awareness of the pending software patent issues in the
+European Union&mdash;MySQL, ISP 1&amp;1, RedHat and other partners started
+a new portal "<a href="http://nosoftwarepatents.com">http://nosoftwarepatents.com</a>.
+The site is available in 10 different european languages and explains why
+software patents are bad, and how they might affect you. In order to learn
+more, or participate in events against software patents, have a look at the
+very informative <a href="http://nosoftwarepatents.com">website</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
 
 <h1>Zend's PHP 5 Coding Contest winners announced</h1>
