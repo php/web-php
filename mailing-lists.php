@@ -287,8 +287,8 @@ function output_lists_table($mailing_lists)
             } else { $larchive = FALSE; }
             echo '<td>' . ($larchive ? make_link("http://marc.theaimsgroup.com/?l=" . $larchive, 'yes') : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? make_link("news://news.php.net/" . $listinfo[6], 'yes') : 'n/a') . '</td>';
-            echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
-            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">' : 'n/a' ) . '</td>';
+            echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '" /></td>';
+            echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest" />' : 'n/a' ) . '</td>';
             echo "</tr>\n";
         }
     }
@@ -309,9 +309,9 @@ function output_lists_table($mailing_lists)
 
 <p align="center">
  <strong>Email:</strong>
- <input type="text" name="email" size="40" value="user@example.com">
- <input type="submit" name="action" value="Subscribe">
- <input type="submit" name="action" value="Unsubscribe">
+ <input type="text" name="email" size="40" value="user@example.com" />
+ <input type="submit" name="action" value="Subscribe" />
+ <input type="submit" name="action" value="Unsubscribe" />
 </p>
 
 </form>
