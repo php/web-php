@@ -161,10 +161,10 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
-  <li>PHP 4.2.1
+  <li>PHP 4.2.2
     <ul>
-      <li><?php download_link("php-4.2.1.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.2.1-Win32.zip", "Windows Binary (zip)"); ?></li>
+      <li><?php download_link("php-4.2.2.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.2.2-Win32.zip", "Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
   <li>PHP 4.1.2
