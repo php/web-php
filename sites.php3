@@ -186,6 +186,7 @@ right away.</blockquote>
 	site("Employee Benefit Placement System","ee-benefits.com/");
 	site("First USA Bank","www.firstusabank.com");
 	site("Insurance Bridge","www.insurancebridge.com");
+	site("Quicken.ca","www.quicken.ca");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
 	site("Wallstreet:Online","www.wallstreet-online.de");
 	siteEnd();
