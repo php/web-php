@@ -161,7 +161,7 @@ commonHeader("Mirroring php.net");
 
 <h1>Data Registered About Official Mirrors</h1>
 
-s<p>
+<p>
  Once you have done the above and your site appears to work, send
  a message to <a href="mailto:mirrors@php.net">mirrors@php.net</a>
  with the following information, and appropriate steps will be taken
