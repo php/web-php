@@ -1,4 +1,6 @@
 <?php
+/* $Id$ */
+
 // Sitewide functions
 include_once 'prepend.inc';
 
@@ -211,8 +213,8 @@ if (!isset($sect)) {
 else {?>
 <form method="post" action="<?php echo $PHP_SELF; ?>">
  <input type="hidden" name="sect" value="<?php echo clean($sect); ?>" />
- <input type="hidden" name="redirect" value="<?php echo clean($redirect); ?>" />
- <input type="hidden" name="lang" value="<?php echo clean($lang); ?>" />
+ <input type="hidden" name="redirect" value="<?php if (isset($redirect)) { echo clean($redirect); } ?>" />
+ <input type="hidden" name="lang" value="<?php if (isset($lang)) { echo clean($lang); } ?>" />
  <table border="0" cellpadding="5" cellspacing="0" bgcolor="#d0d0d0">
   <tr>
    <td colspan="2">
@@ -231,7 +233,7 @@ else {?>
   </tr>
   <tr valign="top">
    <td><b>Your notes:</b></td>
-   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php echo clean($note); ?></textarea><br>
+   <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($note)) { echo clean($note); } ?></textarea><br>
   </td>
   </tr>
   <tr>
