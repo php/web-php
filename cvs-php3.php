@@ -12,13 +12,19 @@ about stepping on each others' toes.
 <P>
 Please note that you do not need a CVS account to access the CVS tree.  See
 <a href="http://cvs.php.net">cvs.php.net</a> for details.  You only need your
-own CVS account if you plan on committing things to the CVS tree.
+own CVS account if you plan on committing things to the CVS tree.  <P>
+And once again since people just don't seem to understand this point.
+You do <b>NOT</b> need a CVS account to study PHP.  You do <b>NOT</b> need
+a CVS account to learn PHP, to use PHP or to in any way do anything at all
+with PHP.  If you are sitting there wondering if you need a CVS account, then
+you don't!
 <P>
-The first thing you need to do is to get a CVS account.  If you are not
-previously known to the PHP Development Team, then this is not an automatic
-process.  Your best bet is to send mail to <a href="mailto: group@php.net">
+Ok, if you are still reading, I assume you do actually need a CVS account.
+If you are not previously known to the PHP Development Team, then this is not 
+an automatic process.  Your best bet is to send mail to <a href="mailto: group@php.net">
 group@php.net</a> and explain what you have in mind and perhaps give a bit of
-background on yourself.<P>
+background on yourself.  If you were told by a PHP developer to come here and 
+fill out this form, you can skip sending the email to group@php.net.<P>
 
 If, you have already established yourself in the above manner you can submit
 a CVS account request here: (only the encrypted version of the password is sent)
@@ -48,7 +54,7 @@ three things are:
 <ul>
 <li><a href="http://viewcvs.php.net/">CVS Web Interface for our CVS repository</a>
 <li><a href="http://bugs.php.net/">PHP Bugs Database</a>
-<li><a href="http://www.php.net/manual/admin-notes.php3">Manual Errata Administration</a>
+<li><a href="http://www.php.net/manual/admin-notes.php">Manual Errata Administration</a>
 </ul>
 
 If you are not familiar with CVS, you should have a look at the various documentation resources available
