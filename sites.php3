@@ -221,6 +221,7 @@ right away.</blockquote>
 	title("ISPs");
 	siteStart();
 	site("Aidan Internet Solutions","www.aidan.net");
+	site("Active Studios","www.activestudios.net");
 	site("Alabanza","www.alabanza.com");
 	site("BestHost","besthost.net");
 	site("CocoNet Corporation","www.coconet.com");
