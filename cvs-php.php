@@ -204,7 +204,7 @@ account. In the box next to "Purpose", describe what it is that you intend to
 do with CVS access. If it isn't clear from what you've described already, tell
 us what parts of the CVS repository you need access to (for example, "phpdoc"
 is the documentation tree, "php4/ext/mysql" is the PHP 4 Mysql extension). If
-someone told you you to fill out the form here, make sure to mention them here!
+someone told you to fill out the form here, make sure to mention them here!
 </p>
 
 <p>
