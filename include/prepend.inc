@@ -28,7 +28,7 @@ include_once 'geoip.inc';
 include_once 'last_updated.inc';
 
 // Function used to import request vars to global scope.
-// Walks through $array, and import all values associated
+// Walks through $array, and imports all values associated
 // with elements listed in $keys to the global scope
 function import_vars(&$array, $keys)
 {
@@ -44,6 +44,9 @@ function import_vars(&$array, $keys)
             $GLOBALS[$keyname] = &$array[$keyname];
         }
     }
+    
+    // Sign of success
+    return TRUE;
 }
 
 ?>
