@@ -291,7 +291,7 @@ if (-d $fullname) {
 	print "</BODY></HTML>\n";
 } elsif (-f $fullname . ',v') {
       if ($input{'rev'} =~ /^([\d\.]+|HEAD)$/) {
-		&checkout($fullname, $input{'rev'});
+		&checkout($where, $input{'rev'});
 		exit;
 	}
 	if ($input{'r1'} && $input{'r2'}) {
@@ -429,10 +429,9 @@ sub safeglob {
 }
 
 sub checkout {
-	local($fullname, $rev) = @_;
-      $fullname =~ s|^$cvsroot/?||; # chop cvsroot from fullname
+	local($where, $rev) = @_;
 
-      open(RCS, "cvs -q -d$cvsroot co -p -r $rev '$fullname' 2>&1 |") ||
+	open(RCS, "cvs -q -d$cvsroot co -p -r $rev '$where' 2>&1 |") ||
 	    &fail("500 Internal Error", "Couldn't co: $!");
 	$| = 1;
 	print "Content-type: text/plain\n\n";
