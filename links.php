@@ -270,6 +270,7 @@ and employers can post their job notices.
  <li><a href="http://www.jobs.com/">Jobs.com</a></li>
  <li><a href="http://www.monster.com/">Monster.com</a></li>
  <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
+ <li><a href="http://mojolin.com/">Mojolin</a></li>
 </ul>
 
 <p>
