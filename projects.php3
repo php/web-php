@@ -220,18 +220,16 @@ practical for them to use. Muppet works in every browser we've tested so far, in
 <? endEntry();?>
 
 <? makeEntry("phpAds","www.htmlwizard.net/phpAds/","Tobias Ratschiller" ,"tobias@dnet.it"); ?>
-phpMyAdmin is intended to handle the adminstration of MySQL over the
-web. Currently it can:
+phpAds is a free banner management system for PHP. Currently it can
 <UL>
-<LI>create and drop databases
-<LI>create, copy, drop and alter tables
-<LI>delete, edit and add fields
-<LI>execute any SQL-statement, even batch-queries
-<LI>manage keys on fields
-<LI>load text files into tables
-<LI>create and read dumps of tables
-<LI>export data to CSV values
-<LI>administer multiple servers and single databases
+<LI>manage multiple clients (each with own login)
+<LI>manage multiple banners (any size) per client
+<LI>view daily, overall and summary statistics
+<LI>send statistics to clients via email
+<LI>use HTML, GIF, JPEG and PNG-banners
+<LI>show random, pre-defined or HTML/image banners
+<LI>show banners belonging to a specific group
+<LI>activate and de-activate individual banners
 </UL>
 <? endEntry();?>
 
