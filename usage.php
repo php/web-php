@@ -3,15 +3,15 @@ require_once 'prepend.inc';
 commonHeader("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for August 2002</h1>
+<h1>Usage Stats for September 2002</h1>
 
 <p>
-PHP: 9,370,482 Domains, 1,199,287 IP Addresses<br>
+PHP: 9,458,364 Domains, 1,191,872 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200208.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200209.png", "Graph"); ?>
 </p>
 <p>
 You can also see how popular PHP is relative to other Apache modules
