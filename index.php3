@@ -3,7 +3,6 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<!--
 <a href="http://www.zend.com/"><img align="right" src="zend_rgb-on-white1.gif" border="0"></a>
 <h3><b>Zend</b> has been announced</h3>
 <p>
@@ -11,7 +10,6 @@ commonHeader("PHP: Hypertext Preprocessor");
 on January 4th, 1999.<br>
 Visit the <a href="http://www.zend.com/">Zend Web site</a>!
 </p>
--->
 
 <h3>PHP 3.0.6 has been released!</h3>
 <p>
