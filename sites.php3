@@ -93,6 +93,7 @@ right away.</blockquote>
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
 	site("DevilNet at Duke University", "devilnet.duke.edu");
+	site("Devry Technical Institute Financial Aid","finance.devry.edu");
 	site("Digital Metrics","www.digitalmetrics.com");
 	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
 	site("GezondheidsNet","www.gezondheidsnet.nl");
@@ -112,8 +113,10 @@ right away.</blockquote>
 	site("FilmNetwork","www.fnw.de");
 	site("HitList","www.hitlist.com");
 	site("Independent Musicians Guild","www.scimg.com");
+	site("Kentucky Lottery","www.kylottery.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("Miss USA 1999","www.missusa.com");
+	site("My Video Store","www.myvideostore.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("Striving For Togetherness Records","www.striving.com");
@@ -253,6 +256,7 @@ right away.</blockquote>
 	site("Online Gaming Review","www.ogr.com");
 	site("PHP.CodeBase.Org","php.codebase.org");
 	site("The UNIX Network Archives","www.tuna.org");
+	site("Versions","www.versions.com");
 	siteEnd();
 
 /* Publishing Industry */
@@ -275,6 +279,7 @@ right away.</blockquote>
 	site("Christian Financial Concepts","cfcministry.org");
 	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
+	site("University Christian Fellowship Vineyard","www.ucf.org");
 	siteEnd();
 
 /* Retail - Service Industry */
@@ -286,10 +291,12 @@ right away.</blockquote>
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Delia*s Inc.","www.delias.com");
+	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("FurniturePoint.com","www.furniturepoint.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
+	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
 	site("Patagonia Clothing","www.patagonia.com");
