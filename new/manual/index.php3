@@ -2,11 +2,7 @@
 require("shared-manual.inc");
 manualHeader("Table of Contents");
 ?>
-<H1>PHP3 Manual</H1
-><H2
-></H2
-><P
->by Stig Sæther Bakken, Alexander Aulbach, Egon Schmid, Jim Winstead, Lars Torben Wilson, Rasmus Lerdorf, and Zeev Suraski</P
+by Stig Sæther Bakken, Alexander Aulbach, Egon Schmid, Jim Winstead, Lars Torben Wilson, Rasmus Lerdorf, and Zeev Suraski</P
 >
 Revision 3.0-dev<BR>
 1998-02-16<BR>
