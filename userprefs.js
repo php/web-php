@@ -115,11 +115,14 @@ function loadSuggestCode()
         }
     }
     if (searchEnabled && document.getElementsByTagName && document.createElement) {
-        if (head = document.getElementsByTagName("head") && head.length == 1) {
-          var scriptElem = document.createElement('script');
-          scriptElem.setAttribute('type', 'text/javascript');
-          scriptElem.setAttribute('src', '/functions.js');
-          head[0].appendChild(scriptElem);
+        var elems = document.getElementsByTagName("*");
+        for (var i = 0; i < elems.length; i++) {
+            if (elems[i].tagName.toLowerCase() == 'head') {
+                var scriptElem = document.createElement('script');
+                scriptElem.setAttribute('type', 'text/javascript');
+                scriptElem.setAttribute('src', '/functions.js');
+                elems[i].appendChild(scriptElem);
+            }
         }
     }
 }
