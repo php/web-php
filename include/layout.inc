@@ -233,16 +233,6 @@ function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
     return '<input type="image"' . substr($img, 4);
 }
 
-// Return a pipe delimiter
-function delim($color = FALSE)
-{
-    if (!$color) { return ' | '; }
-    return sprintf('<span style="color: %s"> | </span>', $color);
-}
-
-// A horizontal delimiter (parameter for backward compatibility)
-function hdelim($bc = FALSE) { return '<hr />'; }
-
 // Return a hiperlink to something within the site
 function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 {
