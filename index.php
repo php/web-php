@@ -43,6 +43,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br>
 &nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br>
 <h3>Community</h3>
+&nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br>
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
 
