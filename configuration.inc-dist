@@ -3,11 +3,6 @@
 $root_url = "/";
 $base_url = ereg_replace("[^/]*\$","",$PHP_SELF);
 
-$dbname = "php3";
-$dbhost="localhost";
-$dbuser="nobody";
-$dbpwd="";
-
 # see Mirrors-htdig.tgz
 $htsearch_prog="/local/htdig/bin/htphp.sh";
 ?>
