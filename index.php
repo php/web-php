@@ -230,9 +230,9 @@ Some of the more major changes include:
 </p>
 <p>
 <ul>
- <li>PHP5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
+ <li>PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
  <a href="/zend-engine-2.php">this</a> webpage.</li>
- <li>XML support has been completely redone in PHP5, all extensions are now focused around the 
+ <li>XML support has been completely redone in PHP 5, all extensions are now focused around the 
  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).</li>
  <li>SQLite has been bundled with PHP.  For more information on SQLite, please visit their 
  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.</li>
