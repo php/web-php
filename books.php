@@ -503,6 +503,20 @@ Coriolis, 1999, ISBN 1-57610-490-7, 316 pages<BR>
 </TD>
 </TR>
 
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/cmvsstuff"
+><IMG SRC="/gifs/cvspr.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0596000030/cmvsstuff"
+>CVS Pocket Reference</A><BR>
+by Gregor N. Purdy<BR>
+<SMALL>
+O'Reilly, August 2000, ISBN 0-5960-0003-0, 79 pages<BR>
+<A HREF="http://www.oreilly.com/catalog/cvspr/">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
 
 </TABLE>
 
