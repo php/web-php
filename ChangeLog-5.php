@@ -7,6 +7,89 @@ site_header("PHP 5 ChangeLog");
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0b3"></a>
+<h3>Version 5.0.0 Beta 3</h3>
+<b>21-Dec-2003</b>
+<ul>
+<li>Bundled new tidy extension (John, Wez)</li>
+<li>Upgraded PCRE library to version 4.5. (Andrei)</li>
+<li>Dropped Windows 95 support. (Andi)</li>
+<li>Moved extensions to PECL:</li>
+ <ul>
+  <li>ext/crack (Jani, Derick)</li>
+  <li>ext/db (Jani, Derick)</li>
+  <li>ext/mcal (Jani, Derick)</li>
+  <li>ext/qtdom (Jani, Derick)</li>
+  <li>ext/notes (Wez)</li>
+ </ul>
+<li>Added 'c' modifier to date() which returns the date in the ISO
+8601 format.  (Derick, Manuzhai)</li>
+<li>Added an optional parameter to microtime() to get the time as
+float. (Andrey)</li>
+<li>Added MacRoman encoding support to htmlentities(). (Derick,
+Marcus Bointon)</li>
+<li>Added possibility to call PHP functions as XSLT-functions.
+(Christian)</li>
+<li>Added possibility to prevent PHP from registering variables when
+input filter.  support is used. (Derick)</li>
+<li>Added iconv stream filter (convert.iconv.*). (Moriyoshi)</li>
+<li>Added EXSLT support in ext/xsl. (Christian)</li>
+<li>Added qdbm handler for dba extension. (mg at iceni dot pl, Marcus)</li>
+<li>Added new functions:</li>
+ <ul>
+  <li>dba_key_split() to split inifile keys in an array. (Marcus)</li>
+  <li>time_nanosleep() signal safe sleep (Magnus, Ilia)</li>
+  <li>headers_list(). (Sara)</li>
+  <li>php_strip_whitespace(). strip whitespace & comments from a
+  script. (Ilia)</li>
+  <li>php_check_syntax(). check php script for parse errors. (Ilia)</li>
+  <li>image_type_to_extension(). return extension based on image type.
+  (Ilia)</li>
+  <li>stream_socket_sendto() and stream_socket_recvfrom(). (Wez)</li>
+  <li>iconv_mime_decode_headers(). (Moriyoshi)</li>
+  <li>get_declared_interfaces(). (Andrey, Marcus)</li>
+  <li>sqlite_fetch_column_types(). (Ilia)</li>
+ </ul>
+<li>Added proxy support to http:// wrapper. (Sara)</li>
+<li>Added rename(), rmdir() and mkdir() support to userstreams.
+(Sara)</li>
+<li>Added rename(), rmdir() and mkdir() support to ftp:// wrapper.
+(Sara)</li>
+<li>Changed rename(), rmdir() and mkdir() to be routed via streams
+API. (Sara)</li>
+<li>Changed stat() and family to be routed via streams API. (Sara)</li>
+<li>Fixed include_once() / require_once() on Windows to honor
+case-insensitivity; of files. (Andi)</li>
+<li>Fixed get_declared_classes() to return only classes. (Andrey,
+Marcus)</li>
+<li>Fixed __autoload() to preserve case of the passed class name.
+(Andi)</li>
+<li>Fixed bug #26615 () (runekl at opoint dot com, Derick)</li>
+<li>Fixed bug #26591 ("__autoload threw an exception" during an
+uncaught). (Marcus)</li>
+<li>Fixed bug #26534 (stream_get_meta_data() -&gt; Access Violation).
+(Wez)</li>
+<li>Fixed bug #26528 (HTML entities are not being decoded by
+xml_parse()/xml_parse_into_struct()). (Ilia)</li>
+<li>Fixed bug #26182 (Object properties created redundantly). (Andi)</li>
+<li>Fixed bug #26156 (REPLACE_ZVAL_VALUE works on uninit stack-based
+zvals). (Moriyoshi)</li>
+<li>Fixed bug #26083 (Non-working write support in ext/dom). (Ilia)</li>
+<li>Fixed bug #26072 (--disable-libxml does not work). (Jani)</li>
+<li>Fixed bug #26001 (serialize crashes when accessing an overloaded
+object that has no properties (NULL hashtable)). (Wez)</li>
+<li>Fixed bug #25664 (COM crashes when calling a Delphi implementations
+of ITypeInfo). (Wez)</li>
+<li>Fixed bug #24837 (Incorrect behaviour of PPP using foreach).
+(Marcus)</li>
+<li>Fixed bug #24693 (Allow session.use_trans_sid to be
+enabled/disabled from inside the script). (Ilia)</li>
+<li>Fixed bug #24394 (Serializing cross-referenced objects causes
+segfault). (Moriyoshi)</li>
+</ul>
+
+<hr />
+
 <a name="5.0.0b2"></a>
 <h3>Version 5.0.0 Beta 2</h3>
 <b>30-Oct-2003</b>
