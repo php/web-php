@@ -98,7 +98,7 @@ function addPlugin()
 
 <p>
  The Mozilla search plugin mentioned above also works with Opera if
- <a href="http://nontroppo.org/wiki/SearchPluginsHelp">OpSed is installed</a>.
+ <a href="http://nontroppo.org/wiki/SearchPluginsHelp">OpSed</a> is installed.
  You just need to <a href="<?php echo $MYSITE; ?>phpnetsearch.src">click on
  this link</a> to add it to your set.
 </p>
