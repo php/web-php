@@ -90,6 +90,11 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html|tableless)(/)?$!", $URI,
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php";
     exit;
 }
+ 
+// Rediretion for printed page image displays
+elseif (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/figures/(.+)$!", $URI, $parts)) {
+  mirror_redirect("/manual/$parts[1]/figures/$parts[3]");
+}
 
 // ============================================================================
 // Some nice URLs for getting something for download
