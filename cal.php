@@ -327,14 +327,14 @@ function read_event($fp)
     // Corrupt line in CSV file
     if (count($linearr) < 12) { return FALSE; }
    
-    if(count($linearr==12) { 
+    if(count($linearr==12)) { 
         // Put the array elements into variables
         list(
             $day, $month, $year, $country,
             $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato
         ) = $linearr;
         $category = 0;
-    } elseif(count($linearr==13) {
+    } elseif(count($linearr==13)) {
         list(
             $day, $month, $year, $country,
             $sdesc, $id, $ldesc, $url, $recur, $tipo, $sdato, $edato, $category
