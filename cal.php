@@ -125,7 +125,7 @@ $eom = mktime(0, 0, 1, $cm+1, 0, $cy);
 // Link to previous month (but do not link to too early dates)
 $lm = mktime(0, 0, 1, $cm, 0, $cy);
 if (valid_year(date("Y", $lm))) {
-   $prev_link = '<a href="' . $PHP_SELF . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $lm);
+   $prev_link = '<a href="/cal.php' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $lm);
 } else {
    $prev_link = '&nbsp;';
 }
@@ -133,20 +133,20 @@ if (valid_year(date("Y", $lm))) {
 // Link to next month (but do not link to too early dates)
 $nm = mktime(0, 0, 1, $cm+1, 1, $cy);
 if (valid_year(date("Y", $nm))) {
-   $next_link = '<a href="' . $PHP_SELF . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
+   $next_link = '<a href="/cal.php' . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
 } else {
    $next_link = '&nbsp;';
 }
 
 // Print out navigation links for previous and next month
-echo '<br /><table bgcolor="#d0d0d0" width="100%" border="0" cellspacing="0" cellpadding="3">',
+echo '<br /><table id="calnav" width="100%" border="0" cellspacing="0" cellpadding="3">',
      "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>', 
      '<td align="center" width="33%">', strftime('<b>%B, %Y</b></td>', $bom),
      '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
 
 // Begin the calendar table
-echo '<table id="cal" bgcolor="#f0f0f0" width="100%" border="1" cellspacing="0" cellpadding="3">',
-     "\n",'<tr bgcolor="#a0a0a0">',"\n";
+echo '<table id="cal" width="100%" border="1" cellspacing="0" cellpadding="3">',
+     "\n",'<tr>',"\n";
 
 // Print out headers for weekdays
 for ($i = 0; $i < 7; $i++) {
@@ -156,15 +156,14 @@ echo "</tr>\n<tr>";
 
 // Generate the requisite number of blank days to get things started
 for ($days = $i = date("w",$bom); $i > 0; $i--) {
-    echo '<td bgcolor="#d0d0d0">&nbsp;</td>';
+    echo '<td class="notaday">&nbsp;</td>';
 }
 
 // Print out all the days in this month
 for ($i = 1; $i <= date("t",$bom); $i++) {
     
     // Print out day number and all events for the day
-    echo '<td valign="top"><a class="day" href="',
-         $PHP_SELF, "?cm=$cm&amp;cd=$i&amp;cy=$cy",
+    echo '<td><a class="day" href="/cal.php', "?cm=$cm&amp;cd=$i&amp;cy=$cy",
          '">',$i,'</a>';
     display_events_for_day(date("Y-m-",$bom).sprintf("%02d",$i), $events);
     echo '</td>';
@@ -175,7 +174,7 @@ for ($i = 1; $i <= date("t",$bom); $i++) {
 
 // Generate the requisite number of blank days to wrap things up
 for (; $days % 7; $days++) {
-    echo '<td bgcolor="#d0d0d0">&nbsp;</td>';
+    echo '<td class="notaday">&nbsp;</td>';
 }
 
 // End HTML table of events
@@ -210,7 +209,7 @@ function date_for_recur($recur, $day, $bom, $eom)
 function display_events_for_day($day, $events)
 {
     // For preservation of state in the links
-    global $PHP_SELF, $cm, $cy, $COUNTRY;
+    global $cm, $cy, $COUNTRY;
     
     // For all events, try to find the events for this day
     foreach ($events as $event) {
@@ -220,7 +219,7 @@ function display_events_for_day($day, $events)
          || ($event['start'] == $day)) {
             echo '<div class="event">',
                  ($COUNTRY == $event['country'] ? "<b>" : ""),
-                 '<a href="',$PHP_SELF,"?id=$event[id]&amp;cm=$cm&amp;cy=$cy",'">',
+                 '<a href="/cal.php',"?id=$event[id]&amp;cm=$cm&amp;cy=$cy",'">',
                  stripslashes(htmlentities($event['sdesc'])),
                  '</a>',
                  ($COUNTRY == $event['country'] ? "</b>" : ""),
