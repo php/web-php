@@ -47,7 +47,7 @@ if ($size) {
  The current mirror is highlighted in yellow, but you may have better luck
  with a different mirror, especially if the current mirror is busy. Mirror
  sites detected to be out of date or disfunctional are not listed for your
- convinience.
+ convenience.
 </p>
 
 <p align="center">
