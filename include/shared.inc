@@ -7,6 +7,16 @@ $IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = $HTDIG = false;
 
 $DISABLE_KICKOUTS = false;
 
+
+# prevent errors if the user is being paranoid
+# they should get the plain version of the site
+
+if (!isset($HTTP_USER_AGENT)) {
+	$HTTP_USER_AGENT = "none";
+}
+
+
+
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
