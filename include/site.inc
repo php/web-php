@@ -1,6 +1,6 @@
 <?
 $MIRRORS = array(
-   "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rsic", "http://www.nisu.flinders.edu.au/", 1),
+   "http://au.php.net:81/"        => array("au", "Flinders University of South Australia", "rcis", "http://www.nisu.flinders.edu.au/", 1),
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1),
    "http://php.privateworld.com/" => array("ca", "Private World", "pwc", "http://www.privateworld.com/", 1),
    "http://il.php.net/"           => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 1),
