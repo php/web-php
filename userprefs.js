@@ -3,7 +3,6 @@ function runOnLoad()
 {
     searchHistory();
     resizeColumnsIE();
-    loadSuggestCode();
 }
 
 // Get a value of one cookie set by it's name

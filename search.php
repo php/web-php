@@ -151,6 +151,7 @@ foreach ($searchoptions as $key => $value) {
   <input type="submit" value=" Search " />
  </p>
 </form>
+<script type="text/javascript">loadSuggestCode();</script>
 <?php
     }
     site_footer(array("functionsjs"));
