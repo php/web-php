@@ -44,7 +44,7 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 <h1>Mailing lists and CVS are up!</h1>
-<? print_link("http://www.pair.net/", make_image("pair.gif", "Pair Networks", "right") ); ?>
+<? print_link("http://www.pair.com/", make_image("pair.gif", "Pair Networks", "right") ); ?>
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
