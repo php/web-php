@@ -3,15 +3,15 @@ require_once 'prepend.inc';
 commonHeader("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for December 2001</h1>
+<h1>Usage Stats for January 2002</h1>
 
 <p>
-PHP: 7,261,540 Domains, 1,043,328 IP Addresses<br>
+PHP: 7,525,142 Domains, 1,079,999 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200112.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200201.png", "Graph"); ?>
 </p>
 <p>
 There has been some shakeout in the large-scale shared hosting space 
