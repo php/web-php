@@ -182,7 +182,7 @@ commonheader("PHP 4 ChangeLog");
 <li>Fixed bug <a href="http://bugs.php.net/20256">#20256</a> (snprintf() not defined on some systems). (Jani)</li>
 <li>Fixed bug <a href="http://bugs.php.net/19919">#19919</a> (crash in sapi_apache_header_handler under heavy load). (George)</li>
 <li>Fixed bug <a href="http://bugs.php.net/19795">#19795</a> (Problems with strnatcmp() / strnatcasecmp()). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17868">#17868</a> (multiple <!--include--> used to include PHP files crashes). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/17868">#17868</a> (multiple &lt;!--include--&gt; used to include PHP files crashes). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/17448">#17448</a> (Print the message when OCI_SUCCESS_WITH_INFO is returned). (Maxim)</li>
 <li>Fixed bug <a href="http://bugs.php.net/17098">#17098</a> (make Apache2 aware that PHP scripts should not be cached). (Ilia)</li>
 <li>Fixed bug <a href="http://bugs.php.net/16798">#16798</a> (Compile failure with LOB support for Oracle version &lt; 8.1). (Maxim)</li>
