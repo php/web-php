@@ -205,6 +205,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Country Detection</h1>
+<p>
+<font class="newsdate">[04-May-2003]</font>
+We are proud to introduce you the latest addition to our <a href="/my.php">My
+PHP.net</a> service. The PHP.net site and mirror sites now autodetect
+your country using the <a href="http://www.ip-to-country.com/">Directi
+Ip-to-Country Database</a>. We use this information to present events in
+your country in bold letters on the frontpage, and to offer close mirror
+sites for downloads and your usual daily work.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.2RC2 Released</h1>
 <p>
 <font class="newsdate">[29-Apr-2003]</font>
