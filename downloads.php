@@ -6,7 +6,6 @@ $server = $SERVER_NAME;
 
 <h1>Latest version of PHP 4.0</h1>
 
-
 <h2>Complete Source Code</h2>
 <ul>
   <li><?php download_link("php-4.0.6.tar.gz", "PHP 4.0.6"); ?> - 23 June 2001</li>
@@ -14,8 +13,13 @@ $server = $SERVER_NAME;
 
 <h2>Win32 Binaries</h2>
 <ul>
-  <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6"); ?> - 23 June 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php406-installer.exe", "PHP 4.0.6"); ?> - 23 June 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
+  <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6"); ?> - 23 June 2001<br>
+  (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
+  support built-in, many extensions included, packaged as zip)</li>
+  <li><?php download_link("php406-installer.exe", "PHP 4.0.6"); ?> - 23 June 2001<br>
+  (CGI only, MySQL support built-in, packaged as Windows installer to install and
+  configure PHP, and automatically configure IIS, PWS and Xitami, with manual
+  configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
 -->
@@ -32,9 +36,7 @@ $server = $SERVER_NAME;
 -->
 </ul>
 
-
 <?php echo hdelim(); ?>
-
 
 <h1>Other Downloads</h1>
 
@@ -47,23 +49,28 @@ $server = $SERVER_NAME;
 
 <?php echo hdelim(); ?>
 
-
 <h1>Older Versions of PHP</h1>
 
 <ul>
-  <li><?php download_link("php-4.0.5.tar.gz", "PHP 4.0.5"); ?> Source Code</li>
-  <li><?php download_link("php-4.0.5-Win32.zip", "PHP 4.0.5"); ?> Windows Binary</li>
-  <li><?php download_link("php-4.0.4pl1.tar.gz", "PHP 4.0.4pl1"); ?> Source Code</li>
-  <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> Windows Binary</li>
+  <li>PHP 4.0.5
+    <ul>
+      <li><?php download_link("php-4.0.5.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.0.5-Win32.zip", "Windows Binary (zip)"); ?></li>
+    </ul>
+  </li>
+  <li>PHP 4.0.4pl1
+    <ul>
+      <li><?php download_link("php-4.0.4pl1.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.0.4pl1-Win32.zip", "Windows Binary"); ?></li>
+    </ul>
+  </li>
   <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18"); ?> Source Code</li>
   <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17"); ?> Windows Binary</li>
-  <!-- <li><a href="download-php3.php">PHP 3.0</a> Source code and Win32 binaries  !-->
-  <li><A HREF="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files
+  <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files
 </ul>
 
 <p>
 <i>Older releases are listed for archeological purposes only. They are no longer supported.</i>
 </p>
-
 
 <?php commonFooter(); ?>
