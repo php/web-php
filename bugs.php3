@@ -67,6 +67,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if((string)$state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
 	if((string)$state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
 	if((string)$state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
+	if((string)$state!="Feedback") { echo "<option>Feedback\n"; }
 	if((string)$state!="Duplicate") { echo "<option>Duplicate\n"; }
 	if((string)$state!="All" && $show_all) { echo "<option>All\n"; }
 }
@@ -145,7 +146,6 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Misbehaving function",
 				   "FrontPage related",
 				   "Feature/Change Request",
-				   "Feedback Needed",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
@@ -283,6 +283,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				break;
 			case "Suspended":
 				return "#ffccbb";
+				break;
+			case "Feedback":
+				return "#bbeeff";
 				break;
 			case "Assigned":
 				return "#bbaaff";
