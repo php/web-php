@@ -5,7 +5,7 @@ include_once 'prepend.inc';
 // ============================================================================
 // Check for a manual in the mirror's default language
 $lang = default_language();
-if (!@is_dir("$DOCUMENT_ROOT/manual/$lang/index.php")) {
+if (!@file_exists("$DOCUMENT_ROOT/manual/$lang/index.php")) {
     $lang = "en"; // fall back to English
 }
 
