@@ -21,6 +21,6 @@ if ($file) {
 $notfound = $prevsearch = $function;
 include 'quickref.php';
 
-exit;
+echo "\n<!-- $DOCUMENT_ROOT -->\n";
 
 ?>

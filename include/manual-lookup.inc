@@ -38,6 +38,7 @@ function find_manual_page($lang, $function) {
       if ($try) return $try;
     }
     if ($lang != "en") {
+      reset($sections);
       while (list($t,$section) = each($sections)) {
         $try = tryprefix("en", $function, $section);
         if ($try) return $try;
