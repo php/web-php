@@ -289,8 +289,6 @@ A French gateway to PHP related contents</li>
 French site about PHP/MySQL: Links, Tips, Articles, 
 FAQ, Code Downloads, and much more!</li>
 
-<li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
-A ring of French PHP Sites</li>
 
 <li><a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</A> :
 <a href="news://fr.comp.lang.php">fr.comp.lang.php</a></li> (anciennement fr.comp.infosystemes.www.auteurs.php).
