@@ -149,6 +149,17 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.3.5RC2 released!</h1>
+<p>
+ <span class="newsdate">[02-Feb-2004]</span>
+ <a href="http://qa.php.net/">PHP 4.3.5RC2</a> has been released for testing. This is 
+ likely to be the last release candidate prior to the final release, so please test it
+ as much as possible. List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&r1=1.1247.2.552&r2=1.1247.2.522">NEWS</a> file.
+</p>
+
+<hr />
+
 <h1>Call for Papers Reminder: O'Reilly Open Source Convention</h1>
 <p>
  <span class="newsdate">[03-Feb-2004]</span>
