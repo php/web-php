@@ -2,12 +2,11 @@
 require("shared.inc");
 
 $current = "3.0.3";
-$win32_current = "3.0.2";
+$win32_current = "3.0.3";
 
 $filesizes["php-3.0.3.tar.gz"]="~ 1107KB";
 $filesizes["php-3.0.2a.tar.gz"]="~ 997KB";
-$filesizes["php-3.0.2-win32.exe"]="~ 1339KB";
-$filesizes["php-3.0.2-win32.zip"]="~ 1304KB";
+$filesizes["php-3.0.3-win32.zip"]="~ 1481KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 $filesizes["php-3.0.1-3.0.2a-patch.gz"]="~ 52KB";
 $filesizes["php-3.0.2-3.0.2a-patch.gz"]="~ 15KB";
@@ -106,7 +105,6 @@ while ($site = key($mirror_sites)) {
 	}
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
-	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
 	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
 	$patch_file_301 = "${site}${srcdir}php-3.0.1-patch.gz";
 	$patch_file_302 = "${site}${srcdir}php-3.0.1-3.0.2a-patch.gz";
@@ -127,9 +125,6 @@ while ($site = key($mirror_sites)) {
 		echo "\n";
 		echo "<LI>";
 		download_link($patch_file_302a, "($method) PHP 3.0.2 -> 3.0.2a patch");
-		echo "\n";
-		echo "<LI>";
-		download_link($win32_file, "($method) $win32_current Win32 binary+installer");
 		echo "\n";
 		echo "<LI>";
 		download_link($win32_zfile, "($method) $win32_current Win32 binary");
