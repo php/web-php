@@ -25,7 +25,7 @@ function highlight_php($code, $return = FALSE)
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
         array(
-            '&nbsp;'
+            '&nbsp;',
             '<br />',
             '<font color="',
             '</font>',
