@@ -36,6 +36,7 @@ PHP 4.3.2 Release Announcement
   <li>Dropped support for GDLIB version 1.x.x (php_gd.dll) on Windows.</li>
   <li>An unix man page for CLI version of PHP.</li>
   <li>New "disable_classes" php.ini option to allow administrators to disable certain classes for security reasons.</li>
+  <li>..and <b>HUGE</b> amount of other bug fixes!</li>
  </ul>
  For a full list of changes in PHP 4.3.2, see the <a href="/ChangeLog-4.php">NEWS</a> file.
 </p>
