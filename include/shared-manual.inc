@@ -36,13 +36,6 @@ function makeBorderTOC($this)
     $FONTCOL = " COLOR=\"#FFFFFF\"";
 
     echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=\"100%\">\n";
-    echo "<TR VALIGN=top>\n";
-    echo "<TD WIDTH=10>";
-    spc(10, 10);
-    echo "</TD>\n";
-    echo "<TD COLSPAN=2><A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
-    echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
-    echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
     $this = eregi_replace("^Manual: *", "", $this);
 
 	$cur = substr(dirname($PHP_SELF),-3);
@@ -60,6 +53,14 @@ function makeBorderTOC($this)
 	if(@is_file("$DOCUMENT_ROOT/manual/nl/$file")) echo "<a href=\"/manual/nl/$file\"><img src=\"/gifs/flag-nl.gif\" valign=bottom height=24 width=45 alt=\"Dutch version of this page\"></a>";
 	if(@is_file("$DOCUMENT_ROOT/manual/pt_BR/$file")) echo "<a href=\"/manual/pt_BR/$file\"><img src=\"/gifs/flag-br.gif\" valign=bottom height=24 width=45 alt=\"Brazilian Portuguese version of this page\"></a>";
 	echo "</TD></TR>\n";
+
+    echo "<TR VALIGN=top>\n";
+    echo "<TD WIDTH=10>";
+    spc(10, 10);
+    echo "</TD>\n";
+    echo "<TD COLSPAN=2><A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
+    echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
+    echo "<B>$UP[1]</B></FONT></A></TD></TR>\n";
 
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
