@@ -9,7 +9,6 @@ if(!strstr($MYSITE,"ca.php.net")) {
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
-#$destination = "php3@lists.php.net";
 $destination = "php-dev@lists.php.net";
 #$destination = "rasmus@lerdorf.on.ca";
 
@@ -51,13 +50,13 @@ function wrap($text,$margin=72) {
 	echo substr($text,$printfrom);
 }
 
-function show_state_options($state, $show_all) {
+function show_state_options($state, $show_all, $user_mode=0) {
 	if ($state) { echo "<option>$state\n"; }
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
-	if($state!="Assigned") { echo "<option>Assigned\n"; }
-	if($state!="Analyzed") { echo "<option>Analyzed\n"; }
-	if($state!="Suspended") { echo "<option>Suspended\n"; }
+	if($state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
+	if($state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
+	if($state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
 	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
 	if($state!="All" && $show_all) { echo "<option>All\n"; }
 }
@@ -162,14 +161,14 @@ function addlinks($text) {
 
 if (isset($cmd) && $cmd == "Send bug report") {
 	if(!ereg("@",$email)) {
-		echo "Please provide a valid email address<P>\n";
-		include("include/footer.inc");
+		echo "ERROR!  Please provide a valid email address<P>\n";
+		commonFooter();
 		exit;
 	}
 
 	if($ebug_type=="--Please Select--") {
-		echo "Please select an appropriate bug type<P>\n";
-		include("include/footer.inc");
+		echo "ERROR!  Please select an appropriate bug type<P>\n";
+		commonFooter();
 		exit;
 	}
 
@@ -179,7 +178,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     mysql_pconnect("localhost","","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
-    $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','')");
+    $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
 	$cid = mysql_insert_id();
 
     $report = "";
@@ -191,24 +190,28 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "Operating system: $php_os\n";
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $ebug_type\n";
-    $report .= "Bug description:\n";
+    $report .= "Bug description:  ";
+    $html_sdesc = ereg_replace("<", "&lt;", $sdesc);
+    $html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
+    $report .= $html_sdesc."\n\n";
 	$ascii_report = indent($report.$ldesc,"");
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
-    $report .= indent($html_desc, "    ");
+    $report .= $html_desc."\n";
 
     $html_report = ereg_replace("<", "&lt;", $report);
     $html_report = ereg_replace(">", "&gt;", $html_report);
 
     echo wrap($html_report);
-
     echo("</pre>\n");
 
     if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
-		echo "Thank you for your help!<P>If the status of the bug report you submitted\n";
+		echo "Thank you for your help!<P>";
+		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
+		echo "If the status of the bug report you submitted\n";
 		echo "changes, you will be notified.  You may return here and check on the status\n";
-		echo "at any time.  The URL for your bug report is: <a href=\"http://ca.php.net/bugs.php3?id=$cid\">";
+		echo "or update your report at any time.  The URL for your bug report is: <a href=\"http://ca.php.net/bugs.php3?id=$cid\">";
 		echo "http://ca.php.net/bugs.php3?id=$cid</a>\n";
     } else {
         echo("<p><h2>Mail not sent!</h2>\n");
@@ -360,6 +363,34 @@ if (isset($cmd) && $cmd == "Send bug report") {
     		Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
 	}
+	if(isset($modify) && $modify=="User Edit Bug") {
+		$ts=date("Y-m-d H:i:s");
+		$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id and passwd='$pw'");
+		$ok=mysql_numrows($result);
+		if(!$ok) {
+			echo "<b>Sorry, incorrect password.  The entry has not been changed.</b><br>\n";
+    		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
+		} else {
+			$row=mysql_fetch_row($result);
+			if($estatus=="Closed" and $row[0]!="Closed")
+				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', ldesc='$eldesc', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts', dev_id='$eemail' where id=$id");
+			else
+				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', ldesc='$eldesc', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
+			echo "<b>Database updated!</b><br>\n";
+			$text = "ID: $id\nUser Update by: $eemail\n";
+			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
+			$text .= "Status: $estatus\n";
+			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
+			$text .= "Bug Type: $ebug_type\n";
+			$text .= "Description: $esdesc\n\n$eldesc\n";
+			$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
+			$text = stripslashes($text);
+			$esdesc = stripslashes($esdesc);
+    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    		Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+			mysql_freeresult($result);
+		}	
+	}
     $result = mysql_query("SELECT * from bugdb where id=$id");
 	if(mysql_numrows($result)>0) {
 		$row = mysql_fetch_row($result);	
@@ -367,14 +398,18 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<table>\n";
 		if(!isset($edit)) {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
-			echo "<td><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Modify</tt></font></a></td>";
+			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>Modify</tt></font></a></td>";
 		} else {
 			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
-			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
+			if($edit==1)
+				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
+			else
+				echo "<input type=hidden name=modify value=\"User Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
-			show_state_options($row[7], 0);
+			show_state_options($row[7], 0, 2);
 			echo "</select>\n";
-			echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
+			if($edit==1)
+				echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
 		}
 		echo "</tr>\n";
 		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
@@ -387,28 +422,50 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			show_types($row[1],0,"ebug_type");
 			echo "</td></tr>\n";
 		}
-		echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
-		echo "<tr><th align=right>PHP Version:</th><td></b>".$row[5]."</td></tr>\n";
-		echo "<tr><th align=right>Assigned To:</th><td></b>".$row[12]."</td></tr>\n";
+		if($edit==2) {
+			echo "<tr><th align=right>OS:</th><td><input type=text size=20 name=ephp_os value=\"".$row[6]."\"></td></tr>\n";
+		} else {
+			echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
+		}
+		if($edit==2) {
+			echo "<tr><th align=right>PHP Version:</th><td><input type=text size=20 name=ephp_version value=\"".$row[5]."\"></td></tr>\n";
+		} else {
+			echo "<tr><th align=right>PHP Version:</th><td>".$row[5]."</td></tr>\n";
+		}
+		echo "<tr><th align=right>Assigned To:</th><td>".$row[12]."</td></tr>\n";
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
 		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"$row[3]\"></td></tr>\n";
 		echo "</table>\n";
 		$text = addlinks($row[4]);
-		echo "<blockquote><blockquote><pre>";
-		echo wrap($text,90);
-		echo "</pre></blockquote></blockquote>\n";
+		if($edit==2) {
+			echo "<textarea cols=60 rows=15 name=\"eldesc\" wrap=virtual>$text</textarea>";
+		} else {
+			echo "<blockquote><blockquote><pre>";
+			echo wrap($text,90);
+			echo "</pre></blockquote></blockquote>\n";
+		}
 		if(!isset($edit)) {
 			if(strlen($row[8])) {
 				echo "<b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
 				$text=addlinks($row[8]);
 				echo "<b><pre>".$text."</pre></b>\n";
 			}
-		} else {
+		} else 
+		if($edit==1) {
 			echo "<b><tt>Developer Comments:</tt></b><br>\n";
 			echo "<textarea cols=60 rows=15 name=\"comments\">".$row[8]."</textarea><br>\n";
 			echo "CVS user id: <input type=text size=10 name=user>\n";
 			echo "CVS password: <input type=password size=10 name=pw>\n";
+			echo "<input type=submit value=\"Commit Changes\">\n";
+			echo "</form>\n";
+		} else {
+			if(strlen($row[8])) {
+				echo "<P><b><tt>Developer Comments</tt></b><br>\n<br><b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
+				$text=addlinks($row[8]);
+				echo "<b><pre>".$text."</pre></b>\n";
+			}
+			echo "<br>Password: <input type=password size=20 name=pw>\n";
 			echo "<input type=submit value=\"Commit Changes\">\n";
 			echo "</form>\n";
 		}
@@ -476,7 +533,16 @@ of grouping them all in one report.
   <th align=right>Bug description:</th>
   <td colspan="2">
    <input type=text size=40 maxlength=79 name="sdesc">
-  </td>
+  </td></tr>
+ </tr><tr>
+  <th align=right>Password:</th>
+  <td>
+   <input type=text size=20 maxlength=20 name="passwd"></td>
+    <td><font size="-2">
+You may enter any password here.  This password allows you to come back and modify your
+submitted bug report at a later date.
+	</font>	
+  </td></tr>
 </table>
 
 <table>
@@ -530,6 +596,7 @@ CREATE TABLE bugdb (
   ts2 datetime,
   dev_id varchar(16),
   assign varchar(16),
+  passwd varchar(20);
   PRIMARY KEY (id)
 );
 */
