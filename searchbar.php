@@ -1,10 +1,10 @@
 <?php
-require_once 'prepend.inc';
+include_once "prepend.inc";
 
 // Gecko would like to see the target to be _content, while IE would
 // like to see the target to be _main. Other browsers are not expected
 // to visit this page, or support for them will be added in the future.
-if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
+if (preg_match("!Gecko!", $_SERVER['HTTP_USER_AGENT'])) {
     $target = "_content"; 
 } else {
     $target = "_main";
@@ -17,7 +17,7 @@ if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
  <style>
   select, input, button, body, p, td {
       font-family: Verdana, Arial, Helvetica, Sans Serif;
-      font-size: 13px;
+      font-size: 75%;
   }
   .title {
       font-size: 25px;
@@ -64,7 +64,7 @@ if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
  <tr>
   <td colspan="2">
    <div class="indented">
-   <small><a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002 The PHP Group</a><br />All rights reserved.</small>
+   <a href="/copyright.php" target="<?php echo $target ?>">Copyright &copy; 2002,2003 The PHP Group</a><br />All rights reserved.
    </div>
   </td>
  </tr>
