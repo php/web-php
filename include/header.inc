@@ -61,7 +61,7 @@ function rolloff(imgName) {
 </script>
 <? } ?>
 </head>
-<body background="jpgs/<?echo $bkg?>" bgcolor="#ffffff" text="#032F5B" link="#537492" vlink="#000000">
+<body background="jpgs/<?echo $bkg?>" bgcolor="#ffffff" text="#000000" link="#537492" vlink="#032F5B">
 <FONT FACE="Verdana, Arial, Helvetica">
 <table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
 <tr>

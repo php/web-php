@@ -5,10 +5,12 @@
 <center><img src="gifs/php3logo.gif"><br><font size="-1">Professional Home Pages</font></center>
 
 <p>PHP 3.0 is a complete rewrite of the popular web development scripting language, 
-<a href="http://php.iquest.net/">PHP/FI 2.0</a>.  It is currently in a <a href="why_beta.php3">public BETA</a> testing period.
+<a href="http://php.iquest.net/">PHP/FI 2.0</a>.<br>
+It is currently in a public beta testing testing period.  
 
 <ul>
 <li><a href="download.php3">Download PHP 3.0!</a>
+<li>Read about whether or not you should <a href="why_beta.php3">upgrade from PHP/FI 2.0</a>.
 <li><a href="documentation.php3">Documentation Resources</a>
 <li><a href="config.php3">Configure PHP 3.0</a> online <font size="-2">(JavaScript required)</font>
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
