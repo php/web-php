@@ -296,6 +296,17 @@ array(
     /* language     */ "en"
    ),
 
+  array (
+    /* title[s]     */ "Making Use of PHP",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0471219738/wwwphpnet",
+    /* author[s]    */ "Ashok Appu",
+    /* auth link[s] */ "",
+    /* image        */ "useofphp.jpg",
+    /* information  */ "John Wiley & Sons, Jul 2002, ISBN 0-4712-1973-8, 352 pages",
+    /* inform. link */ "http://www.wiley.com/cda/product/0,,0471219738,00.html",
+    /* language     */ "en"
+   ),
+
   array(
     /* title[s]     */ array("Core PHP Programming", "Using PHP to Build Dynamic Web Sites"),
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet",
