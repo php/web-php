@@ -8,6 +8,12 @@ em {
 	font-style: italic;
 }
 
+.newsDate {
+	font-size: 10px;
+	font-style: italic;
+	color: #6666cc;
+}
+
 pre,code {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
 	font-size: 12px;

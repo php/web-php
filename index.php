@@ -8,16 +8,20 @@ echo "\n<!--$MYSITE-->\n";
 
 <h1>New Site Design</h1>
 
-<p>You might notice that things look a little different around
+<p>
+<FONT CLASS="newsDate">[08-Mar-2001]</FONT>
+You might notice that things look a little different around
 here. We've streamlined the site, with a new design from the
 esteemed Colin Viebrock. Bear with us while we shake out the
 bugs that are surely lingering behind this new facade.
 </p>
 
-<p>Miss the quickref box? It's still there on the pages of the <a
+<p>
+Miss the quickref box? It's still there on the pages of the <a
 href="manual/">manual</a> (hint: its labeled 'lookup'). Check out our <a href="tips.php">tips
 page</a> for tips on how to add a quick reference button to your
-browser.</p>
+browser.
+</p>
 
 <br clear="all">
 
