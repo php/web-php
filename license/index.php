@@ -126,7 +126,7 @@ site_header("License Information");
  <strong>A.</strong> The authors of the QPL, Troll Tech AS,
  have published an annotated version of the license which
  makes it easier to understand. You can view it online <a
- href="http://www.troll.no/qpl/annotated.html">here</a>.
+ href="http://www.trolltech.com/licenses/qpl-annotated.html">here</a>.
 </p>
 
 <p>
