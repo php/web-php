@@ -1,5 +1,29 @@
 <?php
 require_once 'prepend.inc';
+
+$SIDEBAR_DATA='
+<b>FAQ</b>
+<p>
+The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
+information and those questions that seem to be on most people\'s minds.
+</p>
+
+<b>Books</b>
+<p>
+<a href="/books.php">Books</a> are convenient resources to begin exploring 
+PHP. <a href="/books.php">The titles listed here</a> will help you to start 
+learning PHP, as well as extending your existing knowledge.
+</p>
+
+<b>Sample Code</b>
+<p>
+Looking for some more sample PHP scripts?  Our <A
+HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
+great places to find many example scripts and useful functions, organized for 
+your searching pleasure!
+</p>
+';
+
 commonHeader("Documentation");
 
 $languages = array(
@@ -30,54 +54,6 @@ $formats = array(
 );
 ?>
 
-<H1>
-PHP FAQ
-</H1>
-<ul>
-<li>The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
-    information and those questions that seem to be on most people's minds.
-
-</ul>
-
-
-<? echo hdelim(); ?>
-
-<?php
-$prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
-?>
-
-<H1>The PHP Manual On-line</H1>
-<ul>
-<li><a href="<?php echo $prefix; ?>/manual/">PHP Manual Online</a>. Your reference
-    to everything that's great about PHP.
-
-<li><a href="<?php echo $prefix; ?>/manual/html/">Plain HTML PHP Manual Online</a>. The very
-    same manual in a light-weight, HTML 3.2 version without any bells or
-    whistles.
-</ul>
-
-
-
-<? echo hdelim(); ?>
-
-
-<H1>PHP Annotated Manuals</H1>
-<ul>
-<LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
-    is the same as the above, except there is a built-in errata/note system
-    that users all around the world can (and have!) contributed to. Of
-    all of the documentation, this will be the most current version,
-    as it is updated (and annotated) daily.
-
-<LI><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
-    Errata</A>. This is the collected errata from the on-line errata/note
-    system.
-</ul>
-
-
-
-<? echo hdelim(); ?>
-
 <h1>PHP Manual</h1>
 
 <p>The PHP manual is available in a selection of languages
@@ -89,7 +65,7 @@ and formats. Pick a language and format from the table below:
   <td></td>
   <?php 
     while (list($k,$v) = each($formats)) {
-      echo "<th>$v[0]</th>\n";
+      echo "<th valign=\"bottom\">$v[0]</th>\n";
     }?>
  </tr>
  <?php
@@ -120,6 +96,23 @@ and formats. Pick a language and format from the table below:
    }?>
 </table>
 
+<? echo hdelim(); ?>
+
+<H1>PHP Annotated Manuals</H1>
+<ul>
+<LI><A href="http://www.php.net/manual/">PHP Annotated Manual</A>. This
+    is the same as the above, except there is a built-in errata/note system
+    that users all around the world can (and have!) contributed to. Of
+    all of the documentation, this will be the most current version,
+    as it is updated (and annotated) daily.
+
+<LI><A href="http://www.php.net/manual/browse-errata.php">PHP Manual
+    Errata</A>. This is the collected errata from the on-line errata/note
+    system.
+</ul>
+
+<? echo hdelim(); ?>
+
 <h1>More Information</h1>
 
 <ul>
@@ -127,14 +120,8 @@ and formats. Pick a language and format from the table below:
     This page has a overview about which pages are translated to the
 	different languages and in which versions of PHP the functions
 	are available.
-
-<li><a href="/books.php">Books on PHP</A>. Here you can find a
-    great selection of books on PHP and related themes.
-
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
 </ul>
-
-
 
 <? echo hdelim(); ?>
 
