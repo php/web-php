@@ -31,15 +31,15 @@ version d&egrave;s que possible.
  <li>Correction d'un bogue qui emp&ecirc;chait la compilation de PHP avec les versions 1.2-1.8.</li>
  <li>Correction d'un bogue avec les sessions : les configurations se propagaient entre les requ&ecirc;tes.</li>
  <li>Correction de plusieurs bogues li&eacute;s au changement d'heure d'hiver et d'&eacute;t&eacute;.</li>
- <li>Correction d'un bogue qui emp&ecirc;chait la compialtion de cURL extension avec libcurl 7.11.1</li>
+ <li>Correction d'un bogue qui emp&ecirc;chait la compilation de cURL extension avec libcurl 7.11.1</li>
  <li>Correction de plusieurs crashs avec les extensions domxml et mssql.</li>
 
  <li>Cette version corrige environs 25 bogues qui ont &eacute;t&eacute; d&eacute;couverts depuis
- la version 4.3.5.</li>
+ la version 4.3.6.</li>
 </ul>
 
 <p>
- Pour une liste exhaustive des modifications de PHP 4.3.5, voyez
+ Pour une liste exhaustive des modifications de PHP 4.3.6, voyez
  <a href="/ChangeLog-4.php#4.3.6">le changelog</a>, en anglais.
  </p>
 
