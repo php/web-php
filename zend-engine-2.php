@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'zend-engine-2.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Changes in PHP 5/Zend Engine 2.0");
+site_header("Changes in PHP 5/Zend Engine 2.0");
 ?>
 
 <h1>Changes in PHP 5/Zend Engine 2.0</h1>
@@ -598,4 +598,4 @@ $a = $foo->test(1, "2", 3.4, true);
 var_dump($a);
 ?>'); ?>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

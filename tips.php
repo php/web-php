@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'tips.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Quick Reference Tips");
+site_header("Quick Reference Tips");
 
 function tip_title($title, $author = '', $date = '')
 {
@@ -290,4 +290,4 @@ Search Type=0
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')</tt>
 </p>
 
-<?php commonFooter(); ?>
+<?php site_header(); ?>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'usage.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("PHP Usage Stats");
+site_header("PHP Usage Stats");
 ?>
 
 <h1>Usage Stats for August 2003</h1>
@@ -24,4 +24,4 @@ commonHeader("PHP Usage Stats");
  provided by TIOBE.
 </p>
 
-<?php commonFooter(); ?>
+<?php site_header(); ?>

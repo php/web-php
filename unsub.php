@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'unsub.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-commonHeader("Unsubscribing");
+site_header("Unsubscribing");
 ?>
 
 <h1>Unsubscribing From a Mailing List</h1>
@@ -138,4 +138,4 @@ commonHeader("Unsubscribing");
  at the other end of that last email address, so you'll have to be patient.
 </p>
 
-<?php commonFooter(); ?>
+<?php site_header(); ?>
