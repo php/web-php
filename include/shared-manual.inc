@@ -174,7 +174,7 @@ function manualGetUserNotes($title, $id) {
 	$notes = array();
 	if (is_primary_site() && @mysql_connect("localhost","nobody","")) {
 		mysql_select_db("php3");
-		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE section='$id' AND NOT removed ORDER BY id";
+		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS xwhen FROM note WHERE sect='$id' AND NOT removed ORDER BY id";
                 $result_id = mysql_query($query);
 		if ($result_id && mysql_num_rows($result_id) > 0) {
 			while ($row = mysql_fetch_array($result_id)) {
