@@ -249,7 +249,6 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 Some of the more major changes include:
 </p>
-<p>
 <ul>
  <li>PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
  <a href="/zend-engine-2.php">this</a> webpage.</li>
@@ -260,7 +259,6 @@ Some of the more major changes include:
  <li>Streams have been greatly improved, including the ability to access low-level socket 
  operations on streams.</li>
 </ul>
-</p>
 <p>
 <b>Note</b>: <i>This is a beta version. It should not be used in production or even semi-production
 web sites.</i> There are known bugs in it, and in addition, some of the features may change (based on
