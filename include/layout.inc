@@ -317,7 +317,7 @@ function commonFooter() {
 		echo "</td></tr></table></td>";
 		if (!empty($RSIDEBAR_DATA)) { ?>
 <td bgcolor="#cccccc" background="<?php echo $www_static_root; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
-<td width="175" bgcolor="#f0f0f0">
+<td width="185" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
  </table>
