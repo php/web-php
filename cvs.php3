@@ -10,6 +10,10 @@ CVS.  This helps us track changes and it makes it possible for people located
 in all corners of the world to collaborate on a project without having to worry
 about stepping on each others' toes.
 <P>
+Please note that you do not need a CVS account to access the CVS tree.  See
+<a href="http://cvs.php.net"cvs.php.net</a> for details.  You only need your
+own CVS account if you plan on committing things to the CVS tree.
+<P>
 The first thing you need to do is to get a CVS account.  If you are not
 previously known to the PHP Development Team, then this is not an automatic
 process.  Your best bet is to send mail to <a href="mailto: core@php.net">
