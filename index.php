@@ -197,9 +197,8 @@ very informative <a href="http://nosoftwarepatents.com">website</a>.
 <h1>Zend's PHP 5 Coding Contest winners announced</h1>
 <p>
 <span class="newsdate">[25-Oct-2004]</span>
-Congratulations to Qiang Xue, whose application 'PRADO' earned high votes both
-from the public and from the judges' panel!  There are 49 other prizewinning
-applications in Zend's
+Congratulations to Qiang Xue, whose application '<a href="http://www.xisc.com/">PRADO</a>' earned high votes both from the public and from the judges' panel!
+There are 49 other prizewinning applications in Zend's
 <a href="http://www.zend.com/php5/contest">contest gallery</a>
 - too many to list here.  Some of them are ongoing projects, bringing PHP 5 a
 small armoury of useful open source tools.
