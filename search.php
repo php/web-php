@@ -230,7 +230,7 @@ if (isset($pattern)) {
         list(, , $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
         
         // String to carry on the search parameters in prev/next URLs
-        $baseurl = htmlentities($PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show&base=" urlencode($base));
+        $baseurl = htmlentities($PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show&base=" . urlencode($base));
 
         // Print out search results information header
         echo "$matches documents match your search for '<b>$htmlpt</b>' $where:<br /><br />\n";
