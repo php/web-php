@@ -286,8 +286,8 @@ document.writeln("</STYLE>");
 <A HREF="docs.php3" onMouseover="change('docs',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-docs-p.gif" ALT="documentation" WIDTH=129 HEIGHT=30 BORDER=0 NAME="docs" hspace=10><BR>
 <A HREF="mail.php3" onMouseover="change('mail',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-mailing-p.gif" ALT="mailing list" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mail" hspace=10><BR>
 <A HREF="dev.php3" onMouseover="change('dev',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-development-p.gif" ALT="development" WIDTH=129 HEIGHT=30 BORDER=0 NAME="dev" hspace=10><BR>
-<A HREF="sites.php3" onMouseover="change('news',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
-<A HREF="links.php3" onMouseover="change('link',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
+<A HREF="news.php3" onMouseover="change('news',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-news-p.gif" ALT="in the news" WIDTH=129 HEIGHT=30 BORDER=0 NAME="news" hspace=10><BR>
+<A HREF="sites.php3" onMouseover="change('link',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-links-p.gif" ALT="links" WIDTH=129 HEIGHT=30 BORDER=0 NAME="link" hspace=10><BR>
 <A HREF="mirrors.php3" onMouseover="change('mirr',1); showLayer('mirrorsKick');"><IMG SRC="/new/gifs/b-mirror-p.gif" ALT="mirror sites" WIDTH=129 HEIGHT=30 BORDER=0 NAME="mirr" hspace=10><BR>
 </TD></TR>
 </TABLE>
