@@ -10,6 +10,9 @@ if (!isset($df) || !file_exists($DOCUMENT_ROOT . '/distributions/' . $df)) {
     exit('Invalid file requested for download!');
 }
 
+// Set local file name
+$local_file = $DOCUMENT_ROOT . '/distributions/' . $df;
+
 // Print out common header
 commonHeader('Get Download');
 ?>
@@ -25,13 +28,6 @@ You have chosen to download the following file:
 <tr bgcolor="#cccccc"><td align="center">
 <?php 
 echo '<b>' . $df . '</b><br />';
-
-// Get real file name
-if ($tmp = strrchr($df, '/')) {
-    $local_file = substr($tmp, 1, strlen($tmp));
-} else {
-    $local_file = 'distributions/' . $df;
-}
 
 // Try to get filesize to display
 $size = @filesize($local_file);
