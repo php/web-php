@@ -38,6 +38,8 @@ Looking for an ISP or hosting service that supports PHP?  Try one of the followi
 PHP Tutorials<BR>
 <LI><a HREF="http://www.phpbuilder.com/">PHPBuilder.Com</a><BR>
 A bunch of helpful PHP resources available here<BR>
+<LI><a HREF="http://www.zend.com/">Zend.com</a><BR>
+Zend Technologies' Web site, with lots of PHP related resources (articles, tutorials, case studies, PHP function table, etc.)<BR>
 <LI><a HREF="http://www.devshed.com/Server_Side/PHP/">PHP 3.0 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
 <LI><A HREF="http://php.codebase.org/">PHP.CodeBase.Org</A><BR>
@@ -49,7 +51,7 @@ Another site with good articles on PHP basics and advanced topics.<BR>
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>
-<LI><A HREF="http://webdev.berber.co.il/">Berber's PHP Example Page</A><BR>
+<LI><A HREF="http://www.weberdev.com/">Berber's PHP Example Page</A><BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
 <LI><A HREF="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</A><BR>
 A collection of PHP scripts.<BR>
