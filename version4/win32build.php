@@ -164,7 +164,7 @@ standalone/CGI version.</P>
   select Build=&gt;Rebuild All.  
     <LI>For cmdline users, make sure that you either
   have the C++ environment variables registered,
-  or have run <CODE>vcvars.bat</CODE>, and then execute on of the following:
+  or have run <CODE>vcvars.bat</CODE>, and then execute one of the following:
   <UL>
       <LI><CODE>msdev php4ts.dsp /MAKE &quot;php4ts - Win32
     Debug_TS&quot;</CODE>
