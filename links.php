@@ -58,6 +58,10 @@ parties interested in PHP.</li>
 PHP Qu&eacute;bec promotes PHP for professional users in Qu&eacute;bec, Canada.
 Every month, companies hold sessions about their use of PHP, 
 their customer cases and their solutions.</li>
+
+<li><a href="http://www.nyphp.org/">New York PHP</a><br>
+International community supporting PHP adoption, projects and
+development.</li>
 </ul>
 
 <h4>PHP Link Catalogs</h4>
