@@ -7,7 +7,7 @@
 <p>
 If you would like to see the list of events in a calendar format,
 visit the <a href="http://www.php.net/cal.php">complete event calendar</a>.
-You can also add events yourself with our "<a href="http://www.php.net/cal.php?a=1">Add
+You can also add events yourself with our "<a href="submit-event.php">Add
 an Event</a>" form.
 </p>
 
