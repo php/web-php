@@ -3,7 +3,7 @@
 /* See the end of the script for the table layout. */
 
 require("shared.inc");
-commonHeader("PHP3 Main Page");
+commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
 $destination = "php-dev@php.iquest.net";
 #$destination = "rasmus@lerdorf.on.ca";
