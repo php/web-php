@@ -220,16 +220,20 @@ function manualUserNotes($title, $id) {
     $back_url = 'http://' . $SERVER_NAME . 
         (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
         $PHP_SELF;
+        
+    // Link target to add a note to the current manual page,
+    // and it's extended form with a [+] image
+    $addnotelink = '/manual/add-note.php?sect=' . $id . '&redirect=' . $back_url;
+    $addnotesnippet = 
+        make_link($addnotelink, make_image('notes-add.gif', 'add a note')) .
+        ' <small>' .
+        make_link($addnotelink, 'add a note', false, 'style="color:#000000"') .
+        '</small>';
 
     echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
     echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
     echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
-    echo "<td align=\"right\">";
-    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
-        make_image('notes-add.gif','add a note')
-    );
-    echo ' ';
-    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, 'style="color:#000000"');
+    echo "<td align=\"right\">$addnotesnippet";
 
     /* This information has been included on add-note.php
     echo "&nbsp;";
@@ -237,8 +241,7 @@ function manualUserNotes($title, $id) {
         make_image('notes-about.gif', 'about notes')
     );
     */
-    echo "</td>\n";
-    echo "</tr>\n";
+    echo "</td>\n</tr>\n";
 
     if (sizeof($notes) == 0) {
         echo '<tr valign="top">';
@@ -251,12 +254,7 @@ function manualUserNotes($title, $id) {
         }
 
         echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-        echo "<td colspan=\"2\" align=\"right\">\n";
-        print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
-            make_image('notes-add.gif','add a note')
-        );
-        echo ' ';
-        print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, 'style="color:#000000"');
+        echo "<td colspan=\"2\" align=\"right\">\n$addnotesnippet";
 
         /* This information has been included on add-note.php
         echo "&nbsp;";
@@ -264,8 +262,7 @@ function manualUserNotes($title, $id) {
             make_image('notes-about.gif', 'about notes')
         );
 	*/
-        echo "</td>\n";
-        echo "</tr>\n";
+        echo "</td>\n</tr>\n";
     }
     echo "</table>\n";
 }
@@ -407,5 +404,3 @@ function makePrintEntry($date,$name,$blurb,$id=0) {
     echo clean_note($blurb) . "<br><hr noshade size=\"1\" width=\"50%\" align=\"center\">";
 
 }
-    
-?>
