@@ -73,6 +73,13 @@ packing the strength and experience of PHP users into a nicely organised OOP
 library.
 </p>
 
+<h2><a href="http://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
+<p>
+The bug database is where you can bring problems with PHP to the attention of
+developers (but don't forget to double-check that somebody else hasn't already
+reported the same problem!).
+</p>
+
 <h2><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 <p>
 The Quality Assurance team is one of the most important pieces of the PHP
