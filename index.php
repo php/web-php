@@ -221,9 +221,9 @@ echo "\n<!--$MYSITE-->\n";
 
 <p>
  <font class="newsdate">[17-Jul-2003]</font>
- The publishers of <a href="http://www.phparch.com">php|architect</a>, the
+ The publishers of <a href="http://www.phparch.com/">php|architect</a>, a
  monthly magazine dedicated exclusively to the world of PHP, have announced the
- availability of a <a  href="http://www.phparch.com/print">print edition</a> of
+ availability of a <a href="http://www.phparch.com/print/">print edition</a> of 
  their publication. Subscriptions are now available at a special introductory
  price for readers worldwide.
 </p>
