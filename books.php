@@ -508,6 +508,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "PHP et MySQL Développement Web",
+    /* title_link   */ "http://www.amazon.fr/exec/obidos/ASIN/2744011746/wwwphpnet0f",
+    /* author[s]    */ array("Luke Welling", "Laura Thomson"),
+    /* auth link[s] */ "",
+    /* image        */ "welling_fr.gif",
+    /* information  */ "Campus Press, ISBN 2-7440-1174-6, July 24 2001, 930 pages",
+    /* inform. link */ "",
+    /* language     */ "fr"
+  ),
+
+  array(
     /* title[s]     */ array("PHP tvorba interaktivnich internetovych aplikaci", "(PHP development interactive internet applications)"),
     /* title_link   */ "http://www.kosek.cz/php/index.html",
     /* author[s]    */ "Jiri Kosek",
