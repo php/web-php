@@ -492,10 +492,13 @@ elseif ($cmd == "display") {
 
 <h1>Report a Bug</h1>
 
-<p>
+<br />
 <strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos &
-Don'ts</a> before submitting a bug report!
-</p>
+Don'ts</a> before submitting a bug report!<br />
+If you are not sure if the problem you're experiencing is a bug at all
+it most likely isn't. Please ask support questions on the 
+<a href="support.php">mailing lists</a>.
+<br />
 
 <?php
 }
