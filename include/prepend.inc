@@ -105,7 +105,7 @@ function myphpnet_load()
     
     // If we have a cookie, set the values in the array
     if (isset($_COOKIE['MYPHPNET'])) {
-        $MYPHPNET[0] = $_COOKIE['MYPHPNET'];
+        $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
     }
 }
 
@@ -123,6 +123,26 @@ function myphpnet_language($langcode = FALSE)
         return $MYPHPNET[0];
     }
     else { return FALSE; }
+}
+
+define("MYPHPNET_URL_NONE", FALSE);
+define("MYPHPNET_URL_FUNC", 'quickref');
+define("MYPHPNET_URL_MANUAL", 'manual');
+
+// Set URL search fallback preference
+function myphpnet_urlsearch($type = FALSE)
+{
+    global $MYPHPNET;
+
+    // Set type if specified and if correct
+    if ($type && in_array($type, array(MYPHPNET_URL_FUNC, MYPHPNET_URL_MANUAL))) {
+        $MYPHPNET[1] = $type;
+    }
+
+    // Return code or FALSE
+    elseif (isset($MYPHPNET[1])) {
+        return $MYPHPNET[1];
+    } else { return MYPHPNET_URL_NONE; }
 }
 
 // Save user settings in cookie

@@ -227,8 +227,9 @@ if ($try) {
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
+$fallback = (myphpnet_urlsearch() === MYPHPNET_URL_MANUAL ? "manual" : "quickref");
 mirror_redirect(
-    '/search.php?show=manual&lang=' . urlencode($LANG) .
+    '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
 

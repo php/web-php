@@ -14,7 +14,6 @@ if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
     
     // Set the language preference
     myphpnet_language($_POST['my_lang']);
-    myphpnet_save();
     
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
@@ -47,12 +46,20 @@ foreach ($langs as $code => $name) {
 }
 
 // Assemble form from collected data
-$langpref = "<form action=\"/my.php\" method=\"POST\">\n<select name=\"my_lang\">\n" .
-            join("", $options) . "</select>\n<input type=\"submit\" value=\"Set\">\n</form>";
+$langpref = "<select name=\"my_lang\">\n" .
+            join("", $options) . "</select>\n";
+            
+// Check URL shortcut fallback setting
+if (isset($_POST['urlsearch'])) {
+    myphpnet_urlsearch($_POST['urlsearch']);
+}
+
+myphpnet_save();
 
 commonHeader("My PHP.net");
 ?>
 
+<form action="/my.php" method="POST">
 <h1>My PHP.net</h1>
 
 <p>
@@ -78,7 +85,8 @@ always remembered, and is a good estimate on your preferred language
 most of the time.
 </p>
 
-<table border="0" cellpadding="3" cellspacing="2">
+<div class="indent">
+<table border="0" cellpadding="3" cellspacing="2" class="standard">
 <?php
 
 // Data for the language settings table
@@ -101,12 +109,13 @@ $langinfo = array(
 
 // Write a row for all settings
 foreach ($langinfo as $lin => $lid) {
-    echo " <tr>\n  <td bgcolor=\"#dddddd\">" . $lin . "</td>\n";
-    echo "  <td bgcolor=\"#eeeeee\">" . $lid . "</td>\n </tr>\n";
+    echo " <tr>\n  <td class=\"sub\">" . $lin . "</td>\n";
+    echo "  <td>" . $lid . "</td>\n </tr>\n";
 }
 
 ?>
 </table>
+</div>
 
 <p>
 These settings are only overriden in case you have passed a language
@@ -134,7 +143,7 @@ sites if possible on the download page and on the mirror listing
 page.
 </p>
 
-<blockquote>
+<div class="indent">
 <?php
 if (i2c_valid_country()) {
     echo "We detected that you are from <b>" . $COUNTRIES[$COUNTRY] . "</b>";
@@ -142,6 +151,38 @@ if (i2c_valid_country()) {
     echo "We were unable to detect your country";
 }
 ?>
-</blockquote>
+</div>
+
+<h2>URL search fallback</h2>
+
+<p>
+When you try to access a PHP.net page via an URL shortcut, and
+the site is unable to find that particular page, it falls back
+to a documentation search, or a function list lookup, depending on
+your choice. The default is a function list lookup, as most of
+the URL shortcut users try to access function documentation pages.
+<em>Note that documentation searches are currently [temporarily]
+done through Google.</em>
+</p>
+
+<div class="indent">
+Your setting: <input type="radio" name="urlsearch" value="quickref"
+<?php
+$type = myphpnet_urlsearch();
+if ($type === MYPHPNET_URL_NONE || $type === MYPHPNET_URL_FUNC) {
+    echo ' checked="checked"';
+}
+echo ' /> Function list search <input type="radio" name="urlsearch" value="manual"';
+if ($type === MYPHPNET_URL_MANUAL) {
+    echo ' checked="checked"';
+}
+?>
+ /> PHP Documentation search
+</div>
+
+<div align="center">
+<input type="submit" value="Set All Preferences">
+</div>
+</form>
 
 <?php commonFooter(); ?>
