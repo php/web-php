@@ -361,7 +361,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
     $report .= $html_sdesc."\n\n";
 	$ascii_report = indent($report.$ldesc,"");
-	$ascii_report.= "\nFull Bug description available at: http://bugs.php.net/?id=$cid\n\n";
+	$ascii_report.= "\n\n-- \nEdit Bug report at: http://bugs.php.net/?id=$cid&edit=1\n\n";
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
     $report .= $html_desc."\n";
@@ -383,7 +383,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     } else {
         echo("<p><h2>Mail not sent!</h2>\n");
         echo("Please send this page in a mail to " .
-	     "<a href=\"mailto:$email\">$email</a> manually.\n");
+	     "<a href=\"mailto:$destination\">$destination</a> manually.\n");
     }
 
 } elseif(isset($cmd) && $cmd=="Display Bugs") {
