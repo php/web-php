@@ -1,0 +1,152 @@
+<?php
+$items = array (
+	"Any" => "Any",
+
+	"*General Issues" => "General Issues",
+	"Feature/Change Request"   => "&nbsp;&nbsp;&nbsp;&nbsp;Feature/Change Request",
+	"Documentation problem"    => "&nbsp;&nbsp;&nbsp;&nbsp;Documentation problem",
+	"Output Control"           => "&nbsp;&nbsp;&nbsp;&nbsp;Output Control",
+	"Performance problem"      => "&nbsp;&nbsp;&nbsp;&nbsp;Performance problem",
+	"Reproducible crash"       => "&nbsp;&nbsp;&nbsp;&nbsp;Reproducible crash",
+	"Scripting Engine problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Scripting Engine problem",
+	"Session related"          => "&nbsp;&nbsp;&nbsp;&nbsp;Session related",
+
+	"*Compile Issues" => "&nbsp;&nbsp;&nbsp;&nbsp;Compile Issues",
+	"Compile Failure" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compile Failure",
+	"Compile Warning" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compile Warning",
+
+	"*Configuration Issues"      => "&nbsp;&nbsp;&nbsp;&nbsp;Configuration Issues",
+	"Dynamic loading"            => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dynamic loading",
+	"PHP options/info functions" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHP options/info functions",
+
+	"*Web Server problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Web Server problem",
+	"Apache related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apache related",
+	"IIS related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIS related",
+	"iPlanet related"     => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iPlanet related",
+	"PWS related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PWS related",
+	"Other web server"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other web server",
+
+	"*Calendar problems" => "&nbsp;&nbsp;&nbsp;&nbsp;Calendar problems",
+	"Date/time related"  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date/time related",
+	"Calendar related"   => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Calendar related",
+	"ICAP related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ICAP related",
+	"MCAL related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MCAL related",
+
+	"*Compression related" => "&nbsp;&nbsp;&nbsp;&nbsp;Compression related",
+	"Bzip2 Related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bzip2 Related",
+	"ZZiplib Related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZZiplib Related",
+	"Zlib Related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zlib Related",
+
+	"*Directory/Filesystem functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Directory/Filesystem functions",
+	"Directory function related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory function related",
+	"Filesystem function related"     => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filesystem function related",
+
+	"*Directory Services problems" => "&nbsp;&nbsp;&nbsp;&nbsp;Directory Services problems",
+	"YP/NIS related"               => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YP/NIS related",
+	"LDAP related"                 => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDAP related",
+
+	"*Database Functions"       => "&nbsp;&nbsp;&nbsp;&nbsp;Database Functions",
+	"Adabas-D related"          => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adabas-D related",
+	"dBase related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dBase related",
+	"DBM/DBA related"           => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBM/DBA related",
+	"DBX related"               => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBX related",
+	"filePro related"           => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filePro related",
+	"FrontBase related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FrontBase related",
+	"Hyperwave related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyperwave related",
+	"Informix related"          => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Informix related",
+	"InterBase related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InterBase related",
+	"Sybase-ct (ctlib) related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sybase-ct (ctlib) related",
+	"Sybase (dblib) related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sybase (dblib) related",
+	"mSQL related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mSQL related",
+	"MSSQL related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSSQL related",
+	"MySQL related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL related",
+	"OCI8 related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OCI8 related",
+	"Oracle related"            => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oracle related",
+	"ODBC related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ODBC related",
+	"Ovrimos related"           => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ovrimos related",
+	"PostgreSQL related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PostgreSQL related",
+	"Solid related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solid related",
+
+	"*Data Exchange functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Data Exchange functions",
+	"WDDX related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WDDX related",
+	"YAZ related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YAZ related",
+
+	"*Extensibility Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Extensibility Functions",
+	"COM related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COM related",
+	"Java related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java related",
+	"Program Execution"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program Execution",
+	"Readline related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Readline related",
+	"Satellite CORBA related"  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite CORBA related",
+	"Semaphore related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semaphore related",
+
+	"*E-commerce functions"        => "&nbsp;&nbsp;&nbsp;&nbsp;E-commerce functions",
+	"CCVS related"                 => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CCVS related",
+	"Cybercash related"            => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cybercash related",
+	"Verisign Payflow Pro related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verisign Payflow Pro related",
+
+	"*Graphics related"    => "&nbsp;&nbsp;&nbsp;&nbsp;Graphics related",
+	"GD related"           => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GD related",
+	"GetImageSize related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetImageSize related",
+	"Ming related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ming related",
+	"SWF related"          => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWF related",
+
+	"*Languages/Translation" => "&nbsp;&nbsp;&nbsp;&nbsp;Languages/Translation",
+	"Gettext related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gettext related",
+	"ICONV related"          => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ICONV related",
+	"Recode related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recode related",
+
+	"*Mail Related"      => "&nbsp;&nbsp;&nbsp;&nbsp;Mail Related",
+	"IMAP related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAP related",
+	"Mailparse related"  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mailparse related",
+	"Mail related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mail function related",
+
+	"*Math Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Math Functions",
+	"BC math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BC math related",
+	"Math related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Math related",
+
+	"*Encryption and hash functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Encryption and hash functions",
+	"mcrypt related"                 => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mcrypt related",
+	"mhash related"                  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mhash related",
+	"OpenSSL related"                => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OpenSSL related",
+
+	"*Network Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Network Functions",
+	"Network related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network related",
+	"SNMP related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SNMP related",
+	"FTP related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTP related",
+	"HTTP related"       => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HTTP related",
+	"Sockets related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sockets related",
+
+	"*PDF functions"  => "&nbsp;&nbsp;&nbsp;&nbsp;PDF functions",
+	"ClibPDF related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ClibPDF related",
+	"FDF related"     => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDF related",
+	"PDF related"     => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PDF related",
+
+	"*Programming Data Structures" => "&nbsp;&nbsp;&nbsp;&nbsp;Programming Data Structures",
+	"Class/Object related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Class/Object related",
+	"Arrays related"               => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arrays related",
+	"Strings related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strings related",
+	"Variables related"            => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variables related",
+
+	"*Regular Expressions" => "&nbsp;&nbsp;&nbsp;&nbsp;Regular Expressions",
+	"PCRE related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCRE related",
+	"Regexps related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regexps related",
+
+	"*Spelling functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Spelling functions",
+	"Aspell related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aspell related",
+	"Pspell related"      => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pspell related",
+
+	"*Search functions"   => "&nbsp;&nbsp;&nbsp;&nbsp;Search functions",
+	"mnoGoSearch related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mnoGoSearch related",
+
+	"*XML functions"  => "&nbsp;&nbsp;&nbsp;&nbsp;XML functions",
+	"DOM XML related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOM XML related",
+	"XML related"     => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XML related",
+	"Sablotron XSL"   => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sablotron XSL",
+	"XSLT related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XSLT related",
+
+	"*URL Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;URL Functions",
+	"cURL related"   => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cURL related",
+	"URL related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL related",
+
+	"Unknown/Other Function" => "Unknown/Other Function"
+);
