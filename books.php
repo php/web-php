@@ -932,6 +932,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "PHP Fejlesztõk Kézikönyve",
+    /* title_link   */ "http://php.adatnet.hu/Kossuth.ShowIssue/Kossuth.showIssueEvent/415",
+    /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
+    /* auth link[s] */ "",
+    /* image        */ "devdict_hu.jpg",
+    /* information  */ "Kossuth, May 2002, ISBN 963-0943-36-0, 573 pages + CD",
+    /* inform. link */ "http://php.adatnet.hu/Kossuth.ShowIssue/Kossuth.showIssueEvent/415",
+    /* language     */ "hu"
+  ),
+
+  array(
     /* title[s]     */ "PHP Guia de Consulta R&aacute;pida",
     /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
     /* author[s]    */ "Herbert G. Fischer",
