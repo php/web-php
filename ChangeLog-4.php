@@ -13,9 +13,14 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <a name="4.3.8"></a>
 <h3>Version 4.3.8</h3>
-<b>14-Jul-2004</b>
+<b>13-Jul-2004</b>
 <ul>
-<li>Various fixes including security fixes.</li>
+<li>Fixed strip_tags() to correctly handle '\0' characters. (Stefan)</li>
+<li>Improved stability during startup when memory_limit is used. (Stefan)</li>
+<li>Replace alloca() with emalloc() for better stack protection. (Ilia)</li>
+<li>Added missing safe_mode checks inside ftok and itpc. (Ilia)</li>
+<li><?php bugfix(28963); ?> Fixed address allocation routine in IMAP extension. (Ilia)</li>
+<li><?php bugfix(28632); ?> Prevent open_basedir bypass via MySQL's LOAD DATA LOCAL. (Ilia)</li>
 
 </ul>
 There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
