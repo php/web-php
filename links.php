@@ -210,7 +210,7 @@ Brazilian PHP Portal with many links and informations<br></li>
 <ul>
 
 <li><a href="http://www.cidadela.org/php/">Cidadela</a><br>
-The PHP section of Cidadela provides articles, tuturials,
+The PHP section of Cidadela provides articles, tutorials,
 a help forum, and an Application Market.<br></li>
 </ul></li>
 
