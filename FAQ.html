@@ -59,16 +59,19 @@ libraries (which cost money).
 
 <H3>Can I access Microsoft Access databases?</H3>
 
-<P>Yes, as long as you are running entirely under Windows 95 or NT,
-where you can use ODBC and Microsoft's ODBC drivers for Microsoft Access
-databases. PHP3 does not have any support for reading Microsoft Access
-databases, and there are not any Unix ODBC drivers for them.
+<P>Yes. You already have all the tools you need if you are running
+entirely under Windows 95 or NT, where you can use ODBC and Microsoft's
+ODBC drivers for Microsoft Access databases. From other platforms, you
+would need to have a server running Windows NT (or possibly Windows 95)
+which you connected to using ODBC drivers from your other platform and
+<A href="http://www.openlinksw.com/">OpenLink Software's ODBC Agent</A>
+software, which runs US$4,000.
 
-<P>Some alternatives are to use an SQL server that has Windows ODBC drivers
-and use that to store the data, which you can then access from Microsoft
-Access (using ODBC) and PHP3 (using the built-in drivers), or to use an
-intermediary file format that Access and PHP3 both understand, such as
-flat-files or dBase databases.
+<P>Some better alternatives are to use an SQL server that has Windows ODBC
+drivers and use that to store the data, which you can then access from
+Microsoft Access (using ODBC) and PHP3 (using the built-in drivers), or
+to use an intermediary file format that Access and PHP3 both understand,
+such as flat-files or dBase databases.
 
 <H3>I saw PHP3 offers persistent database connections.   What does that mean?</H3>
 
