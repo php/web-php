@@ -15,10 +15,12 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <b>Win32 Binaries</b><BR>
 <UL>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.3-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.3</a> - 11 October 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+<!--
   <li>Win32 binaries will be posted soon!</li>
+-->
 <!--
   <li>Java binaries will be posted soon!</li>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.2</a> - 29 August 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
   <li>Servlet Server API:
     <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-servlet-jdk118.zip&source_site=<?php echo $server; ?>">jdk1.1.8</a>,
     <a href="http://www.php.net/do_download.php?download_file=php-4.0.2-Win32-servlet-jdk122.zip&source_site=<?php echo $server; ?>">jdk1.2.2</a>,
