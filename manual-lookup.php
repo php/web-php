@@ -29,6 +29,7 @@ tryprefix($function, "class.");
 tryprefix($function, "ref.");
 tryprefix($function, "feature-");
 tryprefix($function, "construct.");
+tryprefix($function, "control-structures.");
 
 reset($try_files);
 while (list($dummy, $file) = each($try_files)) {
