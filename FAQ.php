@@ -70,8 +70,8 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#6.6">6.6. When linking PHP, it complains about a number of undefined references.</a></li>
         <li><a href="#6.7">6.7. I can't figure out how to build PHP with Apache 1.3.</a></li>
         <li><a href="#6.8">6.8. I have followed all the steps to install the Apache module version on UNIX, and my PHP scripts show up in my browser or I am being asked to save the file.</a></li>
-        <li><a href="#6.9">6.9. It says to use: --activate-module=src/modules/php3/libphp3.a, but that file doesn't exist, so I changed it to --activate-module=src/modules/php3/libmodphp3.a and it doesn't work!? What's going on?</a></li>
-        <li><a href="#6.10">6.10. When I try to build Apache with PHP as a static module using --activate-module=src/modules/php3/libphp3.a it tells me that my compiler is not ANSI compliant.</a></li>
+        <li><a href="#6.9">6.9. It says to use: --activate-module=src/modules/php4/libphp4.a, but that file doesn't exist, so I changed it to --activate-module=src/modules/php4/libmodphp4.a and it doesn't work!? What's going on?</a></li>
+        <li><a href="#6.10">6.10. When I try to build Apache with PHP as a static module using --activate-module=src/modules/php4/libphp4.a it tells me that my compiler is not ANSI compliant.</a></li>
         <li><a href="#6.11">6.11. When I try to build PHP using --with-apxs I get strange error messages.</a></li>
         <li><a href="#6.12">6.12. During 'make', I get errors in microtime, and a lot of 'RUSAGE_' stuff.</a></li>
     </ul>
@@ -840,19 +840,19 @@ the file is being read correctly.
   </dd>
 
   <dt><b>
-    <a name="6.9">6.9.</a> It says to use: --activate-module=src/modules/php3/libphp3.a, but that file
-    doesn't exist, so I changed it to --activate-module=src/modules/php3/libmodphp3.a and it doesn't work!?
+    <a name="6.9">6.9.</a> It says to use: --activate-module=src/modules/php4/libphp4.a, but that file
+    doesn't exist, so I changed it to --activate-module=src/modules/php4/libmodphp4.a and it doesn't work!?
     What's going on?
   </b></dt>
   <dd>
     Well, you decided to try to outsmart the people who wrote those nice step-by-step instructions for you and you
-    have now discovered that these people cannot be outsmarted.  The libphp3.a file is not supposed to
+    have now discovered that these people cannot be outsmarted.  The libphp4.a file is not supposed to
     exist.  The Apache build process will create it.<p>
   </dd>
 
   <dt><b>
     <a name="6.10">6.10.</a> When I try to build Apache with PHP as a static module using
-    --activate-module=src/modules/php3/libphp3.a it tells me that my compiler is not ANSI
+    --activate-module=src/modules/php4/libphp4.a it tells me that my compiler is not ANSI
     compliant.
   </b></dt>
   <dd>
