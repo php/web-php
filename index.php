@@ -40,6 +40,23 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
+<?/* move this entry to the top when you update it! */?>
+<h1>
+<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For April available
+</h1>
+<p>
+<font class="newsDate">[18-Apr-2001]</font>
+<? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
+published the current results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the 
+<? print_link("/usage.php", "usage page"); ?>.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 <h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
 
 <p>
@@ -62,22 +79,6 @@ Dublin, Ireland in October 2001! (And stay tuned for more info
 on the first PHP Conference coming July 2001, part of the <a
 href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
 Conference</a> in San Diego, California.)</p>
-
-<? echo hdelim(); ?>
-
-<h1>
-<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For April vailable
-</h1>
-<p>
-<font class="newsDate">[18-Apr-2001]</font>
-<? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
-published the current results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the 
-<? print_link("/usage.php", "usage page"); ?>.
-<br clear="all">
-</p>
 
 <? echo hdelim(); ?>
 
