@@ -10,6 +10,16 @@ Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.
 has been released.  This bug-fix release also fixes a few party-crashing bugs that
 were discovered in PHP 4.0.4.
 
+<h3>New usage stats for January available</h3>
+<p>
+<a href="/usage.php"><img align=right src="gifs/stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
+<a href="http://www.netcraft.com/">Netcraft</a> and <a
+href="http://www.securityspace.com/s_survey/">E-Soft</a> have
+published the January results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the <a
+href="usage.php">usage page</a>.
+<br clear="all">
+
 <a href="http://conferences.oreilly.com/oscon2001/"><img src="gifs/osscon.gif" align="right" border=0></a>
 <h3>PHP Conference - <a href="cfp.php">Call for Participation</a></h3>
 The conference will be part of the <a
@@ -52,16 +62,6 @@ It's a little sparse right now, but feel free to make suggestions!
 <a href="http://www.zend.com">Zend Technologies</a> has announced the availability of
 the Zend Optimizer for PHP 4.0.  The optimizer is available for
 <a href="http://www.zend.com/zend/optimizer.php">free download</a>.
-
-<h3>New usage stats for October available</h3>
-<p>
-<a href="/usage.php"><img align=right src="gifs/stats-small.gif" border=0 height=64 width=121 alt="PHP Usage Stats"></a>
-<a href="http://www.netcraft.com/">Netcraft</a> and <a
-href="http://www.securityspace.com/s_survey/">E-Soft</a> have
-published the October results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the <a
-href="usage.php">usage page</a>.
-<br clear="all">
 
 <h3>What is PHP?</h3>
 <P>
