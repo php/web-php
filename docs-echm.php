@@ -179,7 +179,7 @@ site_header("Documentation - Extended CHM Format");
  </li>
  
  <li>
-  <strong><a href="http://www.macromedia.com/software/homesite/">jEdit</a></strong>:
+  <strong><a href="http://jedit.org/">jEdit</a></strong>:
   Users of this editor can grab and adjust this BeanShell macro. Save it as
   Lookup_In_PHP_Manual.bsh.
   <pre>CHM_location = "C:\\PHP\\php_manual_en.chm";
