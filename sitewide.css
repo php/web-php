@@ -61,6 +61,13 @@ p.formerror, p.warn {
 	padding: 6px;
 }
 
+hr {
+	border: 0px;
+	color: black;
+	background-color: black;
+	height: 1px;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;
