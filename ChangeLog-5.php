@@ -31,6 +31,7 @@ new internal fast_call_user_function() function. (Sterling)</li>
   <ul>
    <li>"session.hash_function" and "session.hash_bits_per_character". (Sascha)</li>
    <li>"mail.force_extra_paramaters". (Derick)</li>
+   <li>"register_long_arrays". (Zeev)</li>
   </ul>
 </li>
 <li>Improved the streams support: (Wez, Sarah, Ilia)
@@ -105,11 +106,12 @@ makes them return the digest as binary data. (Michael Bretterklieber, Derick)</l
 <li>Added optional parameter to mkdir() to make directory creation recursive. (Ilia)</li>
 <li>Added optional parameter to file() which makes the result array not contain
 the line endings and to skip empty lines. (Ilia)</li>
-<li>Added new range() functionality: (Ilia)
+<li>Added new range() functionality:
  <ul>
-  <li>Support for float modifier.</li>
-  <li>Detection of numeric values inside strings passed as high &amp; low.</li>
-  <li>Proper handle the situations where high == low.</li>
+  <li>Support for float modifier. (Ilia)</li>
+  <li>Detection of numeric values inside strings passed as high &amp; low. (Ilia)</li>
+  <li>Proper handle the situations where high == low. (Ilia)</li>
+  <li>Added an optional step parameter. (Jon)</li>
  </ul>
 </li>
 <li>Added encoding detection feature for expat XML parser. (Adam Dickmeiss, Moriyoshi)</li>
@@ -120,6 +122,7 @@ html_entity_decode(). (Moriyoshi)</li>
 <li>Added context options 'method', 'header' and 'content' for "http://" fopen 
 wrapper. (Sara)</li>
 <li>Added input filter support. See README.input_filter for more info. (Rasmus)</li>
+<li>Added a replace count for str_[i]replace(), see bug #8218. (Sara)</li>
 <li>Fixed is_executable() to be available also on Windows. (Shane)</li>
 <li>Fixed dirname() and strip_tags() to be binary-safe. (Moriyoshi)</li>
 <li>Fixed bug #24098 (crash in pathinfo()). (Ilia)</li>
