@@ -115,6 +115,13 @@ Following is a description of the new input mechanism.  For a full list of chang
 
 SECURITY:  NEW INPUT MECHANISM
 
+First and foremost, it's important to stress that regardless of
+anything you may read in the following lines, PHP 4.1.0 *supports*
+the old input mechanisms from older versions.  Old applications
+should go on working fine without modification!
+
+Now that we have that behind us, let's move on :)
+
 For various reasons, PHP setups which rely on register_globals 
 being on (i.e., on form, server and environment variables becoming 
 a part of the global namespace, automatically) are very often 
