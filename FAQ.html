@@ -46,6 +46,30 @@ file included in the PHP3 distribution. Some highlights:
   <LI>Persistent database connections.
 </UL>
 
+<H3>I heard it's possible to access Microsoft SQL Server from PHP3. How?</H3>
+
+<P>On Windows 95/NT machines, you can simply use the included ODBC support
+and the correct ODBC driver.
+
+<P>On Unix machines, you can use the Sybase-CT driver to access Microsoft
+SQL Servers because they are (at least mostly) protocol-compatible. Sybase
+has made a free version of the necessary libraries for Linux systems. For
+other Unix operating systems, you need to contact Sybase for the correct
+libraries (which cost money).
+
+<H3>Can I access Microsoft Access databases?</H3>
+
+<P>Yes, as long as you are running entirely under Windows 95 or NT,
+where you can use ODBC and Microsoft's ODBC drivers for Microsoft Access
+databases. PHP3 does not have any support for reading Microsoft Access
+databases, and there are not any Unix ODBC drivers for them.
+
+<P>Some alternatives are to use an SQL server that has Windows ODBC drivers
+and use that to store the data, which you can then access from Microsoft
+Access (using ODBC) and PHP3 (using the built-in drivers), or to use an
+intermediary file format that Access and PHP3 both understand, such as
+flat-files or dBase databases.
+
 <H3>Is there a PHP3 mailing list?</H3>
 
 <P>Of course! To subscribe, send mail to
@@ -124,15 +148,17 @@ enable using '--with-EXTENSION' options to 'configure'. Run 'configure
 <P>Yes, as long as you're looking for binaries for Windows 95 or NT.
 They're available in the same place as the source.
 
-<h3>I got the latest cvs on my Windows 95/NT machine, what do I need to compile it?</h3>
+<H3>I got the latest version of the PHP3 source code from the CVS
+repository on my Windows 95/NT machine, what do I need to compile it?</H3>
 
-<p>First, you will need Microsoft VisualC++ v5 (v4 may do it also, but we do it with
-v5), and you will need to <a href="win32/makeparser.zip">download Bison and Flex</a>.  You will need to put Bison and Flex
-somewhere IN your path, or add their location to your path.  Then run the batch file 'makeparser'
-before compiling with MSVC.  You also may need to edit some settings in the project settings.  You should
-be familier enough with MSVC to know what to do ;).  But look at the include and lib paths, they will probably be
-wrong for your system.
-</p>
+<P>First, you will need Microsoft Visual C++ v5 (v4 may
+do it also, but we do it with v5), and you will need to <A
+href="http://www.php.net/win32/makeparser.zip">download Bison and
+Flex</A>.  You will need to put Bison and Flex somewhere in your path,
+or add their location to your path.  Then run the batch file 'makeparser'
+before compiling with MSVC.  You also may need to edit some settings
+in the project settings.  You should be familier enough with MSVC to
+know what to do ;).
 
 <HR>
 
@@ -278,6 +304,7 @@ README.WIN32 file.
     happen automatically with PHP3 and Apache 1.3.)
   <P>
   </DD>
+
   <DT><B>
     I'm trying to access one of the standard CGI variables (such
     as $DOCUMENT_ROOT or $HTTP_REFERER) in a user-defined function,
@@ -305,11 +332,11 @@ href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
 <H3>Common Problems</H3>
 
 <DL>
-  <DT><b>
+  <DT><B>
     I converted my script from PHP/FI 2.0 to PHP3 syntax, but now it just
     hangs! When I looked at the processes running on my server, there was
     one process that was chewing up all of the CPU cycles!
-  </b></DT>
+  </B></DT>
   <DD>
     You probably missed the semi-colon on a <CODE>while
     (condition);</CODE> statement. This will cause PHP3 to spin out of
@@ -317,6 +344,7 @@ href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
     loop!  Change the semi-colon to a colon and it should work correctly.
   <P>
   </DD>
+
   <DT><B>
     My user-functions don't work any more! I get a "Parse error (expecting '('"
     on the first line of the function.
