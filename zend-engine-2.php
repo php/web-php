@@ -238,6 +238,7 @@ class Foo {
     }
 }
 ?>'); ?>
+</p>
 <p>
 Old code that has no user-defined classes or functions named 'final' should run 
 without modifications.
@@ -325,6 +326,7 @@ that calls the parent constructor has to be modified.
 PHP 5 introduces a standard way of declaring constructor methods by calling them by the name <code>__construct()</code>.
 </p>
 <h3>Example</h3>
+<p>
 <?php highlight_string('<?php
 class BaseClass {
 	function __construct() {
@@ -342,6 +344,7 @@ class SubClass extends BaseClass {
 $obj = new BaseClass();
 $obj = new SubClass();
 ?>'); ?>
+</p>
 <p>
 For backwards compatibility, if PHP 5 cannot find a <code>__construct()</code> function 
 for a given class, it will search for the old-style constructor function, by the name of the 
@@ -401,6 +404,7 @@ echo "Foo::constant = " . Foo::constant . "\n";
 PHP 5 allows for expressions within constants, however, constants are evaluated at compile time, therefore
 no constants can be declared that rely on runtime information.
 </p>
+<p>
 <?php highlight_string('<?php
 class Bar {
 	const a = 1<<0;
@@ -511,6 +515,7 @@ PHP 5 introduces the <code>instanceof</code> keyword, that allows you to ascerta
 or not an object is an instance of a class, or extends a class, or implements an interface.
 </p>
 <h3>Example</h3>
+<p>
 <?php highlight_string('<?php
 class baseClass { }
 
