@@ -117,7 +117,8 @@ $uri_aliases = array (
 
 $external_redirects = array(
     "php4news" => "http://cvs.php.net/co.php/php4/NEWS?p=1",
-    "projects" => "http://freshmeat.net/browse/183/"
+    "projects" => "http://freshmeat.net/browse/183/",
+    "pear"     => "http://pear.php.net/"
 );
 
 // ============================================================================
