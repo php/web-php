@@ -169,6 +169,7 @@ right away.</blockquote>
 	site("Mail Chek","mail.chek.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
+	site("TageBook.Com - Online Diary","tagebook.com");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
 	siteEnd();
