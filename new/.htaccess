@@ -1,2 +1,2 @@
-php3_include_path ./include
+php3_include_path .:./include
 
