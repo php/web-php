@@ -440,7 +440,7 @@ endif; ?>
      <TD ALIGN=right>
       <?
 		if ($HAVE_SEARCH):
-			$form=$PHP_SELF;
+			$form="/search.php3";
 		else:
 			$form="http://uk.php.net/search.php3";
 		endif;
@@ -578,7 +578,7 @@ endwhile;
 
 <?
 if ($HAVE_SEARCH):
-	$form=$PHP_SELF;
+	$form="/search.php3";
 else:
 	$form="http://uk.php.net/search.php3";
 endif;
