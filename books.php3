@@ -27,10 +27,10 @@ O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
 ><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP Programming</A><BR>
 by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
 <SMALL>
-Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 850 pages<BR>
+Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 909 pages<BR>
 <A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
 </SMALL>
 </TD>
@@ -44,7 +44,7 @@ Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 850 pages<BR>
 >Core PHP Programming</A><BR>
 by Leon Atkinson<BR>
 <SMALL>
-Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages
+Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages<BR>
 <A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
 </SMALL>
 </TD>
@@ -52,12 +52,14 @@ Prentice Hall, April 1999, ISBN 0-13-020787-X, 568 pages
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
-><IMG SRC="http://www.amazon.com/images/P/0071353429.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/medinets.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
->PHP3: Programming Browser-Based Applications (McGraw-Hill Tools Series)</A><BR>
+>PHP3: Programming Browser-Based Applications</A><BR>
 by David Medinets<BR>
-<SMALL><A HREF="http://www.mtolive.com/phpbook">more info</A><BR>
+<SMALL>
+MacGraw-Hill, 2000, ISBN 0-07-135342-9, 552 pages<BR>
+<A HREF="http://www.mtolive.com/phpbook">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
