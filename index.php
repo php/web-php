@@ -192,6 +192,28 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.phpconference.com/", make_image("international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
+
+<h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
+<p>
+<font class="newsdate">[13-Jan-2003]</font>
+Software &amp; Support Verlag announced the <a
+href="http://www.phpconference.com/">International PHP Conference 2003 - Spring
+Edition</a> - in Amsterdam. The dates for this event for PHP enthusiasts from
+all over the world will be May 8 and 9, 2003. The conference venue is the RAI
+conference center in Amsterdam.</p>
+
+<p>Like the International PHP Conferences in Frankfurt this conference will
+offer a first class program  to an international audience of PHP enthusiasts.
+We are happy to ask you to submit your <a
+href="http://www.phpconference.com/content/content2.php?CatID=0&NewsID=354">proposals</a>
+for the session program.</p>
+
+<p>The topics are General PHP, PHP &amp; Business, PHP &amp; Databases, PHP
+Design, PHP Extensions, PHP &amp; XML and PHP-GTK.</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PEAR Out of Beta!</h1>
 <p>
 <font class="newsdate">[11-Jan-2003]</font>
