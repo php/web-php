@@ -14,8 +14,7 @@ dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
-hk	hk.php.net	Marquis Chan <marquix@traland.com>
-ns1.traland.com
+hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
