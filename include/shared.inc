@@ -306,7 +306,7 @@ function commonHeader($title) {
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
 <? endif; ?>
 
-<SCRIPT LANGUAGE="JavaScript1.2">
+<SCRIPT LANGUAGE="JavaScript">
 <!--
 /*
 <? readfile($DOCUMENT_ROOT."/COPYRIGHT.txt"); ?>
@@ -327,7 +327,12 @@ var loaded = 0;
 var gotlayers = 0;
 var lastbutton='top';
 
+// -->
+</SCRIPT>
+
 <? if (($NS4 || $IE4) && (!$DISABLE_KICKOUTS)):	/* Kick Outs */ ?>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
 
 NS4 = (document.layers) ? 1 : 0;
 IE4 = (document.all) ? 1 : 0;
@@ -379,13 +384,18 @@ function popUp(menuName,on) {
 }
 
 <? else: ?>
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
 function popUp(menuName,on) {
 }
 function moveLayers() {
 }
 <? endif;	/* Kick outs */ ?>
+// -->
+</SCRIPT>
 
-
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
 <? if ($NS4 || $NS3 || $IE4):	/* OnOvers */ ?>
 function LoadImgs () {
 	if (document.images) {
@@ -448,7 +458,7 @@ if ($IE4):
 endif;
 ?>
 
-//--->
+// -->
 </SCRIPT>
 
 </HEAD>
@@ -644,7 +654,7 @@ while ($site = key($mirror_sites)):
 endwhile;
 ?>
 </SELECT>
-<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=5 HEIGHT=21 BORDER=0>
 </FORM>
 <? kickFooter("mirrorsKick","mirr",400);?>
 </DIV>
@@ -656,7 +666,7 @@ endwhile;
 Type in a PHP function name or feature to<BR>
 jump to that page of the online manual:<BR>
 <FONT SIZE=3><INPUT NAME="function" TYPE="text" SIZE=25></FONT>
-<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=5 HEIGHT=21 BORDER=0>
 </FORM>
 or click on this button to get an alphabetical listing of all<BR>
 PHP functions.  
@@ -680,14 +690,18 @@ endif;
 if (!isset($prevsearch)):
 	$prevsearch[0]="";
 endif;
-echo "<form action=\"$form\" METHOD=\"POST\">\n"; ?>
+?>
+<FORM ACTION="/search.php3" METHOD="POST">
 <B>What are you searching for:</B><BR>
-<FONT SIZE=3><input type="text" name="pattern" size=20 VALUE="<? echo $prevsearch[0];?>"></FONT><BR>
-<FONT SIZE=2>
-<INPUT TYPE="RADIO" NAME="show" VALUE="nosource" CHECKED> Search whole site<BR>
-<INPUT TYPE="RADIO" NAME="show" VALUE="manual"> Search documentation only<BR>
-<INPUT TYPE="RADIO" NAME="show" VALUE="source"> Search source code only
-<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
+<input type="text" name="pattern" size=20 VALUE="<? echo $prevsearch[0];?>"><BR>
+<B>Where do you want to look:</B><BR>
+<SELECT NAME="show">
+<OPTION VALUE="nosource" SELECTED>Whole site
+<OPTION VALUE="manual">Documentation only
+<OPTION VALUE="maillist">PHP3 Mailing List
+<OPTION VALUE="devlist">PHP Developers' List
+<OPTION VALUE="source">Source code only
+</SELECT><INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HSPACE=5 HEIGHT=21 BORDER=0><BR>
 </FORM>
 <? kickFooter("searchKick","sear",300);?>
 </DIV>
@@ -701,16 +715,13 @@ if (IE4) {
 	gotlayers = 1;
 }
 
-//--->
+// -->
 </SCRIPT>
 
 <SCRIPT LANGUAGE="JavaScript1.3">
 <!--
-if (IE4) {
 	gotlayers = 1;
-}
-	gotlayers = 1;
-//--->
+// -->
 </SCRIPT>
 
 <?

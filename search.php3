@@ -5,6 +5,34 @@ directions in there if you want to run the search engine on your
 mirror (or emulate it on your own website).
 */
 
+if (isset($pattern) && ($pattern)) {
+	SetCookie("prevsearch",$pattern,0,"",".php.net");
+}
+
+require("shared.inc");
+
+if (isset($pattern) && ($pattern)) {
+	$location = "http://www.progressive-comp.com/Lists/";
+	if ($show=="maillist") {
+		$query = "l=php3-general&r=1&w=2&s=".urlencode($pattern);
+		Header("Location: ".$location."?".$query);
+		exit;
+	} else if ($show=="devlist") {
+		$query = "l=php-dev&r=1&w=2&s=".urlencode($pattern);
+		Header("Location: ".$location."?".$query);
+		exit;
+	}
+
+	if (!$HAVE_SEARCH) {
+		$location="http://uk.php.net/search.php3";
+		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
+		Header("Location: ".$location."?".$query);
+		exit;
+	}
+}		
+
+include("configuration.inc");
+
 function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	global $FONTFACE;
 	if ($page>1) {
@@ -30,87 +58,42 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	echo "<TD ALIGN=right WIDTH=75>$next<BR></TD>\n";
 	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "</TR></TABLE><BR>\n";
-};
-
-/* Cookie stuff has to come before the first header */
-if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) { 
-	if ($prevpattern) {
-		$p=$prevpattern;
-	} else {
-		$p=$pattern;
-	}
-	SetCookie("prevsearch[0]",$p,0,"",".php.net");
-	if (isset($prevsearch)) {
-		$i=count($prevsearch);
-		$c=0;$d=1;
-		while(($c<$i)&&($d<9)) { 
-			if ($prevsearch[$c]!=$p) {
-				SetCookie("prevsearch[$d]",$prevsearch[$c],0,"",".php.net");
-				$d++;
-			}
-			$c++;
-		}
-	}
-
 }
-require("shared.inc");
-include("configuration.inc");
-
 
 if(!isset($pattern)) { 
 	$DISABLE_KICKOUTS = true;
 	commonHeader("Site Search");
-	if ($HAVE_SEARCH) {
-		$form=$PHP_SELF;
-	} else {
-		$form="http://uk.php.net/search.php3";
-	}
-	if (!isset($prevsearch)) {
-		$prevsearch[0]="";
-	}
-	?>
-	<form action="<?echo $form;?>" METHOD=POST>
-	<CENTER>
-	<TABLE CELLSPACING=0 CELLPADDING=2>
-	<TR VALIGN=top>
-		<TD ALIGN=RIGHT>
-	 	  <FONT FACE="<? echo $FONTFACE;?>">
-		  Search for: 
-		  </FONT>
-		</TD><TD>
-		  <input type="text" name="pattern" value="<?echo $prevsearch[0];?>" size=30>
-		  <INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
-		  <? if ($prevsearch[0]) { ?>
-		      <SELECT NAME="prevpattern">
-		      <OPTION VALUE="">-- Previous Searches --
-			<?$i=0;while($i<count($prevsearch)) {
-				echo "<OPTION VALUE=\"";
-				echo $prevsearch[$i];
-				echo "\">";
-				echo $prevsearch[$i];
-				echo "\n";
-				$i++;
-			  } ?>
-		      </SELECT>
-		<?}?>
-		  </FONT>
-		</TD>
-	</TR><TR VALIGN=top>
-		<TD ALIGN=RIGHT>
-	 	  <FONT FACE="<? echo $FONTFACE;?>">
-		  Restrict the search to:
-		  </FONT>
-		</TD><TD>
-	 	  <FONT FACE="<? echo $FONTFACE;?>">
-		  <INPUT TYPE="RADIO" NAME="show" VALUE="nosource" CHECKED>Whole site<BR>
-		  <INPUT TYPE="RADIO" NAME="show" VALUE="manual">Online documentation<BR>
-		  <INPUT TYPE="RADIO" NAME="show" VALUE="source">Site PHP3 source code<BR>
-	  	  </FONT>
-		</TD>
-	</TR>
-	</TABLE>
-	</CENTER>
-	</form>
+	$form=$PHP_SELF;
+?>
+<FORM ACTION="<?echo $form;?>" METHOD="POST">
+<CENTER>
+<TABLE CELLSPACING=0 CELLPADDING=2>
+<TR VALIGN=top>
+<TD ALIGN=RIGHT><FONT FACE="<? echo $FONTFACE;?>">
+Search for: <BR>
+</FONT></TD>
+<TD>
+<INPUT TYPE="text" NAME="pattern" VALUE="<?echo $prevsearch;?>" SIZE=30>
+<INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0><BR>
+</FONT></TD>
+</TR>
+<TR VALIGN=top>
+<TD ALIGN=RIGHT><FONT FACE="<? echo $FONTFACE;?>">
+Restrict the search to: <BR>
+</FONT></TD>
+<TD>
+<SELECT NAME="show">
+<OPTION VALUE="nosource" SELECTED>Whole site
+<OPTION VALUE="manual">Online documentation
+<OPTION VALUE="maillist">PHP3 Mailing List
+<OPTION VALUE="devlist">PHP Developers' List
+<OPTION VALUE="source">Site PHP3 source code
+</SELECT><BR>
+</FONT></TD>
+</TR>
+</TABLE>
+</CENTER>
+</FORM>
 <? } else {
 		commonHeader("Search Results");
 		if ($HAVE_SEARCH) {
@@ -126,15 +109,13 @@ if(!isset($pattern)) {
 				$base="-";
 			}
 		}
+
 		if ($base=="-") {
 			$sourceurl=$PHP_SELF;
 		} else {
 			$sourceurl=$base.$PHP_SELF;
 		}
 
-		if ((isset($prevpattern))&&($prevpattern)) {
-			$pattern=$prevpattern;
-		}
 		if ($pattern=="") {
 			echo "<b>Error:</B> No search words specified.<BR><BR>";
 			echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
