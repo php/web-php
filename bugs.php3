@@ -79,7 +79,8 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Solid related",
 				   "Adabas-D related",
 				   "dBase related",
-				   "dbm related",
+				   "DBM related",
+				   "Misbehaving function",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
