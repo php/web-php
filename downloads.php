@@ -187,7 +187,7 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
     </ul>
   </li>
   
-  <li>If you are searching for older versions of PHP, go to the <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
+  <li>If you are searching for older versions of PHP, go to the <a href="http://museum.php.net/">"PHP Museum"</a>.</li>
   <li>Search for PHP tarballs on AllTheWeb.com:
     <form action="http://www.alltheweb.com/search" method="GET">
       <input type="hidden" name="cat" value="ftp">
