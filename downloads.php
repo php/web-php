@@ -133,7 +133,7 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link('php-5.0.0RC3-Win32.zip', 'PHP 5.0.0RC3 zip package'); ?> - 8 Jun 2004<br />
-  <span class="md5sum">md5: fd7a60bc0f1da17d906b6b5c97fad612</span>
+  <span class="md5sum">md5: f6d84eb0ff48cfdb0e53db735fd2324b</span>
  </li>
  <li>
   <?php download_link('pecl-5.0.0RC3-Win32.zip', 'Collection of PECL modules for PHP 5.0.0RC3'); ?> - 8 Jun 2004<br />
