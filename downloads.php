@@ -9,6 +9,7 @@ distributions come with PHP these days, so if you do
 not want to compile your own, go to your distribution\'s
 download site. Binaries available on external servers:
 <ul>
+<li>' . make_link("http://developer.novell.com/ndk/leadedge.htm#le169", "Novell") . '</li>
 <li>' . make_link("http://freeware.sgi.com/index-by-alpha.html#php", "SGI IRIX 6.5.x") . '</li>
 <li>' . make_link("http://www.entropy.ch/software/macosx/php/", "Mac OS X") . '</li>
 <li>' . make_link("http://silk.apana.org.au/php/", "OS/2") . '</li>
