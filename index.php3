@@ -5,7 +5,7 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 <h3>A Request from Rasmus</h3>
-A complete abuse of my involvement with the PHP project is 
+A complete abuse of Rasmus's involvement with the PHP project is 
 <a href="request.php3">HERE</a>.
 
 <img src="php4zend-small-white.gif" align="right">
