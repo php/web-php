@@ -75,8 +75,6 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
-
 <h1>PHP Conference 2 - Call for Participation</h1>
 
 <p>
@@ -92,6 +90,8 @@ Diego, California between July 22-26, 2002.
 </p>
 
 <?php echo hdelim(); ?>
+
+<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
 
 <h1>International PHP Conference slides available</h1>
 
