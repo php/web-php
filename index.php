@@ -145,6 +145,19 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>ApacheCon Europe Call for Papers</h1>
+<p>
+ <span class="newsdate">[08-Feb-2005]</span>
+ ApacheCon Europe will be held from July 18th to July 22th in Stuttgart,
+ Germany. The conference organizers are looking for speakers willing to have a
+ talk of any of the topics mentioned on the <a
+ href="http://www.apachecon.com/2005/EU/index.html">website</a>.  If you think
+ that you have material for this conference and want to have a talk there, you
+ can submit a paper <a href="http://apachecon.com/html/login.html">here</a>.
+</p>
+
+<hr/>
+
 <?php news_image("http://phpsec.org/", "phpsc-logo.gif", "PHPSC Logo"); ?>
 
 <h1>PHP Security Consortium</h1>
