@@ -344,6 +344,18 @@ by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A 
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07"
+><IMG SRC="http://images-eu.amazon.com/images/P/3826680022.04.LZZZZZZZ.jpg">
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3826680022/wwwphpnet07"
+>PHP 4</A><BR>
+by Uwe Hess and G&uuml;nther Karl<BR>
+<SMALL>in German, bhv, Dec 2000, ISBN 3-8266-8002-2, 764 pages<BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.AnayaMultimedia.es/"
 ><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="187" 
 ></A><BR>
