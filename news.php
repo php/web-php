@@ -55,6 +55,11 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Student Suspended Over Suspected Use of PHP", "by National News",
+    "http://bbspot.com/News/2000/6/php_suspend.html", "June 14, 2000");?>
+A teacher overheard him say that he was using PHP, and as part of our Zero-Tolerance policy against drug use, he was immediately suspended. No questions asked,\" said Principal Clyde Thurlow.  \"We're not quite sure what PHP is, but we suspect it may be a derivative of PCP, or maybe a new designer drug like GHB.
+<? endEntry(); ?>
+
 <? makeEntry( "Object-Oriented Programming with PHP", "by <a mailto:href=\"mailto:wj@unstrung.com\">Jason Gilmore</a>",
     "http://www.webreview.com/pub/2000/06/02/feature/index03.html?wwwrrr_rss", "June 2, 2000");?>
 Couple Object-Oriented Programming with PHP and you've got features
