@@ -10,6 +10,10 @@ You can browse through a list of some companies using PHP <a href="/sites.php3">
 Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employement Listing</A> site.  
 PHP developers can post their resumes, and employers can post their job notices.
 
+<h3>ISPs that support PHP</h3>
+Looking for an ISP or hosting service that has PHP3 and MySQL support?  There's a growing list at 
+<A HREF="http://www.od-site.com/php">www.od-site.com/php</A>.
+
 <h3>Example Code</h3>
 Looking for some sample PHP scripts?  Try these sites:
 <UL>
