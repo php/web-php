@@ -480,11 +480,6 @@ elseif ($cmd == "display") {
 Don'ts</a> before submitting a bug report!
 </p>
 
-<p>
-To report bugs in <strong>PHP 3.0</strong>, please go
-<a href="/bugs-php3.php">here</a>.
-</p>
-
 <?php
 }
 
