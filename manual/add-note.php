@@ -23,7 +23,7 @@ CREATE TABLE note (
 
 # turn the POST data into GET data so we can do the redirect
 if(!strstr($MYSITE,"www.php.net")) {
-        Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&redirect=".urlencode($redirect));
+        Header("Location: http://www.php.net/manual/add-note.php?sect=".urlencode($sect)."&lang=".urlencode($lang)."&redirect=".urlencode($redirect));
 }
 
 	mysql_pconnect("localhost","nobody", "");
@@ -31,7 +31,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 
 	if (isset($note)):
 		$now = date("Y-m-d H:i:s");
-		$query = "INSERT INTO note (user, note, sect, ts) VALUES ";
+		$query = "INSERT INTO note (user, note, sect, ts, lang) VALUES ";
 		# protect all HTML-like stuff (may be "Joe Blow <joe@blow.com>")
 		$query .= "('" . htmlspecialchars($user) . "',"; 
 		# only protect PHP-code start tags.
@@ -39,7 +39,8 @@ if(!strstr($MYSITE,"www.php.net")) {
 		# or we could protect all HTML
 		#$query .= "'" . htmlspecialchars(nl2br($note)) . "',";
 		$query .= "'" . $sect . "',";
-		$query .= "'" . $now . "')";
+		$query .= "'" . $now . "',";
+		$query .= "'" . $lang . "')";
 		//echo "<!--$query-->\n";
 		if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
@@ -87,6 +88,7 @@ on the bottom of a manual page so we know where to add the note!</b>
 <FORM method="POST" action="/manual/add-note.php">
 <INPUT type=hidden name="sect" value="<?echo $sect;?>">
 <INPUT type=hidden name="redirect" value="<?echo $redirect;?>">
+<INPUT type=hidden name="lang" value="<?echo $lang;?>">
 <TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0 BGCOLOR="#D0D0D0">
 <TR VALIGN=top>
 <TD><B>Your email address:</B></TD>

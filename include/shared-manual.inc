@@ -246,8 +246,10 @@ function manualGetUserNotes($title,$failover=true)
 
 
 function manualUserNotes($title) {
-	echo '<FORM method="POST" action="http://www.php.net/manual/add-note.php">';
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
+	$cur = substr(dirname($PHP_SELF),-2);
+	if($cur=='al') $cur='en';
+	echo '<FORM method="POST" action="http://www.php.net/manual/add-note.php?lang=$cur">';
 	$back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
 	echo '<INPUT type=hidden name="redirect" value="'.$back_url.'">';
 	echo '<INPUT type=hidden name="sect" value="'.$title.'">';
