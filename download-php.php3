@@ -1,10 +1,10 @@
 <?
 require("shared.inc");
 
-$current = "3.0RC4";
+$current = "3.0RC5";
 $win32_current = "3.0RC4";
 
-$filesizes["php-3.0RC4.tar.gz"]="~ 960KB";
+$filesizes["php-3.0RC5.tar.gz"]="~ 1MB";
 $filesizes["php-3.0RC4-win32.exe"]="~ 1090KB";
 
 function makeCap() {

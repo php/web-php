@@ -400,11 +400,9 @@ of grouping them all in one report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="3.0RC4">3.0 Release Candidate 4
+    <option name="3.0RC5">3.0 Release Candidate 5
     <option name="3.0CVS">3.0 Latest CVS
-    <option name="3.0RC3">3.0 Release Candidate 3
-    <option name="3.0RC2">3.0 Release Candidate 2
-	<option name="3.0RC">3.0 Release Candidate
+    <option name="3.0RC4">3.0 Release Candidate 4
     <option name="other">other
    </select>
   </td>
