@@ -27,7 +27,8 @@ function highlight_php($code, $return = FALSE)
         array(
             '&nbsp;',
             '<br />',
-            '<font color="',
+            '<font color="',        // for PHP 4
+            '<span style="color: ', // from PHP 5.0.0RC1
             '</font>',
             "\n ",
             '  '
@@ -35,6 +36,7 @@ function highlight_php($code, $return = FALSE)
         array(
             ' ',
             "<br />\n",
+            '<span class="',
             '<span class="',
             '</span>',
             "\n&nbsp;",
