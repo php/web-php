@@ -1,6 +1,5 @@
 <?php
 include_once 'prepend.inc';
-commonHeader("My PHP.net");
 
 // Languages array copy and options to list
 $langs = $LANGUAGES; $options = array();
@@ -45,6 +44,7 @@ foreach ($langs as $code => $name) {
 $langpref = "<form action=\"/my.php\" method=\"POST\">\n<select name=\"my_lang\">\n" .
             join("", $options) . "</select>\n<input type=\"submit\" value=\"Set\">\n</form>";
 
+commonHeader("My PHP.net");
 ?>
 
 <h1>My PHP.net</h1>
