@@ -1,5 +1,5 @@
 <?
-function makeBar($no,$page,$firstdisplated,$lastdisplayed) {
+function makeBar($no,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed) {
 	global $FONTFACE;
 	if ($page>1) {
 		$i=$page-1;
@@ -164,7 +164,7 @@ if(!isset($pattern)) {
 
 		echo "$matches documents match your search for '<B>$pattern</B>' in the $where.<BR><BR>\n";
 
-		makeBar(1,$page,$firstdisplayed,$lastdisplayed);
+		makeBar(1,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
 
 		$i=7; #skip response header
 		echo "<TABLE BORDER=0><TR><TD>\n";
@@ -179,7 +179,7 @@ if(!isset($pattern)) {
 		}
 		echo "</TD></TR></TABLE><BR>\n";
 
-		makeBar(2,$page,$firstdisplayed,$lastdisplayed);
+		makeBar(2,$page,$pages,$baseurl,$firstdisplated,$lastdisplayed);
 
 		?>
 		<CENTER>
@@ -190,4 +190,3 @@ if(!isset($pattern)) {
 }
 commonFooter();
 ?>
-
