@@ -656,7 +656,9 @@ function commonFooter() {
 <TR>
 <TD ALIGN="right" COLSPAN=3>
 <FONT SIZE=-2>
-Some elements of this website are subject to <A HREF="/COPYRIGHT.txt">copyright</A>.<BR>
+Elements of this website are subject to <A HREF="/COPYRIGHT.txt">copyright</A>.<BR>
+Questions about installing or using PHP should be directed to one of the <A HREF="/support.php3">mailing lists</A>.<BR>
+Only questions about the website should be directed to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.<BR>
 </FONT>
 </TD>
 </TR>
