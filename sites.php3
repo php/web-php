@@ -156,6 +156,7 @@ removed right away.</blockquote>
 	site("Patagonia Clothing","www.patagonia.com");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
+	site("USRentals","www.usrentals.com");
 	siteEnd();
 
 /* Telecommunications */
