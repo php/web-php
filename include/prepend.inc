@@ -36,23 +36,27 @@ if (!isset($_SERVER)) {
 
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
-        
+
+/* for performance reasons use this define when including files */
+$path = !strncmp(__FILE__, '/', 1) ? __FILE__ : realpath(__FILE__);
+define('__PHPWEB_INC_PATH__', dirname($path) . '/');
+
 // Site details (mirror site information)
-include_once 'site.inc';
+include_once __PHPWEB_INC_PATH__ . 'site.inc';
 
 // Choose language used for translated parts
-include_once 'langchooser.inc';
+include_once __PHPWEB_INC_PATH__ . 'langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include_once 'ip-to-country.inc';
+include_once __PHPWEB_INC_PATH__ . 'ip-to-country.inc';
 
 // Common layout functions
-include_once 'layout.inc';
+include_once __PHPWEB_INC_PATH__ . 'layout.inc';
 
 // This file is generated on rsync.php.net and propogated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include_once 'last_updated.inc';
+include_once __PHPWEB_INC_PATH__ . 'last_updated.inc';
 
 // Function used to import request vars to global scope.
 // Walks through $array, and imports all values associated

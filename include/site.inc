@@ -3,13 +3,13 @@
 // $Id$
 
 // Define $MIRRORS array, and some constants
-include_once 'mirrors.inc';
+include_once __PHPWEB_INC_PATH__ . 'mirrors.inc';
 
 // Define $COUNTRIES array
-include_once 'countries.inc';
+include_once __PHPWEB_INC_PATH__ . 'countries.inc';
 
 // Define $LANGUAGES array
-include_once 'languages.inc';
+include_once __PHPWEB_INC_PATH__ . 'languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site

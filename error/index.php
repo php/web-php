@@ -14,7 +14,7 @@
 
 // Ensure that our environment is set up
 include_once 'prepend.inc';
-include_once 'loadavg.inc';
+include_once __PHPWEB_INC_PATH__ . 'loadavg.inc';
 
 // Get URI for this request (without the leading slash)
 // See langchooser.inc for more info on STRIPPED_URI
