@@ -17,8 +17,10 @@ href="why_beta.php3">upgrade from PHP/FI 2.0</a>.
 
 <li><a href="documentation.php3">Documentation Resources</a>
 
+<!--
 <li><a href="http://il.php.net/config.php3">Configure PHP 3.0</a>
 online <font size="-2">(JavaScript required)</font>
+-->
 
 <li>Report or check on bugs in the <a
 href="http://ca.php.net/bugs.php3">PHP3 Bug Database</a>
