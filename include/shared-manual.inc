@@ -23,8 +23,7 @@ function setupNavigation($data) {
 
 // Put all the border table of contents data to $SIDEBAR_DATA
 function makeBorderTOC($this) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
-    global $SIDEBAR_DATA, $LANG;
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT, $SIDEBAR_DATA;
 
     $SIDEBAR_DATA.= '<table border="0" cellpadding="4" cellspacing="0">';
 
