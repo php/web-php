@@ -440,7 +440,7 @@ commonHeader("PHP 4 ChangeLog");
 
 <HR noshade>
 
-<h3>Version 4.0, Release Candidate 2<h3>
+<h3>Version 4.0, Release Candidate 2</h3>
 <B>08-May-2000</B>
 <UL>
 <LI>NSAPI WIN32 Module compilable, untested (Shane)
