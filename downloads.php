@@ -108,7 +108,7 @@ site_header("Downloads");
 
 <hr />
 
-<h1>PHP 5 Beta 2</h1>
+<h1>PHP 5 Beta 3</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -122,7 +122,7 @@ site_header("Downloads");
  </li>
 </ul>
 
-<h2>Windows Binaries</h2>
+<h2>Windows Binaries (Beta 2, Beta 3 coming soon)</h2>
 <ul>
  <li>
   <?php download_link('php-5.0.0b2-Win32.zip', 'PHP 5.0.0b2 zip package'); ?> - 30 Oct 2003<br />
