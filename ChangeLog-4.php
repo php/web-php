@@ -11,6 +11,49 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.3.7"></a>
+<h3>Version 4.3.7</h3>
+<b>03-Jun-2004</b>
+<ul>
+<li>Upgraded bundled GD library to 2.0.23. (Ilia)</li>
+<li>Changed user error handler mechanism to relay to built-in error handler if it returns false. (Andrei)</li>
+<li>Fixed command line escaping routines for win32. (Ilia)</li>
+<li>Fixed problems with *printf() functions and '%f' formatting. (Marcus)</li>
+<li>Fixed possible crash inside pg_copy_(to|from) function if delimiter is more then 1 character long. (Ilia)</li>
+<li>Fixed crash inside cpdf_place_inline_image() when working with true-color images. (Ilia)</li>
+<li>Fixed handling of return values from stored procedures in mssql_execute() with multiple result sets returned. (Frank)</li>
+<li>Fixed logic bug in session_register() which allowed registering _SESSION and/or HTTP_SESSION_VARS. (Sara)</li>
+<li><?php bugfix(28597); ?> (xmlrpc_encode_request() incorrectly encodes chars in 200-210 range). (fernando dot nemec at folha dot com dot br, Ilia)</li>
+<li><?php bugfix(28569); ?> (informix connection id is not thread safe). (novicky at aarongroup dot cz, Ard)</li>
+<li><?php bugfix(28564); ?> (Problem building informix as a shared extension).  (roques at mti dot ag, Ilia)</li>
+<li><?php bugfix(28508); ?> (Do not make hypot() available if not supported by libc). (Ilia)</li>
+<li><?php bugfix(28506); ?> (Allow negative start angle in imagearc and imagefilledarc). (Pierre)</li>
+<li><?php bugfix(28456); ?> (Problem with enclosed / in uploaded files). (Antony)</li>
+<li><?php bugfix(28386); ?> (wordwrap() wraps lines 1 character too soon). (Ilia)</li>
+<li><?php bugfix(28374); ?> (Possible unterminated loop inside _php_pgsql_trim_message()). (Ilia)</li>
+<li><?php bugfix(28355); ?> (glob() does not return error on Linux when it does not have permission to open the directory). (Ilia)</li>
+<li><?php bugfix(28289); ?> (incorrect resolving of relative paths by glob() in windows). (Ilia)</li>
+<li><?php bugfix(28229); ?> (run-tests tripped up by spaces in names). (Marcus)</li>
+<li><?php bugfix(28228); ?> (number_format() does not allow empty decimal separator). (Ilia)</li>
+<li><?php bugfix(28196); ?> (missing error constants in cURL extension). (Ilia)</li>
+<li><?php bugfix(28187); ?> (parse_url() not handling embedded IPv6 in URLs). (Sara)</li>
+<li><?php bugfix(28175); ?> (build problem for people using FreeType 2.1.0-2.1.2). (Ilia)</li>
+<li><?php bugfix(28147); ?> (Crash with drawing anti-aliased lines). (Derick)</li>
+<li><?php bugfix(28122); ?> (dba_open db3: Permission denied). (Marcus)</li>
+<li><?php bugfix(28112); ?> (sqlite_query() crashing apache on malformed query). (Ilia, Marcus)</li>
+<li><?php bugfix(28055); ?> (timeout duration too long in feof()/pfsockopen() liveness checks). (Wez)</li>
+<li><?php bugfix(28087); ?> (Do not force mysql.trace_mode to 0 on every request). (Ilia)</li>
+<li><?php bugfix(28042); ?> (greek letters in html to entity mapping not correct). (Derick)</li>
+<li><?php bugfix(28007); ?> (compile mssql extension with old versions of FreeTDS fails). (Frank)</li>
+<li><?php bugfix(27995); ?> (imagefilltoborder() stops the fill process prematurely). (Ilia)</li>
+<li><?php bugfix(27810); ?> (don't use php's pemalloc in ext/pcre). (Joe Orton)</li>
+<li><?php bugfix(23220); ?> (SSL: fatal protocol error when talking to IIS). (Wez)</li>
+
+</ul>
+There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.6"></a>
 <h3>Version 4.3.6</h3>
 <b>15-Apr-2004</b>

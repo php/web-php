@@ -152,19 +152,22 @@ commonHeader("Hypertext Preprocessor");
 
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
-<h1>PHP 4.3.7RC1 released!</h1>
+<h1>PHP 4.3.7 released!</h1>
 <p>
- <span class="newsdate">[25-May-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.7RC1</a> has been released for testing. 
- This is the first release candidate and should have a very low number of problems 
- and/or bugs. Nevertheless, please download and test it as much as possible on 
- real-life applications to uncover any remaining issues.
+ <span class="newsdate">[02-Jun-2004]</span>
+ PHP Development Team is proud to announce the release of PHP <a href="/downloads.php">PHP 4.3.7</a>.
+ This is a maintenance release that in addition to several non-critical bug fixes, addresses an input
+ validation vulnerability in escapeshellcmd() and escapeshellarg() functions on the Windows platform.
+ Users of PHP on Windows are encouraged to upgrade to this release as soon as possible.
 </p>
+
 <p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.638&r2=1.1247.2.668">NEWS</a> file.
+ All in all this release fixes over 30 bugs that have been discovered and resolved since the 4.3.6 
+ release. For a full list of changes in PHP 4.3.7, see the <a href="/ChangeLog-4.php#4.3.7">ChangeLog</a>.
 </p>
+
 <hr />
+
 
 <?php news_image("http://www.afup.org/article.php3?id_article=242", "afup2004.jpg", "AFUP"); ?>
 <h1>Call to speaker for Paris Forum 2004</h1>
@@ -254,24 +257,7 @@ commonHeader("Hypertext Preprocessor");
 <hr />
 
 
-<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
-<h1>PHP 4.3.6 released!</h1>
-<p>
- <span class="newsdate">[15-Apr-2004]</span>
- The PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.6</a>.
- This is is a bug fix release whose primary goal is to address two bugs which may 
- result in crashes in PHP builds with thread-safety enabled. All users of PHP 
- in a threaded environment (Windows) are strongly encouraged to upgrade to 
- this release.
-</p>
-
-<p>
- All in all this release fixes approximately 25 bugs that have been discovered since the 4.3.5 release.
- For a full list of changes in PHP 4.3.6, see the <a href="/ChangeLog-4.php#4.3.6">ChangeLog</a>.
-</p>
-
-<hr />
 
 <h1>Second PHP Marathon announced</h1>
 <p>
