@@ -510,7 +510,7 @@ elseif ($cmd == "display") {
 		$text.= get_old_comments($id);
 
 		$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
-		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=2\n";
+		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=1\n";
 
 		$mailto = $mail_bugs_to . (eregi("documentation",$bug_type.$row[1]) ? ",phpdoc@lists.php.net" : "");
 
