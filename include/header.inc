@@ -4,12 +4,12 @@
   $current = "3.0b3";
 
   $mirror_sites = array(
-    "http://www.php.net/"	 => array("usa", "Circle Net, USA"),
     "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
     "http://il.php.net/"         => array("israel", "Netvision, Israel"),
     "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
     "http://no.php.net/"         => array("norway", "Trondheim, Norway"),
-    "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom")
+    "http://uk.php.net/"	 => array("uk", "Norwich, United Kingdom"),
+	"http://www.php.net/"	 => array("usa", "Circle Net, United States")
   );
 
   function download_link($file, $title) {
