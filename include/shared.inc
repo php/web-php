@@ -261,6 +261,10 @@ function commonHeader($title) {
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
 
+<? if ($HAVE_STYLE): ?>
+<LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
+<? endif; ?>
+
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 var loaded = 0;
@@ -382,10 +386,6 @@ endif;
 
 //--->
 </SCRIPT>
-
-<? if ($HAVE_STYLE): ?>
-<LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
-<? endif; ?>
 
 </HEAD>
 
