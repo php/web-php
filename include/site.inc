@@ -119,7 +119,7 @@ $COUNTRIES = array(
 );
 
 
-$MYSITE='http://'.getenv("SERVER_NAME").'/';
+$MYSITE='http://'.getenv("SERVER_NAME").(getenv("SERVER_PORT")!=80:":".getenv("SERVER_PORT")."").'/';
 
 if (!isset($MIRRORS[$MYSITE])) {
 	$MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
