@@ -31,15 +31,16 @@ $MIRRORS = array(
    "http://php.guardian.no/"      => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 0, 0),
    "http://no.php.net/"           => array("no", "Guardian Networks AS", "guardian", "http://no.php.net/", 1, 1),
    "ftp://no.php.net/pub/free/php/dist/" => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 1, 0),
+   "http://php.tgr.com.pl"        => array("pl", "TGR", "tgr", "http://www.tgr.com.pl/", 1, 0),
    "http://pt.php.net/"           => array("pt", "Telenet", "telenet", "http://www.telenet.pt/", 1, 1),
-   "http://ro.php.net/"           => array("ro", "Politehnica University of Timisoara","upt", "http://www.utt.ro",1,0),
-   "ftp://ftp.utt.ro/mirrors/php3/" => array("ro", "University of Timisoara","upt", "http://www.utt.ro",1,0),
+   "http://ro.php.net/"           => array("ro", "Politehnica University of Timisoara","upt", "http://www.utt.ro/",1,0),
+   "ftp://ftp.utt.ro/mirrors/php3/" => array("ro", "University of Timisoara","upt", "http://www.utt.ro/",1,0),
    "http://sg.php.net/"           => array("sg", "Com5 Productions", "comnet", "http://www.com5.net/", 1, 0),
    "http://sk.php.net/"           => array("sk", "Isternet SR", "isternet", "http://www.isternet.sk/", 1, 0),
    "http://uk.php.net/"           => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 1),
    "ftp://uk.php.net/"            => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 0),
    "http://www.php.net/"          => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1, 0),
-   "http://php.he.net/"           => array("us", "Hurricane Electric", "hurricane", "http://he.net", 1, 0),
+   "http://php.he.net/"           => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0),
    ""                             => array("xx", "", "none", "/")
 );
 
@@ -58,6 +59,7 @@ $COUNTRIES = array(
    "nl" => "Netherlands",
    "no" => "Norway",
    "nz" => "New Zealand",
+   "pl" => "Poland",
    "pt" => "Portugal",
    "ro" => "Romania",
    "sk" => "Slovakia",
