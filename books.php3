@@ -90,7 +90,22 @@ for PHP related stuff by using this form:
 </TR>
 <TR VALIGN="middle">
 <TD align="right">Search for:<BR></TD>
-<TD><INPUT TYPE="text" NAME="keyword" SIZE=20 VALUE="PHP">
+<TD><SELECT NAME="keyword">
+<OPTION SELECTED>PHP
+<OPTION>Apache
+<OPTION>Linux
+<OPTION>MySQL
+<OPTION>mSQL
+<OPTION>Oracle
+<OPTION>IMAP
+<OPTION>LDAP
+<OPTION>XML
+<OPTION>Adabas
+<OPTION>Sybase
+<OPTION>Microsoft SQL
+<OPTION>Microsoft NT
+<OPTION>ODBC
+</SELECT>
 <INPUT TYPE="submit" BORDER=0 VALUE="Search" NAME="Search">
 </TD>
 </TR>
