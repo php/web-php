@@ -244,20 +244,25 @@ function manual_navbar_notables($location = "top")
     global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
     // Start navbar with 
-    echo "<!--UdmComment-->\n<div class=\"manualnavbar\">\n <span class=\"prev\">\n";
-    if ($PGI['prev'][1]) {
-        echo "  <a href=\"{$PGI['prev'][0]}\">" . 
-             make_image('caret-l.gif', '&lt;') .
-             $PGI['prev'][1] . "</a>\n";
-    }
-    echo " </span>\n <span class=\"next\">\n";
+    echo "<!--UdmComment-->\n<div class=\"manualnavbar\">\n <span class=\"next\">\n";
     if ($PGI['next'][1]) {
         echo "  <a href=\"{$PGI['next'][0]}\">" .
              $PGI['next'][1] .
              make_image('caret-r.gif', '&gt;') .
              "</a>\n";
     }
+    echo " </span>\n <span class=\"prev\">\n";
+    if ($PGI['prev'][1]) {
+        echo "  <a href=\"{$PGI['prev'][0]}\">" . 
+             make_image('caret-l.gif', '&lt;') .
+             $PGI['prev'][1] . "</a>\n";
+    } else {
+        echo "  &nbsp;\n";
+    }
     echo " </span>\n <hr />\n";
+
+    // Provide last updated information on this page
+    echo " <span class=\"lastupdated\">Last updated: {$PGI['lastmod']}</span>\n";
 
     // Print out language switch on top of manual pages
     echo " <div class=\"langchooser\">\n";
@@ -295,12 +300,12 @@ function manual_navbar_notables($location = "top")
              '/images/small_submit.gif" border="0" width="11" height="11" ' .
              'alt="" align="baseline"> version of this page' . "\n  </form>\n";
        
+    } else {
+        echo "  &nbsp;\n";
     }
     echo " </div>\n";
 
-    // Provide last updated information on this page anc close div
-    echo " <span class=\"lastupdated\">Last updated: {$PGI['lastmod']}</span>\n" .
-         "<div class=\"cleaner\"></div>\n</div>\n<!--/UdmComment-->\n\n";
+    echo "</div>\n<!--/UdmComment-->\n\n";
 }
 
 // =============================================================================
