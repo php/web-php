@@ -63,6 +63,7 @@ right away.</blockquote>
 /* Computer Software */
 	title("Computer Software");
 	siteStart();
+	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("Flexform Software","www.flexform.de");
 	site("Knowledge Adventure","www.knowledgeadventure.com");
