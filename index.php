@@ -39,6 +39,47 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
+<h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
+
+<p>
+<font class="newsDate">[11-Apr-2001]</font>
+You may have missed the conference, but you can see some of the
+presentations online. Check out:</p>
+<ul>
+<!-- <li>Luis Argerich on <a href="">The PXP project, using reusable PHP components and XML to develop dynamic web sites</a></li> -->
+ <li>Thies Arntzen on <a href="http://conf.php.net/pres/index.php?p=slides%2Foci&id=oci">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+ <li>Stig Bakken on <a href="http://conf.php.net/pres/index.php?p=slides%2Fpear&id=pear">The PHP Extension and Application Repository</a></li>
+ <li>Daniel Beckham and Brian Moon on <a href="http://dealnews.com/apachecon/">Caching Dynamic Web Content to Increase Dependability and Performance</a></li>
+<!-- <li>Tony Byrne with <a href="">High-Profile, High Speed: Case study in using PHP to build AlGore.com</a></li> -->
+ <li>Rasmus Lerdorf's <a href="http://conf.php.net/pres/index.php?p=slides%2Fintro&id=ac2">Introduction to PHP</a></li>
+<!-- <li>Zeev Suraski on <a href="">PHP 4 Internals</a></li> -->
+<!-- <li>Nathan Wallace with <a href="">PHP: Hackers Paradise Revisited</a></li> -->
+</ul>
+<p>If you missed out on ApacheCon 2001 in Santa Clara, keep
+your ear to the ground for more info on ApacheCon 2001 Europe in
+Dublin, Ireland in October 2001! (And stay tuned for more info
+on the first PHP Conference coming July 2001, part of the <a
+href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
+Conference</a> in San Diego, California.</p>
+
+<? echo hdelim(); ?>
+
+<h1>
+<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For March Available
+</h1>
+<p>
+<font class="newsDate">[11-Apr-2001]</font>
+<? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
+published the current results for their Web Server surveys - both
+of which continue to show impressive growth for PHP. Check out the 
+<? print_link("/usage.php", "usage page"); ?>.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 <h1>New Site Design</h1>
 
 <p>
@@ -64,20 +105,6 @@ to add "quickref" functionality right into your web browser.
 
 <? echo hdelim(); ?>
 
-<h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
-
-<p>
-<font class="newsDate">[07-Mar-2001]</font>
-Registration for <a href="http://ApacheCon.Com/2001/US/">ApacheCon 2001</a> in Santa Clara on April 4-6, 2001
-is underway! There's sessions about PHP from Luis Argerich, Thies
-Arntzen, Stig Bakken, Daniel Beckham, Tony Bryne, Rasmus Lerdorf,
-Brian Moon, Zeev Suraski and Nathan Wallace, as well as tons of
-sessions on other cool open-source projects.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
 <h1>Announcing PHP-GTK</h1>
 
 <p>
@@ -99,22 +126,6 @@ cross-platform GUI applications. For more information, visit
 Due to two security issues found in the Apache module version of
 PHP 4.0, PHP 4.0.4pl1 has been released.  This bug-fix release also
 fixes a few party-crashing bugs that were discovered in PHP 4.0.4.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
-<h1>
-<? print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For March Available
-</h1>
-<p>
-<font class="newsDate">[11-Apr-2001]</font>
-<? print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<? print_link("http://www.securityspace.com/s_survey/", "E-Soft" ); ?> have
-published the current results for their Web Server surveys - both
-of which continue to show impressive growth for PHP. Check out the 
-<? print_link("/usage.php", "usage page"); ?>.
 <br clear="all">
 </p>
 
@@ -166,21 +177,6 @@ Tips and Tricks Section
 <p>
 Check out our <? print_link("/tips.php", "tips"); ?> page for some "neat" things, 
 PHP-related.  It's a little sparse right now, but feel free to make suggestions!
-<br clear="all">
-</p>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>
-<? print_image("ZendOptimizer.gif", "Zend", "right"); ?>
-Zend Optimizer Released
-</h1>
-<p>
-<? print_link("http://www.zend.com", "Zend Technologies"); ?> has announced the 
-availability of the Zend Optimizer for PHP 4.0.  The optimizer is available for
-<? print_link("http://www.zend.com/zend/optimizer.php", "free download"); ?>.
 <br clear="all">
 </p>
 
