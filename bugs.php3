@@ -16,7 +16,7 @@ function show_menu($state) {
 	global $PHP_SELF, $bug_type;
 
 	if(!isset($bug_type)) { $bug_type="Any"; }
-	echo "<form method=GET action=\"$PHP_SELF\">\n";
+	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
 	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
 	if($state) { echo "<option>$state\n"; }
@@ -235,7 +235,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
 			echo "<td><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=GET action=\"$PHP_SELF?id=$id\">\n";
+			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			if($row[7]=="Open") {
@@ -282,7 +282,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method=GET action="<? echo $PHP_SELF;?>">
+<form method=POST action="<? echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
 <P><STRONG>Please make sure you have read our list of <A
