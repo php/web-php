@@ -52,7 +52,7 @@ This page, however, is a listing of cool things based on PHP, available for down
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
-<? makeEntry("Keystone","www.stonekeep.com/keystone/","Dave Belfer-Shevett","shevett@pobox.com"); ?>
+<? makeEntry("Keystone","www.stonekeep.com/keystone.php3","Dave Belfer-Shevett","shevett@pobox.com"); ?>
 Keystone is the next generation of PTS, the project tracking system developed by Dave Belfer-Shevett. It is
 a complete rewrite of the system, with a new user interface built from the ground up. 
 <? endEntry();?>
