@@ -94,6 +94,10 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   <li><?php download_link("php-4.0.6-memlimit.diff.gz", "PHP 4.0.6 memory limit fix"); ?> - 1 July 2001<br>
   (This patch fixes a bug in the 4.0.6 memory limit option. This is only needed when configuring
   PHP with --enable-memory-limit). If you have problems applying the patch try using GNU patch.</li>
+  <li><?php download_link("php-4.0.6-to-4.1.1.patch.gz", "PHP 4.0.6 to 4.1.1 patch"); ?>  - 03 January 2002<br>
+  This unified diff will enable you to update your local PHP source to the latest version from 4.0.6.</li>
+  <li><?php download_link("php-4.1.0-to-4.1.1.patch.gz", "PHP 4.1.0 to 4.1.1 patch"); ?>  - 03 January 2002<br>
+  This unified diff will enable you to update your local PHP source to the latest version from 4.1.0.</li> 	
 </ul>
 
 <?php echo hdelim(); ?>
@@ -112,18 +116,6 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
     <ul>
       <li><?php download_link("php-4.0.6.tar.gz", "Source Code"); ?></li>
       <li><?php download_link("php-4.0.6-Win32.zip", "Windows Binary (zip)"); ?></li>
-    </ul><br>
-  </li>
-  <li>PHP 4.0.5
-    <ul>
-      <li><?php download_link("php-4.0.5.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.0.5-Win32.zip", "Windows Binary (zip)"); ?></li>
-    </ul><br>
-  </li>
-  <li>PHP 4.0.4pl1
-    <ul>
-      <li><?php download_link("php-4.0.4pl1.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.0.4pl1-Win32.zip", "Windows Binary (zip)"); ?></li>
     </ul><br>
   </li>
   <li>PHP 3.0.x (latest)
