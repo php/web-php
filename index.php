@@ -145,6 +145,27 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+
+<h1>PHP Québec 2005: PHP - MySQL - Apache</h1>
+
+<p>
+ <span class="newsdate">[15-Mar-2005]</span>
+ PHP Québec is proud to present an extended conference in Montréal, Québec,
+ covering the latest innovations in PHP, MySQL and Apache. From March 30th
+ till April 1st, major AMP contributors will talk about Security, Web Services,
+ PHP 5, and great achievement with PHP in North America. The 4 tracks 
+ are available at <a
+ href="http://conf.phpquebec.com/en/conf2005/horaire">the PHP Québec site</a>.
+</p>
+<p>
+ PHP Certification exams by Zend is included with every admission ticket to
+ the conference. The certification center will also provide MySQL and Linux 
+ certification, from MySQL AB, LPI and Savoir Faire Linux. The 
+ <a href="http://conf.phpquebec.com/en/conf2005/certifications">examination center</a>
+ is open to everyone.
+</p>
+<hr />
+
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
 <h1>PHP West: Security Conference - Call for Speakers Announced</h1>
 
