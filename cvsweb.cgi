@@ -252,13 +252,15 @@ if (-d $fullname) {
 #		    &link("Directory-wide diffs", $scriptwhere . '/*'), "<BR>";
 	    } elsif (-d $fullname . "/" . $_) {
 		$url = $scriptwhere . '/' . $_ . '/' . $query;
-		print &link("<IMG BORDER=\"0\" SRC=\"/icons/dir.gif\">", $url),
-                    " ", &link($_ . "/", $url), $attic, "<BR>";
+		if(!length $attic) {
+			print &link("<IMG BORDER=\"0\" SRC=\"/icons/dir.gif\">", $url), " ", &link($_ . "/", $url), $attic, "<BR>";
+		}
 	    } elsif (s/,v$//) {
 # TODO: add date/time?  How about sorting?
 		$url = $scriptwhere . '/' . ($attic ? "Attic/" : "") . $_ . $query;
-		print &link("<IMG BORDER=\"0\" SRC=\"/icons/text.gif\">", $url),
-		      " ", &link($_, $url), $attic, "<BR>";
+		if(!length $attic) {
+			print &link("<IMG BORDER=\"0\" SRC=\"/icons/text.gif\">", $url), " ", &link($_, $url), $attic, "<BR>";
+		}
 	    }
 	}
 	print "</MENU>\n";
