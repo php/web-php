@@ -1,21 +1,23 @@
 <?php
-include_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'cal.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 /*
  This script serves three different forms of the calendar data:
     a monthly view ($cm, $cy)
     a daily view ($cm, $cd, $cy)
     an individual item view ($id)
- For the two later, the month view is also displayed beneath the specifically
- asked data. If we encounter an error, we have a fallback to display the
- actual month/year.
+ For the last two, the month view is also displayed beneath the
+ specifically requested data. If we encounter an error, we have
+ a fallback to display the actual month/year.
 */
 
 $begun = FALSE; $errors = array();
-$id = isset($id) ? (int) $id : 0;
-$cy = isset($cy) ? (int) $cy : 0;
-$cm = isset($cm) ? (int) $cm : 0;
-$cd = isset($cd) ? (int) $cd : 0;
+$id = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+$cy = isset($_GET['cy']) ? (int) $_GET['cy'] : 0;
+$cm = isset($_GET['cm']) ? (int) $_GET['cm'] : 0;
+$cd = isset($_GET['cd']) ? (int) $_GET['cd'] : 0;
 
 // If the year is not valid, set it to the current year
 // This excludes all the "too old", or "too far in the future"
