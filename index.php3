@@ -20,7 +20,7 @@ in order to help us find bugs, and in order for you to see what's new and improv
 <li><a href="config.php3">Configure PHP 3.0</a> online (JavaScript required)
 <li>Read what has <a href="changes.php3">changed</a> since PHP/FI 2.0
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
-<li>Subscribe to the <a href="mailto:php3@php.il.eu.org">PHP 3.0 mailing list</a>
+<li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
 </ul>
 <br>
 
