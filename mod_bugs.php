@@ -421,7 +421,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<b>Database updated!</b><br>\n";
 		
-			### Changes made by j.a.greant 00/09/02
+			### Changes made by j.a.greant 00/09/03
 			
 			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts";
 			$result = mysql_query($query);
@@ -467,13 +467,24 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			echo "<b>Database updated!</b><br>\n";
 
+			### Changes made by j.a.greant 00/09/03
+			
+			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts";
+			$result = mysql_query($query);
+		
+			while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
+			  {
+			  	$prev_comments .= "[$temp[0]] $temp[1]\n$temp[2]\n\n" . str_repeat ('-', 76) . "\n\n";
+			  }
+
 			$text = "ID: $id\nUser Update by: $eemail\n";
 			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
 			$text .= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
-			$text .= "Description: $esdesc\n\n$ncomment\n";
-			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
+			$text .= "Description: $esdesc\n\n$ncomment\n\n";
+			$text .= "Previous Comments:\n\n$prev_comments"; 
+			$text .= "Full Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
