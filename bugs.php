@@ -29,6 +29,7 @@ if (strstr($MYSITE,"bugs.php.net")) {
 
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
+echo "<!--  Bug photo by Dexter Sear, IO Vision.   http://www.insects.org   -->\n";
 echo "<font size=-1>\n";
 $destination = "php-dev@lists.php.net";
 #$destination = "zak@php.net";
