@@ -115,13 +115,6 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <h1>Older Versions of PHP</h1>
 
 <ul>
-  <li>PHP 4.1.0
-    <ul>
-      <li><?php download_link("php-4.1.0.tar.gz", "Source Code"); ?></li>
-      <li><?php download_link("php-4.1.0-Win32.zip", "PHP 4.1.0 zip package"); ?></li>
-      <li><?php download_link("php410-installer.exe", "PHP 4.1.0 installer"); ?></li>
-    </ul><br>
-  </li>
   <li>PHP 4.0.6
     <ul>
       <li><?php download_link("php-4.0.6.tar.gz", "Source Code"); ?></li>
