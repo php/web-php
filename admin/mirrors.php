@@ -73,7 +73,7 @@ elseif (isset($id)) {
 <input type="hidden" name="id" value="<?php echo $row[id];?>" />
 <tr>
  <th align="right">Hostname:</th>
- <td><input type="text" name="hostname" value="<?php echo htmlspecialchars($row[hostname]);?>" size="10" maxlength="40" /></td>
+ <td><input type="text" name="hostname" value="<?php echo htmlspecialchars($row[hostname]);?>" size="40" maxlength="40" /></td>
 </tr>
 <tr>
  <th align="right">Active?</th>
@@ -85,19 +85,19 @@ elseif (isset($id)) {
 </tr>
 <tr>
  <th align="right">Cname:</th>
- <td><input type="text" name="cname" value="<?php echo htmlspecialchars($row[cname]);?>" size="10" maxlength="80" /></td>
+ <td><input type="text" name="cname" value="<?php echo htmlspecialchars($row[cname]);?>" size="40" maxlength="80" /></td>
 </tr>
 <tr>
  <th align="right">Maintainer:</th>
- <td><input type="text" name="maintainer" value="<?php echo htmlspecialchars($row[maintainer]);?>" size="10" maxlength="255" /></td>
+ <td><input type="text" name="maintainer" value="<?php echo htmlspecialchars($row[maintainer]);?>" size="40" maxlength="255" /></td>
 </tr>
 <tr>
  <th align="right">Provider:</th>
- <td><input type="text" name="providername" value="<?php echo htmlspecialchars($row[providername]);?>" size="10" maxlength="255" /></td>
+ <td><input type="text" name="providername" value="<?php echo htmlspecialchars($row[providername]);?>" size="40" maxlength="255" /></td>
 </tr>
 <tr>
- <th align="right">Provider URL:</th>
- <td><input type="text" name="providerurl" value="<?php echo htmlspecialchars($row[providerurl]);?>" size="10" maxlength="255" /></td>
+ <th align="right">Provider URL (with http://):</th>
+ <td><input type="text" name="providerurl" value="<?php echo htmlspecialchars($row[providerurl]);?>" size="40" maxlength="255" /></td>
 </tr>
 <tr>
  <th align="right">Country:</th>
@@ -142,7 +142,7 @@ while ($row = mysql_fetch_array($res)) {?>
  <td align="center"><a href="<?php echo "$PHP_SELF?id=$row[id]";?>"><?php echo make_image('small_submit.gif', 'edit');?></a></td>
  <td><a href="<?php echo ereg("^(f|ht)tp:",$row[hostname]) ? "" : "http://", htmlspecialchars($row[hostname]);?>"><?php echo htmlspecialchars($row[hostname]);?></a></td>
  <td><?php echo htmlspecialchars($row[maintainer]);?>&nbsp;</td>
- <td><a href="http://<?php echo htmlspecialchars($row[providerurl]);?>/"><?php echo htmlspecialchars($row[providername]);?></a></td>
+ <td><a href="<?php echo htmlspecialchars($row[providerurl]);?>"><?php echo htmlspecialchars($row[providername]);?></a></td>
  <td align="center"><?php echo $row[has_stats] ? "<a href=\"http://$row[hostname]/stats/\">go</a>" : "&nbsp;";?></td>
 </tr>
 <?php
@@ -154,7 +154,7 @@ while ($row = mysql_fetch_array($res)) {?>
 <?php
 commonFooter();
 
-function show_country_options($cc="") {
+function show_country_options($cc = "") {
   global $COUNTRIES;
   reset($COUNTRIES);
   while (list($k,$v) = each($COUNTRIES)) {
@@ -162,7 +162,7 @@ function show_country_options($cc="") {
   }
 }
 
-function show_language_options($lang="") {
+function show_language_options($lang = "") {
   global $LANGUAGES;
   reset($LANGUAGES);
   while (list($k,$v) = each($LANGUAGES)) {
@@ -170,7 +170,7 @@ function show_language_options($lang="") {
   }
 }
 
-function show_mirrortype_options($type="") {
+function show_mirrortype_options($type = 1) {
   $types = array(1 => "standard", 2 => "special", 0 => "download" );
   while (list($k,$v) = each($types)) {
     echo "<option value=\"$k\"", $type == $k ? " selected" : "", ">$v</option>";
