@@ -5,17 +5,21 @@ commonHeader("Documentation ");
 
 <H1>PHP FAQ</H1>
 <ul>
-<li>The <a href="FAQ.php">PHP FAQ</a> is your first stop for general
+<li>The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
     information and those questions that seem to be on most people's minds.
 
 </ul>
 
+<?
+$prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
+?>
+
 <H1>The PHP Manual On-line</H1>
 <ul>
-<li><a href="http://www.php.net/manual/">PHP Manual Online</a>. Your reference
+<li><a href="<?php echo $prefix; ?>/manual/">PHP Manual Online</a>. Your reference
     to everything that's great about PHP.
 
-<li><a href="http://www.php.net/manual/html/">Plain HTML PHP Manual Online</a>. The very
+<li><a href="<?php echo $prefix; ?>/manual/html/">Plain HTML PHP Manual Online</a>. The very
     same manual in a light-weight, HTML 3.2 version without any bells or
     whistles.
 
@@ -103,7 +107,7 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 	different languages and in which versions of PHP the functions
 	are available.
 
-<li><a href="books.php">Books on PHP</A>. Here you can find a
+<li><a href="/books.php">Books on PHP</A>. Here you can find a
     great selection of books on PHP and related themes.
 
 <li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
@@ -111,14 +115,14 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 
 <H1>CVS Account</H1>
 <ul>
-<li><a href="anoncvs.php">CVS instructions</a></li>
+<li><a href="/anoncvs.php">CVS instructions</a></li>
 <li><A href="/cvs-php.php">Getting a CVS account</a>.  If you wish to help out
 with the development of PHP, read this.
 </ul>
 
 <H1>Old/unsupported information</H1>
 <ul>
-<li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
+<li><a href="/manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
 </ul>
