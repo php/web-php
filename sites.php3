@@ -31,11 +31,12 @@
 	}
 ?>
 
-<blockquote>The sites listed here are either submitted by site owners, or someone
-who has spotted PHP in use on a site.  The presence of a company on this list does
-not imply endorsement of PHP.  If you control a listaed site that you do not wish 
-listed here please email <a href="mailto: sites@php.net">sites@php.net</a> and it 
-will be removed right away.</blockquote>
+<blockquote>The sites listed here are either submitted by site owners,
+or someone who has spotted PHP in use on a site.  The presence of a
+company on this list does not imply endorsement of PHP.  If you
+control a listed site that you do not wish listed here please email <a
+href="mailto:sites@php.net">sites@php.net</a> and it will be removed
+right away.</blockquote>
 
 <CENTER>
 <TABLE border=0 cellpadding=0 cellspacing=0>
