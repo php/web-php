@@ -41,6 +41,9 @@ include_once 'site.inc';
 // Choose language used for translated parts
 include_once 'langchooser.inc';
 
+// Get country of the user and set it in a cookie
+include_once 'ip-to-country.inc';
+
 // Common layout functions
 include_once 'layout.inc';
 
