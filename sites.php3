@@ -204,6 +204,12 @@ right away.</blockquote>
 	site("USRentals","www.usrentals.com");
 	siteEnd();
 
+/* Sports */
+	title("Sports");
+	siteStart();
+	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
+	siteEnd();
+
 /* Telecommunications */
 	title("Telecommunications");
 	siteStart();
