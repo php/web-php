@@ -47,7 +47,22 @@ if ($MQ) {
 }
 
 // Set language to the preferred one if not set
-if (!isset($lang)) { $lang = preferred_language(); }
+// (also preserves $lang if provided in POST/GET)
+if (!isset($lang) && isset($LANG)) {
+    $lang = $LANG;
+} elseif (!isset($lang)) {
+    $lang = default_language();
+}
+
+// Only allow alphabetical chars in lang (security)
+if (!preg_match("!\\w+!", $lang)) {
+    $lang = default_language();
+}
+
+// Only allow alphabetical chars in show (security)
+if (isset($show) || !preg_match("!\\w+!", $show)) {
+    $show = "wholesite";
+}
 
 // We received something to search for
 if (isset($pattern)) {
@@ -60,7 +75,7 @@ if (isset($pattern)) {
 
         // Quick reference lookup
         case "quickref" :
-            header("Location: manual-lookup.php?pattern=" . urlencode($pattern) . "&lang=" . urlencode($lang));
+            header("Location: manual-lookup.php?pattern=" . urlencode($pattern) . "&lang=$lang");
             exit;
 
         // PHP-General mailing list search
@@ -114,8 +129,8 @@ if (isset($pattern)) {
         // We can redirect to the php.net search page
         else {
             $location = "http://www.php.net/search.php";
-            $query = "show=" . urlencode($show) . "&pattern=" . urlencode($pattern) .
-                     "&base=" . urlencode($MYSITE) . "&lang=" . urlencode($lang);
+            $query = "show=$show&pattern=" . urlencode($pattern) .
+                     "&base=" . urlencode($MYSITE) . "&lang=$lang";
             header("Location: $location?$query");
             exit;
         }
@@ -137,7 +152,7 @@ if (isset($pattern)) {
             // Links should not be pointed back to a non PHP.net mirror site
             if (preg_match("!^http://(\\w{2}\\d?)\\.php\\.net/!", $HTTP_REFERER, $matches) && 
                 $matches[1] != 'qa') {
-                $base = "http://{$matches[1]}.php.net";
+                $base = "http://{$matches[1]}.php.net/";
             }
             unset($matches);
 
@@ -148,7 +163,7 @@ if (isset($pattern)) {
         }
 
         // This will be the link for new searches (a clean search page)
-        $sourceurl = htmlentities($base == NO_BASE ? $PHP_SELF : $base . $PHP_SELF);
+        $sourceurl = htmlentities($base == NO_BASE ? $PHP_SELF : $base . substr($PHP_SELF, 1));
 
         // If the pattern is empty, print out an error, and exit
         $pattern = trim($pattern);
@@ -215,7 +230,7 @@ if (isset($pattern)) {
         list(, , $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
         
         // String to carry on the search parameters in prev/next URLs
-        $baseurl = htmlentities($PHP_SELF . "?pattern=$words&show=$show&base=$base");
+        $baseurl = htmlentities($PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show&base=" urlencode($base));
 
         // Print out search results information header
         echo "$matches documents match your search for '<b>$htmlpt</b>' $where:<br /><br />\n";
@@ -235,7 +250,7 @@ if (isset($pattern)) {
             
             // Otherwise modify links to point to the referrer site
             else {
-                echo preg_replace("!http://[^.]+\\.php\\.net/!i", htmlspecialchars("$base/"), $result[$i]);
+                echo preg_replace("!http://[^.]+\\.php\\.net/!i", htmlspecialchars($base), $result[$i]);
             }
             
             // Make HTML output readable
@@ -277,19 +292,11 @@ else {
     } else {
         $target = "http://www.php.net/search.php";
     }
-    
-    // Try to find out language to print out here
-    // (also preserves $lang is provided in POST/GET)
-    if (!isset($lang) && isset($LANG)) {
-        $lang = $LANG;
-    } elseif (!isset($lang)) {
-        $lang = default_language();
-    }
-
 ?>
 <h1>Search</h1>
 <form action="<?php echo $target; ?>" method="post">
- <input type="hidden" name="lang" value="<?php echo htmlspecialchars($lang); ?>" />
+ <input type="hidden" name="lang" value="<?php echo $lang; ?>" />
+ <input type="hidden" name="base" value="<?php echo htmlspecialchars($MYSITE); ?>" />
  <table cellspacing="0" cellpadding="2" border="0" align="center">
  <tr valign="top">
   <td align="right">Search for:<br /></td>
