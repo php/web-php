@@ -298,22 +298,22 @@ selecting the appropriate option on the top-right of every page.
 
 <h1>Local Mailing Lists</h1>
 <p>
-There are also some mailing lists that have been set up by others in
-the community to host local discussions (particularly non-English
-discussions).
+There are also some mailing lists and newsgroups for PHP users
+that have been set up by others in the community to host local
+(particularly non-English) discussions.
 </p>
 
 <ul>
-  <li><a href="http://www.ilovephp.com/mailinglist/">French PHP User's Mailing List</a>
-  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French PHP Newsgroup</a>
-  <li><a href="http://www.php-center.de/">German PHP User's Mailing List</a>
-  <li><a href="news:de.comp.lang.php">German PHP Newsgroup</a>
-  <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian PHP Mailing List</a>
-  <li><a href="http://groups.yahoo.com/group/php_greek">Greek PHP Mailing List</a>
-  <li><a href="mailto:php3-it-request@michel.enter.it">Italian PHP User's Mailing List</a>
-  <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese PHP User's Mailing List</a>
-  <li><a href="mailto:lista-subscribe@phpes.com">Spanish PHP User's Mailing List</a>
-  <li><a href="http://phptr.baslangic.net/">Turkish PHP User's Mailing List</a>
+  <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a>
+  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a>
+  <li><a href="http://www.php-center.de/">German Mailing List</a>
+  <li><a href="news:de.comp.lang.php">German Newsgroup</a>
+  <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian Mailing List</a>
+  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a>
+  <li><a href="mailto:php3-it-request@michel.enter.it">Italian Mailing List</a>
+  <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a>
+  <li><a href="mailto:lista-subscribe@phpes.com">Spanish Mailing List</a>
+  <li><a href="http://phptr.baslangic.net/">Turkish Mailing List</a>
 </ul>
 
 <?php
