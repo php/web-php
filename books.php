@@ -649,15 +649,13 @@ array(
   array(
     /* title[s]     */ "MySQL. Einf&uuml;hrung, Programmierung, Referenz",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827317622/wwwphpnet07",
-    /* author[s]    */ "Michael Kofler,
+    /* author[s]    */ "Michael Kofler",
     /* auth link[s] */ "",
     /* image        */ "mysqlkofler.jpg",
     /* information  */ "Addison-Wesley - Pearson Education Deutschland, March 2001, ISBN 3-82731-762-2, 624 pages<br>\n" .
     /* inform. link */ "http://www.kofler.cc/mysql/",
     /* language     */ "de"
   ),
-
-
 
   array(
     /* title[s]     */ "MySQL",
