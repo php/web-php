@@ -11,10 +11,6 @@ echo "\n<!--$MYSITE-->\n";
 <h3>Interesting Numbers</h3>
 The latest <a href="/usage.php3">PHP usage numbers</a> from <a href="http://www.netcraft.com">Netcraft</a> are in.
 
-<h3>A Request from Rasmus</h3>
-A complete abuse of Rasmus' involvement with the PHP project is 
-<a href="request.php3">HERE</a>.
-
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 2 is out!</h3>
 
