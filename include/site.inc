@@ -16,6 +16,11 @@ function is_primary_site() {
   return $MYSITE == "http://www.php.net/";
 }
 
+function is_backup_primary() {
+  global $MYSITE;
+  return $MYSITE == "http://download.php.net/";
+}
+
 function default_language() {
   global $MIRRORS,$MYSITE;
   return $MIRRORS[$MYSITE][6];
