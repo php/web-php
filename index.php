@@ -183,8 +183,8 @@ commonHeader("Hypertext Preprocessor");
   operations on streams.
  </li>
 </ul>
-<hr />
 
+<hr />
 
 <h1>PHP Community Site Project Announced</h1>
 <p>
