@@ -20,6 +20,7 @@ PHP 4.2.1 Release Announcement
 
 <p>This bug fix release solves a few bugs found in PHP 4.2.0. PHP 4.2.1 includes the following fixes:
 <ul>
+ <li>Fix for the MySQL extension not be able to connect to a MySQL server.</li>
  <li>Fix for a crash in the COM extension when using an outproc server.</li>
  <li>Fix for SID logic in the session extension.</li>
  <li>Fixes for the mbstring extension, including SJIS directory name handling and mb_output_buffer().</li>
