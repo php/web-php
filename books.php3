@@ -98,6 +98,8 @@ by Paul DuBois<BR>
 >Webmaster in a Nutshell (Nutshell Series)</A><BR>
 <SMALL>includes a large chapter on PHP written by Rasmus Lerdorf</SMALL><BR>
 by Stephen Spainhour and Robert Eckstein<BR>
+<SMALL><A HREF="http://www.oreilly.com/catalog/webmaster2/">more info</A><BR>
+</SMALL>
 </TD>
 </TR>
 
