@@ -142,12 +142,12 @@ right away.</blockquote>
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
 	site("easyDNS","www.easydns.com");
 	site("InfoMak","www.infomak.com");
-	site("My URL's", "murl.com");
+	site("My URLs", "murl.com");
 	site("Webex - Russia","www.webex.ru");
 	siteEnd();
 
-/* ISP's */
-	title("ISP's");
+/* ISPs */
+	title("ISPs");
 	siteStart();
 	site("Aidan Internet Solutions","www.aidan.net");
 	site("BestHost","besthost.net");
@@ -231,7 +231,7 @@ right away.</blockquote>
 	title("Retail & Service Industry");
 	siteStart();
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
-	site("BART'S Water Sports","www.bartswatersports.com");
+	site("BART's Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Delia*s Inc.","www.delias.com");
