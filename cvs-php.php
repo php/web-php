@@ -135,7 +135,7 @@ then you don't!
 mail("group@php.net","CVS Account Request",
     "Full name: $fullname\n".
     "Email:     $email\nID: $id\n".
-    "Password:  ".crypt($password)."\n".
+    "Password:  ".crypt($password, substr(md5(time()), 0, 2))."\n".
     "Purpose:   $purpose",
      "From: \"CVS Account Request\" <$email>");
 mail("php-dev@lists.php.net", "CVS Account Request",
