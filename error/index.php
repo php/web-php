@@ -70,9 +70,12 @@ $uri_aliases = array (
 	"documentation" => "docs",
 
 	# manual shortcuts
-	"ini"     => "configuration",
-	"install" => "installation",
-	"intro"   => "introduction"
+	"ini"         => "configuration",
+	"install"     => "installation",
+	"intro"       => "introduction",
+	"whatis"      => "introduction",
+	"whatisphp"   => "introduction",
+	"what_is_php" => "introduction",
 
 );
 
