@@ -48,8 +48,8 @@ function searchHistory()
     if (typeof(lastSearch) == "string") {
         
         // Get pattern and show information from cookie
-        pattern = lastSearch.substr(0, lastSearch.indexOf(","));
-        option  = lastSearch.substr(lastSearch.indexOf(",") + 1);
+        option  = lastSearch.substr(0, lastSearch.indexOf(","));
+        pattern = lastSearch.substr(lastSearch.indexOf(",") + 1);
         
         // Set pattern in form
         document.forms["topsearch"].pattern.value = pattern;
