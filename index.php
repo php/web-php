@@ -90,7 +90,6 @@ echo "\n<!--$MYSITE-->\n";
 The Software &amp; Support Verlag, based in Frankfurt,
 Germany, has now published a magazine on PHP as a
 tribute to the steadily growing German PHP community.
-Editor in chief of the new magazine is Bjoern Schotte.
 More information can be found at
 <a href="http://www.phpmag.de/">www.phpmag.de</a>.
 
