@@ -192,6 +192,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PEAR Out of Beta!</h1>
+<p>
+<font class="newsdate">[11-Jan-2003]</font>
+The PEAR development team is proud to announce that
+<a href="http://pear.php.net/">PEAR</a> is finally out of its long
+beta period. As of PHP 4.3, the PEAR installer is installed by default.
+Unix support is considered stable, while Windows and Darwin are still
+of beta-quality.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Look Back 2002</h1>
 <p>
 <font class="newsdate">[31-Dec-2002]</font>
