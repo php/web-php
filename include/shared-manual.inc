@@ -102,7 +102,7 @@ function navigationBar($title,$id,$loc) {
     // Print out language switch on top of manual pages
     if ($loc != 'bottom') {
         $links = array();
-        preg_match("!^/manual/(.+)/!", $BASE_FOR_MANPAGE, $langcode);
+        preg_match("!/manual/(.+)/!", $BASE_FOR_MANPAGE, $langcode);
         $links[] = array("$langcode[1]/print/$id", "printer friendly");
         $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
         // Disable all 'inactive' languages
