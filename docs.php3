@@ -14,6 +14,14 @@ commonHeader("Documentation ");
     to everything that's great about PHP. (The manual is approximately 90%
     complete.)
 
+<LI><A href="http://ca.php.net/manual/">PHP 3.0 Annotated Manual</A>. This
+    is the same as the above, except there is a built-in errata/note system
+    that users all around the world can (and have!) contributed to.
+
+<LI><A href="http://ca.php.net/manual/browse-errata.php3">PHP 3.0 Manual
+    Errata</A>. This is the collected errata from the on-line errata/note
+    system.
+
 <li><? download_link("bigmanual.html", "PHP 3.0 HTML Manual (one BIG file)"); ?>
 
 <li><? download_link("manual.zip", "PHP 3.0 HTML Manual ZIP File"); ?>
