@@ -245,7 +245,7 @@ function manual_notes()
 
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
-    $addnotelink = '/manual/add-note.php?sect=' . $id .
+    $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
         make_link($addnotelink, make_image('notes-add.gif', 'add a note')) .
