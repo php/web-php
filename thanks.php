@@ -16,7 +16,7 @@ DNS services for the php.* domains.
 </p>
 
 <p>
-<?php print_link("http://www.pair.com/", "pair Networks"); ?> provides
+<?php print_link("http://promote.pair.com/direct.pl?php.net", "pair Networks"); ?> provides
 the servers and bandwidth for CVS and mailing list services.
 </p>
 

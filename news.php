@@ -274,13 +274,13 @@ For more information, visit <?php print_link("http://gtk.php.net/")?>.
 <?php echo hdelim(); ?>
 
 <h1>Mailing lists and CVS are up!</h1>
-<?php print_link("http://www.pair.com/", make_image("pair.gif", "pair Networks", "right") ); ?>
+<?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("pair.gif", "pair Networks", "right") ); ?>
 
 <p>
 <font class="newsDate">[1-Jul-2001]</font>
 The disturbances in the mailing lists and CVS services that happened in the last
 few weeks are now gone, hopefully for good. This is thanks to a brand new server donated
-by <a href="http://www.pair.com/">pair Networks</a>. Thanks!
+by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks!
 <br clear="all">
 </p>
 
