@@ -1,7 +1,9 @@
-/* Let no border around the body appear */
+/* Let no border around the body appear, and set
+   it to display on a white background */
 body, html {
-    margin:  0px;
+    margin: 0px;
     padding: 0px;
+    background-color: white;
 }
 
 /* Quicksearch table cell on top of every page. */
