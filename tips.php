@@ -3,6 +3,7 @@ require("shared.inc");
 commonHeader("Cool PHP Tips");
 
 function tipTitle($title,$author='',$date='') {
+	echo "<HR NOSHADE SIZE=1>\n";
 	echo "<FONT SIZE=+1><B>" . $title . "</B></FONT><BR>\n";
 	if ($author || $date) {
 		echo "<SMALL>\n";
@@ -31,7 +32,7 @@ related to PHP.  They aren't necessarily be related to actually coding in PHP
 Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.
 </P>
 
-<HR NOSHADE SIZE=1>
+
 
 <? tipTitle('Adding the Quick Reference to Internet Explorer 5', 'Colin Viebrock', '28-Jul-2000'); ?>
 
@@ -63,7 +64,7 @@ example, try typing "php file upload" in your browser.
 
 </OL>
 
-<HR NOSHADE SIZE=1>
+
 
 <? tipTitle('Adding the Quick Reference to Netscape on Linux', 'David Rose', '28-Jul-2000'); ?>
 
@@ -89,6 +90,28 @@ if necessary):
 Netscape will open the proper URL for you.
 
 </OL>
+
+
+
+<? tipTitle('Quick Reference for Gnome Users', 'Benjamin Curtis', '29-Jul-2000'); ?>
+
+<P>
+Here's another search option for Linux users who use Gnome.  This is a macro
+for gnome's mini-commander panel applet (modified from the Yahoo search that
+comes with the applet):
+<P>
+
+<P>
+<B>Regex:</B><BR>
+^php: *(.*)$
+</P>
+
+<P>
+<B>Macro:</B><BR>
+gnome-moz-remote --newwin http://www.php.net/manual-lookup.php?function=$(echo <BR>
+'\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')
+</P>
+
 
 <?
 commonFooter();
