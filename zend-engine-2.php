@@ -370,7 +370,7 @@ $obj = new SubClass();
  PHP 5 introduces a destructor concept similar to that of other object-oriented
  languages, such as Java: When the last reference to an object is destroyed the
  object's destructor, which is a class method named <code>__destruct()</code>
- that recieves no parameters, is called before the object is freed from memory.
+ that receives no parameters, is called before the object is freed from memory.
 </p>
 <h3>Example</h3>
 <?php highlight_php('<?php
@@ -523,7 +523,7 @@ class Exception {
 ?>'); ?>
 <p>
  If you derive your exception classes from this Exception base class
- your exceptions will be nicely shown in the builtin handler for 
+ your exceptions will be nicely shown in the built-in handler for 
  uncaught exceptions.
 </p>
 <p>
@@ -794,7 +794,7 @@ for($it->rewind(); $it->hasMore(); $it->next) {
 unset($it);
 ?>'); ?>
 <p>
- The matching for directive is very intersting here since it shows 
+ The matching for directive is very interesting here since it shows 
  the use of all abstract methods declared in the interfaces 
  <code>Iterator</code> and <code>IteratorAggregate</code> respectively.
 </p>
@@ -855,7 +855,7 @@ echo $obj; // call __toString()
  Nearly all aspects of object oriented code can be reflected by
  using the reflection API which is
  <a href="http://sitten-polizei.de/php/reflection_api/docs/language.reflection.html">documented
- separatley</a>.
+ separately</a>.
 </p>
 
 <h3>Example</h3>
