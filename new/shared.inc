@@ -284,7 +284,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Site Hosted by:</I><BR></TD>
-<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 hspace=10></A><BR></TD>
+<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" BORDER=0 hspace=10></A><BR></TD>
 </TR></TABLE>
 
 </TD>

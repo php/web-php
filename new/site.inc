@@ -6,6 +6,7 @@ $MIRRORS = array(
    "http://no.php.net/"         => array("no", "Trondheim, Norway", "guardian", "http://www.guardian.no/"),
    "http://uk.php.net/"         => array("uk", "Norwich, United Kingdom", "squid", "http://www.netcom.co.uk/"),
    "http://www.php.net/"        => array("us", "Circle Net, United States", "besthost", "http://BestHost.net/"),
+   "http://www.shmooze.net/"	=> array("ca", "Private World, Canada", "pwc", "http://www.privateworld.com/"),
    ""				=> array("xx", "Unknown", "none", "/")
 );
 
