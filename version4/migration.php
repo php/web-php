@@ -45,12 +45,12 @@ the final release.</p>
 following syntax:<br>
 <pre>
 <IfModule mod_php3.c>
-AddType .php3 application/x-httpd-php3
-AddType .phps application/x-httpd-php3-source
+AddType  application/x-httpd-php3        .php3
+AddType  application/x-httpd-php3-source .phps
 </IfModule>
 <IfModule mod_php4.c>
-AddType .php3 application/x-httpd-php
-AddType .phps application/x-httpd-php-source
+AddType  application/x-httpd-php         .php .php4
+AddType  application/x-httpd-php-source  .phps
 </IfModule>
 </pre>
 <br>
