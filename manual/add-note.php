@@ -43,7 +43,9 @@ if(!strstr($MYSITE,"www.php.net")) {
 		//echo "<!--$query-->\n";
 		if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
-<?			mail("php-notes@lists.php.net","note added to $sect",$note,"From: $user");
+<?			$new_id = mysql_insert_id();	
+			$add = "\n\nhttp://www.php.net/manual/".sect_to_file($sect)."\n";
+			mail("php-notes@lists.php.net","note $new_id added to $sect",stripslashes($note).$add,"From: $user");
 		else:
 			// mail it.
 			mail($mailto, "failed manual note query", $query);

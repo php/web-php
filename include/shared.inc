@@ -571,6 +571,13 @@ endif; ?>
 <?
 }
 
+function sect_to_file($string) {
+	$func = "function.$string.php";
+	$chap = "ref.$string.php";
+	if(is_file("function.$string.php")) return $func;
+	else return $chap;
+}
+
 function clean_note($text) {
     $text = htmlspecialchars($text);
     $fixes = array('<br>','<p>','</p>');
