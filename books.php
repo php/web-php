@@ -30,6 +30,160 @@ $books = array (
 
   "PHP" => array (
 
+  array(
+    /* title[s]     */ "PHP 4.x Webbook",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815573238/wwwphpnet07",
+    /* author[s]    */ array("Mark Kronsbein", "Thomas Weinert"),
+    /* auth link[s] */ array("http://www.zend.com/comm_person.php?id=36", "http://www.zend.com/comm_person.php?id=61"),
+    /* image        */ "webbook4x.jpg",
+    /* information  */ "Sybex, May 2002, ISBN 3-8155-7323-8, 456 pages",
+    /* inform. link */ "http://www.phpbuch.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Dynamische Webseiten mit PHP 4",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3772378420/wwwphpnet07",
+    /* author[s]    */ "Jochen Franke",
+    /* auth link[s] */ "",
+    /* image        */ "dynwebseitenfranke.jpg",
+    /* information  */ "Franzis, November 2001, ISBN 3-7723-7842-0",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Jetzt lerne ich MySQL & PHP . Dynamische Webseiten mit Open Source-Software programmieren",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382726202X/wwwphpnet07",
+    /* author[s]    */ array("Sven Letzel", "Robert Gacki"),
+    /* auth link[s] */ "",
+    /* image        */ "jetztlernenichphpmysql.jpg",
+    /* information  */ "Markt+Technik, October 2001, ISBN 3-8272-6202-X, 384 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 IT-Tutorial",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826608194/wwwphpnet07",
+    /* author[s]    */ "Bill McCarty",
+    /* auth link[s] */ "",
+    /* image        */ "it-tutorial.jpg",
+    /* information  */ "mitp, January 2002, ISBN 3-8266-0819-4, 571 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "MySQL/PHP- Datenbankanwendungen",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826608054/wwwphpnet07",
+    /* author[s]    */ array("Jay Greenspan", "Brad Bulger"),
+    /* auth link[s] */ "",
+    /* image        */ "mysqlphpdatenbankanwendungen.jpg",
+    /* information  */ "mitp, 2001, ISBN 3-8266-0805-4, 504 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Go to PHP 4",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827317592/wwwphpnet07",
+    /* author[s]    */ "Dirk Ammelburger",
+    /* auth link[s] */ "",
+    /* image        */ "gotophp4.jpg",
+    /* information  */ "Addison-Wesley, 2002, ISBN 3-8273-1759-2, 591 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP4. Dynamische Web-Seiten mit Apache, PHP und MySQL",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3423502428/wwwphpnet07",
+    /* author[s]    */ "Dirk Taggesell",
+    /* auth link[s] */ "",
+    /* image        */ "dynwebseitenapachephpmysql.jpg",
+    /* information  */ "DTV-Beck, 2002, ISBN 3-4235-0242-8, 266 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 3/4 Befehlsreferenz",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3772371841/wwwphpnet07",
+    /* author[s]    */ "Damir Enseleit",
+    /* auth link[s] */ "",
+    /* image        */ "phpbefehlsreferenz.jpg",
+    /* information  */ "Franzis, 2001, ISBN 3-7723-7184-1, 750 pages",
+    /* inform. link */ "http://www.selfphp4.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Taschenbuch PHP Referenz",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815816661/wwwphpnet07",
+    /* author[s]    */ "Jens Ferner",
+    /* auth link[s] */ "",
+    /* image        */ "phpreferenz.jpg",
+    /* information  */ "Data Becker, March 2002, ISBN 3-8158-1666-1, 320 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP fürs World Wide Web - Digital Studio One",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3827260701/wwwphpnet07",
+    /* author[s]    */ "Larry E. Ullman",
+    /* auth link[s] */ "",
+    /* image        */ "phpwww.jpg",
+    /* information  */ "Markt+Technik, July 2001, ISBN 3-8272-6070-1, 296 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Programmieren lernen in PHP 4. Ein kompakter Einstieg in die Webserverprogrammierung",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3446217541/wwwphpnet07",
+    /* author[s]    */ "Jörg Krause",
+    /* auth link[s] */ ,
+    /* image        */ "programmierenlernenphp4.jpg",
+    /* information  */ "Hanser, 2001, ISBN 3-4462-1754-1, 394 pages",
+    /* inform. link */ "http://www.php.comzept.de/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 - M+T Easy . leicht, klar, sofort",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/382726247X/wwwphpnet07",
+    /* author[s]    */ "Giesbert Damaschke",
+    /* auth link[s] */ "",
+    /* image        */ "php4easy.jpg",
+    /* information  */ "Markt+Technik, December 2001, ISBN 3-8272-6247-X, 320 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP 4 für Dummies",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3826629825/wwwphpnet07",
+    /* author[s]    */ "Christian Baun",
+    /* auth link[s] */ "",
+    /* image        */ "php4dummies.jpg",
+    /* information  */ "mitp, December 2001, ISBN 3-8266-2982-5, 336 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "Best Friend PHP. Das Praxishandbuch",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815822254/wwwphpnet07",
+    /* author[s]    */ array("Bernhard Bauder", "Titus Hochgreve", "Alexander Marquarth"),
+    /* auth link[s] */ "",
+    /* image        */ "bestfriendphp.jpg",
+    /* information  */ "Data Becker, 2001, ISBN 3-8158-2225-4, 350 pages",
+    /* inform. link */ "",
+    /* language     */ "de"
+  ),
+
 array (
     /* title[s]     */ "Programming PHP",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926102/wwwphpnet",
