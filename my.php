@@ -1,5 +1,7 @@
 <?php
-include_once 'prepend.inc';
+/* $Id$ */
+
+include_once "prepend.inc";
 
 // Languages array copy and options to list
 $langs = $LANGUAGES; $options = array();
@@ -73,26 +75,33 @@ most of the time.
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2">
- <tr>
-  <td bgcolor="#dddddd">Your preferred language</td>
-  <td bgcolor="#eeeeee"><?php echo $langpref; ?></td>
- </tr>
- <tr>
-  <td bgcolor="#dddddd">Last seen language</td>
-  <td bgcolor="#eeeeee"><?php echo (isset($_COOKIE['LAST_LANG']) ? $_COOKIE['LAST_LANG'] : "None"); ?></td>
- </tr>
- <tr>
-  <td bgcolor="#dddddd">Your Accept-Language browser setting (parsed)</td>
-  <td bgcolor="#eeeeee"><?php echo join(", ", array_unique ($UA_LANGS)); ?></td>
- </tr>
- <tr>
-  <td bgcolor="#dddddd">The mirror's default language</td>
-  <td bgcolor="#eeeeee"><?php echo default_language(); ?></td>
- </tr>
- <tr>
-  <td bgcolor="#dddddd">Default</td>
-  <td bgcolor="#eeeeee">en</td>
- </tr>
+<?php
+
+// Data for the language settings table
+$langinfo = array(
+    
+    "Your preferred language" =>
+    $langpref,
+    
+    "Last seen language" =>
+    (isset($_COOKIE['LAST_LANG']) ? $_COOKIE['LAST_LANG'] : "None"),
+    
+    "Your Accept-Language browser setting" =>
+    $_SERVER['HTTP_ACCEPT_LANGUAGE'],
+    
+    "The mirror's default language" =>
+    default_language(),
+    
+    "Default" => "en"
+);
+
+// Write a row for all settings
+foreach ($langinfo as $lin => $lid) {
+    echo " <tr>\n  <td bgcolor=\"#dddddd\">" . $lin . "</td>\n";
+    echo "  <td bgcolor=\"#eeeeee\">" . $lid . "</td>\n </tr>\n";
+}
+
+?>
 </table>
 
 <p>
