@@ -177,6 +177,9 @@ endif;
 <? makeName("Richard Lynch","lynch@lscorp.com",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
 
+<? makeName("Tom May","tom@go2net.com",0);?>
+  <UL TYPE=DISC><li>Sybase-CT</UL><BR>
+
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
   
