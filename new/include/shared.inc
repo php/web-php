@@ -231,6 +231,7 @@ if (IE4) LoadImgs();
 
 //--->
 </SCRIPT>
+
 </HEAD>
 
 <BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0 OnLoad="LoadImgs();"><A NAME="top">
@@ -309,8 +310,10 @@ else:
 	echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="search.php3" onMouseover="change('sear',1);showLayer('searchKick');" ><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
-</TR></TABLE>
+echo "<A HREF=\"search.php3\" onMouseover=\"change('sear',1);showLayer('searchKick');\" ><IMG SRC=\"/new/gifs/b-search-p.gif\" ALT=\"Search this site\" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME=\"sear\"></A>";
+echo "<IMG SRC=\"/new/gifs/cap-right.gif\" WIDTH=24 HEIGHT=48 BORDER=0><BR>";
+?>
+</TD></TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
 <TR VALIGN=top BGCOLOR="#FFFFFF">
 <TD ALIGN=left WIDTH="12"><IMG SRC="/new/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
