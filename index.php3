@@ -8,6 +8,16 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<img src="lilogo.gif" align="right">
+<h3>Network Computing takes a look at Web Server technologies</h3>
+<p>
+They didn't quite manage to get the name of PHP right, and they have a few 
+contradictions here and there, but overall the combination of Apache and PHP
+fared much better than IIS/ASP and Netscape/Java in this <a href="http://www.nwc.com/1020/1020f1.html">
+article</a>.  Don't forget to check the links in the blue panel on the right for more detailed
+info on each system they tested.
+</p>
+
 <h3>Interesting Numbers</h3>
 The latest <a href="/usage.php3">PHP usage numbers</a> from <a href="http://www.netcraft.com">Netcraft</a> are in.
 
