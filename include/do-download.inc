@@ -39,7 +39,7 @@ function download_file($mirror, $file)
             $info = "<p>
  This mirror site is improperly setup, and thus has
  no copy of the executable file you requested. Please
- <a href=\"/get/$file/from/a/mirror\">select a different
+ <a href=\"/mirrors\">select a different
  mirror site</a> to get the file, until this site gets
  fixed.
 </p>";
