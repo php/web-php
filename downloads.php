@@ -7,25 +7,32 @@ $SIDEBAR_DATA = '
 We do not distribute UNIX/Linux binaries.  Most Linux
 distributions come with PHP these days, so if you do
 not want to compile your own, go to your distribution\'s
-download site.  For MacOSX binaries, go to 
-<a href="http://www.entropy.ch/software/macosx/">this
-page</a>.
+download site.  For Mac OS X binaries, go to '.
+make_link("http://www.entropy.ch/software/macosx/php/", "this page").'
 </p>
 
 <h3>Other Downloads</h3>
 <p>
-For downloadable documentation, go to the
-<a href="docs.php">documentation</a> page<br><br>
+For downloadable documentation, go to the '.
+make_link("docs.php", "documentation").'
+page
+</p>
 
-Get some <a href="download-logos.php">PHP
-logos</A> for your site<br><br>
+<p>
+Get some '.
+make_link("download-logos.php", "PHP logos").'
+for your site
+</p>
 
+<p>
 To download the latest development version,
-see the <a href="anoncvs.php">instructions
-on using anonymous CVS</a><br><br>
+see the '.
+make_link("anoncvs.php","instructions on using anonymous CVS").'
+</p>
 
-<a href="http://www.zend.com/zend/optimizer.php">Zend
-Optimizer</a> for PHP 4.0.3 and later is
+<p>'.
+make_link("http://www.zend.com/zend/optimizer.php", "Zend Optimizer").'
+for PHP 4.0.3 and later is
 available on Zend Technologies\' web site.
 </p>
 ';
