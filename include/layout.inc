@@ -1,17 +1,17 @@
 <?php
+
 /* $Id$ */
 
-# spacer()
-# print a IMG tag for a sized spacer GIF
-#
-
-function spacer($width=1, $height=1, $align=false, $extras=false) {
-	printf('<img src="/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
-		$width,
-		$height,
-		($align ? 'align="'.$align.'" ' : ''),
-		($extras ? $extras : '')
-	);
+// Print an image for a sized spacer
+function spacer($width = 1, $height = 1, $return = false, $align = false, $extras = false)
+{
+    $function = ($return ? "sprintf" : "printf");
+    return $function('<img src="/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
+        $width,
+        $height,
+        ($align ? "align=\"$align\" " : ""),
+        ($extras ? $extras : "")
+    );
 }
 
 # resize_image()
@@ -236,7 +236,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
       ?>&nbsp;
   </td>
  </tr>
- <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
+ <tr bgcolor="#333366"><td colspan="2"><?php spacer(); ?></td></tr>
  <tr bgcolor="#666699">
    <td align="right" valign="top" colspan="2"><font color="#ffffff">
     <form method="post" action="/search.php" class="thin">
@@ -258,7 +258,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 </font>
    </td>
  </tr>
- <tr bgcolor="#333366"><td colspan="3"><?php spacer(1,1);?></td></tr> 
+ <tr bgcolor="#333366"><td colspan="3"><?php spacer(); ?></td></tr> 
 </table>
 
 <?php
@@ -274,7 +274,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
+  <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="100%">
@@ -298,12 +298,12 @@ function commonFooter() {
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
-<td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
+<td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <td width="175" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
  </table>
-<?php spacer(175);?>
+<?php spacer(175); ?>
 </td>
 <?php		}
 		echo "</tr></table>\n";
@@ -311,7 +311,7 @@ function commonFooter() {
 ?>
 
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
- <tr bgcolor="#333366"><td><?php spacer(1,1);?></td></tr>
+ <tr bgcolor="#333366"><td><?php spacer(); ?></td></tr>
  <tr bgcolor="#9999cc">
   <td align="right" valign="bottom">
 <?php
@@ -327,7 +327,7 @@ function commonFooter() {
 ?>
   </td>
  </tr>
- <tr bgcolor="#333366"><td><?php spacer(1,1); ?></td></tr>
+ <tr bgcolor="#333366"><td><?php spacer(); ?></td></tr>
 </table>
 
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
