@@ -151,7 +151,7 @@ if (isset($MAGIC_COOKIE) && $id) {
     print_popup_link('http://master.php.net/manage/user-notes.php?action=edit+' . $id,
         make_image('notes-edit.gif', 'edit note'),
         'admin',
-                'scrollbars=no,width=650,height=400'
+                'scrollbars=yes,width=650,height=400'
     );
     echo '&nbsp';
     print_popup_link('http://master.php.net/manage/user-notes.php?action=reject+' . $id,
