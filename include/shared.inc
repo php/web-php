@@ -3,7 +3,10 @@ require("site.inc");
 
 /* Check that browser! */
 
-$IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = $HTDIG = false;
+$IE4 = false; $IE3 = false;
+$NS4 = false; $NS3 = false;
+$X11 = false; $HAVE_STYLE = false;
+$HTDIG = false;
 
 $DISABLE_KICKOUTS = false;
 if($SCRIPT_NAME=="/bugs.php3" || $SCRIPT_NAME=="/bugstats.php3") {
