@@ -126,6 +126,20 @@ by Jung Jinho<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D87939%2D26%2DX"
+><IMG SRC="/gifs/korean_book.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+PHP Web-DB Programming Guide<BR>
+by Kim SungSik<BR>
+<SMALL>in Korean<BR>
+<A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D87939%2D26%2DX">more info</A> |
+<A HREF="http://www.wowbook.com/wow/shoppingcart/xt_orderform_additem.asp?title=%BF%C0%B6%F3%C5%AC+%BF%AC%B5%BF%C0%BB+%C0%A7%C7%D1+PHP+%C0%A5%C7%C1%B7%CE%B1%D7%B7%A1%B9%D6&sku=ISBN89%2D87939%2D26%2DX&list%5Fprice=12000&pubname=%B4%EB%C3%BB&inventory%5Fqty=99865&prdsale%5Ftype=&product%5Ftype=
+">purchase</A>
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://php.wilson.gs/bible"
 ><IMG SRC="http://php.wilson.gs/bible/img/cover.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
