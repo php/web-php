@@ -128,43 +128,6 @@ exciting extension and also contribute to the project.
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.linuxtag.org", make_image("linuxtag2.gif", "LinuxTag", "right") ); ?>
-
-<h1>LinuxTag 2002 - Call for Papers</h1>
-
-<p>
-<font class="newsDate">[23-Jan-2002]</font>
-LinuxTag, Europe's most important Linux conference and exhibition, has
-issued a call for papers. <a href="http://www.linuxtag.org">LinuxTag</a>
-will be held at the fair in Karlsruhe, Germany 6th - 9th June 2002. 
-Last year 15,000 visitors came to find the latest information on Linux, 
-Free Software, Open Source solutions and of course PHP. The event is 
-aimed at professionals, enthusiasts, researchers, developers and the community at large.
-<ul>
-    <li><?php print_link("http://www.linuxtag.org", "LinuxTag"); ?></li>
-    <li><?php print_link("http://www1.linuxtag.net/cfp/cfp3-en.html", "Call for papers"); ?></li>
-    <li><?php print_link("http://www.phpug.de/index_ka39.php", "PHP@LinuxTag 2001"); ?></li>
-</ul>
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP Conference 2 - Call for Participation</h1>
-
-<p>
-<font class="newsDate">[10-Jan-2002]</font>
-The second official PHP Conference, part of the <a
-href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source
-Convention</a>, has issued a <a
-href="http://conferences.oreillynet.com/cs/os2002/create/e_sess">call for
-participation</a> for those who would like to make a presentation or give a
-tutorial. The theme of this year's conference is "Doing More With Less".  The
-conference will be held at the Sheraton San Diego Hotel and Marina in San
-Diego, California between July 22-26, 2002.
-</p>
-
-<?php echo hdelim(); ?>
-
 <?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
 
 <h1>Usage stats for December available</h1>
