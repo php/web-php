@@ -7,10 +7,7 @@ if (isset($save) && isset($user) && isset($pw)) {
 
 /* See the end of the script for the table layout. */
 
-if (!isset($status)) $status = '';
-if (!isset($user))   $user   = '';
-if (!isset($pw))     $pw     = '';
-$destination = "php-dev@lists.php.net";
+$mail_bugs_to = "php-dev@lists.php.net";
 
 if (is_primary_site() || strstr($MYSITE,"localhost")) {
 	$dbhost = "localhost";
@@ -76,6 +73,14 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	}
 }
 
+function show_version_options($current) {
+  $versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
+  while (list(,$v) = each($versions)) {
+    echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
+  }
+  echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
+}
+
 function show_menu($state)
 {
 	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE, $search_for;
@@ -83,7 +88,7 @@ function show_menu($state)
 	if(!isset($search_for)) { $search_for=""; }
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=\"post\" action=\"$PHP_SELF\">\n";
-	echo "<input type=\"hidden\" name=\"cmd\" value=\"Display Bugs\">\n";
+	echo "<input type=\"hidden\" name=\"cmd\" value=\"display\" \>\n";
 	echo "<table bgcolor=\"#ccccff\" cellspacing=\"0\"><tr><td><input type=\"submit\" value=\"Display\"></td><td><select name=\"status\">\n";
 	show_state_options($state, 1);
 	echo "</select></td><td align=\"right\">bugs of type: </td><td>";
@@ -111,9 +116,9 @@ function show_menu($state)
 	echo "<tr><td colspan=\"3\" align=\"right\"><form method=\"get\" action=\"$PHP_SELF\">\n";
 	echo "<input type=\"submit\" value=\"Edit\"> bug number:</td><td colspan=\"2\"><input type=\"text\" name=\"id\"></td>\n";
 	if (isset($MAGIC_COOKIE))
-		echo "<input type=\"hidden\" name=\"edit\" value=\"1\"\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"1\" />\n";
 	else
-		echo "<input type=\"hidden\" name=\"edit\" value=\"2\">\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"2\" />\n";
 	echo "</td><td align=\"center\"><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
@@ -121,20 +126,20 @@ function show_menu($state)
 function show_types($first_item,$show_any,$var_name) {
 	include 'bugtypes.inc';
 
-	print "<select name=\"$var_name\">\n";
+	echo "<select name=\"$var_name\">\n";
 	
 	if($first_item == '--Please Select--') {
-		print "<option value\"$first_item\">$first_item\n"; 
+		echo "<option value\"$first_item\">$first_item</option>\n"; 
 	}
 	
 	foreach ($items as $key => $value) {
 		if ($show_any || $value != 'Any') {
-			$sel = ($key == $first_item) ? 'selected' : '';
-			print "<option value=\"$key\" $sel>$value</option>\n";
+			$sel = ($key == $first_item) ? ' selected' : '';
+			echo "<option value=\"$key\"$sel>$value</option>\n";
 		}
 	}
 
-	print "</select>\n";
+	echo "</select>\n";
 }
 
 function find_password($user) {
@@ -163,7 +168,7 @@ function addlinks($text) {
 	return $new_text;
 }
 
-if (isset($cmd) && $cmd == "Send bug report") {
+if ($cmd == "show") {
 	if(!ereg("@",$email)) {
 		echo "ERROR!  Please provide a valid email address<P>\n";
 		commonFooter();
@@ -219,8 +224,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		@mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
 	}
 
-	if (mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
-		echo "<p><h2>Mail sent to $destination...</h2></p>\n";
+	if (mail($mail_bugs_to, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
+		echo "<p><h2>Mail sent to $mail_bugs_to...</h2></p>\n";
 		echo "<p>Thank you for your help!</p>";
 		echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 		echo "If the status of the bug report you submitted\n";
@@ -230,10 +235,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} else {
 		echo "<p><h2>Mail not sent!</h2>\n";
 		echo "Please send this page in a mail to " .
-		     "<a href=\"mailto:$destination\">$destination</a> manually.</p>\n";
+		     "<a href=\"mailto:$mail_bugs_to\">$mail_bugs_to</a> manually.</p>\n";
     }
 
-} elseif(isset($cmd) && $cmd=="Display Bugs") {
+} elseif ($cmd == "display") {
 	show_menu($status);
 	echo "<hr>\n";
 
@@ -316,7 +321,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "TO_DAYS(NOW())-TO_DAYS(ts2) as unchanged_days";
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
-	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
+	$pass_on = ereg_replace(" ","+","&amp;cmd=display&amp;status=$status&amp;bug_type=$bug_type");
 	$default_header_color="cccccc";
 	$centering["id"] = $centering["Mod"] = "center";
 	$dont_link["Mod"]=1;
@@ -362,7 +367,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 
-} else if(!isset($cmd) && isset($id)) {
+} elseif (!isset($cmd) && isset($id)) {
 
 	function get_old_comments ($bug_id) {
 	  	$divider = '---------------------------------------------------------------------------';
@@ -443,8 +448,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			/* mail bug originator if status was changed or comment is not empty. */
 			if($estatus != $row[0] || $ncomment != "") {
-				@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-				@mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
+				@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$mail_bugs_to>");
+				@mail($mail_bugs_to, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
 			}
 		}
 		mysql_freeresult($result);
@@ -493,8 +498,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
       				@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
 			}
 
-			@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-			@mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
+			@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$mail_bugs_to>");
+			@mail($mail_bugs_to, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
 			mysql_freeresult($result);
 		}
 	}
@@ -617,84 +622,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method="post" action="<?php echo $PHP_SELF;?>">
-<input type="hidden" name="cmd" value="Send bug report">
-
-<p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
-<p><strong>To report bugs in PHP 3.0, please go <a href="/bugs-php3.php">here</a>.</strong></p>
-<p><strong>To report problems with the PHP website, you should first try visiting another
-<a href="/mirrors.php">mirror sites</a> in case the problem is only with a specific mirror.
-You should then report the problem (and the mirror(s) that have it) to 
-<a href="mailto:webmaster@php.net">webmaster@php.net</a>.<strong></p>
-
-<table>
- <tr>
-  <th align="right">Your email address:</th>
-  <td colspan="2">
-   <input type="text" size="20" name="email" value="<?php if(isset($email)) { echo $email; }?>">
-  </td>
- </tr><tr>
-  <th align="right">PHP version:</th>
-  <td>
-   <select name="php_version">
-   <option name="4.0.6">4.0.6
-   <option name="4.0.5">4.0.5
-   <option name="4.0.4pl1">4.0.4pl1
-   <option name="4.0.4">4.0.4
-   <option name="4.0CVS-<?php print date("Y-m-d"); ?>">4.0 Latest CVS (<?php print date("Y-m-d"); ?>)
-   <option name="earlier">Earlier?  Upgrade first!
-   </select>
-  </td>
- </tr><tr>
-  <th align="right">Type of bug:</th>
-  <td colspan="2">
-	<?php show_types("--Please Select--",0,"ebug_type")?>
-   </td>
-  </tr><tr>
-  <th align="right">Operating system:</th>
-  <td colspan="2">
-   <input type="text" size="20" name="php_os" value="<?php echo isset($operating_system)?$operating_system:"";?>">
-  </td>
- </tr><tr>
-  <th align="right">Bug description:</th>
-  <td colspan="2">
-   <input type="text" size="40" maxlength="79" name="sdesc">
-  </td></tr>
- </tr><tr>
-  <th align="right">Password:</th>
-  <td>
-   <input type="text" size="20" maxlength="20" name="passwd"></td>
-    <td><font size="-2">
-You may enter any password here.  This password allows you to come back and modify your
-submitted bug report at a later date. [<a href="/bug-pwd-finder.php">Lost your password?</a>]
-	</font>
-  </td></tr>
-</table>
-
-<table>
-<tr>
-<td valign="top">
-Please supply any information that may be helpful in fixing the bug:
-<ul>
-	<li>A short script that reproduces the problem
-	<li>The list of modules you compiled PHP with (your configure line)
-	<li>Any other information unique or specific to your setup
-	<li>A <a href="/bugs-generating-backtrace.php">gdb backtrace</a>.
-</ul>
-<center>
-<input type="submit" value="Send bug report">
-</center>
-</td>
-<td>
-<textarea cols="60" rows="15" name="ldesc" wrap="physical"></textarea>
-</td>
-</tr>
-</table>
-
-<p></p>
-
-</form>
-
+<?php include 'bugform.inc'; ?>
 <?php } ?>
 </font>
 <?php
