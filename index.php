@@ -114,19 +114,6 @@ of which continue to show impressive growth for PHP. Check out the
 </p>
 
 <? echo hdelim(); ?>
-<h1>ApacheCon Europe 2001 Call for Participation</h1>
-
-<p>
-<font class="newsDate">[05-May-2001]</font>
-The <?echo make_link("http://apachecon.com/2001/EU/#cfp","call for
-participation")?> has gone out for ApacheCon Europe 2001, which will
-run October 15-17 in Dublin, Ireland. Have an idea for a session
-or tutorial you could present about PHP or other Apache Software
-Foundation projects? Submit it before June 2, 2001!
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
 
 <h1>PHP Conference</h1>
 <p>
@@ -144,21 +131,6 @@ save up to $400!</a>.
 </p>
 
 <? echo hdelim(); ?>
-
-<h1>PHP 4.0.5 Released!</h1>
-
-<p>
-<font class="newsDate">[30-Apr-2001]</font>
-<a href="downloads.php">PHP 4.0.5</a> is a maintenance release, that features many bug fixes from
-PHP 4.0.4, as well as output compression, new experimental
-FastCGI support, and significantly improved thread-safe versions.  For a full list of
-changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
-
 
 <h1><?print_link("http://ApacheCon.Com/", "ApacheCon 2001");?></h1>
 
