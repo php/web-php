@@ -190,8 +190,6 @@ commonHeader("Hypertext Preprocessor");
 
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
-
-// Here come the news items...
 ?>
 
 <h1>PHP 4.3.0RC4 Released</h1>
