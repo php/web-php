@@ -176,6 +176,7 @@ function show_types($first_item,$show_any,$var_name) {
                     "*Web Server problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Web Server problem",
                     "Apache related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apache related",
                     "IIS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIS related",
+                    "iPlanet related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iPlanet related",
                     "PWS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PWS related",
                     "Other web server" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other web server",
 
@@ -208,7 +209,9 @@ function show_types($first_item,$show_any,$var_name) {
                     "Adabas-D related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adabas-D related",
                     "dBase related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dBase related",
                     "DBM/DBA related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBM/DBA related",
+                    "DBX related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBX related",
                     "filePro related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filePro related",
+                    "FrontBase related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FrontBase related",
                     "Hyperwave related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyperwave related",
                     "Informix related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Informix related",
                     "InterBase related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InterBase related",
@@ -259,9 +262,10 @@ function show_types($first_item,$show_any,$var_name) {
                     "BC math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BC math related",
                     "Math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Math related",
 
-                    "mcrypt related" => "&nbsp;&nbsp;&nbsp;&nbsp;mcrypt related",
-
-                    "mhash related" => "&nbsp;&nbsp;&nbsp;&nbsp;mhash related",
+                    "*Encryption and hash functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Encryption and hash functions",
+                    "mcrypt related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mcrypt related",
+                    "mhash related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mhash related",
+                    "OpenSSL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OpenSSL related",
 
                     "*Network Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Network Functions",
                     "Network related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network related",
