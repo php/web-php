@@ -36,7 +36,7 @@ your searching pleasure!
 The knowledge base is a growing collection of PHP related information in
 a searchable question and answer format. Anyone can contribute, and
 everyone is encouraged to do so. You can visit the Knowledge Base
-at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
+at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 </p>
 
 <b>Instant Resource Center</b>
