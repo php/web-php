@@ -192,6 +192,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Look Back 2002</h1>
+<p>
+<font class="newsdate">[31-Dec-2002]</font>
+<p>
+We are at the end of 2002, and it seemed appropriate to look back on the
+development issues of the past year. So starts the first PHP Look Back! You can
+find it <a href="http://www.derickrethans.nl/20021230.php">here</a>.
+</p>
+<p>
+Happy New Year!
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.0 Released!</h1>
 <p>
 <font class="newsdate">[27-Dec-2002]</font>
