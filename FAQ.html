@@ -214,6 +214,27 @@ href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
     loop!  Change the semi-colon to a colon and it should work correctly.
   <P>
   </DD>
+  <DT><B>
+    My user-functions don't work any more! I get a "Parse error (expecting '('"
+    on the first line of the function.
+  </B></DT>
+  <DD>
+    PHP3's function declaration now resembles C function declarations, so
+    your function should look like:
+    <PRE>
+        function printsum($a, $b) {
+           echo $a + $b;
+        }
+    </PRE>
+    <P>You can also use old-style function declarations by use the 
+    'old_function' designation, like so:
+    <PRE>
+        old_function printsum $a, $b (
+           echo $a + $b;
+        }
+    </PRE>
+    <P>
+    </DD>
 </DL>
 
 <HR>
