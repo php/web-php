@@ -29,6 +29,7 @@ for developers of large PHP sites.<BR>
 
 <h3>Funding PHP Development</h3>
 Sometimes the various volunteer programmers responsible for PHP incur costs related to
-their work on PHP.  You can contribute money to help alleviate these costs <A HREF="funding.php3">HERE</A>.
+their work on PHP.  You can contribute money to help alleviate these costs 
+<A HREF="funding.php3">here</A>.
 
 <? commonFooter(); ?>

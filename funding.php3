@@ -47,14 +47,16 @@ feasible for them to do so, nor is it fair to expect them to.
 <?endEntry()?>
 
 <?makeEntry("How do I contribute?")?>
-Send a US$ or CDN$ cheque or money order to:
-<pre>PHP Development Team
-c/o Lerdorf Consultants Inc.
-1196 Avenue Rd.
-Toronto, Ontario
-M5N 2G1
-CANADA
-<b>Note:<b> Make it payable to: Lerdorf Consultants Inc.
+Send a cheque or money order (in US or Canadian funds) to:
+<DL>
+<DD><B>PHP Development Team</B>
+<DD>c/o Lerdorf Consultants Inc.
+<DD>1196 Avenue Rd.
+<DD>Toronto, Ontario
+<DD>M5N 2G1
+<DD>CANADA
+</DL>
+<b>Note:</b> Make your donation payable to: Lerdorf Consultants Inc.
 <?endEntry()?>
 
 <?makeEntry("Where does my money go?")?>
@@ -71,7 +73,7 @@ to contribute any money towards the development of PHP.
 
 <?makeEntry("Contributions have been received from the following:")?>
 <a href="http://www.clearink.com">ClearInk</a><br>
-<a href="http://www.fni.net"><i>FishNet Inc.</i></a><br>
+<a href="http://www.fni.net">FishNet Inc.</a><br>
 <a href="http://www.tool.net">Internet Tool &amp; Die Inc.</a><br>
 <a href="http://www.netjet.com">NetJet Communications, Inc.<br>
 <a href="http://www.tummy.com">Tummy Com Ltd.</a><br>
