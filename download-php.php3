@@ -8,7 +8,7 @@ $filesizes["php-3.0RC5.tar.gz"]="~ 1MB";
 $filesizes["php-3.0RC4-win32.exe"]="~ 1090KB";
 
 function makeCap() {
-	GLOBAL $MIRRORS;
+	GLOBAL $MIRRORS, $COUNTRIES;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
@@ -22,11 +22,12 @@ while ($site = key($mirror_sites)) {
 	$info = $mirror_sites[$site];
 	next($mirror_sites);
 	$c = $info[0];
+        $cname=$COUNTRIES[$c];
 	if ($c == $lastc || $c == 'xx') {
 		continue;
 	}
 	$count++;
-	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 VSPACE=5 hspace=15 BORDER=0 ALT=\" [$c] \"></A>";
+	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 VSPACE=5 hspace=15 BORDER=0 ALT=\"$cname\"></A>";
 	if ($count%5==0) {
 		echo "<BR>\n";
 	}
@@ -63,6 +64,7 @@ while ($site = key($mirror_sites)) {
 	$info = $mirror_sites[$site];
 	next($mirror_sites);
 	list($country, $location, $shortname, $companyurl, $show) = $info;
+	$cname=$COUNTRIES[$country];
 	if (!$show) {
 		continue;
 	}
@@ -79,9 +81,7 @@ while ($site = key($mirror_sites)) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0 ALT=' '></TD>\n";
-		echo "<TD><A NAME='$country' HREF=\"$site\">";
-		echo "<IMG SRC='/gifs/gflag-$country.gif' ALT='$site' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10>";
-		echo "</A><BR></TD>\n";
+		echo "<TD><IMG SRC='/gifs/gflag-$country.gif' ALT='$cname' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10><BR></TD>\n";
 		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
 		echo "<TD align=right><IMG ALT=' ' SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
