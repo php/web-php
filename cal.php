@@ -429,7 +429,7 @@ foreach($re as $k=>$v) {
   echo "<h1>Event Calendar</h1>";
   if (!isset($cm)) $cm = strftime('%m');
   if (!isset($cy)) $cy = strftime('%Y');
-  draw_cal($cy,$cm)
+  draw_cal($cy,$cm);
 
   commonFooter();
 ?>
