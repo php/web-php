@@ -30,7 +30,7 @@ function quickref_table($functions)
     global $LANG;
 
     echo "<!-- result list start -->\n";
-	echo "<table border=\"0\" cellpadding=\"5\" cellspacing=\"0\" width=\"100%\">\n";
+    echo "<table border=\"0\" cellpadding=\"5\" cellspacing=\"0\" width=\"100%\">\n";
     echo "<tr valign=\"top\"><td>\n";
     
     // Prepare the data
