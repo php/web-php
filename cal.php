@@ -1,5 +1,8 @@
 <?
-	require 'cvs-auth.inc';
+  require_once 'prepend.inc';
+  commonHeader("PHP Event Calendar");
+
+	require_once 'cvs-auth.inc';
 	if (isset($save) && isset($pw)) { # non-developers don't have $user set
 		setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*20,'/');
 	}
@@ -35,7 +38,7 @@ CREATE TABLE phpcal (
 	 *       which 1 = first
 	 *             2 = second
 	 *             3 = third
-     *            -1 = last
+   *            -1 = last
 	 *            -2 = second-last
 	 */
 	function weekday($year, $month, $day, $which) {
@@ -422,12 +425,11 @@ foreach($re as $k=>$v) {
   	if(isset($HTTP_GET_VARS['a'])) $a = $HTTP_GET_VARS['a'];
   	else $a=0;
   }
+
+  echo "<h1>Event Calendar</h1>";
+  if (!isset($cm)) $cm = strftime('%m');
+  if (!isset($cy)) $cy = strftime('%Y');
+  draw_cal($cy,$cm)
+
+  commonFooter();
 ?>
-<html><head><title>PHP Event Calendar</title></head>
-<body>
-<h1>PHP Event Calendar</h1>
-<?
-if(!isset($cm)) $cm = strftime('%m');
-if(!isset($cy)) $cy = strftime('%Y');
-draw_cal($cy,$cm)?>
-<body></html>
