@@ -7,33 +7,38 @@ commonHeader("Changes in PHP 5/Zend Engine 2.0");
 
 <h1>Changes in PHP 5/Zend Engine 2.0</h1>
 
-<p>[ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible en fran&ccedil;ais</a> ]</p>
+<p>
+ [ <a href="http://www.nexen.net/interview/index.php?id=32" target="_blank">Disponible
+ en fran&ccedil;ais</a> ]
+</p>
 
 <h2>New Object Model.</h2>
 <p>
-PHP's handling of objects has been completely rewritten, allowing for better performance and more
-features.  In previous versions of PHP, objects were handled like primitive types (for 
-instance integers and strings).  The drawback of this method was that semantically the whole object 
-was copied when a variable was assigned, or pass as a parameter to a method.  In the new approach, 
-objects are referenced by handle, and not by value (one can think of a handle as an object's 
-identifier).
+ PHP's handling of objects has been completely rewritten, allowing for better
+ performance and more features. In previous versions of PHP, objects were
+ handled like primitive types (for instance integers and strings). The drawback
+ of this method was that semantically the whole object was copied when a
+ variable was assigned, or pass as a parameter to a method. In the new approach, 
+ objects are referenced by handle, and not by value (one can think of a handle
+ as an object's identifier).
 </p>
 <p>
-Many PHP programmers aren't even aware of the copying quirks of the old object model and, therefore, 
-the majority of PHP applications will work out of the box, or with very few modifications.
+ Many PHP programmers aren't even aware of the copying quirks of the old object
+ model and, therefore, the majority of PHP applications will work out of the box,
+ or with very few modifications.
 </p>
 
 <h2>Private and Protected Members</h2>
 <p>
-PHP 5 introduces private and protected member variables, they allow you to define the visibility of class
-properties.
+ PHP 5 introduces private and protected member variables, they allow you to
+ define the visibility of class properties.
 </p>
 
 <h3>Example</h3>
 <p>
-Protected member variables can be accessed in classes extending the class 
-they are declared in, whereas private member variables can only be accessed 
-by the class they belong to.
+ Protected member variables can be accessed in classes extending the class 
+ they are declared in, whereas private member variables can only be accessed 
+ by the class they belong to.
 </p>
 <p>
 <?php highlight_string('<?php
@@ -76,7 +81,7 @@ $obj->printHello();
 
 <h2>Private and protected methods</h2>
 <p>
-With PHP 5 (Zend Engine 2), private and protected methods are also introduced.
+ With PHP 5 (Zend Engine 2), private and protected methods are also introduced.
 </p>
 
 <h3>Example</h3>
@@ -106,15 +111,15 @@ $o->aPublicMethod();
 </p>
 
 <p>
-Old code that has no user-defined classes or functions named "public," "protected"
-or "private" should run without modifications.
+ Old code that has no user-defined classes or functions named "public",
+ "protected" or "private" should run without modifications.
 </p>
 
 <h2>Abstract Classes and Methods</h2>
 <p>
-PHP 5 also introduces abstract classes and methods. An abstract method only declares the 
-method's signature and does not provide an implementation. A class that contains abstract 
-methods needs to be declared abstract.
+ PHP 5 also introduces abstract classes and methods. An abstract method
+ only declares the method's signature and does not provide an implementation.
+ A class that contains abstract methods needs to be declared abstract.
 </p>
 <h3>Example</h3>
 <p>
@@ -135,15 +140,15 @@ $o->test();
 </p>
 
 <p>
-Abstract classes cannot be instantiated.  Old code that has no user-defined classes or 
-functions named 'abstract' should run without modifications.
+ Abstract classes cannot be instantiated. Old code that has no user-defined
+ classes or functions named 'abstract' should run without modifications.
 </p>
 
 <h2>Interfaces</h2>
 
 <p>
-The Zend Engine 2.0 introduces interfaces. A class may implement an arbitrary list 
-of interfaces.
+ The Zend Engine 2.0 introduces interfaces. A class may implement an arbitrary
+ list of interfaces.
 </p>
 
 <h3>Example</h3>
@@ -161,14 +166,15 @@ class Exception implements Throwable {
 </p>
 
 <p>
-Old code that has no user-defined classes or functions named 'interface' or 
-'implements' should run without modifications.
+ Old code that has no user-defined classes or functions named 'interface' or 
+ 'implements' should run without modifications.
 </p>
 
 <h2>Class Type Hints</h2>
 <p>
-While remaining loosely typed PHP 5 introduces the ability to use class type hints to declare 
-the expected class of objects that are passed as parameters to a method.
+ While remaining loosely typed PHP 5 introduces the ability to use class type
+ hints to declare the expected class of objects that are passed as parameters
+ to a method.
 </p>
 <h3>Example</h3>
 <p>
@@ -199,8 +205,8 @@ $a->b($b);
 ?>'); ?>
 </p>
 <p>
-These class type hints are not checked upon compilation, as would be the case 
-in a typed language, but during runtime.  This means that:
+ These class type hints are not checked upon compilation, as would be the case 
+ in a typed language, but during runtime. This means that:
 </p>
 <p>
 <?php
@@ -212,7 +218,7 @@ function foo(ClassName $object) {
 ?>
 </p>
 <p>
-is equivalent to:
+ is equivalent to:
 </p>
 <p>
 <?php 
@@ -225,13 +231,13 @@ function foo($object) {
 ?>'); ?>
 </p>
 <p>
-This syntax only applies to objects/classes, not built-in types.
+ This syntax only applies to objects/classes, not built-in types.
 </p>
 
 <h2>final</h2>
 <p>
-PHP 5 introduces the "final" keyword to declare final members and methods.  Methods and 
-members declared final cannot be overridden by sub-classes.
+ PHP 5 introduces the "final" keyword to declare final members and methods.
+ Methods and members declared final cannot be overridden by sub-classes.
 </p>
 <h3>Example</h3>
 <p>
@@ -244,27 +250,28 @@ class Foo {
 ?>'); ?>
 </p>
 <p>
-Old code that has no user-defined classes or functions named 'final' should run 
-without modifications.
+ Old code that has no user-defined classes or functions named 'final' should
+ run without modifications.
 </p>
 
 <h2>Object Cloning</h2>
 <p>
-PHP 4 (Zend Engine 1.0) offered no way a user could decide what copy constructor to run 
-when an object is duplicated. During duplication, PHP 4 did a bit for bit copy making an 
-identical replica of all the object's properties.
+ PHP 4 (Zend Engine 1.0) offered no way a user could decide what copy constructor
+ to run when an object is duplicated. During duplication, PHP 4 did a bit for bit
+ copy making an identical replica of all the object's properties.
 </p>
 <p>
-Creating a copy of an object with fully replicated properties is not always the wanted 
-behavior. A good example of the need for copy constructors, is if you have an object which 
-represents a GTK window and the object holds the resource of this GTK window, when you 
-create a duplicate you might want to create a new window with the same properties and have
-the new object hold the resource of the new window. Another example is if your object holds 
-a reference to another object which it uses and when you replicate the parent object you want 
-to create a new instance of this other object so that the replica has its own separate copy.
+ Creating a copy of an object with fully replicated properties is not always the
+ wanted behavior. A good example of the need for copy constructors, is if you have
+ an object which represents a GTK window and the object holds the resource of this
+ GTK window, when you create a duplicate you might want to create a new window with
+ the same properties and have the new object hold the resource of the new window.
+ Another example is if your object holds a reference to another object which it
+ uses and when you replicate the parent object you want to create a new instance
+ of this other object so that the replica has its own separate copy.
 </p>
 <p>
-An object copy is created by calling the object's <code>__clone()</code> method:
+ An object copy is created by calling the object's <code>__clone()</code> method:
 </p>
 <p>
 <?php highlight_string('<?php
@@ -272,13 +279,14 @@ $copy_of_object = $object->__clone();
 ?>'); ?>
 </p>
 <p>
-When the developer asks to create a new copy of an object, the Zend Engine will check if a 
-<code>__clone()</code> method has been defined or not. If not, it will call a default <code>__clone()</code>
-which will copy all of the object's properties. If a <code>__clone()</code> method is defined, 
-then it will be responsible to set the necessary properties in the created object. For convenience, 
-the engine will supply a function that imports all of the properties from the source object, so 
-that they can start with a by-value replica of the source object, and only override properties that
-need to be changed. 
+ When the developer asks to create a new copy of an object, the Zend Engine will
+ check if a <code>__clone()</code> method has been defined or not. If not, it
+ will call a default <code>__clone()</code> which will copy all of the object's
+ properties. If a <code>__clone()</code> method is defined, then it will be
+ responsible to set the necessary properties in the created object. For
+ convenience, the engine will supply a function that imports all of the properties
+ from the source object, so that they can start with a by-value replica of the
+ source object, and only override properties that need to be changed. 
 </p>
 <h3>Example</h3>
 <p>
@@ -315,19 +323,22 @@ print $obj->address . "\n";
 
 <h2>Unified Constructors</h2>
 <p>
-The Zend Engine allows developers to declare constructor methods for classes. Classes 
-which have a constructor method call this method on each newly-created object, so it is 
-suitable for any initialization that the object may need before it is used.
+ The Zend Engine allows developers to declare constructor methods for classes.
+ Classes which have a constructor method call this method on each newly-created
+ object, so it is suitable for any initialization that the object may need
+ before it is used.
 </p>
 <p>
-With PHP 4, constructor methods were class methods that had the same name as the class itself. Since 
-it is very common to call parent constructors from derived classes, the way PHP 4 worked made it a bit 
-cumbersome to move classes around in a large class hierarchy. If a class is moved to reside under a 
-different parent, the constructor name of that parent changes as well, and the code in the derived class 
-that calls the parent constructor has to be modified.
+ With PHP 4, constructor methods were class methods that had the same name as
+ the class itself. Since it is very common to call parent constructors from derived
+ classes, the way PHP 4 worked made it a bit cumbersome to move classes around
+ in a large class hierarchy. If a class is moved to reside under a different
+ parent, the constructor name of that parent changes as well, and the code in
+ the derived class that calls the parent constructor has to be modified.
 </p>
 <p>
-PHP 5 introduces a standard way of declaring constructor methods by calling them by the name <code>__construct()</code>.
+ PHP 5 introduces a standard way of declaring constructor methods by calling
+ them by the name <code>__construct()</code>.
 </p>
 <h3>Example</h3>
 <p>
@@ -350,23 +361,26 @@ $obj = new SubClass();
 ?>'); ?>
 </p>
 <p>
-For backwards compatibility, if PHP 5 cannot find a <code>__construct()</code> function 
-for a given class, it will search for the old-style constructor function, by the name of the 
-class. Effectively, it means that the only case that would have compatibility issues is if the 
-class had a method named <code>__construct()</code> which was used for different semantics.
+ For backwards compatibility, if PHP 5 cannot find a <code>__construct()</code>
+ function for a given class, it will search for the old-style constructor function,
+ by the name of the class. Effectively, it means that the only case that would
+ have compatibility issues is if the class had a method named
+ <code>__construct()</code> which was used for different semantics.
 </p>
 
 <h2>Destructors</h2>
 <p>
-Having the ability to define destructors for objects can be very useful. Destructors can log messages 
-for debugging, close database connections and do other clean-up work. No mechanism for object destructors 
-existed in PHP 4, although PHP had already support for registering functions which should be 
-run on request shutdown.
+ Having the ability to define destructors for objects can be very useful.
+ Destructors can log messages for debugging, close database connections and do
+ other clean-up work. No mechanism for object destructors existed in PHP 4,
+ although PHP had already support for registering functions which should be 
+ run on request shutdown.
 </p>
 <p>
-PHP 5 introduces a destructor concept similar to that of other object-oriented languages, such 
-as Java: When the last reference to an object is destroyed the object's destructor, which is a class method 
-name %__destruct()% that recieves no parameters, is called before the object is freed from memory.
+ PHP 5 introduces a destructor concept similar to that of other object-oriented
+ languages, such as Java: When the last reference to an object is destroyed the
+ object's destructor, which is a class method named <code>__destruct()</code>
+ that recieves no parameters, is called before the object is freed from memory.
 </p>
 <h3>Example</h3>
 <p>
@@ -386,14 +400,14 @@ $obj = new MyDestructableClass();
 ?>'); ?>
 </p>
 <p>
-Like constructors, parent destructors will not be called implicitly by the engine. In 
-order to run a parent destructor, one would have to explicitly call <code>parent::__destruct()</code> 
-in the destructor body.
+ Like constructors, parent destructors will not be called implicitly by the
+ engine. In order to run a parent destructor, one would have to explicitly
+ call <code>parent::__destruct()</code> in the destructor body.
 </p>
 
 <h2>Constants</h2>
 <p>
-PHP 5 introduces per-class constants:
+ PHP 5 introduces per-class constants:
 </p>
 <p>
 <?php highlight_string('<?php
@@ -405,8 +419,9 @@ echo "Foo::constant = " . Foo::constant . "\n";
 ?>'); ?>
 </p>
 <p>
-PHP 5 allows for expressions within constants, however, constants are evaluated at compile time, therefore
-no constants can be declared that rely on runtime information.
+ PHP 5 allows for expressions within constants, however, constants are
+ evaluated at compile time, therefore no constants can be declared that
+ rely on runtime information.
 </p>
 <p>
 <?php highlight_string('<?php
@@ -418,13 +433,14 @@ class Bar {
 ?>'); ?>
 </p>
 <p>
-Old code that has no user-defined classes or functions named 'const' will run without modifications.
+ Old code that has no user-defined classes or functions named 'const'
+ will run without modifications.
 </p>
 
 <h2>Exceptions</h2>
 <p>
-PHP 4 had no exception handling. PHP 5 introduces a exception model similar to 
-that of other programming languages.
+ PHP 4 had no exception handling. PHP 5 introduces a exception model similar
+ to that of other programming languages.
 </p>
 <h3>Example</h3>
 <p>
@@ -443,14 +459,15 @@ try {
 ?>'); ?>
 </p>
 <p>
-Old code that has no user-defined classes or functions 'catch', 'throw' and 'try' will run 
-without modifications.
+ Old code that has no user-defined classes or functions 'catch', 'throw'
+ and 'try' will run without modifications.
 </p>
 
 <h2>Dereferencing objects returned from functions</h2>
 <p>
-In PHP 4 it wasn't possible to dereference objects returned by functions and make further
-method calls on those objects.  With the advent of Zend Engine 2, the following is now possible:
+ In PHP 4 it wasn't possible to dereference objects returned by functions
+ and make further method calls on those objects. With the advent of Zend
+ Engine 2, the following is now possible:
 </p>
 <p>
 <?php highlight_string('<?php
@@ -494,8 +511,8 @@ print foo::$my_static;
 
 <h2>Static Methods</h2>
 <p>
-PHP 5 introduces the 'static' keyword to declare a method static, thus 
-callable from outside the object context.
+ PHP 5 introduces the 'static' keyword to declare a method static, thus 
+ callable from outside the object context.
 </p>
 <h3>Example</h3>
 <p>
@@ -510,13 +527,15 @@ Foo::aStaticMethod();
 ?>'); ?>
 </p>
 <p>
-The pseudo variable $this is not available inside a method that has been declared static.
+ The pseudo variable <code>$this</code> is not available inside a method
+ that has been declared static.
 </p>
 
 <h2>instanceof</h2>
 <p>
-PHP 5 introduces the <code>instanceof</code> keyword, that allows you to ascertain whether
-or not an object is an instance of a class, or extends a class, or implements an interface.
+ PHP 5 introduces the <code>instanceof</code> keyword, that allows you to
+ ascertain whether or not an object is an instance of a class, or extends
+ a class, or implements an interface.
 </p>
 <h3>Example</h3>
 <p>
@@ -533,9 +552,10 @@ if ($a instanceof basicClass) {
 
 <h2>Static function variables</h2>
 <p>
-Statics are now treated at compile-time which allows developers to assign variables to statics by 
-reference. This change also greatly improves their performance but means that indirect references to 
-statics will not work anymore.
+ Statics are now treated at compile-time which allows developers to assign
+ variables to statics by reference. This change also greatly improves their
+ performance but means that indirect references to statics will not work
+ anymore.
 </p>
 
 <h2>Parameters that are passed by reference to a function may now have default values</h2>
@@ -552,9 +572,9 @@ function my_function(&$var = null) {
 
 <h2>__autoload()</h2>
 <p>
-The <code>__autoload()</code> interceptor function will be automatically called when an undeclared class 
-is to be instantiated. The name of that class will be passed to the __autoload() interceptor function 
-as its only argument.
+ The <code>__autoload()</code> interceptor function will be automatically called
+ when an undeclared class is to be instantiated. The name of that class will be
+ passed to the <code>__autoload()</code> interceptor function as its only argument.
 </p>
 <h3>Example</h3>
 <p>
@@ -569,8 +589,9 @@ $object = new ClassName;
 
 <h2>Overloadable Method calls and Property accesses</h2> 
 <p>
-Both method calls and property accesses can be overloaded via the <code>__call()</code>, 
-<code>__get()</code> and <code>__set()</code> methods.
+ Both method calls and property accesses can be overloaded via the
+ <code>__call()</code>, <code>__get()</code> and <code>__set()</code>
+ methods.
 </p>
 <h3>Example: __get() and __set()</h3>
 <p>
