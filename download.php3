@@ -40,7 +40,7 @@
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://www.caraveo.com/php/php3a1win32.zip">PHP 3.0a1</a> (Win32 binary) from the PHP Win32 site in the United States.  The
+		Download <a href="http://www.caraveo.com/php/php3a3win32.zip">PHP 3.0a3</a> (Win32 binary) from the PHP Win32 site in the United States.  The
 		<a href="http://www.caraveo.com/php/php3latest.zip">latest patched version</a> may also be downloaded.
 	</td>
 	<td align="center">
