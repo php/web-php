@@ -205,7 +205,7 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-	global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD, $COUNTRY;
+    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA, $SEARCH_BASE, $ONLOAD;
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
