@@ -36,6 +36,7 @@ Zend Technologies' Web site, with lots of PHP related resources
 <li><a href="http://conf.php.net/">PHP Conference Material</a><br>
 Some PHP conference slide shows, presented at various meetings
 by PHP professionals</li>
+</ul>
 
 <h4>PHP Support Companies</h4>
 
@@ -164,11 +165,14 @@ A base library for PHP sites and developers</li>
 
 </ul>
 
-<h4>PHP NewsPapers</h4>
+<h4>PHP Magazines</h4>
 
 <ul>
+<li><a href="http://phpj.com/">PHP Journal</a><br>
+A quarterly journal devoted to the PHP programming language.</li>
+
 <li><a href="http://www.phpmag.de/">PHPmag</a><br>
-The Software & Support Verlag, based in Frankfurt,
+The Software &amp; Support Verlag, based in Frankfurt,
 Germany, has now published a magazine on PHP as a 
 tribute to the steadily growing German PHP community (in German).</li>
 
