@@ -1,6 +1,9 @@
 <?php // -*- C++ -*-
 require_once 'prepend.inc';
 
+// NOTE: See http://www.php.net/manual/note.mysql
+//       for the table structure of the notes table
+
 $NEXT = $PREV = $UP = $HOME = array(false, false);
 $TOC = array();
 
