@@ -205,7 +205,7 @@ by Rolf D. Stoll and Gudrun Anna Leierer<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709"
-><IMG SRC="/gifs/709.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/herellier.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709
