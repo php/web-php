@@ -55,6 +55,10 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Uncovering One of the Web's Secrets: Integrated Scripting with PHP", "by Leon Atkinson","http://webreview.com/wr/pub/1999/07/09/feature/index.html?wwwrrr_19990709.html", "July 9, 1999");?>
+A basic introduction to PHP, by the author of "Core PHP Programming".
+<? endEntry(); ?>
+
 <? makeEntry( "Treasure trove: PHP offers features that will make your Web apps sparkle", "by Nicholas Petreley","http://www.infoworld.com/articles/op/xml/990621oppetreley.xml", "June 19, 1999");?>
 LinuxWorld's editorial director discovers PHP and extols its virtues.
 <? endEntry(); ?>
