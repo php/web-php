@@ -50,11 +50,11 @@ function wrap($text,$margin=72) {
 			if($last_space==0 || $last_space<$printfrom) {
 				echo substr($text,$printfrom,$margin);
 				echo "\n";
-				$printfrom+=$margin+1;	
+				$printfrom+=$margin+1;
 			} else {
 				echo substr($text,$printfrom,$last_space-$printfrom);
 				echo "\n";
-				$printfrom=$last_space+1;	
+				$printfrom=$last_space+1;
 			}
 			$line_len=0;
 		}
@@ -110,7 +110,7 @@ function show_menu($state)
 					"comments" => "Comments",
 					"ts1" => "Opened",
 					"assign" => "Assigned To");
-	
+
 	reset($fields);
 	echo "</td><td align=right>Last Comment By:</td><td> <select name=\"by\">\n";
 	list_ids($by);
@@ -217,7 +217,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	show_menu($status);
 	echo "<hr>\n";
-	
+
     mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
@@ -262,17 +262,17 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	     "<a href=\"mailto:$email\">$email</a> manually.\n");
     }
 
-} elseif(isset($cmd) && $cmd=="Display Bugs") { 
+} elseif(isset($cmd) && $cmd=="Display Bugs") {
 	show_menu($status);
 	echo "<hr>\n";
 
 	include("table_wrapper.inc");
-	
+
 	function external_processing($fieldname,$tablename,$data,$row)
 	{
 		switch($fieldname) {
 			case "id":
-				print "<a href=\"bugs.php?id=$data\">$data</a>\n";	
+				print "<a href=\"bugs.php?id=$data\">$data</a>\n";
 				break;
 			case "Originator":
 				print "<a href=\"mailto:$data\">$data</a>\n";
@@ -328,7 +328,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	}
 	$external_processing_function="external_processing";
 	$row_coloring_function="row_coloring";
-	
+
     mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
     mysql_select_db("php3");
 
@@ -350,7 +350,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$centering["id"] = $centering["Mod"] = "center";
 	$dont_link["Mod"]=1;
 	$dont_display["unchanged_days"] = 1;
-	
+
 	if (!isset($order_by_clause)) {
 		$order_by_clause = "id";
 	}
@@ -462,13 +462,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
     			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 			mysql_freeresult($result);
-		}	
+		}
 	}
 
 	/* DISPLAY BUG */
 	$result = mysql_query("SELECT * from bugdb where id=$id");
 	if($result and mysql_numrows($result)>0) {
-		$row = mysql_fetch_row($result);	
+		$row = mysql_fetch_row($result);
 		echo "<br><h1>Bug id #$id</h1>\n";
 		echo "<table>\n";
 		if(!isset($edit)) {
@@ -484,7 +484,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			show_state_options($row[7], 0, ($edit==2)?2:0);
 			echo "</select>\n";
 			if($edit==1)
+			  {
 				echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
+				echo "<input type=submit value=\"Commit Changes\">\n";
+			  }
 		}
 		echo "</tr>\n";
 		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
@@ -616,7 +619,7 @@ Or use the form below to submit a new bug report.
     <td><font size="-2">
 You may enter any password here.  This password allows you to come back and modify your
 submitted bug report at a later date.
-	</font>	
+	</font>
   </td></tr>
 </table>
 
@@ -661,7 +664,7 @@ CREATE TABLE bugdb (
   id int(8) NOT NULL AUTO_INCREMENT,
   bug_type char(32),
   email varchar(40) NOT NULL,
-  sdesc varchar(80), 
+  sdesc varchar(80),
   ldesc text,
   php_version char(16),
   php_os varchar(32),
