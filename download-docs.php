@@ -125,7 +125,7 @@ if (count($found_formats) == 0) {
         // Additional link for special French version of the manual
         $language = $LANGUAGES[$langcode];
         if ($langcode == "fr") {
-            $language .= '<br /><a href="http://dev.nexen.net/docs/php/chargement.html">[Special French]</a>';
+            $language .= '<br /><a href="http://www.nexen.net/docs/php/index.php">[Special French]</a>';
         }
         
         // Highlight manual in preferred language
