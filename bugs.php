@@ -22,8 +22,8 @@ if (strstr($MYSITE,"bugs.php.net")) {
 $DISABLE_KICKOUTS=1;
 commonHeader("Bug Reporting");
 echo "<font size=-1>\n";
-#$destination = "php-dev@lists.php.net";
-$destination = "rasmus@lerdorf.on.ca";
+$destination = "php-dev@lists.php.net";
+#$destination = "rasmus@lerdorf.on.ca";
 
 function indent($string, $prefix) {
     $string = ereg_replace(13, "", $string); /* get rid of Ctrl-M */
