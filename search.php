@@ -1,4 +1,5 @@
 <?php
+/* $Id$ */
 
 include_once "prepend.inc";
 
@@ -246,12 +247,12 @@ if (isset($pattern)) {
             
             // If we have not performed a "remote search", leave the text as is
             if (!isset($base)) {
-                echo $result[$i];
+                echo preg_replace("/\/gifs\/star/i", "/images/star", $result[$i]);
             }
             
             // Otherwise modify links to point to the referrer site
             else {
-                echo preg_replace("!http://[^.]+\\.php\\.net/!i", htmlspecialchars($base), $result[$i]);
+                echo preg_replace("!http://[^.]+\\.php\\.net/!i", htmlspecialchars($base), preg_replace("/\/gifs\/star/i", "/images/star", $result[$i]));
             }
             
             // Make HTML output readable
