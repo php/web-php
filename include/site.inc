@@ -27,7 +27,7 @@ $MIRRORS = array(
    "http://fi.php.net/"               => array("fi", "NIC Finland", 0, "http://www.nic.fi/", 1, 0, "fi"),
    "http://fi2.php.net/"              => array("fi", "IMG-Multimedia", 0, "http://www.img-media.com/", 1, 0, "fi"),
    "http://fr.php.net/"               => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III",0, "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0, "fr"),
-#   "http://fr2.php.net/"               => array("fr", "nexen.net", 1, "http://www.nexen.net/", 1, 0, "fr"),
+   "http://fr2.php.net/"               => array("fr", "nexen.net", 1, "http://www.nexen.net/", 1, 0, "fr"),
    "http://php3.globe.de/"            => array("de", "@GLOBE GmbH", 0, "http://www.globe.de/", 1, 0, "de"),
    "http://php3.de/"                  => array("de", "Schlund + Partner", 0, "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1, "de"),
    "http://hu.php.net/"               => array("hu", "Externet", 0, "http://www.externet.hu/", 1, 0, "hu"),
