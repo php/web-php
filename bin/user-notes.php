@@ -12,7 +12,7 @@ mysql_connect("localhost","nobody","") or die("unable to connect to db");
 mysql_select_db("php3") or die("unable to select database");
 
 if ($since) {
-  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since) OR updated > FROM_UNIXTIME($since)")
+  mysql_query("CREATE TEMPORARY TABLE updated TYPE = HEAP SELECT DISTINCT sect FROM note WHERE ts > FROM_UNIXTIME($since) OR updated > FROM_UNIXTIME($since) OR removed")
     or die("failed to create temporary table");
   # purge entries marked for removal
   mysql_query("DELETE FROM note WHERE removed");
