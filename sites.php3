@@ -206,6 +206,7 @@ right away.</blockquote>
 	site("Deal-iMac","deal-imac.com");
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
+	site("Legions.Com","legions.com");
 	site("Linux Power","linuxpower.org");
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
