@@ -11,7 +11,7 @@
 
 $MIRRORS = array(
    "http://au.php.net/"              => array("au", "Planet Mirror", "", "http://www.planetmirror.com/", 1, 0, "en"),
-   "http://au2.php.net:81/"            => array("au", "Flinders University of South Australia", "", "http://www.nisu.flinders.edu.au/", 1, 1, "en"),
+   "http://au2.php.net/"            => array("au", "Flinders University of South Australia", "", "http://www.nisu.flinders.edu.au/", 1, 0, "en"),
    "http://at.php.net/"               => array("at", "Goodie Domain Service", "", "http://gd.tuwien.ac.at/", 1, 0, "de"),
    "http://br.php.net/"               => array("br", "SST Internet", "", "http://www.sst.com.br/", 1, 0, "pt_BR"),
 #   "http://br2.php.net/"               => array("br", "Lune Networks", "", "http://www.lunenetworks.com.br/", 1, 0, "pt_BR"),
@@ -120,15 +120,11 @@ $COUNTRIES = array(
 );
 
 
-$MYSITE='http://'.getenv("SERVER_NAME").(getenv("SERVER_PORT")!=80?":".getenv("SERVER_PORT"):"").'/';
+$MYSITE='http://' . getenv("SERVER_NAME") . '/';
 
 if (!isset($MIRRORS[$MYSITE])) {
 	$MIRRORS[$MYSITE] = array("xx", $MYSITE, "none", $MYSITE, 2, 0, "en");
 }
 
-# fix for non-standard port in Australian mirror
-if(strstr($MYSITE,":81")) {
-	$MYSITE = ereg_replace("php.net", "php.net:81", $MYSITE);
-}
 
 ?>
