@@ -150,7 +150,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5.0.2 released!</h1>
 <p>
  <span class="newsdate">[23-Sep-2004]</span>
- PHP Development Team is proud to announce the immediate release of PHP <a href="/downloads.php">PHP 5.0.2</a>.
+ PHP Development Team is proud to announce the immediate release of <a href="/downloads.php">PHP 5.0.2</a>.
  This is a maintenance release that in addition to many non-critical bug fixes, addresses a problem
  with GPC input processing. 
  All Users of PHP 5 are encouraged to upgrade to this release as soon as possible.
@@ -167,7 +167,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 4.3.9 released!</h1>
 <p>
  <span class="newsdate">[22-Sep-2004]</span>
- PHP Development Team is proud to announce the immediate release of PHP <a href="/downloads.php">PHP 4.3.9</a>.
+ PHP Development Team is proud to announce the immediate release of <a href="/downloads.php">PHP 4.3.9</a>.
  This is a maintenance release that in addition to over 50 non-critical bug fixes, addresses a problem
  with GPC input processing. This release also re-introduces ability to write
  GIF images via the bundled GD extension.
