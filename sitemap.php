@@ -1,7 +1,7 @@
 <?php
-/* $Id$ */
-
-include_once "./include/prepend.inc";
+// $Id$
+$_SERVER['BASE_PAGE'] = 'sitemap.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("Sitemap");
 ?>
 
