@@ -335,7 +335,7 @@ function output_lists_table($mailing_lists)
 </p>
 
 <p>
- <strong>Warning:</strong> The PHP users mailing list gets close to 2500
+ <strong>Warning:</strong> The PHP users mailing list gets close to 4000
  messages per month currently. Do the math. That translates to about 80
  messages per day. If your mailbox can't handle this sort of traffic you
  might want to consider subscribing to the digest list instead (two messages
