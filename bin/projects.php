@@ -14,3 +14,4 @@ if (!xslt_process($xsl, $xml, &$result)) {
 } else {
   echo $result;
 }
+?>
