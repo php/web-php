@@ -59,28 +59,12 @@ $formats = array(
  use does otherwise.
 </p>
 
-<table border="0" cellpadding="3" cellspacing="2" class="standard">
- <tr>
-  <th>&nbsp;</th>
-<?php 
+<?php
+$files = array(); $found_formats = array();
 
-// Print out the name of the formats
-foreach ($formats as $formatname => $extension) {
-    echo "  <th valign=\"bottom\">$formatname</th>\n";
-}
-
-echo " </tr>\n";
- 
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
 
-    // See if current language is the preferred one
-    if ($langcode == $LANG) { $preflang = TRUE; }
-    else { $preflang = FALSE; }
-    
-    // Reset files array and format counter
-    $files = array(); $formatnum = 0;
-    
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
     
@@ -99,33 +83,44 @@ foreach ($LANGUAGES as $langcode => $language) {
             $changed = @filemtime($actual_file);
             
             // Size available, collect information
-            if ($size) {
-                $files[] = array(
+            if ($size !== FALSE) {
+                $files[$langcode][$extension] = array(
                     $link_to,
                     (int) ($size/1024),
                     date("j M Y", $changed),
                     $extension
                 );
-                $formatnum++;
+                if (!in_array($extension, array_keys($found_formats))) {
+                    $found_formats[$formatname] = $extension;
+                }
             }
-            
-            // Size is not available, we won't list the file
-            else {
-                $files[] = '';
-            }
-        }
-        
-        // Unable to find file
-        else {
-            $files[] = '';
         }
     }
-    
-    // At least one format is found for this
-    // language => write out table row
-    if ($formatnum > 0) {
+}
 
+if (count($found_formats) == 0) {
+    echo "<p class=\"tip\">This mirror has no documentation files for download.</p>";
+} else {
+
+    echo '<table border="0" cellpadding="3" cellspacing="2" class="standard">' . "\n" .
+         "<tr>\n  <th>&nbsp;</th>\n";
+
+    // Print out the name of the formats
+    foreach ($formats as $formatname => $extension) {
+        if (!in_array($extension, array_values($found_formats))) { continue; }
+        echo "  <th valign=\"bottom\">$formatname</th>\n";
+    }
+
+    echo " </tr>\n";
+
+    foreach ($files as $langcode => $lang_files) {
+    
+        // See if current language is the preferred one
+        if ($langcode == $LANG) { $preflang = TRUE; }
+        else { $preflang = FALSE; }
+        
         // Additional link for special French version of the manual
+        $language = $LANGUAGES[$langcode];
         if ($langcode == "fr") {
             $language .= '<br /><a href="http://dev.nexen.net/docs/php/chargement.html">[Special French]</a>';
         }
@@ -138,26 +133,24 @@ foreach ($LANGUAGES as $langcode => $language) {
         }
 
         echo "<tr>\n<th class=\"subl\">$language</td>\n";
+
+        foreach ($formats as $formatname => $extension) {
         
-        // Print out a table cell for all formats
-        foreach ($files as $fileinfo) {
-            
+            // Skip if no file found
+            if (!in_array($extension, array_values($found_formats))) { continue; }
+
             echo "<td align=\"center\"$cellclass>";
             
-            // Missing format
-            if ($fileinfo == '') {
+            if (!isset($lang_files[$extension])) {
                 echo "&nbsp;";
-            }
-            
-            // Format found, write out link
-            else {
-
-                // Start link tag
+            } else {
+                
+                $fileinfo = $lang_files[$extension];
                 echo "<a href=\"$fileinfo[0]\"";
 
                 // Only print out tooltip, if explicit information is not printed
                 if (!$sizes && !$preflang) {
-                    echo " title=\" Size: $fileinfo[1]Kb\n Date: $fileinfo[2]\"";
+                    echo " title=\" Size: $fileinfo[1]Kb -- Date: $fileinfo[2]\"";
                 }
 
                 // End link tag
@@ -170,20 +163,21 @@ foreach ($LANGUAGES as $langcode => $language) {
             }
 
             // Quite bad looking code tweak to add a link to the extended CHM (en only!)
-            if (strpos($fileinfo[0], "_en.chm/from")) {
+            if ($langcode == "en" && $extension == "chm") {
                 echo '<br /><a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
             }
        
             // End table cell
             echo "</td>\n";
+
         }
         
         // End table row
         echo "</tr>\n";
     }
+    echo "</table>\n";
 }
 ?>
-</table>
 
 <hr />
 
