@@ -111,6 +111,20 @@ by J&ouml;rg Krause<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/thephpdevelopmte"
+><IMG SRC="/gifs/theis.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3934358632/thephpdevelopmte"
+>PHP 4</A><BR>
+Webserver-Programmierung für Um- und Einsteiger<BR>
+by Thomas Theis<BR>
+<SMALL>in German</SMALL><BR>
+<SMALL><A HREF="http://www.galileo-press.de/">weitere Informationen</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.campuspress.fr/store/book_info.asp?id=709"
 ><IMG SRC="/gifs/709.gif" BORDER=0 ALIGN="left"
 ></A><BR>
