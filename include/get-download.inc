@@ -1,17 +1,17 @@
 <?php
-include_once 'prepend.inc';
-include_once 'mirrortable.inc';
+// $Id$
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
 
 // Try to make this page non-cached
 header_nocache();
 
 // If there is no such file, then drop out an invalid file error message
-if (!isset($df) || !file_exists($DOCUMENT_ROOT . '/distributions/' . $df)) {
+if (!isset($df) || !file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $df)) {
     exit('Invalid file requested for download!');
 }
 
 // Set local file name
-$local_file = $DOCUMENT_ROOT . '/distributions/' . $df;
+$local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $df;
 
 // Print out common header
 commonHeader('Get Download');
@@ -20,14 +20,14 @@ commonHeader('Get Download');
 <h1>Choose mirror site for download</h1>
 
 <p>
-You have chosen to download the following file:
+ You have chosen to download the following file:
 </p>
 
-<div align="center">
+<div class="center">
 <table border="0" cellpadding="10" cellspacing="1" width="500">
 <tr bgcolor="#cccccc"><td align="center">
 <?php 
-echo '<b>' . $df . '</b><br />';
+echo '<strong>' . $df . '</strong><br />';
 
 // Try to get filesize to display
 $size = @filesize($local_file);

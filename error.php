@@ -104,7 +104,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     
     // Mirror selection page
     if ($dlinfo[2] == "a") {
-        include_once $_SERVER['DOCUMENT_ROOT'] . "/get_download.php";
+        include_once $_SERVER['DOCUMENT_ROOT'] . "/include/get-download.inc";
         exit;
     }
     
@@ -115,7 +115,7 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     else { $mr = "http://{$dlinfo[2]}/"; }
     
     // Start the download process
-    include "do-download.inc";
+    include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
     download_file($mr, $df);
     exit;
 }
