@@ -151,18 +151,12 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<h1>PHP 4.3.3RC4 released</h1>
+<h1>PHP 4.3.3 released!</h1>
 <p>
- <span class="newsdate">[18-Aug-2003]</span>
- <a href="http://qa.php.net/">PHP 4.3.3RC4</a> has been released for testing.
- This is should be the last release candidate prior to the final 4.3.3 release.
- Please test this release as much as possible, so that any remaining issues can
- be uncovered and resolved.
-</p>
-<p>
- List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&amp;r1=1.1247.2.329&amp;r2=1.1247.2.354">NEWS</a>
- file.
+ The PHP developers are proud to announce the immediate availability of
+ <a href="release_4_3_3.php">PHP 4.3.3</a>. This release contains a large number of bug fixes
+ and we <strong>strongly</strong> recommend that all users of PHP upgrade to this version.
+ Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.3">NEWS</a> file.
 </p>
 
 <hr />

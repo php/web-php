@@ -60,6 +60,52 @@ $SIDEBAR_DATA = '
 commonHeader("Downloads");
 ?>
 
+
+<h1>Latest stable version of PHP</h1>
+
+<h2>Complete Source Code</h2>
+<ul>
+ <li>
+  <?php download_link('php-4.3.3.tar.bz2','PHP 4.3.3 (tar.bz2)'); ?> - 25 August 2003<br />
+  <span class="md5sum">md5: 1171d96104e2ff2cff9e19789a4a1536</span>
+ </li>
+ <li>
+  <?php download_link('php-4.3.3.tar.gz', 'PHP 4.3.3 (tar.gz)');  ?> - 25 August 2003<br />
+  <span class="md5sum">md5: fe3fede4115354155fc6185522f7c6b2</span>
+ </li>
+</ul>
+
+<p>
+ See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
+ or the <a href="/release_4_3_3.php">release notes</a> for more information on
+ this particular release. Daily snapshots are also available from
+ <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
+</p>
+
+<h2>Windows Binaries</h2>
+
+<p>
+ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
+</p>
+
+<ul>
+ <li>
+  <?php download_link('php-4.3.3-Win32.zip', 'PHP 4.3.3 zip package'); ?> - 25 August 2003<br />
+  (CGI binary plus server API versions for Apache, Apache2 (experimental),
+  ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
+  included, packaged as zip)<br />
+  <span class="md5sum">md5: c3497c394b3f5829136eb2ff614da241</span>
+ </li>
+ <li>
+  <?php download_link('php-4.3.3-installer.exe', 'PHP 4.3.3 installer'); ?> - 25 August 2003<br />
+  (CGI only, MySQL support built-in, packaged as Windows installer to install
+  and configure PHP, and automatically configure IIS, PWS and Xitami, with
+  manual configuration for other servers. N.B. no external extensions
+  included)<br />
+  <span class="md5sum">md5: 140b98d796e81402776a133f273f0b38</span>
+ </li>
+</ul>
+
 <h1>PHP 5 Beta 1</h1>
 
 <h2>Complete Source Code</h2>
@@ -82,50 +128,6 @@ commonHeader("Downloads");
  </li>
 </ul>
 
-<h1>Latest stable version of PHP</h1>
-
-<h2>Complete Source Code</h2>
-<ul>
- <li>
-  <?php download_link('php-4.3.2.tar.bz2','PHP 4.3.2 (tar.bz2)'); ?> - 29 May 2003<br />
-  <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
- </li>
- <li>
-  <?php download_link('php-4.3.2.tar.gz', 'PHP 4.3.2 (tar.gz)');  ?> - 29 May 2003<br />
-  <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
- </li>
-</ul>
-
-<p>
- See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_2.php">release notes</a> for more information on
- this particular release. Daily snapshots are also available from
- <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
-</p>
-
-<h2>Windows Binaries</h2>
-
-<p>
- All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
-</p>
-
-<ul>
- <li>
-  <?php download_link('php-4.3.2-Win32.zip', 'PHP 4.3.2 zip package'); ?> - 29 May 2003<br />
-  (CGI binary plus server API versions for Apache, Apache2 (experimental),
-  ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
-  included, packaged as zip)<br />
-  <span class="md5sum">md5: e1afea6341d97e8160bd7d93712721ec</span>
- </li>
- <li>
-  <?php download_link('php-4.3.2-installer.exe', 'PHP 4.3.2 installer'); ?> - 29 May 2003<br />
-  (CGI only, MySQL support built-in, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
-  <span class="md5sum">md5: cb55d0d9df6a2bf4ba666c27886d12cb</span>
- </li>
-</ul>
 
 <h2>File Uploads Security Fix</h2>
 <ul>
@@ -193,6 +195,18 @@ commonHeader("Downloads");
 </p>
 
 <ul>
+ <li>PHP 4.3.2
+  <ul>
+   <li>
+    <?php download_link('php-4.3.2.tar.bz2','PHP 4.3.2 (tar.bz2)'); ?> - 29 May 2003<br />
+    <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.2.tar.gz', 'PHP 4.3.2 (tar.gz)');  ?> - 29 May 2003<br />
+    <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
+   </li>
+  </ul>
+ </li>
  <li>PHP 4.3.1
   <ul>
    <li>
@@ -214,18 +228,6 @@ commonHeader("Downloads");
    <li>
     <?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
     <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
-   </li>
-  </ul>
- </li>
- <li>PHP 4.2.3
-  <ul>
-   <li>
-    <?php download_link("php-4.2.3.tar.gz", "Source Code"); ?><br />
-    <span class="md5sum">md5: 2a4a963d79d97ea2725c860c77e908a2</span>
-   </li>
-   <li>
-    <?php download_link("php-4.2.3-Win32.zip", "Windows Binary (zip)"); ?><br />
-    <span class="md5sum">md5: cc65371d6f6252bb7fecc979fd4cf60e</span>
    </li>
   </ul>
  </li>
@@ -296,6 +298,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
     <option value="php-4.3.0.tar.gz">4.3.0</option>
     <option value="php-4.3.1.tar.gz">4.3.1</option>
     <option value="php-4.3.2.tar.gz">4.3.2</option>
+    <option value="php-4.3.3.tar.gz">4.3.3</option>
    </select>
   </form>
  </li>

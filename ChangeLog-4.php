@@ -7,6 +7,160 @@ site_header("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.3.3"></a>
+<h3>Version 4.3.3</h3>
+<b>25-Aug-2003</b>
+<ul>
+<li>Synchronized bundled GD library with GD 2.0.15. (Ilia)</li>
+<li>Upgraded the bundled Expat library to version 1.95.6. (Jani)</li>
+<li>Upgraded the bundled PCRE library to version 4.3. (Andrei)</li>
+<li>Improved the engine to use POSIX/socket IO where feasible. (Sascha)</li>
+<li>Improved the NSAPI SAPI module (Uwe Schindler)
+ <ul>
+	<li>php4_init (magnus.conf): new parameter to set alternate path to php.ini. (php_ini="/path/to/php.ini")</li>
+	<li>php4_execute (obj.conf): support for additional php.ini values. Allows different settings per virtual server. (See sapi/nsapi/nsapi-readme.txt for more information)</li>
+	<li>Added support for virtual().</li>
+	<li>Added nsapi_request_headers() and nsapi_response_headers() with aliases for apache compatibility.</li>
+	<li>Added "nsapi.read_timeout" php.ini option. </li>
+	<li>Synced $_SERVER variables to be similar to Apache variables.</li>
+	<li>Added possibility to use PHP to generate HTTP error pages (404 Not Found..)</li>
+	<li>Added possibility to use PHP to generate directory listings for directories without index.html</li>
+ </ul>
+</li>
+<li>Improved the IMAP extension (Ilia)
+ <ul>
+	<li>Added imap_timeout() function. (bug <a href="http://bugs.php.net/24161">24161</a>)</li>
+	<li>Added optional 'charset' parameter to imap_search() and imap_sort(). (bug <a href="http://bugs.php.net/22505">22505</a>)</li>
+ </ul>
+</li>	
+<li>Improved the InterBase extension (Daniela)
+ <ul>
+	<li>Added transaction constants: IBASE_REC_VERSION, IBASE_REC_NO_VERSION, IBASE_WRITE, IBASE_WAIT and IBASE_CONCURRENCY. (bugs <a href="http://bugs.php.net/8797">8797</a>, <a href="http://bugs.php.net/23887">23887</a>)</li>
+	<li>Made numeric/decimal datatype handling work on any platform.</li>
+ </ul>
+</li>
+<li>Added DBA handler 'inifile' to support ini files. (Marcus)</li>
+<li>Added a "DEBUG" note to 'php -v' output when --enable-debug is used. (Derick)</li>
+<li>Added long options into CLI & CGI (e.g. --version). (Marcus)</li>
+<li>Added a new parameter to preg_match*() that can be used to specify the starting offset in the subject string to match from. (Andrei)</li>
+<li>Fixed possible integer overflows in:
+ <ul>
+	<li>base64_encode(). (Moriyoshi)</li>
+	<li>bundled GD library. (Ilia)</li>
+ </ul>
+</li>
+<li>Fixed "mysql.connect_timeout" php.ini option to be settable with ini_set(). (Rasmus)</li>
+<li>Fixed ext/yaz to not log if "yaz.log_file" php.ini option is not set. (Adam)</li>
+<li>Fixed a bug in bundled libmysql (mysql bug <a href="http://bugs.mysql.com/564">564</a>). (Georg)</li>
+<li>Fixed ext/exif to honor "magic_quotes_runtime" php.ini option. (Marcus)</li>
+<li>Fixed FastCGI IIS document root problem. (Shane)</li>
+<li>Fixed corruption of multibyte character including 0x5c as second byte in multipart/form-data. (Rui)</li>
+<li>Fixed possible crash in imagerotate() when an invalid color index is used for background color. (Pierre-Alain Joye)</li>
+<li>Fixed a bug that under certain circumstances could invalidate safe_mode. (Ilia)</li>
+<li>Fixed certificate version and allowed setting of the serial number in openssl_csr_sign(). (Stefan Roehrich)</li>
+<li>Fixed each() to be binary safe for keys. (Zeev)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25093">25093</a> (Various leaks due to non-freed queries). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25084">25084</a> (Make refer check not dependant on register_globals). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25081">25081</a> (odbc_fetch_array() may mangle numeric fields). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25044">25044</a> (header("Location:") changing HTTP status). (Marcus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25037">25037</a> (Possible infinite loop inside SendText()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/25007">25007</a> (rand() & mt_rand() seed RNG every call). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24989">24989</a> (external libexpat conflicts with bundled libexpat). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24980">24980</a> (array_reduce() uses first element as default running total). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24977">24977</a> (Revert mysql_select_db optimization). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24958">24958</a> (Incorrect handling of 404s). (Ilia, Justin)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24951">24951</a> (ob_flush() needlessly destroys output handler). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24936">24936</a> (ext/fdf not linked properly as shared extension). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24909">24909</a> (Bad random numbers with ZTS builds on Solaris). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24897">24897</a> (inconsistent behavior of shuffle() & array_multisort()). (Ilia, Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24883">24883</a> (variables_order and gpc_order being ignored). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24873">24873</a> (incorrect handling of / inside open_basedir). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24871">24871</a> (methods misidentified as constructors). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24827">24827</a> (ob_gzhandler overrides Vary header). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24792">24792</a> (--enable-zend-multibyte causes random segfaults with ZTS). (fujimoto)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24783">24783</a> (foreach($ar as $key => $val), $key not binary safe). (Zeev)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24760">24760</a> (non-default SNMP port number not working). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24752">24752</a> (Unhandled "uniqueidentifier" field type). (Ilia, s.sonnenberg[at]coolspot.de)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24710">24710</a> (Crash when $obj->{0} is used). (Zeev)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24663">24663</a> (\n. sequences were not being escaped). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24640">24640</a> (var_export() and var_dump() can not output large floats). (Marcus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24629">24629</a> (FreeBSD select() does not like large microseconds values). (Mirco Bauer).</li>
+<li>Fixed bug <a href="http://bugs.php.net/24609">24609</a> (ext/domxml: segfault when using replace node across different docs). (Rob Richards)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24594">24594</a> (Rewrite of the imagefill() function). (Pierre-Alain Joye)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24592">24592</a> (NULL related crash in session extension). (Sascha)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24573">24573</a> (debug_backtrace() crashes if $this set to null). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24560">24560</a> (parse_url() incorrectly handling certain file:// based schemas). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24557">24557</a> (make fclose() respect refcount on the resource). (Wez, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24537">24537</a> (apache2 compile misses some include directories). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24535">24535</a> (ext/mysql: crash when retrieving data from unbuffered result after the original connection has been changed). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24519">24519</a> (aggregate_methods_by_list() does not increment refcount).</li>
+<li>Fixed bug <a href="http://bugs.php.net/24313">24313</a> (file_exists() warning on non-existent files when open_basedir is used). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24312">24312</a> (base64_decode() does not skip 0xF0-0xFF characters). (gereon.steffens[at]onvista.de, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24284">24284</a> (Fixed memory leak inside pg_ping()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24249">24249</a> (fdf_add_doc_javascript() not available on Windows). (Edin)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24224">24224</a> (ibase_blob_get() overflow). (Ard)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24223">24223</a> (missing variable initialization in bundled gd). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24220">24220</a> (range() didn't handle numeric strings correctly). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24210">24210</a> (not detecting assume_default_colors - typo). (Sara)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24198">24198</a> (Invalid recursion detection in array_merge_recurcive()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24177">24177</a> (Status not set correctly after flush() in Apache 2). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24155">24155</a> (gdImageRotate270 incorrectly use x parameter for y axis). (tom@gksystems.com, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24150">24150</a> (crash in imap_fetch_overview() & imap_rfc822_write_address()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24142">24142</a> (workaround for a gcc bug affecting round()). (Marcus, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24063">24063</a> (serialize() missing 0 after the . on scientific notation). (Marcus, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24063">24063</a> (scientific notation broken in *printf()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24060">24060</a> (ncurses_del_panel() causes segfault). (Georg)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24054">24054</a> (Integer overflow failure with GCC/x86 for *=). (Sascha)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24028">24028</a> (Reading raw post message by php://input failed). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24009">24009</a> (FastCGI handling of file not found). (Shane)</li>
+<li>Fixed bug <a href="http://bugs.php.net/24007">24007</a> (Problem with register_globals & arrays). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23951">23951</a> (constants in static initializers clobbered by inheritance). (Wez, Zend Engine)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23936">23936</a> (ext/interbase: fail to select and fetch). (Ard)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23913">23913</a> (make rename() work across partitions on *nix). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23912">23912</a> (Invalid CSS in phpinfo() output). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23902">23902</a> (NULL in CGI header output). (Shane)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23898">23898</a> (Proper handling of NULLs in odbc_result, odbc_fetch_into and odbc_result_all). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23897">23897</a> (Fixed a check for mbfilter_ru.h). (aleks@m2media.ru, Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23894">23894</a> (sprintf() decimal specifiers problem). (Moriyoshi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23888">23888</a> (Missing input validation for flags parameter). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23808">23808</a> (broken imagecopymerge()). (Pierre-Alain Joye)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23798">23798</a> (Spaces were not being stripped from Bcc header). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23792">23792</a> (imagerotate() problems with limited pallet, the function will always return true color image from now on). (Pierre-Alain Joye)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23779">23779</a> (mysql_connect(): disable local infile option if php.ini option "open_basedir" is set). (Georg)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23769">23769</a> (In FreeBSD glob() gives wrong result when pattern not found). (Hartmut)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23733">23733</a> (Coredump on startup with Oracle 9+). (Edin)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23685">23685</a> (fake values returned when OID value is an empty string). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23664">23664</a> (FastCGI socket listening). (Shane)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23509">23509</a> (exit code lost when exit() called from register_shutdown_function()). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23463">23463</a> (added Dbase2 version check). (Vlad Krupin)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23285">23285</a> (Potential Stack overflow in zendlex). (Wez)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23104">23104</a> (hash position of static arrays not being reset). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/23038">23038</a>, <a href="http://bugs.php.net/23574">23574</a> (aggregate() related leaks and crashes). (Andrei)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22947">22947</a> (Ack() inside win32/sendmail.c may stall in certain situations). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22690">22690</a> (ob_start() did not work with create_function() callbacks). (Marcus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22592">22592</a> (Cascading assignments to strings with curly braces broken). (Stas)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22245">22245</a> (References inside $_SESSION not being handled). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22154">22154</a> (Possible crash when memory_limit is reached and output buffering in addition to session.use_trans_sid is used). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/22072">22072</a> (Apache2 sapis do not detect aborted connections). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21958">21958</a> (workaround for unusual realpath() on AIX & Tru64). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21957">21957</a> (serialize() mangles objects with __sleep). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21918">21918</a> (strange behavior of mixed type in array-keys). (Marcus)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21855">21855</a> (Threading issue on HP-UX). (Roshan Naik, Andi, Moriyoshi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21611">21611</a> (version_compare() does not support "p" as suffix). (Stefan Walk)</li>
+<li>Fixed bug <a href="http://bugs.php.net/21074">21074</a> (Apache2: "ErrorDocument xxx /error.php" broken). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/20896">20896</a> (-s -w modes with php-cli cause php to hang). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/19613">19613</a> (putenv("VAR=") does not empty VAR on win32). (Zeev)</li>
+<li>Fixed bug <a href="http://bugs.php.net/18744">18744</a> (blob_add() has max limit of 64k). (Ard)</li>
+<li>Fixed bug <a href="http://bugs.php.net/18291">18291</a> (escapeshellcmd() can now handle quoted arguments). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/17414">17414</a> (pthreads bug workaround). (timo.teras[at]iki.fi)</li>
+<li>Fixed bug <a href="http://bugs.php.net/13142">13142</a> (strtotime not handling "M d H:i:s Y" format). (Ilia)</li>
+<li>Fixed bug <a href="http://bugs.php.net/11924">11924</a> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
+<li>Fixed bug <a href="http://bugs.php.net/7014">7014</a> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
+</ul>
+There is a <a href="release_4_3_3.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.2"></a>
 <h3>Version 4.3.2</h3>
 <b>29-May-2003</b>
