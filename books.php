@@ -233,7 +233,7 @@ by <A HREF="http://zend.com/comm_person.php?id=30">Leon Atkinson</A><BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
-><IMG SRC="/gifs/2-212-09113-3.gif" BORDER=0 ALIGN="left"
+><IMG SRC="/gifs/lacroix.gif" BORDER=0 ALIGN="left"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
