@@ -13,6 +13,91 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("news/phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
+
+<h1>PHPCon East 2003 - (April 23-25, 2003)</h1>
+<p>
+<font class="newsdate">[01-Feb-2003]</font>
+PHPCon announces PHPCon East 2003 in New York City. This conference
+features two days of technical learning with speakers such as
+Rasmus Lerdorf, Zeev Suraski, Michael Radwin, George Schlossnagle and Jeremy Zawodny. PHPCon East also
+adds a third, full day of tutorials offering practical, cogent PHP
+solutions and ideas including: MySQL and PHP; Building and Consuming Web
+Services with SOAP; Getting Started with PHP; High Performance PHP:
+Profiling and Benchmarking; and more!</p>
+
+<p>PHPCon East has discounts for early registration, students, non-profits,
+and Tutorial/Conference packages. Early Bird Deadline is March 31st. For
+more program information, <a href="http://www.php-con.com/return.php?i=ph2">visit
+the PHPCon website</a>.</p>
+
+<?php echo hdelim(); ?>
+
+<h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
+<p>
+<font class="newsdate">[30-January-2003]</font>
+LinuxTag e.V has once again put out a call for papers for this years conference event. Submit your ideas
+and proposals <a href="http://www.linuxtag.org/2003/en/conferences/cfp.html">here</a>. This year's theme 
+looks at discussions that promote new ideas, delivers a broad overview, introduces new users to linux, or 
+discusses the legal, moral and other implications of linux and free software.</p>
+ 
+<?php echo hdelim(); ?>
+
+<?php print_link("http://phpconf.phpquebec.org/index.php", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+
+<h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&amp;21rst, 2003)</h1>
+<p>
+<font class="newsdate">[28-Jan-2003]</font>
+The PHP Qu&eacute;bec association announces the <a
+href="http://phpconf.phpquebec.com/">Conf&eacute;rence PHP Qu&eacute;bec 2003</a>.
+The conference will take place in the &Eacute;cole Polytechnique de Montr&eacute;al, 
+Qu&eacute;bec, Canada.</p>
+
+<p>
+The Conf&eacute;rence PHP Qu&eacute;bec features two days of conferences, with 
+outstanding customer cases from Canada, and cutting edge technical 
+sessions, hosted by international experts. An exhibitor room will
+showroom professional solutions.</p>
+
+<p>Learn more about those exciting days at 
+<a href="http://phpconf.phpquebec.org/index.php">phpconf.phpquebec.com</a>.</p>
+
+<?php echo hdelim(); ?>
+
+<?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
+
+<h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
+<p>
+<font class="newsdate">[13-Jan-2003]</font>
+Software &amp; Support Verlag announced the <a
+href="http://www.phpconference.com/">International PHP Conference 2003 - Spring
+Edition</a> - in Amsterdam. The dates for this event for PHP enthusiasts from
+all over the world will be May 8 and 9, 2003. The conference venue is the RAI
+conference center in Amsterdam.</p>
+
+<p>Like the International PHP Conferences in Frankfurt this conference will
+offer a first class program  to an international audience of PHP enthusiasts.
+We are happy to ask you to submit your <a
+href="http://www.phpconference.com/content/content2.php?CatID=0&amp;NewsID=354">proposals</a>
+for the session program.</p>
+
+<p>The topics are General PHP, PHP &amp; Business, PHP &amp; Databases, PHP
+Design, PHP Extensions, PHP &amp; XML and PHP-GTK.</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PEAR Out of Beta!</h1>
+<p>
+<font class="newsdate">[11-Jan-2003]</font>
+The PEAR development team is proud to announce that
+<a href="http://pear.php.net/">PEAR</a> is finally out of its long
+beta period. As of PHP 4.3, the PEAR installer is installed by default.
+Unix support is considered stable, while Windows and Darwin are still
+of beta-quality.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Look Back 2002</h1>
 <p>
 <font class="newsdate">[31-Dec-2002]</font>
