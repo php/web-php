@@ -126,6 +126,7 @@ $LANGUAGES = array(
     'pt_BR' => 'Brazilian Portuguese',
     'bg' => 'Bulgarian',
     'ca' => 'Catalan',
+    'cn' => 'Chinese',
     'zh_cn' => 'Chinese',
     'cs' => 'Czech',
     'da' => 'Danish',
