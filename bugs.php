@@ -111,7 +111,7 @@ function show_menu($state)
 					"assign" => "Assigned To");
 	
 	reset($fields);
-	echo "</td><td align=right>Last Comment By:</td><td> <select name='by'>\n";
+	echo "</td><td align=right>Last Comment By:</td><td> <select name=\"by\">\n";
 	list_ids($by);
 	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Where the bug description contains:</td>\n";
@@ -333,6 +333,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Mod";
+//	$fields[] = "TO_DAYS(NOW()-ts2) as unchanged_days";
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
@@ -349,7 +350,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
 	} elseif ($status == "OldFeedback") {
-		$where_clause = "status='Feedback' and TO_DAYS(NOW()-ts2)>60";
+		$where_clause = "status='Feedback' and TO_DAYS(NOW())-TO_DAYS(ts2)>60";
 	} elseif($status!="All" && $bug_type=="Any") {
 		/* Treat assigned and analyzed bugs as open */
 		if($status=="Open") {
@@ -372,7 +373,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$where_clause .= " and";
 	}
 	$where_clause .= " php_version like '4%'";
-	if($by!='Any') $where_clause .= " and dev_id = '$by' ";
+	if($by and $by!='Any') $where_clause .= " and dev_id = '$by' ";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
