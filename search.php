@@ -65,7 +65,7 @@ function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	}
 	if ($page<$pages) {
 		$i=$page+1;
-		$next=make_link($baseurl.'&page='.$i, make_image('caret-r.gif', 'next').'next page');
+		$next=make_link($baseurl.'&page='.$i, 'next page'.make_image('caret-r.gif', 'next') );
 	}
 
 	$middle="<B>Displaying results $firstdisplayed to $lastdisplayed</B>";
