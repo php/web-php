@@ -172,7 +172,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 </TD></TR>
 <TR BGCOLOR="#F0F0F0"><TD>
 <?echo clean_note($blurb);?><BR>
-<?if (isset($MAGIC_COOKIE)):?>
+<?if (isset($MAGIC_COOKIE) && $id):?>
 <hr noshade size=1>
 <A href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1&popup=1" target="admin">delete</A> | 
 <A href="/manual/admin-notes.php?action=reject+<?echo $id?>&brief=1&popup=1" target="admin">reject</A> | 
