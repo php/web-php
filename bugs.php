@@ -585,7 +585,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			/* mail bug originator */
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user <$user@php.net>");
 		}
 	}
 
@@ -624,7 +624,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user <$user@php.net>");
 			mysql_freeresult($result);
 		}
 	}
