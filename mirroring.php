@@ -44,7 +44,7 @@ $minute = rand(0, 59);
 <p>
  If you are not an official mirror (eg. mirror the site for your company's
  internal use), you should not rsync from <tt>rsync.php.net</tt> more frequently
- than every three hours, or you may find your IP blocked. Also, please make
+ than once a day, or you may find your IP blocked. Also, please make
  an effort to only mirror those parts of the site that you actually need.
  (For example, <a href="#exclude">exclude the manual in all languages that you
  will not be using and exclude the distributions directory</a>.)
