@@ -7,12 +7,22 @@ directions in there if you want to run the search engine on your
 mirror (or emulate it on your own website).
 */
 
+// For safety reasons, we disallow the
+// setting of this variable from outside
+unset($htsearch_prog);
+
 // Constant to specify when there is no base
 define(NO_BASE, "-");
 
 // Load in mirror specific configuration data (htdig path)
 if (file_exists("configuration.inc")) {
     include_once 'configuration.inc';
+}
+
+// Override configuration.inc setting with per vhost setting
+// [this will be used in the future instead of configuration.inc]
+if (isset($_SERVER['HTSEARCH_PROG'])) {
+    $htsearch_prog = $_SERVER['HTSEARCH_PROG'];
 }
 
 /* Form parameters expected:
@@ -71,7 +81,7 @@ if (isset($pattern)) {
 
     // If some local search is needed and we have no support for
     // it, send the user to the central search page on php.net
-    if (!have_search() && !isset($local_search_override)) {
+    if (!have_search()) {
         $location = "http://www.php.net/search.php";
         $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
         header("Location: $location?$query");
