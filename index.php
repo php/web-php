@@ -208,6 +208,8 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
+<?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
+
 <h1>Call for Papers: PHP Conference 2004 - Spring Edition</h1>
 <p>
  <span class="newsdate">[10-Dec-2003]</span>
