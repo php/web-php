@@ -31,8 +31,11 @@ if (!strstr($page_name,"include/shared.inc")) {
 ?>
 <hr noshade>
 And if you're interested in what's behind the <B>commonHeader()</B> and <B>commonFooter</B> functions, 
-you can always take a look at the <A HREF="/source.php3?page_url=/include/shared.inc">source 
-of the shared.inc</A> file.
+you can always take a look at the 
+<? if(strstr($MYSITE,"www.php.net")): ?><A HREF="http://ca.php.net/source.php3?page_url=/include/shared.inc">
+<? else: ?><A HREF="/source.php3?page_url=/include/shared.inc">
+<? endif; ?>
+source of the shared.inc</A> file.
 <P>
 <?
 }
