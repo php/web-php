@@ -57,7 +57,7 @@ function endEntry() {
 
 <? makeEntry( "Trio informale", "by Dirk Reichelt", 
 	"http://www.zdnet.de/internet/artikel/java/199912/phpdatenbank01_00-wc.html", "November 29, 1999");?>
-(In German.) &quot;Redaktionssystem für die Website mit PHP
+(In German.) &quot;Redaktionssystem für die Website mit PHP&quot;
 <? endEntry(); ?>
 
 <? makeEntry( "Interview with the PHP Team", "by <a href=\"mailto:lpdevel@linuxpower.org\">Linuxpower Team</a>", 
@@ -69,7 +69,7 @@ An interview with the core PHP development team: Andi, Andrei, Jim, Rasmus, Sasc
 	"http://www.internetworld.de/iw/magazin_11phpeinfuehrung.htm", "October 20, 1999");?>
 (In German.) &quot;Over ten percent of all web servers have the scripting
 language PHP installed. Internet World shows you how to create dynamic
-web pages with PHP.&quot; Introduction to PHP in four parts.
+web pages with PHP.&quot; Introduction to PHP in four parts.&quot;
 <? endEntry(); ?>
 
 <? makeEntry( "PHP: One Size Fits All", "by Niels Pollem","http://www.heise.de/ix/artikel/1999/07/076/", "July 19, 1999");?>
