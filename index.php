@@ -149,7 +149,7 @@ commonHeader("Hypertext Preprocessor");
 
 <p>
  <span class="newsdate">[31-Dec-2004]</span>
- The PHP Development Team has issued an <a href="security_note.php">important
+ The PHP Development Team has issued an <a href="/security-note.php">important
  statement</a> that deals with the security of PHP, and of PHP-based applications.
  The trigger for releasing this statement was the growing misconception in the PHP
  community regarding recent security problems, which exploited bugs
