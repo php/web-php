@@ -9,7 +9,7 @@
    $line = fgets($fp,120);
    while(!feof($fp)) {
 		$line=stripslashes($line);
-		$line=ereg_replace("\<\?","&lt;?",$line);
+		$line=ereg_replace("<\\?","&lt;?",$line);
 		$line=ereg_replace("PHP","<i>PHP</i>",$line);
 		$line=ereg_replace("FI","<i>FI</i>",$line);
 		if($line[0]=="[") {
