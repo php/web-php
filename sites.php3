@@ -433,6 +433,7 @@ right away.</blockquote>
 	site("GoASU.com","www.goasu.com");
 	site("Indianapolis 500 Web Site","www.indy500.com");
 	site("Jason Kidd's Site","www.jasonkidd.net");
+	site("New York Yankees","www.yankees.com");
 	site("Oakland Raiders","www.raiders.com");
 	site("Professional Disc Golf Association","www.pdga.com");
 	site("San Francisco Giants Baseball Club","www.sfgiants.com");
