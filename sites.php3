@@ -180,6 +180,7 @@ right away.</blockquote>
 /* Not-for-Profit */
 	title("Not-for-Profit");
 	siteStart();
+	site("Association of Internet Professionals","www.association.org");
 	site("European Rotaract Information Center","www.rotaract.de/eric/");
 	site("The Jazz Journalists Association","www.jazzhouse.org");
 	site("National Marrow Donor Program","www.marrow.org");
