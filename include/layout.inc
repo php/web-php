@@ -125,7 +125,7 @@ function site_header($title = '', $config = array())
 <body onload="{$config['onload']}">
 
 <div id="headnav">
- <a href="/"><img src="/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42"
+ <a href="/"><img src="/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42"
  alt="PHP" width="120" height="67" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
@@ -455,7 +455,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="126"><a href="/">
-<img src="/?=PHPE9568F36-D428-11d2-A769-00AA001ACF42"
+<img src="/?=PHPE9568F34-D428-11d2-A769-00AA001ACF42"
  alt="PHP" width="120" height="67" /></a></td>
   <td>&nbsp;</td>
  </tr>
