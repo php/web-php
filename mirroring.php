@@ -68,8 +68,16 @@ commonHeader("Mirroring The PHP Website");
 </p>
 
 <p>
- If <tt>/your/local/path</tt> isn't in your web document tree (why isn't it?), 
- then symlink the <tt>phpweb/</tt> directory to the correct place on your server.
+ If <tt>/your/local/path</tt> isn't in your web document tree (why isn't it?),
+ then symlink the <tt>phpweb/</tt> directory to the correct place on your
+ server.
+</p>
+
+<p>
+ PHP mirror sites should provide the exact content coming from rsync.php.net,
+ and should not be altered in any way not described in the mirroring
+ guidelines. Failing to do so can result in immediate removal of your mirror
+ from our list.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>
