@@ -121,6 +121,7 @@
 	echo "<br></td><td valign=top>\n";
 	/* Misc. */
 	site("Internet Weather Report","www.internetweather.com");
+	site("Metaindex of Law and Government","www.catalaw.com");
 
 	echo "</td></tr></table></center>\n";
 ?>
