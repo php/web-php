@@ -306,12 +306,6 @@ presentations online. Check out:</p>
   <li>Nathan Wallace with <a href="http://www.e-gineer.com/articles/php-hackers-paradise-revisited.phtml">PHP: Hackers Paradise Revisited</a></li>
 </ul>
 
-<p>If you missed out on ApacheCon 2001 in Santa Clara, keep
-your ear to the ground for more info on ApacheCon 2001 Europe in
-Dublin, Ireland in October 2001!
-<br clear="all">
-</p>
-
 <?php echo hdelim(); ?>
 
 <h1>Improve Your PHP Skills</h1> 
