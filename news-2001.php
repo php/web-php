@@ -220,7 +220,7 @@ site_header("News Archive - 2001");
  Also coming between July 5th-8th - <a
  href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
  in Stuttgart, Germany, with
- <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
+ <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&amp;lang=en">strong PHP presence</a>.
 </p>
 
 <hr />
@@ -234,7 +234,7 @@ site_header("News Archive - 2001");
  <a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a>
  and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a>
  designed to explore and strengthen PHP in the open source space. Take
- a look under the hood at everything PHP &dash; from understanding PHP
+ a look under the hood at everything PHP &mdash; from understanding PHP
  on wireless devices to participating in a discussion on the future of
  PHP featuring some of the core developers and luminaries from the PHP
  community. The conference runs July 23-27, 2001, at the Sheraton San

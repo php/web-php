@@ -110,7 +110,7 @@ site_header("News Archive - 1999");
 
 <hr />
 
-<h1>Zend has been announced</h3>
+<h1>Zend has been announced</h1>
 <p>
  <span class="newsdate">[04-Jan-1999]</span>
  <strong>Zend</strong>, a new optimized engine for PHP has been

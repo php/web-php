@@ -128,7 +128,7 @@ site_header("News Archive - 2000");
  availability of the Zend Optimizer for PHP 4.0 Beta 4. The optimizer is
  available for <a href="http://www.zend.com/store/products/zend-optimizer.php">free
  download</a>
-</a>
+</p>
 
 <hr />
 
