@@ -80,6 +80,9 @@ href="http://www.tryc.on.ca/php3.html">http://www.tryc.on.ca/php3.html</A>.
 <P>You can download PHP3 from any of the members of the
 PHP3 network of sites. These can be found at <A
 href="http://www.php.net/">http://www.php.net/</A>.
+You can also use anonymous CVS to get the absolute latest
+version of the source. For more information, go to <A
+href="http://www.lerdorf.on.ca/php3.cgi">http://www.lerdorf.on.ca/php3.cgi</A>.
 
 <H3>Why do I have to register to download PHP3?</H3>
 
@@ -142,6 +145,23 @@ README.WIN32 file.
 <H3>Common Problems</H3>
 
 <DL>
+  <DT><B>
+    I got the latest version of PHP3 using the anonymous CVS service,
+    but there's no configure script!
+  </B></DT>
+  <DD>
+    You have to have the GNU autoconf package installed so you can
+    generate the configure script from configure.in. Just run
+    <CODE>autoconf</CODE> in the top-level directory after getting
+    the sources from the CVS server. (Also, unless you run configure
+    with the <CODE>--enable-maintainer-mode</CODE> option, the
+    configure script will not automatically get rebuilt when the
+    configure.in file is updated, so you should make sure to do that
+    manually when you notice configure.in has changed. One symptom
+    of this is finding things like @VARIABLE@ in your Makefile after
+    configure or config.status is run.
+  <P>
+  </DD>
   <DT><B>
     I'm having problems configuring PHP3 to work with Apache. It says
     it can't find httpd.h, but it's right where I said it is!
