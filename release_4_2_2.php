@@ -87,6 +87,8 @@ PHP Security Advisory: Vulnerability in PHP versions 4.2.0 and 4.2.1
 <h2>Credits</h2>
 
 <p>The PHP Group would like to thank Stefan Esser of e-matters GmbH for
-   discovering this vulnerability.</p>
+   discovering this vulnerability. e-matters GmbH has also released an
+   <a href="http://security.e-matters.de/advisories/022002.html">independent advisory</a>,
+   describing the vulnerability in more detail.</p>
    
 <?php commonFooter(); ?>
