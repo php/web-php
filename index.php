@@ -169,7 +169,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <p>
- Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a>
+ Lots of <a href="http://www.zend.com/php5/contest/prizes.php">prizes</a>
  are available!
 </p>
 
