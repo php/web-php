@@ -78,7 +78,7 @@ if ($cmn > 0) {
 	$mirror = $cm[0];
 } else {
     echo "You can change mirrors at the bottom of the page.";
-	srand();
+        srand ((double)microtime()*1000000);
 	
 	if ($server == "www.php.net") {
 		$default_mirrors = array("http://us2.php.net/", "http://ca.php.net", "http://us3.php.net");
