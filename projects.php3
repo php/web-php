@@ -269,10 +269,6 @@ computer at a time)
    </ul>
 <? endEntry();?>
 
-<? makeEntry("Bare Bones Bulletin Board (BBBB)","amber.he.net/~dsoft/bbbb/","Michael Kablitz" ,"mkab@fontane.net.eu.org"); ?>
-Another message forum implementation.  Multiple threading levels, no cookies, users may delete own postings, etc.
-<? endEntry();?>
-
 <?/* site disappeared -- June 12 1999
 <? makeEntry("PHPGen","www.byggsoft.se/~mikaelu/","Mikael Ulfenborg" ,"mikael.ulfenborg@byggsoft.se"); ?>
 PHPGen is small PHP-script used to make a framework for a new PHP-application. 
