@@ -321,7 +321,7 @@ function commonHeader($title) {
 ?>
 <HTML>
 <HEAD>
-<TITLE>PHP3: <? echo $title;?></TITLE>
+<TITLE>PHP: <? echo $title;?></TITLE>
 
 <? if ($HAVE_STYLE): ?>
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
