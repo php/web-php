@@ -33,7 +33,7 @@ commonHeader("Mirror Sites");
 </p>
 
 <p align="center">
-<table border="0" cellpadding="3" cellspacing="1" width="500">
+<table border="0" cellpadding="3" cellspacing="1" width="560">
 <?php
 
 // Previous mirror country code
