@@ -98,7 +98,7 @@
 
 	echo "<br></td><td valign=top>\n";
 	/* Government */
-	site("National Institute of Ecology in Mexico","http://www.ine.gob.mx");
+	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 
 	echo "<br></td><td valign=top>\n";
 	/* Educational */
@@ -106,7 +106,7 @@
 	site("The Chemistry Place","www.chemplace.com");
 	site("The Psychology Place","www.psychplace.com");
 	site("NativeWeb","www.nativeweb.org");
-	site("The Internet Pilot to Physics","http://www.tp.umu.se/TIPTOP/");
+	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 
 	echo "</tr><tr>\n";
 	title("Service Industry");
