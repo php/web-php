@@ -4,7 +4,7 @@ require("shared.inc");
 $current = "3.0.1";
 $win32_current = "3.0";
 
-$filesizes["php-3.0.tar.gz"]="~ 1011KB";
+$filesizes["php-3.0.1.tar.gz"]="~ 1011KB";
 $filesizes["php-3.0-win32.exe"]="~ 1148KB";
 
 function makeCap() {
