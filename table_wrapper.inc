@@ -21,9 +21,9 @@
     global $PHP_SELF;
     $url = "http://$SERVER_NAME$PHP_SELF?foo=bar";
     
-	for (reset(&$fields),$field_list=current(&$fields); next(&$fields); $field_list+=",".current(&$fields));
+	for (reset(&$fields),$field_list=current(&$fields); next(&$fields); $field_list.=",".current(&$fields));
 
-    for (reset(&$tables),$table_list=current(&$tables); next(&$tables); $table_list+=",".current(&$tables));
+    for (reset(&$tables),$table_list=current(&$tables); next(&$tables); $table_list.=",".current(&$tables));
 
     # Generate query...
     
@@ -32,22 +32,22 @@
     
     global $where_clause;
     if (@$where_clause) {
-      $query += " where $where_clause";
-      $url += "&where_clause=$where_clause";
+      $query .= " where $where_clause";
+      $url .= "&where_clause=$where_clause";
     }
     
     global $group_by_clause;
     if (isset($group_by_clause)) {
-      $query += " group by $group_by_clause";
-      $url += "&group_by_clause=$group_by_clause";
+      $query .= " group by $group_by_clause";
+      $url .= "&group_by_clause=$group_by_clause";
     }
     
     global $order_by_clause;
     global $last_order_by;
     if (isset($order_by_clause)) {
-      $query += " order by $order_by_clause";
+      $query .= " order by $order_by_clause";
       if (isset($last_order_by) && $last_order_by==$order_by_clause) {
-        $query += " desc";
+        $query .= " desc";
       } else {
         $last_order_by="last_order_by=$order_by_clause";
       }
@@ -55,8 +55,8 @@
     
     global $having_clause;
     if (isset($having_clause)) {
-      $query += " having $having_clause";
-      $url += "&having_clause=$having_clause";
+      $query .= " having $having_clause";
+      $url .= "&having_clause=$having_clause";
     }
 
 	if (!isset($total_num_rows)) {
@@ -64,7 +64,7 @@
 		$total_num_rows = mysql_num_rows($result);
 		mysql_free_result($result);
 	}
-	$url += "&total_num_rows=$total_num_rows";
+	$url .= "&total_num_rows=$total_num_rows";
 	
     if (isset($GLOBALS["limit_start"])) {
       $limit_start = $GLOBALS["limit_start"];
@@ -74,9 +74,9 @@
         $limit_length="";
       }
       if ($limit_start!=-1) {
-        $query += " limit $limit_start";
+        $query .= " limit $limit_start";
         if ($limit_length) {
-          $query += ",$limit_length";
+          $query .= ",$limit_length";
         }
       }
     } else {
