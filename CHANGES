@@ -267,6 +267,8 @@ Here's a pretty useless function which makes a good example:
 		return $str1+$str2;
 	}
 
+* Old-style function declerations should be changed from function to old_function
+
 [6] OOP support
 
 Classes and inheritence are supported to a limited extent in PHP 3.0.
