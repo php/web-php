@@ -2,11 +2,12 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'copyright.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Copyright and License");
+site_header("License, Copyright and Contact");
 ?>
 
-<h1>Copyright and License</h1>
+<h1>License, Copyright and Contact</h1>
 
+<a name="license"></a>
 <h2>PHP License</h2>
 
 <p>
@@ -14,6 +15,7 @@ site_header("Copyright and License");
  <a href="/license/">see our licensing information page</a>.
 </p>
 
+<a name="copyright"></a>
 <h2>Website Copyright</h2>
 
 <p>
@@ -54,6 +56,12 @@ site_header("Copyright and License");
  <a href="http://bugs.php.net/">the bug system</a>. Categorize the bug
  as "PHP.net Website Problem". This allows us to follow the progress of
  the problem until it is fixed.
+</p>
+<p>
+ If you have problems setting up PHP or using some functionality,
+ or especially a program written in PHP, please ask your question on a
+ <a href="/support.php">support channel</a>, since the webmasters will
+ not answer any such questions.
 </p>
 <p>
  If you would like to contact the webmasters for some other reason, please
