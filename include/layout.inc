@@ -272,7 +272,6 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
    <table cellpadding="10" cellspacing="0" width="620">
     <tr>
      <td valign="top">
-     <?php spacer(620); ?>
 <?php
   endif;
 }
@@ -285,7 +284,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 function commonFooter() {
 	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
 	if ($enclosed) {
-		echo "</td></tr></table></td>";
+		spacer(620);
+  echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
   			<td bgcolor="#cccccc" background="/gifs/checkerboard.gif"><?php spacer(1,1);?><br></td>
   			<td width=175 bgcolor="#f0f0f0">
