@@ -135,6 +135,17 @@ New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/cmvsstuff"
+><IMG SRC="/jpgs/bible.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076454716X/cmvsstuff">PHP 4 Bible</A><BR>
+by Tim Converse and Joyce Park<BR><SMALL>
+IDG Books Worldwide, August 2000, ISBN 0-7645-4716-X<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672317842/cmvsstuff"
 ><IMG SRC="/jpgs/gilmore.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
