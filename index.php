@@ -150,6 +150,27 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php //news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference"); ?>
+<h1>International PHP Conference 2004</h1>
+<p>
+ <span class="newsdate">[18-Jun-2004]</span>
+ The traditional International PHP Conference 2004 will be taking
+ place from 7th November to 10th November in Frankfurt (FFM). The
+ Call for Papers has been issued, so if you have an interesting
+ talk, the organizers would love to hear about it! You can expect
+ a gathering of PHP experts and core developers.
+</p>
+<p>
+ You can find the CfP <a href="http://www.phpconference.de/2004/cfp_en.php">on
+ the website</a>. The deadline is 16th July, 2004.
+</p>
+<p>
+ The conference is also featuring an <strong>OpenSource Exhibition</strong>
+ where PHP related OpenSource projects can present themselves for free.
+</p>
+
+<hr />
+
 <?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
 <h1>php|works - early-bird discount now in effect</h1>
 <p>
