@@ -118,7 +118,7 @@ chapters are available. Other formats hold the complete manual.
        
        // Quite bad looking code tweak to add a link to the extended CHM (en only!)
        if ($langcode == "en" && $fn == "manual-LANG.chm") {
-           echo '<br><a href="http://weblabor.hu/php-doc-chm">extended version</a>';
+           echo ', <a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
        }
 
        echo "</td>\n";
