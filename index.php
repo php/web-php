@@ -162,7 +162,8 @@ commonHeader("Hypertext Preprocessor");
  with the up and down cursor keys. We welcome feedback on this feature at
  <a href="/copyright.php#contact">the webmasters email address</a>, but
  please submit any bugs you find <a href="http://bugs.php.net/">in the
- bug system</a>.
+ bug system</a> classifying them as a "PHP.net website problem" and providing 
+ as much information as possible (OS, Browser version, Javascript errors, etc..).
 </p>
 
 <hr />
