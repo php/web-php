@@ -240,10 +240,10 @@ function commonHeader($title="",$dont_enclose=0) {
     $enclosed = 1;
 ?>
 
-<table width="150" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
+<table width="150" height="100%" align="left" cellpadding="0" cellspacing="0">
  <tr valign="top">
 <?php if (isset($SIDEBAR_DATA)):?>
-  <td>
+  <td bgcolor="#f0f0f0">
    <table width="149" align="left" cellpadding="4" cellspacing="0">
     <tr valign="top">
      <td><?php echo $SIDEBAR_DATA?></td>
