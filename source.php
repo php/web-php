@@ -35,7 +35,8 @@ echo "<h1>Source of: ", htmlentities($url), "</h1>", hdelim();
 $legal_dirs = array(
   "/manual"  => 1,
   "/include" => 1,
-  "/stats"   => 1
+  "/stats"   => 1,
+  "/error"   => 1
 );
 
 $dir = dirname($url);
