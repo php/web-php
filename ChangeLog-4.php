@@ -5,7 +5,7 @@ commonHeader("PHP 4 ChangeLog");
 
 <A NAME="4.0.4">
 <h3>Version 4.0.4</h3>
-<B>19-Nov-2000</B>
+<B>19-Dec-2000</B>
 <UL>
 <LI>Allow assigning a newly created object by reference. This is needed only if 
   your constructor makes other data structures reference the $this object (for 
