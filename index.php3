@@ -3,14 +3,21 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<h3>PHP 3.0.4 build problem</h3>
+<h3>PHP 3.0.4 build problems</h3>
+<i>BSD/OS and AIX users:</i>
 There is a small error in the 3.0.4 configure script which affects some
 versions of BSD/OS and AIX.  If you get an error about <i>u_int</i> being 
 redefined when you build PHP replace your php-3.0.4/configure script with 
-<a href="http://ca.php.net/configure.gz">this file</a> and re-run configure.
+<a href="http://ca.php.net/configure.gz">this file</a> and re-run configure.<br>
+<i>IRIX, Solaris and perhaps other users:</i>
+If you're experiencing trouble compiling functions/basic_functions.c, please
+get an updated file <a href="http://il.php.net/basic_functions.c.gz">here</a>,
+and replace the one in your distribution with it.  The file included in
+the distribution contained a couple of non ANSI-C conforming statements, that
+confuse some compilers.  If you didn't have any problem compiling PHP 3.0.4,
+there's no need to download this update!
 
 <h3>PHP 3.0.4 has been released</h3>
-
 Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
 what is new in this release. All users of earlier versions are encouraged 
 to upgrade to this version.  
