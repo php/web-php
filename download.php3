@@ -16,7 +16,7 @@
 	</tr>
 	<tr>
 	<td>
-		Download <a href="http://php.netvision.net.il/php-3.021.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in Netvision, Israel
+		Download <a href="http://php.netvision.net.il/php-3.0a3.tar.gz">PHP 3.0a3</a> (source) from the PHP main site in Netvision, Israel
 	</td>
 	<td align="center">
 		<a href="http://php.netvision.net.il/php-3.0a3.tar.gz"><img src="gifs/israel.gif" border="0"></a>
