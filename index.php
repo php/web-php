@@ -46,6 +46,43 @@ make_link("/license/", "official license") . '.
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
 ';
 
+$tmp = '/tmp'; /* hopefully writeable on all mirrors */
+
+if($t=@filemtime("$tmp/php_cal_events.csv")) {
+	if(time()-$t > 21600) $t=false;
+}
+if(!$t) {
+	$url = 'http://www.php.net/cal.php?format=csv&nm=2';
+	$fpo = @fopen("$tmp/php_cal_events.tmp",'w');
+	if($fpo) {
+		$fpi = @fopen($url,'r');
+		if($fpi) {
+			while(!feof($fpi)) {
+				$line = fgets($fpi,1024);
+				fputs($fpo,$line);
+			}
+			fclose($fpi);
+			fclose($fpo);
+			@rename("$tmp/php_cal_events.tmp","$tmp/php_cal_events.csv");
+		}
+	}
+}
+$fp = @fopen("$tmp/php_cal_events.csv",'r');
+if($fp) {
+	$cm=0;
+	while(!feof($fp)) {
+		list($d,$m,$y,$url,$desc) = fgetcsv($fp,1024);
+		if($cm!=(int)$m) { 
+			if($cm) $RSIDEBAR_DATA.="<hr><br>\n"; 
+			else $RSIDEBAR_DATA.='<tt>UPCOMING EVENTS</tt><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/cal.php?a=1">[add event]</a><br>';
+			$cm = (int)$m;  
+			$RSIDEBAR_DATA .= "<h3><u>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</u></h3>\n"; 
+		}
+		$RSIDEBAR_DATA .= "$d. <a href=\"$url\">$desc</a><br>\n";
+	}
+	fclose($fp);
+}
+
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>

@@ -1,25 +1,30 @@
 <?php
-  require_once 'prepend.inc';
+  include_once 'prepend.inc';
 
   if (!is_primary_site()) {
   	header("Location: http://www.php.net/cal.php");
   	exit;
   }
+  if(!isset($format)) {
+    $format = 'html';
+  }
 
-  commonHeader("Event Calendar",1);
+  if($format=='html') {
+	commonHeader("Event Calendar",1);
 
-	require_once 'cvs-auth.inc';
+	include_once 'cvs-auth.inc';
 	if (isset($save) && isset($pw)) { # non-developers don't have $user set
 		setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*20,'/');
 	}
 	if (isset($MAGIC_COOKIE) && !isset($user) && !isset($pw)) {
 		list($user,$pw) = explode(":", base64_decode($MAGIC_COOKIE));
 	}
+  }
 
-	mysql_connect('localhost') or die('unable to connect to database');
-	mysql_select_db('php3');
+  mysql_connect('localhost') or die('unable to connect to database');
+  mysql_select_db('php3');
 
-	$re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
+  $re = array(1=>'First',2=>'Second',3=>'Third',4=>'Fourth',-1=>'Last',-2=>'2nd Last',-3=>'3rd Last');
 /*
 CREATE TABLE phpcal (
   id int(8) NOT NULL,
@@ -432,11 +437,36 @@ foreach($re as $k=>$v) {
   	else $a=0;
   }
 
-  echo "<h1>Event Calendar</h1>";
-  if (!isset($cm)) $cm = strftime('%m');
-  if (!isset($cy)) $cy = strftime('%Y');
-  draw_cal($cy,$cm);
+  if (!isset($cm)) $cm = (int)strftime('%m');
+  if (!isset($cy)) $cy = (int)strftime('%Y');
+  if (!isset($cd)) $cd = (int)strftime('%d');
+  if (!isset($nm)) $nm = 1;
 
-  echo "<br>";
-  commonFooter();
+  switch($format) {
+	case 'html':
+		echo "<h1>Event Calendar</h1>";
+		draw_cal($cy,$cm);
+		echo "<br>";
+		commonFooter();
+		break;
+
+	case 'csv':
+		while($nm) {
+			$entries = load_month($cy,$cm);
+			$last = last_day($cy,$cm);
+			for($i=$cd; $i<=$last; $i++) {
+				if(is_array($entries[$i])) foreach($entries[$i] as $row) {
+					if($data) $data.="\n";
+					$data .= "$i,$cm,$cy,\"http://php.net/cal.php?cm=$cm&cy=$cy&ev=".$row['id']."\",\"".addslashes($row['sdesc']).'"';
+				}
+			}	
+			$nm--;
+			if($nm) {
+				$cm++;
+				if($cm==13) { $cy++; $cm=1; }
+			}
+		}
+		echo $data;
+		break;
+  }	
 ?>
