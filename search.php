@@ -63,7 +63,7 @@ if (file_exists("configuration.inc")) {
   include_once 'configuration.inc';
 }
 
-function makeBar($no,$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
+function makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
 	$last = $next = '&nbsp;';
 	if ($page>1) {
 		$i=$page-1;
@@ -203,7 +203,7 @@ Restrict the search to: <BR>
 		echo "$matches documents match your search for '<B>$pattern</B>' in the $where:<BR><BR>\n";
 		echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
 
-		makeBar("",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
+		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		$i=7; #skip response header
 		while($i<$rc) {
@@ -221,7 +221,7 @@ Restrict the search to: <BR>
 		echo "<BR>\n";
 
 
-		makeBar("2",$page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
+		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
 
 		echo "<p>Search powered by<BR>\n";
 		print_link("http://htdig.sdsu.edu/", make_image("htdig.gif", "ht:dig") );
