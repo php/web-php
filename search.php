@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+include_once 'prepend.inc';
 
 /*
 You need to grab http://www.php.net/Mirrors-htdig.tgz and follow the
@@ -7,214 +7,314 @@ directions in there if you want to run the search engine on your
 mirror (or emulate it on your own website).
 */
 
+// Constant to specify when there is no base
+define(NO_BASE, "-");
+
+// Load in mirror specific configuration data (htdig path)
 if (file_exists("configuration.inc")) {
-  include_once 'configuration.inc';
+    include_once 'configuration.inc';
 }
 
-/* we don't want magic slashes in pattern or base */
-if (isset($pattern) && get_magic_quotes_gpc())
-        $pattern = stripslashes($pattern);
-if (isset($base) && get_magic_quotes_gpc())
-        $base = stripslashes($base);
-if (isset($lang) && get_magic_quotes_gpc())
-       $lang = stripslashes($lang);
+/* Form parameters expected:
+     pattern - search keywords
+     lang    - language to limit search to [this is not used currently!!!]
+     show    - target of search action
+     base    - base URL to point result links to
+*/
 
-if ($pattern) {
-	if ($show=="quickref") {
-		header("Location: manual-lookup.php?pattern=".urlencode($pattern)."&lang=".urlencode($lang));
-		exit;
-	}
-	$location = "http://marc.theaimsgroup.com/";
-	if ($show=="maillist") {
-		$query = "l=php3-general&r=1&w=2&q=b&s=".urlencode($pattern);
-		header("Location: ".$location."?".$query);
-		exit;
-	} else if ($show=="devlist") {
-		$query = "l=php-dev&r=1&w=2&q=b&s=".urlencode($pattern);
-		header("Location: ".$location."?".$query);
-		exit;
-	} else if ($show=="phpdoc") {
-		$query = "l=phpdoc&r=1&w=2&q=b&s=".urlencode($pattern);
-		header("Location: ".$location."?".$query);
-		exit;
-	} else if ($show=="phplib") {
-		$query = "l=phplib&w=2&r=1&q=b&s=".urlencode($pattern);
-		header("Location: ".$location."?".$query);
-		exit;
-	} else if ($show=="phplib-dev") {
-		$query = "l=phplib-dev&w=2&r=1&q=b&s=".urlencode($pattern);
-		header("Location: ".$location."?".$query);
-		exit;
-	} else if ($show=="php-kb") {
-		$location = "http://www.faqts.com/knowledge-base/search/index.phtml";
-		$query = "fid=51&search=".urlencode($pattern);
-		header("Location: $location?$query");
-		exit;
-	} else if ($show=="bugdb") {
-		$location = "http://bugs.php.net/search.php";
-		$query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=".urlencode($pattern);
-		header("Location: $location?$query");
-		exit;
-	}
-
-	if (!have_search() && !isset($local_search_override)) {
-		$location="http://www.php.net/search.php";
-		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
-		header("Location: ".$location."?".$query);
-		exit;
-	}
-}		
-
-function makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed) {
-	$last = $next = '&nbsp;';
-	if ($page>1) {
-		$i=$page-1;
-		$last=make_link($baseurl.'&page='.$i, make_image('caret-l.gif', 'previous').'previous');
-	}
-	if ($page<$pages) {
-		$i=$page+1;
-		$next=make_link($baseurl.'&page='.$i, 'next page'.make_image('caret-r.gif', 'next') );
-	}
-
-	$middle="<b>Displaying results $firstdisplayed to $lastdisplayed</b>";
-
-
-        echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
-        echo '<tr>';
-        echo '<td align="middle" colspan="2">' . $middle . '<br></td>';
-        echo '</tr>';
-
-        echo '<tr bgcolor="#cccccc"><td colspan="2">';
-        spacer(1,1);
-        echo '<br></td></tr>';
-
-        echo '<tr>';
-        echo '<td align="left">' . $last . '<br></td>';
-        echo '<td align="right">' . $next . '<br></td>';
-        echo '</tr>';
-        echo '</table><br>' . "\n";
+// If PHP added some quotes, get rid of them
+if (get_magic_quotes_gpc()) {
+    if (isset($pattern)) { $pattern = stripslashes($pattern); }
+    if (isset($base))    { $base = stripslashes($base); }
+    if (isset($lang))    { $lang = stripslashes($lang); }
 }
 
-if(!isset($pattern)) { 
-	commonHeader("Site Search");
-	$form = $PHP_SELF;
+// We received something to search for
+if (isset($pattern)) {
+
+    // Mailing list search base URL
+    $ml_url = "http://marc.theaimsgroup.com/";
+
+    // Do redirections for external search engines
+    switch ($show) {
+
+        // Quick reference lookup
+        case "quickref" :
+            header("Location: manual-lookup.php?pattern=" . urlencode($pattern) . "&lang=" . urlencode($lang));
+            exit;
+
+        // PHP-General mailing list search
+        case "maillist" :
+            $query = "l=php-general&r=1&w=2&q=b&s=" . urlencode($pattern);
+            header("Location: " . $ml_url . "?" . $query);
+            exit;
+
+        // PHP-Dev mailing list search
+        case "devlist" :
+            $query = "l=php-dev&r=1&w=2&q=b&s=" . urlencode($pattern);
+            header("Location: " . $ml_url . "?" . $query);
+            exit;
+
+        // PHPDoc mailing list search
+        case "phpdoc" :
+            $query = "l=phpdoc&r=1&w=2&q=b&s=" . urlencode($pattern);
+            header("Location: " . $ml_url . "?" . $query);
+            exit;
+            
+        // Bug database search
+        case "bugdb" :
+            $location = "http://bugs.php.net/search.php";
+            $query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=" . urlencode($pattern);
+            header("Location: $location?$query");
+            exit;
+    }
+
+    // If some local search is needed and we have no support for
+    // it, send the user to the central search page on php.net
+    if (!have_search() && !isset($local_search_override)) {
+        $location = "http://www.php.net/search.php";
+        $query = "show=" . $show . "&pattern=" . urlencode($pattern) . "&base=" . urlencode($MYSITE);
+        header("Location: $location?$query");
+        exit;
+    }
+    
+    // The local search engine is in place, and some
+    // local search function is needed, so try to do it
+    else {
+        
+        // Print out common headers
+        commonHeader("Search Results");
+        echo "<h1>Search Results</h1>\n";
+        
+        // Guess what base is, if it is not specified
+        if (!isset($base)) {
+            // The base is the referrer site, if it was a PHP mirror site,
+            // but not a special one, which carries non-indexed content
+            if (eregi("^http://([^.]+)\.php\.net/", $HTTP_REFERER, $matches) && 
+                !in_array($matches[1], array('bonsai', 'bugs', 'conf', 'cvs', 'gtk',
+                'lxr', 'master', 'news', 'pear', 'qa', 'smarty', 'snaps'))) {
+                $base = "http://{$matches[1]}.php.net";
+            }
+            unset($matches);
+            // If we are on the same site, there is no need for the base
+            if ($base == $MYSITE) {
+                $base = NO_BASE;
+            }
+        }
+
+        // This will be the link for new searches (a clean search page)
+        $sourceurl = htmlentities($base == NO_BASE ? $PHP_SELF : $base . $PHP_SELF);
+
+        // If the pattern is empty, print out an error, and exit
+        $pattern = trim($pattern);
+        if ($pattern == "") {
+            echo "<b>Error:</b> No search words specified.<br /><br />";
+            echo "Click here for a <a href=\"$sourceurl\">New Search</a><br /><br />\n";
+            commonFooter();
+            exit();
+        }
+            
+        // We have something to search for, now encode it as appropriate
+        $words = escapeshellcmd(urlencode($pattern));
+        
+        // Restrict the search to the English manual or the
+        // whole site depending on what the request asked for
+        if ($show == "manual") {
+            $restrict = $MYSITE . "manual/en";
+            $where = "in the PHP documentation";
+        } else {
+            $restrict = $MYSITE;
+            $where = "on the PHP website";
+        }
+        
+        // If we have a page restriction, provide it for htdig
+        if (isset($page)) { $pgr = "&page=" . escapeshellcmd($page); } else { $pgr = ""; }
+        
+        // Always exclude the printer friendly pages of both types
+        $exclude = urlencode("/print/ /printwn/");
+
+        // Create the htdig query, and execute the engine
+        $query = "words=$words&config=php&exclude=$exclude&restrict=$restrict$pgr";
+        exec("$htsearch_prog \"$query\"", $result);
+        
+        // Count the number of result rows
+        $rc = count($result);
+        
+        // This means that some error occured (the output templates are in
+        // Mirrors-htdig.tgz, and one of those should appear on the output)
+        if ($rc < 2) {
+            echo "<b>There was an error executing this query.</b><br /><br />Please try later.<br /><br />";
+            commonFooter();
+            exit;
+        }
+
+        // The pattern, which is insertable in HTML output too
+        $htmlpt = htmlspecialchars($pattern);
+
+        // If the third row says there is no match, then we need to inform the user
+        if ($result[2] == "NOMATCH") {
+            echo "Sorry, no documents matched your search for <b>\"$htmlpt\"</b>.<br /><br />";
+            echo "Continue your search at ";
+            echo "<a href=\"http://www.alltheweb.com/search?q=$htmlpt\">AllTheWeb</a> ";
+            echo "or <a href=\"http://www.google.com/search?q=$htmlpt\">Google</a><br /><br />";
+            echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br /><br />\n";
+            commonFooter();
+            exit;
+        }
+        
+        // We have matches, so grab the info from the output
+        // (the template for this is phphead.html in Mirrors-htdig.tgz)
+        list($dc, $dc, $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
+        
+        // String to carry on the search parameters in prev/next URLs
+        $baseurl = htmlentities($PHP_SELF . "?pattern=$words&show=$show&base=$base");
+
+        // Print out search results information header
+        echo "$matches documents match your search for '<b>$htmlpt</b>' $where:<br /><br />\n";
+        echo "Click here for a <a href=\"$sourceurl\">New Search</a><br /><br />\n";
+
+        // Top navigation
+        makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed);
+
+        // Skip response header, start from index 7
+        $i = 7;
+        while ($i < $rc) {
+            
+            // If we have not performed a "remote search", leave the text as is
+            if ($base == NO_BASE) {
+                echo $result[$i];
+            }
+            
+            // Otherwise modify links to point to the referrer site
+            else {
+                echo eregi_replace("http://[^.]+\.php\.net/", htmlspecialchars("$base/"), $result[$i]);
+            }
+            
+            // Make HTML output readable
+            echo "\n";
+            
+            // Go to next result element
+            $i++;
+
+            // Print out delimiter between results
+            echo hdelim("#cccccc");
+
+        }
+        echo "<br />\n";
+
+        // Bottom navigation
+        makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed);
+
+        // Indicate what search engine we use
+        echo "<p>Search powered by<br />\n";
+        print_link("http://www.htdig.org/", make_image("htdig.gif", "ht://Dig") );
+        echo "</p>\n";
+    
+        // End HTML page with footer
+        commonFooter();
+    }
+}
+
+// else of isset($pattern)
+else {
+
+    // Print out common header
+    commonHeader("Site Search");
+
+    // Choose the target for the search form
+    if (have_search() && isset($htsearch_prog)) {
+        $target = $PHP_SELF;
+    } else {
+        $target = "http://www.php.net/search.php";
+    }
+    
+    // Try to find out language to print out here
+    // (also preserves $lang is provided in POST/GET)
+    if (!isset($lang) && isset($LANG)) {
+        $lang = $LANG;
+    } elseif (!isset($lang)) {
+        $lang = default_language();
+    }
+
 ?>
 <h1>Search</h1>
-<form action="<?php echo $form;?>" method="post">
-<input type="hidden" name="lang" value="<?php echo htmlspecialchars($lang); ?>">
-<table cellspacing="0" cellpadding="2" border="0" align="center">
-<tr valign="top">
-<td align="right">
-Search for:<br></td>
-<td>
-<input type="text" name="pattern" value="" size="30">
-<input type="submit" value=" Search "><br>
-</td></tr>
-<tr valign="top">
-<td align="right">
-Restrict the search to:<br></td>
-<td>
-<?if(!isset($show)) $show = 'quickref';?>
-<select name="show">
-<option value="quickref" <?=($show=='quickref')?'selected':''?>>function list
-<option value="nosource" <?=($show=='nosource')?'selected':''?>>whole site
-<option value="manual" <?=($show=='manual')?'selected':''?>>online documentation
-<option value="bugdb" <?=($show=='bugdb')?'selected':''?>>bug database
-<option value="maillist" <?=($show=='maillist')?'selected':''?>>general mailing list
-<option value="devlist" <?=($show=='devlist')?'selected':''?>>developer mailing list
-<option value="phpdoc" <?=($show=='phpdoc')?'selected':''?>>documentation mailing list
-</select><br>
-</td></tr></table>
+<form action="<?php echo $target; ?>" method="post">
+ <input type="hidden" name="lang" value="<?php echo htmlspecialchars($lang); ?>" />
+ <table cellspacing="0" cellpadding="2" border="0" align="center">
+ <tr valign="top">
+  <td align="right">Search for:<br /></td>
+  <td>
+  <input type="text" name="pattern" value="" size="30" />
+  <input type="submit" value=" Search "><br>
+  </td>
+ </tr>
+ <tr valign="top">
+  <td align="right">
+  Restrict the search to:<br /></td>
+  <td>
+<? if (!isset($show)) { $show = 'quickref'; } ?>
+   <select name="show">
+    <option value="quickref" <? echo ($show=='quickref') ? 'selected':''?>>function list
+    <option value="nosource" <? echo ($show=='nosource') ? 'selected':''?>>whole site
+    <option value="manual" <?   echo ($show=='manual')   ? 'selected':''?>>online documentation
+    <option value="bugdb" <?    echo ($show=='bugdb')    ? 'selected':''?>>bug database
+    <option value="maillist" <? echo ($show=='maillist') ? 'selected':''?>>general mailing list
+    <option value="devlist" <?  echo ($show=='devlist')  ? 'selected':''?>>developer mailing list
+    <option value="phpdoc" <?   echo ($show=='phpdoc')   ? 'selected':''?>>documentation mailing list
+   </select><br />
+  </td>
+ </tr>
+ </table>
 </form>
-<?php } else {
-		commonHeader("Search Results");
-		echo "<h1>Search Results</h1>\n";
-		if (have_search() && isset($htsearch_prog)) {
-			$form = $PHP_SELF;
-		} else {
-			$form="http://www.php.net/search.php";
-		}
-		if (!isset($base)) {
-			if (eregi("^http://([^.]+)\.php\.net/", $HTTP_REFERER, $matches) && !in_array($matches[1], array('bonsai', 'bugs', 'conf', 'cvs', 'gtk', 'lxr', 'master', 'news', 'pear', 'qa', 'smarty', 'snaps'))) {
-				$base = "http://{$matches[1]}.php.net";
-			}
-			unset($matches);
-			if ($base == $MYSITE) {
-				$base = "-";
-			}
-		}
+<?php 
 
-		$sourceurl = htmlentities($base == '-' ? $PHP_SELF : $base.$PHP_SELF);
+    commonFooter();
+} // endof else isset($pattern)
 
-		if ($pattern == "") {
-			echo "<b>Error:</b> No search words specified.<br><br>";
-			echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
-			CommonFooter();
-			exit();
-		}
-			
-		$words = escapeshellcmd (urlencode($pattern));
-		$config = "php";
-		if ($show == "manual") {
-			$restrict = $MYSITE."manual/en";
-			$exclude = "/source";
-			$where = "PHP documentation";
-		} else {
-			$exclude = "/source";
-			$restrict = $MYSITE;
-			$where = "PHP Web site";
-		}
-		if (isset($page)) { $off = "&page=".escapeshellcmd($page); } else { $off = ""; }
-		$query = "words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
-		exec("$htsearch_prog \"$query\"", $result);
-		$rc = count($result);
-		if ($rc<2) {
-			echo "<b>There was an error executing this query.</b><br><br>Please try later.<br><br>";
-			commonFooter();
-			exit;
-		}
-		if ($result[2] == "NOMATCH") {
-			echo "Sorry, no documents matched your search for <b>&quot;".htmlspecialchars($pattern)."&quot;</b>.<br><br>";
-			echo "Continue your search at ";
-			echo "<a href=\"http://www.alltheweb.com/search?q=".htmlspecialchars($pattern)."\">AllTheWeb</a> ";
-			echo "or <a href=\"http://www.google.com/search?q=".htmlspecialchars($pattern)."\">Google</a><br><br>";
-			echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br><br>\n";
-			commonFooter();
-			exit;
-		}
-		$matches = $result[2];
-		$firstdisplayed = $result[3];
-		$lastdisplayed = $result[4];
-		$page = $result[5];
-		$pages = $result[6];
-		$baseurl = htmlentities($PHP_SELF."?pattern=$words&show=$show&base=$base");
 
-		echo "$matches documents match your search for '<b>",htmlspecialchars($pattern),"</b>' in the $where:<br><br>\n";
-		echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
 
-		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
+// Prints out the top and bottom bar on the search page. Parameters:
+// current page number, total page number, search URL without page
+// parameter, nunber of the first result displayed, and number of
+// the last result displayed
+function makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed)
+{
+    // Initialize prev and next values
+    $prev = $next = '&nbsp;';
+    
+    // Not the first page, we need link to go back
+    if ($page > 1) {
+        $prev = make_link(
+            $baseurl . '&page=' . ($page - 1),
+            make_image('caret-l.gif', '&lt;') . 'previous page'
+        );
+    }
+    
+    // Not the last page, we need link to go forward
+    if ($page < $pages) {
+        $next = make_link(
+            $baseurl . '&page=' . ($page + 1),
+            'next page' . make_image('caret-r.gif', '&gt;')
+        );
+    }
 
-		$i=7; #skip response header
-		while ($i < $rc) {
-			if ($base == "-") {
-				echo $result[$i];
-			} else {
-				echo eregi_replace("http://[^.]+\.php\.net/",htmlspecialchars("$base/"),$result[$i]);
-			}
-			echo "\n";
-			$i++;
+    // This goes to the center
+    $display = "<b>Displaying results $firstdisplayed to $lastdisplayed</b>";
 
-			echo hdelim("#cccccc");
+    echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+    echo '<tr>';
+    echo '<td align="middle" colspan="2">' . $display . '<br></td>';
+    echo '</tr>';
 
-		}
-		echo "<BR>\n";
+    echo '<tr bgcolor="#cccccc"><td colspan="2">';
+    spacer(1,1);
+    echo '<br></td></tr>';
 
-		makeBar($page,$pages,$baseurl,$firstdisplayed,$lastdisplayed);
-
-		echo "<p>Search powered by<br>\n";
-		print_link("http://www.htdig.org/", make_image("htdig.gif", "ht://Dig") );
-		echo "</p>\n";
+    echo '<tr>';
+    echo '<td align="left">'  . $prev . '<br></td>';
+    echo '<td align="right">' . $next . '<br></td>';
+    echo '</tr>';
+    echo '</table><br>' . "\n";
 }
 
-commonFooter();
 ?>
