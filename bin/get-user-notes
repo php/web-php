@@ -31,6 +31,7 @@ while (!feof($fp)) {
     echo "unable to open $notes file $hash\n";
     continue;
   }
+  $note = gzuncompress(base64_decode($note));
   fputs($file,"$id|$sect|$rate|$ts|$user|".base64_encode($note)."\n");
   fclose($file);
 
