@@ -2,7 +2,7 @@
 require("shared.inc");
 
 $NUMACROSS=4;
-$d = dir("/www/php/manual");
+$d = dir("$DOCUMENT_ROOT/manual");
 while($entry=$d->read()) {
 	if (ereg("(function|class)\.(.+)\.php3",$entry,$x)):
 		$functions[$entry]=ereg_replace("-","_",$x[2]);
