@@ -50,7 +50,7 @@ function makeName($name,$email,$size) {
 <li>General hash table implementation for symbol tables, arrays and objects
 <li>Memory manager
 <li>Token cache manager
-<li>Several internal functions and migration from PHP 2.0
+<li>A lot of internal functions (including hebrev :) and migration from PHP 2.0
 <li>Syntax highlighting mode
 <li>Configuration file parser
 <li>New persistent/multilink MySQL, PosgresSQL, Sybase and mSQL modules
