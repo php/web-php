@@ -20,19 +20,28 @@ It is currently in a public beta testing period.
 <!--<li><a href="patches.php3">Download patches</a> for official PHP 3.0 releases-->
 </ul>
 <br>
-<center><font size=-1><i><b>Note:</b> The February issue of <font size=+1>WEB</font>Techniques has
-a full article on PHP3.  Pick up a copy!</i></font></center>
+<center><font size=-1>
+<i><b>Note:</b> The February issue of <font size=+1>WEB</font>Techniques has
+a full article on PHP3.  Pick up a copy!</i>
+</font></center>
 <br>
 
 <center>
 <table cellpadding="5">
-	<tr>
-		<td width="28%" align="center"><font size="-1">Mirror Sites:</font></td>
-		<td width="18%" align="center"><font size="-2"><a href="http://ca.php.net/"><img src="gifs/canada-small.gif" border="0"><br>Canada</a></font></td>
-		<td width="18%" align="center"><font size="-2"><a href="http://il.php.net/"><img src="gifs/israel-small.gif" border="0"><br>Netvision, Israel</a></font></td>
-		<td width="18%" align="center"><font size="-2"><a href="http://machba.il.php.net/"><img src="gifs/israel-small.gif" border="0"><br>Technion, Israel</a></font></td>
-		<td width="18%" align="center"><font size="-2"><a href="http://no.php.net/"><img src="gifs/norway-small.gif" border="0"><br><nobr>Guardian Networks, Norway</nobr></a></font></td>
-	</tr>
+ <tr>
+  <td><font size="-1">Mirror Sites:</font></td>
+<?
+
+  reset($mirror_sites);
+  while ($site = key($mirror_sites)) {
+      next($mirror_sites);
+      echo('  <td align="center"><a href="' . $site . '"><img src="gifs/' .
+           $mirror_sites[$site][0] . '-small.gif" border="0"><br>' .
+           '<font size="-2">' .$mirror_sites[$site][1]. "</font></a></td>\n");
+  }
+
+?>
+ </tr>
 </table>
 </font>
 </center>

@@ -4,16 +4,8 @@
   $title="Download";
   include "include/header.inc";
 
-  $mirror_sites = array(
-    "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
-    "http://il.php.net/"         => array("israel", "Netvision, Israel"),
-    "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
-    "http://no.php.net/"         => array("norway", "Trondheim, Norway")
-  );
-
-  $current = "3.0b3";
-
-  echo("<table>\n");
+?><table>
+<?
 
   reset($mirror_sites);
   while ($site = key($mirror_sites)) {
@@ -31,6 +23,7 @@
       echo("\n </tr>\n");
   }
 ?>
+
  <tr>
   <td>
    Download
@@ -44,6 +37,7 @@
     src="gifs/usa.gif" width="100" height="64" border="0"></a>
   </td>
  </tr>
+
 </table>
 
 <?include "include/footer.inc"; ?>

@@ -1,6 +1,15 @@
 <?
   include "configuration.inc";
 
+  $current = "3.0b3";
+
+  $mirror_sites = array(
+    "http://ca.php.net/"         => array("canada", "Toronto, Canada"),
+    "http://il.php.net/"         => array("israel", "Netvision, Israel"),
+    "http://machba.il.php.net/"  => array("israel", "Technion, Israel"),
+    "http://no.php.net/"         => array("norway", "Trondheim, Norway")
+  );
+
   function download_link($file, $title) {
       if ($tmp = strrchr($file, "/")) {
           $local_file = substr($tmp, 1, strlen($tmp));
