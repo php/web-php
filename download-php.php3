@@ -46,11 +46,13 @@ if ($COUNTRIES[$csel]) {
 	}
 }
 $mirror_sites=$MIRRORS;
+
 $count=0;
 $lastc="";
 reset($mirror_sites);
 while ($site = key($mirror_sites)) {
 	$info = $mirror_sites[$site];
+	
 	next($mirror_sites);
 	$c = $info[0];
         $cname=$COUNTRIES[$c];
