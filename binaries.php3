@@ -87,7 +87,7 @@ while ($site = key($mirror_sites)) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0 ALT=' '></TD>\n";
-		echo "<TD><IMG SRC='/gifs/gflag-$country.gif' ALT='$cname' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10><BR></TD>\n";
+		echo "<TD><A NAME=\"$country\"><IMG SRC='/gifs/gflag-$country.gif' ALT='$cname' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10></A><BR></TD>\n";
 		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
 		echo "<TD align=right><IMG ALT=' ' SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
@@ -104,25 +104,29 @@ while ($site = key($mirror_sites)) {
 		$lastlocation=$location;
 	}
 	echo "<FONT SIZE=-1><UL>\n";
-	$src_file = "${site}${srcdir}php-${current}.tar.gz";
-	$win32_file = "${site}${srcdir}php-${win32_current}-win32.exe";
+	$solaris251_file = "${site}${srcdir}httpd-php-solaris251.tar.gz";
+	$solaris26_file = "${site}${srcdir}httpd-php-solaris26.tar.gz";
+	$hpux1020_file = "${site}${srcdir}httpd-php-hpux1020.tar.gz";
+	$linux21_file = "${site}${srcdir}httpd-php-linux21.tar.gz";
+	$irix63_file = "${site}${srcdir}httpd-php-irix63.tar.gz";
+	$freebsd225_file = "${site}${srcdir}httpd-php-freebsd225.tar.gz";
 	echo "<LI>";
-	download_link("httpd-php-solaris251.tar.gz", "($method) Solaris 2.5.1 Apache $apache_version + PHP $php_version binary");
+	download_link($solaris251_file, "($method) Solaris 2.5.1 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo "<LI>";
-	download_link("httpd-php-solaris26.tar.gz", "($method) Solaris 2.6 Apache $apache_version + PHP $php_version binary");
+	download_link($solaris26_file, "($method) Solaris 2.6 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo "<LI>";
-	download_link("httpd-php-hpux1020.tar.gz", "($method) HP-UX 10.20 Apache $apache_version + PHP $php_version binary");
+	download_link($hpux1020_file, "($method) HP-UX 10.20 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo "<LI>";
-	download_link("httpd-php-linux21.tar.gz", "($method) Linux 2.1.x (Redhat 5.x) Apache $apache_version + PHP $php_version binary");
+	download_link($linux21_file, "($method) Linux 2.1.x (Redhat 5.x) Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo "<LI>";
-	download_link("httpd-php-irix63.tar.gz", "($method) Irix 6.3 Apache $apache_version + PHP $php_version binary");
+	download_link($irix63_file, "($method) Irix 6.3 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo "<LI>";
-	download_link("httpd-php-freebsd225.tar.gz", "($method) FreeBSD 2.2.5 Apache $apache_version + PHP $php_version binary");
+	download_link($freebsd225_file, "($method) FreeBSD 2.2.5 Apache $apache_version + PHP $php_version binary");
 	echo "\n";
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }
