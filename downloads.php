@@ -135,7 +135,7 @@ Seems to be down/broken
   <li><a href="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files</li>
 -->
   
-  <li>If you are searching for older versions of PHP, go to new <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
+  <li>If you are searching for older versions of PHP, go to the new <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
   <li>Search for PHP tarballs on AllTheWeb.com:
     <form action="http://www.alltheweb.com/search" method="GET">
       <input type="hidden" name="cat" value="ftp">
