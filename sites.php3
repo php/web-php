@@ -182,6 +182,7 @@ right away.</blockquote>
 	site("3D Linux","3dlinux.org");
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
+	site("MP3Bench","mp3bench.com");
 	siteEnd();
 
 /* Publishing Industry */
