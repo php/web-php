@@ -1,37 +1,48 @@
-<?
-$MANUAL = array(
-/*
-   "entry name"         =>       "url", "category name"
-*/
+<?php // -*- C++ -*-
 
-   "Table of Contents"  => array("index.php3", "Introduction"),
-   "Introduction: 1"    => array("intro1.php3", "Introduction"),
-   "Introduction: 2"    => array("intro2.php3", "Introduction"),
-   "Introduction: 3"    => array("intro3.php3", "Introduction"),
-   "Installation"    => array("install.php3", "Installation"),
-   "Configuration"    => array("install1.php3", "Installation")
-);
+$NEXT = $PREV = $UP = $HOME = array(false, false);
+$TOC = array();
 
+function setupNavigation($data)
+{
+    global $NEXT, $PREV, $UP, $HOME, $TOC;
+    $HOME = @$data["home"];
+    $NEXT = @$data["next"];
+    $PREV = @$data["prev"];
+    $UP   = @$data["up"];
+    $TOC =  @$data["toc"];
+}
 
-reset($MANUAL);
-$c=0;
-$oldkey="";
-$lastcat="";
-while ($c<count($MANUAL)):
-	$key=key($MANUAL);
+function makeBorderTOC($this)
+{
+    global $NEXT, $PREV, $UP, $HOME, $TOC;
 
-	$category=$MANUAL[$key][1];
-	if ($category!=$lastcat):
-		$CAT_URLS[$category]=$MANUAL[$key][0];
-		$lastcat=$category;
-	endif;
-
-	$PREV[$key]=$oldkey;
-	next($MANUAL);
-	$newkey=key($MANUAL);
-	$NEXT[$key]=$newkey;
-	$oldkey=$key;
-	$c++;
-endwhile;
+    echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=\"100%\">\n";
+    echo "<TR VALIGN=top>\n";
+    echo "<TD>";
+    spc(10, 10);
+    echo "</TD>\n";
+    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
+    echo "<A HREF=\"$cat_url\" onMouseover=\"hide();\" CLASS=white>";
+    echo "<B>$UP[1]</B></A></TD></TR>\n";
+    for ($i = 0; $i < count($TOC); $i++) {
+	list($url, $title) = $TOC[$i];
+	if (!$url || !$title) {
+	    continue;
+	}
+	if ($title == $this) {
+	    $type = "w";
+	    $out = 2;
+	} else {
+	    $type = "p";
+	    $out = 0;
+	}
+	echo "<TR VALIGN=top><TD>";
+	spc(10,10);
+	echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$i',1)\" onMouseout=\"changebullet('bullet$i',$out)\"><IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 BORDER=0 NAME=\"bullet$i\"></A>\n";
+	echo "</TD>\n<TD WIDTH=100%><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\" SIZE=-1><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$i',1)\" onMouseout=\"changebullet('bullet$i',$out)\" CLASS=white>$title<BR></A></TD></TR>\n";
+    }
+    echo "</TABLE>\n";
+};
 
 ?>
