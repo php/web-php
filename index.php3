@@ -11,19 +11,13 @@ echo "\n<!--$MYSITE-->\n";
 The long awaited beta of the new generation of PHP is <a href="version4/">here</a>.
 </p>
 
-<h3>PHP 3.0.11 has been released!</h3>
+<h3>PHP 3.0.12 has been released!</h3>
 <p>
-June 27, 1999. Hot on the heels of 3.0.10, along comes another release
-to fix a few problems on Windows and some Unix platforms. If 3.0.10
-worked for you, there's probably no need to upgrade. 3.0.10 featured
-bug fixes, including the last of the fsockopen() and URL fopen()
-problems, we hope. The dbm database abstraction layer had the mode
-flag for dba_open() brought into line with dbm_open(), which means
-"w" will not create a non-existent database (use "c" instead). The
-documentation has also been moved into its own repository, and the
-generated HTML documentation is included in the tar.gz instead of the
-SGML source.  For a more complete list of all of the changes, see the
-<a href="ChangeLog.php3">ChangeLog</a>.
+July 28, 1999.  Nothing major in this release.  Mostly bug fixes.  Support for
+the new gd-1.6, Internet Time, FreeType2 support, Max OS X build fixes, LDAP
+error functions, some new imap functions, socket io bug fixes, RH6 apxs build
+fix and support for the upcoming Apache-1.3.7.  See the 
+<a href="ChangeLog.php3">ChangeLog</a> for a full list of the changes.
 </P>
 
 <h3>PHP Tutorials at O'Reilly Open Source Software Convention</h3>

@@ -2,6 +2,47 @@
 require("shared.inc");
 commonHeader("PHP 3.0 -> 3.0.11 Changes");
 ?>
+<h3>July 28, 1999, Version 3.0.12</h3>
+<ul>
+<li>gmktime/mktime DST fix (RL and Jim)
+<li>Add imap_search (Chuck Hagenbuch)
+<li>Added locale support for Perl Compatible Regexp functions (Andrey)
+<li>fix crash on invalid URLs in fopen wrappers (Sascha)
+<li>Add support for gd1.6 (disables the ImageCreateFromGif and ImageGif
+  functions because gd1.6 no longer supports GIF format files) (Jim)
+<li>Fixed popen and pclose functions on Windows. (Jim)
+<li>Fixed subprocess creation on Windows when used with IIS (Jim, Dave Cramer)
+<li>Support for Swatch(r) Beat(tm), also known as Internet Time.
+Use by including "B" in the date() or gmdate() format string. (markonen)
+<li>added gmstrftime() (like strftime() but prints out in GMT not local
+	  time) (David Sklar)
+<li>A hack to allow 4bit antialiasing by modifying Freetype2 source (markonen)
+<li>Initial Freetype2 support. You need to use the 1.2 compatibility
+	    API <truetype.h> for now.. (markonen)
+<li>added strtotime() function from <nsayer@quack.kfu.com> with some
+		  modifications (Andrey)
+<li>fix some problems in the socket buffering system (Sascha)
+<li>allow subsecond precision in timeout parameter to fsockopen (Sascha)
+<li>OCI8 - got rid of most Callback-Code (there's a bug in the Oracle 
+ Client-Libraries). (Thies) 
+<li>OCI8 - added OCISetPrefetch($stmt,$rows) for automatic prefetching of
+ data. (Thies)
+<li>make buildable on OS/2 (Brian Havard <brianh@kheldar.apana.org.au>)
+<li>added Chad Cunningham's patches for Mac OS X Server compatibility (markonen)
+<li>added ldap_error(), ldap_errno() and ldap_err2str() functions (kk)
+<li>fix --with-shared-apache (Sascha)
+<b>NOTE</b>: Use of this is deprecated. Refer to INSTALL.DSO instead.
+Future releases do not support this option.
+<li>support for accessing the raw POST data when its content-type isn't
+ already understood by PHP (Jim)
+<li>fix pgsql_fetch_array/pgsql_fetch_object (Sascha)
+<li>detect missing getrlimit function (Jim Jag.)
+<li>fix diskfreespace() on Windows post-OSR2 again (Jim)
+<li>added Chuck Hagenbuch's imap_getmailboxes(), imap_getsubscribed(),
+    and imap error queues; added preliminary support for persistent IMAP
+    connections.  &lt;askalski@chekinc.com&gt;
+</ul>
+
 <h3>June 27, 1999, Version 3.0.11</h3>
 <ul>
 <li>detect missing getpgid function, fix posix_getsid (Jim)
