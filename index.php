@@ -107,6 +107,23 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>ActiveState Awards</h1>
+<p>
+ActiveState is delighted to announce the second annual Programmers'
+Choice and Activators' Choice Awards. The awards honor the unnamed
+heroes who <em>actively</em> contribute to open languages and display
+excellence in their programming efforts. The Programmers' Choice
+recipients are nominated and chosen by members of the programming
+community - like you.  Know someone who's really made a difference using
+these languages? Tell us about them!
+<?print_link('http://www.ActiveState.com/Corporate/Awards/ActiveAwards.html', 'Get out the vote')?> and stay
+tuned! Nominees will be announced July 2, 2002. Perl, PHP, Python and
+XSLT winners will be announced at OSCON July 23, 2002. Tcl winners will
+be announced at the Tcl 2002 conference in September.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP for NetWare (Beta) Released</h1>
 <p>
 <font class="newsDate">[27-May-2002]</font>
