@@ -22,7 +22,9 @@
   $sponsor["no.php.net"] = '<a href="http://www.guardian.no/"><img align=right alt="Site sponsored by<br>Guardian Networks AS" src="http://www.guardian.no/pics/gnphp.gif" border=0></a>';
   $sponsor["php.guardian.no"] = $sponsor["no.php.net"];
 
-  echo $sponsor[$SERVER_NAME];
+  if (isset($sponsor[$SERVER_NAME])) {
+    echo $sponsor[$SERVER_NAME];
+  }
 
 ?></td>
   <td align="right" width="33%">

@@ -133,7 +133,7 @@ function rolloff(imgName) {
 // -->
 </script>
 <? }
-if (!$head_closed) {
+if (!isset($head_closed)) {
     echo("</head>");
 }
 ?>

@@ -16,7 +16,7 @@ function show_menu($state) {
 	global $PHP_SELF, $bug_type;
 
 	if(!isset($bug_type)) { $bug_type="Any"; }
-	echo "<form method=POST action=\"$PHP_SELF\">\n";
+	echo "<form method=GET action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
 	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
 	if($state) { echo "<option>$state\n"; }
@@ -134,34 +134,50 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
+	include("table_wrapper.inc");
+	$do_external_data_processing=1;
+	function External_Processing($fieldname,$tablename,$data,$row)
+	{
+		switch($fieldname) {
+			case "id":
+				print "<a href=\"bugs.php3?id=$data\">$data</a>\n";	
+				break;
+			case "Originator":
+				print "<a href=\"mailto:$data\">$data</a>\n";
+				break;
+			default:
+				print $data;
+				break;
+		}
+	}
     mysql_pconnect("localhost","nobody","");
     mysql_select_db("php3");
-    echo "<center><table border=3><tr bgcolor=\"#aaaaaa\"><th>ID#</th><th>Status</th><th>Type</th><th>Version</th><th>OS</th><th>Originator</th><th>Description</th></tr>\n";
+
+	$tables[] = "bugdb";
+	$fields[] = "id";
+	$fields[] = "status as Status";
+	$fields[] = "php_version as Version";
+	$fields[] = "php_os as OS";
+	$fields[] = "email as Originator";
+	$fields[] = "sdesc as Description";
+	$conversion_table["id"] = "ID#";
+	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
+	$default_header_color="aaaaaa";
+	$default_color="ffbbaa";
+	
+	if (!isset($order_by)) {
+		$order_by = "id";
+	}
 	if($status=="All" && $bug_type=="Any") {
-    	$result = mysql_query("SELECT * from bugdb order by id");
+		/* nothing */
 	} elseif($status=="All" && $bug_type!="Any") {
-		$result = mysql_query("SELECT * from bugdb where bug_type='$bug_type' order by id");
+		$where_clause = "bug_type='$bug_type'";
 	} elseif($status!="All" && $bug_type=="Any") {
-		$result = mysql_query("SELECT * from bugdb where status='$status' order by id");
+		$where_clause = "status='$status'";
 	} else {
-		$result = mysql_query("SELECT * from bugdb where status='$status' and bug_type='$bug_type' order by id");
-	}	
-    while($row=mysql_fetch_row($result)) {
-		if($row[7]=="Open") {
-			$col = "#ffbbaa";
-		} else {
-				$col = "#aaffbb";
-		}
-        echo "<tr bgcolor=\"$col\"><td align=right><a href=\"$PHP_SELF?id=".$row[0]."\">".$row[0]."</a></td>";
-		echo "<td> ".$row[7]." </td>";
-        echo "<td>".$row[1]."</td>";
-        echo "<td>".$row[5]."</td>";
-        echo "<td>".$row[6]."&nbsp;</td>";
-        echo "<td>".$row[2]."&nbsp;</td>";
-        echo "<td>".$row[3]."&nbsp;</td><tr>\n";
-    }
-	mysql_freeresult($result);
-    echo "</table></center>\n";
+		$where_clause = "status='$status' and bug_type='$bug_type'";
+	}
+	table_wrapper("php3");
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
 	show_menu($status);
@@ -201,7 +217,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
 			echo "<td><a href=\"$PHP_SELF?id=$id&edit=1\"><font size=-1><tt>Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
+			echo "<form method=GET action=\"$PHP_SELF?id=$id\">\n";
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			if($row[7]=="Open") {
@@ -248,7 +264,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 ?>
 Or use the form below to submit a new bug report.
 <hr>
-<form method=POST action="<? echo $PHP_SELF;?>">
+<form method=GET action="<? echo $PHP_SELF;?>">
 <input type=hidden name=cmd value="Send bug report">
 
 <P><STRONG>Please make sure you have read our list of <A
@@ -287,7 +303,7 @@ for any outstanding bug reports that match your bug.</STRONG>
   </tr><tr>
   <th align=right>Operating system:</th>
   <td>
-   <input type=text size=20 name="php_os" value="<?echo $operating_system;?>">
+   <input type=text size=20 name="php_os" value="<?echo isset($operating_system)?$operating_system:"";?>">
   </td>
  </tr><tr>
   <th align=right>Bug description:</th>
