@@ -150,7 +150,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("/downloads.php", "php4_logo.gif", "PHP 5"); ?>
+<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
 <h1> PHP 4.3.6RC1 released!</h1>
 <p>
@@ -163,6 +163,8 @@ incorrect handling of daylight savings time. A few other minor bugs were fixed a
 </p>
 
 <hr />
+
+<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
 <h1> PHP 4.3.5 released!</h1>
 <p>
@@ -180,7 +182,7 @@ incorrect handling of daylight savings time. A few other minor bugs were fixed a
 
 <hr />
 
-<?php news_image("/downloads.php#v5", "php5_logo.gif", "PHP 5"); ?>
+<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 
 <h1>PHP 5 Release Candidate 1 Released!</h1>
 <p>
