@@ -33,6 +33,7 @@ no	no.php.net	Stig Bakken <stig@guardian.no>	195.1.254.5	same as php.guardian.no
 #nz	nz.php.net		php.manawatu.net.nz
 pl	pl.php.net	grych@tgr.com.pl	php.tgr.com.pl
 pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
+pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
 #ro	ro.php.net	cbredi@timisoara.roedu.net	193.226.9.16
 ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@ios.chalmers.se>	129.16.214.87

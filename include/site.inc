@@ -36,6 +36,7 @@ $MIRRORS = array(
    "http://no.php.net/"               => array("no", "Fast Search &amp; Transfer ASA", "fast", "http://www.fast.no/", 1, 0, "no"),
    "http://pl.php.net/"               => array("pl", "TGR", "tgr", "http://www.tgr.com.pl/", 1, 0, "pl"),
    "http://pt.php.net/"               => array("pt", "Telenet", "telenet", "http://www.telenet.pt/", 1, 1, "pt"),
+#   "http://pt2.php.net/"               => array("pt", "SONET", "", "http://www.sonet.pt/", 1, 0, "pt"),
    "ftp://ftp.utt.ro/mirrors/php3/"   => array("ro", "University of Timisoara","upt", "http://www.utt.ro/", 0, 0, "ro"),
    "http://ru.php.net/"               => array("ru", "Direct Internet", "directnet", "http://www.dn.ru/", 1, 0, "ru"),
    "http://se.php.net/"               => array("se", "Chalmers Lindholmen", "cl", "http://www.ios.chalmers.se/", 1, 1, "se"),
