@@ -87,7 +87,7 @@ function navigationBar($title,$id,$loc) {
     echo '</td></tr>';
 
     echo '<tr>';
-    echo '<td><small>';
+    echo '<td>';
 
     // Print out language switch on top of manual pages
     if ($loc != 'bottom') {
@@ -100,19 +100,19 @@ function navigationBar($title,$id,$loc) {
                 $links[] = array("$code/$id", $name);
             }
         }
-        echo '<form action="/manual/change.php" method="GET" class="thin">view the ' .
+        echo '<form action="/manual/change.php" method="GET" class="thin"><small>view the </small>' .
              '<select name="page" class="small">'. "\n";
         foreach ($links as $link) {
             echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo '</select>';
-        echo '<input type="image" src="/gifs/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> version of this page</form>';
+        echo '<input type="image" src="/gifs/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
        
     } else {
-        echo "&nbsp;";
+        echo "<small>&nbsp;</small>";
     }
 
-    echo '</small></td><td align="right" valign="bottom"><small>Last updated: ' . $tstamp . '</small></td></tr>';
+    echo '</td><td align="right" valign="bottom"><small>Last updated: ' . $tstamp . '</small></td></tr>';
     echo "</table>\n";
 
 }
