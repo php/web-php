@@ -5,6 +5,7 @@ body, ul, td, th {
 
 p {
 	font-family: verdana,arial,helvetica,sans-serif;
+	text-align: justify;
 }
 
 em {
@@ -31,13 +32,17 @@ acronym {
 	font-size: 85%;
 }
 
+.sidebar p {
+	text-align: left !important;
+}
+
 code, pre {
-	font-family: monospace;
+	font-family: Courier, "Courier New", monospace;
 	font-size: 90%;
 }
 
 pre.note {
-        font-size: 80%;
+        font-size: 90%; /* font size of less than 90% is impossible to read */
 }
 
 h1 {
@@ -96,7 +101,7 @@ input {
 }
 
 textarea {
-	font-family: monospace;
+	font-family: verdana,arial,helvetica,sans-serif;
 }
 
 input.small, select.small {
@@ -105,7 +110,7 @@ input.small, select.small {
 }
 
 textarea.small {
-	font-family: monospace;
+	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 75%;
 }
 
