@@ -296,7 +296,7 @@ document.writeln("</STYLE>");
 <TD ALIGN=right><?
 if($title=="Show Source"):
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hide();change('close',1);\" ><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0></A>";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hide();change('close',1);\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
 else:
 	echo "<IMG SRC=\"gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
 	echo "<A HREF=\"source.php3?page_url=$PHP_SELF\" onMouseover=\"hide();change('sour',1);\" >";
@@ -325,8 +325,8 @@ function commonFooter() {
 </TR>
 
 <TR valign=top>
-<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><?spc(150,1);?></TD>
-<TD ALIGN=left width=100%><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
+<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><?spc(150,1);?><BR></TD>
+<TD ALIGN=left width=100%><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR></TD>
 </TR>
 
 <TR valign=top>
@@ -350,7 +350,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Site Hosted by:</I><BR></TD>
-<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 hspace=10></A><BR></TD>
+<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 vspace=12 hspace=10></A><BR></TD>
 </TR></TABLE>
 
 </TD>
