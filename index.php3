@@ -9,6 +9,15 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<!--
+<img src="ads/ZendOptimizer.gif" align="right">
+<h3>Zend Optimizer released!</h3>
+<a href="http://www.zend.com">Zend Technologies</a> has announced the availability of
+the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
+<a href="http://www.zend.com/optimizer_link.php">free download</a>.
+-->
+
+
 <h3>PHP 3.0.15 released</h3>
 February 25, 2000. PHP 3.0.15 fixes a couple of issues and addresses some
 security concerns. If you are using PHP's safe mode feature, you are urged
