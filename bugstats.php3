@@ -47,6 +47,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		if($row[7]=="Analyzed") {
 			$bug_type['analyzed'][$row[1]]++;
 		}
+		if($row[7]=="Feedback") {
+			$bug_type['feedback'][$row[1]]++;
+		}
 		if($row[7]=="Suspended") {
 			$bug_type['suspended'][$row[1]]++;
 		}
@@ -77,9 +80,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 
 	mysql_freeresult($result);
 	echo "<table>\n";
-	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th></tr>\n";
+	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th><th>Feedback</th></tr>\n";
 	while(list($type,$value)=each($bug_type['all'])) {
-		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td></tr>\n";
+		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
 	}
 	echo "</table>\n";
 	
