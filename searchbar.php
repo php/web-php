@@ -7,7 +7,7 @@
  <style>
   select, input, button, body, p, td {
       font-family: "MS Sans Serif";
-      font-size: 15px;
+      font-size: 13px;
   }
   .title {
       font-size: 25px;
@@ -34,9 +34,9 @@
    <form method="post" action="/search.php" target="_main" name="sform">
    <input type="hidden" name="lang" value="<?php if(empty($LANG)) echo htmlspecialchars(default_language()); else echo htmlspecialchars($LANG); ?>">
    Search for<br />
-   <input type="text" name="pattern" value="" size="21" />
+   <input type="text" name="pattern" value="" style="width: 100%"/><br />
    in the<br />
-   <select name="show">
+   <select name="show" style="width: 100%">
    <option value="quickref" selected>function list
    <option value="nosource">whole site
    <option value="manual">online documentation
