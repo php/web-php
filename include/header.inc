@@ -142,7 +142,7 @@ if (!$head_closed) {
     lynx_space_hack();
     top_button("sm_top", "Top", $root_url);
     lynx_space_hack();
-    top_button("sm_search", "Search", $root_url."search.php3");
+    top_button("sm_search", "Search", $glimpse_url.$root_url."search.php3");
     lynx_space_hack();
     top_button("sm_vs", "View Source",
                $root_url."show_source.php3?page_url=$PHP_SELF");
