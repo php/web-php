@@ -137,6 +137,9 @@ Lots of tutorials/instructions related to Apache, PHP and MySQL<br></li>
 
 <li><a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a><br>
 A series of PHP tutorials for novices<br></li>
+
+<li><a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br>
+A collection of external links to PHP tutorials<br></li>
 </ul>
 
 <h4>PHP Setup tools for Windows</h4>
