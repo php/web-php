@@ -69,6 +69,7 @@ function mirror_provider_url($site = FALSE) {
 // if they are not already defined (BC)
 if (!defined("MIRROR_STANDARD")) {
 
+    define('MIRROR_DOWNLOAD', 0);
     define('MIRROR_STANDARD', 1);
     define('MIRROR_SPECIAL', 2);
 
