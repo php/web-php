@@ -43,6 +43,11 @@ function boldEvents()
 // Restore the last search as stored in a cookie
 function searchHistory()
 {
+    // Something is already typed in, do not try to overwrite it
+    if (document.forms["topsearch"].pattern.value.length > 0) {
+        return;
+    }
+
     // Try to get the lastsearch cookie
     lastSearch = getCookie("LAST_SEARCH");
     if (typeof(lastSearch) == "string") {
