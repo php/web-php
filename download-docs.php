@@ -10,12 +10,17 @@ in various languages, even in printer
 friendly HTML format.
 </p>
 
-<h3>Tip for Windows users</h3>
+<h3>Tips for Windows users</h3>
 <p>
 If you don\'t know how to handle bz2 compressed
 manuals on Windows, please read our <a
 href="/manual/en/faq.misc.php#faq.misc.bz2">FAQ entry</a>
 on this subject.
+</p>
+<p>
+You may also check out the still in progress
+development of a new CHM format based PHP manual at
+<a href="http://weblabor.hu/php-doc-chm">http://weblabor.hu/php-doc-chm</a>.
 </p>
 
 <h3>File sizes and dates</h3>
