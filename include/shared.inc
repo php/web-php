@@ -306,40 +306,21 @@ function commonHeader($title) {
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
 <? endif; ?>
 
-<SCRIPT LANGUAGE="JavaScript">
+<SCRIPT LANGUAGE="JavaScript1.2">
 <!--
 /*
-        The code and graphics on this website (and it's mirror sites, if any) are 
-	Copyright (c) 1998 The PHP Development Team.  All rights reserved.
+<? readfile($DOCUMENT_ROOT."/COPYRIGHT.txt"); ?>
+*/
 
-	Except as otherwise indicated elsewhere on this site, you may view, copy,
-	print, and distribute documents available on this Web site subject to the 
-	following conditions: 
 
-	1. The document may be used solely for personal, informational, non-commercial
-	   purposes;
-	2. Any copy of the document or portion thereof must include the copyright notice 
-	   above and this permission notice; and 
-	3. The PHP Development Team reserves the right to revoke such authorization at any 
-	   time, and any such use shall be discontinued immediately upon notice from the PHP
-	   Development Team.
-
-	Documents specified above do not include the design or layout of this Web site.  
-	Elements of this Web site are protected by trade dress and other laws and may not 
-	be copied or imitated in whole or in part.
-
-	You can contact the webmaster at <webmaster@php.net>.
-
-	For more information on the PHP Development Team and the PHP
-	project, please see <http://www.php.net>.
-
+/*
+Debugging:
 	$IE4 = <? echo $IE4; ?>
 	$IE3 =  <? echo $IE3; ?>
 	$NS4 =  <? echo $NS4; ?>
 	$NS3 =  <? echo $NS3; ?>
 	$X11 =  <? echo $X11; ?>
 	$HAVE_STYLE = <? echo $HAVE_STYLE; ?>
-
 */
 
 var loaded = 0;
@@ -711,7 +692,7 @@ echo "<form action=\"$form\" METHOD=\"POST\">\n"; ?>
 <? kickFooter("searchKick","sear",300);?>
 </DIV>
 
-<SCRIPT LANGUAGE="JavaScript">
+<SCRIPT LANGUAGE="JavaScript1.2">
 <!--
 if (NS4) {
 	gotlayers = (document.layers.length == 3) ? 1 : 0;
@@ -728,6 +709,7 @@ if (IE4) {
 if (IE4) {
 	gotlayers = 1;
 }
+	gotlayers = 1;
 //--->
 </SCRIPT>
 
