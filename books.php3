@@ -22,7 +22,7 @@ by Rasmus Lerdorf<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
 ><IMG SRC="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
@@ -45,7 +45,7 @@ by Leon Atkinson<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
 ><IMG SRC="http://www.amazon.com/images/P/0071353429.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
@@ -57,7 +57,7 @@ by David Medinets<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte"
 ><IMG SRC="http://images.amazon.com/images/P/0201657716.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte">Building Database Applications on the Web Using PHP3</A><BR>
