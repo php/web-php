@@ -60,7 +60,7 @@ if(!strstr($MYSITE,"www.php.net")) {
 
 	$query.= " ORDER BY bug_type";
 
-	$result=mysql_query($query);
+	$result=mysql_unbuffered_query($query);
 	while($row=mysql_fetch_row($result)) {
 		$bug_type['all'][$row[1]]++;
 		if($row[7]=="Open") {
