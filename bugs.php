@@ -488,6 +488,7 @@ function show_id_options($current) {
 	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
 	echo "<option>Any</option>\n";
 	while ($row = mysql_fetch_row($result)) {
+        if (!$row[0]) continue; # don't show blank option
 		echo "<option",($row[0] == $current ? " selected" : ""),
 		     ">$row[0]</option>\n";
 	}
