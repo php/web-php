@@ -6,23 +6,37 @@ echo "\n<!--$MYSITE-->\n";
 
 ?>
 
+<h1>New Site Design</h1>
+
+<p>You might notice that things look a little different around
+here. We've streamlined the site, with a new design from the
+esteemed Colin Viebrock. Bear with us while we shake out the
+bugs that are surely lingering behind this new facade.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 <h1>Announcing PHP-GTK</h1>
 
-The first release of PHP-GTK is now available. PHP-GTK is a PHP extension that
-provides an object-oriented interface to GTK+ toolkit and enables you to write
-client-side cross-platform GUI applications. For more information, visit
+<p>The first release of PHP-GTK is now available. PHP-GTK is
+a PHP extension that provides an object-oriented interface
+to GTK+ toolkit and enables you to write client-side
+cross-platform GUI applications. For more information, visit
 <?print_link("http://gtk.php.net/")?>.
+<br clear="all">
+</p>
 
 <? echo hdelim(); ?>
 
 <h1>Patch Level 1 released for PHP 4.0.4</h1>
 
+<p>
 Due to two security issues found in the Apache module version of PHP 4.0, PHP 4.0.4pl1
 has been released.  This bug-fix release also fixes a few party-crashing bugs that
 were discovered in PHP 4.0.4.
 <br clear="all">
 </p>
-
 
 <? echo hdelim(); ?>
 
