@@ -361,8 +361,8 @@ function valid_year($year)
     // Get current year and compare to one sent in
     $current_year = date("Y");
     
-    // We only allow this year for displays
-    if ($year != $current_year) {
+    // We only allow this and the next year for displays
+    if ($year != $current_year && $year != $current_year+1) {
         return FALSE;
     }
     
