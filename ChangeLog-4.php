@@ -245,7 +245,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(11924); ?> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
 <li><?php bugfix(7014); ?> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
 </ul>
-There is a <a href="release_4_3_3.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br />
 
 <hr />
 
@@ -436,7 +436,7 @@ There is a <a href="release_4_3_3.php">separate announcement</a> available for t
 <li><?php bugfix(13561); ?> (--without-pear disabled phpize/php-config install). (Jani)</li>
 <li><?php bugfix(13551); ?> (bcmath functions applying scale incorrectly). (Sara)</li>
 </ul>
-There is a <a href="release_4_3_2.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br />
 
 <hr />
 
@@ -446,7 +446,7 @@ There is a <a href="release_4_3_2.php">separate announcement</a> available for t
 <ul>
 <li>Fixed serious security vulnerability in CGI SAPI. (Shane)</li>
 </ul>
-There is a <a href="release_4_3_1.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br />
 
 <hr />
 
@@ -959,7 +959,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
   dependencies. Automake is only needed for its aclocal tool. The build 
   process is now more portable and less resource-consuming. (Sascha)</li>
 </ul>
-There is a <a href="release_4_3_0.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br />
 
 <hr />
 
@@ -998,7 +998,7 @@ There is a <a href="release_4_3_0.php">separate announcement</a> available for t
 <li>Fixed array_rand() on thread-safe platforms such as Windows. (Edin)</li>
 <li>Report the right exit code after a call to exit(). (Edin)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br />
 
 <hr />
 
@@ -1008,7 +1008,7 @@ There is no separate announcement available for this release.<br />
 <ul>
 <li>Fixed serious security vulnerability. (Stefan Esser)</li>
 </ul>
-There is a <a href="release_4_2_2.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br />
 
 <hr />
 
@@ -1065,7 +1065,7 @@ There is a <a href="release_4_2_2.php">separate announcement</a> available for t
 <li>Fixed a bug in the COM extension that caused outproc servers to 'hang'
   because of a missing Release() call. (Alan, Harald)</li>
 </ul>
-There is a <a href="release_4_2_1.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br />
 
 <hr />
 
@@ -1279,7 +1279,7 @@ or entries for the specified extension. (Jani)</li>
 (Patch by Alan Knowles &lt;<a href="mailto:alan_k@hklc.com">alan_k@hklc.com</a>&gt; and Wez)</li>
 <li>Improved support for autoconf-2.50+/libtool 1.4b+. (Jan Kneschke, Sascha)</li>
 </ul>
-There is a <a href="release_4_2_0.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br />
 
 <hr />
 
@@ -1296,7 +1296,7 @@ There is a <a href="release_4_2_0.php">separate announcement</a> available for t
 <li>Changed the default output encoding of mbstring 'pass' to fix 
   initialization problem (Rui)</li>
 </ul>
-There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br />
 
 <hr />
 
@@ -1323,7 +1323,7 @@ There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> ava
 <li>Fixed a bug in the strtotime() function where it was incorrectly recognizing
   GMT +0100 and GMT -0100. (Derick)</li>
 </ul>
-There is a <a href="release_4_1_1.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br />
 
 <hr />
 
@@ -1528,7 +1528,7 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
   string indexed array. (Jason)</li>
 <li>Fixed memory leak upon re-registering constants. (Sascha, Zend Engine)</li>
 </ul>
-There is a <a href="release_4_1_0.php">separate announcement</a> available for this release.<br />
+More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br />
 
 <hr />
 
@@ -1644,7 +1644,7 @@ There is a <a href="release_4_1_0.php">separate announcement</a> available for t
 <li>Added mysql_unbuffered_query(), which is useful for very large result sets.
   (Zeev)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br />
 
 <hr />
 
@@ -1791,7 +1791,7 @@ There is no separate announcement available for this release.<br />
 <li>ext/odbc: IBM DB2 patch by Walter Franzini. (walter@sys-net.it)</li>
 <li>Added extension for the cracklib library. (Alexander Feldman)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br />
 
 <hr />
 
@@ -1947,7 +1947,7 @@ There is no separate announcement available for this release.<br />
 <li>Added HMAC support in the mhash module (nmav@altera.gr)</li>
 <li>Added module for Ovrimos sql server (nmav@altera.gr)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br />
 
 <hr />
 
@@ -2030,7 +2030,7 @@ There is no separate announcement available for this release.<br />
   method. Instead define yourself a method such as toString() and use
   print $obj-&gt;toString() (Andi, Zend Engine)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br />
 
 <hr />
 
@@ -2201,7 +2201,7 @@ There is no separate announcement available for this release.<br />
 <li>Added an optional parameter to preg_replace() that can be used to
   specify how many replacements to make. (Andrei)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br />
 
 <hr />
 
@@ -2365,7 +2365,7 @@ There is no separate announcement available for this release.<br />
 <li>Moved to virtual current working directory support. This highly improves the
   functionality and stability of multi-threaded versions of PHP (Andi, Sascha)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br />
 
 <hr />
 
@@ -2388,7 +2388,7 @@ There is no separate announcement available for this release.<br />
 <li>Ported imagegammacorrect from PHP3 to PHP4. (Sterling)</li>
 <li>Added array_rand() function. (Andrei)</li>
 </ul>
-There is no separate announcement available for this release.<br />
+More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br />
 
 <hr />
 
@@ -2485,7 +2485,6 @@ There is no separate announcement available for this release.<br />
   FreeBSD and OpenBSD (Sascha, TSRM)</li>
 <li>Added !== operator support. (Torben, Zend Engine)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -2574,7 +2573,6 @@ There is no separate announcement available for this release.<br />
 <li>Fixed getrusage() (Sascha)</li>
 <li>Fixed OCI8 crash when returning cursors from stored-procedures. (Thies)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -2584,7 +2582,6 @@ There is no separate announcement available for this release.<br />
 <li>Fixed crash when magic_quotes were switched off. (Thies)</li>
 <li>Support for pdflib 2.30 (Uwe)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -2759,7 +2756,6 @@ There is no separate announcement available for this release.<br />
 <li>Fixed mem-overwrite in XML_Parse_Into_Struct (Thies)</li>
 <li>Added substr_replace() function (Andrei)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -2985,7 +2981,6 @@ There is no separate announcement available for this release.<br />
 <li>Fixed thread-safe support for dynamic modules (Zeev)</li>
 <li>Fixed Sybase CT build process (Zeev)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -3068,7 +3063,6 @@ There is no separate announcement available for this release.<br />
   modules (Zeev)</li>
 <li>Gave PHP 4.0's SNMP extension all the functionality of PHP 3.0.12 (SteveL)</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <hr />
 
@@ -3077,6 +3071,5 @@ There is no separate announcement available for this release.<br />
 <ul>
 <li>First public beta of PHP 4.0</li>
 </ul>
-There is no separate announcement available for this release.<br />
 
 <?php site_footer(); ?>
