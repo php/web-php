@@ -55,6 +55,8 @@ A collection of PHP scripts.<BR>
 <LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
+<LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
+German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
 </UL>
