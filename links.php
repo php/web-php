@@ -772,6 +772,7 @@ site_header("Links");
  <li><a href="http://www.jobs.com/">Jobs.com</a></li>
  <li><a href="http://mojolin.com/">Mojolin</a></li>
  <li><a href="http://www.monster.com/">Monster.com</a></li>
+ <li><a href="http://www.php-freelancers.com/">php-freelancers.com</a></li>
  <li><a href="http://www.phpcareer.com/">phpcareer.com</a></li>
  <li><a href="http://www.totalfreelance.com/">totalfreelance.com</a></li>
  <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
