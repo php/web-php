@@ -3,6 +3,7 @@ $items = array (
 	"Any" => "Any (except Feature Requests)",
 
 	"*General Issues" => "General Issues",
+	"Website problem"          => "&nbsp;&nbsp;&nbsp;&nbsp;Website problem",
 	"Feature/Change Request"   => "&nbsp;&nbsp;&nbsp;&nbsp;Feature/Change Request",
 	"Documentation problem"    => "&nbsp;&nbsp;&nbsp;&nbsp;Documentation problem",
 	"Output Control"           => "&nbsp;&nbsp;&nbsp;&nbsp;Output Control",
@@ -75,8 +76,9 @@ $items = array (
 	"COM related"              => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COM related",
 	"Java related"             => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java related",
 	"Program Execution"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program Execution",
+	"POSIX related"            => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POSIX functions related",
 	"Readline related"         => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Readline related",
-	"Satellite CORBA related"  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite CORBA related",
+	"Satellite CORBA related"  => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Satellite CORBA related",
 	"Semaphore related"        => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semaphore related",
 
 	"*E-commerce functions"        => "&nbsp;&nbsp;&nbsp;&nbsp;E-commerce functions",
@@ -149,6 +151,5 @@ $items = array (
 	"URL related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL related",
 
 	"Unknown/Other Function" => "Unknown/Other Function",
-  "Website problem" => "Website problem"
 );
 ?>
