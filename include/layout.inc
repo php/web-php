@@ -392,7 +392,7 @@ function clean_note($text) {
     $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\"|\\.\\s|$)/","<a href=\"\\1\">\\1</a>\\3",$text);
 
     /* this 'fixing' code will go away eventually. */
-    $fixes = array('<br>', '</p>');
+    $fixes = array('<br>', '<p>', '</p>');
     reset($fixes);
     while (list(,$f)=each($fixes)) {
         $text=str_replace(htmlspecialchars($f), $f, $text);
