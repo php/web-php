@@ -104,11 +104,14 @@ site_header("Getting Help");
 <h1>PHP.net webmasters</h1>
 
 <p>
- If you have a problem or suggestion with the PHP.net website,
- please contact the webmasters' mailing list at
+ If you have a problem or suggestion <em>in connection with the PHP.net
+ website</em>, please contact the webmasters' mailing list at
  <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
  This mailing list is archived and also available as a newsgroup,
- much like all the other lists.
+ much like all the other lists. If you have problems setting up PHP
+ or using some functionality, please ask your question on a support
+ channel detailed above, the webmasters will not answer any such
+ questions.
 </p>
 
 <?php site_footer(); ?>
