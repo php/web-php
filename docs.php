@@ -69,19 +69,14 @@ commonHeader("Documentation ");
 
 <H2>PDF Versions (February 02, 2001)</H2>
 <ul>
-<ul>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-cs.pdf", "PHP PDF Manual (Czech)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-nl.pdf", "PHP PDF Manual (Dutch)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-en.pdf", "PHP PDF Manual (English)"); ?>
-<!-- French version doesn't currently compile :(
-<li><?php download_link("http://snaps.php.net/~jah/pdf/manual-fr.pdf", "PHP PDF Manual (French)"); ?>
--->
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-de.pdf", "PHP PDF Manual (German)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-hu.pdf", "PHP PDF Manual (Hungarian)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-it.pdf", "PHP PDF Manual (Italian)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-pt_BR.pdf", "PHP PDF Manual (Portuguese)"); ?>
 <li><?php download_link("http://snaps.php.net/~jah/pdf/manual-es.pdf", "PHP PDF Manual (Spanish)"); ?>
-</ul>
 </ul>
 
 <H2>Other Versions</H2>
