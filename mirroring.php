@@ -79,24 +79,43 @@ Once you create a virtualhost which looks something like:
 
 <a name="settings"></a>
 <pre>
-   &lt;VirtualHost your-hostname-here&gt;
-     ServerName your-hostname-here
+   &lt;VirtualHost *-or-your-hostname-here&gt;
+     ServerName *-or-your-hostname-here
      ServerAlias xx.php.net www.xx.php.net
      ServerAdmin yourname@yourdomain.com
+     
+     # Webroot of PHP mirror site
      DocumentRoot /www/htdocs/phpweb
+     
+     # These PHP settings are necessary to run a mirror
      php_value include_path .:/www/htdocs/phpweb/include
      php_flag register_globals on
+     
+     # Log server activity
      ErrorLog logs/error_log
      TransferLog logs/access_log
+     
+     # Set directory index
      DirectoryIndex index.php index.html
-     ErrorDocument 404 /error/index.php
+     
+     # Handle errors with local error handler script
+     ErrorDocument 401 /error/index.php
      ErrorDocument 403 /error/index.php
+     ErrorDocument 404 /error/index.php
+     
+     # Add types not specified by Apache by default
      AddType application/octet-stream .chm
      AddType application/octet-stream .bz2
-     # next line is only necessary if generating stats (see /stats/README.stats)
+     AddType application/x-pilot .prc .pdb 
+
+     # The next line is only necessary if 
+     # generating stats (see /stats/README.stats)
      Alias /stats/ /path/to/local/stats/
-     # next line only necessary if providing local search support (see /Mirrors-htdig.tgz)
+
+     # The next line is only necessary if you would
+     # like to provide local search support (see /Mirrors-htdig.tgz)
      SetEnv HTSEARCH_PROG /local/htdig/bin/htphp.sh
+
    &lt;/VirtualHost&gt;
 </pre>
    
