@@ -133,7 +133,7 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
-<?php echo make_image("phpconf2002.gif", "International PHP Conference 2002", "right"); ?>
+<?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "International PHP Conference 2002", "right")); ?>
 
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
@@ -142,9 +142,11 @@ After the big success of last year’s first International PHP Conference this
 year’s show will be even bigger and better.</p>
 
 <p>
-Come to Frankfurt and meet the most excellent speakers of the PHP community
-on four following days packed with whole day tutorials on November 3 and 4
-and a great variety of sessions on November 5 and 6.</p>
+<a href="http://www.php-conference.de/2002/index_en.php">Come to Frankfurt</a>
+and meet the most excellent speakers of the PHP community on four following days
+packed with <a href="http://www.php-conference.de/2002/pw_en.php">whole day
+tutorials</a> on November 3 and 4 and a great variety of sessions on November
+5 and 6.</p>
 
 <p>
 The topics are PHP Applications, PHP &amp; Business, Database Topics, PHP &amp; GTK,
