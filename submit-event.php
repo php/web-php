@@ -26,7 +26,8 @@ if (isset($in)) {
     $errors[] = "You must supply a short description of the event.";
   }
 
-  $in['ldesc'] = trim($in['ldesc']);
+  $in['ldesc'] = trim(strip_tags($in['ldesc'],'<a><i><b><br><p>'));
+  $in['ldesc'] = preg_replace("/(style|on\\w+?)\s*=\s*(\"|').+?\\2/i","",$in['ldesc']);
   if (!$in['ldesc']) {
     $errors[] = "You must supply a long description of the event.";
   }
