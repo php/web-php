@@ -10,7 +10,7 @@ cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.218
 cz	cz.php.net	Karel SOMMER <karel.sommer@inway.cz>	www.php.cz
 de	www.php3.de	smartin@schlund.de	62.104.64.10
 de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
-dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
+dk	dk.php.net	Jesper Angelo <guru@borsen.dk>	194.239.128.56
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
