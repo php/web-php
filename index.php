@@ -12,8 +12,9 @@ $SIDEBAR_DATA = '
 
 <p>
 <acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
-is a server-side, cross-platform, HTML embedded scripting
-language. If you are new to PHP and want to get some idea
+is a widely-used general-purpose scripting language that is
+especially suited for Web development and can be embedded into HTML.
+If you are new to PHP and want to get some idea
 of how it works, try the ' . make_link("/tut.php", "introductory tutorial") . '.
 After that, check out the online ' . make_link("/docs.php", "manual") . ',
 and the example archive sites and some of the other resources
@@ -76,6 +77,26 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<h1>PHP-GTK 0.5.0 released</h1>
+
+<p>
+<font class="newsDate">[24-Jan-2002]</font>
+<?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> has reached version
+0.5.0, also known as <em>"monday starts on saturday"</em>. The version number
+was bumped from 0.1.1 to this one to indicate that PHP-GTK is now a fairly
+mature and stable extension and can be used for a variety of applications
+(just look on <?php print_link("http://www.freshmeat.net/", "Freshmeat"); ?>).
+</p>
+
+<p>
+Also taking this opportunity, we would like to ask if some of you would consider
+helping out with PHP-GTK documentation. It would be a great way to learn this
+exciting extension and also contribute to the project.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.linuxtag.org", make_image("linuxtag2.gif", "LinuxTag", "right") ); ?>
 
 <h1>LinuxTag 2002 - Call for Papers</h1>
