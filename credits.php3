@@ -188,6 +188,9 @@ endif;
 
 <? makeName("Jeroen van der Most","jvdmost@digiface.nl",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
+
+<? makeName("Alex Plotnick","shrike@netaxs.com",0);?>
+  <UL TYPE=DISC><li>Gettext support</UL><BR>
   
 <? makeName("Chad Robinson","chadr@brttech.com",0);?>
   <UL TYPE=DISC><li>Documentation, FilePro</UL><BR>
@@ -207,6 +210,9 @@ endif;
 <? makeName("Egon Schmid","eschmid@delos.lf.net",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
 
+<? makeName("Sascha Schumann","sascha@schumann.2ns.de",0);?>
+  <UL TYPE=DISC><li>Regex cache, speedups & bug fixes, mSQL improvement and various string and time functions</UL><BR>
+
 <? makeName("sopwith@redhat.com","sopwith@redhat.com",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
@@ -216,8 +222,17 @@ endif;
 <? makeName("Eric Warnke","ericw@albany.edu",0);?>
   <UL TYPE=DISC><li>LDAP</UL><BR>
 
+<? makeName("Stephanie Wehner","_@r4k.net",0);?>
+  <UL TYPE=DISC><li>YP (NIS)</UL><BR>
+
+<? makeName("Timothy Whitfield","timothy@ametro.net",0);?>
+  <UL TYPE=DISC><li>Cybercash</UL><BR>
+
 <? makeName("Lars Torben Wilson","cslawi@uta.fi",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
+
+<? makeName("Andrey Zmievski","andrey@ispi.net",0);?>
+  <UL TYPE=DISC><li>WDDX</UL><BR>
 
 </DL>
 <hr noshade width="100%" size=1>
