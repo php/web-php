@@ -93,8 +93,8 @@
 <li>Jaakko Hyvätti (jaakko@hyvatti.iki.fi)
   <ul><li>Prototype cop and regular expression code fixes</ul>
 
-<li>Andreas Karajannis (kara@bibo.met.fu-berlin.de) 
-  <ul><li>Adabas D</ul>
+<li>Andreas Karajannis (Andreas.Karajannis@gmd.de) 
+  <ul><li>Adabas D, ODBC</ul>
 
 <li>Muhammad A Muquit (MA_Muquit@fccc.ed)
   <ul><li>Original Sybase module</ul>
