@@ -21,216 +21,203 @@ their answers. If you have suggestions or additions, send them to
 
 <H2>General Information</H2>
 
-<H3>What is PHP3?</H3>
+<DL>
+  <DT><B>
+    What is PHP3?
+  </B></DT>
+  <DD>
+    From the <A href="http://www.php.net/manual/manual.html">manual</A>:
 
-<P>From the <A href="http://www.php.net/manual/manual.html">manual</A>:
+    <BLOCKQUOTE>
+    <P>Professional Home Pages Version 3.0 is an HTML-embedded scripting
+    language. Much of its syntax is borrowed from C, Java and Perl with a
+    couple of unique PHP-specific features thrown in. The goal of the language
+    is to allow web developers to write dynamically generated pages quickly.
+    </BLOCKQUOTE>
+  <P>
+  </DD>
 
-<BLOCKQUOTE>
-<P>Professional Home Pages Version 3.0 is an HTML-embedded scripting
-language. Much of its syntax is borrowed from C, Java and Perl with a
-couple of unique PHP-specific features thrown in. The goal of the language
-is to allow web developers to write dynamically generated pages quickly.
-</BLOCKQUOTE>
+  <DT><B>
+    What is its relation to PHP/FI?
+  </B></DT>
+  <DD>
+    PHP3 is the successor to PHP/FI 2.0.
+  <P>
+  </DD>
 
-<H3>What is its relation to PHP/FI?</H3>
+  <DT><B>
+    What are the differences between PHP3 and PHP/FI 2.0?</H3>
+  </B></DT>
+  <DD>
+    For a complete list of the changes, read the <A
+    href="changes.php3">CHANGES</A> file included in the PHP3
+    distribution. Some highlights:
 
-PHP3 is the successor to PHP/FI 2.0.
+    <UL>
+      <LI>All-new parser.
+      <LI>Persistent database connections.
+      <LI>IMAP, SNMP, and LDAP extensions.
+    </UL>
+  <P>
+  </DD>
 
-<H3>What are the differences between PHP3 and PHP/FI 2.0?</H3>
+  <DT><B>
+    I heard it's possible to access Microsoft SQL Server from PHP3. How?
+  </B></DT>
+  <DD>
+    On Windows 95/NT machines, you can simply use the included ODBC support
+    and the correct ODBC driver.
 
-<P>For a complete list of the changes, read the <A href="changes.php3">CHANGES</A>
-file included in the PHP3 distribution. Some highlights:
+    <P>On Unix machines, you can use the Sybase-CT driver
+    to access Microsoft SQL Servers because they are (at
+    least mostly) protocol-compatible. Sybase has made a <A
+    href="/extra/ctlib-linux-elf.tar.gz">free version of the necessary
+    libraries for Linux systems</A>.  For other Unix operating systems,
+    you need to contact Sybase for the correct libraries (which cost
+    money).
+  <P>
+  </DD>
 
-<UL>
-  <LI>All-new parser.
-  <LI>Persistent database connections.
-</UL>
+  <DT><B>
+    Can I access Microsoft Access databases?
+  </B></DT>
+  <DD>
+    Yes. You already have all the tools you need if you are running
+    entirely under Windows 95 or NT, where you can use ODBC and Microsoft's
+    ODBC drivers for Microsoft Access databases. From other platforms, you
+    would need to have a server running Windows NT (or possibly Windows 95)
+    which you connected to using ODBC drivers from your other platform and
+    <A href="http://www.openlinksw.com/">OpenLink Software's ODBC Agent</A>
+    software, which runs US$4,000.
 
-<H3>I heard it's possible to access Microsoft SQL Server from PHP3. How?</H3>
+    <P>Some better alternatives are to use an SQL server that has
+    Windows ODBC drivers and use that to store the data, which you can
+    then access from Microsoft Access (using ODBC) and PHP3 (using the
+    built-in drivers), or to use an intermediary file format that Access
+    and PHP3 both understand, such as flat-files or dBase databases.
+  <P>
+  </DD>
 
-<P>On Windows 95/NT machines, you can simply use the included ODBC support
-and the correct ODBC driver.
+  <DT><B>
+    Is there a PHP3 mailing list?
+  </B></DT>
+  <DD>
+    Of course! To subscribe, send mail to
+    <CODE>php3-subscribe@php.il.eu.org</CODE>. You don't need to include
+    anything special in the subject or body of the message.
 
-<P>On Unix machines, you can use the Sybase-CT driver to access Microsoft
-SQL Servers because they are (at least mostly) protocol-compatible. Sybase
-has made a <a href="/extra/ctlib-linux-elf.tar.gz">free version of the necessary libraries for Linux systems</a>.
-For other Unix operating systems, you need to contact Sybase for the correct
-libraries (which cost money).
+    <P>To unsubscribe, send mail to <CODE>php3-unsubscribe@php.il.eu.org</CODE>.
+  <P>
+  </DD>
 
-<H3>Can I access Microsoft Access databases?</H3>
+  <DT><B>
+    Help! I can't seem to subscribe to the mailing list!
+  </B></DT>
+  <DT><B>
+    Help! I can't seem to unsubscribe from the mailing list!
+  </B></DT>
+  <DD>
+    If you have problems subscribing to or unsubscribing from the
+    PHP3 mailng list, it may be because the mailing list software
+    can't figure out the correct mailing address to use. If
+    your email address was <CODE>joeblow@example.com</CODE>,
+    you can send your subscription request to
+    <CODE>php3-subscribe-joeblow=example.com@php.il.eu.org</CODE>,
+    or your unsubscription request to
+    <CODE>php3-unsubscribe-joeblow=example.com@php.il.eu.org</CODE>.
+  <P>
+  </DD>
 
-<P>Yes. You already have all the tools you need if you are running
-entirely under Windows 95 or NT, where you can use ODBC and Microsoft's
-ODBC drivers for Microsoft Access databases. From other platforms, you
-would need to have a server running Windows NT (or possibly Windows 95)
-which you connected to using ODBC drivers from your other platform and
-<A href="http://www.openlinksw.com/">OpenLink Software's ODBC Agent</A>
-software, which runs US$4,000.
-
-<P>Some better alternatives are to use an SQL server that has Windows ODBC
-drivers and use that to store the data, which you can then access from
-Microsoft Access (using ODBC) and PHP3 (using the built-in drivers), or
-to use an intermediary file format that Access and PHP3 both understand,
-such as flat-files or dBase databases.
-
-<H3>I saw PHP3 offers persistent database connections.   What does that mean?</H3>
-
-<p>Persistent connections are SQL links that do not close when the
-execution of your script ends.  When a persistent connection is requested,
-PHP checks if there's already an identical persistent connection (that
-remained open from earlier) - and if it exists, it uses it.  If it does
-not exist, it creates the link.  An 'identical' connection is a connection
-that was opened to the same host, with the same username and the same
-password (where applicable).
-
-<p>People who aren't thoroughly familiar with the way Web servers work and
-distribute the load may mistake persistent connects for what they're not.
-In particular, they do NOT give you an ability to open 'user sessions' on
-the same SQL link, they do NOT give you an ability to build up a transaction
-efficently, and they don't do a whole lot of other things.  In fact, to be
-extremely clear about the subject, persistent connections don't give you ANY
-functionality that wasn't possible with their non-persistent brothers.
-
-<p>Why?
-<p>This has to do with the way the way Web servers work.  We can divide
-PHP to three main types.  First, PHP in its CGI mode.  In CGI mode, there's
-no difference between persistent and non persistent connects.  The reason is
-simple - a CGI binary terminates as soon as the execution of your script ends.
-Obviously, when it dies, any resource it may have 'owned', including any type
-of SQL link, dies with it (in practice PHP is nicer and properly closes the
-SQL link right before it dies, but even if it didn't, the link wouldn't have
-been reusable).
-
-<p>The second way of running PHP is as a plugin for a *multithreaded* server.
-Currently, this is only theoratical - Shane has a thread safe ISAPI module
-in the works, and NSAPI/Win32 will probably follow soon after the ISAPI one
-works right.  Multithreaded servers are a bit different in what they enable
-developers to do, even though as far as I can tell right now, PHP's behavior
-would be identical to the one of *multiprocess* servers.  See below.
-
-<p>The last, and most popular way of running PHP is as a plugin to the
-multiprocess server - apache.  A quick guide to the way apache (usually)
-works - apache has one 'parent' process, that doesn't answer to requests.
-Its job is to coordinate between its children.  The children, which are
-spawned by the parent, are the processes that answer to HTTP requests. The
-load of the requests is divided among all of the children.  That is, two
-subsequent hits on the same page are likely to be handled by TWO DIFFERENT
-PROCESSES.  This is the key issue here.  There are plenty of processes that
-make the 'Web server', and the load is distributed among them.
-
-<p>What does that have to do with persistent connections?  Everything.  That
-explains why there's no added functionality in persistent connections.  When
-you open a persistent connection, you can't do something like beginning a
-transaction, and hope that the next time the user submits a page you'd just
-continue the transaction.  You can't lock tables and hope that the next hit
-by the user will unlock the tables.  The two requests are most likely to be
-handled by two different processes!
-
-<p>If persistent connections don't have any added functionality, what are
-they good for?
-<p>The answer here is extremely simple - efficiency.  Persistent connections
-are good if the overhead to create a link to your SQL server is high.
-Whether or not this overhead is really high depends on many factors.  Like,
-what kind of database it is, whether or not it sits on the same computer on
-which your web server sits, how loaded the machine the SQL server sits on is
-and so forth.  The bottom line is that IF that connection overhead is high,
-persistent connects help you.  They simply connect only once for the entire
-lifespan of the httpd child, instead of once per hit that child processes.
-Make sure you understand - this means that for every child that opened a
-persistent connection will have its own open persistent connection to the
-server.  That is, if you had 20 different httpd processes that ran a script
-that included a pconnect(), you'd have 20 different connections to the SQL
-server, one from each child.
-
-<p>An important summary.  pconnects were designed to have 1::1 mapping to
-regular connects.  That means that you should ALWAYS be able to replace
-persistent connect with a non-persistent connect, and it won't change the
-way the script behaves.  It MAY and probably will change the efficiency of
-the script, but not its behavior!
-
-<H3>Is there a PHP3 mailing list?</H3>
-
-<P>Of course! To subscribe, send mail to
-<CODE>php3-subscribe@php.il.eu.org</CODE>. You don't need to include
-anything special in the subject or body of the message.
-
-<P>To unsubscribe, send mail to
-<CODE>php3-unsubscribe@php.il.eu.org</CODE>.
-
-<H3>Help! I can't seem to subscribe to the mailing list!</H3>
-<H3>Help! I can't seem to unsubscribe from the mailing list!</H3>
-
-<P>If you have problems subscribing to or unsubscribing from the PHP3
-mailng list, it may be because the mailing list software can't figure
-out the correct mailing address to use. If your email address was
-<CODE>joeblow@example.com</CODE>, you can send your subscription request
-to <CODE>php3-subscribe-joeblow=example.com@php.il.eu.org</CODE>,
-or your unsubscription request to
-<CODE>php3-unsubscribe-joeblow=example.com@php.il.eu.org</CODE>.
-
-<H3>Is there an archive of the mailing list anywhere?</H3>
-
-<P>Yes, it's located at <A
-href="http://www.tryc.on.ca/php3.html">http://www.tryc.on.ca/php3.html</A>.
+  <DT><B>
+    Is there an archive of the mailing list anywhere?
+  </B></DT>
+  <DD>
+    Yes, it's located at <A
+    href="http://www.tryc.on.ca/php3.html">http://www.tryc.on.ca/php3.html</A>.
+  </DD>
+</DL>
 
 <HR>
 
 <H2>Obtaining PHP3</H2>
 
-<H3>Where can I obtain PHP3?</H3>
+<DL>
+  <DT><B>
+    Where can I obtain PHP3?
+  </B></DT>
+  <DD>
+    You can download PHP3 from any of the members of the
+    PHP3 network of sites. These can be found at <A
+    href="http://www.php.net/">http://www.php.net/</A>.
+    You can also use anonymous CVS to get the absolute latest
+    version of the source. For more information, go to <A
+    href="http://ca.php.net/php3.cgi">http://ca.php.net/php3.cgi</A>.
+  <P>
+  </DD>
 
-<P>You can download PHP3 from any of the members of the
-PHP3 network of sites. These can be found at <A
-href="http://www.php.net/">http://www.php.net/</A>.
-You can also use anonymous CVS to get the absolute latest
-version of the source. For more information, go to <A
-href="http://www.lerdorf.on.ca/php3.cgi">http://www.lerdorf.on.ca/php3.cgi</A>.
+  <DT><B>
+    Are pre-compiled binary versions available?</H3>
+  </B></DT>
+  <DD>
+    Yes, as long as you're looking for binaries for Windows 95 or NT.
+    They're available in the same place as the source.
+  <P>
+  </DD>
 
-<H3>Where can I get libraries needed to compile some of the optional
-PHP3 extensions?</H3>
+  <DT><B>
+    Where can I get libraries needed to compile some of the optional
+    PHP3 extensions?
+  </B></DT>
+  <DD>
+    <B>Note:</B> Those marked with * are not thread-safe libraries, and
+    should not be used with PHP3 as a server module in the multi-threaded
+    Windows web servers (IIS, Netscape).  This does not matter in Unix
+    environments, yet.
 
-<P>Note: Those marked with * are not thread-safe libraries, and should
-not be used with PHP3 as a server module in the multi-threaded Windows web
-servers (IIS, Netscape).  This does not matter in Unix environments, yet.
+    <UL>
+      <LI>LDAP (unix): <A href="ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z">ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z</A>
+      <LI>LDAP* (win): <A href="ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip">ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip</A><br>
+          There is also a free LDAP server at: <A href="ftp://ftp.critical-angle.com/pub/cai/slapd/">ftp://ftp.critical-angle.com/pub/cai/slapd/</A>.
+      <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
+      <LI>SNMP (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
+      <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
+      <LI>mSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
+      <LI>mSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
+      <LI>MySQL (Unix): <A href="http://www.tcx.se/">http://www.tcx.se/</A>
+      <LI>IMAP* (Win/Unix): <A HREF="ftp://ftp.cac.washington.edu/imap/old/imap-4.tar.Z">ftp://ftp.cac.washington.edu/imap/old/imap-4.tar.Z</A>
+      <LI>Sybase-CT (Linux, libc5):  <A href="/extra/ctlib-linux-elf.tar.gz">Available locally</A>
+    </UL>
+  <P>
+  </DD>
 
-<UL>
-  <LI>LDAP (unix): <A href="ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z">ftp://terminator.rs.itd.umich.edu/ldap/ldap-3.3.tar.Z</A>
-  <LI>LDAP* (win): <A href="ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip">ftp://terminator.rs.itd.umich.edu/ldap/windows/winldap.zip</A><br>
-	There is also a free LDAP server at: <A href="ftp://ftp.critical-angle.com/pub/cai/slapd/">ftp://ftp.critical-angle.com/pub/cai/slapd/</A>.
-  <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
-  <LI>SNMP (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
-  <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
-  <LI>mSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
-  <LI>mSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
-  <LI>MySQL (Unix): <A href="http://www.tcx.se/">http://www.tcx.se/</A>
-  <LI>IMAP* (Win/Unix): <A HREF="ftp://ftp.cac.washington.edu/imap/old/imap-4.tar.Z">ftp://ftp.cac.washington.edu/imap/old/imap-4.tar.Z</A>
-  <LI>Sybase-CT (Linux, libc5):  <a href="/extra/ctlib-linux-elf.tar.gz">Available locally</a>
-</UL>
+  <DT><B>
+    How do I get these libraries to work?
+  </B></DT>
+  <DD>
+    You will need to follow instructions provided with the library. Some of
+    these libraries are detected automatically when you run the 'configure'
+    script of PHP3 (such as the GD library), and others you will have to
+    enable using '--with-EXTENSION' options to 'configure'. Run 'configure
+    --help' for a listing of these.
+  <P>
+  </DD>
 
-<H3>How do I get these libraries to work?</H3>
-
-<P>You will need to follow instructions provided with the library. Some of
-these libraries are detected automatically when you run the 'configure'
-script of PHP3 (such as the GD library), and others you will have to
-enable using '--with-EXTENSION' options to 'configure'. Run 'configure
---help' for a listing of these.
-
-<H3>Are pre-compiled binary versions available?</H3>
-
-<P>Yes, as long as you're looking for binaries for Windows 95 or NT.
-They're available in the same place as the source.
-
-<H3>I got the latest version of the PHP3 source code from the CVS
-repository on my Windows 95/NT machine, what do I need to compile it?</H3>
-
-<P>First, you will need Microsoft Visual C++ v5 (v4 may
-do it also, but we do it with v5), and you will need to <A
-href="http://www.php.net/win32/makeparser.zip">download Bison and
-Flex</A>.  You will need to put Bison and Flex somewhere in your path,
-or add their location to your path.  Then run the batch file 'makeparser'
-before compiling with MSVC.  You also may need to edit some settings
-in the project settings.  You should be familier enough with MSVC to
-know what to do ;).
+  <DT><B>
+    I got the latest version of the PHP3 source code from the CVS
+    repository on my Windows 95/NT machine, what do I need to compile it?
+  </B></DT>
+  <DD>
+    First, you will need Microsoft Visual C++ v5 (v4 may do
+    it also, but we do it with v5), and you will need to <A
+    href="http://www.php.net/win32/makeparser.zip">download Bison and
+    Flex</A>.  You will need to put Bison and Flex somewhere in your
+    path, or add their location to your path.  Then run the batch file
+    'makeparser' before compiling with MSVC.  You also may need to edit
+    some settings in the project settings.  You should be familier enough
+    with MSVC to know what to do ;).
+  <P>
+  </DD>
+</DL>
 
 <HR>
 
@@ -354,6 +341,97 @@ README.WIN32 file.
 <HR>
 
 <H2>Using PHP3</H2>
+
+<H3>New Features</H3>
+
+<DL>
+  <DT><B>
+    I saw PHP3 offers persistent database connections.   What does that mean?
+  </B></DT>
+  <DD>
+    Persistent connections are SQL links that do not close when the
+    execution of your script ends.  When a persistent connection is
+    requested, PHP checks if there's already an identical persistent
+    connection (that remained open from earlier) - and if it exists, it
+    uses it.  If it does not exist, it creates the link.  An 'identical'
+    connection is a connection that was opened to the same host, with
+    the same username and the same password (where applicable).
+
+    <P>People who aren't thoroughly familiar with the way web servers
+    work and distribute the load may mistake persistent connects for what
+    they're not.  In particular, they do <B>not</B> give you an ability
+    to open 'user sessions' on the same SQL link, they do <B>not</B>
+    give you an ability to build up a transaction efficently, and they
+    don't do a whole lot of other things.  In fact, to be extremely
+    clear about the subject, persistent connections don't give you <B>any</B>
+    functionality that wasn't possible with their non-persistent brothers.
+
+    <P>Why?
+
+    <P>This has to do with the way web servers work. There are three ways
+    in which your web server can utilize PHP to generate web pages.
+
+    <P>The first method is to use PHP as a CGI "wrapper". When run this
+    way, an instance of the PHP interpreter is created and destroyed for
+    every page request (for a PHP page) to your web server. Because it
+    is destroyed after every request, any resources that it acquires (such
+    as a link to an SQL database server) are closed when it is destroyed.
+    In this case, you do not gain anything from trying to use persistent
+    connections -- they simply don't persist.
+
+    <P>The second, and most popular, method is to run PHP as a module
+    in a <I>multiprocess</I> web server, which currently only includes
+    Apache. A multiprocess server typically has one process (the parent)
+    which coordinates a set of processes (its children) who actually do
+    the work of serving up web pages. When each request comes in from a a
+    client, it is handed off to one of the children that is not already
+    serving another client. This means that when the same client makes
+    a second request to the server, it may be serviced by a different
+    child process than the first time. What a persistent connection does
+    for you in this case it make it so each child process only needs
+    to connect to your SQL server the first time that it serves a page
+    that makes us of such a connection. When another page then requires
+    a connection to the SQL server, it can reuse the connection that
+    child established earlier.
+
+    <P>The last method is to use PHP as a plug-in for a <I>multithreaded</I>
+    web server. Currently this is only theoretical -- PHP does not
+    yet work as a plug-in for any multithreaded web servers. Work is
+    progressing on support for ISAPI, WSAPI, and NSAPI (on Windows),
+    which will all allow PHP to be used as a plug-in on multithreaded
+    servers like Netscape FastTrack, Microsoft's Internet Information
+    Server (IIS), and O'Reilly's WebSite Pro. When this happens, the
+    behavior will be essentially the same as for the multiprocess model
+    described before.
+
+    <P>If persistent connections don't have any added functionality,
+    what are they good for?
+
+    <P>The answer here is extremely simple -- efficiency.  Persistent
+    connections are good if the overhead to create a link to your SQL
+    server is high.  Whether or not this overhead is really high depends
+    on many factors.  Like, what kind of database it is, whether or
+    not it sits on the same computer on which your web server sits,
+    how loaded the machine the SQL server sits on is and so forth.
+    The bottom line is that if that connection overhead is high,
+    persistent connections help you considerably.  They cause the child
+    process to simply connect only once for its entire lifespan, instead
+    of every time it processes a page that requires connecting to the
+    SQL server.  This means that for every child that opened a persistent
+    connection will have its own open persistent connection to the server.
+    For example, if you had 20 different child processes that ran a script
+    that made a persistent connection to your SQL server, you'd have 20
+    different connections to the SQL server, one from each child.
+
+    <P>An important summary.  Persistent connections were designed to
+    have one-to-one mapping to regular connections.  That means that you
+    should <B>always</B> be able to replace persistent connections with
+    non-persistent connections, and it won't change the way your script
+    behaves.  It <B>may</B> (and probably will) change the efficiency
+    of the script, but not its behavior!
+  <P>
+  </DD>
+</DL>
 
 <H3>Common Problems</H3>
 
