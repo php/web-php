@@ -21,7 +21,7 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 }
 
 # handle moving english manual down into its own directory
-if (eregi("^(.*)/manual/([^/]+.php3?)", $REQUEST_URI, $array)) {
+if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 	if($SERVER_PORT!=80) {
 		$url = "http://".$SERVER_NAME.":".$SERVER_PORT."$array[1]/manual/$lang/".$array[2];
 	} else {
