@@ -72,7 +72,7 @@ not only will have to untar and ungzip it, but you will have to convert the
 bare linefeeds to crlf's in the <CODE>*.dsp</CODE> and <CODE>*.dsw</CODE> files 
 before Microsoft Visual C++ will have anything to do with them.</P>
 <UL>
-  <LI><B>Note:</B> place the <CODE>libzend</CODE> and <CODE>TSRM</CODE> 
+  <LI><B>Note:</B> place the <CODE>Zend</CODE> and <CODE>TSRM</CODE> 
   directories inside the <CODE>php4</CODE> directory in order for the projects 
   to be found during the build process.
 </UL>
