@@ -38,6 +38,7 @@ $MIRRORS = array(
    "http://nl.php.net/"               => array("nl", "WEBtic Internet Consultancy", "webtic", "http://www.webtic.com/", 1, 0, "nl"),
    "http://php.nederland.net/"        => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 1, 0, "nl"),
    "ftp://ftp.nederland.net/pub/php/" => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 0, 0, "nl"),
+#   "http://nz.php.net/"               => array("nz", "EXPIO Communications", "", "http://www.expio.co.nz/", 1, 0, "en"),
    "http://php.guardian.no/"          => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 0, 0, "no"),
    "http://no.php.net/"               => array("no", "Fast Search &amp; Transfer ASA", "fast", "http://www.fast.no/", 1, 0, "no"),
 #   "http://ph.php.net/"               => array("ph", "Ateneo de Zamboanga", "", "http://www.adzu.edu.ph", 1, 0, "en"),
