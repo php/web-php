@@ -71,7 +71,7 @@ echo "<font size=\"-1\">\n";
 echo hdelim();
 
 if ($cmd == "send") {
-	if (incoming_details_are_valid(1)) {
+	if (incoming_details_are_valid(1,1)) {
 		$ret = mysql_query("INSERT INTO bugdb (bug_type,email,sdesc,ldesc,php_version,php_os,status,ts1,passwd) VALUES ('$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open',NOW(),'$passwd')");
     
 		$cid = mysql_insert_id();
@@ -661,9 +661,9 @@ function addlinks($text)
 }
 
 /* validate an incoming bug report */
-function incoming_details_are_valid($require_ldesc=0) 
+function incoming_details_are_valid($require_ldesc=0,$require_passwd=0) 
 {
-    global $email,$bug_type,$php_version,$sdesc,$ldesc;
+    global $email,$bug_type,$php_version,$sdesc,$ldesc,$passwd;
 
 	$valid = 1;
 	if(!preg_match("/[.\\w+-]+@[.\\w-]+\\.\\w{2,}/i",$email)) {
@@ -688,6 +688,11 @@ function incoming_details_are_valid($require_ldesc=0)
 
     if ($require_ldesc && !$ldesc) {
 		echo "<h2 class=\"error\">You must supply a long description of the bug you are reporting.</h2>";
+		$valid = 0;
+	}
+
+	if ($require_passwd && empty($passwd)) {
+		echo "<h2 class=\"error\">You must supply a password for this bug report.</h2>";
 		$valid = 0;
 	}
 
