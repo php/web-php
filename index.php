@@ -147,7 +147,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>DotGeek Certification Programme</h1>
 <p>
- <span class="newsdate">[19-Jan-2003]</span>
+ <span class="newsdate">[19-Jan-2004]</span>
  Dotgeek (a community, non-business driven website made by developers
  for the PHP programmers community) is glad to announce
  "<a href="http://www.dotgeek.org/about.php?type=certify">The DotGeek
@@ -171,7 +171,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>PHP Conference 2004 Spring Edition Programme Online</h1>
 <p>
- <span class="newsdate">[18-Jan-2003]</span>
+ <span class="newsdate">[18-Jan-2004]</span>
  The session programme of the <a href="http://www.phpconference.com/">International
  PHP Conference 2004 Spring Edition Amsterdam</a> has now been published
  by the organizers. It features 32 fine sessions from PHP core developers and
