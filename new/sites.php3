@@ -151,7 +151,7 @@
 <blockquote><blockquote>
 <font size=+1><i><tt>If you have a site you feel belongs on this list, please
 send us email at <a href="mailto:sites@php.net">sites@php.net</a>.  With well
-over 30,000 sites on the Internet running PHP, we cannot list them all.  This
+over 60,000 sites on the Internet running PHP, we cannot list them all.  This
 list is to help developers justify their decision to use PHP.  It should thus
 contain high-profile sites that someone not necessarily well-versed in the ways
 of the Internet might have heard of.
