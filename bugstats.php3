@@ -35,7 +35,7 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 
 	commonHeader("Bug Stats");
 	
-	mysql_pconnect("localhost","","");
+	mysql_pconnect("localhost","nobody","");
 	mysql_select_db("php3");
 
 	$result=mysql_query("SELECT * from bugdb");
