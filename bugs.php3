@@ -1,4 +1,3 @@
-<html><head><title>PHP3 Bug Database</title>
 <?
 
 /* See the end of the script for the table layout. */
@@ -353,6 +352,7 @@ href="FAQ.php3">Frequently Asked Questions</A> to see whether your
 problem may already be a known issue, and also check the bug database
 for any outstanding bug reports that match your bug.</STRONG>
 
+<div align="right">
 <table>
  <tr>
   <th align=right>Your email address:</th>
@@ -395,6 +395,7 @@ for any outstanding bug reports that match your bug.</STRONG>
    <input type=text size=40 maxlength=79 name="sdesc">
   </td>
 </table>
+</div>
 
 <table>
 <tr>
