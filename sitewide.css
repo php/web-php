@@ -9,6 +9,9 @@ body, html {
 body, input, textarea, select, option {
 	font-family: verdana, arial, helvetica, sans-serif;
 }
+code, pre, tt {
+	font-family: Courier, "Courier New", monospace;
+}
 
 #content, #headmenu, #footnav, #copyright, #thismirror,
 #headsearch span, #headsearch input, #headsearch select {
