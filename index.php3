@@ -4,7 +4,7 @@ commonHeader("PHP3 Main Page");
 ?>
 Welcome to PHP's new home with an all-new look to it.  The design is courtesy of Colin Viebrock
 at <a href="http://www.privateworld.com">Private World Communications</a>.  Please let us know
-of any problems with the site by sending a message to <a href="mailto:webmaster@php.net?subject=<?
+of any problems with the site by sending a message to <a href="mailto:webmaster@php.net?subject=<? 
 echo "New Look Feedback (browser:$HTTP_USER_AGENT)";?>">
 
 PHP 3.0 is server-side HTML embedded scripting language and it is a complete rewrite of the popular 
