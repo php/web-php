@@ -44,7 +44,9 @@
 	} else {
 		$words="";
 	}
-	if(!isset($icase)) {
+	if(isset($icase)) {
+		$icase="";
+	} else {
 		$icase="-i";
 	}
 	if(isset($fuzzy) && $fuzzy) {
@@ -81,7 +83,7 @@
 			error_reporting(0);
 			$fp = fopen($file,"r");
 			error_reporting(1);
-			if($fp>-1) {
+			if($fp) {
 				$text = fgetss($fp,256);
 				$text = ereg_replace("  +"," ",$text);
 				$text = ereg_replace(13,"",$text);
