@@ -683,9 +683,10 @@ site_header("Links");
   <strong>Polish</strong>
   <ul>
    <li>
-    <a href="http://php.spinacz.pl">php.spinacz.pl</a><br />
-    The biggest Polish site about programming in PHP -- A
-    phpbuilder.com-like site in Polish.
+    <a href="http://php.pl">php.pl</a><br />
+    Daily updated website with articles, translations, the
+    biggest PHP Polish forum, dedicated IRC server, legal
+    information section, etc.
    </li>
   </ul>
  </li>
