@@ -50,7 +50,7 @@ function endEntry() {
 <P>
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
-<? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zd.de", "Jan. 18, 1999"); ?>
+<? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de", "Jan. 18, 1999"); ?>
 "PHP3 is the most powerful tool on the market for building dynamic,
 database-driven websites. Internet Pro shows how to realize a classified ads
 site with PHP and MySQL." <I>This article isn't available online yet.</I>
