@@ -24,7 +24,7 @@ if ($tmp) {
 } else {
   $page_name = $page_url;
 }
-
+echo "<!-- $page_name -->\n";
 show_source($page_name);
 
 commonFooter();
