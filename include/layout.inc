@@ -201,7 +201,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099">
-<!--UdmComment-->
+
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="120"><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
@@ -250,9 +250,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 </font>
    </td>
  </tr>
- <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?></td></tr>
+ <tr bgcolor="#333366"><td colspan="3"><?php spacer(1,1);?></td></tr> 
 </table>
-<!--/UdmComment-->
 
 <?php
   if (!$dont_enclose):
@@ -270,11 +269,16 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
   <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
 <?php endif; ?>
   <td>
-   <table cellpadding="10" cellspacing="0" width="620">
+   <table cellpadding="10" cellspacing="0" width="100%">
     <tr><td valign="top">
 <?php
   endif;
-}
+/* don't show this yet ... ?>
+ <div class="mirror">
+ You are using <?php echo $MYSITE; ?>. However, foo.php.net is closer. We would appreciate if you could use that mirror.
+ </div>
+
+<? */ }
 
 
 # commonfooter()
@@ -283,9 +287,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
 function commonFooter() {
 	global $SCRIPT_NAME,$MYSITE,$LAST_UPDATED,$PHP_SELF,$enclosed, $RSIDEBAR_DATA;
-	echo "<!--UdmComment-->";
 	if ($enclosed) {
-		spacer(620);
 		echo "</td></tr></table></td>";
 		if(isset($RSIDEBAR_DATA)) {?>
 <td bgcolor="#cccccc" background="/gifs/checkerboard.gif" width="1"><?php spacer(1,1);?></td>
@@ -329,11 +331,7 @@ function commonFooter() {
 		print_link('/stats/', 'stats', false, 'class="small"');
 		echo delim();
 	}
-	print_link('/mirrors.php', 'mirror sites:', false, 'class="small"');
-	echo " <select class=\"small\" name=\"country\" onchange=\"gotomirror(this.form)\">\n";
-	show_mirror_options($MYSITE);
-	echo "</select> ";
-	echo make_submit('small_submit.gif', 'go', 'bottom' );
+	print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
       ?>&nbsp;
    </form>
   </td>
@@ -451,6 +449,19 @@ function display_event($event,$include_date=1)
  <tr bgcolor="#eeeeee"><td><?php echo preg_replace("/\r?\n\r?\n/","<br /><br />",trim($event['ldesc'])); if ($event['url']) {?><br /><br /><b>URL:</b> <?php echo '<a href="',htmlentities($event['url']),'">',htmlentities($event['url']),'</a>'; }?></td></tr>
 </table>
 <?php
+}
+
+function calc_distance($from,$to) {
+  $lat1 = pi()/180 * $from['lat'];
+  $lat2 = pi()/180 * $to['lat'];
+  $lon1 = pi()/180 * $from['lon'];
+  $lon2 = pi()/180 * $to['lon'];
+
+  $dlat = $lat2 - $lat1;
+  $dlon = $lon2 - $lon1;
+
+  $t = pow(sin($dlat/2), 2) + cos($lat1)*cos($lat2)*pow(sin($dlon/2),2);
+  return atan2(sqrt($t),sqrt(1-$t));
 }
 
 ?>

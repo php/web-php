@@ -1,6 +1,6 @@
 body, ul, td, th {
 	font-family: verdana,arial,helvetica,sans-serif;
-	font-size: 90%;
+	font-size: 85%;
 }
 
 p {
@@ -22,13 +22,14 @@ acronym {
 }
 
 .newsDate {
-	font-size: 85%;
+	font-size: 75%;
 	font-style: italic;
 	color: #6666cc;
 }
 
 .sidebar {
-	font-size: 85%;
+	font-size: 80%;
+	padding: 5px;
 }
 
 .sidebar p {
@@ -37,12 +38,12 @@ acronym {
 
 code, pre, tt {
 	font-family: Courier, "Courier New", monospace;
-	font-size: 90%;
+	font-size: 80%;
 }
 
 h1 {
 	font-family: verdana,arial,helvetica,sans-serif;
-	font-size: 140%;
+	font-size: 130%;
 	font-weight: bold;
 	color: #000066;
 }
@@ -161,3 +162,11 @@ form.thin {
 .parameter:after {
 	content: " ";
 }
+
+div.mirror {  
+	border: 1px dashed #660000;
+	background: #fee;
+	color: #660000;
+	margin: 4px;
+	padding: 6px;
+} 

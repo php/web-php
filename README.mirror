@@ -1,4 +1,4 @@
-MIRRORING OF THE PHP.NET WEBSITE
+             MIRRORING OF THE PHP.NET WEBSITE
 ------------------------------------------------------------------------
 
 If you want to become an official PHP mirror, please be sure to
@@ -7,8 +7,8 @@ consent of your hosting company (if you aren't a hosting company
 yourself), and be prepared for some reasonably significant bandwidth
 usage (a reasonable estimate as of 2/2002 is 150MB/day).
 
-Also, we are currently only accepting new official mirrors in
-countries where we don't already have two active official mirrors.
+** Also, we are currently only accepting new official mirrors in
+countries where we don't already have two active official mirrors. **
 
 The PHP website requires PHP 4.
 
@@ -121,7 +121,24 @@ email address. Anyway if you would like to follow the things,
 you can subscribe, by sending an empty message to:
 php-mirrors-subscribe@lists.php.net
 
+We would like to thank you for providing php.net with a mirror, so
+if you would like to display a logo on the site promoting your mirror,
+you are able to do so by following these steps:
+
+- Create a logo button 120 x 60 pixels.
+- copy it to your /local/path/to/phpweb/backend as "mirror.gif".
+- go visit your mirror url. 
+
+The PHP Group do reserve the right to refuse images based on content, but
+most things should be fine.
+
+We have chosen mirror sizes that go along with the Internet Advertising Bureau
+standards < http://www.iab.net/iab_banner_standards/bannersizes.html >.
+
 And finally, don't forget to put a nice little PHP logo somewhere
 on your hosting company's site if possible. Grab one of the logos
 from the "Download PHP Logos and Icons" page on the PHP site,
 and link it to your mirror.
+
+
+Thank you for being a mirror!

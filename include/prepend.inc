@@ -3,6 +3,7 @@
 unset($RSIDEBAR_DATA);
 require_once 'site.inc';
 require_once 'layout.inc';
+require_once 'geoip.inc';
 
 # this file is generated on rsync.php.net and propogated
 # from there it just defines $LAST_UPDATED.
