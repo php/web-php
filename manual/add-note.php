@@ -80,7 +80,7 @@ things making the manual hard to read for everybody. You can include
 categories mentioned there, it will be rejected by one of the editors.</p>
 
 <P><b>Note:</b> If you are trying to <A href="http://bugs.php.net/">report a
-bug</A>, or <a href="http://bugs.php.net/">request a new fature or language
+bug</A>, or <a href="http://bugs.php.net/">request a new feature or language
 change</a> you're in the wrong place.  If you are just commenting on the fact
 that something is not documented, save your breath. This is where <b>you</b>
 add to the documentation, not where you ask <b>us</b> to add the
