@@ -10,16 +10,20 @@ mysql_connect() and mysql_select_db("php3") or die("SQL problem");
 $res1 = mysql_result(mysql_query("select count(*) from name_vote where choice=1"),0,0);
 $res2 = mysql_result(mysql_query("select count(*) from name_vote where choice=2"),0,0);
 $res3 = mysql_Result(mysql_query("select count(*) from name_vote where choice=3"),0,0);
+$total = $res1+$res2+$res3;
+$per1 = sprintf("%.1f",$res1/$total*100);
+$per2 = sprintf("%.1f",$res2/$total*100);
+$per3 = sprintf("%.1f",$res3/$total*100);
 ?>
 
 <h3>Summary</h3>
 <center>
 <table border="1" bgcolor="#eeeeee">
-<tr><th>Name</th><th>Votes</th></tr>
-<tr><td bgcolor="#cfefff">PHP HTML Preprocessor</td><td align="right" bgcolor="#cfefff"><? print $res1; ?></td></tr>
-<tr><td bgcolor="#ffefaf">PHP Hypertext Preprocessor</td><td align="right" bgcolor="#ffefaf"><? print $res2; ?></td></tr>
-<tr><td bgcolor="#cfffcf">PHP Hypermedia Preprocessor</td><td align="right" bgcolor="#cfffcf"><? print $res3; ?></td></tr>
-<tr><th>Total</th><td align="right"><? print $res1+$res2+$res3; ?></td></tr>
+<tr><th>Name</th><th>Votes</th><th>%</th></tr>
+<tr><td bgcolor="#cfefff">PHP HTML Preprocessor</td><td align="right" bgcolor="#cfefff"><? print $res1; ?></td><td align="right" bgcolor="#cfefff"><? print "$per1%"; ?></td></tr>
+<tr><td bgcolor="#ffefaf">PHP Hypertext Preprocessor</td><td align="right" bgcolor="#ffefaf"><? print $res2; ?></td><td align="right" bgcolor="#ffefaf"><? print "$per2%"; ?></td></tr>
+<tr><td bgcolor="#cfffcf">PHP Hypermedia Preprocessor</td><td align="right" bgcolor="#cfffcf"><? print $res3; ?></td><td align="right" bgcolor="#cfffcf"><? print "$per3%"; ?></td></tr>
+<tr><th>Total</th><td align="right"><? print $total; ?></td><td align="right">100.0%</td></tr>
 </table>
 </center>
 <br>

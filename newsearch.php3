@@ -48,14 +48,15 @@ if ((isset($pattern))&&($pattern||$prevpattern)&&(!isset($page))) {
 require("shared.inc");
 include("configuration.inc");
 
-if ($HAVE_SEARCH) {
-	$form=$PHP_SELF;
-} else {
-	$form="http://uk.php.net/newsearch.php3";
-}
+
 if(!isset($pattern)) { 
 	$DISABLE_KICKOUTS = true;
 	commonHeader("Site Search");
+	if ($HAVE_SEARCH) {
+		$form=$PHP_SELF;
+	} else {
+		$form="http://uk.php.net/newsearch.php3";
+	}
 	if (!isset($prevsearch)) {
 		$prevsearch[0]="";
 	}
@@ -103,7 +104,12 @@ if(!isset($pattern)) {
 	</CENTER>
 	</form>
 <? } else {
-	commonHeader("Search Results");
+		commonHeader("Search Results");
+		if ($HAVE_SEARCH) {
+			$form=$PHP_SELF;
+		} else {
+			$form="http://uk.php.net/newsearch.php3";
+		}
 		if (!isset($base)) {
 			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,&$reg)) {
 				$base=$reg[1];
