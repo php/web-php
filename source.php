@@ -25,7 +25,7 @@ $dir = dirname($url);
 // The separate manual language dirs are legal dirs
 if (preg_match("!^/manual/(en|pt_BR|cs|nl|fr|de|hu|it|ja|kr|es)$!", $dir) || $legal_dirs[$dir]) {
       $legal_dir = TRUE;
-} else { $legal_dir = FALSE: }
+} else { $legal_dir = FALSE; }
 
 // If this is a legal dir, then it is under the docroot, else use basename
 if ($dir && $legal_dir) {
