@@ -1,4 +1,12 @@
 <?
+	require 'cvs-auth.inc';
+	if (isset($save) && isset($pw)) { # non-developers don't have $user set
+		setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*20,'/');
+	}
+	if (isset($MAGIC_COOKIE) && !isset($user) && !isset($pw)) {
+		list($user,$pw) = explode(":", base64_decode($MAGIC_COOKIE));
+	}
+
 	mysql_connect('localhost') or die('unable to connect to database');
 	mysql_select_db('php3');
 
@@ -244,7 +252,7 @@ function draw_event($ev) {
 }
 
 function draw_app() {
-	global $a,$cm,$cy;
+	global $a,$cm,$cy, $user, $pw;
 ?>
 <tr bgcolor=#d0d0d0><td>
 <form action="cal.php?a=<?echo $a?>&cm=<?echo $cm?>&cy=<?echo $cy?>" method="POST">
@@ -259,7 +267,7 @@ function draw_app() {
 			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>$e[3]</td><td>$e[4]</td></tr>\n";	
 			$i++;
 		}
-		echo "<tr><td align=left><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom></td></tr>";
+		echo "<tr><td align=left colspan=5><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom> &nbsp; <b>CVS Login</b>: <input type=text name=user value=\"$user\"> <b>CVS Passwd</b>: <input type=password name=pw value=\"$pw\"></td></tr>";
 	}
 	
 ?>
@@ -388,11 +396,16 @@ foreach($re as $k=>$v) {
 	}
 
 	if(isset($entries)) {
-		if(isset($HTTP_POST_VARS['Approve_Selected_x']) || isset($HTTP_POST_VARS['Approve_Selected']) || isset($HTTP_POST_VARS['Approve_Selected_y'])) {
-			foreach($entries as $entry=>$val) {
-				$result = mysql_query("update phpcal set approved=1, app_by='rasmus' where id=$entry");
-				if(!$result) echo mysql_error();
+		if (verify_password($user,$pw)) {
+			if(isset($HTTP_POST_VARS['Approve_Selected_x']) || isset($HTTP_POST_VARS['Approve_Selected']) || isset($HTTP_POST_VARS['Approve_Selected_y'])) {
+				foreach($entries as $entry=>$val) {
+					$result = mysql_query("update phpcal set approved=1, app_by='rasmus' where id=$entry");
+					if(!$result) echo mysql_error();
+				}
 			}
+		} else {
+			echo "<h2 class=\"error\">The username or password you supplied was incorrect.</h2>\n";
+			$ap = 1;
 		}
 	}
 
