@@ -11,7 +11,8 @@ include_once 'languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site
-function is_primary_site($site = FALSE) {
+function is_primary_site($site = FALSE)
+{
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $site == "http://www.php.net/";
@@ -19,7 +20,8 @@ function is_primary_site($site = FALSE) {
 
 // Returns true if the current (or specified)
 // site is the backup site of the primary site
-function is_backup_primary($site = FALSE) {
+function is_backup_primary($site = FALSE)
+{
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $site == "http://download.php.net/";
@@ -27,7 +29,8 @@ function is_backup_primary($site = FALSE) {
 
 // Returns the current (or specified)
 // mirror site's default language
-function default_language($site = FALSE) {
+function default_language($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][6];
@@ -35,7 +38,8 @@ function default_language($site = FALSE) {
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local search support
-function have_search($site = FALSE) {
+function have_search($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][5];
@@ -43,15 +47,26 @@ function have_search($site = FALSE) {
 
 // Returns true if the current (or specified) mirror
 // site is registered to have local stats support
-function have_stats($site = FALSE) {
+function have_stats($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][2];
 }
 
 // Returns the current (or specified)
+// mirror site's country code
+function mirror_country($site = FALSE)
+{
+    global $MIRRORS, $MYSITE;
+    if (!$site) { $site = $MYSITE; }
+    return $MIRRORS[$site][0];
+}
+
+// Returns the current (or specified)
 // mirror site's provider's name
-function mirror_provider($site = FALSE) {
+function mirror_provider($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][1];
@@ -59,7 +74,8 @@ function mirror_provider($site = FALSE) {
 
 // Returns the current (or specified)
 // mirror site's provider's URL
-function mirror_provider_url($site = FALSE) {
+function mirror_provider_url($site = FALSE)
+{
     global $MIRRORS,$MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][3];
@@ -82,7 +98,8 @@ if (!defined("MIRROR_STANDARD")) {
 
 // Returns the current (or specified)
 // mirror site's type (use the constants!)
-function mirror_type($site = FALSE) {
+function mirror_type($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][4];
@@ -90,7 +107,8 @@ function mirror_type($site = FALSE) {
 
 // Returns the current (or specified)
 // mirror site's status (use the constants!)
-function mirror_status($site = FALSE) {
+function mirror_status($site = FALSE)
+{
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
     return $MIRRORS[$site][7];
