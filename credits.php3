@@ -32,14 +32,12 @@ function makeName($name,$email,$size) {
 <DL>
 <? makeName("Rasmus Lerdorf","rasmus@php.net",1);?>
 <UL TYPE=DISC>
-<li>Concept
 <li>Original language definition and implementation
 <li>CGI loader and many internal functions
 <li>Apache module support
 <li>SNMP module
 <li>Original mSQL, MySQL and Sybase modules
 <li>Oracle module work
-<li>Project Coordinator
 </UL><BR>
 
 <? makeName("Andi Gutmans","andi@php.net",1);?>
