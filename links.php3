@@ -65,7 +65,7 @@ German site with installation guides, tips & scripts, BestOfGML, WhoIsWho - a vi
 <LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
 is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.phpinfo.net/">PHPInfo</A><BR>
-another french site about PHP.<BR>
+French site about PHP/MySQL: Links, Tips, Articles, Manuals, FAQ, Code Downloads, and much more!<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A>
