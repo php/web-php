@@ -316,7 +316,7 @@ array(
     /* author[s]    */ "Leon Atkinson",
     /* auth link[s] */ "http://zend.com/comm_person.php?id=30",
     /* image        */ "0130893986.jpg",
-    /* information  */ "Foreword by ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans")."<br>".
+    /* information  */ "Foreword by ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans")."<br />".
                        "Prentice Hall, Second Edition, August 2000, ISBN 0-13-089398-6, 769 pages",
     /* inform. link */ "http://www.leonatkinson.com/index.php3?screen=eng_book",
     /* language     */ "en"
@@ -372,7 +372,9 @@ array(
     /* author[s]    */ "Matt Zandstra",
     /* auth link[s] */ "",
     /* image        */ "0672323117.jpg",
-    /* information  */ "Sams, Dec 2001, ISBN 0-6723-2311-7, 528 pages" . 
+    /* information  */ "Sams, Dec 2001, ISBN 0-6723-2311-7, 528 pages<br />" . 
+                       "There is also more information on the first edition on
+                       <a href=\"http://www.sams.com/catalog/product.asp?product_id={AC657B6D-7E41-457D-A203-906D91B0C088}\">it's webpage</a>",
     /* inform. link */ "http://www.sams.com/catalog/product.asp?product_id={F90FC049-C258-4E7C-AAA5-CDF148BBB9A0}",
     /* language     */ "en"
    ),
@@ -394,10 +396,10 @@ array(
     /* author[s]    */ array("Tobias Ratschiller", "Till Gerken"),
     /* auth link[s] */ array("http://zend.com/comm_person.php?id=7","http://zend.com/comm_person.php?id=11"),
     /* image        */ "0735709971.jpg",
-    /* information  */ "Contains Official Zend API Documentation<br>" .
+    /* information  */ "Contains Official Zend API Documentation<br />" .
                        "With contributions by Zend Technologies' " .
                        make_link("http://zend.com/comm_person.php?id=12", "Zeev Suraski") . " and " .
-                       make_link("http://zend.com/zend/hof/andi.php", "Andi Gutmans") . "<br>\n" .
+                       make_link("http://zend.com/zend/hof/andi.php", "Andi Gutmans") . "<br />\n" .
                        "New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages",
     /* inform. link */ "http://www.phpwizard.net/book/",
     /* language     */ "en"
@@ -464,7 +466,7 @@ array(
     /* author[s]    */ array("Sterling Hughes","Andrei Zmievski"),
     /* auth link[s] */ array("http://zend.com/zend/hof/sterling.php","http://zend.com/comm_person.php?id=24"),
     /* image        */ "0672319241.jpg",
-    /* information  */ "Foreword by " . make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br>\n" .
+    /* information  */ "Foreword by " . make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br />\n" .
                        "Sams, November 2000, ISBN 0-6723-1924-1, 505 pages",
     /* inform. link */ "",
     /* language     */ "en"
@@ -586,7 +588,7 @@ array(
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
     /* auth link[s] */ "",
     /* image        */ "0672320290.jpg",
-    /* information  */ "Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<br>" .
+    /* information  */ "Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<br />" .
                        "Also available in " .
                        make_link("http://php.adatnet.hu/Kossuth.ShowIssue/Kossuth.showIssueEvent/415", "Hungarian"),
     /* inform. link */ "",
@@ -599,7 +601,7 @@ array(
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
     /* image        */ "0072127317.jpg",
-    /* information  */ "Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<br>" .
+    /* information  */ "Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<br />" .
                        "Also available in " .
                        make_link("http://cyberspace.mht.bme.hu/~cakes/panem_vasarlas_cgi/kiadvanyok.cgi?katid=6&amp;lap=9635453094", "Hungarian"),
     /* inform. link */ "",
@@ -689,7 +691,7 @@ array(
     /* author[s]    */ "Peter Moulding",
     /* auth link[s] */ "",
     /* image        */ "1588800539.jpg",
-    /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages<br>" .
+    /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages<br />" .
                        "Also available in " .
                        make_link("http://www.interbook.hu/index.php?op=ShowProduct&amp;id=2213", "Hungarian"),
     /* inform. link */ "",
@@ -769,12 +771,12 @@ array(
     /* auth link[s] */ array("http://zend.com/zend/hof/schmid.php", false),
     /* image        */ "3827258774.jpg",
     /* information  */ "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
-                       " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br>\n" .
+                       " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<br />\n" .
                        "Unter Mitarbeit von " .
                        make_link("http://www.zend.com/comm_person.php?id=38", "Wolfgang Drews, ") .
                        make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") .
                        make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") .
-                       " und Christian Wenz<br>\n" .
+                       " und Christian Wenz<br />\n" .
                        "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages",
     /* inform. link */ "http://www.php-buch.de/",
     /* language     */ "de"
@@ -1473,7 +1475,7 @@ array(
     /* author[s]    */ array("Randy Jay Yarger","George Reese","Tim King"),
     /* auth link[s] */ "",
     /* image        */ "1565924347.gif",
-    /* information  */ "O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<br>\n" .
+    /* information  */ "O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<br />\n" .
                        "Also available in " .
                        make_link("http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872","Russian"),
     /* inform. link */ "",
@@ -1486,7 +1488,7 @@ array(
     /* author[s]    */ "Michael Kofler",
     /* auth link[s] */ "",
     /* image        */ "3827317622.jpg",
-    /* information  */ "Addison-Wesley - Pearson Education Deutschland, March 2001, ISBN 3-82731-762-2, 624 pages<br>\n",
+    /* information  */ "Addison-Wesley - Pearson Education Deutschland, March 2001, ISBN 3-82731-762-2, 624 pages<br />\n",
     /* inform. link */ "http://www.kofler.cc/mysql/",
     /* language     */ "de"
   ),
@@ -1498,8 +1500,8 @@ array(
     /* auth link[s] */ "",
     /* image        */ "0735709211.jpg",
     /* information  */ "Foreword by " . make_link("http://zend.com/zend/hof/widenius.php", "Michael \"Monty\" Widenius") .
-                       "<br>New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages" .
-                       "<br>Also available in " .
+                       "<br />New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages" .
+                       "<br />Also available in " .
                        make_link("http://www.amazon.fr/exec/obidos/ASIN/2744008826/wwwphpnet0f", "French") .
                        " and " . make_link("http://www.amazon.de/exec/obidos/ASIN/382725793X/wwwphpnet07", "German"),
     /* inform. link */ "http://www.newriders.com/books/title.cfm?isbn=0735709211",
@@ -1524,7 +1526,7 @@ array(
     /* auth link[s] */ "",
     /* image        */ "1565923251.gif",
     /* information  */ "Includes a large chapter on PHP written by " .
-                       make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br>\n" .
+                       make_link("http://lerdorf.com/bio.php", "Rasmus Lerdorf") . "<br />\n" .
                        "O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/webmaster2/",
     /* language     */ "en"
