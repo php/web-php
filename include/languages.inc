@@ -53,6 +53,7 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
             case 'zh_cn': return 'zh';
             case 'zh_hk': return 'hk';
             case 'zh_tw': return 'tw';
+            case 'ko'   : return 'kr';
             default:      return $langcode;
         }
     }
@@ -61,6 +62,7 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
             case 'cn': return 'zh_cn';
             case 'hk': return 'zh_hk';
             case 'tw': return 'zh_tw';
+            case 'kr': return 'ko';
             default:   return $langcode;
         }
     }
