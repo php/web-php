@@ -50,13 +50,20 @@ function highlight_php($code, $return = FALSE)
    commonHeader and commonFooter functions in the future altogether */
 function site_header($title = '', $config = array())
 {
-    global $EXPL_LANG;
+    global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS;
     
     // Default to empty array if improper parameter passed
     if (!is_array($config)) { $config = array(); }
     
     // String defaults
-    $lang_input = $base = $meta = '';
+    $lang_input = $base = $meta = $layout_helper = '';
+    
+    // Count number of columns for layout. The number identifies
+    // the layout precisely, as we have no page having a right
+    // sidebar and no left sidebar
+    $PAGE_COLUMNS = 1;
+    if (!empty($SIDEBAR_DATA))  { $PAGE_COLUMNS++; }
+    if (!empty($RSIDEBAR_DATA)) { $PAGE_COLUMNS++; }
     
     // Print out lang and charset headers
     if (!isset($config["lang"]))    { $config["lang"] = "en"; }
@@ -84,6 +91,11 @@ function site_header($title = '', $config = array())
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
+    }
+    
+    // Define layout helper in case we need it
+    if ($PAGE_COLUMNS > 2) {
+        $layout_helper = "<div id=\"layout_{$PAGE_COLUMNS}_helper\">";
     }
     
     print <<<END_HEADER
@@ -138,22 +150,38 @@ function site_header($title = '', $config = array())
  </form>
 </div>
 
-<div id="content">
+<div id="layout_{$PAGE_COLUMNS}">{$layout_helper}
 END_HEADER;
+
+    // Print out left column
+    if ($PAGE_COLUMNS > 1) {
+        echo "\n <div id=\"leftbar\">\n$SIDEBAR_DATA\n </div>";
+    }
+    
+    // Print out right column
+    if ($PAGE_COLUMNS > 2) {
+        echo "\n <div id=\"rightbar\">\n$RSIDEBAR_DATA\n </div>";
+    }
+
+    // Start main page content
+    echo "\n <div id=\"content\">\n";
 }
 
 // See the comment for site_header() above
 function site_footer()
 {
-    global $LAST_UPDATED;
+    global $LAST_UPDATED, $PAGE_COLUMNS;
     
     $stats = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
     $provider_url  = mirror_provider_url();
     $provider_name = mirror_provider();
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
+    $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
     
     print <<<END_FOOTER
-</div>
+
+ </div>
+{$layout_helper}</div>
 
 <div id="footnav">
  <a href="/source.php?url=/{$_SERVER['BASE_PAGE']}">show source</a> |
