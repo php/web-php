@@ -20,7 +20,10 @@ learning PHP, as well as extending your existing knowledge.
 <p>
 PHP user groups have started popping up.  Christopher
 R. Moewes-Bystrom is running a PHP user group registry at <a
-href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
+href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.<br>
+As Germany's PHP-community is quite busy, they have their own user groups.
+For an overview as well as news from the various groups have a look at <a href="http://www.phpug.de/">
+http://www.phpug.de/</a>.  
 </p>
 
 <h3>Sample Code</h3>
