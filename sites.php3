@@ -96,6 +96,7 @@ right away.</blockquote>
 /* Games */
 	title("Games");
 	siteStart();
+	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
 
