@@ -1564,6 +1564,17 @@ $books = array (
     /* language     */ "en"
   ),
 
+  array(
+    /* title[s]     */ "Professionelle Softwareentwicklung mit PHP 5",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898642291/wwwphpnet07",
+    /* author[s]    */ "Sebastian Bergmann",
+    /* auth link[s] */ "http://www.sebastian-bergmann.de/",
+    /* image        */ "3898642291.png",
+    /* information  */ "January, 2005, ISBN 3-89864-229-1, 200 pages",
+    /* inform. link */ "http://www.professionelle-softwareentwicklung-mit-php5.de/",
+    /* language     */ "de"
+  ),
+
  ),
 
 
