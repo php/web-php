@@ -3,14 +3,14 @@ require_once 'prepend.inc';
 commonHeader("PHP Usage Stats");
 ?>
 <h1>
-Usage Stats for February 2001
+Usage Stats for March 2001
 </h1>
 
-Feb 2001: PHP: 5558363 Domains, 856543 IP Addresses<br>
+PHP: 5747237 Domains, 882439 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 
 <p>
-<? echo print_image("stats/phpstats-200102.gif", "Graph"); ?>
+<? echo print_image("stats/phpstats-200103.gif", "Graph"); ?>
 </p>
 
 <p>
