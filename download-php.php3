@@ -14,12 +14,35 @@ $filesizes["mod_php-3.0.3-1.i386.rpm"]="~ 318KB";
 $filesizes["mod_php-3.0.3-1.src.rpm"]="~ 1304KB";
 
 function makeCap() {
-	GLOBAL $MIRRORS, $COUNTRIES;
+	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF,$MYSITE;
+	global $showcountry,$showsites,$csel;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD align=center colspan=3 rowspan=2 NOWRAP>
 <?
+if (!isset($csel)) {
+	$csel='';
+	if (!($hostname=getenv("REMOTE_HOST"))) {
+		$ipaddr=getenv("REMOTE_ADDR");
+		$hostname=gethostbyaddr($ipaddr);
+		if ($hostname==$ipaddr) { $hostname=""; }
+	}
+	if ($hostname) {
+		if (ereg('([a-zA-Z]+)$',$hostname,$reg)) {
+			$csel=$reg[0];
+		}
+	}
+}
+if ($COUNTRIES[$csel]) {
+	$showcountry=$csel;
+} else {
+	$info=$MIRRORS[$MYSITE];
+	$showcountry=$info[0];
+	if (!$showcountry) {
+		$showcountry="us";
+	}
+}
 $mirror_sites=$MIRRORS;
 $count=0;
 $lastc="";
@@ -29,11 +52,14 @@ while ($site = key($mirror_sites)) {
 	next($mirror_sites);
 	$c = $info[0];
         $cname=$COUNTRIES[$c];
+	if ($c==$showcountry) {
+		$showsites[]=$site;
+	}
 	if ($c == $lastc || $c == 'xx') {
 		continue;
 	}
 	$count++;
-	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 VSPACE=5 hspace=15 BORDER=0 ALT=\"$cname\"></A>";
+	echo "<A HREF=\"$PHP_SELF?csel=$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 VSPACE=5 hspace=15 BORDER=0 ALT=\"$cname\"></A>";
 	if ($count%5==0) {
 		echo "<BR>\n";
 	}
@@ -53,8 +79,8 @@ while ($site = key($mirror_sites)) {
 
 commonHeader("Download PHP Engine");
 ?>
-<FONT SIZE=+1><B>Pick a mirror site close to you:</B></FONT><BR>
-<I>(all mirrors are updated at least every hour)</I><BR>
+<FONT SIZE=+1><B>Choose a country to download from:</B></FONT><BR>
+<I>(the closest has automagically been selected for you)</I><BR>
 <BR>
 <BR>
 
@@ -63,12 +89,13 @@ commonHeader("Download PHP Engine");
 <?
 makeCap();
 
+$thisurl=substr($PHP_SELF,1); /* strip leading slash */
 $mirror_sites=$MIRRORS;
 $lastcountry="xxxxx";
-reset($mirror_sites);
-while ($site = key($mirror_sites)) {
+reset($showsites);
+while ($site = current($showsites)) {
+	next($showsites);
 	$info = $mirror_sites[$site];
-	next($mirror_sites);
 	list($country, $location, $shortname, $companyurl, $show) = $info;
 	$cname=$COUNTRIES[$country];
 	if (!$show) {
@@ -87,7 +114,7 @@ while ($site = key($mirror_sites)) {
 		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0 ALT=' '></TD>\n";
-		echo "<TD><A NAME=\"$country\"><IMG SRC='/gifs/gflag-$country.gif' ALT='$cname' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10></A><BR></TD>\n";
+		echo "<TD><A HREF=\"$site$thisurl?csel=$country\"><IMG SRC='/gifs/gflag-$country.gif' ALT='$cname' WIDTH=45 HEIGHT=24 vspace=6 BORDER=0 hspace=10></A><BR></TD>\n";
 		echo "<TD colspan=2>";
 		echo "<FONT FACE='$FONTFACE'><B>$COUNTRIES[$country]</B><BR></TD>\n";
 		echo "<TD align=right><IMG ALT=' ' SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
@@ -134,13 +161,18 @@ while ($site = key($mirror_sites)) {
 		echo "<LI>";
 		download_link($src_rpm, "($method) PHP $current source RPM");
 		echo "\n";
-		echo "<LI>";
 	}
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }
 ?>
+
 <TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>
-<? makeCap(); ?>
+<TR BGCOLOR='#D0D0D0' VALIGN=middle>
+<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0 ALT=' '></TD>
+<TD COLSPAN=4 align=right><IMG ALT=' ' SRC='/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+</TR>
+
+
 </TABLE>
 <?
 commonFooter();
