@@ -91,7 +91,7 @@ So you need to build a database application that will be delivered over the Web.
 <? endEntry(); ?>
 
 <? makeEntry( "Object-Oriented Programming with PHP", "by <a mailto:href=\"mailto:wj@unstrung.com\">Jason Gilmore</a>",
-    "http://www.webreview.com/pub/2000/06/02/feature/index03.html?wwwrrr_rss", "June 2, 2000");?>
+    "http://www.webreview.com/2000/06_02/developers/06_02_00_3.shtml", "June 2, 2000");?>
 Couple Object-Oriented Programming with PHP and you've got features
 worth inheriting. From foundations to class to inheritance, Jason makes
 understanding objects within PHP easy--and practical.
