@@ -159,7 +159,7 @@ $minute = rand(0, 59);
      # Set mirror's preferred language here
      SetEnv MIRROR_LANGUAGE "en"
 
-     # The next lines are only necessary if generating
+     # The next two lines are only necessary if generating
      # stats (see below), otherwise you should comment them out
      Alias /stats/ /path/to/local/stats/
      SetEnv MIRROR_STATS 1
@@ -167,6 +167,12 @@ $minute = rand(0, 59);
      # Apache2 has 'AddHandler type-map var' enabled by default.
      # Remove the comment sign on the line below if you have it enabled.
      # RemoveHandler var
+     
+     # Turn spelling support off (which would break URL shortcuts)
+     &lt;IfModule mod_speling.c&gt;
+       CheckSpelling Off
+     &lt;/IfModule&gt;
+         
    &lt;/VirtualHost&gt;
 </pre>
    
