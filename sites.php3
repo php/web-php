@@ -56,13 +56,14 @@
 	site("Christian Financial Concepts","cfcministry.org");
 
 	echo "</tr><tr>\n";
-	title("Newspapers");
+	title("Newspapers & Magazines");
 	title("Computer Hardware");
 	title("Computer Software");
 
 	echo "</tr><tr><td align=top>\n";
-	/* Newspapers*/
+	/* Newspapers & Magazines */
 	site("Børsen - Danish Business Daily","www.borsen.dk");
+	site("Computer Currents","www.computercurrents.com");
 
 	echo "<br></td><td align=top>\n";
 	/* Computer Hardware */
