@@ -183,6 +183,9 @@ endif;
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
   
+<? makeName("Mark Musone","musone@edgeglobal.com",0);?>
+  <UL TYPE=DISC><li>IMAP, ASpell</UL><BR>
+
 <? makeName("Jeroen van der Most","jvdmost@digiface.nl",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
