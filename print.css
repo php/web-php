@@ -1,31 +1,33 @@
 /* Horizontal delimiter defaults */
 hr {
-    border: 0px;
-    color: black;
-    background-color: black;
-    height: 1px;
+	border: 0px;
+	color: black;
+	background-color: black;
+	height: 1px;
 }
 
 /* Clear floating objects */
 hr.topdivider {
-    clear: both;
+	clear: both;
 }
 
 /* Natural white background color */
 body, html {
-    background-color: white;
-    color: black;
+	background-color: white;
+	color: black;
 }
 
 /* Link colors for all links */
 a, a:visited {
-    color: #000099;
+	color: #000099;
+	background-color: transparent;
 }
-
 a:active {
-    color: #0000ff;
+	color: #0000ff;
+	background-color: transparent;
 }
 
+/* Drop border around images */
 img {
-    border: 0px;
+	border: 0px;
 }
