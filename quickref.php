@@ -18,7 +18,7 @@ function makeTable($lang,$array) {
 		if ($i>0 && $i%$limit==0) {
 			echo "</TD><TD WIDTH=\"50%\">\n";
 		}
-		echo "<A HREF=\"/manual/".$file."\">".$name."</A><BR>\n";
+		echo "<A HREF=\"/manual/".$lang."/".$file."\">".$name."</A><BR>\n";
 		$i++;
 	}
 	echo '</TD></TR></TABLE>';
