@@ -200,6 +200,7 @@ right away.</blockquote>
 	siteStart();
 	site("Bar-None Drink Recipes","psp.pair.com/barnone/");
 	site("Cookbook Wizard","www.cookbookwizard.com");
+	site("Drink Specials","www.drinkspecials.com");
 	site("Food Geeks","foodgeeks.com");
 	site("Foodstop.Com","www.foodstop.com");
 	siteEnd();
@@ -277,6 +278,7 @@ right away.</blockquote>
 	site("Mail Chek","mail.chek.com");
 	site("MailFriends.com","www.mailfriends.com");
 	site("MegaDownload","megadownload.de");
+	site("MyDesktop.Com","www.mydesktop.com");
 	site("My URLs", "murl.com");
 	site("National Search &amp; Discovery","www.nation-search.com");
 	site("Oneview Bookmark Management","www.oneview.com");
@@ -306,7 +308,9 @@ right away.</blockquote>
 	site("Cable & Wireless ECRC GmBH","www.ecrc.de");
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
+	site("Digital Academy","www.digalch.com");
 	site("DigitalDaze","www.digitaldaze.com");
+	site("Deutsches Provider Network","www.dpn.de");
 	site("ForeverNET","www.forevernet.de");
 	site("Internections Inc.","www.ixi.net");
 	site("Italia Online","www.iol.it");
@@ -478,6 +482,7 @@ right away.</blockquote>
 	site("Arena Fan","www.arenafan.com");
 	site("Ballgirl Athletic","www.ballgirl.com");
 	site("BART's Water Sports","www.bartswatersports.com");
+	site("Beaufort Composite Technologies","www.composites.com");
 	site("Bird Mansions","birdmansions.com");
 	site("Bowling-France","bowling-france.net");
 	site("Bruna bookstore","www.bruna.com");
@@ -497,6 +502,7 @@ right away.</blockquote>
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("HomePoint.com","www.homepoint.com");
 	site("IMT","www.imt.com");
+	site("Indian Metals","www.indianmetals.com");
 	site("JC Whitney","www.jcwhitney.com");
 	site("Jennifer Furniture","www.jenniferfurniture.com");
 	site("Kellymoore Paints","www.kellymoore.com");
@@ -511,6 +517,7 @@ right away.</blockquote>
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Professional Pavement Products, Inc.","www.pppcatalog.com");
+	site("Rejuvenation Lamp and Fixture Co.","www.rejuvenation.com");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("R U Sure","www.rusure.com");
 	site("Sellit-Here Online","www.sellit-here.com");
@@ -529,6 +536,7 @@ right away.</blockquote>
 /* Search Engines */
 	title("Search Engines");
 	siteStart();
+	site("EuroSeek","www.euroseek.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
 	site("Lycos RichMedia Search", "richmedia.lycos.com");
 	site("alltheweb.com", "alltheweb.com");
@@ -587,6 +595,7 @@ right away.</blockquote>
 	site("TUI - Touristik Union International","www.tui.com");
 	site("Whereis Street Atlas","www.whereis.com.au");
 	site("Whistler Resort Guide","www.whistler.net");
+	site("YachtNow.Com","www.yachtnow.com/home.php3");
 	siteEnd();
 
 /* User Groups */
@@ -603,6 +612,7 @@ right away.</blockquote>
 	title("Web Development Companies");
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
+	site("Cybersource Australia","www.cyber.com.au");
 	site("ego Software","www.ego-software.com");
 	site("Electronic Spider","www.espider.com");
 	site("Espada Ltd.","www.espadanet.com");
@@ -613,6 +623,7 @@ right away.</blockquote>
 	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
 	site("Six Offene Systeme GmbH","www.six.de");
+	site("WAM!design","www.wamdesign.com");
 	siteEnd();
 
 /* Misc. */
