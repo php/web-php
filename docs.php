@@ -135,6 +135,19 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
 <td align="center" bgcolor="#eeeeee">&nbsp;</td>
 <td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">chm</a></td>
 </tr>
+<tr>
+<td bgcolor="#dddddd"><b>Version courte</b></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/annotee/">Voir</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">html.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">txt.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">tar.gz</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">zip</a></td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">pdf</a></td>
+<td align="center" bgcolor="#eeeeee">&nbsp;</td>
+<td align="center" bgcolor="#eeeeee">&nbsp;</td>
+<td align="center" bgcolor="#eeeeee"><a href="http://dev.nexen.net/docs/php/chargement.html">chm</a></td>
+</tr>
 </table>
 
 <? echo hdelim(); ?>
