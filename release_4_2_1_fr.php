@@ -1,23 +1,14 @@
 <?php
 /* if you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn! */
-
 header("Cache-Control: public, max-age=600");
-
 require_once 'prepend.inc';
-
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-
-<h1>
-Publication de PHP 4.2.1
-</h1>
-
+<h1>Publication de PHP 4.2.1</h1>
 <p>[ <a href="/release_4_2_1.php">English Version</a> ]&nbsp;</p>
-
 <h2>Version mineure de correction de bugs</h2>
-
 <p>Cette version interm&eacute;diaire corrige quelques bugs trouv&eacute;s dans PHP 4.2.0.
  PHP 4.2.1 inclut les am&eacute;liorations suivantes:
 <ul>
@@ -32,16 +23,12 @@ Publication de PHP 4.2.1
 Pour une liste compl&egrave;te des modifications de PHP 4.2.1, voyez le fichier 
 <a href="/ChangeLog-4.php">NEWS</a>.
 </p>
-
 <h2>Compatibilit&eacute;</h2>
-
 <p>PHP 4.2.1 dispose aussi d'une compatibilit&eacute; am&eacute;lior&eacute;e (mais toujours exp&eacute;rimentale) 
 avec Apache 2. Nous <b>ne recommandons pas</b> son utilisation dans un environnement de
 production. Testez-le intensivement, et rapportez tous les bugs dans le <a href="http://bugs.php.net">syst&egrave;me</a>.
 </p>
-
 <h2>Variables externes</h2>
-
 <p>Nous attirons votre attention sur l'&eacute;volution majeure de PHP 4.2.0 concernant
 l'utilisation des variables. <b>Les variables externes (celles d'environnement ou du serveur web,
 les requ&ecirc;tes HTTP, les cookies) ne sont plus enregistr&eacute;es par d&eacute;faut comme 
@@ -54,6 +41,4 @@ Plus d'informations sur ces modifications :
  <li><a href="http://www.zend.com/zend/art/art-oertli.php">L'article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e</a></li>
 </ul>
 </p>
-
-
 <?php commonFooter(); ?>

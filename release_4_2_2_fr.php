@@ -14,6 +14,8 @@ echo "\n<!--$MYSITE-->\n";
 PHP Security Advisory: Vulnerability in PHP versions 4.2.0 and 4.2.1
 </h1>
 
+<p>[ <a href="/release_4_2_2.php">English Version</a> ]&nbsp;</p>
+
 <p><table border="0" cellpadding="0" cellspacing="0">
 <tr><td>Date :</td><td>&nbsp;&nbsp;</td><td><b> 22 Juillet 2002</b></td></tr>
 <tr><td>Logiciel :</td><td>&nbsp;&nbsp;</td><td><b>PHP versions 4.2.0 et 4.2.1</b></td></tr>
