@@ -487,6 +487,7 @@ right away.</blockquote>
 	site("RacersDirect","www.racersdirect.com");
 	site("Scour Net","www.scour.net");
 	site("Spell Web","www.spellweb.com");
+	site("Swatch AG","www.swatch.com");
 	site("Temperature Measurement site","www.jmrtech.com/temp");
 	site("TheMatrix","thematrix.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
