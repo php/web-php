@@ -64,7 +64,7 @@ function makeBorderTOC($this)
     
     while (list($lang_num, $lang_data) = each ($manual_languages)) {
       if (@is_file("$DOCUMENT_ROOT/manual/$lang_data[0]/$file")) echo "<a href=\"/manual/$lang_data[0]/$file\"><img src=\"/gifs/flag-$lang_data[1].gif\" valign=bottom height=24 width=45 alt=\"$lang_data[2] version of this page\"></a>";
-      else echo "<img src=\"/gifs/flag-$lang_data[1]-gray.gif\" valign=bottom height=24 width=45 alt=\"$lang_data[2] version of this page is not available\">";
+      else echo "<img src=\"/gifs/blank.gif\" valign=bottom height=24 width=45 alt=\"$lang_data[2] version of this page is not available\">";
       if ($lang_num % 3 == 2) { echo '<br>'; }
     }
     
