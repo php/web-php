@@ -119,7 +119,7 @@ francis&eacute;e et retravaill&eacute;e. De plus, ces docs sont compress&eacute;
 
 <h1>CVS Account</h1>
 <ul>
-<li><a href="/anoncvs.php">CVS instructions</a></li>
+<li><a href="/anoncvs.php">Anonymous CVS access instructions</a></li>
 <li><A href="/cvs-php.php">Getting a CVS account</a>. If you
 wish to help out with the development of PHP, read this.</li>
 </ul>
