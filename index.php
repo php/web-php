@@ -145,6 +145,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
+<h1>>Speakers Announced for PHP West Conference on Web Services</h1>
+<p>
+ <span class="newsdate">[22-Dec-2004]</span>
+ <a href="http://www.phpwest.com">PHP West</a> is holding a conference
+ on January 14th, 2005 at the Vancouver Planetarium providing a great
+ environment for the promotion of PHP within the Vancouver area. With the
+ high impact level of <a href="http://www.phpwest.com/?s=schedule">speakers
+ scheduled for this event</a>, you can look forward to in depth talks from
+ the likes of Rasmus Lerdorf, Terry Chay, John Coggeshall, Ilia Alshanetsky,
+ and Cal Henderson speaking on a wide array of topics focused on Web Services.
+</p>
+
+<p>
+ <a href="http://shop.phpwest.com/product_info.php/products_id/28">Early Bird
+ Specials</a> are in effect right now, tickets are only $40 until December 26th!
+ Due to limited capacity for this event we recommend you register soon to
+ reserve your seat.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
 <p>
  <span class="newsdate">[15-Dec-2004]</span>
@@ -203,28 +225,6 @@ commonHeader("Hypertext Preprocessor");
  The topics are General PHP, PHP &amp; Business/Integration,
  PHP &amp; Databases, PHP Design, PHP Extensions, PHP &amp; XML
  and PHP-GTK.
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
-<h1>PHP West Conferences: Web Services - Vancouver, BC</h1>
-<p>
- <span class="newsdate">[04-Dec-2004]</span>
- <a href="http://www.phpwest.com">PHP West</a> is holding a conference
- on January 14th, 2005 at the Vancouver Planetarium providing a great
- environment for the promotion of PHP within the Vancouver area. With the
- high impact level of <a href="http://www.phpwest.com/?s=schedule">speakers
- scheduled for this event</a>, you can look forward to in depth talks from
- the likes of Rasmus Lerdorf, Terry Chay, John Coggelshall, Ilia Alshanetsky,
- and Cal Henderson speaking on a wide array of topics focused on Web Services.
-</p>
-
-<p>
- <a href="http://www.phpwest.com/?s=register">Early Bird Specials</a> are
- in effect right now, tickets are only $40 until December 26th! Due to
- limited capacity for this event we recommend you register soon to
- reserve your seat.
 </p>
 
 <hr />
