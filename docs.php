@@ -5,7 +5,7 @@ commonHeader("Documentation ");
 
 <ul>
 
-<li>The <a href="FAQ.php">PHP 3.0 FAQ</a> is your first stop for general
+<li>The <a href="FAQ.php">PHP FAQ</a> is your first stop for general
     information and those questions that seem to be on most people's minds.
 
 <li>Read what has <a href="changes.php3">changed since PHP/FI 2.0</a>
