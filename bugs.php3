@@ -282,7 +282,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 	}
 	if(strlen($search_for)) {
-		$where_clause .= " and (sdesc like '%$search_for%' or ldesc like '%$search_for%')";
+		$where_clause .= " and (sdesc like '%$search_for%' or ldesc like '%$search_for%' or comments like '%$search_for%')";
 	}
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
