@@ -51,7 +51,7 @@ has been announced.  Further details are available on the
 <a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
 </p>
 <p>
-<? print_link("http://www.linuxtag.org/2001/english/30.html", make_image("linuxtag.gif", "LinuxTag", "right") ); ?>
+<? print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 Also coming between July 5th-8th - 
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 in Stuttgart, Germany, with <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
