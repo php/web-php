@@ -1,59 +1,7 @@
 <?php
-/* if you're reading this, it isn't because you've found a security hole.
-   this is an open source website. read and learn! */
-
-header("Cache-Control: public, max-age=600");
-
 require_once 'prepend.inc';
 
-$SIDEBAR_DATA = '
-<h3>What is PHP?</h3>
-
-<p>
-<acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
-is a server-side, cross-platform, HTML embedded scripting
-language. If you are new to PHP and want to get some idea
-of how it works, try the ' . make_link("/tut.php", "introductory tutorial") . '.
-After that, check out the online ' . make_link("/docs.php", "manual") . ',
-and the example archive sites and some of the other resources
-available in the ' . make_link("/links.php", "links section") . '.
-</p>
-
-<p>
-PHP is a project of the ' . 
-make_link("http://www.apache.org/","Apache Software Foundation") . '.
-</p>
-
-<h3>' . make_link("/thanks.php", "Thanks To") . '</h3>
-&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
-&nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<br>
-&nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
-&nbsp; ' . make_link("http://www.synacor.com/", "Synacor") . '<br>
-&nbsp; ' . make_link("http://vasoftware.com/", "VA Software Corporation") . '<br>
-<h3>Related sites</h3>
-&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
-&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br>
-&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br>
-&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br>
-<h3>Community</h3>
-&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
-&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
-
-<h3>Contact</h3>
-
-<p>
-Please
-submit website bugs in the ' .
-make_link('http://bugs.php.net/', 'bug system') . '.
-</p>
-<p>
-You can contact the webmaster at ' . 
-make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
-</p>
-';
-
-commonHeader("Hypertext Preprocessor");
-echo "\n<!--$MYSITE-->\n";
+commonHeader("PHP 4.1.1 Release Announcement");
 ?>
 
 <h1>
