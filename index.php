@@ -27,6 +27,7 @@ make_link("/license/", "official license") . '.
 <h3>' . make_link("/thanks.php", "Thanks To:") . '</h3>
 &nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<BR>
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<BR>
+&nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<BR>
 &nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<BR>
 <h3>Related sites:</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<BR>

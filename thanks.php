@@ -16,8 +16,13 @@ DNS services for the php.* domains.
 </p>
 
 <p>
+<? print_link("http://www.pair.com/", "pair Networks"); ?> provides
+the server and bandwidth for CVS and mailing list services.
+</p>
+
+<p>
 <? print_link("http://valinux.com/", "VA Linux Systems"); ?> provides the server and 
-bandwidth that run the PHP mailing lists, CVS server, snapshot site and a number of other services.
+bandwidth that run various services for php.net.
 </p>
 
 <p>
