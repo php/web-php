@@ -4,11 +4,15 @@ require_once 'prepend.inc';
 // NOTE: See http://www.php.net/manual/note.mysql
 //       for the table structure of the notes table
 
+// Set variable defaults
 $NEXT = $PREV = $UP = $HOME = array(false, false);
-$TOC = array();
+$TOC = array(); $SIDEBAR_DATA = '';
 
-$SIDEBAR_DATA = '';
+// If we don't know anything about printing, set it to false
+if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
 
+// Set up variables containing navigational information
+// for this page and page part of the manual
 function setupNavigation($data) {
     global $NEXT, $PREV, $UP, $HOME, $TOC, $tstamp;
     $HOME = @$data["home"];
@@ -20,6 +24,7 @@ function setupNavigation($data) {
     $tstamp = gmdate("D, d M Y",getlastmod());
 }
 
+// Put all the border table of contents data to $SIDEBAR_DATA
 function makeBorderTOC($this) {
 	global $NEXT, $PREV, $UP, $HOME, $TOC, $PHP_SELF, $DOCUMENT_ROOT;
 	global $SIDEBAR_DATA, $LANG;
@@ -64,13 +69,14 @@ function makeBorderTOC($this) {
 		}
 		$SIDEBAR_DATA .= '&nbsp;' . 
 			make_link($url, make_image($img, $title) . $title ) .
-                        "<br />";
+			"<br />";
 	}
 
 	$SIDEBAR_DATA.= '</small></td></tr>';
 	$SIDEBAR_DATA.= '</table></form>';
 }
 
+// Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
 	global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
 
@@ -118,7 +124,7 @@ function navigationBar($title,$id,$loc) {
 
 }
 
-
+// Print out one user note entry
 function makeEntry($date,$name,$blurb,$id=0) {
     global $MAGIC_COOKIE;
 ?>
@@ -174,6 +180,7 @@ if (isset($MAGIC_COOKIE) && $id) {
 <?php
 };
 
+// Get user notes from the appropriate text dump
 function manualGetUserNotes($title, $id) {
 	global $DOCUMENT_ROOT;
 	$notes = array();
@@ -199,6 +206,7 @@ function manualGetUserNotes($title, $id) {
 	return $notes;
 }
 
+// Print out all user notes for this manual page
 function manualUserNotes($title, $id) {
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$cur = substr(dirname($PHP_SELF),-2);
@@ -255,26 +263,65 @@ function manualUserNotes($title, $id) {
 	echo "</table>\n";
 }
 
+// Send manual HTTP headers, provide accurate language data
 function sendManualHeaders($charset,$lang) {
-        global $LANG;
-        $LANG = $lang;
+	global $LANG;
+	$LANG = $lang;
 	Header("Cache-Control: public, max-age=600");
 	Header("Vary: Cookie");
 	Header("Content-type: text/html;charset=$charset");
 	Header("Content-language: $lang");
 }
 
+// Print out manual page header
 function manualHeader($title,$id="") {
-	makeBorderTOC($title);
-	commonHeader($title. " - Manual");
-        # create links to plain html and other languages
-	navigationBar($title, $id, "top");
-        echo "<!--/UdmComment-->";
+	global $PRINT_PAGE;
+    if ($PRINT_PAGE) {
+        manualPrintHeader();
+    } else {
+	    makeBorderTOC($title);
+		commonHeader ($title. " - Manual");
+		navigationBar($title, $id, "top");
+		echo "<!--/UdmComment-->";
+    }
 }
 
+// Print out manual footer
 function manualFooter($title,$id="") {
-	manualUserNotes($title,$id);
-	navigationBar($title, $id, "bottom");
-	commonFooter();
+	global $PRINT_PAGE;
+    if ($PRINT_PAGE) {
+		manualPrintFooter();
+    } else {
+	    manualUserNotes($title,$id);
+		navigationBar($title, $id, "bottom");
+		commonFooter();
+    }
 }
+
+// "Printer optimized" header for manual pages
+function manualPrintHeader ($title = '') {
+	global $REQUEST_URI;
+?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+ <title>PHP<?php if ($title) echo ": $title";?></title>
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099">
+<table>
+<tr>
+ <td><a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a></td>
+ <td>
+  Address of this page: <?php echo $REQUEST_URI; ?><br>
+  <small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br />All rights reserved.</small>
+ </td>
+</tr>
+</table><hr size="1" noshade>
+<?php
+}
+
+// "Printer optimized" footer for manual pages
+function manualPrintFooter() {
+    echo "</body>\n</html>";
+}
+
 ?>
