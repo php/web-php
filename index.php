@@ -82,6 +82,26 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>Fifth sample of 'PHP Manual CHM Edition'</h1>
+
+<p>
+<font class="newsDate">[20-Apr-2002]</font>
+We released the fifth sample of the new CHM Edition. New in
+this sample: user preferences application, a new optional
+design, custom context menu support, linked functions
+in examples, and of course updated content.
+</p>
+
+<p>
+<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
+and send us your feedback to our
+<?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.0 RC 4 Released</h1>
 <p>
 <font class="newsDate">[15-Apr-2002]</font>
@@ -159,27 +179,6 @@ href="http://security.e-matters.de/advisories/012002.html">available here</a>.
 All users of PHP are strongly encouraged to either upgrade to <a
 href="/downloads.php">PHP 4.1.2</a>, or install the patch (<a
 href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
-
-<h1>Fourth sample of 'PHP Manual CHM Edition'</h1>
-
-<p>
-<font class="newsDate">[16-Feb-2002]</font>
-We released the fourth sample of the new CHM Edition. It was
-a long time to release this version, as we revamped the design,
-optimized the HTML code, made the pages stretch to any window
-size, switched to use XSLT style sheets instead of DSSSL to
-generate the pages, and coded many improvements and fixes.
-</p>
-
-<p>
-<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
-and send us your feedback to our
-<?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
 </p>
 
 <?php echo hdelim(); ?>
