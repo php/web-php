@@ -47,7 +47,6 @@ Quick access to PHP documentation and site search for all Mozilla and Netscape 6
 </UL>
 <LI>Right click the bookmark you´ve created and select "Properties..."
 <LI>Choose a "custom keyword" you want to enter in the URL bar, eg. "phpman" and fill it in.
-<LI>That's it!  Try it by typing "php strlen" in the IE Address bar.  You should
 <LI>Click "ok" and open a new browser window.
 <LI>Finished. Now you´re able to enter eg. "phpman fgets" to look up the manual entry on the function fgets() or
  eg. "phpman building php4" to search all available information how to build php4.
