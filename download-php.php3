@@ -24,7 +24,9 @@ $mirror_sites=$MIRRORS;
 
 $lastc="";
 reset($mirror_sites);
-while (list($site, $info) = each($mirror_sites)) {
+while ($site = key($mirror_sites)) {
+	$info = $mirror_sites[$site];
+	next($mirror_sites);
 	$c = $info[0];
 	if ($c == $lastc || $c == 'xx') {
 		continue;
@@ -39,7 +41,9 @@ while (list($site, $info) = each($mirror_sites)) {
 <?
 $lastcountry="xxxxx";
 reset($mirror_sites);
-while (list($site, $info) = each($mirror_sites)) {
+while ($site = key($mirror_sites)) {
+	$info = $mirror_sites[$site];
+	next($mirror_sites);
 	list($country, $location, $shortname, $companyurl, $show) = $info;
 	if (!$show) {
 		continue;
