@@ -192,7 +192,7 @@ might have gotten missed because of another heated discussion.
 </p>
 
 <p>
-Submitting patches and participating in the discussion on the php-dev list
+Submitting patches and participating in the discussion on the internals list
 <b>before</b> requesting full CVS access is strongly suggested, so the PHP
 development team can get to know you and what you'll be contributing. It is
 suggested that all PHP developers (people developing PHP itself, not people
