@@ -6,7 +6,7 @@ header("Cache-Control: public, max-age=600");
 
 require_once 'prepend.inc';
 
-commonHeader("Hypertext Preprocessor");
+commonHeader("PHP 4.3.2 Release Announcement");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
