@@ -23,7 +23,7 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
-if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
+if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
     mirror_redirect("http://bugs.php.net/?$array[1]");
 }
 
