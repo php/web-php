@@ -25,10 +25,10 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
   to 3.7.0. (Moriyoshi)</li>
 <li>Updated bundled libmbfl library (used for multibyte functions). (Moriyoshi)<br>Fixed bugs:
   <ul>
-    <li>Bug <?php bugfix(32063); ?> (mb_convert_encoding ignores named entity 'alpha')</li>
-    <li>Bug <?php bugfix(31911); ?> (mb_decode_mimeheader() is case-sensitive to hex escapes)</li>
-    <li>Bug <?php bugfix(30573); ?> (compiler warnings in libmbfl due to invalid type cast)</li>
-    <li>Bug <?php bugfix(30549); ?> (incorrect character translations for some ISO8859 charsets)</li>
+    <li>Bug <?php bugl(32063); ?> (mb_convert_encoding ignores named entity 'alpha')</li>
+    <li>Bug <?php bugl(31911); ?> (mb_decode_mimeheader() is case-sensitive to hex escapes)</li>
+    <li>Bug <?php bugl(30573); ?> (compiler warnings in libmbfl due to invalid type cast)</li>
+    <li>Bug <?php bugl(30549); ?> (incorrect character translations for some ISO8859 charsets)</li>
   </ul>
 <li>Fixed bug preventing from building oci8 as shared. 
   (stanislav dot voroniy at portavita dot nl, Tony)</li>
@@ -43,156 +43,156 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
   is passed. (Tony)</li>
 <li>Fixed posix_getsid() & posix_getpgid() to return sid & pgid instead 
   of true. (Tony)</li>
-<li>Fixed bug <?php bugfix(32394); ?> (offsetUnset() segfaults in a foreach). (Marcus)</li>
-<li>Fixed bug <?php bugfix(32373); ?> (segfault in bzopen() if supplied path to non-existent 
+<li><?php bugfix(32394); ?> (offsetUnset() segfaults in a foreach). (Marcus)</li>
+<li><?php bugfix(32373); ?> (segfault in bzopen() if supplied path to non-existent 
   file). (Tony)</li>
-<li>Fixed bug <?php bugfix(32326); ?> (Check values of Connection/Transfer-Encoding 
+<li><?php bugfix(32326); ?> (Check values of Connection/Transfer-Encoding 
   case-incentively in SOAP extension). (Ilia)</li>
-<li>Fixed bug <?php bugfix(32290); ?> (call_user_func_array() calls wrong class method within 
+<li><?php bugfix(32290); ?> (call_user_func_array() calls wrong class method within 
   child class). (Marcus)</li>
-<li>Fixed bug <?php bugfix(32238); ?> (spl_array.c: void function cannot return value). (Johannes)</li>
-<li>Fixed bug <?php bugfix(32210); ?> (proc_get_status() sets "running" always to true). (Ilia)</li>
-<li>Fixed bug <?php bugfix(32200); ?> (Prevent using both --with-apxs2 and --with-apxs2filter).
+<li><?php bugfix(32238); ?> (spl_array.c: void function cannot return value). (Johannes)</li>
+<li><?php bugfix(32210); ?> (proc_get_status() sets "running" always to true). (Ilia)</li>
+<li><?php bugfix(32200); ?> (Prevent using both --with-apxs2 and --with-apxs2filter).
   (Jani)</li>
-<li>Fixed bug <?php bugfix(32134); ?> (Overloading offsetGet/offsetSet). (Marcus)</li>
-<li>Fixed bug <?php bugfix(32130); ?> (ArrayIterator::seek() does not throw an Exception on 
+<li><?php bugfix(32134); ?> (Overloading offsetGet/offsetSet). (Marcus)</li>
+<li><?php bugfix(32130); ?> (ArrayIterator::seek() does not throw an Exception on 
   invalid index). (Marcus)</li>
-<li>Fixed bug <?php bugfix(32115); ?> (dateTime SOAP encoding of timezone incorrect). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(32081); ?> (in mysqli default socket value is not being used). (Ilia)</li>
-<li>Fixed bug <?php bugfix(32021); ?> (Crash caused by range('', 'z')). (Derick)</li>
-<li>Fixed bug <?php bugfix(32011); ?> (Fragments which replaced Nodes are not globaly useable).
+<li><?php bugfix(32115); ?> (dateTime SOAP encoding of timezone incorrect). (Dmitry)</li>
+<li><?php bugfix(32081); ?> (in mysqli default socket value is not being used). (Ilia)</li>
+<li><?php bugfix(32021); ?> (Crash caused by range('', 'z')). (Derick)</li>
+<li><?php bugfix(32011); ?> (Fragments which replaced Nodes are not globaly useable).
   (Rob)</li>
-<li>Fixed bug <?php bugfix(32001); ?> (xml_parse_into_struct() function exceeds maximum 
+<li><?php bugfix(32001); ?> (xml_parse_into_struct() function exceeds maximum 
   execution time). (Rob, Moriyoshi)</li>
-<li>Fixed bug <?php bugfix(31980); ?> (Unicode exif data not available on Windows). (Edin)</li>
-<li>Fixed bug <?php bugfix(31792); ?> (getrusage() does not provide ru_nswap value). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31960); ?> (msql_fetch_row() and msql_fetch_array() dropping columns
+<li><?php bugfix(31980); ?> (Unicode exif data not available on Windows). (Edin)</li>
+<li><?php bugfix(31792); ?> (getrusage() does not provide ru_nswap value). (Ilia)</li>
+<li><?php bugfix(31960); ?> (msql_fetch_row() and msql_fetch_array() dropping columns
   with NULL values). (Daniel Convissor)</li>
-<li>Fixed bug <?php bugfix(31878); ?> (Segmentation fault using clone keyword on nodes). (Rob)</li>
-<li>Fixed bug <?php bugfix(31858); ?> (--disable-cli does not force --without-pear). (Jani)</li>
-<li>Fixed bug <?php bugfix(31842); ?> (*date('r') does not return RFC2822 conforming date string).
+<li><?php bugfix(31878); ?> (Segmentation fault using clone keyword on nodes). (Rob)</li>
+<li><?php bugfix(31858); ?> (--disable-cli does not force --without-pear). (Jani)</li>
+<li><?php bugfix(31842); ?> (*date('r') does not return RFC2822 conforming date string).
   (Jani)</li>
-<li>Fixed bug <?php bugfix(31832); ?> (SOAP encoding problem with complex types in WSDL mode with
+<li><?php bugfix(31832); ?> (SOAP encoding problem with complex types in WSDL mode with
   multiple parts). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31797); ?> (exif_read_data() uses too low nesting limit). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31796); ?> (readline completion handler does not handle empty return
+<li><?php bugfix(31797); ?> (exif_read_data() uses too low nesting limit). (Ilia)</li>
+<li><?php bugfix(31796); ?> (readline completion handler does not handle empty return
   values). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31755); ?> (Cannot create SOAP header in no namespace). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31754); ?> (dbase_open() fails for mode = 1). (Mehdi, Derick)</li>
-<li>Fixed bug <?php bugfix(31751); ?> (pg_parameter_status() missing on Windows). (Edin)</li>
-<li>Fixed bug <?php bugfix(31747); ?> (SOAP Digest Authentication doesn't work with 
+<li><?php bugfix(31755); ?> (Cannot create SOAP header in no namespace). (Dmitry)</li>
+<li><?php bugfix(31754); ?> (dbase_open() fails for mode = 1). (Mehdi, Derick)</li>
+<li><?php bugfix(31751); ?> (pg_parameter_status() missing on Windows). (Edin)</li>
+<li><?php bugfix(31747); ?> (SOAP Digest Authentication doesn't work with 
   "HTTP/1.1 100 Continue" response). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31732); ?> (mb_get_info() causes segfault when no parameters 
+<li><?php bugfix(31732); ?> (mb_get_info() causes segfault when no parameters 
   specified). (Tony)</li>
-<li>Fixed bug <?php bugfix(31710); ?> (Wrong return values for mysqli_autocommit/commit/rollback).
+<li><?php bugfix(31710); ?> (Wrong return values for mysqli_autocommit/commit/rollback).
   (Georg)</li>
-<li>Fixed bug <?php bugfix(31705); ?> (parse_url() does not recognize http://foo.com#bar). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31695); ?> (Cannot redefine endpoint when using WSDL). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31684); ?> (dio_tcsetattr(): misconfigured termios settings).
+<li><?php bugfix(31705); ?> (parse_url() does not recognize http://foo.com#bar). (Ilia)</li>
+<li><?php bugfix(31695); ?> (Cannot redefine endpoint when using WSDL). (Dmitry)</li>
+<li><?php bugfix(31684); ?> (dio_tcsetattr(): misconfigured termios settings).
   (elod at itfais dot com)</li>
-<li>Fixed bug <?php bugfix(31683); ?> (changes to $name in __get($name) override future 
+<li><?php bugfix(31683); ?> (changes to $name in __get($name) override future 
   parameters). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31699); ?> (unserialize() float problem on non-English locales). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31562); ?> (__autoload() problem with static variables). (Marcus)</li>
-<li>Fixed bug <?php bugfix(31651); ?> (ReflectionClass::getDefaultProperties segfaults with arrays).
+<li><?php bugfix(31699); ?> (unserialize() float problem on non-English locales). (Ilia)</li>
+<li><?php bugfix(31562); ?> (__autoload() problem with static variables). (Marcus)</li>
+<li><?php bugfix(31651); ?> (ReflectionClass::getDefaultProperties segfaults with arrays).
   (Marcus)</li>
-<li>Fixed bug <?php bugfix(31623); ?> (OCILogin does not support password grace period).</li>
+<li><?php bugfix(31623); ?> (OCILogin does not support password grace period).</li>
   (daniel dot beet at accuratesoftware dot com, Tony)</li>
-<li>Fixed bug <?php bugfix(31527); ?> (crash in msg_send() when non-string is stored without
+<li><?php bugfix(31527); ?> (crash in msg_send() when non-string is stored without
   being serialized). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31515); ?> (Improve performance of scandir() by factor of 10 or so). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31514); ?> (open_basedir uses path_translated rather then cwd for .
+<li><?php bugfix(31515); ?> (Improve performance of scandir() by factor of 10 or so). (Ilia)</li>
+<li><?php bugfix(31514); ?> (open_basedir uses path_translated rather then cwd for .
   translation). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31480); ?> (Possible infinite loop in imap_mail_compose()). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31479); ?> (Fixed crash in chunk_split(), when chunklen > strlen). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31465); ?> (False warning in unpack() when working with *). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31454); ?> (session_set_save_handler crashes PHP when supplied 
+<li><?php bugfix(31480); ?> (Possible infinite loop in imap_mail_compose()). (Ilia)</li>
+<li><?php bugfix(31479); ?> (Fixed crash in chunk_split(), when chunklen > strlen). (Ilia)</li>
+<li><?php bugfix(31465); ?> (False warning in unpack() when working with *). (Ilia)</li>
+<li><?php bugfix(31454); ?> (session_set_save_handler crashes PHP when supplied 
   non-existent object ref). (Tony)</li>
-<li>Fixed bug <?php bugfix(31444); ?> (Memory leak in zend_language_scanner.c).
+<li><?php bugfix(31444); ?> (Memory leak in zend_language_scanner.c).
   (hexer at studentcenter dot org)</li>
-<li>Fixed bug <?php bugfix(31442); ?> (unserialize broken on 64-bit systems). (Marcus)</li>
-<li>Fixed bug <?php bugfix(31440); ?> ($GLOBALS can be overwritten via GPC when register_globals
+<li><?php bugfix(31442); ?> (unserialize broken on 64-bit systems). (Marcus)</li>
+<li><?php bugfix(31440); ?> ($GLOBALS can be overwritten via GPC when register_globals
   is enabled). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31422); ?> (No Error-Logging on SoapServer-Side). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(31413); ?> (curl POSTFIELDS crashes on 64-bit platforms). (Joe)</li>
-<li>Fixed bug <?php bugfix(31396); ?> (compile fails with gd 2.0.33 without freetype). (Jani)</li>
-<li>Fixed bug <?php bugfix(31371); ?> (highlight_file() trims new line after heredoc). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31361); ?> (simplexml/domxml segfault when adding node twice). (Rob)</li>
-<li>Fixed bug <?php bugfix(31348); ?> (CachingIterator::rewind() leaks). (Marcus)</li>
-<li>Fixed bug <?php bugfix(31346); ?> (ArrayIterator::next segfaults). (Marcus)</li>
-<li>Fixed bug <?php bugfix(31190); ?> (Unexpected warning then exception is thrown from 
+<li><?php bugfix(31422); ?> (No Error-Logging on SoapServer-Side). (Dmitry)</li>
+<li><?php bugfix(31413); ?> (curl POSTFIELDS crashes on 64-bit platforms). (Joe)</li>
+<li><?php bugfix(31396); ?> (compile fails with gd 2.0.33 without freetype). (Jani)</li>
+<li><?php bugfix(31371); ?> (highlight_file() trims new line after heredoc). (Ilia)</li>
+<li><?php bugfix(31361); ?> (simplexml/domxml segfault when adding node twice). (Rob)</li>
+<li><?php bugfix(31348); ?> (CachingIterator::rewind() leaks). (Marcus)</li>
+<li><?php bugfix(31346); ?> (ArrayIterator::next segfaults). (Marcus)</li>
+<li><?php bugfix(31190); ?> (Unexpected warning then exception is thrown from 
   call_user_func_array()). (phpbugs at domain51 dot net, Dmitry)</li>
-<li>Fixed bug <?php bugfix(31142); ?> (imap_mail_compose() fails to generate correct output). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31139); ?> (XML Parser Functions seem to drop &amp; when parsing). (Rob)</li>
-<li>Fixed bug <?php bugfix(31398); ?> (When magic_guotes_gpc are enabled filenames with ' get cutoff).
+<li><?php bugfix(31142); ?> (imap_mail_compose() fails to generate correct output). (Ilia)</li>
+<li><?php bugfix(31139); ?> (XML Parser Functions seem to drop &amp; when parsing). (Rob)</li>
+<li><?php bugfix(31398); ?> (When magic_guotes_gpc are enabled filenames with ' get cutoff).
   (Ilia)</li>
-<li>Fixed bug <?php bugfix(31288); ?> (Possible crash in mysql_fetch_field(), if mysql_list_fields() 
+<li><?php bugfix(31288); ?> (Possible crash in mysql_fetch_field(), if mysql_list_fields() 
   was not called previously). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31107); ?>, <?php bugfix(31110); ?>, <?php bugfix(31111); ?>, <?php bugfix(31249); ?> (Compile failure of zend_strtod.c).
+<li><?php bugfix(31107); ?>, <?php bugfix(31110); ?>, <?php bugfix(31111); ?>, <?php bugfix(31249); ?> (Compile failure of zend_strtod.c).
   (Jani)</li>
-<li>Fixed bug <?php bugfix(31110); ?> (PHP 4.3.10 does not compile on Tru64 UNIX 5.1B). (Derick)</li>
-<li>Fixed bug <?php bugfix(31107); ?> (Compile failure on Solaris 9 (Intel) and gcc 3.4.3). (Derick)</li>
-<li>Fixed bug <?php bugfix(31103); ?> (Better error message when c-client cannot be found). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31101); ?> (missing kerberos header file path with --with-openssl). (Jani)</li>
-<li>Fixed bug <?php bugfix(31098); ?> (isset() / empty() incorrectly return true in dereference of
+<li><?php bugfix(31110); ?> (PHP 4.3.10 does not compile on Tru64 UNIX 5.1B). (Derick)</li>
+<li><?php bugfix(31107); ?> (Compile failure on Solaris 9 (Intel) and gcc 3.4.3). (Derick)</li>
+<li><?php bugfix(31103); ?> (Better error message when c-client cannot be found). (Ilia)</li>
+<li><?php bugfix(31101); ?> (missing kerberos header file path with --with-openssl). (Jani)</li>
+<li><?php bugfix(31098); ?> (isset() / empty() incorrectly return true in dereference of
   a string type). (Moriyoshi)</li>
-<li>Fixed bug <?php bugfix(31087); ?> (broken php_url_encode_hash macro). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31072); ?> (var_export() does not output an array element with an empty
+<li><?php bugfix(31087); ?> (broken php_url_encode_hash macro). (Ilia)</li>
+<li><?php bugfix(31072); ?> (var_export() does not output an array element with an empty
   string key). (Derick)</li>
-<li>Fixed bug <?php bugfix(31060); ?> (imageftbbox() does not use linespacing parameter). (Jani)</li>
-<li>Fixed bug <?php bugfix(31056); ?> (php_std_date() returns invalid formatted date if 
+<li><?php bugfix(31060); ?> (imageftbbox() does not use linespacing parameter). (Jani)</li>
+<li><?php bugfix(31056); ?> (php_std_date() returns invalid formatted date if 
   y2k_compliance is On). (Ilia)</li>
-<li>Fixed bug <?php bugfix(31055); ?> (apache2filter: per request leak proportional to the full
+<li><?php bugfix(31055); ?> (apache2filter: per request leak proportional to the full
   path of the request URI). (kameshj at fastmail dot fm)</li>
-<li>Fixed bug <?php bugfix(30901); ?> (can't send cookies with soap envelop). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(30871); ?> (Misleading warning message for array_combine()). (Andrey)</li>
-<li>Fixed bug <?php bugfix(30868); ?> (evaluated pointer comparison in mbregex causes compile
+<li><?php bugfix(30901); ?> (can't send cookies with soap envelop). (Dmitry)</li>
+<li><?php bugfix(30871); ?> (Misleading warning message for array_combine()). (Andrey)</li>
+<li><?php bugfix(30868); ?> (evaluated pointer comparison in mbregex causes compile
   failure). (Moriyoshi)</li>
-<li>Fixed bug <?php bugfix(30862); ?> (Static array with boolean indexes). (Marcus)</li>
-<li>Fixed bug <?php bugfix(30726); ?> (-.1 like numbers are not being handled correctly). (Ilia)</li>
-<li>Fixed bug <?php bugfix(30725); ?> (PHP segfaults when an exception is thrown in getIterator() 
+<li><?php bugfix(30862); ?> (Static array with boolean indexes). (Marcus)</li>
+<li><?php bugfix(30726); ?> (-.1 like numbers are not being handled correctly). (Ilia)</li>
+<li><?php bugfix(30725); ?> (PHP segfaults when an exception is thrown in getIterator() 
   within foreach). (Marcus)</li>
-<li>Fixed bug <?php bugfix(30609); ?> (cURL functions bypass open_basedir). (Jani)</li>
-<li>Fixed bug <?php bugfix(30446); ?> (apache2handler: virtual() includes files out of sequence)</li>
-<li>Fixed bug <?php bugfix(30430); ?> (odbc_next_result() doesn't bind values and that results 
+<li><?php bugfix(30609); ?> (cURL functions bypass open_basedir). (Jani)</li>
+<li><?php bugfix(30446); ?> (apache2handler: virtual() includes files out of sequence)</li>
+<li><?php bugfix(30430); ?> (odbc_next_result() doesn't bind values and that results 
   in segfault). (pdan-php at esync dot org, Tony)</li>
-<li>Fixed bug <?php bugfix(30266); ?> (Invalid opcode 137/1/8). (Marcus)</li>
-<li>Fixed bug <?php bugfix(30120); ?> (imagettftext() and imagettfbbox() accept too many
+<li><?php bugfix(30266); ?> (Invalid opcode 137/1/8). (Marcus)</li>
+<li><?php bugfix(30120); ?> (imagettftext() and imagettfbbox() accept too many
   parameters). (Jani)</li>
-<li>Fixed bug <?php bugfix(30106); ?> (SOAP cannot not parse 'ref' element. Causes Uncaught
+<li><?php bugfix(30106); ?> (SOAP cannot not parse 'ref' element. Causes Uncaught
   SoapFault exception). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(29989); ?> (type re_registers redefined in oniguruma.h). (Moriyoshi)
-<li>Fixed bug <?php bugfix(28803); ?> (enabled debug causes bailout errors with CLI on AIX 
+<li><?php bugfix(29989); ?> (type re_registers redefined in oniguruma.h). (Moriyoshi)
+<li><?php bugfix(28803); ?> (enabled debug causes bailout errors with CLI on AIX 
   because of fflush() called on already closed filedescriptor). (Tony)</li>
-<li>Fixed bug <?php bugfix(29767); ?> (Weird behaviour of __set($name, $value)). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(29733); ?> (printf() handles repeated placeholders wrong).
+<li><?php bugfix(29767); ?> (Weird behaviour of __set($name, $value)). (Dmitry)</li>
+<li><?php bugfix(29733); ?> (printf() handles repeated placeholders wrong).
   (bugs dot php dot net at bluetwanger dot de, Ilia)</li>
-<li>Fixed bug <?php bugfix(29424); ?> (width and height inverted for JPEG2000 files). (Ilia)</li>
-<li>Fixed bug <?php bugfix(29329); ?> (configure for mysqli with shared doesn't work). (Georg)</li>
-<li>Fixed bug <?php bugfix(29136); ?> (make test <li>libtool failure on MacOSX). (Jani)</li>
-<li>Fixed bug <?php bugfix(28976); ?> (mail(): use "From:" from headers if sendmail_from is empty).
+<li><?php bugfix(29424); ?> (width and height inverted for JPEG2000 files). (Ilia)</li>
+<li><?php bugfix(29329); ?> (configure for mysqli with shared doesn't work). (Georg)</li>
+<li><?php bugfix(29136); ?> (make test <li>libtool failure on MacOSX). (Jani)</li>
+<li><?php bugfix(28976); ?> (mail(): use "From:" from headers if sendmail_from is empty).
   (Jani)</li>
-<li>Fixed bug <?php bugfix(28930); ?> (PHP sources pick wrong header files generated by bison).
+<li><?php bugfix(28930); ?> (PHP sources pick wrong header files generated by bison).
   (eggert at gnu dot org, Jani)</li>
-<li>Fixed bug <?php bugfix(28840); ?> (__destruct of a class that extends mysqli not called).
+<li><?php bugfix(28840); ?> (__destruct of a class that extends mysqli not called).
   (Marcus)</li>
-<li>Fixed bug <?php bugfix(28804); ?> (ini-file section parsing pattern is buggy).
+<li><?php bugfix(28804); ?> (ini-file section parsing pattern is buggy).
   (wendland at scan-plus dot de)</li>
-<li>Fixed bug <?php bugfix(28451); ?> (corrupt EXIF headers have unlimited recursive IFD directory
+<li><?php bugfix(28451); ?> (corrupt EXIF headers have unlimited recursive IFD directory
   entries). (Andrei)</li>
-<li>Fixed bug <?php bugfix(28444); ?> (Cannot access undefined property for object with overloaded
+<li><?php bugfix(28444); ?> (Cannot access undefined property for object with overloaded
   property access). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(28442); ?> (Changing a static variables in a class changes it across 
+<li><?php bugfix(28442); ?> (Changing a static variables in a class changes it across 
   sub/super classes.) (Marcus)</li>
-<li>Fixed bug <?php bugfix(28324); ?> (HTTP_SESSION_VARS appear when register_long_arrays is 
+<li><?php bugfix(28324); ?> (HTTP_SESSION_VARS appear when register_long_arrays is 
   Off). (Tony)</li>
-<li>Fixed bug <?php bugfix(28074); ?> (FastCGI: stderr should be written in a FCGI stderr stream).
+<li><?php bugfix(28074); ?> (FastCGI: stderr should be written in a FCGI stderr stream).
   (chris at ex-parrot dot com)</li>
-<li>Fixed bug <?php bugfix(28067); ?> (partially incorrect utf8 to htmlentities mapping). (Derick,
+<li><?php bugfix(28067); ?> (partially incorrect utf8 to htmlentities mapping). (Derick,
   Benjamin Greiner)</li>
-<li>Fixed bug <?php bugfix(28041); ?> (SOAP HTTP Digest Access Authentication). (Dmitry)</li>
-<li>Fixed bug <?php bugfix(27633); ?> (Double \r problem on ftp_get in ASCII mode on Win32). (Ilia)</li>
-<li>Fixed bug <?php bugfix(18613); ?> (Multiple OUs in x509 certificate not handled properly).
+<li><?php bugfix(28041); ?> (SOAP HTTP Digest Access Authentication). (Dmitry)</li>
+<li><?php bugfix(27633); ?> (Double \r problem on ftp_get in ASCII mode on Win32). (Ilia)</li>
+<li><?php bugfix(18613); ?> (Multiple OUs in x509 certificate not handled properly).
   (Jani)</li>
 </ul>
 
@@ -204,68 +204,68 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed error handling in mysqli_multi_query. (Georg)</li>
 <li>Extended the functionality of is_subclass_of() to accept either a class name or an object as first parameter. (Andrey)</li>
 <li>Fixed potential problems with unserializing invalid serialize data. (Marcus)</li>
-<li>Fixed <?php bugfix(31034); ?> (Problem with non-existing iconv header file). (Derick) </li>
-<li>Fixed <?php bugfix(30995); ?> (snmp extension does not build with net-snmp 5.2). (Ilia) </li>
-<li>Fixed <?php bugfix(30994); ?> (SOAP server unable to handle request with references).  (Dmitry) </li>
-<li>Fixed <?php bugfix(30990); ?> (allow popen() on *NIX to accept 'b' flag). (Ilia) </li>
-<li>Fixed <?php bugfix(30967); ?> (properties in extended mysqli classes don't work). (Georg) </li>
-<li>Fixed <?php bugfix(30928); ?> (When Using WSDL, SoapServer doesn't handle private or protected properties). (Dmitry) </li>
-<li>Fixed <?php bugfix(30922); ?> (reflective functions crash PHP when interfaces extend themselves). (Tony, Dmitry) </li>
-<li>Fixed <?php bugfix(30904); ?> (segfault when recording soapclient into session). (Tony, Dmitry) </li>
-<li>Fixed <?php bugfix(30890); ?> (MySQLi testsuite) </li>
-<li>Fixed <?php bugfix(30856); ?> (ReflectionClass::getStaticProperties segfaults). (Marcus) </li>
-<li>Fixed <?php bugfix(30832); ?> ("!" stripped off comments in xml parser). (Rob) </li>
-<li>Fixed <?php bugfix(30799); ?> (SoapServer doesn't handle private or protected properties).  (Dmitry) </li>
-<li>Fixed <?php bugfix(30783); ?> (Apache crash when using ReflectionFunction:: getStaticVariables()). (Marcus) </li>
-<li>Fixed <?php bugfix(30750); ?> (Meaningful error message when upload directory is not accessible). (Ilia) </li>
-<li>Fixed <?php bugfix(30685); ?> (Malformed SOAPClient http header reequest). (Dmitry) </li>
-<li>Fixed <?php bugfix(30672); ?> (Problem handling exif data in jpeg images at unusual places). (Marcus) </li>
-<li>Fixed <?php bugfix(30658); ?> (Ensure that temporary files created by GD are removed).  (Ilia) </li>
-<li>Fixed <?php bugfix(30645); ?> (def. multi result set support for mysql_connect). (Georg) </li>
-<li>Fixed <?php bugfix(30637); ?> (compile with pear error). (Antony) </li>
-<li>Fixed <?php bugfix(30587); ?> (array_multisort doesn't separate zvals before changing them). (Tony) </li>
-<li>Fixed <?php bugfix(30572); ?> (crash when comparing SimpleXML attribute to a boolean).  (Andi) </li>
-<li>Fixed <?php bugfix(30566); ?> (attribute namespace URIs are inconsistent when parsing).  (Rob) </li>
-<li>Fixed <?php bugfix(30490); ?> (PEAR installation fails). (Antony) </li>
-<li>Fixed <?php bugfix(30475); ?> (curl_getinfo() may crash in some situations). (Ilia) </li>
-<li>Fixed <?php bugfix(30442); ?> (segfault when parsing ?getvariable[][ ). (Tony) </li>
-<li>Fixed <?php bugfix(30388); ?> (rename across filesystems loses ownership and permission info). (Tony) </li>
-<li>Fixed <?php bugfix(30387); ?> (stream_socket_client async connect was broken).  (vnegrier at esds dot com, Wez).  </li>
-<li>Fixed <?php bugfix(30381); ?> (Strange results with get_class_vars()). (Marcus) </li>
-<li>Fixed <?php bugfix(30375); ?> (cal_info() does not work without a parameter). (Ilia) </li>
-<li>Fixed <?php bugfix(30362); ?> (stream_get_line() not handling end string correctly).  (Ilia) </li>
-<li>Fixed <?php bugfix(30359); ?> (SOAP client requests have no port in "Host" field).  (Dmitry) </li>
-<li>Fixed <?php bugfix(30356); ?> (str_ireplace() does not work on all strings). (Ilia) </li>
-<li>Fixed <?php bugfix(30344); ?> (Reflection::getModifierNames() returns too long strings).  (Marcus) </li>
-<li>Fixed <?php bugfix(30329); ?> (Error Fetching http body, No Content-Length, connection closed or chunked data). (Dmitry) </li>
-<li>Fixed <?php bugfix(30282); ?> (segfault when using unknown/unsupported session.save_handler and/or session.serialize_handler). (Tony) </li>
-<li>Fixed <?php bugfix(30281); ?> (Prevent non-wbmp images from being detected as such).  (Ilia) </li>
-<li>Fixed <?php bugfix(30276); ?> (Possible crash in ctype_digit on large numbers). (Ilia) </li>
-<li>Fixed <?php bugfix(30230); ?> (exception handler not working with objects). (Marcus) </li>
-<li>Fixed <?php bugfix(30224); ?> (Sybase date strings are sometimes not null terminated).  (Ilia) </li>
-<li>Fixed <?php bugfix(30175); ?> (SOAP results aren't parsed correctly). (Dmitry) </li>
-<li>Fixed <?php bugfix(30147); ?> (OO sqlite_fetch_object did not reset error handler). (Wez) </li>
-<li>Fixed <?php bugfix(30133); ?> (get_current_user() crashes on Windows). (Edin) </li>
-<li>Fixed <?php bugfix(30061); ?> (xml_set_start_namespace_decl_handler not called). (Rob) </li>
-<li>Fixed <?php bugfix(30057); ?> (did not detect IPV6 on FreeBSD 4.1). (Wez) </li>
-<li>Fixed <?php bugfix(30042); ?> (strtotime does not use second param). (Derick) </li>
-<li>Fixed <?php bugfix(30027); ?> (Possible crash inside ftp_get()).  (cfield at affinitysolutions dot com) </li>
-<li>Fixed <?php bugfix(29954); ?> (array_reduce segfaults when initial value is array). (Tony) </li>
-<li>Fixed <?php bugfix(29883); ?> (isset gives invalid values on strings). (Tony, Dmitry) </li>
-<li>Fixed <?php bugfix(29801); ?> (Set limit on the size of mmapable data). (Ilia) </li>
-<li>Fixed <?php bugfix(29557); ?> (strtotime error). (Derick) </li>
-<li>Fixed <?php bugfix(29418); ?> (double free when openssl_csr_new fails).  (Kamesh Jayachandran).  </li>
-<li>Fixed <?php bugfix(29385); ?> (Soapserver always uses std class). (David, Dmitry) </li>
-<li>Fixed <?php bugfix(29211); ?> (SoapClient doesn't request wsdl through proxy). (Rob) </li>
-<li>Fixed <?php bugfix(28817); ?> (Var problem when extending domDocument). (Georg) </li>
-<li>Fixed <?php bugfix(28599); ?> (strtotime fails with zero base time). (Derick) </li>
-<li>Fixed <?php bugfix(28598); ?> (Lost support for MS Symbol fonts). (Pierre) </li>
-<li>Fixed <?php bugfix(28220); ?> (mb_strwidth() returns wrong width values for some hangul characters). (Moriyoshi) </li>
-<li>Fixed <?php bugfix(28228); ?> (NULL decimal separator is not being handled correctly).  (Ilia) </li>
-<li>Fixed <?php bugfix(28209); ?> (strtotime("now")). (Derick) </li>
-<li>Fixed <?php bugfix(27798); ?> (private / protected variables not exposed by get_object_vars() inside class). (Marcus) </li>
-<li>Fixed <?php bugfix(27728); ?> (Can't return within a zend_try {} block or the previous bailout state isn't restored. (Andi) </li>
-<li>Fixed <?php bugfix(27183); ?> (Userland stream wrapper segfaults on stream_write).  (Christian) </li>
+<li><?php bugfix(31034); ?> (Problem with non-existing iconv header file). (Derick) </li>
+<li><?php bugfix(30995); ?> (snmp extension does not build with net-snmp 5.2). (Ilia) </li>
+<li><?php bugfix(30994); ?> (SOAP server unable to handle request with references).  (Dmitry) </li>
+<li><?php bugfix(30990); ?> (allow popen() on *NIX to accept 'b' flag). (Ilia) </li>
+<li><?php bugfix(30967); ?> (properties in extended mysqli classes don't work). (Georg) </li>
+<li><?php bugfix(30928); ?> (When Using WSDL, SoapServer doesn't handle private or protected properties). (Dmitry) </li>
+<li><?php bugfix(30922); ?> (reflective functions crash PHP when interfaces extend themselves). (Tony, Dmitry) </li>
+<li><?php bugfix(30904); ?> (segfault when recording soapclient into session). (Tony, Dmitry) </li>
+<li><?php bugfix(30890); ?> (MySQLi testsuite) </li>
+<li><?php bugfix(30856); ?> (ReflectionClass::getStaticProperties segfaults). (Marcus) </li>
+<li><?php bugfix(30832); ?> ("!" stripped off comments in xml parser). (Rob) </li>
+<li><?php bugfix(30799); ?> (SoapServer doesn't handle private or protected properties).  (Dmitry) </li>
+<li><?php bugfix(30783); ?> (Apache crash when using ReflectionFunction:: getStaticVariables()). (Marcus) </li>
+<li><?php bugfix(30750); ?> (Meaningful error message when upload directory is not accessible). (Ilia) </li>
+<li><?php bugfix(30685); ?> (Malformed SOAPClient http header reequest). (Dmitry) </li>
+<li><?php bugfix(30672); ?> (Problem handling exif data in jpeg images at unusual places). (Marcus) </li>
+<li><?php bugfix(30658); ?> (Ensure that temporary files created by GD are removed).  (Ilia) </li>
+<li><?php bugfix(30645); ?> (def. multi result set support for mysql_connect). (Georg) </li>
+<li><?php bugfix(30637); ?> (compile with pear error). (Antony) </li>
+<li><?php bugfix(30587); ?> (array_multisort doesn't separate zvals before changing them). (Tony) </li>
+<li><?php bugfix(30572); ?> (crash when comparing SimpleXML attribute to a boolean).  (Andi) </li>
+<li><?php bugfix(30566); ?> (attribute namespace URIs are inconsistent when parsing).  (Rob) </li>
+<li><?php bugfix(30490); ?> (PEAR installation fails). (Antony) </li>
+<li><?php bugfix(30475); ?> (curl_getinfo() may crash in some situations). (Ilia) </li>
+<li><?php bugfix(30442); ?> (segfault when parsing ?getvariable[][ ). (Tony) </li>
+<li><?php bugfix(30388); ?> (rename across filesystems loses ownership and permission info). (Tony) </li>
+<li><?php bugfix(30387); ?> (stream_socket_client async connect was broken).  (vnegrier at esds dot com, Wez).  </li>
+<li><?php bugfix(30381); ?> (Strange results with get_class_vars()). (Marcus) </li>
+<li><?php bugfix(30375); ?> (cal_info() does not work without a parameter). (Ilia) </li>
+<li><?php bugfix(30362); ?> (stream_get_line() not handling end string correctly).  (Ilia) </li>
+<li><?php bugfix(30359); ?> (SOAP client requests have no port in "Host" field).  (Dmitry) </li>
+<li><?php bugfix(30356); ?> (str_ireplace() does not work on all strings). (Ilia) </li>
+<li><?php bugfix(30344); ?> (Reflection::getModifierNames() returns too long strings).  (Marcus) </li>
+<li><?php bugfix(30329); ?> (Error Fetching http body, No Content-Length, connection closed or chunked data). (Dmitry) </li>
+<li><?php bugfix(30282); ?> (segfault when using unknown/unsupported session.save_handler and/or session.serialize_handler). (Tony) </li>
+<li><?php bugfix(30281); ?> (Prevent non-wbmp images from being detected as such).  (Ilia) </li>
+<li><?php bugfix(30276); ?> (Possible crash in ctype_digit on large numbers). (Ilia) </li>
+<li><?php bugfix(30230); ?> (exception handler not working with objects). (Marcus) </li>
+<li><?php bugfix(30224); ?> (Sybase date strings are sometimes not null terminated).  (Ilia) </li>
+<li><?php bugfix(30175); ?> (SOAP results aren't parsed correctly). (Dmitry) </li>
+<li><?php bugfix(30147); ?> (OO sqlite_fetch_object did not reset error handler). (Wez) </li>
+<li><?php bugfix(30133); ?> (get_current_user() crashes on Windows). (Edin) </li>
+<li><?php bugfix(30061); ?> (xml_set_start_namespace_decl_handler not called). (Rob) </li>
+<li><?php bugfix(30057); ?> (did not detect IPV6 on FreeBSD 4.1). (Wez) </li>
+<li><?php bugfix(30042); ?> (strtotime does not use second param). (Derick) </li>
+<li><?php bugfix(30027); ?> (Possible crash inside ftp_get()).  (cfield at affinitysolutions dot com) </li>
+<li><?php bugfix(29954); ?> (array_reduce segfaults when initial value is array). (Tony) </li>
+<li><?php bugfix(29883); ?> (isset gives invalid values on strings). (Tony, Dmitry) </li>
+<li><?php bugfix(29801); ?> (Set limit on the size of mmapable data). (Ilia) </li>
+<li><?php bugfix(29557); ?> (strtotime error). (Derick) </li>
+<li><?php bugfix(29418); ?> (double free when openssl_csr_new fails).  (Kamesh Jayachandran).  </li>
+<li><?php bugfix(29385); ?> (Soapserver always uses std class). (David, Dmitry) </li>
+<li><?php bugfix(29211); ?> (SoapClient doesn't request wsdl through proxy). (Rob) </li>
+<li><?php bugfix(28817); ?> (Var problem when extending domDocument). (Georg) </li>
+<li><?php bugfix(28599); ?> (strtotime fails with zero base time). (Derick) </li>
+<li><?php bugfix(28598); ?> (Lost support for MS Symbol fonts). (Pierre) </li>
+<li><?php bugfix(28220); ?> (mb_strwidth() returns wrong width values for some hangul characters). (Moriyoshi) </li>
+<li><?php bugfix(28228); ?> (NULL decimal separator is not being handled correctly).  (Ilia) </li>
+<li><?php bugfix(28209); ?> (strtotime("now")). (Derick) </li>
+<li><?php bugfix(27798); ?> (private / protected variables not exposed by get_object_vars() inside class). (Marcus) </li>
+<li><?php bugfix(27728); ?> (Can't return within a zend_try {} block or the previous bailout state isn't restored. (Andi) </li>
+<li><?php bugfix(27183); ?> (Userland stream wrapper segfaults on stream_write).  (Christian) </li>
 </ul>
 
 <a name="5.0.2"></a>
