@@ -65,8 +65,8 @@ download...</P><UL>
   but others have had success with <A href="http://www.winzip.com/">WinZip</A>
   and <A href="http://www.pkware.com/">PkZip</A>.
 </UL>
-<p>Finally, you are going to need the source to PHP4 itself.  Your best bet is
-to get is straight from <A href="http://www.php.net/version4/cvs.php">CVS</A>.
+<p>Finally, you are going to need the source to PHP 4 itself.  Your best bet is
+to get is straight from <A href="../anoncvs.php">CVS</A>.
 If you get a <A href="http://snaps.php.net/">snapshot</A> or
 a <A href="http://www.php.net/downloads.php">source</A> tarball, you
 not only will have to untar and ungzip it, but you will have to convert the
