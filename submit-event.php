@@ -33,7 +33,10 @@ if (isset($in)) {
   }
 
   $in['url'] = trim($in['url']);
-  if ($in['url'] && !preg_match('/^\w+:/',$in['url'])) {
+  if (!$in['url']) {
+    $errors[] = "You must supply a URL with more information about the event.";
+  }
+  elseif (!preg_match('/^\w+:/',$in['url'])) {
     $errors[] = "The URL you supplied was incomplete.";
   }
 
@@ -157,6 +160,10 @@ if (isset($in)) {
   <td><input type="text" name="in[sdesc]" value="<?php echo htmlentities($in['sdesc'])?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
+  <th>URL</th>
+  <td><input type="text" name="in[url]" size="40" maxlength="128" value="<?php echo htmlentities($in['url'])?>" /></td>
+ </tr>
+ <tr>
   <th>Country</th>
   <td>
    <select name="in[country]" width="30">
@@ -179,10 +186,9 @@ if (isset($in)) {
  <tr>
   <th>Email</th>
   <td><input type="text" name="in[email]" size="40" maxlength="128" value="<?php echo htmlentities($in['email'])?>" /></td>
- </tr>
  <tr>
-  <th>URL</th>
-  <td><input type="text" name="in[url]" size="40" maxlength="128" value="<?php echo htmlentities($in['url'])?>" /></td>
+  <th>&nbsp;</th>
+  <td><small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small></td>
  </tr>
  <tr>
   <th colspan="2" align="left">Long Description</th>
