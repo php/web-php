@@ -160,6 +160,13 @@ be subscribed or unsubscribed, and only added to the list after
 following the directions in that mail.
 
 <P>
+There are a variety of commands you can use to modify your subscription.
+Either send a message to php-whatever-help@lists.php.net (as in,
+php-general-help@lists.php.net) or you can view the commands for
+ezmlm <a href="http://www.ezmlm.org/ezman-0.32/ezman1.html">here.</a>
+</P>
+
+<P>
 Archives for some of these mailing lists can be found at: 
 </P>
 
