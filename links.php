@@ -423,6 +423,7 @@ A Swedish PHP portal with articles, news, forums and much more</li>
  <li><a href="http://www.monster.com/">Monster.com</a></li>
  <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a></li>
  <li><a href="http://mojolin.com/">Mojolin</a></li>
+ <li><a href="http://www.totalfreelance.com/">totalfreelance.com</a></li>
 </ul>
 
 <p>
