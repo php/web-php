@@ -1,9 +1,9 @@
-<?
+<?php
 require("shared.inc");
 commonHeader("Support");
 ?>
 
-<?
+<?php
 if (isset($maillist)) {
 	# should really grab some email validating routine and use it here.
 	if (empty($email) || $email == 'user@example.com') {
@@ -29,9 +29,9 @@ if (isset($maillist)) {
 ?>
 <p>
 A request has been entered into the mailing list processing queue. You
-should receive an email at <?echo $email;?> shortly describing how to
+should receive an email at <?php echo $email;?> shortly describing how to
 complete your request.
-<?
+<?php
 	}
 } else {
 
@@ -45,8 +45,8 @@ other resources in the <a href="/docs.php">documentation</a> section.
 
 <h3>Books</h3>
 <P>
-<a href="books.php">Books</a> are convenient resources to begin exploring 
-PHP. <a href="books.php">The titles listed here</a> will help you to start 
+<a href="/books.php">Books</a> are convenient resources to begin exploring 
+PHP. <a href="/books.php">The titles listed here</a> will help you to start 
 learning PHP, as well as extending your existing knowledge.
 </P>
 
@@ -69,136 +69,172 @@ href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
 <h3>Mailing Lists</h3>
 <P>
 One of the best resources is the very friendly and helpful mailing
-lists.  There are a few PHP-related mailing lists available.
+lists. There are many PHP-related mailing lists available.
 
-<ul>
- <li>Announcements of new PHP releases are sent the php-announce
-     list. (This is a very low-volume, moderated list.)
- <li>The main list for PHP users is <b>php-general@lists.php.net</b>.
-     (This is an unmoderated, high volume list, and is also available
-     in a twice-daily digest.)
- <li>The list for discussing database topics is <b>php-db@lists.php.net</b>.
-     (This is an unmoderated list and is also available in a twice-daily
-     digest.)
- <li>The list for discussing installation issues and problems
-     is <b>php-install@lists.php.net</b>.
-     (This is an unmoderated list and is also available in a twice-daily
-     digest.)
- <li>The list for discussing internationalization (i18n) and localization
-     (l10n) issues and features is <b>php-i18n@lists.php.net</b>.
-     (This is an unmoderated list and is also available in a twice-daily
-     digest.)
- <li>The list for discussion migration from earlier versions of PHP 
-     is <b>php-migration@lists.php.net</b>.
-     (This is an unmoderated list and is also available in a twice-daily
-     digest.)
- <li><b>php-pear@lists.php.net</b> is a mailing list for those interested
-     in PEAR, an open-source common code library for PHP (some people wanted
-     to call it "PHP Foundation Classes" ;-).
- <li>The list for Windows PHP users is <b>php-windows@lists.php.net</b>.
-     (This is an unmoderated list and is also available in a twice-daily
-     digest.)
- <li>Users interested in early access to PHP releases so that they
-     can provide feedback about bugs to the developers before releases
-     go out to the world can subscribe to the Beta list. (This is an
-     unmoderated, low-volume list.)
- <li>The list for those who want to help out with the development
-     of PHP is <b>php-dev@lists.php.net</b>. (This is an unmoderated,
-     medium-volume list.)
- <li>The Knowledge Base list receives daily mailings that contain
-     summaries of topics discussed on the user list, as well as
-     other topics drawn from the Knowledge Base. More
-     information about the Knowledge Base can be found at <a
-     href="http://www.faqts.com/">http://www.faqts.com/</a>.
-</ul>
+<?php
 
-<p>
-To subscribe to one of these lists, use this simple form:
+  // array of lists (list, name, short desc., moderated, archive, digest)
+  $mailing_lists = Array(
 
-<form method="POST" action="http://www.php.net/support.php">
-<table>
- <tr>
-  <td><b>List:</b></td>
-  <td><select name="maillist">
-    <option value="php-announce">Announcements
-    <option value="php-general">General List
-    <option value="php-general-digest">General List Digest
-    <option value="php-beta">Beta List
-    <option value="php-db">Database List
-    <option value="php-db-digest">Database List Digest
-    <option value="php-dev">Developer List
-    <option value="php-cvs">CVS Commit List
-    <option value="php-cvs-daily">Daily CVS Commit Summary
-    <option value="phpdoc">Documentation List
-    <option value="php-install">Installation List
-    <option value="php-install-digest">Installation List Digest
-    <option value="php-i18n">Internationalization List
-    <option value="php-i18n-digest">Internationalization List Digest
-    <option value="php-pear">PHP Extension and Application Repository List
-    <option value="php-pear-digest">PHP Extension and Application Repository List Digest
-    <option value="phplib">PHPLIB Mailing List
-    <option value="phplib-dev">PHPLIB Developers List
-    <option value="php-kb">Knowledge Base
-    <option value="php-migration">Migration List
-    <option value="php-migration-digest">Migration List Digest
-    <option value="php-windows">Windows List
-    <option value="php-windows-digest">Windows List Digest
-  </select></td>
-  <td><input type=submit name="action" value="Subscribe"></td>
- </tr>
+    'General mailing lists for PHP users',
+    Array (
+      'php-announce', 'Announcements',
+      'Announcements of new PHP releases are sent to this very low-volume list',
+      true, false, false
+    ),
+    Array (
+      'php-general', 'General user list',
+      'This is a really high volume general list for PHP users',
+      false, true, true
+    ),
+    Array (
+      'php-windows', 'Windows PHP users list',
+      'Using PHP on Microsoft Windows',
+      false, true, true
+    ),
+
+    'Subject specific lists for PHP users',
+    Array (
+      'php-install', 'Installation issues and problems',
+      'How to install PHP with partiucular configurations, and servers',
+      false, true, true
+    ),
+    Array (
+      'php-db', 'Databases and PHP',
+      'This list is for the discussin of PHP database topics',
+      false, true, true
+    ),
+    Array (
+      'php-i18n', 'Internationalization',
+      'Internationalization (i18n) and localization (l10n) issues and features',
+      false, true, true
+    ),
+    Array (
+      'php-migration', 'Migration from earlier versions',
+      'Discussion of migration from earlier versions of PHP',
+      false, true, true
+    ),
+    Array (
+      'php-pear', 'PEAR common code library list',
+      'A list for those interested in PEAR, an open-source common code library for PHP',
+      false, true, true
+    ),
+    Array (
+      'php-template', 'Templates mailing list',
+      'A list for those working with template engines in PHP',
+      false, true, true
+    ),
+    Array (
+      'php-kb', 'Knowledge Base list',
+      'This list receives daily mailings with summaries of topics on the user list, as well as others drawn from the <a href="#phpkb">Knowledge Base</a>',
+      false, true, false
+    ),
+    Array (
+      'phplib', 'PHPLIB mailing list',
+      'List of the open source PHP code library',
+      false, true, false
+    ),
+    Array (
+      'phplib-dev', 'PHPLIB developers list',
+      'List for the PHPLIB developers',
+      false, true, false
+    ),
+
+    'Lists for the developers of PHP, php.net and the docs',
+    Array (
+      'php-dev', 'Developer list',
+      'A medium volume list for those who want to help out with the development of PHP',
+      false, true, false
+    ),
+    Array (
+      'php-beta', 'Beta list',
+      'A low volume list for users interested in early access to PHP releases',
+      false, false, false
+    ),
+    Array (
+      'php-cvs', 'CVS commit list',
+      'All the commits of the cvs PHP code repository are posted to this list immediately',
+      true, true, false
+    ),
+    Array (
+      'php-cvs-daily', 'Daily CVS commit summary',
+      'Daily changelog and NEWS file updates',
+      true, false, false
+    ),
+    Array (
+      'phpdoc', 'PHP documentation list',
+      'List for the authors of the PHP documentation with CVS commits',
+      false, true, false
+    ),
+    Array (
+      'php-qa', 'Quality Assurance list',
+      'List for the members of the PHP-QA Team',
+      false, true, false
+    )
+  
+  );
+
+?>
+
+<form method="post" action="http://www.php.net/support.php"><table cellspacing="2" cellpadding="3">
+<?php
+
+  while ( list(, $listinfo) = each($mailing_lists)) {
+
+    if (!is_array($listinfo)) { echo '<tr bgcolor="#D0D0D0"><th colspan="2">' . $listinfo . '</th><th>Moderated</th><th>Archive</th><th>Normal</th><th>Digest</th></tr>'; }
+    else {
+  
+      echo '<tr align="center" bgcolor="#F0F0F0"><td><img src="/gifs/blank.gif" width="5" height="5"></td><td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td><td>';
+      if ($listinfo[3]) { echo 'yes'; } else { echo "no"; }
+      echo '</td><td>';
+      if ($listinfo[4]) { echo '<a href="http://marc.theaimsgroup.com/?l=' . $listinfo[0] . '">available</a>'; } 
+      else { echo 'n/a'; }
+      echo '</td><td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td><td>';
+      if ($listinfo[5]) { echo '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest">'; }
+      else { echo 'n/a'; }
+      echo '</td></tr>';
+
+    }
+  }
+
+?>
+
+</table>
+
+<p><table align="center">
  <tr>
   <td><b>Email:</b></td>
   <td><input type=text name="email" width=40 value="user@example.com"></td>
+  <td><input type=submit name="action" value="Subscribe"></td>
   <td><input type=submit name="action" value="Unsubscribe"></td>
  </tr>
 </table>
-</form>
 
 <p>
 You will be sent a confirmation mail at the address you wish to
 be subscribed or unsubscribed, and only added to the list after
 following the directions in that mail.
 
-<P>
+<p>
 There are a variety of commands you can use to modify your subscription.
 Either send a message to php-whatever-help@lists.php.net (as in,
 php-general-help@lists.php.net) or you can view the commands for
 ezmlm <a href="http://www.ezmlm.org/ezman-0.32/ezman1.html">here.</a>
-</P>
 
-<P>
-Archives for some of these mailing lists can be found at: 
-</P>
+<p>
+Archives for some of these mailing lists are also available at
+<a href="http://www.phpbuilder.com/mail/">http://www.phpbuilder.com/mail/</a>.
 
-<ul>
- <li><a href="http://www.phpbuilder.com/mail/">All PHP Lists at www.phpbuilder.com</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-dev">Developers' List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-general">PHP General List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-pear">PEAR List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-cvs">CVS Commits List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-db">Database List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-i18n">Internationalization List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-install">Installation List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-kb">PHP Knowledge Base List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-migration">PHP Migration List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-qa">Quality Assurance List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-template">PHP Template List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=php-windows">PHP on Windows List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=phpdoc">PHP Documentation List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=phplib">PHPLIB List</a>
- <li><a href="http://marc.theaimsgroup.com/?l=phplib-dev">PHPLIB Developers' List</a>
-</ul>
-
-<P>
+<p>
 <b>Warning:</b> The PHP users mailing list gets close to 2500 messages
-per month currently.  Do the math.  That translates to about 80 messages
-per day.  If your mailbox can't handle this sort of traffic you might
+per month currently. Do the math. That translates to about 80 messages
+per day. If your mailbox can't handle this sort of traffic you might
 want to consider subscribing to the digest list instead (two messages
-per day).  You can also read the mailing list on the above web interface,
-or if you like reading things with a news reader, you can read it at
-<a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
+per day). You can also read the mailing list using the archives with
+a web interface, or if you like reading things with a news reader, you
+can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
 
-<P>
+<p>
 You can search the mailing lists right from this website from <A
 HREF="/search.php">the search page</A> or by using the search button
 on the top-right of every page.
@@ -237,10 +273,11 @@ great places to find many example scripts and useful functions, organized for
 your searching pleasure!
 </P>
 
+<a name="phpkb"></a>
 <h3>Knowledge Base</h3>
 <P>
 The knowledge base is a growing collection of PHP related information in
-a searchable question and answer format.  Anyone can contribute, and
+a searchable question and answer format. Anyone can contribute, and
 everyone is encouraged to do so. You can visit the Knowledge Base
 at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
 </P>
@@ -248,19 +285,19 @@ at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
 <h3>Getting the Latest Development Version</h3>
 <P>
 PHP is developed using CVS, so it's possible to obtain the latest
-development release at any time.  Further instructions can be found in
-the web interface to the <a href="http://cvs.php.net">PHP CVS tree</a>.
+development release at any time. Further instructions can be found in
+the web interface of the <a href="http://cvs.php.net">PHP CVS tree</a>.
 </P>
 
 <h3>Instant Resource Center</h3>
 <P>
-Otherwise known as IRC or Internet Relay Chat.  Here you can usually find
+Otherwise known as IRC or Internet Relay Chat. Here you can usually find
 experienced PHP people sitting around doing nothing on the #php channel
-on <a href="http://openprojects.nu">OpenProjects</a>.  There is also a #php
+on <a href="http://openprojects.nu">OpenProjects</a>. There is also a #php
 channel on EFNet, but due to the difficulties many people have getting on and
 staying on that network we are migrating to the OpenProjects network.
 
-<?
+<?php
 }
 commonFooter();
 ?>
