@@ -246,7 +246,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <small>in the</small>
 <select name="show" class="small">
 <option value="quickref" selected>function list
-<option value="nosource">whole site
+<option value="wholesite">whole site
 <option value="manual">online documentation
 <option value="bugdb">bug database
 <option value="maillist">general mailing list
