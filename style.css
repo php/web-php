@@ -1,6 +1,6 @@
 body, td, th {
 	font-family: arial,helvetica,sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 p {
@@ -36,7 +36,8 @@ h1 {
 	font-size: 18px;
 	font-weight: bold;
 	color: #000066;
-	margin-bottom: 5px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 h2 {
@@ -44,7 +45,8 @@ h2 {
 	font-size: 16px;
 	font-weight: bold;
 	color: #000066;
-	margin-bottom: 5px;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 h3 {
@@ -52,6 +54,8 @@ h3 {
 	font-size: 14px;
 	font-weight: bold;
 	color: #000066;
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
 small {
@@ -67,7 +71,7 @@ a.small {
 
 .tableTitle {
 	font-family: arial,helvetica,sans-serif;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: bold;
 }
 
@@ -80,12 +84,12 @@ a.small {
 
 input {
 	font-family: arial,helvetica,sans-serif;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 textarea {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
-	font-size: 11px;
+	font-size: 13px;
 }
 
 input.small, select.small {
@@ -104,3 +108,4 @@ dt {
 
 
 // manual stuff
+

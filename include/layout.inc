@@ -2,7 +2,7 @@
 /* $Id$ */
 
 
-# spc()
+# spacer()
 # print a IMG tag for a sized spacer GIF
 #
 
@@ -16,12 +16,26 @@ function spacer($width=1, $height=1, $align=false) {
 
 
 
+# resize_image()
+# tag the output of make_image() and resize it manually
+#
+
+function resize_image($img, $width=1, $height=1) {
+	$str = preg_replace('/width=\"([0-9]+?)\"/i', '', $img );
+	$str = preg_replace('/height=\"([0-9]+?)\"/i', '', $str );
+	$str = substr($str,0,-1) . sprintf(' height="%s" width="%s">', $height, $width );
+	return $str;
+}
+
+
+
 # make_image()
 # return an IMG tag for a given file (relative to the images dir)
 #
 
 function make_image($file, $alt=false, $align=false, $extras=false, $dir='/gifs', $border=0) {
-	if ($size = @getimagesize($GLOBALS[BASE_DIR].$dir.'/'.$file)) {
+	global $HTTP_SERVER_VARS;
+	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
 		$image = sprintf('<img src="%s/%s" border="%d" %s ALT="%s" %s%s>',
 			$dir,
 			$file,
@@ -80,6 +94,19 @@ function delim($color=false) {
 		return '&nbsp;|&nbsp;';
 	}
 	return sprintf('<font color="%s">&nbsp;|&nbsp;</font>', $color );
+}
+
+
+
+# hdelim()
+# print a horizontal delimiter (just a wide line);
+#
+
+function hdelim($color="#000000") {
+	if (!$color) {
+		return '<HR noshade size="1">';
+	}
+	return sprintf('<HR noshade size="1" color="%s">', $color );
 }
 
 
@@ -203,7 +230,20 @@ function commonHeader($title="",$dont_enclose=0) {
 <?php
   if (!$dont_enclose):
     $enclosed = 1;?>
-<table width="700" cellpadding="4" cellspacing="0"><tr><td valign="top">
+<!-- sidebar -->
+<table width="20" height="100%" 
+	bgcolor="#ffffff"
+	align="left"
+	cellpadding="2" cellspacing="0" 
+><tr><td valign="top">
+<BR>
+</td></tr></table>
+<!-- main section -->
+
+<table width="600"
+	align="left"
+	cellpadding="10" cellspacing="0"
+><tr><td valign="top">
 <?php
   endif;
 }
@@ -219,6 +259,7 @@ function commonFooter() {
   global $SCRIPT_NAME,$PHP_SELF,$MIRRORS,$MYSITE,$COUNTRIES,$enclosed;
   if ($enclosed):?>
 </td></tr></table>
+<br clear=all>
 <?php
   endif;
 ?>
