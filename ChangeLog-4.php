@@ -17,7 +17,7 @@ commonHeader("PHP 4 ChangeLog");
   that is too large for the used algorithm, and a bug that caused
   mcrypt_generic() to segfault PHP (Derick)
 <LI>Fixed getopt so that it accepts command line arguments in the form
-  -<opt><arg> and -<opt> <arg>. (Jmoore)
+  -&lt;opt&gt;&lt;arg&gt; and -&lt;opt&gt; &lt;arg&gt;. (Jmoore)
 <LI>Fixed race in writing session files (Sascha)
 <LI>Fixed a possible crash in the PHP CGI when no input file is
   specified (Zeev)
