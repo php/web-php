@@ -246,7 +246,7 @@ Osborne McGraw-Hill, January 2001, ISBN 0-0721-2731-7, 775 pages<BR>
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet"
 ><IMG SRC="/jpgs/greenspan.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet">MySWL/PHP Database Application</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet">MySQL/PHP Database Application</A><BR>
 by Jay Greenspan and Brad Bulger<BR>
 <SMALL>
 Hungry Minds, January 2001, ISBN 0-7645-3537-4, 500 pages<BR>
