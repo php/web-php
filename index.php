@@ -85,7 +85,7 @@ The Association Française des Utilisateurs de PHP (AFUP) and
 the German PHP Association (PHP Verein) are organizing a PHP
 contest to give out the first PHP Award. The PHP Award will
 be given in three categories: Open Source, Freeware and
-Commercial Software, the submissin deadline is July, 15th 2002.
+Commercial Software, the submission deadline is July, 15th 2002.
 If you are interested go to
 <a href="http://www.php-award.net/">http://www.php-award.net/</a>.
 </p>
