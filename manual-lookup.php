@@ -6,7 +6,7 @@ require("manual-lookup.inc");
 $function = strtolower($function);
 if (!isset($lang)) $lang = $MIRRORS[$MYSITE][6];
 
-$file = get_manual_page($lang, $function);
+$file = find_manual_page($lang, $function);
 if (!$file) $file = get_manual_page("en",$function);
 
 if ($file) {
