@@ -257,7 +257,7 @@ function commonHeader($title) {
 <SCRIPT LANGUAGE="JavaScript">
 <!--
 var loaded = 0;
-var layers = 0;
+var do_layers = 0;
 var lastbutton='top';
 
 <?
@@ -273,12 +273,12 @@ endif;
 
 if ($NS4 || $IE4):
 	echo "function showLayer(layerName){\n";
-	echo "	if (layers == 1) {\n";
+	echo "	if (do_layers == 1) {\n";
 	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"visible\";\n";
 	echo "	}\n";
 	echo "}\n";
 	echo "function hideLayer(layerName){\n";
-	echo "	if (layers == 1) {\n";
+	echo "	if (do_layers == 1) {\n";
 	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"hidden\";\n";
 	echo "	}\n";
 	echo "}\n";
@@ -303,7 +303,7 @@ function change(Name,No) {
 	}
 	if (No == 1) {
 <?	if ($NS4 || $IE4): ?>
-		if (layers == 1) {
+		if (do_layers == 1) {
 <?		if ($FRAMEMODE != "manual"): ?>
 			hideLayer('mirrorsKick');
 <?		endif; ?>
@@ -591,7 +591,7 @@ endwhile;
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
-layers = 1;
+do_layers = 1;
 //--->
 </SCRIPT>
 <? endif;	/* Kick outs */ ?>
