@@ -134,9 +134,6 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     exit;
 }
 
-// Work with lowercased URI from now
-$URI = strtolower($URI);
-
 // ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
@@ -187,8 +184,8 @@ $uri_aliases = array (
     "ZEND_CHANGES.txt"             => "zend-engine-2.php", // BC
     "zend2_example.phps"           => "zend-engine-2.php", // BC
     "ZEND_CHANGES_PHP_5_0_0b2.txt" => "zend-engine-2.php", // BC
-    "NEWS_PHP_5_0_0b2.txt"         => "ChangeLog-5.php", // BC
-    "NEWS_PHP_5_0_0b3.txt"         => "ChangeLog-5.php", // BC
+    "NEWS_PHP_5_0_0b2.txt"         => "changelog-5", // BC
+    "NEWS_PHP_5_0_0b3.txt"         => "changelog-5", // BC
     
     "manual/about-notes.php" => "manual/add-note", // BC
     
@@ -209,12 +206,24 @@ $external_redirects = array(
     "rev"         => "/manual/$LANG/revcheck.html.gz",
     "blog"        => "/manual/$LANG/build.log.gz",
     "functions.js.txt" => "http://cvs.php.net/cvs.php/phpdoc/scripts/quickref",
+    "changelog-5" => "/ChangeLog-5.php",
+    "zend-engine-2.php" => "/zend-engine-2.php"
 );
 
 // ============================================================================
 // "Rewrite" the URL, if it was a shortcut
+
+
+// Work with lowercased URI from now
+//$URI = strtolower($URI);
+
 if (isset($uri_aliases[$URI])) {
-    $URI = $uri_aliases[$URI];
+    $NEWURI = $uri_aliases[$URI];
+}
+
+$URI = strtolower($URI);
+if (isset($NEWURI)) {
+	$URI = $NEWURI;
 }
 
 // ============================================================================
