@@ -1,5 +1,33 @@
 <?php
 require_once 'prepend.inc';
+
+$SIDEBAR_DATA = '
+<h3>Binaries for other systems</h3>
+<p>
+If you are looking for UNIX/Linux binaries, please
+go to your distributions package center. For MacOSX
+binaries, go to <a href="http://www.entropy.ch/software/macosx/">this
+page</a>.
+</p>
+
+<h3>Other Downloads</h3>
+<p>
+For downloadable documentation, go to the
+<a href="docs.php">documentation</a> page<br><br>
+
+Get some <a href="download-logos.php">PHP
+logos</A> for your site<br><br>
+
+To download the latest development version,
+see the <a href="anoncvs.php">instructions
+on using anonymous CVS</a><br><br>
+
+<a href="http://www.zend.com/zend/optimizer.php">Zend
+Optimizer</a> for PHP 4.0.3 and later is
+available on Zend Technologies\' web site.
+</p>
+';
+
 commonHeader("Downloads");
 $server = $SERVER_NAME;
 ?>
@@ -44,17 +72,6 @@ change mirrors at the bottom of the page.</p>
   <li><?php download_link("php-4.0.6-memlimit.diff.gz", "PHP 4.0.6 memory limit fix"); ?> - 1 July 2001<br>
   (This patch fixes a bug in the 4.0.6 memory limit option. This is only needed when configuring
   PHP with --enable-memory-limit). If you have problems applying the patch try using GNU patch.</li>
-</ul>
-
-<?php echo hdelim(); ?>
-
-<h1>Other Downloads</h1>
-
-<ul>
-  <li>For downloadable documentation, go to the <a href="docs.php">documentation</a> page
-  <li>Get some <a href="download-logos.php">PHP logos</A> for your site
-  <li>To download the latest development version, see the <a href="anoncvs.php">instructions on using anonymous CVS</a>
-  <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer</a> for PHP 4.0.3 and later is available on Zend Technologies' web site.
 </ul>
 
 <?php echo hdelim(); ?>
