@@ -518,7 +518,7 @@ commonHeader("Links");
     mysql, postgresql, pear,...)
    </li>
    <li>
-    <a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</A> :
+    <a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</a> :
     <a href="news://fr.comp.lang.php">fr.comp.lang.php</a><br />
     (was: fr.comp.infosystemes.www.auteurs.php)
    </li>
