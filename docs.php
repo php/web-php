@@ -54,8 +54,6 @@ $formats = array(
 );
 ?>
 
-<h1>PHP Manual</h1>
-
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below:
 </p>
