@@ -3,6 +3,151 @@ require_once 'prepend.inc';
 commonHeader("PHP 4 ChangeLog");
 ?>
 
+<A NAME="4.0.5">
+<h3>Version 4.0.5</h3>
+<B>30-Apr-2001</B>
+<UL>
+<LI>IMPORTANT: removed /F modifier handling from preg_replace(). Instead
+  one should use new preg_replace_callback() function. (Andrei)
+<LI>Added new php.ini directive: arg_separator.input which is used to tell
+  PHP which characters are considered as argument separators in URLs. 
+  Renamed php.ini directive: arg_separator -&gt; arg_separator.output (Jani)
+<LI>Added FastCGI SAPI module. (Ben Mansell)
+<LI>Added array_reduce(), which allows iterative reduction of an array
+  to a single value via a callback function. (Andrei)
+<LI>The imageloadfont function of the gd extension should be not platform
+  dependent after this fix. (alex@zend.com)
+<LI>Fixed a compatibility problem in some file functions (fgets, fputs, fread,
+  fwrite). The ANSI standard says that if a file is opened in read/write
+  mode, fseek() should be called before switching from reading to writing
+  and vice versa. (alex@zend.com)
+<LI>Fixed argument checking for call_user_func* functions and allowed
+  specifying array($obj, 'method') syntax for call_user_func_array. (Andrei)
+<LI>Fixed parent::method() to also work with runtime bindings.
+  (Zeev, Zend Engine)
+<LI>Implemented high-performance zlib-based output compression - see
+  zlib.output_compression INI directive. (Zeev)
+<LI>Improved ob_gzhandler() to support chunked output buffering - it's 
+  recommended to use it with 4KB chunks. (Zeev)
+<LI>Fixed chunked output buffering. (Zeev)
+<LI>Forced call_user_method() and call_user_method_array() to take the
+  object argument by reference. (Andrei)
+<LI>Fixed binding of ROWIDs in OCI8. (Thies)
+<LI>Added PEAR/Cache as a generic Caching System. (Sebastian, PEAR/Cache)
+<LI>Added IMAP quota support (imap_set_quota, imap_get_quota), enabled/added via
+  c-client2000. (kalowsky)
+<LI>Upgraded PCRE to version 3.4. (Andrei)
+<LI>Added array_search which works similar to in_array but returns
+  the key instead of a boolean. (jason@php.net)
+<LI>Fixed pgsql transaction support. (Stig, PEAR/DB)
+<LI>Added new object VARIANT() to encapsulate values for use with
+  the COM and DOTNET module. Therefore it is now possible to pass
+  values by reference, convert php values to extended variant types (currency,
+  date, idispatch, iunknown, ...) and define the codepage that should
+  be used for unicode - conversion.
+<LI>Improved overall speed of IRCG, added URL handling to message scanner.
+  (Sascha)
+<LI>Fixed some modules to allow using output-buffering. (Thies)
+<LI>Added the chroot() function. (Derick)
+<LI>PostgreSQL now does a rollback at the end of a request on every
+  persistent connection. This is done by doing an "empty" transaction
+  on the connection. This was advised by someone from the PostgreSQL
+  core-team. (Thies)
+<LI>Fixed PostgeSQL pg_connect() bug. We would sometimes close the default
+  link by accident. (Patch by: aja@nlgroup.ca)
+<LI>Improved OCI8 dead-session detection. (Patch by: George Schlossnagle)
+<LI>Fixed get_meta_tags() multiline bug #4556. (Sean)
+<LI>Prefer random() over *rand48(). (JimJag)
+<LI>Sped up WDDX serialization 2x. (Andrei)
+<LI>Added a new parameter to mail() which appends aditional command line
+  parameters to the mail program. (Derick)
+<LI>Added Udm_Clear_Search_Limits mnoGoSearch extension function. (gluke)
+<LI>Fixed mnogosearch protos. Fixed mnogosearch functions return values.
+  A bug with capital letters break search has been fixed. (gluke)
+<LI>Static methods can now be called via call_user_method_* functions, e.g.
+  call_user_method('method', 'class'), and also array('class', 'method')
+  constructs (for array_walk(), for example). (Andrei, Zend Engine)
+<LI>microtime() under Windows now returns accurate values. (James)
+<LI>Added PREG_SPLIT_DELIM_CAPTURE flag to preg_split() that allows for Perl-like
+  functionality of capturing parenthesized delimiter expression. (Andrei)
+<LI>Fixed strip_tags() to not strip a lone &gt; character. (Rasmus)
+<LI>When using the ob_gzhandler() PHP now automagically also sets the
+  Content-Lengh correctly which enables browsers to use the HTTP
+  Keep-Alive feature. (Thies)
+<LI>Improved handling of preg_replace() /F modifier so that it's possible to
+  specify array($obj, 'method') construct as a replacement function. (Andrei)
+<LI>Added mysql_get_client_info(), mysql_get_server_info(),
+  mysql_get_proto_info(), and mysql_get_host_info() functions. (Sean)
+<LI>Major change of the php pdf api. It could break some functions though
+  backwards compatibility was tried to maintain. Adding some still
+  missing functions as well. (Uwe)
+<LI>Added mnoGoSearch extension - <a href="http://search.mnogo.ru">http://search.mnogo.ru</a>. (Sergey K)
+<LI>Allow URL encoding in DB usernames and passwords. (Stig, PEAR)
+<LI>Added raiseError and setErrorHandling methods to PEAR class. (Stig, PEAR)
+<LI>Added support for converting images from JPG/PNG on the fly with the GD
+  extension, which is usefull for creating dynamic WAP-sites. (Derick)
+<LI>Updated ext/mysql/libmysql to version 3.23.32; bug fixes. (tim@mysql.com)
+<LI>Fixed possible crash in all (non-pcre) regex functions. (Thies)
+<LI>Improved str_replace() to accept an array for any parameter - similar
+  to preg_replace(). (Andrei)
+<LI>Fixed extract() to properly prefix numeric keys when EXTR_PREFIX_ALL is
+  used. (Andrei)
+<LI>Added EXTR_PREFIX_INVALID flag to extract() to automatically prefix
+  string keys that do not constitute valid variable names. (Andrei)
+<LI>BeOS patch from svanegmond@bang.dhs.org, modified somewhat by Rasmus.
+<LI>Fixed the Apache module to overwrite PATH_TRANSLATED with SCRIPT_FILENAME,
+  only if PATH_TRANSLATED is not previously set. (Zeev)
+<LI>Fixed crash bug in highlight_string(). (Rasmus)
+<LI>Added URL support for getimagesize() function. (Jani)
+<LI>Added xslt_set_scheme_handler() function. (carmelo@akooe.com)
+<LI>Added the pg_lolseek and pg_lotell functions. (Derick)
+<LI>Fixed wrong breaking with the wordwrap function. (Derick)
+<LI>Fixed 'O' and 'r' flags of date() to have correct sign for timezone
+  offset. (Andrei)
+<LI>Changed 'Z' flag to date() to always return timezone offset with
+  negative sign if it's west of UTC. (Andrei)
+<LI>Added the HTML_Processor class which provides common functions for 
+  processing HTML. (Sterling)
+<LI>Added localeconv() and strcoll() functions for localization. (Sean)
+<LI>Added the xslt_set_base function. (Sterling)
+<LI>Added support for Zeus 3.3.8.
+<LI>Added odbc_error() and odbc_errormsg() functions. (Stig)
+<LI>New extension for vpopmail - <a href="http://www.inter7.com/vpopmail">http://www.inter7.com/vpopmail</a>,
+  give it a try, but keep in mind that it is not ready for production 
+  environments. (David Croft, Boian Bonev)
+<LI>Added sybase_get_last_message() to the Sybase CT module. (Jan Fedak)
+<LI>Made ldap_list(), ldap_read() and ldap_search() do parallel search when
+  first parameter is an array of link identifiers. (Stig Venaas)
+<LI>Made fopen() of HTTP URL follow redirects, $http_response_header will
+  contain all headers with empty string as delimiter. (Stig Venaas)
+<LI>Added Console_Getopt class for parsing command-line args. (Andrei, PEAR)
+<LI>Added an experimental version of the ZZipLib extension which provides the
+  ability to read zip files. (Sterling)
+<LI>Allow access to uploaded files in safe_mode. Beware that you can only
+  read the file. If you copy it to new location the copy will not have the
+  right UID and you script won't be able to access that copy. (Thies)
+<LI>Changed extract() to check that prefixed name is a valid one. (Andrei)
+<LI>Changed extract() to return the number of variables extracted. (Andrei)
+<LI>Added ldap_rename() function. (Stig Venaas)
+<LI>Made ldap_set_option() support controls. (Stig Venaas)
+<LI>Changed ldap_search() and added functions ldap_parse_result(),
+  ldap_first_reference(), ldap_next_reference() and ldap_parse_reference()
+  to cope with LDAPv3 stuff like referrals and references. (Stig Venaas)
+<LI>Fixed date('r') overflow.
+<LI>Made the php.ini path reported in phpinfo() always point to the absolute
+  path that was opened. (Zeev)
+<LI>Made the INI mechanism thread safe. (Zeev, Zend Engine)
+<LI>Changed setlocale() to use LC_* constants. (Jani)
+<LI>ctype functions now follow the extension naming conventions. (Hartmut)
+<LI>Added iconv() function (using libc or libiconv). (Stig)
+<LI>Added ODBC_TYPE constant. (Stig)
+<LI>Added the call_user_method_array function which allows you to call a method
+  with an arbitrary number of parameters. (Sterling)
+<LI>ext/odbc: IBM DB2 patch by Walter Franzini. (walter@sys-net.it)
+<LI>Added extension for the cracklib library. (Alexander Feldman)
+</UL>
+
+
 <A NAME="4.0.4">
 <h3>Version 4.0.4</h3>
 <B>19-Dec-2000</B>
@@ -90,7 +235,7 @@ commonHeader("PHP 4 ChangeLog");
   Sablotron below 0.44 you must use Sablotron's built-in Expat libraries.
   (Sterling)
 <LI>Added basic authentication support to thttpd (Sascha)
-<LI>Added support for the Caudium webserver (http://caudium.net/). It's based
+<LI>Added support for the Caudium webserver (<a href="http://caudium.net/">http://caudium.net/</a>). It's based
   on the Roxen SAPI module. Many bugs have been identified and fixed. (David)
 <LI>Fixed mysql_close(), pg_close(), msql_close() and sybase_close() - they
   weren't properly closing the SQL connections (Zeev)
