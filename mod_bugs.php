@@ -423,7 +423,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		
 			### Changes made by j.a.greant 00/09/03
 			
-			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by desc ts";
+			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts desc";
 			$result = mysql_query($query);
 		
 			while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
@@ -469,7 +469,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			### Changes made by j.a.greant 00/09/03
 			
-			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by desc ts";
+			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts desc";
 			$result = mysql_query($query);
 		
 			while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
