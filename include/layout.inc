@@ -376,6 +376,10 @@ function sect_to_file($string) {
 	else return "$string.php";
 }
 
+function clean($var) {
+  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var);
+}
+
 function clean_note($text) {
     $text = htmlspecialchars($text);
     $fixes = array('<br>','<p>','</p>');
