@@ -49,6 +49,7 @@ right away.</blockquote>
 	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Mitsubishi Motors","www.mitsucars.com");
+	site("MotoSite.Com","www.motosite.com");
 	site("Opel","www.opel.com");
 	site("Silver Bullet Motorcycles","www.silver-bullet.co.nz");
 	site("Volvo","www.volvo.com");
