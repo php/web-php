@@ -455,6 +455,7 @@ ul#manualtoc li a:hover {
 
 /* Top and bottom navigation controls on manual pages --------------------- */
 div.manualnavbar {
+	position: relative;
 	background-color: #e0e0e0;
 	color: inherit;
 	padding: 4px;
@@ -477,6 +478,7 @@ div.manualnavbar .next, div.manualnavbar .lastupdated {
 div.manualnavbar hr {
 	color: #cccccc;
 	background-color: #cccccc;
+	clear: both;
 }
 div.manualnavbar form {
 	margin: 0px;
