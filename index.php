@@ -156,11 +156,12 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[26-Oct-2003]</span>
  The French PHP User Group <a href="http://www.afup.org/">AFUP association</a>
- is proud to announce the third annual PHP meeting in Paris, 
- on November 26th and 27th, 2003. Developpers and managers will 
- gather to meet PHP inventor Zeev Suraski and other community 
- proeminent experts for two days of conferences, packed with 
- <a href="http://www.afup.org/forumphp/">solutions and advanced technics</a>
+ is proud to announce the third annual PHP meeting in Paris,
+ on November 26th and 27th, 2003. Developers and managers will
+ gather to meet Zeev Suraski and other prominent community experts
+ for two days of sessions, packed with
+ <a href="http://www.afup.org/forumphp/">solutions and advanced techniques</a>
+ (in French).
 </p>
 
 <hr />
