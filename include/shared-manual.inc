@@ -329,7 +329,7 @@ function manual_note_display($date, $name, $text, $id)
          "</td>\n<td align=\"right\">\n";
 
     // If the viewer is logged in, show admin options
-    if (isset($_COOKIE['MAGIC_COOKIE'])) {
+    if (isset($_COOKIE['MAGIC_COOKIE']) && $id) {
     
         print_popup_link(
             'http://master.php.net/manage/user-notes.php?action=edit+' . $id,
