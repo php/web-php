@@ -46,10 +46,11 @@ site_header("Copyright and License");
  </li>
 </ul>
 
+<a name="contact"></a>
 <h2>Contact</h2>
 
 <p>
- You can contact the webmaster at 
+ You can contact the webmasters at 
  <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
  Note that this address is mapped to a mailing list and a newsgroup, so
  every message you send will be stored in public archives.
