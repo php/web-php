@@ -90,6 +90,34 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP Conference</h1>
+
+<p>
+<font class="newsDate">[29-Jul-2001]</font>
+The first official PHP Conference, part of the
+<a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>,
+brought the community together for
+<a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a>
+and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a>
+designed to explore and strengthen PHP in
+the open source space. The conference
+was at the Sheraton San Diego Hotel and Marina
+in San Diego, California between July 23-27, 2001.
+Some presentations, you can see online:</p>
+<ul>
+  <li>Rasmus Lerdorf's <a href="http://conf.php.net/pres/index.php?p=slides%2Fintro&id=or2001">PHP - Spinal Injection</a></li>
+  <li>Thies Arntzen on <a href="http://conf.php.net/pres/index.php?p=slides%2Foci&id=oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
+  <li>Andrei Zmievski and Frank M. Kromann with <a href="http://conf.php.net/pres/index.php?p=slides%2Fgtk&id=sd-gtk">PHP-GTK</a></li>
+  <li>Jon Parise on <a href="http://conf.php.net/pres/index.php?p=slides%2Fpear&id=pear2">The PHP Extension and Application Repository</a></li>
+</ul>
+
+<p>
+You can also download some papers from the
+<a href="ftp://ftp.oreilly.com/pub/conference/os2001/">O'Reilly FTP site</a>
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
 <h1>Integrated FAQ in the PHP Manual</h1>
 
 <p>
@@ -181,22 +209,6 @@ has been announced.  Further details are available on the
 Also  
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP Conference</h1>
-
-<p>
-<font class="newsDate">[1-May-2001]</font>
-The first official PHP Conference, part of the <a href="http://conferences.oreilly.com/oscon/">O'Reilly Open Source Convention</a>, brought the community together for
-<a href="http://conferences.oreillynet.com/cs/os2001/pub/w/os2001/sessions_php.html">sessions</a> and <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/php_tutorials.html">tutorials</a> designed to explore and strengthen PHP in
-the open source space. Examples of the topics are: PHP on wireless devices
-and discussion on the future of PHP, featured some of the core
-developers and luminaries from the PHP community. The conference
-was at the Sheraton San Diego Hotel and Marina
-in San Diego, California between July 23-27, 2001.
-<br clear="all">
 </p>
 
 <?php echo hdelim(); ?>
