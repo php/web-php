@@ -163,7 +163,7 @@ The topics are PHP Applications, PHP &amp; Business, Database Topics, PHP &amp; 
 PHP Internals / Extensions, PHP &amp; XML, and others.</p>
 
 <p><a href="https://www.entwickler.com/ssl/php2002/en/form_php2002.php">Early
-bird registration</a> will end on 30th of September. Students and private
+bird registration</a> will end on 7th of October. Students and private
 persons get special discounts.</p>
 
 <?php echo hdelim(); ?>
