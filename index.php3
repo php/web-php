@@ -4,6 +4,12 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>CNET's Builder.com discovers PHP</h3>
+<p><img src="cnet.gif" align="right">
+CNET has put up an <a href="http://www.builder.com/Programming/PHPIntro/?dd.bu.bb.0805.03">
+introductory PHP article</a> that is an interesting read.
+</p>
+
 <h3>LinuxWorld Editors' Choice Awards</h3>
 <p><img src="lwedchoice-200.gif" align="right">
 PHP is a Finalist in the <a href="http://www.wpi.com/linuxworld/lw-ec-finalists.html">
