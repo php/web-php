@@ -199,6 +199,22 @@ for commercial purposes
 
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
+<IMG SRC="logos/php-icon-white.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
+(not exactly as shown)<BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>PHP icon resource for Windows
+<LI>suitable as icons for your desktop
+<LI>48x48, 32x32 and 16x16 sizes, in each of 16 colour, 256 colour, and true colour formats ... 
+all in one .ICO file
+<LI><A HREF="/logos/php.ico">download here</A>
+</UL>
+</TD>
+</TR>
+
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
 <IMG SRC="logos/mini-logo1.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
 (not exactly as shown)<BR>
 </TD>
