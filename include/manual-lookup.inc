@@ -75,7 +75,7 @@ function find_manual_page($lang, $keyword)
 {
 	// Use open rather than popen to avoid any chance of confusion
 	// when rsync updates the database
-	if (!function_exists("sqlite_open") || !($s = sqlite_open(dirname(__FILE__) . '/../backend/manual-lookup.sqlite'))) {
+	if (!function_exists("sqlite_open") || !($s = @sqlite_open(dirname(__FILE__) . '/../backend/manual-lookup.sqlite'))) {
 		return find_manual_page_slow($lang, $keyword);
 	}
 
@@ -106,7 +106,7 @@ function find_manual_page($lang, $keyword)
 		array('en');
 
 	foreach ($langs as $lang) {
-		$q = sqlite_query($s, "SELECT name from fs where lang='" . $lang . "' and keyword in (" . $words . ") order by prefix LIMIT 1");
+		$q = sqlite_query($s, "SELECT name from fs where lang='" . $lang . "' and keyword in (" . $words . ") order by prio LIMIT 1");
 		if ($q) {
 			$r = sqlite_fetch_array($q, SQLITE_NUM);
 			if (isset($r[0])) {
