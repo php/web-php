@@ -333,14 +333,28 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "php_os as Platform";
 	$fields[] = "sdesc as Description";
 	$fields[] = "id as Mod";
-//	$fields[] = "TO_DAYS(NOW()-ts2) as unchanged_days";
+	$fields[] = "TO_DAYS(NOW()-ts2) as unchanged_days";
 	$conversion_table["id"] = "ID#";
 	$conversion_table["bug_type"] = "Bug Type";
 	$pass_on = ereg_replace(" ","+","&cmd=Display+Bugs&status=$status&bug_type=$bug_type");
 	$default_header_color="aaaaaa";
 	$centering["id"] = $centering["Mod"] = "center";
 	$dont_link["Mod"]=1;
+	$dont_display["unchanged_days"] = 1;
 	
+	function processing_function($fieldname,$tablename,$data, &$row)
+	{
+		if ($fieldname == 'Status' and $data == 'Feedback') {
+			echo "Feedback<br>(".$row["unchanged_days"]." days)";
+		} else {
+			$df = ereg_replace("<", "&lt;", $data);
+                        $df = ereg_replace(">", "&gt;", $df);
+			echo "$df\n"; 
+		}
+	}
+
+	$external_processing_function = processing_function;
+
 	if (!isset($order_by_clause)) {
 		$order_by_clause = "id";
 	}
@@ -373,7 +387,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$where_clause .= " and";
 	}
 	$where_clause .= " php_version like '4%'";
-	if($by and $by!='Any') $where_clause .= " and dev_id = '$by' ";
+	if(strlen($by) and $by!='Any') $where_clause .= " and dev_id = '$by' ";
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
