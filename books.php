@@ -157,6 +157,17 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/cmvsstuff"
+><IMG SRC="/jpgs/beginning_php4.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861003730/cmvsstuff">Beginning PHP 4</A><BR>
+by Jon Blan, Wankyu Choi, Allan Kent, Ganesh Prasad, Chris Ullmann<BR><SMALL>
+Wrox Press Inc, October 2000, ISBN 1-8610-0373-0<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/cmvsstuff"
 ><IMG SRC="/jpgs/zmievski.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
@@ -437,7 +448,9 @@ by Herbert G. Fischer<BR>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
 >MySQL and mSQL (Nutshell Series)</A><BR>
 by Randy Jay Yarger, George Reese and Tim King<BR>
-<SMALL>O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages</SMALL>
+<SMALL>O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages<BR>
+Russian translation: <A HREF="http://www.books.ru/cgi-bin/v3/book_inf_code.cgi?5872</A>
+</SMALL>
 </TD>
 </TR>
 
