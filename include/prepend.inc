@@ -13,6 +13,7 @@ header("Content-type: text/html;charset=ISO-8859-1");
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);
+unset($SEARCH_BASE);
 unset($LANG);
 
 // Backward compatible array creation. After this point, the
