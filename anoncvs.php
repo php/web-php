@@ -59,12 +59,14 @@ cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 Zend TSRM
      Tags for major releases include: php_4_0_0, php_4_0_1, php_4_0_1pl1, php_4_0_2, php_4_0_3, php_4_0_4, php_4_0_4pl1, php_4_0_5, php_4_0_6, php_4_1_0, php_4_1_1</i>
     </blockquote>
     
-  <li>Make sure you have autoconf 2.52 or newer, automake 1.4 or newer and libtool
+  <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
     1.4 or newer.
     <blockquote>
      <strong style="color: #99000">Note:</strong> <br/>
      <i> Certain combinations of autoconf, automake and libtool may not work when used together.<br />
-     See <a href="#buildconf_fail">below</a> for details.</i>
+     See <a href="#buildconf_fail">below</a> for details.</i><br />
+     Also, certain versions of autoconf may generate warnings of <i>AC_PROG_CPP called before AC_PROG_CC</i>. 
+     These messages can usually be ignored.
     </blockquote>
   </li>
   <li>Run ./buildconf. After a while, the configure script should be generated.<br />
