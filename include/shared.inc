@@ -207,6 +207,7 @@ function kickHeader($offset,$side,$width) {
 
 function kickFooter($kickname,$buttname,$width) {
 	$innerwidth=$width-40;
+	$innerwidth2=$innerwidth+21;
 	echo "</TD>\n<TD BACKGROUND='/gifs/kick-bg.gif' width=21 VALIGN=top>";
 	echo "<A HREF=\"javascript:popUp('$kickname',false);change('$buttname',0);\"><IMG SRC='/gifs/kick-close.gif' ALT='Close this window' WIDTH=21 HEIGHT=21 BORDER=0></A><BR>";
 	echo "</TD>\n<TD BACKGROUND='/gifs/kick-br.gif' width=10>";
