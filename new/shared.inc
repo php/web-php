@@ -8,6 +8,33 @@ $MIRRORS = array(
    "http://www.php.net/"        => array("us", "Circle Net, United States")
 );
 
+function download_link($file, $title) {
+	global $filesizes;
+	if ($tmp = strrchr($file, "/")) {
+		$local_file = substr($tmp, 1, strlen($tmp));
+	} else {
+		$file = "distributions/$file";
+		$local_file = $file;
+	}
+	echo("<a href=\"$file\">$title</a>");
+	$size = filesize($local_file)/1024;
+	echo("<!-- file=$file localfile=$local_file size-$size-->\n");
+	if ($size) {
+		printf(" (%dKB)", $size);
+	} elseif (isset($filesizes[$local_file])) {
+		echo " (".$filesizes[$local_file].")";
+	}
+}
+
+function gifurl($img) {
+	global $root_url;
+	return $root_url . "gifs/" . $img;
+}
+
+function jpgurl($img) {
+	global $root_url;
+	return $root_url . "jpgs/" . $img;
+}
 
 function commonHeader($title) {
 ?>
