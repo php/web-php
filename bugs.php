@@ -89,7 +89,7 @@ if ($cmd == "send") {
 		$ascii_report = "$report$sdesc\n\n".wordwrap($ldesc);
 		$ascii_report.= "\n-- \nEdit bug report at: http://bugs.php.net/?id=$cid&edit=1\n";
 
-        $mailto = $mail_bugs_to . (eregi("documentation",$bug_type) ? ",phpdoc@lists.php.net" : "");
+		$mailto = get_bugtype_mailto($bug_type);
 
 		if (mail($mailto, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>")) {
 		    @mail($email, "Bug #$cid: $sdesc", $ascii_report, "From: PHP Bug Database <$mail_bugs_to>\nX-PHP-Bug: $cid\nMessage-ID: <bug-$cid@bugs.php.net>");
@@ -105,6 +105,9 @@ if ($cmd == "send") {
 			echo "Please send this page in a mail to " .
 			     "<a href=\"mailto:$mailto\">$mailto</a> manually.</p>\n";
 	    }
+
+		commonFooter();
+		exit;
 	}
 
 }
@@ -124,7 +127,7 @@ elseif ($cmd == "display") {
 		$where_clause .= " AND (status='Open' OR status='Assigned' OR status='Analyzed' OR status='Critical')";
 	} elseif ($status == "OldFeedback") {
 		$where_clause .= " AND status='Feedback' AND TO_DAYS(NOW())-TO_DAYS(ts2)>60";
-	} elseif ($status != "Any") {
+	} elseif ($status != "All") {
 		$where_clause .= " AND status='$status'";
 	}
 
@@ -299,7 +302,7 @@ elseif ($cmd == "display") {
 		$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
 		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=1\n";
 
-		$mailto = $mail_bugs_to . (eregi("documentation",$bug_type.$row[1]) ? ",phpdoc@lists.php.net" : "");
+		$mailto = get_bugtype_mailto($bug_type);
 
 		/* send mail if status was changed or there is a comment */
 		if ($status != $original[status] || $ncomment != "") {
@@ -474,10 +477,6 @@ elseif ($cmd == "display") {
 
 <p><strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</p>
 <p>To report bugs in <strong>PHP 3.0</strong>, please go <a href="/bugs-php3.php">here</a>.</p>
-<p>To report problems with the <strong>PHP website</strong>, you should first try visiting another
-<a href="/mirrors.php">mirror site</a> in case the problem is only with a specific mirror.
-You should then report the problem (and the mirror(s) that have it) to 
-<a href="mailto:webmaster@php.net">webmaster@php.net</a>.</p>
 
 <?php
 }
@@ -647,6 +646,19 @@ function incoming_details_are_valid($require_ldesc=0) {
 	}
 
 	return $valid;
+}
+
+function get_bugtype_mailto($bug_type) {
+	global $mail_bugs_to;
+	if (eregi("documentation", $bug_type)) {
+		return "$mail_bugs_to,phpdoc@lists.php.net";
+	}
+	elseif (eregi("website", $bug_type)) {
+		return "php-mirrors@lists.php.net";
+	}
+	else {
+		return $mail_bugs_to;
+	}
 }
 
 function get_row_color($row) {
