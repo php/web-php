@@ -67,6 +67,12 @@ candidate 1.
 Classified as "the most popular Apache module" by E-Soft, PHP is one of the least frequently mentioned languages amongst the XML discussion lists.
 <? endEntry(); ?>
 
+<? makeEntry( "Under The Hood of PHP 4", "by Zeev Suraski",
+	"http://www.zend.com/zend/art/under-php4-hood.php", "February 27, 2000");?>
+
+Describes the major differences and improvements in the next generation PHP, PHP 4.
+<? endEntry(); ?>
+
 <? makeEntry( "PHP: Past, Present, and Future", "by Rasmus Lerdorf, Stig Bakken, Andi Gutmans, and Zeev Suraski", 
 	"http://hotwired.lycos.com/webmonkey/radio/php.html", "February 27, 2000");?>
 You may already know that PHP is fast, stable, and easy to learn, but you may not know how it got that way. In this interview, Rasmus Lerdorf, the creator of PHP, talks about the unlikely origins of this open-source product. Then core developers Stig Bakken, Andi Gutmans, and Zeev Suraski explain how they came to work on PHP and discuss the evolution of the language. Plus, you'll hear about the planned support for XML and MySQL and what's going on with Zend.
