@@ -182,6 +182,7 @@ right away.</blockquote>
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
 	site("USRentals","www.usrentals.com");
+	site("Farmauno","www.farmauno.com");
 	siteEnd();
 
 /* Telecommunications */
