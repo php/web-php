@@ -79,6 +79,24 @@ echo "\n<!--$MYSITE-->\n";
 <?php /* move this entry to the top when you update it! */ ?>
 
 <h1>
+PHP-GTK Documentation Update
+</h1>
+
+<p>
+<font class="newsDate">[18-Oct-2001]</font>
+<?php print_link("http://gtk.php.net/", "PHP-GTK"); ?>
+<?php print_link("http://gtk.php.net/docs.php", "documentation"); ?> is starting
+to be more filled out. The manual is now rebuilt every night and
+<?php print_link("http://gtk.php.net/download-docs.php", "downloadable versions"); ?>
+of it in different formats are also available. If you have been working with
+PHP-GTK and would like to contribute to the documentation effort, please
+<?php print_link("mailto:gtk-doc@php.net", "let us know"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>
 <?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
 New Usage Stats For September available
 </h1>
