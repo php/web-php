@@ -80,6 +80,7 @@ right away.</blockquote>
 	site("MyTown.Com","www.mytown.com");
 	site("Niterói à Vista","www.nitvista.com.br");
 	site("City of Sibiu - Romania","www.primbsb.ro");
+	site("Landeshauptstadt Stuttgart - Germany","www.stuttgart.de");
 	site("Tablelands Online","www.tablelandsonline.net");
 	site("The Tri Cities Online","tri.xtn.net");
 	site("Up My Street", "www.upmystreet.com");
@@ -163,6 +164,7 @@ right away.</blockquote>
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("Rubik's Online","www.rubiks.com");
+	site("Sony Music, Europe","www.sonymusic.de");
 	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
@@ -213,6 +215,7 @@ right away.</blockquote>
 	title("Government");
 	siteStart();
 	site("Iowa Division of Tourism","www.state.ia.us/tourism/");
+	site("Landesregierung Baden-W&uuml;rttemberg","www.baden-wuerttemberg.de");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	site("National Chemical Laboratory - India","www.ncl-india.org");
 	site("Nigerian Television Authority","www.micro.com.ng/ntacsa");
@@ -326,6 +329,7 @@ right away.</blockquote>
 /* Newspapers & Magazines */
 	title("Newspapers & Magazines");
 	siteStart();
+	site("Bild der Wissenschaft","www.wissenschaft.de");
 	site("Børsen - Danish Business Daily","www.borsen.dk");
 	site("CADALYST Magazine","www.cadonline.com");
 	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
@@ -336,10 +340,12 @@ right away.</blockquote>
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
 	site("Independent Online (South Africa)","www.iol.co.za");
 	site("LA Weekly","www.laweekly.com");
+	site("Le Scienze","www.lescienze.it");
 	site("Maximum PC Magazine","www.maximumpcmag.com");
 	site("Mercattel","mercattel.interwatts.com");
 	site("Der Spiegel","www.spiegel.de");
 	site("Saarbrücker Zeitung","www.sz-newsline.de");
+	site("Spektrum der Wissenschaft","www.spektrum.de");
 	site("The Star - Kansas City","www.kcstar.com");
 	site("UPI Archives","upi.siteways.com");
 	site("The Village Voice","www.villagevoice.com");
@@ -537,6 +543,7 @@ right away.</blockquote>
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("TopHotels.com","www.tophotels.com");
+	site("TUI - Touristik Union International","www.tui.com");
 	site("Whereis Street Atlas","www.whereis.com.au");
 	site("Whistler Resort Guide","www.whistler.net");
 	siteEnd();
@@ -563,6 +570,7 @@ right away.</blockquote>
 	site("NGenius","www.ngenius.com");
 	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
+	site("Six Offene Systeme GmbH","www.six.de");
 	siteEnd();
 
 /* Misc. */
