@@ -503,6 +503,16 @@ dead
  </li>
 
  <li>
+  <strong>Czech Republic</strong>
+  <ul>
+   <li>
+    <a href="http://php.vrana.cz/">PHP tricks</a><br />
+    Weblog about PHP programming
+   </li>
+  </ul>
+ </li>
+
+ <li>
   <strong>Dutch</strong>
   <ul>
    <li>
