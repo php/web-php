@@ -114,15 +114,16 @@ Search for:<br></td>
 <td align="right">
 Restrict the search to:<br></td>
 <td>
+<?if(!isset($show)) $show = 'quickref';?>
 <select name="show">
-<option value="quickref" selected>function list
-<option value="nosource">whole site
-<option value="manual">online documentation
-<option value="bugdb">bug database
-<option value="maillist">general mailing list
-<option value="devlist">developer mailing list
-<option value="phpdoc">documentation mailing list 
-<option value="source">website source code    
+<option value="quickref" <?=($show=='quickref')?'selected':''?>>function list
+<option value="nosource" <?=($show=='nosource')?'selected':''?>>whole site
+<option value="manual" <?=($show=='manual')?'selected':''?>>online documentation
+<option value="bugdb" <?=($show=='bugdb')?'selected':''?>>bug database
+<option value="maillist" <?=($show=='maillist')?'selected':''?>>general mailing list
+<option value="devlist" <?=($show=='devlist')?'selected':''?>>developer mailing list
+<option value="phpdoc" <?=($show=='phpdoc')?'selected':''?>>documentation mailing list
+<option value="source" <?=($show=='source')?'selected':''?>>website source code
 </select><br>
 </td></tr></table>
 </form>
