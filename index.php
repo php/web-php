@@ -290,11 +290,11 @@ echo "\n<!--$MYSITE-->\n";
  projects, like MySQL, SQLite, Midgard, osCommerce or DB Designer, at booth
  F21.  In addition to the booth "PHP and Friends" offer an interesting
  programme of
- <a href="http://www.infodrom.org/Debian/events/LinuxTag2003/workshops.php3">technical talks and workshops</a>
- which are held by 24 speakers from 11 nations and cover the latest trends and
- technologies related to PHP, Apache and MySQL.  Among the speakers are core
- developers of the discussed Open Source projects, for instance Ken Coar
- (Apache), Rasmus Lerdorf (PHP) or Kaj Arn&ouml; (MySQL).
+ <a href="http://www.infodrom.org/Debian/events/LinuxTag2003/workshops.php3">technical
+ talks and workshops</a> which are held by 24 speakers from 11 nations and cover
+ the latest trends and technologies related to PHP, Apache and MySQL. Among the
+ speakers are core developers of the discussed Open Source projects, for instance
+ Ken Coar (Apache), Rasmus Lerdorf (PHP) or Kaj Arn&ouml; (MySQL).
 </p>
 
 <hr />
@@ -307,23 +307,33 @@ echo "\n<!--$MYSITE-->\n";
  can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
 </p>
 <p>
-Some of the more major changes include:
+ Some of the more major changes include:
 </p>
 <ul>
- <li>PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
- <a href="/zend-engine-2.php">this</a> webpage.</li>
- <li>XML support has been completely redone in PHP 5, all extensions are now focused around the 
- excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).</li>
- <li>SQLite has been bundled with PHP.  For more information on SQLite, please visit their 
- <a href="http://www.hwaci.com/sw/sqlite/">website</a>.</li>
- <li>Streams have been greatly improved, including the ability to access low-level socket 
- operations on streams.</li>
+ <li>
+  PHP 5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
+  <a href="/zend-engine-2.php">this</a> webpage.
+ </li>
+ <li>
+  XML support has been completely redone in PHP 5, all extensions are now focused around the 
+  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
+ </li>
+ <li>
+  SQLite has been bundled with PHP. For more information on SQLite, please visit their 
+  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
+ </li>
+ <li>
+  Streams have been greatly improved, including the ability to access low-level socket 
+  operations on streams.
+ </li>
 </ul>
 <p>
-<b>Note</b>: <i>This is a beta version. It should not be used in production or even semi-production
-web sites.</i> There are known bugs in it, and in addition, some of the features may change (based on
-feedback). We encourage you to download and play with it (and <a href="http://bugs.php.net/">report bugs</a>
-if you find any!), but please do not replace your production installations of PHP 4 at this time.
+ <strong>Note</strong>: <em>This is a beta version. It should not be used in
+ production or even semi-production web sites.</em> There are known bugs in it,
+ and in addition, some of the features may change (based on feedback). We
+ encourage you to download and play with it (and <a href="http://bugs.php.net/">report 
+ bugs</a> if you find any!), but please do not replace your production
+ installations of PHP 4 at this time.
 </p>
 
 <hr />
@@ -333,7 +343,12 @@ if you find any!), but please do not replace your production installations of PH
 <h1>PHP Usage Survey</h1>
 <p>
  <span class="newsdate">[24-Jun-2003]</span>
-Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be shared with the PHP Group, and will help us to better understand the ways in which PHP is being used, and what may need improvement.  <a href="http://www.zend.com/survey/php_net.php">Fill it out</a> and get a chance to win one of 50 PHP T-shirts!
+ Zend Technologies is sponsoring a public PHP Usage Survey.
+ The results will be shared with the PHP Group, and will help
+ us to better understand the ways in which PHP is being used,
+ and what may need improvement.
+ <a href="http://www.zend.com/survey/php_net.php">Fill it out</a>
+ and get a chance to win one of 50 PHP T-shirts!
 </p>
 
 <hr />
@@ -343,19 +358,20 @@ Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be 
 <h1>International PHP Conference 2003</h1>
 <p>
  <span class="newsdate">[24-Jun-2003]</span>
-The traditional International PHP Conference 2003 will be taking place from
-2nd November to 5th November in Frankfurt (FFM).  The Call for Papers has
-been issued, so if you have an interesting talk, the organizers would
-love to hear about it!
-You can expect a gathering of PHP experts and core developers and to focus on PHP 5
-as the main topic for the conference.
+ The traditional International PHP Conference 2003 will be taking place from
+ 2nd November to 5th November in Frankfurt (FFM).  The Call for Papers has
+ been issued, so if you have an interesting talk, the organizers would
+ love to hear about it!
+ You can expect a gathering of PHP experts and core developers and to focus on PHP 5
+ as the main topic for the conference.
 </p>
 <p>
-You can find the CfP <a href="http://www.phpconference.de/2003/cfp_en.php">on
-the website</a>.  The deadline is 14th July, 2003.</p>
+ You can find the CfP <a href="http://www.phpconference.de/2003/cfp_en.php">on
+ the website</a>. The deadline is 14th July, 2003.
+</p>
 <p>
-The conference is also featuring an <b>OpenSource Exhibition</b> where PHP related
-OpenSource projects can present themselves for free.
+ The conference is also featuring an <strong>OpenSource Exhibition</strong>
+ where PHP related OpenSource projects can present themselves for free.
 </p>
 
 <hr />
@@ -380,42 +396,43 @@ OpenSource projects can present themselves for free.
 
 <h1>Active Awards Programmers' Choice Nominees are in!</h1>
 <p>
-<span class="newsdate">[06-June-2003]</span>
-Thanks to the community for recognizing their peers in ActiveState's
-third annual Active Awards.  The awards honor those individuals who
-<b>actively</b> contribute to open languages and display excellence in their
-programming efforts.  Please visit and help choose this years award winner!
-</p><p>
-More information and voting is at:
-<a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
+ <span class="newsdate">[06-June-2003]</span>
+ Thanks to the community for recognizing their peers in ActiveState's
+ third annual Active Awards. The awards honor those individuals who
+ <strong>actively</strong> contribute to open languages and display excellence in their
+ programming efforts. Please visit and help choose this years award winner!
+</p>
+<p>
+ More information and voting is at:
+ <a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
 </p>
 
 <hr />
 
 <h1>PHP 4.3.2 Released!</h1>
 <p>
-<span class="newsdate">[29-May-2003]</span>
-The PHP developers are proud to announce the immediate availability of
-<a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
-and is a <b>strongly</b> recommended update for all users of PHP.
-Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
+ <span class="newsdate">[29-May-2003]</span>
+ The PHP developers are proud to announce the immediate availability of
+ <a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
+ and is a <strong>strongly</strong> recommended update for all users of PHP.
+ Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
 </p>
 
 <hr />
 
 <h1>Automatic Mirror Select</h1>
 <p>
-<span class="newsdate">[23-May-2003]</span>
-In our ongoing battle to fight load and keep serving you content, whenever you
-perform a search on www.php.net, you will be redirected onto a nearby mirror
-(determined using the <a href="http://www.directi.com/?site=ip-to-country">Directi
-Ip-to-Country Database</a>). 
-You may experience a few quirks in the search until your mirrors have synced an up-to-date
-version of the site.
+ <span class="newsdate">[23-May-2003]</span>
+ In our ongoing battle to fight load and keep serving you content, whenever you
+ perform a search on www.php.net, you will be redirected onto a nearby mirror
+ (determined using the <a href="http://www.directi.com/?site=ip-to-country">Directi
+ Ip-to-Country Database</a>). 
+ You may experience a few quirks in the search until your mirrors have synced an up-to-date
+ version of the site.
 </p>
 
 <hr />
 
-<p align="center"><a href="/news-2003.php">News Archive</a></p>
+<p class="center"><a href="/news-2003.php">News Archive</a></p>
 
 <?php commonFooter(); ?>
