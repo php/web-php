@@ -208,6 +208,12 @@ right away.</blockquote>
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
 	siteEnd();
 
+/* User Groups */
+	title("User Groups");
+	siteStart();
+	site("Albany New York PowerBuilder User Group","www.anypbug.org");
+	siteEnd();
+
 /* Web Development */
 	title("Web Development Companies");
 	siteStart();
