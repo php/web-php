@@ -115,6 +115,12 @@ More than "just another web BBS/forum software", w-agora is designed so you can 
 </ul>
 <? endEntry();?>
 
+<? makeEntry("Timesheet","www.egr.uri.edu/~kovacsp/timesheet/","Peter Kovacs"
+,"kovacsp@egr.uri.edu"); ?>
+A multiuser time tracking system.  Users can check in and out and it keeps
+track of how long they've worked.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
