@@ -65,7 +65,7 @@ function makeBorderTOC($this) {
 
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
-    global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT, $PHP_SELF, $LANGUAGES;
+    global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT, $PHP_SELF, $LANGUAGES, $REQUEST_URI;
 
     echo '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
@@ -87,24 +87,32 @@ function navigationBar($title,$id,$loc) {
     echo '</td></tr>';
 
     echo '<tr>';
-    echo '<td align="right" colspan="2"><small>Last updated: '.$tstamp;
+    echo '<td><small>';
 
+    // Print out language switch on top of manual pages
     if ($loc != 'bottom') {
         $links = array();
+        preg_match("!^/manual/(.+)/!", $REQUEST_URI, $langcode);
+        $links[] = array("$langcode[1]/print/$id", "printer friendly");
+        $links[] = array("$langcode[1]/printwn/$id", "printer friendly [+notes]");
         foreach ($LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
-                $links[] = make_link("../$code/$id", $name);
+                $links[] = array("$code/$id", $name);
             }
         }
-        echo "<br /> view the " . make_link("print/$id", 'printer friendly version') .
-             " or the " . make_link("printwn/$id", 'printer friendly version with notes');
-        
-        if (count($links)) {
-            echo ' or change language to ' . join (delim(), $links);
+        echo '<form action="/manual/change.php" method="GET" class="thin">view the ' .
+             '<select name="page" class="small>'. "\n";
+        foreach ($links as $link) {
+            echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
+        echo '</select>';
+        echo '<input type="image" src="/gifs/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"></form> version of this page';
+       
+    } else {
+        echo "&nbsp;";
     }
 
-    echo '</small></td></tr>';
+    echo '</small></td><td><small>Last updated: ' . $tstamp . '</small></td></tr>';
     echo "</table>\n";
 
 }
