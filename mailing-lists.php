@@ -171,17 +171,17 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     Array (
       'smarty-general', 'General user list',
       'This is a medium volume general list for Smarty users',
-      false, false, true, "php.smarty.general"
+      false, true, true, "php.smarty.general"
     ),
     Array (
       'smarty-dev', 'Smarty developers list',
       'A list for Smarty developers' ,
-      false, false, true, "php.smarty.dev"
+      false, true, true, "php.smarty.dev"
     ),
     Array (
       'smarty-cvs', 'Smarty CVS commit list',
       'All the commits of the cvs Smarty code repository are posted to this list automatically',
-      true, false, false, "php.smarty.cvs"
+      true, true, false, "php.smarty.cvs"
     )
   );
 
