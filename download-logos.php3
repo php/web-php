@@ -115,6 +115,20 @@ Right click on one of the images and select "Save Image As" to save the logo.  T
 </TD>
 </TR>
 
+<TR VALIGN=middle>
+<TD ALIGN=center WIDTH=33% BGCOLOR="#404040">
+<IMG SRC="logos/php_lang.jpg" WIDTH=200 HEIGHT=74 BORDER=0><BR>
+</TD>
+<TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
+<UL>
+<LI>400 x 148 pixels (shown half-size here)
+<LI>"HTML-Embedded Scripting Language" image
+<LI>solid black background
+<LI>suitable for articles about PHP
+</UL>
+</TD>
+</TR>
+
 </TABLE>
 </CENTER>
 
