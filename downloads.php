@@ -102,20 +102,20 @@ if ($cmn > 0) {
 
 <h2>Patches to latest version</h2>
 <ul>
-  <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br>
+  <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.</li>
-  <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br>
-  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.</li> 	
+  <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br />
+  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.</li>
 </ul>
 
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.2-Win32.zip">PHP 4.2.2 zip package</a> [5,275Kb] - 22 July 2002<br>
+  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.2-Win32.zip">PHP 4.2.2 zip package</a> [5,275Kb] - 22 July 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
-<?php /*
-  <li><?php download_link("php-4.2.1-installer.exe", "PHP 4.2.1 installer"); ?> - 13 May 2002<br>
+
+  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.2-installer.exe">PHP 4.2.2 installer</a> [913Kb]- 22 July 2002<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
