@@ -33,6 +33,25 @@ For a description of PHP.net shortcut URLs, please visit our
 <a href="urlhowto.php">URL Howto page</a>.
 </p>
 
+<?php tipTitle('Quick Reference for Internet Explorer 4 and above', 'Fraghunter', '07-Nov-2002');?>
+
+<p>
+Just right-click on this link:
+<a href="javascript:q=document.selection.createRange().text;if(!q)void(q=prompt('PHP%20Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</A>
+and add it to your bookmarks. You can edit the bookmark to change the
+default language by changing 'lang=en' to whatever language you want to
+use by default. (For example, to pull up the German translation of the
+manual, you would replace "lang=en" with "lang=de".)
+</p>
+
+<?php tipTitle('Quick Reference for KDE 3.x', 'James Grant', '07-Nov-2002');?>
+
+<p>
+In <a href="http://www.kde.org/">KDE</a> 3.0, the PHP quicksearch 
+is preconfigured, so you can type "php:mail" in Konqueror to get
+the mail() function's manual page.
+</p>
+
 <?php tipTitle('Search Box for Galeon', 'Carter Comunale', '31-Oct-2002'); ?>
 
 <ol>
