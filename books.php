@@ -804,7 +804,8 @@ foreach ($books as $btype => $book_list) {
   echo "  <option value=\"${btype}_all\">+&nbsp;" . $book_types[$btype] . " [" . count($book_list) . " total]" . "</option>\n";
   $book_stat = bookStats($books, $btype);
   foreach ($book_stat as $blang => $number) {
-    echo "    <option value=\"${btype}_${blang}\">" . "&nbsp;&nbsp; - $number book" . ($number==1) ? '' : 's' . " in " . $langs[$blang] . "</option>\n";
+    if ($number == 1) { $suff = ""; } else { $suff = "s"; }
+    echo "    <option value=\"${btype}_${blang}\">" . "&nbsp;&nbsp; - $number book$suff in " . $langs[$blang] . "</option>\n";
   }
 }
 ?>
