@@ -69,9 +69,21 @@ by Jiri Kosek<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
 >MySQL and mSQL (Nutshell Series)</A><BR>
-by Randy Jay Yarger, George Reese, and Tim King<BR>
+by Randy Jay Yarger, George Reese and Tim King<BR>
 </TD>
 </TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
+><IMG SRC="/gifs/webmaster-book.gif" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
+>Webmaster in a Nutshell (Nutshell Series)</A><BR>
+<SMALL>includes a large chapter on PHP written by Rasmus Lerdorf</SMALL><BR>
+by Stephen Spainhour and Robert Eckstein<BR>
+</TD>
+</TR>
+
 
 </TABLE>
 
