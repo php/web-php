@@ -50,7 +50,7 @@ function language_choose_code()
     $explicitly_specified = ''; $selected = '';
     
     // Specified for the request (GET/POST parameter)
-    if (isset($_REQUEST['lang'])) {
+    if (!empty($_REQUEST['lang'])) {
         $explicitly_specified = language_add($_REQUEST['lang'], $languages);
 
         // Set the language in a cookie for a year
