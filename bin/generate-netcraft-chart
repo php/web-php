@@ -1,10 +1,10 @@
 #!/usr/local/bin/php -q
 <?php // -*- C++ -*-
-
-require("./barchart.phl");
+include ("jpgraph.php");
+include ("jpgraph_line.php");
 
 $stats = array(
-	/* numbers from http://www.netcraft.com/survey/Reports/200109/PHP.txt
+	/* numbers from http://www.netcraft.com/survey/Reports/200109/PHP.txt 
     199806 => array(71360, 47329),
     199807 => array(81337, 53361),
     199808 => array(90641, 58078),
@@ -12,6 +12,7 @@ $stats = array(
     199810 => array(129757, 73063),
     199811 => array(220286, 81141),
     199812 => array(241924, 87273),
+*/
     199901 => array(278297, 90264),
     199902 => array(345549, 101140),
     199903 => array(409418, 143667),
@@ -24,7 +25,6 @@ $stats = array(
     199910 => array(931122, 321128),
     199911 => array(1114021, 357481),
     199912 => array(1256216, 378301),
-	*/
     200001 => array(1271060, 391876),
     200002 => array(1412822, 428840),
     200003 => array(1783626, 462510),
@@ -49,55 +49,46 @@ $stats = array(
     200110 => array(6624340, 979572),
     200111 => array(7095691, 1046426),
     200112 => array(7261540, 1043328),
-    200201 => array(7525142, 1079999)
+    200201 => array(7525142, 1079999),
+    200202 => array(8586112, 1143239),
+    200203 => array(8861195, 1142955)
 );
 
-$rgb_colors = array(
-    array(205,85,85,15), // IndianRed3
-    array(72,61,139,15), // royal blue
-    array(139,58,98,15), // scarlet/purple
-    array(0,139,139,15), // green/gray/blue
-    array(238,118,0,15), // orange
-    array(139,69,19,15), // dark red-brown
-    array(65,105,225,40) // clear blue
-);
-$currcol = 0;
 $months = array(1 => "Jan", "Feb", "Mar", "Apr", "May", "Jun",
 		"Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
-$data = array();
-$labels = array();
-$colors = array();
-$lastyear = 0;
-reset($stats);
-while (list($month, $stat) = each($stats)) {
-    $data[] = array($stat[0] - $stat[1], $stat[1]);
-    $year = substr($month, 0, 4);
-    $mon = (int)substr($month, 4);
-    if ($months[$mon]) {
-	$labels[0][] = $months[$mon];
-    } else {
-	$labels[0][] = '';
-    }
-    if ($year != $lastyear) {
-	$labels[1][] = "$year";
-    } else {
-	$labels[1][] = '';
-    }
-    $lastyear = $year;
-    $colors[] = $rgb_colors[$currcol++];
-    if ($currcol >= sizeof($rgb_colors)) {
-	$currcol = 0;
-    }
+
+$i=1;
+
+foreach($stats as $key => $arr) {
+	$domains[] = $arr[0];
+	$ips[] = $arr[1];
+	$keys[] = ($i++%2) ? $months[(int)substr($key,4)].' '.substr($key,0,4) : '';
 }
 
-$max = 250000;
+$graph = new Graph(780,350,"auto");
+$graph->img->SetMargin(60,30,30,60);    
+$graph->SetScale("textlin");
+$graph->xaxis->SetFont(FF_ARIAL,FS_NORMAL,10);
+$graph->xaxis->SetTickLabels($keys);
+$graph->xaxis->SetLabelAngle(45); 
+$graph->SetShadow();
+$graph->title->Set("PHP Usage for " . end($keys));
+$graph->title->SetFont(FF_VERDANA,FS_NORMAL,16);
+$graph->legend->SetLayout(LEGEND_HOR);
+$graph->legend->Pos(0.20,0.18,"center","center");
 
-$bar = new barchart;
-$bar->right = 170;
-$bar->bar_padding = 20;
-$bar->title = $bardata["title"];
-$bar->y_label = $graph["y_axis_label"];
-$bar->init(780, 350, $data, $colors, array('Total (Domains)', 'IP Addresses'));
-$bar->draw_x_labels($labels, 3);
-$bar->display();
-?>
+$p1 = new LinePlot($ips);
+$p1->SetFillColor(array(38,118,0,70));
+$p1->SetLegend("IPs");
+
+$p2 = new LinePlot($domains);
+$p2->SetFillColor(array(45,85,205,50));
+$p2->SetLegend("Domains");
+
+
+$graph->Add($p2);
+$graph->Add($p1);
+
+$graph->Stroke();
+
+?> 
