@@ -193,7 +193,7 @@ elseif ($cmd == "display") {
 		echo "<h2 class=\"error\">No bugs with the specified criteria were found.</h2>";
 	}
 	else {
-		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver";
+		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;php_os=".htmlspecialchars(stripslashes($php_os))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction&amp;phpver=$phpver";
 ?>
 <table align="center" border="0" cellspacing="2" width="95%">
  <?php show_prev_next($begin,$rows,$link,$limit);?>
