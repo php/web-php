@@ -8,6 +8,10 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<h3>Interesting Numbers</h3>
+The latest <a href="/usage.php3">PHP usage numbers</a> from <a href="http://www.netcraft.com">Netcraft</a> are in.
+Could PHP be the most popular web server-embedded scripting language on the Net?  Who knows, but a case could
+be made if we look closely at the <a href="/numbers.php3">numbers</a>.
 
 <h3>A Request from Rasmus</h3>
 A complete abuse of Rasmus' involvement with the PHP project is 
