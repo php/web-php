@@ -48,6 +48,7 @@ right away.</blockquote>
 	site("Cars Everything","www.carseverything.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
 	site("Mitsubishi Motors","www.mitsucars.com");
+	site("Volvo","www.volvo.com");
 	siteEnd();
 
 /* City and Community Sites */
@@ -213,8 +214,10 @@ right away.</blockquote>
 /* Retail - Service Industry */
 	title("Retail & Service Industry");
 	siteStart();
+	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("BART'S Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
+	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Delia*s Inc.","www.delias.com");
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
@@ -232,6 +235,7 @@ right away.</blockquote>
 	siteStart();
 	site("Disc Golf Birmingham","discgolf.bham.al.us");
 	site("Professional Disc Golf Association","www.pdga.com");
+	site("San Francisco Giants Baseball Club","www.sfgiants.com");
 	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
 	site("Southern Nationals Disc Golf","www.sndg.org");
 	site("The Internet Squash Federation","www.squash.org");
@@ -286,6 +290,7 @@ right away.</blockquote>
 	site("Internet Weather Report","www.internetweather.com");
 	site("Mail Chek","mail.chek.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
+	site("Optical Buyer","www.opticalbuyer.com");
 	site("RacersDirect","www.racersdirect.com");
 	site("Scour Net","www.scour.net");
 	site("Spell Web","www.spellweb.com");
