@@ -168,6 +168,7 @@ $uri_aliases = array (
     "README.mirror"      => "mirroring", // BC
     "ZEND_CHANGES.txt"   => "zend-engine-2.php", // BC
     "zend2_example.phps" => "zend-engine-2.php", // BC
+    "manual/about-notes.php" => "manual/add-note", // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
