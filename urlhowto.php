@@ -1,5 +1,5 @@
 <?php
-/* $Id: */
+/* $Id$ */
 
 include_once './include/prepend.inc';
 
