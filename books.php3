@@ -16,7 +16,7 @@ commonHeader("PHP Books");
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
 >PHP Pocket Reference</A><BR>
 by Rasmus Lerdorf<BR>
-O'Reilly & Associates, Jan 2000, 114 pages
+O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages<BR>
 <SMALL><A HREF="http://www.oreilly.com/catalog/phppr/">more info</A><BR>
 </SMALL>
 </TD>
@@ -24,10 +24,11 @@ O'Reilly & Associates, Jan 2000, 114 pages
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh"
-><IMG SRC="http://www.wrox.com/Consumer/Store/images/Smcovers/2963.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/2963.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">Professional PHP</A><BR>
 by Jesus Castagnetto, Harish Rawat, Sascha Schumann, Chris Scollo, Deepak Veliath<BR> 
+Wrox Press Inc, Dec 1999, ISBN 1-86100-296-3, 850 pages<BR>
 <SMALL><A HREF="http://www.amazon.com/exec/obidos/ASIN/1861002963/saschaschumannsh">more info</A><BR>
 </SMALL>
 </TD>
