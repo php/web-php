@@ -22,10 +22,10 @@
 <body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099" onload="document.sform.pattern.focus();">
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
- <tr bgcolor="#9999cc">
-  <td><a href="/" target="_main"><img src="logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
-  <td class="title" width="100%">Search Bar</td>
+<table border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td width="69"><a href="/" target="_main"><img src="logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
+  <td class="title" align="left">Search Bar</td>
  </tr>
  <tr bgcolor="#333366"><td colspan="2"><img src="gifs/spacer.gif" width="1" height="1" border="0" alt="" /></td></tr>
  <tr>
