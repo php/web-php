@@ -151,6 +151,43 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Call for Papers : PHP Conference 2004 - Spring Edition</h1>
+<p>
+ <span class="newsdate">[10-Dec-2003]</span>
+ The organizers of the International PHP Conference are proud
+ to announce the second edition of the Intl PHP Conference 2004
+ Spring Edition in Amsterdam. Again, we'll meet at the RAI Conference
+ Center for three days: one day with hands-on power workshops and
+ two days main conference. The conference will happen from May, 3rd
+ to May, 5th 2004.
+</p>
+<p>
+ The <a href="http://www.phpconference.com/">call for papers</a> has
+ been announced now. Just submit your sessions at <a 
+ href="http://www.phpconference.de/kt/input/">http://www.phpconference.de/kt/input/</a> -
+ they'll be reviewed by the Chair Board which consists this year of:
+ <ul>
+  <li>
+   Bj&ouml;rn Schotte (chair)
+  </li>
+  <li>
+   Zak Greant
+  </li>
+  <li>
+   Derick Rethans
+  </li>
+  <li>
+   George Schlossnagle
+  </li>
+  <li>
+   Sascha Schumann
+  </li>
+ </ul>
+ The full conference website will be online soon.
+</p>
+
+<hr />
+
 <?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
 
 <h1>First Bulgarian and Second Hungarian PHP Conference</h1>
