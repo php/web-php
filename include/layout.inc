@@ -153,7 +153,6 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 #
 
 function download_link($file, $title) {
-	global $filesizes;
 
 	if ($tmp = strrchr($file, "/")) {
 		$local_file = substr($tmp, 1, strlen($tmp));
@@ -161,13 +160,18 @@ function download_link($file, $title) {
 		$local_file = "distributions/$file";
 	}
 
-	$size = @filesize($local_file)/1024;
+	$size = @filesize($local_file);
 	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
 
-  print_link("/do_download.php?download_file=$file", $title);
+    print_link("/do_download.php?download_file=$file", $title);
 
-	if (!$size && isset($filesizes[$local_file])) { $size = $filesizes[$local_file]; }
-	if ($size) { echo " [" . number_format($size, 0, ".", ",") . "Kb]"; }
+	// Print out size in bytes (if size is less the 1Kb, or else in Kb)
+	if ($size) {
+	    echo " [";
+		if ($size < 1024) { echo number_format($size, 0, ".", ",") . "b"; }
+	    else { echo number_format($size/1024, 0, ".", ",") . "Kb"; }
+		echo "]";
+	}
 }
 
 $enclosed = 0;
