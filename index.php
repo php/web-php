@@ -93,7 +93,7 @@ has been announced.  Further details are available on the
 <?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("phplt.gif", "LinuxTag", "right") ); ?>
 Also  
 <a href="http://www.linuxtag.org/2001/english/30.html">LinuxTag 2001</a>,
-was in Stuttgart, Germany, between July 5th-8th with <a href="http://www.linuxtag.org/2001/english/showitem.php3?item=273&lang=en">strong PHP presence</a>.
+was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
 
 <?php echo hdelim(); ?>
