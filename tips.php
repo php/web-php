@@ -32,6 +32,12 @@ related to PHP.  They aren't necessarily be related to actually coding in PHP
 Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@php.net</A>.
 </P>
 
+<?php tipTitle('Adding the Quick Reference to most Javascript-capable Browsers', 'Jim Winstead', '07-Mar-2001'); ?>
+
+<p>Just right-click (command-click for Macintosh users) on this link: <A HREF="javascript:phpfunc=window.prompt('PHP Function Lookup:','') ; if(phpfunc && phpfunc != '') { window.location = 'http://www.php.net/manual-lookup.php?function=' +phpfunc; } else { history.go(-1); }">PHP Quick Reference</A> and add it to your bookmarks.
+</p>
+
+
 <?php tipTitle('Adding the Quick Reference to Mozilla and Netscape 6', 'Andr&eacute; Langhorst', '16-Aug-2000'); ?>
 
 <P>
@@ -110,7 +116,6 @@ if necessary):
 Netscape will open the proper URL for you.
 
 </OL>
-
 
 
 <? tipTitle('Quick Reference for Gnome Users', 'Benjamin Curtis', '29-Jul-2000'); ?>

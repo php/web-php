@@ -12,8 +12,14 @@ echo "\n<!--$MYSITE-->\n";
 here. We've streamlined the site, with a new design from the
 esteemed Colin Viebrock. Bear with us while we shake out the
 bugs that are surely lingering behind this new facade.
-<br clear="all">
 </p>
+
+<p>Miss the quickref box? It's still there on the pages of the <a
+href="manual/">manual</a>. Check out our <a href="tips.php">tips
+page</a> for tips on how to add a quick reference button to your
+browser.</p>
+
+<br clear="all">
 
 <? echo hdelim(); ?>
 
