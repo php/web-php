@@ -74,7 +74,9 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
  href="mailto:group@php.net">group@php.net</a> to let us know that we've
  forgotten you, but you haven't forgotten us! (It happens. There's several of
  us, and sometimes we think that someone else has taken care of your request,
- and they think that we took care of it. Sorry.)
+ and they think that we took care of it. Sorry.)  You can also speed up the
+ process by having an existing CVS account holder who works in the area you are
+ interested in mail us to vouch for you.
 </p>
 
 <p>
@@ -253,7 +255,8 @@ EOT;
  Please note that you do <em>NOT</em> need a CVS account to study PHP. You do
  <em>NOT</em> need a CVS account to learn PHP, to use PHP or to in any way do
  anything at all with PHP. If you are sitting there wondering if you need a
- CVS account, then you don't!
+ CVS account, then you don't!  If an existing CVS account holder suggested you
+ request an account, please mention their cvs id in the request.
 </p>
 
 <?php
