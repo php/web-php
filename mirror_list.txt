@@ -42,5 +42,4 @@ us       www.php.net           Troy Cobb               tcobb@staff.circle.net   
 us       php.he.net                                                                              ?                               same as us2.php.net
 us       us3.php.net           Anton Olsen             aolsen@murl.com                           208.244.87.206
 us       php.calinet.com                               dave@calinet.com                          206.190.76.37
-us       php.cooper8.com                                                                         205.166.246.61 ?
 za       za.php.net            Johan Eksteen           Johan.Eksteen@dent.mikom.csir.co.za       146.64.8.136
