@@ -40,6 +40,18 @@ commonHeader("Documentation ");
 <li><? download_link("manual.zip", "PHP HTML Manual ZIP File"); ?>
 <li><? download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
 </ul>
+<H2>Latest versions (daily snapshots)</H2>
+<ul>
+<li><?php download_link("http://snaps.php.net/manual/manual-en-current.tar.gz", "PHP HTML Manual (English) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-de-current.tar.gz", "PHP HTML Manual (German) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-it-current.tar.gz", "PHP HTML Manual (Italian) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-jp-current.tar.gz", "PHP HTML Manual (Japanese) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-fr-current.tar.gz", "PHP HTML Manual (French) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-es-current.tar.gz", "PHP HTML Manual (Spanish) .tar.gz File"); ?>
+<li><?php download_link("http://snaps.php.net/manual/manual-hu-current.tar.gz", "PHP HTML Manual (Hungarian) .tar.gz File"); ?>
+
+</ul>
+
 
 <H2>PDF Version</H2>
 <ul>
@@ -73,17 +85,28 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 <li><a href="books.php">Books on PHP</A>. Here you can find a
     great selection of books on PHP and related themes.
 
-<li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
-    discussions on a few topics that aren't covered in the PHP 3 manual
-    yet.
+<li><a href="/version4/win32build.php">Win32 build instructions</a></li>	
+<li>Download <a href="/version4/logos.php"> PHP 4.0 Logos</a></li>
 
-<li>Read what has <a href="changes.php3">changed since PHP/FI 2.0</a>
+<li>Read the <a href="/version4/migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
+<li>Read about the (very few) <a href="/version4/incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
+<li>License questions?  See the <a href="/version4/license-FAQ.php">License FAQ</a></li>	
 </ul>
 
 <H1>CVS Account</H1>
 <ul>
+<li><a href="/version4/cvs.php">CVS instructions</a></li>
 <li><A href="/cvs-php3.php">Getting a CVS account</a>.  If you wish to help out
 with the development of PHP, read this.
 </ul>
+
+<H1>Old/unsupported information</H1>
+<ul>
+<li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
+    discussions on a few topics that aren't covered in the PHP 3 manual
+    yet.
+<li>Read what has <a href="changes.php3">changed since PHP/FI 2.0</a>
+</ul>
+
 
 <? commonFooter("") ?>
