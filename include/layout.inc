@@ -181,6 +181,7 @@ function site_footer()
     print <<<END_FOOTER
 
  </div>
+ <div class="cleaner">&nbsp;</div>
 {$layout_helper}</div>
 
 <div id="footnav">

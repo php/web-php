@@ -126,6 +126,12 @@ ul.simple li {
 	/* Background to the right */
 }
 
+.cleaner {
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+}
+
 #leftbar {
 	float: left;
 	width: 186px;
