@@ -57,6 +57,8 @@ The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
 <LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more.<BR>
+<LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
+is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
 Introductory tutorial<BR>
 </UL>
