@@ -332,7 +332,7 @@ function commonFooter() {
 
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
  <tr valign="top" bgcolor="#cccccc">
-  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br />All rights reserved.</small></td>
+  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2003 The PHP Group'); ?><br />All rights reserved.</small></td>
   <td align="right"><small>
    This mirror generously provided by:
    <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
