@@ -5,8 +5,8 @@ commonHeader("License Information");
 
 <h1>License Information</h1>
 
-<p>You can download the text of the latest version (2.02) of the
-PHP license <a href="2_02.txt">here</a>.</p>
+<p>You can download the text of the latest version (3.0) of the
+PHP license <a href="3_0.txt">here</a>.</p>
 
 <a name="#FAQ"><h1>Frequently Asked Questions</h1></a>
 
@@ -17,6 +17,9 @@ Public License (GPL) like PHP 3 was?</p>
 be done with the licensed code.  The PHP developers decided to
 release PHP under a much more loose license (Apache-style), to help
 PHP become as popular as possible.</p>
+
+<p><b><i>Note: the following questions and answers only apply to version
+2.01 and 2.02 of the PHP license.  Ignore for version 3.0.</i></b></p>
 
 <p><b>Q.</b> What does the PHP license mean then, in simple words?</p>
 
