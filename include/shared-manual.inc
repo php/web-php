@@ -310,11 +310,13 @@ function manualFooter()
     
     if ($PRINT_PAGE) {
         if ($PRINT_NOTES) {
+            echo "<br /><br />";
             manualPrintUserNotes($title, $id);
         }
         manualPrintFooter();
     } else {
-        manualUserNotes($title,$id);
+        echo "<br /><br />";
+        manualUserNotes($title, $id);
         echo "<br />";
         navigationBar($title, $id, "bottom");
         commonFooter();
