@@ -126,7 +126,7 @@ scripting engine which greatly improves the object model, adds exception
 handling and provides a much better infrastructure for the integration
 of external technologies like Java or .NET.  For more details and
 examples you can check out the <a href="ZEND_CHANGES.txt">CHANGES file</a>
-and an <a href="http://www.php.net/source.php?url=/zend2_example.php">example script</a>
+and an <a href="http://www.php.net/source.php?url=/zend2_example.phps">example script</a>
 which shows how some of these features can be used.</p>
 
 <p><b>Note:</b>  This is an alpha version.  It should not be used in production
