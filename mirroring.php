@@ -5,7 +5,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("Mirroring The PHP Website");
 
 // Get a minute to print out for the cron example
-srand(); $minute = rand(0, 59);
+function make_seed()
+{
+    list($usec, $sec) = explode(' ', microtime());
+    return (float) $sec + ((float) $usec * 100000);
+}
+srand(make_seed());
+$minute = rand(0, 59);
 ?>
 
 <h1>Mirroring The PHP Website</h1>
