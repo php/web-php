@@ -312,7 +312,7 @@ function commonFooter() {
             window.location.href = mirror +
                       window.location.pathname +
                       window.location.hash +
-                      window.location.search);
+                      window.location.search;
           }
 	  return false;
         }
