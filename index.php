@@ -145,6 +145,25 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>php|symphony</h1>
+
+<p>
+ <span class="newsdate">[10-Feb-2005]</span>
+ php|architect magazine has introduced <a
+ href="http://www.phparch.com/shop_dept.php?itemid=12">php|symphony</a>, an
+ ongoing series of online talks given by some of today's leaders in the PHP
+ world. Each talk in the series features an in-depth discussion on a specific
+ topic, such as security, enterprise development and so on. Talks are delivered
+ entirely online using an interactive system compatible with most OSs and
+ browsers.
+</p>
+<p>
+ The series will start on February 23rd with a talk by security expert Chris
+ Shiflett titled "Mastering PHP Security".
+</p>
+
+<hr />
+
 <h1>ApacheCon Europe Call for Papers</h1>
 <p>
  <span class="newsdate">[08-Feb-2005]</span>
