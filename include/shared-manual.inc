@@ -69,8 +69,6 @@ function makeBorderTOC($this) {
 
 	$SIDEBAR_DATA.= '</small></td></tr>';
 	$SIDEBAR_DATA.= '</table></form>';
-	$SIDEBAR_DATA.= '<!--/UdmComment-->';
-
 }
 
 function navigationBar($title,$id,$loc) {
@@ -274,6 +272,7 @@ function manualHeader($title,$id="") {
 	if (!$HTDIG) {
 		navigationBar($title, $id, "top");
 	}
+        echo "<!--/UdmComment-->";
 }
 
 function manualFooter($title,$id="") {
