@@ -1,5 +1,9 @@
 <?php
 
+require "shared.inc";
+
+$lang = $MIRRORS[$MYSITE][6];
+
 # handle .php3 files that were renamed to .php
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	if($SERVER_PORT!=80) {
@@ -17,11 +21,11 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 }
 
 # handle moving english manual down into its own directory
-if (eregi("/manual/([^/]+.php3?)", $REQUEST_URI, $array)) {
+if (eregi("^(.*)/manual/([^/]+.php3?)", $REQUEST_URI, $array)) {
 	if($SERVER_PORT!=80) {
-		$url = "http://".$SERVER_NAME.":".$SERVER_PORT."/manual/$DEFAULT_LANG/".$array[1];
+		$url = "http://".$SERVER_NAME.":".$SERVER_PORT."$array[1]/manual/$lang/".$array[2];
 	} else {
-		$url = "http://".$SERVER_NAME."/manual/$DEFAULT_LANG/".$array[1];
+		$url = "http://".$SERVER_NAME."$array[1]/manual/$lang/".$array[2];
 	}
 	$urle = htmlspecialchars($url);
 	
@@ -43,8 +47,9 @@ if(strchr($uri,'/')) {
 	$lang = strtolower($lang);
 } else {
         $function = strtolower($uri);
-        $lang = $MIRRORS[$MYSITE][6];
 }
+
+if (!$lang) $lang = $MIRRORS[$MYSITE][6];
 
 $try = find_manual_page($lang, $function);
 if ($try) {
