@@ -40,7 +40,7 @@ function manual_setup($page_data)
 // already set up
 function manual_header()
 {
-    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES;
+    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES, $NOTABLES;
     
     // Get values out of the config array
     list($filename, $title) = $PGI['this'];
@@ -60,6 +60,8 @@ function manual_header()
         } else {
             $_SERVER['BASE_PAGE'] .= "/print/$filename";
         }
+    } elseif ($NOTABLES) {
+        $_SERVER['BASE_PAGE'] .= "/tableless/$filename";
     } else {
         $_SERVER['BASE_PAGE'] .= "/$filename";
     }
@@ -69,15 +71,20 @@ function manual_header()
         manual_header_print();
     } else {
         manual_sidebar();
-        commonHeader("$title - Manual");
-        manual_navbar();
+        if ($NOTABLES) {
+            site_header("$title - Manual");
+            manual_navbar_notables();
+        } else {
+            commonHeader("$title - Manual");
+            manual_navbar();
+        }
     }
 }
 
 // Print out manual page footer
 function manual_footer()
 {
-    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
+    global $PRINT_PAGE, $PRINT_NOTES, $PGI, $NOTABLES;
 
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
@@ -92,8 +99,13 @@ function manual_footer()
         echo "<br /><br />";
         manual_notes();
         echo "<br />";
-        manual_navbar("bottom");
-        commonFooter();
+        if ($NOTABLES) {
+            manual_navbar_notables("bottom");
+            site_footer();
+        } else {
+            manual_navbar("bottom");
+            commonFooter();
+        }
     }
 }
 
@@ -131,9 +143,9 @@ function manual_sidebar()
         // There are some very long function names, which
         // make the TOC be too wide, so wrap them
         // eg: xml_set_processing_instruction_handler 
-        if (strlen($title) > 30 && preg_match("!^[a-z0-9_]+$!", $title)) {
+        if (strlen($title) > 28 && preg_match("!^[a-z0-9_]+$!", $title)) {
             $title = str_replace("_", " ", $title);
-            $title = wordwrap($title, 30, "<br>");
+            $title = wordwrap($title, 28, "<br>");
             $title = str_replace(array(" ", "<br>"), array("_", "<br />_"), $title);
         }
         
@@ -225,6 +237,70 @@ function manual_navbar($location = "top")
     echo '</td><td align="right" valign="bottom"><small>Last updated: ' .
          $PGI['lastmod'] . '</small></td></tr>';
     echo "</table>\n<!--/UdmComment-->\n";
+}
+
+function manual_navbar_notables($location = "top")
+{
+    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
+
+    // Start navbar with 
+    echo "<!--UdmComment-->\n<div class=\"manualnavbar\">\n <span class=\"prev\">\n";
+    if ($PGI['prev'][1]) {
+        echo "  <a href=\"{$PGI['prev'][0]}\">" . 
+             make_image('caret-l.gif', '&lt;') .
+             $PGI['prev'][1] . "</a>\n";
+    }
+    echo " </span>\n <span class=\"next\">\n";
+    if ($PGI['next'][1]) {
+        echo "  <a href=\"{$PGI['next'][0]}\">" .
+             $PGI['next'][1] .
+             make_image('caret-r.gif', '&gt;') .
+             "</a>\n";
+    }
+    echo " </span>\n <hr />\n";
+
+    // Print out language switch on top of manual pages
+    echo " <div class=\"langchooser\">\n";
+    if ($location != 'bottom') {
+        
+        // Quick access to filename
+        $filename = $PGI['this'][0];
+        
+        // Initial two dropdown menu items
+        $links = array(
+            array("$LANG/print/$filename",   "printer friendly"),
+            array("$LANG/printwn/$filename", "printer friendly [+notes]")
+        );
+        
+        // Disable all languages without online content
+        $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+        
+        // Add a dropdown item for all languages left
+        foreach ($online_languages as $code => $name) {
+            if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
+                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$filename")
+               ) {
+                $links[] = array("$code/$filename", $name);
+            }
+        }
+        
+        // Print out the form with all the options
+        echo '  <form action="/manual/change.php" method="GET">' . "\n" .
+             '   view the <select name="page">'. "\n";
+        foreach ($links as $link) {
+            echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
+        }
+        echo "   </select>\n" .
+             '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
+             '/images/small_submit.gif" border="0" width="11" height="11" ' .
+             'alt="" align="baseline"> version of this page' . "\n  </form>\n";
+       
+    }
+    echo " </div>\n";
+
+    // Provide last updated information on this page anc close div
+    echo " <span class=\"lastupdated\">Last updated: {$PGI['lastmod']}</span>\n" .
+         "<div class=\"cleaner\"></div>\n</div>\n<!--/UdmComment-->\n\n";
 }
 
 // =============================================================================
