@@ -440,6 +440,19 @@ by Helmut Dittrich and J&uuml;rgen Mellenthin<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://pagina.se/bok.html?20660"
+><IMG SRC="/gifs/ek-eriksson.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="159"
+></A><BR>
+</TD>
+<TD><A HREF="http://pagina.se/bok.html?20660"
+>PHP 4 programmering</A><BR>
+by Jesper Ek and Ulrika Eriksson<BR>
+<SMALL>in Swedish, February 2001, ISBN 9-1636-0660-7, 220 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.AnayaMultimedia.es/"
 ><IMG SRC="/gifs/esteban_trigo.gif" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="187" 
 ></A><BR>
