@@ -127,12 +127,19 @@ foreach ($LANGUAGES as $langcode => $language) {
             $language .= '<br /><a href="http://dev.nexen.net/docs/php/chargement.html">[Special French]</a>';
         }
         
+        // Highlight manual in preferred language
+        if ($langcode == preferred_language()) {
+            $bgcolor = "#ffffcc";
+        } else {
+            $bgcolor = "#eeeeee";
+        }
+
         echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$language</b></td>\n";
         
         // Print out a table cell for all formats
         foreach ($files as $fileinfo) {
             
-            echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
+            echo "<td align=\"center\" bgcolor=\"$bgcolor\">";
             
             // Missing format
             if ($fileinfo == '') {

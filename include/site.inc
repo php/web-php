@@ -36,6 +36,13 @@ function default_language($site = FALSE)
     return $MIRRORS[$site][6];
 }
 
+// Returns the preferred language,
+// honoring user settings [for future usage]
+function preferred_language()
+{
+    return default_language();
+}
+
 // Returns true if the current (or specified) mirror
 // site is registered to have local search support
 function have_search($site = FALSE)
