@@ -352,6 +352,16 @@ database, just by changing one variable. It just reduces administration time dev
 from 10 to 1.
 <? endEntry();?>
 
+<? makeEntry("TreeDoc","http://www.softky.com/TreeDoc/","Bill Softky","bill@softky.com"); ?>
+TreeDoc allows even php-ignorant page designers to create "Tree Documents," or
+"Fluid Documents," in which hyperlinks are opened in boxes in the middle of the
+calling page, right below the link, instead of on a new page.  This lets you
+open a document's sections, subsections, definitions etc. just like you would
+open sub-folders in a "tree control."  The recursive code is encapsulated in php
+tags analogous to HTML &lt;a href="..."&gt; tags, so non-programmers can create such
+documents.  
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
