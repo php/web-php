@@ -82,7 +82,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP Documentation Team Meeting</h1>
 <p>
 <font class="newsDate">[13-Mar-2002]</font>
-The protocol from the PHP Docuementation Team Meeting (Stuttgart, March 8th-10th) is now available.
+The protocol from the PHP Documentation Team Meeting (Stuttgart, March 8th-10th) is now available.
 You can find the protocol <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html', 'here'); ?>.
 You can find pictures of this event at <?php print_link('http://photos.jdimedia.nl/phpdoc/', 'this'); ?> location.
 </p>
