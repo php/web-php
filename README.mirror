@@ -40,6 +40,8 @@ Once you create a virtualhost which looks something like:
    ErrorDocument 404 /error/
    ErrorDocument 401 /error/
    ErrorDocument 403 /error/
+   # next line is only necessary if generating stats (see stats/README.stats)
+   Alias /stats/ /path/to/local/stats
    </VirtualHost>
 
 modified to reflect your local paths and country, of course, then your site
@@ -74,6 +76,9 @@ appropriate steps will be taken to integrate your mirror site:
 - Whether or not you've installed local searching support on your mirror.
   This uses ht://Dig (http://www.htdig.org), for which instructions for 
   setting it up can be found in Mirrors-htdig.tgz
+- Whether or not you've installed local stats support on your mirror.
+  This uses webalizer, for which instructions for setting it up
+  can be found in stats/README.stats
 - The name of your hosting company.
 - The URL of the site that hosts the mirror.  This is where you want
   people will go when they click on the link for your mirror at the

@@ -288,7 +288,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 #
 
 function commonFooter() {
-	global $SCRIPT_NAME,$MIRRORS,$MYSITE,$COUNTRIES,$LAST_UPDATED,$DOCUMENT_ROOT,$enclosed;
+	global $SCRIPT_NAME,$MIRRORS,$MYSITE,$COUNTRIES,$LAST_UPDATED,$enclosed;
 	if ($enclosed) {
 		echo "</td></tr></table></td></tr></table>\n";
 	}
@@ -316,7 +316,7 @@ function commonFooter() {
 	echo delim();
 	print_link('/credits.php', 'credits', false, 'class="small"');
 	echo delim();
-	if (file_exists("$DOCUMENT_ROOT/stats/index.php")):
+	if ($MIRRORS[$MYSITE][2]):
 		print_link('/stats/', 'stats', false, 'class="small"');
 		echo delim();
 	endif;
