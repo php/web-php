@@ -90,6 +90,7 @@ right away.</blockquote>
 /* Educational/Research */
 	title("Educational/Research");
 	siteStart();
+	site("AAA-CT La Salle","www.salleURL.edu/AnticsAlumnes/index.html");
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
 	site("DevilNet at Duke University", "devilnet.duke.edu");
