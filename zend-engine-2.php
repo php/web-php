@@ -257,7 +257,7 @@ to create a new instance of this other object so that the replica has its own se
 An object copy is created by calling the object's <code>__clone()</code> method:
 </p>
 <p>
-<?php highlight_source('$copy_of_object = $object->__clone();'); ?>
+<?php highlight_string('$copy_of_object = $object->__clone();'); ?>
 </p>
 <p>
 When the developer asks to create a new copy of an object, the Zend Engine will check if a 
@@ -319,7 +319,7 @@ The Zend Engine 2.0 introduces a standard way of declaring constructor methods b
 by the name __construct().
 </p>
 <h3>Example</h3>
-<?php highlight_source('<?php
+<?php highlight_string('<?php
 class BaseClass {
 	function __construct() {
 		print "In BaseClass constructor\n";
