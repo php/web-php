@@ -122,6 +122,7 @@
 	/* Misc. */
 	site("Internet Weather Report","www.internetweather.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
+	site("TVGrid.com","www.divein.tvgrid.com");
 
 	echo "</td></tr></table></center>\n";
 ?>

@@ -12,15 +12,15 @@
   </td>
   <td align="center" width="33%"><?
 
-  mysql_pconnect($dbhost,$dbuser,$dbpwd) or
-      die("Unable to connect to SQL server");
-  @mysql_select_db($dbname) or
-      die("Unable to select database");
-  $sponsquery = @mysql_query("SELECT code FROM sponsor " .
-                             "WHERE server='$SERVER_NAME'");
-  if (@mysql_num_rows($sponsquery) > 0) {
-      print StripSlashes(mysql_result($sponsquery, 0, "code"));	
-  }
+  $sponsor["www.php.net"] = "<a href=\"http://BestHost.net/\"><img src=\"http://BestHost.net/images/php_sponsor.gif\" border=0 alt=\"BestHost - proud sponsor of PHP.net\"></a>";
+  $sponsor["ca.php.net"] = "<a href=\"http://www.lerdorf.on.ca/\">Site hosted by Lerdorf Consultants Inc.</a>";
+  $sponsor["il.php.net"] = "<a href=\"http://www.netvision.net.il/\">Site hosted by Netvision LTD</a>";
+  $sponsor["php.netvision.net.il"] = $sponsor["il.php.net"];
+  $sponsor["php.technion.ac.il"] = "<a href=\"http://www.technion.ac.il/\">Site hosted by the Technion, Israel Institute of Technology</a>";
+  $sponsor["machba.il.php.net"] = $sponsor["php.technion.ac.il"];
+  $sponsor["uk.php.net"] = "<a href=\"http://www.netcom.co.uk/\">Site hosted by Netcom Communications Ltd.</a>";
+  
+  echo $sponsor[$SERVER_NAME];
 
 ?></td>
   <td align="right" width="33%">
