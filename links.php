@@ -243,13 +243,6 @@ An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources</li>
 
 </ul></li>
-<li><b>Dutch</b>
-<ul>
-
-<li><a href="http://php.pagina.nl/">Pagina</a><br>
-A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
-
-</ul></li>
 <li><b>Brazilian</b>
 <ul>
 
@@ -259,6 +252,25 @@ Brazilian PHP portal with many links and information</li>
 
 <li><a href="http://www.phpsite.com.br/">PHPsite.com.br</a><br>
 Brazilian PHP portal featuring tutorials, downloads, a forum and more</li>
+</ul></li>
+
+<li><b>Hungarian</b>
+<ul>
+
+<li><a href="http://phpinfo.freephp.hu/">phpinfo()</a><br>
+Hungarian PHP portal, fearturing tips, forums and fresh news about PHP</li>
+
+
+<li><a href="http://php.lap.hu/">PHP.lap.hu</a><br>
+The most important Hungarian an International links</li>
+</ul></li>
+
+<li><b>Dutch</b>
+<ul>
+
+<li><a href="http://php.pagina.nl/">Pagina</a><br>
+A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
+
 </ul></li>
 
 <li><b>Portuguese</b>
