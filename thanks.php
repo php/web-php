@@ -26,7 +26,7 @@ the server and bandwidth for various php.net websites.
 </p>
 
 <p>
-<?php print_link("http://vasoftware.com/", "VA Software Corporation"); ?> provides
+<?php print_link("http://www.redundant.com/", "Redundant Networks"); ?> provides
 the server and bandwidth that run various services for php.net.
 </p>
 
@@ -39,10 +39,12 @@ our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
 <p>Special 'legacy' thanks go to the people and companies who have helped us in our past.</p>
 
 <p><?php print_link("http://www.synacor.com", "Synacor"); ?> provided us with many terabytes of 
-bandwidth and hosting for www.php.net and others for many years. PHP.net is very grateful for all their support.
+bandwidth and hosting for www.php.net and others for many years.</p>
 </p>
 
 <p><?php print_link("http://www.vasoftware.com", "VA Software Corp."); ?> helped us by donating a server and resources
-to enable us to build manuals and distribute our content via rsync. We appreciate all their support.</p>
+to enable us to build manuals and distribute our content via rsync.</p>
+
+<p>PHP.net is very grateful for all their support.</p>
 
 <?php commonFooter(); ?>
