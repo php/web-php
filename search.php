@@ -232,6 +232,9 @@ if (isset($pattern)) {
         // (the template for this is phphead.html in Mirrors-htdig.tgz)
         list(, , $matches, $firstdisplayed, $lastdisplayed, $page, $pages) = $result;
         
+        // Detect htsearch error, which is returned in a HTML output file
+        if (strpos($matches, "error") > 0) { searchError(); }
+        
         // String to carry on the search parameters in prev/next URLs
         $baseurl = $PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show";
         if (isset($base)) { $baseurl .= "&base=" . urlencode($base); }
