@@ -97,7 +97,7 @@ if ($process) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
             } else {
                 echo "<!-- $result -->";
-                echo "<p class=\"formerror\">There was an error processing your submission. It has been automatically e-mailed to the developers, who will process the note manually.</p>";
+                echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
             }
         }
 

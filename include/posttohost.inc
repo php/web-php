@@ -26,7 +26,7 @@ function posttohost($url, $data)
     }
 
     // Open socket on host
-    $fp = fsockopen($url['host'], $url['port'] ? $url['port'] : 80);
+    $fp = @fsockopen($url['host'], $url['port'] ? $url['port'] : 80);
     if (!$fp) { return "failed to open socket to {$url['host']}"; }
 
     // Send HTTP 1.0 POST request to host
