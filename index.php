@@ -121,10 +121,8 @@ cross-platform GUI applications. Win32 binary version
 should be available a little later.
 </p>
 <p>
-Note that previous versions require PHP 4.0.5/4.0.6,
-but <emphasis>0.1 requires the CVS version of PHP or
-upcoming 4.0.7</emphasis> due to non-backwards
-compatible changes in the Zend engine.
+Note that this version requires PHP CVS version to compile, but it can be run
+under 4.0.5 and later.
 </p>
 <p>
 A talk on PHP-GTK was presented by Andrei Zmievski and
