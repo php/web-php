@@ -25,7 +25,8 @@ First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
 
-    rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path 
+    rsync -avzC --timeout=600 --delete --delete-after \
+      rsync.php.net::phpweb /your/local/path 
 
 Setting up an unofficial mirror, and want to only mirror one language of the
 manual? Add: 
