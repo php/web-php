@@ -9,12 +9,17 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>Improve your PHP skills</h3> 
+Looking for clear and useful guides to build dynamic web-sites using
+PHP?  Our <a href="/books.php3">Books Resource Center</a> lists now
+more than a dozen books in eight different languages. If you know
+about more PHP-related books, tell us about them!
+
 <img src="ads/ZendOptimizer.gif" align="right">
 <h3>Zend Optimizer Beta Released!</h3>
 <a href="http://www.zend.com">Zend Technologies</a> has announced the availability of
 the Zend Optimizer for PHP 4.0 Beta 4.  The optimizer is available for
 <a href="http://www.zend.com/zend/optimizer.php">free download</a>.
-
 
 <h3>PHP 3.0.15 released</h3>
 February 25, 2000. PHP 3.0.15 fixes a couple of issues and addresses some
