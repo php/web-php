@@ -150,6 +150,30 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+<?php print_link("http://conf.phpquebec.org/index.html", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+
+<h1>Call for Speakers : PHP Qu&eacute;bec 2004</h1>
+<p>
+ <span class="newsdate">[11-Nov-2003]</span>
+The PHP Qu&eacute;bec is pleased to annonce the PHP Qu&eacute;bec 
+conference 2004, which will be held on March, 25th&26th 2004. 
+We are looking for the best speakers, willing to 
+share their experience and skills with the educated crowd of PHP 
+programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
+2004 features 3 distinct tracks:<ul>
+<li>Professional PHP, dealing with php usage in professional 
+  environment and unusual businesses.</li>
+<li>Technical PHP, covering indeep details of PHP technics.</li>
+<li>Free software, about any free software, closely related to PHP.</li>
+</ul>
+<a href="http://conf.phpquebec.com/">Sessions</a> will be held in
+<a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
+<a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
+ For more information, read the <a 
+ href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
+</p>
+
+<hr />
 
 <h1>New function list auto completion</h1>
 <p>
