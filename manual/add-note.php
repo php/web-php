@@ -22,6 +22,10 @@ if ($user == "user@example.com") {
 
 $error = '';
 
+if($note && stristr($user, "|")) {
+  $error = "You have included bad characters within your username. We appreciate you may want to obfusicate your email further, but we now have a system in place to do this for you.";
+}
+
 if ($note && strlen($note) >= 4096) {
   $error = "Your note is too long. You'll have to make it shorter before you can post it. Keep in mind that this is not the place for long code examples!";
 }
