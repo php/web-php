@@ -188,6 +188,11 @@ function i2c_realip()
     // if any IP is found behind a firewall)
     $ip = FALSE;
     
+    // If HTTP_CLIENT_IP is set, then give it priority
+    if (!empty($_SERVER["HTTP_CLIENT_IP"])) {
+        $ip = $_SERVER["HTTP_CLIENT_IP"];
+    }
+    
     // User is behind a proxy and check that we discard RFC1918 IP addresses
     // if they are behind a proxy then only figure out which IP belongs to the
     // user.  Might not need any more hackin if there is a squid reverse proxy
@@ -196,6 +201,7 @@ function i2c_realip()
 
         // Put the IP's into an array which we shall work with shortly.
         $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+        if ($ip) { array_unshift($ips, $ip); $ip = FALSE; }
 
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
