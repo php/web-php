@@ -22,9 +22,9 @@ $minute = rand(0, 59);
  consent of your hosting company (if you aren't a hosting company
  yourself), and be prepared for some reasonably significant bandwidth
  usage (a reasonable estimate as of September 2004 is 750MB/day). The PHP
- website <strong>requires PHP 4.3.x</strong> with the settings
- <a href="#settings">outlined below</a>. The size of the full website
- is approximately 1.3 gigabyte.
+ website <strong>requires PHP 4.3.x</strong> set up as an Apache
+ module with the settings <a href="#settings">outlined below</a>.
+ The size of the full website is approximately 1.3 gigabyte.
 </p>
 
 <a name="rule"></a>
