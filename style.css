@@ -5,7 +5,6 @@ body, ul, td, th {
 
 p {
 	font-family: verdana,arial,helvetica,sans-serif;
-	text-align: justify;
 }
 
 em {
@@ -94,7 +93,6 @@ a.small {
 	font-size: 85%;
 	color: #FFFFFF;
 }
-
 
 input {
 	font-family: verdana,arial,helvetica,sans-serif;
