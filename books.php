@@ -339,18 +339,6 @@ array (
   ),
 
   array(
-    /* title[s]     */ "Das Einsteigerseminar PHP 4.0",
-    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3828711103/wwwphpnet07",
-    /* author[s]    */ "Dr. Susanne Wigard",
-    /* auth link[s] */ "",
-    /* image        */ "susanne_wigard.gif",
-    /* information  */ "BHV, Juni 2000, ISBN 3-8287-1110-3, 382 pages",
-    /* inform. link */ "http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html",
-    /* language     */ "de"
-  ),
-
-
-  array(
     /* title[s]     */ "PHP 4 und MySQL",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3815822033/wwwphpnet07",
     /* author[s]    */ array("Rolf D. Stoll", "Gudrun Anna Leierer"),
