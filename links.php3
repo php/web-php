@@ -58,6 +58,10 @@ The start of what looks to be a promising collection of base code
 for developers of large PHP sites.<BR>
 <LI><A HREF="http://www.php-center.de/">PHP Center</A><BR>
 German speaking portal site with tutorials, tips and tricks, job advertisements, articles and more.<BR>
+<LI><A HREF="http://www.php-homepage.de/">PHP-Homepage</A><BR>
+German site about PHP with scripts, tips, foren, MyGuestBook, articles, news and more.<BR>
+<LI><A HREF="http://www.dynamic-webpages.de/">Dynamic-Webpages</A><BR>
+German site with installation guides, tips & scripts, BestOfGML, book reviews, german manual, links and more.<BR>
 <LI><A HREF="http://www.phpindex.com/">PHPIndex</A><BR>
 is a french gateway to PHP related contents.<BR>
 <LI><A HREF="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</A><br>
