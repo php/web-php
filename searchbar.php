@@ -16,7 +16,7 @@ if (preg_match('/Gecko/', $HTTP_SERVER_VARS['HTTP_USER_AGENT'])) {
  <link rel="shortcut icon" href="/favicon.ico" />
  <style>
   select, input, button, body, p, td {
-      font-family: "MS Sans Serif", "Arial", "Helvetica";
+      font-family: Verdana, Arial, Helvetica, Sans Serif;
       font-size: 13px;
   }
   .title {
