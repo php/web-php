@@ -114,6 +114,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Printer friendly manual pages with notes</h1>
+<p>
+<font class="newsdate">[03-Aug-2002]</font> Starting from today, the
+manual pages are not only available in their printer friendly versions,
+but also in printer friendly versions with user notes included. Check
+the links at the <a href="/manual">top of the manual pages</a> to go
+to printer friendly manual pages, and change langauges.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>ActiveState Awards</h1>
 <p>
 <font class="newsdate">[31-Jul-2002]</font> ActiveState is pleased to announce
