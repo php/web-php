@@ -200,6 +200,29 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Grant Program</h1>
+
+<p>
+<font class="newsdate">[06-Mar-2003]</font>
+<a href="http://www.phparch.com">php|architect</a>, is proud to
+announce the creation of the php|architect Grant Program, whose goal is
+to provide financial support to best-of-breed PHP-related projects.
+</p>
+
+<p>
+Participation in the program is open to all open-source projects
+that are related to PHP (but not necessarily written <i>in</i> PHP). The
+program is accepting submissions now and will start distributing grants
+in June of 2003.
+</p>
+
+<p>
+For more information, visit the <a 
+href="http://www.phparch.com/grant/">program's website</a>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Set your own language preference</h1>
 
 <p>
