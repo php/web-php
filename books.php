@@ -408,7 +408,9 @@ array (
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
     /* auth link[s] */ "",
     /* image        */ "allen_wyke.jpg",
-    /* information  */ "Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages",
+    /* information  */ "Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<br>" .
+                       "Also available in " .
+                       make_link("http://php.adatnet.hu/Kossuth.ShowIssue/Kossuth.showIssueEvent/415", "Hungarian"),
     /* inform. link */ "",
     /* language     */ "en"
   ),
