@@ -241,7 +241,7 @@ array(
     /* language     */ "de"
   ),
 
-array (
+  array (
     /* title[s]     */ "Programming PHP",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926102/wwwphpnet",
     /* author[s]    */ array("Rasmus Lerdorf","Kevin Tatroe"),
@@ -252,7 +252,7 @@ array (
     /* language     */ "en"
    ),
 
-array (
+  array (
     /* title[s]     */ "PHP Pocket Reference",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565927699/wwwphpnet",
     /* author[s]    */ "Rasmus Lerdorf",
@@ -260,6 +260,17 @@ array (
     /* image        */ "phppr.s.gif",
     /* information  */ "O'Reilly & Associates, Jan 2000, ISBN 1-56592-769-9, 114 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/phppr/",
+    /* language     */ "en"
+   ),
+
+  array (
+    /* title[s]     */ "Web Database Applications with PHP & MySQL",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0596000413/wwwphpnet",
+    /* author[s]    */ array("Hugh E. Williams", "David Lane"),
+    /* auth link[s] */ "",
+    /* image        */ "webdbapp.gif",
+    /* information  */ "O'Reilly & Associates, Mar 2002, ISBN 0-5960-0041-3, 582 pages",
+    /* inform. link */ "http://www.oreilly.com/catalog/webdbapps/",
     /* language     */ "en"
    ),
 
@@ -507,7 +518,7 @@ array (
   ),
 
   array(
-    /* title[s]     */ "MySQL/PHP Database Application",
+    /* title[s]     */ "MySQL/PHP Database Applications",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0764535374/wwwphpnet",
     /* author[s]    */ array("Jay Greenspan", "Brad Bulger"),
     /* auth link[s] */ "",
