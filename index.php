@@ -217,6 +217,39 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
 
+<h1>PHP 5.0.0 Beta 1</h1>
+<p>
+ <font class="newsdate">[29-Jun-2003]</font>
+ The PHP development community is proud to announce the release of PHP 5 Beta 1.  Both source packages 
+ (<?php download_link('php-5.0.0b1.tar.bz2', 'bzip2'); ?> | <?php download_link('php-5.0.0b1.tar.gz', 'gzip'); ?>),
+ and a Windows <?php download_link('php-5.0.0b1-Win32.zip', 'build'); ?> are available.  A list of changes 
+ can be found in the <a href="/ChangeLog-5.php">ChangeLog</a> file.
+</p>
+<p>
+Some of the more major changes include:
+</p>
+<p>
+<ul>
+ <li>PHP5 features the Zend Engine 2.  For a list of Zend Engine 2 changes, please visit 
+ <a href="/zend-engine-2.php">this</a> webpage.</li>
+ <li>XML support has been completely redone in PHP5, all extensions are now focused around the 
+ excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).</li>
+ <li>SQLite has been bundled with PHP.  For more information on SQLite, please visit their 
+ <a href="http://www.hwaci.com/sw/sqlite/">website</a>.</li>
+ <li>Streams have been greatly improved, including the ability to access low-level socket 
+ operations on streams.</li>
+ <li>Due to issues surrounding the MySQL 4.0 license, the MySQL are no longer bundled with 
+ PHP.  For more information on these licensing changes, please refer to the 
+ <a href="http://www.mysql.com/products/licensing.html">MySQL Licensing Policy</a>.</li>
+</ul>
+</p>
+<p>
+<b>Note</b>: This is a beta version. It should not be used in production or even semi-production
+web sites. There are known bugs in it, and in addition, some of the features may change (based on
+feedback). We encourage you to download and play with it (and <a href="http://bugs.php.net/">report bugs</a>
+if you find any!), but please do not replace your production installations of PHP 4 at this time.
+</p>
+
 <h1>PHP Usage Survey</h1>
 <p>
  <font class="newsdate">[24-Jun-2003]</font>
