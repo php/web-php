@@ -189,8 +189,8 @@ else { ?>
 <p>
  (And if you're posting an example of validating email addresses, please
  don't bother. Your example is almost certainly wrong for some small subset of
- cases. See <a href="http://examples.oreilly.com/regex/">this information from
- O'Reilly Mastering Regular Expressions book</a> for the gory details.)
+ cases. See <a href="http://examples.oreilly.com/regex/readme.html">this information
+ from O'Reilly Mastering Regular Expressions book</a> for the gory details.)
 </p>
 <p>
  Please note that periodically, the developers may go through the notes and
