@@ -135,9 +135,10 @@ Restrict the search to:<br></td>
 			$form="http://www.php.net/search.php";
 		}
 		if (!isset($base)) {
-			if (ereg("^(.+//[^/]+)/",$HTTP_REFERER,$reg)) {
-				$base=$reg[1];
+			if (eregi("^http://([^.]+)\.php\.net/", $HTTP_REFERER, $matches) && !in_array($matches[1], array('bonsai', 'bugs', 'conf', 'cvs', 'gtk', 'lxr', 'master', 'news', 'pear', 'qa', 'smarty', 'snaps'))) {
+				$base = "http://{$matches[1]}.php.net";
 			}
+			unset($matches);
 			if ($base == $MYSITE) {
 				$base = "-";
 			}
