@@ -39,7 +39,7 @@ commonHeader("Download documentation");
 $formats = array(
  "Single HTML"       => "html.bz2",
  "Many HTML files"   => "tar.bz2",
- //"PDF"               => "pdf.bz2",
+ "PDF"               => "pdf.bz2",
  "PalmPilot DOC"     => "doc.pdb",
  "PalmPilot iSilo"   => "isilo.pdb",
  "Windows HTML Help" => "chm"
@@ -99,8 +99,19 @@ foreach ($LANGUAGES as $langcode => $language) {
             
             // Size available, collect information
             if ($size) {
-                $files[] = array($link_to, (int) ($size/1024),  date("j M Y", $changed), $extension);
-                $formatnum++;
+                
+                // The PDF file was changed in 2002, skip it
+                if ($formatname == "PDF" && $changed < mktime(0, 0, 0, 1, 1, 2003)) {
+                    $files[] = '';
+                } else {
+                    $files[] = array(
+                        $link_to,
+                        (int) ($size/1024),
+                        date("j M Y", $changed),
+                        $extension
+                    );
+                    $formatnum++;
+                }
             }
             
             // Size is not available, we won't list the file
