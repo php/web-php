@@ -1,7 +1,7 @@
 <?
 function local_ping($ip) {
 	global $SERVER_NAME;
-	$fp=popen("ping -s -n $ip 32 5","r");
+	$fp=popen("/usr/sbin/ping -s -n $ip 32 5","r");
 	$i=0;
 	while(!feof($fp)) {
 		$lines[]=fgets($fp,256);
