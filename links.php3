@@ -17,7 +17,7 @@ Looking for an ISP or hosting service that has PHP3 and MySQL support?  There's 
 <h3>Example Code</h3>
 Looking for some sample PHP scripts?  Try these sites:
 <UL>
-<LI><A HREF="http://www.sklar.com/px/">PX - PHP Code Exchange</A><BR>
+<LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>
 <LI><A HREF="http://php.netvision.net.il/examples/">PHP Example Archive</A><BR>
