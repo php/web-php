@@ -59,7 +59,7 @@ Then type:
   and should be treated as such.<P>
  
   If you plan on making significant contributions to the PHP code,
-  CVS write access is available.  Please see <a href=\"/cvs.php3\">
+  CVS write access is available.  Please see <a href=\"http://ca.php.net/cvs.php3\">
   Read This</a> for more information.</blockquote>
 <p>
 ";
