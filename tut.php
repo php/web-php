@@ -223,8 +223,8 @@ and hits the submit button, the <i>action.php</i> page is called.
 In this file you would have something like this:
 </p>
 
-<?php example('Hi <?php echo $HTTP_POST_VARS["name"]; ?>.
-You are <?php echo $HTTP_POST_VARS["age"]; ?> years old.')?>
+<?php example('Hi <?php echo $_POST["name"]; ?>.
+You are <?php echo $_POST["age"]; ?> years old.')?>
 
 <p>
 It should be obvious what this does. There is nothing more to it.
