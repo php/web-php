@@ -451,7 +451,8 @@ by Paul DuBois<BR>
 <SMALL>
 Foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
 New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
-<A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
+<A HREF="http://www.newriders.com/books/title.cfm?isbn=0735709211">more info</A><BR>
+French translation: <A HREF="http://www.campuspress.fr/store/book_info.asp?id=882">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
