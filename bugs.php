@@ -805,7 +805,10 @@ Or use the form below to submit a new bug report.
 
 <p><strong>Please read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</strong></p>
 <p><strong>To report bugs in PHP 3.0, please go <a href="/bugs-php3.php">here</a>.</strong></p>
-<p><strong>To report problems with the PHP website, send an email to <a href="mailto:webmaster@php.net">webmaster@php.net</a><strong></p>
+<p><strong>To report problems with the PHP website, you should first try visiting another
+<a href="/mirrors.php">mirror sites</a> in case the problem is only with a specific mirror.
+You should then report the problem (and the mirror(s) that have it) to 
+<a href="mailto:webmaster@php.net">webmaster@php.net</a>.<strong></p>
 
 <table>
  <tr>
