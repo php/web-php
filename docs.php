@@ -66,7 +66,7 @@ see all the information, you can <a href="/docs.php?sizes=1">click
 here to see the file sizes and dates</a>.
 </p>
 
-<p>Note that the packaged versions of the manual (tar.gz, tar.bz2 amd zip)
+<p>Note that the packaged versions of the manual (tar.gz, tar.bz2 and zip)
 don't contain any directories, so all of the files will be dumped into
 your current working directory when you expand the archive unless
 the tool you use does otherwise.</p>
