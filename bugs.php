@@ -184,7 +184,7 @@ elseif ($cmd == "display") {
   <th><a href="<?php echo $link;?>&amp;reorder_by=php_os">OS</a></th>
   <th><a href="<?php echo $link;?>&amp;reorder_by=sdesc">Description</a></th>
   <th>Mod</th>
-  <th><a href="<?php echo $link;?>&amp;reorder_by=assigned">Assigned</a></th>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=assign">Assigned</a></th>
  </tr>
 <?php
 		while ($row = mysql_fetch_array($res)) {
@@ -201,7 +201,7 @@ elseif ($cmd == "display") {
 			echo "<td>",$row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;","</td>";
 			echo "<td>",$row[sdesc] ? htmlspecialchars($row[sdesc]) : "&nbsp;","</td>";
 			echo "<td align=\"center\"><a href=\"$PHP_SELF?id=$row[id]&amp;edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\" alt=\"edit\" /></a></td>";
-			echo "<td>",$row[assigned] ? htmlspecialchars($row[assigned]) : "&nbsp;","</td>";
+			echo "<td>",$row[assign] ? htmlspecialchars($row[assign]) : "&nbsp;","</td>";
 			echo "</tr>\n";
 		}
 
