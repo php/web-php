@@ -309,15 +309,17 @@ elseif ($cmd == "display") {
 
 		$text.= get_old_comments($id);
 
-		$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
-		$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=1\n";
+		$user_text = $text . "\n\nATTENTION! Do NOT reply to this email!\n";
+		$user_text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=2\n";
+
+		$dev_text .= $text . "\n\nEdit this bug report at http://bugs.php.net/?id=$id&edit=1\n";
 
 		list($mailto,$mailfrom) = get_bugtype_mail($bug_type);
 
 		/* send mail if status was changed or there is a comment */
 		if ($status != $original[status] || $ncomment != "") {
-			@mail($original[email], "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: Bug Database <$mailfrom>\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
-			@mail($mailto, "Bug #$id Updated: ".stripslashes($sdesc), $text, "From: $from\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
+			@mail($original[email], "Bug #$id Updated: ".stripslashes($sdesc), $user_text, "From: Bug Database <$mailfrom>\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
+			@mail($mailto, "Bug #$id Updated: ".stripslashes($sdesc), $dev_text, "From: $from\nX-PHP-Bug: $id\nIn-Reply-To: <bug-$id@bugs.php.net>");
 		}
 
 		# display a happy success message
