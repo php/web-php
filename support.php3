@@ -23,15 +23,16 @@ if (isset($maillist)) {
 				"This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
 			break;
 		}
-	}
-}
 ?>
 <p>
 A request has been entered into the mailing list processing queue. You
 should receive an email at <?echo $email;?> shortly describing how to
 complete your request.
-<?endif;
-else:?>
+<?
+	}
+} else {
+
+?>
 <h3>Documentation</h3>
 <P>
 A good place to start is by skimming through the ever-growing <a
@@ -184,6 +185,7 @@ experienced PHP people sitting around doing nothing on the #php channel
 on EFNet.  If you don't know what IRC is you can learn more about it at
 <a href="http://www.irchelp.org">www.irchelp.org</a>.
 
-<?endif;
+<?
+}
 commonFooter();
 ?>
