@@ -167,7 +167,7 @@ commonHeader("Hypertext Preprocessor");
  href="http://www.phpconference.de/kt/input/">http://www.phpconference.de/kt/input/</a> -
  they'll be reviewed by the Chair Board which consists this year of:
  Bj&ouml;rn Schotte (chair), Zak Greant, Derick Rethans, George
- Schlossnagle, Sascha Schumann. The full conference website will
+ Schlossnagle, and Sascha Schumann. The full conference website will
  be online soon.
 </p>
 
