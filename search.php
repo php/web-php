@@ -115,16 +115,14 @@ Restrict the search to: <BR>
 </TD>
 <TD>
 <SELECT NAME="show">
-<OPTION VALUE="quickref">PHP Function List
-<OPTION VALUE="nosource" SELECTED>Whole site
-<OPTION VALUE="bugdb">Bug database
-<OPTION VALUE="manual">Online documentation (English only)
-<OPTION VALUE="maillist">PHP General Mailing List
-<OPTION VALUE="devlist">PHP Developers' List
-<OPTION VALUE="phpdoc">PHP Documentation List
-<OPTION VALUE="phplib">PHPLIB Mailing List
-<OPTION VALUE="phplib-dev">PHPLIB Developers' List
-<OPTION VALUE="source">Site source code
+<OPTION VALUE="quickref" SELECTED>function list
+<OPTION VALUE="nosource">whole site
+<OPTION VALUE="manual">online documentation
+<OPTION VALUE="bugdb">bug database
+<OPTION VALUE="maillist">general mailing list
+<OPTION VALUE="devlist">developer mailing list
+<OPTION VALUE="phpdoc">documentation mailing list 
+<OPTION VALUE="source">website source code    
 </SELECT><BR>
 </FONT></TD>
 </TR>
