@@ -21,6 +21,24 @@ the world of <a href="http://www.opensource.org/">Open Source</a> software!
 Smile, be happy, the world is good.  For the full legalese, see the 
 official <a href="/license/">license</a>.
 </p>
+<p>
+<b><a href="/thanks.php">Thanks to:</a></b>
+<br>&nbsp; <a href="http://chek.com">Chek.com</a>
+<br>&nbsp; <a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a>
+<br>&nbsp; <a href="http://valinux.com">VA Linux Systems</a>
+</p>
+<p>
+<b>Related sites:</b>
+<br>&nbsp; <a href="http://www.apache.org/">Apache</a>
+<br>&nbsp; <a href="http://www.mysql.com/">MySQL</a>
+<br>&nbsp; <a href="http://www.postgresql.org/">PostgreSQL</a>
+<br>&nbsp; <a href="http://www.zend.com">Zend Tech.</a>
+</p>
+<p>
+<b>Community:</b>
+<br>&nbsp; <a href="http://www.linuxfund.org">LinuxFund.org</a>
+<br>&nbsp; <a href="http://www.osdn.org" class=whitelink>OSDN</a>
+</p>
 ';
 
 commonHeader("Hypertext Preprocessor");
