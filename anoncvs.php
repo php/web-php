@@ -56,7 +56,7 @@ cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
 cd php4
 cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 Zend TSRM
      </pre>
-     Tags for major releases include: php_4_0_0, php_4_0_1, php_4_0_1pl1, php_4_0_2, php_4_0_3, php_4_0_4, php_4_0_4pl1, php_4_0_5, php_4_0_6, php_4_1_0, php_4_1_1</i>
+     Tags for major releases look like php_VERSION where version is the version number with periods replaced with underscores.</i>
     </blockquote>
     
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
