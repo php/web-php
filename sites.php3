@@ -195,6 +195,7 @@ right away.</blockquote>
 	site("ClanBase","www.clanbase.com");
 	site("Gameplayer","www.gameplayer.com");
 	site("GamePoint Shop","shop.gamepoint.net");
+	site("The Galactic Empire","www.imperialnexus.net");
 	site("mplayer.com","www.mplayer.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
@@ -552,6 +553,7 @@ right away.</blockquote>
 	site("Christen Democratisch Appel","www.cda.nl");
 	site("Distributed.Net","www.distributed.net");
 	site("Internet Weather Report","www.internetweather.com");
+	site("Linux Video and DVD Project","livid.on.openprojects.net");
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("Optical Buyer","www.opticalbuyer.com");
 	site("RacersDirect","www.racersdirect.com");
