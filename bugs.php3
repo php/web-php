@@ -38,6 +38,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Installation problem",
 				   "Failed to compile",
 				   "Parser error",
+				   "Reproduceable crash",
 				   "Performance problem",
 				   "MySQL related",
 				   "mSQL related",
