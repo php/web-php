@@ -361,7 +361,7 @@ foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Wide
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
 </TD>
-</TR>exec/obidos/ASIN/382725793X
+</TR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
