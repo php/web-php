@@ -105,6 +105,9 @@ function manualPrintNote(const $row, $num) {
        echo "<TR><TD bgcolor=$color>";
         # turn email address into mailto: links (roughly)
        echo ereg_replace("([^;[:space:]]+@[^&[:space:]]+)", "<A href=\"mailto:\\1\">\\1</A>", $row[user]);
+	if (isset($row['ts'])) {
+		echo "<BR>$ts";
+	}
        echo "</TD><TD bgcolor=$color>$row[note]</TD></TR>\n";
 }
 
