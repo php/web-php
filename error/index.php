@@ -25,7 +25,7 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
 if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
-    mirror_redirect("http://bugs.php.net?$array[1]", TRUE);
+    mirror_redirect("http://bugs.php.net/?$array[1]", TRUE);
 }
 
 // ============================================================================
