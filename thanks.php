@@ -49,6 +49,11 @@ site_header("Thanks");
 </p>
 
 <p>
+ <a href="http://www.spry.com/">Spry.com</a> provides a server and 
+ bandwidth for various php.net services.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.

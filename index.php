@@ -72,6 +72,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
  <li><a href="http://www.ev1servers.net/">EV1Servers</a></li>
  <li><a href="http://www.servercentral.net/">Server Central</a></li>
+ <li><a href="http://www.spry.com/">Spry.com</a></li>
  <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
  <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
 </ul>
