@@ -2,6 +2,7 @@
 function runOnLoad()
 {
     searchHistory();
+    resizeColumnsIE();
 }
 
 // Get a value of one cookie set by it's name
@@ -73,6 +74,23 @@ function searchHistory()
                     break;
                 }
             }
+        }
+    }
+}
+
+// This function is a workaround for the IE 3px bug,
+// and therefore is written in IE only JS. If the central
+// column is higher than the left or right sidebar, we need
+// to adjust the height of the sidebars to the contents.
+function resizeColumnsIE()
+{
+    if (document.all && document.all["leftbar"]) {
+        contentH = document.all["content"].offsetHeight;
+        if (contentH > document.all["leftbar"].offsetHeight) {
+            document.all["leftbar"].style.pixelHeight = contentH;
+        }
+        if (document.all["rightbar"] && contentH > document.all["rightbar"].offsetHeight) {
+            document.all["rightbar"].style.pixelHeight = contentH;
         }
     }
 }
