@@ -1,0 +1,9 @@
+#!/bin/sh
+
+lynx -source http://slashdot.org/slashdot.xml > backend/slashdot.xml~
+if [ $? -ne 0 ]; then
+  echo problem getting results from slashdot
+  exit 1
+fi
+
+mv backend/slashdot.xml~ backend/slashdot.xml
