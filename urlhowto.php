@@ -108,18 +108,19 @@ of URL is <tt>http://php.net/search_for_this</tt>.
 
 <p>
 What enables PHP.net to have this feature is a combination of a 
-custom ".htaccess" file, who redirect the browser to another page
-in case of "Error 401/3/4" and a little search page that looks up
-functions names in the manual corresponding to what you searched for in
-<tt>http://php.net/search_for_this</tt>.
+custom ".htaccess" file, which redirects the browser to another page
+in case of an "Error 401/3/4" and a little search page that looks up
+page names or functions names in the manual corresponding to what
+you searched for in <tt>http://php.net/search_for_this</tt>.
+</p>
 
-<br />
-
+<p>
 Everything behind this feature is available here:
 <ul>
- <li><a href="http://cvs.php.net/co.php/phpweb/error/index.php">http://cvs.php.net/co.php/phpweb/error/index.php</a></li>
- <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
  <li><a href="http://cvs.php.net/co.php/phpweb/.htaccess">http://cvs.php.net/co.php/phpweb/.htaccess</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/error/index.php">http://cvs.php.net/co.php/phpweb/error/index.php</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
 </ul>
 
 </p>
