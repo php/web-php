@@ -28,6 +28,20 @@ h4.eventmonth {
     padding: 2px;
 }
 
+/* Left sidebar TOC on manual pages */
+div.mtoc {
+    margin: 0px 5px 5px 5px;
+}
+
+/* Header in manual sidebar TOC */
+div.toch {
+    font-size: 115%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 5px;
+}
+
 /* Inactive and active TOC elements in the left
    sidebar of the manual pages - this is further 
    enhanced with an image in /userprefs.js */
