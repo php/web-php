@@ -120,7 +120,7 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
 
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.2-installer.exe">PHP 4.2.2 installer</a> [913KB]- 22 July 2002<br />
+  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3-installer.exe">PHP 4.2.3 installer</a> [928KB]- 6 September 2002<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
