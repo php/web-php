@@ -31,7 +31,7 @@ function error_404_manual()
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is not available on this server right now. " .
          "Please check back later, or if the problem persist, " .
-         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
+         "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
 }
@@ -46,7 +46,7 @@ function error_noservice()
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> is not available on this server right now. " .
          "Please check back later, or if the problem persist, " .
-         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
+         "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
 }
