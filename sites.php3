@@ -105,6 +105,7 @@ right away.</blockquote>
 	site("EduTest.Com","www.edutest.com");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("HitList","www.hitlist.com");
+	site("Independent Musicians Guild","www.scimg.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
