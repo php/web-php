@@ -20,7 +20,6 @@ href="http://freshmeat.net/">freshmeat</a>.</p>
 commonHeader("Links");
 ?>
 
-
 <h1>Getting Started</h1>
 <p>On these sites you will find tutorials, articles and example scripts</p>
 
@@ -44,6 +43,9 @@ PHP Books, Magazine Articles, Communities, Scripts and Programs, Softwares, Tips
 <li><a href="http://php.resourceindex.com/">PHP Resource Index</a><br>
 Hundreds of PHP resources, categorized and searchable<br>
 
+<li><a href="http://nav.webring.yahoo.com/hub?ring=php&list">PHP Sites Webring</a><br>
+Find PHP Sites within this webring!<br>
+
 <li><a href="http://www.LinuxGuruz.org/">LinuxGuruz.org</a><br>
 Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server,
 HTML, PHP, MySQL ... and lots more<br>
@@ -63,16 +65,23 @@ A good set of articles introducing various PHP concepts<br>
 
 <li><a href="http://www.weberdev.com/">WeberDev.com</a><br>
 PHP related resources (articles, tutorials, forums, advanced search etc.)<br>
+
+<li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
+Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl<br>
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
 
+<ul>
 <li><a href="http://www.itworks.demon.co.uk/phpeditors.htm">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs<br>
 
 <li><a href="http://phplib.netuse.de/">PHP Base Library</a><br>
 The start of what looks to be a promising collection of base code
 for developers of large PHP sites<br>
+
+<li><a href="http://phpclasses.upperdesign.com/">The PHP Classes Repository</a><br>
+Useful PHP classes in a categorized listing<br>
 
 <li><a href="http://px.sklar.com/">PX - PHP Code Exchange</a><br>
 The PHP Code Exchange is a great place to start. Here you'll find many
@@ -89,6 +98,12 @@ A collection of PHP scripts<br>
 <h4>PHP Tutorials</h4>
 
 <ul>
+<li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&ob=3">Tutorialfind</a><br>
+A growing list of PHP tutorials at TutorialFind<br>
+
+<li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br>
+Web Programming Resource - PHP Tutorials<br>
+
 <li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
 Introductory tutorial<br>
 
@@ -96,7 +111,7 @@ Introductory tutorial<br>
 Lots of tutorials/instructions related to Apache, PHP and MySQL<br>
 </ul>
 
-<h4>Some German PHP Sites</h4>
+<h4>Non-English PHP Sites</h4>
 
 <ul>
 <ul><a href="http://www.php-center.de/">PHP Center</a><br>
@@ -112,17 +127,16 @@ WhoIsWho - a view on german PHP-cracks, german manual, book reviews, links and m
 <li><a href="http://www.phpwelt.de/">PHPWelt</a><br>
 A German website using PHP to offer free services, a huge script-archive,
 free scripts, tutorials and many more<br>
-</ul>
 
-<h4>PHP Sites In Other Languages</h4>
-
-<ul>
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A french gateway to PHP related contents<br>
 
 <li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
 French site about PHP/MySQL: Links, Tips, Articles, Manuals,
 FAQ, Code Downloads, and much more!<br>
+
+<li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
+A ring of French PHP Sites<br>
 
 <li><a href="http://johng.free.fr/">FAQ of the French PHP newsgroup</a><br>
 
@@ -136,6 +150,9 @@ with a small PHP section<br>
 <li><a href="http://www.phpcenter.it/">PHPcenter.it</a><br>
 An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources<br>
+
+<li><a href="http://phpbrasil.com/">PHPBrazil.com</a><br>
+Brazilian PHP Portal with many link and informations<br>
 </ul>
 
 <? echo hdelim(); ?>
