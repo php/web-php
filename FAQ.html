@@ -389,40 +389,70 @@ file.
   </DD>
 
   <DT><B>
-	I need to access information in the request header directly.  How can
-	I do this?
+    Hey, what happened to my newlines in:
+<PRE>
+&lt;PRE&gt;
+  1 &lt;?echo $result[1];?&gt;
+  2 &lt;?echo $result[2];?&gt;
+</PRE>
   </B></DT>
   <DD>
-	The getallheaders() function will do this if you are running PHP as a
-	module.  So, the following bit of code will show you all the request
-	headers:<PRE>
+    In PHP, the ending for a block of code is either "?&gt;" <B>or</B>
+    "?&gt;\n" (where \n means a newline). This means that you need to
+    insert an extra newline after each block of PHP code in the above
+    example.
+    <P>
+    Why does PHP do this? Because when formatting normal HTML, this
+    usually makes your life easier because you don't want that newline,
+    but you'd have to create extremely long lines or otherwise make the
+    raw page source unreadable to achieve that effect.
+  <P>
+  </DD>
+
+  <DT><B>
+    I need to access information in the request header directly.  How can
+    I do this?
+  </B></DT>
+  <DD>
+    The getallheaders() function will do this if you are running PHP as a
+    module.  So, the following bit of code will show you all the request
+    headers:<PRE>
     $headers = getallheaders();
 	for(reset($headers); $key = key($headers); next($headers)) {
         echo "headers[$key] = ".$headers[$key]."&lt;br&gt;\n";
     }
-	</PRE>
-	</DD>
+</PRE>
+  <P>
+  </DD>
+
   <DT><B>
     When I try to use authentication with IIS I get 'No Input file specified'
   </B></DT>
   <DD>
-    The security model of IIS is at fault here, this is a problem common to all CGI
-	programes running under IIS.  A workaround is to create a plain HTML file (not parsed
-	by php) as the entry page into an authenticated directory.  Then use a meta tag to redirect
-	to the php page, or have a link to the php page.  PHP will then recognize the authentication
-	correctly.  When the ISAPI module is ready, this will no longer be a problem.  This should
-	not effect other NT web servers.  For more information, see:
-	<a href="http://support.microsoft.com/support/kb/articles/q160/4/22.asp" target="_new">http://support.microsoft.com/support/kb/articles/q160/4/22.asp</a>.
-  </DD>
-  <DT><B>
-    I've followed all the instructions, but still cant get php and IIS to work together!
-  </B></DT>
-  <DD>
-  	Make sure any user who needs to run a php script has the rights to run php.exe!  IIS uses an
-	anonymous user which is added at the time IIS is installed.  This user needs rights to php.exe.  Also,
-	any authenticated user will also need rights to execute php.exe.
+    The security model of IIS is at fault here. This is a problem
+    common to all CGI programs running under IIS.  A workaround is
+    to create a plain HTML file (not parsed by php) as the entry page
+    into an authenticated directory.  Then use a META tag to redirect
+    to the PHP page, or have a link to the PHP page.  PHP will
+    then recognize the authentication correctly.  When the ISAPI
+    module is ready, this will no longer be a problem.  This should
+    not effect other NT web servers.  For more information, see: <A
+    href="http://support.microsoft.com/support/kb/articles/q160/4/22.asp"
+    target="_new">http://support.microsoft.com/support/kb/articles/q160/4/22.asp</A>.
+  <P>
   </DD>
 
+  <DT><B>
+    I've followed all the instructions, but still can't get PHP and IIS
+    to work together!
+  </B></DT>
+  <DD>
+    Make sure any user who needs to run a PHP script has the rights
+    to run php.exe!  IIS uses an anonymous user which is added at the
+    time IIS is installed.  This user needs rights to php.exe.  Also,
+    any authenticated user will also need rights to execute php.exe.
+  <P>
+  </DD>
 
 </DL>
 
