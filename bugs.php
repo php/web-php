@@ -344,6 +344,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	
 	function processing_function($fieldname,$tablename,$data, &$row)
 	{
+		echo "<!-- $fieldname $tablename $data -->\n";
 		if ($fieldname == 'Status' and $data == 'Feedback') {
 			echo "Feedback<br>(".$row["unchanged_days"]." days)";
 		} else {
