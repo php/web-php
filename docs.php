@@ -78,8 +78,9 @@ $lastlang = count($man_languages) - 1;
 
 <p>
  Note, that many languages are just under translation, and
- the untranslated parts are still in English. The translation
- teams are open to contributions though.
+ the untranslated parts are still in English. Also some translated
+ parts might be outdated. The translation teams are open to
+ contributions. 
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2" class="standard">
