@@ -86,7 +86,7 @@ if ($try) {
 
 if ($REQUEST_URI) {
 	header('HTTP/1.0 302 Redirect');
-	header('Location: /search.php?show=nosource&pattern='.urlencode($REQUEST_URI) );
+	header('Location: /search.php?show=nosource&pattern='.urlencode(substr($REQUEST_URI,1)) );
 	exit;
 }
 
