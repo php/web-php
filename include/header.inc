@@ -25,6 +25,35 @@
       }
   }
 
+  function top_button($name, $alt, $href) {
+      global $js, $root_url;
+      echo("\n    <a href=\"$href\" target=\"_top\"");
+      if (isset($js) && $js) {
+          echo(" onMouseOver=\"rollon('$name');return true\"");
+          echo(" onMouseOut=\"rolloff('$name')\"");
+      }
+      echo("\n    ><img src=\"" . jpgurl($name . ".jpg"));
+      echo("\" valign=top border=0 alt=\"$alt\" ");
+      echo("name=\"$name\" width=56 height=32></a>\n");
+  }
+
+  function gifurl($img) {
+      global $root_url;
+      return $root_url . "gifs/" . $img;
+  }
+
+  function jpgurl($img) {
+      global $root_url;
+      return $root_url . "jpgs/" . $img;
+  }
+
+  function lynx_space_hack() {
+      global $lynx;
+      if (isset($lynx) && $lynx) {
+          echo "&nbsp;&nbsp;&nbsp;";
+      }
+  }
+
   if (!$root_url) { $root_url = "/"; }
   $lynx=0;
   $js=0;
@@ -90,28 +119,34 @@ if (!$head_closed) {
     echo("</head>");
 }
 ?>
-<body background="<? echo "$root_url\jpgs/$bkg"; ?>" bgcolor="#ffffff" text="#000000" link="#537492" vlink="#032F5B">
+<body background="<? echo jpgurl($bkg); ?>" bgcolor="#ffffff" text="#000000"
+      link="#537492" vlink="#032F5B">
 <FONT FACE="Verdana, Arial, Helvetica">
-<table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap cols="3" frame="none">
-<tr>
-<td width="33%" align="left"><font size="+1" color="#ffffff"><strong><i>PHP3</i></strong></font></td>
-<td width="33%" align="center"><font size=+2 color="#ffffff"><nobr><?echo $title?></nobr></font></td>
-<td width="33%" align="right"><nobr>
-<?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<? echo $base_url ?>" target=_top
-<?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_top');return true" onMouseOut="rolloff('sm_top')"<? } ?>>
-<img src="<? echo $root_url; ?>jpgs/sm_top.jpg" valign=top border=0 alt="Top" name=sm_top height=32 width=56></a>
-<?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="search.php3" target=_top
-<?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_search');return true" onMouseOut="rolloff('sm_search')"<? } ?>>
-<img src="<? echo $root_url; ?>jpgs/sm_search.jpg" valign=top border=0 alt="Search" name=sm_search height=32 width=56></a>
-<?if(isset($lynx) && $lynx) { echo "&nbsp;&nbsp;&nbsp;"; } ?>
-<a href="<?echo "$root_url\show_source.php3?page_url=$PHP_SELF" ?>" target=_top
-<?if(isset($js) && $js) { ?>onMouseOver="rollon('sm_vs');return true" onMouseOut="rolloff('sm_vs')"<? } ?>>
-<img src="<? echo $root_url; ?>jpgs/sm_vs.jpg" valign=top border=0 alt="View Source" name=sm_vs height=32 width=56></a>
-</nobr>
+<table border="0" width="100%" cellpadding="0" cellspacing="0" nowrap
+       cols="3" frame="none">
+ <tr>
+  <td width="33%" align="left">
+   <font size="+1" color="#ffffff"><b><i>PHP3</i></b></font>
+  </td>
+  <td width="33%" align="center">
+   <font size=+2 color="#ffffff"><nobr><?echo $title?></nobr></font>
+  </td>
+  <td width="33%" align="right">
+  <nobr><?
+
+    lynx_space_hack();
+    top_button("sm_top", "Top", $root_url);
+    lynx_space_hack();
+    top_button("sm_search", "Search", $root_url."search.php3");
+    lynx_space_hack();
+    top_button("sm_vs", "View Source",
+               $root_url."show_source.php3?page_url=$PHP_SELF");
+
+  ?></nobr>
 </td></tr>
 </table>
-<!-- add in 30 more pixels to ensure we don't overlap the background -->
-<table width="100%" height="30" border="0"><tr><td>&nbsp;</td></tr></table>
 
+<!-- add in 30 more pixels to ensure we don't overlap the background -->
+<br clear=all>
+<img alt="" src="<? echo gifurl("blank.gif"); ?>" height="30">
+<br clear=all>
