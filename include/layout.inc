@@ -310,7 +310,7 @@ function commonFooter() {
           mirror = form.country.options[form.country.selectedIndex].value;
           if (mirror != 'http://' + window.location.hostname + '/') {
             window.location.href = mirror +
-                      window.location.pathname +
+                      window.location.pathname.substring(1) +
                       window.location.hash +
                       window.location.search;
           }
