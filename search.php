@@ -241,9 +241,13 @@ if (isset($pattern)) {
         if (strpos($matches, "error") > 0) { searchError(); }
         
         // String to carry on the search parameters in prev/next URLs
-        $baseurl = $PHP_SELF . "?pattern=" . urlencode($pattern) . "&show=$show";
+        $baseurl = substr($PHP_SELF, 1) . "?pattern=" . urlencode($pattern) . "&show=$show";
         if (isset($base)) { $baseurl .= "&base=" . urlencode($base); }
-        $baseurl = htmlentities($baseurl);
+        
+        // We need to preserve the state with a full URL,
+        // as remote searches would otherwise make these links
+        // relative to the originating server
+        $baseurl = $MYSITE . htmlentities($baseurl);
 
         // Print out search results information header
         echo "$matches documents match your search for '<b>$htmlpt</b>' $where:<br /><br />\n";
