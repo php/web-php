@@ -105,6 +105,7 @@ right away.</blockquote>
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
+	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
