@@ -18,7 +18,7 @@ the provider's homepage:
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
   <th>Country</th>
-  <th>Mirror Adress</th>
+  <th>Mirror Address</th>
   <th>Provider</th>
   <th>Default Language</th>
  </tr>
