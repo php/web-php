@@ -331,8 +331,6 @@ function commonFooter() {
   </tr>
 </table>
 
-<br>
-
 </body>
 </html>
 <?php
