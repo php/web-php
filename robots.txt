@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /stats/
 Disallow: /source.php
 Disallow: /search.php
 Disallow: /manual/add-note.php
