@@ -158,15 +158,16 @@ function makeEntry($date,$name,$blurb,$id=0) {
 </TD></TR>
 <TR BGCOLOR="#F0F0F0"><TD>
 <?
-	$blurb = strip_tags($blurb,'<br><p>');
-#	$blurb = htmlspecialchars($blurb);
+#	$blurb = strip_tags($blurb,'<br><p>');
+$blurb = htmlspecialchars($blurb);
 #	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
-#	reset($fixes);
-#	while (list(,$f)=each($fixes)) {
-#		$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
-#		$blurb=str_replace(htmlspecialchars(strtoupper($f)), $f, $blurb);
-#	}
-	echo $blurb;
+$fixes = array('<br>','<p>');
+reset($fixes);
+while (list(,$f)=each($fixes)) {
+	$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
+	$blurb=str_replace(htmlspecialchars(strtoupper($f)), $f, $blurb);
+}
+echo $blurb;
 ?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
 <hr noshade size=1>
