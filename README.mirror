@@ -49,6 +49,7 @@ Once you create a virtualhost which looks something like:
      DirectoryIndex index.php index.html
      ErrorDocument 404 /error/
      ErrorDocument 403 /error/
+     AddType application/octet-stream .chm
      # next line is only necessary if generating stats (see stats/README.stats)
      Alias /stats/ /path/to/local/stats
    </VirtualHost>
