@@ -203,6 +203,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css" />
+ <link rel="stylesheet" href="/user/css.php" />
  <link rel="shortcut icon" href="/favicon.ico" />
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
 </head>
