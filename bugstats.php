@@ -6,10 +6,6 @@ if(!is_primary_site()) {
 	exit;
 }
 
-if ($phpver != 4 and $phpver != 3) {
-	$phpver = 0;
-}
-
 function ShowTime($sec) {
 	if($sec<60) {
 		return "$sec seconds";
@@ -45,7 +41,7 @@ mysql_select_db("php3");
 $query = "SELECT *,UNIX_TIMESTAMP(ts2)-UNIX_TIMESTAMP(ts1) AS timetoclose FROM bugdb";
 
 if ($phpver > 0) {
-	$query .= " WHERE php_version LIKE '" . $phpver . "%'";
+	$query .= " WHERE SUBSTRING(php_version,1,1) = '$phpver'";
 }
 
 $query .= " ORDER BY bug_type";

@@ -146,7 +146,7 @@ elseif ($cmd == "display") {
 	}
 
 	if (!isset($phpver)) $phpver = "4";
-	if ($phpver) $where_clause .= " AND php_version LIKE '$phpver%'";
+	if ($phpver) $where_clause .= " AND SUBSTRING(php_version,1,1) = '$phpver'";
 
 	/* not in the header, but someone can build a query manually with it. */
 	if(strlen($by) and $by!='Any')
