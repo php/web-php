@@ -7,15 +7,25 @@
 | V -- done
 +----
 
+Configuration Issues
+--------------------
+* make it possible to disable support for some extensions (gd, dbm)
+* properly detect dbm routines when they're in libc
+* add the appropriate #define magic for memmove and friends (see
+  GNU autoconf info pages for details)
 
 Language engine related issues
 ------------------------------
-* Add classes support inside arrays (when there's time).
 ? Fix unset() to work on arrays (tricky).
+* add isblank() function for platforms that dont have it (msvc)
+* add .def file for win32 so that external modules will work with
+  updated php, and with any server api.
 D Full ASCII 0 handling (3.0b2)
 D don't evaluate truth expressions more than once,
   e.g. in the question-mark operator (3.0b2)
-D MT-Safe parser (3.0b2 or 3.1)
+P MT-Safe core (3.0b2 or 3.1)
+  In Win32 the core is almost MT-safe, only the flex scanners aren't.
+  A preliminary hack of Flex is finished, testing needs to be done.
 D truss/strace a typical PHP request and see if there might be
   some system calls we can optimize out (3.0b2)
 D ISAPI support (parses files, needs thread-safety and locking)
@@ -29,14 +39,14 @@ V look at octal support issue for chmod, umask, mkdir (others?)
 V Merge array and regular variable rules  (when there's time).
 V showsource() function to force syntax highlighting of current script (3.0b2)
 V Ignore # as the first character so we can make #!/bin/php.cgi scripts
+V Add classes support inside arrays (when there's time).
+V Make isset() work with all datatypes.
 
 
 Miscellaneous
 -------------
 * Go through FIXME and XXX lines (egrep 'FIXME|XXX' *.[ch] */*.[ch])
 * make logging (functions/log*.c) be a static/dynamic extension
-* throw away unused ereg_replace backreferences
-* clean up _php3_regreplace to not allocate memory so wildly
 * move to automake
 * use libtool
 * documentation (esp. for changed and new features)
@@ -45,29 +55,32 @@ Miscellaneous
   is called including a decision about priority of variables and moving
   Treatdata() to use hash_add() instead of hash_update() for insertions
   to the symbol table.
-D PHP2->PHP3 conversion script (3.0b2)
-D SSI->PHP3 conversion script (3.0b2)
-D change gd.c to not use fork() so it can be ported to windows (sometime)
+* add "'" modifier to sprintf to group thousands by comma
+* sorting of objects with a user-defined comparison function (like Perl)
+* FastCGI support - see http://fastcgi.idle.com/
+P PHP2->PHP3 conversion tool
+D SSI->PHP3 conversion script (3.0b?)
 D Remove hard-coded compilation options (3.0 final)
-V Apache 1.3 automatic module configuration integration
+V Make all .ini directives available as Apache .conf directives (Rasmus)
+V Apache 1.3 automatic module configuration integration (Rasmus)
 V command-line options (Stig)
+V send From: header on http includes (Jim)
+V send better password on anonymous ftp includes (Jim)
+V change gd.c to not use fork() so it can be ported to windows (Zeev)
+V clean up _php3_regreplace to not allocate memory so wildly (Jaakko)
+V throw away unused ereg_replace backreferences (Jaakko)
 
 
 Functionality and migration from PHP 2.0
 ----------------------------------------
 
-P sybase support (Rasmus)
 P Large objects support in PostgreSQL (Jouni)
-P oracle support - should use list management (Stig)
 P ODBC support (needs to be converted to use PHP3's resource list)
-P post.c - needs PHP_TRACK_VARS code (Rasmus)
 P finish the sample calendar dl (shane; I may add mayan functions at some point)
-U solid support (Stig)
+P LDAP support
 U adabasd support
 U filepro support (both win and unix)
-U gd support
 * illustra support (APIS)
-* info.c from php2
 * go through all functions and look at PHP_SAFE_MODE issues
 * go through PHP2's php.h and see how each special #define might be
   applied/supported in PHP3
@@ -75,46 +88,42 @@ U gd support
   sure they are supported in PHP3
 * have a look at return codes of fsockopen() function - we should
   probably RETURN_FALSE and then set an error code somewhere (Rasmus)
-* look at what the functions in functions/filestat.c return in the
-  case of errors (Rasmus)
 ? CQL++ support (http://www.cql.com/)
 ? GNU SQL support (does anybody actually use this?)
+? DB2 support
 ? Shore support (http://www.cs.wisc.edu/shore/)
-? LDAP support (Amitay and Ian have expressed interest in this one)
-? PGP Interface
+? PGP Interface (use PGPlib?)
 ? more Perl-like regex handling?
 ? sql-based access logging (start with functions/log_sql.c) (taking it out?)
 D gd support for windows
 D locale issues - funny things happen in PHP2 when the locale is set to
   use , instead of . as the decimal seperator.  ie. 1.5+1.5 = 1 (3.0b2)
-V exec.c migration
-V correct handling of HEAD requests
+V look at what the functions in functions/filestat.c return in the
+  case of errors (Rasmus)
+V exec.c migration (Rasmus)
+V correct handling of HEAD requests (Rasmus)
 V mSQL support (Zeev)
 V MySQL support (Zeev)
 V PostgresSQL support (Zeev)
 V oracle support - Ora_Error(), Ora_ErrorCode() and column access by name (Stig)
 V back-reference support (\1 \2 \3) in ereg_replace (Jim)
-V snmp support - implemented as an extension
+V snmp support - implemented as an extension (Rasmus)
+V sybase support (Zeev + Rasmus)
+V gd support
+V post.c - needs PHP_TRACK_VARS code (Rasmus)
+V info.c from php2 (still needs available variables dump)
+V oracle support - should use list management (Stig)
+V solid support (Stig)
 
 
 Windows specific stuff
 ----------------------
-D export any module that requires a non-standard external library to a dl
-  function library.  (ie. mysql, msql, oracle, sybase, etc)  This will 
-  elliminate the necessity for mulitple compiles of various configurations.
-D Compile with C++ to ensure we can do MT in order for us to support
-  being compiled with VC++ on NT to create an ApacheNT module
-  (I have been able to compile on NT using multithreaded libraries,
-  I don't think that means we're thread safe though ;-) Shane )
-  (may not be right approach to handle MT support? delayed indefinitely.)
-  (so long as thread-safe on unix, should be same on nt)
-D port user and group functions for windows NT.  These will probably
-  not work on windows 95 irregardless.  This will require someone with
-  access to a windows nt environment to test.  Some of these functions
-  are semi-ported.  Need to do additional work in win32/pwd.c to make them
-  actualy do something usefull on winnt systems.
-D Finish syslog-eventlog implementation.  Need someone to test on nt.
-
+D (evaluate the need for this)port user and group functions for windows NT.
+  These will probably not work on windows 95 irregardless.  
+  This will require someone with access to a windows nt environment to test.  
+  Some of these functions are semi-ported.  Need to do additional work in 
+  win32/pwd.c to make them actualy do something usefull on winnt systems.
+V Finish syslog-eventlog implementation.  Need someone to test on nt.
 
 NSAPI/ISAPI Modules related
 ---------------------------
