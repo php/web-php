@@ -151,7 +151,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<h1>Call for Papers : PHP Conference 2004 - Spring Edition</h1>
+<h1>Call for Participation: MySQL User Conference 2004</h1>
+<p>
+ <span class="newsdate">[12-Dec-2003]</span>
+ The <a href="http://mysql.com/events/uc2004/speakers.html">Call
+ for Participation</a> for the 2004 MySQL User Conference is
+ now open. MySQL is looking for sessions that speak to your peers:
+ practical, pragmatic and clueful presentations that focus on how
+ you solved problems in a demanding or unique technical environment.
+ Additionally, the conference is looking for solid proposals for
+ Bird-of-a-Feather (BoF) sessions and Lightning Talks.
+</p>
+<p>
+ The call for papers closes on January 14th. The call for BoFs and
+ lightning talks closes on February 14th. The conference will take
+ place on April 14th to 16th in Orlando, Florida, USA.
+</p>
+
+<hr />
+
+<h1>Call for Papers: PHP Conference 2004 - Spring Edition</h1>
 <p>
  <span class="newsdate">[10-Dec-2003]</span>
  The organizers of the International PHP Conference are proud
@@ -198,7 +217,7 @@ commonHeader("Hypertext Preprocessor");
 
 <?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
-<h1>Call for Speakers : PHP Qu&eacute;bec 2004</h1>
+<h1>Call for Speakers: PHP Qu&eacute;bec 2004</h1>
 <p>
  <span class="newsdate">[11-Nov-2003]</span>
  The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
@@ -373,42 +392,6 @@ commonHeader("Hypertext Preprocessor");
  <a href="http://www.zend.com/zend/php_survey_results.php">Check out</a> the results
  of the PHP Usage Survey conducted by Zend Technologies, including feedback
  from thousands of PHP users around the world.  Thanks for all who contributed!
-</p>
-
-<hr />
-
-<?php news_image("http://weblabor.hu/php-doc-chm", "chmhelp.gif", "CHM"); ?>
-
-<h1>PHP Manual CHM Edition - 12th build</h1>
-<p>
- <span class="newsdate">[06-Sep-2003]</span>
- The 12th build of the extended CHM edition is out now, and
- <a href="/get/php_manual_chm_12.zip/from/a/mirror">available for download</a>.
- This build contains updated content and user notes, as well as fixes the
- bugs found in the previous build. A new optional "phpZ" skin is also
- introduced in this release, courtesy of Gonzalo De la Pena Andreu. For
- more information, visit <a href="http://weblabor.hu/php-doc-chm/">the
- homepage of this edition.</a>
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpconference.de/2003/index_en.php", "international_conference_2003.gif", "International PHP Conference 2003"); ?>
-
-<h1>International PHP Conference 2003 program online</h1>
-<p>
- <span class="newsdate">[05-Sep-2003]</span>
- The organisers of the
- <a href="http://www.phpconference.de/2003/index_en.php">International
- PHP Conference</a> which will take place for the third time in Frankfurt,
- Germany from Nov. 2 to 5, 2003 have announced the conference program.
- The conference board which consists of Bjoern Schotte, Zak
- Greant, Zeev Suraski, Thies Arntzen and Jan Lehnardt has chosen more than
- 40 sessions for the main program on Nov. 4 and 5 and 7 in-depth
- Power Workshops for the pre conference program on Nov. 2 and 3. Among the
- prominent speaking crowd is Zeev Suraski, Ken Coar and many others. See
- <a href="http://www.phpconference.de/2003/index_en.php">the conference
- website</a> for more information.
 </p>
 
 <hr />
