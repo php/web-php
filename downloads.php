@@ -116,7 +116,7 @@ if ($cmn > 0) {
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3-Win32.zip">PHP 4.2.2 zip package</a> [5,417KB] - 6 September 2002<br />
+  <li><a href="<?php echo $mirror; ?>do_download.php?download_file=php-4.2.3-Win32.zip">PHP 4.2.3 zip package</a> [5,417KB] - 6 September 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
 
