@@ -146,9 +146,6 @@ A growing list of PHP scripts</li>
 <li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
 An exhaustive PHP scripts collection, with more 400 useful functions (English and French).</li>
 
-<li><a href="http://www.roadsend.com/siteManager/">SiteManager</a><br>
-A base library for PHP sites and developers</li>
-
 </ul>
 
 <h4>PHP Magazines</h4>
@@ -192,7 +189,7 @@ Great collection of tutorials from O'Reilly</li>
 <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br>
 The PHP section on the famous Webmonkey tutorial site</li>
 
-<li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a>
+<li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a><br>
 Site with information on a PHP course at a Dutch college.</li>
 
 <li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
