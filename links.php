@@ -98,7 +98,12 @@ A growing list of PHP scripts<br>
 
 <li><a href="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</a><br>
 A collection of PHP scripts<br>
+
+<li><a href="http://www.roadsend.com/siteManager/">SiteManager</a><br>
+A base library for PHP sites and developers<br>
+
 </ul>
+
 
 <h4>PHP Tutorials</h4>
 
