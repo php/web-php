@@ -211,7 +211,7 @@ endif;
 <? makeName("Brian Schaffner","brian@tool.net",0);?>
   <UL TYPE=DISC><li>ODBC Support, PHP 3.0 API testing</UL><BR>
 
-<? makeName("Egon Schmid","eschmid@delos.lf.net",0);?>
+<? makeName("Egon Schmid","eschmid@s.netic.de",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
 
 <? makeName("Sascha Schumann","sascha@schumann.2ns.de",0);?>
