@@ -60,10 +60,6 @@ $SIDEBAR_DATA = '
  Ever wondered how popular PHP is? see the
  <a href="/usage.php">Netcraft Survey</a>.
 </p>
-<p>
- PHP is a project of the
- <a href="http://www.apache.org/">Apache Software Foundation</a>.
-</p>
 
 <h3><a href="/thanks.php">Thanks To</a></h3>
 <ul class="simple">
@@ -157,7 +153,7 @@ commonHeader("Hypertext Preprocessor");
  is arranging the <a href="http://oscom.org/events/oscom4/program/">Fourth
  Open Source Content Management Conference</a> from 29th September to 1st
  October in Zürich. This fall, the event features Apache Software Foundation
- projects, including PHP, so you have a chance to meet some prominent
+ projects, and PHP, so you have a chance to meet some prominent
  figures of the PHP scene there. OSCOM.4 is a place for developers,
  vendors, integrators and users to mingle and learn from each other. <a
  href="http://oscom.org/events/oscom4/registration">Registration is
