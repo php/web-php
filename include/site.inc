@@ -90,22 +90,6 @@ function mirror_provider_url($site = FALSE)
     return $MIRRORS[$site][3];
 }
 
-// Define mirror type and status constants
-// if they are not already defined (BC)
-if (!defined("MIRROR_STANDARD")) {
-
-    define('MIRROR_DOWNLOAD', 0);
-    define('MIRROR_STANDARD', 1);
-    define('MIRROR_SPECIAL',  2);
-    define('MIRROR_VIRTUAL',  3);
-
-    define('MIRROR_OK',          0);
-    define('MIRROR_NOTACTIVE',   1);
-    define('MIRROR_OUTDATED',    2);
-    define('MIRROR_DOESNOTWORK', 3);
-
-}
-
 // Returns the current (or specified)
 // mirror site's type (use the constants!)
 function mirror_type($site = FALSE)
@@ -185,5 +169,3 @@ if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
 if (isset($_SERVER['MIRROR_STATS'])) {
     $MIRRORS[$MYSITE][2] = TRUE;
 }
-
-?>
