@@ -1,4 +1,4 @@
-\<?php
+<?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'release_4_3_6.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
