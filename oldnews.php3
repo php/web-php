@@ -105,7 +105,7 @@ Brian and Robert continue their project by focusing on using PHP as the middlewa
 Mike Miller builds a contact database with MySQL and PHP
 <? endEntry();?>
 
-<? makeEntry("Dynamic Web Pages with PHP 3","from WebTechniques","http://www.webtechniques.com/archives/1998/02/lerdorf/lerdorf/","February 1998"); ?>
+<? makeEntry("Dynamic Web Pages with PHP 3","from WebTechniques","http://www.webtechniques.com/archives/1998/02/lerdorf/","February 1998"); ?>
 As PHP gets an upgrade and name change, Rasmus explains its history and shows us some new features
 by building a dynamic Web photo album.
 <? endEntry();?>
