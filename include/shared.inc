@@ -228,7 +228,7 @@ function download_link($file, $title) {
 		$local_file = $file;
 	}
 	echo("<a href=\"$file\">$title</a>");
-	$size = filesize($local_file)/1024;
+	$size = @filesize($local_file)/1024;
 	echo("<!-- file=$file localfile=$local_file size-$size-->\n");
 	if ($size) {
 		printf(" (%dKB)", $size);
