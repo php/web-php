@@ -125,7 +125,7 @@
       $fieldnames[$i] = $field->name;
       $tablenames[$i] = $field->table;
       if (strlen($tablenames[$i])>0 && substr($tablenames[$i],0,3)!="SQL") {
-        $fullnames[$i] = $tablenames[$i]+"."+$fieldnames[$i];
+        $fullnames[$i] = $tablenames[$i].".".$fieldnames[$i];
       } else {
         $fullnames[$i] = $fieldnames[$i];
       }
