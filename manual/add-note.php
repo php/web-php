@@ -230,7 +230,7 @@ else {?>
   <tr valign="top">
    <td><b>Your notes:</b></td>
    <td><textarea name="note" rows="20" cols="60" wrap="virtual"><?php if (isset($note)) { echo clean($note); } ?></textarea>
-   <br>
+   <br />
   </td>
   </tr>
   <tr>
