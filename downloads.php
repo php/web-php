@@ -62,7 +62,8 @@ change mirrors at the bottom of the page.
   <li><?php download_link("php-4.0.6.tar.gz", "PHP 4.0.6"); ?> - 23 June 2001</li>
 </ul>
 
-<h2>Win32 Binaries</h2>
+<h2>Windows Binaries</h2>
+All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000.
 <ul>
   <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6 zip package"); ?> - 23 June 2001<br>
   (CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL
