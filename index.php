@@ -114,6 +114,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.2.2 released in response to vulnerability</h1>
+
+<p>
+<font class="newsdate">[22-Jul-2002]</font> The PHP Group today announced
+the details of a serious <a href="release_4_2_2.php">vulnerability</a> in PHP versions 4.2.0 and 4.2.1.
+A security update, <a href="downloads.php">PHP 4.2.2</a>, fixes the issue. Everyone running
+affected versions of PHP is encouraged to upgrade immediately. The new 4.2.2
+release doesn't include other changes, so upgrading from 4.2.1 is safe and painless.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>New comp.lang.php newsgroup started</h1>
 
 <p>
