@@ -17,6 +17,7 @@ es	es.php.net	Jordi Fabregas <admin@grn.es>	php.grn.es
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
+fr	fr2.php.net	Ghislain Seguy <bibi@php.net>	php.nexen.net
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hk	hk2.php.net	xcyber kwan <xcyber@yahoo.com>	php.xcyber.org
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
