@@ -121,8 +121,9 @@ function show_state_options($state, $show_all, $user_mode=0) {
 
 function show_menu($state)
 {
-	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE;
+	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE, $search_for;
 
+	if(!isset($search_for)) { $search_for=""; }
 	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
@@ -148,7 +149,7 @@ function show_menu($state)
 	list_ids($by);
 	echo "</select></td></tr>\n";
 	echo "<tr><td colspan=3 align=right>Search for:</td>\n";
-	echo "<td colspan=3><input type=text name=\"search_for\"> in the bug database</td></tr></form>\n";
+	echo "<td colspan=3><input type=text name=\"search_for\" value=\"".$search_for."\"> in the bug database</td></tr></form>\n";
 	echo "<tr><td colspan=3 align=right><form method=\"GET\" action=\"$PHP_SELF\">\n";
 	echo "<input type='submit' value='Edit'> bug number:</td><td colspan=2><input type='text' name='id'></td>\n";
 	if (isset($MAGIC_COOKIE))
