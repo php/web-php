@@ -134,6 +134,27 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
+<p>
+<font class="newsdate">[28-Oct-2002]</font>
+For the first time the Open Source projects comprising the popular LAMP
+platform (Linux, Apache, MySQL and PHP) will be present at the 
+<a href="http://www.linuxworldexpo.de">LinuxWorld Expo</a>
+with its own booth.
+</p>
+<p>
+At the booth, which is organized by the <a href="http://www.php-ev.de">German
+PHP Association</a> and the <a href="http://www.phpug.de">PHP Usergroup
+Frankfurt</a>, fair visitors can experience and learn about Apache, MySQL, PHP
+and related projects.
+</p>
+<p>
+Visitors can take LAMP home, too, since there will be a CD with the necessary
+software available at the booth.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.0pre2 Released</h1>
 <p>
 <font class="newsdate">[27-Oct-2002]</font>
