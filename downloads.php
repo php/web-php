@@ -24,6 +24,12 @@ $SIDEBAR_DATA = '
  <li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
 </ul>
 
+<h3>Older versions of PHP</h3>
+<p>
+ See <a href="/releases.php">our releases
+ page</a> for older PHP versions.
+</p>
+
 <h3>Other Downloads</h3>
 <p>
  For downloadable manual packages, go to the
@@ -191,117 +197,6 @@ site_header("Downloads");
   <?php download_link("php-4.1.0-to-4.1.1.patch.gz", "PHP 4.1.0 to 4.1.1 patch"); ?>  - 03 January 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.1.0.<br />
   <span class="md5sum">md5: c3f73adfdbde3bfe5d0d51463432a07c</span>
- </li>
-</ul>
-
-<hr />
-
-<h1>Older Versions of PHP</h1>
-
-<p>
- <em>
-  Older releases are listed for archaeological purposes only.
-  They are no longer supported.
- </em>
-</p>
-
-<ul>
-
- <li>PHP 4.3.3
-  <ul>
-   <li>
-    <?php download_link('php-4.3.3.tar.bz2','PHP 4.3.3 (tar.bz2)'); ?> - 25 August 2003<br />
-    <span class="md5sum">md5: 1171d96104e2ff2cff9e19789a4a1536</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.3.tar.gz', 'PHP 4.3.3 (tar.gz)');  ?> - 25 August 2003<br />
-    <span class="md5sum">md5: fe3fede4115354155fc6185522f7c6b2</span>
-   </li>
-  </ul>
- </li>
- <li>PHP 4.3.2
-  <ul>
-   <li>
-    <?php download_link('php-4.3.2.tar.bz2','PHP 4.3.2 (tar.bz2)'); ?> - 29 May 2003<br />
-    <span class="md5sum">md5: 8aec1bb2dbcca1c92835c71e2e30d9c5</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.2.tar.gz', 'PHP 4.3.2 (tar.gz)');  ?> - 29 May 2003<br />
-    <span class="md5sum">md5: 8433a1d0ce679780990d4813ae094590</span>
-   </li>
-  </ul>
- </li>
- <li>PHP 3.0.x (latest)
-  <ul>
-   <li>
-    <?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?><br />
-    <span class="md5sum">md5: b4b8f7f1151ce66d5f3910a066651133</span>
-   </li>
-   <li>
-    <?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?><br />
-    <span class="md5sum">md5: 29029ac1c3c2075dce38bbd804c42f72</span>
-   </li>
-  </ul>
- </li>
-  
- <li>
-  If you are searching for older versions of PHP, go to
-  the <a href="http://museum.php.net/">"PHP Museum"</a>.
- </li>
- 
- <li>
-  Search for PHP tarballs on AllTheWeb.com:
-  <form action="http://www.alltheweb.com/search" method="get">
-   <input type="hidden" name="cat" value="ftp" />
-   <input type="hidden" name="ftype" value="6" />
-<?php /*
-cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
-*/?>
-   <select name="query" onchange="this.form.submit()">
-    <option value="">--select version--</option>
-    <option value="php-3.0.tar.gz">3.0</option>
-    <option value="php-3.0.1.tar.gz">3.0.1</option>
-    <option value="php-3.0.2.tar.gz">3.0.2</option>
-    <option value="php-3.0.3.tar.gz">3.0.3</option>
-    <option value="php-3.0.4.tar.gz">3.0.4</option>
-    <option value="php-3.0.5.tar.gz">3.0.5</option>
-    <option value="php-3.0.6.tar.gz">3.0.6</option>
-    <option value="php-3.0.7.tar.gz">3.0.7</option>
-    <option value="php-3.0.8.tar.gz">3.0.8</option>
-    <option value="php-3.0.9.tar.gz">3.0.9</option>
-    <option value="php-3.0.10.tar.gz">3.0.10</option>
-    <option value="php-3.0.11.tar.gz">3.0.11</option>
-    <option value="php-3.0.12.tar.gz">3.0.12</option>
-    <option value="php-3.0.13.tar.gz">3.0.13</option>
-    <option value="php-3.0.14.tar.gz">3.0.14</option>
-    <option value="php-3.0.15.tar.gz">3.0.15</option>
-    <option value="php-3.0.16.tar.gz">3.0.16</option>
-    <option value="php-3.0.17.tar.gz">3.0.17</option>
-    <option value="php-3.0.18.tar.gz">3.0.18</option>
-    <option value="">--------</option>
-    <option value="php-4.0.0.tar.gz">4.0.0</option>
-    <option value="php-4.0.1.tar.gz">4.0.1</option>
-    <option value="php-4.0.1pl1.tar.gz">4.0.1pl1</option>
-    <option value="php-4.0.2.tar.gz">4.0.2</option>
-    <option value="php-4.0.3.tar.gz">4.0.3</option>
-    <option value="php-4.0.4.tar.gz">4.0.4</option>
-    <option value="php-4.0.4pl1.tar.gz">4.0.4pl1</option>
-    <option value="php-4.0.5.tar.gz">4.0.5</option>
-    <option value="php-4.0.6.tar.gz">4.0.6</option>
-    <option value="php-4.1.0.tar.gz">4.1.0</option>
-    <option value="php-4.1.1.tar.gz">4.1.1</option>
-    <option value="php-4.1.2.tar.gz">4.1.2</option>
-    <option value="php-4.2.0.tar.gz">4.2.0</option>
-    <option value="php-4.2.1.tar.gz">4.2.1</option>
-    <option value="php-4.2.2.tar.gz">4.2.2</option>
-    <option value="php-4.2.3.tar.gz">4.2.3</option>
-    <option value="php-4.3.0.tar.gz">4.3.0</option>
-    <option value="php-4.3.1.tar.gz">4.3.1</option>
-    <option value="php-4.3.2.tar.gz">4.3.2</option>
-    <option value="php-4.3.3.tar.gz">4.3.3</option>
-    <option value="php-4.3.4.tar.gz">4.3.4</option>
-   </select>
-  </form>
  </li>
 </ul>
 
