@@ -117,7 +117,7 @@ remaining on account" drops below a specified level.
 </ul>
 <? endEntry();?>
 
-<? makeEntry("W-Agora","www.araxe.fr/w-agora","Marc Druilhe","marc.druilhe@hol.fr"); ?>
+<? makeEntry("W-Agora","www.araxe.fr/w-agora","Marc Druilhe","mdruilhe@araxe.fr"); ?>
 W-Agora is a web-based and customizable forum package. It allows you to install forums, BBS, guestbooks and all derived things.
 More than "just another web BBS/forum software", w-agora is designed so you can easily adapt it to your needs. For example you can also use it to: 
 <ul>
