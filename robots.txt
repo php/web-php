@@ -2,5 +2,3 @@ User-agent: *
 Disallow: /source.php
 Disallow: /search.php
 Disallow: /manual/add-note.php
-Disallow: /manual/admin-notes.php
-Disallow: /manual/browse-errata.php
