@@ -38,9 +38,11 @@ h2 { font-size: 125%; }
 h3 { font-size: 110%; }
 h4 { font-size: 100%; }
 
+/* browsers handle this differently
 input.max, textarea.max, select.max {
 	width: 100%;
 }
+*/
 
 img {
 	border: 0px;

@@ -253,10 +253,11 @@ table.standard th.subr {
     vertical-align: top;
 }
 
-/* Maximum width input fields */
+/* browsers handle this differently
 input.max, textarea.max, select.max {
     width: 100%;
 }
+*/
 
 /* PHP code syntax highlighting */
 div.phpcode span.html {
