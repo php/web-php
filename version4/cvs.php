@@ -25,7 +25,7 @@ here's how.<p>
 <ul>
 	<li>It is recommended that you configure CVS by putting this in your <tt>~/.cvsrc</tt> file:
 <pre>
-cvs -z4
+cvs -z3
 update -d -P
 checkout -P
 diff -u
@@ -41,10 +41,8 @@ diff -u
 -->
 	<li>Login to the Zend CVS repository.  Use <strong>zend</strong> as the password.<br>
 		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository login</pre></li>
-	<li>Obtain the Zend CVS tree:<br>
-		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co libzend</pre>
-	<li>Obtain the TSRM (Thread Safe Resource Manager) CVS tree:<br>
-		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co TSRM</pre>
+	<li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
+		<pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co libzend TSRM</pre>
 	<li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool 1.3.3 or newer.</li>
 	<li>Run ./buildconf.  After a while, the configure script should be generated.</li>
 	<li>From this point onwards, installation is similar to the installation of one of the official packages with one main difference - you must have bison 1.25 or later and flex 2.54 or later to install this version.</li>
