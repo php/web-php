@@ -1,13 +1,12 @@
 <?
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	$url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
-	$urle = urlencode($url);
+	$urle = htmlspecialchars($url);
 	
-	header("HTTP/1.0 301 Redirect");
 	header("Location: $url");
 
 	print "<html><title>Redirect to $urle</title><body>";
-	print "<a href=\"".$urle."\">Please click here</a></body></html>";
+	print "<a href=\"".$url."\">Please click here</a></body></html>";
 	exit;
 }
 ?>
