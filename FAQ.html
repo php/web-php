@@ -673,6 +673,20 @@ ctly.
 	have now discovered that these people cannot be outsmarted.  The libphp3.a file is not supposed to 
 	exist.  The Apache build process will create it.<P>
   </DD>
+
+  <DT><B>
+    <a name="4.10">4.10</a> When I try to build Apache with PHP as a static module using 
+	--activate-module=src/modules/php3/libphp3.a it tells me that my compiler is not ANSI
+	compliant.
+  </B></DT>
+  <DD>
+    This is a crappy error message and has been fixed in Apache-1.3.10 (not available yet).  For now, go
+	and edit the src/Configure file in the Apache source directory and down around line 2140 you will find
+	a line that looks like this: <pre>if ./helpers/TestCompile sanity; then</pre>
+	Change this line to be this: <pre>if ./helpers/TestCompile -v sanity; then</pre>
+	and now re-run the Apache configure script.  It will now show you the actual errors
+	that caused your build to fail.  It is usually due to a missing library.
+  </DD>
 </DL>
 
 <HR noshade>
