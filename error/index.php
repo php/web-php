@@ -15,7 +15,7 @@ function make404()
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
-if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
+if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) {
     make404();
     exit;
 }
