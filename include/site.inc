@@ -87,7 +87,8 @@ if (!defined("MIRROR_STANDARD")) {
 
     define('MIRROR_DOWNLOAD', 0);
     define('MIRROR_STANDARD', 1);
-    define('MIRROR_SPECIAL', 2);
+    define('MIRROR_SPECIAL',  2);
+    define('MIRROR_VIRTUAL',  3);
 
     define('MIRROR_OK',          0);
     define('MIRROR_NOTACTIVE',   1);
@@ -126,7 +127,7 @@ if (!isset($MIRRORS[$MYSITE])) {
     // If the mirror is not registered with this name, provide defaults
     // (no country code, no search, no stats, English default language ...)
     if (!isset($MIRRORS[$MYSITE])) {
-        $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_SPECIAL, FALSE, "en", MIRROR_OK);
+        $MIRRORS[$MYSITE] = array("xx", $MYSITE, FALSE, $MYSITE, MIRROR_VIRTUAL, FALSE, "en", MIRROR_OK);
     }
 
 }
