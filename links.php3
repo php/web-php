@@ -29,16 +29,18 @@ There's also a searchable directory at
 <UL>
 <LI><a HREF="http://www.htmlwizard.net/phpTidbits/">phpTidBits</a><BR>
 PHP Tutorials<BR>
-<LI><a HREF="http://www.phpbuilder.com">PHPBuilder.Com</a><BR>
+<LI><a HREF="http://www.phpbuilder.com/`">PHPBuilder.Com</a><BR>
 A bunch of helpful PHP resources available here<BR>
 <LI><a HREF="http://www.devshed.com/resource/advanced/php3.phtml">PHP3 resources at DevShed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
-<LI><A HREF="http://php.codebase.org">PHP.CodeBase.Org</A><BR>
+<LI><A HREF="http://php.codebase.org/">PHP.CodeBase.Org</A><BR>
 A nice all-around support site<BR>
+<LI><A HREF="http://www.314interactive.com/io/index.php3">IONLINE Programmer's Resource</A><BR>
+Another site with good articles on PHP basics and advanced topics.<BR>
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
 useful functions, organized for easy finding.  Includes a search function.<BR>
-<LI><A HREF="http://php.netvision.net.il/examples/">PHP Example Archive</A><BR>
+<LI><A HREF="http://webdev.berber.co.il/">Berber's PHP3 Example Page</A><BR>
 Another collection of sample PHP scripts.  Includes a search function.<BR>
 <LI><A HREF="http://phplib.shonline.de/">PHP Base Library</A><BR>
 The start of what looks to be a promising collection of base code
