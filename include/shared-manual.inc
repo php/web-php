@@ -143,7 +143,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
 
 <TD ALIGN=left BGCOLOR="#E0E0E0">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=5 WIDTH=100%>
+<TABLE BORDER=0 CELLPADDING=3 CELLSPACING=3 WIDTH=100%>
 <TR><TD>
 <?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
