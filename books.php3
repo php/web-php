@@ -10,7 +10,9 @@ commonHeader("PHP Books");
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><SMALL>No image yet<SMALL><BR></TD>
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
+><IMG SRC="/gifs/core-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 >Core PHP Programming</A><BR>
 by Leon Atkinson<BR>
