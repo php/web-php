@@ -361,6 +361,21 @@ foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Wide
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
 </TD>
+</TR>exec/obidos/ASIN/382725793X
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
+><IMG SRC="/jpgs/dubois-de.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/exec/obidos/ASIN/382725793X/thephpdevelopmte"
+>MySQL</A><BR>
+by Paul DuBois<BR>
+Vorwort von <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
+<SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
+</SMALL>
+in German, Markt&Technik, July 2000, ISBN 3-8272-5793-X, 864 Seiten 
+Translation by Dorothea Reder and Judith Muhr<BR>
+</TD>
 </TR>
 
 <TR VALIGN="middle">
