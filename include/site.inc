@@ -56,6 +56,7 @@ $MIRRORS = array(
    "http://uk.php.net/"           => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 1),
    "ftp://uk.php.net/"            => array("uk", "Norwich", "squid", "http://www.netcom.co.uk/", 1, 0),
    "http://www.php.net/"          => array("us", "Circle Net", "besthost", "http://BestHost.net/", 1, 0),
+   "http://beta.php.net/"         => array("us", "chek.com", "chek", "http://www.chek.com/", 1, 1),
    "http://php.he.net/"           => array("us", "Hurricane Electric", "hurricane", "http://he.net/", 1, 0),
    "http://php.calinet.com/"      => array("us", "California Internet Connection", "calinet", "http://home.calinet.com/", 1, 0),
    ""                             => array("xx", "Unknown", "none", "/", 1, 0)
