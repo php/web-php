@@ -50,7 +50,7 @@ function show_menu($state) {
 					"assign" => "Assigned");
 
 	reset($fields);
-	echo "Order by:  <select name='order_by'>\n";
+	echo "Order by:  <select name='order_by_clause'>\n";
 	while(list($field,$name) = each($fields)) {
 		echo "<option value='$field'>$name\n";
 	}
