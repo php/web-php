@@ -23,6 +23,8 @@ if ($in && $checkread) {
 
   if (empty($in[id])) {
     $error .= "You must supply a desired CVS id. ";
+  } elseif(!preg_match('/^[a-z]\w+$/',$in[id])) {
+	$error .= "Your user id must >1 char long, start with a letter and contain nothing but a-z or 0-9 and _";
   }
   if (empty($in[fullname])) {
     $error .= "You must supply your real name. ";
@@ -169,6 +171,10 @@ And once again since people just don't seem to understand this point:
   <td bgcolor="#dddddd">Writing web pages with PHP</td>
   <td bgcolor="#eeeeee">&nbsp;</td>
  </tr>
+ <tr>
+  <td bgcolor="#dddddd">Setting up a php.net mirror site</td>
+  <td bgcolor="#eeeeee">&nbsp;</td>
+ </tr>
 </table>
 
 <p>
@@ -244,7 +250,7 @@ then you don't!
  <td><textarea cols="50" rows="5" name="in[purpose]"><?php echo clean($in[purpose]);?></textarea></td>
 </tr>
 <tr>
- <th>User ID: </th>
+ <th>User ID: (single word, lower case)</th>
  <td><input type="text" size="10" name="in[id]" value="<?php echo clean($in[id]);?>" /></td>
 </tr>
 <tr>
