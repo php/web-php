@@ -2,8 +2,12 @@
 	require("shared.inc");
 	commonHeader("High-Profile sites running PHP");
 
-	function site($name,$domain) {
-		echo "<LI><a href=\"http://$domain\">$name</a><br>\n";
+	function site($name,$domain=false) {
+		if ($domain) {
+			echo "<LI><a href=\"http://$domain\">$name</a><br>\n";
+		} else {
+			echo "<LI><b>$name</b><br>\n";
+		}
 	}
 
 	function siteStart() {
@@ -154,6 +158,7 @@ right away.</blockquote>
 	site("DataGuard AS - Security Consulting","www.dataguard.no");
 	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
+	site("NASA - Jet Propulsion Laboratory");
 	site("PalmShop","www.palmshop.de");
 	siteEnd();
 
