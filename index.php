@@ -125,7 +125,7 @@ of which continue to show impressive growth for PHP. Check out the
 
 <?php echo hdelim(); ?>
 
-<h1><?php echo make_image("php-gtk-white.gif", "PHP-GTK", "right"); ?>
+<h1><?php print_link("http://gtk.php.net/", make_image("php-gtk-white.gif", "PHP-GTK", "right") ); ?>
 PHP-GTK version 0.1 released</h1>
 
 <p>
