@@ -11,7 +11,6 @@ cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.218
 de	www.php3.de	smartin@schlund.de	62.104.64.10
 de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
-es	es.php.net	alfre@ibd.es	195.55.198.14
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
@@ -32,6 +31,7 @@ ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@ios.chalmers.se>	129.16.214.87
 sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
+th	th.php.net	spcom@loxinfo.co.th	php.ubon.asianet.co.th
 tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
 ua	ua2.php.net	Max Khaikin <max@alkar.net>	php.ndot.com.ua
