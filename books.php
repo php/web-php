@@ -122,9 +122,11 @@ Sams, June 2000, ISBN 0-6723-1804-0, 400 pages
 ><IMG SRC="/jpgs/ratschiller.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff">Web Application Development with PHP</A><BR>
-by <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A> and <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A><BR> 
+by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR> 
 <SMALL>
-New Riders Publishing, July 2000, ISBN 0-7345-0997-1, 416 pages<BR>
+Contains Official Zend API Documentation<BR>
+With contributions by Zend Technologies, LTD, <A HREF="http://zend.com/comm_person.php?id=12">Zeev Suraski</A> and <A HREF="http://zend.com/zend/hof/andi.php">Andi Gutmans</A><BR>
+New Riders Publishing, July 2000, ISBN 0-7357-0997-1, 384 pages<BR>
 <A HREF="http://www.phpwizard.net/book/">more info</A>
 </SMALL>
 </TD>
