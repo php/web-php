@@ -24,12 +24,6 @@ if (preg_match('/\.(pdf|gif|jpg)$/', $REQUEST_URI)) {
     exit;
 }
 
-// Direct support for documentation howto link
-if ($REQUEST_URI == 'dochowto') {
-    header("Location: http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz");
-    exit;
-}
-
 // Get preferred language, and check for
 // existing manual in that language
 $lang = default_language();
@@ -132,6 +126,9 @@ if ($function == "rev") {
     exit;
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
+    exit;
+} else if ($function == "dochowto") {
+    header("Location: http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz");
     exit;
 }
 
