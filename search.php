@@ -57,7 +57,7 @@ if ($pattern) {
 		exit;
 	}
 
-	if (!have_search() && !isset(local_search_override)) {
+	if (!have_search() && !isset($local_search_override)) {
 		$location="http://www.php.net/search.php";
 		$query = "show=".$show."&pattern=".urlencode($pattern)."&sourceurl=".urlencode($MYSITE);
 		header("Location: ".$location."?".$query);
