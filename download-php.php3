@@ -3,13 +3,13 @@ require("shared.inc");
 
 $current = "3.0.5";
 $win32_current = "3.0.5";
-$rpm_current = "3.0.5";
+$rpm_current = "3.0.5-1";
 
-$filesizes["php-3.0.5.tar.gz"]="1,270 kB";
+$filesizes["php-${current}.tar.gz"]="1,270 kB";
 $filesizes["php-3.0.4.tar.gz"]="1,215 kB";
-$filesizes["php-3.0.5-win32.zip"]="1,513 kB";
-$filesizes["mod_php3-3.0.4-1.i386.rpm"]="325 kB";
-$filesizes["mod_php3-3.0.4-1.src.rpm"]="1,449 kB";
+$filesizes["php-${win32_current}-win32.zip"]="1,513 kB";
+$filesizes["mod_php3-${rpm_current}.i386.rpm"]="294 kB";
+$filesizes["mod_php3-${rpm_current}.src.rpm"]="1,503 kB";
 
 
 function makeCap() {
@@ -138,8 +138,8 @@ while ($site = current($showsites)) {
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
 	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
-	$i386_rpm = "${site}${srcdir}mod_php3-3.0.4-1.i386.rpm";
-	$src_rpm = "${site}${srcdir}mod_php3-3.0.4-1.src.rpm";
+	$i386_rpm = "${site}${srcdir}mod_php3-${rpm_current}.i386.rpm";
+	$src_rpm = "${site}${srcdir}mod_php3-${rpm_current}.src.rpm";
 	if (eregi("caraveo",$site)) { # special case ;-)
 		echo("<LI>");
 		download_link("${site}/php3latest.zip","Latest patched Windows version");
