@@ -217,6 +217,7 @@ right away.</blockquote>
 	site("The Galactic Empire","www.imperialnexus.net");
 	site("GibWorld","www.gibworld.com");
 	site("mplayer.com","www.mplayer.com");
+	site("Soldier of Fortune Files","www.soffiles.com");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
