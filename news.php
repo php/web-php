@@ -11,6 +11,26 @@ Here you can find older news items from the PHP project. You may find the
 information useful.
 </p>
 
+<?php echo hdelim(); 
+
+print_link("http://www.phpconference.de/2001/index_en.php", make_image("international_conference.gif", 
+							"International PHP Conference 2001", "right") ); ?>
+
+<h1>International PHP Conference slides available</h1>
+
+<p>
+<font class="newsDate">[10-Jan-2002]</font>
+You can find an overview of all slides of the sessions from the International PHP Conference 2001 on the
+<a href="http://www.phpconference.de/2001/slides_en.php">conference slides page</a>. 
+It is still not too late to check out some photos from the conference:
+<ul>
+    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn")
+    <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
+    <li><?php print_link("http://www.phpconference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
+</ul>
+<br clear="all">
+</p>
+
 <?php echo hdelim(); ?>
 
 <h1>PHP 4.1.0 Released!</h1>
@@ -31,15 +51,11 @@ way of accepting form variables; output compression; and much, much more.  Read 
 
 <p>
 <font class="newsDate">[27-Nov-2001]</font>
-After one week our Windows HTML Help Manual Survey
-is over now. We received nearly six hundred
-processable forms with many wishes and comments.
-Thanks for you all, who contributed to making
-the best help system for PHP on Windows.
-You can get more information about the ongoing
-project, including the detailed results of the survey at
-<?php print_link("http://weblabor.hu/php/newchm.php",
-" the project's own page"); ?>.
+After one week our Windows HTML Help Manual Survey is over now. We received nearly six hundred
+processable forms with many wishes and comments. Thanks for you all, who contributed to making
+the best help system for PHP on Windows. You can get more information about the ongoing
+project, including the detailed results of the survey at 
+<?php print_link("http://weblabor.hu/php/newchm.php", "the project's own page"); ?>.
 <br clear="all">
 </p>
 
