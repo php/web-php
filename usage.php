@@ -1,5 +1,5 @@
 <?php
-include_once 'prepend.inc';
+include_once "prepend.inc";
 commonHeader("PHP Usage Stats");
 ?>
 
@@ -21,5 +21,7 @@ Spoiler: PHP is the most popular. There is also a
 <a href="http://www.tiobe.com/tpci.htm">Programming Community Index</a>
 provided by TIOBE.
 </p>
+
+<?php include_once "langchooser.inc"; echo "<!-- $LANG -->"; ?>
 
 <?php commonFooter(); ?>
