@@ -41,18 +41,19 @@ commonHeader("Setting Up Local Search");
   <p>
    Grab <a href="/mirrorkit.tgz">mirrorkit.tgz</a>, and extract
    the contents of the <tt>search</tt> folder somewhere<br /><br />
-   Copy php.conf to /usr/local/htdig/conf (to the conf subfolder of the
-   folder you installed htdig to) and edit the paths contained within it
-   to match your system. Copy phphead.html and phpnomatch.html into
-   <tt>/usr/local/htdig/common/*</tt>. Copy <tt>htphp.sh</tt> into 
-   <tt>/usr/local/htdig/bin/</tt> and edit the <tt>HTBINDIR</tt> line
-   in the script to suit your system.
+   Copy <tt>php.conf</tt> to <tt>/usr/local/htdig/conf</tt> (to the <tt>conf</tt>
+   subfolder of the folder you installed htdig to) and edit the paths
+   contained within it to match your system. Copy <tt>phphead.html</tt>
+   and <tt>phpnomatch.html</tt> into <tt>/usr/local/htdig/common/*</tt>.
+   Copy <tt>htphp.sh</tt> into <tt>/usr/local/htdig/bin/</tt> and edit
+   the <tt>HTBINDIR</tt> line in the script to suit your system.
   </p>
  </li>
  <li>
   <p>
    Edit your VirtualHost configuration as outlined on the
-   <a href="/mirroring.php">mirroring page</a>.
+   <a href="/mirroring.php">mirroring page</a>. See the optimization
+   notes below on the exclude settings.
   </p>
  </li>
  <li>
@@ -98,6 +99,32 @@ commonHeader("Setting Up Local Search");
  Originally written by &lt;gareth (at) omnipotent.net&gt; 1998-Apr-13
  Updated by Dejan Markic &lt;dejan (at) php.net&gt; 2003-Jan-17
  Last updated: 2003-Jan-18
+</p>
+
+<h2>Optimizing The Search</h2>
+
+<p>
+ The <tt>php.conf</tt> in the mirror kit contains an <tt>exclude_urls</tt> setting,
+ which excludes the printed pages the manual howto and the calendar page
+ from the indexes. This will make your search index much smaller, than
+ indexing all the site contents.
+</p>
+
+<p>
+ You may however add more exclude parameters if you want to make your local
+ search even more faster. If you do not expect users on your mirror to search
+ in some language pages, you may restrict the database to the most used
+ languages. This will speed up the indexing process, as well as the search
+ execution. Add some more exclude parameters separated with spaces in case
+ you choose this way.
+</p>
+
+<p>
+ Please do not forget to reflect your actual <tt>exclude_urls</tt> setting in
+ the <tt>HTSEARCH_EXCLUDE</tt> vhost setting, as you can see on
+ <a href="mirroring.php">the mirroring page</a>. This information will be
+ used in the future to support the automatic customization of an advanced
+ search page on mirrors.
 </p>
 
 <h1>Setup With Multidig</h1>
