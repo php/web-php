@@ -44,8 +44,8 @@ site_header("PHP 4.1.0 Release Announcement");
 </p>
 
 <p>
- Following is a description of the new input mechanism.  For a full list of
- changes in PHP 4.1.0, see the <a href="ChangeLog-4.php">changelog</a>.
+ Following is a description of the new input mechanism. For a full list of
+ changes in PHP 4.1.0, see the <a href="ChangeLog-4.php#4.1.0">ChangeLog</a>.
 </p>
 
 <hr />
@@ -133,8 +133,8 @@ function example1()
  new code easier. Another neat trick is that creating new entries in the
  $_SESSION array will automatically register them as session variables, as
  if you called session_register(). This trick is limited to the session
- module only - for example, setting new entries in $_ENV will *not* perform
- an implicit putenv().
+ module only - for example, setting new entries in $_ENV will
+ <strong>not</strong> perform an implicit putenv().
 </p>
 
 <p>
@@ -162,8 +162,8 @@ function example1()
 </p>
 
 <p>
- Thanks go to Shaun Clowes (shaun@securereality.com.au) for pointing out this
- problem and for analyzing it.
+ Thanks go to Shaun Clowes (shaun at securereality dot com dot au) for
+ pointing out this problem and for analyzing it.
 </p>
 
 <?php site_footer(); ?>
