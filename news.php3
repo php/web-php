@@ -55,6 +55,10 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Treasure trove: PHP offers features that will make your Web apps sparkle", "by Nicholas Petreley","http://www.infoworld.com/articles/op/xml/990621oppetreley.xml", "June 19, 1999");?>
+LinuxWorld's editorial director discovers PHP and extols its virtues.
+<? endEntry(); ?>
+
 <? makeEntry( "Site Navigation with PHP", "by Brad Bulger","http://www.hotwired.com/webmonkey/99/25/index2a.html", "June 16, 1999");?>
 Another Webmonkey article on using PHP, this time explaining how to use
 PHP to make it easier for users to navigate your website.
