@@ -37,7 +37,11 @@ if (!isset($csel)) {
 if ($COUNTRIES[$csel]) {
 	$showcountry=$csel;
 } else {
-	$showcountry="us";
+	$info=$MIRRORS[$MYSITE];
+	$showcountry=$info[0];
+	if (!$showcountry) {
+		$showcountry="us";
+	}
 }
 $mirror_sites=$MIRRORS;
 $count=0;

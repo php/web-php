@@ -5,7 +5,7 @@ $apache_version="1.3.0";
 $php_version="3.0";
 
 function makeCap() {
-	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF;
+	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF,$MYSITE;
 	global $showcountry,$showsites,$csel;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
@@ -28,7 +28,11 @@ if (!isset($csel)) {
 if ($COUNTRIES[$csel]) {
 	$showcountry=$csel;
 } else {
-	$showcountry="us";
+	$info=$MIRRORS[$MYSITE];
+	$showcountry=$info[0];
+	if (!$showcountry) {
+		$showcountry="us";
+	}
 }
 $mirror_sites=$MIRRORS;
 $count=0;
