@@ -67,7 +67,43 @@ site_header("Downloads");
 ?>
 
 
-<h1>Latest stable version of PHP</h1>
+<a name="v5">
+<h1>PHP 5.0.0</h1>
+
+<h2>Complete Source Code</h2>
+<ul>
+ <li>
+  <?php download_link('php-5.0.0.tar.bz2', 'PHP 5.0.0 (tar.bz2)'); ?> - 13 Jul 2004<br />
+  <span class="md5sum">md5: 562b7ad1e903248bbe77884cb904b8b7</span>
+ </li>
+ <li>
+  <?php download_link('php-5.0.0.tar.gz', 'PHP 5.0.0 (tar.gz)'); ?> - 13 Jul 2004<br />
+  <span class="md5sum">md5: d9df0d177fa62091a486f0e5cb5aaaca</span>
+ </li>
+</ul>
+
+<h2>Windows Binaries</h2>
+<ul>
+ <li>
+  <?php download_link('php-5.0.0-Win32.zip', 'PHP 5.0.0 zip package'); ?> - 13 Jul 2004<br />
+  <span class="md5sum">md5: f8fb5676b6a32f7be1c8d8d373fbc2af</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.0.0-Win32.zip', 'Collection of PECL modules for PHP 5.0.0'); ?> - 13 Jul 2004<br />
+  <span class="md5sum">md5: ede9d837b3dc48a38ca992ca753ee114</span>
+ </li>
+</ul>
+
+<p>
+ We have a <a href="/zend-engine-2.php">PHP 5 / Zend Engine 2 page</a> explaining the
+ language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
+ ChangeLog</a> details all the other changes.
+</p>
+
+<hr />
+
+<a name="v4">
+<h1>PHP 4.3.7</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -111,41 +147,6 @@ site_header("Downloads");
   <span class="md5sum">md5: 91115427bd112e5b96e5ac48fd8a9afd</span>
  </li>
 </ul>
-
-<hr />
-
-<a name="v5">
-<h1>PHP 5 Release Candidate 3</h1>
-
-<h2>Complete Source Code</h2>
-<ul>
- <li>
-  <?php download_link('php-5.0.0RC3.tar.bz2', 'PHP 5.0.0RC3 (tar.bz2)'); ?> - 8 Jun 2004<br />
-  <span class="md5sum">md5: aa24589d3c173052998792e4a6d255fa</span>
- </li>
- <li>
-  <?php download_link('php-5.0.0RC3.tar.gz', 'PHP 5.0.0RC3 (tar.gz)'); ?> - 8 Jun 2004<br />
-  <span class="md5sum">md5: 30672cc224ced23cb4a2ac532251a2de</span>
- </li>
-</ul>
-
-<h2>Windows Binaries</h2>
-<ul>
- <li>
-  <?php download_link('php-5.0.0RC3-Win32.zip', 'PHP 5.0.0RC3 zip package'); ?> - 8 Jun 2004<br />
-  <span class="md5sum">md5: f6d84eb0ff48cfdb0e53db735fd2324b</span>
- </li>
- <li>
-  <?php download_link('pecl-5.0.0RC3-Win32.zip', 'Collection of PECL modules for PHP 5.0.0RC3'); ?> - 8 Jun 2004<br />
-  <span class="md5sum">md5: aa6ff33dfee1fd7a68bbe476021da3c9</span>
- </li>
-</ul>
-
-<p>
- We have a <a href="/zend-engine-2.php">PHP 5 / Zend Engine 2 page</a> explaining the
- language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
- ChangeLog</a> details all the other changes.
-</p>
 
 <hr />
 
