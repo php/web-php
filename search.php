@@ -126,5 +126,5 @@ foreach ($searchoptions as $key => $value) {
  </p>
 </form>
 <?php
-    site_footer();
+    site_footer(array("functionsjs"));
 }
