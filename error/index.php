@@ -169,14 +169,14 @@ if ($function == "rev") {
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
-} else if (in_array($function, array("dochowto", "phpdochowto"))) {
+} elseif (in_array($function, array("dochowto", "phpdochowto"))) {
     header("Location: http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz");
     exit;
 }
 
 // ============================================================================
-// Link to NEWS
-if (in_array($function, array("NEWS", "news"))) {
+// Link to PHP4 NEWS file
+elseif ($function == "php4news") {
     header("Location: http://cvs.php.net/co.php/php4/NEWS");
     exit;
 }
