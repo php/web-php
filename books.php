@@ -121,7 +121,7 @@ Sams, June 2000, ISBN 0-6723-1804-0, 400 pages
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff"
 ><IMG SRC="/jpgs/ratschiller_gerken.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff">Web Application Development with PHP</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709971/cmvsstuff">Web Application Development with PHP 4.0</A><BR>
 by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR> 
 <SMALL>
 Contains Official Zend API Documentation<BR>
