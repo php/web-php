@@ -156,7 +156,7 @@ with a small PHP section<br>
 An Italian-language php site that features a variety of projects, reviews,
 courses, tutorials and other resources<br>
 
-<li><a href="http://phpbrasil.com/">PHPBrazil.com</a><br>
+<li><a href="http://phpbrasil.com/">PHPBrasil.com</a><br>
 Brazilian PHP Portal with many link and informations<br>
 </ul>
 
