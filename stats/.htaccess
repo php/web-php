@@ -1,0 +1,3 @@
+php3_include_path .:../include
+DirectoryIndex index.php3
+AddType application/x-pilot .prc .pdb

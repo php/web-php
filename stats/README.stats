@@ -1,0 +1,81 @@
+Adding A Stats Page To Your Mirror In 6.5 Easy Steps:
+
+
+1. Get Webalizer:
+
+             http://www.mrunix.net/webalizer/
+
+   The Webalizer is a web server log analysis program. It is designed to 
+   scan web server log files in various formats and produce usage statistics 
+   in HTML format for viewing through a browser.
+
+   Note that Webalizer requires you have the GD library installed on your
+   site.  The instructions say you need GD 1.2, but GD 1.3 works fine too.
+
+
+2. Replace webalizer.c with the version in this directory
+
+   I made a couple of little hacks to the script to allow it to output files
+   with extensions other than .html, and to let me stick the common PHP code
+   in where I wanted it.
+
+   I've sent the writer of Webalizer my code.  It may be incorporated into a
+   future release (here's hoping), so this step may become obsolete at some
+   point.
+
+
+3. Make it
+
+   You may need to edit makefile to set where your GD library is.  Read the
+   INSTALL that came with Webalizer for more info.
+
+   I copied the final executable into /usr/bin.  Call me crazy.
+
+
+4. Edit php.conf
+
+   This is the main conf file for Webalizer.  Specifically, you will want to 
+   change the lines which define where your log file sits, and the name of your
+   host machine.
+
+
+5. Give it a test
+
+   From the command line in the /stats directory, type:
+
+	webalizer -c php.conf -x php3
+
+   The "c" switch tells it to use the php.conf file, and the "x" switch tells
+   it to generate .php3 files, instead of .html.  This is important so the
+   script can generate the fancy PHP site look using includes() instead of hard
+   coding everything in.
+
+   You should get an index file, a usage file for the current month, some gifs,
+   and a history file.
+
+
+6. Add it to your cron
+
+   FWIW, I update things daily at 3 am:
+
+             0 3 * * * cd /www/php/stats;/usr/bin/webalizer -c php.conf -x php3
+
+   The "cd" is important because Webalizer generates it's file in the current
+   directory.
+
+
+6.5. Link it to your mirror
+
+   I haven't built in the code to figure out if you have stats working on your
+   mirror or not yet.  So basically this is just for the webmasters (and people
+   who are clever enough to try "xx.php.net/stats".  I'm working on it.
+
+
+If you have any questions you can email me, although I probably can't help with 
+any compile problems you may have.  Try the PHP Mirrors list (mirrors@php.net).
+
+
+
+Colin Viebrock
+cmv@privateworld.com
+10-Sep-98
