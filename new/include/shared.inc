@@ -396,8 +396,9 @@ document.writeln("px;}");
 document.writeln("</STYLE>");
 //-->
 </SCRIPT>
-<? endif;	/* Kick outs */ ?>
-
+<? endif;	/* Kick outs */ 
+?>
+ 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
