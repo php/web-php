@@ -149,6 +149,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.pawscon.com/", "paws_small.jpg", "PHP and Web Standards Conference - UK 2004"); ?>
+
+<h1>PaWS Tickets Now On Sale!</h1>
+<p>
+ <span class="newsdate">[05-Feb-2004]</span>
+ The <a href="http://www.pawscon.com/">PaWS Group</a> is proud to announce that
+ tickets are now available for the first 
+ <a href="http://www.pawscon.com/">PHP and Web Standards Conference</a>. We are
+ offering Weekend tickets (Saturday 21st and Sunday 22nd only) as well as Conference
+ tickets (Friday 20th - Tuesday 24th) for the entire length of the event. 
+ Additionally, we also have Daily tickets available for each day of the conference.
+ Tickets will also be available on the door for those that simply want to drop in.
+</p>
+<p>
+ For ticket and accommodation Prices, look over our 
+ <a href="http://www.pawscon.com/pricing">pricing guide</a> for more information.
+ <a href="http://www.pawscon.com/register">Purchase your tickets</a> today for this
+ one of a kind conference!
+</p>
+
+<hr />
+
 <h1>PHP 4.3.5RC2 released!</h1>
 <p>
  <span class="newsdate">[03-Feb-2004]</span>
