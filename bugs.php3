@@ -130,9 +130,12 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug #$cid:  $sdesc", $report, "From: $email")) {
-        echo("<p><h2>Mail sent to $destination...</h2>\n");
-	echo("Thank you for your help!\n");
+    if (Mail($destination, "Bug #$cid: $sdesc", $report, "From: $email")) {
+        echo "<p><h2>Mail sent to $destination...</h2>\n";
+		echo "Thank you for your help!<P>If the status of the bug report you submitted\n";
+		echo "changes, you will be notified.  You may return here and check on the status\n";
+		echo "at any time.  The URL for your bug report is: <a href=\"http://ca.php.net/bugs.php3?id=$cid\">";
+		echo "http://ca.php.net/bugs.php3?id=$cid</a>\n";
     } else {
         echo("<p><h2>Mail not sent!</h2>\n");
         echo("Please send this page in a mail to " .
@@ -183,7 +186,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$external_processing_function="external_processing";
 	$row_coloring_function="row_coloring";
 	
-    mysql_pconnect("localhost","bourbon","");
+    mysql_pconnect("localhost","","");
     mysql_select_db("php3");
 
 	$tables[] = "bugdb";
@@ -230,7 +233,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-    mysql_pconnect("localhost","bourbon","");
+    mysql_pconnect("localhost","","");
     mysql_select_db("php3");
 	if(isset($modify) && $modify=="Edit Bug") {
 		$ok=0;
@@ -253,6 +256,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
     		Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
+			if($status=="Delete!") {
+				$text = "The bug has been deleted from the database\n";
+			} else {
+				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments: $comments\n";
+				$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
+			}
+    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
+    		Mail("php-dev@php.iquest.net", "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
 		}
 	}
     $result = mysql_query("SELECT * from bugdb where id=$id");
@@ -278,7 +289,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
 		}
 		echo "</tr>\n";
-		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a></td></tr>\n";
+		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
+		echo "<input type=hidden name=eemail value=\"$row[2]\"></td></tr>\n";
 		echo "<tr><th align=right>Date:</th><td>".$row[9]."</td></tr>\n";
 		if(!isset($edit)) {
 			echo "<tr><th align=right>Type:</th><td>".$row[1]."</td></tr>\n";
@@ -292,7 +304,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		echo "<tr><th align=right>Assigned To:</th><td></b>".$row[12]."</td></tr>\n";
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
-		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd</td></tr>\n";
+		echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"$row[3]\"></td></tr>\n";
 		echo "</table>\n";
 		$text = addlinks($row[4]);
 		echo "<blockquote><blockquote><pre>".$text."</pre></blockquote></blockquote>\n";
@@ -341,8 +353,9 @@ for any outstanding bug reports that match your bug.</STRONG>
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-	<option name="3.0b5">3.0b5
     <option name="3.0CVS">3.0 Latest CVS
+	<option name="3.0b5">3.0b6
+	<option name="3.0b5">3.0b5
 	<option name="3.0b4">3.0b4
 	<option name="3.0b3">3.0b3
 	<option name="3.0b2a">3.0b2a
