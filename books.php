@@ -18,7 +18,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/books.inc';
 $SIDEBAR_DATA = <<<SIDEBAR_END
 <h3>More Books</h3>
 <p>
- There may be more books available that we don't know of yet! You can search
+ There may be more books available that we do not know of yet! You can search
  <a href="http://www.amazon.com/exec/obidos/redirect-home/wwwphpnet">Amazon.com</a>
  for PHP related stuff by using this form (or go directly to
  <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
@@ -86,13 +86,13 @@ function book_show($one_book)
     // Min. one title, max two titles
     if (is_array($title)) {
         $img_title = htmlspecialchars($title[0]);
-        $title = '<p><strong>' .
-                 make_link($title_link, $img_title) . '</strong><br />' .
+        $title = '<p><strong><a href="' . $title_link . '">' .
+                 $img_title . '</a></strong><br />' .
                  htmlspecialchars($title[1]) . '</p>';
     } else {
         $img_title = htmlspecialchars($title);
-        $title = '<p><strong>' .
-                 make_link($title_link, $img_title) . '</strong></p>';
+        $title = '<p><strong><a href="' . $title_link . '">' .
+                 $img_title . '</a></strong></p>';
     }
 
     // More than one author for this book
@@ -107,7 +107,7 @@ function book_show($one_book)
         else {
             for ($i=0; $i < count ($author); $i++) {
                 if ($author_link[$i]) {
-                    $temp[] = make_link($author_link[$i], $author[$i]);
+                    $temp[] = "<a href=\"{$author_link[$i]}\">{$author[$i]}</a>";
                 } else {
                     $temp[] = $author[$i];
                 }
@@ -118,7 +118,7 @@ function book_show($one_book)
         
     } else {
         if ($author_link) {
-            $author = make_link($author_link, $author);
+            $author = "<a href=\"{$author_link}\">{$author}</a>";
         }
     }
 
@@ -126,9 +126,9 @@ function book_show($one_book)
     echo "<tr><td colspan=\"2\"><hr /></td></tr>\n";
 
     // Information row for the book
-    echo "<tr valign=\"top\">\n<td>\n" .
-         make_link($title_link, make_image("books/$image", $img_title)) .
-         "<br />\n</td><td>\n$title\n<p>by $author</p>\n";
+    echo "<tr valign=\"top\">\n<td>\n<a href=\"" .
+         $title_link . '">' . make_image("books/$image", $img_title) .
+         "</a><br />\n</td><td>\n$title\n<p>by $author</p>\n";
 
     // Print any book information and more info link
     if ($info || $lang != "en") {
@@ -138,11 +138,9 @@ function book_show($one_book)
         }
         echo str_replace("& ", "&amp; ", $info) . "</small></p>\n";
     }
-    echo "<p><small>" . make_link(
-        $info_link ? $info_link : $title_link,
-        make_image("caret-rg.gif",">") . "more info"
-    );
-    echo "<br />\n</small></p>\n</td>\n</tr>\n\n";
+    echo '<p><small><a href="' . ($info_link ? $info_link : $title_link) .
+         '">' . make_image("caret-rg.gif",">") . "</a> more info" .
+         "<br />\n</small></p>\n</td>\n</tr>\n\n";
 }
 
 // Generate book statistics (book numbers by languages)
