@@ -16,6 +16,7 @@ function show_types($first_item) {
 	echo "
    <select name=\"bug_type\">
      <option>$first_item
+	 <option>Feature/Change Request
      <option>Documentation problem
      <option>Installation problem
      <option>Failed to compile
