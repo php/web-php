@@ -174,3 +174,8 @@ div.mirror {
 img.flag {
 	border: 1px solid #000000;
 }
+
+.md5sum {
+	color: #6666cc;
+    padding-left: 10px;
+}
