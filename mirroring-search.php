@@ -35,6 +35,13 @@ commonHeader("Setting Up Local Search");
 
        % make install    
    </pre>
+   For Redhat 8 and 9, you will need this configure line:
+   <pre>
+       % CXXFLAGS=-Wno-deprecated CPPFLAGS=-Wno-deprecated \ 
+       ./configure --prefix=/usr/local/htdig --with-cgi-bin-dir=/usr/local/htdig/bin \
+       --with-image-dir=/usr/local/htdig/gifs --with-image-url-prefix=/images \
+       --with-search-dir=/usr/local/htdig/conf
+   </pre>
   </p>
  </li>
  <li>
