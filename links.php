@@ -85,9 +85,6 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)<br></l
 <li><a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br>
 Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl<br></li>
 
-<li><a href="http://www.deskcode.com/">DeskCode</a><br>
-Community-based programming site, featuring <a href="http://www.deskcode.com/phpcompiler/">PHPCompiler</a>
-which converts PHP scripts to Windows executable files (suitable for CD-ROMs, etc.)<br></li>
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
