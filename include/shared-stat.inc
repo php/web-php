@@ -103,6 +103,11 @@ function preloadImages() {
 		b_qref1 = new Image();
 		b_qref1.src = "/gifs/b-quickref-c.gif";
 
+                b_stat0 = new Image();
+                b_stat0.src = "/gifs/b-stats-p.gif";
+                b_stat1 = new Image();
+                b_stat1.src = "/gifs/b-stats-c.gif";
+
 <?	if ($FRAMEMODE == "manual"): ?>
 		b_cont0 = new Image();
 		b_cont0.src = "/gifs/b-contents-p.gif";
@@ -520,7 +525,7 @@ function commonStatFooter() {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT, $HTDIG;
 	global $MIRRORS, $MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
-	global $DISABLE_KICKOUTS;
+	global $DISABLE_KICKOUTS, $DOCUMENT_ROOT;
 	$country=$MIRRORS[$MYSITE][0];
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 ?>
@@ -530,10 +535,15 @@ function commonStatFooter() {
    </TABLE>
   </TD>
  </TR>
- <TR valign=top BGCOLOR="#5B69A6">
+ <TR valign=bottom BGCOLOR="#5B69A6">
   <TD ALIGN=left width="150">
-   <?spc(150,1);?><BR>
-  </TD>
+<?
+        spc(150,1);
+        echo "<BR>\n";
+        if (file_exists($DOCUMENT_ROOT."/stats/index.php3")):
+                makeSideButton("/stats/index.php3","stat","","stats",129,30,0,10,"Site Statistics","<BR>\n");
+        endif;
+?></TD>
   <TD ALIGN=left width="100%" BGCOLOR="#FFFFFF">
    <IMG SRC="/gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
   </TD>
