@@ -23,6 +23,12 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 }
 
 // ============================================================================
+// BC: handle bugs.php moved completely to bugs.php.net
+if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
+    mirror_redirect("http://bugs.php.net?$array[1]", TRUE);
+}
+
+// ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
 if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
@@ -105,7 +111,9 @@ $uri_aliases = array (
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // for backward compatibility with PHP page!
 
-    "faq.php"      => "faq", // for backward compatibility with PHP page!
+    "faq.php"      => "faq",      // for backward compatibility with PHP page!
+    "bugs.php"     => "bugs",     // for backward compatibility with PHP page!
+    "bugstats.php" => "bugstats", // for backward compatibility with PHP page!
 
     "icap"         => "mcal", // mcal is the successor of icap
     
@@ -118,7 +126,9 @@ $uri_aliases = array (
 $external_redirects = array(
     "php4news" => "http://cvs.php.net/co.php/php4/NEWS?p=1",
     "projects" => "http://freshmeat.net/browse/183/",
-    "pear"     => "http://pear.php.net/"
+    "pear"     => "http://pear.php.net/",
+    "bugs"     => "http://bugs.php.net/",
+    "bugstats" => "http://bugs.php.net/bugstats.php",
 );
 
 // ============================================================================
