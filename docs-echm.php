@@ -147,7 +147,7 @@ site_header("Documentation - Extended CHM Format");
 
  <li>
   <strong><a href="http://www.crimsoneditor.com">CrimsonEditor</a>:</strong> The
-  <a href="http://www.crimsoneditor.com/english/howto.html#howto01">author
+  <a href="http://www.crimsoneditor.com/english/docs/howtos.html#howto01">author
   of the editor describes</a> how to ingerate HLP and CHM files with
   keyword indexes into the IDE. This method works quite well, with
   our CHMs.
