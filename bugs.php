@@ -128,52 +128,164 @@ function show_menu($state)
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
 }
 
+### show_types significantly modified by j.a.greant 00/09/05
 
 function show_types($first_item,$show_any,$var_name) {
-	$items = array("Any",
-				   "Documentation problem",
-				   "Installation problem",
-				   "Compile Failure",
-				   "Compile Warning",
-				   "Scripting Engine problem",
-				   "Reproduceable crash",
-				   "Performance problem",
-				   "cURL related",
-				   "Dynamic loading related",
-				   "MySQL related",
-				   "mSQL related",
-				   "MSSQL related",
-				   "PostgreSQL related",
-				   "ODBC related",
-				   "Oracle related",
-				   "Sybase-ct (ctlib) related",
-				   "Sybase (dblib) related",
-				   "Solid related",
-				   "Adabas-D related",
-				   "Informix related",
-				   "dBase related",
-				   "Session related",
-				   "WDDX related",
-				   "IMAP related",
-				   "LDAP related",
-				   "NIS related",
-				   "DBM/DBA related",
-				   "mcrypt related",
-				   "mhash related",
-				   "Misbehaving function",
-				   "FrontPage related",
-				   "Feature/Change Request",
-				   "Other");
+    $items = array ("Any" => "Any",
+					"*General Issues" => "General Issues",
+                    "Feature/Change Request" => "&nbsp;&nbsp;&nbsp;&nbsp;Feature/Change Request",
+                    "Documentation problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Documentation problem",
+                    "Reproduceable crash" => "&nbsp;&nbsp;&nbsp;&nbsp;Reproduceable crash",
+                    "Scripting Engine problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Scripting Engine problem",
+                    "Performance problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Performance problem",
+                    "*Install and Config" => "Install and Config",
+                    "Compile Problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Compile Problem",
+                    "Compile Failure" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compile Failure",
+                    "Compile Warning" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Compile Warning",
 
-	echo "<select name=\"$var_name\">\n<option>$first_item\n";
-	for($i=0;$i<count($items);$i++) {
-		if($first_item!=$items[$i]) {
-			if($show_any || $items[$i]!="Any") {
-				echo "<option>$items[$i]\n";
-			}
+                    "*Web Server problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Web Server problem",
+                    "Apache related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Apache related",
+                    "IIS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IIS related",
+                    "PWS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PWS related",
+                    "Other web server" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other web server",
+
+                    "*Configuration Issues" => "&nbsp;&nbsp;&nbsp;&nbsp;Configuration Issues",
+                    "Dynamic loading" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dynamic loading",
+                    "PHP options/info functions" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PHP options/info functions",
+
+                    "*Function Specific" => "Function Specific",
+                    "Calendar problems" => "&nbsp;&nbsp;&nbsp;&nbsp;Calendar problems",
+                    "Calendar related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Calendar related",
+                    "ICAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ICAP related",
+                    "MCAL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MCAL related",
+
+                    "Date/time related" => "&nbsp;&nbsp;&nbsp;&nbsp;Date/time related",
+
+                    "*Directory/Filesystem functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Directory/Filesystem functions",
+                    "Directory function related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Directory function related",
+                    "Filesystem function related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filesystem function related",
+
+                    "*Directory Services problems" => "&nbsp;&nbsp;&nbsp;&nbsp;Directory Services problems",
+                    "YP/NIS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YP/NIS related",
+                    "LDAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDAP related",
+
+                    "*Database Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Database Functions",
+                    "Adabas-D related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Adabas-D related",
+                    "dBase related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dBase related",
+                    "DBM/DBA related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DBM/DBA related",
+                    "filePro related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filePro related",
+                    "Hyperwave related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hyperwave related",
+                    "Informix related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Informix related",
+                    "InterBase related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InterBase related",
+                    "Sybase-ct (ctlib) related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sybase-ct (ctlib) related",
+                    "Sybase (dblib) related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sybase (dblib) related",
+                    "mSQL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mSQL related",
+                    "MSSQL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MSSQL related",
+                    "MySQL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL related",
+                    "OCI8 related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OCI8 related",
+                    "ODBC related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ODBC related",
+                    "Oracle related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oracle related",
+                    "PostgreSQL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PostgreSQL related",
+                    "Solid related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solid related",
+
+                    "*Data Exchange functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Data Exchange functions",
+                    "WDDX related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WDDX related",
+                    "YAZ related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YAZ related",
+
+                    "*Extensibility Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Extensibility Functions",
+                    "COM related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COM related",
+                    "Program Execution" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program Execution",
+                    "Semaphore related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semaphore related",
+                    "Readline related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Readline related",
+
+                    "*E-commerce functions" => "&nbsp;&nbsp;&nbsp;&nbsp;E-commerce functions",
+                    "Cybercash related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cybercash related",
+                    "Verisign Payflow Pro related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verisign Payflow Pro related",
+                    "CCVS related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CCVS related",
+
+                    "FrontPage related" => "&nbsp;&nbsp;&nbsp;&nbsp;FrontPage related",
+
+                    "*Graphics related" => "&nbsp;&nbsp;&nbsp;&nbsp;Graphics related",
+                    "GD related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GD related",
+                    "GetImageSize related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GetImageSize related",
+
+                    "*Languages/Translation" => "&nbsp;&nbsp;&nbsp;&nbsp;Languages/Translation",
+                    "Gettext related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gettext related",
+                    "Recode related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recode related",
+
+                    "*Mail Related" => "&nbsp;&nbsp;&nbsp;&nbsp;Mail Related",
+                    "IMAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAP related",
+                    "Mail related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mail related",
+                    "Vmailmgr related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vmailmgr related",
+
+                    "*Math Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Math Functions",
+                    "BC math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BC math related",
+                    "Math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Math related",
+
+                    "mcrypt related" => "&nbsp;&nbsp;&nbsp;&nbsp;mcrypt related",
+
+                    "mhash related" => "&nbsp;&nbsp;&nbsp;&nbsp;mhash related",
+
+                    "*Network Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Network Functions",
+                    "Network related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Network related",
+                    "SNMP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SNMP related",
+                    "FTP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTP related",
+                    "HTTP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HTTP related",
+                    "Sockets related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sockets related",
+
+                    "Output Control" => "&nbsp;&nbsp;&nbsp;&nbsp;Output Control",
+
+                    "*PDF functions" => "&nbsp;&nbsp;&nbsp;&nbsp;PDF functions",
+                    "ClibPDF related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ClibPDF related",
+                    "FDF related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDF related",
+                    "PDF related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PDF related",
+
+                    "POSIX related" => "&nbsp;&nbsp;&nbsp;&nbsp;POSIX related",
+
+                    "*Programming Data Structures" => "&nbsp;&nbsp;&nbsp;&nbsp;Programming Data Structures",
+                    "Class/Object related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Class/Object related",
+                    "Arrays related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arrays related",
+                    "Strings related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strings related",
+                    "Variables related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Variables related",
+
+                    "*Regular Expressions" => "&nbsp;&nbsp;&nbsp;&nbsp;Regular Expressions",
+                    "PCRE related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PCRE related",
+                    "Regexps related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regexps related",
+
+                    "*Session related" => "&nbsp;&nbsp;&nbsp;&nbsp;Session related",
+
+                    "*Spelling functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Spelling functions",
+                    "Aspell related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aspell related",
+                    "Pspell related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pspell related",
+
+                    "SWF related" => "&nbsp;&nbsp;&nbsp;&nbsp;SWF related",
+
+                    "*XML functions" => "&nbsp;&nbsp;&nbsp;&nbsp;XML functions",
+                    "DOM XML related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DOM XML related",
+                    "XML related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XML related",
+                    "Sablotron XSL" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sablotron XSL",
+
+                    "*URL Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;URL Functions",
+                    "cURL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cURL related",
+                    "URL related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL related",
+
+                    "*Zlib related" => "&nbsp;&nbsp;&nbsp;&nbsp;Zlib related",
+
+                    "Unknown/Other Function" => "Unknown/Other Function"
+    );
+
+	$selected[$first_item] = ' SELECTED';
+
+	print "<select name=\"$var_name\">\n";
+
+	foreach ($items as $key => $value)
+	  {
+		if ($show_any || $value != 'Any') {
+			print "<option value=\"$key\"$selected[$key]>$value</option>\n";
 		}
 	}
-    echo "</select>\n";
+
+    print "</select>\n";
 }
 
 function find_password($user) {
@@ -398,6 +510,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	function get_old_comments ($bug_id)
 	  {
 	  	$divider = '---------------------------------------------------------------------------';
+		$max_message_length = 10 * 1024;
 
 		#fetch comments
 		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id order by ts desc");
@@ -413,7 +526,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$comments[] = mysql_fetch_row ($result);
 
 		foreach ($comments as $value)
+		  {
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
+			if (strlen ($output) > $max_message_length)
+			  {
+				$output .= "The remainder of the comments for this report are over the " . round ($max_message_length/1024) . "k message limit.  To view the remainder of the comments, please review the bug report online.";
+				break;
+			  }
+		  }
 
 		if ($output)
 			return "\n\nPrevious Comments:\n\n" . $output;
