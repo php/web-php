@@ -11,7 +11,6 @@ if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
 		$HAVE_STYLE = true;
                 $IE4=true;
         elseif($ver==3):
-		$HAVE_STYLE = true;
                 $IE3=true;
         endif;
 elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):                                    
