@@ -3,7 +3,7 @@
 <body>
 <?php
 
-require "./email_validation.inc";
+require "email_validation.inc";
 
 if (!$debug)
 	$debug = 0;
