@@ -114,6 +114,19 @@ by Jiri Kosek<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center">
+<IMG SRC="/jpgs/korean-book.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD>
+PHP Web-DB Programming Guide<BR>
+by Jung Jinho<BR>
+<SMALL>in Korean<BR>
+<A HREF="http://www.wowbook.com/wow/book_info/book-info.asp?isbn=ISBN89%2D381%2D0239%2D4">more info</A> |
+<A HREF="http://www.wowbook.com/wow/shoppingcart/xt_orderform_additem.asp?title=PHP+Web%2DDB+Programming+Guide&sku=ISBN89%2D381%2D0239%2D4&list%5Fprice=20000&pubname=%B5%BF%C0%CF%C3%E2%C6%C7%BB%E7&inventory%5Fqty=99624&prdsale%5Ftype=&product%5Ftype=">purchase</A>
+</SMALL></TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center">
 <IMG SRC="/gifs/japanese-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
