@@ -28,8 +28,30 @@ function show_menu($state) {
 	if($state!="All") { echo "<option>All\n"; }
 	echo "</select> bugs of type ";
 	show_types($bug_type,1,"bug_type");
+
+	$fields = array( "id" => "Bug ID",
+					"bug_type" => "Bug Type",
+					"email" => "Submitter's Email address",
+					"sdesc" => "Short Description",
+					"ldesc" => "Long Description",
+					"php_version" => "PHP Version",
+					"php_os" => "Platform",
+					"status" => "Status",
+					"comments" => "Comments",
+					"ts1" => "TimeStamp 1",
+					"ts2" => "Timestamp 2",
+					"assign" => "Assigned");
+
+	reset($fields);
+	echo "Order by:  <select name='order_by'>\n";
+	while(list($field,$name) = each($fields)) {
+		echo "<option value='$field'>$name\n";
+	}
+	echo "</select>\n";
+
 	echo "</form>\n";
 }
+
 
 function show_types($first_item,$show_any,$var_name) {
 	$items = array("Any",
