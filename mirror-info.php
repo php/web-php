@@ -27,6 +27,7 @@ if (isset($_SERVER['MIRROR_STATS'])) {
     $mirror_stats = 2; // Don't know
 }
 
-echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language();
+echo "$MYSITE|", phpversion(), "|$LAST_UPDATED|$searchtype|$mirror_stats|" , default_language(), "|";
 
-?>
+// Test if there is a /manual alias
+virtual("/manual/noalias.txt");
