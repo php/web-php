@@ -112,7 +112,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     Array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
-      false, true, false
+      false, false, false
     ),
 
     'Lists for the developers of PHP, php.net and documentations',
