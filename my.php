@@ -66,7 +66,10 @@ to let your settings work.
 <p>
 If you use a shortcut or search for a function, the language used
 is determined by checking for the following settings. The list is
-in priority order, the first is the most important.
+in priority order, the first is the most important. Normally you don't
+need to set your preferred language, as your last seen language is
+always remembered, and is a good estimate on your preferred langauge
+most of the time.
 </p>
 
 <table border="0" cellpadding="3" cellspacing="2">
