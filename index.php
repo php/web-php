@@ -134,32 +134,6 @@ cross-platform GUI applications. For more information, visit
 
 <? echo hdelim(); ?>
 
-<h1>Patch Level 1 released for PHP 4.0.4</h1>
-
-<p>
-<font class="newsDate">[11-Jan-2001]</font>
-Due to two security issues found in the Apache module version of
-PHP 4.0, PHP 4.0.4pl1 has been released.  This bug-fix release also
-fixes a few party-crashing bugs that were discovered in PHP 4.0.4.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
-<h1>
-PHP 4.0.4 Released
-</h1>
-<p>
-<font class="newsDate">[18-Dec-2000]</font>
-This release includes improvements for a large number of defects
-and numerous enhancements in the PHP core, the language implementation and
-extensions. <? print_link("/downloads.php", "Download"); ?> and
-<? print_link("/ChangeLog-4.php", "ChangeLog"); ?>.
-<br clear="all">
-</p>
-
-<? echo hdelim(); ?>
-
 <h1>
 PHP 3.0.18 Released
 </h1>
