@@ -550,6 +550,17 @@ array(
   ),
 
   array(
+    /* title[s]     */ "PHP Web Graphics Handbook",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1861008368/wwwphpnet",
+    /* author[s]    */ array(""),
+    /* auth link[s] */ "",
+    /* image        */ "1861008368.gif",
+    /* information  */ "Wrox Press Inc, Feb 2003, ISBN 1-861008-36-8, 300 pages",
+    /* inform. link */ "http://www.wrox.com/books/1861008368.htm",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP Developer's Dictionary",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet/",
     /* author[s]    */ array("R. Allen Wyke", "Michael J. Walker", "Robert M. Cox"),
