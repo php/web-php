@@ -312,7 +312,7 @@ function manualPrintHeader ($title = '') {
  <td>
   This is a printer friendly version of the PHP Manual.<br>
   Original address of this page: <a href="<?php echo $pageurl; ?>"><?php echo $pageurl; ?></a><br>
-  <small><?php echo make_link('copyright.php', 'Copyright &copy; 1997-2002 The PHP Documentation Group'); ?><br />All rights reserved.</small>
+  <small><?php echo make_link('copyright.php', 'Copyright &copy; 1997-2003 The PHP Documentation Group'); ?><br />All rights reserved.</small>
  </td>
 </tr>
 </table><hr size="1" noshade>
