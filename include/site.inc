@@ -168,4 +168,11 @@ if (!isset($MIRRORS[$MYSITE])) {
 
 }
 
+// Override mirror language with local preference
+if (isset($_SERVER['MIRROR_LANGUAGE'])) {
+    if (isset($LANGUAGES[$_SERVER['MIRROR_LANGUAGE']])) {
+        $MIRRORS[$MYSITE][6] = $_SERVER['MIRROR_LANGUAGE'];
+    }
+}
+
 ?>
