@@ -112,7 +112,7 @@ function navigationBar($title,$id,$loc) {
         echo "&nbsp;";
     }
 
-    echo '</small></td><td><small>Last updated: ' . $tstamp . '</small></td></tr>';
+    echo '</small></td><td align="right" valign="bottom"><small>Last updated: ' . $tstamp . '</small></td></tr>';
     echo "</table>\n";
 
 }
