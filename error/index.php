@@ -102,9 +102,14 @@ if(strchr($uri,'/')) {
     }
 
 	$lang = strtolower($lang);
-
 } else {
     $function = strtolower($uri);
+}
+
+// Quick access to revcheck output for manual writers
+if ($function == "rev") {
+    header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html");
+    exit;
 }
 
 $try = find_manual_page($lang, $function);
