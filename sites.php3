@@ -158,6 +158,7 @@ right away.</blockquote>
 	siteStart();
 	site("City of Escondido","www.ci.escondido.ca.us");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
+	site("City of Sibiu - Romania","www.primbsb.ro");
 	siteEnd();
 
 /* Hi-Tech Industry */
@@ -316,6 +317,7 @@ right away.</blockquote>
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Sellit-Here Online","www.sellit-here.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
+	site("Sunset Systems","www.sunsetsystems.com");
 	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
 	siteEnd();
