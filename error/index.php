@@ -82,9 +82,11 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &
 // Some nice URLs for getting something for download
 if (preg_match("!^get/([^/]+)$", $URI, $what)) {
     switch ($what[1]) {
-        case "php"         : $URI = "downloads"; break;
-        case "dochowto"    : // intentional
-        case "phpdochowto" : $URI = "getdochowto"; break;
+        case "php"           : $URI = "downloads"; break;
+        case "docs"          : // intentional
+        case "documentation" : $URI = "download-docs"; break;
+        case "dochowto"      : // intentional
+        case "phpdochowto"   : $URI = "getdochowto"; break;
     }
 }
 
@@ -117,6 +119,7 @@ $uri_aliases = array (
     # PHP page shortcuts
     "download"      => "downloads",
     "getphp"        => "downloads",
+    "getdocs"       => "download-docs",
     "documentation" => "docs",
     "mailinglists"  => "mailing-lists",
     "mailinglist"   => "mailing-lists",
