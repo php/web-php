@@ -84,17 +84,23 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 </p>
 ';
 
-// do the mirror logo segment of the RSIDEBAR.
-if(file_exists("backend/mirror.gif")) {
-	$RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n
-		  <a href='" . $MIRRORS[$MYSITE]['3'] . "'>";
-	if($MIRRORS[$MYSITE]['4'] === 2) {
-		$RSIDEBAR_DATA .= "<img src='backend/mirror.gif' width='125' height='125' alt='mirror sponsor' border='0' /></a></center><br />";
-	} else {
-		$RSIDEBAR_DATA .= "<img src='backend/mirror.gif' width='120' height='60' alt='mirror sponsor' border='0' /></a></center><br />";
-	}
-	echo hdelim();
-}	 
+// Find the type of logo provided and start the right
+// sidebar with it if a mirror banner is available
+while (list(,$ext) = each(array("gif", "jpg", "png"))) {
+    if (file_exists("backend/mirror." . $ext)) {
+        $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n
+        <a href='" . $MIRRORS[$MYSITE]['3'] . "'><img src='backend/mirror.$ext' ";
+        if ($MIRRORS[$MYSITE]['4'] === 2) {
+            $RSIDEBAR_DATA .= "width='125' height='125'";
+        } else {
+            $RSIDEBAR_DATA .= "width='120' height='60'";
+        }
+        $RSIDEBAR_DATA .=
+            " alt='" . $MIRRORS[$MYSITE]['2'] .
+            "' border='0' /></a></center><br />" . hdelim();
+        break;
+    }
+}
 
 // Open events CSV file, and print out event title
 $fp = @fopen("backend/events.csv", "r");
