@@ -39,7 +39,7 @@ function makeBorderTOC($this) {
             '</td></tr>';
     }
 
-    $SIDEBAR_DATA.= '<tr valign="top"><td><small>';
+    $SIDEBAR_DATA.= '<tr valign="top"><td><small class="sidetoc">';
 
     for ($i = 0; $i < count($TOC); $i++) {
         list($url, $title) = $TOC[$i];
