@@ -1,52 +1,28 @@
 <?
 require("site.inc");
 
-function space($width,$height) {
-	echo "<IMG SRC='gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
-};
-
 function kickHeader($offset) {
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>";
 	echo "<TR VALIGN=top>";
-	echo "<TD rowspan=3>";
-	space(1,$offset);
-	echo "<BR><IMG SRC='gifs/black.gif' WIDTH=13 HEIGHT=3 BORDER=0><BR></TD>";
+	echo "<TD rowspan=3><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=$offset BORDER=0><BR><IMG SRC='gifs/black.gif' WIDTH=13 HEIGHT=3 BORDER=0><BR></TD>";
 	echo "<TD><IMG SRC='gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD BACKGROUND='gifs/kick-bt.gif'>";
-	space(1,10);
-	echo "<BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bt.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "<TD><IMG SRC='gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR>";
 	echo "<TR VALIGN=top>";
-	echo "<TD BACKGROUND='gifs/kick-bl.gif'>";
-	space(9,1);
-	echo "<BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bl.gif'><IMG SRC='gifs/spacer.gif' WIDTH=9 HEIGHT=1 BORDER=0><BR></TD>";
 	echo "<TD BACKGROUND='gifs/kick-bg.gif'><FONT FACE='TAHOMA,ARIAL' SIZE=-1>";
 };
 
 function kickFooter() {
 	echo "</TD>";
-	echo "<TD BACKGROUND='gifs/kick-br.gif'>";
-	space(10,1);
-	echo "<BR></TD></TR>";
+	echo "<TD BACKGROUND='gifs/kick-br.gif'><IMG SRC='gifs/spacer.gif' WIDTH=10 HEIGHT=1 BORDER=0><BR></TD></TR>";
 	echo "<TR VALIGN=top>";
 	echo "<TD><IMG SRC='gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD BACKGROUND='gifs/kick-bb.gif'>";
-	space(1,10);
-	echo "<BR></TD>";
+	echo "<TD BACKGROUND='gifs/kick-bb.gif'><IMG SRC='gifs/spacer.gif' WIDTH=1 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "<TD><IMG SRC='gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR></TABLE>";
 };
-
-function gifurl($img) {
-	global $root_url;
-	return $root_url . "gifs/" . $img;
-}
-
-function jpgurl($img) {
-	global $root_url;
-	return $root_url . "jpgs/" . $img;
-}
 
 function download_link($file, $title) {
 	global $filesizes;
@@ -66,8 +42,18 @@ function download_link($file, $title) {
 	}
 }
 
+function gifurl($img) {
+	global $root_url;
+	return $root_url . "gifs/" . $img;
+}
+
+function jpgurl($img) {
+	global $root_url;
+	return $root_url . "jpgs/" . $img;
+}
+
 function commonHeader($title) {
-	global $PHP_SELF;
+	global $PHP_SELF, $HTTP_REFERER;
 ?>
 <HTML>
 <HEAD>
@@ -162,11 +148,6 @@ function LoadImgs () {
 		b_top1 = new Image();
 		b_top1.src = "gifs/b-top-c.gif";
 
-		b_cred0 = new Image();
-		b_cred0.src = "gifs/b-credits-p.gif";
-		b_cred1 = new Image();
-		b_cred1.src = "gifs/b-credits-c.gif";
-
 		b_sear0 = new Image();
 		b_sear0.src = "gifs/b-search-p.gif";
 		b_sear1 = new Image();
@@ -176,6 +157,11 @@ function LoadImgs () {
 		b_sour0.src = "gifs/b-source-p.gif";
 		b_sour1 = new Image();
 		b_sour1.src = "gifs/b-source-c.gif";
+
+		b_close0 = new Image();
+		b_close0.src = "gifs/b-close-p.gif";
+		b_close1 = new Image();
+		b_close1.src = "gifs/b-close-c.gif";
 
 		loaded = 1;
 	}
@@ -198,9 +184,9 @@ function hideAll () {
 		change('link',0);
 		change('mirr',0);
 		change('top',0);
-		change('cred',0);
 		change('sear',0);
 		change('sour',0);
+		change('close',0);
 		if (NS4 || IE4 && (layers == 1)) {
 			hideLayer('mirrorsKick');
 		}
@@ -224,8 +210,8 @@ if (IE4) LoadImgs();
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-<? space(15,1);?><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
-<? space(1,10);?><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=15 HEIGHT=1 BORDER=0><A HREF="index.php3"><IMG SRC="gifs/logo.gif" ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=10 BORDER=0><BR>
 </TD></TR>
 <TR VALIGN=top>
 <TD ALIGN=left>
@@ -242,15 +228,17 @@ if (IE4) LoadImgs();
 <TD align=left width="100%">
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=middle BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TD ALIGN=left><? space(5,1);?><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1><B>
+<TD ALIGN=left><IMG SRC="gifs/spacer.gif" WIDTH=5 HEIGHT=1 BORDER=0><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1><B>
 <!-- start title -->
 <? echo $title;?>
 <!-- end title -->
 </B></FONT></TD>
 <TD ALIGN=right><?
 if($title=="Show Source"):
-	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
+	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hideAll();change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0></A>";
 else:
+	echo "<IMG SRC=\"gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
 	echo "<A HREF=\"source.php3?page_url=$PHP_SELF\" onMouseover=\"hideAll();change('sour',1);\" onMouseout=\"hideAll();\">";
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
@@ -277,7 +265,7 @@ function commonFooter() {
 </TR>
 
 <TR valign=top>
-<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><? space(150,1);?></TD>
+<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><IMG SRC="gifs/spacer.gif" WIDTH=150 HEIGHT=1 BORDER=0></TD>
 <TD ALIGN=left width=100%><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
 </TR>
 
@@ -287,8 +275,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
 <TR VALIGN=bottom>
 <TD ALIGN=left>
-<? space(1,3);?><BR>
-<A HREF="credits.php3" onMouseover="hideAll();change('cred',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-credits-p.gif" ALT="credits" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
+<IMG SRC="gifs/spacer.gif" WIDTH=1 HEIGHT=9 BORDER=0><BR>
 <A HREF="#top" onMouseover="hideAll();change('top',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
 </TR>
@@ -302,7 +289,7 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Site Hosted by:</I><BR></TD>
-<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" BORDER=0 hspace=10></A><BR></TD>
+<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 hspace=10></A><BR></TD>
 </TR></TABLE>
 
 </TD>
@@ -311,8 +298,8 @@ function commonFooter() {
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
 <TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
 <I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><? space(10,36);?><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
-<TD><IMG SRC="gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/spacer.gif" WIDTH=10 HEIGHT=36 BORDER=0><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" WIDTH=64 HEIGHT=36 BORDER=0><BR></TD>
+<TD><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 
 </TD></TR>
@@ -335,9 +322,6 @@ $mirror_sites=$MIRRORS;
 reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
-	if (!$mirror_sites[$site][4]) {
-		continue;
-	}
 	$place=$mirror_sites[$site][1];
 	echo "<OPTION VALUE='$site'>$place";
 endwhile;

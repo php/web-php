@@ -1,6 +1,6 @@
 <?
 function manualHeader($THIS_FUNC, $PREV_FUNC, $PREV_URL, $NEXT_FUNC, $NEXT_URL) {
-	global $PHP_SELF;
+	global $PHP_SELF, $HTTP_REFERER;
 ?>
 <HTML>
 <HEAD>
@@ -111,13 +111,15 @@ if (IE4) LoadImgs();
 <TD ALIGN=right width=50%>
 <?
 if($THIS_FUNC=="Show Source"):
-	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=1 HEIGHT=1 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
+	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hideAll();change('close',1);\" onMouseout=\"hideAll();\"><IMG SRC=\"gifs/b-close-p.gif\" ALT=\"Back to the manual\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"close\"></A>";
 else:
+	echo "<IMG SRC=\"gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
 	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"hideAll();change('sour',1);\" onMouseout=\"hideAll();\">";
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="../search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><A HREF="../index.php3" onMouseover="hideAll();change('close',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-close-p.gif" ALT="close" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME="close"></A><IMG SRC="gifs/p-cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+?><A HREF="../search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME="sear"></A><IMG SRC="gifs/p-cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100% BGCOLOR="#C0C0C0">
 <TR valign=middle>

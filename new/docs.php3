@@ -6,7 +6,7 @@ commonHeader("Documentation");
 
 <ul>
 
-<li><a href="manual/manual.php3">PHP 3.0 Manual Online</a>.
+<li><a href="manual/">PHP 3.0 Manual Online</a>.
     This is an early version.  A lot is still missing, but it is
     improving.
 

@@ -4,11 +4,11 @@ manualHeader("Show Source","","","","");
 
 if (!isset($page_url)):
 	echo "No page URL specified.";
-	manualHeader("Show Source","","","","");
+	manualFooter("Show Source","","","","");
 	exit;
 endif;
 
-echo "Source of: <? echo $page_url ?><BR><hr noshade><FONT SIZE=-1>\n";
+echo "Source of: $page_url<BR><hr noshade><FONT SIZE=-1>\n";
 
 /* remove other path prefixes than /manual/ */
 
