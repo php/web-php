@@ -110,7 +110,7 @@ if(strchr($uri,'/')) {
 if ($function == "rev") {
     header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html");
     exit;
-} elseif ($function == "rev") {
+} elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
 }
