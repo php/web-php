@@ -80,6 +80,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "dBase related",
 				   "DBM related",
 				   "Misbehaving function",
+				   "FrontPage related",
 				   "Feature/Change Request",
 				   "Other");
 
