@@ -259,7 +259,7 @@ function commonHeader($title) {
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
 	global $HAVE_STYLE,$HAVE_SEARCH;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
-	global $DISABLE_KICKOUTS;
+	global $DISABLE_KICKOUTS, $DOCUMENT_ROOT;
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 ?>
 <HTML>
@@ -421,11 +421,17 @@ endif; ?>
 			makeBorderTOC($title);
 		endif;
 	else:
+		$lastnews=filemtime($DOCUMENT_ROOT."/news.php3");
+		if ($lastnews):
+			$lastnews="PHP News last updated: ".date("M d, Y",$lastnews);
+		else:
+			$lastnews="PHP in the News";
+		endif;
 		makeSideButton("downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
 		makeSideButton("docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
 #		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
-		makeSideButton("news.php3","news","","news",129,30,0,10,"PHP in the News","<BR>\n");
+		makeSideButton("news.php3","news","","news",129,30,0,10,$lastnews,"<BR>\n");
 		makeSideButton("projects.php3","proj","","projects",129,30,0,10,"Projects using PHP","<BR>\n");
 		makeSideButton("links.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
 		makeSideButton("mirrors.php3","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
