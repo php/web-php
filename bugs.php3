@@ -549,7 +549,8 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="3.0.12" selected>3.0.12
+    <option name="3.0.13" selected>3.0.13
+    <option name="3.0.12">3.0.12
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
     <option name="3.0.11">3.0.11
     <option name="3.0.10">3.0.10
