@@ -654,6 +654,7 @@ prevent it from applying to the location of your test script.
 should check to make sure that the configuration file you are adding the AddType line to is actually being read.  You can put an obvious syntax error into your httpd.conf file or some other obvious change that will tell you if the file is being read corre
 
 
+
 ctly.
 	</UL>
   <P>
@@ -907,6 +908,23 @@ ctly.
                     or die("Bad query: ".mysql_error());</pre>
    <P>
   </DD>
+
+  <DT><B>
+   <a name="5.14">5.14</a> I'm trying to use an &lt;INPUT TYPE="image"&gt; tag, but the <I>$foo.x</I> and 
+   <I>$foo.y</I> variables aren't available.  Where are they?
+  </B></DT>
+  <DD>
+   When submitting a form, it is possible to use an image instead of the standard submit button 
+   with a tag like:<pre>
+	&lt;INPUT TYPE="image" SRC="image.gif" NAME="foo"&gt;</pre>
+   When the user clicks somewhere on the image, the accompanying form will be transmitted to the 
+   server with two additional variables: foo.x and foo.y.
+   <P>
+   Because $foo.x and $foo.y are invalid variable names in PHP, they are automagically converted to
+   $foo_x and $foo_y.  That is, the periods are replaced with underscores.
+   <P>
+  </DD>
+
 </DL>
 
 <HR noshade>
