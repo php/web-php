@@ -862,6 +862,37 @@ should check to make sure that the configuration file you are adding the AddType
    Apache directive.
   <P>
   </DD>
+
+  <DT><B>
+   <a name="5.12">5.12</a> Where can I find a complete list of pre-set variables available
+   to me, and why are these not documented in the PHP documentation?
+  </B></DT>
+  <DD>
+   The best way is to stick a &lt;?phpinfo()?&gt; tag on a page and load it up.  This will
+   show you all sorts of information about your PHP setup, including a list of both 
+   environment variables and also special variables set by your web server.  This list 
+   can't really be documented in the PHP documentation because it will change from one
+   server to another.
+   <P>
+  </DD>
+
+  <DT><B>
+   <a name="5.13">5.13</a> Why do I always get an error that looks something like this:<br>
+<tt>Warning:  0 is not a MySQL result index in file on line 8</tt><br>
+    What am I doing wrong?
+  </B></DT>
+  <DD>
+   You are trying to use a result identifier that is 0.  The 0 indicates that your query failed
+   for some reason.  You need to check for errors after submitting a query and before you
+   attempt to use the returned result identifier.  The proper way to do this is with code similar
+   to the following:<pre>
+        $result = mysql_query("select * from tables_priv");
+        if(!$result) {
+            echo mysql_error();
+            exit;
+        }</pre>
+   <P>
+  </DD>
 </DL>
 
 <HR noshade>
