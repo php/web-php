@@ -58,7 +58,7 @@ by David Medinets<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte"
-><IMG SRC="http://images.amazon.com/images/P/0201657716.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="http://images.amazon.com/images/P/0201657716.01.MZZZZZZZ.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte">Building Database Applications on the Web Using PHP3</A><BR>
 by Craig Hilton and Jeff Willis<BR> 
