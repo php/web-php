@@ -1,11 +1,16 @@
 <?php
 
-require_once 'prepend.inc';
+// This page tries to find the manual page for "include"
+// because people can access that page by using
+// http://www.php.net/include as a REQUEST_URI
 
-$lang = default_language();
-if (is_dir($lang)) {
-  header("Location: /manual/$lang/function.include.php");
-}
-header("Location: /manual/en/function.include.php");
+require_once 'prepend.inc';
+require_once 'manual-lookup.inc';
+
+$file = find_manual_page(default_language(), "include");
+
+if ($file) {
+    header("Location: $file");
+} else { header("Location: /"); }
 
 ?>

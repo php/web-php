@@ -15,17 +15,17 @@ function tryprefix($cc, $func, $prefix) {
 
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
-	$try = "/manual/${cc}/${prefix}${nosp}.php";
+    $try = "/manual/${cc}/${prefix}${nosp}.php";
         if (file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
-	$try = "/manual/${cc}/${prefix}${dasp}.php";
+    $try = "/manual/${cc}/${prefix}${dasp}.php";
         if (file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
-	$try = "/manual/${cc}/${prefix}${noul}.php";
+    $try = "/manual/${cc}/${prefix}${noul}.php";
         if (file_exists("$DOCUMENT_ROOT$try")) return $try;
     }
     return "";
@@ -39,8 +39,8 @@ function find_manual_page($lang, $function) {
     }
     if ($lang != "en") {
       while (list($t,$section) = each($sections)) {
-	$try = tryprefix("en", $function, $section);
-	if ($try) return $try;
+        $try = tryprefix("en", $function, $section);
+        if ($try) return $try;
       }
     }
     return "";
