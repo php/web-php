@@ -247,7 +247,7 @@ function manualUserNotes($title) {
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
 
 	// is this the correct way to do this?
-	include("../configuration.inc");
+#	include("../configuration.inc");
 	$failover = isset($failover_user_notes) && $failover_user_notes;
 	$notes = manualGetUserNotes($title,$failover);
 
