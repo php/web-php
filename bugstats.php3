@@ -1,4 +1,9 @@
 <?
+require("shared.inc");
+if(!strstr($MYSITE,"ca.php.net")) {
+        Header("Location: http://ca.php.net/bugstats.php3");
+}
+
 	function mydate($str) {
 		$year = substr($str,0,4);
 		$month = substr($str,5,2);
@@ -27,7 +32,6 @@
 		}
 	}
 
-	require "shared.inc";
 	commonHeader("Bug Stats");
 	
 	mysql_pconnect("localhost","","");
@@ -66,7 +70,7 @@
 	function bugstats($status, $type) {
 		global $bug_type;
 		if ($bug_type[$status][$type] > 0) {
-			return '<A href="/bugs.php3?status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '">' . $bug_type[$status][$type] . '</A>\n';
+			return '<A href="/bugs.php3?cmd=Display+Bugs&status=' . ucfirst($status) . '&bug_type=' . urlencode($type) . '">' . $bug_type[$status][$type] . "</A>\n";
 		}
 	}
 
