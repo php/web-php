@@ -174,25 +174,25 @@ function change(Name,No) {
 	if (document.images && (loaded == 1)) {
 		document[Name].src = eval("b_" + Name + No + ".src");
 	}
-	lastbutton = Name;
-	return true
+	if (No == 1) {
+		if (NS4 || IE4 && (layers == 1)) {
+			hideLayer('searchKick');
+		}
+		if (Name != 'sear') {
+			change('sear',0);
+		}
+		lastbutton = Name;
+	}
 }
 
 function changebullet(Name,No) {
 	if (document.images && (loaded == 1)) {
 		document[Name].src = eval("b_bullet" + No + ".src");
 	}
-	return true
 }
 
 function hide() {
 	if (document.images && (loaded == 1)) {
-		if (NS4 || IE4 && (layers == 1) && (lastbutton == 'mirr')) {
-			hideLayer('mirrorsKick');
-		}
-		if (NS4 || IE4 && (layers == 1) && (lastbutton == 'sear')) {
-			hideLayer('searchKick');
-		}
 		change(lastbutton,0);
 	}
 }
@@ -255,8 +255,8 @@ document.writeln("</STYLE>");
 <TR VALIGN=top>
 <TD ALIGN=left>
 
-<A HREF="index.php3" onMouseover="hide();change('cont',1);" ><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
-<A HREF="<? echo $THIS_CAT_URL;?>" onMouseover="hide();change('up',1);" ><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to front of the $THIS_CAT category" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
+<A HREF="index.php3" onMouseover="change('cont',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-contents-p.gif" ALT="contents" WIDTH=129 HEIGHT=30 BORDER=0 NAME="cont" hspace=10></A><BR>
+<A HREF="<? echo $THIS_CAT_URL;?>" onMouseover="change('up',1);" onMouseout="hide();"><IMG SRC="/new/gifs/b-up-p.gif" ALT="up to front of the <? echo $THIS_CAT;?> category" WIDTH=129 HEIGHT=30 BORDER=0 NAME="up" hspace=10><BR>
 <? makeCatListing($function,$THIS_CAT);?>
 </TD></TR>
 </TABLE>
@@ -272,15 +272,14 @@ document.writeln("</STYLE>");
 <TD ALIGN=right><?
 if($function=="Show Source"):
 	echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
-	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"hide();change('close',1);\"><IMG SRC=\"/new/gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
+	echo "<A HREF=\"$HTTP_REFERER\" onMouseover=\"change('close',1);\" onMouseout=\"hide();\"><IMG SRC=\"/new/gifs/b-close-p.gif\" ALT=\"Close this source page\" WIDTH=75 HEIGHT=30 vspace=9 hspace=5 BORDER=0 NAME=\"close\"></A>";
 else:
 	echo "<IMG SRC=\"/new/gifs/b-close-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"close\">";
-	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"hide();change('sour',1);\" >";
+	echo "<A HREF=\"source-manual.php3?page_url=$PHP_SELF\" onMouseover=\"change('sour',1);\" onMouseout=\"hide();\">";
 	echo "<IMG SRC=\"/new/gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="search.php3" onMouseover="hide();change('sear',1);showLayer('searchKick');" ><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><B
-R></TD>
+?><A HREF="search.php3" onMouseover="change('sear',1);showLayer('searchKick');"><IMG SRC="/new/gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
 <TR VALIGN=top BGCOLOR="#FFFFFF">
@@ -293,12 +292,12 @@ if ($function!="Show Source"):
 		echo "<TR VALIGN=middle>\n";
 		echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		if ($PREV_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"hide();change('prev',1);\" ><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev' align=absmiddle></A><BR></TD>\n";
+			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"change('prev',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev' align=absmiddle></A><BR></TD>\n";
 		endif;
 		echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV_FUNC<BR></TD>\n";
 		echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT_FUNC&nbsp;<BR></TD>\n";
 		if ($NEXT_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"hide();change('next',1);\" ><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next' align=absmiddle></A><BR></TD>\n";
+			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"change('next',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next' align=absmiddle></A><BR></TD>\n";
 		endif;
 		echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		echo "</TR></TABLE>\n";
@@ -308,7 +307,7 @@ echo "<!-- start body -->\n";
 };
 
 function manualFooter($function) {
-	global $MIRRORS,$MYSITE,$COUNTRIES, $FONTFACE, $NEXT_FUNC, $NEXT_URL, $PREV_FUNC, $PREV_URL;
+	global $MIRRORS, $MYSITE, $COUNTRIES, $FONTFACE, $NEXT_FUNC, $NEXT_URL, $PREV_FUNC, $PREV_URL;
 	$country=$MIRRORS[$MYSITE][0];
 	echo "<!-- start next/prev -->\n";
 	getNextPrevCat($function);
@@ -318,12 +317,12 @@ function manualFooter($function) {
 		echo "<TR VALIGN=middle>\n";
 		echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		if ($PREV_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"hide();change('prev2',1);\" ><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev2' align=absmiddle></A><BR></TD>\n";
+			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV_URL\" onMouseover=\"change('prev2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev2' align=absmiddle></A><BR></TD>\n";
 		endif;
 		echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV_FUNC<BR></TD>\n";
 		echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT_FUNC&nbsp;<BR></TD>\n";
 		if ($NEXT_FUNC!=""):
-			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"hide();change('next2',1);\" ><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next2' align=absmiddle></A><BR></TD>\n";
+			echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT_URL\" onMouseover=\"change('next2',1);\" onMouseout=\"hide();\" ><IMG SRC='/new/gifs/b-next-p.gif' ALT='Previous' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next2' align=absmiddle></A><BR></TD>\n";
 		endif;
 		echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 		echo "</TR></TABLE>\n";
@@ -348,8 +347,8 @@ function manualFooter($function) {
 <TR VALIGN=bottom>
 <TD ALIGN=left>
 <?spc(1,3);?><BR>
-<A HREF="credits.php3" onMouseover="hide();change('cred',1);" ><IMG SRC="/new/gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
-<A HREF="#top" onMouseover="hide();change('top',1);" ><IMG SRC="/new/gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
+<A HREF="/new/credits.php3" onMouseover="change('cred',1);" onMouseout="hide();" ><IMG SRC="/new/gifs/b-credits-p.gif" ALT="Who is responsible for this?" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="cred"></A><BR>
+<A HREF="#top" onMouseover="change('top',1);" onMouseout="hide();" ><IMG SRC="/new/gifs/b-top-p.gif" ALT="Scroll back to the top of this page" WIDTH=129 HEIGHT=30 BORDER=0 hspace=10 NAME="top"></A><BR>
 <IMG SRC="/new/gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0></TD>
 </TR>
 </TABLE>
@@ -388,26 +387,6 @@ function manualFooter($function) {
 <SCRIPT LANGUAGE="Javascript1.2">
 <!--
 
-document.write("<DIV ID='mirrorsKick'>");
-document.write("<? kickHeader(-20,'left',25,300);?>");
-document.write("<FORM ACTION='redirect.php3' METHOD='POST'>");
-document.write("<B>Pick a mirror site close to you:</B><BR>");
-document.write("<SELECT NAME='URL'>");
-document.write("<?
-$mirror_sites=$MIRRORS;
-reset($mirror_sites);
-while ($site = key($mirror_sites)):
-	next($mirror_sites);
-	$country=$mirror_sites[$site][0];
-	$place=$mirror_sites[$site][1];
-	$type=$mirror_sites[$site][4];
-	if ($type==1):
-		echo "<OPTION VALUE='$site'>$place ($COUNTRIES[$country])";
-	endif;
-endwhile;?>");
-document.write("</SELECT><INPUT TYPE='image' SRC='/new/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0></FORM>");
-document.writeln("<? kickFooter();?></DIV>");
-
 document.write("<DIV ID='searchKick'>");
 document.write("<? kickHeader(-35,'top',25,300);?>");
 document.write("<FORM ACTION='search.php3' METHOD='POST'>");
@@ -418,7 +397,7 @@ document.write("<input type='checkbox' name='icase'> case sensitive<BR>");
 document.write("<input type='checkbox' name='words'> match whole words only<BR>");
 document.write("<input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/new/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>");
 document.write("<input type='hidden' name='st_num' value='1'><input type='hidden' name='psize' value='10'></form>");
-document.writeln("<? kickFooter();?></DIV>");
+document.writeln("<? kickFooter('searchKick','sear');?></DIV>");
 
 layers = 1;
 
