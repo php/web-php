@@ -136,7 +136,7 @@ function book_show($one_book)
         if ($lang != "en") {
             echo "in " . $book_langs[$lang] . "<br />\n";
         }
-        echo htmlspecialchars($info) . "</p>\n";
+        echo str_replace("& ", "&amp; ", $info) . "</p>\n";
     }
     echo "<p>" . make_link(
         $info_link ? $info_link : $title_link,
