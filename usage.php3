@@ -7,7 +7,7 @@ Source: <a href="http://www.netcraft.com">Netcraft</a><br>
 <img src="phpstats-199911.gif"><br clear=left>
 Note: We do not know what caused the sudden surge in the number
 of domains and then the subsequent drop-off in April-May 1999.
-The number of physical servers actually running PHP has ben growing
+The number of physical servers actually running PHP has been growing
 steadily as witnessed by the steady climb in the number of unique IP's
 identifying themselves as being PHP-enabled servers.
 <P>One possible explanation for the domain bubble is that a couple of
