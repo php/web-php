@@ -24,7 +24,7 @@ in the <a href="ChangeLog.php3">ChangeLog</a> that might apply to you, then upgr
 
 <h3>PHP in the News</h3>
 <P>
-<a href="http://www.netcraft.com">Netcraft's</a> November server survey results are
+<a href="http://www.netcraft.com">Netcraft's</a> December server survey results are
 out.  PHP showed a massive jump from last month.  They don't actually have scripting
 language number online at Netcraft, but they do a manual grep and email us this
 information monthly.  Here is a little <a href="usage.php3">bar chart</a> 
