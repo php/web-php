@@ -261,14 +261,23 @@ A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
 
 </ul></li>
 
+<li><b>Estonian</b>
+<ul>
+
+<li><a href="http://php.center.ee/">PHP Center</a><br>
+The biggest Estonian portal site with tutorials, manual translations,
+discussion board, chat room, link collection, news, etc.</li>
+
+</ul></li>
+
 <li><b>French</b>
 <ul>
 
 <li><a href="http://www.nexen.net/">Nexen.net</a><br>
-Home of PHP French documentation, with comprehensive technical informations</li>
+Home of PHP French documentation, with comprehensive technical information</li>
 
 <li><a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br>
-More than 500 PHP applications, listed and sorted.</li>
+More than 500 PHP applications, listed and sorted</li>
 
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A French gateway to PHP related contents</li>
