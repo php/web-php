@@ -23,16 +23,20 @@ function highlight_php($code, $return = FALSE)
     ob_end_clean();
     
     // Fix output to use CSS classes and wrap well
-    $highlighted = '<div class="phpcode">' . preg_replace(
+    $highlighted = '<div class="phpcode">' . str_replace(
         array(
-            '!<br />!',
-            '!<font color="([^"]+)">!',
-            '!</font>!',
+            '<br />',
+            '<font color="',
+            '</font>',
+            "\n ",
+            '&nbsp;&nbsp;'
         ),
         array(
             "<br />\n",
-            '<span class="\\1">',
+            '<span class="',
             '</span>',
+            "\n&nbsp;",
+            '&nbsp; '
 		),
         $highlighted
     ) . '</div>';
