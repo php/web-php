@@ -12,7 +12,8 @@ if (!isset($df)
 
 // Redirect to the particular file
 header('Location: ' . $mr . 'distributions/' . $df);
-// log_download();
+
+log_download();
 // Register the log function as a shutdown function to let the
 // download starts before the log activates. This way if the
 // "log server" does not work, downloads are still working
