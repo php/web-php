@@ -1,25 +1,33 @@
 <?php
-/* if you're reading this, it isn't because you've found a security hole.
-   this is an open source website. read and learn! */
-
-header("Cache-Control: public, max-age=600");
-
 require_once 'prepend.inc';
 
-$SIDEBAR_DATA = '
-<br clear="all">
-<h3>PHP News Archives</h3>
+commonHeader("News Archive");
+?>
+
+<h1>News Archives</h1>
 
 <p>
 Here you can find older news items from the PHP project. You may find the
 information useful.
 </p>
-';
 
-commonHeader("News Archive");
-echo "\n<!--$MYSITE-->\n";
-?>
+<?php echo hdelim(); ?>
 
+<h1>Rackspace providing additional hosting for PHP project</h1>
+<?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
+
+<p>
+<font class="newsDate">[17-Sep-2001]</font>
+Thanks to the generous folks at <a
+href="http://www.rackspace.com/?supbid=php.net">Rackspace</a>, we have added additional
+capacity for hosting the PHP project's efforts. Currently, the machine they
+have provided is serving downloads for www.php.net and snaps.php.net. We will
+continue to re-balance our resource needs across all of the machines provided
+by our supporters.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
 
 <h1>11.09.2001</h1>
 

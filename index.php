@@ -237,22 +237,6 @@ let us know.
 
 <?php echo hdelim(); ?>
 
-<h1>Rackspace providing additional hosting for PHP project</h1>
-<?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
-
-<p>
-<font class="newsDate">[17-Sep-2001]</font>
-Thanks to the generous folks at <a
-href="http://www.rackspace.com/?supbid=php.net">Rackspace</a>, we have added additional
-capacity for hosting the PHP project's efforts. Currently, the machine they
-have provided is serving downloads for www.php.net and snaps.php.net. We will
-continue to re-balance our resource needs across all of the machines provided
-by our supporters.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP News Archive</h1>
 
 <p>
