@@ -20,7 +20,7 @@ href="http://freshmeat.net/">freshmeat</a>.</p>
 commonHeader("Links");
 ?>
 
-<h1>Getting Started</h1>
+<h1>PHP Related Links</h1>
 
 <p>
 On these sites you will find tutorials, articles and example scripts
@@ -39,7 +39,7 @@ full PHP support (single incidents, on-call duty), software
 development, training, and performance measurements.</li>
 </ul>
 
-<h4>PHP Professional association</h4>
+<h4>Professional PHP Associations</h4>
 
 <ul>
 <li><a href="http://www.php-ev.de/">PHP Verein</a><br>
@@ -142,12 +142,6 @@ a search function</li>
 <li><a href="http://www.evilwalrus.com/">Evil Walrus</a><br>
 A growing list of PHP scripts</li>
 
-<!--
-This is is not more reachable (dams@php.net). Is it dead?
-<li><a href="http://www.iometrics.com/php/phplist.php3/">PHPioneers/ioMetrics Scripts</a><br>
-A collection of PHP scripts</li>
--->
-
 <li><a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's scripts librairy</a><br>
 An exhaustive PHP scripts collection, with more 400 useful functions (English and French).</li>
 
@@ -182,9 +176,6 @@ A growing list of PHP tutorials at TutorialFind</li>
 <li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br>
 Web Programming Resource - PHP Tutorials</li>
 
-<li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
-Introductory tutorial</li>
-
 <li><a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br>
 Lots of tutorials/instructions related to Apache, PHP and MySQL</li>
 
@@ -194,9 +185,17 @@ A series of PHP tutorials for novices</li>
 <li><a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br>
 A collection of external links to PHP tutorials</li>
 
+<li><a href="http://www.onlamp.com/php/">ONLamp</a><br>
+Great collection of tutorials from O'Reilly</li>
+
+<li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br>
+The PHP section on the famous Webmonkey tutorial site</li>
+
 <li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a>
 Site with information on a PHP course at a Dutch college.</li>
-</li>
+
+<li><a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br>
+Introductory tutorial</li>
 
 </ul>
 
