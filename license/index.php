@@ -10,6 +10,35 @@ PHP license <a href="3_0.txt">here</a>.</p>
 
 <a name="#FAQ"><h1>Frequently Asked Questions</h1></a>
 
+<p><b>Q.</b> I've written a project in PHP that I'm going to release
+as open source, and I'd like to call it PHPTransmogrifier. Is that
+OK?</p>
+
+<p><b>A.</b> We cannot really stop you from using PHP in the name of
+your project unless you include any code from the PHP distribution, in
+which case you would be violating the license.  But we would really
+prefer if people would come up with their own names independent of the
+PHP name.</p>
+
+<p>Why you ask?  You are only trying to contribute to the PHP
+community.  That may be true, but by using the PHP name you are
+explicitly linking your efforts to those of the entire PHP development
+community and the years of work that has gone into the PHP project.
+Every time a flaw is found in one of the thousands of applications out
+there that call themselves "PHP-Something" the negative karma that
+generates reflects unfairly on the entire PHP project.  We had nothing
+to do with PHP-Nuke, for example, and every bugtraq posting on that
+says "PHP" in it.  Your particular project may in fact be the greatest
+thing ever, but we have to be consistent in how we handle these
+requests and we honestly have no way of knowing whether your project
+is actually the greatest thing ever.</p>
+
+<p>So, please, pick a name that stands on its own merits.  If your
+stuff is good, it will not take long to establish a reputation for
+yourselves.  Look at Zope, for example, that is a framework for Python
+that doesn't have Python in the name.  Smarty as well doesn't have PHP
+in the name and does quite well.</p>
+
 <p><b>Q.</b> Why is PHP 4 not dual-licensed under the GNU General
 Public License (GPL) like PHP 3 was?</p>
 
@@ -35,24 +64,24 @@ I sell along with Zend.  Does that mean I cannot sell PHP scripts
 or web sites that I build?</p>
 
 <p><b>A.</b> <strong>No.</strong>  Not at all.  This clause only
-concerns software built around the Zend scriping engine library,
+concerns software built around the Zend scripting engine library,
 not scripts that PHP executes, using that library. You are free
 to distribute PHP source code you write freely or commercially,
 without any concern about the PHP or Zend licenses. You may also
 package PHP as a whole with your commercial applications as much
 as you want. You just can't build commercial applications that use
-the Zend scriping engine library directly.</p>
+the Zend scripting engine library directly.</p>
 
 <p><b>Q.</b> So, what's the point of the Zend license?  When should
 I be concerned about it?</p>
 
 <p><b>A.</b> You should be aware of the Zend license in two cases.
-First, if you publish patches to the Zend scriping engine library.
+First, if you publish patches to the Zend scripting engine library.
 The Zend license allows Zend Technologies, Ltd. to use those
 patches royalty-free (see the license for exact details). Second,
 the license prevents commercial use of the Zend scripting engine
 library to build commercial applications.  If you want to use the
-Zend scriping engine library commercially (for example, as a macro
+Zend scripting engine library commercially (for example, as a macro
 language in a commercial word processor you're writing), you must
 contact <a href="mailto:license@zend.com">Zend Technologies,
 Ltd.</a> for licensing information.</p>
