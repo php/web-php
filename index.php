@@ -135,6 +135,12 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("phpconf2002.gif", "International PHP Conference 2002", "right")); ?>
 
+<h1>PHP 4.2.3 Released</h1>
+<p>
+<font class="newsdate">[06-Sept-2002]</font>
+<a href="/downloads.php">PHP 4.2.3</a> has been released with a large number of bug fixes.  It is a maintenance
+release, and is a recommended update for all users of PHP.</p>
+
 <h1>International PHP Conference 2002 (Frankfurt, Nov 3-6)</h1>
 <p>
 <font class="newsdate">[05-Sept-2002]</font>
