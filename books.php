@@ -281,6 +281,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Php : Your Visual Blueprint for Creating Open Source, Server-Side Content",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0764535617/wwwphpnet",
+    /* author[s]    */ array("Paul Whitehead", "Joel Desamero"),
+    /* auth link[s] */ "",
+    /* image        */ "phpvisual.jpg",
+    /* information  */ "Hungry Minds, June 2001, ISBN 0-7645-3561-7, 350 pages",
+    /* inform. link */ "http://catalog.hungryminds.com/product.asp?isbn=0764535617",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
