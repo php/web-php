@@ -590,7 +590,7 @@ function get_old_comments ($bug_id) {
     $row = mysql_fetch_row($res);
     if (!$row) return "";
 
-    while ($row = mysql_fetch_row($res) && strlen($output) < $max_message_length && $count++ < $max_comments) {
+    while (($row = mysql_fetch_row($res)) && strlen($output) < $max_message_length && $count++ < $max_comments) {
 		$output .= "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n";
     }
 
