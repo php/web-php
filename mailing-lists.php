@@ -105,7 +105,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
     Array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
-      false, false, false
+      false, false, false, 'php.soap'
     ),
 
     'PEAR mailing lists',
