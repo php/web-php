@@ -87,7 +87,7 @@ and formats. Pick a language and format from the table below:
        }
        $size = @filesize("manual/$langcode/$fn");
        if ($size) {
-         $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . '"' : '');
+         $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . 'Kb"' : '');
          echo "<a href=\"manual/$langcode/$fn\"$print_size>$details[1]</a>";
        }
        else {
