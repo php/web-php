@@ -213,6 +213,23 @@ commonHeader("Hypertext Preprocessor");
 // Diagnostical echo, to see what the mirror thinks about itself
 echo "\n<!--$MYSITE-->\n";
 ?>
+
+<h1>PHP 4.3.3RC1 released</h1>
+<p>
+ <font class="newsdate">[19-Jun-2003]</font>
+ <a href="http://qa.php.net/">PHP 4.3.3RC1</a> has been released for testing.
+ This is the first release candidate and should have a very low number of problems
+ and/or bugs. Nevertheless, please download and test it as much as possible on real-life 
+ applications to uncover any remaining issues.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php4/NEWS?r1=1.1247.2.215.2.1&r2=1.1247.2.261">NEWS</a>
+ file.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
 
 <h1>Active Awards Programmers' Choice Nominees are in!</h1>
