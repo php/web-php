@@ -3,6 +3,7 @@ au	au.php.net	jason andrade <jason@planetmirror.com>	php.planetmirror.com
 au	au2.php.net	David Robley <webmaster@www.nisu.flinders.edu.au>	www.nisu.flinders.edu.au
 be	be.php.net	ftp@be.easynet.nbe	php.easynet.be
 bg	bg.php.net	Alexander Keremidarski <salle@online.bg>	php.online.bg
+bg	bg2.php.net	Alexander Atanasov <alex@ssi.bg>	php.ssi.bg
 br	br.php.net	Antonio Dias <accdias@sst.com.br>	200.223.199.4
 br2	br2.php.net	Nelson Junior <nelson@lunenetworks.com.br>	php-mirror.lunenetworks.com.br
 ca	ca.php.net	Colin Viebrock <colin@easydns.com>	php.easydns.ca
@@ -19,6 +20,7 @@ fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 fr	fr2.php.net	Ghislain Seguy <bibi@php.net>	php.nexen.net
+gr	gr.php.net	Haris Manousaridis <xm@banet.gr>	ns.php.gr
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hk	hk2.php.net	xcyber kwan <xcyber@yahoo.com>	php.xcyber.org
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
