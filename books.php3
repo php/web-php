@@ -16,6 +16,8 @@ commonHeader("PHP Books");
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/013020787X/cmvsstuff"
 >Core PHP Programming</A><BR>
 by Leon Atkinson<BR>
+<SMALL><A HREF="http://www.leonatkinson.com/index.php3?screen=eng_book">more info</A><BR>
+</SMALL>
 </TD>
 </TR>
 
@@ -61,17 +63,18 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 PHP tvorba interaktivnich internetovych aplikaci<BR>
 <I>(PHP development interactive internet applications)</I><BR>
 by Jiri Kosek<BR>
-<SMALL>in Czech, not available for purchase online</SMALL><BR>
-</TD>
+<SMALL>in Czech<BR>
+<A HREF="http://www.kosek.cz/php/index.html">more info</A> | 
+<A HREF="http://fulltext.mia.cz/grada/shop/basket.asp?g_cislo=939&typ=5">purchase</A>
+</SMALL></TD>
 </TR>
 
 </TABLE>
 
 <P>
 Click on the links above for more information on the books.  And remember, if you
-buy the book using the above links, your helping to support PHP development!
+buy the book using the above links, you are helping to support PHP development!
 </P>
-
 
 <?
 commonFooter();
