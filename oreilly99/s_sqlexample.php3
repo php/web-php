@@ -3,7 +3,7 @@
 
 <?example('<?php
 
-mysql_pconnect("db.server.com", "username", "password");
+mysql_connect("db.server.com", "username", "password");
 mysql_select_db("products");
 $result = mysql_query("SELECT * FROM details");
 if ($result) {

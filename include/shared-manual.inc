@@ -5,7 +5,7 @@ function manualLastModified($title) {
 		$host = 'localhost';
 		$user = '';
 		$pass = '';
-		$db_id = mysql_pconnect($host, $user, $pass);
+		$db_id = mysql_connect($host, $user, $pass);
 		$query = "SELECT UNIX_TIMESTAMP(ts) AS stamp FROM note WHERE sect = '$title' ORDER BY ts DESC limit 1";
 		$result_id = mysql_db_query("php3", $query, $db_id);
 	} else {
@@ -206,7 +206,7 @@ function manualUserNotes($title) {
 		$host = 'localhost';
 		$user = '';
 		$pass = '';
-		$db_id = mysql_pconnect($host, $user, $pass);
+		$db_id = mysql_connect($host, $user, $pass);
 		$query = "SELECT *,UNIX_TIMESTAMP(ts) AS when FROM note WHERE sect = '$title' ORDER BY id";
 		$result_id = mysql_db_query("php3", $query, $db_id);
 	} else {
