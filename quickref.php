@@ -38,7 +38,7 @@ while ( $entry=$d->read() ) {
 		$functions[$entry] = $funcname;
 
 		if (function_exists('similar_text') && $notfound) {
-			similar_text($funcname, $notfound, &$p); 
+			similar_text($funcname, $notfound, $p); 
 			$temp[$entry] = $p;
 		}
 
