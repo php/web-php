@@ -62,7 +62,7 @@ foreach($events as $event) {
 		echo "</table><h2>&nbsp;&nbsp;$month</h2><table cellpadding=\"5\" cellspacing=\"1\" border=\"0\">\n";
 	}	
 	echo '<tr bgcolor=#cccccc><td align=left><b><a name="'.$event[5].'_'.$event[6].'">'.$month.'</a> '.$event[5].'</b> <a href="'.$event[4].'">'.$event[2].'</a> ('.$event[1].")</td></tr>\n";
-	echo '<tr><td bgcolor=#e0e0e0>&nbsp;'.$event[3]."</td></tr>\n";
+	echo '<tr><td bgcolor=#e0e0e0>&nbsp;'.base64_decode($event[3])."</td></tr>\n";
 }
 ?>
 </table>
