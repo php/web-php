@@ -136,8 +136,8 @@ function makeEntry($date,$name,$blurb,$id=0) {
     $name = htmlspecialchars($name);
     if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
         if (ereg("(.+)@(.+)\.(.+)",$name)) {
-	  str_replace('@', ' at ', $name);
-	  str_replace('.', ' dot ', $name);
+	  $name = str_replace('@', ' at ', $name);
+	  $name = str_replace('.', ' dot ', $name);
 	}
             echo "<b>".$name."</b><br>\n";
     }
