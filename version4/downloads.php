@@ -7,7 +7,9 @@ commonHeader("PHP 4.0 Release Candidate 2 Downloads");
   <li><a href="do_download.php?download_file=php-4.0RC2.tar.gz">PHP 4.0 Release Candidate 2 Source</a></li> - 09 May 2000
   <p>     
   <li><a href="do_download.php?download_file=php-4.0RC2-Win32.zip">PHP 4.0 Release Candidate 2 Binaries for Win32</a> - 09 May 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
+<!--
   <p>Other add-ons:
+-->
 <!--
   <ul>
     <li>Servlet Server API -
