@@ -283,25 +283,6 @@ on for PHP.net to let this feature work!
 
 <?php echo hdelim(); ?>
 
-<?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
-
-<h1>International PHP Conference - Spring Edition Early Bird Discount runs out!</h1>
-
-<p>
-<font class="newsdate">[09-Apr-2003]</font>
-April 15, 2003 will be the last day to get the very cheap
-early bird discount for your participation at the International
-PHP Conference in Amsterdam on May 8 and 9, 2003.
-</p>
-
-<p>
-<a href="http://www.phpconference.com">Sign up now</a> and save
-100 EUR! Meet PHP programmers from all over the world and learn
-the latest stuff on PHP from internationally acclaimed speakers.
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>PHP 4.3.2RC1 Released</h1>
 <p>
 <font class="newsdate">[13-Mar-2003]</font>
