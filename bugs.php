@@ -1,6 +1,8 @@
 <?php /* vim: set noet ts=4 sw=4: : */
 require_once 'prepend.inc';
 
+require 'format-text.inc';
+
 if (isset($save) && isset($pw)) { # non-developers don't have $user set
   setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 }
@@ -28,102 +30,13 @@ mysql_select_db("php3");
 commonHeader("Bug Reporting");
 echo "<font size=\"-1\">\n";
 
-require 'format-text.inc';
-
-function show_id_options($current) {
-	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
-	echo "<option>Any</option>\n";
-	while ($row = mysql_fetch_row($result)) {
-		echo "<option",($row[0] == $current ? " selected" : ""),
-		     ">$row[0]</option>\n";
-	}
-}
-
-function show_state_options($state, $show_all, $user_mode=0, $default="") {
-	if (!$state && !$default) {
-		$state = "Open";
-	}
-	elseif (!$state) {
-		$state = $default;
-	}
-
-	$state_types = 	array (
-		"Open" => 2, 
-		"Closed" => 2,
-		"Critical" => 1, 
-		"Duplicate" => 2,
-		"Assigned" => 1,
-		"Analyzed" => 1,
-		"Suspended" => 1,
-		"Feedback" => 3,
-		"OldFeedback" => 3,
-		"Bogus" => 1	
-	);
-	
-	/* regular users can only pick states with type = 1 for unclosed bugs */
-	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
-		echo "<option>$state</option>\n";
-		if($state != "Bogus") echo "<option>Closed</option>\n";
-	} else {
-		foreach($state_types as $type => $mode) {
-			if($mode == $user_mode || $user_mode < 2) {
-				echo "<option";
-				if($type == $state) echo " selected";
-				echo ">$type</option>\n";
-			}
-		}
-		if($show_all) {
-			$sel = ($state == "All") ? " selected" : "";
-			echo "<option$sel>All</option>\n";		
-		}
-	}
-}
-
-function show_version_options($current,$default="") {
-	$versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
-	while (list(,$v) = each($versions)) {
-		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
-		if ($current == $v) $use++;
-	}
-	if (!$use && $current) echo "<option selected>$current</option>\n";
-	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
-}
-
-function show_types($current,$show_any,$default="") {
-	include 'bugtypes.inc';
-
-	if (!$current && !$default && !$show_any) {
-		echo "<option value=\"unknown\">--Please Select--</option>\n";
-	}
-	elseif (!$current && $show_any) {
-		$current = "Any";
-	}
-	elseif (!$current) {
-		$current = $default;
-	}
-
-	while (list($key,$value) = each($items)) {
-		if ($show_any || $value != "Any") {
-			echo "<option value=\"$key\"",
-				 ($key == $current? " selected" : ""),
-				 ">$value</option>\n";
-			if ($key == $current) $use++;
-		}
-	}
-	if (!$use && $current) {
-		echo "<option selected>$current</option>\n";
-	}
-}
-
-function show_menu($state) {
-	global $PHP_SELF, $id, $bug_type, $by, $MAGIC_COOKIE, $search_for;
 ?>
 <table bgcolor="#ccccff" border="0" cellspacing="1">
  <form method="POST" action="<?php echo $PHP_SELF?>">
  <input type="hidden" name="cmd" value="display" />
   <tr>
    <td><input type="submit" value="Display" /></td>
-   <td><select name="status"><?php show_state_options($state,1);?></select></td>
+   <td><select name="status"><?php show_state_options($status,1);?></select></td>
    <td align="right">bugs of type: </td>
    <td><select name="bug_type"><?php show_types($bug_type,1);?></select></td>
    <td align="right">last comment by:</td>
@@ -145,114 +58,11 @@ function show_menu($state) {
 </table>
 <i>Feature/Change requests must be explicitly selected to be shown.</i>
 <p></p>
+<hr />
 <?php
-}
-
-function find_password($user) {
-	$fp=@fopen("/repository/CVSROOT/passwd","r");
-	if (!$fp) {
-		return ("");
-	}
-	while(!feof($fp)) {
-		$line=fgets($fp,120);
-		list($luser,$passwd,$junk) = explode(":",$line);
-		if($user==$luser) {
-			fclose($fp);
-			return($passwd);
-		}
-	}
-	fclose($fp);
-	return("");
-}
-
-function valid_login($user,$pass) {
-	if($user!="cvsread") {
-		$psw=find_password($user);
-		if(strlen($psw)>0) {
-			return crypt($pass,substr($psw,0,2)) == $psw;
-		}
-	}
-	return false;
-}
-
-function get_old_comments ($bug_id) {
-	$divider = str_repeat("-", 72);
-	$max_message_length = 10 * 1024;
-    $max_comments = 5;
-    $output = ""; $count = 0;
-
-	$res = @mysql_query("SELECT ts, email, comment FROM bugdb_comments WHERE bug=$bug_id ORDER BY ts DESC");
-
-    if (!$res) return "";
-    
-    # skip the most recent (this is get_old_comments, not get_all_comments!)
-    $row = mysql_fetch_row($res);
-    if (!$row) return "";
-
-    while ($row = mysql_fetch_row($res) && strlen($output) < $max_message_length && $count++ < $max_comments) {
-		$output .= "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n";
-    }
-
-    if (strlen($output) < $max_message_length && $count < $max_comments) {
-    	$res=@mysql_query("SELECT ts1,email,ldesc FROM bugdb WHERE id=$bug_id");
-    	if (!$res) return $output;
-    	$row = mysql_fetch_row($res);
-    	if (!$row) return $output;
-		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n");
-    }
-    else {
-		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "The remainder of the comments for this report are too long. To view\nthe rest of the comments, please view the bug report online at\n    http://bugs.php.net/?id=$bug_id\n");
-    }
-
-    return "";
-}
-
-function addlinks($text) {
-	$text = htmlspecialchars($text);
-    $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\\.\\s|$)/i","<a href=\"\\1\">\\1</a>\\3",$text);
-    # what the heck is this for?
-    $text = preg_replace("/[.,]?-=-\"/", '"', $text);
-	return $text;
-}
-
-/* validate an incoming bug report */
-function incoming_details_are_valid($require_ldesc=0) {
-    global $email,$bug_type,$php_version,$sdesc,$ldesc;
-
-	$valid = 1;
-	if(!preg_match("/[.\\w+-]+@[.\\w]+\\.\\w{2,}/i",$email)) {
-		echo "<h2 class=\"error\">Please provide a valid email address.</h2>";
-		$valid = 0;
-	}
-
-	if ($bug_type=="none") {
-		echo "<h2 class=\"error\">Please select an appropriate bug type.</h2>";
-		$valid = 0;
-	}
-
-	if ($php_version=='earlier') {
-		echo "<h2 class=\"error\">Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.</h2>";
-		$valid = 0;
-	}
-
-    if (!$sdesc) {
-		echo "<h2 class=\"error\">You must supply a short description of the bug you are reporting.</h2>";
-		$valid = 0;
-	}
-
-    if ($require_ldesc && !$ldesc) {
-		echo "<h2 class=\"error\">You must supply a long description of the bug you are reporting.</h2>";
-		$valid = 0;
-	}
-
-	return $valid;
-}
 
 if ($cmd == "send") {
 	if (incoming_details_are_valid(1)) {
-		show_menu($status);
-		echo "<hr />\n";
-
 		$ret = mysql_query("INSERT INTO bugdb (bug_type,email,sdesc,ldesc,php_version,php_os,status,ts1,passwd) VALUES ('$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open',NOW(),'$passwd')");
     
 		$cid = mysql_insert_id();
@@ -300,137 +110,105 @@ if ($cmd == "send") {
 
 }
 elseif ($cmd == "display") {
-	show_menu($status);
-	echo "<hr />\n";
 	if (!$bug_type) $bug_type = "Any";
 
-	include("table_wrapper.inc");
+    $query  = "SELECT *,TO_DAYS(NOW())-TO_DAYS(ts2) AS unchanged FROM bugdb ";
 
-	function external_processing($fieldname,$tablename,$data,$row) {
-
- 		switch($fieldname) {
-			case "id":
-				print "<a href=\"bugs.php?id=$data\">$data</a>\n";
-				break;
-			case "Originator":
-				print "<a href=\"mailto:$data\">$data</a>\n";
-				break;
-			case "Mod":
-				print "<a href=\"bugs.php?id=${row['id']}&edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\"></a>\n";
-				break;
-
-			case "Status":
-				if ($data == "Feedback") {
-					echo "Feedback<br>($row[unchanged_days] days)";
-					break;
-				}
-				/* otherwise fall through */
-
-			default:
-				echo htmlspecialchars($data);
-				break;
-		}
-	}
-
-	function row_coloring($row) {
-		if ($row["bug_type"]=="Feature/Change Request") {
-			return "#aaaaaa";
-		}
-		switch($row["Status"]) {
-			case "Open":
-				return "#ffbbaa";
-				break;
-			case "Critical":
-				return "#ff0000";
-				break;
-			case "Closed":
-				return "#aaffbb";
-				break;
-			case "Suspended":
-				return "#ffccbb";
-				break;
-			case "Assigned":
-				return "#bbaaff";
-				break;
-			case "Feedback":
-				return "#bbeeff";
-				break;
-			case "Analyzed":
-				return "#99bbaa";
-				break;
-			case "Duplicate":
-				return "#bbbbbb";
-				break;
-			default:
-				return "#aaaaaa";
-				break;
-		}
-	}
-	$external_processing_function="external_processing";
-	$row_coloring_function="row_coloring";
-
-	$tables[] = "bugdb";
-	$fields[] = "id";
-	$fields[] = "bug_type";
-	$fields[] = "status as Status";
-	$fields[] = "assign as Assigned";
-	$fields[] = "php_version as Version";
-	$fields[] = "php_os as Platform";
-	$fields[] = "sdesc as Description";
-	$fields[] = "id as Mod";
-	$fields[] = "TO_DAYS(NOW())-TO_DAYS(ts2) as unchanged_days";
-	$conversion_table["id"] = "ID#";
-	$conversion_table["bug_type"] = "Bug Type";
-	$pass_on = ereg_replace(" ","+","&amp;cmd=display&amp;status=$status&amp;bug_type=$bug_type");
-	$default_header_color="cccccc";
-	$centering["id"] = $centering["Mod"] = "center";
-	$dont_link["Mod"]=1;
-	$dont_display["unchanged_days"] = 1;
-
-	if (!isset($order_by_clause)) {
-		$order_by_clause = "id";
-	}
-	if($status=="All" && $bug_type=="Any") {
-		$where_clause = "bug_type!='Feature/Change Request'";
-		/* nothing */
-	} elseif($status=="All" && $bug_type!="Any") {
-		$where_clause = "bug_type='$bug_type'";
+	if($bug_type=="Any") {
+		$where_clause = "WHERE bug_type != 'Feature/Change Request'";
 	} else {
-		if($bug_type=="Any") {
-			$where_clause = "bug_type!='Feature/Change Request'";
-		} else {
-			$where_clause = "bug_type='$bug_type'";
-		}
-
-		/* Treat assigned, analyzed and critical bugs as open */
-
- 		if($status=="Open") {
-			$where_clause .= " and (status='Open' or status='Assigned' or status='Analyzed' or status='Critical')";
-		} elseif($status=="OldFeedback") {
-			$where_clause .= " and status='Feedback' and TO_DAYS(NOW())-TO_DAYS(ts2)>60";
-		} else {
-			$where_clause .= " and status='$status'";
-		}
+		$where_clause = "WHERE bug_type = '$bug_type'";
 	}
-	if(strlen($search_for)) {
-		$where_clause .= " and (email like '%$search_for%' or sdesc like '%$search_for%' or ldesc like '%$search_for%' or comments like '%$search_for%')";
+
+	/* Treat assigned, analyzed and critical bugs as open */
+	if ($status == "Open") {
+		$where_clause .= " AND (status='Open' OR status='Assigned' OR status='Analyzed' OR status='Critical')";
+	} elseif ($status == "OldFeedback") {
+		$where_clause .= " AND status='Feedback' AND TO_DAYS(NOW())-TO_DAYS(ts2)>60";
+	} elseif ($status != "Any") {
+		$where_clause .= " AND status='$status'";
 	}
+
+	if (strlen($search_for)) {
+		$where_clause .= " AND (email like '%$search_for%' OR sdesc LIKE '%$search_for%' OR ldesc LIKE '%$search_for%' OR comments LIKE '%$search_for%')";
+	}
+
 	// not supported by the HTML form yet : use the URL :)
-	if(isset($bug_age) && ($bug_age!="All")) {
-		$where_clause .= " and ts1 >= date_sub(now(), interval $bug_age day)";
+	if($bug_age && $bug_age !="All") {
+		$where_clause .= " AND ts1 >= DATE_SUB(NOW(), INTERVAL $bug_age DAY)";
 	}
-	if (strlen($where_clause)) {
-		$where_clause .= " and";
+
+	$where_clause .= " AND php_version LIKE '4%'";
+
+	if(strlen($by) and $by!='Any')
+		$where_clause .= " AND dev_id = '$by' ";
+
+    $query .= "$where_clause ";
+
+	if (!$order_by) $order_by = "id";
+	if (!$direction) $direction = "ASC";
+
+	if ($reorder_by) {
+		if ($order_by == $reorder_by) {
+			$direction = $direction == "ASC" ? "DESC" : "ASC";
+		}
+		else {
+			$direction = "ASC";
+		}
+		$order_by = $reorder_by;
 	}
-	$where_clause .= " php_version like '4%'";
-	if(strlen($by) and $by!='Any') $where_clause .= " and dev_id = '$by' ";
-	table_wrapper();
-	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
+
+	$query .= " ORDER BY $order_by $direction";
+
+	$res = @mysql_query($query);
+	if (!$res) die(htmlspecialchars($query)."<br>".mysql_error());
+
+	if (!mysql_numrows($res)) {
+		echo "<h2 class=\"error\">No bugs with the specified criteria were found.</h2>";
+	}
+	else {
+		$link = "$PHP_SELF?cmd=display&amp;bug_type=$bug_type&amp;status=$status&amp;search_for=".htmlspecialchars(stripslashes($search_for))."&amp;bug_age=$bug_age&amp;by=$by&amp;order_by=$order_by&amp;direction=$direction";
+?>
+<table align="center" border="0" cellspacing="2" width="95%">
+ <tr bgcolor="#aaaaaa">
+  <th><a href="<?php echo $link;?>&amp;reorder_by=id">ID#</a></th>
+<?php if ($bug_type == "Any") {?>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=bug_type">Type</a></th>
+<?php }?>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=status">Status</a></th>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=php_version">Version</a></th>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=php_os">OS</a></th>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=sdesc">Description</a></th>
+  <th>Mod</th>
+  <th><a href="<?php echo $link;?>&amp;reorder_by=assigned">Assigned</a></th>
+ </tr>
+<?php
+		while ($row = mysql_fetch_array($res)) {
+			echo '<tr bgcolor="', get_row_color($row), '">';
+			echo "<td><a href=\"$PHP_SELF?id=$row[id]\">$row[id]</a></td>";
+			if ($bug_type == "Any") {
+				echo "<td>",htmlspecialchars($row[bug_type]),"</td>";
+			}
+			echo "<td>",htmlspecialchars($row[status]);
+			if ($row[status] == "Feedback" && $row[unchanged] > 0) {
+				printf ("<br />%d day%s", $row[unchanged], $row[unchanged] > 1 ? "s" : "");
+			}
+			echo "<td>",htmlspecialchars($row[php_version]),"</td>";
+			echo "<td>",$row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;","</td>";
+			echo "<td>",$row[sdesc] ? htmlspecialchars($row[sdesc]) : "&nbsp;","</td>";
+			echo "<td align=\"center\"><a href=\"$PHP_SELF?id=$row[id]&amp;edit=1\"><img src=\"gifs/small_submit.gif\" border=\"0\" width=\"11\" height=\"11\" alt=\"edit\" /></a></td>";
+			echo "<td>",$row[assigned] ? htmlspecialchars($row[assigned]) : "&nbsp;","</td>";
+			echo "</tr>\n";
+		}
+?>
+</table>
+<?php
+	}
+    echo "<p align=\"center\"><a href=\"$PHP_SELF\">Submit a Bug Report</a></p>";
+	commonFooter();
+	exit;
 
 } elseif (!isset($cmd) && isset($id)) {
-
-	show_menu($status);
-	echo "<hr />\n";
 
     # fetch the original bug into $original
     $res = mysql_query("SELECT * FROM bugdb WHERE id=$id");
@@ -684,9 +462,8 @@ elseif ($cmd == "display") {
 	exit;
 
 } elseif (!isset($cmd)) {
-	show_menu($status);
 ?>
-Or use the form below to submit a new bug report.
+<h2>Report a Bug</h2>
 
 <p><strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</p>
 <p>To report bugs in <strong>PHP 3.0</strong>, please go <a href="/bugs-php3.php">here</a>.</p>
@@ -698,13 +475,233 @@ You should then report the problem (and the mirror(s) that have it) to
 <?php
 }
 
-echo "<hr />\n";
-
 include 'bugform.inc';
 ?>
 </font>
 <?php
 commonFooter();
+
+# FUNCTIONS
+
+function show_id_options($current) {
+	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
+	echo "<option>Any</option>\n";
+	while ($row = mysql_fetch_row($result)) {
+		echo "<option",($row[0] == $current ? " selected" : ""),
+		     ">$row[0]</option>\n";
+	}
+}
+
+function show_state_options($state, $show_all, $user_mode=0, $default="") {
+	if (!$state && !$default) {
+		$state = "Open";
+	}
+	elseif (!$state) {
+		$state = $default;
+	}
+
+	$state_types = 	array (
+		"Open" => 2, 
+		"Closed" => 2,
+		"Critical" => 1, 
+		"Duplicate" => 2,
+		"Assigned" => 1,
+		"Analyzed" => 1,
+		"Suspended" => 1,
+		"Feedback" => 3,
+		"OldFeedback" => 3,
+		"Bogus" => 1	
+	);
+	
+	/* regular users can only pick states with type = 1 for unclosed bugs */
+	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
+		echo "<option>$state</option>\n";
+		if($state != "Bogus") echo "<option>Closed</option>\n";
+	} else {
+		foreach($state_types as $type => $mode) {
+			if($mode == $user_mode || $user_mode < 2) {
+				echo "<option";
+				if($type == $state) echo " selected";
+				echo ">$type</option>\n";
+			}
+		}
+		if($show_all) {
+			$sel = ($state == "All") ? " selected" : "";
+			echo "<option$sel>All</option>\n";		
+		}
+	}
+}
+
+function show_version_options($current,$default="") {
+	$versions = array("4.0.6","4.0.5","4.0.4pl1","4.0.4","4.0CVS-".date("Y-m-d"));
+	while (list(,$v) = each($versions)) {
+		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
+		if ($current == $v) $use++;
+	}
+	if (!$use && $current) echo "<option selected>$current</option>\n";
+	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
+}
+
+function show_types($current,$show_any,$default="") {
+	include 'bugtypes.inc';
+
+	if (!$current && !$default && !$show_any) {
+		echo "<option value=\"unknown\">--Please Select--</option>\n";
+	}
+	elseif (!$current && $show_any) {
+		$current = "Any";
+	}
+	elseif (!$current) {
+		$current = $default;
+	}
+
+	while (list($key,$value) = each($items)) {
+		if ($show_any || $value != "Any") {
+			echo "<option value=\"$key\"",
+				 ($key == $current? " selected" : ""),
+				 ">$value</option>\n";
+			if ($key == $current) $use++;
+		}
+	}
+	if (!$use && $current) {
+		echo "<option selected>$current</option>\n";
+	}
+}
+
+function find_password($user) {
+	$fp=@fopen("/repository/CVSROOT/passwd","r");
+	if (!$fp) {
+		return ("");
+	}
+	while(!feof($fp)) {
+		$line=fgets($fp,120);
+		list($luser,$passwd,$junk) = explode(":",$line);
+		if($user==$luser) {
+			fclose($fp);
+			return($passwd);
+		}
+	}
+	fclose($fp);
+	return("");
+}
+
+function valid_login($user,$pass) {
+	if($user!="cvsread") {
+		$psw=find_password($user);
+		if(strlen($psw)>0) {
+			return crypt($pass,substr($psw,0,2)) == $psw;
+		}
+	}
+	return false;
+}
+
+function get_old_comments ($bug_id) {
+	$divider = str_repeat("-", 72);
+	$max_message_length = 10 * 1024;
+    $max_comments = 5;
+    $output = ""; $count = 0;
+
+	$res = @mysql_query("SELECT ts, email, comment FROM bugdb_comments WHERE bug=$bug_id ORDER BY ts DESC");
+
+    if (!$res) return "";
+    
+    # skip the most recent (this is get_old_comments, not get_all_comments!)
+    $row = mysql_fetch_row($res);
+    if (!$row) return "";
+
+    while ($row = mysql_fetch_row($res) && strlen($output) < $max_message_length && $count++ < $max_comments) {
+		$output .= "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n";
+    }
+
+    if (strlen($output) < $max_message_length && $count < $max_comments) {
+    	$res=@mysql_query("SELECT ts1,email,ldesc FROM bugdb WHERE id=$bug_id");
+    	if (!$res) return $output;
+    	$row = mysql_fetch_row($res);
+    	if (!$row) return $output;
+		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "[$row[0]] $row[1]\n\n$row[2]\n\n$divider\n\n");
+    }
+    else {
+		return ("\n\nPrevious Comments:\n$divider\n\n" . $output . "The remainder of the comments for this report are too long. To view\nthe rest of the comments, please view the bug report online at\n    http://bugs.php.net/?id=$bug_id\n");
+    }
+
+    return "";
+}
+
+function addlinks($text) {
+	$text = htmlspecialchars($text);
+    $text = preg_replace("/((mailto|http|ftp|nntp|news):.+?)(&gt;|\\s|\\)|\\.\\s|$)/i","<a href=\"\\1\">\\1</a>\\3",$text);
+    # what the heck is this for?
+    $text = preg_replace("/[.,]?-=-\"/", '"', $text);
+	return $text;
+}
+
+/* validate an incoming bug report */
+function incoming_details_are_valid($require_ldesc=0) {
+    global $email,$bug_type,$php_version,$sdesc,$ldesc;
+
+	$valid = 1;
+	if(!preg_match("/[.\\w+-]+@[.\\w]+\\.\\w{2,}/i",$email)) {
+		echo "<h2 class=\"error\">Please provide a valid email address.</h2>";
+		$valid = 0;
+	}
+
+	if ($bug_type=="none") {
+		echo "<h2 class=\"error\">Please select an appropriate bug type.</h2>";
+		$valid = 0;
+	}
+
+	if ($php_version=='earlier') {
+		echo "<h2 class=\"error\">Please select a valid PHP version. If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.</h2>";
+		$valid = 0;
+	}
+
+    if (!$sdesc) {
+		echo "<h2 class=\"error\">You must supply a short description of the bug you are reporting.</h2>";
+		$valid = 0;
+	}
+
+    if ($require_ldesc && !$ldesc) {
+		echo "<h2 class=\"error\">You must supply a long description of the bug you are reporting.</h2>";
+		$valid = 0;
+	}
+
+	return $valid;
+}
+
+function get_row_color($row) {
+	if ($row["bug_type"]=="Feature/Change Request") {
+		return "#aaaaaa";
+	}
+	switch($row["status"]) {
+		case "Open":
+			return "#ffbbaa";
+			break;
+		case "Critical":
+			return "#ff0000";
+			break;
+		case "Closed":
+			return "#aaffbb";
+			break;
+		case "Suspended":
+			return "#ffccbb";
+			break;
+		case "Assigned":
+			return "#bbaaff";
+			break;
+		case "Feedback":
+			return "#bbeeff";
+			break;
+		case "Analyzed":
+			return "#99bbaa";
+			break;
+		case "Duplicate":
+			return "#bbbbbb";
+			break;
+		default:
+			return "#aaaaaa";
+			break;
+	}
+}
 
 /*
 # MySQL dump 4.0
