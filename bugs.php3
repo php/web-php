@@ -14,7 +14,7 @@ function indent($string, $prefix) {
 }
 
 function show_state_options($state, $show_all) {
-	if ($state) { echo "<option>?$state\n"; }
+	if ($state) { echo "<option>$state\n"; }
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
 	if($state!="Assigned") { echo "<option>Assigned\n"; }
