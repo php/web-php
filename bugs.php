@@ -36,7 +36,7 @@ echo "<font size=\"-1\">\n";
  <input type="hidden" name="cmd" value="display" />
   <tr>
    <td><input type="submit" value="Display" /></td>
-   <td><select name="status"><?php show_state_options($status,1);?></select></td>
+   <td><select name="status"><?php show_state_options($status);?></select></td>
    <td align="right">bugs of type: </td>
    <td><select name="bug_type"><?php show_types($bug_type,1);?></select></td>
    <td align="right">reported since:</td>
@@ -131,8 +131,10 @@ elseif ($cmd == "display") {
 	/* Treat assigned, analyzed and critical bugs as open */
 	if ($status == "Open") {
 		$where_clause .= " AND (status='Open' OR status='Assigned' OR status='Analyzed' OR status='Critical')";
-	} elseif ($status == "OldFeedback") {
+	} elseif ($status == "Old Feedback") {
 		$where_clause .= " AND status='Feedback' AND TO_DAYS(NOW())-TO_DAYS(ts2)>60";
+	} elseif ($status == "Stale") {
+		$where_clause .= " AND status != 'Closed' AND status != 'Duplicate' AND status != 'Bogus' AND TO_DAYS(NOW())-TO_DAYS(ts2) > 30";
 	} elseif ($status != "All") {
 		$where_clause .= " AND status='$status'";
 	}
@@ -343,7 +345,7 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">Status:</th>
   <?php if ($edit) {?>
-   <td><select name="status"><?php show_state_options($status,0,$edit,$original[status])?></select>
+   <td><select name="status"><?php show_state_options($status,$edit,$original[status])?></select>
    <?php if ($edit == 1) {?>
     <b>Assign To:</b> <input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>"> <input type="submit" value="Submit Changes"></td>
    <?php } else { ?>
@@ -506,7 +508,7 @@ function show_byage_options($current) {
 	}
 }
 
-function show_state_options($state, $show_all, $user_mode=0, $default="") {
+function show_state_options($state, $user_mode=0, $default="") {
 	if (!$state && !$default) {
 		$state = "Open";
 	}
@@ -522,9 +524,11 @@ function show_state_options($state, $show_all, $user_mode=0, $default="") {
 		"Assigned" => 1,
 		"Analyzed" => 1,
 		"Suspended" => 1,
-		"Feedback" => 3,
-		"OldFeedback" => 3,
-		"Bogus" => 1	
+		"Feedback" => 1,
+		"Old Feedback" => 0,
+		"Stale" => 0,
+		"Bogus" => 1,
+		"All" => 0
 	);
 	
 	/* regular users can only pick states with type = 1 for unclosed bugs */
@@ -533,15 +537,11 @@ function show_state_options($state, $show_all, $user_mode=0, $default="") {
 		if($state != "Bogus") echo "<option>Closed</option>\n";
 	} else {
 		foreach($state_types as $type => $mode) {
-			if($mode == $user_mode || $user_mode < 2) {
+			if ($mode >= $user_mode) {
 				echo "<option";
 				if($type == $state) echo " selected";
 				echo ">$type</option>\n";
 			}
-		}
-		if($show_all) {
-			$sel = ($state == "All") ? " selected" : "";
-			echo "<option$sel>All</option>\n";		
 		}
 	}
 }
