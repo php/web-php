@@ -114,7 +114,7 @@ Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
 by Matt Zandstra<BR>
 <SMALL>
 Sams, June 2000, ISBN 0-6723-1804-0, 481 pages 
-<A HREF="more information">http://www.corrosive.co.uk/</A>
+<A HREF="http://www.corrosive.co.uk/">more information</A>
 </SMALL>
 </TD>
 </TR>
