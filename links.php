@@ -123,6 +123,10 @@ provide a large resource for the community as a whole.
 <li><a href="http://www.phpfreaks.com/">PHP Freaks</a><br>
 PHP Learning Center site.</li>
 
+<li><a href="http://www.webkreator.com/php/">PHP Traveller</a><br />
+PHP weblog, knowledge and link directory. Regularly updated
+collection of PHP resources.</li>
+
 <li><a href="http://www.phpwizard.net/">phpWizard</a><br>
 PHP tutorials and programs</li>
 
