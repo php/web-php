@@ -1847,7 +1847,7 @@ There is no separate announcement available for this release.<br />
   (Rasmus, Sascha)</li>
 <li>Virtualize realpath, chmod, chown and utime (Stas)</li>
 <li>Support content-encoding headers in file upload MIME parts
-  (Ragnar Kjrstad)</li>
+  (Ragnar Kj&oslash;rstad)</li>
 <li>Fixed warning when shutting down OCINLogon() connections. (Thies)</li>
 <li>Fixed \n in session variables bug on Win32 (Stas)</li>
 <li>OCIError() would sometimes not report failed connections. (Thies)</li>
@@ -2050,7 +2050,7 @@ There is no separate announcement available for this release.<br />
 <li>fopen_wrappers() are now extensible via modules (Hartmut Holzgraefe)</li>
 <li>Make trim strip \0 to match php 3 (Rasmus)</li>
 <li>Added function imagecreatefromxbm(). (Jouni)</li>
-<li>Added function imagewbmp(). (Jouni, based on patch from Rune Nordbe
+<li>Added function imagewbmp(). (Jouni, based on patch from Rune Nordb&oslash;e
   Skillingstad)</li>
 <li>Added str_pad() for padding a string with an arbitrary string on left or
   right. (Andrei)</li>
@@ -2428,7 +2428,7 @@ There is no separate announcement available for this release.<br />
   over the server and environment variables, in addition to GET/POST/Cookies
   (Zeev)</li>
 <li>new function cpdf_set_document_limits() (Uwe)</li>
-<li>Applied safe-mode patch to popen(). (Patch by Kristian Khntopp)</li>
+<li>Applied safe-mode patch to popen(). (Patch by Kristian K&ouml;hntopp)</li>
 <li>str_repeat() now returns correct length. (Thies)</li>
 <li>Don't assume libz and libpng are installed for the GD checks (Rasmus)</li>
 <li>Implemented support for &lt;boolean&gt; and &lt;null&gt; types according
