@@ -32,11 +32,11 @@ You can get your own copy of the
 tree by using a CVS client from your own system.  If you don't already have one, you will
 find one at <a href=\"http://www.cyclic.com/\">http://www.cyclic.com/</a>.  You can get your
 own copy of the tree with the commands:
-<PRE>   cvs -d :pserver:cvsread\@ca.php.net:/repository login</PRE>
+<PRE>   cvs -d :pserver:cvsread\@cvs.php.net:/repository login</PRE>
 When it asks you for a password enter: <b>phpfi</b><P>
 Then type:
  
-<PRE>   cvs -z3 -d :pserver:cvsread\@ca.php.net:/repository checkout php3</PRE>
+<PRE>   cvs -z3 -d :pserver:cvsread\@cvs.php.net:/repository checkout php3</PRE>
  
   This will create a php3 directory in your current directory.  It will
   take a bit of time, especially if your network connection is slow.

@@ -231,6 +231,7 @@ right away.</blockquote>
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
 	site("Legions.Com","legions.com");
+	site("LinuxApps","www.linuxapps.com");
 	site("Linux Power","linuxpower.org");
 	site("FreeBSD Rocks","www.freebsdrocks.com");
 	site("FreshMeat","freshmeat.net");
@@ -258,6 +259,7 @@ right away.</blockquote>
 	title("Religious");
 	siteStart();
 	site("Christian Financial Concepts","cfcministry.org");
+	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
 	siteEnd();
 
