@@ -40,10 +40,7 @@ if ($bug_id) {
 commonHeader("Bug Reporting");
 
 ?>
-<form method="post" action="<?php echo $PHP_SELF;?>">
-<p>
-<b>Bugs Report Password Finder</b>
-</p>
+<h1>Bugs Report Password Finder</h1>
 
 <p>
 If you need to modify a bug report that you submitted, but have
@@ -58,8 +55,8 @@ in the bug report.
 
 <?php if ($msg) { echo "<p><font color=\"#cc000000\">$msg</font></p>"; } ?>
 
+<form method="post" action="<?php echo $PHP_SELF;?>">
 <p><b>Bug Report ID:</b> #<input type="text" size="20" name="bug_id"> <input type="submit" value="Send"></p>
 </form>
-</font>
 
 <?php commonFooter(); ?>

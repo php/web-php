@@ -3,6 +3,8 @@ require_once 'prepend.inc';
 commonHeader("Anonymous CVS Access");
 ?>
 
+<h1>Anonymous CVS Access</h1>
+
 <p>If you wish to get the latest PHP source tree, you can obtain it
 through anonymous CVS. You should be warned that the CVS version
 is a development version, and as such, is often unstable, and may
