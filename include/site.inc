@@ -18,7 +18,7 @@ $MIRRORS = array(
    "http://www.php3.de/"          => array("de", "Schlund + Partner", "schlund", "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1),
    "http://dk.php.net/"           => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/",1,0),
    "http://fi.php.net/"           => array("fi", "Netlife Oy", "netlife", "http://www.netlife.fi/",1,0),
-   "http://php.nic.fi/"           => array("fi", "NIC Finland", "nic", "http://www.nic.fi/",1,0),
+   "http://fi2.php.net/"          => array("fi", "NIC Finland", "nic", "http://www.nic.fi/",1,0),
    "http://fr.php.net/"           => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0),
    "http://id.php.net/"           => array("id", "IndoGlobal","indog","http://www.indoglobal.com/",1,0),
    "http://il.php.net/"           => array("il", "Netvision", "netvision", "http://www.netvision.net.il/", 1, 1),
