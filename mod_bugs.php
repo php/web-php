@@ -414,8 +414,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		print implode ("|", $temp);
 		$comments[] = $temp;
 
-		print
-
 		foreach ($comments as $value)
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
 
