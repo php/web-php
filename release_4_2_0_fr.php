@@ -7,6 +7,8 @@ site_header("Annonce de publication de PHP 4.2.0");
 
 <h1>Annonce de publication de PHP 4.2.0</h1>
 
+<p>[ <a href="/release_4_2_1.php">English Version</a> ]</p>
+
 <p>
  Apr&egrave;s avoir pass&eacute; avec succ&egrave;s le processus
  qualit&eacute;, PHP 4.2.0 est officiellement <a href="/downloads.php">publi&eacute;</a>!
