@@ -95,22 +95,23 @@ if(!isset($pattern)) {
 <h1>Search</h1>
 <FORM ACTION="<?echo $form;?>" METHOD="POST">
 <CENTER>
-<TABLE CELLSPACING=0 CELLPADDING=2>
-<TR VALIGN=top>
-<TD ALIGN=RIGHT>
+<TABLE CELLSPACING="0" CELLPADDING="2">
+<TR VALIGN="top">
+<TD ALIGN="right">
 Search for: <BR>
 </TD>
 <TD>
-<INPUT TYPE="text" NAME="pattern" VALUE="<?echo $prevsearch;?>" SIZE=30>
+<INPUT TYPE="text" NAME="pattern" VALUE="<?echo $prevsearch;?>" SIZE="30">
 <INPUT TYPE="submit" VALUE=" Search "><BR>
 </FONT></TD>
 </TR>
-<TR VALIGN=top>
-<TD ALIGN=RIGHT>
+<TR VALIGN="top">
+<TD ALIGN="right">
 Restrict the search to: <BR>
 </TD>
 <TD>
 <SELECT NAME="show">
+<OPTION VALUE="quickref">PHP Function List
 <OPTION VALUE="nosource" SELECTED>Whole site
 <OPTION VALUE="manual">Online documentation
 <OPTION VALUE="maillist">PHP General Mailing List
