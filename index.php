@@ -93,12 +93,6 @@ $SIDEBAR_DATA = '
 <p>
  You can grab our news as an RSS feed via a daily dump in a file
  named <a href="/news.rss">news.rss</a>.
-</p>
-
-<h3>Contact</h3>
-<p>
- Please submit website bugs in the
- <a href="http://bugs.php.net/">bug system</a>.
 </p>';
 
 $MIRROR_IMAGE = '';

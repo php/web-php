@@ -50,15 +50,22 @@ site_header("Copyright and License");
 <h2>Contact</h2>
 
 <p>
- You can contact the webmasters at 
- <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
+ Please report problems you find on PHP.net and mirror sites in
+ <a href="http://bugs.php.net/">the bug system</a>. Categorize the bug
+ as "PHP.net Website Problem". This allows us to follow the progress of
+ the problem until it is fixed.
+</p>
+<p>
+ If you would like to contact the webmasters for some other reason, please
+ write to <a href="mailto:webmaster@php.net">webmaster@php.net</a>.
  Note that this address is mapped to a mailing list and a newsgroup, so
- every message you send will be stored in public archives.
+ every message you send will be stored in public archives at multiple
+ servers.
 </p>
 
 <p>
  For more information on the PHP Group and the PHP project, please see 
- <a href="http://www.php.net/">http://www.php.net/</a>.
+ <a href="http://www.php.net/">the PHP homepage</a>.
 </p>
 
 <?php site_footer(); ?>
