@@ -59,6 +59,14 @@ directory when you expand the archive unless the tool you
 use does otherwise.
 </p>
 
+<p>
+<em>
+Please note that due to some technical problems, the PDF
+version of the manual is not complete, but only the first 45 
+chapters are available. Other formats hold the complete manual.
+</em>
+</p>
+
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
   <td>&nbsp;</td>
