@@ -445,9 +445,9 @@ Ok, so it may be not so simple.  Play with it, it's pretty powerful.
 	Multiple values from arrays may now be assigned into several
 	variables using one assignment.  For example:
 	
-		$str = "johndoe:x:555:555:Doe, John:/home/johndoe:/bin/tcsh;
+		$str = "johndoe:x:555:555:Doe, John:/home/johndoe:/bin/tcsh";
 		
-		($username,$passwd,$uid,$gid,$realname,$homedir,$shell) = 
+		list($username,$passwd,$uid,$gid,$realname,$homedir,$shell) = 
 			explode(":",$str);
 	
 	Would assign 'johndoe' into $username, 'x' into $passwd, etc.
