@@ -373,6 +373,7 @@ by Herbert G. Fischer<BR>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565924347/cmvsstuff"
 >MySQL and mSQL (Nutshell Series)</A><BR>
 by Randy Jay Yarger, George Reese and Tim King<BR>
+<SMALL>O'Reilly & Associates, July 1999, ISBN 1-56592-434-7, 487 pages</SMALL>
 </TD>
 </TR>
 
@@ -384,7 +385,9 @@ by Randy Jay Yarger, George Reese and Tim King<BR>
 >MySQL</A><BR>
 by Paul DuBois<BR>
 foreword by <A HREF="http://zend.com/zend/hof/widenius.php">Michael "Monty" Widenius</A>, MySQL Moderator<BR>
-<SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
+<SMALL>
+New Riders, December 1999, ISBN 0-7357-0921-1, 756 pages<BR>
+<A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
@@ -412,7 +415,9 @@ Translation by Dorothea Reder and Judith Muhr<BR>
 >Webmaster in a Nutshell (Nutshell Series)</A><BR>
 <SMALL>includes a large chapter on PHP written by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A></SMALL><BR>
 by Stephen Spainhour and Robert Eckstein<BR>
-<SMALL><A HREF="http://www.oreilly.com/catalog/webmaster2/">more info</A><BR>
+<SMALL>
+O'Reilly & Associates, June 1999, 2nd edition, ISBN 1-5659-2325-1, 523 pages<BR>
+<A HREF="http://www.oreilly.com/catalog/webmaster2/">more info</A><BR>
 </SMALL>
 </TD>
 </TR>
@@ -425,7 +430,9 @@ by Stephen Spainhour and Robert Eckstein<BR>
 >Open Source Development with CVS</A><BR>
 <SMALL>Learn how to work with Open Source Software</SMALL><BR>
 by Karl Franz Fogel<BR>
-<SMALL><A HREF="http://cvsbook.red-bean.com/">more info (and many free chapters)</A><BR>
+<SMALL>
+Coriolis, 1999, ISBN 1-57610-490-7, 316 pages<BR>
+<A HREF="http://cvsbook.red-bean.com/">more info (and many free chapters)</A><BR>
 </SMALL>
 </TD>
 </TR>
