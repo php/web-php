@@ -60,6 +60,11 @@ function endEntry() {
 The literal translation of LinuxTag is LinuxDay. This title is a leftover from ancient times, when the event really lasted one day. This year the event occupied the fair in Stuttgart for four whole days, beginning at thurday with a business congress. For those commercially relevant lectures you had to pay. However, a total of over 100 hours of free lectures followed from friday to sunday, addressing the interests of end-users and developers. During all days companies and free software developers showed their Linux-products on an area of 6.000 m². An estimated number of 17.000 people visited the LinuxTag, making it a big success to be repeated next year. 
 <? endEntry(); ?>
 
+<? makeEntry ("Brennpunkt WWW", "by <a href=\"mailto:tobias@dnet.it\"">Tobias Ratschiller</a>",
+    "http://www.heise.de/ix/artikel/2000/07/052/", "June 23, 2000");?>
+(In German.) Maßgeschneidert für das Web: PHP 4.0.  Mit der am 22. Mai freigegebenen Version 4.0 wandelt sich PHP von der Skriptsprache für kleine und mittlere Webanwendungen zur umfangreichen Middleware-Technik.
+<? endEntry(); ?>
+
 <? makeEntry( "Are PHP and MySQL the Perfect Couple?", "by <a href=\"http://www.oreillynet.com/pub/au/77\">Jason Gilmore</a>",
     "http://www.oreillynet.com/pub/a/network/2000/06/16/magazine/php_mysql.html", "June 16, 2000");?>
 MySQL and PHP have developed a special sort of relationship over the past few years, perhaps due in large part to the fact that they are both freely available for download. The increased popularity of this dynamic duo, coupled with boundless enthusiasm from core developers of both technologies, culminated in a "meeting of the minds" in Israel earlier this year. This resulted in the MySQL library being packaged with the PHP 4.0 distribution, in addition to an agreement to help each other improve the performance quality of product integration whenever the opportunity arises.
