@@ -829,19 +829,10 @@ You should then report the problem (and the mirror(s) that have it) to
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
+   <option name="4.0.6">4.0.6
    <option name="4.0.5">4.0.5
    <option name="4.0.4pl1">4.0.4pl1
    <option name="4.0.4">4.0.4
-<?php
-/*
-   <option name="4.0.3pl1">4.0.3pl1
-   <option name="4.0.3">4.0.3
-   <option name="4.0.2">4.0.2
-   <option name="4.0.1pl2">4.0.1pl2
-   <option name="4.0.1">4.0.1
-   <option name="4.0.0">4.0.0
-*/
-?>
    <option name="4.0CVS-<? print date("Y-m-d"); ?>">4.0 Latest CVS (<? print date("Y-m-d"); ?>)
    <option name="earlier">Earlier?  Upgrade first!
    </select>
