@@ -13,7 +13,7 @@ site_header("PHP 4.3.6 Release Announcement");
 <p>
 L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
 la publication de <a href="/downloads.php">PHP 4.3.6</a>. C'est une version 
-de maintenance, destin&eacute;e &agrave; corriger deux bugs qui
+de maintenance, destin&eacute;e &agrave; corriger deux bogues qui
 peuvent conduire &agrave; des crashs de PHP si la s&eacute;curit&eacute; threads est activ&eacute;e.
 Il est recommand&eacute; &agrave; tous les utilisateurs d'adopter cette 
 version d&egrave;s que possible.
@@ -28,14 +28,14 @@ version d&egrave;s que possible.
 <ul>
  <li>Mise &agrave; jour de la biblioth&egrave;que PDFLib en version 5.0.3p1 pour les versions Windows.</li>
  <li>Mise &agrave; jour de la biblioth&egrave;que GD 2.0.22.</li>
- <li>Correction d'un bogue qui emp&ecirc;chait la compilation de PHP avec les versions 1.2-1.8.</li>
- <li>Correction d'un bogue avec les sessions : les configurations se propagaient entre les requ&ecirc;tes.</li>
- <li>Correction de plusieurs bogues li&eacute;s au changement d'heure d'hiver et d'&eacute;t&eacute;.</li>
- <li>Correction d'un bogue qui emp&ecirc;chait la compilation de cURL extension avec libcurl 7.11.1</li>
+ <li>Correction d'un bogue qui emp&ecirc;chait la compilation de l'extension GD avec les versions 1.2-1.8 de la librairie externe GD.</li>
+ <li>Correction d'un bogue avec les sessions : les configurations ne se propagaient pas entre les requ&ecirc;tes.</li>
+ <li>Correction de plusieurs bogues li&eacute;s au changement d'heure d'hiver et d'&eacute;t&eacute; dans les fonctions mktime et strtotime.</li>
+ <li>Correction d'un bogue qui emp&ecirc;chait la compilation de l'extension cURL avec libcurl 7.11.1</li>
  <li>Correction de plusieurs crashs avec les extensions domxml et mssql.</li>
 
  <li>Cette version corrige environs 25 bogues qui ont &eacute;t&eacute; d&eacute;couverts depuis
- la version 4.3.6.</li>
+ la version 4.3.5.</li>
 </ul>
 
 <p>
