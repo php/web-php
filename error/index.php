@@ -1,4 +1,5 @@
 <?php
+require_once 'prepend.inc';
 
 if (file_exists("../configuration.inc")) {
   include_once "../configuration.inc";
