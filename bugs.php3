@@ -406,7 +406,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			else
 				echo "<input type=hidden name=modify value=\"User Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
-			show_state_options($row[7], 0, 2);
+			show_state_options($row[7], 0, ($edit==2)?2:0);
 			echo "</select>\n";
 			if($edit==1)
 				echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
@@ -449,7 +449,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($row[8])) {
 				echo "<b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
 				$text=addlinks($row[8]);
-				echo "<b><pre>".$text."</pre></b>\n";
+				echo "<b><pre>";
+				wrap($text,90);
+				echo "</pre></b>\n";
 			}
 		} else 
 		if($edit==1) {
@@ -463,7 +465,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($row[8])) {
 				echo "<P><b><tt>Developer Comments</tt></b><br>\n<br><b><i>[".$row[10]."] Updated by ".$row[11]."</i></b><br>\n";
 				$text=addlinks($row[8]);
-				echo "<b><pre>".$text."</pre></b>\n";
+				echo "<b><pre>";
+				wrap($text,90);
+				echo "</pre></b>\n";
 			}
 			echo "<br>Password: <input type=password size=20 name=pw>\n";
 			echo "<input type=submit value=\"Commit Changes\">\n";
