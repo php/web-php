@@ -9,8 +9,9 @@ function makeMail($mail) {
 
 <center><h1><font color="#5B69A6">Core Developers</font></h1></center>
 
-<table><tr><td>
-<h3>Rasmus Lerdorf <? makeMail("rasmus@lerdorf.on.ca");?></h3>
+<table bgcolor=#D0D0D0>
+<tr><td><img src="/jpgs/rasmus.jpg" border=0 width=320 height=240></td>
+<td><h3>Rasmus Lerdorf <? makeMail("rasmus@php.net");?></h3>
 
 <ul>
 <li>Concept
@@ -21,14 +22,19 @@ function makeMail($mail) {
 <li>Original mSQL, MySQL and Sybase modules
 <li>Project Coordinator
 </ul>
-
+</td></tr>
+<tr><td colspan=2>
+Looking bleary-eyed after another all-night coding session.<br>
+When I am not playing with PHP I spend my time as an Internet consultant in
+Toronto, Canada.
+</td></tr>
+</table>
 <hr noshade width="80%" size=1>
 
-<table><tr><td align="center">
+<table><tr><td>
 <h3>Andi Gutmans <? makeMail("andi@php.net</A>");?></h3>
 &
 <h3>Zeev Suraski <? makeMail("zeev@php.net");?></h3>
-</td></tr></table>
 
 <ul>
 <li>New language definition and implementation
@@ -41,9 +47,10 @@ function makeMail($mail) {
 <li>Configuration file parser
 <li>New persistent/multilink MySQL, PosgresSQL, Sybase and mSQL modules
 </ul>
-
+</td></tr></table>
 <hr noshade width="80%" size=1>
 
+<table><tr><td>
 <h3>Stig Bakken <? makeMail("ssb@guardian.no");?></h3>
 
 <ul>
@@ -54,10 +61,11 @@ function makeMail($mail) {
 <li>Loadable font support
 <li>ODBC work
 </ul>
-
+</td></tr></table>
 
 <hr noshade width="80%" size=1>
 
+<table><tr><td>
 <h3>Shane Caraveo <? makeMail("shane@caraveo.com");?></h3>
 
 <ul>
@@ -66,9 +74,11 @@ function makeMail($mail) {
 <li>Work on ISAPI and NSAPI APIs
 
 </ul>
+</td></tr></table>
 
 <hr noshade width="80%" size=1>
 
+<table><tr><td>
 <h3>Jim Winstead <? makeMail("jimw@php.net");?></h3>
 
 <ul>
