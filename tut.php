@@ -112,12 +112,13 @@ here is a simple example.  Assume you have a page with a form like this on it:
 <?example('<form action="action.php" method="post">
 Your name: <input type="text" name="name">
 You age: <input type="text" name="age">
-<input type="submit"">
+<input type="submit">
 </form>');?>
 There is nothing special about this form.  It is a straight HTML form with no special tags of any kind.
 When the user fills in this form and hits the submit button, the <i>action.php</i> page is called.  In this
 file you would have something like this:
-<?example('Hi <?php echo $name; ?>.  You are <?php echo $age; ?> years old.')?>
+<?example('Hi <?php echo $name; ?>.
+You are <?php echo $age; ?> years old.')?>
 It should be obvious what this does.  There is nothing more to it.  The $name and $age variables are
 automatically set for you by PHP.
 <h2>More?</h2>
@@ -127,7 +128,7 @@ in the example archives.
 <p>
 Here is a list of other excellent PHP tutorials:
 <ul>
-<li><a href="http://conf.php.net/">PHP conference materials</a></li>
+<li><a href="http://conf.php.net/">PHP conference presentations</a></li>
 <li><a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a></li>
 <li><a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a></li>
 <li><a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a></li>
