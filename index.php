@@ -78,7 +78,10 @@ if($fp) {
 			$cm = (int)$m;  
 			$RSIDEBAR_DATA .= "<h3><u>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</u></h3>\n"; 
 		}
-		$RSIDEBAR_DATA .= "$d. <a href=\"$url\">$desc</a><br>\n";
+		if(!$seen[$desc]) {
+			$RSIDEBAR_DATA .= "$d. <a href=\"$url\">$desc</a><br>\n";
+			$seen[$desc] = true;
+		}
 	}
 	fclose($fp);
 }
