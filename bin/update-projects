@@ -7,3 +7,16 @@ if [ $? -ne 0 ]; then
 fi
 
 mv backend/projects.xml~ backend/projects.xml
+
+# won't be necessary when this is running on a machine that has php+sablotron
+# but for now is necessary to give time for projects.xml to get mirrored over
+# to www.php.net
+sleep 900
+
+lynx -source http://www.php.net/bin/projects.php > backend/projects.html~
+if [ $? -ne 0 ]; then
+  echo problem converting results to html
+  exit 1
+fi
+
+mv backend/projects.html~ backend/projects.html
