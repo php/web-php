@@ -6,7 +6,7 @@ site_header("PHP 4.3.11 Release Announcement");
 ?>
 
 <h1>PHP 4.3.11 Release Announcement</h1>
-<!-- <p>[ <a href="/release_4_3_11_fr.php">Version Fran&ccedil;aise</a> ]</p> -->
+<p>[ <a href="/release_4_3_11_fr.php">Version Fran&ccedil;aise</a> ]</p>
 <p>
 PHP Development Team is would like to announce the immediate release of <a href="/downloads.php">PHP 4.3.11</a>. 
 This is a maintenance release that in addition to over 70 non-critical bug fixes addresses several 
