@@ -156,6 +156,11 @@ Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl<br></l
 <li><a href="http://www.phpgeek.com/phptriad.php">PHPTriad</a><br>
 Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin, Perl, and
 some special modules<br></li>
+
+<li><a href="http://www.analogx.com/contents/download/network/phpconf.htm">AnalogX PHPConfig</a><br>
+A graphical frontend to PHP's php.ini file with support for all the standard PHP
+functionality, and a special 'Unknown' tab to handle any 3rd party plugins.
+<br></li>
 </ul>
 
 <h4>Other PHP related projects</h4>
