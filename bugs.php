@@ -410,7 +410,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     echo wrap($html_report);
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
+    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
 		echo "Thank you for your help!<P>";
 		echo "<i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
@@ -639,7 +639,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			/* mail bug originator if status was changed or comment is not empty. */
 			if($estatus != $row[0] || $ncomment != "") {
 				Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-				Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
+				Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
 			}
 		}
 		mysql_freeresult($result);
@@ -683,7 +683,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
    			Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-   			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail");
+   			Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
 			mysql_freeresult($result);
 		}
 	}
