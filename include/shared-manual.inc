@@ -143,6 +143,8 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
 
 <TD ALIGN=left BGCOLOR="#E0E0E0">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=5>
+<TR><TD>
 <?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	$name = htmlspecialchars($name);
@@ -152,7 +154,10 @@ function makeEntry($date,$name,$blurb,$id=0) {
                 echo "<B>".$name."</B><BR>\n";
         }
         echo date("d-M-Y h:i",$date)."<BR>\n";
-	echo "<HR NOSHADE SIZE=1>\n";
+?>
+</TD></TR>
+<TR BGCOLOR="#E0E0E0"><TD>
+<?
 	$blurb = htmlspecialchars($blurb);
 	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
 	reset($fixes);
@@ -168,6 +173,9 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <A href="/manual/admin-notes.php3?action=edit+<?echo $id?>&brief=1" target="admin">edit</A>
 <BR>
 <?endif;?>
+</TD></TR>
+</TABLE>
+
 </TD>
 <TD ALIGN=left bgcolor='#ffffff'><? spc(18,18);?><BR></TD>
 </TR>  
