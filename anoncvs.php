@@ -87,9 +87,6 @@ diff -u
     named myphp5:<br />
     <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 -r HEAD php-src</tt>
    </li>
-   <li>
-    The Zend engine version is embedded into the final <i>checkout</i> parameter.
-   </li>
   </ul>
  </li>
  
