@@ -1069,7 +1069,7 @@ array(
   ),
 
   array(
-    /* title[s]     */ "PHP et MySQL Développement Web",
+    /* title[s]     */ "PHP et MySQL D&eacute;veloppement Web",
     /* title_link   */ "http://www.amazon.fr/exec/obidos/ASIN/2744011746/wwwphpnet0f",
     /* author[s]    */ array("Luke Welling", "Laura Thomson"),
     /* auth link[s] */ "",
