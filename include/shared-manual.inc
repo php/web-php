@@ -74,6 +74,7 @@ function makeBorderTOC($this)
 	if($cur!='/ja' && is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a>";
 	if($cur!='/it' && is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
 	if($cur!='/fr' && is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
+	if($cur!='/hu' && is_file("$DOCUMENT_ROOT/manual/hu/$file")) echo "<a href=\"/manual/hu/$file\"><img src=\"/gifs/flag-hu.gif\" valign=bottom height=24 width=45 alt=\"Hungarian version of this page\"></a>";
 
     for ($i = 0; $i < count($TOC); $i++) {
 	list($url, $title) = $TOC[$i];
