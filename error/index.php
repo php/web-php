@@ -23,24 +23,14 @@ if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) {
 // ============================================================================
 // Check for a manual in the mirror's default language
 $lang = default_language();
-if (!@is_dir("$DOCUMENT_ROOT/manual/$lang")) {
+if (!@is_dir("$DOCUMENT_ROOT/manual/$lang/index.php")) {
     $lang = "en"; // fall back to English
 }
 
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
-    if($SERVER_PORT!=80) {
-        $url = "http://".$SERVER_NAME.":".$SERVER_PORT.$array[1];
-    } else {
-        $url = "http://".$SERVER_NAME.$array[1];
-    }
-    $urle = htmlspecialchars($url);
-    
-    header("Location: $url");
-
-    print "<html><title>Redirect to $urle</title><body>";
-    print "<a href=\"".$url."\">Please click here</a></body></html>";
+    header("Location: http://$SERVER_NAME$array[1]");
     exit;
 }
 
@@ -48,17 +38,7 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
 if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
-    if ($SERVER_PORT != 80) {
-        $url = "http://".$SERVER_NAME.":".$SERVER_PORT."$array[1]/manual/$lang/".$array[2];
-    } else {
-        $url = "http://".$SERVER_NAME."$array[1]/manual/$lang/".$array[2];
-    }
-    $urle = htmlspecialchars($url);
-    
-    header("Location: $url");
-
-    print "<html><title>Redirect to $url</title><body>";
-    print "<a href=\"".$url."\">Please click here</a></body></html>";
+    header("Location: http://$SERVER_NAME$array[1]/manual/$lang/$array[2]");
     exit;
 }
 
@@ -79,30 +59,30 @@ if ($uri[0] == "/") { $uri = substr($uri,1); }
 // and point to pages relative to the print dir (which is nonexistent)
 // We need to override the 404 status in that case.
 if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts) &&
-    @file_exists("../manual/$parts[1]/$parts[3]")) {
+    @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[3]")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
-    include "../manual/$parts[1]/$parts[3]";
+    include "$DOCUMENT_ROOT/manual/$parts[1]/$parts[3]";
     exit;
 }
 
 // BC: for old HTML directory (.html extension was used in that)
 elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts) &&
-        @file_exists("../manual/$parts[1]/$parts[2].php")) {
+        @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[2].php")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
-    include "../manual/$parts[1]/$parts[2].php";
+    include "$DOCUMENT_ROOT/manual/$parts[1]/$parts[2].php";
     exit;
 }
 
 // The index file needs to be handled in a special way
 elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $uri, $parts) &&
-        @file_exists("../manual/$parts[1]/index.php")) {
+        @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/index.php")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
     if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
-    include "../manual/$parts[1]/index.php";
+    include "$DOCUMENT_ROOT/manual/$parts[1]/index.php";
     exit;
 }
 
