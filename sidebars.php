@@ -49,11 +49,16 @@ function addPlugin()
 </p>
 
 <p>
+ For users of Mozilla Firefox who are interested in adding the search sidebar,
+ they can also click the above link, and that will offer a new bookmark. Save that
+ bookmark anywhere in your set, and whenever you try to open that, it will
+ dispslay the search sidebar. You can remove the sidebar by removing the bookmark.
+</p>
+
+<p>
  We also offer a plugin for the built-in <a href="http://mycroft.mozdev.org/">Mozilla
  Search Sidebar</a>, and this plugin will also work with the several Mozilla and
- <a href="http://www.mozilla.org/products/firefox/">Firefox</a> 
- <a href="http://extensionroom.mozdev.org/">search extensions</a> as well as
- <a href="http://www.apple.com/macosx/features/sherlock/">Sherlock</a> on MacOSX.
+ Firefox <a href="http://update.mozilla.org/extensions/showlist.php?type=E&amp;application=firefox&amp;category=Search%20Tools&amp;numpg=10">search extensions</a> as well as Sherlock on MacOSX.
  <a href="javascript:addPlugin();">Install our sidebar plugin</a>, and enjoy the
  integrated search in Mozilla. Sherlock users should save our
  <a href="<?php echo $MYSITE; ?>phpnetsearch.src">phpnetsearch.src file</a> to
