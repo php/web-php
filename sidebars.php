@@ -16,7 +16,7 @@ site_header("PHP.net Search Bars");
  an email to <a href="mailto:webmaster@php.net">the webmasters</a>.
 </p>
 
-<h2>Mozilla 0.9.4 and above</h2>
+<h2>Mozilla, Firebird, Netscape 6+ and Sherlock for MacOSX</h2>
 <script type="text/javascript">
 function addPanel()
 {
@@ -26,6 +26,19 @@ function addPanel()
         alert('Sidebar cannot be added! You must use Mozilla 0.9.4 or later!');
     }
 }
+function addPlugin()
+{
+    if ((typeof window.sidebar == "object") && (typeof window.sidebar.addSearchEngine == "function")) {
+      window.sidebar.addSearchEngine(
+          "<?php echo $MYSITE; ?>phpnetsearch.src",
+          "<?php echo $MYSITE; ?>images/phpnetsearch.png",
+          "phpnetsearch",
+          "Web"
+      );
+    } else {
+        alert('Search plugin cannot be installed! Netscape 6 or Mozilla is required!');
+    }
+}
 </script>
 <p>
  If you use Mozilla 0.9.4 or later, you can <a href="javascript:addPanel()">add
@@ -33,6 +46,16 @@ function addPanel()
  Sidebar" dialog in Mozilla. <em>To get more information on Mozilla sidebars
  see the <a href="http://wp.netscape.com/sidebar/how.html">Netscape Sidebar
  Howto</a>.</em>
+</p>
+
+<p>
+ We also offer a plugin for the built-in <a href="http://mycroft.mozdev.org/">Mozilla
+ Search Sidebar</a>, and this plugin will also work with the several Mozilla and
+ <a href="http://www.mozilla.org/products/firebird/">Firebird</a> 
+ <a href="http://extensionroom.mozdev.org/">search extensions</a> as well as
+ <a href="http://www.apple.com/macosx/features/sherlock/">Sherlock</a> on MacOSX.
+ <a href="javascript:addPlugin();">Install our sidebar plugin</a>, and enjoy the
+ integrated search in Mozilla.
 </p>
 
 <h2>Internet Explorer 5 and above</h2>
