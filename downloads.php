@@ -14,7 +14,7 @@ $server = $SERVER_NAME;
 
 <h2>Win32 Binaries</h2>
 <ul>
-  <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> - 13 January 2001<br>(CGI binary plus server API versions for Apache, AOL server, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
+  <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> - 13 January 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
   <li><?php download_link("php404pl1-installer.exe", "PHP 4.0.4pl1"); ?> - 13 January 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
