@@ -113,8 +113,7 @@ PHP--from understanding PHP on wireless devices to participating
 in a discussion on the future of PHP featuring some of the core
 developers and luminaries from the PHP community. The conference
 runs July 23-27, 2001, at the Sheraton San Diego Hotel and Marina
-in San Diego, California. <a href="http://conferences.oreillynet.com/cs/os2001/pub/10/register.html">Register before June 22 to
-save up to $400!</a>.
+in San Diego, California.
 <br clear="all">
 </p>
 
