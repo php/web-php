@@ -3,6 +3,10 @@ body, ul, td, th {
 	font-size: 95%;
 }
 
+p {
+	font-family: arial,helvetica,sans-serif;
+}
+
 em {
 	font-weight: bold;
 	font-style: italic;
