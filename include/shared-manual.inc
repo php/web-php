@@ -267,6 +267,7 @@ function manualUserNotes($title, $id) {
 function sendManualHeaders($charset,$lang) {
         global $LANG;
         $LANG = $lang;
+	Header("Cache-Control: public, max-age=300");
 	Header("Content-type: text/html;charset=$charset");
 	Header("Content-language: $lang");
 }
