@@ -63,7 +63,32 @@ example, try typing "php file upload" in your browser.
 
 </OL>
 
+<HR NOSHADE SIZE=1>
 
+<? tipTitle('Adding the Quick Reference to Netscape on Linux', 'David Rose', '28-Jul-2000'); ?>
+
+<P>
+Further to the example above for Windows/IE users, here's something Linux folk can do:
+</P>
+
+<OL>
+
+<LI>Create a file called <B>phpfind</B> somewhere on an executable path
+
+<LI>In that file, write the following code (substituting the path to Netscape,
+if necessary):
+
+<PRE>
+#!/bin/sh
+/usr/bin/netscape http://www.php.net/manual-lookup.php?funtion=$1
+</PRE>
+
+<LI>Save it and type <B>chmod +x phpfind</B> to make it executable
+
+<LI>That's it.  When you type "phpfind funcionname" on your command line, 
+Netscape will open the proper URL for you.
+
+</OL>
 
 <?
 commonFooter();
