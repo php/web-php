@@ -318,10 +318,40 @@ function commonHeader($title) {
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 	Header("Vary: User-Agent");
-	if(substr(dirname($PHP_SELF),-2)=='ja')
-		Header("Content-Type: text/html; charset=utf-8");
-	else 
-		Header("Content-Type: text/html; charset=iso-8859-1");
+	switch(substr(dirname($PHP_SELF),-2)) {
+		case 'ja':
+			Header("Content-Type: text/html; charset=utf-8");
+			Header("Content-language: ja");
+			break;
+		case 'hu':
+			Header("Content-Type: text/html; charset=iso-8859-2");
+			Header("Content-language: hu");
+			break;
+		case 'de':
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: de");
+			break;
+		case 'nl':
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: nl");
+			break;
+		case 'it':
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: it");
+			break;
+		case 'fr':
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: fr");
+			break;
+		case 'es':
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: es");
+			break;
+		default:
+			Header("Content-Type: text/html; charset=iso-8859-1");
+			Header("Content-language: en");
+			break;
+	}
 
 ?>
 <HTML>
