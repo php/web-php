@@ -177,7 +177,7 @@ if ($function == "rev") {
 // ============================================================================
 // Link to PHP4 NEWS file
 elseif ($function == "php4news") {
-    header("Location: http://cvs.php.net/co.php/php4/NEWS");
+    header("Location: http://cvs.php.net/co.php/php4/NEWS?p=1");
     exit;
 }
 
