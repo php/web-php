@@ -7,7 +7,7 @@ commonheader("PHP 4 ChangeLog");
 
 <a name="4.1.2"></a>
 <h3>Version 4.1.2</h3>
-<b>27-Feb-2001</b>
+<b>27-Feb-2002</b>
 <ul>
 <li>Fixed start up failure when mm save handler is used and there is multiple 
   SAPIs are working at the same time. (Yasuo)</li>
