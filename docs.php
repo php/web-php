@@ -47,10 +47,11 @@ $formats = array(
 
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below.
-Tip: If you are using Internet Explorer, the file size
-will show up, when you move the mouse above one link.
-If you use another browser you can 
-<a href="/docs.php?sizes=1">click here to see the file sizes</a>.
+Tip: If you are using Internet Explorer, Opera or Netscape 6,
+the file size will show up, when you move the mouse above one
+link. If you use another browser, or would like to see all the
+information, you can <a href="/docs.php?sizes=1">click here
+to see the file sizes</a>.
 </p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
