@@ -34,7 +34,7 @@ Send your suggestions for tips to <A HREF="mailto:webmaster@php.net">webmaster@p
 
 <?php tipTitle('Adding the Quick Reference to most Javascript-capable Browsers', 'Jim Winstead', '07-Mar-2001'); ?>
 
-<p>Just right-click (command-click for Macintosh users) on this link: <A HREF="javascript:phpfunc=window.prompt('PHP Function Lookup:','') ; if(phpfunc && phpfunc != '') { window.location = 'http://www.php.net/manual-lookup.php?function=' +phpfunc; } else { history.go(-1); }">PHP Quick Reference</A> and add it to your bookmarks.
+<p>Just right-click (command-click for Macintosh users) on this link: <a href="javascript:javascript:void(q=prompt('PHP Reference:',''));if(q)location.href='http://www.php.net/manual-lookup.php?lang=en&function='+escape(q)" title="PHP Quick Reference">PHP Quick Reference</A> and add it to your bookmarks.
 </p>
 
 
