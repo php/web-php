@@ -58,23 +58,26 @@ function endEntry() {
 &quot;Building Dynamic Web Pages with Search Engines in Mind&quot; and &quot;Creating Dynamic Images with PHP&quot;
 <? endEntry(); ?>
 
-<? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de", "Jan. 18, 1999"); ?>
-"PHP3 is the most powerful tool on the market for building dynamic,
+<? makeEntry( "Classified ads with PHP3 and MySQL", "German article in Internet Pro (Ziff Davis) written by Tobias Ratschiller", "http://www.zdnet.de/internet/artikel/java/199902/php3mysql_00-wf.html", "Jan. 18, 1999"); ?>
+&quot;PHP3 is the most powerful tool on the market for building dynamic,
 database-driven websites. Internet Pro shows how to realize a classified ads
-site with PHP and MySQL." <I>This article isn't available online yet.</I>
+site with PHP and MySQL.&quot;
 <? endEntry(); ?>
 
 <? makeEntry("Apache Gets Down to Business","WEBBuilder Magazine article by Bjørn Borud","http://www.devx.com/upload/free/features/webbuilder/1998/wb1098/bb1098/bb1098.htm","Sept. 24, 1998"); ?>
-"The world's most popular Web server has a reputation for performance and extensibility. You may not be aware of the rich programming environment that surrounds Apache, though. PHP gives you strong SQL connectivity, and mod_perl has powerful application i
-
-ntegration facilities. Learn how to exploit these capabilities. Also, see our review of Apache."
+&quot;The world's most popular Web server has a reputation for performance and extensibility. 
+You may not be aware of the rich programming environment that surrounds Apache, 
+though. PHP gives you strong SQL connectivity, and mod_perl has powerful application 
+integration facilities. Learn how to exploit these capabilities. Also, see our review of Apache.&quot;
 <? endEntry(); ?>
 
 <? makeEntry("PHP/MySQL ... Two great things that go great together","Combination wins Database of the Year Award at Web98","http://webreview.com/wr/pub/wtawards","June 22, 1998"); ?>
-"The substance of the Web is more and more residing in databases, and there are a variety of methods used to
-generate Web pages.  This year, we selected a pair of "free software" tools that
-work together quite nicely as a platform for building dynamic content. The award is also a tribute to the Open Source
-initiative; both products are used, developed and supported by interlocking communities of people on the Net."
+&quot;The substance of the Web is more and more residing in databases, and there
+are a variety of methods used to generate Web pages.  This year, we selected a 
+pair of &quot;free software&quot; tools that work together quite nicely as a 
+platform for building dynamic content. The award is also a tribute to the Open Source
+initiative; both products are used, developed and supported by interlocking 
+communities of people on the Net.&quot;
 <? endEntry(); ?>
 
 <TR bgcolor='#D0D0D0' valign=top>
