@@ -42,7 +42,7 @@ $MIRRORS = array(
    "http://jp2.php.net/"             => array("jp", "Hitachi Business International, Ltd.", 0, "http://mirrors.hbi.co.jp/", 1, 1, "ja"),
    "http://kr.php.net/"               => array("kr", "HolyNet", 0, "http://www.holywar.net/", 1, 1, "kr"),
 #   "http://li.php.net/"               => array("li", "Lie-Comtel AG", 0, "http://www.lie-comtel.li", 1, 0, "de"),
-   "http://lv.php.net/"               => array("lv", "A/S Mediaparks", 0, "http://www.mediasparks.lv/", 1, 0, "lv"),
+   "http://lv.php.net/"               => array("lv", "A/S Mediaparks", 1, "http://www.mediasparks.lv/", 1, 0, "lv"),
    "http://lv2.php.net/"               => array("lv", "SysMan", 0, "http://www.sysman.net/", 1, 0, "lv"),
    "http://mx.php.net/"               => array("mx", "Urbano.com.mx", 0, "http://web.urbano.com.mx/?in=php", 1, 0, "es"),
    "http://nl.php.net/"               => array("nl", "WEBtic Internet Consultancy", 0, "http://www.webtic.com/", 1, 0, "nl"),
