@@ -65,6 +65,25 @@ commonHeader("Downloads");
 $server = $SERVER_NAME;
 ?>
 
+<h1>PHP5</h1>
+
+<h2>Complete Source Code</h2>
+<ul>
+ <li><?php download_link('php-5.0.0b1.tar.bz2', 'PHP 5.0.0b1 (tar.bz2)'); ?> - 29 Jun 2003<br />
+ <span class="md5sum">md5: 0cb4ce9c05b639b763bc272c15fbb1a6</span>
+ </li>
+ <li><?php download_link('php-5.0.0b1.tar.gz', 'PHP 5.0.0b1 (tar.gz)'); ?> - 29 Jun 2003<br />
+ <span class="md5sum">md5: 7f76a9cbd750a04e22d757059c6ffd7a</span>
+ </li>
+</ul>
+
+<h2>Windows Binaries</h2>
+<ul>
+ <li><?php download_link('php-5.0.0b1-Win32.zip', 'PHP 5.0.0b1 zip package'); ?> - 29 Jun 2003<br />
+ <span class="md5sum">md5: 1a1dd59ea921a18cf810e016b8631033</span>
+ </li>
+</ul>
+
 <h1>Latest version of PHP</h1>
 
 <h2>Complete Source Code</h2>
