@@ -10,6 +10,7 @@ of how it works, have a look at the ' . make_link("/tut.php", "introductory tuto
 Once you get beyond that, have a look at the example archive sites and some of the 
 other resources available in the ' . make_link("/links.php", "links section") . '.
 </p>
+<p>PHP is a project of the '.make_link("http://www.apache.org/","Apache Software Foundation").'.</p>
 <h3>So, How Much Does It Cost?</h3>
 <p>
 This may sound a little foreign to all you folks coming from a non-Unix
