@@ -11,6 +11,13 @@ td.quicksearch {
     color: white;
 }
 
+/* Horizontal delimiter defaults */
+hr {
+    color: black;
+    background-color: black;
+    height: 1px;
+}
+
 body, ul, td, th {
 	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 85%;
@@ -196,6 +203,7 @@ img.flag {
 	color: #6666cc;
 }
 
+/* Used on the credits page [.e, .h, .v and .vr] */
 .e {
 	background-color: #ccccff; 
 	font-weight: bold;
@@ -214,4 +222,3 @@ img.flag {
 	background-color: #cccccc; 
 	text-align: right;
 }
-

@@ -92,16 +92,8 @@ function delim($color=false) {
 	return sprintf('<font color="%s"> | </font>', $color );
 }
 
-# hdelim()
-# print a horizontal delimiter (just a wide line);
-#
-
-function hdelim($color="#000000") {
-	if (!$color) {
-		return '<hr noshade="noshade" size="1" />';
-	}
-	return sprintf('<hr noshade="noshade" size="1" color="%s" />', $color );
-}
+// A horizontal delimiter (parameter for backward compatibility)
+function hdelim($bc) { return '<hr />'; }
 
 # make_link()
 # return a hyperlink to something, within the site
