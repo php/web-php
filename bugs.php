@@ -560,7 +560,7 @@ Or use the form below to submit a new bug report.
     <option name="4.0.1" selected>4.0.1
     <option name="4.0.0" selected>4.0.0
     <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
-    option name="earlier">Earlier?  Upgrade first!
+    <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
  </tr><tr>
