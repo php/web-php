@@ -212,14 +212,14 @@ CREATE TABLE phpcal (
 	}
 ?>
 </table>
-<?phpif($ev) draw_event($ev) ?>
-<tr bgcolor=#d0d0d0><th <?phpif($err) echo 'align=center'; else echo 'align=left';?>><?phpif(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event'; 
+<?php if($ev) draw_event($ev) ?>
+<tr bgcolor=#d0d0d0><th <?php if($err) echo 'align=center'; else echo 'align=left';?>><?php if(!$err) echo '<a href="cal.php?a='.(($a)?0:1).'&ap='.$ap.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($a)?'reject':'add').'.gif" border=0 alt='.(($a)?'collapse':'expand').'></a> add event'; 
 else echo "<font color=#f02020>$err</font>";
 echo "</th></tr>\n";
 if($a) draw_add();?>
 <?php $result = mysql_query("select id from phpcal where approved=0");
    $c = mysql_num_rows($result); ?>
-<tr bgcolor=#d0d0d0><th <?phpif($aerr) echo 'align=center'; else echo 'align=left';?>><?phpif(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
+<tr bgcolor=#d0d0d0><th <?php if($aerr) echo 'align=center'; else echo 'align=left';?>><?php if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
 else echo "<font color=#f02020>$aerr</font>";
 if($ap) draw_app();
 echo "</table>\n";
@@ -303,7 +303,7 @@ function draw_add() {
 ?>
 </select>
 <input type=text name="sday" size=2 maxlength=2 value=<?php echo $sday?>>
-<input type=text name="syear" size=4 maxlength=4 value="<?phpif($syear) echo $syear; else echo date("Y");?>">
+<input type=text name="syear" size=4 maxlength=4 value="<?php if($syear) echo $syear; else echo date("Y");?>">
 <input type="radio" name="type" value="single" CHECKED> Just one day (no end-date required)
 </td>
 </tr>
@@ -318,7 +318,7 @@ function draw_add() {
 ?>
 </select>
 <input type=text name="eday" size=2 maxlength=2 value="<?php echo $eday?>">
-<input type=text name="eyear" size=4 maxlength=4 value="<?phpif($eyear) echo $eyear; else echo date("Y")?>">
+<input type=text name="eyear" size=4 maxlength=4 value="<?php if($eyear) echo $eyear; else echo date("Y")?>">
 <input type="radio" name="type" value="multi"> Multi-day event
 </td>
 </tr>
