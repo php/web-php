@@ -14,7 +14,7 @@ function clean_AntiSPAM ($email) {
 function is_emailable_address( $email) {
     $hosts_regex="lists\.php\.net|chek.*\.com";
     $excluded_hosts = ereg($hosts_regex,$email);
-	$email_regex="^([-!#\$%&'*+./0-9=?A-Z^_`a-z{|}~ ])+@([-!#\$%&'*+/0-9=?A-Z^_`a-z{|}~ ]+\\.)+[a-zA-Z]{2,4}\$";
+	$email_regex="^([-!#\$%&'*+./0-9=?A-Z^_`a-z{|}~ ])+@([-!#\$%&'*+/0-9=?A-Z^_`a-z{|}~ ]+\\.)+[a-zA-Z]{2,6}\$";
     if (!$excluded_hosts && $email != "") {
 		return eregi($email_regex, $email);
     } else {
