@@ -15,7 +15,7 @@ commonHeader("Information About This PHP Mirror Site");
 <h2>General Information</h2>
 
 <ul>
- <li>This site is <?php echo is_official_mirror ? "" : "not"; ?> an official PHP.net mirror site</li>
+ <li>This site is <?php echo is_official_mirror() ? "" : "not"; ?> an official PHP.net mirror site</li>
  <li>The mirror site's address is <?php print_link($MYSITE); ?></li>
  <li>The provider of this mirror is <?php print_link(mirror_provider_url(), mirror_provider()); ?></li>
 </ul>
