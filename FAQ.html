@@ -512,6 +512,33 @@ README.WIN32 file.
 
 <DL>
   <DT><B>
+    When I add two strings together and then echo it, it echoes zero instead
+    of the concatenation of the two strings! What's going on? Wouldn't it
+    be great if adding two strings just concatenated them together?
+  </B></DT>
+  <DD>
+    PHP3 does not support the overloading of the addition operator for
+    strings because values that arrive via the GET and POST methods and
+    from databases are always stored as strings. This means that if the
+    plus operator were overloaded to concatenate strings, you could add
+    what you thought were two numbers and get the wrong result! (For
+    example, "4" + "5" would be equal to "45".) One way around this would
+    be to explicitly type-cast one or both of the operands, which is what
+    PHP/FI 2 did.
+
+   <P>This has been simplified in PHP3 by the addition of a real string
+   concatenation operator. If you want to "add" two strings together,
+   just write it like: <CODE>"this" . "that"</CODE> which will result in
+   the string "thisthat".
+
+   <P>The answer to the final part of the question is an emphatic no.
+   Operator overloading can be a source of great confusion, especially
+   when variables aren't very strongly typed to begin with, as they are
+   in PHP3.
+  <P>
+  </DD>
+
+  <DT><B>
     I converted my script from PHP/FI 2.0 to PHP3 syntax, but now it just
     hangs! When I looked at the processes running on my server, there was
     one process that was chewing up all of the CPU cycles!
