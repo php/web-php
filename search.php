@@ -14,7 +14,8 @@ if (isset($prevsearch) && get_magic_quotes_gpc())
         $prevsearch = stripslashes($prevsearch);
 
 if ($pattern) {
-	setcookie("prevsearch",$pattern,0,"",".php.net");
+	if (!$auto)
+		setcookie("prevsearch",$pattern,0,"",".php.net");
 
 	if ($show=="quickref") {
 		header("Location: manual-lookup.php?pattern=".urlencode($pattern));
