@@ -239,9 +239,6 @@ An extensive list of installation kits setting up servers and PHP for you in min
 <li><a href="http://phpeditors.dancinghippo.com/">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs</li>
 
-<li><a href="http://www.php-editors.com/">PHP-Editors.com</a><br>
-A comprehensive list of PHP related editors reviewed with user comments.</li>
-
 </ul>
 
 
