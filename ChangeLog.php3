@@ -1,7 +1,30 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.16 Changes");
+commonHeader("PHP 3.0 -> 3.0.17 Changes");
 ?>
+
+<h3>October 11, 2000, Version 3.0.17</h3>
+<ul>
+<li>Fixed output functions (Sascha)
+<li>Added odbc_tables() (Frank)
+<li>Fixed htmlspecialchars/htmlentities inconsistencies (Rasmus)
+<li>Added is_uploaded_file() (Zeev)
+<li>Clean up htmlspecialchars/htmlentities inconsistencies (Rasmus)
+<li>Add optional charset parameter to sybase_[p]connect (alf@alpha.ulatina.ac.cr)
+<li>Fixed incorrect handling of 0-precision strings (e.g., %4.0s)
+  in printf (Ken Coar)
+<li>You can now call Ora_Error() without prameters to get the reason
+  for a failed connection attempt. (Kirill Maximov)
+<li>Fixed crash in OCIFetchStatement() when trying to read after
+  all data has already been read. (Thies)
+<li>Added --enable-sigchild. Use this option if you encounter
+  <defunc> processes when using Oracle 8i. (Thies)
+<li>Uncommitted outstanding OCI8 transactions are now rolled back
+  before the connection is closed. (Thies)
+<li>Improved configure checks for Oracle 8i. (Thies)
+<li>Added imap_mime_header_decode() function (Skalski)
+</ul>
+
 
 <h3>April 05, 2000, Version 3.0.16</h3>
 
