@@ -23,11 +23,11 @@ function makeName($name,$email,$size=0) {
 <TABLE border=0 cellpadding=0 cellspacing=0 WIDTH=100%>
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left WIDTH=18><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD ALIGN=left WIDTH=100%><FONT SIZE=+1 FACE="<? echo $FONTFACE;?>"><B>Core Developers</B></FONT><BR></TD>
+<TD ALIGN=left WIDTH=100%><FONT SIZE=+1 <? echo $FONTFACEATTR;?>><B>Core Developers</B></FONT><BR></TD>
 <TD ALIGN=right WIDTH=18><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
-<TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
+<TR VALIGN=top><TD></TD><TD><FONT <? echo $FONTFACEATTR;?>>
 
 <? makeName("Rasmus Lerdorf","rasmus@php.net",1);?>
 <ul>
@@ -86,11 +86,11 @@ function makeName($name,$email,$size=0) {
 
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left WIDTH=18><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD ALIGN=left WIDTH=100%><FONT SIZE=+1 FACE="<? echo $FONTFACE;?>"><B>Major Contributors</B></FONT><BR></TD>
+<TD ALIGN=left WIDTH=100%><FONT SIZE=+1 <? echo $FONTFACEATTR;?>><B>Major Contributors</B></FONT><BR></TD>
 <TD ALIGN=right WIDTH=18><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 </TR>
 <TR><TD COLSPAN=3><? spc(10,10);?><BR></TD></TR>
-<TR VALIGN=top><TD></TD><TD><FONT FACE="<? echo $FONTFACE;?>">
+<TR VALIGN=top><TD></TD><TD><FONT <? echo $FONTFACEATTR;?>>
 
 <? makeName("Bjørn Borud","borud@guardian.no");?>
   <ul><li>soundex code and lots of enthusiasm</ul>
