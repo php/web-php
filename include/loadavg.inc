@@ -5,7 +5,7 @@
  * machine. */
 function check_load()
 {
-	global $COUNTRY, $MIRRORS;
+	global $COUNTRY, $MIRRORS, $MYSITE;
 
 	if (!function_exists("getloadavg")) {
 		return;
@@ -25,8 +25,7 @@ function check_load()
 	/* find potential mirrors */
 	foreach ($MIRRORS as $murl => $mirror) {
 		if ($murl != 'http://www.php.net/' &&
-				$mirror[7] == MIRROR_OK /* mirror status */ &&
-				$mirror[5] /* searchable */) {
+				$mirror[7] == MIRROR_OK /* mirror status */) {
 
 			if ($mirror[0] == $COUNTRY) {
 				$mirrors[] = $murl;
@@ -36,18 +35,28 @@ function check_load()
 		}
 	}
 
+	$need_mirror = true;
+
 	/* randomly pick one of the mirrors in their country */
 	if (count($mirrors) > 0) {
 		$murl = $mirrors[array_rand($mirrors)];
-		header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-		exit;
+		
+		if ($murl == $MYSITE) {
+			$need_mirror = false; /* selected this site */
+		} else {
+			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+			exit;
+		}
 	}
 
 	/* pick a random mirror if load is moderate */
-	if ($l[0] > 10 && count($any_mirrors) > 0) {
+	if ($need_mirror && $l[0] > 10 && count($any_mirrors) > 0) {
 		$murl = $any_mirrors[array_rand($any_mirrors)];
-		header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
-		exit;
+
+		if ($murl != $MYSITE) {
+			header("Location: $murl" . substr($_SERVER['REQUEST_URI'], 1));
+			exit;
+		}
 	}
 
 	/* no searchable mirror was found, allow the request through if the load

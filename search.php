@@ -150,10 +150,15 @@ if (isset($pattern)) {
             exit;
     }
 
+	header("Location: http://www.alltheweb.com/search?q=" . urlencode($pattern) .
+			"+site:" . urlencode(substr($MYSITE, 7)) . "&l=$lang");
+	exit;
+
     // If some local search is needed and we have no support for
     // it, send the user to the central search page on php.net
     if (!isset($htsearch_prog)) {
-        
+       
+
         // We cannot redirect to anywhere, absolute failure
         if (is_primary_site()) {
             commonHeader("Search Service");
@@ -233,8 +238,8 @@ if (isset($pattern)) {
         if ($result[2] == "NOMATCH") {
             echo "Sorry, no documents matched your search for <b>\"$htmlpt\"</b>.<br /><br />";
             echo "Continue your search at ";
-            echo "<a href=\"http://www.alltheweb.com/search?q=$urlpt\">AllTheWeb</a> ";
-            echo "or <a href=\"http://www.google.com/search?q=$urlpt&amp;as_sitesearch=www.php.net\">Google</a><br /><br />";
+            echo "<a href=\"http://www.alltheweb.com/search?q=$urlpt+site:www.php.net\">AllTheWeb</a> ";
+            echo "or <a href=\"http://www.google.com/search?q=$urlpt+site:www.php.net\">Google</a><br /><br />";
             echo "Click here for a <a href=\"$sourceurl\">New Search</a> on the PHP website<br /><br />\n";
             commonFooter();
             exit;
