@@ -390,7 +390,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $ldesc = stripslashes($ldesc);
     $sdesc = stripslashes($sdesc);
     $report .= "From:             $email\n";
-    $report .= "IP Address:       $REMOTE_ADDR\n";
     $report .= "Operating system: $php_os\n";
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $ebug_type\n";
