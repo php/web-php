@@ -105,18 +105,16 @@ function navigationBar($title,$id,$loc) {
     if ($loc != 'bottom') {
         global $LANGUAGES;
         $links = array();
-        //$file = substr($id,0,-4);
-        //if (file_exists("html/$file.html")) {
-        //    $links[] = make_link("html/$file.html", 'Plain HTML');
-        //}
-        $links[] = make_link("print/$id", 'Printer friendly version');
         foreach ($LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $PHP_SELF) && file_exists("../$code/$id")) {
                 $links[] = make_link("../$code/$id", $name);
             }
         }
+        echo "<br /> view the " . make_link("print/$id", 'printer friendly version') .
+             " or the " . make_link("printwn/$id", 'printer friendly version with notes');
+        
         if (count($links)) {
-            echo '<br />view this page in ' . join (delim(), $links);
+            echo ' or change language to ' . join (delim(), $links);
         }
     }
 
