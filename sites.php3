@@ -70,8 +70,8 @@ right away.</blockquote>
 	site("RedHat Software","www.redhat.com");
 	siteEnd();
 
-/* Educational */
-	title("Educational");
+/* Educational/Research */
+	title("Educational/Research");
 	siteStart();
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
@@ -81,6 +81,7 @@ right away.</blockquote>
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	site("Let's Find Out","www.letsfindout.com");
 	site("NativeWeb","www.nativeweb.org");
+	site("Research Institute for electro-magnetic compatibility","www.femu.rwth-aachen.de");
 	site("The Psychology Place","www.psychplace.com");
 	siteEnd();
 
