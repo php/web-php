@@ -324,6 +324,7 @@ function commonFooter() {
 		echo delim();
 	}
 	print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
+        echo "&nbsp;";
 ?>
   </td>
  </tr>
