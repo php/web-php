@@ -80,6 +80,9 @@ echo "\n<!--$MYSITE-->\n";
 PHP 4.1.0 Release Announcement
 </h1>
 
+<p>A <a href="release_4_1_0_fr.php">French translation</a> of this
+announcement is also available.</p>
+
 <pre>
 
 After a lengthy QA process, PHP 4.1.0 is finally out. 
