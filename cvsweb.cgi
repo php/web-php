@@ -37,7 +37,7 @@ own copy of the tree with the commands:
 When it asks you for a password enter: <b>phpfi</b><P>
 Then type:
  
-<PRE>   cvs -d :pserver:cvsread\@ca.php.net:/repository checkout php3</PRE>
+<PRE>   cvs -z3 -d :pserver:cvsread\@ca.php.net:/repository checkout php3</PRE>
  
   This will create a php3 directory in your current directory.  It will
   take a bit of time, especially if your network connection is slow.
@@ -45,9 +45,10 @@ Then type:
   CVS source tree.  You can then at any time cd into this directory and
   type:
  
-<PRE>   cvs update -d</PRE>
+<PRE>   cvs -z3 update -d</PRE>
  
-  to update your source tree to be in sync with the master tree.<P>
+  to update your source tree to be in sync with the master tree.  (The -z3 sets
+  the compression level)<P>
  
   In order to compile php from this master source tree you will need the GNU
   yacc replacement called Bison (at least version 1.25) as well as the GNU lex
