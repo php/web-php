@@ -154,12 +154,15 @@ function language_choose_code()
     // As most of the language dependant operations involve manual
     // page display (lookup, search, shortcuts), we will check for
     // the index file of manuals.
+/*
     foreach ($languages as $language) {
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$language/index.php")) {
             $selected = $language;
             break;
         }
     }
+*/
+	$selected = $langs[0];
     
     // Return with all found data
     return array($selected, $explicitly_specified, $parsed_langs);
