@@ -305,9 +305,9 @@ that have been set up by others in the community to host local
 
 <ul>
   <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a>
-  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a>
+  <li><a href="news://fr.comp.infosystemes.www.auteurs.php/">French Newsgroup</a>
   <li><a href="http://www.php-center.de/">German Mailing List</a>
-  <li><a href="news:de.comp.lang.php">German Newsgroup</a>
+  <li><a href="news://de.comp.lang.php/">German Newsgroup</a>
   <li><a href="mailto:wl-phplista-request@gimli.externet.hu?subject=subscribe">Hungarian Mailing List</a>
   <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a>
   <li><a href="mailto:php3-it-request@michel.enter.it">Italian Mailing List</a>
