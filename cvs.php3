@@ -38,7 +38,8 @@ to modify the PHP CVS tree.  It also allows you to comment on and close bugs in 
 as well as modifying the documentation notes in the annotated manual.  The relevant links for these
 three things are:
 <ul>
-<li><a href="http://ca.php.net/cvsweb.cgi">CVS Web Interface</a>
+<li><a href="http://ca.php.net/cvsweb.cgi">CVS Web Interface for 3.0 Tree</a>
+<li><a href="http://ca.php.net/cvsweb31.cgi">CVS Web Interface for 3.1 Tree</a>
 <li><a href="http://ca.php.net/bugs.php3">PHP Bugs Database</a>
 <li><a href="http://ca.php.net/manual/admin-notes.php3">Manual Errata Administration</a>
 </ul>
