@@ -467,8 +467,8 @@ articles, lessons, consulting.</li>
 <li><b>Spanish</b>
 <ul>
 
-<li><a href="http://infolibo.com/bci/php/php_documentacion.php">BCI PHP</a><br>
-PHP and server setup information, manuals, scripts, forums.</li>
+<li><a href="http://www.lpsz.org">lpsz.org</a><br>
+PHP news, articles , and scripts.</li>
 </ul></li>
 
 <li><b>Swedish</b>
