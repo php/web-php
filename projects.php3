@@ -128,14 +128,12 @@ More than "just another web BBS/forum software", w-agora is designed so you can 
 </ul>
 <? endEntry();?>
 
-<? makeEntry("Timesheet","www.egr.uri.edu/~kovacsp/timesheet/","Peter Kovacs"
-,"kovacsp@egr.uri.edu"); ?>
+<? makeEntry("Timesheet","www.egr.uri.edu/~kovacsp/timesheet/","Peter Kovacs","kovacsp@egr.uri.edu"); ?>
 A multiuser time tracking system.  Users can check in and out and it keeps
 track of how long they've worked.
 <? endEntry();?>
 
-<? makeEntry("FocalMail","www.focalmail.com/home/index.html","FocalTek"
-,"support@focalmail.com"); ?>
+<? makeEntry("FocalMail","www.focalmail.com/home/index.html","FocalTek","support@focalmail.com"); ?>
 FocalMail is a web based email interface which allow you to manage your mail virtually anywhere with any Javascript enabled web browser.
 <? endEntry();?>
 
@@ -145,8 +143,7 @@ A web based recipe calculator with a recipe database and other beer related good
 a very complete and complex site and not your average, &quot;duh.. I like beer site&quot;.
 <? endEntry();?>
 
-<? makeEntry("phpMyAdmin","www.htmlwizard.net/phpMyAdmin/","Tobias Ratschiller"
-,"tobias@dnet.it"); ?>
+<? makeEntry("phpMyAdmin","www.htmlwizard.net/phpMyAdmin/","Tobias Ratschiller","tobias@dnet.it"); ?>
 phpMyAdmin is intended to handle the basic adminstration of MySQL. Currently it can create and drop 
 databases and tables, modify, delete and add records and keys and execute any SQL-statement. It also 
 features an overview of MySQL's activity and can import flat-file databases.
@@ -218,8 +215,8 @@ FishCartSQL(sm) is a catalog management system for online e-commerce
 solutions; it has been in active use since January 1998. A few of the key
 benefits include multiple parallel catalogs, multiple languages, timed
 sales, Associate ID tracking, and Web based catalog maintenance. The
-order output of FishCartSQL(sm) can be adapted to an existing order
-processing system so that system is not impacted.
+order output of FishCartSQL(sm) can be adapted for easy integration with 
+existing order processing systems.
 <? endEntry();?>
 
 <TR bgcolor='#D0D0D0' valign=top>
