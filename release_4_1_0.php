@@ -82,19 +82,34 @@ PHP 4.1.0 Release Announcement
 
 <pre>
 
-After a lengthy QA process, PHP 4.1.0 is finally out.  Download at http://www.php.net/downloads.php !
+After a lengthy QA process, PHP 4.1.0 is finally out. 
+Download at http://www.php.net/downloads.php !
 
 PHP 4.1.0 includes several other key improvements:
 - A new input interface for improved security (read below)
 - Highly improved performance in general
-- Revolutionary performance and stability improvements under Windows.  The multithreaded server modules under Windows (ISAPI, Apache, etc.) perform as much as 30 times faster under load!  We want to thank Brett Brewer and his team in Microsoft for working with us to improve PHP for Windows.
-- Versioning support for extensions.  Right now it's barely being used, but the infrastructure was put in place to support separate version numbers for different extensions.  The negative side effect is that loading extensions that were built against old versions of PHP will now result in a crash, instead of in a nice clear message.  Make sure you only use extensions built with PHP 4.1.0.
+- Revolutionary performance and stability improvements under
+  Windows.  The multithreaded server modules under Windows (ISAPI,
+  Apache, etc.) perform as much as 30 times faster under load!  We
+  want to thank Brett Brewer and his team in Microsoft for working
+  with us to improve PHP for Windows.
+- Versioning support for extensions.  Right now it's barely being
+  used, but the infrastructure was put in place to support separate
+  version numbers for different extensions.  The negative side effect
+  is that loading extensions that were built against old versions of
+  PHP will now result in a crash, instead of in a nice clear message.
+  Make sure you only use extensions built with PHP 4.1.0.
 - Turn-key output compression support
 - *LOTS* of fixes and new functions
 
-As some of you may notice, this version is quite historical, as it's the first time in history we actually incremented the middle digit!  :) The two key reasons for this unprecedented change were the new input interface, and the broken binary compatibility of modules due to the versioning support.
+As some of you may notice, this version is quite historical, as it's
+the first time in history we actually incremented the middle digit! :)
+The two key reasons for this unprecedented change were the new input
+interface, and the broken binary compatibility of modules due to the
+versioning support.
 
-Following is a description of the new input mechanism.  For a full list of changes in PHP 4.1.0, scroll down to the end of this section.
+Following is a description of the new input mechanism.  For a full
+list of changes in PHP 4.1.0, scroll down to the end of this section.
 
 -----------------------------------
 
