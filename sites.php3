@@ -55,6 +55,7 @@ right away.</blockquote>
 	siteStart();
 	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
 	site("The Tri Cities Online","tri.xtn.net");
+	site("Zone - Cultural sites in Rotterdam","www.cultuur.rotterdam.nl");
 	siteEnd();
 
 /* Computer Software */
@@ -74,6 +75,7 @@ right away.</blockquote>
 	site("The Chemistry Place","www.chemplace.com");
 	site("DevilNet at Duke University", "devilnet.duke.edu");
 	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
+	site("GezondheidsNet","www.gezondheidsnet.nl");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	site("Let's Find Out","www.letsfindout.com");
 	site("NativeWeb","www.nativeweb.org");
@@ -84,7 +86,9 @@ right away.</blockquote>
 	title("Entertainment");          
 	siteStart();
 	site("HitList","www.hitlist.com");
+	site("PromoPodium","www.promopodium.nl");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
+	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
 	siteEnd();
 
 
@@ -145,6 +149,7 @@ right away.</blockquote>
 	site("SpaceNet","www.spacenet.de");
 	site("Total Information Management AG","www.timso.ch");
 	site("XOOM Inc.","xoom.com");
+	site("Yebo! Net","www.yebo.co.za");
 	siteEnd();
 
 /* Military */
@@ -183,6 +188,9 @@ right away.</blockquote>
 	title("Online News Sites");
 	siteStart();
 	site("3D Linux","3dlinux.org");
+	site("Deal-iMac","deal-imac.com");
+	site("Deal-Mac","deal-mac.com");
+	site("Deal-Pc","deal-pc.com");
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
@@ -222,7 +230,10 @@ right away.</blockquote>
 /* Sports */
 	title("Sports");
 	siteStart();
+	site("Disc Golf Birmingham","discgolf.bham.al.us");
+	site("Professional Disc Golf Association","www.pdga.com");
 	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
+	site("Southern Nationals Disc Golf","www.sndg.org");
 	site("The Internet Squash Federation","www.squash.org");
 	siteEnd();
 
