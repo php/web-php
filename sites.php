@@ -224,6 +224,7 @@ right away.</blockquote>
 	siteStart();
 	site("Iowa Division of Tourism","www.state.ia.us/tourism/");
 	site("Landesregierung Baden-W&uuml;rttemberg","www.baden-wuerttemberg.de");
+	site("Ministerium f&uuml;r Schule und Weiterbildung, Wissenschaft und Forschung NRW","www.mswwf.nrw.de");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	site("National Chemical Laboratory - India","www.ncl-india.org");
 	site("Nigerian Television Authority","www.micro.com.ng/ntacsa");
