@@ -11,7 +11,7 @@ function makeEntry($title,$subtitle,$url,$date="") {
 	echo "<FONT FACE=\"$FONTFACE\">\n";
 	echo "<B>$title</B><BR></FONT>\n";
 ?></TD>
-<TD ALIGN=right><?
+<TD ALIGN=right width=200><?
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	echo "<I>$date</I>&nbsp;<BR></FONT>\n";
 ?></TD>
@@ -105,11 +105,11 @@ online community.
 <TD VALIGN=middle ALIGN=left rowspan=2>
 If you have written an article, or spot something on the Net somewhere that isn't listed here, please send a note
 to <a href="mailto:core@php.net">core@php.net</a> and we will be sure to add it to this list.<BR></TD>
-<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD></TD><TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
 <TR VALIGN=bottom bgcolor='#D0D0D0'>
 <TD ALIGN=left><IMG alt=" " SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
-<TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD></TD><TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
 
 </TABLE>
