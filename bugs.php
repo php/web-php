@@ -727,10 +727,9 @@ CREATE TABLE bugdb (
   php_version char(16),
   php_os varchar(32),
   status varchar(16),
-  comments text,# developer comment (deprecated)
   ts1 datetime, # bug created date
-  ts2 datetime, # developer comment date (deprecated)
-  dev_id varchar(16),# developer who commented (deprecated)
+  ts2 datetime, # bug last updated date
+  dev_id varchar(16),# developer who last commented
   assign varchar(16),
   passwd varchar(20),# user password
   PRIMARY KEY (id)
