@@ -30,16 +30,6 @@ by Dave Medinets<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><SMALL>No image yet<SMALL><BR></TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1884777732/cmvsstuff"
->Practical PHP</A><BR>
-by Chad Robinson, Graeme Merrall<BR>
-<SMALL>Not at Amazon yet ... but you can get it at 
-<A HREF="http://search.borders.com/fcgi-bin/db2www/search/search.d2w/Details?&mediaType=Book&prodID=51309967">Borders</A><BR>
-</SMALL></TD>
-</TR>
-
-<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
