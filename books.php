@@ -487,6 +487,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Creation de sitios web con PHP 4",
+    /* title_link   */ "http://www.mcgraw-hill.es/",
+    /* author[s]    */ array ("Javier Gil", "Jorge Tejedore", "Augustin Yagüe"),
+    /* auth link[s] */ "",
+    /* image        */ "gil.jpg",
+    /* information  */ "McGraw Hill, October 2001, ISBN 8-4481-13209-2, 568 pages",
+    /* inform. link */ "http://www.mcgraw-hill.es/",
+    /* language     */ "es"
+  ),
+
+  array(
     /* title[s]     */ "Pages Web dynamiques avec ASP, PHP, SQL",
     /* title_link   */ "http://www.amazon.fr/exec/obidos/ASIN/2744007099/wwwphpnet0f",
     /* author[s]    */ array("Jean-Marc Herellier","Philippe Merigod"),
