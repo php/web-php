@@ -402,6 +402,15 @@ $books = array (
       "de"  #lang
    ),
 
+   array("PC Spicker PHP",    #title(s)
+      "http://www.amazon.de/exec/obidos/ASIN/3815500613/wwwphpnet07", #title_link
+      array("Mark Kronsbein", "Thomas Weinert"), #author(s)
+      array("http://www.zend.com/comm_person.php?id=36", false), #author_link(s)
+      "phpspicker.jpg", #img
+      "Sybex, May 2001, ISBN 3-8155-0061-3 , 120 pages", #info
+      "http://www.phpbuch.de/", #info_link
+      "de"  #lang
+   ),
 
    array( "PHP 4 programmering",    #title(s)
       "http://pagina.se/bok.html?20660", #title_link
