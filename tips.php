@@ -45,7 +45,7 @@ function tip_title($title, $author = '', $date = '')
 <?php tip_title('Search from the WeberDev Toolbar', 'Boaz Yahav', '16-Aug-2003');?>
 
 <p>
- The <a href="http://toolbar.weberdev.com/">WeberDev Toolbar</a> provides direct
+ The <a href="http://www.weberdev.com/toolbar">WeberDev Toolbar</a> provides direct
  search functions to the PHP function list and the bug database, right from a
  browser toolbar.
 </p>
