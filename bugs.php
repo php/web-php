@@ -32,10 +32,10 @@ echo "<font size=\"-1\">\n";
 
 ?>
 <table bgcolor="#ccccff" border="0" cellspacing="1">
- <form method="POST" action="<?php echo $PHP_SELF?>">
- <input type="hidden" name="cmd" value="display" />
+ <form method="post" action="<?php echo $PHP_SELF?>">
+ <input type="hidden" name="cmd" value="display">
   <tr>
-   <td><input type="submit" value="Display" /></td>
+   <td><input type="submit" value="Display"></td>
    <td><select name="status"><?php show_state_options($status,1);?></select></td>
    <td align="right">bugs of type: </td>
    <td><select name="bug_type"><?php show_types($bug_type,1);?></select></td>
@@ -47,17 +47,19 @@ echo "<font size=\"-1\">\n";
    <td colspan="3"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the bug database</td>
   </tr>
  </form>
- <form method="GET" action="<?php echo $PHP_SELF;?>">
+ <form method="get" action="<?php echo $PHP_SELF;?>">
   <tr>
-   <td colspan="3" align="right"><input type="submit" value="Edit" /> bug number:</td>
-   <td colspan="2"><input type="text" name="id" value="<?echo $id?>" /></td>
-   <input type="hidden" name="edit" value="<?php echo isset($MAGIC_COOKIE) ? 1 : 2;?>" />
+   <td colspan="3" align="right"><input type="submit" value="Edit"> bug number:</td>
+   <td colspan="2"><input type="text" name="id" value="<?echo $id?>"></td>
+   <input type="hidden" name="edit" value="<?php echo isset($MAGIC_COOKIE) ? 1 : 2;?>">
    <td align="center"><a href="bugstats.php">Statistics</a></td>
   </tr>
  </form>
 </table>
-<hr />
+
 <?php
+
+echo hdelim();
 
 if ($cmd == "send") {
 	if (incoming_details_are_valid(1)) {
@@ -198,7 +200,7 @@ elseif ($cmd == "display") {
 			}
 			echo "<td>",htmlspecialchars($row[status]);
 			if ($row[status] == "Feedback" && $row[unchanged] > 0) {
-				printf ("<br />%d day%s", $row[unchanged], $row[unchanged] > 1 ? "s" : "");
+				printf ("<br>%d day%s", $row[unchanged], $row[unchanged] > 1 ? "s" : "");
 			}
 			echo "<td>",htmlspecialchars($row[php_version]),"</td>";
 			echo "<td>",$row[php_os] ? htmlspecialchars($row[php_os]) : "&nbsp;","</td>";
@@ -322,35 +324,35 @@ elseif ($cmd == "display") {
 
 	/* DISPLAY BUG */
     if ($edit) {
-		echo "<form method=\"POST\" action=\"$PHP_SELF?id=$id\">\n";
-		echo "<input type=\"hidden\" name=\"edit\" value=\"$edit\" />\n";
+		echo "<form method=\"post\" action=\"$PHP_SELF?id=$id\">\n";
+		echo "<input type=\"hidden\" name=\"edit\" value=\"$edit\">\n";
 	}
     if ($edit==1)
-		echo '<input type="hidden" name="modify" value="developer" />',"\n";
+		echo '<input type="hidden" name="modify" value="developer">',"\n";
     if ($edit==2)
-		echo '<input type="hidden" name="modify" value="user" />',"\n";
+		echo '<input type="hidden" name="modify" value="user">',"\n";
 ?>
-<br />
+<br>
 <h1>Bug id #<?php echo $id?></h1>
-<table>
+<table border="0">
  <tr>
   <th align="right">Status:</th>
   <?php if ($edit) {?>
    <td><select name="status"><?php show_state_options($status,0,$edit,$original[status])?></select>
    <?php if ($edit == 1) {?>
-    <b>Assign To:</b> <input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>" /> <input type="submit" value="Submit Changes" /></td>
+    <b>Assign To:</b> <input type="text" name="assign" size="10" maxlength="16" value="<?php echo $assign ? htmlspecialchars(stripslashes($assign)) : htmlspecialchars($original[assign])?>"> <input type="submit" value="Submit Changes"></td>
    <?php } else { ?>
-     <font size="-1"><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></font></td>
+     <small><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></small></td>
    <?php }?>
   <?php } else { ?>
    <td><?php echo $original[status]?></td>
-   <td><td><font size="-1"><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=2"><tt>User Modify</tt></a> &nbsp; <a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></font></td>
+   <td><td><small><a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=2"><tt>User Modify</tt></a> &nbsp; <a href="<?php echo "$PHP_SELF?id=$id";?>&amp;edit=1"><tt>Dev Modify</tt></a></small></td>
   <?php }?>
  </tr>
  <tr>
   <th align="right">From:</th>
   <?php if ($edit) {?>
-   <td><input type="text" name="email" size="20" maxlength="40" value="<?php echo $email ? htmlspecialchars(stripslashes($email)) : htmlspecialchars($original[email])?>" /></td>
+   <td><input type="text" name="email" size="20" maxlength="40" value="<?php echo $email ? htmlspecialchars(stripslashes($email)) : htmlspecialchars($original[email])?>"></td>
   <?php } else { ?>
    <td><?php echo $original[email]?></td>
   <?php }?>
@@ -370,7 +372,7 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">OS:</th>
   <?php if ($edit) {?>
-   <td><input type="text" name="php_os" size="20" maxlength="32" value="<?php echo $php_os ? htmlspecialchars(stripslashes($php_os)) : htmlspecialchars($original[php_os])?>" /></td>
+   <td><input type="text" name="php_os" size="20" maxlength="32" value="<?php echo $php_os ? htmlspecialchars(stripslashes($php_os)) : htmlspecialchars($original[php_os])?>"></td>
   <?php } else { ?>
    <td><?php echo $original[php_os]?></td>
   <?php }?>
@@ -378,7 +380,7 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">PHP Version:</th>
   <?php if ($edit) {?>
-   <td><input type="text" name="php_version" size="20" maxlength="100" value="<?php echo $php_version ? htmlspecialchars(stripslashes($php_version)) : htmlspecialchars($original[php_version])?>" /></td>
+   <td><input type="text" name="php_version" size="20" maxlength="100" value="<?php echo $php_version ? htmlspecialchars(stripslashes($php_version)) : htmlspecialchars($original[php_version])?>"></td>
   <?php } else { ?>
    <td><?php echo $original[php_version]?></td>
   <?php }?>
@@ -392,7 +394,7 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">Summary:</th>
   <?php if ($edit) {?>
-   <td><input type="text" name="sdesc" size="40" maxlength="80" value="<?php echo $sdesc ? htmlspecialchars(stripslashes($sdesc)) : htmlspecialchars($original[sdesc])?>" /></td>
+   <td><input type="text" name="sdesc" size="40" maxlength="80" value="<?php echo $sdesc ? htmlspecialchars(stripslashes($sdesc)) : htmlspecialchars($original[sdesc])?>"></td>
   <?php } else { ?>
    <td><?php echo $original[sdesc]?></td>
   <?php }?>
@@ -410,14 +412,14 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">CVS Username:</th>
   <td>
-   <input type="text" name="user" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($user));?>" />
+   <input type="text" name="user" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($user));?>">
   </td>
  </tr>
 <?php   }?>
  <tr>
   <th align="right">Password:</th>
   <td>
-   <input type="<?php echo ($edit == 1) ? "password" : "text";?>" name="pw" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($pw));?>" />
+   <input type="<?php echo ($edit == 1) ? "password" : "text";?>" name="pw" size="10" maxlength="20" value="<?php echo htmlspecialchars(stripslashes($pw));?>">
    <?php if ($edit == 2) {?>
    [<a href="bug-pwd-finder.php">Lost your password?</a>]
    <?php }?>
@@ -426,14 +428,14 @@ elseif ($cmd == "display") {
  <tr>
   <th align="right">Remember me:</th>
   <td>
-   <input type="checkbox" name="save" />
+   <input type="checkbox" name="save">
    (Check here to remember your password for next time.)
   </td>
  </tr>
  <tr>
   <td colspan="2">
    &nbsp; &nbsp; &nbsp;
-   <input type="submit" value="Submit Changes" />
+   <input type="submit" value="Submit Changes">
   </td>
  </tr>
 <?php }?>
@@ -441,7 +443,7 @@ elseif ($cmd == "display") {
 <?php
 	if ($edit) echo "</form>\n";
 
-	echo "<hr />\n";
+	echo hdelim();
 
 	/* ORIGINAL REPORT */
 	echo "<b><i>[$original[ts1]] $original[email]</i></b><br>\n";
@@ -474,10 +476,18 @@ elseif ($cmd == "display") {
 
 } elseif (!isset($cmd)) {
 ?>
-<h2>Report a Bug</h2>
 
-<p><strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos & Don'ts</a> before submitting a bug report!</p>
-<p>To report bugs in <strong>PHP 3.0</strong>, please go <a href="/bugs-php3.php">here</a>.</p>
+<h1>Report a Bug</h1>
+
+<p>
+<strong>Please</strong> read the <a href="bugs-dos-and-donts.php">Dos &
+Don'ts</a> before submitting a bug report!
+</p>
+
+<p>
+To report bugs in <strong>PHP 3.0</strong>, please go
+<a href="/bugs-php3.php">here</a>.
+</p>
 
 <?php
 }
