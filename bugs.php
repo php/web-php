@@ -250,9 +250,9 @@ if ($cmd == "send") {
 		show_menu($status);
 		echo "<hr />\n";
 
-		$ret = mysql_query("INSERT INTO bugdb (bug_type,email,sdesc,ldesc,php_version,php_os,status,ts1,passwd) VALUES ('$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','',NOW(),'$passwd')");
+		$ret = mysql_query("INSERT INTO bugdb (bug_type,email,sdesc,ldesc,php_version,php_os,status,ts1,passwd) VALUES ('$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open',NOW(),'$passwd')");
     echo mysql_error();
-
+    
 		$cid = mysql_insert_id();
 
 		$report = "";
