@@ -39,8 +39,8 @@ site_header("Download documentation");
 
 // Format to look for
 $formats = array(
-    "Single HTML"       => "html.bz2",
-    "Many HTML files"   => "tar.bz2",
+    "Single HTML"       => "html.gz",
+    "Many HTML files"   => "tar.gz",
     "PDF"               => "pdf.bz2",
     "PalmPilot DOC"     => "doc.pdb",
     "PalmPilot iSilo"   => "isilo.pdb",
