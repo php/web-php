@@ -171,6 +171,7 @@ removed right away.</blockquote>
 	siteStart();
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("San Diego Zoo", "www.sandiegozoo.org");
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
