@@ -1,38 +1,38 @@
 <?php
 
-// http://www.unicode.org/unicode/onlinedat/languages.html
+/*
+ This is a list of all manual languages hosted
+ on a full PHP.net mirror site
+
+ Some codes, like "ko" and "tw" are not in conformance
+ with the official language code standard!
+
+ http://www.unicode.org/unicode/onlinedat/languages.html
+*/
 $LANGUAGES = array(
     'en'    => 'English',
+    'ar'    => 'Arabic',
     'pt_BR' => 'Brazilian Portuguese',
-    'bg'    => 'Bulgarian',
-    'ca'    => 'Catalan',
-    'zh'    => 'Chinese',
-    'zh_cn' => 'Chinese',
+    'tw'    => 'Chinese (Traditional)',
+    'zh'    => 'Chinese (Continental)',
     'cs'    => 'Czech',
-    'da'    => 'Danish',
     'nl'    => 'Dutch',
     'fi'    => 'Finnish',
     'fr'    => 'French',
     'de'    => 'German',
-    'el'    => 'Greek',
+    'he'    => 'Hebrew',
+    //'hk' => '',
     'hu'    => 'Hungarian',
-    'in'    => 'Indonesian',
     'it'    => 'Italian',
     'ja'    => 'Japanese',
-    'ko'    => 'Korean',
-    'kr'    => 'Korean', // This should be 'ko'. It is wrong in phpdoc!
-    'lv'    => 'Latvian',
-    'no'    => 'Norwegian',
+    'kr'    => 'Korean',
     'pl'    => 'Polish',
-    'pt'    => 'Portuguese',
     'ro'    => 'Romanian',
     'ru'    => 'Russian',
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
     'es'    => 'Spanish',
     'sv'    => 'Swedish',
-    'th'    => 'Thai',
     'tr'    => 'Turkish',
-    'uk'    => 'Ukranian',
 );
 ?>
