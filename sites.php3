@@ -88,6 +88,7 @@ right away.</blockquote>
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
 	site("Skinz","www.skinz.org");
+	site("Sonic Spot","www.sonicspot.com");
 	siteEnd();
 
 /* Educational/Research */
