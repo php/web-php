@@ -180,8 +180,9 @@ site_header("Documentation - Extended CHM Format");
  
  <li>
   <strong><a href="http://jedit.org/">jEdit</a></strong>:
-  Users of this editor can grab and adjust this BeanShell macro. Save it as
-  Lookup_In_PHP_Manual.bsh.
+  Users of this editor can grab and adjust this BeanShell macro. Save it
+  as <code>[jEdit Settings Folder]/macros/PHP/Open_in_PHP_Manual.bsh</code>. You can also
+  assign a hotkey and/or a context menu option to it.
   <pre>CHM_location = "C:\\PHP\\php_manual_en.chm";
 
 if (textArea.getSelection().length > 0) {
