@@ -436,7 +436,7 @@ endif; ?>
 			makeSideButton($HTTP_REFERER,"close","","close",75,30,9,5,"Close this source page","");
 		else:
 			makeSideButton("","close","","close",1,1,0,0,"","");
-			makeSideButton("source.php3?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
+			makeSideButton("/source.php3?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
 		endif;
 		makeSideButton("http://ca.php.net/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
       ?><IMG 
