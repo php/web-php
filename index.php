@@ -150,6 +150,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
+
+<h1>PHP 4.3.6RC3 released!</h1>
+<p>
+ <span class="newsdate">[08-Apr-2004]</span>
+ In the spirit of release early, release often here is the third and
+ hopefully the final <a href="http://qa.php.net/">release candidate of
+ PHP 4.3.6</a>. This release addresses 2 major bugs introduced in the
+ 4.3.5 release. One of these bugs caused problems when loading dynamic
+ extensions on Windows and thread-safe (ZTS) builds and the other involves
+ incorrect handling of daylight savings time. A few other minor bugs
+ were fixed as well.
+</p>
+
+<hr />
+
 <h1>Second PHP Marathon announced</h1>
 <p>
  <span class="newsdate">[06-Apr-2004]</span>
@@ -158,22 +174,6 @@ commonHeader("Hypertext Preprocessor");
  problems and composing your solutions offline, it all takes place online and within
  a specific timeframe. The Marathon is kindly sponsored by Zend Technologies and will
  now feature a problem on PHP 5. Participation is free of charge.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
-
-<h1>PHP 4.3.6RC2 released!</h1>
-<p>
- <span class="newsdate">[05-Apr-2004]</span>
- In the spirit of release early, release often here is the second and
- hopefully the final <a href="http://qa.php.net/">release candidate of
- PHP 4.3.6</a>. This release addresses 2 major bugs introduced in the
- 4.3.5 release. One of these bugs caused problems when loading dynamic
- extensions on Windows and thread-safe (ZTS) builds and the other involves
- incorrect handling of daylight savings time. A few other minor bugs
- were fixed as well.
 </p>
 
 <hr />
