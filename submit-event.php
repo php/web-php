@@ -200,7 +200,7 @@ if ($process) {
  <tr>
   <th class="subr">Country</th>
   <td>
-   <select name="country" clas="max">
+   <select name="country" class="max">
     <option value="">- Select a country -</option>
     <?php display_options($COUNTRIES, $_POST['country']);?>
    </select>
