@@ -807,6 +807,7 @@ Please supply any information that may be helpful in fixing the bug:
 	<li>The list of modules you compiled PHP with (your configure line)
 	<li>A copy of your php.ini file (if it might be relevant)
 	<li>Any other information unique or specific to your setup
+	<li>A <a href="http://bugs.php.net/bugs-generating-backtrace.php">gdb backtrace</a>.
 </ul>
 <center>
 <input type=submit value="Send bug report">

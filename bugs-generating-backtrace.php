@@ -13,6 +13,9 @@ may mean that PHP crashes somewhere along the execution of the script.  Another 
 to tell that PHP is crashing is by looking at the Apache error logs, and looking for
 SEGV (Apache 1.2) or Segmentation Fault (Apache 1.3).
 
+<h3>Important!</h3>
+To get a backtrace with correct information you must have PHP configured with --enable-debug !!
+
 <h3>If you don't have a core file yet:</h3>
 
 <ul>
