@@ -362,6 +362,14 @@ Norwegian site for newbies and intermediates. Installation help
 and scripts.</li>
 </ul></li>
 
+<li><b>Persian</b>
+<ul>
+
+<li><a href="http://www.iranphp.net/">IranPHP.net</a><br>
+A site about PHP for Iranians, with news and forums.</li>
+
+</ul></li>
+
 <li><b>Polish</b>
 <ul>
 
