@@ -19,10 +19,10 @@
   }
  </style>
 </head>
-<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0"
+<body topmargin="0" leftmargin="0"
  bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff"
  vlink="#000099" onload="document.sform.pattern.focus();">
-<table border="0" cellspacing="0" cellpadding="0">
+<table border="0" cellspacing="2" cellpadding="0">
  <tr>
   <td width="69"><a href="/" target="_main"><img src="logos/php-logo.gif" width="69" height="36" border="0" alt="PHP" hspace="3" vspace="3" /></a></td>
   <td class="title" align="left">Search Bar</td>
@@ -34,9 +34,9 @@
    <form method="post" action="/search.php" target="_main" name="sform">
    <input type="hidden" name="lang" value="<?php if(empty($LANG)) echo htmlspecialchars(default_language()); else echo htmlspecialchars($LANG); ?>">
    Search for<br />
-   <input type="text" name="pattern" value="" style="width: 100%"/><br />
+   <input type="text" name="pattern" value="" style="width: 95%"/><br />
    in the<br />
-   <select name="show" style="width: 100%">
+   <select name="show" style="width: 95%">
    <option value="quickref" selected>function list
    <option value="nosource">whole site
    <option value="manual">online documentation
