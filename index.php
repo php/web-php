@@ -232,26 +232,6 @@ version of the site.
 
 <?php echo hdelim(); ?>
 
-<h1>PHP 4.3.2RC4 Released</h1>
-<p>
-<font class="newsdate">[22-May-2003]</font>
-<a href="http://qa.php.net/">PHP 4.3.2RC4</a> has been released.
-This is the fourth and final release candidate and should have no critical
-problems/bugs. Nevertheless, please download and test it as much as possible
-on real-life applications to uncover any remaining issues.
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.3.2RC3 Released</h1>
-<p>
-<font class="newsdate">[16-May-2003]</font>
-<a href="http://qa.php.net/">PHP 4.3.2RC3</a> has been released.
-This is the third and final release candidate and should have no critical 
-problems/bugs. Nevertheless, please download and test it as much as possible 
-on real-life applications to uncover any remaining issues.
-</p>
-
 <?php echo hdelim(); ?>
 
 <?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
@@ -283,17 +263,6 @@ sites for downloads and your usual daily work.
 
 <?php echo hdelim(); ?>
 
-<h1>PHP 4.3.2RC2 Released</h1>
-<p>
-<font class="newsdate">[29-Apr-2003]</font>
-<a href="http://qa.php.net/">PHP 4.3.2RC2</a> has been released.
-This is the second release candidate and should have no critical problems/bugs.
-Nevertheless, please download and test it as much as possible on real-life
-applications to uncover any remaining issues.
-</p>
-
-<?php echo hdelim(); ?>
-
 <h1>My PHP.net</h1>
 
 <p>
@@ -309,17 +278,6 @@ parameters.
 However, normally this is not needed, as we remember the
 language you used last time. Be sure to have cookies turned
 on for PHP.net to let this feature work!
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.3.2RC1 Released</h1>
-<p>
-<font class="newsdate">[13-Mar-2003]</font>
-<a href="http://qa.php.net/">PHP 4.3.2RC1</a> has been released. 
-This is the first release candidate and should have a very
-low number of problems and/or bugs. Nevertheless, please download and test it as
-much as possible on real-life applications to uncover any remaining issues.
 </p>
 
 <?php echo hdelim(); ?>
