@@ -80,7 +80,7 @@ function makeBorderTOC($this) {
 function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME,$SERVER_PORT,$PHP_SELF;
 
-    echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
+    echo '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
 
     echo '<tr><td>';
     if ($PREV[1]) {
@@ -221,7 +221,7 @@ function manualUserNotes($title, $id) {
         (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
         $PHP_SELF;
 
-    echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"620\">\n";
+    echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
     echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
     echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
     echo "<td align=\"right\">";
