@@ -2,7 +2,9 @@
 require("shared.inc");
 commonHeader("PHP - Acronym Meaning Vote");
 
-if (empty($name) || empty($email) || empty($choice)) {
+if (true) {
+	echo "Sorry, the vote is now closed.";
+} else if (empty($name) || empty($email) || empty($choice)) {
 	echo "Please fill out your name and email, and select one of the three options.";
 } else {
 	mysql_connect() or die("Unable to connect to SQL server");

@@ -1,12 +1,15 @@
 <?
 require("shared.inc");
-commonHeader("PHP3 Main Page");
+commonHeader("PHP:  Hypertext Preprocessor");
 ?>
 
 <h3>PHP Meaning Vote</h3>
 
-Help the development team decide about the meaning of the PHP acronym
-by <a href="http://il.php.net/vote_form.php3">placing your vote</a>.
+<strong>PHP:  Hypertext Preprocessor</strong> was chosen as the official
+meaning of the PHP acronym with 53% of the votes.  You can see the votes
+as well as some ideas to plenty of other unofficial meanings
+<a href="vote_listing.php3">here</a>.
+
 <br>
 
 <h3>New Site</h3>
