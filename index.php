@@ -1,4 +1,7 @@
 <?php
+/* if you're reading this, it isn't because you've found a security hole.
+   this is an open source website. read and learn! */
+
 require_once 'prepend.inc';
 
 $SIDEBAR_DATA = '
