@@ -254,7 +254,6 @@ site_header("Links");
   An English edition of the magazine mentioned above. The PHP Magazine
   is published bimonthly and aimed at professional PHP users.
  </li>
-
  <li>
   <a href="http://www.zpmag.com/">ZPmag</a><br />
   ZPmag is a webzine (exclusively online distribution  newspaper), 
@@ -263,14 +262,19 @@ site_header("Links");
 </ul>
 
 <a name="videos"></a>
-<h4>PHP Video</h4>
+<h4>PHP Video and audio</h4>
 
 <ul>
  <li>
-  <a href="http://dvd.phpquebec.com/">DVD PHP Qu&eacute;bec</a><br />
+  <a href="http://conf.phpquebec.org/main.php/en/dvd2003/main">DVD PHP Qu&eacute;bec</a><br />
   The PHP Qu&eacute;bec DVD was shot during the Montr&eacute;al sessions, in 2003.
   It gathers 6 hours of advanced technics sessions, subtitled in French
   and English.
+ </li>
+ <li>
+  <a href="http://conf.phpquebec.org/main.php/en/cdrom2004/main">CD-ROM PHP Qu&eacute;bec</a><br />
+  The PHP Qu&eacute;bec CD-ROM was recorded during the Montr&eacute;al sessions, in 2004.
+  It gathers 21 hours of advanced technics sessions in audio format, with the slides.
  </li>
 </ul>
 
