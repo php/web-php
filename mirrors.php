@@ -1,14 +1,15 @@
 <?php
 require_once 'prepend.inc';
+
 if (isset($REDIRECT)) {
   header("Location: $country$FROM");
   exit;
 }
+
 commonHeader("Mirrors Page");
 ?>
-<h1>
-Mirror Sites
-</h1>
+<h1>Mirror Sites</h1>
+
 <p>
 Here you can find more information about the mirrors
 of php.net. Pick a mirror site close to you, or visit
@@ -43,6 +44,5 @@ the provider's homepage:
 If you are interested in hosting a mirror of this site, 
 <?php print_link("/README.mirror", "here's how"); ?>.
 </p>
-<?php
-commonFooter();
-?>
+
+<?php commonFooter(); ?>
