@@ -32,14 +32,11 @@ Zend Technologies' Web site, with lots of PHP related resources
 <LI><a HREF="http://www.phpwizard.net/">phpWizard</a><BR>
 PHP Tutorials<BR>
 
-<LI><a HREF="http://www.phpbuilder.com/">PHPBuilder.Com</a><BR>
+<LI><a HREF="http://www.phpbuilder.com/">PHPBuilder.com</a><BR>
 A bunch of helpful PHP resources available here<BR>
 
-<LI><a HREF="http://www.devshed.com/Server_Side/PHP/">PHP 3.0 resources at DevShed</a><BR>
+<LI><a HREF="http://www.devshed.com/Server_Side/PHP/">Developers Shed</a><BR>
 A good set of articles introducing various PHP concepts<BR>
-
-<LI><A HREF="http://www.314interactive.com/io/index.php3">IONLINE Programmer's Resource</A><BR>
-Another site with good articles on PHP basics and advanced topics.<BR>
 
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and
@@ -85,14 +82,11 @@ Introductory tutorial<BR>
 <LI><A HREF="http://www.e-gineer.com/instructions/">E-gineer Instructions</A><BR>
 Lots of tutorials/instructions related to Apache, PHP and MySQL.<br>
 
-<LI><A HREF="http://www.hotscripts.com/PHP/Scripts_and_Programs/">HotScripts.com</A><BR>
-PHP Scripts and Programs<BR>
+<LI><A HREF="http://www.hotscripts.com/PHP/">HotScripts.com</A><BR>
+PHP Books, Magazine Articles, Communities, Scripts and Programs, Softwares, Tips<BR>
 
 <LI><A HREF="http://www.itworks.demon.co.uk/phpeditors.htm">Editor List</A><BR>
 A comprehensive list of editors you can use to edit PHP programs.<BR>
-
-<LI><A HREF="http://phpsearch.de/">PHPSearch</A><br>
-Searchengine for PHP related things.<BR>
 
 <LI><A HREF="http://www.evilwalrus.com/">Evil Walrus</A><BR>
 A a growing list of PHP scripts<BR>
@@ -106,10 +100,6 @@ Hundreds of PHP resources, categorized and searchable.<BR>
 <LI><A HREF="http://www.tutorials.it/">Tutorials.it</A><BR>
 An Italian site that provides a variety of developer tutorials.
 Has a small PHP section.<BR>
-
-Motore di ricerca per i tutorials in lingua italiana.
-Ha una piccola sezione di PHP.
-<BR>
 
 <LI><A HREF="http://www.phpcenter.it/">PHPcenter.it</A><BR>
 An Italian-language php site that features a variety of projects, reviews, courses, tutorials and other resources.
