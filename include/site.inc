@@ -114,7 +114,7 @@ $COUNTRIES = array(
 $MYSITE='http://'.getenv("SERVER_NAME").'/';
 
 if (!isset($MIRRORS[$MYSITE])) {
-	$MIRRORS[$MYSITE] = array("xx", "Unknown", "none", $MYSITE, 1, 0);
+	$MIRRORS[$MYSITE] = array("xx", "Unknown", "none", $MYSITE, 1, 0, "en");
 }
 
 # fix for non-standard port in Australian mirror
