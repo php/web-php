@@ -131,6 +131,7 @@ removed right away.</blockquote>
 	site("CADALYST Magazine","www.cadonline.com");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
+	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
 	siteEnd();
 
 /* Not-for-Profit */
