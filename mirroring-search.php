@@ -76,7 +76,7 @@ commonHeader("Setting Up Local Search");
    Check the mirror site's search page if it works (full site
    search or manual search).
   </p>
- <li>
+ </li>
 </ol>
 
 <h2>Search Setup Troubleshooting</h2>
@@ -101,7 +101,7 @@ commonHeader("Setting Up Local Search");
 
 <h1>Setup With Multidig</h1>
 
-<ul>
+<ol>
  <li>
   <p>Install htdig as described in the previous list [1-2].</p>
  </li>
@@ -140,7 +140,7 @@ commonHeader("Setting Up Local Search");
    system.
   </p>
  </li>
-</ul>
+</ol>
 
 <p>
  Originally written by <Philippe.Rochat (at) epfl.ch> 1998-Apr-13
