@@ -80,6 +80,10 @@ $COUNTRIES = array(
 
 $MYSITE='http://'.getenv("SERVER_NAME").'/';
 
+if (!isset($MIRRORS[$MYSITE])) {
+	$MIRRORS[$MYSITE] = array("xx", "Unknown", "none", $MYSITE, 1, 0);
+}
+
 # fix for non-standard port in Australian mirror
 if(strstr($MYSITE,"au.php.net")) {
 	$MYSITE = ereg_replace("au.php.net", "au.php.net:81", $MYSITE);
