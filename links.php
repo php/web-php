@@ -234,6 +234,23 @@ efficient.
 
 </ul>
 
+<h4>PHP Accelerators</h4>
+
+<ul>
+<li><a href="http://www.zend.com/store/products/zend-accelerator.php">Zend Accelerator</a><br>
+Commercial accelerator available from Zend Technologies, Inc.</li>
+
+<li><a href="http://php-accelerator.co.uk/">PHP Accelerator</a><br>
+A free accelerator available from Nick Lindridge.</li>
+
+<li><a href="http://apc.communityconnect.com/">APC</a><br>
+Alternative PHP Cache, Free open source accelerator available from Community Connect.</li>
+
+<li><a href="http://afterburner.bware.it/">After Burner</a><br>
+Free open source accelerator available from Bware Technologies.</li>
+</ul>
+
+
 <h4>Non-English PHP Sites</h4>
 
 <ul>
