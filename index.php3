@@ -12,7 +12,7 @@ echo "\n<!--$MYSITE-->\n";
 <p>
 Due to some poorly-timed problems with the machine that handles the
 mailing lists, they have been taken out of service temporarily. Things
-should be back to normal early next week. Sorry!
+should be back to normal in a couple of days. Sorry!
 </p>
 
 <h3>PHP Talk at Atlanta Linux Showcase</h3>
