@@ -79,6 +79,18 @@ by Randy Jay Yarger, George Reese and Tim King<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/thephpdevelopmte"
+><IMG SRC="/jpgs/dubois.jpg" BORDER=0 ALIGN="left"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/thephpdevelopmte"
+>MySQL</A><BR>
+by Paul DuBois<BR>
+<SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565923251/cmvsstuff"
 ><IMG SRC="/gifs/webmaster-book.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
