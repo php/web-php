@@ -25,8 +25,6 @@ commonHeader("Documentation ");
     Errata</A>. This is the collected errata from the on-line errata/note
     system.
 
-<li><? download_link("mod_php3-doc-3.0.5-1.i386.rpm", "PHP 3.0 documentation RPM"); ?>
-<li><? download_link("bigmanual.html", "PHP 3.0 HTML Manual (one BIG file)"); ?>
 <li><? download_link("manual.zip", "PHP 3.0 HTML Manual ZIP File"); ?>
 <li><? download_link("manual.tar.gz", "PHP 3.0 HTML Manual .tar.gz File"); ?>
 <li><? download_link("manual.rtf", "PHP 3.0 Manual RTF File"); ?>
