@@ -95,8 +95,9 @@ function i2c_go()
     // Set global variable for further usage
     $COUNTRY = $country;
 
-    // Set the country in a cookie for a week and for all *.php.net servers
-    return setcookie("COUNTRY", "$country,$ipnum", time() + 60*60*24*7, '/', '.php.net');
+    // Set the country in a cookie for a week
+    return mirror_setcookie("COUNTRY", "$country,$ipnum", 60*60*24*7);
+    
 }
 
 // Find nearest index entry for IP number 

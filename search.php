@@ -92,6 +92,9 @@ if (isset($base)) {
 // We received something to search for
 if (isset($pattern)) {
 
+    // Remember the last search settings for a week
+    mirror_setcookie("LAST_SEARCH", "$show,$pattern", 60*60*24*7);
+
     // Mailing list search base URL
     $ml_url = "http://marc.theaimsgroup.com/";
 

@@ -147,6 +147,18 @@ function mirror_redirect($absoluteURI, $remote = FALSE)
     exit;
 }
 
+// Set a cookie for all the .php.net sites for the root
+// dir with $name and $content. Provide $exptime relatively
+// to the current time!
+function mirror_setcookie($name, $content, $exptime)
+{
+    if (!headers_sent()) {
+        return setcookie($name, $content, time() + $exptime, '/', '.php.net');
+    } else {
+        return FALSE;
+    }
+}
+
 // Use this function to write out proper headers on
 // pages where the content should not be publicly cached
 function header_nocache()
