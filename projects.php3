@@ -121,6 +121,11 @@ A multiuser time tracking system.  Users can check in and out and it keeps
 track of how long they've worked.
 <? endEntry();?>
 
+<? makeEntry("FocalMail","www.focalmail.com/home/index.html","FocalTek"
+,"support@focalmail.com"); ?>
+FocalMail is a web based email interface which allow you to manage your mail virtually anywhere with any Javascript enabled web browser.
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>

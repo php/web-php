@@ -161,6 +161,7 @@ right away.</blockquote>
 	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
 	site("Computer Currents","www.computercurrents.com");
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
+	site("FocalPress","www.focalpress.com.hk");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
 	site("Mercattel","mercattel.interwatts.com");
 	site("Der Spiegel","www.spiegel.de");
