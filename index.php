@@ -150,27 +150,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://afup.org/phpworks", "phpworks.png", "php|works"); ?>
-<h1>php|works 2004 Call for Papers</h1>
+<?php news_image("http://www.afup.org/article.php3?id_article=242", "afup2004.jpg", "AFUP"); ?>
+<h1>Call to speaker for Paris Forum 2004</h1>
 <p>
-<span class="newsdate">[17-May-2004]</span>
-Call to speaker for Paris Forum 2004
-
-The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des Utilisateurs de PHP, is proud
-to announce the forum PHP 2004. For this unique event in France, we are
-looking for the best French speaking experts, who want to share their
-know-how and enthusiasm. The forum PHP features 2 days, with distinct
-themas  :<ul><li>Technical day, with the most advanced PHP technics</li>
-<li>Business day, with user cases and sucessuful projects</li></ul>
-
-The <a href="http://www.afup.org/article.php3?id_article=242">forum PHP 2004</a> 
-will take place in Paris, at the FIAP Jean Monnet, 
-on thursday 25th and friday 26th, november 2004.
-
-More information in French at this <a href="http://www.afup.org/article.php3?id_article=242">URL</a>.
+ <span class="newsdate">[17-May-2004]</span>
+ The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française
+ des Utilisateurs de PHP, is proud to announce the forum PHP 2004. For this 
+ unique event in France, we are looking for the best French speaking experts, 
+ who want to share their know-how and enthusiasm. 
+</p>
+<p>
+ The forum PHP features 2 days, with distinct themas:
+ <ul>
+  <li>Technical day, with the most advanced PHP technics</li>
+  <li>Business day, with user cases and sucessuful projects</li>
+ </ul>
+</p>
+<p>
+ The <a href="http://www.afup.org/article.php3?id_article=242">forum PHP 2004</a> 
+ will take place in Paris, at the FIAP Jean Monnet, on thursday 25th and friday 
+ 26th, november 2004.<br />
+ More information in French at this <a 
+ href="http://www.afup.org/article.php3?id_article=242">URL</a>.
+</p>
 
 <hr />
-
 
 <?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
 <h1>php|works 2004 Call for Papers</h1>
