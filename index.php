@@ -86,7 +86,8 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 
 // Find the type of logo provided and start the right
 // sidebar with it if a mirror banner is available
-while (list(,$ext) = each(array("gif", "jpg", "png"))) {
+$types = array("gif", "jpg", "png");
+while (list(,$ext) = each($types)) {
     if (file_exists("backend/mirror." . $ext)) {
         $RSIDEBAR_DATA .= "<center><h3>This mirror sponsored by:</h3>\n
         <a href='" . $MIRRORS[$MYSITE]['3'] . "'><img src='backend/mirror.$ext' ";
