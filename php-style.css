@@ -6,6 +6,11 @@ A {
     color: #5B69A6;
 }
 
+
+TD {
+    font-family: tahoma, verdana, arial, helvetica, sans-serif;
+}
+
 .sidebartoc {
     font-family: tahoma, verdana, arial, helvetica, sans-serif;
     color: #FFFFFF;

@@ -1,0 +1,82 @@
+<?
+require("shared.inc");
+commonHeader("Projects");
+
+function makeEntry($project,$url,$name,$email) {
+	global $FONTFACE;
+?>
+<TR bgcolor='#D0D0D0' valign=top>
+<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=left rowspan=2>
+<?
+	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1><FONT SIZE=+0>\n";
+	echo "<B>$project</B><BR></FONT>\n";
+	echo "<A HREF=\"http://".$url."\" TARGET=\"_blank\">".$url."</A><BR>\n";
+	if ($email):
+		echo "by <A HREF=\"mailto:".$email."\">".$name."</A><BR>\n";
+	else:
+		echo "by ".$name."<BR>\n";
+	endif;
+?>
+</TD>
+<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+</TR>
+<TR VALIGN=bottom bgcolor='#D0D0D0'>
+<TD ALIGN=left><IMG alt=" " SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+</TR>
+<TR VALIGN=top>
+<TD WIDTH=18><BR></TD>
+<TD ALIGN=left>
+<TABLE border=0 cellpadding=5 cellspacing=0 bgcolor="#F0F0F0" width=100%>
+<TR><TD><FONT FACE="<? echo $FONTFACE;?>" SIZE=-1>
+<?
+};
+
+function endEntry() {
+?>
+<BR><BR></TD></TR></TABLE>
+</TD>
+<TD width=18><BR></TD>
+</TR>
+<?
+};
+
+
+?>
+<h3>Projects using PHP</h3>
+
+An increasing number of projects, both commercial and open source, are using PHP as their main development
+tool.  If you want to browse through a list companies using PHP, you can go <a href="/sites.php3">here</a>. 
+This page, however, is a listing of cool things based on PHP, available for download.
+<P>
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<? makeEntry("Keystone","www.stonekeep.com/keystone/","Dave Belfer-Shevett","shevett@pobox.com"); ?>
+Keystone is the next generation of PTS, the project tracking system developed by Dave Belfer-Shevett. It is
+a complete rewrite of the system, with a new user interface built from the ground up. 
+<? endEntry();?>
+
+<? makeEntry("Phorum","www.brian.threadnet.com/forum/","Brian Moon","brianlmoon@iname.com"); ?>
+Forums and message boards are popping up all over the place. To this point the most 
+popular has been the free perl one at Matt's Script Archive. This project is trying
+to design a better forum with the use of PHP and a database. We are currently using
+mySQL, but hope to either have a databse independent version or multiple versions for
+different databases in the future.
+<? endEntry();?>
+
+<TR bgcolor='#D0D0D0' valign=top>
+<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD VALIGN=middle ALIGN=left rowspan=2>
+If you have a project you feel belongs on this list, send us email us at <A HREF="projects@php.net">projects@php.net</A>.
+<BR></TD>
+<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+</TR>
+<TR VALIGN=bottom bgcolor='#D0D0D0'>
+<TD ALIGN=left><IMG alt=" " SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG alt=" " SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+</TR>
+
+</TABLE>
+
+<? commonFooter(); ?>

@@ -68,6 +68,11 @@ function preloadImages() {
 		b_sour1 = new Image();
 		b_sour1.src = "/gifs/b-source-c.gif";
 
+		b_proj0 = new Image();
+		b_proj0.src = "/gifs/b-projects-p.gif";
+		b_proj1 = new Image();
+		b_proj1.src = "/gifs/b-projects-c.gif";
+
 		b_mirr0 = new Image();
 		b_mirr0.src = "/gifs/b-mirror-p.gif";
 		b_mirr1 = new Image();
@@ -283,7 +288,7 @@ function moveLayers() {
 			screenWidth = window.innerWidth;
 <? if ($FRAMEMODE!="manual"): ?>
 			document.layers['mirrorsKick'].left = 140;
-			document.layers['mirrorsKick'].top = 185;
+			document.layers['mirrorsKick'].top = 215;
 <? endif; ?>
 			document.layers['searchKick'].left = screenWidth-350;
 			document.layers['searchKick'].top = 36;
@@ -291,7 +296,7 @@ function moveLayers() {
 			screenWidth = document.body.clientWidth + 18;
 <? if ($FRAMEMODE!="manual"): ?>
 			document.all['mirrorsKick'].style.pixelLeft = 140;
-			document.all['mirrorsKick'].style.pixelTop = 185;
+			document.all['mirrorsKick'].style.pixelTop = 215;
 <? endif; ?>
 			document.all['searchKick'].style.pixelLeft = screenWidth-350;
 			document.all['searchKick'].style.pixelTop = 36;
@@ -421,6 +426,7 @@ endif; ?>
 #		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
 		makeSideButton("support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("news.php3","news","","news",129,30,0,10,"PHP in the News","<BR>\n");
+		makeSideButton("projects.php3","proj","","projects",129,30,0,10,"Projects using PHP","<BR>\n");
 		makeSideButton("links.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
 		makeSideButton("mirrors.php3","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
 	endif; ?>
