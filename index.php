@@ -166,24 +166,9 @@ commonHeader("Hypertext Preprocessor");
  been announced now. Just submit your sessions at <a 
  href="http://www.phpconference.de/kt/input/">http://www.phpconference.de/kt/input/</a> -
  they'll be reviewed by the Chair Board which consists this year of:
- <ul>
-  <li>
-   Bj&ouml;rn Schotte (chair)
-  </li>
-  <li>
-   Zak Greant
-  </li>
-  <li>
-   Derick Rethans
-  </li>
-  <li>
-   George Schlossnagle
-  </li>
-  <li>
-   Sascha Schumann
-  </li>
- </ul>
- The full conference website will be online soon.
+ Bj&ouml;rn Schotte (chair), Zak Greant, Derick Rethans, George
+ Schlossnagle, Sascha Schumann. The full conference website will
+ be online soon.
 </p>
 
 <hr />
