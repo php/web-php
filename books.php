@@ -489,11 +489,11 @@ by Herbert G. Fischer<BR>
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/thephpdevelopmte/"
 ><IMG SRC="/jpgs/dehnhardt.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/382725793X/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446214135/thephpdevelopmte"
 >Scriptsprachen f&uuml;r dynamische Webauftritte: JavaScript, VBScript, ASP, Perl, PHP, XML</A><BR>
 by Prof. Dr. Wolfgang Dehnhardt<BR>
 <SMALL>Hanser Verlag, Dec 2000, ISBN 3-446-21413-5, 452 pages<BR>
-In German: <A HREF="http://www.wsite.de/">more info</A>
+in German: <A HREF="http://www.wsite.de/">more info</A>
 </SMALL>
 </TD>
 </TR>
