@@ -13,9 +13,8 @@ the MySQL module, due to bad settings.
 <P>
 In order to try and avoid such occurences in the future, we've assembled
 a beta testing team that would check out every new release before it's 
-announced.  If youare willing to beta test PHP releases on your servers
-before they're released, and have access to 'exotic' platforms, please
-mail as at <a href="mailto:core@php.net">core@php.net</a>.
+announced.  Online registration for the beta testing team will be available
+soon.
 </P>
 <P>
 All users of earlier versions of PHP are strongly encouraged to upgrade to
