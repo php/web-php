@@ -79,7 +79,7 @@ echo "\n<!--$MYSITE-->\n";
 
 <?php print_link("http://photos.jdimedia.nl/phpdoc/", make_image("brain.gif", "PHPDoc Brain", "right") ); ?>
 
-<h1>PHP Document Meeting</h1>
+<h1>PHP Documentation Team Meeting</h1>
 <p>
 <font class="newsDate">[13-Mar-2002]</font>
 The protocol from the PHP Docuementation Team Meeting (Stuttgart, March 8th-10th) is now available.
