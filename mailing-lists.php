@@ -85,6 +85,13 @@ if (isset($_POST['maillist'])) {
 </p>
 
 <p>
+ Some PHP.net subsites have their own project specific pages about mailing
+ lists. You can find the <a href="http://pear.php.net/support.php">PEAR
+ mailing lists</a> and the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ mailing lists</a> on their own pages.
+</p> 
+
+<p>
  <b>Note:</b> When posting to mailing lists or newsgroups, please keep 
  the following in mind:
 </p>
@@ -171,50 +178,6 @@ if (isset($_POST['maillist'])) {
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
       FALSE, FALSE, FALSE, 'php.soap'
-    ),
-
-    'PEAR mailing lists',
-    array (
-      'pear-general', 'PEAR general list',
-      'A list for users of PEAR, an open-source common code library for PHP',
-      FALSE, TRUE, TRUE, "php.pear.general"
-    ),
-    array (
-      'pear-dev', 'PEAR developers list',
-      'A list for developers of PEAR, an open-source common code library for PHP',
-      FALSE, TRUE, TRUE, "php.pear.dev"
-    ),
-    array (
-      'pear-doc', 'PEAR documentation list',
-      'A list involving the documentation of PEAR, an open-source common code library for PHP',
-      FALSE, FALSE, TRUE, "php.pear.doc"
-    ),
-    array (
-      'pear-cvs', 'PEAR CVS list',
-      'All the commits of the cvs PEAR code repository are posted to this list automatically',
-      FALSE, TRUE, TRUE, "php.pear.cvs"
-    ),
-
-    'PHP-GTK mailing lists',
-    array (
-      'php-gtk-general', 'PHP-GTK general list',
-      'A list for users of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
-      FALSE, TRUE, TRUE, "php.gtk.general"
-    ),
-    array (
-      'php-gtk-doc', 'PHP-GTK documentation list',
-      'List for the authors of the PHP-GTK documentation with CVS commits',
-      FALSE, TRUE, FALSE, "php.gtk.doc"
-    ),
-    array (
-      'php-gtk-dev', 'PHP-GTK developers list',
-      'A list for the developers of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
-      FALSE, TRUE, TRUE, "php.gtk.dev"
-    ),
-    array (
-      'php-gtk-cvs', 'PHP-GTK CVS list',
-      'All the commits to the cvs PHP-GTK code repository are posted to this list automatically' ,
-      FALSE, TRUE, TRUE, "php.gtk.cvs"
     ),
 
     'Smarty template engine project mailing lists',
