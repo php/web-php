@@ -47,9 +47,10 @@ commonHeader("Documentation");
 // Check for really available manual languages
 $man_languages = array();
 foreach ($LANGUAGES as $code => $langname) {
-    if (file_exists("manual/$code/index.php")) {
+// Avoid this stat call here for the moment
+//    if (file_exists("manual/$code/index.php")) {
         $man_languages[] = $code;
-    }
+//    }
 }
 $lastlang = count($man_languages) - 1;
 
