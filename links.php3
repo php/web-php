@@ -24,11 +24,11 @@ There's also a searchable directory at
 <A HREF="http://phphosts.easydns.com/">phphosts.easydns.com</A>, complete with comments from users.
 </P>
 
-<h3>Example Code</h3>
-<P>
-Looking for some sample PHP scripts?  Try these sites:
-</P>
+<h3>Getting Started</h3>
+<P>On these sites you will find tutorials, articles and example scripts</P>
 <UL>
+<LI><a HREF="http://www.devshed.com/resource/advanced/php3.phtml">PHP3 resources at DevShed</a><BR>
+A good set of articles introducing various PHP concepts<BR>
 <LI><A HREF="http://php.codebase.org">PHP.CodeBase.Org</A><BR>
 A nice all-around support site<BR>
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
