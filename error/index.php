@@ -72,6 +72,14 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &
 }
 
 // ============================================================================
+// Nice URLs for download files, so wget works completely well with download links
+if (preg_match("!^get/([^/]+)$!", $URI, $filepart)) {
+    $df = $filepart[1];
+    include_once "$DOCUMENT_ROOT/get_download.php";
+    exit;
+}
+
+// ============================================================================
 // Define shortcuts for PHP files, manual pages and external redirects
 $uri_aliases = array (
 
