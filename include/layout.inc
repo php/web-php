@@ -152,7 +152,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 # print a link for a downloadable file (including filesize)
 #
 
-function download_link($file, $title) {
+function download_link($file, $title, $mirror = '') {
 
 	if ($tmp = strrchr($file, "/")) {
 		$local_file = substr($tmp, 1, strlen($tmp));
@@ -162,9 +162,14 @@ function download_link($file, $title) {
 
 	$size = @filesize($local_file);
 	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
+ 
+ $download_link = "/do_download.php?download_file=$file";
+ if ($mirror != '') {
+    $download_link = "http://$mirror" . $download_link;
+ }
 
-    print_link("/do_download.php?download_file=$file", $title);
-#    print_link("/distributions/$file", $title);
+    print_link($download_link, $title);
+#   print_link("/distributions/$file", $title);
 
 	// Print out size in bytes (if size is less the 1Kb, or else in Kb)
 	if ($size) {
