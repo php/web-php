@@ -179,6 +179,29 @@ MacMillan, November 2000, ISBN 0-6723-1924-1, 500 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet"
+><IMG SRC="/jpgs/allen_wyke.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="140"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672320290/wwwphpnet">PHP Developer's Dictionary</A><BR>
+by R. Allen Wyke, Michael J. Walker and Robert Cox<BR>
+<SMALL>
+Sams, Dec 2000, ISBN 0-6723-2029-0, 500 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/07357090X/wwwphpnet"
+><IMG SRC="/jpgs/till_gerken.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/073570970X/wwwphpnet">PHP Functions Essential Reference</A><BR>
+by <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A>, <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A>, Landon Bradshaw, <A HREF="http://zend.com/comm_person.php?id=32">Graeme Merral</A>, Stephen Wall (Editor)<BR><SMALL>
+New Riders Publishing, April 2001, ISBN 0-7357-0970-X, 500 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD COLSPAN=2><B>Other Languages</B></TD>
 </TR>
 
@@ -310,12 +333,12 @@ by Matt Zandstra<BR>
 
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07"
-><IMG SRC="/jpgs/tobias_and_till.jpg" BORDER=0 ALIGN="left" width="111" height="157"
+><IMG SRC="/jpgs/tobias_and_till.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="152"
 ></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827317304/wwwphpnet07"
 >Webanwendungen mit PHP 4.0 entwickeln</A><BR>
-by Tobias Ratschiller and Till Gerken<BR>
+by <A HREF="http://zend.com/comm_person.php?id=7">Tobias Ratschiller</A> and <A HREF="http://zend.com/comm_person.php?id=11">Till Gerken</A><BR>
 <SMALL>in German, Addison-Wesley, Jan 2001, ISBN 3-8273-1730-4, 400 pages<BR>
 </TD>
 </TR>
