@@ -173,6 +173,11 @@ $minute = rand(0, 59);
      &lt;IfModule mod_speling.c&gt;
        CheckSpelling Off
      &lt;/IfModule&gt;
+     
+     # If you have Russian Apache with mod_charset installed,
+     # do not forget to search for this line in your existing
+     # configuration, and comment it out:
+     # AddHandler strip-meta-http .htm .html 
          
    &lt;/VirtualHost&gt;
 </pre>
