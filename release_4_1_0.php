@@ -75,21 +75,6 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-<?php /* move this entry to the top when you update it! */ ?>
-
-<h1>PHP 4.0.6 Released!</h1>
-
-<p>
-<font class="newsDate">[10-Dec-2001]</font>
-<a href="/downloads.php">PHP 4.1.0</a> is key new release in the PHP 4 family.  It includes
-highly improved performance, especially under Windows;  A new, and more security-friendly
-way of accepting form variables;  Output compression, and much, much more.  Read the full
-<a href="/release_4_1_0.php">Release Announcement</a>, or check out the
-<a href="/ChangeLog-4.php">Change Log</a>.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
 
 <h1>
 PHP 4.1.0 Release Announcement
