@@ -1,5 +1,6 @@
 <?php
 require_once 'prepend.inc';
+require_once 'email-validation.inc';
 
 commonHeader("Mailing Lists");
 ?>
@@ -7,8 +8,8 @@ commonHeader("Mailing Lists");
 <?php
 if (isset($maillist)) {
 	# should really grab some email validating routine and use it here.
-	if (empty($email) || $email == 'user@example.com' || $email == 'fake@from.net') {
-		echo "You forgot to specify an email address to be added to the list. ";
+	if (empty($email) || $email == 'user@example.com' || $email == 'fake@from.net' || !is_emailable_address($email)) {
+		echo "You forgot to specify an email address to be added to the list, or specified an invalid address. ";
 		echo "Go back and try again.";
 	} else {
 		$request = strtolower($action);
