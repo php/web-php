@@ -225,7 +225,7 @@ function commonHeader($title="",$dont_enclose=0) {
 	print_link('/links.php','links',false,'class="small"');
 	echo delim();
 	print_link('/search.php','search:',false,'class="small"');
-	echo ' <input class="small" type="text" name="what" size=10> ';
+	echo ' <input class="small" type="text" name="pattern" size=10> ';
 	echo make_submit('small_submit.gif', 'search', 'bottom');
       ?>&nbsp;<br>
       </td>
