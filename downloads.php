@@ -129,15 +129,15 @@ site_header("Downloads");
  </li>
 </ul>
 
-<h2>Windows Binaries (Release Candidate 1 binaries will be posted soon)</h2>
+<h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b4-Win32.zip', 'PHP 5.0.0b4 zip package'); ?> - 12 Feb 2004<br />
-  <span class="md5sum">md5: 00033ff76e862078e672662d26a135cd</span>
+  <?php download_link('php-5.0.0RC1-Win32.zip', 'PHP 5.0.0RC1 zip package'); ?> - 18 Mar 2004<br />
+  <span class="md5sum">md5: 71856f78bf28b49c114c00a522752ba4</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.0b4-Win32.zip', 'Collection of PECL modules for PHP 5.0.0b4'); ?> - 12 Feb 2004<br />
-  <span class="md5sum">md5: 0a753ea1efd6aa398bc7dc88fbf8db2c</span>
+  <?php download_link('pecl-5.0.0RC1-Win32.zip', 'Collection of PECL modules for PHP 5.0.0RC1'); ?> - 18 Mar 2004<br />
+  <span class="md5sum">md5: 217e8d66a85ebe73767e2c3c73c11f00</span>
  </li>
 </ul>
 
