@@ -196,13 +196,23 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
         $sizeparams = '';
     }
     
+    // Convert right or left alignment to CSS float,
+    // but leave other alignments intact (for now)
+    if (in_array($align, array("right", "left"))) {
+        $align = ' style="float: ' . $align . ';"';
+    } elseif ($align) {
+        $align = ' align="' . $align . '"';
+    } else {
+        $align = '';
+    }
+    
     // Return with image built up
     return sprintf('<img src="%s/%s" alt="%s"%s%s%s />',
         $webdir,
         $file,
         ($alt    ? $alt : ''),
         $sizeparams,
-        ($align  ? ' align="' . $align . '"'  : ''),
+        $align,
         ($extras ? ' ' . $extras              : '')
     );
     return $image;
