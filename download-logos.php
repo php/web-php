@@ -9,9 +9,15 @@ logo (except where otherwise indicated).  Then, link it to the main PHP
 site at <B>www.php.net</B>.
 </P>
 <P>
-If you are using the PHP logo for commercial purposes (t-shirts, coffee mugs,
-product packaging, etc.), then you need to contact 
-<A HREF="mailto:logos@php.net">logos@php.net</A> for licencing information.
+<B>Note:</B> If you are planning on making money off of our logo 
+(e.g. you want to make merchandise with the logo ... t-shirts, coffee mugs, 
+pocket protectors, etc.), then you need to contact 
+<A HREF="mailto:logos@php.net">logos@php.net</A> for licencing information.  
+For pretty much all other uses, there is no licensing requirement.  For 
+example: a logo on your website showing that you use/promote PHP, even 
+commercial websites; course materials; a t-shirt or two for your own use 
+and some friends; a PHP-related book; a banner for your computer group; etc..
+If in doubt, <A HREF="mailto:logos@php.net">ask</A>.
 </P>
 <p>
 <font color="#ff0000">Do not just include the graphic from our
