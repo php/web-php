@@ -150,6 +150,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("/downloads.php#v5", "php-version5.gif", "PHP 5"); ?>
+<a name="5.0.1"></a>
+<h1>PHP 5.0.1 Released!</h1>
+<p>
+ <span class="newsdate">[12-Aug-2004]</span>
+ PHP Development Team would like to announce the immediate availability of <a href="/downloads.php">PHP 5.0.1</a>.
+ This is a maintenance release that in addition to many non-critical bug fixes also includes new UNIX and
+ Windows installation docs which are now auto-generated from the PHP Manual.
+</p>
+
+<p>
+ For changes since PHP 5.0.0, please consult the
+ <a href="/ChangeLog-5.php#5.0.1">ChangeLog</a>.
+</p>
+
+<hr />
+
+
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.9RC1 released!</h1>
 <p>
