@@ -26,8 +26,8 @@ the server and bandwidth for various php.net services.
 </p>
 
 <p>
-<?php print_link("http://valinux.com/", "VA Linux Systems"); ?> provides the server and 
-bandwidth that run various services for php.net.
+<?php print_link("http://vasoftware.com/", "VA Software Corporation"); ?>
+provides the server and bandwidth that run various services for php.net.
 </p>
 
 <p>
