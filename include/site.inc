@@ -11,7 +11,7 @@
 
 $MIRRORS = array(
    "http://au.php.net/"              => array("au", "Planet Mirror", 0, "http://www.planetmirror.com/", 1, 0, "en"),
-   "http://au2.php.net/"            => array("au", "Flinders University of South Australia", 0, "http://www.nisu.flinders.edu.au/", 1, 0, "en"),
+   "http://au2.php.net/"            => array("au", "Flinders University of South Australia", 1, "http://www.nisu.flinders.edu.au/", 1, 0, "en"),
    "http://at.php.net/"               => array("at", "Goodie Domain Service", 0, "http://gd.tuwien.ac.at/", 1, 0, "de"),
    "http://br.php.net/"               => array("br", "SST Internet", 0, "http://www.sst.com.br/", 1, 0, "pt_BR"),
    "http://br2.php.net/"               => array("br", "Lune Networks", 0, "http://www.lunenetworks.com.br/", 1, 0, "pt_BR"),
