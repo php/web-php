@@ -25,7 +25,7 @@ by Leon Atkinson<BR>
 <TD ALIGN="center"><TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
 ><IMG SRC="http://www.amazon.com/images/P/0071353429.01.MZZZZZZZ.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF=http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0071353429/cmvsstuff"
 >PHP3: Programming Browser-Based Applications (McGraw-Hill Tools Series)</A><BR>
 by David Medinets<BR>
 <SMALL><A HREF="http://www.mtolive.com/phpbook">more info</A><BR>
@@ -109,7 +109,7 @@ by Stephen Spainhour and Robert Eckstein<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1576104907/cmvsstuff"
 >Open Source Development with CVS</A><BR>
-<SMALL>Learn how to Work with Open Source Software</SMALL><BR>
+<SMALL>Learn how to work with Open Source Software</SMALL><BR>
 by Karl Franz Fogel<BR>
 <SMALL><A HREF="http://cvsbook.red-bean.com/">more info (and many free chapters)</A><BR>
 </SMALL>
