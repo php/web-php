@@ -386,7 +386,7 @@ $books = array (
    array("PHP 4 Webbook",    #title(s)
       "http://www.amazon.de/exec/obidos/ASIN/381550502X/wwwphpnet07", #title_link
       array("Mark Kronsbein", "Thomas Weinert"), #author(s)
-      array("http://www.zend.com/comm_person?id=36", false), #author_link(s)
+      array("http://www.zend.com/comm_person.php?id=36", false), #author_link(s)
       "mark_thomas.jpg", #img
       "Sybex, March 2001, ISBN 3-8984-2116-3, 500 pages", #info
       "http://www.phpbuch.de/", #info_link
