@@ -9,6 +9,50 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.2"></a>
+<h3>Version 5.0.2</h3>
+<b>23-Sep-2004</b>
+<ul>
+<li> Added new boolean (fourth) parameter to array_slice() that turns on the preservation of keys in the returned array. (Derick) </li>
+<li> Added the sorting flag SORT_LOCALE_STRING to the sort() functions which makes them sort based on the current locale. (Derick) </li>
+<li> Added interface_exists() and make class_exists() only return true for real classes. (Andrey) </li>
+<li> Added PHP_EOL constant that contains the OS way of representing newlines.  (Paul Hudson, Derick) </li>
+<li> Implemented periodic PCRE compiled regexp cache cleanup, to avoid memory exhaustion. (Andrei) </li>
+<li> Renamed SoapClient->__call() to SoapClinet->__soapCall(). (Dmitry) </li>
+<li> Fixed bug with raw_post_data not getting set (Brian) </li>
+<li> Fixed a file-descriptor leak with phpinfo() and other 'special' URLs (Zeev) </li>
+<li> <?php bugfix(30209); ?> (ReflectionClass::getMethod() lowercases attribute).  (Marcus) </li>
+<li> <?php bugfix(30182); ?> (SOAP module processing WSDL file dumps core). (Dmitry) </li>
+<li> <?php bugfix(30045); ?> (Cannot pass big integers (> 2147483647) in SOAP requests).  (Dmitry) </li>
+<li> <?php bugfix(29985); ?> (unserialize()/ __PHP_Incomplete_class does not report correctly class name). (Marcus, Tony) </li>
+<li> <?php bugfix(29945); ?> (simplexml_load_file URL limitation 255 char). (Rob) </li>
+<li> <?php bugfix(29873); ?> (No defines around pcntl_*priority definitions). (Derick) </li>
+<li> <?php bugfix(29844); ?> (SOAP doesn't return the result of a valid SOAP request).  (Dmitry) </li>
+<li> <?php bugfix(29842); ?> (soapclient return null value). (Dmitry) </li>
+<li> <?php bugfix(29839); ?> (incorrect convert (xml:lang to lang)). (Dmitry) </li>
+<li> <?php bugfix(29830); ?> (SoapServer::setClass() should not export non-public methods). (Dmitry) </li>
+<li> <?php bugfix(29828); ?> (Interfaces no longer work). (Marcus) </li>
+<li> <?php bugfix(29821); ?> (Fixed possible crashes in convert_uudecode() on invalid data). (Ilia) </li>
+<li> <?php bugfix(29808); ?> (array_count_values() breaks with numeric strings). (Ilia) </li>
+<li> <?php bugfix(29805); ?> (HTTP Authentication Issues). (Uwe Schindler) </li>
+<li> <?php bugfix(29795); ?> (SegFault with Soap and Amazon's Web Services). (Dmitry) </li>
+<li> <?php bugfix(29737); ?> (ip2long should return -1 if IP is 255.255.255.255 and FALSE on error). (Tony) </li>
+<li> <?php bugfix(29711); ?> (Changed ext/xml to default to UTF-8 output). (Rob) </li>
+<li> <?php bugfix(29678); ?> (opendir() with ftp:// wrapper segfaults if path does not have trailing slash). (Ilia) </li>
+<li> <?php bugfix(29657); ?> (xml_* functions throw non descriptive error).  (Christian, Rob) </li>
+<li> <?php bugfix(29656); ?> (segfault on result and statement properties). (Georg) </li>
+<li> <?php bugfix(29566); ?> (foreach/string handling strangeness (crash)). (Dmitry) </li>
+<li> <?php bugfix(29447); ?> (Reflection API issues). (Marcus) </li>
+<li> <?php bugfix(29296); ?> (Added sslv2 and sslv3 transports). (Wez) </li>
+<li> <?php bugfix(29283); ?> (Invalid statement handle in mysqli on execute). (Georg) </li>
+<li> <?php bugfix(29913); ?> (parse_url() is now binary safe). (Ilia) </li>
+<li> <?php bugfix(27994); ?> (segfault with Soapserver when WSDL-Cache is enabled).  (Dmitry) </li>
+<li> <?php bugfix(27791); ?> (Apache 2.0 SAPI build against Apache 2 HEAD). (Joe Orton, Derick) </li>
+<li> <?php bugfix(26737); ?> (private/protected properties not serialized when user declared method __sleep() exists). E_NOTICE thrown when __sleep() returns name of non-existing member. (Andrey, Curt)</li>
+</ul>
+
+<hr />
+
 <a name="5.0.1"></a>
 <h3>Version 5.0.1</h3>
 <b>12-Aug-2004</b>
