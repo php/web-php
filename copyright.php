@@ -26,7 +26,7 @@ The PHP Group.  All rights reserved.
 
 <P>
 Except as otherwise indicated elsewhere on this Site, you are free
-view, download and print the documents and information available 
+to view, download and print the documents and information available 
 on this Site subject to the following conditions:
 </P>
 <UL>
