@@ -2,6 +2,25 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'docs-echm.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+$SIDEBAR_DATA='
+<h3>Download</h3>
+<p>
+ The <a href="/get/php_manual_chm_12.zip/from/a/mirror">latest (12th) build of
+ the PHP Manual CHM Edition</a> fixes the known bugs from the previous build,
+ introduces the brilliant new phpZ skin (see screenshots) and contains up to
+ date content (released on the 6th September 2003).
+</p>
+
+<h3>Screenshots</h3>
+<div class="center">
+ <a href="/images/echm/shot1.png"><img src="/images/echm/shot1_mini.png" alt="PHP documentation displayed with 'low' skin" title="PHP documentation displayed with 'low' skin" /></a>
+ <a href="/images/echm/shot3.png"><img src="/images/echm/shot3_mini.png" alt="PHP documentation displayed with 'headernostalgia' skin" title="PHP documentation displayed with 'headernostalgia' skin" /></a>
+ <a href="/images/echm/shot2.png"><img src="/images/echm/shot2_mini.png" alt="PHP documentation displayed with 'phpz' skin" title="PHP documentation displayed with 'phpz' skin" /></a>
+ <a href="/images/echm/prefs.png"><img src="/images/echm/prefs_mini.png" alt="Setting preferences" title="Setting preferences" /></a>
+</div>
+';
+
 site_header("Documentation - Extended CHM Format");
 ?>
 
@@ -35,17 +54,16 @@ site_header("Documentation - Extended CHM Format");
  <ul>
   <li>Full tree like TOC menu of pages, with even the smallest parts included</li>
   <li>Alpabetical index of all pages [with quick access to functions]</li>
-
-  <li>Full text search [see the chapter about FTS in the CHM]</li>
+  <li>Full text search (see the chapter about FTS in the CHM)</li>
   <li>Personal favourites listing</li>
   <li>Window position and size remembered</li>
  </ul>
 
- <h3>Features in PHP Manual CHM Edition [current build]</h3>
+ <h3>Features in PHP Manual CHM Edition (current build)</h3>
  <ul>
   <li>Two clean and clear designs</li>
   <li>Extension mechanism to apply your own CSS or your own graphical design</li>
-  <li>Manual notes included as separate file [see the chapter about full text search in the CHM]</li>
+  <li>Manual notes included as separate file (see the chapter about full text search in the CHM)</li>
   <li>External windows application to manage preferences</li>
   <li>Online functions, bug reporting on manual pages</li>
   <li>Support for right click menu overrides, custom right click menus</li>
@@ -53,7 +71,7 @@ site_header("Documentation - Extended CHM Format");
   <li>'Path to this page' displayed for all the pages</li>
   <li>External links open in new window, and marked with '&raquo;'</li>
   <li>General gray table look and feel for misc. tables</li>
-  <li>Integration with popular IDEs [<a href="#ides">see below for more information!</a>]</li>
+  <li><a href="#ides">Integration with popular IDEs</a></li>
  </ul>
 
  <h3>Planned features for the next builds</h3>
@@ -82,14 +100,6 @@ site_header("Documentation - Extended CHM Format");
   <a href="http://www.google.com/search?q=cache:IjPT5nzzj68C:216.136.1.66/2002Graphics/Graphics/MSVCP60%2520error.doc">this
   page will help you</a>. This is not something to fix in our package.
 </p>
-
-<a name="shots"></a>
-<h2>Screenshots</h2>
-
-<a href="/images/echm/shot1.png"><img src="/images/echm/shot1_mini.png" alt="PHP documentation displayed with 'low' skin" title="PHP documentation displayed with 'low' skin" /></a>
-<a href="/images/echm/shot3.png"><img src="/images/echm/shot3_mini.png" alt="PHP documentation displayed with 'headernostalgia' skin" title="PHP documentation displayed with 'headernostalgia' skin" /></a>
-<a href="/images/echm/shot2.png"><img src="/images/echm/shot2_mini.png" alt="PHP documentation displayed with 'phpz' skin" title="PHP documentation displayed with 'phpz' skin" /></a>
-<a href="/images/echm/prefs.png"><img src="/images/echm/prefs_mini.png" alt="Setting preferences" title="Setting preferences" /></a>
 
 <a name="ides"></a>
 <h2>IDE integration</h2>
@@ -256,15 +266,5 @@ site_header("Documentation - Extended CHM Format");
   </p>
  </li>
 </ul>
-
-<a name="download"></a>
-<h2>Download</h2>
-
-<p>
- The <a href="/get/php_manual_chm_12.zip/from/a/mirror">latest (12th) build of
- the PHP Manual CHM Edition</a> fixes the known bugs from the previous build,
- introduces the brilliant new phpZ skin (see screenshots) and contains up to
- date content (released on the 6th September 2003).
-</p>
 
 <?php site_footer(); ?>
