@@ -607,6 +607,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Tanuljuk meg a PHP4 használatát 24 óra alatt",
+    /* title_link   */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
+    /* author[s]    */ "Matt Zandstra",
+    /* auth link[s] */ "",
+    /* image        */ "zandstra_hu.jpg",
+    /* information  */ "Kiskapu, Aug 2001, ISBN 963-9301-30-2, 560 pages",
+    /* inform. link */ "http://www.kiskapu.hu/kiskapu/search.phtml?detailed=120449801",
+    /* language     */ "hu"
+  ),
+
+  array(
     /* title[s]     */ "PHP Guia de Consulta R&aacute;pida",
     /* title_link   */ "http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216",
     /* author[s]    */ "Herbert G. Fischer",
