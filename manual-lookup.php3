@@ -38,7 +38,7 @@ while (list($dummy, $file) = each($try_files)) {
     }
 }
 
-Header("Location: search.php3?pattern=".urlencode($function)."show=nosource");
+Header("Location: search.php3?pattern=".urlencode($function)."&show=nosource");
 exit;
 
 
