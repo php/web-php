@@ -16,6 +16,84 @@ site_header("News Archive - 2004");
 <div class="newspage">
 <hr />
 
+<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>Zend's PHP 5 Coding Contest</h1>
+
+<p>
+ <span class="newsdate">[06-Jun-2004]</span>
+ <a href="http://www.zend.com/php5/contest/">Zend's
+ PHP 5 Coding Contest</a> is underway and accepting submissions. 
+ This is every developer's chance to flaunt their PHP 5 skills
+ and let their application shine!
+</p>
+
+<p>
+ Applications will be rated both by your peers and by a panel of
+ judges assembled from among the most known and well-respected
+ names in the PHP community. 
+</p>
+
+<p>
+ Lots of <a href="http://www.zend.com/php5/contest/prizes.php">prizes</a>
+ are available!
+</p>
+
+<hr />
+
+<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<h1>PHP 5 Release Candidate 2 Released!</h1>
+<p>
+ <span class="newsdate">[25-Apr-2004]</span>
+ The <a href="/downloads.php#v5">second Release Candidate of PHP 5</a> is now
+ available! This mostly bug fix release improves PHP 5's stability and irons out
+ some of the remaining issues before PHP 5 can be deemed release quality. Note
+ that it is still <i>not</i> recommended for mission-critical use but people are
+ encouraged to start playing with it and report any problems.
+</p>
+
+<p>Key changes since Release Candidate 1 include:</p>
+
+<ul>
+ <li>
+  The Zend Engine I compatibility mode (zend.ze1_compatibility_mode) has been
+  re-implemented to more accurately support PHP 4's object auto-clone behavior.
+ </li>
+ <li>
+  All object-oriented extensions except for MySQLi have moved to studlyCaps.
+  This includes SQLite, SOAP, Reflection API, Ming and others.
+ </li>
+ <li>
+  Implementing an interfaces and/or abstract method with the wrong prototype is
+  now a fatal error. For backwards compatibility, re-implementing regular methods
+  with the wrong prototype will only result in an E_STRICT warning.
+ </li>
+ <li>
+  Features as described in the Release Candidate 1
+  <a href="/index.php#5.0.0RC1">release announcement</a>
+ </li>
+ <li>And lots more...</li>
+</ul>
+
+<p>
+ For changes since Release Candidate 1, please consult the
+ <a href="/ChangeLog-5.php#5.0.0RC2">ChangeLog</a>.
+</p>
+
+<hr />
+
+<h1>Second PHP Marathon announced</h1>
+<p>
+ <span class="newsdate">[06-Apr-2004]</span>
+ DotGeek.org is proud to announce the <a href="http://marathon.dotgeek.org/">second
+ PHP Programming Marathon</a> to be held on the 24 April 2004. Instead of receiving the
+ problems and composing your solutions offline, it all takes place online and within
+ a specific timeframe. The Marathon is kindly sponsored by Zend Technologies and will
+ now feature a problem on PHP 5. Participation is free of charge.
+</p>
+
+<hr />
+
 <?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <a name="5.0.0RC1"></a>
 <h1>PHP 5 Release Candidate 1 Released!</h1>

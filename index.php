@@ -146,7 +146,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.afup.org/forumphp/", "afup2003.png", "Forum PHP"); ?>
+<?php news_image("http://www.afup.org/forumphp/", "afup2004.png", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 18 &amp; 19, 2004</h1>
 <p>
@@ -220,7 +220,7 @@ commonHeader("Hypertext Preprocessor");
  OSCOM, the international association for Open Source Content Management
  is arranging the <a href="http://oscom.org/events/oscom4/program/">Fourth
  Open Source Content Management Conference</a> from 29th September to 1st
- October in Zürich. This fall, the event features Apache Software Foundation
+ October in Zrich. This fall, the event features Apache Software Foundation
  projects, and PHP, so you have a chance to meet some prominent
  figures of the PHP scene there. OSCOM.4 is a place for developers,
  vendors, integrators and users to mingle and learn from each other. <a
@@ -428,112 +428,6 @@ commonHeader("Hypertext Preprocessor");
 <p>There are few changes changes since Release Candidate 2, which can be found
 <a href="/ChangeLog-5.php#5.0.0RC3">here</a>.</p>
 </p>
-
-<hr />
-
-<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
-
-<h1>Zend's PHP 5 Coding Contest</h1>
-
-<p>
- <span class="newsdate">[06-Jun-2004]</span>
- <a href="http://www.zend.com/php5/contest/">Zend's
- PHP 5 Coding Contest</a> is underway and accepting submissions. 
- This is every developer's chance to flaunt their PHP 5 skills
- and let their application shine!
-</p>
-
-<p>
- Applications will be rated both by your peers and by a panel of
- judges assembled from among the most known and well-respected
- names in the PHP community. 
-</p>
-
-<p>
- Lots of <a href="http://www.zend.com/php5/contest/prizes.php">prizes</a>
- are available!
-</p>
-
-<hr />
-
-<?php news_image("http://www.afup.org/article.php3?id_article=242", "afup2004.jpg", "AFUP"); ?>
-<h1>Call to speaker for Paris Forum 2004</h1>
-<p>
- <span class="newsdate">[17-May-2004]</span>
- The <a href="http://www.afup.org/index.php">AFUP</a>, Association Fran&ccedil;aise
- des Utilisateurs de PHP, is proud to announce the forum PHP 2004. For this 
- unique event in France, we are looking for the best French speaking experts, 
- who want to share their know-how and enthusiasm. 
-</p>
-<p>
- The forum PHP features 2 days, with distinct themas:
- <ul>
-  <li>Technical day, with the most advanced PHP technics</li>
-  <li>Business day, with user cases and successful projects</li>
- </ul>
-</p>
-<p>
- The <a href="http://www.afup.org/article.php3?id_article=242">forum PHP 2004</a> 
- will take place in Paris, at the FIAP Jean Monnet, on thursday 18th and friday 
- 19th, november 2004.<br />
- More information in French at this <a 
- href="http://www.afup.org/article.php3?id_article=242">URL</a>.
-</p>
-
-<hr />
-
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
-<h1>PHP 5 Release Candidate 2 Released!</h1>
-<p>
- <span class="newsdate">[25-Apr-2004]</span>
- The <a href="/downloads.php#v5">second Release Candidate of PHP 5</a> is now
- available! This mostly bug fix release improves PHP 5's stability and irons out
- some of the remaining issues before PHP 5 can be deemed release quality. Note
- that it is still <i>not</i> recommended for mission-critical use but people are
- encouraged to start playing with it and report any problems.
-</p>
-
-<p>Key changes since Release Candidate 1 include:</p>
-
-<ul>
- <li>
-  The Zend Engine I compatibility mode (zend.ze1_compatibility_mode) has been
-  re-implemented to more accurately support PHP 4's object auto-clone behavior.
- </li>
- <li>
-  All object-oriented extensions except for MySQLi have moved to studlyCaps.
-  This includes SQLite, SOAP, Reflection API, Ming and others.
- </li>
- <li>
-  Implementing an interfaces and/or abstract method with the wrong prototype is
-  now a fatal error. For backwards compatibility, re-implementing regular methods
-  with the wrong prototype will only result in an E_STRICT warning.
- </li>
- <li>
-  Features as described in the Release Candidate 1
-  <a href="/index.php#5.0.0RC1">release announcement</a>
- </li>
- <li>And lots more...</li>
-</ul>
-
-<p>
- For changes since Release Candidate 1, please consult the
- <a href="/ChangeLog-5.php#5.0.0RC2">ChangeLog</a>.
-</p>
-
-<hr />
-
-<h1>Second PHP Marathon announced</h1>
-<p>
- <span class="newsdate">[06-Apr-2004]</span>
- DotGeek.org is proud to announce the <a href="http://marathon.dotgeek.org/">second
- PHP Programming Marathon</a> to be held on the 24 April 2004. Instead of receiving the
- problems and composing your solutions offline, it all takes place online and within
- a specific timeframe. The Marathon is kindly sponsored by Zend Technologies and will
- now feature a problem on PHP 5. Participation is free of charge.
-</p>
-
-<hr />
 
 <p class="center"><a href="/news-2004.php">News Archive</a></p>
 
