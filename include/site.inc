@@ -115,13 +115,18 @@ function mirror_status($site = FALSE)
     return $MIRRORS[$site][7];
 }
 
-// Guess the current site from what Apache tells us
+// Guess the current site from what Apache tells us.
+// This should be the main name of the mirror (in case
+// it works under more then one name). SERVER_NAME is
+// the name of the Apache vhost.
 $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
 
 // If this site does not exist
 if (!isset($MIRRORS[$MYSITE])) {
 
-    // Try the hostname [without www]
+    // Try the hostname [without www]. In case the main name above is
+    // not found, we try to find the mirror with the name provided by
+    // the browser (in the Host HTTP header).
     $MYSITE = 'http://' . ereg_replace("^www\\.", "", $_SERVER["HTTP_HOST"]) . '/';
 
     // If the mirror is not registered with this name, provide defaults
