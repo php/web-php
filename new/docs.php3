@@ -1,7 +1,6 @@
 <?
-require("site.inc");
 require("shared.inc");
-commonHeader("Documentation");
+commonHeader("Documentation ");
 ?>
 
 <ul>

@@ -1,6 +1,8 @@
 <?
 require("site.inc");
 
+$FONTFACE="TAHOMA,ARIAL";
+
 function spc($width, $height) {
 	echo "<IMG SRC='gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
 };
@@ -86,7 +88,7 @@ function jpgurl($img) {
 }
 
 function commonHeader($title) {
-	global $PHP_SELF, $HTTP_REFERER;
+	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
 ?>
 <HTML>
 <HEAD>
@@ -102,14 +104,6 @@ var NS4 = (bName == "Netscape" && bVer >= 4);
 var IE4 = (bName == "Microsoft Internet Explorer" && bVer >= 4);
 var NS3 = (bName == "Netscape" && bVer < 4);
 var IE3 = (bName == "Microsoft Internet Explorer" && bVer < 4);
-
-if (NS4) {
-	window.captureEvents(Event.RESIZE);
-	function ResizeHandler(e) {
-		window.location.reload(true);
-	}
-	window.onResize = ResizeHandler;
-}
 
 var loaded = 0;
 var layers = 0;
@@ -231,9 +225,10 @@ if (IE4) LoadImgs();
 </SCRIPT>
 </HEAD>
 
-<BODY OnLoad="LoadImgs()" BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0><A NAME="top">
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#4040ff" VLINK="#404040" ALINK="#00FF00" MARGINWIDTH=5 MARGINHEIGHT=0 OnLoad="LoadImgs();"><A NAME="top">
 <IMG SRC="gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
 <!-- Kick outs -->
+
 <SCRIPT LANGUAGE="Javascript1.2">
 <!--
 screenWidth=document.bigspacer.width;
@@ -250,6 +245,7 @@ if (IE4) {
 }
 
 document.writeln("<STYLE TYPE='text/css'>");
+document.writeln("TD { font-family: Tahoma, Arial, sans-serif }");
 document.write("#mirrorsKick {POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: ");
 document.write(mirrorPosTop);
 document.write("px; LEFT: ");
@@ -263,10 +259,12 @@ document.writeln("px;}");
 document.writeln("</STYLE>");
 //-->
 </SCRIPT>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+
+
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
 <TR valign=top>
-<TD ALIGN=left width=150>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TD ALIGN=left width=150 BGCOLOR="#5B69A6">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
 <TR VALIGN=top>
 <TD ALIGN=left>
 <IMG SRC="gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
@@ -286,13 +284,13 @@ document.writeln("</STYLE>");
 </TABLE>
 </TD>
 <TD align=left width="100%">
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
-<TR VALIGN=middle BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TD ALIGN=left><?spc(5,1);?><FONT FACE="TAHOMA,ARIAL" COLOR="#000000" SIZE=+1><B>
-<!-- start title -->
-<? echo $title;?>
-<!-- end title -->
-</B></FONT></TD>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
+<TR VALIGN=middle BGCOLOR="#5B69A6">
+<TD ALIGN=left WIDTH="100%">
+<?
+	spc(5,1);
+	echo "<FONT FACE=\"$FONTFACE\" SIZE=+1><B>$title</B></FONT><BR></TD>\n";
+?>
 <TD ALIGN=right><?
 if($title=="Show Source"):
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" WIDTH=1 HEIGHT=1 BORDER=0 NAME=\"sour\">";
@@ -305,17 +303,17 @@ else:
 endif;
 ?><A HREF="search.php3" onMouseover="hide();change('sear',1);showLayer('searchKick');" ><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
 </TR></TABLE>
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
-<TR VALIGN=top>
-<TD ALIGN=left WIDTH=12><IMG SRC="gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
-<TD ALIGN=left WIDTH=100%><FONT FACE="TAHOMA,ARIAL"><BR>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
+<TR VALIGN=top BGCOLOR="#FFFFFF">
+<TD ALIGN=left WIDTH="12"><IMG SRC="gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0></TD>
+<TD ALIGN=left WIDTH="100%"><FONT FACE="<? echo $FONTFACE;?>"><BR>
 <!-- start body -->
 <?
 };
 
-
 function commonFooter() {
-	global $MIRRORS,$MYSITE;
+	global $MIRRORS,$MYSITE,$FONTFACE, $COUNTRIES;
+	$country=$MIRRORS[$MYSITE][0];
 ?>
 <!-- end body -->
 </TD></TR>
@@ -324,15 +322,15 @@ function commonFooter() {
 </TD>
 </TR>
 
-<TR valign=top>
-<TD ALIGN=left width=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6"><?spc(150,1);?><BR></TD>
-<TD ALIGN=left width=100%><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR></TD>
+<TR valign=top BGCOLOR="#5B69A6">
+<TD ALIGN=left width="150"><?spc(150,1);?><BR></TD>
+<TD ALIGN=left width="100%" BGCOLOR="#FFFFFF"><IMG SRC="gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR></TD>
 </TR>
 
 <TR valign=top>
-<TD ALIGN=left width=150>
+<TD ALIGN=left width="150" BGCOLOR="#5B69A6">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=150 BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
 <TR VALIGN=bottom>
 <TD ALIGN=left>
 <?spc(1,3);?><BR>
@@ -342,24 +340,27 @@ function commonFooter() {
 </TR>
 </TABLE>
 
-</TD><TD align=left width=100%>
+</TD><TD align=left width="100%">
 
-<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
-<TR VALIGN=middle BACKGROUND="gifs/background-p.gif" BGCOLOR="#5B69A6">
-<TD ALIGN=right width=50%>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
+<TR VALIGN=middle>
+<TD ALIGN=center BGCOLOR="#5B69A6">
+
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
-<TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
-<I>Site Hosted by:</I><BR></TD>
-<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 vspace=12 hspace=10></A><BR></TD>
+<TR VALIGN=middle><TD align=right><FONT FACE="<? echo $FONTFACE;?>" SIZE=-2>
+<I>Site<BR>Hosting:</I><BR></TD>
+<TD><? spc(5,1);?><BR></TD>
+<TD><A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 vspace=12></A><BR></TD>
 </TR></TABLE>
 
 </TD>
-<TD ALIGN=right width=50%>
+<TD ALIGN=right BGCOLOR="#5B69A6">
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
-<TR VALIGN=middle><TD align=right><FONT FACE="TAHOMA,ARIAL" SIZE=-1>
-<I>Location:</I><BR><? echo $MIRRORS[$MYSITE][1]; ?><BR></TD>
-<TD><?spc(10,36);?><IMG SRC="gifs/flag-<? echo $MIRRORS[$MYSITE][0]; ?>.gif" BORDER=0><BR></TD>
+<TR VALIGN=middle><TD align=center><FONT FACE="<? echo $FONTFACE;?>" SIZE=-1>
+<FONT SIZE=-2><I>Located in</I></FONT><BR><? echo $COUNTRIES[$country]; ?><BR></TD>
+<TD><? spc(5,1);?><BR></TD>
+<TD><IMG SRC="gifs/flag-<? echo $country; ?>.gif" BORDER=0><BR></TD>
 <TD><IMG SRC="gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0><BR></TD>
 </TR></TABLE>
 
@@ -383,10 +384,11 @@ $mirror_sites=$MIRRORS;
 reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
+	$country=$mirror_sites[$site][0];
 	$place=$mirror_sites[$site][1];
 	$type=$mirror_sites[$site][4];
 	if ($type==1):
-		echo "<OPTION VALUE='$site'>$place";
+		echo "<OPTION VALUE='$site'>$place ($COUNTRIES[$country])";
 	endif;
 endwhile;?>");
 document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0></FORM>");
