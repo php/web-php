@@ -13,8 +13,8 @@ learning PHP, as well as extending your existing knowledge.
 <p>
 An increasing number of projects, both commercial and open
 source, are using PHP as their main development tool. There
-is <a href="/projects.php">a listing of some of the
-open-source PHP applications available</a>, courtesy of <a
+is a <a href="/projects.php">listing of some of the
+open-source PHP applications</a> available, courtesy of <a
 href="http://freshmeat.net/">freshmeat</a>.</p>
 ';
 commonHeader("Links");
