@@ -563,7 +563,7 @@ endwhile;
 
 <DIV ID='searchKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-35,'top',300);?>
-<FORM ACTION='search.php3' METHOD='POST'>
+<FORM ACTION='http://ca.php.net/search.php3' METHOD='POST'>
 <B>What are you searching for:</B><BR>
 <FONT SIZE=+0><input type='text' name='pattern' size=20></FONT><BR>
 <FONT SIZE="-1">
