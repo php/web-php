@@ -186,8 +186,8 @@ function example1()
 </p>
 
 <p>
- French translation is available courtesy of 
- <a href="mailto:pierre-alain.joye@wanadoo.fr">Pierre-Alain Joye</a>.
+ French translation is available courtesy of Pierre-Alain Joye
+ (pierre-alain dot joye at wanadoo dot fr).
 </p>
 
 <?php site_footer(); ?>
