@@ -38,22 +38,23 @@ within the next couple of months.
 
 <h2>Who should use PHP 3.0 and who should still use PHP/FI 2.0?</h2>
 
-New users should now begin with PHP 3.0.  It is now definite that PHP 3.0 is going to replace PHP/FI 2.0, and no
+<p>New users should now begin with PHP 3.0.  It is now definite that PHP 3.0 is going to replace PHP/FI 2.0, and no
 further development is planned on the PHP/FI 2.0 core.
 
-Regarding users of PHP/FI 2.0, not everybody should take the time and upgrade to PHP 3.0 (especially since it does require some time, as this
+<p>Regarding users of PHP/FI 2.0, not everybody should take the time and upgrade to PHP 3.0 (especially since it does require some time, as this
 isn't a 100% downwards compatible upgrade).  The approach that should apply here is "if it ain't broke don't fix it".
 That means that if you have a site, designed with PHP/FI 2.0, that works fine, takes the load well and doesn't
 give you any trouble - you might as well stay with it.  PHP 3.0 can't give you something better than that already
 perfect situation.
-Just about everybody else should begin migrating to PHP 3.0.  Bug reports are likely to be solved quicker than bugs
+
+<p>Just about everybody else should begin migrating to PHP 3.0.  Bug reports are likely to be solved quicker than bugs
 in PHP/FI 2.0 (the development team of PHP 3.0 contains 6 people, and the code is much easier to fix) and more
 importantly, the new implementation is much less prone to bugs.  The efficiency of the new language implementation
 is much better, which means that the load of a PHP 3.0 based site is roughly 35% of the load of a PHP/FI 2.0 based site.
 And of course, you're presented with a whole new set of powerful tools and language features that were not available
 in PHP/FI 2.0.
 
-More information about the new PHP 3.0 features and changes from PHP/FI 2.0 are described in the
+<p>More information about the new PHP 3.0 features and changes from PHP/FI 2.0 are described in the
 <a href="changes.php3">changes</a> file.  Answers to several frequently asked questions can be found in the
 <a href="FAQ.php3">FAQ</a>.
 
