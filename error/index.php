@@ -97,7 +97,7 @@ if(strchr($uri,'/')) {
 	list($lang,$function) = explode('/',$uri,2);
 	$function = strtolower($function);
 
-    if (isset($uri_aliases[$function]])) {
+    if (isset($uri_aliases[$function])) {
         $function = $uri_aliases[$function];
     }
 
