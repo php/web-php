@@ -83,19 +83,26 @@ make_link('http://bugs.php.net/', 'bug system') . '.
 </p>
 ';
 
-$fp = @fopen("backend/events.csv",'r');
-if($fp) {
-	$cm=0;
-	while(!feof($fp)) {
-		list($d,$m,$y,$url,$desc,$id) = fgetcsv($fp,8192);
-		if($cm!=(int)$m) { 
-			if($cm) $RSIDEBAR_DATA.= "<br />\n"; 
-			else $RSIDEBAR_DATA.='<h3>Upcoming Events<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="submit-event.php">[add event]</a></h3>';
-			$cm = (int)$m;  
+// Open events CVS file, and print out event title
+$fp = @fopen("backend/events.csv", "r");
+if ($fp) {
+	$cm = 0;
+	while (!feof($fp)) {
+		list($d, $m, $y, $url, $desc, $id) = fgetcsv($fp, 8192);
+		// fgetcvs returns an array with a single null element for a blank line
+        if ($d === NULL) { continue; }
+        if ($cm != (int) $m) { 
+			if ($cm) {
+                $RSIDEBAR_DATA .= "<br />\n";
+            }
+			else {
+                $RSIDEBAR_DATA .= '<h3>Upcoming Events<br />&nbsp;&nbsp;&nbsp;&nbsp;<a href="submit-event.php">[add event]</a></h3>';
+            }
+			$cm = (int) $m;
 			$RSIDEBAR_DATA .= "<h4>".strftime('%B',mktime(12,0,0,$cm,$d,$y))."</h4>\n"; 
 			unset($seen);
 		}
-		if(!$seen[$desc]) {
+		if (!$seen[$desc]) {
 			$RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">". stripslashes($desc)."</a><br>\n";
 			$seen[$desc] = true;
 		}
