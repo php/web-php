@@ -159,7 +159,7 @@ if ($process) {
 
 ?>
 <form action="/submit_event.php" method="post">
-<table border="0" cellspacing="0" cellpadding="3" class="standard">
+<table border="0" cellpadding="3" class="standard">
  <tr>
   <th class="subr">Start Date</th>
   <td>
@@ -191,16 +191,16 @@ if ($process) {
  </tr>
  <tr>
   <th class="subr">Short Description</th>
-  <td><input type="text" name="sdesc" value="<?php echo htmlentities($_POST['sdesc'])?>" size="32" maxlength="32" /></td>
+  <td><input type="text" name="sdesc" class="max" value="<?php echo htmlentities($_POST['sdesc'])?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
   <th class="subr">URL</th>
-  <td><input type="text" name="url" size="40" maxlength="128" value="<?php echo htmlentities($_POST['url'])?>" /></td>
+  <td><input type="text" name="url" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['url'])?>" /></td>
  </tr>
  <tr>
   <th class="subr">Country</th>
   <td>
-   <select name="country">
+   <select name="country" clas="max">
     <option value="">- Select a country -</option>
     <?php display_options($COUNTRIES, $_POST['country']);?>
    </select>
@@ -209,7 +209,7 @@ if ($process) {
  <tr>
   <th class="subr">Event Category</th>
   <td>
-   <select name="category">
+   <select name="category" class="max">
 <?php
 	$cat = array("- Select a category -", "User Group Event", "Conference", "Training");
         display_options($cat, $_POST['category']);
@@ -220,13 +220,13 @@ if ($process) {
  <tr>
   <th class="subr">Email</th>
   <td>
-   <input type="text" name="email" size="40" maxlength="128" value="<?php echo htmlentities($_POST['email'])?>" /><br />
+   <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'])?>" /><br />
    <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
   </td>
  </tr>
  <tr>
   <th class="subr">Long Description</th>
-  <td><textarea name="ldesc" cols="60" rows="10" wrap="virtual"><?php echo htmlentities($_POST['ldesc']);?></textarea></td>
+  <td><textarea name="ldesc" cols="60" rows="10" wrap="virtual" class="max"><?php echo htmlentities($_POST['ldesc']);?></textarea></td>
  </tr>
  <tr>
   <th colspan="2">
@@ -234,7 +234,7 @@ if ($process) {
 <?php if ($process && count($errors) == 0) {?>
     <input type="submit" name="action" value="Submit" />
 <?php }?>
-  </td>
+  </th>
  </tr>
 </table>
 </form>
