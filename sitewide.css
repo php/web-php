@@ -68,6 +68,18 @@ hr {
 	height: 1px;
 }
 
+.center {
+	text-align: center;
+}
+.center table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+.center th {
+	text-align: center;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;

@@ -180,9 +180,9 @@ if ($type === MYPHPNET_URL_MANUAL) {
  /> PHP Documentation search
 </div>
 
-<div align="center">
-<input type="submit" value="Set All Preferences">
-</div>
+<p class="center">
+ <input type="submit" value="Set All Preferences">
+</p>
 </form>
 
 <?php commonFooter(); ?>
