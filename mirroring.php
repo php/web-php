@@ -134,8 +134,8 @@ commonHeader("Mirroring The PHP Website");
 <p>
  Provide an asterisk or a hostname in the VirtualHost container's
  header and in the ServerName directive. Consult
- <a href="">the Apache documentation</a> for
- differences of the two methods. Change the
+ <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
+ documentation</a> for differences of the two methods. Change the
  DocumentRoot and include_path settings as appropriate, specify
  the mirror's preferred language, and provide settings according to
  your local search and stats setup, if your mirror is going to
