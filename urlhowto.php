@@ -90,7 +90,7 @@ your queries, you can type <tt>http://it.php.net/echo</tt>.
 
 <p>
 There is another method though for accessing the manual page
-in your preferred langauge. You can embed the language in the
+in your preferred language. You can embed the language in the
 URL before the manual search term. <tt>http://php.net/hu/echo</tt>
 will bring up the Hungarian manual page for echo for example.
 </p>
