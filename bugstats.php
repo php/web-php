@@ -5,17 +5,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		exit;
 }
 
-	echo "<!--$version-->\n";
-
-	$version = (int) $version;
-
-	echo "<!--$version-->\n";
-
-	if ($version != 4 and $version != 3) {
-		$version = 0;
+	if ($ver != 4 and $ver != 3) {
+		$ver = 0;
 	}
-
-	echo "<!--$version-->\n";
 
 	function mydate($str) {
 		$year = substr($str,0,4);
@@ -47,9 +39,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 
 	commonHeader("Bug Stats");
 
-	if ($version > 0) {
-		$other = ($version == 4 ? 3 : 4);
-		echo '<p>Currently displaying PHP'. $version . ' bugs only. Display <a href="bugstats.php">all bugs</a> or <a href="bugstats.php?version=' . $other . '">only PHP' . $other . ' bugs</a>.</p>' . "\n";
+	if ($ver > 0) {
+		$other = ($ver == 4 ? 3 : 4);
+		echo '<p>Currently displaying PHP'. $ver . ' bugs only. Display <a href="bugstats.php">all bugs</a> or <a href="bugstats.php?version=' . $other . '">only PHP' . $other . ' bugs</a>.</p>' . "\n";
 	}
 	else {
 		echo '<p>Currently displaying all bugs. Display <a href="bugstats.php?version=3">only PHP3 bugs</a> or <a href="bugstats.php?version=4">only PHP4 bugs</a>.</p>' . "\n";
@@ -61,8 +53,8 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 
 	$query = "SELECT * from bugdb";
 
-	if ($version > 0) {
-		$query .= " WHERE php_version LIKE '" . $version . "%'";
+	if ($ver > 0) {
+		$query .= " WHERE php_version LIKE '" . $ver . "%'";
 	}
 
 	$result=mysql_query($query);
@@ -98,6 +90,7 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		$status[$row[7]]++;
 		if($row[7]=="Closed") {
 			$bug_type['closed'][$row[1]]++;
+			$bug_type['closed']['all']++;
 			if (mydate($row[10]) > mydate($row[9])) {
 				$time_to_close[] = mydate($row[10]) - mydate($row[9]);
 			}
@@ -107,9 +100,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	}
 
 	function bugstats($status, $type) {
-		global $bug_type, $version;
+		global $bug_type, $ver;
 		if ($bug_type[$status][$type] > 0) {
-			if ($version == 4) {
+			if ($ver == 4) {
 				$page = "bugs.php";
 			}
 			else {
