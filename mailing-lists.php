@@ -85,51 +85,21 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, true, "php.i18n"
     ),
     Array (
-      'pear-general', 'PEAR general list',
-      'A list for users of PEAR, an open-source common code library for PHP',
-      false, true, true, "php.pear.general"
-    ),
-    Array (
-      'php-gtk-general', 'PHP-GTK general list',
-      'A list for users of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
-      false, true, true, "php.gtk.general"
-    ),
-    Array (
       'php-evangelism', 'PHP evangelism mailing list',
       'A list for people interested in promoting PHP and learning good reasons to support PHP in the enterprise',
       true, true, true, "php.evangelism"
     ),	
-    Array (
-      'phplib', 'PHPLIB mailing list',
-      'List of the open source PHP code library',
-      false, true, false
-    ),
-    Array (
-      'phplib-dev', 'PHPLIB developers list',
-      'List for the PHPLIB developers',
-      false, true, false
-    ),
     Array (
       'soap', 'PHP SOAP list',
       'List for the SOAP developers',
       false, false, false
     ),
 
-    'Lists for the developers of PHP, php.net and documentations',
+    'Lists for the developers of PHP and the Zend Engine',
     Array (
       'php-dev', 'Developer list',
       'A medium volume list for those who want to help out with the development of PHP',
       false, true, false, "php.dev"
-    ),
-    Array (
-      'php-gtk-dev', 'PHP-GTK developers list',
-      'A list for the developers of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
-      false, true, true, "php.gtk.dev"
-    ),
-    Array (
-      'pear-dev', 'PEAR developers list',
-      'A list for developers of PEAR, an open-source common code library for PHP',
-      false, true, true, "php.pear.dev"
     ),
     Array (
       'php-cvs', 'CVS commit list',
@@ -147,15 +117,12 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       false, true, true, "php.zend-engine.cvs"
     ),
     Array (
-      'php-gtk-cvs', 'PHP-GTK CVS list',
-      'All the commits to the cvs PHP-GTK code repository are posted to this list automatically' ,
-      false, true, true, "php.gtk.cvs"
+      'php-qa', 'Quality Assurance list',
+      'List for the members of the PHP-QA Team',
+      false, true, false, "php.qa"
     ),
-    Array (
-      'pear-cvs', 'PEAR CVS list',
-      'All the commits of the cvs PEAR code repository are posted to this list automatically',
-      false, true, true, "php.pear.cvs"
-    ),
+
+    'PHP documentation mailing lists',
     Array (
       'phpdoc', 'PHP documentation list',
       'List for the authors of the PHP documentation with CVS commits',
@@ -166,15 +133,44 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'List for developers of the Windows Help-format PHP documentation',
       false, false, true, "php.doc.chm"
     ),
+
+    'PEAR mailing lists',
+    Array (
+      'pear-general', 'PEAR general list',
+      'A list for users of PEAR, an open-source common code library for PHP',
+      false, true, true, "php.pear.general"
+    ),
+    Array (
+      'pear-dev', 'PEAR developers list',
+      'A list for developers of PEAR, an open-source common code library for PHP',
+      false, true, true, "php.pear.dev"
+    ),
+    Array (
+      'pear-cvs', 'PEAR CVS list',
+      'All the commits of the cvs PEAR code repository are posted to this list automatically',
+      false, true, true, "php.pear.cvs"
+    ),
+
+    'PHP-GTK mailing lists',
+    Array (
+      'php-gtk-general', 'PHP-GTK general list',
+      'A list for users of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
+      false, true, true, "php.gtk.general"
+    ),
     Array (
       'php-gtk-doc', 'PHP-GTK documentation list',
       'List for the authors of the PHP-GTK documentation with CVS commits',
       false, true, false, "php.gtk.doc"
     ),
     Array (
-      'php-qa', 'Quality Assurance list',
-      'List for the members of the PHP-QA Team',
-      false, true, false, "php.qa"
+      'php-gtk-dev', 'PHP-GTK developers list',
+      'A list for the developers of PHP-GTK, An extension for PHP making it possible to write client-side GUI applications' ,
+      false, true, true, "php.gtk.dev"
+    ),
+    Array (
+      'php-gtk-cvs', 'PHP-GTK CVS list',
+      'All the commits to the cvs PHP-GTK code repository are posted to this list automatically' ,
+      false, true, true, "php.gtk.cvs"
     ),
 
     'Smarty template engine project mailing lists',
@@ -192,7 +188,19 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'smarty-cvs', 'Smarty CVS commit list',
       'All the commits of the cvs Smarty code repository are posted to this list automatically',
       true, true, false, "php.smarty.cvs"
-    )
+    ),
+
+    'PHPLIB mailing lists',
+    Array (
+      'phplib', 'PHPLIB mailing list',
+      'List of the open source PHP code library',
+      false, true, false
+    ),
+    Array (
+      'phplib-dev', 'PHPLIB developers list',
+      'List for the PHPLIB developers',
+      false, true, false
+    ),
   );
 
 ?>
