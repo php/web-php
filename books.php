@@ -514,7 +514,7 @@ array (
     /* auth link[s] */ "",
     /* image        */ "welling_fr.gif",
     /* information  */ "Campus Press, ISBN 2-7440-1174-6, July 24 2001, 930 pages",
-    /* inform. link */ "",
+    /* inform. link */ "http://www.campuspress.net/store/book_info.asp?ref=4&nav=&maincat=&id=1174",
     /* language     */ "fr"
   ),
 
