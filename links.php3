@@ -3,20 +3,31 @@
 	commonHeader("Links");
 ?>
 <h3>Sites using PHP</h3>
-Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their web-sites.  
+<P>
+Who uses PHP?  An ever-increasing number of companies are using PHP to add functionality to their
+web-sites.  
 You can browse through a list of some companies using PHP <a href="/sites.php3">here</a>.
+</P>
 
 <h3>Developers and Job Opportunities</h3>
+<P>
 Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.  
 PHP developers can post their resumes, and employers can post their job notices.
+</P>
 
 <h3>ISPs that support PHP</h3>
-Looking for an ISP or hosting service that has PHP3 and MySQL support?  There's a growing list at 
+<P>
+Looking for an ISP or hosting service that supports PHP?  There's a growing list at 
 <A HREF="http://www.od-site.com/php">www.od-site.com/php</A>.
-<P>There's also a searchable database at <A href="http://phphosts.easydns.com/">phphosts.easydns.com</A>.
+</P><P>
+There's also a searchable directory at 
+<A HREF="http://phphosts.easydns.com/">phphosts.easydns.com</A>, complete with comments from users.
+</P>
 
 <h3>Example Code</h3>
+<P>
 Looking for some sample PHP scripts?  Try these sites:
+</P>
 <UL>
 <LI><A HREF="http://px.sklar.com/">PX - PHP Code Exchange</A><BR>
 The PHP Code Exchange is a great place to start.  Here you'll find many example scripts and 
@@ -29,8 +40,10 @@ for developers of large PHP sites.<BR>
 </UL>
 
 <h3>Funding PHP Development</h3>
+<P>
 Sometimes the various volunteer programmers responsible for PHP incur costs related to
 their work on PHP.  You can contribute money to help alleviate these costs 
 <A HREF="funding.php3">here</A>.
+</P>
 
 <? commonFooter(); ?>
