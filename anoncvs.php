@@ -51,11 +51,14 @@ diff -u
   <li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
     <pre>cvs -d :pserver:cvsread@cvs.zend.com:/repository co Zend TSRM</pre></li>
   <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
-    1.4 or newer.</li>
+    1.4 or newer.
+    <blockquote>
+     <strong style="color: #99000">Note:</strong> <br/>
+     <i> Certain combinations of autoconf, automake and libtool may not work when used together.<br />
+     See <a href="#buildconf_fail">below</a> for details.</i>
+    </blockquote>
+  </li>
   <li>Run ./buildconf. After a while, the configure script should be generated.<br />
-    <strong style="color: #99000">Caution:</strong> 
-    <i> Certain combinations of autoconf, automake and libtool may cause the 
-    buildconf script to fail. See <a href="#buildconf_fail">below</a> for details.</i>
   <li>From this point onwards, installation is similar to the installation of one of
     the official packages with one main difference - you must have bison 1.28 or later
     and flex 2.54 or later to compile, because the pre-generated scanner and parser
@@ -71,16 +74,15 @@ to see what is available, and substitute the appropriate name for
 <p>You can also mirror the PHP CVS repository using CVSup. See
 <a href="/cvsup.php">here</a> for more details.</p>
 
-<p><strong><a name="buildconf_fail">Possible buildconf troubles</a></strong></p>
+<p><strong><a name="buildconf_fail">autoconf, automake and libtool information</a></strong></p>
+<p> There seem to be problems with libtool 1.4.2. It is suggested that you use
+libtool 1.4, along with the most current versions of autoconf and automake.
+You should also ensure that autoconf, automake and libtool are installed in the same directory.</p>
 
-<p> Certain combinations of autoconf, automake and libtool may cause the 
-buildconf script to fail.</p>
-
-<p>Under SuSE 7.1 (Linux kernal 2.2.18 i686) autoconf version 2.13, 
-automake version 1.4 (ok) and libtool version 1.4.2 are suspected not 
-to work.</p>
-
-<p>libtool 1.4.2 may not work with any current (as of 2001/09/30) versions 
-of autoconf and automake.</p>
+<p>The following combination are known to work.
+ <ul>
+  <li>autoconf 2.52, automake 1.5 and libtool 1.4</li>
+ </ul>
+</p>
 
 <?php commonFooter(); ?>
