@@ -6,7 +6,7 @@
 $title="PHP3 Bug Database";
 require "include/header.inc";
 
-$destination = "php3@php.il.eu.org";
+$destination = "php-dev@php.iquest.net";
 #$destination = "rasmus@lerdorf.on.ca";
 
 function indent($string, $prefix) {
