@@ -87,6 +87,7 @@ right away.</blockquote>
 	site("Flexform Software","www.flexform.de");
 	site("Freedows OS","freedows.netpedia.net/");
 	site("Knowledge Adventure","www.knowledgeadventure.com");
+	site("LCDproc", "lcdproc.omnipotent.net");
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
 	site("Skinz","www.skinz.org");
