@@ -158,7 +158,7 @@ commonHeader("Hypertext Preprocessor");
 <p>
  For changes since PHP 4.3.9, please consult the
  <a href="/ChangeLog-4.php#4.3.10">PHP 4 ChangeLog</a>.
- For changes since PHP 5.0.3, please consult the
+ For changes since PHP 5.0.2, please consult the
  <a href="/ChangeLog-5.php#5.0.3">PHP 5 ChangeLog</a>.
 </p>
 
