@@ -57,6 +57,7 @@ function endEntry() {
 
 <? makeEntry( "Authenticate and Track Users with PHP", "by <a href=\"mailto:jcm@i2ii.com\">Julie Meloni</a>", 
 	"http://hotwired.lycos.com/webmonkey/00/05/index2a.html", "February 2, 2000");?>
+Shows you the basics of PHP-based user authentication, the use of cookies, and a short glimpse (with working examples!) at the session functions of PHP4.  The article was written by Julie Meloni, author of <a href="http://www.thickbook.com/">PHP Essentials</a>, a book for the beginning or intermediate PHP user, available in March at a bookstore near you.
 <? endEntry(); ?>
 
 <? makeEntry( "What you should know about PHP", "by <a href=\"mailto:gilmore@cob.ohio-state.edu\">Jason Gilmore</a>", 
