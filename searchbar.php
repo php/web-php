@@ -42,7 +42,11 @@ if (preg_match("!Gecko!", $_SERVER['HTTP_USER_AGENT'])) {
   <td colspan="2">
    <div class="indented">
    <form method="post" action="/search.php" target="<?php echo $target ?>" name="sform">
-   <input type="hidden" name="lang" value="<?php if(empty($LANG)) echo htmlspecialchars(default_language()); else echo htmlspecialchars($LANG); ?>">
+<?php
+    if (isset($EXPL_LANG)) {
+        echo '   <input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
+    }
+?>
    Search for<br />
    <input type="text" name="pattern" value="" style="width: 95%"/><br />
    in the<br />

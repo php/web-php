@@ -49,8 +49,6 @@ if ($MQ) {
 // (also preserves $lang if provided in POST/GET)
 if (!isset($lang) && isset($LANG)) {
     $lang = $LANG;
-} elseif (!isset($lang)) {
-    $lang = default_language();
 }
 
 // Only allow alphabetical chars in lang (security)
@@ -59,7 +57,7 @@ if (!preg_match("!^\\w+$!", $lang)) {
 }
 
 // Only allow alphabetical chars in show (security)
-if (isset($show) && !preg_match("!^\\w+$!", $show)) {
+if (!isset($show) || !preg_match("!^\\w+$!", $show)) {
     $show = "wholesite";
 }
 
