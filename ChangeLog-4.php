@@ -1007,7 +1007,7 @@ always_populate_raw_post_data is on. (Rasmus)</li>
 <li>Fixed a bug in preg_replace() that would change the type of the replacement
 array entries to string. (Andrei)</li>
 <li>Added user-space object overloading extension. (Andrei)</li>
-<li>Added ldap_start_tls() function. (Stig Venaas, patch by &lt;<a href="mailto:kuenne@rentec.com">kuenne@rentec.com</a>&gt;)
+<li>Added ldap_start_tls() function. (Stig Venaas, patch by &lt;<a href="mailto:kuenne@rentec.com">kuenne@rentec.com</a>&gt;)</li>
 <li>Changed rand() and mt_rand() to be seed automatically if srand() or
 mt_srand() has not been called. (Sterling)</li>
 <li>Changed the seed options to srand() and mt_srand() to be optional. If the
