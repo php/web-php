@@ -102,6 +102,12 @@
 		}
 		echo "</TD></TR></TABLE><BR>\n";
 		echo $bar;
+		?>
+		<CENTER>
+		<BR><I>Search results courtesy of</I><BR>
+		<A HREF="http://htdig.sdsu.edu/"><IMG SRC="gifs/htdig.gif" BORDER=0 ALT="ht:dig"></A>
+		</CENTER>
+		<?
 }
 commonFooter();
 ?>
