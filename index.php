@@ -232,8 +232,6 @@ version of the site.
 
 <?php echo hdelim(); ?>
 
-<?php echo hdelim(); ?>
-
 <?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
 
 <h1>ActiveState Active Awards</h1>
