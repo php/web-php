@@ -133,6 +133,8 @@ For downloadable formats, please visit our
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
 <tr><th bgcolor="#dddddd">Other manuals</th><td bgcolor="#eeeeee">
+The <a href="/manual/howto">Documentation HOWTO</a> is also
+available for online reading.
 <a href="http://gtk.php.net/docs.php">PHP-GTK</a> and
 <a href="http://pear.php.net/manual/">PEAR</a> manuals
 can be found on separate servers.
