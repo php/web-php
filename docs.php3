@@ -11,8 +11,7 @@ commonHeader("Documentation ");
 <li>Read what has <a href="changes.php3">changed since PHP/FI 2.0</a>
 
 <li><a href="manual/">PHP 3.0 Manual Online</a>. Your reference
-    to everything that's great about PHP. (The manual is approximately 95%
-    complete.)
+    to everything that's great about PHP.
 
 <li><a href="manual/html/">Plain HTML PHP 3.0 Manual Online</a>. The very
     same manual in a light-weight, HTML 3.2 version without any bells or
