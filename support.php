@@ -64,8 +64,8 @@ href="http://www.php.net/submit-event.php">on this page</a>.
 
 <h1>Sample Code</h1>
 <p>
-Looking for some more sample PHP scripts? Our <A
-HREF="/links.php">links page</A> lists some archives of sample PHP code - 
+Looking for some more sample PHP scripts? Our <a
+href="/links.php">links page</a> lists some archives of sample PHP code - 
 great places to find many example scripts and useful functions, organized for 
 your searching pleasure!
 </p>
