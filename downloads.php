@@ -115,29 +115,29 @@ site_header("Downloads");
 <hr />
 
 <a name="v5">
-<h1>PHP 5 Release Candidate 1</h1>
+<h1>PHP 5 Release Candidate 2</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0RC1.tar.bz2', 'PHP 5.0.0RC1 (tar.bz2)'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: 7896bb1fb85247e2514b9faa5084ced7</span>
+  <?php download_link('php-5.0.0RC2.tar.bz2', 'PHP 5.0.0RC2 (tar.bz2)'); ?> - 25 Apr 2004<br />
+  <span class="md5sum">md5: 99e056269c2e3eac7e934755c60c44b7</span>
  </li>
  <li>
-  <?php download_link('php-5.0.0RC1.tar.gz', 'PHP 5.0.0RC1 (tar.gz)'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: f407bc91ec3e6446fdce6a5c32e55dd7</span>
+  <?php download_link('php-5.0.0RC2.tar.gz', 'PHP 5.0.0RC2 (tar.gz)'); ?> - 25 Apr 2004<br />
+  <span class="md5sum">md5: e9d349d5e355c4056a03fc5597495a8c</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0RC1-Win32.zip', 'PHP 5.0.0RC1 zip package'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: 71856f78bf28b49c114c00a522752ba4</span>
+  <?php download_link('php-5.0.0RC2-Win32.zip', 'PHP 5.0.0RC2 zip package'); ?> - 25 Apr 2004<br />
+  <span class="md5sum">md5: 6842b5c345bcdfc9fa2cb253681d27e7</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.0RC1-Win32.zip', 'Collection of PECL modules for PHP 5.0.0RC1'); ?> - 18 Mar 2004<br />
-  <span class="md5sum">md5: 217e8d66a85ebe73767e2c3c73c11f00</span>
+  <?php download_link('pecl-5.0.0RC2-Win32.zip', 'Collection of PECL modules for PHP 5.0.0RC2'); ?> - 25 Apr 2004<br />
+  <span class="md5sum">md5: b37dc782df28625fb40a59be4867f398</span>
  </li>
 </ul>
 
