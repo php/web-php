@@ -25,10 +25,10 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
 
 <h3>' . make_link("/thanks.php", "Thanks To") . '</h3>
-&nbsp; ' . make_link("http://www.synacor.com/", "Synacor") . '<br>
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
 &nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
+&nbsp; ' . make_link("http://www.synacor.com/", "Synacor") . '<br>
 &nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<br>
 <h3>Related sites</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
@@ -103,7 +103,7 @@ PHP enthusiasts from all over the world met three days to attend
 powerworkshops and sessions presented by the inventors of PHP, members
 of the core group and other well known people from the community.
 The conference is over now, but you can get some impressions
-by visiting one of the photo galleries, attendees put together:
+by visiting one of the photo galleries put together by attendees:
 <ul>
     <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
