@@ -91,7 +91,7 @@ foreach ($LANGUAGES as $langcode => $language) {
         if (file_exists("distributions/manual/php_manual_$langcode.$extension")) {
             
             // Relative file path from here
-            $link_to = "distributions/manual/php_manual_$langcode.$extension";
+            $link_to = "/get/php_manual_$langcode.$extension/from/a/mirror";
 
             // Try to get size and changed date
             $size    = @filesize($link_to);
