@@ -2,12 +2,12 @@
 require 'prepend.inc';
 require 'cvs-auth.inc';
 
-/*
 if (!is_primary_site()) {
-  header("Location: http://www.php.net/admin/mirrors.php");
+  if (!is_backup_primary()) {
+    header("Location: http://www.php.net/admin/mirrors.php");
+  }
   exit;
 }
-*/
 
 if (isset($save) && isset($user) && isset($pw)) {
   setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
