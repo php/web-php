@@ -52,10 +52,6 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 Please submit website bugs in the ' .
 make_link('http://bugs.php.net/', 'bug system') . '.
 </p>
-<p>
-You can contact the webmaster at ' . 
-make_link('mailto:webmaster@php.net', 'webmaster@php.net') . '.
-</p>
 ';
 
 $fp = @fopen("backend/events.csv",'r');
