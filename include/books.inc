@@ -279,7 +279,7 @@ array(
 
  array (
     /* title[s]     */ "Developing Custom PHP Extensions",
-    /* title_link   */ "",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1411601882/wwwphpnet",
     /* author[s]    */ "Blake Schwendiman",
     /* auth link[s] */ "",
     /* image        */ "1411601882.gif",
