@@ -1,15 +1,6 @@
 <?
 require("site.inc");
 
-$MIRRORS = array(
-   "http://ca.php.net/"         => array("ca", "Toronto, Canada", "bellasf", "http://www.bell.ca/"),
-   "http://il.php.net/"         => array("il", "Netvision, Israel", "netvision", "http://www.netvision.net.il/"),
-   "http://machba.il.php.net/"  => array("il", "Technion, Israel", "none", "/"),
-   "http://no.php.net/"         => array("no", "Trondheim, Norway", "guardian", "http://www.guardian.no/"),
-   "http://uk.php.net/"         => array("uk", "Norwich, United Kingdom", "squid", "http://www.netcom.co.uk/"),
-   "http://www.php.net/"        => array("us", "Circle Net, United States", "besthost", "http://BestHost.net/")
-);
-
 function space($width,$height) {
 	echo "<IMG SRC='gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
 };
@@ -246,7 +237,8 @@ else:
 	echo "<IMG SRC=\"gifs/b-source-p.gif\" ALT=\"View the source code for this page\" WIDTH=75 HEIGHT=30 hspace=5 vspace=9 BORDER=0 NAME=\"sour\">";
 	echo "</A>";
 endif;
-?><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+?><A HREF="search.php3" onMouseover="hideAll();change('sear',1);" onMouseout="hideAll();"><IMG SRC="gifs/b-search-p.gif" ALT="Search this site" WIDTH=75 HEIGHT=30 vspace=9 BORDER=0 NAME="sear"></A><IMG SRC="gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0>
+<BR></TD>
 </TR></TABLE>
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>
 <TR VALIGN=top>
