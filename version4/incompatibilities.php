@@ -22,7 +22,7 @@ echo "\n<!--$MYSITE-->\n";
   <li>You can't used PHP3 dynamic extensions (php3_*.dll on Windows) with PHP4.</li>
   <li>The string "0" is now considered empty. This is known to have an effect on phpMyAdmin.</li>
   <li>In PHP4, multiple calls to setcookie() are performed in the order called, whereas in PHP3 they were performed in reverse order.</li>
-  <li>unset() now greaks the association between a locally scoped variable and one that is globally scoped if the reference is made using the "global" keyword.</li>
+  <li>unset() now breaks the association between a locally scoped variable and one that is globally scoped if the reference is made using the "global" keyword.</li>
 </ul>
 
 <p>If any more incompatibilities are discovered, we will add them here.</p>
