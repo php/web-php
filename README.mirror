@@ -1,7 +1,5 @@
 Here is how to mirror the PHP site:
 
-NOTE: We are not accepting new official mirrors at this time.
-
 First, you need to have a rsync (http://rsync.samba.org/) installed.
 
 Fetch the web files with the following:
@@ -21,6 +19,7 @@ to www.php.net to fetch user contributed manual notes.
 Once you create a virtualhost which looks something like:
 
    <VirtualHost xx.php.net>
+   ServerName xx.php.net
    ServerAdmin yourname@yourdomain.com
    DocumentRoot /www/htdocs/phpweb
    <IfModule mod_php3.c>
@@ -29,7 +28,6 @@ Once you create a virtualhost which looks something like:
    <IfModule mod_php4.c>
       php_value include_path .:/www/htdocs/phpweb/include
    </IfModule>
-   ServerName xx.php.net
    ErrorLog logs/error_log
    TransferLog logs/access_log
    DirectoryIndex index.php index.php3 index.html index.htm manual.php manual.php3 manual.html
@@ -57,19 +55,21 @@ Something like:
 hurt. You should try to stagger your times a bit from the example
 to help spread the load on the rsync.php.net server.)
 
-Once you have done the above and your site appears to work, send a message to
-mirrors@php.net with the following information, and appropriate steps will be 
-taken to integrate your mirror site:
-
-NOTE: We are not currently accepting new official mirror sites.
+Once you have done the above and your site appears to work, send
+a message to mirrors@php.net with the following information, and
+appropriate steps will be taken to integrate your mirror site:
 
 - Your name and email address as the admin for the mirror.
 - Your country (we will update the DNS for php.net).
+- A hostname that we can use as a CNAME for the country-code-based
+  name of the mirror. (This is preferable to an IP address, because
+  it means you can move the mirror to another IP address without
+  coordinating with us at all.)
 - Whether or not you've installed local searching support on your mirror.
   This uses ht://Dig (http://www.htdig.org), for which instructions for 
   setting it up can be found in Mirrors-htdig.tgz
 - A logo for your hosting company, or the URL of where we can get one.
-  The big and better the quality, the better.  We will do the fancy 
+  The bigger and better the quality, the better.  We will do the fancy 
   graphics stuff to make it fit into the look of the site.
 - The URL of the site that hosts the mirror.  This is where you want
   people will go when they click on the logo at the bottom of each page.
@@ -86,5 +86,3 @@ Traffic is pretty light, and we need to be able to keep in touch with you!
 And finally, don't forget to put a nice little PHP logo somewhere on your 
 hosting company's site if possible.  Grab one of the logos from the 
 "Downloads" page on the PHP site, and link it to your mirror.
-
-25-Jun-1999
