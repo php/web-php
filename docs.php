@@ -16,7 +16,7 @@ different languages and in which versions of PHP the functions
 are available.<br><br>
 
 If you have license questions, see
-the <a href="/license/">License FAQ</a>
+the <a href="/license/">License FAQ</a>.
 </p>
 
 <h3>Books</h3>
@@ -52,9 +52,9 @@ the table below.
 
 <table border="0" cellpadding="3" cellspacing="2" width="100%">
 
-<tr bgcolor="#cccccc"><td>Format</td><td>Languages</td></tr>
+<tr bgcolor="#cccccc"><th>Format</th><th>Languages</th></tr>
 
-<tr><td bgcolor="#dddddd">View Online</td><td bgcolor="#eeeeee">
+<tr><th bgcolor="#dddddd">View Online</th><td bgcolor="#eeeeee">
 <?php
 
   foreach ($man_languages as $langcode) {
@@ -64,7 +64,7 @@ the table below.
 ?>
 </td></tr>
 
-<tr><td bgcolor="#dddddd">Printer friendly</td><td bgcolor="#eeeeee">
+<tr><th bgcolor="#dddddd">Printer friendly</th><td bgcolor="#eeeeee">
 <?php
 
   foreach ($man_languages as $langcode) {
@@ -74,7 +74,7 @@ the table below.
 ?>
 </td></tr>
 
-<tr><td bgcolor="#dddddd">Downloads</td><td bgcolor="#eeeeee">
+<tr><th bgcolor="#dddddd">Downloads</th><td bgcolor="#eeeeee">
 For other downloadable formats, please visit our new
 <a href="download-docs.php">documentation downloads</a> page.
 </td></tr>
