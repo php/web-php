@@ -55,6 +55,10 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
+<? makeEntry( "Web mail in PHP", "by Bj&#248;rn Borud", "http://www.opensourceit.com/tutorials/990416php.html", "April 28, 1999");?>
+Building a simple web-mail interface in PHP using the IMAP extension.
+<? endEntry(); ?>
+
 <? makeEntry( "LDAP at Home", "Article in May issue of Webtechniques by Rasmus Lerdorf", "http://www.webtechniques.com/1999/05/lerdorf/junk.shtml", "April. 14, 1999");?>
 A very introductory look at LDAP and how to write a PHP interface to an LDAP server.
 <? endEntry(); ?>
