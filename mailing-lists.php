@@ -320,7 +320,7 @@ function output_lists_table($mailing_lists)
 
 <hr />
 
-<h2><a name="local">Local Mailing Lists</a></h2>
+<h2><a name="local">Local Mailing Lists and Newsgroups</a></h2>
 
 <p>
  There are also some mailing lists and newsgroups for PHP users
@@ -334,12 +334,13 @@ function output_lists_table($mailing_lists)
  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
  <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
  <li><a href="news:de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
- <li><a href="http://weblabor.hu/wl-phplista/etikett">Hungarian Mailing List</a></li>
  <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
+ <li><a href="http://weblabor.hu/levlistak">Hungarian Mailing List</a></li>
+ <li><a href="http://groups.or.id/mailman/listinfo/php-id">Indonesian Mailing List</a></li>
  <li><a href="http://www.ziobudda.net/mailman/listinfo/php-it/">Italian Mailing List</a></li>
  <li><a href="http://cortesi.com/php/">Italian Mailing List (coordinating the translation of the PHP manual)</a></li>
- <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
  <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
+ <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
 </ul>
 
 <?php site_footer(); ?>
