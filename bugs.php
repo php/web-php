@@ -503,7 +503,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		/* INSERT NEW COMMENT HERE */
 		if (isset($edit)) {
 			echo "<b>New Comment:</b><br>\n";
-			echo "<textarea cols=60 rows=15 name=\"ncomment\"></textarea><br>\n";
+			echo "<textarea cols=60 rows=15 name=\"ncomment\" wrap=physical></textarea><br>\n";
 			if(isset($MAGIC_COOKIE)) list($user, $pw) = explode(":", base64_decode($MAGIC_COOKIE));
 			if ($edit == 1) {
 				echo "CVS user id: <input type=text size=10 name=user value=\"$user\">\n";
@@ -620,7 +620,7 @@ Please supply any information that may be helpful in fixing the bug:
 </center>
 </td>
 <td>
-<textarea cols=60 rows=15 name="ldesc" wrap=virtual></textarea>
+<textarea cols=60 rows=15 name="ldesc" wrap=physical></textarea>
 </td>
 </tr>
 </table>
