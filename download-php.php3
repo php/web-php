@@ -26,7 +26,10 @@ if (!isset($csel)) {
 	if (!($hostname=getenv("REMOTE_HOST"))) {
 		$ipaddr=getenv("REMOTE_ADDR");
 		$hostname=gethostbyaddr($ipaddr);
+		echo "<!-- no_remote_host\nipaddr=$ipaddr\nhostname=$hostname -->\n";
 		if ($hostname==$ipaddr) { $hostname=""; }
+	} else {
+		echo "<!-- remote_host\nhostname=$hostname -->\n";
 	}
 	if ($hostname) {
 		if (ereg('([a-zA-Z]+)$',$hostname,$reg)) {
