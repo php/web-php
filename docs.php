@@ -41,9 +41,9 @@ commonHeader("Documentation ");
 <H1>Downloadable PHP Manuals</H1>
 <H2>HTML Version</H2>
 <ul>
-<li><? download_link("bigmanual.html", "PHP HTML Manual (one BIG file)"); ?>
-<li><? download_link("manual.zip", "PHP HTML Manual ZIP File"); ?>
-<li><? download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
+<li><?php download_link("bigmanual.html", "PHP HTML Manual (one BIG file)"); ?>
+<li><?php download_link("manual.zip", "PHP HTML Manual ZIP File"); ?>
+<li><?php download_link("manual.tar.gz", "PHP HTML Manual .tar.gz File"); ?>
 </ul>
 <H2>Latest versions (daily snapshots)</H2>
 <ul>
@@ -65,14 +65,15 @@ commonHeader("Documentation ");
 
 <H2>Other Versions</H2>
 <ul>
-<li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
-<li><? download_link("manual.chm", "PHP Manual Windows Help File - January 5, 2001"); ?>
+<li><?php download_link("manual.rtf", "PHP Manual RTF File"); ?>
+<li><?php download_link("manual.chm", "PHP Manual Windows Help File - January 5, 2001"); ?>
 <li><?php download_link("manual_isilo.pdb","PHP Manual - PalmPilot Isilo format"); ?>
 <li><?php download_link("manual_doc.pdb","PHP Manual - PalmPilot DOC format"); ?>
 </ul>
 
 <H1>Translations</H1>
 <ul>
+<li><?php download_link("manual_hu.chm", "PHP Manual Windows Help File (Hungarian) - January 11, 2001"); ?>
 <li><a href="http://www.cityfujisawa.ne.jp/~louis/apps/phpfi/index.html"
     >Japanese translation of the PHP manual</a>
 
