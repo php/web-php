@@ -1,7 +1,7 @@
 <?
 require("shared.inc");
 
-$NUMACROSS=4;
+$NUMACROSS=3;
 $d = dir("$DOCUMENT_ROOT/manual");
 while($entry=$d->read()) {
 	if (substr($entry, 0, 1) == ".") {
