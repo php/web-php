@@ -154,7 +154,7 @@ commonHeader("Hypertext Preprocessor");
 Congratulations to Qiang Xue, whose application 'PRADO' earned high votes both
 from the public and from the judges' panel!  There are 49 other prizewinning
 applications in Zend's
-<a href = "http://www.zend.com/php5/contest" target = "_blank">contest gallery</a>
+<a href="http://www.zend.com/php5/contest">contest gallery</a>
 - too many to list here.  Some of them are ongoing projects, bringing PHP 5 a
 small armoury of useful open source tools.
 </p>
