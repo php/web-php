@@ -10,10 +10,10 @@ commonHeader("PHP Books");
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/cmvsstuff"
 ><IMG SRC="/gifs/phppr.s.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/1565927699/cmvsstuff"
 >PHP Pocket Reference</A><BR>
 by Rasmus Lerdorf<BR>
 <SMALL>
@@ -65,10 +65,10 @@ MacGraw-Hill, 2000, ISBN 0-07-135342-9, 552 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/cmvsstuff"
 ><IMG SRC="/jpgs/hilton-willis.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/thephpdevelopmte">Building Database Applications on the Web Using PHP3</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0201657716/cmvsstuff">Building Database Applications on the Web Using PHP3</A><BR>
 by Craig Hilton and Jeff Willis<BR>
 <SMALL>
 Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages 
@@ -78,10 +78,10 @@ Addison-Wesley, Dec 1999, ISBN 0-2016-5771-6, 624 pages
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff"
 ><IMG SRC="/jpgs/php_essentials.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/thephpdevelopmte">PHP Essentials</A><BR>
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/076152729X/cmvsstuff">PHP Essentials</A><BR>
 <SMALL>A Better Way to Learn PHP - Includes Version 4</SMALL><BR>
 by <A HREF="mailto:julie@thickbook.com">Julie C. Meloni</A><BR> 
 <SMALL>
@@ -326,10 +326,10 @@ by Randy Jay Yarger, George Reese and Tim King<BR>
 </TR>
 
 <TR VALIGN="middle">
-<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/thephpdevelopmte"
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
 ><IMG SRC="/jpgs/dubois.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0735709211/cmvsstuff"
 >MySQL</A><BR>
 by Paul DuBois<BR>
 <SMALL><A HREF="http://www2.newriders.com/cfm/prod_book.cfm?RecordID=584">more info</A><BR>
