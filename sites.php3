@@ -16,7 +16,7 @@
 	}
 
 	function siteEnd() {
-		echo "</UL><BR></TD>\n";
+		echo "<BR></UL></TD>\n";
 		echo "<TD>&nbsp;<BR></TD>\n";
 		echo "</TR>\n";
 
@@ -161,7 +161,7 @@
 	siteEnd();
 
 /* blank bar at end. */
-	title("");
+	title("&nbsp;");
 
 echo "</table></center>\n";
 
