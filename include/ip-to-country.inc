@@ -37,11 +37,6 @@
     server with country detection in case the data files are
     not there, or they are bogus, or the user has a non listed
     IP.
-  - The cookie may contain the IP address too in the future
-    for automatic detection of new IP usage, and searching
-    again in the DB, but this may lead to 'interesting
-    results' for users with dynamic IP
-
 */
 
 // Start the detection
@@ -54,52 +49,54 @@ function i2c_go()
 {
     global $_SERVER, $_COOKIE, $COUNTRY;
 
-    // User already has a country detected
-    if (!empty($_COOKIE['COUNTRY'])) {
-       $COUNTRY = $_COOKIE['COUNTRY'];
-       return TRUE;
-    }
-
     // User is behind a proxy and check that we discard RFC1918 IP addresses
-	// if they are behind a proxy then only figure out which IP belongs to the
-	// user.  Might not need any more hackin if there is a squid reverse proxy
+    // if they are behind a proxy then only figure out which IP belongs to the
+    // user.  Might not need any more hackin if there is a squid reverse proxy
     // infront of apache.
     if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-		unset($ips);
-		unset($ip);
+        unset($ips); unset($ip);
 
-		// Put the IP's into an array which we shall work with shortly.
-		$ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+        // Put the IP's into an array which we shall work with shortly.
+        $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
 
-		for ($i = 0; $i < count($ips); $i++) {
-			// Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
-			// 192.168.0.0/16 -- jim kill me later with my regexp pattern
-			// below.
-			if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
-				$ip = $ips[$i];
-				break;
-			}
-		}
-
-        $ipnum = (float) sprintf("%u", ip2long(($ip ? $ip : $_SERVER['REMOTE_ADDR'])));
+        for ($i = 0; $i < count($ips); $i++) {
+            // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
+            // 192.168.0.0/16 -- jim kill me later with my regexp pattern
+            // below.
+            if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
+                $ip = $ips[$i];
+                break;
+            }
+        }
+        
+        $ipnum = $ip ? $ip : $_SERVER['REMOTE_ADDR'];
     }
 
     // This is the real IP of the user
     else {
-        $ipnum = (float) sprintf("%u", ip2long($_SERVER['REMOTE_ADDR']));
+        $ipnum = $_SERVER['REMOTE_ADDR'];
+    }
+    
+    // User already has a country detected with this IP stored
+    if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== FALSE) {
+       list($COUNTRY, $storedip) = explode(",", $_COOKIE['COUNTRY']);
+       if ($storedip == $ipnum) { return TRUE; }
     }
 
+    // Convert the IP number to some useable form for searching
+    $ipn = (float) sprintf("%u", ip2long($ipnum));
+
     // Find the index to start search from
-    $idx = i2c_search_in_index($ipnum);
+    $idx = i2c_search_in_index($ipn);
 
     // Search in the database from the given index
-    $country = i2c_search_in_db($ipnum, $idx);
+    $country = i2c_search_in_db($ipn, $idx);
 
-    // Set global variable for futher usage
+    // Set global variable for further usage
     $COUNTRY = $country;
 
     // Set the country in a cookie for a week and for all *.php.net servers
-    return setcookie("COUNTRY", $country, time() + 60*60*24*7, '/', '.php.net');
+    return setcookie("COUNTRY", "$country,$ipnum" time() + 60*60*24*7, '/', '.php.net');
 }
 
 // Find nearest index entry for IP number 
