@@ -13,7 +13,7 @@ $tmp = strrchr($page_url, "/");
 if ($tmp) {
     $path = substr($page_url, 0, strlen($page_url)-strlen($tmp));
     if ($legal_paths[$path]) {
-	$page_name = $page_url;
+	$page_name = "$DOCUMENT_ROOT/" . ereg_replace("^/", "", $page_url);
     } else {
 	$page_name = substr($tmp, 1, strlen($tmp));
     }
@@ -22,8 +22,6 @@ if ($tmp) {
 }
 
 show_source($page_name);
-
-// "abcde/foo"
 
 include "include/footer.inc";
 
