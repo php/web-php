@@ -128,6 +128,10 @@ a set of solid sites that work together to promote the PHP language and
 provide a large resource for the community as a whole.
 </li>
 
+<li><a href="http://codewalkers.com/">Codewalkers</a><br>
+A community site dedicated to PHP developers. Includes forums, tutorials,
+and user submitted code. Home of the PHP Coding Contest.</li>
+
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
