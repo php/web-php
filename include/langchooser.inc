@@ -103,21 +103,21 @@ function language_choose_code()
 
     // Check if we have $_SERVER['HTTP_ACCEPT_LANGUAGE'] set and
     // it no longer breaks if you only have one language set :)
-	if (isset ($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-		$browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+	if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
-	    // Go through all language preference specs
-		for ($i = 0; $i < count($browser_accept); $i++) {
-			// The language part is either a code or a code with a quality
-			// We cannot do anything with a * code, so it is skipped
-			// If the quality is missing, it is assumed to be 1 according to the RFC
-			if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($browser_accept[$i]), $found)) {
-				$quality = (isset($found[3]) ? (float) $found[3] : 1.0);
-				$browser_langs[] = array($found[1], $quality);
-			}
-			unset($found);
-		}
-	}
+        // Go through all language preference specs
+        for ($i = 0; $i < count($browser_accept); $i++) {
+            // The language part is either a code or a code with a quality
+            // We cannot do anything with a * code, so it is skipped
+            // If the quality is missing, it is assumed to be 1 according to the RFC
+            if (preg_match("!([a-z-]+)(;q=([0-9\\.]+))?!", trim($browser_accept[$i]), $found)) {
+                $quality = (isset($found[3]) ? (float) $found[3] : 1.0);
+                $browser_langs[] = array($found[1], $quality);
+            }
+            unset($found);
+        }
+    }
 
     // Order the codes by quality
     usort($browser_langs, "language_accept_order");
