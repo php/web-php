@@ -134,6 +134,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP site server updates</h1>
+<p>
+<font class="newsdate">[12-Nov-2002]</font>
+We are in the process of moving to new server machines so there may
+be downtimes in some services, including site search, user note display
+and downloads. Please be patient until we finish our work, and everything
+will be back again.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP Search Bars available for major browsers</h1>
 <p>
 <font class="newsdate">[29-Oct-2002]</font>
