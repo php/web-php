@@ -229,7 +229,7 @@ function manualUserNotes($title, $id) {
         make_image('notes-add.gif','add a note')
     );
     echo ' ';
-    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, '', 'style="color:#000000"');
+    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, 'style="color:#000000"');
 
     /* This information has been included on add-note.php
     echo "&nbsp;";
@@ -256,7 +256,7 @@ function manualUserNotes($title, $id) {
             make_image('notes-add.gif','add a note')
         );
         echo ' ';
-        print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, '', 'style="color:#000000"');
+        print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,'add a note', false, 'style="color:#000000"');
 
         /* This information has been included on add-note.php
         echo "&nbsp;";
