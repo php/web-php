@@ -281,7 +281,7 @@ Search Type=0
 </p>
 
 <p>
- <stroong>Regex:</strong><br /><tt>^php: *(.*)$</tt>
+ <strong>Regex:</strong><br /><tt>^php: *(.*)$</tt>
 </p>
 
 <p>
