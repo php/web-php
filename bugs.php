@@ -464,8 +464,10 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		switch($row["Status"]) {
 			case "Open":
-			case "Critical":
 				return "#ffbbaa";
+				break;
+			case "Critical":
+				return "#ff0000";
 				break;
 			case "Closed":
 				return "#aaffbb";
