@@ -10,6 +10,8 @@ mirror (or emulate it on your own website).
 /* we don't want magic slashes in pattern or prevsearch */
 if (isset($pattern) && get_magic_quotes_gpc())
         $pattern = stripslashes($pattern);
+if (isset($base) && get_magic_quotes_gpc())
+        $base = stripslashes($base);
 if (isset($prevsearch) && get_magic_quotes_gpc())
         $prevsearch = stripslashes($prevsearch);
 
@@ -143,11 +145,7 @@ Restrict the search to:<br></td>
 			}
 		}
 
-		if ($base == "-") {
-			$sourceurl = $PHP_SELF;
-		} else {
-			$sourceurl = $base.$PHP_SELF;
-		}
+		$sourceurl = htmlentities($base == '-' ? $PHP_SELF : $base.$PHP_SELF);
 
 		if ($pattern == "") {
 			echo "<b>Error:</b> No search words specified.<br><br>";
@@ -191,7 +189,7 @@ Restrict the search to:<br></td>
 		$lastdisplayed = $result[4];
 		$page = $result[5];
 		$pages = $result[6];
-		$baseurl = $PHP_SELF."?pattern=$words&show=$show&base=$base";
+		$baseurl = htmlentities($PHP_SELF."?pattern=$words&show=$show&base=$base");
 
 		echo "$matches documents match your search for '<b>",htmlspecialchars($pattern),"</b>' in the $where:<br><br>\n";
 		echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
