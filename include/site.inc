@@ -175,6 +175,12 @@ if (isset($_SERVER['MIRROR_LANGUAGE'])) {
     }
 }
 
+// Fallback to English in case the language
+// set is definitely not supported
+if (!isset($LANGUAGES[$MIRRORS[$MYSITE][6]])) {
+    $MIRRORS[$MYSITE][6] = "en";
+}
+
 // Override central stats information if specified in vhost
 if (isset($_SERVER['MIRROR_STATS'])) {
     $MIRRORS[$MYSITE][2] = TRUE;
