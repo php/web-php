@@ -57,6 +57,9 @@ function site_header($title = '', $onload = '')
     if (isset($EXPL_LANG)) {
         $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
     } else { $lang_input = ''; }
+    if (!empty($_SERVER['BASE_HREF'])) {
+        $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
+    } else { $base = ''; }
     
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -66,8 +69,7 @@ function site_header($title = '', $onload = '')
  <title>PHP{$title}</title>
  <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/sitewide.css");</style>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>
- <base href="{$_SERVER['BASE_HREF']}" />
+ <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base
 </head>
 <body onload="{$onload}">
 
