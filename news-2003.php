@@ -15,6 +15,67 @@ site_header("News Archive - 2003");
 
 <hr />
 
+<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+
+<h1>Call for Speakers: PHP Qu&eacute;bec 2004</h1>
+<p>
+ <span class="newsdate">[11-Nov-2003]</span>
+ The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
+ conference 2004, which will be held on March, 25th&amp;26th 2004. 
+ We are looking for the best speakers, willing to 
+ share their experience and skills with the educated crowd of PHP 
+ programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
+ 2004 features 3 distinct tracks:
+ <ul>
+  <li>
+   Professional PHP, dealing with php usage in professional 
+   environment and unusual businesses.
+  </li>
+  <li>
+   Technical PHP, covering indeep details of PHP technics.
+  </li>
+  <li>
+   Free software, about any free software, closely related to PHP.
+  </li>
+ </ul>
+ <a href="http://conf.phpquebec.com/">Sessions</a> will be held in
+ <a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
+ <a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
+ For more information, read the <a 
+ href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
+</p>
+
+<hr />
+
+<h1>New function list auto completion</h1>
+<p>
+ <span class="newsdate">[04-Nov-2003]</span>
+ You can probably name at least one IDE providing support for PHP function name
+ code completion. PHP.net is just <em>beta testing</em> the same feature
+ <a href="/search.php">on the search page</a>. Try selecting the 'function
+ list' lookup option and start typing in a function name in the search field.
+ You can autocomplete the name with the space key and navigate in the dropdown
+ with the up and down cursor keys. We welcome feedback on this feature at
+ <a href="/copyright.php#contact">the webmasters email address</a>, but
+ please submit any bugs you find <a href="http://bugs.php.net/">in the
+ bug system</a> classifying them as a "PHP.net website problem" and providing 
+ as much information as possible (OS, Browser version, Javascript errors, etc..).
+</p>
+
+<hr />
+
+<h1>PHP 4.3.4 released!</h1>
+<p>
+ <span class="newsdate">[03-Nov-2003]</span>
+ The PHP developers are proud to announce the immediate availability of
+ <a href="release_4_3_4.php">PHP 4.3.4</a>. This release contains a fair
+ number of bug fixes and we recommend that all users of PHP upgrade to 
+ this version. Full list of fixes can be found in the 
+ <a href="ChangeLog-4.php#4.3.4">ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>PHP 5.0.0 Beta 2 released</h1>
 <p>
  <span class="newsdate">[30-Oct-2003]</span>

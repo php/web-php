@@ -145,6 +145,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>DotGeek Certification Programme</h1>
+<p>
+ <span class="newsdate">[19-Jan-2003]</span>
+ Dotgeek (a community, non-business driven website made by developers
+ for the PHP programmers community) is glad to announce
+ "<a href="http://www.dotgeek.org/about.php?type=certify">The DotGeek
+ Certified PHP Programmer Certification Programme</a>".
+</p>
+<p>
+ The programme, which is independent, open source and totally free, is
+ based on tutorials and code samples submission analyzed under a number
+ of public criteria.
+</p>
+<p>
+ The certification board includes well-accomplished professionals in
+ their fields like David Costa, Anthony L. Faulds and Chris Shiflett.
+ The open nature of the programme allows PHP professionals to join the
+ certification board and contribute directly to the project.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpconference.com/", "intcon2004spring.png", "International PHP Conference 2004 - Spring Edition"); ?>
 
 <h1>PHP Conference 2004 Spring Edition Programme Online</h1>
@@ -194,7 +216,6 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP and Web Standards Conference - UK 2004</h1>
 <p>
  <span class="newsdate">[22-Dec-2003]</span>
- Call for Papers: PHP and Web Standards Conference - UK 2004<br />
  The PaWS Group is pleased to announce the first ever UK <a
  href="http://www.pawscon.com">PHP and Web Standards Conference</a>.
  PaWS Con will cover using PHP and Web Standards separately and in
@@ -352,67 +373,6 @@ commonHeader("Hypertext Preprocessor");
  PHP Conference</a> building on last year's successful event. The Call For Papers is
  open for the conference, speakers are welcome to hold sessions and workshops ranging
  from PHP internals to web standard compliance. The event is exclusively in Hungarian.
-</p>
-
-<hr />
-
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
-
-<h1>Call for Speakers: PHP Qu&eacute;bec 2004</h1>
-<p>
- <span class="newsdate">[11-Nov-2003]</span>
- The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
- conference 2004, which will be held on March, 25th&amp;26th 2004. 
- We are looking for the best speakers, willing to 
- share their experience and skills with the educated crowd of PHP 
- programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
- 2004 features 3 distinct tracks:
- <ul>
-  <li>
-   Professional PHP, dealing with php usage in professional 
-   environment and unusual businesses.
-  </li>
-  <li>
-   Technical PHP, covering indeep details of PHP technics.
-  </li>
-  <li>
-   Free software, about any free software, closely related to PHP.
-  </li>
- </ul>
- <a href="http://conf.phpquebec.com/">Sessions</a> will be held in
- <a href="http://conf.phpquebec.com/main.php/fr/accueil/main">French</a> or 
- <a href="http://conf.phpquebec.com/main.php/en/accueil/main">English</a>.
- For more information, read the <a 
- href="http://conf.phpquebec.org/main.php/en/conf2004/conferencier">PHP Qu&eacute;bec</a>.
-</p>
-
-<hr />
-
-<h1>New function list auto completion</h1>
-<p>
- <span class="newsdate">[04-Nov-2003]</span>
- You can probably name at least one IDE providing support for PHP function name
- code completion. PHP.net is just <em>beta testing</em> the same feature
- <a href="/search.php">on the search page</a>. Try selecting the 'function
- list' lookup option and start typing in a function name in the search field.
- You can autocomplete the name with the space key and navigate in the dropdown
- with the up and down cursor keys. We welcome feedback on this feature at
- <a href="/copyright.php#contact">the webmasters email address</a>, but
- please submit any bugs you find <a href="http://bugs.php.net/">in the
- bug system</a> classifying them as a "PHP.net website problem" and providing 
- as much information as possible (OS, Browser version, Javascript errors, etc..).
-</p>
-
-<hr />
-
-<h1>PHP 4.3.4 released!</h1>
-<p>
- <span class="newsdate">[03-Nov-2003]</span>
- The PHP developers are proud to announce the immediate availability of
- <a href="release_4_3_4.php">PHP 4.3.4</a>. This release contains a fair
- number of bug fixes and we recommend that all users of PHP upgrade to 
- this version. Full list of fixes can be found in the 
- <a href="ChangeLog-4.php#4.3.4">ChangeLog</a>.
 </p>
 
 <hr />
