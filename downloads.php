@@ -117,10 +117,10 @@ echo '</p>';
 <h2>Complete Source Code</h2>
 <ul>
   <li><?php download_link('php-4.2.3.tar.bz2','PHP 4.2.3 (tar.bz2)'); ?> - 6 September 2002<br />
-  md5: a0c7531f3d53a7736742c780f72a0f41
+  <span class="md5sum">md5: a0c7531f3d53a7736742c780f72a0f41</span>
   </li>
   <li><?php download_link('php-4.2.3.tar.gz', 'PHP 4.2.3 (tar.gz)');  ?> - 6 September 2002<br />
-  md5: 2a4a963d79d97ea2725c860c77e908a2
+  <span class="md5sum">md5: 2a4a963d79d97ea2725c860c77e908a2</span>
   </li>
 </ul>
 
@@ -134,14 +134,14 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   <li><?php download_link('php-4.2.3-Win32.zip', 'PHP 4.2.3 zip package'); ?> - 6 September 2002<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)<br />
-  md5: cc65371d6f6252bb7fecc979fd4cf60e
+  <span class="md5sum">md5: cc65371d6f6252bb7fecc979fd4cf60e</span>
   </li>
 
   <li><?php download_link('php-4.2.3-installer.exe', 'PHP 4.2.3 installer'); ?> - 6 September 2002<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)<br />
-  md5: d872eaad5ae1c0b333f1b8b342e83807
+  <span class="md5sum">md5: d872eaad5ae1c0b333f1b8b342e83807</span>
   </li>
 
 <?php /*  <li>Win32 binaries will be posted soon!</li> */ ?>
@@ -151,15 +151,15 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
   <li><?php download_link("rfc1867.c.diff-4.1.x.gz", "for PHP 4.1.0/4.1.1"); ?> - 27 February 2002<br />
   (Apply in php-4.1.x/main)<br />
-  md5: c8ad890a7fdb9843b48fef9a2034a1df
+  <span class="md5sum">md5: c8ad890a7fdb9843b48fef9a2034a1df</span>
   </li>
   <li><?php download_link("rfc1867.c.diff-4.0.6.gz", "for PHP 4.0.6"); ?> - 27 February 2002<br />
   (Apply in php-4.0.6/main)<br />
-  md5: 2fcb7e1c4762a8253f30d08476f147dc
+  <span class="md5sum">md5: 2fcb7e1c4762a8253f30d08476f147dc</span>
   </li>
   <li><?php download_link("mime.c.diff-3.0.gz", "for PHP 3.0"); ?> - 27 February 2002<br />
   (Apply in php-3.0.x/functions)<br />
-  md5: b4826b2d7968553f808ddb80269d87a0
+  <span class="md5sum">md5: b4826b2d7968553f808ddb80269d87a0</span>
   </li>
 </ul>
 
@@ -167,24 +167,24 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
   <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.<br />
-  md5: 254bccc245d65cece1f40f782b70ec6b
+  <span class="md5sum">md5: 254bccc245d65cece1f40f782b70ec6b</span>
   </li>
   <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.<br />
-  md5: a725c3c9fada0b2e21336250faeca39b
+  <span class="md5sum">md5: a725c3c9fada0b2e21336250faeca39b</span>
   </li>
   <li><?php download_link("php-4.0.6-memlimit.diff.gz", "PHP 4.0.6 memory limit fix"); ?> - 1 July 2001<br />
   (This patch fixes a bug in the 4.0.6 memory limit option. This is only needed when configuring
   PHP with --enable-memory-limit). If you have problems applying the patch try using GNU patch.<br />
-  md5: 75a6f4377ab54853bf866ffd44d1c700
+  <span class="md5sum">md5: 75a6f4377ab54853bf866ffd44d1c700</span>
   </li>
   <li><?php download_link("php-4.0.6-to-4.1.1.patch.gz", "PHP 4.0.6 to 4.1.1 patch"); ?>  - 03 January 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.0.6.<br />
-  md5: 408127b09d87932c5e0f2cd57133e939
+  <span class="md5sum">md5: 408127b09d87932c5e0f2cd57133e939</span>
   </li>
   <li><?php download_link("php-4.1.0-to-4.1.1.patch.gz", "PHP 4.1.0 to 4.1.1 patch"); ?>  - 03 January 2002<br />
   This unified diff will enable you to update your local PHP source to the latest version from 4.1.0.<br />
-  md5: c3f73adfdbde3bfe5d0d51463432a07c
+  <span class="md5sum">md5: c3f73adfdbde3bfe5d0d51463432a07c</span>
   </li>
 </ul>
 
@@ -200,35 +200,35 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
   <li>PHP 4.2.2
     <ul>
       <li><?php download_link("php-4.2.2.tar.gz", "Source Code"); ?><br />
-      md5: 2c3c803152878c799cdf551d56bd142b
+      <span class="md5sum">md5: 2c3c803152878c799cdf551d56bd142b</span>
       </li>
       <li><?php download_link("php-4.2.2-Win32.zip", "Windows Binary (zip)"); ?><br />
-      md5: aae616caf02c9d7af930c605f616e86a
+      <span class="md5sum">md5: aae616caf02c9d7af930c605f616e86a</span>
       </li>
     </ul><br>
   </li>
   <li>PHP 4.1.2
     <ul>
       <li><?php download_link("php-4.1.2.tar.gz", "Source Code"); ?><br />
-      md5: 75a62553076c20e91d3be575ce158be2
+      <span class="md5sum">md5: 75a62553076c20e91d3be575ce158be2</span>
       </li>
       <li><?php download_link("php-4.1.2-Win32.zip", "Windows Binary (zip)"); ?><br />
-      md5: 7df7d0edac5c504adec87b9bd518d2df
+      <span class="md5sum">md5: 7df7d0edac5c504adec87b9bd518d2df</span>
       </li>
     </ul><br>
   </li>
   <li>PHP 3.0.x (latest)
     <ul>
       <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18 Source Code"); ?><br />
-      md5: b4b8f7f1151ce66d5f3910a066651133
+      <span class="md5sum">md5: b4b8f7f1151ce66d5f3910a066651133</span>
       </li>
       <li><?php download_link("php-3.0.17-win32.zip", "PHP 3.0.17 Windows Binary (zip)"); ?><br />
-      md5: 29029ac1c3c2075dce38bbd804c42f72
+      <span class="md5sum">md5: 29029ac1c3c2075dce38bbd804c42f72</span>
       </li>
     </ul><br>
   </li>
   
-  <li>If you are searching for older versions of PHP, go to the new <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
+  <li>If you are searching for older versions of PHP, go to the <a href="http://ftp.proventum.net/pub/php/">"PHP Museum"</a>.</li>
   <li>Search for PHP tarballs on AllTheWeb.com:
     <form action="http://www.alltheweb.com/search" method="GET">
       <input type="hidden" name="cat" value="ftp">
