@@ -63,7 +63,7 @@ EOT;
     // Log download on master server (may be a registered
     // shutdown function to really run after the file is
     // started to download)
-    if ($log) { download_log($mirror, $found); }
+    // if ($log) { download_log($mirror, $found); }
 }
 
 // Log downloads on the master server
