@@ -194,7 +194,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
   <tr bgcolor="#9999cc">
     <td align="middle" rowspan="2" width="120">
-      <a href="/"><?php print_image('php_logo.gif', 'PHP'); ?></a><br>
+      <a href="/"><?php print_image('php_snow.gif', 'PHP'); ?></a><br>
     </td>
     <td align="right" valign="top">
       <font color="#ffffff"><b>
