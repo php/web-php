@@ -24,22 +24,22 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed ip2long() to return FALSE if an IP address passed to this function is not valid. (Derick)</li>
 <li>Fixed memory leak in memory manager. (Andi)</li>
 <li>Fixed problem with exceptions returning from include(). (Dmitry)</li>
-<li>Fixed bug #28641 (Instance of Interface). (Marcus)</li>
-<li>Fixed bug #28430 (Extending mysqli class). (Georg)</li>
-<li>Fixed bug #28311 (Transparency detection code is off by 1). (Ilia, pikeman at pikeman dot sytes dot net)</li>
-<li>Fixed bug #28304 (Missing bounds check inside imagefilter()). (Ilia)</li>
-<li>Fixed bug #28300 (Userspace stream/filter names forced to lowercase). (Sara)</li>
-<li>Fixed bug #28287 (stream_*_register() not calling __autoload()). (Sara)</li>
-<li>Fixed bug #28267 (php_image_filter_contrast calls gdImageBrightness). (Ilia)</li>
-<li>Fixed bug #28239 (No results returned on SOAP call, no error given). (Dmitry)</li>
-<li>Fixed bug #28205 (num_rows property for statement object). (Georg)</li>
-<li>Fixed bug #28161 (COM: Array style properties could not be accessed). (Wez)</li>
-<li>Fixed bug #28125 (ArrayObject leaks when accessing elements). (Marcus)</li>
-<li>Fixed bug #28100 (NULL parameter support for mysqli_ssl_set). (Georg)</li>
-<li>Fixed bug #28099 (ArrayObject doesn't implement ArrayAccess). (Marcus)</li>
-<li>Fixed bug #27929 (SPL: change visibility of ArrayIterator::__construct). (Marcus)</li>
-<li>Fixed bug #27640 (memory leak of registered_zend_ini_directives).  (Dmitry)</li>
-<li>Fixed bug #27063 (SPL: ArrayObject does not handle PPP correctly). (Marcus)</li>
+<li><?php bugfix(28641); ?> (Instance of Interface). (Marcus)</li>
+<li><?php bugfix(28430); ?> (Extending mysqli class). (Georg)</li>
+<li><?php bugfix(28311); ?> (Transparency detection code is off by 1). (Ilia, pikeman at pikeman dot sytes dot net)</li>
+<li><?php bugfix(28304); ?> (Missing bounds check inside imagefilter()). (Ilia)</li>
+<li><?php bugfix(28300); ?> (Userspace stream/filter names forced to lowercase). (Sara)</li>
+<li><?php bugfix(28287); ?> (stream_*_register() not calling __autoload()). (Sara)</li>
+<li><?php bugfix(28267); ?> (php_image_filter_contrast calls gdImageBrightness). (Ilia)</li>
+<li><?php bugfix(28239); ?> (No results returned on SOAP call, no error given). (Dmitry)</li>
+<li><?php bugfix(28205); ?> (num_rows property for statement object). (Georg)</li>
+<li><?php bugfix(28161); ?> (COM: Array style properties could not be accessed). (Wez)</li>
+<li><?php bugfix(28125); ?> (ArrayObject leaks when accessing elements). (Marcus)</li>
+<li><?php bugfix(28100); ?> (NULL parameter support for mysqli_ssl_set). (Georg)</li>
+<li><?php bugfix(28099); ?> (ArrayObject doesn't implement ArrayAccess). (Marcus)</li>
+<li><?php bugfix(27929); ?> (SPL: change visibility of ArrayIterator::__construct). (Marcus)</li>
+<li><?php bugfix(27640); ?> (memory leak of registered_zend_ini_directives).  (Dmitry)</li>
+<li><?php bugfix(27063); ?> (SPL: ArrayObject does not handle PPP correctly). (Marcus)</li>
 </ul>
 
 <hr />
