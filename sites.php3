@@ -75,6 +75,7 @@ right away.</blockquote>
 	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
 	site("Du côté de","www.ducotede.com");
 	site("City of Escondido","www.ci.escondido.ca.us");
+	site("Fayetteville","www.fayetteville.com");
 	site("Greene County Online","greene.xtn.net");
 	site("Hull and East Yorkshire","www.humber.net/key/");
 	site("MyTown.Com","www.mytown.com");
@@ -137,6 +138,7 @@ right away.</blockquote>
 	site("Research Institute for electro-magnetic compatibility","www.femu.rwth-aachen.de");
 	site("Traffic School To Go","www.trafficschooltogo.com");
 	site("The Psychology Place","www.psychplace.com");
+	site("Vestfold College, Norway","www.hive.no");
 	site("WISE Project","wise.berkeley.edu");
 	siteEnd();
 
@@ -197,6 +199,7 @@ right away.</blockquote>
 	title("Food & Drink");
 	siteStart();
 	site("Bar-None Drink Recipes","psp.pair.com/barnone/");
+	site("Cookbook Wizard","www.cookbookwizard.com");
 	site("Food Geeks","foodgeeks.com");
 	site("Foodstop.Com","www.foodstop.com");
 	siteEnd();
@@ -513,6 +516,7 @@ right away.</blockquote>
 	site("Sellit-Here Online","www.sellit-here.com");
 	site("Schneider-electric","www.schneider-electric.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
+	site("Stuart Weitzman","www.stuartweitzman.com");
 	site("Sunset Systems","www.sunsetsystems.com");
 	site("Swiss Online Bookstore","www.editore.ch");
 	site("TonerStop","www.tonerstop.com");
