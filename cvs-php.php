@@ -171,11 +171,11 @@ EOT;
  </tr>
  <tr>
   <td class="sub">Reading the PHP source</td>
-  <td>Maintaining the documentation</td>
+  <td><a href="/dochowto">Maintaining the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Using PHP extensions</td>
-  <td>Translating the documentation</td>
+  <td><a href="/dochowto">Translating the documentation</a></td>
  </tr>
  <tr>
   <td class="sub">Creating experimental PHP extensions</td>
@@ -221,7 +221,8 @@ EOT;
  itself</strong>, not people developing in PHP) subscribe to this list.
  Similarly, if you plan on contributing documentation, you should
  <a href="mailto:phpdoc-subscribe@lists.php.net">subscribe to the
- documentation mailing list</a>, etc.
+ documentation mailing list</a>, and read the <a href="/dochowto">PHP
+ Documentation HOWTO</a>.
 </p>
 
 <p>
