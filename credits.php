@@ -1,26 +1,34 @@
 <?php
-require_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'credits.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+// Output buffering supported
 if (function_exists('ob_start')) {
-  ob_start();
-  phpcredits();
-  $credits = ob_get_contents();
-  ob_end_clean();
+    
+    // Put credits information to $credits
+    ob_start();
+    phpcredits();
+    $credits = ob_get_contents();
+    ob_end_clean();
 
-  // strip all but the body
-  preg_match ('/<body.*?>(.*)<\/body>/ims', $credits, $m);
+    // Strip all but the body
+    preg_match('!<body.*?>(.*)</body>!ims', $credits, $m);
 
-  // strip out any style
-  $credits = preg_replace('/<style.*?>.*<\/style>/ims', '', $m[1]);
+    // Strip out any style
+    $credits = preg_replace('!<style.*?>.*</style>!ims', '', $m[1]);
 
-  if ($credits) {
-    commonHeader("PHP Credits", 1);
-    echo $credits;
-    commonFooter(); 
-		exit;
-	}
+    // If there is something left, print it out
+    if ($credits) {
+        commonHeader("Credits");
+        echo $credits;
+        commonFooter(); 
+    }
 }
-
-phpcredits();
+ 
+// No output buffer support, standard credits page
+else {
+    phpcredits();
+}
 
 ?>
