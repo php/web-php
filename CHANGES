@@ -135,47 +135,29 @@ types. For example, you could use:
 	while ("" != (string)$key) {
 
 
-[6] Some array functions must have their parameters passed by reference.
-
-A design decision has caused several array related functions to change
-their behavior.  With the following functions, where $a is an array,
-the function should be called using func(&$a) instead of func($a):
-
-	next()
-	prev()
-	reset()
-	end()
-	sort()
-	asort()
-	ksort()
-
-The reason for this is that these functions change the contents of $a
-in one way or another, and you must instruct PHP to pass the variable
-by reference instead of by value (more on this later).
-
-[7] The structure of error messages as changed.
+[6] The structure of error messages as changed.
 
 Although the error messages are usually more accurate, you won't be shown
 the actual line of text and actual place in which the error occured.
 You'll be supplied with the line number in which the error has occured,
 though.
 
-[8] The format string argument to echo is no longer supported.
+[7] The format string argument to echo is no longer supported.
 
 Use printf(format,arg1,arg2,arg3,...) instead (unlimited arguments).
 
-[9] The use of read-mode $array[] is no longer supported.
+[8] The use of read-mode $array[] is no longer supported.
 
 That is, you cannot traverse an array by having a loop that does $data =
 $array[].  Use current() and next() instead.  Also, $array1[] = $array2
 does not append the values of $array2 to $array1, but appends $array2
 as the last entry of $array1 (see the multidimensional array support).
 
-[10] Apache versions older than 1.2 are not supported anymore.
+[9] Apache versions older than 1.2 are not supported anymore.
 
 The apache module requires apache 1.2 or later (1.3-beta is supported).
 
-[11] Other incompatibilities.
+[10] Other incompatibilities.
 
 It's not too unlikely that other documented behavior of PHP2 has changed
 in this release.  If you think you've found an example, please mail
@@ -432,31 +414,46 @@ A simple example:
 
 Ok, so it may be not so simple.  Play with it, it's pretty powerful.
 
-[12] Array initialization is now supported.
 
-For example, let's say you want to initialize a lookup table to convert
-number to month names:
+[12]	Array initialization is now supported.
 
-	$months = ({ "January", "February", "March",
-		     "April", "May", "June", "July", "August", "September",
-		     "October", "November", "December" });
+	For example, let's say you want to initialize a lookup table to convert
+	number to month names:
 
-would assign $months[0] to be January, $months[1] to be February, etc.
-Alternately, you may want the count to start at '1' instead of 0.
-You can do so easily:
+		$months = array("January", "February", "March",
+						"April", "May", "June", "July", "August",
+				 		"September", "October", "November", "December");
 
-$months = ({ 1=>"January", "February", "March",
-	     "April", "May", "June", "July", "August", "September",
-             "October", "November", "December" });
+	would assign $months[0] to be January, $months[1] to be February, etc.
+	Alternately, you may want the count to start at '1' instead of 0.
+	You can do so easily:
 
-Also, you can specify an index for every entry, not just the first one:
+		$months = array(1=>"January", "February", "March",
+						"April", "May", "June", "July", "August",
+						"September", "October", "November", "December");
 
-	$first_names = ({ "Doe"=>"John", "Gates"=>"William",
-			  "Clinton"=>"Bill" });
+	Also, you can specify an index for every entry, not just the first one:
 
-would assign $first_names["Doe"]="John", etc.
+		$first_names = array("Doe"=>"John", "Gates"=>"William",
+							"Clinton"=>"Bill" });
 
-[13] Colons are supported in 'case' and 'default' statements.
+	would assign $first_names["Doe"]="John", etc.
+
+
+[13]	Perl style lists now supported.
+
+	Multiple values from arrays may now be assigned into several
+	variables using one assignment.  For example:
+	
+		$str = "johndoe:x:555:555:Doe, John:/home/johndoe:/bin/tcsh;
+		
+		($username,$passwd,$uid,$gid,$realname,$homedir,$shell) = 
+			explode(":",$str);
+	
+	Would assign 'johndoe' into $username, 'x' into $passwd, etc.
+
+
+[14] Colons are supported in 'case' and 'default' statements.
 
 For example:
 
