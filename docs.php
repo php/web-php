@@ -54,7 +54,7 @@ your searching pleasure!
 
 commonHeader("Documentation");
 
-$man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'pl', 'es');
+$man_languages = array('en', 'pt_BR', 'zh', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'pl', 'es');
 
 ?>
 

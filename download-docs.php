@@ -35,7 +35,7 @@ here to see all the file sizes and dates</a>.
 
 commonHeader("Download documentation");
 
-$man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'ko', 'pl', 'es');
+$man_languages = array('en', 'pt_BR', 'zh', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'ko', 'pl', 'es');
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
