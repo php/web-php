@@ -190,7 +190,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       true, true, false, "php.smarty.cvs"
     ),
 
-    'PHPLIB mailing lists',
+/*    'PHPLIB mailing lists',
     Array (
       'phplib', 'PHPLIB mailing list',
       'List of the open source PHP code library',
@@ -200,7 +200,7 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'phplib-dev', 'PHPLIB developers list',
       'List for the PHPLIB developers',
       false, true, false
-    ),
+    ), */
   );
 
 ?>
