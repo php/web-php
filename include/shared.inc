@@ -8,14 +8,16 @@ $IE4 = $IE3 = $NS4 = $NS3 = $X11 = $HAVE_STYLE = false;
 if (ereg("MSIE ([0-9]+)",$HTTP_USER_AGENT,$version)):
         $ver=(int)$version[1];
         if ($ver>=4):
-		$IE4 = $HAVE_STYLE = true;
+		$IE4=true;
+		$HAVE_STYLE = true;
         elseif($ver==3):
 		$IE3=true;
         endif;
 elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):                                    
         $ver=(int)$version[1];
         if ($ver>=4):
-		$NS4 = $HAVE_STYLE = true;
+		$NS4=true;
+		$HAVE_STYLE=true;
         elseif($ver==3):  
 		$NS3=true;
         endif;
@@ -243,9 +245,10 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 
 function commonHeader($title) {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR;
-	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES;
+	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
 	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
+	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 ?>
 <HTML>
 <HEAD>
@@ -435,7 +438,11 @@ endif; ?>
 			makeSideButton("","close","","close",1,1,0,0,"","");
 			makeSideButton("/source.php3?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
 		endif;
-		makeSideButton("http://ca.php.net/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
+		if ($HAVE_SEARCH):
+			makeSideButton("/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
+		else:
+			makeSideButton("http://ca.php.net/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
+		endif;
       ?><IMG 
          SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
     </TR>
