@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+include './include/prepend.inc';
 
 commonHeader("News Archive");
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once 'prepend.inc';
+require_once '../include/prepend.inc';
 
 $lang = default_language();
 if (@is_dir($lang)) {

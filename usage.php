@@ -1,5 +1,5 @@
 <?php
-include_once "prepend.inc";
+include "./include/prepend.inc";
 commonHeader("PHP Usage Stats");
 ?>
 

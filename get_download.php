@@ -1,6 +1,6 @@
 <?php
-include_once 'prepend.inc';
-include_once 'mirrortable.inc';
+include './include/prepend.inc';
+include './include/mirrortable.inc';
 
 // Try to make this page non-cached
 header_nocache();

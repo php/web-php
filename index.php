@@ -39,7 +39,7 @@ else {
     header("Last-Modified: " . $tsstring);
 }
 
-include_once 'prepend.inc';
+include './include/prepend.inc';
 
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '

@@ -1,5 +1,5 @@
 <?php
-include_once 'prepend.inc';
+include './include/prepend.inc';
 
 $SIDEBAR_DATA='
 <h3>FAQ</h3>

@@ -1,7 +1,7 @@
 <?php
 
-include_once "prepend.inc";
-include_once "books.inc";
+include "./include/prepend.inc";
+include "./include/books.inc";
 commonHeader("PHP Books");
 
 // Show a table row for one book
