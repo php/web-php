@@ -123,7 +123,6 @@ Restrict the search to:<br></td>
 <option value="maillist" <?=($show=='maillist')?'selected':''?>>general mailing list
 <option value="devlist" <?=($show=='devlist')?'selected':''?>>developer mailing list
 <option value="phpdoc" <?=($show=='phpdoc')?'selected':''?>>documentation mailing list
-<option value="source" <?=($show=='source')?'selected':''?>>website source code
 </select><br>
 </td></tr></table>
 </form>
@@ -155,11 +154,7 @@ Restrict the search to:<br></td>
 			
 		$words = escapeshellcmd (urlencode($pattern));
 		$config = "php";
-		if ($show == "source") {
-			$exclude = "/manual";
-			$restrict = $MYSITE."source";
-			$where = "Site source code";
-		} elseif ($show == "manual") {
+		if ($show == "manual") {
 			$restrict = $MYSITE."manual/en";
 			$exclude = "/source";
 			$where = "PHP documentation";
