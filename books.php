@@ -233,7 +233,7 @@ $books = array (
 
   "Other" => array(
 
-   array( "PHP kurz & gut",    #title(s)
+   array("PHP kurz & gut",    #title(s)
       "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07", #title_link
       array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"), #author(s)
       array("http://zend.com/zend/hof/rasmus.php", "http://www.oreilly.de/catalog/phptbger/translator.html"),
@@ -245,15 +245,20 @@ $books = array (
    ),
 
 
-   array( "PHP 4. Dynamische Webauftritte professionell realisieren",    #title(s)
+   array("PHP 4. Dynamische Webauftritte professionell realisieren",    #title(s)
       "http://www.amazon.de/exec/obidos/ASIN/3827258774/wwwphpnet07", #title_link
       array("Egon Schmid", "Christian Cartus"), #author(s)
       array("http://zend.com/zend/hof/schmid.php", false), #author_link(s)
       "schmid_cartus.jpg", #img
       "Mit einem Vorwort von ".make_link("http://www.zend.com/zend/hof/andi.php", "Andi Gutmans") .
           " und " . make_link("http://www.zend.com/comm_person.php?id=12", "Zeev Suraski") . "<BR>\n" .
-          "Unter Mitarbeit von Markt+Technik Verlag<BR>\n" .
-          "New technology, Dec 2000, ISBN 3-8272-5877-4, 639 pages", #info
+          "Unter Mitarbeit von "
+	  . make_link("http://www.zend.com/comm_person.php?id=38", "Wofgang Drews, ")
+	  . make_link("http://www.zend.com/comm_person.php?id=33", "Hartmut Holzgraefe, ") 
+	  . make_link("http://www.zend.com/comm_person.php?id=37", "Uwe Steinmann") 
+	  . " und "
+          . "Christian Wenz<BR>\n" .
+          "Markt+Technik Verlag, New Technology, December 2000, ISBN 3-8272-5877-4, 639 pages", #info
       "http://www.php-buch.de/",  #info_link
       "de" #lang
    ),
@@ -376,6 +381,18 @@ $books = array (
       "", #info_link
       "de"  #lang
    ),
+
+
+   array("PHP 4 Webbook",    #title(s)
+      "http://www.amazon.de/exec/obidos/ASIN/381550502X/wwwphpnet07", #title_link
+      array("Mark Kronsbein", "Thomas Weinert"), #author(s)
+      array("http://www.zend.com/comm_person?id=36", false), #author_link(s)
+      "mark_thomas.jpg", #img
+      "Sybex, March 2001, ISBN 3-8984-2116-3, 500 pages", #info
+      "http://www.phpbuch.de/", #info_link
+      "de"  #lang
+   ),
+
 
    array( "PHP 4 programmering",    #title(s)
       "http://pagina.se/bok.html?20660", #title_link
