@@ -80,6 +80,11 @@ With the same features as ASP and JSP, PHP is the fastest growing Apache add-on.
 An interview with the core PHP development team: Andi, Andrei, Jim, Rasmus, Sascha, Stig, Thies, and Zeev.
 <? endEntry(); ?>
 
+<? makeEntry( "Web-Page Generator PHP Gets A Much-Needed Jolt in Version 4", "by Ahmad Abualsamid", 
+	"http://www.techweb.com/se/directlink.cgi?NWC19991101S0014", "November 1, 1999");?>
+PHP began as a small project to enhance a single Web site; it eventually became the most popular server-side scripting language for use with Apache. 
+<? endEntry(); ?>
+
 <? makeEntry( "PHP-Einf&uuml;hrung", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>", 
 	"http://www.internetworld.de/iw/magazin_11phpeinfuehrung.htm", "October 20, 1999");?>
 (In German.) &quot;Over ten percent of all web servers have the scripting
