@@ -119,7 +119,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>Alpha 2 of PHP w/ the Zend Engine 2 Now Available</h1>
 <font class="newsdate">[30-Jun-2002]</font>
 <p>The second alpha release of PHP w/ Zend Engine 2 is
-<a href="distributions/php-4.3.0-dev-zend2-alpha2.tar.gz">now available</a>.
+<?php download_link("php-4.3.0-dev-zend2-alpha2.tar.gz", "now available."); ?>
 It is based on the current PHP 4 CVS (4.3.0-dev) and includes the new 
 scripting engine which greatly improves the object model, adds exception
 handling and provides a much better infrastructure for the integration
