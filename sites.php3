@@ -125,6 +125,7 @@ right away.</blockquote>
 	site("TVN Entertainment","www.tvn.com");
 	site("United States of Hardcore (Music)","www.ush.net");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
+	site("VRT - Vlaamse Radio - en Televisieomroep","www.vrt.be");
 	siteEnd();
 
 
