@@ -155,8 +155,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5.0.0 Released!</h1>
 <p>
  <span class="newsdate">[13-Jul-2004]</span>
- The <a href="/downloads.php#v5">final release of PHP 5</a> is finally
- here!
+ The PHP team is proud to announce the <a href="/downloads.php#v5">final release of PHP 5</a>!
 </p>
 
 <p>Some of the key features of PHP 5 include:</p>
