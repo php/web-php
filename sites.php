@@ -168,6 +168,7 @@ right away.</blockquote>
 	site("Independent Musicians Guild","www.scimg.com");
 	site("Kentucky Lottery","www.kylottery.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
+	site("PowerMetal.de","www.powermetal.de");
 	site("Miss USA 1999","www.missusa.com");
 	site("My Video Store","www.myvideostore.com");
 	site("MysteryGuide.com","www.mysteryguide.com");
