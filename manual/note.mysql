@@ -1,0 +1,25 @@
+# MySQL dump 8.5
+#
+# Host: localhost    Database: php3
+#--------------------------------------------------------
+# Server version	3.23.18-alpha
+
+#
+# Table structure for table 'note'
+#
+
+CREATE TABLE note (
+  id mediumint(9) NOT NULL auto_increment,
+  sect varchar(80),
+  user varchar(80),
+  note text,
+  ts datetime,
+  status varchar(16),
+  lang varchar(16),
+  votes int(11) DEFAULT '0' NOT NULL,
+  rating int(11) DEFAULT '0' NOT NULL,
+  updated datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+  removed tinyint(1) DEFAULT '0' NOT NULL,
+  PRIMARY KEY (id)
+);
+

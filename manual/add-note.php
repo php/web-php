@@ -11,21 +11,6 @@ if ($MYSITE!='http://www.php.net/') {
 
 $mailto = 'rasmus@php.net';
 
-/*
-#
-# Table structure for table 'note'
-#
-CREATE TABLE note (
-  id mediumint(9) DEFAULT '0' NOT NULL auto_increment,
-  sect varchar(80),
-  user varchar(80),
-  note text,
-  ts datetime,
-  PRIMARY KEY (id)
-);
-*/
-
-
 require("shared-manual.inc");
 commonHeader("Manual Notes");
 
@@ -59,7 +44,9 @@ if (isset($note) && isset($action) && strtolower($action) != "preview"):
         $query .= "('$user','$note','$sect','$now','$lang')";
 	//echo "<!--$query-->\n";
 	if (mysql_query($query)):?>
-<P>Your submission was successful -- thanks for contributing!
+<P>Your submission was successful -- thanks for contributing! Note that it may
+not show up for a few hours on some of the <a href="/mirrors.php">mirrors</a>,
+but it will find its way to all of our mirrors in due time.
 <?		$new_id = mysql_insert_id();	
 		$msg = stripslashes($note);
 		$msg .= "\n\n $redirect \n";
@@ -99,7 +86,7 @@ things making the manual hard to read for everybody. You can include
 <p>Read carefully the following note. If your post falls into one of the
 categories mentioned there, it will be rejected by one of the editors.</p>
 
-<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net">report a
+<P><B>Note:</B> If you are trying to <A href="http://bugs.php.net/">report a
 bug</A>, or <a href="http://bugs.php.net/">request a new fature or language
 change</a> you're in the wrong place.  If you are just commenting on the fact
 that something is not documented, save your breath. This is where <B>you</B>
@@ -113,7 +100,7 @@ any of the categories above, it will edited and/or removed.
 Just to make the point once more. The notes are being edited and support
 questions/bug reports/feature request/comments on lack of documentation, are
 being <b>deleted</b> from them (and you may get a <b>rejection</b> email), so
-if you post a question/bug/feature/complain, it will be removed. (But once you
+if you post a question/bug/feature/complaint, it will be removed. (But once you
 get an answer/bug solution/function documentation, feel free to come back
 and add it here!)</p>
 <p>
