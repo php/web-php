@@ -209,6 +209,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP.net news history</h1>
+
+<p>
+ <span class="newsdate">[15-Aug-2003]</span>
+ Ever wonder what was the original PHP 3.0 release annoucement, what
+ where the choices when the PHP: Hypertext Preprocessor name was
+ choosen, or since when you can use URL shortcuts to access pieces
+ of our site? We have digged up some of the most interesting news
+ items published on PHP.net since January 1998, when the site started
+ to serve its visitors. You can find these <a href="/news-2003.php">in
+ the news archives</a>. There is also some historical information in
+ <a href="/history">the manual's history appendix</a>.
+</p>
+
+<hr />
+
 <h1>Select mirror for redirection</h1>
 
 <p>
