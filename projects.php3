@@ -86,6 +86,7 @@ The PHP Base Library is a toolkit of extremely useful functions needed in many w
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
 If you have a project you feel belongs on this list, send us email us at <A HREF="mailto:projects@php.net">projects@php.net</A>.
+If you have a site that uses PHP, you may want to add it to the <a href="/sites.php3">sites page</a>.
 <BR></TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
