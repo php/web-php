@@ -59,7 +59,7 @@ change mirrors at the bottom of the page.
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.0.6.tar.gz", "PHP 4.0.6"); ?> - 23 June 2001</li>
+  <li><?php download_link("php-4.1.0.tar.gz", "PHP 4.1.0"); ?> - 10 December 2001</li>
 </ul>
 
 <h2>Windows Binaries</h2>
