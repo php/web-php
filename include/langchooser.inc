@@ -56,7 +56,7 @@ function language_choose_code()
         $explicitly_specified = language_add($_REQUEST['lang'], $languages);
 
         // Set the language in a cookie for a year and for all *.php.net servers
-        setcookie("MYPHPNET", $_REQUEST['lang'], time() + 60*60*24*365, '/', '.php.net');
+        setcookie("LAST_LANG", $_REQUEST['lang'], time() + 60*60*24*365, '/', '.php.net');
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
@@ -77,14 +77,24 @@ function language_choose_code()
     // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
     if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
         $flang = language_add($flang[1], $languages);
+
+        // Set explicity specified language
         if (empty($explicitly_specified)) {
             $explicitly_specified = $flang;
         }
+
+        // Set the language in a cookie for a year and for all *.php.net servers
+        setcookie("LAST_LANG", $flang, time() + 60*60*24*365, '/', '.php.net');
     }
     
     // Honor the users own language setting (if available)
     if (isset($_COOKIE['MYPHPNET'])) {
         language_add($_COOKIE['MYPHPNET'], $languages);
+    }
+    
+    // Put the last selected language in the priority order (if available)
+    if (isset($_COOKIE['LAST_LANG'])) {
+        language_add($_COOKIE['LAST_LANG'], $languages);
     }
 
     // Specified by the user via the browser's Accept Language setting
