@@ -222,7 +222,6 @@ $uri_aliases = array (
     "registerglobals"  => "security.globals",
     "manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
     "gd"               => "image",
-	"php5"             => "language.oop5",
 
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
@@ -236,9 +235,14 @@ $uri_aliases = array (
     
     "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
-    "zend_changes.txt"             => "zend-engine-2", // BC
-    "zend2_example.phps"           => "zend-engine-2", // BC
-    "zend_changes_php_5_0_0b2.txt" => "zend-engine-2", // BC
+    
+    "php5"                         => "language.oop5",
+    "zend_changes.txt"             => "language.oop5", // BC
+    "zend2_example.phps"           => "language.oop5", // BC
+    "zend_changes_php_5_0_0b2.txt" => "language.oop5", // BC
+    "zend-engine-2"                => "language.oop5", // BC
+    "zend-engine-2.php"            => "language.oop5", // BC
+    
     "news_php_5_0_0b2.txt"         => "ChangeLog-5", // BC
     "news_php_5_0_0b3.txt"         => "ChangeLog-5", // BC
     
