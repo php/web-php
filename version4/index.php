@@ -8,6 +8,7 @@ echo "\n<!--$MYSITE-->\n";
 <ul>
   <li>Read the <a href="release_announcement.php">Beta 1 Release Announcement</a></li>
   <li><a href="downloads.php">Download</a> PHP 4.0 Release Candidate 1!</li>
+  <li>Read the <a href="roadmap.php">roadmap</a> for the 4.0 release that came out of the PDM.</li>
   <li>Read the <a href="migration.php">Migration notes</a> on how to migrate from PHP 3.0</li>
   <li>Read about the (very few) <a href="incompatibilities.php">incompatibilities</a> between PHP 3.0 and PHP 4.0.</li>
   <li><a href="http://bugs.php.net/version4/">Report bugs</a></li>
