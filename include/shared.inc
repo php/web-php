@@ -182,7 +182,7 @@ function kickHeader($offset,$side,$width) {
 	echo "</TR>\n";
 	echo "<TR VALIGN=top><TD BACKGROUND='/gifs/kick-bl.gif' width=9>";
 	spc(9,1);
-	echo "<BR></TD>\n<TD BGCOLOR='#EFEF52' width=$innerwidth><FONT $FONTFACEATTR SIZE=-1>\n";
+	echo "<BR></TD>\n<TD BGCOLOR='#EFEF52' width=$innerwidth><FONT $FONTFACEATTR SIZE=2>\n";
 }
 
 function kickFooter($kickname,$buttname,$width) {
@@ -387,7 +387,6 @@ endif;
 	echo " OnLoad=\"LoadImgs();\"";
 endif; ?>
 ><A NAME="top">
-
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="100%">
  <TR valign=top>
   <TD ALIGN=left width=150 BGCOLOR="#5B69A6">
@@ -426,7 +425,7 @@ endif; ?>
      <TD ALIGN=left>
       <?
 		spc(5,1);
-		echo "<FONT${FONTFACEATTR} SIZE=+1><B>$title</B></FONT><BR>\n";
+		echo "<FONT${FONTFACEATTR} SIZE=4><B>$title</B></FONT><BR>\n";
       ?>
      </TD>
      <TD ALIGN=right>
@@ -507,7 +506,7 @@ function commonFooter() {
       <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
        <TR VALIGN=middle>
         <TD align=right>
-         <FONT<? echo $FONTFACEATTR ?> SIZE="-2">
+         <FONT<? echo $FONTFACEATTR ?> SIZE=1>
          <I>Site<BR>Hosting:</I><BR>
         </TD>
         <TD>
@@ -523,8 +522,8 @@ function commonFooter() {
       <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
        <TR VALIGN=middle>
         <TD align=center>
-         <FONT<? echo $FONTFACEATTR; ?> SIZE="-1">
-         <FONT SIZE="-2"><I>Located in</I></FONT><BR><? echo $COUNTRIES[$country]; ?></TD>
+         <FONT<? echo $FONTFACEATTR; ?> SIZE=2>
+         <FONT SIZE=1><I>Located in</I></FONT><BR><? echo $COUNTRIES[$country]; ?></TD>
         <TD><? spc(5,1);?></TD>
         <TD>
          <IMG SRC="/gifs/flag-<? echo $country; ?>.gif" BORDER=0></TD>
@@ -573,8 +572,8 @@ else:
 	echo "<FORM ACTION='http://ca.php.net/search.php3' METHOD='POST'>\n";
 endif;?>
 <B>What are you searching for:</B><BR>
-<FONT SIZE=+0><input type='text' name='pattern' size=20></FONT><BR>
-<FONT SIZE="-1">
+<FONT SIZE=3><input type='text' name='pattern' size=20></FONT><BR>
+<FONT SIZE=2>
 <input type='checkbox' name='icase'> case sensitive<BR>
 <input type='checkbox' name='words'> match whole words only<BR>
 <input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
