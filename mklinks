@@ -1,0 +1,21 @@
+#!/usr/bin/sh
+
+fixlink()
+{
+    rm -f $2
+    ln -s $1 $2
+}
+
+fixlink bug-form.php3 bug-form.phps
+fixlink config-form.php3 config-form.phps
+fixlink download.php3 download.phps
+fixlink index.php3 index.phps
+fixlink menu.php3 menu.phps
+fixlink new_user.php3 new_user.phps
+fixlink search.php3 search.phps
+fixlink register.php3 register.phps
+fixlink credits.php3 credits.phps
+fixlink config.php3 config.phps
+fixlink oh_no.php3 oh_no.phps
+fixlink setcookie.php3 setcookie.phps
+fixlink patches.php3 patches.phps

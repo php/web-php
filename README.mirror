@@ -3,18 +3,13 @@ Here is how to mirror the PHP3 site.
 First, you need to have a cvs client.  See http://www.cyclic.com, or grab one from your
 local GNU mirror.  You will also need MySQL installed and working.  See http://www.tcx.se/
 
-Second, create a directory off of your root directory.  Doesn't matter what the name is, as
-long as it isn't "php3".  I call mine "cvs".  cd into this directory and issue the following
+Fetch the web files with the following:
 
    cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository login
    Password: phpfi
-   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository co php3/web-stuff
+   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository co phpweb
 
-now cd into php3 and type: cvs update CHANGES
-
-Then cd back into your root directory and create a symbolic link:
-
-  ln -s cvs/php3/web-stuff php3
+Symbolic link the phpweb directory to the correct place on your server.
 
 Now, make sure your web server is set up to serve up .php3 files as PHP3 parsed files.
 If it isn't, add the mime-type to your config.
@@ -33,7 +28,8 @@ The shell script, "mklinks", will create these for you.
 You should be all set.  Point your browser at www.yoursite.com/php3
 
 You may want to set up a cron job that periodically does a 'cvs update -d' in 
-your cvs/php3 directory.  This will ensure that your web site is up to date.
+your web directory.  This will ensure that your web site is up to date. 
+Something like: 0,15,30,45 * * * * (cd <your_path>; /usr/local/bin/cvs update -d)
 
 In order to get the Search button to work, you need to have the Glimpse binaries
 installed.  They are available at ftp://ftp.cs.arizona.edu/pub/glimpse
@@ -41,10 +37,11 @@ I haven't had much luck compiling from their sources, but the binary distributio
 of Glimpse-4.0 seems to work fine.  Install these in /usr/local/bin, and run
 the following command:
 
-/usr/local/bin/glimpseindex -b -i -t -H /u/www/servers/lerdorf/php3 /u/www/servers/lerdorf/php3; chmod a+r /u/www/servers/lerdorf/php3/.gli*
+/usr/local/bin/glimpseindex -b -i -t -H <path> <path>; chmod a+r <path>/.gli*
 
-Replace /u/www/servers/lerdorf with whatever the path is to your php3 directory.  Note that
+Replace <path> with whatever the path is to your php3 directory.  Note that
 the search script assumes all files are reachable with a URL of: /php3/filename.ext
+(this needs to be fixed)
 
 In order for the patches to download when you click on them, add this line to your
 srm.conf file:
@@ -52,4 +49,4 @@ srm.conf file:
   AddType application/octet-stream .fix 
 
 (instructions for database synchronization will follow when we figure out how
-to do it)
+ to do it)
