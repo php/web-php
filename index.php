@@ -87,7 +87,7 @@ PHP-GTK Documentation Update
 <?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> 
 <?php print_link("http://gtk.php.net/docs.php", "documentation"); ?> is starting
 to be more filled out. The manual is now rebuilt every night and
-<?php print_link("http://gtk.php.net/download-docs.php", "downloadable versions"); ?>
+<?php print_link("http://gtk.php.net/download-docs.php", "downloadable versions"); ?> 
 of it in different formats are also available. If you have been working with
 PHP-GTK and would like to contribute to the documentation effort, please
 <?php print_link("mailto:gtk-doc@php.net", "let us know"); ?>.
