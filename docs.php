@@ -107,7 +107,7 @@ the tool you use does otherwise.
        # if no size required [pdf, online], then just print, else
        # decide what to do according to the $size of the file
        if (!$details[2]) { 
-         if ($link_to == 'down') echo "PDF Format Unavailable Temporarily";
+         if ($link_to == 'down') echo "Format Unavailable";
          else echo "<a href=\"$link_to\">$details[1]</a>"; 
        }
        else {
