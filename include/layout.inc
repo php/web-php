@@ -335,7 +335,7 @@ function commonFooter() {
  <tr valign="top" bgcolor="#cccccc">
   <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2003 The PHP Group'); ?><br />All rights reserved.</small></td>
   <td align="right"><small>
-   This mirror generously provided by:
+   <a href="/mirror.php">This mirror</a> generously provided by:
    <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
    Last updated: <url-minder-ignore><?php echo strftime("%c %Z", $LAST_UPDATED); ?></url-minder-ignore>
    </small>
