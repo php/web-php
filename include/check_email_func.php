@@ -3,7 +3,7 @@
 <body>
 <?php
 
-require getcwd()."/email_validation.inc";
+require getcwd()."/email-validation.inc";
 
 if (!$debug)
 	$debug = 0;
