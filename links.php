@@ -363,7 +363,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.interakt.ro/">InterAKT Online</a><br />
+  <a href="http://www.interaktonline.com/">InterAKT Online</a><br />
   InterAKT Online provides quality software development tools used by tens
   of thousands of PHP developers around the world, including PHAkt and
   Krysalis.
