@@ -16,19 +16,10 @@ to wait for the official releases.</p>
 download clients for most major platforms, at <a
 href="http://www.cvshome.org/">CVShome.org</a>.</p>
 
-<p>Getting the PHP 4 CVS version to work is a bit more complicated
-than it is for PHP 3 for two main reasons - first, the engine,
-Zend, has been separated from the main language tree, and resides
-in a different CVS module. And second, PHP 4 uses a much
-more advanced configuration system, that requires you to have not
-only autoconf installed, but also automake and libtool.</p>
-
-<p>All of the necessary utilities (autoconf, automake. libtool,
-bison and flex) can be obtained from <a
-href="ftp://ftp.gnu.org/pub/gnu/">the GNU FTP site</a>.</p>
-
-<p>If after these warnings you're still interested in obtaining
-PHP from CVS, here's how.<p>
+<p> PHP 4 uses an advanced configuration system that requires you to have 
+autoconf (2.13+), automake (1.4+), libtool (1.4+ [except 1.4.2]), bison 
+(1.28+) and flex (2.5.4+) installed.  All of the necessary utilities can be
+obtained from <a href="ftp://ftp.gnu.org/pub/gnu/">the GNU FTP site</a>.</p>
 
 <ul>
   <li>It is recommended that you configure CVS by putting this
@@ -44,17 +35,11 @@ diff -u
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
   <li>Obtain the PHP 4 CVS tree:<br>
     <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co php4</pre></li>
-	<li>Move to the PHP 4 source tree:<br>
-    <pre>cd php4</pre></li>
-  <li>Obtain the Zend and TSRM (Thread Safe Resource Manager) CVS tree:<br>
-    <pre>cvs -d :pserver:cvsread@cvs.php.net:/repository co Zend TSRM</pre></li>
 
     <blockquote>
      <strong style="color: #99000">Note:</strong> <br/>
      <i>You can retrieve a specific release of PHP from CVS by using the -r flag in your cvs command. For example:<br><pre>
 cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4
-cd php4
-cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 Zend TSRM
      </pre>
      Tags for major releases look like php_VERSION where version is the version number with periods replaced with underscores.</i>
     </blockquote>
