@@ -1,6 +1,8 @@
 <?php /* vim: set noet ts=4 sw=4: : */
 require_once 'prepend.inc';
 
+require 'cvs-auth.inc';
+
 if (isset($save) && isset($pw)) { # non-developers don't have $user set
   setcookie("MAGIC_COOKIE",base64_encode("$user:$pw"),time()+3600*24*12,'/');
 }
@@ -244,7 +246,7 @@ elseif ($cmd == "display") {
 		$from = $email;
     }
     elseif ($modify == "developer") {
-		if (!valid_login($user,$pw)) {
+		if (!verify_password($user,$pw)) {
 			echo "<h2 class=\"error\">The username or password you supplied was incorrect.</h2>\n";
 		}
 		elseif (incoming_details_are_valid()) {
@@ -573,33 +575,6 @@ function show_types($current,$show_any,$default="") {
 	if (!$use && $current) {
 		echo "<option selected>$current</option>\n";
 	}
-}
-
-function find_password($user) {
-	$fp=@fopen("/repository/CVSROOT/passwd","r");
-	if (!$fp) {
-		return ("");
-	}
-	while(!feof($fp)) {
-		$line=fgets($fp,120);
-		list($luser,$passwd,$junk) = explode(":",$line);
-		if($user==$luser) {
-			fclose($fp);
-			return($passwd);
-		}
-	}
-	fclose($fp);
-	return("");
-}
-
-function valid_login($user,$pass) {
-	if($user!="cvsread") {
-		$psw=find_password($user);
-		if(strlen($psw)>0) {
-			return crypt($pass,substr($psw,0,2)) == $psw;
-		}
-	}
-	return false;
 }
 
 function get_old_comments ($bug_id) {
