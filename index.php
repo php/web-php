@@ -114,12 +114,37 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>New comp.lang.php newsgroup started</h1>
+
+<p>
+<font class="newsdate">[09-Jul-2002]</font> comp.lang.php was created yesterday,
+after a two and a half month long process started in April by Ian Fette resulted
+in a <a href="http://groups.google.com/groups?q=comp.lang.php&hl=en&lr=&ie=UTF-8&sel
+m=1025483879.39561%40isc.org&rnum=3">177-11 vote</a> in favor of the group.
+The new group is already carried on most news servers, and should be carried
+on almost all news servers in the world within the next few days.
+</p>
+
+<p>
+The new group is important for a few reasons: Firstly, the old alt.* php
+groups suffered from poor propagation - i.e. not all servers carried them,
+and the community was split between multiple groups. This new group offers a
+chance to unite the PHP-Usenet community. Secondly, most servers have longer
+post-retention times for comp.* than alt.*. Finally, the creation of
+comp.lang.php represents PHP's coming to acceptance and maturity. Virtually
+all languages (except ASP) have a spot under the comp.lang.* heirarchy. Stop
+on by and become a part of the community - comp.lang.php is a great place to
+get help and to help others.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
 
 <h1>New Sample of PHP Documentation "New CHM Edition"</h1>
 <p>
-The 6th sample of the CHM edition is out now. This sample is mainly
-and content update, but it also fixes some small bugs. We welcome
+<font class="newsdate">[04-Jul-2002]</font> The 6th sample of the CHM edition is out now.
+This sample is mainly and content update, but it also fixes some small bugs. We welcome
 any suggestions and bug reports.
 <?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
 and please send us your feedback to our

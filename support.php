@@ -28,9 +28,16 @@ subscribe to the lists.
 
 <h1>Newsgroups</h1>
 <p>
-Many of the mailing lists <a href="mailing-lists.php">listed here</a>
-are also reflected onto the news server at <a
-href="news://news.php.net">news.php.net</a>.
+The PHP language newsgroup is <tt>comp.lang.php</tt>. In addition
+to this many of our mailing lists are also reflected onto the news
+server at <a href="news://news.php.net">news://news.php.net/</a>. The
+server also has a read only web interface at
+<a href="http://news.php.net/">http://news.php.net/</a>.
+</p>
+<p>
+Mailing list messages are transfered to newsgroup posts and
+newsgroup posts are sent to the mailing lists. Please note
+that these newsgroups are only available on this server.
 </p>
 
 <h1>User Groups</h1>
