@@ -127,7 +127,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Compile Failure",
 				   "Compile Warning",
 				   "Scripting Engine problem",
-				   "Reproduceable crash",
+				   "Reproducible crash",
 				   "Performance problem",
 				   "Dynamic loading related",
 				   "MySQL related",

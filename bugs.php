@@ -166,7 +166,7 @@ function show_types($first_item,$show_any,$var_name) {
 					"*General Issues" => "General Issues",
                     "Feature/Change Request" => "&nbsp;&nbsp;&nbsp;&nbsp;Feature/Change Request",
                     "Documentation problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Documentation problem",
-                    "Reproduceable crash" => "&nbsp;&nbsp;&nbsp;&nbsp;Reproduceable crash",
+                    "Reproducible crash" => "&nbsp;&nbsp;&nbsp;&nbsp;Reproducible crash",
                     "Scripting Engine problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Scripting Engine problem",
                     "Performance problem" => "&nbsp;&nbsp;&nbsp;&nbsp;Performance problem",
                     "*Install and Config" => "Install and Config",
