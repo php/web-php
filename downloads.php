@@ -9,14 +9,14 @@ commonHeader("Downloads ");
   <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32.zip&source_site=<?php echo $SERVER_NAME; ?>">PHP 4.0.0 Release Binaries for Win32</a> - 22 May 2000<br>(CGI binary and ISAPI module included, MySQL support built-in)</li>
   <p>Other add-ons:
   <ul>
-    <li>Servlet Server API
+    <li>Servlet Server API:
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-servlet-jdk118.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.1.8</a>,
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-servlet-jdk122.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.2.2</a>,
-      <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-servlet-jdk13.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.3</a>,
-    <li>Java extensions
+      <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-servlet-jdk13.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.3</a>
+    <li>Java extensions:
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk118.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.1.8</a>,
       <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk122.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.2.2</a>,
-      <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk13.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.3</a>,
+      <a href="http://www.php.net/do_download.php?download_file=php-4.0.0-Win32-java-jdk13.zip&source_site=<?php echo $SERVER_NAME; ?>">jdk1.3</a>
   </ul>
   <p>
   <LI>For downloadable documentation, go to the <A HREF="docs.php">documentation</A> page
