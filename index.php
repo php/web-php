@@ -152,7 +152,7 @@ load, if you would like to read the manuals online.
 
 <h1>
 <?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For July available
+New Usage Stats For August available
 </h1>
 
 <p>
