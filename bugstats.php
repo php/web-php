@@ -117,18 +117,56 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	mysql_freeresult($result);
 	echo "<table>\n";
 
-	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th><th>Feedback</th></tr>\n";
+	/* prepare for sorting by bug report count */
+	while(list($type,$value)=each($bug_type['all'])) {
+		if(!isset($bug_type['closed'][$type]))    $bug_type['closed'][$type] = 0;
+		if(!isset($bug_type['open'][$type]))      $bug_type['open'][$type] = 0;
+		if(!isset($bug_type['analyzed'][$type]))  $bug_type['analyzed'][$type] = 0;
+		if(!isset($bug_type['suspended'][$type])) $bug_type['suspended'][$type] = 0;
+		if(!isset($bug_type['duplicate'][$type])) $bug_type['duplicate'][$type] = 0;
+		if(!isset($bug_type['assigned'][$type]))  $bug_type['assigned'][$type] = 0;
+		if(!isset($bug_type['feedback'][$type]))  $bug_type['feedback'][$type] = 0;
+	}
+
+	if(!isset($sort_by)) $sort_by = 'open';	
+	if(!isset($rev)) $rev = 1;
+
+	if($rev == 1) {
+		arsort($bug_type[$sort_by]);
+	} else {
+		asort($bug_type[$sort_by]);
+	}
+	reset($bug_type);
+	
+	function sort_url($type) {
+		global $sort_by,$rev;
+		if($type == $sort_by) { 
+			$reve = ($rev == 1) ? 0 : 1;		
+		} else {
+			$reve = 1;
+		}	
+		return '<A href="./bugstats.php?sort_by='.$type.'&amp;rev='.$reve.'">'.ucfirst($type).'</a>';
+	}
+	
+	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td>";
+	echo "<th>".sort_url('closed')."</th>";
+	echo "<th>".sort_url('open')."</th>";
+	echo "<th>".sort_url('analyzed')."</th>";
+	echo "<th>".sort_url('suspended')."</th>";
+	echo "<th>".sort_url('duplicate')."</th>";
+	echo "<th>".sort_url('assigned')."</th>";
+	echo "<th>".sort_url('feedback')."</th></tr>\n";
 
 	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
-	while(list($type,$value)=each($bug_type['all'])) {
-		if(	$bug_type['open'][$type] > 0 || 
+	while(list($type,$value)=each($bug_type[$sort_by])) {
+		if(($bug_type['open'][$type] > 0 || 
 			$bug_type['analyzed'][$type] > 0 ||
 			$bug_type['suspended'][$type] > 0 ||
 			$bug_type['duplicate'][$type] > 0 ||
 			$bug_type['assigned'][$type] > 0 ||
-			$bug_type['feedback'][$type] > 0 ) 
+			$bug_type['feedback'][$type] > 0 ) && $type != 'all') 
 		{ 
-			echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
+			echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>".$bug_type['all'][$type]."</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
 		}
 	}
 	echo "</table>\n";
