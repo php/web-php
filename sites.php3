@@ -97,6 +97,7 @@ right away.</blockquote>
 /* Games */
 	title("Games");
 	siteStart();
+	site("BEETLE<i>MANIA</i>","www.beetlemania.de");
 	site("Riot Publishing","riot.com.au");
 	site("Worms2","www.worms2.com");
 	siteEnd();
@@ -223,6 +224,7 @@ right away.</blockquote>
 	title("Web Development Companies");
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
+	site("I-D Gruppe","www.idgruppe.com");
 	site("Private World Communications","www.privateworld.com");
 	siteEnd();
 

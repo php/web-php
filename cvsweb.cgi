@@ -5,26 +5,6 @@
 # Written by Bill Fenner <fenner@parc.xerox.com> on his own time.
 # Insert BSD copyright here.
 #
-#HTTP_USER_AGENT: Mozilla/1.1N (X11; I; SunOS 4.1.3_U1 sun4m) via proxy gateway CERN-HTTPD/3.0 libwww/2.17
-#SERVER_NAME: www.freebsd.org
-#QUERY_STRING: baz
-#SCRIPT_FILENAME: /usr/local/www/cgi-bin/env.pl
-#SERVER_PORT: 80
-#HTTP_ACCEPT: */*, image/gif, image/x-xbitmap, image/jpeg
-#SERVER_PROTOCOL: HTTP/1.0
-#HTTP_COOKIE: s=beta26429821397802167
-#PATH_INFO: /foo/bar
-#REMOTE_ADDR: 13.1.64.94
-#DOCUMENT_ROOT: /usr/local/www/data/
-#PATH: /sbin:/bin:/usr/sbin:/usr/bin
-#PATH_TRANSLATED: /usr/local/www/data//foo/bar
-#GATEWAY_INTERFACE: CGI/1.1
-#REQUEST_METHOD: GET
-#SCRIPT_NAME: /cgi-bin/env.pl
-#SERVER_SOFTWARE: Apache/1.0.0
-#REMOTE_HOST: beta.xerox.com
-#SERVER_ADMIN: webmaster@freebsd.org
-#
 require 'timelocal.pl';
 require 'ctime.pl';
 
@@ -77,8 +57,8 @@ Then type:
   and should be treated as such.<P>
  
   If you plan on making significant contributions to the PHP code,
-  CVS write access is available.  E-mail <a href=\"mailto:rasmus\@lerdorf.on.ca\">
-  rasmus\@lerdorf.on.ca</a> for more information.</blockquote>
+  CVS write access is available.  Please see <a href=\"/cvs.php3\">
+  Read This</a> for more information.</blockquote>
 <p>
 ";
 $shortinstr = "
