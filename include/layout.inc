@@ -342,7 +342,7 @@ function commonFooter() {
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
   <tr valign="top" bgcolor="#cccccc">
     <td><small>
-      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001 The PHP Group'); ?><br>
+      <?php echo make_link('/copyright.php', 'Copyright &copy; 2001, 2002 The PHP Group'); ?><br>
       All rights reserved.<br>
       </small>
     </td>
