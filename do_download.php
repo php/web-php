@@ -31,16 +31,13 @@ function log_download ()
     // Figure out true remote address
     $remote_addr = $HTTP_X_FORWARDED_FOR ? $HTTP_X_FORWARDED_FOR : $REMOTE_ADDR;
     
-    // Try to open remote log on php.net
-    $remote_log = 
-        @fopen($LOG_SERVER . $LOG_FILE . 
-            "?download_file=" . urlencode($download_file).
-            "&mirror=" . urlencode($SERVER_NAME).
-            "&user_referer=" . urlencode($HTTP_REFERER).
-            "&user_ip=" . urlencode($remote_addr), 
-        'r');
-    
-    // If we can open it, read from it, and close (just to make sure it runs) ??? 
+    // Try to open remote log on master.php.net
+    $log_file = $LOG_SERVER . $LOG_FILE . "?download_file=" . urlencode($download_file) . "&mirror=" . urlencode($SERVER_NAME) . "&user_referer=" . urlencode($HTTP_REFERER) . "&user_ip=" . urlencode($remote_addr);
+
+    $remote_log = @fopen($log_file, 'r');
+   
+    mail("imajes@php.net", "download log info", $log_file); 
+
     if ($remote_log) {
         fread($remote_log, 1024);
         fclose($remote_log);
