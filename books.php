@@ -519,6 +519,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Dreamweaver MX: PHP Web Development",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1904151116/wwwphpnet",
+    /* author[s]    */ array("Bruno Mairlot","Gareth Downes-Powell","Tim Green"),
+    /* auth link[s] */ "",
+    /* image        */ "dwmx.gif",
+    /* information  */ "glasshaus, July 2002, ISBN 1-9041-5111-6, 320 pages",
+    /* inform. link */ "http://www.glasshaus.com/bookInfo.asp?bookId=61",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
