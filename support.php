@@ -91,12 +91,13 @@ complete your request.
 <p>
 There are many PHP-related mailing lists available. Most of them
 have archives are available, and many are also available as newsgroups
-on our <a href="news://news.php.net">news server</a>
+on our <a href="news://news.php.net">news server</a>. The archives
+are searchable.
 </p>
 
 <?php
 
-  // array of lists (list, name, short desc., moderated, archive, digest)
+  // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
   $mailing_lists = Array(
 
     'General mailing lists for PHP users',
@@ -286,9 +287,9 @@ archives.
 </p>
 
 <p>
-You can search the mailing lists right from this website from <A
-HREF="/search.php">the search page</A> or by using the search button
-on the top-right of every page.
+You can search the main mailing lists right from this website from <A
+HREF="/search.php">the search page</A> or by using the search input box
+selecting the appropriate option on the top-right of every page.
 </p>
 
 
