@@ -27,6 +27,7 @@ mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
 nl	php.nederland.net	Sander Steffann <steffann@nederland.net>	193.67.110.5 
 no	no.php.net	Stig Bakken <stig@guardian.no>	195.1.254.5	same as php.guardian.no
+ph	ph.php.net	Greg Montano <mirror@adzu.edu.ph>	208.142.136.230
 pl	pl.php.net	grych@tgr.com.pl	php.tgr.com.pl
 pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
 pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34

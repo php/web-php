@@ -39,6 +39,7 @@ $MIRRORS = array(
    "ftp://ftp.nederland.net/pub/php/" => array("nl", "Nederland.net", "nederlandnet", "http://www.nederland.net/", 0, 0, "nl"),
    "http://php.guardian.no/"          => array("no", "Guardian Networks AS", "guardian", "http://www.guardian.no/", 0, 0, "no"),
    "http://no.php.net/"               => array("no", "Fast Search &amp; Transfer ASA", "fast", "http://www.fast.no/", 1, 0, "no"),
+#   "http://ph.php.net/"               => array("ph", "Ateneo de Zamboanga", "", "http://www.adzu.edu.ph", 1, 0, "en"),
    "http://pl.php.net/"               => array("pl", "TGR", "tgr", "http://www.tgr.com.pl/", 1, 0, "pl"),
    "http://pt.php.net/"               => array("pt", "Telenet", "telenet", "http://www.telenet.pt/", 1, 1, "pt"),
    "http://pt2.php.net/"               => array("pt", "SONET", "", "http://www.sonet.pt/", 1, 0, "pt"),
