@@ -32,25 +32,29 @@ echo "<font size=\"-1\">\n";
 
 ?>
 <table bgcolor="#ccccff" border="0" cellspacing="1">
- <form method="post" action="<?php echo $PHP_SELF?>">
- <input type="hidden" name="cmd" value="display">
+ <form method="POST" action="<?php echo $PHP_SELF?>">
+ <input type="hidden" name="cmd" value="display" />
   <tr>
-   <td><input type="submit" value="Display"></td>
+   <td><input type="submit" value="Display" /></td>
    <td><select name="status"><?php show_state_options($status,1);?></select></td>
    <td align="right">bugs of type: </td>
    <td><select name="bug_type"><?php show_types($bug_type,1);?></select></td>
-   <td align="right">last comment by:</td>
-   <td><select name="by"><?php show_id_options($by);?></select></td>
+   <td align="right">reported since:</td>
+   <td><select name="bug_age"><?php show_byage_options($bug_age);?></select></td>
   </tr>
   <tr>
-   <td colspan="3" align="right">Search for:</td>
-   <td colspan="3"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the bug database</td>
+   <td align="right">with text:</td>
+   <td colspan="5"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the report or email address</td>
   </tr>
  </form>
- <form method="get" action="<?php echo $PHP_SELF;?>">
+ <tr>
+  <td bgcolor="#000000" colspan="6"><?echo spacer(1,1);?></td>
+ </tr>
+ <form method="GET" action="<?php echo $PHP_SELF;?>">
   <tr>
-   <td colspan="3" align="right"><input type="submit" value="Edit"> bug number:</td>
-   <td colspan="2"><input type="text" name="id" value="<?echo $id?>"></td>
+   <td align="right"><input type="submit" value="Edit" /></td>
+   <td align="right">bug number:</td>
+   <td colspan="3"><input type="text" name="id" value="<?echo $id?>"></td>
    <input type="hidden" name="edit" value="<?php echo isset($MAGIC_COOKIE) ? 1 : 2;?>">
    <td align="center"><a href="bugstats.php">Statistics</a></td>
   </tr>
@@ -137,16 +141,16 @@ elseif ($cmd == "display") {
 		$where_clause .= " AND (email like '%$search_for%' OR sdesc LIKE '%$search_for%' OR ldesc LIKE '%$search_for%')";
 	}
 
-	// not supported by the HTML form yet : use the URL :)
-	if($bug_age && $bug_age !="All") {
+	if ($bug_age) {
 		$where_clause .= " AND ts1 >= DATE_SUB(NOW(), INTERVAL $bug_age DAY)";
 	}
 
 	$where_clause .= " AND php_version LIKE '4%'";
 
+	/* not in the header, but someone can build a query manually with it. */
 	if(strlen($by) and $by!='Any')
 		$where_clause .= " AND dev_id = '$by' ";
-
+ 
     $query .= "$where_clause ";
 
 	if (!$order_by) $order_by = "id";
@@ -324,7 +328,7 @@ elseif ($cmd == "display") {
 
 	/* DISPLAY BUG */
     if ($edit) {
-		echo "<form method=\"post\" action=\"$PHP_SELF?id=$id\">\n";
+		echo "<form method=\"POST\" action=\"$PHP_SELF?id=$id\">\n";
 		echo "<input type=\"hidden\" name=\"edit\" value=\"$edit\">\n";
 	}
     if ($edit==1)
@@ -491,13 +495,18 @@ commonFooter();
 
 # FUNCTIONS
 
-function show_id_options($current) {
-	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
-	echo "<option>Any</option>\n";
-	while ($row = mysql_fetch_row($result)) {
-		if (!$row[0]) continue; # don't show blank option
-		echo "<option",($row[0] == $current ? " selected" : ""),
-		     ">$row[0]</option>\n";
+function show_byage_options($current) {
+	$opts = array(
+		"0"   => "the beginning",
+		"1"   => "yesterday",
+		"7"   => "7 days ago",
+		"15"  => "15 days ago",
+		"30"  => "30 days ago",
+		"90"  => "90 days ago",
+	);
+	while (list($k,$v) = each($opts)) {
+		echo "<option value=\"$k\"", ($current==$k ? " selected" : ""),
+		     ">$v</option>\n";
 	}
 }
 
