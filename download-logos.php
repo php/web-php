@@ -148,6 +148,8 @@ for commercial purposes
 </TD>
 </TR>
 
+<!--  disable old-skool logos
+
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
 <IMG SRC="logos/php4-small.gif" WIDTH=143 HEIGHT=65 BORDER=0><BR>
@@ -172,6 +174,8 @@ for commercial purposes
 </TD>
 </TR>
 
+//  disable old-skool logos -->
+
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
 <IMG SRC="logos/zend-powered-by.gif" WIDTH=100 HEIGHT=58 BORDER=0><BR>
@@ -179,6 +183,7 @@ for commercial purposes
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
 <LI>100 x 58 pixels
+<LI>"Powered by Zend" logo
 <LI>solid black background
 </UL>
 </TD>
@@ -213,6 +218,8 @@ all in one .ICO file
 </TD>
 </TR>
 
+<!--  disable old-skool logos
+
 <TR VALIGN=middle>
 <TD ALIGN=center WIDTH=33% BGCOLOR="#FFFFFF">
 <IMG SRC="logos/mini-logo1.gif" VSPACE=5 WIDTH=32 HEIGHT=32 BORDER=0><BR>
@@ -232,6 +239,8 @@ all in one .ICO file
 </UL>
 </TD>
 </TR>
+
+// disable old-skool logos -->
 
 </TABLE>
 </CENTER>
