@@ -77,7 +77,7 @@ removed right away.</blockquote>
 /* Entertainment */
         title("Entertainment");          
         siteStart();
-        site("SumemrWorks Theatre Festival","www.summerworks.on.ca");
+        site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	siteEnd();
 
 
