@@ -177,6 +177,19 @@ site_header("Documentation - Extended CHM Format");
   toolbar button set to "Launch an external application" with the 
   filename pointing to the main .chm file.
  </li>
+ 
+ <li>
+  <strong><a href="http://www.macromedia.com/software/homesite/">jEdit</a></strong>:
+  Users of this editor can grab and adjust this BeanShell macro. Save it as
+  Lookup_In_PHP_Manual.bsh.
+  <pre>CHM_location = "C:\\PHP\\php_manual_en.chm";
+
+if (textArea.getSelection().length > 0) {
+  CHM_location += "::/_function.html#" + textArea.getSelectedText();
+}
+exec("HH " + CHM_location);
+</pre>
+ </list>
 
  <li>
   <strong><a href="http://www.pfersdorff.de/">Mr. Ed</a></strong>:
