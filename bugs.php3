@@ -556,10 +556,7 @@ Or use the form below to submit a new bug report.
     <option name="3.0.15">3.0.15
     <option name="3.0.14">3.0.14
     <option name="3.0.13">3.0.13
-    <option name="3.0.12">3.0.12
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
-    <option name="3.0.11">3.0.11
-    <option name="3.0.10">3.0.10
     <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>

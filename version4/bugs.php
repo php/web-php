@@ -554,9 +554,7 @@ Or use the form below to submit a new bug report.
     <option name="4.0b4pl1">4.0 Beta 4 Patch Level 1
     <option name="4.0b4">4.0 Beta 4
     <option name="4.0b3">4.0 Beta 3
-    <option name="4.0B2">4.0 Beta 2
     <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
-    <option name="4.0B1">4.0 Beta 1
     <!--<option name="earlier">Earlier?  Upgrade first!-->
    </select>
   </td>
