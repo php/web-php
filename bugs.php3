@@ -544,12 +544,12 @@ Or use the form below to submit a new bug report.
   <td>
    <select name="php_version">
     <option name="3.0.12" selected>3.0.12
+    <option name="4.0b1" selected>4.0b1
     <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
-    <option name="3.0.10">3.0.11
-    <option name="3.0.9">3.0.10
-    <option name="3.0.8">3.0.9
-    <option name="3.0.7">3.0.8
-    <option name="3.0.6">3.0.7
+    <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
+    <option name="3.0.11">3.0.11
+    <option name="3.0.10">3.0.10
+    <option name="3.0.9">3.0.9
     <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
