@@ -42,17 +42,17 @@ $man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 
 
 # array structure: (header, link_text, show_size_for_package)
 $formats = array(
- "manual.txt.gz"           => array("Plain text",          "txt.gz",    true),
- "bigmanual.html.gz"       => array("Single HTML",         "html.gz",   true),
- "manual.tar.gz"           => array("Many HTML files",     "tar.gz",    true),
- "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2",   true),
- "manual.zip"              => array("Many HTML files",     "zip",       true),
- "php_manual_LANG.pdf.gz"  => array("PDF",                 "pdf.gz",    true),
- "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2",   true),
- "php_manual_LANG.pdf.zip" => array("PDF",                 "pdf.zip",   true),
- "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb",   true),
- "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb", true),
- "manual-LANG.chm"         => array("Windows HTML Help",   "chm",       true)
+ "manual.txt.gz"           => array("Plain text",          "txt.gz"),
+ "bigmanual.html.gz"       => array("Single HTML",         "html.gz"),
+ "manual.tar.gz"           => array("Many HTML files",     "tar.gz"),
+ "manual.tar.bz2"          => array("Many HTML files",     "tar.bz2"),
+ "manual.zip"              => array("Many HTML files",     "zip"),
+ "php_manual_LANG.pdf.gz"  => array("PDF",                 "pdf.gz"),
+ "php_manual_LANG.pdf.bz2" => array("PDF",                 "pdf.bz2"),
+ "php_manual_LANG.pdf.zip" => array("PDF",                 "pdf.zip"),
+ "manual_doc.pdb"          => array("PalmPilot DOC",       "doc.pdb"),
+ "manual_isilo.pdb"        => array("PalmPilot iSilo",     "isilo.pdb"),
+ "manual-LANG.chm"         => array("Windows HTML Help",   "chm")
 );
 ?>
 
@@ -88,29 +88,29 @@ use does otherwise.
      while (list($fn,$details) = each($formats)) {
        echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
 
-       // temporary hacks until the manuals are at the correct
-       // places and with the correct package file names
-       if ($fn == "manual-LANG.chm") {
-         $link_to = "distributions/manual/manual-$langcode.chm";
-       } elseif (preg_match("/php_manual_LANG\.pdf\.(gz|bz2|zip)/", $fn, $mem)) {
-          $link_to = "distributions/manual/php_manual_$langcode.pdf." . $mem[1];
-       } else {
+       $link_to = "";
+       if (file_exists("manual/$langcode/$fn")) {
          $link_to = "manual/$langcode/$fn";
        }
-       
-       // if no size required [eg. external], then just print, else
-       // decide what to do according to the $size of the file
-       if (!$details[2]) { 
-         if ($link_to == 'down') echo "Format Unavailable";
-         else echo "<a href=\"$link_to\">$details[1]</a>"; 
+       elseif (file_exists("distributions/manual/php_manual_$langcode.$details[1]")) {
+         $link_to = "distributions/manual/php_manual_$langcode.$details[1]";
+       }
+       elseif (file_exists("distributions/manual/manual-$langcode.$details[1]")) {
+         $link_to = "distributions/manual/manual-$langcode.$details[1]";
+       }
+
+       if (!$link_to) {
+         echo "&nbsp;";
        }
        else {
          $size = @filesize($link_to);
          $changed = @filemtime($link_to);
          $date_format = "j M Y"; // Part of the RFC date type (to be short)
          if ($size) {
-           echo "<a href=\"$link_to\" title=\" Size: " . (int) ($size/1024) . "Kb\n Date: " . date ($date_format, $changed) . "\">$details[1]</a>";
-           if ($sizes) { echo "<br><small>Size: " . (int) ($size/1024) . "Kb<br>Date: " . date ($date_format, $changed) . "</small>"; }
+           echo "<a href=\"$link_to\" title=\" Size: ", (int) ($size/1024), "Kb\n Date: ", date($date_format, $changed), "\">$details[1]</a>";
+           if ($sizes) {
+             echo "<br><small>Size: ", (int) ($size/1024), "Kb<br>Date: ", date($date_format, $changed), "</small>";
+           }
          } else {
            echo "&nbsp;";
          }
