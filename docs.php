@@ -28,7 +28,7 @@ learning PHP, as well as extending your existing knowledge.
 
 <h3>Sample Code</h3>
 <p>
-Looking for some more sample PHP scripts?  Our <A
+Looking for some more sample PHP scripts? Our <A
 HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
 great places to find many example scripts and useful functions, organized for 
 your searching pleasure!

@@ -1,4 +1,5 @@
 <?php
+
 if (!isset($HTTP_REFERER)) {
 	$HTTP_REFERER="-";
 }
@@ -12,7 +13,7 @@ if (!isset($source_site)) {
 	$source_site="www.php.net";
 }
 
-header("Location:  http://$source_site/distributions/$download_file");
+header("Location: http://$source_site/distributions/$download_file");
 
 $log = @fopen("logs/download.log", "a");
 if ($log) {
@@ -20,4 +21,5 @@ if ($log) {
 	fputs($log, "$log_line\n");
 	fclose($log);
 }
+
 ?>
