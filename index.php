@@ -150,6 +150,29 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5 Release Candidate 1 Released!</h1>
+<p>
+ <span class="newsdate">[18-Mar-2004]</span>
+
+<p>The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally here!  The move from Beta stage to RC stage means that PHP 5 is now feature complete, and is quite stable - stable enough for everyone to start playing with.  Note that it is still <i>not</i> recommended for mission-critical use.</p>
+
+<p>Some of the key features of PHP 5 include:</p>
+
+<ul>
+<li>The Zend Engine II with a new object model and dozens of new features.</li>
+<li>XML support has been completely redone in PHP 5, all extensions are now focused around the excellent libxml2 library (http://www.xmlsoft.org/).</li>
+<li>A new MySQL extension named MySQLi for developers using MySQL 4.1 and later. Additionally to a functional interface this new extension also includes an object-oriented interfaced and support for many of MySQL's new features such as prepared statements.</li>
+<li>SQLite has been bundled with PHP. For more information on SQLite, please visit their website.</li>
+<li>A brand new built-in SOAP extension for interoperability with Web Services.</li>
+<li>A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can also interface with the DOM extension and vice-versa.</li>
+<li>Streams have been greatly improved, including the ability to access low-level socket operations on streams.</li>
+<li>And lots more...</li>
+</ul>
+
+<p>For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.</p>
+<hr />
+
+
 <h1>Spanish PHP Mailing List Now at PHP.net</h1>
 <p>
  <span class="newsdate">[29-Feb-2004]</span>
