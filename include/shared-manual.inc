@@ -72,12 +72,12 @@ function makeBorderTOC($this)
     echo "<TD COLSPAN=3>";
 	if(substr($file,-5)=='.php3') $file = substr($file,0,-1);
 	echo "<a href=\"/manual/$file\"><img src=\"/gifs/flag-uk.gif\" valign=bottom height=24 width=45 alt=\"English version of this page\"></a>";
-	if(is_file("$DOCUMENT_ROOT/manual/de/$file")) echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
-	if(is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
-	if(is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
-	if(is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
-	if(is_file("$DOCUMENT_ROOT/manual/hu/$file")) echo "<a href=\"/manual/hu/$file\"><img src=\"/gifs/flag-hu.gif\" valign=bottom height=24 width=45 alt=\"Hungarian version of this page\"></a><br>";
-	if(is_file("$DOCUMENT_ROOT/manual/es/$file")) echo "<a href=\"/manual/es/$file\"><img src=\"/gifs/flag-es.gif\" valign=bottom height=24 width=45 alt=\"Spanish version of this page\"></a>";
+	if(@is_file("$DOCUMENT_ROOT/manual/de/$file")) echo "<a href=\"/manual/de/$file\"><img src=\"/gifs/flag-de.gif\" valign=bottom height=24 width=45 alt=\"German version of this page\"></a>";
+	if(@is_file("$DOCUMENT_ROOT/manual/ja/$file")) echo "<a href=\"/manual/ja/$file\"><img src=\"/gifs/flag-jp.gif\" valign=bottom height=24 width=45 alt=\"Japanese version of this page\"></a><br>";
+	if(@is_file("$DOCUMENT_ROOT/manual/it/$file")) echo "<a href=\"/manual/it/$file\"><img src=\"/gifs/flag-it.gif\" valign=bottom height=24 width=45 alt=\"Italian version of this page\"></a>";
+	if(@is_file("$DOCUMENT_ROOT/manual/fr/$file")) echo "<a href=\"/manual/fr/$file\"><img src=\"/gifs/flag-fr.gif\" valign=bottom height=24 width=45 alt=\"French version of this page\"></a>";
+	if(@is_file("$DOCUMENT_ROOT/manual/hu/$file")) echo "<a href=\"/manual/hu/$file\"><img src=\"/gifs/flag-hu.gif\" valign=bottom height=24 width=45 alt=\"Hungarian version of this page\"></a><br>";
+	if(@is_file("$DOCUMENT_ROOT/manual/es/$file")) echo "<a href=\"/manual/es/$file\"><img src=\"/gifs/flag-es.gif\" valign=bottom height=24 width=45 alt=\"Spanish version of this page\"></a>";
 	echo "</TD></TR>\n";
 
     for ($i = 0; $i < count($TOC); $i++) {
@@ -210,7 +210,7 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 <?
 };
 
-function manualGetUserNotes($title,$failover=true)
+function manualGetUserNotes($title)
 {
 	// either get it from local db or www.php.net/manual/get.php
 	global $MYSITE;
@@ -230,11 +230,12 @@ function manualGetUserNotes($title,$failover=true)
 			}
 		}
 	} else {
-		if ($failover) {
-			$url = "http://www.php.net/manual/get-user-notes.php?title=".urlencode($title);
-			$fp = @fopen($url,"r");
+		$notes_file = "usernotes/" . urlencode( $title ) . ".txt";
+		if ( @file_exists( $notes_file ) )
+		{
+			$fp = @fopen($notes_file,"r");
 			if ($fp) {
-				$body = fread($fp,100000);
+				$body = fread($fp,filesize($notes_file));
 				if (strlen($body)) {
 					$notes = @unserialize($body);
 				}
@@ -244,7 +245,6 @@ function manualGetUserNotes($title,$failover=true)
 	}
 	return $notes;
 }
-
 
 function manualUserNotes($title) {
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
@@ -257,11 +257,7 @@ function manualUserNotes($title) {
 
 	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
 
-	// is this the correct way to do this?
-#	include("../configuration.inc");
-	$failover = isset($failover_user_notes) && $failover_user_notes;
-	$notes = manualGetUserNotes($title,$failover);
-
+	$notes = manualGetUserNotes($title);
 	$num_notes = count($notes);
 	if ( $num_notes > 0 ) {
 		makeTitle("User Contributed Notes: ".$title);
