@@ -42,7 +42,7 @@ function addlinks($text) {
 			echo "Bug #$id is not in the database";
 		}
 	} else {
-		$result = mysql_query("select id,bug_type,status,sdesc from bugdb where status != 'Closed' and status!='Suspended' and status!='Duplicate' and php_version like '4%' order by bug_type,id");
+		$result = mysql_query("select id,bug_type,status,sdesc from bugdb where status != 'Closed' and status!='Suspended' and status!='Duplicate' and status!='Bogus' and php_version like '4%' order by bug_type,id");
 		if($num=mysql_num_rows($result)) {
 			echo "<h1>PHP 4.0 Bug Database summary</h1>";
 			echo "<pre> Num Status     Summary ($num total including feature requests)\n";
