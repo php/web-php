@@ -12,8 +12,9 @@ $langs = $LANGUAGES; $options = array();
 // We have post data, and it is an available language
 if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
     
-    // Set the language in a cookie for a year
-    mirror_setcookie("MYPHPNET", $_POST['my_lang'], 60*60*24*365);
+    // Set the language preference
+    myphpnet_language($_POST['my_lang']);
+    myphpnet_save();
     
     // Add this as first option, selected
     $options[] = '<option value="' . $_POST['my_lang'] . '" selected>' .
@@ -24,14 +25,14 @@ if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
 }
 
 // We have recevied a cookie and it is an available language
-elseif (isset($_COOKIE['MYPHPNET']) && isset($langs[$_COOKIE['MYPHPNET']])) {
+elseif (isset($langs[myphpnet_language()])) {
 
     // Add this as first option, selected
-    $options[] = '<option value="' . $_COOKIE['MYPHPNET'] . '" selected>' .
-                 $langs[$_COOKIE['MYPHPNET']] . "</option>\n";
+    $options[] = '<option value="' . myphpnet_language() . '" selected>' .
+                 $langs[myphpnet_language()] . "</option>\n";
     
     // Remove, so it is not listed two times
-    unset($langs[$_COOKIE['MYPHPNET']]);
+    unset($langs[myphpnet_language()]);
 }
 
 // We have no cookie and no form submitted

@@ -5,7 +5,7 @@
 /*
 
  This script handles all 401, 403 and 404 error redirects,
- and some directory requests (like /images). Uses the $LANG
+ and some directory requests (like /images). Uses the
  preferred language setting and the REQUEST_URI to guess what
  page should be displayed. In case there is no page that can
  be displayed, the user is redirected to a search page.
@@ -13,8 +13,8 @@
 */
 
 // Ensure that our environment is set up
-include_once 'prepend.inc';
-include_once __PHPWEB_INC_PATH__ . 'loadavg.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 
 // Get URI for this request (without the leading slash)
 // See langchooser.inc for more info on STRIPPED_URI

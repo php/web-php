@@ -88,8 +88,8 @@ function language_choose_code()
     }
     
     // Honor the users own language setting (if available)
-    if (isset($_COOKIE['MYPHPNET'])) {
-        language_add($_COOKIE['MYPHPNET'], $languages);
+    if (myphpnet_language()) {
+        language_add(myphpnet_language(), $languages);
     }
     
     // Put the last selected language in the priority order (if available)

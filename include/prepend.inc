@@ -20,11 +20,13 @@ unset($SEARCH_BASE);
 unset($LANG);
 unset($COUNTRY);
 unset($ONLOAD);
+unset($MYPHPNET);
 
 // Backward compatible array creation. After this point, the
 // PHP 4.1.0+ arrays can be used to access variables coming
 // from outside PHP. But it should be noted that these variables
 // are not necessarily superglobals, so they need to be global-ed!
+/*
 if (!isset($_SERVER)) {
     $_GET     = &$HTTP_GET_VARS;
     $_POST    = &$HTTP_POST_VARS;
@@ -33,30 +35,30 @@ if (!isset($_SERVER)) {
     $_COOKIE  = &$HTTP_COOKIE_VARS;
     $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
 }
+*/
+
+// Load the My PHP.net settings before any includes
+myphpnet_load();
 
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
 
-/* for performance reasons use this define when including files */
-$path = !strncmp(__FILE__, '/', 1) ? __FILE__ : realpath(__FILE__);
-define('__PHPWEB_INC_PATH__', dirname($path) . '/');
-
 // Site details (mirror site information)
-include_once __PHPWEB_INC_PATH__ . 'site.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
 
 // Choose language used for translated parts
-include_once __PHPWEB_INC_PATH__ . 'langchooser.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include_once __PHPWEB_INC_PATH__ . 'ip-to-country.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
 
 // Common layout functions
-include_once __PHPWEB_INC_PATH__ . 'layout.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
 
-// This file is generated on rsync.php.net and propogated
+// This file is generated on rsync.php.net and propagated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include_once __PHPWEB_INC_PATH__ . 'last_updated.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
 // Function used to import request vars to global scope.
 // Walks through $array, and imports all values associated
@@ -106,4 +108,43 @@ function getmicrotime()
 {
     list($usec, $sec) = explode(" ", microtime());
     return ((float) $usec + (float) $sec);
+}
+
+// Load in the user preferences
+function myphpnet_load()
+{
+    global $MYPHPNET;
+
+    // Empty the preferences array
+    $MYPHPNET = array();
+    
+    // If we have a cookie, set the values in the array
+    if (isset($_COOKIE['MYPHPNET'])) {
+        $MYPHPNET[0] = $_COOKIE['MYPHPNET'];
+    }
+}
+
+// Get or set preferred language code
+function myphpnet_language($langcode = FALSE)
+{
+    global $MYPHPNET;
+
+    // Set language code
+    if ($langcode) {
+        $MYPHPNET[0] = $langcode;
+    }
+    // Return code or FALSE
+    elseif (isset($MYPHPNET[0])) {
+        return $MYPHPNET[0];
+    }
+    else { return FALSE; }
+}
+
+// Save user settings in cookie
+function myphpnet_save()
+{
+    global $MYPHPNET;
+    
+    // Set all the preferred values for a year
+    mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
 }
