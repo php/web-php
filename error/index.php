@@ -68,6 +68,7 @@ $uri_aliases = array (
     # PHP page shortcuts
 	"download"      => "downloads",
 	"documentation" => "docs",
+    "changelog"     => "ChangeLog-4",
 
 	# manual shortcuts
 	"ini"         => "configuration",
