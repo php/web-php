@@ -96,7 +96,7 @@ if($fp) {
 			unset($seen);
 		}
 		if(!$seen[$desc]) {
-			$RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">$desc</a><br>\n";
+			$RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">", stripslashes($desc),"</a><br>\n";
 			$seen[$desc] = true;
 		}
 	}
