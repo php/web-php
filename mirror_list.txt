@@ -3,6 +3,7 @@ au	au.php.net:81	David Robley <webmaster@www.nisu.flinders.edu.au>	129.96.218.17
 au	au2.php.net	jason andrade <jason@planetmirror.com>	php.planetmirror.com
 bg	bg.php.net	Alexander Keremidarski <salle@online.bg>	php.online.bg
 br	br.php.net	Antonio Dias <accdias@sst.com.br>	200.223.199.4
+br2	br2.php.net	Nelson Junior <nelson@lunenetworks.com.br>	php-mirror.lunenetworks.com.br
 ca	php.easydns.com	Colin Viebrock <cmv@privateworld.com>	205.210.42.153
 ch	ch.php.net	prochat@lbdsun.epfl.ch	128.178.77.33
 cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.218
