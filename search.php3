@@ -1,4 +1,3 @@
-<html><head><title>PHP3 Glimpse Search</title>
 <?
 	require("shared.inc");
 	commonHeader("Glimpse Search");
