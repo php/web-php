@@ -67,6 +67,16 @@ site_header("Links");
  </li>
 </ul>
 
+<a name="news"></a>
+<h4>PHP News</h4>
+
+<ul>
+ <li>
+  <a href="http://planet-php.net/">Planet PHP</a><br />
+  Latest news aggregated from PHP related weblogs.
+ </li>
+</ul>
+
 <a name="links"></a>
 <h4>PHP Link Catalogs</h4>
 
