@@ -211,8 +211,7 @@ function commonHeader($title="",$dont_enclose=0) {
   </tr>
 
   <tr bgcolor="#9999cc">
-    <form method="POST" action="/manual-lookup.php">
-      <td align="right" valign="bottom">
+    <td align="right" valign="bottom">
       <?php
 	print_link('/downloads.php','downloads',false,'class="small"');
 	echo delim();
@@ -223,12 +222,32 @@ function commonHeader($title="",$dont_enclose=0) {
 	print_link('/bugs.php','reporting bugs',false,'class="small"');
 	echo delim();
 	print_link('/links.php','links',false,'class="small"');
-	echo delim();
-	print_link('/search.php','search:',false,'class="small"');
-	echo ' <input class="small" type="text" name="pattern" size=10> ';
-	echo make_submit('small_submit.gif', 'search', 'bottom');
       ?>&nbsp;<br>
-      </td>
+    </td>
+  </tr>
+
+  <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
+
+  <tr bgcolor="#666699">
+    <form method="POST" action="/search.php">
+      <td align="right" valign="top" colspan="2"><FONT COLOR="#ffffff">
+        <small>
+search for <INPUT CLASS="small" TYPE="text" NAME="pattern" VALUE="<? echo htmlspecialchars($prevsearch) ?>" SIZE="30">
+in the <SELECT NAME="show" CLASS="small">
+<OPTION VALUE="quickref" SELECTED>PHP function list
+<OPTION VALUE="nosource">whole site
+<OPTION VALUE="manual">online documentation
+<OPTION VALUE="maillist">PHP general mailing list
+<OPTION VALUE="devlist">PHP developers' list
+<OPTION VALUE="phpdoc">PHP documentation list 
+<OPTION VALUE="phplib">PHPLIB mailing list
+<OPTION VALUE="phplib-dev">PHPLIB developers' list
+<OPTION VALUE="source">website source code    
+</SELECT>
+<?	echo make_submit('small_submit.gif', 'search', 'bottom');
+      ?>&nbsp;<br>
+        </small>
+      </font></td>
     </form>
   </tr>
 

@@ -14,6 +14,10 @@ if (isset($pattern) && ($pattern)) {
 $HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 if (isset($pattern) && ($pattern)) {
+	if ($show=="quickref") {
+		header("Location: manual-lookup.php?pattern=".urlencode($pattern));
+		exit;
+	}
 	$location = "http://www.progressive-comp.com/Lists/";
 	if ($show=="maillist") {
 		$query = "l=php3-general&r=1&w=2&q=b&s=".urlencode($pattern);
