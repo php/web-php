@@ -114,6 +114,7 @@ right away.</blockquote>
 	site("Research Institute for electro-magnetic compatibility","www.femu.rwth-aachen.de");
 	site("Traffic School To Go","www.trafficschooltogo.com");
 	site("The Psychology Place","www.psychplace.com");
+	site("WISE Project","wise.berkeley.edu");
 	siteEnd();
 
 /* Entertainment */
@@ -322,6 +323,7 @@ right away.</blockquote>
 	site("All Brevard Houses for Sale","www.allbrevard.net");
 	site("BNF Homes","www.bnfhomes.com");
 	site("Real Estate Planet","www.realestateplanet.com");
+	site("ReallyNyce.Com","www.reallynyce.com");
 	site("Slater Realtors","www.slater-realtors.com");
 	siteEnd();
 
@@ -351,7 +353,7 @@ right away.</blockquote>
 	site("DUI Shopping","shop.dui.be");
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
-	site("FurniturePoint.com","www.furniturepoint.com");
+	site("HomePoint.com","www.homepoint.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
