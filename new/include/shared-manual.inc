@@ -18,7 +18,7 @@ function setupNavigation($data) {
 }
 
 function makeBullet($url,$number,$offtype,$offnum) {
-	echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n ";
+	echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n";
 	echo "onMouseout=\"changebullet('bullet$number',$offnum)\">";
 	echo "<IMG SRC=\"/new/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n NAME=\"bullet$number\">";
 	echo "</A>";
@@ -64,14 +64,14 @@ function makeBorderTOC($this)
 	echo "<TR VALIGN=top><TD WIDTH=10>";
 	spc(10,10);
 	echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" ";
-	echo "onMouseover=\"hide();changebullet('bullet$i',1)\" ";
+	echo "onMouseover=\"hide();changebullet('bullet$i',1)\" \n";
 	echo "onMouseout=\"changebullet('bullet$i',$out)\">";
 	echo "<IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 ";
 	echo "BORDER=0 NAME=\"bullet$i\"></A>\n";
 	echo "</TD>\n<TD WIDTH=100%>";
 	echo "<A HREF=\"$url\" onMouseover=\"hide();";
-	echo "changebullet('bullet$i',1)\" ";
-	echo "onMouseout=\"changebullet('bullet$i',$out)\" ";
+	echo "changebullet('bullet$i',1)\" \n ";
+	echo "onMouseout=\"changebullet('bullet$i',$out)\" \n";
 	echo "CLASS=sidebartoc>";
 	echo "<FONT SIZE=\"$tocfontsize\"".$FONTCOL.$FONTFACEATTR.">";
 	echo "$title</FONT></A></TD></TR>\n";
