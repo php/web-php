@@ -163,9 +163,11 @@ function download_link($file, $title, $mirror = '') {
 	$size = @filesize($local_file);
 	//echo("<!-- file=$file localfile=$local_file size-$size -->\n");
  
- $download_link = "/do_download.php?download_file=$file";
+ $download_link = "do_download.php?download_file=$file";
  if ($mirror != '') {
-    $download_link = "http://$mirror" . $download_link;
+    $download_link = $mirror . $download_link;
+ } else {
+    $download_link = "/" . $download_link;
  }
 
     print_link($download_link, $title);
