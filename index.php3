@@ -9,6 +9,15 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP 4 Release Candidate 2</h3>
+
+May 10, 2000. The PHP Group is proud to announce the release of the <a
+href="version4/">second release candidate of the upcoming PHP 4.0</a>. 
+Highlights of this release include
+support for new web servers (Zeus, Netscape Enterprise, Apache Win32 module),
+improved portability of the Unix build framework and tons of bug fixes.
+We expect this to be the final release candidate before PHP 4.0.
+
 <h3>PHP 3.0.16 released</h3>
 April 05, 2000. PHP 3.0.16 was released. This is mostly a bug fix release which
 adds support for gd-1.8, ucd-snmp 4.1, and high-resolution timers on OS/2.
