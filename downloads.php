@@ -15,8 +15,8 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 
 <b>Win32 Binaries</b><BR>
 <UL>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.4</a> - 19 December 2000<br>(3.79 Mb CGI binary and ISAPI module included, MySQL support built-in, many extensions included, packaged as zip)</li>
-  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4-installer.exe&source_site=<?php echo $server; ?>">PHP 4.0.4</a> - 19 December 2000<br>(732 Kb CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php-4.0.4pl1-Win32.zip&source_site=<?php echo $server; ?>">PHP 4.0.4pl1</a> - 13 January 2001<br>(3.64 Mb CGI binary plus server API versions for Apache, AOL server, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
+  <li><a href="http://www.php.net/do_download.php?download_file=php404pl1-installer.exe&source_site=<?php echo $server; ?>">PHP 4.0.4pl1</a> - 13 January 2001<br>(735 Kb CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
 -->
