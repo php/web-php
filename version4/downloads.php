@@ -19,9 +19,7 @@ commonHeader("PHP 4.0 Release Candidate 2 Downloads");
       <a href="do_download.php?download_file=php-4.0RC2-Win32-java-jdk13.zip">jdk1.3</a>
   </ul>
   <p>  
-<!--
   <li><a href="http://www.zend.com/zend/optimizer.php">Zend Optimizer Beta</a> for PHP 4.0 (Beta 4 or later) is available on  Zend Technologies' web site.</li>
--->
 </ul>
 
 <? commonFooter(); ?>
