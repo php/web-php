@@ -196,7 +196,7 @@ if (isset($uri_aliases[$URI])) {
 // Redirect if the entered URI was a PHP page name (except the books page,
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
-if ($URI !=  'books' && file_exists("$DOCUMENT_ROOT/$URI.php")) {
+if (!in_array($URI, array('books', 'mirror-info')) && file_exists("$DOCUMENT_ROOT/$URI.php")) {
     mirror_redirect("/$URI.php");
 }
 
@@ -207,10 +207,10 @@ if (isset($external_redirects[$URI])) {
     mirror_redirect($external_redirects[$URI], $true_external);
 }
 
-// Temporary hack for books, until all the pages will be
-// capable of being included from anywhere
-if ($URI == 'books') {
-    include_once $_SERVER['DOCUMENT_ROOT'] . "/books.php";
+// Temporary hack for books and mirror-info, until all the pages
+// will be capable of being included from anywhere
+if (in_array($URI, array('books', 'mirror-info'))) {
+    include_once $_SERVER['DOCUMENT_ROOT'] . "/$URI.php";
 }
 
 // ============================================================================
