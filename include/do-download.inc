@@ -11,8 +11,6 @@
 // Download a file from a mirror site
 function download_file($mirror, $file)
 {
-    global $_SERVER;
-    
     // Quit if the requested file is not availabe localy
     if (!file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file)) {
         exit("Invalid file requested for download!");
@@ -39,8 +37,6 @@ function download_file($mirror, $file)
 // Log downloads on the master server
 function download_log($mirror, $file)
 {
-    global $_SERVER;
-
     // Set referer value
     $referer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-');
     
