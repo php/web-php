@@ -148,5 +148,6 @@ $items = array (
 	"cURL related"   => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cURL related",
 	"URL related"    => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL related",
 
-	"Unknown/Other Function" => "Unknown/Other Function"
+	"Unknown/Other Function" => "Unknown/Other Function",
+  "Website problem" => "Website problem"
 );
