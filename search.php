@@ -109,7 +109,7 @@ if (isset($pattern)) {
             header("Location: $ml_url?$query");
             exit;
 
-        // PHP-Dev mailing list search
+        // Internals (known as php-dev by marc) mailing list search
         case "devlist" :
             $query = "l=php-dev&r=1&w=2&q=b&s=" . urlencode($pattern);
             header("Location: $ml_url?$query");
@@ -319,22 +319,33 @@ else {
   <td align="right">Search for:<br /></td>
   <td>
   <input type="text" name="pattern" value="" size="30" />
-  <input type="submit" value=" Search "><br>
+  <input type="submit" value=" Search " /><br>
   </td>
  </tr>
  <tr valign="top">
   <td align="right">
   Restrict the search to:<br /></td>
   <td>
-<?php if (!isset($show)) { $show = 'quickref'; } ?>
    <select name="show">
-    <option value="quickref" <?php  echo ($show=='quickref')  ? 'selected':''?>>function list
-    <option value="wholesite" <?php echo ($show=='wholesite') ? 'selected':''?>>whole site
-    <option value="manual" <?php    echo ($show=='manual')    ? 'selected':''?>>online documentation [en]
-    <option value="bugdb" <?php     echo ($show=='bugdb')     ? 'selected':''?>>bug database
-    <option value="maillist" <?php  echo ($show=='maillist')  ? 'selected':''?>>general mailing list
-    <option value="devlist" <?php   echo ($show=='devlist')   ? 'selected':''?>>developer mailing list
-    <option value="phpdoc" <?php    echo ($show=='phpdoc')    ? 'selected':''?>>documentation mailing list
+<?php
+if (!isset($show)) { $show = 'quickref'; }
+$searchoptions = array(
+    "quickref"  => "function list",
+    "wholesite" => "whole site",
+    "manual"    => "online documentation [en]",
+    "bugdb"     => "bug database",
+    "maillist"  => "general mailing list",
+    "devlist"   => "developer mailing list",
+    "phpdoc"    => "documentation mailing list",
+);
+
+// Print out an <option> for all search options
+foreach ($searchoptions as $key => $value) {
+    echo '    <option value="' . $key . '"' . 
+         ($key == $show ? ' selected="selected"' : '') .
+         '>' . $value . "</option>\n";
+}
+?>
    </select><br />
   </td>
  </tr>
@@ -378,16 +389,16 @@ function makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed)
     // Print out navigation table
     echo '<table border="0" width="620" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
     echo '<tr>';
-    echo '<td align="middle" colspan="2">' . $display . '<br></td>';
+    echo '<td align="middle" colspan="2">' . $display . '<br /></td>';
     echo '</tr>';
 
     echo '<tr bgcolor="#cccccc"><td colspan="2">' . spacer(1, 1, TRUE) . '<br /></td></tr>';
 
     echo '<tr>';
-    echo '<td align="left">'  . $prev . '<br></td>';
-    echo '<td align="right">' . $next . '<br></td>';
+    echo '<td align="left">'  . $prev . '<br /></td>';
+    echo '<td align="right">' . $next . '<br /></td>';
     echo '</tr>';
-    echo '</table><br>' . "\n";
+    echo '</table><br />' . "\n";
 }
 
 // This message is printed out if an error
@@ -400,5 +411,3 @@ function searchError()
     commonFooter();
     exit;
 }
-
-?>
