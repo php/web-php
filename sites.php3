@@ -331,6 +331,7 @@ right away.</blockquote>
 	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("Coconut Beach","coconutbeach.com");
+	site("CompareNet","www.compare.net");
 	site("COMP-U-BUY","www.comp-u-buy.com");
 	site("Cookson's Tools","www.cooksons.com");
 	site("Delia*s Inc.","www.delias.com");
