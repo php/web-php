@@ -129,6 +129,9 @@ provide a large resource for the community as a whole.
 A community site dedicated to PHP developers. Includes forums, tutorials,
 and user submitted code. Home of the PHP Coding Contest.</li>
 
+<li><a href="http://www.phpfreaks.com/">PHP Freaks</a><br>
+PHP Learning Center sitew.</li>
+
 </ul>
 
 <h4>PHP Scripts and Programs</h4>
