@@ -8,12 +8,12 @@ site_header("PHP Usage Stats");
 <h1>Usage Stats for December 2004</h1>
 
 <p>
-PHP: 17,826,404 Domains, 1,318,739 IP Addresses<br>
+PHP: 18,455,683 Domains, 1,317,871 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br />
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200412.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200501.png", "Graph"); ?>
 </p>
 
 <p>
