@@ -8,6 +8,14 @@ if (is_primary_site() || strstr($MYSITE,"localhost")) {
   $dbuser="nobody";
   $dbpwd="";
 } else {
+  if (is_backup_primary()) {
+    commonHeader("Service Unavailable");?>
+<p>Sorry, the bug database is temporarily unavailable.</p>
+<?php
+    commonFooter();
+    exit;
+  }
+
   Header("Location: http://www.php.net/bug-pwd-finder.php");
   exit;
 }

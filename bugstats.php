@@ -2,6 +2,14 @@
 require_once 'prepend.inc';
 
 if(!is_primary_site()) {
+	if (is_backup_primary()) {
+		commonHeader("Service Unavailable");?>
+<p>Sorry, the bug database is temporarily unavailable.</p>
+<?php
+		commonFooter();
+		exit;
+	}
+
 	header("Location: http://www.php.net/bugstats.php");
 	exit;
 }

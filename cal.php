@@ -1,12 +1,17 @@
 <?php
   include_once 'prepend.inc';
 
-/*
   if (!is_primary_site()) {
+    if (is_backup_primary()) {
+      commonHeader("Service Unavailable");?>
+<p>Sorry, the event calendar is temporarily unavailable.</p>
+<?php
+      commonFooter();
+      exit;
+    }
   	header("Location: http://www.php.net/cal.php");
   	exit;
   }
-*/
   if (!isset($format)) {
     $format = 'html';
   }
