@@ -81,6 +81,7 @@ good matches are in bold).  Perhaps you were looking for one of these:
 <P>
 If you want to search the entire PHP website for the string &quot;<B><? echo $notfound; ?></B>&quot;, 
 then <? print_link('search.php?show=nosource&pattern='.urlencode($notfound), 'click here'); ?>.
+</P>
 <? } ?>
 
 <P>
