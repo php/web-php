@@ -345,10 +345,10 @@ function sect_to_file($string) {
 	$chap = "ref.$string.php";
 	$feat = "features.$string.php";
 	$struct = "control-structures.$string.php";
-	if(is_file($func)) return $func;
-	else if(is_file($chap)) return $chap;
-	else if(is_file($feat)) return $feat;
-	else if(is_file($struct)) return $struct;
+	if(@is_file($func)) return $func;
+	else if(@is_file($chap)) return $chap;
+	else if(@is_file($feat)) return $feat;
+	else if(@is_file($struct)) return $struct;
 	else return "$string.php";
 }
 
