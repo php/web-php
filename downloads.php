@@ -59,7 +59,7 @@ change mirrors at the bottom of the page.
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.1.0.tar.gz", "PHP 4.1.0"); ?> - 10 December 2001</li>
+  <li><?php download_link("php-4.0.6.tar.gz", "PHP 4.0.6"); ?> - 23 June 2001</li>
 </ul>
 
 <h2>Windows Binaries</h2>
@@ -100,6 +100,12 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000.
 <h1>Older Versions of PHP</h1>
 
 <ul>
+  <li>PHP 4.0.6
+    <ul>
+      <li><?php download_link("php-4.0.6.tar.gz", "Source Code"); ?></li>
+      <li><?php download_link("php-4.0.6-Win32.zip", "Windows Binary (zip)"); ?></li>
+    </ul><br>
+  </li>
   <li>PHP 4.0.5
     <ul>
       <li><?php download_link("php-4.0.5.tar.gz", "Source Code"); ?></li>
