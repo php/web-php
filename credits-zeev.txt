@@ -1,6 +1,6 @@
 New language definition and implementation
 Internal functions API design
-General hash table implementation for symbol tables, arrays and objects
+Some work on the general hash table implementation
 Memory manager
 Token cache manager
 A lot of internal functions (including hebrev :) and migration from PHP 2.0
