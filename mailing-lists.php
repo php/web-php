@@ -165,8 +165,24 @@ server at <a href="http://news.php.net/">http://news.php.net/</a>.
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       false, true, false, "php.qa"
+    ),
+
+    'Smarty template engine project mailing lists',
+    Array (
+      'smarty-general', 'General user list',
+      'This is a medium volume general list for Smarty users',
+      false, true, true, "php.smarty.general"
+    ),
+    Array (
+      'smarty-dev', 'Smarty developers list',
+      'A list for Smarty developers' ,
+      false, false, true, "php.smarty.dev"
+    ),
+    Array (
+      'smarty-cvs', 'Smarty CVS commit list',
+      'All the commits of the cvs Smarty code repository are posted to this list automatically',
+      true, false, false, "php.smarty.cvs"
     )
-  
   );
 
 ?>
