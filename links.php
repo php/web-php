@@ -223,8 +223,8 @@ FAQ, Code Downloads, and much more!</li>
 <li><a href="http://nav.webring.yahoo.com/hub?ring=phpfrancophone&list">French PHP Webring</a><br>
 A ring of French PHP Sites</li>
 
-<li><a href="http://faqfciwap.free.fr/">FAQ of the French PHP newsgroup</A> :
-<a href="news://fr.comp.infosystemes.www.auteurs.php">fr.comp.infosystemes.www.auteurs.php</a></li>
+<li><a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</A> :
+<a href="news://fr.comp.lang.php">fr.comp.lang.php</a></li> (anciennement fr.comp.infosystemes.www.auteurs.php).
 
 </ul></li>
 <li><b>German</b>
