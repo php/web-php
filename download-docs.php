@@ -46,9 +46,12 @@ $formats = array(
 <h1>Download documentation</h1>
 
 <p>
- The PHP manual is available in a selection of languages
- and formats. Pick a language and format from the table below
- to start downloading.
+ The PHP manual is available in a selection of languages and
+ formats. Note that the English version should be considered
+ the most accurate, since translations are based on that version.
+ Most of the translations are not complete, and contain English
+ parts. Pick a language and format from the table below to start
+ downloading.
 </p>
 
 <p>
