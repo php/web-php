@@ -1,10 +1,19 @@
 <html><head><title>PHP3 Glimpse Search</title>
 <?	$title="Glimpse Search";
 	include "header";
+	include "configuration.inc";
 	/* Set this to the directory containing your .glimpse* files */
-	$gdir = "/u/www/servers/lerdorf/php3";
+	if (isset($glimpse_dir)) {
+		$gdir = $glimpse_dir;
+	} else {
+		$gdir = "/u/www/servers/lerdorf/php3";
+	}
 	/* Set this to the path of your glimpse binary */
-	$glimpse = "/usr/local/bin/glimpse";
+	if (isset($glimpse_prog)) {
+		$glimpse = $glimpse_prog;
+	} else {
+		$glimpse = "/usr/local/bin/glimpse";
+	}
 
 	if(!isset($pattern)) { ?>
 	<h1 align=center>PHP3 Glimpse Search</h1>
@@ -63,6 +72,9 @@
 				$filepat = substr($file,$l-29,29);
 			}
 			$url = ereg_replace(":.*\$","",$line);
+			if (isset($glimpse_url_regexp)) {
+				$url = ereg_replace($glimpse_url_regexp, "", $url);
+			}
 			$cnt = (int)ereg_replace("^.*: ","",$line);
 			$size = filesize($file);
 			$mtime = date("D M d/y",filemtime($file));
