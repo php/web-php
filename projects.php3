@@ -71,7 +71,7 @@ activity is a requirement.
 </ul>
 <? endEntry();?>
 
-<? makeEntry("Double Choco Latte","http://dcl.netpedia.net/","Michael Dean & Tim Norman","mdean@kcnet.com"); ?>
+<? makeEntry("Double Choco Latte","http://dcl.sourceforge.net/","Michael Dean & Tim Norman","mdean@kcnet.com"); ?>
 Double Choco Latte is a system for tracking bugs, changes,
 enhancements, requests for software. The system is suited for multiple
 products and multiple accounts (clients). It is in its infancy now and
