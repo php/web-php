@@ -111,9 +111,9 @@ function delim($color=false) {
 
 function hdelim($color="#000000") {
 	if (!$color) {
-		return '<HR noshade size="1">';
+		return '<hr noshade size="1">';
 	}
-	return sprintf('<HR noshade size="1" color="%s">', $color );
+	return sprintf('<hr noshade size="1" color="%s">', $color );
 }
 
 
@@ -146,21 +146,28 @@ function print_link($url, $linktext=false, $target=false, $extras=false) {
 # print a link for a downloadable file (including filesize)
 #
 
-function download_link($file, $title) {
-	global $filesizes;
+function download_link($file, $title, $size_in_link=false) {
+	global $filesizes, $server;
+
 	if ($tmp = strrchr($file, "/")) {
 		$local_file = substr($tmp, 1, strlen($tmp));
 	} else {
 		$file = "distributions/$file";
 		$local_file = $file;
 	}
-	print_link($file, $title);
+
 	$size = @filesize($local_file)/1024;
-	echo("<!-- file=$file localfile=$local_file size-$size-->\n");
-	if ($size) {
-		printf(" (%dKB)", $size);
+	echo("<!-- file=$file localfile=$local_file size-$size -->\n");
+
+  if ($size_in_link) { $extraparam = 'title="' . $size . '"'; }
+  else { $extraparam = false; }
+
+  print_link("http://www.php.net/do_download.php?download_file=" . $file . "&source_site=$server", $title, false, $extraparam);
+
+	if ($size && !$size_in_link) {
+		printf(" [%dKB]", $size);
 	} else if (isset($filesizes[$local_file])) {
-		echo " (".$filesizes[$local_file].")";
+		echo " [".$filesizes[$local_file]."]";
 	}
 }
 
