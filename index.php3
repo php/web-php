@@ -22,6 +22,8 @@ in order to help us find bugs, and in order for you to see what's new and improv
 <li>Read what has <a href="changes.php3">changed</a> since PHP/FI 2.0
 <li><a href="bug-form.php3">Report bugs</a> you found in PHP 3.0
 <li>Subscribe to the <a href="mailto:php3-subscribe@php.il.eu.org">PHP 3.0 mailing list</a>
+<li><a href="manual/manual.html">PHP 3.0 Manual</a>.  This is a <i>very</i> early version,
+     a lot is missing and the structure is horrible, it'll get better.
 </ul>
 <br>
 
