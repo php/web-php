@@ -736,12 +736,22 @@ should check to make sure that the configuration file you are adding the AddType
     this is the case, and then try to reproduce the problem with
     a small test case. If you know how to use 'gdb', it is very
     helpful when you can provide a backtrace with your bug report
-    to help the developers pinpoint the problem.
+    to help the developers pinpoint the problem.  If you are using
+    PHP as an Apache module try something like:
+<ul>
+<li> Stop your httpd processes
+<li> gdb httpd
+<li> &gt; run -X -f /path/to/httpd.conf
+<li> Then fetch the URL causing the problem with your browser
+<li> If you are getting a core dump, gdb should inform you of this now
+<li> type: bt
+<li> Send the resulting backtrace to <a href="mailto: php-dev@lists.php.net">php-dev@lists.php.net</a>
+</ul>
     <P>
     If your script uses the regular expression functions (<CODE>ereg()</CODE>
     and friends), you should make sure that you compiled PHP3 and
     Apache with the same regular expression package. (This should
-    happen automatically with PHP3 and Apache 1.3.)
+    happen automatically with PHP3 and Apache 1.3.x)
   <P>
   </DD>
 
