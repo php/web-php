@@ -87,10 +87,11 @@ site_header("Sitemap");
 
 <ul>
  <li><a href="/download-logos.php">Download Logos</a></li>
- <li><a href="/copyright.php#contact">Contact</a></li>
+ <li><a href="/contact.php">Contact</a></li>
  <li><a href="/copyright.php">Copyright</a></li>
  <li><a href="/credits.php">Credits</a></li>
  <li><a href="/manual/howto">Documentation HOWTO</a></li>
+ <li><a href="/contact.php#ads">Advertising at PHP.net</a></li>
 </ul>
 
 <?php site_footer(); ?>

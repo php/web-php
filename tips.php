@@ -38,8 +38,7 @@ function tip_title($title, $author = '', $date = '')
 </p>
  
 <p>
- Send your suggestions for tips to
- <a href="/copyright.php#contact">the webmasters</a>.
+ Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
 <?php tip_title('Search from the Safari Search Bar', 'Gabor Hojtsy', '19-Jan-2004');?>

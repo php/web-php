@@ -200,7 +200,8 @@ function site_footer($config = array())
  <a href="/source.php?url=/{$_SERVER['BASE_PAGE']}">show source</a> |
  <a href="/credits.php">credits</a> |$stats
  <a href="/sitemap.php">sitemap</a> |
- <a href="/copyright.php#contact">contact</a> |
+ <a href="/contact.php">contact</a> |
+ <a href="/contact.php#ads">advertising</a> |
  <a href="/mirrors.php">mirror sites</a>
 </div>
 
@@ -562,7 +563,9 @@ function commonFooter() {
 	}
 	print_link('/sitemap.php', 'sitemap', false, 'class="small"');
 	echo " | ";
-	print_link('/copyright.php#contact', 'contact', false, 'class="small"');
+	print_link('/contact.php', 'contact', false, 'class="small"');
+	echo " | ";
+	print_link('/contact.php#ads', 'advertising', false, 'class="small"');
 	echo " | ";
     print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
     echo "&nbsp;";
