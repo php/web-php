@@ -235,8 +235,8 @@ endif;
 <? makeName("Lars Torben Wilson","cslawi@uta.fi",0);?>
   <UL TYPE=DISC><li>Documentation</UL><BR>
 
-<? makeName("Andrey Zmievski","andrey@ispi.net",0);?>
-  <UL TYPE=DISC><li>WDDX</UL><BR>
+<? makeName("Andrei Zmievski","andrei@ispi.net",0);?>
+  <UL TYPE=DISC><li>WDDX, PCRE extensions</UL><BR>
 
 </DL>
 <hr noshade width="100%" size=1>
