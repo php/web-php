@@ -1,14 +1,4 @@
 <?php
-/* Structure of MIRRORS array (in mirrors.inc):
-  0  Country code,
-  1  Mirror provider name,
-  2  Flag for whether local stats work (1) or not (0) on this mirror
-  3  URL for hosting company,
-  4  Flag for whether site is a standard mirror (1) a special one (2) or just a download site (0)
-  5  Flag for whether search engine works (1) or not (0) on the site
-  6  Default language code
-*/
-
 require_once 'mirrors.inc';
 require_once 'countries.inc';
 
