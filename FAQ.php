@@ -116,6 +116,10 @@ If you have suggestions, corrections or additions, send them to
         <li><a href="#11.2">11.2. Incompatible functions</a></li>
     </ul>
 <li><b><a href="#12">12. Migrating from PHP2 to PHP3</a></b>
+<li><b><a href="#13">13. Miscellaneous Questions</a></b>
+    <ul>
+        <li><a href="#13.1">13.1. Where did the pop-ups go on the website?  Can I have the code for that?</a></li>
+    </ul>
 </ul>
 
 <? echo hdelim(); ?>
@@ -1394,7 +1398,6 @@ solution is to use PHP's
     process. If you're really unsure about compatibility you should
     install PHP 4 in a test environment and run your scripts there.
   </dd>
-  <p>
   <dt><b>
     <a name="11.2">11.2.</a> Incompatible functions
   </b></dt>
@@ -1417,6 +1420,28 @@ solution is to use PHP's
     PHP/FI 2.0 is no longer supported. Please see <a
     href="http://www.php.net/manual/migration.php">the manual</a> for
     information about migration from PHP/FI 2.0.
+  </dd>
+</dl>
+
+
+<? echo hdelim(); ?>
+<a name="11">
+<h2>13. Miscellaneous Questions</h2>
+</a>
+
+<dl>
+  <dt><b>
+    <a name="13.1">13.1.</a> Where did the pop-ups go on the website?  Can I have the code for that?
+  </b></dt>
+  <dd>
+    The yellow pop-up windows on the old site were pretty cool, but
+    were very difficult to maintain (since some companies seem to
+    enjoy changing the way their browsers work with every new release).
+    <p>
+    All the code for previous versions of the website is still available
+    through CVS.  Specifically, the last version of shared.inc (that had
+    all the Javascript and DHTML to do the popups) is available 
+    <? print_link("http://cvsweb.php.net/viewcvs.cgi/phpweb/include/shared.inc?rev=1.123&content-type=text/vnd.viewcvs-markup", "here"); ?>.
   </dd>
 </dl>
 
