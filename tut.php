@@ -231,9 +231,9 @@ It should be obvious what this does. There is nothing more to it.
 The $_POST["name"] and $_POST["age"] variables
 are automatically set for you by PHP. (<b>Note:</b> On versions 
 previous to PHP 4.1.0, one needed to use the $HTTP_POST_VARS array
-instead of the $_POST superglobal array. See the section on "<a
-href="/manual/language.variables.predefined.php">Predefined
-variables</a>" in the manual for more information).
+instead of the $_POST superglobal array. See the section on 
+<?php print_link('/manual/'.$lang.'/language.variables.predefined.php',
+'"Predefined variables"'); ?> in the manual for more information).
 </p>
 
 <h2>Using old code with new versions of PHP</h2>
@@ -259,9 +259,9 @@ default (in other words, "register_globals=off" by defaults in php.ini),
 which means that the preferred method of accessing those values is via
 the superglobal arrays mentioned above. (PHP &gt;= 4.2.0)
 </ol>
-For more details on these changes see the manual section on <a
-href="/manual/language.variables.predefined.php">predefined
-variables</a> and links therein.
+For more details on these changes see the manual section on 
+<?php print_link('/manual/'.$lang.'/language.variables.predefined.php',
+'predefined variables'); ?> and links therein.
 </p>
 
 <h2>What's next?</h2>
