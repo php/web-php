@@ -152,8 +152,7 @@ function download_link($file, $title, $size_in_link=false) {
 	if ($tmp = strrchr($file, "/")) {
 		$local_file = substr($tmp, 1, strlen($tmp));
 	} else {
-		$file = "distributions/$file";
-		$local_file = $file;
+		$local_file = "distributions/$file";
 	}
 
 	$size = @filesize($local_file)/1024;
