@@ -145,6 +145,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Misbehaving function",
 				   "FrontPage related",
 				   "Feature/Change Request",
+				   "Feedback Needed",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
