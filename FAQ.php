@@ -942,10 +942,9 @@ my $CFG_LDFLAGS_SHLIB = q(-shared);# substituted via Makefile.tmpl </pre>
     X
 
     $ gcc -E test.c &gt;/dev/null
-
+    </pre>
     If that spews out errors, you know your include files are messed up. 
-    </pre></p>
-    <p>
+    </p>
    </dd>
 </dl>
 

@@ -250,7 +250,7 @@ Stuff goes in here.
 <!-- sidebar table ends -->
 
 </td>
-    <td bgcolor="#cccccc">
+    <td bgcolor="#cccccc" background="/gifs/checkerboard.gif">
 <?php spacer(1,1);?><br>
     </td>
 </table>
