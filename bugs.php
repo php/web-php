@@ -248,7 +248,6 @@ function show_types($first_item,$show_any,$var_name) {
                     "*Mail Related" => "&nbsp;&nbsp;&nbsp;&nbsp;Mail Related",
                     "IMAP related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IMAP related",
                     "Mail related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mail function related",
-                    "Vmailmgr related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vmailmgr related",
 
                     "*Math Functions" => "&nbsp;&nbsp;&nbsp;&nbsp;Math Functions",
                     "BC math related" => "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BC math related",
