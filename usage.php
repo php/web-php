@@ -3,15 +3,15 @@ include_once "prepend.inc";
 commonHeader("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for March 2003</h1>
+<h1>Usage Stats for April 2003</h1>
 
 <p>
-PHP: 11,869,645 Domains, 1,316,288 IP Addresses<br>
+PHP: 12,236,270 Domains, 1,324,036 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200303.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200304.png", "Graph"); ?>
 </p>
 
 <p>
