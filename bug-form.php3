@@ -68,6 +68,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
   <th align=right>PHP version:</th>
   <td>
    <select name="phpver">
+	<option name="3.0b2a">3.0b2a
+	<option name="3.0b2">3.0b2
     <option name="3.0b1">3.0b1
     <option name="3.0CVS">3.0 Latest CVS
     <option name="3.0a4">3.0a4
