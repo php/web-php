@@ -130,6 +130,11 @@ site_header("Downloads");
  </li>
 </ul>
 
+<p>
+ We have a <a href="/zend-egine-2.php">PHP 5 / Zend Engine 2 page</a> explaining the
+ changes introduced in PHP 5.
+</p>
+
 <hr />
 
 <h1>Security fixes and patches</h1>
