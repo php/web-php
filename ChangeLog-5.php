@@ -39,7 +39,7 @@ modules. (Andi, Zeev)</li>
 which is required format for some proxies. (Sara)</li>
 <li>Added optional third parameter 'strict' to array_keys(). (Andrey)</li>
 <li>Added stream_lock() method to userspace streams interface. (Hartmut, Wez)</li>
-<li>Added xsltprocessor->registerPHPFunctions(). (Christian)</li>
+<li>Added xsltprocessor-&gt;registerPHPFunctions(). (Christian)</li>
 <li>Readded support for using classes before they are declared according to
 the behavior in PHP 4. This won't work with classes who are using PHP 5
 features such as interfaces. (Zeev, Andi)</li>
@@ -75,7 +75,7 @@ octets). (Moriyoshi)</li>
 queries). (Ilia)</li>
 <li>Fixed bug #26844 (ext/mime_magic: magic file validation broken). (Jani)</li>
 <li>Fixed bug #26819 (http_build_query() crashes on NULL output). (Ilia)</li>
-<li>Fixed bug #26817 (http_build_query() does not handle private & protected
+<li>Fixed bug #26817 (http_build_query() does not handle private &amp; protected
 object properties correctly). (Ilia)</li>
 <li>Fixed bug #26815 (foreach of (DOM) childnodes crashes when Xinclude is used).
 (Rob)</li>
@@ -91,7 +91,7 @@ results in segfault). (Marcus)</li>
 (Andi)</li>
 <li>Fixed bug #26695 (Reflection API does not recognize mixed-case class hints).
 (Marcus)</li>
-<li>Fixed bug #26690 (make xsltProcessor->transformToUri use streams wrappers).
+<li>Fixed bug #26690 (make xsltProcessor-&gt;transformToUri use streams wrappers).
 (Ilia)</li>
 <li>Fixed bug #26680 (Added version check in mysqli_report_index). (Georg)</li>
 <li>Fixed bug #26675 (Segfault on ArrayAccess use). (Marcus)</li>
@@ -145,7 +145,7 @@ input filter.  support is used. (Derick)</li>
   <li>dba_key_split() to split inifile keys in an array. (Marcus)</li>
   <li>time_nanosleep() signal safe sleep (Magnus, Ilia)</li>
   <li>headers_list(). (Sara)</li>
-  <li>php_strip_whitespace(). strip whitespace & comments from a
+  <li>php_strip_whitespace(). strip whitespace &amp; comments from a
   script. (Ilia)</li>
   <li>php_check_syntax(). check php script for parse errors. (Ilia)</li>
   <li>image_type_to_extension(). return extension based on image type.
