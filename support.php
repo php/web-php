@@ -126,7 +126,7 @@ To subscribe to one of these lists, use this simple form:
     <option value="php-dev">Developer List
     <option value="php-cvs">CVS Commit List
     <option value="php-cvs-daily">Daily CVS Commit Summary
-    <option value="phpdoc">Documentation List
+<!--    <option value="phpdoc">Documentation List -->
     <option value="php-install">Installation List
     <option value="php-install-digest">Installation List Digest
     <option value="php-i18n">Internationalization List
