@@ -119,6 +119,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "PHP version:      $php_version\n";
     $report .= "PHP Bug Type:     $ebug_type\n";
     $report .= "Bug description:\n";
+	$ascii_report = indent($report.$ldesc,"    ");
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
     $report .= indent($html_desc, "    ");
@@ -130,7 +131,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug #$cid: $sdesc", $report, "From: $email")) {
+    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email")) {
         echo "<p><h2>Mail sent to $destination...</h2>\n";
 		echo "Thank you for your help!<P>If the status of the bug report you submitted\n";
 		echo "changes, you will be notified.  You may return here and check on the status\n";
