@@ -23,6 +23,7 @@ gr	gr.php.net	Haris Manousaridis <xm@banet.gr>	ns.php.gr
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
 hk	hk2.php.net	xcyber kwan <xcyber@yahoo.com>	php.xcyber.org
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
+id	id.php.net	Andika Triwidada <andika@hotmail.com>	php.piksi.itb.ac.id
 ie	ie.php.net	Dave Rynne <ftpadmin@esat.net>	php.mirrors.esat.net
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it

@@ -34,6 +34,7 @@ $MIRRORS = array(
    "http://php3.de/"                  => array("de", "Schlund + Partner", 0, "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1, "de"),
    "http://gr.php.net/"               => array("gr", "BANet S.A.", 0, "http://www.banet.gr", 1, 0, "el"),
    "http://hu.php.net/"               => array("hu", "Externet", 0, "http://www.externet.hu/", 1, 0, "hu"),
+#   "http://id.php.net/"               => array("id", "Computer Center PIKSI ITB", 0, "http://www.piksi.itb.ac.id/", 1, 0, "in"),
    "http://ie.php.net/"               => array("ie", "Esat Net", 0, "http://www.esat.net/", 1, 0, "en"),
    "http://php.fmal.com/"             => array("it", "Open Technology Consulting", 0, "http://otc.fmal.com/", 1, 0, "it"),
    "http://it2.php.net/"              => array("it", "Utility Line Italia S.r.l.", 0, "http://www.uli.it/", 1, 0, "it"),
@@ -153,6 +154,7 @@ $LANGUAGES = array(
     'de' => 'German',
     'el' => 'Greek',
     'hu' => 'Hungarian',
+    'in' => 'Indonesian',
     'it' => 'Italian',
     'ja' => 'Japanese',
     'kr' => 'Korean', # this should be 'ko'. its wrong in phpdoc.
