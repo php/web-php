@@ -9,9 +9,8 @@ function makeMail($mail) {
 
 <center><h1><font color="#5B69A6">Core Developers</font></h1></center>
 
-<table bgcolor=#D0D0D0>
-<tr><td><img src="/jpgs/rasmus.jpg" border=0 width=320 height=240></td>
-<td><h3>Rasmus Lerdorf <? makeMail("rasmus@php.net");?></h3>
+<table><tr><td>
+<h3>Rasmus Lerdorf <? makeMail("rasmus@php.net");?></h3>
 
 <ul>
 <li>Concept
@@ -23,12 +22,8 @@ function makeMail($mail) {
 <li>Project Coordinator
 </ul>
 </td></tr>
-<tr><td colspan=2>
-Looking bleary-eyed after another all-night coding session.<br>
-When I am not playing with PHP I spend my time as an Internet consultant in
-Toronto, Canada.
-</td></tr>
 </table>
+
 <hr noshade width="80%" size=1>
 
 <table><tr><td>
