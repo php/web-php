@@ -66,6 +66,54 @@ $SIDEBAR_DATA = '
 site_header("Downloads");
 ?>
 
+<a name="v5"></a>
+<h1>PHP 5.0.4</h1>
+
+<h2>Complete Source Code</h2>
+ <b>Note:</b>The PHP 5.0.4 source packages were re-released due to a missing file in the embedded PEAR distribution.  There are <i>no</i> changes in this re-release
+<ul> other than the addition of the missing file.
+ <li>
+  <?php download_link('php-5.0.4.tar.bz2', 'PHP 5.0.4 (tar.bz2)'); ?> - 03 Apr 2005<br />
+  <span class="md5sum">md5: fb1aac107870f897d26563a9cc5053c0</span>
+ </li>
+ <li>
+  <?php download_link('php-5.0.4.tar.gz', 'PHP 5.0.4 (tar.gz)'); ?> - 03 Apr 2005<br />
+  <span class="md5sum">md5: 8edf259bcfab4cfc890a4bb4e7c3649f</span>
+ </li>
+</ul>
+
+<h2>Windows Binaries</h2>
+<ul>
+ <li>
+  <?php download_link('php-5.0.4-Win32.zip', 'PHP 5.0.4 zip package'); ?> - 31 Mar 2005<br />
+  <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.0.4-Win32.zip', 'Collection of PECL modules for PHP 5.0.4'); ?> - 31 Mar 2005<br />
+  (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
+  standard with PHP 4 Windows binaries but have since been moved into this 
+  separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
+  <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
+ </li>
+ <li>
+  <?php download_link('php-5.0.4-installer.exe', 'PHP 5.0.4 installer'); ?> - 31 Mar 2005<br />
+  (CGI only, packaged as Windows installer to install
+  and configure PHP, and automatically configure IIS, PWS and Xitami, with
+  manual configuration for other servers. N.B. no external extensions
+  included)<br />
+  <span class="md5sum">md5: 8f951136757600ce78d5e442cb5b1541</span>
+ </li>
+</ul>
+
+<p>
+ We have a <a href="/manual/en/migration5.oop.php">PHP 5 / Zend Engine 2 page</a> explaining the
+ language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
+ ChangeLog</a> details all the other changes.
+</p>
+
+<hr />
+
+
 <a name="v4"></a>
 <h1>PHP 4.3.11</h1>
 
@@ -111,52 +159,6 @@ site_header("Downloads");
   <span class="md5sum">md5: 07523a6a56441a8eb382114f1933af52</span>
  </li>
 </ul>
-
-<hr />
-
-<a name="v5"></a>
-<h1>PHP 5.0.4</h1>
-
-<h2>Complete Source Code</h2>
-<ul>
- <li>
-  <?php download_link('php-5.0.4.tar.bz2', 'PHP 5.0.4 (tar.bz2)'); ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: 47727afde39329d5cebda4cb5e5ecee0</span>
- </li>
- <li>
-  <?php download_link('php-5.0.4.tar.gz', 'PHP 5.0.4 (tar.gz)'); ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: c8f5fa441fd99c1b363bd2a071a0bd97</span>
- </li>
-</ul>
-
-<h2>Windows Binaries</h2>
-<ul>
- <li>
-  <?php download_link('php-5.0.4-Win32.zip', 'PHP 5.0.4 zip package'); ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
- </li>
- <li>
-  <?php download_link('pecl-5.0.4-Win32.zip', 'Collection of PECL modules for PHP 5.0.4'); ?> - 31 Mar 2005<br />
-  (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
-  standard with PHP 4 Windows binaries but have since been moved into this 
-  separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
- </li>
- <li>
-  <?php download_link('php-5.0.4-installer.exe', 'PHP 5.0.4 installer'); ?> - 31 Mar 2005<br />
-  (CGI only, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
-  <span class="md5sum">md5: 8f951136757600ce78d5e442cb5b1541</span>
- </li>
-</ul>
-
-<p>
- We have a <a href="/manual/en/migration5.oop.php">PHP 5 / Zend Engine 2 page</a> explaining the
- language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
- ChangeLog</a> details all the other changes.
-</p>
 
 <hr />
 

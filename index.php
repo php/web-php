@@ -149,7 +149,7 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[31-Mar-2005]</span>
   The PHP Development Team would like to announce the immediate release of 
-  <a href="/downloads.php">PHP 5.0.4 and 4.3.11</a>. 
+  <a href="/downloads.php#v5">PHP 5.0.4</a> and <a href="/downloads.php#v4">4.3.11</a>. 
   These are maintenance releases that in addition to non-critical bug fixes 
   address several security issues. All Users of PHP are strongly 
   encouraged to upgrade to one of these releases as soon as possible.
