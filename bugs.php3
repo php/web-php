@@ -260,9 +260,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} elseif($status!="All" && $bug_type=="Any") {
 		/* Treat assigned and analyzed bugs as open */
 		if($status=="Open") {
-			$where_clause = "status='Open' or status='Assigned' or status='Analyzed'";
+			$where_clause = "bug_type!='Feature/Change Request' and (status='Open' or status='Assigned' or status='Analyzed')";
 		} else {
-			$where_clause = "status='$status'";
+			$where_clause = "status='$status' and bug_type!='Feature/Change Request'";
 		}
 	} else {
 		/* Treat assigned and analyzed bugs as open */
