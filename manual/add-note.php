@@ -43,7 +43,8 @@ if(!strstr($MYSITE,"www.php.net")) {
 		//echo "<!--$query-->\n";
 		if (mysql_query($query)):?>
 <P>Your submission was successful -- thanks for contributing!
-<?		else:
+<?			mail("php-notes@lists.php.net","note added to $sect",$note,"From: $user");
+		else:
 			// mail it.
 			mail($mailto, "failed manual note query", $query);
 ?>
