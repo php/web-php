@@ -245,7 +245,7 @@ The tutorials section on the Zend.com developer zone</li>
 <li><a href="http://www.hotscripts.com/PHP/Software_and_Servers/Installation_Kits/">List of installation kits</a><br />
 An extensive list of installation kits setting up servers and PHP for you in minutes.</li>
 
-<li><a href="http://phpeditors.dancinghippo.com/">PHP Editors List</a><br />
+<li><a href="http://phpeditors.linuxbackup.co.uk/">PHP Editors List</a><br />
 A comprehensive list of editors you can use to edit PHP programs</li>
 
 </ul>
