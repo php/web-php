@@ -44,107 +44,107 @@ function preloadImages($mode) {
 	global $FRAMEMODE;
 ?>
 		b_close0 = new Image();
-		b_close0.src = "/new/gifs/b-close-p.gif";
+		b_close0.src = "/gifs/b-close-p.gif";
 		b_close1 = new Image();
-		b_close1.src = "/new/gifs/b-close-c.gif";
+		b_close1.src = "/gifs/b-close-c.gif";
 
 		b_cred0 = new Image();
-		b_cred0.src = "/new/gifs/b-credits-p.gif";
+		b_cred0.src = "/gifs/b-credits-p.gif";
 		b_cred1 = new Image();
-		b_cred1.src = "/new/gifs/b-credits-c.gif";
+		b_cred1.src = "/gifs/b-credits-c.gif";
 
 		b_top0 = new Image();
-		b_top0.src = "/new/gifs/b-top-p.gif";
+		b_top0.src = "/gifs/b-top-p.gif";
 		b_top1 = new Image();
-		b_top1.src = "/new/gifs/b-top-c.gif";
+		b_top1.src = "/gifs/b-top-c.gif";
 
 		b_sear0 = new Image();
-		b_sear0.src = "/new/gifs/b-search-p.gif";
+		b_sear0.src = "/gifs/b-search-p.gif";
 		b_sear1 = new Image();
-		b_sear1.src = "/new/gifs/b-search-c.gif";
+		b_sear1.src = "/gifs/b-search-c.gif";
 
 		b_sour0 = new Image();
-		b_sour0.src = "/new/gifs/b-source-p.gif";
+		b_sour0.src = "/gifs/b-source-p.gif";
 		b_sour1 = new Image();
-		b_sour1.src = "/new/gifs/b-source-c.gif";
+		b_sour1.src = "/gifs/b-source-c.gif";
 <?	if ($FRAMEMODE == "manual"): ?>
 		b_cont0 = new Image();
-		b_cont0.src = "/new/gifs/b-contents-p.gif";
+		b_cont0.src = "/gifs/b-contents-p.gif";
 		b_cont1 = new Image();
-		b_cont1.src = "/new/gifs/b-contents-c.gif";
+		b_cont1.src = "/gifs/b-contents-c.gif";
 
 		b_up0 = new Image();
-		b_up0.src = "/new/gifs/b-up-p.gif";
+		b_up0.src = "/gifs/b-up-p.gif";
 		b_up1 = new Image();
-		b_up1.src = "/new/gifs/b-up-c.gif";
+		b_up1.src = "/gifs/b-up-c.gif";
 
 		b_next0 = new Image();
-		b_next0.src = "/new/gifs/b-next-p.gif";
+		b_next0.src = "/gifs/b-next-p.gif";
 		b_next1 = new Image();
-		b_next1.src = "/new/gifs/b-next-c.gif";
+		b_next1.src = "/gifs/b-next-c.gif";
 
 		b_prev0 = new Image();
-		b_prev0.src = "/new/gifs/b-prev-p.gif";
+		b_prev0.src = "/gifs/b-prev-p.gif";
 		b_prev1 = new Image();
-		b_prev1.src = "/new/gifs/b-prev-c.gif";
+		b_prev1.src = "/gifs/b-prev-c.gif";
 
 		b_next20 = new Image();
-		b_next20.src = "/new/gifs/b-next-p.gif";
+		b_next20.src = "/gifs/b-next-p.gif";
 		b_next21 = new Image();
-		b_next21.src = "/new/gifs/b-next-c.gif";
+		b_next21.src = "/gifs/b-next-c.gif";
 
 		b_prev20 = new Image();
-		b_prev20.src = "/new/gifs/b-prev-p.gif";
+		b_prev20.src = "/gifs/b-prev-p.gif";
 		b_prev21 = new Image();
-		b_prev21.src = "/new/gifs/b-prev-c.gif";
+		b_prev21.src = "/gifs/b-prev-c.gif";
 
 		b_bullet0 = new Image();
-		b_bullet0.src = "/new/gifs/b-bullet-p.gif";
+		b_bullet0.src = "/gifs/b-bullet-p.gif";
 		b_bullet1 = new Image();
-		b_bullet1.src = "/new/gifs/b-bullet-c.gif";
+		b_bullet1.src = "/gifs/b-bullet-c.gif";
 		b_bullet2 = new Image();
-		b_bullet2.src = "/new/gifs/b-bullet-w.gif";
+		b_bullet2.src = "/gifs/b-bullet-w.gif";
 <?	else: ?>
 		b_down0 = new Image();
-		b_down0.src = "/new/gifs/b-downloads-p.gif";
+		b_down0.src = "/gifs/b-downloads-p.gif";
 		b_down1 = new Image();
-		b_down1.src = "/new/gifs/b-downloads-c.gif";
+		b_down1.src = "/gifs/b-downloads-c.gif";
 
 		b_docs0 = new Image();
-		b_docs0.src = "/new/gifs/b-docs-p.gif";
+		b_docs0.src = "/gifs/b-docs-p.gif";
 		b_docs1 = new Image();
-		b_docs1.src = "/new/gifs/b-docs-c.gif";
+		b_docs1.src = "/gifs/b-docs-c.gif";
 
 		b_mail0 = new Image();
-		b_mail0.src = "/new/gifs/b-mailing-p.gif";
+		b_mail0.src = "/gifs/b-mailing-p.gif";
 		b_mail1 = new Image();
-		b_mail1.src = "/new/gifs/b-mailing-c.gif";
+		b_mail1.src = "/gifs/b-mailing-c.gif";
 
 		b_dev0 = new Image();
-		b_dev0.src = "/new/gifs/b-development-p.gif";
+		b_dev0.src = "/gifs/b-development-p.gif";
 		b_dev1 = new Image();
-		b_dev1.src = "/new/gifs/b-development-c.gif";
+		b_dev1.src = "/gifs/b-development-c.gif";
 
 		b_news0 = new Image();
-		b_news0.src = "/new/gifs/b-news-p.gif";
+		b_news0.src = "/gifs/b-news-p.gif";
 		b_news1 = new Image();
-		b_news1.src = "/new/gifs/b-news-c.gif";
+		b_news1.src = "/gifs/b-news-c.gif";
 
 		b_link0 = new Image();
-		b_link0.src = "/new/gifs/b-links-p.gif";
+		b_link0.src = "/gifs/b-links-p.gif";
 		b_link1 = new Image();
-		b_link1.src = "/new/gifs/b-links-c.gif";
+		b_link1.src = "/gifs/b-links-c.gif";
 
 		b_mirr0 = new Image();
-		b_mirr0.src = "/new/gifs/b-mirror-p.gif";
+		b_mirr0.src = "/gifs/b-mirror-p.gif";
 		b_mirr1 = new Image();
-		b_mirr1.src = "/new/gifs/b-mirror-c.gif";
+		b_mirr1.src = "/gifs/b-mirror-c.gif";
 <? endif;
 }
 
 
 function spc($width, $height) {
-	echo "<IMG SRC='/new/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
+	echo "<IMG SRC='/gifs/spacer.gif' WIDTH=$width HEIGHT=$height BORDER=0>";
 }
 
 function kickHeader($offset,$side,$distance,$width) {
@@ -162,9 +162,9 @@ function kickHeader($offset,$side,$distance,$width) {
 		if ($offset>=0):
 			echo "<TD valign=top rowspan=3 width=$distance>";
 			spc(1,$off);
-			echo "<BR><IMG SRC='/new/gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR></TD>";
+			echo "<BR><IMG SRC='/gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR></TD>";
 		else:
-			echo "<TD valign=bottom rowspan=3 width=$distance><IMG SRC='/new/gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR>";
+			echo "<TD valign=bottom rowspan=3 width=$distance><IMG SRC='/gifs/black.gif' WIDTH=$distance HEIGHT=3 BORDER=0><BR>";
 			spc(1,$off);
 			echo "<BR></TD>";
 		endif;
@@ -172,34 +172,34 @@ function kickHeader($offset,$side,$distance,$width) {
 		if ($offset>=0):
 			echo "<TR><TD colspan=4 align=left width=$width>";
 			spc($off,1);
-			echo "<IMG SRC='/new/gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0><BR></TD></TR>";
+			echo "<IMG SRC='/gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0><BR></TD></TR>";
 		else:
-			echo "<TR><TD colspan=4 align=right width=$width><IMG SRC='/new/gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0>";
+			echo "<TR><TD colspan=4 align=right width=$width><IMG SRC='/gifs/black.gif' WIDTH=3 HEIGHT=$distance BORDER=0>";
 			spc($off,1);
 			echo "<BR></TD></TR>";
 		endif;	
 		echo "<TR VALIGN=top>";
 	endif;
-	echo "<TD width=9><IMG SRC='/new/gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD colspan=2 BACKGROUND='/new/gifs/kick-bt.gif' width=$innerwidth2>";
+	echo "<TD width=9><IMG SRC='/gifs/kick-ctl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bt.gif' width=$innerwidth2>";
 	spc(1,10);
-	echo "<BR></TD><TD width=10><IMG SRC='/new/gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<BR></TD><TD width=10><IMG SRC='/gifs/kick-ctr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR>";
-	echo "<TR VALIGN=top><TD BACKGROUND='/new/gifs/kick-bl.gif' width=9>";
+	echo "<TR VALIGN=top><TD BACKGROUND='/gifs/kick-bl.gif' width=9>";
 	spc(9,1);
-	echo "<BR></TD><TD BACKGROUND='/new/gifs/kick-bg.gif' width=$innerwidth><FONT${FONTFACEATTR} SIZE=-1>";
+	echo "<BR></TD><TD BACKGROUND='/gifs/kick-bg.gif' width=$innerwidth><FONT${FONTFACEATTR} SIZE=-1>";
 }
 
 function kickFooter($kickname,$buttname) {
-	echo "</TD><TD BACKGROUND='/new/gifs/kick-bg.gif' width=21 VALIGN=top>";
-	echo "<A HREF=\"javascript:hideLayer('$kickname');change('$buttname',0);\"><IMG SRC='/new/gifs/kick-close.gif' ALT='Close this window' WIDTH=21 HEIGHT=21 BORDER=0></A><BR>";
-	echo "</TD><TD BACKGROUND='/new/gifs/kick-br.gif' width=10>";
+	echo "</TD><TD BACKGROUND='/gifs/kick-bg.gif' width=21 VALIGN=top>";
+	echo "<A HREF=\"javascript:hideLayer('$kickname');change('$buttname',0);\"><IMG SRC='/gifs/kick-close.gif' ALT='Close this window' WIDTH=21 HEIGHT=21 BORDER=0></A><BR>";
+	echo "</TD><TD BACKGROUND='/gifs/kick-br.gif' width=10>";
 	spc(10,1);
 	echo "<BR></TD></TR><TR VALIGN=top>";
-	echo "<TD width=9><IMG SRC='/new/gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
-	echo "<TD colspan=2 BACKGROUND='/new/gifs/kick-bb.gif' width=$innerwidth2>";
+	echo "<TD width=9><IMG SRC='/gifs/kick-cbl.gif' WIDTH=9 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<TD colspan=2 BACKGROUND='/gifs/kick-bb.gif' width=$innerwidth2>";
 	spc(1,10);
-	echo "<BR></TD><TD width=10><IMG SRC='/new/gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
+	echo "<BR></TD><TD width=10><IMG SRC='/gifs/kick-cbr.gif' WIDTH=10 HEIGHT=10 BORDER=0><BR></TD>";
 	echo "</TR></TABLE>";
 }
 
@@ -223,7 +223,7 @@ function download_link($file, $title) {
 
 function gifurl($img) {
 	global $root_url;
-	return $root_url . "/new/gifs/" . $img;
+	return $root_url . "/gifs/" . $img;
 }
 
 function jpgurl($img) {
@@ -240,7 +240,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 			echo "\" \n onMouseout=\"hide();\">";
 		endif;
 	endif;
-	echo "<IMG SRC=\"/new/gifs/b-$gif-p.gif\" \n ALT=\"$alt\" \n WIDTH=$width HEIGHT=$height BORDER=0 \n NAME=\"$button\" \n HSPACE=$hspace VSPACE=$vspace>";
+	echo "<IMG SRC=\"/gifs/b-$gif-p.gif\" \n ALT=\"$alt\" \n WIDTH=$width HEIGHT=$height BORDER=0 \n NAME=\"$button\" \n HSPACE=$hspace VSPACE=$vspace>";
 	if ($url):
 		echo "</A>";
 	endif;
@@ -356,7 +356,7 @@ endif;
 </SCRIPT>
 
 <? if ($HAVE_STYLE): ?>
-<LINK REL="stylesheet" HREF="/new/php-style.css" TYPE="text/css">
+<LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
 <? endif; ?>
 
 </HEAD>
@@ -366,7 +366,7 @@ endif;
 	echo "OnLoad=\"LoadImgs();\"";
 endif; ?>
 ><A NAME="top">
-<IMG SRC="/new/gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
+<IMG SRC="/gifs/spacer.gif" WIDTH=100% HEIGHT=5 BORDER=0 NAME="bigspacer"><BR>
 
 <? if($NS4 || $IE4):	/* Kick outs */ ?>
 <SCRIPT LANGUAGE="Javascript1.2">
@@ -411,8 +411,8 @@ document.writeln("</STYLE>");
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH="150">
     <TR VALIGN=top>
      <TD ALIGN=left>
-      <IMG SRC="/new/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
-      <?spc(15,67);?><A HREF="/new/index.php3"><IMG SRC="/new/gifs/logo.gif" 
+      <IMG SRC="/gifs/cap-ul.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
+      <?spc(15,67);?><A HREF="/index.php3"><IMG SRC="/gifs/logo.gif" 
  ALT="PHP3 Home Page" WIDTH=130 HEIGHT=67 BORDER=0></A><BR>
       <?spc(1,10);?><BR>
      </TD>
@@ -460,13 +460,13 @@ document.writeln("</STYLE>");
 		endif;
 		makeSideButton("search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
       ?><IMG 
-         SRC="/new/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+         SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
     </TR>
    </TABLE>
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
     <TR VALIGN=top BGCOLOR="#FFFFFF">
      <TD ALIGN=left WIDTH="12">
-      <IMG SRC="/new/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
+      <IMG SRC="/gifs/corner-ul.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
      </TD>
      <TD ALIGN=left WIDTH="100%">
       <? if ($FONTFACEATTR): ?>
@@ -494,7 +494,7 @@ function commonFooter() {
    <?spc(150,1);?><BR>
   </TD>
   <TD ALIGN=left width="100%" BGCOLOR="#FFFFFF">
-   <IMG SRC="/new/gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
+   <IMG SRC="/gifs/corner-bl.gif" WIDTH=12 HEIGHT=12 BORDER=0><BR>
   </TD>
  </TR>
  <TR valign=top>
@@ -508,7 +508,7 @@ function commonFooter() {
 		makeSideButton("credits.php3","cred","","credits",129,30,0,10,"Who's responsible for this?","<BR>\n");
 		makeSideButton("#top","top","","top",129,30,0,10,"Top of this page","<BR>\n");
       ?>
-      <IMG SRC="/new/gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
+      <IMG SRC="/gifs/cap-bl.gif" WIDTH=9 HEIGHT=9 BORDER=0><BR>
      </TD>
     </TR>
    </TABLE>
@@ -527,7 +527,7 @@ function commonFooter() {
          <? spc(5,1);?><BR>
         </TD>
         <TD>
-         <A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="/new/gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 vspace=12></A><BR>
+         <A HREF="<? echo $MIRRORS[$MYSITE][3]; ?>"><IMG SRC="/gifs/logo-<? echo $MIRRORS[$MYSITE][2]; ?>.gif" WIDTH=190 HEIGHT=48 BORDER=0 vspace=12></A><BR>
         </TD>
        </TR>
       </TABLE>
@@ -541,9 +541,9 @@ function commonFooter() {
            echo $COUNTRIES[$country]; ?></TD>
         <TD><? spc(5,1);?></TD>
         <TD>
-         <IMG SRC="/new/gifs/flag-<? echo $country; ?>.gif" BORDER=0></TD>
+         <IMG SRC="/gifs/flag-<? echo $country; ?>.gif" BORDER=0></TD>
         <TD>
-         <IMG SRC="/new/gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0></TD>
+         <IMG SRC="/gifs/cap-right2.gif" WIDTH=24 HEIGHT=72 BORDER=0></TD>
        </TR>
       </TABLE>
      </TD>
@@ -575,7 +575,7 @@ while ($site = key($mirror_sites)):
 endwhile;
 ?>
 </SELECT>
-<INPUT TYPE='image' SRC='/new/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
+<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 hspace=3 HEIGHT=21 BORDER=0>
 </FORM>
 <? kickFooter("mirrorsKick","mirr");?>
 </DIV>
@@ -590,7 +590,7 @@ endwhile;
 <FONT SIZE="-1">
 <input type='checkbox' name='icase'> case sensitive<BR>
 <input type='checkbox' name='words'> match whole words only<BR>
-<input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/new/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
+<input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
 <input type='hidden' name='st_num' value='1'><input type='hidden' name='psize' value='10'>
 </form>
 <? kickFooter("searchKick","sear");?>

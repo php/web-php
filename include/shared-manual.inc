@@ -20,7 +20,7 @@ function setupNavigation($data) {
 function makeBullet($url,$number,$offtype,$offnum) {
 	echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n";
 	echo "onMouseout=\"changebullet('bullet$number',$offnum)\">";
-	echo "<IMG SRC=\"/new/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n NAME=\"bullet$number\">";
+	echo "<IMG SRC=\"/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n NAME=\"bullet$number\">";
 	echo "</A>";
 }
 
@@ -66,7 +66,7 @@ function makeBorderTOC($this)
 	echo "</TD>\n<TD WIDTH=15><A HREF=\"$url\" ";
 	echo "onMouseover=\"hide();changebullet('bullet$i',1)\" \n";
 	echo "onMouseout=\"changebullet('bullet$i',$out)\">";
-	echo "<IMG SRC=\"/new/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 ";
+	echo "<IMG SRC=\"/gifs/b-bullet-$type.gif\" WIDTH=10 HEIGHT=10 ";
 	echo "BORDER=0 NAME=\"bullet$i\"></A>\n";
 	echo "</TD>\n<TD WIDTH=100%>";
 	echo "<A HREF=\"$url\" onMouseover=\"hide();";
@@ -87,16 +87,16 @@ function navigationBar($title) {
 	echo("<!-- start next/prev -->\n");
 	echo "<TABLE BORDER=0 WIDTH=100% BGCOLOR='#D0D0D0' CELLPADDING=0 CELLSPACING=0>\n";
 	echo "<TR VALIGN=middle>\n";
-	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/new/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "<TD ALIGN=left WIDTH=18><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	if ($PREV[0] && $PREV[1]) {
-	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A><BR></TD>\n";
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$PREV[0]\" onMouseover=\"change('prev$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-prev-p.gif' ALT='Previous page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='prev$no' align=absmiddle></A><BR></TD>\n";
 	}
 	echo "<TD ALIGN=left WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>&nbsp;$PREV[1]<BR></TD>\n";
 	echo "<TD ALIGN=right WIDTH=50%><FONT FACE='$FONTFACE' SIZE=-1>$NEXT[1]&nbsp;<BR></TD>\n";
 	if ($NEXT[0] && $NEXT[1]) {
-	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/new/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A><BR></TD>\n";
+	    echo "<TD ALIGN=left WIDTH=75><A HREF=\"$NEXT[0]\" onMouseover=\"change('next$no',1);\" onMouseout=\"hide();\"><IMG SRC='/gifs/b-next-p.gif' ALT='Next page' WIDTH=75 HEIGHT=21 VSPACE=7 BORDER=0 NAME='next$no' align=absmiddle></A><BR></TD>\n";
 	}
-	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/new/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
+	echo "<TD ALIGN=right WIDTH=18><IMG SRC='/gifs/gcap-right.gif' WIDT=18 HEIGHT=36 BORDER=0><BR></TD>\n";
 	echo "</TR></TABLE>\n";
 	echo "<BR>\n";
 	$navBarNo = (string)((int)$navBarNo + 2);
