@@ -111,7 +111,7 @@ Prima-Tech, July 2000, ISBN 0-7615-3055-X, 436 pages<BR>
 ><IMG SRC="/jpgs/zandstra.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672318040/cmvsstuff">SAMS Teach Yourself PHP4 in 24 Hours</A><BR>
-by Matt Zandstra<BR>
+by Brian Schaffner<BR>
 <SMALL>
 Sams, June 2000, ISBN 0-6723-1804-0, 400 pages 
 <!-- <SMALL><A HREF="no information found">no more info</A><BR> -->
