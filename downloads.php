@@ -139,7 +139,7 @@ site_header("Downloads");
   <span class="md5sum">md5: dbf32bfa687e55dbc697d08c4ee09bf2</span>
  </li>
  <li>
-  <?php download_link('php-4.3.7-installer.exe', 'PHP 4.3.8 installer'); ?> - 13 July 2004<br />
+  <?php download_link('php-4.3.8-installer.exe', 'PHP 4.3.8 installer'); ?> - 13 July 2004<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
