@@ -703,7 +703,7 @@ echo "</table></center>\n";
 <BR>
 <blockquote>If you have a site you feel belongs on this list, send us email at
 <a href="mailto:sites@php.net">sites@php.net</a>.  Please include a suggested
-category.  With well over 275,000 sites on the Internet running PHP, we cannot
+category.  With well over 5 million sites on the Internet running PHP, we cannot
 list them all and will add suggested sites at our discretion.</blockquote>
 <?
 commonFooter();
