@@ -75,14 +75,10 @@ site_header("Links");
 <h4>PHP Link Catalogs</h4>
 
 <ul>
-<?php
-/* web site down
  <li>
   <a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a><br />
   The PHP category in the Open Directory Project.
  </li>
-*/
-?>
 
  <li>
   <a href="http://www.hotscripts.com/PHP/">HotScripts.com</a><br />
