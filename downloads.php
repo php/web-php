@@ -102,7 +102,7 @@ site_header("Downloads");
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: d11743698c18cc62211f02724df3a04e</span>
+  <span class="md5sum">md5: 261fb88be82c3d32ae441b48555ba4a3</span>
  </li>
 </ul>
 
