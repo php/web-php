@@ -1,56 +1,24 @@
 <?
 require_once 'prepend.inc';
-commonHeader("Links");
-?>
 
-<h1>Projects</h1>
+$SIDEBAR_DATA = '
+<b>Books</b>
+<p>
+<a href="/books.php">Books</a> are convenient resources to begin exploring 
+PHP. <a href="/books.php">The titles listed here</a> will help you to start 
+learning PHP, as well as extending your existing knowledge.
+</p>
 
+<b>Projects</b>
 <p>
 An increasing number of projects, both commercial and open
 source, are using PHP as their main development tool. There
 is <a href="/projects.php">a listing of some of the
 open-source PHP applications available</a>, courtesy of <a
-href="http://freshmeat.net/">freshmeat</a>.  </p>
-
-
-<h1>Developers and Job Opportunities</h1>
-<P>
-Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.
-PHP developers can post their resumes, and employers can post their job notices.
-</P>
-
-<h4>Other Job Sites with PHP jobs:</h4>
-
-<ul>
- <li><a href="http://www.dice.com/">dice.com</a>
- <li><a href="http://www.gnujobs.com/">gnujobs.com</a>
- <li><a href="http://www.hotjobs.com/">hotjobs.com</a>
- <li><a href="http://www.jobs.com/">Jobs.com</a>
- <li><a href="http://www.monster.com/">Monster.com</a>
- <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a>
-</ul>
-
-<p>For a more exhaustive list of job
-search sites on the web, take a look at <a
-href="http://www.dmoz.org/Business/Employment/Job_Search/">dmoz.org's
-Job Search listings</a>.</p>
-
-<? echo hdelim(); ?>
-
-
-<h1>ISPs that support PHP</h1>
-<P>
-Looking for an ISP or hosting service that supports PHP?  Try one of the following sites:
-</P>
-<UL>
-<LI><A HREF="http://www.od-site.com/php">www.od-site.com/php</A><BR>
-<LI><A HREF="http://hosts.php.net/">hosts.php.net</A><BR>
-(features a searchable directory and comments from users)<BR>
-<LI>PMCW webservices (<a href="http://pmcw.dhs.org/">http://pmcw.dhs.org/</a>)
-</UL>
-
-
-<? echo hdelim(); ?>
+href="http://freshmeat.net/">freshmeat</a>.</p>
+';
+commonHeader("Links");
+?>
 
 
 <h1>Getting Started</h1>
@@ -148,5 +116,44 @@ An Italian-language php site that features a variety of projects, reviews, cours
 <BR>
 
 </UL>
+
+<? echo hdelim(); ?>
+
+<h1>Developers and Job Opportunities</h1>
+<P>
+Brian Schaffner has put up a <A HREF="http://www.schaffner.net/emp">PHP Employment Listing</A> site.
+PHP developers can post their resumes, and employers can post their job notices.
+</P>
+
+<h4>Other Job Sites with PHP jobs:</h4>
+
+<ul>
+ <li><a href="http://www.dice.com/">dice.com</a>
+ <li><a href="http://www.gnujobs.com/">gnujobs.com</a>
+ <li><a href="http://www.hotjobs.com/">hotjobs.com</a>
+ <li><a href="http://www.jobs.com/">Jobs.com</a>
+ <li><a href="http://www.monster.com/">Monster.com</a>
+ <li><a href="http://careers.yahoo.com/">Yahoo! Careers</a>
+</ul>
+
+<p>For a more exhaustive list of job
+search sites on the web, take a look at <a
+href="http://www.dmoz.org/Business/Employment/Job_Search/">dmoz.org's
+Job Search listings</a>.</p>
+
+<? echo hdelim(); ?>
+
+
+<h1>ISPs that support PHP</h1>
+<P>
+Looking for an ISP or hosting service that supports PHP?  Try one of the following sites:
+</P>
+<UL>
+<LI><A HREF="http://www.od-site.com/php">www.od-site.com/php</A><BR>
+<LI><A HREF="http://hosts.php.net/">hosts.php.net</A><BR>
+(features a searchable directory and comments from users)<BR>
+<LI>PMCW webservices (<a href="http://pmcw.dhs.org/">http://pmcw.dhs.org/</a>)
+</UL>
+
 
 <? commonFooter(); ?>
