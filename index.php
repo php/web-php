@@ -77,6 +77,18 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>New PHP.net URL Howto</h1>
+<p>
+<font class="newsDate">[23-Mar-2002]</font>
+Even wondered what you can type in your browsers location
+field to access a php.net page? Many of you already know
+<a href="http://php.net/echo">http://php.net/echo</a>.
+We gathered some information about how the URLs are parsed,
+and what are your possibilities. Read it in our new
+<a href="urlhowto.php">URL Howto</a>.
+
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.2.0 RC 1 Released</h1>
 <p>
 <font class="newsDate">[21-Mar-2002]</font>
