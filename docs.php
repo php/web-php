@@ -48,10 +48,10 @@ $formats = array(
 <p>The PHP manual is available in a selection of languages
 and formats. Pick a language and format from the table below.
 Tip: If you are using Internet Explorer, Opera or Netscape 6,
-the file size will show up, when you move the mouse above one
-link. If you use another browser, or would like to see all the
-information, you can <a href="/docs.php?sizes=1">click here
-to see the file sizes</a>.
+the file size and date will show up, when you move the mouse
+above one link. If you use another browser, or would like to
+see all the information, you can <a href="/docs.php?sizes=1">click
+here to see the file sizes and dates</a>.
 </p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
@@ -84,15 +84,16 @@ to see the file sizes</a>.
        # if no size required [pdf, online], then just print, else
        # decide what to do according to the $size of the file
        if (!$details[2]) { 
-			if($link_to == 'down') echo "PDF Documentation Unavailable Temporarily";
-			else echo "<a href=\"$link_to\">$details[1]</a>"; 
-		}
+         if($link_to == 'down') echo "PDF Format Unavailable Temporarily";
+         else echo "<a href=\"$link_to\">$details[1]</a>"; 
+       }
        else {
          $size = @filesize($link_to);
+         $changed = @filemtime($link_to);
          if ($size) {
-           echo "<a href=\"$link_to\" title=\"" . (int) ($size/1024) . "Kb\">$details[1]</a>";
-           if ($sizes) { echo '<br><small>' . (int) ($size/1024) . 'Kb</small>'; }
-         } else { 
+           echo "<a href=\"$link_to\" title=\" Size: " . (int) ($size/1024) . "Kb\n Date: " . date ("r", $changed) . "\">$details[1]</a>";
+           if ($sizes) { echo "<br><small>Size: " . (int) ($size/1024) . "Kb<br>Date: " . date ("r", $changed) . "</small>"; }
+         } else {
            echo "&nbsp;";
          }
        }
