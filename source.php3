@@ -28,8 +28,10 @@ if ($dir && $legal_dirs[$dir]) {
 
 echo("<!-- $page_name -->\n");
 
-if (file_exists($page_name)) {
+if (file_exists($page_name) && !is_dir($page_name)) {
     show_source($page_name);
+} else if (is_dir($page_name)) {
+    echo "<P>No file specified.  Can't show source for a directory.</P>\n";
 }
 
 if (!strstr($page_name,"include/shared.inc")) {
