@@ -151,6 +151,41 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.0 Beta 3 released!</h1>
+<p>
+ <span class="newsdate">[21-Dec-2003]</span>
+ <a href="/downloads.php">PHP 5.0 Beta 3</a> has been released.  The third beta of PHP is also scheduled
+ to be the last one (barring unexpected surprises).  This beta incorporates
+ dozens of bug fixes since Beta 2, better XML support and many other
+ improvements, some of which are documented in the <a href="/NEWS_PHP_5_0_0b3.txt">NEWS file</a>.
+</p>
+<p>
+ Some of the key features of PHP 5 include:
+</p>
+<ul>
+ <li>
+  PHP 5 features the <a href="/zend-engine-2.php">Zend Engine 2</a>.
+ </li>
+ <li>
+  XML support has been completely redone in PHP 5, all extensions are now focused around the
+  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
+ </li>
+ <li>
+  SQLite has been bundled with PHP. For more information on SQLite, please visit their
+  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
+ </li>
+ <li>
+  A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can
+  also interface with the DOM extension and vice-versa.
+ </li>
+ <li>
+  Streams have been greatly improved, including the ability to access low-level socket
+  operations on streams.
+ </li>
+</ul>
+<hr />
+
+
 <h1>PHP Community Site Project Announced</h1>
 <p>
  <span class="newsdate">[18-Dec-2003]</span>

@@ -113,12 +113,12 @@ site_header("Downloads");
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b2.tar.bz2', 'PHP 5.0.0b2 (tar.bz2)'); ?> - 30 Oct 2003<br />
-  <span class="md5sum">md5: 7acea44d0dc10eb54fa08984e94060e8</span>
+  <?php download_link('php-5.0.0b3.tar.bz2', 'PHP 5.0.0b3 (tar.bz2)'); ?> - 21 Dec 2003<br />
+  <span class="md5sum">md5: bc9dfe2083564a749b88dd7ce7ed1a59</span>
  </li>
  <li>
-  <?php download_link('php-5.0.0b2.tar.gz', 'PHP 5.0.0b2 (tar.gz)'); ?> - 30 Oct 2003<br />
-  <span class="md5sum">md5: fd1dd3a3a958fc31e2fc32fee8e34402</span>
+  <?php download_link('php-5.0.0b3.tar.gz', 'PHP 5.0.0b3 (tar.gz)'); ?> - 21 Dec 2003<br />
+  <span class="md5sum">md5: 2f4c6db0b2dd5b888f5281b363fe3a85</span>
  </li>
 </ul>
 
