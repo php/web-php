@@ -134,6 +134,17 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.3.0RC2 Released</h1>
+<p>
+<font class="newsdate">[27-Nov-2002]</font>
+<a href="http://qa.php.net/">PHP 4.3.0RC2</a>
+has been released, just in time for the Thanksgiving. And thanks indeed must
+be given to those who fixed bugs and pushed this release to be a lot closer
+to the final one. Please download and test it as much as possible on
+real-life applications to uncover remaining issues.
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.afup.org/", make_image("afup-logo.gif", "AFUP", "right") ); ?>
 
 <h1>Forum PHP 2002 in Paris, France</h1>
