@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-  <TITLE>PHP3 Frequently Asked Questions</TITLE>
+  <TITLE>PHP Frequently Asked Questions</TITLE>
   <STYLE type="text/css">
     BODY {background: #FFFFFF;}
     H1,H2,H3 {color: #5B69A6;}
@@ -9,12 +9,12 @@
 
 <BODY>
 
-<H1>PHP3 Frequently Asked Questions</H1>
+<H1>PHP Frequently Asked Questions</H1>
 
 <!-- The website should stop chopping. -->
 
 <P>
-This is a list of Frequently Asked Questions about PHP3 and
+This is a list of Frequently Asked Questions about PHP and
 their answers. If you have suggestions or additions, send them to
 <A HREF="mailto:php3@lists.php.net">php3@lists.php.net</A>.
 <P>
@@ -22,10 +22,10 @@ their answers. If you have suggestions or additions, send them to
 
 <DL>
 <DT><a HREF="#1">1. General Information</A></DT>
-<DT><a HREF="#2">2. Obtaining PHP3</A></DT>
+<DT><a HREF="#2">2. Obtaining PHP</A></DT>
 <DT><a HREF="#3">3. Installation</A></DT>
 <DT><a HREF="#4">4. Build Problems</A></DT>
-<DT><a HREF="#5">5. Using PHP3</A></DT>
+<DT><a HREF="#5">5. Using PHP</A></DT>
 <DT><a HREF="#6">6. New Features</A></DT>
 <DT><a HREF="#7">7. Common Problems</A></DT>
 <DT><a HREF="#8">8. Migrating from PHP2 to PHP3</A></DT>
@@ -39,7 +39,7 @@ their answers. If you have suggestions or additions, send them to
 
 <DL>
   <DT><B>
-    <a name="1.1">1.1</a> What is PHP3?
+    <a name="1.1">1.1</a> What is PHP?
   </B></DT>
   <DD>
     From the <A href="http://www.php.net/manual/">manual</A>:
@@ -57,27 +57,27 @@ their answers. If you have suggestions or additions, send them to
     <a name="1.2">1.2</a> What is its relation to PHP/FI?
   </B></DT>
   <DD>
-    PHP3 is the successor to PHP/FI 2.0.
+    PHP is the successor to PHP/FI 2.0.
   <P>
   </DD>
   <DT><B>
-    <a name="1.3">1.3</a> Can I run both PHP/FI 2.0 and PHP3 at the same time?
+    <a name="1.3">1.3</a> Can I run both PHP/FI 2.0 and PHP at the same time?
   </B></DT>
   <DD>
-    Yes, PHP3 was written so as to not interfere with an existing PHP/FI 2 installation.
-    Instructions for building Apache 1.3.0 with both PHP/FI 2 and PHP3 modules can be
+    Yes, PHP was written so as to not interfere with an existing PHP/FI 2 installation.
+    Instructions for building Apache 1.3.0 with both PHP/FI 2 and PHP modules can be
     found <a href="php2.php3">HERE</a>.  A different spin on this is 
     <a href="http://www.jeo.net/php/both.htm">HERE</a>, although the first step where 
-    the PHP2 regex code is substituted with the PHP3 regex code seems redundant.  The
+    the PHP2 regex code is substituted with the PHP regex code seems redundant.  The
     two regex dirs are pretty much identical.
   <P>
 
   <DT><B>
-    <a name="1.4">1.4</a> What are the differences between PHP3 and PHP/FI 2.0?
+    <a name="1.4">1.4</a> What are the differences between PHP and PHP/FI 2.0?
   </B></DT>
   <DD>
     For a complete list of the changes, read the <A
-    href="changes.php3">CHANGES</A> file included in the PHP3
+    href="changes.php3">CHANGES</A> file included in the PHP
     distribution. Some highlights:
 
     <UL>
@@ -90,7 +90,7 @@ their answers. If you have suggestions or additions, send them to
   </DD>
 
   <DT><B>
-    <a name="1.5">1.5</a> I heard it's possible to access Microsoft SQL Server from PHP3. How?
+    <a name="1.5">1.5</a> I heard it's possible to access Microsoft SQL Server from PHP. How?
   </B></DT>
   <DD>
     On Windows 95/NT machines, you can simply use the included ODBC support
@@ -122,13 +122,13 @@ their answers. If you have suggestions or additions, send them to
 
     <P>Another alternative is to use an SQL server that has
     Windows ODBC drivers and use that to store the data, which you can
-    then access from Microsoft Access (using ODBC) and PHP3 (using the
+    then access from Microsoft Access (using ODBC) and PHP (using the
     built-in drivers), or to use an intermediary file format that Access
-    and PHP3 both understand, such as flat-files or dBase databases.
+    and PHP both understand, such as flat-files or dBase databases.
 	On this point Tim Hayes from OpenLink software writes:
 <blockquote><blockquote>
 Using another database as an intermediary is not a good idea, when you can
-use ODBC from PHP3 straight to your database - i.e. with OpenLink's drivers. If
+use ODBC from PHP straight to your database - i.e. with OpenLink's drivers. If
 you do need to use an intermediary file format, OpenLink have now released
 Virtuoso (a virtual database engine) for NT, Linux and other unix platforms.
 Please visit our
@@ -144,12 +144,12 @@ Please visit our
 Latest available from www.mysql.org (get it from your mirror!). No special
 configuration required except when you set up a database, and configure the
 user account, you should put % in the host field, or the host name of the
-windows computer you wish to access MySQL with. Make a note of your server
+Windows computer you wish to access MySQL with. Make a note of your server
 name, username, and password.<P>
 
-<li> Download the MyODBC for windows driver from the MySQL site. Latest
+<li> Download the MyODBC for Windows driver from the MySQL site. Latest
 release is myodbc-2_50_19-win95.zip (NT available too, as well as source
-code). Install it on your windows machine. You can test the operation with
+code). Install it on your Windows machine. You can test the operation with
 the utilities included with this program.<P>
 
 <li> Create a user or system dsn in your ODBC administrator, located in the
@@ -184,7 +184,7 @@ just hit the always prompt for new location checkbox before pressing ok.
   </DD>
 
   <DT><B>
-    <a name="1.7">1.7</a> Is there a PHP3 mailing list?
+    <a name="1.7">1.7</a> Is there a PHP mailing list?
   </B></DT>
   <DD>
     Of course! To subscribe, send mail to
@@ -203,7 +203,7 @@ just hit the always prompt for new location checkbox before pressing ok.
   </B></DT>
   <DD>
     If you have problems subscribing to or unsubscribing from the
-    PHP3 mailng list, it may be because the mailing list software
+    PHP mailng list, it may be because the mailing list software
     can't figure out the correct mailing address to use. If
     your email address was <CODE>joeblow@example.com</CODE>,
     you can send your subscription request to
@@ -240,7 +240,7 @@ just hit the always prompt for new location checkbox before pressing ok.
 	</UL>
 	<P>But your best source of information is to view the source code to the pages on the PHP site.  
 	To see the actual DHTML/Javascript code, use your browser's "View Source" function.  To see how this code was
-	generated dynamically using PHP3, click on the "Source" button in the upper-right corner of any PHP page.  You 
+	generated dynamically using PHP, click on the "Source" button in the upper-right corner of any PHP page.  You 
 	will probably also want to view the source of the "shared.inc" file - there is a link to it at the bottom of every
 	source page.
     </BLOCKQUOTE><P>
@@ -323,16 +323,16 @@ just hit the always prompt for new location checkbox before pressing ok.
 <HR noshade>
 
 <A NAME="2">
-<H2>2. Obtaining PHP3</H2>
+<H2>2. Obtaining PHP</H2>
 </A>
 
 <DL>
   <DT><B>
-    <a name="2.1">2.1</a> Where can I obtain PHP3?
+    <a name="2.1">2.1</a> Where can I obtain PHP?
   </B></DT>
   <DD>
-    You can download PHP3 from any of the members of the
-    PHP3 network of sites. These can be found at <A
+    You can download PHP from any of the members of the
+    PHP network of sites. These can be found at <A
     href="http://www.php.net/">http://www.php.net/</A>.
     You can also use anonymous CVS to get the absolute latest
     version of the source. For more information, go to <A
@@ -353,11 +353,11 @@ just hit the always prompt for new location checkbox before pressing ok.
 
   <DT><B>
     <a name="2.3">2.3</a> Where can I get libraries needed to compile some of the optional
-    PHP3 extensions?
+    PHP extensions?
   </B></DT>
   <DD>
     <B>Note:</B> Those marked with * are not thread-safe libraries, and
-    should not be used with PHP3 as a server module in the multi-threaded
+    should not be used with PHP as a server module in the multi-threaded
     Windows web servers (IIS, Netscape).  This does not matter in Unix
     environments, yet.
 
@@ -367,7 +367,7 @@ just hit the always prompt for new location checkbox before pressing ok.
       <LI>LDAP (unix/win): <A HREF="http://developer.netscape.com/tech/directory/downloads.html" TARGET="_top">Netscape Directory (LDAP) SDK 1.1</A>
           There is also a free LDAP server at: <A href="ftp://ftp.critical-angle.com/pub/cai/slapd/">ftp://ftp.critical-angle.com/pub/cai/slapd/</A>.
       <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
-      <LI>SNMP* (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
+      <LI>SNMP* (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP uses the native SNMP interface in Windows.)
       <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
       <LI>mSQL* (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
       <LI>mSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
@@ -393,25 +393,23 @@ just hit the always prompt for new location checkbox before pressing ok.
   <DD>
     You will need to follow instructions provided with the library. Some of
     these libraries are detected automatically when you run the 'configure'
-    script of PHP3 (such as the GD library), and others you will have to
+    script of PHP (such as the GD library), and others you will have to
     enable using '--with-EXTENSION' options to 'configure'. Run 'configure
     --help' for a listing of these.
   <P>
   </DD>
 
   <DT><B>
-    <a name="2.5">2.5</a> I got the latest version of the PHP3 source code from the CVS
+    <a name="2.5">2.5</a> I got the latest version of the PHP source code from the CVS
     repository on my Windows 95/NT machine, what do I need to compile it?
   </B></DT>
   <DD>
-    First, you will need Microsoft Visual C++ v5 (v4 may do
-    it also, but we do it with v5), and you will need to <A
-    href="http://www.php.net/win32/makeparser.zip">download Bison and
-    Flex</A>.  You will need to put Bison and Flex somewhere in your
-    path, or add their location to your path.  Then run the batch file
-    'makeparser' before compiling with MSVC.  You also may need to edit
-    some settings in the project settings.  You should be familier enough
-    with MSVC to know what to do ;).
+    First, you will need Microsoft Visual C++ v6 (v5 may do
+    it also, but we do it with v6), and you will need to <A
+    href="http://www.php.net/extra/win32build.zip">download the
+    support files</A>. You will need to unzip this file (which
+    has subdirectories, so make sure your unzip program keeps them)
+    into the win32 subdirectory of the source distribution.
   <P>
   </DD>
 
@@ -431,7 +429,7 @@ just hit the always prompt for new location checkbox before pressing ok.
 <H2>3. Installation</H2>
 </A>
 
-<P>To install PHP3, follow the instructions in the <A
+<P>To install PHP, follow the instructions in the <A
 href="http://cvs.php.net/cvsweb.cgi/INSTALL?rev=HEAD">INSTALL</A>
 file located in the distribution. Windows
 95 and NT users should also read the <A
@@ -459,7 +457,7 @@ Unix see: <a href="http://www.webgenx.com/Kwazy/phpunix.html">http://www.webgenx
   </DD>
 
   <DT><B>
-    <a name="3.2">3.2</a> I installed PHP3 using RPMS, but Apache isn't processing the php3 pages! What's going on here?
+    <a name="3.2">3.2</a> I installed PHP using RPMS, but Apache isn't processing the PHP pages! What's going on here?
   </B></DT>
   <DD>
   <UL>        
@@ -476,21 +474,21 @@ Unix see: <a href="http://www.webgenx.com/Kwazy/phpunix.html">http://www.webgenx
 
 <LI>And add:<BR>
 <CODE>AddType application/x-httpd-php3 .php3</CODE><BR>
-To the global properties, or to the properties of the VirtualDomain you want to have PHP3 support added to.
+To the global properties, or to the properties of the VirtualDomain you want to have PHP support added to.
 </UL><P></DD>
 
 <DT><B>
-<a name="3.3">3.3</a> I installed PHP3 using RPMS, but it doesn't compile with the database support I need! What's going on here?
+<a name="3.3">3.3</a> I installed PHP using RPMS, but it doesn't compile with the database support I need! What's going on here?
 </B></DT>
 <DD>
 Due to the way PHP is currently built, it is not easy to build a complete flexible PHP RPM.  This
-issue will be addressed in PHP4.  For PHP3, we currently suggest you use the mechanism described
+issue will be addressed in PHP4.  For PHP, we currently suggest you use the mechanism described
 in the INSTALL.REDHAT file in the PHP distribution.  If you insist on using an RPM version of PHP,
 read on...<BR>
 Currently the RPM packagers are setting up the RPMS to install without database support to simplify installations AND because RPMS use /usr/ instead of the standard /usr/local/ directory for files.
 You need to tell the RPM spec file which databases to support and the location of the <EM>top-level</EM> of your database server.<BR>
 This example will explain the process of adding support for the popular MySQL database server, using the mod installation for Apache.<BR>
-Of course all of this information can be adjusted for any database server that PHP3 supports.
+Of course all of this information can be adjusted for any database server that PHP supports.
 I will assume you installed MySQL and Apache completely with RPMS for this example as well.
 
 <UL>
@@ -531,7 +529,7 @@ Make sure you restart Apache, and you now have PHP with MySQL support using RPM'
 
 <DL>
   <DT><B>
-    <a name="4.1">4.1</a> I got the latest version of PHP3 using the anonymous CVS service,
+    <a name="4.1">4.1</a> I got the latest version of PHP using the anonymous CVS service,
     but there's no configure script!
   </B></DT>
   <DD>
@@ -548,7 +546,7 @@ Make sure you restart Apache, and you now have PHP with MySQL support using RPM'
   <P>
   </DD>
   <DT><B>
-    <a name="4.2">4.2</a> I'm having problems configuring PHP3 to work with Apache. It says
+    <a name="4.2">4.2</a> I'm having problems configuring PHP to work with Apache. It says
     it can't find httpd.h, but it's right where I said it is!
   </B></DT>
   <DD>
@@ -601,7 +599,7 @@ Make sure you restart Apache, and you now have PHP with MySQL support using RPM'
   </DD>
 
   <DT><B>
-    <a name="4.6">4.6</a> When linking PHP3, it complains about a number of undefined references.
+    <a name="4.6">4.6</a> When linking PHP, it complains about a number of undefined references.
   </B></DT>
   <DD>
     Take a look at the link line and make sure that all of the appropriate
@@ -620,19 +618,19 @@ Make sure you restart Apache, and you now have PHP with MySQL support using RPM'
   </DD>
 
   <DT><B>
-	<a name="4.7">4.7</a> I can't figure out how to build PHP3 with Apache 1.3.
+	<a name="4.7">4.7</a> I can't figure out how to build PHP with Apache 1.3.
   </B></DT>
   <DD>
     <P>This is actually quite easy.  Follow these steps carefully:
     <UL>
 	<LI>Grab the latest Apache 1.3 distribution from <A href="http://www.apache.org/dist/">www.apache.org</A>.
 	<LI>Ungzip and untar it somewhere, for example /usr/local/src/apache-1.3.
-	<LI>Compile PHP3 by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache-1.3  (substitute <i>&lt;path&gt;</i> for the actual path to your apache-1.3 directory.
-	<LI>Type 'make' followed by 'make install' to build PHP3 and copy the
+	<LI>Compile PHP by first running ./configure --with-apache=/<i>&lt;path&gt;</i>/apache-1.3  (substitute <i>&lt;path&gt;</i> for the actual path to your apache-1.3 directory.
+	<LI>Type 'make' followed by 'make install' to build PHP and copy the
             necessary files to the Apache distribution tree.
 	<LI>Change directories into to your /<i>&lt;path&gt;</i>/apache-1.3/src directory and edit the <i>Configuration</i> file.  At the end of the file, add: <tt>AddModule modules/php3/libphp3.a</tt>.
 	<LI>Type: './Configure' followed by 'make'.
-	<LI>You should now have a PHP3-enabled httpd binary!
+	<LI>You should now have a PHP-enabled httpd binary!
     </UL>
     <b>Note:</b> You can also use the new Apache ./configure script.  See the instructions in the README.configure file
     which is part of your Apache distribution.  Also have a look at the INSTALL file in the PHP distribution.
@@ -675,7 +673,7 @@ ctly.
 <HR noshade>
 
 <A NAME="5">
-<H2>5. Using PHP3</H2>
+<H2>5. Using PHP</H2>
 </A>
 
 <DL>
@@ -913,7 +911,7 @@ ctly.
 
 <DL>
   <DT><B>
-    <a name="6.1">6.1</a> I saw PHP3 offers persistent database connections.   What does that mean?
+    <a name="6.1">6.1</a> I saw PHP offers persistent database connections.   What does that mean?
   </B></DT>
   <DD>
     Persistent connections are SQL links that do not close when the
@@ -1008,11 +1006,11 @@ ctly.
 
 <DL>
   <DT><b>
-    <a name="7.1">7.1</a> I installed PHP3, but every time I load a document, I get the
+    <a name="7.1">7.1</a> I installed PHP, but every time I load a document, I get the
     message 'Document Contains No Data'! What's going on here?
   </b></DT>
   <DD>
-    This probably means that PHP3 is having some sort of problem
+    This probably means that PHP is having some sort of problem
     and is core-dumping. Look in your server error log to see if
     this is the case, and then try to reproduce the problem with
     a small test case. If you know how to use 'gdb', it is very
@@ -1030,9 +1028,9 @@ ctly.
 </ul>
     <P>
     If your script uses the regular expression functions (<CODE>ereg()</CODE>
-    and friends), you should make sure that you compiled PHP3 and
+    and friends), you should make sure that you compiled PHP and
     Apache with the same regular expression package. (This should
-    happen automatically with PHP3 and Apache 1.3.x)
+    happen automatically with PHP and Apache 1.3.x)
   <P>
   </DD>
 
