@@ -1,5 +1,6 @@
 <?php // -*- C++ -*-
 
+$RSIDEBAR_DATA = '';
 require_once 'site.inc';
 require_once 'layout.inc';
 
