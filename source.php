@@ -8,12 +8,12 @@ the plaintext script.<br><br>
 
 If you\'re interested in what\'s behind the several functions we
 used, you can always take a look at the source of the 
-&nbsp; ' . make_link("/source.php?url=/include/shared.inc", "shared.inc") . ',
-&nbsp; ' . make_link("/source.php?url=/include/prepend.inc", "prepend.inc") . ',
-&nbsp; ' . make_link("/source.php?url=/include/site.inc", "site.inc") . ',
-&nbsp; ' . make_link("/source.php?url=/include/layout.inc", "layout.inc") . ',
-&nbsp; ' . make_link("/source.php?url=/include/shared-manual.inc", "shared-manual.inc") . ' and
-&nbsp; ' . make_link("/source.php?url=/include/manual-lookup.inc", "manual-lookup.inc") . '
+&nbsp; ' . make_link("/source.php?url=/include/shared.inc", "shared.inc") . ',<br>
+&nbsp; ' . make_link("/source.php?url=/include/prepend.inc", "prepend.inc") . ',<br>
+&nbsp; ' . make_link("/source.php?url=/include/site.inc", "site.inc") . ',<br>
+&nbsp; ' . make_link("/source.php?url=/include/layout.inc", "layout.inc") . ',<br>
+&nbsp; ' . make_link("/source.php?url=/include/shared-manual.inc", "shared-manual.inc") . ' and<br>
+&nbsp; ' . make_link("/source.php?url=/include/manual-lookup.inc", "manual-lookup.inc") . '<br>
 files.<br><br>
 
 Of course, if you want to see the source of this page, have a look ' .
@@ -29,7 +29,7 @@ if (!isset($url)) {
     exit;
 }
 
-echo "Source of: $url<br>" . hdelim(); 
+echo "<h1>Source of: $url</h1>" . hdelim(); 
 
 $legal_dirs = array(
   "/manual"  => 1,
