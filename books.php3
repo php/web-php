@@ -197,7 +197,7 @@ by Wilson Peng<BR>
 <TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="
 http://www.drmaster.com.tw/information.asp?®Ñ¸¹=DB20023"
-><IMG SRC="/gifs/db20023" BORDER=0 ALIGN="left"></A><BR>
+><IMG SRC="/gifs/db20023.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
 <TD>
 Using PHP and MySQL (with FreeBSD and Apache)<BR>
