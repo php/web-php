@@ -404,8 +404,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
 			$comments[] = $temp;
 
-		$comment[0]
-			and unset ($comments[0]);	# Ditch the most recent comment
+		if ($comments[0])
+			unset ($comments[0]);	# Ditch the most recent comment
 
 	  	#fetch original bug description
 		print $query = "SELECT ts1, email, comments from bugdb where id=$bug_id";
