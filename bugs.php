@@ -625,7 +625,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text.= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text.= "Bug Type: $ebug_type\n";
-			$text.= "PHP Version: ephp_version\n";
+			$text.= "PHP Version: $ephp_version\n";
 			$text.= "Assigned To: $eassign\n";
 			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
 			$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
