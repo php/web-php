@@ -64,18 +64,18 @@ diff -u
   the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
   latest, consider the following CVS commands:<br /><br />
   <strong>PHP 4</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src-ze1</tt>
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src</tt>
   <br />
   <strong>PHP 5</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r HEAD php-src-ze2</tt>
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r HEAD php-src</tt>
   <br /><br />
   Some tips and notes:
   <br />
   <div class="tip" style="margin: 10px 0 10px 20px;">
    You may retrieve a specific release of PHP from CVS by using the
    <i>-r</i> flag in your cvs command.  Some examples:<br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src-ze1</tt><br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3_2 php-src-ze1</tt>
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src</tt><br />
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3_2 php-src</tt>
   </div>
   <ul>
    <li>
@@ -85,7 +85,7 @@ diff -u
     All of the above commands create a local directory named "php-src".  You can also 
     specify another directory name, for example, to put PHP 5 HEAD into a directory 
     named myphp5:<br />
-    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 -r HEAD php-src-ze2</tt>
+    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 -r HEAD php-src</tt>
    </li>
    <li>
     The Zend engine version is embedded into the final <i>checkout</i> parameter.
@@ -122,7 +122,7 @@ diff -u
  for the documentation, available via anonymous CVS. See
  <a href="http://cvs.php.net/">the web-based view of the CVS
  server</a> to see what is available, and substitute the
- appropriate module name for "<i>-r HEAD php-src-ze2</i>" in step 
+ appropriate module name for "<i>-r HEAD php-src</i>" in step 
  3 (and ignore the later steps).  For example, to checkout the
  latest english version of the PHP manual:<br />
  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</tt>
