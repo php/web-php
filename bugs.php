@@ -27,13 +27,12 @@ echo "<font size=\"-1\">\n";
 
 require 'format-text.inc';
 
-function list_ids($current) {
-	global $dbhost,$dbuser,$dbpwd;
+function show_id_options($current) {
 	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
-	if ($current) echo "<option>$current\n";
-	echo "<option>Any\n";
+	echo "<option>Any</option>\n";
 	while ($row = mysql_fetch_row($result)) {
-		if ($row[0]!=$current) { echo "<option>".$row[0]."\n"; }
+		echo "<option",($row[0] == $current ? " selected" : ""),
+		     ">$row[0]</option>\n";
 	}
 }
 
@@ -42,7 +41,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if (empty($state)) { $state = "Open"; }
 
 	$state_types = 	array (
-				"Open"        => 2, 
+				"Open"	=> 2, 
 				"Closed"      => 2,
 				"Critical"    => 1, 
 				"Duplicate"   => 2,
@@ -51,7 +50,7 @@ function show_state_options($state, $show_all, $user_mode=0) {
 				"Suspended"   => 1,
 				"Feedback"    => 3,
 				"OldFeedback" => 3,
-				"Bogus"       => 1        
+				"Bogus"       => 1	
  			);
 	
 	/* regular users can only pick states with type = 1 for unclosed bugs */
@@ -81,65 +80,53 @@ function show_version_options($current) {
   echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
 }
 
-function show_menu($state)
-{
-	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE, $search_for;
-
-	if(!isset($search_for)) { $search_for=""; }
-	if(!isset($bug_type)) { $bug_type="Any"; }
-	echo "<form method=\"post\" action=\"$PHP_SELF\">\n";
-	echo "<input type=\"hidden\" name=\"cmd\" value=\"display\" \>\n";
-	echo "<table bgcolor=\"#ccccff\" cellspacing=\"0\"><tr><td><input type=\"submit\" value=\"Display\"></td><td><select name=\"status\">\n";
-	show_state_options($state, 1);
-	echo "</select></td><td align=\"right\">bugs of type: </td><td>";
-	show_types($bug_type,1,"bug_type");
-
-	$fields = array("id" => "Bug ID",
-			"bug_type" => "Bug Type",
-			"email" => "Email address",
-			"sdesc" => "Short Description",
-			"ldesc" => "Long Description",
-			"php_version" => "PHP Version",
-			"php_os" => "Platform",
-			"status" => "Status",
-			"comments" => "Comments",
-			"ts1" => "Opened",
-			"assign" => "Assigned To"
-		);
-
-	reset($fields);
-	echo "</td><td align=\"right\">Last Comment By:</td><td> <select name=\"by\">\n";
-	list_ids($by);
-	echo "</select></td></tr>\n";
-	echo "<tr><td colspan=\"3\" align=\"right\">Search for:</td>\n";
-	echo "<td colspan=\"3\"><input type=\"text\" name=\"search_for\" value=\"".$search_for."\"> in the bug database</td></tr></form>\n";
-	echo "<tr><td colspan=\"3\" align=\"right\"><form method=\"get\" action=\"$PHP_SELF\">\n";
-	echo "<input type=\"submit\" value=\"Edit\"> bug number:</td><td colspan=\"2\"><input type=\"text\" name=\"id\"></td>\n";
-	if (isset($MAGIC_COOKIE))
-		echo "<input type=\"hidden\" name=\"edit\" value=\"1\" />\n";
-	else
-		echo "<input type=\"hidden\" name=\"edit\" value=\"2\" />\n";
-	echo "</td><td align=\"center\"><a href=\"bugstats.php\">Statistics</a></td></tr></table>";
-	echo "<i>Feature/Change requests must be explicitly selected to be shown</i></form>\n";
-}
-
-function show_types($first_item,$show_any,$var_name) {
+function show_types($current,$show_any) {
 	include 'bugtypes.inc';
 
-	echo "<select name=\"$var_name\">\n";
-	
-	if($first_item == '--Please Select--') {
-		echo "<option value\"$first_item\">$first_item</option>\n"; 
-	}
-	
-	foreach ($items as $key => $value) {
-		if ($show_any || $value != 'Any') {
-			$sel = ($key == $first_item) ? ' selected' : '';
-			echo "<option value=\"$key\"$sel>$value</option>\n";
-		}
+	if (!$current) {
+		echo "<option value=\"unknown\">--Please Select--</option>\n";
 	}
 
-	echo "</select>\n";
+	while (list($key,$value) = each($items)) {
+		if (!$show_any && $value == "Any") continue;
+		echo "<option value=\"$key\"",
+		     ($key == $selected ? " selected" : ""),
+		     ">$value</option>\n";
+	}
+}
+
+function show_menu($state) {
+	global $PHP_SELF, $bug_type, $by, $MAGIC_COOKIE, $search_for;
+	if(!isset($bug_type)) { $bug_type="Any"; }
+?>
+<table bgcolor="#ccccff" border="0" cellspacing="1">
+ <form method="POST" action="<?php echo $PHP_SELF?>">
+ <input type="hidden" name="cmd" value="display" />
+  <tr>
+   <td><input type="submit" value="Display" /></td>
+   <td><select name="status"><?php show_state_options($state,1);?></select></td>
+   <td align="right">bugs of type: </td>
+   <td><select name="bug_type"><?php show_types($bug_type,1);?></select></td>
+   <td align="right">last comment by:</td>
+   <td><select name="by"><?php show_id_options($by);?></select></td>
+  </tr>
+  <tr>
+   <td colspan="3" align="right">Search for:</td>
+   <td colspan="3"><input type="text" name="search_for" value="<?echo htmlspecialchars($search_for);?>"> in the bug database</td>
+  </tr>
+ </form>
+ <form method="GET" action="<?php echo $PHP_SELF;?>">
+  <tr>
+   <td colspan="3" align="right"><input type="submit" value="Edit" /> bug number:</td>
+   <td colspan="2"><input type="text" name="id"></td>
+   <input type="hidden" name="edit" value="<?php echo isset($MAGIC_COOKIE) ? 1 : 2;?>" />
+   <td align="center"><a href="bugstats.php">Statistics</a></td>
+  </tr>
+ </form>
+</table>
+<i>Feature/Change requests must be explicitly selected to be shown.</i>
+<p></p>
+<?php
 }
 
 function find_password($user) {
@@ -175,7 +162,7 @@ if ($cmd == "show") {
 		exit;
 	}
 
-	if($ebug_type=="--Please Select--") {
+	if($ebug_type=="none") {
 		echo "ERROR!  Please select an appropriate bug type<P>\n";
 		commonFooter();
 		exit;
@@ -199,7 +186,7 @@ if ($cmd == "show") {
 
 	$ldesc = stripslashes($ldesc);
 	$sdesc = stripslashes($sdesc);
-	$report .= "From:             $email\n";
+	$report .= "From:	     $email\n";
 	$report .= "Operating system: $php_os\n";
 	$report .= "PHP version:      $php_version\n";
 	$report .= "PHP Bug Type:     $ebug_type\n";
@@ -443,7 +430,7 @@ if ($cmd == "show") {
 
       // mail phpdoc if old or new type is documentation (jeroen)
       if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
-        @mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
+	@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $user@php.net\nX-PHP-Bug: $id");
       }
 
 			/* mail bug originator if status was changed or comment is not empty. */
@@ -539,8 +526,9 @@ if ($cmd == "show") {
 			echo "<tr><th align=\"right\">Type:</th><td>".$row[1]."</td></tr>\n";
 		} else {
 			echo "<tr><th align=\"right\">Type:</th><td>\n";
-			show_types($row[1],0,"ebug_type");
-			echo "</td></tr>\n";
+			echo "<select name=\"ebug_type\">";
+			show_types($row[1],0);
+			echo "</select></td></tr>\n";
 		}
 
 		if(isset($edit) && $edit==2) {

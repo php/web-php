@@ -22,7 +22,7 @@ You should then report the problem (and the mirror(s) that have it) to
  </tr><tr>
   <th align="right">Type of bug:</th>
   <td colspan="2">
-    <?php show_types("--Please Select--",0,"ebug_type")?>
+    <select name="ebug_type"><?php show_types($ebug_type,0);?></select>
   </td>
  </tr><tr>
   <th align="right">Operating system:</th>
