@@ -47,6 +47,12 @@ removed right away.</blockquote>
 	site("Mitsubishi Motors","www.mitsucars.com");
 	siteEnd();
 
+/* City and Community Sites */
+	title("City and Community Sites");
+	siteStart();
+	site("City of Capelle aan den IJssel","www.capelle-ijssel.nl");
+	siteEnd();
+
 /* Computer Software */
 	title("Computer Software");
 	siteStart();
@@ -157,12 +163,6 @@ removed right away.</blockquote>
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("Whistler Networks","www.whistler.net");
 	site("Whistler Blackcomb Mountains","www.whistler-blackcomb.com");
-	siteEnd();
-
-/* City and Community Sites */
-	title("City and Community Sites");
-	siteStart();
-	site("City of Capelle aan den IJssel","www.capelle-ijssel.nl");
 	siteEnd();
 
 /* Misc. */
