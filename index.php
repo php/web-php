@@ -210,7 +210,7 @@ The new 4.3.1 release does not include any other changes, so upgrading from 4.3.
 <font class="newsdate">[01-Feb-2003]</font>
 PHPCon announces PHPCon East 2003 in New York City. This conference
 features two days of technical learning with speakers such as
-Rasmus Lerdorf, Michael Radwin, and Jeremy Zawodny. PHPCon East also
+Rasmus Lerdorf, Zeev Suraski, Michael Radwin, George Schlossnagle and Jeremy Zawodny. PHPCon East also
 adds a third, full day of tutorials offering practical, cogent PHP
 solutions and ideas including: MySQL and PHP; Building and Consuming Web
 Services with SOAP; Getting Started with PHP; High Performance PHP:
