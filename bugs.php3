@@ -70,7 +70,8 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if($state!="All" && $show_all) { echo "<option>All\n"; }
 }
 
-function show_menu($state) {
+function show_menu($state)
+{
 	global $PHP_SELF, $bug_type;
 
 	if(!isset($bug_type)) { $bug_type="Any"; }
@@ -104,7 +105,10 @@ function show_menu($state) {
 	echo "</table>\n";
 	echo "<i>Feature/Change requests must be explicitly selected to be shown</i>\n";
 	echo "</form>\n";
-	
+	echo "<form method=GET action=\"$PHP_SELF\">\n";
+	echo "<input type='submit' value='Edit'> bug number <input type='text' name='id'>\n";
+	echo "<input type='hidden' name='edit' value='1'>\n";
+	echo "</form><br>\n";
 }
 
 
