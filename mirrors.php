@@ -17,10 +17,10 @@ site_header("Mirror Sites");
  here, or the mirror site you used seems to be disappeared, check back later.
 </p>
 <p>
- We would like to advice you to choose a mirror site close to use in your
- everyday work. All mirror sites are expected to provide the same service.
- This means that you don't loose anything, if you go with a local mirror
- site, but you gain speed. The current mirror is highlighted in the list below.
+ We suggest you to choose a mirror site geographically close to you. All mirror sites
+ are expected to provide the same service. This means that you don't lose anything
+ if you go with a local mirror site, but you gain speed. The current mirror is
+ highlighted in the list below.
 </p>
 <p>
  If you are interested in hosting a mirror of this site,
