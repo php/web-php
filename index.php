@@ -42,6 +42,19 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 
 ?>
+<h1>PHP 4.0.6 Released!</h1>
+
+<p>
+<font class="newsDate">[23-Jun-2001]</font>
+<a href="downloads.php">PHP 4.0.6</a> is a maintenance release, that features many bug fixes from
+PHP 4.0.5, and is especially much more efficient in its memory requirements.  Users that skipped
+the 4.0.5 upgrade may wish to jump directly from 4.0.4 to the much more stable 4.0.6.  For a
+full list of changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
+<br clear="all">
+</p>
+
+<? echo hdelim(); ?>
+
 
 <h1>
 <? print_link("http://www.php-kongress.de/2001/index_en.php", make_image("international_conference.gif", "PHP International Conference 2001", "right") ); ?>

@@ -9,13 +9,13 @@ $server = $SERVER_NAME;
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.0.5.tar.gz", "PHP 4.0.5"); ?> - 30 April 2001</li>
+  <li><?php download_link("php-4.0.6.tar.gz", "PHP 4.0.6"); ?> - 23 June 2001</li>
 </ul>
 
 <h2>Win32 Binaries</h2>
 <ul>
-  <li><?php download_link("php-4.0.5-Win32.zip", "PHP 4.0.5"); ?> - 30 April 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
-  <li><?php download_link("php405-installer.exe", "PHP 4.0.5"); ?> - 30 April 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
+  <li><?php download_link("php-4.0.6-Win32.zip", "PHP 4.0.6"); ?> - 23 June 2001<br>(CGI binary plus server API versions for Apache, AOLserver, ISAPI and NSAPI. MySQL support built-in, many extensions included, packaged as zip)</li>
+  <li><?php download_link("php406-installer.exe", "PHP 4.0.6"); ?> - 23 June 2001<br>(CGI only, MySQL support built-in, packaged as Windows installer to install and configure PHP, and automatically configure IIS, PWS and Xitami, with manual configuration for other servers. N.B. no external extensions included)</li>
 <!--
   <li>Win32 binaries will be posted soon!</li>
 -->
@@ -51,6 +51,8 @@ $server = $SERVER_NAME;
 <h1>Older Versions of PHP</h1>
 
 <ul>
+  <li><?php download_link("php-4.0.5.tar.gz", "PHP 4.0.5"); ?> Source Code</li>
+  <li><?php download_link("php-4.0.5-Win32.zip", "PHP 4.0.5"); ?> Windows Binary</li>
   <li><?php download_link("php-4.0.4pl1.tar.gz", "PHP 4.0.4pl1"); ?> Source Code</li>
   <li><?php download_link("php-4.0.4pl1-Win32.zip", "PHP 4.0.4pl1"); ?> Windows Binary</li>
   <li><?php download_link("php-3.0.18.tar.gz", "PHP 3.0.18"); ?> Source Code</li>
