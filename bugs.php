@@ -596,6 +596,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			if(strlen($psw)>0) {
 				if(crypt($pw,substr($psw,0,2))==$psw) {
 					$ts=date("Y-m-d H:i:s");
+					$result = mysql_query("select status, bug_type, ldesc, php_version, php_os from bugdb where id=$id");
 					mysql_query("UPDATE bugdb set sdesc='$esdesc',status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					if (!empty($ncomment)) {
 						mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'".$user."@php.net','$ts','$ncomment')");
@@ -606,19 +607,27 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		}
 		if(!$ok) {
 			echo "<b>Sorry, incorrect user id/password pair.</b><br>\n";
-    			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
+			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
-
-			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($id);
-			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
+			$row=mysql_fetch_row($result);
+			$text = "ID: $id\nUpdated by: $user\n";
+			$text.= "Reported By: $eemail\n";
+			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
+			$text.= "Status: $estatus\n";
+			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
+			$text.= "Bug Type: $ebug_type\n";
+			$text.= "Assigned To: $eassign\n";
+			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
+			$text.= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
 
 			/* mail bug originator */
-    			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-    			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
+			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
 		}
+		mysql_freeresult($result);
 	}
 
 	/* HANDLE USER UDPATES */
@@ -628,16 +637,17 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$ok=mysql_numrows($result);
 		if(!$ok) {
 			echo "<b>Sorry, incorrect password.  The entry has not been changed.</b><br>\n";
-    			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
+			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for bug #$id - ($pw)", "", "From: bugdb");
 		} else {
 			$row=mysql_fetch_row($result);
 
 			/* update bug record */
-			if($estatus=="Closed" and $row[0]!="Closed")
+			if($estatus=="Closed" and $row[0]!="Closed") {
 				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts', dev_id='$eemail' where id=$id");
-			else
-				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
-
+			} else {
+ 				mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', php_version='$ephp_version', php_os='$ephp_os', ts2='$ts' where id=$id");
+			}
+			
 			/* add comment */
 			if (!empty($ncomment)) {
 				mysql_query("INSERT INTO bugdb_comments (bug, email, ts, comment) VALUES ($id,'$eemail','$ts','$ncomment')");
@@ -680,16 +690,16 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			show_state_options($row[7], 0, ($edit==2)?2:0);
 			echo "</select>\n";
-			if($edit==1)
-			  {
+			if($edit==1) {
 				echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
 				echo "<input type=submit value=\"Commit Changes\">\n";
-			  }
+			}
 		}
 		echo "</tr>\n";
 		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a>";
 		echo "<input type=hidden name=eemail value=\"$row[2]\"></td></tr>\n";
 		echo "<tr><th align=right>Date:</th><td>".$row[9]."</td></tr>\n";
+
 		if(!isset($edit)) {
 			echo "<tr><th align=right>Type:</th><td>".$row[1]."</td></tr>\n";
 		} else {
@@ -712,7 +722,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$sd = ereg_replace("<","&lt;",$row[3]);
 		$sd = ereg_replace(">","&gt;",$sd);
 		if(isset($edit) && $edit==1) {
-			echo "<tr><th align=right>Short Desc.:</th><td><input type=text size=30 name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
+			echo "<tr><th align=right>Short Desc.:</th><td><input type=text size=40 name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
 		} else {
 			echo "<tr><th align=right>Short Desc.:</th><td></b>$sd<input type=hidden name=esdesc value=\"", htmlspecialchars($row[3]), "\"></td></tr>\n";
 		}
