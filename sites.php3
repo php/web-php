@@ -156,6 +156,7 @@ right away.</blockquote>
 	site("Computer Currents","www.computercurrents.com");
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
+	site("Mercattel","mercattel.interwatts.com");
 	site("The Star - Kansas City","www.kcstar.com");
 	site("UPI Archives","upi.siteways.com");
 	siteEnd();
