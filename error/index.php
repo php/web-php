@@ -60,7 +60,7 @@ if ($try) {
 
 ?>
 <?Header("HTTP/1.0 404 Not Found")?>
-<?commonHeader($REDIRECT_REDIRECT_ERROR_NOTES);
+<?commonHeader(str_replace($DOCUMENT_ROOT,'',$REDIRECT_REDIRECT_ERROR_NOTES));
 
 	if(!isset($pattern)) {
 		$pattern = $uri;
