@@ -21,12 +21,25 @@ commonHeader("Anonymous CVS Access");
 </p>
 
 <p>
- PHP 4 uses an advanced configuration system that requires you to have
- autoconf (2.13+), automake (1.4+), libtool (1.4+ [except 1.4.2]), bison
- (1.28+) and flex (2.5.4+) installed. All of the necessary utilities can be
- obtained from <a href="ftp://ftp.gnu.org/pub/gnu/">the GNU FTP site</a>.
+ PHP uses an advanced configuration system that requires you to have
+ the following tools.  All necessary utilities can be obtained from
+ <a href="ftp://ftp.gnu.org/pub/gnu/">the GNU FTP site</a>.
 </p>
 
+<ul>
+ <li><i>autoconf</i>: 2.13+</li>
+ <li><i>automake</i>: 1.4+</li>
+ <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
+ <li><i>bison</i>: 1.28 (preferred), 1.35, or 1.75</li>
+ <li><i>flex</i>: 2.5.4</li>
+</ul>
+
+<p>
+ If you're experiencing problems, see also the section on
+ <a href="#buildconf_fail">buildconf failures</a>.
+</p>
+
+<h2>Steps for using PHP from CVS</h2>
 <ol>
  <li>
   It is recommended that you configure CVS by putting this
@@ -40,26 +53,49 @@ diff -u
  </li>
 
  <li>
-  Log in to the PHP anonymous CVS server. Use <strong>phpfi</strong>
-  as the password:<br />
+  Log in to the PHP CVS server. We'll use the anonymous user <strong>cvsread</strong> 
+  as the username, and use <strong>phpfi</strong> as the password:<br />
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository login</tt>
  </li>
-  
+ 
  <li>
-  Obtain the PHP 5 CVS tree:<br />
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository co php5</tt>
+  Obtain the latest PHP source from CVS.  There is a single <i>php-src</i> 
+  directory that contains all PHP 4 and PHP 5 branches.  PHP from CVS uses
+  the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
+  latest, consider the following CVS commands:<br /><br />
+  <strong>PHP 4</strong>: 
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src-ze1</tt>
+  <br />
+  <strong>PHP 5</strong>: 
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r HEAD php-src-ze2</tt>
+  <br /><br />
+  Some tips and notes:
+  <br />
   <div class="tip" style="margin: 10px 0 10px 20px;">
-   Note that you can retrieve a specific release of PHP from CVS by using the
-   -r flag in your cvs command. For example:<br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 php4</tt><br />
-   Tags for major releases look like php_VERSION where version is the
-   version number with periods replaced with underscores.
+   You may retrieve a specific release of PHP from CVS by using the
+   <i>-r</i> flag in your cvs command.  Some examples:<br />
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src-ze1</tt><br />
+   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3_2 php-src-ze1</tt>
   </div>
- </li> 
-   
+  <ul>
+   <li>
+    The branch names can also be used for cvs diff and merge operations.
+   </li>
+   <li>
+    All of the above commands create a local directory named "php-src".  You can also 
+    specify another directory name, for example, to put PHP 5 HEAD into a directory 
+    named myphp5:<br />
+    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 -r HEAD php-src-ze2</tt>
+   </li>
+   <li>
+    The Zend engine version is embedded into the final <i>checkout</i> parameter.
+   </li>
+  </ul>
+ </li>
+ 
  <li>
   Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
-  1.4 or newer.
+  1.4.
   <div class="tip" style="margin: 10px 0 10px 20px;">
    Note that certain combinations of autoconf, automake and libtool may not
    work when used together. See <a href="#buildconf_fail">below</a> for
@@ -76,7 +112,7 @@ diff -u
  <li>
   From this point onwards, installation is similar to the installation of one of
   the official packages with one main difference - you must have bison 1.28 or later
-  and flex 2.54 or later to compile, because the pre-generated scanner and parser
+  and flex 2.5.4 to compile, because the pre-generated scanner and parser
   files are not included in CVS.
  </li>
 </ol>
@@ -86,13 +122,18 @@ diff -u
  for the documentation, available via anonymous CVS. See
  <a href="http://cvs.php.net/">the web-based view of the CVS
  server</a> to see what is available, and substitute the
- appropriate name for "php5" in step 3 (and ignore the later
- steps).
+ appropriate module name for "<i>-r HEAD php-src-ze2</i>" in step 
+ 3 (and ignore the later steps).  For example, to checkout the
+ latest english version of the PHP manual:<br />
+ <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</tt>
 </p>
 
 <p>
- You can also mirror the PHP CVS repository using CVSup. See
+ You can also mirror the PHP CVS repository using CVSup, see
  <a href="/cvsup.php">our CVSup page</a> for more details.
+ You may also be interested in a PHP snapshot, see
+ <a href="http://snaps.php.net/">snaps.php.net</a>.
+ Compiled snapshots for Windows users are also included.
 </p>
 
 <a name="buildconf_fail"></a>
@@ -102,7 +143,8 @@ diff -u
  There seem to be problems with libtool 1.4.2. It is suggested
  that you use libtool 1.4, along with the autoconf 2.13 and
  automake 1.4. You should also ensure that autoconf, automake
- and libtool are installed in the same directory.
+ and libtool are installed in the same directory.  libtool 1.5
+ will not work.
 </p>
 
 <p>The following combinations are known to work:</p>
