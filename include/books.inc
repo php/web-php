@@ -53,7 +53,8 @@ $book_langs = array(
   'se'  => 'Swedish',
   'hu'  => 'Hungarian',
   'dk'  => 'Danish',
-  'it'  => 'Italian'
+  'it'  => 'Italian',
+  'pl'  => 'Polish'
 );
 
 // Book types
@@ -361,17 +362,6 @@ array(
     /* image        */ "0596000413.jpg",
     /* information  */ "O'Reilly & Associates, Mar 2002, ISBN 0-5960-0041-3, 582 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/webdbapps/",
-    /* language     */ "en"
-   ),
-
-  array (
-    /* title[s]     */ "PHP Cookbook",
-    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926811/wwwphpnet",
-    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
-    /* auth link[s] */ "",
-    /* image        */ "1565926811.jpg",
-    /* information  */ "O'Reilly & Associates, Nov 2002, ISBN 1-5659-2681-1, 624 pages",
-    /* inform. link */ "http://www.oreilly.com/catalog/phpckbk/",
     /* language     */ "en"
    ),
 
@@ -1660,7 +1650,67 @@ array(
     /* information  */ "O'Reilly, January 1997, ISBN 1-5659-2257-3, 368 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/regex/",
     /* language     */ "en"
-  )
+  ),
+  
+  array (
+    /* title[s]     */ "Essential PHP Tools: Modules Extensions, and Accelerators ",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1590592808/wwwphpnet",
+    /* author[s]    */ "David Sklar",
+    /* auth link[s] */ "http://www.sklar.com/",
+    /* image        */ "1590592808.jpg",
+    /* information  */ "Apress, March 2004, ISBN 1-5905-9280-8, 365 pages",
+    /* inform. link */ "http://www.apress.com/book/bookDisplay.html?bID=300",
+    /* language     */ "en"
+   ),
+  
+  array (
+    /* title[s]     */ "PHP Cookbook",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926811/wwwphpnet",
+    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
+    /* auth link[s] */ array("http://www.sklar.com/", "http://www.trachtenberg.com"),
+    /* image        */ "1565926811.jpg",
+    /* information  */ "O'Reilly & Associates, Nov 2002, ISBN 1-5659-2681-1, 624 pages<br />" .
+                       "Also available in " .
+                       make_link("http://www.amazon.de/exec/obidos/ASIN/3897213516/wwwphpnet07", "German") . ", " .
+                       make_link("http://www.amazon.fr/exec/obidos/ASIN/2841772314/wwwphpnet0f", "French") . " and " .
+                       make_link("http://helion.pl/ksiazki/phprec.htm", "Polish"),
+    /* inform. link */ "http://www.oreilly.com/catalog/phpckbk/",
+    /* language     */ "en"
+   ),
+  
+  array(
+    /* title[s]     */ "PHP-Kochbuch",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897213516/wwwphpnet07",
+    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
+    /* auth link[s] */ array("http://www.sklar.com/", "http://www.trachtenberg.com"),
+    /* image        */ "3897213516.jpg",
+    /* information  */ "O'Reilly & Associates, July 2003, ISBN 3-8972-1351-6, 632 pages",
+    /* inform. link */ "http://www.oreilly.de/catalog/phpckbkger/",
+    /* language     */ "de"
+  ),
+
+  array(
+    /* title[s]     */ "PHP en action",
+    /* title_link   */ "http://www.amazon.fr/exec/obidos/ASIN/2841772314/wwwphpnet0f",
+    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
+    /* auth link[s] */ array("http://www.sklar.com/", "http://www.trachtenberg.com"),
+    /* image        */ "2841772314.jpg",
+    /* information  */ "O'Reilly & Associates, September 2003, ISBN 2-8417-7231-4, 550 pages",
+    /* inform. link */ "http://www.oreilly.fr/catalogue/2841772314.html",
+    /* language     */ "fr"
+  ),
+    
+  array(
+    /* title[s]     */ "PHP. Receptury",
+    /* title_link   */ "http://helion.pl/ksiazki/phprec.htm",
+    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
+    /* auth link[s] */ array("http://www.sklar.com/", "http://www.trachtenberg.com"),
+    /* image        */ "8373611177.gif",
+    /* information  */ "Helion / O'Reilly & Associates, August 2003, ISBN 83-7361-117-7, 649 pages",
+    /* inform. link */ "http://helion.pl/ksiazki/phprec.htm",
+    /* language     */ "pl"
+  ),
+  
   )
 );
 
