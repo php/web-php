@@ -134,6 +134,7 @@ Here is a list of other excellent PHP tutorials:
 <li><a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a></li>
 <li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a></li>
 <li><a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a></li>
+<li><a href="http://www.zend.com/zend/tut/">Zend</a></li>
 </ul>
 
 <? commonfooter(); ?>
