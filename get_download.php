@@ -53,11 +53,16 @@ with a different mirror, especially if the current mirror is busy.
 <p align="center">
 <table border="0" cellpadding="3" cellspacing="1" width="500">
 <?php
-
+	$no_download = array('http://news.php.net/', 'http://bugs.php.net/');
+	
 	$mprevious = 'aa';
 	foreach ($MIRRORS as $murl=>$mdata) {
 
 		if ($murl=='0') {
+			continue;
+		}
+
+		if(in_array($murl, $no_download)) {
 			continue;
 		}
 
