@@ -583,6 +583,7 @@ right away.</blockquote>
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
 	site("LondonTown.com","www.londontown.com");
+	site("Lufthansa.de","www.lufthansa.de");
 	site("Maggia Valley (Switzerland)","www.vallemaggia.ch");
 	site("Oaxaca State Tourist Guide","oaxaca-travel.com");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
