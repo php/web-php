@@ -19,7 +19,7 @@ sont encouragés à utiliser cette version.
 <h2>Version de correction de bogues</h2>
 
 <p>
-En plus des fonctionnalités ci-dessus, PHP 4.3.7 contient notamment les corrections, 
+En plus des fonctionnalités ci-dessus, PHP 4.3.9 contient notamment les corrections, 
 ajouts et am&eacute;liorations suivantes : 
 </p>
 
@@ -41,8 +41,8 @@ ajouts et am&eacute;liorations suivantes :
 </ul>
 
 <p>
- Pour une liste exhaustive des modifications de PHP 4.3.7, voyez
- <a href="/ChangeLog-4.php#4.3.9">le changeLog</a>, en anglais.
+ Pour une liste exhaustive des modifications de PHP 4.3.9, voyez
+ <a href="/ChangeLog-4.php#4.3.9">le ChangeLog</a>, en anglais.
  </p>
 
 <?php site_footer(); ?>
