@@ -31,8 +31,7 @@ commonHeader("Setting Up Local Stats");
  <li>
   <p>
    Grab <a href="/mirrorkit.tgz">mirrorkit.tgz</a>, extract
-   <tt>stats/php.conf-dist</tt>, rename to <tt>php.conf</tt>
-   and edit the file.<br /><br />
+   <tt>stats/php.conf</tt> and edit the file.<br /><br />
    This is the main conf file for The Webalizer. Specifically, you will want to 
    change the lines which define where your log file sits, where the output
    should go, and the name of your host machine. Look for these settings:
