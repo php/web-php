@@ -53,8 +53,8 @@ and the correct ODBC driver.
 
 <P>On Unix machines, you can use the Sybase-CT driver to access Microsoft
 SQL Servers because they are (at least mostly) protocol-compatible. Sybase
-has made a free version of the necessary libraries for Linux systems. For
-other Unix operating systems, you need to contact Sybase for the correct
+has made a <a href="/extra/ctlib-linux-elf.tar.gz">free version of the necessary libraries for Linux systems</a>.
+For other Unix operating systems, you need to contact Sybase for the correct
 libraries (which cost money).
 
 <H3>Can I access Microsoft Access databases?</H3>
@@ -69,6 +69,81 @@ and use that to store the data, which you can then access from Microsoft
 Access (using ODBC) and PHP3 (using the built-in drivers), or to use an
 intermediary file format that Access and PHP3 both understand, such as
 flat-files or dBase databases.
+
+<H3>I saw PHP3 offers persistent database connections.   What does that mean?</H3>
+
+<p>Persistent connections are SQL links that do not close when the
+execution of your script ends.  When a persistent connection is requested,
+PHP checks if there's already an identical persistent connection (that
+remained open from earlier) - and if it exists, it uses it.  If it does
+not exist, it creates the link.  An 'identical' connection is a connection
+that was opened to the same host, with the same username and the same
+password (where applicable).
+
+<p>People who aren't thoroughly familiar with the way Web servers work and
+distribute the load may mistake persistent connects for what they're not.
+In particular, they do NOT give you an ability to open 'user sessions' on
+the same SQL link, they do NOT give you an ability to build up a transaction
+efficently, and they don't do a whole lot of other things.  In fact, to be
+extremely clear about the subject, persistent connections don't give you ANY
+functionality that wasn't possible with their non-persistent brothers.
+
+<p>Why?
+<p>This has to do with the way the way Web servers work.  We can divide
+PHP to three main types.  First, PHP in its CGI mode.  In CGI mode, there's
+no difference between persistent and non persistent connects.  The reason is
+simple - a CGI binary terminates as soon as the execution of your script ends.
+Obviously, when it dies, any resource it may have 'owned', including any type
+of SQL link, dies with it (in practice PHP is nicer and properly closes the
+SQL link right before it dies, but even if it didn't, the link wouldn't have
+been reusable).
+
+<p>The second way of running PHP is as a plugin for a *multithreaded* server.
+Currently, this is only theoratical - Shane has a thread safe ISAPI module
+in the works, and NSAPI/Win32 will probably follow soon after the ISAPI one
+works right.  Multithreaded servers are a bit different in what they enable
+developers to do, even though as far as I can tell right now, PHP's behavior
+would be identical to the one of *multiprocess* servers.  See below.
+
+<p>The last, and most popular way of running PHP is as a plugin to the
+multiprocess server - apache.  A quick guide to the way apache (usually)
+works - apache has one 'parent' process, that doesn't answer to requests.
+Its job is to coordinate between its children.  The children, which are
+spawned by the parent, are the processes that answer to HTTP requests. The
+load of the requests is divided among all of the children.  That is, two
+subsequent hits on the same page are likely to be handled by TWO DIFFERENT
+PROCESSES.  This is the key issue here.  There are plenty of processes that
+make the 'Web server', and the load is distributed among them.
+
+<p>What does that have to do with persistent connections?  Everything.  That
+explains why there's no added functionality in persistent connections.  When
+you open a persistent connection, you can't do something like beginning a
+transaction, and hope that the next time the user submits a page you'd just
+continue the transaction.  You can't lock tables and hope that the next hit
+by the user will unlock the tables.  The two requests are most likely to be
+handled by two different processes!
+
+<p>If persistent connections don't have any added functionality, what are
+they good for?
+<p>The answer here is extremely simple - efficiency.  Persistent connections
+are good if the overhead to create a link to your SQL server is high.
+Whether or not this overhead is really high depends on many factors.  Like,
+what kind of database it is, whether or not it sits on the same computer on
+which your web server sits, how loaded the machine the SQL server sits on is
+and so forth.  The bottom line is that IF that connection overhead is high,
+persistent connects help you.  They simply connect only once for the entire
+lifespan of the httpd child, instead of once per hit that child processes.
+Make sure you understand - this means that for every child that opened a
+persistent connection will have its own open persistent connection to the
+server.  That is, if you had 20 different httpd processes that ran a script
+that included a pconnect(), you'd have 20 different connections to the SQL
+server, one from each child.
+
+<p>An important summary.  pconnects were designed to have 1::1 mapping to
+regular connects.  That means that you should ALWAYS be able to replace
+persistent connect with a non-persistent connect, and it won't change the
+way the script behaves.  It MAY and probably will change the efficiency of
+the script, but not its behavior!
 
 <H3>Is there a PHP3 mailing list?</H3>
 
@@ -108,13 +183,6 @@ You can also use anonymous CVS to get the absolute latest
 version of the source. For more information, go to <A
 href="http://www.lerdorf.on.ca/php3.cgi">http://www.lerdorf.on.ca/php3.cgi</A>.
 
-<H3>Why do I have to register to download PHP3?</H3>
-
-<P>This is so the development team can find out what operating systems
-and databases that people are using, and how many people are using PHP3
-in general. Don't worry, you aren't being added to any mailing lists
-by registering!
-
 <H3>Where can I get libraries needed to compile some of the optional
 PHP3 extensions?</H3>
 
@@ -129,10 +197,11 @@ servers (IIS, Netscape).  This does not matter in Unix environments, yet.
   <LI>Berkeley DB2 (Unix/Win): <A href="http://www.sleepycat.com/">http://www.sleepycat.com/</A>
   <LI>SNMP (Unix): <A href="http://www.ece.ucdavis.edu/ucd-snmp/">http://www.ece.ucdavis.edu/ucd-snmp/</A> (Note: PHP3 uses the native SNMP interface in Windows.)
   <LI>GD* (Unix/Win): <A href="http://www.boutell.com/gd/#buildgd">http://www.boutell.com/gd/#buildgd</A> 
-  <LI>MSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
-  <LI>MSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
+  <LI>mSQL (Unix): <A href="http://www.hughes.com.au/">http://www.hughes.com.au/</A> 
+  <LI>mSQL* (Win) : <A HREF="http://blnet.com/msqlpc/">MSQL PC Home Page</a>
   <LI>MySQL (Unix): <A href="http://www.tcx.se/">http://www.tcx.se/</A>
   <LI>IMAP* (Win/Unix): <A HREF="ftp://ftp.cac.washington.edu/imap/imap-4.1.BETA.tar.Z">ftp://ftp.cac.washington.edu/imap/imap-4.1.BETA.tar.Z</a>
+  <LI>Sybase-CT (Linux, libc5):  <a href="/extra/ctlib-linux-elf.tar.gz">Available locally</a>
 </UL>
 
 <H3>How do I get these libraries to work?</H3>

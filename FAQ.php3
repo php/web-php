@@ -4,6 +4,7 @@
 <?$title="Frequently Asked Questions";
   include "include/header.inc";
   $fd = fopen("FAQ.html", "r");
+
   /* drop everything until it tells us to stop chopping */
   while (!feof($fd)) {
     if (ereg("stop chopping", fgets($fd, 1024))) {
