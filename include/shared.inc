@@ -277,17 +277,17 @@ endif;
 
 if (($NS4 || $IE4) && !$X11):
         echo "function moveLayerTo(layerName,moveleft,movetop){\n";
-        echo "          $layerRef"."[layerName]".$styleSwitch.".top=movetop;\n";
-        echo "          $layerRef"."[layerName]".$styleSwitch.".left=moveleft;\n";
+        //echo "          $layerRef"."[layerName]".$styleSwitch.".top=movetop;\n";
+        //echo "          $layerRef"."[layerName]".$styleSwitch.".left=moveleft;\n";
         echo "}\n";
 	echo "function showLayer(layerName){\n";
 	echo "	if (do_layers == 1) {\n";
-	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"visible\";\n";
+	//echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"visible\";\n";
 	echo "	}\n";
 	echo "}\n";
 	echo "function hideLayer(layerName){\n";
 	echo "	if (do_layers == 1) {\n";
-	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"hidden\";\n";
+	//echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"hidden\";\n";
 	echo "	}\n";
 	echo "}\n";
 else:
