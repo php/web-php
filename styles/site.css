@@ -120,7 +120,7 @@ ul.simple li {
 
 /* Layout styling and helpers --------------------------------------------- */
 #layout_2, #layout_3 {
-	/* Background image will be set in client side script */
+	/* Background image will be set in a mirror specific CSS rule */
 	background-position top left;
 	background-repeat: repeat-y;
 }

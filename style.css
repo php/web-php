@@ -63,7 +63,8 @@ div.toch {
 
 /* Inactive and active TOC elements in the left
    sidebar of the manual pages - this is further 
-   enhanced with an image in /userprefs.js */
+   enhanced with an image in a mirror specific
+   CSS rule */
 div.toci, div.toca {
     padding: 0 0 0 11px;
     margin:  1px 0 0 3px;
