@@ -85,7 +85,8 @@ echo "\n<!--$MYSITE-->\n";
 highly improved performance, especially under Windows;  A new, and more security-friendly
 way of accepting form variables;  Output compression, and much, much more.  Read the full
 <a href="/release_4_1_0.php">Release Announcement</a>, or check out the
-<a href="/ChangeLog-4.php">Change Log</a>.
+<a href="/ChangeLog-4.php">Change Log</a>.  A <a href="/release_4_1_0_fr.php">French translation</a>
+of the Release Announcement</a> is also available.
 <br clear="all">
 </p>
 
