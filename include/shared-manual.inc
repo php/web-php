@@ -15,7 +15,7 @@ function manualLastModified($title) {
 		$t = mysql_fetch_row($result_id);
 		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",$t[0])." GMT");
 	} else {
-		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",filemtime($SCRIPT_FILENAME))." GMT");
+		Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod)." GMT");
 	}
 	if($result_id) mysql_free_result($result_id);
 }

@@ -3,7 +3,7 @@ if (isset($SERVER_NAME) && $SERVER_NAME=="www.php3.net") {
         Header("Location: http://www.php.net/");
         exit;
 }
-Header("Last-Modified: ".gmdate("D, d M Y H:i:s",filemtime($SCRIPT_FILENAME))." GMT");
+Header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
 require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
