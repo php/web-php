@@ -116,7 +116,7 @@ Archives for some of these mailing lists can be found at:
  <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP 3.0 List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=phplib#phplib">PHPLIB List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=phplib-dev#phplib-dev">PHPLIB Developers' List</a>
- <li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP 3.0 List</a>
+ <li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP 3.0 List</a> (older archive)
 </ul>
 
 <P>
