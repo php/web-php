@@ -14,7 +14,7 @@ $filesizes["mod_php-3.0.3-1.i386.rpm"]="~ 318KB";
 $filesizes["mod_php-3.0.3-1.src.rpm"]="~ 1304KB";
 
 function makeCap() {
-	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF;
+	GLOBAL $MIRRORS, $COUNTRIES,$PHP_SELF,$MYSITE;
 	global $showcountry,$showsites,$csel;
 ?>
 <TR bgcolor='#D0D0D0' valign=top>
