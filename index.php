@@ -157,10 +157,10 @@ commonHeader("Hypertext Preprocessor");
  <span class="newsdate">[18-Mar-2004]</span>
 The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally here!  The move from Beta stage to RC stage means that PHP 5 is now feature complete, and is quite stable - stable enough for everyone to start playing with.  Note that it is still <i>not</i> recommended for mission-critical use.</p>
 
-<p>Some of the key features of PHP 5 include:</p>
+<p>Some of the key features of PHP 5 include:
 
 <ul>
-<li>The Zend Engine II with a new object model and dozens of new features.</li>
+<li>The <a href="/zend-engine-2.php">Zend Engine II</a> with a new object model and dozens of new features.</li>
 <li>XML support has been completely redone in PHP 5, all extensions are now focused around the excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).</li>
 <li>A new MySQL extension named MySQLi for developers using MySQL 4.1 and later. Additionally to a functional interface this new extension also includes an object-oriented interfaced and support for many of MySQL's new features such as prepared statements.</li>
 <li>SQLite has been bundled with PHP. For more information on SQLite, please visit <a href="http://www.sqlite.org/">their website</a>.</li>
@@ -170,7 +170,7 @@ The <a href="/downloads.php#v5">first Release Candidate of PHP 5</a> is finally 
 <li>And lots more...</li>
 </ul>
 
-<p>For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.</p>
+For changes since Beta 4, please consult the <a href="/ChangeLog-5.php#5.0.0b4">ChangeLog</a>.</p>
 <hr />
 
 
