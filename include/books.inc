@@ -67,6 +67,38 @@ $books = array (
 
   "PHP" => array (
 
+array(
+    /* title[s]     */ "Einstieg in PHP 5",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898422607/wwwphpnet07",
+    /* author[s]    */ "Thomas Theis",
+    /* auth link[s] */ "",
+    /* image        */ "3898422607.jpg",
+    /* information  */ "Galileo Computing, 2004, ISBN 3-89842-260-7, 550 pages",
+    /* inform. link */ "http://www.galileocomputing.de/393",
+    /* language     */ "de"
+  ),
+
+array(
+    /* title[s]     */ "PHP 5 - Die Neuerungen",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898424901/wwwphpnet07",
+    /* author[s]    */ array("Martin Goldmann", "Markus Schraudolph"),
+    /* auth link[s] */ "",
+    /* image        */ "3898424901.jpg",
+    /* information  */ "Galileo Computing, 2004, ISBN 3-89842-490-1, 170 pages",
+    /* inform. link */ "http://www.galileocomputing.de/735",
+    /* language     */ "de"
+  ),
+  
+array(
+    /* title[s]     */ "Besser PHP programmieren",
+    /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3898423816/wwwphpnet07",
+    /* author[s]    */ "Carsten Möhrke",
+    /* auth link[s] */ "",
+    /* image        */ "3898423816.jpg",
+    /* information  */ "Galileo Computing, 2004, ISBN 3-89842-381-6, 624 pages",
+    /* inform. link */ "http://www.galileocomputing.de/606",
+    /* language     */ "de"
+  ),
 
 array(
     /* title[s]     */ "PHP - Der erfolgreiche Einstieg",
