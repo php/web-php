@@ -127,6 +127,7 @@ right away.</blockquote>
 	site("Évora's University in Portugal","www.uevora.pt");
 	site("GezondheidsNet","www.gezondheidsnet.nl");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
+	site("The Lawson Institute","lriweb.stjosephs.london.on.ca");
 	site("Let's Find Out","www.letsfindout.com");
 	site("NativeWeb","www.nativeweb.org");
 	site("University of Bergen - Norway","www.uib.no");
@@ -146,6 +147,7 @@ right away.</blockquote>
 	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("FilmNetwork","www.fnw.de");
+	site("Food Geeks","foodgeeks.com");
 	site("Granada","www.granada.co.uk");
 	site("Hip Hop Archives","www.hiphoparchives.com");
 	site("HitList","www.hitlist.com");
@@ -158,6 +160,7 @@ right away.</blockquote>
 	site("O'Brien's Cafe","www.obrienscafe.com");
 	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
+	site("Rubik's Online","www.rubiks.com");
 	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
@@ -240,6 +243,7 @@ right away.</blockquote>
 	site("ClickAgents","www.clickagents.com");
 	site("Constructors","www.constructors.com");
 	site("CyberWarp","cyberwarp.to");
+	site("DIGIRO FreeMail Server","mail.digiro.net");
 	site("easyDNS","www.easydns.com");
 	site("Easy.to/Remember","easy.to/remember");
 	site("Emedia Designs","emediadesigns.com");
@@ -256,6 +260,7 @@ right away.</blockquote>
 	site("MailFriends.com","www.mailfriends.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
+	site("National Search &amp; Discovery","www.nation-search.com");
 	site("Oneview Bookmark Management","www.oneview.com");
 	site("PBM Online Services","www.ndw.de");
 	site("Resourcepage.com","www.resourcepage.com");
@@ -488,6 +493,7 @@ right away.</blockquote>
 	title("Telecommunications");
 	siteStart();
 	site("Danish Yellow Pages","www.gulesider.dk");
+	site("Ericsson GmbH","www.ericsson.de");
 	site("onebox.com","www.onebox.com");
 	site("The Public Payphone Database","wiw.org/wiw.org/payphone/");
 	site("Southwestern Bell","WWW.SBWireless.COM");
