@@ -167,8 +167,6 @@ WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 align=absmiddle
 
 
 function manualUserNotes($title) {
-	echo "<P><B>Sorry .. the annotated manual is temporaraly unavailable.</B></P>";
-	return;
 	global $MYSITE;
 	if(strstr($MYSITE,"www.php.net")) {
 		$host = 'localhost';

@@ -148,7 +148,10 @@ function show_types($first_item,$show_any,$var_name) {
 }
 
 function find_password($user) {
-	$fp=fopen("/repository/CVSROOT/passwd","r");
+	$fp=@fopen("/repository/CVSROOT/passwd","r");
+	if (!$fp) {
+		return ("");
+	}
 	while(!feof($fp)) {
 		$line=fgets($fp,120);
 		list($luser,$passwd,$junk) = explode(":",$line);
