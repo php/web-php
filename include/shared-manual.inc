@@ -290,9 +290,9 @@ function manualHeader()
 {
     global $PRINT_PAGE, $PGI, $BASE_FOR_MANPAGE;
     
-    // XSL sheets provide params in the 'this' array
-    // element configured above, while old DSSSL sheets
-    // provide info via two parameters [title, id]
+    // XSL [and new DSSSL] sheets provide params in the
+    // 'this' array element configured above, while old
+    // DSSSL sheets provide info via two parameters [title, id]
     if (func_num_args() > 0) {
         list($title, $id) = func_get_args();
     } else {
@@ -316,9 +316,9 @@ function manualFooter()
 {
     global $PRINT_PAGE, $PRINT_NOTES, $PGI;
 
-    // XSL sheets provide params in the 'this' array
-    // element configured above, while old DSSSL sheets
-    // provide info via two parameters [title, id]
+    // XSL [and new DSSSL] sheets provide params in the
+    // 'this' array element configured above, while old
+    // DSSSL sheets provide info via two parameters [title, id]
     if (func_num_args() > 0) {
         list($title, $id) = func_get_args();
     } else {
