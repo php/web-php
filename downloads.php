@@ -87,9 +87,6 @@ $server = ($SERVER_PORT == "81" ? $SERVER_NAME . ":81" : $SERVER_NAME);
 <UL>
   <li><a href="download-php3.php">PHP 3.0</a> Source code and Win32 binaries
   <li><A HREF="ftp://ftp.nerosworld.com/pub/php/dist">PHP/FI 2.0</a> Source and related files
-<!--
-  <li>Instructions on how to use the <a href="http://www.php.net/cvs-php3.php">PHP 3.0 CVS tree</a>
--->
 </UL>
 
 <P>
