@@ -22,6 +22,11 @@ available in the ' . make_link("/links.php", "links section") . '.
 </p>
 
 <p>
+Ever wondered how popular PHP is? see the ' .
+make_link("/usage.php", "Netcraft Survey") . '.
+</p>	
+
+<p>
 PHP is a project of the ' . 
 make_link("http://www.apache.org/","Apache Software Foundation") . '.
 </p>
@@ -179,61 +184,6 @@ mature and stable extension and can be used for a variety of applications
 Also taking this opportunity, we would like to ask if some of you would
 consider helping out with PHP-GTK documentation. It would be a great way to
 learn this exciting extension and also contribute to the project.
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-
-<h1>Usage stats for December available</h1>
-
-<p>
-<font class="newsDate">[09-Jan-2002]</font>
-<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and
-<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
-published the <?php print_link("/usage.php", "current results"); ?> for their Web
-Server surveys.
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-
-<?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
-
-<h1>International PHP Conference slides available</h1>
-
-<p>
-<font class="newsDate">[10-Jan-2002]</font>
-You can find an overview of all slides of the sessions from the
-International PHP Conference 2001 on the
-<a href="http://www.phpconference.de/2001/slides_en.php">conference
-slides page</a>. It is still not too late to check out some photos
-from the conference:
-<ul>
-    <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
-    <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
-    <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
-</ul>
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<h1>PHP 4.1.1 Released!</h1>
-
-<p>
-<font class="newsDate">[26-Dec-2001]</font> Due to a few bugs in PHP 4.1.0, we
-decided to release <a href="/downloads.php">PHP 4.1.1</a>. The bugs that were
-fixed are not major ones but minor ones, which could be annoying if you get
-bitten by them.
-</p>
-<p>
-Our recommendation is that people who already upgraded to PHP 4.1.0 do
-not need to upgrade to PHP 4.1.1 unless they're experiencing one of the
-described bugs. Read the full
-<a href="/release_4_1_1.php">release announcement</a>.
-<br clear="all">
 </p>
 
 <?php echo hdelim(); ?>
