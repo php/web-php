@@ -17,4 +17,5 @@ mkyed@borsen.dk dk.php.net 194.239.128.56
 trurl@asteria.odtel.net ua.php.net CNAME to php.asteria.odtel.net
 fmal@fmal.com it.php.net CNAME to php.fmal.com
 cbredi@timisoara.roedu.net ro.php.net CNAME to 193.226.9.16
+grych@tgr.com.pl pl.php.net CNAME to ??
 
