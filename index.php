@@ -100,8 +100,8 @@ New Usage Stats For July available
 <p>
 <font class="newsDate">[02-Aug-2001]</font>
 <?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?>
-have published the current results for their Web Server surveys - both
+<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
+published the current results for their Web Server surveys - both
 of which continue to show impressive growth for PHP. Check out the 
 <?php print_link("/usage.php", "usage page"); ?>.
 <br clear="all">
