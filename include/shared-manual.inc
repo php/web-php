@@ -98,12 +98,17 @@ function navigationBar($title,$id,$loc) {
 
 	if ($loc == 'bottom') {
 
-		$back_url = 'http://' . $SERVER_NAME . 
-			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
-			$PHP_SELF;
-		print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url, 'add note',false,'class="small"');
-		echo delim();
-		print_link('/manual/about-notes.php', 'about notes',false,'class="small"',false,'class="small"');
+#		$back_url = 'http://' . $SERVER_NAME . 
+#			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+#			$PHP_SELF;
+#		print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url, 
+#			make_image('notes-add.gif','add a note')
+#		);
+#		echo '&nbsp;';
+#		print_link('/manual/about-notes.php', 
+#			make_image('notes-about.gif', 'about notes')
+#		);
+#		echo '<br>';
 
 	} else {
 
@@ -121,9 +126,10 @@ function navigationBar($title,$id,$loc) {
 		if (count($links)) {
 			echo 'view this page in ' . join (delim(), $links);
 		}
+		echo '<br>';
 	}
 
-	echo '<br></small></td></tr>';
+	echo '</small></td></tr>';
 	echo "</table>\n";
 
 }
@@ -133,7 +139,7 @@ function makeEntry($date,$name,$blurb,$id=0) {
 	global $MAGIC_COOKIE;
 ?>
 <tr valign="top">
-<td bgcolor="#e0e0e0">
+<td bgcolor="#e0e0e0" colspan="2">
 <table border="0" cellpadding="2" cellspacing="0" width="100%">
 <tr><td>
 <?
@@ -150,16 +156,30 @@ function makeEntry($date,$name,$blurb,$id=0) {
 ?>
 </td></tr>
 <tr bgcolor="#f0f0f0"><td>
-<?
-echo clean_note($blurb);
-?><BR>
-<?if (isset($MAGIC_COOKIE) && $id):?>
-<hr noshade size=1>
-<a href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1&popup=1" target="admin">delete</a> | 
-<a href="/manual/admin-notes.php?action=reject+<?echo $id?>&brief=1&popup=1" target="admin">reject</a> | 
-<a href="/manual/admin-notes.php?action=edit+<?echo $id?>&brief=1" target="admin">edit</a>
-<?endif;?>
+<? echo clean_note($blurb); ?><br>
 </td></tr>
+<? 
+
+if (isset($MAGIC_COOKIE) && $id) {
+	echo "<tr><td align=\"right\">";
+	print_link('/manual/admin-notes.php?action=edit+' . $id . '&brief=1',
+		make_image('notes-edit.gif', 'edit note'),
+		'admin'
+	);
+	echo '&nbsp';
+	print_link('/manual/admin-notes.php?action=reject+' . $id . '&brief=1&popup=1',
+		make_image('notes-reject.gif', 'reject note'),
+		'admin'
+	);
+	echo '&nbsp';
+	print_link('/manual/admin-notes.php?action=delete+' . $id . '&brief=1&popup=1',
+		make_image('notes-delete.gif', 'delete note'),
+		'admin'
+	);
+	echo "<br></td></tr>\n";
+}
+
+?>
 </table>
 </td>
 </tr>  
@@ -208,16 +228,44 @@ function manualUserNotes($title, $id) {
 	$cur = substr(dirname($PHP_SELF),-2);
 	if($cur=='al') $cur='en';
 
-	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"1\" width=\"100%\">\n";
+	echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"100%\">\n";
 
 	$notes = manualGetUserNotes($title, $id);
-	$num_notes = count($notes);
-	if ( $num_notes > 0 ) {
-                echo "<tr bgcolor=\"#d0d0d0\"><td><b>User Contributed Notes: $title</b></td></tr>";
-		for ($i=0; $i<$num_notes; $i++) {
-			$note = $notes[$i]; // should use foreach? 
-			makeEntry($note['xwhen'],$note['user'],$note['note'],$note['id']);
+	if ( sizeof($notes) > 0 ) {
+
+		$back_url = 'http://' . $SERVER_NAME . 
+			(($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+			$PHP_SELF;
+
+                echo "<tr bgcolor=\"#d0d0d0\">\n";
+		echo "<td><b>User Contributed Notes: $title</b><br></td>\n";
+		echo "<td align=\"right\">
+                print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
+                        make_image('notes-add.gif','add a note')
+                );      
+		echo "&nbsp;";
+                print_link('/manual/about-notes.php',
+                        make_image('notes-about.gif', 'about notes')
+                );
+		echo "<br></td>\n";
+		echo "</tr>\n";
+
+		foreach($notes as $note) {
+			makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'] );
 		}
+
+                echo "<tr bgcolor=\"#d0d0d0\">\n";
+		echo "<td colspan=\"2\" align=\"right\">
+                print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
+                        make_image('notes-add.gif','add a note')
+                );      
+		echo "&nbsp;";
+                print_link('/manual/about-notes.php',
+                        make_image('notes-about.gif', 'about notes')
+                );
+		echo "<br></td>\n";
+		echo "</tr>\n";
+
 	}
 	echo "</table>\n";
 }
