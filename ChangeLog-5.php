@@ -3,6 +3,8 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 5 ChangeLog");
+function bugfix($number) { echo "Fixed bug "; bugl($number); }
+function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
@@ -64,27 +66,27 @@ case-insensitivity; of files. (Andi)</li>
 Marcus)</li>
 <li>Fixed __autoload() to preserve case of the passed class name.
 (Andi)</li>
-<li>Fixed bug #26615 () (runekl at opoint dot com, Derick)</li>
-<li>Fixed bug #26591 ("__autoload threw an exception" during an
+<li><?php bugfix(26615); ?> () (runekl at opoint dot com, Derick)</li>
+<li><?php bugfix(26591); ?> ("__autoload threw an exception" during an
 uncaught). (Marcus)</li>
-<li>Fixed bug #26534 (stream_get_meta_data() -&gt; Access Violation).
+<li><?php bugfix(26534); ?> (stream_get_meta_data() -&gt; Access Violation).
 (Wez)</li>
-<li>Fixed bug #26528 (HTML entities are not being decoded by
+<li><?php bugfix(26528); ?> (HTML entities are not being decoded by
 xml_parse()/xml_parse_into_struct()). (Ilia)</li>
-<li>Fixed bug #26182 (Object properties created redundantly). (Andi)</li>
-<li>Fixed bug #26156 (REPLACE_ZVAL_VALUE works on uninit stack-based
+<li><?php bugfix(26182); ?> (Object properties created redundantly). (Andi)</li>
+<li><?php bugfix(26156); ?> (REPLACE_ZVAL_VALUE works on uninit stack-based
 zvals). (Moriyoshi)</li>
-<li>Fixed bug #26083 (Non-working write support in ext/dom). (Ilia)</li>
-<li>Fixed bug #26072 (--disable-libxml does not work). (Jani)</li>
-<li>Fixed bug #26001 (serialize crashes when accessing an overloaded
+<li><?php bugfix(26083); ?> (Non-working write support in ext/dom). (Ilia)</li>
+<li><?php bugfix(26072); ?> (--disable-libxml does not work). (Jani)</li>
+<li><?php bugfix(26001); ?> (serialize crashes when accessing an overloaded
 object that has no properties (NULL hashtable)). (Wez)</li>
-<li>Fixed bug #25664 (COM crashes when calling a Delphi implementations
+<li><?php bugfix(25664); ?> (COM crashes when calling a Delphi implementations
 of ITypeInfo). (Wez)</li>
-<li>Fixed bug #24837 (Incorrect behaviour of PPP using foreach).
+<li><?php bugfix(24837); ?> (Incorrect behaviour of PPP using foreach).
 (Marcus)</li>
-<li>Fixed bug #24693 (Allow session.use_trans_sid to be
+<li><?php bugfix(24693); ?> (Allow session.use_trans_sid to be
 enabled/disabled from inside the script). (Ilia)</li>
-<li>Fixed bug #24394 (Serializing cross-referenced objects causes
+<li><?php bugfix(24394); ?> (Serializing cross-referenced objects causes
 segfault). (Moriyoshi)</li>
 </ul>
 
@@ -155,33 +157,33 @@ characters. (Moriyoshi)</li>
 <li>Fixed support for &lt;![CDATA[]]&gt; fields within XML documents
 in ext/xml. (Sterling)</li>
 <li>Fixed visibility of __construct and __clone. (Marcus)</li>
-<li>Fixed bug #26003 (fgetcsv() not binary-safe on null bytes).
+<li><?php bugfix(26003); ?> (fgetcsv() not binary-safe on null bytes).
 (Moriyoshi)</li>
-<li>Fixed bug #25756 (SimpleXML's validate_schema_file() broken).
+<li><?php bugfix(25756); ?> (SimpleXML's validate_schema_file() broken).
 (Moriyoshi)</li>
-<li>Fixed bug #25581 (getimagesize() returns incorrect values on
+<li><?php bugfix(25581); ?> (getimagesize() returns incorrect values on
 bitmap (os2) files). (Marcus)</li>
-<li>Fixed bug #25494 (array_merge*() allows non-arrays as argument).
+<li><?php bugfix(25494); ?> (array_merge*() allows non-arrays as argument).
 (Jay)</li>
-<li>Fixed bug #24766 (strange result array from unpack()). (Moriyoshi)</li>
-<li>Fixed bug #24729 ($obj = new $className; causes crash when
+<li><?php bugfix(24766); ?> (strange result array from unpack()). (Moriyoshi)</li>
+<li><?php bugfix(24729); ?> ($obj = new $className; causes crash when
 $className is not set). (Marcus)</li>
-<li>Fixed bug #24565 (cannot read array elements received via
+<li><?php bugfix(24565); ?> (cannot read array elements received via
 $_REQUEST). (Zeev)</li>
-<li>Fixed bug #24445 (get_parent_class() returns different values).
+<li><?php bugfix(24445); ?> (get_parent_class() returns different values).
 (Sterling, Stanislav)</li>
-<li>Fixed bug #24403 (preg_replace() problem: Using $this when not
+<li><?php bugfix(24403); ?> (preg_replace() problem: Using $this when not
 in object context). (Zeev)</li>
-<li>Fixed bug #24399 (PEAR DB isError crash [instanceof_function
+<li><?php bugfix(24399); ?> (PEAR DB isError crash [instanceof_function
 fault?]).  (Sterling, Marcus)</li>
-<li>Fixed bug #24396 (foreach ($k=>$v), the key $k is missing). (Zeev)</li>
-<li>Fixed bug #24279 (__get() crash when no value is returned). (Ilia)</li>
-<li>Fixed bug #22367 (undefined variable has a value). (Zeev)</li>
-<li>Fixed bug #19859 (allow fast_call_user_function to support __call).
+<li><?php bugfix(24396); ?> (foreach ($k=>$v), the key $k is missing). (Zeev)</li>
+<li><?php bugfix(24279); ?> (__get() crash when no value is returned). (Ilia)</li>
+<li><?php bugfix(22367); ?> (undefined variable has a value). (Zeev)</li>
+<li><?php bugfix(19859); ?> (allow fast_call_user_function to support __call).
 (Stanislav)</li>
-<li>Fixed bug #17997 (Warning when switch() and reference are combined).
+<li><?php bugfix(17997); ?> (Warning when switch() and reference are combined).
 (Zeev)</li>
-<li>Fixed bug #17988 (strtotime failed to parse postgresql timestamp).
+<li><?php bugfix(17988); ?> (strtotime failed to parse postgresql timestamp).
 (Derick)</li>
 </ul>
 
@@ -304,12 +306,12 @@ the line endings and to skip empty lines. (Ilia)</li>
 html_entity_decode(). (Moriyoshi)</li>
 <li>Added IPv6 support to ext/sockets. (Sara)</li>
 <li>Added input filter support. See README.input_filter for more info. (Rasmus)</li>
-<li>Added a replace count for str_[i]replace(), see bug #8218. (Sara)</li>
+<li>Added a replace count for str_[i]replace(), see <?php bugl(8218); ?>. (Sara)</li>
 <li>Fixed is_executable() to be available also on Windows. (Shane)</li>
 <li>Fixed dirname() and strip_tags() to be binary-safe. (Moriyoshi)</li>
-<li>Fixed bug #24098 (crash in pathinfo()). (Ilia)</li>
-<li>Fixed bug #21985 and #22064 (various mb_send_mail() issues). (Moriyoshi)</li>
-<li>Fixed bug #21600 (Assign by reference function call changes variable 
+<li><?php bugfix(24098); ?> (crash in pathinfo()). (Ilia)</li>
+<li><?php bugfix(21985); ?> and <?php bugl(22064); ?> (various mb_send_mail() issues). (Moriyoshi)</li>
+<li><?php bugfix(21600); ?> (Assign by reference function call changes variable 
 contents). (Zeev)</li>
 </ul>
 
