@@ -157,6 +157,17 @@ Sams, October 2000, ISBN 0-6723-1784-2<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0130889032/wwwphpnet"
+><IMG SRC="/jpgs/cosentino.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="167"></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.com/exec/obidos/0130889032/wwwphpnet">Essential PHP for Web Professionals</A><BR>
+by Christopher Cosentino<BR><SMALL>
+Prentice Hall, October 2000, ISBN 0-1308-8903-2, 168 pages<BR>
+</SMALL>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.com/exec/obidos/ASIN/0789724405/wwwphpnet"
 ><IMG SRC="/jpgs/maxfield.jpg" BORDER=0 ALIGN="left" WIDTH="111" HEIGHT="139"></A><BR>
 </TD>
