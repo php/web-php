@@ -1,9 +1,9 @@
 <?php // -*- C++ -*-
-header("Vary: User-Agent");
-require_once 'prepend.inc';
+// $Id$
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 function commonStatHeader($title) {
-    commonHeader($title,0,1);
+    commonHeader($title, 0, 1);
 }
 
 function commonStatBody($title) {
