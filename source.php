@@ -11,22 +11,22 @@ $SIDEBAR_DATA = '
 
 <p>
  If you\'re interested in what\'s behind the several functions we
- used, you can always take a look at the source of the
- <ul class="simple">
-  <li><a href="/source.php?url=/include/prepend.inc">prepend.inc</a></li>
-  <li><a href="/source.php?url=/include/site.inc">site.inc</a></li>
-  <li><a href="/source.php?url=/include/mirrors.inc">mirrors.inc</a></li>
-  <li><a href="/source.php?url=/include/countries.inc">countries.inc</a></li>
-  <li><a href="/source.php?url=/include/languages.inc">languages.inc</a></li>
-  <li><a href="/source.php?url=/include/langchooser.inc">langchooser.inc</a></li>
-  <li><a href="/source.php?url=/include/ip-to-country.inc">ip-to-country.inc</a></li>
-  <li><a href="/source.php?url=/include/layout.inc">layout.inc</a></li>
-  <li><a href="/source.php?url=/include/last_updated.inc">last_updated.inc</a></li>
-  <li><a href="/source.php?url=/include/shared-manual.inc">shared-manual.inc</a></li>
-  <li><a href="/source.php?url=/include/manual-lookup.inc">manual-lookup.inc</a></li>
- </ul>
- files.
+ used, you can always take a look at the source of the following files:
 </p>
+
+<ul class="simple">
+ <li><a href="/source.php?url=/include/prepend.inc">prepend.inc</a></li>
+ <li><a href="/source.php?url=/include/site.inc">site.inc</a></li>
+ <li><a href="/source.php?url=/include/mirrors.inc">mirrors.inc</a></li>
+ <li><a href="/source.php?url=/include/countries.inc">countries.inc</a></li>
+ <li><a href="/source.php?url=/include/languages.inc">languages.inc</a></li>
+ <li><a href="/source.php?url=/include/langchooser.inc">langchooser.inc</a></li>
+ <li><a href="/source.php?url=/include/ip-to-country.inc">ip-to-country.inc</a></li>
+ <li><a href="/source.php?url=/include/layout.inc">layout.inc</a></li>
+ <li><a href="/source.php?url=/include/last_updated.inc">last_updated.inc</a></li>
+ <li><a href="/source.php?url=/include/shared-manual.inc">shared-manual.inc</a></li>
+ <li><a href="/source.php?url=/include/manual-lookup.inc">manual-lookup.inc</a></li>
+</ul>
 
 <p>
  Of course, if you want to see the source of this page, have a look
