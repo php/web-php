@@ -221,9 +221,12 @@ $uri_aliases = array (
     "register_globals" => "security.globals",
     "registerglobals"  => "security.globals",
     "manual/en/security.registerglobals.php" => "security.globals", // fix for 4.3.8 configure
-	"magic_quotes"     => "security.magicquotes",
-	"magicquotes"      => "security.magicquotes",
+    "magic_quotes"     => "security.magicquotes",
+    "magicquotes"      => "security.magicquotes",
     "gd"               => "image",
+
+    "htaccess"     => "configuration.changes",
+    "php_value"    => "configuration.changes",
 
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
@@ -322,5 +325,7 @@ mirror_redirect(
     '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
 );
-
+/*
+ * vim:et
+ */
 ?>
