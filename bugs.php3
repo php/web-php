@@ -62,7 +62,6 @@ function show_menu($state) {
 
 function show_types($first_item,$show_any,$var_name) {
 	$items = array("Any",
-				   "Feature/Change Request",
 				   "Documentation problem",
 				   "Installation problem",
 				   "Compile Failure",
@@ -81,6 +80,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "dBase related",
 				   "DBM related",
 				   "Misbehaving function",
+				   "Feature/Change Request",
 				   "Other");
 
 	echo "<select name=\"$var_name\">\n<option>$first_item\n";
