@@ -36,9 +36,12 @@ A German and international PHP support company providing
 full PHP support (single incidents, on-call duty), software
 development, training, and performance measurements.</li>
 
-<li><a href="http://www.zend.com/">Zend.com</a><br>
-Zend Technologies offers many PHP related products, support,
-and many more PHP related content.</li>
+<li><a href="http://www.zend.com/">Zend Technologies</a><br>
+Zend Technologies supports the PHP community and promotes
+PHP adoption.  Founded by the authors of the
+<a href="http://www.zend.com/store/products/zend-engine.php">Zend Engine</a>
+and members of the PHP Group, Zend offers both free and commercial
+solutions for PHP.</li>
 </ul>
 
 <a name="associations"><h4>Professional PHP Associations</h4></a>
@@ -137,6 +140,9 @@ PHP tutorials and programs</li>
 <li><a href="http://www.weberdev.com/">WeberDev.com</a><br>
 PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 
+<li><a href="http://devzone.zend.com/">Zend.com DevZone</a><br>
+A community site for developers of all levels, including a code
+gallary, applications, tips, forums, tutorials and more.</li>
 </ul>
 
 
@@ -217,6 +223,9 @@ A growing list of PHP tutorials at TutorialFind</li>
 
 <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br>
 The PHP section on the famous Webmonkey tutorial site</li>
+
+<li><a href="http://www.zend.com/zend/tut/">Zend.com DevZone<br>
+The tutorials section on the Zend.com developer zone</li>
 
 </ul>
 
