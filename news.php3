@@ -57,7 +57,7 @@ function endEntry() {
 
 <? makeEntry( "Interview with the PHP Team", "by <a href=\"mailto:lpdevel@linuxpower.org\">Linuxpower Team</a>", 
 	"http://www.linuxpower.org/display_item.phtml?id=149", "November 17, 1999");?>
-A interview with the core PHP development team: Andi, Andrei, Jim, Rasmus, Sascha, Stig, Thies, and Zeev.
+An interview with the core PHP development team: Andi, Andrei, Jim, Rasmus, Sascha, Stig, Thies, and Zeev.
 <? endEntry(); ?>
 
 <? makeEntry( "PHP-Einf&uuml;hrung", "by <a href=\"mailto:tobias@dnet.it\">Tobias Ratschiller</a>", 
