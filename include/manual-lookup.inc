@@ -2,6 +2,9 @@
 
 // $Id$
 
+// We need this for error reporting 
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+
 // Try to find some variations of keyword with $prefix in the $lang manual
 function tryprefix($lang, $keyword, $prefix)
 {
@@ -143,6 +146,8 @@ function find_manual_page($lang, $keyword)
                 // Match found
                 return $r[0];
             }
+        } else {
+            error_noservice();
         }
     }
     
