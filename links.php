@@ -276,6 +276,15 @@ Commercial accelerator available from Zend Technologies, Inc.</li>
 <h4>Non-English PHP Sites</h4>
 
 <ul>
+<li><b>Bosnian</b>
+<ul>
+
+<li><a href="http://www.php.co.ba">PHP.co.ba</a><br>
+Bosnian site with PHP and SQL manual, tutorials, scripts,
+forum, mailing list, tools, books...</li>
+
+</ul></li>
+
 <li><b>Brazilian</b>
 <ul>
 
