@@ -391,61 +391,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php news_image("http://servercentral.net", "server_central.gif", "Server Central"); ?>
-
-<h1>Server Central Donates Server</h1>
-<p>
- <span class="newsdate">[28-Aug-2003]</span>
- Chicago-based company <a href="http://servercentral.net/">Server Central</a>
- has donated PHP.net a brand new server with a gigabit connection. The box is
- a quad 2.4GHz machine with 2GB ram, so we're going to be using it to power
- our more resource-intensive tasks, including building the manual. Thanks,
- Server Central!
-</p>
-
-<hr />
-
-<h1>European Open Source Development Threatened!</h1>
-<p>
- <span class="newsdate">[27-Aug-2003]</span>
- Today sees an international day of protest against the move by the EU to
- make obtaining a patent easier within Europe. Such patents may cause Open
- Source software such as PHP to infringe on existing licenses and new ones, 
- meaning we would no longer be safe to distribute PHP within Europe. Contact
- your EU Representative to get this cruicial vote blocked. Find out more at
- the <a href="http://swpat.ffii.org/">campaign website</a> 
-</p>
- 
-<hr />
-
-<?php news_image("http://www.php-con.com", "phpcon_2003.gif", "php{con west 2003"); ?>  
-
-<h1>php{con west is announced</h1>
-<p>
- <span class="newsdate">[26-Aug-2003]</span>
- php{con returns to the San Francisco Bay Area with new sessions, PHP gurus
- and a whole new day of PHP-intensive learning. Their program features a full
- day of tutorials, three technical session tracks over two days, an all day 
- coding marathon, Code Sprint, social events, works in progress, and
- presentations from PHP luminaries. Early Bird discounts end on September
- 26th. See the full program and register online at
- <a href="http://www.php-con.com">their website</a>
-</p>
-
-<hr />
-
-<h1>PHP 4.3.3 released!</h1>
-<p>
- <span class="newsdate">[25-Aug-2003]</span>
- The PHP developers are proud to announce the immediate availability of
- <a href="release_4_3_3.php">PHP 4.3.3</a>. This release contains a large
- number of bug fixes and we <strong>strongly</strong> recommend that all
- users of PHP upgrade to this version. Full list of fixes can be found in
- the <a href="ChangeLog-4.php#4.3.3">NEWS</a> file.
-</p>
-
-<hr />
-
 <p class="center"><a href="/news-2003.php">News Archive</a></p>
 
 <?php commonFooter(); ?>
