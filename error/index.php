@@ -3,46 +3,41 @@
 include_once 'prepend.inc';
 
 // ============================================================================
-// For images, display a 404 automatically (no redirect)
-if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) { make404(); }
-
-// ============================================================================
 // Check for a manual in the mirror's default language
 $lang = default_language();
 if (!@is_dir("$DOCUMENT_ROOT/manual/$lang/index.php")) {
     $lang = "en"; // fall back to English
 }
 
+// Get URI for this request (without the leading slash)
+$URI = substr($REQUEST_URI, 1);
+
+// ============================================================================
+// For images, display a 404 automatically (no redirect)
+if (preg_match("!\\.(pdf|gif|jpg|png)$!", $URI)) { make404(); }
+
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
-if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
-    mirror_redirect($array[1]);
+if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
+    mirror_redirect("/$array[1]");
 }
 
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
-if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
-    mirror_redirect("$array[1]/manual/$lang/$array[2]");
+if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
+    mirror_redirect("manual/$lang/$array[1]");
+} elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
+    preg_replace("!.html$!", ".php", $array[1]);
+    mirror_redirect("manual/$lang/print/$array[1]");
 }
-
-// ============================================================================
-// Prepare URI for further manipulation, dropping out leading slash
-$error_notes = $REDIRECT_REDIRECT_ERROR_NOTES
-             ? $REDIRECT_REDIRECT_ERROR_NOTES
-             : $REDIRECT_ERROR_NOTES;
-$uri = substr(
-    $error_notes,
-    strpos($error_notes,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1
-);
-if ($uri[0] == "/") { $uri = substr($uri,1); }
 
 // ============================================================================
 // Printer friendly manual page handling. It's important that this is included,
 // and not redirected, as this way all relative URL's will retain their meaning
 // and point to pages relative to the print dir (which is nonexistent)
-// We need to override the 404 status in that case.
-if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts) &&
+// We need to override the 404 status in these cases too.
+if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
     @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[3]")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
@@ -52,7 +47,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $uri, $parts) &&
 }
 
 // BC: for old HTML directory (.html extension was used in that)
-elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts) &&
+elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
         @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/$parts[2].php")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
@@ -61,7 +56,7 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $uri, $parts) &&
 }
 
 // The index file needs to be handled in a special way
-elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $uri, $parts) &&
+elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &&
         @file_exists("$DOCUMENT_ROOT/manual/$parts[1]/index.php")) {
     header('Status: 200 OK');
     $PRINT_PAGE = TRUE;
@@ -87,6 +82,7 @@ $uri_aliases = array (
     "logos"         => "download-logos",
 
     "README.mirror" => "mirroring", // backward compatibility
+    "dochowto"     => "phpdochowto",
 
     # manual shortcuts
     "ini"          => "configuration",
@@ -114,8 +110,8 @@ $uri_aliases = array (
     "icap"         => "mcal", // mcal is the successor of icap
     
     # external shortcut aliases ;)
-    "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // for backward compatibility with PHP page!
+
     
 );
 
@@ -126,31 +122,31 @@ $external_redirects = array(
 
 // ============================================================================
 // "Rewrite" the URL, if it was a shortcut
-if (isset($uri_aliases[strtolower($uri)])) {
-    $uri = $uri_aliases[strtolower($uri)];
+if (isset($uri_aliases[strtolower($URI)])) {
+    $URI = $uri_aliases[strtolower($URI)];
 }
 
 // ============================================================================
 // Redirect if the entered URI was a PHP page name (except the books page,
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
-if ($uri !=  'books' && file_exists("$DOCUMENT_ROOT/$uri.php")) {
-    mirror_redirect("/$uri.php");
+if ($URI !=  'books' && file_exists("$DOCUMENT_ROOT/$URI.php")) {
+    mirror_redirect("/$URI.php");
 }
 
 // ============================================================================
 // Execute external redirect if a rule exists for the URI
-if (isset($external_redirects[strtolower($uri)])) {
-    mirror_redirect($external_redirects[strtolower($uri)], TRUE);
+if (isset($external_redirects[strtolower($URI)])) {
+    mirror_redirect($external_redirects[strtolower($URI)], TRUE);
 }
 
 // ============================================================================
 // Try to find the URI as a manual entry
 require "manual-lookup.inc";
-if (strchr($uri,'/')) {
+if (strchr($URI, '/')) {
     
     // Find language and function name part (eg. hu/ini)
-    list($lang,$function) = explode('/',$uri,2);
+    list($lang, $function) = explode('/', $URI, 2);
 
     $function = strtolower($function);
     $lang     = strtolower($lang);
@@ -164,7 +160,7 @@ if (strchr($uri,'/')) {
     }
 
 } else {
-    $function = strtolower($uri);
+    $function = strtolower($URI);
 }
 
 // ============================================================================
@@ -186,7 +182,7 @@ if ($try) { mirror_redirect($try); }
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-mirror_redirect('/search.php?show=manual&lang='.urlencode($lang).'&pattern='.urlencode(substr($REQUEST_URI,1)));
+mirror_redirect('/search.php?show=manual&lang=' . urlencode($lang) . '&pattern=' . urlencode($URI));
 
 // A 'good looking' 404 error message page
 function make404()
