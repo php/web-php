@@ -167,7 +167,7 @@ Restrict the search to:<br></td>
 			$where = "PHP Web site";
 		}
 		if (isset($page)) { $off = "&page=$page"; } else { $off = ""; }
-		$query = "words=$words&config=$config&exclude=$exclude&restrict=$restrict$off";
+		$query = escapeshellarg("words=$words&config=$config&exclude=$exclude&restrict=$restrict$off");
 		exec("$htsearch_prog \"$query\"", $result);
 		$rc = count($result);
 		if ($rc<2) {
