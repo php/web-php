@@ -20,18 +20,18 @@ function setupNavigation($data) {
 function makeBullet($url,$number,$offtype,$offnum) {
 	echo "<A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$number',1)\" \n ";
 	echo "onMouseout=\"changebullet('bullet$number',$offnum)\">";
-	echo "<IMG SRC=\"/new/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 BORDER=0 \n NAME=\"bullet$number\">";
+	echo "<IMG SRC=\"/new/gifs/b-bullet-$offtype.gif\" \n WIDTH=10 HEIGHT=10 HSPACE=2 VSPACE=2 BORDER=0 \n NAME=\"bullet$number\">";
 	echo "</A>";
 };
 
 function makeBorderTOC($this) {
-    global $NEXT, $PREV, $UP, $HOME, $TOC;
+    global $NEXT, $PREV, $UP, $HOME, $TOC, $FONTFACE;
     echo "<TABLE BORDER=0 CELLPADDING=1 CELLSPACING=0 WIDTH=\"100%\">\n";
     echo "<TR VALIGN=top>\n";
     echo "<TD WIDTH=10>";
     spc(10, 10);
     echo "<BR></TD>\n";
-    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\">";
+    echo "<TD COLSPAN=2><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
     echo "<A HREF=\"$UP[0]\" onMouseover=\"hide();\" CLASS=sidebartoc>";
     echo "<B>$UP[1]</B></A></TD></TR>\n";
     for ($i = 0; $i < count($TOC); $i++) {
@@ -51,7 +51,7 @@ function makeBorderTOC($this) {
 	}
 	echo "<TR VALIGN=top><TD WIDTH=10>";
 	spc(10,10);
-	echo "<BR></TD>\n<TD WIDTH=15 ALIGN=left>";
+	echo "<BR>\n</TD>\n<TD WIDTH=15 ALIGN=left><FONT SIZE=-1 FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\">";
 	makeBullet($url,$i,$type,$out);
 	echo "<BR>\n</TD>\n<TD WIDTH=100%><FONT FACE=\"$FONTFACE\" COLOR=\"#FFFFFF\" SIZE=-1><A HREF=\"$url\" onMouseover=\"hide();changebullet('bullet$i',1)\" onMouseout=\"changebullet('bullet$i',$out)\" CLASS=sidebartoc>$title<BR></A></TD></TR>\n";
     }
