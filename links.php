@@ -149,7 +149,7 @@ The latest PHP packages and useful tools for Windows<br></li>
 Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl<br></li>
 
 <li><a href="http://www.phpgeek.com/phptriad.php">PHPTriad</a><br>
-Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin and Perl, and
+Automatic install of Apache, PHP, MySQL, MySQL Front, PHPMyAdmin, Perl, and
 some special modules<br></li>
 </ul>
 
