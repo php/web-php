@@ -8,6 +8,17 @@ The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
 information and those questions that seem to be on most people\'s minds.
 </p>
 
+<h3>More Information</h3>
+<p>
+The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>.
+has an overview about which pages are translated to the
+different languages and in which versions of PHP the functions
+are available.<br><br>
+
+If you have license questions, see
+the <a href="/license/">License FAQ</a>
+</p>
+
 <h3>Books</h3>
 <p>
 <a href="/books.php">Books</a> are convenient resources to begin exploring 
@@ -55,10 +66,10 @@ see all the information, you can <a href="/docs.php?sizes=1">click
 here to see the file sizes and dates</a>.
 </p>
 
-<p>Note that the packaged versions of the manual (tar.gz, zip) don't contain
-any directories, so all of the files will be dumped into your current working
-directory when you expand the archive unless the tool you use does
-otherwise.</p>
+<p>Note that the packaged versions of the manual (tar.gz, tar.bz2 amd zip)
+don't contain any directories, so all of the files will be dumped into
+your current working directory when you expand the archive unless
+the tool you use does otherwise.</p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
@@ -181,19 +192,6 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
 
 <?php echo hdelim(); ?>
 
-<h1>More Information</h1>
-
-<ul>
-<li><a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>.
-    This page has a overview about which pages are translated to the
-	different languages and in which versions of PHP the functions
-	are available.
-<li>License questions?  See the <a href="/license/#FAQ">License FAQ</a></li>	
-</ul>
-
-<?php echo hdelim(); ?>
-
-
 <H1>CVS Account</H1>
 <ul>
 <li><a href="/anoncvs.php">CVS instructions</a></li>
@@ -201,15 +199,11 @@ francis&eacute;e et retravaill&eacute;e . De plus, ces docs sont compress&eacute
 with the development of PHP, read this.
 </ul>
 
-
-
 <?php echo hdelim(); ?>
-
 
 <h1>Old/Unsupported Information</h1>
 <ul>
 <li><a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>. 
 </ul>
 
-
-<?php commonFooter("") ?>
+<?php commonFooter(); ?>
