@@ -68,6 +68,7 @@ right away.</blockquote>
 /* Computer Software */
 	title("Computer Software");
 	siteStart();
+	site("Apache Web Server","www.apache.org");
 	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
 	site("Flexform Software","www.flexform.de");
@@ -148,6 +149,7 @@ right away.</blockquote>
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
 	site("easyDNS","www.easydns.com");
 	site("InfoMak","www.infomak.com");
+	site("Mail Chek","mail.chek.com");
 	site("My URLs", "murl.com");
 	site("Webex - Russia","www.webex.ru");
 	siteEnd();
@@ -323,8 +325,8 @@ right away.</blockquote>
 	site("Astrology Forum","www.astroforum.ch");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
+	site("Distributed.Net","www.distributed.net");
 	site("Internet Weather Report","www.internetweather.com");
-	site("Mail Chek","mail.chek.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
 	site("Optical Buyer","www.opticalbuyer.com");
 	site("RacersDirect","www.racersdirect.com");
