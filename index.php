@@ -155,7 +155,7 @@ if ($fp) {
     while (!feof($fp)) {
 
         // Get information event elements from file
-        list($d, $m, $y, $url, $desc, $id) = fgetcsv($fp, 8192);
+        list($d, $m, $y, $ccode, $desc, $id) = fgetcsv($fp, 8192);
 
         // Fgetcvs() returns an array with a single null element
         // for a blank line, which we need to skip
@@ -186,9 +186,9 @@ if ($fp) {
         // There is no event with this description in this month
         if (!isset($seen[$desc])) {
             // Add event to sidebar
-            $RSIDEBAR_DATA .= "$d. <a href=\"cal.php?id=$id\">" .
+            $RSIDEBAR_DATA .= "<span class=\"event_$ccode\">$d. <a href=\"cal.php?id=$id\">" .
                               htmlspecialchars(stripslashes($desc)) .
-                              "</a><br />\n";
+                              "</a></span><br />\n";
             // Set seen flag
             $seen[$desc] = TRUE;
         }
