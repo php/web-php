@@ -52,7 +52,7 @@ PHP related channels on <a href="http://www.efnet.org/">EFNet</a>
 <a href="http://www.efnet.org/channels.html?q=php&s=0">EFNet</a> is there
 again, but has an Error
 -->
- and on <a href="http://www.ludd.luth.se/irc/main.html">IRCNet</a> 
+ and on <a href="http://www.ircnet.net/">IRCNet</a> 
 (like #php and <a href="http://php.de.jayniz.de">#php.de</a>).
 </p>
 ';
