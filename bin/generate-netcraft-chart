@@ -1,10 +1,10 @@
-#!/usr/local/bin/php
+#!/usr/local/bin/php -q
 <?php // -*- C++ -*-
 
 require("./barchart.phl");
 
 $stats = array(
-		/*
+	/*
     199806 => array(71360, 47329),
     199807 => array(81337, 53361),
     199808 => array(90641, 58078),
@@ -12,7 +12,6 @@ $stats = array(
     199810 => array(129757, 73063),
     199811 => array(220286, 81141),
     199812 => array(241924, 87273),
-	*/
     199901 => array(278297, 90264),
     199902 => array(345549, 101140),
     199903 => array(409418, 143667),
@@ -25,6 +24,7 @@ $stats = array(
     199910 => array(931122, 321128),
     199911 => array(1114021, 357481),
     199912 => array(1256216, 378301),
+	*/
     200001 => array(1271060, 391876),
     200002 => array(1412822, 428840),
     200003 => array(1783626, 462510),
@@ -39,17 +39,20 @@ $stats = array(
     200012 => array(4775580, 803889),
     200101 => array(5104536, 832457),
     200102 => array(5558363, 856543),
-    200103 => array(5747237, 882439)
+    200103 => array(5747237, 882439),
+    200104 => array(6156321, 914146),
+    200105 => array(6280233, 941419),
+    200106 => array(6751394, 960954)
 );
 
 $rgb_colors = array(
-    array(205,85,85), // IndianRed3
-    array(72,61,139), // royal blue
-    array(139,58,98), // scarlet/purple
-    array(0,139,139), // green/gray/blue
-    array(238,118,0), // orange
-    array(139,69,19), // dark red-brown
-    array(65,105,225) // clear blue
+    array(205,85,85,15), // IndianRed3
+    array(72,61,139,15), // royal blue
+    array(139,58,98,15), // scarlet/purple
+    array(0,139,139,15), // green/gray/blue
+    array(238,118,0,15), // orange
+    array(139,69,19,15), // dark red-brown
+    array(65,105,225,40) // clear blue
 );
 $currcol = 0;
 $months = array(1 => "Jan", "Feb", "Mar", "Apr", "May", "Jun",

@@ -101,7 +101,7 @@ class barchart {
 
 	 function init($x, $y, $d, $c, $l) {
 		  $this->min_allowed_max = 5;
-		  $this->im    = ImageCreate($x, $y);
+		  $this->im    = ImageCreateTrueColor($x, $y);
 		  $this->width  = $x;
 		  $this->height = $y;
 
@@ -140,11 +140,24 @@ class barchart {
 
 		  $num_colors = count($c);
 
+		  ImageAlphaBlending($this->im, false);
+		  ImageFilledRectangle($this->im, 0, 0, $x, $y, $this->white);
+		  ImageAlphaBlending($this->im, true);
+
 		  for ($i = 0; $i < $num_colors; $i++) {
-				$this->colors[] = ImageColorAllocate($this->im, 
+				if(count($c[$i])>3) {
+					$this->colors[] = ImageColorResolveAlpha($this->im, 
+																 $c[$i][0],
+																 $c[$i][1],
+																 $c[$i][2],
+																 $c[$i][3]);
+
+				} else {
+					$this->colors[] = ImageColorAllocate($this->im, 
 																 $c[$i][0],
 																 $c[$i][1],
 																 $c[$i][2]);
+				}
 		  }
 	 }
 
@@ -352,7 +365,7 @@ class barchart {
 		  $this->draw_legends($this->legend_font);
 		  $this->draw_bars();
 
-		  ImageGif($this->im);
+		  ImagePNG($this->im);
 	 }
 
 
