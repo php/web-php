@@ -443,6 +443,7 @@ Try one of the following sites:
 </p>
 
 <ul>
+  <li><a href="http://www.oinko.net/freephp/">Free PHP hosting directory</a></li>
   <li><a href="http://www.od-site.com/php">www.od-site.com/php</a></li>
 <!--  <li><a href="http://pmcw.dhs.org/">PMCW webservices</a></li> -->
 </ul>
