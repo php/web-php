@@ -4,6 +4,14 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>PHP/MySQL Tutorials on HotWired</h3>
+<p>
+Graeme Merrall has written a 3-part tutorial on PHP/MySQL that is worth a
+read if you are new to PHP.  Head on over to 
+<a href="http://www.hotwired.com/webmonkey/databases/tutorials/tutorial4.html">
+HotWired's WebMonkey Site</a> to read it.
+</p>
+
 <img src="php4zend-small-white.gif" align="right">
 <h3>PHP 4.0 Beta 1 is out!</h3>
 
