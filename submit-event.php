@@ -102,7 +102,7 @@ event has been accepted for inclusion in our calendar.</p>
   if (!$errors) {?>
 <p>The following is a preview of your event submission. Please double-check it
 to make sure all of the information is correct.</p>
-<?
+<?php
   }
 }
 else {?>
