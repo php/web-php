@@ -864,6 +864,7 @@ class Foo {
     public $prop;
     function Func($name) {
         echo "Hello $name";
+    }
 }
 
 reflection_class::export(\'Foo\');
