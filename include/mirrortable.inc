@@ -65,7 +65,7 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
         );
     }
     
-    echo '<div align="center">' . "\n" . 
+    echo '<div class="center">' . "\n" . 
          '<table border="0" cellpadding="3" cellspacing="1" width="' .
          $cnf['width'] . '">' . "\n";
 
@@ -95,7 +95,7 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
                 'flags/' . strtolower($country) . '.png',
                 $COUNTRIES[$country],
                 FALSE,
-                'CLASS="flag"'
+                'class="flag"'
             );
             echo '<br /></td>';
             echo '<td colspan="' . $cnf['datacols'] . '"><b>' .
@@ -140,13 +140,8 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
 
             // Print out mirror provider's link
             echo '<td><small>';
-            print_link(mirror_provider_url($murl), mirror_provider($murl));
+            print_link(mirror_provider_url($murl), htmlspecialchars(mirror_provider($murl)));
             echo '</small><br /></td>' . "\n";
-
-            // Print out search support information
-            // echo '<td><small>';
-            // echo (have_search($murl) ? "with local search" : "&nbsp;");
-            // echo '</small><br /></td>' . "\n";
         }
 
         // End row for this mirror
