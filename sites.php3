@@ -146,6 +146,7 @@ right away.</blockquote>
 	site("film.at - movie listings for Austria","www.film.at");
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("FilmNetwork","www.fnw.de");
+	site("Granada","www.granada.co.uk");
 	site("Hip Hop Archives","www.hiphoparchives.com");
 	site("HitList","www.hitlist.com");
 	site("Independent Musicians Guild","www.scimg.com");
