@@ -1,0 +1,12 @@
+/* TOC elements on manual pages ------------------------------------------- */
+div.toci {
+	background-image: url(http://static.php.net/www.php.net/images/box-0.gif);
+}
+div.toca {
+	background-image: url(http://static.php.net/www.php.net/images/box-1.gif);
+}
+
+/* Left sidebar background ------------------------------------------------ */
+#layout_2, #layout_3 {
+	background-image: url(http://static.php.net/www.php.net/images/leftbar.png);
+}

@@ -1,7 +1,6 @@
 // Default document onload function
 function runOnLoad()
 {
-    addImages();
     searchHistory();
 }
 
@@ -74,53 +73,6 @@ function searchHistory()
                     break;
                 }
             }
-        }
-    }
-}
-
-// Make images appear by the side of TOC items on the manual pages,
-// and let sidebar background images properly display on all sites.
-// This is not a user based function, but a mirror based one. Only
-// php.net has images on a different server. For performance
-// reasons, the code is implemented to run on the client side.
-function addImages()
-{
-    // Check if we are on the master site or not
-    staticContent = (location.hostname == "www.php.net" ||
-                     location.hostname == "php.net") ?
-                     "http://static.php.net/www.php.net/" : "/";
-        
-    // If DOM is supported, get the <div>s
-    if (document.getElementsByTagName) {
-            
-        divs = document.getElementsByTagName("div");
-            
-        // Change the style of every div tag which is in
-        // the "toci" or "toca" class, modifying the class
-        // according to the hostname
-        for (var i = 0; i < divs.length; i++) {
-            if (divs[i].className == "toci") {
-                divs[i].style.backgroundImage = "url(" + staticContent + "images/box-0.gif)";
-            } else if(divs[i].className == "toca") {
-                divs[i].style.backgroundImage = "url(" + staticContent + "images/box-1.gif)";
-            }
-        }
-    }
-    
-    // Check for an element with a given ID
-    if (document.getElementById) {
-            
-        layout_2 = document.getElementById("layout_2");
-        layout_3 = document.getElementById("layout_3");
-        
-        // Two column layout
-        if (layout_2) {
-            layout_2.style.backgroundImage = "url(" + staticContent + "images/leftbar.png)";
-        }
-        
-        // Three column layout
-        else if (layout_3) {
-            layout_3.style.backgroundImage = "url(" + staticContent + "images/leftbar.png)";
         }
     }
 }

@@ -98,13 +98,19 @@ function site_header($title = '', $config = array())
         $layout_helper = "<div id=\"layout_{$PAGE_COLUMNS}_helper\">";
     }
     
+    // Choose name of mirror site specific CSS file
+    $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
+    
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
  <title>PHP{$title}</title>
- <style type="text/css">@import url("{$_SERVER['STATIC_ROOT']}/sitewide.css");</style>
+ <style type="text/css">
+  @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
+  @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
+ </style>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base$meta
 </head>
@@ -406,11 +412,15 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     if (!empty($SEARCH_BASE))          { $PBASE = $SEARCH_BASE; }
     if (!empty($_SERVER['BASE_HREF'])) { $PBASE = $_SERVER['BASE_HREF']; }
 
+    // Choose name of mirror site specific CSS file
+    $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
+
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/style.css" />
+ <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT'] . "/styles/" . $mirror_specific_style; ?>.css" />
  <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
  <script language="Javascript" type="text/javascript" src="<?php echo $_SERVER['STATIC_ROOT']; ?>/userprefs.js"></script>
 <?php echo (isset($PBASE) ? ' <base href="' . $PBASE . '" />' : ''); ?></head>
