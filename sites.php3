@@ -167,6 +167,9 @@ removed right away.</blockquote>
 	site("USRentals","www.usrentals.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
+	site("The Longaberger Company","www.longaberger.com");
+	site("BART'S Water Sports","www.bartswatersports.com");
+	site("Clabber Girl Baking Powder","www.hulman.com");
 	siteEnd();
 
 /* Telecommunications */
