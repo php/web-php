@@ -5,7 +5,7 @@ $SIDEBAR_DATA='
 <h3>More tutorials</h3>
 <p>
 There are other excellent PHP tutorials available:<br><br>
-&nbsp; <a href="http://conf.php.net/">PHP conference presentations</a><br>
+&nbsp; <a href="http://conf.php.net/">PHP presentations</a><br>
 &nbsp; <a href="http://www.zend.com/zend/art/intro.php">Zend Intro to PHP</a><br>
 &nbsp; <a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a><br>
 &nbsp; <a href="http://www.devshed.com/Server_Side/PHP/Introduction/">DevShed</a><br>
