@@ -228,7 +228,7 @@ A Swedish PHP portal with articles, news, forums and much more<br></li>
 <ul>
 
 <li><a href="http://php.spinacz.pl">php.spinacz.pl</a><br>
-The bigest Polish site about programming in PHP -- A
+The biggest Polish site about programming in PHP -- A
 phpbuilder.com-like site in Polish.<br></li>
 </ul></li>
 </ul>
