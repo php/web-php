@@ -298,7 +298,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				$comments = stripslashes($comments);
 				$text = "Bug #$id has been deleted from the database by $user\nComments: $comments\n";
 			} else {
-				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments: $comments\n";
+				$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n $comments\n";
 				$text .= "\nFull Bug description available at: http://ca.php.net/bugs.php3?id=$id\n";
 				$text = stripslashes($text);
 			}
