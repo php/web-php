@@ -1,24 +1,10 @@
 <?php
-require_once 'prepend.inc';
 
-// A 'good looking' 404 error message page
-function make404()
-{
-    global $REQUEST_URI;
-    header('Status: 404 Not Found');
-    header("Cache-Control: public, max-age=600");
-    commonHeader('404 Not Found');
-    echo "<h1>Not Found</h1>\n";
-    echo "<p>The page <b>" . htmlspecialchars($REQUEST_URI) . "</b> could not be found.</p>\n";
-    commonFooter();
-}
+include_once 'prepend.inc';
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
-if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) {
-    make404();
-    exit;
-}
+if (preg_match('/\.(pdf|gif|jpg|png)$/', $REQUEST_URI)) { make404(); }
 
 // ============================================================================
 // Check for a manual in the mirror's default language
@@ -30,16 +16,14 @@ if (!@is_dir("$DOCUMENT_ROOT/manual/$lang/index.php")) {
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
-    header("Location: http://$SERVER_NAME$array[1]");
-    exit;
+    mirror_redirect($array[1]);
 }
 
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
 if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
-    header("Location: http://$SERVER_NAME$array[1]/manual/$lang/$array[2]");
-    exit;
+    mirror_redirect("$array[1]/manual/$lang/$array[2]");
 }
 
 // ============================================================================
@@ -151,15 +135,13 @@ if (isset($uri_aliases[strtolower($uri)])) {
 // which we display in the mirror's language or the explicitly specified
 // language [see below])
 if ($uri !=  'books' && file_exists("$DOCUMENT_ROOT/$uri.php")) {
-    header("Location: http://$SERVER_NAME/$uri.php");
-    exit;
+    mirror_redirect("/$uri.php");
 }
 
 // ============================================================================
 // Execute external redirect if a rule exists for the URI
 if (isset($external_redirects[strtolower($uri)])) {
-    header("Location: " . $external_redirects[strtolower($uri)]);
-    exit;
+    mirror_redirect($external_redirects[strtolower($uri)], TRUE);
 }
 
 // ============================================================================
@@ -187,32 +169,36 @@ if (strchr($uri,'/')) {
 
 // ============================================================================
 // Quick access to revcheck output, build logs, books for various languages and
-// the PHP Documentation Howto for backward compatibility
-if ($function == "rev") {
-    header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html.gz");
-    exit;
-} elseif ($function == "blog") {
-    header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
-    exit;
-} elseif ($function == "books") {
-    header("Location: http://$SERVER_NAME/books.php?type_lang=PHP_$lang");
-    exit;
-} elseif ($function == "phpdochowto") {
-    header("Location: http://$SERVER_NAME/manual/howto/index.html");
-    exit;
+// the PHP Documentation Howto for backward compatibility [breaks left out intentionally]
+switch ($function) {
+    case "rev"         : mirror_redirect("/manual/$lang/revcheck.html.gz");
+    case "blog"        : mirror_redirect("/manual/$lang/build.log.gz");
+    case "books"       : mirror_redirect("/books.php?type_lang=PHP_$lang");
+    case "phpdochowto" : mirror_redirect("/manual/howto/index.html");
 }
 
 // ============================================================================
 // Try to find the page using this language as a manual page (lang is the language
 // from the URI, or the default language if it was not there in the URI
 $try = find_manual_page($lang, $function);
-if ($try) {
-    header("Location: $try");
-    exit;
-}
+if ($try) { mirror_redirect($try); }
 
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-header('Location: http://'.$SERVER_NAME.'/search.php?show=manual&lang='.urlencode($lang).'&pattern='.urlencode(substr($REQUEST_URI,1)) );
+mirror_redirect('/search.php?show=manual&lang='.urlencode($lang).'&pattern='.urlencode(substr($REQUEST_URI,1)));
+
+// A 'good looking' 404 error message page
+function make404()
+{
+    global $REQUEST_URI;
+    header('Status: 404 Not Found');
+    header("Cache-Control: public, max-age=600");
+    commonHeader('404 Not Found');
+    echo "<h1>Not Found</h1>\n";
+    echo "<p>The page <b>" . htmlspecialchars($REQUEST_URI) . "</b> could not be found.</p>\n";
+    commonFooter();
+    exit;
+}
+
 ?>

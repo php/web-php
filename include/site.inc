@@ -124,6 +124,28 @@ function mirror_status($site = FALSE)
     return $MIRRORS[$site][7];
 }
 
+// Redirect to an URI on this mirror
+// site or outside this site
+function mirror_redirect($absoluteURI, $remote = FALSE)
+{
+    global $MYSITE;
+
+    // A local or remote redirect is needed
+    if (!$remote) {
+        $URI = substr($MYSITE, 0, -1) . $absoluteURI;
+    } else {
+        $URI = $absoluteURI;
+    }
+
+    // Do a redirection, if headers are not sent
+    if (!headers_sent()) {
+        header("Location: $URI");
+    }
+
+    // Always exit (the page is not to be displayed)
+    exit;
+}
+
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is
