@@ -1,6 +1,6 @@
 <?php
 include_once 'prepend.inc';
-commonHeader("Mirroring php.net");
+commonHeader("Mirroring The PHP Website");
 ?>
 
 <p>
