@@ -198,6 +198,25 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/thephpdevelopmte"
+><IMG SRC="/jpgs/schmid_cartus.jpg" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827258774/thephpdevelopmte"
+>PHP 4. Dynamische Webauftritte professionell realisieren</A><BR>
+by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus<BR>
+Mit einem Vorwort von <A HREF="http://www.zend.com/zend/hof/andi.php">Andi Gutmans</A> und <A HREF="http://www.zend.com/comm_person.php?id=12">Zeev Suraski</A><BR>
+Unter Mitwirkung von 
+<A HREF="http://www.zend.com/comm_person.php?id=38">Wolfgang Drews</A>,
+<A HREF="http://www.zend.com/comm_person.php?id=33">Hartmut Holzgraefe</A>,
+<A HREF="http://www.zend.com/comm_person.php?id=37">Uwe Steinmann</A> und
+Christian Wenz<BR>
+<SMALL>in German, Markt+Technik, Dec 2000, ISBN 3-8272-5877-4, 640 pages</SMALL><BR>
+<SMALL><A HREF="http://www.php-buch.de/">weitere Informationen</A><BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 ><IMG SRC="/gifs/book-php-german.gif" BORDER=0 ALIGN="left"
 ></A><BR>
@@ -205,7 +224,7 @@ in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3827255244/thephpdevelopmte"
 >PHP - Dynamische Webauftritte professionell realisieren</A><BR>
 by <A HREF="http://zend.com/zend/hof/schmid.php">Egon Schmid</A>, Christian Cartus, Richard Blume<BR>
-<SMALL>in German, Markt&Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
+<SMALL>in German, Markt+Technik, Nov 1999 [3. Druck], ISBN 3-8272-5524-4, 477 pages</SMALL><BR>
 <SMALL><A HREF="http://www.dynamic-webpages.de/11.buecher.php?buchID=2">weitere Informationen</A><BR>
 </TD>
 </TR>
