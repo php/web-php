@@ -90,7 +90,8 @@ any suggestions using the text field in the form.
 <?php print_link("http://weblabor.hu/php/newchm.php",
 "Please complete our survey"); ?> 
 (there is no need to provide any personal details
-about yourself).
+about yourself). We also included links to proposed
+designs. See and mail us your opinions.
 <br clear="all">
 </p>
 
