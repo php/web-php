@@ -231,30 +231,6 @@ site_header("Downloads");
    </li>
   </ul>
  </li>
- <li>PHP 4.3.1
-  <ul>
-   <li>
-    <?php download_link('php-4.3.1.tar.bz2','PHP 4.3.1 (tar.bz2)'); ?> - 17 February 2003<br />
-    <span class="md5sum">md5: bbfe584acb3549c62bb61355165e2ca6</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.1.tar.gz', 'PHP 4.3.1 (tar.gz)');  ?> - 17 February 2003<br />
-    <span class="md5sum">md5: d4a34efe145b43ed10dbd95825686065</span>
-   </li>
-  </ul>
- </li>
- <li>PHP 4.3.0
-  <ul>
-   <li>
-    <?php download_link('php-4.3.0.tar.bz2','PHP 4.3.0 (tar.bz2)'); ?> - 27 December 2002<br />
-    <span class="md5sum">md5: 6a3e1ad25cc912816c1f958cd4507767</span>
-   </li>
-   <li>
-    <?php download_link('php-4.3.0.tar.gz', 'PHP 4.3.0 (tar.gz)');  ?> - 27 December 2002<br />
-    <span class="md5sum">md5: 9e0eb9ee8e9193ee0a8aea2f428ec3de</span>
-   </li>
-  </ul>
- </li>
  <li>PHP 3.0.x (latest)
   <ul>
    <li>
