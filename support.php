@@ -1,7 +1,58 @@
 <?php
 require_once 'prepend.inc';
+
+$SIDEBAR_DATA='
+<b>Documentation</b>
+<p>
+A good place to start is by skimming through the ever-growing <a
+href="/FAQ.php">FAQ</a>.  Then have a look at the online manual and
+other resources in the <a href="/docs.php">documentation</a> section.
+</p>
+
+<b>Books</b>
+<p>
+<a href="/books.php">Books</a> are convenient resources to begin exploring 
+PHP. <a href="/books.php">The titles listed here</a> will help you to start 
+learning PHP, as well as extending your existing knowledge.
+</p>
+
+<b>User Groups</b>
+<p>
+PHP user groups have started popping up.  Christopher
+R. Moewes-Bystrom is running a PHP user group registry at <a
+href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
+</p>
+
+<b>Sample Code</b>
+<p>
+Looking for some more sample PHP scripts?  Our <A
+HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
+great places to find many example scripts and useful functions, organized for 
+your searching pleasure!
+</p>
+
+<b>Knowledge Base</b>
+<p>
+The knowledge base is a growing collection of PHP related information in
+a searchable question and answer format. Anyone can contribute, and
+everyone is encouraged to do so. You can visit the Knowledge Base
+at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
+</p>
+
+<b>Instant Resource Center</b>
+<p>
+Otherwise known as IRC or Internet Relay Chat. Here you can usually find
+experienced PHP people sitting around doing nothing on the #php channel
+on <a href="http://openprojects.nu">OpenProjects</a>. There is also a #php
+channel on EFNet, but due to the difficulties many people have getting on and
+staying on that network we are migrating to the OpenProjects network.
+</p>
+';
+
 commonHeader("Support");
 ?>
+
+<h1>Mailing Lists</h1>
 
 <?php
 if (isset($maillist)) {
@@ -37,57 +88,11 @@ complete your request.
 } else {
 
 ?>
-<h1>Documentation</h1>
-<P>
-A good place to start is by skimming through the ever-growing <a
-href="/FAQ.php">FAQ</a>.  Then have a look at the online manual and
-other resources in the <a href="/docs.php">documentation</a> section.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Books</h1>
-<P>
-<a href="/books.php">Books</a> are convenient resources to begin exploring 
-PHP. <a href="/books.php">The titles listed here</a> will help you to start 
-learning PHP, as well as extending your existing knowledge.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Reporting Bugs</h1>
-<P>If you can't resolve your problem from the
-available documentation or mailing list archives, and you think it might
-be a bug, a <a href="http://bugs.php.net">Bug Database</a> has
-been established for tracking bugs and ensuring that all reported bugs
-get addressed.  If you see a problem, please tell us so we can address it.
-Please read <a href="http://bugs.php.net/bugs-dos-and-donts.php"
->Dos & Don'ts</a> before posting a report.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>User Groups</h1>
 <p>
-PHP user groups have started popping up.  Christopher
-R. Moewes-Bystrom is running a PHP user group registry at <a
-href="http://www.phpusergroups.org/">http://www.phpusergroups.org/</a>.
+There are many PHP-related mailing lists available. Most of them
+have archives are available, and many are also available as newsgroups
+on our <a href="news://news.php.net">news server</a>
 </p>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Mailing Lists</h1>
-<P>
-One of the best resources is the very friendly and helpful mailing
-lists. There are many PHP-related mailing lists available.
 
 <?php
 
@@ -98,59 +103,59 @@ lists. There are many PHP-related mailing lists available.
     Array (
       'php-announce', 'Announcements',
       'Announcements of new PHP releases are sent to this very low-volume list',
-      true, false, false
+      true, false, false, "php.announce"
     ),
     Array (
       'php-general', 'General user list',
       'This is a really high volume general list for PHP users',
-      false, true, true
+      false, true, true, "php.general"
     ),
     Array (
       'php-windows', 'Windows PHP users list',
       'Using PHP on Microsoft Windows',
-      false, true, true
+      false, true, true, "php.windows"
     ),
 
     'Subject specific lists for PHP users',
     Array (
       'php-install', 'Installation issues and problems',
       'How to install PHP with partiucular configurations, and servers',
-      false, true, true
+      false, true, true, "php.install"
     ),
     Array (
       'php-db', 'Databases and PHP',
       'This list is for the discussin of PHP database topics',
-      false, true, true
+      false, true, true, "php.db"
     ),
     Array (
       'php-i18n', 'Internationalization',
       'Internationalization (i18n) and localization (l10n) issues and features',
-      false, true, true
+      false, true, true, "php.i18n"
     ),
     Array (
       'php-migration', 'Migration from earlier versions',
       'Discussion of migration from earlier versions of PHP',
-      false, true, true
+      false, true, true, "php.migration"
     ),
     Array (
       'pear-general', 'PEAR general list',
       'A list for users of PEAR, an open-source common code library for PHP',
-      false, true, true
+      false, true, true, "php.pear.general"
     ),
     Array (
       'php-template', 'Templates mailing list',
       'A list for those working with template engines in PHP',
-      false, true, true
+      false, true, true, "php.template"
     ),
     Array (
       'php-gtk', 'PHP-GTK mailing list',
       'A list for those who would like to use PHP to write client-side GUI applications' ,
-      false, true, false
+      false, true, false, "php.gtk"
     ),
     Array (
       'php-kb', 'Knowledge Base list',
       'This list receives daily mailings with summaries of topics on the user list, as well as others drawn from the <a href="#phpkb">Knowledge Base</a>',
-      false, true, false
+      false, true, false, "php.kb"
     ),
     Array (
       'phplib', 'PHPLIB mailing list',
@@ -167,22 +172,22 @@ lists. There are many PHP-related mailing lists available.
     Array (
       'php-dev', 'Developer list',
       'A medium volume list for those who want to help out with the development of PHP',
-      false, true, false
+      false, true, false, "php.dev"
     ),
     Array (
       'php-beta', 'Beta list',
       'A low volume list for users interested in early access to PHP releases',
-      false, false, false
+      false, false, false, "php.beta"
     ),
     Array (
       'pear-dev', 'PEAR developers list',
       'A list for developers of PEAR, an open-source common code library for PHP',
-      false, true, true
+      false, true, true, "php.pear.dev"
     ),
     Array (
       'php-cvs', 'CVS commit list',
       'All the commits of the cvs PHP code repository are posted to this list automatically',
-      true, true, false
+      true, true, false, "php.cvs"
     ),
     Array (
       'php-cvs-daily', 'Daily CVS commit summary',
@@ -192,24 +197,24 @@ lists. There are many PHP-related mailing lists available.
     Array (
       'pear-cvs', 'PEAR CVS list',
       'All the commits of the cvs PEAR code repository are posted to this list automatically',
-      false, true, true
+      false, true, true, "php.pear.cvs"
     ),
     Array (
       'phpdoc', 'PHP documentation list',
       'List for the authors of the PHP documentation with CVS commits',
-      false, true, false
+      false, true, false, "php.doc"
     ),
     Array (
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
-      false, true, false
+      false, true, false, "php.qa"
     )
   
   );
 
 ?>
 
-<form method="post" action="http://www.php.net/support.php">
+<form method="POST" action="http://www.php.net/support.php">
 <p>
 <table cellpadding="5" cellspacing="1">
 <?php
@@ -221,6 +226,7 @@ while ( list(, $listinfo) = each($mailing_lists)) {
 		echo '<th>' . $listinfo . '</th>';
 		echo '<th>Moderated</th>';
 		echo '<th>Archive</th>';
+		echo '<th>Newsgroup</th>';
 		echo '<th>Normal</th>';
 		echo '<th>Digest</th>';
 		echo '</tr>' . "\n";
@@ -231,6 +237,7 @@ while ( list(, $listinfo) = each($mailing_lists)) {
 		echo '<td align="left"><b>' . $listinfo[1] . '</b><br><small>'. $listinfo[2] . '</small></td>';
 		echo '<td>' . ($listinfo[3] ? 'yes' : 'no') . '</td>';
 		echo '<td>' . ($listinfo[4] ? make_link("http://marc.theaimsgroup.com/?l=".$listinfo[0], 'yes') : 'n/a') . '</td>';
+		echo '<td>' . ($listinfo[6] ? make_link("news://news.php.net/".$listinfo[6], 'yes') : 'n/a') . '</td>';
 		echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '"></td>';
 		echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="'.$listinfo[0].'-digest">' : 'n/a' ) . '</td>';
 		echo '</tr>' . "\n";
@@ -274,9 +281,8 @@ Archives for some of these mailing lists are also available at
 per month currently. Do the math. That translates to about 80 messages
 per day. If your mailbox can't handle this sort of traffic you might
 want to consider subscribing to the digest list instead (two messages
-per day). You can also read the mailing list using the archives with
-a web interface, or if you like reading things with a news reader, you
-can read it at <a href="news://news.netimages.com/php3.general">news.netimages.com</a>.
+per day), using the news server, or reading the mailing list using the
+archives. 
 </p>
 
 <p>
@@ -286,25 +292,7 @@ on the top-right of every page.
 </p>
 
 
-
 <? echo hdelim(); ?>
-
-
-<h1>Newsgroups</h1>
-<p>
-The mailing lists hosted at lists.php.net are also gatewayed to
-newsgroups on the server at <a href="news://news.php.net/">news.php.net</a>.
-</p>
-
-<p>
-You can both read and post to the mailing lists through the news
-interface.
-</p>
-
-
-
-<? echo hdelim(); ?>
-
 
 <h1>Local Mailing Lists</h1>
 <p>
@@ -325,56 +313,6 @@ discussions).
   <li><a href="mailto:lista-subscribe@phpes.com">Spanish PHP User's Mailing List</a>
   <li><a href="http://phptr.baslangic.net/">Turkish PHP User's Mailing List</a>
 </ul>
-
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Sample Code</h1>
-<P>
-Looking for some more sample PHP scripts?  Our <A
-HREF="/links.php">links page</A> page lists some archives of sample PHP code - 
-great places to find many example scripts and useful functions, organized for 
-your searching pleasure!
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<a name="phpkb"></a>
-<h1>Knowledge Base</h1>
-<P>
-The knowledge base is a growing collection of PHP related information in
-a searchable question and answer format. Anyone can contribute, and
-everyone is encouraged to do so. You can visit the Knowledge Base
-at <a href="http://www.faqts.com/">http://www.faqts.com/</a>.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Getting the Latest Development Version</h1>
-<P>
-PHP is developed using CVS, so it's possible to obtain the latest
-development release at any time. Further instructions can be found in
-the web interface of the <a href="http://cvs.php.net">PHP CVS tree</a>.
-</P>
-
-
-<? echo hdelim(); ?>
-
-
-<h1>Instant Resource Center</h1>
-<P>
-Otherwise known as IRC or Internet Relay Chat. Here you can usually find
-experienced PHP people sitting around doing nothing on the #php channel
-on <a href="http://openprojects.nu">OpenProjects</a>. There is also a #php
-channel on EFNet, but due to the difficulties many people have getting on and
-staying on that network we are migrating to the OpenProjects network.
-</p>
 
 <?php
 }
