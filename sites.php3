@@ -362,6 +362,7 @@ right away.</blockquote>
 	title("Sports");
 	siteStart();
 	site("Disc Golf Birmingham","discgolf.bham.al.us");
+	site("Indianapolis 500 Web Site","www.indy500.com");
 	site("Jason Kidd's Site","www.jasonkidd.net");
 	site("Oakland Raiders","www.raiders.com");
 	site("Professional Disc Golf Association","www.pdga.com");
