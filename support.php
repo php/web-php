@@ -145,11 +145,6 @@ are searchable.
       false, true, false, "php.gtk"
     ),
     Array (
-      'php-kb', 'Knowledge Base list',
-      'This list receives daily mailings with summaries of topics on the user list, as well as others drawn from the <a href="#phpkb">Knowledge Base</a>',
-      false, true, false, "php.kb"
-    ),
-    Array (
       'phplib', 'PHPLIB mailing list',
       'List of the open source PHP code library',
       false, true, false
