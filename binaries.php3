@@ -73,16 +73,8 @@ commonHeader("Download PHP Apache+PHP Binary Tarballs for UNIX");
 <FONT SIZE=+1><B>Choose a country to download from:</B></FONT><BR>
 <I>(the closest has automagically been selected for you)</I><BR>
 <BR>
-The binary distributions on this page are experimental.  The goal is that they
-will help get you up and running quickly so you can try Apache+PHP for yourself
-without needing to learn how to compile both packages.  These tarballs all include
-a minimal Apache-1.3.0 installation with the standard set of Apache modules 
-enabled along with PHP support.  The PHP module includes support for MySQL 3.21.30,
-so if you have MySQL 3.21.x installed on your system these binary distributions should
-work right out of the box with your database.  For other configurations you will have
-to compile Apache + PHP yourself.  Each tarball includes a 
-<a href="README-binaries.txt">README</a> file which explains exactly how the tarball 
-was built.
+The binary distributions on this page are experimental, unsupported and most
+likely outdated.  Building from the source tarball is strongly suggested.
 <BR><BR>
 
 <CENTER>
@@ -132,33 +124,9 @@ while ($site = current($showsites)) {
 		$lastlocation=$location;
 	}
 	echo "<FONT SIZE=-1><UL>\n";
-	$solaris251_file = "${site}${srcdir}httpd-php-solaris251.tar.gz";
-	$solaris26_file = "${site}${srcdir}httpd-php-solaris26.tar.gz";
-	$hpux1020_file = "${site}${srcdir}httpd-php-hpux1020.tar.gz";
-	$linux21_file = "${site}${srcdir}httpd-php-linux21.tar.gz";
-	$irix63_file = "${site}${srcdir}httpd-php-irix63.tar.gz";
-	$freebsd225_file = "${site}${srcdir}httpd-php-freebsd225.tar.gz";
 	$rpm_i386_file = "${site}${srcdir}mod_php3-3.0.5-1.i386.rpm";
 	$rpm_src_file = "${site}${srcdir}mod_php3-3.0.5-1.src.rpm";
 	$amiga_file = "${site}${srcdir}Apache-1.3.3-PHP-3.0.6.lha";
-	echo "<LI>";
-	download_link($solaris251_file, "($method) Solaris 2.5.1 Apache $apache_version + PHP $php_version binary");
-	echo "\n";
-	echo "<LI>";
-	download_link($solaris26_file, "($method) Solaris 2.6 Apache $apache_version + PHP $php_version binary");
-	echo "\n";
-	echo "<LI>";
-	download_link($hpux1020_file, "($method) HP-UX 10.20 Apache $apache_version + PHP $php_version binary");
-	echo "\n";
-	echo "<LI>";
-	download_link($linux21_file, "($method) Linux 2.1.x (Redhat 5.x) Apache $apache_version + PHP $php_version binary");
-	echo "\n";
-	echo "<LI>";
-	download_link($irix63_file, "($method) Irix 6.3 Apache $apache_version + PHP $php_version binary");
-	echo "\n";
-	echo "<LI>";
-	download_link($freebsd225_file, "($method) FreeBSD 2.2.5 Apache $apache_version + PHP $php_version binary");
-	echo "\n";
 	echo "<LI>";
 	download_link($rpm_i386_file, "($method) i386 RPM, dynamically loadable Apache 1.3 module");
 	echo "\n";
