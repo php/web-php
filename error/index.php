@@ -39,8 +39,8 @@ if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
-if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
-    mirror_redirect("/manual/$LANG/$array[1]");
+if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
+    mirror_redirect("/manual/$LANG$array[1]");
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
     $array[1] = preg_replace("!.html$!", ".php", $array[1]);
     mirror_redirect("/manual/$LANG/print/$array[1]");
