@@ -18,6 +18,7 @@ the provider's homepage:
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
   <th>Country</th>
+  <th>Mirror Adress</th>
   <th>Provider</th>
   <th>Default Language</th>
  </tr>
@@ -26,9 +27,11 @@ the provider's homepage:
   foreach ($MIRRORS as $murl => $mdata) {
     if ($mdata[4] != 1) { continue; }
     echo '<tr bgcolor="#e0e0e0"><td>';
-    if ($mprevious != $mdata[0]) { echo make_link($murl, $COUNTRIES[$mdata[0]]); }
+    if ($mprevious != $mdata[0]) { echo $COUNTRIES[$mdata[0]]; }
     else { echo "&nbsp;"; }
-    echo '</td><td>' . make_link($mdata[3], $mdata[1]) . '</td><td>$mdata[6]</td></tr>';
+    echo '</td><td>' . make_link($murl, $murl); .
+         '</td><td>' . make_link($mdata[3], $mdata[1]) . 
+         '</td><td>' . $mdata[6] . '</td></tr>';
     $mprevious = $mdata[0];
   }
 ?>
