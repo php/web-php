@@ -8,6 +8,10 @@ em {
 	font-style: italic;
 }
 
+.error {
+        color: #cc0000;
+}
+
 .newsDate {
 	font-size: 85%;
 	font-style: italic;
