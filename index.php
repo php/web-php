@@ -82,6 +82,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php echo make_image("phpmag.gif", "PHP Magazin", "right"); ?>
+
+<h1>PHP Magazin out now!</h1>
+<p>
+<font class="newsDate">[26-Mar-2002]</font>
+The Software &amp; Support Verlag, based in Frankfurt,
+Germany, has now published a magazine on PHP as a
+tribute to the steadily growing German PHP community.
+Editor in chief of the new magazine is Bjoern Schotte.
+More information can be found at
+<a href="http://www.phpmag.de/">www.phpmag.de</a>.
+
+<?php echo hdelim(); ?>
+
 <h1>New PHP.net URL Howto</h1>
 <p>
 <font class="newsDate">[23-Mar-2002]</font>
