@@ -53,6 +53,11 @@ companies to have one unique place for PHP solutions.</li>
 The goal of the German PHP Association, PHP Verein, is 
 to push PHP, as well as to serve as a junction for all 
 parties interested in PHP.</li>
+
+<li><a href="http://www.phpquebec.org/">PHP Qu&eacute;bec</a><br>
+PHP Qu&eacute;bec promotes PHP for professional users in Qu&eacute;bec, Canada.
+Every month, companies hold sessions about their use of PHP, 
+their customer cases and their solutions.</li>
 </ul>
 
 <h4>PHP Link Catalogs</h4>
