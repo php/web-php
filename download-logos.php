@@ -220,7 +220,7 @@ all in one .ICO file
 </TD>
 <TD ALIGN=left WIDTH=67%><FONT FACE="<? echo $FONTFACE; ?>">
 <UL>
-<LI>Three 32 x 32 PHP3 icons for Windows
+<LI>Three 32 x 32 PHP 3 icons for Windows
 <LI>transparent backgrounds
 <LI>suitable as icons for your desktop
 <LI>Available in:
