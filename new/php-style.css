@@ -9,10 +9,11 @@
 .example {
     margin-top: 5px;
     margin-bottom: 5px;
-    border-right-width: 1;
+    margin-left: 5px;
     background: #E0E0E0;
 }
 
 .programlisting {
+    margin-left: 15px;
     font-family: courier;
 }
