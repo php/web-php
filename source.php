@@ -8,7 +8,6 @@ the plaintext script.<br><br>
 
 If you\'re interested in what\'s behind the several functions we
 used, you can always take a look at the source of the<br>
-&nbsp; ' . make_link("/source.php?url=/include/shared.inc", "shared.inc") . ',<br>
 &nbsp; ' . make_link("/source.php?url=/include/prepend.inc", "prepend.inc") . ',<br>
 &nbsp; ' . make_link("/source.php?url=/include/site.inc", "site.inc") . ',<br>
 &nbsp; ' . make_link("/source.php?url=/include/layout.inc", "layout.inc") . ',<br>
