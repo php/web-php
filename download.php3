@@ -44,7 +44,7 @@
 		<a href="http://www.caraveo.com/php/php3latest.zip">latest patched version</a> may also be downloaded.
 	</td>
 	<td align="center">
-		<a href="http://www.caraveo.com/php/php3a1win32.zip"><img src="gifs/usa.gif" border="0"></a>
+		<a href="http://www.caraveo.com/php/php3a1win32.zip"><img src="gifs/usa.gif" width="100" height="64" border="0"></a>
 	</td>
 	</tr>
 </table>
