@@ -57,7 +57,7 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3446213015/thephpdevelopmte"
 >PHP - Grundlagen und L&ouml;sungen</A><BR>
-<SMALL>Webserver-Programmierung unter Windows und Linux</SMALL><BR>
+Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
 <SMALL>in German</SMALL><BR>
 <SMALL><A HREF="http://www.dynamic-webpages.de/books.php3">weitere Informationen</A><BR>
