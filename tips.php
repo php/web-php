@@ -41,7 +41,7 @@ For a description of PHP.net shortcut URLs, please visit our
 Open the Preferences dialog box, select Searches and then Internet Sites.
 Click New, add "PHP Quick Reference" as the Title, and "http://www.php.net/manual-lookup.php?function=" as the URL. If you add
 a letter in the Key column (eg. "p") you can search using the address bar
-with that letter (eg. "p str_replace"). Otherwise, use Edit &lt; Find (Cmd-F)
+with that letter (eg. "p str_replace"). Otherwise, use Edit &gt; Find (Cmd-F)
 and select "On the Internet" under Find and choose "PHP Quick Reference" as
 the search site.
 </p>
