@@ -51,6 +51,9 @@ function find_manual_page_slow($lang, $keyword)
         "feature-", "control-structures.", "language."
     );
 
+    // Remove .. for security reasons
+    $keyword = str_replace("..", "", $keyword);
+    
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
         $found = tryprefix($lang, $keyword, $section);
