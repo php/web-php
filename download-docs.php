@@ -21,11 +21,15 @@ here to see all the file sizes and dates</a>.
 
 <h3>Tip for Windows users</h3>
 <p>
-Note, that the recent versions of WinZip and other
-zip programs on Windows can handle .tar.gz compressed
-files. If you have such a program, you can save
-download time for yourself, if you choose the .tar.gz
-formats, instead of .zip.
+Note that there are software to handle .tar.gz
+and .bz2 archives for Windows. WinZip includes
+support for .tar.gz, WinRAR supports .bz2, and
+Redhat also hosts
+<a href="http://sources.redhat.com/bzip2/">free
+downloads of .bz2 tools for Windows</a>.
+You can save download time for yourself, if you
+choose the .tar.gz or .bz2 formats, instead of
+.zip.
 </p>
 ';
 
