@@ -23,6 +23,14 @@ not only autoconf installed, but also automake and libtool.</p>
 here's how.<p>
 
 <ul>
+	<li>It is recommended that you configure CVS by putting this in your <tt>~/.cvsrc</tt> file:
+<pre>
+cvs -z4
+update -d -P
+checkout -P
+diff -u
+</pre>
+
 	<li>Login to the PHP CVS repository.  Use <strong>phpfi</strong> as the password.<br>
 		<pre>cvs -d :pserver:cvsread@cvs.php.net:/repository login</pre></li>
 	<li>Obtain the PHP 4.0 CVS tree:<br>
