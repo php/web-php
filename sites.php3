@@ -62,7 +62,7 @@ right away.</blockquote>
 	siteStart();
 	site("C2Net Software Inc.","www.c2.net");
 	site("Flexform Software","www.flexform.de");
-	site("Knowledge Adventure","www.adventure.com");
+	site("Knowledge Adventure","www.knowledgeadventure.com");
 	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
 	siteEnd();
@@ -75,6 +75,7 @@ right away.</blockquote>
 	site("DevilNet at Duke University", "devilnet.duke.edu");
 	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
+	site("Let's Find Out","www.letsfindout.com");
 	site("NativeWeb","www.nativeweb.org");
 	site("The Psychology Place","www.psychplace.com");
 	siteEnd();
