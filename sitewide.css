@@ -111,3 +111,22 @@ h1 {
     font-size: 75%;
     text-decoration: none;
 }
+
+/* Credits page styles ---------------------------------------------------- */
+.e {
+	background-color: #ccccff; 
+	color: inherit;
+	font-weight: bold;
+}
+.h {
+	background-color: #9999cc; 
+	color: inherit;
+	font-weight: bold;
+}
+.v, .vr {
+	background-color: #cccccc;
+	color: inherit;
+}
+.vr {
+	text-align: right;
+}
