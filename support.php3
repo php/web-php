@@ -18,6 +18,10 @@ If you are interested in helping out with the development of PHP3 you should joi
 developers' list by sending an empty message to
 <a href="mailto: php-dev-subscribe@php.iquest.net">php-dev-subscribe@php.iquest.net</a>.
 
+<h3>Getting the latest development version</h3>
+PHP is developed using CVS, so it's possible to obtain the latest development release at any time.
+Further instructions can be found in the web interface to the <a href="http://ca.php.net/cvsweb.cgi">PHP 3.0 CVS tree</a>.
+
 <h3>Reporting Bugs</h3>
 If you can't resolve your problem from the available documentation or mailing list archives, and you think it might
 be a bug, a <a href="http://ca.php.net/bugs.php3">Bug Database</a> has been established for tracking
