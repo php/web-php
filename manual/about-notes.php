@@ -11,8 +11,8 @@ PHP users when they browse the manual online.
 
 <p>
 Periodically, the developers may go through the notes and incorporate
-the information in them into the documentation. This also means, that
-notes are always under the same license, as the manual itself.
+the information in them into the documentation. This also means that
+notes are always under the same license as the manual itself.
 </p>
 
 <p>
