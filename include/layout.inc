@@ -227,20 +227,37 @@ function commonHeader($title="",$dont_enclose=0) {
 
   <tr bgcolor="#333366"><td colspan="2"><?php spacer(1,1);?><br></td></tr>
 </table>
+
 <?php
   if (!$dont_enclose):
-    $enclosed = 1;?>
-<!-- sidebar -->
-<table width="20" 
-	bgcolor="#ffffff"
-	align="left"
-	cellpadding="2" cellspacing="0" 
-><tr><td valign="top">
-<BR>
-</td></tr></table>
+    $enclosed = 1;
+?>
+
+<table width="150" height="100%" bgcolor="#f0f0f0" align="left" cellpadding="0" cellspacing="0">
+<tr valign="top">
+<td>
+
+<!-- sidebar table starts -->
+<table width="150" align="left" cellpadding="4" cellspacing="0">
+<tr valign="top">
+<td><small>
+<p>
+Stuff goes in here.
+</p>
+</small></td>
+</tr>
+</table>
+<!-- sidebar table ends -->
+
+</td>
+    <td bgcolor="#cccccc">
+<?php spacer(1,1);?><br>
+    </td>
+</table>
+
 <!-- main section -->
 
-<table width="600"
+<table width="620"
 	align="left"
 	cellpadding="10" cellspacing="0"
 ><tr><td valign="top">
