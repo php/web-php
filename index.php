@@ -150,6 +150,23 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>Zend's PHP 5 Coding Contest</h1>
+
+<p>
+ <span class="newsdate">[06-Jun-2004]</span>
+<a href="http://www.zend.com/php5/contest/">Zend's PHP 5 Coding Contest</a> is underway and accepting submissions.  This is every developer's chance to flaunt their PHP 5 skills and let their application shine!
+</p>
+
+<p>
+Applications will be rated both by your peers and by a panel of judges assembled from among the most known and well-respected names in the PHP community. 
+</p>
+
+<p>
+Lots of <a href="www.zend.com/php5/contest/prizes.php">prizes</a> are available!
+</p>
+
 <?php news_image("/downloads.php", "php-version4.gif", "PHP 4"); ?>
 
 <h1>PHP 4.3.7 released!</h1>
