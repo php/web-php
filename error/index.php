@@ -23,6 +23,7 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	}
 	$urle = htmlspecialchars($url);
 	
+	header("HTTP/1.0 302 Redirect");
 	header("Location: $url");
 
 	print "<html><title>Redirect to $urle</title><body>";
@@ -39,6 +40,7 @@ if (eregi("^(.*)/manual/((html/)?[^/]+)$", $REQUEST_URI, $array)) {
 	}
 	$urle = htmlspecialchars($url);
 	
+	header("HTTP/1.0 302 Redirect");
 	header("Location: $url");
 
 	print "<html><title>Redirect to $urle</title><body>";
@@ -63,6 +65,7 @@ if (!$lang) $lang = $MIRRORS[$MYSITE][6];
 
 $try = find_manual_page($lang, $function);
 if ($try) {
+	header("HTTP/1.0 302 Redirect");
 	header("Location: $try");
 	exit;
 }
