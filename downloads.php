@@ -69,7 +69,7 @@ change mirrors at the bottom of the page.
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link("php-4.2.1-Win32.zip", "PHP 4.2.1 zip package"); ?> - 13 May 2002<br>
+  <li><?php download_link("php-4.2.1-Win32.zip", "PHP 4.2.1 zip package"); ?> - 14 May 2002<br>
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
   <li><?php download_link("php-4.2.1-installer.exe", "PHP 4.2.1 installer"); ?> - 13 May 2002<br>
