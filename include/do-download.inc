@@ -34,15 +34,29 @@ function download_file($mirror, $file)
             $moreinfo = ", or <a href=\"{$_SERVER['HTTP_REFERER']}\">reconsider your mirror selection</a>"; 
         } else { $moreinfo = ""; }
         
-        echo <<<EOT
-<h1>Download not found</h1>
-<p>
+        // An executable was requested (temp fix for rsync change)
+        if (preg_match("!\\.exe$!", $name)) {
+            $info = "<p>
+ This mirror site is improperly setup, and thus has
+ no copy of the executable file you requested. Please
+ <a href=\"/get/$file/from/a/mirror\">select a different
+ mirror site</a> to get the file, until this site gets
+ fixed.
+</p>";
+        }
+        else {
+            $info = "<p>
  The file you requested (<strong>{$file}</strong>) is not found on
  this server (<strong>{$MYSITE}</strong>). If this file is a
  recent addition to our downloads, then it is possible that this
  particular server is not yet updated to host that file for download.
  Please come back to this server later{$moreinfo}.
-</p>
+</p>";
+        }
+        
+        echo <<<EOT
+<h1>Download not found</h1>
+{$info}
 EOT;
         site_footer();
         exit;
