@@ -3,6 +3,8 @@ require_once 'prepend.inc';
 commonHeader("Bugs Database Dos and Don'ts");
 ?>
 
+<h1>PHP Bug reporting Dos And Don'ts</h1>
+
 <ul>
 <li>Please don't report bugs in versions older than two revisions before the latest one available.  E.g., if the latest revision is 3.0.5, please don't report problems in versions earlier than 3.0.3.  Instead, upgrade first to the latest version, and see if the problem isn't solved.  Only if it isn't - submit a bug report here.
 <li>Don't report bugs in the 3.1 tree.  PHP 3.1 has now become PHP 4.0, and all bug reports should go <a href="http://bugs.php.net/">here</a>.
