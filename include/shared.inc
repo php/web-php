@@ -1,5 +1,4 @@
 <?php // -*- C++ -*-
-header("Vary: User-Agent");
 require("site.inc");
 
 /* Check that browser! */
@@ -296,11 +295,14 @@ function commonHeader($title) {
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	global $DISABLE_KICKOUTS, $DOCUMENT_ROOT;
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
+
+	Header("Vary: User-Agent");
+	Header("Content-Type: text/html; charset=iso-8859-1");
+
 ?>
 <HTML>
 <HEAD>
 <TITLE>PHP3: <? echo $title;?></TITLE>
-<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
 
 <? if ($HAVE_STYLE): ?>
 <LINK REL="stylesheet" HREF="/php-style.css" TYPE="text/css">
