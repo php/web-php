@@ -267,10 +267,12 @@ final class Foo {
  of this other object so that the replica has its own separate copy.
 </p>
 <p>
- An object copy is created by calling the object's <code>__clone()</code> method:
+ An object copy is created by using the clone keyword (which calls the object's
+ <code>__clone()</code> method if possible). An object's <code>__clone()</code>
+ method cannot be called directly.
 </p>
 <?php highlight_php('<?php
-$copy_of_object = $object->__clone();
+$copy_of_object = clone $object;
 ?>'); ?>
 <p>
  When the developer asks to create a new copy of an object, PHP 5 will
@@ -292,7 +294,6 @@ class MyCloneable {
     }
 
     function __clone() {
-        $this->name = $that->name;
         $this->address = "New York";
         $this->id = self::$id++;
     }
@@ -305,11 +306,11 @@ $obj->address = "Tel-Aviv";
 
 print $obj->id . "\n";
 
-$obj = $obj->__clone();
+$obj_cloned = clone $obj;
 
-print $obj->id . "\n";
-print $obj->name . "\n";
-print $obj->address . "\n";
+print $obj_cloned->id . "\n";
+print $obj_cloned->name . "\n";
+print $obj_cloned->address . "\n";
 ?>');
 ?>
 
@@ -693,7 +694,7 @@ var_dump($foo);
 <h3>Example: __call()</h3>
 <?php highlight_php('<?php
 class Caller {
-    var $x = array(1, 2, 3);
+    private $x = array(1, 2, 3);
 
     function __call($m, $a) {
         print "Method $m called:\n";
@@ -715,8 +716,8 @@ var_dump($a);
 <h3>Example</h3>
 <?php highlight_php('<?php
 class Foo {
-    var $x = 1;
-    var $y = 2;
+    public $x = 1;
+    public $y = 2;
 }
 
 $obj = new Foo;
@@ -750,7 +751,7 @@ class ObjectIterator implements Iterator {
     function rewind() {
         $this->num = 0;
     }
-    function hasMore() {
+    function valid() {
         return $this->num < $this->obj->max;
     }
     function key() {
@@ -832,9 +833,7 @@ class Foo {
     }
 }
 
-$obj = Foo;
-
-$str = (string) $obj; // call __toString()
+$obj = new Foo;
 
 echo $obj; // call __toString()
 ?>'); ?>
