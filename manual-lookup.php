@@ -1,25 +1,35 @@
 <?php // -*- C++ -*-
 
+require("shared.inc");
+
 $try_files = array();
 
 $function = strtolower($function);
 
 function tryprefix($func, $prefix) {
-    global $try_files;
+    global $try_files, $MIRRORS, $MYSITE;
+
+    // Get the country code, to find native
+    // language manual entries first
+    $cc = $MIRRORS[$MYSITE][2];
 
     $func = ereg_replace("_","-",$func);
     $func = ereg_replace('\(.*\)',"-",$func);
+    $try_files[] = "/manual/${cc}/${prefix}${func}.php";
     $try_files[] = "/manual/${prefix}${func}.php";
     $nosp = ereg_replace(" ", "", $func);
     if ($nosp != $func) {
+	$try_files[] = "/manual/${cc}/${prefix}${nosp}.php";
 	$try_files[] = "/manual/${prefix}${nosp}.php";
     }
     $dasp = ereg_replace(" ", "-", $func);
     if ($dasp != $func) {
+	$try_files[] = "/manual/${cc}/${prefix}${dasp}.php";
 	$try_files[] = "/manual/${prefix}${dasp}.php";
     }
     $noul = ereg_replace("-", "", $func);
     if ($noul != $func) {
+	$try_files[] = "/manual/${cc}/${prefix}${noul}.php";
 	$try_files[] = "/manual/${prefix}${noul}.php";
     }
 }
@@ -43,7 +53,6 @@ Header("Location: search.php?pattern=".urlencode($function)."&show=nosource");
 exit;
 
 
-require("shared.inc");
 CommonHeader("Quick Manual Reference");
 
 ?>
