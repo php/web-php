@@ -6,7 +6,7 @@ commonHeader("License Information");
 <h1>License Information</h1>
 
 <p>You can download the text of the latest version (2.02) of the
-PHP license <a href="2_02.txt">here</a>.
+PHP license <a href="2_02.txt">here</a>.</p>
 
 <a name="#FAQ"><h1>Frequently Asked Questions</h1></a>
 
@@ -25,7 +25,7 @@ the PHP license, it is intended to give you a general impression
 of what the license means.) Essentially, the PHP license gives you
 the right to use, distribute and modify PHP as much as you want,
 for both commercial and non-commercial use. You just have to make
-it clear to the user that what you have distributed contains PHP.</p
+it clear to the user that what you have distributed contains PHP.</p>
 
 <p><b>Q.</b> The Zend license says I may not charge money for stuff
 I sell along with Zend.  Does that mean I cannot sell PHP scripts
@@ -51,14 +51,15 @@ the license prevents commercial use of the Zend scripting engine
 library to build commercial applications.  If you want to use the
 Zend scriping engine library commercially (for example, as a macro
 language in a commercial word processor you're writing), you must
-contact <a href="mailto:license@zend.com">Zend Technologies, Ltd.</a> for licensing information.
+contact <a href="mailto:license@zend.com">Zend Technologies,
+Ltd.</a> for licensing information.</p>
 
 <p><b>Q.</b> Where can I get more information on the QPL?</p>
 
 <p><b>A.</b> The authors of the QPL, Troll Tech AS,
 have published an annotated version of the license which
 makes it easier to understand. You can view it online <a
-href="http://www.troll.no/qpl/annotated.html">here</a>.
+href="http://www.troll.no/qpl/annotated.html">here</a>.</p>
 
 <p><b>Q.</b> You suck! I'm going to take the last version of PHP 3
 that was distributed under the GPL and fork! How would you like
