@@ -556,8 +556,8 @@ array(
     /* author[s]    */ array("Jay Greenspan", "Brad Bulger"),
     /* auth link[s] */ "",
     /* image        */ "greenspan.jpg",
-    /* information  */ "Hungry Minds, January 2001, ISBN 0-7645-3537-4, 500 pages",
-    /* inform. link */ "",
+    /* information  */ "John Wiley & Sons, January 2001, ISBN 0-7645-3537-4, 500 pages",
+    /* inform. link */ "http://www.wiley.com/cda/product/0,,0764535374,00.html",
     /* language     */ "en"
   ),
 
@@ -600,8 +600,8 @@ array(
     /* author[s]    */ array("Paul Whitehead", "Joel Desamero"),
     /* auth link[s] */ "",
     /* image        */ "phpvisual.jpg",
-    /* information  */ "Hungry Minds, June 2001, ISBN 0-7645-3561-7, 350 pages",
-    /* inform. link */ "http://catalog.hungryminds.com/product.asp?isbn=0764535617",
+    /* information  */ "John Wiley & Sons, June 2001, ISBN 0-7645-3561-7, 350 pages",
+    /* inform. link */ "http://www.wiley.com/cda/product/0,,0764535617,00.html",
     /* language     */ "en"
   ),
 
