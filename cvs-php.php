@@ -265,26 +265,26 @@ EOT;
 <tr>
  <th class="subr">Full Name:</th>
  <td><input type="text" size="50" name="fullname"
-      class="max" value="<?php echo clean($_POST['fullname']);?>" /></td>
+      value="<?php echo clean($_POST['fullname']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">Email:</th>
  <td><input type="text" size="50" name="email"
-      class="max" value="<?php echo clean($_POST['email']);?>" /></td>
+      value="<?php echo clean($_POST['email']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">Purpose:</th>
- <td><textarea cols="50" rows="5" name="purpose" class="max"><?php echo clean($_POST['purpose']);?></textarea></td>
+ <td><textarea cols="50" rows="5" name="purpose"><?php echo clean($_POST['purpose']);?></textarea></td>
 </tr>
 <tr>
  <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>
  <td><input type="text" size="10" name="id"
-      class="max" value="<?php echo clean($_POST['id']);?>" /></td>
+      value="<?php echo clean($_POST['id']);?>" /></td>
 </tr>
 <tr>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
-      class="max" value="<?php echo clean($_POST['password']);?>" /></td>
+      value="<?php echo clean($_POST['password']);?>" /></td>
 </tr>
 <?php
 // if checkread is set here, we're redisplaying the form because of an error.
