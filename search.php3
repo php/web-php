@@ -96,7 +96,7 @@
 					}
 				}
 				$j=0;
-				$remain = ereg_replace(".+[\?]","",$text);
+				$remain = ereg_replace(".+[\\?]","",$text);
 				if($text!=$remain) {
 					$text = $text - $remain;
 				}
