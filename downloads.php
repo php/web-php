@@ -132,9 +132,9 @@ echo '</p>';
 
 <p>
   If you would like to download these files with wget or lynx or any command line
-  utility, be aware that the question mark in the URL may be handled specially
-  by your shell. If you escape that character with a backslash, then the download
-  will work well.
+  utility, be aware that the question mark and/or ampersand in the URL may be handled
+  specially by your shell. If you escape those characters with a backslash, then
+  the download will work well.
 </p>
 
 <h2>Windows Binaries</h2>
