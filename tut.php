@@ -4,7 +4,7 @@ require_once 'prepend.inc';
 $SIDEBAR_DATA='
 <h3>More tutorials</h3>
 <p>
-There are other excellent PHP tutorials available:
+There are other excellent PHP tutorials available:<br><br>
 &nbsp; <a href="http://conf.php.net/">PHP conference presentations</a><br>
 &nbsp; <a href="http://www.zend.com/zend/art/intro.php">Zend Intro to PHP</a><br>
 &nbsp; <a href="http://www.hotwired.com/webmonkey/99/21/index2a.html">WebMonkey</a><br>
@@ -12,6 +12,13 @@ There are other excellent PHP tutorials available:
 &nbsp; <a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a><br>
 &nbsp; <a href="http://www.phpbuilder.com/getit/">PHP Builder</a><br>
 &nbsp; <a href="http://www.melonfire.com/community/columns/trog/archives.php3?category=PHP">Melonfire</a><br>
+
+<h3>Books</h3>
+<p>
+<a href="/books.php">Books</a> are convenient resources to begin exploring 
+PHP. <a href="/books.php">The titles listed here</a> will help you to start 
+learning PHP, as well as extending your existing knowledge.
+</p>
 ';
 
 commonHeader('PHP Tutorial');
