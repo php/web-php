@@ -1,6 +1,11 @@
 <?php
 
-require_once 'prepend.inc';
+$MYSITE = 'http://' . getenv("SERVER_NAME") . '/';
+
+function is_primary_site() {
+  global $MYSITE;
+  return $MYSITE == "http://www.php.net/";
+}
 
 // This file is intended to be used on php.net only!
 if (!is_primary_site()) { exit; }
