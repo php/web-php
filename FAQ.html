@@ -2,8 +2,8 @@
 <HEAD>
   <TITLE>PHP3 Frequently Asked Questions</TITLE>
   <STYLE type="text/css">
-    BODY {background: #FFFFFF}
-    H1,H2,H3 {color: blue}
+    BODY {background: #FFFFFF;}
+    H1,H2,H3 {color: #5B69A6;}
   </STYLE>
 </HEAD>
 
@@ -13,13 +13,29 @@
 
 <!-- The website should stop chopping. -->
 
-<P>This is a list of Frequently Asked Questions about PHP3 and
+<P>
+This is a list of Frequently Asked Questions about PHP3 and
 their answers. If you have suggestions or additions, send them to
-<CODE>php3@lists.php.net</CODE>.
+<A HREF="mailto:php3@lists.php.net">php3@lists.php.net</A>.
+<P>
+<HR noshade>
+
+<DL>
+<DT><a HREF="#1">1. General Information</A></DT>
+<DT><a HREF="#2">2. Obtaining PHP3</A></DT>
+<DT><a HREF="#3">3. Installation</A></DT>
+<DT><a HREF="#4">4. Common Problems</A></DT>
+<DT><a HREF="#5">5. Using PHP3</A></DT>
+<DT><a HREF="#6">6. New Features</A></DT>
+<DT><a HREF="#7">7. Common Problems</A></DT>
+<DT><a HREF="#8">8. Migrating from PHP2 to PHP3</A></DT>
+</DL>
 
 <HR noshade>
 
+<A NAME="1">
 <H2>1. General Information</H2>
+</A>
 
 <DL>
   <DT><B>
@@ -142,13 +158,42 @@ their answers. If you have suggestions or additions, send them to
   </B></DT>
   <DD>
     Yes, you will find a list of archive sites on the <a href="/support.php3">Support</a>
-	page.
+	page.<P>
   </DD>
+
+  <DT><B>
+    <a name="1.10">1.10</a> How did you do those pop-out windows for the Search and Mirror buttons?
+  </B></DT>
+  <DD>
+    Our site designer, Colin Viebrock (<A href="mailto:cmv@privateworld.com">cmv@privateworld.com</A>), says:
+
+    <BLOCKQUOTE>
+	<P>Those fancy pop-out layers are done with Dynamic HTML (DHTML), Cascading Style Sheets (CSS) and Javascript (version 1.2).<P>
+	There are plenty of references on the web about DHTML and CSS, including:
+	<P><UL>
+	<LI>CSS Level 1 Spec: <A HREF="http://www.w3.org/TR/REC-CSS1">www.w3.org/TR/REC-CSS1</A>
+	<LI>Macromedia's DHTML Zone: <A HREF="http://www.dhtmlzone.com/index.html">www.dhtmlzone.com/index.html</A>
+	<LI>Webreference's DHTML Lab: <A HREF="http://www.webreference.com/dhtml/">www.webreference.com/dhtml/</A>
+	<LI>Guide to Cascading Style Sheets: <A HREF="http://www.htmlhelp.com/reference/css/">www.htmlhelp.com/reference/css/</A>
+	<LI>Dynamic Duo - Cross-Browser DHTML: <A HREF="http://www.dansteinman.com/dynduo/">www.dansteinman.com/dynduo/</A>
+	<LI>Netscape's Guide to JS 1.2: <A HREF="http://developer.netscape.com/docs/manuals/communicator/jsguide/js1_2.htm">developer.netscape.com/docs/manuals/communicator/jsguide/js1_2.htm</A>
+	</UL>
+	<P>But your best source of information is to view the source code to the pages on the PHP site.  
+	To see the actual DHTML/Javascript code, use your browser's "View Source" function.  To see how this code was
+	generated dynamically using PHP3, click on the "Source" button in the upper-right corner of any PHP page.  You 
+	will probably also want to view the source of the "shared.inc" file - there is a link to it at the bottom of every
+	source page.
+    </BLOCKQUOTE><P>
+
+  </DD>
+
 </DL>
 
 <HR noshade>
 
+<A NAME="2">
 <H2>2. Obtaining PHP3</H2>
+</A>
 
 <DL>
   <DT><B>
@@ -243,7 +288,9 @@ their answers. If you have suggestions or additions, send them to
 
 <HR noshade>
 
+<A NAME="3">
 <H2>3. Installation</H2>
+</A>
 
 <P>To install PHP3, follow the instructions in the <A
 href="http://ca.php.net/cvsweb.cgi/INSTALL?rev=1.18">INSTALL</A>
@@ -254,7 +301,11 @@ file.  There are also some helpful hints for Windows users here:
 <a href="http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html">
 http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
 
-<H3>4. Common Problems</H3>
+<HR noshade>
+
+<A NAME="4">
+<H2>4. Common Problems</H2>
+</A>
 
 <DL>
   <DT><B>
@@ -369,7 +420,9 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
 
 <HR noshade>
 
+<A NAME="5">
 <H2>5. Using PHP3</H2>
+</A>
 
 <DL>
   <DT><B>
@@ -510,7 +563,11 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
 
 </DL>
 
-<H3>6. New Features</H3>
+<HR noshade>
+
+<A NAME="6">
+<H2>6. New Features</H2>
+</A>
 
 <DL>
   <DT><B>
@@ -601,7 +658,11 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
   </DD>
 </DL>
 
-<H3>7. Common Problems</H3>
+<HR noshade>
+
+<A NAME="7">
+<H2>7. Common Problems</H2>
+</A>
 
 <DL>
   <DT><b>
@@ -667,9 +728,9 @@ http://leonard.staff.imaginet.fr/Doc/php/configuration_NT.html</a>.
 
 <HR noshade>
 
-<H2>8. Migrating from PHP/FI 2.0</H2>
-
-<H3>Common Problems</H3>
+<A NAME="8">
+<H2>8. Migrating from PHP2 to PHP3</H2>
+</A>
 
 <DL>
   <DT><B>
