@@ -274,18 +274,27 @@ discussion board, chat room, link collection, news, etc.</li>
 <ul>
 
 <li><a href="http://www.nexen.net/">Nexen.net</a><br>
-Home of PHP French documentation, with comprehensive technical information</li>
+Home of PHP French documentation, with comprehensive technical information, and all PHP related news</li>
 
-<li><a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br>
-More than 500 PHP applications, listed and sorted</li>
+<li><a href="http://www.phpdebutant.com/">phpdebutant</a><br>
+Apprendre le PHP par l'exemple, facilement et simplement. R&eacute;serv&eacute; d'abord aux d&eacute;butants.
+</li>
 
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A French gateway to PHP related contents</li>
 
+<!--
+This web site is dead. It may come back some day as static...
 <li><a href="http://www.phpinfo.net/">PHPInfo</a><br>
 French site about PHP/MySQL: Links, Tips, Articles, 
 FAQ, Code Downloads, and much more!</li>
+-->
 
+<li><a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br>
+More than 500 PHP applications, listed and sorted</li>
+
+<li><a href="http://www.phpteam.net/">phpTeam</a><br>
+Site traitant du PHP pour les professionels (php et flash, mysql, postgresql, pear,...)</li>
 
 <li><a href="http://faqfclphp.free.fr/">FAQ of the French PHP newsgroup</A> :
 <a href="news://fr.comp.lang.php">fr.comp.lang.php</a></li> (anciennement fr.comp.infosystemes.www.auteurs.php).
