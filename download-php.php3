@@ -4,7 +4,7 @@ require("shared.inc");
 $current = "3.0RC";
 $win32_current = "3.0b6";
 
-$filesizes["php-3.0RC.tar.gz"]="~ 900KB";
+$filesizes["php-3.0RC.tar.gz"]="~ 890KB";
 $filesizes["php-3.0b6-win32.exe"]="~ 959KB";
 
 commonHeader("Download PHP Engine");
