@@ -67,7 +67,7 @@ diff -u
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4 php-src</tt>
   <br />
   <strong>PHP 5</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r HEAD php-src</tt>
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</tt>
   <br /><br />
   Some tips and notes:
   <br />
@@ -85,7 +85,7 @@ diff -u
     All of the above commands create a local directory named "php-src".  You can also 
     specify another directory name, for example, to put PHP 5 HEAD into a directory 
     named myphp5:<br />
-    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 -r HEAD php-src</tt>
+    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d myphp5 php-src</tt>
    </li>
   </ul>
  </li>
@@ -119,7 +119,7 @@ diff -u
  for the documentation, available via anonymous CVS. See
  <a href="http://cvs.php.net/">the web-based view of the CVS
  server</a> to see what is available, and substitute the
- appropriate module name for "<i>-r HEAD php-src</i>" in step 
+ appropriate module name for "<i>php-src</i>" in step 
  3 (and ignore the later steps).  For example, to checkout the
  latest english version of the PHP manual:<br />
  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</tt>
