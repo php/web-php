@@ -74,6 +74,8 @@ $SIDEBAR_DATA = '
    <option value="php-4.3.9.tar.gz">4.3.9</option>
    <option value="">--------</option>
    <option value="php-5.0.0.tar.gz">5.0.0</option>
+   <option value="php-5.0.1.tar.gz">5.0.1</option>
+   <option value="php-5.0.2.tar.gz">5.0.2</option>
   </select>
  </p>
 </form>
@@ -91,6 +93,74 @@ site_header("Releases");
  <em>older releases are listed for archaeological purposes only, and
  they are no longer supported</em>.
 </p>
+
+<a name="5.0.2"></a>
+<h2>5.0.2</h2>
+
+<ul>
+ <li>Released: 23 Sep 2004</li>
+ <li>Announcement: None</li>
+ <li><a href="/ChangeLog-5.php#5.0.2">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.0.2.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: 579f82f3d6a61b669183b2ebce357a1e</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.2.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: 5467327e0cab6de76a90266933322b59</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.2-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: dd74b477b3b9cabf8c448e333fcda2c6</span>
+   </li>
+   <li>
+    <?php download_link('pecl-5.0.2-Win32.zip', 'Collection of PECL modules for PHP 5.0.2'); ?><br />
+    <span class="md5sum">md5: 5a95c4bf9561d12ad992dfb4e6e60222</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.2-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 2528dcc6a8b6c6e5027e262ba35c5d12</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<a name="5.0.1"></a>
+<h2>5.0.1</h2>
+
+<ul>
+ <li>Released: 12 Aug 2004</li>
+ <li>Announcement: None</li>
+ <li><a href="/ChangeLog-5.php#5.0.1">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.0.1.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: b12042826ddba29fba3ae5a2eac3c391</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.1.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: 15c9f5a9848a9e8f32002c6731a31ca8</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.1-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: 0447dcd6c4ca786619cefb1ae5cceba3</span>
+   </li>
+   <li>
+    <?php download_link('pecl-5.0.1-Win32.zip', 'Collection of PECL modules for PHP 5.0.1'); ?><br />
+    <span class="md5sum">md5: 4ad4c24c49d602fd26f373bd08627be4</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.1-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 990982de151b6fcc5b093a8f5dcf5404</span>
+   </li>
+  </ul>
+ </li>
+</ul>
 
 <a name="5.0.0"></a>
 <h2>5.0.0</h2>
@@ -115,12 +185,18 @@ site_header("Releases");
     <span class="md5sum">md5: f8fb5676b6a32f7be1c8d8d373fbc2af</span>
    </li>
    <li>
+    <?php download_link('pecl-5.0.0-Win32.zip', 'Collection of PECL modules for PHP 5.0.0'); ?><br />
+    <span class="md5sum">md5: ede9d837b3dc48a38ca992ca753ee114</span>
+   </li>
+   <li>
     <?php download_link('php-5.0.0-installer.exe','Windows installer'); ?><br />
     <span class="md5sum">md5: ffce859b5f72ffee00dbe4f013053247</span>
    </li>
   </ul>
  </li>
 </ul>
+
+<hr />
 
 <a name="4.3.9"></a>
 <h2>4.3.9</h2>
