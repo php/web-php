@@ -42,7 +42,7 @@ function default_language($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][6];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][6] : FALSE);
 }
 
 // Returns true if the current (or specified) mirror
@@ -51,7 +51,7 @@ function have_search($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][5];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][5] : FALSE);
 }
 
 // Returns true if the current (or specified) mirror
@@ -60,7 +60,7 @@ function have_stats($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][2];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][2] : FALSE);
 }
 
 // Returns the current (or specified)
@@ -69,7 +69,7 @@ function mirror_country($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][0];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][0] : FALSE);
 }
 
 // Returns the current (or specified)
@@ -78,7 +78,7 @@ function mirror_provider($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][1];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][1] : FALSE);
 }
 
 // Returns the current (or specified)
@@ -87,7 +87,7 @@ function mirror_provider_url($site = FALSE)
 {
     global $MIRRORS,$MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][3];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][3] : FALSE);
 }
 
 // Returns the current (or specified)
@@ -96,7 +96,7 @@ function mirror_type($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][4];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][4] : FALSE);
 }
 
 // Returns the current (or specified)
@@ -105,7 +105,7 @@ function mirror_status($site = FALSE)
 {
     global $MIRRORS, $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $MIRRORS[$site][7];
+    return (isset($MIRRORS[$site]) ? $MIRRORS[$site][7] : FALSE);
 }
 
 // Count all mirrors or mirrors in a given country
