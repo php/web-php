@@ -23,8 +23,8 @@ $formats = array(
  "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb"),
  "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb"),
  "manual.pdf" => array("PDF", "pdf"),
- "manual.txt.gz" => array("Plain text (compressed)", "txt.gz"),
- "manual.tar.gz" =>  array("Many HTML files (compressed tar)", "tar.gz"),
+ "manual.txt.gz" => array("Plain text (gziped)", "txt.gz"),
+ "manual.tar.gz" =>  array("Many HTML files (gziped tar)", "tar.gz"),
  "manual.zip" => array("Many HTML files (zip)", "zip"),
  "manual.chm" => array("Windows HTML Help", "chm")
 );
@@ -78,11 +78,11 @@ $prefix = ($MYSITE=='http://bugs.php.net/') ? 'http://www.php.net' : '';
 
 <? echo hdelim(); ?>
 
-<h1>Downloadable PHP Manuals</h1>
+<h1>International PHP Manuals and downloads</h1>
 
-<p>The PHP manual is also available in a selection of downloadable
-formats for off-line use. Pick your format and language from the
-table below:</p>
+<p>The PHP manual is also available in a selection of languages
+in both online, and downloadable formats for off-line use.
+Pick your language and format from the table below:</p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
  <tr bgcolor="#cccccc">
