@@ -53,6 +53,7 @@ $COUNTRIES = array(
    "no" => "Norway",
    "nz" => "New Zealand",
    "pt" => "Portugal",
+   "ro" => "Romania",
    "sk" => "Slovakia",
    "sg" => "Singapore",
    "ua" => "Ukraine",
