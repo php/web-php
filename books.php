@@ -27,36 +27,38 @@ $SIDEBAR_DATA = <<<SIDEBAR_END
 </p>
 
 <form method="get" action="http://www.amazon.com/exec/obidos/external-search">
- <input type="hidden" name="tag" value="wwwphpnet" />
- Search Amazon for<br />
- <select name="mode">
-  <option value="blended">All Products</option>
-  <option value="books" selected="selected">Books</option>
-  <option value="music">Popular Music</option>
-  <option value="classical-music">Classical Music</option>
-  <option value="video">Video</option>
-  <option value="toys">Toys</option>
-  <option value="electronics">Electronics</option>
- </select><br />
- about<br />
- <select name="keyword">
-  <option selected="selected">PHP</option>
-  <option>Apache</option>
-  <option>Linux</option>
-  <option>MySQL</option>
-  <option>PostgreSQL</option>
-  <option>mSQL</option>
-  <option>Oracle</option>
-  <option>IMAP</option>
-  <option>LDAP</option>
-  <option>XML</option>
-  <option>Adabas</option>
-  <option>Sybase</option>
-  <option>Microsoft SQL</option>
-  <option>Microsoft NT</option>
-  <option>ODBC</option>
- </select><br />
- <input type="submit" value="Search" name="Search" />
+ <p>
+  <input type="hidden" name="tag" value="wwwphpnet" />
+  Search Amazon for<br />
+  <select name="mode">
+   <option value="blended">All Products</option>
+   <option value="books" selected="selected">Books</option>
+   <option value="music">Popular Music</option>
+   <option value="classical-music">Classical Music</option>
+   <option value="video">Video</option>
+   <option value="toys">Toys</option>
+   <option value="electronics">Electronics</option>
+  </select><br />
+  about<br />
+  <select name="keyword">
+   <option selected="selected">PHP</option>
+   <option>Apache</option>
+   <option>Linux</option>
+   <option>MySQL</option>
+   <option>PostgreSQL</option>
+   <option>mSQL</option>
+   <option>Oracle</option>
+   <option>IMAP</option>
+   <option>LDAP</option>
+   <option>XML</option>
+   <option>Adabas</option>
+   <option>Sybase</option>
+   <option>Microsoft SQL</option>
+   <option>Microsoft NT</option>
+   <option>ODBC</option>
+  </select><br />
+  <input type="submit" value="Search" name="Search" />
+ </p>
 </form>
 
 <h3>Book Suggestion</h3>
@@ -84,13 +86,13 @@ function book_show($one_book)
     // Min. one title, max two titles
     if (is_array($title)) {
         $img_title = htmlspecialchars($title[0]);
-        $title = '<h2>' .
-                 make_link($title_link, $img_title) . '<br />' .
-                 htmlspecialchars($title[1]) . '</h2>';
+        $title = '<p><strong>' .
+                 make_link($title_link, $img_title) . '</strong><br />' .
+                 htmlspecialchars($title[1]) . '</p>';
     } else {
         $img_title = htmlspecialchars($title);
-        $title = '<h2>' .
-                 make_link($title_link, $img_title) . '</h2>';
+        $title = '<p><strong>' .
+                 make_link($title_link, $img_title) . '</strong></p>';
     }
 
     // More than one author for this book
