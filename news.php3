@@ -55,9 +55,9 @@ function endEntry() {
 
 <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
 
-<? makeEntry( "The Soothingly Seamless Setup of Apache, SSL, MySQL, and PHP", "by <a href=\"mailto:idenis@ureach.com\">Israel Denis Jr.</a>", 
-	"http://www.devshed.com/Server_Side/PHP/SoothinglySeamless/", "March 2, 2000");?>
-This article will cover a lot of information. This guide is meant as an introductory guide to get you started to the world of e-commerce, web site scripting, and Secure Sockets Layer (SSL), for the purpose of helping you create secure web site driven by dynamic information stored in databases.
+<? makeEntry( "PHP and XML, technical or cultural gap?", "by <a href=\"http://www.xmlhack.com/author.php?id=8\">Eric van der Vlist</a>", 
+	"http://www.xmlhack.com/read.php?item=338", "March 14, 2000");?>
+Classified as "the most popular Apache module" by E-Soft, PHP is one of the least frequently mentioned languages amongst the XML discussion lists.
 <? endEntry(); ?>
 
 <? makeEntry( "PHP: Past, Present, and Future", "by Rasmus Lerdorf, Stig Bakken, Andi Gutmans, and Zeev Suraski", 
