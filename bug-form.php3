@@ -30,6 +30,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     echo("<pre>\n");
 
     $bugdesc = stripslashes($bugdesc);
+	$bug_short_desc = stripslashes($bug_short_desc);
     $report .= "From:             $email\n\n";
     $report .= "Operating system: $osver\n\n";
     $report .= "PHP version:      $phpver\n\n";
