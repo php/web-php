@@ -1,13 +1,15 @@
 <?php
-include_once 'prepend.inc';
-include_once 'mirrortable.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = 'mirrors.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
 commonHeader("Mirror Sites");
 ?>
 
 <h1>Mirror Sites</h1>
 
 <p>
- Here you can find information about the mirrors of php.net. This page only
+ Here you can find information about the mirrors of PHP.net. This page only
  lists the official mirrors, registered in our database. The mirrors automatically
  detected to be outdated or disfunctional are not listed for your convinience, so
  there may be a mirror (or some mirrors) with problems in your country additionaly
@@ -16,15 +18,13 @@ commonHeader("Mirror Sites");
 </p>
 <p>
  We would like to advice you to choose a mirror site close to use in your
- everyday work. All mirror sites are expected to provide the same service
- (with the possible exception of local search support, in which case the
- main site performs the search). This means that you don't loose anything,
- if you go with a local mirror site, but you gain speed. The current mirror
- is highlighted in the list below.
+ everyday work. All mirror sites are expected to provide the same service.
+ This means that you don't loose anything, if you go with a local mirror
+ site, but you gain speed. The current mirror is highlighted in the list below.
 </p>
 <p>
  If you are interested in hosting a mirror of this site,
- <?php print_link("/mirroring.php", "here's how"); ?>.
+ <a href="/mirroring.php">read our mirroring page</a>.
 </p>
 
 <?php
