@@ -104,12 +104,12 @@ are interested in is <b>$HTTP_USER_AGENT</b>.  To display this
 variable we can simply do:
 </p>
 
-<?php example('<?php echo $HTTP_USER_AGENT; ?>')?>
+<?php example('<?php echo $_SERVER["HTTP_USER_AGENT"]; ?>')?>
 
 <p>
 For the browser that you are using right now to view this page,
 this displays:
-<blockquote><?php echo $HTTP_USER_AGENT; ?></blockquote>
+<blockquote><?php echo $_SERVER["HTTP_USER_AGENT"]; ?></blockquote>
 There are many other variables that are automatically set by
 your web server. You can get a complete list of them by creating
 a file that looks like this:
@@ -131,8 +131,8 @@ could do something like this:
 </p>
 
 <?php example('<?php
-if(strstr($HTTP_USER_AGENT,"MSIE")) {
-	echo "You are using Internet Explorer<br>";
+if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {
+	echo "You are using Internet Explorer<br />";
 }
 ?>');?>
 
@@ -162,7 +162,7 @@ of PHP mode even in the middle of a PHP block:
 </p>
 
 <?php example('<?php
-if(strstr($HTTP_USER_AGENT,"MSIE")) {
+if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {
 ?>
 <center><b>You are using Internet Explorer</b></center>
 <?
@@ -182,7 +182,7 @@ Running this script right now results in:
 </p>
 
 <?php
-if (strstr($HTTP_USER_AGENT,"MSIE")) {
+if (strstr($_SERVER["HTTP_USER_AGENT"], "MSIE")) {
 ?>
 <center><b>You are using Internet Explorer</b></center>
 <?php
@@ -217,8 +217,8 @@ and hits the submit button, the <i>action.php</i> page is called.
 In this file you would have something like this:
 </p>
 
-<?php example('Hi <?php echo $name; ?>.
-You are <?php echo $age; ?> years old.')?>
+<?php example('Hi <?php echo $_POST["name"]; ?>.
+You are <?php echo $_POST["age"]; ?> years old.')?>
 
 <p>
 It should be obvious what this does. There is nothing more to it.
