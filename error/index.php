@@ -200,7 +200,8 @@ if (strchr($uri,'/')) {
 }
 
 // ============================================================================
-// Quick access to revcheck output and build logs for various languages
+// Quick access to revcheck output, build logs, books for various languages and
+// the PHP Documentation Howto for backward compatibility
 if ($function == "rev") {
     header("Location: http://$SERVER_NAME/manual/$lang/revcheck.html.gz");
     exit;
@@ -210,7 +211,9 @@ if ($function == "rev") {
 } elseif ($function == "phpdochowto") {
     header("Location: http://$SERVER_NAME/manual/howto/index.html");
     exit;
-}	
+}	elseif ($function == "books") {
+    header("Location: http://$SERVER_NAME/books.php?type_lang=PHP_$lang");
+}
 
 // ============================================================================
 // Try to find the page using this language as a manual page (lang is the language
