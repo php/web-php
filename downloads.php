@@ -122,11 +122,11 @@ site_header("Downloads");
  </li>
 </ul>
 
-<h2>Windows Binaries (Beta 2, Beta 3 coming soon)</h2>
+<h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b2-Win32.zip', 'PHP 5.0.0b2 zip package'); ?> - 30 Oct 2003<br />
-  <span class="md5sum">md5: d58f09501d06a636f00c0be3d99e4669</span>
+  <?php download_link('php-5.0.0b3-Win32.zip', 'PHP 5.0.0b3 zip package'); ?> - 22 Dec 2003<br />
+  <span class="md5sum">md5: 5673410fd16b3b01e1df52a5f914dc09</span>
  </li>
 </ul>
 
