@@ -126,8 +126,8 @@ development team.  Programmers' Choice Award winners were nominated and
 chosen by the open source community, the nominees were: Greg Allan; Stig
 Bakken; Bogomil Shopov; Philippe Thomassigny; and Andrei Zmievski. 
 </p><p>
-The Activators' Choice winners are Derrick Rethans and Jani Taskinen.
-Derrick is heavily involved in developing processes for QA and Release
+The Activators' Choice winners are Derick Rethans and Jani Taskinen.
+Derick is heavily involved in developing processes for QA and Release
 Management, and Jani has been one of the largest contributors to QA and
 support of the Bug database.  The Programmers' Choice winner is Greg
 Allen, who was the lead developer and founding member of the PostNuke
