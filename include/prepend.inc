@@ -5,6 +5,11 @@
 // See http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9
 // for cache control header descriptions (used in many places on the site).
 
+// Provide default content-type, charset and language information
+// Manual pages will override this, and maybe others too
+header("Content-language: en");
+header("Content-type: text/html;charset=ISO-8859-1");
+
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);
