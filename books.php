@@ -292,6 +292,17 @@ array (
   ),
 
   array(
+    /* title[s]     */ "Php Black Book",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/158880539/wwwphpnet",
+    /* author[s]    */ array("Peter Moulding"),
+    /* auth link[s] */ "",
+    /* image        */ "moulding.jpg",
+    /* information  */ "The Coriolis Group, October 2001, ISBN 0-7645-3561-7, 880 pages",
+    /* inform. link */ "",
+    /* language     */ "en"
+  ),
+
+  array(
     /* title[s]     */ "PHP kurz & gut",
     /* title_link   */ "http://www.amazon.de/exec/obidos/ASIN/3897212250/wwwphpnet07",
     /* author[s]    */ array("Rasmus Lerdorf", "Ingo Marks (Deutsche &Uuml;bersetzung)"),
