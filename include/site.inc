@@ -14,6 +14,7 @@ $MIRRORS = array(
    "http://ca.php.net/"           => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://php.privateworld.com/" => array("ca", "Private World", "pwc", "http://www.privateworld.com/", 1, 0),
    "http://ch.php.net/"           => array("ch", "Laboratoire de Bases de Donn&eacute;es", "lbd", "http://lbdwww.epfl.ch/" ,1 ,0),
+#   "http://cl.php.net/"           => array("cl", "Amerikanclaris Internet", "amerikanclaris", "http://wwww.amerikanclaris.com", 1 ,0).
    "http://www.php3.de/"          => array("de", "Schlund + Partner", "schlund", "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1),
    "http://dk.php.net/"           => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/",1,0),
    "http://fr.php.net/"           => array("fr", "L'Universit&eacute; Michel de Montaigne Bordeaux III","montaigne", "http://www-recherche.montaigne.u-bordeaux.fr/", 1, 0),
@@ -51,6 +52,7 @@ $COUNTRIES = array(
    "at" => "Austria",
    "ca" => "Canada",
    "ch" => "Switzerland",
+   "cl" => "Chile",
    "de" => "Germany",
    "dk" => "Denmark",
    "fr" => "France",
