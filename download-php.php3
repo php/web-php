@@ -4,10 +4,9 @@ require("shared.inc");
 $current = "3.0.2a";
 $win32_current = "3.0.2";
 
-$filesizes["php-3.0.1.tar.gz"]="~ 1011KB";
-$filesizes["php-3.0.2a.tar.gz"]="~ 1024KB";
-$filesizes["php-3.0.2-win32.exe"]="~ 1332KB";
-$filesizes["php-3.0.2-win32.zip"]="~ 1297KB";
+$filesizes["php-3.0.2a.tar.gz"]="~ 997KB";
+$filesizes["php-3.0.2-win32.exe"]="~ 1339KB";
+$filesizes["php-3.0.2-win32.zip"]="~ 1304KB";
 $filesizes["php-3.0.1-patch.gz"]="~ 130KB";
 $filesizes["php-3.0.1-3.0.2a-patch.gz"]="~ 52KB";
 $filesizes["php-3.0.2-3.0.2a-patch.gz"]="~ 15KB";
