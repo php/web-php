@@ -145,7 +145,7 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
-<?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
+<?php news_image("http://conf.phpquebec.org/en/conf2005/", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
 <h1>Call for Speakers: PHP Qu&eacute;bec 2005</h1>
 <p>
