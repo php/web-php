@@ -137,7 +137,7 @@ A growing list of PHP scripts</li>
 An exhaustive PHP scripts collection, with more 400 useful functions (English
 and French).</li>
 
-<li><a href="http://phpeditors.dancinghippo.com">PHP Editors List</a><br>
+<li><a href="http://phpeditors.dancinghippo.com/">PHP Editors List</a><br>
 A comprehensive list of editors you can use to edit PHP programs</li>
 
 <li><a href="http://php.foundries.sourceforge.net/">PHP Foundry at SourceForge</a><br>
