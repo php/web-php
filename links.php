@@ -263,6 +263,14 @@ A Swedish PHP portal with articles, news, forums and much more<br></li>
 The biggest Polish site about programming in PHP -- A
 phpbuilder.com-like site in Polish.<br></li>
 </ul></li>
+
+<li><b>Norwegian</b>
+<ul>
+
+<li>PHP@sindrem.com (<a href="http://www.sindrem.com">http://www.sindrem.com</a>)<br>
+Norwegian site for newbies and intermediates. Installation help 
+and scripts.<br></li>
+</ul></li>
 </ul>
 
 <?php echo hdelim(); ?>
