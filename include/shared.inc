@@ -589,7 +589,8 @@ do_layers = 1;
 </SCRIPT>
 <? endif;	/* Kick outs */ ?>
 
-<? if ($MYSITE="http://php.privateworld.com/"):?>
+<? if ($MYSITE=="http://php.privateworld.com/"):?>
+
 <hr noshade>
 <FONT SIZE=-1 COLOR="#808080">
 This mirror is being used for development.  You may receive unexpected errors from this site if it is currently being
@@ -599,6 +600,7 @@ modified.  <B>I recommend using another mirror.</B><BR>
 <BR>
 <?
 	echo "Agent: ".$HTTP_USER_AGENT."<BR>\n";
+	echo "$MYSITE<BR>\n";
 	echo "IE3: ".$IE3."<BR>\n";
 	echo "IE4: ".$IE4."<BR>\n";
 	echo "NS3: ".$NS3."<BR>\n";
