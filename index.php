@@ -220,7 +220,7 @@ commonHeader("Hypertext Preprocessor");
  OSCOM, the international association for Open Source Content Management
  is arranging the <a href="http://oscom.org/events/oscom4/program/">Fourth
  Open Source Content Management Conference</a> from 29th September to 1st
- October in Zrich. This fall, the event features Apache Software Foundation
+ October in Zürich. This fall, the event features Apache Software Foundation
  projects, and PHP, so you have a chance to meet some prominent
  figures of the PHP scene there. OSCOM.4 is a place for developers,
  vendors, integrators and users to mingle and learn from each other. <a
