@@ -145,7 +145,7 @@ interface Throwable {
     public function getMessage();
 }
 
-class Exception implements Throwable {
+class MyException implements Throwable {
     public function getMessage() {
         // ...
     }
