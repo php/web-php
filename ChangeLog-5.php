@@ -9,6 +9,98 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.0.0RC2"></a>
+<h3>Version 5.0.0 Release Candidate 2</h3>
+<b>25-Apr-2004</b>
+<ul>
+<li> Implementing an interface/abstract method with the wrong prototype is now
+  a fatal error. (Zeev)
+</li>
+<li> Reimplemented zend.ze1_compatibility_mode to have better PHP 4 compliance.
+  (Dmitry, Andi)
+</li>
+<li> Under CLI, fclose() on php://stdin, php://stdout and php://stderr will now
+  close the real stream.  Please update your CLI scripts to use STDIN, STDOUT
+  and STDERR constants instead of fopen()/fclose(). (Wez)
+</li>
+<li> Moved yaz extension to PECL. (Wez)
+</li>
+<li> Added pty support to proc_open(). (Wez)
+</li>
+<li> Added possibility to check in which extension an internal class was defined 
+  in using reflection API. (Marcus)
+</li>
+<li> Changed tidy error handling to no longer use exceptions and 
+  renamed the "error_buf" property to errorBuffer. (John)
+</li>
+<li> Changed class and method names to use studlyCaps convention. (Marcus)
+</li>
+<li> Changed language parser to throw errors when a non-empty signature is used in
+  a destructor definition. (Marcus)
+</li>
+<li> Changed HTTP file uploads not to throw E_WARNINGs and E_NOTICEs. The error 
+  value in the $_FILES global should be used for error handling. (Derick)
+</li>
+<li> Changed __construct() to always take precedence over old style constructor.
+  (Dmitry)
+</li>
+<li> Fixed handling of return values from storred procedures in mssql_execute()
+  with multiple result sets returned. (Frank)
+</li>
+<li> Fixed bug #28096 (stream_socket_accept() doesn't work with ssl). (Wez)
+</li>
+<li> Fixed bug #28007 (compile mssql extension with old versions of FreeTDS
+  fails). (Frank)
+</li>
+<li> Fixed bug #27997 (SPL: Crash with getInnerIterator()). (Marcus)
+</li>
+<li> Fixed bug #27974 (COM doesn't pass array parameters). (Wez)
+</li>
+<li> Fixed bug #27928 (sqlite incorrectly handles invalid filenames). (Ilia)
+</li>
+<li> Fixed bug $27923 (in some cases using foreach() to iterate over values
+  led to a false error message about the key being a reference). (Adam)
+</li>
+<li> Fixed bug #27865 (STDIN, STDOUT, STDERR are dup()d under CLI). (Wez)
+</li>
+<li> Fixed bug #27821 (xml_parse() segfaults when xml_set_object() is called from
+  class method). (Andi, Rob)
+</li>
+<li> Fixed bug #27742 (WDSL SOAP Parsing Schema bug). (Dmitry)
+</li>
+<li> Fixed bug #27722 (Segfault on schema without targetNamespace). (Dmitry)
+</li>
+<li> Fixed bug #27719 (mktime issues on and around DST changeover). (Rasmus)
+</li>
+<li> Fixed bug #27681 (soap extension fails without HAVE_TM_GMTOFF). (Dmitry)
+</li>
+<li> Fixed bug #27641 (Object cloning in ze1_compatibility_mode was reimplemented)
+  (Dmitry, Andi)
+</li>
+<li> Fixed bug #27628 (Simplify the process of making a POST request via stream
+  context). (Ilia)
+</li>
+<li> Fixed bug #27619 (filters not applied to pre-buffered stream data). (Sara)
+</li>
+<li> Fixed bug #27519 (Reflection_Function constructor crashes with non-existant 
+  function's name). (Marcus)
+</li>
+<li> Fixed bug #27469 (serialize() objects of incomplete class). (Dmitry)
+</li>
+<li> Fixed bug #27457 (handling of numeric indexes in strtr()). (Dmitry)
+</li>
+<li> Fixed bug #27397 (debug_backtrace() not showing function arguments). (Zeev)
+</li>
+<li> Fixed bug #27283 (The last catch statement was sometimes skipped). (Andi)
+</li>
+<li> Fixed bug #26441 (When __set() returned a value it corrupted it). (Andi)
+</li>
+<li> Fixed bug #19749 (shouldn't mmap() files larger than memory_limit). (Wez)
+</li>
+</ul>
+
+<hr />
+
 <a name="5.0.0RC1"></a>
 <h3>Version 5.0.0 Release Candidate 1</h3>
 <b>18-Mar-2004</b>
