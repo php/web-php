@@ -630,7 +630,7 @@ $books = array (
 
 function showBook($one_book) {
 
-    list($title, $title_link, $author, $author_link=false, $image=false, $info=false, $info_link=false, $lang=false) = $one_book;
+    list($title, $title_link, $author, $author_link, $image, $info, $info_link, $lang) = $one_book;
 
     global $langs;
 
