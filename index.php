@@ -10,7 +10,7 @@ echo "\n<!--$MYSITE-->\n";
 ?>
 
 <h3>PHP 4.0.1 Patch Level 2 available</h3>
-PHP 4.0.1pl2 addresses two bugs that were discovered in PHP 4.0.1, that
+<a href="downloads.php">PHP 4.0.1pl2</a> addresses two bugs that were discovered in PHP 4.0.1, that
 prevent error_reporting() and readdir() from working properly.
 
 <h3>PHP 4.0.1 Released!</h3>
