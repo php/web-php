@@ -323,9 +323,18 @@ Brazilian PHP portal featuring tutorials, downloads, a forum and more</li>
 
 <li><b>Chinese</b>
 <ul>
+
 <li><a href="http://www.phpe.net/">Exceed PHP</a><br>
 Opensource site with PHP, MySQL and Apache tutorials, articles
 and scripts</li>
+</ul></li>
+
+<li><b>Croatian</b>
+<ul>
+
+<li><a href="http://php.monitor.hr">PHP.co.ba</a><br>
+Croatian site with news, source code, manuals, beginners guides, forums,
+questions &amp; answers, on-line help for programmers, polls, tools, etc.</li>
 </ul></li>
 
 <li><b>Dutch</b>
@@ -333,7 +342,6 @@ and scripts</li>
 
 <li><a href="http://php.pagina.nl/">Pagina</a><br>
 A Dutch PHP portal that lists a lot of PHP links, including free hosting</li>
-
 </ul></li>
 
 <li><b>Estonian</b>
