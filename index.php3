@@ -3,16 +3,11 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
+<h3>PHP 3.0.3 has been released</h3>
 
-<h3>PHP 3.0.2 has been released</h3>
-
-Version 3.0.2 is a service release for versions 3.0  and 3.0.1.  It includes
-fixes for the browscap module, two fixes to fairly rare language problems that
-could result in a crash, compile fixes for systems that do not have GNU make,
-and support for Apache 1.3.1 (<a href="ChangeLog-3.0.2.php3">complete list of changes available</a>).
-PHP 3.0.2 is available as both a full package and patches against earlier versions in the
-<a href="download-php.php3">downloads page</a>.<br>
-All users of earlier versions are encouraged to upgrade to this version.
+Have a look at the <a href="ChangeLog.php3">ChangeLog</a> to see
+what is new in this release. All users of earlier versions are encouraged 
+to upgrade to this version.
  
 <h3>What is PHP?</h3>
 
