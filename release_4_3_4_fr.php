@@ -24,7 +24,6 @@ site_header("Annonce de publication de PHP 4.3.4", array("lang" => "fr"));
 </p>
 
 <ul>
- <li>L'extension MCVE est disponible sur la plate-forme.</li>
  <li>Correction des fonctions disk_total_space() et disk_free_space() sous FreeBSD.</li>
  <li>Correction de FastCGI qui ne pouvait pas utiliser certaines IP sp&eacute;cifiques.</li>
  <li>Correction de nombreux bogues de la fonction mail() sous Windows.</li>

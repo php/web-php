@@ -22,7 +22,6 @@ site_header("PHP 4.3.4 Release Announcement");
 </p>
 
 <ul>
- <li>Made MCVE extension available on win32.</li>
  <li>Fixed disk_total_space() and disk_free_space() under FreeBSD.</li>
  <li>Fixed FastCGI being unable to bind to a specific IP.</li>
  <li>Fixed several bugs in mail() implementation on win32.</li>
