@@ -154,7 +154,7 @@ function print_popup_link($url, $linktext=false, $windowprops="", $target=false,
 
 function download_link($file, $title, $showsize = true, $mirror = '') {
 
-	$download_link = "get/$file";
+	$download_link = "get/$file/from/mirror";
 	if ($mirror != '') {
 		$download_link = $mirror . $download_link;
 	} else {
