@@ -7,7 +7,7 @@ commonHeader("Thanks");
 
 <p>
 <?php print_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS"); ?> provides
-DNS services for the php.* domains.
+DNS services for the php domains.
 </p>
 
 <p>
@@ -34,5 +34,12 @@ the server and bandwidth that run various services for php.net.
 And special thanks to all the companies who donate server space and bandwidth to host
 our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
 </p>
+
+<p>
+Special 'legacy' thanks go to <?php print_link("http://www.synacor.com", "Synacor"); ?>. 
+Synacor provided us with many Terabytes of bandwidth and hosting for www.php.net and others for many years. 
+PHP.net is very grateful for all their support.
+</p>
+
 
 <?php commonFooter(); ?>
