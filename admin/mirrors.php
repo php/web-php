@@ -51,7 +51,7 @@ if (isset($id) && isset($hostname)) {
     $query = "UPDATE mirrors SET hostname='$hostname',active=$active,mirrortype=$mirrortype,cname='$cname',maintainer='$maintainer',providername='$providername',providerurl='$providerurl',cc='$cc',lang='$lang',has_stats=$has_stats,has_search=$has_search WHERE id=$id";
   }
   else {
-    $query = "INSERT INTO mirrors (hostname,active,mirrortype,cname,maintainer,providername,providerurl,cc,lang,has_stats,has_search) VALUES ('$hostname',$active,$mirrortype,'$cname','$maintainer','$providername','$cc','$lang',$has_stats,$has_search)";
+    $query = "INSERT INTO mirrors (hostname,active,mirrortype,cname,maintainer,providername,providerurl,cc,lang,has_stats,has_search) VALUES ('$hostname',$active,$mirrortype,'$cname','$maintainer','$providername','$providerurl','$cc','$lang',$has_stats,$has_search)";
   }
   if (!mysql_query($query)) {
     echo "<h2 class=\"error\">Query failed: ", mysql_error(), "</h2>";
@@ -148,6 +148,7 @@ while ($row = mysql_fetch_array($res)) {?>
 }
 ?>
 </table>
+<p><a href="<?php echo $PHP_SELF;?>?id=0">add a new mirror</a></p>
 <?php
 commonFooter();
 
