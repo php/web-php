@@ -150,6 +150,7 @@ right away.</blockquote>
 	title("ISP's");
 	siteStart();
 	site("Aidan Internet Solutions","www.aidan.net");
+	site("BestHost","besthost.net");
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("Italia Online","www.iol.it");
@@ -236,6 +237,7 @@ right away.</blockquote>
 	site("Delia*s Inc.","www.delias.com");
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
+	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
 	site("Patagonia Clothing","www.patagonia.com");
@@ -276,6 +278,7 @@ right away.</blockquote>
 	site("Oaxaca State Tourist Guide","oaxaca-travel.gob.mx");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
+	site("Spirit Journeys","www.spiritjourneys.com");
 	site("Texas Highways","WWW.TexasHighways.COM");
 	site("Texas Weekender","WWW.TexasWeekender.COM");
 	site("TopHotels.com","www.tophotels.com");
