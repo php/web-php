@@ -271,6 +271,11 @@ if ($NS4 || $IE4):
 	echo "		$layerRef"."[layerName]".$styleSwitch.".visibility=\"hidden\";\n";
 	echo "	}\n";
 	echo "}\n";
+else:
+	echo "function showLayer(layerName) {\n";
+	echo "}\n";
+	echo "function hideLayer(layerName) {\n";
+	echo "}\n";
 endif;
 
 if ($NS4 || $NS3 || $IE4):	/* OnOvers */ ?>
@@ -322,10 +327,6 @@ function hide() {
 function change(Name,No) {
 }
 function changebullet(Name,No) {
-}
-function showLayer(layerName) {
-}
-function hideLayer(layerName) {
 }
 function hide() {
 }
