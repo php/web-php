@@ -191,6 +191,27 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://phpconf.phpquebec.org/index.php", make_image("conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
+
+<h1>Conf&eacute;rence PHP Qu&eacute;bec 2003 - (Montr&eacute;al, March 20&21rst, 2003)</h1>
+<p>
+<font class="newsdate">[28-Jan-2003]</font>
+The PHP Qu&eacute;bec association announces the <a
+href="http://phpconf.phpquebec.com/">Conf&eacute;rence PHP Qu&eacute;bec 2003</a>.
+The conference will take place in the &Eacute;cole Polytechnique de Montr&eacute;al, 
+Qu&eacute;bec, Canada.</p>
+
+<p>
+The Conf&eacute;rence PHP Qu&eacute;bec features two days of conferences, with 
+outstanding customer cases from Canada, and cutting edge technical 
+sessions, hosted by international experts. An exhibitor room will
+showroom professional solutions.</p>
+
+<p>Learn more about those exciting days at 
+<a href="http://phpconf.phpquebec.org/index.php">phpconf.phpquebec.com</a>.</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.phpconference.com/", make_image("international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
 
 <h1>International PHP Conference 2003 - Spring Edition (Amsterdam, May 8-9)</h1>
