@@ -62,6 +62,7 @@ right away.</blockquote>
 	site("C2Net Software Inc.","www.c2.net");
 	site("Flexform Software","www.flexform.de");
 	site("Knowledge Adventure","www.adventure.com");
+	site("Mozilla Crypto Group","mozilla-crypto.ssleay.org");
 	site("RedHat Software","www.redhat.com");
 	siteEnd();
 
