@@ -1,8 +1,8 @@
 <?$mod = GMDate("D, d M Y H:i:s",filemtime("FAQ.html"));
-  Header("Last-Modified: $mod GMT"); ?>
-<html><head><title>PHP3 Frequently Asked Questions</title>
-<?$title="Frequently Asked Questions";
-  include "include/header.inc";
+  Header("Last-Modified: $mod GMT");
+  require("shared.inc");
+  commonHeader("Frequently Asked Questions"); 
+
   $fd = fopen("FAQ.html", "r");
 
   /* drop everything until it tells us to stop chopping */
@@ -21,5 +21,5 @@
   }
   /* just close the file, throwing away the rest */
   fclose($fd);
+  commonFooter();
 ?>
-</body></html>

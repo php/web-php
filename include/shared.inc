@@ -376,9 +376,9 @@ searchPosLeft=screenWidth - 320;
 searchPosTop=40;
 mirrorPosLeft=143;
 <?	if ($X11NS): ?>
-mirrorPosTop=220;
+mirrorPosTop=180;
 <?	else: ?>
-mirrorPosTop=240;
+mirrorPosTop=200;
 <?	endif; ?>
 <?	if ($IE4): ?>
 	searchPosLeft+=4;
@@ -430,8 +430,8 @@ document.writeln("</STYLE>");
 	else:
 		makeSideButton("downloads.php3","down","","downloads",129,30,0,10,"Downloads","<BR>\n");
 		makeSideButton("docs.php3","docs","","docs",129,30,0,10,"Documentation","<BR>\n");
-		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
-		makeSideButton("dev.php3","dev","","development",129,30,0,10,"News for Developers","<BR>\n");
+#		makeSideButton("mail.php3","mail","","mailing",129,30,0,10,"Mailing Lists","<BR>\n");
+		makeSideButton("support.php3","dev","","development",129,30,0,10,"Getting Help","<BR>\n");
 		makeSideButton("news.php3","news","","news",129,30,0,10,"PHP in the News","<BR>\n");
 		makeSideButton("sites.php3","link","","links",129,30,0,10,"PHP Links","<BR>\n");
 		makeSideButton("mirrors.php3","mirr","mirrorsKick","mirror",129,30,0,10,"Mirror sites","<BR>\n");
