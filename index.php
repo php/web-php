@@ -83,7 +83,7 @@ echo "\n<!--$MYSITE-->\n";
 highly-improved performance, especially under Windows; a more security-friendly
 way of accepting form variables; output compression; and much, much more.  Read the full
 <a href="/release_4_1_0.php">release announcement</a>, or check out the
-<a href="/ChangeLog-4.php">changelog</a>. Windows binaries will be available in a few days.
+<a href="/ChangeLog-4.php">changelog</a>. Windows binaries are also available.
 <br clear="all">
 </p>
 
