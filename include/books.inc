@@ -288,6 +288,17 @@ array(
     /* language     */ "en"
    ),
 
+ array (
+    /* title[s]     */ "Comprehensive PHP PEAR::DB",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1411603613/wwwphpnet",
+    /* author[s]    */ "Blake Schwendiman",
+    /* auth link[s] */ "",
+    /* image        */ "1411603613.jpg",
+    /* information  */ "Lulu Press, Inc., 2003, ISBN 1-4116-0361-3, 169 pages",
+    /* inform. link */ "http://www.lulu.com/intechrabooks",
+    /* language     */ "en"
+   ),
+
   array (
     /* title[s]     */ "Programming PHP",
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926102/wwwphpnet",
