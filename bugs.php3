@@ -22,13 +22,14 @@ function show_menu($state) {
 	if($state) { echo "<option>$state\n"; }
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
+	if($state!="Assigned") { echo "<option>Assigned\n"; }
 	if($state!="All") { echo "<option>All\n"; }
 	echo "</select> bugs of type ";
-	show_types($bug_type);
+	show_types($bug_type,1,"bug_type");
 	echo "</form>\n";
 }
 
-function show_types($first_item) {
+function show_types($first_item,$show_any,$var_name) {
 	$items = array("Any",
 				   "Feature/Change Request",
 				   "Documentation problem",
@@ -48,10 +49,12 @@ function show_types($first_item) {
 				   "dbm related",
 				   "Other");
 
-	echo "<select name=\"bug_type\">\n<option>$first_item\n";
+	echo "<select name=\"$var_name\">\n<option>$first_item\n";
 	for($i=0;$i<count($items);$i++) {
 		if($first_item!=$items[$i]) {
-			echo "<option>$items[$i]\n";
+			if($show_any || $items[$i]!="Any") {
+				echo "<option>$items[$i]\n";
+			}
 		}
 	}
     echo "</select>\n";
@@ -99,7 +102,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     mysql_pconnect("localhost","bourbon","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
-    mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','')");
+    mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','')");
 	$cid = mysql_insert_id();
 
     $report = "";
@@ -158,6 +161,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			case "Closed":
 				return "#aaffbb";
 				break;
+			case "Assigned":
+				return "#bbaaff";
+				break;
 			default:
 				return "#aaaaaa";
 				break;
@@ -173,8 +179,9 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$fields[] = "id";
 	$fields[] = "bug_type";
 	$fields[] = "status as Status";
-	$fields[] = "php_version as Version";
-	$fields[] = "php_os as OS";
+	$fields[] = "assign as Assigned";
+#	$fields[] = "php_version as Version";
+#	$fields[] = "php_os as OS";
 	$fields[] = "email as Originator";
 	$fields[] = "sdesc as Description";
 	$conversion_table["id"] = "ID#";
@@ -191,9 +198,18 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	} elseif($status=="All" && $bug_type!="Any") {
 		$where_clause = "bug_type='$bug_type'";
 	} elseif($status!="All" && $bug_type=="Any") {
-		$where_clause = "status='$status'";
+		/* Treat assigned bugs as open */
+		if($status=="Open") {
+			$where_clause = "status='Open' or status='Assigned'";
+		} else {
+			$where_clause = "status='$status'";
+		}
 	} else {
-		$where_clause = "status='$status' and bug_type='$bug_type'";
+		if($status=="Open") {
+			$where_clause = "(status='Open' or status='Assigned') and bug_type='$bug_type'";
+		} else {
+			$where_clause = "status='$status' and bug_type='$bug_type'";
+		}
 	}
 	table_wrapper("php3");
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
@@ -213,7 +229,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 					if($status=="Delete!") {
 						mysql_query("DELETE from bugdb where id=$id");
 					} else {
-						mysql_query("UPDATE bugdb set status='$estatus', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+						mysql_query("UPDATE bugdb set status='$estatus', bug_type='$ebug_type', assign='$eassign', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					}
 					$ok=1;
 				}
@@ -239,18 +255,28 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			if($row[7]=="Open") {
-				echo "<option>Open\n<option>Closed<option>Delete!\n";
+				echo "<option>Open\n<option>Closed<option>Assigned<option>Delete!\n";
+			} elseif($row[7]=="Closed") {
+				echo "<option>Closed\n<option>Open<option>Assign<option>Delete!\n";
 			} else {
-				echo "<option>Closed\n<option>Open<option>Delete!\n";
+				echo "<option>Assigned<option>Closed\n<option>Open<option>Delete!\n";
 			}
 			echo "</select>\n";
+			echo "Assign to: <input type=text name=eassign value=\"$row[12]\">\n";
 		}
 		echo "</tr>\n";
 		echo "<tr><th align=right>From:</th><td><a href=\"mailto:".$row[2]."\">".$row[2]."</a></td></tr>\n";
 		echo "<tr><th align=right>Date:</th><td>".$row[9]."</td></tr>\n";
-		echo "<tr><th align=right>Type:</th><td>".$row[1]."</td></tr>\n";
+		if(!isset($edit)) {
+			echo "<tr><th align=right>Type:</th><td>".$row[1]."</td></tr>\n";
+		} else {
+			echo "<tr><th align=right>Type:</th><td>\n";
+			show_types($row[1],0,"ebug_type");
+			echo "</td></tr>\n";
+		}
 		echo "<tr><th align=right>OS:</th><td>".$row[6]."</td></tr>\n";
 		echo "<tr><th align=right>PHP Version:</th><td></b>".$row[5]."</td></tr>\n";
+		echo "<tr><th align=right>Assigned To:</th><td></b>".$row[12]."</td></tr>\n";
 		echo "<tr><th align=right>Short Desc.:</th><td></b>".$row[3]."</td></tr>\n";
 		echo "</table>\n";
 		$text = addlinks($row[4]);
@@ -316,7 +342,7 @@ for any outstanding bug reports that match your bug.</STRONG>
  </tr><tr>
   <th align=right>Type of bug:</th>
   <td>
-	<?show_types("--Please Select--")?>
+	<?show_types("--Please Select--",0,"bug_type")?>
    </td>
   </tr><tr>
   <th align=right>Operating system:</th>
