@@ -88,7 +88,7 @@ if ($cmd == "send") {
 
 		echo "</pre>\n";
 
-		$ascii_report = $report.$sdesc."\n\n".wrap($ldesc);
+		$ascii_report = "$report$sdesc\n\n$ldesc";
 		$ascii_report.= "\n-- \nEdit bug report at: http://bugs.php.net/?id=$cid&edit=1\n";
 
         $mailto = $mail_bugs_to . (eregi("documentation",$bug_type) ? ",phpdoc@lists.php.net" : "");
