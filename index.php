@@ -87,7 +87,7 @@ Thanks for you all, who contributed to making
 the best help system for PHP on Windows.
 You can get more information about the ongoing
 project at <?php print_link("http://weblabor.hu/php/newchm.php",
-" it's own page"); ?>.
+" its own page"); ?>.
 <br clear="all">
 </p>
 
@@ -103,7 +103,7 @@ PHP enthusiasts from all over the world met three days to attend
 powerworkshops and sessions presented by the inventors of PHP, members
 of the core group and other well known people from the community.
 The conference is over now, but you can get some impressions
-by visting one of the photo galleries, attendees put together:
+by visiting one of the photo galleries, attendees put together:
 <ul>
     <li><?php print_link("http://www.photoalbum.nohn.net/PHPConference2001", "Sebastian Nohn"); ?></li>
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
@@ -231,7 +231,7 @@ designed to explore and strengthen PHP in
 the open source space. The conference
 was at the Sheraton San Diego Hotel and Marina
 in San Diego, California between July 23-27, 2001.
-Some presentations, you can see online:</p>
+You can view some of the presentations online:</p>
 <ul>
   <li>Rasmus Lerdorf's <a href="http://conf.php.net/or2001">PHP - Spinal Injection</a></li>
   <li>Thies Arntzen on <a href="http://conf.php.net/oci2">Making efficient use of Oracle8i thru Apache and PHP 4</a></li>
