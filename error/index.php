@@ -117,18 +117,26 @@ $uri_aliases = array (
     "logos"         => "download-logos",
 
     # manual shortcuts
-    "ini"         => "configuration",
-    "install"     => "installation",
-    "intro"       => "introduction",
-    "whatis"      => "introduction",
-    "whatisphp"   => "introduction",
-    "what_is_php" => "introduction",
-    "windows"     => "install.windows",
-    "win32"       => "install.windows",
-    "globals"     => "security.registerglobals",
-    "tut"         => "tutorial",
-    "tut.php"     => "tutorial", // for backward compatibility with PHP page!
-    "gd"          => "image",
+    "ini"          => "configuration",
+
+    "install"      => "installation",
+
+    "intro"        => "introduction",
+    "whatis"       => "introduction",
+    "whatisphp"    => "introduction",
+    "what_is_php"  => "introduction",
+
+    "windows"      => "install.windows",
+    "win32"        => "install.windows",
+
+    "globals"      => "security.registerglobals",
+    "gd"           => "image",
+
+    "tut"          => "tutorial",
+    "tut.php"      => "tutorial", // for backward compatibility with PHP page!
+
+    "icap"         => "mcal", // mcal is the successor of icap,
+    "ref.icap.php" => "mcal", // which is not supported by PHP anymore
     
     # external shortcut aliases ;)
     "dochowto"    => "phpdochowto"
