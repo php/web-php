@@ -6,7 +6,8 @@ site_header("Annonce de publication de PHP 4.2.2", array("lang" => "fr"));
 ?>
 
 <h1>
-PHP Security Advisory: Vulnerability in PHP versions 4.2.0 and 4.2.1
+Alerte de s&eacute;curit&eacute; PHP : Vuln&eacute;rabilit&eacute; dans
+les versions 4.2.0 et 4.2.1 de PHP
 </h1>
 
 <p>[ <a href="/release_4_2_2.php">English Version</a> ]</p>
