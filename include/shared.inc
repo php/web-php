@@ -26,7 +26,7 @@ elseif (ereg("Mozilla/([0-9]+)",$HTTP_USER_AGENT,$version)):
         endif;
 endif;
 
-if (eref("Opera",$HTTP_USER_AGENT)):
+if (ereg("Opera",$HTTP_USER_AGENT)):
 	$DISABLE_KICKOUTS = true;
 endif;
 
