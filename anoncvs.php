@@ -72,13 +72,13 @@ to see what is available, and substitute the appropriate name for
 
 <p><strong><a name="buildconf_fail">autoconf, automake and libtool information</a></strong></p>
 <p> There seem to be problems with libtool 1.4.2. It is suggested that you use
-libtool 1.4, along with the most current versions of autoconf and automake.
+libtool 1.4, along with the autoconf 2.13 and automake 1.4.
 You should also ensure that autoconf, automake and libtool are installed in the same directory.</p>
 
-<p>The following combination are known to work.
+<p>The following combinations are known to work:
  <ul>
-  <li>autoconf 2.52, automake 1.4 and libtool 1.4</li>
-  <li>autoconf 2.52, automake 1.5 and libtool 1.4</li>
+  <li>autoconf 2.13, automake 1.4 and libtool 1.4</li>
+  <li>autoconf 2.13, automake 1.5 and libtool 1.4</li>
  </ul>
 </p>
 
