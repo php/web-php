@@ -1,16 +1,11 @@
 <?php
 
+// Ensure that our environment is set up
 include_once 'prepend.inc';
 
-// ============================================================================
-// Check for a manual in the mirror's default language
-$lang = default_language();
-if (!@file_exists("$DOCUMENT_ROOT/manual/$lang/index.php")) {
-    $lang = "en"; // fall back to English
-}
-
 // Get URI for this request (without the leading slash)
-$URI = substr($REQUEST_URI, 1);
+// See langchooser.inc for more info on STRIPPED_URI
+$URI = substr($_SERVER['STRIPPED_URI'], 1);
 
 // ============================================================================
 // For images, display a 404 automatically (no redirect)
@@ -32,10 +27,10 @@ if (preg_match("!^bugs.php?(.+)$!", $URI, $array)) {
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
 if (preg_match("!^manual/([^/]+)$!", $URI, $array)) {
-    mirror_redirect("/manual/$lang/$array[1]");
+    mirror_redirect("/manual/$LANG/$array[1]");
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
     $array[1] = preg_replace("!.html$!", ".php", $array[1]);
-    mirror_redirect("/manual/$lang/print/$array[1]");
+    mirror_redirect("/manual/$LANG/print/$array[1]");
 }
 
 // ============================================================================
@@ -73,15 +68,17 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &
 
 // ============================================================================
 // Nice URLs for download files, so wget works completely well with download links
-if (preg_match("!^get/([^/]+)(/from/mirror)?$!", $URI, $filepart)) {
-    $df = $filepart[1];
-    include_once "$DOCUMENT_ROOT/get_download.php";
-    exit;
-}
-elseif (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
+if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
+    
     $df = $dlinfo[1];
+    
+    // Mirror selection page
     if ($dlinfo[2] == "a") { include_once "$DOCUMENT_ROOT/get_download.php"; exit; }
+    
+    // The same mirror is selected
     if ($dlinfo[2] == "this") { $mr = $MYSITE; }
+    
+    // Some other mirror is selected
     else { $mr = "http://{$dlinfo[2]}/"; }
     include_once "$DOCUMENT_ROOT/do_download.php";
     exit;
@@ -169,58 +166,41 @@ if (isset($external_redirects[strtolower($URI)])) {
 }
 
 // ============================================================================
-// Try to find the URI as a manual entry
-require "manual-lookup.inc";
-if (strchr($URI, '/')) {
-    
-    // Find language and function name part (eg. hu/ini)
-    list($lang, $function) = explode('/', $URI, 2);
-
-    $function = strtolower($function);
-    $lang     = strtolower($lang);
-    
-    // Proper case for Brazilian Portuguese
-    if ($lang == 'pt_br') { $lang = 'pt_BR'; }
-
-    // Transform function name, so it can be a shortcut
-    if (isset($uri_aliases[$function])) {
-        $function = $uri_aliases[$function];
-    }
-
-} else {
-    $function = strtolower($URI);
-}
-
-// ============================================================================
 // Quick access to revcheck output, build logs, books for various languages and
 // the PHP Documentation Howto for backward compatibility [breaks left out intentionally]
-switch ($function) {
-    case "rev"         : mirror_redirect("/manual/$lang/revcheck.html.gz");
-    case "blog"        : mirror_redirect("/manual/$lang/build.log.gz");
-    case "books"       : mirror_redirect("/books.php?type_lang=PHP_$lang");
+$URI = strtolower($URI);
+switch ($URI) {
+    case "rev"         : mirror_redirect("/manual/$LANG/revcheck.html.gz");
+    case "blog"        : mirror_redirect("/manual/$LANG/build.log.gz");
+    case "books"       : mirror_redirect("/books.php?type_lang=PHP_$LANG");
     case "phpdochowto" : mirror_redirect("/manual/howto/index.html");
 }
 
 // ============================================================================
-// Try to find the page using this language as a manual page (lang is the language
-// from the URI, or the default language if it was not there in the URI
-$try = find_manual_page($lang, $function);
+// Try to find the page using the preferred language as a manual page
+include_once "manual-lookup.inc";
+$try = find_manual_page($LANG, $URI);
 if ($try) { mirror_redirect($try); }
 
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-mirror_redirect('/search.php?show=manual&lang=' . urlencode($lang) . '&pattern=' . urlencode($URI));
+mirror_redirect(
+    '/search.php?show=manual&lang=' . urlencode($LANG) .
+    '&pattern=' . urlencode($_SERVER['REQUEST_URI'])
+);
 
 // A 'good looking' 404 error message page
 function make404()
 {
-    global $REQUEST_URI;
+    global $_SERVER;
     header('Status: 404 Not Found');
     header("Cache-Control: public, max-age=600");
     commonHeader('404 Not Found');
-    echo "<h1>Not Found</h1>\n";
-    echo "<p>The page <b>" . htmlspecialchars($REQUEST_URI) . "</b> could not be found.</p>\n";
+    echo "<h1>Not Found</h1>\n",
+         "<p>The page <b>",
+         htmlspecialchars($_SERVER['REQUEST_URI']),
+         "</b> could not be found.</p>\n";
     commonFooter();
     exit;
 }
