@@ -538,14 +538,14 @@ PHP and follow the instructions in INSTALL.REDHAT found in that distribution.
   <DD>
     You have to have the GNU autoconf package installed so you can
     generate the configure script from configure.in. Just run
-    <CODE>autoconf</CODE> in the top-level directory after getting
+    <CODE>make -f build.mk</CODE> in the top-level directory after getting
     the sources from the CVS server. (Also, unless you run configure
     with the <CODE>--enable-maintainer-mode</CODE> option, the
     configure script will not automatically get rebuilt when the
     configure.in file is updated, so you should make sure to do that
     manually when you notice configure.in has changed. One symptom
     of this is finding things like @VARIABLE@ in your Makefile after
-    configure or config.status is run.
+    configure or config.status is run.)
   <P>
   </DD>
   <DT><B>
