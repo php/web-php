@@ -13,6 +13,63 @@ information useful.
 
 <?php echo hdelim(); ?>
 
+<h1>PHP 4.1.0 Released!</h1>
+
+<p>
+<font class="newsDate">[10-Dec-2001]</font>
+<a href="/downloads.php">PHP 4.1.0</a> is a key new release in the PHP 4 family.  It includes
+highly-improved performance, especially under Windows; a more security-friendly
+way of accepting form variables; output compression; and much, much more.  Read the full
+<a href="/release_4_1_0.php">release announcement</a>, or check out the
+<a href="/ChangeLog-4.php">changelog</a>. Windows binaries are also available.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>Windows Manual Survey Results</h1>
+
+<p>
+<font class="newsDate">[27-Nov-2001]</font>
+After one week our Windows HTML Help Manual Survey
+is over now. We received nearly six hundred
+processable forms with many wishes and comments.
+Thanks for you all, who contributed to making
+the best help system for PHP on Windows.
+You can get more information about the ongoing
+project, including the detailed results of the survey at
+<?php print_link("http://weblabor.hu/php/newchm.php",
+" the project's own page"); ?>.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP-GTK Documentation Update</h1>
+
+<p>
+<font class="newsDate">[18-Oct-2001]</font>
+<?php print_link("http://gtk.php.net/", "PHP-GTK"); ?> 
+<?php print_link("http://gtk.php.net/docs.php", "documentation"); ?> is starting
+to be more filled out. The manual is now rebuilt every night and
+<?php print_link("http://gtk.php.net/download-docs.php", "downloadable versions"); ?> 
+of it in different formats are also available. If you have been working with
+PHP-GTK and would like to contribute to the documentation effort, please
+let us know. 
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
+<h1>PHP News Archive</h1>
+
+<p>
+Find all previous PHP related news and announcements <?php print_link("/news.php", "here"); ?>.
+<br clear ="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Rackspace providing additional hosting for PHP project</h1>
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("rackspace.gif", "Rackspace", "right") ); ?>
 
