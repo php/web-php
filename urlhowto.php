@@ -104,4 +104,24 @@ the query you typed into the URL. An example of this kind
 of URL is <tt>http://php.net/search_for_this</tt>.
 </p>
 
+<h2>Get it on your site</h2>
+
+<p>
+What enables PHP.net to have this feature is a combination of a 
+custom ".htaccess" file, who redirect the browser to another page
+in case of "Error 401/3/4" and a little search page that looks up
+functions names in the manual corresponding to what you searched for in
+<tt>http://php.net/search_for_this</tt>.
+
+<br />
+
+Everything behind this feature is available here:
+<ul>
+ <li><a href="http://cvs.php.net/co.php/phpweb/error/index.php">http://cvs.php.net/co.php/phpweb/error/index.php</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
+ <li><a href="http://cvs.php.net/co.php/phpweb/.htaccess">http://cvs.php.net/co.php/phpweb/.htaccess</a></li>
+</ul>
+
+</p>
+
 <?php commonFooter(); ?>
