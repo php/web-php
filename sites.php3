@@ -84,6 +84,7 @@ right away.</blockquote>
 	site("The Biology Place","www.biology.com");
 	site("The Chemistry Place","www.chemplace.com");
 	site("DevilNet at Duke University", "devilnet.duke.edu");
+	site("Digital Metrics","www.digitalmetrics.com");
 	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
 	site("GezondheidsNet","www.gezondheidsnet.nl");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
@@ -132,6 +133,7 @@ right away.</blockquote>
 /* Government */
 	title("Government");
 	siteStart();
+	site("City of Escondido","www.ci.escondido.ca.us");
 	site("National Institute of Ecology in Mexico","www.ine.gob.mx");
 	siteEnd();
 
