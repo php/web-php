@@ -125,7 +125,6 @@ right away.</blockquote>
 	site("BörsePlus","www.boerseplus.de");
 	site("Cyber Merchants Exchange","www.c-me.com");
 	site("The Development Capital Exchange","www.equity-invest.com");
-	site("E*Trade","www.etrade.com");
 	site("First USA Bank","www.firstusabank.com");
 	site("TFC Commodity Charts","tfc-charts2.w2d.com");
 	siteEnd();
