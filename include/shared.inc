@@ -376,7 +376,7 @@ searchPosLeft=screenWidth - 320;
 searchPosTop=40;
 mirrorPosLeft=143;
 <?	if ($X11NS): ?>
-mirrorPosTop=180;
+mirrorPosTop=190;
 <?	else: ?>
 mirrorPosTop=200;
 <?	endif; ?>
