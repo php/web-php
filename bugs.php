@@ -17,59 +17,22 @@ if (strstr($MYSITE,"www.php.net") || strstr($MYSITE,"localhost")) {
 	$dbuser = "nobody";
 	$dbpwd  = "";
 } else {
-  header("Location: http://www.php.net/bugs.php" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
-  exit;
+	header("Location: http://www.php.net/bugs.php" . ($QUERY_STRING ? "?$QUERY_STRING" : ""));
+	exit;
 }
 
-/* if ($edit)
-	$edit = $MAGIC_COOKIE ? 1 : 2;
-*/
+mysql_connect($dbhost,$dbuser,$dbpwd)
+	or die("Unable to connect to SQL server.");
+mysql_select_db("php3");
 
 commonHeader("Bug Reporting");
 echo "<font size=\"-1\">\n";
 
-function indent($string, $prefix) {
-    $string = ereg_replace(13, "", $string); /* get rid of Ctrl-M */
-    return $prefix . ereg_replace("\n", "\n$prefix", $string) . "\n";
-}
-
-function wrap($text,$margin=72) {
-	$i=0;
-	$last_space=0;
-	$printfrom=0;
-	$len=strlen($text);
-	$line_len=0;
-	while($i<$len) {
-		if($text[$i]==chr(32) || $text[$i]==chr(7)) {
-			$last_space=$i;
-			$line_len++;
-		} else
-		if($text[$i]==chr(10) || $text[$i]==chr(13)) {
-			$line_len=0;
-		} else {
-			$line_len++;
-		}
-		if($line_len>$margin) {
-			if($last_space==0 || $last_space<$printfrom) {
-				echo substr($text,$printfrom,$margin);
-				echo "\n";
-				$printfrom+=$margin+1;
-			} else {
-				echo substr($text,$printfrom,$last_space-$printfrom);
-				echo "\n";
-				$printfrom=$last_space+1;
-			}
-			$line_len=0;
-		}
-		$i++;
-	}
-	echo substr($text,$printfrom);
-}
+require 'format-text.inc';
 
 function list_ids($current) {
 	global $dbhost,$dbuser,$dbpwd;
-	mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
-	$result = mysql_db_query('php3', "select distinct dev_id from bugdb where dev_id not like '%@%' and dev_id not like '%.%' and php_version like '4%' order by dev_id");
+	$result = mysql_query("SELECT DISTINCT dev_id FROM bugdb WHERE dev_id NOT LIKE '%@%' AND dev_id NOT LIKE '%.%' AND php_version LIKE '4%' ORDER BY dev_id");
 	if ($current) echo "<option>$current\n";
 	echo "<option>Any\n";
 	while ($row = mysql_fetch_row($result)) {
@@ -82,25 +45,25 @@ function show_state_options($state, $show_all, $user_mode=0) {
 	if (empty($state)) { $state = "Open"; }
 
 	$state_types = 	array (
-						"Open"        => 2, 
-						"Closed"      => 2,
-						"Critical"    => 1, 
-						"Duplicate"   => 2,
-						"Assigned"    => 1,
-						"Analyzed"    => 1,
-						"Suspended"   => 1,
-						"Feedback"    => 3,
-						"OldFeedback" => 3,
-						"Bogus"       => 1        
- 					);
+				"Open"        => 2, 
+				"Closed"      => 2,
+				"Critical"    => 1, 
+				"Duplicate"   => 2,
+				"Assigned"    => 1,
+				"Analyzed"    => 1,
+				"Suspended"   => 1,
+				"Feedback"    => 3,
+				"OldFeedback" => 3,
+				"Bogus"       => 1        
+ 			);
 	
-	/* Restricted status's have value 1, i.e. User can only close the report (except Bogus). */
+	/* regular users can only pick states with type = 1 for unclosed bugs */
 	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
 		echo "<option>$state\n";
 		if($state != "Bogus") echo "<option>Closed\n";
 	} else {
 		foreach($state_types as $type => $mode) {
-			if($mode == $user_mode || $user_mode == 1 || $user_mode == 0) {
+			if($mode == $user_mode || $user_mode < 2) {
 				echo "<option";
 				if($type == $state) echo " SELECTED";
 				echo ">$type\n";
@@ -126,17 +89,18 @@ function show_menu($state)
 	echo "</select></td><td align=\"right\">bugs of type: </td><td>";
 	show_types($bug_type,1,"bug_type");
 
-	$fields = array( "id" => "Bug ID",
-					"bug_type" => "Bug Type",
-					"email" => "Email address",
-					"sdesc" => "Short Description",
-					"ldesc" => "Long Description",
-					"php_version" => "PHP Version",
-					"php_os" => "Platform",
-					"status" => "Status",
-					"comments" => "Comments",
-					"ts1" => "Opened",
-					"assign" => "Assigned To");
+	$fields = array("id" => "Bug ID",
+			"bug_type" => "Bug Type",
+			"email" => "Email address",
+			"sdesc" => "Short Description",
+			"ldesc" => "Long Description",
+			"php_version" => "PHP Version",
+			"php_os" => "Platform",
+			"status" => "Status",
+			"comments" => "Comments",
+			"ts1" => "Opened",
+			"assign" => "Assigned To"
+		);
 
 	reset($fields);
 	echo "</td><td align=\"right\">Last Comment By:</td><td> <select name=\"by\">\n";
@@ -170,7 +134,7 @@ function show_types($first_item,$show_any,$var_name) {
 		}
 	}
 
-    print "</select>\n";
+	print "</select>\n";
 }
 
 function find_password($user) {
@@ -221,54 +185,52 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	show_menu($status);
 	echo "<hr>\n";
 
-    mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
-    mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
-    $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
+	$ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','','$passwd')");
 	$cid = mysql_insert_id();
 
-    $report = "";
-    echo("<pre>\n");
+	$report = "";
+	echo("<pre>\n");
 
-    $ldesc = stripslashes($ldesc);
-    $sdesc = stripslashes($sdesc);
-    $report .= "From:             $email\n";
-    $report .= "Operating system: $php_os\n";
-    $report .= "PHP version:      $php_version\n";
-    $report .= "PHP Bug Type:     $ebug_type\n";
-    $report .= "Bug description:  ";
-    $html_sdesc = ereg_replace("<", "&lt;", $sdesc);
-    $html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
-    $report .= $html_sdesc."\n\n";
+	$ldesc = stripslashes($ldesc);
+	$sdesc = stripslashes($sdesc);
+	$report .= "From:             $email\n";
+	$report .= "Operating system: $php_os\n";
+	$report .= "PHP version:      $php_version\n";
+	$report .= "PHP Bug Type:     $ebug_type\n";
+	$report .= "Bug description:  ";
+	$html_sdesc = ereg_replace("<", "&lt;", $sdesc);
+	$html_sdesc = ereg_replace(">", "&gt;", $html_sdesc);
+	$report .= $html_sdesc."\n\n";
 	$ascii_report = indent($report.$ldesc,"");
 	$ascii_report.= "\n\n-- \nEdit Bug report at: http://bugs.php.net/?id=$cid&edit=1\n\n";
-    $html_desc = ereg_replace("<", "&lt;", $ldesc);
-    $html_desc = ereg_replace(">", "&gt;", $html_desc);
-    $report .= $html_desc."\n";
+	$html_desc = ereg_replace("<", "&lt;", $ldesc);
+	$html_desc = ereg_replace(">", "&gt;", $html_desc);
+	$report .= $html_desc."\n";
 
-    $html_report = ereg_replace("<", "&lt;", $report);
-    $html_report = ereg_replace(">", "&gt;", $html_report);
+	$html_report = ereg_replace("<", "&lt;", $report);
+	$html_report = ereg_replace(">", "&gt;", $html_report);
 
-    echo wrap($html_report);
-    echo("</pre>\n");
+	echo wrap($html_report);
+	echo("</pre>\n");
 
-    // Send doc bugs also to the doc list (jeroen)
-    if ($ebug_type == "Documentation problem") {
-      @mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
-    }
+	// Send doc bugs also to the doc list (jeroen)
+	if ($ebug_type == "Documentation problem") {
+		@mail('phpdoc@lists.php.net', "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid"); 
+	}
 
-    if (Mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
-        echo "<p><h2>Mail sent to $destination...</h2></p>\n";
+	if (mail($destination, "Bug #$cid: $sdesc", $ascii_report, "From: $email\nX-PHP-Bug: $cid")) {
+		echo "<p><h2>Mail sent to $destination...</h2></p>\n";
 		echo "<p>Thank you for your help!</p>";
 		echo "<p><i>The password for this report is</i>: <b>".htmlentities($passwd)."</b><br>";
 		echo "If the status of the bug report you submitted\n";
 		echo "changes, you will be notified. You may return here and check on the status\n";
 		echo "or update your report at any time. The URL for your bug report is: <a href=\"http://bugs.php.net/?id=$cid\">";
 		echo "http://bugs.php.net/?id=$cid</a></p>\n";
-    } else {
-        echo "<p><h2>Mail not sent!</h2>\n";
-        echo "Please send this page in a mail to " .
-	     "<a href=\"mailto:$destination\">$destination</a> manually.</p>\n";
+	} else {
+		echo "<p><h2>Mail not sent!</h2>\n";
+		echo "Please send this page in a mail to " .
+		     "<a href=\"mailto:$destination\">$destination</a> manually.</p>\n";
     }
 
 } elseif(isset($cmd) && $cmd=="Display Bugs") {
@@ -277,7 +239,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	include("table_wrapper.inc");
 
-	function external_processing($fieldname,$tablename,$data,$row){
+	function external_processing($fieldname,$tablename,$data,$row) {
 
  		switch($fieldname) {
 			case "id":
@@ -342,9 +304,6 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$external_processing_function="external_processing";
 	$row_coloring_function="row_coloring";
 
-    mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server");
-    mysql_select_db("php3");
-
 	$tables[] = "bugdb";
 	$fields[] = "id";
 	$fields[] = "bug_type";
@@ -405,10 +364,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 } else if(!isset($cmd) && isset($id)) {
 
-	/* Change made by j.a.greant 00/09/03 */
-
-	function get_old_comments ($bug_id)
-	  {
+	function get_old_comments ($bug_id) {
 	  	$divider = '---------------------------------------------------------------------------';
 		$max_message_length = 10 * 1024;
 
@@ -426,26 +382,21 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		$comments[] = mysql_fetch_row ($result);
 
 		$counter = 0;
-		foreach ($comments as $value)
-		  {
+		foreach ($comments as $value) {
 			$output .= "[$value[0]] $value[1]\n\n$value[2]\n\n$divider\n\n";
-			if (strlen ($output) > $max_message_length || ++$counter > 4 )
-			  {
+			if (strlen ($output) > $max_message_length || ++$counter > 4 ) {
 				$output .= "The remainder of the comments for this report are too long.\nTo view the rest of the comments, please\nview the bug report online.\n";
 				break;
-			  }
-		  }
+			}
+		}
 
-		if ($output)
+		if ($output) {
 			return "\n\nPrevious Comments:\n$divider\n\n" . $output;
-	  }
+		}
+	}
 
 	show_menu($status);
 	echo "<hr>\n";
-
-	mysql_connect($dbhost,$dbuser,$dbpwd)
-		or die("Unable to connect to SQL server.");
-	mysql_select_db("php3");
 
 	/* HANDLE NORMAL DEVELOPER UPDATES */
 	if(isset($modify) && $modify=="Edit Bug") {
@@ -537,13 +488,13 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
 
-      // mail phpdoc if old or new type is documentation (jeroen)
-      if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
-        @mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
-      }
+			// mail phpdoc if old or new type is documentation
+			if ($ebug_type == "Documentation problem" || $row[1] == "Documentation problem") {
+      				@mail('phpdoc@lists.php.net',"Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
+			}
 
-      @mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-      @mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
+			@mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+			@mail($destination, "Bug #$id Updated: $esdesc", $text, "From: $eemail\nX-PHP-Bug: $id");
 			mysql_freeresult($result);
 		}
 	}
