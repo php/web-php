@@ -126,6 +126,7 @@ right away.</blockquote>
 	siteStart();
 	site("easyDNS","www.easydns.com");
 	site("InfoMak","www.infomak.com");
+	site("Webex - Russia","www.webex.ru");
 	siteEnd();
 
 /* ISP's */
@@ -192,14 +193,15 @@ right away.</blockquote>
 	site("BART'S Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
 	site("Delia*s Inc.","www.delias.com");
+	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
 	site("Patagonia Clothing","www.patagonia.com");
+	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
 	site("USRentals","www.usrentals.com");
-	site("Farmauno","www.farmauno.com");
 	siteEnd();
 
 /* Telecommunications */
