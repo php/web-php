@@ -47,14 +47,16 @@ site_header("Links");
   The AFUP was created to answer the growing need from
   companies to have one unique place for PHP solutions.
  </li>
-
+<?php
+/* will come back soon
  <li>
   <a href="http://www.php-ev.de/">PHP Verein</a><br />
   The goal of the German PHP Association, PHP Verein, is 
   to push PHP, as well as to serve as a junction for all 
   parties interested in PHP.
  </li>
-
+*/
+?>
  <li>
   <a href="http://www.phpquebec.org/">PHP Qu&eacute;bec</a><br />
   PHP Qu&eacute;bec promotes PHP for professional users in Qu&eacute;bec, Canada.
@@ -73,10 +75,14 @@ site_header("Links");
 <h4>PHP Link Catalogs</h4>
 
 <ul>
+<?php
+/* web site down
  <li>
   <a href="http://dmoz.org/Computers/Programming/Languages/PHP/">dmoz.org</a><br />
   The PHP category in the Open Directory Project.
  </li>
+*/
+?>
 
  <li>
   <a href="http://www.hotscripts.com/PHP/">HotScripts.com</a><br />
@@ -110,10 +116,14 @@ site_header("Links");
 <h4>PHP FAQ sites</h4>
 
 <ul>
+<?php
+/* blank page with a link for administration
  <li>
   <a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br />
   A big faq and some links about PHP and SQL
  </li>
+*/
+?>
  <li>
   <a href="http://www.dclp-faq.de/">de.comp.lang.php FAQ</a><br />
   Excellent german language FAQ about PHP
@@ -203,7 +213,7 @@ site_header("Links");
  <li>
   <a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's
   scripts librairy</a><br />An exhaustive PHP scripts collection,
-  with more 400 useful functions (English and French).
+  with more 800 useful functions (English and French).
  </li>
 
  <li>
