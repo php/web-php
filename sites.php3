@@ -232,6 +232,7 @@ right away.</blockquote>
 	site("Internet Weather Report","www.internetweather.com");
 	site("Mail Chek","mail.chek.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
+	site("Scour Net","www.scour.net");
 	site("Spell Web","www.spellweb.com");
 	site("TVGrid.com","www.divein.tvgrid.com");
 	site("WebMasters Index","www.webmastersindex.com");
