@@ -94,7 +94,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		exit;
 	}
 
-	if($bug_type=="--Please Select--") {
+	if($ebug_type=="--Please Select--") {
 		echo "Please select an appropriate bug type<P>\n";
 		include("include/footer.inc");
 		exit;
@@ -106,7 +106,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     mysql_pconnect("localhost","","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
-    mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','')");
+    $ret = mysql_query("INSERT into bugdb values (0,'$ebug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','','')");
 	$cid = mysql_insert_id();
 
     $report = "";
@@ -117,7 +117,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     $report .= "From:             $email\n";
     $report .= "Operating system: $php_os\n";
     $report .= "PHP version:      $php_version\n";
-    $report .= "PHP Bug Type:     $bug_type\n";
+    $report .= "PHP Bug Type:     $ebug_type\n";
     $report .= "Bug description:\n";
     $html_desc = ereg_replace("<", "&lt;", $ldesc);
     $html_desc = ereg_replace(">", "&gt;", $html_desc);
@@ -206,8 +206,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	$centering["id"] = $centering["Modify"] = "center";
 	$dont_link["Modify"]=1;
 	
-	if (!isset($order_by)) {
-		$order_by = "id";
+	if (!isset($order_by_clause)) {
+		$order_by_clause = "id";
 	}
 	if($status=="All" && $bug_type=="Any") {
 		/* nothing */
@@ -372,7 +372,7 @@ for any outstanding bug reports that match your bug.</STRONG>
  </tr><tr>
   <th align=right>Type of bug:</th>
   <td>
-	<?show_types("--Please Select--",0,"bug_type")?>
+	<?show_types("--Please Select--",0,"ebug_type")?>
    </td>
   </tr><tr>
   <th align=right>Operating system:</th>
