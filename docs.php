@@ -17,12 +17,12 @@ $languages = array(
 );
 
 $formats = array(
- "bigmanual.html.gz" => array("Single HTML (compressed)", "html.gz"),
+ "bigmanual.html.gz" => array("Single HTML (gziped)", "html.gz"),
  "manual_doc.pdb" => array("PalmPilot DOC", "doc.pdb"),
  "manual_isilo.pdb" => array("PalmPilot iSilo", "isilo.pdb"),
  "manual.pdf" => array("PDF", "pdf"),
- "manual.txt.gz" => array("Plain text (compressed)", "txt.gz"),
- "manual.tar.gz" =>  array("Many HTML files (compressed tar)", "tar.gz"),
+ "manual.txt.gz" => array("Plain text (gziped)", "txt.gz"),
+ "manual.tar.gz" =>  array("Many HTML files (gziped tar)", "tar.gz"),
  "manual.zip" => array("Many HTML files (zip)", "zip"),
  "manual.chm" => array("Windows HTML Help", "chm")
 );
