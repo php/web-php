@@ -63,7 +63,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
 &nbsp; ' . make_link("http://promote.pair.com/direct.pl?php.net", "pair Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackshack.net/", "RackShack") . ' <br>
-&nbsp; ' . make_link("http://www.redundant.net/", "Redundant Networks") . '<br>
+&nbsp; ' . make_link("http://www.redundant.com/", "Redundant Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
 <h3>Related sites</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
