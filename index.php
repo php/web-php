@@ -150,8 +150,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
+<?php news_image("http://phparch.com/phpworks", "phpworks.png", "php|works"); ?>
+<h1>php|works 2004 Call for Papers</h1>
+<p>
+ <span class="newsdate">[07-May-2004]</span>
+ <a href="http://phparch.com">php|architect</a> has announced php|works 2004, a
+ three-day conference dedicated to PHP, its companion technologies and the
+ business of open-source software that will be held in Toronto, Canada,
+ September 22, 23 and 24, 2004.
+</p>
+<p>
+ Effective now, and until May 24th, the php|works team is soliciting a Call
+ for Papers for speakers who want to present at the conference. The CfP is
+ open to the public, and your talk ideas are welcome!
+</p>
+<p>
+ For more information, visit the <a
+ href="http://www.phparch.com/phpworks">php|works website</a>.
+</p>
 
+<hr />
+
+<?php news_image("/downloads.php#5", "php-version5.gif", "PHP 5"); ?>
 <h1>PHP 5 Release Candidate 2 Released!</h1>
 <p>
  <span class="newsdate">[25-Apr-2004]</span>
