@@ -68,7 +68,7 @@ hr {
 	color: black;
 	background-color: black;
 	height: 1px;
-	clear: both;
+	/* clear: both; has problems in IE and Opera */
 }
 
 .center {
