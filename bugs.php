@@ -623,13 +623,16 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$text.= "Bug Type: $ebug_type\n";
 			$text.= "Assigned To: $eassign\n";
 			$text.= "Comments:\n\n$ncomment" . get_old_comments ($id);
-			$text.= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
+			$text.= "\n\nATTENTION! Do NOT reply to this email!\n";
+			$text.= "To reply, use the web interface found at http://bugs.php.net/?id=$id&edit=2\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
 
-			/* mail bug originator */
-			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
-			Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
+			/* mail bug originator if status was changed or comment is not empty. */
+			if($estatus != $row[0] || $ncomment != "") {
+				Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+				Mail($destination, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: $user@php.net");
+			}
 		}
 		mysql_freeresult($result);
 	}
