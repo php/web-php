@@ -3,6 +3,8 @@
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 4 ChangeLog");
+function bugfix($number) { echo "Fixed bug "; bugl($number); }
+function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
 ?>
 
 <h1>PHP 4 ChangeLog</h1>
@@ -19,75 +21,75 @@ site_header("PHP 4 ChangeLog");
 <li>Fixed memory leak in gethostbynamel() if an error occurs. (Sara)</li>
 <li>Fixed FastCGI being unable to bind to a specific IP. (Sascha)</li>
 <li>Fixed multibyte regex engine to properly handle ".*" pattern under POSIX compatible mode. (K.Kosako <kosako at sofnec.co.jp>, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25955">25955</a> (Compile failure on MacOSX 10.3 Panther). (Marko, Dan)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25923">25923</a> (mail() modifies the to & subject arguments). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25922">25922</a> (Crash in error handler when 5th argument is modified). (Ilia) </li>
-<li>Fixed bug <a href="http://bugs.php.net/25918">25918</a> (Possible crash in mime_content_type()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25900">25900</a> (document->get_elements_by_tag_name with default xmlns). (Rob)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25895">25895</a> (Incorrect detection of safe_mode limited ini options). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25888">25888</a> (Crash of php.exe when xpath_eval of a namespace). (Rob)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25836">25836</a> (last key of multi-dimensional array passed via GPC not being escaped when magic_quotes_gpc is on). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25825">25825</a> (tzset() was not called to reset libc environment on request shutdown). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25814">25814</a> (Make flock() return correct value when 3rd argument is used). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25800">25800</a> (parse_url() could not parse urls with empty port). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25780">25780</a> (ext/session: invalid "session.cookie_lifetime" makes session_start() to crash in win32). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25777">25777</a> (Do not rtrim() of text fields fetched from mssql). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25770">25770</a> (Segfault with PHP and bison 1.875). (eggert@gnu.org, Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25764">25764</a> (ldap_get_option() crashes with unbound ldap link). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25758">25758</a> (var_export does not escape ' & \ inside array keys). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25752">25752</a> (ext/ncurses: ncurses.h instead of curses.h with BSD). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25746">25746</a> (Do not bail out when unable to chdir original dir on systems with broken getcwd()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25745">25745</a> (ctype functions fail with non-ascii characters). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25744">25744</a> (make ZTS build of ext/sybase compile). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25738">25738</a> (alloca() related issues on the Darwin platform). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25708">25708</a> (extract($GLOBALS, EXTR_REFS) mangles $GLOBALS). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25707">25707</a> (html_entity_decode() over-decodes &amp;lt;). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25703">25703</a> (openssl configure check failed). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25701">25701</a> (On flush() set headers_sent in apache2handler). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25671">25671</a> (str_replace() corrupts subarrays). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25669">25669</a> (eregi() with non-ascii characters). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25665">25665</a> (var_dump() hangs on Nan and INF). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25648">25648</a> (xslt_set_encoding() not detected correctly). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25636">25636</a> (SNMP Session not closed on success). (Ilia, patch by: nesslage at mwsc dot edu)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25635">25635</a> (Make "make tests" to fail due to invalid include_path). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25604">25604</a> (HAVE_SNMP_PARSE_OID undefined with phpize build). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25583">25583</a> (Incorrect handling of paths starting with "/" on win32 inside glob() function). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25570">25570</a> (Possible crash in apache2handler when zend_bailout called outside of zend_try {} block). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25558">25558</a> (ext/dbase: reverted fix for bug <a href="http://bugs.php.net/23463">23463</a>). (Vlad)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25530">25530</a> (checkdate() incorrectly handles floats). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25525">25525</a> (ldap_explode_dn() crashes when passed invalid dn). (Sara, patch by: mikael dot suvi at trigger dot ee)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25504">25504</a> (pcre_match_all() crashes when passed only 2 parameters). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25483">25483</a> (ext/informix: bogus -469 error from ifx_query()). (Jani, patch by: denisov at kubsu dot ru)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25463">25463</a> (ext/cpdf: compile failure with bundled GD)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25429">25429</a> (fix copying of stdin using copy() function). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25424">25424</a> (ext/informix: lvarchar not supported in win32). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25404">25404</a> (ext/pgsql: open transactions not closed when script ends). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25385">25385</a> (ob_gzhandler(): typo in sapi_add_header_ex() call). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25378">25378</a> (unserialize() crashes with invalid data). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25372">25372</a> (sscanf() does not work with %X). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25348">25348</a> ("make install" fails with --enable-short-tags). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25343">25343</a> (is_dir() gives warning on FreeBSD). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25333">25333</a> (Possible body corruption & crash in win32 mail()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25316">25316</a> (Possible infinite loop inside _php_stream_write()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25314">25314</a> (FTP_ASCII mode behaving like binary from Win->Unix). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25308">25308</a> (php -m crashes when zend extensions are loaded). (Stas)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25307">25307</a> (Crash with WDDX serializer). (Sascha, Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25295">25295</a> (QNX6: php_ini.c:414: 'alphasort' undeclared). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25294">25294</a> (ext/ftp: NLST failure leads to crash on exit). (Sara, Rob)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25293">25293</a> (Output correct EOL to error_log). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25239">25239</a> (ftp_fopen_wrapper not RFC compliant). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25218">25218</a> ("deflate" compressed pages had a gzip header). (Stefan)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25211">25211</a> (image.c compile failure with AIX). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25166">25166</a> (WDDX serializer handler missing in win32). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25109">25109</a> (Possible crash when fetching field names in pgsql). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25106">25106</a> (Added more stringent checks on bzopen() mode). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25070">25070</a> (unlock session files on win32 before closing them). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24402">24402</a> (Compile failure with gettext 0.12.x). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23488">23488</a> (zlib.output_compression overrides Vary header). (Stefan)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23326">23326</a> (ext/domxml: Attributes via append_child not supported). (Melvyn)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21220">21220</a> (Wrong Apache version shown in phpinfo() output). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18534">18534</a> (ifx_close() leaves open session). (nobbie@php.net)</li>
-<li>Fixed bug <a href="http://bugs.php.net/14049">14049</a> (realpath() returns invalid results for non-existent paths). (Ilia)</li>
+<li><?php bugfix(25955); ?> (Compile failure on MacOSX 10.3 Panther). (Marko, Dan)</li>
+<li><?php bugfix(25923); ?> (mail() modifies the to & subject arguments). (Ilia)</li>
+<li><?php bugfix(25922); ?> (Crash in error handler when 5th argument is modified). (Ilia) </li>
+<li><?php bugfix(25918); ?> (Possible crash in mime_content_type()). (Ilia)</li>
+<li><?php bugfix(25900); ?> (document->get_elements_by_tag_name with default xmlns). (Rob)</li>
+<li><?php bugfix(25895); ?> (Incorrect detection of safe_mode limited ini options). (Ilia)</li>
+<li><?php bugfix(25888); ?> (Crash of php.exe when xpath_eval of a namespace). (Rob)</li>
+<li><?php bugfix(25836); ?> (last key of multi-dimensional array passed via GPC not being escaped when magic_quotes_gpc is on). (Ilia)</li>
+<li><?php bugfix(25825); ?> (tzset() was not called to reset libc environment on request shutdown). (Wez)</li>
+<li><?php bugfix(25814); ?> (Make flock() return correct value when 3rd argument is used). (Ilia)</li>
+<li><?php bugfix(25800); ?> (parse_url() could not parse urls with empty port). (Ilia)</li>
+<li><?php bugfix(25780); ?> (ext/session: invalid "session.cookie_lifetime" makes session_start() to crash in win32). (Jani)</li>
+<li><?php bugfix(25777); ?> (Do not rtrim() of text fields fetched from mssql). (Ilia)</li>
+<li><?php bugfix(25770); ?> (Segfault with PHP and bison 1.875). (eggert@gnu.org, Marcus)</li>
+<li><?php bugfix(25764); ?> (ldap_get_option() crashes with unbound ldap link). (Jani)</li>
+<li><?php bugfix(25758); ?> (var_export does not escape ' & \ inside array keys). (Ilia)</li>
+<li><?php bugfix(25752); ?> (ext/ncurses: ncurses.h instead of curses.h with BSD). (Jani)</li>
+<li><?php bugfix(25746); ?> (Do not bail out when unable to chdir original dir on systems with broken getcwd()). (Ilia)</li>
+<li><?php bugfix(25745); ?> (ctype functions fail with non-ascii characters). (Moriyoshi)</li>
+<li><?php bugfix(25744); ?> (make ZTS build of ext/sybase compile). (Ilia)</li>
+<li><?php bugfix(25738); ?> (alloca() related issues on the Darwin platform). (Moriyoshi)</li>
+<li><?php bugfix(25708); ?> (extract($GLOBALS, EXTR_REFS) mangles $GLOBALS). (Moriyoshi)</li>
+<li><?php bugfix(25707); ?> (html_entity_decode() over-decodes &amp;lt;). (Moriyoshi)</li>
+<li><?php bugfix(25703); ?> (openssl configure check failed). (Jani)</li>
+<li><?php bugfix(25701); ?> (On flush() set headers_sent in apache2handler). (Ilia)</li>
+<li><?php bugfix(25671); ?> (str_replace() corrupts subarrays). (Sara)</li>
+<li><?php bugfix(25669); ?> (eregi() with non-ascii characters). (Moriyoshi)</li>
+<li><?php bugfix(25665); ?> (var_dump() hangs on Nan and INF). (Ilia)</li>
+<li><?php bugfix(25648); ?> (xslt_set_encoding() not detected correctly). (Jani)</li>
+<li><?php bugfix(25636); ?> (SNMP Session not closed on success). (Ilia, patch by: nesslage at mwsc dot edu)</li>
+<li><?php bugfix(25635); ?> (Make "make tests" to fail due to invalid include_path). (Ilia)</li>
+<li><?php bugfix(25604); ?> (HAVE_SNMP_PARSE_OID undefined with phpize build). (Jani)</li>
+<li><?php bugfix(25583); ?> (Incorrect handling of paths starting with "/" on win32 inside glob() function). (Ilia)</li>
+<li><?php bugfix(25570); ?> (Possible crash in apache2handler when zend_bailout called outside of zend_try {} block). (Ilia)</li>
+<li><?php bugfix(25558); ?> (ext/dbase: reverted fix for bug <?php bugl(23463); ?>). (Vlad)</li>
+<li><?php bugfix(25530); ?> (checkdate() incorrectly handles floats). (Ilia)</li>
+<li><?php bugfix(25525); ?> (ldap_explode_dn() crashes when passed invalid dn). (Sara, patch by: mikael dot suvi at trigger dot ee)</li>
+<li><?php bugfix(25504); ?> (pcre_match_all() crashes when passed only 2 parameters). (Jani)</li>
+<li><?php bugfix(25483); ?> (ext/informix: bogus -469 error from ifx_query()). (Jani, patch by: denisov at kubsu dot ru)</li>
+<li><?php bugfix(25463); ?> (ext/cpdf: compile failure with bundled GD)</li>
+<li><?php bugfix(25429); ?> (fix copying of stdin using copy() function). (Ilia)</li>
+<li><?php bugfix(25424); ?> (ext/informix: lvarchar not supported in win32). (Jani)</li>
+<li><?php bugfix(25404); ?> (ext/pgsql: open transactions not closed when script ends). (Marcus)</li>
+<li><?php bugfix(25385); ?> (ob_gzhandler(): typo in sapi_add_header_ex() call). (Jani)</li>
+<li><?php bugfix(25378); ?> (unserialize() crashes with invalid data). (Jani)</li>
+<li><?php bugfix(25372); ?> (sscanf() does not work with %X). (Jani)</li>
+<li><?php bugfix(25348); ?> ("make install" fails with --enable-short-tags). (Jani)</li>
+<li><?php bugfix(25343); ?> (is_dir() gives warning on FreeBSD). (Jani)</li>
+<li><?php bugfix(25333); ?> (Possible body corruption & crash in win32 mail()). (Ilia)</li>
+<li><?php bugfix(25316); ?> (Possible infinite loop inside _php_stream_write()). (Ilia)</li>
+<li><?php bugfix(25314); ?> (FTP_ASCII mode behaving like binary from Win->Unix). (Sara)</li>
+<li><?php bugfix(25308); ?> (php -m crashes when zend extensions are loaded). (Stas)</li>
+<li><?php bugfix(25307); ?> (Crash with WDDX serializer). (Sascha, Jani)</li>
+<li><?php bugfix(25295); ?> (QNX6: php_ini.c:414: 'alphasort' undeclared). (Jani)</li>
+<li><?php bugfix(25294); ?> (ext/ftp: NLST failure leads to crash on exit). (Sara, Rob)</li>
+<li><?php bugfix(25293); ?> (Output correct EOL to error_log). (Ilia)</li>
+<li><?php bugfix(25239); ?> (ftp_fopen_wrapper not RFC compliant). (Sara)</li>
+<li><?php bugfix(25218); ?> ("deflate" compressed pages had a gzip header). (Stefan)</li>
+<li><?php bugfix(25211); ?> (image.c compile failure with AIX). (Marcus)</li>
+<li><?php bugfix(25166); ?> (WDDX serializer handler missing in win32). (Jani)</li>
+<li><?php bugfix(25109); ?> (Possible crash when fetching field names in pgsql). (Ilia)</li>
+<li><?php bugfix(25106); ?> (Added more stringent checks on bzopen() mode). (Ilia)</li>
+<li><?php bugfix(25070); ?> (unlock session files on win32 before closing them). (Ilia)</li>
+<li><?php bugfix(24402); ?> (Compile failure with gettext 0.12.x). (Jani)</li>
+<li><?php bugfix(23488); ?> (zlib.output_compression overrides Vary header). (Stefan)</li>
+<li><?php bugfix(23326); ?> (ext/domxml: Attributes via append_child not supported). (Melvyn)</li>
+<li><?php bugfix(21220); ?> (Wrong Apache version shown in phpinfo() output). (Jani)</li>
+<li><?php bugfix(18534); ?> (ifx_close() leaves open session). (nobbie@php.net)</li>
+<li><?php bugfix(14049); ?> (realpath() returns invalid results for non-existent paths). (Ilia)</li>
 </ul>
 There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br />
 
@@ -115,13 +117,13 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 </li>
 <li>Improved the IMAP extension (Ilia)
  <ul>
-	<li>Added imap_timeout() function. (bug <a href="http://bugs.php.net/24161">24161</a>)</li>
-	<li>Added optional 'charset' parameter to imap_search() and imap_sort(). (bug <a href="http://bugs.php.net/22505">22505</a>)</li>
+	<li>Added imap_timeout() function. (bug <?php bugl(24161); ?>)</li>
+	<li>Added optional 'charset' parameter to imap_search() and imap_sort(). (bug <?php bugl(22505); ?>)</li>
  </ul>
 </li>	
 <li>Improved the InterBase extension (Daniela)
  <ul>
-	<li>Added transaction constants: IBASE_REC_VERSION, IBASE_REC_NO_VERSION, IBASE_WRITE, IBASE_WAIT and IBASE_CONCURRENCY. (bugs <a href="http://bugs.php.net/8797">8797</a>, <a href="http://bugs.php.net/23887">23887</a>)</li>
+	<li>Added transaction constants: IBASE_REC_VERSION, IBASE_REC_NO_VERSION, IBASE_WRITE, IBASE_WAIT and IBASE_CONCURRENCY. (bugs <?php bugl(8797); ?>, <?php bugl(23887); ?>)</li>
 	<li>Made numeric/decimal datatype handling work on any platform.</li>
  </ul>
 </li>
@@ -145,103 +147,103 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li>Fixed a bug that under certain circumstances could invalidate safe_mode. (Ilia)</li>
 <li>Fixed certificate version and allowed setting of the serial number in openssl_csr_sign(). (Stefan Roehrich)</li>
 <li>Fixed each() to be binary safe for keys. (Zeev)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25093">25093</a> (Various leaks due to non-freed queries). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25084">25084</a> (Make refer check not dependant on register_globals). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25081">25081</a> (odbc_fetch_array() may mangle numeric fields). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25044">25044</a> (header("Location:") changing HTTP status). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25037">25037</a> (Possible infinite loop inside SendText()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/25007">25007</a> (rand() & mt_rand() seed RNG every call). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24989">24989</a> (external libexpat conflicts with bundled libexpat). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24980">24980</a> (array_reduce() uses first element as default running total). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24977">24977</a> (Revert mysql_select_db optimization). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24958">24958</a> (Incorrect handling of 404s). (Ilia, Justin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24951">24951</a> (ob_flush() needlessly destroys output handler). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24936">24936</a> (ext/fdf not linked properly as shared extension). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24909">24909</a> (Bad random numbers with ZTS builds on Solaris). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24897">24897</a> (inconsistent behavior of shuffle() & array_multisort()). (Ilia, Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24883">24883</a> (variables_order and gpc_order being ignored). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24873">24873</a> (incorrect handling of / inside open_basedir). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24871">24871</a> (methods misidentified as constructors). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24827">24827</a> (ob_gzhandler overrides Vary header). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24792">24792</a> (--enable-zend-multibyte causes random segfaults with ZTS). (fujimoto)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24783">24783</a> (foreach($ar as $key => $val), $key not binary safe). (Zeev)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24760">24760</a> (non-default SNMP port number not working). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24752">24752</a> (Unhandled "uniqueidentifier" field type). (Ilia, s.sonnenberg[at]coolspot.de)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24710">24710</a> (Crash when $obj->{0} is used). (Zeev)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24663">24663</a> (\n. sequences were not being escaped). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24640">24640</a> (var_export() and var_dump() can not output large floats). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24629">24629</a> (FreeBSD select() does not like large microseconds values). (Mirco Bauer).</li>
-<li>Fixed bug <a href="http://bugs.php.net/24609">24609</a> (ext/domxml: segfault when using replace node across different docs). (Rob Richards)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24594">24594</a> (Rewrite of the imagefill() function). (Pierre-Alain Joye)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24592">24592</a> (NULL related crash in session extension). (Sascha)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24573">24573</a> (debug_backtrace() crashes if $this set to null). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24560">24560</a> (parse_url() incorrectly handling certain file:// based schemas). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24557">24557</a> (make fclose() respect refcount on the resource). (Wez, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24537">24537</a> (apache2 compile misses some include directories). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24535">24535</a> (ext/mysql: crash when retrieving data from unbuffered result after the original connection has been changed). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24519">24519</a> (aggregate_methods_by_list() does not increment refcount).</li>
-<li>Fixed bug <a href="http://bugs.php.net/24313">24313</a> (file_exists() warning on non-existent files when open_basedir is used). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24312">24312</a> (base64_decode() does not skip 0xF0-0xFF characters). (gereon.steffens[at]onvista.de, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24284">24284</a> (Fixed memory leak inside pg_ping()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24249">24249</a> (fdf_add_doc_javascript() not available on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24224">24224</a> (ibase_blob_get() overflow). (Ard)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24223">24223</a> (missing variable initialization in bundled gd). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24220">24220</a> (range() didn't handle numeric strings correctly). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24210">24210</a> (not detecting assume_default_colors - typo). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24198">24198</a> (Invalid recursion detection in array_merge_recurcive()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24177">24177</a> (Status not set correctly after flush() in Apache 2). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24155">24155</a> (gdImageRotate270 incorrectly use x parameter for y axis). (tom@gksystems.com, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24150">24150</a> (crash in imap_fetch_overview() & imap_rfc822_write_address()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24142">24142</a> (workaround for a gcc bug affecting round()). (Marcus, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24063">24063</a> (serialize() missing 0 after the . on scientific notation). (Marcus, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24063">24063</a> (scientific notation broken in *printf()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24060">24060</a> (ncurses_del_panel() causes segfault). (Georg)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24054">24054</a> (Integer overflow failure with GCC/x86 for *=). (Sascha)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24028">24028</a> (Reading raw post message by php://input failed). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24009">24009</a> (FastCGI handling of file not found). (Shane)</li>
-<li>Fixed bug <a href="http://bugs.php.net/24007">24007</a> (Problem with register_globals & arrays). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23951">23951</a> (constants in static initializers clobbered by inheritance). (Wez, Zend Engine)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23936">23936</a> (ext/interbase: fail to select and fetch). (Ard)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23913">23913</a> (make rename() work across partitions on *nix). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23912">23912</a> (Invalid CSS in phpinfo() output). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23902">23902</a> (NULL in CGI header output). (Shane)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23898">23898</a> (Proper handling of NULLs in odbc_result, odbc_fetch_into and odbc_result_all). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23897">23897</a> (Fixed a check for mbfilter_ru.h). (aleks@m2media.ru, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23894">23894</a> (sprintf() decimal specifiers problem). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23888">23888</a> (Missing input validation for flags parameter). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23808">23808</a> (broken imagecopymerge()). (Pierre-Alain Joye)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23798">23798</a> (Spaces were not being stripped from Bcc header). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23792">23792</a> (imagerotate() problems with limited pallet, the function will always return true color image from now on). (Pierre-Alain Joye)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23779">23779</a> (mysql_connect(): disable local infile option if php.ini option "open_basedir" is set). (Georg)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23769">23769</a> (In FreeBSD glob() gives wrong result when pattern not found). (Hartmut)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23733">23733</a> (Coredump on startup with Oracle 9+). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23685">23685</a> (fake values returned when OID value is an empty string). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23664">23664</a> (FastCGI socket listening). (Shane)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23509">23509</a> (exit code lost when exit() called from register_shutdown_function()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23463">23463</a> (added Dbase2 version check). (Vlad Krupin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23285">23285</a> (Potential Stack overflow in zendlex). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23104">23104</a> (hash position of static arrays not being reset). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23038">23038</a>, <a href="http://bugs.php.net/23574">23574</a> (aggregate() related leaks and crashes). (Andrei)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22947">22947</a> (Ack() inside win32/sendmail.c may stall in certain situations). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22690">22690</a> (ob_start() did not work with create_function() callbacks). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22592">22592</a> (Cascading assignments to strings with curly braces broken). (Stas)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22245">22245</a> (References inside $_SESSION not being handled). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22154">22154</a> (Possible crash when memory_limit is reached and output buffering in addition to session.use_trans_sid is used). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22072">22072</a> (Apache2 sapis do not detect aborted connections). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21958">21958</a> (workaround for unusual realpath() on AIX & Tru64). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21957">21957</a> (serialize() mangles objects with __sleep). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21918">21918</a> (strange behavior of mixed type in array-keys). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21855">21855</a> (Threading issue on HP-UX). (Roshan Naik, Andi, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21611">21611</a> (version_compare() does not support "p" as suffix). (Stefan Walk)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21074">21074</a> (Apache2: "ErrorDocument xxx /error.php" broken). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20896">20896</a> (-s -w modes with php-cli cause php to hang). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19613">19613</a> (putenv("VAR=") does not empty VAR on win32). (Zeev)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18744">18744</a> (blob_add() has max limit of 64k). (Ard)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18291">18291</a> (escapeshellcmd() can now handle quoted arguments). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17414">17414</a> (pthreads bug workaround). (timo.teras[at]iki.fi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/13142">13142</a> (strtotime not handling "M d H:i:s Y" format). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/11924">11924</a> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/7014">7014</a> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
+<li><?php bugfix(25093); ?> (Various leaks due to non-freed queries). (Ilia)</li>
+<li><?php bugfix(25084); ?> (Make refer check not dependant on register_globals). (Ilia)</li>
+<li><?php bugfix(25081); ?> (odbc_fetch_array() may mangle numeric fields). (Ilia)</li>
+<li><?php bugfix(25044); ?> (header("Location:") changing HTTP status). (Marcus)</li>
+<li><?php bugfix(25037); ?> (Possible infinite loop inside SendText()). (Ilia)</li>
+<li><?php bugfix(25007); ?> (rand() & mt_rand() seed RNG every call). (Jani)</li>
+<li><?php bugfix(24989); ?> (external libexpat conflicts with bundled libexpat). (Jani)</li>
+<li><?php bugfix(24980); ?> (array_reduce() uses first element as default running total). (Ilia)</li>
+<li><?php bugfix(24977); ?> (Revert mysql_select_db optimization). (Ilia)</li>
+<li><?php bugfix(24958); ?> (Incorrect handling of 404s). (Ilia, Justin)</li>
+<li><?php bugfix(24951); ?> (ob_flush() needlessly destroys output handler). (Ilia)</li>
+<li><?php bugfix(24936); ?> (ext/fdf not linked properly as shared extension). (Jani)</li>
+<li><?php bugfix(24909); ?> (Bad random numbers with ZTS builds on Solaris). (Ilia)</li>
+<li><?php bugfix(24897); ?> (inconsistent behavior of shuffle() & array_multisort()). (Ilia, Jani)</li>
+<li><?php bugfix(24883); ?> (variables_order and gpc_order being ignored). (Ilia)</li>
+<li><?php bugfix(24873); ?> (incorrect handling of / inside open_basedir). (Ilia)</li>
+<li><?php bugfix(24871); ?> (methods misidentified as constructors). (Ilia)</li>
+<li><?php bugfix(24827); ?> (ob_gzhandler overrides Vary header). (Ilia)</li>
+<li><?php bugfix(24792); ?> (--enable-zend-multibyte causes random segfaults with ZTS). (fujimoto)</li>
+<li><?php bugfix(24783); ?> (foreach($ar as $key => $val), $key not binary safe). (Zeev)</li>
+<li><?php bugfix(24760); ?> (non-default SNMP port number not working). (Jani)</li>
+<li><?php bugfix(24752); ?> (Unhandled "uniqueidentifier" field type). (Ilia, s.sonnenberg[at]coolspot.de)</li>
+<li><?php bugfix(24710); ?> (Crash when $obj->{0} is used). (Zeev)</li>
+<li><?php bugfix(24663); ?> (\n. sequences were not being escaped). (Ilia)</li>
+<li><?php bugfix(24640); ?> (var_export() and var_dump() can not output large floats). (Marcus)</li>
+<li><?php bugfix(24629); ?> (FreeBSD select() does not like large microseconds values). (Mirco Bauer).</li>
+<li><?php bugfix(24609); ?> (ext/domxml: segfault when using replace node across different docs). (Rob Richards)</li>
+<li><?php bugfix(24594); ?> (Rewrite of the imagefill() function). (Pierre-Alain Joye)</li>
+<li><?php bugfix(24592); ?> (NULL related crash in session extension). (Sascha)</li>
+<li><?php bugfix(24573); ?> (debug_backtrace() crashes if $this set to null). (Jani)</li>
+<li><?php bugfix(24560); ?> (parse_url() incorrectly handling certain file:// based schemas). (Ilia)</li>
+<li><?php bugfix(24557); ?> (make fclose() respect refcount on the resource). (Wez, Ilia)</li>
+<li><?php bugfix(24537); ?> (apache2 compile misses some include directories). (Jani)</li>
+<li><?php bugfix(24535); ?> (ext/mysql: crash when retrieving data from unbuffered result after the original connection has been changed). (Ilia)</li>
+<li><?php bugfix(24519); ?> (aggregate_methods_by_list() does not increment refcount).</li>
+<li><?php bugfix(24313); ?> (file_exists() warning on non-existent files when open_basedir is used). (Ilia)</li>
+<li><?php bugfix(24312); ?> (base64_decode() does not skip 0xF0-0xFF characters). (gereon.steffens[at]onvista.de, Ilia)</li>
+<li><?php bugfix(24284); ?> (Fixed memory leak inside pg_ping()). (Ilia)</li>
+<li><?php bugfix(24249); ?> (fdf_add_doc_javascript() not available on Windows). (Edin)</li>
+<li><?php bugfix(24224); ?> (ibase_blob_get() overflow). (Ard)</li>
+<li><?php bugfix(24223); ?> (missing variable initialization in bundled gd). (Ilia)</li>
+<li><?php bugfix(24220); ?> (range() didn't handle numeric strings correctly). (Ilia)</li>
+<li><?php bugfix(24210); ?> (not detecting assume_default_colors - typo). (Sara)</li>
+<li><?php bugfix(24198); ?> (Invalid recursion detection in array_merge_recurcive()). (Ilia)</li>
+<li><?php bugfix(24177); ?> (Status not set correctly after flush() in Apache 2). (Ilia)</li>
+<li><?php bugfix(24155); ?> (gdImageRotate270 incorrectly use x parameter for y axis). (tom@gksystems.com, Ilia)</li>
+<li><?php bugfix(24150); ?> (crash in imap_fetch_overview() & imap_rfc822_write_address()). (Ilia)</li>
+<li><?php bugfix(24142); ?> (workaround for a gcc bug affecting round()). (Marcus, Ilia)</li>
+<li><?php bugfix(24063); ?> (serialize() missing 0 after the . on scientific notation). (Marcus, Ilia)</li>
+<li><?php bugfix(24063); ?> (scientific notation broken in *printf()). (Ilia)</li>
+<li><?php bugfix(24060); ?> (ncurses_del_panel() causes segfault). (Georg)</li>
+<li><?php bugfix(24054); ?> (Integer overflow failure with GCC/x86 for *=). (Sascha)</li>
+<li><?php bugfix(24028); ?> (Reading raw post message by php://input failed). (Jani)</li>
+<li><?php bugfix(24009); ?> (FastCGI handling of file not found). (Shane)</li>
+<li><?php bugfix(24007); ?> (Problem with register_globals & arrays). (Ilia)</li>
+<li><?php bugfix(23951); ?> (constants in static initializers clobbered by inheritance). (Wez, Zend Engine)</li>
+<li><?php bugfix(23936); ?> (ext/interbase: fail to select and fetch). (Ard)</li>
+<li><?php bugfix(23913); ?> (make rename() work across partitions on *nix). (Ilia)</li>
+<li><?php bugfix(23912); ?> (Invalid CSS in phpinfo() output). (Ilia)</li>
+<li><?php bugfix(23902); ?> (NULL in CGI header output). (Shane)</li>
+<li><?php bugfix(23898); ?> (Proper handling of NULLs in odbc_result, odbc_fetch_into and odbc_result_all). (Ilia)</li>
+<li><?php bugfix(23897); ?> (Fixed a check for mbfilter_ru.h). (aleks@m2media.ru, Ilia)</li>
+<li><?php bugfix(23894); ?> (sprintf() decimal specifiers problem). (Moriyoshi)</li>
+<li><?php bugfix(23888); ?> (Missing input validation for flags parameter). (Ilia)</li>
+<li><?php bugfix(23808); ?> (broken imagecopymerge()). (Pierre-Alain Joye)</li>
+<li><?php bugfix(23798); ?> (Spaces were not being stripped from Bcc header). (Ilia)</li>
+<li><?php bugfix(23792); ?> (imagerotate() problems with limited pallet, the function will always return true color image from now on). (Pierre-Alain Joye)</li>
+<li><?php bugfix(23779); ?> (mysql_connect(): disable local infile option if php.ini option "open_basedir" is set). (Georg)</li>
+<li><?php bugfix(23769); ?> (In FreeBSD glob() gives wrong result when pattern not found). (Hartmut)</li>
+<li><?php bugfix(23733); ?> (Coredump on startup with Oracle 9+). (Edin)</li>
+<li><?php bugfix(23685); ?> (fake values returned when OID value is an empty string). (Jani)</li>
+<li><?php bugfix(23664); ?> (FastCGI socket listening). (Shane)</li>
+<li><?php bugfix(23509); ?> (exit code lost when exit() called from register_shutdown_function()). (Ilia)</li>
+<li><?php bugfix(23463); ?> (added Dbase2 version check). (Vlad Krupin)</li>
+<li><?php bugfix(23285); ?> (Potential Stack overflow in zendlex). (Wez)</li>
+<li><?php bugfix(23104); ?> (hash position of static arrays not being reset). (Ilia)</li>
+<li><?php bugfix(23038); ?>, <?php bugl(23574); ?> (aggregate() related leaks and crashes). (Andrei)</li>
+<li><?php bugfix(22947); ?> (Ack() inside win32/sendmail.c may stall in certain situations). (Ilia)</li>
+<li><?php bugfix(22690); ?> (ob_start() did not work with create_function() callbacks). (Marcus)</li>
+<li><?php bugfix(22592); ?> (Cascading assignments to strings with curly braces broken). (Stas)</li>
+<li><?php bugfix(22245); ?> (References inside $_SESSION not being handled). (Ilia)</li>
+<li><?php bugfix(22154); ?> (Possible crash when memory_limit is reached and output buffering in addition to session.use_trans_sid is used). (Ilia)</li>
+<li><?php bugfix(22072); ?> (Apache2 sapis do not detect aborted connections). (Ilia)</li>
+<li><?php bugfix(21958); ?> (workaround for unusual realpath() on AIX & Tru64). (Ilia)</li>
+<li><?php bugfix(21957); ?> (serialize() mangles objects with __sleep). (Ilia)</li>
+<li><?php bugfix(21918); ?> (strange behavior of mixed type in array-keys). (Marcus)</li>
+<li><?php bugfix(21855); ?> (Threading issue on HP-UX). (Roshan Naik, Andi, Moriyoshi)</li>
+<li><?php bugfix(21611); ?> (version_compare() does not support "p" as suffix). (Stefan Walk)</li>
+<li><?php bugfix(21074); ?> (Apache2: "ErrorDocument xxx /error.php" broken). (Jani)</li>
+<li><?php bugfix(20896); ?> (-s -w modes with php-cli cause php to hang). (Ilia)</li>
+<li><?php bugfix(19613); ?> (putenv("VAR=") does not empty VAR on win32). (Zeev)</li>
+<li><?php bugfix(18744); ?> (blob_add() has max limit of 64k). (Ard)</li>
+<li><?php bugfix(18291); ?> (escapeshellcmd() can now handle quoted arguments). (Ilia)</li>
+<li><?php bugfix(17414); ?> (pthreads bug workaround). (timo.teras[at]iki.fi)</li>
+<li><?php bugfix(13142); ?> (strtotime not handling "M d H:i:s Y" format). (Ilia)</li>
+<li><?php bugfix(11924); ?> (ibase_query(), ibase_execute() mangled passed parameters). (Jani)</li>
+<li><?php bugfix(7014); ?> (crash in _php_ibase_error() after request shutdown). (Ard)</li>
 </ul>
 There is a <a href="release_4_3_3.php">separate announcement</a> available for this release.<br />
 
@@ -287,152 +289,152 @@ There is a <a href="release_4_3_3.php">separate announcement</a> available for t
 <li>Fixed a bug in GD's truecolor TTF handling. (Derick)</li>
 <li>Fixed several 64-bit problems. (Dave)</li>
 <li>Fixed several errors in hwapi extension. Objects weren't handled properly. (Uwe)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23788">#23788</a> (str|preg_replace() clobber the array elements). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23765">#23765</a> (file uploads ignored due to case sensitivity). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23738">#23738</a> (ifx_copy_blob() crash). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23661">#23661</a> (mysql_fetch_array() gives no warning when an invalid argument was passed as result_type). (Derick)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23619">#23619</a> (set_error_handler() registered handler not called for object instances). (Jani, waboring@qualys.com)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23606">#23606</a> (Unable to build --with-db4 (db4.1.25)). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23567">#23567</a> (pfsockopen() returns dead connections). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23539">#23539</a> (curl_exec() produces strange results). (daniel@haxx.se)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23527">#23527</a> (PostScript Type 1 fonts do not render properly). (nid@home.se, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23402">#23402</a> (crash with improper use of mssql_bind()). (Frank)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23371">#23371</a> (configure falsely detects c-client using SSL). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23340">#23340</a> (fopen on multiple URLs causes memory corruption). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23298">#23298</a> (serialize cuts off floats &amp; doubles). (Ilia, Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23232">#23232</a> (safe_mode does not honor PHP_AUTH_* in apache2). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23225">#23225</a> (money_format() didn't handle erroneous return of strfmon). (Ilia, marcot@tabini.ca)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23201">#23201</a> (set_file_buffer() crashes with stdio streams). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23188">#23188</a> (CDB databases created with 'c' mode do not work). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23187">#23187</a> (memory leaks in sybase_connect/sybase_pconnect). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23162">#23162</a> (user_error() crashs if error message > 1024 bytes). (Jay, Marcus, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23152">#23152</a> ($http_response_header empty on invalid URLs). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23102">#23102</a> (integer overflow in exif_iif_add_value()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23099">#23099</a> (ext/interbase: libgds.so: undefined reference to 'crypt'). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23093">#23093</a> (highlight_string() crashed with __FUNCTION__). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23080">#23080</a> (socket_strerror() crashes on win32). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23071">#23071</a> (when DST in effect, date("T") crashed PHP). (Scott MacVicar, Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23069">#23069</a> (tempnam creates readonly file [win32]). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23009">#23009</a> (pg_select with timestamp). (Marcus, Jay)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23008">#23008</a> (ldap_start_tls() not available on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/23004">#23004</a> (When ftp_close() is called, send QUIT to the ftp server). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22989">#22989</a> (sendmail not found by configure). (igyu@ionsphere.org)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22987">#22987</a> (missing perror() check in configure). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22965">#22965</a> (Crash in gd lib's ImageFillToBorder()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22939">#22939</a> (crash in imap_header_info()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22844">#22844</a> (Changing bool value via -d or ini_set(), On would be Off). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22786">#22786</a> (Crash when trying to call DomAttribute's set_namespace method). (Chregu)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22775">#22775</a> (Fatal errors exit with status 0 with CGI/CLI). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22774">#22774</a> (PHP crashes when exiting (long XML doc)). (Rob Richards)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22751">#22751</a> (Compile error in gdcache.c when external libgd is used).  (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22721">#22721</a> (Poor file() performance on systems without mmap). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22709">#22709</a> (Crash in interbase when database unavailable). (Vladimir Michl)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22681">#22681</a> (Crash when reading from invalid file pointer). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22672">#22672</a> (User not logged under Apache2). (Ian) </li>
-<li>Fixed bug <a href="http://bugs.php.net/22616">#22616</a> (Wrong order of -lssl and -lcrypto with IMAP). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22613">#22613</a> (imagettfbox() does not add the kerning distance to the running position). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22585">#22585</a> (Do not terminate the script on minor errors). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22550">#22550</a> (overflow protection for upload_max_filesize ini option). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22544">#22544</a> (writing transparency to truecolor png images). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22538">#22538</a> (failed stat on stdio/stdin/stderr streams). (Wez, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22530">#22530</a> (append_child does not unlink node). (Chregu)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22520">#22520</a> (mcrypt_generic_deinit() was not available on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22508">#22508</a> (Added protection against circular HTML redirects). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22473">#22473</a> (ISAPI Secure Server variables not available). (Christian Swoboda)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22402">#22402</a> (opening of ftp for read/write could fail due to invalid return code handling). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22384">#22384</a> (FNM_CASEFOLD is not available). (Hartmut)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22382">#22382</a> (fgetcsv() did not handle \" correctly). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22376">#22376</a> (wrong httpd.conf modified when using INSTALL_ROOT). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22363">#22363</a> (combinations of fwrite(), fread() and fseek() produce unexpected results). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22355">#22355</a> (PHP would remove folding from Subject &amp; To fields). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22330">#22330</a> (overloaded strrpos() gives wrong results). (david@santinoli.com, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22312">#22312</a> (crash on failed connection when curl_getinfo() was called). (Phil Oleson &lt;poleson@verio.net&gt;)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22308">#22308</a> (optimized passthru, code is now ~40 times faster). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22306">#22306</a> (pg_lo_seek($h, 0, PGSQL_SEEK_SET) succeeds but returns false). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22301">#22301</a> (htmlspecialchars() crashes Apache on Tru64). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22299">#22299</a> (gethostbyname() with non-existing domain crashed on MacOSX). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22283">#22283</a> (possible crash when opening relative URLs). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22238">#22238</a> (stream_select() clobbers fifos under win9x). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22234">#22234</a> (copy() fails if source file has 0 length). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22227">#22227</a> (printf() field limiters broke between 4.2.3 and 4.3.0). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22224">#22224</a> (implode() changes object references in array). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22221">#22221</a> (bad rows count in the result object for postgresql). (Marc)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22207">#22207</a> (e notation in *printf would be missing a 0 when there is no exponent). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22220">#22220</a> ("php_admin_value open_basedir none" does not work). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22191">#22191</a> (frontbase build broken with old version of frontbase). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22187">#22187</a> (spprintf function did not handle floats correctly). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22149">#22149</a> (incorrect insertion of session id when tabs are used to separate tag elements). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22141">#22141</a> (removed undocumented Boyer str_replace() method). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22103">#22103</a> (Added gdImageEllipse and replaced old gdImageFilledEllipse with a better implementation). (Pierre)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22088">#22088</a> (array_shift() left next index to be +1 too much). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22083">#22083</a> (MySQL charset directory problem on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22059">#22059</a> (ftp_chdir() causes segfault). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22048">#22048</a> (crash in imap_header() when the e-mail contains an abnormally large number of special characters). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22042">#22042</a> (pg_result_seek() would never seek to the 1st row in the result due to always seeking to row next to the one requested). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22031">#22031</a> (Made curl_write() &amp; curl_write_header() binary safe). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22022">#22022</a> (Crash in imap_mail_compose() if the body is an empty array). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22017">#22017</a> (date() does not support negative timestamps on win32). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22008">#22008</a> (strip_tags() eliminates too much). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/22004">#22004</a> (Overload extension and _call() breaks classes). (Shane)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21998">#21998</a> (array_pop() did not reset the current array position). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21978">#21978</a>, <a href="http://bugs.php.net/21036">#21036</a> (win32 mail(), bcc: gets interpreted as cc:). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21885">#21885</a> (move_uploaded_file() does not ignore open_basedir). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21820">#21820</a> ("$arr['foo']" generates bogus E_NOTICE, should be E_PARSE). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21815">#21815</a> (fpassthru() ignored buffered data but complained anyway). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21809">#21809</a> (select would not always timeout during socket shutdown). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21751">#21751</a> (default output buffer could not be deleted). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21725">#21725</a> (return behaviour differs between include and require). (Zeev)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21713">#21713</a> (include remote files leaks descriptors on Solaris). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21708">#21708</a> (ucwords() trouble again). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21689">#21689</a> (fgetcsv() suppresses some characters before a separator). (Masahiro, Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21912">#21912</a>, <a href="http://bugs.php.net/21676">#21676</a> (getimagesize() failed for remote files). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21597">#21597</a> (made glob() understand Windows paths). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21549">#21549</a> (problem with Ingres II persistent connections). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21544">#21544</a> (Extended checks for where FreeTDS is installed). (Frank)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21534">#21534</a> (typo in gmp_gcdext() causes incorrect results). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21531">#21531</a> (file_exists() and other filestat functions report errors when the requested file/directory does not exists). (Sara)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21529">#21529</a> (memory corruption by fsockopen()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21525">#21525</a> (bind_textdomain_codeset() now available on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21523">#21523</a> (number_format() could cause a memory allocation for a negative memory size in situations where the sprintf implementation of the host system generated less decimal places than were requested). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21518">#21518</a> (imagecreatefromstring() crashed with invalid image files). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21511">#21511</a> (config.status warning). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21498">#21498</a> (mysql_pconnect connection problems). (Georg)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21453">#21453</a> (improper handling of non-terminated &lt; by strip_tags()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21445">#21445</a> (gd unable to open fonts). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21443">#21443</a> (improper handling of ? surrounded by spaces in get_browser()). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21442">#21442</a> (crash in mail() on Windows when 1st parameter is empty). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21410">#21410</a> (fixed handling of NULL or "" files on Win32). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21378">#21378</a> (COM code crashes after update 4.2.1 to 4.3.0). (Harald)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21338">#21338</a> (html_entity_decode() crashed when "" is passed). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21310">#21310</a> (Solaris has issues with getcwd() needing read permissions on directories instead of just execute). (Wez, jflemer)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21297">#21297</a> (in CLI/CGI on the #! it would leave a \n when the code encounters \r\n). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21268">#21268</a> (session_decode() returned FALSE on success). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21267">#21267</a> (opening URLs that result in redirection to a relative path was failing). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21229">#21229</a> (missing 3rd argument to php_module_startup). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21228">#21228</a> (broken check for ob_gzhandler and made ob_start() return the correct value). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21226">#21226</a> (parse_url handling of urls without a path). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21224">#21224</a> (apache configure fails when using --enable-versioning). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21169">#21169</a> (Compile Failure and lots of warnings on UnixWare). (Derick)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21131">#21131</a> (fopen() with mode 'a+' and rewind() doesn't work). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21007">#21007</a> (html_errors off text-only output in phpinfo). (Marcus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20857">#20857</a> (snmpset() failed always, patch by: rs@epost.de). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20802">#20802</a> (PHP would die silently when memory limit reached). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20715">#20715</a> (odbc could not be compiled as shared extension). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20641">#20641</a> (Numeric/decimal datatype overflow in ext/interbase on Win32). (Daniela)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20503">#20503</a> (imagesetbrush() not available on Windows). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20282">#20282</a> (COM memory leak). (Harald)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20256">#20256</a> (snprintf() not defined on some systems). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19919">#19919</a> (crash in sapi_apache_header_handler under heavy load). (George)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19795">#19795</a> (Problems with strnatcmp() / strnatcasecmp()). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17868">#17868</a> (multiple &lt;!--include--&gt; used to include PHP files crashes). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17448">#17448</a> (Print the message when OCI_SUCCESS_WITH_INFO is returned). (Maxim)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17098">#17098</a> (make Apache2 aware that PHP scripts should not be cached). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/16798">#16798</a> (Compile failure with LOB support for Oracle version &lt; 8.1). (Maxim)</li>
-<li>Fixed bug <a href="http://bugs.php.net/14532">#14532</a> (fixed connection_status() to return 2 for timeouts). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/14245">#14245</a> ('make install' fails on AIX when using --with-apxs). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/13757">#13757</a> (CGI: passing query string on command line broken). (Shane)</li>
-<li>Fixed bug <a href="http://bugs.php.net/13561">#13561</a> (--without-pear disabled phpize/php-config install). (Jani)</li>
-<li>Fixed bug <a href="http://bugs.php.net/13551">#13551</a> (bcmath functions applying scale incorrectly). (Sara)</li>
+<li><?php bugfix(23788); ?> (str|preg_replace() clobber the array elements). (Ilia)</li>
+<li><?php bugfix(23765); ?> (file uploads ignored due to case sensitivity). (Sara)</li>
+<li><?php bugfix(23738); ?> (ifx_copy_blob() crash). (Jani)</li>
+<li><?php bugfix(23661); ?> (mysql_fetch_array() gives no warning when an invalid argument was passed as result_type). (Derick)</li>
+<li><?php bugfix(23619); ?> (set_error_handler() registered handler not called for object instances). (Jani, waboring@qualys.com)</li>
+<li><?php bugfix(23606); ?> (Unable to build --with-db4 (db4.1.25)). (Marcus)</li>
+<li><?php bugfix(23567); ?> (pfsockopen() returns dead connections). (Wez)</li>
+<li><?php bugfix(23539); ?> (curl_exec() produces strange results). (daniel@haxx.se)</li>
+<li><?php bugfix(23527); ?> (PostScript Type 1 fonts do not render properly). (nid@home.se, Ilia)</li>
+<li><?php bugfix(23402); ?> (crash with improper use of mssql_bind()). (Frank)</li>
+<li><?php bugfix(23371); ?> (configure falsely detects c-client using SSL). (Jani)</li>
+<li><?php bugfix(23340); ?> (fopen on multiple URLs causes memory corruption). (Wez)</li>
+<li><?php bugfix(23298); ?> (serialize cuts off floats &amp; doubles). (Ilia, Marcus)</li>
+<li><?php bugfix(23232); ?> (safe_mode does not honor PHP_AUTH_* in apache2). (Ilia)</li>
+<li><?php bugfix(23225); ?> (money_format() didn't handle erroneous return of strfmon). (Ilia, marcot@tabini.ca)</li>
+<li><?php bugfix(23201); ?> (set_file_buffer() crashes with stdio streams). (Ilia)</li>
+<li><?php bugfix(23188); ?> (CDB databases created with 'c' mode do not work). (Marcus)</li>
+<li><?php bugfix(23187); ?> (memory leaks in sybase_connect/sybase_pconnect). (Ilia)</li>
+<li><?php bugfix(23162); ?> (user_error() crashs if error message > 1024 bytes). (Jay, Marcus, Moriyoshi)</li>
+<li><?php bugfix(23152); ?> ($http_response_header empty on invalid URLs). (Ilia)</li>
+<li><?php bugfix(23102); ?> (integer overflow in exif_iif_add_value()). (Ilia)</li>
+<li><?php bugfix(23099); ?> (ext/interbase: libgds.so: undefined reference to 'crypt'). (Jani)</li>
+<li><?php bugfix(23093); ?> (highlight_string() crashed with __FUNCTION__). (Jani)</li>
+<li><?php bugfix(23080); ?> (socket_strerror() crashes on win32). (Moriyoshi)</li>
+<li><?php bugfix(23071); ?> (when DST in effect, date("T") crashed PHP). (Scott MacVicar, Jani)</li>
+<li><?php bugfix(23069); ?> (tempnam creates readonly file [win32]). (Wez)</li>
+<li><?php bugfix(23009); ?> (pg_select with timestamp). (Marcus, Jay)</li>
+<li><?php bugfix(23008); ?> (ldap_start_tls() not available on Windows). (Edin)</li>
+<li><?php bugfix(23004); ?> (When ftp_close() is called, send QUIT to the ftp server). (Ilia)</li>
+<li><?php bugfix(22989); ?> (sendmail not found by configure). (igyu@ionsphere.org)</li>
+<li><?php bugfix(22987); ?> (missing perror() check in configure). (Jani)</li>
+<li><?php bugfix(22965); ?> (Crash in gd lib's ImageFillToBorder()). (Ilia)</li>
+<li><?php bugfix(22939); ?> (crash in imap_header_info()). (Ilia)</li>
+<li><?php bugfix(22844); ?> (Changing bool value via -d or ini_set(), On would be Off). (Ilia)</li>
+<li><?php bugfix(22786); ?> (Crash when trying to call DomAttribute's set_namespace method). (Chregu)</li>
+<li><?php bugfix(22775); ?> (Fatal errors exit with status 0 with CGI/CLI). (Jani)</li>
+<li><?php bugfix(22774); ?> (PHP crashes when exiting (long XML doc)). (Rob Richards)</li>
+<li><?php bugfix(22751); ?> (Compile error in gdcache.c when external libgd is used).  (Jani)</li>
+<li><?php bugfix(22721); ?> (Poor file() performance on systems without mmap). (Wez)</li>
+<li><?php bugfix(22709); ?> (Crash in interbase when database unavailable). (Vladimir Michl)</li>
+<li><?php bugfix(22681); ?> (Crash when reading from invalid file pointer). (Ilia)</li>
+<li><?php bugfix(22672); ?> (User not logged under Apache2). (Ian) </li>
+<li><?php bugfix(22616); ?> (Wrong order of -lssl and -lcrypto with IMAP). (Jani)</li>
+<li><?php bugfix(22613); ?> (imagettfbox() does not add the kerning distance to the running position). (Ilia)</li>
+<li><?php bugfix(22585); ?> (Do not terminate the script on minor errors). (Ilia)</li>
+<li><?php bugfix(22550); ?> (overflow protection for upload_max_filesize ini option). (Ilia)</li>
+<li><?php bugfix(22544); ?> (writing transparency to truecolor png images). (Ilia)</li>
+<li><?php bugfix(22538); ?> (failed stat on stdio/stdin/stderr streams). (Wez, Ilia)</li>
+<li><?php bugfix(22530); ?> (append_child does not unlink node). (Chregu)</li>
+<li><?php bugfix(22520); ?> (mcrypt_generic_deinit() was not available on Windows). (Edin)</li>
+<li><?php bugfix(22508); ?> (Added protection against circular HTML redirects). (Ilia)</li>
+<li><?php bugfix(22473); ?> (ISAPI Secure Server variables not available). (Christian Swoboda)</li>
+<li><?php bugfix(22402); ?> (opening of ftp for read/write could fail due to invalid return code handling). (Ilia)</li>
+<li><?php bugfix(22384); ?> (FNM_CASEFOLD is not available). (Hartmut)</li>
+<li><?php bugfix(22382); ?> (fgetcsv() did not handle \" correctly). (Ilia)</li>
+<li><?php bugfix(22376); ?> (wrong httpd.conf modified when using INSTALL_ROOT). (Jani)</li>
+<li><?php bugfix(22363); ?> (combinations of fwrite(), fread() and fseek() produce unexpected results). (Wez)</li>
+<li><?php bugfix(22355); ?> (PHP would remove folding from Subject &amp; To fields). (Ilia)</li>
+<li><?php bugfix(22330); ?> (overloaded strrpos() gives wrong results). (david@santinoli.com, Moriyoshi)</li>
+<li><?php bugfix(22312); ?> (crash on failed connection when curl_getinfo() was called). (Phil Oleson &lt;poleson@verio.net&gt;)</li>
+<li><?php bugfix(22308); ?> (optimized passthru, code is now ~40 times faster). (Ilia)</li>
+<li><?php bugfix(22306); ?> (pg_lo_seek($h, 0, PGSQL_SEEK_SET) succeeds but returns false). (Jani)</li>
+<li><?php bugfix(22301); ?> (htmlspecialchars() crashes Apache on Tru64). (Ilia)</li>
+<li><?php bugfix(22299); ?> (gethostbyname() with non-existing domain crashed on MacOSX). (Jani)</li>
+<li><?php bugfix(22283); ?> (possible crash when opening relative URLs). (Ilia)</li>
+<li><?php bugfix(22238); ?> (stream_select() clobbers fifos under win9x). (Wez)</li>
+<li><?php bugfix(22234); ?> (copy() fails if source file has 0 length). (Moriyoshi)</li>
+<li><?php bugfix(22227); ?> (printf() field limiters broke between 4.2.3 and 4.3.0). (Moriyoshi)</li>
+<li><?php bugfix(22224); ?> (implode() changes object references in array). (Moriyoshi)</li>
+<li><?php bugfix(22221); ?> (bad rows count in the result object for postgresql). (Marc)</li>
+<li><?php bugfix(22207); ?> (e notation in *printf would be missing a 0 when there is no exponent). (Ilia)</li>
+<li><?php bugfix(22220); ?> ("php_admin_value open_basedir none" does not work). (Jani)</li>
+<li><?php bugfix(22191); ?> (frontbase build broken with old version of frontbase). (Ilia)</li>
+<li><?php bugfix(22187); ?> (spprintf function did not handle floats correctly). (Ilia)</li>
+<li><?php bugfix(22149); ?> (incorrect insertion of session id when tabs are used to separate tag elements). (Ilia)</li>
+<li><?php bugfix(22141); ?> (removed undocumented Boyer str_replace() method). (Sara)</li>
+<li><?php bugfix(22103); ?> (Added gdImageEllipse and replaced old gdImageFilledEllipse with a better implementation). (Pierre)</li>
+<li><?php bugfix(22088); ?> (array_shift() left next index to be +1 too much). (Jani)</li>
+<li><?php bugfix(22083); ?> (MySQL charset directory problem on Windows). (Edin)</li>
+<li><?php bugfix(22059); ?> (ftp_chdir() causes segfault). (Sara)</li>
+<li><?php bugfix(22048); ?> (crash in imap_header() when the e-mail contains an abnormally large number of special characters). (Ilia)</li>
+<li><?php bugfix(22042); ?> (pg_result_seek() would never seek to the 1st row in the result due to always seeking to row next to the one requested). (Ilia)</li>
+<li><?php bugfix(22031); ?> (Made curl_write() &amp; curl_write_header() binary safe). (Ilia)</li>
+<li><?php bugfix(22022); ?> (Crash in imap_mail_compose() if the body is an empty array). (Ilia)</li>
+<li><?php bugfix(22017); ?> (date() does not support negative timestamps on win32). (Ilia)</li>
+<li><?php bugfix(22008); ?> (strip_tags() eliminates too much). (Moriyoshi)</li>
+<li><?php bugfix(22004); ?> (Overload extension and _call() breaks classes). (Shane)</li>
+<li><?php bugfix(21998); ?> (array_pop() did not reset the current array position). (Jani)</li>
+<li><?php bugfix(21978); ?>, <?php bugl(21036); ?> (win32 mail(), bcc: gets interpreted as cc:). (Sara)</li>
+<li><?php bugfix(21885); ?> (move_uploaded_file() does not ignore open_basedir). (Wez)</li>
+<li><?php bugfix(21820); ?> ("$arr['foo']" generates bogus E_NOTICE, should be E_PARSE). (Jani)</li>
+<li><?php bugfix(21815); ?> (fpassthru() ignored buffered data but complained anyway). (Wez)</li>
+<li><?php bugfix(21809); ?> (select would not always timeout during socket shutdown). (Wez)</li>
+<li><?php bugfix(21751); ?> (default output buffer could not be deleted). (Marcus)</li>
+<li><?php bugfix(21725); ?> (return behaviour differs between include and require). (Zeev)</li>
+<li><?php bugfix(21713); ?> (include remote files leaks descriptors on Solaris). (Wez)</li>
+<li><?php bugfix(21708); ?> (ucwords() trouble again). (Moriyoshi)</li>
+<li><?php bugfix(21689); ?> (fgetcsv() suppresses some characters before a separator). (Masahiro, Moriyoshi)</li>
+<li><?php bugfix(21912); ?>, <?php bugl(21676); ?> (getimagesize() failed for remote files). (Wez)</li>
+<li><?php bugfix(21597); ?> (made glob() understand Windows paths). (Edin)</li>
+<li><?php bugfix(21549); ?> (problem with Ingres II persistent connections). (Jani)</li>
+<li><?php bugfix(21544); ?> (Extended checks for where FreeTDS is installed). (Frank)</li>
+<li><?php bugfix(21534); ?> (typo in gmp_gcdext() causes incorrect results). (Sara)</li>
+<li><?php bugfix(21531); ?> (file_exists() and other filestat functions report errors when the requested file/directory does not exists). (Sara)</li>
+<li><?php bugfix(21529); ?> (memory corruption by fsockopen()). (Ilia)</li>
+<li><?php bugfix(21525); ?> (bind_textdomain_codeset() now available on Windows). (Edin)</li>
+<li><?php bugfix(21523); ?> (number_format() could cause a memory allocation for a negative memory size in situations where the sprintf implementation of the host system generated less decimal places than were requested). (Wez)</li>
+<li><?php bugfix(21518); ?> (imagecreatefromstring() crashed with invalid image files). (Ilia)</li>
+<li><?php bugfix(21511); ?> (config.status warning). (Jani)</li>
+<li><?php bugfix(21498); ?> (mysql_pconnect connection problems). (Georg)</li>
+<li><?php bugfix(21453); ?> (improper handling of non-terminated &lt; by strip_tags()). (Ilia)</li>
+<li><?php bugfix(21445); ?> (gd unable to open fonts). (Ilia)</li>
+<li><?php bugfix(21443); ?> (improper handling of ? surrounded by spaces in get_browser()). (Ilia)</li>
+<li><?php bugfix(21442); ?> (crash in mail() on Windows when 1st parameter is empty). (Edin)</li>
+<li><?php bugfix(21410); ?> (fixed handling of NULL or "" files on Win32). (Ilia)</li>
+<li><?php bugfix(21378); ?> (COM code crashes after update 4.2.1 to 4.3.0). (Harald)</li>
+<li><?php bugfix(21338); ?> (html_entity_decode() crashed when "" is passed). (Ilia)</li>
+<li><?php bugfix(21310); ?> (Solaris has issues with getcwd() needing read permissions on directories instead of just execute). (Wez, jflemer)</li>
+<li><?php bugfix(21297); ?> (in CLI/CGI on the #! it would leave a \n when the code encounters \r\n). (Ilia)</li>
+<li><?php bugfix(21268); ?> (session_decode() returned FALSE on success). (Ilia)</li>
+<li><?php bugfix(21267); ?> (opening URLs that result in redirection to a relative path was failing). (Ilia)</li>
+<li><?php bugfix(21229); ?> (missing 3rd argument to php_module_startup). (Ilia)</li>
+<li><?php bugfix(21228); ?> (broken check for ob_gzhandler and made ob_start() return the correct value). (Ilia)</li>
+<li><?php bugfix(21226); ?> (parse_url handling of urls without a path). (Ilia)</li>
+<li><?php bugfix(21224); ?> (apache configure fails when using --enable-versioning). (Jani)</li>
+<li><?php bugfix(21169); ?> (Compile Failure and lots of warnings on UnixWare). (Derick)</li>
+<li><?php bugfix(21131); ?> (fopen() with mode 'a+' and rewind() doesn't work). (Wez)</li>
+<li><?php bugfix(21007); ?> (html_errors off text-only output in phpinfo). (Marcus)</li>
+<li><?php bugfix(20857); ?> (snmpset() failed always, patch by: rs@epost.de). (Jani)</li>
+<li><?php bugfix(20802); ?> (PHP would die silently when memory limit reached). (Ilia)</li>
+<li><?php bugfix(20715); ?> (odbc could not be compiled as shared extension). (Jani)</li>
+<li><?php bugfix(20641); ?> (Numeric/decimal datatype overflow in ext/interbase on Win32). (Daniela)</li>
+<li><?php bugfix(20503); ?> (imagesetbrush() not available on Windows). (Edin)</li>
+<li><?php bugfix(20282); ?> (COM memory leak). (Harald)</li>
+<li><?php bugfix(20256); ?> (snprintf() not defined on some systems). (Jani)</li>
+<li><?php bugfix(19919); ?> (crash in sapi_apache_header_handler under heavy load). (George)</li>
+<li><?php bugfix(19795); ?> (Problems with strnatcmp() / strnatcasecmp()). (Moriyoshi)</li>
+<li><?php bugfix(17868); ?> (multiple &lt;!--include--&gt; used to include PHP files crashes). (Ilia)</li>
+<li><?php bugfix(17448); ?> (Print the message when OCI_SUCCESS_WITH_INFO is returned). (Maxim)</li>
+<li><?php bugfix(17098); ?> (make Apache2 aware that PHP scripts should not be cached). (Ilia)</li>
+<li><?php bugfix(16798); ?> (Compile failure with LOB support for Oracle version &lt; 8.1). (Maxim)</li>
+<li><?php bugfix(14532); ?> (fixed connection_status() to return 2 for timeouts). (Jani)</li>
+<li><?php bugfix(14245); ?> ('make install' fails on AIX when using --with-apxs). (Jani)</li>
+<li><?php bugfix(13757); ?> (CGI: passing query string on command line broken). (Shane)</li>
+<li><?php bugfix(13561); ?> (--without-pear disabled phpize/php-config install). (Jani)</li>
+<li><?php bugfix(13551); ?> (bcmath functions applying scale incorrectly). (Sara)</li>
 </ul>
 There is a <a href="release_4_3_2.php">separate announcement</a> available for this release.<br />
 
@@ -484,41 +486,41 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 <li>Fixed a bug in ISO-8601 week calculation</li>
 <li>Fixed a crash when using invalid color index with imagecolortransparent()
   (Pierre-Alain Joye).</li>
-<li>Fixed bug <a href="http://bugs.php.net/20987">#20987</a> (no handling for client certificates). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/21039">#21039</a> (crash when not supplying an IV to mcrypt_generic_init).
+<li><?php bugfix(20987); ?> (no handling for client certificates). (Ilia)</li>
+<li><?php bugfix(21039); ?> (crash when not supplying an IV to mcrypt_generic_init).
   (Derick)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20936">#20936</a> (openssl_pkey_get was broken). (jeroen@derks.it, Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20927">#20927</a> (wordwrap crash). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20796">#20796</a> (when register_globals is on &amp; arrays with same names are
+<li><?php bugfix(20936); ?> (openssl_pkey_get was broken). (jeroen@derks.it, Wez)</li>
+<li><?php bugfix(20927); ?> (wordwrap crash). (Ilia)</li>
+<li><?php bugfix(20796); ?> (when register_globals is on &amp; arrays with same names are
   passed via get/post/cookie the data inside $_GET/$_POST/$_COOKIE can would be
   corrupted). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20725">#20725</a> (if the upload directory cannot be written to, the POST data
+<li><?php bugfix(20725); ?> (if the upload directory cannot be written to, the POST data
   after the uploaded file is lost). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20865">#20865</a> (array_key_exists() fails to find NULL key). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20812">#20812</a> (ftp_get returned NULL on success, instead of TRUE). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20785">#20785</a> (crash when using pdf_open_memory_image() to load a
+<li><?php bugfix(20865); ?> (array_key_exists() fails to find NULL key). (Ilia)</li>
+<li><?php bugfix(20812); ?> (ftp_get returned NULL on success, instead of TRUE). (Ilia)</li>
+<li><?php bugfix(20785); ?> (crash when using pdf_open_memory_image() to load a
   true-color image). (Ilia)</li>
 <li>Fixed a crash when converting between true-color images (png/jpeg) and
   gd1/gd2 image formats, png/jpeg -> gd1/gd2 -> png/jpeg conversion now
   works correctly. (Ilia, Pierre-Alain Joye).</li>
 <li>Fixed a memory leak in the bundled GD library inside 
   gdImageTrueColorToPalette(). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/12776">#12776</a> (array_walk crash). (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20934">#20934</a> (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/20270">#20270</a>, <a href="http://bugs.php.net/15702">#15702</a>, <a href="http://bugs.php.net/18600">#18600</a> (segfaults in ext/java). (Tony J. White)</li>
+<li><?php bugfix(12776); ?> (array_walk crash). (Moriyoshi)</li>
+<li><?php bugfix(20934); ?> (htmlspecialchars returns latin1 from UTF-8). (Moriyoshi)</li>
+<li>Fixed bugs <?php bugl(20270); ?>, <?php bugl(15702); ?>, <?php bugl(18600); ?> (segfaults in ext/java). (Tony J. White)</li>
 <li>Made bcmath extension thread safe. (Sander)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19566">#19566</a> (get_declared_classes() segfaults). (Moriyoshi, Marcus, Andi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20381">#20381</a> (array_merge_recursive mangles input arrays). (Moriyoshi)</li>
+<li><?php bugfix(19566); ?> (get_declared_classes() segfaults). (Moriyoshi, Marcus, Andi)</li>
+<li><?php bugfix(20381); ?> (array_merge_recursive mangles input arrays). (Moriyoshi)</li>
 <li>Added -n command switch to cli and cgi version which allows to skip php.ini
   parsing at startup. (Marcus, Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19689">#19689</a> (absolute paths like /test/dir/ not working correctly).
+<li><?php bugfix(19689); ?> (absolute paths like /test/dir/ not working correctly).
   (Ilia)</li>
 <li>Added "neutral" language entry to mbstring spec. (Moriyoshi)</li>
 <li>Changed bundled gd library to consider php.ini option memory_limit. (Marcus)</li>
 <li>Modified log() to accept multiple bases. (Jason)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/16190">#16190</a>/18746 (ext/db: flatfile support with windows). (Marcus)</li>
+<li>Fixed bugs <?php bugl(16190); ?>/<?php bugl(18746); ?>xt/db: flatfile support with windows). (Marcus)</li>
 <li>Added gd_info() which returns an array of gd support information. (Marcus)</li>
-<li>Implemented features/changes requested in Bug <a href="http://bugs.php.net/16960">#16960</a> (Timm):
+<li>Implemented features/changes requested in Bug <?php bugl(16960); ?> (Timm):
   <ul>
   <li>Added a new function sybase_unbuffered_query()</li>
   <li>Added a new function sybase_fetch_assoc()</li>
@@ -534,18 +536,18 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
   <li>Made sybase_query() error messages more verbose</li>
   </ul>
 </li>
-<li>Fixed bug <a href="http://bugs.php.net/19935">#19935</a> (made OpenSSL file system operations abide by safe_mode
+<li><?php bugfix(19935); ?> (made OpenSSL file system operations abide by safe_mode
   &amp; open_basedir restrictions). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18868">#18868</a> (improved the check for availability of realpath()). (Ilia)</li>
+<li><?php bugfix(18868); ?> (improved the check for availability of realpath()). (Ilia)</li>
 <li>Fixed width/height detection of bmp images using getimagesize() function on
   big endian systems and added code to retrieve bmp bit depth. (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20035">#20035</a> (line counting error when script starts with #! in 
+<li><?php bugfix(20035); ?> (line counting error when script starts with #! in 
   cgi/cli/fastcgi sapis). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20235">#20235</a> (incorrect handling of symlinks on ZTS build). (Ilia)</li>
+<li><?php bugfix(20235); ?> (incorrect handling of symlinks on ZTS build). (Ilia)</li>
 <li>Added sanity checks to headers_sent() &amp; image_type_to_mime_type(). (Ilia)</li>
 <li>Added an aditional parameter to the jdtojewish() function which makes
   the function return the symbolic hebrew name. (Moshe Doron, Derick)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20169">#20169</a> (implode() clobbers first argument). (Moriyoshi)</li>
+<li><?php bugfix(20169); ?> (implode() clobbers first argument). (Moriyoshi)</li>
 <li>Improved dba extension (Marcus)
   <ul>
   <li>Added dba_handlers() that returns an array of installed handlers and
@@ -561,22 +563,22 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 </li>
 <li>Added imagerotate() which is available only when bundled libgd is used.
   (Pierre-Alain Joye, Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17497">#17497</a> (mssql extension crashes if magic_quotes_runtime is on).
+<li><?php bugfix(17497); ?> (mssql extension crashes if magic_quotes_runtime is on).
   (Sterling)</li>
 <li>Remove $_FILES from $_REQUEST (import_request_variables is not modified), 
   this didn't work properly in the first place, and added confusion. (Sterling)</li>
 <li>Fix the socket_read() function on win32 to work in normal mode (reading to
   the end of a line), as well as binary mode. (Sterling)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20110">#20110</a> (added sanity check to prevent include/require functions
+<li><?php bugfix(20110); ?> (added sanity check to prevent include/require functions
   from trying to include directories). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/20108">#20108</a> (segmentation fault on printf("%1.1s", "string")). (Ilia)</li>
+<li><?php bugfix(20108); ?> (segmentation fault on printf("%1.1s", "string")). (Ilia)</li>
 <li>Added dbx_escape_string() function to dbx module. (Marc)</li>
 <li>Added Oracle (oci8) support to dbx module. (Marc)</li>
 <li>Updated FDF extension to work with Adode fdftk 5.0. (Hartmut)</li>
 <li>Added mb_strtolower() and mb_strtoupper(). (Moriyoshi)</li>
 <li>Fixed an infinite loop in setlocale() when only invalid locale names
   were passed in the array. (patch by Pal Loberg, pallo[at]initio.no)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/19156">#19156</a> and <a href="http://bugs.php.net/19544">#19544</a> (COM extension leaks memory and keeps
+<li>Fixed bugs <?php bugl(19156); ?> and <?php bugl(19544); ?> (COM extension leaks memory and keeps
   components referenced). (Harald)</li>
 <li>Added fribidi_get_charsets() and fribidi_charset_info() functions. (Tal)</li>
 <li>Added Oracle TIMESTAMP type to oci8 extension. (Thies)</li>
@@ -588,15 +590,15 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 <li>Added PGSQL_CONNECT_FORCE_NEW option to pg_connect() (Yasuo)</li>
 <li>Added ICONV_IMPL and ICONV_VERSION constants to iconv extension to
   indicate which iconv implementation is used. (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/4232">#4232</a> (Added %e &amp; %E support to printf/sprintf). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17580">#17580</a> (Allow ini parser to parse files &gt;16K). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19649">#19649</a> (Sanity checks for browscap.ini parser). (Ilia)</li>
+<li><?php bugfix(4232); ?> (Added %e &amp; %E support to printf/sprintf). (Ilia)</li>
+<li><?php bugfix(17580); ?> (Allow ini parser to parse files &gt;16K). (Ilia)</li>
+<li><?php bugfix(19649); ?> (Sanity checks for browscap.ini parser). (Ilia)</li>
 <li>Added experimental patch to address problem with floats on various locales.
-  (Bug <a href="http://bugs.php.net/17079">#17079</a>). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19280">#19280</a> (imap_header fails with many To: addresses). (Ilia)</li>
+  (Bug <?php bugl(17079); ?>). (Ilia)</li>
+<li><?php bugfix(19280); ?> (imap_header fails with many To: addresses). (Ilia)</li>
 <li>Added mb_regex_set_options(). The Options parameters of various mbregex
   functions are now deprecated. (Moriyoshi)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19482">#19482</a> (Segfault with PCRE and locale). (Andrei)</li>
+<li><?php bugfix(19482); ?> (Segfault with PCRE and locale). (Andrei)</li>
 <li>Made ImageTruecolorToPalette() in bundled GD2 library actually work. (Rasmus)</li>
 <li>Fixed ImageCopy() in bundled GD2 library to handle copying from truecolor to
   palette-based. (Wez, Rasmus)</li>
@@ -629,19 +631,19 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
 </li>
 <li>Fixed strstr(), strchr() and strrchr() to be binary safe. (Andrey)</li>
 <li>Added array_diff_assoc() and array_intersect_assoc(). (Andrey)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17825">#17825</a> (ob_start() chunk size option didn't work well). (Yasuo)</li>
+<li><?php bugfix(17825); ?> (ob_start() chunk size option didn't work well). (Yasuo)</li>
 <li>Fixed output buffer infinite loop when buffer_size became 0. (Marcus, Wez)</li>
 <li>Added getopt() for parsing command line options and arguments. (Jon)</li>
 <li>Added pg_fetch_assoc(), pg_fetch_all(), pg_ping(), pg_meta_data(), pg_convert(), 
   pg_insert(), pg_select(), pg_update(), pg_delete(), pg_result_seek(),
   pg_unescape_bytea(), pg_get_notify() and pg_get_pid(). (Yasuo)</li>
-<li>Fixed bug <a href="http://bugs.php.net/17281">#17281</a> (Sanity checks for encoding sessions). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/16995">#16995</a> and <a href="http://bugs.php.net/19392">#19392</a> (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
+<li><?php bugfix(17281); ?> (Sanity checks for encoding sessions). (Ilia)</li>
+<li><?php bugfix(16995); ?> and <?php bugl(19392); ?> (Prevent crash if $HTTP_SESSION_VARS != ARRAY).
   (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19292">#19292</a> (open_basedir restriction problem). (Rasmus)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19366">#19366</a> (gdImageFill crashes when x &amp; y are outside of 
+<li><?php bugfix(19292); ?> (open_basedir restriction problem). (Rasmus)</li>
+<li><?php bugfix(19366); ?> (gdImageFill crashes when x &amp; y are outside of 
   the image's boundries). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/13936">#13936</a> (__FILE__ constant didn't contain full path). (Ilia)</li>
+<li><?php bugfix(13936); ?> (__FILE__ constant didn't contain full path). (Ilia)</li>
 <li>PHP now has a new stream system that allows it to do some clever stuff with
   fopen() and fsockopen().  As a result:
   <ul>
@@ -691,48 +693,48 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
     streams to their respective standard I/O counterparts. (Edin)</li>
   <li>Added php.ini option "auto_detect_line_endings" which enables PHP to
     detect Macintosh, Unix and Dos end-of-line characters in fgets() and
-	file(). Fixes bugs <a href="http://bugs.php.net/16521">#16521</a> and <a href="http://bugs.php.net/16708">#16708</a>. (Wez)</li>
+	file(). Fixes bugs <?php bugl(16521); ?> and <?php bugl(16708); ?>. (Wez)</li>
   <li>Fixed include(), require() and GD functions to work with remote files
     under win32.</li>
-  <li>Fixed bug <a href="http://bugs.php.net/18609">#18609</a> (ImageCreateFromJPEG can't fetch from a URL). (Wez)</li>
+  <li><?php bugfix(18609); ?> (ImageCreateFromJPEG can't fetch from a URL). (Wez)</li>
   </ul>
 </li>
-<li>Fixed bug <a href="http://bugs.php.net/18022">#18022</a> (fopen does not work with php://stdin anymore on Solaris).
+<li><?php bugfix(18022); ?> (fopen does not work with php://stdin anymore on Solaris).
   (Wez)</li>
 <li>Added php.ini option "default_socket_timeout" to set the timeout limit for 
   PHP network streams. (kalowsky, ilia@prohost.org, Wez)</li>
 <li>Added file_get_contents() which returns the contents of a file as a string. 
   This function also supports the URL wrappers. (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19595">#19595</a> (Missing functions for GD2 format handling). (Edin)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19633">#19633</a> (Wrong directories in ext/ldap/config.m4). (Derick)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/17274">#17274</a> and <a href="http://bugs.php.net/19627">#19627</a> (segfault in sem_remove). (Wez)</li>
+<li><?php bugfix(19595); ?> (Missing functions for GD2 format handling). (Edin)</li>
+<li><?php bugfix(19633); ?> (Wrong directories in ext/ldap/config.m4). (Derick)</li>
+<li>Fixed bugs <?php bugl(17274); ?> and <?php bugl(19627); ?> (segfault in sem_remove). (Wez)</li>
 <li>Added mb_convert_case() function to the mbstring extension which can convert
   strings between upper, lower and title case using Unicode mappings.
-  Fixed bug <a href="http://bugs.php.net/19257">#19257</a> (strtolower &amp; strtoupper does not work for UTF-8 strings).
+  <?php bugfix(19257); ?> (strtolower &amp; strtoupper does not work for UTF-8 strings).
   (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18521">#18521</a> (htmlentities didn't warn about unsupported charsets). (Wez)</li>
-<li>Fixed bug <a href="http://bugs.php.net/11643">#11643</a> (Session related, fix SID redefinition). (Ilia)</li>
-<li>Fixed bug <a href="http://bugs.php.net/18556">#18556</a> (Scripting Engine, problem with locales like tr_TR). (Ilia)</li>
+<li><?php bugfix(18521); ?> (htmlentities didn't warn about unsupported charsets). (Wez)</li>
+<li><?php bugfix(11643); ?> (Session related, fix SID redefinition). (Ilia)</li>
+<li><?php bugfix(18556); ?> (Scripting Engine, problem with locales like tr_TR). (Ilia)</li>
 <li>Changed y2k_compliance to default to 1 now. (Sascha)</li>
 <li>Added platform independent socket error constants for better error handling. (Jason)</li>
 <li>Update output of phpinfo() to use more CSS to reduce the file size, do
   proper HTML escaping, and make it XHTML compliant. (Colin)</li>
-<li>Fixed compile errors in the FriBidi extension (Bug <a href="http://bugs.php.net/16414">#16414</a>). (Tal)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/7472">#7472</a>, <a href="http://bugs.php.net/12120">#12120</a> and <a href="http://bugs.php.net/12989">#12989</a> as well as other potential problems
+<li>Fixed compile errors in the FriBidi extension (Bug <?php bugl(16414); ?>). (Tal)</li>
+<li>Fixed bugs <?php bugl(7472); ?>, <?php bugl(12120); ?> and <?php bugl(12989); ?> as well as other potential problems
   with strip_tags() function. (Ilia)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/17570">#17570</a> and <a href="http://bugs.php.net/17957">#17957</a> (Regexps related). (Andrei, Ilia)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/18167">#18167</a> and <a href="http://bugs.php.net/16859">#16859</a> (SEGV with session_decode). (Ilia)</li>
-<li>Fixed bugs <a href="http://bugs.php.net/19573">#19573</a> and <a href="http://bugs.php.net/13472">#13472</a> (Session, XHTML compliance and trans_sid). 
+<li>Fixed bugs <?php bugl(17570); ?> and <?php bugl(17957); ?> (Regexps related). (Andrei, Ilia)</li>
+<li>Fixed bugs <?php bugl(18167); ?> and <?php bugl(16859); ?> (SEGV with session_decode). (Ilia)</li>
+<li>Fixed bugs <?php bugl(19573); ?> and <?php bugl(13472); ?> (Session, XHTML compliance and trans_sid). 
   (Sascha)</li>
-<li>Fixed bug <a href="http://bugs.php.net/19570">#19570</a> (last character was missing in get_html_translation_table). 
+<li><?php bugfix(19570); ?> (last character was missing in get_html_translation_table). 
   (Wez)</li>
 <li>Upgraded PCRE to version 3.9. (Wez)</li>
 <li>Fixed bug in OCIResult() which returned garbage when called on 
   empty result-sets. (Thies)</li>
 <li>Added ability to use Perl-style ${n} subpattern references in the
-  replacement string for preg_replace() (bug <a href="http://bugs.php.net/18442">#18442</a>). (Andrei)</li>
+  replacement string for preg_replace() (bug <?php bugl(18442); ?>). (Andrei)</li>
 <li>Fixed array_merge_recursive() to avoid problems with merging cyclical
-  arrays (bug <a href="http://bugs.php.net/16064">#16064</a>). (Andrei)</li>
+  arrays (bug <?php bugl(16064); ?>). (Andrei)</li>
 <li>Made function_exists() work properly with disabled functions. (Andrei)</li>
 <li>Added ability to extract() variables as references via OR'able EXTR_REFS
   flag. (Andrei)</li>
@@ -821,7 +823,7 @@ There is a <a href="release_4_3_1.php">separate announcement</a> available for t
   its glibc cousin. (Rasmus)</li>
 <li>Fixed str_rot13() to not mangle source string. (Rasmus)</li>
 <li>Fixed imap_get_quota() to work with multiple returned resources as per
-  the RFC 2087 and bug <a href="http://bugs.php.net/14673">#14673</a>. (kalowsky, Sander Steffann)</li>
+  the RFC 2087 and bug <?php bugl(14673); ?>. (kalowsky, Sander Steffann)</li>
 <li>Added MarkerNote decoding to exif_read_data() for several Cameras. (Marcus)</li>
 <li>Disabled zlib.output_compression for "image/" content-type
   headers which can be changed during script execution. (Stefan)</li>
@@ -1100,7 +1102,7 @@ example: socket_connect($sock, 'www.yahoo.com', 80);</li>
     </pre></li>
   </ul></li>
 <li>Fixed segfault in ibase_close() if user does not free the resultset.
-Bugs <a href="http://bugs.php.net/bug.php?id=15419">#15419</a>, <a href="http://bugs.php.net/bug.php?id=15992">#15992</a>. (daniela)</li>
+Bugs <?php bugl(15419); ?>, <?php bugl(15992); ?>. (daniela)</li>
 <li>Fixed pg_last_notice() crash. (Yasuo)</li>
 <li>Added optional 3rd parameter "int encoding_mode" to gzencode() and fixed
 parameters to conform documentation. (Stefan)</li>
@@ -1186,9 +1188,9 @@ either normal or recursive counting. (patch by Vlad Bosinceanu &lt;<a href="mail
 <li>Fixed pow()'s incorrect behaviour when dealing with powers of 0. (Jim)</li>
 <li>Added is_finite(), is_infinite() and is_nan(). (Jim)</li>
 <li>Fixed segfault in wordwrap() when wrapping to zero width and using
-multi-character break or trying to force cut (bug <a href="http://bugs.php.net/bug.php?id=12768">#12768</a>). (Jim)</li>
+multi-character break or trying to force cut (bug <?php bugl(12768); ?>). (Jim)</li>
 <li>Fixed several bugs in dbase extension (dbase_pack() truncate file to right
-size, fix <a href="http://bugs.php.net/bug.php?id=6852">6852 #1 and 6852 #2</a>). (Vlad)</li>
+size, fix <?php bugl(6852) ?> #1 and #2). (Vlad)</li>
 <li>Fixed bug in krsort() where an extra character was being compared. (Andi)</li>
 <li>Fixed bug that made pspell include pspell.h from a wrong location. (Vlad)</li>
 <li>Added function overload in mbstring to add multibyte support for
@@ -1311,8 +1313,8 @@ There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> ava
   integers properly. (Vlad)</li>
 <li>Fixed several bugs and memleaks in the domxml extension. (Markus)</li>
 <li>Fixed bug in gmmktime() which was one hour off during standard time -
-  bug <a href="http://bugs.php.net/bug.php?id=9878">#9878</a>. Patch by bfoddy@mediaone.net. (jmoore)</li>
-<li>Fixed bug in gmdate() timezone handling on Windows - bug <a href="http://bugs.php.net/bug.php?id=13885">#13885</a>. (jmoore)</li>
+  bug <?php bugl(9878); ?>. Patch by bfoddy@mediaone.net. (jmoore)</li>
+<li>Fixed bug in gmdate() timezone handling on Windows - bug <?php bugl(13885); ?>. (jmoore)</li>
 <li>Fixed several crash bugs in the mcrypt extension. (Derick)</li>
 <li>Made the mcrypt extension compile with the libmcrypt 2.2 series again.
   (Sterling)</li>
@@ -1511,7 +1513,7 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
   (Patch from Steven Bower)</li>
 <li>Renamed diskfreespace() to disk_free_space() to conform to established
   naming conventions. (Jon)</li>
-<li>Fixed <a href="http://bugs.php.net/bug.php?id=2181">#2181</a>. Now zero is returned instead of an unset value for
+<li>Fixed <?php bugl(2181); ?>. Now zero is returned instead of an unset value for
   7-bit encoding and plain text body type. (Vlad)</li>
 <li>Fixed a bug in call_user_*() functions that would not allow calling
   functions/methods that accepted parameters by reference. (Andrei)</li>
@@ -1605,7 +1607,7 @@ There is a <a href="release_4_1_0.php">separate announcement</a> available for t
 <li>Added -C command-line option to avoid chdir to the script's directory. (Stig)</li>
 <li>Fixed a bug with /e modifier in preg_replace(), that would not correctly
   replace two-digit references if single digit references were present
-  before them. This fixed bug <a href="http://bugs.php.net/bug.php?id=10218">#10218</a>. (Andrei)</li>
+  before them. This fixed bug <?php bugl(10218); ?>. (Andrei)</li>
 <li>Added temporary LOB support in OCI8. (Patch by David Benson)</li>
 <li>Fixed crash in pathinfo()</li>
 <li>OCI8 now supports binding of collections. (Patch by Andy Sautins
@@ -1699,7 +1701,7 @@ There is no separate announcement available for this release.<br />
 <li>Fixed PostgeSQL pg_connect() bug. We would sometimes close the default
   link by accident. (Patch by: aja@nlgroup.ca)</li>
 <li>Improved OCI8 dead-session detection. (Patch by: George Schlossnagle)</li>
-<li>Fixed get_meta_tags() multiline bug <a href="http://bugs.php.net/bug.php?id=4556">#4556</a>. (Sean)</li>
+<li>Fixed get_meta_tags() multiline bug <?php bugl(4556); ?>. (Sean)</li>
 <li>Prefer random() over *rand48(). (JimJag)</li>
 <li>Sped up WDDX serialization 2x. (Andrei)</li>
 <li>Added a new parameter to mail() which appends aditional command line
@@ -1837,7 +1839,7 @@ There is no separate announcement available for this release.<br />
   name in the replacement argument to preg_replace() that will be called
   at run-time to provide the replacement string. It is passed an array of
   matched pattern and subpatterns. (Andrei)</li>
-<li>Put an end to Bug <a href="http://bugs.php.net/bug.php?id=4615">#4615</a> (kalowsky &amp; Eric Veldhuyzen)</li>
+<li>Put an end to Bug <?php bugl(4615); ?> (kalowsky &amp; Eric Veldhuyzen)</li>
 <li>Fixed realpath() in Virtual Directory mode (Daniel)</li>
 <li>Integrated the Phil Nelson's bc math library routines into PHP, now that
   the license allows it (Phil Nelson)</li>
@@ -2095,11 +2097,11 @@ There is no separate announcement available for this release.<br />
   the status code across the redirect as well.  (Rasmus)</li>
 <li>Added Olympus-specific tags to read_exif_data() (Rasmus)</li>
 <li>Fixed bug in imap_fetchheader() where using FT_PREFETCHTEXT didn't return
-  the body. Bug <a href="http://bugs.php.net/bug.php?id=4447">#4447</a>. (Jani)</li>
+  the body. Bug <?php bugl(4447); ?>. (Jani)</li>
 <li>Fixed exec() returning "\0" when output is empty</li>
 <li>Added XML_Parser class in PEAR (Stig)</li>
 <li>Added "make test" target in pear/ and added some regression tests (Stig)</li>
-<li>Fixed bug in strip_tags function as per bug <a href="http://bugs.php.net/bug.php?id=5857">#5857</a> (Rasmus)</li>
+<li>Fixed bug in strip_tags function as per bug <?php bugl(5857); ?> (Rasmus)</li>
 <li>Fixed reading of IPTC via GetImageInfo() for certain JPEG files. (Thies)</li>
 <li>Improved the output-buffering functions to be re-entrant (Zeev)</li>
 <li>Made ldap_add(), ldap_modify(), ldap_mod_add(), ldap_mod_replace()
