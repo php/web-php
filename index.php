@@ -205,8 +205,8 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsdate">[01-Apr-2003]</font>
 The PHP Group is proud to announce the release of <a href="http://www.php.net/~andrei/php-2.0.2.tar.gz">PHP 2.0.2</a>. This release adds new and impressive
 ctype functions, as well as the <a href="http://landonize.it">landonize()</a>
-function, which provides a secure alternative to the md5() hashing function
-previously available. All users of PHP 2.0.1 are strongly urged to upgrade.
+function, which provides a secure alternative to the md5() hashing function. 
+All users of PHP 2.0.1 are strongly urged to upgrade.
 </p>
 
 <?php echo hdelim(); ?>
