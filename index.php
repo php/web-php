@@ -85,7 +85,7 @@ echo "\n<!--$MYSITE-->\n";
 <h1>PHP 4.2.0 RC 4 Released</h1>
 <p>
 <font class="newsDate">[15-Apr-2002]</font>
-A third <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
+A fourth <?php print_link ("http://www.php.net/~derick/", "release candidate"); ?> for
 PHP 4.2.0 has just been released, with <b>experimental</b> support for the
 recent Apache 2.0.35 release as well as numerous collected bug fixes. This
 build is used for testing the readiness of the release branch. By providing
