@@ -72,9 +72,10 @@ appropriate steps will be taken to integrate your mirror site:
 - The URL of the site that hosts the mirror.  This is where you want
   people will go when they click on the link for your mirror at the
   bottom of each page.
-- The preferred default manual language for your country (only
-  the manuals are translated). See if there is a manual in your
-  language. If not, please choose one other from the list.
+- The preferred default language for your country (currently only
+  the manuals are translated). Don't worry if there's no content
+  available in the preferred language yet, so long as English is
+  an acceptable secondary default.
 
 Don't worry about graphics for your country's flag - we've got them all!
 
