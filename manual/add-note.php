@@ -52,7 +52,7 @@ if ($process) {
     
     // The user name contains a malicious character
     elseif (stristr($user, "|")) {
-        $error = "You have included bad characters within your username. We appreciate you may want to obfusicate your email further, but we have a system in place to do this for you.";
+        $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
     }
 
     // Check if the note is not too long
