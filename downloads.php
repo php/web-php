@@ -108,25 +108,25 @@ site_header("Downloads");
 
 <hr />
 
-<h1>PHP 5 Beta 1</h1>
+<h1>PHP 5 Beta 2</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b1.tar.bz2', 'PHP 5.0.0b1 (tar.bz2)'); ?> - 29 Jun 2003<br />
-  <span class="md5sum">md5: 0cb4ce9c05b639b763bc272c15fbb1a6</span>
+  <?php download_link('php-5.0.0b2.tar.bz2', 'PHP 5.0.0b2 (tar.bz2)'); ?> - 30 Oct 2003<br />
+  <span class="md5sum">md5: 7acea44d0dc10eb54fa08984e94060e8</span>
  </li>
  <li>
-  <?php download_link('php-5.0.0b1.tar.gz', 'PHP 5.0.0b1 (tar.gz)'); ?> - 29 Jun 2003<br />
-  <span class="md5sum">md5: 7f76a9cbd750a04e22d757059c6ffd7a</span>
+  <?php download_link('php-5.0.0b2.tar.gz', 'PHP 5.0.0b2 (tar.gz)'); ?> - 30 Oct 2003<br />
+  <span class="md5sum">md5: fd1dd3a3a958fc31e2fc32fee8e34402</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.0b1-Win32.zip', 'PHP 5.0.0b1 zip package'); ?> - 29 Jun 2003<br />
-  <span class="md5sum">md5: 1a1dd59ea921a18cf810e016b8631033</span>
+  <?php download_link('php-5.0.0b2-Win32.zip', 'PHP 5.0.0b2 zip package'); ?> - 30 Oct 2003<br />
+  <span class="md5sum">md5: d58f09501d06a636f00c0be3d99e4669</span>
  </li>
 </ul>
 

@@ -151,6 +151,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.0.0 Beta 2 released</h1>
+<p>
+ <span class="newsdate">[30-Oct-2003]</span>
+ <a href="http://www.php.net/downloads.php">PHP 5.0.0 Beta 2</a> has been released.
+ This is the first feature complete version of PHP 5, and we recommend for PHP users
+ to try it out although it is not yet ready for production use.
+</p>
+<p>
+ There have been many changes since Beta 1, some of them documented in the
+ <a href="http://www.php.net/NEWS_PHP_5_0_0b2.txt">NEWS file</a> and most language
+ changes are documented in <a href="http://www.php.net/ZEND_CHANGES_PHP_5_0_0b2.txt">ZEND_CHANGES</a>
+</p>
+
+<hr />
+
 <h1>PHP 4.3.4RC3 released</h1>
 <p>
  <span class="newsdate">[29-Oct-2003]</span>
