@@ -24,7 +24,7 @@ if ($pattern) {
 		header("Location: manual-lookup.php?pattern=".urlencode($pattern)."&lang=".urlencode($lang));
 		exit;
 	}
-	$location = "http://www.progressive-comp.com/Lists/";
+	$location = "http://marc.theaimsgroup.com/";
 	if ($show=="maillist") {
 		$query = "l=php3-general&r=1&w=2&q=b&s=".urlencode($pattern);
 		header("Location: ".$location."?".$query);
