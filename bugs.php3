@@ -509,18 +509,15 @@ of grouping them all in one report.
   <td>
    <select name="php_version">
     <option name="3.0.4">3.0.4
+    <option name="3.0CVS-<? print date("d/m/Y"); ?>">3.0 Latest CVS (<? print date("d/m/Y"); ?>)
     <option name="3.0.3">3.0.3
-    <option name="3.0.2a">3.0.2a
-    <option name="3.0CVS">3.0 Latest CVS
-    <option name="3.0.2">3.0.2
-    <option name="3.0.1">3.0.1
-    <option name="3.0">3.0 Final Release
-    <option name="other">other
+    <option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
   <td>
    <font size="-2">
-   Please don't report bugs in versions earlier than the final 3.0 release, but instead,
+   <font color="#FF0000">Note:</font>
+   Please don't report bugs in versions earlier than 3.0.3, but instead,
    upgrade first, and check if the bug still exists.
    </font>
   </td>
