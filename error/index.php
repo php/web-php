@@ -118,6 +118,8 @@ $uri_aliases = array (
     "subscribe"     => "mailing-lists",
     "logos"         => "download-logos",
 
+    "README.mirror" => "mirroring", // backward compatibility
+
     # manual shortcuts
     "ini"          => "configuration",
 
