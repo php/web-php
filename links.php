@@ -163,7 +163,7 @@ A German website using PHP to offer free services, a huge script-archive,
 free scripts, tutorials and many more<br></li>
 
 </ul></li>
-<li><b>French (Fran&ccedil;ais)</b>
+<li><b>French</b>
 <ul>
 
 <li><a href="http://www.nexen.net/">Nexen.net</a><br>
@@ -228,8 +228,8 @@ A Swedish PHP portal with articles, news, forums and much more<br></li>
 <ul>
 
 <li><a href="http://php.spinacz.pl">php.spinacz.pl</a><br>
-The bigest polish site about programming in PHP, a
-phpbuilder.com like site in Polish.<br></li>
+The bigest Polish site about programming in PHP -- A
+phpbuilder.com-like site in Polish.<br></li>
 </ul></li>
 </ul>
 
