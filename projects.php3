@@ -167,6 +167,17 @@ TWIG (formerly known as Muppet) came about because several of our users were run
 practical for them to use. Muppet works in every browser we've tested so far, including lynx.
 <? endEntry();?>
 
+<? makeEntry("phpAds","www.htmlwizard.net/phpAds/","Tobias Ratschiller" ,"tobias@dnet.it"); ?>
+phpAds is a banner management and tracking system written in PHP3. Currently it can:
+<ul>
+<li> manage multiple banners (any size) per client
+<li> view daily, overall and summary statistics , send stats via email
+<li> use HTML, GIF, JPEG and PNG-banners
+<li> show random, predefined or HTML/image banners
+<li> activate and de-activate individual banners
+</ul>
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
