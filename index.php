@@ -77,6 +77,27 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://weblabor.hu/php-doc-chm", make_image("chmhelp.gif", "CHM", "right") ); ?>
+
+<h1>Fouth sample of 'PHP Manual CHM Edition' available</h1>
+
+<p>
+<font class="newsDate">[16-Feb-2002]</font>
+We released the fourth sample of the new CHM Edition. It was
+a long time to release this version, as we revampaed the design,
+optimized the HTML code, made the pages stretch to any window
+size, switched to use XSLT style sheets instead of DSSSL to
+generate the pages, and coded many improvements and fixes.
+</p>
+
+<p>
+<?php print_link("http://weblabor.hu/php-doc-chm", "Try out the new CHM Edition"); ?>,
+and send us your feedback to our
+<?php print_link("php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>PHP-GTK 0.5.0 released</h1>
 
 <p>
