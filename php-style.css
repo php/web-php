@@ -10,6 +10,7 @@ A {
     font-family: tahoma, arial, helvetica, sans-serif;
     color: #FFFFFF;
     text-decoration: none;
+    font-weight: normal;
 }
 
 .example {
@@ -21,7 +22,7 @@ A {
 
 .programlisting {
     margin-left: 15px;
-    font-family: courier;
+    font-family: "monotype.com", "courier new", courier, monospace;
 }
 
 .warning {
