@@ -438,8 +438,8 @@ test it as much as possible on real-life applications to uncover any remaining i
 </p>
 <p>
  The <a href="http://www.afup.org/article.php3?id_article=242">forum PHP 2004</a> 
- will take place in Paris, at the FIAP Jean Monnet, on thursday 25th and friday 
- 26th, november 2004.<br />
+ will take place in Paris, at the FIAP Jean Monnet, on thursday 18th and friday 
+ 19th, november 2004.<br />
  More information in French at this <a 
  href="http://www.afup.org/article.php3?id_article=242">URL</a>.
 </p>
