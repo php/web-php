@@ -24,14 +24,14 @@ $SIDEBAR_DATA = '
 <h3>Still searching?</h3>
 <p>
  If this page and the suggested links are unable to help you,
- you might try to search for a PHP tarball on AllTheWeb:
+ you might try to search for a PHP tarball on FileWatcher:
 </p>
  
-<form action="http://www.alltheweb.com/search" method="get">
+<form action="http://www.filewatcher.com/" method="get">
  <p>
-  <input type="hidden" name="cat" value="ftp" />
-  <input type="hidden" name="ftype" value="6" />
-  <select name="query" onchange="this.form.submit()">
+  <input type="hidden" name="min" value="500000" />
+  <input type="hidden" name="af" value="1" />
+  <select name="q" onchange="this.form.submit()">
    <option value="">-select version-</option>
    <option value="php-3.0.tar.gz">3.0</option>
    <option value="php-3.0.1.tar.gz">3.0.1</option>
