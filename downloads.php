@@ -61,17 +61,17 @@ Before you download, make sure you are using a mirror close to you.
 $cm = find_closest_mirrors();
 $cmn = count($cm);
 if ($cmn > 0) {
-    echo " We found ";
+    echo "We found ";
     echo ($cmn > 1 ? "$cmn mirrors" : "a mirror");
-    echo " near you. We recommend you use nearby mirror sites.";
-    echo "Please visit: ";
+    echo " near you. We recommend you to use nearby mirror sites.\n";
+    echo " Please visit: ";
     foreach ($cm as $num => $mirror) {
         echo '<a href="' . $mirror . '">' . $mirror . '</a>';
-        if ($num < $cmn) { echo " or "; }
+        if ($num < $cmn-1) { echo " or "; }
     }
-    echo ". You can also change mirrors at the bottom of the page.";
+    echo ". You can also change mirrors at the bottom of this page.";
 } else {
-    echo " You can change mirrors at the bottom of the page.";
+    echo "You can change mirrors at the bottom of the page.";
 }
 ?>
 </p>
