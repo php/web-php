@@ -232,7 +232,7 @@ right away.</blockquote>
 /* Internet Services */
 	title("Internet Services");
 	siteStart();
-	site("Active Mind","www.activemind.com");
+	site("Active Mind","www.activemind.net");
 	site("ActiveWeb Internet Solutions","www.activeweb.co.il");
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
