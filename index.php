@@ -215,6 +215,8 @@ PHP Conference in Amsterdam on May 8 and 9, 2003.
 the latest stuff on PHP from internationally acclaimed speakers.
 </p>
 
+<?php echo hdelim(); ?>
+
 <h1>PHP 4.3.2RC1 Released</h1>
 <p>
 <font class="newsdate">[13-Mar-2003]</font>
