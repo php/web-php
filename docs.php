@@ -48,7 +48,9 @@ $formats = array(
  "manual.tar.gz"     => array("Many HTML files",     "tar.gz",    true),
  "manual.tar.bz2"    => array("Many HTML files",     "tar.bz2",   true),
  "manual.zip"        => array("Many HTML files",     "zip",       true),
- "manual.pdf"        => array("PDF",                 "pdf",       false),
+ "manual.pdf.bz2"    => array("PDF",                 "pdf.bz2",   true),
+ "manual.pdf.gz"     => array("PDF",                 "pdf.gz",    true),
+ "manual.pdf.zip"    => array("PDF",                 "pdf.zip",   true),
  "manual_doc.pdb"    => array("PalmPilot DOC",       "doc.pdb",   true),
  "manual_isilo.pdb"  => array("PalmPilot iSilo",     "isilo.pdb", true),
  "manual.chm"        => array("Windows HTML Help",   "chm",       true)
@@ -90,9 +92,12 @@ the tool you use does otherwise.
        echo "<td align=\"center\" bgcolor=\"#eeeeee\">";
 
        # temporary hacks until pdf and chm are auto-generated
-       if ($fn == "manual.pdf") {
-#         $link_to = "http://snaps.php.net/~jah/pdf/manual-$langcode.pdf";
-          $link_to = 'down';
+       if ($fn == "manual.pdf.bz2") {
+          $link_to = 'distributions/manual-$langcode.pdf.bz2';
+       } elseif ($fn == "manual.pdf.gz") {
+          $link_to = 'distributions/manual-$langcode.pdf.gz';
+       } if ($fn == "manual.pdf.zip") {
+          $link_to = 'distributions/manual-$langcode.pdf.zip';
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual_$langcode.chm";
        } else {
