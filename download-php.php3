@@ -31,7 +31,7 @@ while ($site = key($mirror_sites)) {
 	if ($c == $lastc || $c == 'xx') {
 		continue;
 	}
-	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
+	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0 ALT=\" [$c] \"></A>";
 	$lastc = $c;
 }
 ?><BR>
