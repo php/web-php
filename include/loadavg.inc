@@ -25,10 +25,10 @@ function check_load()
 	/* find potential mirrors */
 	foreach ($MIRRORS as $murl => $mirror) {
 		if ($murl != 'http://www.php.net' &&
-				mirror_status($murl) == MIRROR_OK &&
+				$mirror[7] == MIRROR_OK /* mirror status */ &&
 				$mirror[5] /* searchable */) {
 
-			if (mirror_country($murl) == $COUNTRY) {
+			if ($mirror[0] == $COUNTRY) {
 				$mirrors[] = $murl;
 			} else {
 				$any_mirrors[] = $murl;
