@@ -68,10 +68,27 @@ unset($flang);
 // Samples: "hu, en-us;q=0.66, en;q=0.33", "hu,en-us;q=0.5"
 $browser_accept = explode(",", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 foreach ($browser_accept as $langcode) {
+    
+    // Get language code part
     list($langcode) = @explode(";", trim($langcode));
+    
+    // Translation table for accept-language codes and phpdoc codes
+    switch($langcode) {
+        case "pt-br" : $langcode = 'pt_br'; break;
+        case "zh-cn" : $langcode = 'zh'; break;
+        case "zh-hk" : $langcode = 'hk'; break;
+        case "zh-tw" : $langcode = 'tw'; break;
+    }
+    
+    // We do not support flavors of languages (except the ones above)
+    if (preg_match("!^(.+)-!", $langcode, $match)) {
+        $langcode = $match[1];
+    }
+    
+    // Add language to priority order
     language_add($langcode);
 }
-unset($browser_accept); unset($langcode);
+unset($browser_accept); unset($langcode); unset($match);
 
 // Language preferred by this mirror site
 language_add(default_language());
