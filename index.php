@@ -205,6 +205,41 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
+
+<h1>ActiveState Active Awards</h1>
+<p>
+<font class="newsdate">[12-May-2003]</font>
+ActiveState is pleased to announce the third annual Programmers' Choice
+and Activators' Choice Awards. The awards honor those individuals who
+<b>actively</b> contribute to open languages and display excellence in their
+programming efforts. 
+</p><p>
+Awards will be presented in each of ActiveState's key technologies:
+PHP, Perl, Python, Tcl, and XSLT.
+</p><p>
+Programmers' Choice recipients are nominated and chosen by members of
+the programming community--like you. Know someone who's really made a
+difference using these languages? Tell us about them!
+</p><p>
+We'll also be acknowledging our personal favorites with the Activators'
+Choice Awards. While you're busy voting for your favorites, our
+development team will do the same, selecting one deserving programmer in
+each language. 
+</p><p>
+Get out the vote and stay tuned! Nominee recommendations are from May 12
+- June 1, 2003. We'll count the results and present five finalists in
+each category. Voting for the winner will take place from June 3-30,
+2003. Perl, PHP, Python, and XSLT winners will be announced at OSCON on
+July 8, 2003. Tcl winners will be announced at the Tcl conference at the
+end of July.
+</p><p>
+More information and voting is at:
+<a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
+</p>
+
+<?php echo hdelim(); ?>
+
 <h1>Country Detection</h1>
 <p>
 <font class="newsdate">[04-May-2003]</font>
