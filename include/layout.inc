@@ -176,7 +176,8 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
 	global $SIDEBAR_DATA, $prevsearch;
 
-?><html>
+?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">
