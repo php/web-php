@@ -35,7 +35,9 @@ what services they provide.</p>
 
 <p><b>aliases:</b> download.php.net, snaps.php.net</p>
 
-<h2>va1.php.net (offline)</h2>
+<h2>va1.php.net (198.186.203.51)</h2>
+
+<p><b>machine:</b> dual p3/650, 1 GB RAM, 130GB HD, debian-stable</p>
 
 <p>originally compiled by jim winstead, september 2001</p>
 
