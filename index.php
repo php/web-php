@@ -86,8 +86,8 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 <h3>Syndication</h3>
 
 <p>
-You can grab our news as an <img src="/images/rss10.gif" align="absmiddle" alt="XML" />
-(RSS) feed via a daily dump in a file named <a href="/news.rss">news.rss</a>.
+You can grab our news as an RSS feed via a daily dump in a file
+named <a href="/news.rss">news.rss</a>.
 </p>
 
 <h3>Contact</h3>
