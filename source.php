@@ -39,10 +39,10 @@ $legal_dirs = array(
   "/error"   => 1
 );
 
-$dir = dirname($url);
+$dir = $url ? dirname($url) : "";
 
 // The separate manual language dirs are legal dirs
-if (preg_match("!^/manual/(en|pt_BR|cs|nl|fr|de|hu|it|ja|kr|es)$!", $dir) || $legal_dirs[$dir]) {
+if (preg_match("!^/manual/(en|pt_BR|cs|nl|fr|de|hu|it|ja|kr|es)$!", $dir) || isset($legal_dirs[$dir])) {
       $legal_dir = TRUE;
 } else { $legal_dir = FALSE; }
 
