@@ -468,6 +468,14 @@ JPEG, and data in text-linear, linear-linear, and linear-linear-error
 formats.
 <? endEntry();?>
 
+<? makeEntry("Ciao EmailList Manager","http://www.technobreeze.com/php/emaillist/","Ben Drushell","ben@technobreeze.com"); ?>
+Ciao EmailList Manager is a PHP/MySQL opt-in mass e-mail program.  This
+program is intended to assist in the sending of updates/ notifications/
+newsletters/ etc. via the web.  A single message can be e-mailed to a
+large number of addresses.  Each recipient has no way of knowing who
+else is on the mailing list.
+<? endEntry();?>
+
 
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
