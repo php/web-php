@@ -44,7 +44,7 @@ function tryprefix($lang, $keyword, $prefix)
 
 // Try to find a manual page in a specified
 // language for the specified "keyword"
-function find_manual_page($lang, $keyword)
+function find_manual_page_slow($lang, $keyword)
 {
     // Possible prefixes to test
     $sections = array(
@@ -69,6 +69,57 @@ function find_manual_page($lang, $keyword)
 
     // Nothing found
     return "";
+}
+
+function find_manual_page($lang, $keyword)
+{
+	if (!function_exists("sqlite_open")) {
+		return find_manual_page_slow($lang, $keyword);
+	}
+
+	// In production, use sqlite_popen
+	$s = sqlite_popen("manual-lookup.sqlite");
+
+	/* generate keywords */
+
+	$keyword = str_replace('_', '-', $keyword);
+	$keyword = preg_replace("!\\(.*\\)!", "-", $keyword);
+
+	if (strlen($keyword) == 0) {
+		return "";
+	}
+
+	$keywords = array($keyword);
+
+	$keywords[] = str_replace(' ', '', $keyword);
+	$keywords[] = str_replace(' ', '-', $keyword);
+	$keywords[] = str_replace('-', '', $keyword);
+
+	$keywords = array_unique($keywords);
+	$words = "";
+	foreach ($keywords as $word) {
+		if (strlen($words)) {
+			$words .= ',';
+		}
+		$words .= "'" . sqlite_escape_string($word) . "'";
+	}
+
+	if ($lang != 'en') {
+		$langs = array(sqlite_escape_string($lang), 'en');
+	} else {
+		$langs = array('en');
+	}
+	foreach ($langs as $lang) {
+		$q = sqlite_query($s, "SELECT name from fs where lang='$lang' and keyword in ($words) order by prefix LIMIT 1");
+		if ($q) {
+			$r = sqlite_fetch_array($q, SQLITE_NUM);
+			if (is_array($r)) {
+				return $r[0];
+			}
+		}
+	}
+	return "";
+
 }
 
 ?>
