@@ -653,6 +653,7 @@ prevent it from applying to the location of your test script.
 	<LI> Finally, the default location of the Apache configuration files changed between Apache 1.2 and Apache 1.3.  You
 should check to make sure that the configuration file you are adding the AddType line to is actually being read.  You can put an obvious syntax error into your httpd.conf file or some other obvious change that will tell you if the file is being read corre
 
+
 ctly.
 	</UL>
   <P>
@@ -839,7 +840,12 @@ ctly.
    array if necessary.<P>
 
    Note that if you are using JavaScript the <i>[]</i> on the element name might cause you problems when you
-   try to refer to the element by name.  Use it's numerical form element id instead.
+   try to refer to the element by name.  Use it's numerical form element id instead, or enclose the
+   variable name in single quotes and use that as the index to the <I>elements</I> array, for example:
+
+<PRE>   variable = documents.forms[0].elements['var[]'];
+</PRE>
+
   <P>
   </DD>
 
