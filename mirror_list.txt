@@ -44,4 +44,4 @@ us	us2.php.net		php.he.net
 us	us3.php.net	Anton Olsen <aolsen@murl.com>	208.244.78.206
 us	us4.php.net	Hans Kind <hans@kindserver.com>	208.230.143.24	same as php.myphp.net
 us	php.calinet.com	dave@calinet.com	206.190.76.37
-za	za.php.net	Johan Eksteen <Johan.Eksteen@dent.mikom.csir.co.za>	146.64.8.136
+za	za.php.net	<php@mikom.csir.co.za>	146.64.8.136
