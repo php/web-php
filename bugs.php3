@@ -81,6 +81,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
     mysql_query("INSERT into bugdb values (0,'$bug_type','$email','$sdesc','$ldesc','$php_version','$php_os','Open','','$ts','$ts','')");
+	$cid = mysql_insert_id();
 
     $report = "";
     echo("<pre>\n");
@@ -101,7 +102,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
     echo("</pre>\n");
 
-    if (Mail($destination, "Bug report:  $sdesc", $report, "From: $email")) {
+    if (Mail($destination, "Bug #$cid:  $sdesc", $report, "From: $email")) {
         echo("<p><h2>Mail sent to $destination...</h2>\n");
 	echo("Thank you for your help!\n");
     } else {
