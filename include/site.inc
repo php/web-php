@@ -30,6 +30,7 @@ $MIRRORS = array(
    "http://it2.php.net/"              => array("it", "Utility Line Italia S.r.l.", "utilina", "http://www.uli.it/", 1, 0, "it"),
 #   "http://it3.php.net/"              => array("it", "Italia OnLine", "", "http://www.iol.it/", 1, 0, "it"),
    "http://jp.php.net/"               => array("jp", "HappySize, Inc.", "happy", "http://jp.gigahit.com/", 1, 1, "jp"),
+#    "http://jp2.php.net/"             => array("jp", "Hitachi Business International, Ltd.", "http://mirrors.hbi.co.jp/", 1, 1, "jp"),
 #   "http://kr.php.net/"               => array("kr", "HolyNet", "holynet", "http://www.holywar.net/", 1, 1, "kr"),
 #   "http://li.php.net/"               => array("li", "Lie-Comtel AG", "", "http://www.lie-comtel.li", 1, 0, "de"),
    "http://mx.php.net/"               => array("mx", "Urbano.com.mx", "urbano", "http://web.urbano.com.mx/?in=php", 1, 0, "es"),

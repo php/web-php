@@ -20,6 +20,7 @@ it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
 it	it3.php.net	Dino Uras <dino.uras@iol.it>	php.iol.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
+jp	jp2.php.net	Hitachi BI Mirrors Administrator <mirrors-adm@hbi.co.jp>	php.hbi.ne.jp
 kr      kr.php.net      JunSeon Oh <holywar@holywar.net>        php.holywar.net
 li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
