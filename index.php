@@ -97,7 +97,7 @@ while (list(,$ext) = each($types)) {
             $RSIDEBAR_DATA .= "width='120' height='60'";
         }
         $RSIDEBAR_DATA .=
-            " alt='" . $MIRRORS[$MYSITE]['2'] .
+            " alt='" . $MIRRORS[$MYSITE]['1'] .
             "' border='0' /></a></center><br />" . hdelim();
         break;
     }
