@@ -119,6 +119,7 @@ right away.</blockquote>
 	site("Striving For Togetherness Records","www.striving.com");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
+	site("TVN Entertainment","www.tvn.com");
 	site("Verzamel.net - for Dutch-speaking collectors","www.verzamel.net");
 	siteEnd();
 
@@ -277,6 +278,7 @@ right away.</blockquote>
 /* Retail - Service Industry */
 	title("Retail & Service Industry");
 	siteStart();
+	site("Access Micro","www.accessmicro.com");
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("BART's Water Sports","www.bartswatersports.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
@@ -291,6 +293,7 @@ right away.</blockquote>
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
+	site("Sellit-Here Online","www.sellit-here.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
 	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
@@ -305,6 +308,7 @@ right away.</blockquote>
 	site("Soccer Silly - World Soccer E-Zine","www.soccersilly.com");
 	site("Southern Nationals Disc Golf","www.sndg.org");
 	site("The Internet Squash Federation","www.squash.org");
+	site("Victor Bray Drag Racing","victorbray.com");
 	siteEnd();
 
 /* Telecommunications */
