@@ -75,8 +75,21 @@ function addlinks($text) {
 }
 
 if (isset($cmd) && $cmd == "Send bug report") {
+	if(!ereg("@",$email)) {
+		echo "Please provide a valid email address<P>\n";
+		include("include/footer.inc");
+		exit;
+	}
+
+	if($bug_type=="--Please Select--") {
+		echo "Please select an appropriate bug type<P>\n";
+		include("include/footer.inc");
+		exit;
+	}
+
 	show_menu($status);
 	echo "<hr>\n";
+	
     mysql_pconnect("localhost","nobody","");
     mysql_select_db("php3");
 	$ts=date("Y-m-d H:i:s");
