@@ -155,7 +155,7 @@ commonHeader("Hypertext Preprocessor");
  make the result available on all php.net pages.
 </p>
 <p>
- Whenever you type something into the search file, while having the
+ Whenever you type something into the search field, while having the
  function list search option selected, you will get a list of suggested
  functions starting with the letters you typed in. You can browse the list
  with the up/down keys, and you will be able to autocomplete the function
