@@ -622,11 +622,13 @@ Unix see: <a href="http://www.webgenx.com/php/phpnes.php3">http://www.webgenx.co
 
 <code># Extra Modules</code><br>
 <code>LoadModule php_module         modules/mod_php.so</code><br>
-<code>LoadModule php3_module        modules/libphp3.so</code><br>
+<code>LoadModule php3_module        modules/libphp3.so</code> (for PHP 3)<br>
+<code>LoadModule php4_module        modules/libphp4.so</code> (for PHP 4)<br>
 <code>LoadModule perl_module        modules/libperl.so</code><br>
 
 <li>And add:<br>
-<code>AddType application/x-httpd-php3 .php3</code><br>
+<code>AddType application/x-httpd-php3 .php3</code> (for PHP 3)<br>
+<code>AddType application/x-httpd-php .php</code> (for PHP)<br>
 To the global properties, or to the properties of the VirtualDomain you want to have PHP support added to.
 </ul><p></dd>
 
@@ -812,7 +814,9 @@ To the global properties, or to the properties of the VirtualDomain you want to 
     <li> Make sure that the httpd binary you are running is the actual new httpd binary you just built.  To do this,
 try running: <i>/path/to/binary/httpd -l</i><br>
 If you don't see <b>mod_php3.c</b> listed then you are not running the right binary.  Find and install the correct binary.
-    <li> Make sure you have added the correct Mime Type to one of your Apache .conf files.  It should be: <b><i>AddType application/x-httpd-php3 .php3</i></b><br>
+    <li> Make sure you have added the correct Mime Type to one of your Apache .conf files.  
+It should be: <b><i>AddType application/x-httpd-php3 .php3</i></b> (for PHP 3)<br>
+or <b><i>AddType application/x-httpd-php .php</i></b> (for PHP 4)<br>
 Also make sure that this AddType line is not hidden away inside a &lt;Virtualhost&gt; or &lt;Directory&gt; block which would
 prevent it from applying to the location of your test script.
     <li> Finally, the default location of the Apache configuration files changed between Apache 1.2 and Apache 1.3.  You
