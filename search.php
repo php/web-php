@@ -39,7 +39,7 @@ if (!@is_executable($htsearch_prog)) {
      base    - base URL to point result links to
 */
 
-// If PHP added some quotes, get rid of them
+// If PHP added some slashes to quotes, get rid of them
 if ($MQ) {
     if (isset($pattern)) { $pattern = stripslashes($pattern); }
     if (isset($base))    { $base = stripslashes($base); }
