@@ -168,11 +168,6 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.phpwizard.net/">phpWizard</a><br />
-  PHP tutorials and programs
- </li>
-
- <li>
   <a href="http://www.weberdev.com/">WeberDev.com</a><br />
   PHP related resources (articles, tutorials, forums, advanced search etc.)
  </li>
