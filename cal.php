@@ -232,7 +232,7 @@ function draw_event($ev) {
 ?>
 <tr bgcolor=#d0d0d0><td>
 <table border=0 cellspacing=0 cellpadding=3 width=100%>
-<tr bgcolor=#a0a0a0><th><?echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?echo $event['ldesc']?></td></tr>
+<tr bgcolor=#a0a0a0><th><?echo $event['sdesc']?></th><td bgcolor=#f0f0f0 rowspan=3 width=80%><?echo get_cfg_var('magic_quotes_gpc')?stripslashes($event['ldesc']):$event['ldesc']?></td></tr>
 <tr bgcolor=#a0a0a0><th>
 <? switch($event['tipo']) {
 	case 1:
@@ -267,7 +267,7 @@ function draw_app() {
 	$col = array('#e0e0e0','#f0f0f0'); $i=0;
 	if(count($events)) {
 		foreach($events as $e) {
-			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>$e[3]</td><td>$e[4]</td></tr>\n";	
+			echo '<tr bgcolor='.$col[$i%2]."><td align=left><input type=\"checkbox\" name=\"entries[".$e[0]."]\"></td><td>$e[1]</td><td>$e[2]</td><td>".(get_cfg_var('magic_quotes_gpc')?stripslashes($e[3]):$e[3])."</td><td>$e[4]</td></tr>\n";	
 			$i++;
 		}
 		echo "<tr><td align=left colspan=5><input type=image src=\"/gifs/notes-checkmark.gif\" border=0 name=\"Approve Selected\" align=bottom> <input type=image src=\"/gifs/notes-delete.gif\" border=0 name=\"Reject Selected\" align=bottom> &nbsp; <b>CVS Login</b>: <input type=text name=user value=\"$user\"> <b>CVS Passwd</b>: <input type=password name=pw value=\"$pw\"></td></tr>";
