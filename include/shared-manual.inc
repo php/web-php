@@ -143,38 +143,31 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
 
 <TD ALIGN=left BGCOLOR="#E0E0E0">
-<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=1 BGCOLOR="#F0F0F0" WIDTH=100%>
-<TR VALIGN=top>
-<TD ALIGN=left WIDTH=25%><?
+<?
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+	$name = htmlspecialchars($name);
         if (ereg("(.+)@(.+)\.(.+)",$name)):
                 echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
-        else:
+        } else {
                 echo "<B>".$name."</B><BR>\n";
-        endif;
+        }
         echo date("d-M-Y h:i",$date)."<BR>\n";
-?></FONT></TD>
-<TD ALIGN=left WIDTH=75%><?
-        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
-		$blurb=str_replace("&lt;pre&gt;","<pre>",$blurb);
-		$blurb=str_replace("&lt;/pre&gt;","</pre>",$blurb);
-		$blurb=str_replace("&lt;PRE&gt;","<PRE>",$blurb);
-		$blurb=str_replace("&lt;/PRE&gt;","</PRE>",$blurb);
-		$blurb=str_replace("&lt;tt&gt;","<tt>",$blurb);
-		$blurb=str_replace("&lt;/tt&gt;","</tt>",$blurb);
-		$blurb=str_replace("&lt;BR&gt;","<BR>",$blurb);
-		$blurb=str_replace("&lt;P&gt;","<P>",$blurb);
+	echo "<HR NOSHADE>\n";
+	$blurb = htmlspecialchars($blurb);
+	$fixes = array('<pre>', '</pre>', '<tt>', '</tt>', '<br>', '<p>' );
+	reset($fixes);
+	while (list(,$f)=each($fixes)) {
+		$blurb=str_replace(htmlspecialchars($f), $f, $blurb);
+		$blurb=str_replace(htmlspecialchars(strtoupper($f)), $f, $blurb);
+	}
 	echo $blurb;
-?><BR></FONT></TD>
+?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
-<TD ALIGN=left>
-<A href="/manual/admin-notes.php3?action=delete+<?echo $id?>&brief=1" target="admin">X</A>
-<A href="/manual/admin-notes.php3?action=edit+<?echo $id?>&brief=1" target="admin">E</A>
-</TD>
+<hr noshade size=1>
+<A href="/manual/admin-notes.php3?action=delete+<?echo $id?>&brief=1" target="admin">delete</A> | 
+<A href="/manual/admin-notes.php3?action=edit+<?echo $id?>&brief=1" target="admin">edit</A>
+<BR>
 <?endif;?>
-</TR>
-</TABLE>
-
 </TD>
 <TD ALIGN=left bgcolor='#ffffff'><? spc(18,18);?><BR></TD>
 </TR>  
@@ -223,7 +216,7 @@ function manualUserNotes($title) {
 	if ($result_id && mysql_num_rows($result_id) > 0) {
 		makeTitle("User Contributed Notes: ".$title);
 		while ($row = mysql_fetch_array($result_id)) {
-			makeEntry($row['xwhen'],htmlspecialchars($row['user']),htmlspecialchars($row['note']),$row['id']);
+			makeEntry($row['xwhen'],$row['user'],$row['note'],$row['id']);
 		}
 	}
 	makeAddNote();
