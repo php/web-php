@@ -232,6 +232,12 @@ if ($try) {
 }
 
 // ============================================================================
+// 404 page for manual pages (eg. not built language)
+if (strpos($URI, "manual/") === 0) {
+    manual404();
+}
+
+// ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
 $fallback = (myphpnet_urlsearch() === MYPHPNET_URL_MANUAL ? "manual" : "quickref");
@@ -245,10 +251,26 @@ function make404()
 {
     global $_SERVER;
     status_header(404);
-    site_header('404 Not Found');
+    site_header('404 Not Found', array("noindex"));
     echo "<h1>Not Found</h1>\n" .
          "<p><strong>" . htmlspecialchars($_SERVER['REQUEST_URI']) .
          "</strong> not found on this server.</p>\n";
+    site_footer();
+    exit;
+}
+
+// A 'good looking' 404 error message page for manual pages
+function manual404()
+{
+    global $_SERVER;
+    status_header(404);
+    site_header('404 Not Found', array("noindex"));
+    echo "<h1>Not Found</h1>\n" .
+         "<p>The manual page you are looking for (<strong>" .
+         htmlspecialchars($_SERVER['REQUEST_URI']) .
+         "</strong>) is not available on this server right now. " .
+         "Please check back later, or if the problem persist, " .
+         "<a href=\"/copyright.php#contact\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
 }
