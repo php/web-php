@@ -181,7 +181,7 @@ by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7El
 <TD>
 <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">PHP Guia de Consulta R&aacute;pida</A><BR>
 by Herbert G. Fischer<BR>
-<SMALL>in Portugese, Jan/2000, ISBN 8-5851-8469-8<BR></SMALL>
+<SMALL>in Portugese, Jan/2000, ISBN 8-5851-8469-8<BR>
 <A HREF="http://phpclasses.UpperDesign.com/products.html/id/8585184698">more info</A> | <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">purchase</A>
 </SMALL></TD>
 </TR>
