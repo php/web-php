@@ -15,7 +15,7 @@ Annonce de publication de PHP 4.3.2
 </h1>
 
 <p>
-[ <a href="/release_4_3_0.php">English version</a> ]&nbsp;
+[ <a href="/release_4_3_2.php">English version</a> ]&nbsp;
 </p>
 
 <p>
