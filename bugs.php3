@@ -13,8 +13,9 @@ function indent($string, $prefix) {
 }
 
 function show_menu($state) {
-	global $PHP_SELF;
+	global $PHP_SELF, $bug_type;
 
+	if(!isset($bug_type)) { $bug_type="Any"; }
 	echo "<form method=POST action=\"$PHP_SELF\">\n";
 	echo "<input type=hidden name=cmd value=\"Display Bugs\">\n";
 	echo "<input type=submit value=\"Display\"> <select name=\"status\">\n";
@@ -22,33 +23,38 @@ function show_menu($state) {
 	if($state!="Open") { echo "<option>Open\n"; }
 	if($state!="Closed") { echo "<option>Closed\n"; }
 	if($state!="All") { echo "<option>All\n"; }
-	echo "</select> bugs of type ";
-	show_types("Any");
+	echo "</select> bugs of type $bug_type ";
+	show_types($bug_type);
 	echo "</form>\n";
 }
 
 function show_types($first_item) {
-	echo "
-   <select name=\"bug_type\">
-     <option>$first_item
-	 <option>Feature/Change Request
-     <option>Documentation problem
-     <option>Installation problem
-     <option>Failed to compile
-     <option>Parser error
-	 <option>Performance problem
-     <option>MySQL related
-     <option>mSQL related
-     <option>PostgreSQL related
-     <option>ODBC related
-     <option>Oracle related
-     <option>Sybase related
-     <option>Solid related
-     <option>Adabas-D related
-     <option>dBase related
-     <option>dbm related
-     <option>Other
-    </select>";
+	$items = array("Any",
+				   "Feature/Change Request",
+				   "Documentation problem",
+				   "Installation problem",
+				   "Failed to compile",
+				   "Parser error",
+				   "Performance problem",
+				   "MySQL related",
+				   "mSQL related",
+				   "PostgreSQL related",
+				   "ODBC related",
+				   "Oracle related",
+				   "Sybase related",
+				   "Solid related",
+				   "Adabas-D related",
+				   "dBase related",
+				   "dbm related",
+				   "Other");
+
+	echo "<select name=\"bug_type\">\n<option>$first_item\n";
+	for($i=0;$i<count($items);$i++) {
+		if($first_item!=$items[$i]) {
+			echo "<option>$items[$i]\n";
+		}
+	}
+    echo "</select>\n";
 }
 
 function find_password($user) {
@@ -173,7 +179,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 					if($status=="Delete!") {
 						mysql_query("DELETE from bugdb where id=$id");
 					} else {
-						mysql_query("UPDATE bugdb set status='$status', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
+						mysql_query("UPDATE bugdb set status='$estatus', comments='$comments', ts2='$ts', dev_id='$user' where id=$id");
 					}
 					$ok=1;
 				}
@@ -197,7 +203,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		} else {
 			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
 			echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
-			echo "<tr><th align=right>Status:</th><td><select name=\"status\">\n";
+			echo "<tr><th align=right>Status:</th><td><select name=\"estatus\">\n";
 			if($row[7]=="Open") {
 				echo "<option>Open\n<option>Closed<option>Delete!\n";
 			} else {
