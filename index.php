@@ -155,8 +155,8 @@ commonHeader("Hypertext Preprocessor");
 <h1>Call for Speakers : PHP Qu&eacute;bec 2004</h1>
 <p>
  <span class="newsdate">[11-Nov-2003]</span>
-The PHP Qu&eacute;bec is pleased to annonce the PHP Qu&eacute;bec 
-conference 2004, which will be held on March, 25th&26th 2004. 
+The PHP Qu&eacute;bec is pleased to announce the PHP Qu&eacute;bec 
+conference 2004, which will be held on March, 25th&amp;26th 2004. 
 We are looking for the best speakers, willing to 
 share their experience and skills with the educated crowd of PHP 
 programmers in eastern Canada and in the USA. PHP Qu&eacute;bec 
