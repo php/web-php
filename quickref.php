@@ -49,7 +49,13 @@ function quickref_table($functions)
     echo '</td></tr></table>';
 }
 
-$dirh = opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG");
+// Open directory, fall back to English,
+// if there is no dir for that language
+$dirh = @opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/$LANG");
+if (!$dirh) {
+    $dirh = opendir($_SERVER['DOCUMENT_ROOT'] . "/manual/en");
+}
+
 $functions = $maybe = $temp = $parts = array();
 $p = 0;
 
