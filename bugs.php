@@ -138,6 +138,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Scripting Engine problem",
 				   "Reproduceable crash",
 				   "Performance problem",
+				   "cURL related",
 				   "Dynamic loading related",
 				   "MySQL related",
 				   "mSQL related",
@@ -392,6 +393,32 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
+
+	### Change made by j.a.greant 00/09/03
+	function get_old_comments ($bug_id)
+	  {
+	  	$divider = '---------------------------------------------------------------------------';
+
+		#fetch comments
+		$result = mysql_query ("SELECT ts, email, comment from bugdb_comments where bug = $bug_id order by ts desc");
+		while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
+			$comments[] = $temp;
+
+		if ($comments[0])
+			unset ($comments[0]);	# Ditch the most recent comment
+
+	  	#fetch original bug description
+		$query = "SELECT ts1, email, ldesc from bugdb where id=$bug_id";
+		$result = mysql_query ($query);
+		$comments[] = mysql_fetch_row ($result);
+
+		foreach ($comments as $value)
+			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
+
+		if ($output)
+			return "\n\nPrevious Comments:\n\n" . $output;
+	  }
+
 	show_menu($status);
 	echo "<hr>\n";
 
@@ -420,19 +447,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
     			Mail("rasmus@lerdorf.on.ca", "bugdb auth failure for $user/$pw", "", "From: bugdb");
 		} else {
 			echo "<b>Database updated!</b><br>\n";
-		
-			### Changes made by j.a.greant 00/09/03
-			
-			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts desc";
-			$result = mysql_query($query);
-		
-			while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
-			  {
-			  	$prev_comments .= "[$temp[0]] $temp[1]\n$temp[2]\n\n" . str_repeat ('-', 76) . "\n\n";
-			  }
 
-			
-			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment\n\nPrevious Comments:\n\n$prev_comments";
+			$text = "ID: $id\nUpdated by: $user\nReported By: $eemail\nStatus: $estatus\nBug Type: $ebug_type\nAssigned To: $eassign\nComments:\n\n$ncomment" . get_old_comments ($id);
 			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
@@ -467,24 +483,14 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 			echo "<b>Database updated!</b><br>\n";
 
-			### Changes made by j.a.greant 00/09/03
-			
-			$query = "SELECT ts, email, comment from bugdb_comments where bug=$id order by ts desc";
-			$result = mysql_query($query);
-		
-			while ($temp = mysql_fetch_row ($result))	# $result should always be valid, suppress error just in case.
-			  {
-			  	$prev_comments .= "[$temp[0]] $temp[1]\n$temp[2]\n\n" . str_repeat ('-', 76) . "\n\n";
-			  }
-
 			$text = "ID: $id\nUser Update by: $eemail\n";
 			if($estatus!=$row[0]) $text .= "Old-Status: ".$row[0]."\n";
 			$text .= "Status: $estatus\n";
 			if($ebug_type != $row[1]) $text .= "Old-Bug Type: ".$row[1]."\n";
 			$text .= "Bug Type: $ebug_type\n";
-			$text .= "Description: $esdesc\n\n$ncomment\n\n";
-			$text .= "Previous Comments:\n\n$prev_comments"; 
-			$text .= "Full Bug description available at: http://bugs.php.net/?id=$id\n";
+			$text .= "Description: $esdesc\n\n$ncomment";
+			$text .= get_old_comments ($id);
+			$text .= "\nFull Bug description available at: http://bugs.php.net/?id=$id\n";
 			$text = stripslashes($text);
 			$esdesc = stripslashes($esdesc);
     			Mail($eemail, "PHP 4.0 Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
