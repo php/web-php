@@ -145,6 +145,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>php|cruise deadline set for February 15th</h1>
+
+<p>
+ <span class="newsdate">[16-Jan-2004]</span>
+ The organizers of the <a 
+ href="http://www.phparch.com/cruise">php|cruise</a> conference (March 
+ 1st through March 5th, 2004) have announced that February 15th will be 
+ the deadline to <a href="http://www.phparch.com/cruise/signup.php">sign 
+ up for the event</a>. php|cruise features over 30 sessions, covering 
+ material from beginner to advanced level, and takes place onboard a 
+ cruise ship bound for the Bahamas islands.
+</p>
+
+<hr />
+
 <h1>PHP 4.3.5RC1 released!</h1>
 <p>
  <span class="newsdate">[12-Jan-2004]</span>
