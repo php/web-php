@@ -99,43 +99,92 @@ function navigationBar($title) {
     }
 }
 
-function manualPrintNote(const $row, $num) {
-       if ($num % 2 == 0) { $color = '#ccddee'; }
-       else { $color = '#ddeeff'; }
-       echo "<TR><TD bgcolor=$color valign=top><B>";
-        # turn email address into mailto: links (roughly)
-       echo ereg_replace("([^;[:space:]]+@[^&[:space:]]+)", "<A href=\"mailto:\\1\">\\1</A>", $row[user]);
-	if (isset($row['ts'])) {
-		echo "<BR>$ts";
-	}
-       echo "</B></TD><TD bgcolor=$color>$row[note]</TD></TR>\n";
-}
+
+function makeTitle($title) {
+        global $FONTFACE;
+?>
+<TR bgcolor='#D0D0D0' valign=middle>
+<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=left><?
+        echo "<FONT FACE=\"$FONTFACE\">\n";
+        echo "<B>$title</B><BR></FONT>\n";
+?></TD>
+<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+</TR>
+<?
+};
+
+function makeEntry($date,$name,$blurb) {
+	global $FONTFACE;
+?>
+<TR VALIGN=top>
+<TD ALIGN=left><? spc(18,18);?><BR></TD>
+
+<TD ALIGN=left BGCOLOR="#E0E0E0">
+<TABLE BORDER=0 CELLPADDING=5 CELLSPACING=1 BGCOLOR="#F0F0F0" WIDTH=100%>
+<TR VALIGN=top>
+<TD ALIGN=left WIDTH=25%><?
+        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+        if (ereg("(.+)@(.+)\.(.+)",$name)):
+                echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
+        else:
+                echo "<B>".$name."</B><BR>\n";
+        endif;
+        echo date("d-M-Y h:m",$date)."<BR>\n";
+?></FONT></TD>
+<TD ALIGN=left WIDTH=75%><?
+        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+	echo $blurb;
+?><BR></TD>
+</TR>
+</TABLE>
+
+</TD>
+<TD ALIGN=left bgcolor='#ffffff'><? spc(18,18);?><BR></TD>
+</TR>  
+<?
+};
+
+function makeAddNote();
+        global $FONTFACE;
+?>
+<TR bgcolor='#D0D0D0' valign=middle>
+<TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=right><?
+        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+?>
+<INPUT type=submit value "Add Note"><BR>
+<A HREF="/manual/about-notes.php3">About</A><BR>
+</TD>
+<TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+</TR>
+<?
+};
+
 
 function manualUserNotes($title) {
 	global $MYSITE;
 	if(strstr($MYSITE,"ca.php.net")) {
 		$host = 'localhost'; $user = ''; $pass = '';
 		$db_id = mysql_pconnect($host, $user, $pass);
-
 		$result_id = mysql_db_query("php3","SELECT * FROM note WHERE sect = '$title' ORDER BY id", $db_id);
 	} else $result_id = 0;
 	echo '<FORM method="POST" action="http://ca.php.net/manual/add-note.php3">';
-	echo '<TABLE width="100%">'."\n";
-	if ($result_id && mysql_num_rows($result_id) > 0) {
-		echo '<TD colspan=2 bgcolor="#aabbcc">User-contributed Notes</TD>',"\n";
-		$num = 0;
-		while ($result = mysql_fetch_array($result_id)) {
-			manualPrintNote($result, $num++);
-		}
-	}
-	echo "<TR><TD colspan=2 align=right>";
-	echo '<INPUT type=hidden name="sect" value="'.$title.'">';
 	global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
 	$back_url = "http://$SERVER_NAME".(($SERVER_PORT==80)?"":":".$SERVER_PORT).$PHP_SELF;
 	echo '<INPUT type=hidden name="redirect" value="'.$back_url.'">';
-	echo '<INPUT type=submit value="Add Note">';
-	echo "<SMALL><A href=\"/manual/about-notes.php3\">About</A></SMALL>\n";
-	echo "</TD></TR></TABLE></FORM>\n";
+	echo '<INPUT type=hidden name="sect" value="'.$title.'">';
+
+	echo "<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width=100%>\n";
+
+	if ($result_id && mysql_num_rows($result_id) > 0) {
+		makeTitle("User Contributed Notes: ".$title);
+		while ($row = mysql_fetch_array($result_id)) {
+			makeEntry($row['when'],$row['user'],$row['note']);
+		}
+	}
+	makeAddNote();
+	echo "</TABLE></FORM>\n";
 }
 
 function manualHeader($title) {
@@ -149,9 +198,12 @@ function manualHeader($title) {
 function manualFooter($title) {
 	global $HTDIG;
 	if (!$HTDIG):
-               manualUserNotes($title);
+		manualUserNotes($title);
 		navigationBar($title);
 	endif;
 	commonFooter($title);
 }
 ?>
+
+
+
