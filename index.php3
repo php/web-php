@@ -9,6 +9,9 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>Slight technical problem</h3>
+The 3.0.14 release announcement and files will be back shortly. Check back in 30 minutes.
+
 <h3>PHP 3.0.13 has been released</h3>
 
 <p>
