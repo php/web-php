@@ -212,7 +212,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="120"><a href="/"><?php
-	print_image('/?='.php_logo_guid(), 'PHP'); ?></a></td>
+	print_image('phpnet_logo.gif', 'PHP'); ?></a></td>
   <td>&nbsp;</td>
  </tr>
  <tr bgcolor="#9999cc">
