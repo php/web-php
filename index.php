@@ -151,11 +151,11 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>PHP 4.3.5RC2 released!</h1>
 <p>
- <span class="newsdate">[02-Feb-2004]</span>
+ <span class="newsdate">[03-Feb-2004]</span>
  <a href="http://qa.php.net/">PHP 4.3.5RC2</a> has been released for testing. This is 
  likely to be the last release candidate prior to the final release, so please test it
  as much as possible. List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&r1=1.1247.2.552&r2=1.1247.2.522">NEWS</a> file.
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&amp;r1=1.1247.2.552&amp;r2=1.1247.2.522">NEWS</a> file.
 </p>
 
 <hr />
@@ -199,18 +199,6 @@ commonHeader("Hypertext Preprocessor");
  up for the event</a>. php|cruise features over 30 sessions, covering 
  material from beginner to advanced level, and takes place onboard a 
  cruise ship bound for the Bahamas islands.
-</p>
-
-<hr />
-
-<h1>PHP 4.3.5RC1 released!</h1>
-<p>
- <span class="newsdate">[12-Jan-2004]</span>
- <a href="http://qa.php.net/">PHP 4.3.5RC1</a> has been released for testing. This is the 
- first release candidate and should have a very low number of problems and/or bugs. 
- Nevertheless, please download and test it as much as possible on real-life applications 
- to uncover any remaining issues. List of changes can be found in the 
- <a href="http://cvs.php.net/diff.php/php-src/NEWS?login=2&r1=1.1247.2.452&r2=1.1247.2.522">NEWS</a> file.
 </p>
 
 <hr />
