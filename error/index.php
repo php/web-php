@@ -175,6 +175,13 @@ if ($function == "rev") {
 }
 
 // ============================================================================
+// Link to NEWS
+if (in_array($function, array("NEWS", "news"))) {
+    header("Location: http://cvs.php.net/co.php/php4/NEWS");
+    exit;
+}
+
+// ============================================================================
 // Try to find the page using this language as a manual page (lang is the language
 // from the URI, or the default language if it was not there in the URI
 $try = find_manual_page($lang, $function);
