@@ -68,6 +68,11 @@ else AddSlide("title");	// title slide
 // if (tutorialMode) { AddSlide("howtotu2"); }
 // else if (online) { AddSlide("howto2"); }
 
+//AddSlide("s_effic");
+//AddSlide("s_effic2");
+//AddSlide("s_effic3");
+//AddSlide("s_effic4");
+
 AddSlide("s_agenda1");
 
 AddSlide("s_history");
@@ -96,6 +101,7 @@ AddSlide("s_encode");
 AddSlide("s_filehandling");
 AddSlide("s_filehandling2");
 AddSlide("s_image");
+AddSlide("s_pdf");
 AddSlide("s_limits");
 AddSlide("s_sql");
 AddSlide("s_sqlexample");

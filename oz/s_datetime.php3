@@ -5,7 +5,7 @@
 <?php output(date("M d, Y H:i:s", time())); ?>
 
 <?example('<?php
-$dday = mktime(0, 0, 0, 1, 1, 2000);
+$dday = mktime(0, 0, 0, 9, 15, 2000);
 $diff = $dday - time();
 $days = $diff / 86400;
 if ($days > 1) {
@@ -15,12 +15,12 @@ if ($days > 1) {
     if ($hours > 1) {
         printf( "Only %d hour%s left!<BR>\n", $hours, $hours == 1 ?  "" :  "s");
     } else {
-        echo  "Log out and hide under your table!<BR>\n";
+        echo  "The Olympics are here!<BR>\n";
     }
 }
 ?>');?>
 <?php
-$dday = mktime(0, 0, 0, 1, 1, 2000);
+$dday = mktime(0, 0, 0, 9, 15, 2000);
 $diff = $dday - time();
 $days = $diff / 86400;
 if ($days > 1) {
@@ -30,7 +30,7 @@ if ($days > 1) {
     if ($hours > 1) {
         $out=sprintf( "Only %d hour%s left!<BR>\n", $hours, $hours == 1 ?  "" :  "s");
     } else {
-        $out = "Log out and hide under your table!<BR>\n";
+        $out = "The Olympics are here!<BR>\n";
     }
 }
 output($out)
