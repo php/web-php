@@ -176,7 +176,7 @@ Restrict the search to:<br></td>
 			exit;
 		}
 		if ($result[2] == "NOMATCH") {
-			echo "Sorry, no documents matched your search for<b>&quot;".htmlspecialchars($pattern)."&quot;</b>.<br><br>";
+			echo "Sorry, no documents matched your search for <b>&quot;".htmlspecialchars($pattern)."&quot;</b>.<br><br>";
 			echo "Click here for a <a href=\"$sourceurl\">New Search</a><br><br>\n";
 			commonFooter();
 			exit;
