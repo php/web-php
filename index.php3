@@ -1,6 +1,7 @@
 <?
 require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
+echo "\n<!--$MYSITE-->\n";
 ?>
 
 <h3>PHP 3.0.10 has been released!</h3>
