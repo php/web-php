@@ -132,7 +132,8 @@ site_header("Downloads");
 
 <p>
  We have a <a href="/zend-engine-2.php">PHP 5 / Zend Engine 2 page</a> explaining the
- changes introduced in PHP 5.
+ language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
+ ChangeLog</a> details all the other changes.
 </p>
 
 <hr />
