@@ -228,6 +228,24 @@ EOT;
 </p>
 
 <p>
+If you wish to contribute to the docmentation please contact the translation
+team for the language you wish to help with.  If you have trouble finding the
+team, ask on the phpdoc mailing list.  Once you have made contact you may
+apply for a CVS account here by including the name of one or more people from
+the existing translation team that referred you and of course the language
+you wish to translate to.
+</p>
+
+<p>
+If you have a new PEAR or PECL extension you wish to contribute, bring it
+up on the appropriate PEAR or PECL mailing list first.  Once you get the
+sense that people generally agree that your contribution is worthwhile, you
+may apply for a CVS account here.  Specify the name of your PEAR or PECL
+contribution (single word CVS module name) and also reference an existing
+account holder who can vouch for your contribution.
+</p>
+
+<p>
  Okay, if you are still reading, then you may actually need a CVS account.
  This is <strong>not</strong> an automatic process. Fill in the form below to
  request an account. In the box next to "Purpose", describe what it is that
