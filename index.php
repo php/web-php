@@ -74,7 +74,6 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.servercentral.net/">Server Central</a></li>
  <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
  <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
- <li><a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">
