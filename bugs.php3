@@ -121,6 +121,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Dynamic loading related",
 				   "MySQL related",
 				   "mSQL related",
+				   "MSSQL related",
 				   "PostgreSQL related",
 				   "ODBC related",
 				   "Oracle related",
