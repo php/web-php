@@ -280,6 +280,14 @@ Home of PHP French documentation, with comprehensive technical information, and 
 Apprendre le PHP par l'exemple, facilement et simplement. R&eacute;serv&eacute; d'abord aux d&eacute;butants.
 </li>
 
+<li><a href="http://www.phpfr.org/">phpfr</a><br>
+Le site de r&eacute;f&eacute;rence sur PHP en France !</li>
+
+
+<li><a href="http://www.phpfrance.com/">phpfrance</a><br>
+Pour tout savoir sur le PHP, en fran&ccedil;ais. Vous trouverez un tutorial, des exemples, 
+des astuces, toute la documentation n&eacute;cessaire, ainsi que des forums pour poser des questions.</li>
+
 <li><a href="http://www.phpindex.com/">PHPIndex</a><br>
 A French gateway to PHP related contents</li>
 
