@@ -274,6 +274,17 @@ array(
     /* language     */ "en"
    ),
 
+  array (
+    /* title[s]     */ "PHP Cookbook",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926811/wwwphpnet",
+    /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
+    /* auth link[s] */ "",
+    /* image        */ "cookbook.gif",
+    /* information  */ "O'Reilly & Associates, Nov 2002, ISBN 1-5659-2681-1, 624 pages",
+    /* inform. link */ "http://www.oreilly.com/catalog/phpckbk/",
+    /* language     */ "en"
+   ),
+
   array(
     /* title[s]     */ array("Core PHP Programming", "Using PHP to Build Dynamic Web Sites"),
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0130893986/wwwphpnet",
