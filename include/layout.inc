@@ -243,6 +243,11 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     if (isset($EXPL_LANG)) {
         echo '<input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
       }
+
+    if (isset($base) && $base != $MYSITE) {
+	$base = stripslashes($base);
+	echo '<input type="hidden" name="base" value="' . $base . '" />';
+    }
 ?>
 <small><span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)"><u>s</u>earch for</span></small>
 <input class="small" type="text" name="pattern" value="" size="30" accesskey="s" />
