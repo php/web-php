@@ -1,194 +1,149 @@
 <?php
 /* $Id$ */
 
-$www_static_root = ($HTTP_SERVER_VARS['SERVER_NAME'] == 'www.php.net') ? 'http://static.php.net/www.php.net' : '';
+// Set the static content root differently on php.net
+$_SERVER['STATIC_ROOT'] = ($MYSITE == 'http://www.php.net/') ?
+                          'http://static.php.net/www.php.net' : '';
 
 // Print an image for a sized spacer
-function spacer($width = 1, $height = 1, $return = false, $align = false, $extras = false)
+function spacer($width = 1, $height = 1, $return = FALSE, $align = FALSE, $extras = FALSE)
 {
-	global $HTTP_SERVER_VARS, $www_static_root;
-
-	$function = ($return ? "sprintf" : "printf");
-	return $function('<img src="%s/images/spacer.gif" width="%d" height="%d" border="0" alt="" %s%s />',
-		$www_static_root,
-		$width,
-		$height,
-		($align ? "align=\"$align\" " : ""),
-		($extras ? $extras : "")
-	);
+    $function = ($return ? "sprintf" : "printf");
+    return $function('<img src="%s/images/spacer.gif" width="%d" ' .
+                     'height="%d" border="0" alt=""%s%s />',
+        $_SERVER['STATIC_ROOT'],
+        $width,
+        $height,
+        ($align  ? " align=\"$align\" " : ""),
+        ($extras ? " $extras" : "")
+    );
 }
 
-# resize_image()
-# tag the output of make_image() and resize it manually
-# (considering possible HTML/XHTML image tag endings)
-#
-
-function resize_image($img, $width=1, $height=1) {
-	$str = preg_replace('!width=\"([0-9]+?)\"!i', '', $img );
-	$str = preg_replace('!height=\"([0-9]+?)\"!i', '', $str );
-	return preg_replace('!/?>$!', sprintf(' height="%s" width="%s" />', $height, $width), $str);
+// Resize the image using the output of make_image()
+// (considering possible HTML/XHTML image tag endings)
+function resize_image($img, $width = 1, $height = 1)
+{
+    // Drop width and height values from image if available
+    $str = preg_replace('!width=\"([0-9]+?)\"!i',  '', $img);
+    $str = preg_replace('!height=\"([0-9]+?)\"!i', '', $str);
+    
+    // Return image with new width and height added
+    return preg_replace(
+        '!/?>$!',
+        sprintf(' height="%s" width="%s" />', $height, $width),
+        $str
+    );
 }
 
-# make_image()
-# return an IMG tag for a given file (relative to the images dir)
-#
+// Return an <img /> tag for a given image file available on the server
+function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
+                    $dir = '/images', $border = 0)
+{
+    // If no / was provided at the start of $dir, add it
+    $webdir = $_SERVER['STATIC_ROOT'] . ($dir{0} == '/' ? '' : '/') . $dir;
 
-function make_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
-	global $HTTP_SERVER_VARS, $www_static_root;
-	
-	if (!$dir) {
-		$dir = '/images';
-	}
-
-	$webdir = $www_static_root .  ($dir{0} == '/' ? '' : '/') . $dir;
-	
-	if ($size = @getimagesize($HTTP_SERVER_VARS['DOCUMENT_ROOT'].$dir.'/'.$file)) {
-		$image = sprintf('<img src="%s/%s" border="%d" %s alt="%s" %s%s />',
-			$webdir,
-			$file,
-			$border,
-			$size[3],
-			($alt    ? $alt : ''),
-			($align  ? ' align="'.$align.'"'  : ''),
-			($extras ? ' '.$extras            : '')
-		);
-	} else {
-		$image = sprintf('<img src="%s/%s" border="%d" alt="%s" %s%s />',
-			$webdir,
-			$file,
-			$border,
-			($alt    ? $alt : ''),
-			($align  ? ' ALIGN="'.$align.'"'  : ''),
-			($extras ? ' '.$extras            : '')
-		);
-	}
-	return $image;
+    // Get width and height values if possible
+    if ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file")) {
+        $sizeparams = ' ' . trim($size[3]);
+    } else {
+        $sizeparams = '';
+    }
+    
+    // Return with image built up
+    return sprintf('<img src="%s/%s" border="%d" alt="%s"%s%s%s />',
+        $webdir,
+        $file,
+        $border,
+        ($alt    ? $alt : ''),
+        $sizeparams,
+        ($align  ? ' align="' . $align . '"'  : ''),
+        ($extras ? ' ' . $extras              : '')
+    );
+    return $image;
 }
 
-# print_image()
-# print an IMG tag for a given file
-#
-
-function print_image($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
-	print make_image($file, $alt, $align, $extras, $dir);
+// Print an <img /> tag out for a given file
+function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
+                     $dir = '/images', $border = 0)
+{
+    echo make_image($file, $alt, $align, $extras, $dir, $border);
 }
 
-# make_submit()
-#  - make a submit button image
-#
-function make_submit($file, $alt=false, $align=false, $extras=false, $dir=false, $border=0) {
-	if (!$dir) {
-		$dir = '/images';
-	}
-	$return = make_image($file, $alt, $align, $extras, $dir, $border);
-	if ($return != "<img>") {
-		$return = '<input type="image"'.substr($return,4);
-	} else {
-		$return = '<input type="submit" />';
-	}
-	return $return;
+// Return HTML code for a submit button image
+function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
+                     $dir = '/images', $border = 0)
+{
+    return '<input type="image"' .
+           substr(make_image($file, $alt, $align, $extras, $dir, $border), 4);
 }
 
-# delim()
-# print a pipe delimiter
-#
-
-function delim($color=false) {
-	if (!$color) {
-		return ' | ';
-	}
-	return sprintf('<font color="%s"> | </font>', $color );
+// Return a pipe delimiter
+function delim($color = FALSE)
+{
+    if (!$color) { return ' | '; }
+    return sprintf('<span style="color: %s"> | </span>', $color);
 }
 
 // A horizontal delimiter (parameter for backward compatibility)
-function hdelim($bc=FALSE) { return '<hr />'; }
+function hdelim($bc = FALSE) { return '<hr />'; }
 
-# make_link()
-# return a hyperlink to something, within the site
-#
-
-function make_link ($url, $linktext=false, $target=false, $extras=false) {
-	return sprintf("<a href=\"%s\"%s%s>%s</a>",
-		$url,
-		($target ? ' target="'.$target.'"' : ''),
-		($extras ? ' '.$extras : ''),
-		($linktext ? $linktext : $url)
-	);
+// Return a hiperlink to something within the site
+function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
+{
+    return sprintf("<a href=\"%s\"%s%s>%s</a>",
+        $url,
+        ($target   ? ' target="' . $target . '"' : ''),
+        ($extras   ? ' ' . $extras               : ''),
+        ($linktext ? $linktext                   : $url)
+    );
 }
 
-# print_link()
-# echo a hyperlink to something, within the site
-#
-
-function print_link($url, $linktext=false, $target=false, $extras=false) {
-	echo make_link($url, $linktext, $target, $extras);
+// Print a hyperlink to something, within the site
+function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
+{
+    echo make_link($url, $linktext, $target, $extras);
 }
 
-# make_popup_link()
-# return a hyperlink to something, within the site, that pops up a new window
-#
+// Print a link for a downloadable file (including filesize)
+function download_link($file, $title, $showsize = TRUE, $mirror = '')
+{
+    // Construct the download link for this site or a mirror site
+    $download_link = "get/$file/from/a/mirror";
+    if ($mirror != '') {
+        $download_link = $mirror . $download_link;
+    } else {
+        $download_link = "/" . $download_link;
+    }
 
-function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
-	return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
-		htmlspecialchars($url),
-		($target ? $target : "_new"),
-		htmlspecialchars($url),
-		($target ? $target : "_new"),
-                $windowprops,
-		($extras ? ' '.$extras : ''),
-		($linktext ? $linktext : $url)
-	);
-}
-
-# print_popup_link()
-# echo a hyperlink to something, within the site, that pops up a new window
-#
-
-function print_popup_link($url, $linktext=false, $windowprops="", $target=false, $extras=false) {
-	echo make_popup_link($url, $linktext, $windowprops, $target, $extras);
-}
-
-# download_link()
-# print a link for a downloadable file (including filesize)
-#
-
-function download_link($file, $title, $showsize = true, $mirror = '') {
-
-	$download_link = "get/$file/from/a/mirror";
-	if ($mirror != '') {
-		$download_link = $mirror . $download_link;
-	} else {
-		$download_link = "/" . $download_link;
-	}
-
+    // Print out the download link
     print_link($download_link, $title);
 
-	if ($showsize) {
+    // Size display is required
+    if ($showsize) {
 
-		if ($tmp = strrchr($file, "/")) {
-			$local_file = substr($tmp, 1, strlen($tmp));
-		} else {
-			$local_file = "distributions/$file";
-		}
+        // We have a full path or a relative to the distributions dir
+        if ($tmp = strrchr($file, "/")) {
+            $local_file = substr($tmp, 1, strlen($tmp));
+        } else {
+            $local_file = "distributions/$file";
+        }
 
-		$size = @filesize($local_file);
+        // Try to get the size of the file
+        $size = @filesize($local_file);
 
-		/*  Print out size in bytes (if size is less the 1Kb, or else in Kb)  */
-
-		if ($size) {
-			echo ' [';
-			if ($size < 1024) { 
-				echo number_format($size, 0, '.', ',') . 'b'; 
-			} else { 
-				echo number_format($size/1024, 0, '.', ',') . 'Kb'; 
-			}
-			echo ']';
-		}
-	}
-
+        // Print out size in bytes (if size is
+        // less then 1Kb, or else in Kb)
+        if ($size) {
+            echo ' [';
+            if ($size < 1024) {
+                echo number_format($size, 0, '.', ',') . 'b';
+            } else {
+                echo number_format($size/1024, 0, '.', ',') . 'Kb';
+            }
+            echo ']';
+        }
+    }
 }
-
-
 
 $enclosed = 0;
 
@@ -198,7 +153,7 @@ $enclosed = 0;
 
 function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
-           $SEARCH_BASE, $ONLOAD, $www_static_root, $BASE_FOR_MANPAGE;
+           $SEARCH_BASE, $ONLOAD, $BASE_FOR_MANPAGE;
 
     // If no onload event is specified, restore the last search
     if (empty($ONLOAD)) { $ONLOAD = "searchHistory();"; }
@@ -207,9 +162,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="<?php echo $www_static_root; ?>/style.css" />
- <link rel="shortcut icon" href="<?php echo $www_static_root; ?>/favicon.ico" />
- <script language="Javascript" type="text/javascript" src="<?php echo $www_static_root; ?>/userprefs.js"></script>
+ <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/style.css" />
+ <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
+ <script language="Javascript" type="text/javascript" src="<?php echo $_SERVER['STATIC_ROOT']; ?>/userprefs.js"></script>
  <?php echo (isset($SEARCH_BASE) ? '<base href="' . $SEARCH_BASE . '" />' : ''); ?>
  <?php echo (!empty($BASE_FOR_MANPAGE) ? '<base href="' . $BASE_FOR_MANPAGE . '" />' : ''); ?>
 </head>
@@ -294,7 +249,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
    </table>
   </td>
-  <td bgcolor="#cccccc" background="<?php echo $www_static_root; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
+  <td bgcolor="#cccccc" background="<?php echo $_SERVER['STATIC_ROOT']; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <?php endif; ?>
   <td>
    <table cellpadding="10" cellspacing="0" width="100%">
@@ -315,11 +270,11 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 
 function commonFooter() {
 	global $SCRIPT_NAME, $MYSITE, $LAST_UPDATED, $PHP_SELF,
-           $enclosed, $RSIDEBAR_DATA, $page_creation_start, $www_static_root;
+           $enclosed, $RSIDEBAR_DATA, $page_creation_start;
 	if ($enclosed) {
 		echo "</td></tr></table></td>";
 		if (!empty($RSIDEBAR_DATA)) { ?>
-<td bgcolor="#cccccc" background="<?php echo $www_static_root; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
+<td bgcolor="#cccccc" background="<?php echo $_SERVER['STATIC_ROOT']; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
 <td width="185" bgcolor="#f0f0f0">
  <table width="100%" cellpadding="4" cellspacing="0">
   <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>

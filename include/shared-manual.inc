@@ -68,7 +68,7 @@ function makeBorderTOC($this) {
 // Print out manual navigation bar
 function navigationBar($title,$id,$loc) {
     global $NEXT, $PREV, $tstamp, $SERVER_NAME, $SERVER_PORT,
-           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $REQUEST_URI, $www_static_root;
+           $PHP_SELF, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $REQUEST_URI;
 
     echo '<!--UdmComment-->' . "\n" . 
          '<table border="0" width="100%" bgcolor="#e0e0e0" cellpadding="0" cellspacing="4">';
@@ -114,7 +114,7 @@ function navigationBar($title,$id,$loc) {
             echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo '</select>';
-        echo '<input type="image" src="' . $www_static_root . '/images/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
+        echo '<input type="image" src="' . $_SERVER['STATIC_ROOT'] . '/images/small_submit.gif" border="0" width="11" height="11" alt="" align="baseline"> <small>version of this page</small></form>';
        
     } else {
         echo "<small>&nbsp;</small>";
