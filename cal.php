@@ -44,7 +44,7 @@ CREATE TABLE phpcal (
 		$match = 0;
 		$inc = 3600*24;
 		while(!$done) {
-			if(strftime('%w',$ts)==$day) {
+			if(strftime('%w',$ts)==$day-1) {
 				$match++;
 			}
 			if($match==abs($which)) $done=true;
@@ -69,7 +69,7 @@ CREATE TABLE phpcal (
 						break;
 					case 3:
 						list($which,$day) = explode(':',$row['recur']);
-						$events[] = array($row['id'],'Every '.$re[(int)$which].' '.$days[$day+1],$row['sdesc'],$row['ldesc'],$row['url']);
+						$events[] = array($row['id'],'Every '.$re[(int)$which].' '.$days[$day],$row['sdesc'],$row['ldesc'],$row['url']);
 						break;
 				}	
 			}
@@ -134,6 +134,7 @@ CREATE TABLE phpcal (
 		return $months;
 	}
 
+	/* returns array of Days starting with 1 = Sunday */
 	function days() {
 		static $days=NULL;
 		if(!$days) for($i=1;$i<=7;$i++) {
@@ -213,7 +214,9 @@ CREATE TABLE phpcal (
 else echo "<font color=#f02020>$err</font>";
 echo "</th></tr>\n";
 if($a) draw_add();?>
-<tr bgcolor=#d0d0d0><th <?if($aerr) echo 'align=center'; else echo 'align=left';?>><?if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events'; 
+<? $result = mysql_query("select id from phpcal where approved=0");
+   $c = mysql_num_rows($result); ?>
+<tr bgcolor=#d0d0d0><th <?if($aerr) echo 'align=center'; else echo 'align=left';?>><?if(!$aerr) echo '<a href="cal.php?ap='.(($ap)?0:1).'&a='.$a.'&cm='.$cm.'&cy='.$cy.'"><img src="/gifs/notes-'.(($ap)?'reject':'add').'.gif" border=0 alt='.(($ap)?'collapse':'expand').'></a> approve events' . " ($c event(s) pending)"; 
 else echo "<font color=#f02020>$aerr</font>";
 if($ap) draw_app();
 echo "</table>\n";
@@ -240,7 +243,7 @@ function draw_event($ev) {
 		break;
 	case 3:
 		list($which,$day) = explode(':',$event['recur']);
-		echo 'Every '.$re[(int)$which].' '.$days[$day+1];
+		echo 'Every '.$re[(int)$which].' '.$days[$day];
 		break;
   }
 ?>
@@ -327,10 +330,9 @@ foreach($re as $k=>$v) {
 <select name="recur_day">
 <?
 	$days = days(); $i=0;
-	if($recur_day) echo "<option value=\"$recur_day\">".$days[$recur_day-1]."</option>\n";
-	foreach($days as $d) { 
+	if($recur_day) echo "<option value=\"$recur_day\">".$days[$recur_day]."</option>\n";
+	foreach($days as $i=>$d) { 
 		if($i!=$recur_day) echo "<option value=\"$i\">$d</option>\n"; 
-		$i++; 
 	}
 ?>
 </select>
