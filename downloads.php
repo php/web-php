@@ -68,7 +68,7 @@ if ($cmn > 0) {
     echo " near you. We recommend that you use one of these.\n";
     echo " Please visit: ";
     foreach ($cm as $num => $mirror) {
-        echo '<a href="' . $mirror . '">' . $mirror . '</a>';
+        echo '<a href="' . $mirror . 'downloads.php">' . $mirror . '</a>';
         if ($num < $cmn-1) { echo " or "; }
     }
     echo ". You can also change mirrors at the bottom of this page.";
