@@ -178,7 +178,7 @@ foreach ($LANGUAGES as $langcode => $language) {
             }
 
             // Quite bad looking code tweak to add a link to the extended CHM (en only!)
-            if ($langcode == "en" && preg_match("!.chm$!", $fileinfo[0])) {
+            if (strpos($fileinfo[0], "_en.chm/from")) {
                 echo '<br /><a href="http://weblabor.hu/php-doc-chm">extended chm</a>';
             }
        
