@@ -17,6 +17,13 @@ $cy = isset($cy) ? (int) $cy : 0;
 $cm = isset($cm) ? (int) $cm : 0;
 $cd = isset($cd) ? (int) $cd : 0;
 
+// If the year is not valid, set it to the current year
+// This excludes all the "too old", or "too far in the future"
+// calendar to displays (so search engines can handle this page too)
+if ($cy != 0 && !valid_year($cy)) {
+    $cy = date("Y");
+}
+
 // We need to look up an event with an ID
 if ($id) {
     // Try to load event by ID and display header and info for that event
@@ -113,18 +120,27 @@ if (count($errors) > 0) {
 $bom = mktime(0, 0, 1, $cm,   1, $cy);
 $eom = mktime(0, 0, 1, $cm+1, 0, $cy);
 
-// Last month and next month
+// Link to previous month (but do not link to too early dates)
 $lm = mktime(0, 0, 1, $cm, 0, $cy);
+if (valid_year(date("Y", $lm))) {
+   $prev_link = '<a href="' . $PHP_SELF . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $lm);
+} else {
+   $prev_link = '&nbsp;';
+}
+
+// Link to next month (but do not link to too early dates)
 $nm = mktime(0, 0, 1, $cm+1, 1, $cy);
+if (valid_year(date("Y", $nm))) {
+   $next_link = '<a href="' . $PHP_SELF . strftime('?cm=%m&amp;cy=%Y">%B, %Y</a>', $nm);
+} else {
+   $next_link = '&nbsp;';
+}
 
 // Print out navigation links for previous and next month
 echo '<br /><table bgcolor="#d0d0d0" width="100%" border="0" cellspacing="0" cellpadding="3">',
-     "\n<tr>", '<td align="left" width="33%"><a href="', $PHP_SELF,
-     strftime('?cm=%m&amp;cy=%Y">%B, %Y</a></td>', $lm),
+     "\n<tr>", '<td align="left" width="33%">', $prev_link, '</td>', 
      '<td align="center" width="33%">', strftime('<b>%B, %Y</b></td>', $bom),
-     '<td align="right" width="33%"><a href="', $PHP_SELF,
-     strftime('?cm=%m&amp;cy=%Y">%B, %Y</a></td>', $nm),
-     "</tr>\n</table>\n";
+     '<td align="right" width="33%">', $next_link, "</td></tr>\n</table>\n";
 
 // Begin the calendar table
 echo '<table id="cal" bgcolor="#f0f0f0" width="100%" border="1" cellspacing="0" cellpadding="3">',
@@ -168,7 +184,8 @@ commonFooter();
 
 // Generate the date on which a recurring event falls for a given month
 // $bom and $eom are the first and last day of the month to look at
-function date_for_recur($recur, $day, $bom, $eom) {
+function date_for_recur($recur, $day, $bom, $eom)
+{
 
     // $day == 1 == 'Sunday' == date("w",'some sunday')+1
   
@@ -188,7 +205,8 @@ function date_for_recur($recur, $day, $bom, $eom) {
 }
 
 // Display a <div> for each of the events that are on a given day
-function display_events_for_day($day, $events) {
+function display_events_for_day($day, $events)
+{
     
     // For preservation of state in the links
     global $PHP_SELF, $cm, $cy;
@@ -328,6 +346,23 @@ function read_event($fp)
         'url'       => $url,
         'ldesc'     => base64_decode($ldesc),
     );
+}
+
+// We would not like to allow any year to be viewed, because
+// it would fool some [not clever enough] search engines
+function valid_year($year)
+{
+    // Get current year and compare to one sent in
+    $current_year = date("Y");
+    
+    // We only allow two years back (for historical reasons) and two
+    // years forth (to plan your schedule for the next year)
+    if (($year < $current_year - 2) || ($year > $current_year + 2)) {
+        return FALSE;
+    }
+    
+    // The year is all right
+    return TRUE;
 }
 
 ?>
