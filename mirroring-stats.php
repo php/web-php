@@ -47,11 +47,9 @@ commonHeader("Setting Up Local Stats");
   <p>
    Give it a test<br /><br />
    From the command line in the stats directory, type:
-   <pre>
-       webalizer -c php.conf
-   </pre>
-   You should get an index file, a usage file for the
-   current month, some images, and a history file.
+   <tt>webalizer -c php.conf</tt> You should get an index
+   file, a usage file for the current month, some images,
+   and a history file.
   </p>
  </li>
  <li>
@@ -60,9 +58,11 @@ commonHeader("Setting Up Local Stats");
    If all went well, in the previous step, it is ready to be updated
    regularly. Something like this will be sufficient (update things
    daily at 3 am):
-   <pre>
-       0 3 * * * (cd /your/stats/folder;/usr/bin/webalizer -c php.conf) >/dev/null 2>&1
-   </pre>
+  </p>
+  <pre>
+      0 3 * * * (cd /your/stats/folder;/usr/bin/webalizer -c php.conf) >/dev/null 2>&amp;1
+  </pre>
+  <p>
    Provide the path of the stats directory in the "cd".
   </p>
  </li>
