@@ -11,7 +11,7 @@ Here you can find older news items from the PHP project. You may find the
 information useful.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.php-con.com/return.php?i=ph2", make_image("news/phpcon_logo.png", "PHPCon East 2003", "right") ); ?>
 
@@ -31,7 +31,7 @@ and Tutorial/Conference packages. Early Bird Deadline is March 31st. For
 more program information, <a href="http://www.php-con.com/return.php?i=ph2">visit
 the PHPCon website</a>.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>LinuxTag, Karlsruhe, July 10th - 13th</h1>
 <p>
@@ -41,7 +41,7 @@ and proposals <a href="http://www.linuxtag.org/2003/en/conferences/cfp.html">her
 looks at discussions that promote new ideas, delivers a broad overview, introduces new users to linux, or 
 discusses the legal, moral and other implications of linux and free software.</p>
  
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://phpconf.phpquebec.org/index.php", make_image("news/conference_php_quebec.gif", "Conference PHP Quebec", "right") ); ?>
 
@@ -62,7 +62,7 @@ showroom professional solutions.</p>
 <p>Learn more about those exciting days at 
 <a href="http://phpconf.phpquebec.org/index.php">phpconf.phpquebec.com</a>.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.phpconference.com/", make_image("news/international_conference_2003_spring.gif", "Int'l PHP Conference", "right") ); ?>
 
@@ -84,7 +84,7 @@ for the session program.</p>
 <p>The topics are General PHP, PHP &amp; Business, PHP &amp; Databases, PHP
 Design, PHP Extensions, PHP &amp; XML and PHP-GTK.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PEAR Out of Beta!</h1>
 <p>
@@ -96,7 +96,7 @@ Unix support is considered stable, while Windows and Darwin are still
 of beta-quality.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Look Back 2002</h1>
 <p>
@@ -110,7 +110,7 @@ href="http://www.derickrethans.nl/20021230.php">here</a>.
 Happy New Year!
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.3.0 Released!</h1>
 <p>
@@ -127,7 +127,7 @@ contender in the general purpose scripting language arena. Please see
 the full <a href="release_4_3_0.php">release announcement</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("news/chmhelp.gif", "CHM", "right") ); ?>
 
@@ -148,7 +148,7 @@ would give you more options in displaying the pages.
 <?php print_link("http://weblabor.hu/php-doc-chm", "See the edition's page for more information"); ?>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.mysql.com/events/uc2003/", make_image("news/mysqluc2003.png", "MySQL Users Conference and Expo 2003", "right") ); ?>
 
@@ -166,7 +166,7 @@ More information on <a href="http://www.mysql.com/events/uc2003/">the
 event's website</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP news feed available</h1>
 <p>
@@ -179,7 +179,7 @@ locally on your side, as the newsfeed is updated daily. The RSS
 file is available on every mirror site.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.afup.org/", make_image("news/afup-logo.gif", "AFUP", "right") ); ?>
 
@@ -195,7 +195,7 @@ For more information (in French) see the
 website.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Magazine - International Edition</h1>
 <p>
@@ -218,7 +218,7 @@ two months. You will be able to subscribe on the <a
 href="http://www.php-mag.net/">website</a> which will open shortly.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>New Monthly PHP Magazine Launched</h1>
 <p>
@@ -231,7 +231,7 @@ article on the creation of a web-based PDF converter is also
 available on the magazine website
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Search Bars available for major browsers</h1>
 <p>
@@ -245,7 +245,7 @@ us to test this new service, and provide feedback via
 as a PHP.net website bug please).
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP at the LinuxWorld Expo Oct. 29-31th in Frankfurt, Germany</h1>
 <p>
@@ -266,7 +266,7 @@ Visitors can take LAMP home, too, since there will be a CD with the necessary
 software available at the booth.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>New keyboard shortcuts</h1>
 <p>
@@ -281,7 +281,7 @@ for the suggestion. You can read more about keyboard shortcuts on web pages
 the HTML standard</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.2.3 Released</h1>
 <p>
@@ -291,7 +291,7 @@ release, and is a recommended update for all users of PHP, and Windows users in 
 list of changes can be found in the <a href="ChangeLog-4.php">ChangeLog</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.php-conference.de/2002/index_en.php", make_image("news/phpconf2002.gif", "PHP Conference 2002", "right")); ?>
 
@@ -316,7 +316,7 @@ PHP Internals / Extensions, PHP &amp; XML, and others.</p>
 bird registration</a> will end on 7th of October. Students and private
 persons get special discounts.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.php-con.com/", make_image("news/phpcon2002.png", "PHPCon 2002", "right") ); ?>
 
@@ -347,7 +347,7 @@ only conference in the US is placing PHP front and center as the language
 for solving web problems. PHPCon 2002, October 24 &amp; 25, 2002, Millbrae,
 California.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Printer friendly manual pages with notes</h1>
 <p>
@@ -359,7 +359,7 @@ the manual pages</a> to go to printer friendly manual pages, and
 change languages.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>ActiveState Awards</h1>
 <p>
@@ -383,7 +383,7 @@ project.  More details are available at
 <?print_link('http://www.ActiveState.com/ActiveAwards2002', 'http://www.ActiveState.com/ActiveAwards2002')?>
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.2.2 released in response to vulnerability</h1>
 
@@ -395,7 +395,7 @@ affected versions of PHP is encouraged to upgrade immediately. The new 4.2.2
 release doesn't include other changes, so upgrading from 4.2.1 is safe and painless.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>New comp.lang.php newsgroup started</h1>
 
@@ -420,7 +420,7 @@ become a part of the community - comp.lang.php is a great place to get help
 and to help others.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php echo make_image("news/engine.gif", "Zend Engine 2", "right"); ?>
 
@@ -446,7 +446,7 @@ but please don't expect it to replace your copy of PHP 4 at this stage.</p>
 <p>Windows binary version is also available for
 <?php download_link("php-4.3.0-dev-zend2-win32-alpha2.zip", "download"); ?>.</p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP for NetWare (Beta) Released</h1>
 <p>
@@ -457,7 +457,7 @@ Developer Kit site</a>. This version is based on the
 4.0.8 (development) version of the PHP source code.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php echo make_image("news/linuxtag3.gif", "LinuxTag", "right"); ?>
 
@@ -472,7 +472,7 @@ workshops</a>, which are free to enter. Make time to visit the (L)AMP booth also
 be hosting several <a href="http://www.phpug.de/index_ka109.php">PHP related projects</a> (text in
 German).
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Coding Contest</h1>
 <p>
@@ -483,7 +483,7 @@ prizes provided by the sponsors, Zend Technologies and Sams Publishing.
 You can enter the challenge by visiting <a href="http://codewalkers.com/php-contest.php">their site</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.2.1 released</h1>
 <p>
@@ -499,7 +499,7 @@ extension. Also a few extra checks for safe_mode were added. For more informatio
 <?php print_link ("/release_4_2_1.php", "PHP 4.2.1 release announcement"); ?>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php echo make_image("news/phpaward_100.gif", "PHP Award", "right"); ?>
 
@@ -515,7 +515,7 @@ If you are interested go to
 <a href="http://www.php-award.net/">http://www.php-award.net/</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP.net: A Tourist's Guide</h1>
 <p>
@@ -528,7 +528,7 @@ mailing lists at <a href="http://news.php.net/">news.php.net</a>? See what else
 you've been missing.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.2.0 released</h1>
 <p>
@@ -545,7 +545,7 @@ domxml, posix, sockets and iconv extensions. For more information, see the
 <?php print_link ("/release_4_2_0.php", "PHP 4.2.0 release announcement"); ?>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://weblabor.hu/php-doc-chm", make_image("news/chmhelp.gif", "CHM", "right") ); ?>
 
@@ -565,7 +565,7 @@ and send us your feedback to our
 <?php print_link("mailto:php-doc-chm@lists.php.net", "dedicated mailing list"); ?>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php echo make_image("news/phpmag.gif", "PHP Magazin", "right"); ?>
 
@@ -578,7 +578,7 @@ tribute to the steadily growing German PHP community.
 More information can be found at
 <a href="http://www.phpmag.de/">www.phpmag.de</a>.
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>New PHP.net URL Howto</h1>
 <p>
@@ -590,7 +590,7 @@ We gathered some information about how the URLs are parsed,
 and what are your possibilities. Read it in our new
 <a href="urlhowto.php">URL Howto</a>.
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php echo make_image("news/brain.gif", "PHPDoc Brain", "right"); ?>
 
@@ -603,7 +603,7 @@ The <?php print_link('http://www.php-ev.de/documents/phpdoc/protocol.html',
 Pictures of the event are currently not available.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Security Update - Windows Version</h1>
 <p>
@@ -616,7 +616,7 @@ Windows users are encouraged to upgrade to the <?php
 print_link('/downloads.php', 'latest version'); ?>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP Security Update</h1>
 <p>
@@ -629,7 +629,7 @@ href="/downloads.php">PHP 4.1.2</a>, or install the patch (<a
 href="/downloads.php">available for PHP 3.0.18, 4.0.6 and 4.1.0/4.1.1)</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP-GTK 0.5.0 released</h1>
 
@@ -648,10 +648,11 @@ consider helping out with PHP-GTK documentation. It would be a great way to
 learn this exciting extension and also contribute to the project.
 </p>
 
-<?php echo hdelim();
-
-print_link("http://www.phpconference.de/2001/index_en.php", make_image("news/international_conference.gif", 
-							"International PHP Conference 2001", "right") ); ?>
+<hr />
+<?php 
+print_link("http://www.phpconference.de/2001/index_en.php",
+    make_image("news/international_conference.gif", 
+               "International PHP Conference 2001", "right")); ?>
 
 <h1>International PHP Conference slides available</h1>
 
@@ -668,7 +669,7 @@ It is still not too late to check out some photos from the conference:
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.1.0 Released!</h1>
 
@@ -682,7 +683,7 @@ way of accepting form variables; output compression; and much, much more.  Read 
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Windows Manual Survey Results</h1>
 
@@ -696,7 +697,7 @@ project, including the detailed results of the survey at
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP-GTK Documentation Update</h1>
 
@@ -712,7 +713,7 @@ let us know.
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Rackspace providing additional hosting for PHP project</h1>
 <?php print_link("http://www.rackspace.com/?supbid=php.net", make_image("news/rackspace.gif", "Rackspace", "right") ); ?>
@@ -728,7 +729,7 @@ by our supporters.
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>11.09.2001</h1>
 
@@ -741,7 +742,7 @@ Red Cross.</a>
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Manual notes are mirrored worldwide</h1>
 
@@ -753,7 +754,7 @@ times by visiting the closest mirror. See the bottom of our pages.
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1><?php print_link("http://gtk.php.net/", make_image("news/php-gtk-white.gif", "PHP-GTK", "right") ); ?>
 PHP-GTK version 0.1 released</h1>
@@ -775,7 +776,7 @@ For more information, visit <?php print_link("http://gtk.php.net/")?>.
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Mailing lists and CVS are up!</h1>
 <?php print_link("http://promote.pair.com/direct.pl?php.net", make_image("news/pair.gif", "pair Networks", "right") ); ?>
@@ -788,7 +789,7 @@ by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks
 <br clear="all" />
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.linuxtag.org/2001/english/30.html", make_image("news/phplt.gif", "LinuxTag", "right") ); ?>
 
@@ -800,7 +801,7 @@ by <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>. Thanks
 was in Stuttgart, Germany, between July 5th-8th. PHPUG.De has <a href="http://www.phpug.de/phplt_en.php4">a report</a> on the PHP events at LinuxTag.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1><?php print_link("http://apachecon.com/2001/US/", "ApacheCon 2001");?></h1>
 

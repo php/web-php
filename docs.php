@@ -144,7 +144,7 @@ can be found on separate servers.
 </td></tr>
 </table>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>CVS Account</h1>
 <ul>
@@ -153,7 +153,7 @@ can be found on separate servers.
 wish to help out with the development of PHP, read this.</li>
 </ul>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Old/Unsupported Information</h1>
 <ul>

@@ -120,7 +120,7 @@ function book_show($one_book)
     }
 
     // Horizontal delimiter row
-    echo '<tr><td colspan="2">' . hdelim() . "</td></tr>\n";
+    echo "<tr><td colspan=\"2\"><hr /></td></tr>\n";
 
     // Information row for the book
     echo "<tr valign=\"top\">\n<td>\n" .

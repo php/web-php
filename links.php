@@ -532,7 +532,7 @@ A Swedish PHP portal with articles, news, forums and much more</li>
 </ul></li>
 </ul>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="jobs"></a>
 <h1>Developers and Job Opportunities</h1>
@@ -559,7 +559,7 @@ the web, take a look at
 Job Search listings</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <a name="hosts"></a>
 <h1>ISPs that support PHP</h1>

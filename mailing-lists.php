@@ -314,7 +314,7 @@ HREF="/search.php">the search page</A> or by using the search input box
 selecting the appropriate option on the top-right of every page.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1><a name="local">Local Mailing Lists</a></h1>
 

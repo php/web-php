@@ -190,7 +190,7 @@ foreach ($LANGUAGES as $langcode => $language) {
 ?>
 </table>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Documentation howto</h1>
 

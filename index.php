@@ -133,7 +133,7 @@ while (list(,$ext) = each($types)) {
 
         // End mirror specific part
         $RSIDEBAR_DATA .= make_link(mirror_provider_url(), $img) .
-                          '</div><br />' . hdelim();
+                          '</div><br /><hr />';
 
         // We have found an image
         break;
@@ -229,7 +229,7 @@ echo "\n<!--$MYSITE-->\n";
  file.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>URL Shortcuts and Site Search</h1>
 
@@ -244,7 +244,7 @@ echo "\n<!--$MYSITE-->\n";
  onsite search solution, Google is used temporarily to search our site.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "right")); ?> 
 
@@ -259,7 +259,7 @@ echo "\n<!--$MYSITE-->\n";
  price for readers worldwide.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.linuxtag.org/2003/en/index.html", make_image("news/linuxtag2003.gif", "LinuxTag", "right") ); ?>
 
@@ -283,7 +283,7 @@ echo "\n<!--$MYSITE-->\n";
  (Apache), Rasmus Lerdorf (PHP) or Kaj Arn&ouml; (MySQL).
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 5.0.0 Beta 1</h1>
 <p>
@@ -312,7 +312,7 @@ feedback). We encourage you to download and play with it (and <a href="http://bu
 if you find any!), but please do not replace your production installations of PHP 4 at this time.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.zend.com/survey/php_net.php", make_image("news/zendtech_logo.gif", "Zend Technologies", "right") ); ?>
 
@@ -322,7 +322,7 @@ if you find any!), but please do not replace your production installations of PH
 Zend Technologies is sponsoring a public PHP Usage Survey.  The results will be shared with the PHP Group, and will help us to better understand the ways in which PHP is being used, and what may need improvement.  <a href="http://www.zend.com/survey/php_net.php">Fill it out</a> and get a chance to win one of 50 PHP T-shirts!
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.phpconference.de/2003/index_en.php", make_image("news/international_conference_2003.gif", "International PHP Conference", "right") ); ?>
 
@@ -344,7 +344,7 @@ The conference is also featuring an <b>OpenSource Exhibition</b> where PHP relat
 OpenSource projects can present themselves for free.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.3.3RC1 released</h1>
 <p>
@@ -360,7 +360,7 @@ OpenSource projects can present themselves for free.
  file.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://www.ActiveState.com/Corporate/ActiveAwards/", make_image("news/activestate_logo.gif", "ActiveState", "right") ); ?>
 
@@ -376,7 +376,7 @@ More information and voting is at:
 <a href="http://www.ActiveState.com/Corporate/ActiveAwards/">http://www.ActiveState.com/Corporate/ActiveAwards/</a>
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.3.2 Released!</h1>
 <p>
@@ -387,7 +387,7 @@ and is a <b>strongly</b> recommended update for all users of PHP.
 Full list of fixes can be found in the <a href="ChangeLog-4.php">NEWS</a> file.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Automatic Mirror Select</h1>
 <p>
@@ -400,7 +400,7 @@ You may experience a few quirks in the search until your mirrors have synced an 
 version of the site.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Country Detection</h1>
 <p>
@@ -413,7 +413,7 @@ your country in bold letters on the frontpage, and to offer close mirror
 sites for downloads and your usual daily work.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>My PHP.net</h1>
 
@@ -432,7 +432,7 @@ language you used last time. Be sure to have cookies turned
 on for PHP.net to let this feature work!
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Grant Program</h1>
 
@@ -455,7 +455,7 @@ For more information, visit the <a
 href="http://www.phparch.com/grant/">program's website</a>.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Set your own language preference</h1>
 
@@ -477,7 +477,7 @@ Explorer. This will probably also enhance your web experience on sites
 providing translated content.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <?php print_link("http://phpconf.hu/", make_image("news/hu_conf.gif", "PHPConf.hu", "right") ); ?>
 
@@ -498,7 +498,7 @@ community itself and promoting their interests in any national business and
 official phorums.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>PHP 4.3.1 released in response to CGI vulnerability</h1>
 
@@ -512,7 +512,7 @@ immediately. The new 4.3.1 release does not include any other changes,
 so upgrading from 4.3.0 is safe and painless.
 </p>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <p align="center"><a href="/news.php">Old News</a></p>
 

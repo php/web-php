@@ -166,7 +166,7 @@ All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP.
   </li>
 </ul>
 
-<?php echo hdelim(); ?>
+<hr />
 
 <h1>Older Versions of PHP</h1>
 

@@ -295,7 +295,7 @@ if (isset($pattern)) {
             // If the result element ended (a </div> or a </dl>
             // depending on htdig version and setup), print out delimiter
             if (preg_match("!(</div>|</dl>)$!", $result[$i])) {
-                echo hdelim();
+                echo '<hr />';
             }
             
             // Go to next result element
