@@ -60,7 +60,7 @@ echo "\n<!--$MYSITE-->\n";
 PHP 4.2.0 Release Announcement
 </h1>
 
-<p>After an orderly QA process, PHP 4.2.0 is <a href="http://www.php.net/downloads.php">out</a>!</p>
+<p>After an orderly QA process, PHP 4.2.0 is <a href="/downloads.php">out</a>!</p>
 
 <h2>External variables</h2>
 
@@ -70,8 +70,8 @@ PHP 4.2.0 Release Announcement
  method of accessing these external variables is by using the new Superglobal
  arrays, introduced in PHP 4.1.0. More information about this change:
 <ul>
- <li><a href="http://www.php.net/manual/en/html/language.variables.predefined.html">PHP Manual: Predefined variables</a></li>
- <li><a href="http://www.php.net/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
+ <li><a href="/manual/en/language.variables.predefined.php">PHP Manual: Predefined variables</a></li>
+ <li><a href="/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
  <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
 </ul>
 </p>
