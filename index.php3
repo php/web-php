@@ -14,7 +14,7 @@ The long awaited beta of the new generation of PHP is <a href="version4/">here</
 <h3>PHP 3.0.12 has been released!</h3>
 <p>
 July 28, 1999.  Nothing major in this release.  Mostly bug fixes.  Support for
-the new gd-1.6, Internet Time, FreeType2 support, Max OS X build fixes, LDAP
+the new gd-1.6, Internet Time, FreeType2 support, Mac OS X build fixes, LDAP
 error functions, some new imap functions, socket io bug fixes, RH6 apxs build
 fix and support for the upcoming Apache-1.3.7.  See the 
 <a href="ChangeLog.php3">ChangeLog</a> for a full list of the changes.
