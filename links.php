@@ -122,6 +122,10 @@ Motore di ricerca per i tutorials in lingua italiana.
 Ha una piccola sezione di PHP.
 <BR>
 
+<LI><A HREF="http://www.phpcenter.it/">PHPcenter.it</A><BR>
+An Italian-language php site that features a variety of projects, reviews, courses, tutorials and other resources.
+<BR>
+
 </UL>
 
 <? commonFooter(); ?>
