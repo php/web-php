@@ -173,7 +173,7 @@ Wrox Press Inc, October 2000, ISBN 1-8610-0373-0, 800 pages<BR>
 </TD>
 <TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/0672319241/wwwphpnet">PHP Developer's Cookbook</A><BR>
 by 
-<A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes, with contributions by</A>
+<A HREF="http://zend.com/zend/hof/sterling.php">Sterling Hughes</A>, with contributions by
 <A HREF="http://zend.com/comm_person.php?id=24">Andrei Zmievski</A><BR><SMALL>
 Foreword by <A HREF="http://zend.com/zend/hof/rasmus.php">Rasmus Lerdorf</A><BR>
 Sams, November 2000, ISBN 0-6723-1924-1, 505 pages<BR>
