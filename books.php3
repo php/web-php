@@ -66,7 +66,37 @@ Click on the links above for more information on the books.  And remember, if yo
 buy the book using the above links, you are helping to support PHP development!
 </P>
 
+<P>
+There may be more books available that we don't know of yet!  You can search 
+<A HREF="http://www.amazon.com/exec/obidos/redirect-home/cmvstuff">Amazon.com</A>
+for PHP related stuff by using this form:
+</P>
+
+<FORM METHOD="get" ACTION="http://www.amazon.com/exec/obidos/external-search">
+<INPUT TYPE="hidden" NAME="tag" VALUE="cmvstuff">
+<TABLE BORDER=0 CELLPADDING=3 cellspacing=0 align="center" BGCOLOR="#E0E0E0">
+<TR VALIGN="middle">
+<TD align="right">Search what:<BR></TD>
+<TD><SELECT NAME="mode">
+<OPTION VALUE="blended">All Products
+<OPTION VALUE="books" SELECTED>Books
+<OPTION VALUE="music">Popular Music
+<OPTION VALUE="classical-music">Classical Music
+<OPTION VALUE="video">Video
+<OPTION VALUE="toys">Toys
+<OPTION VALUE="electronics">Electronics
+</SELECT>
+</TD>
+</TR>
+<TR VALIGN="middle">
+<TD align="right">Search for:<BR></TD>
+<TD><INPUT TYPE="text" NAME="keyword" SIZE=20 VALUE="PHP">
+<INPUT TYPE="submit" BORDER=0 VALUE="Search" NAME="Search">
+</TD>
+</TR>
+</TABLE>
+</FORM>
+
 <?
 commonFooter();
 ?>
-
