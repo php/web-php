@@ -1,10 +1,10 @@
-<?
+<?php
 require("shared.inc");
 commonHeader("Using CVS for PHP Development");
 ?>
 <h3>Using CVS for PHP Development</h3>
 
-<? if(empty($fullname)){ ?>
+<?php if(empty($fullname)){ ?>
 All PHP development is done through a distributed revision control system called
 CVS.  This helps us track changes and it makes it possible for people located
 in all corners of the world to collaborate on a project without having to worry
@@ -17,13 +17,17 @@ own CVS account if you will be regularly committing things to the CVS tree.
 And once again since people just don't seem to understand this point:
 <P>
 <table>
-<tr><td><b>Does Not Require CVS Account</b></td><td>&nbsp;</td><td><b>Requires CVS Account</b></td></tr>
-<tr><td>Learning PHP</td><td>&nbsp;</td><td>Coding PHP source in C</td></tr>
-<tr><td>Coding in PHP</td><td>&nbsp;</td><td>Coding PHP source in C</td></tr>
-<tr><td>Reading PHP source</td><td>&nbsp;</td><td>Writing to PHP source</td></tr>
-<tr><td>Adding notes to documentation</td><td>&nbsp;</td><td>Authoring PHP documentaion</td></tr>
-<tr><td>Using PHP modules</td><td>&nbsp;</td><td>Creating a PHP module</td></tr>
-<tr><td>Writing web pages with PHP</td><td>&nbsp;</td><td>Writing www.php.net web pages</td></tr>
+<tr><td><b>Does <u>Not</u> Require CVS Account</b></td>	<td>&nbsp;</td><td><b>Requires CVS Account</b></td></tr>
+<tr><td>Learning PHP</td>								<td>&nbsp;</td><td>Coding PHP source in C</td></tr>
+<tr><td>Coding in PHP</td>								<td>&nbsp;</td><td>Creating approved modules in the PHP tree</td></tr>
+<tr><td>Reading PHP source</td>							<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Learning coding PHP source in C</td>			<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Using PHP modules</td>							<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Creating experimental PHP modules</td>			<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>One-time patch contributions</td>				<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Adding notes to documentation</td>				<td>&nbsp;</td><td>Authoring PHP documentation</td></tr>
+<tr><td>Writing web pages with PHP</td>					<td>&nbsp;</td><td>Authoring www.php.net web pages</td></tr>
+
 </table>
 <P>
 If you are contributing a patch, a small fix, or another minor change you
@@ -48,6 +52,7 @@ In the purpose field, put a couple of words describing what you want to work on.
 This is mostly to jog our memories and allow us to match the account request with 
 whatever previous correspondence that may taken place.
 <P>
+Please note:<br>
 <b>
 You do <i>NOT</i> need a CVS account to study PHP.  You do <i>NOT</i> need
 a CVS account to learn PHP, to use PHP or to in any way do anything at all
@@ -59,22 +64,27 @@ you don't!
 <table>
 <tr><th>Full Name: </th><td><input type=text size=50 name=fullname></td></tr>
 <tr><th>Email: </th><td><input type=text size=50 name=email></td></tr>
-<tr><th>Purpose: </th><td><input type=text size=50 name=purpose></th></tr>
-<tr><th>User ID: </th><td><input type=text size=10 name=id></th></tr>
-<tr><th>Requested Password: </th><td><input type=password size=10 name=password></th></tr>
+<tr><th>Purpose: </th><td><input type=text size=50 name=purpose></td></tr>
+<tr><th>User ID: </th><td><input type=text size=10 name=id></td></tr>
+<tr><th>Requested Password: </th><td><input type=password size=10 name=password></td></tr>
+<tr><th></th><td>By checking this box you ensure having read <I>all</I> comments above <input type="checkbox" name="checkread" value="1"></td></tr>
 <tr><th>&nbsp;</th><td><input type=submit value="Send It"></td></tr>
 </table>
 </form>
-<? } elseif ($fullname && $email && $password && $purpose) {
+<?php } elseif ($fullname && $email && $password && $purpose && $checkread) {
 mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
 mail("php-dev@lists.php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPurpose: $purpose");
 ?>
 Thank you.  Your request has been sent.
-<? } else { ?>
+<?php }
+elseif ($fullname && $email && $password && $purpose && !$checkread) { ?>
+<blink><H1><font color="#ff0000">PLEASE, read our comments about applying for CVS accounts.</font></H1></blink>
+<?php }
+else { ?>
 <blink><H1><font color="#ff0000">INCOMPLETE FORM. GO BACK AND RESUBMIT.</font></H1></blink>
-<? } ?>
+<?php } ?>
 <P>
-The CVS account, once activated, gives you access to a number of things.  First, and most important it gives you access
+The CVS account, once granted and activated, gives you access to a number of things.  First, and most important it gives you access
 to modify the PHP CVS tree.  It also allows you to comment on and close bugs in the PHP bugs interface
 as well as modifying the documentation notes in the annotated manual.  The relevant links for these
 three things are:
@@ -115,4 +125,4 @@ cvs -z4
 update -d -P
 checkout -P</pre>
 <P>Your CVS account also translates into a foo@php.net email address where <b>foo</b> is your CVS user id.
-<? commonFooter(); ?>
+<?php commonFooter(); ?>
