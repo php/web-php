@@ -145,14 +145,14 @@ $fp = @fopen("backend/events.csv", "r");
 // If we were able to open the file
 if ($fp) {
 
-    // Current month number (for delimiter additions)
+    // Current month number, current category and categories list
     $cm = $ccat = 0;
-	$cats = array('unknown','User Group Events','Conferences','Training');
+    $cats = array('unknown', 'User Group Events', 'Conferences', 'Training');
 
     // Event duplication check hash
     $seen = array();
 
-    $RSIDEBAR_DATA .= '<div align="left"><b>Upcoming Events</b></div><div align="right"><a href="submit-event.php">[add event]</a></div>';
+    $RSIDEBAR_DATA .= '<h3>Upcoming Events <a href="submit-event.php">[add]</a></h3>';
 
     // While we can read the events file
     while (true) {
@@ -160,41 +160,41 @@ if ($fp) {
         // Get information event elements from file
         $elems = fgetcsv($fp, 8192);
         if($elems === false) { break; }
-        list($d, $m, $y, $ccode, $desc, $id, , , , , , ,$cat) = $elems;
+        list($d, $m, $y, $ccode, $desc, $id, , , , , , , $cat) = $elems;
 
         // Fgetcvs() returns an array with a single null element
         // for a blank line, which we need to skip
         if ($d === NULL) { continue; }
 
-        if ($ccat != (int)$cat) {
-            $RSIDEBAR_DATA .= '<br /><div align="left"><tt><u><b>'.$cats[$cat].'</b></u></tt><br /></div>';
-			$ccat = $cat;
-		}
-
         // If the month number changed
         if ($cm != (int) $m) {
-
-            // If we are not at the begining
-            if ($cm) {
-#                $RSIDEBAR_DATA .= "<br />\n";
-            }
 
             // Update current month information
             $cm = (int) $m;
 
-            // Get abbreviated month name
-			$mon = strftime('%b', mktime(12, 0, 0, $cm, $d, $y));
+            // Start month with a header
+            $RSIDEBAR_DATA .= '<h4 class="eventmonth">' .
+                              strftime('%B', mktime(12, 0, 0, $cm, $d, $y)) .
+                              "</h4>\n";
 
             // We have not seen any events in this month
             $seen = array();
         }
 
-        // There is no event with this description in this month
+        // Start new category with a category header
+        if ($ccat != (int) $cat) {
+            $RSIDEBAR_DATA .= '<h4>' . $cats[$cat] . '</h4>';
+            $ccat = $cat;
+        }
+        
+        // There is no event with this description in this month already seen
         if (!isset($seen[$desc])) {
+            
             // Add event to sidebar
-            $RSIDEBAR_DATA .= "<span class=\"event_$ccode\"><div class=\"small\">$mon.$d <a href=\"cal.php?id=$id\">" .
+            $RSIDEBAR_DATA .= "<span class=\"event_$ccode\">$d. <a href=\"cal.php?id=$id\">" .
                               htmlspecialchars(stripslashes($desc)) .
-                              "</a></div></span>\n";
+                              "</a></span><br />\n";
+            
             // Set seen flag
             $seen[$desc] = TRUE;
         }

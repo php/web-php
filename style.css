@@ -19,6 +19,15 @@ hr {
     height: 1px;
 }
 
+/* Event month header on homepage */
+h4.eventmonth {
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 1px 0px;
+    background-color: lightgray;
+    padding: 2px;
+}
+
 body, ul, td, th {
 	font-family: verdana,arial,helvetica,sans-serif;
 	font-size: 85%;
