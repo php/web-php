@@ -305,6 +305,7 @@ right away.</blockquote>
 	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
 	site("The Longaberger Company","www.longaberger.com");
+	site("Para-Shop","www.para-shop.de");
 	site("Patagonia Clothing","www.patagonia.com");
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
@@ -339,6 +340,7 @@ right away.</blockquote>
 	title("Travel & Tourism");
 	siteStart();
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
+	site("Arlberg Online","www.arlberg.com");
 	site("BackPackers.Com","www.backpackers.com");
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
