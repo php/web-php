@@ -2,7 +2,35 @@
 /* if you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn! */
 
-header("Cache-Control: public, max-age=600");
+/* ------------------------------------------------------------------------- */
+
+/* Get the modification dates of the main PHP file */
+$timestamps[] = @getlastmod();
+
+/* The date of prepend.inc indicates the age of ALL
+   included files. Please touch it if you modify an
+   another include file. The cost of stat'ing them
+   all is prohibitive. Also note the file path,
+   we aren't using the include path here. */
+$timestamps[] = @filemtime("include/prepend.inc");
+
+/* Calendar is the only dynamic feature on this page. */
+$timestamps[] = @filemtime("backend/events.csv");
+
+/* The latest of these modification dates is our real
+   Last-Modified date. */
+$timestamp = max($timestamps);
+
+/* Note that this is not a RFC 822 date (the tz is always GMT) */
+$tsstring = gmdate("D, d M Y H:i:s ",$timestamp)."GMT";
+
+if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
+	/* The UA has the exact same page we have. */
+	header("HTTP/1.1 304 Not Modified");
+	exit();
+} else {
+    header("Last-Modified: ".$tsstring);
+}
 
 require_once 'prepend.inc';
 
