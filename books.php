@@ -40,6 +40,9 @@ function showBook($one_book) {
     }
     $last = array_pop($temp);
     $author = join(', ', $temp) . ' &amp; ' . $last;
+  } else {
+    if ($author_link)
+	   $author = make_link ($author_link, $author);
   }
 
   echo '<tr><td colspan="2">' . hdelim() . "</td></tr>\n";
@@ -49,12 +52,7 @@ function showBook($one_book) {
   print_link ($title_link, make_image ("books/".$image, $img_title, false, false, false, 0) );
   echo "<br>\n</td><td><p>\n";
   echo "$title\nby ";
-
-  if ($author_link) {
-    print_link ($author_link, $author);
-  } else {
-    echo $author;
-  }
+  echo $author;
   echo "</p>\n<small>\n";
 
   if ($info || $lang != "en") {
@@ -84,9 +82,11 @@ function bookStats ($books, $btype) {
 echo '<h1>PHP Books</h1>';
 
 // If invalid type || lang specified, unset it
-list($type, $lang) = explode("_", $type_lang);
-if (!isset($book_types[$type])) { unset($type); }
-if (!isset($book_langs[$lang])) { unset($lang); }
+if (isset($type_lang) && !empty($type_lang)) {
+	list($type, $lang) = explode("_", $type_lang);
+	if (!isset($book_types[$type])) { unset($type); }
+	if (!isset($book_langs[$lang])) { unset($lang); }
+}
 
 // If type is set, we are printing books
 if (isset($type)) { ?>
@@ -189,4 +189,6 @@ if (isset($type)) {
 echo "</p>";
 
 commonFooter();
+
+/* vim: set noet ts=4 sw=4 ft=php: : */
 ?>
