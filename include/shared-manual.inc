@@ -46,12 +46,13 @@ function makeBorderTOC($this) {
         if (!$url || !$title) {
             continue;
         }
+        if ($UP[0] == 'funcref.php') {
+            $title = eregi_replace(" functions\$", "", $title);
+        }
         $img = 'box-0.gif';
         if ($title == $this) {
             $img = 'box-1.gif';
-        }
-        if ($UP[0] == 'funcref.php') {
-            $title = eregi_replace(" functions\$", "", $title);
+            $title = "<b>$title</b>";
         }
         $SIDEBAR_DATA .= '&nbsp;' . 
             make_link($url, make_image($img, "&middot;") . $title ) .
