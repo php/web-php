@@ -7,9 +7,7 @@ site_header("PHP 4.3.5 Release Announcement");
 
 <h1>PHP 4.3.5 Release Announcement</h1>
 
-<!--
 <p>[ <a href="/release_4_3_5_fr.php">Version Fran&ccedil;aise</a> ]</p>
--->
 
 <p>
  PHP Development Team is proud to announce the release of <a href="/downloads.php">PHP 4.3.5</a>.
