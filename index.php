@@ -162,13 +162,17 @@ commonHeader("Hypertext Preprocessor");
  to popularize PHP among the business, education and services sectors. The organizers
  welcome proposals for sessions and company presentations.
 </p>
+
 <?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
+
 <p>
  Also coming in March 2004 is the <a href="http://www.phpconf.hu/">Second Hungarian
  PHP Conference</a> building on last year's successful event. The Call For Papers is
  open for the conference, speakers are welcome to hold sessions and workshops ranging
  from PHP internals to web standard compliance. The event is exclusively in Hungarian.
 </p>
+
+<hr />
 
 <?php news_image("http://conf.phpquebec.org/index.html", "conference_php_quebec.gif", "Conference PHP Quebec"); ?>
 
