@@ -1,9 +1,10 @@
 <?
 require("shared.inc");
 
-$current = "3.0.2a";
+$current = "3.0.3";
 $win32_current = "3.0.2";
 
+$filesizes["php-3.0.3.tar.gz"]="~ 1107KB";
 $filesizes["php-3.0.2a.tar.gz"]="~ 997KB";
 $filesizes["php-3.0.2-win32.exe"]="~ 1339KB";
 $filesizes["php-3.0.2-win32.zip"]="~ 1304KB";
