@@ -141,7 +141,6 @@ function makeEntry($date,$name,$blurb,$id=0) {
 	  str_replace('.', ' dot ', $name);
 	}
             echo "<b>".$name."</b><br>\n";
-        }
     }
     echo date("d-M-Y h:i",$date);
 ?>
