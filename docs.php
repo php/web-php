@@ -58,7 +58,9 @@ $formats = array(
 <h1>PHP Manual</h1>
 
 <p>The PHP manual is available in a selection of languages
-and formats. Pick a language and format from the table below:
+and formats. Pick a language and format from the table below.
+Tip: If you are using Internet Explorer, the file size
+will show up, when you move the mouse above one link.
 </p>
 
 <table border="0" cellpadding="2" cellspacing="1" width="100%">
@@ -82,7 +84,11 @@ and formats. Pick a language and format from the table below:
        }
        # temporary hack until chm are auto-generated
        if ($fn == "manual.chm") {
-         echo "<a href=\"distributions/manual_$langcode.chm\">$details[1]</a></td>";
+         $size = @filesize("distributions/manual_$langcode.chm");
+         if ($size) { 
+          $print_size = ($details[2] ? ' title="' . (int) ($size/1024) . 'Kb"' : '');
+         }
+         echo "<a href=\"distributions/manual_$langcode.chm\"$print_size>$details[1]</a></td>";
          continue;
        }
        $size = @filesize("manual/$langcode/$fn");
