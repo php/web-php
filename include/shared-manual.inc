@@ -115,8 +115,8 @@ function makeTitle($title) {
 <?
 };
 
-function makeEntry($date,$name,$blurb) {
-	global $FONTFACE;
+function makeEntry($date,$name,$blurb,$id=0) {
+	global $FONTFACE, $MAGIC_COOKIE;
 ?>
 <TR VALIGN=top>
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
@@ -137,6 +137,12 @@ function makeEntry($date,$name,$blurb) {
         echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
 	echo $blurb;
 ?><BR></TD>
+<?if (isset($MAGIC_COOKIE)):?>
+<TD ALIGN=left>
+<A href="/manual/admin-notes.php3?action=delete+<?echo $id?>&brief=1" target="admin">X</A>
+<A href="/manual/admin-notes.php3?action=edit+<?echo $id?>&brief=1" target="admin">E</A>
+</TD>
+<?endif;?>
 </TR>
 </TABLE>
 
@@ -189,7 +195,7 @@ function manualUserNotes($title) {
 	if ($result_id && mysql_num_rows($result_id) > 0) {
 		makeTitle("User Contributed Notes: ".$title);
 		while ($row = mysql_fetch_array($result_id)) {
-			makeEntry($row['when'],$row['user'],$row['note']);
+			makeEntry($row['when'],$row['user'],$row['note'],$row['id']);
 		}
 	}
 	makeAddNote();
