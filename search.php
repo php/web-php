@@ -365,9 +365,7 @@ function makeBar($page, $pages, $baseurl, $firstdisplayed, $lastdisplayed)
     echo '<td align="middle" colspan="2">' . $display . '<br></td>';
     echo '</tr>';
 
-    echo '<tr bgcolor="#cccccc"><td colspan="2">';
-    spacer(1,1);
-    echo '<br></td></tr>';
+    echo '<tr bgcolor="#cccccc"><td colspan="2">' . spacer(1, 1, TRUE) . '<br /></td></tr>';
 
     echo '<tr>';
     echo '<td align="left">'  . $prev . '<br></td>';
