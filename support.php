@@ -71,9 +71,11 @@ at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 <h1>Instant Resource Center</h1>
 <p>
 Otherwise known as IRC or Internet Relay Chat. Here you can usually find
-experienced PHP people sitting around doing nothing on the #php channel
-on <a href="http://openprojects.nu">OpenProjects</a>. There are also many
-PHP related channels on <a href="http://www.efnet.org/">EFNet</a> 
+experienced PHP people sitting around doing nothing on the #php channels.
+<!-- this is a domain reg. page - 2002/May/04
+on <a href="http://openprojects.nu">OpenProjects</a>.
+-->
+There are many PHP related channels on <a href="http://www.efnet.org/">EFNet</a> 
 <!-- 
 <a href="http://www.efnet.org/channels.html?q=php&s=0">EFNet</a> is there
 again, but has an Error
