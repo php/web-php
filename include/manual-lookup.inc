@@ -82,7 +82,13 @@ function find_manual_page($lang, $keyword)
         !($s = @sqlite_open($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite'))) {
         return find_manual_page_slow($lang, $keyword);
     }
-
+    
+    // Try the preferred language first, then the
+    // English one in case no page is found
+    $langs = ($lang != 'en') ?
+        array(sqlite_escape_string($lang), 'en') :
+        array('en');
+    
     // Reformat keyword, drop anything in parenthesis
     $keyword = str_replace('_', '-', $keyword);
     if (strpos($keyword, '(') !== FALSE) {
@@ -97,40 +103,35 @@ function find_manual_page($lang, $keyword)
     // NB: sqlite wants ' quoted as ''
     $keyword = sqlite_escape_string($keyword);
     
-    // If there is a dot in the $keyword, then the prefix
-    // is spefied, so we need to carry that on into the SQL
+    // If there is a dot in the $keyword, then a prefix
+    // is specfied, so we need to carry that on into the SQL
     // search [eg. function.echo or function.mysql-close]
     if (strpos($keyword, ".") > 0) {
-        list($prefix, $keyword) = explode('.', $keyword);
-        $prefix_SQL = "prefix = '" . $prefix . ".' AND";
+        $SQL = "SELECT name from fs WHERE name LIKE '%$keyword.php'
+                AND lang = 'LANG_HERE' ORDER BY prio LIMIT 1";
+    
+    // Some partially specified URL is used
     } else {
-        $prefix_SQL = "";
+        
+        // List a few variations, plus a metaphone version
+        $keywords = array_unique(array(
+            $keyword,
+            str_replace(' ', '',  $keyword),
+            str_replace(' ', '-', $keyword),
+            str_replace('-', '',  $keyword),
+            metaphone($keyword)
+        ));
+
+        // List of all the keywords in single quotes
+        $words = "'" . implode("','", $keywords) . "'";
+        
+        $SQL = "SELECT name FROM fs WHERE lang = 'LANG_HERE'
+                AND keyword IN (" . $words . ") ORDER BY prio LIMIT 1";
     }
-
-    // List a few variations, plus a metaphone version
-    $keywords = array_unique(array(
-        $keyword,
-        str_replace(' ', '',  $keyword),
-        str_replace(' ', '-', $keyword),
-        str_replace('-', '',  $keyword),
-        metaphone($keyword)
-    ));
-
-    // List of all the keywords in single quotes
-    $words = "'" . implode("','", $keywords) . "'";
-
-    // Try the preferred language first, then the
-    // English one in case no page is found
-    $langs = ($lang != 'en') ?
-        array(sqlite_escape_string($lang), 'en') :
-        array('en');
 
     // Check for all the languages
     foreach ($langs as $lang) {
-        $q = sqlite_query($s,
-                "SELECT name FROM fs WHERE $prefix_SQL lang = '" . $lang .
-                "' AND keyword IN (" . $words . ") ORDER BY prio LIMIT 1"
-             );
+        $q = sqlite_query($s, str_replace('LANG_HERE', $lang, $SQL));
         
         // Successful query
         if ($q) {
