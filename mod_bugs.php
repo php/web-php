@@ -410,9 +410,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 	  	#fetch original bug description
 		$query = "SELECT ts1, email, ldesc from bugdb where id=$bug_id";
 		$result = mysql_query ($query);
-		$temp = mysql_fetch_row ($result);
-		print implode ("|", $temp);
-		$comments[] = $temp;
+		$comments[] = mysql_fetch_row ($result);
 
 		foreach ($comments as $value)
 			$output .= "[$value[0]] $value[1]\n$value[2]\n\n$divider\n\n";
