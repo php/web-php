@@ -1,0 +1,48 @@
+--- /home/bourbon/php-3.0a1/list.c	Thu Oct 30 01:07:25 1997
++++ list.c	Fri Oct 31 20:03:23 1997
+@@ -58,6 +58,10 @@
+ #include "functions/solid.h"
+ #endif
+ 
++#if HAVE_ORACLE
++#include "functions/oracle.h"
++#endif
++
+ #include "functions/db.h"
+ 
+ #if HAVE_DIRENT_H
+--- /home/bourbon/php-3.0a1/functions/oracle.c	Thu Oct 30 01:07:54 1997
++++ functions/oracle.c	Fri Oct 31 20:14:15 1997
+@@ -55,15 +55,6 @@
+ 
+ #if HAVE_ORACLE
+ 
+-/* Oracle stuff */
+-#include "oratypes.h"
+-#include "ocidfn.h"
+-#ifdef __STDC__
+-#include "ociapr.h"
+-#else
+-#include "ocikpr.h"
+-#endif
+-
+ #include "oracle.h"
+ 
+ /* #define TRACE */
+--- /home/bourbon/php-3.0a1/functions/oracle.h	Thu Oct 30 01:07:54 1997
++++ functions/oracle.h	Fri Oct 31 20:14:12 1997
+@@ -38,6 +38,14 @@
+ 
+ #if HAVE_ORACLE
+ 
++#include "oratypes.h"
++#include "ocidfn.h"
++#ifdef __STDC__
++#include "ociapr.h"
++#else
++#include "ocikpr.h"
++#endif
++
+ /* The maximum number of Oracle connections in a single document */
+ #define MAX_CONNECTIONS 15
+ 

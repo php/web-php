@@ -1,0 +1,9 @@
+* sprintf crashes with hard-limited string width combined with
+  alignment (%-.20s)
+* String in eval() is either not efree()'d, or both efree()'d and free()'d.
+  It's allocated using e*() functions, but may be free()'d by flex, and later free()'d by the memory
+  manager.  Another alternative is that it's not free()'d by flex, and is only free()'d by the
+  memory manager, which is just a simple leak.
+* split() function doesn't return regex errors nicely
+* ksort() may contain a bug that causes PHP to get stuck and consume 100% CPU
+* Configuration file strings are kinda broken

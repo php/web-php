@@ -1,0 +1,55 @@
+Here is how to mirror the PHP3 site.
+
+First, you need to have a cvs client.  See http://www.cyclic.com, or grab one from your
+local GNU mirror.  You will also need MySQL installed and working.  See http://www.tcx.se/
+
+Second, create a directory off of your root directory.  Doesn't matter what the name is, as
+long as it isn't "php3".  I call mine "cvs".  cd into this directory and issue the following
+
+   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository login
+   Password: phpfi
+   cvs -d:pserver:cvsread@inet-dev.bellglobal.com:/repository co php3/web-stuff
+
+now cd into php3 and type: cvs update CHANGES
+
+Then cd back into your root directory and create a symbolic link:
+
+  ln -s cvs/php3/web-stuff php3
+
+Now, make sure your web server is set up to serve up .php3 files as PHP3 parsed files.
+If it isn't, add the mime-type to your config.
+
+Create a mysql database with: mysqladmin create php3
+
+Make sure your "nobody" user has access to it.  Then cd into your php3 directory and type:
+
+   mysql php3 <schema.mysql
+
+In order for the "View Source" button to work, you need to add the php3-source
+mime type and point it at files with the .phps extension.  Then create symbolic
+links from index.php3 to index.phps, search.php3 to search.phps, etc. 
+The shell script, "mklinks", will create these for you.
+
+You should be all set.  Point your browser at www.yoursite.com/php3
+
+You may want to set up a cron job that periodically does a 'cvs update -d' in 
+your cvs/php3 directory.  This will ensure that your web site is up to date.
+
+In order to get the Search button to work, you need to have the Glimpse binaries
+installed.  They are available at ftp://ftp.cs.arizona.edu/pub/glimpse
+I haven't had much luck compiling from their sources, but the binary distribution
+of Glimpse-4.0 seems to work fine.  Install these in /usr/local/bin, and run
+the following command:
+
+/usr/local/bin/glimpseindex -b -i -t -H /u/www/servers/lerdorf/php3 /u/www/servers/lerdorf/php3; chmod a+r /u/www/servers/lerdorf/php3/.gli*
+
+Replace /u/www/servers/lerdorf with whatever the path is to your php3 directory.  Note that
+the search script assumes all files are reachable with a URL of: /php3/filename.ext
+
+In order for the patches to download when you click on them, add this line to your
+srm.conf file:
+
+  AddType application/octet-stream .fix 
+
+(instructions for database synchronization will follow when we figure out how
+to do it)

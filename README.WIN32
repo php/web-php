@@ -1,0 +1,105 @@
+Windows 95/NT Specific Notes on Compilation
+
+Windows compilation has only been tested with Microsoft Visual C++ 
+Version 5 Standard Edition.  The PHP executable has only had limited
+testing under Windows 95.  SAFE MODE and any User or Group functionality
+has not been ported/tested.
+
+-----------------------------------------------------------------------
+Base Configuration and Configuration Issues
+
+*The base configuration for the windows php version contains odbc
+and flatfile database support.  Support for other database modules will
+be provided as external dll files.  
+*ODBC can be used to connect to many of the databases previously 
+supported by php (though they can still be compiled in if you have 
+the libraries!)  
+*GD graphics library will not be supported at this time.  
+*Crypt will only compile if you create a crypt library.
+
+-----------------------------------------------------------------------
+Additional included libraries
+You MUST seperately compile the regex library.  It must be compiled as
+multithreaded if you are creating any server module.
+
+A DBASE library has been included.  VC5 makefiles have been included
+to aid in compilation.  You must compile the DBASE library before
+php to include it in the project.  It must be compiled as
+multithreaded if you are creating any server module.
+
+-----------------------------------------------------------------------
+Makefiles
+
+Be sure to edit any windows makefile and change the include directories
+to be appropriate for your system.
+
+-----------------------------------------------------------------------
+CGI Version
+
+The makefile for the cgi version of php is located in the win32 
+subdirectory of the php source tree.  This make file is specificaly
+for Visual C++ V5.
+
+-----------------------------------------------------------------------
+ISAPI Version
+
+While the ISAPI version will compile and parse a php script, it is
+not recommended for use until a later beta that will be thread-safe.
+If you choose to set it up on a test server, we would appreciate 
+notification of any bugs you may encounter.  The ISAPI makefile can
+be found in the win32 directory and is called isapi.mak
+
+-----------------------------------------------------------------------
+NSAPI Version
+
+The NSAPI version is unlikely to work at this time.  In a future beta
+the NSAPI module should be working
+
+-----------------------------------------------------------------------
+ApacheNT module
+
+UNTESTED
+
+-----------------------------------------------------------------------
+External Modules
+
+A sample external module can be found in the directory sampledl under
+the php source tree.  The makefile is called win32vc5.mak
+
+-----------------------------------------------------------------------
+Other Libraries
+
+To compile additional features into the windows version of php you will
+need to download and compile various other libraries.  These libraries
+should be compiled as multithreaded libraries if you are compiling any
+server module.  If you are compiling cgi, you may compile as single
+threaded.  The following items are untested by us, but are ported to
+windows95/NT.  If you are aware of any other ported libraries that
+are in use by the unix version of php, please report their location
+to the php development team.
+
+Berkly DB 2.3.11 http://www.sleepycat.com/
+mSQL 2.01        http://www.blnet.com/msqlpc
+
+-----------------------------------------------------------------------
+WINDOWS 98
+
+No testing has been done with this port on windows 98.
+
+
+-----------------------------------------------------------------------
+INSTALLATION
+
+Please refer to the php-list archives for information on installing
+php for your particular server.  More notes on installation will
+be provided here at a future date.  At a much later beta or
+final version, an automated install program will be added.
+
+INI File
+Be sure to copy the php.ini file in the win32 subdirectory to your
+c:\windows or c:\winnt directory.  Make whatever modifications may be
+necessary for you system and server
+
+
+
+Please email questions to php-list@php.iquest.net

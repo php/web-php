@@ -1,0 +1,121 @@
+--- /home/bourbon/php-3.0a1/functions/msql.c	Thu Oct 30 01:07:51 1997
++++ functions/msql.c	Thu Oct 30 21:25:34 1997
+@@ -741,13 +742,51 @@
+ }
+ 
+ 
++char *php3_msql_get_field_name(int field_type)
++{
++	switch (field_type) {
++#if MSQL1
++		case INT_TYPE:
++			return "int";
++			break;
++		case CHAR_TYPE:
++			return "char";
++			break;
++		case REAL_TYPE:
++			return "real";
++			break;
++		case IDENT_TYPE:
++			return "ident";
++			break;
++		case NULL_TYPE:
++			return "null";
++			break;
++#else
++		case INT_TYPE:
++		case UINT_TYPE:
++		case CHAR_TYPE:
++		case TEXT_TYPE:
++		case REAL_TYPE:
++		case NULL_TYPE:
++		case DATE_TYPE:
++		case TIME_TYPE:
++		case MONEY_TYPE:
++			return msqlTypeNames[field_type];
++			break;
++#endif
++		default:
++			return "unknown";
++			break;
++	}
++}
++
++
+ void php3_msql_fetch_field(INTERNAL_FUNCTION_PARAMETERS)
+ {
+ 	YYSTYPE *result;
+ 	m_result *msql_result;
+ 	m_field *msql_field;
+ 	int type;
+-	char *field_type;
+ 	
+ 	if (ARG_COUNT(ht)!=1 || getParameters(ht, 1, &result)==FAILURE) {
+ 		WRONG_PARAM_COUNT;
+@@ -775,41 +814,8 @@
+ #else
+ 	add_assoc_long("unique",(msql_field->flags&UNIQUE_FLAG?1:0));
+ #endif
+-	switch(msql_field->type) {
+-#if MSQL1
+-		case INT_TYPE:
+-			field_type = "int";
+-			break;
+-		case CHAR_TYPE:
+-			field_type = "char";
+-			break;
+-		case REAL_TYPE:
+-			field_type = "real";
+-			break;
+-		case IDENT_TYPE:
+-			field_type = "ident";
+-			break;
+-		case NULL_TYPE:
+-			field_type = "null";
+-			break;
+-#else
+-		case INT_TYPE:
+-		case UINT_TYPE:
+-		case CHAR_TYPE:
+-		case TEXT_TYPE:
+-		case REAL_TYPE:
+-		case NULL_TYPE:
+-		case DATE_TYPE:
+-		case TIME_TYPE:
+-		case MONEY_TYPE:
+-			field_type = msqlTypeNames[msql_field->type];
+-			break;
+-#endif
+-		default:
+-			field_type = "unknown";
+-			break;
+-	}
+-	add_assoc_string("type",field_type);
++
++	add_assoc_string("type",php3_msql_get_field_name(msql_field->type));
+ }
+ 
+ void php3_msql_field_seek(INTERNAL_FUNCTION_PARAMETERS)
+@@ -890,8 +896,8 @@
+ 			return_value.type = IS_LONG;
+ 			break;
+ 		case PHP3_MSQL_FIELD_TYPE:
+-			return_value.strlen = strlen(msqlTypeNames[msql_field->type]);
+-			return_value.value.strval = estrndup(msqlTypeNames[msql_field->type], return_value.strlen);
++			return_value.value.strval = estrdup(php3_msql_get_field_name(msql_field->type));
++			return_value.strlen = strlen(return_value.value.strval);
+ 			return_value.type = IS_STRING;
+ 			break;
+ 		case PHP3_MSQL_FIELD_FLAGS:
+@@ -1009,3 +1015,10 @@
+ void php3_msql_field_type(INTERNAL_FUNCTION_PARAMETERS) {}
+ void php3_msql_field_flags(INTERNAL_FUNCTION_PARAMETERS) {}
+ #endif
++
++/*
++ * Local variables:
++ * tab-width: 4
++ * c-basic-offset: 4
++ * End:
++ */

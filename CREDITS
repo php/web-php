@@ -1,0 +1,90 @@
+<h1>PHP Version 3.0 Development Team</h1>
+
+<h1>Core Developers</h1>
+
+<i>
+<h3>Rasmus Lerdorf (rasmus@lerdorf.on.ca)</h3>
+</i>
+
+<ul>
+<li> Concept
+<li> Original language definition and implementation
+<li> CGI loader and many internal functions
+<li> Apache module support
+<li> mSQL, MySQL, SNMP, Sybase work
+<li> Project Coordinator
+</ul>
+
+
+<i>
+<h3>Andi Gutmans (andi@vipe.technion.ac.il)</h3>
+<h3>Zeev Suraski (bourbon@netvision.net.il)</h3>
+</i>
+
+<ul>
+<li> New language definition and implementation
+<li> Internal functions API design
+<li> General hash table implementation for symbol tables, arrays and
+	objects
+<li> Memory manager
+<li> Token cache manager
+<li> Several internal functions and migration from PHP 2.0
+<li> Syntax highlighting mode
+<li> Configuration file parser
+<li> New persistent/multilink MySQL, PosgresSQL and mSQL modules
+</ul>
+
+
+<i>
+<h3>Stig Bakken (ssb@guardian.no)</h3>
+</i>
+
+<ul>
+<li> Oracle support
+<li> configure/install script work
+<li> sprintf reimplementation
+<li> SGML documentation work
+<li> general handyman
+</ul>
+
+
+<i>
+<h3>Shane Caraveo (shane@caraveo.com)</h3>
+</i>
+
+<ul>
+<li> Porting to Visual C++
+<li> Generalization to support different server APIs
+<li> Work on ISAPI and NSAPI APIs
+</ul>
+
+
+<i>
+<h3>Jim Winstead (jimw@adventure.com)</h3>
+</i>
+
+<ul>
+<li> Lots of PHP2 -> PHP3 porting
+<li> dBase support
+<li> Makefile work
+<li> Regex rewrite
+<li> Win32 work
+</ul>
+	
+<h1>Major Contributors</h1>
+<table border=0>
+<tr><td>Bjørn Borud </td> <td>(borud@guardian.no)     </td> <td>soundex code + lots of enthusiasm</td></tr>
+<tr><td>Mitch Golden   </td> <td>(mgolden@interport.net) </td> <td>Oracle testing and bug fixes</td></tr>
+<tr><td>Simon Gornall  </td> <td>(simon@oyster.co.uk)    </td> <td>Illustra</td></tr>
+<tr><td>Mark Henderson </td> <td>(mark@togglemedia.com)  </td> <td>Various odds and ends</td></tr>
+<tr><td>Jaakko Hyvätti</td> <td>(jaakko@hyvatti.iki.fi)</td><td>Prototype cop </td></tr>
+<tr><td>Andreas Karajannis</td><td>(kara@bibo.met.fu-berlin.de) </td> <td>Adabas D</td></tr>
+<tr><td>Muhammad A Muquit</td><td>(MA_Muquit@fccc.ed)     </td> <td>Sybase</td></tr>
+<tr><td>Jeroen van der Most</td><td>(jvdmost@digiface.nl)  </td> <td>Solid</td></tr>
+<tr><td>Chad Robinson  </td><td>(chadr@brttech.com)     </td> <td>Documentation, FilePro</td></tr>
+<tr><td>John Robinson  </td><td>(john@intelligent.co.uk)</td> <td>Postgres</td></tr>
+<tr><td>Lachlan Roche  </td><td>(lr@www.wwi.com.au)     </td> <td>MD5</td></tr>
+<tr><td>Brian Schaffner</td><td>(brian@tool.net)        </td> <td>ODBC Support, PHP3 API testing</td></tr>
+<tr><td>               </td><td>(sopwith@redhat.com)    </td> <td>Solid</td></tr>
+<tr><td>Adam Sussman   </td><td>(asussman@vidya.com)    </td> <td>Postgres</td></tr>
+</table>

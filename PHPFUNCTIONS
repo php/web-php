@@ -1,0 +1,407 @@
+'Delayed/removed function      2.0    3.0
+---------------------------------------------------------------------------
+snmpget                       2.0     D  | SNMP support - delayed until 3.0b2
+snmpwalk                      2.0     D  |
+
+initsyslog                    2.0     R  ! not needed in 3.0
+clearstack                    2.0     R  ! not needed in 3.0
+phpshowpool                   2.0     R  | N/A for version 3.0
+
+getaccdir                     2.0    D/R |
+getlastaccess                 2.0    D/R |
+getlastbrowser                2.0    D/R |
+getlastemail                  2.0    D/R |
+getlasthost                   2.0    D/R |
+getlastref                    2.0    D/R |
+getlogdir                     2.0    D/R | access logging - delayed/removed
+getlogfile                    2.0    D/R |
+getloghost                    2.0    D/R |
+getstartlogging               2.0    D/R |
+gettoday                      2.0    D/R |
+gettotal                      2.0    D/R |
+setlogging                    2.0    D/R |
+setshowinfo                   2.0    D/R |
+logas                         2.0    D/R |
+
+
+To be migrated function       2.0   3.0
+---------------------------------------------------------------------------
+arsort                        2.0        | reversed asort
+rsort                         2.0        | reverse sort
+
+ada_fetch                            3.0 ! will be
+ada_fetchrow                  2.0        ! renamed
+ada_fieldnum                  2.0       
+ada_free                             3.0 ! will be
+ada_freeresult                2.0        ! renamed
+
+mi_close                      2.0        |
+mi_connect                    2.0        |
+mi_dbname                     2.0        |
+mi_exec                       2.0        |
+mi_fieldname                  2.0        | Illustra support
+mi_fieldnum                   2.0        |
+mi_numfields                  2.0        |
+mi_numrows                    2.0        |
+mi_result                     2.0        |
+
+phpinfo                       2.0        |
+
+securevar                     2.0        |
+seterrorreporting             2.0        | need backwards-compat. bitmask
+
+solid_close                   2.0        | 
+solid_connect                 2.0        | 
+solid_exec                    2.0        | 
+solid_fetchrow                2.0        | 
+solid_fieldname               2.0        | 
+solid_fieldnum                2.0        | Solid support
+solid_freeresult              2.0        | 
+solid_numfields               2.0        | 
+solid_numrows                 2.0        | 
+solid_result                  2.0        | 
+
+sybsql_checkconnect           2.0        |
+sybsql_connect                2.0        |
+sybsql_dbuse                  2.0        |
+sybsql_exit                   2.0        |
+sybsql_fieldname              2.0        |
+sybsql_getfield               2.0        |
+sybsql_isrow                  2.0        | Sybase support
+sybsql_nextrow                2.0        |
+sybsql_numfields              2.0        |
+sybsql_numrows                2.0        |
+sybsql_query                  2.0        |
+sybsql_result                 2.0        |
+sybsql_result_all             2.0        |
+sybsql_seek                   2.0        |
+
+
+Migrated Function     Status: 2.0    3.0
+---------------------------------------------------------------------------
+abs                           2.0    3.0
+acos                                 3.0
+ada_autocommit                       3.0
+ada_close                     2.0    3.0
+ada_closeall                         3.0
+ada_connect                   2.0    3.0
+ada_exec                      2.0    3.0
+ada_fieldlen                  2.0    3.0
+ada_fieldname                 2.0    3.0
+ada_fieldtype                 2.0    3.0
+ada_numfields                 2.0    3.0
+ada_numrows                   2.0    3.0
+ada_result                    2.0    3.0
+ada_resultall                 2.0    3.0
+ada_transact                         3.0
+addslashes                    2.0    3.0
+asin                                 3.0
+asort                         2.0    3.0
+atan                                 3.0
+bindec                        2.0    3.0
+ceil                          2.0    3.0
+chdir                         2.0    3.0
+checkdate                     2.0    3.0
+chgrp                         2.0    3.0
+chmod                         2.0    3.0
+chop                          2.0    3.0
+chown                         2.0    3.0
+chr                           2.0    3.0
+clearstatcache                2.0    3.0
+closedir                      2.0    3.0
+closelog                      2.0    3.0
+cos                           2.0    3.0
+count                         2.0    3.0
+crypt                         2.0    3.0
+current                              3.0
+date                          2.0    3.0
+dbase_add_record                     3.0
+dbase_close                          3.0
+dbase_delete_record                  3.0
+dbase_get_record                     3.0
+dbase_numfields                      3.0
+dbase_numrecords                     3.0
+dbase_open                           3.0
+dbase_pack                           3.0
+dblist                        2.0    3.0
+dbmclose                      2.0    3.0
+dbmdelete                     2.0    3.0
+dbmexists                     2.0    3.0
+dbmfetch                      2.0    3.0
+dbmfirstkey                   2.0    3.0
+dbminsert                     2.0    3.0
+dbmnextkey                    2.0    3.0
+dbmopen                       2.0    3.0
+dbmreplace                    2.0    3.0
+decbin                        2.0    3.0
+dechex                        2.0    3.0
+decoct                        2.0    3.0
+dl                                   3.0
+doubleval                     2.0    3.0
+end                           2.0    3.0
+ereg                          2.0    3.0
+ereg_replace                  2.0    3.0
+eregi                         2.0    3.0
+eregi_replace                 2.0    3.0
+error_reporting                      3.0
+escapeshellcmd                2.0    3.0
+exec                          2.0    3.0
+exp                           2.0    3.0
+explode                              3.0
+fclose                        2.0    3.0
+feof                          2.0    3.0
+fgets                         2.0    3.0
+fgetss                        2.0    3.0
+file                          2.0    3.0
+fileatime                     2.0    3.0
+filectime                     2.0    3.0
+filegroup                     2.0    3.0
+fileinode                     2.0    3.0
+filemtime                     2.0    3.0
+fileowner                     2.0    3.0
+fileperms                     2.0    3.0
+filesize                      2.0    3.0
+filetype                      2.0    3.0
+filepro                       2.0    3.0
+filepro_fieldcount            2.0    3.0
+filepro_fieldname             2.0    3.0
+filepro_fieldtype             2.0    3.0
+filepro_fieldwidth            2.0    3.0
+filepro_retrieve              2.0    3.0
+filepro_rowcount              2.0    3.0
+floor                         2.0    3.0
+flush                         2.0    3.0
+fopen                         2.0    3.0
+fpassthru                     2.0    3.0   not needed if we get binary strings
+fputs                         2.0    3.0
+fseek                         2.0    3.0
+fsockopen                     2.0    3.0
+ftell                         2.0    3.0
+getdate                              3.0
+getenv                        2.0    3.0
+gethostbyaddr                 2.0    3.0
+gethostbyname                 2.0    3.0
+getimagesize                  2.0    3.0
+getlastmod                    2.0    3.0
+getmyinode                    2.0    3.0
+getmypid                      2.0    3.0
+getmyuid                      2.0    3.0
+getrandmax                    2.0    3.0
+gettype                       2.0    3.0
+gmdate                        2.0    3.0
+header                        2.0    3.0
+hexdec                        2.0    3.0
+htmlspecialchars              2.0    3.0
+imagearc                      2.0    3.0
+imagechar                     2.0    3.0
+imagecharup                   2.0    3.0
+imagecolorallocate            2.0    3.0
+imagecolortransparent         2.0    3.0
+imagecopyresized              2.0    3.0
+imagecreate                   2.0    3.0
+imagecreatefromgif            2.0    3.0
+imagedestroy                  2.0    3.0
+imagefill                     2.0    3.0
+imagefilledpolygon            2.0    3.0
+imagefilledrectangle          2.0    3.0
+imagefilltoborder             2.0    3.0
+imagegif                      2.0    3.0
+imageinterlace                2.0    3.0
+imageline                     2.0    3.0
+imagepolygon                  2.0    3.0
+imagerectangle                2.0    3.0
+imagesetpixel                 2.0    3.0
+imagestring                   2.0    3.0
+imagestringup                 2.0    3.0
+imagesx                       2.0    3.0
+imagesy                       2.0    3.0
+implode                              3.0
+intval                        2.0    3.0
+key                           2.0    3.0
+ksort                                3.0
+link                          2.0    3.0
+linkinfo                      2.0    3.0
+log                           2.0    3.0
+log10                         2.0    3.0
+mail                          2.0    3.0
+max                           2.0    3.0
+md5                           2.0    3.0
+microtime                     2.0    3.0
+min                           2.0    3.0
+mkdir                         2.0    3.0
+mktime                        2.0    3.0
+
+next                          2.0    3.0
+octdec                        2.0    3.0
+opendir                       2.0    3.0
+openlog                       2.0    3.0
+ora_close                     2.0    3.0
+ora_commit                    2.0    3.0
+ora_commitoff                 2.0    3.0
+ora_commiton                  2.0    3.0
+ora_error                            3.0
+ora_errorcode                        3.0
+ora_exec                      2.0    3.0
+ora_fetch                     2.0    3.0
+ora_getcolumn                 2.0    3.0
+ora_logoff                    2.0    3.0
+ora_logon                     2.0    3.0
+ora_open                      2.0    3.0
+ora_parse                     2.0    3.0
+ora_rollback                  2.0    3.0
+ord                           2.0    3.0
+parse_str                     2.0    3.0
+passthru                      2.0    3.0
+pclose                        2.0    3.0
+phpversion                    2.0    3.0
+pi                                   3.0
+popen                         2.0    3.0
+pos                           2.0    3.0
+pow                           2.0    3.0
+prev                          2.0    3.0
+printf                               3.0
+putenv                        2.0    3.0
+quotemeta                     2.0    3.0
+rand                          2.0    3.0
+readdir                       2.0    3.0
+readfile                      2.0    3.0
+readlink                      2.0    3.0
+reg_match                     2.0    3.0
+reg_replace                   2.0    3.0
+reg_search                    2.0    3.0
+rename                        2.0    3.0
+reset                         2.0    3.0
+rewind                        2.0    3.0
+rewinddir                     2.0    3.0
+rmdir                         2.0    3.0
+settype                       2.0    3.0
+sin                           2.0    3.0
+sleep                         2.0    3.0
+sort                          2.0    3.0
+soundex                       2.0    3.0
+split                                3.0
+sprintf                       2.0    3.0
+sql_regcase                          3.0
+sqlconnect                    2.0    3.0
+sqldisconnect                 2.0    3.0
+sqlexecdirect                 2.0    3.0
+sqlfetch                      2.0    3.0
+sqlfree                       2.0    3.0
+sqlgetdata                    2.0    3.0
+sqlrowcount                   2.0    3.0
+sqrt                          2.0    3.0
+srand                         2.0    3.0
+stat                                 3.0
+strchr                        2.0    3.0
+stripslashes                  2.0    3.0
+strlen                        2.0    3.0
+strrchr                       2.0    3.0
+strstr                        2.0    3.0
+strtok                        2.0    3.0
+strtolower                    2.0    3.0
+strtoupper                    2.0    3.0
+strtr                         2.0    3.0
+strval                        2.0    3.0
+substr                        2.0    3.0
+setcookie                     2.0    3.0
+symlink                       2.0    3.0
+syslog                        2.0    3.0
+system                        2.0    3.0
+tan                           2.0    3.0
+tempnam                       2.0    3.0
+time                          2.0    3.0
+touch                                3.0
+ucfirst                       2.0    3.0
+umask                         2.0    3.0
+uniqid                        2.0    3.0
+unlink                        2.0    3.0
+urldecode                     2.0    3.0
+urlencode                     2.0    3.0
+usleep                        2.0    3.0
+virtual                       2.0    3.0
+
+pg_close                      2.0    3.0 |
+pg_connect                    2.0    3.0 |
+pg_dbname                     2.0    3.0 |
+pg_errormessage               2.0    3.0 |
+pg_exec                       2.0    3.0 |
+pg_fieldname                  2.0    3.0 |
+pg_fieldnum                   2.0    3.0 |
+pg_fieldprtlen                2.0    3.0 |
+pg_fieldsize                  2.0    3.0 |
+pg_fieldtype                  2.0    3.0 | PostgresSQL support
+pg_freeresult                 2.0    3.0 |
+pg_getlastoid                 2.0    3.0 |
+pg_host                       2.0    3.0 |
+pg_numfields                  2.0    3.0 |
+pg_numrows                    2.0    3.0 |
+pg_options                    2.0    3.0 |
+pg_pconnect                          3.0 |
+pg_port                       2.0    3.0 |
+pg_result                     2.0    3.0 |
+pg_tty                        2.0    3.0 |
+
+
+mysql                         2.0    3.0 |
+mysql_affected_rows           2.0    3.0 |
+mysql_close                   2.0    3.0 |
+mysql_connect                 2.0    3.0 |
+mysql_create_db                      3.0 |
+mysql_createdb                2.0    3.0 |
+mysql_data_seek                      3.0 |
+mysql_dbname                  2.0    3.0 |
+mysql_drop_db                        3.0 |
+mysql_dropdb                  2.0    3.0 |
+mysql_fetch_field                    3.0 |
+mysql_fetch_lengths                  3.0 |
+mysql_fetch_row                      3.0 |
+mysql_field_seek                     3.0 | MySQL support
+mysql_fieldflags              2.0    3.0 |
+mysql_fieldlen                2.0    3.0 |
+mysql_fieldname               2.0    3.0 |
+mysql_fieldtable                     3.0 |
+mysql_fieldtype               2.0    3.0 |
+mysql_freeresult              2.0    3.0 |
+mysql_insert_id               2.0    3.0 |
+mysql_listdbs                 2.0    3.0 |
+mysql_listfields              2.0    3.0 | doesn't work for some odd reason
+mysql_listtables              2.0    3.0 |
+mysql_num_fields                     3.0 |
+mysql_numfields               2.0    3.0 |
+mysql_num_rows                       3.0 |
+mysql_numrows                 2.0    3.0 |
+mysql_pconnect                       3.0 |
+mysql_query                          3.0 |
+mysql_result                  2.0    3.0 |
+mysql_tablename               2.0    3.0 |
+
+
+msql                          2.0    3.0 |
+msql_close                    2.0    3.0 |
+msql_connect                  2.0    3.0 |
+msql_create_db                       3.0 |
+msql_createdb                 2.0    3.0 |
+msql_data_seek                       3.0 |
+msql_dbname                   2.0    3.0 |
+msql_drop_db                         3.0 |
+msql_dropdb                   2.0    3.0 |
+msql_fetch_field                     3.0 |
+msql_fetch_row                       3.0 |
+msql_field_seek                      3.0 |
+msql_fieldflags               2.0    3.0 |
+msql_fieldlen                 2.0    3.0 | mSQL support
+msql_fieldname                2.0    3.0 |
+msql_fieldtype                2.0    3.0 |
+msql_freeresult               2.0    3.0 |
+msql_listdbs                  2.0    3.0 |
+msql_listfields               2.0    3.0 |
+msql_listtables               2.0    3.0 |
+msql_num_fields                      3.0 |
+msql_numfields                2.0    3.0 |
+msql_num_rows                        3.0 |
+msql_numrows                  2.0    3.0 |
+msql_pconnect                        3.0 |
+msql_query                           3.0 |
+msql_result                   2.0    3.0 |
+msql_regcase                  2.0    3.0 |
+msql_tablename                2.0    3.0 |

@@ -1,0 +1,147 @@
+Migrating functionality:
+
+Adding new internal functions to the parser involves the following:
+1.  Writing the function code (described below).  The code shouldn't go
+into internal_functions.c (that includes the internal function API
+implementation), but rather, into basic_functions.c or some new .c file.
+
+2.  Registering the function in the internal_functions[] array, located in
+internal_functions.c.  The first field of the internal_function is the
+function name, which should be a lower-case string.  The second is a function
+pointer of type (void (*)(INTERNAL_FUNCTION_PARAMETERS)), to the C-function that 
+handles this function.  The third, is whether or not the function is compiled in
+this compilation.
+
+3.  Adding an extern declaration in internal_functions.h or some .h file
+that is included from it for the added function.
+
+4.  Updating the Makefile with the proper dependencies, if any (for
+instance, if a new .h file is included from internal_functions.h, this file
+should be added to internal_functions.h's dependency list).
+
+No changes to the lexical and syntactic scanners are required (they
+wouldn't be recompiled either if dependencies are properly kept).
+
+The API itself:
+
+We've already implemented a few functions, so one way to understand it
+would be looking at basic_functions.c.  In a function, there are basically
+3 things one does - accepting arguments, executing the actual function
+code, and returning a result.  All arguments in our parser are of type
+YYSTYPE *.  YYSTYPE has a .value property, which is a union for all possible
+values of the variable.  It also contains a .type property, which denotes
+the currently active type for the variable.
+
+Variables are passed to internal functions using the HashTable structure.
+However, one should not mess with the HashTable directly in order to obtain
+these arguments, but use the getParameters() function instead.
+getParameters() accepts the hash table, the amount of expected arguments
+and a list of YYSTYPE **, and updates these YYSTYPEs with the
+arguments.  For example, if one expects two arguments, the beginning of the
+function would look similar to this (the hashtable pointer is called ht):
+
+void php3_foo(INTERNAL_FUNCTION_PARAMETERS)
+{
+  YYSTYPE *arg1, *arg2;
+  if (getParameters(ht,2,&arg1,&arg2)==FAILURE) {
+    WRONG_PARAM_COUNT;
+  }
+  ...
+}
+
+getParameters() would accept any number of arguments, but the number of
+these arguments MUST match the argument_count that's supplied (e.g., if one
+writes getParameter(ht,2,&arg1); this would break the program!).
+In addition, the macro ARG_COUNT(ht) returns the number of arguments
+supplied, which can be used for functions that accept a variable amount of
+arguments.  These kind of functions can benefit from the
+getParametersArray() function.  It's similar to getParameters(), only it
+accepts an array of YYSTYPE * as an argument, instead of a list of YYSTYPE *'s.
+ e.g., if one calls getParametersArray(ht,7,yystype_array), the first
+argument to the function would be placed in yystype_array[0], the second at
+yystype_array[1], etc.  Again, the array size must be big enough to contain
+the supplied argument_count.  This can be used to implement functions that
+accept an arbitrary amount of arguments.
+
+Executing the function code would probably have to use the argument values.
+Using them is easy, but one must remember that only one type is valid for
+each argument at any given time.
+The longint value is stored at arg->value.lval, with arg->type set to IS_LONG.
+The double value is stored at arg->value.dval, with arg->type set to IS_DOUBLE.
+The string value is stored at arg->value.strval, with arg->strlen set to the
+length of the string, and arg->type set to IS_STRING.
+The array value is stored at arg->value.ht, with arg->type set to IS_ARRAY.
+Internal functions can be sent array values (this is kind of alpha, as we
+wrote the code during the time we were writing this line:).
+
+To be sure the arguments are in the expected format them to be, one can use
+convert_to_long(arg), convert_to_double(arg) and convert_to_string(arg)
+(there are a few other functions, such as convert_double_to_long() which
+would convert a double to long, but wouldn't convert a string).
+
+Return values should be assigned to the 'return_value' global variable, and
+its type should be properly set as well. If nothing is assigned to return_value
+the default is the FALSE empty string "".
+Here's a simple example of how to implement a simple concat() function as
+an internal function (completely useless as its supported at the parser
+level, but a good example):
+
+void php3_concat(INTERNAL_FUNCTION_PARAMETERS)
+{
+  YYSTYPE *arg1, *arg2;
+
+  if (getParameters(ht,2,&arg1,&arg2)==FAILURE) {
+    WRONG_PARAM_COUNT;
+  }
+  convert_to_string(arg1);
+  convert_to_string(arg2);
+  return_value.strlen = arg1->strlen+arg2->strlen;
+  return_value.value.strval = (char *) malloc (return_value.strlen+1);
+  if (!return_value.value.strval) {
+    var_reset(&return_value);  /* resets return_value to the empty string */
+    return;
+  }
+  strcpy(return_value.value.strval,arg1->value.strval);
+  strcat(return_value.value.strval,arg2->value.strval);
+  return_value.type = IS_STRING;
+}
+
+Another important difference is that no matter how many arguments are sent
+to a given function, the function doesn't have to accept them all, or even
+any of them, in order to maintain program flow (there's no stack to be
+ruined).  The hash table that's used by the internal function is cleaned
+automatically at the end of the function call by the internal function call
+handler.
+
+That about covers the internal function API.
+
+Another thing that you'd personally have to use is direct access to the
+global symbol table, so that you'd be able to add in the POST/GET variables
+(with magic quotes) and environment variables at startup.  As mentioned,
+this symbol table is implemented using a HashTable, and is named
+(shockingly) 'symbol_table'.
+
+Adding a new entry to it is simple, here's a sample function that adds (or
+updates) a (variable,value) set to the global symbol table:
+int add_pair(char *varname, char *value)
+{
+  YYSTYPE var;
+
+  var.value.strval = value;
+  var.strlen = strlen(value);
+  var.type = IS_STRING;
+
+  hash_update(&symbol_table, varname, strlen(varname), &var, sizeof(YYSTYPE));
+}
+
+Note that the char *value is inserted (indirectly) into the hash, and thus,
+must not be free()'d nor changed after the hash_update() call (one can run
+the yystype_copy_constructor(&var) before calling hash_update(), which
+duplicates all of the dynamic memory in the yystype, thus allowing the use
+of char *value freely after the hash_update() call).   The char *varname
+(which is used as the symbol table key) is copied inside the hash, and can
+be used and free()d later.
+
+Getting the hang of it may take some time, but once you get used to the few
+simple mentioned rules, adding new functionality is a breeze.
+
