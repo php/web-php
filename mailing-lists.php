@@ -2,6 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 site_header("Mailing Lists");
 
@@ -29,16 +30,20 @@ if (isset($_POST['maillist'])) {
         $sub = str_replace("@", "=", $_POST['email']);
         $remote_addr = i2c_realip();
 
-        // Try to send mail
-        $mail_sent = mail(
-            "$maillist-$request-$sub@lists.php.net",
-            "Website Subscription", 
-            "This was a request generated from the form at http://php.net/mailing-lists.php by $remote_addr.",
-            "From: {$_POST['email']}\r\n"
+        // Get in contact with master server to [un]subscribe the user
+        $result = posttohost(
+            "http://master.php.net/entry/subscribe.php",
+            array(
+                "request"  => $request,
+                "email"    => $_POST['email'],
+                "maillist" => $_POST['maillist'],
+                "remoteip" => $remote_addr,
+                "referer"  => $MYSITE . "mailing-lists.php"
+            )
         );
         
-        // Provide error if unable to send mail
-        if (!$mail_sent) {
+        // Provide error if unable to [un]subscribe
+        if ($result) {
             $error = "We were unable to subsribe you due to some technical problems.<br/ >" .
                      "Please try again later.";
         }
@@ -56,7 +61,7 @@ if (isset($_POST['maillist'])) {
 </p>
 <?php
     }
-    commonFooter();
+    site_footer();
     exit;
 }
 
@@ -304,7 +309,7 @@ function output_lists_table($mailing_lists)
 
 ?>
 
-<form method="post" action="http://www.php.net/mailing-lists.php">
+<form method="post" action="/mailing-lists.php">
 
 <h2><a name="general">General Mailing Lists</a></h2>
 
