@@ -217,6 +217,9 @@ endif;
 <? makeName("Sascha Schumann","sascha@schumann.2ns.de",0);?>
   <UL TYPE=DISC><li>Regex cache, speedups & bug fixes, mSQL improvement and various string and time functions</UL><BR>
 
+<? makeName("Andrew Skalski","askalski@chek.com",0);?>
+  <UL TYPE=DISC><li>FTP, IMAP</UL><BR>
+
 <? makeName("sopwith@redhat.com","sopwith@redhat.com",0);?>
   <UL TYPE=DISC><li>Solid</UL><BR>
   
