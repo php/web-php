@@ -65,7 +65,7 @@ function makeBorderTOC($this) {
             $title = eregi_replace(" functions\$", "", $title);
         }
         $SIDEBAR_DATA .= '&nbsp;' . 
-            make_link($url, make_image($img, $title) . $title ) .
+            make_link($url, make_image($img, "&middot;") . $title ) .
             "<br />";
     }
 
