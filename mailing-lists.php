@@ -188,7 +188,7 @@ if (isset($_POST['maillist'])) {
 
     'Smarty template engine project mailing lists',
     array (
-      'smarty-general', 'General user list',
+      'smarty-general', 'Smarty general user list',
       'This is a medium volume general list for Smarty users',
       FALSE, TRUE, TRUE, "php.smarty.general"
     ),
