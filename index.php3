@@ -11,6 +11,9 @@ complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI
 memory than version 2.  All users of version 2 are encouraged to
 upgrade.
 
+<P>The final version of PHP 3.0 has been released.  See the 
+<a href="news.php3">in the News</a> page for the release announcement 
+and the accompanying press release.
 
 <P>If you are new to PHP, a good place to start discovering the power of
 this language is by clicking on the &quot;Source&quot; button in the

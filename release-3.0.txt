@@ -1,0 +1,57 @@
+PHP 3.0 is finally here!  After 10 months of development PHP Version 3.0
+is ready for production environments.  Coupled with the release of the
+final version of Apache-1.3.0 today, the combination provides an
+unbeatable web hosting platform suitable for both small and large web
+sites. 
+
+PHP 3.0 is the latest evolution of the PHP/FI 2.0 language and it offers 
+some dramatic enhancements.  It is more than twice as fast, it uses less
+memory, it has a more consistent language implementation and a much wider
+set of expressions and language features than PHP/FI 2.0.  An included
+conversion program will help you migrate your PHP2 scripts to PHP3. 
+
+There are too many changes and enhancements to list each one here, but
+some of the key points are: 
+
+ * Persistent database connections for selected databases
+ * New language constructs such as for loops and multi-dimensional arrays
+ * A well-defined C API which lets you extend PHP yourself
+ * Dynamically loadable modules
+ * Run-time configuration of most PHP options
+
+For a more detailed description of the differences between PHP2 and PHP3,
+see http://www.php.net/changes.php3
+
+The people behind PHP3 are:
+
+Zeev Suraski and Andi Gutmans who speerheaded the new and improved parser
+which is the heart and soul of PHP.  Zeev also rewrote many of the
+database modules and implemented persistent connections.
+
+Stig Bakken who along with writing the Oracle support and many other
+important PHP3 features has worked tirelessly on the SGML framework for
+the online manual which you can see at http://www.php.net/manual/. 
+
+Shane Caraveo is the Windows developer in the group.  He performs magic
+with Unix-specific code and somehow makes it work well on Windows.  He is
+currently locked away in a small room making PHP multithread safe on
+Windows with the goal being to get the Windows-based PHP ISAPI parser
+running smoothly. 
+
+Jim Winstead who helped streamline the URL grokking code which allows you 
+to open up http and ftp url's directly from various PHP commands.  Jim 
+also fixed some very complex regular expression code, added dBase support
+along with various other important bits and pieces.
+
+Rasmus Lerdorf who has been developing bits and pieces of PHP for years.
+
+Although the above 6 people are the core contributors to the project,
+countless others have contributed code, bug fixes and suggestions.  The
+PHP project would have been completely impossible without these people. 
+For a more detailed list of who has contributed to this projects have a
+look at http://www.php.net/credits.php3
+
+PHP can be downloaded in both source and binary form from
+http://www.php.net It is an Open Source project and can be used free of
+charge for both commercial and non-commercial purposes.  See the license
+included with the PHP distribution for full details.

@@ -2,7 +2,14 @@
 require("shared.inc");
 commonHeader("PHP in the News");
 ?>
+
 <DL>
+<dt><b>PHP 3.0 Press Release: <a href="/press-release-3.0.txt">Writing an article about PHP3? - read this</a></b>
+<p>
+
+<dt><b>PHP 3.0 Released!: <a href="/release-3.0.txt">Read the release announcement here</a></b>
+<p>
+
 <dt><b>UnixWorld Online: <a href="http://www.unixworld.com/archives/95/tutorial/018.html">Linux, SQL, and the Web</a></b>
 <dd>Charles J. Fisher walks through the steps required to get Linux, PostgreSQL and PHP3 to talk to each other.
 <p>
