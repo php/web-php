@@ -61,19 +61,23 @@ function language_choose_code()
     if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
         
         // Put language into preference list
-        language_add($flang[1], $languages);
+        $flang = language_add($flang[1], $languages);
+        
+        // Set explicity specified language
+        if (empty($explicitly_specified)) {
+            $explicitly_specified = $flang;
+        }
         
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
             "!^/$flang[1]/!", "/", $_SERVER['REQUEST_URI']
         );
-        
-        // No need to set $explicitly_specified here, as no page will
-        // be displayed, only a Location header is sent back to the user.
+    
     }
 
     // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
     if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
+        
         $flang = language_add($flang[1], $languages);
 
         // Set explicity specified language
