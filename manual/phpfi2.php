@@ -11,7 +11,7 @@ when it is bad, it is better than nothing.
                 ++ Dick Brandon 
 -->
 
-  <h1 align="center">PHP/FI Version 2.0</h1>
+  <h1 style="text-align: center;">PHP/FI Version 2.0</h1>
 
   <h1>Table of Contents</h1>
 
