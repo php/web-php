@@ -22,7 +22,7 @@ the server and bandwidth for www.php.net.
 
 <p>
 <?php print_link("http://www.rackspace.com/", "Rackspace"); ?> provides
-the server and bandwidth for various php.net services.
+the server and bandwidth for various php.net websites.
 </p>
 
 <p>
@@ -35,11 +35,14 @@ And special thanks to all the companies who donate server space and bandwidth to
 our international array of <?php print_link("/mirrors.php", "mirror sites");?>.
 </p>
 
-<p>
-Special 'legacy' thanks go to <?php print_link("http://www.synacor.com", "Synacor"); ?>. 
-Synacor provided us with many terabytes of bandwidth and hosting for www.php.net and others for many years. 
-PHP.net is very grateful for all their support.
+<h1>Thanks Emeritus</h1>
+<p>Special 'legacy' thanks go to the people and companies who have helped us in our past.</p>
+
+<p><?php print_link("http://www.synacor.com", "Synacor"); ?> provided us with many terabytes of 
+bandwidth and hosting for www.php.net and others for many years. PHP.net is very grateful for all their support.
 </p>
 
+<p><?php print_link("http://www.vasoftware.com", "VA Software Corp."); ?> helped us by donating a server and resources
+to enable us to build manuals and distribute our content via rsync. We appreciate all their support.</p>
 
 <?php commonFooter(); ?>

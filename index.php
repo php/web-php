@@ -63,8 +63,8 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
 &nbsp; ' . make_link("http://promote.pair.com/direct.pl?php.net", "pair Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackshack.net/", "RackShack") . ' <br>
+&nbsp; ' . make_link("http://www.redundant.net/", "Redundant Networks") . '<br>
 &nbsp; ' . make_link("http://www.rackspace.com/?supbid=php.net", "Rackspace") . '<br>
-&nbsp; ' . make_link("http://vasoftware.com/", "VA Software Corporation") . '<br> 
 <h3>Related sites</h3>
 &nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
 &nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br>
@@ -74,6 +74,7 @@ make_link("http://www.apache.org/","Apache Software Foundation") . '.
 &nbsp; ' . make_link("http://www.devnetwork.net/", "PHP Developers Network") . '<br>
 &nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
 &nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
+&nbsp; ' . make_link("http://www.opensource.org/", "OpenSource") . '<br> 
 
 <h3>Contact</h3>
 
