@@ -38,6 +38,7 @@ function makeName($name,$email,$size) {
 <li>Apache module support
 <li>SNMP module
 <li>Original mSQL, MySQL and Sybase modules
+<li>Oracle module work
 <li>Project Coordinator
 </UL><BR>
 
@@ -114,7 +115,7 @@ function makeName($name,$email,$size) {
   <UL TYPE=DISC><li>Prototype cop, regular expression code fixes and CGI security issues</UL><BR>
 
 <? makeName("Andreas Karajannis","Andreas.Karajannis@gmd.de",0);?>
-  <UL TYPE=DISC><li>Adabas D, ODBC</UL><BR>
+  <UL TYPE=DISC><li>Adabas D, ODBC, Oracle</UL><BR>
 
 <? makeName("Muhammad A Muquit","MA_Muquit@fccc.ed",0);?>
   <UL TYPE=DISC><li>Original Sybase module</UL><BR>
