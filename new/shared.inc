@@ -323,7 +323,10 @@ reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
 	$place=$mirror_sites[$site][1];
-	echo "<OPTION VALUE='$site'>$place";
+	$type=$mirror_sites[$site][4];
+	if ($type==1):
+		echo "<OPTION VALUE='$site'>$place";
+	endif;
 endwhile;
 ?>");
 document.write("</SELECT><INPUT TYPE='image' SRC='gifs/b-go.gif' ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0></FORM>");

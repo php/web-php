@@ -10,7 +10,10 @@ reset($mirror_sites);
 while ($site = key($mirror_sites)):
 	next($mirror_sites);
 	$place=$mirror_sites[$site][1];
-	echo "<OPTION VALUE=\"$site\">$place\n";
+	$type=$mirror_sites[$site][4];
+	if ($type==1):
+		echo "<OPTION VALUE=\"$site\">$place\n";
+	endif;
 endwhile;
 ?></SELECT>
 <INPUT TYPE="image" SRC="gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HEIGHT=21 BORDER=0><BR>
