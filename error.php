@@ -178,10 +178,12 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     
-    "news.php"           => "news-2003", // BC
-    "README.mirror"      => "mirroring", // BC
-    "ZEND_CHANGES.txt"   => "zend-engine-2.php", // BC
-    "zend2_example.phps" => "zend-engine-2.php", // BC
+    "news.php"                     => "news-2003", // BC
+    "README.mirror"                => "mirroring", // BC
+    "ZEND_CHANGES.txt"             => "zend-engine-2.php", // BC
+    "zend2_example.phps"           => "zend-engine-2.php", // BC
+    "ZEND_CHANGES_PHP_5_0_0b2.txt" => "zend-engine-2.php", // BC
+    
     "manual/about-notes.php" => "manual/add-note", // BC
     
     # external shortcut aliases ;)

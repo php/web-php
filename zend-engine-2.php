@@ -405,18 +405,6 @@ class Foo {
 echo "Foo::constant = " . Foo::constant . "\n";
 ?>'); ?>
 <p>
- PHP 5 allows for expressions within constants, however, constants are
- evaluated at compile time, therefore no constants can be declared that
- rely on runtime information.
-</p>
-<?php highlight_php('<?php
-class Bar {
-    const a = 1<<0;
-    const b = 1<<1;
-    const c = a | b;
-}
-?>'); ?>
-<p>
  Old code that has no user-defined classes or functions named 'const'
  will run without modifications.
 </p>
