@@ -71,8 +71,9 @@ PHP 4.2.0 Release Announcement
  two things to use the variable:</p>
 <ol>
  <li>Access the form variable with $_GET['foo']</li>
- <li>Turn register_globals on in php.ini, but visit the resources
-  below first to give you a nice insight in why register_globals is bad.</li>
+ <li>Turn register_globals on in php.ini, but visit the resources below first
+  to give you a nice insight why register_globals can lead to security
+  issues.</li>
 </ol>
 <p>The following resources explain what the register_globals php.ini option
  does and which problems may arise using it:</p>
@@ -104,7 +105,7 @@ PHP 4.2.0 Release Announcement
  <li>Register globals is <b>off!</b> by default</li>
  <li>Overhaul of the sockets extension</li>
  <li>Highly improved performance with file uploads</li>
- <li>The satellite and mailparse extensions were moved to PECL and are not longer 
+ <li>The satellite and mailparse extensions were moved to PECL and are no longer 
   bundled with the official PHP release.</li>
  <li>The posix extension has been cleaned up.</li>
  <li>iconv handling has been improved</li>
@@ -115,5 +116,9 @@ PHP 4.2.0 Release Announcement
  <li><b>LOTS</b> of fixes and new functions</li>
 </ul>
 
+<p>
+For a full list of changes in PHP 4.2.0, see the
+<a href="http://cvs.php.net/co.php/php4/NEWS?r=1.885.2.19">NEWS</a> file.
+</p>
 
 <?php commonFooter(); ?>
