@@ -10,6 +10,10 @@ not even compile properly.  The advantage of using CVS, though,
 is that you can get the latest fixes and updates, without having
 to wait for the official releases.</p>
 
+<p>You can find more information about CVS, and
+download clients for most major platforms, at <a
+href="http://www.cvshome.org/">CVShome.org</a>.</p>
+
 <p>Getting the PHP 4.0 CVS version to work is a bit more complicated
 than it is for PHP 3.0 for two main reasons - first, the engine,
 Zend, has been separated from the main language tree, and resides
