@@ -118,6 +118,12 @@ right away.</blockquote>
 	site("PalmShop","www.palmshop.de");
 	siteEnd();
 
+/* Internet Services */
+	title("Internet Services");
+	siteStart();
+	site("easyDNS","www.easydns.com");
+	siteEnd();
+
 /* ISP's */
 	title("ISP's");
 	siteStart();
