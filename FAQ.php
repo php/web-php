@@ -378,8 +378,6 @@ If you have suggestions, corrections or additions, send them to
     On Windows 95/NT machines, you can simply use the included ODBC support
     and the correct ODBC driver.
 
-    <p>A copy of step-by-step ODBC setup can be found <a href="/manual/config-odbc.html">here</a>.
-
     <p>On Unix machines, you can use the Sybase-CT driver
     to access Microsoft SQL Servers because they are (at
     least mostly) protocol-compatible. Sybase has made a <A
