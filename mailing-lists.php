@@ -91,7 +91,7 @@ if (isset($_POST['maillist'])) {
 
 <p>
  Some PHP.net subsites have their own project specific pages about mailing
- lists. You can find the <a href="http://pear.php.net/support.php">PEAR
+ lists. You can find the <a href="http://pear.php.net/support/lists.php">PEAR
  mailing lists</a>, the <a href="http://pecl.php.net/support.php">PECL
  mailing lists</a>, the <a href="http://gtk.php.net/resources.php">PHP-GTK
  mailing lists</a>, and the
