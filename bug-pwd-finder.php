@@ -1,5 +1,5 @@
 <?
-/* See the end of the script for the table layout. */
+/* See bugs.php for the table layout of bugdb. */
 
 require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
@@ -37,7 +37,7 @@ if ($bug_id)
 	list ($email, $passwd) = mysql_fetch_row ($result);
 	$passwd = stripslashes ($passwd);
 
-	mail ($email, "Password for bug report #$bug_id", "The password from bug report #$bug_id is $password.", "From: noreply@php.net")
+	mail ($email, "Password for bug report #$bug_id", "The password for bug report #$bug_id is $passwd.", "From: noreply@php.net")
 		or die ("Sorry. Mail could not be sent at this time. Please try again later.");
 
 	$msg = "The password for bug report #$bug_id has been sent to $email.";
@@ -53,7 +53,7 @@ commonHeader("Bug Reporting");
 <p>If you need to modify a bug report that you submitted, but have forgotten what password you used, this utility can help you.</p>
 <p>Enter in the number of the bug report, press the Send button and the password will be mailed to the email address specified in the bug report.</p>
 
-<?php $msg and print "<p>$msg</p>";?>
+<?php $msg and print "<p><font color="#CC0000">$msg</font></p>";?>
 
 <p><b>Bug Report ID:</b> #<input type=text size=20 name="bug_id" /> <input type="submit" value="Send" /></p>
 </form>
