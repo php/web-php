@@ -531,14 +531,11 @@ dead
     Home of PHP French documentation, with comprehensive
     technical information, and all PHP related news
    </li>
-<!--
-Not a French web site anymore
    <li>
-    <a href="http://www.phpdebutant.com/">phpdebutant</a><br />
+    <a href="http://www.phpdebutant.org/">phpdebutant</a><br />
     Apprendre le PHP par l'exemple, facilement et simplement.
     R&eacute;serv&eacute; d'abord aux d&eacute;butants.
    </li>
--->
    <li>
     <a href="http://www.phpfr.org/">phpfr</a><br />
     Le site de r&eacute;f&eacute;rence sur PHP en France!
