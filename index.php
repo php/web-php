@@ -45,7 +45,8 @@ echo "\n<!--$MYSITE-->\n";
 <font class="newsDate">[30-Apr-2001]</font>
 <a href="downloads.php">PHP 4.0.5</a> is a maintenance release, that features many bug fixes from
 PHP 4.0.4, as well as output compression, new experimental
-FastCGI support, and significantly improved thread-safe versions.
+FastCGI support, and significantly improved thread-safe versions.  For a full list of
+changes, check out the <a href="/ChangeLog-4.php">Change Log</a>.
 <br clear="all">
 </p>
 
