@@ -6,31 +6,24 @@ php.online.bg
 br	br.php.net	<accdias@sst.com.br>	200.223.126.4
 ca	php.easydns.com	Colin Viebrock <cmv@privateworld.com>	205.210.42.153
 ch	ch.php.net	prochat@lbdsun.epfl.ch	128.178.77.33
-#cl	cl.php.net	dan@amerikanclaris.com	php.labs.amerikanclaris.cl
 cn	cn.php.net	Yu Sun <yusun@atwell.co.jp>,mirror@linuxforum.net	210.77.60.220 
 #cz	www.php.cz	jap@maya.cz	212.24.129.2
 de	www.php3.de	smartin@schlund.de	62.104.64.10
 de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	mkyed@borsen.dk	194.239.128.56
 es	es.php.net	alfre@ibd.es	195.55.198.14
-#fi	fi.php.net	masa@netlife.fi	195.170.139.154	contact unreachable (bounces)
 fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
-#id	id.php.net		202.146.0.241
-#il	il.php.net	Zeev Suraski <zeev@php.net>	199.203.100.253	same as php.netvision.net.il
-#il	machba.il.php.net		132.68.252.253	same as php.technion.ac.il
 it	it.php.net	fmal@fmal.com	php.fmal.com
 it	it2.php.net		www.php.uli.it
 jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
 kr      kr.php.net      JunSeon Oh <holywar@holywar.net>        php.holywar.net
-#lv	lv.php.net	Alex Petrov <sysman@pd.gov.lv>	159.148.45.25
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	200.36.127.163
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
 nl	php.nederland.net	Sander Steffann <steffann@nederland.net>	193.67.110.5 
 no	no.php.net	Stig Bakken <stig@guardian.no>	195.1.254.5	same as php.guardian.no
-#nz	nz.php.net		php.manawatu.net.nz
 pl	pl.php.net	grych@tgr.com.pl	php.tgr.com.pl
 pt	pt.php.net	melo@co.telenet.pt	php.telenet.pt
 pt	pt2.php.net	jfa@mail.sonet.pt	195.8.11.34
@@ -39,16 +32,12 @@ ru	ru.php.net	Roma Kuzmin <kuzmin@directnet.ru>	195.222.162.101
 se	se.php.net	Kalle Kiviaho <kivi@ios.chalmers.se>	129.16.214.87
 sg      sg.php.net      Chen Shiyuan <csy@hjc.edu.sg>           php.hjc.edu.sg
 sk	sk.php.net	bednar@isternet.sk	195.72.0.6
-tr	tr.php.net		php.bilkent.edu.tr	inactive - removed from mirrors array
 tw	tw.php.net	Eagle Chao <ccgeagle@ms6.hinet.net>	php.dw.com.tw
 ua	ua.php.net	Alexander Ivanov <sander@paco.net>	php.paco.net.ua
 ua	ua2.php.net	Max Khaikin <max@alkar.net>	php.ndot.com.ua
 uk	uk.php.net	Gareth Watts <gareth@omnipotent.net>	194.73.160.93
-#uk	uk2.php.net	David Sean McNicholl <dave@infonaut.net>	194.73.200.202
 us	www.php.net	core@php.net	208.247.106.167
 us	us.php.net	Troy Cobb <tcobb@staff.circle.net>	209.95.65.70
 us	us2.php.net	Gary Shaver <gshaver@he.net>, Mike Leber <mleber@he.net>	php.he.net
-#us	us3.php.net	Anton Olsen <aolsen@murl.com>	208.244.78.206
 us	us4.php.net	Hans Kind <hans@kindserver.com>	208.230.143.24	same as php.myphp.net
-#us	php.calinet.com	dave@calinet.com	206.190.76.37
 za	za.php.net	<php@mikom.csir.co.za>	146.64.8.136
