@@ -156,8 +156,32 @@ commonHeader("Hypertext Preprocessor");
  <span class="newsdate">[30-Oct-2003]</span>
  <a href="http://www.php.net/downloads.php">PHP 5.0.0 Beta 2</a> has been released.
  This is the first feature complete version of PHP 5, and we recommend for PHP users
- to try it out although it is not yet ready for production use.
+ to try it. PHP 5 is still not ready for production use!
 </p>
+<p>
+ Some of the more major changes include:
+</p>
+<ul>
+ <li>
+  PHP 5 features the Zend Engine 2.
+ </li>
+ <li>
+  XML support has been completely redone in PHP 5, all extensions are now focused around the
+  excellent libxml2 library (<a href="http://www.xmlsoft.org/">http://www.xmlsoft.org/</a>).
+ </li>
+ <li>
+  SQLite has been bundled with PHP. For more information on SQLite, please visit their
+  <a href="http://www.hwaci.com/sw/sqlite/">website</a>.
+ </li>
+ <li>
+  A new SimpleXML extension for easily accessing and manipulating XML as PHP objects. It can
+  also interface with the DOM extension and vice-versa.
+ </li>
+ <li>
+  Streams have been greatly improved, including the ability to access low-level socket
+  operations on streams.
+ </li>
+</ul>
 <p>
  There have been many changes since Beta 1, some of them documented in the
  <a href="http://www.php.net/NEWS_PHP_5_0_0b2.txt">NEWS file</a> and most language
