@@ -599,6 +599,11 @@ site_header("Links");
   <strong>Italian</strong>
   <ul>
    <li>
+    <a href="http://freephp.html.it/">FreePHP.HTML.it</a><br />
+    The biggest Italian speaking source for PHP: daily updated links
+    to scripts, articles, tutorials and many other resources.
+   </li>
+   <li>
     <a href="http://www.tutorials.it/">Tutorials.it</a><br />
     An Italian site that provides a variety of developer tutorials,
     with a small PHP section
