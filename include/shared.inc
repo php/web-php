@@ -252,7 +252,7 @@ function makeSideButton($url,$button,$kick,$gif,$width,$height,$vspace,$hspace,$
 function commonHeader($title) {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $FRAMEMODE, $FONTFACEATTR, $HTDIG;
 	global $PHP_SELF, $HTTP_REFERER, $FONTFACE, $COUNTRIES, $MIRRORS, $MYSITE;
-	global $HAVE_STYLE,$HAVE_SEARCH;
+	global $HAVE_STYLE;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	global $DISABLE_KICKOUTS;
 	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
@@ -439,6 +439,11 @@ endif; ?>
      </TD>
      <TD ALIGN=right>
       <?
+		if ($HAVE_SEARCH):
+			$form=$PHP_SELF;
+		else:
+			$form="http://uk.php.net/search.php3";
+		endif;
 		if($title=="Show Source"):
 			makeSideButton("","sour","","source",1,1,0,0,"","");
 			makeSideButton($HTTP_REFERER,"close","","close",75,30,9,5,"Close this source page","");
@@ -446,13 +451,8 @@ endif; ?>
 			makeSideButton("","close","","close",1,1,0,0,"","");
 			makeSideButton("/source.php3?page_url=$PHP_SELF","sour","","source",75,30,9,5,"View the source code for this page","");
 		endif;
-		if ($HAVE_SEARCH):
-			makeSideButton("/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
-		else:
-			makeSideButton("http://ca.php.net/search.php3","sear","searchKick","search",75,30,9,5,"Search the site","");
-		endif;
-      ?><IMG 
-         SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
+		makeSideButton("$form","sear","searchKick","search",75,30,9,5,"Search the site","");
+      ?><IMG SRC="/gifs/cap-right.gif" WIDTH=24 HEIGHT=48 BORDER=0><BR></TD>
     </TR>
    </TABLE>
    <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 width="100%">
@@ -472,10 +472,11 @@ endif; ?>
 
 function commonFooter() {
 	global $NS4, $NS3, $IE3, $IE4, $X11, $HAVE_STYLE, $FRAMEMODE, $FONTFACEATTR, $HTTP_USER_AGENT, $HTDIG;
-	global $MIRRORS,$MYSITE, $COUNTRIES;
+	global $MIRRORS, $MYSITE, $COUNTRIES;
 	global $NEXT, $PREV, $UP, $HOME, $TOC;
 	global $DISABLE_KICKOUTS;
 	$country=$MIRRORS[$MYSITE][0];
+	$HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 ?>
       <!-- end body -->
      </TD>
@@ -530,8 +531,11 @@ function commonFooter() {
       <TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
        <TR VALIGN=middle>
         <TD align=center>
-         <FONT<? echo $FONTFACEATTR; ?> SIZE=2>
-         <FONT SIZE=1><I>Located in</I></FONT><BR><? echo $COUNTRIES[$country]; ?></TD>
+<?	if (!$HTDIG):
+		echo "<FONT $FONTFACEATTR SIZE=2>\n";
+		echo "<FONT SIZE=1><I>Located in</I></FONT><BR>".$COUNTRIES[$country];
+	endif; ?>
+	  </TD>
         <TD><? spc(5,1);?></TD>
         <TD>
          <IMG SRC="/gifs/flag-<? echo $country; ?>.gif" BORDER=0></TD>
@@ -572,24 +576,30 @@ endwhile;
 <? kickFooter("mirrorsKick","mirr",350);?>
 </DIV>
 
+<?
+if ($HAVE_SEARCH):
+	$form=$PHP_SELF;
+else:
+	$form="http://uk.php.net/search.php3";
+endif;
+?>
+
 <DIV ID='searchKick' STYLE="POSITION: absolute; Z-INDEX: 20; VISIBILITY: hidden; TOP: 0px; LEFT: 0px;">
 <? kickHeader(-35,'top',300);
-if ($HAVE_SEARCH):
-	echo "<FORM ACTION='/search.php3' METHOD='POST'>\n";
-else:
-	echo "<FORM ACTION='http://ca.php.net/search.php3' METHOD='POST'>\n";
-endif;?>
+if (!isset($prevsearch)):
+	$prevsearch[0]="";
+endif;
+echo "<form action='$form' METHOD='POST'>\n"; ?>
 <B>What are you searching for:</B><BR>
-<FONT SIZE=3><input type='text' name='pattern' size=20></FONT><BR>
+<FONT SIZE=3><input type='text' name='pattern' size=20 VALUE='<? echo $prevsearch[0];?>'></FONT><BR>
 <FONT SIZE=2>
-<input type='checkbox' name='icase'> case sensitive<BR>
-<input type='checkbox' name='words'> match whole words only<BR>
-<input type='checkbox' name='fuzzy'> approximate search<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
-<input type='hidden' name='st_num' value='1'><input type='hidden' name='psize' value='10'>
-</form>
+<INPUT TYPE='RADIO' NAME='show' VALUE='nosource' CHECKED> Search whole site<BR>
+<INPUT TYPE='RADIO' NAME='show' VALUE='manual'> Search documentation only<BR>
+<INPUT TYPE='RADIO' NAME='show' VALUE='source'> Search source code only
+<INPUT TYPE='image' SRC='/gifs/b-go.gif' ALIGN=right WIDTH=36 HEIGHT=21 hspace=3 BORDER=0><BR>
+</FORM>
 <? kickFooter("searchKick","sear",300);?>
 </DIV>
-
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
