@@ -75,6 +75,23 @@ if($fp) {
 commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
+<?php /* move this entry to the top when you update it! */ ?>
+
+<h1>
+<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
+New Usage Stats For November available
+</h1>
+
+<p>
+<font class="newsDate">[02-Dec-2001]</font>
+<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
+<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
+published the <?php print_link("/usage.php", "current results"); ?> for their Web 
+Server surveys.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
 
 <h1>Windows Manual Survey Results</h1>
 
@@ -110,24 +127,6 @@ by visiting one of the photo galleries put together by attendees:
     <li><?php print_link("http://www.bttr.org/phpconf/", "Ralf Geschke"); ?></li>
     <li><?php print_link("http://www.php-conference.de/2001/images/PHP_Konferenz/", "Conference photos"); ?></li>
 </ul>
-<br clear="all">
-</p>
-
-<?php echo hdelim(); ?>
-
-<?php /* move this entry to the top when you update it! */ ?>
-
-<h1>
-<?php print_link("/usage.php", make_image("stats-small.gif", "PHP Usage Stats", "right") ); ?>
-New Usage Stats For October available
-</h1>
-
-<p>
-<font class="newsDate">[01-Nov-2001]</font>
-<?php print_link("http://www.netcraft.com/", "Netcraft"); ?> and 
-<?php print_link("http://www.securityspace.com/s_survey/", "SecuritySpace" ); ?> have
-published the <?php print_link("/usage.php", "current results"); ?> for their Web 
-Server surveys.
 <br clear="all">
 </p>
 

@@ -3,23 +3,23 @@ require_once 'prepend.inc';
 commonHeader("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for September 2001</h1>
+<h1>Usage Stats for November 2001</h1>
 
 <p>
-PHP: 6,624,340 Domains, 979,572 IP Addresses<br>
+PHP: 7,095,691 Domains, 1,046,426 IP Addresses<br>
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br>
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200110.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200111.png", "Graph"); ?>
 </p>
 <p>
-There have been some shakeout in the large-scale shared hosting space 
-related to the .com crash and combine with some routing issues in 
+There has been some shakeout in the large-scale shared hosting space 
+related to the .com crash and combined with some routing issues in 
 Germany which caused 5-10% of German servers not being able to
 respond to the Netcraft queries.  This hurt the PHP total domain
-numbers a bit, but the number of unique ips seen running PHP is still up.
-
+numbers a bit in recent months, but they appear to be back up nicely
+as of November's numbers.
 </p>
 <p>
 You can also see how popular PHP is relative to other Apache modules
