@@ -146,7 +146,7 @@ commonHeader("Hypertext Preprocessor");
 ?>
 
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
-<h1>>Speakers Announced for PHP West Conference on Web Services</h1>
+<h1>Speakers Announced for PHP West Conference on Web Services</h1>
 <p>
  <span class="newsdate">[22-Dec-2004]</span>
  <a href="http://www.phpwest.com">PHP West</a> is holding a conference
