@@ -45,13 +45,18 @@ echo "\n<!--$MYSITE-->\n";
 Mailing Lists temporarily unavailable
 </h1>
 <p>
-<font class="newsDate">[02-Jun-2001]</font>
+<font class="newsDate">[15-Jun-2001]</font>
 While the CVS repository has been reactivated, we are still
 working on reestablishing our mailing list infrastructure.
 We will keep you posted about the progress. Thank
 you for your patience.  Note also that the PDF version of the
 documentation is also unavailable until further notice.
 <br clear="all">
+These services are down due to the machine being hosted on a
+network that was hacked a couple of weeks ago.  We are working
+on securing alternate hosting facilities for these services.
+We will hopefully have everything back up within a week or
+so.
 </p>
 
 <? echo hdelim(); ?>
