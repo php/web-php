@@ -28,7 +28,7 @@ and/or non-commercial use all you want.  You can give it to your friends,
 print it out and hang it on your wall or eat it for lunch.  Welcome to
 the world of <a href="http://www.opensource.org">Open Source</a> software!  
 Smile, be happy, the world is good.  For the full legalese, see the 
-official <a href="license.txt">license</a>.
+official <a href="license.html">license</a>.
 
 <h3>Year 2000 Compliance</h3>
 
