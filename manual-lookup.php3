@@ -38,6 +38,10 @@ while (list($dummy, $file) = each($try_files)) {
     }
 }
 
+Header("Location: search.php3?pattern=".urlencode($function)."show=nosource");
+exit;
+
+
 require("shared.inc");
 CommonHeader("Quick Manual Reference");
 

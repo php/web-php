@@ -148,7 +148,7 @@ Restrict the search to: <BR>
 			exit;
 		}
 		if ($result[2]=="NOMATCH") {
-			echo "<B>Sorry, no documents matched your query.</B><BR><BR>";
+			echo "Sorry, no documents matched your search for<B>&quot;".$pattern."&quot;</B>.<BR><BR>";
 			echo "Click here for a <A HREF=\"$sourceurl\">New Search</A><BR><BR>\n";
 			commonFooter();
 			exit;
