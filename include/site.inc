@@ -122,6 +122,7 @@ $COUNTRIES = array(
 $LANGUAGES = array(
     'en' => 'English',
     'pt_BR' => 'Brazilian Portuguese',
+    'cs' => 'Czech',
     'nl' => 'Dutch',
     'fr' => 'French',
     'de' => 'German',
