@@ -158,7 +158,7 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[28-Aug-2003]</span>
  Chicago-based company <a href="http://servercentral.net/">Server Central</a> has donated PHP.net a brand new 
- server with a gigabit connection. The box is a dual 2.4Ghz machine with 2GB ram, so we're going to be using 
+ server with a gigabit connection. The box is a quad 2.4GHz machine with 2GB ram, so we're going to be using 
  it to power our more resource-intensive tasks, including building the manual.  Thanks, Server Central!
 </p>
 
