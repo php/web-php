@@ -743,6 +743,7 @@ site_header("Links");
 
 <ul>
  <li><a href="http://www.dice.com/">dice.com</a></li>
+ <li><a href="http://www.getafreelancer.com">getafreelancer.com</a></li>
  <li><a href="http://www.gnujobs.com/">gnujobs.com</a></li>
  <li><a href="http://www.hotjobs.com/">hotjobs.com</a></li>
  <li><a href="http://www.jobs.com/">Jobs.com</a></li>
