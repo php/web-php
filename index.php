@@ -32,18 +32,18 @@ make_link("/license/", "official license") . '.
 </p>
 
 <h3>' . make_link("/thanks.php", "Thanks To:") . '</h3>
-&nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<BR>
-&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<BR>
-&nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<BR>
-&nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<BR>
+&nbsp; ' . make_link("http://chek.com/", "Chek.com") . '<br>
+&nbsp; ' . make_link("http://www.easydns.com/?V=698570efeb62a6e2", "easyDNS") . '<br>
+&nbsp; ' . make_link("http://www.pair.com/", "pair Networks") . '<br>
+&nbsp; ' . make_link("http://valinux.com/", "VA Linux Systems") . '<br>
 <h3>Related sites:</h3>
-&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<BR>
-&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<BR>
-&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<BR>
-&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<BR>
+&nbsp; ' . make_link("http://www.apache.org/", "Apache") . '<br>
+&nbsp; ' . make_link("http://www.mysql.com/", "MySQL") . '<br>
+&nbsp; ' . make_link("http://www.postgresql.org/", "PostgreSQL") . '<br>
+&nbsp; ' . make_link("http://www.zend.com/", "Zend Technologies") . '<br>
 <h3>Community:</h3>
-&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<BR>
-&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<BR>
+&nbsp; ' . make_link("http://www.linuxfund.org/", "LinuxFund.org") . '<br>
+&nbsp; ' . make_link("http://www.osdn.org/", "OSDN") . '<br>
 ';
 
 commonHeader("Hypertext Preprocessor");
