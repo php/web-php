@@ -63,8 +63,8 @@ $uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES
 if ($uri[0] == "/") $uri = substr($uri,1);
 
 # handle common page shortcuts, like docs, links, support, etc.
-if (file_exists("$DOCUMENT_ROOT$uri.php")) {
-    header("Location: http://$SERVER_NAME$uri.php");
+if (file_exists("$DOCUMENT_ROOT/$uri.php")) {
+    header("Location: http://$SERVER_NAME/$uri.php");
 }
 
 # try to find the uri as a manual entry
