@@ -110,7 +110,7 @@ if ($process) {
             echo "<p>\n Thank you for your submission! You should hear back soon\n" .
                  " as to whether your event has been accepted for inclusion in\n" .
                  " our calendar.\n</p>";
-            commonFooter();
+            site_footer();
             exit;
         }
     }
