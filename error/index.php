@@ -206,7 +206,11 @@ if (isset($external_redirects[$URI])) {
 // Try to find the page using the preferred language as a manual page
 include_once "manual-lookup.inc";
 $try = find_manual_page($LANG, $URI);
-if ($try) { mirror_redirect($try); }
+if ($try) {
+    header('Status: 200 OK');
+    include_once $_SERVER['DOCUMENT_ROOT'] . $try;
+    exit;
+}
 
 // ============================================================================
 // If no match was found till this point, the last action is to start a
