@@ -164,6 +164,9 @@ $minute = rand(0, 59);
      Alias /stats/ /path/to/local/stats/
      SetEnv MIRROR_STATS 1
 
+     # Apache2 has 'AddHandler type-map var' enabled by default.
+     # Remove the comment sign on the line below if you have it enabled.
+     # RemoveHandler var
    &lt;/VirtualHost&gt;
 </pre>
    
