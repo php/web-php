@@ -156,7 +156,6 @@ $uri_aliases = array (
 );
 
 $external_redirects = array(
-    "phpdochowto" => "http://cvs.php.net/co.php/phpdoc/howto/howto.html.tar.gz?p=1",
     "php4news"    => "http://cvs.php.net/co.php/php4/NEWS?p=1"
 );
 
@@ -208,7 +207,10 @@ if ($function == "rev") {
 } elseif ($function == "blog") {
     header("Location: http://$SERVER_NAME/manual/$lang/build.log.gz");
     exit;
-}
+} elseif ($function == "phpdochowto") {
+    header("Location: http://$SERVER_NAME/manual/howto/index.html");
+    exit;
+}	
 
 // ============================================================================
 // Try to find the page using this language as a manual page (lang is the language
