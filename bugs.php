@@ -149,6 +149,7 @@ function show_types($first_item,$show_any,$var_name) {
 				   "Sybase (dblib) related",
 				   "Solid related",
 				   "Adabas-D related",
+				   "Informix related",
 				   "dBase related",
 				   "Session related",
 				   "WDDX related",
