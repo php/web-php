@@ -96,7 +96,7 @@ Versions t&eacute;l&eacute;chargeables <a href="http://dev.nexen.net/docs/php/ch
 <H1>CVS Account</H1>
 <ul>
 <li><a href="/version4/cvs.php">CVS instructions</a></li>
-<li><A href="/cvs-php3.php">Getting a CVS account</a>.  If you wish to help out
+<li><A href="/cvs-php.php">Getting a CVS account</a>.  If you wish to help out
 with the development of PHP, read this.
 </ul>
 
