@@ -85,7 +85,7 @@ bitten by them.
 </p>
 <p>
 Our recommendation is that people who already upgraded to PHP 4.1.0 do
-*not* upgrade to PHP 4.1.1, unless they're experiencing one of the
+not need to upgrade to PHP 4.1.1 unless they're experiencing one of the
 described bugs. Read the full
 <a href="/release_4_1_1.php">release announcement</a>.
 Windows binaries will be available later.
