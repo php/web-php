@@ -144,7 +144,7 @@ preliminary release is meant to kick-start this testing while the fixes are
 still being performed. Please join in and help us make this a high-quality
 release. You can use the build tracker at
 <a href="http://qa.php.net/buildtest-submit.php">http://qa.php.net/buildtest-submit.php</a>
-to report the your results.
+to report your results.
 
 <?php echo hdelim(); ?>
 
