@@ -62,19 +62,19 @@ function show_state_options($state, $show_all, $user_mode=0, $default="") {
 	
 	/* regular users can only pick states with type = 1 for unclosed bugs */
 	if($state != "All" && $state_types[$state] == 1 && $user_mode == 2) {
-		echo "<option>$state\n";
-		if($state != "Bogus") echo "<option>Closed\n";
+		echo "<option>$state</option>\n";
+		if($state != "Bogus") echo "<option>Closed</option>\n";
 	} else {
 		foreach($state_types as $type => $mode) {
 			if($mode == $user_mode || $user_mode < 2) {
 				echo "<option";
-				if($type == $state) echo " SELECTED";
-				echo ">$type\n";
+				if($type == $state) echo " selected";
+				echo ">$type</option>\n";
 			}
 		}
 		if($show_all) {
-			$sel = ($state == "All") ? "SELECTED" : "";
-			echo "<option $sel>All\n";		
+			$sel = ($state == "All") ? " selected" : "";
+			echo "<option$sel>All</option>\n";		
 		}
 	}
 }
@@ -85,7 +85,7 @@ function show_version_options($current,$default="") {
 		echo "<option", ($current == $v ? " selected" : ""), ">$v</option>\n";
 		if ($current == $v) $use++;
 	}
-	if (!$use) echo "<option selected>$current</option>\n";
+	if (!$use && $current) echo "<option selected>$current</option>\n";
 	echo "<option value=\"earlier\">Earlier? Upgrade first!</option>\n";
 }
 
@@ -110,7 +110,7 @@ function show_types($current,$show_any,$default="") {
 			if ($key == $current) $use++;
 		}
 	}
-	if (!$use) {
+	if (!$use && $current) {
 		echo "<option selected>$current</option>\n";
 	}
 }
