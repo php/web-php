@@ -171,7 +171,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 
 	$tables[] = "bugdb";
 	$fields[] = "id";
-	$fields[] = "bug_type as Bug Type";
+	$fields[] = "bug_type as Bug_Type";
 	$fields[] = "status as Status";
 	$fields[] = "php_version as Version";
 	$fields[] = "php_os as OS";
