@@ -100,6 +100,7 @@ right away.</blockquote>
 	site("FilmFrenzy.com","filmfrenzy.com");
 	site("HitList","www.hitlist.com");
 	site("KPIG Radio Station (Freedom, CA)","www.kpig.com");
+	site("prince.org","www.prince.org");
 	site("PromoPodium","www.promopodium.nl");
 	site("SummerWorks Theatre Festival","www.summerworks.on.ca");
 	site("Transcasts","www.transcasts.com");
