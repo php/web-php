@@ -46,7 +46,7 @@ PHP conventions in Europe
 </h1>
 <p>
 <font class="newsDate">[14-Jun-2001]</font>
-The second International PHP Conference, taking part in Frankfurt, Germany this coming November
+The second International PHP Conference, taking place in Frankfurt, Germany this coming November
 has been announced.  Further details are available on the 
 <a href="http://www.php-kongress.de/2001/index_en.php">official Web site</a>.
 </p>
