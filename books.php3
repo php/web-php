@@ -166,6 +166,19 @@ by Leon Atkinson<BR>
 </TR>
 
 <TR VALIGN="middle">
+<TD ALIGN="center"><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
+><IMG SRC="/gifs/2-212-09113-3.gif" BORDER=0 ALIGN="left"
+></A><BR>
+</TD>
+<TD><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
+>Programmation Web avec PHP</A><BR>
+by Laurent Lacroix, Christophe Lauer, Nicolas Leprince, Christophe Boggero<BR>
+<SMALL>in French</SMALL><BR>
+<SMALL>April 2000, ISBN 2-212-09113, 364 pages<BR>
+</TD>
+</TR>
+
+<TR VALIGN="middle">
 <TD ALIGN="center"><A HREF="http://www.kosek.cz/php/index.html"
 ><IMG SRC="/gifs/czech-book.jpg" BORDER=0 ALIGN="left"></A><BR>
 </TD>
