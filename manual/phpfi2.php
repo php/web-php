@@ -1,5 +1,7 @@
 <?php
-include_once 'prepend.inc';
+// $Id$
+$_SERVER['BASE_PAGE'] = '/manual/phpfi2.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader('PHP/FI Version 2.0 Documentation');
 ?>
 

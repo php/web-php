@@ -1,8 +1,5 @@
 <?php
-require_once '../include/prepend.inc';
-
-$lang = default_language();
-if (@is_dir($lang)) {
-  header("Location: $lang/");
-}
-header("Location: en/");
+// $Id$
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+mirror_redirect("/manual/$LANG/index.php");
+?>
