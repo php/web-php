@@ -5,11 +5,8 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 		exit;
 }
 
-	if (isset($version4)) {
-		$version4 = true;
-	}
-	else {
-		$version4 = false;
+	if ($version != 4 and $version != 3) {
+		$version = all;
 	}
 
 	function mydate($str) {
@@ -41,14 +38,23 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	}
 
 	commonHeader("Bug Stats");
+
+	if ($version > 0) {
+		$other = ($version == 4 ? 3 : 4);
+		echo '<p>Currently displaying PHP'. $version . ' bugs only. Display <a href="bugstats.php">all bugs</a> or <a href="bugstats.php?version=' . $other . '">only PHP' . $other . ' bugs</a>.</p>' . "\n";
+	}
+	else {
+		echo '<p>Currently displaying all bugs. Display <a href="bugstats.php?version=3">only PHP3 bugs</a> or <a href="bugstats.php?version=4">only PHP4 bugs</a>.</p>' . "\n";
+	
+	}
 	
 	mysql_connect("localhost","nobody","");
 	mysql_select_db("php3");
 
 	$query = "SELECT * from bugdb";
 
-	if ($version4) {
-		$query .= " WHERE php_version LIKE '4%'";
+	if ($version > 0) {
+		$query .= " WHERE php_version LIKE '" . $version . "%'";
 	}
 
 	$result=mysql_query($query);
@@ -85,9 +91,9 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	}
 
 	function bugstats($status, $type) {
-		global $bug_type, $version4;
+		global $bug_type, $version;
 		if ($bug_type[$status][$type] > 0) {
-			if ($version4) {
+			if ($version == 4) {
 				$page = "bugs.php";
 			}
 			else {
