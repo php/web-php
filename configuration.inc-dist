@@ -1,10 +1,9 @@
 <?php
 
-// PLEASE SET THIS IN A VHOST SETTING!
-// See http://php.net/mirroring for more information!
-
-// Set the local search (htdig) program here
-// (see also Mirrors-htdig.tgz for more information)
-// $htsearch_prog = "/local/htdig/bin/htphp.sh";
+/*
+ The usage of this file is deprecated. Please see
+ http://php.net/mirroring for information on what
+ needs to be set where.
+*/
 
 ?>
