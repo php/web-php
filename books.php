@@ -72,7 +72,11 @@ function bookStats ($books, $btype) {
 
   $stats = array();
   foreach ($books[$btype] as $number => $book) {
-    $stats[$book[7]]++;
+    if (isset($stats[$book[7]])) {
+		$stats[$book[7]]++;
+	} else {
+		$stats[$book[7]] = 1;
+    }
   }
   arsort($stats, SORT_NUMERIC);
   return $stats;
