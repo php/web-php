@@ -70,7 +70,7 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 			$bug_type['analyzed'][$row[1]]++;
 			$bug_type['analyzed']['all']++;
 		}
-		if($row[7]=="Feedback") {
+		if($row[7]=="Feedback" || $row[7]=="OldFeedback") {
 			$bug_type['feedback'][$row[1]]++;
 			$bug_type['feedback']['all']++;
 		}
@@ -120,9 +120,16 @@ if(!strstr($MYSITE,"bugs.php.net")) {
 	echo "<tr bgcolor=#aabbcc><th align=right>Total bug entries in system:</th><td>$total</td><th>Closed</th><th>Open</th><th>Analyzed</th><th>Suspended</th><th>Duplicate</th><th>Assigned</th><th>Feedback</th></tr>\n";
 
 	echo "<tr><th align=right bgcolor=#aabbcc>All:</th><td align=center bgcolor=#ccddee>$total</td><td align=center bgcolor=#ddeeff>".bugstats('closed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', 'all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', 'all')."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned','all')."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback','all')."&nbsp;</td></tr>\n";
-
 	while(list($type,$value)=each($bug_type['all'])) {
-		echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
+		if(	$bug_type['open'][$type] > 0 || 
+			$bug_type['analyzed'][$type] > 0 ||
+			$bug_type['suspended'][$type] > 0 ||
+			$bug_type['duplicate'][$type] > 0 ||
+			$bug_type['assigned'][$type] > 0 ||
+			$bug_type['feedback'][$type] > 0 ) 
+		{ 
+			echo "<tr><th align=right bgcolor=#aabbcc>$type:</th><td align=center bgcolor=#ccddee>$value</td><td align=center bgcolor=#ddeeff>".bugstats('closed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('open', $type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('analyzed', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('suspended',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('duplicate', $type)."&nbsp;</td><td align=center bgcolor=#ccddee>".bugstats('assigned',$type)."&nbsp;</td><td align=center bgcolor=#ddeeff>".bugstats('feedback',$type)."&nbsp;</td></tr>\n";
+		}
 	}
 	echo "</table>\n";
 	
