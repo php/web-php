@@ -64,7 +64,7 @@ There is a <a href="release_4_2_2.php">separate announcement</a> available for t
 <li>Major update of domxml. New functions, better DOM compliance and bug fixes:
   <ul>
     <li>
-      Changed the old $node->append_child() to $node->append_sibling() since
+      Changed the old $node-&gt;append_child() to $node-&gt;append_sibling() since
       the new append_child() behaves correctly (= W3C standard).
     </li>
     <li>
@@ -355,8 +355,8 @@ There is a <a href="release_4_1_2_win32.php">separate win32 announcement</a> ava
   integers properly. (Vlad)</li>
 <li>Fixed several bugs and memleaks in the domxml extension. (Markus)</li>
 <li>Fixed bug in gmmktime() which was one hour off during standard time -
-  bug #9878. Patch by bfoddy@mediaone.net. (jmoore)</li>
-<li>Fixed bug in gmdate() timezone handling on Windows - bug #13885. (jmoore)</li>
+  bug <a href="http://bugs.php.net/bug.php?id=9878">#9878</a>. Patch by bfoddy@mediaone.net. (jmoore)</li>
+<li>Fixed bug in gmdate() timezone handling on Windows - bug <a href="http://bugs.php.net/bug.php?id=13885">#13885</a>. (jmoore)</li>
 <li>Fixed several crash bugs in the mcrypt extension. (Derick)</li>
 <li>Made the mcrypt extension compile with the libmcrypt 2.2 series again.
   (Sterling)</li>
@@ -555,12 +555,12 @@ There is a <a href="release_4_1_1.php">separate announcement</a> available for t
   (Patch from Steven Bower)</li>
 <li>Renamed diskfreespace() to disk_free_space() to conform to established
   naming conventions. (Jon)</li>
-<li>Fixed #2181. Now zero is returned instead of an unset value for
+<li>Fixed <a href="http://bugs.php.net/bug.php?id=2181">#2181</a>. Now zero is returned instead of an unset value for
   7-bit encoding and plain text body type. (Vlad)</li>
 <li>Fixed a bug in call_user_*() functions that would not allow calling
   functions/methods that accepted parameters by reference. (Andrei)</li>
 <li>Added com_release($obj) and com_addref($obj) functions and the related class
-  members $obj->Release() and $obj->AddRef() to gain more control over the used
+  members $obj-&gt;Release() and $obj-&gt;AddRef() to gain more control over the used
   COM components. (phanto)</li>
 <li>Added an additional parameter to dotnet_load to specify the codepage (phanto)</li>
 <li>Added peak memory logging. Use --enable-memory-limit to create a new Apache
@@ -649,7 +649,7 @@ There is a <a href="release_4_1_0.php">separate announcement</a> available for t
 <li>Added -C command-line option to avoid chdir to the script's directory. (Stig)</li>
 <li>Fixed a bug with /e modifier in preg_replace(), that would not correctly
   replace two-digit references if single digit references were present
-  before them. This fixed bug #10218. (Andrei)</li>
+  before them. This fixed bug <a href="http://bugs.php.net/bug.php?id=10218">#10218</a>. (Andrei)</li>
 <li>Added temporary LOB support in OCI8. (Patch by David Benson)</li>
 <li>Fixed crash in pathinfo()</li>
 <li>OCI8 now supports binding of collections. (Patch by Andy Sautins
@@ -743,7 +743,7 @@ There is no separate announcement available for this release.<br />
 <li>Fixed PostgeSQL pg_connect() bug. We would sometimes close the default
   link by accident. (Patch by: aja@nlgroup.ca)</li>
 <li>Improved OCI8 dead-session detection. (Patch by: George Schlossnagle)</li>
-<li>Fixed get_meta_tags() multiline bug #4556. (Sean)</li>
+<li>Fixed get_meta_tags() multiline bug <a href="http://bugs.php.net/bug.php?id=4556">#4556</a>. (Sean)</li>
 <li>Prefer random() over *rand48(). (JimJag)</li>
 <li>Sped up WDDX serialization 2x. (Andrei)</li>
 <li>Added a new parameter to mail() which appends aditional command line
@@ -881,7 +881,7 @@ There is no separate announcement available for this release.<br />
   name in the replacement argument to preg_replace() that will be called
   at run-time to provide the replacement string. It is passed an array of
   matched pattern and subpatterns. (Andrei)</li>
-<li>Put an end to BUG#4615 (kalowsky &amp; Eric Veldhuyzen)</li>
+<li>Put an end to Bug <a href="http://bugs.php.net/bug.php?id=4615">#4615</a> (kalowsky &amp; Eric Veldhuyzen)</li>
 <li>Fixed realpath() in Virtual Directory mode (Daniel)</li>
 <li>Integrated the Phil Nelson's bc math library routines into PHP, now that
   the license allows it (Phil Nelson)</li>
@@ -1070,7 +1070,7 @@ There is no separate announcement available for this release.<br />
   paths of files won't leak on unclean shutdown (Andi)</li>
 <li>Removed support of print $obj automatically calling the __string_value()
   method. Instead define yourself a method such as toString() and use
-  print $obj->toString() (Andi, Zend Engine)</li>
+  print $obj-&gt;toString() (Andi, Zend Engine)</li>
 </ul>
 There is no separate announcement available for this release.<br />
 
@@ -1139,11 +1139,11 @@ There is no separate announcement available for this release.<br />
   the status code across the redirect as well.  (Rasmus)</li>
 <li>Added Olympus-specific tags to read_exif_data() (Rasmus)</li>
 <li>Fixed bug in imap_fetchheader() where using FT_PREFETCHTEXT didn't return
-  the body. Bug #4447. (Jani)</li>
+  the body. Bug <a href="http://bugs.php.net/bug.php?id=4447">#4447</a>. (Jani)</li>
 <li>Fixed exec() returning "\0" when output is empty</li>
 <li>Added XML_Parser class in PEAR (Stig)</li>
 <li>Added "make test" target in pear/ and added some regression tests (Stig)</li>
-<li>Fixed bug in strip_tags function as per bug #5857 (Rasmus)</li>
+<li>Fixed bug in strip_tags function as per bug <a href="http://bugs.php.net/bug.php?id=5857">#5857</a> (Rasmus)</li>
 <li>Fixed reading of IPTC via GetImageInfo() for certain JPEG files. (Thies)</li>
 <li>Improved the output-buffering functions to be re-entrant (Zeev)</li>
 <li>Made ldap_add(), ldap_modify(), ldap_mod_add(), ldap_mod_replace()
@@ -1837,13 +1837,13 @@ There is no separate announcement available for this release.<br />
 <li>Enable IBM DB2 support - Tested against DB2 6.1 UDB on Linux (Rasmus)</li>
 <li>Added new str_repeat() function. (Andrei)</li>
 <li>Output-Buffering system is now Thread-Safe. (Thies)</li>
-<li>implemented OCI8 $lob->WriteToFile() function - very useful for streaming
+<li>implemented OCI8 $lob-&gt;WriteToFile() function - very useful for streaming
   large amounts of LOB-Data without to need of a huge buffer. (Thies)</li>
 <li>Added session.use_cookies option (Sascha)</li>
 <li>Added getcwd() function. (Thies)</li>
 <li>XML_Parse_Into_Struct no longer eats data. (Thies)</li>
 <li>Fixed parse_url('-') crash. (Thies)</li>
-<li>added === operator support. (Andi & Thies, Zend Engine)</li>
+<li>added === operator support. (Andi &amp; Thies, Zend Engine)</li>
 <li>unserialize() now gives a notice when passed invalid data. (Thies)</li>
 <li>Fixed shuffle() so that it no longer breaks on Solaris. (Andrei)</li>
 <li>Added is_resource(), is_bool() functions. (Thies)</li>
