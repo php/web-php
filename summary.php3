@@ -21,7 +21,7 @@ The following people attended:</p>
 <li> Andrei Zmievski, Sr.Internet Developer of ISPI of Lincoln Nebraska, USA 
 </ul>
 
-<p>The main technical discussions revolved around what is required to get the production release PHP Version 4.0 out the door.  </p>
+<p>The main technical discussions revolved around what is required to get the production release of PHP Version 4.0 out the door.  </p>
 
 <b>Not Required before release</b>
 <dl>
