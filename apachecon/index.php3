@@ -15,7 +15,7 @@
 
      <FRAME SRC=basefile/prev.htm NAME="prev" NORESIZE SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#000000">
 
-     <FRAME SRC=basefile/start.htm NAME="slide" NORESIZE SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#000000">
+     <FRAME SRC=basefile/start.htm NAME="slide" NORESIZE MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#000000">
 
      <FRAME SRC=basefile/next2.htm NAME="next" NORESIZE SCROLLING="NO" MARGINWIDTH="0" MARGINHEIGHT="0" bgcolor="#000000">
 
