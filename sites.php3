@@ -361,6 +361,7 @@ right away.</blockquote>
 /* Religious */
 	title("Religious");
 	siteStart();
+	site("Christian Cafe","www.christiancafe.com");
 	site("Christian Financial Concepts","cfcministry.org");
 	site("Gospel Communications Network","www.gospelcom.net");
 	site("Kenneth Copeland Ministries","kcm.org");
