@@ -434,8 +434,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     
     $rssautodiscovery = '';
     if (isset($_SERVER['BASE_PAGE']) && $_SERVER['BASE_PAGE'] == 'index.php') {
-      $rssautodiscovery = ' <link rel="alternate" type="application/rss+xml" title="PHP: Hypertext
-Preprocessor" href="' . $MYSITE . 'news.rss" />' . "\n";
+      $rssautodiscovery = ' <link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />' . "\n";
     }
 
 ?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
