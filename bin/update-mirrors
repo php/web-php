@@ -1,7 +1,7 @@
 #!/bin/sh
 
 lynx -source http://www.php.net/bin/mirrors.php > include/mirrors.inc~
-if [ $? -ne 0 -a ! -s include/mirrors.inc~ ]; then
+if [ $? -ne 0 -o ! -s include/mirrors.inc~ ]; then
   rm -f include/mirrors.inc~
   echo problem converting results to html
   exit 1
