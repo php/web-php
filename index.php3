@@ -4,6 +4,13 @@ commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h3>LinuxWorld Editors' Choice Awards</h3>
+<p><img src="lwedchoice-200.gif" align="right">
+PHP is a Finalist in the <a href="http://www.wpi.com/linuxworld/lw-ec-finalists.html">
+LinuxWorld Editors' Choice Awards</a> to be presented on Aug.11 in San Jose, CA.  PHP is
+up against QT from Troll Tech in the &quot;Programming Library/Tools&quot; category.
+</p>
+
 <h3>PHP/MySQL Tutorials on HotWired</h3>
 <p>
 Graeme Merrall has written a 3-part tutorial on PHP/MySQL that is worth a
