@@ -118,11 +118,22 @@ if (isset($note) && isset($user) && isset($lang) &&
 // Any needed variable was missing => display instructions
 else { ?>
 <p>
- You can contribute to the PHP manual from the comfort of your browser!
- Just add your comment in the big field below, and, optionally, your email 
- address in the little one. There is no need to obsfuscate your email
- address, as we have a simple conversion in place to convert the @ signs
- and dots in your address.
+ You can contribute <a href="about-notes.php">your notes</a> to the PHP
+ manual from the comfort of your browser! Just add your comment in the
+ big field below, and, optionally, your email address or name in the
+ little one.
+</p>
+
+<p>
+ There is no need to obsfuscate your email address, as we have a simple
+ conversion in place to convert the @ signs and dots in your address. You
+ may still want to include a part in the email address only understandable
+ by humans, to make it spam protected, as our conversion can be performed
+ the other way too. You may submit your email address as
+ <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
+ as <tt>user at NOSPAM dot example dot com</tt>. Although note that we can
+ only inform you of the removal of your note, if you use your real email
+ address.
 </p>
 
 <p>
@@ -207,7 +218,7 @@ else {?>
    </td>
   </tr>
   <tr valign="top">
-   <td><b>Your email address:</b></td>
+   <td><b>Your email address (or name):</b></td>
    <td><input type="text" name="user" size="60" maxlength="40" value="<?php echo clean($user); ?>" /></td>
   </tr>
   <tr valign="top">
