@@ -99,12 +99,12 @@ Prima-Tech, March 2000, ISBN 0-7615-2729-X, 363 pages<BR>
 <TD ALIGN="center"><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/thephpdevelopmte"
 ><IMG SRC="/gifs/rasmus-kug.gif" BORDER=0 ALIGN="left"></A><BR>
 </TD>
-<TD><A HREF="http://www.amazon.com/exec/obidos/ASIN/3897212250/thephpdevelopmte"
+<TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3897212250/thephpdevelopmte"
 >PHP kurz & gut</A><BR>
 by Rasmus Lerdorf<BR>
 <SMALL>
 Deutsche &Uuml;bersetzung von Ingo Marks<BR>
-in German, O'Reilly & Associates, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
+in German, O'Reilly, June 2000, ISBN 3-89721-255-0, 111 pages<BR>
 <A HREF="http://www.oreilly.de/catalog/phptbger/index.html">weitere Informationen</A><BR>
 </SMALL>
 </TD>
@@ -131,7 +131,7 @@ by Egon Schmid, Christian Cartus, Richard Blume<BR>
 <TD><A HREF="http://www.pearsoneducation.nl/php3/boek1test.html?isbn=9043001406"
 >PHP - Dynamische websites professioneel ondersteunen</A><BR>
 by Egon Schmid, Christian Cartus en Richard Blume<BR>
-<SMALL>in Dutch, Addison Wesley Longman, 482 pages, ISBN 90-430-0140-6, April 2000</SMALL><BR>
+<SMALL>in Dutch, Addison Wesley Longman, April 2000, ISBN 90-430-0140-6, 477 pages</SMALL><BR>
 <SMALL><BR>
 </TD>
 </TR>
@@ -145,8 +145,8 @@ by Egon Schmid, Christian Cartus en Richard Blume<BR>
 >PHP - Grundlagen und L&ouml;sungen</A><BR>
 Webserver-Programmierung unter Windows und Linux<BR>
 by J&ouml;rg Krause<BR>
-<SMALL>in German</SMALL><BR>
-<SMALL><A HREF="http://www.dynamic-webpages.de/books.php">weitere Informationen</A><BR>
+<SMALL>in German, Hanser, Dec 1999, ISBN 3-446-21301-5, 1067 pages<BR>
+<A HREF="http://www.dynamic-webpages.de/books.php">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
 
@@ -171,9 +171,9 @@ by Thomas Theis<BR>
 </TD>
 <TD><A HREF="http://www.amazon.de/exec/obidos/ASIN/3828711103/thephpdevelopmte"
 >Das Einsteigerseminar PHP 4.0</A><BR>
-by Dr. Susanne Wigard, BHV, Juni 2000, 382 Seiten<BR>
-<SMALL>in German</SMALL><BR>
-<SMALL><A HREF="http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html">weitere Informationen</A><BR>
+by Dr. Susanne Wigard<BR>
+<SMALL>in German, BHV, Juni 2000, ISBN 3-8287-1110-3, 382 pages<BR>
+<A HREF="http://www.bhv.net/bhv/buchreihen/deinst_1110_3.html">weitere Informationen</A></SMALL><BR>
 </TD>
 </TR>
 
@@ -213,8 +213,7 @@ by Leon Atkinson<BR>
 <TD><A HREF="http://www.eyrolles.com/php.informatique/Ouvrages/ouvrage.php3?ouv_ean13=9782212091137"
 >Programmation Web avec PHP</A><BR>
 by Laurent Lacroix, Christophe Lauer, Nicolas Leprince, Christophe Boggero<BR>
-<SMALL>in French</SMALL><BR>
-<SMALL>April 2000, ISBN 2-212-09113-3, 364 pages<BR>
+<SMALL>in French, April 2000, ISBN 2-212-09113-3, 364 pages</SMALL><BR>
 </TD>
 </TR>
 
@@ -296,10 +295,9 @@ http://www.drmaster.com.tw/information.asp?書號=DB20023"
 <TD>
 Using PHP and MySQL (with FreeBSD and Apache)<BR>
 by C.C.J.<BR>
-<SMALL>in Traditional Chinese<BR>
+<SMALL>in Traditional Chinese, July 1999, ISBN 957-527-168-8<BR>
 <A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20023">more info</A>
 | <A HREF="http://www.dw.com.tw/book.html">purchase</A><BR>
-July 1999, ISBN 957-527-168-8
 </SMALL></TD>
 </TR>
 
@@ -310,10 +308,9 @@ July 1999, ISBN 957-527-168-8
 <TD>
 Examples of PHP and MySQL<BR>
 by C.C.J.<BR>
-<SMALL>in Traditional Chinese<BR>
+<SMALL>in Traditional Chinese, February 2000, ISBN 957-527-224-2<BR>
 <A HREF="http://www.dw.com.tw/book.html">more info</A>
 | <A HREF="http://www.drmaster.com.tw/information.asp?書號=DB20029">purchase</A><BR>
-February 2000, ISBN 957-527-224-2
 </SMALL></TD>
 </TR>
 
@@ -324,7 +321,7 @@ February 2000, ISBN 957-527-224-2
 <TD>
 <A HREF="http://books.softbank.co.jp/bookweb.nsf/7218069992c69510492566350001471a/5ab16e3b3dcf4ef7492566ff0048baac?OpenDocument">PHP tettei kouryaku</A><BR>
 by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7Elouis/">Rui Hirokawa</A><BR>
-<SMALL>in Japanese, Sep/1999, ISBN 4-7973-0865-6<BR></SMALL></TD>
+<SMALL>in Japanese, Sep 1999, ISBN 4-7973-0865-6<BR></SMALL></TD>
 </TR>
 
 <TR VALIGN="middle">
@@ -334,7 +331,7 @@ by Michihide Hotta, Tatsuo Ishii and <A HREF="http://www.cityfujisawa.ne.jp/%7El
 <TD>
 <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">PHP Guia de Consulta R&aacute;pida</A><BR>
 by Herbert G. Fischer<BR>
-<SMALL>in Portugese, Jan/2000, ISBN 8-5851-8469-8<BR>
+<SMALL>in Portugese, Jan 2000, ISBN 8-5851-8469-8<BR>
 <A HREF="http://phpclasses.UpperDesign.com/products.html/id/8585184698">more info</A> | <A HREF="http://www.livcultura.com.br/scripts/cultura/resenha/resenha.asp?nitem=320216">purchase</A>
 </SMALL></TD>
 </TR>
