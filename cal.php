@@ -393,7 +393,7 @@ foreach($re as $k=>$v) {
 </tr>
 <tr bgcolor=#e0e0e0><th>Short<br>Description</th><td><input type=text name="sdesc" value="<?php echo ini_get('magic_quotes_gpc')?stripslashes($sdesc):$sdesc?>" size=16 maxlength=16>
 </td><td align=center><input type="submit" value=" Submit " name="new"></td></tr>
-<tr bgcolor=#e0e0e0><th>Country<td colspan=2><select name="country" width="30"><option value=0>- Select a country -</option>
+<tr bgcolor=#e0e0e0><th>Country</th><td colspan=2><select name="country" width="30"><option value=0>- Select a country -</option>
 <?php
 	$result = mysql_query ("select id, name from country order by name");
 	if ($result){
@@ -404,7 +404,8 @@ foreach($re as $k=>$v) {
 		mysql_free_result($result);
 	}
 ?>
-<tr bgcolor=#e0e0e0><th>Event Category<td colspan=2><select name="category" width="20"></option>
+</select></td></tr>
+<tr bgcolor=#e0e0e0><th>Event Category</th><td colspan=2><select name="category" width="20"></option>
 <?php
 	$cat = array("- Select a category -", "regional", "national", "international");
 	for ($i=0; $i < count($cat); $i++){
