@@ -279,7 +279,7 @@ array(
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1565926811/wwwphpnet",
     /* author[s]    */ array("David Sklar", "Adam Trachtenberg"),
     /* auth link[s] */ "",
-    /* image        */ "cookbook.gif",
+    /* image        */ "cookbook.jpg",
     /* information  */ "O'Reilly & Associates, Nov 2002, ISBN 1-5659-2681-1, 624 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/phpckbk/",
     /* language     */ "en"
@@ -667,7 +667,7 @@ array(
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1903450160/wwwphpnet",
     /* author[s]    */ "Steve Webster",
     /* auth link[s] */ "",
-    /* image        */ "fnd_php_for_flash.jpg",
+    /* image        */ "fdn_php_for_flash.jpg",
     /* information  */ "friends of Ed, Sep 2001, ISBN 1-9034-5016-0, 500 pages",
     /* inform. link */ "http://www.friendsofed.com/books/foundation/php/index.html",
     /* language     */ "en"
