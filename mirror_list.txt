@@ -5,7 +5,7 @@ br	br.php.net	<accdias@sst.com.br>	200.223.126.4
 ca	php.easydns.com	Colin Viebrock <cmv@privateworld.com>	205.210.42.153
 ch	ch.php.net	prochat@lbdsun.epfl.ch	128.178.77.33
 #cl	cl.php.net	dan@amerikanclaris.com	php.labs.amerikanclaris.cl
-cz	www.php.cz	jap@maya.cz	212.24.129.2
+#cz	www.php.cz	jap@maya.cz	212.24.129.2
 de	www.php3.de	smartin@schlund.de	62.104.64.10
 de	de.php.net	Markus Wirtz <mw@globe.de>	php3.globe.de
 dk	dk.php.net	mkyed@borsen.dk	194.239.128.56

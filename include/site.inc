@@ -16,7 +16,7 @@ $MIRRORS = array(
 #  "http://ca.php.net/"               => array("ca", "Toronto", "bellasf", "http://www.bell.ca/", 1, 1),
    "http://ca.php.net/"               => array("ca", "easyDNS", "easydns", "http://www.easydns.com/", 1, 0, "en"),
 #  "http://cl.php.net/"               => array("cl", "Amerikanclaris Internet", "amerikanclaris", "http://wwww.amerikanclaris.com/", 1 ,0),
-   "http://www.php.cz/"               => array("cz", "Inway", "inway1", "http://www.inway.cz/", 1 , 0, "cz"),
+#   "http://www.php.cz/"               => array("cz", "Inway", "inway1", "http://www.inway.cz/", 1 , 0, "cz"),
    "http://php3.globe.de/"            => array("de", "@GLOBE GmbH", "globe", "http://www.globe.de/", 1, 0, "de"),
    "http://php3.de/"                  => array("de", "Schlund + Partner", "schlund", "http://admin.schlund.de/s+p/count.phtml?BName=logo-schlund.gif&BLocation=(www.php3.de)&url=www.schlund.de", 1, 1, "de"),
    "http://dk.php.net/"               => array("dk", "B&oslash;rsen Online", "borsen", "http://www.borsen.dk/", 1, 0, "dk"),
