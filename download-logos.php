@@ -1,6 +1,5 @@
 <?
-require("shared.inc");
-commonHeader("Download PHP Logos ");
+commonHeader("Download PHP Logos");
 ?>
 
 <P>

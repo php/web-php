@@ -1,12 +1,13 @@
 <?
+
+commonHeader('PHP Tutorial');
+
 	function example($text) {
 		echo "<blockquote><table border=1 cellpadding=3 cellspacing=3><tr bgcolor=#d0d0d0><td>";
 		highlight_string($text);
 		echo "</td></tr></table></blockquote>";
 	}
 ?>
-<html><head><title>PHP Tutorial</title></head>
-<body>
 <h1>Introductory Tutorial</h1>
 PHP is a tool that lets you create dynamic web pages.
 PHP-enabled web pages are treated just like regular HTML pages and you can create
@@ -134,4 +135,5 @@ Here is a list of other excellent PHP tutorials:
 <li><a href="http://www.htmlwizard.net/resources/tutorials/">phpTidbits</a>
 <li><a href="http://www.phpbuilder.com/getit/">PHP Builder</a>
 </ul>
-</body></html>
+
+<? commonfooter(); ?>

@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 commonHeader("Projects");
 
 function makeEntry($project,$url,$name,$email) {

@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 commonHeader("PHP in the News");
 
 function makeEntry($title,$subtitle,$url=false,$date="") {

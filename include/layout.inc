@@ -143,8 +143,9 @@ $enclosed = 0;
 #
 
 function commonHeader($title="",$dont_enclose=0) {
-	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;?>
-<html>
+	global $MYSITE, $MIRRORS, $COUNTRIES, $enclosed;
+	header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
+?><html>
 <head>
  <title>PHP<?php if ($title) echo ": $title";?></title>
  <link rel="stylesheet" href="/style.css">

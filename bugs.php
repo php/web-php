@@ -11,7 +11,6 @@ if(!isset($user))   $user   = '';
 if(!isset($pw))     $pw     = '';
 $destination = "php-dev@lists.php.net";
 
-require("shared.inc");
 
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";

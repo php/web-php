@@ -1,5 +1,4 @@
 <?php
-require("shared.inc");
 commonHeader("Cool PHP Tips");
 
 function tipTitle($title,$author='',$date='') {

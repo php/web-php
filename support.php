@@ -1,5 +1,4 @@
 <?php
-require("shared.inc");
 commonHeader("Support");
 ?>
 

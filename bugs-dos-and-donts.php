@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 commonHeader("Bugs Database Dos and Don'ts");
 ?>
 

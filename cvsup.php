@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 commonHeader("Using CVSup to maintain local CVS repository");
 ?>
 <h3>Using CVSup to maintain local CVS repository</h3>

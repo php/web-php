@@ -1,5 +1,4 @@
 <?php
-require("shared.inc");
 commonHeader("Using CVS for PHP Development");
 ?>
 <h3>Using CVS for PHP Development</h3>

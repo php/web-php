@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 
 $NUMACROSS=2;
 $d = dir("$DOCUMENT_ROOT/manual/en");

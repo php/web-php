@@ -26,13 +26,13 @@ ul.compact, ol.compact {
 	margin-bottom: 0px;
 }
 
-pre {
+pre,code {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
-	font-size: 9px;
+	font-size: 12px;
 }
 
 h1 {
-	font-family: tahoma,arial,helvetica,sans-serif;
+	font-family: arial,helvetica,sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: #000066;
@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-	font-family: tahoma,arial,helvetica,sans-serif;
+	font-family: arial,helvetica,sans-serif;
 	font-size: 16px;
 	font-weight: bold;
 	color: #000066;
@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-	font-family: tahoma,arial,helvetica,sans-serif;
+	font-family: arial,helvetica,sans-serif;
 	font-size: 14px;
 	font-weight: bold;
 	color: #000066;
@@ -97,5 +97,10 @@ textarea.small {
 	font-family: "andale mono", "monotype.com", "courier new", monospace;
 	font-size: 11px;
 }
+
+dt {
+	margin-top: 20px;
+}
+
 
 // manual stuff

@@ -17,8 +17,6 @@ CREATE TABLE note (
 */
 
 
-	require("shared.inc");
-	$DISABLE_KICKOUTS=1;
 	commonHeader("Manual Notes");
 
 /* clean off leading and trailing whitespace */

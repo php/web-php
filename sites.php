@@ -1,5 +1,4 @@
 <?
-	require("shared.inc");
 	commonHeader("High-Profile sites running PHP");
 
 	function site($name,$domain=false) {

@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 
 $current = "3.0.18";
 $win32_current = "3.0.17";

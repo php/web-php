@@ -9,7 +9,6 @@ if (isset($pattern) && ($pattern)) {
 	SetCookie("prevsearch",$pattern,0,"",".php.net");
 }
 
-require("shared.inc");
 $HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 
 if (isset($pattern) && ($pattern)) {

@@ -5,7 +5,6 @@
 
 /* See the end of the script for the table layout. */
 
-require("shared.inc");
 if (strstr($MYSITE,"bugs.php.net")) {
 	$dbhost="localhost";
 	$dbuser="nobody";

@@ -1,5 +1,5 @@
 <?php 
-require('shared-manual.inc');
+require_once 'shared-manual.inc';
 
 // a tool for
 // (on www.php.net) providing manual-notes in serialised form

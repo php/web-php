@@ -1,8 +1,7 @@
 <?php
 
-require "shared.inc";
 if (file_exists("../configuration.inc")) {
-  include "../configuration.inc";
+  include_once "../configuration.inc";
 }
 
 $lang = $MIRRORS[$MYSITE][6];

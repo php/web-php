@@ -1,6 +1,5 @@
 <?php
-require("shared.inc");
-commonHeader("Documentation ");
+commonHeader("Documentation");
 ?>
 
 <H1>PHP FAQ</H1>
@@ -118,7 +117,7 @@ with the development of PHP, read this.
 
 <H1>Old/unsupported information</H1>
 <ul>
-<li><a href="manual/phpfi2.html">PHP/FI 2.0 Manual</a>. This includes
+<li><a href="manual/phpfi2.php">PHP/FI 2.0 Manual</a>. This includes
     discussions on a few topics that aren't covered in the PHP 3 manual
     yet.
 </ul>

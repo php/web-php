@@ -1,5 +1,4 @@
 <?
-require("shared.inc");
 commonHeader("Manual Notes");
 ?>
 

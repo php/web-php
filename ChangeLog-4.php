@@ -1,5 +1,4 @@
-<?
-require("shared.inc");
+<?php
 commonHeader("PHP 4 ChangeLog");
 ?>
 

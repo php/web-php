@@ -5,9 +5,6 @@ require_once 'site.inc';
 require_once 'layout.inc';
 
 
-header("Last-Modified: ".gmdate("D, d M Y H:i:s",getlastmod())." GMT");
-
-
 # figure out the directory root
 
 if (!$BASE_DIR) {
