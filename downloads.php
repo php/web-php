@@ -37,6 +37,12 @@ make_link("http://www.zend.com/zend/optimizer.php", "Zend Optimizer").'
 for PHP 4.0.3 and later is
 available on Zend Technologies\' web site
 </p>
+
+<p> For '.
+make_link("http://gtk.php.net/", "PHP-GTK").'
+downloads, please visit out site dedicated
+to ' . make_link("http://gtk.php.net/", "PHP-GTK").'.
+</p>
 ';
 
 commonHeader("Downloads");
