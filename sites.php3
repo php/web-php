@@ -99,6 +99,7 @@ removed right away.</blockquote>
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
+	site("PalmShop","www.palmshop.de");
 	siteEnd();
 
 /* ISP's */
