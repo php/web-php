@@ -160,20 +160,18 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <TABLE BORDER=0 CELLPADDING=3 CELLSPACING=3 WIDTH=100%>
 <TR><TD>
 <?
-        echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
+    echo "<FONT FACE=\"$FONTFACE\" SIZE=-1>\n";
     $name = htmlspecialchars($name);
-        if (ereg("(.+)@(.+)\.(.+)",$name)) {
-                echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
-        } else {
-                echo "<B>".$name."</B><BR>\n";
-        }
-        echo date("d-M-Y h:ia",$date)."<BR>\n";
+    if (ereg("(.+)@(.+)\.(.+)",$name)) {
+       echo "<A HREF=\"mailto:".$name."\">".$name."</A><BR>\n";
+    } else {
+       echo "<B>".$name."</B><BR>\n";
+    }
+    echo date("d-M-Y h:ia",$date)."<BR>\n";
 ?>
 </TD></TR>
 <TR BGCOLOR="#F0F0F0"><TD>
-<?
-echo clean_note($blurb);
-?><BR>
+<?echo clean_note($blurb);?><BR>
 <?if (isset($MAGIC_COOKIE)):?>
 <hr noshade size=1>
 <A href="/manual/admin-notes.php?action=delete+<?echo $id?>&brief=1&popup=1" target="admin">delete</A> | 
