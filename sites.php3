@@ -53,6 +53,7 @@ right away.</blockquote>
 	site("The Audi TT web site","www.audi-tt.org");
 	site("Audi World","www.audiworld.com");
 	site("Auto City","www.autocity.de");
+	site("AutoNetworkUSA.com","www.AutoNetworkUSA.com");
 	site("Cars Everything","www.carseverything.com");
 	site("Euroclassics","www.euroclassics.com");
 	site("Hobby Caravaning","www.hobby-caravan.de");
@@ -74,6 +75,7 @@ right away.</blockquote>
 	site("Niterói à Vista","www.nitvista.com.br");
 	site("The Tri Cities Online","tri.xtn.net");
 	site("Up My Street", "www.upmystreet.com");
+	site("White House 200th Anniversary site","www.wh200th.com");
 	site("XOOM.com Inc.","xoom.com");
 	site("Zone - Cultural sites in Rotterdam","www.cultuur.rotterdam.nl");
 	siteEnd();
@@ -84,6 +86,7 @@ right away.</blockquote>
 	site("Apache Web Server","www.apache.org");
 	site("BSB-Software","www.bsb-software.com");
 	site("C2Net Software Inc.","www.c2.net");
+	site("Cornado Internet Applications","www.cornado.com");
 	site("Flexform Software","www.flexform.de");
 	site("Freedows OS","freedows.netpedia.net/");
 	site("Knowledge Adventure","www.knowledgeadventure.com");
@@ -107,6 +110,8 @@ right away.</blockquote>
 	site("Devry Technical Institute Financial Aid","finance.devry.edu");
 	site("Digital Metrics","www.digitalmetrics.com");
 	site("Edwards/Penney Calculus Website","www.edwardspenney.com");
+	site("EdSeek.com","www.edseek.com");
+	site("Évora's University in Portugal","www.uevora.pt");
 	site("GezondheidsNet","www.gezondheidsnet.nl");
 	site("The Internet Pilot to Physics","www.tp.umu.se/TIPTOP/");
 	site("Let's Find Out","www.letsfindout.com");
@@ -186,10 +191,13 @@ right away.</blockquote>
 	site("32bit.com","www.32bit.com");
 	site("Developer Shed","www.devshed.com");
 	site("DataGuard AS - Security Consulting","www.dataguard.no");
-	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("Fujitsu Business Communications Systems","www.fbcs.fujitsu.com");	
+	site("Lead People (Recruitment Agency)","www.leadpeople.com");
 	site("NASA - Jet Propulsion Laboratory");
+	site("Nuance Communication Extranet","www.nuance.com");
+	site("ONE TOUCH Systems Inc.","www.onetouch.com");
 	site("PalmShop","www.palmshop.de");
+	site("Tab Products","www.tab.com");
 	site("Wildtangent","www.wildtangent.com");
 	site("ZeroKnowledge.com","josb.zeroknowledge.com");
 	siteEnd();
@@ -197,11 +205,14 @@ right away.</blockquote>
 /* Internet Services */
 	title("Internet Services");
 	siteStart();
+	site("ActiveWeb Internet Solutions","www.activeweb.co.il");
 	site("All 4 One","www.all4one.com");
 	site("BaBoo, Browse and Bookmark","www.baboo.com");
+	site("CapGemini","www.capgemini.fr");
 	site("ClickAgents","www.clickagents.com");
 	site("Constructors","www.constructors.com");
 	site("easyDNS","www.easydns.com");
+	site("Exe-prod","www.exe-prod.com");
 	site("FAST MP3 Search", "mp3.lycos.com");
 	site("KnowPost","www.humansearch.com");
 	site("InfoMak","www.infomak.com");
@@ -218,6 +229,7 @@ right away.</blockquote>
 	site("Terra Firma Design","www.terrafirmadesign");
 	site("The Noodle","www.thenoodle.com");
 	site("Webex - Russia","www.webex.ru");
+	site("West Central Ohio Marketplace","www.wcomarketplace.com");
 	site("WhereIs Street Atlas (Australia)","www.whereis.com.au");
 	site("WhoBuiltIt","www.whobuiltit.com");
 	site("zcentral.com","www.zcentral.com");
@@ -234,6 +246,7 @@ right away.</blockquote>
 	site("CocoNet Corporation","www.coconet.com");
 	site("Compmore.Net","www.compmore.net");
 	site("Datastream","www.datastream.it");
+	site("DigitalDaze","www.digitaldaze.com");
 	site("ForeverNET","www.forevernet.de");
 	site("Italia Online","www.iol.it");
 	site("Kieser.Net","www.kieser.net");
@@ -270,8 +283,10 @@ right away.</blockquote>
 	site("Calendar - Syracuse Events Guide","calendar.syracuse.com");
 	site("Computer Currents","www.computercurrents.com");
 	site("The Dryden Observer","lak.awcoldstream.com/observer/first1.phtml");
+	site("El Mundo","www.el-mundo.es");
 	site("FocalPress","www.focalpress.com.hk");
 	site("The German Linux Magazine","www.linux-magazin.de/newsflash");
+	site("LA Weekly","www.laweekly.com");
 	site("Maximum PC Magazine","www.maximumpcmag.com");
 	site("Mercattel","mercattel.interwatts.com");
 	site("Der Spiegel","www.spiegel.de");
@@ -286,12 +301,13 @@ right away.</blockquote>
 	site("Association of Internet Professionals","www.association.org");
 	site("Global Rotaract Information Center", "www.rotaract.org/");
 	site("Humanities Web","humanitiesweb.org");
+	site("KidsCampaigns","www.kidscampaigns.org");
+	site("National Marrow Donor Program","www.marrow.org");
+	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
 	site("Scram.de","www.scram.de");
 	site("The Long Now Foundation","www.longnow.org");
 	site("The Jazz Journalists Association","www.jazzhouse.org");
-	site("National Marrow Donor Program","www.marrow.org");
-	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
-	site("KidsCampaigns","www.kidscampaigns.org");
+	site("W3C","www.w3.org");
 	siteEnd();
 
 /* Online News Sites */
@@ -303,6 +319,7 @@ right away.</blockquote>
 	site("Deal-Mac","deal-mac.com");
 	site("Deal-Pc","deal-pc.com");
 	site("GAMESDomain","www.gamesdomain.com");
+	site("Indian Ballot","www.indianballot.com");
 	site("Legions.Com","legions.com");
 	site("LinuxApps","www.linuxapps.com");
 	site("Linux BBS","www.linuxbbs.org");
@@ -313,6 +330,7 @@ right away.</blockquote>
 	site("FreshMeat","freshmeat.net");
 	site("Incluso - online PHP Magazine","io.incluso.com");
 	site("MP3Bench","mp3bench.com");
+	site("MP3.com","www.mp3.com");
 	site("Online Gaming Review","www.ogr.com");
 	site("PHP.CodeBase.Org","php.codebase.org");
 	site("SegFault","segfault.org");
@@ -364,6 +382,7 @@ right away.</blockquote>
 	site("Farmauno","www.farmauno.com");
 	site("Froeschl - Online Auctions","www.froeschl.de");
 	site("HomePoint.com","www.homepoint.com");
+	site("Kellymoore Paints","www.kellymoore.com");
 	site("Larkbooks - also FiberArts Magazine","www.larkbooks.com");
 	site("Levolor Blinds","www.levolor.com");
 	site("LinkAlarm","www.linkalarm.com");
@@ -375,8 +394,10 @@ right away.</blockquote>
 	site("PC Market - Russia", "www.pcmarket.ru/pcmarket");
 	site("Restoration Hardware","www.restorationhardware.com");
 	site("Sellit-Here Online","www.sellit-here.com");
+	site("Schneider-electric","www.schneider-electric.com");
 	site("Shipwreck Beads","www.shipwreck-beads.com");
 	site("Sunset Systems","www.sunsetsystems.com");
+	site("Swiss Online Bookstore","www.editore.ch");
 	site("United Rentals","www.unitedrentals.com");
 	site("Vancouver Rentals","www.vancouverrentals.com");
 	siteEnd();
@@ -413,10 +434,12 @@ right away.</blockquote>
 	site("Ambassadair - ATA's Travel Club","www.ambassadair.com");
 	site("Arlberg Online","www.arlberg.com");
 	site("BackPackers.Com","www.backpackers.com");
+	site("BrazilInfo.com","www.brazilinfo.com");
 	site("Centro Turistico Studentesco","www.cts.it");
 	site("Eating Sacramento","www.eatingsacramento.com");
 	site("Griechenland.DE","www.griechenland.de");
 	site("LondonTown.com","www.londontown.com");
+	site("Maggia Valley (Switzerland)","www.vallemaggia.ch");
 	site("Oaxaca State Tourist Guide","oaxaca-travel.com");
 	site("Online Fares Travel, Inc.","www.onlinefares.com");
 	site("San Diego Zoo", "www.sandiegozoo.org");
@@ -442,6 +465,8 @@ right away.</blockquote>
 	siteStart();
 	site("Avatar Technology","www.avatartech.com");
 	site("Espada Ltd.","www.espadanet.com");
+	site("FUMOT","www.fumot.com");
+	site("GreyZone","www.greyzone.com");
 	site("I-D Gruppe","www.idgruppe.com");
 	site("PBM","www.pbm.de");
 	site("Private World Communications","www.privateworld.com");
@@ -450,6 +475,7 @@ right away.</blockquote>
 /* Misc. */
 	title("Miscellaneous");
 	siteStart();
+	site("AirPics.com","www.airpics.com");
 	site("Astrology Forum","www.astroforum.ch");
 	site("Banana Fish Bones","www.bananafishbones.de");
 	site("Bookmarklets","www.bookmarklets.com");
