@@ -62,13 +62,13 @@ function wrap($text,$margin=72) {
 
 function show_state_options($state, $show_all, $user_mode=0) {
 	if ($state) { echo "<option>$state\n"; }
-	if($state!="Open") { echo "<option>Open\n"; }
-	if($state!="Closed") { echo "<option>Closed\n"; }
-	if($state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
-	if($state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
-	if($state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
-	if($state!="Duplicate") { echo "<option>Duplicate\n"; }
-	if($state!="All" && $show_all) { echo "<option>All\n"; }
+	if((string)$state!="Open") { echo "<option>Open\n"; }
+	if((string)$state!="Closed") { echo "<option>Closed\n"; }
+	if((string)$state!="Assigned" && $user_mode!=2) { echo "<option>Assigned\n"; }
+	if((string)$state!="Analyzed" && $user_mode!=2) { echo "<option>Analyzed\n"; }
+	if((string)$state!="Suspended" && $user_mode!=2) { echo "<option>Suspended\n"; }
+	if((string)$state!="Duplicate") { echo "<option>Duplicate\n"; }
+	if((string)$state!="All" && $show_all) { echo "<option>All\n"; }
 }
 
 function show_menu($state)
