@@ -125,7 +125,9 @@ echo '</p>';
 </ul>
 
 <p>
-  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.
+  See the <a href="ChangeLog-4.php">ChangeLog</a> for a complete list of changes.<br>
+  Daily spanshots are also available from <a href="http://snaps.php.net/">snaps.php.net</a>
+  (not intended for production use!).
 </p>
 
 <h2>Windows Binaries</h2>
