@@ -25,7 +25,7 @@ Once you create a virtualhost which looks something like:
  ServerName ca.php.net
  ErrorLog logs/error_log
  TransferLog logs/access_log
- DirectoryIndex index.phtml index.php3 index.html index.htm
+ DirectoryIndex index.phtml index.php3 manual.php3 index.html index.htm
  php3_include_path .:./include:../include
  </VirtualHost>
 
