@@ -108,14 +108,10 @@ site_header("Links");
 <h4>PHP FAQ sites</h4>
 
 <ul>
-<?php
-/* blank page with a link for administration
  <li>
   <a href="http://www.alt-php-faq.org/">alt-php-faq.org</a><br />
   A big faq and some links about PHP and SQL
  </li>
-*/
-?>
  <li>
   <a href="http://www.dclp-faq.de/">de.comp.lang.php FAQ</a><br />
   Excellent german language FAQ about PHP
@@ -746,6 +742,7 @@ site_header("Links");
  <li><a href="http://www.free-php-hosting.com/">free-php-hosting.com</a></li>
  <li><a href="http://www.oinko.net/freephp/">Oinko free PHP hosting directory</a></li>
  <li><a href="http://phphosts.codewalkers.com">PHP Host Directory at Codewalkers</a></li>
+ <li><a href="http://www.weberdev.com/Hosting/Index.php">WeberDev's Hosting Provider Listing</a></li>
 </ul>
 
 <?php site_footer(); ?>
