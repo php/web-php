@@ -25,8 +25,12 @@ $URI = substr($_SERVER['STRIPPED_URI'], 1);
 $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
-// For images, display a 404 automatically (no redirect)
-if (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) { error_404(); }
+// Perform a redirect for manual figures, other images display a 404 automatically
+if (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/figures/(.+)$!", $URI, $parts)) {
+    mirror_redirect("/manual/$parts[1]/figures/$parts[3]");
+} elseif (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) {
+    error_404();
+}
 
 // ============================================================================
 // BC: handle .php3 files that were renamed to .php
@@ -89,11 +93,6 @@ elseif (preg_match("!^manual/(\\w+)/(print|printwn|html|tableless)(/)?$!", $URI,
     }
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php";
     exit;
-}
- 
-// Rediretion for printed page image displays
-elseif (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/figures/(.+)$!", $URI, $parts)) {
-  mirror_redirect("/manual/$parts[1]/figures/$parts[3]");
 }
 
 // ============================================================================
