@@ -18,6 +18,7 @@ fi	fi.php.net	Kaj-Michael Lang <milang@tal.org>	php.nic.fi
 fi	fi2.php.net	Toni Viemerö <toni.viemero@iki.fi>	php.selfdestruct.net
 fr	fr.php.net		web.montaigne.u-bordeaux.fr
 hk	hk.php.net	Marquis Chan <marquix@traland.com>	ns1.traland.com
+hk	hk2.php.net	xcyber kwan <xcyber@yahoo.com>	php.xcyber.org
 hu	hu.php.net	Hojtsy Gabor <goba@php.net>	same as phpnet.externet.hu
 ie	ie.php.net	Dave Rynne <ftpadmin@esat.net>	php.mirrors.esat.net
 it	it.php.net	fmal@fmal.com	php.fmal.com
@@ -27,7 +28,7 @@ jp	jp.php.net	sgk@happysize.co.jp	jp-php-net.happysize.co.jp
 jp	jp2.php.net	Hitachi BI Mirrors Administrator <mirrors-adm@hbi.co.jp>	php.hbi.ne.jp
 kr  kr.php.net  JunSeon Oh <holywar@holywar.net>        php.holywar.net
 li	li.php.net	Roland Guthauser <roland@unitec-inc.com>	php.unitec-inc.com
-lv	lv.php.net	Kaspars Foigts <laacz@laacz.lv>	php.mp.lv
+lv	lv.php.net	Kaspars Foigts <laacz@laacz.lv>	php.mediaparks.lv
 mx	mx.php.net	webmaster@goliath.urbano.com.mx	php.uservers.net
 nl	nl.php.net	paulj@ns.web-tic.com	php.webtic.com
 nl	php.nederland.net	Sander Steffann <steffann@nederland.net>	193.67.110.5 
