@@ -244,7 +244,7 @@ in the <SELECT NAME="show" CLASS="small">
 <OPTION VALUE="phplib-dev">PHPLIB developers' list
 <OPTION VALUE="source">website source code    
 </SELECT>
-<?	echo make_submit('small_submit.gif', 'search', 'bottom');
+<?	echo make_submit('small_submit_white.gif', 'search', 'bottom');
       ?>&nbsp;<br>
         </small>
       </font></td>
