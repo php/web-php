@@ -163,7 +163,7 @@ commonHeader("Hypertext Preprocessor");
  The forum PHP features 2 days, with distinct themas:
  <ul>
   <li>Technical day, with the most advanced PHP technics</li>
-  <li>Business day, with user cases and sucessuful projects</li>
+  <li>Business day, with user cases and successful projects</li>
  </ul>
 </p>
 <p>
