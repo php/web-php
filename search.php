@@ -131,7 +131,7 @@ if (isset($pattern)) {
         if (isset($page)) { $pgr = "&page=" . escapeshellcmd($page); } else { $pgr = ""; }
         
         // Always exclude the printer friendly pages of both types
-        $exclude = urlencode("/print/ /printwn/");
+        $exclude = urlencode("/print/|/printwn/");
 
         // Create the htdig query, and execute the engine
         $query = "words=$words&config=php&exclude=$exclude&restrict=$restrict$pgr";
