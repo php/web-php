@@ -352,10 +352,11 @@ function manual_note_display($date, $name, $text, $id)
     
     $text = clean_note($text);
     
+    $anchor = ($id ? "<a name=\"$id\"></a>\n " : "");
+        
     echo <<<USER_NOTE_TEXT
 
- <a name="$id"></a>
- <div class="note">{$admin}{$name}{$datestr}
+ {$anchor}<div class="note">{$admin}{$name}{$datestr}
   <div class="text">
 {$text}
   </div>
