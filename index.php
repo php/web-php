@@ -145,6 +145,27 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://phpsec.org/", "phpsc-logo.gif", "PHPSC Logo"); ?>
+
+<h1>PHP Security Consortium</h1>
+<p>
+ <span class="newsdate">[31-Jan-2005]</span>
+ An international group of PHP experts today announced the official launch
+ of the <a href="http://phpsec.org/">PHP Security Consortium</a> (PHPSC), a
+ group whose mission is to promote secure programming practices within the
+ PHP community through education and exposition while maintaining high
+ ethical standards.
+</p>
+<p>
+ Members of the PHPSC seek to educate PHP developers about security through
+ a variety of resources, including documentation, tools, and standards. In
+ addition to their educational efforts, the PHPSC engages in exploratory
+ and experimental research in order to develop and promote standards of
+ best practice for PHP application development.
+</p>
+
+<hr />
+
 <h1>O'Reilly Open Source Convention 2005</h1>
 
 <p>
