@@ -26,19 +26,7 @@ your searching pleasure!
 
 commonHeader("Documentation");
 
-$languages = array(
- "en" => "English",
- "pt_BR" => "Brazilian Portuguese",
- "cs" => "Czech",
- "nl" => "Dutch",
- "fr" => "French",
- "de" => "German",
- "hu" => "Hungarian",
- "it" => "Italian",
- "ja" => "Japanese",
- "kr" => "Korean",
- "es" => "Spanish"
-);
+$man_languages = array('en', 'pt_BR', 'cs', 'nl', 'fr', 'de', 'hu', 'it', 'ja', 'kr', 'es');
 
 # array structure: (header, link text, show_size_in_link)
 $formats = array(
@@ -74,7 +62,8 @@ If you use another browser you can
     }?>
  </tr>
  <?php
-   while (list($langcode,$language) = each($languages)) {
+   while (list(,$langcode) = each($man_languages)) {
+     $language = $LANGUAGES[$langcode];
      echo "<tr>\n<td bgcolor=\"#dddddd\"><b>$language</b></td>\n";
      reset($formats);
      while (list($fn,$details) = each($formats)) {
