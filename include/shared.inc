@@ -329,10 +329,13 @@ function commonHeader($title) {
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
+
+if (window != top) top.location.href = location.href;
+
+
 /*
 <? readfile($DOCUMENT_ROOT."/COPYRIGHT.txt"); ?>
 */
-
 
 /*
 Debugging:

@@ -298,6 +298,9 @@ if ($HAVE_STYLE): ?>
 
 <SCRIPT LANGUAGE="JavaScript">
 <!--
+
+if (window != top) top.location.href = location.href;
+
 var loaded = 0;
 var gotlayers = 0;
 var lastbutton='top';
