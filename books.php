@@ -774,6 +774,7 @@ function bookStats ($books, $btype) {
 echo '<h1>PHP Books</h1>';
 
 // If invalid type || lang specified, unset it
+list($type, $lang) = explode("_", $type_lang);
 if (!isset($book_types[$type])) { unset($type); }
 if (!isset($langs[$lang])) { unset($lang); }
 
@@ -791,25 +792,25 @@ you are helping to support PHP development!
 Choose one category and/or a language from the ones below to go to
 a listing of books about that subject.
 </p>
-<?php }
+<?php } ?>
 
-echo "<p><br>Browse our listing of books:";
+<form method="get" action="<?php echo $PHP_SELF; ?>">
+<p><br>Browse our listing of books:
+<select name="type_lang">
 
+<?php
 // Jumplist with types and languages
-echo "<ul>\n";
 foreach ($books as $btype => $book_list) {
-  echo "  <li>" . make_link("/books.php?type=$btype", $book_types[$btype] . " [" . count($book_list) . " books total]") . "\n";
+  echo "  <option value=\"${btype}_all\">" . $book_types[$btype] . " [" . count($book_list) . " books total]" . "</option>\n";
   $book_stat = bookStats($books, $btype);
-  echo "    <ul>";
   foreach ($book_stat as $blang => $number) {
-    echo "      <li>" . make_link("/books.php?type=$btype&lang=$blang", "in " . $langs[$blang] . " [$number]") . "</li>\n";
+    echo "    <option value=\"${btype}_${blang}\">" . "  in " . $langs[$blang] . " [$number]" . "</option>\n";
   }
-  echo "    </ul>\n  </li>\n";
-  
 }
-echo '</ul>';
-
 ?>
+
+</select><input type="submit" value="Show">
+</form>
 
 <p>
 There may be more books available that we don't know of yet! You can search
