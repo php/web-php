@@ -3,22 +3,13 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<h3>PHP 3.0.5 has been released!</h3>
+<h3>PHP 3.0.6 has been released!</h3>
 <p>
-Due to several annoying problems in version 3.0.4, version 3.0.5
-has been released.  It fixes all the compilation quirks that were
-reported in 3.0.4, as well as random problems in setups that included
-the MySQL module, due to bad settings.
-</P>
-<P>
-In order to try and avoid such occurences in the future, we've assembled
-a beta testing team that would check out every new release before it's 
-announced.  Online registration for the beta testing team will be available
-soon.
-</P>
-<P>
-All users of earlier versions of PHP are strongly encouraged to upgrade to
-this version.
+December 24th, 1998.  Merry Christmas!  3.0.6 is ready to go.  This is mostly
+a maintenance release.  Some new modules make their first apperance in this
+version.  Support for Adobe PDF and FDF as well as XML and an initial Interbase
+module are now available.  If you need any of these features, or if you see something
+in the <a href="ChangeLog.php3">ChangeLog</a> that might apply to you, then upgrade.
 </P>
 
 <h3>PHP in the News</h3>
