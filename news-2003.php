@@ -48,7 +48,7 @@ site_header("News Archive - 2003");
 </ul>
 <p>
  There have been many changes since Beta 1, some of them documented in the
- <a href="/ChangeLog-5.php#5.0.0b2">NEWS file</a> and most language
+ <a href="/ChangeLog-5.php#5.0.0b2">ChangeLog</a> and most language
  changes are documented on <a href="/zend-engine-2.php">our PHP 5/Zend Engine 2 page</a>.
 </p>
 
@@ -221,7 +221,7 @@ site_header("News Archive - 2003");
  <a href="release_4_3_3.php">PHP 4.3.3</a>. This release contains a large
  number of bug fixes and we <strong>strongly</strong> recommend that all
  users of PHP upgrade to this version. Full list of fixes can be found in
- the <a href="ChangeLog-4.php#4.3.3">NEWS</a> file.
+ the <a href="ChangeLog-4.php#4.3.3">ChangeLog</a>.
 </p>
 
 <hr />
@@ -354,7 +354,7 @@ site_header("News Archive - 2003");
  The PHP development community is proud to announce the release of PHP 5
  Beta 1. Both source packages, and a Windows build are available in the
  <a href="/downloads.php">Downloads Section</a>. A list of changes 
- can be found in the <a href="/ChangeLog-5.php#5.0.0b1">ChangeLog</a> file.
+ can be found in the <a href="/ChangeLog-5.php#5.0.0b1">ChangeLog</a>.
 </p>
 <p>
  Some of the more major changes include:
@@ -409,7 +409,7 @@ site_header("News Archive - 2003");
  The PHP developers are proud to announce the immediate availability of
  <a href="release_4_3_2.php">PHP 4.3.2</a>. This release contains a large number of bug fixes
  and is a <strong>strongly</strong> recommended update for all users of PHP.
- Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.2">NEWS</a> file.
+ Full list of fixes can be found in the <a href="ChangeLog-4.php#4.3.2">ChangeLog</a> file.
 </p>
 
 <hr />
