@@ -141,7 +141,7 @@ else { ?>
 </p>
 
 <p>
- There is no need to obsfuscate your email address, as we have a simple
+ There is no need to obfuscate your email address, as we have a simple
  conversion in place to convert the @ signs and dots in your address. You
  may still want to include a part in the email address only understandable
  by humans, to make it spam protected, as our conversion can be performed
