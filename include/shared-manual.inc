@@ -117,6 +117,7 @@ function makeTitle($title) {
 function makeEntry($date,$name,$blurb) {
 	global $FONTFACE;
 ?>
+<!--<?echo $date?>-->
 <TR VALIGN=top>
 <TD ALIGN=left><? spc(18,18);?><BR></TD>
 
@@ -151,7 +152,7 @@ function makeAddNote() {
 <TR bgcolor='#D0D0D0' valign=middle>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
 <TD ALIGN=right WIDTH=100%
-><INPUT TYPE=image VALUE="Add Note" SRC='/gifs/b-addnote-p.gif' ALT='Add Note' 
+><INPUT TYPE=image name='addnote' VALUE="Add Note" SRC='/gifs/b-addnote-p.gif' ALT='Add Note' 
 onMouseover="change('addnote',1);" onMouseout="hide();"
 WIDTH=100 HEIGHT=21 VSPACE=7 BORDER=0 NAME='addnote' align=absmiddle
 ></A
