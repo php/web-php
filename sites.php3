@@ -506,6 +506,7 @@ right away.</blockquote>
 	site("BuggEr.NeT","bugger.net");
 	site("Cigar.Com","www.cigar.com");
 	site("ClearInk Corporation","www.clearink.com");
+	site("Christen Democratisch Appel","www.cda.nl");
 	site("Distributed.Net","www.distributed.net");
 	site("Internet Weather Report","www.internetweather.com");
 	site("Metaindex of Law and Government","www.catalaw.com");
