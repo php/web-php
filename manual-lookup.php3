@@ -4,6 +4,8 @@ $func=ereg_replace("\(.*\)","-",$func);
 $filename="/manual/function.".$func.".php3";
 $classname="/manual/class.".$func.".php3";
 $refname="/manual/ref.".$func.".php3";
+$featname="/manual/feature-".$func.".php3";
+$constname="/manual/construct.".$func.".php3";
 
 if (file_exists($DOCUMENT_ROOT.$filename)):
 	Header("Location: $filename");
@@ -13,6 +15,12 @@ elseif (file_exists($DOCUMENT_ROOT.$classname)):
 	exit;
 elseif (file_exists($DOCUMENT_ROOT.$refname)):
 	Header("Location: $refname");
+	exit;
+elseif (file_exists($DOCUMENT_ROOT.$featname)):
+	Header("Location: $featname");
+	exit;
+elseif (file_exists($DOCUMENT_ROOT.$constname)):
+	Header("Location: $constname");
 	exit;
 else:
 	require("shared.inc");
