@@ -72,7 +72,9 @@ to see the file sizes</a>.
 
        # temporary hacks until pdf and chm are auto-generated
        if ($fn == "manual.pdf") {
-         $link_to = "http://snaps.php.net/~jah/pdf/manual-$langcode.pdf";
+#         $link_to = "http://snaps.php.net/~jah/pdf/manual-$langcode.pdf";
+		  $link_to = 'down';
+
        } elseif ($fn == "manual.chm") {
          $link_to = "distributions/manual_$langcode.chm";
        } else {
@@ -81,7 +83,10 @@ to see the file sizes</a>.
        
        # if no size required [pdf, online], then just print, else
        # decide what to do according to the $size of the file
-       if (!$details[2]) { echo "<a href=\"$link_to\">$details[1]</a>"; }
+       if (!$details[2]) { 
+			if($link_to == 'down') echo "PDF Documentation Unavailable Temporarily";
+			else echo "<a href=\"$link_to\">$details[1]</a>"; 
+		}
        else {
          $size = @filesize($link_to);
          if ($size) {
