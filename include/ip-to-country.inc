@@ -49,33 +49,8 @@ function i2c_go()
 {
     global $_SERVER, $_COOKIE, $COUNTRY;
 
-    // User is behind a proxy and check that we discard RFC1918 IP addresses
-    // if they are behind a proxy then only figure out which IP belongs to the
-    // user.  Might not need any more hackin if there is a squid reverse proxy
-    // infront of apache.
-    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        unset($ips); unset($ip);
-
-        // Put the IP's into an array which we shall work with shortly.
-        $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
-
-        for ($i = 0; $i < count($ips); $i++) {
-            // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
-            // 192.168.0.0/16 -- jim kill me later with my regexp pattern
-            // below.
-            if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
-                $ip = $ips[$i];
-                break;
-            }
-        }
-        
-        $ipnum = $ip ? $ip : $_SERVER['REMOTE_ADDR'];
-    }
-
-    // This is the real IP of the user
-    else {
-        $ipnum = $_SERVER['REMOTE_ADDR'];
-    }
+    // Get the real IP of the user
+    $ipnum = i2c_realip();
     
     // User already has a country detected with this IP stored
     if (!empty($_COOKIE['COUNTRY']) && strpos($_COOKIE['COUNTRY'], ',') !== FALSE) {
@@ -190,6 +165,39 @@ function i2c_valid_country()
 {
     global $COUNTRY, $COUNTRIES;
     return (!empty($COUNTRY) && $COUNTRY != "NA" && isset($COUNTRIES[$COUNTRY]));
+}
+
+// Returns the real IP address of the user
+function i2c_realip()
+{
+    global $_SERVER;
+    
+    // No IP found (will be overwritten by for
+    // if any IP is found behind a firewall)
+    $ip = FALSE;
+    
+    // User is behind a proxy and check that we discard RFC1918 IP addresses
+    // if they are behind a proxy then only figure out which IP belongs to the
+    // user.  Might not need any more hackin if there is a squid reverse proxy
+    // infront of apache.
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+
+        // Put the IP's into an array which we shall work with shortly.
+        $ips = explode (", ", $_SERVER['HTTP_X_FORWARDED_FOR']);
+
+        for ($i = 0; $i < count($ips); $i++) {
+            // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
+            // 192.168.0.0/16 -- jim kill me later with my regexp pattern
+            // below.
+            if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
+                $ip = $ips[$i];
+                break;
+            }
+        }
+    }
+
+    // Return with the found IP or the remote address
+    return ($ip ? $ip : $_SERVER['REMOTE_ADDR']);
 }
 
 /* vim: set noet ts=4 sw=4 ft=php: : */
