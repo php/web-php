@@ -43,7 +43,7 @@ Note: The official names for PHP mirrors are in the convention: "xx.php.net",
 where "xx" is replaced by the 2-letter country code of your mirror's location.
 If there already is a "xx.php.net", then you should set up your ServerName to
 be "xx2.php.net" (or "xx3.php.net", etc.).  For a list of what's available and
-whats taken, have a look at the mirror_list.txt file.
+what is taken, have a look at http://www.php.net/mirror_list.txt.
 
 You must also set up a cron job that periodically does an rsync to refresh 
 your web directory.  This will ensure that your web site is up to date. 
