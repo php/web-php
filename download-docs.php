@@ -89,7 +89,7 @@ use does otherwise.
        } elseif ($fn == "manual.pdf.zip") {
           $link_to = "distributions/manual/manual-$langcode.pdf.zip";
        } elseif ($fn == "manual.chm") {
-         $link_to = "distributions/manual/manual_$langcode.chm";
+         $link_to = "distributions/manual_$langcode.chm";
        } else {
          $link_to = "manual/$langcode/$fn";
        }
