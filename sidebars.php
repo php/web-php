@@ -38,12 +38,12 @@ Howto</a>.</i>
 <h2>Internet Explorer 5 and above</h2>
 
 <p>
-If you use Internet Explorer 5 or above on Windows, you can copy
-<a href="javascript:void(open('/searchbar.php','_search'))">this link</a>
-to your Links toolbar or add it to your favorites and clicking on it you
-can see our bar displayed in place of your usual search bar. This
-link does not install our bar as your default search bar, so no
-modification is made to your system. <i>We used the _search target name
+If you use Internet Explorer 5 or above on Windows, you can add the
+<a href="javascript:void(open('/searchbar.php','_search'))">PHP.net Search Bar</a>
+to your Links toolbar (dragging the link there) or you can add it to your 
+favorites and clicking on it you can see our bar displayed in place of your
+usual search bar. This link does not install our bar as your default search bar,
+so no modification is made to your system. <i>We used the _search target name
 supported by IE 5+ passed to the
 <a href="http://msdn.microsoft.com/workshop/author/dhtml/reference/methods/open_1.asp">open()
 JavaScript function</a> to make this sidebar available.</i>
