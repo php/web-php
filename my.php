@@ -3,6 +3,9 @@
 
 include_once "prepend.inc";
 
+// Try to make this page non-cached
+header_nocache();
+
 // Languages array copy and options to list
 $langs = $LANGUAGES; $options = array();
 
@@ -118,5 +121,26 @@ a function list search on a non-manual page, when you visit
 the <a href="/download-docs.php">manual download</a> or
 <a href="/docs.php">language selection</a> pages, etc.
 </p>
+
+<h2>Your country</h2>
+
+<p>
+The PHP.net site and mirror sites try to detect your country
+using the <a href="http://www.ip-to-country.com/">Directi
+Ip-to-Country Database</a>. This information is used to mark
+the events in your country specially and to offer close mirror
+sites if possible on the download page and on the mirror listing
+page.
+</p>
+
+<blockquote>
+<?php
+if (i2c_valid_country()) {
+    echo "We detected that you are from <b>" . $COUNTRIES[$COUNTRY] . "</b>";
+} else {
+    echo "We were unable to detect your country";
+}
+?>
+</blockquote>
 
 <?php commonFooter(); ?>
