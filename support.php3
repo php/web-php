@@ -71,6 +71,7 @@ To subscribe to one of these lists, use this simple form:
     <option value="php-announce">Announcements
     <option value="php3">User List
     <option value="php3-digest">User List Digest
+    <option value="php4beta">PHP4 Beta List
     <option value="php-kb">Knowledge Base
     <option value="php-dev">Developer List
     <option value="php-beta">Beta List
