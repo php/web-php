@@ -6,11 +6,7 @@ $win32_current = "3.0.4";
 
 $filesizes["php-3.0.4.tar.gz"]="~ 1215KB";
 $filesizes["php-3.0.3.tar.gz"]="~ 1107KB";
-$filesizes["php-3.0.2a.tar.gz"]="~ 997KB";
 $filesizes["php-3.0.4-win32.zip"]="~ 1522KB";
-$filesizes["php-3.0.1-patch.gz"]="~ 130KB";
-$filesizes["php-3.0.1-3.0.2a-patch.gz"]="~ 52KB";
-$filesizes["php-3.0.2-3.0.2a-patch.gz"]="~ 15KB";
 $filesizes["mod_php-3.0.3-1.i386.rpm"]="~ 318KB";
 $filesizes["mod_php-3.0.3-1.src.rpm"]="~ 1304KB";
 
@@ -138,9 +134,6 @@ while ($site = current($showsites)) {
 	echo "<FONT SIZE=-1><UL>\n";
 	$src_file = "${site}${srcdir}php-${current}.tar.gz";
 	$win32_zfile = "${site}${srcdir}php-${win32_current}-win32.zip";
-	$patch_file_301 = "${site}${srcdir}php-3.0.1-patch.gz";
-	$patch_file_302 = "${site}${srcdir}php-3.0.1-3.0.2a-patch.gz";
-	$patch_file_302a = "${site}${srcdir}php-3.0.2-3.0.2a-patch.gz";
 	$i386_rpm = "${site}${srcdir}mod_php-3.0.3-1.i386.rpm";
 	$src_rpm = "${site}${srcdir}mod_php-3.0.3-1.src.rpm";
 	if (eregi("caraveo",$site)) { # special case ;-)
@@ -150,15 +143,6 @@ while ($site = current($showsites)) {
 	} else {
 		echo "<LI>";
 		download_link($src_file, "($method) PHP $current source");
-		echo "\n";
-		echo "<LI>";
-		download_link($patch_file_301, "($method) PHP 3.0 -> 3.0.1 patch");
-		echo "\n";
-		echo "<LI>";
-		download_link($patch_file_302, "($method) PHP 3.0.1 -> 3.0.2a patch");
-		echo "\n";
-		echo "<LI>";
-		download_link($patch_file_302a, "($method) PHP 3.0.2 -> 3.0.2a patch");
 		echo "\n";
 		echo "<LI>";
 		download_link($win32_zfile, "($method) $win32_current Win32 binary");

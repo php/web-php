@@ -409,7 +409,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			echo "<tr><th align=right>Status:</th><td>".$row[7]."</td>";
 			echo "<td><a href=\"$PHP_SELF?id=$id&edit=2\"><font size=-1><tt>Modify</tt></font></a></td>";
 		} else {
-			echo "<form method=POST action=\"$PHP_SELF?id=$id\">\n";
+			echo "<form method=POST action=\"http://ca.php.net$PHP_SELF?id=$id\">\n";
 			if($edit==1)
 				echo "<input type=hidden name=modify value=\"Edit Bug\">\n";
 			else
