@@ -107,10 +107,10 @@ README.WIN32 file.
 <H3>Common Problems</H3>
 
 <DL>
-  <DT>
+  <DT><b>
     When I run configure, it says that it can't find the include files or
     library for gdbm (or some other package)!
-  </DT>
+  </b></DT>
   <DD>
     You can make the configure script looks for header files and libraries
     in non-standard locations by specifying additional flags to pass to
@@ -125,19 +125,19 @@ README.WIN32 file.
   <P>
   </DD>
 
-  <DT>
+  <DT><b>
     When it is compiling the file language-parser.tab.c, it gives me errors
     that say 'yytname undeclared'.
-  </DT>
+  </b></DT>
   <DD>
     You need to update your version of Bison.
   <P>
   </DD>
             
-  <DT>
+  <DT><b>
     When I run 'make', it seems to run fine but then fails when it tries
     to link the final application complaining that it can't find some files.
-  </DT>
+  </b></DT>
   <DD>
     Some old versions of make that don't correctly put the compiled
     versions of the files in the functions directory into that same
@@ -147,9 +147,9 @@ README.WIN32 file.
   <P>
   </DD>
 
-  <DT>
+  <DT><b>
     When linking PHP3, it complains about a number of undefined references.
-  </DT>
+  </b></DT>
   <DD>
     Take a look at the link line and make sure that all of the appropriate
     libraries are being included at the end. Common ones that you might have
@@ -174,10 +174,10 @@ README.WIN32 file.
 <H3>Common Problems</H3>
 
 <DL>
-  <DT>
+  <DT><b>
     I installed PHP3, but every time I load a document, I get the
     message 'Document Contains No Data'! What's going on here?
-  </DT>
+  </b></DT>
   <DD>
     This probably means that PHP3 is having some sort of problem
     and is core-dumping. Look in your server error log to see if
@@ -202,11 +202,11 @@ href="http://www.php.net/bug-form.php3">http://www.php.net/bug-form.php3</A>.
 <H3>Common Problems</H3>
 
 <DL>
-  <DT>
+  <DT><b>
     I converted my script from PHP/FI 2.0 to PHP3 syntax, but now it just
     hangs! When I looked at the processes running on my server, there was
     one process that was chewing up all of the CPU cycles!
-  </DT>
+  </b></DT>
   <DD>
     You probably missed the semi-colon on a <CODE>while
     (condition);</CODE> statement. This will cause PHP3 to spin out of
