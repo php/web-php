@@ -142,7 +142,7 @@ PHP related resources (articles, tutorials, forums, advanced search etc.)</li>
 
 <li><a href="http://devzone.zend.com/">Zend.com DevZone</a><br>
 A community site for developers of all levels, including a code
-gallary, applications, tips, forums, tutorials and more.</li>
+gallery, applications, tips, forums, tutorials and more.</li>
 </ul>
 
 
