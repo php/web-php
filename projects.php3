@@ -116,7 +116,7 @@ A PHP based secure email reading interface for IMAP based servers.
 <? endEntry();?>
 <? */ ?>
 
-<? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
+<? makeEntry("PHP Base Library","phplib.netuse.de","Boris Erdman & Kristian Köhntopp","kk@netuse.de"); ?>
 The PHP Base Library is a toolkit of extremely useful functions needed in many web applications.
 <? endEntry();?>
 
