@@ -162,7 +162,7 @@ removed right away.</blockquote>
 	site("Sprint Canada","www.sprint.ca");
 	site("Danish Yellow Pages","www.gulesider.dk");
 	site("Southwestern Bell","WWW.SBWireless.COM");
-	site("The Public Payphone Database","wiw.org/payphone");
+	site("The Public Payphone Database","wiw.org/wiw.org/payphone/");
 	siteEnd();
 
 /* Travel */
