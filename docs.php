@@ -55,7 +55,7 @@ commonHeader("Documentation ");
 <li><?php download_link("http://snaps.php.net/manual/manual-es-current.tar.gz", "PHP HTML Manual (Spanish) .tar.gz File"); ?>
 <li><?php download_link("http://snaps.php.net/manual/manual-hu-current.tar.gz", "PHP HTML Manual (Hungarian) .tar.gz File"); ?>
 </ul>
-<H2>WinHelp (CHM) versions (Januari 12, 2001)</H2>
+<H2>WinHelp (CHM) versions (January 12, 2001)</H2>
 <ul>
 <li><?php download_link("manual.chm", "PHP Manual (English)"); ?>
 <li><?php download_link("manual_de.chm", "PHP Manual (German)"); ?>
