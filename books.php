@@ -268,7 +268,7 @@ array(
     /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0596000413/wwwphpnet",
     /* author[s]    */ array("Hugh E. Williams", "David Lane"),
     /* auth link[s] */ "",
-    /* image        */ "webdbapp.gif",
+    /* image        */ "webdbapp.jpg",
     /* information  */ "O'Reilly & Associates, Mar 2002, ISBN 0-5960-0041-3, 582 pages",
     /* inform. link */ "http://www.oreilly.com/catalog/webdbapps/",
     /* language     */ "en"
@@ -351,6 +351,17 @@ array(
                        "There is also more information on the first edition on
                        <a href=\"http://www.sams.com/catalog/product.asp?product_id={AC657B6D-7E41-457D-A203-906D91B0C088}\">it's webpage</a>",
     /* inform. link */ "http://www.sams.com/catalog/product.asp?product_id={F90FC049-C258-4E7C-AAA5-CDF148BBB9A0}",
+    /* language     */ "en"
+   ),
+
+  array(
+    /* title[s]     */ "PHP and PostgreSQL Advanced Web Programming",
+    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/0672323826/wwwphpnet",
+    /* author[s]    */ array("Ewald Geschwinde", "Hans-Juergen Schoenig"),
+    /* auth link[s] */ "",
+    /* image        */ "phpandpostgres.jpg",
+    /* information  */ "Sams, Jun 2002, ISBN 0-6723-2382-6, 800 pages",
+    /* inform. link */ "http://www.sams.com/catalog/product.asp?product_id={29C0BE2C-EC75-4D30-9AA8-7589623E2FE3}",
     /* language     */ "en"
    ),
 
