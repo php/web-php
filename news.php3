@@ -5,6 +5,14 @@ commonHeader("PHP in the News");
 <dl>
 <dt>
 <b>UnixIntegration:
+Building A Cross-Platform Web Infrastructure, <a href="http://www.performancecomputing.com/unixintegration/9802/9802f1.htm">Part I</a> and <a href="http://www.performancecomputing.com/unixintegration/9803/9803f1.htm">Part II</a></b>
+<dd>Brian Platz and Robert Flannigan take a look at all the options out there and end up choosing PHP over all the
+big guys.
+<p>
+
+<dl>
+<dt>
+<b>UnixIntegration:
 <a href="http://www.performancecomputing.com/unixintegration/9802/9802f1.htm">Building A Cross-Platform Web Infrastructure, Part I</a></b>
 <dd>Brian Platz and Robert Flannigan take a look at all the options out there and end up choosing PHP over all the
 big guys.
