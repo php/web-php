@@ -6,7 +6,9 @@ if (file_exists("../configuration.inc")) {
 }
 
 $lang = $MIRRORS[$MYSITE][6];
-
+if (!is_dir("$DOCUMENT_ROOT/manual/$lang")) {
+	$lang = "en"; // fall back to English
+}
 # handle .php3 files that were renamed to .php
 if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	if($SERVER_PORT!=80) {
