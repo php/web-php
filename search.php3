@@ -15,11 +15,19 @@ $HAVE_SEARCH=$MIRRORS[$MYSITE][5];
 if (isset($pattern) && ($pattern)) {
 	$location = "http://www.progressive-comp.com/Lists/";
 	if ($show=="maillist") {
-		$query = "l=php3-general&r=1&w=2&s=".urlencode($pattern);
+		$query = "l=php3-general&r=1&w=2&q=b&s=".urlencode($pattern);
 		Header("Location: ".$location."?".$query);
 		exit;
 	} else if ($show=="devlist") {
-		$query = "l=php-dev&r=1&w=2&s=".urlencode($pattern);
+		$query = "l=php-dev&r=1&w=2&q=b&s=".urlencode($pattern);
+		Header("Location: ".$location."?".$query);
+		exit;
+	} else if ($show=="phplib") {
+		$query = "l=phplib&w=2&r=1&q=b&s=".urlencode($pattern);
+		Header("Location: ".$location."?".$query);
+		exit;
+	} else if ($show=="phplib-dev") {
+		$query = "l=phplib-dev&w=2&r=1&q=b&s=".urlencode($pattern);
 		Header("Location: ".$location."?".$query);
 		exit;
 	}
@@ -87,6 +95,8 @@ Restrict the search to: <BR>
 <OPTION VALUE="manual">Online documentation
 <OPTION VALUE="maillist">PHP 3.0 Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
+<OPTION VALUE="phplib">PHPLIB Mailing List
+<OPTION VALUE="phplib-dev">PHPLIB Developers' List
 <OPTION VALUE="source">Site PHP 3.0 source code
 </SELECT><BR>
 </FONT></TD>

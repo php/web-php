@@ -731,6 +731,8 @@ endif;
 <OPTION VALUE="manual">Documentation only
 <OPTION VALUE="maillist">PHP 3.0 Mailing List
 <OPTION VALUE="devlist">PHP Developers' List
+<OPTION VALUE="phplib">PHPLIB Mailing List
+<OPTION VALUE="phplib-dev">PHPLIB Developers' List
 <OPTION VALUE="source">Source code only
 </SELECT><INPUT TYPE="image" SRC="/gifs/b-go.gif" ALIGN=absmiddle WIDTH=36 HSPACE=5 HEIGHT=21 BORDER=0><BR>
 </FORM>

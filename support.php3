@@ -4,15 +4,27 @@ commonHeader("Support");
 ?>
 
 <?
-if (isset($maillist)):
-  # should really grab some email validating routine and use it here.
-  if (empty($email) || $email == 'user@example.com'):?>
-You forgot to specify an email address to be added to the list.
-Go back and try again.
-<?else:
-    $request = strtolower($action);
-    $sub = str_replace("@", "=", $email);
-    mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", "This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
+if (isset($maillist)) {
+	# should really grab some email validating routine and use it here.
+	if (empty($email) || $email == 'user@example.com') {
+		echo "You forgot to specify an email address to be added to the list.  ";
+		echo "Go back and try again.";
+	} else {
+		$request = strtolower($action);
+		$sub = str_replace("@", "=", $email);
+		switch ($maillist) {
+		    case "phplib":
+		    case "phplib-dev":
+			mail("$maillist-$request-$sub@lists.netuse.de", "Website Subscription", 
+				"This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
+			break;
+		    default:
+			mail("$maillist-$request-$sub@lists.php.net", "Website Subscription", 
+				"This was a request generated from the form at http://www.php.net/support.php3.", "From: $email\r\n");
+			break;
+		}
+	}
+}
 ?>
 <p>
 A request has been entered into the mailing list processing queue. You
@@ -75,6 +87,8 @@ To subscribe to one of these lists, use this simple form:
     <option value="php-kb">Knowledge Base
     <option value="php-dev">Developer List
     <option value="php-beta">Beta List
+    <option value="phplib">PHPLIB Mailing List
+    <option value="phplib-dev">PHPLIB Developers List
   </select></td>
   <td><input type=submit name="action" value="Subscribe"></td>
  </tr>
@@ -99,6 +113,8 @@ Archives for some of these mailing lists can be found at:
  <li><a href="http://php.gotocity.com/mail/">PHP 3.0 List at www.phpbuilder.com</a>
  <li><a href = "http://www.progressive-comp.com/Lists/?l=php-dev#php-dev">Developers' List</a>
  <li><a href="http://www.progressive-comp.com/Lists/?l=php3-general#php3-general">PHP 3.0 List</a>
+ <li><a href="http://www.progressive-comp.com/Lists/?l=phplib#phplib">PHPLIB List</a>
+ <li><a href="http://www.progressive-comp.com/Lists/?l=phplib-dev#phplib-dev">PHPLIB Developers' List</a>
  <li><a href="http://www.tryc.on.ca/archives/php3/php3.html">PHP 3.0 List</a>
 </ul>
 
