@@ -194,7 +194,7 @@ echo "\n<!--$MYSITE-->\n";
 // Here come the news items...
 ?>
 
-<?php print_link("http://www.mysql.com/events/uc2003/", make_image("mysqluc2003", "MySQL Users Conference and Expo 2003", "right") ); ?>
+<?php print_link("http://www.mysql.com/events/uc2003/", make_image("mysqluc2003.png", "MySQL Users Conference and Expo 2003", "right") ); ?>
 
 <h1>MySQL Users Conference and Expo 2003 in San Jose</h1>
 <p>
