@@ -161,9 +161,10 @@ commonHeader("Hypertext Preprocessor");
  Montr&eacute;al, in March 2003. DVD is subtitled in English and French,
  making legendary sessions from Rasmus and Zeev available anywhere 
  in the world. 
-<br /> 
-  This DVD makes a nice christmas present for every PHP enthusiast.
-  Available in
+</p>
+<p> 
+ This DVD makes a nice christmas present for every PHP enthusiast.
+ Available in
  <a href="http://conf.phpquebec.org/main.php/en/dvd2003/main">English</a> or 
  <a href="http://conf.phpquebec.org/main.php/fr/dvd2003/main">French</a>.
 </p>
