@@ -95,6 +95,8 @@ right away.</blockquote>
 	site("RedHat Software","www.redhat.com");
 	site("Skinz","www.skinz.org");
 	site("Sonic Spot","www.sonicspot.com");
+	site("Type Euphoria","fonts.linuxpower.org");
+	site("VB World","www.vb-world.net");
 	site("Winamp", "www.winamp.com");
 	site("Xingtech.com","www.xingtech.com");
 	site("YellowDog Linux","www.yellowdoglinux.com");
@@ -223,6 +225,7 @@ right away.</blockquote>
 	site("MailFriends.com","www.mailfriends.com");
 	site("MegaDownload","megadownload.de");
 	site("My URLs", "murl.com");
+	site("Oneview Bookmark Management","www.oneview.com");
 	site("PBM Online Services","www.ndw.de");
 	site("Resourcepage.com","www.resourcepage.com");
 	site("TageBook.Com - Online Diary","tagebook.com");
@@ -264,6 +267,7 @@ right away.</blockquote>
 /* Job & Career Sites */
 	title("Job & Career Sites");
 	siteStart();
+	site("Careers 4 Teens","www.careers4teens.com");
 	site("Jobs & Career - The Times of India","www.timesjobsandcareers.com");
 	site("Little6","www.little6.com");
 	siteEnd();
