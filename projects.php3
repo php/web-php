@@ -11,7 +11,8 @@ function makeEntry($project,$url,$name,$email) {
 <?
 	echo "<FONT FACE=\"$FONTFACE\" SIZE=-1><FONT SIZE=+0>\n";
 	echo "<B>$project</B><BR></FONT>\n";
-	echo "<A HREF=\"http://".$url."\" TARGET=\"_blank\">".$url."</A><BR>\n";
+	$url2 = (substr(strtolower($url),0,4)=="http") ? $url : "http://".$url;
+	echo "<A HREF=\"" . $url2."\" TARGET=\"_blank\">".$url2."</A><BR>\n";
 	if ($email):
 		echo "by <A HREF=\"mailto:".$email."\">".$name."</A><BR>\n";
 	else:
@@ -98,6 +99,10 @@ that also maintains change logs for all machines and software packages.
 IMP is a set of PHP3 scripts that implement an IMAP based webmail system. 
 Assuming you have an account on a server that supports IMAP, you can theoretically 
 use an installation of IMP to check your mail from anywhere that you have web access. 
+<? endEntry();?>
+
+<? makeEntry("SwellMail","https://www.swellmail.net","Angelos Karageorgiou","angelos@www.datatone.com"); ?>
+A PHP based secure email reading interface for IMAP based servers.
 <? endEntry();?>
 
 <? makeEntry("PHP Base Library","phplib.shonline.de","Boris Erdman & Kristian Köhntopp","be@shonline.de"); ?>
