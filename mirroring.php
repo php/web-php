@@ -4,7 +4,7 @@ commonHeader("Mirroring php.net");
 ?>
 
 <p>
- If you want to become an official PHP mirror, please be sure to
+ If you would like to become an official PHP mirror, please be sure to
  read and follow these instructions carefully. You should have the
  consent of your hosting company (if you aren't a hosting company
  yourself), and be prepared for some reasonably significant bandwidth
@@ -31,13 +31,15 @@ commonHeader("Mirroring php.net");
 <p>
  If you are not an official mirror (eg. mirror the site for your company's
  internal use), you should not rsync from <tt>rsync.php.net</tt> more frequently
- than every three hours, or you may find your ip blocked. Also, please make
+ than every three hours, or you may find your IP blocked. Also, please make
  an effort to only mirror those parts of the site that you actually need.
  (For example, <a href="#exclude">exclude the manual in all languages that you
  will not be using and exclude the distributions directory</a>.)
 </p>
 
 <h1>How To Mirror The PHP Website</h1>
+
+<h2>Get Files With Rsync</h2>
 
 <p>
  First, you need to have a <a href="http://rsync.samba.org/">rsync</a> installed.
@@ -70,8 +72,10 @@ commonHeader("Mirroring php.net");
  then symlink the <tt>phpweb/</tt> directory to the correct place on your server.
 </p>
 
+<h2>Setup Apache VirtualHost</h2>
+
 <p>
- Now, make sure your web server is set up to serve up <tt>.php</tt> files
+ Make sure your web server is set up to serve up <tt>.php</tt> files
  as PHP parsed files. If it isn't, add the mime-type to your config.
 </p>
 
@@ -82,6 +86,7 @@ commonHeader("Mirroring php.net");
 <a name="settings"></a>
 <pre>
    &lt;VirtualHost *-or-your-hostname-here&gt;
+
      ServerName *-or-your-hostname-here
      ServerAlias xx.php.net www.xx.php.net
      ServerAdmin yourname@yourdomain.com
@@ -110,9 +115,13 @@ commonHeader("Mirroring php.net");
      AddType application/octet-stream .bz2
      AddType application/x-pilot .prc .pdb 
 
-     # The next line is only necessary if 
+     # Set mirror's preferred language here
+     SetEnv MIRROR_LANGUAGE "en"
+
+     # The next lines are only necessary if 
      # generating stats (see /stats/README.stats)
      Alias /stats/ /path/to/local/stats/
+     SetEnv MIRROR_STATS 1
 
      # The next lines are only necessary if you would
      # like to provide local search support (see /Mirrors-htdig.tgz)
@@ -124,12 +133,16 @@ commonHeader("Mirroring php.net");
    
 <p>
  Provide an asterisk or a hostname in the VirtualHost container's
- header and in the ServerName directive. Consult the Apache
- documentation for differences of the two methods. Change the
- DocumentRoot and include_path settings as appropriate, and
- provide settings according to your local search and stats
- setup, if your mirror is going to provide these. After you
- restart Apache, your mirror site should start working.
+ header and in the ServerName directive. Consult
+ <a href="">the Apache documentation</a> for
+ differences of the two methods. Change the
+ DocumentRoot and include_path settings as appropriate, specify
+ the mirror's preferred language, and provide settings according to
+ your local search and stats setup, if your mirror is going to
+ provide these. For the preferred language setting, choose one from
+ those avilable as manual translations. If you provide something else,
+ your default language will default to English. After you restart
+ Apache, your mirror site should start working.
 </p>
 
 <p>
@@ -141,6 +154,8 @@ commonHeader("Mirroring php.net");
  bold above</a>.
 </p>
 
+<h2>Setup Regular updates</h2>
+
 <p>
  You must also set up a cron job that periodically does an rsync
  to refresh your web directory. This will ensure that your web site
@@ -148,15 +163,77 @@ commonHeader("Mirroring php.net");
 </p>
 
 <pre>
-   23 * * * * /usr/local/bin/rsync -avzC --delete --delete-after rsync.php.net::phpweb /your/local/path
+   23 * * * * /usr/local/bin/rsync -avzC --timeout=600 --delete --delete-after rsync.php.net::phpweb /your/local/path
 </pre>
 
 <p>
- You should try to stagger your times a bit from the example to help
- spread the load on the <tt>rsync.php.net</tt> server. Don't be afraid
- if you cannot find several pieces of the site in your local copy,
- like the tutorial PHP page or the printed pages' directories. These
- are handled automatically on the fly and are not real files.
+ Remember to specify the same rsync parameters you used to get
+ the phpweb files. You should try to stagger your times a bit from the
+ example to help spread the load on the <tt>rsync.php.net</tt> server.
+</p>
+
+<h2>Sponsor Logo</h2>
+
+<p>
+ We would like to thank you for providing a mirror, so
+ if you would like to display a logo on the mirror site promoting your
+ company, you are able to do so by following these steps:
+</p>
+
+<ul>
+ <li>Create a 120 x 60 pixel sized logo button.</li>
+ <li>Copy it to your <tt>/www/htdocs/phpweb/backend</tt> folder as <tt>mirror.gif</tt>, <tt>mirror.jpg</tt> or <tt>mirror.png</tt>.</li>
+ <li>Go visit your mirror URL and check if it's there.</li>
+</ul>
+
+<p>
+ The PHP Group do reserve the right to refuse images based on content, but
+ most things should be fine.
+</p>
+
+<p>
+ We have chosen a banner size which conforms with the
+ <a href="http://www.iab.net/standards/adunits.asp">Internet
+ Advertising Bureau standards</a>.
+</p>
+
+<p>
+ And finally, don't forget to put a nice little PHP logo somewhere
+ on your hosting company's site if possible. Grab one of the logos
+ from the <a href="/download-logos.php">Download logos</a> page, and
+ link it to your mirror.
+</p>
+
+<h2>Mirror Setup Troubleshooting</h2>
+
+<p>
+ Don't be afraid if you cannot find several pieces of the site in your
+ local copy, like the tutorial PHP page or the printed pages' directories.
+ These are handled automatically on the fly and are not real files.
+</p>
+
+<p>
+ If you find that the manuals are listed on the documentation page, but
+ all of the links open up a search page, you probably have an Apache /manual/
+ alias in effect. Remove that alias, restart Apache, and the manuals will
+ be showing up.
+</p>
+
+<p>
+ If the shortcut features [eg. xx.php.net/echo] are not working, check that
+ the manual files are really under DOCUMENT_ROOT, you have register_globals on,
+ and that at least the English manual is present. If the xx.php.net/include
+ shortcut works, but xx.php.net/echo does not, then you have an improper
+ ErrorDocument setting.
+</p>
+
+<p>
+ If you have an offical mirror site but it is not listed on
+ <a href="/mirrors.php">mirrors.php</a>, then your mirror is probably detected
+ to be disfunctional for our users. Mirror sites inaccessible for more then
+ three days or not updated for more then seven days are removed automatically
+ from the listing for our user's convinience. We send out a notification to
+ all automatically disabled mirror site owners every week.
 </p>
 
 <h1>Data Registered About Official Mirrors</h1>
@@ -203,14 +280,6 @@ commonHeader("Mirroring php.net");
   The URL of the hosting company. This link is provided with the
   companies name at the bottom of pages, and in the mirror listing.
  </li>
- <li>
-  The preferred default language for your country. Currently only
-  the manuals are translated. If there is no manual in your language,
-  then we will set the default language for your mirror to English for
-  now. If you see a new manual language showing up, which fits your
-  mirror better, then please contact us to modify your mirror
-  information.
- </li>
 </ul>
 
 <p>
@@ -222,36 +291,6 @@ commonHeader("Mirroring php.net");
  email address. Anyway if you would like to follow what's
  happening, you can subscribe, by sending an empty message
  to: <a href="mailto:php-mirrors-subscribe@lists.php.net">php-mirrors-subscribe@lists.php.net</a>
-</p>
-
-<p>
- We would like to thank you for providing php.net with a mirror, so
- if you would like to display a logo on the mirror site promoting your
- company, you are able to do so by following these steps:
-</p>
-
-<ul>
- <li>Create a 120 x 60 pixel sized logo button.</li>
- <li>Copy it to your <tt>/www/htdocs/phpweb/backend</tt> as <tt>mirror.gif</tt>, <tt>mirror.jpg</tt> or <tt>mirror.png</tt>.</li>
- <li>Go visit your mirror URL and check if it's there.</li>
-</ul>
-
-<p>
- The PHP Group do reserve the right to refuse images based on content, but
- most things should be fine.
-</p>
-
-<p>
- We have chosen a banner size which conforms with the
- <a href="http://www.iab.net/standards/adunits.asp">Internet
- Advertising Bureau standards</a>.
-</p>
-
-<p>
- And finally, don't forget to put a nice little PHP logo somewhere
- on your hosting company's site if possible. Grab one of the logos
- from the <a href="/download-logos.php">Download logos</a> page, and
- link it to your mirror.
 </p>
 
 <p>
