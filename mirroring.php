@@ -236,7 +236,7 @@ $minute = rand(0, 59);
 </p>
 
 <pre>
-   <?php echo $minute; ?> * * * * /usr/local/bin/rsync -avzC --timeout=600 --delete --delete-after rsync.php.net::phpweb /your/local/path
+   <?php echo $minute; ?> * * * * rsync -avzC --timeout=600 --delete --delete-after --include='distributions/*.exe' rsync.php.net::phpweb /your/local/path
 </pre>
 
 <p>
