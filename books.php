@@ -629,20 +629,9 @@ array (
   ),
 
   array(
-    /* title[s]     */ "Desenvolvendo Websites com PHP 4",
-    /* title_link   */ "http://www.temporeal.com.br/mod_perl/livraria.pl?acao=ver_detalhes&isbn=8575220039&volume=1&ano_publ=2001&rnd=16354996126232",
-    /* author[s]    */ "Juliano Niederauer",
-    /* auth link[s] */ "",
-    /* image        */ "niederauer.jpg",
-    /* information  */ "2001, ISBN 85-7522-003-9, 256 pages",
-    /* inform. link */ "http://www.cursophp.net/livro/",
-    /* language     */ "pt"
-  ),
-
-  array(
     /* title[s]     */ "PHP e MySQL - Desenvolvimento Web",
     /* title_link   */ "http://www.campus.com.br/catalogo/livro.cfm?id=20821",
-    /* author[s]    */ "Luke Welling", "Laura Thomson",
+    /* author[s]    */ array("Luke Welling", "Laura Thomson"),
     /* auth link[s] */ "",
     /* image        */ "welling_br.gif",
     /* information  */ "Editora Campus, July 2001, ISBN 8-5352-0821-6",
@@ -816,7 +805,7 @@ function showBook($one_book) {
 
   echo '<tr valign="top">' . "\n";
   echo "<td>\n";
-  print_link ($title_link, make_image ("books/".$image, $img_title, false, false, false, 1) );
+  print_link ($title_link, make_image ("books/".$image, $img_title, false, false, false, 0) );
   echo "<br>\n</td><td><p>\n";
   echo "$title\nby ";
 
