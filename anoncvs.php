@@ -1,4 +1,5 @@
 <?php
+// $Id$
 $_SERVER['BASE_PAGE'] = 'anoncvs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 commonHeader("Anonymous CVS Access");
