@@ -66,7 +66,7 @@ function wrap($text,$margin=72) {
 function list_ids($current) {
 	global $dbhost,$dbuser,$dbpwd;
 	mysql_connect($dbhost,$dbuser,$dbpwd) or die("Unable to connect to SQL server.");
-	$result = mysql_db_query('php3', "select distinct dev_id from bugdb where dev_id not like '%@%' and dev_id not like '%.%' order by dev_id");
+	$result = mysql_db_query('php3', "select distinct dev_id from bugdb where dev_id not like '%@%' and dev_id not like '%.%' and php_version like '4%' order by dev_id");
 	if($current) echo "<option>$current\n";
 	echo "<option>Any\n";
 	while($row = mysql_fetch_row($result)) {
