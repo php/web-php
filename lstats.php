@@ -1,10 +1,5 @@
 <?php
 
-if(!strstr($MYSITE,"www.php.net")) {
-	Header("Location: http://www.php.net/lstats.php");
-	exit;
-}
-	
 	function status_print ($status, $num) 
 	{
 		$str = ucfirst($status).":";
