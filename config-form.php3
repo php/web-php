@@ -140,9 +140,6 @@ function generate_config()
 	if (parent.frames[0].document.config.with_debugger.checked) {
 		cfg_line += " --enable-debugger";
 	}
-	if (parent.frames[0].document.config.with_logging.checked) {
-		cfg_line += " --enable-logging";
-	}
 	
 	parent.frames[1].document.result.config_line.value = cfg_line;
 }
@@ -302,12 +299,6 @@ function generate_config()
 		<td valign="top">PHP Debugger</td>
 		<td>Compile the PHP debugger.  This is in an early alpha.</td>
 	</tr>
-	<tr>
-		<td valign="top"><? print_checkbox("with_logging") ?></td>
-		<td valign="top">PHP Logging</td>
-		<td>Enable PHP logging.  This feature is likely to change or disappear in the final 3.0 release.</td>
-	</tr>
-	
 </table>
 <br>
 
