@@ -7,9 +7,7 @@ site_header("Annonce de publication de PHP 4.3.5");
 
 <h1>Annonce de publication de PHP 4.3.5</h1>
 
-<!--
-<p>[ <a href="/release_4_3_5_fr.php">Version Fran&ccedil;aise</a> ]</p>
--->
+<p>[ <a href="/release_4_3_5.php">English Version</a> ]</p>
 
 <p>
 L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer 
@@ -23,7 +21,7 @@ d'adopter cette version d&egrave;s que possible.
 <h2>Version de correction de bogues</h2>
 
 <p>
- PHP 4.3.4 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
+ PHP 4.3.5 contient notamment les corrections, ajouts et am&eacute;liorations suivantes : 
 </p>
 
 <ul>
@@ -42,7 +40,7 @@ d'adopter cette version d&egrave;s que possible.
 </ul>
 
 <p>
- Pour une liste exhaustive des modifications de PHP 4.3.4, voyez
+ Pour une liste exhaustive des modifications de PHP 4.3.5, voyez
  <a href="/ChangeLog-4.php#4.3.5">le changelog</a>, en anglais.
  </p>
 
