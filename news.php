@@ -65,7 +65,7 @@ features, and provides today a base that can easily stand out in the
 increasingly crowded server-side application development platform market.
 <? endEntry(); ?>
 
-<? makeEntry( "PHP 4.0: Dynamic Content for the Web Warrior", "by <a href=\"mailto:paulferris@linuxtoday.com\">Paul Harris</a>", 
+<? makeEntry( "PHP 4.0: Dynamic Content for the Web Warrior", "by <a href=\"mailto:paulferris@linuxtoday.com\">Paul Ferris</a>", 
 	"http://www.linuxplanet.com/linuxplanet/reviews/1891/1/", "May 28, 2000");?>
 If you've been cruising the net, looking for the latest and greatest things, you often come across vaporware technologies, and promises that are made and broken. You might find yourself imagining things, like over-hyped proprietary products coming down the pike, where the choices had been open in the past. 
 <? endEntry(); ?>
