@@ -7,21 +7,15 @@ $win32_current = "3.0RC4";
 $filesizes["php-3.0RC4.tar.gz"]="~ 960KB";
 $filesizes["php-3.0RC4-win32.exe"]="~ 1090KB";
 
-commonHeader("Download PHP Engine");
+function makeCap() {
+	GLOBAL $MIRRORS;
 ?>
-<FONT SIZE=+1><B>Pick a mirror site close to you:</B></FONT><BR>
-<I>(all mirrors are updated at least every hour)</I><BR>
-<BR>
-<BR>
-
-<CENTER>
-<TABLE border=0 cellpadding=0 cellspacing=0>
-<TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD align=left colspan=3 NOWRAP>
+<TR bgcolor='#D0D0D0' valign=top>
+<TD ALIGN=left><IMG SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD align=center colspan=3 rowspan=2 NOWRAP>
 <?
 $mirror_sites=$MIRRORS;
-
+$count=0;
 $lastc="";
 reset($mirror_sites);
 while ($site = key($mirror_sites)) {
@@ -31,14 +25,38 @@ while ($site = key($mirror_sites)) {
 	if ($c == $lastc || $c == 'xx') {
 		continue;
 	}
-	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0 ALT=\" [$c] \"></A>";
+	$count++;
+	echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 VSPACE=5 hspace=15 BORDER=0 ALT=\" [$c] \"></A>";
+	if ($count%5==0) {
+		echo "<BR>\n";
+	}
 	$lastc = $c;
 }
 ?><BR>
 </TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+</TR>
+<TR VALIGN=bottom bgcolor='#D0D0D0'>
+<TD ALIGN=left><IMG SRC="/gifs/gcap-leftbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
+<TD ALIGN=right><IMG SRC="/gifs/gcap-rightbot.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 </TR>
 <?
+};
+
+
+commonHeader("Download PHP Engine");
+?>
+<FONT SIZE=+1><B>Pick a mirror site close to you:</B></FONT><BR>
+<I>(all mirrors are updated at least every hour)</I><BR>
+<BR>
+<BR>
+
+<CENTER>
+<TABLE border=0 cellpadding=0 cellspacing=0>
+<?
+makeCap();
+
+$mirror_sites=$MIRRORS;
 $lastcountry="xxxxx";
 reset($mirror_sites);
 while ($site = key($mirror_sites)) {
@@ -58,7 +76,7 @@ while ($site = key($mirror_sites)) {
 		$method="unknown";
 	}
 	if ($lastcountry!=$country) {
-		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR><BR></TD><TD><BR></TD></TR>\n";
+		echo "<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>\n";
 		echo "<TR BGCOLOR='#D0D0D0' VALIGN=middle>\n";
 		echo "<TD><IMG SRC='/gifs/gcap-left.gif' WIDTH=18 HEIGHT=36 BORDER=0></TD>\n";
 		echo "<TD><A NAME='$country' HREF=\"$site\">";
@@ -97,26 +115,8 @@ while ($site = key($mirror_sites)) {
 	echo("</UL>\n</TD></TR></TABLE></TD></TR>\n");
 }
 ?>
-<TR><TD colspan=3>&nbsp;<BR></TD><TD BGCOLOR='#F0F0F0'>&nbsp;<BR><BR></TD><TD>&nbsp;<BR></TD></TR>
-<TR bgcolor='#D0D0D0' valign=middle>
-<TD ALIGN=left><IMG SRC="/gifs/gcap-left.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-<TD align=left colspan=3 NOWRAP>
-<?
-$mirror_sites=$MIRRORS;
-reset($mirror_sites);
-$lastc="";
-while ($site = key($mirror_sites)) {
-	next($mirror_sites);
-	$c=$mirror_sites[$site][0];
-	if ($c!=$lastc):
-		echo "<A HREF=\"#$c\"><IMG SRC=\"/gifs/gflag-$c.gif\" WIDTH=45 HEIGHT=24 hspace=10 BORDER=0></A>";
-		$lastc=$c;
-	endif;
-}
-?><BR>
-</TD>
-<TD ALIGN=right><IMG SRC="/gifs/gcap-right.gif" WIDTH=18 HEIGHT=36 BORDER=0><BR></TD>
-</TR>
+<TR><TD colspan=3><BR></TD><TD BGCOLOR='#F0F0F0'><BR></TD><TD><BR></TD></TR>
+<? makeCap(); ?>
 </TABLE>
 <?
 commonFooter();
