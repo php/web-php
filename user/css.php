@@ -3,8 +3,9 @@
 
 include_once "prepend.inc";
 
-// The output of this page should not be cached
-header_nocache();
+// The output of this page should not be cached by public proxies
+header("Cache-Control: private, max-age=86400, min-age=43200");
+header("Pragma: no-cache");
 
 // Proper content-type header
 header("Content-type: text/css");
