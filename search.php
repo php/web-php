@@ -2,6 +2,7 @@
 /* $Id$ */
 
 include_once "prepend.inc";
+include 'loadavg.inc';
 
 /*
  See http://php.net/mirroring-search for directions if you want
