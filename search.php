@@ -47,7 +47,7 @@ if ($pattern) {
 		header("Location: $location?$query");
 		exit;
 	} else if ($show=="bugdb") {
-		$location = "http://bugs.php.net/";
+		$location = "http://bugs.php.net/search.php";
 		$query = "cmd=Display+Bugs&status=All&bug_type=Any&search_for=".urlencode($pattern);
 		header("Location: $location?$query");
 		exit;
