@@ -16,7 +16,6 @@ Servers that run the CGI version of PHP are not reflected in these stats.
 
 <p>You can also see how popular PHP is relative to other Apache modules
 at <a href="http://www.e-softinc.com/survey/">E-Soft Inc.'s
-web survey</a>. (Spoiler: PHP is the most popular behind the FrontPage
-extensions.)
+web survey</a>. (Spoiler: PHP is the most popular)
 
 <? commonFooter(); ?>
