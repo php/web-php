@@ -153,13 +153,13 @@ function clean_AntiSPAM ($email) {
 }
 
 
-function is_emailable_address( $email ) {
+function is_emailable_address( $email, $debug=0 ) {
     $hosts_regex="lists\.php\.net|chek.*\.com";
     $excluded_hosts = ereg($hosts_regex,$email);
     if (!$excluded_hosts && $email != "") {
         $validator = new email_validation_class;
         $validator->timeout=10;
-        //$validator->debug=1;
+        $validator->debug=$debug;
         return $validator->ValidateEmailBox($email);
     } else {
         return false;
