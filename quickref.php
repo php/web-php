@@ -98,7 +98,7 @@ if (count($temp) > 0) {
     unset($matches, $temp);
 }
 
-commonHeader("Manual Quick Reference");
+site_header("Manual Quick Reference");
 ?>
 
 <h1>PHP Function List</h1>
@@ -132,7 +132,7 @@ commonHeader("Manual Quick Reference");
 </p>
 
 <?php
-    commonFooter();
+    site_footer();
     exit;
 } 
 ?>
@@ -145,5 +145,5 @@ commonHeader("Manual Quick Reference");
 
 <?php
 quickref_table($functions);
-commonFooter();
+site_footer();
 ?>

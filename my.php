@@ -63,7 +63,7 @@ $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
 myphpnet_save();
 
-commonHeader("My PHP.net");
+site_header("My PHP.net");
 ?>
 
 <form action="/my.php" method="post">
@@ -233,4 +233,4 @@ foreach ($mirror_sites as $murl => $mdata) {
 </p>
 </form>
 
-<?php commonFooter(); ?>
+<?php site_footer(); ?>

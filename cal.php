@@ -30,7 +30,7 @@ if ($cy != 0 && !valid_year($cy)) {
 if ($id) {
     // Try to load event by ID and display header and info for that event
     if ($event = load_event($id)) {
-        commonHeader("Event: " . stripslashes(htmlentities($event['sdesc'])));
+        site_header("Event: " . stripslashes(htmlentities($event['sdesc'])));
         display_event($event, 0);
         $begun = TRUE;
     }
@@ -51,7 +51,7 @@ elseif ($cy && $cm && $cd) {
         
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
-            commonHeader("Events: ".date("F j, Y", $date));
+            site_header("Events: ".date("F j, Y", $date));
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
                 display_event($event, 0);
@@ -87,7 +87,7 @@ if (!isset($cy) || $cy == 0) { $cy = date("Y"); }
 $date = mktime(0, 0, 1, $cm, 1, $cy);
 
 if (!$begun) {
-  commonHeader("Events: ".date("F Y", $date));
+  site_header("Events: ".date("F Y", $date));
 ?>
 <div class="tip">
  <p>
@@ -114,7 +114,7 @@ if ($events === FALSE || count($events) == 0) {
 // If there were any error, display them
 if (count($errors) > 0) {
     display_errors($errors);
-    commonFooter();
+    site_footer();
     exit;
 }
 
@@ -182,7 +182,7 @@ for (; $days % 7; $days++) {
 echo "</tr>\n</table>\n";
 
 // Print out common footer
-commonFooter();
+site_footer();
 
 // Generate the date on which a recurring event falls for a given month
 // $bom and $eom are the first and last day of the month to look at
