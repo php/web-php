@@ -146,6 +146,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://mysqlcomconeurope.com", "MySQLcomcon_logo.gif", "MySQL"); ?>
+<h1>MySQL ComCon Europe</h1>
+<p>
+ <span class="newsdate">[06-Sep-2004]</span>
+ The MySQL ComCon Europe 2004 brings together the vigor and excitement of a
+ community event with the structure of MySQL mission-critical business event.
+ The conference will take place in Frankfurt from November 9th to 10th and will
+ have a day of pre-conference power workshops on the 8th. Sessions on diverse
+ topics such as "Performance Tuning J2EE Applications deployed on MySQL", "PHP
+ 5 and MySQL 4.1/5.0" and a two-part introduction to MySQL Cluster will be
+ presented by MySQL core developers, expert trainers and MySQL community
+ leaders. For more details on the event, please visit
+ <a href="http://mysqlcomconeurope.com">http://mysqlcomconeurope.com/</a>.
+</p>
+
+<p>List of changes can be found in the 
+<a href="http://viewcvs.php.net/viewcvs.cgi/php-src/NEWS.diff?r1=1.1247.2.724&r2=1.1247.2.714">NEWS</a> file.</p>
+
+<hr />
+
 <?php news_image("/downloads.php#v4", "php-version4.gif", "PHP 4"); ?>
 <h1>PHP 4.3.9RC2 released!</h1>
 <p>
