@@ -198,6 +198,12 @@ if (isset($cmd) && $cmd == "Send bug report") {
 		exit;
 	}
 
+	if ($php_version=='earlier') {
+		echo "ERROR!  Please select a valid PHP version.  If your PHP version is too old, please upgrade first and see if the problem has not already been fixed.");
+		commonFooter();
+		exit;
+	}
+
 	show_menu($status);
 	echo "<hr>\n";
 	
@@ -551,14 +557,10 @@ Or use the form below to submit a new bug report.
   <th align=right>PHP version:</th>
   <td>
    <select name="php_version">
-    <option name="4.0.0" selected>4.0.0 Release
+    <option name="4.0.1" selected>4.0.1
+    <option name="4.0.0" selected>4.0.0
     <option name="4.0CVS-<? print date("d/m/Y"); ?>">4.0 Latest CVS (<? print date("d/m/Y"); ?>)
-    <option name="4.0RC2">4.0 Release Candidate 2
-    <option name="4.0RC1">4.0 Release Candidate 1
-    <option name="4.0b4pl1">4.0 Beta 4 Patch Level 1
-    <option name="4.0b4">4.0 Beta 4
-    <option name="4.0b3">4.0 Beta 3
-    <!--<option name="earlier">Earlier?  Upgrade first!-->
+    option name="earlier">Earlier?  Upgrade first!
    </select>
   </td>
  </tr><tr>
