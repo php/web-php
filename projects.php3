@@ -72,6 +72,12 @@ an IT support department to keep track of its support calls in a way
 that also maintains change logs for all machines and software packages.
 <? endEntry();?>
 
+<? makeEntry("IMP","osmos.ml.org/projects/imp/","Chuck Hagenbuch","chuck@osmos.ml.org"); ?>
+IMP is a set of PHP3 scripts that implement an IMAP based webmail system. 
+Assuming you have an account on a server that supports IMAP, you can theoretically 
+use an installation of IMP to check your mail from anywhere that you have web access. 
+<? endEntry();?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
