@@ -59,7 +59,7 @@ cvs -d :pserver:cvsread@cvs.php.net:/repository co -r PHP_4_0_7 Zend TSRM
      Tags for major releases include: php_4_0_0, php_4_0_1, php_4_0_1pl1, php_4_0_2, php_4_0_3, php_4_0_4, php_4_0_4pl1, php_4_0_5, php_4_0_6, php_4_1_0, php_4_1_1</i>
     </blockquote>
     
-  <li>Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
+  <li>Make sure you have autoconf 2.52 or newer, automake 1.4 or newer and libtool
     1.4 or newer.
     <blockquote>
      <strong style="color: #99000">Note:</strong> <br/>
@@ -90,6 +90,7 @@ You should also ensure that autoconf, automake and libtool are installed in the 
 
 <p>The following combination are known to work.
  <ul>
+  <li>autoconf 2.52, automake 1.4 and libtool 1.4</li>
   <li>autoconf 2.52, automake 1.5 and libtool 1.4</li>
  </ul>
 </p>
