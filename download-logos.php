@@ -32,7 +32,7 @@ servers on your page! Copy the image to your site please.</font>
 </p>
 
 <p>
-<a href="http://vpontier.free.fr/">Vincent Pontier</a> also made some
+<a href="http://www.elroubio.net/">Vincent Pontier</a> also made some
 really neat PHP artwork, for the French PHP sites, and for the benefit
 of the whole community. You can download some of his works and use
 under a GPL licence.
