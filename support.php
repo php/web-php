@@ -140,7 +140,7 @@ lists. There are many PHP-related mailing lists available.
       false, true, false
     ),
 
-    'Lists for the developers of PHP, php.net and the docs',
+    'Lists for the developers of PHP, php.net and documentations',
     Array (
       'php-dev', 'Developer list',
       'A medium volume list for those who want to help out with the development of PHP',
