@@ -14,9 +14,7 @@ if (preg_match("/(.*\.php)3$/", $REQUEST_URI, $array)) {
 	exit;
 }
 
-$uri=strstr($REDIRECT_REDIRECT_ERROR_NOTES,'phpweb/');
-$uri = strchr($uri,'/');
-$uri = substr($uri,1);
+$uri=substr($REDIRECT_REDIRECT_ERROR_NOTES,strpos($REDIRECT_REDIRECT_ERROR_NOTES,$DOCUMENT_ROOT)+strlen($DOCUMENT_ROOT)+1);
 
 if(strchr($uri,'/')) {
 	list($lang,$function) = explode('/',$uri,2);
