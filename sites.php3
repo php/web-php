@@ -385,6 +385,7 @@ right away.</blockquote>
 	site("Amulet Gemstones and Jewelry","ww2.gemstones.com");
 	site("Arena Fan","www.arenafan.com");
 	site("BART's Water Sports","www.bartswatersports.com");
+	site("Bruna bookstore","www.bruna.com");
 	site("BuyMP3.com","www.buymp3.com");
 	site("Cheap Bytes", "www.cheapbytes.com");
 	site("Clabber Girl Baking Powder","www.hulman.com");
