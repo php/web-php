@@ -54,10 +54,8 @@ commonHeader("Documentation ");
 <ul>
 <li><? download_link("manual.rtf", "PHP Manual RTF File"); ?>
 <li><? download_link("manual.chm", "PHP Manual Windows Help File"); ?>
-<!-- <li><? //download_link("manual.prc", "PHP Manual PalmPilot DOC File"); ?> -->
 <li><?php download_link("manual_isilo.pdb","PHP Manual - PalmPilot Isilo format"); ?>
-<li><?php download_link("manual_poormojo_org.pdb","PHP Manual - PalmPilot DOC format (using www.poormojo.org)"); ?>
-<li><?php download_link("manual_screwdriver_net.pdb","PHP Manual - PalmPilot DOC format (using pilot.screwdriver.net)"); ?>
+<li><?php download_link("manual_doc.pdb","PHP Manual - PalmPilot DOC format)"); ?>
 </ul>
 
 <H1>Translations</H1>
