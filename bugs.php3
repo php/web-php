@@ -315,8 +315,8 @@ if (isset($cmd) && $cmd == "Send bug report") {
 				$text = stripslashes($text);
 			}
 			$esdesc = stripslashes($esdesc);
-    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
-    		Mail("php-dev@php.iquest.net", "Bug #$id Updated: $esdesc", $text, "From: Bug Database <php-dev@php.iquest.net>");
+    		Mail($eemail, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
+    		Mail($destination, "Bug #$id Updated: $esdesc", $text, "From: Bug Database <$destination>");
 		}
 	}
     $result = mysql_query("SELECT * from bugdb where id=$id");
