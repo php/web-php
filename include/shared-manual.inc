@@ -267,7 +267,7 @@ function sendManualHeaders($charset,$lang) {
 function manualHeader($title,$id="") {
 	global $HTDIG, $LANGUAGES, $LANG, $SIDEBAR_DATA;
 	makeBorderTOC($title);
-	commonHeader('Manual: '.$title);
+	commonHeader($title. " - Manual");
         # create links to plain html and other languages
 	if (!$HTDIG) {
 		navigationBar($title, $id, "top");
