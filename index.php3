@@ -8,13 +8,6 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
-<h3>Mailing lists temporarily unavailable</h3>
-<p>
-Due to some poorly-timed problems with the machine that handles the
-mailing lists, they have been taken out of service temporarily. Things
-should be back to normal in a couple of days. Sorry!
-</p>
-
 <h3>PHP Talk at Atlanta Linux Showcase</h3>
 <p>
 <a href="als99/"><img align=right src="gifs/als99.gif" border=0 width=64 height=61 alt="Atlanta Linux Showcase"></a>
