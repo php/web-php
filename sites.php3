@@ -113,6 +113,7 @@ removed right away.</blockquote>
 	site("SpaceNet","www.spacenet.de");
 	site("Compmore.Net","www.compmore.net");
 	site("CocoNet Corporation","www.coconet.com");
+	site("Aidan Internet Solutions","www.aidan.net");
 	siteEnd();
 
 /* Military */
