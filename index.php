@@ -215,6 +215,20 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>URL Shortcuts and Site Search</h1>
+
+<p>
+ <span class="newsdate">[29-Jul-2003]</span>
+ After many of our users requested a change in how our URL shortcuts behave
+ when someone mistypes a shortcut, the default behaviour now is to look for
+ a function name instead of performing a documentation search on Google.
+ Those, who were satisfied with the Google search, can <a href="/my.php">set
+ their preference at the My PHP.net page</a>. We are working on a better
+ onsite search solution, Google is used temporarily to search our site.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.phparch.com/", make_image("news/phpa_logo_small.gif", "php|architect", "right")); ?> 
 
 <h1>php|architect now in print</h1>
