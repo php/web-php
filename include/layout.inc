@@ -425,7 +425,7 @@ function display_event($event,$include_date=1)
 <?php
   if ($include_date && ($event['start'] || $event['smonth'])) echo "<b>", date("F j, Y", $sday), "</b>\n";
   if ($event['url']) echo '<a href="', htmlentities($event['url']),'">';
-  echo "<b>", htmlentities($event['sdesc']), "</b>";
+  echo "<b>", stripslashes(htmlentities($event['sdesc'])), "</b>";
   if ($event['url']) echo "</a>";
   switch ($event['type']) {
   case 2:

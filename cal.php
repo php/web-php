@@ -16,7 +16,7 @@ $cd = (int)$cd;
 
 if ($id) {
  if ($event = load_event($id)) {
-   commonHeader("Event: ".htmlentities($event['sdesc']));
+   commonHeader("Event: ".stripslashes(htmlentities($event['sdesc'])));
    display_event($event, 0);
    $begun++;
  }
@@ -151,7 +151,7 @@ function display_events_for_day($day,$events) {
      || ($event['start'] == $day)) {
       echo '<div class="event">',
            '<a href="',$PHP_SELF,"?id=$event[id]&amp;cm=$cm&amp;cy=$cy",'">',
-           htmlentities($event['sdesc']),
+           stripslashes(htmlentities($event['sdesc'])),
            '</a></div>';
     }
   }
