@@ -9,10 +9,8 @@ site_header("News Archive - 2000");
 
 <p>
  Here are the most important news items we have published in 2000 on PHP.net.
- For the latest news, <a href="/index.php">check the homepage</a>. For the 
- <a href="/news-2001.php">news archive of 2001</a>,
- <a href="/news-2002.php">2002</a>, or <a href="/news-2003.php">2003</a> see
- the respective pages.
+ For the latest news, <a href="/index.php">check the homepage</a>.
+ See more archives for <?php print_news_links(); ?>.
 </p>
 
 <hr />
@@ -119,6 +117,54 @@ site_header("News Archive - 2000");
  gd-1.8, ucd-snmp 4.1, and high-resolution timers on OS/2. OpenBSD support has been
  improved considerably. The source package and Win32 binaries are available from the
  PHP homepage. The ChangeLog contains a full list of changes.
+</p>
+
+<hr />
+
+<h1>Zend Optimizer released!</h1>
+<p>
+ <span class="newsdate">[08-Mar-2000]</span>
+ <a href="http://www.zend.com">Zend Technologies</a> has announced the
+ availability of the Zend Optimizer for PHP 4.0 Beta 4. The optimizer is
+ available for <a href="http://www.zend.com/store/products/zend-optimizer.php">free
+ download</a>
+</a>
+
+<hr />
+
+<h1>PHP Talks at ApacheCon</h1>
+<p>
+ <span class="newsdate">[24-Feb-2000]</span>
+ Nathan Wallace, Craig Kohtz and Tobias Ratschiller are all giving
+ presentations on PHP at ApacheCon, 8-10th March 2000, in Orlando,
+ Florida. The topics include sessions and authentication, advanced PHP
+ techniques, migrating from ASP to PHP and web design patterns. You can
+ find more information about these talks <a
+ href="http://www.apachecon.com/2000/US/html/sessions.html">here</a>.
+</p>
+
+<hr />
+
+<h1>PHP Developers' Meeting</h1>
+<p>
+ <span class="newsdate">[17-Jan-2000]</span>
+ On January 20th, 2000 the primary developers of PHP are meeting for a
+ 4-day session in Tel Aviv, Israel. The main goal is to organize the
+ development effort. The developers of MySQL will also be in attendance
+ to explore how the two projects can cooperate further to make the
+ PHP/MySQL combination even stronger than it already is.
+</p>
+
+<hr />
+
+<h1>PHP 3.0.13 has been released</h1>
+<p>
+ <span class="newsdate">[01-Jan-2000]</span>
+ The long-awaited release of PHP 3.0 contains numerous bug fixes and a
+ bonus of new features. Support for GNU recode, portable access to stdio
+ streams, enhanced FTP support, support for Mcal and IMSP, as well as PNG
+ functions for gd make this release a must for every user of PHP. The
+ ChangeLog provides a complete list of changes.
 </p>
 
 <?php site_footer(); ?>

@@ -669,4 +669,16 @@ function display_event($event, $include_date = 1)
 <?php
 }
 
+// Print news links for archives
+function print_news_links()
+{
+    $links = "";
+    for ($i = 1998; $i < 2004; $i++) {
+        $pagename = "news-$i.php";
+        if ($pagename == $_SERVER['BASE_PAGE']) { continue; }
+        $links .= '<a href="/news-' . $i . '.php">' . $i . '</a>, ';
+    }
+    echo substr($links, 0, -2);
+}
+
 /* vim: set noet ts=4 sw=4 ft=php: : */

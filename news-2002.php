@@ -9,9 +9,8 @@ site_header("News Archive - 2002");
 
 <p>
  Here are the most important news items we have published in 2002 on PHP.net.
- For the latest news, <a href="/index.php">check the homepage</a>. For the 
- <a href="/news-2000.php">news archive of 2000</a>, <a href="/news-2001.php">2001</a>,
- or <a href="/news-2003.php">2003</a>, see the respective pages.
+ For the latest news, <a href="/index.php">check the homepage</a>.
+ See more archives for <?php print_news_links(); ?>.
 </p>
 
 <hr />
