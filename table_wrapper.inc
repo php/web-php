@@ -4,7 +4,7 @@
 #| By Zeev Suraski                     |
 #+-------------------------------------+
 
-  function table_wrapper($dbname)
+  function table_wrapper()
   {
     global $fields,$tables;
     

@@ -266,7 +266,7 @@ if (isset($cmd) && $cmd == "Send bug report") {
 			$where_clause = "status='$status' and bug_type='$bug_type'";
 		}
 	}
-	table_wrapper("php3");
+	table_wrapper();
 	echo "<br><center><a href=\"$PHP_SELF\">Submit a Bug Report</a></center>\n";
 } else if(!isset($cmd) && isset($id)) {
 	show_menu($status);

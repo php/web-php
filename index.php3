@@ -3,13 +3,24 @@ require("shared.inc");
 commonHeader("PHP3 Main Page");
 ?>
 
-Welcome to PHP's new home with an all-new look to it.  The design is
+<h3>PHP Meaning Vote</h3>
+
+Help the development team decide about the meaning of the PHP acronym
+by <a href="http://il.php.net/vote_form.php3">placing your vote</a>.
+<br>
+
+<h3>New Site</h3>
+
+The PHP site has been given a serious facelift recently.  The design is
 courtesy of Colin Viebrock at <a
 href="http://www.privateworld.com">Private World Communications</a>.
 Please let us know of any problems with the site by sending a message
 to <a href="mailto:webmaster@php.net?subject=<?
 echo "New Look Feedback (browser:$HTTP_USER_AGENT, site:$SERVER_NAME)";
 ?>">webmaster@php.net</A>.<P>
+<br>
+
+<h3>What is PHP?</h3>
 
 PHP 3.0 is server-side HTML embedded scripting language and it is a
 complete rewrite of the popular <a href="http://php.iquest.net">PHP/FI
