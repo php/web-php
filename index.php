@@ -271,7 +271,7 @@ presentations online. Check out:</p>
 <p>
 Looking for clear and useful guides to build dynamic web-sites using
 PHP? Our <?php print_link("/books.php", "Books Resource Center"); ?> lists now
-more than 50 books in eleven different languages. If you know
+more than 60 books in eleven different languages. If you know
 about more PHP-related books, tell us about them!
 <br clear="all">
 </p>
