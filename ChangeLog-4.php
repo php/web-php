@@ -5,6 +5,60 @@ commonheader("PHP 4 ChangeLog");
 
 <h1>PHP 4 ChangeLog</h1>
 
+<a name="4.2.1"></a>
+<h3>Version 4.2.1</h3>
+<b>13-May-2002</b>
+<ul>
+<li>Added safe-mode checks to show_source(), parse_ini_file() and rmdir(). Also
+ fixed security problems with safe_mode_include_dir directive. (Rasmus)</li>
+<li>Changed HTTP upload code to accept 0 byte file uploads. (Zeev)</li>
+<li>Major update of domxml. New functions, better DOM compliance and bug fixes:
+  <ul>
+    <li>
+      Changed the old $node->append_child() to $node->append_sibling() since
+      the new append_child() behaves correctly (= W3C standard).
+    </li>
+    <li>
+      Added domxml functions:
+      <ul>
+        <li>domxml_elem_get_elements_by_tagname()</li>
+        <li>domxml_doc_get_elements_by_tagname()</li>
+        <li>domxml_doc_get_element_by_id()</li>
+        <li>domxml_elem_remove_attribute()</li>
+        <li>domxml_elem_get_attribute_node()</li>
+      </ul>
+    </li>
+    <li>
+      Fixed a segfault in domxml_unlink(). 
+    </li>
+    <li>
+      Added formatting option to domxml_dump_mem(). 
+    </li>
+  </ul>
+  (Uwe, jtate, Chregu)</li>
+<li>Fixed a bug in socket_select() that could cause unexpected behavior when
+  using a statement like $w = $e = array($sock); This change unfortunately
+  prevents the use of constant values (e.g. NULL) for the socket array
+  paramaters. Instead, use a temporary variable or an expression with the
+  leftmost member being a temporary variable. ex.:
+  socket_select($w, $r, $e = NULL, 10); (Jason)</li>
+<li>Fixed crashes in the session serializer. (Stas)</li>
+<li>Fixed malformed atime/mtime with touch(). (Yasuo)</li>
+<li>Fixed a couple of bugs in array_sum() and array_merge(). (Andrei)</li>
+<li>Fixed SJIS directory name handling under Windows. (Rui)</li>
+<li>Fixed empty mb_output_handler() output when Content-Type is specified.
+  (Yasuo)</li>
+<li>Fixed the false logic in ext/session which made SID constant not to be
+  defined when cookies are disabled. (Sascha)</li>
+<li>Fixed possible crash bug in HTTP uploads. (Patch: Lucas Schroeder)</li>
+<li>Fixed possible NULL-pointer dereferencing in the COM extension which
+  caused 'Error in php_OLECHAR_to_char()' warnings on various places.
+  Also modified the API to consistently return NULL in case of an error.
+  (Alan, Harald)</li>
+<li>Fixed a bug in the COM extension that caused outproc servers to 'hang'
+  because of a missing Release() call. (Alan, Harald)</li>
+</ul>
+
 <a name="4.2.0"></a>
 <h3>Version 4.2.0</h3>
 <b>22-Apr-2002</b>

@@ -78,6 +78,22 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>PHP 4.2.1 released</h1>
+<p>
+<font class="newsDate">[13-May-2002]</font>
+The PHP Group is happy to announce the
+<?php print_link ("/downloads.php", "immediate availability"); ?> of
+PHP 4.2.1, the latest version of the widely-used, general-purpose scripting language
+that is especially well-suited for Web development.</p>
+
+<p>This latest release contains several bug fixes as found in PHP 4.2.0. These include
+fixes for the session, com and mbstring extensions, as well as a major upgrade of the DomXML
+extension. Also a few extra checks for safe_mode were added. For more information, see the
+<?php print_link ("/release_4_2_1.php", "PHP 4.2.1 release announcement"); ?>.
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php echo make_image("phpaward_100.gif", "PHP Award", "right"); ?>
 
 <h1>PHP Award 2002</h1>
