@@ -102,6 +102,21 @@ commonHeader("Hypertext Preprocessor");
 echo "\n<!--$MYSITE-->\n";
 ?>
 
+<h1>Manual notes are mirrored worldwide</h1>
+
+<p>
+<font class="newsDate">[28-Aug-2001]</font>
+There is no need now to come to the main php.net
+server, if you would like to read the manual notes,
+as they are mirrored worldwide, and you can read them
+on all our mirror sites. You can get better response
+times by visiting the closest mirror. See the bottom
+of our pages.
+<br clear="all">
+</p>
+
+<?php echo hdelim(); ?>
+
 <?php print_link("http://www.php-conference.de/2001/index_en.php", make_image("international_conference.gif", "International PHP Conference 2001", "right") ); ?>
 
 <h1>International PHP Conference in Frankfurt (November 5-7, 2001)</h1>
