@@ -56,6 +56,7 @@ right away.</blockquote>
 	siteStart();
 	site("City of Capelle aan den Ijssel","www.capelle-ijssel.nl");
 	site("The Tri Cities Online","tri.xtn.net");
+	site("XOOM.com Inc.","xoom.com");
 	site("Zone - Cultural sites in Rotterdam","www.cultuur.rotterdam.nl");
 	siteEnd();
 
@@ -183,6 +184,7 @@ right away.</blockquote>
 	siteStart();
 	site("Association of Internet Professionals","www.association.org");
 	site("European Rotaract Information Center","www.rotaract.de/eric/");
+	site("Humanities Web","humanitiesweb.org");
 	site("The Jazz Journalists Association","www.jazzhouse.org");
 	site("National Marrow Donor Program","www.marrow.org");
 	site("PoloniaNet - Polish community of the Internet","www.PoloniaNet.com");
