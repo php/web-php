@@ -1,7 +1,48 @@
 <?
 require("shared.inc");
-commonHeader("PHP 3.0 -> 3.0.9 Changes");
+commonHeader("PHP 3.0 -> 3.0.10 Changes");
 ?>
+<h3>June 25, 1999, Version 3.0.10</h3>
+<ul>
+<li>fix base64_decode to match RFC 2045 semantics (Sascha & bfranklin@dct.com)
+<li>fix potential segfault in tempnam() (Sascha)
+<li>fix buffer overruns in dbase_get_record() (Sascha)
+<li>workaround for negative 1-digit numbers not returned correct via OCI8 (Thies)
+<li>fix APXS linking wrt to static libraries (Sascha)
+<li>OCIExecute would sometimes return true on error (Thies)
+<li>Made dba_open modes consistant with those from dbm_open. Specifically,
+  'w' is read/write but will NOT auto-create a non-existant file.
+  To do this, use 'c' which is read/write and auto-create. (Jim Jagielski)
+<li>reverted split() to work the same way as pre 3.0.9 versions (Andrey)
+<li>moved easter_date and easter_days to the calendar extension (Jim)
+<li>fix VPATH APXS build process (Sascha)
+<li>make workaround for UCD SNMP deallocate problem optional (Sascha)
+  (see the documentation for a more verbose description)
+<li>make fgetcsv() understand multi-line fields and embedded quotes (RL & Nick 
+  Talbott)
+<li>Add extension_loaded() function (Jim)
+<li>fix URL wrapper functions to play nicely with the socket code (Sascha)
+<li>fix persistent definitions of constants in the mcrypt module (Sascha)
+<li>Fix gmmktime() problems (RL and Cole Tuininga)
+<li>Added support for "localhost:/path/to/socket" syntax for mysql_connect
+  (Thanks to Orion Poplawski <orion@bvt.com>.)
+<li>Added support for file-upload arrays and put file-upload vars into
+  HTTP_POST_VARS (Brian)
+<li>fix a string allocation bug introduced in 3.0.8 in the MySQL module (Sascha)
+<li>overhaul of Hyperwave module, mainly code clean ups, some bug fixes
+<li>fixed a bug in preg_split() that would return nothing if nothing
+  matched (Andrey)
+<li>fixed a bug in preg_replace() that had to do with "\\" at the end
+  of the replacement string (Andrey)
+<li>open_basedir now resolves symlinks in the configuration (S. Steffann)
+<li>added 'Z' flag to date(): timezone offset in seconds (C. Viebrock)
+<li>added 'L' flag to date(): 1 if it's a leap year, 0 if it isn't (C. Viebrock)
+<li>fixed 't' flag in date() (J. Ahto)
+<li>added support for upcoming pdflib 2.0 (U. Steinmann)
+<li>mail() on Win32 will only add Date: and From: headers if not supplied
+  by the caller. (F. Kromann)
+</ul>
+
 <h3>June 6 1999, Version 3.0.9</h3>
 <ul>
 <li>added preg_quote() function (Andrey)

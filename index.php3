@@ -3,13 +3,16 @@ require("shared.inc");
 commonHeader("PHP: Hypertext Preprocessor");
 ?>
 
-<h3>PHP 3.0.9 has been released!</h3>
+<h3>PHP 3.0.10 has been released!</h3>
 <p>
-June 6, 1999. More bug fixes, including many in the OCI8 module, and
-an important fix for fgets() on socket connections. Also added support
-for PCRE (Perl-compatible Regular Expressions library), t1lib (PostScript
-Type-1 fonts with GD), and mhash. For a more complete list of all
-of the changes, see the <a href="ChangeLog.php3">ChangeLog</a>.
+June 25, 1999. Many more bug fixes, including the last of the fsockopen()
+and URL fopen() problems, we hope. The dbm database abstraction layer
+had the mode flag for dba_open() brought into line with dbm_open(),
+which means "w" will not create a non-existent database (use "c"
+instead). The documentation has also been moved into its own repository,
+and the generated HTML documentation is included in the tar.gz instead
+of the SGML source.  For a more complete list of all of the changes,
+see the <a href="ChangeLog.php3">ChangeLog</a>.
 </P>
 
 <h3>PHP Related Books are Available</h3>
