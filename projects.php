@@ -48,7 +48,7 @@ function endEntry() {
 <h3>Projects using PHP</h3>
 
 An increasing number of projects, both commercial and Open Source, are using PHP as their main development
-tool.  If you want to browse through a list companies using PHP, you can go <a href="/sites.php">here</a>. 
+tool.  If you want to browse through a list companies using PHP, you can go <a href="/sites.php">here</a>.
 This page, however, is a listing of cool things based on PHP, available for download.
 <P>
 
@@ -105,9 +105,9 @@ that also maintains change logs for all machines and software packages.
 <? endEntry();?>
 
 <? makeEntry("IMP","horde.org/imp/","Chuck Hagenbuch","chuck@osmos.ml.org"); ?>
-IMP is a set of PHP 3.0 scripts that implement an IMAP based webmail system. 
-Assuming you have an account on a server that supports IMAP, you can theoretically 
-use an installation of IMP to check your mail from anywhere that you have web access. 
+IMP is a set of PHP 3.0 scripts that implement an IMAP based webmail system.
+Assuming you have an account on a server that supports IMAP, you can theoretically
+use an installation of IMP to check your mail from anywhere that you have web access.
 <? endEntry();?>
 
 <? /* ?>
@@ -161,12 +161,12 @@ remaining on account" drops below a specified level.
 
 <? makeEntry("W-Agora","www.araxe.fr/w-agora","Marc Druilhe","mdruilhe@araxe.fr"); ?>
 W-Agora is a web-based and customizable forum package. It allows you to install forums, BBS, guestbooks and all derived things.
-More than "just another web BBS/forum software", w-agora is designed so you can easily adapt it to your needs. For example you can also use it to: 
+More than "just another web BBS/forum software", w-agora is designed so you can easily adapt it to your needs. For example you can also use it to:
 <ul>
-<li> distribute informations, news, announcements 
-<li> diffuse software updates to people on an intranet site 
-<li> publish adverts, FAQs, 
-<li> allows people to upload documents and share information on your server 
+<li> distribute informations, news, announcements
+<li> diffuse software updates to people on an intranet site
+<li> publish adverts, FAQs,
+<li> allows people to upload documents and share information on your server
 </ul>
 <? endEntry();?>
 
@@ -214,8 +214,8 @@ Its all free under a GNU license.
 <? endEntry();?>
 
 <? makeEntry("TWIG","screwdriver.net/twig/","Christopher Heschong" ,"chris@wiw.org"); ?>
-TWIG (formerly known as Muppet) came about because several of our users were running Windows 3.x with non-javascript browsers 
-(specifically MSIE 3.x for Win3.x). Although we like IMP (http://web.horde.org/imp/), it wasn't exactly 
+TWIG (formerly known as Muppet) came about because several of our users were running Windows 3.x with non-javascript browsers
+(specifically MSIE 3.x for Win3.x). Although we like IMP (http://web.horde.org/imp/), it wasn't exactly
 practical for them to use. Muppet works in every browser we've tested so far, including lynx.
 <? endEntry();?>
 
@@ -272,7 +272,7 @@ computer at a time)
 
 <?/* site disappeared -- June 12 1999
 <? makeEntry("PHPGen","www.byggsoft.se/~mikaelu/","Mikael Ulfenborg" ,"mikael.ulfenborg@byggsoft.se"); ?>
-PHPGen is small PHP-script used to make a framework for a new PHP-application. 
+PHPGen is small PHP-script used to make a framework for a new PHP-application.
 <? endEntry();?>
 */?>
 
@@ -281,7 +281,7 @@ FishCartSQL(sm) is a catalog management system for online e-commerce
 solutions; it has been in active use since January 1998. A few of the key
 benefits include multiple parallel catalogs, multiple languages, timed
 sales, Associate ID tracking, and Web based catalog maintenance. The
-order output of FishCartSQL(sm) can be adapted for easy integration with 
+order output of FishCartSQL(sm) can be adapted for easy integration with
 existing order processing systems.
 <? endEntry();?>
 
@@ -291,10 +291,10 @@ written in PHP 3.0 with a MySQL-connection. Freeware. (This site is in German.)
 <? endEntry();?>
 
 <? makeEntry("Bookmarker","renaghan.com/bookmarker/","Padraic Renaghan",""); ?>
-bookmarker is a WWW based application for managing bookmarks. It allows         
-multiple users to list, search, maintain, and create bookmarks. It is           
-written in PHP using PHPLIB, which allows support for multiple                  
-databases. bookmarker includes functions to store URLs and send URLs via        
+bookmarker is a WWW based application for managing bookmarks. It allows
+multiple users to list, search, maintain, and create bookmarks. It is
+written in PHP using PHPLIB, which allows support for multiple
+databases. bookmarker includes functions to store URLs and send URLs via
 e-mail directly from your browser (quik-mark, mail-this-link) using
 javascript functions that link directly to the application.
 <? endEntry();?>
@@ -321,7 +321,7 @@ currently available for Perl, ASP, and PHP.
 kidSister is a to-do list and a time logger. It was designed to help
 programmers organize many intricate tasks pertaining to multiple projects
 as well as keep track of the completion of such tasks. kidSister also has
-workgroup-like features that give its users the ability to &quot;spy&quot;  
+workgroup-like features that give its users the ability to &quot;spy&quot;
 on each other when granted the proper permission.
 <? endEntry();?>
 
@@ -336,7 +336,7 @@ database-enabled Web services
 <? endEntry();?>
 
 <? makeEntry("Phorm","www.holotech.net/scripts.html","Alan Little","darguz@holotech.net"); ?>
-The Script Formerly Known As PHPMail. As features were added to PHPMail, its name became inaccurate, as it can now do so much more than just mailing form results, including sending an autoresponder, logging to a text file, and logging to a MySQL database. The next version will support validation of email addresses, credit card numbers and U.S. phone numbers. 
+The Script Formerly Known As PHPMail. As features were added to PHPMail, its name became inaccurate, as it can now do so much more than just mailing form results, including sending an autoresponder, logging to a text file, and logging to a MySQL database. The next version will support validation of email addresses, credit card numbers and U.S. phone numbers.
 <? endEntry();?>
 
 <? makeEntry("phpDB","http://phpdb.linuxbox.com/","Joe Thong","darkjoe@softhome.net"); ?>
@@ -360,7 +360,7 @@ calling page, right below the link, instead of on a new page.  This lets you
 open a document's sections, subsections, definitions etc. just like you would
 open sub-folders in a "tree control."  The recursive code is encapsulated in php
 tags analogous to HTML &lt;a href="..."&gt; tags, so non-programmers can create such
-documents.  
+documents.
 <? endEntry(); ?>
 
 <? makeEntry("xml2tree", "http://www.risource.org/phpTools/xml2tree/README.html", "Bill Softky", "bill@rsv.ricoh.com"); ?>
@@ -372,9 +372,9 @@ treeNodes based on simple criteria.  No other libraries or software are needed; 
 <? endEntry(); ?>
 
 <? makeEntry("PHPXref", "http://phpxref.sourceforge.net/", "Gareth Watts", "gareth@omnipotent.net"); ?>
-PHPXref is a small Perl script that cross-references functions, variables, and SQL tables used 
-in a PHP-based Web site and generates HTML output. In addition, it can extract inline 
-formatted comments from the PHP files to provide browsable documentation for the functions 
+PHPXref is a small Perl script that cross-references functions, variables, and SQL tables used
+in a PHP-based Web site and generates HTML output. In addition, it can extract inline
+formatted comments from the PHP files to provide browsable documentation for the functions
 defined in the scripts.
 <? endEntry(); ?>
 
@@ -383,12 +383,62 @@ eGrail is a comprehensive web management system with templates, and revision
 control.  It is based completely on open source products.
 <? endEntry(); ?>
 
+<? makeEntry("FireSite", "http://www.dotvoid.com", "Danne Lundqvist", "dotvoid@dotvoid.com"); ?>
+FireSite is a Content Management System with very flexible role based user access.
+Using a module based approach it is easy to adopt into various organisations with different information needs.
+<? endEntry(); ?>
+
+
+<? makeEntry("phpDBForm", "http://sourceforge.net/projects/phpdbform/", "Paulo Assis", "ottani@uol.com.br"); ?>
+PHP scripts to help manage a html form to admin data in MySQL. With only some lines of PHP code you get a html form. Features: easy management, customizations, drop down lists easy, and others.
+<? endEntry(); ?>
+
+
+<? makeEntry("SquirrelMail", "http://www.squirrelmail.org/", "Tyler Akins", "tyler@boas.anthro.mnsu.edu"); ?>
+SquirrelMail is a web-based mail program that will read and send your mail on IMAP-based mail servers.  This script is very easy to install and configure. The newest version supports plugins, which expand SquirrelMail's capabilities and allows developers to try their hand at developing new features.<br /><br />
+
+* It is written entirely in PHP 4.<br />
+* It has its own IMAP implementation (you don't need it compiled into PHP)<br />
+* Address book supports LDAP (if compiled in)<br />
+* Source (and CVS) available on SourceForge.net)<br />
+* Works with a wide variety of IMAP servers
+<? endEntry(); ?>
+
+
+<? makeEntry("PHP Bind 8", "http://sourceforge.net/projects/phpbind/", "Alexey Zilber", "alex@dayak.com"); ?>
+PHP Bind is a fully self-contained PHP class for controlling
+  Bind 8.2's config files. It can parse, regenerate, modify, and
+  activate/deactivate domains in named.conf and domain db
+  files.
+<? endEntry(); ?>
+
+
+<? makeEntry("GroupIT Engine", "http://www.groupit.org/channel/", "Sean Pecor", "sean@digitalspinner.com"); ?>
+The GroupIT v0.90 Engine (for PHP) is a open source content and community management engine for online communities, extranets and intranets. Forums supported in this version include Message forums, Article forums, Link forums, Contributor Forums, and Photo Gallery forums. GroupIT administrators can use the engine as a turnkey solution or, because the entire source code is available, the package can be completely customized to suit the requirements of any web site.<br /><br />
+
+The entire source code of the GroupIT engine is available for download and use under the terms of the "Orchestrated Open Source License (OOSL - http://www.groupit.org/oosl).
+<? endEntry(); ?>
+
+
+<? makeEntry("Les Visiteurs v1.4", "http://www.phpinfo.net/visiteurs.php3", "Jean-Pierre Dezelus", "jpdezelus@phpinfo.net"); ?>
+'Les Visiteurs v1.4' (Visitors) is a comprehensive Web site statistics analysis program written in PHP that uses a MySQL database on backend for data handling. Key reports include details on last 30 visitors, Daily breakdowns for each month, Visitor OS, browsers, Top 30 referrers, Top 30 domains, hits by hour, and more. It uses the GD library for creating statistical charts. Note that the document and scripts are written in French.<br />
+The next release will include a configuration file for messages, and many modules to create his own statistics page.<br /><br />
+
+Demo: http://www.phpinfo.net/visiteurs.php3<br />
+Download : http://www.phpinfo.net/?p=fichiers&rub=applis
+<? endEntry(); ?>
+
+
+<? makeEntry("PhpDocumentor", "http://phpdocu.sourceforge.net/", "Joshua Eichorn", "jeichorn@asu.edu"); ?>
+PhpDocumentor is a php script that allows you to create javadoc style documentation from your php code.
+<? endEntry(); ?>
+
 <TR bgcolor='#D0D0D0' valign=top>
 <TD ALIGN=left WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-lefttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
 <TD VALIGN=middle ALIGN=left rowspan=2>
-If you have a project you feel belongs on this list, send us email us at 
-<A HREF="mailto:projects@php.net">projects@php.net</A> (we consider a project to be 
-a software package where the code is available for download).  If you have a site that 
+If you have a project you feel belongs on this list, send us email us at
+<A HREF="mailto:projects@php.net">projects@php.net</A> (we consider a project to be
+a software package where the code is available for download).  If you have a site that
 uses PHP, you may want to add it to the <a href="/sites.php">sites page</a>.
 <BR></TD>
 <TD ALIGN=right WIDTH=18><IMG ALT=" " SRC="/gifs/gcap-righttop.gif" WIDTH=18 HEIGHT=18 BORDER=0><BR></TD>
