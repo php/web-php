@@ -304,9 +304,7 @@ discussions).
 </p>
 
 <ul>
-  <!-- This is not active since 2000 Sept.
-  <li><a href="http://groups.yahoo.com/group/php3-france">French PHP User's Mailing List</a>
-  -->
+  <li><a href="http://www.ilovephp.com/mailinglist/">French PHP User's Mailing List</a>
   <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French PHP Newsgroup</a>
   <li><a href="http://www.php-center.de/">German PHP User's Mailing List</a>
   <li><a href="news:de.comp.lang.php">German PHP Newsgroup</a>
