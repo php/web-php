@@ -80,21 +80,30 @@ if ($cmn > 0) {
 
 <h2>Complete Source Code</h2>
 <ul>
-  <li><?php download_link("php-4.2.1.tar.bz2", "PHP 4.2.1 (tar.bz2)"); ?> - 13 May 2002</li>
-  <li><?php download_link("php-4.2.1.tar.gz", "PHP 4.2.1 (tar.gz)"); ?> - 13 May 2002</li>
+  <li><?php download_link("php-4.2.2.tar.bz2", "PHP 4.2.2 (tar.bz2)"); ?> - 22 July 2002</li>
+  <li><?php download_link("php-4.2.2.tar.gz", "PHP 4.2.2 (tar.gz)"); ?> - 22 July 2002</li>
+</ul>
+
+<h2>Patches to latest version</h2>
+<ul>
+  <li><?php download_link("php-4.2.0-to-4.2.2.patch.gz", "PHP 4.2.0 to 4.2.2 patch"); ?>  - 22 July 2002<br>
+  This unified diff will enable you to update your local PHP source to the latest version from 4.2.0.</li>
+  <li><?php download_link("php-4.2.1-to-4.2.2.patch.gz", "PHP 4.2.1 to 4.2.2 patch"); ?>  - 22 July 2002<br>
+  This unified diff will enable you to update your local PHP source to the latest version from 4.2.1.</li> 	
 </ul>
 
 <h2>Windows Binaries</h2>
 All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 <ul>
-  <li><?php download_link("php-4.2.1-Win32.zip", "PHP 4.2.1 zip package"); ?> - 14 May 2002<br>
+  <li><?php download_link("php-4.2.2-Win32.zip", "PHP 4.2.2 zip package"); ?> - 22 July 2002<br>
   (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL
   support built-in, many extensions included, packaged as zip)</li>
+<?php /*
   <li><?php download_link("php-4.2.1-installer.exe", "PHP 4.2.1 installer"); ?> - 13 May 2002<br>
   (CGI only, MySQL support built-in, packaged as Windows installer to install and
   configure PHP, and automatically configure IIS, PWS and Xitami, with manual
   configuration for other servers. N.B. no external extensions included)</li>
-<?php //  <li>Win32 binaries will be posted soon!</li> ?>
+<?php /*  <li>Win32 binaries will be posted soon!</li> */ ?>
 </ul>
 
 <h2>File Uploads Security Fix</h2>
@@ -127,12 +136,6 @@ All Windows binaries can be used on Windows 95/98/Me and on Windows NT/2000/XP.
 </p>
 
 <ul>
-  <li>PHP 4.2.0
-    <ul>
-      <li><?php download_link("php-4.2.0.tar.bz2", "Source Code"); ?></li>
-      <li><?php download_link("php-4.2.0-Win32.zip", "Windows Binary (zip)"); ?></li>
-    </ul><br>
-  </li>
   <li>PHP 4.1.2
     <ul>
       <li><?php download_link("php-4.1.2.tar.gz", "Source Code"); ?></li>
@@ -190,6 +193,7 @@ cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|
         <option value="php-4.1.2.tar.gz">4.1.2</option>
         <option value="php-4.2.0.tar.gz">4.2.0</option>
         <option value="php-4.2.1.tar.gz">4.2.1</option>
+        <option value="php-4.2.2.tar.gz">4.2.2</option>
       </select>
     </form>
   </li>
