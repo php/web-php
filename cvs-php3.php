@@ -42,7 +42,8 @@ whatever previous correspondence that may taken place.
 </table>
 </form>
 <? else:
-mail("rasmus@lerdorf.on.ca","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
+mail("group@php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPassword: ".crypt($password)."\nPurpose: $purpose");
+mail("php-dev@lists.php.net","CVS Account Request","Full name: $fullname\nEmail: $email\nID: $id\nPurpose: $purpose");
 ?>
 Thank you.  Your request has been sent.
 <?endif;?>
