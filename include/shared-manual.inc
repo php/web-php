@@ -126,7 +126,7 @@ function navigationBar($title,$id,$loc) {
 }
 
 // Print out one user note entry
-function makeEntry($date,$name,$blurb,$id=0, $print = FALSE) {
+function makeEntry($date,$name,$blurb,$id=0) {
     global $MAGIC_COOKIE;
 ?>
 <tr valign="top">
@@ -208,7 +208,7 @@ function manualGetUserNotes($title, $id) {
 }
 
 // Print out all user notes for this manual page
-function manualUserNotes($title, $id, $print = FALSE) {
+function manualUserNotes($title, $id) {
 
     global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
     $cur = substr(dirname($PHP_SELF),-2);
@@ -223,55 +223,43 @@ function manualUserNotes($title, $id, $print = FALSE) {
         (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
         $PHP_SELF;
 
-    if (!$print) {
-        echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"620\">\n";
+    echo "<table border=\"0\" cellpadding=\"4\" cellspacing=\"0\" width=\"620\">\n";
+    echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
+    echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
+    echo "<td align=\"right\">";
+    print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
+        make_image('notes-add.gif','add a note')
+    );      
+    echo "&nbsp;";
+    print_link('/manual/about-notes.php',
+        make_image('notes-about.gif', 'about notes')
+    );
+    echo "</td>\n";
+    echo "</tr>\n";
+
+    if (sizeof($notes) == 0) {
+        echo '<tr valign="top">';
+        echo '<td bgcolor="#e0e0e0" colspan="2">';
+        echo 'There are no user contributed notes for this page.';
+        echo '</td></tr>';
+    } else {
+        foreach($notes as $note) {
+            makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id']);
+        }
+
         echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-        echo "<td><small>User Contributed Notes</small><br /><b>$title</b></td>\n";
-        echo "<td align=\"right\">";
+        echo "<td colspan=\"2\" align=\"right\">\n";
         print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
             make_image('notes-add.gif','add a note')
-        );      
+        );
         echo "&nbsp;";
         print_link('/manual/about-notes.php',
             make_image('notes-about.gif', 'about notes')
         );
         echo "</td>\n";
         echo "</tr>\n";
-    } else {
-        echo "<hr size=\"1\" noshade><h2>User Contributed Notes</h2>";
     }
-
-    if (sizeof($notes) == 0) {
-      
-        if (!$print) {
-            echo '<tr valign="top">';
-            echo '<td bgcolor="#e0e0e0" colspan="2">';
-            echo 'There are no user contributed notes for this page.';
-            echo '</td></tr>';
-        } else {
-            echo "<p>There are no user contributed notes for this page</p>";
-        }
-    } else {
-        
-        foreach($notes as $note) {
-            makeEntry($note['xwhen'], $note['user'], $note['note'], $note['id'], $print);
-        }
-
-        if (!$print) {
-            echo "<tr bgcolor=\"#d0d0d0\" valign=\"top\">\n";
-            echo "<td colspan=\"2\" align=\"right\">\n";
-            print_link('/manual/add-note.php?sect='.$id.'&redirect='.$back_url,
-                make_image('notes-add.gif','add a note')
-            );
-            echo "&nbsp;";
-            print_link('/manual/about-notes.php',
-                make_image('notes-about.gif', 'about notes')
-            );
-            echo "</td>\n";
-            echo "</tr>\n";
-        }
-    }
-    if (!$print) { echo "</table>\n"; }
+    echo "</table>\n";
 }
 
 // Send manual HTTP headers, provide accurate language data
@@ -302,7 +290,7 @@ function manualFooter($title,$id="") {
     global $PRINT_PAGE, $PRINT_NOTES;
     if ($PRINT_PAGE) {
         if ($PRINT_NOTES) {
-            manualUserNotes($title, $id, TRUE);
+            manualPrintUserNotes($title, $id);
         }
         manualPrintFooter();
     } else {
@@ -340,4 +328,47 @@ function manualPrintFooter() {
     echo "</body>\n</html>";
 }
 
+// Print out all user notes for this manual page
+function manualPrintUserNotes($title, $id) {
+
+    global $PHP_SELF, $SERVER_NAME, $SERVER_PORT;
+    $cur = substr(dirname($PHP_SELF),-2);
+    if ($cur=='al') $cur='en';
+
+    # don't want .php at the end of the id.
+    if (substr($id,-4) == '.php') $id = substr($id,0,-4);
+
+    $notes = manualGetUserNotes($title, $id);
+
+    $back_url = 'http://' . $SERVER_NAME . 
+        (($SERVER_PORT==80) ? '' : ':'.$SERVER_PORT ) . 
+        $PHP_SELF;
+
+    echo "<hr size=\"1\" noshade><h2>User Contributed Notes</h2>";
+
+    if (sizeof($notes) == 0) {
+        echo "<p>There are no user contributed notes for this page</p>";
+    } else {
+        foreach($notes as $note) {
+            makePrintEntry($note['xwhen'], $note['user'], $note['note'], $note['id']);
+        }
+    }
+}
+
+// Make manual user note entry for printing
+function makePrintEntry($date,$name,$blurb,$id=0) {
+
+    $name = htmlspecialchars($name);
+    if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
+        if (ereg("(.+)@(.+)\.(.+)",$name)) {
+            echo "<b><a href=\"mailto:".$name."\">".$name."</a></b><br>\n";
+        } else {
+            echo "<b>".$name."</b><br>\n";
+        }
+    }
+    echo date("d-M-Y h:i",$date) . "<br><br>";
+    echo clean_note($blurb) . "<br><br>";
+
+}
+    
 ?>
