@@ -135,7 +135,7 @@ types. For example, you could use:
 	while ("" != (string)$key) {
 
 
-[6] The structure of error messages as changed.
+[6] The structure of error messages has changed.
 
 Although the error messages are usually more accurate, you won't be shown
 the actual line of text and actual place in which the error occured.
@@ -201,8 +201,13 @@ The first expression is executed the first time the loop is encountered,
 the loop is run as long as the second expression is evaluated as TRUE,
 and after each iteration, the 3rd expression is evaluated.
 
-Note:  There's NO support for colon-mode FOR loops (i.e. for:
-... endfor;), and no such support is planned.
+
+Colon-mode FOR loops are also supported:
+
+    for (expr; expr; expr):
+        statements
+        ...
+    endfor;
 
 [3] do..while(expr) loops are now supported.
 
