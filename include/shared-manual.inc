@@ -138,10 +138,13 @@ function makeEntry($date,$name,$blurb,$id=0) {
 <tr><td>
 <?
 	$name = htmlspecialchars($name);
-        if (ereg("(.+)@(.+)\.(.+)",$name)) {
-                echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
-        } elseif ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
-                echo "<b>".$name."</b><br>\n";
+        if ($name && $name != "php-general@lists.php.net" && $name != "user@example.com") {
+	  if (ereg("(.+)@(.+)\.(.+)",$name)) {
+	    echo "<a href=\"mailto:".$name."\">".$name."</a><br>\n";
+	  }
+	  else {
+	    echo "<b>".$name."</b><br>\n";
+	  }
         }
         echo date("d-M-Y h:i",$date);
 ?>
