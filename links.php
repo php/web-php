@@ -425,6 +425,11 @@ dead
  </li>
 
  <li>
+   <a href="http://eaccelerator.net/">EAccelerator</a><br />
+   A fork of Turck MMCache.
+ </li>
+
+ <li>
   <a href="http://php-accelerator.co.uk/">ionCube PHP Accelerator</a><br />
   A free accelerator available from ionCube.
  </li>
