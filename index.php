@@ -145,6 +145,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
+
+<h1>PHP Applications gathering</h1>
+<p>
+ <span class="newsdate">[20-Apr-2005]</span>
+The PHP Quebec Conference team is looking for the best software developed
+with PHP, MySQL and Apache. Each proposal <a href="http://conf.phpquebec.org/en/cdrom2005/">received</a>
+by  April 29th 29 will be will be reviewed by an experts and members of the PHP Quebec community.
+</p>
+<p>
+The most useful software will be included on the 2005 PHP Quebec
+Conference CDROM along with over 25 hours of conference which where given
+by the leaders behind PHP, MySQL and Apache, as well as regional and
+international experts at the 2005 PHP Quebec conference.
+</p>
+
+<hr />
+
 <h1>PHP 5.0.4 and 4.3.11 Released</h1>
 <p>
  <span class="newsdate">[31-Mar-2005]</span>
