@@ -232,6 +232,10 @@ $uri_aliases = array (
     "magicquotes"      => "security.magicquotes",
     "gd"               => "image",
 
+    "callback"     => "language.pseudo-types",
+    "number"       => "language.pseudo-types",
+    "mixed"        => "language.pseudo-types",
+
     "htaccess"     => "configuration.changes",
     "php_value"    => "configuration.changes",
 
