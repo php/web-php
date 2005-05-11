@@ -145,6 +145,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?> 
+
+<h1>PHP West Security Conference in Vancouver, BC</h1>
+
+<p>
+ <span class="newsDate">[11-May-2005]</span>
+ <a href="http://www.osevents.com"><img src="http://www.osevents.com/themes/osevents_v1/images/header/logo-osevents.gif" border="0" align="right" /></a> <a href="http://www.osevents.com">Open Source Events</a> is hosting their second conference on June 11th, 2005 in Vancouver, British Columbia. The conference will focus on PHP and Open Source Security. Featured talks will be presented by Bruce Perens, Chris Shiflett, Christian Wenz, Tom Robinson and Chris Hubbard.
+</p>
+
+<p>
+The conference is a single day - one track event where attendees will receive a free t-shirt, lunch, and full access to the full day of talks with the <a href="http://store.osevents.com/product_info.php?products_id=1">purchase of their ticket</a>. A number of free prizes will be given away at the closing ceremonies.
+</p>
+
+<hr />
+
 <?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
 
 <h1>PHP Applications gathering</h1>
