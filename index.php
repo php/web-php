@@ -259,33 +259,6 @@ international experts at the 2005 PHP Quebec conference.
 </p>
 <hr />
 
-<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
-<h1>PHP West: Security Conference - Call for Speakers Announced</h1>
-
-<p>
- <span class="newsDate">[14-Mar-2005]</span>
- <a href="http://www.phpwest.com">PHP West</a>, a division of Open Source
- Events, is holding their second conference in Vancouver, British Columbia on
- PHP and Open Source Security. The conference will be on June 11th, 2005 and
- will be a one day, single track event. Open Source Events has published a
- call for speakers on there website for anyone interested to submit a
- talk.
-</p>
-<p>
- <a href="http://www.osevents.com">Open Source Event's</a>
- last conference was focused on PHP Web Services which hosted more than 160
- attendees in the Vancouver Planetarium and had the pleasure of welcoming
- Rasmus Lerdorf, among many other industry experts into Vancouver to speak on
- variant topics of Web Services geared towards application usage within a
- enterprise business environment.
-</p>
-<p>
- You can look forward to the same caliber of speakers to grace the PHP
- and Open Source Security conference on June 11th, 2005.
-</p>
-
-<hr />
-
 <h1>PHP &amp; PEAR at FOSDEM 2005</h1>
 
 <p>
@@ -487,27 +460,6 @@ international experts at the 2005 PHP Quebec conference.
  off for yourself on the <a href="/my.php">My PHP.net</a> page.
  <a href="/search.php">More information</a> about is available on
  the search page.
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?>
-<h1>Speakers Announced for PHP West Conference on Web Services</h1>
-<p>
- <span class="newsdate">[22-Dec-2004]</span>
- <a href="http://www.phpwest.com">PHP West</a> is holding a conference
- on January 14th, 2005 at the Vancouver Planetarium providing a great
- environment for the promotion of PHP within the Vancouver area. With the
- high impact level of <a href="http://www.phpwest.com/?s=schedule">speakers
- scheduled for this event</a>, you can look forward to in depth talks from
- the likes of Rasmus Lerdorf, Terry Chay, John Coggeshall, Ilia Alshanetsky,
- and Cal Henderson speaking on a wide array of topics focused on Web Services.
-</p>
-
-<p>
- <a href="http://shop.phpwest.com/product_info.php/products_id/28">Tickets
- are only 50$!</a> Due to limited capacity for this event we recommend
- you register soon to reserve your seat.
 </p>
 
 <hr />
