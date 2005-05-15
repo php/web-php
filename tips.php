@@ -41,6 +41,15 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
+<?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '15-May-2004');?>
+
+<p>
+ Simon Ganiere created a widget which provides a simple search field to the php.net
+ function lookup search, and is <a
+ href="http://www.apple.com/downloads/macosx/dashboard/phpmanual.html">available from
+ the Apple website</a>.
+</p>
+
 <?php tip_title('Search from the Safari Search Bar', 'Gabor Hojtsy', '19-Jan-2004');?>
 
 <p>
