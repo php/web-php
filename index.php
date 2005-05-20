@@ -145,19 +145,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>CfP PHP Track - (AUUG) Annual Conference</h1>
+<p>
+ <span class="newsdate">[20-May-2005]</span>
+ For the first time the AUUG will incorporate a PHP Track as part of its
+ annual conference in Sydney, Australia. For this
+ track we seek tutorials and presentations. Tutorials are on October 16 to 18
+ and presentations on October 19 to 21. For information on how to submit
+ a proposal we kindly point you to our CfP which you can find on <a
+ href="http://auug.org.au/events/2005/auug2005/cfp.html">our website</a>. The
+ deadline for proposals is May 27. In case you want more information, email
+ <a href="mailto:derick&#64;php.net">Derick</a> or <a
+ href="mailto:arjen&#64;mysql.com">Arjen</a>.
+</p>
+<hr />
+
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?> 
 
 <h1>PHP West Security Conference in Vancouver, BC</h1>
-
 <p>
  <span class="newsDate">[11-May-2005]</span>
  <a href="http://www.osevents.com"><img src="http://www.osevents.com/themes/osevents_v1/images/header/logo-osevents.gif" border="0" align="right" /></a> <a href="http://www.osevents.com">Open Source Events</a> is hosting their second conference on June 11th, 2005 in Vancouver, British Columbia. The conference will focus on PHP and Open Source Security. Featured talks will be presented by Bruce Perens, Chris Shiflett, Christian Wenz, Tom Robinson and Chris Hubbard.
 </p>
-
 <p>
 The conference is a single day - one track event where attendees will receive a free t-shirt, lunch, and full access to the full day of talks with the <a href="http://store.osevents.com/product_info.php?products_id=1">purchase of their ticket</a>. A number of free prizes will be given away at the closing ceremonies.
 </p>
-
 <hr />
 
 <?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
@@ -175,7 +187,6 @@ Conference CDROM along with over 25 hours of conference which where given
 by the leaders behind PHP, MySQL and Apache, as well as regional and
 international experts at the 2005 PHP Quebec conference.
 </p>
-
 <hr />
 
 <h1>PHP 5.0.4 and 4.3.11 Released</h1>
@@ -199,7 +210,6 @@ international experts at the 2005 PHP Quebec conference.
 
 
 <h1>International PHP Conference 2005 Spring Edition</h1>
-
 <p>
  <span class="newsdate">[23-Mar-2005]</span>
  The <a href="http://www.phpconference.com/">International PHP
