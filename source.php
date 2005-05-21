@@ -39,7 +39,7 @@ $SIDEBAR_DATA = '
 site_header("Show Source");
 
 // No file param specified
-if (!isset($_GET['url'])) {
+if (!isset($_GET['url']) || (isset($_GET['url']) && !is_string($_GET['url']))) {
     echo "<h1>No page URL specified</h1>";
     site_footer();
     exit;
