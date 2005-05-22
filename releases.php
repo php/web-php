@@ -96,6 +96,7 @@ site_header("Releases");
  they are no longer supported</em>.
 </p>
 
+<a name="v5"></a>
 <a name="5.0.3"></a>
 <h2>5.0.3</h2>
 
@@ -197,6 +198,7 @@ site_header("Releases");
 
 <hr />
 
+<a name="v4"></a>
 <a name="4.3.10"></a>
 <h2>4.3.10</h2>
 
@@ -608,6 +610,9 @@ site_header("Releases");
  </li>
 </ul>
 
+<hr />
+
+<a name="v3"></a>
 <a name="3.0.x"></a>
 <h2>3.0.x (latest)</h2>
 
