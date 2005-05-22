@@ -17,7 +17,136 @@ site_header("News Archive - 2004");
 
 <hr />
 
-<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Quebec"); ?>
+<h1>A Note on Security in PHP</h1>
+
+<p>
+ <span class="newsdate">[31-Dec-2004]</span>
+ The PHP Development Team has issued an <a href="/security-note.php">important
+ statement</a> that deals with the security of PHP, and of PHP-based applications.
+ The trigger for releasing this statement was the growing misconception in the PHP
+ community regarding recent security problems, which exploited bugs
+ in PHP applications, rather than bugs in PHP itself.  It's a recommended read
+ for anybody using PHP.
+</p>
+
+<hr />
+
+<h1>Function list suggestions available</h1>
+<p>
+ <span class="newsdate">[27-Dec-2004]</span>
+ Surely, some of our visitors are back at work for a few days between
+ holidays, and hopefully they will find our post-christmas gift useful.
+ The function list suggestions we started to test a year ago seemed to
+ be working better as some bugs were found and fixed, so it was time to
+ make the result available on all php.net pages.
+</p>
+<p>
+ Whenever you type something into the search field, while having the
+ function list search option selected, you will get a list of suggested
+ functions starting with the letters you typed in. You can browse the list
+ with the up/down keys, and you will be able to autocomplete the function
+ name with the spacebar.
+</p>
+<p>
+ If you are not interested in this feature, you can turn it
+ off for yourself on the <a href="/my.php">My PHP.net</a> page.
+ <a href="/search.php">More information</a> about is available on
+ the search page.
+</p>
+
+<hr />
+
+<h1>PHP 4.3.10 &amp; 5.0.3 released!</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+  The PHP Development Team would like to announce the immediate release of 
+  <a href="/downloads.php">PHP 4.3.10</a> and <a href="/downloads.php">PHP 5.0.3</a>. 
+  These are maintenance releases that in addition to non-critical bug fixes 
+  address several very serious security issues. All Users of PHP are strongly 
+  encouraged to upgrade to one of these releases as soon as possible.
+</p>
+
+<p>
+ For changes since PHP 4.3.9, please consult the
+ <a href="/ChangeLog-4.php#4.3.10">PHP 4 ChangeLog</a>.
+ For changes since PHP 5.0.2, please consult the
+ <a href="/ChangeLog-5.php#5.0.3">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
+<h1>Second Bulgarian PHP Conference</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+ The second Web Technology conference in Bulgaria will be held in March 2005
+ at the city of Sofia. Within its framework, the <a
+ href="http://webtech2005.info/index.php?/archives/19-PHP-iioaaioee.html">Second
+ Bulgarian PHP Conference</a> and first IT Business conference will be held.
+ The purpose of this meeting is to discuss the new tendencies in this direction
+ and to popularize the internet technologies in the spheres of business,
+ education, and services. The range of subjects includes technologies like
+ PHP, Perl, business systems through web, education through the internet, and
+ others.
+</p>
+
+<hr />
+
+<h1>International PHP Conference 2005 - Spring Edition (Amsterdam, May 2-4)</h1>
+<p>
+ <span class="newsdate">[15-Dec-2004]</span>
+ The PHP Center and the Software &amp; Support Verlag are pleased
+ to announce the <a href="http://www.phpconference.com/">International
+ PHP Conference 2005 Spring Edition</a> in Amsterdam, Netherlands.
+ The dates for this event will be May 2-4, 2005. The conference venue
+ is the RAI conference center.
+</p>
+<p>
+ The topics are General PHP, PHP &amp; Business/Integration,
+ PHP &amp; Databases, PHP Design, PHP Extensions, PHP &amp; XML
+ and PHP-GTK.
+</p>
+
+<hr />
+
+<?php news_image("http://nosoftwarepatents.com/", "90x40_3.jpg", "No Software Patents"); ?>
+
+<h1>MySQL, RedHat and other partners started a new campaign against software patents</h1>
+<p>
+ <span class="newsdate">[01-Nov-2004]</span>
+ In order to boost more awareness of the pending software patent issues in the
+ European Union&mdash;MySQL, ISP 1&amp;1, RedHat and other partners started
+ a new portal "<a href="http://nosoftwarepatents.com">http://nosoftwarepatents.com</a>".
+ The site is available in 10 different european languages and explains why
+ software patents are bad, and how they might affect you. In order to learn
+ more, or participate in events against software patents, have a look at the
+ very informative <a href="http://nosoftwarepatents.com">website</a>.
+</p>
+
+<hr />
+
+<?php news_image("http://www.zend.com/php5/contest/", "zendtech_logo.gif", "Zend Technologies"); ?>
+
+<h1>Zend's PHP 5 Coding Contest winners announced</h1>
+<p>
+ <span class="newsdate">[25-Oct-2004]</span>
+ Congratulations to Qiang Xue, whose application
+ '<a href="http://www.xisc.com/">PRADO</a>' earned high votes both
+ from the public and from the judges' panel!
+ There are 49 other prizewinning applications in Zend's
+ <a href="http://www.zend.com/php5/contest">contest gallery</a>
+ &ndash; too many to list here.  Some of them are ongoing projects, bringing
+ PHP 5 a small armoury of useful open source tools.
+</p>
+
+<p>
+ The top 50 applications will remain on display until the end of
+ this year, giving you the chance to take a leisurely look through
+ the code and see how the new features in PHP 5 should be used.
+</p>
+
+<hr />
+
+<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Québec"); ?>
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
 <p>
  <span class="newsdate">[12-Oct-2004]</span>
