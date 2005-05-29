@@ -247,7 +247,7 @@ $uri_aliases = array (
     "htaccess"     => "configuration.changes",
     "php_value"    => "configuration.changes",
 
-    "ternary"      => "language.operators.comparison.ternary",
+    "ternary"      => "language.operators.comparison",
     "instanceof"   => "language.operators.type",
     "if"           => "language.control-structures",
     "static"       => "language.variables.scope",
