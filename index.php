@@ -146,6 +146,20 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.afup.org/", "afup2005.jpg", "AFUP"); ?>
+<h1>Forum AFUP 2005 Call for Papers</h1>
+<p>
+<span class="newsdate">[1-Jun-2005]</span>
+The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des Utilisateurs de PHP, is proud to announce the forum PHP 2005. For this unique event in France, we are looking for the best French speaking experts, who want to share their know-how and enthusiasm. The forum PHP features 2 days, with distinct themas&nbsp;:
+<UL>
+<li>Technical day, with the most advanced PHP technics</li>
+<li>Business day, with user cases and sucessful projects</li>
+</ul>
+
+The <a href="http://www.afup.org/article.php3?id_article=282">forum PHP 2005</a> will take place in Paris, at the SNH (Société Nationale d'Orthiculture), on thursday 8th and friday 9th, November 2005.
+<hr />
+
+
 <h1>CfP PHP Track - (AUUG) Annual Conference</h1>
 <p>
  <span class="newsdate">[20-May-2005]</span>
