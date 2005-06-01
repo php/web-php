@@ -150,8 +150,8 @@ commonHeader("Hypertext Preprocessor");
 <h1>Forum AFUP 2005 Call for Papers</h1>
 <p>
 <span class="newsdate">[1-Jun-2005]</span>
-The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des Utilisateurs de PHP, is proud to announce the forum PHP 2005. For this unique event in France, we are looking for the best French speaking experts, who want to share their know-how and enthusiasm. The forum PHP features 2 days, with distinct themas&nbsp;:
-<UL>
+The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des Utilisateurs de PHP, is proud to announce the forum PHP 2005. For this unique event in France, we are looking for the best French speaking experts, who want to share their know-how and enthusiasm. The forum PHP features 2 days, with distinct themas :
+<ul>
 <li>Technical day, with the most advanced PHP technics</li>
 <li>Business day, with user cases and sucessful projects</li>
 </ul>
