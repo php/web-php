@@ -160,7 +160,7 @@ distinct themas:
 <li>Business day, with user cases and successful projects</li>
 </ul>
 
-The <a href="http://www.afup.org/article.php3?id_article=282">Forum PHP 2005</a> 
+The <a href="http://www.afup.org/article.php3?id_article=283">Forum PHP 2005</a> 
 will take place in Paris, at the SNH (Société Nationale d'Horticulture), on 
 Tuesday 8th and Wednesday 9th, November 2005.
 <hr />
