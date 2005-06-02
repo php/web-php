@@ -22,7 +22,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://silk.apana.org.au/php/">OS/2</a></li>
  <li><a href="http://php.alexwaugh.com/">RISC OS</a></li>
  <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
- <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARK</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
+ <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
 </ul>
 
 <h3>Older versions of PHP</h3>
