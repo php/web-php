@@ -146,25 +146,43 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
+<h1>International PHP Conference 2005 Call for Papers</h1>
+<p>
+ <span class="newsdate">[02-Jun-2005]</span>
+ The traditional <a href="http://www.phpconference.com/">International
+ PHP Conference 2005</a> will take place
+ from November 6th to November 9th 2005 at Frankfurt/Main, Germany.
+ The <a href="http://input.entwickler.com/">Call for Papers</a> has
+ been issued, if you have an interesting talk the organisers would
+ love to hear from you. You can expect a gathering of PHP experts
+ and the PHP core developers.The conference website will be updated
+ in the next few days. 
+</p>
+
+<hr />
+
 <?php news_image("http://www.afup.org/", "afup2005.jpg", "AFUP"); ?>
 <h1>Forum AFUP 2005 Call for Papers</h1>
 <p>
-<span class="newsdate">[01-Jun-2005]</span>
-The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des
-Utilisateurs de PHP, is proud to announce the forum PHP 2005. For this unique
-event in France, we are looking for the best French speaking experts, who want
-to share their know-how and enthusiasm. The forum PHP features 2 days, with
-distinct themas:
+ <span class="newsdate">[01-Jun-2005]</span>
+ The <a href="http://www.afup.org/index.php">AFUP</a>, Association Française des
+ Utilisateurs de PHP, is proud to announce the forum PHP 2005. For this unique
+ event in France, we are looking for the best French speaking experts, who want
+ to share their know-how and enthusiasm. The forum PHP features 2 days, with
+ distinct themas:
+</p>
 <ul>
-<li>Technical day, with the most advanced PHP techniques</li>
-<li>Business day, with user cases and successful projects</li>
+ <li>Technical day, with the most advanced PHP techniques</li>
+ <li>Business day, with user cases and successful projects</li>
 </ul>
+<p>
+ The <a href="http://www.afup.org/article.php3?id_article=283">Forum PHP 2005</a>
+ will take place in Paris, at the SNH (Société Nationale d'Horticulture), on
+ Tuesday 8th and Wednesday 9th, November 2005.
+</p>
 
-The <a href="http://www.afup.org/article.php3?id_article=283">Forum PHP 2005</a> 
-will take place in Paris, at the SNH (Société Nationale d'Horticulture), on 
-Tuesday 8th and Wednesday 9th, November 2005.
 <hr />
-
 
 <h1>CfP PHP Track - (AUUG) Annual Conference</h1>
 <p>
@@ -179,6 +197,7 @@ Tuesday 8th and Wednesday 9th, November 2005.
  <a href="mailto:derick&#64;php.net">Derick</a> or <a
  href="mailto:arjen&#64;mysql.com">Arjen</a>.
 </p>
+
 <hr />
 
 <?php news_image("http://www.phpwest.com/", "phpwest.gif", "PHP West Conferences"); ?> 
@@ -186,11 +205,20 @@ Tuesday 8th and Wednesday 9th, November 2005.
 <h1>PHP West Security Conference in Vancouver, BC</h1>
 <p>
  <span class="newsDate">[11-May-2005]</span>
- <a href="http://www.osevents.com"><img src="http://www.osevents.com/themes/osevents_v1/images/header/logo-osevents.gif" border="0" align="right" /></a> <a href="http://www.osevents.com">Open Source Events</a> is hosting their second conference on June 11th, 2005 in Vancouver, British Columbia. The conference will focus on PHP and Open Source Security. Featured talks will be presented by Bruce Perens, Chris Shiflett, Christian Wenz, Tom Robinson and Chris Hubbard.
+ <a href="http://www.osevents.com">Open Source Events</a> is hosting their
+ second conference on June 11th, 2005 in Vancouver, British Columbia. The
+ conference will focus on PHP and Open Source Security. Featured talks
+ will be presented by Bruce Perens, Chris Shiflett, Christian Wenz,
+ Tom Robinson and Chris Hubbard.
 </p>
 <p>
-The conference is a single day - one track event where attendees will receive a free t-shirt, lunch, and full access to the full day of talks with the <a href="http://store.osevents.com/product_info.php?products_id=1">purchase of their ticket</a>. A number of free prizes will be given away at the closing ceremonies.
+ The conference is a single day &ndash; one track event where attendees will
+ receive a free t-shirt, lunch, and full access to the full day of talks
+ with the <a href="http://store.osevents.com/product_info.php?products_id=1">purchase
+ of their ticket</a>. A number of free prizes will be given away at the
+ closing ceremonies.
 </p>
+
 <hr />
 
 <?php news_image("http://conf.phpquebec.org/en/cdrom2005/", "cdrom_phpquebec_2005.gif", "PHP Québec CD ROM 2005"); ?> 
@@ -198,28 +226,30 @@ The conference is a single day - one track event where attendees will receive a 
 <h1>PHP Applications gathering</h1>
 <p>
  <span class="newsdate">[20-Apr-2005]</span>
-The PHP Québec Conference team is looking for the best software developed
-with PHP, MySQL and Apache. Each proposal <a href="http://conf.phpquebec.org/en/cdrom2005/">received</a>
-by  April 29th 29 will be will be reviewed by an experts and members of the PHP Québec community.
+ The PHP Québec Conference team is looking for the best software developed
+ with PHP, MySQL and Apache. Each proposal
+ <a href="http://conf.phpquebec.org/en/cdrom2005/">received</a>
+ by April 29th will be reviewed by an experts and members of the
+ PHP Québec community.
 </p>
 <p>
-The most useful software will be included on the 2005 PHP Québec
-Conference CDROM along with over 25 hours of conference which where given
-by the leaders behind PHP, MySQL and Apache, as well as regional and
-international experts at the 2005 PHP Québec conference.
+ The most useful software will be included on the 2005 PHP Québec
+ Conference CDROM along with over 25 hours of conference which where given
+ by the leaders behind PHP, MySQL and Apache, as well as regional and
+ international experts at the 2005 PHP Québec conference.
 </p>
+
 <hr />
 
 <h1>PHP 5.0.4 and 4.3.11 Released</h1>
 <p>
  <span class="newsdate">[31-Mar-2005]</span>
-  The PHP Development Team would like to announce the immediate release of 
-  <a href="/downloads.php#v5">PHP 5.0.4</a> and <a href="/downloads.php#v4">4.3.11</a>. 
-  These are maintenance releases that in addition to non-critical bug fixes 
-  address several security issues. All Users of PHP are strongly 
-  encouraged to upgrade to one of these releases as soon as possible.
+ The PHP Development Team would like to announce the immediate release of 
+ <a href="/downloads.php#v5">PHP 5.0.4</a> and <a href="/downloads.php#v4">4.3.11</a>. 
+ These are maintenance releases that in addition to non-critical bug fixes 
+ address several security issues. All Users of PHP are strongly 
+ encouraged to upgrade to one of these releases as soon as possible.
 </p>
-
 <p>
  For changes in PHP 5.0.4 since PHP 5.0.3, please consult the
  <a href="/ChangeLog-5.php#5.0.4">PHP 5 ChangeLog</a>.
@@ -228,7 +258,6 @@ international experts at the 2005 PHP Québec conference.
 </p>
 
 <hr />
-
 
 <h1>International PHP Conference 2005 Spring Edition</h1>
 <p>
@@ -243,6 +272,7 @@ international experts at the 2005 PHP Québec conference.
  to PHP 5 and others. Early bird discounts are available until April
  1, 2005.
 </p>
+
 <hr />
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?> 
@@ -259,7 +289,6 @@ international experts at the 2005 PHP Québec conference.
  PHP with the Enterprise (including Web Services and XML); and PHP
  Resources: Tools, Libraries and Techniquies.
 </p> 
- 
 <p>
  We <a href="http://zend.kbconferences.com/call.php">invite interested speakers</a> 
  to submit session proposals between
@@ -267,8 +296,8 @@ international experts at the 2005 PHP Québec conference.
  information about the conference or if you are interested in
  submitting a session proposal.
 </p>
-<hr />
 
+<hr />
 
 <h1>PHP Québec 2005: PHP - MySQL - Apache</h1>
 
@@ -288,6 +317,7 @@ international experts at the 2005 PHP Québec conference.
  <a href="http://conf.phpquebec.com/en/conf2005/certifications">examination center</a>
  is open to everyone.
 </p>
+
 <hr />
 
 <h1>PHP &amp; PEAR at FOSDEM 2005</h1>
