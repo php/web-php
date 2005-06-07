@@ -146,6 +146,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
+<h1>php|works and web|works Call for Papers</h1>
+<p>
+ <span class="newsdate">[07-Jun-2005]</span>
+ The publishers of <a href="http://www.phparch.com">php|architect</a> magazine
+ have announced <a href="http://www.phparch.com/phpworks">php|works and
+ web|works 2005</a>--two three-day conferences dedicated to PHP and web
+ development that will take place simultaneously in Toronto, Canada, between
+ September 14 and September 16, 2005.
+</p>
+<p>
+ A <a href="http://www.phparch.com/phpworks/cfp.php">Call for Papers</a> is
+ in effect until June 27th and the organizers are welcoming talk proposals
+ from the community.
+</p>
+<p>
+ The conferences also feature an <a
+ href="https://www.phparch.com/phpworks/signup.php">"early-early bird"
+ special offer</a> with additional savings for signups before July 1st.
+ Special pricing is also available for students, members of academia and
+ non-profit organizations.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
 <h1>International PHP Conference 2005 Call for Papers</h1>
 <p>
