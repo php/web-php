@@ -449,13 +449,14 @@ dead
 <h4>PHP Merchandise</h4>
 
 <ul>
+ <?php /* 
  <li>
   <a href="http://www.copyleft.net/search.phtml?search=1&amp;lookup%5Bbrand_id%5D=47">Copyleft</a><br />
   Some t-shirts, hats and stickers with the Copyleft variant of the PHP logo on them.
- </li>
+ </li> */ ?>
 
  <li>
-  <a href="http://www.cafeshops.com/cp/searchresults_x.aspx?criteria=storeid&amp;searchstring=php">PHP projects' merchandise</a><br />
+  <a href="http://www.cafepress.com/cp/browse/?Nao=1&amp;No=1&amp;Nty=1&amp;N=0&amp;Ntk=All&amp;Ntt=php&amp;x=0&amp;y=0">PHP projects' merchandise</a><br />
   A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)
  </li>
 </ul>
