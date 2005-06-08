@@ -148,7 +148,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>10 years since PHP 1.0 was released!</h1>
 <p>
- <span class="newsdate">[8-June-2005]</span> <a
+ <span class="newsdate">[08-Jun-2005]</span> <a
  href="http://groups.google.ch/groups?selm=3r7pgp%24aa1%40ionews.io.org&amp;oe=UTF-8&amp;output=gplain">It
  has been 10 years since Rasmus released the first version of PHP</a>.
  To everyone that has helped to shape PHP into what it is today; from the
