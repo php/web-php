@@ -146,6 +146,20 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>10 years since PHP 1.0 was released!</h1>
+<p>
+ <span class="newsdate">[8-June-2005]</span> <a
+ href="http://groups.google.ch/groups?selm=3r7pgp%24aa1%40ionews.io.org&amp;oe=UTF-8&amp;output=gplain">It
+ has been 10 years since Rasmus released the first version of PHP</a>.
+ To everyone that has helped to shape PHP into what it is today; from the
+ people developing the core and extensions, documentors, script developers, bug
+ reporters, beta testers, PHP application developers and even just people that
+ are using PHP&mdash;<b>Thank you!</b>
+
+</p>
+
+<hr />
+
 <?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
 <h1>php|works and web|works Call for Papers</h1>
 <p>
