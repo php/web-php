@@ -146,7 +146,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.php.net", "php10bd.jpg", "PHP 10th anniversary cake"); ?>
+<?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
 <p>
  <span class="newsdate">[08-Jun-2005]</span> <a
