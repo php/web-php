@@ -198,11 +198,6 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.evilwalrus.com/">Evil Walrus</a><br />
-  A growing list of PHP scripts
- </li>
-
- <li>
   <a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's
   scripts librairy</a><br />An exhaustive PHP scripts collection,
   with more 800 useful functions (English and French).
