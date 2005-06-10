@@ -183,8 +183,11 @@ site_header("Downloads");
  </li>
 </ul>
 
-<!--
 <h2>Windows Binaries</h2>
+<p>
+Windows binaries to follow shortly!
+</p>
+<!--
 <ul>
  <li>
   <?php download_link('php-5.1.0b1-Win32.zip', 'PHP 5.1.0b1 zip package'); ?> - 10 Jun 2005<br />
