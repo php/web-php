@@ -184,32 +184,19 @@ site_header("Downloads");
 </ul>
 
 <h2>Windows Binaries</h2>
-<p>
-Windows binaries to follow shortly!
-</p>
-<!--
 <ul>
  <li>
-  <?php download_link('php-5.1.0b1-Win32.zip', 'PHP 5.1.0b1 zip package'); ?> - 10 Jun 2005<br />
-  <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
+  <?php download_link('php-5.1.0b1-Win32.zip', 'PHP 5.1.0b1 zip package'); ?> - 11 Jun 2005<br />
+  <span class="md5sum">md5: 2491014b80e58e8dd2c5076860da4b42</span>
  </li>
  <li>
-  <?php download_link('pecl-5.1.0b1-Win32.zip', 'Collection of PECL modules for PHP 5.1.0b1'); ?> - 10 Jun 2005<br />
+  <?php download_link('pecl-5.1.0b1-Win32.zip', 'Collection of PECL modules for PHP 5.1.0b1'); ?> - 11 Jun 2005<br />
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
   standard with PHP 4 Windows binaries but have since been moved into this 
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
- </li>
- <li>
-  <?php download_link('php-5.1.0b1-installer.exe', 'PHP 5.1.0b1 installer'); ?> - 10 Jun 2005<br />
-  (CGI only, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
-  <span class="md5sum">md5: 8f951136757600ce78d5e442cb5b1541</span>
+  <span class="md5sum">md5: 455bca375370f1b5224342a2c1db0c86</span>
  </li>
 </ul>
--->
 
 <hr />
 
