@@ -146,6 +146,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<!--
 <h1>PHP 5.1 Beta 1 Available</h1>
 <p>
  <span class="newsdate">[10-Jun-2005]</span>
@@ -165,6 +166,7 @@ Everyone is encouraged to start playing with this beta, although it is not yet r
 </p>
 
 <hr />
+-->
 
 <?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
