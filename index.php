@@ -165,7 +165,7 @@ commonHeader("Hypertext Preprocessor");
  Besides addressing this reference related bug, 46 other bugs are fixed.
  Please test this release and report any bugs or problems in our
  bugsystem (after searching first). You can find 4.4.0 RC1 at
- http://qa.php.net/~derick/
+ <a href="http://qa.php.net/~derick/">http://qa.php.net/~derick/</a>
 </p>
 
 <hr />
