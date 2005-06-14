@@ -8,11 +8,11 @@ site_header("Annonce de PHP 4.3.11");
 <h1>Annonce de publication de PHP 4.3.11</h1>
 <p>[ <a href="/release_4_3_11.php">English Version</a> ]</p>
 <p>
-L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer la publication de <a href="/downloads.php">PHP 4.3.11</a>. C'est une version de maintenance, destin&eacute;e &agrave; corriger environ 70 bogues non-critiques et ainsi que plusieurs problèmes avec les extensions exif et fbsql ainsi que les fonctions unserialize(), swf_definepoly() et getimagesize().
+L'&eacute;quipe de d&eacute;veloppement PHP a le plaisir de vous annoncer la publication de <a href="/downloads.php">PHP 4.3.11</a>. C'est une version de maintenance, destin&eacute;e &agrave; corriger environ 70 bogues non-critiques, plusieurs problèmes avec les extensions exif et fbsql ainsi que les fonctions unserialize(), swf_definepoly() et getimagesize().
 </p>
-<p />
+<p>
 Tous les utilisateurs sont encouragés à utiliser cette version.
-<p /> 
+</p> 
 
 <h2>Version de correction de bogues</h2>
 <ul>
