@@ -146,6 +146,29 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.0RC1 Available</h1>
+<p>
+ <span class="newsdate">[14-Jun-2005]</span>
+ We just released the first release candidate for PHP 4.4.0.  This is a bug-fix
+ only release, the increased middle digit is needed because this release
+ changes PHP's Internal API that causes existing third-party binary extensions
+ to be incompatible with the new version.
+</p>
+<p>
+ This release address a major problem within PHP concerning references.
+ If references where used in a wrong way, PHP would often create memory
+ corruptions which would not always surface and be visible. In other
+ cases it can cause variables and objects to change type or class. If you
+ encountered strange behavior like this, this release might fix it.
+</p>
+<p>
+ Besides addressing this reference related bug, 46 other bugs are fixed.
+ Please test this release and report any bugs or problems in our
+ bugsystem (after searching first). You can find 4.4.0 RC1 at
+ http://qa.php.net/~derick/
+</p>
+
+<hr />
 <!--
 <h1>PHP 5.1 Beta 1 Available</h1>
 <p>
