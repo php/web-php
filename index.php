@@ -156,7 +156,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 <p>
  This release address a major problem within PHP concerning references.
- If references where used in a wrong way, PHP would often create memory
+ If references were used in a wrong way, PHP would often create memory
  corruptions which would not always surface and be visible. In other
  cases it can cause variables and objects to change type or class. If you
  encountered strange behavior like this, this release might fix it.
