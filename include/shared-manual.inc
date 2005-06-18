@@ -401,8 +401,11 @@ function manual_notes_load($id)
 function manual_note_display($date, $name, $text, $id)
 {
     if ($name) { $name = "\n  <strong>" . htmlspecialchars($name) . "</strong><br />"; }
-    $datestr = "\n  " . date("d-M-Y h:i", $date);
-    
+    $datestr = date("d-M-Y h:i", $date);
+    $datestr = ($id ? "\n  <a href=\"#$id\">$datestr</a>" : "\n  $datestr");
+    $anchor  = ($id ? "<a name=\"$id\"></a>\n " : "");
+    $text    = clean_note($text);
+
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['MAGIC_COOKIE']) && $id) {
     
@@ -431,10 +434,6 @@ function manual_note_display($date, $name, $text, $id)
         
     } else { $admin = ''; }
     
-    $text = clean_note($text);
-    
-    $anchor = ($id ? "<a name=\"$id\"></a>\n " : "");
-        
     echo <<<USER_NOTE_TEXT
 
  {$anchor}<div class="note">{$admin}{$name}{$datestr}
