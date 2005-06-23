@@ -154,7 +154,7 @@ commonHeader("Hypertext Preprocessor");
 <p>Some of the key improvements of PHP 5.1 include:</p>
 <ul>
  <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
- <li>Significantly improved language performance mainly due to new Zend Engine II execution architecture.</li>
+ <li>Significantly improved language performance mainly due to the new Zend Engine II execution architecture.</li>
  <li>The PCRE extension has been updated to PCRE 5.0.</li>
  <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
  <li> See the bundled NEWS file for a more complete list of changes.</li>
