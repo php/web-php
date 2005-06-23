@@ -146,6 +146,17 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?>
+<h1>Zend/PHP Conference 2005 Call For Papers Ending Soon!</h1>
+<p>
+ <span class="newsdate">[23-Jun-2005]</span>
+The deadline for the Zend/PHP Conference & Expo 2005 Call For Papers is ending soon, <a href="http://zend.kbconferences.com/cfp.php">interested speakers</a> should submit session proposals between now and June 30, 2005. Visit the <a href="http://zend.kbconferences.com/cfp.php">conference website</a> for more information about the conference or if you are interested in submitting a session proposal. 
+</p>
+<p>
+The conference is taking place at the Hyatt Regency San Francisco Airport on October 18-21, 2005. The theme of the conference will be "Power Your Business With PHP" and will feature sessions in the following four tracks: The Business Case for PHP; Developing, Deploying and Managing Large-Scale PHP Applications; Integrating PHP with the Enterprise (including Web Services and XML); and PHP Resources: Tools, Libraries and Techniquies.  Early registration discounts are available until August 15, 2005.
+</p>
+<hr />
+
 <h1>PHP 4.4.0RC1 Available</h1>
 <p>
  <span class="newsdate">[14-Jun-2005]</span>
