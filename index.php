@@ -146,6 +146,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1 Beta 2 Available</h1>
+<p>
+ <span class="newsdate">[23-Jun-2005]</span>
+<a href="/downloads.php#v5.1">PHP 5.1 Beta 2</a> is now available! A lot of work has been put into this upcoming release and we believe it is ready for public testing.
+</p>
+<p>Some of the key improvements of PHP 5.1 include:</p>
+<ul>
+ <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
+ <li>Significantly improved language performance mainly due to new Zend Engine II execution architecture.</li>
+ <li>The PCRE extension has been updated to PCRE 5.0.</li>
+ <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
+ <li> See the bundled NEWS file for a more complete list of changes.</li>
+</ul>
+</p>
+<p>
+Everyone is encouraged to start playing with this beta, although it is not yet recommended for mission-critical production use. 
+</p>
+
+<hr />
+
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?>
 <h1>Zend/PHP Conference 2005 Call For Papers Ending Soon!</h1>
 <p>
@@ -180,27 +200,6 @@ The conference is taking place at the Hyatt Regency San Francisco Airport on Oct
 </p>
 
 <hr />
-<!--
-<h1>PHP 5.1 Beta 1 Available</h1>
-<p>
- <span class="newsdate">[10-Jun-2005]</span>
-<a href="/downloads.php#v5.1">PHP 5.1 Beta 1</a> is now available! A lot of work has been put into this upcoming release and we believe it is ready for public testing.
-</p>
-<p>Some of the key improvements of PHP 5.1 include:</p>
-<ul>
- <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
- <li>Significantly improved performance including a new Zend Engine II execution architecture.</li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
- <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
- <li> See the bundled NEWS file for a more complete list of changes.</li>
-</ul>
-</p>
-<p>
-Everyone is encouraged to start playing with this beta, although it is not yet recommended for mission-critical production use. 
-</p>
-
-<hr />
--->
 
 <?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
 <h1>10 years since PHP 1.0 was released!</h1>
