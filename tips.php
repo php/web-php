@@ -41,13 +41,17 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
-<?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '22-May-2004');?>
+<?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '27-Jun-2004');?>
 
 <p>
- Simon Ganiere created a widget which provides a simple search field to the php.net
- function lookup search, and is <a
- href="http://www.apple.com/downloads/macosx/dashboard/phpmanual.html">available from
- the Apple website</a>. Havard Eide created an even quicker, <a
+ Simon Ganiere
+ <a href="http://www.simonganiere.ch/modules/sections/index.php?op=viewarticle&amp;artid=2">created
+ a widget</a> which provides a simple search field to the PHP.net
+ function lookup search. The Apple website also has a <a
+ href="http://www.apple.com/downloads/dashboard/developer/phpsearch.html">PHP.net
+ Search</a> and a <a
+ href="http://www.apple.com/downloads/dashboard/developer/phpquickreferencewidget.html">PHP
+ Quick Reference</a> widget listed. Havard Eide created a quick <a
  href="http://eide.org/?epc=osx&display=dashboard">local function lookup widget</a>.
 </p>
 
