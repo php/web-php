@@ -72,6 +72,15 @@ $formats = array(
 </p>
 
 <p>
+ <strong>Note to Windows users</strong>: If you are using Windows XP SP2 or
+ later and you are going to download the documentation in CHM
+ format, you should "unblock" the file after downloading it, by
+ right-clicking on it and selecting the properties menu item. Then click
+ on the 'Unblock' button. Failing to do this may lead to errors
+ in the visualization of the file, due to a Microsoft bug.
+</p>
+
+<p>
  The English version of the manual is <a
  href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">also
  available</a> for the ThoutReader.
@@ -214,7 +223,7 @@ if (count($found_formats) == 0) {
  HTML formatted docs from the XML sources, what conventions to follow when
  writing documentation, etc. If you are interested in the process, or would
  like to start/join a translation, you can <a href="/get/dochowto">download
- the howto</a>. Note, that <a href="/manual/howto">it is also readable
+ the howto</a>. Note, that <a href="/dochowto">it is also readable
  online</a>.
 </p>
 
