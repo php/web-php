@@ -141,6 +141,15 @@ site_header("Documentation - Extended CHM Format");
  </li>
 
  <li>
+  <strong><a href="http://devphp.sf.net/">Dev-PHP 2</a>:</strong>
+  Go to "Options" &raquo; "General options", and select the "Extra" tab in
+  the dialog displayed. Enter the full path of the help file
+  (or locate it with the locate button), then choose the correct language in
+  the corresponding combo-box. Finish with the "Ok" button.
+  Now you can use F1 to get help on a PHP function in the editor.
+ </li>
+
+ <li>
   <strong><a href="http://www.macromedia.com/software/dreamweaver/">Dreamweaver MX</a>:</strong>
   Users of this product can download an extension on
   <a href="http://www.tecnorama.org/document.php?id_doc=49">this Spanish page</a>.
