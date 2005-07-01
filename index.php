@@ -146,7 +146,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<h1>PEAR XML_RPC Vulnarability and PHP 4.4.0RC2 release</h1>
+<h1>PEAR XML_RPC Vulnerability and PHP 4.4.0RC2 release</h1>
 <p>
  <span class="newsdate">[01-Jul-2005]</span>
  An easily exploitable security issue was discovered in PEAR XML_RPC &lt;=
