@@ -146,6 +146,34 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PEAR XML_RPC Vulnarability and PHP 4.4.0RC2 release</h1>
+<p>
+ <span class="newsdate">[01-Jul-2005]</span>
+ An easily exploitable security issue was discovered in PEAR XML_RPC &lt;=
+ 1.3.0.  We recommend that users of this PEAR class immediately upgrade to the
+ latest version with:
+</p>
+<pre>
+ pear upgrade XML_RPC
+</pre>
+<p>
+ The same security problem exists in many other XML RPC implementations,
+ please check if the installed applications that you use might have a
+ similar problem.
+</p>
+<p>
+ The new PEAR XML_RPC package is also bundled with the second release
+ candidation of PHP 4.4.0RC2. Besides this new PEAR package there are two
+ minor issues fixed since PHP 4.4.0RC1. As the improved reference support
+ in PHP 4.4 might show as notices and warnings in your existing
+ applications - in cases where PHP formerly just silently ignored this
+ and often causing memory corruptions - we also recommend to test PHP
+ 4.4.0RC2 with your applications. The final release is planned for July
+ 11th. PHP 4.4.0RC2 can be found <a href="http://qa.php.net/~derick/">here</a>.
+</p>
+
+<hr />
+
 <h1>PHP 5.1 Beta 2 Available</h1>
 <p>
  <span class="newsdate">[23-Jun-2005]</span>
