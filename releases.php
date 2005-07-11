@@ -199,6 +199,36 @@ site_header("Releases");
 <hr />
 
 <a name="v4"></a>
+<a name="4.3.11"></a>
+<h2>4.3.11</h2>
+
+<ul>
+ <li>Released: 31 Mar 2005</li>
+ <li>Announcement: <a href="/release_4_3_11.php">English</a></li>
+ <li><a href="/ChangeLog-4.php#4.3.11">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-4.3.11.tar.bz2','PHP 4.3.11 (tar.bz2)'); ?> - 31 Mar 2005<br />
+    <span class="md5sum">md5: fbc67d240812136a9842bc1f2a217b7a</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.11.tar.gz', 'PHP 4.3.11 (tar.gz)');  ?> - 31 Mar 2005<br />
+    <span class="md5sum">md5: 5de2ba1aababb5868d55ea43cf3bebef</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.11-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: 3f2586bc27ac7eae3a5a1decf4d9b5b5</span>
+   </li>
+   <li>
+    <?php download_link('php-4.3.11-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 07523a6a56441a8eb382114f1933af52</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 <a name="4.3.10"></a>
 <h2>4.3.10</h2>
 

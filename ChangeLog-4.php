@@ -11,6 +11,71 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.4.0"></a>
+<h3>Version 4.4.0</h3>
+<b>11-Jul-2005</b>
+<ul>
+<li>Added man pages for "phpize" and "php-config" scripts.</li>
+<li>Added support for .cc files in extensions.</li>
+<li>Added the sorting flag SORT_LOCALE_STRING to the sort() functions which makes them sort based on the current locale.</li>
+<li>Changed sha1_file() and md5_file() functions to use streams instead of low level IO.</li>
+<li>Fixed memory corruptions when using references in a wrong way.</li>
+<li>Fixed memory corruption in pg_copy_from() in case the as_null parameter was passed.</li>
+<li>Fixed memory corruption in stristr(). (Derick)</li>
+<li><?php bugfix(32685); ?>, <?php bugfix(29423); ?> (Segfault when using assignment by reference within function).</li>
+<li><?php bugfix(33242); ?> (Mangled error message when stream fails).</li>
+<li><?php bugfix(33222); ?> (segfault when CURL handle is closed in a callback).</li>
+<li><?php bugfix(33214); ?> (odbc_next_result does not signal SQL errors with 2-statement SQL batches).</li>
+<li><?php bugfix(33210); ?> (relax jpeg recursive loop protection).</li>
+<li><?php bugfix(33200); ?> (preg_replace(): magic_quotes_sybase=On makes 'e' modifier misbehave).</li>
+<li><?php bugfix(33150); ?> (shtool: insecure temporary file creation).</li>
+<li><?php bugfix(33072); ?> (Add a safemode/open_basedir check for runtime save_path change).</li>
+<li><?php bugfix(33070); ?> (Improved performance of bzdecompress() by several orders of magnitude).</li>
+<li><?php bugfix(33057); ?> (Don't send extraneous entity-headers on a 304 as per RFC 2616 section 10.3.5).</li>
+<li><?php bugfix(33019); ?> (socket errors cause memory leaks in php_strerror()).</li>
+<li><?php bugfix(33017); ?> ("make distclean" gives an error with VPATH build).</li>
+<li><?php bugfix(33013); ?> ("next month" was handled wrong while parsing dates).</li>
+<li><?php bugfix(32974); ?> (pcntl calls malloc() from a signal handler).</li>
+<li><?php bugfix(32944); ?> (Disabling session.use_cookies doesn't prevent reading session cookies).</li>
+<li><?php bugfix(32936); ?> (http redirects URLs are not checked for control chars).</li>
+<li><?php bugfix(32932); ?> (Oracle LDAP: ldap_get_entries invalid pointer).</li>
+<li><?php bugfix(32904); ?> (pg_get_notify() ignores result_type parameter).</li>
+<li><?php bugfix(32813); ?> (parse_url() does not handle scheme-only urls properly).</li>
+<li><?php bugfix(32810); ?> (temporary files not using plain file wrapper).</li>
+<li><?php bugfix(32802); ?> (General cookie overrides more specific cookie).</li>
+<li><?php bugfix(32800); ?>, <?php bugfix(32830); ?> (ext/odbc: Problems with 64bit systems).</li>
+<li><?php bugfix(32773); ?> (GMP functions break when second parameter is 0).</li>
+<li><?php bugfix(32742); ?> (segmentation fault when the stream with a wrapper is not closed).</li>
+<li><?php bugfix(32730); ?> (ext/crack.c fails to compile with cracklib-2.8.3).</li>
+<li><?php bugfix(32670); ?> (foreach() does not issue warning on unset array arg).</li>
+<li><?php bugfix(32699); ?> (pg_affected_rows() was defined when it was not available).</li>
+<li><?php bugfix(32682); ?> (ext/mssql: Error on module shutdown when called from activescript).</li>
+<li><?php bugfix(32647); ?> (Using register_shutdown_function() with invalid callback can crash PHP).</li>
+<li><?php bugfix(32591); ?> (ext/mysql: Unsatisfied symbol: ntohs with HP-UX).</li>
+<li><?php bugfix(32589); ?> (Possible crash inside imap_mail_compose, with charsets).</li>
+<li><?php bugfix(32587); ?> (Apache2: errors sent to error_log do not include timestamps).</li>
+<li><?php bugfix(32567); ?> (ext/gmp fails to compile in threadsafe mode).</li>
+<li><?php bugfix(32538); ?> (ext/swf/swf.c does not compile with gcc-3.4.x or newer).</li>
+<li><?php bugfix(32530); ?> (chunk_split() does not append endstr if chunklen is longer then the original string).</li>
+<li><?php bugfix(32491); ?> (File upload error - unable to create a temporary file).</li>
+<li><?php bugfix(32311); ?> (mb_encode_mimeheader() does not properly escape characters).</li>
+<li><?php bugfix(32245); ?> (xml_parser_free() in a function assigned to the xml parser gives a segfault).</li>
+<li><?php bugfix(32116); ?> (mysql compressed connection doesn't work under windows).</li>
+<li><?php bugfix(31887); ?> (ISAPI: Custom 5xx error does not return correct HTTP response message).</li>
+<li><?php bugfix(31583); ?> (php_std_date() uses short day names in non-y2k_compliance mode).</li>
+<li><?php bugfix(31213); ?> (Sideeffects caused by fix of bug <?php bugfix(29493); ?>).</li>
+<li><?php bugfix(30052); ?> (Crash on shutdown after odbc_pconnect()).</li>
+<li><?php bugfix(29975); ?> (memory leaks when set_error_handler() is used inside error handler).</li>
+<li><?php bugfix(29944); ?> (Function defined in switch, crashes).</li>
+<li><?php bugfix(29338); ?> (unencoded spaces get ignored after certain tags).</li>
+<li><?php bugfix(28605); ?> (Need to use -[m]ieee option for Alpha CPUs).</li>
+<li><?php bugfix(28377); ?> (debug_backtrace is intermittently passing args).</li>
+</ul>
+
+There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.3.11"></a>
 <h3>Version 4.3.11</h3>
 <b>31-Mar-2005</b>
@@ -45,7 +110,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(31527); ?> (crash in msg_send() when non-string is stored without being serialized).</li>
 <li><?php bugfix(31514); ?> (open_basedir uses path_translated rather then cwd for . translation).</li>
 <li><?php bugfix(31480); ?> (Possible infinite loop in imap_mail_compose()).</li>
-<li><?php bugfix(31479); ?> (Fixed crash in chunk_split(), when chunklen > strlen).</li>
+<li><?php bugfix(31479); ?> (Fixed crash in chunk_split(), when chunklen &gt; strlen).</li>
 <li><?php bugfix(31465); ?> (False warning in unpack() when working with *).</li>
 <li><?php bugfix(31454); ?> (session_set_save_handler crashes PHP when supplied non-existent object ref).</li>
 <li><?php bugfix(31444); ?> (Memory leak in zend_language_scanner.c).</li>
