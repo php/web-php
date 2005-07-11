@@ -21,7 +21,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Changed sha1_file() and md5_file() functions to use streams instead of low level IO.</li>
 <li>Fixed memory corruptions when using references in a wrong way.</li>
 <li>Fixed memory corruption in pg_copy_from() in case the as_null parameter was passed.</li>
-<li>Fixed memory corruption in stristr(). (Derick)</li>
+<li>Fixed memory corruption in stristr().</li>
 <li><?php bugfix(32685); ?>, <?php bugfix(29423); ?> (Segfault when using assignment by reference within function).</li>
 <li><?php bugfix(33242); ?> (Mangled error message when stream fails).</li>
 <li><?php bugfix(33222); ?> (segfault when CURL handle is closed in a callback).</li>
