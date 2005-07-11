@@ -121,23 +121,23 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<h1>PHP 4.3.11</h1>
+<h1>PHP 4.4.0</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.3.11.tar.bz2','PHP 4.3.11 (tar.bz2)'); ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: fbc67d240812136a9842bc1f2a217b7a</span>
+  <?php download_link('php-4.4.0.tar.bz2','PHP 4.4.0 (tar.bz2)'); ?> - 11 Jul 2005<br />
+  <span class="md5sum">md5: e85b606fe48198bfcd785e5a5b1c9613</span>
  </li>
  <li>
-  <?php download_link('php-4.3.11.tar.gz', 'PHP 4.3.11 (tar.gz)');  ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: 5de2ba1aababb5868d55ea43cf3bebef</span>
+  <?php download_link('php-4.4.0.tar.gz', 'PHP 4.4.0 (tar.gz)');  ?> - 31 Jul 2005<br />
+  <span class="md5sum">md5: 4c12d241216e4ca2f2ce2cb7ee5de48b</span>
  </li>
 </ul>
 
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_3_11.php">release notes</a> for more information on
+ or the <a href="/release_4_4_0.php">release notes</a> for more information on
  this particular release. Daily snapshots are also available from
  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
@@ -150,19 +150,22 @@ site_header("Downloads");
 
 <ul>
  <li>
-  <?php download_link('php-4.3.11-Win32.zip', 'PHP 4.3.11 zip package'); ?> - 31 Mar 2005<br />
+  <?php download_link('php-4.4.0-Win32.zip', 'PHP 4.4.0 zip package'); ?> - 11 Jul 2005<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: 3f2586bc27ac7eae3a5a1decf4d9b5b5</span>
+  <span class="md5sum">md5: bf5dfbda3cbf90609eaac8865145e052</span>
  </li>
  <li>
-  <?php download_link('php-4.3.11-installer.exe', 'PHP 4.3.11 installer'); ?> - 31 Mar 2005<br />
+  The Windows installer will follow soon.
+<!--
+  <?php download_link('php-4.4.0-installer.exe', 'PHP 4.4.0 installer'); ?> - 11 Jul 2005<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
   <span class="md5sum">md5: 07523a6a56441a8eb382114f1933af52</span>
+-->
  </li>
 </ul>
 

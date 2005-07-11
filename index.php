@@ -146,6 +146,27 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.0 Released</h1>
+<p>
+ <span class="newsdate">[11-Jul-2005]</span>
+ The PHP Development Team would like to announce the immediate release of 
+ <a href="/downloads.php#v4">PHP 4.4.0</a>. 
+ This is a maintenance release that addresses a serious memory corruption
+ problem within PHP concerning references. If references were used in a wrong
+ way, PHP would often create memory corruptions which would not always surface
+ and be visible. The increased middle digit was required because the fix that
+ corrected the problem with references changed PHP's internal API. PHP 4.4.0
+ does not have any new features, and is solely a bugfix release.
+</p>
+<p>
+ A separate release announcement is also <a
+ href="release_4_4_0.php">available</a>.  For changes in PHP 4.4.0 since PHP
+ 4.3.11, please consult the <a href="/ChangeLog-4.php#4.4.0">PHP 4
+ ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>PEAR XML_RPC Vulnerability and PHP 4.4.0RC2 release</h1>
 <p>
  <span class="newsdate">[01-Jul-2005]</span>
@@ -185,7 +206,7 @@ commonHeader("Hypertext Preprocessor");
  <li>Significantly improved language performance mainly due to the new Zend Engine II execution architecture.</li>
  <li>The PCRE extension has been updated to PCRE 5.0.</li>
  <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
- <li> See the bundled NEWS file for a more complete list of changes.</li>
+ <li>See the bundled NEWS file for a more complete list of changes.</li>
 </ul>
 </p>
 <p>
