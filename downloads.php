@@ -130,7 +130,7 @@ site_header("Downloads");
   <span class="md5sum">md5: e85b606fe48198bfcd785e5a5b1c9613</span>
  </li>
  <li>
-  <?php download_link('php-4.4.0.tar.gz', 'PHP 4.4.0 (tar.gz)');  ?> - 31 Jul 2005<br />
+  <?php download_link('php-4.4.0.tar.gz', 'PHP 4.4.0 (tar.gz)');  ?> - 11 Jul 2005<br />
   <span class="md5sum">md5: 4c12d241216e4ca2f2ce2cb7ee5de48b</span>
  </li>
 </ul>
