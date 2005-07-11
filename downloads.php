@@ -157,15 +157,12 @@ site_header("Downloads");
   <span class="md5sum">md5: bf5dfbda3cbf90609eaac8865145e052</span>
  </li>
  <li>
-  The Windows installer will follow soon.
-<!--
   <?php download_link('php-4.4.0-installer.exe', 'PHP 4.4.0 installer'); ?> - 11 Jul 2005<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 07523a6a56441a8eb382114f1933af52</span>
--->
+  <span class="md5sum">md5: 9f8c733be89ea32025ecc64f7aeae60b</span>
  </li>
 </ul>
 
