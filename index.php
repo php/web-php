@@ -146,6 +146,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1 Beta 3 Available</h1>
+<p>
+ <span class="newsdate">[14-Jul-2005]</span>
+<a href="/downloads.php#v5.1">PHP 5.1 Beta 3</a> is now available! If all goes well, this beta release will be followed by a release candidate within a couple of weeks.
+</p>
+<p>Some of the key improvements of PHP 5.1 include:</p>
+<ul>
+ <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
+ <li>Significantly improved language performance mainly due to the new Zend Engine II execution architecture.</li>
+ <li>The PCRE extension has been updated to PCRE 5.0.</li>
+ <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
+ <li>See the bundled NEWS file for a more complete list of changes.</li>
+</ul>
+</p>
+<p>
+Everyone is encouraged to download and test this beta, although it is not yet recommended for mission-critical production use. 
+</p>
+
+<hr />
+
 <h1>PHP 4.4.0 Released</h1>
 <p>
  <span class="newsdate">[11-Jul-2005]</span>
