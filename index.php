@@ -146,22 +146,58 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
+<h1>web|works and php|works 2005 Program Online</h1>
+<p>
+ <span class="newsdate">[16-Jul-2005]</span>
+ The <a href="http://www.phparch.com/works/schedule.php">full program</a> of
+ <a href="http://www.phparch.com/works">php/web|works 2005</a>, a three-day
+ conference on PHP and web technologies is available. The event will take
+ place in Toronto, Canada, the birthplace of PHP, between September 14 and
+ September 16. This year's speakers include Rasmus Lerdorf, Derick
+ Rethans, Wez Furlong, John Coggeshall, Ilia Alshanetsky and many more.
+</p>
+<p>
+ An early-bird <a href="https://www.phparch.com/works/signup.php">special
+ discount</a> is in effect until August 1st, and special pricing is
+ available for students, member of academia and non-profit organizations.
+</p>
+
+<hr />
+
 <h1>PHP 5.1 Beta 3 Available</h1>
 <p>
  <span class="newsdate">[14-Jul-2005]</span>
-<a href="/downloads.php#v5.1">PHP 5.1 Beta 3</a> is now available! If all goes well, this beta release will be followed by a release candidate within a couple of weeks.
-</p>
-<p>Some of the key improvements of PHP 5.1 include:</p>
-<ul>
- <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
- <li>Significantly improved language performance mainly due to the new Zend Engine II execution architecture.</li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
- <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
- <li>See the bundled NEWS file for a more complete list of changes.</li>
-</ul>
+ <a href="/downloads.php#v5.1">PHP 5.1 Beta 3</a> is now available!
+ If all goes well, this beta release will be followed by a release
+ candidate within a couple of weeks.
 </p>
 <p>
-Everyone is encouraged to download and test this beta, although it is not yet recommended for mission-critical production use. 
+ Some of the key improvements of PHP 5.1 include:
+</p>
+<ul>
+ <li>
+  PDO (PHP Data Objects) - A new native database abstraction layer
+  providing performance, ease-of-use, and flexibility.
+ </li>
+ <li>
+  Significantly improved language performance mainly due to the
+  new Zend Engine II execution architecture.
+ </li>
+ <li>The PCRE extension has been updated to PCRE 5.0.</li>
+ <li>
+  Many more improvements including lots of new functionality
+  &amp; many bug fixes, especially in regards to SOAP, streams
+  and SPL.
+ </li>
+ <li>
+  See the bundled NEWS file for a more complete list of changes.
+ </li>
+</ul>
+<p>
+ Everyone is encouraged to download and test this beta,
+ although it is not yet recommended for mission-critical
+ production use. 
 </p>
 
 <hr />
@@ -218,31 +254,61 @@ Everyone is encouraged to download and test this beta, although it is not yet re
 <h1>PHP 5.1 Beta 2 Available</h1>
 <p>
  <span class="newsdate">[23-Jun-2005]</span>
-<a href="/downloads.php#v5.1">PHP 5.1 Beta 2</a> is now available! A lot of work has been put into this upcoming release and we believe it is ready for public testing.
-</p>
-<p>Some of the key improvements of PHP 5.1 include:</p>
-<ul>
- <li>PDO (PHP Data Objects) - A new native database abstraction layer providing performance, ease-of-use, and flexibility.</li>
- <li>Significantly improved language performance mainly due to the new Zend Engine II execution architecture.</li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
- <li>Many more improvements including lots of new functionality & many bug fixes, especially in regards to SOAP, streams and SPL.</li>
- <li>See the bundled NEWS file for a more complete list of changes.</li>
-</ul>
+ <a href="/downloads.php#v5.1">PHP 5.1 Beta 2</a> is now available!
+ A lot of work has been put into this upcoming release and we
+ believe it is ready for public testing.
 </p>
 <p>
-Everyone is encouraged to start playing with this beta, although it is not yet recommended for mission-critical production use. 
+ Some of the key improvements of PHP 5.1 include:
+</p>
+<ul>
+ <li>
+  PDO (PHP Data Objects) - A new native database abstraction
+  layer providing performance, ease-of-use, and flexibility.
+ </li>
+ <li>
+  Significantly improved language performance mainly due to
+  the new Zend Engine II execution architecture.
+ </li>
+ <li>The PCRE extension has been updated to PCRE 5.0.</li>
+ <li>
+  Many more improvements including lots of new functionality
+  &amp; many bug fixes, especially in regards to SOAP, streams
+  and SPL.
+ </li>
+ <li>
+  See the bundled NEWS file for a more complete list of changes.
+ </li>
+</ul>
+<p>
+ Everyone is encouraged to start playing with this beta,
+ although it is not yet recommended for mission-critical
+ production use. 
 </p>
 
 <hr />
 
-<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?>
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
 <h1>Zend/PHP Conference 2005 Call For Papers Ending Soon!</h1>
 <p>
  <span class="newsdate">[23-Jun-2005]</span>
-The deadline for the Zend/PHP Conference & Expo 2005 Call For Papers is ending soon, <a href="http://zend.kbconferences.com/cfp.php">interested speakers</a> should submit session proposals between now and June 30, 2005. Visit the <a href="http://zend.kbconferences.com/cfp.php">conference website</a> for more information about the conference or if you are interested in submitting a session proposal. 
+ The deadline for the Zend/PHP Conference &amp; Expo 2005 Call
+ For Papers is ending soon,
+ <a href="http://zend.kbconferences.com/cfp.php">interested speakers</a>
+ should submit session proposals between now and June 30, 2005. Visit
+ the <a href="http://zend.kbconferences.com/cfp.php">conference website</a>
+ for more information about the conference or if you are interested in
+ submitting a session proposal. 
 </p>
 <p>
-The conference is taking place at the Hyatt Regency San Francisco Airport on October 18-21, 2005. The theme of the conference will be "Power Your Business With PHP" and will feature sessions in the following four tracks: The Business Case for PHP; Developing, Deploying and Managing Large-Scale PHP Applications; Integrating PHP with the Enterprise (including Web Services and XML); and PHP Resources: Tools, Libraries and Techniquies.  Early registration discounts are available until August 15, 2005.
+ The conference is taking place at the Hyatt Regency San Francisco
+ Airport on October 18-21, 2005. The theme of the conference will be
+ "Power Your Business With PHP" and will feature sessions in the
+ following four tracks: The Business Case for PHP; Developing,
+ Deploying and Managing Large-Scale PHP Applications; Integrating PHP
+ with the Enterprise (including Web Services and XML); and PHP
+ Resources: Tools, Libraries and Techniquies.  Early registration
+ discounts are available until August 15, 2005.
 </p>
 <hr />
 
@@ -281,31 +347,6 @@ The conference is taking place at the Hyatt Regency San Francisco Airport on Oct
  reporters, beta testers, PHP application developers and even just people that
  are using PHP&mdash;<b>Thank you!</b>
 
-</p>
-
-<hr />
-
-<?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
-<h1>php|works and web|works Call for Papers</h1>
-<p>
- <span class="newsdate">[07-Jun-2005]</span>
- The publishers of <a href="http://www.phparch.com">php|architect</a> magazine
- have announced <a href="http://www.phparch.com/phpworks">php|works and
- web|works 2005</a>--two three-day conferences dedicated to PHP and web
- development that will take place simultaneously in Toronto, Canada, between
- September 14 and September 16, 2005.
-</p>
-<p>
- A <a href="http://www.phparch.com/phpworks/cfp.php">Call for Papers</a> is
- in effect until June 27th and the organizers are welcoming talk proposals
- from the community.
-</p>
-<p>
- The conferences also feature an <a
- href="https://www.phparch.com/phpworks/signup.php">"early-early bird"
- special offer</a> with additional savings for signups before July 1st.
- Special pricing is also available for students, members of academia and
- non-profit organizations.
 </p>
 
 <hr />
@@ -439,16 +480,16 @@ The conference is taking place at the Hyatt Regency San Francisco Airport on Oct
 
 <hr />
 
-<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference & Expo"); ?> 
-<h1>Call for Speakers: Zend/PHP Conference & Expo 2005</h1>
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?> 
+<h1>Call for Speakers: Zend/PHP Conference &amp; Expo 2005</h1>
 <p>
  <span class="newsdate">[17-Mar-2005]</span>
  Zend Technologies and KB Conferences proudly announce the
- <a href="http://zend.kbconferences.com/">Zend/PHP Conference & Expo 2005</a> 
+ <a href="http://zend.kbconferences.com/">Zend/PHP Conference &amp; Expo 2005</a> 
  taking place at the Hyatt Regency San Francisco
- Airport on October 18-21, 2005.  The theme of the conference will be
+ Airport on October 18-21, 2005. The theme of the conference will be
  &quot;Power Your Business With PHP&quot; and will feature sessions
- in the following four tracks:  The Business Case for PHP; Developing,
+ in the following four tracks: The Business Case for PHP; Developing,
  Deploying and Managing Large-Scale PHP Applications; Integrating
  PHP with the Enterprise (including Web Services and XML); and PHP
  Resources: Tools, Libraries and Techniquies.
@@ -456,7 +497,7 @@ The conference is taking place at the Hyatt Regency San Francisco Airport on Oct
 <p>
  We <a href="http://zend.kbconferences.com/call.php">invite interested speakers</a> 
  to submit session proposals between
- now and July 15, 2005.  Visit the conference website for more
+ now and July 15, 2005. Visit the conference website for more
  information about the conference or if you are interested in
  submitting a session proposal.
 </p>
