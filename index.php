@@ -480,30 +480,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?> 
-<h1>Call for Speakers: Zend/PHP Conference &amp; Expo 2005</h1>
-<p>
- <span class="newsdate">[17-Mar-2005]</span>
- Zend Technologies and KB Conferences proudly announce the
- <a href="http://zend.kbconferences.com/">Zend/PHP Conference &amp; Expo 2005</a> 
- taking place at the Hyatt Regency San Francisco
- Airport on October 18-21, 2005. The theme of the conference will be
- &quot;Power Your Business With PHP&quot; and will feature sessions
- in the following four tracks: The Business Case for PHP; Developing,
- Deploying and Managing Large-Scale PHP Applications; Integrating
- PHP with the Enterprise (including Web Services and XML); and PHP
- Resources: Tools, Libraries and Techniquies.
-</p> 
-<p>
- We <a href="http://zend.kbconferences.com/call.php">invite interested speakers</a> 
- to submit session proposals between
- now and July 15, 2005. Visit the conference website for more
- information about the conference or if you are interested in
- submitting a session proposal.
-</p>
-
-<hr />
-
 <h1>PHP Québec 2005: PHP - MySQL - Apache</h1>
 
 <p>
