@@ -209,16 +209,18 @@ commonHeader("Hypertext Preprocessor");
  <a href="/downloads.php#v4">PHP 4.4.0</a>. 
  This is a maintenance release that addresses a serious memory corruption
  problem within PHP concerning references. If references were used in a wrong
- way, PHP would often create memory corruptions which would not always surface
- and be visible. The increased middle digit was required because the fix that
- corrected the problem with references changed PHP's internal API. PHP 4.4.0
- does not have any new features, and is solely a bugfix release.
+ way, PHP could create memory corruptions which would not always surface or
+ be visible. The increased middle digit was required because the fix that
+ corrected the problem with references changed PHP's internal API, breaking
+ binary compatibility with the PHP 4.3.* series. PHP 4.4.0 does not have
+ any new features, and is solely a bugfix release; however, it is strongly
+ recommended that you read the more detailed release announcement
+ <a href="release_4_4_0.php">available here</a> prior to upgrading your
+ PHP 4 installation.
 </p>
 <p>
- A separate release announcement is also <a
- href="release_4_4_0.php">available</a>.  For changes in PHP 4.4.0 since PHP
- 4.3.11, please consult the <a href="/ChangeLog-4.php#4.4.0">PHP 4
- ChangeLog</a>.
+For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
+<a href="/ChangeLog-4.php#4.4.0">PHP 4 ChangeLog</a>.
 </p>
 
 <hr />
