@@ -816,7 +816,7 @@ dead
 
 <p>
  Looking for an ISP or hosting service that supports PHP?
- Try one of the following sites:
+ The following sites list some providers:
 </p>
 
 <ul>
