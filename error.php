@@ -262,6 +262,18 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     "odbc"         => "uodbc", // BC
+
+    "class"        => "language.oop5.basic",
+    "new"          => "language.oop5.basic",
+    "extends"      => "language.oop5.basic",
+    "construct"    => "language.oop5.decon",
+    "destruct"     => "language.oop5.decon",
+    "public"       => "language.oop5.visibility",
+    "private"      => "language.oop5.visibility",
+    "protected"    => "language.oop5.visibility",
+    "abstract"     => "language.oop5.abstract",
+    "interface"    => "language.oop5.interfaces",
+    "interfaces"   => "language.oop5.interfaces",
     
     "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
