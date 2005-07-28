@@ -274,6 +274,10 @@ $uri_aliases = array (
     "abstract"     => "language.oop5.abstract",
     "interface"    => "language.oop5.interfaces",
     "interfaces"   => "language.oop5.interfaces",
+
+    "throw"        => "language.exceptions",
+    "try"          => "language.exceptions",
+    "catch"        => "language.exceptions",
     
     "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
