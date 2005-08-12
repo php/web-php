@@ -146,6 +146,33 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
+<h1>International PHP Conference 2005 - Program available</h1>
+<p>
+ <span class="newsdate">[12-Aug-2005]</span>
+ The program for the <a href="http://www.phpconference.com/">International PHP
+ Conference</a> is now available. The conference that was one of the first
+ events on PHP will take place again in Frankfurt from November 6-9, 2005
+ and offers two days with pre conference tutorials as well as two days
+ packed with sessions from well known speakers such as Derick Rethans,
+ Zak Greant, Ilia Alshanetsky and many more.
+</p>
+<p>
+ A new feature has been added to this year's conference: the Management Day
+ where project managers and consultants shine the light on using PHP in
+ enterprise-level projects. Conference attendees, including software
+ architects, PHP developers, project leaders, and programmers can gain
+ strategic information on how to realize their IT projects on-time,
+ in-budget. The Management Day is <em>free of charge</em> for attendees
+ registering prior to September 30, 2005.
+</p>
+<p>
+ Early Bird Special discounts are available as well until this date, and
+ special discounts for students and private persons.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
 <h1>web|works and php|works 2005 Program Online</h1>
 <p>
@@ -349,22 +376,6 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  reporters, beta testers, PHP application developers and even just people that
  are using PHP&mdash;<b>Thank you!</b>
 
-</p>
-
-<hr />
-
-<?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
-<h1>International PHP Conference 2005 Call for Papers</h1>
-<p>
- <span class="newsdate">[02-Jun-2005]</span>
- The traditional <a href="http://www.phpconference.com/">International
- PHP Conference 2005</a> will take place
- from November 6th to November 9th 2005 at Frankfurt/Main, Germany.
- The <a href="http://input.entwickler.com/">Call for Papers</a> has
- been issued, if you have an interesting talk the organisers would
- love to hear from you. You can expect a gathering of PHP experts
- and the PHP core developers.The conference website will be updated
- in the next few days. 
 </p>
 
 <hr />
