@@ -318,19 +318,11 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 <hr />
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
-<h1>Zend/PHP Conference 2005 Call For Papers Ending Soon!</h1>
+<h1>Zend/PHP Conference 2005</h1>
 <p>
  <span class="newsdate">[23-Jun-2005]</span>
- The deadline for the Zend/PHP Conference &amp; Expo 2005 Call
- For Papers is ending soon,
- <a href="http://zend.kbconferences.com/cfp.php">interested speakers</a>
- should submit session proposals between now and June 30, 2005. Visit
- the <a href="http://zend.kbconferences.com/cfp.php">conference website</a>
- for more information about the conference or if you are interested in
- submitting a session proposal. 
-</p>
-<p>
- The conference is taking place at the Hyatt Regency San Francisco
+ The <a href="http://zend.kbconferences.com/">Zend/PHP Conference</a>
+ is taking place at the Hyatt Regency San Francisco
  Airport on October 18-21, 2005. The theme of the conference will be
  "Power Your Business With PHP" and will feature sessions in the
  following four tracks: The Business Case for PHP; Developing,
@@ -339,30 +331,6 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  Resources: Tools, Libraries and Techniquies.  Early registration
  discounts are available until August 15, 2005.
 </p>
-<hr />
-
-<h1>PHP 4.4.0RC1 Available</h1>
-<p>
- <span class="newsdate">[14-Jun-2005]</span>
- We just released the first release candidate for PHP 4.4.0.  This is a bug-fix
- only release, the increased middle digit is needed because this release
- changes PHP's Internal API that causes existing third-party binary extensions
- to be incompatible with the new version.
-</p>
-<p>
- This release address a major problem within PHP concerning references.
- If references were used in a wrong way, PHP would often create memory
- corruptions which would not always surface and be visible. In other
- cases it can cause variables and objects to change type or class. If you
- encountered strange behavior like this, this release might fix it.
-</p>
-<p>
- Besides addressing this reference related bug, 46 other bugs are fixed.
- Please test this release and report any bugs or problems in our
- bugsystem (after searching first). You can find 4.4.0 RC1 at
- <a href="http://qa.php.net/~derick/">http://qa.php.net/~derick/</a>
-</p>
-
 <hr />
 
 <?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
@@ -555,15 +523,11 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr />
 
-<h1>ApacheCon Europe Call for Papers</h1>
+<h1>ApacheCon Europe 2005</h1>
 <p>
  <span class="newsdate">[08-Feb-2005]</span>
- ApacheCon Europe will be held from July 18th to July 22th in Stuttgart,
- Germany. The conference organizers are looking for speakers willing to have a
- talk of any of the topics mentioned on the <a
- href="http://www.apachecon.com/2005/EU/index.html">website</a>.  If you think
- that you have material for this conference and want to have a talk there, you
- can submit a paper <a href="http://apachecon.com/html/login.html">here</a>.
+ <a href="http://www.apachecon.com/2005/EU/index.html">ApacheCon Europe</a>
+ will be held from July 18th to July 22th in Stuttgart, Germany.
 </p>
 
 <hr />
@@ -593,24 +557,12 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <p>
  <span class="newsdate">[27-Jan-2005]</span>
- Circle August 1-5 on your calendar and join in at the O'Reilly
- Open Source Convention in beautiful Portland, Oregon. OSCON 2005
+ Circle August 1-5 on your calendar and join in at the 
+ <a href="http://conferences.oreillynet.com/os2005/">O'Reilly
+ Open Source Convention</a> in beautiful Portland, Oregon. OSCON 2005
  will be at the Oregon Convention Center, where there will be
  tutorials, sessions, parties, BOFs, and a huge exhibit
- hall. The <a href="http://conferences.oreillynet.com/os2005/">Call
- for Proposals</a> is now open, and registration and hotel
- information will be available soon. Get the details as soon
- as they're available by signing up for the <a
- href="http://www.oreillynet.com/cs/nl/home#conferences">OSCON
- newsletter</a>.
-</p>
-<p>
- You're invited to submit a proposal to lead tutorials and sessions.
- Visit the submissions page for all the details on tracks and proposal
- guidelines. The committee is particularly interested in talks on PHP
- 5: migration, new developments, security, case studies, large-scale
- applications development, and best practices. Proposals are due no
- later than February 13, 2005.
+ hall.
 </p>
 
 <hr />
