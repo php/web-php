@@ -7,7 +7,7 @@
 /* ------------------------------------------------------------------------- */
 
 // Get the modification date of this PHP file
-$timestamps[] = @getlastmod();
+$timestamps = array(@getlastmod());
 
 /*
    The date of prepend.inc represents the age of ALL
