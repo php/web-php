@@ -204,7 +204,8 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://php.foundries.sourceforge.net/">PHP Foundry at SourceForge</a><br />
+  <a href="http://sourceforge.net/softwaremap/trove_list.php?form_cat=183">PHP
+  projects at SourceForge</a><br />
   A great number of open source PHP projects actively developed
  </li>
 
