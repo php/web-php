@@ -164,7 +164,7 @@ commonHeader("Hypertext Preprocessor");
   Significantly improved language performance mainly due to the
   new Zend Engine II execution architecture.
  </li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
+ <li>The PCRE extension has been updated to PCRE 6.2.</li>
  <li>
   Many more improvements including lots of new functionality
   &amp; many bug fixes, especially in regards to SOAP, streams
