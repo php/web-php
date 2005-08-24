@@ -274,6 +274,7 @@ $uri_aliases = array (
     "abstract"     => "language.oop5.abstract",
     "interface"    => "language.oop5.interfaces",
     "interfaces"   => "language.oop5.interfaces",
+    "autoload"     => "language.oop5.autoload",
 
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
