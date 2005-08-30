@@ -175,7 +175,7 @@ commonHeader("Hypertext Preprocessor");
  </li>
 </ul>
 <p>
- Everyone is encouraged to download and test this beta,
+ Everyone is encouraged to download and test this release candidate,
  although it is not yet recommended for mission-critical
  production use. 
 </p>
@@ -228,43 +228,6 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
-<h1>PHP 5.1 Beta 3 Available</h1>
-<p>
- <span class="newsdate">[14-Jul-2005]</span>
- <a href="/downloads.php#v5.1">PHP 5.1 Beta 3</a> is now available!
- If all goes well, this beta release will be followed by a release
- candidate within a couple of weeks.
-</p>
-<p>
- Some of the key improvements of PHP 5.1 include:
-</p>
-<ul>
- <li>
-  PDO (PHP Data Objects) - A new native database abstraction layer
-  providing performance, ease-of-use, and flexibility.
- </li>
- <li>
-  Significantly improved language performance mainly due to the
-  new Zend Engine II execution architecture.
- </li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
- <li>
-  Many more improvements including lots of new functionality
-  &amp; many bug fixes, especially in regards to SOAP, streams
-  and SPL.
- </li>
- <li>
-  See the bundled NEWS file for a more complete list of changes.
- </li>
-</ul>
-<p>
- Everyone is encouraged to download and test this beta,
- although it is not yet recommended for mission-critical
- production use. 
-</p>
-
-<hr />
-
 <h1>PHP 4.4.0 Released</h1>
 <p>
  <span class="newsdate">[11-Jul-2005]</span>
@@ -312,43 +275,6 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  and often causing memory corruptions - we also recommend to test PHP
  4.4.0RC2 with your applications. The final release is planned for July
  11th. PHP 4.4.0RC2 can be found <a href="http://qa.php.net/~derick/">here</a>.
-</p>
-
-<hr />
-
-<h1>PHP 5.1 Beta 2 Available</h1>
-<p>
- <span class="newsdate">[23-Jun-2005]</span>
- <a href="/downloads.php#v5.1">PHP 5.1 Beta 2</a> is now available!
- A lot of work has been put into this upcoming release and we
- believe it is ready for public testing.
-</p>
-<p>
- Some of the key improvements of PHP 5.1 include:
-</p>
-<ul>
- <li>
-  PDO (PHP Data Objects) - A new native database abstraction
-  layer providing performance, ease-of-use, and flexibility.
- </li>
- <li>
-  Significantly improved language performance mainly due to
-  the new Zend Engine II execution architecture.
- </li>
- <li>The PCRE extension has been updated to PCRE 5.0.</li>
- <li>
-  Many more improvements including lots of new functionality
-  &amp; many bug fixes, especially in regards to SOAP, streams
-  and SPL.
- </li>
- <li>
-  See the bundled NEWS file for a more complete list of changes.
- </li>
-</ul>
-<p>
- Everyone is encouraged to start playing with this beta,
- although it is not yet recommended for mission-critical
- production use. 
 </p>
 
 <hr />
@@ -518,7 +444,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 
 <hr />
 
-<h1>PHP &amp; PEAR at FOSDEM 2005</h1>
+<h1>PHP and PEAR at FOSDEM 2005</h1>
 
 <p>
  <span class="newsdate">[23-Feb-2005]</span>
