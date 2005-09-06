@@ -234,7 +234,7 @@ commonHeader("Hypertext Preprocessor");
  conference on PHP and web technologies is available. The event will take
  place in Toronto, Canada, the birthplace of PHP, between September 14 and
  September 16. This year's speakers include Rasmus Lerdorf, Derick
- Rethans, Wez Furlong, John Coggeshall, Ilia Alshanetsky and many more.
+ Rethans, Wez Furlong, Ilia Alshanetsky and many more.
 </p>
 <p>
  An early-bird <a href="https://www.phparch.com/works/signup.php">special
