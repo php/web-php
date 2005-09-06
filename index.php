@@ -146,6 +146,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.0.5 Released</h1>
+<p>
+ <span class="newsdate">[06-Sep-2005]</span>
+ PHP 5.0.5 is now <a href="/downloads.php#v5">available for download</a>.
+ This version is a maintenance release, that contains numerous bug fixes, including
+ security fixes to vulnerabilities found in the XMLRPC package.  All users of PHP
+ 5.0 are encouraged to upgrade to this version.
+</p>
+<p>
+ The full list of changes in PHP 5.0.5 is available in the
+ <a href="/ChangeLog-5.php#5.0.4">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
+
 <h1>PHP 5.1 Release Candidate 1 Available</h1>
 <p>
  <span class="newsdate">[8-Aug-2005]</span>

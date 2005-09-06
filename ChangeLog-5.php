@@ -8,6 +8,242 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.0.5"></a>
+<h3>Version 5.0.5</h3>
+<b>05-Sep-2005</b>
+<ul>
+<li>Upgraded PCRE library to version 5.0. (Andrei)</li>
+<li>Removed php_check_syntax() function which never worked properly. (Ilia)</li>
+<li>Added new function mysqli_set_charset(). (Georg)</li>
+<li>Added man pages for "phpize" and "php-config" scripts. (Jakub Vrana)</li>
+<li>Added support for .cc files in extensions. (Brian)</li>
+<li>Added PHP_INT_MAX and PHP_INT_SIZE as predefined constants. (Andrey)</li>
+<li>Changed sha1_file() and md5_file() functions to use streams instead of
+  low level IO. (Uwe)</li>
+<li>Changed ming to support official 0.2a and 0.3 library versions. (Marcus)</li>
+<li>Fixed failing queries problem (FALSE returned) with mysqli_query() on 64 bit.
+  (Andrey)</li>
+<li>Fixed memory corruption in pg_copy_from() in case the as_null parameter was
+  passed. (Derick)</li>
+<li>Fixed ext/mysqli to allocate less memory when fetching bound params
+  of type (MEDIUM|LONG)BLOB/(MEDIUM|LONG)TEXT. (Andrey)</li>
+<li>Fixed memory corruption in ImageTTFText() with 64bit systems. (Andrey)</li>
+<li>Fixed memory corruption in stristr(). (Derick)</li>
+<li>Fixed segfaults when CURL callback functions throw exception. (Tony)</li>
+<li>Fixed various reentrancy bugs in user-sort functions, solves bugs <?php bugl(33286); ?> and
+  <?php bugl(33295); ?>. (Mike Bretz)</li>
+<li>Fixed bug <?php bugl(34307); ?> (on_modify handler not called to set the default value if
+  setting from php.ini was invalid). (Andrei)</li>
+<li>Fixed bug <?php bugl(34302); ?> (date('W') do not return leading zeros for week 1 to 9).
+  (Derick)</li>
+<li>Fixed bug <?php bugl(34299); ?> (ReflectionClass::isInstantiable() returns true for abstract
+  classes). (Marcus)</li>
+<li>Fixed bug <?php bugl(34277); ?> (array_filter() crashes with references and objects).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(34260); ?> (Segfault with callbacks (array_map) + overloading).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(34137); ?> (assigning array element by reference causes binary mess).
+  (Dmitry) 
+<li>Fixed bug <?php bugl(34078); ?> (Reflection API problems in methods with boolean or 
+  null default values). (Tony)</li>
+<li>Fixed bug <?php bugl(34064); ?> (arr[] as param to function is allowed only if function 
+  receives argument by reference). (Dmitry)</li>
+<li>Fixed bug <?php bugl(34062); ?> (Crash in catch block when many arguments are used).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(33989); ?> (extract($GLOBALS,EXTR_REFS) crashes PHP). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33940); ?> (array_map() fails to pass by reference when called
+  recursively). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33853); ?> (php:function call __autoload with lowercase param). (Marcus)</li>
+<li>Fixed bug <?php bugl(33802); ?> (throw Exception in error handler causes crash). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33723); ?> (php_value overrides php_admin_value). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33710); ?> (ArrayAccess objects doen't initialize $this). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33588); ?> (LDAP: RootDSE query not possible). (Jani)</li>
+<li>Fixed bug <?php bugl(33558); ?> (warning with nested calls to functions returning by
+  reference). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33520); ?> (crash if safe_mode is on and session.save_path is changed).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(33491); ?> (crash after extending MySQLi internal class). (Tony)</li>
+<li>Fixed bug <?php bugl(33340); ?> (CLI Crash when calling php:function from XSLT). (Rob)</li>
+<li>Fixed bug <?php bugl(33277); ?> (private method accessed by child class). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33268); ?> (iconv_strlen() works only with a parameter of < 3 in 
+  length). (Ilia)</li>
+<li>Fixed bug <?php bugl(33263); ?> (mysqli_real_escape doesn't work in __construct) (Georg)</li>
+<li>Fixed bug <?php bugl(33257); ?> (array_splice() inconsistent when passed function instead
+  of variable). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33243); ?> (ze1_compatibility_mode does not work as expected). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33242); ?> (Mangled error message when stream fails). (Derick)</li>
+<li>Fixed bug <?php bugl(33222); ?> (segfault when CURL handle is closed in a callback). (Tony)</li>
+<li>Fixed bug <?php bugl(33214); ?> (odbc_next_result does not signal SQL errors with 
+  2-statement SQL batches). (rich at kastle dot com, Tony)</li>
+<li>Fixed bug <?php bugl(33210); ?> (relax jpeg recursive loop protection). (Ilia)</li>
+<li>Fixed bug <?php bugl(33200); ?> (preg_replace(): magic_quotes_sybase=On makes 'e' modifier
+  misbehave). (Jani)</li>
+<li>Fixed bug <?php bugl(33185); ?> (--enable-session=shared does not build). (Jani)</li>
+<li>Fixed bug <?php bugl(33171); ?> (foreach enumerates private fields declared in base
+  classes). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33164); ?> (Soap extension incorrectly detects HTTP/1.1). (Ilia)</li>
+<li>Fixed bug <?php bugl(33156); ?> (cygwin version of setitimer doesn't accept ITIMER_PROF).
+  (Nuno)</li>
+<li>Fixed bug <?php bugl(33116); ?> (crash when assigning class name to global variable in
+  __autoload). (Dmitry)</li>
+<li>Fixed bug <?php bugl(33090); ?> (mysqli_prepare() doesn't return an error). (Georg)</li>
+<li>Fixed bug <?php bugl(33076); ?> (str_ireplace() incorrectly counts result string length 
+  and may cause segfault). (Tony)</li>
+<li>Fixed bug <?php bugl(33072); ?> (Add a safemode/open_basedir check for runtime
+  "session.save_path" change using session_save_path() function). (Rasmus)</li>
+<li>Fixed bug <?php bugl(33070); ?> (Improved performance of bzdecompress() by several orders
+  of magnitude). (Ilia)</li>
+<li>Fixed bug <?php bugl(33059); ?> (crash when moving xml attribute set in dtd). (Ilia)</li>
+<li>Fixed bug <?php bugl(33057); ?> (Don't send extraneous entity-headers on a 304 as per
+  RFC 2616 section 10.3.5) (Rasmus, Choitel)</li>
+<li>Fixed bug <?php bugl(33019); ?> (socket errors cause memory leaks in php_strerror()). 
+  (jwozniak23 at poczta dot onet dot pl, Tony).
+<li>Fixed bug <?php bugl(33017); ?> ("make distclean" gives an error with VPATH build). (Jani)</li>
+<li>Fixed bug <?php bugl(33013); ?> ("next month" was handled wrong while parsing dates).
+  (Derick)</li>
+<li>Fixed bug <?php bugl(32981); ?> (ReflectionMethod::getStaticVariables() causes apache2.0.54
+  seg fault). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32956); ?> (mysql_bind_result() doesn't support MYSQL_TYPE_NULL). (Georg)</li>
+<li>Fixed bug <?php bugl(32947); ?> (Incorrect option for mysqli default password). (Georg)</li>
+<li>Fixed bug <?php bugl(32944); ?> (Disabling session.use_cookies doesn't prevent reading 
+  session cookies). (Jani, Tony)</li>
+<li>Fixed bug <?php bugl(32941); ?> (Sending structured SOAP fault kills a php). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32936); ?> (http redirects URLs are not checked for control chars). (Ilia)</li>
+<li>Fixed bug <?php bugl(32933); ?> (Cannot extend class "SQLiteDatabase"). (Marcus)</li>
+<li>Fixed bug <?php bugl(32932); ?> (Oracle LDAP: ldap_get_entries(), invalid pointer). (Jani)</li>
+<li>Fixed bug <?php bugl(32930); ?> (class extending DOMDocument doesn't clone properly). (Rob)</li>
+<li>Fixed bug <?php bugl(32904); ?> (pg_get_notify() ignores result_type parameter). (Tony)</li>
+<li>Fixed bug <?php bugl(32852); ?> (Crash with singleton and __destruct when
+  zend.ze1_compatibility_mode = On). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32813); ?> (parse_url() does not handle scheme-only urls properly). (Ilia)</li>
+<li>Fixed bug <?php bugl(32810); ?> (temporary files not using plain file wrapper). (Ilia)</li>
+<li>Fixed bug <?php bugl(32809); ?> (Missing T1LIB support on Windows). (Edin)</li>
+<li>Fixed bug <?php bugl(32802); ?> (General cookie overrides more specific cookie). (Ilia)</li>
+<li>Fixed bugs <?php bugl(32800); ?>, <?php bugl(32830); ?> (ext/odbc: Problems with 64bit systems). (Jani)</li>
+<li>Fixed bug <?php bugl(32799); ?> (crash: calling the corresponding global var during the
+  destruct). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32776); ?> (SOAP doesn't support one-way operations). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32773); ?> (GMP functions break when second parameter is 0). (Stas)</li>
+<li>Fixed bug <?php bugl(32759); ?> (incorrect determination of default value (COM)). (Wez)</li>
+<li>Fixed bug <?php bugl(32758); ?> (Cannot access safearray properties in VB6 objects). (Wez)</li>
+<li>Fixed bug <?php bugl(32755); ?> (Segfault in replaceChild() when DocumentFragment has
+  no children). (Rob)</li>
+<li>Fixed bug <?php bugl(32753); ?> (Undefined constant SQLITE_NOTADB). (Ilia)</li>
+<li>Fixed bug <?php bugl(32742); ?> (segmentation fault when the stream with a wrapper 
+  is not closed). (Tony, Dmitry)</li>
+<li>Fixed bug <?php bugl(32699); ?> (pg_affected_rows() was defined when it was not available).
+  (Derick)</li>
+<li>Fixed bug <?php bugl(32686); ?> (Require/include file in destructor causes segfault).
+  (Marcus)</li>
+<li>Fixed bug <?php bugl(32682); ?> (ext/mssql: Error on module shutdown when called from
+  activescript). (Frank)</li>
+<li>Fixed bug <?php bugl(32674); ?> (exception in iterator causes crash). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32660); ?> (Assignment by reference causes crash when field access is
+  overloaded (__get)). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32647); ?> (Using register_shutdown_function() with invalid callback
+  can crash PHP). (Jani)</li>
+<li>Fixed bug <?php bugl(32615); ?> (Segfault in replaceChild() using fragment when 
+  previousSibling is NULL). (Rob)</li>
+<li>Fixed bug <?php bugl(32613); ?> (ext/snmp: use of snmp_shutdown() causes snmpapp.conf 
+  access errors). (Jani, ric at arizona dot edu)</li>
+<li>Fixed bug <?php bugl(32608); ?> (html_entity_decode() converts single quotes even if
+  ENT_NOQUOTES is given). (Ilia)</li>
+<li>Fixed bug <?php bugl(32596); ?> (Segfault/Memory Leak by getClass (etc) in __destruct).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(32591); ?> (ext/mysql: Unsatisfied symbol: ntohs with HP-UX). (Jani)</li>
+<li>Fixed bug <?php bugl(32589); ?> (Possible crash inside imap_mail_compose, with charsets).
+  (Ilia)</li>
+<li>Fixed bug <?php bugl(32587); ?> (Apache2: errors sent to error_log do not include
+  timestamps). (Jani)</li>
+<li>Fixed bug <?php bugl(32560); ?> (configure looks for incorrect db2 library). (Tony)</li>
+<li>Fixed bug <?php bugl(32553); ?> (mmap loads only the 1st 2000000 bytes on Win32). (Ilia)</li>
+<li>Fixed bug <?php bugl(32533); ?> (proc_get_status() returns the incorrect process status). (Ilia)</li>
+<li>Fixed bug <?php bugl(32530); ?> (chunk_split() does not append endstr if chunklen is  
+  longer then the original string). (Ilia)</li>
+<li>Fixed bug <?php bugl(32491); ?> (File upload error - unable to create a temporary file).
+  (Uwe Schindler)</li>
+<li>Fixed bug <?php bugl(32405); ?> (mysqli::fetch() returns bad data - 64bit problem). (Andrey)</li>
+<li>Fixed bug <?php bugl(32282); ?> (Segfault in mysqli_fetch_array on 64-bit). (Georg)</li>
+<li>Fixed bug <?php bugl(32296); ?> (get_class_methods() output has changed between 5.0.2 and
+  5.0.3). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32245); ?> (xml_parser_free() in a function assigned to the xml parser
+  gives a segfault). (Rob)</li>
+<li>Fixed bug <?php bugl(32171); ?> (Userspace stream wrapper crashes PHP). (Tony, Dmitry)</li>
+<li>Fixed bug <?php bugl(32080); ?> (segfault when assigning object to itself with
+  zend.ze1_compatibility_mode=On). (Dmitry)</li>
+<li>Fixed bug <?php bugl(32013); ?> (ext/mysqli bind_result causes fatal error: memory
+  limit). (Andrey)</li>
+<li>Fixed bug <?php bugl(31887); ?> (ISAPI: Custom 5xx error does not return correct HTTP 
+  response message). (Jani)</li>
+<li>Fixed bug <?php bugl(31828); ?> (Crash with zend.ze1_compatibility_mode=On). (Dmitry)</li>
+<li>Fixed bug <?php bugl(31668); ?> (multi_query works exactly every other time - multi query
+  d/e flag global and not per connection). (Andrey)</li>
+<li>Fixed bug <?php bugl(31636); ?> (another crash when echoing a COM object). (Wez)</li>
+<li>Fixed bug <?php bugl(31583); ?> (php_std_date() uses short day names in non-y2k_compliance 
+  mode). (mike at php dot net)</li>
+<li>Fixed bug <?php bugl(31525); ?> (object reference being dropped. $this getting lost).
+  (Stas, Dmitry)</li>
+<li>Fixed bug <?php bugl(31502); ?> (Wrong deserialization from session when using WDDX
+  serializer). (Dmitry) 
+<li>Fixed bug <?php bugl(31465); ?> (False warning in unpack() when working with *). (Ilia)</li>
+<li>Fixed bug <?php bugl(31363); ?> (broken non-blocking flock()). ian at snork dot net
+<li>Fixed bug <?php bugl(31213); ?> (Sideeffects caused by fix of bug <?php bugl(29493); ?>. (Dmitry)</li>
+<li>Fixed bug <?php bugl(31158); ?> (array_splice on $GLOBALS crashes). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30961); ?> (Wrong linenumber in ReflectionClass getStartLine()).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(30889); ?> (Conflict between __get/__set and ++ operator). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30833); ?> (array_count_values() modifying input array). (Tony)</li>
+<li>Fixed bug <?php bugl(30828); ?> (debug_backtrace() reports incorrect class in overridden
+  methods). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30820); ?> (static member conflict with $this->member silently
+  ignored). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30819); ?> (Better support for LDAP SASL bind). (Jani)</li>
+<li>Fixed bug <?php bugl(30791); ?> (magic methods (__sleep/__wakeup/__toString) call __call if
+  object is overloaded). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30707); ?> (Segmentation fault on exception in method). (Stas, Dmitry)</li>
+<li>Fixed bug <?php bugl(30702); ?> (cannot initialize class variable from class constant).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(30519); ?> (Interface not existing says Class not found). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30394); ?> (Assignment operators yield wrong result with __get/__set).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(30332); ?> (zend.ze1_compatibility_mode isnt fully compatable with
+  array_push()). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30162); ?> (Catching exception in constructor causes lose of $this).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(30140); ?> (Problem with array in static properties). (Dmitry)</li>
+<li>Fixed bug <?php bugl(30126); ?> (Enhancement for error message for abstract classes). 
+  (Marcus)</li>
+<li>Fixed bug <?php bugl(30080); ?> (Passing array or non array of objects). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29975); ?> (memory leaks when set_error_handler() is used inside error 
+  handler). (Tony)</li>
+<li>Fixed bug <?php bugl(29971); ?> (variables_order behaviour). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29944); ?> (Function defined in switch, crashes). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29896); ?> (Backtrace argument list out of sync). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29683); ?> (headers_list() returns empty array). (Tony)</li>
+<li>Fixed bug <?php bugl(29583); ?> (crash when echoing a COM object). (M.Sisolak, Wez)</li>
+<li>Fixed bug <?php bugl(29338); ?> (unencoded spaces get ignored after certain tags). (Ilia)</li>
+<li>Fixed bug <?php bugl(29210); ?> (Function: is_callable - no support for private and
+  protected classes). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29104); ?> (Function declaration in method doesn't work). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29015); ?> (Incorrect behavior of member vars(non string ones)-numeric
+  mem vars und others). (Dmitry)</li>
+<li>Fixed bug <?php bugl(28839); ?> (SIGSEGV in interactive mode (php -a)).
+  (kameshj at fastmail dot fm)</li>
+<li>Fixed bug <?php bugl(28605); ?> (Need to use -[m]ieee option for Alpha CPUs). (Jani)</li>
+<li>Fixed bug <?php bugl(28377); ?> (debug_backtrace is intermittently passing args). (Dmitry)</li>
+<li>Fixed bug <?php bugl(27598); ?> (list() array key assignment causes HUGE memory leak).
+  (Dmitry)</li>
+<li>Fixed bug <?php bugl(26456); ?> (Wrong results from Reflection-API getDocComment() when
+  called via STDIN). (Dmitry)</li>
+<li>Fixed bug <?php bugl(25922); ?> (In error handler, modifying 5th arg (errcontext) may result
+  in seg fault). (Dmitry)</li>
+<li>Fixed bug <?php bugl(22836); ?> (returning reference to uninitialized variable). (Dmitry)</li>
+<li>Fixed bug <?php bugl(29689); ?> (default value of protected member overrides default value of private) 
+  and other private variable problems in inherited classes (Stas)</li>
+<li>Fixed bug <?php bugl(29253); ?> (array_diff with $GLOBALS argument fails). (Dmitry)</li>
+<li>Abstract private methods are no longer allowed (Stas)</li>
+</ul>
+
 
 <a name="5.0.4"></a>
 <h3>Version 5.0.4</h3>

@@ -68,41 +68,35 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.0.4</h1>
+<h1>PHP 5.0.5</h1>
 
 <h2>Complete Source Code</h2>
-<p>
- <strong>Note:</strong> The PHP 5.0.4 source packages were re-released
- due to a missing file in the embedded PEAR distribution.  There are
- <em>no changes</em> in this re-release other than the addition of the
- missing file.
-</p>
 <ul>
  <li>
-  <?php download_link('php-5.0.4.tar.bz2', 'PHP 5.0.4 (tar.bz2)'); ?> - 03 Apr 2005<br />
-  <span class="md5sum">md5: fb1aac107870f897d26563a9cc5053c0</span>
+  <?php download_link('php-5.0.5.tar.bz2', 'PHP 5.0.5 (tar.bz2)'); ?> - 05 Sep 2005<br />
+  <span class="md5sum">md5: b5d4ca75bbb11ee5b830fa67213d9f7f</span>
  </li>
  <li>
-  <?php download_link('php-5.0.4.tar.gz', 'PHP 5.0.4 (tar.gz)'); ?> - 03 Apr 2005<br />
-  <span class="md5sum">md5: 8edf259bcfab4cfc890a4bb4e7c3649f</span>
+  <?php download_link('php-5.0.5.tar.gz', 'PHP 5.0.5 (tar.gz)'); ?> - 05 Sep 2005<br />
+  <span class="md5sum">md5: ae36a2aa35cfaa58bdc5b9a525e6f451</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.4-Win32.zip', 'PHP 5.0.4 zip package'); ?> - 31 Mar 2005<br />
-  <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
+  <?php download_link('php-5.0.5-Win32.zip', 'PHP 5.0.5 zip package'); ?> - 05 Sep 2005<br />
+  <span class="md5sum">md5: e5201a26444b55101a113efddc529bf9</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.4-Win32.zip', 'Collection of PECL modules for PHP 5.0.4'); ?> - 31 Mar 2005<br />
+  <?php download_link('pecl-5.0.5-Win32.zip', 'Collection of PECL modules for PHP 5.0.5'); ?> - 05 Sep 2005<br />
   (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
   standard with PHP 4 Windows binaries but have since been moved into this 
   separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
+  <span class="md5sum">md5: cec67c89356b8a95a51dfdfc22c7bbbb</span>
  </li>
  <li>
-  <?php download_link('php-5.0.4-installer.exe', 'PHP 5.0.4 installer'); ?> - 31 Mar 2005<br />
+  <?php download_link('php-5.0.5-installer.exe', 'PHP 5.0.4 installer'); ?> - 31 Mar 2005<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
