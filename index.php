@@ -156,7 +156,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 <p>
  The full list of changes in PHP 5.0.5 is available in the
- <a href="/ChangeLog-5.php#5.0.4">PHP 5 ChangeLog</a>.
+ <a href="/ChangeLog-5.php#5.0.5">PHP 5 ChangeLog</a>.
 </p>
 
 <hr />
