@@ -146,6 +146,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>Get Your Pocket PHP Reference and Help Hurricane Relief</h1>
+<p>
+ <span class="newsdate">[08-Sep-2005]</span>
+ php|architect has announced the publication of
+ <a href="http://www.phparch.com/rcrs">php|architect's Pocket
+ PHP Reference</a>, a handy guide to every function in PHP, inclusive
+ of syntax, extension and description. It's a perfect companion
+ for all your coding work, perfect for looking up function syntax
+ in a pinch&mdash;and its convenient pocket size (5x8") makes it
+ unobtrusive and easy to transport.
+</p>
+<p>
+ What's more, however, buying this book will help those affected
+ by the recent hurricane disaster: all profits from the sale of
+ the Pocket Guide will be donated entirely to the Canadian Red
+ Cross' Katrina Relief Fund.
+</p>
+
+<hr />
+
 <h1>PHP 5.0.5 Released</h1>
 <p>
  <span class="newsdate">[06-Sep-2005]</span>
@@ -160,7 +180,6 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
-
 
 <h1>PHP 5.1 Release Candidate 1 Available</h1>
 <p>
