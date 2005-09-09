@@ -63,7 +63,7 @@ $SIDEBAR_DATA = '
 
 <h3><a href="/thanks.php">Thanks To</a></h3>
 <ul class="simple">
- <li><a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></li>
+ <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
  <li><a href="http://www.directi.com/">Directi</a></li>
  <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
  <li><a href="http://www.ev1servers.net/">EV1Servers</a></li>
