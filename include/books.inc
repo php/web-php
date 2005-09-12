@@ -82,6 +82,17 @@ $books = array (
 //  ),
 
   array(
+   /* title[s]     */ "php|architect's Guide to PHP Security",
+   /* title_link   */ "http://www.phparch.com/shop_product.php?itemid=98",
+   /* author[s]    */ "Ilia Alshanetsky",
+   /* auth link[s] */ "http://www.ilia.ws",
+   /* image        */ "0973862106.jpg",
+   /* information  */ "PHP|Architect, 2005, ISBN 0-9738621-0-6, 201 pages",
+   /* inform. link */ "http://www.phparch.com/shop_product.php?itemid=98",
+   /* language     */ "en"
+  ),
+
+  array(
    /* title[s]     */ "Beginning PHP 5 and MySQL: From Novice to Professional",
    /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/1893115518/wwwphpnet",
    /* author[s]    */ "W. Jason Gilmore",
