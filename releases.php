@@ -78,6 +78,7 @@ $SIDEBAR_DATA = '
    <option value="php-5.0.1.tar.gz">5.0.1</option>
    <option value="php-5.0.2.tar.gz">5.0.2</option>
    <option value="php-5.0.3.tar.gz">5.0.3</option>
+   <option value="php-5.0.4.tar.gz">5.0.4</option>
   </select>
  </p>
 </form>
@@ -97,6 +98,40 @@ site_header("Releases");
 </p>
 
 <a name="v5"></a>
+<a name="5.0.4"></a>
+<h2>5.0.4</h2>
+
+<ul>
+ <li>Released: 31 Mar 2005</li>
+ <li>Announcement: None</li>
+ <li><a href="/ChangeLog-5.php#5.0.4">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.0.4.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: fb1aac107870f897d26563a9cc5053c0</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.4.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: 8edf259bcfab4cfc890a4bb4e7c3649f</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.4-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: fff10991a8e6f3b36ee567eb236ae3f4</span>
+   </li>
+   <li>
+    <?php download_link('pecl-5.0.4-Win32.zip', 'Collection of PECL modules for PHP 5.0.4'); ?><br />
+    <span class="md5sum">md5: 44304bc1e1d3f08404ed99279ea1b8de</span>
+   </li>
+   <li>
+    <?php download_link('php-5.0.4-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 8f951136757600ce78d5e442cb5b1541</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 <a name="5.0.3"></a>
 <h2>5.0.3</h2>
 
