@@ -330,7 +330,6 @@ function output_lists_table($mailing_lists)
 
 <ul>
  <li><a href="news:dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
- <li><a href="http://www.ilovephp.com/mailinglist/">French Mailing List</a></li>
  <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
  <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
  <li><a href="news:de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
