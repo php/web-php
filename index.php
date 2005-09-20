@@ -146,6 +146,30 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
+<h1>Zend/PHP Conference & Expo 2005 Program Announced</h1>
+<p>
+ <span class="newsdate">[20-Sep-2005]</span>
+ The final program for the Zend / PHP Conference (October 18-21, 2005 in
+ San Francisco) 
+ <a href="http://zend.kbconferences.com/speakerschedule.php">is now available</a>.
+ The conference theme is "Power Your
+ Business With PHP" and features keynote addresses from Marc Andreessen,
+ Google VP Adam Bosworth, and executives from IBM, Oracle & Intel.
+ Featured speakers include Michael Radwin of Yahoo!, Adam Trachtenberg
+ of eBay, Joyce Park of Renkoo.com, George Schlossnagle & Wez Furlong
+ of OmniTI, and, of course, Zeev Suraski & Andi Gutmans.
+</p>
+<p>
+ In addition to keynotes and sessions, the conference also features tutorials,
+ certification, a party continuing the celebration of the 10th Anniversary of
+ PHP, and an exhibit hall including companies like Zend, IBM, Oracle,
+ Intel, MySQL, Microsoft, eBay/PayPal, Emic Networks, ActiveGrid, ActiveState
+ and SpikeSource.  Registration discounts are still available.
+</p>
+
+<hr />
+
 <h1>Get Your Pocket PHP Reference and Help Hurricane Relief</h1>
 <p>
  <span class="newsdate">[08-Sep-2005]</span>
