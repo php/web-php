@@ -12,7 +12,8 @@ $SIDEBAR_DATA='
 
 <h3>Changelog</h3>
 <p>
- You can also find the <a href="/ChangeLog-4.php">PHP Changelog</a> useful,
+ You can also find the <a href="/ChangeLog-4.php">PHP 4 Changelog</a> or
+ the <a href="/ChangeLog-5.php">PHP 5 Changelog</a> useful,
  if you would like to look up changes between various versions of PHP.
 </p>
 
