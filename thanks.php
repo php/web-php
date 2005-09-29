@@ -55,6 +55,16 @@ site_header("Thanks");
 </p>
 
 <p>
+ <a href="http://www.osuosl.org/">OSU Open Source Lab</a> provides a server and
+ bandwidth for various php.net services.
+</p>
+
+<p>
+ <a href="http://www.emini.dk/">Emini</a> A/S provides bandwidth and Windows binary 
+ building facilities for PHP distributions and PECL extensions.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.
