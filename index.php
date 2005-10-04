@@ -147,6 +147,22 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
+
+<h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
+<p>
+ <span class="newsdate">[28-Sep-2004]</span>
+ The French <a href="http://www.afup.org/">AFUP association</a>
+ is proud to announce the fourth annual PHP meeting in Paris,
+ on November 9th and 10th, 2004. Developers and managers will
+ gather to meet Rasmus Lerdorf, Wez Furlong and other prominent community experts
+ for two days of sessions, packed with
+ <a href="http://www.afup.org/pages/forumphp/">enterprise solutions and advanced techniques</a>
+ (in French).
+</p>
+
+<hr />
+
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
 <h1>Zend/PHP Conference & Expo 2005 Program Announced</h1>
 <p>
