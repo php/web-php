@@ -151,7 +151,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
 <p>
- <span class="newsdate">[28-Sep-2004]</span>
+ <span class="newsdate">[05-Oct-2005]</span>
  The French <a href="http://www.afup.org/">AFUP association</a>
  is proud to announce the fourth annual PHP meeting in Paris,
  on November 9th and 10th, 2004. Developers and managers will
