@@ -154,7 +154,7 @@ commonHeader("Hypertext Preprocessor");
  <span class="newsdate">[05-Oct-2005]</span>
  The French <a href="http://www.afup.org/">AFUP association</a>
  is proud to announce the fourth annual PHP meeting in Paris,
- on November 9th and 10th, 2004. Developers and managers will
+ on November 9th and 10th, 2005. Developers and managers will
  gather to meet Rasmus Lerdorf, Wez Furlong and other prominent community experts
  for two days of sessions, packed with
  <a href="http://www.afup.org/pages/forumphp/">enterprise solutions and advanced techniques</a>
