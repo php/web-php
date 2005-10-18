@@ -147,6 +147,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP Québec"); ?>
+
+<h1>PHP Québec 2006 : call for speakers</h1>
+<p>
+ <span class="newsdate">[18-Oct-2005]</span>
+<a href="http://conf.phpquebec.com/en/conf2006/">PHP Québec</a> is pleased to 
+announce the 2006 PHP Québec conference, which will be held between March, 29th
+and 31th 2006. We are looking for the best speakers, willing to share their 
+experience and skills with professional PHP developers from eastern Canada 
+and USA. PHP Québec 2006 features 3 distinct tracks: <ul>
+<li>Technical PHP, covering in deep details of PHP techniques. </li>
+<li>Professional Development, featuring tools and development methodologies to 
+increase productivity.</li>
+<li>Databases, covers different databases that can be used with PHP.</li></ul>
+Sessions will be held in French or English. For more information, see the <a 
+href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
+</p>
+
+<hr />
+
 <?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
