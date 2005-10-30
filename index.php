@@ -242,42 +242,6 @@ href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
 
 <hr />
 
-<h1>PHP 5.1 Release Candidate 1 Available</h1>
-<p>
- <span class="newsdate">[8-Aug-2005]</span>
- <a href="/downloads.php#v5.1">PHP 5.1 Release Candidate 1</a> is now available!
- If all goes well, this RC will be followed by a release within a couple of weeks.
-</p>
-<p>
- Some of the key improvements of PHP 5.1 include:
-</p>
-<ul>
- <li>
-  PDO (PHP Data Objects) - A new native database abstraction layer
-  providing performance, ease-of-use, and flexibility.
- </li>
- <li>
-  Significantly improved language performance mainly due to the
-  new Zend Engine II execution architecture.
- </li>
- <li>The PCRE extension has been updated to PCRE 6.2.</li>
- <li>
-  Many more improvements including lots of new functionality
-  &amp; many bug fixes, especially in regards to SOAP, streams
-  and SPL.
- </li>
- <li>
-  See the bundled NEWS file for a more complete list of changes.
- </li>
-</ul>
-<p>
- Everyone is encouraged to download and test this release candidate,
- although it is not yet recommended for mission-critical
- production use. 
-</p>
-
-<hr />
-
 <?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
 <h1>International PHP Conference 2005 - Program available</h1>
 <p>
