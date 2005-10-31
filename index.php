@@ -147,9 +147,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.1 Released</h1>
+<p>
+ <span class="newsdate">[31-Oct-2005]</span>
+ PHP 4.4.1 is now <a href="/downloads.php#v4">available for download</a>.
+ This version is a maintenance release, that contains numerous bug fixes,
+ including a number of security fixes related to the overwriting of the GLOBALS
+ array. All users of PHP 4.3 and 4.4 are encouraged to upgrade to this version.
+</p>
+<p>
+ The full list of changes in PHP 4.4.1 is available in the
+ <a href="/ChangeLog-4.php#4.1.1">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP Québec"); ?>
 
-<h1>PHP Québec 2006 : call for speakers</h1>
+<h1>PHP Québec 2006: call for speakers</h1>
 <p>
  <span class="newsdate">[18-Oct-2005]</span>
 <a href="http://conf.phpquebec.com/en/conf2006/">PHP Québec</a> is pleased to 

@@ -11,6 +11,60 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.4.1"></a>
+<h3>Version 4.4.1</h3>
+<b>31-Oct-2005</b>
+<ul>
+<li>Added missing safe_mode checks for image* functions and cURL.</li>
+<li>Added missing safe_mode/open_basedir checks for file uploads.</li>
+<li>Fixed a memory corruption bug regarding included files.</li>
+<li>Fixed possible INI setting leak via virtual() in Apache 2 sapi.</li>
+<li>Fixed possible crash and/or memory corruption in import_request_variables().</li>
+<li>Fixed potential GLOBALS overwrite via import_request_variables().</li>
+<li>Fixed possible GLOBALS variable override when register_globals are ON.</li>
+<li>Fixed possible register_globals toggle via parse_str().</li>
+<li>Added "new_link" parameter to mssql_connect(). Bug #34369.</li>
+<li><?php bugfix(34850); ?> (--program-suffix and --program-prefix not included in man page names).</li>
+<li><?php bugfix(34790); ?> (preg_match_all(), named capturing groups, variable assignment/return =&gt; crash).</li>
+<li><?php bugfix(34742); ?> (ftp wrapper failures caused from segmented command transfer).</li>
+<li><?php bugfix(34704); ?> (Infinite recursion due to corrupt JPEG).</li>
+<li><?php bugfix(34645); ?> (ctype corrupts memory when validating large numbers).</li>
+<li><?php bugfix(34565); ?> (mb_send_mail does not fetch mail.force_extra_parameters).</li>
+<li><?php bugfix(34557); ?> (php -m exits with "error" 1).</li>
+<li><?php bugfix(34456); ?> (Possible crash inside pspell extension).</li>
+<li><?php bugfix(34311); ?> (unserialize() crashes with chars above 191 dec).</li>
+<li><?php bugfix(34307); ?> (on_modify handler not called to set the default value if setting from php.ini was invalid).</li>
+<li><?php bugfix(34302); ?> (date('W') do not return leading zeros for week 1 to 9).</li>
+<li><?php bugfix(34277); ?> (array_filter() crashes with references and objects).</li>
+<li><?php bugfix(34191); ?> (ob_gzhandler does not enforce trailing \0).</li>
+<li><?php bugfix(34156); ?> (memory usage remains elevated after memory limit is reached).</li>
+<li><?php bugfix(34148); ?> (+,- and . not supported as parts of scheme).</li>
+<li><?php bugfix(34137); ?> (assigning array element by reference causes binary mess).  </li>
+<li><?php bugfix(34068); ?> (Numeric string as array key not cast to integer in wddx_deserialize()).</li>
+<li><?php bugfix(34064); ?> (arr[] as param to function is allowed only if function receives argument by reference).</li>
+<li><?php bugfix(33989); ?> (extract($GLOBALS,EXTR_REFS) crashes PHP).</li>
+<li><?php bugfix(33987); ?> (php script as ErrorDocument causes crash in Apache 2). </li>
+<li><?php bugfix(33940); ?> (array_map() fails to pass by reference when called recursively).</li>
+<li><?php bugfix(33690); ?> (Crash setting some ini directives in httpd.conf).</li>
+<li><?php bugfix(33673); ?> (Added detection for partially uploaded files).</li>
+<li><?php bugfix(33648); ?> (Using --with-regex=system causes compile failure).</li>
+<li><?php bugfix(33558); ?> (Warning with nested calls to functions returning by reference).</li>
+<li><?php bugfix(33383); ?> (crash when retrieving empty LOBs).</li>
+<li><?php bugfix(33156); ?> (cygwin version of setitimer doesn't accept ITIMER_PROF).</li>
+<li><?php bugfix(32937); ?> (open_basedir looses trailing / in the limiter).</li>
+<li><?php bugfix(32589); ?> (possible crash inside imap_mail_compose() function).</li>
+<li><?php bugfix(32179); ?> (xmlrpc_encode() segfaults with recursive references).</li>
+<li><?php bugfix(32160); ?> (copying a file into itself leads to data loss).</li>
+<li><?php bugfix(31158); ?> (array_splice on $GLOBALS crashes).</li>
+<li><?php bugfix(29983); ?> (PHP does not explicitly set mime type &amp; charset).</li>
+<li><?php bugfix(29253); ?> (array_diff with $GLOBALS argument fails).</li>
+<li><?php bugfix(21306); ?> (ext/sesssion: catch bailouts of write handler during RSHUTDOWN).</li>
+</ul>
+
+There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.4.0"></a>
 <h3>Version 4.4.0</h3>
 <b>11-Jul-2005</b>
