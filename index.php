@@ -157,7 +157,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 <p>
  The full list of changes in PHP 4.4.1 is available in the
- <a href="/ChangeLog-4.php#4.1.1">PHP 4 ChangeLog</a>.
+ <a href="/ChangeLog-4.php#4.4.1">PHP 4 ChangeLog</a>.
 </p>
 
 <hr />
