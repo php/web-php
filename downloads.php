@@ -68,40 +68,33 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.0.5</h1>
+<h1>PHP 5.1.0</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.5.tar.bz2', 'PHP 5.0.5 (tar.bz2)'); ?> - 05 Sep 2005<br />
-  <span class="md5sum">md5: b5d4ca75bbb11ee5b830fa67213d9f7f</span>
+  <?php download_link('php-5.1.0.tar.bz2', 'PHP 5.1.0 (tar.bz2)'); ?> - 24 Nov 2005<br />
+  <span class="md5sum">md5: 4b9caa2f201f6b1f6a24de6c435cd4b1</span>
  </li>
  <li>
-  <?php download_link('php-5.0.5.tar.gz', 'PHP 5.0.5 (tar.gz)'); ?> - 05 Sep 2005<br />
-  <span class="md5sum">md5: ae36a2aa35cfaa58bdc5b9a525e6f451</span>
+  <?php download_link('php-5.1.0.tar.gz', 'PHP 5.1.0 (tar.gz)'); ?> - 24 Nov 2005<br />
+  <span class="md5sum">md5: b565964b595df91be27900e490760d4b</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.0.5-Win32.zip', 'PHP 5.0.5 zip package'); ?> - 05 Sep 2005<br />
-  <span class="md5sum">md5: e5201a26444b55101a113efddc529bf9</span>
+  <?php download_link('php-5.1.0-Win32.zip', 'PHP 5.1.0 zip package'); ?> - 24 Nov 2005<br />
+  <span class="md5sum">md5: a2dc5ffbeddef7c67b1ac9c1a4a3b408</span>
  </li>
  <li>
-  <?php download_link('pecl-5.0.5-Win32.zip', 'Collection of PECL modules for PHP 5.0.5'); ?> - 05 Sep 2005<br />
-  (Most of these <a href="http://pecl.php.net/">PECL</a> extension files come 
-  standard with PHP 4 Windows binaries but have since been moved into this 
-  separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)<br />
-  <span class="md5sum">md5: cec67c89356b8a95a51dfdfc22c7bbbb</span>
- </li>
- <li>
-  <?php download_link('php-5.0.5-installer.exe', 'PHP 5.0.5 installer'); ?>  - 9 Sep 2005<br />
+  <?php download_link('php-5.1.0-installer.exe', 'PHP 5.1.0 installer'); ?>  - 24 Nov 2005<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 0bb307c1a9185faa161fdf549348ab8e</span>
+  <span class="md5sum">md5: 28019a42c2845b3ad70e134a302c5089</span>
  </li>
 </ul>
 
