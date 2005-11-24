@@ -399,6 +399,13 @@ dead
  </li>
 
  <li>
+  <a href="http://www.waterproof.fr/">WaterProof</a><br />
+  WaterProof produce PHPEdit, an IDE mainly targetted to PHP development with
+  integrated debugger and tools to speed up and enhance quality of your php
+  projects.
+ </li>
+
+ <li>
   <a href="http://www.zend.com/store/">Zend Technologies, Inc.</a><br />
   Zend Technologies, Inc. provides tools to Develop, Protect and Scale your
   PHP Applications.
