@@ -8,8 +8,8 @@ site_header("License Information");
 <h1>License Information</h1>
 
 <p>
- You can download the text of the latest version (3.01) of the
- PHP license <a href="3_01.txt">here</a>.
+ You can <a href="3_01.txt">download the text of the latest version (3.01)</a>
+ of the PHP license.
 </p>
 
 <a name="#FAQ"><h1>Frequently Asked Questions</h1></a>
