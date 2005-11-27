@@ -43,6 +43,8 @@ function random_bgcolor($min, $max)
  commercial websites; course materials; a bunch of t-shirts for your own use 
  and some friends, or your user group; a PHP-related book; a banner for your 
  computer group; etc.. If in doubt, <a href="mailto:logos@php.net">ask</a>.
+ However you should not use the logo in such a way, that it suggests that a
+ particular person, company, course, etc. is endorsed by PHP.net.
 </p>
 
 <p class="warn">
