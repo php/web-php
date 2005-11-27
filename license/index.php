@@ -8,8 +8,8 @@ site_header("License Information");
 <h1>License Information</h1>
 
 <p>
- You can download the text of the latest version (3.0) of the
- PHP license <a href="3_0.txt">here</a>.
+ You can download the text of the latest version (3.01) of the
+ PHP license <a href="3_01.txt">here</a>.
 </p>
 
 <a name="#FAQ"><h1>Frequently Asked Questions</h1></a>
@@ -66,7 +66,7 @@ site_header("License Information");
 <p>
  <em>
   Note: the following questions and answers only apply to version
-  2.01 and 2.02 of the PHP license. Ignore for version 3.0.
+  2.01 and 2.02 of the PHP license. Ignore for 3.x versions.
  </em>
 </p>
 
