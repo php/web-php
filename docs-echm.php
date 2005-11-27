@@ -103,13 +103,14 @@ site_header("Documentation - Extended CHM Format");
 </p>
 
 <ul>
+ <?php /* Website is kidnapped by some SEO venture 
  <li>
   <strong><a href="http://www.code-genie.com">Code-Genie</a>:</strong> Copy the
   help file to the helps subdirectory of Code-Genie. Alternatively,
   you can create a shortcut to the help file (a file with .lnk extension) and
   place this link file to the helps subdir of Code-Genie. The shortcut will
   be resolved at run time.
- </li>
+ </li> */ ?>
 
  <li>
   <p>
