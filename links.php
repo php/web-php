@@ -13,7 +13,8 @@ site_header("Links");
  <a href="/mailing-lists.php">our mailing lists page</a> for information
  about mailing lists on PHP.net and some international ones.
  <a href="/books.php">Our books page</a> may also be interesting for those
- searching for PHP reading.
+ searching for PHP reading. Additionaly to these links, we have a 
+ <a href="/software">list of software</a> available under the PHP license.
 </p>
 
 <a name="companies"></a>
