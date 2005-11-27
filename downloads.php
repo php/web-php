@@ -86,7 +86,7 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link('php-5.1.0-Win32.zip', 'PHP 5.1.0 zip package'); ?> - 24 Nov 2005<br />
-  <span class="md5sum">md5: a2dc5ffbeddef7c67b1ac9c1a4a3b408</span>
+  <span class="md5sum">md5: 93152588795d377743fe1b1fb1680b84</span>
  </li>
  <li>
   <?php download_link('php-5.1.0-installer.exe', 'PHP 5.1.0 installer'); ?>  - 24 Nov 2005<br />
