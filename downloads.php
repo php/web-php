@@ -86,7 +86,7 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link('php-5.1.1-Win32.zip', 'PHP 5.1.1 zip package'); ?> - 28 Nov 2005<br />
-  <span class="md5sum">md5: 5bfda4a363a699a639c0f5c3b160dc99</span>
+  <span class="md5sum">md5: 7575fb60805e1b95be75489b32cfd21c</span>
  </li>
  <li>
   <?php download_link('pecl-5.1.1-Win32.zip', 'Collection of PECL modules for PHP 5.1.1'); ?> - 28 Nov 2005<br />
