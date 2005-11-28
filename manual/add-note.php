@@ -177,9 +177,9 @@ else { ?>
  <li>
   If you are just commenting on the fact that something is not documented, 
   save your breath. This is where <strong>you</strong> add to the documentation,
-  not where you ask <strong>us</strong> to add the documentation. You may choose
-  to email the <a href="mailto:phpdoc@lists.php.net">PHP Documentation Team</a> to
-  discuss the change.
+  not where you ask <strong>us</strong> to add the documentation. If you have
+  an addition or change request, open a Documentation Problem in 
+  <a href="http://bugs.php.net/">our bug system</a>, where your idea can be discussed.
  </li>
  
  <li>
