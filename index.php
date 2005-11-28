@@ -147,6 +147,26 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1.1 Released</h1>
+<p>
+ <span class="newsdate">[28-Nov-2005]</span>
+ The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br />
+ This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows: 
+<ul>
+<li>Native date class is withdrawn to prevent namespace conflict with PEAR's date package.</li>
+<li>Fixed fatal parse error when the last line of the script is a PHP comment.</li>
+<li>eval() hangs when the code being evaluated ends with a comment.</li>
+<li>Usage of \{$var} in PHP 5.1.0 resulted in the output of {$var} instead of the $var variable's value enclosed in {}.</li>
+<li>Fixed inconsistency in the format of PHP_AUTH_DIGEST between Apache 1 and 2 sapis.</li>
+<li>Improved safe_mode/open_basedir checks inside the cURL extension.</li>
+</ul>
+
+The complete details about all of the changes can be found in the
+<a href="/ChangeLog-5.php#5.1.1">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.0 Released</h1>
 <p>
  <span class="newsdate">[24-Nov-2005]</span>

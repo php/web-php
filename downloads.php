@@ -68,33 +68,37 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.1.0</h1>
+<h1>PHP 5.1.1</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.0.tar.bz2', 'PHP 5.1.0 (tar.bz2)'); ?> - 24 Nov 2005<br />
-  <span class="md5sum">md5: 4b9caa2f201f6b1f6a24de6c435cd4b1</span>
+  <?php download_link('php-5.1.1.tar.bz2', 'PHP 5.1.1 (tar.bz2)'); ?> - 28 Nov 2005<br />
+  <span class="md5sum">md5: 70a7c90de182d1a1901c390b844153c7</span>
  </li>
  <li>
-  <?php download_link('php-5.1.0.tar.gz', 'PHP 5.1.0 (tar.gz)'); ?> - 24 Nov 2005<br />
-  <span class="md5sum">md5: b565964b595df91be27900e490760d4b</span>
+  <?php download_link('php-5.1.1.tar.gz', 'PHP 5.1.1 (tar.gz)'); ?> - 28 Nov 2005<br />
+  <span class="md5sum">md5: ed3d099828282e66c66cadd8d879d739</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.0-Win32.zip', 'PHP 5.1.0 zip package'); ?> - 24 Nov 2005<br />
-  <span class="md5sum">md5: 93152588795d377743fe1b1fb1680b84</span>
+  <?php download_link('php-5.1.1-Win32.zip', 'PHP 5.1.1 zip package'); ?> - 28 Nov 2005<br />
+  <span class="md5sum">md5: 771c1aaf754fa411aa85a5ef9b60a92f</span>
  </li>
  <li>
-  <?php download_link('php-5.1.0-installer.exe', 'PHP 5.1.0 installer'); ?>  - 24 Nov 2005<br />
+  <?php download_link('pecl-5.1.1-Win32.zip', 'Collection of PECL modules for PHP 5.1.1'); ?> - 28 Nov 2005<br />
+  <span class="md5sum">md5: 771c1aaf754fa411aa85a5ef9b60a92f</span>
+ </li>
+ <li>
+  <?php download_link('php-5.1.1-installer.exe', 'PHP 5.1.1 installer'); ?>  - 28 Nov 2005<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 28019a42c2845b3ad70e134a302c5089</span>
+  <span class="md5sum">md5: b453c56e2ba2221848902294f176991c</span>
  </li>
 </ul>
 

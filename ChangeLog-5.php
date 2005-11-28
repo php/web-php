@@ -8,6 +8,27 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.1.1"></a>
+<h3>Version 5.1.1</h3>
+<b>28-Nov-2005</b>
+<ul>
+<li>Disabled native date class to prevent pear::date conflict. (Ilia)</li>
+<li>Improved safe_mode/open_basedir checks in cURL extension. (Ilia, Jani)</li>
+<li>Changed reflection constants be both PHP and class constants. (Johannes)</li>
+<li>Added an additional field $frame['object'] to the result array of debug_backtrace() that contains a reference to the respective object when the frame was called from an object. (Sebastian)</li>
+<li><?php bugfix(35423); ?> (RecursiveDirectoryIterator doesnt appear to recurse with RecursiveFilterIterator). (Marcus)</li>
+<li><?php bugfix(35413); ?> (Removed -dev flag from Zend Engine version). (Ilia)</li>
+<li><?php bugfix(35411); ?> (Regression with \{$ handling). (Ilia)</li>
+<li><?php bugfix(35406); ?> (eval hangs when evall'ed code ends with comment w/o newline). (Marcus)</li>
+<li><?php bugfix(35391); ?> (pdo_mysql::exec does not return number of affected rows). (Tony)</li>
+<li><?php bugfix(35382); ?> (Comment in end of file produces fatal error). (Ilia)</li>
+<li><?php bugfix(35360); ?> (exceptions in interactive mode (php -a) may cause crash).); ?> (Dmitry)</li>
+<li><?php bugfix(35358); ?> (Incorrect error messages for PDO class constants). (Ilia)</li>
+<li><?php bugfix(35338); ?> (pdo_pgsql does not handle binary bound params). (Wez)</li>
+<li><?php bugfix(35316); ?> (Application exception trying to create COM object). (Rob)</li>
+<li><?php bugfix(35170); ?> (PHP_AUTH_DIGEST differs under Apache 1.x and 2.x). (Ilia)</li>
+</ul>
+
 <a name="5.1.0"></a>
 <h3>Version 5.1.0</h3>
 <b>24-Nov-2005</b>
