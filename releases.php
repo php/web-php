@@ -82,6 +82,7 @@ $SIDEBAR_DATA = '
    <option value="php-5.0.3.tar.gz">5.0.3</option>
    <option value="php-5.0.4.tar.gz">5.0.4</option>
    <option value="php-5.0.5.tar.gz">5.0.5</option>
+   <option value="php-5.1.0.tar.gz">5.1.0</option>
   </select>
  </p>
 </form>
@@ -102,7 +103,7 @@ site_header("Releases");
 
 <a name="v5"></a>
 <a name="5.1.1"></a>
-<h2>5.1.1</h2>
+<h2>5.1.1 (current)</h2>
 
 <ul>
  <li>Released: 28 Nov 2005</li>
@@ -130,6 +131,36 @@ site_header("Releases");
    <li>
     <?php download_link('php-5.1.1-installer.exe','Windows installer'); ?><br />
     <span class="md5sum">md5: b453c56e2ba2221848902294f176991c</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<a name="5.1.0"></a>
+<h2>5.1.0</h2>
+
+<ul>
+ <li>Released: 24 Nov 2005</li>
+ <li>Announcement: <a href="/release_5_1_0.php">English</a></li>
+ <li><a href="/ChangeLog-5.php#5.1.0">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.1.0.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: 4b9caa2f201f6b1f6a24de6c435cd4b1</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.0.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: b565964b595df91be27900e490760d4b</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.0-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: 93152588795d377743fe1b1fb1680b84</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.0-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 28019a42c2845b3ad70e134a302c5089</span>
    </li>
   </ul>
  </li>
