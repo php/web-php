@@ -147,6 +147,35 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
+
+<h1>php|tek 2006 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[01-Dec-2005]</span>
+ php|architect magazine is proud to announce
+ <a href="http://www.phparch.com/tek">php|tek 2006</a>, an exclusive three-day
+ conference (plus one day of exclusive in-depth seminars) dedicated to the
+ world of PHP-driven software development. This year's conference will take
+ place from April 26-28, 2006, in Orlando, Florida, with April 25th set aside
+ for a set of in-depth seminars.
+</p>
+<p>
+ Do you have unique insight into PHP? Have you written extensions, or
+ contributed to the core? Have you deployed PHP in a tough environment, or
+ scaled it to handle millions of hits per minute? Have you solved a unique
+ problem, and want to share your discovery? Perhaps you've become an expert
+ in a specific field? This year, our theme is
+ "<code>$build->deploy->scale();</code>", and if you're an expert on any of
+ these, php|architect wants <em>you</em> to speak at  php|tek.
+</p>
+<p>
+ For more information, please visit the
+ <a href="http://www.phparch.com/tek/tek_cfp.php">Call for Papers</a> page,
+ and submit your ideas. The deadline is December 21, 2005.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.1 Released</h1>
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
