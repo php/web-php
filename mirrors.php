@@ -11,7 +11,7 @@ site_header("Mirror Sites");
 <p>
  Here you can find information about the mirrors of PHP.net. This page only
  lists the official mirrors, registered in our database. The mirrors automatically
- detected to be outdated or disfunctional are not listed for your convinience, so
+ detected to be outdated or nonfunctional are not listed for your convinience, so
  there may be a mirror (or some mirrors) with problems in your country additionaly
  to those listed here. Therefore if you cannot find mirror sites in your country
  here, or the mirror site you used seems to be disappeared, check back later.

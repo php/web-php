@@ -311,7 +311,7 @@ $minute = rand(0, 59);
 <p>
  If you have an offical mirror site but it is not listed on
  <a href="/mirrors.php">mirrors.php</a>, then your mirror is probably detected
- to be disfunctional for our users. Mirror sites inaccessible for more than
+ to be nonfunctional for our users. Mirror sites inaccessible for more than
  three days, not updated for more than seven days, or having any major error in
  their setup are removed automatically from the listing for our user's
  convinience. We send out a notification to all automatically disabled mirror
