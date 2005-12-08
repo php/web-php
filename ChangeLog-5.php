@@ -22,7 +22,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(35406); ?> (eval hangs when evall'ed code ends with comment w/o newline). (Marcus)</li>
 <li><?php bugfix(35391); ?> (pdo_mysql::exec does not return number of affected rows). (Tony)</li>
 <li><?php bugfix(35382); ?> (Comment in end of file produces fatal error). (Ilia)</li>
-<li><?php bugfix(35360); ?> (exceptions in interactive mode (php -a) may cause crash).); ?> (Dmitry)</li>
+<li><?php bugfix(35360); ?> (exceptions in interactive mode (php -a) may cause crash). (Dmitry)</li>
 <li><?php bugfix(35358); ?> (Incorrect error messages for PDO class constants). (Ilia)</li>
 <li><?php bugfix(35338); ?> (pdo_pgsql does not handle binary bound params). (Wez)</li>
 <li><?php bugfix(35316); ?> (Application exception trying to create COM object). (Rob)</li>
