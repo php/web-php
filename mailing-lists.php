@@ -173,8 +173,8 @@ if (isset($_POST['maillist'])) {
       FALSE, TRUE, TRUE, "php.db"
     ),
     array (
-      'php-i18n', 'Internationalization',
-      'Internationalization (i18n) and localization (l10n) issues and features',
+      'php-i18n', 'Unicode and Internationalization',
+      'Unicode support, Internationalization (i18n) and localization (l10n) issues and features',
       FALSE, TRUE, TRUE, "php.i18n"
     ),
     array (
