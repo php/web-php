@@ -556,10 +556,13 @@ dead
     Apprendre le PHP par l'exemple, facilement et simplement.
     R&eacute;serv&eacute; d'abord aux d&eacute;butants.
    </li>
+<!-- 
+Web site does not respond
    <li>
     <a href="http://www.phpfr.org/">phpfr</a><br />
     Le site de r&eacute;f&eacute;rence sur PHP en France!
    </li>
+-->
    <li>
     <a href="http://www.phpfrance.com/">phpfrance</a><br />
     Pour tout savoir sur le PHP, en fran&ccedil;ais. Vous trouverez
@@ -573,6 +576,10 @@ dead
    <li>
     <a href="http://www.phpscripts-fr.net/">PHPscripts-fr</a><br />
     More than 500 PHP applications, listed and sorted
+   </li>
+   <li>
+    <a href="http://www.phpsecure.info/">phpsecure.info</a><br />
+	Everyday PHP applicatoins advisories, bugs and vulnerabilities.
    </li>
    <li>
     <a href="http://www.phpteam.net/">phpTeam</a><br />
