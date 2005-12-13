@@ -73,6 +73,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://ez.no/">eZ systems</a> / <a href="http://www.hit.no/english">HiT</a></li>
  <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
  <li><a href="http://www.emini.dk/">Emini</a> A/S</li>
+ <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">

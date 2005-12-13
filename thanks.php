@@ -65,6 +65,11 @@ site_header("Thanks");
 </p>
 
 <p>
+ <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and amazing
+ hardware for the CVS server (cvs.php.net).
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.
