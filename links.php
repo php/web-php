@@ -770,10 +770,6 @@ Web site does not respond
     PHP news, articles , and scripts.
    </li>
    <li>
-    <a href="http://www.php.com.ve/">php.com.ve</a><br />
-    PHP dedicated site in Venezuela
-   </li>
-   <li>
     <a href="http://www.programacion.com/php/">PHP en Castellano</a><br />
     Spanish PHP community. Articles, tutorials, courses,
     source code, forums, and more about PHP.
