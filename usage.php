@@ -5,7 +5,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for October 2005</h1>
+<h1>Usage Stats for December 2005</h1>
 
 <p>
 PHP: 22,172,983 Domains, 1,277,375 IP Addresses<br>
