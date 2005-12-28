@@ -19,7 +19,7 @@ site_header("Thanks");
 
 <p>
  <a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a>
- provides the servers and bandwidth for CVS, PEAR and mailing list services.
+ provides the servers and bandwidth for PEAR, PECL and mailing list services.
 </p>
 
 <p>
