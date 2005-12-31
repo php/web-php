@@ -216,7 +216,7 @@ function site_footer($config = array())
 
 <div id="pagefooter">
  <div id="copyright">
-  <a href="/copyright.php">Copyright &copy; 2001-2005 The PHP Group</a><br />
+  <a href="/copyright.php">Copyright &copy; 2001-2006 The PHP Group</a><br />
   All rights reserved.
  </div>
 
@@ -592,7 +592,7 @@ function commonFooter() {
 
 <table border="0" cellspacing="0" cellpadding="6" width="100%">
  <tr valign="top" bgcolor="#cccccc">
-  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2005 The PHP Group'); ?><br />All rights reserved.</small></td>
+  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2006 The PHP Group'); ?><br />All rights reserved.</small></td>
   <td align="right"><small>
    <?php
     echo (is_official_mirror() ?
