@@ -148,6 +148,29 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1.2 Released</h1>
+<p>
+ <span class="newsdate">[12-Jan-2006]</span>
+ The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.2</a>.
+ This release combines small feature enhancements with a fair number of
+ bug fixes and addresses three security issues. All PHP 5 users are encouraged to
+ upgrade to this release. Some of the key changes of PHP 5.1.2 include:
+
+<ul>
+<li>HTTP Response Splitting has been addressed in ext/session and in the header() function.</li>
+<li>Fixed format string vulnerability in ext/mysqli.</li>
+<li>Fixed possible cross-site scripting problems in certain error conditions.</li>
+<li>Hash &amp; XMLWriter extensions added and enabled by default.</li>
+<li>Upgraded OCI8 extension.</li>
+<li>Over 85 various bug fixes.</li>
+</ul>
+
+Further details about this release can be found in the <a href="">release announcement</a> 
+and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
 
 <h1>php|tek 2006 - Call for Papers</h1>

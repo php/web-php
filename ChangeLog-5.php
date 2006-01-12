@@ -8,6 +8,129 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.1.2"></a>
+<h3>Version 5.1.2</h3>
+<b>12-Jan-2006</b>
+<ul>
+<li>Updated libsqlite in ext/sqlite to 2.8.17. (Ilia)</li>
+<li>Updated libsqlite in ext/pdo_sqlite to 3.2.8. (Ilia)</li>
+<li>Updated to libxml2-2.6.22 and libxslt-1.1.15 in the win32 bundle. (Rob)</li>
+<li>Added new extensions: (Ilia, Wez)</li>
+  <ul>
+  <li>XMLWriter</li>
+  <li>Hash</li>
+  </ul>
+<li>Added PNG compression support to GD extension. (Pierre)</li>
+<li>Added reflection constants as class constants. (Johannes)</li>
+<li>Added --enable-gcov configure option to enable C-level code coverage. (John, Jani, Ilia, Marcus)</li>
+<li>Added missing support for 'B' format identifier to date() function. (Ilia)</li>
+<li>Changed reflection to be an extension. (Marcus)</li>
+<li>Improved SPL extension: (Marcus)</li>
+  <ul>
+  <li>Added class SplFileInfo as root class for DirectoryIterator and SplFileObject</li>
+  <li>Added SplTempFileObject</li>
+  </ul>
+<li>Improved SimpleXML extension: (Marcus)</li>
+  <ul>
+  <li>Fixed memleaks</li>
+  <li>Fixed var_dump()</li>
+  <li>Fixed isset/empty/(bool) behavior</li>
+  <li>Fixed iterator edge cases</li>
+  <li>Added methods getNamespaces(), getDocNamespaces()</li>
+  </ul>
+<li>Upgraded pear to version 1.4.6. (Greg)</li>
+<li>Added constants for libxslt and libexslt versions: LIBXSLT_VERSION, LIBXSLT_DOTTED_VERSION, LIBEXSLT_VERSION and LIBEXSLT_DOTTED_VERSION. (Pierre)</li>
+<li>Fixed possible crash in apache_getenv()/apache_setenv() on invalid parameters. (Ilia)</li>
+<li>Changed errors to warnings in imagecolormatch(). (Pierre)</li>
+<li>Fixed segfault/leak in imagecolormatch(). (Pierre)</li>
+<li>Fixed small leak in mysqli_stmt_fetch() when bound variable was empty string. (Andrey)</li>
+<li>Fixed prepared statement name conflict handling in PDO_PGSQL. (Thies, Ilia)</li>
+<li>Fixed memory corruption when PDO::FETCH_LAZY mode is being used. (Ilia)</li>
+<li>Fixed possible leaks in imagecreatefromstring() with invalid data. (Pierre)</li>
+<li>Fixed possible memory corruption inside mb_strcut(). (Ilia)</li>
+<li>Fixed possible header injection by limiting each header to a single line. (Ilia)</li>
+<li>Fixed possible XSS inside error reporting functionality. (Ilia)</li>
+<li>Fixed many bugs in OCI8. (Tony)</li>
+<li>Fixed crash and leak in mysqli when using 4.1.x client libraries and connecting to 5.x server. (Andrey)</li>
+<li><?php bugfix(35916); ?> (Duplicate calls to stream_bucket_append() lead to a crash). (Ilia)</li>
+<li><?php bugfix(35908); ?> (curl extension uses undefined GCRY_THREAD_OPTIONS_USER). (Ilia)</li>
+<li><?php bugfix(35907); ?> (PDO_OCI uses hardcoded lib path $ORACLE_HOME/lib). (Tony)</li>
+<li><?php bugfix(35887); ?> (wddx_deserialize not parsing dateTime fields properly). (Derick)</li>
+<li><?php bugfix(35885); ?> (strtotime("NOW") no longer works). (Derick)</li>
+<li><?php bugfix(35821); ?> (array_map() segfaults when exception is throwed from the callback). (Tony)</li>
+<li><?php bugfix(35817); ?> (unpack() does not decode odd number of hexadecimal values). (Ilia)</li>
+<li><?php bugfix(35797); ?> (segfault on PDOStatement::execute() with zend.ze1_compatibility_mode = On). (Tony, Ilia)</li>
+<li><?php bugfix(35781); ?> (stream_filter_append() can cause segfault). (Tony)</li>
+<li><?php bugfix(35760); ?> (sybase_ct doesn't compile on Solaris using old gcc). (Tony)</li>
+<li><?php bugfix(35759); ?> (mysqli_stmt_bind_result() makes huge allocation when column empty). (Andrey)</li>
+<li><?php bugfix(35751); ?> (using date with a timestamp makes httpd segfault). (Derick)</li>
+<li><?php bugfix(35740); ?> (memory leak when including a directory). (Tony)</li>
+<li><?php bugfix(35730); ?> (ext/mssql + freetds: Use correct character encoding and allow setting it). (Frank)</li>
+<li><?php bugfix(35723); ?> (xmlrpc_introspection.c fails compile per C99 std). (Jani)</li>
+<li><?php bugfix(35720); ?> (A final constructor can be overwritten). (Marcus)</li>
+<li><?php bugfix(35713); ?> (getopt() returns array with numeric strings when passed options like '-1'). (Tony)</li>
+<li><?php bugfix(35705); ?> (strtotime() fails to parse soap date format without TZ). (Ilia)</li>
+<li><?php bugfix(35699); ?> (date() can't handle leap years before 1970). (Derick)</li>
+<li><?php bugfix(35694); ?> (Improved error message for invalid fetch mode). (Ilia)</li>
+<li><?php bugfix(35692); ?> (iconv_mime_decode() segmentation fault; with libiconv only). (Tony)</li>
+<li><?php bugfix(35690); ?> (pack() tries to allocate huge memory block when packing  float values to strings). (Tony)</li>
+<li><?php bugfix(35669); ?> (imap_mail_compose() crashes with multipart-multiboundary-email). (Ilia)</li>
+<li><?php bugfix(35660); ?> (AIX TZ variable format not understood, yields UTC timezone). (Derick)</li>
+<li><?php bugfix(35655); ?> (whitespace following end of heredoc is lost). (Ilia)</li>
+<li><?php bugfix(35630); ?> (strtotime() crashes on certain relative identifiers). (Ilia)</li>
+<li><?php bugfix(35629); ?> (crash in http:// wrapper on multiple redirects). (Ilia)</li>
+<li><?php bugfix(35624); ?> (strtotime() does not handle 3 character weekdays). (Ilia)</li>
+<li><?php bugfix(35612); ?> (iis6 Access Violation crash). (Dmitry, alacn.uhahaa)</li>
+<li><?php bugfix(35594); ?> (Multiple calls to getopt() may result in a crash). (rabbitt at gmail dot com, Ilia)</li>
+<li><?php bugfix(35571); ?> (Fixed crash in Apache 2 SAPI when more then one php  script is loaded via SSI include). (Ilia)</li>
+<li><?php bugfix(35570); ?> (segfault when re-using soap client object). (Dmitry)</li>
+<li><?php bugfix(35558); ?> (mktime() interpreting 3 digit years incorrectly). (Ilia)</li>
+<li><?php bugfix(35543); ?> (php crash when calling non existing method of a class that extends PDO). (Tony)</li>
+<li><?php bugfix(35539); ?> (typo in error message for ErrorException). (Tony)</li>
+<li><?php bugfix(35536); ?> (mysql_field_type() doesn't handle NEWDECIMAL). (Tony)</li>
+<li><?php bugfix(35517); ?> (mysql_stmt_fetch returns NULL on data truncation). (Georg)</li>
+<li><?php bugfix(35509); ?> (string constant as array key has different behavior inside object). (Dmitry)</li>
+<li><?php bugfix(35508); ?> (PDO fails when unknown fetch mode specified). (Tony)</li>
+<li><?php bugfix(35499); ?> (strtotime() does not handle whitespace around the date string). (Ilia)</li>
+<li><?php bugfix(35496); ?> (Crash in mcrypt_generic()/mdecrypt_generic() without proper init). (Ilia)</li>
+<li><?php bugfix(35490); ?> (socket_sendto() unable to handle IPv6 addresses). (Tony)</li>
+<li><?php bugfix(35461); ?> (Ming extension fails to compile with ming 0.3beta1). (Jani)</li>
+<li><?php bugfix(35437); ?> (Segfault or Invalid Opcode 137/1/4). (Dmitry)</li>
+<li><?php bugfix(35470); ?> (Assigning global using variable name from array doesn't function). (Dmitry)</li>
+<li><?php bugfix(35456); ?> (+ 1 [time unit] format did not work). (Ilia)</li>
+<li><?php bugfix(35447); ?> (xml_parse_into_struct() chokes on the UTF-8 BOM). (Rob)</li>
+<li><?php bugfix(35431); ?> (PDO crashes when using LAZY fetch with fetchAll). (Wez)</li>
+<li><?php bugfix(35430); ?> (PDO crashes on incorrect FETCH_FUNC use). (Tony)</li>
+<li><?php bugfix(35427); ?> (str_word_count() handles '-' incorrectly). (Ilia)</li>
+<li><?php bugfix(35425); ?> (idate() function ignores timezone settings). (Ilia)</li>
+<li><?php bugfix(35422); ?> (strtotime() does not parse times with UTC as timezone). (Ilia)</li>
+<li><?php bugfix(35414); ?> (strtotime() no longer works with ordinal suffix). (Ilia)</li>
+<li><?php bugfix(35410); ?> (wddx_deserialize() doesn't handle large ints as keys properly). (Ilia)</li>
+<li><?php bugfix(35409); ?> (undefined reference to 'rl_completion_matches'). (Jani)</li>
+<li><?php bugfix(35399); ?> (Since fix of bug #35273 SOAP decoding of soapenc:base64binary fails). (Dmitry)</li>
+<li><?php bugfix(35393); ?> (changing static protected members from outside the class, one more reference issue). (Dmitry)</li>
+<li><?php bugfix(35381); ?> (ssl library is not initialized properly). (Alan)</li>
+<li><?php bugfix(35377); ?> (PDO_SQLITE: undefined reference to "fdatasync"). (Nuno, Jani)</li>
+<li><?php bugfix(35373); ?> (HP-UX "alias not allowed in this configuration"). (Dmitry)</li>
+<li><?php bugfix(35288); ?> (iconv() function defined as libiconv()). (Nuno)</li>
+<li><?php bugfix(35103); ?> (mysqli handles bad unsigned (big)int incorrectly).(Andrey)</li>
+<li><?php bugfix(35062); ?> (socket_read() produces warnings on non blocking sockets). (Nuno, Ilia)</li>
+<li><?php bugfix(35028); ?> (SimpleXML object fails FALSE test). (Marcus)</li>
+<li><?php bugfix(34729); ?> (Crash in ZTS mode under Apache). (Dmitry, Zeev) </li>
+<li><?php bugfix(34429); ?> (Output buffering cannot be turned off with FastCGI). (Dmitry, Ilya)</li>
+<li><?php bugfix(34359); ?> (Possible crash inside fopen http wrapper). (Ilia, Sara, Nuno)</li>
+<li><?php bugfix(33789); ?> (Many Problems with SunFuncs). (Derick)</li>
+<li><?php bugfix(33671); ?> (sun_rise and sun_set don't return a GMT timestamp if one passes an offset). (Derick)</li>
+<li><?php bugfix(32820); ?> (date_sunrise and date_sunset don't handle GMT offset well). (Derick)</li>
+<li><?php bugfix(31347); ?> (is_dir and is_file (incorrectly) return true for any string greater then 255 characters). (Nuno, Ilia)</li>
+<li><?php bugfix(30937); ?> (date_sunrise() & date_sunset() don't handle endless day/night at high latitudes). (Derick)</li>
+<li><?php bugfix(30760); ?> (Remove MessageBox on win32 for E_CORE errors if display_startup_error is off). (Ilia)</li>
+<li><?php bugfix(29955); ?> (mb_strtoupper() / lower() broken with Turkish encoding). (Rui)</li>
+<li><?php bugfix(28899); ?> (mb_substr() and substr() behave differently when "mbstring.func_overload" is enabled). (Rui)</li>
+<li><?php bugfix(27678); ?> (number_format() crashes with large numbers). (Marcus)</li>
+</li>
+</ul>
+
 <a name="5.1.1"></a>
 <h3>Version 5.1.1</h3>
 <b>28-Nov-2005</b>
