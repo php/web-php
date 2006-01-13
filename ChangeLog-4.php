@@ -11,6 +11,55 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="4.4.2"></a>
+<h3>Version 4.4.2</h3>
+<b>11-Jan-2006</b>
+<ul>
+<li>Added missing safe_mode/open_basedir checks into cURL extension.</li>
+<li>Backported missing imap_mailcompose() fixes from PHP 5.x.</li>
+<li>Prevent header injection by limiting each header to a single line.</li>
+<li>Fixed possible XSS inside error reporting functionality.</li>
+<li>Fixed Apache 2 regression with sub-request handling on non-linux systems.</li>
+<li><?php bugfix(35817); ?> (unpack() does not decode odd number of hexadecimal values).</li>
+<li><?php bugfix(35735); ?> ($EGREP not defined in configure).</li>
+<li><?php bugfix(35669); ?> (imap_mail_compose() crashes with multipart-multiboundary-email).</li>
+<li><?php bugfix(35655); ?> (whitespace following end of heredoc is lost).</li>
+<li><?php bugfix(35646); ?> (%{mod_php_memory_usage}n is not reset after exit).</li>
+<li><?php bugfix(35594); ?> (Multiple calls to getopt() may result in a crash).</li>
+<li><?php bugfix(35571); ?> (Fixed crash in Apache 2 SAPI when more then one php script is loaded via SSI include).</li>
+<li><?php bugfix(35536); ?> (mysql_field_type() doesn't handle NEWDECIMAL).</li>
+<li><?php bugfix(35410); ?> (wddx_deserialize() doesn't handle large ints as keys properly).</li>
+<li><?php bugfix(35341); ?> (Fix for bug #33760 breaks build with older curl).</li>
+<li><?php bugfix(35278); ?> (Multiple virtual() calls crash Apache 2 php module).</li>
+<li><?php bugfix(35257); ?> (Calling ob_flush after creating an ob callback causes segfault).</li>
+<li><?php bugfix(35079); ?> (stream_set_blocking(true) toggles, not enables blocking).</li>
+<li><?php bugfix(35078); ?> (configure does not find ldap_start_tls_s).</li>
+<li><?php bugfix(35071); ?> (Wrong fopen mode used in GD safe-mode checks).</li>
+<li><?php bugfix(35067); ?>, <?php bugfix(35063); ?> (key(),current() need to work by reference).</li>
+<li><?php bugfix(35062); ?> (socket_read() produces warnings on non blocking sockets).</li>
+<li><?php bugfix(35059); ?> (Apache2 crash with mod_rewrite).</li>
+<li><?php bugfix(35009); ?> (ZTS: Persistent resource destruct crashes when extension is compiled as shared).</li>
+<li><?php bugfix(34996); ?> (ImageTrueColorToPalette() crashes when ncolors is zero).</li>
+<li><?php bugfix(34851); ?> (SO_RECVTIMEO and SO_SNDTIMEO socket options expect integer parameter on Windows).</li>
+<li><?php bugfix(34830); ?> (the 5th argument of mb_send_mail does not work).</li>
+<li><?php bugfix(34359); ?> (Possible crash inside fopen http wrapper).</li>
+<li><?php bugfix(33963); ?> (mssql_bind() fails on input parameters).</li>
+<li><?php bugfix(33760); ?> (cURL needs CRYPTO_callback functions to prevent locking).</li>
+<li><?php bugfix(33720); ?> (mb_encode_mimeheader does not work for multibyte chars).</li>
+<li><?php bugfix(33523); ?> (Memory leak in xmlrpc_encode_request()).</li>
+<li><?php bugfix(33201); ?> (Crash when fetching some data types).</li>
+<li><?php bugfix(33153); ?> (crash in mssql_next result).</li>
+<li><?php bugfix(32009); ?> (crash when mssql_bind() is called more than once).</li>
+<li><?php bugfix(31971); ?> (ftp_login fails on some SSL servers).</li>
+<li><?php bugfix(30760); ?> (Remove MessageBox on win32 for E_CORE errors if display_startup_error is off).</li>
+<li><?php bugfix(27678); ?> (number_format() crashes with large numbers).</li>
+
+</ul>
+
+There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.4.1"></a>
 <a name="4.1.1"></a>
 <h3>Version 4.4.1</h3>

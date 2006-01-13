@@ -75,6 +75,7 @@ $SIDEBAR_DATA = '
    <option value="php-4.3.10.tar.gz">4.3.10</option>
    <option value="php-4.3.11.tar.gz">4.3.11</option>
    <option value="php-4.4.0.tar.gz">4.4.0</option>
+   <option value="php-4.4.1.tar.gz">4.4.1</option>
    <option value="">--------</option>
    <option value="php-5.0.0.tar.gz">5.0.0</option>
    <option value="php-5.0.1.tar.gz">5.0.1</option>
@@ -334,6 +335,36 @@ site_header("Releases");
 <hr />
 
 <a name="v4"></a>
+<a name="4.4.1"></a>
+<h2>4.4.1</h2>
+
+<ul>
+ <li>Released: 31 Oct 2005</li>
+ <li>Announcement: <a href="/release_4_4_1.php">English</a></li>
+ <li><a href="/ChangeLog-4.php#4.4.1">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-4.4.1.tar.bz2','PHP 4.4.1 (tar.bz2)'); ?> - 31 Oct 2005<br />
+    <span class="md5sum">md5: 6b5726471189f8a1f26dd7cc5e19b442</span>
+   </li>
+   <li>
+    <?php download_link('php-4.4.1.tar.gz', 'PHP 4.4.1 (tar.gz)');  ?> - 31 Oct 2005<br />
+    <span class="md5sum">md5: 83a9d52df96f682cbb88ce87ff10efb5</span>
+   </li>
+   <li>
+    <?php download_link('php-4.4.1-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: cd0bc0289c50ec4b7716143978a535df</span>
+   </li>
+   <li>
+    <?php download_link('php-4.4.1-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: b6102c68d0b76ee8de780ef7e0023e10</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 <a name="4.4.0"></a>
 <h2>4.4.0</h2>
 

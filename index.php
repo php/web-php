@@ -148,6 +148,28 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.2 Released</h1>
+<p>
+ <span class="newsdate">[13-Jan-2006]</span>
+ The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 4.4.2</a>.
+ This release address a few small security issues, and also corrects some
+ regressions that occurred in PHP 4.4.1.  All PHP 4 users are encouraged to
+ upgrade to this release. Some of the key changes of PHP 4.4.2 include:
+
+<ul>
+<li>HTTP Response Splitting has been addressed in the header() function.</li>
+<li>An XSS problem inside the error reporting functionality has been removed.</li>
+<li>Apache 2 regression with sub-request handling on non-Linux systems has been fixed.</li>
+<li>A regression with the key() and current() functions have been fixed.</li>
+<li>Over 30 various bug fixes.</li>
+</ul>
+
+Further details about this release can be found in the <a href="/release_4_4_2.php">release announcement</a> 
+and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.2 Released</h1>
 <p>
  <span class="newsdate">[12-Jan-2006]</span>
