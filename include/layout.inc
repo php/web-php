@@ -125,7 +125,7 @@ function site_header($title = '', $config = array())
 <body onload="{$config['onload']}">
 
 <div id="headnav">
- <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php_snow.gif"
+ <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
  alt="PHP" width="120" height="67" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
@@ -455,7 +455,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
  <tr bgcolor="#9999cc">
   <td align="center" rowspan="2" width="126"><a href="/"><?php
-  	print_image('php_snow.gif', 'PHP', false, 'hspace="3"'); ?></a></td>
+  	print_image('php.gif', 'PHP', false, 'hspace="3"'); ?></a></td>
   <td>&nbsp;</td>
  </tr>
  <tr bgcolor="#9999cc">
@@ -759,7 +759,7 @@ function display_event($event, $include_date = 1)
 function print_news_links()
 {
     $links = "";
-    for ($i = 1998; $i < 2005; $i++) {
+    for ($i = 1998; $i < 2006; $i++) {
         $pagename = "news-$i.php";
         if ($pagename == $_SERVER['BASE_PAGE']) { continue; }
         $links .= '<a href="/news-' . $i . '.php">' . $i . '</a>, ';
