@@ -140,26 +140,27 @@ site_header("Downloads");
 </p>
 
 <ul>
+<!--
  <li>
   The Windows binaries and installer will follow shortly.
  </li>
-<!--
+-->
+
  <li>
-  <?php download_link('php-4.4.2-Win32.zip', 'PHP 4.4.2 zip package'); ?> - 15 Jan 2006<br />
+  <?php download_link('php-4.4.2-Win32.zip', 'PHP 4.4.2 zip package'); ?> - 13 Jan 2006<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: cd0bc0289c50ec4b7716143978a535df</span>
+  <span class="md5sum">md5: 7ab55b81832050439df570b97076b4f1</span>
  </li>
  <li>
-  <?php download_link('php-4.4.2-installer.exe', 'PHP 4.4.2 installer'); ?> - 15 Jan 2006<br />
+  <?php download_link('php-4.4.2-installer.exe', 'PHP 4.4.2 installer'); ?> - 13 Jan 2006<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: b6102c68d0b76ee8de780ef7e0023e10</span>
+  <span class="md5sum">md5: 28dab297d8b7242723a0a4b095f87a14</span>
  </li>
--->
 </ul>
 
 <hr />
