@@ -80,14 +80,20 @@ if ($process) {
     // No error was found, and the submit action is required
     if (!$error && strtolower($_POST['action']) != "preview") {
 
+        $redirip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ?
+                   $_SERVER['HTTP_X_FORWARDED_FOR'] :
+                   (isset($_SERVER['HTTP_VIA']) ? $_SERVER['HTTP_VIA'] : '');
+
         // Post the variables to the central user note script
         // ($MQ is defined in prepend.inc)
         $result = posttohost(
             "http://master.php.net/entry/user-note.php",
             array(
-                "user" => ($MQ ? stripslashes($user) : $user),
-                "note" => ($MQ ? stripslashes($note) : $note),
-                "sect" => ($MQ ? stripslashes($_POST['sect']) : $_POST['sect'])
+                'user'    => ($MQ ? stripslashes($user) : $user),
+                'note'    => ($MQ ? stripslashes($note) : $note),
+                'sect'    => ($MQ ? stripslashes($_POST['sect']) : $_POST['sect']),
+                'ip'      => $_SERVER['REMOTE_ADDR'],
+                'redirip' => htmlspecialchars($redirip)
             )
         );
 
