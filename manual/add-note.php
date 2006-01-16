@@ -93,7 +93,7 @@ if ($process) {
                 'note'    => ($MQ ? stripslashes($note) : $note),
                 'sect'    => ($MQ ? stripslashes($_POST['sect']) : $_POST['sect']),
                 'ip'      => $_SERVER['REMOTE_ADDR'],
-                'redirip' => htmlspecialchars($redirip)
+                'redirip' => $redirip
             )
         );
 
