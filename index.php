@@ -148,6 +148,17 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>UK PHP Conference 2006</h1>
+<p>
+ <span class="newsdate">[17-Feb-2006]</span>
+ The first <a href="http://www.phpconference.co.uk/">UK PHP Conference</a>
+ if going to be held on February 10th 2006, organized by the
+ <a href="http://www.phplondon.org/">PHP London user group</a>.
+ This is a one day event at South Bank University, plus networking events.
+ The list of speakers: Derick Rethans, Pawel Kozlowski, Harry Fuecks,
+ Chris Kunz and Matt Zandstra. Not bad for 50 quid.
+</p>
+
 <h1>PHP 4.4.2 Released</h1>
 <p>
  <span class="newsdate">[13-Jan-2006]</span>
