@@ -150,7 +150,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>UK PHP Conference 2006</h1>
 <p>
- <span class="newsdate">[17-Feb-2006]</span>
+ <span class="newsdate">[17-Jan-2006]</span>
  The first <a href="http://www.phpconference.co.uk/">UK PHP Conference</a>
  if going to be held on February 10th 2006, organized by the
  <a href="http://www.phplondon.org/">PHP London user group</a>.
