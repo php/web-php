@@ -159,6 +159,8 @@ commonHeader("Hypertext Preprocessor");
  Chris Kunz and Matt Zandstra. Not bad for 50 quid.
 </p>
 
+<hr />
+
 <h1>PHP 4.4.2 Released</h1>
 <p>
  <span class="newsdate">[13-Jan-2006]</span>
