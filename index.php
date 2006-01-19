@@ -148,6 +148,57 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
+
+<h1>Third Bulgarian PHP Conference</h1>
+<p>
+ <span class="newsdate">[19-Jan-2006]</span>
+ The third <a href="http://wtconferences.com/">Web Technology conference
+ and Expo</a> in Bulgaria will be held in June 2006 in the city
+ of Sofia. Within its framework, the Third Bulgarian
+ PHP Conference will be held. The event will take place on
+ the 30th of June and the 1st of July at the conference area
+ of the Kempinski Hotel Zografski.
+</p>
+<p>
+ The purpose of this meeting is to discuss the new tendencies
+ in this direction and to popularize the internet technologies
+ in the spheres of business, education, and services. The
+ range of subjects includes technologies like PHP, Perl,
+ business systems through web, education through the
+ internet, and others.
+</p>
+
+<hr />
+
+<h1>FrOSCon 2006 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[19-Jan-2006]</span>
+ The first Free and Open Source Conference "FrOSCon" takes place on 24th
+ and 25th June 2006 in St. Augustin, near Bonn, Germany. Organized by a
+ commited team, it aims to become a significant event for free software
+ in the Rhineland. The conference is hosted by the faculty of computer
+ science of the University of Applied Sciences Bonn-Rhein-Sieg in
+ collaboration with the student body and the Linux/Unix User Group St.
+ Augustin.
+</p>
+<p>
+ In a <a href="http://www.froscon.org/wiki/CallforPapers">Call for
+ Papers</a>, the organizers ask for submission of
+ contributions. A broad variety of topics concerning free and open
+ source software is desired. Particularly welcome are contributions about
+ programming languages, free software on the desktop, security, systems
+ administration and networks. Aspects of free software in business and
+ industry are also a focus of the conference.
+</p>
+<p>
+ Contributions can be submitted in English or German and should summarize
+ the intended talk concisely and succinctly; talks should range from 45
+ to 60 minutes in length. Deadline for submission is 15th March 2006.
+</p>
+
+<hr />
+
 <h1>UK PHP Conference 2006</h1>
 <p>
  <span class="newsdate">[17-Jan-2006]</span>
