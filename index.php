@@ -152,7 +152,7 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[17-Jan-2006]</span>
  The first <a href="http://www.phpconference.co.uk/">UK PHP Conference</a>
- if going to be held on February 10th 2006, organized by the
+ is going to be held on February 10th 2006, organized by the
  <a href="http://www.phplondon.org/">PHP London user group</a>.
  This is a one day event at South Bank University, plus networking events.
  The list of speakers: Derick Rethans, Pawel Kozlowski, Harry Fuecks,
