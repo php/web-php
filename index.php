@@ -199,6 +199,8 @@ commonHeader("Hypertext Preprocessor");
 
 <hr />
 
+<?php news_image("http://www.phpconference.co.uk/", "ukphp2006.png", "UK PHP Conference 2006"); ?>
+
 <h1>UK PHP Conference 2006</h1>
 <p>
  <span class="newsdate">[17-Jan-2006]</span>
