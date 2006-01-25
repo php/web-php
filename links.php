@@ -766,10 +766,6 @@ Web site does not respond
   <strong>Spanish</strong>
   <ul>
    <li>
-    <a href="http://www.lpsz.org/">lpsz.org</a><br />
-    PHP news, articles , and scripts.
-   </li>
-   <li>
     <a href="http://www.programacion.com/php/">PHP en Castellano</a><br />
     Spanish PHP community. Articles, tutorials, courses,
     source code, forums, and more about PHP.
