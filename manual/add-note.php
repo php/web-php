@@ -103,6 +103,8 @@ if ($process) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
             } else if (strpos($result, '[SPAMMER]') !== FALSE) {
                 print '<p class="formerror">Your IP is listed in one of the spammers lists we use. If you think this is an error, please contact the <a href="mailto:webmaster@php.net">webmaster</a>.</p>';
+            } else if (strpos($result, '[SPAM WORD]') !== FALSE) {
+                echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
             } else {
                 echo "<!-- $result -->";
                 echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
