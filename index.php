@@ -175,6 +175,8 @@ href="http://www.nyphpcon.com/attendee_registration.php">early-bird
 discount is available until March 1st</a>.
 </p>
 
+<hr />
+
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
 <h1>Third Bulgarian PHP Conference</h1>
