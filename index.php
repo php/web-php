@@ -148,6 +148,33 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.png", "NYPHPCon 2006"); ?>
+
+<h1>NYPHPCon 2006</h1>
+<p>
+ <span class="newsdate">[02-Feb-2006]</span>
+The <a href="http://www.nyphpcon.com">New York PHP Conference & Expo
+2006</a> is taking place in New York City, at the historic New Yorker
+Hotel, June 14-16, 2006.  There will be three full days of sessions,
+tutorials, exhibits, and networking events. </p>
+<p>
+NYPHPCon 2006 focuses on the The PHP Business Community, with two
+featured parallel tracks: <a
+href="http://www.nyphpcon.com/conference_glance.php">Business Strategy
+and Technical Solutions</a>.  Over 400 are expected to attend, including
+business and technical professionals from around the world.
+</p>
+<p>
+We invite everyone - whether technical or non-technical - to participate
+in our <a href="http://www.nyphpcon.com/call_for_papers.php">Call For
+Papers</a>.
+</p>
+<p>
+An <a
+href="http://www.nyphpcon.com/attendee_registration.php">early-bird
+discount is available until March 1st</a>.
+</p>
+
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
 <h1>Third Bulgarian PHP Conference</h1>
