@@ -52,7 +52,7 @@ $SIDEBAR_DATA = '
 </p>
 
 <p>
- <a href="http://www.zend.com/zend/optimizer.php">Zend
+ <a href="http://www.zend.com/store/products/zend-optimizer.php">Zend
  Optimizer</a> for PHP 4.0.3 and later is
  available on Zend Technologies\' web site
 </p>
