@@ -13,7 +13,7 @@ site_header("A Tourist's Guide");
 <p>
  Everyone knows the www.php.net site. All of us went there sooner or later,
  and will keep going back there. This is the central reference point for PHP
- users, and it has a wealth of informations there. All of it isn't that obvious.
+ users, and there is a wealth of information there. Not all of it is obvious.
  Come with me, I'll show you.
 </p>
 
@@ -46,8 +46,8 @@ site_header("A Tourist's Guide");
  The <a href="/support.php">support</a> page has all the directions to a wealth
  of resources both inside and outside of PHP.net. The community has built a huge
  network of knowledge bases, PHP user groups, and training sessions where anyone
- can have his questions answered. Non-English-speaking users also get a large
- share of attention.
+ can have his or her questions answered. Non-English-speaking users also get a
+ large share of attention.
 </p>
 
 <p>
@@ -106,6 +106,16 @@ site_header("A Tourist's Guide");
  its sister, PEAR.
 </p>
 
+<h2>
+ <a href="http://pecl4win.php.net/">pecl4win.php.net</a>:
+ The PECL Windows Repository
+</h2>
+
+<p>
+ This site hosts a repository of PECL extensions precompiled for the Windows
+ platform.
+</p>
+
 <h2><a href="http://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
 
 <p>
@@ -123,24 +133,14 @@ site_header("A Tourist's Guide");
  process.
 </p>
 
-<h2><a href="http://chora.php.net/">cvs.php.net</a>: CVS Repository</h2>
+<h2><a href="http://cvs.php.net/viewcvs.cgi/">cvs.php.net</a>: CVS Repository</h2>
 
 <p>
  The PHP project is organised with a CVS server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
- href="http://cvs.php.net/cvs.php/php-src/">php-src</a> module is the 
+ href="http://cvs.php.net/viewcvs.cgi/php-src/">php-src</a> module is the 
  repository for the source code to the latest version of PHP itself.
-</p>
-
-<h2><a href="http://bonsai.php.net">bonsai.php.net</a>: Bonsai</h2>
-
-<p>
- Bonsai is another window into the CVS repository that makes it easy to search
- within the sources, so you may keep track of who has done updates to files.
- This is most handy when you are working in a team on some specific section of
- the code. You may also keep an eye of evolution of implementation, and know the
- activity level of every extension.
 </p>
 
 <h2><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
