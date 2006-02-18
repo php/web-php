@@ -5,8 +5,8 @@
 /*
 
  Offload to the visitor's nearest mirror if the load is too high.
- The used getloadavg() function is currently only available on
- the www.php.net machine.
+ The used sys_getloadavg() function is currently only available in
+ the latest PHP 5.1 versions
 
 */
 
@@ -16,12 +16,12 @@ function load_check()
     global $COUNTRY, $MIRRORS;
 
     // We cannot check the load here
-    if (!function_exists("getloadavg")) {
+    if (!function_exists("sys_getloadavg")) {
         return;
     }
 
     // Get load and print it out in header
-    $load = getloadavg();
+    $load = sys_getloadavg();
     header("X-PHP-Load: " . implode(", ", $load));
     $load = $load[0];
 
