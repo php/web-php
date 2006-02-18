@@ -684,27 +684,15 @@ function display_event($event, $include_date = 1)
         -3 => '3rd Last'
     );
 
-    if (!isset($event['start'])) { $event['start'] = ""; }
-    if (!isset($event['end'])) { $event['end'] = ""; }
-    if (!isset($event['sday'])) { $event['sday'] = ""; } 
-    if (!isset($event['smonth'])) { $event['smonth'] = ""; }
-    if (!isset($event['syear'])) { $event['syear'] = ""; }
-    if (!isset($event['eday'])) { $event['eday'] = ""; }
-    if (!isset($event['emonth'])) { $event['emonth'] = ""; }
-    if (!isset($event['eyear'])) { $event['eyear'] = ""; }
-
-    // Start and end day of this event
-    $sday = $event['start'] ? strtotime($event['start'])
-            : mktime(0, 0, 1, $event['smonth'], $event['sday'], $event['syear']);
-    $eday = $event['end'] ? strtotime($event['end'])
-            : mktime(0, 0, 1, $event['emonth'], $event['eday'], $event['eyear']);
+    $sday = isset($event['start']) ? strtotime($event['start']) : 0;
+    $eday = isset($event['end']) ? strtotime($event['end']) : 0;
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%">
  <tr bgcolor="#dddddd"><td>
 <?php
     
     // Print out date if needed
-    if ($include_date && ($event['start'] || $event['smonth'])) {
+    if ($include_date && ($event['start'])) {
         echo "<b>", date("F j, Y", $sday), "</b>\n";
     }
     
