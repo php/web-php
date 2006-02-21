@@ -3,13 +3,13 @@
 // $Id$
 
 // Define $MIRRORS array, and some constants
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/mirrors.inc';
 
 // Define $COUNTRIES array
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/countries.inc';
 
 // Define $LANGUAGES array
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 
 // Returns true if the current (or specified)
 // site is the primary mirror site

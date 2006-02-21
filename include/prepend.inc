@@ -26,21 +26,21 @@ myphpnet_load();
 $MQ = (boolean) get_magic_quotes_gpc();
 
 // Site details (mirror site information)
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
 
 // Choose language used for translated parts
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/langchooser.inc';
 
 // Get country of the user and set it in a cookie
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/ip-to-country.inc';
 
 // Common layout functions
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
 
 // This file is generated on rsync.php.net and propagated
 // from there. It just defines $LAST_UPDATED, which is the
 // mirror's last updated time.
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
 // Function used to import request vars to global scope.
 // Walks through $array, and imports all values associated
