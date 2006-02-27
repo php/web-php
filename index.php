@@ -177,6 +177,29 @@ discount is available until March 1st</a>.
 
 <hr />
 
+
+<?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
+
+<h1>Third Bulgarian PHP Conference</h1>
+<p>
+ <span class="newsdate">[19-Jan-2006]</span>
+ The third <a href="http://wtconferences.com/">Web Technology conference
+ and Expo</a> in Bulgaria will be held in June 2006 in the city
+ of Sofia. Within its framework, the Third Bulgarian
+ PHP Conference will be held. The event will take place on
+ the 30th of June and the 1st of July at the conference area
+ of the Kempinski Hotel Zografski.
+</p>
+<p>
+ The purpose of this meeting is to discuss the new tendencies
+ in this direction and to popularize the internet technologies
+ in the spheres of business, education, and services. The
+ range of subjects includes technologies like PHP, Perl,
+ business systems through web, education through the
+ internet, and others.
+</p>
+
+<hr />
 <?php news_image("http://conf.phpquebec.com/", "conference_php_quebec.gif", "PHP Quebec 2006"); ?>
 
 <h1>PHP Quebec 2006</h1>
@@ -205,29 +228,6 @@ Learn more about this exciting conference at http://conf.phpquebec.com.
 </p>
 
 <hr />
-<?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
-
-<h1>Third Bulgarian PHP Conference</h1>
-<p>
- <span class="newsdate">[19-Jan-2006]</span>
- The third <a href="http://wtconferences.com/">Web Technology conference
- and Expo</a> in Bulgaria will be held in June 2006 in the city
- of Sofia. Within its framework, the Third Bulgarian
- PHP Conference will be held. The event will take place on
- the 30th of June and the 1st of July at the conference area
- of the Kempinski Hotel Zografski.
-</p>
-<p>
- The purpose of this meeting is to discuss the new tendencies
- in this direction and to popularize the internet technologies
- in the spheres of business, education, and services. The
- range of subjects includes technologies like PHP, Perl,
- business systems through web, education through the
- internet, and others.
-</p>
-
-<hr />
-
 <h1>FrOSCon 2006 - Call for Papers</h1>
 <p>
  <span class="newsdate">[19-Jan-2006]</span>
