@@ -177,6 +177,34 @@ discount is available until March 1st</a>.
 
 <hr />
 
+<?php news_image("http://conf.phpquebec.com/", "conference_php_quebec.gif", "PHP Quebec 2006"); ?>
+
+<h1>PHP Quebec 2006</h1>
+<p>
+ <span class="newsdate">[26-Feb-2006]</span>
+The <a href="http://www.phpquebec.com/">PHP Quebec team</a> is pleased to 
+announce the 4th edition of the <a href="http://conf.phpquebec.com/">PHP Quebec Conference</a>. 
+This year, the conference will be held at the Montreal Plaza Hotel 
+from March 29th to 31st. It features 2 days of technical learning and an 
+additional day of workshop. Among the speakers, the well known PHP Experts 
+such has Rasmus Lerdorf, Andrei Zmeivski, Derick Rethans and Ilia 
+Alshanetsky. 
+</p>
+<p>
+The conference will have three distinct tracks of session: Advanced 
+Techniques, Professional Development and Databases. With over 31 
+sessions, including workshops, the PHP Québec Conference is great opportunity 
+to learn about the latest PHP techniques and professional development 
+techniques to help you build high quality PHP software. The conference will 
+also present the various storage solutions available such has  IBM DB2, 
+PostgreSQL, SQLite and MySQL.
+</p>
+<p>
+Early bird pricing are available until march 3rd.<br />
+Learn more about this exciting conference at http://conf.phpquebec.com.
+</p>
+
+<hr />
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
 <h1>Third Bulgarian PHP Conference</h1>
