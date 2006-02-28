@@ -65,12 +65,10 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
     }
   }
 
- if(empty($_GET['p']) || $_GET['p'] == 'local') {
-  	$real_url = preg_replace('!^http://[\w]+\.php\.net/(.*)$!', $MYSITE . '\\1', $hit['Url']);
-  } else {
-	$real_url = $hit['Url'];
-  }
-  $displayurl = preg_replace('!^http://(.+[^/])(/?)$!', '\\1', $hit['Url']);
+  // rewrite mirrors urls (\w\w\d? or www)
+  $real_url = preg_replace('!^http://\w{2,3}\.php\.net/(.*)$!', $MYSITE . '$1', $hit['Url']);
+
+  $displayurl = preg_replace('!^http://(.+[^/])/?$!', '$1', $hit['Url']);
   $display_title = str_replace('PHP:', '', $hit['Title']);
   echo <<<EOB
 <li>
