@@ -514,12 +514,13 @@ ul#search-results p.meta a {
   color: #8284cc;
 }
 div#results_nav {
-	margin:auto;
+	margin: auto;
 	width: 200px;
 	text-align: center;
 }
 
 ul#results_nav_list {
+        margin-top: -1em;
 	text-align: center;
 	padding: 0px;
 }

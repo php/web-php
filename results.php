@@ -78,6 +78,8 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
                  'pearbugs'=>'<img src="http://static.php.net/www.php.net/images/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'talks'=>'<img src="http://static.php.net/www.php.net/images/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
                  'snaps'=>'<img src="http://static.php.net/www.php.net/images/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'cvsweb'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'viewcvs'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
                 );
@@ -91,10 +93,11 @@ EOB;
 }
 echo <<<EOB
 </ul>
-<span style="margin-left: 3.5em;"><a href="http://developer.yahoo.net/about">
+<span style="margin-left: 3em; margin-top: 1em; float: left;"><a href="http://developer.yahoo.net/about">
 <img src="http://us.dev1.yimg.com/us.yimg.com/i/us/nt/bdg/websrv_120_1.gif" border="0">
 </a></span>
-<div id="results_nav"><h4>Results Page:</h4><ul id="results_nav_list">
+<div id="results_nav"><h4>Results Page:</h4>
+<ul id="results_nav_list">
 EOB;
 $start = 0;
 for($z=1; $z < 11; $z++) {
