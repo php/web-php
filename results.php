@@ -7,7 +7,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 // Prepare data for search
 if ($MQ) { 
 	$q = stripslashes($_GET['q']); //query
-	$l = stripslashes($GET['l']); // language
+	$l = stripslashes($_GET['l']); // language
 } else { 
 	$q = $_GET['q']; 
 	$l = $_GET['l'];
@@ -66,9 +66,9 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   }
 
   // rewrite mirrors urls (\w\w\d? or www)
-  $real_url = preg_replace('!^http://\w{2,3}\.php\.net/(.*)$!', $MYSITE . '$1', $hit['Url']);
+  $real_url = preg_replace('!^http://\w{2,3}\.php\.net(.*)$!', '$1', $hit['Url']);
 
-  $displayurl = preg_replace('!^http://(.+[^/])/?$!', '$1', $hit['Url']);
+  $displayurl = preg_replace('!^http://(?:\w{2,3}\.)?(.+[^/])/?$!', '$1', $hit['Url']);
   $display_title = str_replace('PHP:', '', $hit['Title']);
   echo <<<EOB
 <li>

@@ -75,7 +75,7 @@ if (!empty($_FORM['pattern'])) {
             }
 
         case "manual":
-            mirror_redirect($MYSITE . "results.php?q={$ucp}&p=manual&lang=$LANG");
+            mirror_redirect($MYSITE . "results.php?q={$ucp}&p=manual&l=$LANG");
             break;
 
         case "news_archive":
