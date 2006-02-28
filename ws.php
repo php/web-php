@@ -15,15 +15,25 @@ $sites = array(  'all'=>'site=php.net',
                 'pecl'=>'site=pecl.php.net',
                'talks'=>'site=talks.php.net',
               );
-if(isset($sites[$_REQUEST['profile']])) $p = $sites[$_REQUEST['profile']];
-else $p = $sites['all'];
+if(isset($sites[$_REQUEST['profile']])) {
+  $scope = $_REQUEST['profile'];
+} else { 
+  $scope = 'all';
+}
 
-$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&{$p}&language=$l&output=php";
+$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&{$sites[$scope]}&language=$l&output=php";
 $data = @file_get_contents($request);
 list($version,$status_code,$msg) = explode(' ',$http_response_header[0], 3);
 if($status_code==200) echo $data;
 else echo serialize($http_response_header[0]);
-$fp = fopen("/tmp/ws.log","a");
-fputs($fp,"$request\n");
-fclose($fp);
+
+$dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'], array(PDO::ATTR_PERSISTENT => true,
+                                                                                         PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try {
+  $stmt = $dbh->prepare("INSERT INTO log (query,profile) VALUES (:query,:profile)");
+  $stmt->execute(array(':query'=>$q,':profile'=>$scope));
+} catch (PDOException $e) {
+   
+}
 ?>
