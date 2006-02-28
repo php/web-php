@@ -75,7 +75,7 @@ function site_header($title = '', $config = array())
     
     // Print out lang and charset headers
     if (!isset($config["lang"]))    { $config["lang"] = "en"; }
-    if (!isset($config["charset"])) { $config["charset"] = "ISO-8859-1"; }
+    if (!isset($config["charset"])) { $config["charset"] = "utf-8"; }
     header("Content-type: text/html;charset={$config['charset']}");
     header("Content-language: {$config['lang']}");
     

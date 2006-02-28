@@ -8,7 +8,7 @@
 // Provide default content-type, charset and language information
 // Manual pages will override this, and maybe others too
 header("Content-language: en");
-header("Content-type: text/html;charset=ISO-8859-1");
+header("Content-type: text/html; charset=utf-8");
 
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
