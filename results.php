@@ -74,6 +74,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   $display_title = str_replace('PHP:', '', $hit['Title']);
   $types = array('pear'=>'<img src="http://static.php.net/www.php.net/images/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pecl'=>'<img src="http://static.php.net/www.php.net/images/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+                 'pecl4win'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
                  'peclbugs'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pearbugs'=>'<img src="http://static.php.net/www.php.net/images/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'talks'=>'<img src="http://static.php.net/www.php.net/images/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
