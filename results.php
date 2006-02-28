@@ -92,7 +92,7 @@ for($z=1; $z < 11; $z++) {
 	if($start > $res['ResultSet']['totalResultsAvailable']) {
 		break;
 	}
-	printf('<li><a href="/results.php?q=%s&start=%d&p=$scope">%d</a></li>', $q, $start, $z);
+	printf('<li><a href="/results.php?q=%s&start=%d&p=%s">%d</a></li>', $q, $start, $scope, $z);
 	$start += $per_page;
 }
 echo '</ul></div>';
