@@ -487,3 +487,44 @@ div.manualnavbar form {
 div.manualnavbar .lastupdated {
 	font-size: 75%;
 }
+
+/* for searching system... */
+ul#search-results {
+  list-style-type: none;
+}
+ul#search-results li {
+  margin-top: 1em;
+  list-style-type: none;
+}
+ul#search-results p {
+  margin: 0;
+}
+ul#search-results p.result {
+	font-weight: 700;
+}
+ul#search-results p.summary,
+ul#search-results p.meta {
+  font-size: 0.8em;
+  margin-left: 2em;
+}
+ul#search-results p.meta {
+  color: #008000;
+}
+ul#search-results p.meta a {
+  color: #8284cc;
+}
+div#results_nav {
+	margin:auto;
+	width: 200px;
+	text-align: center;
+}
+
+ul#results_nav_list {
+	text-align: center;
+	padding: 0px;
+}
+ul#results_nav_list li {
+	display: inline;
+	margin-right: 0.4em;
+	list-style-type: none;
+}

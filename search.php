@@ -77,9 +77,7 @@ if (!empty($_FORM['pattern'])) {
         
         // Covers "wholesite", "manual" and any malicios targets
         default:
-            mirror_redirect(
-                "http://www.google.com/search?q={$ucp}+site:www.php.net&l=$LANG"
-            );
+            mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG");
     }
 }
 

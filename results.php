@@ -1,18 +1,33 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'results.php';
-#include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 #include $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 
 // Prepare data for search
-if ($MQ) { $q = stripslashes($_GET['q']); }
-else { $q = $_GET['q']; }
-$q = urlencode($q);
-$s = (int) $_GET['start'];
+if ($MQ) { 
+	$q = stripslashes($_GET['q']); //query
+	$l = stripslashes($GET['l']); // language
+} else { 
+	$q = $_GET['q']; 
+	$l = $_GET['l'];
+}
 
-$data = file_get_contents("http://www.php.net/~rasmus/ws.php?q=$q&results=10&start=$s");
+$q = urlencode($q);
+$l = urlencode($l);
+
+$s = (int) $_GET['start'];
+$per_page = 15;
+
+$valid_profiles = array('all', 'local', 'news', 'bugs');
+$scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
+
+$data = file_get_contents("http://www.php.net/ws.php?profile=$scope&q=$q&results=$per_page&start=$s");
 $res = unserialize($data);
+
 // HTTP status line is passed on, signifies and error
+site_header('Search results');
+
 if (is_string($res)) {
   echo '<h2>Internal error, please try later</h2>';
   exit;  
@@ -24,31 +39,14 @@ if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   exit;  
 }
 
-echo <<<EOB
-<style type="text/css">
-ul#search-results {
-  list-style-type: none;
-}
-ul#search-results li {
-  margin-top: 1em;
-}
-ul#search-results p {
-  margin: 0;
-}
-ul#search-results p.summary,
-ul#search-results p.meta {
-  font-size: 0.8em;
-  margin-left: 2em;
-}
-ul#search-results p.meta {
-  color: #008000;
-}
-ul#search-results p.meta a {
-  color: #8284cc;
-}
+$start_result = ($s == 0 ? 1 : $s);
+$end_result = $s + $res['ResultSet']['totalResultsReturned'];
 
-</style>
-<h2>Showing {$res['ResultSet']['totalResultsReturned']} of {$res['ResultSet']['totalResultsAvailable']} results</h2>
+$results_count = ($res['ResultSet']['totalResultsAvailable'] < 100 ? $res['ResultSet']['totalResultsAvailable'] : 'more than 100');
+
+
+echo <<<EOB
+<h2>Showing results $start_result to $end_result of $results_count</h2>
 <ul id="search-results">
 EOB;
 $pos = $res['ResultSet']['firstResultPosition'];
@@ -66,11 +64,17 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
       $size = " - {$hit['Cache']['Size']} bytes";
     }
   }
+
+ if(empty($_GET['p']) || $_GET['p'] == 'local') {
+  	$real_url = preg_replace('!^http://[\w]+\.php\.net/(.*)$!', $MYSITE . '\\1', $hit['Url']);
+  } else {
+	$real_url = $hit['Url'];
+  }
   $displayurl = preg_replace('!^http://(.+[^/])(/?)$!', '\\1', $hit['Url']);
-  
+  $display_title = str_replace('PHP:', '', $hit['Title']);
   echo <<<EOB
 <li>
- <p class="result">$cnt. <a href="{$hit['Url']}">{$hit['Title']}</a></p>
+ <p class="result"><a href="{$real_url}">{$display_title}</a></p>
  <p class="summary">{$hit['Summary']}</p>
  <p class="meta">{$displayurl} - {$d}{$size}{$cachelink}</p>
 </li>
@@ -80,4 +84,16 @@ echo <<<EOB
 </ul>
 EOB;
 
+$start = 0;
+echo '<span style="margin-left: 3.5em;"><a href="http://developer.yahoo.net/about"><img src="http://us.dev1.yimg.com/us.yimg.com/i/us/nt/bdg/websrv_120_1.gif" border="0"></a></span>';
+echo '<div id="results_nav"><h4>Results Page:</h4><ul id="results_nav_list">';
+for($z=1; $z < 11; $z++) {
+	if($start > $res['ResultSet']['totalResultsAvailable']) {
+		break;
+	}
+	printf('<li><a href="/results.php?q=%s&start=%d">%d</a></li>', $q, $start, $z);
+	$start += $per_page;
+}
+echo '</ul></div>';
+site_footer();
 ?>
