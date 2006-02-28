@@ -19,7 +19,7 @@ $l = urlencode($l);
 $s = (int) $_GET['start'];
 $per_page = 15;
 
-$valid_profiles = array('all', 'local', 'news', 'bugs');
+$valid_profiles = array('all', 'local', 'news', 'bugs', 'pear', 'pecl', 'talks');
 $scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
 
 $data = file_get_contents("http://www.php.net/ws.php?profile=$scope&q=$q&results=$per_page&start=$s");

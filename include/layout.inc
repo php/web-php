@@ -151,12 +151,18 @@ function site_header($title = '', $config = array())
    <span>in the</span>
    <select name="show">
     <option value="quickref" selected="selected">function list</option>
-    <option value="wholesite">whole site</option>
+    <option value="all"      >all php.net sites</option>
+    <option value="local"    >this mirror only</option>
     <option value="manual"   >online documentation [en]</option>
     <option value="bugdb"    >bug database</option>
+    <option value="news_archive">Site News Archive</option>
+    <option value="changelogs">All Changelogs</option>
+    <option value="pear"     >just pear.php.net</option>
+    <option value="pecl"     >just pecl.php.net</option>
+    <option value="talks"    >just talks.php.net</option>
     <option value="maillist" >general mailing list</option>
     <option value="devlist"  >developer mailing list</option>
-    <option value="phpdoc"   >documentation mailing list </option>
+    <option value="phpdoc"   >documentation mailing list</option>
    </select>
    <input type="image"
           src="{$_SERVER['STATIC_ROOT']}/images/small_submit_white.gif"
@@ -500,13 +506,19 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <input class="small" type="text" name="pattern" value="" size="30" accesskey="s" />
 <small>in the</small>
 <select name="show" class="small">
-<option value="quickref" selected="selected">function list</option>
-<option value="wholesite">whole site</option>
-<option value="manual">online documentation [en]</option>
-<option value="bugdb">bug database</option>
-<option value="maillist">general mailing list</option>
-<option value="devlist">developer mailing list</option>
-<option value="phpdoc">documentation mailing list </option>
+ <option value="quickref" selected="selected">function list</option>
+ <option value="all"      >all php.net sites</option>
+ <option value="local"    >this mirror only</option>
+ <option value="manual"   >online documentation [en]</option>
+ <option value="bugdb"    >bug database</option>
+ <option value="news_archive">Site News Archive</option>
+ <option value="changelogs">All Changelogs</option>
+ <option value="pear"     >just pear.php.net</option>
+ <option value="pecl"     >just pecl.php.net</option>
+ <option value="talks"    >just talks.php.net</option>
+ <option value="maillist" >general mailing list</option>
+ <option value="devlist"  >developer mailing list</option>
+ <option value="phpdoc"   >documentation mailing list</option>
 </select>
 <?php echo make_submit('small_submit_white.gif', 'search', 'bottom'); ?>&nbsp;
 </form>

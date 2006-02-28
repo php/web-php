@@ -25,6 +25,8 @@ myphpnet_load();
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
 
+$APC = function_exists('apc_store');
+
 // Site details (mirror site information)
 include $_SERVER['DOCUMENT_ROOT'] . '/include/site.inc';
 

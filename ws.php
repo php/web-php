@@ -9,7 +9,12 @@ $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
 $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang']) : 'en';
 $sites = array(  'all'=>'site=php.net',
                'local'=>'site=www.php.net',
-                'news'=>'site=news.php.net');
+                'news'=>'site=news.php.net',
+                'bugs'=>'site=bugs.php.net',
+                'pear'=>'site=pear.php.net',
+                'pecl'=>'site=pecl.php.net',
+               'talks'=>'site=talks.php.net',
+              );
 if(isset($sites[$_REQUEST['profile']])) $p = $sites[$_REQUEST['profile']];
 else $p = $sites['all'];
 

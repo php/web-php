@@ -73,8 +73,22 @@ if (!empty($_FORM['pattern'])) {
                     "cmd=Display+Bugs&status=All&bug_type=Any&search_for={$ucp}"
                 );
             }
-        
-        // Covers "wholesite", "manual" and any malicious targets
+
+        case "manual":
+            mirror_redirect($MYSITE . "results.php?q=inurl:manual/en+{$ucp}&p=local");
+            break;
+
+        case "news_archive":
+            $p = urlencode($_FORM['show']);
+            mirror_redirect($MYSITE . "results.php?q=title:news%2Barchive+{$ucp}&p=local");
+            break;
+
+        case "changelogs":
+            $p = urlencode($_FORM['show']);
+            mirror_redirect($MYSITE . "results.php?q=title:changelog%2Barchive+{$ucp}&p=all");
+            break;
+ 
+        // Covers the rest
         default:
             $p = urlencode($_FORM['show']);
             mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG&p=$p");
@@ -135,6 +149,11 @@ $searchoptions = array(
     "local"    => "this mirror only",
     "manual"   => "online documentation [en]",
     "bugdb"    => "bug database",
+    "news_archive" => "Site News Archive",
+    "changelogs"   => "All Changelogs",
+    "pear"     => "just pear.php.net",
+    "pecl"     => "just pecl.php.net",
+    "talks"    => "just talks.php.net",
     "maillist" => "general mailing list",
     "devlist"  => "developer mailing list",
     "phpdoc"   => "documentation mailing list",
