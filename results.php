@@ -69,15 +69,21 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   $real_url = preg_replace('!^http://\w{2,3}\.php\.net(.*)$!', '$1', $hit['Url']);
   $displayurl = preg_replace('!^http://(?:\w{2,3}\.)?(.+[^/])/?$!', '$1', $hit['Url']);
   $type = substr($displayurl,0,strpos($displayurl,'.'));
+  if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
+  if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
   $display_title = str_replace('PHP:', '', $hit['Title']);
   $types = array('pear'=>'<img src="http://static.php.net/www.php.net/images/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pecl'=>'<img src="http://static.php.net/www.php.net/images/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-                 'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
+                 'peclbugs'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+                 'pearbugs'=>'<img src="http://static.php.net/www.php.net/images/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+                 'talks'=>'<img src="http://static.php.net/www.php.net/images/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
+                 'snaps'=>'<img src="http://static.php.net/www.php.net/images/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
                 );
   echo <<<EOB
 <li>
- {$types[$type]}
- <p class="result"><a href="{$real_url}">{$display_title}</a></p>
+ <p class="result">{$types[$type]}<a href="{$real_url}">{$display_title}</a></p>
  <p class="summary">{$hit['Summary']}</p>
  <p class="meta">{$displayurl} - {$d}{$size}{$cachelink}</p>
 </li>
