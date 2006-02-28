@@ -146,14 +146,14 @@ site_header("News Archive - 2004");
 
 <hr />
 
-<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP Québec"); ?>
+<?php news_image("http://www.phpquebec.com/modules/news/article.php?storyid=55", "conference_php_quebec.gif", "PHP QuÃ©bec"); ?>
 <h1>PHP before Canadian government, in Ottawa, October 19th and 20th, 2004</h1>
 <p>
  <span class="newsdate">[12-Oct-2004]</span>
- <a href="http://www.phpquebec.com/">PHP Québec</a>, the profesional association
- of PHP users in Québec, will be part of the <a 
+ <a href="http://www.phpquebec.com/">PHP QuÃ©bec</a>, the profesional association
+ of PHP users in QuÃ©bec, will be part of the <a 
  href="http://www.gtecweek.com/">GTEC exhibition</a>, in Ottawa, Ontario, on 
- Tuesday October 19th and Wednesday October 20th. PHP Québec will present PHP's
+ Tuesday October 19th and Wednesday October 20th. PHP QuÃ©bec will present PHP's
  features, its capabilities for e-government and its support services in Canada. 
  Come and meet us on the floor, booth 1610C.
 </p>
@@ -234,7 +234,7 @@ site_header("News Archive - 2004");
  OSCOM, the international association for Open Source Content Management
  is arranging the <a href="http://oscom.org/events/oscom4/program/">Fourth
  Open Source Content Management Conference</a> from 29th September to 1st
- October in Zürich. This fall, the event features Apache Software Foundation
+ October in ZÃ¼rich. This fall, the event features Apache Software Foundation
  projects, and PHP, so you have a chance to meet some prominent
  figures of the PHP scene there. OSCOM.4 is a place for developers,
  vendors, integrators and users to mingle and learn from each other. <a
