@@ -493,7 +493,7 @@ ul#search-results {
   list-style-type: none;
 }
 ul#search-results li {
-  margin-top: 1em;
+  margin-top: 0.5em;
   list-style-type: none;
 }
 ul#search-results p {
@@ -505,7 +505,7 @@ ul#search-results p.result {
 ul#search-results p.summary,
 ul#search-results p.meta {
   font-size: 0.8em;
-  margin-left: 2em;
+  margin-left: 1em;
 }
 ul#search-results p.meta {
   color: #008000;
