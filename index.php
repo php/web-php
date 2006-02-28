@@ -164,7 +164,7 @@ Alshanetsky.
 <p>
 The conference will have three distinct tracks of session: Advanced 
 Techniques, Professional Development and Databases. With over 31 
-sessions, including workshops, the PHP Québec Conference is great opportunity 
+sessions, including workshops, the PHP QuÃ©bec Conference is great opportunity 
 to learn about the latest PHP techniques and professional development 
 techniques to help you build high quality PHP software. The conference will 
 also present the various storage solutions available such has  IBM DB2, 
@@ -407,22 +407,22 @@ The complete details about all of the changes can be found in the
 
 <hr />
 
-<?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP Québec"); ?>
+<?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP QuÃ©bec"); ?>
 
-<h1>PHP Québec 2006: call for speakers</h1>
+<h1>PHP QuÃ©bec 2006: call for speakers</h1>
 <p>
  <span class="newsdate">[18-Oct-2005]</span>
-<a href="http://conf.phpquebec.com/en/conf2006/">PHP Québec</a> is pleased to 
-announce the 2006 PHP Québec conference, which will be held between March, 29th
+<a href="http://conf.phpquebec.com/en/conf2006/">PHP QuÃ©bec</a> is pleased to 
+announce the 2006 PHP QuÃ©bec conference, which will be held between March, 29th
 and 31th 2006. We are looking for the best speakers, willing to share their 
 experience and skills with professional PHP developers from eastern Canada 
-and USA. PHP Québec 2006 features 3 distinct tracks: <ul>
+and USA. PHP QuÃ©bec 2006 features 3 distinct tracks: <ul>
 <li>Technical PHP, covering in deep details of PHP techniques. </li>
 <li>Professional Development, featuring tools and development methodologies to 
 increase productivity.</li>
 <li>Databases, covers different databases that can be used with PHP.</li></ul>
 Sessions will be held in French or English. For more information, see the <a 
-href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
+href="http://conf.phpquebec.com/en/conf2006/appel">PHP  QuÃ©bec</a> website.
 </p>
 
 <hr />
@@ -444,7 +444,7 @@ href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
 <hr />
 
 <?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
-<h1>Zend/PHP Conference & Expo 2005 Program Announced</h1>
+<h1>Zend/PHP Conference &amp; Expo 2005 Program Announced</h1>
 <p>
  <span class="newsdate">[20-Sep-2005]</span>
  The final program for the Zend / PHP Conference (October 18-21, 2005 in
@@ -452,10 +452,10 @@ href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
  <a href="http://zend.kbconferences.com/speakerschedule.php">is now available</a>.
  The conference theme is "Power Your
  Business With PHP" and features keynote addresses from Marc Andreessen,
- Google VP Adam Bosworth, and executives from IBM, Oracle & Intel.
+ Google VP Adam Bosworth, and executives from IBM, Oracle &amp; Intel.
  Featured speakers include Michael Radwin of Yahoo!, Adam Trachtenberg
- of eBay, Joyce Park of Renkoo.com, George Schlossnagle & Wez Furlong
- of OmniTI, and, of course, Zeev Suraski & Andi Gutmans.
+ of eBay, Joyce Park of Renkoo.com, George Schlossnagle &amp; Wez Furlong
+ of OmniTI, and, of course, Zeev Suraski &amp; Andi Gutmans.
 </p>
 <p>
  In addition to keynotes and sessions, the conference also features tutorials,
