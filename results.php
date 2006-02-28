@@ -25,7 +25,7 @@ $scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
 $data = file_get_contents("http://www.php.net/ws.php?profile=$scope&q=$q&results=$per_page&start=$s");
 $res = unserialize($data);
 
-// HTTP status line is passed on, signifies and error
+// HTTP status line is passed on, signifies an error
 site_header('Search results');
 
 if (is_string($res)) {
@@ -82,16 +82,17 @@ EOB;
 }
 echo <<<EOB
 </ul>
+<span style="margin-left: 3.5em;"><a href="http://developer.yahoo.net/about">
+<img src="http://us.dev1.yimg.com/us.yimg.com/i/us/nt/bdg/websrv_120_1.gif" border="0">
+</a></span>
+<div id="results_nav"><h4>Results Page:</h4><ul id="results_nav_list">
 EOB;
-
 $start = 0;
-echo '<span style="margin-left: 3.5em;"><a href="http://developer.yahoo.net/about"><img src="http://us.dev1.yimg.com/us.yimg.com/i/us/nt/bdg/websrv_120_1.gif" border="0"></a></span>';
-echo '<div id="results_nav"><h4>Results Page:</h4><ul id="results_nav_list">';
 for($z=1; $z < 11; $z++) {
 	if($start > $res['ResultSet']['totalResultsAvailable']) {
 		break;
 	}
-	printf('<li><a href="/results.php?q=%s&start=%d">%d</a></li>', $q, $start, $z);
+	printf('<li><a href="/results.php?q=%s&start=%d&p=$scope">%d</a></li>', $q, $start, $z);
 	$start += $per_page;
 }
 echo '</ul></div>';

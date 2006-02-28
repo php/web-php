@@ -61,10 +61,9 @@ if (!empty($_FORM['pattern'])) {
             mirror_redirect("{$ml_url}l=phpdoc&s={$ucp}");
             
         case "bugdb" :
-            
             // Redirect to bug page in case of exact number
             if (preg_match("!^\\d+$!", $_FORM['pattern'])) {
-                mirror_redirect("http://bugs.php.net/{$_FORM['pattern']}");
+                mirror_redirect("http://bugs.php.net/{$ucp}");
             }
 
             // Redirect to bug search page in case of some other pattern
@@ -75,9 +74,11 @@ if (!empty($_FORM['pattern'])) {
                 );
             }
         
-        // Covers "wholesite", "manual" and any malicios targets
+        // Covers "wholesite", "manual" and any malicious targets
         default:
-            mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG");
+            $p = urlencode($_FORM['show']);
+            mirror_redirect($MYSITE . "results.php?q={$ucp}&l=$LANG&p=$p");
+            break;
     }
 }
 
@@ -129,13 +130,14 @@ else {
 <?php
 if (empty($_FORM['show'])) { $_FORM['show'] = 'quickref'; }
 $searchoptions = array(
-    "quickref"  => "function list",
-    "wholesite" => "whole site",
-    "manual"    => "online documentation [en]",
-    "bugdb"     => "bug database",
-    "maillist"  => "general mailing list",
-    "devlist"   => "developer mailing list",
-    "phpdoc"    => "documentation mailing list",
+    "quickref" => "function list",
+    "all"      => "all php.net sites",
+    "local"    => "this mirror only",
+    "manual"   => "online documentation [en]",
+    "bugdb"    => "bug database",
+    "maillist" => "general mailing list",
+    "devlist"  => "developer mailing list",
+    "phpdoc"   => "documentation mailing list",
 );
 
 // Print out an <option> for all search options
