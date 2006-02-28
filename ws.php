@@ -8,21 +8,23 @@ $q = urlencode($raw);
 $r = isset($_REQUEST['results']) ? (int)$_REQUEST['results'] : 10;
 $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
 $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang']) : 'en';
-$sites = array(  'all'=>'site=php.net',
-               'local'=>'site=www.php.net',
-                'news'=>'site=news.php.net',
-                'bugs'=>'site=bugs.php.net',
-                'pear'=>'site=pear.php.net',
-                'pecl'=>'site=pecl.php.net',
-               'talks'=>'site=talks.php.net',
+$sites = array( 'all'=>'php.net',
+                'local'=>'www.php.net',
+                'manual'=>'www.php.net',
+                'news'=>'news.php.net',
+                'bugs'=>'bugs.php.net',
+                'pear'=>'pear.php.net',
+                'pecl'=>'pecl.php.net',
+                'talks'=>'talks.php.net',
               );
+
 if(isset($sites[$_REQUEST['profile']])) {
   $scope = $_REQUEST['profile'];
 } else { 
   $scope = 'all';
 }
 
-$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&{$sites[$scope]}&language=$l&output=php";
+$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&site={$sites[$scope]}&language=$l&output=php";
 $data = @file_get_contents($request);
 list($version,$status_code,$msg) = explode(' ',$http_response_header[0], 3);
 if($status_code==200) echo $data;

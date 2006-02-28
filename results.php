@@ -19,10 +19,10 @@ $l = urlencode($l);
 $s = (int) $_GET['start'];
 $per_page = 15;
 
-$valid_profiles = array('all', 'local', 'news', 'bugs', 'pear', 'pecl', 'talks');
+$valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
 $scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
 
-$data = file_get_contents("http://www.php.net/ws.php?profile=$scope&q=$q&results=$per_page&start=$s");
+$data = file_get_contents("http://www.php.net/ws.php?profile=$scope&q=$q&lang=$l&results=$per_page&start=$s");
 $res = unserialize($data);
 
 // HTTP status line is passed on, signifies an error
