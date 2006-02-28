@@ -3,7 +3,8 @@ if(!$conf=apc_fetch('ws_config')) {
   include '/local/Web/ws.conf';
   apc_store('ws_config',$conf);
 }
-$q = urlencode($_REQUEST['q']);
+$raw = input_get(INPUT_GET, 'q', FILTER_UNSAFE_RAW);
+$q = urlencode($raw);
 $r = isset($_REQUEST['results']) ? (int)$_REQUEST['results'] : 10;
 $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
 $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang']) : 'en';
@@ -32,7 +33,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 try {
   $stmt = $dbh->prepare("INSERT INTO log (query,profile) VALUES (:query,:profile)");
-  $stmt->execute(array(':query'=>$q,':profile'=>$scope));
+  $stmt->execute(array(':query'=>$raw,':profile'=>$scope));
 } catch (PDOException $e) {
    
 }
