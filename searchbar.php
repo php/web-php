@@ -38,7 +38,7 @@ echo <<<SEARCHBAR_END
    <option value="quickref" selected="selected">function list</option>
    <option value="all"      >all php.net sites</option>
    <option value="local"    >this mirror only</option>
-   <option value="manual"   >online documentation [en]</option>
+   <option value="manual"   >online documentation</option>
    <option value="bugdb"    >bug database</option>
    <option value="news_archive">Site News Archive</option>
    <option value="changelogs">All Changelogs</option>
