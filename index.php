@@ -182,7 +182,7 @@ href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 <h1>NYPHPCon 2006</h1>
 <p>
  <span class="newsdate">[02-Feb-2006]</span>
-The <a href="http://www.nyphpcon.com">New York PHP Conference & Expo
+The <a href="http://www.nyphpcon.com">New York PHP Conference &amp; Expo
 2006</a> is taking place in New York City, at the historic New Yorker
 Hotel, June 14-16, 2006.  There will be three full days of sessions,
 tutorials, exhibits, and networking events. </p>
