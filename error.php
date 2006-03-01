@@ -246,6 +246,7 @@ $uri_aliases = array (
     "float"        => "language.types.float",
     "string"       => "language.types.string",
     "heredoc"      => "language.types.string",
+    "<<<"          => "language.types.string",
     "object"       => "language.types.object",
     "null"         => "language.types.null",
 
