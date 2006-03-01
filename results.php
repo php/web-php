@@ -17,7 +17,7 @@ $q = urlencode($q);
 $l = urlencode($l);
 
 $s = (int) $_GET['start'];
-$per_page = 15;
+$per_page = 10;
 
 $valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
 $scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
