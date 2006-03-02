@@ -147,7 +147,20 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+<?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
+<h1>php|tek 2006</h1>
+<p>
+ <span class="newsdate">[02-Mar-2006]</span>
+ The <a href="http://www.phparch.com/tek/">php|tek 2006 conference</a> will take place
+ in Orlando, Florida, April 25-28.
+</p>
+<p>
+ This year's speaker roster features many well-known PHP and open-source experts,
+ including Rasmus Lerdorf, IBM's Rod Smith and Zend's Andi Gutmans, speaking on a
+ variety of topics that highlight PHP's scalability, robustness and future.
+</p>
 
+<hr />
 <?php news_image("http://conf.phpquebec.com/en/conf2006/", "conference_php_quebec.gif", "PHP Quebec 2006"); ?>
 
 <h1>PHP Quebec 2006</h1>
