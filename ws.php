@@ -8,6 +8,7 @@ $q = urlencode($raw);
 $r = isset($_REQUEST['results']) ? (int)$_REQUEST['results'] : 10;
 $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
 $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang']) : 'en';
+$m = isset($_REQUEST['mirror']) ? htmlspecialchars($_REQUEST['mirror']) : '';
 $sites = array( 'all'=>'php.net',
                 'local'=>'www.php.net',
                 'manual'=>'www.php.net',
@@ -34,8 +35,8 @@ $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'
                                                                                          PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 try {
-  $stmt = $dbh->prepare("INSERT INTO log (query,profile) VALUES (:query,:profile)");
-  $stmt->execute(array(':query'=>$raw,':profile'=>$scope));
+  $stmt = $dbh->prepare("INSERT INTO log (query,profile,mirror) VALUES (:query,:profile,:mirror)");
+  $stmt->execute(array(':query'=>$raw,':profile'=>$scope,':mirror'=>$m));
 } catch (PDOException $e) {
    
 }
