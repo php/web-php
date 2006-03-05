@@ -62,9 +62,9 @@ function searchHistory()
         // Get pattern and show information from cookie
         option  = lastSearch.substr(0, lastSearch.indexOf(","));
         pattern = lastSearch.substr(lastSearch.indexOf(",") + 1);
-        
+
         // Set pattern in form
-        document.forms["topsearch"].pattern.value = pattern;
+        document.forms["topsearch"].pattern.value = unescape(pattern.replace(/\+/g," "));
         
         // Set the last selected search method in the dropdown
         for (var i = 0; i < document.forms["topsearch"].show.length; i++) {
