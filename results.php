@@ -133,7 +133,7 @@ for($z=1; $z < 11; $z++) {
 	if($start > $res['ResultSet']['totalResultsAvailable']) {
 		break;
 	}
-	printf('<li><a href="/results.php?q=%s&start=%d&p=%s">%d</a></li>', $q, $start, $scope, $z);
+	printf('<li><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $q, $start, $scope, $l, $z);
 	$start += $per_page;
 }
 echo '</ul></div>';
