@@ -268,6 +268,7 @@ $uri_aliases = array (
 
     "icap"         => "mcal", // mcal is the successor of icap
     "odbc"         => "uodbc", // BC
+    "_"            => "function.gettext",
 
     "class"        => "language.oop5.basic",
     "new"          => "language.oop5.basic",
