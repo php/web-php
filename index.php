@@ -177,7 +177,7 @@ Alshanetsky.
 <p>
 The conference will have three distinct tracks of session: Advanced 
 Techniques, Professional Development and Databases. With over 31 
-sessions, including workshops, the PHP Qu√©bec Conference is great opportunity 
+sessions, including workshops, the PHP Qu&eacute;bec Conference is great opportunity 
 to learn about the latest PHP techniques and professional development 
 techniques to help you build high quality PHP software. The conference will 
 also present the various storage solutions available such has †IBM DB2, 
@@ -185,7 +185,7 @@ PostgreSQL, SQLite and MySQL.
 </p>
 <p>
 Early bird pricing are available until march 3rd.<br />
-Learn more about this Learn more about this <a 
+Learn more about this <a 
 href="http://conf.phpquebec.com/en/conf2006/">exciting conference</a>.
 </p>
 
