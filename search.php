@@ -43,7 +43,10 @@ if (!empty($_FORM['pattern'])) {
     // Mailing list search base URL
     $ml_url = "http://marc.theaimsgroup.com/?r=1&w=2&q=b&";
     $ucp = urlencode($_FORM['pattern']);
-    
+
+    // Ugly one-off exception here because es.php.net blocks outbound connections   
+    if($MYSITE=='http://es.php.net/') $MYSITE = 'http://es2.php.net/'; 
+
     // Do redirections for external search engines
     switch ($_FORM['show']) {
 
