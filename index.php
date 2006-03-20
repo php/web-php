@@ -488,7 +488,7 @@ href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
  PHP Reference</a>, a handy guide to every function in PHP, inclusive
  of syntax, extension and description. It's a perfect companion
  for all your coding work, perfect for looking up function syntax
- in a pinch&mdash;and its convenient pocket size (5x8") makes it
+ in a pinch, and its convenient pocket size (5x8") makes it
  unobtrusive and easy to transport.
 </p>
 <p>
