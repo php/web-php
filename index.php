@@ -637,7 +637,7 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  To everyone that has helped to shape PHP into what it is today; from the
  people developing the core and extensions, documentors, script developers, bug
  reporters, beta testers, PHP application developers and even just people that
- are using PHP&mdash;<b>Thank you!</b>
+ are using PHP--<b>Thank you!</b>
 
 </p>
 
