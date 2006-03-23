@@ -17,6 +17,284 @@ site_header("News Archive - 2005");
 
 <hr />
 
+<?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
+
+<h1>php|tek 2006 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[01-Dec-2005]</span>
+ php|architect magazine is proud to announce
+ <a href="http://www.phparch.com/tek">php|tek 2006</a>, an exclusive three-day
+ conference (plus one day of exclusive in-depth seminars) dedicated to the
+ world of PHP-driven software development. This year's conference will take
+ place from April 26-28, 2006, in Orlando, Florida, with April 25th set aside
+ for a set of in-depth seminars.
+</p>
+<p>
+ Do you have unique insight into PHP? Have you written extensions, or
+ contributed to the core? Have you deployed PHP in a tough environment, or
+ scaled it to handle millions of hits per minute? Have you solved a unique
+ problem, and want to share your discovery? Perhaps you've become an expert
+ in a specific field? This year, our theme is
+ "<code>$build->deploy->scale();</code>", and if you're an expert on any of
+ these, php|architect wants <em>you</em> to speak at  php|tek.
+</p>
+<p>
+ For more information, please visit the
+ <a href="http://www.phparch.com/tek/tek_cfp.php">Call for Papers</a> page,
+ and submit your ideas. The deadline is December 21, 2005.
+</p>
+
+<hr />
+
+<h1>PHP 5.1.1 Released</h1>
+<p>
+ <span class="newsdate">[28-Nov-2005]</span>
+ The PHP Development Team would like to announce the immediate release of <a href="/downloads.php">PHP 5.1.1</a>.<br />
+ This is a regression correction release aimed at addressing several issues introduced by PHP 5.1.0, the core changes as follows: 
+<ul>
+<li>Native date class is withdrawn to prevent namespace conflict with PEAR's date package.</li>
+<li>Fixed fatal parse error when the last line of the script is a PHP comment.</li>
+<li>eval() hangs when the code being evaluated ends with a comment.</li>
+<li>Usage of \{$var} in PHP 5.1.0 resulted in the output of {$var} instead of the $var variable's value enclosed in {}.</li>
+<li>Fixed inconsistency in the format of PHP_AUTH_DIGEST between Apache 1 and 2 sapis.</li>
+<li>Improved safe_mode/open_basedir checks inside the cURL extension.</li>
+</ul>
+
+The complete details about all of the changes can be found in the
+<a href="/ChangeLog-5.php#5.1.1">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
+<h1>PHP 5.1.0 Released</h1>
+<p>
+ <span class="newsdate">[24-Nov-2005]</span>
+ The PHP development team is proud to announce the release of <a href="/downloads.php#v5">PHP 5.1.0</a>.<br />
+ Some of the key features of PHP 5.1.0 include:
+<ul>
+<li>A complete rewrite of date handling code, with improved timezone support.
+<li>Significant performance improvements compared to PHP 5.0.X.
+<li>PDO extension is now enabled by default.
+<li>Over 30 new functions in various extensions and built-in functionality.
+<li>Bundled libraries, PCRE and SQLite upgraded to latest versions.
+<li>Over 400 various bug fixes.
+<li>PEAR upgraded to version 1.4.5
+</ul>
+
+In addition to new features, this release includes a number of important
+security fixes and we recommend that all users of PHP 5.0 and early
+adopters of PHP 5.1 betas upgrade to this release as soon as possible.
+The complete details about all of the changes can be found in the
+<a href="/ChangeLog-5.php#5.1.0">PHP 5 ChangeLog</a> and an
+<a href="/README_UPGRADE_51.php">upgrading guide</a> is available as well.
+</p>
+
+<hr />
+
+<h1>PHP 4.4.1 Released</h1>
+<p>
+ <span class="newsdate">[31-Oct-2005]</span>
+ PHP 4.4.1 is now <a href="/downloads.php#v4">available for download</a>.
+ This version is a maintenance release, that contains numerous bug fixes,
+ including a number of security fixes related to the overwriting of the GLOBALS
+ array. All users of PHP 4.3 and 4.4 are encouraged to upgrade to this version.
+</p>
+<p>
+ The full list of changes in PHP 4.4.1 is available in the
+ <a href="/ChangeLog-4.php#4.4.1">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
+<?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP Québec"); ?>
+
+<h1>PHP Québec 2006: call for speakers</h1>
+<p>
+ <span class="newsdate">[18-Oct-2005]</span>
+<a href="http://conf.phpquebec.com/en/conf2006/">PHP Québec</a> is pleased to 
+announce the 2006 PHP Québec conference, which will be held between March, 29th
+and 31th 2006. We are looking for the best speakers, willing to share their 
+experience and skills with professional PHP developers from eastern Canada 
+and USA. PHP Québec 2006 features 3 distinct tracks: <ul>
+<li>Technical PHP, covering in deep details of PHP techniques. </li>
+<li>Professional Development, featuring tools and development methodologies to 
+increase productivity.</li>
+<li>Databases, covers different databases that can be used with PHP.</li></ul>
+Sessions will be held in French or English. For more information, see the <a 
+href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
+</p>
+
+<hr />
+
+<?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
+
+<h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
+<p>
+ <span class="newsdate">[05-Oct-2005]</span>
+ The French <a href="http://www.afup.org/">AFUP association</a>
+ is proud to announce the fourth annual PHP meeting in Paris,
+ on November 9th and 10th, 2005. Developers and managers will
+ gather to meet Rasmus Lerdorf, Wez Furlong and other prominent community experts
+ for two days of sessions, packed with
+ <a href="http://www.afup.org/pages/forumphp/">enterprise solutions and advanced techniques</a>
+ (in French).
+</p>
+
+<hr />
+
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
+<h1>Zend/PHP Conference &amp; Expo 2005 Program Announced</h1>
+<p>
+ <span class="newsdate">[20-Sep-2005]</span>
+ The final program for the Zend / PHP Conference (October 18-21, 2005 in
+ San Francisco) 
+ <a href="http://zend.kbconferences.com/speakerschedule.php">is now available</a>.
+ The conference theme is "Power Your
+ Business With PHP" and features keynote addresses from Marc Andreessen,
+ Google VP Adam Bosworth, and executives from IBM, Oracle &amp; Intel.
+ Featured speakers include Michael Radwin of Yahoo!, Adam Trachtenberg
+ of eBay, Joyce Park of Renkoo.com, George Schlossnagle &amp; Wez Furlong
+ of OmniTI, and, of course, Zeev Suraski &amp; Andi Gutmans.
+</p>
+<p>
+ In addition to keynotes and sessions, the conference also features tutorials,
+ certification, a party continuing the celebration of the 10th Anniversary of
+ PHP, and an exhibit hall including companies like Zend, IBM, Oracle,
+ Intel, MySQL, Microsoft, eBay/PayPal, Emic Networks, ActiveGrid, ActiveState
+ and SpikeSource.  Registration discounts are still available.
+</p>
+
+<hr />
+
+<?php news_image("http://www.phpconference.com/", "intconf2005fall.gif", "International PHP Conference 2005"); ?>
+<h1>International PHP Conference 2005 - Program available</h1>
+<p>
+ <span class="newsdate">[12-Aug-2005]</span>
+ The program for the <a href="http://www.phpconference.com/">International PHP
+ Conference</a> is now available. The conference that was one of the first
+ events on PHP will take place again in Frankfurt from November 6-9, 2005
+ and offers two days with pre conference tutorials as well as two days
+ packed with sessions from well known speakers such as Derick Rethans,
+ Zak Greant, Ilia Alshanetsky and many more.
+</p>
+<p>
+ A new feature has been added to this year's conference: the Management Day
+ where project managers and consultants shine the light on using PHP in
+ enterprise-level projects. Conference attendees, including software
+ architects, PHP developers, project leaders, and programmers can gain
+ strategic information on how to realize their IT projects on-time,
+ in-budget. The Management Day is <em>free of charge</em> for attendees
+ registering prior to September 30, 2005.
+</p>
+<p>
+ Early Bird Special discounts are available as well until this date, and
+ special discounts for students and private persons.
+</p>
+
+<hr />
+
+<?php news_image("http://www.phparch.com/phpworks", "php-web-works-logo.gif", "php|works and web|works 2005"); ?>
+<h1>web|works and php|works 2005 Program Online</h1>
+<p>
+ <span class="newsdate">[16-Jul-2005]</span>
+ The <a href="http://www.phparch.com/works/schedule.php">full program</a> of
+ <a href="http://www.phparch.com/works">php/web|works 2005</a>, a three-day
+ conference on PHP and web technologies is available. The event will take
+ place in Toronto, Canada, the birthplace of PHP, between September 14 and
+ September 16. This year's speakers include Rasmus Lerdorf, Derick
+ Rethans, Wez Furlong, Ilia Alshanetsky and many more.
+</p>
+<p>
+ An early-bird <a href="https://www.phparch.com/works/signup.php">special
+ discount</a> is in effect until August 1st, and special pricing is
+ available for students, member of academia and non-profit organizations.
+</p>
+
+<hr />
+
+<h1>PHP 4.4.0 Released</h1>
+<p>
+ <span class="newsdate">[11-Jul-2005]</span>
+ The PHP Development Team would like to announce the immediate release of 
+ <a href="/downloads.php#v4">PHP 4.4.0</a>. 
+ This is a maintenance release that addresses a serious memory corruption
+ problem within PHP concerning references. If references were used in a wrong
+ way, PHP could create memory corruptions which would not always surface or
+ be visible. The increased middle digit was required because the fix that
+ corrected the problem with references changed PHP's internal API, breaking
+ binary compatibility with the PHP 4.3.* series. PHP 4.4.0 does not have
+ any new features, and is solely a bugfix release; however, it is strongly
+ recommended that you read the more detailed release announcement
+ <a href="release_4_4_0.php">available here</a> prior to upgrading your
+ PHP 4 installation.
+</p>
+<p>
+For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
+<a href="/ChangeLog-4.php#4.4.0">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
+<h1>PEAR XML_RPC Vulnerability and PHP 4.4.0RC2 release</h1>
+<p>
+ <span class="newsdate">[01-Jul-2005]</span>
+ An easily exploitable security issue was discovered in PEAR XML_RPC &lt;=
+ 1.3.0.  We recommend that users of this PEAR class immediately upgrade to the
+ latest version with:
+</p>
+<pre>
+ pear upgrade XML_RPC
+</pre>
+<p>
+ The same security problem exists in many other XML RPC implementations,
+ please check if the installed applications that you use might have a
+ similar problem.
+</p>
+<p>
+ The new PEAR XML_RPC package is also bundled with the second release
+ candidation of PHP 4.4.0RC2. Besides this new PEAR package there are two
+ minor issues fixed since PHP 4.4.0RC1. As the improved reference support
+ in PHP 4.4 might show as notices and warnings in your existing
+ applications - in cases where PHP formerly just silently ignored this
+ and often causing memory corruptions - we also recommend to test PHP
+ 4.4.0RC2 with your applications. The final release is planned for July
+ 11th. PHP 4.4.0RC2 can be found <a href="http://qa.php.net/~derick/">here</a>.
+</p>
+
+<hr />
+
+<?php news_image("http://zend.kbconferences.com/", "zendphp_conf.gif", "Zend/PHP Conference &amp; Expo"); ?>
+<h1>Zend/PHP Conference 2005</h1>
+<p>
+ <span class="newsdate">[23-Jun-2005]</span>
+ The <a href="http://zend.kbconferences.com/">Zend/PHP Conference</a>
+ is taking place at the Hyatt Regency San Francisco
+ Airport on October 18-21, 2005. The theme of the conference will be
+ "Power Your Business With PHP" and will feature sessions in the
+ following four tracks: The Business Case for PHP; Developing,
+ Deploying and Managing Large-Scale PHP Applications; Integrating PHP
+ with the Enterprise (including Web Services and XML); and PHP
+ Resources: Tools, Libraries and Techniquies.  Early registration
+ discounts are available until August 15, 2005.
+</p>
+<hr />
+
+<?php news_image("http://www.php.net", "php10thbd.jpg", "PHP 10th anniversary cake"); ?>
+<h1>10 years since PHP 1.0 was released!</h1>
+<p>
+ <span class="newsdate">[08-Jun-2005]</span> 
+ <a href="http://groups.google.ch/groups?selm=3r7pgp%24aa1%40ionews.io.org&amp;oe=UTF-8&amp;output=gplain">It
+ has been 10 years since Rasmus released the first version of PHP</a>.
+ To everyone that has helped to shape PHP into what it is today; from the
+ people developing the core and extensions, documentors, script developers, bug
+ reporters, beta testers, PHP application developers and even just people that
+ are using PHP--<b>Thank you!</b>
+
+</p>
+
+<hr />
+
+
 <h1>CfP PHP Track - (AUUG) Annual Conference</h1>
 <p>
  <span class="newsdate">[20-May-2005]</span>
