@@ -9,18 +9,19 @@ if ($MQ) {
 	$q = stripslashes($_GET['q']); //query
 	$l = stripslashes($_GET['l']); // language
 } else { 
-	$q = $_GET['q']; 
-	$l = $_GET['l'];
+	$q = isset($_GET['q']) ? $_GET['q'] : ''; 
+	$l = isset($_GET['l']) ? $_GET['l'] : 'en';
 }
 
 $q = urlencode($q);
 $l = urlencode($l);
 
-$s = (int) $_GET['start'];
+$s = isset($_GET['start']) ? (int)$_GET['start'] : 1;
+$profile = isset($_GET['p']) ? $_GET['p'] : 'all';
 $per_page = 10;
 
 $valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
-$scope = in_array($_GET['p'], $valid_profiles) ? $_GET['p'] : 'all';
+$scope = in_array($profile, $valid_profiles) ? $profile : 'all';
 $srch_host = "www.php.net";
 $srch_rqst = "/ws.php?profile=$scope&q=$q&lang=$l&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://".$srch_host.$srch_rqst;
