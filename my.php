@@ -206,7 +206,9 @@ if ($type === MYPHPNET_URL_MANUAL) {
  Whenever you start a search on a PHP.net page, a list of suggested function
  names starting with the letters you typed in are suggested. If your browser
  has problems with this functionality or you are not interested in these
- suggestions, you can turn them off here.
+ suggestions, you can turn them off here. <strong>Note that this feature is
+ currently only available on the <a href="/search">search page itself</a>,
+ not on any of the other pages.</strong>
 </p>
 
 <div class="indent">
