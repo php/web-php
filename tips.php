@@ -24,36 +24,56 @@ function tip_title($title, $author = '', $date = '')
 <h1>Quick Reference Tips</h1>
 
 <p>
- On this page, you can find many neat tips and tricks to optimize
- your usage of our quick reference features. All of these shortcuts
- display pages in your own preferred language, as detected by the
- PHP site. For more information on language selection, see
- <a href="/my.php">the My PHP.net page</a>.
+ On this page, you can find many neat tips and tricks to look up
+ information about PHP functions and language constructs.
 </p>
 
 <p>
  Most of the tips here utilize PHP.net URL shortcuts, so they allow you
  more then just function lookups. For more information on what is possible
  with our shortcuts, see the <a href="/urlhowto.php">URL Howto page</a>.
+ These shortcuts display pages in your own preferred language, as detected
+ by the PHP site. For more information on language selection, see
+ <a href="/my.php">the My PHP.net page</a>.
 </p>
  
 <p>
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
-<?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '27-Jun-2004');?>
+<?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '02-Apr-2006');?>
 
 <p>
- Simon Ganiere
- <a href="http://www.simonganiere.ch/modules/sections/index.php?op=viewarticle&amp;artid=2">created
- a widget</a> which provides a simple search field to the PHP.net
- function lookup search. The Apple website also has a <a
- href="http://www.apple.com/downloads/dashboard/developer/phpsearch.html">PHP.net
- Search</a> and a <a
- href="http://www.apple.com/downloads/dashboard/developer/phpquickreferencewidget.html">PHP
- Quick Reference</a> widget listed. Havard Eide created a quick <a
- href="http://eide.org/?epc=osx&display=dashboard">local function lookup widget</a>.
+ There are some options for
+ <a href="http://www.apple.com/macosx/features/dashboard/">Apple Dashboard</a> users:
 </p>
+<ul>
+ <li>
+  Andrew Hedges created the <a href="http://andrew.hedges.name/widgets/#phpfr">PHP
+  Function Reference widget</a>, which ships with a copy of the PHP Manual, and
+  includes additional functionality, such as a favourites list and an interactive
+  <code>date()</code> formatter.
+ </li>
+ <li>
+  Claudio Procida's <a href="http://www.apple.com/downloads/dashboard/developer/phpquickreferencewidget.html">PHPQuickReference widget</a> provides a custom
+  view of the online PHP documentation with some added features.
+ </li>
+ <li>
+  Havard Eide <a href="http://eide.org/view/osx/dashboard">implemented the
+  Dashboard Widget</a> version of <a href="http://wiki.cc/php/Epc_phpm">phpm</a>,
+  providing function lookups.
+ </li>
+ <li>
+  Simon Ganiere created the <a href="http://www.simonganiere.ch/?page_id=39">PHP
+  Manual widget</a>, which provides a simple search field to the PHP.net
+  function lookup search.
+ </li>
+ <li>
+  Nathan Bolender also created a simple <a
+  href="http://www.apple.com/downloads/dashboard/developer/phpsearch.html">PHP.net
+  Search widget</a>, available from the Apple website.
+ </li>
+</ul>
 
 <?php tip_title('Search from the Safari Search Bar', 'Gabor Hojtsy', '19-Jan-2004');?>
 
