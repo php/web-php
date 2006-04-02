@@ -331,41 +331,6 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2
 
 <hr />
 
-<h1>Get Your Pocket PHP Reference and Help Hurricane Relief</h1>
-<p>
- <span class="newsdate">[08-Sep-2005]</span>
- php|architect has announced the publication of
- <a href="http://www.phparch.com/rcrs">php|architect's Pocket
- PHP Reference</a>, a handy guide to every function in PHP, inclusive
- of syntax, extension and description. It's a perfect companion
- for all your coding work, perfect for looking up function syntax
- in a pinch, and its convenient pocket size (5x8") makes it
- unobtrusive and easy to transport.
-</p>
-<p>
- What's more, however, buying this book will help those affected
- by the recent hurricane disaster: all profits from the sale of
- the Pocket Guide will be donated entirely to the Canadian Red
- Cross' Katrina Relief Fund.
-</p>
-
-<hr />
-
-<h1>PHP 5.0.5 Released</h1>
-<p>
- <span class="newsdate">[06-Sep-2005]</span>
- PHP 5.0.5 is now <a href="/downloads.php#v5">available for download</a>.
- This version is a maintenance release, that contains numerous bug fixes, including
- security fixes to vulnerabilities found in the XMLRPC package.  All users of PHP
- 5.0 are encouraged to upgrade to this version.
-</p>
-<p>
- The full list of changes in PHP 5.0.5 is available in the
- <a href="/ChangeLog-5.php#5.0.5">PHP 5 ChangeLog</a>.
-</p>
-
-<hr />
-
 <p class="center"><a href="/news-2005.php">News Archive</a></p>
 
 <?php commonFooter(); ?>

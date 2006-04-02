@@ -19,33 +19,6 @@ site_header("News Archive - 2005");
 
 <?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
 
-<h1>php|tek 2006 - Call for Papers</h1>
-<p>
- <span class="newsdate">[01-Dec-2005]</span>
- php|architect magazine is proud to announce
- <a href="http://www.phparch.com/tek">php|tek 2006</a>, an exclusive three-day
- conference (plus one day of exclusive in-depth seminars) dedicated to the
- world of PHP-driven software development. This year's conference will take
- place from April 26-28, 2006, in Orlando, Florida, with April 25th set aside
- for a set of in-depth seminars.
-</p>
-<p>
- Do you have unique insight into PHP? Have you written extensions, or
- contributed to the core? Have you deployed PHP in a tough environment, or
- scaled it to handle millions of hits per minute? Have you solved a unique
- problem, and want to share your discovery? Perhaps you've become an expert
- in a specific field? This year, our theme is
- "<code>$build->deploy->scale();</code>", and if you're an expert on any of
- these, php|architect wants <em>you</em> to speak at  php|tek.
-</p>
-<p>
- For more information, please visit the
- <a href="http://www.phparch.com/tek/tek_cfp.php">Call for Papers</a> page,
- and submit your ideas. The deadline is December 21, 2005.
-</p>
-
-<hr />
-
 <h1>PHP 5.1.1 Released</h1>
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
@@ -106,26 +79,6 @@ The complete details about all of the changes can be found in the
 
 <hr />
 
-<?php news_image("http://conf.phpquebec.com/en/conf2006/appel", "conference_php_quebec.gif", "PHP Québec"); ?>
-
-<h1>PHP Québec 2006: call for speakers</h1>
-<p>
- <span class="newsdate">[18-Oct-2005]</span>
-<a href="http://conf.phpquebec.com/en/conf2006/">PHP Québec</a> is pleased to 
-announce the 2006 PHP Québec conference, which will be held between March, 29th
-and 31th 2006. We are looking for the best speakers, willing to share their 
-experience and skills with professional PHP developers from eastern Canada 
-and USA. PHP Québec 2006 features 3 distinct tracks: <ul>
-<li>Technical PHP, covering in deep details of PHP techniques. </li>
-<li>Professional Development, featuring tools and development methodologies to 
-increase productivity.</li>
-<li>Databases, covers different databases that can be used with PHP.</li></ul>
-Sessions will be held in French or English. For more information, see the <a 
-href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
-</p>
-
-<hr />
-
 <?php news_image("http://www.afup.org/pages/forumphp/", "afup2005.jpg", "Forum PHP"); ?>
 
 <h1>Forum PHP in Paris, November 9 &amp; 10th, 2005</h1>
@@ -162,6 +115,41 @@ href="http://conf.phpquebec.com/en/conf2006/appel">PHP  Québec</a> website.
  PHP, and an exhibit hall including companies like Zend, IBM, Oracle,
  Intel, MySQL, Microsoft, eBay/PayPal, Emic Networks, ActiveGrid, ActiveState
  and SpikeSource.  Registration discounts are still available.
+</p>
+
+<hr />
+
+<h1>Get Your Pocket PHP Reference and Help Hurricane Relief</h1>
+<p>
+ <span class="newsdate">[08-Sep-2005]</span>
+ php|architect has announced the publication of
+ <a href="http://www.phparch.com/rcrs">php|architect's Pocket
+ PHP Reference</a>, a handy guide to every function in PHP, inclusive
+ of syntax, extension and description. It's a perfect companion
+ for all your coding work, perfect for looking up function syntax
+ in a pinch, and its convenient pocket size (5x8") makes it
+ unobtrusive and easy to transport.
+</p>
+<p>
+ What's more, however, buying this book will help those affected
+ by the recent hurricane disaster: all profits from the sale of
+ the Pocket Guide will be donated entirely to the Canadian Red
+ Cross' Katrina Relief Fund.
+</p>
+
+<hr />
+
+<h1>PHP 5.0.5 Released</h1>
+<p>
+ <span class="newsdate">[06-Sep-2005]</span>
+ PHP 5.0.5 is now <a href="/downloads.php#v5">available for download</a>.
+ This version is a maintenance release, that contains numerous bug fixes, including
+ security fixes to vulnerabilities found in the XMLRPC package.  All users of PHP
+ 5.0 are encouraged to upgrade to this version.
+</p>
+<p>
+ The full list of changes in PHP 5.0.5 is available in the
+ <a href="/ChangeLog-5.php#5.0.5">PHP 5 ChangeLog</a>.
 </p>
 
 <hr />
@@ -293,7 +281,6 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 </p>
 
 <hr />
-
 
 <h1>CfP PHP Track - (AUUG) Annual Conference</h1>
 <p>
