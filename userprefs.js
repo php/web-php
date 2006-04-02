@@ -1,7 +1,8 @@
 // Default document onload function
 function runOnLoad()
 {
-    searchHistory();
+    // Disabled because of complaints
+    // searchHistory();
     resizeColumnsIE();
 }
 
