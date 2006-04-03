@@ -181,8 +181,6 @@ if (i2c_valid_country()) {
  to a documentation search, or a function list lookup, depending on
  your choice. The default is a function list lookup, as most of
  the URL shortcut users try to access function documentation pages.
- <em>Note that documentation searches are currently [temporarily]
- done through Google.</em>
 </p>
 
 <div class="indent">
