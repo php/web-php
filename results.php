@@ -16,7 +16,7 @@ if ($MQ) {
 $q = urlencode($q);
 $l = urlencode($l);
 
-$s = isset($_GET['start']) ? (int)$_GET['start'] : 1;
+$s = (isset($_GET['start'])&&$_GET['start']!=0) ? (int)$_GET['start'] : 1;
 $profile = isset($_GET['p']) ? $_GET['p'] : 'all';
 $per_page = 10;
 
@@ -67,8 +67,8 @@ if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   exit;  
 }
 
-$start_result = ($s == 0 ? 1 : $s);
-$end_result = $s + $res['ResultSet']['totalResultsReturned'] - 1;
+$start_result = $s + ($s<2?0:1);
+$end_result = $s + $res['ResultSet']['totalResultsReturned'] - ($s<2?1:0);
 
 $results_count = ($res['ResultSet']['totalResultsAvailable'] < 100 ? $res['ResultSet']['totalResultsAvailable'] : 'more than 100');
 
