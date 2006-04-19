@@ -68,7 +68,7 @@ if ($res['ResultSet']['totalResultsAvailable'] == 0) {
 }
 
 $start_result = ($s == 0 ? 1 : $s);
-$end_result = $s + $res['ResultSet']['totalResultsReturned'];
+$end_result = $s + $res['ResultSet']['totalResultsReturned'] - 1;
 
 $results_count = ($res['ResultSet']['totalResultsAvailable'] < 100 ? $res['ResultSet']['totalResultsAvailable'] : 'more than 100');
 
