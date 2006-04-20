@@ -177,6 +177,12 @@ else { ?>
  rejected by one of the editors.
 </p>
 
+<p>
+ Your IP Address will be logged with the submitted note and made public on the
+ PHP manual user notes mailing list. The IP address is logged as part of the
+ notes moderation process, and won't be shown within the PHP manual itself.
+</p>
+
 <ul>
  <li>
   If you are trying to <a href="http://bugs.php.net/">report a
