@@ -147,6 +147,61 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
+<h1>PHP at FrOSCon Call for Papers</h1>
+<p>
+ <span class="newsdate">[24-Apr-2006]</span>
+ The faculty for Computer Science of the college of higher education
+ Bonn-Rhein-Sieg celebrates the first conference about free software in
+ cooperation with the LUUSA and the <a href="http://froscon.de/">FrOSCon
+ e.V. 2006</a>. The event takes place on June 24th/25th in Bonn, Germany
+ and is organized completely free and open.
+</p>
+<p>
+ The PHP user groups Köln/Bonn and Dortmund take part in the conference
+ and organize a professional PHP track for both days. The
+ <a href="http://froscon.phpugdo.de/">call for papers</a>
+ is currently open and every interesting talk is highly appreciated.
+</p>
+
+<h1>PHP Vikinger</h1>
+<p>
+ <span class="newsdate">[24-Apr-2006]</span>
+ The <a href="http://phpvikinger.org/">PHP Vikinger</a> is a community-driven
+ PHP event that will be held in
+ <a href="http://en.wikipedia.org/wiki/Skien">Skien, Norway</a>
+ from June 24th to 25th. Like the famous
+ <a href="http://en.wikipedia.org/wiki/Foo_Camp">Foo Camp</a> and
+ <a href="http://en.wikipedia.org/wiki/Bar_Camp">Bar Camp</a>, the people
+ who attend get to choose and present the sessions at the event.</p>
+</p>
+<p>
+ The event is meant to be affordable: registration is 20 Euros, and
+ simple food and a place to sleep are provided for both days of the
+ event. The major expense for most attendees will be the cost of
+ traveling to Norway. 50
+ <a href="http://zak.greant.com/php-vikinger-invitations-emailed">invitations</a>
+ have been sent to various PEAR and PHP contributors. General
+ registration for the event opens on May 1st.
+</p>
+
+<h1>International PHP Conference 2006 Call for Papers</h1>
+<p>
+ <span class="newsdate">[24-Apr-2006]</span>
+ The <a href="http://input.entwickler.com/phpconference">Call for Papers for
+ the International PHP Conference 2006</a>, 5th to 8th November 2009 at
+ Frankfurt/Main Germany, has been started. The Conference features two days
+ full with six hours PowerWorkshops and two days main conference with sessions.
+</p>
+<p>
+ The main focus of the conference will be Security through an own security
+ track. Like last year, we'll provide a Management Day for businesses
+ utilizing PHP or evaluating PHP.
+</p>
+<p>
+ The Call for Papers will end at April, 30th. 
+</p>
+
 <?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
 <h1>php|tek 2006</h1>
 <p>
