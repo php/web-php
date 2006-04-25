@@ -17,8 +17,6 @@ site_header("News Archive - 2005");
 
 <hr />
 
-<?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
-
 <h1>PHP 5.1.1 Released</h1>
 <p>
  <span class="newsdate">[28-Nov-2005]</span>
