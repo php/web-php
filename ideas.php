@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'deas.php';
+$_SERVER['BASE_PAGE'] = 'ideas.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("SoC Ideas");
 ?>
@@ -12,6 +12,19 @@ site_header("SoC Ideas");
 
 <ul>
  <li>Unicode conversion of all internal functions for PHP 6</li>
+</ul>
+
+<a name="qa"></a>
+<h4>Quality Assurance</h4>
+
+<ul>
+ <li>
+  Develop the <a href="http://gcov.php.net">gcov.php.net</a> site (improve usability, send automatic e-mails
+  to developers on new regression or memory leak, enable site to receive and display data from multiple
+  sources,...). Some ideas/code: <a href="http://cvs.php.net/viewcvs.cgi/php-gcov-web/">[1]</a>
+  <a href="http://mega.ist.utl.pt/~ncpl/phptest/">[2]</a>
+  <a href="http://mega.ist.utl.pt/~ncpl/cvs/viewcvs.cgi/phpqa/">[3]</a>
+ </li>
 </ul>
 
 <a name="pear"></a>
@@ -30,7 +43,7 @@ site_header("SoC Ideas");
 </ul>
 
 <a name="docs"></a>
-<h4>Documentation</h4>
+<h4>Documentation / <a href="http://wiki.phpdoc.info/LiveDocs">Livedocs</a></h4>
 
 <ul>
  <li>New indexer for Livedocs</li>
