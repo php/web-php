@@ -42,8 +42,8 @@ td.quicksearch {
 /* Horizontal delimiter defaults */
 hr {
     border: 0px;
-    color: black;
-    background-color: black;
+    color: #b1b1b1;
+    background-color: #b1b1b1;
     height: 1px;
 }
 

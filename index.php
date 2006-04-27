@@ -164,6 +164,7 @@ commonHeader("Hypertext Preprocessor");
  is currently open and every interesting talk is highly appreciated.
 </p>
 
+<hr />
 <h1>PHP Vikinger</h1>
 <p>
  <span class="newsdate">[24-Apr-2006]</span>
@@ -185,6 +186,7 @@ commonHeader("Hypertext Preprocessor");
  registration for the event opens on May 1st.
 </p>
 
+<hr />
 <h1>International PHP Conference 2006 Call for Papers</h1>
 <p>
  <span class="newsdate">[24-Apr-2006]</span>
@@ -202,6 +204,7 @@ commonHeader("Hypertext Preprocessor");
  The Call for Papers will end at April, 30th. 
 </p>
 
+<hr />
 <?php news_image("http://www.phparch.com/tek/", "php_tek_2006.gif", "php|tek 2006"); ?>
 <h1>php|tek 2006</h1>
 <p>
@@ -273,8 +276,6 @@ discount is available until March 1st</a>.
 </p>
 
 <hr />
-
-
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
 <h1>Third Bulgarian PHP Conference</h1>
@@ -325,7 +326,6 @@ discount is available until March 1st</a>.
 </p>
 
 <hr />
-
 <?php news_image("http://www.phpconference.co.uk/", "ukphp2006.png", "UK PHP Conference 2006"); ?>
 
 <h1>UK PHP Conference 2006</h1>
@@ -340,7 +340,6 @@ discount is available until March 1st</a>.
 </p>
 
 <hr />
-
 <h1>PHP 4.4.2 Released</h1>
 <p>
  <span class="newsdate">[13-Jan-2006]</span>
@@ -348,7 +347,7 @@ discount is available until March 1st</a>.
  This release address a few small security issues, and also corrects some
  regressions that occurred in PHP 4.4.1.  All PHP 4 users are encouraged to
  upgrade to this release. Some of the key changes of PHP 4.4.2 include:
-
+</p>
 <ul>
 <li>HTTP Response Splitting has been addressed in the header() function.</li>
 <li>An XSS problem inside the error reporting functionality has been removed.</li>
@@ -356,13 +355,12 @@ discount is available until March 1st</a>.
 <li>A regression with the key() and current() functions have been fixed.</li>
 <li>Over 30 various bug fixes.</li>
 </ul>
-
+<p>
 Further details about this release can be found in the <a href="/release_4_4_2.php">release announcement</a> 
 and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2">PHP 4 ChangeLog</a>.
 </p>
 
 <hr />
-
 <h1>PHP 5.1.2 Released</h1>
 <p>
  <span class="newsdate">[12-Jan-2006]</span>
@@ -370,7 +368,7 @@ and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2
  This release combines small feature enhancements with a fair number of
  bug fixes and addresses three security issues. All PHP 5 users are encouraged to
  upgrade to this release. Some of the key changes of PHP 5.1.2 include:
-
+</p>
 <ul>
 <li>HTTP Response Splitting has been addressed in ext/session and in the header() function.</li>
 <li>Fixed format string vulnerability in ext/mysqli.</li>
@@ -379,7 +377,7 @@ and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2
 <li>Upgraded OCI8 extension.</li>
 <li>Over 85 various bug fixes.</li>
 </ul>
-
+<p>
 Further details about this release can be found in the <a href="/release_5_1_2.php">release announcement</a> 
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
