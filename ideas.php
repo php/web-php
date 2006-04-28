@@ -40,6 +40,8 @@ site_header("SoC Ideas");
 <ul>
  <li>Opcode optimizer for APC</li>
  <li>PHP Aspect rewrite</li>
+ <li>Transaction Manager - Possible mentor Andi</li>
+ <li>OCR Extension - Possible mentor Andi</li>
 </ul>
 
 <a name="docs"></a>
