@@ -201,7 +201,7 @@ commonHeader("Hypertext Preprocessor");
  utilizing PHP or evaluating PHP.
 </p>
 <p>
- The Call for Papers will end at April, 30th. 
+ The Call for Papers will end at May, 21th. 
 </p>
 
 <hr />
