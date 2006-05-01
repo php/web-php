@@ -147,16 +147,22 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
 <h1>Summer of Code</h1>
 <p>
-Proposals are now being accepted for <a href="http://code.google.com/summerofcode.html">Google's Summer of Code program</a>.
-If you <a href="http://code.google.com/soc/studentfaq.html#8">qualify</a> and you are interested in working on a 
-PHP-related project this summer, please consider applying.  
-
-We have listed a couple of <a href="/ideas.php">ideas</a>, but we would encourage you to submit 
-a proposal for any part of PHP you are interested in.  If your project is accepted we will 
-match you up with a mentor and try to provide you with as much support as possible.  To get
-started, read the <a href="http://code.google.com/soc/studentfaq.html#21">FAQ</a>.
+ <span class="newsdate">[01-May-2006]</span>
+ Proposals are now being accepted for
+ <a href="http://code.google.com/summerofcode.html">Google's
+ Summer of Code program</a>. If you
+ <a href="http://code.google.com/soc/studentfaq.html#8">qualify</a>
+ and you are interested in working on a PHP-related project this
+ summer, please consider applying. We have listed a couple of
+ <a href="/ideas.php">ideas</a>, but we would encourage you to
+ submit a proposal for any part of PHP you are interested in.
+ If your project is accepted we will match you up with a mentor
+ and try to provide you with as much support as possible. To
+ get started, read the
+ <a href="http://code.google.com/soc/studentfaq.html#21">FAQ</a>.
 </p>
 
 <hr />
