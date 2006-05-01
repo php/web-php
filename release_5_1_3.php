@@ -8,9 +8,8 @@ site_header("PHP 5.1.3 Release Announcement");
 <h1>PHP 5.1.3. Release Announcement</h1>
 <p>
 The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.3</a>.
-This release combines small feature enhancements with a large number of
-bug fixes including some security issues. All PHP users are encouraged to
-upgrade to this release as soon as possible.
+This release combines small number of feature enhancements with a significant amount of bug fixes and resolves a number of security issues.
+All PHP users are encouraged to upgrade to this release as soon as possible.
 </p>
 
 <p>

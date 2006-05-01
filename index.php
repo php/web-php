@@ -152,9 +152,9 @@ commonHeader("Hypertext Preprocessor");
 <p>
  <span class="newsdate">[01-May-2006]</span>
  The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.3</a>.
- This release combines small feature enhancements with a large number of
- bug fixes including some security issues. All PHP users are encouraged to
- upgrade to this release as soon as possible. Some of the key changes of PHP 5.1.3 include:
+ This release combines small number of feature enhancements with a significant amount of bug fixes and resolves a number of security issues.
+ All PHP users are encouraged to upgrade to this release as soon as possible.
+ Some of the key changes of PHP 5.1.3 include:
 </p>
 <ul>
 <li>Disallow certain characters in session names.</li>
