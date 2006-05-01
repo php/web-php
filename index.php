@@ -148,6 +148,37 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1.3 Released</h1>
+<p>
+ <span class="newsdate">[01-May-2006]</span>
+ The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.3</a>.
+ This release combines small feature enhancements with a large number of
+ bug fixes including some security issues. All PHP users are encouraged to
+ upgrade to this release as soon as possible. Some of the key changes of PHP 5.1.3 include:
+</p>
+<ul>
+<li>Disallow certain characters in session names.</li>
+<li>Fixed a buffer overflow inside the wordwrap() function.</li>
+<li>Prevent jumps to parent directory via the 2nd parameter of the tempnam() function.</li>
+<li>Enforce safe_mode for the source parameter of the copy() function.</li>
+<li>Fixed cross-site scripting inside the phpinfo() function.</li>
+<li>Fixed offset/length parameter validation inside the substr_compare() function.</li>
+<li>Fixed a heap corruption inside the session extension.</li>
+<li>Fixed a bug that would allow variable to survive unset().</li>
+<li>Fixed a number of crashes in the DOM, SOAP and PDO extensions.</li>
+<li>Upgraded bunbled PCRE library to version 6.6</li>
+<li>The use of the var keyword to declare properties no longer raises a deprecation E_STRICT.</li>
+<li>FastCGI interface was completely reimplemented.</li>
+<li>Multitude of improvements to the SPL, SimpleXML, GD, CURL and Reflection extensions.</li>
+<li>Over 120 various bug fixes.</li>
+</ul>
+<p>
+Further details about this release can be found in the <a href="/release_5_1_3.php">release announcement</a> 
+and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>Summer of Code</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>
@@ -166,6 +197,7 @@ commonHeader("Hypertext Preprocessor");
 </p>
 
 <hr />
+
 <h1>PHP at FrOSCon Call for Papers</h1>
 <p>
  <span class="newsdate">[24-Apr-2006]</span>

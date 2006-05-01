@@ -51,7 +51,7 @@ $SIDEBAR_DATA = '
  using anonymous CVS</a>
 </p>
 
-<p>
+<p>a
  <a href="http://www.zend.com/store/products/zend-optimizer.php">Zend
  Optimizer</a> for PHP 4.0.3 and later is
  available on Zend Technologies\' web site
@@ -68,37 +68,37 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.1.2</h1>
+<h1>PHP 5.1.3</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.2.tar.bz2', 'PHP 5.1.2 (tar.bz2)'); ?> - 12 Jan 2006<br />
-  <span class="md5sum">md5: 79cee17e9db85be878000a2a4198378e</span>
+  <?php download_link('php-5.1.3.tar.bz2', 'PHP 5.1.3 (tar.bz2)'); ?> - 01 May 2006<br />
+  <span class="md5sum">md5: 081699305f7fd4903afda5a1f836e7b1</span>
  </li>
  <li>
-  <?php download_link('php-5.1.2.tar.gz', 'PHP 5.1.2 (tar.gz)'); ?> - 12 Jan 2006<br />
-  <span class="md5sum">md5: b5b6564e8c6a0d5bc1d2b4787480d792</span>
+  <?php download_link('php-5.1.3.tar.gz', 'PHP 5.1.3 (tar.gz)'); ?> - 01 May 2006<br />
+  <span class="md5sum">md5: 6fa84f22af9dcfa50f901f6d0391b190</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.2-Win32.zip', 'PHP 5.1.2 zip package'); ?> - 12 Jan 2006<br />
-  <span class="md5sum">md5: d2c3440e40c697e62a0b6f23514d03dc</span>
+  <?php download_link('php-5.1.3-Win32.zip', 'PHP 5.1.3 zip package'); ?> - 01 May 2006<br />
+  <span class="md5sum">md5: c58917f4e721568202d43d17558e6d8e</span>
  </li>
  <li>
-  <?php download_link('pecl-5.1.2-Win32.zip', 'Collection of PECL modules for PHP 5.1.2'); ?> - 12 Jan 2006<br />
-  <span class="md5sum">md5: 09571722fd44bec411a64eca8ca383ae</span>
+  <?php download_link('pecl-5.1.3-Win32.zip', 'Collection of PECL modules for PHP 5.1.3'); ?> - 01 May 2006<br />
+  <span class="md5sum">md5: b29aaef293756dd444f782c0c6c41d2b</span>
  </li>
  <li>
-  <?php download_link('php-5.1.2-installer.exe', 'PHP 5.1.2 installer'); ?>  - 12 Jan 2006<br />
+  <?php download_link('php-5.1.3-installer.exe', 'PHP 5.1.3 installer'); ?>  - 01 May 2006<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: f4e47bda69ddc081fb44068cd9237b85</span>
+  <span class="md5sum">md5: 1634aea699ba4588a44a2d330e5f69e9</span>
  </li>
 </ul>
 
@@ -112,7 +112,7 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<h1>PHP 4.4.2</h1>
+<šh1>PHP 4.4.2</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -133,7 +133,7 @@ site_header("Downloads");
  <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
 </p>
 
-<h2>Windows Binaries</h2>
+<hÆ2>Windows Binaries</h2>
 
 <p>
  All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP/2003.
