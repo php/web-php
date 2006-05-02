@@ -112,7 +112,7 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<šh1>PHP 4.4.2</h1>
+<h1>PHP 4.4.2</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
