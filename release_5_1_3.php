@@ -33,10 +33,10 @@ The feature enhancements include the following notables:
 	<li>FastCGI interface was completely reimplemented.</li>
 	<li>Multitude of improvements to the SPL, SimpleXML, GD, CURL and Reflection extensions.</li>
 	<li>Support for many additional date formats added to the strtotime() function.</li>
-	<li>A number of performance improvements added to the engine the core extensions.</li>
+	<li>A number of performance improvements added to the engine and the core extensions.</li>
 	<li>Added imap_savebody() that allows message body to be written to a file.</li>
 	<li>Added lchown() and lchgrp() to change user/group ownership of symlinks.</li>
-	<li>Upgraded bunbled PCRE library to version 6.6</li>
+	<li>Upgraded bundled PCRE library to version 6.6</li>
 </ul>
 </p>
 
