@@ -193,7 +193,8 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  If your project is accepted we will match you up with a mentor
  and try to provide you with as much support as possible. To
  get started, read the
- <a href="http://code.google.com/soc/studentfaq.html#21">FAQ</a>.
+ <a href="http://code.google.com/soc/studentfaq.html#21">FAQ</a> and
+ then go to <a href="http://code.google.com/soc/student_step1.html">Step 1</a>.
 </p>
 
 <hr />
