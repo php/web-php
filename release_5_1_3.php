@@ -49,7 +49,7 @@ The release also includes over 120 bug fixes with a focus on:
 	<li>Fixed recursion handling in the serialize() functionality.</li>
 	<li>Make is_*() function account of open_basedir restrictions.</li>
 	<li>Fixed a number of crashes in the DOM and PDO extensions.</li>
-	<li>Addressed a number of regressions in the strtotime() extension.</li>
+	<li>Addressed a number of regressions in the strtotime() function.</li>
 	<li>Make memory_limit work in Win32 systems.</li>
 	<li>Fixed a deadlock in the sqlite extension caused by the sqlite_fetch_column_types() function.</li>
 	<li>Fixed memory leaks in the realpath() cache.</li>
