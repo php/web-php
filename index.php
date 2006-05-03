@@ -147,7 +147,7 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
-
+<!--
 <h1>PHP 5.1.3 Released</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>
@@ -166,7 +166,7 @@ commonHeader("Hypertext Preprocessor");
 <li>Fixed a heap corruption inside the session extension.</li>
 <li>Fixed a bug that would allow variable to survive unset().</li>
 <li>Fixed a number of crashes in the DOM, SOAP and PDO extensions.</li>
-<li>Upgraded bunbled PCRE library to version 6.6</li>
+<li>Upgraded bundled PCRE library to version 6.6</li>
 <li>The use of the var keyword to declare properties no longer raises a deprecation E_STRICT.</li>
 <li>FastCGI interface was completely reimplemented.</li>
 <li>Multitude of improvements to the SPL, SimpleXML, GD, CURL and Reflection extensions.</li>
@@ -178,7 +178,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 </p>
 
 <hr />
-
+-->
 <h1>Summer of Code</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>
