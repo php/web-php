@@ -151,7 +151,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 5.1.4 Released</h1>
 <p>
  <span class="newsdate">[04-May-2006]</span>
- A critical bug with $_POST array handling as well as the FastCGI sapi have been discovered in PHP 5.1.3. A new PHP release 5.1.4 is now
+ A critical bug with $_POST array handling as well as the FastCGI sapi have been discovered in PHP 5.1.3. A new PHP release <a href="/downloads.php">5.1.4</a> is now
  available to address these issues. All PHP users are encouraged to upgrade to this release as soon as possible.
 </p>
 <p>
