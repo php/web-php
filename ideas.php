@@ -42,6 +42,9 @@ site_header("SoC Ideas");
  <li>PHP Aspect rewrite</li>
  <li>Transaction Manager - Possible mentor Andi</li>
  <li>OCR Extension - Possible mentor Andi</li>
+ <li>Script pre-processor - e.g. Support for C-like #define statements</li>
+ <li>Named Pipe stream protocol transport</li>
+ <li>SCTP stream protocol transport</li>
 </ul>
 
 <a name="docs"></a>
@@ -50,6 +53,13 @@ site_header("SoC Ideas");
 <ul>
  <li>New indexer for Livedocs</li>
  <li>Better docbook compatibility for livedocs</li>
+</ul>
+
+<a name="other"></a>
+<h4>Other</h4>
+
+<ul>
+ <li>re2php - Add PHP Support to re2c</li>
 </ul>
 
 <?php site_footer(); ?>
