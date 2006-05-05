@@ -147,13 +147,25 @@ commonHeader("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
-<!--
+
+<h1>PHP 5.1.4 Released</h1>
+<p>
+ <span class="newsdate">[04-May-2006]</span>
+ A critical bug with $_POST array handling as well as the FastCGI sapi have been discovered in PHP 5.1.3. A new PHP release 5.1.4 is now
+ available to address these issues. All PHP users are encouraged to upgrade to this release as soon as possible.
+</p>
+<p>
+Further details about this release can be found in the <a href="/release_5_1_4.php">release announcement</a> 
+and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4">PHP 5 ChangeLog</a>.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.3 Released</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>
  The PHP development team is proud to announce the release of <a href="/downloads.php">PHP 5.1.3</a>.
  This release combines small number of feature enhancements with a significant amount of bug fixes and resolves a number of security issues.
- All PHP users are encouraged to upgrade to this release as soon as possible.
  Some of the key changes of PHP 5.1.3 include:
 </p>
 <ul>
@@ -178,7 +190,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 </p>
 
 <hr />
--->
+
 <h1>Summer of Code</h1>
 <p>
  <span class="newsdate">[01-May-2006]</span>

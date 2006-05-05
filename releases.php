@@ -86,6 +86,7 @@ $SIDEBAR_DATA = '
    <option value="php-5.1.0.tar.gz">5.1.0</option>
    <option value="php-5.1.1.tar.gz">5.1.1</option>
    <option value="php-5.1.2.tar.gz">5.1.2</option>
+   <option value="php-5.1.3.tar.gz">5.1.3</option>
   </select>
  </p>
 </form>
@@ -103,6 +104,42 @@ site_header("Releases");
  <em>older releases are listed for archaeological purposes only, and
  they are no longer supported</em>.
 </p>
+
+<a name="v5"></a>
+<a name="5.1.3"></a>
+<h2>5.1.3</h2>
+
+<ul>
+ <li>Released: 12 Jan 2006</li>
+ <li>Announcement: <a href="/release_5_1_2.php">English</a></li>
+ <li><a href="/ChangeLog-5.php#5.1.3">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.1.3.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: 081699305f7fd4903afda5a1f836e7b1</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.3.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: 6fa84f22af9dcfa50f901f6d0391b190</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.3-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: c58917f4e721568202d43d17558e6d8e</span>
+   </li>
+   <li>
+    <?php download_link('php-5.1.3-installer.exe','Windows installer'); ?><br />
+    <span class="md5sum">md5: 1634aea699ba4588a44a2d330e5f69e9</span>
+   </li>
+   <li>
+    <?php download_link('pecl-5.1.3-Win32.zip','Collection of PECL modules for PHP 5.1.3'); ?><br />
+    <span class="md5sum">md5: b29aaef293756dd444f782c0c6c41d2b</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 
 <a name="v5"></a>
 <a name="5.1.2"></a>

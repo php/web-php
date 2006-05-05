@@ -8,6 +8,21 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.1.4"></a>
+<h3>Version 5.1.4</h3>
+<b>04-May-2006</b>
+<ul>
+	<li>Added "capture_peer_cert" and "capture_peer_cert_chain" context options for SSL streams. (Wez).
+	<li>Added PDO::PARAM_EVT_* family of constants. (Sara)</li>
+	<li>Fixed possible crash in highlight_string(). (Dmitry)</li>
+	<li><?php bugfix(37291); ?>(FastCGI now longer works with isapi_fcgi.dll). (Dmitry)</li>
+	<li><?php bugfix(37277); ?>(cloning Dom Documents or Nodes does not work). (Rob)</li>
+	<li><?php bugfix(37276); ?>(problems with $_POST array). (Dmitry)</li>
+	<li><?php bugfix(36632); ?>(bad error reporting for pdo_odbc exec UPDATE). (Wez).</li>
+	<li><?php bugfix(35552); ?>(crash when pdo_odbc prepare fails). (Wez).</li>
+</ul>
+
+<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.3"></a>
 <h3>Version 5.1.3</h3>
 <b>02-May-2006</b>

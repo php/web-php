@@ -68,37 +68,37 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.1.3</h1>
+<h1>PHP 5.1.4</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.3.tar.bz2', 'PHP 5.1.3 (tar.bz2)'); ?> - 01 May 2006<br />
-  <span class="md5sum">md5: 081699305f7fd4903afda5a1f836e7b1</span>
+  <?php download_link('php-5.1.4.tar.bz2', 'PHP 5.1.4 (tar.bz2)'); ?> - 04 May 2006<br />
+  <span class="md5sum">md5: b55e633bdc80ab30da7c92f760fc4b58</span>
  </li>
  <li>
-  <?php download_link('php-5.1.3.tar.gz', 'PHP 5.1.3 (tar.gz)'); ?> - 01 May 2006<br />
-  <span class="md5sum">md5: 6fa84f22af9dcfa50f901f6d0391b190</span>
+  <?php download_link('php-5.1.4.tar.gz', 'PHP 5.1.4 (tar.gz)'); ?> - 04 May 2006<br />
+  <span class="md5sum">md5: 4b7c93c9730ef7807f59732697470dad</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.3-Win32.zip', 'PHP 5.1.3 zip package'); ?> - 01 May 2006<br />
-  <span class="md5sum">md5: c58917f4e721568202d43d17558e6d8e</span>
+  <?php download_link('php-5.1.4-Win32.zip', 'PHP 5.1.4 zip package'); ?> - 04 May 2006<br />
+  <span class="md5sum">md5: bf208201a671fd20a13490dc6f38b344</span>
  </li>
  <li>
-  <?php download_link('pecl-5.1.3-Win32.zip', 'Collection of PECL modules for PHP 5.1.3'); ?> - 01 May 2006<br />
-  <span class="md5sum">md5: b29aaef293756dd444f782c0c6c41d2b</span>
+  <?php download_link('pecl-5.1.4-Win32.zip', 'Collection of PECL modules for PHP 5.1.4'); ?> - 04 May 2006<br />
+  <span class="md5sum">md5: ff5ac6c4db975bc3ff2f3a89b7881c3f</span>
  </li>
  <li>
-  <?php download_link('php-5.1.3-installer.exe', 'PHP 5.1.3 installer'); ?>  - 01 May 2006<br />
+  <?php download_link('php-5.1.4-installer.exe', 'PHP 5.1.4 installer'); ?>  - 04 May 2006<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 1634aea699ba4588a44a2d330e5f69e9</span>
+  <span class="md5sum">md5: 86d83c9f42e281c60a40cf7c6d66db8d</span>
  </li>
 </ul>
 
