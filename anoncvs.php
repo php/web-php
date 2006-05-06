@@ -77,6 +77,9 @@ diff -u
   <strong>PHP 5.1</strong>:
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_1 php-src</tt>
   <br />
+  <strong>PHP 5.2</strong>:
+  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php-src</tt>
+  <br />
   <strong>PHP 6</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</tt>
   <br /><br />
