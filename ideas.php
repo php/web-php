@@ -32,6 +32,11 @@ site_header("SoC Ideas");
 
 <ul>
  <li>PHP 4 to PHP 5 (and PHP 6?) conversion script</li>
+ <li>Expand PEAR::MDB2_Schema to cover all aspects of schema evolution
+  <a href="http://pooteeweet.org/files/phptek06/database_schema_deployment.pdf">[1]</a>
+ </li>
+ <li>New package to read, create or modify OpenDocument files</li>
+ <li>Create a 5.1+ port of MDB2</li>
 </ul>
 
 <a name="pecl"></a>
