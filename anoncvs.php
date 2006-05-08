@@ -34,7 +34,7 @@ site_header("Anonymous CVS Access");
  <li><i>autoconf</i>: 2.13</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
- <li><i>bison</i>: 1.28 (preferred), up to 2.1</li>
+ <li><i>bison</i>: 1.28 (preferred), 1.35, 1.75, 2.0 or higher</li>
  <li><i>flex</i>: 2.5.4</li>
  <li><i>re2c</i>: 0.9.11</li>
 </ul>
