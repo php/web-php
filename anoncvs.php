@@ -24,7 +24,9 @@ site_header("Anonymous CVS Access");
 
 <p>
  PHP uses an advanced configuration system that requires you to have
- the following tools.  All necessary utilities can be obtained from
+ the following tools. Re2c is only necessary for developers and can be found 
+ <a href="http://re2c.org">here</a>.
+ All other utilities can be obtained from
  <a href="ftp://ftp.gnu.org/pub/gnu/">the GNU FTP site</a>.
 </p>
 
@@ -32,8 +34,9 @@ site_header("Anonymous CVS Access");
  <li><i>autoconf</i>: 2.13</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
- <li><i>bison</i>: 1.28 (preferred), 1.35, or 1.75</li>
+ <li><i>bison</i>: 1.28 (preferred), up to 2.1</li>
  <li><i>flex</i>: 2.5.4</li>
+ <li><i>re2c</i>: 0.9.11</li>
 </ul>
 
 <p>
