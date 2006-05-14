@@ -74,11 +74,11 @@ site_header("Downloads");
 <ul>
  <li>
   <?php download_link('php-5.1.4.tar.bz2', 'PHP 5.1.4 (tar.bz2)'); ?> - 04 May 2006<br />
-  <span class="md5sum">md5: b55e633bdc80ab30da7c92f760fc4b58</span>
+  <span class="md5sum">md5: 66a806161d4a2d3b5153ebe4cd0f2e1c</span>
  </li>
  <li>
   <?php download_link('php-5.1.4.tar.gz', 'PHP 5.1.4 (tar.gz)'); ?> - 04 May 2006<br />
-  <span class="md5sum">md5: 4b7c93c9730ef7807f59732697470dad</span>
+  <span class="md5sum">md5: 7c846aa09ec1fe0f54a57c8ba030d9f8</span>
  </li>
 </ul>
 
