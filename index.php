@@ -157,6 +157,8 @@ commonHeader("Hypertext Preprocessor");
 <p>
 Further details about this release can be found in the <a href="/release_5_1_4.php">release announcement</a> 
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.4">PHP 5 ChangeLog</a>.
+<br />
+<b>The tarballs were updated to include the PEAR's phar file, previously missing from the release.</b>
 </p>
 
 <hr />
