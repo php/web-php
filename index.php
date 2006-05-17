@@ -148,6 +148,33 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<hr />
+<?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
+
+<h1>NYPHPCon 2006 Program Announced</h1>
+<p>
+ <span class="newsdate">[16-May-2006]</span>
+ We are pleased to announce the speaker, tutorial and keynote program for 
+ NYPHPCon 2006.  The <a href="http://www.nyphpcon.com">New York PHP 
+ Conference & Expo 2006</a> is taking place in New York City, at the 
+ historic New Yorker Hotel, June 14-16, 2006.  There will be three full 
+ days of sessions, tutorials, exhibits, and networking events.
+</p>
+<p>
+We are also pleased to host the <a href="http://www.nyphpcon.com/mashup.php">
+IBM Mashup Contest</a> and <a href="http://www.nyphpcon.com/keynote_bio_oracle.php">
+Oracle PHPFest</a>, and a special 
+<a href="http://www.nyphpcon.com/conference_glance.php#Training">PHP 
+Training package</a> at this event.
+</p>
+<p>
+NYPHPCon 2006 focuses on the The PHP Business Community, with two 
+featured parallel tracks plus tutorials: 
+<a href="http://www.nyphpcon.com/conference_glance.php#SpeakerSessions">
+Business Strategy and Technical Solutions</a>.  Over 400 are expected to attend,
+including business and technical professionals from around the world.
+</p>
+
 <h1>PHP 5.1.4 Released</h1>
 <p>
  <span class="newsdate">[04-May-2006]</span>
