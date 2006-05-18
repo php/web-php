@@ -153,7 +153,7 @@ commonHeader("Hypertext Preprocessor");
 <h1>Call to speaker for Paris "Forum PHP 2006"</h1>
 <p>
  <span class="newsdate">[17-May-2006]</span>
-The <a href="http://www.afup.org/">AFUP, Association Française des Utilisateurs de PHP</a>, 
+The <a href="http://www.afup.org/">AFUP, Association FranÃ§aise des Utilisateurs de PHP</a>, 
 is proud to announce the upcoming conference "Forum PHP 2006". 
 For this unique event in France, we are looking for the best French 
 speaking experts, who want to share their know-how and enthusiasm. 
@@ -163,7 +163,7 @@ and examples of successful projects.
 </p>
 <p>
 Date and location: the "Forum PHP 2006" will take place in Paris, 
-at the SNHF (Société Nationale d'Horticulture), on Thursday and Friday 
+at the SNHF (SociÃ©tÃ© Nationale d'Horticulture), on Thursday and Friday 
 the 9th and 10th of November 2006.
 </p>
 
