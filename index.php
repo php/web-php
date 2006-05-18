@@ -148,7 +148,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<hr />
 <?php news_image("http://www.nyphpcon.com/", "NYPHPCon06.gif", "NYPHPCon 2006"); ?>
 
 <h1>NYPHPCon 2006 Program Announced</h1>
@@ -174,6 +173,8 @@ featured parallel tracks plus tutorials:
 Business Strategy and Technical Solutions</a>.  Over 400 are expected to attend,
 including business and technical professionals from around the world.
 </p>
+
+<hr />
 
 <h1>PHP 5.1.4 Released</h1>
 <p>
