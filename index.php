@@ -176,7 +176,7 @@ the 9th and 10th of November 2006.
  <span class="newsdate">[16-May-2006]</span>
  We are pleased to announce the speaker, tutorial and keynote program for 
  NYPHPCon 2006.  The <a href="http://www.nyphpcon.com">New York PHP 
- Conference & Expo 2006</a> is taking place in New York City, at the 
+ Conference &amp; Expo 2006</a> is taking place in New York City, at the 
  historic New Yorker Hotel, June 14-16, 2006.  There will be three full 
  days of sessions, tutorials, exhibits, and networking events.
 </p>
