@@ -96,8 +96,8 @@ site_header("Downloads");
   <?php download_link('php-5.1.4-installer.exe', 'PHP 5.1.4 installer'); ?>  - 04 May 2006<br />
   (CGI only, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
+  manual configuration for other servers. No external extensions
+  included, get them from the zip and PECL downloads above, and install manually)<br />
   <span class="md5sum">md5: 86d83c9f42e281c60a40cf7c6d66db8d</span>
  </li>
 </ul>
