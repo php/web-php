@@ -148,6 +148,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
+
+<h1>php|works / db|works 2006 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[16-May-2006]</span>
+ php|architect magazine is proud to announce
+ <a href="http://www.phparch.com/works">php|works / db|works 2006</a>, a
+ three-day conference (plus one day of exclusive in-depth seminars) dedicated
+ to PHP driven software development. This year's conference will take
+ place on Sept. 12-15, 2006, in Toronto, Canada with September 12th set aside
+ for a set of in-depth seminars.
+</p>
+<p>
+ If you've got unique insight into PHP, or have used PHP to connect to
+ high-end datastores, php|architect wants to hear from you.
+</p>
+<p>
+ For more information, please visit the
+ <a href="http://hades.phparch.com/ceres/public/page/index.php/works::cfp">
+ Call for Papers</a> page,  and submit your ideas. The deadline is June 5,
+ 2006.
+</p>
+
+<hr />
+
 <?php news_image("http://www.afup.org/", "afup2006.jpg", "AFUP Paris 2006"); ?>
 
 <h1>Call to speaker for Paris "Forum PHP 2006"</h1>
