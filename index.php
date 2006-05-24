@@ -148,6 +148,31 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://zendcon06.kbconferences.com/", "ZendPHPcon06.jpg", "Zend/PHP Conference & Expo"); ?>
+
+<h1>Zend/PHP Conference 2006 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[24-May-2006]</span>
+Zend Technologies invites you to participate in the <a href="http://zendcon06.kbconferences.com/">Zend/PHP Conference
+2006</a>. Share your ideas with fellow colleagues in the PHP community. Present
+your technical concepts, cutting edge applications, or business
+applications. Your participation will help make this conference a success.
+</p>
+<p>
+Session tracks include:<br />
+  -- PHP and Web Services - Architecting and Building Service Based
+Applications:  From SOA to Mashups<br />
+  -- PHP Development - Best Practices and Pivotal Skills for PHP
+Development<br />
+  -- PHP Management - Operating Business Critical PHP Applications  
+</p>
+<p>
+The conference selection committee will consider all abstracts submitted on
+or before June 30th, 2006. Notifications will be made by August 1st, 2006.
+Complete details available at the <a href="http://devzone.zend.com/node/view/id/89">Zend Developer Zone</a>
+</p>
+
+<hr />
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 
 <h1>php|works / db|works 2006 - Call for Papers</h1>
