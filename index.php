@@ -240,7 +240,7 @@ the 9th and 10th of November 2006.
 </p>
 <p>
 We are also pleased to host the <a href="http://www.nyphpcon.com/mashup.php">
-IBM Mashup Contest</a> and <a href="http://www.nyphpcon.com/keynote_bio_oracle.php">
+IBM Mashup Contest</a> and <a href="http://www.nyphpcon.com/OraclePHPfest.pdf">
 Oracle PHPFest</a>, and a special 
 <a href="http://www.nyphpcon.com/conference_glance.php#Training">PHP 
 Training package</a> at this event.
