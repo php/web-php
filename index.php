@@ -160,7 +160,7 @@ projects like PHP. The students are each mentored by members of our community,
 who will look after the students and their projects step by step.
 </p>
 <p>
-The student, their projects and their assigned mentors can be viewed
+The students, their projects and their assigned mentors can be viewed
 <a href="http://code.google.com/soc/php/about.html">here</a>.
 </p>
 
