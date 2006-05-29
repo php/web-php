@@ -148,6 +148,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://code.google.com/soc/php/about.html", "google_soc_2006_128x53.gif", "Google Summer of Code 2006"); ?>
+
+<h1>Welcome Summer of Code 2006 Students</h1>
+<p>
+ <span class="newsdate">[26-May-2006]</span>
+PHP is very pleased to announce that seven students have been chosen for the
+Google 'Summer of Code'. Through this project, Google provides student developers with 
+a stipend to create new open source programs or to help currently established 
+projects like PHP. The students are each mentored by members of our community,
+who will look after the students and their projects step by step.
+</p>
+<p>
+The student, their projects and their assigned mentors can be viewed
+<a href="http://code.google.com/soc/php/about.html">here</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://zendcon06.kbconferences.com/", "ZendPHPcon06.jpg", "Zend/PHP Conference & Expo"); ?>
 
 <h1>Zend/PHP Conference 2006 - Call for Papers</h1>
