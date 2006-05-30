@@ -283,6 +283,7 @@ $uri_aliases = array (
     "interfaces"   => "language.oop5.interfaces",
     "autoload"     => "language.oop5.autoload",
     "__autoload"   => "language.oop5.autoload",
+    "reflection"   => "language.oop5.reflection",
 
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
