@@ -166,8 +166,6 @@ The students, their projects and their assigned mentors can be viewed
 
 <hr />
 
-<?php news_image("http://zendcon06.kbconferences.com/", "ZendPHPcon06.jpg", "Zend/PHP Conference & Expo"); ?>
-
 <h1>Zend/PHP Conference 2006 - Call for Papers</h1>
 <p>
  <span class="newsdate">[24-May-2006]</span>
