@@ -180,4 +180,13 @@ site_header("A Tourist's Guide");
  development sources.
 </p>
 
+<h2><a href="http://gcov.php.net/">gcov.php.net</a>: Test and Code Coverage analysis</h2>
+
+<p>
+ This site is deticated to automatic PHP code coverage testing. On a regular 
+ basis current cvs snapshots are being build and tested on this machine. After 
+ all tests are done the results are visualized along with a code coverage 
+ analysis.  
+</p>
+
 <?php site_footer(); ?>
