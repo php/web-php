@@ -105,6 +105,8 @@ if ($process) {
                 print '<p class="formerror">Your IP is listed in one of the spammers lists we use. If you think this is an error, please contact the <a href="mailto:webmaster@php.net">webmaster</a>.</p>';
             } else if (strpos($result, '[SPAM WORD]') !== FALSE) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
+            } else if (strpos($result, '[CLOSED]') !== FALSE) {
+                echo '<p class="formerror">Due to some technical problems this service isn\'t currently working. Please try again later. Sorry for any inconvenience.</p>';
             } else {
                 echo "<!-- $result -->";
                 echo "<p class=\"formerror\">There was an internal error processing your submission. Please try to submit again later.</p>";
