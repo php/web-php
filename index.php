@@ -148,6 +148,24 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<hr />
+<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Call for Papers"); ?>
+
+<h1>2006 DC PHP Conference - Call for Papers</h1>
+<p>
+ <span class="newsdate">[13-June-2006]</span>
+<a href="http://dcphpconference.com/">DC PHP Conference</a> invites technology experts from the federal government, 
+local community, and the non-profit sector to participate in a premiere forum for PHP's vast number of users.
+Present your technical concepts, cutting edge applications, or business applications for an opportunity 
+to showcase your ideas in the PHP community.
+</p>
+<p>
+Your participation will make this conference a success. The conference selection committee requests that 
+you submit an abstract for consideration. <a href="http://dcphpconference.com/callforpapers.php">All abstracts</a> submitted on or before July 7th, 2006 will be considered.
+</p>
+
+<hr />
+
 <?php news_image("http://code.google.com/soc/php/about.html", "google_soc_2006_128x53.gif", "Google Summer of Code 2006"); ?>
 
 <h1>Welcome Summer of Code 2006 Students</h1>
@@ -196,23 +214,7 @@ The students, their projects and their assigned mentors can be viewed
  Complete details available at the <a href="http://devzone.zend.com/node/view/id/89">Zend Developer Zone</a>
 </p>
 
-<hr />
-<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Call for Papers"); ?>
 
-<h1>2006 DC PHP Conference - Call for Papers</h1>
-<p>
- <span class="newsdate">[13-June-2006]</span>
-<a href="http://dcphpconference.com/">DC PHP Conference</a> invites technology experts from the federal government, 
-local community, and the non-profit sector to participate in a premiere forum for PHP's vast number of users.
-Present your technical concepts, cutting edge applications, or business applications for an opportunity 
-to showcase your ideas in the PHP community.
-</p>
-<p>
-Your participation will make this conference a success. The conference selection committee requests that 
-you submit an abstract for consideration. <a href="http://dcphpconference.com/callforpapers.php">All abstracts</a> submitted on or before July 7th, 2006 will be considered.
-</p>
-
-<hr />
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 
 <h1>php|works / db|works 2006 - Call for Papers</h1>
