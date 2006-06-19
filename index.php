@@ -214,6 +214,7 @@ The students, their projects and their assigned mentors can be viewed
  Complete details available at the <a href="http://devzone.zend.com/node/view/id/89">Zend Developer Zone</a>
 </p>
 
+<hr />
 
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 
