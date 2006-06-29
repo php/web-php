@@ -149,6 +149,22 @@ commonHeader("Hypertext Preprocessor");
 ?>
 
 <hr />
+<?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
+<h1>php/db|works 2006 Schedule Now Online</h1>
+<p>
+ <span class="newsdate">[29-June-2006]</span>
+ The upcoming premier PHP conference, <a href="http://www.phparch.com/works">php|works/db|works</a>,
+ will take place in Toronto, Canada, September 12-15, 2006.
+</p>
+<p>
+ The conference, as always, will feature excellent speakers from many aspects of PHP development,
+ including Rasmus Lerdorf, Wez Furlong, Sara Golemon, Sebastian Bergmann, Chris Shiflett and more!
+ Be sure to check out the
+ <a href="http://hades.phparch.com/ceres/public/page/index.php/works::schedule">entire lineup</a>,
+ including special evening social events with top-notch prizes.
+</p>
+
+<hr />
 <?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Call for Papers"); ?>
 
 <h1>2006 DC PHP Conference - Call for Papers</h1>
