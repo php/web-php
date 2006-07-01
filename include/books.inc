@@ -82,6 +82,17 @@ $books = array (
 //  ),
 
   array(
+   /* title[s]     */ "Extending and Embedding PHP",
+   /* title_link   */ "http://www.amazon.com/exec/obidos/ASIN/067232704X/wwwphpnet",
+   /* author[s]    */ "Sara Golemon",
+   /* auth link[s] */ "http://blog.libssh2.org",
+   /* image        */ "067232704X.png",
+   /* information  */ "Sams Publishing, 2006, ISBN 0-672-32704-X",
+   /* inform. link */ "http://www.samspublishing.com/bookstore/product.asp?isbn=067232704X&rl=1",
+   /* language     */ "en"
+  ),
+
+  array(
    /* title[s]     */ "php|architect's Guide to PHP Security",
    /* title_link   */ "http://www.phparch.com/shop_product.php?itemid=98",
    /* author[s]    */ "Ilia Alshanetsky",
