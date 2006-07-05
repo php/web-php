@@ -4,21 +4,22 @@ $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
+include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
 site_header("Add Manual Note");
 
 // Copy over "sect" and "redirect" from GET to POST
-if (!isset($_POST['sect']) && isset($_GET['sect'])) {
+if (empty($_POST['sect']) && isset($_GET['sect'])) {
     $_POST['sect'] = $_GET['sect'];
 }
-if (!isset($_POST['redirect']) && isset($_GET['redirect'])) {
+if (empty($_POST['redirect']) && isset($_GET['redirect'])) {
     $_POST['redirect'] = $_GET['redirect'];
 }
 
 // Decide on whether all vars are present for processing 
 $process = TRUE;
-$needed_vars = array('note', 'user', 'sect', 'redirect', 'action');
+$needed_vars = array('note', 'user', 'sect', 'redirect', 'action', 'func', 'arga', 'argb', 'answer');
 foreach ($needed_vars as $varname) {
-    if (!isset($_POST[$varname])) {
+    if (empty($_POST[$varname])) {
         $process = FALSE;
         break;
     }
@@ -49,13 +50,18 @@ if ($process) {
     if (strlen($note) == 0) {
         $error = "You have not specified the note text.";
     }
-    
+
+    // SPAM challenge failed
+    elseif (!test_answer($_POST['func'], $_POST['arga'], $_POST['argb'], $_POST['answer'])) {
+        $error = 'SPAM challenge failed.';
+    }
+
     // The user name contains a malicious character
     elseif (stristr($user, "|")) {
         $error = "You have included bad characters within your username. We appreciate you may want to obfuscate your email further, but we have a system in place to do this for you.";
     }
 
-    // Check if the note is not too long
+    // Check if the note is too long
     elseif (strlen($note) >= 4096) {
         $error = "Your note is too long. You'll have to make it shorter before you can post it. Keep in mind that this is not the place for long code examples!";
     }
@@ -273,7 +279,16 @@ else {?>
   </td>
   </tr>
   <tr>
+   <th class="subr">Answer to this simple question (SPAM challenge):<br />
+   <?php $c = gen_challenge(); echo $c[3]; ?>?</th>
+   <td><input type="text" name="answer" size="60" maxlength="10" /></td>
+  </td>
+  </tr>
+  <tr>
    <th colspan="2">
+    <input type="hidden" name="func" value="<?php echo $c[0]; ?>" />
+    <input type="hidden" name="arga" value="<?php echo $c[1]; ?>" />
+    <input type="hidden" name="argb" value="<?php echo $c[2]; ?>" />
     <input type="submit" name="action" value="Preview" />
     <input type="submit" name="action" value="Add Note" />
    </th>
