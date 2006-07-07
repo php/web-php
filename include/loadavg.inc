@@ -3,11 +3,9 @@
 // $Id$
 
 /*
-
  Offload to the visitor's nearest mirror if the load is too high.
  The used sys_getloadavg() function is currently only available in
  the latest PHP 5.1 versions
-
 */
 
 // Check load on mirror
@@ -16,7 +14,7 @@ function load_check()
     global $COUNTRY, $MIRRORS;
 
     // We cannot check the load here
-    if (!function_exists("sys_getloadavg")) {
+    if (!function_exists("sys_getloadavg") || !is_primary_site()) {
         return;
     }
 
@@ -31,7 +29,7 @@ function load_check()
     // Adhere to user preferences if valid
     $user_mirror = myphpnet_mirror();
     if (isset($MIRRORS[$user_mirror]) && $MIRRORS[$user_mirror][7] == MIRROR_OK
-        && $murl != "http://www.php.net/") {
+        && $user_mirror != "http://www.php.net/") {
         header("Location: $user_mirror" . substr($_SERVER['REQUEST_URI'], 1));
         exit;
     }
