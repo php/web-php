@@ -13,6 +13,8 @@ if ($MQ) {
 	$l = isset($_GET['l']) ? $_GET['l'] : 'en';
 }
 
+if($l=='pt-BR') $l='pt';
+
 $q = urlencode($q);
 $l = urlencode($l);
 
