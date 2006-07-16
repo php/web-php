@@ -13,7 +13,7 @@ if ($MQ) {
 	$l = isset($_GET['l']) ? $_GET['l'] : 'en';
 }
 
-if($l=='pt-BR') $l='pt';
+if(strlen($l)>2) $l = substr($l,0,2); // Just take the first 2 chars.  eg. pt_BR = pt
 
 $q = urlencode($q);
 $l = urlencode($l);
