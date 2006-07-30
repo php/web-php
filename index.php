@@ -148,7 +148,6 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<hr />
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 <h1>php/db|works 2006 Schedule Now Online</h1>
 <p>
