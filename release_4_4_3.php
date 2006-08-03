@@ -9,7 +9,7 @@ site_header("PHP 4.4.3 Release Announcement");
 <p>
 The PHP development team is proud to announce the release of <a href="/downloads.php#v4">PHP 4.4.3</a>.
 This release combines small number of bug fixes and resolves a number of security issues.
-All PHP users are encouraged to upgrade to this release as soon as possible.
+All PHP 4.x users are encouraged to upgrade to this release as soon as possible.
 </p>
 
 <p>
