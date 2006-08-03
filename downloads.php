@@ -112,31 +112,33 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<h1>PHP 4.4.2</h1>
+<h1>PHP 4.4.3</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.4.2.tar.bz2','PHP 4.4.2 (tar.bz2)'); ?> - 13 Jan 2006<br />
-  <span class="md5sum">md5: 28051cd9ef43490dd9727a4d442011b5</span>
+  <?php download_link('php-4.4.3.tar.bz2','PHP 4.4.3 (tar.bz2)'); ?> - 03 Aug 2006<br />
+  <span class="md5sum">md5: 9542117551c0e79f5bf21f46493094e7</span>
  </li>
  <li>
-  <?php download_link('php-4.4.2.tar.gz', 'PHP 4.4.2 (tar.gz)');  ?> - 13 Jan 2006<br />
-  <span class="md5sum">md5: a7ae7ed8f2edf1592bd94eab91c634fa</span>
+  <?php download_link('php-4.4.3.tar.gz', 'PHP 4.4.3 (tar.gz)');  ?> - 03 Aug 2006<br />
+  <span class="md5sum">md5: f991b9a18ae167c436783bd0976ad749</span>
  </li>
 </ul>
 
 <p>
- See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of changes,
- or the <a href="/release_4_4_2.php">release notes</a> for more information on
- this particular release. Daily snapshots are also available from
- <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for production use!).
+ See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of
+ changes, or the <a href="/release_4_4_3.php">release notes</a> for more
+ information on this particular release. Daily snapshots are also available
+ from <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for
+ production use!).
 </p>
 
-<hÆ2>Windows Binaries</h2>
+<h2>Windows Binaries</h2>
 
 <p>
- All Windows binaries can be used on Windows 98/Me and on Windows NT/2000/XP/2003.
+ All Windows binaries can be used on Windows 98/Me and on Windows
+ NT/2000/XP/2003.
 </p>
 
 <ul>
@@ -147,19 +149,19 @@ site_header("Downloads");
 -->
 
  <li>
-  <?php download_link('php-4.4.2-Win32.zip', 'PHP 4.4.2 zip package'); ?> - 13 Jan 2006<br />
+  <?php download_link('php-4.4.3-Win32.zip', 'PHP 4.4.3 zip package'); ?> - 03 Aug 2006<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: 7ab55b81832050439df570b97076b4f1</span>
+  <span class="md5sum">md5: 9355a754c56857d921b3a945a91d729f</span>
  </li>
  <li>
-  <?php download_link('php-4.4.2-installer.exe', 'PHP 4.4.2 installer'); ?> - 13 Jan 2006<br />
+  <?php download_link('php-4.4.3-installer.exe', 'PHP 4.4.3 installer'); ?> - 03 Aug 2006<br />
   (CGI only, MySQL support built-in, packaged as Windows installer to install
   and configure PHP, and automatically configure IIS, PWS and Xitami, with
   manual configuration for other servers. N.B. no external extensions
   included)<br />
-  <span class="md5sum">md5: 28dab297d8b7242723a0a4b095f87a14</span>
+  <span class="md5sum">md5: b5b7e1953c62393cff7d7d065fb74e99</span>
  </li>
 </ul>
 

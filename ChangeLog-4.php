@@ -9,6 +9,42 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <h1>PHP 4 ChangeLog</h1>
 
+<hr/>
+
+<a name="4.4.3"></a>
+<h3>Version 4.4.3</h3>
+<b>03-Aug-2006</b>
+<ul>
+<li>Added control character checks for cURL extension's open_basedir/safe_mode checks.</li>
+<li>Added overflow checks to wordwrap() function.</li>
+<li>Added a check for special characters in the session name.</li>
+<li>Improved safe_mode check for the error_log() function.</li>
+<li>Updated PCRE to version 6.6.</li>
+<li>Fixed handling of extremely long paths inside tempnam() function.</li>
+<li>Fixed XSS inside phpinfo() with long inputs.</li>
+<li>Fixed a possible buffer overflow inside create_named_pipe() for Win32 systems in libmysql.c.</li>
+<li><?php bugfix(37720); ?> (merge_php_config scrambles values).</li>
+<li><?php bugfix(37569); ?> (WDDX incorrectly encodes high-ascii characters).</li>
+<li><?php bugfix(37510); ?> (session_regenerate_id changes session_id() even on failure).</li>
+<li><?php bugfix(37360); ?> (Memory errors with a corrupt GIF file).</li>
+<li><?php bugfix(37348); ?> (Make PEAR install ignore open_basedir).</li>
+<li><?php bugfix(37346); ?> (Crashes when using an invalid colormap format).</li>
+<li><?php bugfix(37162); ?> (wddx does not build as a shared extension).</li>
+<li><?php bugfix(37046); ?> (foreach breaks static scope).</li>
+<li><?php bugfix(37045); ?> (Fixed check for special chars for http redirects).</li>
+<li><?php bugfix(36857); ?> (Added support for partial content fetching to the HTTP streams wrapper).</li>
+<li><?php bugfix(36776); ?> (node_list_wrapper_dtor segfault).</li>
+<li><?php bugfix(36459); ?> (Incorrect adding PHPSESSID to links, which contains \r\n).</li>
+<li><?php bugfix(36458); ?> (sleep() accepts negative values).</li>
+<li><?php bugfix(36242); ?> (Possible memory corruption in stream_select()).</li>
+<li><?php bugfix(36223); ?> (curl bypasses open_basedir restrictions).</li>
+<li><?php bugfix(36205); ?> (Memory leaks on duplicate cookies).</li>
+<li><?php bugfix(36148); ?> (unpack("H*hex", $data) is adding an extra character to the end of the string).</li>
+<li><?php bugfix(36017); ?> (fopen() crashes PHP when opening a URL).</li>
+</ul>
+
+There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br />
+
 <hr />
 
 <a name="4.4.2"></a>

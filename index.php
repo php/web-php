@@ -148,6 +148,32 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.3 Released</h1>
+<p>
+ <span class="newsdate">[03-Aug-2006]</span>
+ The PHP development team is proud to announce the release of <a
+ href="/downloads.php#v4">PHP 4.4.3</a>.  This release combines small number of
+ bug fixes and resolves a number of security issues.  Some of the key changes
+ of PHP 4.4.3 include:
+</p>
+<ul>
+<li>Disallow certain characters in session names.</li>
+<li>Fixed a buffer overflow inside the wordwrap() function.</li>
+<li>Prevent jumps to parent directory via the 2nd parameter of the tempnam() function.</li>
+<li>Improved safe_mode check for the error_log() function.</li>
+<li>Fixed cross-site scripting inside the phpinfo() function.</li>
+<li>Fixed offset/length parameter validation inside the substr_compare() function.</li>
+<li>Upgraded bundled PCRE library to version 6.6</li>
+<li>Over 20 various bug fixes.</li>
+</ul>
+<p>
+Further details about this release can be found in the <a
+href="/release_4_4_3.php">release announcement</a> and the full list of changes
+is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
+</p>
+
+<hr />
+
 <?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
 <h1>php/db|works 2006 Schedule Now Online</h1>
 <p>
