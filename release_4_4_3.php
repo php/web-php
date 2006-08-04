@@ -20,7 +20,6 @@ The security issues resolved include the following:
 	<li>Prevent jumps to parent directory via the 2nd parameter of the tempnam() function.</li>
 	<li>Improved safe_mode check for the error_log() function.</li>
 	<li>Fixed cross-site scripting inside the phpinfo() function.</li>
-	<li>Fixed offset/length parameter validation inside the substr_compare() function.</li>
 </ul>
 </p>
 
