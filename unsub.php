@@ -104,7 +104,7 @@ site_header("Unsubscribing");
   from the 'View' menu.
  </p>
  <p>
-  If you use <a href="http://texturizer.net/thunderbird/">Mozilla Thunderbird</a>,
+  If you use <a href="http://www.mozilla.com/thunderbird/">Mozilla Thunderbird</a>,
   you can view the full headers of a message by selecting 'Headers&rarr;All'
   from the 'View' menu, and expanding the headers section of the display by
   clicking on the triangle icon.
