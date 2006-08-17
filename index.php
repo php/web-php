@@ -148,6 +148,37 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 4.4.4 and PHP 5.1.5 Released</h1>
+<p>
+ <span class="newsdate">[17-Aug-2006]</span>
+ PHP development team would like to announce the immediate availability of
+ PHP <a href="/downloads.php#v5">5.1.5</a> and <a
+ href="/downloads.php#v4">4.4.4</a>. The two releases address a series of
+ security problems discovered since PHP 5.1.4 and 4.4.3, respectively. These
+ include the following:
+</p>
+<ul>
+<li>Added missing safe_mode/open_basedir checks inside the error_log(),
+	file_exists(), imap_open() and imap_reopen() functions.</li>
+<li>Fixed overflows inside str_repeat() and wordwrap() functions on 64bit
+    systems.</li>
+<li>Fixed possible open_basedir/safe_mode bypass in cURL extension and on PHP
+    5.1.5 with realpath cache.</li>
+<li>Fixed overflow in GD extension on invalid GIF images.</li>
+<li>Fixed a buffer overflow inside sscanf() function.</li>
+<li>Fixed an out of bounds read inside stripos() function.</li>
+<li>Fixed memory_limit restriction on 64 bit system.</li>
+</ul>
+<p>
+Further details about this release can be found in the release announcements
+(<a href="/release_5_1_5.php">5.1.5</a> and
+<a href="/release_4_4_4.php">4.4.4</a>)  and the full list of changes is
+available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.3">PHP 4</a>, 
+<a href="/ChangeLog-4.php#5.1.5">PHP 5</a>).
+</p>
+
+<hr />
+
 <h1>PHP 4.4.3 Released</h1>
 <p>
  <span class="newsdate">[03-Aug-2006]</span>

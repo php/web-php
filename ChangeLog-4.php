@@ -11,6 +11,29 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.4"></a>
+<h3>Version 4.4.4</h3>
+<b>17-Aug-2006</b>
+<ul>
+<li>Fixed memory_limit on 64bit systems.</li>
+<li>Fixed overflow on 64bit systems in str_repeat() and wordwrap().</li>
+<li>Disabled CURLOPT_FOLLOWLOCATION in curl when open_basedir or safe_mode are enabled.</li>
+<li>Fixed a memory corruption error with an invalid foreach() call.</li>
+<li><?php bugfix(38431); ?> (xmlrpc_get_type() crashes PHP on objects).</li>
+<li><?php bugfix(38377); ?> (session_destroy() gives warning after session_regenerate_id()).</li>
+<li><?php bugfix(38322); ?> (reading past array in sscanf() leads to arbitary code execution).</li>
+<li><?php bugfix(38278); ?> (session_cache_expire()'s value does not match phpinfo's session.cache_expire).</li>
+<li><?php bugfix(38251); ?> (socket_select() and invalid arguments).</li>
+<li><?php bugfix(38183); ?> (disable_classes=Foobar causes disabled class to be called Foo).</li>
+<li><?php bugfix(38112); ?> (corrupted gif segfaults).</li>
+<li><?php bugfix(37265); ?> (Added missing safe_mode &amp; open_basedir checks to imap_body()).</li>
+<li><?php bugfix(29538); ?> (number_format and problem with 0).</li>
+</ul>
+
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.4.3"></a>
 <h3>Version 4.4.3</h3>
 <b>03-Aug-2006</b>
