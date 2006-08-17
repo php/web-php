@@ -8,6 +8,33 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.1.5"></a>
+<h3>Version 5.1.5</h3>
+<b>17-Aug-2006</b>
+<ul>
+	<li>Fixed memory_limit on 64bit systems. (Stefan E.)</li>
+	<li>Fixed overflow on 64bit systems in str_repeat() and wordwrap(). (Stefan E.) </li>
+	<li>Disabled CURLOPT_FOLLOWLOCATION in curl when open_basedir or safe_mode are enabled. (Stefan E., Ilia)</li>
+	<li><?php bugfix(38322); ?>(reading past array in sscanf() leads to arbitrary code execution). (Tony)</li>
+	<li><?php bugfix(38125); ?>(undefined reference to spl_dual_it_free_storage). (Marcus)</li>
+	<li><?php bugfix(38112); ?>(corrupted gif segfaults) (Pierre)</li>
+	<li><?php bugfix(37587); ?>(var without attribute causes segfault). (Marcus)</li>
+	<li><?php bugfix(37576); ?>(FastCGI env (cgi vars) table overflow). (Piotr)</li>
+	<li><?php bugfix(37496); ?>(FastCGI output buffer overrun). (Piotr, Dmitry)</li>
+	<li><?php bugfix(37487); ?>(oci_fetch_array() array-type should always default to OCI_BOTH). (Tony)</li>
+	<li><?php bugfix(37416); ?>(iterator_to_array() hides exceptions thrown in rewind() method). (Tony) </li>
+	<li><?php bugfix(37392); ?>(Unnecessary call to OCITransRollback() at the end of request). (Tony)</li>
+	<li><?php bugfix(37341); ?>($_SERVER in included file is shortened to two entries, if $_ENV gets used). (Dmitry)</li>
+	<li><?php bugfix(37313); ?>(sigemptyset() used without including <signal.h>). (jdolecek)</li>
+	<li><?php bugfix(37346); ?>(invalid colormap format) (Pierre)</li>
+	<li><?php bugfix(37360); ?>(invalid gif size) (Pierre)</li>
+	<li><?php bugfix(37306); ?>(max_execution_time = max_input_time). (Dmitry)</li>
+	<li><?php bugfix(37278); ?>(SOAP not respecting uri in __soapCall). (Dmitry)</li>
+	<li><?php bugfix(37265); ?>(Added missing safe_mode & open_basedir checks to imap_body()). (Ilia)</li>
+	<li><?php bugfix(37256); ?>(php-fastcgi doesn't handle connection abort). (Dmitry)</li>
+</ul>
+
+<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.4"></a>
 <h3>Version 5.1.4</h3>
 <b>04-May-2006</b>
