@@ -173,7 +173,7 @@ commonHeader("Hypertext Preprocessor");
 Further details about this release can be found in the release announcements
 (<a href="/release_5_1_5.php">5.1.5</a> and
 <a href="/release_4_4_4.php">4.4.4</a>), and the full list of changes is
-available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.3">PHP 4</a>, 
+available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.4">PHP 4</a>, 
 <a href="/ChangeLog-5.php#5.1.5">PHP 5</a>).
 </p>
 
