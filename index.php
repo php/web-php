@@ -151,11 +151,11 @@ commonHeader("Hypertext Preprocessor");
 <h1>PHP 4.4.4 and PHP 5.1.5 Released</h1>
 <p>
  <span class="newsdate">[17-Aug-2006]</span>
- PHP development team would like to announce the immediate availability of
+ The PHP development team would like to announce the immediate availability of
  PHP <a href="/downloads.php#v5">5.1.5</a> and <a
- href="/downloads.php#v4">4.4.4</a>. The two releases address a series of
- security problems discovered since PHP 5.1.4 and 4.4.3, respectively. These
- include the following:
+ href="/downloads.php#v4">4.4.4</a>. These two releases address a series of
+ security problems that were discovered since the release of PHP 5.1.4 and
+ 4.4.3. The new releases include the following changes:
 </p>
 <ul>
 <li>Added missing safe_mode/open_basedir checks inside the error_log(),
@@ -172,7 +172,7 @@ commonHeader("Hypertext Preprocessor");
 <p>
 Further details about this release can be found in the release announcements
 (<a href="/release_5_1_5.php">5.1.5</a> and
-<a href="/release_4_4_4.php">4.4.4</a>)  and the full list of changes is
+<a href="/release_4_4_4.php">4.4.4</a>), and the full list of changes is
 available in the ChangeLogs (<a href="/ChangeLog-4.php#4.4.3">PHP 4</a>, 
 <a href="/ChangeLog-5.php#5.1.5">PHP 5</a>).
 </p>
