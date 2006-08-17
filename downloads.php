@@ -128,7 +128,7 @@ site_header("Downloads");
 
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of
- changes, or the <a href="/release_4.4.4.php">release notes</a> for more
+ changes, or the <a href="/release_4_4_4.php">release notes</a> for more
  information on this particular release. Daily snapshots are also available
  from <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for
  production use!).
