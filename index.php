@@ -148,6 +148,19 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet", "mre3cover_sm.jpg", "Mastering Regular Expressions, 3rd edition"); ?>
+<h1><i>Mastering Regular Expressions</i> - now with PHP coverage</h1>
+
+<p>
+ <span class="newsdate">[24-Aug-2006]</span>
+ The third edition of
+ <a href="http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet">Mastering Regular Expressions</a>
+ is finally out and includes a full 48-page chapter on PHP. This is an excellent
+ resource from Jeffrey Friedl who has been writing about regexps for years.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.6 Released</h1>
 <p>
  <span class="newsdate">[24-Aug-2006]</span>
