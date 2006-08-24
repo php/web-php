@@ -167,6 +167,7 @@ commonHeader("Hypertext Preprocessor");
  is finally out and includes a full 48-page chapter on PHP. This is an excellent
  resource from Jeffrey Friedl who has been writing about regexps for years.
 </p>
+<br clear="all" />
 
 <hr />
 
