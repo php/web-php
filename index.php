@@ -159,7 +159,7 @@ commonHeader("Hypertext Preprocessor");
 <hr />
 
 <?php news_image("http://www.amazon.com/exec/obidos/ASIN/0596528124/wwwphpnet", "mre3cover_sm.jpg", "Mastering Regular Expressions, 3rd edition"); ?>
-<h1><i>Mastering Regular Expressions</i> - now with PHP coverage</h1>
+<h1>Mastering Regular Expressions - now with PHP coverage</h1>
 <p>
  <span class="newsdate">[24-Aug-2006]</span>
  The third edition of
