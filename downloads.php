@@ -68,37 +68,29 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.1.5</h1>
+<h1>PHP 5.1.6</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.5.tar.bz2', 'PHP 5.1.5 (tar.bz2)'); ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: fb4edd5ed9c536a04a241b52ea62a6c1</span>
+  <?php download_link('php-5.1.6.tar.bz2', 'PHP 5.1.6 (tar.bz2)'); ?> - 24 Aug 2006<br />
+  <span class="md5sum">md5: 08e423aa314369d4392a36b3f7246afc</span>
  </li>
  <li>
-  <?php download_link('php-5.1.5.tar.gz', 'PHP 5.1.5 (tar.gz)'); ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: 643f41b0caae908927c0c3705ac006d3</span>
+  <?php download_link('php-5.1.6.tar.gz', 'PHP 5.1.6 (tar.gz)'); ?> - 24 Aug 2006<br />
+  <span class="md5sum">md5: 04d6166552289eaeff771f5ec953b065</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.5-Win32.zip', 'PHP 5.1.5 zip package'); ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: 0330f932dab53176623abf7afba007ce</span>
+  <?php download_link('php-5.1.6-Win32.zip', 'PHP 5.1.6 zip package'); ?> - 24 Aug 2006<br />
+  <span class="md5sum">md5: 866369dbe28284ad8d8b93dbbfd10ee4</span>
  </li>
  <li>
-  <?php download_link('pecl-5.1.5-Win32.zip', 'Collection of PECL modules for PHP 5.1.5'); ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: dc2fbbed8487f58e9ff6163e2ae00c96</span>
- </li>
- <li>
-  <?php download_link('php-5.1.5-installer.exe', 'PHP 5.1.5 installer'); ?>  - 17 Aug 2006<br />
-  (CGI only, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. No external extensions
-  included, get them from the zip and PECL downloads above, and install manually)<br />
-  <span class="md5sum">md5: cf9a99abb9ab0a6dbfcb001ab0b05fa9</span>
+  <?php download_link('pecl-5.1.6-Win32.zip', 'Collection of PECL modules for PHP 5.1.6'); ?> - 24 Aug 2006<br />
+  <span class="md5sum">md5: 4bd86d8673a146a22708006cf446e89e</span>
  </li>
 </ul>
 

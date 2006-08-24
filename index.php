@@ -148,6 +148,16 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>PHP 5.1.6 Released</h1>
+<p>
+ <span class="newsdate">[24-Aug-2006]</span>
+ The PHP development team would like to announce the immediate availability of
+ PHP <a href="/downloads.php#v5">5.1.6</a>. This release contains a fix for 
+ memory_limit restriction on 64 bit systems that was not included in PHP 5.1.5.
+</p>
+
+<hr />
+
 <h1>PHP 4.4.4 and PHP 5.1.5 Released</h1>
 <p>
  <span class="newsdate">[17-Aug-2006]</span>

@@ -8,11 +8,20 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.1.6"></a>
+<h3>Version 5.1.6</h3>
+<b>24-Aug-2006</b>
+<ul>
+	<li>Fixed memory_limit on 64bit systems. (Stefan E.)</li>
+	<li><?php bugfix(38488); ?>(Access to "php://stdin" and family crashes PHP on win32). (Dmitry)</li>
+</ul>
+
+
+<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.5"></a>
 <h3>Version 5.1.5</h3>
 <b>17-Aug-2006</b>
 <ul>
-	<li>Fixed memory_limit on 64bit systems. (Stefan E.)</li>
 	<li>Fixed overflow on 64bit systems in str_repeat() and wordwrap(). (Stefan E.) </li>
 	<li>Disabled CURLOPT_FOLLOWLOCATION in curl when open_basedir or safe_mode are enabled. (Stefan E., Ilia)</li>
 	<li><?php bugfix(38322); ?>(reading past array in sscanf() leads to arbitrary code execution). (Tony)</li>
