@@ -288,6 +288,9 @@ $uri_aliases = array (
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
     "catch"        => "language.exceptions",
+
+    "factory"      => "language.oop5.patterns",
+    "singleton"    => "language.oop5.patterns",
     
     "news.php"                     => "news-2004", // BC
     "readme.mirror"                => "mirroring", // BC
