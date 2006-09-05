@@ -15,11 +15,11 @@ site_header("Getting Help");
 </p>
 
 <h1>Books</h1>
-
 <p>
- <a href="/books.php">Books</a> are convenient resources to begin exploring 
- PHP. <a href="/books.php">The titles listed here</a> will help you to start 
- learning PHP, as well as extending your existing knowledge.
+ Books are convenient resources to begin exploring or extend your
+ PHP knowledge. There are literally thousands of books available in
+ English and numerous in other langauges. Search at your favourite
+ online or offline bookstore.
 </p>
 
 <h1>Mailing Lists</h1>
