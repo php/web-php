@@ -4,6 +4,43 @@ $_SERVER['BASE_PAGE'] = 'mailing-lists.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+
+$SIDEBAR_DATA = '
+<h3>Would like to unsubscribe yourself?</h3>
+
+<p>
+ If you have trouble getting off from any of our mailing lists, or
+ would like to unsubscribe from a mailing list not listed here, we
+ have more information for you on <a href="/unsub.php">the
+ unsubscription page</a>.
+</p>
+
+<h3>Other PHP related mailing lists</h3>
+
+<p>
+ Find the <a href="http://pear.php.net/support/lists.php">PEAR
+ lists</a>, the <a href="http://pecl.php.net/support.php">PECL
+ lists</a>, the <a href="http://gtk.php.net/resources.php">PHP-GTK
+ lists</a>, and the
+ <a href="http://smarty.php.net/resources.php?category=7">Smarty
+ lists</a> on their own pages.
+</p> 
+
+<h3><a name="local">Local Mailing Lists and Newsgroups</a></h3>
+
+<ul>
+ <li><a href="http://groups.google.com/group/dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
+ <li><a href="http://groups.google.com/group/fr.comp.lang.php">French Newsgroup</a></li>
+ <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
+ <li><a href="http://groups.google.com/group/de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
+ <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
+ <li><a href="http://weblabor.hu/levlistak">Hungarian Mailing List</a></li>
+ <li><a href="http://www.domeus.it/circles/php">Italian Mailing List (at PHPItalia)</a></li>
+ <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group\'s Mailing lists</a></li>
+ <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
+</ul>
+';
+
 site_header("Mailing Lists");
 
 // Some mailing list is selected for [un]subscription
@@ -81,23 +118,6 @@ if (isset($_POST['maillist'])) {
  <a href="http://www.phpbuilder.com/mail/">PHPBuilder</a>
  and <a href="http://zend.com/lists.php">Zend</a>.
 </p>
-
-<p>
- If you have trouble getting off from any of our mailing lists, or
- would like to unsubscribe from a mailing list not listed here, we
- have more information for you on <a href="/unsub.php">the
- unsubscription page</a>.
-</p>
-
-<p>
- Some PHP.net subsites have their own project specific pages about mailing
- lists. You can find the <a href="http://pear.php.net/support/lists.php">PEAR
- mailing lists</a>, the <a href="http://pecl.php.net/support.php">PECL
- mailing lists</a>, the <a href="http://gtk.php.net/resources.php">PHP-GTK
- mailing lists</a>, and the
- <a href="http://smarty.php.net/resources.php?category=7">Smarty mailing
- lists</a> on their own pages.
-</p> 
 
 <p>
  <b>Note:</b> When posting to mailing lists or newsgroups, please keep 
@@ -304,8 +324,8 @@ function output_lists_table($mailing_lists)
 </p>
 
 <p>
- <strong>Warning:</strong> The PHP users mailing list gets close to 4000
- messages per month currently. Do the math. That translates to about 130
+ <strong>Warning:</strong> The PHP users mailing list gets close to 1500-2000
+ messages per month currently. Do the math. That translates to about 60
  messages per day. If your mailbox can't handle this sort of traffic you
  might want to consider subscribing to the digest list instead (two messages
  per day), using the news server, or reading the mailing list using the
@@ -313,34 +333,9 @@ function output_lists_table($mailing_lists)
 </p>
 
 <p>
- You can search the main mailing lists right from this website from <a
+ You can search some main mailing lists right from this website from <a
  href="/search.php">the search page</a> or by using the search input box
  selecting the appropriate option on the top-right of every page.
 </p>
-
-<hr />
-
-<h2><a name="local">Local Mailing Lists and Newsgroups</a></h2>
-
-<p>
- There are also some mailing lists and newsgroups for PHP users
- that have been set up by others in the community to host local
- (particularly non-English) discussions.
-</p>
-
-<ul>
- <li><a href="news:dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
- <li><a href="news:fr.comp.infosystemes.www.auteurs.php">French Newsgroup</a></li>
- <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
- <li><a href="news:de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
- <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
- <li><a href="http://weblabor.hu/levlistak">Hungarian Mailing List</a></li>
- <li><a href="http://groups.or.id/mailman/listinfo/php-id">Indonesian Mailing List</a></li>
- <li><a href="http://www.domeus.it/circles/php">Italian Mailing List (at PHPItalia)</a></li>
- <li><a href="http://www.ziobudda.net/mailman/listinfo/php-it/">Italian Mailing List</a></li>
- <li><a href="http://cortesi.com/php/">Italian Mailing List (coordinating the translation of the PHP manual)</a></li>
- <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group's Mailing lists</a></li>
- <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
-</ul>
 
 <?php site_footer(); ?>
