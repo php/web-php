@@ -94,7 +94,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://php.weblogs.com/">PHP Everywhere</a><br />
+  <a href="http://phplens.com/phpeverywhere/">PHP Everywhere</a><br />
   Links and news about PHP and related technologies.
  </li>
 
