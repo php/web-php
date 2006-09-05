@@ -302,30 +302,30 @@ div#usernotes div.text {
 }
 
 /* Left sidebar TOC on manual pages */
-ul#manualtoc {
+ul.toc {
     margin: 0px 5px 5px 5px;
     padding: 0px;
 }
-ul#manualtoc li {
+ul.toc li {
     margin: 1px 0 1px 1px;
     padding: 1px 0 1px 11px;
     list-style-type: none;
     background-repeat: no-repeat;
     background-position: center left;
 }
-ul#manualtoc li.header {
+ul.toc li.header {
     font-size: 135%;
     padding: 5px 0px 5px 11px;
     border-bottom: 1px solid #cccccc;
     margin-bottom: 5px;
 }
-ul#manualtoc li.active {
+ul.toc li.active {
     font-weight: bold;
 }
-ul#manualtoc li a {
+ul.toc li a {
     text-decoration: none;
 }
-ul#manualtoc li a:hover {
+ul.toc li a:hover {
     text-decoration: underline;
 }
 

@@ -120,7 +120,7 @@ function manual_sidebar()
     global $PGI, $SIDEBAR_DATA;
 
     // Start sidebar with its <div>
-    $BAR = "<!--UdmComment-->\n<ul id=\"manualtoc\">\n";
+    $BAR = "<!--UdmComment-->\n<ul class=\"toc\">\n";
 
     // Link to manual home
     $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .

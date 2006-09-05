@@ -28,7 +28,7 @@ $SIDEBAR_DATA = '
 
 <h3><a name="local">Local Mailing Lists and Newsgroups</a></h3>
 
-<ul>
+<ul class="toc">
  <li><a href="http://groups.google.com/group/dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
  <li><a href="http://groups.google.com/group/fr.comp.lang.php">French Newsgroup</a></li>
  <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
