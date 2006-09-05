@@ -34,7 +34,7 @@ site_header("Anonymous CVS Access");
  <li><i>autoconf</i>: 2.13</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
- <li><i>bison</i>: 1.28 (preferred), 1.35, 1.75, 2.0 or higher</li>
+ <li><i>bison</i>: 1.28, 1.35, 1.75, 2.0 or higher</li>
  <li><i>flex</i>: 2.5.4</li>
  <li><i>re2c</i>: 0.9.11+</li>
 </ul>
@@ -71,12 +71,6 @@ diff -u
   <strong>PHP 4.4</strong>: 
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_4 php-src</tt>
   <br />
-  <strong>PHP 4.3</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_3 php-src</tt>
-  <br />
-  <strong>PHP 5.0</strong>:
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_0 php-src</tt>
-  <br />
   <strong>PHP 5.1</strong>:
   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_1 php-src</tt>
   <br />
@@ -100,9 +94,9 @@ diff -u
    </li>
    <li>
     All of the above commands create a local directory named "php-src".  You can also 
-    specify another directory name, for example, to put PHP 5 HEAD into a directory 
-    named php5dev:<br />
-    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php5dev php-src</tt>
+    specify another directory name, for example, to put PHP 6 HEAD into a directory 
+    named php6dev:<br />
+    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php-src</tt>
    </li>
   </ul>
  </li>
