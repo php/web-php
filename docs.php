@@ -34,7 +34,12 @@ $SIDEBAR_DATA='
  Books are convenient resources to begin exploring or extend your
  PHP knowledge. There are literally thousands of books available in
  English and numerous in other langauges. Search at your favourite
- online or offline bookstore.
+ online or offline bookstore. You can search at
+ <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
+ go directly to
+ <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
+ or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.fr</a>
+ and search there.
 </p>
 
 <h3>Sample Code</h3>
