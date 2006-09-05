@@ -43,7 +43,6 @@ site_header("Sitemap");
    </li>
    <li>Other support pages
     <ul>
-     <li><a href="/books.php">Books</a></li>
      <li><a href="/mailing-lists.php">Mailing Lists</a>, <a href="/unsub.php">Unsubscribe</a></li>
      <li><a href="/cal.php">Events</a></li>
      <li><a href="/links.php">Links</a></li>
