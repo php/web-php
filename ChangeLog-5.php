@@ -8,6 +8,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+
+<hr />
+
 <a name="5.1.6"></a>
 <h3>Version 5.1.6</h3>
 <b>24-Aug-2006</b>
@@ -16,8 +19,6 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li><?php bugfix(38488); ?>(Access to "php://stdin" and family crashes PHP on win32). (Dmitry)</li>
 </ul>
 
-
-<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.5"></a>
 <h3>Version 5.1.5</h3>
 <b>17-Aug-2006</b>
@@ -43,7 +44,6 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li><?php bugfix(37256); ?>(php-fastcgi doesn't handle connection abort). (Dmitry)</li>
 </ul>
 
-<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.4"></a>
 <h3>Version 5.1.4</h3>
 <b>04-May-2006</b>
@@ -58,7 +58,6 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li><?php bugfix(35552); ?>(crash when pdo_odbc prepare fails). (Wez).</li>
 </ul>
 
-<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.3"></a>
 <h3>Version 5.1.3</h3>
 <b>02-May-2006</b>
@@ -253,7 +252,6 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(29476); ?> (sqlite_fetch_column_types() locks the database forever). (Ilia)</li>
 </ul>
 
-<h1>PHP 5 ChangeLog</h1>
 <a name="5.1.2"></a>
 <h3>Version 5.1.2</h3>
 <b>12-Jan-2006</b>
