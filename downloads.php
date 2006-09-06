@@ -14,9 +14,8 @@ $SIDEBAR_DATA = '
  not want to compile your own, go to your distribution\'s
  download site. Binaries available on external servers:
 </p>
-<ul class="simple">
-' .// <li><a href="http://195.228.168.217/louise/index.php?MENU=6">AmigaOS</a></li>
- '<li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
+<ul class="toc">
+ <li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
  <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/ndk/php.htm">Novell NetWare</a></li>
  <li><a href="http://silk.apana.org.au/php/">OS/2</a></li>
@@ -25,42 +24,49 @@ $SIDEBAR_DATA = '
  <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
 </ul>
 
-<h3>Older versions of PHP</h3>
+<h3>Development and archive versions</h3>
 <p>
- See <a href="/releases.php">our releases
- page</a> for older PHP versions.
+ Regular source and binary snapshots are available
+ from <a href="http://snaps.php.net/">snaps.php.net</a>.
+ These are not intended for production use!
+</p>
+<p>
+ To download the very latest development version,
+ see the <a href="anoncvs.php">instructions on
+ using anonymous CVS</a>
+</p>
+<p>
+ Information about older releases and their downloads
+ are available on <a href="/releases.php">our releases page</a>.
 </p>
 
 <h3>Other Downloads</h3>
 <p>
- For downloadable manual packages, go to the
+ <a href="http://pear.php.net/packages.php">PEAR
+ packages</a>, <a href="http://pecl.php.net/packages.php">PECL hosted
+ PHP extensions</a>, <a href="http://gtk.php.net/download.php">PHP-GTK
+ source and binaries</a>, and
+ <a href="http://smarty.php.net/download.php">Smarty
+ sources</a> are available on their own pages.
+</p>
+
+<p>
+ For downloadable PHP manual packages, go to the
  <a href="download-docs.php">documentation download</a>
- page
+ page.
 </p>
 
 <p>
  Get some
  <a href="download-logos.php">PHP logos</a>
  for your site, and some PHP icons to use on
- your computer
+ your computer.
 </p>
 
 <p>
- To download the latest development version,
- see the <a href="anoncvs.php">instructions on
- using anonymous CVS</a>
-</p>
-
-<p>a
  <a href="http://www.zend.com/store/products/zend-optimizer.php">Zend
  Optimizer</a> for PHP 4.0.3 and later is
- available on Zend Technologies\' web site
-</p>
-
-<p>
- For <a href="http://gtk.php.net/">PHP-GTK</a>
- downloads, please visit our site dedicated
- to <a href="http://gtk.php.net/">PHP-GTK</a>.
+ available on Zend Technologies\' web site.
 </p>
 ';
 
@@ -121,9 +127,7 @@ site_header("Downloads");
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of
  changes, or the <a href="/release_4_4_4.php">release notes</a> for more
- information on this particular release. Daily snapshots are also available
- from <a href="http://snaps.php.net/">snaps.php.net</a> (not intended for
- production use!).
+ information on this particular release.
 </p>
 
 <h2>Windows Binaries</h2>
