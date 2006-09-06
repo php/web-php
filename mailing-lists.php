@@ -26,7 +26,8 @@ $SIDEBAR_DATA = '
  lists</a> on their own pages.
 </p> 
 
-<h3><a name="local">Local Mailing Lists and Newsgroups</a></h3>
+<a name="local"></a>
+<h3>Local Mailing Lists and Newsgroups</h3>
 
 <ul class="toc">
  <li><a href="http://groups.google.com/group/dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
@@ -298,11 +299,13 @@ function output_lists_table($mailing_lists)
 
 <form method="post" action="/mailing-lists.php">
 
-<h2><a name="general">General Mailing Lists</a></h2>
+<a name="general"></a>
+<h2>General Mailing Lists</h2>
 
 <?php output_lists_table($general_mailing_lists); ?>
 
-<h2><a name="internals">Internals Mailing Lists</a></h2>
+<a name="internals"></a>
+<h2>Internals Mailing Lists</h2>
 
 <?php output_lists_table($internals_mailing_lists); ?>
 
