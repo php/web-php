@@ -2,22 +2,27 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'tips.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>About URL shortcuts</h3>
+<p>
+ Most of the tips here utilize PHP.net URL shortcuts, so they allow you
+ more then just function lookups. For more information on what is possible
+ with our shortcuts, see the <a href="/urlhowto.php">URL Howto page</a>.
+</p>
+
+<h3>More on language selection</h3>
+<p>
+ These shortcuts display pages in your own preferred language, as detected
+ by the PHP site. For more information on language selection, see
+ <a href="/my.php">the My PHP.net page</a>.
+</p>
+';
 site_header("Quick Reference Tips");
 
 function tip_title($title, $author = '', $date = '')
 {
-	echo "<hr />\n<h2>" . $title . "</h2>\n";
-    if ($author || $date) {
-        echo "<small>\n";
-        if ($author) {
-            echo "Submitted by " . $author . "<br />\n";
-        }
-        if ($date) {
-            echo $date . "<br />\n";
-        }
-        echo "</small>\n";
-    }
-    echo "<br />\n";
+    echo "<hr />\n<h2>$title<br />\n";
+    echo "<small>Submitted by $author ($date)</small></h2>\n";
 }
 ?>
 
@@ -26,18 +31,6 @@ function tip_title($title, $author = '', $date = '')
 <p>
  On this page, you can find many neat tips and tricks to look up
  information about PHP functions and language constructs.
-</p>
-
-<p>
- Most of the tips here utilize PHP.net URL shortcuts, so they allow you
- more then just function lookups. For more information on what is possible
- with our shortcuts, see the <a href="/urlhowto.php">URL Howto page</a>.
- These shortcuts display pages in your own preferred language, as detected
- by the PHP site. For more information on language selection, see
- <a href="/my.php">the My PHP.net page</a>.
-</p>
- 
-<p>
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
@@ -236,7 +229,7 @@ Search Type=0
  Voila!
 </p>
 
-<?php tip_title('Adding the Quick Reference to most Javascript-capable Browsers', '', '07-Mar-2001'); ?>
+<?php tip_title('Adding the Quick Reference to most Javascript-capable Browsers', 'Anonymous', '07-Mar-2001'); ?>
 
 <p>
  Just right-click (control-click or click-and-hold for Macintosh users)
@@ -245,7 +238,7 @@ Search Type=0
  your bookmarks manually to give the bookmark an easy-to-remember title.
 </p>
 
-<?php tip_title('Adding the Quick Reference to Mozilla and Netscape 6/7', 'Andr&eacute; Langhorst', '16-Aug-2000'); ?>
+<?php tip_title('Adding the Quick Reference to Mozilla and Netscape 6/7', 'André Langhorst', '16-Aug-2000'); ?>
 
 <p>
  Quick access to PHP documentation and site search for all Mozilla (including Firebird)
