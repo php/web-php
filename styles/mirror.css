@@ -1,14 +1,14 @@
 /* TOC elements on manual pages ------------------------------------------- */
-ul#manualtoc li {
+ul.toc li {
 	background-image: url(/images/box-0.gif);
 }
-ul#manualtoc li.up {
+ul.toc li.up {
 	background-image: url(/images/caret-u.gif);
 }
-ul#manualtoc li.home {
+ul.toc li.home {
 	background-image: url(/images/caret-t.gif);
 }
-ul#manualtoc li.active {
+ul.toc li.active {
 	background-image: url(/images/box-1.gif);
 }
 
