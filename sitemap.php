@@ -11,7 +11,7 @@ site_header("Sitemap");
 
 <ul>
  <li><a href="/index.php">Home Page</a></li>
- <li>News Archives (<?php print_news_links(); ?>)</li>
+ <li><a href="/news-2006.php">News Archives</a></li>
  <li><a href="/news.rss">RSS newsfeed</a></li>
 </ul>
 
@@ -19,7 +19,6 @@ site_header("Sitemap");
 
 <ul>
  <li><a href="/downloads.php">Downloads</a></li>
- <li><a href="/anoncvs.php">Getting PHP from CVS</a></li>
 </ul>
 
 <h2>PHP Bugs</h2>
@@ -64,6 +63,14 @@ site_header("Sitemap");
  <li><a href="/sites.php">PHP.net Sites List</a></li>
 </ul>
 
+<h2>CVS instructions</h2>
+
+<ul>
+ <li><a href="/anoncvs.php">Getting PHP from CVS</a></li>
+ <li><a href="/cvs-php.php">Using CVS for PHP Development</a></li>
+ <li><a href="/cvsup.php">Maintaining a Local CVS Repository</a></li>
+</ul>
+
 <h2>Mirror sites</h2>
 
 <ul>
@@ -77,7 +84,6 @@ site_header("Sitemap");
   <ul>
    <li><a href="/mirroring.php">Mirroring PHP.net</a></li>
    <li><a href="/mirroring-stats.php">Mirroring - stats service</a></li>
-   <li><a href="/cvsup.php">Maintaining a Local CVS Repository</a></li>
   </ul>
  </li>
 </ul>
@@ -93,4 +99,4 @@ site_header("Sitemap");
  <li><a href="/contact.php#ads">Advertising at PHP.net</a></li>
 </ul>
 
-<?php site_footer(); ?>
+<?php site_footer();
