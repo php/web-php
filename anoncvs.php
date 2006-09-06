@@ -2,6 +2,27 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'anoncvs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>What is CVS?</h3>
+<p>
+ You can find more information about CVS, and
+ download clients for most major platforms, at
+ <a href="http://ximbiot.com/cvs/wiki/index.php">the CVS Wiki</a>.
+</p>
+
+<h3>CVS mirroring</h3>
+<p>
+ You can also mirror the PHP CVS repository using CVSup, see
+ <a href="/cvsup.php">our CVSup page</a> for more details.
+</p>
+
+<h3>Source and binary snapshots</h3>
+<p>
+ You may also be interested in a PHP snapshot, see
+ <a href="http://snaps.php.net/">snaps.php.net</a>.
+ Compiled snapshots for Windows users are also included.
+</p>
+';
 site_header("Anonymous CVS Access");
 ?>
 
@@ -14,12 +35,6 @@ site_header("Anonymous CVS Access");
  not even compile properly. The advantage of using CVS, though,
  is that you can get the latest fixes and updates, without having
  to wait for the official releases.
-</p>
-
-<p>
- You can find more information about CVS, and
- download clients for most major platforms, at
- <a href="http://www.cvshome.org/">CVShome.org</a>.
 </p>
 
 <p>
@@ -134,14 +149,6 @@ diff -u
  3 (and ignore the later steps).  For example, to checkout the
  latest english version of the PHP manual:<br />
  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</tt>
-</p>
-
-<p>
- You can also mirror the PHP CVS repository using CVSup, see
- <a href="/cvsup.php">our CVSup page</a> for more details.
- You may also be interested in a PHP snapshot, see
- <a href="http://snaps.php.net/">snaps.php.net</a>.
- Compiled snapshots for Windows users are also included.
 </p>
 
 <a name="buildconf_fail"></a>
