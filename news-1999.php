@@ -2,6 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'news-1999.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+news_archive_sidebar();
 site_header("News Archive - 1999");
 ?>
 
@@ -9,8 +10,6 @@ site_header("News Archive - 1999");
 
 <p>
  Here are the most important news items we have published in 1999 on PHP.net.
- For the latest news, <a href="/index.php">check the homepage</a>.
- See more archives for <?php print_news_links(); ?>.
 </p>
 
 <div class="newspage">

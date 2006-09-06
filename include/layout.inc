@@ -757,15 +757,27 @@ function display_event($event, $include_date = 1)
 }
 
 // Print news links for archives
-function print_news_links()
+function news_archive_sidebar()
 {
-    $links = "";
+    global $SIDEBAR_DATA;
+    $SIDEBAR_DATA = '
+<h2>Latest news</h2>
+
+<p>
+ For the latest news, <a href="/index.php">check the homepage</a>,
+ or <a href="/news.rss">our RSS feed</a>.
+</p>
+
+<h2>Archives by year</h2>
+
+<ul class="toc">
+';
     for ($i = 1998; $i < 2007; $i++) {
         $pagename = "news-$i.php";
-        if ($pagename == $_SERVER['BASE_PAGE']) { continue; }
-        $links .= '<a href="/news-' . $i . '.php">' . $i . '</a>, ';
+        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
+        $SIDEBAR_DATA .= '<li><a href="/' . $pagename .'"' . $classname .'>' . $i . "</a></li>\n";
     }
-    echo substr($links, 0, -2);
+    $SIDEBAR_DATA .= '</ul>';
 }
 
 /* vim: set noet ts=4 sw=4 ft=php: : */
