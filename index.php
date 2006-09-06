@@ -140,7 +140,7 @@ if (is_official_mirror()) {
 $RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
 
 // Run the boldEvents() function on page load
-$ONLOAD = "boldEvents(); searchHistory();";
+$ONLOAD = "boldEvents();";
 
 // Write out common header
 commonHeader("Hypertext Preprocessor");
@@ -148,7 +148,7 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Speakers and schedule"); ?>
+<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference"); ?>
 
 <h1>2006 DC PHP Conference - Speakers and schedule</h1>
 <p>

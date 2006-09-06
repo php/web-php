@@ -425,8 +425,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
            $SEARCH_BASE, $ONLOAD;
 
-    // If no onload event is specified, restore the last search
-    if (empty($ONLOAD)) { $ONLOAD = "runOnLoad();"; }
+    $onload = ($ONLOAD ? ' onload="' . $ONLOAD . '"' : '');
 
     // Guess what base to use for this page (the first two are just
     // for BC reasons, until we migrate all the code to use the last one)
@@ -454,7 +453,7 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 <?php echo (isset($PBASE) ? ' <base href="' . $PBASE . '" />' : ''); ?></head>
 <body bgcolor="#ffffff" text="#000000"
       link="#000099" alink="#0000ff" vlink="#000099"
-      onload="<?php echo $ONLOAD; ?>">
+      <?php echo $onload; ?>>
 
 <!--UdmComment-->
 <table border="0" cellspacing="0" cellpadding="0" width="100%">
