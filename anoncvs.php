@@ -63,7 +63,7 @@ site_header("Anonymous CVS Access");
 <ol>
  <li>
   It is recommended that you configure CVS by putting this
-  in your <tt>~/.cvsrc</tt> file:
+  in your <code>~/.cvsrc</code> file:
 <pre>
 cvs -z3
 update -d -P
@@ -75,43 +75,43 @@ diff -u
  <li>
   Log in to the PHP CVS server. We'll use the anonymous user <strong>cvsread</strong> 
   as the username, and use <strong>phpfi</strong> as the password:<br />
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository login</tt>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository login</code>
  </li>
  
  <li>
-  Obtain the latest PHP source from CVS.  There is a single <i>php-src</i> 
-  directory that contains all PHP 4 and PHP 5 branches.  To get PHP from CVS, 
-  use the <i>"cvs checkout -r BRANCH"</i> notation.  To checkout the
+  Obtain the latest PHP source from CVS. There is a single <i>php-src</i> 
+  directory that contains all PHP branches. To get PHP from CVS, 
+  use the <i>"cvs checkout -r BRANCH"</i> notation. To checkout the
   latest, consider the following CVS commands:<br /><br />
   <strong>PHP 4.4</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_4 php-src</tt>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_4 php-src</code>
   <br />
   <strong>PHP 5.1</strong>:
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_1 php-src</tt>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_1 php-src</code>
   <br />
   <strong>PHP 5.2</strong>:
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php-src</tt>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php-src</code>
   <br />
   <strong>PHP 6</strong>: 
-  <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</tt>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</code>
   <br /><br />
   Some tips and notes:
   <br />
   <div class="tip" style="margin: 10px 0 10px 20px;">
    You may retrieve a specific release of PHP from CVS by using the
-   <i>-r</i> flag in your cvs command.  Some examples:<br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_2_1 php-src</tt><br />
-   <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_3_2 php-src</tt>
+   <i>-r</i> flag in your cvs command. Some examples:<br />
+   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_2_1 php-src</code><br />
+   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_3_2 php-src</code>
   </div>
   <ul>
    <li>
     The branch names can also be used for cvs diff and merge operations.
    </li>
    <li>
-    All of the above commands create a local directory named "php-src".  You can also 
+    All of the above commands create a local directory named "php-src". You can also 
     specify another directory name, for example, to put PHP 6 HEAD into a directory 
     named php6dev:<br />
-    <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php-src</tt>
+    <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php-src</code>
    </li>
   </ul>
  </li>
@@ -123,18 +123,18 @@ diff -u
    Note that certain combinations of autoconf, automake and libtool may not
    work when used together. See <a href="#buildconf_fail">below</a> for
    details.<br />
-   Also, certain versions of autoconf may generate warnings of <tt>AC_PROG_CPP
-   called before AC_PROG_CC</tt>. These messages can usually be ignored.
+   Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
+   called before AC_PROG_CC</code>. These messages can usually be ignored.
   </div>
  </li>
   
  <li>
-  Run <tt>./buildconf</tt>. After a while, the configure script should be generated.
+  Run <code>./buildconf</code>. After a while, the configure script should be generated.
  </li>
   
  <li>
   From this point onwards, installation is similar to the installation of one of
-  the official packages with one main difference - you must have bison 1.28 or later
+  the official packages with one main difference &ndash; you must have bison 1.28 or later
   and flex 2.5.4 to compile, because the pre-generated scanner and parser
   files are not included in CVS.
  </li>
@@ -148,7 +148,7 @@ diff -u
  appropriate module name for "<i>php-src</i>" in step 
  3 (and ignore the later steps).  For example, to checkout the
  latest english version of the PHP manual:<br />
- <tt>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</tt>
+ <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</code>
 </p>
 
 <a name="buildconf_fail"></a>
@@ -156,9 +156,9 @@ diff -u
 
 <p>
  There seem to be problems with libtool 1.4.2. It is suggested
- that you use libtool 1.4, along with the autoconf 2.13 and
+ that you use libtool 1.4, along with autoconf 2.13 and
  automake 1.4. You should also ensure that autoconf, automake
- and libtool are installed in the same directory.  libtool 1.5
+ and libtool are installed in the same directory. libtool 1.5
  will not work.
 </p>
 
