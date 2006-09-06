@@ -127,6 +127,10 @@ ul.simple li {
 	margin-top: 0px;
 }
 
+/* 3px IE bug hack hidden from IE5-mac \*/
+* html #content { height: 1%; }
+/* End hide from IE5-mac */ 
+
 /* Layout styling and helpers --------------------------------------------- */
 #layout_2, #layout_3 {
 	/* Background image will be set in a mirror specific CSS rule */

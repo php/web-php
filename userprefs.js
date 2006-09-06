@@ -1,7 +1,7 @@
 // Default document onload function
 function runOnLoad()
 {
-    resizeColumnsIE();
+    //resizeColumnsIE();
 }
 
 // Get a value of one cookie set by it's name
