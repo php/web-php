@@ -114,8 +114,8 @@ site_header("URL Howto");
  <tt><?php echo $MYSITE; ?>php4news</tt>. The latter is an external page
  alias, as it points to a file on the CVS server, containing information
  about changes in PHP. There are also some convinient aliases, like
- <tt><?php echo $MYSITE; ?>de/books</tt> which displays the German
- PHP books' list.
+ <tt><?php echo $MYSITE; ?>de/phpversion</tt> which displays the German
+ manual page for the phpversion() function.
 </p>
 
 <h1>Get it on your site</h1>
@@ -134,10 +134,10 @@ site_header("URL Howto");
 </p>
 <ul>
  <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
- <li><a href="http://cvs.php.net/co.php/phpweb/include/langchooser.inc">http://cvs.php.net/co.php/phpweb/include/langchooser.inc</a></li>
- <li><a href="http://cvs.php.net/co.php/phpweb/error.php">http://cvs.php.net/co.php/phpweb/error.php</a></li>
- <li><a href="http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc">http://cvs.php.net/co.php/phpweb/include/manual-lookup.inc</a></li>
- <li><a href="http://cvs.php.net/co.php/phpweb/search.php">http://cvs.php.net/co.php/phpweb/search.php</a></li>
+ <li><a href="/source.php?url=/include/langchooser.inc">include/langchooser.inc</a></li>
+ <li><a href="/source.php?url=/error.php">error.php</a></li>
+ <li><a href="/source.php?url=/include/manual-lookup.inc">include/manual-lookup.inc</a></li>
+ <li><a href="/source.php?url=/search.php">search.php</a></li>
 </ul>
 
 <?php site_footer(); ?>
