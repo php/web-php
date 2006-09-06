@@ -148,6 +148,21 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Speakers and schedule"); ?>
+
+<h1>2006 DC PHP Conference - Speakers and schedule</h1>
+<p>
+<span class="newsdate">[06-September-2006]</span>
+The <a href="http://www.dcphpconference.com">2006 DC PHP Conference</a> group
+is pleased to announce our <a href="http://www.dcphpconference.com/schedule.php">
+speaker and schedule lineup</a>. The conference is taking place in downtown 
+Washington, DC, USA at the L'Enfant Plaza Hotel, October 19-20, 2006. There 
+will be presentations and networking opportunities in the heart 
+of the public sector.
+</p>
+
+<hr />
+
 <h1>PHP 5.1.6 Released</h1>
 <p>
  <span class="newsdate">[24-Aug-2006]</span>
