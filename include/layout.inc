@@ -761,14 +761,14 @@ function news_archive_sidebar()
 {
     global $SIDEBAR_DATA;
     $SIDEBAR_DATA = '
-<h2>Latest news</h2>
+<h3>Latest news</h3>
 
 <p>
  For the latest news, <a href="/index.php">check the homepage</a>,
  or <a href="/news.rss">our RSS feed</a>.
 </p>
 
-<h2>Archives by year</h2>
+<h3>Archives by year</h3>
 
 <ul class="toc">
 ';
