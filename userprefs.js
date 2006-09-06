@@ -1,9 +1,3 @@
-// Default document onload function
-function runOnLoad()
-{
-    //resizeColumnsIE();
-}
-
 // Get a value of one cookie set by it's name
 // Impmentation from the JS 1.3 Client Guide by Netscape
 function getCookie(Name)
@@ -46,23 +40,7 @@ function boldEvents()
     }
 }
 
-// This function is a workaround for the IE 3px bug,
-// and therefore is written in IE only JS. If the central
-// column is higher than the left or right sidebar, we need
-// to adjust the height of the sidebars to the contents.
-function resizeColumnsIE()
-{
-    if (document.all && document.all["leftbar"]) {
-        contentH = document.all["content"].offsetHeight;
-        if (contentH > document.all["leftbar"].offsetHeight) {
-            document.all["leftbar"].style.pixelHeight = contentH;
-        }
-        if (document.all["rightbar"] && contentH > document.all["rightbar"].offsetHeight) {
-            document.all["rightbar"].style.pixelHeight = contentH;
-        }
-    }
-}
-
+// Load function name suggestion code (for search box)
 function loadSuggestCode()
 {
     searchEnabled = true;
