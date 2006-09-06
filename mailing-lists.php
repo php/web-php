@@ -15,6 +15,18 @@ $SIDEBAR_DATA = '
  unsubscription page</a>.
 </p>
 
+<h3>Mailing list options</h3>
+
+<p>
+ All of the mailing lists hosted at <a
+ href="http://lists.php.net/">lists.php.net</a> are managed using the <a
+ href="http://www.ezmlm.org/">ezmlm-idx</a> mailing list software.
+ There are a variety of commands you can use to modify your subscription.
+ Either send a message to <code>php-whatever-help@lists.php.net</code> (as in,
+ <code>php-general-help@lists.php.net</code>) or you can view the commands for
+ ezmlm <a href="http://www.ezmlm.org/ezman/ezman1.html">here.</a>
+</p>
+
 <h3>Other PHP related mailing lists</h3>
 
 <p>
@@ -314,13 +326,6 @@ function output_lists_table($mailing_lists)
  You will be sent a confirmation mail at the address you wish to
  be subscribed or unsubscribed, and only added to the list after
  following the directions in that mail.
-</p>
-
-<p>
- There are a variety of commands you can use to modify your subscription.
- Either send a message to php-whatever-help@lists.php.net (as in,
- php-general-help@lists.php.net) or you can view the commands for
- ezmlm <a href="http://www.ezmlm.org/ezman-0.32/ezman1.html">here.</a>
 </p>
 
 <p>
