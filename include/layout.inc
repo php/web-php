@@ -86,10 +86,8 @@ function site_header($title = '', $config = array())
         $meta .= "\n <meta name=\"robots\" content=\"noindex\" />";
     }
     
-    // Decide on onload event handler
-    if (!isset($config['onload'])) {
-        $config['onload'] = "runOnLoad();";
-    }
+    // Set onload handler if required
+    $onload = (isset($config['onload']) ? 'onload="' . $config['onload'] . '"' : '');
     
     // Explicit language setting means that we should put that into the form
     if (isset($EXPL_LANG)) {
@@ -123,7 +121,7 @@ function site_header($title = '', $config = array())
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base$meta
 </head>
-<body onload="{$config['onload']}">
+<body{$onload}">
 
 <div id="headnav">
  <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
