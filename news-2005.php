@@ -12,8 +12,6 @@ site_header("News Archive - 2005");
  Here are the most important news items we have published in 2005 on PHP.net.
 </p>
 
-<div class="newspage">
-
 <hr />
 
 <h1>PHP 5.1.1 Released</h1>
@@ -538,7 +536,5 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
 <p>
  Congratulations to us all!
 </p>
-
-</div>
 
 <?php site_footer(); ?>

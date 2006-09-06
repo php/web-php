@@ -13,18 +13,6 @@ $SIDEBAR_DATA = '
  <a href="http://smarty.php.net/resources.php?category=7">Smarty
  lists</a> on their own pages.
 </p> 
-
-<h3>More mailing list options</h3>
-
-<p>
- All of the mailing lists hosted at <a
- href="http://lists.php.net/">lists.php.net</a> are managed using the <a
- href="http://www.ezmlm.org/">ezmlm-idx</a> mailing list software.
- There are a variety of commands you can use to modify your subscription.
- Either send a message to <code>php-whatever-help@lists.php.net</code> (as in,
- <code>php-general-help@lists.php.net</code>) or you can view the commands for
- ezmlm <a href="http://www.ezmlm.org/ezman/ezman1.html">here.</a>
-</p>
 ';
 site_header("Unsubscribing");
 ?>
@@ -172,12 +160,12 @@ site_header("Unsubscribing");
  </dd>
 </dl>
 
+<a name="unsubdiff"></a>
 <h2>Unsubscribe with a different email address</h2>
 
 <p>
- To <a name="unsubdiff">unsubscribe an address like this that is
- different</a> from what the mailing list software recognizes as your
- own address, you need to send mail to
+ To unsubscribe an address like this that is different from what the
+ mailing list software recognizes as your own address, you need to send mail to
  <tt><em>listname</em>-unsubscribe-<em>joecool=example.com</em>@lists.php.net</tt>
  (or <tt>-unsubscribe-digest-</tt>, if the address is subscribed to the
  digest format of the list).

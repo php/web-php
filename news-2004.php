@@ -12,8 +12,6 @@ site_header("News Archive - 2004");
  Here are the most important news items we have published in 2004 on PHP.net.
 </p>
 
-<div class="newspage">
-
 <hr />
 
 <h1>A Note on Security in PHP</h1>
@@ -656,7 +654,5 @@ site_header("News Archive - 2004");
  <a href="http://www.pawscon.com/register">Purchase your tickets</a> today for this
  one of a kind conference!
 </p>
-
-</div>
 
 <?php site_footer(); ?>

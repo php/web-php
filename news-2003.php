@@ -12,7 +12,6 @@ site_header("News Archive - 2003");
  Here are the most important news items we have published in 2003 on PHP.net.
 </p>
 
-<div class="newspage">
 <hr />
 
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2004.gif", "Vancouver PHP Conference 2004"); ?>
@@ -797,7 +796,5 @@ site_header("News Archive - 2003");
  Unix support is considered stable, while Windows and Darwin are still
  of beta-quality.
 </p>
-
-</div>
 
 <?php site_footer(); ?>

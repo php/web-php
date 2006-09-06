@@ -52,7 +52,7 @@ div.tip, p.tip {
 	border: 1px solid #0000cc;
 	color: #000066;
 	background-color: #eeeeff;
-	padding: 0px 8px;
+	padding: 8px;
 }
 
 p.formerror, p.warn {
@@ -69,9 +69,6 @@ hr {
 	background-color: black;
 	height: 1px;
 	/* clear: both; has problems in IE and Opera */
-}
-.newspage hr {
-	clear: both;
 }
 
 .center {
@@ -528,4 +525,8 @@ ul#results_nav_list li {
 	display: inline;
 	margin-right: 0.4em;
 	list-style-type: none;
+}
+
+dl dd {
+  margin: 0.5em 0 0.5em 2em;
 }

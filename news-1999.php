@@ -12,7 +12,6 @@ site_header("News Archive - 1999");
  Here are the most important news items we have published in 1999 on PHP.net.
 </p>
 
-<div class="newspage">
 <hr />
 
 <h1>The Mars Polar Lander and PHP</h1>
@@ -118,7 +117,5 @@ site_header("News Archive - 1999");
  <a href="http://www.zend.com/">Zend Web site</a> for more
  information!
 </p>
-
-</div>
 
 <?php site_footer(); ?>

@@ -12,8 +12,6 @@ site_header("News Archive - 2006");
  Here are the most important news items we have published in 2006 on PHP.net.
 </p>
 
-<div class="newspage">
-
 <hr />
 <?php news_image("http://wtconferences.com/", "webtech2006.png", "WebTech 2006"); ?>
 
@@ -92,7 +90,5 @@ and the full list of changes is available in the <a href="/ChangeLog-4.php#4.4.2
 Further details about this release can be found in the <a href="/release_5_1_2.php">release announcement</a> 
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
-
-</div>
 
 <?php site_footer(); ?>

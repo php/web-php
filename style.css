@@ -128,7 +128,7 @@ div.tip, p.tip {
         border: 1px solid #00c;
         color: #000066;
         background: #eeeeff;
-        padding: 0px 8px;
+        padding: 8px;
 }
 
 table#cal {
@@ -368,4 +368,8 @@ ul#results_nav_list li {
 	display: inline;
 	margin-right: 0.4em;
 	list-style-type: none;
+}
+
+dl dd {
+  margin: 0.5em 0 0.5em 2em;
 }

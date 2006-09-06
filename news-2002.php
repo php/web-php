@@ -12,7 +12,6 @@ site_header("News Archive - 2002");
  Here are the most important news items we have published in 2002 on PHP.net.
 </p>
 
-<div class="newspage">
 <hr />
 
 <h1>PHP Look Back 2002</h1>
@@ -602,7 +601,5 @@ site_header("News Archive - 2002");
  <li><a href="http://www.bttr.org/phpconf/">Ralf Geschke</a></li>
  <li><a href="http://www.phpconference.de/2001/images/PHP_Konferenz/">Conference photos</a></li>
 </ul>
-
-</div>
 
 <?php site_footer(); ?>

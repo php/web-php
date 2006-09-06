@@ -12,7 +12,6 @@ site_header("News Archive - 2001");
  Here are the most important news items we have published in 2001 on PHP.net.
 </p>
 
-<div class="newspage">
 <hr />
 
 <h1>PHP 4.1.0 Released!</h1>
@@ -315,7 +314,5 @@ site_header("News Archive - 2001");
  has been released. This bug-fix release also fixes a few party-crashing bugs that
  were discovered in PHP 4.0.4.
 </p>
-
-</div>
 
 <?php site_footer(); ?>
