@@ -2,6 +2,14 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sites.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>PHP.net Sitemap</h3>
+<p>
+ It might also be a good idea to dig deeper into
+ what PHP.net can offer you. Our <a href="/sitemap.php">sitemap</a>
+ helps you find your way around the site.
+</p>
+';
 site_header("A Tourist's Guide");
 ?>
 
@@ -11,7 +19,7 @@ site_header("A Tourist's Guide");
 </h1>
 
 <p>
- Everyone knows the www.php.net site. All of us went there sooner or later,
+ Everyone knows the <code>www.php.net</code> site. All of us went there sooner or later,
  and will keep going back there. This is the central reference point for PHP
  users, and there is a wealth of information there. Not all of it is obvious.
  Come with me, I'll show you.
@@ -122,6 +130,13 @@ site_header("A Tourist's Guide");
  The bug database is where you can bring problems with PHP to the attention of
  developers (but don't forget to double-check that somebody else hasn't already
  reported the same problem!).
+</p>
+
+<h2><a href="http://doc.php.net/">doc.php.net</a>: Documentation collaboration</h2>
+
+<p>
+ The documentation projects website tries to gather all PHP.net hosted
+ documentation teams together with tools, status reports and an RFC system.
 </p>
 
 <h2><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
