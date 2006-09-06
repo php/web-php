@@ -152,7 +152,7 @@ commonHeader("Hypertext Preprocessor");
 
 <h1>2006 DC PHP Conference - Speakers and schedule</h1>
 <p>
-<span class="newsdate">[06-September-2006]</span>
+<span class="newsdate">[06-Sep-2006]</span>
 The <a href="http://www.dcphpconference.com">2006 DC PHP Conference</a> group
 is pleased to announce our <a href="http://www.dcphpconference.com/schedule.php">
 speaker and schedule lineup</a>. The conference is taking place in downtown 
