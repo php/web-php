@@ -121,19 +121,24 @@ if (isset($_POST['maillist'])) {
 <p>
  There are many PHP-related mailing lists available on our server.
  Most of them are archived, and all of them are available as newsgroups
- on our <a href="news://news.php.net">news server</a>. The archives
- are searchable. There is an experimental web interface for the news
- server at <a href="http://news.php.net/">http://news.php.net/</a>, and
+ on our <a href="news://news.php.net">news server</a>. You can search
+ some mailing lists right from this website from <a href="/search.php">the
+ search page</a> or by using the search input box selecting the
+ appropriate option on the top-right of every page.
+</p>
+<p>
+ There is an experimental web interface for the news server at
+ <a href="http://news.php.net/">http://news.php.net/</a>, and
  there are also other archives provided by
  <a href="http://marc.theaimsgroup.com/">Marc</a>,
- <a href="http://www.phparch.com/mailinglists">php|architect</a>,
- <a href="http://www.phpbuilder.com/mail/">PHPBuilder</a>
+ <a href="http://beeblex.com/lists/lists.html">Beeblex</a>,
  and <a href="http://zend.com/lists.php">Zend</a>.
 </p>
 
+<h2>Posting guidelines</h2>
+
 <p>
- <b>Note:</b> When posting to mailing lists or newsgroups, please keep 
- the following in mind:
+ When posting to mailing lists or newsgroups, please keep the following in mind:
 </p>
 
 <ul>
@@ -335,12 +340,6 @@ function output_lists_table($mailing_lists)
  might want to consider subscribing to the digest list instead (two messages
  per day), using the news server, or reading the mailing list using the
  archives. 
-</p>
-
-<p>
- You can search some main mailing lists right from this website from <a
- href="/search.php">the search page</a> or by using the search input box
- selecting the appropriate option on the top-right of every page.
 </p>
 
 <?php site_footer(); ?>
