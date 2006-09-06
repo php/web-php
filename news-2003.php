@@ -103,6 +103,7 @@ site_header("News Archive - 2003");
 
 <hr />
 
+<?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
 <?php news_image("http://webdevmagazine.co.uk/conf/index_n.php", "bulgaria_2004.gif", "First Bulgarian PHP conference"); ?>
 
 <h1>First Bulgarian and Second Hungarian PHP Conference</h1>
@@ -114,8 +115,6 @@ site_header("News Archive - 2003");
  to popularize PHP among the business, education and services sectors. The organizers
  welcome proposals for sessions and company presentations.
 </p>
-
-<?php news_image("http://www.phpconf.hu/", "hu_conf.gif", "Second Hungarian PHP conference"); ?>
 
 <p>
  Also coming in March 2004 is the <a href="http://www.phpconf.hu/">Second Hungarian
