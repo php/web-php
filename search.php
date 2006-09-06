@@ -37,9 +37,6 @@ if (!empty($_FORM['pattern'])) {
     // Never allow a comma in the show string, that would confuse our JS
     $_FORM['show'] = str_replace(",", "", $_FORM['show']);
     
-    // Remember the last search settings for a week
-    mirror_setcookie("LAST_SEARCH", "{$_FORM['show']},{$_FORM['pattern']}", 60*60*24*7);
-
     // Mailing list search base URL
     $ml_url = "http://marc.theaimsgroup.com/?r=1&w=2&q=b&";
     $ucp = urlencode($_FORM['pattern']);

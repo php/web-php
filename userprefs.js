@@ -1,8 +1,6 @@
 // Default document onload function
 function runOnLoad()
 {
-    // Disabled because of complaints
-    // searchHistory();
     resizeColumnsIE();
 }
 
@@ -43,35 +41,6 @@ function boldEvents()
                 if (spans[i].className == "event_" + country) {
                     spans[i].style.fontWeight = "bold";
                 }
-            }
-        }
-    }
-}
-
-// Restore the last search as stored in a cookie
-function searchHistory()
-{
-    // Something is already typed in, do not try to overwrite it
-    if (document.forms["topsearch"].pattern.value.length > 0) {
-        return;
-    }
-
-    // Try to get the lastsearch cookie
-    lastSearch = getCookie("LAST_SEARCH");
-    if (typeof(lastSearch) == "string") {
-        
-        // Get pattern and show information from cookie
-        option  = lastSearch.substr(0, lastSearch.indexOf(","));
-        pattern = lastSearch.substr(lastSearch.indexOf(",") + 1);
-
-        // Set pattern in form
-        document.forms["topsearch"].pattern.value = unescape(pattern.replace(/\+/g," "));
-        
-        // Set the last selected search method in the dropdown
-        for (var i = 0; i < document.forms["topsearch"].show.length; i++) {
-            if (document.forms["topsearch"].show[i].value == option) {
-                document.forms["topsearch"].show[i].selected = true;
-                break;
             }
         }
     }
