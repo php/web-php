@@ -1,5 +1,8 @@
 <?php
 // $Id$
+
+$ip_spam_lookup_url = 'http://www.dnsstuff.com/tools/ip4r.ch?ip=';
+
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
@@ -107,8 +110,10 @@ if ($process) {
         if ($result) {
             if (strpos($result, '[TOO MANY NOTES]') !== FALSE) {
                 print "<p class=\"formerror\">As a security precaution, we only allow a certain number of notes to be submitted per minute. At this time, this number has been exceeded. Please re-submit your note in about a minute.</p>";
-            } else if (strpos($result, '[SPAMMER]') !== FALSE) {
-                print '<p class="formerror">Your IP is listed in one of the spammers lists we use. If you think this is an error, please contact the <a href="mailto:webmaster@php.net">webmaster</a>.</p>';
+            } else if (($pos = strpos($result, '[SPAMMER]')) !== FALSE) {
+                $ip       = trim(substr($result, $pos+9));
+                $spam_url = $ip_spam_lookup_url . $ip;
+                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>. If the problem persists, please contact the <a href="mailto:webmaster@php.net">webmaster</a>.</p>';
             } else if (strpos($result, '[SPAM WORD]') !== FALSE) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
             } else if (strpos($result, '[CLOSED]') !== FALSE) {
