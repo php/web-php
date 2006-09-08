@@ -199,8 +199,8 @@ site_header("Links");
 
  <li>
   <a href="http://www.nexen.net/component/option,com_nexen_v2/Itemid,234/">Nexen's
-  scripts librairy</a><br />An exhaustive PHP scripts collection,
-  with more 800 useful functions (English and French).
+  script library</a><br />An exhaustive collection of PHP scripts,
+  with over 800 useful functions (French).
  </li>
 
  <li>
