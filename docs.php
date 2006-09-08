@@ -19,12 +19,6 @@ $SIDEBAR_DATA='
 
 <h3>More Information</h3>
 <p>
- The <a href="http://zugeschaut-und-mitgebaut.de/php/">PHP Function Table</a>
- has an overview about which pages are translated to the
- different languages and in which versions of PHP the functions
- are available.
-</p>
-<p>
  If you have license questions, see
  the <a href="/license/">License FAQ</a>.
 </p>
