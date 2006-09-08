@@ -259,22 +259,6 @@ is available in the <a href="/ChangeLog-4.php#4.4.3">PHP 4 ChangeLog</a>.
 </p>
 
 <hr />
-<?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference - Call for Papers"); ?>
-
-<h1>2006 DC PHP Conference - Call for Papers</h1>
-<p>
- <span class="newsdate">[13-June-2006]</span>
-<a href="http://dcphpconference.com/">DC PHP Conference</a> invites technology experts from the federal government, 
-local community, and the non-profit sector to participate in a premiere forum for PHP's vast number of users.
-Present your technical concepts, cutting edge applications, or business applications for an opportunity 
-to showcase your ideas in the PHP community.
-</p>
-<p>
-Your participation will make this conference a success. The conference selection committee requests that 
-you submit an abstract for consideration. <a href="http://dcphpconference.com/callforpapers.php">All abstracts</a> submitted on or before July 7th, 2006 will be considered.
-</p>
-
-<hr />
 
 <?php news_image("http://code.google.com/soc/php/about.html", "google_soc_2006_128x53.gif", "Google Summer of Code 2006"); ?>
 
@@ -290,63 +274,6 @@ who will look after the students and their projects step by step.
 <p>
 The students, their projects and their assigned mentors can be viewed
 <a href="http://code.google.com/soc/php/about.html">here</a>.
-</p>
-
-<hr />
-
-<h1>Zend/PHP Conference 2006 - Call for Papers</h1>
-<p>
- <span class="newsdate">[24-May-2006]</span>
- Zend Technologies invites you to participate in the <a href="http://zendcon06.kbconferences.com/">Zend/PHP Conference
- 2006</a>. Share your ideas with fellow colleagues in the PHP community. Present
- your technical concepts, cutting edge applications, or business
- applications. Your participation will help make this conference a success.
-</p>
-<p>
- Session tracks include:
-</p>
-<ul>
- <li>
-  PHP and Web Services - Architecting and Building Service Based
-  Applications:  From SOA to Mashups
- </li>
- <li>
-  PHP Development - Best Practices and Pivotal Skills for PHP
-  Development
- </li>
- <li>
-  PHP Management - Operating Business Critical PHP Applications
- </li>
-</ul>
-<p>
- The conference selection committee will consider all abstracts submitted on
- or before June 30th, 2006. Notifications will be made by August 1st, 2006.
- Complete details available at the <a href="http://devzone.zend.com/node/view/id/89">Zend Developer Zone</a>
-</p>
-
-<hr />
-
-<?php news_image("http://www.phparch.com/works/", "phpworks.png", "php|works / db|works 2006"); ?>
-
-<h1>php|works / db|works 2006 - Call for Papers</h1>
-<p>
- <span class="newsdate">[16-May-2006]</span>
- php|architect magazine is proud to announce
- <a href="http://www.phparch.com/works">php|works / db|works 2006</a>, a
- three-day conference (plus one day of exclusive in-depth seminars) dedicated
- to PHP driven software development. This year's conference will take
- place on Sept. 12-15, 2006, in Toronto, Canada with September 12th set aside
- for a set of in-depth seminars.
-</p>
-<p>
- If you've got unique insight into PHP, or have used PHP to connect to
- high-end datastores, php|architect wants to hear from you.
-</p>
-<p>
- For more information, please visit the
- <a href="http://hades.phparch.com/ceres/public/page/index.php/works::cfp">
- Call for Papers</a> page,  and submit your ideas. The deadline is June 5,
- 2006.
 </p>
 
 <hr />
@@ -464,24 +391,6 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
 </p>
 
 <hr />
-
-<h1>PHP at FrOSCon Call for Papers</h1>
-<p>
- <span class="newsdate">[24-Apr-2006]</span>
- The faculty for Computer Science of the college of higher education
- Bonn-Rhein-Sieg celebrates the first conference about free software in
- cooperation with the LUUSA and the <a href="http://froscon.de/">FrOSCon
- e.V. 2006</a>. The event takes place on June 24th/25th in Bonn, Germany
- and is organized completely free and open.
-</p>
-<p>
- The PHP user groups Köln/Bonn and Dortmund take part in the conference
- and organize a professional PHP track for both days. The
- <a href="http://froscon.phpugdo.de/">call for papers</a>
- is currently open and every interesting talk is highly appreciated.
-</p>
-
-<hr />
 <h1>PHP Vikinger</h1>
 <p>
  <span class="newsdate">[24-Apr-2006]</span>
@@ -501,24 +410,6 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  <a href="http://zak.greant.com/php-vikinger-invitations-emailed">invitations</a>
  have been sent to various PEAR and PHP contributors. General
  registration for the event opens on May 1st.
-</p>
-
-<hr />
-<h1>International PHP Conference 2006 Call for Papers</h1>
-<p>
- <span class="newsdate">[24-Apr-2006]</span>
- The <a href="http://input.entwickler.com/phpconference">Call for Papers for
- the International PHP Conference 2006</a>, 5th to 8th November 2009 at
- Frankfurt/Main Germany, has been started. The Conference features two days
- full with six hours PowerWorkshops and two days main conference with sessions.
-</p>
-<p>
- The main focus of the conference will be Security through an own security
- track. Like last year, we'll provide a Management Day for businesses
- utilizing PHP or evaluating PHP.
-</p>
-<p>
- The Call for Papers will end at May, 21th. 
 </p>
 
 <hr />
@@ -580,11 +471,6 @@ featured parallel tracks: <a
 href="http://www.nyphpcon.com/conference_glance.php">Business Strategy
 and Technical Solutions</a>.  Over 400 are expected to attend, including
 business and technical professionals from around the world.
-</p>
-<p>
-We invite everyone - whether technical or non-technical - to participate
-in our <a href="http://www.nyphpcon.com/call_for_papers.php">Call For
-Papers</a>.
 </p>
 <p>
 An <a
