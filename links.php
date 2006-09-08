@@ -139,7 +139,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.devshed.com/Server_Side/PHP/">Developers Shed</a><br />
+  <a href="http://www.devshed.com/c/b/PHP/">Developers Shed</a><br />
   A good set of articles introducing various PHP concepts
  </li>
 
@@ -198,7 +198,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://dev.nexen.net/scripts/index.php?langue=en">Nexen's
+  <a href="http://www.nexen.net/component/option,com_nexen_v2/Itemid,234/">Nexen's
   scripts librairy</a><br />An exhaustive PHP scripts collection,
   with more 800 useful functions (English and French).
  </li>
