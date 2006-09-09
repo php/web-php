@@ -28,4 +28,4 @@ $correctmanual = @virtual("/manual/noalias.txt");
 if (!$correctmanual) { echo "manual-alias"; }
 
 // Check for for an exe file (rsnyc settings)
-echo "|" . ((int) file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/php-5.0.4-installer.exe'));
+echo "|" . ((int) file_exists($_SERVER['DOCUMENT_ROOT'] . '/distributions/pecl-5.1.6-installer.exe'));
