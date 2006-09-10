@@ -148,6 +148,29 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>International PHP Conference 2006</h1>
+<p>
+ <span class="newsdate">[10-Sep-2006]</span>
+ Software &amp; Support media is pleased to announce the
+ <a href="http://www.phpconference.com/">International PHP Conference 2006</a>.
+ It will happen from Nov. 05 to Nov. 08, 2006 at Frankfurt/Main.
+ This year's sessions include topics on Security, PHP Internals,
+ PHP &amp; Business and Webservice topics. The Call for Papers has
+ been closed and the programme is now online.
+</p>
+<p>
+ On Nov. 05 and Nov. 06 there will be 6-hour PowerWorkshops that
+ deliver hands-on PHP knowledge. A Management Day, dedicated to
+ Managers who want to get informed about the usage of PHP, contains
+ several sessions about the usage of PHP in large companies. The
+ "PHP Code Camp @ Nite" with PHP Core Devs Marcus Börger and Sara
+ Golemon. They go through from PHP basics to PHP OOP and implementing
+ your own PHP extension. Delicious pizza and peer will to the rest.
+ Registration is now open.
+</p>
+
+<hr />
+
 <?php news_image("http://dcphpconference.com/", "dcphpconference.png", "2006 DC PHP Conference"); ?>
 
 <h1>2006 DC PHP Conference - Speakers and schedule</h1>
