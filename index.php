@@ -165,7 +165,7 @@ commonHeader("Hypertext Preprocessor");
  several sessions about the usage of PHP in large companies. The
  "PHP Code Camp @ Nite" with PHP Core Devs Marcus Börger and Sara
  Golemon. They go through from PHP basics to PHP OOP and implementing
- your own PHP extension. Delicious pizza and peer will to the rest.
+ your own PHP extension. Delicious pizza and beer will do the rest.
  Registration is now open.
 </p>
 
