@@ -16,6 +16,14 @@ $SIDEBAR_DATA = '
  <a href="/cvsup.php">our CVSup page</a> for more details.
 </p>
 
+<h3>Contribute</h3>
+<p>
+ If you would like to join PHP development or would like to
+ contribute to the PHP documentation, contact the relevant
+ group. You will need <a href="/cvs-php.php">your own CVS account</a>
+ to contribute.
+</p>
+
 <h3>Source and binary snapshots</h3>
 <p>
  You may also be interested in a PHP snapshot, see

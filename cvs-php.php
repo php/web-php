@@ -4,6 +4,21 @@ $_SERVER['BASE_PAGE'] = 'cvs-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+$SIDEBAR_DATA = '
+<h3>More about CVS</h3>
+<p>
+ You can find more information about CVS, and
+ download clients for most major platforms, at
+ <a href="http://ximbiot.com/cvs/wiki/index.php">the CVS Wiki</a>.
+</p>
+
+<h3>Anonymous CVS access</h3>
+<p>
+ If you would like to grab PHP sources or other PHP.net
+ hosted project data from PHP.net, you can also use 
+ <a href="/anoncvs.php">anonymous CVS</a>.
+</p>
+';
 site_header("Using CVS for PHP Development");
 ?>
 
@@ -75,23 +90,23 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
  Thank you. Your request has been sent. You should hear something within the
  next week or so. If you haven't heard anything by then, send an email to <a
  href="mailto:group@php.net">group@php.net</a> to let us know that we've
- forgotten you, but you haven't forgotten us! (It happens. There's several of
+ forgotten you, but you haven't forgotten us! It happens. There's several of
  us, and sometimes we think that someone else has taken care of your request,
- and they think that we took care of it. Sorry.)  You can also speed up the
+ and they think that we took care of it. Sorry. You can also speed up the
  process by having an existing CVS account holder who works in the area you are
  interested in mail us to vouch for you.
 </p>
 
 <p>
  If you are not familiar with CVS, you should have a look at the various
- documentation resources available at <a
- href="http://www.cvshome.org/">CVShome.org</a>. This is also where
- to get the most recent version of the CVS client.
+ documentation resources available in <a
+ href="http://ximbiot.com/cvs/wiki/index.php">the CVS Wiki</a>. This is
+ also where to get the most recent version of the CVS client.
 </p>
 
 <p>
- All CVS commit messages get sent to the php-cvs mailing list. You should
- subscribe yourself to this mailing list. Instructions for subscribing
+ All CVS commit messages to the PHP sources get sent to the php-cvs mailing list.
+ You should subscribe yourself to this mailing list. Instructions for subscribing
  are on the <a href="/mailing-lists.php">Mailing Lists</a> page.
 </p>
 
@@ -99,7 +114,7 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
  CVS itself is quite easy to use. You will not be able to check out your
  own copy of the CVS tree, until you receive confirmation of your account
  having been created. After that, you can follow the steps listed on the
- <a href="anoncvs.php">anonymous CVS</a> page for checking out your tree.
+ <a href="/anoncvs.php">anonymous CVS</a> page for checking out your tree.
  Substitute your own user name for 'cvsread' and use the password you
  submitted.
 </p>
@@ -144,10 +159,9 @@ EOT;
 
 <p>
  All PHP development is done through a distributed revision control system
- called <a href="http://www.cvshome.org/">CVS</a>. This helps us track changes
- and it makes it possible for people located in all corners of the world to
- collaborate on a project without having to worry about stepping on each
- others' toes.
+ called CVS. This helps us track changes and it makes it possible for people
+ located in all corners of the world to collaborate on a project without
+ having to worry about stepping on each others' toes.
 </p>
 
 <p>
@@ -231,21 +245,21 @@ EOT;
 </p>
 
 <p>
-If you wish to contribute to the docmentation please contact the translation
-team for the language you wish to help with.  If you have trouble finding the
-team, ask on the phpdoc mailing list.  Once you have made contact you may
-apply for a CVS account here by including the name of one or more people from
-the existing translation team that referred you and of course the language
-you wish to translate to.
+ If you wish to contribute to the docmentation please contact the translation
+ team for the language you wish to help with. If you have trouble finding the
+ team, ask on the phpdoc mailing list. Once you have made contact you may
+ apply for a CVS account here by including the name of one or more people from
+ the existing translation team that referred you and of course the language
+ you wish to translate to.
 </p>
 
 <p>
-If you have a new PEAR or PECL extension you wish to contribute, bring it
-up on the appropriate PEAR or PECL mailing list first.  Once you get the
-sense that people generally agree that your contribution is worthwhile, you
-may apply for a CVS account here.  Specify the name of your PEAR or PECL
-contribution (single word CVS module name) and also reference an existing
-account holder who can vouch for your contribution.
+ If you have a new PEAR or PECL extension you wish to contribute, bring it
+ up on the appropriate PEAR or PECL mailing list first. Once you get the
+ sense that people generally agree that your contribution is worthwhile, you
+ may apply for a CVS account here. Specify the name of your PEAR or PECL
+ contribution (single word CVS module name) and also reference an existing
+ account holder who can vouch for your contribution.
 </p>
 
 <p>
@@ -254,8 +268,8 @@ account holder who can vouch for your contribution.
  request an account. In the box next to "Purpose", describe what it is that
  you intend to do with CVS access. If it isn't clear from what you've
  described already, tell us what parts of the CVS repository you need access
- to (for example, "phpdoc" is the documentation tree, "php-src/ext/mnogosearch"
- is the PHP mnoGoSearch extension). If someone told you to fill out the form
+ to (for example, "phpdoc" is the documentation tree, "php-src/ext/readline"
+ is the PHP readline extension). If someone told you to fill out the form
  here, make sure to mention them here!
 </p>
 
@@ -276,7 +290,7 @@ account holder who can vouch for your contribution.
  Please note that you do <em>NOT</em> need a CVS account to study PHP. You do
  <em>NOT</em> need a CVS account to learn PHP, to use PHP or to in any way do
  anything at all with PHP. If you are sitting there wondering if you need a
- CVS account, then you don't!  If an existing CVS account holder suggested you
+ CVS account, then you don't! If an existing CVS account holder suggested you
  request an account, please mention their cvs id in the request.
 </p>
 
@@ -332,4 +346,4 @@ foreach ($purposes as $i => $p) { ?>
 </table>
 </form>
 
-<?php site_footer(); ?>
+<?php site_footer();

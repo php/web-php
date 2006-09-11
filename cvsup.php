@@ -13,8 +13,12 @@ $SIDEBAR_DATA = '
 <h3>PHP.net CVS access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
- hoster project data from PHP.net, read our 
+ hosted project data from PHP.net, read our 
  <a href="/anoncvs.php">anonymous CVS</a> instructions.
+ If you would like to join PHP development or would like to
+ contribute to the PHP documentation, contact the relevant
+ group. You will need <a href="/cvs-php.php">your own CVS account</a>
+ to contribute.
 </p>
 
 <h3>Source and binary snapshots</h3>
