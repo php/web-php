@@ -148,6 +148,8 @@ commonHeader("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://phpconference.com/", "intconf2006fall.png", "International PHP Conference 2006"); ?>
+
 <h1>International PHP Conference 2006</h1>
 <p>
  <span class="newsdate">[10-Sep-2006]</span>
