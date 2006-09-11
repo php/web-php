@@ -2,6 +2,20 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirror.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>More mirror sites</h3>
+<p>
+ Find more available mirrors on our <a href="/mirrors.php">mirror
+ sites page</a>.
+</p>
+
+<h3>Mirroring PHP.net</h3>
+<p>
+ If you are interested in mirroring our website, you can
+ find more information and setup details on <a href="/mirroring.php">our
+ mirroring page</a>.
+</p>
+';
 site_header("Information About This PHP Mirror Site");
 ?>
 
