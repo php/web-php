@@ -2,21 +2,19 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'copyright.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("License and Copyright");
-?>
-
-<h1>License and Copyright</h1>
-
+$SIDEBAR_DATA = '
 <a name="license"></a>
-<h2>PHP License</h2>
-
+<h3>PHP License</h3>
 <p>
  For information on the PHP License (i.e. using the PHP language),
  <a href="/license/">see our licensing information page</a>.
 </p>
+';
+site_header("Copyright");
+?>
 
 <a name="copyright"></a>
-<h2>Website Copyright</h2>
+<h1>Website Copyright</h1>
 
 <p>
  The code, text, PHP logo, and graphical elements on this website 
@@ -53,4 +51,4 @@ site_header("License and Copyright");
  <a href="http://www.php.net/">the PHP homepage</a>.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer();
