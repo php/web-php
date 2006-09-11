@@ -1,4 +1,5 @@
 <?php
+// $Id$
 
 // Define $MYSITE and $LAST_UPDATED variables
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
