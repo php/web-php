@@ -2,6 +2,21 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'links.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>Support tips and links</h3>
+<p>
+ We suggest you visit <a href="/support.php">our support page</a>
+ for information about mailing lists on PHP.net and some international
+ ones, as well as other support options.
+</p>
+
+<h3>PHP licensed software</h3>
+<p>
+ Additionaly to these links, we have a 
+ <a href="/software">list of software</a> available under
+ the PHP license.
+</p>
+';
 site_header("Links");
 ?>
 
@@ -9,11 +24,7 @@ site_header("Links");
 
 <p>
  On these sites you will find tutorials, articles, example scripts, PHP
- related tools, jobs, web hosting services, etc. We suggest you visit
- <a href="/mailing-lists.php">our mailing lists page</a> for information
- about mailing lists on PHP.net and some international ones.
- Additionaly to these links, we have a 
- <a href="/software">list of software</a> available under the PHP license.
+ related tools, jobs, web hosting services, etc.
 </p>
 
 <a name="companies"></a>
