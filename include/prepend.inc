@@ -18,6 +18,7 @@ unset($LANG);
 unset($COUNTRY);
 unset($ONLOAD);
 unset($MYPHPNET);
+unset($LAST_UPDATED);
 
 // Load the My PHP.net settings before any includes
 myphpnet_load();
@@ -25,6 +26,7 @@ myphpnet_load();
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
 
+// Check for APC support
 $APC = function_exists('apc_store');
 
 // Site details (mirror site information)
@@ -44,48 +46,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
 // mirror's last updated time.
 include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
-// Function used to import request vars to global scope.
-// Walks through $array, and imports all values associated
-// with elements listed in $keys to the global scope
-function import_vars(&$array, $keys)
-{
-    // Wrong parameters passed
-    if (!is_array($array) || !is_array($keys)) { return FALSE; }
-    
-    // Walk through all requested keys
-    foreach ($keys as $keyname) {
-        
-        // If there is a value in the arary for this key,
-        // import it to the global scope (without copying)
-        if (isset($array[$keyname])) {
-            $GLOBALS[$keyname] = &$array[$keyname];
-        }
-    }
-    
-    // Sign of success
-    return TRUE;
-}
-
-// Unset all variables except common ones we use
-// to access request variables and the globals array
-// If all files are register_globals = off safe, then
-// this function can be called to get rid of all
-// variables, even if register_globals = on
-function unset_variables()
-{
-    // Protect some common variables
-    $protected = array(
-        '_GET', '_POST', '_COOKIE', '_SERVER',
-        '_ENV', '_REQUEST', 'GLOBALS',
-    );
-    
-    // Go through all global variables
-    foreach ($GLOBALS as $name => $value) {
-        if (!in_array($name, $protected)) {
-            unset($GLOBALS[$name]);
-        }
-    }
-}
+// -----------------------------------------------------------------------------
 
 // Load in the user preferences
 function myphpnet_load()
