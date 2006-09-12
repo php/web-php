@@ -542,6 +542,16 @@ ul#results_nav_list li {
 	list-style-type: none;
 }
 
+/* Definition lists used on eg. the unsub page */
 dl dd {
-  margin: 0.5em 0 0.5em 2em;
+	margin: 0.5em 0 0.5em 2em;
+}
+
+/* Event month header on homepage */
+h4.eventmonth {
+	border-style: solid;
+	border-color: black;
+	border-width: 0px 1px 1px 0px;
+	background-color: #d3d3d3;
+	padding: 2px;
 }
