@@ -138,7 +138,9 @@ ul.simple li {
 	background-repeat: repeat-y;
 }
 #layout_3_helper {
-	/* TODO: Background to the right */
+	/* Background image will be set in a mirror specific CSS rule */
+	background-position: top right;
+	background-repeat: repeat-y;
 }
 
 .cleaner {
@@ -153,13 +155,22 @@ ul.simple li {
 	padding: 5px;
 	font-size: smaller;
 }
-#leftbar p, #leftbar h3 {
+#leftbar p, #leftbar h3, #rightbar p, #rightbar h3 {
 	margin-top: 0;
 	margin-bottom: 1em;
+}
+#rightbar {
+	float: right;
+	width: 186px;
+	padding: 5px;
+	font-size: smaller;
 }
 
 #layout_2 #content {
 	margin-left: 196px;
+}
+#layout_3 #content {
+	margin-right: 196px;
 }
 
 /* Header navigation area ------------------------------------------------- */

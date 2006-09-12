@@ -12,7 +12,10 @@ ul.toc li.active {
 	background-image: url(/images/box-1.gif);
 }
 
-/* Left sidebar background ------------------------------------------------ */
+/* Sidebar backgrounds ---------------------------------------------------- */
 #layout_2, #layout_3 {
 	background-image: url(/images/leftbar.png);
+}
+#layout_3_helper {
+	background-image: url(/images/rightbar.png);
 }
