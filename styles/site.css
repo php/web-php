@@ -166,7 +166,7 @@ ul.simple li {
 	font-size: smaller;
 }
 
-#layout_2 #content {
+#layout_2 #content, #layout_3 #content {
 	margin-left: 196px;
 }
 #layout_3 #content {
