@@ -40,8 +40,10 @@ $minute = rand(0, 59);
  usage. A reasonable estimate for an often visited mirror as of September
  2006 is 12GB/day, based on access data from uk.php.net. The PHP website
  requires at least PHP 4.3.x, but PHP 5 is preferred. Set it up as an Apache
- module with the settings <a href="#settings">outlined below</a>. The size
- of the full website is approximately 1.7 gigabyte.
+ module with the settings <a href="#settings">outlined below</a>, or in
+ any other Apache connected way (CGI, FastCGI, etc), considering the requested
+ PHP settings outlined below in the Apache vhost instructions. The size of
+ the full website is approximately 1.7 gigabyte.
 </p>
 
 <a name="rule"></a>
