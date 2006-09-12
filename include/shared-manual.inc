@@ -40,7 +40,7 @@ function manual_setup($page_data)
 // already set up
 function manual_header()
 {
-    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES, $NOTABLES;
+    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES;
     
     // Get values out of the config array
     list($filename, $title) = $PGI['this'];
@@ -61,8 +61,6 @@ function manual_header()
         } else {
             $_SERVER['BASE_PAGE'] .= "/print/$filename";
         }
-    } elseif ($NOTABLES) {
-        $_SERVER['BASE_PAGE'] .= "/tableless/$filename";
     } else {
         $_SERVER['BASE_PAGE'] .= "/$filename";
     }
@@ -72,20 +70,15 @@ function manual_header()
         manual_header_print();
     } else {
         manual_sidebar();
-        if ($NOTABLES) {
-            site_header("$title - Manual", array("noindex"));
-            manual_navbar_notables();
-        } else {
-            commonHeader("$title - Manual");
-            manual_navbar();
-        }
+        site_header("$title - Manual");
+        manual_navbar();
     }
 }
 
 // Print out manual page footer
 function manual_footer()
 {
-    global $PRINT_PAGE, $PRINT_NOTES, $PGI, $NOTABLES;
+    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
 
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
@@ -100,13 +93,8 @@ function manual_footer()
         echo "<br /><br />";
         manual_notes();
         echo "<br />";
-        if ($NOTABLES) {
-            manual_navbar_notables("bottom");
-            site_footer();
-        } else {
-            manual_navbar("bottom");
-            commonFooter();
-        }
+        manual_navbar("bottom");
+        site_footer();
     }
 }
 
@@ -159,88 +147,7 @@ function manual_sidebar()
     $SIDEBAR_DATA = "$BAR</ul><!--/UdmComment-->\n";
 }
 
-// Print out manual navigation bar
 function manual_navbar($location = "top")
-{
-    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
-
-    echo '<!--UdmComment-->' . "\n" . 
-         '<table border="0" width="100%" bgcolor="#e0e0e0" ' .
-         'cellpadding="0" cellspacing="4">';
-
-    // Print link to previous page if available
-    echo '<tr><td>';
-    if ($PGI['prev'][1]) {
-        print_link(
-            $PGI['prev'][0],
-            make_image('caret-l.gif', '&lt;') . $PGI['prev'][1]
-        );
-    }
-    echo '</td>';
-
-    // Print link to next page if available
-    echo '<td align="right">';
-    if ($PGI['next'][1]) {
-        print_link(
-            $PGI['next'][0],
-            $PGI['next'][1] . make_image('caret-r.gif', '&gt;')
-        );
-    }
-    echo '</td></tr>';
-
-    // Print a spacer row
-    echo '<tr bgcolor="#cccccc"><td colspan="2">';
-    spacer(1,1);
-    echo '</td></tr>';
-
-    echo '<tr><td>';
-
-    // Print out language switch on top of manual pages
-    if ($location != 'bottom') {
-        
-        // Quick access to filename
-        $filename = $PGI['this'][0];
-        
-        // Initial two dropdown menu items        
-        $links = array(
-            array("$LANG/print/$filename",   "printer friendly"),
-            array("$LANG/printwn/$filename", "printer friendly [+notes]")
-        );
-        
-        // Disable all languages without online content
-        $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
-        
-        // Add a dropdown item for all languages left
-        foreach ($online_languages as $code => $name) {
-            if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
-                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$filename")
-               ) {
-                $links[] = array("$code/$filename", $name);
-            }
-        }
-        
-        // Print out the form with all the options
-        echo '<form action="/manual/change.php" method="GET" class="thin">' . "\n" .
-             '<small>view the </small><select name="page" class="small">'. "\n";
-        foreach ($links as $link) {
-            echo '<option value="' . $link[0] . '">' . $link[1] . "</option>\n";
-        }
-        echo '</select>';
-        echo '<input type="image" src="' . $_SERVER['STATIC_ROOT'] .
-             '/images/small_submit.gif" border="0" width="11" height="11" ' .
-             'alt="" align="baseline"> <small>version of this page</small></form>';
-       
-    } else {
-        echo "<small>&nbsp;</small>";
-    }
-
-    // Provide last updated information on this page
-    echo '</td><td align="right" valign="bottom"><small>Last updated: ' .
-         $PGI['lastmod'] . '</small></td></tr>';
-    echo "</table>\n<!--/UdmComment-->\n";
-}
-
-function manual_navbar_notables($location = "top")
 {
     global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 

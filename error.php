@@ -42,7 +42,7 @@ $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
 // Perform a redirect for manual figures, other images display a 404 automatically
-if (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/figures/(.+)$!", $URI, $parts)) {
+if (preg_match("!^manual/(\\w+)/(print|printwn)/figures/(.+)$!", $URI, $parts)) {
     mirror_redirect("/manual/$parts[1]/figures/$parts[3]");
 } elseif (preg_match("!\\.(pdf|gif|jpg|png)$!i", $URI)) {
     error_404();
@@ -80,14 +80,12 @@ if (preg_match("!^manual/howto/!", $URI, $array)) {
 // and not redirected, as this way all relative URL's will retain their meaning
 // and point to pages relative to the print dir (which is nonexistent)
 // We need to override the 404 status in these cases too.
-if (preg_match("!^manual/(\\w+)/(print|printwn|tableless)/(.+\\.php)$!", $URI, $parts) &&
+if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
     @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]")) {
     status_header(200);
     if (in_array($parts[2], array('print', 'printwn'))) {
         $PRINT_PAGE = TRUE;
         if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
-    } else {
-        $NOTABLES = TRUE;
     }
     include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]";
     exit;
@@ -103,7 +101,7 @@ elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
 }
 
 // The index file needs to be handled in a special way
-elseif (preg_match("!^manual/(\\w+)/(print|printwn|html|tableless)(/)?$!", $URI, $parts) &&
+elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &&
         @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php")) {
     status_header(200);
     if (in_array($parts[2], array('print', 'printwn', 'html'))) {
