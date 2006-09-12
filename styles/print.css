@@ -1,0 +1,9 @@
+#headmenu, #headsearch, #leftbar, #rightbar, #footnav, #thismirror,
+.manualnavbar .next, .manualnavbar .prev, .manualnavbar .langchooser,
+.note .action {
+  display: none;
+}
+
+#content {
+  width: 100%;
+}

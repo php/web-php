@@ -117,6 +117,9 @@ function site_header($title = '', $config = array())
   @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
   @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
  </style>
+ <style type="text/css" media="print">
+  @import url("{$_SERVER['STATIC_ROOT']}/styles/print.css");
+ </style>
  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base$meta
