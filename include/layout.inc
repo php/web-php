@@ -425,6 +425,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
     global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
            $SEARCH_BASE, $ONLOAD;
 
+    // TODO: work in progress tabless checking for this page
+    if ($_GET['tableless'] == 1) { return site_header($title, ($ONLOAD ? array('onload' => $ONLOAD) : array())); }
+           
     $onload = ($ONLOAD ? ' onload="' . $ONLOAD . '"' : '');
 
     // Guess what base to use for this page (the first two are just
@@ -555,6 +558,9 @@ function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
 function commonFooter() {
 	global $SCRIPT_NAME, $MYSITE, $LAST_UPDATED, $PHP_SELF,
            $enclosed, $RSIDEBAR_DATA, $page_creation_start;
+
+    // TODO: work in progress tabless checking for this page
+    if ($_GET['tableless'] == 1) { return site_footer(); }
            
     $URL = (isset($_SERVER['BASE_PAGE']) ? "/" . $_SERVER['BASE_PAGE'] : $SCRIPT_NAME);
 	if ($enclosed) {
