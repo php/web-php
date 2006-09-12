@@ -3,13 +3,12 @@
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 function commonStatHeader($title) {
-    commonHeader($title, 0, 1);
+    site_header($title);
 }
 
 function commonStatBody($title) {
 }
 
 function commonStatFooter() {
-    commonFooter();
+    site_footer();
 }
-?>
