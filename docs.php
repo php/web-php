@@ -8,6 +8,8 @@ $SIDEBAR_DATA='
 <p>
  The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
  information and those questions that seem to be on most people\'s minds.
+ If you have licensing questions, see the separate
+ <a href="/license/">License FAQ</a>.
 </p>
 
 <h3>Changelog</h3>
@@ -17,18 +19,10 @@ $SIDEBAR_DATA='
  if you would like to look up changes between various versions of PHP.
 </p>
 
-<h3>More Information</h3>
-<p>
- If you have license questions, see
- the <a href="/license/">License FAQ</a>.
-</p>
-
 <h3>Books</h3>
 <p>
- Books are convenient resources to begin exploring or extend your
- PHP knowledge. There are literally thousands of books available in
- English and numerous in other langauges. Search at your favourite
- online or offline bookstore. You can search at
+ There are literally thousands of books available in
+ English and numerous in other langauges. You can easily search at
  <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
  go directly to
  <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
@@ -39,7 +33,7 @@ $SIDEBAR_DATA='
 <h3>Sample Code</h3>
 <p>
  Looking for some more sample PHP scripts? Our <a
- href="/links.php">links page</a> page lists some archives of sample PHP code - 
+ href="/links.php">links page</a> lists some archives of sample PHP code - 
  great places to find many example scripts and useful functions, organized for 
  your searching pleasure!
 </p>
@@ -153,38 +147,30 @@ foreach ($man_languages as $langnum => $langcode) {
    <a href="download-docs.php">documentation downloads</a> page.
   </td>
  </tr>
- <tr>
-  <th class="sub">Other manuals</th>
-  <td>
-   The <a href="/manual/howto">Documentation HOWTO</a> is also
-   available for online reading.
-   <a href="http://gtk.php.net/docs.php">PHP-GTK</a> and
-   <a href="http://pear.php.net/manual/">PEAR</a> manuals
-   can be found on separate servers.
-  </td>
- </tr>
 </table>
 
-<hr />
-
-<h1>CVS Account</h1>
- <ul>
-  <li>
-   <a href="/anoncvs.php">Anonymous CVS access instructions</a>
-  </li>
-  <li>
-   <a href="/cvs-php.php">Getting a CVS account</a>. If you
-   wish to help out with the development of PHP, read this.
-  </li>
+<h2>More documentation</h2>
+<ul>
+ <li>
+  If you are interested in how the documentation is edited and translated,
+  you should read the <a href="/dochowto">Documentation HOWTO</a>.
+ </li>
+ <li>
+  <a href="http://gtk.php.net/docs.php">PHP-GTK related documentation</a>
+  is hosted on the PHP-GTK website.
+ </li>
+ <li>
+  <a href="http://pear.php.net/manual/">Documentation of PEAR and the various
+  packages</a> can be found on a separate server.
+ </li>
+ <li>
+  <a href="http://smarty.php.net/docs.php">Smarty template engine documentation</a>
+  is hosted at <code>smarty.php.net</code>.
+ </li>
+ <li>
+  You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
+  2.0 Manual</a> on our site, which we only host for historical purposes.
+ </li>
 </ul>
 
-<hr />
-
-<h1>Old/Unsupported Information</h1>
-<p>
- You can still read a copy of the original
- <a href="/manual/phpfi2.php">PHP/FI 2.0 Manual</a>
- on our site, which we only host for historical purposes.
-</p>
-
-<?php site_footer(); ?>
+<?php site_footer();
