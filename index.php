@@ -143,7 +143,7 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
 $ONLOAD = "boldEvents();";
 
 // Write out common header
-commonHeader("Hypertext Preprocessor");
+site_header("Hypertext Preprocessor");
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
@@ -207,7 +207,6 @@ of the public sector.
  is finally out and includes a full 48-page chapter on PHP. This is an excellent
  resource from Jeffrey Friedl who has been writing about regexps for years.
 </p>
-<br clear="all" />
 
 <hr />
 
@@ -507,4 +506,4 @@ discount is available until March 1st</a>.
 
 <p class="center"><a href="/news-2006.php">News Archive</a></p>
 
-<?php commonFooter(); ?>
+<?php site_footer();
