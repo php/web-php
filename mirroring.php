@@ -2,6 +2,22 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirroring.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>Existing mirror sites</h3>
+<p>
+ Properly working mirror sites are listed on <a href="/mirrors.php">our
+ mirrors page</a>.
+</p>
+
+<h3>CVS repository mirroring</h3>
+<p>
+ If you are interested in using a local copy of our
+ CVS repository for yourself, we provide 
+ <a href="/cvsup.php">CVSUp instructions</a>
+ separately.
+</p>
+';
+
 site_header("Mirroring The PHP Website");
 
 // Get a minute to print out for the cron example
@@ -289,27 +305,28 @@ $minute = rand(0, 59);
 
 <h2>Mirror Setup Troubleshooting</h2>
 
-<p>
+<ul>
+<li>
  Don't be afraid if you cannot find several pieces of the site in your
  local copy, like the tutorial PHP page or the printed pages' directories.
  These are handled automatically on the fly and are not real files.
-</p>
+</li>
 
-<p>
+<li>
  If you find that the manuals are listed on the documentation page, but
  all of the links open up a search page, you probably have an Apache /manual/
  alias in effect. Remove that alias, restart Apache, and the manuals will
  be showing up.
-</p>
+</li>
 
-<p>
+<li>
  If the shortcut features [eg. xx.php.net/echo] are not working, check that
  the manual files are really under DOCUMENT_ROOT, you have register_globals on,
  and that at least the English manual is present. Also make sure that you have
  a correct ErrorDocument setting.
-</p>
+</li>
 
-<p>
+<li>
  If you have an offical mirror site but it is not listed on
  <a href="/mirrors.php">mirrors.php</a>, then your mirror is probably detected
  to be nonfunctional for our users. Mirror sites inaccessible for more than
@@ -317,7 +334,8 @@ $minute = rand(0, 59);
  their setup are removed automatically from the listing for our user's
  convinience. We send out a notification to all automatically disabled mirror
  site owners every week.
-</p>
+</li>
+</ul>
 
 <h2>Data Registered About Official Mirrors</h2>
 
@@ -371,7 +389,7 @@ $minute = rand(0, 59);
 
 <p>
  <em>
-  Thank you for being a mirror!
+  Thank you for providing a mirror!
  </em>
 </p>
 
