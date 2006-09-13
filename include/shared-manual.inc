@@ -12,9 +12,6 @@
  The $PGI global variable is used to store all page related
  information, including HTTP header related data.
  
- The $PRINT_PAGE and $PRINT_NOTES vars determine the layout
- of the manual page printed.
- 
 */
 
 // Ensure that our environment is set up
@@ -22,9 +19,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Set variable defaults
 $PGI = array(); $SIDEBAR_DATA = '';
-
-// If we don't know anything about printing, set it to false
-if (!isset($PRINT_PAGE)) { $PRINT_PAGE = FALSE; }
 
 // Set up variables important for this page
 // including HTTP header information
@@ -38,9 +32,11 @@ function manual_setup($page_data)
 // Print out HTTP headers and the HTML header
 // for this manual page, according to details
 // already set up
+// TODO: prev/next <link> tags into <head>
+// TODO: replace logo with logos/php-med-trans-light.gif on print
 function manual_header()
 {
-    global $PGI, $LAST_UPDATED, $MYSITE, $PRINT_PAGE, $PRINT_NOTES;
+    global $PGI, $LAST_UPDATED, $MYSITE;
     
     // Get values out of the config array
     list($filename, $title) = $PGI['this'];
@@ -54,48 +50,27 @@ function manual_header()
     header("Content-language: $lang");
     
     // Set base page and href for this manual page
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang);
-    if ($PRINT_PAGE) {
-        if ($PRINT_NOTES) {
-            $_SERVER['BASE_PAGE'] .= "/printwn/$filename";
-        } else {
-            $_SERVER['BASE_PAGE'] .= "/print/$filename";
-        }
-    } else {
-        $_SERVER['BASE_PAGE'] .= "/$filename";
-    }
+    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang) . "/$filename";
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
-    if ($PRINT_PAGE) {
-        manual_header_print();
-    } else {
-        manual_sidebar();
-        site_header("$title - Manual");
-        manual_navbar();
-    }
+    manual_sidebar();
+    site_header("$title - Manual");
+    manual_navbar();
 }
 
 // Print out manual page footer
 function manual_footer()
 {
-    global $PRINT_PAGE, $PRINT_NOTES, $PGI;
+    global $PGI;
 
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
     
-    if ($PRINT_PAGE) {
-        if ($PRINT_NOTES) {
-            echo "<br /><br />";
-            manual_notes_print();
-        }
-        manual_footer_print();
-    } else {
-        echo "<br /><br />";
-        manual_notes();
-        echo "<br />";
-        manual_navbar("bottom");
-        site_footer();
-    }
+    echo "<br /><br />";
+    manual_notes();
+    echo "<br />";
+    manual_navbar("bottom");
+    site_footer();
 }
 
 // =============================================================================
@@ -346,72 +321,6 @@ function manual_note_display($date, $name, $text, $id)
  </div>
 USER_NOTE_TEXT;
  
-}
-
-// =============================================================================
-// Printer friendly support functions
-// =============================================================================
-
-// "Printer optimized" header for manual pages
-function manual_header_print()
-{
-    global $PGI;
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
-<head>
- <title>PHP: <?php echo $PGI['this'][1]; ?> - Manual</title>
- <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/print.css" />
- <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
- <link rel="prev" href="<?php echo $PGI['prev'][0]; ?>" />
- <link rel="next" href="<?php echo $PGI['next'][0]; ?>" />
- <link rel="start" href="<?php echo $PGI['home'][0]; ?>" />
- <base href="<?php echo $_SERVER['BASE_HREF']; ?>" />
- <meta name="robots" content="noindex,nofollow" />
-</head>
-<body>
-<?php print_link("/", make_image('logos/php-med-trans-light.gif', 'PHP', 'left')); ?>
-This is a printer friendly version of the PHP Manual.<br />
-Original address of this page: <?php print_link($_SERVER['BASE_HREF']); ?><br />
-<small><?php print_link('copyright.php', 'Copyright &copy; 1997-2006 The PHP Documentation Group'); ?> All rights reserved.</small>
-<hr class="topdivider" />
-<?php
-}
-
-// "Printer optimized" footer for manual pages
-function manual_footer_print()
-{
-    echo "</body>\n</html>";
-}
-
-// Print out all user notes for this manual page
-function manual_notes_print()
-{
-    // Get filename
-    list($filename) = $GLOBALS['PGI']['this'];
-    
-    // Drop file extension from the name
-    if (substr($filename, -4) == '.php') {
-        $filename = substr($filename, 0, -4);
-    }
-
-    // Load user note for this page
-    $notes = manual_notes_load($filename);
-
-    echo "<hr /><h2>User Contributed Notes</h2>";
-
-    // Print notes or inform the user if there are no notes
-    if (sizeof($notes) == 0) {
-        echo "<p>There are no user contributed notes for this page</p>";
-    } else {
-        foreach($notes as $note) {
-            if ($note['user']) {
-                echo "<b>" . htmlspecialchars($note['user']) . "</b><br />\n";
-            }
-            echo date("d-M-Y h:i", $note['xwhen']) . "<br /><br />" .
-                 clean_note($note['note']) . "<br />" .
-                 "<hr />";
-        }
-    }
 }
 
 // =============================================================================
