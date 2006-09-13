@@ -120,7 +120,7 @@ ul.simple li {
 }
 
 .invisible {
-    display: none;
+    font-size: 0;
 }
 
 /* Content are styles ----------------------------------------------------- */
