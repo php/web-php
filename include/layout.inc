@@ -53,9 +53,6 @@ function highlight_php($code, $return = FALSE)
     else { echo $highlighted; }
 }
 
-/* These functions are only used on the new XHTML 1.0 Strict compatible
-   pages, and are used as an experiment, but are going to replace the
-   commonHeader and commonFooter functions in the future altogether */
 function site_header($title = '', $config = array())
 {
     global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS;
@@ -107,6 +104,12 @@ function site_header($title = '', $config = array())
     // Choose name of mirror site specific CSS file
     $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
     
+    // Support for more header tags
+    $moreheadtags = '';
+    if (isset($config['headtags'])) {
+      $moreheadtags = "\n " . join("\n ", $config['headtags']);
+    } 
+
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -122,7 +125,7 @@ function site_header($title = '', $config = array())
  </style>
  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>$base$meta
+ <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
 </head>
 <body{$onload}>
 
@@ -189,7 +192,6 @@ END_HEADER;
     echo "\n <div id=\"content\">\n";
 }
 
-// See the comment for site_header() above
 function site_footer($config = array())
 {
     global $LAST_UPDATED, $PAGE_COLUMNS;
@@ -238,20 +240,6 @@ function site_footer($config = array())
 </body>
 </html>
 END_FOOTER;
-}
-
-// Print an image for a sized spacer
-function spacer($width = 1, $height = 1, $return = FALSE, $align = FALSE, $extras = FALSE)
-{
-    $function = ($return ? "sprintf" : "printf");
-    return $function('<img src="%s/images/spacer.gif" width="%d" ' .
-                     'height="%d" border="0" alt=""%s%s />',
-        $_SERVER['STATIC_ROOT'],
-        $width,
-        $height,
-        ($align  ? " align=\"$align\" " : ""),
-        ($extras ? " $extras" : "")
-    );
 }
 
 // Resize the image using the output of make_image()
@@ -416,218 +404,6 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             echo ']';
         }
     }
-}
-
-$enclosed = 0;
-
-# commonheader()
-#
-#
-
-function commonHeader($title="",$dont_enclose=0,$headers_gone=0) {
-    global $MYSITE, $base, $enclosed, $EXPL_LANG, $SIDEBAR_DATA,
-           $SEARCH_BASE, $ONLOAD;
-
-    // TODO: work in progress tabless checking for this page
-    if ($_GET['tableless'] == 1) { return site_header($title, ($ONLOAD ? array('onload' => $ONLOAD) : array())); }
-           
-    $onload = ($ONLOAD ? ' onload="' . $ONLOAD . '"' : '');
-
-    // Guess what base to use for this page (the first two are just
-    // for BC reasons, until we migrate all the code to use the last one)
-    unset($PBASE);
-    if (!empty($SEARCH_BASE))          { $PBASE = $SEARCH_BASE; }
-    if (!empty($_SERVER['BASE_HREF'])) { $PBASE = $_SERVER['BASE_HREF']; }
-
-    // Choose name of mirror site specific CSS file
-    $mirror_specific_style = ($_SERVER['STATIC_ROOT'] ? 'phpnet' : 'mirror');
-    
-    $rssautodiscovery = '';
-    if (isset($_SERVER['BASE_PAGE']) && $_SERVER['BASE_PAGE'] == 'index.php') {
-      $rssautodiscovery = ' <link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />' . "\n";
-    }
-
-?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
- <title>PHP<?php if ($title) echo ": $title";?></title>
- <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/style.css" />
- <link rel="stylesheet" href="<?php echo $_SERVER['STATIC_ROOT'] . "/styles/" . $mirror_specific_style; ?>.css" />
- <link rel="shortcut icon" href="<?php echo $_SERVER['STATIC_ROOT']; ?>/favicon.ico" />
-<?php echo $rssautodiscovery; ?>
- <script language="Javascript" type="text/javascript" src="<?php echo $_SERVER['STATIC_ROOT']; ?>/userprefs.js"></script>
-<?php echo (isset($PBASE) ? ' <base href="' . $PBASE . '" />' : ''); ?></head>
-<body bgcolor="#ffffff" text="#000000"
-      link="#000099" alink="#0000ff" vlink="#000099"
-      <?php echo $onload; ?>>
-
-<!--UdmComment-->
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
- <tr bgcolor="#9999cc">
-  <td align="center" rowspan="2" width="126"><a href="/"><?php
-  	print_image('php.gif', 'PHP', false, 'hspace="3"'); ?></a></td>
-  <td>&nbsp;</td>
- </tr>
- <tr bgcolor="#9999cc">
-  <td align="right" valign="bottom">
-<?php
-	print_link('/downloads.php','downloads',false,'class="small"');
-	echo " | ";
-	print_link('/docs.php', 'documentation', false, 'class="small"');
-	echo " | ";
-	print_link('/FAQ.php', 'faq', false, 'class="small"');
-	echo " | ";
-	print_link('/support.php','getting help',false,'class="small"');
-	echo " | ";
-	print_link('/mailing-lists.php','mailing lists',false,'class="small"');
-	echo " | ";
-	print_link('http://bugs.php.net/','reporting bugs',false,'class="small"');
-	echo " | ";
-	print_link('/sites.php','php.net sites',false,'class="small"');
-	echo " | ";
-	print_link('/links.php','links',false,'class="small"');
-	echo " | ";
-	print_link ('/my.php', 'my php.net', false, 'class="small"');
-      ?>&nbsp;
-  </td>
- </tr>
- <tr bgcolor="#333366"><td colspan="2"><?php spacer(); ?></td></tr>
- <tr bgcolor="#666699">
-   <td align="right" valign="top" colspan="2" class="quicksearch">
-    <form method="post" action="/search.php" class="thin" name="topsearch">
-<?php
-    if (isset($EXPL_LANG)) {
-        echo '<input type="hidden" name="lang" value="'.  $EXPL_LANG . '" />';
-      }
-
-    if (isset($base) && $base != $MYSITE) {
-	$base = stripslashes($base);
-	echo '<input type="hidden" name="base" value="' . $base . '" />';
-    }
-?>
-<small><span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)"><u>s</u>earch for</span></small>
-<input class="small" type="text" name="pattern" value="" size="30" accesskey="s" />
-<small>in the</small>
-<select name="show" class="small">
- <option value="quickref" selected="selected">function list</option>
- <option value="all"      >all php.net sites</option>
- <option value="local"    >this mirror only</option>
- <option value="manual"   >online documentation</option>
- <option value="bugdb"    >bug database</option>
- <option value="news_archive">Site News Archive</option>
- <option value="changelogs">All Changelogs</option>
- <option value="pear"     >just pear.php.net</option>
- <option value="pecl"     >just pecl.php.net</option>
- <option value="talks"    >just talks.php.net</option>
- <option value="maillist" >general mailing list</option>
- <option value="devlist"  >developer mailing list</option>
- <option value="phpdoc"   >documentation mailing list</option>
-</select>
-<?php echo make_submit('small_submit_white.gif', 'search', 'bottom'); ?>&nbsp;
-</form>
-   </td>
- </tr>
- <tr bgcolor="#333366"><td colspan="3"><?php spacer(); ?></td></tr> 
-</table>
-<!--/UdmComment-->
-
-<?php
-  if (!$dont_enclose):
-    $enclosed = 1;
-?>
-
-<table border="0" cellpadding="0" cellspacing="0">
- <tr valign="top">
-<?php if (!empty($SIDEBAR_DATA)):?>
-  <td width="200" bgcolor="#f0f0f0">
-   <table width="100%" cellpadding="2" cellspacing="0" border="0">
-    <tr valign="top"><td class="sidebar"><?php echo $SIDEBAR_DATA?></td></tr>
-   </table>
-  </td>
-  <td bgcolor="#cccccc" background="<?php echo $_SERVER['STATIC_ROOT']; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
-<?php endif; // sidebar printed ?>
-  <td>
-   <table cellpadding="10" cellspacing="0" width="100%">
-    <tr><td valign="top">
-<?php
-  endif; // enclosed in a multiple column layout
-}
-
-
-# commonfooter()
-#
-#
-
-function commonFooter() {
-	global $SCRIPT_NAME, $MYSITE, $LAST_UPDATED, $PHP_SELF,
-           $enclosed, $RSIDEBAR_DATA, $page_creation_start;
-
-    // TODO: work in progress tabless checking for this page
-    if ($_GET['tableless'] == 1) { return site_footer(); }
-           
-    $URL = (isset($_SERVER['BASE_PAGE']) ? "/" . $_SERVER['BASE_PAGE'] : $SCRIPT_NAME);
-	if ($enclosed) {
-		echo "</td></tr></table></td>";
-		if (!empty($RSIDEBAR_DATA)) { ?>
-<td bgcolor="#cccccc" background="<?php echo $_SERVER['STATIC_ROOT']; ?>/images/checkerboard.gif" width="1"><?php spacer(); ?></td>
-<td width="185" bgcolor="#f0f0f0">
- <table width="100%" cellpadding="4" cellspacing="0">
-  <tr valign="top"><td class="sidebar"><?php echo $RSIDEBAR_DATA?></td></tr>
- </table>
-<?php spacer(175); ?>
-</td>
-<?php		}
-		echo "</tr></table>\n";
-	}
-?>
-
-<!--UdmComment-->
-<table border="0" cellspacing="0" cellpadding="0" width="100%">
- <tr bgcolor="#333366"><td><?php spacer(); ?></td></tr>
- <tr bgcolor="#9999cc">
-  <td align="right" valign="bottom">
-<?php
-	print_link("/source.php?url=$URL", 'show source', false, 'class="small"');
-	echo " | ";
-	print_link('/credits.php', 'credits', false, 'class="small"');
-	echo " | ";
-	if (have_stats()) {
-		print_link('/stats/', 'stats', false, 'class="small"');
-    	echo " | ";
-	}
-	print_link('/sitemap.php', 'sitemap', false, 'class="small"');
-	echo " | ";
-	print_link('/contact.php', 'contact', false, 'class="small"');
-	echo " | ";
-	print_link('/contact.php#ads', 'advertising', false, 'class="small"');
-	echo " | ";
-    print_link('/mirrors.php', 'mirror sites', false, 'class="small"');
-    echo "&nbsp;";
-?>
-  </td>
- </tr>
- <tr bgcolor="#333366"><td><?php spacer(); ?></td></tr>
-</table>
-
-<table border="0" cellspacing="0" cellpadding="6" width="100%">
- <tr valign="top" bgcolor="#cccccc">
-  <td><small><?php echo make_link('/copyright.php', 'Copyright &copy; 2001-2006 The PHP Group'); ?><br />All rights reserved.</small></td>
-  <td align="right"><small>
-   <?php
-    echo (is_official_mirror() ?
-        "<a href=\"/mirror.php\">This mirror</a> generously provided by:" :
-        "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:"); 
-   ?>
-   <a href="<?php echo mirror_provider_url();?>"><?php echo mirror_provider();?></a><br />
-   Last updated: <?php echo strftime("%c %Z", $LAST_UPDATED); ?>
-   </small>
-  </td>
- </tr>
-</table>
-<!--/UdmComment-->
-</body>
-</html>
-<?php
 }
 
 function sect_to_file($string) {

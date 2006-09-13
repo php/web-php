@@ -139,11 +139,8 @@ if (is_official_mirror()) {
 // Prepend mirror image to sidebar text
 $RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
 
-// Run the boldEvents() function on page load
-$ONLOAD = "boldEvents();";
-
 // Write out common header
-site_header("Hypertext Preprocessor");
+site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
