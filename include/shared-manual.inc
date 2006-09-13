@@ -152,7 +152,7 @@ function manual_navbar($location = "top")
     global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
     // Start navbar with 
-    echo "<!--UdmComment-->\n<div class=\"manualnavbar\">\n <span class=\"next\">\n";
+    echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
     if ($PGI['next'][1]) {
         echo "  <a href=\"{$PGI['next'][0]}\">" .
              $PGI['next'][1] .
