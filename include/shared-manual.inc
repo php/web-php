@@ -134,7 +134,7 @@ function manual_sidebar()
         // eg: xml_set_processing_instruction_handler 
 	//     DOMElement->getElementsByTagNameNS()
         if (preg_match("!^[a-zA-Z0-9_>()-]+$!", $title)) {
-	    $wrap = '<span class="invisible"> </span>';
+	    $wrap = '<span class="w"> </span>';
             $title = str_replace(array('_', '->'), array("_$wrap", "->$wrap"), $title);
         }
         

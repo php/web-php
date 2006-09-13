@@ -119,7 +119,8 @@ ul.simple li {
 	background-color: transparent;
 }
 
-.invisible {
+/* Used for manual page toc wrapping */
+.w {
     font-size: 0;
 }
 
