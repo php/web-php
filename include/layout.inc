@@ -107,7 +107,11 @@ function site_header($title = '', $config = array())
     // Support for more header tags
     $moreheadtags = '';
     if (isset($config['headtags'])) {
-      $moreheadtags = "\n " . join("\n ", $config['headtags']);
+      if (is_array($config['headtags'])) {
+        $moreheadtags = "\n " . join("\n ", $config['headtags']);
+      } else {
+        $moreheadtags = "\n " . ((string)$config['headtags']);
+      }
     } 
 
     print <<<END_HEADER
