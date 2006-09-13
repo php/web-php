@@ -148,20 +148,22 @@ site_header("Hypertext Preprocessor");
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://www.zendcon.com/", "zend_phpconf06.png", "Zend / PHP Conference & Expo 2006"); ?>
+<?php news_image("http://www.zendcon.com/", "zend_phpconf06.png", "Zend / PHP Conference &amp; Expo 2006"); ?>
 
-<h1>Zend / PHP Conference & Expo 2006</h1>
+<h1>Zend / PHP Conference &amp; Expo 2006</h1>
 <p>
  <span class="newsdate">[13-Sep-2006]</span>
- The <a href="http://www.zendcon.com">Zend / PHP Conference & Expo 2006</a> has an Early Bird
- registration special available before before September 15.  Use the 'earlybird' code,
- available on the site, and receive a $795 registration price.
+ The <a href="http://www.zendcon.com">Zend / PHP Conference &amp; Expo 2006</a>
+ has an Early Bird registration special available before before September 15.
+ Use the 'earlybird' code, available on the site, and receive a $795 registration
+ price.
 </p>
 <p>
  The conference has announced a great line-up of speakers, including Chris Anderson,
- author of The Long Tail and editor-in-chief at Wired Magazine, r0ml, open source strategist,
- and Matthew Rechs, CTO of interactive agency, Schematic.  There's a great line-up
- of speakers <a href="http://www.zendcon.com/speakers_temp.php">available</a>.
+ author of The Long Tail and editor-in-chief at Wired Magazine, r0ml,
+ open source strategist, and Matthew Rechs, CTO of interactive agency,
+ Schematic. There's a great line-up of speakers
+ <a href="http://www.zendcon.com/speakers_temp.php">available</a>.
 </p>
 
 <hr />
