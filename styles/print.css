@@ -1,6 +1,6 @@
 #headmenu, #headsearch, #leftbar, #rightbar, #footnav, #thismirror,
 .manualnavbar .next, .manualnavbar .prev, .manualnavbar .langchooser,
-.manualnavbar hr, .manualnavbar_bottom, #usernotes .action {
+.manualnavbar hr, .manualnavbar_bottom, #usernotes .action, #usernotes .foot {
   display: none;
 }
 
