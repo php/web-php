@@ -90,17 +90,12 @@ $lastlang = count($man_languages) - 1;
 foreach ($man_languages as $langnum => $langcode) {
 
     // Make preferred language bold
-    if ($langcode == $LANG) { echo "<b>"; }
+    if ($langcode == $LANG) { echo "<strong>"; }
 
     echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
     echo ($lastlang != $langnum) ? ",\n" : "\n";
 
-    // Also link to the external special French version, after the French link
-    if ($langcode == "fr") {
-        echo '<a href="http://www.nexen.net/docs/php/annotee/">[Special French]</a>,' . "\n";
-    }
-
-    if ($langcode == $LANG) { echo "</b>"; }
+    if ($langcode == $LANG) { echo "</strong>"; }
 }
 
 ?>
