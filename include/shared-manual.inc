@@ -176,14 +176,10 @@ function manual_navbar($location = "top")
     echo " <div class=\"langchooser\">\n";
     if ($location != 'bottom') {
         
+        $links = array();
+
         // Quick access to filename
         $filename = $PGI['this'][0];
-        
-        // Initial two dropdown menu items
-        $links = array(
-            array("$LANG/print/$filename",   "printer friendly"),
-            array("$LANG/printwn/$filename", "printer friendly [+notes]")
-        );
         
         // Disable all languages without online content
         $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
@@ -199,14 +195,14 @@ function manual_navbar($location = "top")
         
         // Print out the form with all the options
         echo '  <form action="/manual/change.php" method="GET">' . "\n" .
-             '   view the <select name="page">'. "\n";
+             '   view this page in <select name="page">'. "\n";
         foreach ($links as $link) {
             echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo "   </select>\n" .
              '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
              '/images/small_submit.gif" border="0" width="11" height="11" ' .
-             'alt="" align="baseline"> version of this page' . "\n  </form>\n";
+             'alt="" align="baseline">' . "\n  </form>\n";
        
     } else {
         echo "  &nbsp;\n";

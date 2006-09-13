@@ -58,10 +58,8 @@ $lastlang = count($man_languages) - 1;
 <h1>Documentation</h1>
 
 <p>
- The PHP manual is available online in a selection of languages.
- You can choose between the printer friendly and graphically
- designed versions. Please pick a language and format from
- the table below.
+ The PHP Manual is available online in a selection of languages.
+ Please pick a language from the list below.
 </p>
 
 <p>
@@ -102,38 +100,6 @@ foreach ($man_languages as $langnum => $langcode) {
         echo '<a href="http://www.nexen.net/docs/php/annotee/">[Special French]</a>,' . "\n";
     }
 
-    if ($langcode == $LANG) { echo "</b>"; }
-}
-
-?>
-  </td>
- </tr>
- <tr>
-  <th class="sub">Printer friendly</th>
-  <td>
-<?php
-
-// List printer friendly pages of all manual languages
-foreach ($man_languages as $langnum => $langcode) {
-    if ($langcode == $LANG) { echo "<b>"; }
-    echo '<a href="/manual/' . $langcode . '/print/index.php">' . $LANGUAGES[$langcode] . '</a>';
-    echo ($lastlang != $langnum) ? ",\n" : "\n";
-    if ($langcode == $LANG) { echo "</b>"; }
-}
-
-?>
-  </td>
- </tr>
- <tr>
-  <th class="sub">Printer friendly<br />with notes</th>
-  <td>
-<?php
-
-// List printer friendly pages with notes of all manual languages
-foreach ($man_languages as $langnum => $langcode) {
-    if ($langcode == $LANG) { echo "<b>"; }
-    echo '<a href="/manual/' . $langcode . '/printwn/index.php">' . $LANGUAGES[$langcode] . '</a>';
-    echo ($lastlang != $langnum) ? ",\n" : "\n";
     if ($langcode == $LANG) { echo "</b>"; }
 }
 

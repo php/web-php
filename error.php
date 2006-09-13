@@ -58,14 +58,10 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
 if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
-    // Special case for mirror checking
-    if ($array[1] == 'mirror-info') {
-        mirror_redirect("/manual/mirror-info.php");
-    }
     mirror_redirect("/manual/$LANG$array[1]");
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
     $array[1] = preg_replace("!.html$!", ".php", $array[1]);
-    mirror_redirect("/manual/$LANG/print/$array[1]");
+    mirror_redirect("/manual/$LANG/$array[1]");
 }
 
 // ============================================================================
@@ -76,42 +72,12 @@ if (preg_match("!^manual/howto/!", $URI, $array)) {
 }
 
 // ============================================================================
-// Printer friendly manual page handling. It's important that this is included,
-// and not redirected, as this way all relative URL's will retain their meaning
-// and point to pages relative to the print dir (which is nonexistent)
-// We need to override the 404 status in these cases too.
-if (preg_match("!^manual/(\\w+)/(print|printwn)/(.+\\.php)$!", $URI, $parts) &&
-    @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]")) {
-    status_header(200);
-    if (in_array($parts[2], array('print', 'printwn'))) {
-        $PRINT_PAGE = TRUE;
-        if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
-    }
-    include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[3]";
-    exit;
-}
-
-// BC: for old HTML directory (.html extension was used in that)
-elseif (preg_match("!^manual/(\\w+)/html/(.+)\\.(html|php)$!", $URI, $parts) &&
-        @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[2].php")) {
-    status_header(200);
-    $PRINT_PAGE = TRUE;
-    include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/$parts[2].php";
-    exit;
-}
-
-// The index file needs to be handled in a special way
-elseif (preg_match("!^manual/(\\w+)/(print|printwn|html)(/)?$!", $URI, $parts) &&
-        @file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php")) {
-    status_header(200);
-    if (in_array($parts[2], array('print', 'printwn', 'html'))) {
-        $PRINT_PAGE = TRUE;
-        if ($parts[2] == "printwn") { $PRINT_NOTES = TRUE; }
-    } else {
-        $NOTABLE = TRUE;
-    }
-    include $_SERVER['DOCUMENT_ROOT'] . "/manual/$parts[1]/index.php";
-    exit;
+// BC: Printer friendly manual page handling was separate previously, but we
+// only need to redirect the old URLs now. Our pages are now printer friendly
+// by design.
+if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) {
+    $array[3] = preg_replace("!.html$!", ".php", $array[3]);
+    mirror_redirect("/manual/$array[1]$array[3]");
 }
 
 // ============================================================================
