@@ -8,25 +8,24 @@ $SIDEBAR_DATA='
 <p>
  You can read the
  <a href="/docs.php">documentation online</a>
- in various languages, even in printer
- friendly formats.
+ in various languages. The Documentation HOWTO,
+ PEAR, Smarty and archive manuals are also available
+ from our <a href="/docs.php">documentation page</a>.
 </p>
 
-<h3>Tip for Linux and BSD users</h3>
-<p>
- A free CHM viewer is available for Linux, *BSD and Solaris,
- which is capable of reading the CHMs available here, except
- the extended CHMs. It is called
- <a href="http://xchm.sourceforge.net/">xCHM</a>. If you
- use Gnome, you might also be interested in another fine
- project named <a href="http://gnochm.sourceforge.net/">GnoCHM</a>.
-</p>
-
-<h3>CHM reader for Mac OS X</h3>
-<p>
- There is also a free CHM viewer available for Mac
- OS X, named <a href="http://chmox.sourceforge.net/">Chmox</a>.
-</p>
+<h3>CHM viewer programs</h3>
+<ul class="toc">
+ <li>Microsoft Windows has a reader built in.</li>
+ <li>
+  Use <a href="http://xchm.sourceforge.net/">xCHM</a> or 
+  <a href="http://gnochm.sourceforge.net/">GnoCHM</a>
+  on Linux, *BSD and Solaris.
+ </li>
+ <li>
+  <a href="http://chmox.sourceforge.net/">Chmox</a> caters
+  to Mac OS X users.
+ </li>
+</ul>
 
 <h3>File sizes and dates</h3>
 <p>
@@ -48,7 +47,6 @@ $formats = array(
     "PalmPilot DOC"      => "doc.pdb",
     "PalmPilot iSilo"    => "isilo.pdb",
     "Windows HTML Help"  => "chm",
-    "Extended HTML Help" => "chm.zip"
 );
 ?>
 
@@ -56,36 +54,41 @@ $formats = array(
 
 <p>
  The PHP manual is available in a selection of languages and
- formats. Note that the English version should be considered
- the most accurate, since translations are based on that version.
- Most of the translations are not complete, and contain English
- parts. Pick a language and format from the table below to start
+ formats. Pick a language and format from the table below to start
  downloading.
 </p>
 
-<p>
- Note that the packaged HTML version of the manual
- (tar.gz) doesn't contain any directories,
- so all of the files will be dumped into your current working
- directory when you expand the archive unless the tool you
- use does otherwise.
-</p>
+<h2>Notes to read before you download</h2>
 
-<p>
- <strong>Note to Windows users</strong>: If you are using
- Microsoft Internet Explorer under Windows XP SP2 or
- later and you are going to download the documentation in CHM
- format, you should "unblock" the file after downloading it, by
- right-clicking on it and selecting the properties menu item. Then click
- on the 'Unblock' button. Failing to do this may lead to errors
- in the visualization of the file, due to a Microsoft bug.
-</p>
-
-<p>
- The English version of the manual is <a
- href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">also
- available</a> for the ThoutReader.
-</p>
+<ul>
+ <li>
+  The English version should be considered the most accurate, since
+  translations are based on that version. Most of the translations
+  are not complete, and contain English parts. 
+ </li>
+ <li>
+  The packaged HTML version of the manual (tar.gz) doesn't contain
+  any directories, so all of the files will be dumped into your
+  current working directory when you expand the archive unless the
+  tool you use does otherwise.
+ </li>
+ <li>
+  If you are using Microsoft Internet Explorer under Windows XP SP2 or
+  later and you are going to download the documentation in CHM
+  format, you should "unblock" the file after downloading it, by
+  right-clicking on it and selecting the properties menu item. Then click
+  on the 'Unblock' button. Failing to do this may lead to errors
+  in the visualization of the file, due to a Microsoft bug.
+ </li>
+ <li>
+  The English version of the manual is <a
+  href="/get/php_manual_chm.zip/from/a/mirror">downloadable</a> in an
+  <a href="/docs-echm.php">Extended HTML Help format</a>, and is also
+  available <a
+  href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">for
+  the ThoutReader</a>.
+ </li>
+</ul>
 
 <?php
 $files = array(); $found_formats = array();
@@ -96,23 +99,15 @@ foreach ($LANGUAGES as $langcode => $language) {
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
     
-        // Skip chm.zip if we are not dealing with the English manual
-        if ($extension == 'chm.zip' && $langcode != 'en') {
-            continue;
-        }
-
         // Actual filename of the file
         $actual_file = $_SERVER['DOCUMENT_ROOT'] . 
-                       "/distributions/manual/php_manual_" .
-                       ($extension == 'chm.zip' ? $extension : "$langcode.$extension");
+                       "/distributions/manual/php_manual_$langcode.$extension";
         
         // File named after the language and format exists
         if (file_exists($actual_file)) {
             
             // Mirror selection download URL
-            $link_to = '/get/php_manual_' .
-                ($extension == 'chm.zip' ? $extension : "$langcode.$extension") .
-                '/from/a/mirror';
+            $link_to = "/get/php_manual_$langcode.$extension/from/a/mirror";
 
             // Try to get size and changed date
             $size    = @filesize($actual_file);
@@ -144,11 +139,7 @@ if (count($found_formats) == 0) {
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
         if (!in_array($extension, array_values($found_formats))) { continue; }
-        if ($formatname === 'Extended HTML Help') {
-            echo "  <th valign=\"bottom\"><a href=\"/docs-echm.php\">$formatname</a></th>\n";
-        } else {
-            echo "  <th valign=\"bottom\">$formatname</th>\n";
-        }
+        echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
     echo " </tr>\n";
@@ -159,12 +150,6 @@ if (count($found_formats) == 0) {
         if ($langcode == $LANG) { $preflang = TRUE; }
         else { $preflang = FALSE; }
         
-        // Additional link for special French version of the manual
-        $language = $LANGUAGES[$langcode];
-        if ($langcode == "fr") {
-            $language .= '<br /><a href="http://www.nexen.net/docs/php/index.php">[Special French]</a>';
-        }
-        
         // Highlight manual in preferred language
         if ($preflang) {
             $cellclass = ' class="highlight"';
@@ -172,7 +157,7 @@ if (count($found_formats) == 0) {
             $cellclass = "";
         }
 
-        echo "<tr>\n<th class=\"subl\">$language</td>\n";
+        echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</td>\n";
 
         foreach ($formats as $formatname => $extension) {
         
@@ -214,18 +199,4 @@ if (count($found_formats) == 0) {
 }
 ?>
 
-<hr />
-
-<h1>Documentation howto</h1>
-
-<p>
- The PHP Documentation Team has a documentation howto, including coverage
- on how to set up a working environment on Unix/Linux/Windows, how to build
- HTML formatted docs from the XML sources, what conventions to follow when
- writing documentation, etc. If you are interested in the process, or would
- like to start/join a translation, you can <a href="/get/dochowto">download
- the howto</a>. Note, that <a href="/dochowto">it is also readable
- online</a>.
-</p>
-
-<?php site_footer(); ?>
+<?php site_footer();
