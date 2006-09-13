@@ -227,7 +227,6 @@ END_USERNOTE_HEADER;
     
     // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
-        //echo "\n <div class=\"note\">User notes are temporarily unavailable. Please read the related news item on <a href=\"/\">our frontpage</a>.</div>";
         echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
     }
      
@@ -290,21 +289,21 @@ function manual_note_display($date, $name, $text, $id)
         $admin = "\n  <span class=\"action\">\n   " .
         
         make_popup_link(
-            'http://master.php.net/manage/user-notes.php?action=edit+' . $id,
+            'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
             make_image('notes-edit.gif', 'edit note'),
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
     
         make_popup_link(
-            'http://master.php.net/manage/user-notes.php?action=reject+' . $id,
+            'https://master.php.net/manage/user-notes.php?action=reject+' . $id,
             make_image('notes-reject.gif', 'reject note'),
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
     
         make_popup_link(
-            'http://master.php.net/manage/user-notes.php?action=delete+' . $id,
+            'https://master.php.net/manage/user-notes.php?action=delete+' . $id,
             make_image('notes-delete.gif', 'delete note'),
             'admin',
             'scrollbars=no,width=300,height=200'
@@ -322,30 +321,3 @@ function manual_note_display($date, $name, $text, $id)
 USER_NOTE_TEXT;
  
 }
-
-// =============================================================================
-// Compatibility functions with old function interface
-// =============================================================================
-
-function sendManualHeaders($charset, $lang)
-{
-    $GLOBALS['PGI']['head'] = array($charset, $lang);
-}
-
-function manualHeader()
-{
-    // XSL [and new DSSSL] sheets provide params in the
-    // 'this' PGI array element, while old DSSSL sheets
-    // provide info via two parameters [title, id]
-    if (func_num_args() > 0) {
-        list($title, $id) = func_get_args();
-        $GLOBALS['PGI']['this'] = array($id, $title);
-    }
-
-    // This does the work of sendManualHeaders()
-    // and manualHeader() too
-    manual_header();
-}
-
-function manualFooter()         { manual_footer(); }
-function setupNavigation($data) { manual_setup($data); }
