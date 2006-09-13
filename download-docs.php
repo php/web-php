@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'download-docs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 $SIDEBAR_DATA='
-<h3>Documentation online</h3>
+<h3>Online documentation</h3>
 <p>
  You can read the
  <a href="/docs.php">documentation online</a>
@@ -13,7 +13,7 @@ $SIDEBAR_DATA='
  from our <a href="/docs.php">documentation page</a>.
 </p>
 
-<h3>CHM viewer programs</h3>
+<h3>HTML Help viewers</h3>
 <ul class="toc">
  <li>Microsoft Windows has a reader built in.</li>
  <li>
@@ -41,12 +41,12 @@ site_header("Download documentation");
 
 // Format to look for
 $formats = array(
-    "Single HTML"        => "html.gz",
-    "Many HTML files"    => "tar.gz",
-    "PDF"                => "pdf.bz2",
-    "PalmPilot DOC"      => "doc.pdb",
-    "PalmPilot iSilo"    => "isilo.pdb",
-    "Windows HTML Help"  => "chm",
+    "Single HTML file" => "html.gz",
+    "Many HTML files"  => "tar.gz",
+    /*"PDF"              => "pdf.bz2",
+    "PalmPilot DOC"    => "doc.pdb",
+    "PalmPilot iSilo"  => "isilo.pdb",*/
+    "HTML Help file"   => "chm",
 );
 ?>
 
