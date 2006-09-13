@@ -119,6 +119,10 @@ ul.simple li {
 	background-color: transparent;
 }
 
+.invisible {
+    display: none;
+}
+
 /* Content are styles ----------------------------------------------------- */
 #content {
 	padding: 10px;

@@ -130,12 +130,12 @@ function manual_sidebar()
         $liclass = ($url == $PGI['this'][0]) ? ' class="active"' : "";
         
         // There are some very long function names, which
-        // make the TOC be too wide, so wrap them
+        // make the TOC too wide, so enable the browser to wrap them
         // eg: xml_set_processing_instruction_handler 
-        if (strlen($title) > 28 && preg_match("!^[a-z0-9_]+$!", $title)) {
-            $title = str_replace("_", " ", $title);
-            $title = wordwrap($title, 28, "<br>");
-            $title = str_replace(array(" ", "<br>"), array("_", "<br />_"), $title);
+	//     DOMElement->getElementsByTagNameNS()
+        if (preg_match("!^[a-zA-Z0-9_>()-]+$!", $title)) {
+	    $wrap = '<span class="invisible"> </span>';
+            $title = str_replace(array('_', '->'), array("_$wrap", "->$wrap"), $title);
         }
         
         // Print out the TOC item using a <div>
