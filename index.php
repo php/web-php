@@ -151,7 +151,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 <p>
  <span class="newsdate">[13-Sep-2006]</span>
  The <a href="http://www.zendcon.com">Zend / PHP Conference &amp; Expo 2006</a>
- has an Early Bird registration special available before before September 15.
+ has an Early Bird registration special available before September 15.
  Use the 'earlybird' code, available on the site, and receive a $795 registration
  price.
 </p>
