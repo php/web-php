@@ -115,7 +115,7 @@ diff -u
    <li>
     You can also specify the directory name, for example, to put PHP 6 HEAD into a directory 
     named php6dev:<br />
-    <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php-src</code>
+    <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php6</code>
    </li>
   </ul>
  </li>
@@ -148,9 +148,7 @@ diff -u
  There are also other things, like the XML source code
  for the documentation, available via anonymous CVS. See
  <a href="http://cvs.php.net/">the web-based view of the CVS
- server</a> to see what is available, and substitute the
- appropriate module name for "<i>php-src</i>" in step 
- 3 (and ignore the later steps).  For example, to checkout the
+ server</a> to see what is available. For example, to checkout the
  latest english version of the PHP manual:<br />
  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout phpdoc</code>
 </p>
