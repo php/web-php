@@ -27,7 +27,7 @@ $SIDEBAR_DATA = '
 
 <p>
  Of course, if you want to see the <a href="/source.php?url=/source.php">source
- of this page, we have it available.
+ of this page</a>, we have it available.
  You can also browse the CVS repository for this website on
  <a href="http://cvs.php.net/viewvc.cgi/phpweb/">cvs.php.net</a>.
 </p>
