@@ -94,14 +94,11 @@ diff -u
   <strong>PHP 4.4</strong>: 
   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_4_4 php-src</code>
   <br />
-  <strong>PHP 5.1</strong>:
-  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_1 php-src</code>
-  <br />
   <strong>PHP 5.2</strong>:
-  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php-src</code>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php5</code>
   <br />
   <strong>PHP 6</strong>: 
-  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php-src</code>
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php6</code>
   <br /><br />
   Some tips and notes:
   <br />
@@ -116,8 +113,7 @@ diff -u
     The branch names can also be used for cvs diff and merge operations.
    </li>
    <li>
-    All of the above commands create a local directory named "php-src". You can also 
-    specify another directory name, for example, to put PHP 6 HEAD into a directory 
+    You can also specify the directory name, for example, to put PHP 6 HEAD into a directory 
     named php6dev:<br />
     <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -d php6dev php-src</code>
    </li>
