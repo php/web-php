@@ -65,6 +65,12 @@ if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
 }
 
 // ============================================================================
+// BC: News archive moved to folder
+if (preg_match("!^news-(\\d+)(\\.|$)!", $URI, $array)) {
+    mirror_redirect("/archive/$array[1].php");
+}
+
+// ============================================================================
 // BC: handle documentation howto moved to the doc.php.net server
 // (redirect to index page)
 if (preg_match("!^manual/howto/!", $URI, $array)) {
@@ -256,7 +262,7 @@ $uri_aliases = array (
     "factory"      => "language.oop5.patterns",
     "singleton"    => "language.oop5.patterns",
     
-    "news.php"                     => "news-2004", // BC
+    "news.php"                     => "archive/index", // BC
     "readme.mirror"                => "mirroring", // BC
     
     "php5"                         => "language.oop5",

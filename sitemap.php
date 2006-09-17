@@ -11,7 +11,7 @@ site_header("Sitemap");
 
 <ul>
  <li><a href="/index.php">Home Page</a></li>
- <li><a href="/news-2006.php">News Archives</a></li>
+ <li><a href="/archive/index.php">News Archives</a></li>
  <li><a href="/news.rss">RSS newsfeed</a></li>
 </ul>
 

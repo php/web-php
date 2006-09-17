@@ -521,6 +521,6 @@ discount is available until March 1st</a>.
 
 <hr />
 
-<p class="center"><a href="/news-2006.php">News Archive</a></p>
+<p class="center"><a href="/archive/index.php">News Archive</a></p>
 
 <?php site_footer();

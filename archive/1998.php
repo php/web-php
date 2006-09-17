@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'news-1998.php';
+$_SERVER['BASE_PAGE'] = 'archive/1998.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
 site_header("News Archive - 1998");
