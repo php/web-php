@@ -9,7 +9,7 @@ site_header("UPGRADE NOTES - PHP 5.1");
 
 <ol>
 <li><a href="#cirh">Changes in reference handling</a>
-    <ol type="a">
+    <ol>
      <li><a href="#overview">Overview</a></li>
      <li><a href="#cirh2">Code that worked under PHP 4.3, but now fails</a></li>
      <li><a href="#cirh3">Code that was valid under PHP 4.3, but now throws an error</a></li>
@@ -25,13 +25,13 @@ site_header("UPGRADE NOTES - PHP 5.1");
 <li><a href="#cir">Changes in inheritance rules</a></li>
 <li><a href="#cc">Class constants</a></li>
 <li><a href="#extensions">Extensions</a>
-     <ol type="a">
+     <ol>
      <li><a href="#extensions1">Extensions that are gone from the PHP core</a></li>
      <li><a href="#extensions2">Class constants in new PHP 5.1 extensions</a></li>
      </ol></li>
 <li><a href="#date">Date/time support</a></li>
 <li><a href="#db">Changes in database support</a>
-     <ol type="a">
+     <ol>
      <li><a href="#db1">PDO overview</a></li>
      <li><a href="#db2">Changes in MySQL support</a></li>
      <li><a href="#db3">Changes in SQLite support</a></li>
@@ -40,9 +40,9 @@ site_header("UPGRADE NOTES - PHP 5.1");
 <li><a href="#estrict">Checking for E_STRICT errors</a></li>
 </ol>
 
-<a name="cirh"><h2>1. Changes in reference handling</h2></a>
+<a name="cirh"></a><h2>1. Changes in reference handling</h2>
 
-<a name="overview"><h3>1a. Overview</h3></a>
+<a name="overview"></a><h3>1a. Overview</h3>
 
 <p>
 From the PHP script writer's point of view, the change most likely to impact
@@ -92,7 +92,7 @@ Code that could potentially produce memory corruption can no longer do so.
 However, some legacy code might work differently as a result.
 </p>
 
-<a name="cirh2"><h3>1b. Code that worked under PHP 4.3, but now fails</h3></a>
+<a name="cirh2"></a><h3>1b. Code that worked under PHP 4.3, but now fails</h3>
  
 <?php 
 highlight_string('
@@ -182,7 +182,7 @@ Again, this can be brought to a common base, either by forcing func() to
 return by reference or by eliminating the by-reference assignment.
 </p>
 
-<a name="cirh3"><h3>1c. Code that was valid under PHP 4.3, but now throws an error</h3></a>
+<a name="cirh3"></a><h3>1c. Code that was valid under PHP 4.3, but now throws an error</h3>
 
 <?php
 highlight_string('
@@ -215,7 +215,7 @@ this is actually invalid code which will throw an E_NOTICE under
 PHP 4.4 or an E_STRICT under PHP 5.0.4 and up.
 </p>
 
-<a name="cirh4"><h3>1d. Code that failed under PHP 4.3, but now works</h3></a>
+<a name="cirh4"></a><h3>1d. Code that failed under PHP 4.3, but now works</h3>
 
 <?php
 highlight_string('
@@ -258,7 +258,7 @@ Until PHP 5.0.5, it wasn't possible to assign an array element by
 reference in this way. It now is.
 </p>
 
-<a name="cirh5"><h3>1e. Code that 'should have worked' under PHP 5.0</h3></a>
+<a name="cirh5"></a><h3>1e. Code that 'should have worked' under PHP 5.0</h3>
 
 <p>
 There are a couple of instances of bugs reported under PHP 5.0 prior
@@ -271,7 +271,7 @@ still see an E_ERROR when you try it, even where the assignment
 itself appears to work.
 </p>
 
-<a name="cirh6"><h3>1f. Warnings that came and went</h3></a>
+<a name="cirh6"></a><h3>1f. Warnings that came and went</h3>
 
 <?php
 highlight_string('<?php
@@ -297,7 +297,7 @@ PHP 4.3 and PHP 5.1, but threw an unwarranted E_NOTICE or E_STRICT under
 the intervening PHP releases.
 </p>
 
-<a name="reading"><h2>2. Reading []</h2></a>
+<a name="reading"></a><h2>2. Reading []</h2>
 
 <?php
 highlight_string('
@@ -330,7 +330,7 @@ This should always have thrown a fatal E_ERROR, because [] cannot be used
 for reading in PHP. It is invalid code in PHP 4.4.2 and PHP 5.0.5 upward.
 </p>
 
-<a name="is_a"><h2>3. instanceof, is_a(), is_subclass_of(), catch</a></h2>
+<a name="is_a"></a><h2>3. instanceof, is_a(), is_subclass_of(), catch</h2>
 
 <p>
 In PHP 5.0, is_a() was deprecated and replaced by the &quot;instanceof&quot; operator.
@@ -347,7 +347,7 @@ the class_exists() workarounds used in code written for PHP 5.0, while
 not problematic in any way, are no longer necessary.
 </p>
 
-<a name="int"><h3>4. Integer values in function parameters</h3></a>
+<a name="int"></a><h3>4. Integer values in function parameters</h3>
 
 <p>
 With the advent of PHP 5.0, a new parameter parsing API was introduced
@@ -361,13 +361,13 @@ safety and input validation, PHP functions will now emit an E_NOTICE
 when such strings are passed as integers.
 </p>
 
-<a name="abstract"><h2>5. Abstract private methods</h2></a>
+<a name="abstract"></a><h2>5. Abstract private methods</h2>
 
 Abstract private methods were supported between PHP 5.0.0 and PHP 5.0.4,
 but were then disallowed on the grounds that the behaviours of 'private'
 and 'abstract' are mutually exclusive.
 
-<a name="ami"><h2>6. Access modifiers in interfaces</h2></a>
+<a name="ami"></a><h2>6. Access modifiers in interfaces</h2>
 
 <p>
 Under PHP 5.0, function declarations in interfaces were treated in exactly
@@ -380,7 +380,7 @@ the 'protected' and 'private' modifiers will now throw an E_ERROR, as will
 none of these modifiers makes sense in the context of interfaces anyway.
 </p>
 
-<a name="cir"><h2>7. Changes in inheritance rules</h2></a>
+<a name="cir"></a><h2>7. Changes in inheritance rules</h2>
 
 <p>
 Under PHP 5.0, it was possible to have a function declaration in a derived class
@@ -405,7 +405,7 @@ class Derived extends Base {
 
 <p>This code will cause an E_STRICT error to be emitted under PHP 5.1.</p>
 
-<a name="cc"><h2>8. Class constants</h2></a>
+<a name="cc"></a><h2>8. Class constants</h2>
 
 <p>Under PHP 5.0, the following code was valid:</p>
 
@@ -423,9 +423,9 @@ class test {
 
 <p>Under PHP 5.1, redefinition of a class constant will throw a fatal E_ERROR.</p>
 
-<a name="extensions"><h2>9. Extensions</h2></a>
+<a name="extensions"></a><h2>9. Extensions</h2>
 
-<a name="extensions1"><h3>9a. Extensions that are gone from the PHP core</h3></a>
+<a name="extensions1"></a><h3>9a. Extensions that are gone from the PHP core</h3>
 
 <p>
 One of the first things you're likely to notice when you download PHP 5.1 is that
@@ -450,7 +450,7 @@ ext/mnogosearch     not actively maintained
 ext/oracle          ext/oci8 or ext/pdo_oci
 ext/ovrimos         not actively maintained
 ext/pfpro           not actively maintained
-                    - alternatives at <a href="http://pecl.php.net/packages.php?catpid=18&catname=Payment">http://pecl.php.net/packages.php?catpid=18&catname=Payment</a>
+                    - alternatives at <a href="http://pecl.php.net/packages.php?catpid=18&amp;catname=Payment">http://pecl.php.net/packages.php?catpid=18&amp;catname=Payment</a>
 ext/w32api          pecl/ffi
 ext/yp              not actively maintained
 sapi/activescript   <a href="http://pecl4win.php.net/ext.php/php5activescript.dll">http://pecl4win.php.net/ext.php/php5activescript.dll</a> (PECL package)
@@ -465,7 +465,7 @@ have any PECL package releases), are still available in CVS at
 unsupported, and your mileage may vary when attempting to install or use them.
 </p>
 
-<a name="extensions2"><h3>9b. Class constants in new PHP 5.1 extensions</h3></a>
+<a name="extensions2"></a><h3>9b. Class constants in new PHP 5.1 extensions</h3>
 
 <p>
 The Zend Engine 2.1 API allows extension developers to declare class constants
@@ -481,7 +481,7 @@ PDO_CLASS_CONSTANT
 
 <p>in order to minimise pollution of the global namespace in PHP.</p>
 
-<a name="date"><h2>10. Date/time support</h2></a>
+<a name="date"></a><h2>10. Date/time support</h2>
 
 <p>
 Date/time support has been fully rewritten in PHP 5.1, and no longer
@@ -490,11 +490,11 @@ instead utilize, in the following order:
 </p>
 
 <ul>
-<li>The timezone set using the date_default_timezone_set() function (if any)
-<li>The TZ environment variable (if non empty)
-<li>The date.timezone ini option (if set)
-<li>&quot;magical&quot; guess (if the operating system supports it)
-<li>If none of the above options succeeds, UTC
+<li>The timezone set using the date_default_timezone_set() function (if any)</li>
+<li>The TZ environment variable (if non empty)</li>
+<li>The date.timezone ini option (if set)</li>
+<li>&quot;magical&quot; guess (if the operating system supports it)</li>
+<li>If none of the above options succeeds, UTC</li>
 </ul>
 
 <p>
@@ -509,9 +509,9 @@ The supported timezones are listed, in this format, in the PHP manual at
 <a href="http://www.php.net/manual/en/timezones.php">http://www.php.net/manual/en/timezones.php</a>.
 </p>
 
-<a name="db"><h2>11. Changes in database support</h2></a>
+<a name="db"></a><h2>11. Changes in database support</h2>
 
-<a name="db1"><h3>11a. PDO overview</h3></a>
+<a name="db1"></a><h3>11a. PDO overview</h3>
 
 <p>
 PHP Data Objects (PDO) were introduced as a PECL extension under PHP 5.0,
@@ -547,7 +547,7 @@ There is more in-depth information about the PDO extension in the manual
 at <a href="http://www.php.net/manual/ref.pdo.php">http://www.php.net/manual/ref.pdo.php</a>.
 </p>
 
-<a name="db2"><h3>11b. Changes in MySQL support</h3></a>
+<a name="db2"></a><h3>11b. Changes in MySQL support</h3>
 
 <p>
 In PHP 4, MySQL 3 support was built-in. With the release of PHP 5.0 there
@@ -561,7 +561,7 @@ older MySQL extensions remain in place for reasons of back compatibility,
 but are not enabled by default.
 </p>
 
-<a name="db3"><h3>11c. Changes in SQLite support</h3></a>
+<a name="db3"></a><h3>11c. Changes in SQLite support</h3>
 
 <p>
 In PHP 5.0, SQLite 2 support was provided by the built-in sqlite
@@ -601,14 +601,14 @@ PDO extension as a shared extension, then the SQLite extension must also
 be built shared. The same holds true for any extension that provides a PDO driver
 </p>
 
-<a name="misc"><h2>12. Further migration information</h2></a>
+<a name="misc"></a><h2>12. Further migration information</h2>
 
 <p>
 For general information about migrating from PHP 4 to PHP 5, please refer to
 the relevant section in the PHP manual at <a href="http://www.php.net/manual/migration5.php">http://www.php.net/manual/migration5.php</a>.
 </p>
 
-<a name="estrict"><h2>13. Checking for E_STRICT errors</h2></a>
+<a name="estrict"></a><h2>13. Checking for E_STRICT errors</h2>
 
 <p>
 If you only have a single script to check, you can pick up E_STRICT
@@ -617,7 +617,7 @@ errors using PHP's commandline lint facility:
 
 php -d error_reporting=4095 -l script_to_check.php
 
-<p>For larger projects, the shell script below will achieve the same task:</a>
+<p>For larger projects, the shell script below will achieve the same task:</p>
 
 <pre>
 #!/bin/sh
