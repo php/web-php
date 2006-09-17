@@ -85,7 +85,7 @@ $formats = array(
   href="/get/php_manual_chm.zip/from/a/mirror">downloadable</a> in an
   <a href="/docs-echm.php">Extended HTML Help format</a>, and is also
   available <a
-  href="http://www.osoft.com/store/productdetails.php?pid=14&cid=1">for
+  href="http://www.osoft.com/store/productdetails.php?pid=14&amp;cid=1">for
   the ThoutReader</a>.
  </li>
 </ul>
@@ -157,7 +157,7 @@ if (count($found_formats) == 0) {
             $cellclass = "";
         }
 
-        echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</td>\n";
+        echo "<tr>\n<th class=\"subl\">" . $LANGUAGES[$langcode] . "</th>\n";
 
         foreach ($formats as $formatname => $extension) {
         

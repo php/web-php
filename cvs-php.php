@@ -311,7 +311,7 @@ EOT;
       class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>" /></td>
 </tr>
 <tr>
- <th class="subr">For what purpose do you require a CVS account:<br/ >
+ <th class="subr">For what purpose do you require a CVS account:<br />
  (check all that apply)</th>
  <td>
 <?php 
@@ -322,12 +322,12 @@ $purposes = array("Learning PHP", "Coding in PHP", "Reading the PHP source",
 
 foreach ($purposes as $i => $p) { ?>
   <input type="checkbox" name="purpose[<?php echo $i?>]" value="1" 
-	checked="checked"><?php echo $p; ?><br />
+	checked="checked" /><?php echo $p; ?><br />
 <?php } ?>
  </td>
 </tr>
 <tr>
- <th class="subr">If your intended purpose is not in the list, <br>please state it here:</th>
+ <th class="subr">If your intended purpose is not in the list, <br />please state it here:</th>
  <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
 </tr>
 <tr>
