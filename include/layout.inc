@@ -559,7 +559,7 @@ function news_archive_sidebar()
 <ul class="toc">
 ';
     for ($i = 1998; $i < 2007; $i++) {
-        $pagename = "news-$i.php";
+        $pagename = "archive/$i.php";
         $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
         $SIDEBAR_DATA .= '<li><a href="/' . $pagename .'"' . $classname .'>' . $i . "</a></li>\n";
     }
