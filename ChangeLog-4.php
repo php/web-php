@@ -120,7 +120,6 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 <hr />
 
 <a name="4.4.1"></a>
-<a name="4.1.1"></a>
 <h3>Version 4.4.1</h3>
 <b>31-Oct-2005</b>
 <ul>
@@ -301,7 +300,7 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 <li><?php bugfix(30609); ?> (cURL functions bypass open_basedir).</li>
 <li><?php bugfix(30573); ?> (compiler warnings in libmbfl due to invalid type cast).</li>
 <li><?php bugfix(30549); ?> (incorrect character translations for some ISO8859 charsets).</li>
-<li><?php bugfix(30446); ?> (apache2handler: virtual() includes files out of sequence)
+<li><?php bugfix(30446); ?> (apache2handler: virtual() includes files out of sequence)</li>
 <li><?php bugfix(30430); ?> (odbc_next_result() doesn't bind values and that results  in segfault).</li>
 <li><?php bugfix(30120); ?> (imagettftext() and imagettfbbox() accept too many parameters).</li>
 <li><?php bugfix(29733); ?> (printf() handles repeated placeholders wrong).</li>
@@ -534,19 +533,19 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li>Fixed possible crashes inside socket extension, due to missing check inside allocation functions. (Ilia)</li>
 <li>Fixed zero bytes memory allocation when no extra ini files are found in the --with-config-file-scan-dir specified directory. (Eric Colinet, Derick)</li>
 <li>Changed "allow_url_fopen" php.ini option to be PHP_INI_SYSTEM. (Sara)</li>
-<li>Improved the sybase_ct module: (Timm)</li>
+<li>Improved the sybase_ct module: (Timm)
  <ul>
   <li>Added ability to define a message handler not only globally, but also per connection.</li>
   <li>Added "sybct.packet_size" php.ini option.</li>
   <li>Changed "sybct.login_timeout" php.ini option changeable at runtime.</li>
   <li>Fixed memory leak in sybase_set_message_handler().</li>
-  </ul>
+  </ul></li>
 <li>Synchronized bundled GD library with GD 2.0.17</li>
 <li>Upgraded PCRE library to version 4.5. (Andrei)</li>
 <li>Updated bundled PostgreSQL library to version 7.4 in Windows distribution. (Edin)</li>
 <li>Added support for --program-prefix and --program-suffix configure options. (Jani)</li>
 <li>Added a warning when creating temp stream fails with ftp_(n)list(). (Sara)</li>
-<li>Fixed header handler in NSAPI SAPI module (header->replace was ignored, send_default_content_type now sends value from php.ini). (Uwe Schindler)</li>
+<li>Fixed header handler in NSAPI SAPI module (header-&gt;replace was ignored, send_default_content_type now sends value from php.ini). (Uwe Schindler)</li>
 <li><?php bugfix(27633); ?> (Incorrect EOL translation by ftp_get() in ASCII mode). (Ilia)</li>
 <li><?php bugfix(27600); ?> (GCC 3.0.4 does not like __attribute__ directive). (Sascha)</li>
 <li><?php bugfix(27590); ?> (crash during shutdown when freeing persistent resources in ZTS mode). (Ilia)</li>
@@ -630,7 +629,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(26488); ?> (Missing declaration of CRTSCTS in ext/dio/dio.c). (Jani)</li>
 <li><?php bugfix(26467); ?> (flock() does not force the "wouldblock" parameter to be passed by reference). (Wez)</li>
 <li><?php bugfix(26463); ?> (Incorrect handling of semicolons after heredoc). (Ilia)</li>
-<li><?php bugfix(26462); ?> (phpize + ext/bcmath -> compile error). (Jani)</li>
+<li><?php bugfix(26462); ?> (phpize + ext/bcmath -&gt; compile error). (Jani)</li>
 <li><?php bugfix(26461); ?> (-lssl missing from LIBS). (Jani)</li>
 <li><?php bugfix(26458); ?> (var_dump(), var_export(), debug_zval_dump() not binary safe for array keys). (Ilia)</li>
 <li><?php bugfix(26447); ?> (--with-openssl=shared causes compile errors). (Jani)</li>
@@ -640,7 +639,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(26415); ?> (Updated bundled OpenSSL DLLs in the Windows distribution to 0.9.7c). (Edin)</li>
 <li><?php bugfix(26407); ?> (Result set fetching broken around transactions). (Timm)</li>
 <li><?php bugfix(26391); ?> (parse_url() destroys strings that contain a character in range of \x80-\xff)). (Moriyoshi)</li>
-<li><?php bugfix(26384); ?> (crash in domxslt->process()). (Christian)</li>
+<li><?php bugfix(26384); ?> (crash in domxslt-&gt;process()). (Christian)</li>
 <li><?php bugfix(26381); ?> (rand() without srand() doesn't work with certain php.ini). (Jani)</li>
 <li><?php bugfix(26376); ?> (typo in ext/odbc/config.m4: DBMaker test fails). (Jani)</li>
 <li><?php bugfix(26355); ?> (flock() doesn't initialize the wouldblock argument). (Ilia)</li>
@@ -668,7 +667,7 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 <li><?php bugfix(26003); ?> (Make fgetcsv() binary safe). (Ilia, Moriyoshi)</li>
 <li><?php bugfix(25963); ?> (PostgreSQL error message include \n characters). (Marcus, Ilia)</li>
 <li><?php bugfix(25939); ?> (feof() not working correctly for sockets). (Wez)</li>
-<li><?php bugfix(25916); ?> (get_browser() -> PHP Fatal error: Nesting level too deep - recursive dependency?). (Uwe Schindler)</li>
+<li><?php bugfix(25916); ?> (get_browser() -&gt; PHP Fatal error: Nesting level too deep - recursive dependency?). (Uwe Schindler)</li>
 <li><?php bugfix(25794); ?> (Cannot open existing hash db3 file with write" ext/dba). (Marcus)</li>
 <li><?php bugfix(25753); ?> (php.ini settings "leak" from vhosts/.htaccess files). (Patch by: rover at tob dot ru)</li>
 <li><?php bugfix(25694); ?> (round() and number_format() give inconsistent results). (Ilia)</li>
@@ -702,12 +701,12 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 <li>Fixed crash bug when non-existing save/serializer handler was used. (Jani)</li>
 <li>Fixed memory leak in gethostbynamel() if an error occurs. (Sara)</li>
 <li>Fixed FastCGI being unable to bind to a specific IP. (Sascha)</li>
-<li>Fixed multibyte regex engine to properly handle ".*" pattern under POSIX compatible mode. (K.Kosako <kosako at sofnec.co.jp>, Moriyoshi)</li>
+<li>Fixed multibyte regex engine to properly handle ".*" pattern under POSIX compatible mode. (K.Kosako &lt;kosako at sofnec.co.jp&gt;, Moriyoshi)</li>
 <li><?php bugfix(25955); ?> (Compile failure on MacOSX 10.3 Panther). (Marko, Dan)</li>
-<li><?php bugfix(25923); ?> (mail() modifies the to & subject arguments). (Ilia)</li>
+<li><?php bugfix(25923); ?> (mail() modifies the to &amp; subject arguments). (Ilia)</li>
 <li><?php bugfix(25922); ?> (Crash in error handler when 5th argument is modified). (Ilia) </li>
 <li><?php bugfix(25918); ?> (Possible crash in mime_content_type()). (Ilia)</li>
-<li><?php bugfix(25900); ?> (document->get_elements_by_tag_name with default xmlns). (Rob)</li>
+<li><?php bugfix(25900); ?> (document-&gt;get_elements_by_tag_name with default xmlns). (Rob)</li>
 <li><?php bugfix(25895); ?> (Incorrect detection of safe_mode limited ini options). (Ilia)</li>
 <li><?php bugfix(25888); ?> (Crash of php.exe when xpath_eval of a namespace). (Rob)</li>
 <li><?php bugfix(25836); ?> (last key of multi-dimensional array passed via GPC not being escaped when magic_quotes_gpc is on). (Ilia)</li>
@@ -718,7 +717,7 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 <li><?php bugfix(25777); ?> (Do not rtrim() of text fields fetched from mssql). (Ilia)</li>
 <li><?php bugfix(25770); ?> (Segfault with PHP and bison 1.875). (eggert@gnu.org, Marcus)</li>
 <li><?php bugfix(25764); ?> (ldap_get_option() crashes with unbound ldap link). (Jani)</li>
-<li><?php bugfix(25758); ?> (var_export does not escape ' & \ inside array keys). (Ilia)</li>
+<li><?php bugfix(25758); ?> (var_export does not escape ' &amp; \ inside array keys). (Ilia)</li>
 <li><?php bugfix(25752); ?> (ext/ncurses: ncurses.h instead of curses.h with BSD). (Jani)</li>
 <li><?php bugfix(25746); ?> (Do not bail out when unable to chdir original dir on systems with broken getcwd()). (Ilia)</li>
 <li><?php bugfix(25745); ?> (ctype functions fail with non-ascii characters). (Moriyoshi)</li>
@@ -751,9 +750,9 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 <li><?php bugfix(25372); ?> (sscanf() does not work with %X). (Jani)</li>
 <li><?php bugfix(25348); ?> ("make install" fails with --enable-short-tags). (Jani)</li>
 <li><?php bugfix(25343); ?> (is_dir() gives warning on FreeBSD). (Jani)</li>
-<li><?php bugfix(25333); ?> (Possible body corruption & crash in win32 mail()). (Ilia)</li>
+<li><?php bugfix(25333); ?> (Possible body corruption &amp; crash in win32 mail()). (Ilia)</li>
 <li><?php bugfix(25316); ?> (Possible infinite loop inside _php_stream_write()). (Ilia)</li>
-<li><?php bugfix(25314); ?> (FTP_ASCII mode behaving like binary from Win->Unix). (Sara)</li>
+<li><?php bugfix(25314); ?> (FTP_ASCII mode behaving like binary from Win-&gt;Unix). (Sara)</li>
 <li><?php bugfix(25308); ?> (php -m crashes when zend extensions are loaded). (Stas)</li>
 <li><?php bugfix(25307); ?> (Crash with WDDX serializer). (Sascha, Jani)</li>
 <li><?php bugfix(25295); ?> (QNX6: php_ini.c:414: 'alphasort' undeclared). (Jani)</li>
@@ -811,7 +810,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 </li>
 <li>Added DBA handler 'inifile' to support ini files. (Marcus)</li>
 <li>Added a "DEBUG" note to 'php -v' output when --enable-debug is used. (Derick)</li>
-<li>Added long options into CLI & CGI (e.g. --version). (Marcus)</li>
+<li>Added long options into CLI &amp; CGI (e.g. --version). (Marcus)</li>
 <li>Added a new parameter to preg_match*() that can be used to specify the starting offset in the subject string to match from. (Andrei)</li>
 <li>Fixed possible integer overflows in:
  <ul>
@@ -834,7 +833,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(25081); ?> (odbc_fetch_array() may mangle numeric fields). (Ilia)</li>
 <li><?php bugfix(25044); ?> (header("Location:") changing HTTP status). (Marcus)</li>
 <li><?php bugfix(25037); ?> (Possible infinite loop inside SendText()). (Ilia)</li>
-<li><?php bugfix(25007); ?> (rand() & mt_rand() seed RNG every call). (Jani)</li>
+<li><?php bugfix(25007); ?> (rand() &amp; mt_rand() seed RNG every call). (Jani)</li>
 <li><?php bugfix(24989); ?> (external libexpat conflicts with bundled libexpat). (Jani)</li>
 <li><?php bugfix(24980); ?> (array_reduce() uses first element as default running total). (Ilia)</li>
 <li><?php bugfix(24977); ?> (Revert mysql_select_db optimization). (Ilia)</li>
@@ -842,16 +841,16 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(24951); ?> (ob_flush() needlessly destroys output handler). (Ilia)</li>
 <li><?php bugfix(24936); ?> (ext/fdf not linked properly as shared extension). (Jani)</li>
 <li><?php bugfix(24909); ?> (Bad random numbers with ZTS builds on Solaris). (Ilia)</li>
-<li><?php bugfix(24897); ?> (inconsistent behavior of shuffle() & array_multisort()). (Ilia, Jani)</li>
+<li><?php bugfix(24897); ?> (inconsistent behavior of shuffle() &amp; array_multisort()). (Ilia, Jani)</li>
 <li><?php bugfix(24883); ?> (variables_order and gpc_order being ignored). (Ilia)</li>
 <li><?php bugfix(24873); ?> (incorrect handling of / inside open_basedir). (Ilia)</li>
 <li><?php bugfix(24871); ?> (methods misidentified as constructors). (Ilia)</li>
 <li><?php bugfix(24827); ?> (ob_gzhandler overrides Vary header). (Ilia)</li>
 <li><?php bugfix(24792); ?> (--enable-zend-multibyte causes random segfaults with ZTS). (fujimoto)</li>
-<li><?php bugfix(24783); ?> (foreach($ar as $key => $val), $key not binary safe). (Zeev)</li>
+<li><?php bugfix(24783); ?> (foreach($ar as $key =&gt; $val), $key not binary safe). (Zeev)</li>
 <li><?php bugfix(24760); ?> (non-default SNMP port number not working). (Jani)</li>
 <li><?php bugfix(24752); ?> (Unhandled "uniqueidentifier" field type). (Ilia, s.sonnenberg[at]coolspot.de)</li>
-<li><?php bugfix(24710); ?> (Crash when $obj->{0} is used). (Zeev)</li>
+<li><?php bugfix(24710); ?> (Crash when $obj-&gt;{0} is used). (Zeev)</li>
 <li><?php bugfix(24663); ?> (\n. sequences were not being escaped). (Ilia)</li>
 <li><?php bugfix(24640); ?> (var_export() and var_dump() can not output large floats). (Marcus)</li>
 <li><?php bugfix(24629); ?> (FreeBSD select() does not like large microseconds values). (Mirco Bauer).</li>
@@ -875,7 +874,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(24198); ?> (Invalid recursion detection in array_merge_recurcive()). (Ilia)</li>
 <li><?php bugfix(24177); ?> (Status not set correctly after flush() in Apache 2). (Ilia)</li>
 <li><?php bugfix(24155); ?> (gdImageRotate270 incorrectly use x parameter for y axis). (tom@gksystems.com, Ilia)</li>
-<li><?php bugfix(24150); ?> (crash in imap_fetch_overview() & imap_rfc822_write_address()). (Ilia)</li>
+<li><?php bugfix(24150); ?> (crash in imap_fetch_overview() &amp; imap_rfc822_write_address()). (Ilia)</li>
 <li><?php bugfix(24142); ?> (workaround for a gcc bug affecting round()). (Marcus, Ilia)</li>
 <li><?php bugfix(24063); ?> (serialize() missing 0 after the . on scientific notation). (Marcus, Ilia)</li>
 <li><?php bugfix(24063); ?> (scientific notation broken in *printf()). (Ilia)</li>
@@ -883,7 +882,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(24054); ?> (Integer overflow failure with GCC/x86 for *=). (Sascha)</li>
 <li><?php bugfix(24028); ?> (Reading raw post message by php://input failed). (Jani)</li>
 <li><?php bugfix(24009); ?> (FastCGI handling of file not found). (Shane)</li>
-<li><?php bugfix(24007); ?> (Problem with register_globals & arrays). (Ilia)</li>
+<li><?php bugfix(24007); ?> (Problem with register_globals &amp; arrays). (Ilia)</li>
 <li><?php bugfix(23951); ?> (constants in static initializers clobbered by inheritance). (Wez, Zend Engine)</li>
 <li><?php bugfix(23936); ?> (ext/interbase: fail to select and fetch). (Ard)</li>
 <li><?php bugfix(23913); ?> (make rename() work across partitions on *nix). (Ilia)</li>
@@ -912,7 +911,7 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 <li><?php bugfix(22245); ?> (References inside $_SESSION not being handled). (Ilia)</li>
 <li><?php bugfix(22154); ?> (Possible crash when memory_limit is reached and output buffering in addition to session.use_trans_sid is used). (Ilia)</li>
 <li><?php bugfix(22072); ?> (Apache2 sapis do not detect aborted connections). (Ilia)</li>
-<li><?php bugfix(21958); ?> (workaround for unusual realpath() on AIX & Tru64). (Ilia)</li>
+<li><?php bugfix(21958); ?> (workaround for unusual realpath() on AIX &amp; Tru64). (Ilia)</li>
 <li><?php bugfix(21957); ?> (serialize() mangles objects with __sleep). (Ilia)</li>
 <li><?php bugfix(21918); ?> (strange behavior of mixed type in array-keys). (Marcus)</li>
 <li><?php bugfix(21855); ?> (Threading issue on HP-UX). (Roshan Naik, Andi, Moriyoshi)</li>
@@ -962,7 +961,7 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 <li>Added improved JPEG 2000 support for getimagesize(). (Marcus, Adam Wright)</li>
 <li>Added XBM and WBMP support for getimagesize(). (Marcus)</li>
 <li>Added KOI8-R, CP866, and CP1251 support for htmlentities(). (Antony Dovgal, Moriyoshi)</li>
-<li>Added domdocument->free() to free XML-documents from memory. (Rob Richards)</li>
+<li>Added domdocument-&gt;free() to free XML-documents from memory. (Rob Richards)</li>
 <li>Fixed a bug in error reporting with the CLI for start-up errors. (Derick)</li>
 <li>Fixed spurious fsync calls during socket communication. (Sascha)</li>
 <li>Fixed a possible vhost issue in thttpd. (Sascha, dgl@dgl.cx)</li>
@@ -989,7 +988,7 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 <li><?php bugfix(23201); ?> (set_file_buffer() crashes with stdio streams). (Ilia)</li>
 <li><?php bugfix(23188); ?> (CDB databases created with 'c' mode do not work). (Marcus)</li>
 <li><?php bugfix(23187); ?> (memory leaks in sybase_connect/sybase_pconnect). (Ilia)</li>
-<li><?php bugfix(23162); ?> (user_error() crashs if error message > 1024 bytes). (Jay, Marcus, Moriyoshi)</li>
+<li><?php bugfix(23162); ?> (user_error() crashs if error message &gt; 1024 bytes). (Jay, Marcus, Moriyoshi)</li>
 <li><?php bugfix(23152); ?> ($http_response_header empty on invalid URLs). (Ilia)</li>
 <li><?php bugfix(23102); ?> (integer overflow in exif_iif_add_value()). (Ilia)</li>
 <li><?php bugfix(23099); ?> (ext/interbase: libgds.so: undefined reference to 'crypt'). (Jani)</li>
@@ -1183,7 +1182,7 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 <li><?php bugfix(20785); ?> (crash when using pdf_open_memory_image() to load a
   true-color image). (Ilia)</li>
 <li>Fixed a crash when converting between true-color images (png/jpeg) and
-  gd1/gd2 image formats, png/jpeg -> gd1/gd2 -> png/jpeg conversion now
+  gd1/gd2 image formats, png/jpeg -&gt; gd1/gd2 -&gt; png/jpeg conversion now
   works correctly. (Ilia, Pierre-Alain Joye).</li>
 <li>Fixed a memory leak in the bundled GD library inside 
   gdImageTrueColorToPalette(). (Ilia)</li>
@@ -1982,6 +1981,7 @@ More information on this release on <a href="/releases.php#4.1.2">our Releases p
 
 <hr />
 
+<a name="4.1.1"></a>
 <h3>Version 4.1.1</h3>
 <b>26-Dec-2001</b>
 <ul>
@@ -3518,7 +3518,7 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Updated Zend garbage collection with a much more thorough method.
   (Andi, Zend Engine)</li>
 <li>Added the ability to use variable references in the array() construct.
-  For example, array("foo" => &amp;$foo). (Andi, Zend Engine)</li>
+  For example, array("foo" =&gt; &amp;$foo). (Andi, Zend Engine)</li>
 <li>Added array_reverse() function (Andrei)</li>
 <li>Some more XML fixes/cleanups (Thies)</li>
 <li>Updated preg_replace() so that if any argument passed in is an array
