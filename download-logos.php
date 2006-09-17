@@ -2,18 +2,21 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'download-logos.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
+<h3>More PHP artwork</h3>
+<p>
+ <a href="http://www.elroubio.net/">Vincent Pontier</a> also made some
+ really neat PHP artwork, for the French PHP sites, and for the benefit
+ of the whole community. You can download some of his works and use
+ under a GPL licence.
+</p>
+';
 site_header("Download Logos");
 
 // Print recommended star cell
 function print_star()
 {
-    echo "  <td class=\"star\">" .
-         make_image('star.gif', 'recommended', FALSE, 'title="recommended"') .
-         "</td>\n";
-}
-function print_nostar()
-{
-    echo "<td></td>";
+    echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</a></td>\n";
 }
 
 // Provide a random bgcolor setting for a cell
@@ -30,14 +33,24 @@ function random_bgcolor($min, $max)
 <p>
  Right click on one of the images and select "Save Image As" to save the
  logo (except where otherwise indicated). Then, link it to the main PHP
- site at <strong>www.php.net</strong>.
+ site at <code>www.php.net</code>. 
 </p>
 
 <p>
- <strong>Note:</strong> If you are planning on making money off of our logo 
+ In case you have found some PHP logos, icons or other material around
+ the web, feel free to point those out to us, so we can include them here,
+ if appropriate. And oh, if you're wondering about the font we used, it's
+ called  <a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel
+ Gothic</a>.
+</p>
+
+<h2>Logo licensing</h2>
+
+<p>
+ If you are planning on making money off of our logo 
  (e.g. you want to make merchandise with the logo ... t-shirts,
  coffee mugs, pocket protectors, etc.), then you need to contact 
- <a href="mailto:logos@php.net">logos@php.net</a> for licencing information.  
+ <a href="mailto:logos@php.net">logos@php.net</a> for licensing information.  
  For pretty much all other uses, there is no licensing requirement. For 
  example: a logo on your website showing that you use/promote PHP, even 
  commercial websites; course materials; a bunch of t-shirts for your own use 
@@ -53,22 +66,7 @@ function random_bgcolor($min, $max)
 </p>
 
 <p>
- <a href="http://www.elroubio.net/">Vincent Pontier</a> also made some
- really neat PHP artwork, for the French PHP sites, and for the benefit
- of the whole community. You can download some of his works and use
- under a GPL licence.
-</p>
-
-<p>
- In case you have found some PHP logos, icons or other material around
- the web, feel free to point those out to us, so we can include them here,
- if appropriate. And oh, if you're wondering about the font we used, it's
- called  <a href="http://www.myfonts.com/fonts/bitstream/handel-gothic/">Handel
- Gothic</a>.
-</p>
-
-<p>
- The images marked with a <?php print_image('star.gif', 'recommended');?> are
+ The images marked with a <span class="star" title="recommended">*</a> are
  the images we recommend to display on your website, in case you are unable
  to choose from the formats. Note however, that some combinations of
  browser/operating system don't handle transparent PNG images very well.
@@ -99,7 +97,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?><br />
    (not exactly as shown)
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>250 x 134 pixels</li>
@@ -129,7 +127,7 @@ function random_bgcolor($min, $max)
   <td class="logo">
    <?php print_image("logos/php-med-trans-light.gif", "PHP logo"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>95 x 51 pixels</li>
@@ -144,7 +142,7 @@ function random_bgcolor($min, $max)
   <td class="logob">
    <?php print_image("logos/php-med-trans-dark.gif", "PHP logo"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>95 x 51 pixels</li>
@@ -174,7 +172,7 @@ function random_bgcolor($min, $max)
   <td class="logo">
    <?php print_image("logos/php-power-white.gif", "Powered by PHP"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>88 x 31 pixels</li>
@@ -204,7 +202,7 @@ function random_bgcolor($min, $max)
   <td class="logob">
    <?php print_image("logos/php-power-black.gif", "Powered by PHP"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>88 x 31 pixels</li>
@@ -221,7 +219,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php-power-micro2.png", "PHP Powered"); ?><br /><br />
    <?php print_image("logos/php5-power-micro.png", "PHP 5 Powered"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>80 x 15 pixels</li>
@@ -255,7 +253,7 @@ function random_bgcolor($min, $max)
   <td class="logo">
    <?php print_image("logos/php-icon-white.gif", "PHP icon"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>32 x 32 pixels</li>
@@ -270,7 +268,7 @@ function random_bgcolor($min, $max)
   <td class="logob">
    <?php print_image("logos/php-icon-black.gif", "PHP icon"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>32 x 32 pixels</li>
@@ -286,7 +284,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php-icon-white.gif", "PHP icons"); ?><br />
    (not exactly as shown)
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>PHP icon resource for Windows</li>
@@ -306,7 +304,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php_file_ico.gif", "PHP file icons"); ?><br />
    (not exactly as shown)
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>PHP icon resource for Windows</li>
@@ -323,7 +321,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php_script_ico.png", "PHP script icons"); ?><br />
    (not exactly as shown)
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>PHP icon resource for Windows</li>
@@ -340,7 +338,7 @@ function random_bgcolor($min, $max)
    <?php print_image("logos/php_xpstyle_ico.gif", "Windows XP PHP file icons"); ?><br />
    (not exactly as shown)
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>PHP icon resource for Windows XP [<b>use only on WinXP!</b>]</li>
@@ -359,7 +357,7 @@ function random_bgcolor($min, $max)
   <td class="logob">
    <?php print_image("logos/zend-powered-by.gif", "Powered by Zend"); ?>
   </td>
-  <?php print_nostar(); ?>
+  <td></td>
   <td>
    <ul>
     <li>100 x 58 pixels</li>
@@ -376,4 +374,4 @@ function random_bgcolor($min, $max)
 </table>
 </div>
 
-<?php site_footer(); ?>
+<?php site_footer();

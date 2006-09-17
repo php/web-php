@@ -409,6 +409,11 @@ table#logos td.logob {
 table#logos td.star {
 	width: 20px;
 }
+span.star {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #6868cd;
+}
 table#logos td ul {
 	padding-left: 15px;
 	list-style-type: square;
