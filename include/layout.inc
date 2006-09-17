@@ -561,7 +561,7 @@ function news_archive_sidebar()
     for ($i = 1998; $i < 2007; $i++) {
         $pagename = "archive/$i.php";
         $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
-        $SIDEBAR_DATA .= '<li><a href="/' . $pagename .'"' . $classname .'>' . $i . "</a></li>\n";
+        $SIDEBAR_DATA .= "<li{$classname}><a href=\"{$pagename}\">{$i}</a></li>\n";
     }
     $SIDEBAR_DATA .= '</ul>';
 }
