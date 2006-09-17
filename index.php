@@ -441,7 +441,7 @@ and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.3
  from June 24th to 25th. Like the famous
  <a href="http://en.wikipedia.org/wiki/Foo_Camp">Foo Camp</a> and
  <a href="http://en.wikipedia.org/wiki/Bar_Camp">Bar Camp</a>, the people
- who attend get to choose and present the sessions at the event.</p>
+ who attend get to choose and present the sessions at the event.
 </p>
 <p>
  The event is meant to be affordable: registration is 20 Euros, and
