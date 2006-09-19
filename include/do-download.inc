@@ -64,6 +64,7 @@ EOT;
     
     // Redirect to the particular file
     if (!headers_sent()) {
+        status_header(302);
         header('Location: ' . $mirror . 'distributions/' . $found);
     } else {
         exit("Unable to serve you the requested file for download");
