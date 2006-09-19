@@ -53,6 +53,9 @@ function highlight_php($code, $return = FALSE)
     else { echo $highlighted; }
 }
 
+// Stats pages still need this
+function commonHeader($title) { site_header($title); }
+
 function site_header($title = '', $config = array())
 {
     global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS;
@@ -195,6 +198,9 @@ END_HEADER;
     // Start main page content
     echo "\n <div id=\"content\">\n";
 }
+
+// Stats pages still need this
+function commonFooter() { site_footer(); }
 
 function site_footer($config = array())
 {
