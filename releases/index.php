@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'releases.php';
+$_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Tarball list generated with:

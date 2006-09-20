@@ -275,8 +275,9 @@ $uri_aliases = array (
     "news_php_5_0_0b2.txt"         => "ChangeLog-5", // BC
     "news_php_5_0_0b3.txt"         => "ChangeLog-5", // BC
     
-    "manual/about-notes.php" => "manual/add-note", // BC
-    "software/index.php"     => "software",        // BC
+    "manual/about-notes.php" => "manual/add-note",   // BC
+    "software/index.php"     => "software",          // BC
+    "releases.php"           => "releases/index",    // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
