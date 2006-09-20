@@ -252,7 +252,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 05 Sep 2005</li>
- <li>Announcement: none</li>
+ <li>Announcement: None</li>
  <li><a href="/ChangeLog-5.php#5.0.5">ChangeLog</a></li>
  <li>
   Download:
@@ -268,7 +268,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 31 Mar 2005</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/55">English</a></li>
  <li><a href="/ChangeLog-5.php#5.0.4">ChangeLog</a></li>
  <li>
   Download:
@@ -284,7 +284,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 15 Dec 2004</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/54">English</a></li>
  <li><a href="/ChangeLog-5.php#5.0.3">ChangeLog</a></li>
  <li>
   Download:
@@ -300,7 +300,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 23 Sep 2004</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/53">English</a></li>
  <li><a href="/ChangeLog-5.php#5.0.2">ChangeLog</a></li>
  <li>
   Download:
@@ -316,7 +316,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 12 Aug 2004</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/51">English</a></li>
  <li><a href="/ChangeLog-5.php#5.0.1">ChangeLog</a></li>
  <li>
   Download:
@@ -331,7 +331,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 13 July 2004</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/50">English</a></li>
  <li><a href="/ChangeLog-5.php#5.0.0">ChangeLog</a></li>
  <li>
   Download:
@@ -350,7 +350,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 03 Aug 2006</li>
- <li>Announcement: <a href="/releases/4.4.3.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_4_3.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.4.3">ChangeLog</a></li>
  <li>
   Download:
@@ -428,7 +428,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 31 Mar 2005</li>
- <li>Announcement: <a href="/releases/4_3_11.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_11.php">English</a>, <a href="/releases/4_3_11_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.11">ChangeLog</a></li>
  <li>
   Download:
@@ -444,7 +444,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 15 Dec 2004</li>
- <li>Announcement: <a href="/releases/4_3_10.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_10.php">English</a>, <a href="/releases/4_3_10_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.10">ChangeLog</a></li>
  <li>
   Download:
@@ -460,7 +460,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 22 Sep 2004</li>
- <li>Announcement: <a href="/releases/4_3_9.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_9.php">English</a>, <a href="/releases/4_3_9_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.9">ChangeLog</a></li>
  <li>
   Download:
@@ -493,7 +493,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 03 June 2004</li>
- <li>Announcement: <a href="/releases/4_3_7.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_7.php">English</a>, <a href="/releases/4_3_7_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.7">ChangeLog</a></li>
  <li>
   Download:
@@ -615,7 +615,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 6 September 2002</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=37">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/37">English</a></li>
  <li><a href="/ChangeLog-4.php#4.2.3">ChangeLog</a></li>
  <li>
   Download:
@@ -747,7 +747,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 19 December 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=28">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/28">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.4">ChangeLog</a></li>
  <li>
   Download:
@@ -765,8 +765,8 @@ site_header("Releases");
 <ul>
  <li>Released: 11 October 2000</li>
  <li>
-  Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=26">English</a>,
-  <a href="http://news.php.net/article.php?group=php.announce&amp;article=27">English (pl1)</a>,
+  Announcement: <a href="http://news.php.net/php.announce/26">English</a>,
+  <a href="http://news.php.net/php.announce/27">English (pl1)</a>
  </li>
  <li><a href="/ChangeLog-4.php#4.0.3">ChangeLog</a></li>
  <li>
@@ -783,7 +783,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 29 August 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=24">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/24">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.2">ChangeLog</a></li>
  <li>
   Download:
@@ -797,7 +797,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 28 June 2000</li>
- <li>Announcement: <a href="http://news.php.net/article.php?group=php.announce&amp;article=23">English</a></li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/23">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.1">ChangeLog</a></li>
  <li>
   Download:
@@ -813,7 +813,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 22 May 2000</li>
- <li>Announcement: None</li>
+ <li>Announcement: <a href="http://news.php.net/php.announce/22">English</a></li>
  <li><a href="/ChangeLog-4.php#4.0.0">ChangeLog</a></li>
  <li>
   Download:

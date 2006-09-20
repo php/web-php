@@ -45,7 +45,7 @@ site_header("PHP 4.1.0 Release Announcement");
 
 <p>
  Following is a description of the new input mechanism. For a full list of
- changes in PHP 4.1.0, see the <a href="ChangeLog-4.php#4.1.0">ChangeLog</a>.
+ changes in PHP 4.1.0, see the <a href="/ChangeLog-4.php#4.1.0">ChangeLog</a>.
 </p>
 
 <hr />

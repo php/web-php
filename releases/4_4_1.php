@@ -15,7 +15,7 @@ This is a bug fix release, which addresses some security problems too. The
 security issues that this release fixes are:
 <ul>
 <li>Fixed a Cross Site Scripting (<a href='http://www.cgisecurity.com/articles/xss-faq.shtml'>XSS</a>)
-	vulnerability in <a href='http://php.net/phpinfo'>phpinfo</a>() that could
+	vulnerability in <a href='/phpinfo'>phpinfo</a>() that could
 	lead f.e. to cookie exposure, when a phpinfo() script is accidently left
 	on a production server.</li>
 <li>Fixed multiple safe_mode/open_basedir bypass vulnerabilities in ext/curl
@@ -27,12 +27,12 @@ security issues that this release fixes are:
 	href='http://www.hardened-php.net/globals-problem'>here</a>).</li>
 <li>Fixed a problem when a request was terminated due to memory_limit
 	constraints during certain
-	<a href='http://php.net/parse_str'>parse_str</a>() calls. In some cases
+	<a href='/parse_str'>parse_str</a>() calls. In some cases
 	this can result in register_globals being turned on.</li>
 <li>Fixed an issue with trailing slashes in allowed basedirs. They were ignored
 	by open_basedir checks, so that specified basedirs were handled as prefixes
 	and not as full directory names.</li>
-<li>Fixed an issue with calling <a href='http://php.net/virtual'>virtual</a>()
+<li>Fixed an issue with calling <a href='/virtual'>virtual</a>()
 	on Apache 2. This allowed bypassing of certain configuration directives
 	like safe_mode or open_basedir.</li>
 <li>Updated to the latest pcrelib to fix a possible integer overflow

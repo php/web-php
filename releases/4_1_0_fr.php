@@ -50,7 +50,7 @@ site_header("Annonce de publication de PHP 4.1.0", array("lang" => "fr"));
 <p>
  Ce qui suit concerne une description du nouveau m&eacute;canisme d'entr&eacute;e.
  Pour une liste compl&egrave;te des changements voir le
- <a href="ChangeLog-4.php#4.1.0">ChangeLog</a>.
+ <a href="/ChangeLog-4.php#4.1.0">ChangeLog</a>.
 </p>
 
 <hr />

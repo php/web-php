@@ -26,10 +26,9 @@ site_header("Annonce de publication de PHP 4.2.0", array("lang" => "fr"));
  PHP 4.1.0. Pour plus d'informations sur ces modifications:
 </p>
 <ul>
- <li><a href="http://www.php.net/manual/en/language.variables.predefined.php">PHP Manual : Predefined variables</a></li>
- <li><a href="http://www.php.net/release_4_1_0.php">Annonce de PHP 4.1.0</a></li>
+ <li><a href="/variables.predefined">PHP Manual : Predefined variables</a></li>
+ <li><a href="/releases/4_1_0.php">Annonce de PHP 4.1.0</a></li>
  <li><a href="http://www.zend.com/zend/art/art-oertli.php">Article de Thomas Oertli sur la programmation s&eacute;curis&eacute;e en PHP</a></li>
- <li><a href="http://www.phpinfo.net/?p=articles&rub=globals">Article de Jean Pierre D&eacute;zelus sur les variables globales</a></li>
 </ul>
 
 <h2>Compatibilit&eacute;</h2>
@@ -63,7 +62,7 @@ site_header("Annonce de publication de PHP 4.2.0", array("lang" => "fr"));
   d'ex&eacute;cution, des requ&ecirc;tes HTTP, des cookies ou du serveur web)
   ne sont plus enregistr&eacute;es dans l'environnement d'ex&eacute;cution
   global par d&eacute;faut.
-  </strnong>
+  </strong>
  </li>
  <li>Remise en &eacute;tat g&eacute;n&eacute;rale de l'extension socket</li>
  <li>Performances r&eacute;volutionnaires des uploads de fichiers</li>

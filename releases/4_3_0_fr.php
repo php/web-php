@@ -36,8 +36,7 @@ site_header("Annonce de publication de PHP 4.3.0", array("lang" => "fr"));
  CLI dispose de fonctionnalit&eacute;s diff&eacute;rentes, par rappot
  &agrave; la version interfac&eacute;e avec les serveurs web. Pour
  plus de d&eacute;tails, reportez vous &agrave; 
- <a href="http://dev.nexen.net/docs/php/annotee/features.commandline.php">Utiliser
- PHP en ligne de commande</a>
+ <a href="/features.commandline">Utiliser PHP en ligne de commande</a>
 </p>
 
 <h2>Fl&ocirc;ts (Streams)</h2>
@@ -54,8 +53,7 @@ site_header("Annonce de publication de PHP 4.3.0", array("lang" => "fr"));
  toutes), peuvent utiliser des protocoles internes tels que HTTP/HTTPS et FTP/FTPS,
  ainsi que des protocoles personnalis&eacute;s, enregistr&eacute;s comme tels depuis
  les scripts PHP. Pour plus d'informations, voyez:
- <a href="http://dev.nexen.net/docs/php/annotee/wrappers.php#wrappers">Liste des
- protocoles support&eacute;s</a>
+ <a href="/wrappers">Liste des protocoles support&eacute;s</a>
 </p>
 
 <h2>Nouveaus syst&egrave;me de compilation</h2>

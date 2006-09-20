@@ -9,7 +9,7 @@ site_header("PHP 4.2.0 Release Announcement");
 
 <p>
  After an orderly QA process, PHP 4.2.0 is <a href="/downloads.php">out</a>!<br />
- [ <a href="/release_4_2_0_fr.php">Version Fran&ccedil;aise</a> ]
+ [ <a href="/releases/4_2_0_fr.php">Version Fran&ccedil;aise</a> ]
 </p>
 
 <h2>External variables</h2>
@@ -22,8 +22,8 @@ site_header("PHP 4.2.0 Release Announcement");
  arrays, introduced in PHP 4.1.0. More information about this change:</p>
  
 <ul>
- <li><a href="/manual/en/language.variables.predefined.php">PHP Manual: Predefined variables</a></li>
- <li><a href="/release_4_1_0.php">The PHP 4.1.0 release announcement</a></li>
+ <li><a href="/variables.predefined">PHP Manual: Predefined variables</a></li>
+ <li><a href="/releases/4_1_0.php">The PHP 4.1.0 release announcement</a></li>
  <li><a href="http://www.zend.com/zend/art/art-oertli.php">Thomas Oertli's article on secure programming in PHP</a></li>
 </ul>
 

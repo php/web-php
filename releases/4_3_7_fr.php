@@ -15,7 +15,7 @@ la publication de <a href="/downloads.php">PHP 4.3.7</a>. C'est une version
 de maintenance, destin&eacute;e &agrave; corriger des bogues non-critiques,
 corriger une vuln&eacute;rabilit&eacute; de validation dans les fonctions escapeshellcmd() et
 escapeshellarg() sur la plate-forme Windows. Les utilisateurs de PHP sont encourag&eacute;s
-à changer de version aussit&ocirc;t que possible.
+Ã  changer de version aussit&ocirc;t que possible.
 </p>
 
 <h2>Version de correction de bogues</h2>

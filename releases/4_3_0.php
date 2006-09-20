@@ -31,7 +31,7 @@ site_header("PHP 4.3.0 Release Announcement");
 <p>
  CLI has a number of differences compared to other server APIs. More information
  can be found in the PHP Manual:
- <a href="/manual/en/features.commandline.php">Using PHP from the command line</a>
+ <a href="/features.commandline">Using PHP from the command line</a>
 </p>
 
 <h2>Streams</h2>
@@ -45,7 +45,7 @@ site_header("PHP 4.3.0 Release Announcement");
  What this means for users is that any I/O function that works with streams
  (and that is almost all of them) can access built-in protocols, such as
  HTTP/HTTPS and FTP/FTPS, as well as custom protocols registered from PHP
- scripts. For more information please see: <a href="/manual/en/wrappers.php">List
+ scripts. For more information please see: <a href="/wrappers">List
  of Supported Protocols/Wrappers</a>
 </p>
 
