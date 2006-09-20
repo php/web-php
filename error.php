@@ -65,9 +65,15 @@ if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
 }
 
 // ============================================================================
-// BC: News archive moved to folder
+// BC: News archive moved to subfolder
 if (preg_match("!^news-(\\d+)(\\.|$)!", $URI, $array)) {
     mirror_redirect("/archive/$array[1].php");
+}
+
+// ============================================================================
+// BC: Release files moved to subfolder
+if (preg_match("!^release_([^\\.]+)(\\.php$|$)!", $URI, $array)) {
+    mirror_redirect("/releases/$array[1].php");
 }
 
 // ============================================================================

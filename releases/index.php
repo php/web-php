@@ -115,7 +115,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 17 Aug 2006</li>
- <li>Announcement: <a href="/release_5_1_5.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_5.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.5">ChangeLog</a></li>
  <li>
   Download:
@@ -151,7 +151,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 04 May 2006</li>
- <li>Announcement: <a href="/release_5_1_4.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_4.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.4">ChangeLog</a></li>
  <li>
   Download:
@@ -186,7 +186,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 12 Jan 2006</li>
- <li>Announcement: <a href="/release_5_1_3.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_3.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.3">ChangeLog</a></li>
  <li>
   Download:
@@ -204,7 +204,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 12 Jan 2006</li>
- <li>Announcement: <a href="/release_5_1_2.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_2.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.2">ChangeLog</a></li>
  <li>
   Download:
@@ -221,7 +221,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 28 Nov 2005</li>
- <li>Announcement: <a href="/release_5_1_1.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_1.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.1">ChangeLog</a></li>
  <li>
   Download:
@@ -237,7 +237,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 24 Nov 2005</li>
- <li>Announcement: <a href="/release_5_1_0.php">English</a></li>
+ <li>Announcement: <a href="/releases/5_1_0.php">English</a></li>
  <li><a href="/ChangeLog-5.php#5.1.0">ChangeLog</a></li>
  <li>
   Download:
@@ -350,7 +350,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 03 Aug 2006</li>
- <li>Announcement: <a href="/release_4.4.3.php">English</a></li>
+ <li>Announcement: <a href="/releases/4.4.3.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.4.3">ChangeLog</a></li>
  <li>
   Download:
@@ -380,7 +380,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 13 Jan 2006</li>
- <li>Announcement: <a href="/release_4_4_2.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_4_2.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.4.2">ChangeLog</a></li>
  <li>
   Download:
@@ -396,7 +396,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 31 Oct 2005</li>
- <li>Announcement: <a href="/release_4_4_1.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_4_1.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.4.1">ChangeLog</a></li>
  <li>
   Download:
@@ -412,7 +412,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 11 Jul 2005</li>
- <li>Announcement: <a href="/release_4_4_0.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_4_0.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.4.0">ChangeLog</a></li>
  <li>
   Download:
@@ -428,7 +428,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 31 Mar 2005</li>
- <li>Announcement: <a href="/release_4_3_11.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_11.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.11">ChangeLog</a></li>
  <li>
   Download:
@@ -444,7 +444,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 15 Dec 2004</li>
- <li>Announcement: <a href="/release_4_3_10.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_10.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.10">ChangeLog</a></li>
  <li>
   Download:
@@ -460,7 +460,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 22 Sep 2004</li>
- <li>Announcement: <a href="/release_4_3_9.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_9.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.9">ChangeLog</a></li>
  <li>
   Download:
@@ -477,7 +477,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 13 July 2004</li>
- <li>Announcement: <a href="/release_4_3_8.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_8.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.8">ChangeLog</a></li>
  <li>
   Download:
@@ -493,7 +493,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 03 June 2004</li>
- <li>Announcement: <a href="/release_4_3_7.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_7.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.7">ChangeLog</a></li>
  <li>
   Download:
@@ -508,7 +508,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 15 April 2004</li>
- <li>Announcement: <a href="/release_4_3_6.php">English</a>, <a href="/release_4_3_6_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_6.php">English</a>, <a href="/releases/4_3_6_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.6">ChangeLog</a></li>
  <li>
   Download:
@@ -523,7 +523,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 26 March 2004</li>
- <li>Announcement: <a href="/release_4_3_5.php">English</a>, <a href="/release_4_3_5_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_5.php">English</a>, <a href="/releases/4_3_5_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.5">ChangeLog</a></li>
  <li>
   Download:
@@ -539,7 +539,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 03 November 2003</li>
- <li>Announcement: <a href="/release_4_3_4.php">English</a>, <a href="/release_4_3_4_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_4.php">English</a>, <a href="/releases/4_3_4_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.4">ChangeLog</a></li>
  <li>
   Download:
@@ -554,7 +554,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 25 August 2003</li>
- <li>Announcement: <a href="/release_4_3_3.php">English</a>, <a href="/release_4_3_3_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_3.php">English</a>, <a href="/releases/4_3_3_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.3">ChangeLog</a></li>
  <li>
   Download:
@@ -569,7 +569,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 29 May 2003</li>
- <li>Announcement: <a href="/release_4_3_2.php">English</a>, <a href="/release_4_3_2_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_2.php">English</a>, <a href="/releases/4_3_2_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.2">ChangeLog</a></li>
  <li>
   Download:
@@ -585,7 +585,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 17 February 2003</li>
- <li>Announcement: <a href="/release_4_3_1.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_3_1.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.3.1">ChangeLog</a></li>
  <li>
   Download:
@@ -600,7 +600,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 27 December 2002</li>
- <li>Announcement: <a href="/release_4_3_0.php">English</a>, <a href="/release_4_3_0_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_3_0.php">English</a>, <a href="/releases/4_3_0_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.3.0">ChangeLog</a></li>
  <li>
   Download:
@@ -630,7 +630,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 22 July 2002</li>
- <li>Announcement: <a href="/release_4_2_2.php">English</a>, <a href="/release_4_2_2_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_2_2.php">English</a>, <a href="/releases/4_2_2_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.2.2">ChangeLog</a></li>
  <li>
   Download:
@@ -645,7 +645,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 13 May 2002</li>
- <li>Announcement: <a href="/release_4_2_1.php">English</a>, <a href="/release_4_2_1_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_2_1.php">English</a>, <a href="/releases/4_2_1_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.2.1">ChangeLog</a></li>
  <li>
   Download:
@@ -660,7 +660,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 22 April 2002</li>
- <li>Announcement: <a href="/release_4_2_0.php">English</a>, <a href="/release_4_2_0_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_2_0.php">English</a>, <a href="/releases/4_2_0_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.2.0">ChangeLog</a></li>
  <li>
   Download:
@@ -675,7 +675,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 12 March 2002</li>
- <li>Announcement: <a href="/release_4_1_2_win32.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_1_2_win32.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.1.2">ChangeLog</a></li>
  <li>
   Download:
@@ -690,7 +690,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 26 Dec 2001</li>
- <li>Announcement: <a href="/release_4_1_1.php">English</a></li>
+ <li>Announcement: <a href="/releases/4_1_1.php">English</a></li>
  <li><a href="/ChangeLog-4.php#4.1.1">ChangeLog</a></li>
  <li>
   Download:
@@ -705,7 +705,7 @@ site_header("Releases");
 
 <ul>
  <li>Released: 10 Dec 2001</li>
- <li>Announcement: <a href="/release_4_1_0.php">English</a>, <a href="/release_4_1_0_fr.php">French</a></li>
+ <li>Announcement: <a href="/releases/4_1_0.php">English</a>, <a href="/releases/4_1_0_fr.php">French</a></li>
  <li><a href="/ChangeLog-4.php#4.1.0">ChangeLog</a></li>
  <li>
   Download:
