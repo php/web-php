@@ -149,7 +149,7 @@ if ($process) {
         // Print out preview of note
         echo '<p>This is what your entry will look like, roughly:</p>';
         echo '<div id="usernotes">';
-        manual_note_display(time(), stripslashes($user), stripslashes($note), FALSE);
+        manual_note_display(time(), ($MQ ? stripslashes($user) : $user), ($MQ ? stripslashes($note) : $note), FALSE);
         echo '</div><br /><br />';
     }
 }
