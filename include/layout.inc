@@ -443,7 +443,7 @@ function clean_note($text)
 
     // Turn urls into links
     $text = preg_replace(
-        '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\|\'|$)!',
+        '!((mailto:|(http|ftp|nntp|news):\/\/).*?)(\s|<|\)|"|\\\\|\'|$)!',
         '<a href="\1" target="_blank">\1</a>\4',
         $text
     );
