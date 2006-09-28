@@ -234,6 +234,7 @@ $uri_aliases = array (
     "if"           => "language.control-structures",
     "static"       => "language.variables.scope",
     "global"       => "language.variables.scope",
+    "@"            => "language.operators.errorcontrol",
     
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
@@ -260,6 +261,7 @@ $uri_aliases = array (
     "autoload"     => "language.oop5.autoload",
     "__autoload"   => "language.oop5.autoload",
     "reflection"   => "language.oop5.reflection",
+    "::"           => "language.oop5.paamayim-nekudotayim",
 
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
