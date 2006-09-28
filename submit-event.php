@@ -12,14 +12,21 @@ $process = (boolean) count($_POST);
 
 // Avoid E_NOTICE errors on incoming vars if not set
 $vars = array(
-    'type', 'sday', 'smonth', 'syear', 'eday',
-    'emonth', 'eyear', 'recur', 'recur_day', 'country',
-    'category', 'email', 'url', 'ldesc', 'sdesc'
+    'sday', 'smonth', 'syear', 'eday',
+    'emonth', 'eyear', 'recur', 'recur_day'
 );
 foreach ($vars as $varname) {
-    if (!isset($_POST[$varname])) {
-        $_POST[$varname] = '';
+    if (!isset($_POST[$varname]) || empty($_POST[$varname])) {
+        $_POST[$varname] = 0;
     }
+}
+$vars = array(
+	'type', 'country', 'category', 'email', 'url', 'ldesc', 'sdesc'
+);
+foreach($vars as $varname) {
+	if (!isset($_POST[$varname])) {
+		$_POST[$varname] = "";
+	}
 }
 
 // We need to process some form data
