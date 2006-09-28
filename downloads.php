@@ -18,7 +18,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
  <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/ndk/php.htm">Novell NetWare</a></li>
- <li><a href="http://silk.apana.org.au/php/">OS/2</a></li>
+ <li><a href="http://smedley.info/os2ports/">OS/2</a></li>
  <li><a href="http://php.alexwaugh.com/">RISC OS</a></li>
  <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
  <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
