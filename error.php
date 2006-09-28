@@ -235,6 +235,7 @@ $uri_aliases = array (
     "static"       => "language.variables.scope",
     "global"       => "language.variables.scope",
     "@"            => "language.operators.errorcontrol",
+    "&"            => "language.references",
     
     "tut"          => "tutorial",
     "tut.php"      => "tutorial", // BC
