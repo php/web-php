@@ -24,7 +24,7 @@ function highlight_php($code, $return = FALSE)
 
 	// This should eventually be a php_syntax_check() call when we move to PHP5
 	// But use this ugly hack for now to avoid code snippets with bad syntax screwing up the highlighter   
-	if(strstr($highlighted,"include/layout.inc</b>")) $highlighted = "<pre>".htmlentities($code)."</pre>";
+	if(strstr($highlighted,"include/layout.inc</b>")) $highlighted = '<span class="default">'.htmlentities($code)."</span>";
  
     // Fix output to use CSS classes and wrap well
     $highlighted = '<div class="phpcode">' . str_replace(
