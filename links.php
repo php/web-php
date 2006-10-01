@@ -428,12 +428,7 @@ dead
 
 <ul>
  <li>
-  <a href="http://afterburner.bware.it/">After Burner</a><br />
-  Free open source accelerator available from Bware Technologies.
- </li>
-
- <li>
-  <a href="http://apc.communityconnect.com/">APC</a><br />
+  <a href="http://pecl.php.net/apc">APC</a><br />
   Alternative PHP Cache, Free open source accelerator available from Community
   Connect.
  </li>
@@ -608,6 +603,10 @@ Web site does not respond
   <strong>German</strong>
   <ul>
    <li>
+    <a href="http://www.phpbar.de/">php::bar</a><br />
+    PHP related wiki
+   </li>
+   <li>
     <a href="http://www.php-center.de/">PHP Center</a><br />
     German speaking portal site with tutorials, tips and
     tricks, job advertisements, articles and more
@@ -631,10 +630,6 @@ Web site does not respond
     <a href="http://www.phpwelt.de/">PHPWelt</a><br />
     A German website using PHP to offer free services, a
     huge script-archive, free scripts, tutorials and many more
-   </li>
-   <li>
-    <a href="http://php.martin-jansen.de/">php.martin-jansen.de</a><br />
-    German PHP resource (especially for newbies)
    </li>
    <li>
     <a href="http://develnet.org/">develnet.org</a><br />
