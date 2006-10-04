@@ -145,6 +145,21 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
+
+<h1>Forum PHP in Paris, France, November 9 & 10th, 2006</h1>
+<p>
+<span class="newsdate">[04-Oct-2006]</span>
+The <a href="http://afup.org/">French AFUP association</a> is proud to announce
+the <a href="http://afup.org/forumphp/">fifth annual PHP</a> meeting 
+in Paris, on November 9th and 10th, 2006. Developers and managers will gather 
+to meet Rasmus Lerdorf, Andrei Zmievski and other prominent community experts 
+for two days of sessions, packed with enterprise solutions and 
+advanced techniques (in French).
+</p>
+
+<hr />
+
 <?php news_image("http://www.zendcon.com/", "zend_phpconf06.png", "Zend / PHP Conference &amp; Expo 2006"); ?>
 
 <h1>Zend / PHP Conference &amp; Expo 2006</h1>
