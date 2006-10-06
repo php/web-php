@@ -147,7 +147,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 
 <?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
 
-<h1>Forum PHP in Paris, France, November 9 & 10th, 2006</h1>
+<h1>Forum PHP in Paris, France, November 9 &amp; 10th, 2006</h1>
 <p>
 <span class="newsdate">[04-Oct-2006]</span>
 The <a href="http://afup.org/">French AFUP association</a> is proud to announce
