@@ -147,8 +147,6 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 
 <?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
 
-<hr />
-
 <h1>Vancouver PHP Conference Call For Speakers</h1>
 <p>
  <span class="newsdate">[13-Oct-2006]</span>
@@ -157,6 +155,8 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
  If you are interested in participating as a speaker or sponsor,
  please email Shane Caraveo at shanec AT ActiveState DOT com.
 </p>
+
+<hr />
 
 <h1>Forum PHP in Paris, France, November 9 &amp; 10th, 2006</h1>
 <p>
