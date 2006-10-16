@@ -149,7 +149,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 <p>
  <span class="newsdate">[13-Oct-2006]</span>
  The <a href="http://vancouver.php.net">Vancouver PHP User Group</a> is pleased
- to announce thier second PHP Conference in Vancouver, B.C., Canada on February 12-13, 2007.
+ to announce their second PHP Conference in Vancouver, B.C., Canada on February 12-13, 2007.
  If you are interested in participating as a speaker or sponsor,
  please email Shane Caraveo at shanec AT ActiveState DOT com.
 </p>
