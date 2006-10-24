@@ -145,6 +145,34 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
+<h1>php|tek 2007 Chicago - Call for Papers</h1>
+<p>
+ <span class="newsdate">[24-Oct-2006]</span>
+ php|architect magazine is proud to announce
+ <a href="http://www.phparch.com/tek">php|tek 2007</a>, an exclusive three-day
+ conference (plus one day of exclusive in-depth seminars) dedicated to the
+ world of PHP-driven software development. This year's conference will take
+ place from May 16-18 2007, in Chicago, Illinois (USA), with May 15th set aside
+ for a set of in-depth seminars.
+</p>
+<p>
+ Do you have unique insight into PHP? Have you written extensions, or
+ contributed to the core? Have you deployed PHP in a tough environment, or
+ scaled it to handle millions of hits per minute? Have you solved a unique
+ problem, and want to share your discovery? Perhaps you've become an expert
+ in a specific field? If so, php|architect wants you to speak at
+ php|tek.
+</p>
+<p>
+ For more information, please visit the
+ <a href="http://hades.phparch.com/ceres/public/tek/page/index.php/cfp">
+ Call for Papers</a> page, and submit your ideas. The deadline is November
+ 20th, 2006.
+</p>
+
+<hr />
+
 <h1>Vancouver PHP Conference Call For Speakers</h1>
 <p>
  <span class="newsdate">[13-Oct-2006]</span>
