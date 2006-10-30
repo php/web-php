@@ -5,15 +5,15 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP Usage Stats");
 ?>
 
-<h1>Usage Stats for September 2006</h1>
+<h1>Usage Stats for October 2006</h1>
 
 <p>
-PHP: 19,491,324 Domains, 1,313,977 IP Addresses<br />
+PHP: 23,299,550 Domains, 1,290,179 IP Addresses<br />
 Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br />
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200609.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200610.png", "Graph"); ?>
 </p>
 
 <p>
