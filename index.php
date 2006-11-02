@@ -152,7 +152,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
  5.2.0. This release is a major improvement in the 5.X series, which includes a
  large number of new features, bug fixes and security enhancements.
  Further details about this release can be found in the release announcement
- <a href="/release_5_2_0.php">5.2.0</a>, the full list of changes is
+ <a href="/releases/5_2_0.php">5.2.0</a>, the full list of changes is
  available in the ChangeLog <a href="/ChangeLog-5.php#5.2.0">PHP 5</a>.
 </p>
 <p>
