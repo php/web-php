@@ -95,7 +95,7 @@ site_header("Downloads");
   <span class="md5sum">md5: 910734e96f41190020272d80b82ce553</span>
  </li>
  <li>
-  <?php download_link('php-5.2.0-Win32.zip', 'PHP 5.2.0 installer'); ?> - 02 Nov 2006<br />
+  <?php download_link('php-5.2.0-win32-installer.msi', 'PHP 5.2.0 installer'); ?> - 02 Nov 2006<br />
   <span class="md5sum">md5: 1521d6e9b273299ebd8081d174146d22</span>
  </li>
  <li>
