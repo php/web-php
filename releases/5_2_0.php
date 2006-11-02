@@ -15,7 +15,7 @@ large number of new features, bug fixes and security enhancements.
 <p>
 <b>The key features of PHP 5.2.0 include:</b>
 <ul>
-	<li>New memory manager for the Zend Engine with improved better performance and a more accurate memory usage tracking.</li>
+	<li>New memory manager for the Zend Engine with improved performance and a more accurate memory usage tracking.</li>
 	<li>Input filtering extension was added and enabled by default.</li>
 	<li>JSON extension was added and enabled by default.</li>
 	<li>ZIP extension for creating and editing zip files was introduced.</li>
