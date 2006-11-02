@@ -79,24 +79,28 @@ site_header("Downloads");
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.6.tar.bz2', 'PHP 5.1.6 (tar.bz2)'); ?> - 24 Aug 2006<br />
-  <span class="md5sum">md5: 08e423aa314369d4392a36b3f7246afc</span>
+  <?php download_link('php-5.2.0.tar.bz2', 'PHP 5.2.0 (tar.bz2)'); ?> - 02 Nov 2006<br />
+  <span class="md5sum">md5: e6029fafcee029edcfa2ceed7a005333</span>
  </li>
  <li>
-  <?php download_link('php-5.1.6.tar.gz', 'PHP 5.1.6 (tar.gz)'); ?> - 24 Aug 2006<br />
-  <span class="md5sum">md5: 04d6166552289eaeff771f5ec953b065</span>
+  <?php download_link('php-5.2.0.tar.gz', 'PHP 5.2.0 (tar.gz)'); ?> - 02 Nov 2006<br />
+  <span class="md5sum">md5: 52d7e8b3d8d7573e75c97340f131f988</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.1.6-Win32.zip', 'PHP 5.1.6 zip package'); ?> - 24 Aug 2006<br />
-  <span class="md5sum">md5: 866369dbe28284ad8d8b93dbbfd10ee4</span>
+  <?php download_link('php-5.2.0-Win32.zip', 'PHP 5.2.0 zip package'); ?> - 02 Nov 2006<br />
+  <span class="md5sum">md5: 910734e96f41190020272d80b82ce553</span>
  </li>
  <li>
-  <?php download_link('pecl-5.1.6-Win32.zip', 'Collection of PECL modules for PHP 5.1.6'); ?> - 24 Aug 2006<br />
-  <span class="md5sum">md5: 4bd86d8673a146a22708006cf446e89e</span>
+  <?php download_link('php-5.2.0-Win32.zip', 'PHP 5.2.0 installer'); ?> - 02 Nov 2006<br />
+  <span class="md5sum">md5: 1521d6e9b273299ebd8081d174146d22</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.2.0-Win32.zip', 'Collection of PECL modules for PHP 5.2.0'); ?> - 02 Nov 2006<br />
+  <span class="md5sum">md5: 638f5997884ae3ce35d2b3ec12f399b2</span>
  </li>
 </ul>
 
