@@ -64,7 +64,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 </li>
 <li>Disabled CURLOPT_FOLLOWLOCATION in curl when open_basedir or safe_mode are enabled. (Stefan E., Ilia)</li>
 
-<li>Increased default memory limit to 16 megabytes to accommodate for a more accurate memory utilization measurement.</li></li>
+<li>Increased default memory limit to 16 megabytes to accommodate for a more accurate memory utilization measurement.</li>
 <li>In addition to path to php.ini, PHPRC now may specify full file name. (Dmitry)</li>
 
 <li>Optimized array/HashTable copying. (Matt Wilmas, Dmitry)</li>
@@ -144,7 +144,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
    <li>Added FETCH_PROPS_LATE. (Marcus)</li>
   </ul>
 </li>
-<li>Improved SPL: (Marcus)</li>
+<li>Improved SPL: (Marcus)
  <ul>
    <li>Made most iterator code exception safe.</li>
    <li>Added RegExIterator and RecursiveRegExIterator.</li>

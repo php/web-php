@@ -14,6 +14,7 @@ large number of new features, bug fixes and security enhancements.
 
 <p>
 <b>The key features of PHP 5.2.0 include:</b>
+</p>
 <ul>
 	<li>New memory manager for the Zend Engine with improved performance and a more accurate memory usage tracking.</li>
 	<li>Input filtering extension was added and enabled by default.</li>
@@ -27,9 +28,9 @@ large number of new features, bug fixes and security enhancements.
 	<li>Many performance improvements.</li>
 	<li>Over 200 bug fixes.</li>
 </ul>
-</p>
 <p>
 <b>Security Enhancements and Fixes in PHP 5.2.0:</b>
+</p>
 <ul>
 	<li>Made PostgreSQL escaping functions in PostgreSQL and PDO extension keep track of character set encoding whenever possible.</li>
 	<li>Added allow_url_include, set to Off by default to disallow use of URLs for include and require.</li>
@@ -37,12 +38,11 @@ large number of new features, bug fixes and security enhancements.
 	<li>Improved safe_mode enforcement for error_log() function.</li>
 	<li>Fixed a possible buffer overflow in the underlying code responsible for htmlspecialchars() and htmlentities() functions.</li>
 	<li>Added missing safe_mode and open_basedir checks for the cURL extension.</li>
-	<li>Fixed overflow is str_repeat() & wordwrap() functions on 64bit machines.</li>
+	<li>Fixed overflow is str_repeat() &amp; wordwrap() functions on 64bit machines.</li>
 	<li>Fixed handling of long paths inside the tempnam() function.</li>
 	<li>Fixed safe_mode/open_basedir checks for session.save_path, allowing them to account for extra parameters.</li>
 	<li>Fixed ini setting overload in the ini_restore() function.</li>
 </ul>
-</p>
 
 <p>
 All users of PHP, especially those using earlier PHP 5 releases are advised
