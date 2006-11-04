@@ -214,6 +214,7 @@ ul.simple li {
 }
 #headsearch span.shortkey {
 	text-decoration: underline;
+	font-size: 100%;
 }
 
 /* Footer navigation area ------------------------------------------------- */
