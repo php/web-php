@@ -145,29 +145,6 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "Conference PHP Québec 2007"); ?>
-<h1>PHP Québec 2007 - Call for Papers</h1>
-<p>
- <span class="newsdate">[03-Nov-2006]</span>
-PHP Québec is pleased to announce the 2007 PHP Québec conference. The 
-conference will take place in Montreal, Canada on March 14-15-16th 2007. We are 
-looking for the best speakers willing to share their experience and skills 
-with professional PHP developers from eastern Canada and the United States. 
-</p>
-<p>
-This year, the conference will feature 3 distinct tracks: 
-<ul>
-<li>Advanced Techniques: Providing in-depth details of PHP techniques</li>
-<li>Data Availability: Databases, XML, Web Services, VOIP, TOIP, WAP, etc</li>
-<li>PHP Beyond theory: Real solutions for real problems related to software 
-development and project management</li>
-</ul>
-For more information, please visit the <a 
-href="http://conf.phpquebec.com/en/conf2007/">conference website</a>.
-
-<hr />
-
-
 <h1>PHP 5.2.0 Released</h1>
 <p>
  <span class="newsdate">[02-Nov-2006]</span>
@@ -189,6 +166,28 @@ For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide
 available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
 and PHP 5.2.0.
 </p>
+
+<hr />
+
+<?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif", "Conference PHP Québec 2007"); ?>
+<h1>PHP Québec 2007 - Call for Papers</h1>
+<p>
+ <span class="newsdate">[03-Nov-2006]</span>
+PHP Québec is pleased to announce the 2007 PHP Québec conference. The 
+conference will take place in Montreal, Canada on March 14-15-16th 2007. We are 
+looking for the best speakers willing to share their experience and skills 
+with professional PHP developers from eastern Canada and the United States. 
+</p>
+<p>
+This year, the conference will feature 3 distinct tracks: 
+<ul>
+<li>Advanced Techniques: Providing in-depth details of PHP techniques</li>
+<li>Data Availability: Databases, XML, Web Services, VOIP, TOIP, WAP, etc</li>
+<li>PHP Beyond theory: Real solutions for real problems related to software 
+development and project management</li>
+</ul>
+For more information, please visit the <a 
+href="http://conf.phpquebec.com/en/conf2007/">conference website</a>.
 
 <hr />
 
