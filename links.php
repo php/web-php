@@ -510,7 +510,7 @@ dead
   <strong>Croatian</strong>
   <ul>
    <li>
-    <a href="http://php.monitor.hr">PHP.izvor (PHP.source)</a><br />
+    <a href="http://php.com.hr/">PHP.com.hr (Croatian PHP community)</a><br />
     Croatian site with news, source code, manuals, beginners guides, forums,
     questions &amp; answers, on-line help for programmers, polls, tools, etc.
    </li>
