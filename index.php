@@ -145,6 +145,24 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil.jpg", "PHP Brasil 2007"); ?>
+<h1>PHP Conference Brazil</h1>
+<p>
+ <span class="newsdate">[27-Nov-2006]</span>
+ The PHP Conference Brasil is the first Brazilian conference related exclusively
+ to the PHP language in Sao Paulo, on December 1st and 2nd, 2006.
+</p>
+
+<p>
+ It will be a 
+ great opportunity to establish a sustainable Brazilian PHP community and to
+ exchange ideas among our professionals.
+ More info is available at
+ <a href="http://www.prophp.com.br/phpconference.php">the Brazilian PHP Conference</a> Web site.
+</p>
+
+<hr />
+
 <h1>PHP 5.2.0 Released</h1>
 <p>
  <span class="newsdate">[02-Nov-2006]</span>
