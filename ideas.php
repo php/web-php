@@ -7,24 +7,82 @@ site_header("SoC Ideas");
 
 <h1>Ideas for Google Summer of Code Projects</h1>
 
+<p>Here you'll find a couple of ideas for Google Summer of Code projects. This list is not exhaustive and you may
+propose any &quot;crazy&quot; idea you may have though.</p>
+
+<p>Before you submit your proposal, you are encouraged to contact the possible mentors for the project you are applying.
+If the project hasn't any mentor assigned or if you are submiting an off-list project, please contact one of our
+<a href="/mailing-lists.php">mailing lists</a> to discuss the proposal before submiting it.</p>
+
+<p>If your project is to be written in PHP, please make sure you read the
+<a href="http://pear.php.net/manual/en/standards.php">PEAR Coding Standards</a> when applying.</p>
+
+<p>If you are applying for a project in the PHP code itself (in C), you may find useful the PHP hackers guide, which
+also includes our C coding standards (TBD).</p>
+
+<p>Your proposal should include the following:</p>
+<ul>
+ <li>Name and e-mail</li>
+ <li>Detailed description of what you intent to do including, if possible, a list of quantifiable results</li>
+ <li>Project Schedule: How long will the project take? When can you begin work?</li>
+ <li>Availability: How many hours per week can you spend working on this? What other obligations do you have this summer?</li>
+ <li>Bio: Who are you? What makes you the best person to work on this project?</li>
+</ul>
+
+<hr/>
+<p>&nbsp;</p>
+
+<a name="qa"></a>
+<h2>Quality Assurance</h2>
+
+<h3>Automatic code checker</h3>
+<p><strong>Description</strong>: The PHP API has a couple of varargs functions that are error prone and may easily cause segfaults
+in PHP, especially on less used platforms. The list of such functions include zend_parse_parameters*(), zend_error() and a few
+others. Our current check script is made in PHP and is regex based. It is available at <a href="http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup">http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup</a>. This script is difficult to maintain and generates way too many false-positives.
+The work would envolve constructing or probably reusing a parse tree for the PHP code and its extensions (mixed C/C++) and generate
+error messages for the problems found. A sample output of the script mentioned is available at: <a
+href="http://gcov.php.net/viewer.php?version=PHP_HEAD&amp;func=params">http://gcov.php.net/viewer.php?version=PHP_HEAD&amp;func=params</a>.<br/>
+<strong>Possible mentor(s)</strong>: <a href="mailto:nlopess@php.net">Nuno Lopes</a></p>
+
+<hr/>
+
+<a name="docs"></a>
+<h2>Documentation</h2>
+
+<h3><a href="http://wiki.phpdoc.info/LiveDocs">Livedocs</a></h3>
+<p><strong>Description</strong>:
+Livedocs is a tool to display DocBook XML files in a web browser on the fly,
+without the need of building all HTML target files first. It was started as
+a project to simplify the task of PHP Manual contributors, to check their
+changes as they will show up in the documentation. To use Livedocs, a little
+preprocessing work is needed, but after that, the script collection even works
+on modified XML files. <br/>
+
+The main advantage of Livedocs for the PHP Manual is the dramatically reduced
+time-to-live interval, since modified XML files can be pushed to servers
+without the need of building all the HTML files even for small changes.
+Additionaly to this, Livedocs also does a good job of providing search
+results for keywords found in the manual, as well as keeping track of
+relations of translated files to their English equivalents, notifying
+readers, if they read a seriously outdated translation.
+<br/>
+Possible projects on livedocs include: improve docbook compatibility,
+implement a browser-based docbook editor (maybe based on an existing one:
+<a href="http://summerofcode.wordpress.com/2006/09/29/beacon-02/">[1]</a>
+<a href="http://bitfluxeditor.org/">[2]</a>, ...),
+make livedocs more generic (i.e. not so phpdoc specific), etc... (your imagination is the limit!)
+<br/>
+<strong>Possible mentor(s)</strong>: (not yet assigned)</p>
+
+
+<!--
+	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
+
 <a name="php"></a>
 <h4>Core PHP</h4>
 
 <ul>
  <li>Unicode conversion of all internal functions for PHP 6</li>
-</ul>
-
-<a name="qa"></a>
-<h4>Quality Assurance</h4>
-
-<ul>
- <li>
-  Develop the <a href="http://gcov.php.net">gcov.php.net</a> site (improve usability, send automatic e-mails
-  to developers on new regression or memory leak, enable site to receive and display data from multiple
-  sources,...). Some ideas/code: <a href="http://cvs.php.net/viewcvs.cgi/php-gcov-web/">[1]</a>
-  <a href="http://mega.ist.utl.pt/~ncpl/phptest/">[2]</a>
-  <a href="http://mega.ist.utl.pt/~ncpl/cvs/viewcvs.cgi/phpqa/">[3]</a>
- </li>
 </ul>
 
 <a name="pear"></a>
@@ -52,14 +110,6 @@ site_header("SoC Ideas");
  <li>SCTP stream protocol transport</li>
 </ul>
 
-<a name="docs"></a>
-<h4>Documentation / <a href="http://wiki.phpdoc.info/LiveDocs">Livedocs</a></h4>
-
-<ul>
- <li>New indexer for Livedocs</li>
- <li>Better docbook compatibility for livedocs</li>
-</ul>
-
 <a name="other"></a>
 <h4>Other</h4>
 
@@ -67,5 +117,6 @@ site_header("SoC Ideas");
  <li>re2php - Add PHP Support to <a href="http://re2c.sf.net/">re2c</a></li>
  <li>ANTLR - Add PHP Code Generation Target to <a href="http://www.antlr.org/v3/index.html">ANTLR 3</a>
 </ul>
+-->
 
 <?php site_footer(); ?>
