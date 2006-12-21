@@ -145,6 +145,22 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://vancouver.php.net/", "vancouver_conference_2007.gif", "PHP Vancouver 2007"); ?>
+<h1>Vancouver PHP Conference</h1>
+<p>
+ <span class="newsdate">[21-Dec-2006]</span>
+The <a href="http://vancouver.php.net/">Vancouver PHP User Group</a> is pleased 
+to announce their second PHP Conference in Vancouver, B.C., Canada on 
+February 12-13, 2007. The 
+<a href="http://vancouver.php.net/confschedule">schedule</a> is now online.
+</p>
+
+<p>
+<a href="http://vancouver.php.net/register">Register</a> by Dec. 31, 2006 
+and get 1/3rd off the ticket price.  Regular price is $150CDN, early bird price $100CDN.
+</p>
+
+<hr />
 <?php news_image("http://www.prophp.com.br/phpconference.php", "phpconfbrasil.jpg", "PHP Brasil 2007"); ?>
 <h1>PHP Conference Brazil</h1>
 <p>
