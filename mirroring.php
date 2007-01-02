@@ -158,7 +158,6 @@ $minute = rand(0, 59);
      
      # These PHP settings are necessary to run a mirror
      php_value include_path .:/www/htdocs/phpweb/include
-     php_flag register_globals on
      
      # Log server activity
      ErrorLog logs/error_log
@@ -323,9 +322,9 @@ $minute = rand(0, 59);
 
 <li>
  If the shortcut features [eg. xx.php.net/echo] are not working, check that
- the manual files are really under DOCUMENT_ROOT, you have register_globals on,
- and that at least the English manual is present. Also make sure that you have
- a correct ErrorDocument setting.
+ the manual files are really under DOCUMENT_ROOT and that at least the
+ English manual is present. Also make sure that you have a correct
+ ErrorDocument setting.
 </li>
 
 <li>
