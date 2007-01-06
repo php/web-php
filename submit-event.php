@@ -40,14 +40,6 @@ if ($process) {
     }
 
     // Clean and validate data
-    if (preg_match("/\btest\b/i", $_POST['sdesc'])) {
-        $errors[] = 'We know this works. Please do not test the system.';
-    }
-
-    if (preg_match("/\btest\b/i", $_POST['ldesc'])) {
-        $errors[] = 'We know this works. Please do not test the system.';
-    }
-
     if (!is_emailable_address($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
     }
