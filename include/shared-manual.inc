@@ -108,9 +108,9 @@ function manual_sidebar()
         // make the TOC too wide, so enable the browser to wrap them
         // eg: xml_set_processing_instruction_handler 
 	//     DOMElement->getElementsByTagNameNS()
-        if (preg_match("!^[a-zA-Z0-9_>()-]+$!", $title)) {
-	    $wrap = '<span class="w"> </span>';
-            $title = str_replace(array('_', '->'), array("_$wrap", "->$wrap"), $title);
+        if (preg_match("!^[a-zA-Z0-9_>()-:]+$!", $title)) {
+            $wrap = '<span class="w"> </span>';
+            $title = str_replace(array('_', '->', '::'), array("_$wrap", "->$wrap", "::$wrap"), $title);
         }
         
         // Print out the TOC item using a <div>
