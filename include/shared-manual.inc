@@ -32,7 +32,6 @@ function manual_setup($page_data)
 // Print out HTTP headers and the HTML header
 // for this manual page, according to details
 // already set up
-// TODO: prev/next <link> tags into <head>
 // TODO: replace logo with logos/php-med-trans-light.gif on print
 function manual_header()
 {
@@ -54,7 +53,13 @@ function manual_header()
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
     manual_sidebar();
-    site_header("$title - Manual");
+    $link = array(
+        "contents" => $PGI["home"][0],
+        "index"    => $PGI["up"][0],
+        "prev"     => $PGI["prev"][0],
+        "next"     => $PGI["next"][0],
+    );
+    site_header("$title - Manual", array("link" => $link));
     manual_navbar();
 }
 

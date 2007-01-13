@@ -94,6 +94,16 @@ function site_header($title = '', $config = array())
         $lang_input = "\n   <input type=\"hidden\" name=\"lang\" value=\"$EXPL_LANG\" />";
     }
     
+    // Link tags
+    $link = "";
+    if (isset($config['link']) && is_array($config['link'])) {
+        foreach($config['link'] as $rel => $url) {
+            if ($url) {
+                $link .= "\n <link rel=\"$rel\" href=\"$url\" />";
+            }
+        }
+    }
+
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
@@ -133,7 +143,7 @@ function site_header($title = '', $config = array())
   </style>
  <!--[if IE]><![endif]><![endif]-->
  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
- <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />
+ <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
 </head>
 <body{$onload}>
@@ -574,4 +584,4 @@ function news_archive_sidebar()
     $SIDEBAR_DATA .= '</ul>';
 }
 
-/* vim: set noet ts=4 sw=4 ft=php: : */
+/* vim: set et ts=4 sw=4 ft=php: : */
