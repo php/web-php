@@ -22,7 +22,7 @@ $SIDEBAR_DATA='
 <h3>Books</h3>
 <p>
  There are literally thousands of books available in
- English and numerous in other langauges. You can easily search at
+ English and numerous other languages. You can easily search at
  <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
  go directly to
  <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
