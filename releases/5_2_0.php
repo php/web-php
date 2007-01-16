@@ -38,7 +38,7 @@ large number of new features, bug fixes and security enhancements.
 	<li>Improved safe_mode enforcement for error_log() function.</li>
 	<li>Fixed a possible buffer overflow in the underlying code responsible for htmlspecialchars() and htmlentities() functions.</li>
 	<li>Added missing safe_mode and open_basedir checks for the cURL extension.</li>
-	<li>Fixed overflow is str_repeat() &amp; wordwrap() functions on 64bit machines.</li>
+	<li>Fixed overflow in str_repeat() &amp; wordwrap() functions on 64bit machines.</li>
 	<li>Fixed handling of long paths inside the tempnam() function.</li>
 	<li>Fixed safe_mode/open_basedir checks for session.save_path, allowing them to account for extra parameters.</li>
 	<li>Fixed ini setting overload in the ini_restore() function.</li>
