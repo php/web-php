@@ -151,7 +151,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 <h1>PHP London 2007</h1>
 <p>
  <span class="newsdate">[18-Jan-2007]</span>
-After the success of 2006 the PHP London user group is staging the UK's second dedicated PHP conference on Friday, 23 February 2007, in London. The conference will be a low-cost event, costing &#163;50 for the day. Speakers include: Rasmus Lerdorf, Cal Evans, Simon Laws and Kevlin Henney.
+After the success of 2006 the <a href="http://www.phplondon.org/">PHP London user group</a> is staging the <a href="http://www.phpconference.co.uk/">UK's second dedicated PHP conference</a> on Friday, 23 February 2007, in London. The conference will be a low-cost event, costing &#163;50 for the day. Speakers include: Rasmus Lerdorf, Cal Evans, Simon Laws and Kevlin Henney.
 </p>
 
 <hr />
