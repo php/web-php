@@ -566,3 +566,10 @@ h4.eventmonth {
 	background-color: #d3d3d3;
 	padding: 2px;
 }
+
+/* phpdoc image example output */
+div.example div.screenshot img {
+    padding: 20px;
+    border: 1px dotted #000;
+    background-color: #E0E0E0;
+}
