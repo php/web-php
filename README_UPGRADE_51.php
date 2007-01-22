@@ -509,6 +509,11 @@ The supported timezones are listed, in this format, in the PHP manual at
 <a href="http://www.php.net/manual/en/timezones.php">http://www.php.net/manual/en/timezones.php</a>.
 </p>
 
+<p>
+Also note that <a href="http://www.php.net/strtotime">strtotime()</a> now
+returns FALSE on failure, instead of -1.
+</p>
+
 <a name="db"></a><h2>11. Changes in database support</h2>
 
 <a name="db1"></a><h3>11a. PDO overview</h3>
