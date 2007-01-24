@@ -147,6 +147,24 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 ?>
 
 
+<?php news_image("http://phpconference.com/", "intcon2007spring.png", "International PHP Conference 2007 Spring Edition"); ?>
+<h1>International PHP Conference 2007 Spring Edition : Call for Paper</h1>
+<p>
+ <span class="newsdate">[24-Jan-2007]</span>
+The International PHP Conference 2007 Spring Edition will happen from May, 21st to 23rd 2007
+in Stuttgart. The Call for Papers has just been opened. You can find more information at 
+<a href="http://phpconference.com/" title="International PHP Conference 2007 Spring Edition">http://phpconference.com/</a>.
+There's a pre-conference day on 21st of May with full day Power Workshops and 
+a Main Conference from 22nd to 23rd of May with 1 hour sessions. 
+</p>
+<p>
+Please submit your session proposals at 
+<a href="http://phpconference.com/input" title="International PHP Conference 2007 Spring Edition - Call for Paper">http://phpconference.com/input</a>.
+They will be voted by the Chair board consisting of Bj&ouml;rn Schotte (Head of Chair), 
+Christopher Kunz and Sebastian Meyen. The language for talks is both English and German.
+</p>
+
+<hr />
 <?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
 <h1>PHP London 2007</h1>
 <p>
