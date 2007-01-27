@@ -160,7 +160,7 @@ a Main Conference from 22nd to 23rd of May with 1 hour sessions.
 <p>
 Please submit your session proposals at 
 <a href="http://phpconference.com/input" title="International PHP Conference 2007 Spring Edition - Call for Paper">http://phpconference.com/input</a>.
-They will be voted by the Chair board consisting of Bj&ouml;rn Schotte (Head of Chair), 
+They will be voted by the Chair board consisting of Björn Schotte (Head of Chair), 
 Christopher Kunz and Sebastian Meyen. The language for talks is both English and German.
 </p>
 
