@@ -146,6 +146,15 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conferences.oreillynet.com/os2007/", "os2007.png", "International PHP Conference 2007 Spring Edition"); ?>
+<h1>International PHP Conference 2007 Spring Edition : Call for Paper</h1>
+<p>
+ <span class="newsdate">[29-Jan-2007]</span>
+The O'Reilly Open Source Convention 2007 will once again take place from July 23rd - 27th 2007
+in Portland, Oregon, and has a PHP track as usual. The Call for Papers closes Monday February 5 2007.  You can find more information at <a href="http://conferences.oreillynet.com/os2007/" title="O'Reilly Open Source Convention 2007">http://conferences.oreillynet.com/os2007/</a>.
+</p>
+
+<hr />
 
 <?php news_image("http://phpconference.com/", "intcon2007spring.png", "International PHP Conference 2007 Spring Edition"); ?>
 <h1>International PHP Conference 2007 Spring Edition : Call for Paper</h1>
