@@ -146,7 +146,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<?php news_image("http://conferences.oreillynet.com/os2007/", "os2007.gif", "International PHP Conference 2007 Spring Edition"); ?>
+<?php news_image("http://conferences.oreillynet.com/os2007/", "os2007.gif", "OSCON Open Source Convention"); ?>
 <h1> O'Reilly OSCON call for papers</h1>
 <p>
  <span class="newsdate">[29-Jan-2007]</span>
