@@ -205,9 +205,8 @@ function i2c_realip()
 
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
-            // 192.168.0.0/16 -- jim kill me later with my regexp pattern
-            // below.
-            if (!eregi ("^(10|172\.16|192\.168)\.", $ips[$i])) {
+            // 192.168.0.0/16
+            if (!preg_match('/^(?:10|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i])) {
                 if (version_compare(phpversion(), "5.0.0", ">=")) {
                     if (ip2long($ips[$i]) != false) {
                         $ip = $ips[$i];
