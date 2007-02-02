@@ -70,6 +70,13 @@ site_header("Links");
   International community supporting PHP adoption, projects and
   development.
  </li>
+
+ <li>
+  <a href="http://www.prophp.com.br/">Grupo de Profissionais PHP - Brasil</a><br />
+  The ProPHP was created to support PHP adoption, improve its usage 
+  and group all of our brazilian PHP Professionals, promoting conferences,
+  zines and much more.
+ </li>
 </ul>
 
 <a name="news"></a>
@@ -180,13 +187,14 @@ site_header("Links");
   <a href="http://www.phpfreaks.com/">PHP Freaks</a><br />
   PHP Learning Center site.
  </li>
-
+<!--
+dead website on 2007-02-02
  <li>
   <a href="http://www.webkreator.com/php/">PHP Traveller</a><br />
   PHP weblog, knowledge and link directory. Regularly updated
   collection of PHP resources.
  </li>
-
+-->
  <li>
   <a href="http://www.weberdev.com/">WeberDev.com</a><br />
   PHP related resources (articles, tutorials, forums, advanced search etc.)
