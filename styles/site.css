@@ -292,6 +292,32 @@ div.phpcode span.string {
 	background-color: transparent;
 }
 
+/* XML source code highlighting ------------------------------------------- */
+div.xmlcode span.attributes {
+	color: #333366;
+	background-color: transparent;
+}
+div.xmlcode span.cdata {
+	color: #990000;
+	background-color: transparent;
+}
+div.xmlcode span.comment {
+	color: #666666;
+	background-color: transparent;
+}
+div.xmlcode span.tags {
+	color: #000066;
+	background-color: transparent;
+}
+div.xmlcode span.keyword {
+	color: #cc6600;
+	background-color: transparent;
+}
+div.xmlcode span.string {
+	color: #006600;
+	background-color: transparent;
+}
+
 /* Standard tables -------------------------------------------------------- */
 table.standard td {
 	background-color: #eeeeee;
