@@ -157,7 +157,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
   <li>an improved, XSL-based build system that will deliver compiled manuals
   to mirrors in a more timely manner (goodbye dsssl)</li>
   <li>manual pages can now contain images (see
-  <code><a href="http://php.net/manual/en/function.imagearc.php">imagearc()</a></code>
+  <code><a href="http://php.net/function.imagearc">imagearc()</a></code>
   for an example)</li>
   <li>updated function version information and capture system (fewer
   "no version information, might be only in CVS" messages)</li>
@@ -165,7 +165,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
  </ul>
 </p>
 <p>
- Please help us improve the documentation by submitting bugs reports, and adding notes to undocumented functions.
+ Please <a href="http://php.net/about.howtohelp">help us improve the documentation</a> by <a href="http://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.
 </p>
 
 <hr />
