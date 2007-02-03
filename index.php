@@ -161,10 +161,11 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
   for an example)</li>
   <li>updated function version information and capture system (fewer
   "no version information, might be only in CVS" messages)</li>
+  <li>... and more to come!</li>
  </ul>
 </p>
 <p>
- ... and more to come!
+ Please help us improve the documentation by submitting bugs reports, and adding notes to undocumented functions.
 </p>
 
 <hr />
