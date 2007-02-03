@@ -146,6 +146,29 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image('http://php.net/manual/en/','php-logo.gif','The PHP Manual'); ?>
+<h1>PHP Manual Updates</h1>
+<p>
+ <span class="newsdate">[03-Feb-2007]</span>
+ The PHP documentation team is proud to present to the PHP community a few
+ fixes and tweaks to the <a href="http://php.net/manual/en/">PHP Manual</a>,
+ including:
+ <ul>
+  <li>an improved, XSL-based build system that will deliver compiled manuals
+  to mirrors in a more timely manner (goodbye dsssl)</li>
+  <li>manual pages can now contain images (see
+  <code><a href="http://php.net/manual/en/function.imagearc.php">imagearc()</a></code>
+  for an example)</li>
+  <li>updated function version information and capture system (fewer
+  "no version information, might be only in CVS" messages)</li>
+ </ul>
+</p>
+<p>
+ ... and more to come!
+</p>
+
+<hr />
+
 <?php news_image("http://conferences.oreillynet.com/os2007/", "os2007.gif", "OSCON Open Source Convention"); ?>
 <h1> O'Reilly OSCON call for papers</h1>
 <p>
