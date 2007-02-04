@@ -55,13 +55,26 @@ div.tip, p.tip {
 	padding: 8px;
 }
 
-p.formerror, p.warn {
+/* {{{ Errors and warning classes */
+p.formerror, p.warn, div.warning, div.caution {
 	border: 1px solid #666600;
 	color: #660000;
 	background-color: #ffeeee;
 	margin: 4px;
 	padding: 6px;
 }
+
+div.caution {
+	border: 1px solid #333;
+	color: #333;
+	background-color: #ffc;
+}
+
+div.warning table, div.warning table tr, div.warning table td,
+div.caution table, div.caution table tr, div.caution table td {
+	border: 0;
+}
+/* }}} */
 
 hr {
 	border: 0px;
@@ -593,9 +606,52 @@ h4.eventmonth {
 	padding: 2px;
 }
 
-/* phpdoc image example output */
-div.example div.screenshot img {
-    padding: 20px;
-    border: 1px dotted #000;
-    background-color: #E0E0E0;
+/* {{{ phpdoc examples */
+div.example, div.informalexample {
+	background-color: #eee;
+	border: 1px dotted #000;
 }
+
+div.example p {
+	margin: 0px;
+	padding: 0px;
+	text-indent: 50px;
+	border-bottom: 1px dotted #000;
+}
+
+div.example div.example-contents, div.informalexample .phpcode, div.informalexample pre.html {
+	background-color: #ddd;
+	margin: 10px;
+	border: 1px outset #000;
+}
+
+/* Konq & Fx, for what ever reason, dislike br:before so this doesn't work at the moment...
+ * This should however add line-number to examples - which will _not_ be copied to clipboard
+ * when the code is copy/pasted
+div.example div.example-contents:after {
+	counter-reset: phpexample;
+}
+
+div.example-contents br:before {
+	content: counter(phpexample);
+	counter-increment: phpexample; 
+}
+*/
+
+div.example div.example-contents p, div.informalexample p {
+	background-color: #ccc;
+	text-indent: 0;
+	border-bottom: 1px outset #000;
+}
+
+div.example div.screenshot img {
+	padding: 20px;
+	border: 1px dotted #000;
+	background-color: #E0E0E0;
+}
+/* }}} */
+
+/*
+ * vim: noet
+ */
+
