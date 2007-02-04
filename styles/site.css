@@ -619,7 +619,10 @@ div.example p {
 	border-bottom: 1px dotted #000;
 }
 
-div.example div.example-contents, div.informalexample .phpcode, div.informalexample pre.html {
+div.example div.example-contents,
+div.table .phpcode,
+div.informalexample pre,
+div.informalexample .phpcode {
 	background-color: #ddd;
 	margin: 10px;
 	border: 1px outset #000;
