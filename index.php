@@ -157,7 +157,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
   <li>an improved, XSL-based build system that will deliver compiled manuals
   to mirrors in a more timely manner (goodbye dsssl)</li>
   <li>manual pages can now contain images (see
-  <code><a href="http://php.net/function.imagearc">imagearc()</a></code>
+  <code><a href="http://php.net/en/function.imagearc">imagearc()</a></code>
   for an example)</li>
   <li>updated function version information and capture system (fewer
   "no version information, might be only in CVS" messages)</li>
