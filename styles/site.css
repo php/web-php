@@ -12,6 +12,9 @@ body, input, textarea, select, option {
 code, pre, tt {
 	font-family: Courier, "Courier New", monospace;
 }
+pre {
+	background-color: #ddd;
+}
 
 #content, #headmenu, #footnav, #copyright, #thismirror,
 #headsearch span, #headsearch input, #headsearch select {
@@ -48,15 +51,8 @@ img {
 	border: 0px;
 }
 
-div.tip, p.tip {
-	border: 1px solid #0000cc;
-	color: #000066;
-	background-color: #eeeeff;
-	padding: 8px;
-}
-
-/* {{{ Errors and warning classes */
-p.formerror, p.warn, div.warning, div.caution {
+/* {{{ Errors, warning, tips classes */
+p.formerror, p.warn {
 	border: 1px solid #666600;
 	color: #660000;
 	background-color: #ffeeee;
@@ -64,12 +60,32 @@ p.formerror, p.warn, div.warning, div.caution {
 	padding: 6px;
 }
 
+/* Manual warnings/cautions/tips */
+div.warning , div.caution, div.tip {
+	margin: 20px;
+	padding: 20px 30px;
+	text-align: center;
+}
+div.warning p, div.caution p, div.tip p {
+	text-align: justify;
+}
+div.tip {
+	border: 1px solid #00c;
+	color: #006;
+	background-color: #eef;
+}
+div.warning {
+	border: 1px solid #660;
+	color: #600;
+	background-color: #fee;
+}
 div.caution {
 	border: 1px solid #333;
 	color: #333;
 	background-color: #ffc;
 }
 
+/* FIXME: Remove when the new XSL build has finished */
 div.warning table, div.warning table tr, div.warning table td,
 div.caution table, div.caution table tr, div.caution table td {
 	border: 0;
@@ -549,6 +565,21 @@ div.manualnavbar form {
 div.manualnavbar .lastupdated {
 	font-size: 75%;
 }
+div.manualnavbar div.langchooser #changeLangImage {
+	border: 0px solid #000;
+	width: 11px;
+	height: 11px;
+}
+div.manualnavbar fieldset {
+	margin: 0px;
+	padding: 0px;
+	border: 0px solid #000;
+}
+div.manualnavbar div.langchooser p {
+	margin: 0px 10px 0 5px;
+	padding: 0px;
+	float: left;
+}
 
 /* for searching system... */
 ul#search-results {
@@ -610,6 +641,7 @@ h4.eventmonth {
 div.example, div.informalexample {
 	background-color: #eee;
 	border: 1px dotted #000;
+	text-align: left;
 }
 
 div.example p {
@@ -620,7 +652,7 @@ div.example p {
 }
 
 div.example div.example-contents,
-div.table .phpcode,
+table .phpcode,
 div.informalexample pre,
 div.informalexample .phpcode {
 	background-color: #ddd;
