@@ -174,15 +174,15 @@ function manual_navbar($location = "top")
         }
         
         // Print out the form with all the options
-        echo '  <form action="/manual/change.php" method="GET">' . "\n" .
-             '   view this page in <select name="page">'. "\n";
+        echo '  <form action="/manual/change.php" method="get">' . "\n" .
+             '   <p>view this page in </p><fieldset><select name="page">'. "\n";
         foreach ($links as $link) {
             echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo "   </select>\n" .
              '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
-             '/images/small_submit.gif" border="0" width="11" height="11" ' .
-             'alt="" align="baseline">' . "\n  </form>\n";
+             '/images/small_submit.gif" id="changeLangImage" ' .
+             'alt="" />' . "\n  </fieldset></form>\n";
        
     } else {
         echo "  &nbsp;\n";
