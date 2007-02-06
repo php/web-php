@@ -102,11 +102,11 @@ diff -u
   <br /><br />
   Some tips and notes:
   <br />
-  <div class="tip" style="margin: 10px 0 10px 20px;">
-   You may retrieve a specific release of PHP from CVS by using the
+  <div class="tip">
+   <p>You may retrieve a specific release of PHP from CVS by using the
    <i>-r</i> flag in your cvs command. Some examples:<br />
    <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_2_1 php-src</code><br />
-   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_3_2 php-src</code>
+   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r php_4_3_2 php-src</code></p>
   </div>
   <ul>
    <li>
@@ -124,11 +124,11 @@ diff -u
   Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
   1.4.
   <div class="tip" style="margin: 10px 0 10px 20px;">
-   Note that certain combinations of autoconf, automake and libtool may not
+   <p>Note that certain combinations of autoconf, automake and libtool may not
    work when used together. See <a href="#buildconf_fail">below</a> for
    details.<br />
    Also, certain versions of autoconf may generate warnings of <code>AC_PROG_CPP
-   called before AC_PROG_CC</code>. These messages can usually be ignored.
+   called before AC_PROG_CC</code>. These messages can usually be ignored.</p>
   </div>
  </li>
   
