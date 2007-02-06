@@ -30,7 +30,7 @@ Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br />
 
 <p>
  There are <a href="http://www.nexen.net/the_english_speaking_nexen.net.php">
- detailled stats about PHP</a>, by version, by countries, by web servers
+ detailed stats about PHP</a>, by version, by countries, by web servers
  and evolution from the &quot;PHP version tracker&quot;, run by 
  <a href="http://www.nexen.net/">nexen.net</a>.
 </p>
