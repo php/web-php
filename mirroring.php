@@ -140,6 +140,9 @@ $minute = rand(0, 59);
  Make sure your web server is set up to serve up <tt>.php</tt> files
  as PHP parsed files. If it isn't, add the mime-type to your config.
 </p>
+<p class="warn">
+ Please make sure you have turned off output compression for binary files
+</p>
 
 <p>
  Create a virtualhost which looks something like:
