@@ -352,6 +352,10 @@ dead
  <li><a href="http://www.zend.com/zend/tut/">Zend.com DevZone</a><br />
   The tutorials section on the Zend.com developer zone
  </li>
+
+ <li><a href="http://www-128.ibm.com/developerworks/db2/products/opensource/">IBM PHP tutorials</a><br />
+  Use PHP and other open source tools to develop applications for IBM Information Management servers.
+ </li>
 </ul>
 
 <a name="setup"></a>
