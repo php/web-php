@@ -189,6 +189,16 @@ ul.simple li {
 	padding: 5px;
 	font-size: smaller;
 }
+#conferencesSidebar {
+	float: left;
+	width: 300px;
+	border-right: 1px dotted #000;
+	margin: 0 10px 0 0;
+	padding: 0 0 0 5px;
+	background-color: #efefef;
+	font-size: smaller;
+}
+
 #leftbar p, #leftbar h3, #rightbar p, #rightbar h3 {
 	margin-top: 0;
 	margin-bottom: 1em;
@@ -635,6 +645,9 @@ h4.eventmonth {
 	border-width: 0px 1px 1px 0px;
 	background-color: #d3d3d3;
 	padding: 2px;
+}
+#conferencesSidebar h4.eventmonth {
+	border-width: 0px 0px 1px 0px;
 }
 
 /* {{{ phpdoc examples */

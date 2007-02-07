@@ -160,6 +160,7 @@ function site_header($title = '', $config = array())
   <a href="http://bugs.php.net/">reporting bugs</a> |
   <a href="/sites.php">php.net sites</a> |
   <a href="/links.php">links</a> |
+  <a href="/conferences/">conferences</a> |
   <a href="/my.php">my php.net</a>
  </div>
 </div>
@@ -205,6 +206,11 @@ END_HEADER;
     // Print out right column
     if ($PAGE_COLUMNS > 2) {
         echo "\n <div id=\"rightbar\">\n$RSIDEBAR_DATA\n </div>";
+    }
+
+    // Any layout workarounds?
+    if (!empty($config["layout_workaround"])) {
+        echo $config["layout_workaround"];
     }
 
     // Start main page content
