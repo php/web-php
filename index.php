@@ -146,6 +146,31 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif ", "PHP Québec conference"); ?>
+<h1> PHP Québec conference 2007 </h1>
+<p>
+ <span class="newsdate">[07-Feb-2007]</span>
+PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>. 
+The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of 
+<a  href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and 
+an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>. 
+Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei 
+Zmeivski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
+</p>
+<p>
+The conference has three distinct tracks : Advanced Techniques, Data 
+Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the 
+PHP Qu.bec Conference is great opportunity to learn about the latest 
+development and professional techniques to help you build high quality PHP 
+software and meet with PHP.
+</p>
+<p>
+Special prices are available for all Open Source community members and major 
+contributors.
+</p>
+
+<hr />
+
 <?php news_image('http://php.net/manual/en/','php-logo.gif','The PHP Manual'); ?>
 <h1>PHP Manual Updates</h1>
 <p>
