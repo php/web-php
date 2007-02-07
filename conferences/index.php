@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'conferences.php';
+$_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
 
@@ -108,4 +108,4 @@ and get 1/3rd off the ticket price.  Regular price is $150CDN, early bird price 
 
 
 <?php site_footer();
-//echo "<pre>";var_dump($GLOBALS);
+
