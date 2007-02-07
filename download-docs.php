@@ -83,10 +83,7 @@ $formats = array(
  <li>
   The English version of the manual is <a
   href="/get/php_manual_chm.zip/from/a/mirror">downloadable</a> in an
-  <a href="/docs-echm.php">Extended HTML Help format</a>, and is also
-  available <a
-  href="http://www.osoft.com/store/productdetails.php?pid=14&amp;cid=1">for
-  the ThoutReader</a>.
+  <a href="/docs-echm.php">Extended HTML Help format</a>. 
  </li>
 </ul>
 
