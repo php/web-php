@@ -155,7 +155,7 @@ The conference will take place in Montréal, Canada on March 14-15-16th 2007. It
 <a  href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and 
 an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>. 
 Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei 
-Zmeivski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
+Zmievski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
 </p>
 <p>
 The conference has three distinct tracks : Advanced Techniques, Data 
