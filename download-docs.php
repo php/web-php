@@ -80,11 +80,6 @@ $formats = array(
   on the 'Unblock' button. Failing to do this may lead to errors
   in the visualization of the file, due to a Microsoft bug.
  </li>
- <li>
-  The English version of the manual is <a
-  href="/get/php_manual_chm.zip/from/a/mirror">downloadable</a> in an
-  <a href="/docs-echm.php">Extended HTML Help format</a>. 
- </li>
 </ul>
 
 <?php
@@ -125,12 +120,32 @@ foreach ($LANGUAGES as $langcode => $language) {
         }
     }
 }
+/* {{{ FIXME: Special handling for the extended html help format since it doesn't follow the "naming rules"
+ * (mostly copy&paste from the loop above)
+ */
+$formats['<a href="/docs-echm.php">Extended HTML Help</a>'] = "zip"; // Add a link to the xchm docs in the table header
+$actual_file = $_SERVER['DOCUMENT_ROOT'] . "/distributions/manual/php_manual_chm.zip";
+if (file_exists($actual_file)) {
+    $link_to = "/get/php_manual_chm.zip/from/a/mirror";
+    $size    = @filesize($actual_file);
+    $changed = @filemtime($actual_file);
+    if ($size !== FALSE) {
+        $files["en"]["zip"] = array(
+            $link_to,
+            (int) ($size/1024),
+            date("j M Y", $changed),
+            "zip"
+        );
+        $found_formats["xchm"] = "zip";
+    }
+}
+/* }}} */
 
 if (count($found_formats) == 0) {
     echo "<p class=\"tip\">This mirror has no documentation files for download.</p>";
 } else {
 
-    echo '<table border="0" cellpadding="3" cellspacing="2" class="standard">' . "\n" .
+    echo '<table border="0" cellpadding="4" cellspacing="2" class="standard">' . "\n" .
          "<tr>\n  <th>&nbsp;</th>\n";
 
     // Print out the name of the formats
