@@ -153,6 +153,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
  The PHP documentation team is proud to present to the PHP community a few
  fixes and tweaks to the <a href="http://php.net/manual/en/">PHP Manual</a>,
  including:
+</p>
  <ul>
   <li>an improved, XSL-based build system that will deliver compiled manuals
   to mirrors in a more timely manner (goodbye dsssl)</li>
@@ -163,7 +164,6 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
   "no version information, might be only in CVS" messages)</li>
   <li>... and more to come!</li>
  </ul>
-</p>
 <p>
  Please <a href="http://php.net/about.howtohelp">help us improve the documentation</a> by <a href="http://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.
 </p>
