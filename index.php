@@ -146,6 +146,17 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<h1>The front page has changed</h1>
+<p>
+ <span class="newsdate">[08-Feb-2007]</span>
+ The news on the front page of php.net has changed, the <a href="/conferences/">conference 
+ announcements</a> are now located on their own page. The idea is to keep php.net specific 
+ news clear and also opens the door for additional news entries, like for RC releases. 
+ More changes are on the way so keep an eye out.
+</p>
+
+<hr />
+
 <?php news_image('http://php.net/manual/en/','php-logo.gif','The PHP Manual'); ?>
 <h1>PHP Manual Updates</h1>
 <p>
