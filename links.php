@@ -32,7 +32,7 @@ site_header("Links");
 
 <ul>
  <li>
-  <a href="http://www.thinkphp.de/">ThinkPHP.de</a><br />
+  <a href="http://www.mayflower.de/category/category.php?CatID=8&lang=de">ThinkPHP.de</a><br />
   A German and international PHP support company providing
   full PHP support (single incidents, on-call duty), software
   development, training, and performance measurements.
@@ -42,7 +42,7 @@ site_header("Links");
   <a href="http://www.zend.com/">Zend Technologies</a><br />
   Zend Technologies supports the PHP community and promotes
   PHP adoption. Founded by the authors of the
-  <a href="http://www.zend.com/store/products/zend-engine.php">Zend Engine</a>
+  <a href="http://www.zend.com/products/zend_engine">Zend Engine</a>
   and members of the PHP Group, Zend offers both free and commercial
   solutions for PHP.
  </li>
@@ -84,7 +84,7 @@ site_header("Links");
 
 <ul>
  <li>
-  <a href="http://planet-php.net/">Planet PHP</a><br />
+  <a href="http://www.planet-php.net/">Planet PHP</a><br />
   Latest news aggregated from PHP related weblogs.
  </li>
 </ul>
@@ -105,7 +105,7 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.LinuxGuruz.org/">LinuxGuruz.org</a><br />
+  <a href="http://www.linuxguruz.com/">LinuxGuruz.com</a><br />
   Many Links and Tutorials, Articles and FAQ about Linux, Apache Web Server,
   HTML, PHP, MySQL ... and lots more
  </li>
@@ -258,7 +258,7 @@ dead website on 2007-02-02
  </li>
 
  <li>
-  <a href="http://www.phpmag.de/">PHP Magazin</a><br />
+  <a href="http://phpmagazin.de/">PHP Magazin</a><br />
   The Software &amp; Support Verlag, based in Frankfurt,
   Germany, has now published a magazine on PHP as a 
   tribute to the steadily growing German PHP community (in German).
@@ -308,14 +308,16 @@ dead
 
 <ul>
  <li>
-  <a href="http://www.awtrey.com/support/dbeweb/">Database enabled websites tutorial</a><br />
+  <a href="http://www.awtrey.com/tutorials/dbeweb/">Database enabled websites tutorial</a><br />
   Introductory tutorial</li>
 
+<!--
+Site has moved, due to old age 2007/02/07
  <li>
   <a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br />
   Lots of tutorials/instructions related to Apache, PHP and MySQL
  </li>
-
+-->
  <li>
   <a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br />
   A collection of external links to PHP tutorials
@@ -329,10 +331,12 @@ dead
   Great collection of tutorials from O'Reilly
  </li>
 
+<!--
+dead web site
  <li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a><br />
   Site with information on a PHP course at a Dutch college.
  </li>
-
+-->
  <li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br />
   Web Programming Resource - PHP Tutorials
  </li>
@@ -344,12 +348,13 @@ dead
  <li><a href="http://www.vtc.com/products/php.htm">Video tutorials</a><br />
   Video tutorials at Virtaul Training Company
  </li>
-
+<!-- 
+PHP Service is gone
  <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br />
   The PHP section on the famous Webmonkey tutorial site
  </li>
-
- <li><a href="http://www.zend.com/zend/tut/">Zend.com DevZone</a><br />
+-->
+ <li><a href="http://devzone.zend.com/public/view/tag/tutorials">Zend.com DevZone</a><br />
   The tutorials section on the Zend.com developer zone
  </li>
 
@@ -368,7 +373,7 @@ dead
  </li>
 
  <li>
-  <a href="http://www.thelinuxconsultancy.co.uk/phpeditors.php">PHP Editors List</a><br />
+  <a href="http://www.midnighthax.com/phpeditors.php">PHP Editors List</a><br />
   A comprehensive list of editors you can use to edit PHP programs
  </li>
 </ul>
@@ -397,7 +402,7 @@ dead
  </li>
 
  <li>
-  <a href="http://www.macromedia.com/">Macromedia</a><br />
+  <a href="http://www.adobe.com/">Macromedia</a><br />
   Macromedia created Dreamweaver MX, a rapid web application development
   tool supporting PHP.
  </li>
@@ -461,7 +466,7 @@ dead
  </li>
 
  <li>
-  <a href="http://www.zend.com/store/products/zend-accelerator.php">Zend Accelerator</a><br />
+  <a href="http://www.zend.com/products/zend_platform">Zend Accelerator</a><br />
   Commercial accelerator available from Zend Technologies, Inc.
  </li>
 </ul>
@@ -477,7 +482,7 @@ dead
  </li> */ ?>
 
  <li>
-  <a href="http://www.cafepress.com/cp/browse/?Nao=1&amp;No=1&amp;Nty=1&amp;N=0&amp;Ntk=All&amp;Ntt=php&amp;x=0&amp;y=0">PHP projects' merchandise</a><br />
+  <a href="http://www.cafepress.com/buy/php//-/fpt_">PHP projects' merchandise</a><br />
   A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)
  </li>
 </ul>
@@ -543,7 +548,7 @@ dead
   <strong>Dutch</strong>
   <ul>
    <li>
-    <a href="http://php.pagina.nl/">Pagina</a><br />
+    <a href="http://php.startpagina.nl/">Pagina</a><br />
     A Dutch PHP portal that lists a lot of PHP links, including free hosting
    </li>
   </ul>
@@ -629,15 +634,18 @@ Web site does not respond
     MyGuestBook, articles, news and more
    </li>
    <li>
-    <a href="http://www.dynamic-webpages.de/">Dynamic-Webpages</a><br />
+    <a href="http://www.dynamicwebpages.de/">DynamicWebpages</a><br />
     German site with installation guides, tips &amp; scripts, BestOfGML,
     WhoIsWho - a view on german PHP-cracks, german manual,
     book reviews, links and more
    </li>
+<!--
+service is gone...
    <li>
-    <a href="http://www.phpcrawler.de/">PHPCrawler</a><br />
+    <a href="http://www.nohn.org/">PHPCrawler</a><br />
     Searchengine over German PHP-sites with webaccess to newsgroups
    </li>
+   -->
    <li>
     <a href="http://www.phpwelt.de/">PHPWelt</a><br />
     A German website using PHP to offer free services, a
@@ -661,10 +669,13 @@ Web site does not respond
     script-archive, lots of tutorials and a qualified moderated forum that
     answers nearly all your question
    </li>
-   <li>
+<!--
+dead domain as 2007/02/07 
+<li>
     <a href="http://www.phpreferenz.de/workshops.html">www.phpreferenz.de</a><br />
     Free printable workshops for PHP newcomers
    </li>
+   -->
   </ul>
  </li>
 
@@ -687,7 +698,7 @@ Web site does not respond
   <strong>Italian</strong>
   <ul>
    <li>
-    <a href="http://freephp.html.it/">FreePHP.HTML.it</a><br />
+    <a href="http://php.html.it/">php.html.it</a><br />
     The biggest Italian speaking source for PHP: daily updated links
     to scripts, articles, tutorials and many other resources.
    </li>
@@ -743,6 +754,8 @@ Web site does not respond
   </ul>
  </li>
 
+<!--
+dead domain 2007/02/07	
  <li>
   <strong>Portuguese</strong>
   <ul>
@@ -753,7 +766,7 @@ Web site does not respond
    </li>
   </ul>
  </li>
-
+-->
  <li>
   <strong>Romanian</strong>
   <ul>
@@ -816,7 +829,7 @@ Web site does not respond
  <li><a href="http://www.dice.com/">dice.com</a></li>
  <li><a href="http://www.getafreelancer.com">getafreelancer.com</a></li>
  <li><a href="http://www.gnujobs.com/">gnujobs.com</a></li>
- <li><a href="http://www.hotjobs.com/">hotjobs.com</a></li>
+ <li><a href="http://hotjobs.yahoo.com">hotjobs.com</a></li>
  <li><a href="http://www.jobs.com/">Jobs.com</a></li>
  <li><a href="http://mojolin.com/">Mojolin</a></li>
  <li><a href="http://www.monster.com/">Monster.com</a></li>
@@ -848,7 +861,6 @@ Web site does not respond
  <li><a href="http://dmoz.org/Computers/Internet/Web_Design_and_Development/Hosting/">dmoz.org's web hosting index</a></li>
  <li><a href="http://www.free-php-hosting.com/">free-php-hosting.com</a></li>
  <li><a href="http://www.oinko.net/freephp/">Oinko free PHP hosting directory</a></li>
- <li><a href="http://phphosts.codewalkers.com">PHP Host Directory at Codewalkers</a></li>
  <li><a href="http://www.weberdev.com/Hosting/Index.php">WeberDev's Hosting Provider Listing</a></li>
 </ul>
 
