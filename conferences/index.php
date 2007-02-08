@@ -14,6 +14,8 @@ EOT;
 unset($RSIDEBAR_DATA);
 
 site_header("PHP Conferences around the world", array("layout_workaround" => $layout_workaround));
+
+// DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif ", "PHP Québec conference"); ?>
