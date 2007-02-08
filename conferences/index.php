@@ -13,7 +13,7 @@ EOT;
 
 unset($RSIDEBAR_DATA);
 
-site_header("PHP Conferences around the world", array("layout_workaround" => $layout_workaround));
+site_header("PHP Conferences around the world", array("layout_workaround" => $layout_workaround, 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'conferences/news.rss" />'));
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
