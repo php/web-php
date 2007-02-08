@@ -17,7 +17,7 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 ?>
 
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif ", "PHP Québec conference"); ?>
-<h1> PHP Québec conference 2007 </h1>
+<h1>PHP Québec conference 2007</h1>
 <p>
  <span class="newsdate">[07-Feb-2007]</span>
 PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>. 
@@ -30,7 +30,7 @@ Zmievski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and 
 <p>
 The conference has three distinct tracks : Advanced Techniques, Data 
 Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the 
-PHP Qu.bec Conference is great opportunity to learn about the latest 
+PHP Québec Conference is great opportunity to learn about the latest 
 development and professional techniques to help you build high quality PHP 
 software and meet with PHP.
 </p>
