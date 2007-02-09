@@ -149,12 +149,12 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 <h1>PHP 5.2.1 Released</h1>
 <p>
  <span class="newsdate">[08-Feb-2007]</span>
-  The PHP development team would like to announce the immediate availability of PHP 5.2.1. 
+  The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.1.</a>
   This release is a major stability and security enhancement of the 5.X branch, and all
   users are strongly encouraged to upgrade to it as soon as possible.
-  Further details about this release can be found in the release announcement
-  <a href="/releases/5_2_1.php">5.2.1</a>, the full list of changes is
-  available in the ChangeLog <a href="/ChangeLog-5.php#5.2.1">PHP 5</a>.
+  Further details about this release can be found in the <a href="/releases/5_2_1.php">release announcement
+  5.2.1</a>, the full list of changes is
+  available in the <a href="/ChangeLog-5.php#5.2.1">ChangeLog PHP 5</a>.
 </p>
 
 <p>
