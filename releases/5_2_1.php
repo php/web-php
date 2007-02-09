@@ -39,7 +39,7 @@ users are strongly encouraged to upgrade to it as soon as possible.
 
 <p>
 Majority of the security vulnerabilities discovered and resolved can in most cases be only abused by local users and cannot be triggered 
-remotely. However, some of the above issues can be triggered remotely, or exploited by malicious local users on shares hosting setups 
+remotely. However, some of the above issues can be triggered remotely in certain situations, or exploited by malicious local users on shares hosting setups 
 utilizing PHP as an Apache module. Therefor, we strongly advise all users of PHP, regardless of the version to upgrade to 5.2.1 release 
 as soon as possible.
 </p>
