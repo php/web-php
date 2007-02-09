@@ -17,7 +17,7 @@ users are strongly encouraged to upgrade to it as soon as possible.
 </p>
 <ul>
 	<li>Fixed possible safe_mode &amp; open_basedir bypasses inside the session extension.</li>
-	<li>Prevent searchs engine from indexing the phpinfo() page.</li>
+	<li>Prevent search engines from indexing the phpinfo() page.</li>
 	<li>Fixed a number of input processing bugs inside the filter extension.</li>
 	<li>Fixed unserialize() abuse on 64 bit systems with certain input strings.</li>
 	<li>Fixed possible overflows and stack corruptions in the session extension.</li>
