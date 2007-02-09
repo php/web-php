@@ -74,33 +74,41 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.2.0</h1>
+<h1>PHP 5.2.1</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-5.2.0.tar.bz2', 'PHP 5.2.0 (tar.bz2)'); ?> - 02 Nov 2006<br />
-  <span class="md5sum">md5: e6029fafcee029edcfa2ceed7a005333</span>
+  <?php download_link('php-5.2.1.tar.bz2', 'PHP 5.2.1 (tar.bz2)'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: 261218e3569a777dbd87c16a15f05c8d</span>
  </li>
  <li>
-  <?php download_link('php-5.2.0.tar.gz', 'PHP 5.2.0 (tar.gz)'); ?> - 02 Nov 2006<br />
-  <span class="md5sum">md5: 52d7e8b3d8d7573e75c97340f131f988</span>
+  <?php download_link('php-5.2.1.tar.gz', 'PHP 5.2.1 (tar.gz)'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: 604eaee2b834bb037d2c83e53e300d3f</span>
  </li>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
  <li>
-  <?php download_link('php-5.2.0-Win32.zip', 'PHP 5.2.0 zip package'); ?> - 02 Nov 2006<br />
-  <span class="md5sum">md5: 910734e96f41190020272d80b82ce553</span>
+  <?php download_link('php-5.2.1-Win32.zip', 'PHP 5.2.1 zip package'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: 682dd66fb03c7dd24c522f474e1b04b6</span>
  </li>
  <li>
-  <?php download_link('php-5.2.0-win32-installer.msi', 'PHP 5.2.0 installer'); ?> - 02 Nov 2006<br />
-  <span class="md5sum">md5: 1521d6e9b273299ebd8081d174146d22</span>
+  <?php download_link('php-5.2.1-win32-installer.msi', 'PHP 5.2.1 installer'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: cc2ba36fa05d186e26f96755207a7826</span>
  </li>
  <li>
-  <?php download_link('pecl-5.2.0-Win32.zip', 'Collection of PECL modules for PHP 5.2.0'); ?> - 02 Nov 2006<br />
-  <span class="md5sum">md5: 638f5997884ae3ce35d2b3ec12f399b2</span>
+  <?php download_link('php-5.2.1-nts-Win32.zip', 'PHP 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: 815c8c61af58fffdc34d34c24310ffe2</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Win32 binaries'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: dc8b394146faf7effa6f26df02e8e534</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: ffd78a31a704d68c8adadc9288261583</span>
  </li>
 </ul>
 

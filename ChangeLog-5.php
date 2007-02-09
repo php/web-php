@@ -11,6 +11,279 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.1"></a>
+<h3>Version 5.2.1</h3>
+<b>08-Feb-2007</b>
+<ul>
+<li>Added CURLOPT_TCP_NODELAY constant to Curl extension. (Sara)</li>
+<li>Added support for hex numbers of any size. (Matt)</li>
+<li>Added function stream_socket_shutdown(). It is a wrapper for system shutdown() function, that shut downs part of a full-duplex connection. (Dmitry)</li>
+<li>Added internal heap protection (Dmitry)</li>
+ <ul>
+   <li>memory-limit is always enabled (--enable-memory-limit removed)</li>
+   <li>default value if memory-limit is set to 128M</li>
+   <li>safe unlinking</li>
+   <li>cookies</li>
+   <li>canary protection (debug build only)</li>
+   <li>random generation of cookies and canaries</li>
+ </ul>
+</li>
+<li>Added forward support for 'b' prefix in front of string literals. (Andrei)</li>
+<li>Added three new functions to ext/xmlwriter (Rob, Ilia)</li>
+ <ul>
+   <li>xmlwriter_start_dtd_entity()</li>
+   <li>xmlwriter_end_dtd_entity()</li>
+   <li>xmlwriter_write_dtd_entity()</li>
+ </ul>
+</li>
+<li>Added a meta tag to phpinfo() output to prevent search engines from indexing the page. (Ilia)</li>
+<li>Added new function, sys_get_temp_dir(). (Hartmut)</li>
+<li>Added missing object support to file_put_contents(). (Ilia)</li>
+<li>Added support for md2, ripemd256 and ripemd320 algos to hash(). (Sara)</li>
+<li>Added forward support for (binary) cast. (Derick)</li>
+<li>Added optimization for imageline with horizontal and vertical lines (Pierre)</li>
+
+<li>Removed dependency from SHELL32.DLL. (Dmitry)</li>
+<li>Removed double &quot;wrong parameter count&quot; warnings in various functions.  (Hannes)</li>
+<li>Moved extensions to PECL:
+ <ul>
+   <li>ext/informix (Derick, Tony)</li>
+ </ul>
+</li>
+<li>Changed double-to-string utilities to use BSD implementation. (Dmitry, Tony)</li>
+<li>Updated bundled libcURL to version 7.16.0 in the Windows distro. (Edin)</li>
+<li>Updated timezone database to version 2006.16. (Derick)</li>
+<li>cgi.* and fastcgi.* directives are moved to INI subsystem. The new directive cgi.check_shebang_line can be used to omitting check for &quot;#! /usr/bin/php&quot; line. (Dmitry).</li>
+<li>Improved proc_open(). Now on Windows it can run external commands not through CMD.EXE. (Dmitry)</li>
+<li>VCWD_REALPATH() is improved to use realpath cache without VIRTUAL_DIR. (Dmitry)</li>
+<li>ext/bcmath initialization code is moved from request startup to module startup. (Dmitry)</li>
+<li>Zend Memory Manager Improvements (Dmitry)</li>
+ <ul>
+   <li>use HeapAlloc() instead of VirtualAlloc()</li>
+   <li>use &quot;win32&quot; storage manager (instead of &quot;malloc&quot;) on Windows by default</li>
+ </ul>
+</li>
+<li>Zip Extension Improvements (Pierre)
+ <ul>
+   <li>Fixed leak in statName and stateIndex</li>
+   <li>Fixed return setComment (Hannes)</li>
+   <li>Added addEmptyDir method</li>
+ </ul>
+</li>
+<li>Filter Extension Improvements (Ilia, Pierre)
+ <ul>
+   <li>Fixed a bug when callback function returns a non-modified value.</li>
+   <li>Added filter support for $_SERVER in cgi/apache2 sapis.</li>
+   <li>Make sure PHP_SELF is filtered in Apache 1 sapi.</li>
+   <li><?php bugfix(39358); ?> (INSTALL_HEADERS contains incorrect reference to php_filter.h).</li>
+   <li>Added &quot;default&quot; option that allows a default value to be set for an invalid or missing value.</li>
+   <li>Invalid filters fails instead of returning unsafe value</li>
+   <li>Fixed possible double encoding problem with sanitizing filters</li>
+   <li>Make use of space-strict strip_tags() function</li>
+   <li>Fixed whitespace trimming</li>
+   <li>Added support for FastCGI environment variables. (Dmitry)</li>
+ </ul>
+</li>
+<li>PDO_MySQL Extension Improvements (Ilia)
+ <ul>
+   <li>Enabled buffered queries by default.</li>
+   <li>Enabled prepared statement emulation by default.</li>
+ </ul>
+</li>
+
+<li>Small optimization of the date() function. (Matt,Ilia)</li>
+<li>Optimized the internal is_numeric_string() function. (Matt,Ilia)</li>
+<li>Optimized array functions utilizing php_splice(). (Ilia)</li>
+<li>Windows related optimizations (Dmitry, Stas)</li>
+ <ul>
+   <li>COM initialization/deinitialization are done only if necessary</li>
+   <li>removed unnecessary checks for ISREG file and corresponding stat() calls</li>
+   <li>opendir() is reimplementation using GetFistFile/GetNextFile those are faster then _findfirst/_findnext</li>
+   <li>implemented registry cache that prevent registry lookup on each request. In case of modification of corresponding registry-tree PHP will reload it automatic</li>
+   <li>start timeout thread only if necessary</li>
+   <li>stat() is reimplementation using GetFileAttributesEx(). The new implementation is faster then implementation in MS VC CRT, but it doesn't support Windows 95.</li>
+ </ul>
+</li>
+<li>Streams optimization (Dmitry)
+ <ul>
+   <li>removed unnecessary ftell() calls (one call for each included PHP file)</li>
+   <li>disabled calls to read() after EOF</li>
+ </ul>
+</li>
+
+<li>Fixed incorrect function names on FreeBSD where inet_pton() was named __inet_pton() and inet_ntop() was named __inet_ntop(). (Hannes)</li>
+<li>Fixed FastCGI impersonation for persistent connections on Windows. (Dmitry)</li>
+<li>Fixed wrong signature initialization in imagepng (Takeshi Abe)</li>
+<li>Fixed ftruncate() with negative size on FreeBSD. (Hannes)</li>
+<li>Fixed segfault in RegexIterator when given invalid regex. (Hannes)</li>
+<li>Fixed segfault in SplFileObject-&gt;openFile()-&gt;getPathname(). (Hannes)</li>
+<li>Fixed segfault in ZTS mode when OCI8 statements containing sub-statements  are destroyed in wrong order. (Tony)</li>
+<li>Fixed the validate email filter so that the letter &quot;v&quot; can also be used in the user part of the email address. (Derick)</li>
+<li><?php bugfix(40297); ?> (compile failure in ZTS mode when collections support is  missing). (Tony)</li>
+<li><?php bugfix(40285); ?> (The PDO prepare parser goes into an infinite loop in some instances). (Ilia)</li>
+<li><?php bugfix(40274); ?> (Sessions fail with numeric root keys). (Ilia)</li>
+<li><?php bugfix(40259); ?> (ob_start call many times - memory error). (Dmitry)</li>
+<li><?php bugfix(40231); ?> (file_exists incorrectly reports false). (Dmitry)</li>
+<li><?php bugfix(40228); ?> (ZipArchive::extractTo does create empty directories  recursively). (Pierre)</li>
+<li><?php bugfix(40200); ?> (The FastCgi version has different realpath results than  thread safe version). (Dmitry)</li>
+<li><?php bugfix(40191); ?> (use of array_unique() with objects triggers segfault).  (Tony)</li>
+<li><?php bugfix(40189); ?> (possible endless loop in zlib.inflate stream filter). (Greg, Tony)</li>
+<li><?php bugfix(40169); ?> (CURLOPT_TCP_NODELAY only available in curl >= 7.11.2).  (Tony)</li>
+<li><?php bugfix(40129); ?> (iconv extension doesn't compile with CodeWarrior on  Netware). (gk at gknw dot de, Tony)</li>
+<li><?php bugfix(40127); ?> (apache2handler doesn't compile on Netware).  (gk at gknw dot de)</li>
+<li><?php bugfix(40121); ?> (PDO_DBLIB driver wont free statements). (Ilia)</li>
+<li><?php bugfix(40098); ?> (php_fopen_primary_script() not thread safe). (Ilia)</li>
+<li><?php bugfix(40092); ?> (chroot() doesn't clear realpath cache). (Dmitry)</li>
+<li><?php bugfix(40091); ?> (spl_autoload_register with 2 instances of the same class). (Ilia)</li>
+<li><?php bugfix(40083); ?> (milter SAPI functions always return false/null). (Tony)</li>
+<li><?php bugfix(40079); ?> (php_get_current_user() not thread safe). (Ilia, wharmby at uk dot ibm dot com)</li>
+<li><?php bugfix(40078); ?> (ORA-01405 when fetching NULL values using oci_bind_array_by_name()). (Tony)</li>
+<li><?php bugfix(40076); ?> (zend_alloc.c: Value of enumeration constant must be in  range of signed integer). (Dmitry)</li>
+<li><?php bugfix(40073); ?> (exif_read_data dies on certain images). (Tony, Marcus)</li>
+<li><?php bugfix(40036); ?> (empty() does not work correctly with ArrayObject when  using ARRAY_AS_PROPS). (Ilia)</li>
+<li><?php bugfix(40012); ?> (php_date.c doesn't compile on Netware). (gk at gknw dot de, Derick)</li>
+<li><?php bugfix(40009); ?> (http_build_query(array()) returns NULL). (Ilia)</li>
+<li><?php bugfix(40002); ?> (Try/Catch performs poorly). (Dmitry)</li>
+<li><?php bugfix(39993); ?> (tr_TR.UTF-8 locale has problems with PHP). (Ilia)</li>
+<li><?php bugfix(39990); ?> (Cannot &quot;foreach&quot; over overloaded properties). (Dmitry)</li>
+<li><?php bugfix(39988); ?> (type argument of oci_define_by_name() is ignored). (Chris Jones, Tony)</li>
+<li><?php bugfix(39984); ?> (redirect response code in header() could be ignored  in CGI sapi). (Ilia)</li>
+<li><?php bugfix(39979); ?> (PGSQL_CONNECT_FORCE_NEW will causes next connect to  establish a new connection). (Ilia)</li>
+<li><?php bugfix(39971); ?> (pg_insert/pg_update do not allow now() to be used  for timestamp fields). (Ilia)</li>
+<li><?php bugfix(39969); ?> (ini setting short_open_tag has no effect when using  --enable-maintainer-zts). (Dmitry)</li>
+<li><?php bugfix(39952); ?> (zip ignoring --with-libdir on zlib checks) (judas dot iscariote at gmail dot com)</li>
+<li><?php bugfix(39944); ?> (References broken). (Dmitry)</li>
+<li><?php bugfix(39935); ?> (Extensions tidy,mcrypt,mhash,pdo_sqlite ignores  --with-libdir). (judas dot iscariote at gmail dot com, Derick)</li>
+<li><?php bugfix(39903); ?> (Notice message when executing __halt_compiler() more than once). (Tony)</li>
+<li><?php bugfix(39898); ?> (FILTER_VALIDATE_URL validates \r\n\t etc). (Ilia)</li>
+<li><?php bugfix(39890); ?> (using autoconf 2.6x and --with-layout=GNU breaks PEAR install path). (Tony)</li>
+<li><?php bugfix(39884); ?> (ReflectionParameter::getClass() throws exception for  type hint self). (thekid at php dot net)</li>
+<li><?php bugfix(39878); ?> (CURL doesn't compile on Sun Studio Pro). (Ilia)</li>
+<li><?php bugfix(39873); ?> (number_format() breaks with locale &amp; decimal points). (Ilia)</li>
+<li><?php bugfix(39869); ?> (safe_read does not initialize errno). (michiel at boland dot org, Dmitry)</li>
+<li><?php bugfix(39850); ?> (SplFileObject throws contradictory/wrong error messages when trying to open &quot;php://wrong&quot;). (Tony)</li>
+<li><?php bugfix(39846); ?> (Invalid IPv4 treated as valid). (Ilia)</li>
+<li><?php bugfix(39845); ?> (Persistent connections generate a warning in pdo_pgsql). (Ilia)</li>
+<li><?php bugfix(39832); ?> (SOAP Server: parameter not matching the WSDL specified  type are set to 0). (Dmitry)</li>
+<li><?php bugfix(39825); ?> (foreach produces memory error). (Dmitry)</li>
+<li><?php bugfix(39816); ?> (apxs2filter ignores httpd.conf &amp; .htaccess php config  settings). (Ilia)</li>
+<li><?php bugfix(39815); ?> (SOAP double encoding is not locale-independent). (Dmitry)</li>
+<li><?php bugfix(39797); ?> (virtual() does not reset changed INI settings). (Ilia) </li>
+<li><?php bugfix(39795); ?> (build fails on AIX because crypt_r() uses different  data struct). (Tony)</li>
+<li><?php bugfix(39791); ?> (Crash in strtotime() on overly long relative date  multipliers). (Ilia)</li>
+<li><?php bugfix(39787); ?> (PHP doesn't work with Apache 2.3). (mv at binarysec dot com).</li>
+<li><?php bugfix(39782); ?> (setTime() on a DateTime constructed with a Weekday  yields incorrect results). (Ilia)</li>
+<li><?php bugfix(39780); ?> (PNG image with CRC/data error raises fatal error) (Pierre)</li>
+<li><?php bugfix(39779); ?> (Enable AUTH PLAIN mechanism in underlying libc-client). (michael dot heimpold at s2000 dot tu-chemnitz dot de, Ilia)</li>
+<li><?php bugfix(39775); ?> (&quot;Indirect modification ...&quot; message is not shown). (Dmitry)</li>
+<li><?php bugfix(39763); ?> (magic quotes are applied twice by ext/filter in  parse_str()). (Ilia) </li>
+<li><?php bugfix(39760); ?> (cloning fails on nested SimpleXML-Object). (Rob)</li>
+<li><?php bugfix(39759); ?> (Can't use stored procedures fetching multiple result  sets in pdo_mysql). (Ilia)</li>
+<li><?php bugfix(39754); ?> (Some POSIX extension functions not thread safe). (Ilia, wharmby at uk dot ibm dot com)</li>
+<li><?php bugfix(39751); ?> (putenv crash on Windows). (KevinJohnHoffman at gmail.com)</li>
+<li><?php bugfix(39732); ?> (oci_bind_array_by_name doesn't work on Solaris 64bit). (Tony)</li>
+<li><?php bugfix(39724); ?> (Broken build due to spl/filter usage of pcre extension). (Tony, Ilia)</li>
+<li><?php bugfix(39718); ?> (possible crash if assert.callback is set in ini). (Ilia)</li>
+<li><?php bugfix(39702); ?> (php crashes in the allocator on linux-m68k). (Dmitry)</li>
+<li><?php bugfix(39685); ?> (iconv() - undefined function). (Hannes)</li>
+<li><?php bugfix(39673); ?> (file_get_contents causes bus error on certain offsets). (Tony)</li>
+<li><?php bugfix(39663); ?> (Memory leak in pg_get_notify() and a possible memory  corruption on Windows in pgsql and pdo_pgsql extensions). (Ilia, matteo at beccati dot com)</li>
+<li><?php bugfix(39662); ?> (Segfault when calling asXML() of a cloned  SimpleXMLElement). (Rob, Tony)</li>
+<li><?php bugfix(39656); ?> (crash when calling fetch() on a PDO statment object after closeCursor()). (Ilia, Tony)</li>
+<li><?php bugfix(39653); ?> (ext/dba doesn't check for db-4.5 and db-4.4 when db4 support is enabled). (Tony)</li>
+<li><?php bugfix(39652); ?> (Wrong negative results from memory_get_usage()). (Dmitry)</li>
+<li><?php bugfix(39648); ?> (Implementation of PHP functions chown() and chgrp() are  not thread safe). (Ilia, wharmby at uk dot ibm dot com)</li>
+<li><?php bugfix(39640); ?> (Segfault with &quot;Allowed memory size exhausted&quot;). (Dmitry)</li>
+<li><?php bugfix(39625); ?> (Apache crashes on importStylesheet call). (Rob)</li>
+<li><?php bugfix(39623); ?> (thread safety fixes on *nix for putenv() &amp; mime_magic). (Ilia, wharmby at uk dot ibm dot com)</li>
+<li><?php bugfix(39621); ?> (str_replace() is not binary safe on strings with equal length). (Tony)</li>
+<li><?php bugfix(39613); ?> (Possible segfault in imap initialization due to missing module dependency). (wharmby at uk dot ibm dot com, Tony)</li>
+<li><?php bugfix(39606); ?> (Use of com.typelib_file in PHP.ini STILL causes A/V). (Rob)</li>
+<li><?php bugfix(39602); ?> (Invalid session.save_handler crashes PHP). (Dmitry)</li>
+<li><?php bugfix(39596); ?> (Creating Variant of type VT_ARRAY). (Rob)</li>
+<li><?php bugfix(39583); ?> (ftp_put() does not change transfer mode to ASCII). (Tony)</li>
+<li><?php bugfix(39576); ?> (array_walk() doesn't separate user data zval). (Tony)</li>
+<li><?php bugfix(39575); ?> (move_uploaded_file() no longer working (safe mode  related)). (Tony)</li>
+<li><?php bugfix(39571); ?> (timeout ssl:// connections). (Ilia)</li>
+<li><?php bugfix(39564); ?> (PDO::errorInfo() returns inconsistent information when  sqlite3_step() fails). (Tony)</li>
+<li><?php bugfix(39548); ?> (ZMSG_LOG_SCRIPT_NAME not routed to OutputDebugString() on Windows). (Dmitry)</li>
+<li><?php bugfix(39538); ?> (fgetcsv can't handle starting newlines and trailing odd number of backslashes). (David Soria Parra, Pierre)</li>
+<li><?php bugfix(39534); ?> (Error in maths to calculate of  ZEND_MM_ALIGNED_MIN_HEADER_SIZE). (wharmby at uk dot ibm dot com, Dmitry)</li>
+<li><?php bugfix(39527); ?> (Failure to retrieve results when multiple unbuffered, prepared statements are used in pdo_mysql). (Ilia)</li>
+<li><?php bugfix(39508); ?> (imagefill crashes with small images 3 pixels or less). (Pierre)</li>
+<li><?php bugfix(39506); ?> (Archive corrupt with ZipArchive::addFile method). (Pierre)</li>
+<li><?php bugfix(39504); ?> (xmlwriter_write_dtd_entity() creates Attlist tag, not  entity). (Hannes)</li>
+<li><?php bugfix(39483); ?> (Problem with handling of \ char in prepared statements). (Ilia, suhachov at gmail dot com)</li>
+<li><?php bugfix(39458); ?> (ftp_nlist() returns false on empty dirs). (Nuno)</li>
+<li><?php bugfix(39454); ?> (Returning a SOAP array segfaults PHP). (Dmitry)</li>
+<li><?php bugfix(39450); ?> (getenv() fills other super-globals). (Ilia, Tony)</li>
+<li><?php bugfix(39449); ?> (Overloaded array properties do not work correctly). (Dmitry)</li>
+<li><?php bugfix(39445); ?> (Calling debug_backtrace() in the __toString() function produces a crash). (Dmitry)</li>
+<li><?php bugfix(39438); ?> (Fatal error: Out of memory). (Dmitry)</li>
+<li><?php bugfix(39435); ?> ('foo' instanceof bar gives invalid opcode error). (Sara)</li>
+<li><?php bugfix(39414); ?> (Syntax error while compiling with Sun Workshop Complier). (Johannes)</li>
+<li><?php bugfix(39398); ?> (Booleans are not automatically translated to integers). (Ilia)</li>
+<li><?php bugfix(39394); ?> (Missing check for older variants of openssl). (Ilia)</li>
+<li><?php bugfix(39367); ?> (clearstatcache() doesn't clear realpath cache). (j at pureftpd dot org, Dmitry)</li>
+<li><?php bugfix(39366); ?> (imagerotate does not use alpha with angle > 45 degrees) (Pierre)</li>
+<li><?php bugfix(39364); ?> (Removed warning on empty haystack inside mb_strstr()). (Ilia)</li>
+<li><?php bugfix(39362); ?> (Added an option to imap_open/imap_reopen to control the number of connection retries). (Ilia)</li>
+<li>Fixed bugs <?php bugl(39361); ?>, <?php bugl(39400); ?> (mbstring function overloading problem). (Seiji)</li>
+<li><?php bugfix(39354); ?> (Allow building of curl extension against libcurl 7.16.0). (Ilia) </li>
+<li><?php bugfix(39350); ?> (crash with implode(&quot;\n&quot;, array(false))). (Ilia)</li>
+<li><?php bugfix(39344); ?> (Unnecessary calls to OnModify callback routine for an extension INI directive). (wharmby at uk dot ibm dot com, Dmitry)</li>
+<li><?php bugfix(39320); ?> (ZEND_HASH_APPLY_STOP causes deletion). (Marcus)</li>
+<li><?php bugfix(39313); ?> (spl_autoload triggers Fatal error). (Marcus)</li>
+<li><?php bugfix(39300); ?> (make install fails if wget is not available). (Tony)</li>
+<li><?php bugfix(39297); ?> (Memory corruption because of indirect modification of overloaded array). (Dmitry)</li>
+<li><?php bugfix(39286); ?> (misleading error message when invalid dimensions are given) (Pierre)</li>
+<li><?php bugfix(39273); ?> (imagecopyresized may ignore alpha channel) (Pierre)</li>
+<li><?php bugfix(39265); ?> (Fixed path handling inside mod_files.sh). (michal dot taborsky at gmail dot com, Ilia)</li>
+<li><?php bugfix(39217); ?> (serialNumber might be -1 when the value is too large). (Pierre, Tony)</li>
+<li><?php bugfix(39215); ?> (Inappropriate close of stdin/stdout/stderr). (Wez, Ilia)</li>
+<li><?php bugfix(39201); ?> (Possible crash in Apache 2 with 413 ErrorHandler). (Ilia)</li>
+<li><?php bugfix(39151); ?> (Parse error in recursiveiteratoriterator.php). (Marcus)</li>
+<li><?php bugfix(39121); ?> (Incorrect return array handling in non-wsdl soap client). (Dmitry)</li>
+<li><?php bugfix(39090); ?> (DirectoryFilterDots doxygen docs and example is wrong). (Marcus)</li>
+<li><?php bugfix(38852); ?> (XML-RPC Breaks iconv). (Hannes)</li>
+<li><?php bugfix(38770); ?> (unpack() broken with longs on 64 bit machines). (Ilia, David Soria Parra).</li>
+<li><?php bugfix(38698); ?> (for some keys cdbmake creates corrupted db and cdb can't read valid db). (Marcus)</li>
+<li><?php bugfix(38680); ?> (Added missing handling of basic types in json_decode). (Ilia)</li>
+<li><?php bugfix(38604); ?> (Fixed request time leak inside foreach() when iterating through virtual properties). (Dmitry)</li>
+<li><?php bugfix(38602); ?> (header( &quot;HTTP/1.0 ...&quot; ) does not change proto version). (Ilia)</li>
+<li><?php bugfix(38542); ?> (proc_get_status() returns wrong PID on windows). (Nuno)</li>
+<li><?php bugfix(38536); ?> (SOAP returns an array of values instead of an object). (Dmitry)</li>
+<li><?php bugfix(38456); ?> (Apache2 segfaults when virtual() is called in .php  ErrorDocument). (Ilia)</li>
+<li><?php bugfix(38325); ?> (spl_autoload_register() gives wrong line for &quot;class not found&quot;). (Ilia)</li>
+<li><?php bugfix(38319); ?> (Remove bogus warnings from persistent PDO connections). (Ilia)</li>
+<li><?php bugfix(38274); ?> (Memlimit fatal error sent to &quot;wrong&quot; stderr when using fastcgi). (Dmitry)</li>
+<li><?php bugfix(38252); ?> (Incorrect PDO error message on invalid default fetch mode). (Ilia)</li>
+<li><?php bugfix(37927); ?> (Prevent trap when COM extension processes argument of type VT_DISPATCH|VT_REF) (Andy)</li>
+<li><?php bugfix(37773); ?> (iconv_substr() gives &quot;Unknown error&quot; when string length = 1&quot;). (Ilia)</li>
+<li><?php bugfix(37627); ?> (session save_path check checks the parent directory). (Ilia)</li>
+<li><?php bugfix(37619); ?> (proc_open() closes stdin on fork() failure). (jdolecek at NetBSD dot org, Nuno)</li>
+<li><?php bugfix(37588); ?> (COM Property propputref converts to PHP function and can't be accesed). (Rob)</li>
+<li><?php bugfix(36975); ?> (natcasesort() causes array_pop() to misbehave). (Hannes)</li>
+<li><?php bugfix(36812); ?> (pg_execute() modifies input array). (Ilia)</li>
+<li><?php bugfix(36798); ?> (Error parsing named parameters with queries containing high-ascii chars). (Ilia)</li>
+<li><?php bugfix(36644); ?> (possible crash in variant_date_from_timestamp()). (Ilia)</li>
+<li><?php bugfix(36427); ?> (proc_open() / proc_close() leak handles on windows). (jdolecek at NetBSD dot org, Nuno)</li>
+<li><?php bugfix(36392); ?> (wrong number of decimal digits with %e specifier in sprintf). (Matt,Ilia)</li>
+<li><?php bugfix(36214); ?> (__get method works properly only when conditional operator is used). (Dmitry)</li>
+<li><?php bugfix(35634); ?> (Erroneous &quot;Class declarations may not be nested&quot; error raised). (Carl P. Corliss, Dmitry)</li>
+<li><?php bugfix(35106); ?> (nested foreach fails when array variable has a reference). (Dmitry)</li>
+<li><?php bugfix(34564); ?> (COM extension not returning modified &quot;out&quot; argument) (Andy)</li>
+<li><?php bugfix(33734); ?> (Something strange with COM Object). (Rob)</li>
+<li><?php bugfix(33386); ?> (ScriptControl only sees last function of class). (Rob)</li>
+<li><?php bugfix(33282); ?> (Re-assignment by reference does not clear the is_ref flag) (Ilia, Dmitry, Matt Wilmas)</li>
+<li><?php bugfix(30074); ?> (apparent symbol table error with  extract($blah, EXTR_REFS)) (Brian)</li>
+<li><?php bugfix(29840); ?> (is_executable() does not honor safe_mode_exec_dir  setting). (Ilia)</li>
+<li>Fixed PECL bug #7295 (ORA-01405: fetched column value is NULL on LOB fields). (Tony)</li>
+
+</ul>
+
+<hr />
+
 <a name="5.2.0"></a>
 <h3>Version 5.2.0</h3>
 <b>02-Nov-2006</b>
