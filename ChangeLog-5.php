@@ -18,7 +18,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added CURLOPT_TCP_NODELAY constant to Curl extension. (Sara)</li>
 <li>Added support for hex numbers of any size. (Matt)</li>
 <li>Added function stream_socket_shutdown(). It is a wrapper for system shutdown() function, that shut downs part of a full-duplex connection. (Dmitry)</li>
-<li>Added internal heap protection (Dmitry)</li>
+<li>Added internal heap protection (Dmitry)
  <ul>
    <li>memory-limit is always enabled (--enable-memory-limit removed)</li>
    <li>default value if memory-limit is set to 128M</li>
@@ -29,7 +29,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
  </ul>
 </li>
 <li>Added forward support for 'b' prefix in front of string literals. (Andrei)</li>
-<li>Added three new functions to ext/xmlwriter (Rob, Ilia)</li>
+<li>Added three new functions to ext/xmlwriter (Rob, Ilia)
  <ul>
    <li>xmlwriter_start_dtd_entity()</li>
    <li>xmlwriter_end_dtd_entity()</li>
@@ -57,7 +57,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Improved proc_open(). Now on Windows it can run external commands not through CMD.EXE. (Dmitry)</li>
 <li>VCWD_REALPATH() is improved to use realpath cache without VIRTUAL_DIR. (Dmitry)</li>
 <li>ext/bcmath initialization code is moved from request startup to module startup. (Dmitry)</li>
-<li>Zend Memory Manager Improvements (Dmitry)</li>
+<li>Zend Memory Manager Improvements (Dmitry)
  <ul>
    <li>use HeapAlloc() instead of VirtualAlloc()</li>
    <li>use &quot;win32&quot; storage manager (instead of &quot;malloc&quot;) on Windows by default</li>
@@ -94,7 +94,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Small optimization of the date() function. (Matt,Ilia)</li>
 <li>Optimized the internal is_numeric_string() function. (Matt,Ilia)</li>
 <li>Optimized array functions utilizing php_splice(). (Ilia)</li>
-<li>Windows related optimizations (Dmitry, Stas)</li>
+<li>Windows related optimizations (Dmitry, Stas)
  <ul>
    <li>COM initialization/deinitialization are done only if necessary</li>
    <li>removed unnecessary checks for ISREG file and corresponding stat() calls</li>
