@@ -99,15 +99,15 @@ site_header("Downloads");
   <span class="md5sum">md5: cc2ba36fa05d186e26f96755207a7826</span>
  </li>
  <li>
-  <?php download_link('php-5.2.1-nts-Win32.zip', 'PHP 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: 815c8c61af58fffdc34d34c24310ffe2</span>
- </li>
- <li>
   <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Win32 binaries'); ?> - 08 Feb 2007<br />
   <span class="md5sum">md5: dc8b394146faf7effa6f26df02e8e534</span>
  </li>
  <li>
-  <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
+  <?php download_link('php-5.2.1-nts-Win32.zip', 'PHP 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
+  <span class="md5sum">md5: 815c8c61af58fffdc34d34c24310ffe2</span>
+ </li>
+ <li>
+  <?php download_link('pecl-5.2.1-nts-Win32.zip', 'PECL 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
   <span class="md5sum">md5: ffd78a31a704d68c8adadc9288261583</span>
  </li>
 </ul>
