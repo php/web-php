@@ -507,8 +507,8 @@ function display_event($event, $include_date = 1)
         -3 => '3rd Last'
     );
 
-    $sday = isset($event['start']) ? strtotime($event['start']) : 0;
-    $eday = isset($event['end']) ? strtotime($event['end']) : 0;
+    $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
+    $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%">
  <tr bgcolor="#dddddd"><td>
