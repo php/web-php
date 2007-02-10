@@ -60,11 +60,6 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.emini.dk/">Emini</a> A/S provides bandwidth and Windows binary 
- building facilities for PHP distributions and PECL extensions.
-</p>
-
-<p>
  <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and amazing
  hardware for the CVS server (cvs.php.net).
 </p>
