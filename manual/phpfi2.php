@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = '/manual/phpfi2.php';
+$_SERVER['BASE_PAGE'] = 'manual/phpfi2.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header('PHP/FI Version 2.0 Documentation');
 ?>
