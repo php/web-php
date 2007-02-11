@@ -55,12 +55,15 @@ if ($process) {
         $errors[] = "You must supply a long description of the event.";
     }
 
+    $valid_schemes = array('http','https','ftp');
+    $pu = parse_url($_POST['url']);
+
     $_POST['url'] = trim($_POST['url']);
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (!preg_match('/^\w+:/', $_POST['url'])) {
-        $errors[] = "The URL you supplied was incomplete.";
+    elseif (!in_array($pu['scheme'], $schemes) || empty(trim($pu['host']))) {
+        $errors[] = "The URL you supplied was invalid.";
     }
 
     if (!$_POST['country']) {
