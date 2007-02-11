@@ -59,10 +59,11 @@ if ($process) {
     $pu = parse_url($_POST['url']);
 
     $_POST['url'] = trim($_POST['url']);
+    $pu['host'] = trim($pu['host']);
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (!in_array($pu['scheme'], $valid_schemes) || empty(trim($pu['host']))) {
+    elseif (!in_array($pu['scheme'], $valid_schemes) || empty($pu['host'])) {
         $errors[] = "The URL you supplied was invalid.";
     }
 
@@ -253,5 +254,5 @@ function display_options($options, $current)
     }
 }
 
-/* vim: set noet ts=4 sw=4 ft=php: : */
+/* vim: set et ts=4 sw=4 ft=php: : */
 ?>
