@@ -98,7 +98,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
  <ul>
    <li>COM initialization/deinitialization are done only if necessary</li>
    <li>removed unnecessary checks for ISREG file and corresponding stat() calls</li>
-   <li>opendir() is reimplementation using GetFistFile/GetNextFile those are faster then _findfirst/_findnext</li>
+   <li>opendir() is reimplementation using GetFirstFile/GetNextFile those are faster then _findfirst/_findnext</li>
    <li>implemented registry cache that prevent registry lookup on each request. In case of modification of corresponding registry-tree PHP will reload it automatic</li>
    <li>start timeout thread only if necessary</li>
    <li>stat() is reimplementation using GetFileAttributesEx(). The new implementation is faster then implementation in MS VC CRT, but it doesn't support Windows 95.</li>
