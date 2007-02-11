@@ -145,6 +145,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="4"></a>
 <h1>PHP 5.2.1 Released</h1>
 <p>
  <span class="newsdate">[08-Feb-2007]</span>
@@ -196,7 +197,7 @@ and PHP 5.2.1.
 
 <hr />
 
-
+<a name="3"></a>
 <h1>The front page has changed</h1>
 <p>
  <span class="newsdate">[08-Feb-2007]</span>
@@ -208,6 +209,7 @@ and PHP 5.2.1.
 
 <hr />
 
+<a name="2"></a>
 <?php news_image('http://php.net/manual/en/','php-logo.gif','The PHP Manual'); ?>
 <h1>PHP Manual Updates</h1>
 <p>
@@ -232,6 +234,7 @@ and PHP 5.2.1.
 
 <hr />
 
+<a name="1"></a>
 <h1>PHP 5.2.0 Released</h1>
 <p>
  <span class="newsdate">[02-Nov-2006]</span>
