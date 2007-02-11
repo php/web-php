@@ -103,7 +103,7 @@ if ($process) {
         $errors[] = "You must specify a valid day of the month for a recurring event.";
     }
 
-    if (preg_match("/submit/i", $action)) {
+    if (preg_match("/submit/i", $_POST["action"])) {
         // Submit to master.php.net
         $result = posttohost("http://master.php.net/entry/event.php", $_POST);
         if ($result) {
