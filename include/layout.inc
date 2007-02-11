@@ -515,7 +515,7 @@ function display_event($event, $include_date = 1)
 <?php
     
     // Print out date if needed
-    if ($include_date && ($event['start'])) {
+    if ($include_date && (isset($event['start']))) {
         echo "<b>", date("F j, Y", $sday), "</b>\n";
     }
     
