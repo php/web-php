@@ -117,5 +117,7 @@ and get 1/3rd off the ticket price.  Regular price is $150CDN, early bird price 
 <hr />
 
 
-<?php site_footer();
+<?php
+// NO MORE NEWS TO PARSE
+site_footer();
 
