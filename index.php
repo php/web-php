@@ -195,6 +195,7 @@ For users upgrading from PHP 5.0 and PHP 5.1, an upgrade guide is available
 and PHP 5.2.1.
 </p>
 
+<p><strong>Update: Feb 12th;</strong> The Windows install package had problems with upgrading from previous PHP versions. That has now been fixed and new file posted in the <a href="/downloads.php">download section</a>.</p>
 <hr />
 
 <a name="3"></a>

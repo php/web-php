@@ -95,8 +95,9 @@ site_header("Downloads");
   <span class="md5sum">md5: 682dd66fb03c7dd24c522f474e1b04b6</span>
  </li>
  <li>
-  <?php download_link('php-5.2.1-win32-installer.msi', 'PHP 5.2.1 installer'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: cc2ba36fa05d186e26f96755207a7826</span>
+  <?php download_link('php-5.2.1-win32-installer.msi', 'PHP 5.2.1 installer'); ?> - 12 Feb 2007<br />
+  <span class="md5sum">md5: f0a1445f4adfdc2e00a81b2eb788be5c</span>
+  <p><strong>Note:</strong> This file was updated February 12th to fix problems when upgrading from previous PHP versions.</p>
  </li>
  <li>
   <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Win32 binaries'); ?> - 08 Feb 2007<br />
