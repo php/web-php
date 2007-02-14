@@ -753,19 +753,23 @@ dead domain as 2007/02/07
    </li>
   </ul>
  </li>
-
-<!--
-dead domain 2007/02/07	
  <li>
   <strong>Portuguese</strong>
   <ul>
    <li>
+    <a href="http://www.php-pt.net/">portuguese php users group</a><br />
+    The site intends to help, support, and guide all portuguese php users.
+   </li>
+  </ul>
+ </li>
+
+<!--
+dead domain 2007/02/07	   <li>
     <a href="http://www.cidadela.org/php/">Cidadela</a><br />
     The PHP section of Cidadela provides articles, tutorials,
     a help forum, and an Application Market.
    </li>
-  </ul>
- </li>
+
 -->
  <li>
   <strong>Romanian</strong>
