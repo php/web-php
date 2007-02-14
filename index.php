@@ -177,6 +177,8 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 	<li>Fixed possible clobbering of super-globals in several code paths.</li>
 	<li>Fixed a possible information disclosure inside the wddx extension.</li>
 	<li>Fixed a possible string format vulnerability in *print() functions on 64 bit systems.</li>
+	<li>Fixed a possible buffer overflow inside ibase_{delete,add,modify}_user() functions.</li>
+	<li>Fixed a string format vulnerability inside the odbc_result_all() function.</li>
 </ul>
 <p>
 <b>Security Enhancements and Fixes in PHP 5.2.1 only:</b>
@@ -195,9 +197,9 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 <b>Security Enhancements and Fixes in PHP 4.4.5 only:</b>
 </p>
 <ul>
-<li>Fixed possible overflows inside zip &amp; imap extensions.</li>
-<li>Fixed a possible buffer overflow inside mail() function on Windows.</li>
-<li>Unbundled the ovrimos extension.</li>
+	<li>Fixed possible overflows inside zip &amp; imap extensions.</li>
+	<li>Fixed a possible buffer overflow inside mail() function on Windows.</li>
+	<li>Unbundled the ovrimos extension.</li>
 </ul>
 
 <p>
@@ -215,7 +217,7 @@ available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between
 those releases and PHP 5.2.1.
 </p>
 
-<p><strong>Update: Feb 14th;</strong> Adding release information for PHP
+<p><strong>Update: Feb 14th;</strong> Added release information for PHP
 4.4.5.</p>
 
 <p><strong>Update: Feb 12th;</strong> The Windows install package had problems
