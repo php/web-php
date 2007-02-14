@@ -11,6 +11,43 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.5"></a>
+<h3>Version 4.4.5</h3>
+<b>14-Feb-2007</b>
+<ul>
+<li>Upgraded PEAR to 1.5.0.</li>
+<li>Updated PCRE to version 6.7.</li>
+<li>Moved extensions to PECL: ext/ovrimos</li>
+<li>Added a meta tag to phpinfo() output to prevent search engines from indexing the page.</li>
+<li>Backported a fix in the configure tests to detect the "rounding fuzz".</li>
+<li>Backported fix for ext/imap compilation failure with recent c-client versions.</li>
+<li>Fixed missing open_basedir check inside chdir() function.</li>
+<li><?php bugfix(40335); ?> (Compile fails when using GCC 4.1.1/binutils 2.17).</li>
+<li><?php bugfix(39971); ?> (pg_insert/pg_update do not allow now() to be used for timestamp fields).</li>
+<li><?php bugfix(39890); ?> (using autoconf 2.6x and --with-layout=GNU breaks PEAR install path).</li>
+<li><?php bugfix(39819); ?> (Using $this not in object context can cause segfaults).</li>
+<li><?php bugfix(39653); ?> (ext/dba doesn't check for db-4.5 and db-4.4 when db4 support is enabled).</li>
+<li><?php bugfix(39583); ?> (ftp_put() does not change transfer mode to ASCII).</li>
+<li><?php bugfix(39458); ?> (ftp_nlist() returns false on empty dirs).</li>
+<li><?php bugfix(39354); ?> (Allow building of curl extension against libcurl 7.16.0).</li>
+<li><?php bugfix(39034); ?> (curl_exec() with return transfer returns TRUE on empty files).</li>
+<li><?php bugfix(38963); ?> (Fixed a possible open_basedir bypass in tempnam()).</li>
+<li><?php bugfix(38882); ?> (ldap_connect causes segfault with newer versions of OpenLDAP).</li>
+<li><?php bugfix(38859); ?> (parse_url() fails if passing '@' in passwd).</li>
+<li><?php bugfix(38722); ?> (Calling undefined method prints insufficient error message).</li>
+<li><?php bugfix(38534); ?> (segfault when calling setlocale() in userspace session handler).</li>
+<li><?php bugfix(38450); ?> (constructor is not called for classes used in userspace stream wrappers).</li>
+<li><?php bugfix(38378); ?> (wddx_serialize_value() generates no wellformed xml).</li>
+<li><?php bugfix(37812); ?> (aggregate_methods_by_list fails to take certain methods).</li>
+<li><?php bugfix(36975); ?> (natcasesort() causes array_pop() to misbehave).</li>
+<li><?php bugfix(36248); ?> (CURLOPT_HEADERFUNCTION, couldn't set the function in the class).</li>
+<li><?php bugfix(34066); ?> (recursive array_walk causes segfault).</li>
+</ul>
+
+There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
+
+<hr />
+
 <a name="4.4.4"></a>
 <h3>Version 4.4.4</h3>
 <b>17-Aug-2006</b>

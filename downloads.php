@@ -123,23 +123,23 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<h1>PHP 4.4.4</h1>
+<h1>PHP 4.4.5</h1>
 
 <h2>Complete Source Code</h2>
 <ul>
  <li>
-  <?php download_link('php-4.4.4.tar.bz2','PHP 4.4.4 (tar.bz2)'); ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: bc6fa8908e2ac36e93bab9f7d42cda3a</span>
+  <?php download_link('php-4.4.5.tar.bz2','PHP 4.4.5 (tar.bz2)'); ?> - 14 Feb 2007<br />
+  <span class="md5sum">md5: bf61d557c82962dc9533f6ef35283d4c</span>
  </li>
  <li>
-  <?php download_link('php-4.4.4.tar.gz', 'PHP 4.4.4 (tar.gz)');  ?> - 17 Aug 2006<br />
-  <span class="md5sum">md5: e884b9b7c2e936310553c946bc2f67c2</span>
+  <?php download_link('php-4.4.5.tar.gz', 'PHP 4.4.5 (tar.gz)');  ?> - 14 Feb 2007<br />
+  <span class="md5sum">md5: cfc1d47cdc7c1bfd27666abb8fe97a45</span>
  </li>
 </ul>
 
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of
- changes, or the <a href="/release_4_4_4.php">release notes</a> for more
+ changes, or the <a href="/release_4_4_5.php">release notes</a> for more
  information on this particular release.
 </p>
 
@@ -158,19 +158,11 @@ site_header("Downloads");
 -->
 
  <li>
-  <?php download_link('php-4.4.4-Win32.zip', 'PHP 4.4.4 zip package'); ?> - 17 Aug 2006<br />
+  <?php download_link('php-4.4.5-Win32.zip', 'PHP 4.4.5 zip package'); ?> - 14 Feb 2007<br />
   (CGI binary plus server API versions for Apache, Apache2 (experimental),
   ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
   included, packaged as zip)<br />
-  <span class="md5sum">md5: 3ff3f58a2f573c80f34f2b670d7ac873</span>
- </li>
- <li>
-  <?php download_link('php-4.4.4-installer.exe', 'PHP 4.4.4 installer'); ?> - 17 Aug 2006<br />
-  (CGI only, MySQL support built-in, packaged as Windows installer to install
-  and configure PHP, and automatically configure IIS, PWS and Xitami, with
-  manual configuration for other servers. N.B. no external extensions
-  included)<br />
-  <span class="md5sum">md5: e5db53efb3e0fed5407fc7c71cf0b436</span>
+  <span class="md5sum">md5: c4197ede538cc911b04cdf3d7c0e37f1</span>
  </li>
 </ul>
 
