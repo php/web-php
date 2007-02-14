@@ -171,7 +171,6 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 	<li>Fixed unserialize() abuse on 64 bit systems with certain input strings.</li>
 	<li>Fixed possible overflows and stack corruptions in the session extension.</li>
 	<li>Fixed an underflow inside the internal sapi_header_op() function.</li>
-	<li>Fixed possible stack overflows inside zip, imap &amp; sqlite extensions.</li>
 	<li>Fixed non-validated resource destruction inside the shmop extension.</li>
 	<li>Fixed a possible overflow in the str_replace() function.</li>
 	<li>Fixed possible clobbering of super-globals in several code paths.</li>
@@ -187,7 +186,7 @@ site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headta
 	<li>Prevent search engines from indexing the phpinfo() page.</li>
 	<li>Fixed a number of input processing bugs inside the filter extension.</li>
 	<li>Fixed allocation bugs caused by attempts to allocate negative values in some code paths.</li>
-	<li>Fixed possible stack overflows inside zip, imap &amp; sqlite extensions.</li>
+	<li>Fixed possible stack/buffer overflows inside zip, imap &amp; sqlite extensions.</li>
 	<li>Fixed several possible buffer overflows inside the stream filters.</li>
 	<li>Memory limit is now enabled by default.</li>
 	<li>Added internal heap protection.</li>
