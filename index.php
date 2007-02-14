@@ -262,4 +262,8 @@ and PHP 5.2.0.
 
 <p class="center"><a href="/archive/index.php">News Archive</a></p>
 
-<?php site_footer();
+<?php
+site_footer(
+    array("rss" => "/news.rss") // Add a link to the feed at the bottom
+);
+

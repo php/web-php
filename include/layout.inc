@@ -225,6 +225,9 @@ function site_footer($config = array())
     global $LAST_UPDATED, $PAGE_COLUMNS;
     
     $stats         = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
+    $rsslink       = (isset($config["rss"]) ?
+        "<a href=\"{$config["rss"]}\">RSS</a> |" :
+        "");
     $viewsource    = (isset($_SERVER['BASE_PAGE']) ?
         "<a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a> |" :
         "");
@@ -244,7 +247,7 @@ function site_footer($config = array())
 {$layout_helper}</div>
 
 <div id="footnav">
- $viewsource
+ $rsslink $viewsource
  <a href="/credits.php">credits</a> |$stats
  <a href="/sitemap.php">sitemap</a> |
  <a href="/contact.php">contact</a> |

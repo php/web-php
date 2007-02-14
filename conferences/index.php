@@ -119,5 +119,7 @@ and get 1/3rd off the ticket price.  Regular price is $150CDN, early bird price 
 
 <?php
 // NO MORE NEWS TO PARSE
-site_footer();
+site_footer(
+    array("rss" => "/conferences/news.rss") // Add a link to the feed
+);
 
