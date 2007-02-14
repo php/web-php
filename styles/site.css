@@ -310,6 +310,9 @@ ul.simple li {
 }
 
 /* PHP source code highlighting ------------------------------------------- */
+phpcode {
+	padding: 0.5em
+}
 div.phpcode span.html {
 	color: black;
 	background-color: transparent;
@@ -652,15 +655,15 @@ h4.eventmonth {
 
 /* {{{ phpdoc examples */
 div.example, div.informalexample {
-	background-color: #eee;
-	border: 1px dotted #000;
+	background-color: #fff;
+	border: 1px solid #000;
 	text-align: left;
 }
 
 div.example p {
 	margin: 0px;
-	padding: 0px;
-	text-indent: 50px;
+	padding: 0.2em;
+	text-indent: 1em;
 	border-bottom: 1px dotted #000;
 }
 
