@@ -16,7 +16,7 @@ site_header("Download Logos");
 // Print recommended star cell
 function print_star()
 {
-    echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</a></td>\n";
+    echo "<td class=\"star\"><span class=\"star\" title=\"recommended\">*</span></td>\n";
 }
 
 // Provide a random bgcolor setting for a cell

@@ -437,7 +437,7 @@ site_header("News Archive - 2004");
 </p>
 
 <p>There are few changes changes since Release Candidate 2, which can be found
-<a href="/ChangeLog-5.php#5.0.0RC3">here</a>.</p>
+<a href="/ChangeLog-5.php#5.0.0RC3">here</a>.
 </p>
 
 <hr />

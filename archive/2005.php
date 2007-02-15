@@ -40,13 +40,13 @@ The complete details about all of the changes can be found in the
  The PHP development team is proud to announce the release of <a href="/downloads.php#v5">PHP 5.1.0</a>.<br />
  Some of the key features of PHP 5.1.0 include:
 <ul>
-<li>A complete rewrite of date handling code, with improved timezone support.
-<li>Significant performance improvements compared to PHP 5.0.X.
-<li>PDO extension is now enabled by default.
-<li>Over 30 new functions in various extensions and built-in functionality.
-<li>Bundled libraries, PCRE and SQLite upgraded to latest versions.
-<li>Over 400 various bug fixes.
-<li>PEAR upgraded to version 1.4.5
+<li>A complete rewrite of date handling code, with improved timezone support.</li>
+<li>Significant performance improvements compared to PHP 5.0.X.</li>
+<li>PDO extension is now enabled by default.</li>
+<li>Over 30 new functions in various extensions and built-in functionality.</li>
+<li>Bundled libraries, PCRE and SQLite upgraded to latest versions.</li>
+<li>Over 400 various bug fixes.</li>
+<li>PEAR upgraded to version 1.4.5</li>
 </ul>
 
 In addition to new features, this release includes a number of important

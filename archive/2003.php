@@ -51,7 +51,7 @@ site_header("News Archive - 2003");
 <h1>PHP Magazine in PDF Format</h1>
 <p>
  <span class="newsdate">[15-Dec-2003]</span>
- <a href="http://software-support.biz/en">Software & Support Media</a>,
+ <a href="http://software-support.biz/en">Software &amp; Support Media</a>,
  producers of the <a href="http://www.phpconference.de/2003/index_en.php">International
  PHP Conference</a>, are pleased to announce a new monthly version of their
  print publication, the "<a href="http://www.php-mag.net/">International
