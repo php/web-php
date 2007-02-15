@@ -66,7 +66,7 @@ function random_bgcolor($min, $max)
 </p>
 
 <p>
- The images marked with a <span class="star" title="recommended">*</a> are
+ The images marked with a <span class="star" title="recommended">*</span> are
  the images we recommend to display on your website, in case you are unable
  to choose from the formats. Note however, that some combinations of
  browser/operating system don't handle transparent PNG images very well.
