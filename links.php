@@ -757,7 +757,7 @@ dead domain as 2007/02/07
   <strong>Portuguese</strong>
   <ul>
    <li>
-    <a href="http://www.php-pt.net/">portuguese php users group</a><br />
+    <a href="http://www.php-pt.com/">portuguese php users group</a><br />
     The site intends to help, support, and guide all portuguese php users.
    </li>
   </ul>
