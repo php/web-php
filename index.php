@@ -204,7 +204,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
         }
         echo "    </ul>\n";
     }
-    echo "  </div>\n";
+    echo "  </div><hr />\n";
 }
 
 
