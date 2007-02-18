@@ -2,6 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
 // Try to make this page non-cached
 header_nocache();
@@ -74,43 +75,36 @@ site_header("Downloads");
 ?>
 
 <a name="v5"></a>
-<h1>PHP 5.2.1</h1>
+<h1>PHP <?php list($v, $a) = each($RELEASES[5]); echo $v ?></h1>
 
 <h2>Complete Source Code</h2>
 <ul>
- <li>
-  <?php download_link('php-5.2.1.tar.bz2', 'PHP 5.2.1 (tar.bz2)'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: 261218e3569a777dbd87c16a15f05c8d</span>
- </li>
- <li>
-  <?php download_link('php-5.2.1.tar.gz', 'PHP 5.2.1 (tar.gz)'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: 604eaee2b834bb037d2c83e53e300d3f</span>
- </li>
+<?php
+foreach($a["source"] as $rel) {
+    echo " <li>\n  ";
+    download_link($rel["filename"], $rel["name"]); echo " -  {$rel["date"]}<br />\n";
+    echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
+    (isset($rel["note"]) ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
+    echo " </li>\n";
+}
+?>
 </ul>
 
 <h2>Windows Binaries</h2>
 <ul>
- <li>
-  <?php download_link('php-5.2.1-Win32.zip', 'PHP 5.2.1 zip package'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: 682dd66fb03c7dd24c522f474e1b04b6</span>
- </li>
- <li>
-  <?php download_link('php-5.2.1-win32-installer.msi', 'PHP 5.2.1 installer'); ?> - 12 Feb 2007<br />
-  <span class="md5sum">md5: f0a1445f4adfdc2e00a81b2eb788be5c</span>
-  <p><strong>Note:</strong> This file was updated February 12th to fix problems when upgrading from previous PHP versions.</p>
- </li>
- <li>
-  <?php download_link('pecl-5.2.1-Win32.zip', 'PECL 5.2.1 Win32 binaries'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: dc8b394146faf7effa6f26df02e8e534</span>
- </li>
- <li>
-  <?php download_link('php-5.2.1-nts-Win32.zip', 'PHP 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: 815c8c61af58fffdc34d34c24310ffe2</span>
- </li>
- <li>
-  <?php download_link('pecl-5.2.1-nts-Win32.zip', 'PECL 5.2.1 Non-thread-safe Win32 binaries'); ?> - 08 Feb 2007<br />
-  <span class="md5sum">md5: ffd78a31a704d68c8adadc9288261583</span>
- </li>
+<?php
+if(isset($a["windows"])) {
+    foreach($a["windows"] as $rel) {
+        echo " <li>\n  ";
+        download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
+        echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
+        echo isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
+        echo " </li>\n";
+    }
+} else {
+    echo "<li>The Windows binaries and installer will follow shortly.</li>\n";
+}
+?>
 </ul>
 
 <p>
@@ -123,18 +117,19 @@ site_header("Downloads");
 
 
 <a name="v4"></a>
-<h1>PHP 4.4.5</h1>
+<h1>PHP <?php list($v, $a) = each($RELEASES[4]); echo $v ?></h1>
 
 <h2>Complete Source Code</h2>
 <ul>
- <li>
-  <?php download_link('php-4.4.5.tar.bz2','PHP 4.4.5 (tar.bz2)'); ?> - 14 Feb 2007<br />
-  <span class="md5sum">md5: bf61d557c82962dc9533f6ef35283d4c</span>
- </li>
- <li>
-  <?php download_link('php-4.4.5.tar.gz', 'PHP 4.4.5 (tar.gz)');  ?> - 14 Feb 2007<br />
-  <span class="md5sum">md5: cfc1d47cdc7c1bfd27666abb8fe97a45</span>
- </li>
+<?php
+foreach($a["source"] as $rel) {
+    echo " <li>\n  ";
+    download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
+    echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
+    (isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "");
+    echo " </li>\n";
+}
+?>
 </ul>
 
 <p>
@@ -151,19 +146,19 @@ site_header("Downloads");
 </p>
 
 <ul>
-<!--
- <li>
-  The Windows binaries and installer will follow shortly.
- </li>
--->
-
- <li>
-  <?php download_link('php-4.4.5-Win32.zip', 'PHP 4.4.5 zip package'); ?> - 14 Feb 2007<br />
-  (CGI binary plus server API versions for Apache, Apache2 (experimental),
-  ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions
-  included, packaged as zip)<br />
-  <span class="md5sum">md5: c4197ede538cc911b04cdf3d7c0e37f1</span>
- </li>
+<?php
+if(isset($a["windows"])) {
+    foreach($a["windows"] as $rel) {
+        echo " <li>\n  ";
+        download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
+        echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
+        echo isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
+        echo " </li>\n";
+    }
+} else {
+    echo "<li>The Windows binaries follow shortly.</li>\n";
+}
+?>
 </ul>
 
 <?php site_footer(); ?>
