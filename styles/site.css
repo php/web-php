@@ -199,6 +199,36 @@ ul.simple li {
 	font-size: smaller;
 }
 
+/* {{{ Latest conference announcements on the frontpage */
+#confTeaser {
+	border: 1px dotted #ddd;
+	padding: 10px 0;
+	margin: 0;
+	background-color: #eee;
+}
+
+#confTeaser ul {
+	margin: 0;
+	padding: 0;
+}
+
+#confTeaser ul li {
+	background-color: #eee;
+	padding: 0 2px;
+	margin: 0;
+	display: inline;
+	font-size: smaller;
+}
+#confTeaser ul.cfp:before {
+	font-size: smaller;
+	content: "CFP:";
+}
+#confTeaser ul.conference:before {
+	font-size: smaller;
+	content: "Conferences:";
+}
+/* }}} */
+
 #leftbar p, #leftbar h3, #rightbar p, #rightbar h3 {
 	margin-top: 0;
 	margin-bottom: 1em;

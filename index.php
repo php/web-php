@@ -19,8 +19,9 @@ $timestamps = array(@getlastmod());
 */
 $timestamps[] = @filemtime("include/prepend.inc");
 
-// Calendar is the only "dynamic" feature on this page
+// Calendar & conference teasers are the only "dynamic" features on this page
 $timestamps[] = @filemtime("include/pregen-events.inc");
+$timestamps[] = @filemtime("include/pregen-confs.inc");
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
@@ -42,6 +43,7 @@ else {
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
 
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
@@ -141,6 +143,23 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
 
 // Write out common header
 site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
+
+if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
+    echo '  <div id="confTeaser">' . "\n";
+    foreach($CONF_TEASER as $k => $a) {
+        echo '    <ul class="' .$k. '">' . "\n";
+        $count = 0;
+        foreach($a as $url => $title) {
+            if ($count++ >= 4) {
+                break;
+            }
+            echo '      <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
+        }
+        echo "    </ul>\n";
+    }
+    echo "  </div>\n";
+}
+
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
