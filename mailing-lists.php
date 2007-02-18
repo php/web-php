@@ -299,13 +299,11 @@ function output_lists_table($mailing_lists)
 
 <form method="post" action="/mailing-lists.php">
 
-<h2>General Mailing Lists</h2>
-<a name="general"></a>
+<h2 id="general">General Mailing Lists</h2>
 
 <?php output_lists_table($general_mailing_lists); ?>
 
-<h2>Internals Mailing Lists</h2>
-<a name="internals"></a>
+<h2 id="internals">Internals Mailing Lists</h2>
 
 <?php output_lists_table($internals_mailing_lists); ?>
 
