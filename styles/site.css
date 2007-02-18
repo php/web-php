@@ -51,6 +51,39 @@ img {
 	border: 0px;
 }
 
+/* {{{ The "latest releases" box on the top right */
+#releaseBox, #candidateBox {
+	border : 1px dotted #000;
+	margin : 0 0 5px 0;
+	padding: 2px;
+}
+#releaseBox h4, #candidateBox h4 {
+	border: 1px solid #000;
+	border-width: 0px 0px 1px 0px;
+	background-color: #d3d3d3;
+	margin : 0;
+	padding: 2px;
+}
+#releaseBox h4 {
+	color: #080;
+}
+#candidateBox h4 {
+	color: #C70;
+}
+ol#releases, ol#candidates {
+	margin : 0;
+	padding: 0;
+}
+ol#releases li, ol#candidates li{
+	list-style-type: none;
+	display: inline;
+	font-size: smaller;
+}
+ol#releases li span.release {
+	font-weight: bold;
+}
+/* }}} */
+
 /* {{{ Errors, warning, tips classes */
 p.formerror, p.warn {
 	border: 1px solid #666600;

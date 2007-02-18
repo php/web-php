@@ -19,9 +19,10 @@ $timestamps = array(@getlastmod());
 */
 $timestamps[] = @filemtime("include/prepend.inc");
 
-// Calendar & conference teasers are the only "dynamic" features on this page
+// Calendar, conference teasers & latest releaes box are the only "dynamic" features on this page
 $timestamps[] = @filemtime("include/pregen-events.inc");
 $timestamps[] = @filemtime("include/pregen-confs.inc");
+$timestamps[] = @filemtime("include/version.inc");
 
 // The latest of these modification dates is our real Last-Modified date
 $timestamp = max($timestamps);
@@ -44,6 +45,7 @@ $_SERVER['BASE_PAGE'] = 'index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
 // This goes to the left sidebar of the front page
 $SIDEBAR_DATA = '
@@ -138,8 +140,53 @@ if (is_official_mirror()) {
     }
 }
 
-// Prepend mirror image to sidebar text
-$RSIDEBAR_DATA = $MIRROR_IMAGE . $RSIDEBAR_DATA;
+/* {{{ Generate latest release info */
+$PHP_5_STABLE = $PHP_4_STABLE = array();
+$PHP_5_RC     = $PHP_4_RC     = "";
+$rel          = $rc           = "";
+
+list($PHP_5_STABLE, ) = each($RELEASES[5]);
+list($PHP_4_STABLE, ) = each($RELEASES[4]);
+
+$rel = <<< EOT
+  <div id="releaseBox">
+   <h4>Stable Releases</h4>
+   <ol id="releases">
+    <li class="php5"><a href="/downloads.php#v5">Current PHP 5 Stable: <span class="release">$PHP_5_STABLE</span></a></li>
+    <li class="php5"><a href="/downloads.php#v4">Current PHP 4 Stable: <span class="release">$PHP_4_STABLE</span></a></li>
+   </ol>
+  </div>\n
+EOT;
+
+/* Do we have any release candidates to brag about? */
+if (count($RELEASES[5]>1)) {
+    list($PHP_5_RC, ) = each($RELEASES[5]);
+
+    if (!empty($PHP_5_RC)) {
+        $rc .= "    <li class=\"php5\"><a href=\"http://qa.php.net/#v5\">Current PHP 5 RC: <span class=\"release\">$PHP_5_RC</span></a></li>\n";
+    }
+}
+if (count($RELEASES[4]>1)) {
+    list($PHP_4_RC, ) = each($RELEASES[4]);
+
+    if (!empty($PHP_4_RC)) {
+        $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/#v4\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
+    }
+}
+if (!empty($rc)) {
+	$rel .= <<< EOT
+  <div id="candidateBox">
+   <h4>Release Candidates</h4>
+   <ol id="candidates">
+$rc
+   </ol>
+  </div>\n
+EOT;
+}
+/* }}} */
+
+// Prepend mirror image & latest releases to sidebar text
+$RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 
 // Write out common header
 site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
