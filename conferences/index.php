@@ -19,6 +19,7 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 ?>
 
 <a name="6"></a>
+<!-- SUBJECT: conference -->
 <?php news_image("http://conf.phpquebec.com/en/conf2007/", "conference_php_quebec.gif ", "PHP Québec conference"); ?>
 <h1>PHP Québec conference 2007</h1>
 <p>
@@ -45,6 +46,7 @@ contributors.
 <hr />
 
 <a name="5"></a>
+<!-- SUBJECT: cfp -->
 <?php news_image("http://conferences.oreillynet.com/os2007/", "os2007.gif", "OSCON Open Source Convention"); ?>
 <h1> O'Reilly OSCON call for papers</h1>
 <p>
@@ -56,6 +58,7 @@ in Portland, Oregon, and has a PHP track as usual. The Call for Papers closes Mo
 <hr />
 
 <a name="4"></a>
+<!-- SUBJECT: cfp -->
 <?php news_image("http://phpconference.com/", "intcon2007spring.png", "International PHP Conference 2007 Spring Edition"); ?>
 <h1>International PHP Conference 2007 Spring Edition : Call for Paper</h1>
 <p>
@@ -76,6 +79,7 @@ Christopher Kunz and Sebastian Meyen. The language for talks is both English and
 <hr />
 
 <a name="3"></a>
+<!-- SUBJECT: conference -->
 <?php news_image("http://www.phpconference.co.uk/", "phplondon2007.png", "PHP London 2007"); ?>
 <h1>PHP London 2007</h1>
 <p>
@@ -86,6 +90,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 <hr />
 
 <a name="2"></a>
+<!-- SUBJECT: conference -->
 <?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
 <h1>php|tek 2007</h1>
 <p>
@@ -99,6 +104,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 <hr />
 
 <a name="1"></a>
+<!-- SUBJECT: conference -->
 <?php news_image("http://vancouver.php.net/", "vancouver_conference_2007.gif", "PHP Vancouver 2007"); ?>
 <h1>Vancouver PHP Conference</h1>
 <p>
