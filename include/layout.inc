@@ -126,6 +126,13 @@ function site_header($title = '', $config = array())
         $moreheadtags = "\n " . ((string)$config['headtags']);
       }
     } 
+    $classname = "default";
+    if(isset($_SERVER['BASE_PAGE'])) {
+        $classname = dirname($_SERVER['BASE_PAGE']);
+        if(empty($classname)) {
+            $classname = "default";
+        }
+    }
 
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -214,7 +221,7 @@ END_HEADER;
     }
 
     // Start main page content
-    echo "\n <div id=\"content\">\n";
+    echo "\n <div id=\"content\" class=\"$classname\">\n";
 }
 
 // Stats pages still need this
