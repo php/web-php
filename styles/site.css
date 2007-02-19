@@ -272,7 +272,7 @@ ul.simple li {
 	font-size: small;
 }
 
-#layout_1 #content {
+#layout_1 #content.conferences {
 	margin-left: 310px;
 }
 #layout_2 #content, #layout_3 #content {
