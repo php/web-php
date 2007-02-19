@@ -269,6 +269,10 @@ ul.simple li {
 	font-size: smaller;
 }
 
+#rightbar h3 {
+	font-size: smaller;
+}
+
 #layout_2 #content, #layout_3 #content {
 	margin-left: 196px;
 }
