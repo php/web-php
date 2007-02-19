@@ -225,7 +225,6 @@ ul.simple li {
 	float: left;
 	width: 300px;
 	border-right: 1px dotted #000;
-	margin: 0 10px 0 0;
 	padding: 0 0 0 5px;
 	background-color: #efefef;
 	font-size: smaller;
@@ -273,6 +272,9 @@ ul.simple li {
 	font-size: small;
 }
 
+#layout_1 #content {
+	margin-left: 310px;
+}
 #layout_2 #content, #layout_3 #content {
 	margin-left: 196px;
 }
