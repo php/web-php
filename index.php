@@ -192,9 +192,10 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
 
 if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
+    $categories = array("conference" => "Conferences", "cfp" => "CfP");
     echo '  <div id="confTeaser">' . "\n";
     foreach($CONF_TEASER as $k => $a) {
-        echo '    <ul class="' .$k. '">' . "\n";
+        echo '    <p>'.$categories[$k].':</p> <ul class="' .$k. '">' . "\n";
         $count = 0;
         foreach($a as $url => $title) {
             if ($count++ >= 4) {
@@ -202,7 +203,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
             }
             echo '      <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
         }
-        echo "    </ul>\n";
+        echo "    </ul><br />\n";
     }
     echo "  </div><hr />\n";
 }

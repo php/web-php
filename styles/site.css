@@ -76,8 +76,7 @@ ol#releases, ol#candidates {
 }
 ol#releases li, ol#candidates li{
 	list-style-type: none;
-	display: inline;
-	font-size: smaller;
+	font-size: .9em;
 }
 ol#releases li span.release {
 	font-weight: bold;
@@ -238,11 +237,17 @@ ul.simple li {
 	padding: 10px 0;
 	margin: 0;
 	background-color: #eee;
+	font-size: small;
+}
+
+#confTeaser p {
+	display: inline;
 }
 
 #confTeaser ul {
 	margin: 0;
 	padding: 0;
+	display: inline;
 }
 
 #confTeaser ul li {
@@ -250,15 +255,6 @@ ul.simple li {
 	padding: 0 2px;
 	margin: 0;
 	display: inline;
-	font-size: smaller;
-}
-#confTeaser ul.cfp:before {
-	font-size: smaller;
-	content: "CFP:";
-}
-#confTeaser ul.conference:before {
-	font-size: smaller;
-	content: "Conferences:";
 }
 /* }}} */
 
