@@ -60,7 +60,7 @@ in Portland, Oregon, and has a PHP track as usual. The Call for Papers closes Mo
 <a name="4"></a>
 <!-- SUBJECT: cfp -->
 <?php news_image("http://phpconference.com/", "intcon2007spring.png", "International PHP Conference 2007 Spring Edition"); ?>
-<h1>International PHP Conference 2007 Spring Edition : Call for Paper</h1>
+<h1>International PHP Conference 2007 Spring Edition : Call for Papers</h1>
 <p>
  <span class="newsdate">[24-Jan-2007]</span>
 The International PHP Conference 2007 Spring Edition will happen from May, 21st to 23rd 2007
