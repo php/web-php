@@ -196,7 +196,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
     echo '  <div id="confTeaser">' . "\n";
     echo "   <table>\n";
     foreach($CONF_TEASER as $k => $a) {
-        echo "    <tr>\n     <td valign='top'".$categories[$k].":</td>\n";
+        echo "    <tr>\n     <td valign='top' style='white-space: nowrap'>".$categories[$k].":</td>\n";
         echo "     <td valign='top'>\n";
         echo '      <ul class="' .$k. '">' . "\n";
         $count = 0;
