@@ -196,18 +196,20 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
     echo '  <div id="confTeaser">' . "\n";
     echo "   <table>\n";
     foreach($CONF_TEASER as $k => $a) {
-        echo "    <tr>\n     <td valign='top' style='white-space: nowrap'>".$categories[$k].":</td>\n";
-        echo "     <td valign='top'>\n";
-        echo '      <ul class="' .$k. '">' . "\n";
-        $count = 0;
-        $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
-        foreach($a as $url => $title) {
-            if ($count++ >= 4) {
-                break;
+        if (is_array($a) && count($a)) {
+            echo "    <tr>\n     <td valign='top' style='white-space: nowrap'>".$categories[$k].":</td>\n";
+            echo "     <td valign='top'>\n";
+            echo '      <ul class="' .$k. '">' . "\n";
+            $count = 0;
+            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
+            foreach($a as $url => $title) {
+                if ($count++ >= 4) {
+                    break;
+                }
+                echo '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
             }
-            echo '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
-        }
-        echo "      </ul>\n     </td>\n    </tr>\n";
+            echo "      </ul>\n     </td>\n    </tr>\n";
+        } // if set
     }
     echo "   </table>\n  </div>\n\n<br />\n";
 }
