@@ -53,26 +53,28 @@ img {
 
 /* {{{ The "latest releases" box on the top right */
 #releaseBox, #candidateBox {
-	border : 1px dotted #000;
+	border : 1px dotted #999;
 	margin : 0 0 5px 0;
 	padding: 2px;
 }
 #releaseBox h4, #candidateBox h4 {
 	border: 1px solid #000;
-	border-width: 0px 0px 1px 0px;
+	border-width: 0px 1px 1px 0px;
 	background-color: #d3d3d3;
 	margin : 0;
 	padding: 2px;
 }
 #releaseBox h4 {
-	color: #080;
+/*	color: #080; */
 }
 #candidateBox h4 {
-	color: #C70;
+/*	color: #C70; */
 }
 ol#releases, ol#candidates {
 	margin : 0;
-	padding: 0;
+	padding: 0 1px 0 2px;
+	background-color: white;
+	border-bottom: 1px solid white;
 }
 ol#releases li, ol#candidates li{
 	list-style-type: none;
@@ -232,7 +234,7 @@ ul.simple li {
 
 /* {{{ Latest conference announcements on the frontpage */
 #confTeaser {
-	border: 1px dotted #ddd;
+	border: 1px dotted #999;
 	padding: 10px 0;
 	margin: 0;
 	background-color: #eee;

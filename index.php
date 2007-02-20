@@ -192,22 +192,25 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
 
 if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
-    $categories = array("conference" => "Conferences", "cfp" => "CfP");
+    $categories = array("conference" => "Conferences", "cfp" => "Calling for papers");
     echo '  <div id="confTeaser">' . "\n";
+    echo "   <table>\n";
     foreach($CONF_TEASER as $k => $a) {
-        echo '    <p>'.$categories[$k].':</p> <ul class="' .$k. '">' . "\n";
+        echo "    <tr>\n     <td valign='top'".$categories[$k].":</td>\n";
+        echo "     <td valign='top'>\n";
+        echo '      <ul class="' .$k. '">' . "\n";
         $count = 0;
+        $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
         foreach($a as $url => $title) {
             if ($count++ >= 4) {
                 break;
             }
-            echo '      <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
+            echo '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
         }
-        echo "    </ul><br />\n";
+        echo "      </ul>\n     </td>\n    </tr>\n";
     }
-    echo "  </div><hr />\n";
+    echo "   </table>\n  </div>\n\n<br />\n";
 }
-
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
