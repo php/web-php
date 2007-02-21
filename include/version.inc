@@ -8,7 +8,7 @@
  *                 "name"     => "package name",
  *                 "md5"      => "crc32, right?",
  *                 "date"     => "this files release date",
- *                 "notes"    => "this file was updated 29feb due to broken phar files..",
+ *                 "note"     => "this file was updated 29feb due to broken phar files..",
  *             ),
  *             "announcement" => "bool, release announcement exists in releases/?"
  *         ),
@@ -64,7 +64,7 @@ $RELEASES = array(
                     "name"     => "PECL 5.2.1 Non-thread-safe Win32 binaries",
                     "md5"      => "ffd78a31a704d68c8adadc9288261583",
                     "date"     => "08 Feb 2007",
-                    "note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_zip.dll, etc.)",
+                    "note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_ssh2.dll, etc.)",
                 ),
             ),
         ),
