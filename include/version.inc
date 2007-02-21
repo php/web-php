@@ -1,4 +1,4 @@
-<?php
+<?php // vim: et
 /* The format is:
  * array(
  *     "major release number" => array(
@@ -10,6 +10,7 @@
  *                 "date"     => "this files release date",
  *                 "notes"    => "this file was updated 29feb due to broken phar files..",
  *             ),
+ *             "announcement" => "bool, release announcement exists in releases/?"
  *         ),
  *     ),
  * );
@@ -17,6 +18,7 @@
 $RELEASES = array(
     5 => array(
         "5.2.1" => array(
+            "announcement" => true,
             "source" => array(
                 array(
                     "filename" => "php-5.2.1.tar.bz2",
@@ -69,6 +71,7 @@ $RELEASES = array(
     ),
     4 => array(
         "4.4.5" => array(
+            "announcement" => true,
             "source" => array(
                 array(
                     "filename" => "php-4.4.5.tar.bz2",

@@ -1,4 +1,4 @@
-<?php
+<?php // vim: et
 // $Id$
 $_SERVER['BASE_PAGE'] = 'downloads.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
@@ -132,10 +132,17 @@ foreach($a["source"] as $rel) {
 ?>
 </ul>
 
+<?php
+$announce_text = ".";
+if($a["announcement"]) {
+    $file = str_replace(".", "_", $v);
+    $announce_text = ', or the <a href="/releases/' .$file. '.php">release notes</a> for'
+                   . ' more information on this particular release.';
+}
+?>
 <p>
  See the <a href="/ChangeLog-4.php">ChangeLog</a> for a complete list of
- changes, or the <a href="/release_4_4_5.php">release notes</a> for more
- information on this particular release.
+ changes<?php echo $announce_text;?>
 </p>
 
 <h2>Windows Binaries</h2>
