@@ -97,7 +97,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-        //"4.4.6RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
+        "4.4.6RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
     ),
 );
 
