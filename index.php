@@ -163,14 +163,14 @@ if (count($RELEASES[5]>1)) {
     list($PHP_5_RC, ) = each($RELEASES[5]);
 
     if (!empty($PHP_5_RC)) {
-        $rc .= "    <li class=\"php5\"><a href=\"http://qa.php.net/#v5\">Current PHP 5 RC: <span class=\"release\">$PHP_5_RC</span></a></li>\n";
+        $rc .= "    <li class=\"php5\"><a href=\"http://qa.php.net/rc.php\">Current PHP 5 RC: <span class=\"release\">$PHP_5_RC</span></a></li>\n";
     }
 }
 if (count($RELEASES[4]>1)) {
     list($PHP_4_RC, ) = each($RELEASES[4]);
 
     if (!empty($PHP_4_RC)) {
-        $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/#v4\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
+        $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/rc.php\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
     }
 }
 if (!empty($rc)) {
