@@ -74,6 +74,21 @@ make livedocs more generic (i.e. not so phpdoc specific), etc... (your imaginati
 <br/>
 <strong>Possible mentor(s)</strong>: (not yet assigned)</p>
 
+<hr/>
+
+<a name="other"></a>
+<h2>Other</h2>
+
+<h3>Support for Mutation Testing in PHPUnit</h3>
+<p><strong>Description</strong>: <a href="http://en.wikipedia.org/wiki/Mutation_testing">Mutation Testing</a>,
+or Automated Error Seeding, is an approach where the testing tool makes some
+change to the tested code, runs the tests, and if the tests pass displays a
+message saying what it changed. This approach is different than code coverage
+analysis, because it can find code that is executed by the running of tests but
+not actually tested. It is not meant as a replacement for code coverage analysis,
+but complementary.<br/>More information can be found
+<a href="http://www.phpunit.de/wiki/Ideas#SupportforMutationTesting">here</a>.
+<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:sebastian@php.net">Sebastian Bergmann</a></p>
 
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
