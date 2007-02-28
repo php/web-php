@@ -3,7 +3,7 @@ if(!$conf=apc_fetch('ws_config')) {
   include '/local/Web/ws.conf';
   apc_store('ws_config',$conf);
 }
-$raw = input_get(INPUT_GET, 'q', FILTER_UNSAFE_RAW);
+$raw = filter_input(INPUT_GET, 'q', FILTER_UNSAFE_RAW);
 $q = urlencode($raw);
 $r = isset($_REQUEST['results']) ? (int)$_REQUEST['results'] : 10;
 $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
