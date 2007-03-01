@@ -9,7 +9,7 @@ site_header("PHP 4.4.6 Release Announcement");
 <p>
 The PHP development team would like to announce the immediate availability of
 PHP 4.4.6.  This release addresses a crash problem with the session extension
-when register_globals is turned on that was introduced in PHP 4.4.6. This
+when register_globals is turned on that was introduced in PHP 4.4.5. This
 release comes also with the new version 7.0 of PCRE and it addresses a number
 of minor bugs.
 </p>
