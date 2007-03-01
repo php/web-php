@@ -720,6 +720,85 @@ h4.eventmonth {
 	border-width: 0px 0px 1px 0px;
 }
 
+
+/* {{{ Security Respons section */
+#content.security {
+	width: 610px;
+}
+#content.security .record {
+	width: 550px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px 0px;
+	padding: 5px;
+}
+#content.security .record .id,
+#content.security .record .date, 
+#content.security .record .range {
+	float: left;
+}
+#content.security .record .date {
+	text-indent: 5px;
+	width: 105px;
+}
+#content.security .record .id {
+	width: 90px;
+}
+#content.security .record .range {
+	width: 55px;
+}
+#content.security .record .affects {
+	font-weight: bold;
+}
+#content.security .record .summary {
+	text-indent: 10px;
+	padding: 3px 0px;
+}
+#content.security .low {
+	background-color: yellow;
+}
+#content.security .medium {
+	background-color: #f90;
+}
+#content.security .critical {
+	background-color: #FF0000;
+}
+#content ul.colors {
+	width: 150px;
+}
+#content ul.colors li {
+	text-indent: 10px;
+}
+
+/* Single records */
+#content.security .singlerecord {
+	text-align: left;
+	font-size: 1.1em;
+	width: 650px;
+}
+#content.security .singlerecord .title {
+	float: left;
+	font-weight: bold;
+	width: 150px;
+	text-indent: 10px;
+}
+#content.security .singlerecord .reporter,
+#content.security .singlerecord .references {
+	margin: 0 0 10px 0;
+}
+#content.security .description .title {
+	border-style: solid;
+	border-color: black;
+	border-width: 0px 0px 0px 0px;
+}
+#content.security .description .data {
+	float: left;
+	text-indent: 20px;
+	padding: 5px;
+	width: 650px;
+}
+/* }}} */
+
 /* {{{ phpdoc examples */
 div.example, div.informalexample {
 	background-color: #fff;
