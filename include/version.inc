@@ -30,12 +30,12 @@ $PHP_5_MD5     = array(
 );
 
 /* PHP 4 Release */
-$PHP_4_VERSION = "4.4.5";
-$PHP_4_DATE    = "14 Feb 2007";
+$PHP_4_VERSION = "4.4.6";
+$PHP_4_DATE    = "01 Mar 2007";
 $PHP_4_MD5     = array(
-                       "tar.bz2"   => "bf61d557c82962dc9533f6ef35283d4c",
-                       "tar.gz"    => "cfc1d47cdc7c1bfd27666abb8fe97a45",
-                       "zip"       => "c4197ede538cc911b04cdf3d7c0e37f1",
+                       "tar.bz2"   => "5db283824310c87efb18c76b4735c4bd",
+                       "tar.gz"    => "07c607fcf12435f0078d72fe0de4e3c0",
+                       "zip"       => "486764cefb5f7bde39e95c49b2e38635",
 );
 
 $RELEASES = array(
@@ -120,7 +120,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-        "4.4.6RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
+//        "4.4.6RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
     ),
 );
 

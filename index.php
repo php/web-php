@@ -217,6 +217,25 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="5"></a>
+<h1>PHP 4.4.6 Released</h1>
+<p>
+ <span class="newsdate">[01-Mar-2007]</span>
+  The PHP development team would like to announce the immediate <a
+  href="/downloads.php#v4">availability of PHP 4.4.6</a>.
+
+  The main issue that this release addresses is a crash problem that was
+  introduced in PHP 4.4.5.  The problem occurs when session variables are used
+  while register_globals is enabled.
+  
+  Details about the PHP 4.4.6 release can be found in the <a
+  href="/releases/4_4_6.php">release announcement for 4.4.6</a>, the full list
+  of changes is available in the <a href="/ChangeLog-4.php#4.4.6">ChangeLog for
+  PHP 4</a>.
+</p>
+
+<hr />
+
 <a name="4"></a>
 <h1>PHP 5.2.1 and PHP 4.4.5 Released</h1>
 <p>

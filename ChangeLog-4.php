@@ -11,6 +11,21 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.6"></a>
+<h3>Version 4.4.6</h3>
+<b>01-Mar-2007</b>
+<ul>
+<li>Updated PCRE to version 7.0.</li>
+<li>Fixed segfault in ext/session when register_globals=On.</li>
+<li><?php bugfix(40635); ?> (segfault in cURL extension).</li>
+<li><?php bugfix(40611); ?> (possible cURL memory error).</li>
+<li><?php bugfix(40578); ?> (imagettftext() multithreading issue).</li>
+<li><?php bugfix(40502); ?> (ext/interbase compile failure).</li>
+<li><?php bugfix(40286); ?> (PHP fastcgi with PHP_FCGI_CHILDREN don't kill children when parent is killed).</li>
+</ul>
+
+<hr />
+
 <a name="4.4.5"></a>
 <h3>Version 4.4.5</h3>
 <b>14-Feb-2007</b>
