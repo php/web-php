@@ -25,6 +25,8 @@ myphpnet_load();
 
 // Put the magic quotes setting to $MQ
 $MQ = (boolean) get_magic_quotes_gpc();
+// Turn off runtime magic quoting
+set_magic_quotes_runtime(0);
 
 // Check for APC support
 $APC = function_exists('apc_store');
