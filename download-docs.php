@@ -73,12 +73,14 @@ $formats = array(
   tool you use does otherwise.
  </li>
  <li>
+  <p class="warn">
   If you are using Microsoft Internet Explorer under Windows XP SP2 or
   later and you are going to download the documentation in CHM
   format, you should "unblock" the file after downloading it, by
   right-clicking on it and selecting the properties menu item. Then click
   on the 'Unblock' button. Failing to do this may lead to errors
   in the visualization of the file, due to a Microsoft bug.
+  </p>
  </li>
 </ul>
 
