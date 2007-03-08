@@ -92,7 +92,7 @@ After the success of 2006 the <a href="http://www.phplondon.org/">PHP London use
 <a name="2"></a>
 <!-- SUBJECT: conference -->
 <?php news_image("http://www.phparch.com/tek", "phptek2007.png", "php|tek 2007"); ?>
-<h1>php|tek 2007</h1>
+<h1>Chicago php|tek 2007</h1>
 <p>
  <span class="newsdate">[12-Jan-2007]</span>
  php|architect is proud to announce <a href="http://www.phparch.com/tek">php|tek 2007</a>, which will take place in Chicago, Illinois (USA) on May 16-18, 2007.
