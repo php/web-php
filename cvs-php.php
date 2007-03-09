@@ -245,7 +245,7 @@ EOT;
 </p>
 
 <p>
- If you wish to contribute to the docmentation please contact the translation
+ If you wish to contribute to the documentation please contact the translation
  team for the language you wish to help with. If you have trouble finding the
  team, ask on the phpdoc mailing list. Once you have made contact you may
  apply for a CVS account here by including the name of one or more people from
@@ -291,7 +291,7 @@ EOT;
  <em>NOT</em> need a CVS account to learn PHP, to use PHP or to in any way do
  anything at all with PHP. If you are sitting there wondering if you need a
  CVS account, then you don't! If an existing CVS account holder suggested you
- request an account, please mention their cvs id in the request.
+ request an account, please mention their CVS id in the request.
 </p>
 
 <?php

@@ -243,7 +243,7 @@ $minute = rand(0, 59);
  Change the DocumentRoot and include_path settings as appropriate,
  specify the mirror's preferred language, and provide settings according
  to your stats setup, if your mirror is going to provide it. For the
- preferred language setting, choose one from those avilable as
+ preferred language setting, choose one from those available as
  manual translations. If you provide something else, your default
  language will be English. After you restart Apache, your mirror
  site should start working.
@@ -336,7 +336,7 @@ $minute = rand(0, 59);
  to be nonfunctional for our users. Mirror sites inaccessible for more than
  three days, not updated for more than seven days, or having any major error in
  their setup are removed automatically from the listing for our user's
- convinience. We send out a notification to all automatically disabled mirror
+ convenience. We send out a notification to all automatically disabled mirror
  site owners every week.
 </li>
 </ul>

@@ -12,7 +12,7 @@ $SIDEBAR_DATA = '
 
 <h3>PHP licensed software</h3>
 <p>
- Additionaly to these links, we have a 
+ Additionally to these links, we have a 
  <a href="/software">list of software</a> available under
  the PHP license.
 </p>
@@ -517,7 +517,7 @@ PHP Service is gone
   <ul>
    <li>
     <a href="http://www.phpe.net/">Exceed PHP</a><br />
-    Opensource site with PHP, MySQL and Apache tutorials, articles
+    Open Source site with PHP, MySQL and Apache tutorials, articles
     and scripts
    </li>
   </ul>

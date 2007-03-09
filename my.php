@@ -138,7 +138,7 @@ foreach ($langinfo as $lin => $lid) {
 </div>
 
 <p>
- These settings are only overriden in case you have passed a language
+ These settings are only overridden in case you have passed a language
  setting URL parameter or POST data to a page or you are viewing a manual
  page in a particular language. In these cases, the explicit specification
  overrides the language selected from the above list.

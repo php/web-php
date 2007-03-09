@@ -8,7 +8,7 @@ $SIDEBAR_DATA = '
  <a href="http://www.elroubio.net/">Vincent Pontier</a> also made some
  really neat PHP artwork, for the French PHP sites, and for the benefit
  of the whole community. You can download some of his works and use
- under a GPL licence.
+ under a GPL license.
 </p>
 ';
 site_header("Download Logos");

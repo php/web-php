@@ -18,7 +18,7 @@ site_header("Getting Help");
 <p>
  Books are convenient resources to begin exploring or extend your
  PHP knowledge. There are literally thousands of books available in
- English and numerous in other langauges. Search at your favourite
+ English and numerous in other languages. Search at your favourite
  online or offline bookstore. You can search at
  <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
  go directly to

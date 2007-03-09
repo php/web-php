@@ -82,7 +82,7 @@ if (isset($_POST['maillist'])) {
         
         // Provide error if unable to [un]subscribe
         if ($result) {
-            $error = "We were unable to subsribe you due to some technical problems.<br/ >" .
+            $error = "We were unable to subscribe you due to some technical problems.<br/ >" .
                      "Please try again later.";
         }
     }
@@ -139,7 +139,7 @@ if (isset($_POST['maillist'])) {
   Send plain ASCII messages, no HTML-formatted emails please.
  </li>
  <li>
-  Turn on wordwrapping so your entire message doesn't show up on
+  Turn on word wrapping so your entire message doesn't show up on
   a single line.
  </li>
  <li>

@@ -51,7 +51,7 @@ site_header("Documentation - Extended CHM Format");
  <h3>Features provided by HTML Help</h3>
  <ul>
   <li>Full tree like TOC menu of pages, with even the smallest parts included</li>
-  <li>Alpabetical index of all pages [with quick access to functions]</li>
+  <li>Alphabetical index of all pages [with quick access to functions]</li>
   <li>Full text search (see the chapter about FTS in the CHM)</li>
   <li>Personal favourites listing</li>
   <li>Window position and size remembered</li>
@@ -76,7 +76,7 @@ site_header("Documentation - Extended CHM Format");
  <ul>
   <li>Online skin repository with ready made skins for the CHM Edition</li>
   <li>Special marking of see also links</li>
-  <li>Support for all manual langauges (currently only English is available)</li>
+  <li>Support for all manual languages (currently only English is available)</li>
  </ul>
 
 <a name="knownbugs"></a>
@@ -136,7 +136,7 @@ site_header("Documentation - Extended CHM Format");
  <li>
   <strong><a href="http://www.crimsoneditor.com">CrimsonEditor</a>:</strong> The
   <a href="http://www.crimsoneditor.com/english/docs/howtos.html#howto01">author
-  of the editor describes</a> how to ingerate HLP and CHM files with
+  of the editor describes</a> how to integrate HLP and CHM files with
   keyword indexes into the IDE. This method works quite well, with
   our CHMs.
  </li>

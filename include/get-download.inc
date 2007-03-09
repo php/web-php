@@ -85,7 +85,7 @@ if ($size) {
 <p>
  Please choose the mirror closest to you from which to download the file.  
  The current mirror is highlighted in yellow, mirror sites detected to be
- out of date or disfunctional are not listed for your convenience.
+ out of date or dysfunctional are not listed for your convenience.
 </p>
  
 <?php

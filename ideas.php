@@ -39,7 +39,7 @@ also includes our C coding standards (TBD).</p>
 <p><strong>Description</strong>: The PHP API has a couple of varargs functions that are error prone and may easily cause segfaults
 in PHP, especially on less used platforms. The list of such functions include zend_parse_parameters*(), zend_error() and a few
 others. Our current check script is made in PHP and is regex based. It is available at <a href="http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup">http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup</a>. This script is difficult to maintain and generates way too many false-positives.
-The work would envolve constructing or probably reusing a parse tree for the PHP code and its extensions (mixed C/C++) and generate
+The work would involve constructing or probably reusing a parse tree for the PHP code and its extensions (mixed C/C++) and generate
 error messages for the problems found. A sample output of the script mentioned is available at: <a
 href="http://gcov.php.net/viewer.php?version=PHP_HEAD&amp;func=params">http://gcov.php.net/viewer.php?version=PHP_HEAD&amp;func=params</a>.<br/>
 <strong>Possible mentor(s)</strong>: <a href="mailto:nlopess@php.net">Nuno Lopes</a></p>
@@ -61,7 +61,7 @@ on modified XML files. <br/>
 The main advantage of Livedocs for the PHP Manual is the dramatically reduced
 time-to-live interval, since modified XML files can be pushed to servers
 without the need of building all the HTML files even for small changes.
-Additionaly to this, Livedocs also does a good job of providing search
+Additionally to this, Livedocs also does a good job of providing search
 results for keywords found in the manual, as well as keeping track of
 relations of translated files to their English equivalents, notifying
 readers, if they read a seriously outdated translation.
