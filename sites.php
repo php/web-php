@@ -15,16 +15,13 @@ $SIDEBAR_DATA = '
  Of course there are a lot more sites connected to PHP
  somehow, which are not part of the PHP.net site family.
  Our <a href="/links.php">links page</a> offers some start
- pages you will find intresting.
+ pages you will find interesting.
 </p>
 ';
 site_header("A Tourist's Guide");
 ?>
 
-<h1>
- PHP.net: A Tourist's Guide<br />
- <small>originally by Damien Seguy</small>
-</h1>
+<h1>PHP.net: A Tourist's Guide</h1>
 
 <p>
  Everyone knows the <code>www.php.net</code> site. All of us went there sooner or later,
@@ -159,7 +156,7 @@ site_header("A Tourist's Guide");
 <h2><a href="http://cvs.php.net/viewcvs.cgi/">cvs.php.net</a>: CVS Repository</h2>
 
 <p>
- The PHP project is organised with a CVS server, and this website is the web
+ The PHP project is organized with a CVS server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
  href="http://cvs.php.net/viewcvs.cgi/php-src/">php-src</a> module is the 
@@ -207,7 +204,7 @@ site_header("A Tourist's Guide");
 
 <p>
  This site is dedicated to automatic PHP code coverage testing. On a regular 
- basis current cvs snapshots are being build and tested on this machine. After 
+ basis current CVS snapshots are being build and tested on this machine. After 
  all tests are done the results are visualized along with a code coverage 
  analysis.  
 </p>
