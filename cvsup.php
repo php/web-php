@@ -42,7 +42,7 @@ site_header("Using CVSup to maintain a local CVS repository");
 
 <ol>
  <li>
-  Download the appropiate binary distribution from
+  Download the appropriate binary distribution from
   <a href="http://www.cvsup.org/">the CVSup homepage</a>.
  </li>
  <li>
