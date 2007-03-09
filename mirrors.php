@@ -9,18 +9,16 @@ site_header("Mirror Sites");
 <h1>Mirror Sites</h1>
 
 <p>
- Here you can find information about the mirrors of PHP.net. This page only
- lists the official mirrors, registered in our database. The mirrors automatically
- detected to be outdated or nonfunctional are not listed for your convinience, so
- there may be a mirror (or some mirrors) with problems in your country additionaly
- to those listed here. Therefore if you cannot find mirror sites in your country
- here, or the mirror site you used seems to be disappeared, check back later.
+ Listed below are the official, active, and fully functional PHP.net mirrors.
+ Some mirrors might be missing from this list because mirrors are
+ automatically deactivated when problems arise.  Mirrors are continuously
+ checked and reactivated when appropriate.
 </p>
 <p>
- We suggest you to choose a mirror site geographically close to you. All mirror sites
- are expected to provide the same service. This means that you don't lose anything
- if you go with a local mirror site, but you gain speed. The current mirror is
- highlighted in the list below.
+ We suggest you <a href="my.php">choose</a> a PHP.net mirror that is
+ geographically close to you. All mirrors provide identical features and
+ services, with the only difference being the increased speed that close
+ mirrors provide. Your current mirror is highlighted in the list below.
 </p>
 <p>
  If you are interested in hosting a mirror of this site,
