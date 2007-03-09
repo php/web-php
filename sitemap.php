@@ -13,12 +13,17 @@ site_header("Sitemap");
  <li><a href="/index.php">Home Page</a></li>
  <li><a href="/archive/index.php">News Archives</a></li>
  <li><a href="/news.rss">RSS newsfeed</a></li>
+ <li><a href="/conferences/">Conferences</a></li>
+ <li><a href="/ChangeLog-4.php">PHP 4 ChangeLog</a></li>
+ <li><a href="/ChangeLog-5.php">PHP 5 ChangeLog</a></li>
 </ul>
 
 <h2>Getting PHP</h2>
 
 <ul>
  <li><a href="/downloads.php">Downloads</a></li>
+ <li><a href="/releases/">Older releases</a></li>
+ <li><a href="/software.php">Software</a></li>
 </ul>
 
 <h2>PHP Bugs</h2>
@@ -49,6 +54,13 @@ site_header("Sitemap");
    </li>
   </ul>
  </li>
+</ul>
+
+<h2>Security</h2>
+
+<ul>
+ <li><a href="/manual/security">In the Manual</a></li>
+ <li><a href="/security-note.php">A Note</a></li>
 </ul>
 
 <h2>Navigation</h2>
@@ -96,6 +108,8 @@ site_header("Sitemap");
  <li><a href="/copyright.php">Copyright</a></li>
  <li><a href="/credits.php">Credits</a></li>
  <li><a href="/contact.php#ads">Advertising at PHP.net</a></li>
+ <li><a href="/license/">License Information</a></li>
+ <li><a href="/usage.php">Usage</a></li>
 </ul>
 
 <?php site_footer();
