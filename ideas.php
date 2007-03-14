@@ -46,6 +46,8 @@ circular references, for instance the one described <a href="http://www.research
 and integrate it into the Zend Engine.<br/>
 <strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
 
+<hr/>
+
 <a name="qa"></a>
 <h2>Quality Assurance</h2>
 
