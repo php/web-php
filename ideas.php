@@ -32,6 +32,20 @@ also includes our C coding standards (TBD).</p>
 <hr/>
 <p>&nbsp;</p>
 
+<a name="ze"></a>
+<h2>Zend Engine</h2>
+
+<h3>New Reference Counting Implementation</h3>
+<p><strong>Description</strong>: The Zend Engine, the compiling and interpreting kernel of PHP, uses
+<a href="http://en.wikipedia.org/wiki/Reference_counting">reference counting</a> to keep track of which
+objects are no longer referenced and thus can be destroyed. A major weakness of the Zend Engine's
+current reference counting implementation is that it cannot detect reference cycles, that is objects
+that reference each other in a circular graph structure which is not referenced itself from outside the
+circle.<br/>The work would involve implementing a reference counting algorithm that can cope with
+circular references, for instance the one described <a href="http://www.research.ibm.com/people/d/dfb/papers/Bacon01Concurrent.pdf">here</a>
+and integrate it into the Zend Engine.<br/>
+<strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
+
 <a name="qa"></a>
 <h2>Quality Assurance</h2>
 
