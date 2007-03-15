@@ -143,6 +143,7 @@ but complementary.<br/>More information can be found
 <h4>Other</h4>
 
 <ul>
+ <li>re2php - Add PHP Support to <a href="http://re2c.sf.net/">re2c</a></li>
  <li>ANTLR - Add PHP Code Generation Target to <a href="http://www.antlr.org/v3/index.html">ANTLR 3</a>
 </ul>
 -->
