@@ -51,7 +51,11 @@ and integrate it into the Zend Engine.<br/>
 <a name="qa"></a>
 <h2>Quality Assurance</h2>
 
-<h3>Automatic code checker</h3>
+<h3>Code Coverage Improvement</h3>
+<p><strong>Description</strong>: PHP regression test suite code coverage could be better. Improving the coverage means creating tests that will solicit parts of code currently not activated by the existing tests.<br/>
+<strong>Possible mentor(s)</strong>: (not yet assigned)</p>
+
+<h3>Automatic Code Checker</h3>
 <p><strong>Description</strong>: The PHP API has a couple of varargs functions that are error prone and may easily cause segfaults
 in PHP, especially on less used platforms. The list of such functions include zend_parse_parameters*(), zend_error() and a few
 others. Our current check script is made in PHP and is regex based. It is available at <a href="http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup">http://cvs.php.net/viewvc.cgi/php-src/scripts/dev/check_parameters.php?view=markup</a>. This script is difficult to maintain and generates way too many false-positives.
