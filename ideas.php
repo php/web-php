@@ -110,6 +110,18 @@ but complementary.<br/>More information can be found
 <a href="http://www.phpunit.de/wiki/Ideas#SupportforMutationTesting">here</a>.
 <br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:sebastian@php.net">Sebastian Bergmann</a></p>
 
+<h3>PHP5 Core Refactory Of Jaws Project</h3>
+<h3><a href="http://www.jaws-project.com">Jaws Project</a></h3>
+<p><strong>Description</strong>:
+The idea is to completely revamp the internals of Jaws by moving it to PHP 5 and fully exploit it's bells
+and whistles to create a better developer and user experience.<br/>
+
+It would not only be a E_STRICT update but a full usage of the various new extension and in addition it might
+sport external libs from PEAR, ECZ, Zend and others where it makes sense
+
+<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Þormar Þorbjörnsson</a> </p>
+
+
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
 
