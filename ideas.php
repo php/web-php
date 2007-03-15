@@ -110,16 +110,31 @@ but complementary.<br/>More information can be found
 <a href="http://www.phpunit.de/wiki/Ideas#SupportforMutationTesting">here</a>.
 <br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:sebastian@php.net">Sebastian Bergmann</a></p>
 
-<h3>PHP5 Core Refactory Of Jaws Project</h3>
+<h3>PHP 5 Core Refactory Of Jaws Project</h3>
 <h3><a href="http://www.jaws-project.com">Jaws Project</a></h3>
 <p><strong>Description</strong>:
 The idea is to completely revamp the internals of Jaws by moving it to PHP 5 and fully exploit it's bells
 and whistles to create a better developer and user experience.<br/>
 
 It would not only be a E_STRICT update but a full usage of the various new extension and in addition it might
-sport external libs from PEAR, ECZ, Zend and others where it makes sense
+sport external libs from PEAR, eZC, Zend and others where it makes sense
 
-<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Þormar Þorbjörnsson</a> </p>
+<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Ãžormar ÃžorbjÃ¶rnsson</a> </p>
+
+<h3>Debugger front-end for Xdebug</h3>
+<p><strong>Description</strong>: Xdebug is finally nearing version 2 and the
+only really important thing missing is a good and simple client that can speak
+the DBGp to interact with Xdebug. This project would mean that a student 
+writes a simple GUI application (QT/KDE/GTK/Gnome) that can do this.<br/>
+
+This GUI application should be as standalone as possible, run on Linux (and
+Windows) and implement the full DBGp specification, including setting
+breakpoints, seeing stack traces, inspecting variables and stepping through
+code. Editting scripts in the interface should not even be possible.<br/>
+
+<br/>More information can be found about the protocol
+<a href="http://xdebug.org/docs-dbgp.php">here</a>.
+<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
 
 
 <!--
