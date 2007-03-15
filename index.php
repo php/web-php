@@ -236,7 +236,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 
 <hr />
 
-<a name="5"></a>
+<a name="6"></a>
 <h1>PHP Selected for Google Summer of Code</h1>
 <p>
  <span class="newsdate">[14-Mar-2007]</span>
@@ -251,6 +251,8 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  of the Google Summer of Code, then have a look here 
  <a href="http://code.google.com/soc">http://code.google.com/soc</a>.
 </p>
+
+<hr />
 
 <a name="4"></a>
 <h1>PHP 5.2.1 and PHP 4.4.5 Released</h1>
