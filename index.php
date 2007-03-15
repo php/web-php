@@ -236,6 +236,22 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 
 <hr />
 
+<a name="5"></a>
+<h1>PHP Selected for Google Summer of Code</h1>
+<p>
+ <span class="newsdate">[14-Mar-2007]</span>
+ The PHP team is proud to once again participate in the Google Summer of Code.
+ We are still looking for project ideas of interested students. In case you 
+ want to spend your summer with your favorite open source project, PHP, and get 
+ some money for adding an interesting project to it, you should contact us at 
+ internals@php.net. The deadline for submitting ideas is the 24th of March 2007.
+ The current list of ideas can be seen here 
+ <a href="http://php.net/ideas">http://php.net/ideas</a>, which includes
+ suggested topics still looking for student participants. If you have not heard
+ of the Google Summer of Code, then have a look here 
+ <a href="http://code.google.com/soc">http://code.google.com/soc</a>.
+</p>
+
 <a name="4"></a>
 <h1>PHP 5.2.1 and PHP 4.4.5 Released</h1>
 <p>
