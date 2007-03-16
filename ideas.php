@@ -32,18 +32,16 @@ also includes our C coding standards (TBD).</p>
 <hr/>
 <p>&nbsp;</p>
 
-<a name="ze"></a>
-<h2>Zend Engine</h2>
+<a name="php"></a>
+<h2>PHP Interpreter</h2>
 
 <h3>New Reference Counting Implementation</h3>
-<p><strong>Description</strong>: The Zend Engine, the compiling and interpreting kernel of PHP, uses
-<a href="http://en.wikipedia.org/wiki/Reference_counting">reference counting</a> to keep track of which
-objects are no longer referenced and thus can be destroyed. A major weakness of the Zend Engine's
-current reference counting implementation is that it cannot detect reference cycles, that is objects
-that reference each other in a circular graph structure which is not referenced itself from outside the
-circle.<br/>The work would involve implementing a reference counting algorithm that can cope with
-circular references, for instance the one described <a href="http://www.research.ibm.com/people/d/dfb/papers/Bacon01Concurrent.pdf">here</a>
-and integrate it into the Zend Engine.<br/>
+<p><strong>Description</strong>: The PHP Interpreter uses <a href="http://en.wikipedia.org/wiki/Reference_counting">reference counting</a>
+to keep track of which objects are no longer referenced and thus can be destroyed. A major weakness in the current implementation is that
+it cannot detect reference cycles, that is objects that reference each other in a circular graph structure which is not referenced itself
+from outside the circle.<br/>
+The work would involve implementing a reference counting algorithm that can cope with circular references, for instance the one described
+<a href="http://www.research.ibm.com/people/d/dfb/papers/Bacon01Concurrent.pdf">here</a> and integrate it into the PHP Interpreter.<br/>
 <strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
 
 <hr/>
@@ -99,6 +97,14 @@ make livedocs more generic (i.e. not so phpdoc specific), etc... (your imaginati
 <a name="other"></a>
 <h2>Other</h2>
 
+<h3>Debugger Frontend for Xdebug</h3>
+<p><strong>Description</strong>: <a href="http://xdebug.org/">Xdebug</a> is finally nearing version 2 and the only
+really important thing missing is a good and simple client that can speak the <a href="http://xdebug.org/docs-dbgp.php">DBGp</a> protocol to interact with Xdebug.
+This project would mean that a student writes a simple GUI application (QT/KDE/GTK/Gnome) that can do this.<br/>
+This GUI application should be as standalone as possible, run on Linux (and Windows) and implement the full DBGp specification, including setting
+breakpoints, seeing stack traces, inspecting variables and stepping through code. Editting scripts in the interface should not even be possible.<br/>
+<strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
+
 <h3>Support for Mutation Testing in PHPUnit</h3>
 <p><strong>Description</strong>: <a href="http://en.wikipedia.org/wiki/Mutation_testing">Mutation Testing</a>,
 or Automated Error Seeding, is an approach where the testing tool makes some
@@ -110,32 +116,13 @@ but complementary.<br/>More information can be found
 <a href="http://www.phpunit.de/wiki/Ideas#SupportforMutationTesting">here</a>.
 <br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:sebastian@php.net">Sebastian Bergmann</a></p>
 
-<h3>PHP 5 Core Refactory Of Jaws Project</h3>
-<h3><a href="http://www.jaws-project.com">Jaws Project</a></h3>
+<h3>Refactory of Jaws for PHP 5</h3>
 <p><strong>Description</strong>:
-The idea is to completely revamp the internals of Jaws by moving it to PHP 5 and fully exploit it's bells
-and whistles to create a better developer and user experience.<br/>
-
-It would not only be a E_STRICT update but a full usage of the various new extension and in addition it might
-sport external libs from PEAR, eZC, Zend and others where it makes sense
-
-<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Þormar Þorbjörnsson</a> </p>
-
-<h3>Debugger front-end for Xdebug</h3>
-<p><strong>Description</strong>: Xdebug is finally nearing version 2 and the
-only really important thing missing is a good and simple client that can speak
-the DBGp to interact with Xdebug. This project would mean that a student 
-writes a simple GUI application (QT/KDE/GTK/Gnome) that can do this.<br/>
-
-This GUI application should be as standalone as possible, run on Linux (and
-Windows) and implement the full DBGp specification, including setting
-breakpoints, seeing stack traces, inspecting variables and stepping through
-code. Editting scripts in the interface should not even be possible.<br/>
-
-<br/>More information can be found about the protocol
-<a href="http://xdebug.org/docs-dbgp.php">here</a>.
-<br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:derick@php.net">Derick Rethans</a></p>
-
+The idea is to completely revamp the internals of <a href="http://www.jaws-project.com">Jaws</a>
+by moving it to PHP 5 and fully exploit its bells and whistles to create a better developer and user experience.<br/>
+It would not only be an <tt>E_STRICT</tt> update but a full usage of the various new extensions and in addition it might
+sport external libs from PEAR, eZ Components, Zend Framework and others where it makes sense.<br/>
+<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Þormar Þorbjörnsson</a></p>
 
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
