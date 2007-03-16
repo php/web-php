@@ -217,6 +217,23 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="6"></a>
+<h1>The PHP.net Google Summer of Code</h1>
+<p>
+ <span class="newsdate">[14-Mar-2007]</span>
+ The PHP team is once again proud to participate in the 
+ <a href="http://code.google.com/soc/">Google Summer of Code</a>, and 
+ we are still looking for project ideas from interested students. In case you 
+ want to spend the summer with your favorite Open Source project, PHP, and get 
+ some money for adding an interesting project to it, you should 
+ <a href="mailing-lists.php">contact</a> us at internals@php.net. 
+ The deadline for submitting ideas is the <em>24th of March, 2007.</em> 
+ Also, the <a href="http://php.net/ideas">current list of ideas</a> 
+ includes suggested topics still looking for student participants.
+</p>
+
+<hr />
+
 <a name="5"></a>
 <h1>PHP 4.4.6 Released</h1>
 <p>
@@ -232,24 +249,6 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
   href="/releases/4_4_6.php">release announcement for 4.4.6</a>, the full list
   of changes is available in the <a href="/ChangeLog-4.php#4.4.6">ChangeLog for
   PHP 4</a>.
-</p>
-
-<hr />
-
-<a name="6"></a>
-<h1>PHP Selected for Google Summer of Code</h1>
-<p>
- <span class="newsdate">[14-Mar-2007]</span>
- The PHP team is proud to once again participate in the Google Summer of Code.
- We are still looking for project ideas of interested students. In case you 
- want to spend your summer with your favorite open source project, PHP, and get 
- some money for adding an interesting project to it, you should contact us at 
- internals@php.net. The deadline for submitting ideas is the 24th of March 2007.
- The current list of ideas can be seen here 
- <a href="http://php.net/ideas">http://php.net/ideas</a>, which includes
- suggested topics still looking for student participants. If you have not heard
- of the Google Summer of Code, then have a look here 
- <a href="http://code.google.com/soc">http://code.google.com/soc</a>.
 </p>
 
 <hr />
