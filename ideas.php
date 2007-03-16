@@ -118,11 +118,19 @@ but complementary.<br/>More information can be found
 
 <h3>Refactory of Jaws for PHP 5</h3>
 <p><strong>Description</strong>:
-The idea is to completely revamp the internals of <a href="http://www.jaws-project.com">Jaws</a>
-by moving it to PHP 5 and fully exploit its bells and whistles to create a better developer and user experience.<br/>
-It would not only be an <tt>E_STRICT</tt> update but a full usage of the various new extensions and in addition it might
-sport external libs from PEAR, eZ Components, Zend Framework and others where it makes sense.<br/>
-<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi Þormar Þorbjörnsson</a></p>
+<br />
+The scope/idea of this project, is to completely revamp the internals of the <a href="http://www.jaws-project.com">Jaws Project</a> by recoding 
+and re-doing the architecture of this project using PHP5 and being able to fully exploit it's main features, 
+Object Oriented Development abilities, Security Improvements, Iterators (SPL), etc. All this will be done in order to 
+create a better developer experience, and first and foremost, better user experience with less problems, faster responses,
+and more secure application.
+<br />
+Doing this revamp/move to PHP5 doesn't simply mean <tt>E_STRICT</tt> compliance, but, as stated above we will be using
+the Real-Object Oriented architectural possibilities offered by PHP5, and we will also have the ability to use
+a variety of new extensions made only available for php5 and not previous versions. This will also give us the
+ability to use new PEAR, eZ components, Zend, etc. libs where it makes sense.
+<br />
+<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi &thorn;ormar &thorn;orbjörnsson</a></p>
 
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
