@@ -320,7 +320,7 @@ PHP, regardless of the version to upgrade to the 5.2.1 or 4.4.5 releases as soon
 
 <p>
 For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
-available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between
+available <a href="/migration52">here</a>, detailing the changes between
 those releases and PHP 5.2.1.
 </p>
 

@@ -296,6 +296,8 @@ $uri_aliases = array (
     "manual/about-notes.php" => "manual/add-note",   // BC
     "software/index.php"     => "software",          // BC
     "releases.php"           => "releases/index",    // BC
+
+    "update_5_2.txt"         => "migration52",      // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
