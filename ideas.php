@@ -51,7 +51,7 @@ The work would involve implementing a reference counting algorithm that can cope
 
 <h3>Code Coverage Improvement</h3>
 <p><strong>Description</strong>: PHP regression test suite code coverage could be better. Improving the coverage means creating tests that will solicit parts of code currently not activated by the existing tests.<br/>
-<strong>Possible mentor(s)</strong>: (not yet assigned)</p>
+<strong>Possible mentor(s)</strong>: <a href="mailto:tony2001@php.net">Antony Dovgal</a></p>
 
 <h3>Automatic Code Checker</h3>
 <p><strong>Description</strong>: The PHP API has a couple of varargs functions that are error prone and may easily cause segfaults
