@@ -179,7 +179,7 @@ $minute = rand(0, 59);
      ErrorDocument 404 /error.php
      
      # Add types not specified by Apache by default
-     AddType application/octet-stream .chm .bz2 .tgz
+     AddType application/octet-stream .chm .bz2 .tgz .msi
      AddType application/x-pilot .prc .pdb 
 
      # Set mirror's preferred language here
