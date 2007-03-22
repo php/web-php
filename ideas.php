@@ -116,22 +116,16 @@ but complementary.<br/>More information can be found
 <a href="http://www.phpunit.de/wiki/Ideas#SupportforMutationTesting">here</a>.
 <br/><br/><strong>Possible mentor(s)</strong>: <a href="mailto:sebastian@php.net">Sebastian Bergmann</a></p>
 
-<h3>Refactory of Jaws for PHP 5</h3>
+<h3>Refactory of Jaws for PHP 6</h3>
 <p><strong>Description</strong>:
 <br />
-The scope/idea of this project, is to completely revamp the internals of the <a href="http://www.jaws-project.com">Jaws Project</a> by recoding 
-and re-doing the architecture of this project using PHP5 and being able to fully exploit it's main features, 
-Object Oriented Development abilities, Security Improvements, Iterators (SPL), etc. All this will be done in order to 
-create a better developer experience, and first and foremost, better user experience with less problems, faster responses,
-and more secure application.
+The scope/idea of this project, is to completely revamp the internals of the <a href="http://www.jaws-project.com">Jaws Project</a> by recoding it's core architecture using PHP6. This project will not only aim at making Jaws a better product, but will also aim at helping developers of PHP6 to find bugs before a release. This will also give a student the chance to develop on an exclusive technology that is not even pre-released yet.
 <br />
-Doing this revamp/move to PHP5 doesn't simply mean <tt>E_STRICT</tt> compliance, but, as stated above we will be using
-the Real-Object Oriented architectural possibilities offered by PHP5, and we will also have the ability to use
-a variety of new extensions made only available for php5 and not previous versions. This will also give us the
-ability to use new PEAR, eZ components, Zend, etc. libs where it makes sense.
+Using PHP6 means we will no longer have globals, but also the idea is to use a complete and solid Object Oriented Model and Data Structure (and of course the ability to use unicode). PHP6 being under heavy development, we would be the first fully open source project to havea core and possibly modules entirely developed using PHP6.
 <br />
-<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi &thorn;ormar &thorn;orbjörnsson</a></p>
+Recap: This project is to help PHP6's core/internal developers, the Jaws project itself and the student to learn new technologies.
 
+<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi &thorn;ormar &thorn;orbjörnsson</a></p
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
 
