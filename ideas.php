@@ -124,8 +124,8 @@ The scope/idea of this project, is to completely revamp the internals of the <a 
 Using PHP6 means we will no longer have globals, but also the idea is to use a complete and solid Object Oriented Model and Data Structure (and of course the ability to use unicode). PHP6 being under heavy development, we would be the first fully open source project to havea core and possibly modules entirely developed using PHP6.
 <br />
 Recap: This project is to help PHP6's core/internal developers, the Jaws project itself and the student to learn new technologies.
-
-<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi &thorn;ormar &thorn;orbjörnsson</a></p
+<br /><br />
+<strong>Possible mentor(s)</strong>: <a href="mailto:davidc@php.net">David Coallier</a>, <a href="mailto:dufuz@php.net">Helgi &thorn;ormar &thorn;orbjörnsson</a></>
 <!--
 	Note: SoC 2006 Ideas. these need to be either ported to the "new style" or cleaned up
 
