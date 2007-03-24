@@ -226,7 +226,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  we are still looking for project ideas from interested students. In case you 
  want to spend the summer with your favorite Open Source project, PHP, and get 
  some money for adding an interesting project to it, you should 
- <a href="mailing-lists.php">contact</a> us at internals@php.net. 
+ <a href="mailing-lists.php">contact</a> us at internals@lists.php.net. 
  The deadline for submitting ideas is the <em>26th of March, 2007.</em> 
  Also, the <a href="http://php.net/ideas">current list of ideas</a> 
  includes suggested topics still looking for student participants.
