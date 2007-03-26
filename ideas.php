@@ -119,7 +119,7 @@ but complementary.<br/>More information can be found
 <h3>Refactory of Jaws for PHP 6</h3>
 <p><strong>Description</strong>:
 <br />
-The scope/idea of this project, is to completely revamp the internals of the <a href="http://www.jaws-project.com">Jaws Project</a> by recoding it's core architecture using PHP6. This project will not only aim at making Jaws a better product, but will also aim at helping developers of PHP6 to find bugs before a release. This will also give a student the chance to develop on an exclusive technology that is not even pre-released yet.
+The scope/idea of this project, is to completely revamp the internals of the <a href="http://www.jaws-project.com">Jaws Project</a> by recoding its core architecture using PHP6. This project will not only aim at making Jaws a better product, but will also aim at helping developers of PHP6 to find bugs before a release. This will also give a student the chance to develop on an exclusive technology that is not even pre-released yet.
 <br />
 Using PHP6 means we will no longer have globals, but also the idea is to use a complete and solid Object Oriented Model and Data Structure (and of course the ability to use unicode). PHP6 being under heavy development, we would be the first fully open source project to havea core and possibly modules entirely developed using PHP6.
 <br />
