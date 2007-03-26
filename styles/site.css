@@ -377,8 +377,9 @@ ul.simple li {
 }
 
 /* PHP source code highlighting ------------------------------------------- */
-phpcode {
-	padding: 0.5em
+.phpcode {
+	padding: 0.5em;
+	text-align: left;
 }
 div.phpcode span.html {
 	color: black;
