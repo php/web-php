@@ -1,4 +1,4 @@
-<?php
+<?php // vim: et
 // $Id$
 $_SERVER['BASE_PAGE'] = 'search.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
@@ -100,7 +100,13 @@ if (!empty($_FORM['pattern'])) {
 else {
 
     // Print out common header
-    site_header("Search");
+    $link = array(
+        "rel"   => "search",
+        "type"  => "application/opensearchdescription+xml",
+        "href"  => $MYSITE . "phpnetimprovedsearch.src",
+        "title" => "Add PHP.net search"
+    );
+    site_header("Search", array("link" => array($link)));
 ?>
 <p>
  The autocompleting search feature is accessible via the form elements at the top

@@ -1,4 +1,4 @@
-<?php
+<?php // vim: et
 /*
    If you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn!
@@ -189,7 +189,20 @@ EOT;
 $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 
 // Write out common header
-site_header("Hypertext Preprocessor", array('onload' => 'boldEvents();', 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />'));
+site_header("Hypertext Preprocessor",
+    array(
+        'onload' => 'boldEvents();',
+        'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />',
+        'link' => array(
+            array(
+                "rel"   => "search",
+                "type"  => "application/opensearchdescription+xml",
+                "href"  => $MYSITE . "phpnetimprovedsearch.src",
+                "title" => "Add PHP.net search"
+            ),
+        ),
+    )
+);
 
 if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
     $categories = array("conference" => "Conferences", "cfp" => "Calling for papers");

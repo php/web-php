@@ -100,8 +100,14 @@ function site_header($title = '', $config = array())
     $link = "";
     if (isset($config['link']) && is_array($config['link'])) {
         foreach($config['link'] as $rel => $url) {
-            if ($url) {
+            if (!is_array($url)) {
                 $link .= "\n <link rel=\"$rel\" href=\"$url\" />";
+            } else {
+                $link .= "\n <link ";
+                foreach($url as $attr => $val) {
+                    $link .= "$attr=\"$val\" ";
+                }
+                $link .= "/>";
             }
         }
     }

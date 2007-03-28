@@ -29,6 +29,12 @@ if ($URI == 'phpnetsearch.src') {
     include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozsearch.inc';
     exit;
 }
+// FIXME: Nuke the old firefox search plugin
+if ($URI == 'phpnetimprovedsearch.src') {
+    status_header(200);
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozopensearch.inc';
+    exit;
+}
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
