@@ -35,6 +35,7 @@ function highlight_php($code, $return = FALSE)
             '<span style="color: ', // from PHP 5.0.0RC1
             '</font>',
             "\n ",
+            '  ',
             '  '
         ),
         array(
@@ -44,6 +45,7 @@ function highlight_php($code, $return = FALSE)
             '<span class="',
             '</span>',
             "\n&nbsp;",
+            '&nbsp; ',
             '&nbsp; '
         ),
         $highlighted
