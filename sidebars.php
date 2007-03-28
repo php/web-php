@@ -108,4 +108,15 @@ function addPlugin()
  this link</a> to add it to your set.
 </p>
 
+<h2>Windows Vista</h2>
+<p>
+ If you use Microsoft Windows Vista you can now search the php.net function
+database directly from your desktop. The Microsoft Windows Vista Sidebar is a
+pane on the right side of your Microsoft Windows Vista Desktop where you can
+keep useful utilities. The
+<a href="http://www.gozipline.com/gadget.php">php.net Function Finder</a>
+will install in this bar giving you direct search access to the php.net
+database directly from your Desktop.
+</p>
+
 <?php site_footer(); ?>
