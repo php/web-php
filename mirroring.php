@@ -141,7 +141,7 @@ $minute = rand(0, 59);
  as PHP parsed files. If it isn't, add the mime-type to your config.
 </p>
 <p class="warn">
- Please make sure you have turned off output compression for binary files and disabled mod_negotiation
+ Please make sure you have turned off output compression for binary files
 </p>
 
 <p>
@@ -150,7 +150,12 @@ $minute = rand(0, 59);
 
 <a name="settings"></a>
 <pre>
-   &lt;VirtualHost *-or-your-hostname-or-your-ip-here&gt;
+&lt;VirtualHost *-or-your-hostname-or-your-ip-here&gt;
+     &lt;Directory /www/htdocs/phpweb&gt;
+          # Do not display directory listings if index is not present,
+          # and do not try to match filenames if extension is omitted
+          Options -Indexes -MultiViews
+     &lt;/Directory&gt;
 
      ServerName xx.php.net
      ServerAlias the.cname.you.set.up.example.com www.xx.php.net
@@ -168,10 +173,6 @@ $minute = rand(0, 59);
      
      # Set directory index
      DirectoryIndex index.php index.html
-     
-     # Do not display directory listings if index is not present,
-     # and do not try to match filenames if extension is omitted
-     Options -Indexes -MultiViews
      
      # Handle errors with local error handler script
      ErrorDocument 401 /error.php
@@ -204,7 +205,7 @@ $minute = rand(0, 59);
      # configuration, and comment it out:
      # AddHandler strip-meta-http .htm .html 
          
-   &lt;/VirtualHost&gt;
+&lt;/VirtualHost&gt;
 </pre>
    
 <p>
