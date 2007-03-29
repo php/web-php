@@ -141,7 +141,7 @@ $minute = rand(0, 59);
  as PHP parsed files. If it isn't, add the mime-type to your config.
 </p>
 <p class="warn">
- Please make sure you have turned off output compression for binary files
+ Please make sure you have turned off output compression for binary files and disabled mod_negotiation
 </p>
 
 <p>
