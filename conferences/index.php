@@ -17,8 +17,10 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
+
 <a name="7"></a>
 <!-- SUBJECT: cfp -->
+<?php news_image("http://froscon.phpugdo.de", "phpatfroscon2007.png", "PHP @ FrOSCon"); ?>
 <h1>PHP @ FrOSCon call for papers</h1>
 <p>
  <span class="newsdate">[29-Mar-2007]</span>
@@ -27,7 +29,7 @@ the Free and Open Source Conference 2007. The event will take place on
 August 25th and 26th in St. Augustin (near Bonn), Germany. For the
 dedicated PHP talks program, the call for papers is open until June 4th.
 Talks are accepted in English and German language. For detailed
-information see <a href="http://froscon.phpugdo.de.">http://froscon.phpugdo.de</a>.
+information see <a href="http://froscon.phpugdo.de">http://froscon.phpugdo.de</a>.
 </p>
 
 <hr />
