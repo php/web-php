@@ -155,24 +155,10 @@ site_header("Releases");
  <li><a href="/ChangeLog-5.php#5.1.6">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-5.1.6.tar.bz2','Source (tar.bz2)'); ?><br />
-    <span class="md5sum">md5: 08e423aa314369d4392a36b3f7246afc</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.6.tar.gz','Source (tar.gz)'); ?><br />
-    <span class="md5sum">md5: 04d6166552289eaeff771f5ec953b065</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.6-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: 866369dbe28284ad8d8b93dbbfd10ee4</span>
-   </li>
-   <li>
-    <?php download_link('pecl-5.1.6-Win32.zip','Collection of PECL modules for PHP 5.1.6'); ?><br />
-    <span class="md5sum">md5: 4bd86d8673a146a22708006cf446e89e</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php5/php-5.1.6.tar.bz2">Source (tar.bz2)</a>
+    <a href="http://museum.php.net/php5/php-5.1.6.tar.gz">Source (tar.gz)</a>
+    <a href="http://museum.php.net/php5/php-5.1.6-Win32.zip">Windows binary</a>
+    <a href="http://museum.php.net/php5/pecl-5.1.6-Win32.zip">Collection of PECL modules for PHP 5.1.6</a>
  </li>
 </ul>
 
@@ -187,28 +173,11 @@ site_header("Releases");
  <li><a href="/ChangeLog-5.php#5.1.5">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-5.1.5.tar.bz2','Source (tar.bz2)'); ?><br />
-    <span class="md5sum">md5: fb4edd5ed9c536a04a241b52ea62a6c1</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.5.tar.gz','Source (tar.gz)'); ?><br />
-    <span class="md5sum">md5: 643f41b0caae908927c0c3705ac006d3</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.5-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: 0330f932dab53176623abf7afba007ce</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.5-installer.exe','Windows installer'); ?><br />
-    <span class="md5sum">md5: cf9a99abb9ab0a6dbfcb001ab0b05fa9</span>
-   </li>
-   <li>
-    <?php download_link('pecl-5.1.5-Win32.zip','Collection of PECL modules for PHP 5.1.5'); ?><br />
-    <span class="md5sum">md5: dc2fbbed8487f58e9ff6163e2ae00c96</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php5/php-5.1.5.tar.bz2">Source (tar.bz2)</a>
+    <a href="http://museum.php.net/php5/php-5.1.5.tar.gz">Source (tar.gz)</a>
+    <a href="http://museum.php.net/php5/php-5.1.5-Win32.zip">Windows binary</a>
+    <a href="http://museum.php.net/php5/php-5.1.5-installer.exe">Windows installer</a>
+    <a href="http://museum.php.net/php5/pecl-5.1.5-Win32.zip">Collection of PECL modules for PHP 5.1.5</a>
  </li>
 </ul>
 
@@ -223,28 +192,11 @@ site_header("Releases");
  <li><a href="/ChangeLog-5.php#5.1.4">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-5.1.4.tar.bz2','Source (tar.bz2)'); ?><br />
-    <span class="md5sum">md5: 66a806161d4a2d3b5153ebe4cd0f2e1c</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.4.tar.gz','Source (tar.gz)'); ?><br />
-    <span class="md5sum">md5: 7c846aa09ec1fe0f54a57c8ba030d9f8</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.4-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: bf208201a671fd20a13490dc6f38b344</span>
-   </li>
-   <li>
-    <?php download_link('php-5.1.4-installer.exe','Windows installer'); ?><br />
-    <span class="md5sum">md5: 86d83c9f42e281c60a40cf7c6d66db8d</span>
-   </li>
-   <li>
-    <?php download_link('pecl-5.1.4-Win32.zip','Collection of PECL modules for PHP 5.1.4'); ?><br />
-    <span class="md5sum">md5: ff5ac6c4db975bc3ff2f3a89b7881c3f</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php5/php-5.1.4.tar.bz2">Source (tar.bz2)</a>
+    <a href="http://museum.php.net/php5/php-5.1.4.tar.gz">Source (tar.gz)</a>
+    <a href="http://museum.php.net/php5/php-5.1.4-Win32.zip">Windows binary</a>
+    <a href="http://museum.php.net/php5/php-5.1.4-installer.exe">Windows installer</a>
+    <a href="http://museum.php.net/php5/pecl-5.1.4-Win32.zip">Collection of PECL modules for PHP 5.1.4</a>
  </li>
 </ul>
 
@@ -422,20 +374,9 @@ site_header("Releases");
  <li><a href="/ChangeLog-4.php#4.4.5">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-4.4.5.tar.bz2','PHP 4.4.5 (tar.bz2)'); ?> - 14 Feb 2007<br />
-    <span class="md5sum">md5: bf61d557c82962dc9533f6ef35283d4c</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.5.tar.gz', 'PHP 4.4.5 (tar.gz)');  ?> - 14 Feb 2007<br />
-    <span class="md5sum">md5: cfc1d47cdc7c1bfd27666abb8fe97a45</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.5-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: c4197ede538cc911b04cdf3d7c0e37f1</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php4/php-4.4.5.tar.bz2">PHP 4.4.5 (tar.bz2)</a>
+    <a href="http://museum.php.net/php4/php-4.4.5.tar.gz">PHP 4.4.5 (tar.gz)</a>
+    <a href="http://museum.php.net/php4/php-4.4.5-Win32.zip">Windows binary</a>
  </li>
 </ul>
 
@@ -448,24 +389,10 @@ site_header("Releases");
  <li><a href="/ChangeLog-4.php#4.4.4">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-4.4.4.tar.bz2','PHP 4.4.4 (tar.bz2)'); ?> - 17 Aug 2006<br />
-    <span class="md5sum">md5: bc6fa8908e2ac36e93bab9f7d42cda3a</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.4.tar.gz', 'PHP 4.4.4 (tar.gz)');  ?> - 17 Aug 2006<br />
-    <span class="md5sum">md5: e884b9b7c2e936310553c946bc2f67c2</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.4-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: 3ff3f58a2f573c80f34f2b670d7ac873</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.4-installer.exe','Windows installer'); ?><br />
-    <span class="md5sum">md5: e5db53efb3e0fed5407fc7c71cf0b436</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php4/php-4.4.4.tar.bz2">PHP 4.4.4 (tar.bz2)</a>
+    <a href="http://museum.php.net/php4/php-4.4.4.tar.gz">PHP 4.4.4 (tar.gz)</a>
+    <a href="http://museum.php.net/php4/php-4.4.4-Win32.zip">Windows binary</a>
+    <a href="http://museum.php.net/php4/php-4.4.4-installer.exe">Windows installer</a>
  </li>
 </ul>
 
@@ -478,24 +405,10 @@ site_header("Releases");
  <li><a href="/ChangeLog-4.php#4.4.3">ChangeLog</a></li>
  <li>
   Download:
-  <ul>
-   <li>
-    <?php download_link('php-4.4.3.tar.bz2','PHP 4.4.3 (tar.bz2)'); ?> - 03 Aug 2006<br />
-    <span class="md5sum">md5: 9542117551c0e79f5bf21f46493094e7</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.3.tar.gz', 'PHP 4.4.3 (tar.gz)');  ?> - 03 Aug 2006<br />
-    <span class="md5sum">md5: f991b9a18ae167c436783bd0976ad749</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.3-Win32.zip','Windows binary'); ?><br />
-    <span class="md5sum">md5: 9355a754c56857d921b3a945a91d729f</span>
-   </li>
-   <li>
-    <?php download_link('php-4.4.3-installer.exe','Windows installer'); ?><br />
-    <span class="md5sum">md5: b5b7e1953c62393cff7d7d065fb74e99</span>
-   </li>
-  </ul>
+    <a href="http://museum.php.net/php4/php-4.4.3.tar.bz2">PHP 4.4.3 (tar.bz2)</a>
+    <a href="http://museum.php.net/php4/php-4.4.3.tar.gz">PHP 4.4.3 (tar.gz)</a>
+    <a href="http://museum.php.net/php4/php-4.4.3-Win32.zip">Windows binary</a>
+    <a href="http://museum.php.net/php4/php-4.4.3-installer.exe">Windows installer</a>
  </li>
 </ul>
 
