@@ -113,7 +113,7 @@ if ($process) {
             } else if (($pos = strpos($result, '[SPAMMER]')) !== FALSE) {
                 $ip       = trim(substr($result, $pos+9));
                 $spam_url = $ip_spam_lookup_url . $ip;
-                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>. If the problem persists, please contact the <a href="mailto:webmaster@php.net">webmaster</a>.</p>';
+                print '<p class="formerror">Your IP is listed in one of the spammers lists we use, which aren\'t controlled by us. More information is available at <a href="'.$spam_url.'">'.$spam_url.'</a>.</p>';
             } else if (strpos($result, '[SPAM WORD]') !== FALSE) {
                 echo '<p class="formerror">Your note contains a prohibited (usually SPAM) word. Please remove it and try again.</p>';
             } else if (strpos($result, '[CLOSED]') !== FALSE) {
