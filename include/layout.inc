@@ -164,7 +164,7 @@ function site_header($title = '', $config = array())
 <body{$onload}>
 
 <div id="headnav">
- <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
+ <a href="/"><img src="{$_SERVER['STATIC_ROOT']}?=PHPE9568F36-D428-11d2-A769-00AA001ACF42"
  alt="PHP" width="120" height="67" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
