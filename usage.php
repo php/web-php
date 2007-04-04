@@ -13,7 +13,7 @@ Source: <a href="http://www.netcraft.com/Survey/">Netcraft</a><br />
 </p>
 
 <p>
-<?php echo print_image("stats/phpstats-200611.png", "Graph"); ?>
+<?php echo print_image("stats/phpstats-200612.png", "Graph"); ?>
 </p>
 
 <p>
