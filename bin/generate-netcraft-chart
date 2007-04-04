@@ -125,7 +125,7 @@ foreach($stats as $key => $arr) {
 	$domains[] = $arr[0];
 	$ips[] = $arr[1];
 	$date = $months[(int)substr($key,4)].' '.substr($key,0,4);
-	$keys[] = ($i++%2) ? $date : '';
+	$keys[] = ($i++%4==0) ? $date : '';
 }
 
 $graph = new Graph(780,350,"auto");
