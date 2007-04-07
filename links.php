@@ -87,6 +87,10 @@ site_header("Links");
   <a href="http://www.planet-php.net/">Planet PHP</a><br />
   Latest news aggregated from PHP related weblogs.
  </li>
+ <li>
+  <a href="http://devzone.zend.com/public/view/tag/Weekly_Summaries">Weekly Summaries</a><br />
+  Summary of Internal PHP happenings, brought to you by Zend.com
+ </li>
 </ul>
 
 <a name="links"></a>
@@ -851,21 +855,5 @@ dead domain 2007/02/07	   <li>
  Job Search listings</a>.
 </p>
 
-<hr />
-
-<a name="hosts"></a>
-<h1>ISPs that support PHP</h1>
-
-<p>
- Looking for an ISP or hosting service that supports PHP?
- The following sites list some providers:
-</p>
-
-<ul>
- <li><a href="http://dmoz.org/Computers/Internet/Web_Design_and_Development/Hosting/">dmoz.org's web hosting index</a></li>
- <li><a href="http://www.free-php-hosting.com/">free-php-hosting.com</a></li>
- <li><a href="http://www.oinko.net/freephp/">Oinko free PHP hosting directory</a></li>
- <li><a href="http://www.weberdev.com/Hosting/Index.php">WeberDev's Hosting Provider Listing</a></li>
-</ul>
 
 <?php site_footer(); ?>
