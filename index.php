@@ -233,16 +233,44 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 <a name="6"></a>
 <h1>The PHP.net Google Summer of Code</h1>
 <p>
- <span class="newsdate">[14-Mar-2007]</span>
+ <span class="newsdate">[14-Apr-2007]</span>
  The PHP team is once again proud to participate in the 
- <a href="http://code.google.com/soc/">Google Summer of Code</a>, and 
- we are still looking for project ideas from interested students. In case you 
- want to spend the summer with your favorite Open Source project, PHP, and get 
- some money for adding an interesting project to it, you should 
- <a href="mailing-lists.php">contact</a> us at internals@lists.php.net. 
- The deadline for submitting ideas is the <em>26th of March, 2007.</em> 
- Also, the <a href="http://php.net/ideas">current list of ideas</a> 
- includes suggested topics still looking for student participants.
+ <a href="http://code.google.com/soc/">Google Summer of Code</a>.
+ Seven students will &quot;flip bits instead of burgers&quot; this summer:
+ <ul><li>Hannes Magnusson will work on <a href="http://wiki.phpdoc.info/LiveDocs">LiveDocs</a>,
+ which is a &quot;tool to display DocBook XML files in a web browser on the
+ fly, without the need of building all HTML target files first&quot;. This
+ project will be of great value to the PHP Documentation Team.</li>
+ <li>The PHP Interpreter uses reference counting to keep track of which objects
+ are no longer referenced and thus can be destroyed. A major weakness in the
+ current implementation is that it cannot detect reference cycles, that is
+ objects that reference each other in a circular graph structure which is not
+ referenced itself from outside the circle. Mentored by Derick Rethans,
+ David Wang will implement a new reference counting algorithm that will
+ alleviate this problem.</li>
+ <li><a href="http://xdebug.org/">Xdebug</a> provides a range of useful
+ functionality for PHP developers, including detailed error information,
+ code coverage and profiling support, and support for remote debugging using
+ the GDB and DBGp protocols. Mentored by Xdebug's creator, Derick Rethans,
+ Adam Harvey will develop a cross-platform GUI application that implements
+ the DBGp protocol and allows PHP applications to be debugged using Xdebug
+ in a development environment agnostic fashion.</li>
+ <li>Mentored by Lukas Smith, Konsta Vesterinen will work on the object-relational
+ mapper <a href="http://www.phpdoctrine.net/">Doctrine</a>.</li>
+ <li>Mutation Testing, or Automated Error Seeding, is an approach where the testing
+ tool makes some change to the tested code, runs the tests, and if the tests pass
+ displays a message saying what it changed. This approach is different than code
+ coverage analysis, because it can find code that is executed by the running of
+ tests but not actually tested. Mentored by Sebastian Bergmann, Mike Lewis will
+ implement Mutation Testing for <a href="http://www.phpunit.de/">PHPUnit</a>.</li>
+ <li>Mentored by Lukas Smith, Igor Feghali will add support for foreign keys to
+ <a href="http://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>, a package
+ that &quot;enables users to maintain RDBMS independant schema files in XML that
+ can be used to create, alter and drop database entities and insert data into a
+ database&quot;.</li>
+ <li>Mentored by David Coallier, Nicolas Bérard-Nault will refactor the internals
+ of <a href="http://www.jaws-project.com/">Jaws</a>, a Framework and Content
+ Management System for building dynamic web sites, for PHP 6.</li></ul>
 </p>
 
 <hr />
