@@ -165,9 +165,6 @@ $minute = rand(0, 59);
      # Webroot of PHP mirror site
      DocumentRoot /www/htdocs/phpweb
      
-     # These PHP settings are necessary to run a mirror
-     php_value include_path .:/www/htdocs/phpweb/include
-     
      # Log server activity
      ErrorLog logs/error_log
      TransferLog logs/access_log
