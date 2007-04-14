@@ -237,6 +237,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  The PHP team is once again proud to participate in the 
  <a href="http://code.google.com/soc/">Google Summer of Code</a>.
  Seven students will &quot;flip bits instead of burgers&quot; this summer:
+</p>
  <ul><li>Hannes Magnusson will work on <a href="http://wiki.phpdoc.info/LiveDocs">LiveDocs</a>,
  which is a &quot;tool to display DocBook XML files in a web browser on the
  fly, without the need of building all HTML target files first&quot;. This
@@ -271,7 +272,6 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  <li>Mentored by David Coallier, Nicolas Bérard-Nault will refactor the internals
  of <a href="http://www.jaws-project.com/">Jaws</a>, a Framework and Content
  Management System for building dynamic web sites, for PHP 6.</li></ul>
-</p>
 
 <hr />
 
