@@ -238,7 +238,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  <a href="http://code.google.com/soc/">Google Summer of Code</a>.
  Seven students will &quot;flip bits instead of burgers&quot; this summer:
 </p>
- <ul><li>Hannes Magnusson will work on <a href="http://wiki.phpdoc.info/LiveDocs">LiveDocs</a>,
+ <ul><li>Mentored by Michael Wallner, Hannes Magnusson will work on <a href="http://wiki.phpdoc.info/LiveDocs">LiveDocs</a>,
  which is a &quot;tool to display DocBook XML files in a web browser on the
  fly, without the need of building all HTML target files first&quot;. This
  project will be of great value to the PHP Documentation Team.</li>
