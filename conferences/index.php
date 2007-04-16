@@ -18,6 +18,26 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="8"></a>
+<!-- SUBJECT: cfp -->
+<?php news_image("http://www.zendcon.com/cfp.php", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
+<h1>Zend/PHP Conference 2007 call for papers</h1>
+<p>
+ <span class="newsdate">[16-Apr-2007]</span>
+2007 marks the third anniversary of the Zend/PHP Conference and Expo. Focused on the PHP, the world's fastest growing web development language, this year’s conference is guaranteed to again be bigger and better than ever.
+</p>
+<p>
+Present your business applications, technical concepts, or cutting edge applications at the Zend/PHP Conference of 2007. With the most sessions, the world's top presenters, and the largest and most qualified attendance, this will be the premier forum for PHP in 2007.
+</p>
+<p>
+Your participation will make this conference a success. Zend Technologies requests that you submit an abstract.<br />
+The conference selection committee will consider all abstracts submitted on or before May 31, 2007.<br />
+</p>
+<p>
+For more information about topics and submission guidelines please see <a href="http://www.zendcon.com/cfp.php">http://www.zendcon.com/cfp.php</a>.
+</p>
+<hr />
+
 <a name="7"></a>
 <!-- SUBJECT: cfp -->
 <?php news_image("http://froscon.phpugdo.de", "phpatfroscon2007.png", "PHP @ FrOSCon"); ?>
