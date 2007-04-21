@@ -264,11 +264,11 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
  coverage analysis, because it can find code that is executed by the running of
  tests but not actually tested. Mentored by Sebastian Bergmann, Mike Lewis will
  implement Mutation Testing for <a href="http://www.phpunit.de/">PHPUnit</a>.</li>
- <li>Mentored by Lukas Smith, Igor Feghali will add support for foreign keys to
- <a href="http://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>, a package
- that &quot;enables users to maintain RDBMS independant schema files in XML that
- can be used to create, alter and drop database entities and insert data into a
- database&quot;.</li>
+ <li>Mentored by Helgi Þormar Þorbjörnsson, Igor Feghali will add support for
+ foreign keys to <a href="http://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>,
+ a package that &quot;enables users to maintain RDBMS independant schema files in
+ XML that can be used to create, alter and drop database entities and insert data
+ into a database&quot;.</li>
  <li>Mentored by David Coallier, Nicolas Bérard-Nault will refactor the internals
  of <a href="http://www.jaws-project.com/">Jaws</a>, a Framework and Content
  Management System for building dynamic web sites, for PHP 6.</li></ul>
