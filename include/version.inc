@@ -91,7 +91,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-        "5.2.2RC1" => array(), /* Yes, it should be empty - unless we want it in the version feed? */
+        "5.2.2RC2" => array(), /* Yes, it should be empty - unless we want it in the version feed? */
     ),
     4 => array(
         $PHP_4_VERSION => array(
