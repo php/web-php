@@ -114,7 +114,7 @@ foreach ($man_languages as $langnum => $langcode) {
 <ul>
  <li>
   If you are interested in how the documentation is edited and translated,
-  you should read the <a href="/dochowto">Documentation HOWTO</a>.
+  you should read the <a href="http://doc.php.net/php/dochowto/">Documentation HOWTO</a>.
  </li>
  <li>
   <a href="http://gtk.php.net/docs.php">PHP-GTK related documentation</a>

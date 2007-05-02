@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
  <li><a href="http://developer.novell.com/wiki/index.php/PHP_for_NetWare">Novell NetWare</a></li>
  <li><a href="http://smedley.info/os2ports/">OS/2</a></li>
- <li><a href="http://php.alexwaugh.com/">RISC OS</a></li>
+ <li><a href="http://www.cp15.org/php/">RISC OS</a></li>
  <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
  <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
 </ul>
@@ -38,7 +38,7 @@ $SIDEBAR_DATA = '
 </p>
 <p>
  Information about older releases and their downloads
- are available on <a href="/releases.php">our releases page</a>.
+ are available on <a href="/releases/">our releases page</a>.
 </p>
 
 <h3>Other Downloads</h3>
@@ -65,7 +65,7 @@ $SIDEBAR_DATA = '
 </p>
 
 <p>
- <a href="http://www.zend.com/store/products/zend-optimizer.php">Zend
+ <a href="http://www.zend.com/products/zend_optimizer">Zend
  Optimizer</a> for PHP 4.0.3 and later is
  available on Zend Technologies\' web site.
 </p>
