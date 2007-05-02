@@ -30,15 +30,15 @@ $SIDEBAR_DATA = '
 <h3>Local Mailing Lists and Newsgroups</h3>
 
 <ul class="toc">
- <li><a href="http://groups.google.com/group/dk.edb.internet.webdesign.serverside.php">Danish Newsgroup</a></li>
- <li><a href="http://groups.google.com/group/fr.comp.lang.php">French Newsgroup</a></li>
- <li><a href="http://lists.phpbar.de/">German Mailing List</a></li>
- <li><a href="http://groups.google.com/group/de.comp.lang.php.misc">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
- <li><a href="http://groups.yahoo.com/group/php_greek">Greek Mailing List</a></li>
+ <li><a href="http://groups.google.com/group/dk.edb.internet.webdesign.serverside.php/topics">Danish Newsgroup</a></li>
+ <li><a href="http://groups.google.com/group/fr.comp.lang.php/topics">French Newsgroup</a></li>
+ <li><a href="http://lists.phpbar.de/mailman/listinfo">German Mailing List</a></li>
+ <li><a href="http://groups.google.com/group/de.comp.lang.php.misc/topics">German Newsgroup</a> (also other topics under de.comp.lang.php)</li>
+ <li><a href="http://groups.yahoo.com/group/php_greek/">Greek Mailing List</a></li>
  <li><a href="http://weblabor.hu/levlistak">Hungarian Mailing List</a></li>
  <li><a href="http://www.domeus.it/circles/php">Italian Mailing List (at PHPItalia)</a></li>
- <li><a href="http://ns1.php.gr.jp/ml.html">The Japanese PHP User Group\'s Mailing lists</a></li>
- <li><a href="http://groups.yahoo.com/group/php-pt">Portuguese Mailing List</a></li>
+ <li><a href="http://ml.php.gr.jp/">The Japanese PHP User Group\'s Mailing lists</a></li>
+ <li><a href="http://br.groups.yahoo.com/group/php-pt/">Portuguese Mailing List</a></li>
 </ul>
 ';
 
@@ -119,9 +119,7 @@ if (isset($_POST['maillist'])) {
  There is an experimental web interface for the news server at
  <a href="http://news.php.net/">http://news.php.net/</a>, and
  there are also other archives provided by
- <a href="http://marc.theaimsgroup.com/">Marc</a>,
- <a href="http://beeblex.com/lists/lists.html">Beeblex</a>,
- and <a href="http://zend.com/lists.php">Zend</a>.
+ <a href="http://marc.info/">Marc</a>.
 </p>
 
 <h2>Posting guidelines</h2>
@@ -285,7 +283,7 @@ function output_lists_table($mailing_lists)
             if ($listinfo[4] !== FALSE) {
                 $larchive = ($listinfo[4] === TRUE ? $listinfo[0] : $listinfo[4]);
             } else { $larchive = FALSE; }
-            echo '<td>' . ($larchive ? "<a href=\"http://marc.theaimsgroup.com/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
+            echo '<td>' . ($larchive ? "<a href=\"http://marc.info/?l={$larchive}\">yes</a>" : 'n/a') . '</td>';
             echo '<td>' . ($listinfo[6] ? "<a href=\"news://news.php.net/{$listinfo[6]}\">yes</a> <a href=\"http://news.php.net/group.php?group={$listinfo[6]}\">http</a>" : 'n/a') . '</td>';
             echo '<td><input name="maillist" type="radio" value="' . $listinfo[0] . '" /></td>';
             echo '<td>' . ($listinfo[5] ? '<input name="maillist" type="radio" value="' . $listinfo[0] . '-digest" />' : 'n/a' ) . '</td>';
