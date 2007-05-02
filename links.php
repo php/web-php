@@ -124,10 +124,6 @@ site_header("Links");
   Hundreds of PHP resources, categorized and searchable
  </li>
 
- <li>
-  <a href="http://q.webring.com/hub?ring=php">PHP Sites Webring</a><br />
-  Find PHP Sites within this webring!
- </li>
 </ul>
 
 <a name="faq"></a>
@@ -166,21 +162,6 @@ site_header("Links");
  </li>
 
  <li>
-  <a href="http://www.dotgeek.org/">Dotgeek</a><br />
-  A PHP and PostgreSQL community site with tutorials, articles, programming marathon and news.
- </li>
-
- <li>
-  <a href="http://www.opendeveloper.org/">Opendeveloper.org</a><br />
-  Developing Open Web Sites With Linux-Apache-MySQL-PHP-Perl
- </li>
-
- <li>
-  <a href="http://www.phpbuilder.com/">PHPBuilder.com</a><br />
-  A bunch of helpful PHP resources available here
- </li>
-
- <li>
   <a href="http://www.devnetwork.net/">PHP Developers' network</a><br />
   The PHP Developers' Network was founded to provide the PHP Community with
   a set of solid sites that work together to promote the PHP language and 
@@ -190,18 +171,6 @@ site_header("Links");
  <li>
   <a href="http://www.phpfreaks.com/">PHP Freaks</a><br />
   PHP Learning Center site.
- </li>
-<!--
-dead website on 2007-02-02
- <li>
-  <a href="http://www.webkreator.com/php/">PHP Traveller</a><br />
-  PHP weblog, knowledge and link directory. Regularly updated
-  collection of PHP resources.
- </li>
--->
- <li>
-  <a href="http://www.weberdev.com/">WeberDev.com</a><br />
-  PHP related resources (articles, tutorials, forums, advanced search etc.)
  </li>
 
  <li>
@@ -216,7 +185,7 @@ dead website on 2007-02-02
 
 <ul>
  <li>
-  <a href="http://freshmeat.net/browse/183/">freshmeat.net PHP Projects</a>:
+  <a href="http://freshmeat.net/browse/183/">freshmeat.net PHP Projects</a><br />
   A huge number of projects, both commercial and open source
  </li>
 
@@ -249,12 +218,6 @@ dead website on 2007-02-02
 <h4>PHP Magazines</h4>
 
 <ul>
- <li>
-  <a href="http://www.directionphp.biz/">Direction|PHP</a><br />
-  Direction|PHP is a monthly French speaking magazine, dedicated 
-  to PHP and MySQL. It covers industry news and technology reviews. 
-  It is mainly downloaded by professionnals, in PDF format.
- </li>
 
  <li>
   <a href="http://www.phparch.com/">php|architect</a><br />
@@ -280,14 +243,7 @@ dead website on 2007-02-02
   and dedicated to PHP and its related technologies. It's edited by the Tunisian PHP
   users group.
  </li>
-<!-- 
-dead
- <li>
-  <a href="http://www.zpmag.com/">ZPmag</a><br />
-  ZPmag is a webzine (exclusively online distribution  newspaper), 
-  dedicated to PHP and its technologies (in French).
- </li>
- -->
+
 </ul>
 
 <a name="videos"></a>
@@ -311,21 +267,6 @@ dead
 <h4>PHP Tutorials</h4>
 
 <ul>
- <li>
-  <a href="http://www.awtrey.com/tutorials/dbeweb/">Database enabled websites tutorial</a><br />
-  Introductory tutorial</li>
-
-<!--
-Site has moved, due to old age 2007/02/07
- <li>
-  <a href="http://www.e-gineer.com/instructions/">E-gineer Instructions</a><br />
-  Lots of tutorials/instructions related to Apache, PHP and MySQL
- </li>
--->
- <li>
-  <a href="http://www.justphukit.com/php-tutorials.php">justPhukit!</a><br />
-  A collection of external links to PHP tutorials
- </li>
 
  <li><a href="http://www.melonfire.com/community/columns/trog/archives.php?category=PHP">Melonfire</a><br />
   A series of PHP tutorials for novices
@@ -335,34 +276,12 @@ Site has moved, due to old age 2007/02/07
   Great collection of tutorials from O'Reilly
  </li>
 
-<!--
-dead web site
- <li><a href="http://elmo.engineering.tech.nhl.nl/two/index.html">technisch web ontwerp</a><br />
-  Site with information on a PHP course at a Dutch college.
- </li>
--->
- <li><a href="http://www.thescripts.com/serversidescripting/php/">TheScripts.com</a><br />
-  Web Programming Resource - PHP Tutorials
- </li>
 
- <li><a href="http://www.find.com.au/tutorials/webdevelopment/php/default.asp?ct=21&amp;ob=3">Tutorialfind</a><br />
-  A growing list of PHP tutorials at TutorialFind
- </li>
-
- <li><a href="http://www.vtc.com/products/php.htm">Video tutorials</a><br />
-  Video tutorials at Virtaul Training Company
- </li>
-<!-- 
-PHP Service is gone
- <li><a href="http://hotwired.lycos.com/webmonkey/programming/">Webmonkey PHP</a><br />
-  The PHP section on the famous Webmonkey tutorial site
- </li>
--->
  <li><a href="http://devzone.zend.com/public/view/tag/tutorials">Zend.com DevZone</a><br />
   The tutorials section on the Zend.com developer zone
  </li>
 
- <li><a href="http://www-128.ibm.com/developerworks/db2/products/opensource/">IBM PHP tutorials</a><br />
+ <li><a href="http://www-128.ibm.com/developerworks/opensource/top-projects/php.html">IBM PHP tutorials</a><br />
   Use PHP and other open source tools to develop applications for IBM Information Management servers.
  </li>
 </ul>
@@ -387,16 +306,9 @@ PHP Service is gone
 
 <ul>
  <li>
-  <a href="http://www.activestate.com/">ActiveState</a><br />
+  <a href="http://www.activestate.com/solutions/php/">ActiveState</a><br />
   ActiveState, a division of Sophos, produces Komodo, a professional
   integrated development environment (IDE) for open source languages.
- </li>
-
- <li>
-  <a href="http://www.interaktonline.com/">InterAKT Online</a><br />
-  InterAKT Online provides quality software development tools used by tens
-  of thousands of PHP developers around the world, including PHAkt and
-  Krysalis.
  </li>
 
  <li>
@@ -449,7 +361,7 @@ PHP Service is gone
 
 <ul>
  <li>
-  <a href="http://pecl.php.net/apc">APC</a><br />
+  <a href="http://pecl.php.net/package/APC">APC</a><br />
   Alternative PHP Cache, Free open source accelerator available from Community
   Connect.
  </li>
@@ -479,14 +391,8 @@ PHP Service is gone
 <h4>PHP Merchandise</h4>
 
 <ul>
- <?php /* 
  <li>
-  <a href="http://www.copyleft.net/search.phtml?search=1&amp;lookup%5Bbrand_id%5D=47">Copyleft</a><br />
-  Some t-shirts, hats and stickers with the Copyleft variant of the PHP logo on them.
- </li> */ ?>
-
- <li>
-  <a href="http://www.cafepress.com/buy/php//-/fpt_">PHP projects' merchandise</a><br />
+  <a href="http://www.cafepress.com/buy/php/">PHP projects' merchandise</a><br />
   A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)
  </li>
 </ul>
