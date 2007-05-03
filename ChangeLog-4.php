@@ -11,6 +11,31 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.7"></a>
+<h3>Version 4.4.7</h3>
+<b>03-May-2007</b>
+<ul>
+<li>Fixed MOPB-33-2007 (PHP mail() Message ASCIIZ Byte Truncation).</li>
+<li>Fixed MOPB-32-2007 (Double free inside session_decode()).</li>
+<li>Fixed MOPB-26-2007 (mb_parse_str() can be used to activate register_globals).</li>
+<li>Fixed MOPB-24-2007 (Fixed unallocated memory access/double free in in array_user_key_compare()).</li>
+<li>Fixed MOPB-22-2007 (PHP session_regenerate_id() Double Free Vulnerability).</li>
+<li>Fixed MOPB-21-2007 (An open_basedir/safe_mode bypass inside the compress.bzip2 wraper).</li>
+<li>Fixed MOPB-8-2007 (XSS in phpinfo()).</li>
+<li>Fixed CVE-2007-1001 (GD wbmp used with invalid image size).</li>
+<li>Fixed CVE-2007-0455 (Buffer overflow in gdImageStringFTEx, used by imagettf function).</li>
+<li><?php bugfix(41252); ?> (Calling mcrypt_generic without first calling mcrypt_generic_init crashes).</li>
+<li><?php bugfix(40998); ?> (long session array keys are truncated).</li>
+<li><?php bugfix(40915); ?> (addcslashes unexpected behavior with binary input).</li>
+<li><?php bugfix(40831); ?> (cURL extension doesn't clean up the buffer of reused handle).</li>
+<li><?php bugfix(40747); ?> (possible crash in session when save_path is out of open_basedir).</li>
+<li><?php bugfix(38236); ?> (Binary data gets corrupted on multipart/formdata POST).</li>
+<li>Fixed huge CPU usage in imagearc when used with large angles (libgd bug #74).</li>
+<li>Fixed CRLF injection inside ftp_putcmd().</li>
+</ul>
+
+<hr />
+
 <a name="4.4.6"></a>
 <h3>Version 4.4.6</h3>
 <b>01-Mar-2007</b>

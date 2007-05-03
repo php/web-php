@@ -17,25 +17,25 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.1";
-$PHP_5_DATE    = "08 Feb 2007";
+$PHP_5_VERSION = "5.2.2";
+$PHP_5_DATE    = "03 May 2007";
 $PHP_5_MD5     = array(
-                       "tar.bz2"   => "261218e3569a777dbd87c16a15f05c8d",
-                       "tar.gz"    => "604eaee2b834bb037d2c83e53e300d3f",
-                       "zip"       => "682dd66fb03c7dd24c522f474e1b04b6",
-                       "installer" => "f0a1445f4adfdc2e00a81b2eb788be5c",
-                       "pecl.zip"  => "dc8b394146faf7effa6f26df02e8e534",
-                       "nts.zip"   => "815c8c61af58fffdc34d34c24310ffe2",
-                       "pecl.nts"  => "ffd78a31a704d68c8adadc9288261583",
+                       "tar.bz2"   => "d084337867d70b50a10322577be0e44e",
+                       "tar.gz"    => "7a920d0096900b2b962b21dc5c55fe3c",
+                       "zip"       => "634cf45c34f80dfb1284cabf1bbb1417",
+                       "installer" => "eea060523d095ae421409e8a9c343207",
+                       "pecl.zip"  => "5d206368799dfbac983d83954328ae3a",
+                       "nts.zip"   => "b9abde6658b91ab66acb26eca699b5f6",
+                       "pecl.nts"  => "902360747287abaf4c8906efb609f2f8",
 );
 
 /* PHP 4 Release */
-$PHP_4_VERSION = "4.4.6";
-$PHP_4_DATE    = "01 Mar 2007";
+$PHP_4_VERSION = "4.4.7";
+$PHP_4_DATE    = "03 May 2007";
 $PHP_4_MD5     = array(
-                       "tar.bz2"   => "5db283824310c87efb18c76b4735c4bd",
-                       "tar.gz"    => "07c607fcf12435f0078d72fe0de4e3c0",
-                       "zip"       => "486764cefb5f7bde39e95c49b2e38635",
+                       "tar.bz2"   => "3f21b44d37a57ca3876d3aea713c700d",
+                       "tar.gz"    => "2669d2049822ac14abb263703d24f643",
+                       "zip"       => "e774e79530d610c58c5f2da433d14e0f",
 );
 
 $RELEASES = array(
@@ -67,8 +67,7 @@ $RELEASES = array(
                     "filename" => "php-$PHP_5_VERSION-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => "12 Feb 2007", # $PHP_5_DATE,
-                    "note"     => "This file was updated February 12th to fix problems when upgrading from previous PHP versions.",
+                    "date"     => $PHP_5_DATE,
                 ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
@@ -91,7 +90,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-        "5.2.2RC2" => array(), /* Yes, it should be empty - unless we want it in the version feed? */
+//        "5.2.3" => array(), /* Yes, it should be empty - unless we want it in the version feed? */
     ),
     4 => array(
         $PHP_4_VERSION => array(
@@ -120,7 +119,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-        "4.4.7RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
+//        "4.4.7RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
     ),
 );
 

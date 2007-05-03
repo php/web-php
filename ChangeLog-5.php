@@ -11,6 +11,202 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.2"></a>
+<h3>Version 5.2.2</h3>
+<b>03-May-2007</b>
+<ul>
+<li>Security Fixes
+	<ul>
+	<li>Fixed CVE-2007-1001, GD wbmp used with invalid image size (by Ivan Fratric) (Pierre)</li>
+	<li>Fixed a header injection via Subject and To parameters to the mail() function (MOPB-34 by Stefan Esser) (Ilia)</li>
+	<li>Fixed asciiz byte truncation inside mail() (MOPB-33 by Stefan Esser) (Ilia)</li>
+	<li>Fixed wrong length calculation in unserialize S type (MOPB-29 by Stefan Esser) (Stas)</li>
+	<li>Fixed a bug in mb_parse_str() that can be used to activate register_globals (MOPB-26 by Stefan Esser) (Ilia)</li>
+	<li>Fixed unallocated memory access/double free in in array_user_key_compare() (MOPB-24 by Stefan Esser) (Stas)</li>
+	<li>Fixed a double free inside session_regenerate_id() (MOPB-22 by Stefan Esser) (Ilia)</li>
+	<li>Added missing open_basedir &amp; safe_mode checks to zip:// and bzip:// wrappers. (MOPB-20, MOPB-21 by Stefan Esser). (Ilia)</li>
+	<li>Fixed substr_compare and substr_count information leak (MOPB-14 by Stefan Esser) (Stas, Ilia)</li>
+	<li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser) (Stas)</li>
+	<li>Fixed CRLF injection inside ftp_putcmd(). (by loveshell[at]Bug.Center.Team) (Ilia)</li>
+	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Steffan Esser) (Ilia)</li>
+	<li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (Ilia)</li>
+	<li>Fixed a buffer overflow inside user_filter_factory_create(). (Ilia)</li>
+	<li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (Stas)</li>
+	</ul>
+</li>
+
+<li>Improved bundled GD
+  <ul>
+  <li>Sync to 2.0.35</li>
+  <li>Added imagegrabwindow and imagegrabscreen, capture a screen or a window using its handle (Pierre)</li>
+  <li>colors allocated henceforth from the resulting image overwrite the palette colors (Rob Leslie)</li>
+  <li>Improved thread safety of the gif support (Roman Nemecek, Nuno, Pierre)
+  	<ul>
+	<li>Use the dimension of the GIF frame to create the destination image (Pierre)</li>
+	<li>Load only once the local color map from a GIF data (Pierre)</li>
+	</ul>
+  </li>
+  <li>Improved thread safety of the freetype cache (Scott MacVicar, Nuno, Pierre)
+  	<ul>
+	<li>imagearc huge CPU usage with large angles, libgd bug #74 (Pierre)</li>
+	</ul>
+  </ul>
+  </li>
+<li>Improved FastCGI SAPI to support external pipe and socket servers on win32. (Dmitry)</li>
+<li>Improved Zend Memory Manager
+  <ul>
+  <li>guarantee of reasonable time for worst cases of best-fit free block searching algorithm. (Dmitry)</li>
+  <li>better cache usage and less fragmentation on erealloc() (Tony, Dmitry)</li>
+  </ul>
+</li>
+<li>Improved SPL (Marcus)
+  <ul>
+  <li>Added SplFileInfo::getBasename(), DirectoryIterator::getBasename().</li>
+  <li>Added SplFileInfo::getLinkTarget(), SplFileInfo::getRealPath().</li>
+  <li>Made RecursiveFilterIterator::accept() abstract as stated in documentation.</li>
+  </ul>
+</li>
+<li>Improved SOAP
+  <ul>
+  <li>Added ability to encode arrays with &quot;SOAP-ENC:Array&quot; type instead of WSDL type. To activate the ability use &quot;feature&quot;=&gt;SOAP_USE_XSI_ARRAY_TYPE option in SoapClient/SoapServer constructors. (Rob, Dmitry)</li>
+  </ul>
+</li>
+<li>Added GMP_VERSION constant. (Tony)</li>
+<li>Added --ri switch to CLI which allows to check extension information. (Marcus)</li>
+<li>Added tidyNode::getParent() method (John, Nuno)</li>
+<li>Added openbasedir and safemode checks in zip:// stream wrapper and ZipArchive::open (Pierre)</li>
+<li>Added php_pdo_sqlite_external.dll, a version of the PDO SQLite driver that links against an external sqlite3.dll. This provides Windows users to upgrade their sqlite3 version outside of the PHP release cycle. (Wez, Edin)</li>
+<li>Added linenumbers to array returned by token_get_all(). (Johannes)</li>
+
+<li>Implement #40947, allow a single filter as argument for filter_var_array (Pierre)</li>
+<li>Implement #39867 (openssl PKCS#12 support) (Marc Delling, Pierre)</li>
+
+<li>Upgraded SQLite 3 to version 3.3.16 (Ilia)</li>
+<li>Upgraded libraries bundled in the Windows distribution. (Edin)
+  <ul>
+  <li>c-client (imap) to version 2006e</li>
+  <li>libpq (PostgreSQL) to version 8.2.3</li>
+  <li>libmysql (MySQL) to version 5.0.37</li>
+  <li>openssl to version 0.9.8e</li>
+  </ul>
+</li>
+<li>Upgraded PCRE to version 7.0 (Nuno)</li>
+<li>Updated timezone database to version 2007.5. (Derick)</li>
+
+<li>Fixed commandline handling for CLI and CGI. (Marcus, Johannes)</li>
+<li>Fixed iterator_apply() with a callback using __call(). (Johannes)</li>
+<li>Fixed possible multi bytes issues in openssl csr parser (Pierre)</li>
+<li>Fixed shmop_open() with IPC_CREAT|IPC_EXCL flags on Windows. (Vladimir Kamaev, Tony).</li>
+<li>Fixed possible leak in ZipArchive::extractTo when safemode checks fails (Ilia)</li>
+<li>Fixed possible relative path issues in zip_open and TS mode (old API) (Pierre)</li>
+<li>Fixed zend_llist_remove_tail (Michael Wallner, Dmitry)</li>
+<li>Fixed a thread safety issue in gd gif read code (Nuno, Roman Nemecek)</li>
+<li>Fixed crash on op-assign where argument is string offset (Brian, Stas)</li>
+
+
+<li><?php bugfix(41215); ?> (setAttribute return code reversed). (Ilia)</li>
+<li><?php bugfix(41192); ?> (Per Directory Values only work for one key). (Dmitry)</li>
+<li><?php bugfix(41175); ?> (addAttribute() fails to add an attribute with an empty value). (Ilia)</li>
+<li><?php bugfix(41159); ?> (mysql_pconnect() hash does not account for connect flags). (Ilia)</li>
+<li><?php bugfix(41121); ?> (range() overflow handling for large numbers on 32bit machines). (Ilia)</li>
+<li><?php bugfix(41118); ?> (PHP does not handle overflow of octal integers). (Tony)</li>
+<li><?php bugfix(41109); ?> (recursiveiterator.inc says &quot;implements&quot; Iterator instead of &quot;extends&quot;). (Marcus)</li>
+<li><?php bugfix(40130); ?> (TTF usage doesn't work properly under Netware). (Scott, gk at gknw dot de)</li>
+<li><?php bugfix(41093); ?> (magic_quotes_gpc ignores first arrays keys). (Arpad, Ilia)</li>
+<li><?php bugfix(41075); ?> (memleak when creating default object caused exception). (Dmitry)</li>
+<li><?php bugfix(41067); ?> (json_encode() problem with UTF-16 input). (jp at df5ea dot net. Ilia)</li>
+<li><?php bugfix(41063); ?> (chdir doesn't like root paths). (Dmitry)</li>
+<li><?php bugfix(41061); ?> (&quot;visibility error&quot; in ReflectionFunction::export()). (Johannes)</li>
+<li><?php bugfix(41043); ?> (pdo_oci crash when freeing error text with persistent connection). (Tony)</li>
+<li><?php bugfix(41037); ?> (unregister_tick_function() inside the tick function crash PHP). (Tony)</li>
+<li><?php bugfix(41034); ?> (json_encode() ignores null byte started keys in arrays). (Ilia)</li>
+<li><?php bugfix(41026); ?> (segfault when calling &quot;self::method()&quot; in shutdown functions). (Tony)</li>
+<li><?php bugfix(40999); ?> (mcrypt_create_iv() not using random seed). (Ilia)</li>
+<li><?php bugfix(40998); ?> (long session array keys are truncated). (Tony)</li>
+<li><?php bugfix(40935); ?> (pdo_mysql does not raise an exception on empty fetchAll()). (Ilia)</li>
+<li><?php bugfix(40931); ?> (open_basedir bypass via symlink and move_uploaded_file()). (Tony)</li>
+<li><?php bugfix(40921); ?> (php_default_post_reader crashes when post_max_size is exceeded). (trickie at gmail dot com, Ilia)</li>
+<li><?php bugfix(40915); ?> (addcslashes unexpected behavior with binary input). (Tony)</li>
+<li><?php bugfix(40899); ?> (memory leak when nesting list()). (Dmitry)</li>
+<li><?php bugfix(40897); ?> (error_log file not locked). (Ilia)</li>
+<li><?php bugfix(40883); ?> (mysql_query() is allocating memory incorrectly). (Tony)</li>
+<li><?php bugfix(40872); ?> (inconsistency in offsetSet, offsetExists treatment of string enclosed integers). (Marcus)</li>
+<li><?php bugfix(40861); ?> (strtotime() doesn't handle double negative relative time units correctly). (Derick, Ilia)</li>
+<li><?php bugfix(40854); ?> (imap_mail_compose() creates an invalid terminator for multipart e-mails). (Ilia)</li>
+<li><?php bugfix(40848); ?> (sorting issue on 64-bit Solaris). (Wez)</li>
+<li><?php bugfix(40836); ?> (Segfault in ext/dom). (Rob)</li>
+<li><?php bugfix(40833); ?> (Crash when using unset() on an ArrayAccess object retrieved via __get()). (Dmitry)</li>
+<li><?php bugfix(40822); ?> (pdo_mysql does not return rowCount() on select). (Ilia)</li>
+<li><?php bugfix(40815); ?> (using strings like &quot;class::func&quot; and static methods in set_exception_handler() might result in crash). (Tony)</li>
+<li><?php bugfix(40809); ?> (Poor performance of &quot;.=&quot;). (Dmitry)</li>
+<li><?php bugfix(40805); ?> (Failure executing function ibase_execute()). (Tony)</li>
+<li><?php bugfix(40800); ?> (cannot disable memory_limit with -1). (Dmitry, Tony)</li>
+<li><?php bugfix(40794); ?> (ReflectionObject::getValues() may crash when used with dynamic properties). (Tony)</li>
+<li><?php bugfix(40784); ?> (Case sensitivity in constructor's fallback). (Tony)</li>
+<li><?php bugfix(40770); ?> (Apache child exits when PHP memory limit reached). (Dmitry)</li>
+<li><?php bugfix(40764); ?> (line thickness not respected for horizontal and vertical lines). (Pierre)</li>
+<li><?php bugfix(40758); ?> (Test fcgi_is_fastcgi() is wrong on windows). (Dmitry)</li>
+<li><?php bugfix(40754); ?> (added substr() &amp; substr_replace() overflow checks). (Ilia)</li>
+<li><?php bugfix(40752); ?> (parse_ini_file() segfaults when a scalar setting is redeclared as an array). (Tony)</li>
+<li><?php bugfix(40750); ?> (openssl stream wrapper ignores default_stream_timeout). (Tony)</li>
+<li><?php bugfix(40727); ?> (segfault in PDO when failed to bind parameters). (Tony)</li>
+<li><?php bugfix(40709); ?> (array_reduce() behaves strange with one item stored arrays). (Ilia)</li>
+<li><?php bugfix(40703); ?> (Resolved a possible namespace conflict between libxmlrpc and MySQL's NDB table handler). (Ilia)</li>
+<li><?php bugfix(40961); ?> (Incorrect results of DateTime equality check). (Mike)</li>
+<li><?php bugfix(40678); ?> (Cross compilation fails). (Tony)</li>
+<li><?php bugfix(40621); ?> (Crash when constructor called inappropriately). (Tony)</li>
+<li><?php bugfix(40609); ?> (Segfaults when using more than one SoapVar in a request). (Rob, Dmitry)</li>
+<li><?php bugfix(40606); ?> (umask is not being restored when request is finished). (Tony)</li>
+<li><?php bugfix(40598); ?> (libxml segfault). (Rob)</li>
+<li><?php bugfix(40591); ?> (list()=&quot;string&quot;; gives invalid opcode). (Dmitry)</li>
+<li><?php bugfix(40578); ?> (imagettftext() multithreading issue). (Tony, Pierre)</li>
+<li><?php bugfix(40576); ?> (double values are truncated to 6 decimal digits when encoding). (Tony)</li>
+<li><?php bugfix(40560); ?> (DIR functions do not work on root UNC path). (Dmitry)</li>
+<li><?php bugfix(40548); ?> (SplFileInfo::getOwner/getGroup give a warning on broken symlink). (Marcus)</li>
+<li><?php bugfix(40546); ?> (SplFileInfo::getPathInfo() throws an exception if directory is in root dir). (Marcus)</li>
+<li><?php bugfix(40545); ?> (multithreading issue in zend_strtod()). (Tony)</li>
+<li><?php bugfix(40503); ?> (json_encode() value corruption on 32bit systems with overflown values). (Ilia)</li>
+<li><?php bugfix(40467); ?> (Partial SOAP request sent when XSD sequence or choice include minOccurs=0). (Dmitry) </li>
+<li><?php bugfix(40465); ?> (Ensure that all PHP elements are printed by var_dump). (wharmby at uk dot ibm dot com, Ilia)</li>
+<li><?php bugfix(40464); ?> (session.save_path wont use default-value when safe_mode or open_basedir is enabled). (Ilia)</li>
+<li><?php bugfix(40455); ?> (proc_open() uses wrong command line when safe_mode_exec_dir is set). (Tony)</li>
+<li><?php bugfix(40432); ?> (strip_tags() fails with greater than in attribute). (Ilia)</li>
+<li><?php bugfix(40431); ?> (dynamic properties may cause crash in ReflectionProperty methods). (Tony)</li>
+<li><?php bugfix(40451); ?> (addAttribute() may crash when used with non-existent child node). (Tony)</li>
+<li><?php bugfix(40442); ?> (ArrayObject::offsetExists broke in 5.2.1, works in 5.2.0). (olivier at elma dot fr, Marcus)</li>
+<li><?php bugfix(40428); ?> (imagepstext() doesn't accept optional parameter). (Pierre)</li>
+<li><?php bugfix(40417); ?> (Allow multiple instances of the same named PDO token in prepared statement emulation code). (Ilia)</li>
+<li><?php bugfix(40414); ?> (possible endless fork() loop when running fastcgi). (Dmitry)</li>
+<li><?php bugfix(40410); ?> (ext/posix does not compile on MacOS 10.3.9). (Tony)</li>
+<li><?php bugfix(40392); ?> (memory leaks in PHP milter SAPI). (tuxracer69 at gmail dot com, Tony)</li>
+<li><?php bugfix(40371); ?> (pg_client_encoding() not working on Windows). (Edin)</li>
+<li><?php bugfix(40352); ?> (FCGI_WEB_SERVER_ADDRS function get lost). (Dmitry)</li>
+<li><?php bugfix(40290); ?> (strtotime() returns unexpected result with particular timezone offset). (Derick)</li>
+<li><?php bugfix(40286); ?> (PHP fastcgi with PHP_FCGI_CHILDREN don't kill children when parent is killed). (Dmitry)</li>
+<li><?php bugfix(40261); ?> (Extremely slow data handling due to memory fragmentation). (Dmitry)</li>
+<li><?php bugfix(40236); ?> (php -a function allocation eats memory). (Dmitry)</li>
+<li><?php bugfix(40109); ?> (iptcembed fails on non-jfif jpegs). (Tony)</li>
+<li><?php bugfix(39965); ?> (Latitude and longitude are backwards in date_sun_info()). (Derick)</li>
+<li><?php bugfix(39836); ?> (SplObjectStorage empty after unserialize). (Marcus)</li>
+<li><?php bugfix(39416); ?> (Milliseconds in date()). (Derick)</li>
+<li><?php bugfix(39396); ?> (stream_set_blocking crashes on Win32). (Ilia, maurice at iceblog dot de)</li>
+<li><?php bugfix(39351); ?> (relative include fails on Solaris). (Dmitry, Tony)</li>
+<li><?php bugfix(39322); ?> (proc_terminate() destroys process resource). (Nuno)</li>
+<li><?php bugfix(38406); ?> (crash when assigning objects to SimpleXML attributes). (Tony)</li>
+<li><?php bugfix(37799); ?> (ftp_ssl_connect() falls back to non-ssl connection). (Nuno)</li>
+<li><?php bugfix(36496); ?> (SSL support in imap_open() not working on Windows). (Edin)</li>
+<li><?php bugfix(36226); ?> (Inconsistent handling when passing nillable arrays). (Dmitry)</li>
+<li><?php bugfix(35872); ?> (Avoid crash caused by object store being referenced during RSHUTDOWN). (Andy) </li>
+<li><?php bugfix(34794); ?> (proc_close() hangs when used with two processes). (jdolecek at netbsd dot org, Nuno)</li>
+<li><?php bugfix(38710); ?> (data leakage because of nonexisting boundary checking in statements in mysqli) (Stas)</li>
+<li><?php bugfix(37386); ?> (autocreating element doesn't assign value to first node). (Rob)</li>
+<li><?php bugfix(37013); ?> (server hangs when returning circular object references). (Dmitry)</li>
+<li><?php bugfix(33664); ?> Console window appears when using exec() (Richard Quadling, Stas)</li>
+<li>Fixed PECL bug #10194 (crash in Oracle client when memory limit reached in the callback). (Tony)</li>
+</ul>
+
+<hr />
+
 <a name="5.2.1"></a>
 <h3>Version 5.2.1</h3>
 <b>08-Feb-2007</b>

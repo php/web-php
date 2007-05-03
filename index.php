@@ -230,6 +230,70 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="5"></a>
+<h1>PHP 5.2.2 and PHP 4.4.7 Released</h1>
+<p>
+ <span class="newsdate">[03-May-2007]</span>
+  The PHP development team would like to announce the immediate <a
+  href="/downloads.php#v5">availability of PHP 5.2.2</a> and <a
+  href="/downloads.php#v4">availability of PHP 4.4.7</a>.
+  These releases are major stability and security enhancements of the 5.x and
+  4.4.x branches, and all users are strongly encouraged to upgrade to it as
+  soon as possible.  Further details about the PHP 5.2.2 release can be found in the <a
+  href="/releases/5_2_2.php">release announcement for 5.2.2</a>, the full list of
+  changes is available in the <a href="/ChangeLog-5.php#5.2.2">ChangeLog for PHP
+  5</a>. Details about the PHP 4.4.7 release can be found in the <a
+  href="/releases/4_4_7.php">release announcement for 4.4.7</a>, the full list of
+  changes is available in the <a href="/ChangeLog-4.php#4.4.7">ChangeLog for PHP
+  4</a>.
+</p>
+
+<p>
+<b>Security Enhancements and Fixes in PHP 5.2.2 and PHP 4.4.7:</b>
+</p>
+<ul>
+	<li>Fixed CVE-2007-1001, GD wbmp used with invalid image size (by Ivan Fratric)</li>
+	<li>Fixed asciiz byte truncation inside mail() (MOPB-33 by Stefan Esser)</li>
+	<li>Fixed a bug in mb_parse_str() that can be used to activate register_globals (MOPB-26 by Stefan Esser)</li>
+	<li>Fixed unallocated memory access/double free in in array_user_key_compare() (MOPB-24 by Stefan Esser)</li>
+	<li>Fixed a double free inside session_regenerate_id() (MOPB-22 by Stefan Esser)</li>
+	<li>Added missing open_basedir &amp; safe_mode checks to zip:// and bzip:// wrappers. (MOPB-21 by Stefan Esser).</li>
+	<li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser)</li>	
+	<li>Fixed CRLF injection inside ftp_putcmd(). (by loveshell[at]Bug.Center.Team)</li>
+	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Stefan Esser)</li>
+	<li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (by Stanislav Malyshev)</li>
+</ul>
+<p>
+<b>Security Enhancements and Fixes in PHP 5.2.2 only:</b>
+</p>
+<ul>
+	<li>Fixed a header injection via Subject and To parameters to the mail() function (MOPB-34 by Stefan Esser)</li>
+	<li>Fixed wrong length calculation in unserialize S type (MOPB-29 by Stefan Esser)</li>
+	<li>Fixed substr_compare and substr_count information leak (MOPB-14 by Stefan Esser) (Stas, Ilia)</li>
+	<li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (by Ilia Alshanetsky)</li>
+	<li>Fixed a buffer overflow inside user_filter_factory_create(). (by Ilia Alshanetsky)</li>
+</ul>
+<p>
+<b>Security Enhancements and Fixes in PHP 4.4.7 only:</b>
+</p>
+<ul>
+	<li>XSS in phpinfo() (MOPB-8 by Stefan Esser)</li>
+</ul>
+
+<p>
+While majority of the issues outlined above are local, in some circumstances
+given specific code paths they can be triggered externally. Therefor, we 
+strongly recommend that if you use code utilizing the functions and extensions 
+identified as having had vulnerabilities in them, you consider upgrading your PHP.
+</p>
+
+<p>
+For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+available <a href="/migration52">here</a>, detailing the changes between
+those releases and PHP 5.2.2.
+</p>
+
+<hr />
 <a name="6"></a>
 <h1>The PHP.net Google Summer of Code</h1>
 <p>
@@ -406,31 +470,6 @@ posted in the <a href="/downloads.php">download section</a>.</p>
  </ul>
 <p>
  Please <a href="http://php.net/about.howtohelp">help us improve the documentation</a> by <a href="http://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.
-</p>
-
-<hr />
-
-<a name="1"></a>
-<h1>PHP 5.2.0 Released</h1>
-<p>
- <span class="newsdate">[02-Nov-2006]</span>
- The PHP development team is proud to announce the immediate release of PHP
- 5.2.0. This release is a major improvement in the 5.X series, which includes a
- large number of new features, bug fixes and security enhancements.
- Further details about this release can be found in the release announcement
- <a href="/releases/5_2_0.php">5.2.0</a>, the full list of changes is
- available in the ChangeLog <a href="/ChangeLog-5.php#5.2.0">PHP 5</a>.
-</p>
-<p>
-All users of PHP, especially those using earlier PHP 5 releases are advised
-to upgrade to this release as soon as possible. This release also obsoletes
-the 5.1 branch of PHP.
-</p>
-
-<p>
-For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide 
-available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
-and PHP 5.2.0.
 </p>
 
 <hr />
