@@ -230,7 +230,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<a name="5"></a>
+<a name="7"></a>
 <h1>PHP 5.2.2 and PHP 4.4.7 Released</h1>
 <p>
  <span class="newsdate">[03-May-2007]</span>
