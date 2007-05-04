@@ -293,6 +293,8 @@ available <a href="/migration52">here</a>, detailing the changes between
 those releases and PHP 5.2.2.
 </p>
 
+<p><strong>Update: May 4th;</strong> The PHP 4.4.7 Windows build was updated due to the faulty Apache2 module shipped with the original</p>
+
 <hr />
 <a name="6"></a>
 <h1>The PHP.net Google Summer of Code</h1>
