@@ -59,7 +59,7 @@ site_header("Anonymous CVS Access");
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>bison</i>: 1.28, 1.35, 1.75, 2.0 or higher</li>
  <li><i>flex</i>: 2.5.4</li>
- <li><i>re2c</i>: 0.9.11+</li>
+ <li><i>re2c</i>: 0.9.11+ (0.12.0+ for HEAD)</li>
 </ul>
 
 <p>
