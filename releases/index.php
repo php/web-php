@@ -147,7 +147,6 @@ site_header("Releases");
 </ul>
 
 
-<a name="v5"></a>
 <a name="5.2.0"></a>
 <h2>5.2.0</h2>
 
@@ -179,7 +178,6 @@ site_header("Releases");
 </ul>
 
 
-<a name="v5"></a>
 <a name="5.1.6"></a>
 <h2>5.1.6</h2>
 
@@ -197,7 +195,6 @@ site_header("Releases");
 </ul>
 
 
-<a name="v5"></a>
 <a name="5.1.5"></a>
 <h2>5.1.5</h2>
 
@@ -216,7 +213,6 @@ site_header("Releases");
 </ul>
 
 
-<a name="v5"></a>
 <a name="5.1.4"></a>
 <h2>5.1.4</h2>
 
@@ -252,7 +248,6 @@ site_header("Releases");
 </ul>
 
 
-<a name="v5"></a>
 <a name="5.1.2"></a>
 <h2>5.1.2</h2>
 
@@ -399,6 +394,32 @@ site_header("Releases");
 <hr />
 
 <a name="v4"></a>
+<a name="4.4.6"></a>
+<h2>4.4.6</h2>
+
+<ul>
+ <li>Released: 01 Mar 2007</li>
+ <li>Announcement: <a href="/releases/4_4_6.php">English</a></li>
+ <li><a href="/ChangeLog-4.php#4.4.6">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-4.4.6.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: 5db283824310c87efb18c76b4735c4bd</span>
+   </li>
+   <li>
+    <?php download_link('php-4.4.6.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: 07c607fcf12435f0078d72fe0de4e3c0</span>
+   </li>
+   <li>
+    <?php download_link('php-4.4.6-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: 486764cefb5f7bde39e95c49b2e38635</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 <a name="4.4.5"></a>
 <h2>4.4.5</h2>
 
