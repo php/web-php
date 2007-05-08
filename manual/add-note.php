@@ -132,9 +132,6 @@ if ($process) {
                  'our mirrors in due time.</p>';
         }
         
-        // Provide a backlink for the page the user is coming from
-        echo '<p>You can <a href="' . $_POST['redirect'] . '">go back</a> from whence you came.</p>';
-        
         // Print out common footer, and end page
         site_footer();
         exit();
