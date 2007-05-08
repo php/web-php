@@ -394,9 +394,9 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 //
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
 	return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
-		htmlspecialchars($url),
+		htmlspecialchars($url, ENT_QUOTES),
 		($target ? $target : "_new"),
-		htmlspecialchars($url),
+		htmlspecialchars($url, ENT_QUOTES),
 		($target ? $target : "_new"),
                 $windowprops,
 		($extras ? ' '.$extras : ''),
@@ -468,7 +468,7 @@ function sect_to_file($string) {
 }
 
 function clean($var) {
-  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var);
+  return htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($var) : $var, ENT_QUOTES);
 }
 
 // Clean out the content of one user note for printing to HTML
