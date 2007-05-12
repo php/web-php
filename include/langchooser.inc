@@ -54,7 +54,7 @@ function language_choose_code()
         $explicitly_specified = language_add($_REQUEST['lang'], $languages);
 
         // Set the language in a cookie for a year
-        mirror_setcookie("LAST_LANG", $_REQUEST['lang'], 60*60*24*365);
+        mirror_setcookie("LAST_LANG", $explicitly_specified, 60*60*24*365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
@@ -176,8 +176,8 @@ function language_add($langcode, &$langs)
 {
     global $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
 
-    // Make language code lowercase
-    $langcode = strtolower($langcode);
+    // Make language code lowercase, html encode special chars and remove slashes
+    $langcode = strtolower(htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($langcode) : $langcode));
 
     // The Brazilian Portuguese code needs special attention
     if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
