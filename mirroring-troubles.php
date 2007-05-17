@@ -25,7 +25,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  title may be used to test this mirror.
 </p>
 
-<a name="multiviews" />
+<a name="multiviews"></a>
 <h3>MultiViews are on [<a href="/functions">?</a>]</h3>
 <p>
  Because the 'Options' directive may be ignored in VirtualHost, a 
@@ -52,7 +52,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  Content Negotiation</a>.
 </p>
 
-<a name="content-type" />
+<a name="content-type"></a>
 <h3>Improper Content-Type [<a href="/manual/en/faq.html.php">?</a>]</h3>
 <p>
  Some pages are returning incorrect <em>Content-Type</em> headers. For example,
@@ -64,7 +64,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  <a href="http://apache.lexa.ru/">Russian Apache</a>.
 </p>
 
-<a name="manual-redirect" />
+<a name="manual-redirect"></a>
 <h3>Manual redirects [<a href="/manual/">?</a>]</h3>
 <p>
  By default, Apache inserts an alias for <em>/manual/</em> in the configuration 
@@ -74,7 +74,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  remove that alias.
 </p>
 
-<a name="shortcuts" />
+<a name="shortcuts"></a>
 <h3>Broken manual shortcuts [<a href="/echo">?</a>]</h3>
 <p>
  If the shortcut features [e.g. xx.php.net/echo] are not working, be sure 
@@ -83,7 +83,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  ErrorDocument setting.
 </p>
 
-<a name="invalid-data" />
+<a name="invalid-data"></a>
 <h3>Invalid data types [<a href="/testing">?</a>]</h3>
 <p>
  Invalid data is being received, and this is probably caused by improper error 
@@ -91,7 +91,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  for how to setup the ErrorDocument.
 </p>
 
-<a name="var" />
+<a name="var"></a>
 <h3>A misguided var handler [<a href="/manual/en/ref.var.php">?</a>]</h3>
 <p>
  The <a href="mirroring.php">mirroring guidelines</a> mention that Apache2
@@ -99,7 +99,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  <em>RemoveHandler var</em> in the configuration file.
 </p>
 
-<a name="msi" />
+<a name="msi"></a>
 <h3>Mishandling of .msi files</h3>
 <p>
  When improperly set, users are not given a "download this file" prompt 
@@ -109,7 +109,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  <em>AddType application/octet-stream .msi</em>
 </p>
 
-<a name="unlisted" />
+<a name="unlisted"></a>
 <h3>An unlisted mirror</h3>
 <p>
  If you have an official mirror server but it's not listed on 
@@ -121,7 +121,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  maintainers, and to the mirrors@lists.php.net mailing list.
 </p>
 
-<a name="slow" />
+<a name="slow"></a>
 <h3>Slow response time</h3>
 <p>
  Although this test is currently a little unfair (it's only based from the 
