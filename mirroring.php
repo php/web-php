@@ -308,37 +308,12 @@ $minute = rand(0, 59);
 
 <h2>Mirror Setup Troubleshooting</h2>
 
-<ul>
-<li>
- Don't be afraid if you cannot find several pieces of the site in your
- local copy, like the tutorial PHP page or the printed pages' directories.
- These are handled automatically on the fly and are not real files.
-</li>
-
-<li>
- If you find that the manuals are listed on the documentation page, but
- all of the links open up a search page, you probably have an Apache /manual/
- alias in effect. Remove that alias, restart Apache, and the manuals will
- be showing up.
-</li>
-
-<li>
- If the shortcut features [eg. xx.php.net/echo] are not working, check that
- the manual files are really under DOCUMENT_ROOT and that at least the
- English manual is present. Also make sure that you have a correct
- ErrorDocument setting.
-</li>
-
-<li>
- If you have an offical mirror site but it is not listed on
- <a href="/mirrors.php">mirrors.php</a>, then your mirror is probably detected
- to be nonfunctional for our users. Mirror sites inaccessible for more than
- three days, not updated for more than seven days, or having any major error in
- their setup are removed automatically from the listing for our user's
- convenience. We send out a notification to all automatically disabled mirror
- site owners every week.
-</li>
-</ul>
+<p>
+ The <a href="/mirroring-troubles.php">mirror troubleshooting guide</a> 
+ contains information about the common and potential problems discovered 
+ when setting up and maintaining a PHP.net mirror. Included are links that 
+ perform many of the tests executed by the automated mirror management tools.
+</p> 
 
 <h2>Data Registered About Official Mirrors</h2>
 
