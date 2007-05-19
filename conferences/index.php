@@ -18,6 +18,26 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="9"></a>
+<!-- SUBJECT: conference -->
+<?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo.png", "WebTech 2007"); ?>
+<h1>WebTech 2007</h1>
+<p>
+ <span class="newsdate">[18-May-2007]</span>
+ The 4th <a href="http://www.wtconferences.com/2007/?q=node/1">Internet technologies conference</a>
+ will take place from June 29 till 30th in the Bulgarian seaside at city of Varna where
+ you can combine sun, sea and technologies.
+</p>
+<p>
+ The conference as in the previous 3 years will focus on new technologies in web programming,
+ open source and everything that stands for IT.
+</p>
+<p>
+ The conference is free of charge.
+</p>
+
+<hr />
+
 <a name="8"></a>
 <!-- SUBJECT: cfp -->
 <?php news_image("http://www.zendcon.com/cfp.php", "zendcon07_logo_s.jpg", "Zend/PHP Conference 2007"); ?>
