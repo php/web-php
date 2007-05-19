@@ -23,7 +23,7 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 <?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo.png", "WebTech 2007"); ?>
 <h1>WebTech 2007</h1>
 <p>
- <span class="newsdate">[18-May-2007]</span>
+ <span class="newsdate">[19-May-2007]</span>
  The 4th <a href="http://www.wtconferences.com/2007/?q=node/1">Internet technologies conference</a>
  will take place from June 29 till 30th in the Bulgarian seaside at city of Varna where
  you can combine sun, sea and technologies.
