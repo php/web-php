@@ -51,7 +51,8 @@ function find_manual_page_slow($lang, $keyword)
     // Possible prefixes to test
     $sections = array(
         "", "ref.", "function.", "class.",
-        "feature-", "control-structures.", "language."
+        "feature-", "control-structures.", "language.",
+        "about.", "faq.", "features.", 
     );
 
     // Remove .. for security reasons
