@@ -26,7 +26,7 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 
 <a name="9"></a>
 <!-- SUBJECT: conference -->
-<?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo.png", "WebTech 2007"); ?>
+<?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
 <h1>WebTech 2007</h1>
 <p>
  <span class="newsdate">[19-May-2007]</span>
