@@ -32,7 +32,6 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  solution is to move the MultiViews option into a specific 
  directory and disable it from there. For example:
 </p>
-<p>
 <pre>
   &lt;VirtualHost *:80>
     &lt;Directory /path/to/phpweb>
@@ -44,7 +43,6 @@ site_header("The PHP mirrors problem and troubleshooting guide");
     ....
   &lt;/VirtualHost> 
 </pre>
-</p>
 <p>
  The <a href="mirroring.php#settings">mirror settings</a> example also 
  demonstrates this use. See also the Apache documentation that describes
@@ -132,3 +130,4 @@ site_header("The PHP mirrors problem and troubleshooting guide");
 
 <?php 
 site_footer();
+
