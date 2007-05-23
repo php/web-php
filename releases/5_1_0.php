@@ -8,7 +8,7 @@ site_header("PHP 5.1.0 Release Announcement");
 <h1>PHP 5.1.0. Release Announcement</h1>
 <p>
 The PHP development team is proud to announce the release of PHP <a href="/downloads.php">PHP 5.1.0</a>.<br />
-Some of the key features of PHP <a href="/downloads.php">PHP 5.1.0</a> include:
+Some of the key features of <a href="/downloads.php">PHP 5.1.0</a> include:
 </p>
 <p>
 <ul>

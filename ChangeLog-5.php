@@ -28,7 +28,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Fixed substr_compare and substr_count information leak (MOPB-14 by Stefan Esser) (Stas, Ilia)</li>
 	<li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser) (Stas)</li>
 	<li>Fixed CRLF injection inside ftp_putcmd(). (by loveshell[at]Bug.Center.Team) (Ilia)</li>
-	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Steffan Esser) (Ilia)</li>
+	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Stefan Esser) (Ilia)</li>
 	<li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (Ilia)</li>
 	<li>Fixed a buffer overflow inside user_filter_factory_create(). (Ilia)</li>
 	<li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (Stas)</li>
