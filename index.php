@@ -258,9 +258,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 	<li>Fixed unallocated memory access/double free in in array_user_key_compare() (MOPB-24 by Stefan Esser)</li>
 	<li>Fixed a double free inside session_regenerate_id() (MOPB-22 by Stefan Esser)</li>
 	<li>Added missing open_basedir &amp; safe_mode checks to zip:// and bzip:// wrappers. (MOPB-21 by Stefan Esser).</li>
-	<li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser)</li>	
 	<li>Fixed CRLF injection inside ftp_putcmd(). (by loveshell[at]Bug.Center.Team)</li>
-	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Stefan Esser)</li>
 	<li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (by Stanislav Malyshev)</li>
 </ul>
 <p>
@@ -272,6 +270,8 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 	<li>Fixed substr_compare and substr_count information leak (MOPB-14 by Stefan Esser) (Stas, Ilia)</li>
 	<li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (by Ilia Alshanetsky)</li>
 	<li>Fixed a buffer overflow inside user_filter_factory_create(). (by Ilia Alshanetsky)</li>
+	<li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Stefan Esser)</li>
+	<li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser)</li>	
 </ul>
 <p>
 <b>Security Enhancements and Fixes in PHP 4.4.7 only:</b>
@@ -294,6 +294,7 @@ those releases and PHP 5.2.2.
 </p>
 
 <p><strong>Update: May 4th;</strong> The PHP 4.4.7 Windows build was updated due to the faulty Apache2 module shipped with the original</p>
+<p><strong>Update: May 23th;</strong> By accident a couple of fixes where listed as fixed in both PHP 5.2.2 and 4.4.7 but where however only fixed in PHP 5.2.2. The PHP 4 ChangeLog was not affected.</p>
 
 <hr />
 <a name="6"></a>
