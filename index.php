@@ -142,8 +142,7 @@ if (is_official_mirror()) {
 
 /* {{{ Generate latest release info */
 $PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = "5.2.3RC1";
-$PHP_4_RC     = "";
+$PHP_5_RC     = $PHP_4_RC     = "";
 $rel          = $rc           = "";
 
 list($PHP_5_STABLE, ) = each($RELEASES[5]);

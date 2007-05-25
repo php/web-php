@@ -28,6 +28,7 @@ $PHP_5_MD5     = array(
                        "nts.zip"   => "b9abde6658b91ab66acb26eca699b5f6",
                        "pecl.nts"  => "902360747287abaf4c8906efb609f2f8",
 );
+$PHP_5_RC      = "5.2.3RC1";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.7";
@@ -37,6 +38,7 @@ $PHP_4_MD5     = array(
                        "tar.gz"    => "2669d2049822ac14abb263703d24f643",
                        "zip"       => "e774e79530d610c58c5f2da433d14e0f",
 );
+$PHP_4_RC      = false;
 
 $RELEASES = array(
     5 => array(
@@ -90,7 +92,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-//        "5.2.3" => array(), /* Yes, it should be empty - unless we want it in the version feed? */
+        $PHP_5_RC => array(),
     ),
     4 => array(
         $PHP_4_VERSION => array(
@@ -119,7 +121,7 @@ $RELEASES = array(
                 ),
             ),
         ),
-//        "4.4.7RC1" => array(), /* Yes, it should be empty.. unless we want it in the version feed..? */
+        $PHP_4_RC => array(),
     ),
 );
 
