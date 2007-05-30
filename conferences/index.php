@@ -24,6 +24,24 @@ site_header("PHP Conferences around the world", array("layout_workaround" => $la
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
+<a name="10"></a>
+<!-- SUBJECT: cfp -->
+<?php news_image("http://dcphpconference.com/", "dcphpconference.2007.png", "DC PHP Conference 2007"); ?>
+<h1>DC PHP Conference 2007 : call for Papers</h1>
+<p>
+ <span class="newsdate">[30-May-2007]</span>
+Join us at the <a href="http://dcphpconference.com/" title="DC PHP Conference 2007">2nd Annual DC PHP Conference</a>. Technology experts are invited to participate in the East Coast's premiere forum for PHP's vast number of users.  Present your technical concepts, cutting edge applications, or business applications for an opportunity to showcase your ideas in the PHP community.
+</p>
+<p>
+<a href="http://dcphpconference.com/?q=node/add/paper" title= "DC PHP Conference 2007 : call for paper">Please submit an abstract for consideration</a>. All abstracts submitted on or before July 22, 2007 will be considered.
+<ul>
+  <li>Submission Deadline:	July 22th, 2007</li>
+  <li>Notification by:		August 15th, 2007</li>
+</ul>
+</p>
+
+<hr />
+
 <a name="9"></a>
 <!-- SUBJECT: conference -->
 <?php news_image("http://www.wtconferences.com/2007/?q=node/1", "wtlogo_s.png", "WebTech 2007"); ?>
