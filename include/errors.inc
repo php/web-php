@@ -51,6 +51,18 @@ function error_noservice()
     exit;
 }
 
+// There is no such mirror
+function error_nomirror($mirror) {
+	site_header("No such mirror", array("noindex"));
+	echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
+		 htmlspecialchars($mirror) .
+		 ") is not registered php.net mirror. Please check back later," .
+		 " or if the problem persist, " .
+		 "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
+	site_footer();
+	exit;
+}
+
 // Send out a proper status header
 function status_header($num)
 {
@@ -69,3 +81,4 @@ function status_header($num)
     
     return TRUE;
 }
+

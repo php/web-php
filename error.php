@@ -150,6 +150,11 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     // Some other mirror is selected
     else { $mr = "http://{$dlinfo[2]}/"; }
     
+    // Check if that mirror really exists if not, bail out
+    if(!isset($MIRRORS[$mr])) {
+        error_nomirror($mr);
+        exit;
+    }
     // Start the download process
     status_header(200);
     include $_SERVER['DOCUMENT_ROOT'] . "/include/do-download.inc";
