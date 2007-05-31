@@ -231,7 +231,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 // DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
 ?>
 
-<a name="7"></a>
+<a name="8"></a>
 <h1>PHP 5.2.3 Released</h1>
 <p>
  <span class="newsdate">[01-Jun-2007]</span>
