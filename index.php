@@ -78,6 +78,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
  <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
  <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
+ <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">
