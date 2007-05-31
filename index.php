@@ -232,6 +232,47 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 ?>
 
 <a name="7"></a>
+<h1>PHP 5.2.3 Released</h1>
+<p>
+ <span class="newsdate">[01-Jun-2007]</span>
+The PHP development team would like to announce the immediate <a
+href="/downloads.php#v5">availability of PHP 5.2.3</a>. 
+This release continues to improve the security and the stability of 
+the 5.X branch as well as addressing two regressions introduced
+by the previous 5.2 releases. These regressions relate to the timeout
+handling over non-blocking SSL connections and the lack of
+HTTP_RAW_POST_DATA in certain conditions. All users are encouraged to
+upgrade to this release.
+</p>
+
+<p>
+Further details about the PHP 5.2.3 release can be found in the <a
+  href="/releases/5_2_3.php">release announcement for 5.2.3</a>, the full list of
+  changes is available in the <a href="/ChangeLog-5.php#5.2.3">ChangeLog for PHP
+  5</a>.
+</p>
+ 
+<p>
+<b>Security Enhancements and Fixes in PHP 5.2.3:</b>
+</p>
+<ul>
+	<li>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</li>
+	<li>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</li>
+	<li>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</li>
+	<li>Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
+	<li>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</li>
+	<li>Added mysql_set_charset() to allow runtime altering of connection encoding.</li>
+</ul>
+
+<p>
+For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+available <a href="/migration52">here</a>, detailing the changes between
+those releases and PHP 5.2.2.
+</p>
+
+<hr />
+
+<a name="7"></a>
 <h1>PHP 5.2.2 and PHP 4.4.7 Released</h1>
 <p>
  <span class="newsdate">[03-May-2007]</span>

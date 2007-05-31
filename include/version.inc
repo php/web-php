@@ -17,18 +17,18 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.2";
-$PHP_5_DATE    = "03 May 2007";
+$PHP_5_VERSION = "5.2.3";
+$PHP_5_DATE    = "01 June 2007";
 $PHP_5_MD5     = array(
-                       "tar.bz2"   => "d084337867d70b50a10322577be0e44e",
-                       "tar.gz"    => "7a920d0096900b2b962b21dc5c55fe3c",
-                       "zip"       => "634cf45c34f80dfb1284cabf1bbb1417",
-                       "installer" => "eea060523d095ae421409e8a9c343207",
-                       "pecl.zip"  => "5d206368799dfbac983d83954328ae3a",
-                       "nts.zip"   => "b9abde6658b91ab66acb26eca699b5f6",
-                       "pecl.nts"  => "902360747287abaf4c8906efb609f2f8",
+                       "tar.bz2"   => "eb50b751c8e1ced05bd012d5a0e4dec3",
+                       "tar.gz"    => "df79b04d63fc4c1ccb6d8ea58a9cf3ac",
+                       "zip"       => "ff6e5dc212823009e68f26d66d85cbac",
+                       "installer" => "4d042f649d9c264477e1b421c64c6435",
+                       "pecl.zip"  => "0480ffaf5a5333e83d90d75cece54748",
+                       "nts.zip"   => "3b291d4081af3100b83e39b8aacc444a",
+                       "pecl.nts"  => "ddf283dc8a9c49c8d2c5f38ad697c051",
 );
-$PHP_5_RC      = "5.2.3RC1";
+$PHP_5_RC      = "";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.7";

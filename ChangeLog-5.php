@@ -11,6 +11,82 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.3"></a>
+<h3>Version 5.2.3</h3>
+<b>31-May-2007</b>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</li>
+		<li>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</li>
+		<li>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</li>
+		<li>Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
+		<li>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</li>
+		<li>Added mysql_set_charset() to allow runtime altering of connection encoding.</li>
+	</ul>
+</li>
+
+<li>Changed CGI install target to php-cgi and 'make install' to install CLI when CGI is selected. (Jani)</li>
+<li>Changed JSON maximum nesting depth from 20 to 128. (Rasmus)
+
+<li>Improved compilation of heredocs and interpolated strings. (Matt, Dmitry)</li>
+<li>Optimized out a couple of per-request syscalls. (Rasmus)</li>
+<li>Optimized digest generation in md5() and sha1() functions. (Ilia)</li>
+<li>Upgraded bundled SQLite 3 to version 3.3.17. (Ilia)
+
+<li>Addded "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007. (Stas)</li>
+<li>Added a 4th parameter flag to htmlspecialchars() and htmlentities() that makes the function not encode existing html entities. (Ilia)</li>
+<li>Added PDO::FETCH_KEY_PAIR mode that will fetch a 2 column result set into an associated array. (Ilia)</li>
+<li>Added CURLOPT_TIMEOUT_MS and CURLOPT_CONNECTTIMEOUT_MS cURL constants. (Sara)</li>
+<li>Added --ini switch to CLI that prints out configuration file names. (Marcus)</li>
+
+<li>Implemented FR <?php bugfix(41416); ?> (getColumnMeta() should also return table name). (Tony)
+
+<li>Fixed filetype() and linkinfo() processing of symlinks on ZTS systems. (Oliver Block, Tony, Dmitry)</li>
+<li>Fixed SOAP extension's handler() to work even when "always_populate_raw_post_data" is off. (Ilia)</li>
+<li>Fixed altering $this via argument named "this". (Dmitry)</li>
+<li>Fixed PHP CLI usage of php.ini from the binary location. (Hannes)</li>
+<li>Fixed segfault in strripos(). (Tony, Joxean Koret)</li>
+<li>Fixed gd build when used with freetype 1.x (Pierre, Tony)</li>
+<li><?php bugfix(41525); ?> (ReflectionParameter::getPosition() not available). (Marcus)</li>
+<li><?php bugfix(41511); ?> (Compile failure under IRIX 6.5.30 building md5.c). (Jani)</li>
+<li><?php bugfix(41504); ?> (json_decode() incorrectly decodes JSON arrays with empty string keys). (Ilia)</li>
+<li><?php bugfix(41477); ?> (no arginfo about SoapClient::__soapCall()). (Ilia)</li>
+<li><?php bugfix(41455); ?> (ext/dba/config.m4 pollutes global $LIBS and $LDFLAGS).  (mmarek at suse dot cz, Tony)</li>
+<li><?php bugfix(41442); ?> (imagegd2() under output control). (Tony)</li>
+<li><?php bugfix(41430); ?> (Fatal error with negative values of maxlen parameter of  file_get_contents()). (Tony)</li>
+<li><?php bugfix(41423); ?> (PHP assumes wrongly that certain ciphers are enabled in  OpenSSL). (Pierre)</li>
+<li><?php bugfix(41421); ?> (Uncaught exception from a stream wrapper segfaults).  (Tony, Dmitry)</li>
+<li><?php bugfix(41403); ?> (json_decode cannot decode floats if localeconv  decimal_point is not '.'). (Tony)</li>
+<li><?php bugfix(41401); ?> (wrong unary operator precedence). (Stas)</li>
+<li><?php bugfix(41394); ?> (dbase_create creates file with corrupted header). (Tony)</li>
+<li><?php bugfix(41390); ?> (Clarify error message with invalid protocol scheme). (Scott)</li>
+<li><?php bugfix(41378); ?> (fastcgi protocol lacks support for Reason-Phrase in  "Status:" header). (anight at eyelinkmedia dot com, Dmitry)</li>
+<li><?php bugfix(41374); ?> (whole text concats values of wrong nodes). (Rob)</li>
+<li><?php bugfix(41358); ?> (configure cannot determine SSL lib with libcurl >= 7.16.2). (Mike)</li>
+<li><?php bugfix(41353); ?> (crash in openssl_pkcs12_read() on invalid input). (Ilia)</li>
+<li><?php bugfix(41351); ?> (Invalid opcode with foreach ($a[] as $b)). (Dmitry, Tony)</li>
+<li><?php bugfix(41347); ?> (checkdnsrr() segfaults on empty hostname). (Scott)</li>
+<li><?php bugfix(41337); ?> (WSDL parsing doesn't ignore non soap bindings). (Dmitry)</li>
+<li><?php bugfix(41326); ?> (Writing empty tags with Xmlwriter::WriteElement[ns]) (Pierre)</li>
+<li><?php bugfix(41321); ?> (downgrade read errors in getimagesize() to E_NOTICE). (Ilia)</li>
+<li><?php bugfix(41304); ?> (compress.zlib temp files left). (Dmitry)</li>
+<li><?php bugfix(41293); ?> (Fixed creation of HTTP_RAW_POST_DATA when there is no default post handler). (Ilia)</li>
+<li><?php bugfix(41291); ?> (FastCGI does not set SO_REUSEADDR).  (fmajid at kefta dot com, Dmitry)</li>
+<li><?php bugfix(41287); ?> (Namespace functions don't allow xmlns definition to be  optional). (Rob)</li>
+<li><?php bugfix(41283); ?> (Bug with deserializing array key that are doubles or floats in wddx). (Ilia)</li>
+<li><?php bugfix(41257); ?> (lookupNamespaceURI does not work as expected). (Rob)</li>
+<li><?php bugfix(41236); ?> (Regression in timeout handling of non-blocking SSL connections during reads and writes). (Ilia)</li>
+<li><?php bugfix(41134); ?> (zend_ts_hash_clean not thread-safe).  (marco dot cova at gmail dot com, Tony)</li>
+<li><?php bugfix(41097); ?> (ext/soap returning associative array as indexed without using WSDL). (Dmitry)</li>
+<li><?php bugfix(41004); ?> (minOccurs="0" and null class member variable). (Dmitry)</li>
+<li><?php bugfix(39542); ?> (Behavior of require/include different to < 5.2.0). (Dmitry)</li>
+
+
+</ul>
+
+<hr />
+
 <a name="5.2.2"></a>
 <h3>Version 5.2.2</h3>
 <b>03-May-2007</b>
