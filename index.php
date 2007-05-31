@@ -267,7 +267,7 @@ Further details about the PHP 5.2.3 release can be found in the <a
 <p>
 For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
 available <a href="/migration52">here</a>, detailing the changes between
-those releases and PHP 5.2.2.
+those releases and PHP 5.2.3.
 </p>
 
 <hr />
