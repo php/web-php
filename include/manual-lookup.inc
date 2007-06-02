@@ -132,7 +132,7 @@ function find_manual_page($lang, $keyword)
         // List of all the keywords in single quotes
         $words = "'" . implode("','", $keywords) . "'";
         
-        $SQL = "SELECT name FROM fs WHERE lang = 'LANG_HERE'
+        $SQL = "SELECT name, prio FROM fs WHERE lang = 'LANG_HERE'
                 AND keyword IN (" . $words . ") ORDER BY prio LIMIT 1";
     }
 
@@ -144,6 +144,11 @@ function find_manual_page($lang, $keyword)
         if ($q) {
             $r = sqlite_fetch_array($q, SQLITE_NUM);
             if (isset($r[0])) {
+				if($r[1] > 10 && strlen($keyword) < 4) {
+					// "Match" found, but the keyword is so short
+					// its probably bogus. Skip it
+					continue;
+				}
                 // Match found
                 return $r[0];
             }
