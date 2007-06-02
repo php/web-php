@@ -316,6 +316,7 @@ $uri_aliases = array (
     "releases.php"           => "releases/index",    // BC
 
     "update_5_2.txt"         => "migration52",      // BC
+    "readme_upgrade_51.php"  => "migration51",      // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",

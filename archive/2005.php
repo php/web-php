@@ -54,7 +54,7 @@ security fixes and we recommend that all users of PHP 5.0 and early
 adopters of PHP 5.1 betas upgrade to this release as soon as possible.
 The complete details about all of the changes can be found in the
 <a href="/ChangeLog-5.php#5.1.0">PHP 5 ChangeLog</a> and an
-<a href="/README_UPGRADE_51.php">upgrading guide</a> is available as well.
+<a href="/migration51">upgrading guide</a> is available as well.
 </p>
 
 <hr />

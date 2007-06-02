@@ -62,6 +62,6 @@ All users of PHP 5.0 and early adopters of 5.1 betas are strongly advised to upg
 possible. Furthermore, 5.1 branch obsoletes the 5.0 PHP branch.
 </p>
 
-<p><a href="/README_UPGRADE_51.php">Upgrading Guide</a> is available to ease the transition from prior PHP versions.</p>
+<p><a href="/migration51">Upgrading Guide</a> is available to ease the transition from prior PHP versions.</p>
 
 <?php site_footer(); ?>
