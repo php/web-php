@@ -30,13 +30,13 @@ if ($cy != 0 && !valid_year($cy)) {
 if ($id) {
     // Try to load event by ID and display header and info for that event
     if ($event = load_event($id)) {
-        site_header("Event: " . stripslashes(htmlentities($event['sdesc'])));
+        site_header("Event: " . stripslashes(htmlentities($event['sdesc'], ENT_QUOTES, 'UTF-8')));
         display_event($event, 0);
         $begun = TRUE;
     }
     // Unable to find event, put this to the error messages' list
     else {
-        $errors[] = "There is no event for specified id ('".htmlentities($id)."')";
+        $errors[] = "There is no event for specified id ('".htmlentities($id, ENT_QUOTES, 'UTF-8')."')";
     }
 }
 
@@ -68,14 +68,14 @@ elseif ($cy && $cm && $cd) {
     
     // Wrong date specified
     else {
-        $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd").") was not valid.";
+        $errors[] = "The specified date (".htmlentities("$cy/$cm/$cd", ENT_QUOTES, 'UTF-8').") was not valid.";
         unset($cm); unset($cd); unset($cy);
     }
 }
 
 // Check if month and year is valid
 if ($cm && $cy && !checkdate($cm,1,$cy)) {
-    $errors[] = "The specified year and month (".htmlentities("$cy, $cm").") are not valid.";
+    $errors[] = "The specified year and month (".htmlentities("$cy, $cm", ENT_QUOTES, 'UTF-8').") are not valid.";
     unset($cm); unset($cy);
 }
 
@@ -221,7 +221,7 @@ function display_events_for_day($day, $events)
                  ($COUNTRY == $event['country'] ? "<strong>" : ""),
                  '<a class="cat' . $event['category'] . '" href="/cal.php',
                  "?id=$event[id]&amp;cm=$cm&amp;cy=$cy", '">',
-                 stripslashes(htmlentities($event['sdesc'])),
+                 stripslashes(htmlentities($event['sdesc'], ENT_QUOTES, 'UTF-8')),
                  '</a>',
                  ($COUNTRY == $event['country'] ? "</strong>" : ""),
                  '</div>';
