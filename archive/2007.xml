@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="/" xmlns:php="http://php.net/ns/news">
+  <title>PHP.net news &amp; announcements</title>
+  <link href="/feed.atom" rel="self"/>
+  <icon>/images/news/php-logo.gif</icon>
+  <updated>2007-06-03T08:55:48+02:00</updated>
+  <id>http://php.net/archive/2007.php</id>
+  <author>
+    <name>Webmaster</name>
+    <uri>http://php.net/contact</uri>
+    <email>webmaster@php.net</email>
+  </author>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 5.2.3 Released</title>
+    <link href="/index.php#2007-06-01-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-06-01-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-06-01-1</id>
+    <published>2007-06-01T00:00:00+01:00</published>
+    <updated>2007-06-01T00:00:00+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+The PHP development team would like to announce the immediate <a href="/downloads.php#v5">availability of PHP 5.2.3</a>. 
+This release continues to improve the security and the stability of 
+the 5.X branch as well as addressing two regressions introduced
+by the previous 5.2 releases. These regressions relate to the timeout
+handling over non-blocking SSL connections and the lack of
+HTTP_RAW_POST_DATA in certain conditions. All users are encouraged to
+upgrade to this release.
+</p>
+
+<p>
+Further details about the PHP 5.2.3 release can be found in the
+<a href="/releases/5_2_3.php">release announcement for 5.2.3</a>, the full list of
+changes is available in the <a href="/ChangeLog-5.php#5.2.3">ChangeLog for PHP 5</a>.
+</p>
+ 
+<p>
+<b>Security Enhancements and Fixes in PHP 5.2.3:</b>
+</p>
+<ul>
+	<li>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</li>
+	<li>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</li>
+	<li>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</li>
+	<li>Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
+	<li>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</li>
+	<li>Added mysql_set_charset() to allow runtime altering of connection encoding.</li>
+</ul>
+
+<p>
+For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+available <a href="/migration52">here</a>, detailing the changes between
+those releases and PHP 5.2.3.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>DC PHP Conference 2007 : call for Papers</title>
+    <link href="/conferences/index.php#2007-05-30-1" rel="alternate" type="text/html"/>
+    <link href="http://dcphpconference.com/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-05-30-1</id>
+    <published>2007-05-30T00:00:00+01:00</published>
+    <updated>2007-05-30T00:00:00+01:00</updated>
+	<category term="cfp" label="Call for Papers"/>
+	<php:finalTeaserDate>2007-06-22</php:finalTeaserDate>
+	<php:newsImage link="http://dcphpconference.com/" title="DC PHP Conference 2007">dcphpconference.2007.png</php:newsImage>
+    <content type="xhtml">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+Join us at the <a href="http://dcphpconference.com/" title="DC PHP Conference 2007">2nd Annual DC PHP Conference</a>. Technology experts are invited to participate in the East Coast's premiere forum for PHP's vast number of users.  Present your technical concepts, cutting edge applications, or business applications for an opportunity to showcase your ideas in the PHP community.
+</p>
+<p>
+<a href="http://dcphpconference.com/?q=node/add/paper" title= "DC PHP Conference 2007 : call for paper">Please submit an abstract for consideration</a>. All abstracts submitted on or before July 22, 2007 will be considered.
+<ul>
+  <li>Submission Deadline:	July 22th, 2007</li>
+  <li>Notification by:		August 15th, 2007</li>
+</ul>
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>WebTech 2007</title>
+    <link href="/conferences/index.php#2007-05-19-1" rel="alternate" type="text/html"/>
+    <link href="http://www.wtconferences.com/2007/?q=node/1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-05-19-1</id>
+    <published>2007-05-19T00:00:00+01:00</published>
+    <updated>2007-05-19T00:00:00+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+	<php:finalTeaserDate>2007-06-30</php:finalTeaserDate>
+	<php:newsImage link="http://www.wtconferences.com/2007/?q=node/1" title="WebTech 2007">wtlogo_s.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+ The 4th <a href="http://www.wtconferences.com/2007/?q=node/1">Internet technologies conference</a>
+ will take place from June 29 till 30th in the Bulgarian seaside at city of Varna where
+ you can combine sun, sea and technologies.
+</p>
+<p>
+ The conference as in the previous 3 years will focus on new technologies in web programming,
+ open source and everything that stands for IT.
+</p>
+<p>
+ The conference is free of charge.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 5.2.2 and PHP 4.4.7 Released</title>
+    <link href="/index.php#2007-05-03-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-05-03-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-05-03-1</id>
+    <published>2007-05-03T00:00:00+01:00</published>
+    <updated>2007-05-23T00:00:00+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+ The PHP development team would like to announce the immediate
+ <a href="/downloads.php#v5">availability of PHP 5.2.2</a> and
+ <a href="/downloads.php#v4">availability of PHP 4.4.7</a>.
+ These releases are major stability and security enhancements of the 5.x and
+ 4.4.x branches, and all users are strongly encouraged to upgrade to it as
+ soon as possible.  Further details about the PHP 5.2.2 release can be found
+ in the <a href="/releases/5_2_2.php">release announcement for 5.2.2</a>,
+ the full list of changes is available in the
+ <a href="/ChangeLog-5.php#5.2.2">ChangeLog for PHP 5</a>. Details about
+ the PHP 4.4.7 release can be found in the
+ <a href="/releases/4_4_7.php">release announcement for 4.4.7</a>, the full
+ list of changes is available in the
+ <a href="/ChangeLog-4.php#4.4.7">ChangeLog for PHP 4</a>.
+</p>
+<p>
+ <b>Security Enhancements and Fixes in PHP 5.2.2 and PHP 4.4.7:</b>
+</p>
+<ul>
+ <li>Fixed CVE-2007-1001, GD wbmp used with invalid image size (by Ivan Fratric)</li>
+ <li>Fixed asciiz byte truncation inside mail() (MOPB-33 by Stefan Esser)</li>
+ <li>Fixed a bug in mb_parse_str() that can be used to activate register_globals (MOPB-26 by Stefan Esser)</li>
+ <li>Fixed unallocated memory access/double free in in array_user_key_compare() (MOPB-24 by Stefan Esser)</li>
+ <li>Fixed a double free inside session_regenerate_id() (MOPB-22 by Stefan Esser)</li>
+ <li>Added missing open_basedir &amp; safe_mode checks to zip:// and bzip:// wrappers. (MOPB-21 by Stefan Esser).</li>
+ <li>Fixed CRLF injection inside ftp_putcmd(). (by loveshell[at]Bug.Center.Team)</li>
+ <li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (by Stanislav Malyshev)</li>
+</ul>
+<p>
+ <b>Security Enhancements and Fixes in PHP 5.2.2 only:</b>
+</p>
+<ul>
+ <li>Fixed a header injection via Subject and To parameters to the mail() function (MOPB-34 by Stefan Esser)</li>
+ <li>Fixed wrong length calculation in unserialize S type (MOPB-29 by Stefan Esser)</li>
+ <li>Fixed substr_compare and substr_count information leak (MOPB-14 by Stefan Esser) (Stas, Ilia)</li>
+ <li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (by Ilia Alshanetsky)</li>
+ <li>Fixed a buffer overflow inside user_filter_factory_create(). (by Ilia Alshanetsky)</li>
+ <li>Fixed a possible super-global overwrite inside import_request_variables(). (by Stefano Di Paola, Stefan Esser)</li>
+ <li>Limit nesting level of input variables with max_input_nesting_level as fix for (MOPB-03 by Stefan Esser)</li>
+</ul>
+<p>
+ <b>Security Enhancements and Fixes in PHP 4.4.7 only:</b>
+</p>
+<ul>
+ <li>XSS in phpinfo() (MOPB-8 by Stefan Esser)</li>
+</ul>
+<p>
+ While majority of the issues outlined above are local, in some
+ circumstances given specific code paths they can be triggered externally.
+ Therefor, we strongly recommend that if you use code utilizing the
+ functions and extensions identified as having had vulnerabilities in them,
+ you consider upgrading your PHP.
+</p>
+<p>
+ For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+ available <a href="/migration52">here</a>, detailing the changes between
+ those releases and PHP 5.2.2.
+</p>
+<p><strong>Update: May 4th;</strong> The PHP 4.4.7 Windows build was updated due to the faulty Apache2 module shipped with the original</p>
+<p><strong>Update: May 23th;</strong> By accident a couple of fixes where listed as fixed in both PHP 5.2.2 and 4.4.7 but where however only fixed in PHP 5.2.2. The PHP 4 ChangeLog was not affected.</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>Zend/PHP Conference 2007 call for papers</title>
+    <link href="/conferences/index.php#2007-04-16-1" rel="alternate" type="text/html"/>
+    <link href="http://www.zendcon.com/cfp.php" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-04-16-1</id>
+    <published>2007-04-16T00:00:00+01:00</published>
+    <updated>2007-04-16T00:00:00+01:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+	<php:finalTeaserDate>2007-05-31</php:finalTeaserDate>
+	<php:newsImage link="http://www.zendcon.com/cfp.php" title="Zend/PHP Conference 2007">zendcon07_logo_s.jpg</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+2007 marks the third anniversary of the Zend/PHP Conference and Expo. Focused on the PHP, the world's fastest growing web development language, this year’s conference is guaranteed to again be bigger and better than ever.
+</p>
+<p>
+Present your business applications, technical concepts, or cutting edge applications at the Zend/PHP Conference of 2007. With the most sessions, the world's top presenters, and the largest and most qualified attendance, this will be the premier forum for PHP in 2007.
+</p>
+<p>
+Your participation will make this conference a success. Zend Technologies requests that you submit an abstract.<br/>
+The conference selection committee will consider all abstracts submitted on or before May 31, 2007.<br/>
+</p>
+<p>
+For more information about topics and submission guidelines please see <a href="http://www.zendcon.com/cfp.php">http://www.zendcon.com/cfp.php</a>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>The PHP.net Google Summer of Code</title>
+    <link href="/index.php#2007-04-14-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-04-14-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-04-14-1</id>
+    <published>2007-04-14T00:00:00+01:00</published>
+    <updated>2007-04-14T00:00:00+01:00</updated>
+	<category term="frontpage" label="PHP.net frontpage news"/>
+	<category term="gsoc" label="Google Summer of Code"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+    The PHP team is once again proud to participate in the 
+    <a href="http://code.google.com/soc/">Google Summer of Code</a>.
+    Seven students will "flip bits instead of burgers" this summer:
+</p>
+<ul>
+  <li>
+        Mentored by Michael Wallner, Hannes Magnusson will work on
+        <a href="http://wiki.phpdoc.info/LiveDocs">LiveDocs</a>, which is a
+        "tool to display DocBook XML files in a web browser on the
+        fly, without the need of building all HTML target files first".
+        This project will be of great value to the PHP Documentation Team.
+  </li>
+  <li>
+        The PHP Interpreter uses reference counting to keep track of which
+        objects are no longer referenced and thus can be destroyed. A major
+        weakness in the current implementation is that it cannot detect
+        reference cycles, that is objects that reference each other in a
+        circular graph structure which is not referenced itself from outside
+        the circle. Mentored by Derick Rethans, David Wang will implement a
+        new reference counting algorithm that will alleviate this problem.
+  </li>
+  <li>
+	    <a href="http://xdebug.org/">Xdebug</a> provides a range of useful
+        functionality for PHP developers, including detailed error information,
+        code coverage and profiling support, and support for remote debugging
+        using the GDB and DBGp protocols. Mentored by Xdebug's creator,
+        Derick Rethans, Adam Harvey will develop a cross-platform GUI
+        application that implements the DBGp protocol and allows PHP
+        applications to be debugged using Xdebug in a development environment
+        agnostic fashion.
+  </li>
+  <li>
+	    Mentored by Lukas Smith, Konsta Vesterinen will work on the
+        object-relational mapper <a href="http://www.phpdoctrine.net/">Doctrine</a>.
+  </li>
+  <li>
+        Mutation Testing, or Automated Error Seeding, is an approach where
+        the testing tool makes some change to the tested code, runs the tests,
+        and if the tests pass displays a message saying what it changed. This
+        approach is different than code coverage analysis, because it can find
+        code that is executed by the running of tests but not actually tested.
+        Mentored by Sebastian Bergmann, Mike Lewis will implement Mutation
+        Testing for <a href="http://www.phpunit.de/">PHPUnit</a>.
+  </li>
+  <li>
+        Mentored by Helgi Þormar Þorbjörnsson, Igor Feghali will add support
+        for foreign keys to
+        <a href="http://pear.php.net/package/MDB2_Schema/">MDB2_Schema</a>,
+        a package that "enables users to maintain RDBMS independant schema
+        files in XML that can be used to create, alter and drop database
+        entities and insert data into a database".
+  </li>
+  <li>
+        Mentored by David Coallier, Nicolas Bérard-Nault will refactor the
+        internals of <a href="http://www.jaws-project.com/">Jaws</a>, a
+        Framework and Content Management System for building dynamic web sites,
+        for PHP 6.
+  </li>
+</ul>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP @ FrOSCon call for papers</title>
+    <link href="/conferences/index.php#2007-03-29-1" rel="alternate" type="text/html"/>
+    <link href="http://froscon.phpugdo.de/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-03-29-1</id>
+    <published>2007-03-29T00:00:00+01:00</published>
+    <updated>2007-03-29T00:00:00+01:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+	<php:finalTeaserDate>2007-05-04</php:finalTeaserDate>
+	<php:newsImage link="http://froscon.phpugdo.de" title="PHP @ FrOSCon">phpatfroscon2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+The PHP Usergroup Dortmund is again organizing a dedicated PHP room at
+the Free and Open Source Conference 2007. The event will take place on
+August 25th and 26th in St. Augustin (near Bonn), Germany. For the
+dedicated PHP talks program, the call for papers is open until June 4th.
+Talks are accepted in English and German language. For detailed
+information see <a href="http://froscon.phpugdo.de">http://froscon.phpugdo.de</a>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 4.4.6 Released</title>
+    <link href="/index.php#2007-03-01-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-03-01-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-03-01-1</id>
+    <published>2007-03-01T00:00:00+01:00</published>
+    <updated>2007-03-01T00:00:00+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+    The PHP development team would like to announce the immediate
+    <a href="/downloads.php#v4">availability of PHP 4.4.6</a>.
+</p>
+<p>
+    The main issue that this release addresses is a crash problem that was
+    introduced in PHP 4.4.5.  The problem occurs when session variables are used
+    while register_globals is enabled.
+</p>
+<p>
+    Details about the PHP 4.4.6 release can be found in the
+    <a href="/releases/4_4_6.php">release announcement for 4.4.6</a>,
+    the full list of changes is available in the
+    <a href="/ChangeLog-4.php#4.4.6">ChangeLog for PHP 4</a>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 5.2.1 and PHP 4.4.5 Released</title>
+    <link href="/index.php#2007-02-08-2" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-02-08-2" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-02-08-2</id>
+    <published>2007-02-08T00:00:00+01:00</published>
+    <updated>2007-02-14T00:00:00+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+  The PHP development team would like to announce the immediate
+  <a href="/downloads.php#v5">availability of PHP 5.2.1</a> and
+  <a href="/downloads.php#v4">availability of PHP 4.4.5</a>.
+  These releases are major stability and security enhancements of the 5.x and
+  4.4.x branches, and all users are strongly encouraged to upgrade to it as
+  soon as possible.  Further details about the PHP 5.2.1 release can be found in
+  the <a href="/releases/5_2_1.php">release announcement for 5.2.1</a>, the full list of
+  changes is available in the <a href="/ChangeLog-5.php#5.2.1">ChangeLog for PHP
+   5</a>. Details about the PHP 4.4.5 release can be found in the
+  <a href="/releases/4_4_5.php">release announcement for 4.4.5</a>, the full list of
+  changes is available in the <a href="/ChangeLog-4.php#4.4.5">ChangeLog for PHP 4</a>.
+</p>
+        <p>
+          <b>Security Enhancements and Fixes in PHP 5.2.1 and PHP 4.4.5:</b>
+        </p>
+        <ul>
+          <li>Fixed possible safe_mode &amp; open_basedir bypasses inside the session extension.</li>
+          <li>Fixed unserialize() abuse on 64 bit systems with certain input strings.</li>
+          <li>Fixed possible overflows and stack corruptions in the session extension.</li>
+          <li>Fixed an underflow inside the internal sapi_header_op() function.</li>
+          <li>Fixed non-validated resource destruction inside the shmop extension.</li>
+          <li>Fixed a possible overflow in the str_replace() function.</li>
+          <li>Fixed possible clobbering of super-globals in several code paths.</li>
+          <li>Fixed a possible information disclosure inside the wddx extension.</li>
+          <li>Fixed a possible string format vulnerability in *print() functions on 64 bit systems.</li>
+          <li>Fixed a possible buffer overflow inside ibase_{delete,add,modify}_user() functions.</li>
+          <li>Fixed a string format vulnerability inside the odbc_result_all() function.</li>
+        </ul>
+        <p>
+          <b>Security Enhancements and Fixes in PHP 5.2.1 only:</b>
+        </p>
+        <ul>
+          <li>Prevent search engines from indexing the phpinfo() page.</li>
+          <li>Fixed a number of input processing bugs inside the filter extension.</li>
+          <li>Fixed allocation bugs caused by attempts to allocate negative values in some code paths.</li>
+          <li>Fixed possible stack/buffer overflows inside zip, imap &amp; sqlite extensions.</li>
+          <li>Fixed several possible buffer overflows inside the stream filters.</li>
+          <li>Memory limit is now enabled by default.</li>
+          <li>Added internal heap protection.</li>
+          <li>Extended filter extension support for $_SERVER in CGI and apache2 SAPIs.</li>
+        </ul>
+        <p>
+          <b>Security Enhancements and Fixes in PHP 4.4.5 only:</b>
+        </p>
+        <ul>
+          <li>Fixed possible overflows inside zip &amp; imap extensions.</li>
+          <li>Fixed a possible buffer overflow inside mail() function on Windows.</li>
+          <li>Unbundled the ovrimos extension.</li>
+        </ul>
+        <p>
+The majority of the security vulnerabilities discovered and resolved can in
+most cases be only abused by local users and cannot be triggered remotely.
+However, some of the above issues can be triggered remotely in certain
+situations, or exploited by malicious local users on shared hosting setups
+utilizing PHP as an Apache module. Therefore, we strongly advise all users of
+PHP, regardless of the version to upgrade to the 5.2.1 or 4.4.5 releases as soon as possible.
+</p>
+        <p>
+For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+available <a href="/migration52">here</a>, detailing the changes between
+those releases and PHP 5.2.1.
+</p>
+        <p><strong>Update: Feb 14th;</strong> Added release information for PHP
+4.4.5.</p>
+        <p><strong>Update: Feb 12th;</strong> The Windows install package had problems
+with upgrading from previous PHP versions. That has now been fixed and new file
+posted in the <a href="/downloads.php">download section</a>.</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>The front page has changed</title>
+    <link href="/index.php#2007-02-08-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-02-08-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-02-08-1</id>
+    <published>2007-02-08T00:00:00+01:00</published>
+    <updated>2007-02-08T00:00:00+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+    The news on the front page of php.net has changed, the <a href="/conferences/">conference announcements</a> are now located on their own page.
+    The idea is to keep php.net specific news clear and also opens the door for additional news entries, like for RC releases. More changes are on the way so keep an eye out.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP Québec conference 2007</title>
+    <link href="/conferences/index.php#2007-02-07-1" rel="alternate" type="text/html"/>
+    <link href="http://conf.phpquebec.com/en/conf2007/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-02-07-1</id>
+    <published>2007-02-07T00:00:00+01:00</published>
+    <updated>2007-02-07T00:00:00+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+	<php:finalTeaserDate>2007-03-16</php:finalTeaserDate>
+	<php:newsImage link="http://conf.phpquebec.com/en/conf2007/" title="PHP Québec conference">conference_php_quebec.gif</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+PHP Québec is pleased to announce the <a href="http://conf.phpquebec.com/en/conf2007/">fifth edition of the PHP Québec Conference</a>. 
+The conference will take place in Montréal, Canada on March 14-15-16th 2007. It features 2 days of 
+<a href="http://conf.phpquebec.com/en/conf2007/horaire">technicals talks</a> and 
+an additional day of <a href="http://conf.phpquebec.com/en/conf2007/ateliers">workshop</a>. 
+Among the  speakers, the well know PHP experts such has:  Rasmus Lerdorf, Andrei 
+Zmievski, Derick Rethans, Ilia Alshanetsky, John Coggeshall, Damien Séguy, and many more.
+</p>
+        <p>
+The conference has three distinct tracks : Advanced Techniques, Data 
+Availability, PHP: Beyound Theory. With over 35 sessions and workshops, the 
+PHP Québec Conference is great opportunity to learn about the latest 
+development and professional techniques to help you build high quality PHP 
+software and meet with PHP.
+</p>
+        <p>
+Special prices are available for all Open Source community members and major 
+contributors.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP Manual Updates</title>
+    <link href="/index.php#2007-02-03-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-02-03-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-02-03-1</id>
+    <published>2007-02-03T00:00:00+01:00</published>
+    <updated>2007-02-03T00:00:00+01:00</updated>
+	<category term="frontpage" label="PHP.net frontpage news"/>
+	<category term="documentation" label="PHP Documentation news"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The PHP documentation team is proud to present to the PHP community a few fixes and tweaks to the <a href="/manual/en/">PHP Manual</a>, including:</p>
+        <ul>
+          <li>an improved, XSL-based build system that will deliver compiled manuals to mirrors in a more timely manner (goodbye dsssl)</li>
+          <li>manual pages can now contain images (see <code><a href="/en/function.imagearc">imagearc()</a></code> for an example)</li>
+          <li>updated function version information and capture system (fewer "no version information, might be only in CVS" messages)</li>
+          <li>... and more to come!</li>
+        </ul>
+        <p>Please <a href="/about.howtohelp">help us improve the documentation</a> by <a href="http://bugs.php.net/">submitting bug reports</a>, and adding notes to undocumented functions.</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title> O'Reilly OSCON call for papers</title>
+    <link href="/conferences/index.php#2007-01-29-1" rel="alternate" type="text/html"/>
+    <link href="http://conferences.oreillynet.com/os2007/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-01-29-1</id>
+    <published>2007-01-29T00:00:00+01:00</published>
+    <updated>2007-01-29T00:00:00+01:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+	<php:finalTeaserDate>2007-02-05</php:finalTeaserDate>
+	<php:newsImage link="http://conferences.oreillynet.com/os2007/" title="OSCON Open Source Convention">os2007.gif</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+The O'Reilly Open Source Convention 2007 will once again take place from July 23rd - 27th 2007
+in Portland, Oregon, and has a PHP track as usual. The Call for Papers closes Monday February 5 2007.  You can find more information at <a href="http://conferences.oreillynet.com/os2007/" title="O'Reilly Open Source Convention 2007">http://conferences.oreillynet.com/os2007/</a>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>International PHP Conference 2007 Spring Edition : Call for Papers</title>
+    <link href="/conferences/index.php#2007-01-24-1" rel="alternate" type="text/html"/>
+    <link href="http://phpconference.com/input" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-01-24-1</id>
+    <published>2007-01-24T00:00:00+01:00</published>
+    <updated>2007-01-24T00:00:00+01:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+	<php:finalTeaserDate>2007-05-21</php:finalTeaserDate>
+	<php:newsImage link="http://phpconference.com/" title="International PHP Conference 2007 Spring Edition">intcon2007spring.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+The International PHP Conference 2007 Spring Edition will happen from May, 21st to 23rd 2007
+in Stuttgart. The Call for Papers has just been opened. You can find more information at 
+<a href="http://phpconference.com/" title="International PHP Conference 2007 Spring Edition">http://phpconference.com/</a>.
+There's a pre-conference day on 21st of May with full day Power Workshops and 
+a Main Conference from 22nd to 23rd of May with 1 hour sessions. 
+</p>
+        <p>
+Please submit your session proposals at 
+<a href="http://phpconference.com/input" title="International PHP Conference 2007 Spring Edition - Call for Paper">http://phpconference.com/input</a>.
+They will be voted by the Chair board consisting of Björn Schotte (Head of Chair), 
+Christopher Kunz and Sebastian Meyen. The language for talks is both English and German.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP London 2007</title>
+    <link href="/conferences/index.php#2007-01-18-1" rel="alternate" type="text/html"/>
+    <link href="http://www.phplondon.org" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-01-18-1</id>
+    <published>2007-01-18T00:00:00+01:00</published>
+    <updated>2007-01-18T00:00:00+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+	<php:finalTeaserDate>2007-02-23</php:finalTeaserDate>
+	<php:newsImage link="http://www.phpconference.co.uk/" title="PHP London 2007">phplondon2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+After the success of 2006 the <a href="http://www.phplondon.org/">PHP London user group</a> is staging the <a href="http://www.phpconference.co.uk/">UK's second dedicated PHP conference</a> on Friday, 23 February 2007, in London. The conference will be a low-cost event, costing £50 for the day. Speakers include: Rasmus Lerdorf, Cal Evans, Simon Laws and Kevlin Henney.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>Chicago php|tek 2007</title>
+    <link href="/conferences/index.php#2007-01-12-1" rel="alternate" type="text/html"/>
+    <link href="http://www.phparch.com/tek" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-01-12-1</id>
+    <published>2007-01-12T00:00:00+01:00</published>
+    <updated>2007-01-12T00:00:00+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+	<php:finalTeaserDate>2007-05-18</php:finalTeaserDate>
+	<php:newsImage link="http://www.phparch.com/tek" title="php|tek 2007">phptek2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+php|architect is proud to announce <a href="http://www.phparch.com/tek">php|tek 2007</a>, which will take place in Chicago, Illinois (USA) on May 16-18, 2007.
+</p>
+        <p>
+This year, the conference once again promises to be an excellent event for PHP developers of all levels, with talks from top PHP experts such as Rasmus Lerdorf, Chris Shiflett, Andrei Zmievski, Ilia Alshanetsky, Sara Golemon, and many more.
+</p>
+      </div>
+    </content>
+  </entry>
+</feed>
+
