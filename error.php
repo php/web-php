@@ -324,9 +324,9 @@ $uri_aliases = array (
 );
 
 $external_redirects = array(
-    "php4news"    => "http://cvs.php.net/viewcvs.cgi/php-src/NEWS?view=markup&pathrev=PHP_4_4",
-    "php5news"    => "http://cvs.php.net/viewcvs.cgi/php-src/NEWS?view=markup&pathrev=PHP_5_2",
-    "php6news"    => "http://cvs.php.net/viewcvs.cgi/php-src/NEWS?view=markup&pathrev=HEAD",
+    "php4news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=PHP_4_4",
+    "php5news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=PHP_5_2",
+    "php6news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=HEAD",
     "projects"    => "http://freshmeat.net/browse/183/",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",

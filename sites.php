@@ -153,13 +153,13 @@ site_header("A Tourist's Guide");
  process.
 </p>
 
-<h2><a href="http://cvs.php.net/viewcvs.cgi/">cvs.php.net</a>: CVS Repository</h2>
+<h2><a href="http://cvs.php.net/viewvc.cgi/">cvs.php.net</a>: CVS Repository</h2>
 
 <p>
  The PHP project is organized with a CVS server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
- href="http://cvs.php.net/viewcvs.cgi/php-src/">php-src</a> module is the 
+ href="http://cvs.php.net/viewvc.cgi/php-src/">php-src</a> module is the 
  repository for the source code to the latest version of PHP itself.
 </p>
 
