@@ -600,7 +600,7 @@ function news_archive_sidebar()
 
 <ul class="toc">
 ';
-    for ($i = 1998; $i < 2007; $i++) {
+    for ($i = 1998; $i <= date("Y"); $i++) {
         $pagename = "archive/$i.php";
         $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
         $SIDEBAR_DATA .= "<li{$classname}><a href=\"/{$pagename}\">{$i}</a></li>\n";
@@ -608,4 +608,23 @@ function news_archive_sidebar()
     $SIDEBAR_DATA .= '</ul>';
 }
 
+// Print news
+function print_news($news) {
+    foreach($news as $item) {
+        $image = "";
+        if($item["image"]) {
+            $image = news_image($item["image"]["link"], $item["image"]["image"], $item["image"]["title"]);
+        }
+        echo <<< EOT
+<div class="newsItem">
+    $image
+    <a name="{$item["fragment"]}" id="{$item["fragment"]}"><h1>{$item["title"]}</h1></a>
+    {$item["content"]}
+</div>
+
+<hr />
+
+EOT;
+    }
+}
 /* vim: set et ts=4 sw=4 ft=php: : */
