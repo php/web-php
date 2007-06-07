@@ -116,10 +116,10 @@ $langinfo = array(
     $langpref,
     
     "Last seen language" =>
-    (isset($_COOKIE['LAST_LANG']) ? $_COOKIE['LAST_LANG'] : "None"),
+    (isset($_COOKIE['LAST_LANG']) ? htmlentities($_COOKIE['LAST_LANG'], ENT_QUOTES) : "None"),
     
     "Your Accept-Language browser setting" =>
-    (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : "None"),
+    (isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? htmlentities($_SERVER['HTTP_ACCEPT_LANGUAGE'], ENT_QUOTES) : "None"),
     
     "The mirror's default language" =>
     default_language(),
