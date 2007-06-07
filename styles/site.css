@@ -152,6 +152,10 @@ hr {
 	color: #6666cc;
 	background-color: transparent;
 }
+div.newsItem .newsdate {
+	float:left;
+	padding-right: 10px;
+}
 
 div.indent {
 	margin-left: 50px;
