@@ -83,7 +83,7 @@ site_header("Getting Help");
  great places to find many example scripts and useful functions, organized for 
  your searching pleasure!
 </p>
-
+<!--
 <h1>Knowledge Base</h1>
 
 <p>
@@ -92,7 +92,7 @@ site_header("Getting Help");
  everyone is encouraged to do so. You can visit the Knowledge Base
  at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 </p>
-
+-->
 <h1>Instant Resource Center</h1>
 
 <p>
