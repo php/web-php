@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-06-03T08:55:48+02:00</updated>
+  <updated>2007-06-13T17:04:48-04:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
@@ -11,6 +11,52 @@
     <email>webmaster@php.net</email>
   </author>
   <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>Paris Forum 2007 : call for papers</title>
+    <link href="/conferences/index.php#2007-06-13-2" rel="alternate" type="text/html"/>
+    <link href="http://afup.org/article.php3?id_article=336" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-06-13-2</id>
+    <published>2007-06-13T16:01:48+02:00</published>
+    <updated>2007-06-13T17:04:47-04:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+    <php:finalTeaserDate>2007-07-01</php:finalTeaserDate>
+    <php:newsImage link="http://afup.org/article.php3?id_article=336" title="Paris Forum 2007">afup2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+	<p>The AFUP, Association Française des Utilisateurs de PHP,
+	is proud to announce the upcoming conference "Forum PHP 2007".
+	For this unique event in France, we are looking for the best French speaking experts,
+	who want to share their know-how and enthusiasm.
+	This two day conference features one technical day, with the most advanced PHP techniques
+	and a business day, with case studies and examples of successful projects.
+	</p>
+	<p>The "Forum PHP Paris 2007" will take place in Paris on Thursday and Friday
+	the 21th and 22th of November 2007.</p>
+
+	<p>Please send your proposals at bureau@afup.org.
+	This email must contain the following information:
+	</p>
+	<ul>
+		<li>name</li>
+		<li>company if applicable</li>
+		<li>a short (4-6 sentences) biography about your PHP experience</li>
+		<li>complete name and address</li>
+		<li>include photo for each speaker (JPEG format)</li>
+	</ul>
+
+	<p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session.</p>
+	
+	<p>You are allowed to submit several proposals.
+	The email must then contain the extra information:
+	</p>
+	<ul>
+		<li>session title</li>
+		<li>target audience</li>
+		<li>short description (~10 sentences)</li>
+	</ul>
+	</div>
+    </content>
+  </entry>
+    <entry xmlns="http://www.w3.org/2005/Atom">
     <title>International PHP Conference: call for Papers</title>
     <link href="/conferences/index.php#2007-06-13-1" rel="alternate" type="text/html"/>
     <link href="http://phpconference.com/cfp" rel="via" type="text/html"/>
@@ -604,4 +650,3 @@ This year, the conference once again promises to be an excellent event for PHP d
     </content>
   </entry>
 </feed>
-
