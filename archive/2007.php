@@ -10,7 +10,7 @@ site_header("News Archive - 2007");
 <h1>News Archive - 2007</h1>
 
 <p>
- Here are the most important news items we have published in 2006 on PHP.net.
+ Here are the most important news items we have published in 2007 on PHP.net.
 </p>
 
 <hr />
