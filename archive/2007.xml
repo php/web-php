@@ -11,6 +11,31 @@
     <email>webmaster@php.net</email>
   </author>
   <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>International PHP Conference: call for Papers</title>
+    <link href="/conferences/index.php#2007-06-13-1" rel="alternate" type="text/html"/>
+    <link href="http://phpconference.com/cfp" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-06-13-1</id>
+    <published>2007-06-13T16:01:48+02:00</published>
+    <updated>2007-06-13T16:01:48+02:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+    <php:finalTeaserDate>2007-07-10</php:finalTeaserDate>
+    <php:newsImage link="http://phpconference.com/cfp" title="The International PHP Conference 2007">phpconf2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+The International PHP Conference 2007 will happen from 4th to
+7th November 2007 at Frankfurt-Mörfelden, Germany. The Call
+for Papers has just been opened. You can find more information
+at <a href="http://phpconference.com/cfp">http://phpconference.com/cfp</a>.
+Please put your proposals to <a href="http://phpconference.com/input">http://phpconference.com/input</a>.
+There are two pre-conference days with a Management Day and Power
+Workshops and two main conference days. The language for talks is both
+English and German.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
     <title>PHP 5.2.3 Released</title>
     <link href="/index.php#2007-06-01-1" rel="alternate" type="text/html"/>
     <link href="/archive/2007.php#2007-06-01-1" rel="via" type="text/html"/>
