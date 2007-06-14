@@ -853,6 +853,12 @@ div.example div.screenshot img {
 }
 /* }}} */
 
+/* Make sure the underscore in many function names are visible */
+div.refentry a, div.reference a, div.section a {
+	text-decoration: none;
+	border-bottom: 1px solid #009;
+}
+
 /*
  * vim: noet
  */
