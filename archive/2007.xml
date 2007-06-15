@@ -3,13 +3,48 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-06-13T17:04:48-04:00</updated>
+  <updated>2007-06-15T17:09:59+02:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>php|works 2007: Call for Papers</title>
+    <link href="/conferences/index.php#2007-06-15-1" rel="alternate" type="text/html"/>
+    <link href="http://works.phparch.com/c/p/index" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-06-15-1</id>
+    <published>2007-06-15T17:11:25+02:00</published>
+    <updated>2007-06-15T17:11:25+02:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+    <php:finalTeaserDate>2007-06-28</php:finalTeaserDate>
+    <php:newsImage link="http://works.phparch.com/c/p/index" title="php|works 2007">phpworks2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+  php|works is a conference for developers.
+  As such, our main goal is to provide talks and presentations designed to
+  inspire programmers of all levels to improve their craft, expand their
+  horizons and learn something new they can use on a daily basis.
+</p>
+<p>
+  The Call for Papers is open until June 27, and this year it features
+  a whole new (and improved) speaker's compensation package.
+</p>
+<p>
+  This year's conference aims at showcasing the practical use of PHP to
+  solve complex problems. We're looking for a great mix of theoretical
+  and practical talks that teach our attendees new concepts, techniques
+  and features of PHP, as well as case studies on the use of PHP in
+  real-life, high-impact websites.
+</p>
+<p>
+  Don't forget to send in your proposals!
+</p>
+      </div>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>Paris Forum 2007 : call for papers</title>
     <link href="/conferences/index.php#2007-06-13-2" rel="alternate" type="text/html"/>
