@@ -150,7 +150,10 @@ function find_manual_page($lang, $keyword)
 					continue;
 				}
                 // Match found
-                return $r[0];
+                // But does the file really exist?
+                if (file_exists($_SERVER["DOCUMENT_ROOT"] . $r[0])) {
+                    return $r[0];
+                }
             }
         } else {
             error_noservice();
