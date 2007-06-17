@@ -198,6 +198,11 @@ $manual_page_moves = array(
     'install.sambar'             => 'install.windows.sambar',
     'install.solaris'            => 'install.unix.solaris',
     'install.xitami'             => 'install.windows.xitami',
+
+    // Internals docs where moved
+    'internals'                  => 'internals2',
+    'streams'                    => 'internals2.ze1.streams',
+    'internals.pdo'              => 'internals2.pdo',
 );
 
 if (isset($manual_page_moves[$URI])) {
