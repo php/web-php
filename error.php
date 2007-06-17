@@ -35,6 +35,13 @@ if ($URI == 'phpnetimprovedsearch.src') {
     include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozopensearch.inc';
     exit;
 }
+// FIXME: Temporary fix for mirrors with sqlite enabled
+// Remove this in few hours!
+if ($URI == "internals") {
+    status_header(200);
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/manual/en/internals2.php';
+    exit;
+}
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
