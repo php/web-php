@@ -61,6 +61,9 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
     if (empty($_POST['email']) || !is_emailable_address($cleaned['email'])) {
         $error .= "You must supply a proper email address. ";
     }
+    if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
+        $error .= "You did not fill the form out correctly";
+    }
 
     // Post the request if there is no error
     if (!$error) {
@@ -71,7 +74,8 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
                 "name"     => $cleaned['fullname'],
                 "email"    => $cleaned['email'],
                 "passwd"   => $cleaned['password'],
-                "note"     => $cleaned['realpurpose']
+                "note"     => $cleaned['realpurpose'],
+                "yesno"    => $cleaned['yesno'],
             )
         );
         // Error while posting
@@ -339,6 +343,10 @@ foreach ($purposes as $i => $p) { ?>
  <th class="subr">Requested Password:</th>
  <td><input type="password" size="10" name="password"
       class="max" value="<?php if (isset($_POST['password'])) echo clean($_POST['password']);?>" /></td>
+</tr>
+<tr>
+ <th class="subr">Did you fill this form out correctly (yes/no)?</th>
+ <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
 </tr>
 <tr>
  <th colspan="2"><input type="submit" value="Send Request" /></th>
