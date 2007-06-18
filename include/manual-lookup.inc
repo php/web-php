@@ -161,5 +161,5 @@ function find_manual_page($lang, $keyword)
     }
     
     // No match found
-    return "";
+    return find_manual_page_slow($lang, $keyword);
 }
