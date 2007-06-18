@@ -35,13 +35,6 @@ if ($URI == 'phpnetimprovedsearch.src') {
     include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mozopensearch.inc';
     exit;
 }
-// FIXME: Temporary fix for mirrors with sqlite enabled
-// Remove this in few hours!
-if ($URI == "internals") {
-    status_header(200);
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/manual/en/internals2.php';
-    exit;
-}
 
 // ============================================================================
 // BC: handle bugs.php moved completely to bugs.php.net
@@ -200,9 +193,12 @@ $manual_page_moves = array(
     'install.xitami'             => 'install.windows.xitami',
 
     // Internals docs where moved
-    'internals'                  => 'internals2',
+    'zend'                       => 'internals2.ze1.zendapi',
+    'zend-api'                   => 'internals2.ze1.zendapi',
     'streams'                    => 'internals2.ze1.streams',
     'internals.pdo'              => 'internals2.pdo',
+    'phpdevel'                   => 'internals2.ze1.php3devel',
+    'tsrm'                       => 'internals2.ze1.tsrm',
 );
 
 if (isset($manual_page_moves[$URI])) {
@@ -329,6 +325,7 @@ $uri_aliases = array (
 
     "update_5_2.txt"         => "migration52",      // BC
     "readme_upgrade_51.php"  => "migration51",      // BC
+    "internals"              => "internals2",        // BC
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
