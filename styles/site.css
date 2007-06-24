@@ -432,6 +432,10 @@ div.xmlcode span.string {
 	background-color: transparent;
 }
 
+.refentry table td {
+	text-indent: 5px;
+}
+
 /* Standard tables -------------------------------------------------------- */
 table.standard td {
 	background-color: #eeeeee;
