@@ -50,7 +50,7 @@ if ($process) {
     }
 
     $_POST['ldesc'] = trim(strip_tags($_POST['ldesc'], '<a><i><b><br /><p>'));
-    $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=\s*(\"|').+?\\2/i", "", $_POST['ldesc']);
+    $_POST['ldesc'] = preg_replace("/(style|on\\w+?)\s*=[^>]*/i", "", $_POST['ldesc']);
     if (!$_POST['ldesc']) {
         $errors[] = "You must supply a long description of the event.";
     }
