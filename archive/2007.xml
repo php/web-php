@@ -290,29 +290,42 @@ Join us at the <a href="http://dcphpconference.com/" title="DC PHP Conference 20
     </content>
   </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
-    <title>Zend/PHP Conference 2007 call for papers</title>
-    <link href="/conferences/index.php#2007-04-16-1" rel="alternate" type="text/html"/>
-    <link href="http://www.zendcon.com/cfp.php" rel="via" type="text/html"/>
-    <id>http://php.net/archive/2007.php#2007-04-16-1</id>
-    <published>2007-04-16T00:00:00+01:00</published>
-    <updated>2007-04-16T00:00:00+01:00</updated>
-    <category term="cfp" label="Call for Papers"/>
-	<php:finalTeaserDate>2007-05-31</php:finalTeaserDate>
-	<php:newsImage link="http://www.zendcon.com/cfp.php" title="Zend/PHP Conference 2007">zendcon07_logo_s.jpg</php:newsImage>
+    <title>Zend/PHP Conference 2007</title>
+    <link href="/conferences/index.php#2007-07-25-1" rel="alternate" type="text/html"/>
+    <link href="http://www.zendcon.com/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-07-25-1</id>
+    <published>2007-07-25T00:00:00+01:00</published>
+    <updated>2007-07-25T00:00:00+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+	<php:finalTeaserDate>2007-10-11</php:finalTeaserDate>
+	<php:newsImage link="http://www.zendcon.com/" title="Zend/PHP Conference 2007">zendcon07_logo_s.jpg</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
 <p>
-2007 marks the third anniversary of the Zend/PHP Conference and Expo. Focused on the PHP, the world's fastest growing web development language, this year’s conference is guaranteed to again be bigger and better than ever.
+Don't miss the third annual Zend/PHP Conference and Expo 2007!  This
+year's conference promises to be the best ever.  Join Zend, the PHP
+community and leading technology companies from around the world for
+three days of education, learning and networking - plus an additional
+tutorial day.  The 2007 conference will feature over 40 sessions, an
+exhibit hall featuring leading companies such as Adobe, IBM, PayPal and
+Zend, an UnConference area to stimulate impromptu discussions, and
+networking opportunities galore. 
 </p>
 <p>
-Present your business applications, technical concepts, or cutting edge applications at the Zend/PHP Conference of 2007. With the most sessions, the world's top presenters, and the largest and most qualified attendance, this will be the premier forum for PHP in 2007.
+ZendCon2007 will feature something for everyone – from novice to
+advanced, business-oriented to technical-focused.  You will hear from
+leaders in the PHP community and business experts who have implemented
+PHP based initiatives.  Come hear from Zend as it presents a roadmap for
+business-critical PHP.  Meet the Zend development teams.  Learn more
+about Zend open source projects.
 </p>
 <p>
-Your participation will make this conference a success. Zend Technologies requests that you submit an abstract.<br/>
-The conference selection committee will consider all abstracts submitted on or before May 31, 2007.<br/>
+ZendCon 2007 promises to be the largest gathering dedicated to PHP. 
+Plan to attend ZendCon 2007 and join the PHP community to network and
+learn from the best PHP minds from around the world.
 </p>
 <p>
-For more information about topics and submission guidelines please see <a href="http://www.zendcon.com/cfp.php">http://www.zendcon.com/cfp.php</a>.
+For more information please see <a href="http://www.zendcon.com/">http://www.zendcon.com/</a>.
 </p>
       </div>
     </content>
