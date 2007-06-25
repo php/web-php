@@ -133,14 +133,14 @@ function manual_navbar($location = "top")
 
     // Start navbar with 
     echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
-    if ($PGI['next'][1]) {
+    if (isset($PGI['next']) && isset($PGI['next'][1])) {
         echo "  <a href=\"{$PGI['next'][0]}\">" .
              $PGI['next'][1] .
              make_image('caret-r.gif', '&gt;') .
              "</a>\n";
     }
     echo " </span>\n <span class=\"prev\">\n";
-    if ($PGI['prev'][1]) {
+    if (isset($PGI['prev']) && isset($PGI['prev'][1])) {
         echo "  <a href=\"{$PGI['prev'][0]}\">" . 
              make_image('caret-l.gif', '&lt;') .
              $PGI['prev'][1] . "</a>\n";
