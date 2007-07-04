@@ -50,12 +50,12 @@ function random_bgcolor($min, $max)
  If you are planning on making money off of our logo 
  (e.g. you want to make merchandise with the logo ... t-shirts,
  coffee mugs, pocket protectors, etc.), then you need to contact 
- <a href="mailto:logos@php.net">logos@php.net</a> for licensing information.  
+ <a href="mailto:group@php.net">group@php.net</a> for licensing information.  
  For pretty much all other uses, there is no licensing requirement. For 
  example: a logo on your website showing that you use/promote PHP, even 
  commercial websites; course materials; a bunch of t-shirts for your own use 
  and some friends, or your user group; a PHP-related book; a banner for your 
- computer group; etc.. If in doubt, <a href="mailto:logos@php.net">ask</a>.
+ computer group; etc.. If in doubt, <a href="mailto:group@php.net">ask</a>.
  However you should not use the logo in such a way, that it suggests that a
  particular person, company, course, etc. is endorsed by PHP.net.
 </p>
