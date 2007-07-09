@@ -3,13 +3,47 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-06-15T17:09:59+02:00</updated>
+  <updated>2007-07-10T00:21:32+02:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>New Delhi PHP UnConference: Call for Speakers/Campers!</title>
+    <link href="/conferences/index.php#2007-07-10-1" rel="alternate" type="text/html"/>
+    <link href="http://www.osscamp.in/OSSCampDelhi/index.php?title=PHP_Camp" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-07-10-1</id>
+    <published>2007-07-10T00:21:32+02:00</published>
+    <updated>2007-07-10T00:21:32+02:00</updated>
+    <category term="cfp" label="Call for Papers"/>
+    <php:finalTeaserDate>2007-09-01</php:finalTeaserDate>
+    <php:newsImage link="http://www.osscamp.in/OSSCampDelhi/index.php?title=PHP_Camp" title="New Delhi PHP UnConference">phpcamp_07.jpg</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+India's biggest Open Source Unconference "OSS Camp" has been scheduled for
+September 8 - 9, 2007 in New Delhi.
+</p>
+<p>
+Embedded in the OSS Camp is India's first community-driven PHP Camp. PHP
+Camp will bring together the PHP community in a distinctly "unconference"
+setting. It is an intense event with discussions, demos, and interaction
+from all participants. Participation is free of cost!.  Some of the tracks
+for PHP camps are Frameworks, Unit Testing, PHP Security, Performance
+Management, High Availability beside product specific themes like Joomla,
+Drupal, EZ, Dot Project camps.
+</p>
+<p>
+Participants can add up their sessions on
+<a href="http://www.osscamp.in/OSSCampDelhi/index.php?title=PHP_Camp">http://www.osscamp.in/OSSCampDelhi/index.php?title=PHP_Camp.</a>
+You should restrict your sessions to 40 minutes (90 minutes in case of workshop).
+Your sessions should be hardcore PHP specific sessions.
+</p>
+      </div>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>php|works 2007: Call for Papers</title>
     <link href="/conferences/index.php#2007-06-15-1" rel="alternate" type="text/html"/>
