@@ -106,7 +106,7 @@ $SIDEBAR_DATA = '
 site_header("Releases");
 ?>
 
-<h1>Releases</h1>
+<h1>Unsupported Historical Releases</h1>
 
 <p>
  We have collected all the official information and code available for
@@ -427,6 +427,12 @@ site_header("Releases");
 <hr />
 
 <a name="v4"></a>
+
+<p>
+ Support for PHP 4 will be <b style="color: red">discontinued</b> at 2007-12-31. Please consider
+ upgrading to PHP 5.2.
+</p>
+
 <a name="4.4.6"></a>
 <h2>4.4.6</h2>
 

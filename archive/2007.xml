@@ -11,6 +11,40 @@
     <email>webmaster@php.net</email>
   </author>
   <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 4 end of life announcement</title>
+    <link href="/index.php#2007-07-13-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-07-13-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-07-13-1</id>
+    <published>2007-07-13T00:13:00+02:00</published>
+    <updated>2007-07-13T00:13:00+02:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+  Today it is exactly three years ago since PHP 5 has been released. In
+  those three years it has seen many improvements over PHP 4. PHP 5 is
+  fast, stable &amp; production-ready and as PHP 6 is on the way, PHP 4
+  will be discontinued.
+</p>
+<p>
+  The PHP development team hereby announces that support for PHP 4 will
+  continue until the end of this year only. After 2007-12-31 there will be no
+  more releases of PHP 4.4. We will continue to make critical security fixes
+  available on a case-by-case basis until 2008-08-08.  Please use the rest of
+  this year to make your application suitable to run on PHP 5. 
+</p>
+<p>
+  For documentation on migration for PHP 4 to PHP 5, we would like to point you
+  to our <a href="/manual/en/migration5.php">migration guide</a>. There is
+  additional information available in the <a
+  href="/manual/en/migration51.php">PHP 5.0 to PHP 5.1</a> and <a
+  href="/manual/en/migration52.php">PHP 5.1 to PHP 5.2</a> migration guides as
+  well.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
     <title>New Delhi PHP UnConference: Call for Speakers/Campers!</title>
     <link href="/conferences/index.php#2007-07-10-1" rel="alternate" type="text/html"/>
     <link href="http://www.osscamp.in/OSSCampDelhi/index.php?title=PHP_Camp" rel="via" type="text/html"/>

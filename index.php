@@ -156,7 +156,7 @@ $rel = <<< EOT
    <h4>Stable Releases</h4>
    <ol id="releases">
     <li class="php5"><a href="/downloads.php#v5">Current PHP 5 Stable: <span class="release">$PHP_5_STABLE</span></a></li>
-    <li class="php5"><a href="/downloads.php#v4">Current PHP 4 Stable: <span class="release">$PHP_4_STABLE</span></a></li>
+    <li class="php5"><a href="/downloads.php#v4">Historical PHP 4 Stable: <span class="release">$PHP_4_STABLE</span></a></li>
    </ol>
   </div>\n
 EOT;
