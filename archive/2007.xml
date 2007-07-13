@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-07-10T00:21:32+02:00</updated>
+  <updated>2007-07-13T13:00:00+02:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
@@ -15,8 +15,8 @@
     <link href="/index.php#2007-07-13-1" rel="alternate" type="text/html"/>
     <link href="/archive/2007.php#2007-07-13-1" rel="via" type="text/html"/>
     <id>http://php.net/archive/2007.php#2007-07-13-1</id>
-    <published>2007-07-13T00:13:00+02:00</published>
-    <updated>2007-07-13T00:13:00+02:00</updated>
+    <published>2007-07-13T13:00:00+02:00</published>
+    <updated>2007-07-13T13:00:00+02:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
