@@ -258,12 +258,17 @@ EOT;
 </p>
 
 <p>
- If you have a new PEAR or PECL extension you wish to contribute, bring it
- up on the appropriate PEAR or PECL mailing list first. Once you get the
- sense that people generally agree that your contribution is worthwhile, you
- may apply for a CVS account here. Specify the name of your PEAR or PECL
- contribution (single word CVS module name) and also reference an existing
- account holder who can vouch for your contribution.
+ If you have a new PEAR package you wish to contribute, propose it
+ through the PEPR system on the PEAR website. If you have a new PECL
+ extension you wish to contribute, bring it up on the appropriate PECL
+ mailing list first. 
+ <br />
+ Once your PEAR package has been approved, or you get the sense that
+ people generally agree that your PECL contribution is worthwhile, you
+ may apply for a CVS account here. Specify the name of your PEAR package
+ or PECL contribution (single word CVS module name) and also reference an
+ existing account holder who can vouch for your contribution, or provide
+ a link to your PEAR proposal.
 </p>
 
 <p>
