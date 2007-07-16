@@ -3,13 +3,34 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-07-13T13:00:00+02:00</updated>
+  <updated>2007-07-16T12:20:00-04:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>php|works 2007 in Atlanta</title>
+    <link href="/conferences/index.php#2007-07-16-01" rel="alternate" type="text/html"/>
+    <link href="http://works.phparch.com/" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-07-16-01</id>
+    <published>2007-07-16T10:35:00-04:00</published>
+    <updated>2007-07-16T10:35:00-04:00</updated>
+    <category term="conferences" label="Conference announcement"/>    
+    <php:finalTeaserDate>2007-09-15</php:finalTeaserDate>
+    <php:newsImage link="http://works.phparch.com/c/p/index" title="php|works 2007">phpworks2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+php|architect is proud to announce <a href="http://works.phparch.com">php|works 2007</a>, which will take place in Atlanta Georgia (USA) on September 12-14, 2007.
+</p>
+<p>
+This year, the conference once again promises to be an excellent event for PHP developers of all levels, with <a href="http://works.phparch.com/c/schedule">talks from top PHP experts</a> such as Derick Rethans, Chris Shiflett, Andrei Zmievski, Sara Golemon, and many more (and plenty of new faces, as well). 
+</p>
+      </div>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>PHP 4 end of life announcement</title>
     <link href="/index.php#2007-07-13-1" rel="alternate" type="text/html"/>
