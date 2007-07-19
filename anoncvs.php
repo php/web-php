@@ -58,7 +58,7 @@ site_header("Anonymous CVS Access");
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>bison</i>: 1.28, 1.35, 1.75, 2.0 or higher</li>
- <li><i>flex</i>: 2.5.4</li>
+ <li><i>flex</i>: 2.5.4 (<strong>not higher</strong>)</li>
  <li><i>re2c</i>: 0.9.11+ (0.12.0+ for HEAD)</li>
 </ul>
 
@@ -169,5 +169,12 @@ diff -u
  <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
  <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
 </ul>
+
+<a name="flex_fail"></a>
+<h2>Zend/zend_language_scanner.c: No such file or directory</h2>
+
+<p>
+ PHP only supports flex 2.5.4, <strong>not</strong> later versions as they broke backwards compatibility
+</p>
 
 <?php site_footer(); ?>
