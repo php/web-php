@@ -311,7 +311,6 @@ $uri_aliases = array (
     "__tostring"   => "language.oop5.magic",
     "__set_state"  => "language.oop5.magic",
     "__clone"      => "language.oop5.cloning",
-    "__autoload"   => "language.oop5.autoload",
 
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
