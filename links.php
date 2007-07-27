@@ -84,6 +84,10 @@ site_header("Links");
 
 <ul>
  <li>
+  <a href="http://www.phpdeveloper.org/">PHPDeveloper.org</a><br />
+  Latest in PHP community news.
+ </li>
+ <li>
   <a href="http://www.planet-php.net/">Planet PHP</a><br />
   Latest news aggregated from PHP related weblogs.
  </li>
