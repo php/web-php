@@ -210,6 +210,12 @@ function manual_notes()
     // Load user note for this page
     $notes = manual_notes_load($filename);
 
+    // If there are few comments, provide the quick 'prevous'/'next' navigation
+    // above the comments
+    if(count($notes) > 2) {
+        manual_navbar("bottom");
+    }
+
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
