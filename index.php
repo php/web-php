@@ -145,7 +145,8 @@ if (is_official_mirror()) {
 
 /* {{{ Generate latest release info */
 $PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = $PHP_4_RC     = "";
+$PHP_5_RC     = "5.2.4RC1";
+$PHP_4_RC     = "";
 $rel          = $rc           = "";
 
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
@@ -176,6 +177,7 @@ if (count($RELEASES[4]>1)) {
         $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
     }
 }
+
 if (!empty($rc)) {
 	$rel .= <<< EOT
   <div id="candidateBox">

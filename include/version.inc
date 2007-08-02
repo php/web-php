@@ -28,7 +28,7 @@ $PHP_5_MD5     = array(
                        "nts.zip"   => "3b291d4081af3100b83e39b8aacc444a",
                        "pecl.nts"  => "ddf283dc8a9c49c8d2c5f38ad697c051",
 );
-$PHP_5_RC      = "";
+$PHP_5_RC      = "5.2.4RC1";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.7";
