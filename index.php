@@ -144,9 +144,12 @@ if (is_official_mirror()) {
 }
 
 /* {{{ Generate latest release info */
+/* NOTE: You are editing the wrong file, you should be in include/version.inc
+ *  For RC: See the $PHP_x_RC variable
+ *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
+ */
 $PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = "5.2.4RC1";
-$PHP_4_RC     = "";
+$PHP_5_RC     = $PHP_4_RC     = "";
 $rel          = $rc           = "";
 
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
@@ -236,6 +239,9 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 ?>
 
 <?php
+/* Where the h*ll did all the news go?
+ * See archives/2007.xml
+ */
 print_news($NEWS_ENTRIES["frontpage"]);
 ?>
 
