@@ -26,7 +26,12 @@ function manual_setup($page_data)
 {
     global $PGI;
     $PGI = array_merge($PGI, $page_data); // merge for BC reasons
-    $PGI['lastmod'] = gmdate("D, d M Y", getlastmod());
+    
+    // Set base page for this manual page
+    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($PGI['head'][1]) . "/" . $PGI['this'][0];
+ 
+    // Set last modification time on the current manual page
+    $PGI['lastmod'] = gmdate("D, d M Y", filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE']));
 }
 
 // Print out HTTP headers and the HTML header
@@ -38,7 +43,7 @@ function manual_header()
     global $PGI, $LAST_UPDATED, $MYSITE;
     
     // Get values out of the config array
-    list($filename, $title) = $PGI['this'];
+    $title = $PGI['this'][1];
     list($encoding, $lang)  = $PGI['head'];
     
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
@@ -47,9 +52,8 @@ function manual_header()
     //header("Content-type: text/html;charset=$encoding");
     header("Content-type: text/html;charset=utf-8");
     header("Content-language: $lang");
-    
-    // Set base page and href for this manual page
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($lang) . "/$filename";
+   
+    // Set base href for this manual page
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
     manual_sidebar();
