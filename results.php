@@ -29,7 +29,7 @@ $srch_rqst = "/ws.php?profile=$scope&q=$q&lang=$l&results=$per_page&start=$s&mir
 $url = "http://".$srch_host.$srch_rqst;
 
 if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-  $data = file_get_contents($url);
+  $data = @file_get_contents($url);
 } else {
   // Let's find another way
   if(function_exists('curl_exec')) {
@@ -58,7 +58,7 @@ $res = unserialize($data);
 // HTTP status line is passed on, signifies an error
 site_header('Search results');
 
-if (is_string($res)) {
+if (!is_array($res)) {
   echo '<h2>Internal error, please try later</h2>';
   exit;  
 }
