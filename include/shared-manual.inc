@@ -98,6 +98,15 @@ function manual_sidebar()
     $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
             $PGI['home'][1] . "</a></li>\n";
 
+    // Link to parents
+    if (isset($PGI['parents']) && ($c = count($PGI['parents'])-1) > 0) {
+        // The root parent is the "PHP Manual"
+        for($i=$c-1; $i>=0; $i--) {
+            $BAR .= ' <li class="header up"><a href="' . $PGI['parents'][$i][0] . '">' .
+                $PGI['parents'][$i][1] . "</a></li>\n";
+        }
+    }
+
     // Link to one page up if titles does not match
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
         $BAR .= ' <li class="header up"><a href="' . $PGI['up'][0] . '">' .
