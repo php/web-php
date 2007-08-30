@@ -97,7 +97,8 @@ $SIDEBAR_DATA = '
    <option value="php-5.1.6.tar.gz">5.1.6</option>
    <option value="php-5.2.0.tar.gz">5.2.0</option>
    <option value="php-5.2.1.tar.gz">5.2.1</option>
-   <option value="php-5.2.2.tar.gz">5.2.1</option>
+   <option value="php-5.2.2.tar.gz">5.2.2</option>
+   <option value="php-5.2.3.tar.gz">5.2.3</option>
   </select>
  </p>
 </form>
@@ -115,6 +116,38 @@ site_header("Releases");
  <em>older releases are listed for archaeological purposes only, and
  they are no longer supported</em>.
 </p>
+
+<a name="v5"></a>
+<a name="5.2.3"></a>
+<h2>5.2.3</h2>
+
+<ul>
+ <li>Released: 31 May 2007</li>
+ <li>Announcement: <a href="/releases/5_2_3.php">English</a></li>
+ <li><a href="/ChangeLog-5.php#5.2.3">ChangeLog</a></li>
+ <li>
+  Download:
+  <ul>
+   <li>
+    <?php download_link('php-5.2.3.tar.bz2','Source (tar.bz2)'); ?><br />
+    <span class="md5sum">md5: eb50b751c8e1ced05bd012d5a0e4dec3</span>
+   </li>
+   <li>
+    <?php download_link('php-5.2.3.tar.gz','Source (tar.gz)'); ?><br />
+    <span class="md5sum">md5: df79b04d63fc4c1ccb6d8ea58a9cf3ac</span>
+   </li>
+   <li>
+    <?php download_link('php-5.2.3-Win32.zip','Windows binary'); ?><br />
+    <span class="md5sum">md5: ff6e5dc212823009e68f26d66d85cbac</span>
+   </li>
+   <li>
+    <?php download_link('pecl-5.2.3-Win32.zip','Collection of PECL modules for PHP 5.2.3'); ?><br />
+    <span class="md5sum">md5: 0480ffaf5a5333e83d90d75cece54748</span>
+   </li>
+  </ul>
+ </li>
+</ul>
+
 
 <a name="v5"></a>
 <a name="5.2.2"></a>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+\<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="/" xmlns:php="http://php.net/ns/news">
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
@@ -10,6 +10,62 @@
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  
+  <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP 5.2.4 Released</title>
+    <link href="/index.php#2007-08-30-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-08-30-1" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-08-30-1</id>
+    <published>2007-08-30T20:00:00+04:00</published>
+    <updated>2007-08-30T20:00:00+04:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+The PHP development team would like to announce the immediate
+<a href="/downloads.php#v5">availability of PHP 5.2.4</a>. 
+This release focuses on improving the stability of the PHP 5.2.X 
+branch with over 120 various bug fixes in addition to resolving 
+several low priority security bugs. All users of PHP are encouraged 
+to upgrade to this release.
+</p>
+
+<p>
+Further details about the PHP 5.2.4 release can be found in the
+<a href="/releases/5_2_4.php">release announcement for 5.2.4</a>, the full list of
+changes is available in the <a href="/ChangeLog-5.php#5.2.4">ChangeLog for PHP 5</a>.
+</p>
+ 
+<p>
+<b>Security Enhancements and Fixes in PHP 5.2.4:</b>
+</p>
+<ul>
+	<li>Fixed a floating point exception inside wordwrap() (Reported by Mattias Bengtsson)</li>
+	<li>Fixed several integer overflows inside the GD extension (Reported by Mattias Bengtsson)</li>
+	<li>Fixed size calculation in chunk_split() (Reported by Gerhard Wagner)</li>
+	<li>Fixed integer overflow in str[c]spn(). (Reported by Stanislav Malyshev)</li>
+	<li>Fixed money_format() not to accept multiple %i or %n tokens. (Reported by Stanislav Malyshev)</li>
+	<li>Fixed zend_alter_ini_entry() memory_limit interruption vulnerability. (Reported by Stefan Esser)</li>
+	<li>Fixed INFILE LOCAL option handling with MySQL extensions not to be allowed when open_basedir or safe_mode is active. (Reported by Stanislav Malyshev)</li>
+	<li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378) (Reported by Maksymilian Arciemowicz)</li>
+	<li>Fixed a possible invalid read in glob() win32 implementation (CVE-2007-3806) (Reported by shinnai)</li>
+	<li>Fixed a possible buffer overflow in php_openssl_make_REQ (Reported by zatanzlatan at hotbrev dot com)</li>
+	<li>Fixed an open_basedir bypass inside glob() function (Reported by dr at peytz dot dk)</li>
+	<li>Fixed a possible open_basedir bypass inside session extension when the session file is a symlink (Reported by c dot i dot morris at durham dot ac dot uk)</li>
+	<li>Improved fix for MOPB-03-2007.</li>
+	<li>Corrected fix for CVE-2007-2872.</li>
+</ul>
+
+<p>
+For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide is
+available <a href="/migration52">here</a>, detailing the changes between
+those releases and PHP 5.2.4.
+</p>
+      </div>
+    </content>
+  </entry>
+  
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>php|works 2007 in Atlanta</title>
     <link href="/conferences/index.php#2007-07-16-01" rel="alternate" type="text/html"/>
