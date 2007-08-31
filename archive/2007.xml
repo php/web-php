@@ -44,10 +44,10 @@ changes is available in the <a href="/ChangeLog-5.php#5.2.4">ChangeLog for PHP 5
 	<li>Fixed a floating point exception inside wordwrap() (Reported by Mattias Bengtsson)</li>
 	<li>Fixed several integer overflows inside the GD extension (Reported by Mattias Bengtsson)</li>
 	<li>Fixed size calculation in chunk_split() (Reported by Gerhard Wagner)</li>
-	<li>Fixed integer overflow in str[c]spn(). (Reported by Stanislav Malyshev)</li>
+	<li>Fixed integer overflow in str[c]spn(). (Reported by Mattias Bengtsson)</li>
 	<li>Fixed money_format() not to accept multiple %i or %n tokens. (Reported by Stanislav Malyshev)</li>
 	<li>Fixed zend_alter_ini_entry() memory_limit interruption vulnerability. (Reported by Stefan Esser)</li>
-	<li>Fixed INFILE LOCAL option handling with MySQL extensions not to be allowed when open_basedir or safe_mode is active. (Reported by Stanislav Malyshev)</li>
+	<li>Fixed INFILE LOCAL option handling with MySQL extensions not to be allowed when open_basedir or safe_mode is active. (Reported by Mattias Bengtsson)</li>
 	<li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378) (Reported by Maksymilian Arciemowicz)</li>
 	<li>Fixed a possible invalid read in glob() win32 implementation (CVE-2007-3806) (Reported by shinnai)</li>
 	<li>Fixed a possible buffer overflow in php_openssl_make_REQ (Reported by zatanzlatan at hotbrev dot com)</li>
