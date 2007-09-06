@@ -4,6 +4,51 @@ $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/releases.inc";
 
+if (isset($_GET["serialize"])) {
+	include_once $_SERVER["DOCUMENT_ROOT"] . "/include/version.inc";
+
+	if (isset($_GET["version"])) {
+		$ver = (int)$_GET["version"];
+
+		if (isset($RELEASES[$ver])) {
+			list($version, $r) = each($RELEASES[$ver]);
+
+			if (isset($_GET["max"])) {
+				$max = (int)$_GET["max"];
+				if ($max == -1) { $max = PHP_INT_MAX; }
+
+				$return = array($version => $r);
+
+				$count = 1;
+				foreach($OLDRELEASES[$ver] as $version => $release) {
+					if ($max <= $count++) {
+						break;
+					}
+
+					$return[$version] = $release;
+				}
+				echo serialize($return);
+			} else {
+				$r["version"] = $version;
+
+				echo serialize($r);
+			}
+		} else {
+			echo serialize(array("error" => "Unkown version"));
+		}
+	} else {
+		$array = array();
+		foreach($RELEASES as $major => $release) {
+			list($version, $r) = each($release);
+			$r["version"] = $version;
+			$array[$major] = $r;
+		}
+		echo serialize($array);
+	}
+	return;
+}
+
+
 // Tarball list generated with:
 // cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
 $SIDEBAR_DATA = '
