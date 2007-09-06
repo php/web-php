@@ -28,7 +28,9 @@ $PHP_5_MD5     = array(
                        "nts.zip"   => "7728b869cfe3b8b7f1751da0a298fc12",
                        "pecl.nts"  => "44302972cffd2b9cf05cb7131b56056a",
 );
+
 $PHP_5_RC      = false;
+$PHP_5_RC_DATE = "5 September 2007";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.7";
@@ -38,7 +40,9 @@ $PHP_4_MD5     = array(
                        "tar.gz"    => "2669d2049822ac14abb263703d24f643",
                        "zip"       => "e774e79530d610c58c5f2da433d14e0f",
 );
+
 $PHP_4_RC      = false;
+$PHP_4_RC_DATE = "5 September 2007";
 
 $RELEASES = array(
     5 => array(
