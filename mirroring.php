@@ -356,12 +356,12 @@ $minute = rand(0, 59);
 
 <p>
  There is a mailing list named <tt>"php-mirrors"</tt> at
- <tt>lists.php.net</tt>. It is not required to sign up to
- this mailing list. Besides the name, the traffic on this
- list is mainly interesting for the webmasters of PHP.net,
- and we are able to keep in touch with you using your given
- email address. Anyway if you would like to follow what is
- happening, you can subscribe, by sending an empty message
+ <tt>lists.php.net</tt> which we would appreciate if you could sign up to.
+ This mailing list is extremly low traffic and only used for communication
+ between mirror maintainers and the php.net webmasters.
+</p>
+<p>
+ To subscribe send an empty message
  to: <a href="mailto:php-mirrors-subscribe@lists.php.net">php-mirrors-subscribe@lists.php.net</a>
 </p>
 
