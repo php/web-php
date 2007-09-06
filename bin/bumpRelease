@@ -1,0 +1,33 @@
+#!/usr/local/bin/php
+<?php
+PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+
+require "include/version.inc";
+require "include/releases.inc";
+
+$a = array();
+foreach($RELEASES as $major => $rel) {
+	list($k, $v) = each($rel);
+
+	$tmp = 'PHP_' .$major. '_DATE';
+	$v["date"] = $$tmp;
+
+	if (is_bool($v["announcement"]) && $v["announcement"]) {
+		$v["announcement"] = array("English" => "/releases/" . str_replace(".", "_", $k) . ".php");
+	}
+	$v["museum"] = false;
+	$a[$major] = array_merge(
+		array($k => $v),
+		$OLDRELEASES[$major]
+	);
+}
+
+$keys = array_diff(array_keys($OLDRELEASES), array_keys($RELEASES));
+foreach($keys as $key) {
+	$a[$key] = $OLDRELEASES[$key];
+}
+
+file_put_contents("include/releases.inc", array("<?php\n\$OLDRELEASES = ", var_export($a, true), ";\n"));
+
+echo "This was fun \o/\nI hope you remembered to run this script *before* updating include/version.inc... :)\n";
+
