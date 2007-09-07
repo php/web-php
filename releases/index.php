@@ -165,7 +165,7 @@ site_header("Releases");
 
 <?php
 function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) {
-	printf("<a name=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", $ver, $date);
+	printf("<a name=\"%s\"></a>\n<h2>%1\$s</h2>\n<ul>\n <li>Released: %s</li>\n <li>Announcement: ", ($pos = strpos($ver, " ")) ? substr($ver, 0, $pos) : $ver, $date);
 	if ($announcement) {
 		if (is_array($announcement)) {
 			foreach($announcement as $ann => $url) {
