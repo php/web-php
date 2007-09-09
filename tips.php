@@ -34,6 +34,29 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
+<?php tip_title('Quick Reference for Opera 9', 'Mustaque Ullah', '09-Sep-2007');?>
+
+<p>
+ In Opera, go to Tools --&gt; Preferences, and then click on the Search tab. You
+ should "Add a new search engine" and fill in the appropriate fields. My
+ choices are below.
+</p>
+<ul>
+ <li>Name: PHP</li>
+ <li>Keyword: p</li>
+ <li>Address: http://www.php.net/search.php</li>
+ <li>Query string: pattern=%s&amp;show=quickref</li>
+</ul>
+<p class="note">
+ You have to check "Use POST" to be able to type in a query string.
+</p>
+<p>
+ From then on (click OK twice to close the windows) you should be able to search
+ the function list by typing "p function" in the address bar (or use the
+ search dropdown menu). You can change "quickref" to "all" if you want to
+ search all php.net sites, or "manual" for the online documentation.
+</p>
+
 <?php tip_title('Function lookup with Apple Dashboard', 'Gabor Hojtsy', '02-Apr-2006');?>
 
 <p>
