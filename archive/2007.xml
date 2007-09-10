@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news" xml:base="/">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news">
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
