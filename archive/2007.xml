@@ -62,7 +62,7 @@ those releases and PHP 5.2.4.
     </content>
   </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
-    <title>Forum PHP in Paris, France, November 21st &amp; 22nd, 2007</title>
+    <title>Forum PHP Paris 2007</title>
     <link href="/conferences/index.php#2007-09-20-1" rel="alternate" type="text/html"/>
     <link href="http://www.afup.org/pages/forumphp2007/" rel="via" type="text/html"/>
     <id>http://php.net/archive/2007.php#2007-09-20-1</id>
@@ -85,7 +85,7 @@ enterprise solutions and advanced techniques.
     </content>
   </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
-    <title>PHP Québec 2008 in Montréal : call for speaker</title>
+    <title>PHP Québec 2008 : call for speaker</title>
     <link href="/conferences/index.php#2007-09-16-01" rel="alternate" type="text/html"/>
     <link href="http://conf.phpquebec.com/" rel="via" type="text/html"/>
     <id>http://php.net/archive/2007.php#2007-09-16-01</id>
