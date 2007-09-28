@@ -381,7 +381,7 @@ ul.simple li {
 }
 
 /* PHP source code highlighting ------------------------------------------- */
-.phpcode {
+.phpcode, div.classsynopsis {
 	padding: 0.5em;
 	text-align: left;
 }
@@ -389,9 +389,12 @@ div.phpcode span.html {
 	color: black;
 	background-color: transparent;
 }
-div.phpcode span.comment {
+div.phpcode span.comment, span.php_comment {
 	color: #FF8000;
 	background-color: transparent;
+}
+span.php_comment {
+	font-weight: bold;
 }
 div.phpcode span.default {
 	color: #0000BB;
@@ -809,7 +812,7 @@ h4.eventmonth {
 /* }}} */
 
 /* {{{ phpdoc examples */
-div.example, div.informalexample {
+div.example, div.informalexample, div.classsynopsis {
 	background-color: #fff;
 	border: 1px solid #000;
 	text-align: left;
@@ -824,6 +827,8 @@ div.example p {
 
 div.example div.example-contents,
 table .phpcode,
+div.mediaobject,
+div.classsynopsis,
 div.informalexample pre,
 div.informalexample .phpcode {
 	background-color: #ddd;
@@ -861,6 +866,46 @@ div.example div.screenshot img {
 div.refentry a, div.reference a, div.section a {
 	text-decoration: none;
 	border-bottom: 1px solid #009;
+}
+
+div.refsect1 {
+	border: solid 2px #cccccc;
+	border-collapse: collapse;
+	margin: 1em;
+	padding: 1em;
+	background-color: #eeeeff;
+}
+div.refsect1 h3 {
+	margin-top: 0;
+	padding-top: 0;
+	border-bottom: dashed 1px #ffffff;
+}
+div.refsect1 dt {
+}
+div.refsect1 dd {
+	border: groove 2px #ffffff;
+	background-color: #f5f5ff;
+}
+div.refsect1 span.term {
+	font-size: 1.2em;
+	border-bottom: groove 1px #dddddd;
+}
+
+div.classsynopsis div.methodsynopsis,
+div.classsynopsis div.fieldsynopsis,
+div.classsynopsis div.classsynopsisinfo {
+	text-indent: 30px;
+}
+div.classsynopsis {
+	color: rgb(0, 119, 0);
+}
+div.classsynopsis b.classname,
+div.classsynopsis div.fieldsynopsis var,
+div.classsynopsis div.classsynopsisinfo var,
+div.classsynopsis span.methodname,
+div.classsynopsis tt.parameter,
+div.classsynopsis span.modifier_role {
+	color: rgb(0, 0, 187);
 }
 
 /*
