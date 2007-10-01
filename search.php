@@ -38,7 +38,7 @@ if (!empty($_FORM['pattern'])) {
     $_FORM['show'] = str_replace(",", "", $_FORM['show']);
     
     // Mailing list search base URL
-    $ml_url = "http://marc.theaimsgroup.com/?r=1&w=2&q=b&";
+    $ml_url = "http://marc.info/?r=1&w=2&q=b&";
     $ucp = urlencode($_FORM['pattern']);
 
     // Do redirections for external search engines
@@ -52,7 +52,7 @@ if (!empty($_FORM['pattern'])) {
             mirror_redirect("{$ml_url}l=php-general&s={$ucp}");
 
         case "devlist" :
-            mirror_redirect("{$ml_url}l=php-dev&s={$ucp}");
+            mirror_redirect("{$ml_url}l=php-internals&s={$ucp}");
 
         case "phpdoc" :
             mirror_redirect("{$ml_url}l=phpdoc&s={$ucp}");
