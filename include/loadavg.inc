@@ -39,7 +39,7 @@ function load_check()
 
     // Find potential close mirrors 
     foreach ($MIRRORS as $murl => $mirror) {
-        if ($murl != 'http://www.php.net/' && $mirror[7] == MIRROR_OK) {
+        if ($murl != 'http://www.php.net/' && $mirror[7] == MIRROR_OK && $mirror[4] != MIRROR_SPECIAL) {
             if ($mirror[0] == $COUNTRY) {
                 $close_mirrors[] = $murl;
             } else {
