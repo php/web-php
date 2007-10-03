@@ -917,6 +917,13 @@ div.classsynopsis tt.parameter,
 div.classsynopsis span.modifier_role {
 	color: rgb(0, 0, 187);
 }
+span.replaceable, span.initializer {
+	font-style: italic;
+}
+div.authorgroup {
+	padding: 10px;
+}
+
 
 /*
  * vim: noet
