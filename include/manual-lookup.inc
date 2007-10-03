@@ -144,7 +144,7 @@ function find_manual_page($lang, $keyword)
         if ($q) {
             $r = sqlite_fetch_array($q, SQLITE_NUM);
             if (isset($r[0])) {
-				if($r[1] > 10 && strlen($keyword) < 4) {
+				if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
 					// "Match" found, but the keyword is so short
 					// its probably bogus. Skip it
 					continue;
