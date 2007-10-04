@@ -85,7 +85,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
 
   $d = date('j M Y', $hit['ModificationDate']);
   $cachelink = $size = '';
-  if ($hit['Cache']['Size']) {
+  if (isset($hit['Cache'])) {
     $cachelink = " - <a href=\"{$hit['Cache']['Url']}\">Cached</a>";
     if ($hit['Cache']['Size'] > 1024) {
       $size = ' - ' . sprintf("%d", $hit['Cache']['Size']/1024) . 'k';
