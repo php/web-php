@@ -897,6 +897,10 @@ div.refsect1 span.term {
 	border-bottom: groove 1px #dddddd;
 }
 
+div.refsect1 span.term b tt {
+	font-size: 0.9em;
+}
+
 div.classsynopsisinfo_comment {
 	text-indent: 30px;
 	padding-top: 2em;
