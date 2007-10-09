@@ -97,7 +97,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
 
   // rewrite mirrors urls (\w\w\d? or www, but not qa)
   $real_url = preg_replace('@^http://(?!qa)\w{2,3}\.php\.net(.*)$@', '$1', $hit['Url']);
-  $displayurl = preg_replace('@^http://(?:(?!qa)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
+  $displayurl = preg_replace('@^http://(?:(?!qa)\w{2,3}\.)?(php\.net.+[^/])/?$@', '$1', $hit['Url']);
   $type = substr($displayurl,0,strpos($displayurl,'.'));
   if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
   if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
@@ -111,6 +111,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
                  'snaps'=>'<img src="http://static.php.net/www.php.net/images/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'cvsweb'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'viewcvs'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'news'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'smarty'=>'<img src="http://static.php.net/www.php.net/images/smarty-icon.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
