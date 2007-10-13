@@ -43,7 +43,7 @@ if ($process) {
     
     // Don't pass through example username
     if ($user == "user@example.com") {
-        $user = "";
+        $user = "Anonymous";
     }
     
     // We don't know of any error now
