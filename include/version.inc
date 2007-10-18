@@ -29,8 +29,8 @@ $PHP_5_MD5     = array(
                        "pecl.nts"  => "44302972cffd2b9cf05cb7131b56056a",
 );
 
-$PHP_5_RC      = false;
-$PHP_5_RC_DATE = "5 September 2007";
+$PHP_5_RC      = "5.2.5RC1";
+$PHP_5_RC_DATE = "18 October 2007";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.7";
