@@ -248,7 +248,7 @@ foreach ($mirror_sites as $murl => $mdata) {
     
     // Compute user friendly mirror name
     $mname = ($murl == "NONE" ? "Automatic selection (default)" :
-                                substr($murl, strpos($murl, '//') + 2, -1));
+                                $COUNTRIES[$mdata[0]] . " (" .substr($murl, strpos($murl, '//') + 2, -1)). ")";
     
     // Print out mirror option with selection if needed
     printf (
