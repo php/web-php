@@ -149,8 +149,7 @@ if (is_official_mirror()) {
  *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
  */
 $PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = "5.2.5RC1";
-$PHP_4_RC     = "";
+$PHP_5_RC     = $PHP_4_RC     = "";
 $rel          = $rc           = "";
 
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
