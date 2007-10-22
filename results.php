@@ -95,9 +95,9 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
     }
   }
 
-  // rewrite mirrors urls (\w\w\d? or www, but not qa)
-  $real_url = preg_replace('@^http://(?!qa)\w{2,3}\.php\.net(.*)$@', '$1', $hit['Url']);
-  $displayurl = preg_replace('@^http://(?:(?!qa)(?!php)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
+  // rewrite mirrors urls (\w\w\d? or www, but not qa nor doc)
+  $real_url = preg_replace('@^http://(?!doc)(?!qa)\w{2,3}\.php\.net(.*)$@', '$1', $hit['Url']);
+  $displayurl = preg_replace('@^http://(?:(?!doc)(?!qa)(?!php)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
   $type = substr($displayurl,0,strpos($displayurl,'.'));
   if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
   if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
