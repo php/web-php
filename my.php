@@ -7,7 +7,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 header_nocache();
 
 // Languages array copy and options to list
-$langs = $LANGUAGES; $options = array();
+$langs = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+$options = array();
 
 // We have post data, and it is an available language
 if (isset($_POST['my_lang']) && isset($langs[$_POST['my_lang']])) {
