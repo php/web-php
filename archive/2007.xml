@@ -11,6 +11,25 @@
     <email>webmaster@php.net</email>
   </author>
   <entry xmlns="http://www.w3.org/2005/Atom">
+    <title>PHP Conference Brasil 2007</title>
+    <link href="/conferences/index.php#2007-10-29-1" rel="alternate" type="text/html"/>
+    <link href="http://www.prophp.com.br/phpconference.php" rel="via" type="text/html"/>
+    <id>http://php.net/archive/2007.php#2007-10-29-1</id>
+    <published>2007-10-29T13:46:03+01:00</published>
+    <updated>2007-10-29T13:46:03+01:00</updated>
+    <category term="conferences" label="Conference announcement"/>
+    <php:finalTeaserDate>2007-12-01</php:finalTeaserDate>
+    <php:newsImage link="http://www.prophp.com.br/phpconference.php" title="São Paulo 2007">phpconfbrasil2007.png</php:newsImage>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+November 31th - December 1st, Join us at the 2nd Annual PHP Conference Brasil. The event will take place at UNIFIEO in Osasco, São Paulo. This year's conference will have room for 1000 people. Its scheduled for tutorials of 3 hours, aside of speeches, cases, stands and a great catch up time for newbies and veterans.
+Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for more details. Early registration with discounted price is available until November 9th.
+	</p>
+      </div>
+    </content>
+  </entry>
+  <entry xmlns="http://www.w3.org/2005/Atom">
     <title>The new documentation build system is ready for testing</title>
     <id>http://php.net/archive/2007.php#2007-10-03-1</id>
     <published>2007-10-03T10:55:47-07:00</published>
