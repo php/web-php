@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-10-03T10:55:47-07:00</updated>
+  <updated>2007-10-30T02:27:29+01:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
@@ -16,7 +16,7 @@
     <link href="http://www.prophp.com.br/phpconference.php" rel="via" type="text/html"/>
     <id>http://php.net/archive/2007.php#2007-10-29-1</id>
     <published>2007-10-29T13:46:03+01:00</published>
-    <updated>2007-10-29T13:46:03+01:00</updated>
+    <updated>2007-10-30T02:27:29+01:00</updated>
     <category term="conferences" label="Conference announcement"/>
     <php:finalTeaserDate>2007-12-01</php:finalTeaserDate>
     <php:newsImage link="http://www.prophp.com.br/phpconference.php" title="São Paulo 2007">phpconfbrasil2007.png</php:newsImage>
