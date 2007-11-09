@@ -11,6 +11,91 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.5"></a>
+<h3>Version 5.2.5</h3>
+<b>08-November-2007</b>
+<ul>
+	<li>Security Fixes
+		<ul>
+			<li>Fixed dl() to only accept filenames. reported by Laurent Gaffie.</li>
+			<li>Fixed dl() to limit argument size to MAXPATHLEN (CVE-2007-4887).</li>
+			<li>Fixed htmlentities/htmlspecialchars not to accept partial multibyte sequences.</li>
+			<li>Fixed possible triggering of buffer overflows inside glibc implementations of the fnmatch(), setlocale() and glob() functions. Reported by Laurent Gaffie.</li>
+			<li>Fixed "mail.force_extra_parameters" php.ini directive not to be modifiable in .htaccess due to the security implications reported by SecurityReason.</li>
+			<li><?php bugfix(42869); ?> (automatic session id insertion adds sessions id to non-local forms).</li>
+			<li><?php bugfix(41561); ?> (Values set with php_admin_* in httpd.conf can be overwritten with ini_set()).</li>
+		</ul>
+	</li>
+
+<li>Upgraded PCRE to version 7.3 (Nuno)</li>
+<li>Added optional parameter $provide_object to debug_backtrace(). (Sebastian)</li>
+<li>Added alpha support for imagefilter() IMG_FILTER_COLORIZE. (Pierre)</li>
+<li>Added ability to control memory consumption between request using ZEND_MM_COMPACT environment variable. (Dmitry)</li>
+
+<li>Improved speed of array_intersect_key(), array_intersect_assoc(), array_uintersect_assoc(), array_diff_key(), array_diff_assoc() and array_udiff_assoc(). (Dmitry)</li>
+
+<li>Fixed move_uploaded_file() to always set file permissions of resulting file according to UMASK. (Andrew Sitnikov)</li>
+<li>Fixed possible crash in ext/soap because of uninitialized value. (Zdash Urf)</li>
+<li>Fixed regression in glob() when enforcing safe_mode/open_basedir checks on paths containing '*'. (Ilia)</li>
+<li>Fixed PDO crash when driver returns empty LOB stream. (Stas)</li>
+<li>Fixed iconv_*() functions to limit argument sizes as workaround to libc bug (CVE-2007-4783, CVE-2007-4840 by Laurent Gaffie). (Christian Hoffmann, Stas)</li>
+<li>Fixed missing brackets leading to build warning and error in the log. Win32 code. (Andrey)</li>
+<li>Fixed leaks with multiple connects on one mysqli object. (Andrey)</li>
+<li>Fixed endianness detection on MacOS when building universal binary. (Uwe Schindler, Christian Speich, Tony)</li>
+<li>Fixed imagerectangle regression with 1x1 rectangle (libgd #106). (Pierre)</li>
+
+<li><?php bugfix(43196); ?> (array_intersect_assoc() crashes with non-array input). (Jani)</li>
+<li><?php bugfix(43139); ?> (PDO ignores ATTR_DEFAULT_FETCH_MODE in some cases with fetchAll()). (Ilia)</li>
+<li><?php bugfix(43137); ?> (rmdir() and rename() do not clear statcache). (Jani)</li>
+<li><?php bugfix(43130); ?> (Bound parameters cannot have - in their name). (Ilia)</li>
+<li><?php bugfix(43099); ?> (XMLWriter::endElement() does not check # of params). (Ilia)</li>
+<li><?php bugfix(43020); ?> (Warning message is missing with shuffle() and more than one argument). (Scott)</li>
+<li><?php bugfix(42976); ?> (Crash when constructor for newInstance() or newInstanceArgs() fails) (Ilia)</li>
+<li><?php bugfix(42943); ?> (ext/mssql: Move *timeout initialization from RINIT to connect time). (Ilia)</li>
+<li><?php bugfix(42917); ?> (PDO::FETCH_KEY_PAIR doesn't work with setFetchMode). (Ilia)</li>
+<li><?php bugfix(42890); ?> (Constant "LIST" defined by mysqlclient and c-client). (Andrey)</li>
+<li><?php bugfix(42818); ?> ($foo = clone(array()); leaks memory). (Dmitry)</li>
+<li><?php bugfix(42817); ?> (clone() on a non-object does not result in a fatal error). (Ilia)</li>
+<li><?php bugfix(42785); ?> (json_encode() formats doubles according to locale rather  then following standard syntax). (Ilia)</li>
+<li><?php bugfix(42783); ?> (pg_insert() does not accept an empty list for insertion). (Ilia)</li>
+<li><?php bugfix(42773); ?> (WSDL error causes HTTP 500 Response). (Dmitry)</li>
+<li><?php bugfix(42772); ?> (Storing $this in a static var fails while handling a cast to string). (Dmitry)</li>
+<li><?php bugfix(42767); ?> (highlight_string() truncates trailing comment). (Ilia)</li>
+<li><?php bugfix(42739); ?> (mkdir() doesn't like a trailing slash when safe_mode is enabled). (Ilia)</li>
+<li><?php bugfix(42703); ?> (Exception raised in an iterator::current() causes segfault in FilterIterator) (Marcus)</li>
+<li><?php bugfix(42699); ?> (PHP_SELF duplicates path). (Dmitry)</li>
+<li><?php bugfix(42654); ?> (RecursiveIteratorIterator modifies only part of leaves) (Marcus)</li>
+<li><?php bugfix(42643); ?> (CLI segfaults if using ATTR_PERSISTENT). (Ilia)</li>
+<li><?php bugfix(42637); ?> (SoapFault : Only http and https are allowed). (Bill Moran)</li>
+<li><?php bugfix(42629); ?> (Dynamically loaded PHP extensions need symbols exported on MacOSX). (jdolecek at NetBSD dot org)</li>
+<li><?php bugfix(42627); ?> (bz2 extension fails to build with -fno-common). (dolecek at netbsd dot org)</li>
+<li><?php bugfix(42596); ?> (session.save_path MODE option does not work). (Ilia)</li>
+<li><?php bugfix(42590); ?> (Make the engine recognize \v and \f escape sequences). (Ilia)</li>
+<li><?php bugfix(42587); ?> (behavior change regarding symlinked .php files). (Dmitry)</li>
+<li><?php bugfix(42579); ?> (apache_reset_timeout() does not exist). (Jani)</li>
+<li><?php bugfix(42549); ?> (ext/mysql failed to compile with libmysql 3.23). (Scott)</li>
+<li><?php bugfix(42523); ?> (PHP_SELF duplicates path). (Dmitry)</li>
+<li><?php bugfix(42512); ?> (ip2long('255.255.255.255') should return 4294967295 on 64-bit PHP). (Derick)</li>
+<li><?php bugfix(42506); ?> (php_pgsql_convert() timezone parse bug) (nonunnet at gmail dot com, Ilia)</li>
+<li><?php bugfix(42462); ?> (Segmentation when trying to set an attribute in a DOMElement). (Rob)</li>
+<li><?php bugfix(42453); ?> (CGI SAPI does not shut down cleanly with -i/-m/-v cmdline options). (Dmitry)</li>
+<li><?php bugfix(42452); ?> (PDO classes do not expose Reflection API information). (Hannes)</li>
+<li><?php bugfix(42468); ?> (Write lock on file_get_contents fails when using a compression stream). (Ilia)</li>
+<li><?php bugfix(42488); ?> (SoapServer reports an encoding error and the error itself breaks). (Dmitry)</li>
+<li><?php bugfix(42378); ?> (mysqli_stmt_bind_result memory exhaustion). (Andrey)</li>
+<li><?php bugfix(42359); ?> (xsd:list type not parsed). (Dmitry)</li>
+<li><?php bugfix(42326); ?> (SoapServer crash). (Dmitry)</li>
+<li><?php bugfix(42214); ?> (SoapServer sends clients internal PHP errors). (Dmitry)</li>
+<li><?php bugfix(42189); ?> (xmlrpc_set_type() crashes php on invalid datetime values). (Ilia)</li>
+<li><?php bugfix(42139); ?> (XMLReader option constants are broken using XML()). (Rob)</li>
+<li><?php bugfix(42086); ?> (SoapServer return Procedure '' not present for WSIBasic compliant wsdl). (Dmitry)</li>
+<li><?php bugfix(41822); ?> (Relative includes broken when getcwd() fails). (Ab5602, Jani)</li>
+<li><?php bugfix(39651); ?> (proc_open() append mode doesn't work on windows). (Nuno)</li>
+	
+</ul>
+
+<hr />
+
 <a name="5.2.4"></a>
 <h3>Version 5.2.4</h3>
 <b>30-August-2007</b>

@@ -3,13 +3,26 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2007-10-30T02:27:29+01:00</updated>
+  <updated>2007-11-08T19:33:04-05:00</updated>
   <id>http://php.net/archive/2007.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry>
+    <title>PHP 5.2.5 Released</title>
+    <id>http://php.net/archive/2007.php#2007-11-08-1</id>
+    <published>2007-11-08T19:33:26-05:00</published>
+    <updated>2007-11-08T19:33:26-05:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <link href="/index.php#2007-11-08-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2007.php#2007-11-08-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>        The PHP development team would like to announce the immediate        <a href="/downloads.php#v5">aavailability of PHP 5.2.5</a>.        This release focuses on improving the stability of the PHP 5.2.x        branch with over 60 bug fixes, several of which are security related.        All users of PHP are encouraged to upgrade to this release.</p><p>        Further details about the PHP 5.2.5 release can be found in the        <a href="/releases/5_2_5.php">release announcement for 5.2.5</a>, the full list of        changes is available in the <a href="/ChangeLog-5.php#5.2.5">ChangeLog for PHP 5</a>.</p><p>        <b>Security Enhancements and Fixes in PHP 5.2.5:</b></p><ul>        <li>Fixed dl() to only accept filenames. Reported by Laurent Gaffie.</li>        <li>Fixed dl() to limit argument size to MAXPATHLEN (CVE-2007-4887). Reported by Laurent Gaffie.</li>        <li>Fixed htmlentities/htmlspecialchars not to accept partial multibyte sequences. Reported by Rasmus Lerdorf</li>        <li>Fixed possible triggering of buffer overflows inside glibc implementations of the fnmatch(), setlocale() and glob() functions. Reported by Laurent Gaffie.</li>        <li>Fixed "mail.force_extra_parameters" php.ini directive not to be modifiable in .htaccess due to the security implications. Reported by SecurityReason.</li>        <li>Fixed bug #42869 (automatic session id insertion adds sessions id to non-local forms).</li>        <li>Fixed bug #41561 (Values set with php_admin_* in httpd.conf can be overwritten with ini_set()).</li></ul><p>For users upgrading to PHP 5.2 from PHP 5.0 and PHP 5.1, an upgrade guide isavailable <a href="/migration52">here</a>, detailing the changes betweenthose releases and PHP 5.2.5.</p></div>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>PHP Conference Brasil 2007</title>
     <link href="/conferences/index.php#2007-10-29-1" rel="alternate" type="text/html"/>
@@ -39,7 +52,7 @@ Visit <a href="http://www.prophp.com.br/phpconference.php">the website</a> for m
     <link href="/archive/2007.php#2007-10-03-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>
+        <p>
 The PHP documentation team is pleased to announce the initial release of 
 the new build system that generates the PHP Manual. Written in PHP, PhD 
 (<em>[PH]P based [D]ocBook renderer</em>) builds are now available for 
@@ -47,12 +60,12 @@ viewing at <a href="http://docs.php.net/">docs.php.net</a>. Everyone is
 encouraged to test and use this system so 
 that <a href="http://bugs.php.net/">bugs</a> will be found and squashed. 
       </p>
-      <p>
+        <p>
 Once the new build system is stable, expect additional changes to the PHP 
 manual that will include an improved navigation system and styling for OOP 
 documentation. 
       </p>
-      <p>
+        <p>
 Feel free to set this developmental mirror as your default by 
 using <a href="/my.php">my.php</a>.
       </p>
@@ -124,11 +137,7 @@ those releases and PHP 5.2.4.
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
 November 7th - 9th, Join us at the 2nd Annual DC PHP Conference. The event will take place at George Washington University's Cafritz Conference Center in the heart of Washington DC. The three day conference begins November 7th and 8th with general sessions, and ends November 9th with tutorials. This year's conference will host some of the PHP Community's top speakers and developers and focus on three primary tracks:
-<ul>	
-<li>Scalability</li>
-<li>Security</li>
-<li>The Art of PHP</li>
-</ul>
+<ul><li>Scalability</li><li>Security</li><li>The Art of PHP</li></ul>
 Please see <a href="http://www.dcphpconference.com ">the website</a> for more details and to register. Early registration is available until mid-October.
 	</p>
       </div>
@@ -169,27 +178,25 @@ enterprise solutions and advanced techniques.
     <php:newsImage link="http://conf.phpquebec.com/en" title="PHP Québec 2008">phpquebec.2008.png</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-<p>PHP Quebec is pleased to announce the sixth edition of the <a 
-href="http://conf.phpquebec.com/en">PHP Quebec Conference</a>. The Conference 
+        <p>PHP Quebec is pleased to announce the sixth edition of the <a href="http://conf.phpquebec.com/en">PHP Quebec Conference</a>. The Conference 
 will take place in Montreal, Canada between March 12th and 14th, 2008. We are 
 looking for speakers willing to share their expertise with Canadian and 
 United States PHP professionals.
 </p>
-<p>
+        <p>
 The Conference features the PHPLab, where speakers and visitors will find 
 solutions to actual business problems. The two days of technical talks will 
 be dedicated to advanced software development techniques with PHP5 and PHP6, 
 XML, web services, databases, etc.
 </p>
-<p>
+        <p>
 Organizers will prioritize new and original topics in English or French.
-For more information, visit the website: <a 
-href="http://conf.phpquebec.com">http://conf.phpquebec.com</a>
+For more information, visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com</a>
 </p>
       </div>
     </content>
   </entry>
-<entry xmlns="http://www.w3.org/2005/Atom">
+  <entry xmlns="http://www.w3.org/2005/Atom">
     <title>php|works 2007 in Atlanta</title>
     <link href="/conferences/index.php#2007-07-16-01" rel="alternate" type="text/html"/>
     <link href="http://works.phparch.com/" rel="via" type="text/html"/>

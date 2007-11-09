@@ -17,19 +17,19 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.4";
-$PHP_5_DATE    = "30 August 2007";
+$PHP_5_VERSION = "5.2.5";
+$PHP_5_DATE    = "08 November 2007";
 $PHP_5_MD5     = array(
-                       "tar.bz2"   => "55c97a671fdabf462cc7a82971a656d2",
-                       "tar.gz"    => "0826e231c3148b29fd039d7a8c893ad3",
-                       "zip"       => "979b8a305b028b296b97ed72322026b2",
-                       "installer" => "ad23dcc391a8c26c7d387eb5e9bf1ffb",
-                       "pecl.zip"  => "dd98dfe607ceb98e727c394d5bd679fb",
-                       "nts.zip"   => "7728b869cfe3b8b7f1751da0a298fc12",
-                       "pecl.nts"  => "44302972cffd2b9cf05cb7131b56056a",
+                       "tar.bz2"   => "61a0e1661b70760acc77bc4841900b7a",
+                       "tar.gz"    => "61a0e1661b70760acc77bc4841900b7a",
+                       "zip"       => "",
+                       "installer" => "",
+                       "pecl.zip"  => "",
+                       "nts.zip"   => "",
+                       "pecl.nts"  => "",
 );
 
-$PHP_5_RC      = "5.2.5RC2";
+$PHP_5_RC      = false;
 $PHP_5_RC_DATE = "01 November 2007";
 
 /* PHP 4 Release */
@@ -62,7 +62,7 @@ $RELEASES = array(
                     "date"     => $PHP_5_DATE,
                 ),
             ),
-            "windows" => array( /* Prefix the key with dot if the windows stuff isn't available yet*/
+            ".windows" => array( /* Prefix the key with dot if the windows stuff isn't available yet*/
                 array(
                     "filename" => "php-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION zip package",
@@ -86,7 +86,7 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 binaries",
                     "md5"      => $PHP_5_MD5["nts.zip"],
                     "date"     => $PHP_5_DATE,
-                ),
+                ), 
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Non-thread-safe Win32 binaries",

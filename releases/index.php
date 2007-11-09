@@ -145,6 +145,7 @@ $SIDEBAR_DATA = '
    <option value="php-5.2.1.tar.gz">5.2.1</option>
    <option value="php-5.2.2.tar.gz">5.2.2</option>
    <option value="php-5.2.3.tar.gz">5.2.3</option>
+   <option value="php-5.2.4.tar.gz">5.2.4</option>
   </select>
  </p>
 </form>
