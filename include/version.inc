@@ -20,7 +20,7 @@
 $PHP_5_VERSION = "5.2.5";
 $PHP_5_DATE    = "08 November 2007";
 $PHP_5_MD5     = array(
-                       "tar.bz2"   => "61a0e1661b70760acc77bc4841900b7a",
+                       "tar.bz2"   => "1fe14ca892460b09f06729941a1bb605",
                        "tar.gz"    => "61a0e1661b70760acc77bc4841900b7a",
                        "zip"       => "a1e31c0d872ab030a2256b1cd6d3b7d1",
                        "installer" => "cc882abae3b9ac2f5b83abc57f3381ae",
