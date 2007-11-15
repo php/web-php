@@ -23,7 +23,7 @@ $PHP_5_MD5     = array(
                        "tar.bz2"   => "1fe14ca892460b09f06729941a1bb605",
                        "tar.gz"    => "61a0e1661b70760acc77bc4841900b7a",
                        "zip"       => "a1e31c0d872ab030a2256b1cd6d3b7d1",
-                       "installer" => "cc882abae3b9ac2f5b83abc57f3381ae",
+                       "installer" => "f9396b654721d9a18c95ea6412c3d54e",
                        "pecl.zip"  => "a3553b61c9332d08a5044cf9bf89f2df",
                        "nts.zip"   => "41ef1582f43cfdb6e546a626b9ef93d6",
                        "pecl.nts"  => "6e5ac694907b4aae080b2c9b6e83748a",
@@ -74,6 +74,7 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
                     "date"     => $PHP_5_DATE,
+                    "note"     => "Updated 2007-11-15 due to problems with the original installer for this release.",
                 ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
