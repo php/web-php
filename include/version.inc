@@ -73,8 +73,8 @@ $RELEASES = array(
                     "filename" => "php-$PHP_5_VERSION-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => $PHP_5_DATE,
-                    "note"     => "Updated 2007-11-15 due to problems with the original installer for this release.",
+                    "date"     => "15 November 2007",
+                    "note"     => "Updated due to problems with the original installer for this release.",
                 ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
