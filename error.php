@@ -162,6 +162,13 @@ if (preg_match("!^get/([^/]+)/from/([^/]+)(/mirror)?$!", $URI, $dlinfo)) {
     exit;
 }
 
+// The rest rendering
+if (strpos($URI, "reST/") === 0) {
+    $_GET["rel_path"] = substr($URI, 5);
+    include $_SERVER['DOCUMENT_ROOT'] ."/reST/index.php";
+    exit;
+}
+ 
 // Work with lowercased URI from now
 $URI = strtolower($URI);
 
