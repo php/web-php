@@ -11,6 +11,7 @@ $path = isset($_GET['rel_path']) ? $_GET['rel_path'] : "";
 
 // Set "this pages ID" (for the notes system)
 $PGI["this"] = array("reST/" . ($path ? $path : "index.php"), "");
+$_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
 
 $SIDEBAR_DATA = '<h3>File list</h3>
