@@ -10,7 +10,7 @@ body, input, textarea, select, option {
 	font-family: verdana, arial, helvetica, sans-serif;
 }
 code, pre, tt {
-	font-family: Courier, "Courier New", monospace;
+	font-family: "Courier New", Courier, monospace;
 }
 pre {
 	background-color: #ddd;
