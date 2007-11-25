@@ -718,6 +718,7 @@ ul#results_nav_list li {
 /* Definition lists used on eg. the unsub page */
 dl dd {
 	margin: 0.5em 0 0.5em 2em;
+	padding: 0.5em;
 }
 
 /* Event month header on homepage */
@@ -912,6 +913,11 @@ div.classsynopsis div.fieldsynopsis {
 	text-indent: 30px;
 	padding: 3px;
 }
+div.refsect1 div.methodsynopsis {
+	background-color: #fff;
+	padding: 0.5em;
+	border: 1px solid black;
+}
 div.classsynopsis {
 	color: rgb(0, 119, 0);
 }
@@ -930,7 +936,12 @@ span.replaceable, span.initializer {
 div.authorgroup {
 	padding: 10px;
 }
-
+blockquote {
+	border: 1px solid #000;
+	background-color: #FFF;
+	margin: 0.5em 0;
+	padding: 0.5em 1em;
+}
 
 /*
  * vim: noet
