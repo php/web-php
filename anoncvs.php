@@ -97,6 +97,9 @@ diff -u
   <strong>PHP 5.2</strong>:
   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_2 php5</code>
   <br />
+  <strong>PHP 5.3</strong>:
+  <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout -r PHP_5_3 php5</code>
+  <br />
   <strong>PHP 6</strong>: 
   <code>cvs -d :pserver:cvsread@cvs.php.net:/repository checkout php6</code>
   <br /><br />
