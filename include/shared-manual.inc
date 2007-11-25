@@ -31,7 +31,11 @@ function manual_setup($page_data)
     $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($PGI['head'][1]) . "/" . $PGI['this'][0];
  
     // Set last modification time on the current manual page
-    $PGI['lastmod'] = gmdate("D, d M Y", filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE']));
+    if (($time = @filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE'])) != false) {
+        $PGI['lastmod'] = gmdate("D, d M Y", $time);
+    } else {
+        $PGI['lastmod'] = "Unkown";
+    }
 }
 
 // Print out HTTP headers and the HTML header
