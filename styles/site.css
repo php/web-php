@@ -909,11 +909,15 @@ div.classsynopsisinfo_comment {
 	padding-top: 2em;
 }
 div.classsynopsis div.methodsynopsis,
+div.classsynopsis div.constructorsynopsis,
+div.classsynopsis div.destructorsynopsis,
 div.classsynopsis div.fieldsynopsis {
 	text-indent: 30px;
 	padding: 3px;
 }
-div.refsect1 div.methodsynopsis {
+div.refsect1 div.methodsynopsis,
+div.refsect1 div.constructorsynopsis,
+div.refsect1 div.destructorsynopsis {
 	background-color: #fff;
 	padding: 0.5em;
 	border: 1px solid black;
