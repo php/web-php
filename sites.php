@@ -68,8 +68,7 @@ site_header("A Tourist's Guide");
 </p>
 
 <h2>
- <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials and
- <a href="http://conf.php.net/">conf.php.net</a>: Older Conference Materials
+ <a href="http://talks.php.net/">talks.php.net</a>: Conference Materials
 </h2>
 
 <p>
