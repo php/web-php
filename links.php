@@ -396,6 +396,10 @@ site_header("Links");
 
 <ul>
  <li>
+  <a href="http://www.nexen.net/elephpant.php">The elePHPant</a><br />
+  The furry PHP mascot, elePHPant.
+</li>
+ <li>
   <a href="http://www.cafepress.com/buy/php/">PHP projects' merchandise</a><br />
   A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)
  </li>
