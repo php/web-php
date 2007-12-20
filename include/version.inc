@@ -41,8 +41,8 @@ $PHP_4_MD5     = array(
                        "zip"       => "e774e79530d610c58c5f2da433d14e0f",
 );
 
-$PHP_4_RC      = false;
-$PHP_4_RC_DATE = "5 September 2007";
+$PHP_4_RC      = "4.4.8RC1"; // false
+$PHP_4_RC_DATE = "20 December 2007";
 
 $RELEASES = array(
     5 => array(

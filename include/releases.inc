@@ -651,6 +651,43 @@ $OLDRELEASES = array (
   ),
   4 => 
   array (
+    '4.4.7' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/4_4_7.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.7.tar.bz2',
+          'name' => 'PHP 4.4.7 (tar.bz2)',
+          'md5' => '3f21b44d37a57ca3876d3aea713c700d',
+          'date' => '03 May 2007',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-4.4.7.tar.gz',
+          'name' => 'PHP 4.4.7 (tar.gz)',
+          'md5' => '2669d2049822ac14abb263703d24f643',
+          'date' => '03 May 2007',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.7-Win32.zip',
+          'name' => 'PHP 4.4.7 zip package',
+          'md5' => '065e867fa3cfa75cba8271dde9b10cee',
+          'date' => '04 May 2007',
+          'note' => 'This package was updated due to faulty Apache2 module shipped with the orginal.<br /> (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions included, packaged as zip)<br />',
+        ),
+      ),
+      'date' => '03 May 2007',
+      'museum' => false,
+    ),
     '4.4.6' => 
     array (
       'date' => '01 Mar 2007',
@@ -1719,4 +1756,3 @@ $OLDRELEASES = array (
     ),
   ),
 );
-
