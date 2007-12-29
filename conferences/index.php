@@ -20,11 +20,11 @@ EOT;
 
 unset($RSIDEBAR_DATA);
 
-site_header("PHP Conferences around the world", array("layout_workaround" => $layout_workaround, 'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'conferences/news.rss" />'));
+site_header("PHP Conferences around the world", array("layout_workaround" => $layout_workaround, 'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Conference announcements" href="' . $MYSITE . 'conferences/feed.atom" />'));
 
 print_news($NEWS_ENTRIES["conferences"]);
 
 site_footer(
-    array("rss" => "/conferences/news.rss") // Add a link to the feed
+    array("atom" => "/feed.atom") // Add a link to the feed
 );
 

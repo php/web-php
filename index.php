@@ -97,8 +97,7 @@ $SIDEBAR_DATA = '
 
 <h3>Syndication</h3>
 <p>
- You can grab our news as an RSS feed via a daily dump in a file
- named <a href="/news.rss">news.rss</a>.
+ You can grab our news as an <a href="/feed.atom">Atom feed</a>.
 </p>';
 
 $MIRROR_IMAGE = '';
@@ -200,7 +199,7 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 site_header("Hypertext Preprocessor",
     array(
         'onload' => 'boldEvents();',
-        'headtags' => '<link rel="alternate" type="application/rss+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'news.rss" />',
+        'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
         'link' => array(
             array(
                 "rel"   => "search",
@@ -249,6 +248,6 @@ print_news($NEWS_ENTRIES["frontpage"]);
 
 <?php
 site_footer(
-    array("rss" => "/news.rss") // Add a link to the feed at the bottom
+    array("atom" => "/feed.atom") // Add a link to the feed at the bottom
 );
 

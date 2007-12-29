@@ -243,6 +243,9 @@ function site_footer($config = array())
     $rsslink       = (isset($config["rss"]) ?
         "<a href=\"{$config["rss"]}\">RSS</a> |" :
         "");
+    $atomlink      = (isset($config["atom"]) ?
+        "<a href=\"{$config["atom"]}\">Atom</a> |" :
+        "");
     $viewsource    = (isset($_SERVER['BASE_PAGE']) ?
         "<a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a> |" :
         "");
@@ -262,7 +265,7 @@ function site_footer($config = array())
 {$layout_helper}</div>
 
 <div id="footnav">
- $rsslink $viewsource
+ $rsslink $atomlink $viewsource
  <a href="/credits.php">credits</a> |$stats
  <a href="/sitemap.php">sitemap</a> |
  <a href="/contact.php">contact</a> |
@@ -593,7 +596,7 @@ function news_archive_sidebar()
 
 <p>
  For the latest news, <a href="/index.php">check the homepage</a>,
- or <a href="/news.rss">our RSS feed</a>.
+ or <a href="/feed.atom">our Atom feed</a>.
 </p>
 
 <h3>Archives by year</h3>
