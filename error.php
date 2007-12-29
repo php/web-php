@@ -406,6 +406,16 @@ if ($try) {
     include_once $_SERVER['DOCUMENT_ROOT'] . $try;
     exit;
 }
+// BC. The class methods are now classname.methodname
+if (preg_match("!^manual/(.+)/function\.(.+)-(.+).php$!", $URI, $array)) {
+    $try = find_manual_page($array[1], $array[2]. "." .$array[3]);
+    if ($try) {
+        status_header(301);
+        mirror_redirect($try);
+        exit;
+    }
+}
+
 
 // ============================================================================
 // 404 page for manual pages (eg. not built language)
