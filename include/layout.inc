@@ -609,8 +609,11 @@ function news_archive_sidebar()
 }
 
 // Print news
-function print_news($news) {
+function print_news($news, $year = false) {
     foreach($news as $item) {
+        if ($year && $year != date("Y", strtotime($item["date"]))) {
+            continue;
+        }
         $image = "";
         if($item["image"]) {
             $image = news_image($item["image"]["link"], $item["image"]["image"], $item["image"]["title"]);
