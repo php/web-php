@@ -207,6 +207,13 @@ site_header("Hypertext Preprocessor",
                 "href"  => $MYSITE . "phpnetimprovedsearch.src",
                 "title" => "Add PHP.net search"
             ),
+            array(
+                "rel"   => "alternate",
+                "type"  => "application/atom+xml",
+                "href"  => $MYSITE . "releases.atom",
+                "title" => "PHP Release feed"
+            ),
+
         ),
     )
 );

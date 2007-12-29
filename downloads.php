@@ -71,7 +71,18 @@ $SIDEBAR_DATA = '
 </p>
 ';
 
-site_header("Downloads");
+site_header("Downloads",
+    array(
+        'link' => array(
+            array(
+                "rel"   => "alternate",
+                "type"  => "application/atom+xml",
+                "href"  => $MYSITE . "releases.atom",
+                "title" => "PHP Release feed"
+            ),
+        ),
+    )
+);
 ?>
 
 <a name="v5"></a>
