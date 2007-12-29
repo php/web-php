@@ -36,10 +36,13 @@ $SIDEBAR_DATA = '
  see the <a href="anoncvs.php">instructions on
  using anonymous CVS</a>
 </p>
+<div class="tip">
 <p>
  Information about older releases and their downloads
  are available on <a href="/releases/">our releases page</a>.
 </p>
+</div>
+<br />
 
 <h3>Other Downloads</h3>
 <p>
