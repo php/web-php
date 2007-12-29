@@ -118,6 +118,14 @@ div.caution {
 	color: #333;
 	background-color: #ffc;
 }
+#leftbar div.tip {
+	margin: 0;
+	padding: 5px;
+	text-align: left;
+}
+#leftbar div.tip p {
+	text-align: left;
+}
 
 /* FIXME: Remove when the new XSL build has finished */
 div.warning table, div.warning table tr, div.warning table td,
