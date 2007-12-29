@@ -149,6 +149,13 @@ $SIDEBAR_DATA = '
   </select>
  </p>
 </form>
+
+<div class="tip">
+ <strong>Want a PHP serialize()d list of the PHP releases?</strong><br />
+ <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
+ <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
+ <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+</div>
 ';
 
 site_header("Releases");
