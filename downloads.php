@@ -63,12 +63,6 @@ $SIDEBAR_DATA = '
  for your site, and some PHP icons to use on
  your computer.
 </p>
-
-<p>
- <a href="http://www.zend.com/products/zend_optimizer">Zend
- Optimizer</a> for PHP 4.0.3 and later is
- available on Zend Technologies\' web site.
-</p>
 ';
 
 site_header("Downloads",
