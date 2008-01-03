@@ -20,7 +20,7 @@ function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to =
 $y = date("Y");
 $today = date("Y-m-d");
 $file = "archive/$y.xml";
-file_exists($file) or die("Can't find $file, are you sure you are in phpweb/?");
+file_exists($file) or die("Can't find $file, are you sure you are in phpweb/?\n");
 
 $dom = new DOMDocument("1.0", "utf-8");
 $dom->formatOutput = true;

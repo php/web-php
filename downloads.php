@@ -128,8 +128,8 @@ if(isset($a["windows"])) {
 <h1>PHP <?php list($v, $a) = each($RELEASES[4]); echo $v ?></h1>
 
 <p>
- Support for PHP 4 will be <b style="color: red">discontinued</b> at 2007-12-31. Please consider
- upgrading to PHP 5.2.
+ Support for PHP 4 has been <b style="color: red">discontinued</b> since 2007-12-31. Please consider
+ upgrading to PHP 5.2. The release below is the last PHP 4 release.
 </p>
 
 <h2>Complete Source Code</h2>

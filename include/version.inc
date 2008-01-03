@@ -33,15 +33,15 @@ $PHP_5_RC      = false;
 $PHP_5_RC_DATE = "01 November 2007";
 
 /* PHP 4 Release */
-$PHP_4_VERSION = "4.4.7";
-$PHP_4_DATE    = "03 May 2007";
+$PHP_4_VERSION = "4.4.8";
+$PHP_4_DATE    = "03 January 2008";
 $PHP_4_MD5     = array(
-                       "tar.bz2"   => "3f21b44d37a57ca3876d3aea713c700d",
-                       "tar.gz"    => "2669d2049822ac14abb263703d24f643",
-                       "zip"       => "e774e79530d610c58c5f2da433d14e0f",
+                       "tar.bz2"   => "ed31e77414e0331e787487b53732dbca",
+                       "tar.gz"    => "8ad5d1ca793d55b24cd82e591248c04e",
+//                     "zip"       => "e774e79530d610c58c5f2da433d14e0f",
 );
 
-$PHP_4_RC      = "4.4.8RC1"; // false
+$PHP_4_RC      = false;
 $PHP_4_RC_DATE = "20 December 2007";
 
 $RELEASES = array(
@@ -116,7 +116,7 @@ $RELEASES = array(
                     "date"     => $PHP_4_DATE,
                 ),
             ),
-            "windows" => array( /* Prefix the key with dot if they don't exists yet */
+            ".windows" => array( /* Prefix the key with dot if they don't exists yet */
                 array(
                     "filename" => "php-$PHP_4_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_4_VERSION zip package",

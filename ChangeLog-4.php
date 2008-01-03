@@ -11,6 +11,27 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.8"></a>
+<h3>Version 4.4.8</h3>
+<b>03-Jan-2008</b>
+<ul>
+<li>Improved fix for MOPB-02-2007.</li>
+<li>Fixed an integer overflow inside chunk_split(). Identified by Gerhard Wagner.</li>
+<li>Fixed integer overlow in str[c]spn().</li>
+<li>Fixed regression in glob when open_basedir is on introduced by #41655 fix.</li>
+<li>Fixed money_format() not to accept multiple %i or %n tokens.</li>
+<li>Addded "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007.</li>
+<li>Fixed INFILE LOCAL option handling with MySQL - now not allowed when open_basedir or safe_mode is active.</li>
+<li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378).</li>
+<li><?php bugfix(43010); ?> (Fixed regression in imagearc with two equivelent angles).</li>
+<li><?php bugfix(41765); ?> (Recode crashes/does not work on amd64).</li>
+<li><?php bugfix(41630); ?> (segfault when an invalid color index is present in the image data).</li>
+<li><?php bugfix(41628); ?> (PHP settings leak between Virtual Hosts in Apache 1.3).</li>
+<li><?php bugfix(38798); ?> (OpenSSL init corrected in php5 but not in php4).</li>
+</ul>
+
+<hr/>
+
 <a name="4.4.7"></a>
 <h3>Version 4.4.7</h3>
 <b>03-May-2007</b>
