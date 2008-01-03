@@ -127,6 +127,7 @@ $SIDEBAR_DATA = '
    <option value="php-4.4.4.tar.gz">4.4.4</option>
    <option value="php-4.4.5.tar.gz">4.4.5</option>
    <option value="php-4.4.6.tar.gz">4.4.6</option>
+   <option value="php-4.4.7.tar.gz">4.4.7</option>
    <option value="">--------</option>
    <option value="php-5.0.0.tar.gz">5.0.0</option>
    <option value="php-5.0.1.tar.gz">5.0.1</option>
@@ -146,6 +147,7 @@ $SIDEBAR_DATA = '
    <option value="php-5.2.2.tar.gz">5.2.2</option>
    <option value="php-5.2.3.tar.gz">5.2.3</option>
    <option value="php-5.2.4.tar.gz">5.2.4</option>
+   <option value="php-5.2.5.tar.gz">5.2.5</option>
   </select>
  </p>
 </form>
@@ -223,7 +225,7 @@ foreach($OLDRELEASES as $major => $a) {
 	if ($major != $latest) {
 		echo "\n<hr />\n";
 		if ($major == 4) {
-			echo '<p>Support for PHP 4 will be <b style="color: red;">discontinued</b> at 2007-12-31. Please consider upgrading to PHP 5.2.</p>'."\n";
+			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.2.</p>'."\n";
 		}
 	}
 
