@@ -825,6 +825,7 @@ div.example, div.informalexample, div.classsynopsis div.ooclass {
 	background-color: #fff;
 	border: 1px solid #000;
 	text-align: left;
+	color: #000;
 }
 
 div.classsynopsis div.ooclass,
