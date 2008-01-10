@@ -16,7 +16,7 @@
     <published>2008-01-10T16:23:20+01:00</published>
     <updated>2008-01-10T16:23:20+01:00</updated>
     <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-02-29</php:finalTeaserDate>
-    <category term="cfp" label="Call for Papers"/>
+    <category term="conferences" label="Conference announcement"/>
     <link href="/conferences/index.php#2008-01-10-1" rel="alternate" type="text/html"/>
     <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
     <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
