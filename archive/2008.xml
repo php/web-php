@@ -3,13 +3,34 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-01-03T13:57:13+01:00</updated>
+  <updated>2008-01-10T16:23:01+01:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry>
+    <title>phplondon conference 2008</title>
+    <id>http://php.net/archive/2008.php#2008-01-10-1</id>
+    <published>2008-01-10T16:23:20+01:00</published>
+    <updated>2008-01-10T16:23:20+01:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-02-29</php:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="/conferences/index.php#2008-01-10-1" rel="alternate" type="text/html"/>
+    <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
+    <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>February 29th (Leap Year Day). phplondon.org  announce their third
+            annual <a href="http://www.phpconference.co.uk" alt="phplondon.org community conference">community conference</a>
+            to be held at Inmarsat, Old Street, London.</p>
+        <p>This year the conference will run two tracks and include speakers such as Derick Rethans, Wez Furlong, Scott MacVicar and Zoe Slattery.</p>
+        <p>We will also be holding an extended presentation and discussion on frameworks for PHP.</p>
+        <p>Visit our <a href=" http://www.phpconference.co.uk" alt="phplondon.org community conference">conference site</a> to register. Early bird discount is available until 1st February 2008.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>PHP 4.4.8 Released</title>
     <id>http://php.net/archive/2008.php#2008-01-03-1</id>
@@ -61,7 +82,10 @@ releases to address security issues could be made until 2008-08-08.
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>2008 DC PHP Conference June 2nd - 4th</p>
-        <ul> <li>Submission Deadline: March 15, 2008</li> <li>Notification by: April 2, 2008 </li></ul>
+        <ul>
+          <li>Submission Deadline: March 15, 2008</li>
+          <li>Notification by: April 2, 2008 </li>
+        </ul>
         <p> Join us at the <a href="http://dcphpconference.com/" title="DC PHP Conference 2008">3rd Annual DC PHP Conference</a>. The event will take place at George Washington University's Cafritz Conference Center in the heart of Washington DC. The three day conference begins June 2nd and 3rd with general sessions, and ends June 4th with tutorials.</p>
         <p> For more details go to <a href="http://www.dcphpconference.com/node/346" title="Call for Papers to DC conference"> http://www.dcphpconference.com/node/346</a></p>
       </div>
