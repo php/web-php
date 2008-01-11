@@ -161,6 +161,10 @@ if (isset($_POST['maillist'])) {
   what you got instead.
  </li>
 </ul>
+<p>
+ And make sure you have read our
+ <a href="/reST/php-src/README.MAILINGLIST_RULES">Mailinglist Rules</a>.
+</p>
 <?php
 
   // array of lists (list, name, short desc., moderated, archive, digest, newsgroup)
