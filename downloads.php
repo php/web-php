@@ -48,10 +48,8 @@ $SIDEBAR_DATA = '
 <p>
  <a href="http://pear.php.net/packages.php">PEAR
  packages</a>, <a href="http://pecl.php.net/packages.php">PECL hosted
- PHP extensions</a>, <a href="http://gtk.php.net/download.php">PHP-GTK
- source and binaries</a>, and
- <a href="http://smarty.php.net/download.php">Smarty
- sources</a> are available on their own pages.
+ PHP extensions</a> and <a href="http://gtk.php.net/download.php">PHP-GTK
+ source and binaries</a> are available on their own pages.
 </p>
 
 <p>

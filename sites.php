@@ -181,16 +181,6 @@ site_header("A Tourist's Guide");
  and the latest news from the project.
 </p>
 
-<h2><a href="http://smarty.php.net/">smarty.php.net</a>: Smarty Template Engine</h2>
-
-<p>
- Smarty is another PHP spin off: Smarty provides your basic variable
- substitution and dynamic block functionality, and also takes a step further to
- be a "smart" template engine, adding features such as configuration files,
- template functions, variable modifiers, and making all of this functionality as
- easy as possible to use for both programmers and template designers.
-</p>
-
 <h2><a href="http://snaps.php.net/">snaps.php.net</a>: Daily PHP Snapshots</h2>
 
 <p>

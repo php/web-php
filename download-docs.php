@@ -9,7 +9,7 @@ $SIDEBAR_DATA='
  You can read the
  <a href="/docs.php">documentation online</a>
  in various languages. The Documentation HOWTO,
- PEAR, Smarty and archive manuals are also available
+ and archive manuals are also available
  from our <a href="/docs.php">documentation page</a>.
 </p>
 

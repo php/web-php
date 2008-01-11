@@ -125,10 +125,6 @@ foreach ($man_languages as $langnum => $langcode) {
   packages</a> can be found on a separate server.
  </li>
  <li>
-  <a href="http://smarty.php.net/docs.php">Smarty template engine documentation</a>
-  is hosted at <code>smarty.php.net</code>.
- </li>
- <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
   2.0 Manual</a> on our site, which we only host for historical purposes.
  </li>
