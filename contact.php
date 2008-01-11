@@ -24,6 +24,10 @@ site_header("Contact");
  the problem until it is fixed.
 </p>
 <p>
+ For security related issues (in PHP or our websites) please contact
+ <a href="mailto:security@php.net">security@php.net</a>.
+</p>
+<p>
  If you have problems setting up PHP or using some functionality,
  or especially a program written in PHP, please ask your question on a
  <a href="/support.php">support channel</a>, since the webmasters will
