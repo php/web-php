@@ -15,20 +15,40 @@ $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
 
 $SIDEBAR_DATA = '<h3>File list</h3>
-<ul class="simple">';
+<ul class="simple" id="reSTlist">';
 
 $restfiles = glob($rest_dir. "/*");
 
-$list = "";
+$list = $lastdir = "";
 foreach($restfiles as $filename) {
 	$link = basename($filename, ".rest");
-	$text = substr($link, strpos($link, "_")+1); // Remove the fs dirname
-	$link[strpos($link, "_")] = "/"; // Replace the first - with a directory seperator
-	$list .= '<li><a href="/reST/' .$link.'">'.$text.'</a></li>';
+
+	// Separate the dirname from the filename
+	list($dir, $filename) = explode("_", $link, 2);
+
+	// Create a tree-like-structure
+	if ($dir != $lastdir) {
+		if ($lastdir) {
+			$list .= "</ul>\n";
+		}
+		$list .= "<li><h4>$dir</h4><li>\n<ul class=\"simple\">\n";
+		$lastdir = $dir;
+	}
+
+	// Replace the first - with a directory seperator
+	$link[strpos($link, "_")] = "/";
+
+	// Only use the "last part" of the filename (i.e. README.FOOBAR => FOOBAR)
+	if (strpos($filename, ".") !== false) {
+		$filename = substr($filename, strpos($filename, ".")+1);
+	}
+
+	$filename = str_replace(array("-", "_"), " ", $filename);
+	$list .= '<li><a href="/reST/' .$link.'">'.$filename.'</a></li>'."\n";
 }
 
 if ($list) {
-	$SIDEBAR_DATA .= $list;
+	$SIDEBAR_DATA .= "$list</ul>";
 } else {
 	$SIDEBAR_DATA .= "<li>No files available</li>";
 }
