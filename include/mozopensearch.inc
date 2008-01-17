@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?php echo '<?xml version="1.0"?>'."\n"; ?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
  <ShortName>PHP.net</ShortName>
  <Description>PHP.net - Search</Description>
