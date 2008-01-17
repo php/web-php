@@ -74,9 +74,21 @@ function status_header($num)
         case 404: $status = "Not Found"; break;
         default: return FALSE;
     }
+
+    // Figure out HTTP protocol version - use 1.1 answer for 1.1 request,
+    // answer with HTTP/1.0 for any other (ancient or futuristic) user
+    switch (strtoupper($_SERVER['SERVER_PROTOCOL'])) {
+        case 'HTTP/1.0':
+            @header("HTTP/1.0 $num $status");
+            break;
+
+        case 'HTTP/1.1':
+        default:
+            @header("HTTP/1.1 $num $status");
+            break;
+    }
     
     // BC code for PHP < 4.3.0
-    @header("HTTP/1.1 $num $status");
     @header("Status: $num $status", TRUE, $num);
     
     return TRUE;
