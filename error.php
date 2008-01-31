@@ -293,6 +293,7 @@ $uri_aliases = array (
     "class"        => "language.oop5.basic",
     "new"          => "language.oop5.basic",
     "extends"      => "language.oop5.basic",
+    "clone"        => "language.oop5.cloning",
     "construct"    => "language.oop5.decon",
     "destruct"     => "language.oop5.decon",
     "public"       => "language.oop5.visibility",
