@@ -956,6 +956,12 @@ blockquote {
 	padding: 0.5em 1em;
 }
 
+div.footnote sup {
+	float: left;
+}
+div.footnote p {
+	text-indent: 10px;
+}
 /*
  * vim: noet
  */
