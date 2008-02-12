@@ -116,13 +116,12 @@ $RELEASES = array(
                     "date"     => $PHP_4_DATE,
                 ),
             ),
-            ".windows" => array( /* Prefix the key with dot if they don't exists yet */
+            "windows" => array( /* Prefix the key with dot if they don't exists yet */
                 array(
                     "filename" => "php-$PHP_4_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_4_VERSION zip package",
-                    "md5"      => "065e867fa3cfa75cba8271dde9b10cee", //$PHP_4_MD5["zip"],
-                    "date"     => "04 May 2007", //$PHP_4_DATE,
-                    "note"     => "This package was updated due to faulty Apache2 module shipped with the orginal.<br /> (CGI binary plus server API versions for Apache, Apache2 (experimental), ISAPI, NSAPI, Servlet and Pi3Web. MySQL support built-in, many extensions included, packaged as zip)<br />",
+                    "md5"      => "09ffff4b1a54bbadb8fee6acd85a2c1f", //$PHP_4_MD5["zip"],
+                    "date"     => "12 Feb 2008", //$PHP_4_DATE,
                 ),
             ),
         ),
