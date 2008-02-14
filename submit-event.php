@@ -56,14 +56,15 @@ if ($process) {
     }
 
     $valid_schemes = array('http','https','ftp');
-    $pu = parse_url($_POST['url']);
 
     $_POST['url'] = trim($_POST['url']);
-    $pu['host'] = trim($pu['host']);
+    $pu = parse_url($_POST['url']);
+    $pu['host'] = isset($pu['host']) ? trim($pu['host']) : '';
+
     if (!$_POST['url']) {
         $errors[] = "You must supply a URL with more information about the event.";
     }
-    elseif (!in_array($pu['scheme'], $valid_schemes) || empty($pu['host'])) {
+    elseif (empty($pu['host']) || !in_array($pu['scheme'], $valid_schemes)) {
         $errors[] = "The URL you supplied was invalid.";
     }
 
@@ -109,7 +110,7 @@ if ($process) {
         if ($result) {
             $errors[] = "There was an error processing your submission: $result";
         }
-        if (!$errors) {
+        if (count($errors) === 0) {
             echo "<p>\n Thank you for your submission! You should hear back soon\n" .
                  " as to whether your event has been accepted for inclusion in\n" .
                  " our calendar.\n</p>";
@@ -118,7 +119,7 @@ if ($process) {
         }
     }
 
-    if (!$errors) {
+    if (count($errors) === 0) {
         echo "<p>\n The following is a preview of your event submission.\n" .
              " Please double-check it to make sure all of the information is correct.\n</p>";
     }
@@ -132,7 +133,7 @@ else {
 }
 
 // Display errors if found
-if ($errors) { display_errors($errors); }
+if (count($errors)) { display_errors($errors); }
 
 // Generate days and months arrays for form
 for ($i = 1; $i <= 7; $i++) {
@@ -154,7 +155,7 @@ $re = array(
 );
 
 // If we have data, display preview
-if ($process) {
+if ($process && count($errors) === 0) {
     echo "<p><strong>Preview:</strong></p>\n";
     display_event($_POST);
     echo "<p><strong>Change:</strong></p>\n";
