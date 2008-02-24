@@ -174,10 +174,10 @@ function language_choose_code()
 // Add a language to the possible languages' list
 function language_add($langcode, &$langs)
 {
-    global $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
+    global $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $MQ;
 
     // Make language code lowercase, html encode special chars and remove slashes
-    $langcode = strtolower(htmlspecialchars(get_magic_quotes_gpc() ? stripslashes($langcode) : $langcode));
+    $langcode = strtolower(htmlspecialchars($MQ ? stripslashes($langcode) : $langcode));
 
     // The Brazilian Portuguese code needs special attention
     if ($langcode == 'pt_br') { $langcode = 'pt_BR'; }
