@@ -511,6 +511,10 @@ function display_errors($errors)
 function display_event($event, $include_date = 1)
 {
     global $COUNTRIES;
+    // Current month (int)($_GET['cm'] ?: 0)
+    global $cm;
+    // Current year (int)($_GET['cy'] ?: 0)
+    global $cy;
     
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
@@ -531,7 +535,7 @@ function display_event($event, $include_date = 1)
     $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
     $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
 ?>
-<table border="0" cellspacing="0" cellpadding="3" width="100%">
+<table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
  <tr bgcolor="#dddddd"><td>
 <?php
     
@@ -541,9 +545,9 @@ function display_event($event, $include_date = 1)
     }
     
     // Print link in case we have one
-    if ($event['url']) { echo '<a href="', htmlentities($event['url']),'">'; }
+    if ($event['url']) { echo '<a href="', htmlentities($event['url']),'" class="url">'; }
     // Print event description
-    echo "<b>", stripslashes(htmlentities($event['sdesc'])), "</b>";
+    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'])), "</b>";
     // End link
     if ($event['url']) { echo "</a>"; }
   
@@ -551,12 +555,19 @@ function display_event($event, $include_date = 1)
     switch ($event['type']) {
         case 2:
         case 'multi':
-            echo " (", date("Y-m-d",$sday), " to ", date("Y-m-d",$eday), ")";
+            $dtend = date("Y-m-d", strtotime("+1 day", $eday));
+            echo " (<abbr class='dtstart'>", date("Y-m-d",$sday), "</abbr> to <abbr class='dtend' title='$dtend'>", date("Y-m-d",$eday), "</abbr>)";
             break;
         case 3:
         case 'recur':
-            echo " (Every ", $re[$event['recur']], " ",
-                 $days[$event['recur_day']], " of the month)";
+            $days = $re[$event['recur']]. " " .$days[$event['recur_day']];
+            if (!$cm || $cy) {
+                $cm = date("m");
+                $cy = date("Y");
+            }
+            $month = date("M", mktime(0, 0, 0, $cm, 1, $cy));
+            $dtstart = date("Y-m-d", strtotime($days . ' 0st' .$month. ' ' .$cy));
+            echo ' (Every <abbr class="dtstart" title="'.$dtstart.'">', $days, "</abbr> of the month)";
             break;
     }
    
@@ -567,10 +578,10 @@ function display_event($event, $include_date = 1)
 	}
 	
     // Print out country information
-    echo ' (' , $COUNTRIES[$event['country']] , ')';
+    echo ' (<span class="location">' , $COUNTRIES[$event['country']] , '</span>)';
 ?>
  </td></tr>
- <tr bgcolor="#eeeeee"><td>
+ <tr bgcolor="#eeeeee" class="description"><td>
 <?php
 
     // Print long description
