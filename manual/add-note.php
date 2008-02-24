@@ -1,7 +1,7 @@
 <?php
 // $Id$
 
-$ip_spam_lookup_url = 'http://www.dnsstuff.com/tools/ip4r.ch?ip=';
+$ip_spam_lookup_url = 'http://www.dnsbl.info/lookup.asp?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
