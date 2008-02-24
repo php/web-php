@@ -248,8 +248,16 @@ foreach ($mirror_sites as $murl => $mdata) {
         $murl == "http://www.php.net/") { continue; }
     
     // Compute user friendly mirror name
-    $mname = ($murl == "NONE" ? "Automatic selection (default)" :
-                                $COUNTRIES[$mdata[0]] . " (" .substr($murl, strpos($murl, '//') + 2, -1)). ")";
+    if ($murl == "NONE") {
+        $mname = "Automatic selection (default)";
+    } else {
+        $tmpurl = " (" .substr($murl, strpos($murl, '//') + 2, -1). ")";
+        if (isset($COUNTRIES[$mdata[0]])) {
+            $mname = $COUNTRIES[$mdata[0]] . $tmpurl;
+        } else {
+            $mname = "Unknown" . $tmpurl;
+        }
+    }
     
     // Print out mirror option with selection if needed
     printf (
