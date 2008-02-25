@@ -623,7 +623,7 @@ function news_archive_sidebar()
 }
 
 // Print news
-function print_news($news, $year = false) {
+function print_news($news, $year = false, $event = false) {
     foreach($news as $item) {
         if ($year && $year != date("Y", strtotime($item["date"]))) {
             continue;
@@ -632,10 +632,14 @@ function print_news($news, $year = false) {
         if($item["image"]) {
             $image = news_image($item["image"]["link"], $item["image"]["image"], $item["image"]["title"]);
         }
+        $vevent = "";
+        if ($event) {
+            $vevent = " vevent";
+        }
         echo <<< EOT
-<div class="newsItem">
+<div class="newsItem$vevent">
     $image
-    <a name="{$item["fragment"]}" id="{$item["fragment"]}"><h1>{$item["title"]}</h1></a>
+    <a name="{$item["fragment"]}" id="{$item["fragment"]}"><h1 class="summary">{$item["title"]}</h1></a>
     {$item["content"]}
 </div>
 

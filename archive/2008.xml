@@ -21,8 +21,8 @@
     <php:finalTeaserDate>2008-05-24</php:finalTeaserDate>
     <php:newsImage link="http://tek.phparch.com/" title="php|tek 2008: Chicago">phptek_2008.png</php:newsImage>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-<a href="http://tek.phparch.com/">php|tek 2008: Chicago</a>
+      <div xmlns="http://www.w3.org/1999/xhtml" class="description">
+<a href="http://tek.phparch.com/" class="url">php|tek 2008: Chicago</a>
 <p>
 The publishers of <a href="http://www.phparch.com/">php|architect Magazine</a> are proud to announce the php|tek 2008 conference in Chicago, Illinois, USA.
 </p>
@@ -46,13 +46,14 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
     <php:finalTeaserDate>2008-03-16</php:finalTeaserDate>
     <php:newsImage link="http://conf.phpquebec.com/en/conf2008/" title="PHP Québec conference 2008">conference_php_quebec.gif</php:newsImage>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml" class="description">
 <a href="http://conf.phpquebec.com/">2008 PHP Quebec Conference &amp; Job Fair</a>
 <p>
 The PHP Quebec team is pleased to present the sixth edition of the <a 
-href="http://conf.phpquebec.com">PHP 
+href="http://conf.phpquebec.com" class="url">PHP 
 Quebec Conference</a>. The Conference will take place in Montreal, Canada, 
-on March 12 through 14.
+on <abbr class="dtstart" title="2008-03-12">March 12</abbr> through
+<abbr class="dtend" title="2008-03-15">14</abbr>.
 </p>
 <p>
 Join us for the PHPLabs, 2 days of technical talks, the Open Source Job 
@@ -77,9 +78,9 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
     <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>February 29th (Leap Year Day). phplondon.org  announce their third
-            annual <a href="http://www.phpconference.co.uk" alt="phplondon.org community conference">community conference</a>
+      <div xmlns="http://www.w3.org/1999/xhtml" class="description">
+		  <p><abbr class="dtstart" title="2008-02-29">February 29th</abbr> (Leap Year Day). phplondon.org  announce their third
+            annual <a href="http://www.phpconference.co.uk" alt="phplondon.org community conference" class="url">community conference</a>
             to be held at Inmarsat, Old Street, London.</p>
         <p>This year the conference will run two tracks and include speakers such as Derick Rethans, Wez Furlong, Scott MacVicar and Zoe Slattery.</p>
         <p>We will also be holding an extended presentation and discussion on frameworks for PHP.</p>
