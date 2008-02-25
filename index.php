@@ -241,10 +241,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
     echo "   </table>\n  </div>\n\n<br />\n";
 }
 
-// DO NOT REMOVE THIS COMMENT (the RSS parser is dependant on it)
-?>
 
-<?php
 /* Where the h*ll did all the news go?
  * See archives/2007.xml
  */
