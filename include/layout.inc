@@ -164,7 +164,7 @@ function site_header($title = '', $config = array())
 <body{$onload}>
 
 <div id="headnav">
- <a href="/"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
+ <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
  alt="PHP" width="120" height="67" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
@@ -606,7 +606,7 @@ function news_archive_sidebar()
 <h3>Latest news</h3>
 
 <p>
- For the latest news, <a href="/index.php">check the homepage</a>,
+ For the latest news, <a href="/index.php" rel="home">check the homepage</a>,
  or <a href="/feed.atom">our Atom feed</a>.
 </p>
 
