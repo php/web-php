@@ -291,7 +291,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Optimized digest generation in md5() and sha1() functions. (Ilia)</li>
 <li>Upgraded bundled SQLite 3 to version 3.3.17. (Ilia)
 
-<li>Addded "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007. (Stas)</li>
+<li>Added "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007. (Stas)</li>
 <li>Added a 4th parameter flag to htmlspecialchars() and htmlentities() that makes the function not encode existing html entities. (Ilia)</li>
 <li>Added PDO::FETCH_KEY_PAIR mode that will fetch a 2 column result set into an associated array. (Ilia)</li>
 <li>Added CURLOPT_TIMEOUT_MS and CURLOPT_CONNECTTIMEOUT_MS cURL constants. (Sara)</li>
