@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-02-19T11:45:00-05:00</updated>
+  <updated>2008-02-28T17:50:00-05:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -16,7 +16,7 @@
     <link href="http://tek.phparch.com/" rel="via" type="text/html"/>
     <id>http://php.net/archive/2008.php#2008-02-19-1</id>
     <published>2008-02-19T11:45:00-05:00</published>
-    <updated>2008-02-19T11:45:00-05:00</updated>
+    <updated>2008-02-28T17:50:00-05:00</updated>
     <category term="conferences" label="Conference announcement"/>
     <php:finalTeaserDate>2008-05-24</php:finalTeaserDate>
     <php:newsImage link="http://tek.phparch.com/" title="php|tek 2008: Chicago">phptek_2008.png</php:newsImage>
@@ -27,7 +27,7 @@
 The publishers of <a href="http://www.phparch.com/">php|architect Magazine</a> are proud to announce the php|tek 2008 conference in Chicago, Illinois, USA.
 </p>
 <p>
-The PHP Community meets in May for one of North America's premier PHP conferences of 2008. Join us to hear <a href="http://tek.phparch.com/c/schedule">top speakers</a> such as Derick Rethans (eZ Systems), Lucas Nelan (Facebook), Chris Shiflett (OmniTI), Eli White (Digg) and yes, even Terry Chay (Tagged).
+The PHP Community meets <abbr class="dtstart" title="2008-05-20">May 20</abbr>-<abbr class="dtend" title="2008-05-24">23</abbr> for one of North America's premier PHP conferences of 2008. Join us to hear <a href="http://tek.phparch.com/c/schedule">top speakers</a> such as Derick Rethans (eZ Systems), Lucas Nelan (Facebook), Chris Shiflett (OmniTI), Eli White (Digg) and yes, even Terry Chay (Tagged).
 </p>
 <p>
 For the past two years, php|architect's spring conference has sold out <em>weeks</em> before the start date, so if you're interested in attending, don't delay, and be sure to <a href="http://tek.phparch.com/c/p/signup">sign up</a> ASAP!
