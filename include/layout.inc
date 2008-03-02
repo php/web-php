@@ -60,7 +60,7 @@ function commonHeader($title) { site_header($title); }
 
 function site_header($title = '', $config = array())
 {
-    global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS;
+    global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS, $PGI;
     
     // Default to empty array if improper parameter passed
     if (!is_array($config)) { $config = array(); }
@@ -141,6 +141,19 @@ function site_header($title = '', $config = array())
             $classname = "default";
         }
     }
+
+    // Right-to-left support
+    $rtl = "";
+    if (isset($PGI, $PGI['head'], $PGI['head'][1])) {
+        switch (language_convert($PGI['head'][1])) {
+            case "he":
+            case "ar":
+                $rtl = ' style="direction: rtl"';
+                break;
+        }
+    }
+
+ 
 
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
@@ -229,7 +242,7 @@ END_HEADER;
     }
 
     // Start main page content
-    echo "\n <div id=\"content\" class=\"$classname\">\n";
+    echo "\n <div id=\"content\" class=\"$classname\"{$rtl}>\n";
 }
 
 // Stats pages still need this
