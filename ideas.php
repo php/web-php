@@ -5,7 +5,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("SoC Ideas");
 ?>
 
-<h1>Ideas for Google Summer of Code Projects</h1>
+<h1>Ideas for Google Summer of Code Projects (for 2007)</h1>
 
 <p>Here you'll find a couple of ideas for Google Summer of Code projects. This list is not exhaustive and you may
 propose any &quot;crazy&quot; idea you may have though.</p>
