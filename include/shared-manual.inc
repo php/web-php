@@ -61,13 +61,17 @@ function manual_header()
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
     manual_sidebar();
-    $link = array(
-        "contents" => $PGI["home"][0],
-        "index"    => $PGI["up"][0],
-        "prev"     => $PGI["prev"][0],
-        "next"     => $PGI["next"][0],
-    );
-    site_header("$title - Manual", array("link" => $link));
+    site_header("$title - Manual", array(
+		"link" => array(
+			"contents"         => $PGI["home"][0],
+			"index"            => $PGI["up"][0],
+			"prev"             => $PGI["prev"][0],
+			"next"             => $PGI["next"][0],
+			"schema.dc"        => "http://purl.org/dc/elements/1.1/",
+			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
+		),
+		"profile" => "http://purl.org/NET/erdf/profile",
+	));
     manual_navbar();
 }
 
