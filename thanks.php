@@ -23,11 +23,6 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.ev1servers.net/">EV1Servers</a> provides
- the server and bandwidth for www.php.net.
-</p>
-
-<p>
  <a href="http://ez.no/">eZ systems</a> together with
  <a href="http://www.hit.no">HiT</a> provide a server and bandwidth for various
  php.net services.
@@ -46,7 +41,7 @@ site_header("Thanks");
 
 <p>
  <a href="http://www.servercentral.net/">Server Central</a> provides 
- a powerful box and connection which runs various services and sites for php.net
+ a box and connection which runs various services and sites for php.net
 </p>
 
 <p>
@@ -60,8 +55,8 @@ site_header("Thanks");
 </p>
 
 <p>
- <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and amazing
- hardware for the CVS server (cvs.php.net).
+ <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and 
+ hardware for www.php.net and cvs.php.net.
 </p>
 
 <p>
