@@ -375,9 +375,13 @@ function print_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
 
 // Shortcut to usual news image printing (right floating
 // image from the news dir with an alt and an URL) 
-function news_image($URL, $image, $alt)
+function news_image($URL, $image, $alt, $print = true)
 {
-    echo "<a href=\"$URL\">" . make_image("news/$image", $alt, "right") . "</a>";
+    $str = "<a href=\"$URL\">" . make_image("news/$image", $alt, "right") . "</a>";
+    if ($print) {
+        echo $str;
+    }
+    return $str;
 }
 
 // Return HTML code for a submit button image
@@ -646,24 +650,60 @@ function news_archive_sidebar()
 }
 
 // Print news
-function print_news($news, $year = false, $event = false) {
+function print_news($news, $dog, $max = 5) {
+    $count = 0;
     foreach($news as $item) {
-        if ($year && $year != date("Y", strtotime($item["date"]))) {
+        $vevent = "";
+        $ok = false;
+
+        // Only print entries in the provided s/dog/cat/ egory
+        // If its a conference, use the hCalendar container
+        foreach($item["category"] as $category) {
+            if (in_array($category["term"], (array)$dog)) {
+                $ok = true;
+                ++$count;
+            }
+            if ($category["term"] === "conferences") {
+                $vevent = " vevent";
+            }
+        }
+        if ($count > $max) {
+            break;
+        }
+        if ($ok === false) {
             continue;
         }
+
         $image = "";
-        if($item["image"]) {
-            $image = news_image($item["image"]["link"], $item["image"]["image"], $item["image"]["title"]);
+        if(isset($item["newsImage"])) {
+            $image = news_image($item["newsImage"]["link"], $item["newsImage"]["content"], $item["newsImage"]["title"], false);
         }
-        $vevent = "";
-        if ($event) {
-            $vevent = " vevent";
+
+        //$id = parse_url($item["id"], PHP_URL_FRAGMENT); 5.1.2
+        $id = parse_url($item["id"]);
+        $id = $id["fragment"];
+
+        // Find the permlink
+        foreach($item["link"] as $link) {
+            if ($link["rel"] === "via") {
+                $permlink = $link["href"];
+                break;
+            }
         }
+        if (!isset($permlink)) {
+            $permlink = "#" .$id;
+        }
+
+        $newsdate = date("d-M-Y", strtotime($item["updated"]));
+
         echo <<< EOT
-<div class="newsItem$vevent">
-    $image
-    <a name="{$item["fragment"]}" id="{$item["fragment"]}"><h1 class="summary">{$item["title"]}</h1></a>
-    {$item["content"]}
+<div class="newsItem hentry{$vevent}">
+    <div class="newsImage">{$image}</div>
+    <h1 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h1>
+    <div class="entry-content description">
+        <abbr class="updated newsdate" title="{$item["updated"]}">[{$newsdate}]</abbr>
+        {$item["content"]}
+    </div>
 </div>
 
 <hr />
@@ -672,3 +712,4 @@ EOT;
     }
 }
 /* vim: set et ts=4 sw=4 ft=php: : */
+

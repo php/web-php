@@ -245,7 +245,7 @@ if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
 /* Where the h*ll did all the news go?
  * See archives/2007.xml
  */
-print_news($NEWS_ENTRIES["frontpage"]);
+print_news($NEWS_ENTRIES, "frontpage");
 ?>
 
 <p class="center"><a href="/archive/index.php">News Archive</a></p>

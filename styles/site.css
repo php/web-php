@@ -162,7 +162,7 @@ hr {
 }
 div.newsItem .newsdate {
 	float:left;
-	padding-right: 10px;
+	margin-right: 10px;
 }
 
 div.indent {

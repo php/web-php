@@ -16,13 +16,8 @@ site_header("News Archive - 2008");
 <hr />
 
 <?php
-function date_sort($a, $b) {
-	return $a["date"] == $b["date"] ? 0 : (strtotime($a["date"]) > strtotime($b["date"]) ? -1 : 1);
-}
 
-$news = array_merge($NEWS_ENTRIES["frontpage"], $NEWS_ENTRIES["conferences"]);
-uasort($news, "date_sort");
-print_news($news, 2008);
+print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage"), 50);
 /* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
 site_footer();
 
