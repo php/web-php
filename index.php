@@ -72,7 +72,6 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
  <li><a href="http://www.directi.com/">Directi</a></li>
  <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
- <li><a href="http://www.ev1servers.net/">EV1Servers</a></li>
  <li><a href="http://www.servercentral.net/">Server Central</a></li>
  <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
  <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
@@ -81,6 +80,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
  <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
  <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
+ <li><a href="http://www.rackspace.com/">Rackspace</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">
