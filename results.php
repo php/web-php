@@ -4,6 +4,23 @@ $_SERVER['BASE_PAGE'] = 'results.php';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 #include $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 
+function exit_with_pretty_error($title, $header, $msg) {
+  if ($title) {
+    site_header($title);
+  }
+  echo '<h2>' .$header. '</h2>';
+  echo '<p>' .$msg. '</p>';
+  site_footer();
+  exit;
+}
+
+if (!isset($_GET['q']) || (!is_string($_GET['q']) || strlen($_GET['q']) < 3)) {
+  exit_with_pretty_error("Search results", "Empty query", "You need to specify what you want to search for, 3chars at least");
+}
+if (!isset($_GET['l']) || !is_string($_GET['l'])) {
+  $_GET['l'] = null;
+}
+
 // Prepare data for search
 if ($MQ) { 
 	$q = stripslashes($_GET['q']); //query
@@ -18,8 +35,8 @@ if(strlen($l)>2) $l = substr($l,0,2); // Just take the first 2 chars.  eg. pt_BR
 $q = urlencode($q);
 $l = urlencode($l);
 
-$s = (isset($_GET['start'])&&$_GET['start']!=0) ? (int)$_GET['start'] : 1;
-$profile = isset($_GET['p']) ? $_GET['p'] : 'all';
+$s = (isset($_GET['start']) && is_numeric($_GET['start']) && $_GET['start']!=0) ? (int)$_GET['start'] : 1;
+$profile = (isset($_GET['p']) && is_string($_GET['p'])) ? $_GET['p'] : 'all';
 $per_page = 10;
 
 $valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
@@ -59,15 +76,12 @@ $res = unserialize($data);
 site_header('Search results');
 
 if (!is_array($res)) {
-  echo '<h2>Internal error, please try later</h2>';
-  site_footer();
-  exit;  
+  exit_with_pretty_error(null, 'Internal error', 'Please try again later');
 }
 
 // No results for query
 if ($res['ResultSet']['totalResultsAvailable'] == 0) {
-  echo '<h2>No pages matched your query</h2>';
-  site_footer();
+  exit_with_pretty_error(null, 'No matches', 'No pages matched your query');
   exit;  
 }
 
