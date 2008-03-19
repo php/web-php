@@ -1,6 +1,7 @@
 #!/usr/local/bin/php
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
+$BASE = "http://www.php.net";
 
 function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to = null) {
 	if ($value) {
@@ -69,7 +70,7 @@ do {
 } while(1);
 
 
-$via = $archive = "/archive/$y.php#" .$id;
+$via = $archive = $BASE . "/archive/$y.php#id" .$id;
 
 ce($dom, "id", "http://php.net" .$archive, array(), $item);
 ce($dom, "published", date(DATE_ATOM), array(), $item);
@@ -85,7 +86,7 @@ foreach($cat as $keys) {
 }
 if ($conf) {
 	/* /conferences news item */
-	$href = "/conferences/index.php";
+	$href = $BASE . "/conferences/index.php";
 
 	do {
 		fwrite(STDOUT, "When does the conference start/cfp end? (strtotime() compatible syntax): ");
@@ -98,7 +99,7 @@ if ($conf) {
 	} while(1);
 	$item->appendChild($dom->createElementNs("http://php.net/ns/news", "finalTeaserDate", date("Y-m-d", $t)));
 } else {
-	$href = "/index.php";
+	$href = $BASE . "/index.php";
 }
 
 foreach($cat as $n) {
@@ -109,7 +110,7 @@ foreach($cat as $n) {
 	}
 }
 
-ce($dom, "link", null, array("href" => "$href#$id", "rel"  => "alternate", "type" => "text/html"), $item);
+ce($dom, "link", null, array("href" => "$href#id$id", "rel"  => "alternate", "type" => "text/html"), $item);
 
 fwrite(STDOUT, "Will a picture be accompanying this entry? ");
 $yn = fgets(STDIN);
