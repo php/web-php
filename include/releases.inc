@@ -78,7 +78,7 @@ $OLDRELEASES = array (
       array (
         'English' => '/releases/5_2_3.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.2' => 
     array (
@@ -117,7 +117,7 @@ $OLDRELEASES = array (
       array (
         'English' => '/releases/5_2_2.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.1' => 
     array (
@@ -156,7 +156,7 @@ $OLDRELEASES = array (
       array (
         'English' => '/releases/5_2_1.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.0' => 
     array (
@@ -195,7 +195,7 @@ $OLDRELEASES = array (
       array (
         'English' => '/releases/5_2_0.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.1.6' => 
     array (
@@ -719,7 +719,7 @@ $OLDRELEASES = array (
       array (
         'English' => '/releases/4_4_6.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '4.4.5' => 
     array (
@@ -1752,7 +1752,7 @@ $OLDRELEASES = array (
           'md5' => '29029ac1c3c2075dce38bbd804c42f72',
         ),
       ),
-      'museum' => false,
+      'museum' => true,
     ),
   ),
 );
