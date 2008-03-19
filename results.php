@@ -129,6 +129,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
                  'viewcvs'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'news'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+                 'doc'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
                 );
   echo <<<EOB
