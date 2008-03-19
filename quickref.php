@@ -31,7 +31,7 @@ if (!isset($notfound)) {
 
 // Print out the table of found (or all) functions. The HTML comments are
 // needed to support MyCroft search (Mozilla browser family and Sherlock for MacOSX)
-function quickref_table($functions)
+function quickref_table($functions, $sort = true)
 {
     global $LANG;
 
@@ -42,7 +42,9 @@ function quickref_table($functions)
     // Prepare the data
     $i = 0;
     $limit = ceil(count($functions) / COLUMNS);
-    asort($functions);
+    if ($sort) {
+        asort($functions);
+    }
     
     // Print out all rows
     foreach ($functions as $file => $name) {
@@ -82,6 +84,12 @@ while (($entry = readdir($dirh)) !== FALSE) {
         // Compute similarity of the name to the requested one
         if (function_exists('similar_text') && !empty($notfound)) {
             similar_text($funcname, $notfound, $p); 
+
+            // If $notfound is a substring of $funcname then overwrite the score 
+            // similar_text() gave it.
+            if ($p < 70 && ($pos = strpos($funcname, $notfound)) !== FALSE) {
+                $p = 90 - $pos;
+            }
             $temp[$entry] = $p;
         }
     }
@@ -133,7 +141,7 @@ site_header("Manual Quick Reference", $head_options);
  (really good matches are in bold). Perhaps you were looking for one of these:
 </p>
 
-<?php quickref_table($maybe); ?>
+<?php quickref_table($maybe, false); ?>
 
 <p>
  If you want to search the entire PHP website for the string
