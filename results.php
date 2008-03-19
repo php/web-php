@@ -6,7 +6,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 function exit_with_pretty_error($title, $header, $msg) {
   if ($title) {
-    site_header($title);
+    site_header($title, array("noindex"));
   }
   echo '<h2>' .$header. '</h2>';
   echo '<p>' .$msg. '</p>';
@@ -73,7 +73,7 @@ if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
 $res = unserialize($data);
 
 // HTTP status line is passed on, signifies an error
-site_header('Search results');
+site_header('Search results', array("noindex"));
 
 if (!is_array($res)) {
   exit_with_pretty_error(null, 'Internal error', 'Please try again later');
@@ -117,6 +117,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   $type = substr($displayurl,0,strpos($displayurl,'.'));
   if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
   if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
+  if($type=='smarty') continue;
   $display_title = str_replace('PHP:', '', $hit['Title']);
   $types = array('pear'=>'<img src="http://static.php.net/www.php.net/images/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pecl'=>'<img src="http://static.php.net/www.php.net/images/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
