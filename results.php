@@ -39,7 +39,7 @@ if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
     $data = curl_exec($ch);
     curl_close($ch);
-  } else if(function_exists('fsockopen') && $fd = fsockopen($srch_host, 80)) {
+  } else if(function_exists('fsockopen') && $fd = @fsockopen($srch_host, 80, $errno, $errstr, 15)) {
     $data = ''; $header = false;
     fputs($fd,"GET $srch_rqst HTTP/1.0\r\n");
     fputs($fd,"Host: $srch_host\r\n");
@@ -60,12 +60,14 @@ site_header('Search results');
 
 if (!is_array($res)) {
   echo '<h2>Internal error, please try later</h2>';
+  site_footer();
   exit;  
 }
 
 // No results for query
 if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   echo '<h2>No pages matched your query</h2>';
+  site_footer();
   exit;  
 }
 
