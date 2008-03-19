@@ -42,7 +42,7 @@ $per_page = 10;
 $valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
 $scope = in_array($profile, $valid_profiles) ? $profile : 'all';
 $srch_host = "www.php.net";
-$srch_rqst = "/ws.php?profile=$scope&q=$q&lang=$l&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
+$srch_rqst = "/ws.php?profile=$scope&q=$q&amp;lang=$l&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://".$srch_host.$srch_rqst;
 
 if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
