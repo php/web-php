@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news">
   <title>PHP.net news &amp; announcements</title>
-  <link href="/feed.atom" rel="self"/>
+  <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-03-19T13:53:49-04:00</updated>
+  <updated>2008-03-19T21:50:13+01:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -16,8 +16,8 @@
     <published>2008-03-19T13:53:55-04:00</published>
     <updated>2008-03-19T13:53:55-04:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
-    <link href="/index.php#2008-03-19-1" rel="alternate" type="text/html"/>
-    <link href="/archive/2008.php#2008-03-19-1" rel="via" type="text/html"/>
+    <link href="http://www.php.net/index.php#2008-03-19-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#2008-03-19-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Once again we are glad to announce that we have been accepted to be a Google Summer of Code project. See <a href="http://code.google.com/soc/2008/php/about.html">our program</a> for this year's GSoC.</p>
@@ -28,7 +28,7 @@
   </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>php|tek 2008: Chicago</title>
-    <link href="/conferences/index.php#2008-02-19-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/conferences/index.php#2008-02-19-1" rel="alternate" type="text/html"/>
     <link href="http://tek.phparch.com/" rel="via" type="text/html"/>
     <id>http://php.net/archive/2008.php#2008-02-19-1</id>
     <published>2008-02-19T11:45:00-05:00</published>
@@ -53,7 +53,7 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
   </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>PHP Québec conference 2008</title>
-    <link href="/conferences/index.php#2008-02-06-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/conferences/index.php#2008-02-06-1" rel="alternate" type="text/html"/>
     <link href="http://conf.phpquebec.com/en/conf2008/" rel="via" type="text/html"/>
     <id>http://php.net/archive/2008.php#2008-02-06-1</id>
     <published>2008-02-06T19:23:51+01:00</published>
@@ -89,7 +89,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     <updated>2008-01-10T16:23:20+01:00</updated>
     <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-02-29</php:finalTeaserDate>
     <category term="conferences" label="Conference announcement"/>
-    <link href="/conferences/index.php#2008-01-10-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/conferences/index.php#2008-01-10-1" rel="alternate" type="text/html"/>
     <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP London Conference 08">phplondon2008.png</php:newsImage>
     <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
     <content type="xhtml">
@@ -110,12 +110,12 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     <updated>2008-01-03T10:13:50+01:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
     <category term="releases" label="New PHP release"/>
-    <link href="/index.php#2008-01-03-1" rel="alternate" type="text/html"/>
-    <link href="/archive/2008.php#2008-01-03-1" rel="via" type="text/html"/>
+    <link href="http://www.php.net/index.php#2008-01-03-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#2008-01-03-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-The PHP development team would like to announce the immediate <a href="/downloads.php#v4">availability of
+The PHP development team would like to announce the immediate <a href="http://www.php.net/downloads.php#v4">availability of
 PHP 4.4.8</a>.  It continues to improve the security and the stability of the 4.4
 branch and all users are strongly encouraged to upgrade to it as soon as
 possible. This release wraps up all the outstanding patches for the PHP 4.4
@@ -136,7 +136,7 @@ releases to address security issues could be made until 2008-08-08.
           <li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378).</li>
         </ul>
         <p>
- For a full list of changes in PHP 4.4.8, see the <a href="/ChangeLog-4.php#4.4.8">ChangeLog</a>.
+ For a full list of changes in PHP 4.4.8, see the <a href="http://www.php.net/ChangeLog-4.php#4.4.8">ChangeLog</a>.
 </p>
       </div>
     </content>
@@ -148,7 +148,7 @@ releases to address security issues could be made until 2008-08-08.
     <updated>2008-01-03T13:57:46+01:00</updated>
     <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-03-15</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
-    <link href="/conferences/index.php#2008-01-03-2" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/conferences/index.php#2008-01-03-2" rel="alternate" type="text/html"/>
     <php:newsImage xmlns="http://php.net/ns/news" link="http://dcphpconference.com/" title="DC PHP Conference 2008">dcphpconference.2008.png</php:newsImage>
     <link href="http://dcphpconference.com/" rel="via" type="text/html"/>
     <content type="xhtml">
