@@ -3,13 +3,29 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-02-28T17:50:00-05:00</updated>
+  <updated>2008-03-19T13:53:49-04:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>webmaster@php.net</email>
   </author>
+  <entry>
+    <title>Google Summer of Code 2008</title>
+    <id>http://php.net/archive/2008.php#2008-03-19-1</id>
+    <published>2008-03-19T13:53:55-04:00</published>
+    <updated>2008-03-19T13:53:55-04:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <link href="/index.php#2008-03-19-1" rel="alternate" type="text/html"/>
+    <link href="/archive/2008.php#2008-03-19-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Once again we are glad to announce that we have been accepted to be aGoogle Summer of Code project. See our program <a href="http://code.google.com/soc/2008/php/about.html">here</a></p>
+        <p>We would like to take this opportunity to say thanks to Google Inc.for this privilege to participate once again, and would like to inviteeveryone to look at our list of ideas: <a href="http://wiki.php.net/gsoc/2008">http://wiki.php.net/gsoc/2008</a>.Students are of course more than welcome to come up with their own ideas fortheir proposals and we will consider each and every application that we will receive.</p>
+        <p>So once again, thanks to everyone who is involved in this magnificentjourney and we hope to see many of you great students and open sourcepassionate join us in our most enjoyable <a href="http://code.google.com/soc/2008">Google Summer of Code</a> projects.</p>
+      </div>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>php|tek 2008: Chicago</title>
     <link href="/conferences/index.php#2008-02-19-1" rel="alternate" type="text/html"/>
@@ -22,14 +38,14 @@
     <php:newsImage link="http://tek.phparch.com/" title="php|tek 2008: Chicago">phptek_2008.png</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-<a href="http://tek.phparch.com/" class="url">php|tek 2008: Chicago</a>
-<p>
+        <a href="http://tek.phparch.com/" class="url">php|tek 2008: Chicago</a>
+        <p>
 The publishers of <a href="http://www.phparch.com/">php|architect Magazine</a> are proud to announce the php|tek 2008 conference in Chicago, Illinois, USA.
 </p>
-<p>
+        <p>
 The PHP Community meets <abbr class="dtstart" title="2008-05-20">May 20</abbr>-<abbr class="dtend" title="2008-05-24">23</abbr> for one of North America's premier PHP conferences of 2008. Join us to hear <a href="http://tek.phparch.com/c/schedule">top speakers</a> such as Derick Rethans (eZ Systems), Lucas Nelan (Facebook), Chris Shiflett (OmniTI), Eli White (Digg) and yes, even Terry Chay (Tagged).
 </p>
-<p>
+        <p>
 For the past two years, php|architect's spring conference has sold out <em>weeks</em> before the start date, so if you're interested in attending, don't delay, and be sure to <a href="http://tek.phparch.com/c/p/signup">sign up</a> ASAP!
 </p>
       </div>
@@ -47,21 +63,20 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
     <php:newsImage link="http://conf.phpquebec.com/en/conf2008/" title="PHP Québec conference 2008">conference_php_quebec.gif</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-<a href="http://conf.phpquebec.com/">2008 PHP Quebec Conference &amp; Job Fair</a>
-<p>
-The PHP Quebec team is pleased to present the sixth edition of the <a 
-href="http://conf.phpquebec.com" class="url">PHP 
+        <a href="http://conf.phpquebec.com/">2008 PHP Quebec Conference &amp; Job Fair</a>
+        <p>
+The PHP Quebec team is pleased to present the sixth edition of the <a href="http://conf.phpquebec.com" class="url">PHP 
 Quebec Conference</a>. The Conference will take place in Montreal, Canada, 
 on <abbr class="dtstart" title="2008-03-12">March 12</abbr> through
 <abbr class="dtend" title="2008-03-15">14</abbr>.
 </p>
-<p>
+        <p>
 Join us for the PHPLabs, 2 days of technical talks, the Open Source Job 
 Fair &amp; Cocktail. Meet with well know community members such as: John 
 Coggeshall, Marcus Boerger, Zak Greant, Chris Shiflett, Damien Seguy and 
 many more.
 </p>
-<p>
+        <p>
 Take note that online registration ends on March 7th. For more information, 
 visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com</a></p>
       </div>
@@ -79,7 +94,7 @@ visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com
     <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-		  <p><abbr class="dtstart" title="2008-02-29">February 29th</abbr> (Leap Year Day). phplondon.org  announce their third
+        <p><abbr class="dtstart" title="2008-02-29">February 29th</abbr> (Leap Year Day). phplondon.org  announce their third
             annual <a href="http://www.phpconference.co.uk" alt="phplondon.org community conference" class="url">community conference</a>
             to be held at Inmarsat, Old Street, London.</p>
         <p>This year the conference will run two tracks and include speakers such as Derick Rethans, Wez Furlong, Scott MacVicar and Zoe Slattery.</p>
