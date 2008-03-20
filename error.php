@@ -206,6 +206,9 @@ $manual_page_moves = array(
     'internals.pdo'              => 'internals2.pdo',
     'phpdevel'                   => 'internals2.ze1.php3devel',
     'tsrm'                       => 'internals2.ze1.tsrm',
+
+    // Replaced extensions
+    'aspell'                     => 'pspell',
 );
 
 if (isset($manual_page_moves[$URI])) {
