@@ -289,7 +289,6 @@ $uri_aliases = array (
     "bugs.php"     => "bugs",     // BC
     "bugstats.php" => "bugstats", // BC
 
-    "icap"         => "mcal", // mcal is the successor of icap
     "odbc"         => "uodbc", // BC
     "_"            => "function.gettext",
 
