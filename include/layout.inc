@@ -663,7 +663,7 @@ function print_news($news, $dog, $max = 5) {
                 $ok = true;
                 ++$count;
             }
-            if ($category["term"] === "conferences") {
+            if ($category["term"] === "conferences" || $category["term"] === "cfp") {
                 $vevent = " vevent";
             }
         }
