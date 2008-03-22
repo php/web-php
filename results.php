@@ -118,7 +118,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
   if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
   if($type=='smarty') continue;
-  $display_title = str_replace('PHP:', '', $hit['Title']);
+  $display_title = str_replace(array('PHP:', '&amp;'), array('', '&'), $hit['Title']);
   $types = array('pear'=>'<img src="http://static.php.net/www.php.net/images/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pecl'=>'<img src="http://static.php.net/www.php.net/images/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
                  'pecl4win'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
@@ -134,9 +134,8 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
                  'doc'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
                  'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
                 );
-  // These strings are apparently double escaped
-  $summary = html_entity_decode($hit['Summary'], ENT_NOQUOTES, "UTF-8");
-  $display_title = html_entity_decode($display_title, ENT_NOQUOTES, "UTF-8");
+  // Fix &amp;gt; double escaping
+  $summary = str_replace('&amp;', '&', $hit['Summary']);
   echo <<<EOB
 <li>
  <p class="result">{$types[$type]}<a href="{$real_url}">{$display_title}</a></p>
