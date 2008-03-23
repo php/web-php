@@ -96,6 +96,25 @@ echo <<<EOB
 <ul id="search-results">
 EOB;
 $pos = $res['ResultSet']['firstResultPosition'];
+
+$php_img_dir = 'http://static.php.net/www.php.net/images';
+$types = array(
+  'pear'     => '<img src="'. $php_img_dir .'/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+  'pecl'     => '<img src="'. $php_img_dir .'/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+  'pecl4win' => '<img src="'. $php_img_dir .'/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
+  'peclbugs' => '<img src="'. $php_img_dir .'/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+  'pearbugs' => '<img src="'. $php_img_dir .'/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
+  'talks'    => '<img src="'. $php_img_dir .'/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
+  'snaps'    => '<img src="'. $php_img_dir .'/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'cvsweb'   => '<img src="'. $php_img_dir .'/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'viewcvs'  => '<img src="'. $php_img_dir .'/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'news'     => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'php'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'doc'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'bugs'     => '<img src="'. $php_img_dir .'/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
+  'gtk'      => '<img src="http://bjori.php.is/images/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
+);
+                
 foreach($res['ResultSet']['Result'] as $i => $hit) {
   $cnt = $pos + $i; 
 
@@ -111,29 +130,15 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
     }
   }
 
-  // rewrite mirrors urls (\w\w\d? or www, but not qa, doc and gtk)
-  $real_url = preg_replace('@^http://(?!doc)(?!qa)(?!gtk)\w{2,3}\.php\.net(.*)$@', '$1', $hit['Url']);
-  $displayurl = preg_replace('@^http://(?:(?!doc)(?!qa)(?!php)(?!gtk)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
+  // rewrite mirrors urls (\w\w\d? or www, but not qa, doc, gtk and ~/user)
+  $real_url = preg_replace('@^http://(?!doc|qa|gtk)\w{2,3}\.php\.net(?!/~)(.*)$@', '$1', $hit['Url']);
+  $displayurl = preg_replace('@^http://(?:(?!doc|qa|php|gtk)\w{2,3}\.)?(.+[^/])/?$@', '$1', $hit['Url']);
   $type = substr($displayurl,0,strpos($displayurl,'.'));
   if($type=='pecl' && strstr($displayurl,"/bugs/")) $type = "peclbugs";
   if($type=='pear' && strstr($displayurl,"/bugs/")) $type = "pearbugs";
   if($type=='smarty') continue;
   $display_title = str_replace(array('PHP:', '&amp;'), array('', '&'), $hit['Title']);
-  $types = array('pear'=>'<img src="http://static.php.net/www.php.net/images/pear_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-                 'pecl'=>'<img src="http://static.php.net/www.php.net/images/pecl_item.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-                 'pecl4win'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_win.gif" height="22" width="21" style="float:left; margin-left:-31px;"/>',
-                 'peclbugs'=>'<img src="http://static.php.net/www.php.net/images/pecl_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-                 'pearbugs'=>'<img src="http://static.php.net/www.php.net/images/pear_item_bug.gif" height="19" width="17" style="float:left; margin-left:-30px;"/>',
-                 'talks'=>'<img src="http://static.php.net/www.php.net/images/ele-icon.gif" height="20" width="32" style="float:left; margin-left:-40px;"/>',
-                 'snaps'=>'<img src="http://static.php.net/www.php.net/images/logos/php_xpstyle_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'cvsweb'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'viewcvs'=>'<img src="http://static.php.net/www.php.net/images/logos/php_script_ico.png" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'news'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'php'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'gtk'=>'<img src="http://bjori.php.is/images/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>',
-                 'doc'=>'<img src="http://static.php.net/www.php.net/images/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-                 'bugs'=>'<img src="http://static.php.net/www.php.net/images/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>'
-                );
+
   // Fix &amp;gt; double escaping
   $summary = str_replace('&amp;', '&', $hit['Summary']);
   echo <<<EOB
