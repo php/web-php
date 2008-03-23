@@ -239,8 +239,6 @@ $uri_aliases = array (
     "logos"         => "download-logos",
 
     # manual shortcuts
-    "ini"          => "configuration",
-
     "intro"        => "introduction",
     "whatis"       => "introduction",
     "whatisphp"    => "introduction",
