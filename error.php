@@ -310,6 +310,7 @@ $uri_aliases = array (
     "__construct"  => "language.oop5.decon",
     "__destruct"   => "language.oop5.decon",
     "__call"       => "language.oop5.overloading",
+    "__callstatic" => "language.oop5.overloading",
     "__get"        => "language.oop5.overloading",
     "__set"        => "language.oop5.overloading",
     "__isset"      => "language.oop5.overloading",
@@ -323,7 +324,10 @@ $uri_aliases = array (
     "throw"        => "language.exceptions",
     "try"          => "language.exceptions",
     "catch"        => "language.exceptions",
-
+    "lsb"          => "language.oop5.late-static-bindings",
+    "use"          => "language.namespaces.using",
+    "iterator"     => "language.oop5.iterations",
+    
     "factory"      => "language.oop5.patterns",
     "singleton"    => "language.oop5.patterns",
     
