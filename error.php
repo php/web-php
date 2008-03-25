@@ -288,6 +288,7 @@ $uri_aliases = array (
     "bugstats.php" => "bugstats", // BC
 
     "odbc"         => "uodbc", // BC
+    "oracle"       => "oci8",
     "_"            => "function.gettext",
 
     "class"        => "language.oop5.basic",
