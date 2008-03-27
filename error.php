@@ -290,6 +290,7 @@ $uri_aliases = array (
     "odbc"         => "uodbc", // BC
     "oracle"       => "oci8",
     "_"            => "function.gettext",
+    "cli"          => "features.commandline",
 
     "class"        => "language.oop5.basic",
     "new"          => "language.oop5.basic",
