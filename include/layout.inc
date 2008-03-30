@@ -694,7 +694,9 @@ function print_news($news, $dog, $max = 5) {
             $permlink = "#" .$id;
         }
 
-        $newsdate = date("d-M-Y", strtotime($item["updated"]));
+        // PHP4 strtotime() doesn't support RFC3339 timestamps
+        $updated = substr($item["updated"], 0, 10);
+        $newsdate = date("d-M-Y", strtotime($updated));
 
         echo <<< EOT
 <div class="newsItem hentry{$vevent}">
