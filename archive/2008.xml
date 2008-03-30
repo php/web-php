@@ -3,13 +3,45 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-03-20T20:23:55+01:00</updated>
+  <updated>2008-03-30T21:06:55+01:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>TestFest 2008</title>
+    <id>http://php.net/archive/2008.php#2008-03-30-1</id>
+    <published>2008-03-30T21:06:55+01:00</published>
+    <updated>2008-03-30T21:06:55+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <link href="http://www.php.net/index.php#2008-03-30-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#2008-03-30-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The PHP-QA team would like to announce the
+        <a href="http://qa.php.net/testfest.php">TestFest</a> for the month of
+        May 2008. The TestFest is an event that aims at improving the
+        <a href="http://gcov.php.net">code coverage</a> of the
+        <a href="http://qa.php.net/running-tests.php">test suite</a> for the PHP
+        language itself. As part of this event, local User Groups (UG) are
+        invited to join the TestFest. These UGs can meet physically or come
+        together virtually. The point however is that people network to learn
+        together. Aside from being an opportunity for all of you to make friends
+        with like minded people in your (virtual) community, it also will
+        hopefully reduce the work load for the PHP.net mentors.</p>
+        <p>All it takes is someone to organize a UG to spearhead the event and
+        to get others involved in
+        <a href="http://qa.php.net/write-test.php">writing phpt tests</a>.
+        The submissions will then be reviewed by members of php.net before
+        getting included in the official test suite. Please visit the
+        <a href="http://qa.php.net/testfest.php">TestFest homepage</a> to get
+        additional details on the TestFest on how to get involved, either as a
+        UG or by setting up the necessary infrastructure.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>PHP @ FrOSCon: Call for Papers</title>
     <id>http://php.nethttp://www.php.net/archive/2008.php#id2008-03-20-1</id>
@@ -82,19 +114,19 @@ For the past two years, php|architect's spring conference has sold out <em>weeks
       <div xmlns="http://www.w3.org/1999/xhtml">
         <a href="http://conf.phpquebec.com/">2008 PHP Quebec Conference &amp; Job Fair</a>
         <p>
-The PHP Quebec team is pleased to present the sixth edition of the <a href="http://conf.phpquebec.com" class="url">PHP 
-Quebec Conference</a>. The Conference will take place in Montreal, Canada, 
+The PHP Quebec team is pleased to present the sixth edition of the <a href="http://conf.phpquebec.com" class="url">PHP
+Quebec Conference</a>. The Conference will take place in Montreal, Canada,
 on <abbr class="dtstart" title="2008-03-12">March 12</abbr> through
 <abbr class="dtend" title="2008-03-15">14</abbr>.
 </p>
         <p>
-Join us for the PHPLabs, 2 days of technical talks, the Open Source Job 
-Fair &amp; Cocktail. Meet with well know community members such as: John 
-Coggeshall, Marcus Boerger, Zak Greant, Chris Shiflett, Damien Seguy and 
+Join us for the PHPLabs, 2 days of technical talks, the Open Source Job
+Fair &amp; Cocktail. Meet with well know community members such as: John
+Coggeshall, Marcus Boerger, Zak Greant, Chris Shiflett, Damien Seguy and
 many more.
 </p>
         <p>
-Take note that online registration ends on March 7th. For more information, 
+Take note that online registration ends on March 7th. For more information,
 visit the website: <a href="http://conf.phpquebec.com">http://conf.phpquebec.com</a></p>
       </div>
     </content>
