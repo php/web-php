@@ -7,7 +7,7 @@ $SIDEBAR_DATA = '
 <p>
  You can find more information about CVS, and
  download clients for most major platforms, at
- <a href="http://ximbiot.com/cvs/wiki/index.php">the CVS Wiki</a>.
+ <a href="http://ximbiot.com/cvs/wiki/">the CVS Wiki</a>.
 </p>
 
 <h3>CVS mirroring</h3>
