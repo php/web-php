@@ -26,7 +26,7 @@ The following list of languages already contain CVS modules, and will show up on
 <ul>
 <?php
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
-    echo '<li>', $lang, ' : (<a href="http://docs.php.net/manual/', $cc, '>archive</a>)</li>';
+    echo '<li>', $lang, ' : (<a href="http://docs.php.net/manual/', $cc, '">archive</a>)</li>';
 }
 ?>
 </ul>
