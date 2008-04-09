@@ -193,7 +193,8 @@ function manual_navbar($location = "top")
                 $links[] = array("$code/$filename", $name);
             }
         }
-        
+        $links[] = array('help-translate.php', 'Other');
+
         // Print out the form with all the options
         echo '  <form action="/manual/change.php" method="get">' . "\n" .
              '   <p>view this page in </p><fieldset><select name="page">'. "\n";
