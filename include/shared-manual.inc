@@ -150,7 +150,7 @@ function manual_sidebar()
 
 function manual_navbar($location = "top")
 {
-    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES;
+    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $ACTIVE_ONLINE_LANGUAGES;
 
     // Start navbar with 
     echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
@@ -182,11 +182,9 @@ function manual_navbar($location = "top")
         // Quick access to filename
         $filename = $PGI['this'][0];
         
-        // Disable all languages without online content
-        $online_languages = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
-        
+        // Disable all languages without online content        
         // Add a dropdown item for all languages left
-        foreach ($online_languages as $code => $name) {
+        foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
                 // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$filename")
                ) {

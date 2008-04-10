@@ -79,6 +79,8 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'tr'    => 'Turkish',
  );
 
+$ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
+
 // Convert between language codes back and forth
 // [We use non standard languages codes and so conversion
 // is needed when communicating with the outside world]
