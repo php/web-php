@@ -21,8 +21,8 @@ If you're interested in helping translate a specific language, then please read 
 <p>
 The following list of languages already contain CVS modules, and will show up on the documentation development server. Warning: These translations are considered outdated, so content within each may be completely wrong or insecure!
 </p>
-<p>
-<strong>Inactive languages already in CVS</strong>
+
+<h3>Inactive languages already in CVS</h3>
 <ul>
 <?php
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
@@ -30,7 +30,6 @@ foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
 }
 ?>
 </ul>
-</p>
 
 <?php
 site_footer();
