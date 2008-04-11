@@ -14,6 +14,7 @@
 $LANGUAGES = array(
     'en'    => 'English',
     'ar'    => 'Arabic',
+	'bg'    => 'Bulgarian',
     'pt_BR' => 'Brazilian Portuguese',
     'zh'    => 'Chinese (Simplified)',
     'hk'    => 'Chinese (Hong Kong Cantonese)',
