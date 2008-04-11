@@ -45,10 +45,9 @@ site_header("Documentation");
 $man_languages = array();
 // Remove inactive online languages from the list to show
 foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $langname) {
-// Avoid this stat call here for the moment
-//    if (file_exists("manual/$code/index.php")) {
+    if (file_exists("manual/$code/index.php")) {
         $man_languages[] = $code;
-//    }
+    }
 }
 $lastlang = count($man_languages) - 1;
 
