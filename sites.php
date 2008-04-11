@@ -143,6 +143,15 @@ site_header("A Tourist's Guide");
  documentation teams together with tools, status reports and an RFC system.
 </p>
 
+<h2><a href="http://docs.php.net/">docs.php.net</a>: Documentation dev server</h2>
+
+<p>
+ The documentation developmental server is a PHP mirror that contains upcoming 
+ releases of the PHP documentation before it's pushed out to the mirrors. 
+ Documentation changes, such as layout, is tested here (with feedback requested) 
+ before being made official. Documentation is built here four times a day.
+</p>
+
 <h2><a href="http://qa.php.net/">qa.php.net</a>: Quality Assurance Team</h2>
 
 <p>
@@ -196,6 +205,14 @@ site_header("A Tourist's Guide");
  basis current CVS snapshots are being build and tested on this machine. After 
  all tests are done the results are visualized along with a code coverage 
  analysis.  
+</p>
+
+<h2><a href="http://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
+
+<p>
+ Home of the official PHP wiki, this site contains information related to php.net like
+ RFCs, GSOC information, and TODO files. Most every aspect of the PHP project
+ has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
 <?php site_footer(); ?>
