@@ -41,16 +41,6 @@ $SIDEBAR_DATA='
 
 site_header("Documentation");
 
-// Check for really available manual languages
-$man_languages = array();
-// Remove inactive online languages from the list to show
-foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $langname) {
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$code/index.php")) {
-        $man_languages[] = $code;
-    }
-}
-$lastlang = count($man_languages) - 1;
-
 ?>
 
 <h1>Documentation</h1>
@@ -85,13 +75,17 @@ $lastlang = count($man_languages) - 1;
 <?php
 
 // List all manual languages viewable online
-foreach ($man_languages as $langnum => $langcode) {
+$lastlang = end($ACTIVE_ONLINE_LANGUAGES);
+foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
+	if (!file_exists($_SERVER["DOCUMENT_ROOT"] . "/manual/{$langcode}/index.php")) {
+		continue;
+	}
 
     // Make preferred language bold
     if ($langcode == $LANG) { echo "<strong>"; }
 
-    echo '<a href="/manual/' . $langcode . '/">' . $LANGUAGES[$langcode] . '</a>';
-    echo ($lastlang != $langnum) ? ",\n" : "\n";
+    echo '<a href="/manual/' . $langcode . '/">' . $langname . '</a>';
+    echo ($lastlang != $langname) ? ",\n" : "\n";
 
     if ($langcode == $LANG) { echo "</strong>"; }
 }
