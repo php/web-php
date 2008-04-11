@@ -112,7 +112,7 @@ $types = array(
   'php'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
   'doc'      => '<img src="'. $php_img_dir .'/logos/php-icon-white.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
   'bugs'     => '<img src="'. $php_img_dir .'/php_bug.gif" height="32" width="32" style="float:left; margin-left:-40px;"/>',
-  'gtk'      => '<img src="'. $php_img_dir .'/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
+  'gtk'      => '<img src="'. $php_img_dir .'/logos/php-gtk-white.gif" height="26" width="32" style="float:left; margin-left:-40px;"/>'
 );
                 
 foreach($res['ResultSet']['Result'] as $i => $hit) {
