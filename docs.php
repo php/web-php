@@ -45,7 +45,7 @@ site_header("Documentation");
 $man_languages = array();
 // Remove inactive online languages from the list to show
 foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $langname) {
-    if (file_exists($_SERVER['DOCUMENT_ROOT'] . "manual/$code/index.php")) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/manual/$code/index.php")) {
         $man_languages[] = $code;
     }
 }
