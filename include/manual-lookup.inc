@@ -57,6 +57,11 @@ function find_manual_page_slow($lang, $keyword)
 
     // Remove .. for security reasons
     $keyword = str_replace("..", "", $keyword);
+
+    // FIXME: Temporary hack for mysqli_ functions
+    if (strpos($keyword, "mysqli_") === 0) {
+        $keyword[6] = ".";
+    }
     
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
@@ -89,6 +94,7 @@ function find_manual_page($lang, $keyword)
         !($s = @sqlite_open($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite'))) {
         return find_manual_page_slow($lang, $keyword);
     }
+    $kw = $keyword;
     
     // Try the preferred language first, then the
     // English one in case no page is found
@@ -161,5 +167,5 @@ function find_manual_page($lang, $keyword)
     }
     
     // No match found
-    return find_manual_page_slow($lang, $keyword);
+    return find_manual_page_slow($lang, $kw);
 }
