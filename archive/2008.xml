@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-04-13T21:56:21-07:00</updated>
+  <updated>2008-04-14T07:35:49+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -14,8 +14,8 @@
     <title>Call for speakers for Forum PHP Paris 2008</title>
     <id>http://php.nethttp://www.php.net/archive/2008.php#id2008-04-13-2</id>
     <published>2008-04-13T21:56:55-07:00</published>
-    <updated>2008-04-13T21:56:55-07:00</updated>
-    <php:finalTeaserDate xmlns="http://php.net/ns/news">2004-05-11</php:finalTeaserDate>
+    <updated>2008-04-14T07:35:49+02:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-05-11</php:finalTeaserDate>
     <php:newsImage link="http://www.afup.org/" title="Forum AFUP Paris 2008">afup2008.png</php:newsImage>
     <category term="cfp" label="Call for Papers"/>
     <link href="http://www.php.net/conferences/index.php#id2008-04-13-2" rel="alternate" type="text/html"/>
@@ -41,7 +41,10 @@
 
 	<h3>Date and location</h3>
 
-	<p>The "Forum PHP Paris 2008" will take place in Paris on 8th-9th december 2008</p>
+	<p>
+		The "Forum PHP Paris 2008" will take place in Paris on
+		<abbr class="dtstart" title="2008-12-08">8th</abbr>-<abbr class="dtend" title="2008-12-10">9th december 2008</abbr>
+	</p>
 
     <p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session and up to
     3 hours for workshops. Use the <a href="http://afup.org/pages/forumphp2008/appel-a-conferenciers.php">form on the site</a>, 
