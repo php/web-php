@@ -3,13 +3,55 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-04-14T02:25:42+02:00</updated>
+  <updated>2008-04-13T21:56:21-07:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>Call for speakers for Forum PHP Paris 2008</title>
+    <id>http://php.nethttp://www.php.net/archive/2008.php#id2008-04-13-2</id>
+    <published>2008-04-13T21:56:55-07:00</published>
+    <updated>2008-04-13T21:56:55-07:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2004-05-11</php:finalTeaserDate>
+    <php:newsImage link="http://www.afup.org/" title="Forum AFUP Paris 2008">afup2008.png</php:newsImage>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-04-13-2" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="via" type="text/html"/>
+    <content type="html">
+    <p>The AFUP, Association Française des Utilisateurs de PHP,
+	is proud to announce the upcoming conference "Forum PHP 2008".</p>
+
+	<p>For this unique event in France, we are looking for the best French speaking experts,
+	who want to share their know-how and enthusiasm.
+	This two day conference features one technical day, with the most advanced PHP techniques
+	and a business day, with case studies and examples of successful projects.
+        <ul>
+        <li>How to manage a PHP project (tools, methods, ...)</li>
+        <li>Insure code quality</li>
+        <li>Internet and legal issues (intellectual property, ...)</li>
+        <li>Build a business around</li>
+        <li>PHP scalibility</li>
+        <li>Connect services(web services)</li>
+        <li>Rich User Interfaces (technology choice, implementation, ...)</li>
+    </ul>
+    </p>
+
+	<h3>Date and location</h3>
+
+	<p>The "Forum PHP Paris 2008" will take place in Paris on 8th-9th december 2008</p>
+
+    <p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session and up to
+    3 hours for workshops. Use the <a href="http://afup.org/pages/forumphp2008/appel-a-conferenciers.php">form on the site</a>, 
+    no email proposal will be accepted.</p>
+    
+    <p>
+    Proposals will be reviewed after the deadline has passed. Additional information may be asked where needed. Proposals will be chosen according to their layout, relevancy for a professional audience and the overall homegeneity of the forum. Every candidate will be personnally notified of the status of their proposal. The decision is final. Priority will be given to sessions in French.
+    </p>
+    </content>
+  </entry>
   <entry xmlns="http://www.w3.org/2005/Atom">
     <title>PHP DC conference 2008</title>
     <link href="http://www.php.net/conferences/index.php#id2008-04-13-1" rel="alternate" type="text/html"/>
@@ -22,7 +64,7 @@
     <php:newsImage link="http://www.dcphpconference.com/" title="PHP DC conference 2008">dcphpconference.2008.png</php:newsImage>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-      	<p>
+        <p>
       	The DC PHP Developers Group recently announced Kshemendra Paul as a 
 		featured keynote speaker at the DC PHP Conference &amp; Expo,
 		<abbr class="dtstart" title="2008-06-02">June 2</abbr>-<abbr class="dtend" title="2008-06-05">4</abbr>, 
@@ -31,7 +73,7 @@
       	the President, will be presenting on "Federal E-Government and 
       	Enterprise Architecture Updates." 
       	</p>
-      	<p>
+        <p>
 		Join hundreds of PHP practitioners, business managers, and government 
 		officials from around the world in the exchange of ideas and solutions
 		for building a better web application infrastructure. The DC PHP 
@@ -39,7 +81,7 @@
 		practices, the art of PHP, PHP applications, PHP in the enterprise,
 		and Open Source. The full speaker schedule will be announced shortly.
 		</p>
-		<p>
+        <p>
 		For more information about DC PHP Conference &amp; Expo 2008 and to register, 
 		please visit <a href="http://www.dcphpconference.com/">www.dcphpconference.com</a>. 
 		Early discounted registration rates affective until April 15, 2008
@@ -78,7 +120,8 @@
         UG or by setting up the necessary infrastructure.</p>
       </div>
     </content>
-  </entry>  <entry>
+  </entry>
+  <entry>
     <title>PHP @ FrOSCon: Call for Papers</title>
     <id>http://php.nethttp://www.php.net/archive/2008.php#id2008-03-20-1</id>
     <published>2008-03-20T20:24:29+01:00</published>
