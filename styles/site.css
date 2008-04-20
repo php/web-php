@@ -908,6 +908,10 @@ div.refsect1 span.term {
 	font-size: 1.2em;
 	border-bottom: groove 1px #dddddd;
 }
+div.section dt {
+	background: #FAFAFA;
+	border-bottom: 1px solid #CCC;
+}
 
 div.refsect1 span.term b tt {
 	font-size: 0.9em;
