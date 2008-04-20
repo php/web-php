@@ -202,7 +202,6 @@ $manual_page_moves = array(
     // Internals docs where moved
     'zend'                       => 'internals2.ze1.zendapi',
     'zend-api'                   => 'internals2.ze1.zendapi',
-    'streams'                    => 'internals2.ze1.streams',
     'internals.pdo'              => 'internals2.pdo',
     'phpdevel'                   => 'internals2.ze1.php3devel',
     'tsrm'                       => 'internals2.ze1.tsrm',
@@ -254,6 +253,7 @@ $uri_aliases = array (
     "magic_quotes"     => "security.magicquotes",
     "magicquotes"      => "security.magicquotes",
     "gd"               => "image",
+    'streams'          => 'book.stream',
 
     "callback"     => "language.pseudo-types",
     "number"       => "language.pseudo-types",
