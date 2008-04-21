@@ -20,6 +20,21 @@ $md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_MD5["ta
 // Does this mirror have sqlite?
 $sqlite = (int) function_exists("sqlite_open");
 
+if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e5cd90e") {
+	$retval = run_self_tests();
+	$output = isset($_GET["output"]) ? $_GET["output"] : "php";
+	switch($output) {
+	case "human":
+		var_dump($retval);
+		break;
+
+	case "php":
+	default:
+		echo serialize($retval);
+	}
+	exit(0);
+}
+
 echo join('|', array(
     $MYSITE,            // 0: ServerName problems
     phpversion(),       // 1: PHP version overview
@@ -30,3 +45,56 @@ echo join('|', array(
     'manual-noalias',   // 6: /manual alias check is done elsewhere now
     $md5_ok,            // 7: Rsync setup problems
 ));
+
+function run_self_tests() {
+	global $MYSITE;
+	global $LAST_UPDATED, $sqlite, $mirror_stats, $md5_ok;
+
+	$content = fetch_contents($MYSITE . "manual/noalias.txt");
+	if (trim($content) !== 'manual-noalias') {
+		return array(
+			"name" => "Apache manual alias",
+			"see"  => $MYSITE . "mirroring-troubles.php#manual-redirect",
+		);
+	}
+
+	$ctype = fetch_header($MYSITE . "manual/en/faq.html.php", "content-type");
+	if (strpos($ctype, "text/html") === false) {
+		return array(
+			"name" => "Header weirdness. Pages named '.html.php' are returning wrong status headers",
+			"see"  => $MYSITE . "mirroring-troubles.php#content-type",
+		);
+	}
+
+	$ctype = fetch_header($MYSITE . "functions", "content-type");
+	if (is_array($ctype)) {
+		$ctype = current($ctype);
+	}
+	if (strpos($ctype, "text/html") === false) {
+		return array(
+			"name" => "MultiViews on",
+			"see"  => $MYSITE . "mirroring-troubles.php#multiviews"
+		);
+	}
+
+	$header = fetch_header($MYSITE . "manual/en/ref.var.php", 0);
+	list($ver, $status, $msg) = explode(" ", $header, 3);
+	if($status != 200) {
+		return array(
+			"name" => "Var Handler",
+			"see"  => $MYSITE . "mirroring-troubles.php#var",
+		);
+	}
+
+	return array(
+		"servername" => $MYSITE,
+		"version"    => phpversion(),
+		"updated"    => $LAST_UPDATED,
+		"sqlite"     => $sqlite,
+		"stats"      => $mirror_stats,
+		"language"   => default_language(),
+		"rsync"      => $md5_ok,
+	);
+
+}
+
