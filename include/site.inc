@@ -173,6 +173,104 @@ function header_nocache()
     }
 }
 
+
+// Compatibility function to fetch data from external source
+function fetch_contents($url, $headers = false) {
+    if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
+        $data = @file_get_contents($url);
+        if ($headers) {
+            return $http_response_header;
+        }
+
+        return $data;
+    }
+
+    // Let's find another way
+    if(function_exists('curl_exec')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+        curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+
+        if ($headers) {
+            $array = explode("\n", $data);
+            foreach($array as $line) {
+                if (strlen($line)<=2) {
+                    return $header;
+                } else {
+                    $header[] = $line;
+                }
+            }
+        }
+        return $data;
+    }
+
+    $array = parse_url($url);
+    if(function_exists('fsockopen') && $fd = @fsockopen($array["host"], 80, $errno, $errstr, 15)) {
+        $data = "";
+        $header = array();
+        $body = false;
+
+        $path = $array["path"];
+        if (isset($array["query"])) {
+            $path .= "?" . $array["query"];
+        }
+        fputs($fd,"GET {$path} HTTP/1.0\r\n");
+        fputs($fd,"Host: {$array["host"]}\r\n");
+        fputs($fd,"Connection: close\r\n\r\n");
+
+        while($line = fgets($fd)) { 
+            if($body) {
+                $data .= $line;
+            } elseif(strlen($line)<=2) {
+                $body = true;
+            } else {
+                $header[] = $line;
+            }
+        }
+        fclose($fd);
+
+        if ($headers) {
+            return $header;
+        }
+
+        return $data;
+    }
+
+    // Redirect to www.php.net ?
+    return array("ERROR" => "Unable to find a way to retrieve data");
+}
+
+// Compatibility function to fetch headers from external source
+function fetch_header($url, $header) {
+    $headers = array();
+
+    if(function_exists("get_headers") && ini_get('allow_url_fopen')) {
+        $headers = get_headers($url, 1);
+    } else {
+        $data = fetch_contents($url, true);
+        foreach($data as $line) {
+            if (($pos = strpos($line, ":")) !== false) {
+                $headers[substr($line, 0, $pos)] = trim(substr($line, $pos+1));
+            } else {
+                $headers[0] = trim($line);
+            }
+        }
+    }
+    if (!is_array($headers) || empty($headers)) {
+        return null;
+    }
+    if (is_string($header)) {
+        $headers = array_change_key_case($headers, CASE_LOWER);
+    }
+
+    return isset($headers[$header]) ? $headers[$header] : null;
+}
+
+
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is
@@ -218,3 +316,4 @@ if (isset($_SERVER['MIRROR_STATS'])) {
 if (isset($_SERVER['BASE_PAGE'])) {
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 } else { unset($_SERVER['BASE_HREF']); }
+

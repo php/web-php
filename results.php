@@ -45,30 +45,9 @@ $srch_host = "www.php.net";
 $srch_rqst = "/ws.php?profile=$scope&q=$q&lang=$l&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://".$srch_host.$srch_rqst;
 
-if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-  $data = @file_get_contents($url);
-} else {
-  // Let's find another way
-  if(function_exists('curl_exec')) {
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_HEADER, 0);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-    $data = curl_exec($ch);
-    curl_close($ch);
-  } else if(function_exists('fsockopen') && $fd = @fsockopen($srch_host, 80, $errno, $errstr, 15)) {
-    $data = ''; $header = false;
-    fputs($fd,"GET $srch_rqst HTTP/1.0\r\n");
-    fputs($fd,"Host: $srch_host\r\n");
-    fputs($fd,"Connection: close\r\n\r\n");
-    while($line = fgets($fd)) { 
-      if($header) $data .= $line;
-      if(strlen($line)<=2) $header = true;
-    }
-    fclose($fd);
-  } else {
-    // Redirect to www.php.net ?
-  }
+$data = fetch_contents($url);
+if (is_array($data)) {
+  exit_with_pretty_error("Search error", "Internal error", "This mirror does not support searches, please report this error to <a href='/contact'>our webmasters</a>");
 }
 $res = unserialize($data);
 
