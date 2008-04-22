@@ -72,7 +72,7 @@ site_header("Getting Help");
  sessions) is included in the right-hand column of the front page, and
  on the <a href="/cal.php">event calendar page</a>. If you want to list
  an upcoming event, just fill out the form <a
- href="http://www.php.net/submit-event.php">on this page</a>.
+ href="/submit-event.php">on this page</a>.
 </p>
 
 <h1>Sample Code</h1>
