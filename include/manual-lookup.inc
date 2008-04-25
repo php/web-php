@@ -50,7 +50,7 @@ function find_manual_page_slow($lang, $keyword)
 {
     // Possible prefixes to test
     $sections = array(
-        "", "intro.", "book.", "ref.", "function.", "class.",
+        "", "book.", "ref.", "function.", "class.",
         "feature-", "control-structures.", "language.",
         "about.", "faq.", "features.", 
     );
