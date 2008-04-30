@@ -72,7 +72,7 @@ do {
 
 $via = $archive = $BASE . "/archive/$y.php#id" .$id;
 
-ce($dom, "id", "http://php.net" .$archive, array(), $item);
+ce($dom, "id", $archive, array(), $item);
 ce($dom, "published", date(DATE_ATOM), array(), $item);
 ce($dom, "updated", date(DATE_ATOM), array(), $item);
 
