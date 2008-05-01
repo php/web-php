@@ -3,13 +3,32 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-04-22T20:04:48+02:00</updated>
+  <updated>2008-05-01T19:27:50-04:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>PHP 5.2.6 Released</title>
+    <id>http://www.php.net/archive/2008.php#id2008-05-01-1</id>
+    <published>2008-05-01T19:27:58-04:00</published>
+    <updated>2008-05-01T19:27:58-04:00</updated>
+    <category term="releases" label="New PHP release"/>
+    <link href="http://www.php.net/index.php#id2008-05-01-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-05-01-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The PHP development team would like to announce the immediateavailability of PHP 5.2.6. This release focuses on improving the stability ofthe PHP 5.2.x branch with over 120 bug fixes, several of which are security related.All users of PHP are encouraged to upgrade to this release.</p>
+        <p>        Further details about the PHP 5.2.6 release can be found in the        <a href="/releases/5_2_6.php">release announcement for 5.2.6</a>, the full list of        changes is available in the <a href="/ChangeLog-5.php#5.2.6">ChangeLog for PHP 5</a>.</p>
+        <p>
+          <b>Security Enhancements and Fixes in PHP 5.2.6:</b>
+        </p>
+        <ul>        <li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>        <li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>        <li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>        <li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>        <li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>        <li>Upgraded bundled PCRE to version 7.6</li></ul>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Google Summer of Code: php.net students</title>
     <id>http://www.php.net/archive/2008.php#id2008-04-22-1</id>
@@ -19,175 +38,65 @@
     <link href="http://www.php.net/index.php#id2008-04-22-1" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="via" type="text/html"/>
     <content type="xhtml">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-<p>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
 	The PHP team is once again proud to participate in the 
 	<a href="http://code.google.com/soc/">Google Summer of Code</a>.
 	Ten students will "flip bits instead of burgers" this summer:
 </p>
-<ul>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=73D5F5E282F9163F" class="url">Zend LLVM Extension</a> by
-		<span class="fn">
-			<span class="given-name">Joonas</span>
-			<span class="family-name">Govenius</span>
-		</span>,
+        <ul>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=73D5F5E282F9163F" class="url">Zend LLVM Extension</a> by
+		<span class="fn"><span class="given-name">Joonas</span><span class="family-name">Govenius</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Nuno</span>
-			<span class="family-name">Lopes</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=12A8D27646C9771A" class="url">PHP Optimizer</a> by
-		<span class="fn">
-			<span class="given-name">Samuel</span>
-			<span class="family-name">Graham Kelly IV</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Nuno</span><span class="family-name">Lopes</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=12A8D27646C9771A" class="url">PHP Optimizer</a> by
+		<span class="fn"><span class="given-name">Samuel</span><span class="family-name">Graham Kelly IV</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Derick</span>
-			<span class="family-name">Rethans</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=74121AFCC0C7C341" class="url">PhD Improvements and Updates</a> by
-		<span class="fn">
-			<span class="given-name">Nicholas</span>
-			<span class="family-name">Sloan</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Derick</span><span class="family-name">Rethans</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=74121AFCC0C7C341" class="url">PhD Improvements and Updates</a> by
+		<span class="fn"><span class="given-name">Nicholas</span><span class="family-name">Sloan</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Hannes</span>
-			<span class="family-name">Magnusson</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=93F63E6C761134FB" class="url">Replace auto* with CMake</a> by
-		<span class="fn">
-			<span class="given-name">Alejandro Leiva</span>
-			<span class="family-name">Rojas</span>
-		</span>, 
+	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span><span class="family-name">Magnusson</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=93F63E6C761134FB" class="url">Replace auto* with CMake</a> by
+		<span class="fn"><span class="given-name">Alejandro Leiva</span><span class="family-name">Rojas</span></span>, 
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Pierre A.</span>
-			<span class="family-name">Joye</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=F74E5E31D92F95D0" class="url">gsoc:2008 - XDebug</a> by
-		<span class="fn">
-			<span class="given-name">Chung-Yang</span>
-			<span class="family-name">Lee</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Pierre A.</span><span class="family-name">Joye</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=F74E5E31D92F95D0" class="url">gsoc:2008 - XDebug</a> by
+		<span class="fn"><span class="given-name">Chung-Yang</span><span class="family-name">Lee</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">David</span>
-			<span class="family-name">Coallier</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=435245F847240738" class="url">Rewrite the run-tests.php script</a> by
-		<span class="fn">
-			<span class="given-name">Cesar</span>
-			<span class="family-name">Montedonico</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">David</span><span class="family-name">Coallier</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=435245F847240738" class="url">Rewrite the run-tests.php script</a> by
+		<span class="fn"><span class="given-name">Cesar</span><span class="family-name">Montedonico</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Travis</span>
-			<span class="family-name">Swicegood</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=837287100B93044F" class="url">PHP Bindings for Cairo</a> by
-		<span class="fn">
-			<span class="given-name">Akshat</span>
-			<span class="family-name">Gupta</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Travis</span><span class="family-name">Swicegood</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=837287100B93044F" class="url">PHP Bindings for Cairo</a> by
+		<span class="fn"><span class="given-name">Akshat</span><span class="family-name">Gupta</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Anant</span>
-			<span class="family-name">Narayanan</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=25AE6211DDEC86FD" class="url">Algorithm Optimizations</a> by
-		<span class="fn">
-			<span class="given-name">Michal</span>
-			<span class="family-name">Dziemianko</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Anant</span><span class="family-name">Narayanan</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=25AE6211DDEC86FD" class="url">Algorithm Optimizations</a> by
+		<span class="fn"><span class="given-name">Michal</span><span class="family-name">Dziemianko</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Scott</span>
-			<span class="family-name">MacVicar</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=5A442E6A7568434D" class="url">PECL, Website Improvements</a> by
-		<span class="fn">
-			<span class="given-name">Barry</span>
-			<span class="family-name">Carlyon</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=5A442E6A7568434D" class="url">PECL, Website Improvements</a> by
+		<span class="fn"><span class="given-name">Barry</span><span class="family-name">Carlyon</span></span>,
 	</span>
 	mentored by 
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Helgi Þormar</span>
-			<span class="family-name">Þorbjörnsson</span>
-		</span>
-	</span>
-</li>
-<li>
-	<span class="vcard">
-		<a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=AD4803BA9A70BCB3" class="url">Implement Unicode into PHP 6</a> by
-		<span class="fn">
-			<span class="given-name">Henrique do Nascimento</span>
-			<span class="family-name">Angelo</span>
-		</span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Helgi Þormar</span><span class="family-name">Þorbjörnsson</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=AD4803BA9A70BCB3" class="url">Implement Unicode into PHP 6</a> by
+		<span class="fn"><span class="given-name">Henrique do Nascimento</span><span class="family-name">Angelo</span></span>,
 	</span>
 	mentored by
-	<span class="vcard">
-		<span class="fn">
-			<span class="given-name">Scott</span>
-			<span class="family-name">MacVicar</span>
-		</span>
-	</span>
-</li>
-</ul>
-		</div>
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
+        </ul>
+      </div>
     </content>
   </entry>
   <entry>
@@ -201,36 +110,23 @@
     <link href="http://www.php.net/conferences/index.php#id2008-04-13-2" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-04-13-2" rel="via" type="text/html"/>
     <content type="html">
-    <p>The AFUP, Association Française des Utilisateurs de PHP,
+      <p>The AFUP, Association Française des Utilisateurs de PHP,
 	is proud to announce the upcoming conference "Forum PHP 2008".</p>
-
-	<p>For this unique event in France, we are looking for the best French speaking experts,
+      <p>For this unique event in France, we are looking for the best French speaking experts,
 	who want to share their know-how and enthusiasm.
 	This two day conference features one technical day, with the most advanced PHP techniques
 	and a business day, with case studies and examples of successful projects.
-        <ul>
-        <li>How to manage a PHP project (tools, methods, ...)</li>
-        <li>Insure code quality</li>
-        <li>Internet and legal issues (intellectual property, ...)</li>
-        <li>Build a business around</li>
-        <li>PHP scalibility</li>
-        <li>Connect services(web services)</li>
-        <li>Rich User Interfaces (technology choice, implementation, ...)</li>
-    </ul>
+        <ul><li>How to manage a PHP project (tools, methods, ...)</li><li>Insure code quality</li><li>Internet and legal issues (intellectual property, ...)</li><li>Build a business around</li><li>PHP scalibility</li><li>Connect services(web services)</li><li>Rich User Interfaces (technology choice, implementation, ...)</li></ul>
     </p>
-
-	<h3>Date and location</h3>
-
-	<p>
+      <h3>Date and location</h3>
+      <p>
 		The "Forum PHP Paris 2008" will take place in Paris on
 		<abbr class="dtstart" title="2008-12-08">8th</abbr>-<abbr class="dtend" title="2008-12-10">9th december 2008</abbr>
 	</p>
-
-    <p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session and up to
+      <p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session and up to
     3 hours for workshops. Use the <a href="http://afup.org/pages/forumphp2008/appel-a-conferenciers.php">form on the site</a>, 
     no email proposal will be accepted.</p>
-    
-    <p>
+      <p>
     Proposals will be reviewed after the deadline has passed. Additional information may be asked where needed. Proposals will be chosen according to their layout, relevancy for a professional audience and the overall homegeneity of the forum. Every candidate will be personnally notified of the status of their proposal. The decision is final. Priority will be given to sessions in French.
     </p>
     </content>

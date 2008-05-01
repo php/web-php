@@ -1,7 +1,46 @@
 <?php
 $OLDRELEASES = array (
-  5 => 
+  5 =>
   array (
+    '5.2.5' => 
+    array (
+      'date' => '08 November 2007',
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.5.tar.bz2',
+          'name' => 'Source (tar.bz2)',
+          'md5' => '1fe14ca892460b09f06729941a1bb605',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.5.tar.gz',
+          'name' => 'Source (tar.gz)',
+          'md5' => '61a0e1661b70760acc77bc4841900b7a',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.5-Win32.zip',
+          'name' => 'Windows binary',
+          'md5' => 'a1e31c0d872ab030a2256b1cd6d3b7d1',
+        ),
+        1 => 
+        array (
+          'filename' => 'pecl-5.2.5-Win32.zip',
+          'name' => 'Collection of PECL modules for PHP 5.2.5',
+          'md5' => 'a3553b61c9332d08a5044cf9bf89f2df',
+        ),
+      ),
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_5.php',
+      ),
+      'museum' => false,
+    ), 
     '5.2.4' => 
     array (
       'date' => '30 August 2007',
