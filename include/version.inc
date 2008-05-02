@@ -20,13 +20,14 @@
 $PHP_5_VERSION = "5.2.6";
 $PHP_5_DATE    = "01 May 2008";
 $PHP_5_MD5     = array(
-                       "tar.bz2"   => "7380ffecebd95c6edb317ef861229ebd",
-                       "tar.gz"    => "1720f95f26c506338f0dba3a51906bbd",
-                       "zip"       => "53b339f263e015b1562fced46a787e46",
-                       "installer" => "afd3c7e2c51313da478137df7badcfe0",
-                       "pecl.zip"  => "d674147acf74afe5c3b540f59e6a2ab1",
-                       "nts.zip"   => "b34a15d336d99789bc6ffdc1ff44649c",
-                       "pecl.nts"  => "251a1c5bb0fca49a696063d3e027d45d",
+                       "tar.bz2"       => "7380ffecebd95c6edb317ef861229ebd",
+                       "tar.gz"        => "1720f95f26c506338f0dba3a51906bbd",
+                       "zip"           => "53b339f263e015b1562fced46a787e46",
+                       "installer"     => "afd3c7e2c51313da478137df7badcfe0",
+                       "pecl.zip"      => "d674147acf74afe5c3b540f59e6a2ab1",
+                       "nts.zip"       => "b34a15d336d99789bc6ffdc1ff44649c",
+                       "pecl.nts"      => "251a1c5bb0fca49a696063d3e027d45d",
+                       "nts.installer" => "739dc241e3259116c2193ac5fe0d5ca0",
 );
 
 $PHP_5_RC      = false;
@@ -73,8 +74,7 @@ $RELEASES = array(
                     "filename" => "php-$PHP_5_VERSION-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => "15 November 2007",
-                    "note"     => "Updated due to problems with the original installer for this release.",
+                    "date"     => $PHP_5_DATE,
                 ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
@@ -88,6 +88,12 @@ $RELEASES = array(
                     "md5"      => $PHP_5_MD5["nts.zip"],
                     "date"     => $PHP_5_DATE,
                 ), 
+                array(
+                    "filename" => "php-$PHP_5_VERSION-nts-win32-installer.msi",
+                    "name"     => "PHP $PHP_5_VERSION Non-thread-safe installer",
+                    "md5"      => $PHP_5_MD5["installer"],
+                    "date"     => $PHP_5_DATE,
+                ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Non-thread-safe Win32 binaries",
