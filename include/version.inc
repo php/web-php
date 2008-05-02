@@ -18,7 +18,7 @@
 
 /* PHP 5 Release */
 $PHP_5_VERSION = "5.2.6";
-$PHP_5_DATE    = "01 May 2007";
+$PHP_5_DATE    = "01 May 2008";
 $PHP_5_MD5     = array(
                        "tar.bz2"   => "7380ffecebd95c6edb317ef861229ebd",
                        "tar.gz"    => "1720f95f26c506338f0dba3a51906bbd",
