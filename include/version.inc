@@ -22,12 +22,14 @@ $PHP_5_DATE    = "01 May 2008";
 $PHP_5_MD5     = array(
                        "tar.bz2"       => "7380ffecebd95c6edb317ef861229ebd",
                        "tar.gz"        => "1720f95f26c506338f0dba3a51906bbd",
-                       "zip"           => "53b339f263e015b1562fced46a787e46",
+                       "zip"           => "c7e5010114f58282858d7d78e6509cdc",
                        "installer"     => "afd3c7e2c51313da478137df7badcfe0",
-                       "pecl.zip"      => "d674147acf74afe5c3b540f59e6a2ab1",
-                       "nts.zip"       => "b34a15d336d99789bc6ffdc1ff44649c",
-                       "pecl.nts"      => "251a1c5bb0fca49a696063d3e027d45d",
+                       "pecl.zip"      => "f0e7b245589d705eef731b51142d5def",
+                       "nts.zip"       => "1d3661a086f352ec7e318e7c2eeba4de",
+                       "pecl.nts"      => "62b102221920092dfefc08756aa3e926",
                        "nts.installer" => "739dc241e3259116c2193ac5fe0d5ca0",
+                       "nts.debugpack" => "4c1fd96c8a78e1896d37da81467ff70d",
+                       "debugpack"     => "24dde2726e3e0cefbb83c0c375ea1f84"
 );
 
 $PHP_5_RC      = false;
@@ -83,6 +85,12 @@ $RELEASES = array(
                     "date"     => $PHP_5_DATE,
                 ),
                 array(
+                    "filename" => "php-debug-pack-$PHP_5_VERSION-Win32.zip",
+                    "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
+                    "md5"      => $PHP_5_MD5["debugpack"],
+                    "date"     => $PHP_5_DATE,
+                ),
+                array(
                     "filename" => "php-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 binaries",
                     "md5"      => $PHP_5_MD5["nts.zip"],
@@ -94,6 +102,13 @@ $RELEASES = array(
                     "md5"      => $PHP_5_MD5["installer"],
                     "date"     => $PHP_5_DATE,
                 ),
+                array(
+                    "filename" => "php-debug-pack-$PHP_5_VERSION-nts-Win32.zip",
+                    "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
+                    "md5"      => $PHP_5_MD5["nts.debugpack"],
+                    "date"     => $PHP_5_DATE,
+                ),
+
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Non-thread-safe Win32 binaries",
