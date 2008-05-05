@@ -27,6 +27,7 @@ function download_file($mirror, $file)
     
     // No downloadable file found
     if ($found === FALSE) {
+        status_header(404);
         site_header("Download not found");
         
         // If user comes from a mirror selection page, provide a backlink
