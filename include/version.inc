@@ -23,11 +23,11 @@ $PHP_5_MD5     = array(
                        "tar.bz2"       => "7380ffecebd95c6edb317ef861229ebd",
                        "tar.gz"        => "1720f95f26c506338f0dba3a51906bbd",
                        "zip"           => "c7e5010114f58282858d7d78e6509cdc",
-                       "installer"     => "afd3c7e2c51313da478137df7badcfe0",
+                       "installer"     => "f9396b654721d9a18c95ea6412c3d54e",
                        "pecl.zip"      => "f0e7b245589d705eef731b51142d5def",
                        "nts.zip"       => "1d3661a086f352ec7e318e7c2eeba4de",
                        "pecl.nts"      => "62b102221920092dfefc08756aa3e926",
-                       "nts.installer" => "739dc241e3259116c2193ac5fe0d5ca0",
+                       "nts.installer" => "96a2326b16bda488734d3956a48201b7",
                        "nts.debugpack" => "4c1fd96c8a78e1896d37da81467ff70d",
                        "debugpack"     => "24dde2726e3e0cefbb83c0c375ea1f84"
 );
@@ -101,7 +101,7 @@ $RELEASES = array(
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-Win32.zip",
-                    "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 binaries",
+                    "name"     => "PHP $PHP_5_VERSION Non-thread-safe zip package",
                     "md5"      => $PHP_5_MD5["nts.zip"],
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
