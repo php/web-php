@@ -35,6 +35,11 @@ $PHP_5_MD5     = array(
 $PHP_5_RC      = false;
 $PHP_5_RC_DATE = "10 April 2008";
 
+$PHP_5_WINDOWS_NOTE_MSI = "Update May 6th: Added missing XSL and IMAP extension";
+$PHP_5_WINDOWS_NOTE_ZIP = "Update May 3th: Added missing XSL and IMAP extension";
+$PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
+$PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
+
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.8";
 $PHP_4_DATE    = "03 January 2008";
@@ -70,51 +75,59 @@ $RELEASES = array(
                     "filename" => "php-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION zip package",
                     "md5"      => $PHP_5_MD5["zip"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_MSI,
+                    "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Win32 binaries",
                     "md5"      => $PHP_5_MD5["pecl.zip"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["debugpack"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 binaries",
                     "md5"      => $PHP_5_MD5["nts.zip"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ), 
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_MSI,
+                    "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
                 array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["nts.debugpack"],
-                    "date"     => $PHP_5_DATE,
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
 
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Non-thread-safe Win32 binaries",
                     "md5"      => $PHP_5_MD5["pecl.nts"],
-                    "date"     => $PHP_5_DATE,
-                    "note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_ssh2.dll, etc.)",
+                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
+                    //"note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_ssh2.dll, etc.)",
                 ),
             ),
         ),

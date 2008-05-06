@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-05-01T19:27:50-04:00</updated>
+  <updated>2008-05-06T09:56:38+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -14,7 +14,7 @@
     <title>PHP 5.2.6 Released</title>
     <id>http://www.php.net/archive/2008.php#id2008-05-01-1</id>
     <published>2008-05-01T19:27:58-04:00</published>
-    <updated>2008-05-01T19:27:58-04:00</updated>
+    <updated>2008-05-06T09:56:38+02:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
     <category term="releases" label="New PHP release"/>
     <link href="http://www.php.net/index.php#id2008-05-01-1" rel="alternate" type="text/html"/>
@@ -27,6 +27,10 @@
           <b>Security Enhancements and Fixes in PHP 5.2.6:</b>
         </p>
         <ul>        <li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>        <li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>        <li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>        <li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>        <li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>        <li>Upgraded bundled PCRE to version 7.6</li></ul>
+        <p><strong>Update (May 6th):</strong> The Windows installers were missing the <a href="/xsl">XSL</a>
+         and <a href="/imap">IMAP</a> extensions.</p>
+        <p><strong>Update (May 3rd):</strong> The Windows archives were missing the <a href="/xsl">XSL</a>
+         and <a href="/imap">IMAP</a> extensions.</p>
       </div>
     </content>
   </entry>
