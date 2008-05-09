@@ -23,7 +23,7 @@ $PHP_5_MD5     = array(
                        "tar.bz2"       => "7380ffecebd95c6edb317ef861229ebd",
                        "tar.gz"        => "1720f95f26c506338f0dba3a51906bbd",
                        "zip"           => "c7e5010114f58282858d7d78e6509cdc",
-                       "installer"     => "f9396b654721d9a18c95ea6412c3d54e",
+                       "installer"     => "94e551037e7c9c056f90179f351c0560",
                        "pecl.zip"      => "f0e7b245589d705eef731b51142d5def",
                        "nts.zip"       => "1d3661a086f352ec7e318e7c2eeba4de",
                        "pecl.nts"      => "62b102221920092dfefc08756aa3e926",
@@ -109,7 +109,7 @@ $RELEASES = array(
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe installer",
-                    "md5"      => $PHP_5_MD5["installer"],
+                    "md5"      => $PHP_5_MD5["nts.installer"],
                     "date"     => $PHP_5_WINDOWS_DATE_MSI,
                     "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
