@@ -32,10 +32,14 @@ $SIDEBAR_DATA='
 ';
 
 site_header("URL Howto");
+function a($href) {
+    global $MYSITE;
+	echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
+}
 
 ?>
 
-<h1>URL Howto</h1>
+<h1>Navigation tips&tricks</h1>
 
 <p>
  When using the PHP.net website, there is even no need to get to
@@ -81,6 +85,52 @@ site_header("URL Howto");
  <li>Feature pages, like <tt><?php echo $MYSITE; ?>safe_mode</tt></li>
  <li>Control structure pages, like <tt><?php echo $MYSITE; ?>while</tt></li>
  <li>Other language pages, like <tt><?php echo $MYSITE; ?>oop</tt></li>
+</ul>
+<p>
+ Since there are several manual pages that could potentionally match the query
+ (extension, class, function name..) you are encouraged to use their prefix/suffix:
+</p>
+<ul>
+ <li>Extension <abbr title="Table of Contents">TOC</abbr>:
+  <tt><?php echo $MYSITE ?>book.extname</tt>
+  (ex: <?php a("book.dom")?>).
+ </li>
+ <li>Extension intro pages:
+  <tt><?php echo $MYSITE ?>intro.extname</tt>
+  (ex: <?php a("intro.array") ?>).
+ </li>
+ <li>Extension setup <abbr title="Table of Contents">TOC</abbr>:
+  <tt><?php echo $MYSITE ?>extname.setup</tt>
+  (ex: <?php a("intl.setup") ?>).
+ </li>
+ <li>Extension install chapter:
+  <tt><?php echo $MYSITE ?>extname.installation</tt>
+  (ex: <?php a("apc.installation") ?>).
+ </li>
+ <li>Extension configuration:
+  <tt><?php echo $MYSITE ?>extname.configuration</tt>
+  (ex: <?php a("session.configuration") ?>).
+ </li>
+ <li>Extension resources:
+  <tt><?php echo $MYSITE ?>extname.resources</tt>
+  (ex: <?php a("mysql.resources") ?>).
+ </li>
+ <li>Extension constants:
+  <tt><?php echo $MYSITE ?>extname.constants</tt>
+  (ex: <?php a("image.constants") ?>).
+ </li>
+ <li>Class synopsis:
+  <tt><?php echo $MYSITE ?>class.classname</tt>
+  (ex: <?php a("class.xmlreader") ?>).
+ </li>
+ <li>Class method:
+  <tt><?php echo $MYSITE ?>classname.methodname</tt>
+  (ex: <?php a("pdo.query") ?>).
+ </li>
+ <li>Functions:
+  <tt><?php echo $MYSITE ?>function.functionname</tt>
+  (ex: <?php a("function.strpos") ?>).
+ </li>
 </ul>
 
 <p>
