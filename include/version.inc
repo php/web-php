@@ -36,7 +36,7 @@ $PHP_5_RC      = false;
 $PHP_5_RC_DATE = "10 April 2008";
 
 $PHP_5_WINDOWS_NOTE_MSI = "Update May 6th: Added missing XSL and IMAP extension";
-$PHP_5_WINDOWS_NOTE_ZIP = "Update May 3th: Added missing XSL and IMAP extension";
+$PHP_5_WINDOWS_NOTE_ZIP = "Update May 3rd: Added missing XSL and IMAP extension";
 $PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
 $PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
 
