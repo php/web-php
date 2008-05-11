@@ -27,9 +27,9 @@
           <b>Security Enhancements and Fixes in PHP 5.2.6:</b>
         </p>
         <ul>        <li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>        <li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>        <li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>        <li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>        <li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>        <li>Upgraded bundled PCRE to version 7.6</li></ul>
-        <p><strong>Update (May 6th):</strong> The Windows installers were missing the <a href="/xsl">XSL</a>
+        <p><strong>Update (<abbr class="updated" title="2008-05-06T09:56:38+02:00">May 6th</abbr>):</strong> The Windows installers were missing the <a href="/xsl">XSL</a>
          and <a href="/imap">IMAP</a> extensions.</p>
-        <p><strong>Update (May 3rd):</strong> The Windows archives were missing the <a href="/xsl">XSL</a>
+        <p><strong>Update (<abbr class="updated" title="2008-05-03T09:56:38+02:00">May 3rd</abbr>):</strong> The Windows archives were missing the <a href="/xsl">XSL</a>
          and <a href="/imap">IMAP</a> extensions.</p>
       </div>
     </content>
@@ -101,7 +101,7 @@
 	mentored by
 	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
         </ul>
-        <p><strong>Updated (May 11th):</strong>
+        <p><strong>Update (<abbr class="updated" title="2008-05-11T17:48:11+02:00">May 11th</abbr>):</strong>
          Ufortunately <span class="vcard"><span class="fn">Nicholas Sloan</span></span> had to drop out of the
          program, but he will be replaced by <span class="vcard"><span class="fn">Rudy Nappée</span></span> working on the same application.</p>
       </div>
