@@ -695,15 +695,15 @@ function print_news($news, $dog, $max = 5) {
         }
 
         // PHP4 strtotime() doesn't support RFC3339 timestamps
-        $updated = substr($item["updated"], 0, 10);
-        $newsdate = date("d-M-Y", strtotime($updated));
+        $published = substr($item["published"], 0, 10);
+        $newsdate = date("d-M-Y", strtotime($published));
 
         echo <<< EOT
 <div class="newsItem hentry{$vevent}">
     <div class="newsImage">{$image}</div>
     <h1 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h1>
     <div class="entry-content description">
-        <abbr class="updated newsdate" title="{$item["updated"]}">[{$newsdate}]</abbr>
+        <abbr class="published newsdate" title="{$item["published"]}">[{$newsdate}]</abbr>
         {$item["content"]}
     </div>
 </div>
