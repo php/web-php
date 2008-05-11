@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-05-06T09:56:38+02:00</updated>
+  <updated>2008-05-11T17:48:11+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -38,7 +38,7 @@
     <title>Google Summer of Code: php.net students</title>
     <id>http://www.php.net/archive/2008.php#id2008-04-22-1</id>
     <published>2008-04-22T20:04:48+02:00</published>
-    <updated>2008-04-22T20:04:48+02:00</updated>
+    <updated>2008-05-11T17:48:11+02:00</updated>
     <category term="frontpage" label="PHP.net frontpage news"/>
     <link href="http://www.php.net/index.php#id2008-04-22-1" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-04-22-1" rel="via" type="text/html"/>
@@ -60,8 +60,8 @@
 	</span>
 	mentored by
 	<span class="vcard"><span class="fn"><span class="given-name">Derick</span> <span class="family-name">Rethans</span></span></span></li>
-          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=74121AFCC0C7C341" class="url">PhD Improvements and Updates</a> by
-		<span class="fn"><span class="given-name">Nicholas</span> <span class="family-name">Sloan</span></span>,
+   <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=3D5258783F22F62C" class="url">PhD (PHP Docbook) Project</a> by
+		<span class="fn"><span class="given-name">Rudy</span> <span class="family-name">Nappée</span></span>,
 	</span>
 	mentored by
 	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span> <span class="family-name">Magnusson</span></span></span></li>
@@ -101,6 +101,9 @@
 	mentored by
 	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
         </ul>
+        <p><strong>Updated (May 11th):</strong>
+         Ufortunately <span class="vcard"><span class="fn">Nicholas Sloan</span></span> had to drop out of the
+         program, but he will be replaced by <span class="vcard"><span class="fn">Rudy Nappée</span></span> working on the same application.</p>
       </div>
     </content>
   </entry>
