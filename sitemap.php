@@ -12,7 +12,7 @@ site_header("Sitemap");
 <ul>
  <li><a href="/index.php">Home Page</a></li>
  <li><a href="/archive/index.php">News Archives</a></li>
- <li><a href="/news.rss">RSS newsfeed</a></li>
+ <li><a href="/feed.atom">Atom newsfeed</a></li>
  <li><a href="/conferences/">Conferences</a></li>
  <li><a href="/ChangeLog-4.php">PHP 4 ChangeLog</a></li>
  <li><a href="/ChangeLog-5.php">PHP 5 ChangeLog</a></li>
@@ -43,6 +43,7 @@ site_header("Sitemap");
      <li><a href="/docs.php">Online Documentation</a></li>
      <li><a href="/faq.php">Frequently Asked Questions</a></li>
      <li><a href="/download-docs.php">Download documentation</a></li>
+     <li><a href="/reST">Internal documentations for developers</a></li>
     </ul>
    </li>
    <li>Other support pages
