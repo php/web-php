@@ -3,13 +3,40 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-05-11T17:48:11+02:00</updated>
+  <updated>2008-05-14T16:19:11-05:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>Call for PUG, for elePHPants, 2008 generation</title>
+    <id>http://www.php.net/archive/2008.php#id2008-05-13-1</id>
+    <published>2008-05-13T11:56:55-07:00</published>
+    <updated>2008-05-14T16:19:11-05:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-06-01</php:finalTeaserDate>
+    <php:newsImage link="http://www.afup.org/" title="elePHPants">elephpants.png</php:newsImage>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-05-13-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="via" type="text/html"/>
+    <content type="html">
+      <p>The elePHPants are now ready to make their 2008 generation. 
+      PHP User groups, enthusiasts and companies that are interested in 
+      groups of elePHPants, shall join this year's herd.</p>
+      <p>
+ElePHPants are a great link of the community, happily promoting your favorite
+language in conferences, on work station, baby cribs and other unusual places.
+Production prices make it possible for groups to raise funds, entice membership
+or simply bring joy and PHP around. 
+    </p>
+      <p>
+Pre-register your <a href="http://www.nexen.net/index.php?option=com_elephpant&task=&langue=en&Itemid=317">herd of elePHPants</a>
+online, for big and small, 
+and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blue elePHPants</a>.
+    </p>
+    </content>
+  </entry>
   <entry>
     <title>PHP 5.2.6 Released</title>
     <id>http://www.php.net/archive/2008.php#id2008-05-01-1</id>
