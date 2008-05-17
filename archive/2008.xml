@@ -3,13 +3,71 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-05-14T16:19:11-05:00</updated>
+  <updated>2008-05-17T16:50:43+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>Open Source Developers' Conference 2008 - Sydney - Call for Papers</title>
+    <id>http://www.php.net/archive/2008.php#id2008-05-17-1</id>
+    <published>2008-05-17T16:50:56+02:00</published>
+    <updated>2008-05-17T16:50:56+02:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-06-30</php:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-05-17-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-05-17-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+     <div xmlns="http://www.w3.org/1999/xhtml">
+<p>
+ The Open Source Developers' Conference 2008 is a conference run by open
+ source developers, for developers and business people. It covers
+ numerous programming languages across a range of operating systems, and
+ related topics such as business processes, licensing, and strategy.
+ Talks vary from introductory pieces through to the deeply technical. It
+ is a great opportunity to meet, share, and learn with like-minded
+ individuals.
+</p>
+<p>
+ This year, the conference will be held in <span class="location">Sydney, Australia</span> during the
+ first week of December. If you are an Open Source maintainer, developer
+ or user, the organising committee would encourage you to submit a talk
+ proposal on open source tools, solutions, languages or technologies you
+ are working with.
+</p>
+<p>
+ For more details, see:
+ <a href="http://osdc.com.au/2008/papers/cfp.html">http://osdc.com.au/2008/papers/cfp.html</a>.
+</p>
+<p>
+ If you have any questions or require assistance with your submission,
+ please don't hesitate to ask!
+</p>
+<p>
+ We continue to recognise the increasing importance of Open Source
+ in providing a medium for collaboration between individuals,
+ researchers, business and government. In recognition of this and
+ ensure a high standard of presentations, we intend to peer-review
+ all submitted papers.
+</p>
+<p>
+ OSDC 2008 Sydney (Australia) - Key Program Dates:
+</p>
+<ol>
+ <li><abbr title="2008-04-28" class="dtstart">28 Apr</abbr> - Call for Papers</li>
+ <li><abbr title="2008-06-30" class="dtend">30 Jun</abbr> - Initial proposals (short abstract) due</li>
+ <li>21 Jul - Proposal acceptance</li>
+ <li>15 Sep - Accepted paper submissions</li>
+</ol>
+<p>
+ For all information, contacts and updates, see the OSDC conference
+ web site at <a href="http://osdc.com.au/2008/" class="url">http://osdc.com.au/2008/</a>.
+</p>
+     </div>
+    </content>
+  </entry>
   <entry>
     <title>Call for PUG, for elePHPants, 2008 generation</title>
     <id>http://www.php.net/archive/2008.php#id2008-05-13-1</id>
