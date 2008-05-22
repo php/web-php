@@ -416,6 +416,10 @@ dead domain 2007/02/07	   <li>
     <a href="http://zonaphp.com/">zonaphp.com</a><br />
     News and tutorials
    </li>
+   <li>
+   <a href="http://www.dirphp.com">dirphp.net</a><br />
+   A PHP resource directory for the spanish speaking people, programming articles and translated news.
+   </li>
   </ul>
  </li>
 
