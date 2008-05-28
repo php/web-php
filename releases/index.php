@@ -225,7 +225,7 @@ foreach($OLDRELEASES as $major => $a) {
 	if ($major != $latest) {
 		echo "\n<hr />\n";
 		if ($major == 4) {
-			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.2.</p>'."\n";
+			echo '<p>Support for PHP 4 has been <b style="color: red;">discontinued</b> since 2007-12-31. Please consider upgrading to PHP 5.</p>'."\n";
 		}
 	}
 
