@@ -259,11 +259,6 @@ if (isset($_POST['maillist'])) {
       'List for the authors of the PHP documentation with CVS commits',
       FALSE, TRUE, FALSE, "php.doc"
     ),
-    array (
-      'php-doc-chm', 'PHP CHM documentation list',
-      'List for developers of the Windows Help-format PHP documentation',
-      FALSE, FALSE, TRUE, "php.doc.chm"
-    ),
   );
 
 // Print out a table for a given list array
