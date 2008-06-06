@@ -177,6 +177,9 @@ function header_nocache()
 // Compatibility function to fetch data from external source
 function fetch_contents($url, $headers = false) {
     if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
+        $opts = array('user_agent'  => 'php.net',);
+
+        stream_context_get_default(array("http" => $opts));
         $data = @file_get_contents($url);
         if ($headers) {
             return $http_response_header;
@@ -191,6 +194,7 @@ function fetch_contents($url, $headers = false) {
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
         curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
+        curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
 
         $data = curl_exec($ch);
         curl_close($ch);
@@ -220,6 +224,7 @@ function fetch_contents($url, $headers = false) {
         }
         fputs($fd,"GET {$path} HTTP/1.0\r\n");
         fputs($fd,"Host: {$array["host"]}\r\n");
+        fputs($fd,"User-Agent: php.net\r\n");
         fputs($fd,"Connection: close\r\n\r\n");
 
         while($line = fgets($fd)) { 
