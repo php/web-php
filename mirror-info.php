@@ -55,7 +55,7 @@ function run_self_tests() {
 		return array(
 			"name" => "Apache manual alias",
 			"see"  => $MYSITE . "mirroring-troubles.php#manual-redirect",
-			"got"  => var_export($content),
+			"got"  => $content,
 		);
 	}
 
