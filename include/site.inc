@@ -182,12 +182,16 @@ function fetch_contents($url, $headers = false) {
         $opts    = array('user_agent'  => 'php.net');
 
         if (version_compare(PHP_VERSION, '5.1.0', '>')) {
-            $context = stream_context_get_defaul(array('http' => $opts));
+            $context = stream_context_get_default(array('http' => $opts));
         }
         elseif (version_compare(PHP_VERSION, '5.0.0', '>')) {
             $context = stream_context_create(array('http' => $opts));
         }
-        $data = @file_get_contents($url, false, $context);
+        if ($context) {
+            $data = @file_get_contents($url, false, $context);
+        } else {
+            $data = @file_get_contents($url, false);
+        }
 
         if ($headers) {
             return $http_response_header;
