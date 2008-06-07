@@ -177,12 +177,17 @@ function header_nocache()
 // Compatibility function to fetch data from external source
 function fetch_contents($url, $headers = false) {
 
-    if (version_compare(PHP_VERSION, '5.0.0', '>')) {
-        if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-            $opts    = array('user_agent'  => 'php.net');
-            $context = stream_context_create(array('http' => $opts));
-            $data    = @file_get_contents($url, false, $context);
+    if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
+        $context = null;
+        $opts    = array('user_agent'  => 'php.net');
+
+        if (version_compare(PHP_VERSION, '5.1.0', '>')) {
+            $context = stream_context_get_defaul(array('http' => $opts));
         }
+        elseif (version_compare(PHP_VERSION, '5.0.0', '>')) {
+            $context = stream_context_create(array('http' => $opts));
+        }
+        $data = @file_get_contents($url, false, $context);
 
         if ($headers) {
             return $http_response_header;
