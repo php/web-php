@@ -176,11 +176,14 @@ function header_nocache()
 
 // Compatibility function to fetch data from external source
 function fetch_contents($url, $headers = false) {
-    if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
-        $opts = array('user_agent'  => 'php.net',);
 
-        $context = stream_context_create(array('http' => $opts));
-        $data = @file_get_contents($url, false, $context);
+    if (version_compare(PHP_VERSION, '5.0.0', '>')) {
+        if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
+            $opts    = array('user_agent'  => 'php.net');
+            $context = stream_context_create(array('http' => $opts));
+            $data    = @file_get_contents($url, false, $context);
+        }
+
         if ($headers) {
             return $http_response_header;
         }
@@ -245,6 +248,7 @@ function fetch_contents($url, $headers = false) {
         return $data;
     }
 
+    // TODO: Log if we get here
     // Redirect to www.php.net ?
     return array("ERROR" => "Unable to find a way to retrieve data");
 }
