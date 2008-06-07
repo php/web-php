@@ -179,8 +179,8 @@ function fetch_contents($url, $headers = false) {
     if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
         $opts = array('user_agent'  => 'php.net',);
 
-        stream_context_get_default(array("http" => $opts));
-        $data = @file_get_contents($url);
+        $context = stream_context_create(array('http' => $opts));
+        $data = @file_get_contents($url, false, $context);
         if ($headers) {
             return $http_response_header;
         }
