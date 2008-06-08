@@ -197,6 +197,10 @@ function fetch_contents($url, $headers = false) {
             return $http_response_header;
         }
 
+        if (!$data) {
+            return array("ERROR" => "Unable to find a way to retrieve data with file_get_contents");
+        }
+
         return $data;
     }
 
@@ -221,6 +225,10 @@ function fetch_contents($url, $headers = false) {
                 }
             }
         }
+        if (!$data) {
+            return array("ERROR" => "Unable to find a way to retrieve data with curl");
+        }
+
         return $data;
     }
 
@@ -253,6 +261,9 @@ function fetch_contents($url, $headers = false) {
         if ($headers) {
             return $header;
         }
+        if (!$data) {
+            return array("ERROR" => "Unable to find a way to retrieve data with fsockopen");
+        }
 
         return $data;
     }
@@ -270,6 +281,9 @@ function fetch_header($url, $header) {
         $headers = get_headers($url, 1);
     } else {
         $data = fetch_contents($url, true);
+        if (isset($data["ERROR"])) {
+            return null;
+        }
         foreach($data as $line) {
             if (($pos = strpos($line, ":")) !== false) {
                 $headers[substr($line, 0, $pos)] = trim(substr($line, $pos+1));
@@ -282,6 +296,7 @@ function fetch_header($url, $header) {
         return null;
     }
     if (is_string($header)) {
+        $header = strtolower($header);
         $headers = array_change_key_case($headers, CASE_LOWER);
     }
 

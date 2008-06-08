@@ -50,8 +50,9 @@ function run_self_tests() {
 	global $MYSITE;
 	global $LAST_UPDATED, $sqlite, $mirror_stats, $md5_ok;
 
+	//$MYSITE = "http://sg.php.net/";
 	$content = fetch_contents($MYSITE . "manual/noalias.txt");
-	if (trim($content) !== 'manual-noalias') {
+	if (is_array($content) || trim($content) !== 'manual-noalias') {
 		return array(
 			"name" => "Apache manual alias",
 			"see"  => $MYSITE . "mirroring-troubles.php#manual-redirect",
