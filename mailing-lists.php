@@ -255,9 +255,19 @@ if (isset($_POST['maillist'])) {
 
     'PHP documentation mailing lists',
     array (
-      'phpdoc', 'PHP documentation list',
-      'List for the authors of the PHP documentation with CVS commits',
+      'phpdoc', 'Documentation discussion',
+      'List for discussing the PHP documentation',
       FALSE, TRUE, FALSE, "php.doc"
+    ),
+    array (
+      'doc-cvs', 'Documentation changes and commits',
+      'Changes to the documentation are posted here',
+      TRUE, TRUE, FALSE, "php.doc.cvs"
+    ),
+    array (
+      'doc-bugs', 'Documentation bugs',
+      'Documentation bug activity (translations, sources, and build system) are posted here',
+      TRUE, TRUE, FALSE, "php.doc.bugs"
     ),
   );
 
