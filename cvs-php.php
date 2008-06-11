@@ -64,7 +64,7 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
         $error .= "You did not fill the form out correctly. ";
     }
-    if (empty($_POST['group']) || !in_array($_POST['group'], array("php", "pear",))) {
+    if (empty($_POST['group']) || !in_array($_POST['group'], array("php", "pear","pecl",))) {
         $error .= "You did not fill out where to send the request. ";
     }
 
@@ -363,6 +363,7 @@ foreach ($purposes as $i => $p) { ?>
   <select name="group">
    <option value="php"  <?php if (!isset($_POST["group"]) || $_POST["group"] == "php") { echo 'selected="selected"'; } ?>>PHP Group</option>
    <option value="pear" <?php if (isset($_POST["group"]) && $_POST["group"] == "pear") { echo 'selected="selected"'; } ?>>PEAR Group</option>
+   <option value="pecl" <?php if (isset($_POST["group"]) && $_POST["group"] == "pecl") { echo 'selected="selected"'; } ?>>PEAR Group</option>
   </select>
  </td>
 </tr>
