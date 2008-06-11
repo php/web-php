@@ -62,7 +62,10 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
         $error .= "You must supply a proper email address. ";
     }
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
-        $error .= "You did not fill the form out correctly";
+        $error .= "You did not fill the form out correctly. ";
+    }
+    if (empty($_POST['group']) || !in_array($_POST['group'], array("php", "pear",))) {
+        $error .= "You did not fill out where to send the request. ";
     }
 
     // Post the request if there is no error
@@ -76,6 +79,7 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
                 "passwd"   => $cleaned['password'],
                 "note"     => $cleaned['realpurpose'],
                 "yesno"    => $cleaned['yesno'],
+                "group"    => $cleaned['group'],
             )
         );
         // Error while posting
@@ -352,6 +356,15 @@ foreach ($purposes as $i => $p) { ?>
 <tr>
  <th class="subr">Did you fill this form out correctly (yes/no)?</th>
  <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
+</tr>
+<tr>
+ <th>Send this request to:</th>
+ <td>
+  <select name="group">
+   <option value="php"  <?php if (!isset($_POST["group"]) || $_POST["group"] == "php") { echo 'selected="selected"'; } ?>>PHP Group</option>
+   <option value="pear" <?php if (isset($_POST["group"]) && $_POST["group"] == "pear") { echo 'selected="selected"'; } ?>>PEAR Group</option>
+  </select>
+ </td>
 </tr>
 <tr>
  <th colspan="2"><input type="submit" value="Send Request" /></th>
