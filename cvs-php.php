@@ -4,6 +4,7 @@ $_SERVER['BASE_PAGE'] = 'cvs-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+
 $SIDEBAR_DATA = '
 <h3>More about CVS</h3>
 <p>
@@ -20,6 +21,14 @@ $SIDEBAR_DATA = '
 </p>
 ';
 site_header("Using CVS for PHP Development");
+
+$groups = array(
+  "php"  => "PHP Group",
+  "pear" => "PEAR Group",
+  "pecl" => "PECL Group",
+  "doc"  => "Doc Group",
+);
+
 ?>
 
 <h1>Using CVS for PHP Development</h1>
@@ -64,7 +73,7 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
         $error .= "You did not fill the form out correctly. ";
     }
-    if (empty($_POST['group']) || !in_array($_POST['group'], array("php", "pear","pecl",))) {
+    if (empty($_POST['group']) || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. ";
     }
 
@@ -361,9 +370,12 @@ foreach ($purposes as $i => $p) { ?>
  <th>Send this request to:</th>
  <td>
   <select name="group">
-   <option value="php"  <?php if (!isset($_POST["group"]) || $_POST["group"] == "php") { echo 'selected="selected"'; } ?>>PHP Group</option>
-   <option value="pear" <?php if (isset($_POST["group"]) && $_POST["group"] == "pear") { echo 'selected="selected"'; } ?>>PEAR Group</option>
-   <option value="pecl" <?php if (isset($_POST["group"]) && $_POST["group"] == "pecl") { echo 'selected="selected"'; } ?>>PEAR Group</option>
+<?php
+foreach($groups as $group => $name) {
+  $selected = (isset($_POST["group"]) && $_POST["group"] == $group) ? ' selected="selected"' : '';
+  echo "<option value='$group'$selected>$name</option>\n";
+}
+?>
   </select>
  </td>
 </tr>
