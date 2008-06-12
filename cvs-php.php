@@ -105,8 +105,18 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
 ?>
 <p>
  Thank you. Your request has been sent. You should hear something within the
- next week or so. If you haven't heard anything by then, send an email to <a
- href="mailto:group@php.net">group@php.net</a> to let us know that we've
+ next week or so. If you haven't heard anything by around <i><?php echo date('r'); ?></i>
+ then please send an email to the appropriate <a href="/mailing-lists.php">mailing list</a>:
+</p>
+<ul>
+ <li>Internals:     <a href="mailto:internals@lists.php.net">internals@lists.php.net</a></li>
+ <li>Documentation: <a href="mailto:phpdoc@lists.php.net">phpdoc@lists.php.net</a></li>
+ <li>PECL:          <a href="mailto:pecl-dev@lists.php.net">pecl-dev@lists.php.net</a></li>
+ <li>PEAR:          <a href="mailto:pear-dev@lists.php.net">pear-dev@lists.php.net</a></li>
+ <li>Other:         <a href="mailto:group@php.net">group@php.net</a></li>
+</ul>
+<p>
+ This is to let us know that we've
  forgotten you, but you haven't forgotten us! It happens. There's several of
  us, and sometimes we think that someone else has taken care of your request,
  and they think that we took care of it. Sorry. You can also speed up the
@@ -315,6 +325,10 @@ EOT;
  CVS account, then you don't! If an existing CVS account holder suggested you
  request an account, please mention their CVS id in the request.
 </p>
+<p class="warn">
+ Also note that information provided here will be sent to a public
+ mailing list.
+</p>
 
 <?php
 } // endif: no data submitted
@@ -367,7 +381,7 @@ foreach ($purposes as $i => $p) { ?>
  <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
 </tr>
 <tr>
- <th>Send this request to:</th>
+ <th>Type of initial karma (who to send this request to):</th>
  <td>
   <select name="group">
 <?php
