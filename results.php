@@ -47,7 +47,8 @@ $url = "http://".$srch_host.$srch_rqst;
 
 $data = fetch_contents($url);
 if (is_array($data)) {
-  exit_with_pretty_error("Search error", "Internal error", "This mirror does not support searches, please report this error to <a href='/contact'>our webmasters</a>");
+  $comment = '<!-- ' .$data["ERROR"]. '-->';
+  exit_with_pretty_error("Search error", "Internal error", "This mirror does not support searches, please report this error to <a href='/contact'>our webmasters</a>" . $comment);
 }
 $res = unserialize($data);
 
