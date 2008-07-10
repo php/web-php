@@ -3,13 +3,32 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-05-17T16:50:43+02:00</updated>
+  <updated>2008-07-10T22:29:39+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>php|works CfP Announced!</title>
+    <id>http://www.php.net/archive/2008.php#id2008-07-10-1</id>
+    <published>2008-07-10T22:29:53+02:00</published>
+    <updated>2008-07-10T22:29:53+02:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-07-25</php:finalTeaserDate>
+    <category term="cfp" label="Call for Papers"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-07-10-1" rel="alternate" type="text/html"/>
+    <php:newsImage xmlns="http://php.net/ns/news" link="http://phpworks.mtacon.com/c/p/phpworks,cfp" title="php|works">phpworks2008.png</php:newsImage>
+    <link href="http://phpworks.mtacon.com/c/p/phpworks,cfp" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>php|works 2008 will be held November 12-14, 2008 in Atlanta, GA. Our Call for Papers is <abbr title="2008-07-10T22:34:04+02:00" class="dtstart">now open</abbr>, but the deadline for submissions is <abbr title="2008-07-25T00:00:00+02:00" class="dtend">July 25, 2008</abbr>.</p>
+        <p>This year's php|works takes place concurrently with PyWorks 2008, MTA's new fall Python conference, organized by the publishers of Python Magazine, and attendees to both conferences will be able to attend talks from either.</p>
+        <p>This gives us a great opportunity to create cross-over talks to cover topics that bridge both worlds, enriching members of either communities and facilitating the cross-pollination of ideas. If you have a topic that fits the bill, or that could be equally interesting to both PHPers and Pythonistas, don't hesitate to propose it.</p>
+        <p>For more information about our Call for Papers, visit our site at <a href="http://phpworks.mtacon.com/c/p/phpworks,cfp">http://phpworks.mtacon.com/c/p/phpworks,cfp</a>.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Open Source Developers' Conference 2008 - Sydney - Call for Papers</title>
     <id>http://www.php.net/archive/2008.php#id2008-05-17-1</id>
@@ -20,8 +39,8 @@
     <link href="http://www.php.net/conferences/index.php#id2008-05-17-1" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-05-17-1" rel="via" type="text/html"/>
     <content type="xhtml">
-     <div xmlns="http://www.w3.org/1999/xhtml">
-<p>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
  The Open Source Developers' Conference 2008 is a conference run by open
  source developers, for developers and business people. It covers
  numerous programming languages across a range of operating systems, and
@@ -30,42 +49,42 @@
  is a great opportunity to meet, share, and learn with like-minded
  individuals.
 </p>
-<p>
+        <p>
  This year, the conference will be held in <span class="location">Sydney, Australia</span> during the
  first week of December. If you are an Open Source maintainer, developer
  or user, the organising committee would encourage you to submit a talk
  proposal on open source tools, solutions, languages or technologies you
  are working with.
 </p>
-<p>
+        <p>
  For more details, see:
  <a href="http://osdc.com.au/2008/papers/cfp.html">http://osdc.com.au/2008/papers/cfp.html</a>.
 </p>
-<p>
+        <p>
  If you have any questions or require assistance with your submission,
  please don't hesitate to ask!
 </p>
-<p>
+        <p>
  We continue to recognise the increasing importance of Open Source
  in providing a medium for collaboration between individuals,
  researchers, business and government. In recognition of this and
  ensure a high standard of presentations, we intend to peer-review
  all submitted papers.
 </p>
-<p>
+        <p>
  OSDC 2008 Sydney (Australia) - Key Program Dates:
 </p>
-<ol>
- <li><abbr title="2008-04-28" class="dtstart">28 Apr</abbr> - Call for Papers</li>
- <li><abbr title="2008-06-30" class="dtend">30 Jun</abbr> - Initial proposals (short abstract) due</li>
- <li>21 Jul - Proposal acceptance</li>
- <li>15 Sep - Accepted paper submissions</li>
-</ol>
-<p>
+        <ol>
+          <li><abbr title="2008-04-28" class="dtstart">28 Apr</abbr> - Call for Papers</li>
+          <li><abbr title="2008-06-30" class="dtend">30 Jun</abbr> - Initial proposals (short abstract) due</li>
+          <li>21 Jul - Proposal acceptance</li>
+          <li>15 Sep - Accepted paper submissions</li>
+        </ol>
+        <p>
  For all information, contacts and updates, see the OSDC conference
  web site at <a href="http://osdc.com.au/2008/" class="url">http://osdc.com.au/2008/</a>.
 </p>
-     </div>
+      </div>
     </content>
   </entry>
   <entry>
@@ -79,22 +98,22 @@
     <link href="http://www.php.net/conferences/index.php#id2008-05-13-1" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="via" type="text/html"/>
     <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <p>The elePHPants are now ready to make their 2008 generation. 
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The elePHPants are now ready to make their 2008 generation. 
       PHP User groups, enthusiasts and companies that are interested in 
       groups of elePHPants, shall join this year's herd.</p>
-      <p>
+        <p>
 ElePHPants are a great link of the community, happily promoting your favorite
 language in conferences, on work station, baby cribs and other unusual places.
 Production prices make it possible for groups to raise funds, entice membership
 or simply bring joy and PHP around. 
     </p>
-      <p>
+        <p>
 Pre-register your <a href="http://www.nexen.net/elephpant/2008_en.php">herd of elePHPants</a>
 online, for big and small, 
 and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blue elePHPants</a>.
     </p>
-    </div>
+      </div>
     </content>
   </entry>
   <entry>
@@ -113,7 +132,14 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
         <p>
           <b>Security Enhancements and Fixes in PHP 5.2.6:</b>
         </p>
-        <ul>        <li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>        <li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>        <li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>        <li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>        <li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>        <li>Upgraded bundled PCRE to version 7.6</li></ul>
+        <ul>
+          <li>Fixed possible stack buffer overflow in the FastCGI SAPI identified by Andrei Nigmatulin.</li>
+          <li>Fixed integer overflow in printf() identified by Maksymilian Aciemowicz.</li>
+          <li>Fixed security issue detailed in CVE-2008-0599 identified by Ryan Permeh.</li>
+          <li>Fixed a safe_mode bypass in cURL identified by Maksymilian Arciemowicz.</li>
+          <li>Properly address incomplete multibyte chars inside escapeshellcmd() identified by Stefan Esser.</li>
+          <li>Upgraded bundled PCRE to version 7.6</li>
+        </ul>
         <p><strong>Update (<abbr class="updated" title="2008-05-06T09:56:38+02:00">May 6th</abbr>):</strong> The Windows installers were missing the <a href="/xsl">XSL</a>
          and <a href="/imap">IMAP</a> extensions.</p>
         <p><strong>Update (<abbr class="updated" title="2008-05-03T09:56:38+02:00">May 3rd</abbr>):</strong> The Windows archives were missing the <a href="/xsl">XSL</a>
@@ -138,55 +164,55 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 </p>
         <ul>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=73D5F5E282F9163F" class="url">Zend LLVM Extension</a> by
-		<span class="fn"><span class="given-name">Joonas</span> <span class="family-name">Govenius</span></span>,
+		<span class="fn"><span class="given-name">Joonas</span><span class="family-name">Govenius</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Nuno</span> <span class="family-name">Lopes</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Nuno</span><span class="family-name">Lopes</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=12A8D27646C9771A" class="url">PHP Optimizer</a> by
-		<span class="fn"><span class="given-name">Samuel</span> <span class="family-name">Graham Kelly IV</span></span>,
+		<span class="fn"><span class="given-name">Samuel</span><span class="family-name">Graham Kelly IV</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Derick</span> <span class="family-name">Rethans</span></span></span></li>
-   <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=3D5258783F22F62C" class="url">PhD (PHP Docbook) Project</a> by
-		<span class="fn"><span class="given-name">Rudy</span> <span class="family-name">Nappée</span></span>,
+	<span class="vcard"><span class="fn"><span class="given-name">Derick</span><span class="family-name">Rethans</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=3D5258783F22F62C" class="url">PhD (PHP Docbook) Project</a> by
+		<span class="fn"><span class="given-name">Rudy</span><span class="family-name">Nappée</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span> <span class="family-name">Magnusson</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span><span class="family-name">Magnusson</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=93F63E6C761134FB" class="url">Replace auto* with CMake</a> by
-		<span class="fn"><span class="given-name">Alejandro Leiva</span> <span class="family-name">Rojas</span></span>, 
+		<span class="fn"><span class="given-name">Alejandro Leiva</span><span class="family-name">Rojas</span></span>, 
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Pierre A.</span> <span class="family-name">Joye</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Pierre A.</span><span class="family-name">Joye</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=F74E5E31D92F95D0" class="url">gsoc:2008 - XDebug</a> by
-		<span class="fn"><span class="given-name">Chung-Yang</span> <span class="family-name">Lee</span></span>,
+		<span class="fn"><span class="given-name">Chung-Yang</span><span class="family-name">Lee</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">David</span> <span class="family-name">Coallier</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">David</span><span class="family-name">Coallier</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=435245F847240738" class="url">Rewrite the run-tests.php script</a> by
-		<span class="fn"><span class="given-name">Cesar</span> <span class="family-name">Montedonico</span></span>,
+		<span class="fn"><span class="given-name">Cesar</span><span class="family-name">Montedonico</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Travis</span> <span class="family-name">Swicegood</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Travis</span><span class="family-name">Swicegood</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=837287100B93044F" class="url">PHP Bindings for Cairo</a> by
-		<span class="fn"><span class="given-name">Akshat</span> <span class="family-name">Gupta</span></span>,
+		<span class="fn"><span class="given-name">Akshat</span><span class="family-name">Gupta</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Anant</span> <span class="family-name">Narayanan</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Anant</span><span class="family-name">Narayanan</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=25AE6211DDEC86FD" class="url">Algorithm Optimizations</a> by
-		<span class="fn"><span class="given-name">Michal</span> <span class="family-name">Dziemianko</span></span>,
+		<span class="fn"><span class="given-name">Michal</span><span class="family-name">Dziemianko</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=5A442E6A7568434D" class="url">PECL, Website Improvements</a> by
-		<span class="fn"><span class="given-name">Barry</span> <span class="family-name">Carlyon</span></span>,
+		<span class="fn"><span class="given-name">Barry</span><span class="family-name">Carlyon</span></span>,
 	</span>
 	mentored by 
-	<span class="vcard"><span class="fn"><span class="given-name">Helgi Þormar</span> <span class="family-name">Þorbjörnsson</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Helgi Þormar</span><span class="family-name">Þorbjörnsson</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=AD4803BA9A70BCB3" class="url">Implement Unicode into PHP 6</a> by
-		<span class="fn"><span class="given-name">Henrique do Nascimento</span> <span class="family-name">Angelo</span></span>,
+		<span class="fn"><span class="given-name">Henrique do Nascimento</span><span class="family-name">Angelo</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
         </ul>
         <p><strong>Update (<abbr class="updated" title="2008-05-11T17:48:11+02:00">May 11th</abbr>):</strong>
          Unfortunately <span class="vcard"><span class="fn">Nicholas Sloan</span></span> had to drop out of the
