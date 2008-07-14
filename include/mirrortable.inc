@@ -87,10 +87,14 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
         // Print out a country header, if a new country is found
         if ($prevcc != $country && $country != "xx") {
             echo "  <tr>\n   <th class=\"flag\">";
-            print_image(
-                'flags/' . strtolower($country) . '.png',
-                $COUNTRIES[$country]
-            );
+            if ($country == 'xxx') {
+              echo "&nbsp;";
+            } else {
+              print_image(
+                  'flags/' . strtolower($country) . '.png',
+                  $COUNTRIES[$country]
+              );
+            }
             echo "</th>\n" .
                  '   <th class="ch" colspan="' . $cnf['datacols'] . '">' .
                  $COUNTRIES[$country] . "</th>\n  </tr>\n";
