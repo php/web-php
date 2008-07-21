@@ -188,55 +188,55 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 </p>
         <ul>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=73D5F5E282F9163F" class="url">Zend LLVM Extension</a> by
-		<span class="fn"><span class="given-name">Joonas</span><span class="family-name">Govenius</span></span>,
+		<span class="fn"><span class="given-name">Joonas</span> <span class="family-name">Govenius</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Nuno</span><span class="family-name">Lopes</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Nuno</span> <span class="family-name">Lopes</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=12A8D27646C9771A" class="url">PHP Optimizer</a> by
-		<span class="fn"><span class="given-name">Samuel</span><span class="family-name">Graham Kelly IV</span></span>,
+		<span class="fn"><span class="given-name">Samuel</span> <span class="family-name">Graham Kelly IV</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Derick</span><span class="family-name">Rethans</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Derick</span> <span class="family-name">Rethans</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=3D5258783F22F62C" class="url">PhD (PHP Docbook) Project</a> by
-		<span class="fn"><span class="given-name">Rudy</span><span class="family-name">Nappée</span></span>,
+		<span class="fn"><span class="given-name">Rudy</span> <span class="family-name">Nappée</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span><span class="family-name">Magnusson</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Hannes</span> <span class="family-name">Magnusson</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=93F63E6C761134FB" class="url">Replace auto* with CMake</a> by
-		<span class="fn"><span class="given-name">Alejandro Leiva</span><span class="family-name">Rojas</span></span>, 
+		<span class="fn"><span class="given-name">Alejandro Leiva</span> <span class="family-name">Rojas</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Pierre A.</span><span class="family-name">Joye</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Pierre A.</span> <span class="family-name">Joye</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=F74E5E31D92F95D0" class="url">gsoc:2008 - XDebug</a> by
-		<span class="fn"><span class="given-name">Chung-Yang</span><span class="family-name">Lee</span></span>,
+		<span class="fn"><span class="given-name">Chung-Yang</span> <span class="family-name">Lee</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">David</span><span class="family-name">Coallier</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">David</span> <span class="family-name">Coallier</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=435245F847240738" class="url">Rewrite the run-tests.php script</a> by
-		<span class="fn"><span class="given-name">Cesar</span><span class="family-name">Montedonico</span></span>,
+		<span class="fn"><span class="given-name">Cesar</span> <span class="family-name">Montedonico</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Travis</span><span class="family-name">Swicegood</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Travis</span> <span class="family-name">Swicegood</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=837287100B93044F" class="url">PHP Bindings for Cairo</a> by
-		<span class="fn"><span class="given-name">Akshat</span><span class="family-name">Gupta</span></span>,
+		<span class="fn"><span class="given-name">Akshat</span> <span class="family-name">Gupta</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Anant</span><span class="family-name">Narayanan</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Anant</span> <span class="family-name">Narayanan</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=25AE6211DDEC86FD" class="url">Algorithm Optimizations</a> by
-		<span class="fn"><span class="given-name">Michal</span><span class="family-name">Dziemianko</span></span>,
+		<span class="fn"><span class="given-name">Michal</span> <span class="family-name">Dziemianko</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
           <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=5A442E6A7568434D" class="url">PECL, Website Improvements</a> by
-		<span class="fn"><span class="given-name">Barry</span><span class="family-name">Carlyon</span></span>,
-	</span>
-	mentored by 
-	<span class="vcard"><span class="fn"><span class="given-name">Helgi Þormar</span><span class="family-name">Þorbjörnsson</span></span></span></li>
-          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=AD4803BA9A70BCB3" class="url">Implement Unicode into PHP 6</a> by
-		<span class="fn"><span class="given-name">Henrique do Nascimento</span><span class="family-name">Angelo</span></span>,
+		<span class="fn"><span class="given-name">Barry</span> <span class="family-name">Carlyon</span></span>,
 	</span>
 	mentored by
-	<span class="vcard"><span class="fn"><span class="given-name">Scott</span><span class="family-name">MacVicar</span></span></span></li>
+	<span class="vcard"><span class="fn"><span class="given-name">Helgi Þormar</span> <span class="family-name">Þorbjörnsson</span></span></span></li>
+          <li><span class="vcard"><a href="http://code.google.com/soc/2008/php/appinfo.html?csaid=AD4803BA9A70BCB3" class="url">Implement Unicode into PHP 6</a> by
+		<span class="fn"><span class="given-name">Henrique do Nascimento</span> <span class="family-name">Angelo</span></span>,
+	</span>
+	mentored by
+	<span class="vcard"><span class="fn"><span class="given-name">Scott</span> <span class="family-name">MacVicar</span></span></span></li>
         </ul>
         <p><strong>Update (<abbr class="updated" title="2008-05-11T17:48:11+02:00">May 11th</abbr>):</strong>
          Unfortunately <span class="vcard"><span class="fn">Nicholas Sloan</span></span> had to drop out of the
