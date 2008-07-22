@@ -139,6 +139,10 @@ if (isset($_POST['maillist'])) {
   a single line.
  </li>
  <li>
+  Be sure to click <strong>Reply-All</strong> to reply to list. Clicking
+  <strong>Reply</strong> will email the author of the message privately.
+ </li>
+ <li>
   No attachments please, just post a URL if you want someone to
   look at something.
  </li>
