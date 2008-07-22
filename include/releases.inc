@@ -1,6 +1,6 @@
 <?php
 $OLDRELEASES = array (
-  5 =>
+  5 => 
   array (
     '5.2.5' => 
     array (
@@ -40,7 +40,7 @@ $OLDRELEASES = array (
         'English' => '/releases/5_2_5.php',
       ),
       'museum' => false,
-    ), 
+    ),
     '5.2.4' => 
     array (
       'date' => '30 August 2007',
@@ -690,6 +690,42 @@ $OLDRELEASES = array (
   ),
   4 => 
   array (
+    '4.4.8' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/4_4_8.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.8.tar.bz2',
+          'name' => 'PHP 4.4.8 (tar.bz2)',
+          'md5' => 'ed31e77414e0331e787487b53732dbca',
+          'date' => '03 January 2008',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-4.4.8.tar.gz',
+          'name' => 'PHP 4.4.8 (tar.gz)',
+          'md5' => '8ad5d1ca793d55b24cd82e591248c04e',
+          'date' => '03 January 2008',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.8-Win32.zip',
+          'name' => 'PHP 4.4.8 zip package',
+          'md5' => '09ffff4b1a54bbadb8fee6acd85a2c1f',
+          'date' => '12 Feb 2008',
+        ),
+      ),
+      'date' => '03 January 2008',
+      'museum' => false,
+    ),
     '4.4.7' => 
     array (
       'announcement' => 
