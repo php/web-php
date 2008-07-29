@@ -11,6 +11,35 @@
     <email>php-webmaster@lists.php.net</email>
   </author>
   <entry>
+    <title>TestFest 2008 wrap-up</title>
+    <id>http://www.php.net/archive/2008.php#id2008-07-30-1</id>
+    <published>2008-07-30T00:23:14+01:00</published>
+    <updated>2008-07-30T00:23:14+01:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <link href="http://www.php.net/index.php#id2008-07-30-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-07-30-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Overall 158 tests have been submitted as part of <a href="http://qa.php.net/testfest.php">TestFest 2008</a> since the launch of the <a href="http://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying phpt test file!</p>
+        <p>Our top submitter Felix has actually committed his last submissions himself since, based on the high quality of his submissions, he has been granted commit rights to the PHP repository. We have not heard back from all participants, but we encourage everybody to <a href="http://www.deshong.net/?p=76" target="_new">blog</a> about their experience and provide us with feedback on how to improve future events.</p>
+        <p>Now better late than never, here are the 10 winners of the promised <a  href="http://flickr.com/groups/elephpants/pool/">elePHPant</a> raffle sponsored by <a href="http://www.nexen.net">Nexen</a>. Note that Felix asked me not to include him in the raffle, since he is already herding quite a number of elePHPants at home.</p>
+        <ul>
+          <li>Eric Stewart</li>
+          <li>H&aring;vard Eide</li>
+          <li>Marc Veldman</li>
+          <li>Michelangelo van Dam</li>
+          <li>Rein Velt</li>
+          <li>Rob Young</li>
+          <li>Sami Greenbury</li>
+          <li>Sebastian Deutch</li>
+          <li>Sebastian Sch&uuml;mann</li>
+          <li>Stefan Koopmanschap</li>
+        </ul>
+        <p>I will provide Nexen with the email addresses of the winners, so that they can arrange to get the elePHPants shipped. Also for those people wondering, you can continue to submit tests on the <a href="http://testfest.php.net">TestFest submission site</a>. A bit thank you to all participants and TestFest organizers! Without the countless people that helped organize local events, implement the infrastructure and submissions reviewers, the TestFest would have obviously not worked out as well as it has. We will surely do similar events in the future based on the big success of TestFest 2008.</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <title>Manual restructure and license change</title>
     <id>http://www.php.net/archive/2008.php#id2008-07-29-1</id>
     <published>2008-07-29T23:50:37+02:00</published>
@@ -164,18 +193,18 @@
     <link href="http://www.php.net/archive/2008.php#id2008-05-13-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>The elePHPants are now ready to make their 2008 generation. 
-      PHP User groups, enthusiasts and companies that are interested in 
+        <p>The elePHPants are now ready to make their 2008 generation.
+      PHP User groups, enthusiasts and companies that are interested in
       groups of elePHPants, shall join this year's herd.</p>
         <p>
 ElePHPants are a great link of the community, happily promoting your favorite
 language in conferences, on work station, baby cribs and other unusual places.
 Production prices make it possible for groups to raise funds, entice membership
-or simply bring joy and PHP around. 
+or simply bring joy and PHP around.
     </p>
         <p>
 Pre-register your <a href="http://www.nexen.net/elephpant/2008_en.php">herd of elePHPants</a>
-online, for big and small, 
+online, for big and small,
 and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blue elePHPants</a>.
     </p>
       </div>
@@ -223,7 +252,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-	The PHP team is once again proud to participate in the 
+	The PHP team is once again proud to participate in the
 	<a href="http://code.google.com/soc/">Google Summer of Code</a>.
 	Ten students will "flip bits instead of burgers" this summer:
 </p>
@@ -310,7 +339,7 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
 		<abbr class="dtstart" title="2008-12-08">8th</abbr>-<abbr class="dtend" title="2008-12-10">9th december 2008</abbr>
 	</p>
       <p>Sessions will typically be 45 minutes long followed by a 10 minutes Q&amp;A session and up to
-    3 hours for workshops. Use the <a href="http://afup.org/pages/forumphp2008/appel-a-conferenciers.php">form on the site</a>, 
+    3 hours for workshops. Use the <a href="http://afup.org/pages/forumphp2008/appel-a-conferenciers.php">form on the site</a>,
     no email proposal will be accepted.</p>
       <p>
     Proposals will be reviewed after the deadline has passed. Additional information may be asked where needed. Proposals will be chosen according to their layout, relevancy for a professional audience and the overall homegeneity of the forum. Every candidate will be personnally notified of the status of their proposal. The decision is final. Priority will be given to sessions in French.
@@ -330,25 +359,25 @@ and join the <a href="http://www.flickr.com/photos/tags/elephpant/">world of blu
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>
-      	The DC PHP Developers Group recently announced Kshemendra Paul as a 
+      	The DC PHP Developers Group recently announced Kshemendra Paul as a
 		featured keynote speaker at the DC PHP Conference &amp; Expo,
-		<abbr class="dtstart" title="2008-06-02">June 2</abbr>-<abbr class="dtend" title="2008-06-05">4</abbr>, 
+		<abbr class="dtstart" title="2008-06-02">June 2</abbr>-<abbr class="dtend" title="2008-06-05">4</abbr>,
       	2008, at George Washington University in Washington, DC. Paul, chief
       	architect for the Office of Management and Budget Executive Office of
-      	the President, will be presenting on "Federal E-Government and 
-      	Enterprise Architecture Updates." 
+      	the President, will be presenting on "Federal E-Government and
+      	Enterprise Architecture Updates."
       	</p>
         <p>
-		Join hundreds of PHP practitioners, business managers, and government 
+		Join hundreds of PHP practitioners, business managers, and government
 		officials from around the world in the exchange of ideas and solutions
-		for building a better web application infrastructure. The DC PHP 
+		for building a better web application infrastructure. The DC PHP
 		conference will include tracks pertaining to business cases, best
 		practices, the art of PHP, PHP applications, PHP in the enterprise,
 		and Open Source. The full speaker schedule will be announced shortly.
 		</p>
         <p>
-		For more information about DC PHP Conference &amp; Expo 2008 and to register, 
-		please visit <a href="http://www.dcphpconference.com/">www.dcphpconference.com</a>. 
+		For more information about DC PHP Conference &amp; Expo 2008 and to register,
+		please visit <a href="http://www.dcphpconference.com/">www.dcphpconference.com</a>.
 		Early discounted registration rates affective until April 15, 2008
 		</p>
       </div>
