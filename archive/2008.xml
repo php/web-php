@@ -21,27 +21,27 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
        <p>
-        Few weeks ago the <a href="/manual">manual</a> was restructured,
-        hopefully improving navigation and making room for
+        A few weeks ago the <a href="/manual">manual</a> was restructured
+        to improve navigation and make room for
         <a href="/pdo.prepared-statements">per-extension chapters</a>
         and <a href="/haru.examples">usage examples</a> along with
         <a href="/class.xmlreader">improved documentation</a> for
         <a href="/oop5/">object oriented</a> extensions.
        </p>
        <p>
-        Most noticable changes are the <a href="/funcref">function reference</a>,
+        The most noticable changes are the <a href="/funcref">function reference</a>,
         <a href="/reserved.variables">predefined variables</a>,
         <a href="/context">context options and parameters</a> and
-        <a href="/reserved.exceptions">predefined exceptions</a> manul pages,
-        which <a href="/contact">we would really appreciate feedback</a> on.
+        <a href="/reserved.exceptions">predefined exceptions</a> manual pages,
+        for which <a href="/contact">we would really appreciate feedback</a> on.
        </p>
        <p>
-        Now with the upcomming PHP5.3 release, which introduces
+        The upcomming PHP5.3 release introduces
         <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
         such as <a href="/namespaces">namespaces</a>, closures,
         <a href="/lsb">late static bindings</a>, <a href="/intl">internationalization functions</a>,
-        <a href="/ini.sections">INI sections</a>, <a href="/phar">Phar</a>..., we would really
-        appreciate any and all help we can get improving the documentations.
+        <a href="/ini.sections">INI sections</a>, and <a href="/phar">Phar</a> among others.
+        We would really appreciate any and all help we can get improving the documentation.
        </p>
        <p>
         In related news, the manual was relicensed recently and is now
