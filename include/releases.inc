@@ -2,6 +2,99 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.2.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_6.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.6.tar.bz2',
+          'name' => 'PHP 5.2.6 (tar.bz2)',
+          'md5' => '7380ffecebd95c6edb317ef861229ebd',
+          'date' => '01 May 2008',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.6.tar.gz',
+          'name' => 'PHP 5.2.6 (tar.gz)',
+          'md5' => '1720f95f26c506338f0dba3a51906bbd',
+          'date' => '01 May 2008',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.6-Win32.zip',
+          'name' => 'PHP 5.2.6 zip package',
+          'md5' => 'c7e5010114f58282858d7d78e6509cdc',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.6-win32-installer.msi',
+          'name' => 'PHP 5.2.6 installer',
+          'md5' => '94e551037e7c9c056f90179f351c0560',
+          'date' => '6 May 2008',
+          'note' => 'Update May 6th: Added missing XSL and IMAP extension',
+        ),
+        2 => 
+        array (
+          'filename' => 'pecl-5.2.6-Win32.zip',
+          'name' => 'PECL 5.2.6 Win32 binaries',
+          'md5' => 'f0e7b245589d705eef731b51142d5def',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.6-Win32.zip',
+          'name' => 'PHP 5.2.6 Win32 Debug Pack',
+          'md5' => '24dde2726e3e0cefbb83c0c375ea1f84',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.6-nts-Win32.zip',
+          'name' => 'PHP 5.2.6 Non-thread-safe zip package',
+          'md5' => '1d3661a086f352ec7e318e7c2eeba4de',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-5.2.6-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.6 Non-thread-safe installer',
+          'md5' => '96a2326b16bda488734d3956a48201b7',
+          'date' => '6 May 2008',
+          'note' => 'Update May 6th: Added missing XSL and IMAP extension',
+        ),
+        6 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.6-nts-Win32.zip',
+          'name' => 'PHP 5.2.6 Win32 Debug Pack',
+          'md5' => '4c1fd96c8a78e1896d37da81467ff70d',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+        7 => 
+        array (
+          'filename' => 'pecl-5.2.6-nts-Win32.zip',
+          'name' => 'PECL 5.2.6 Non-thread-safe Win32 binaries',
+          'md5' => '62b102221920092dfefc08756aa3e926',
+          'date' => '3 May 2008',
+          'note' => 'Update May 3rd: Added missing XSL and IMAP extension',
+        ),
+      ),
+      'date' => '01 May 2008',
+      'museum' => false,
+    ),
     '5.2.5' => 
     array (
       'date' => '08 November 2007',
