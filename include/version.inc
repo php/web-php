@@ -32,8 +32,8 @@ $PHP_5_MD5     = array(
                        "debugpack"     => "24dde2726e3e0cefbb83c0c375ea1f84"
 );
 
-$PHP_5_RC      = false;
-$PHP_5_RC_DATE = "10 April 2008";
+$PHP_5_RC      = '5.3.0RC1';
+$PHP_5_RC_DATE = "31 July 2008";
 
 $PHP_5_WINDOWS_NOTE_MSI = "Update May 6th: Added missing XSL and IMAP extension";
 $PHP_5_WINDOWS_NOTE_ZIP = "Update May 3rd: Added missing XSL and IMAP extension";
@@ -105,7 +105,7 @@ $RELEASES = array(
                     "md5"      => $PHP_5_MD5["nts.zip"],
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
-                ), 
+                ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe installer",
@@ -162,4 +162,3 @@ $RELEASES = array(
         $PHP_4_RC => array(),
     ),
 );
-
