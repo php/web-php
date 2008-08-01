@@ -24,7 +24,11 @@
 
         <strong>THIS IS A DEVELEOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
 
-        <p>The purpose of this alpha release is to encourage users to not only actively participate in identifying bugs, but also in ensuring that all new features or necessary backwards compatibility breaks are noted in the documentation. Please report any findings to the <a href="mailto:qa-php@lists.php.net">QA mailinglist</a> or the <a href="http://bugs.php.net">bug tracker</a>.</p>
+        <p>The purpose of this alpha release is to encourage users to not only actively
+         participate in identifying bugs, but also in ensuring that all new features or
+         necessary backwards compatibility breaks are noted in the documentation. Please
+         report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
+         or the <a href="http://bugs.php.net">bug tracker</a>.</p>
 
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
