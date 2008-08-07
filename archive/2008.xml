@@ -3,13 +3,45 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-08-05T14:02:37+02:00</updated>
+  <updated>2008-08-07T20:12:25+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>PHP 4.4.9 released!</title>
+    <id>http://www.php.net/archive/2008.php#id2008-08-07-1</id>
+    <published>2008-08-07T20:12:42+02:00</published>
+    <updated>2008-08-07T20:12:42+02:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <category term="releases" label="New PHP release"/>
+    <link href="http://www.php.net/index.php#id2008-08-07-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-08-07-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The PHP development team would like to announce the immediate
+        availability of PHP 4.4.9. It continues to improve the security and the
+        stability of the 4.4 branch and all users are strongly encouraged to
+        upgrade to it as soon as possible. This release wraps up all the
+        outstanding patches for the PHP 4.4 series, and is therefore the
+        <b>last</b> PHP 4.4 release.</p>
+        <p>
+          <b>Security Enhancements and Fixes in PHP 4.4.9:</b>
+        </p>
+        <ul>
+        <li>Updated PCRE to version 7.7.</li>
+        <li>Fixed overflow in memnstr().</li>
+        <li>Fixed crash in imageloadfont when an invalid font is given.</li>
+        <li>Fixed open_basedir handling issue in the curl extension.</li>
+        <li>Fixed mbstring.func_overload set in .htaccess becomes global.</li>
+        </ul>
+        <p> For a full list of changes in PHP 4.4.9, see the <a
+        href="/ChangeLog-4.php#4.4.9">ChangeLog</a>.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>PHP 5.3 alpha1 released!</title>
     <id>http://www.php.net/archive/2008.php#id2008-08-01-1</id>
@@ -21,29 +53,26 @@
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>The PHP development team is proud to announce the <a href="http://downloads.php.net/johannes/">first alpha release</a> of the upcoming minor version update of PHP. <a href="http://downloads.php.net/pierre/">Windows binaries</a> will be available starting with alpha2 (intermediate snapshots available at <a href="http://snaps.php.net">snaps.php.net</a>). The new version PHP 5.3 is expected to improve stability and performance as well as add new language syntax and extensions. Several new features have already been documented in the <a href="http://php.net/docs.php">official documentation</a>, others are listed on the <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">wiki</a> in preparation of getting documented. Please also review the <a href="http://php.net/php5news">NEWS</a> file.</p>
-
         <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
-
         <p>The purpose of this alpha release is to encourage users to not only actively
          participate in identifying bugs, but also in ensuring that all new features or
          necessary backwards compatibility breaks are noted in the documentation. Please
          report any findings to the <a href="mailto:php-qa@lists.php.net">QA mailinglist</a>
          or the <a href="http://bugs.php.net">bug tracker</a>.</p>
-
         <p>There have been a great number of other additions and improvements, but here is a short overview of the most important changes:</p>
         <ul>
-            <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
-            <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
-            <li><a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a></li>
-            <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
-            <li>Optional cyclic garbage collection</li>
-            <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
-            <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
-            <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
+          <li><a href="http://php.net/language.namespaces">Namespaces</a> (documentation maybe out dated)</li>
+          <li><a href="http://php.net/oop5.late-static-bindings">Late static binding</a> and <a href="http://php.net/language.oop5.overloading">__callStatic</a></li>
+          <li>
+            <a href="http://wiki.php.net/rfc/closures">Lambda functions and closures</a>
+          </li>
+          <li>Addition of the <a href="http://php.net/book.intl">intl</a>, <a href="http://php.net/book.phar">phar</a> (phar is scheduled for some more work a head of alpha2), <a href="http://php.net/book.fileinfo">fileinfo </a> and <a href="http://php.net/book.sqlite3">sqlite3</a> extensions</li>
+          <li>Optional cyclic garbage collection</li>
+          <li>Optional support for the <a href="http://forge.mysql.com/wiki/PHP_MYSQLND">MySQLnd</a> replacement driver for libmysql</li>
+          <li>Windows older than Windows 2000 (Windows 98, NT4, etc.) are not supported anymore (<a href="http://wiki.php.net/internals/windows/releasenotes">details</a>)</li>
+          <li>New syntax features like <a href="http://php.net/language.types.string#language.types.string.syntax.nowdoc">NOWDOC</a>, limited GOTO, ternary short cut "?:"</li>
         </ul>
-
         <p>Several under the hood changes also require in depth testing with existing applications to ensure that any backwards compatibility breaks are minimized. This is especially important for users that require the undocumented Zend engine multibyte support.</p>
-
         <p>The current <a href="http://wiki.php.net/todo/php53">release plan</a> states that there will be alpha/beta/RC releases in 2-3 week intervals with an expected stable release of PHP 5.3 between mid September and mid October of 2008.</p>
       </div>
     </content>
@@ -60,7 +89,7 @@
       <div xmlns="http://www.w3.org/1999/xhtml">
         <p>Overall 158 tests have been submitted as part of <a href="http://qa.php.net/testfest.php">TestFest 2008</a> since the launch of the <a href="http://testfest.php.net">TestFest submission site</a> by 30 different people from people all over the world. Actually this is not counting the various submissions by existing core developers, who also took this opportunity to add some more tests. This has actually increased total <a href="http://gcov.php.net/" target="_new">test coverage</a> for ext/reflection, ext/dom and ext/exif by about 10% each. While the organization of the TestFest was a bit adhoc, there were numerous TestFest events in local user groups. So the number of people exposed to the PHP test framework is much greater. Hopefully this will lead to more people submitting bug reports with an accompanying <a href="http://qa.php.net/write-test.php">phpt</a> test file!</p>
         <p>Our top submitter Felix De Vliegher has actually committed his last submissions himself since, based on the high quality of his submissions, he has been granted commit rights to the PHP repository. We have not heard back from all participants, but we encourage everybody to <a href="http://www.deshong.net/?p=76" target="_new">blog</a> about their experience and provide us with feedback on how to improve future events.</p>
-        <p>Now better late than never, here are the 10 winners of the promised <a  href="http://flickr.com/groups/elephpants/pool/">elePHPant</a> raffle sponsored by <a href="http://www.nexen.net">Nexen</a>. Note that Felix asked me not to include him in the raffle, since he is already herding quite a number of elePHPants at home.</p>
+        <p>Now better late than never, here are the 10 winners of the promised <a href="http://flickr.com/groups/elephpants/pool/">elePHPant</a> raffle sponsored by <a href="http://www.nexen.net">Nexen</a>. Note that Felix asked me not to include him in the raffle, since he is already herding quite a number of elePHPants at home.</p>
         <ul>
           <li>Eric Stewart</li>
           <li>Håvard Eide</li>
@@ -87,7 +116,7 @@
     <link href="http://www.php.net/archive/2008.php#id2008-07-29-1" rel="via" type="text/html"/>
     <content type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">
-       <p>
+        <p>
         A few weeks ago the <a href="/manual">manual</a> was restructured
         to improve navigation and make room for
         <a href="/pdo.prepared-statements">per-extension chapters</a>
@@ -95,14 +124,14 @@
         <a href="/class.xmlreader">improved documentation</a> for
         <a href="/oop5/">object oriented</a> extensions.
        </p>
-       <p>
+        <p>
         The most noticable changes are the <a href="/funcref">function reference</a>,
         <a href="/reserved.variables">predefined variables</a>,
         <a href="/context">context options and parameters</a> and
         <a href="/reserved.exceptions">predefined exceptions</a> manual pages,
         for which <a href="/contact">we would really appreciate feedback</a> on.
        </p>
-       <p>
+        <p>
         The upcomming PHP5.3 release introduces
         <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">several major features</a>
         such as <a href="/namespaces">namespaces</a>, closures,
@@ -110,7 +139,7 @@
         <a href="/ini.sections">INI sections</a>, and <a href="/phar">Phar</a> among others.
         We would really appreciate any and all help we can get improving the documentation.
        </p>
-       <p>
+        <p>
         In related news, the manual was relicensed recently and is now
         covered by the
         <a href="http://creativecommons.org/licenses/by/3.0/" rel="license">CreativeCommons Attribution license</a>.

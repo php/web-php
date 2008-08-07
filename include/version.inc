@@ -41,15 +41,15 @@ $PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
 $PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
 
 /* PHP 4 Release */
-$PHP_4_VERSION = "4.4.8";
-$PHP_4_DATE    = "03 January 2008";
+$PHP_4_VERSION = "4.4.9";
+$PHP_4_DATE    = "07 August 2008";
 $PHP_4_MD5     = array(
-                       "tar.bz2"   => "ed31e77414e0331e787487b53732dbca",
-                       "tar.gz"    => "8ad5d1ca793d55b24cd82e591248c04e",
-//                     "zip"       => "e774e79530d610c58c5f2da433d14e0f",
+                       "tar.bz2"   => "2e3b2a0e27f10cb84fd00e5ecd7a1880",
+                       "tar.gz"    => "9bcc1aba50be0dfeeea551d018375548",
+                       "zip"       => "7395068d5489a9f8abf50c6e4b48622f",
 );
 
-$PHP_4_RC      = "4.4.9RC1";
+$PHP_4_RC      = false; //"4.4.9RC1";
 $PHP_4_RC_DATE = "22 July 2008";
 
 $RELEASES = array(
@@ -154,8 +154,8 @@ $RELEASES = array(
                 array(
                     "filename" => "php-$PHP_4_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_4_VERSION zip package",
-                    "md5"      => "09ffff4b1a54bbadb8fee6acd85a2c1f", //$PHP_4_MD5["zip"],
-                    "date"     => "12 Feb 2008", //$PHP_4_DATE,
+                    "md5"      => $PHP_4_MD5["zip"],
+                    "date"     => $PHP_4_DATE,
                 ),
             ),
         ),

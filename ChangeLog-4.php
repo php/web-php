@@ -11,6 +11,19 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr/>
 
+<a name="4.4.9"></a>
+<h3>Version 4.4.9</h3>
+<b>07-Aug-2008</b>
+<ul>
+<li>Updated PCRE to version 7.7.</li>
+<li>Fixed overflow in memnstr().</li>
+<li>Fixed crash in imageloadfont when an invalid font is given.</li>
+<li>Fixed open_basedir handling issue in the curl extension.</li>
+<li><?php bugfix(37421); ?> (mbstring.func_overload set in .htaccess becomes global).</li>
+</ul>
+
+<hr/>
+
 <a name="4.4.8"></a>
 <h3>Version 4.4.8</h3>
 <b>03-Jan-2008</b>
