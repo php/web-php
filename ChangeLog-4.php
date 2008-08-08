@@ -19,7 +19,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed overflow in memnstr().</li>
 <li>Fixed crash in imageloadfont when an invalid font is given.</li>
 <li>Fixed open_basedir handling issue in the curl extension.</li>
-<li><?php bugfix(37421); ?> (mbstring.func_overload set in .htaccess becomes global).</li>
+<li><?php bugfix(27421); ?> (mbstring.func_overload set in .htaccess becomes global).</li>
 </ul>
 
 <hr/>
