@@ -60,7 +60,7 @@ function commonHeader($title) { site_header($title); }
 
 function site_header($title = '', $config = array())
 {
-    global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS, $PGI;
+    global $EXPL_LANG, $SIDEBAR_DATA, $PAGE_COLUMNS, $PGI, $PRE_DATA;
     
     // Default to empty array if improper parameter passed
     if (!is_array($config)) { $config = array(); }
@@ -73,7 +73,6 @@ function site_header($title = '', $config = array())
     // sidebar and no left sidebar
     $PAGE_COLUMNS = 1;
     if (!empty($SIDEBAR_DATA))  { $PAGE_COLUMNS++; }
-    if (!empty($RSIDEBAR_DATA)) { $PAGE_COLUMNS++; }
     
     // Print out lang and charset headers
     if (!isset($config["lang"]))    { $config["lang"] = "en"; }
@@ -166,93 +165,83 @@ function site_header($title = '', $config = array())
  
 
     print <<<END_HEADER
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head{$profile}>
- <title>PHP{$title}</title>
- <style type="text/css" media="all">
-  @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
-  @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
- </style>
- <!--[if IE]><![if gte IE 6]><![endif]-->
-  <style type="text/css" media="print">
-   @import url("{$_SERVER['STATIC_ROOT']}/styles/print.css");
-  </style>
- <!--[if IE]><![endif]><![endif]-->
- <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
- <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
+  <title>PHP{$title}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}" />
+  <link type="text/css" media="screen" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/screen.css" />
+  <link type="text/css" media="print" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/print.css" />
+  <link type="text/css" media="handfield" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/handfield.css" />
+  <!--[if IE ]>
+    <link type="text/css" rel="stylesheet" media="screen" href="{$_SERVER['STATIC_ROOT']}/styles/ie.css" />
+  <![endif]-->
+  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
+  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>
+  {$base}{$meta}{$moreheadtags}
 </head>
-<body{$onload}>
 
-<div id="headnav">
- <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
- alt="PHP" width="120" height="67" /></a>
- <div id="headmenu">
-  <a href="/downloads.php">downloads</a> |
-  <a href="/docs.php">documentation</a> |
-  <a href="/FAQ.php">faq</a> |
-  <a href="/support.php">getting help</a> |
-  <a href="/mailing-lists.php">mailing lists</a> |
-  <a href="http://bugs.php.net/">reporting bugs</a> |
-  <a href="/sites.php">php.net sites</a> |
-  <a href="/links.php">links</a> |
-  <a href="/conferences/">conferences</a> |
-  <a href="/my.php">my php.net</a>
- </div>
-</div>
+<body id="homepage">
+ <ul id="root">
+  <li id="header">
+   <div class="content">
+    <h1><a href="/index.php">PHP: Hypertext Preprocessor</a></h1>
+    <form method="post" action="/search.php" id="topsearch">
+     <div id="search-box">
+      <label>Search for</label>
+      <span><input type="text" class="text" maxlength="20" name="pattern" /></span>
+      <label>in the</label>
+      <span>
+        <select name="show">
+          <option value="quickref" selected="selected">function list</option>
+          <option value="all"         >all php.net sites</option>
+          <option value="local"       >this mirror only</option>
+          <option value="manual"      >online documentation</option>
+          <option value="bugdb"       >bug database</option>
+          <option value="news_archive">Site News Archive</option>
+          <option value="changelogs"  >All Changelogs</option>
+          <option value="pear"        >just pear.php.net</option>
+          <option value="pecl"        >just pecl.php.net</option>
+          <option value="talks"       >just talks.php.net</option>
+          <option value="maillist"    >general mailing list</option>
+          <option value="devlist"     >developer mailing list</option>
+          <option value="phpdoc"      >documentation mailing list</option>
+        </select>
+      </span>
+      <span><input type="submit" class="button" value="Search" /></span>
+     </div>
+    </form>
+   </div>
+  </li><!--#header-->
+  <li id="main-menu">
+   <ul id="top-navigation">
+    <li class="first"><a href="/downloads.php">Downloads</a></li>
+    <li><a href="/docs.php">Documentation</a></li>
+    <li><a href="/FAQ.php">Faq</a></li>
+    <li><a href="/support.php">Getting Help</a></li>
+    <li><a href="/mailing-lists.php">Mailing Lists</a></li>
+    <li><a href="http://bugs.php.net">Reporting Bugs</a></li>
+    <li><a href="/sites.php">Php.net Sites</a></li>
+    <li><a href="/links.php">Links</a></li>
+    <li><a href="/conferences/">Conferences</a></li>
+    <li class="last"><a href="/my.php">My Php.net</a></li>
+   </ul>
+  </li><!--#main-menu-->
 
-<div id="headsearch">
- <form method="post" action="/search.php" id="topsearch">
-  <p>
-   <span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)">
-    <span class="shortkey">s</span>earch for
-   </span>
-   <input type="text" name="pattern" value="" size="30" accesskey="s" />
-   <span>in the</span>
-   <select name="show">
-    <option value="quickref" selected="selected">function list</option>
-    <option value="all"      >all php.net sites</option>
-    <option value="local"    >this mirror only</option>
-    <option value="manual"   >online documentation</option>
-    <option value="bugdb"    >bug database</option>
-    <option value="news_archive">Site News Archive</option>
-    <option value="changelogs">All Changelogs</option>
-    <option value="pear"     >just pear.php.net</option>
-    <option value="pecl"     >just pecl.php.net</option>
-    <option value="talks"    >just talks.php.net</option>
-    <option value="maillist" >general mailing list</option>
-    <option value="devlist"  >developer mailing list</option>
-    <option value="phpdoc"   >documentation mailing list</option>
-   </select>
-   <input type="image"
-          src="{$_SERVER['STATIC_ROOT']}/images/small_submit_white.gif"
-          class="submit" alt="search" />{$lang_input}
-  </p>
- </form>
-</div>
-
-<div id="layout_{$PAGE_COLUMNS}">{$layout_helper}
 END_HEADER;
+
+    echo $PRE_DATA;
 
     // Print out left column
     if ($PAGE_COLUMNS > 1) {
-        echo "\n <div id=\"leftbar\">\n$SIDEBAR_DATA\n </div>";
+echo '
+  <li id="content">
+   <ul id="content-columns">
+    <li id="left-column">
+     ' . $SIDEBAR_DATA . '
+    </li>';
     }
     
-    // Print out right column
-    if ($PAGE_COLUMNS > 2) {
-        echo "\n <div id=\"rightbar\">\n$RSIDEBAR_DATA\n </div>";
-    }
-
-    // Any layout workarounds?
-    if (!empty($config["layout_workaround"])) {
-        echo $config["layout_workaround"];
-    }
-
-    // Start main page content
-    echo "\n <div id=\"content\" class=\"$classname\"{$rtl}>\n";
 }
 
 // Stats pages still need this
@@ -260,17 +249,17 @@ function commonFooter() { site_footer(); }
 
 function site_footer($config = array())
 {
-    global $LAST_UPDATED, $PAGE_COLUMNS;
+    global $LAST_UPDATED, $PAGE_COLUMNS, $RSIDEBAR_DATA;
     
-    $stats         = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
+    $stats         = (have_stats() ? "\n <li><a href=\"/stats/\">stats</a></li>" : "");
     $rsslink       = (isset($config["rss"]) ?
-        "<a href=\"{$config["rss"]}\">RSS</a> |" :
+        "<li><a href=\"{$config["rss"]}\">RSS</a></li>" :
         "");
     $atomlink      = (isset($config["atom"]) ?
-        "<a href=\"{$config["atom"]}\">Atom</a> |" :
+        "<li><a href=\"{$config["atom"]}\">Atom</a></li>" :
         "");
     $viewsource    = (isset($_SERVER['BASE_PAGE']) ?
-        "<a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a> |" :
+        "<li><a href=\"/source.php?url=/{$_SERVER['BASE_PAGE']}\">show source</a></li>" :
         "");
     $provider_url  = mirror_provider_url();
     $provider_name = mirror_provider();
@@ -278,36 +267,40 @@ function site_footer($config = array())
         "<a href=\"/mirror.php\">This mirror</a> generously provided by:" :
         "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:"); 
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
-    $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
     //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
     
+    // Print out right column
+    if ($RSIDEBAR_DATA) {
+echo '
+    <li id="right-column">
+     ' . $RSIDEBAR_DATA . '
+     </li>';
+    }
+
     print <<<END_FOOTER
 
- </div>
- <div class="cleaner">&nbsp;</div>
-{$layout_helper}</div>
-
-<div id="footnav">
- $rsslink $atomlink $viewsource
- <a href="/credits.php">credits</a> |$stats
- <a href="/sitemap.php">sitemap</a> |
- <a href="/contact.php">contact</a> |
- <a href="/contact.php#ads">advertising</a> |
- <a href="/mirrors.php">mirror sites</a>
-</div>
-
-<div id="pagefooter">
- <div id="copyright">
-  <a href="/copyright.php">Copyright &copy; 2001-2008 The PHP Group</a><br />
-  All rights reserved.
- </div>
-
- <div id="thismirror">
-  {$mirror_text}
-  <a href="{$provider_url}">{$provider_name}</a><br />
-  Last updated: {$last_updated}
- </div>
-</div>
+      </ul> <!-- #content-columns -->
+    </li> <!-- #content -->
+  <li id="footer"><span class="corners-top"><span></span></span>
+   <div class="info">
+    <div id="copyright"><a href="/copyright.php">Copyright &copy; 2001-2008 The PHP Group</a><br />All rights reserved.</div>			
+    <div id="footer-menu">
+     <ul>  
+      $rsslink $atomlink $viewsource
+      <li><a href="/credits.php">Credits</a></li>
+      $stats
+      <li><a href="/stats/">Stats</a></li>
+      <li><a href="/sitemap.php">Sitemap</a></li>
+      <li><a href="/contact.php">Contact</a></li>
+      <li><a href="/contact.php#ads">Advertising</a></li>
+      <li class="last"><a href="/mirrors.php">Mirror sites</a></li>
+     </ul><br />
+     <small>{$mirror_text} <a href="{$provider_url}">{$provider_name}</a> Last updated: {$last_updated}</small>
+    </div>
+   </div>
+   <span class="corners-bottom"><span></span></span>
+  </li><!--#footer-->
+ </ul><!--#root-->
 
 </body>
 </html>
@@ -699,16 +692,14 @@ function print_news($news, $dog, $max = 5) {
         $newsdate = date("d-M-Y", strtotime($published));
 
         echo <<< EOT
-<div class="newsItem hentry{$vevent}">
-    <div class="newsImage">{$image}</div>
-    <h1 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h1>
-    <div class="entry-content description">
-        <abbr class="published newsdate" title="{$item["published"]}">[{$newsdate}]</abbr>
-        {$item["content"]}
+  <div class="block"><span class="corners-top"><span></span></span>
+    <div class="info hentry{$vevent}">
+      <h3 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h3>
+      <p class="news-date"><abbr class="published newsdate" title="{$item["published"]}">$newsdate</abbr></p>
+      <div class="newsImage">{$image}</div>
+      {$item["content"]}
     </div>
-</div>
-
-<hr />
+  </div><!--.block-->
 
 EOT;
     }

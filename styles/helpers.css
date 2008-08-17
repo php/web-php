@@ -1,0 +1,67 @@
+/* Code colors
+*******************************/
+.default { color:#0000BB; }
+.keyword { color:#009900; }
+.string  { color:#BB0000; }
+.comment { color:#FF9900; }
+
+/* Text size
+*******************************/
+.em18		{ font-size: 1.8em; }
+.em16		{ font-size: 1.6em; }
+.em12		{ font-size: 1.2em; }
+.em11		{ font-size: 1.1em; }
+.em10		{ font-size: 1.0em; }
+.em9		{ font-size: 0.9em; }
+
+/* Text decorations
+*******************************/
+.bold 		{ font-weight: bold; }
+.normal 	{ font-weight: normal; }
+.italic 	{ font-style: italic }
+.underline	{ text-decoration: underline; }
+
+/* Float
+*******************************/
+.f-right 	{ float: right; }
+.f-left 	{ float: left; }
+.f-none 	{ float: none; }
+
+/* Text align
+*******************************/
+.t-right 	{ text-align: right; }
+.t-left 	{ text-align: left; }
+.t-center 	{ text-align: center; }
+.t-justify 	{ text-align: justify; }
+
+/* Width
+*******************************/
+.w_25		{ width:2.5em; }
+.w_30		{ width:3em; }
+.w_50		{ width:5em; }
+.w_70	    { width:7em; }
+.w_100		{ width:10em; }
+.w_150		{ width:15em; }
+.w_200		{ width:20em; }
+.w_250		{ width:25em; }
+.w_300		{ width:30em; }
+
+/* Text transform
+*******************************/
+.lower		{ text-transform: lowercase; }
+.upper		{ text-transform: uppercase; }
+.capitalize	{ text-transform: capitalize; }
+
+/* Other
+*******************************/
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.zoom{
+    overflow:hidden;
+}

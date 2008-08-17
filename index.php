@@ -6,6 +6,7 @@
 
 /* ------------------------------------------------------------------------- */
 
+// Modified headers {{{
 // Get the modification date of this PHP file
 $timestamps = array(@getlastmod());
 
@@ -41,6 +42,7 @@ if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
 else {
     header("Last-Modified: " . $tsstring);
 }
+// }}}
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
@@ -49,8 +51,13 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
-// This goes to the left sidebar of the front page
+// This goes to the left sidebar of the front page {{{
 $SIDEBAR_DATA = '
+<div class="content">
+      <div class="block">
+    <span class="corners-top"><span></span></span>
+       <div class="info">
+
 <h3>What is PHP?</h3>
 <p>
  <acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
@@ -62,10 +69,11 @@ $SIDEBAR_DATA = '
  and the example archive sites and some of the other resources
  available in the <a href="/links.php">links section</a>.
 </p>
-<p>
- Ever wondered how popular PHP is? see the
- <a href="/usage.php">Netcraft Survey</a>.
-</p>
+</div>
+</div><!-- .block-->
+
+      <div class="block">
+       <div class="info">
 
 <h3><a href="/thanks.php">Thanks To</a></h3>
 <ul class="simple">
@@ -83,27 +91,21 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.rackspace.com/">Rackspace</a></li>
  <li><a href="http://www.eukhost.com/">EUKhost</a></li>
 </ul>
-<h3>Related sites</h3>
-<ul class="simple">
- <li><a href="http://www.apache.org/">Apache</a></li>
- <li><a href="http://www.mysql.com/">MySQL</a></li>
- <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
- <li><a href="http://www.zend.com/">Zend Technologies</a></li>
-</ul>
-<h3>Community</h3>
-<ul class="simple">
- <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
- <li><a href="http://www.ostg.com/">OSTG</a></li>
-</ul>
 
 <h3>Syndication</h3>
 <p>
  You can grab our news as an <a href="/feed.atom">Atom feed</a>.
-</p>';
+</p>
+      </div><!--.block-->
+      <span class="corners-bottom"><span></span></span>
+     </div>
+    </div>
+';
+// }}}
 
 $MIRROR_IMAGE = '';
 
-// Try to find a sponsor image in case this is an official mirror
+// Try to find a sponsor image in case this is an official mirror {{{
 if (is_official_mirror()) {
 
     // Iterate through possible mirror provider logo types in priority order
@@ -141,62 +143,102 @@ if (is_official_mirror()) {
             break;
         }
     }
-}
+} // }}}
 
-/* {{{ Generate latest release info */
-/* NOTE: You are editing the wrong file, you should be in include/version.inc
- *  For RC: See the $PHP_x_RC variable
- *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
- */
-$PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = $PHP_4_RC     = "";
-$rel          = $rc           = "";
-
+// {{{ Generate latest release info
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
-list($PHP_4_STABLE, ) = each($RELEASES[4]);
-
-$rel = <<< EOT
-  <div id="releaseBox">
-   <h4>Stable Releases</h4>
-   <ol id="releases">
-    <li class="php5"><a href="/downloads.php#v5">Current PHP 5 Stable: <span class="release">$PHP_5_STABLE</span></a></li>
-    <li class="php5"><a href="/downloads.php#v4">Historical PHP 4 Stable: <span class="release">$PHP_4_STABLE</span></a></li>
-   </ol>
-  </div>\n
-EOT;
+$PHP_5_RC = null;
 
 /* Do we have any release candidates to brag about? */
 if (count($RELEASES[5])>1) {
     list($PHP_5_RC, ) = each($RELEASES[5]);
-
-    if (!empty($PHP_5_RC)) {
-        $rc .= "    <li class=\"php5\"><a href=\"http://qa.php.net/\">Current PHP 5 RC: <span class=\"release\">$PHP_5_RC</span></a></li>\n";
-    }
-}
-if (count($RELEASES[4])>1) {
-    list($PHP_4_RC, ) = each($RELEASES[4]);
-
-    if (!empty($PHP_4_RC)) {
-        $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
-    }
 }
 
-if (!empty($rc)) {
-	$rel .= <<< EOT
-  <div id="candidateBox">
-   <h4><a href="http://qa.php.net/rc.php">Release Candidates</a></h4>
-   <ol id="candidates">
-$rc
-   </ol>
-  </div>\n
-EOT;
+
+$release_box = <<< RELEASE_DATA
+     <div class="content">
+      <div class="block releases"><span class="corners-top"><span></span></span>
+       <div class="info">
+        <h3>Stable releases</h3>
+        <p class="first">Current PHP 5 Stable: <a href="/ChangeLog-5.php#$PHP_5_STABLE"><strong>$PHP_5_STABLE</strong></a></p>
+        <p class="download-button"><a href="/downloads.php#v5"><span>Download</span></a></p>
+        <p class="top-border">Historical PHP Stable: <a href="/downloads.php#v4"><strong>4.4.9</strong></a></p>
+RELEASE_DATA;
+
+if ($PHP_5_RC) {
+  $release_box .= <<< RELEASE_DATA
+        <h4>Release Candidates</h4>
+        <p class="top-border"><a href="http://qa.php.net/">$PHP_5_RC</a></p>
+RELEASE_DATA;
 }
+$release_box .= <<< RELEASE_DATA
+        <p><a href="/downloads.php"><strong>Download area &raquo;</strong></a></p>
+       </div><!-- .info -->
+      </div><!--.block-->
+RELEASE_DATA;
 /* }}} */
 
-// Prepend mirror image & latest releases to sidebar text
-$RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
+// Generate the event box {{{
+$upcoming_events = <<< UPCOMING_EVENTS
+      <div class="block">
+      <div class="info">
+       <h3 class="upcoming-events">Upcoming Events</h3>
+       <div class="calendar"><span class="corners-top"><span></span></span>
+        <h4>Events Calendar</h4>
+        <form method="get" action="/cal.php">
+         <p>
+          <select class="month" name="cm">
+UPCOMING_EVENTS;
 
-// Write out common header
+$months = array(1 => "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+$current = date("m", $_SERVER["REQUEST_TIME"]);
+foreach($months as $n => $month) {
+  $upcoming_events .= "<option value='$n' ". ($n == $current ? 'selected="selected"' : '') .">$month</option>\n";
+}
+
+$upcoming_events .= <<< UPCOMING_EVENTS
+          </select>
+          <span><input type="submit" class="button" value="View" /></span>
+         </p>
+        </form>
+        <span class="corners-bottom"><span></span></span></div>
+        <p class="add-event"><a href="/submit-event.php"><strong>Add event &raquo;</strong></a></p>
+        <div class="events">
+         $EVENTS_DATA
+        </div>
+       </div><!-- .calendar -->
+      </div><!-- .info -->
+      </div><!-- .block -->
+UPCOMING_EVENTS;
+// }}}
+
+// Prepend mirror image & latest releases to sidebar text
+$RSIDEBAR_DATA = $MIRROR_IMAGE . $release_box . $upcoming_events;
+
+// Generate conference teaser {{{
+if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
+    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
+    $teaser = '  <li id="news-line"><span class="corners-top"><span></span></span><ul>' . "\n";
+    foreach($CONF_TEASER as $k => $a) {
+        if (is_array($a) && count($a)) {
+            $teaser .= "      <li><span>" . $categories[$k] . "</span>\n";
+            $teaser .= "      <ul>";
+            $count = 0;
+            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
+            foreach($a as $url => $title) {
+                if ($count++ >= 4) {
+                    break;
+                }
+                $teaser .= '       <li class="first last"><a href="' . $url. '">' . $title. '</a></li>' . "\n";
+            }
+            $teaser .= "      </ul>\n     </li>\n";
+        } // if set
+    }
+    $teaser .= '   </ul><span class="corners-bottom"><span></span></span></li><!-- #news-line -->'."\n";
+    $PRE_DATA = $teaser;
+} // }}}
+
+// Write out common header {{{
 site_header("Hypertext Preprocessor",
     array(
         'onload' => 'boldEvents();',
@@ -218,38 +260,21 @@ site_header("Hypertext Preprocessor",
         ),
     )
 );
+// }}}
 
-if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
-    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
-    echo '  <div id="confTeaser">' . "\n";
-    echo "   <table>\n";
-    foreach($CONF_TEASER as $k => $a) {
-        if (is_array($a) && count($a)) {
-            echo "    <tr>\n     <td valign='top' style='white-space: nowrap'>".$categories[$k].":</td>\n";
-            echo "     <td valign='top'>\n";
-            echo '      <ul class="' .$k. '">' . "\n";
-            $count = 0;
-            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
-            foreach($a as $url => $title) {
-                if ($count++ >= 4) {
-                    break;
-                }
-                echo '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
-            }
-            echo "      </ul>\n     </td>\n    </tr>\n";
-        } // if set
-    }
-    echo "   </table>\n  </div>\n\n<br />\n";
-}
-
-
+?>
+    <li id="mid-column">
+     <div class="content">
+<?php
 /* Where the h*ll did all the news go?
- * See archives/2007.xml
+ * See ./bin/createNewsEntry
  */
 print_news($NEWS_ENTRIES, "frontpage");
 ?>
+      <p class="t-center"><a href="/archive/index.php"><strong>News Archive</strong></a></p>
+     </div>
+    </li><!-- #mid-column-->
 
-<p class="center"><a href="/archive/index.php">News Archive</a></p>
 
 <?php
 site_footer(

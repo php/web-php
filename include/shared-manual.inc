@@ -26,10 +26,10 @@ function manual_setup($page_data)
 {
     global $PGI;
     $PGI = array_merge($PGI, $page_data); // merge for BC reasons
-    
+
     // Set base page for this manual page
     $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($PGI['head'][1]) . "/" . $PGI['this'][0];
- 
+
     // Set last modification time on the current manual page
     if (($time = @filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE'])) != false) {
         $PGI['lastmod'] = gmdate("D, d M Y", $time);
@@ -41,25 +41,24 @@ function manual_setup($page_data)
 // Print out HTTP headers and the HTML header
 // for this manual page, according to details
 // already set up
-// TODO: replace logo with logos/php-med-trans-light.gif on print
 function manual_header()
 {
     global $PGI, $LAST_UPDATED, $MYSITE;
-    
+
     // Get values out of the config array
     $title = $PGI['this'][1];
     list($encoding, $lang)  = $PGI['head'];
-    
+
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
     header("Vary: Cookie");
     //header("Content-type: text/html;charset=$encoding");
     header("Content-type: text/html;charset=utf-8");
     header("Content-language: $lang");
-   
+
     // Set base href for this manual page
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-    
+
     manual_sidebar();
     site_header("$title - Manual", array(
 		"link" => array(
@@ -72,7 +71,22 @@ function manual_header()
 		),
 		"profile" => "http://purl.org/NET/erdf/profile",
 	));
+    echo <<< MAIN_CONTENT
+        <li id="main-column">
+          <div class="content">
+MAIN_CONTENT;
+
     manual_navbar();
+
+echo <<< MAIN_CONTENT
+
+            <div class="block"><span class="corners-top"><span></span></span>
+              <div class="info">
+				<p class="func-date">Last updated: <span>{$PGI['lastmod']}</span></p>
+
+
+MAIN_CONTENT;
+
 }
 
 // Print out manual page footer
@@ -83,10 +97,18 @@ function manual_footer()
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
     
-    echo "<br /><br />";
+    echo "</div><!-- .info -->\n";
+    echo '<span class="corners-bottom"><span></span></span></div><!--.block-->';
+
+
     manual_notes();
-    echo "<br />";
+
     manual_navbar("bottom");
+	echo <<< MAIN_CONTENT
+		 </div> <!-- .content -->
+        </li><!-- #main-column-->
+MAIN_CONTENT;
+
     site_footer();
 }
 
@@ -100,7 +122,13 @@ function manual_sidebar()
     global $PGI, $SIDEBAR_DATA;
 
     // Start sidebar with its <div>
-    $BAR = "<!--UdmComment-->\n<ul class=\"toc\">\n";
+    $BAR = <<< SIDEBAR
+          <div class="content">
+            <div class="block"><span class="corners-top"><span></span></span>
+              <div class="info">
+                <h3>PHP Manual</h3>
+                <ul id="functions-list">
+SIDEBAR;
 
     // Link to manual home
     $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
@@ -117,8 +145,8 @@ function manual_sidebar()
 
     // Link to one page up if titles does not match
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
-        $BAR .= ' <li class="header up"><a href="' . $PGI['up'][0] . '">' .
-                $PGI['up'][1] . "</a></li>\n";
+        $BAR .= ' <li class="header up sel"><a href="' . $PGI['up'][0] . '">' .
+                $PGI['up'][1] . "</a><ul>\n";
     }
 
     // Print out one link for all siblings of this page
@@ -128,7 +156,7 @@ function manual_sidebar()
         list($url, $title) = $tocitem;
 
         // Get the proper classname to use for this <div>
-        $liclass = ($url == $PGI['this'][0]) ? ' class="active"' : "";
+        $liclass = ($url == $PGI['this'][0]) ? ' class="sel"' : "";
         
         // There are some very long function names, which
         // make the TOC too wide, so enable the browser to wrap them
@@ -144,8 +172,19 @@ function manual_sidebar()
                 make_link($url, $title) . "</li>\n";
     }
 
+	$close = "";
+    if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
+      $close = "</ul></li>";
+	}
     // Put navigation content into sidebar, end <div>
-    $SIDEBAR_DATA = "$BAR</ul><!--/UdmComment-->\n";
+    $SIDEBAR_DATA = <<< SIDEBAR
+     $BAR
+                </ul>
+              </div>
+            <span class="corners-bottom"><span></span></span></div><!--.block-->
+          </div><!-- .content -->
+SIDEBAR;
+
 }
 
 function manual_navbar($location = "top")
@@ -153,36 +192,27 @@ function manual_navbar($location = "top")
     global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $ACTIVE_ONLINE_LANGUAGES;
 
     // Start navbar with 
-    echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
+    echo <<< NAVBAR
+            <div class="adv-block"><span class="corners-top"><span></span></span>
+NAVBAR;
+ 
     if (isset($PGI['next']) && isset($PGI['next'][1])) {
-        echo "  <a href=\"{$PGI['next'][0]}\">" .
-             $PGI['next'][1] .
-             make_image('caret-r.gif', '&gt;') .
-             "</a>\n";
+        echo "  <a href=\"{$PGI['next'][0]}\" class=\"next\">" . $PGI['next'][1] . "</a>\n";
     }
-    echo " </span>\n <span class=\"prev\">\n";
     if (isset($PGI['prev']) && isset($PGI['prev'][1])) {
-        echo "  <a href=\"{$PGI['prev'][0]}\">" . 
-             make_image('caret-l.gif', '&lt;') .
-             $PGI['prev'][1] . "</a>\n";
+        echo "  <a href=\"{$PGI['prev'][0]}\" class=\"prev\">" . $PGI['prev'][1] . "</a>\n";
     } else {
         echo "  &nbsp;\n";
     }
-    echo " </span>\n <hr />\n";
-
-    // Provide last updated information on this page
-    echo " <span class=\"lastupdated\">Last updated: {$PGI['lastmod']}</span>\n";
 
     // Print out language switch on top of manual pages
-    echo " <div class=\"langchooser\">\n";
     if ($location != 'bottom') {
-        
         $links = array();
 
         // Quick access to filename
         $filename = $PGI['this'][0];
-        
-        // Disable all languages without online content        
+
+        // Disable all languages without online content
         // Add a dropdown item for all languages left
         foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
@@ -194,22 +224,22 @@ function manual_navbar($location = "top")
         $links[] = array('help-translate.php', 'Other');
 
         // Print out the form with all the options
-        echo '  <form action="/manual/change.php" method="get">' . "\n" .
-             '   <p>view this page in </p><fieldset><select name="page">'. "\n";
+        echo '<form action="/manual/change.php" method="get"><p>View this page in 
+
+         <select name="page">';
+
         foreach ($links as $link) {
             echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
-        echo "   </select>\n" .
-             '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
-             '/images/small_submit.gif" id="changeLangImage" ' .
-             'alt="" />' . "\n  </fieldset></form>\n";
-       
+        echo '</select><input type="submit" value="&raquo;" /></p></form>';
+
     } else {
         echo "  &nbsp;\n";
     }
-    echo " </div>\n";
-
-    echo "</div>\n<!--/UdmComment-->\n\n";
+    echo <<< NAVBAR
+             <span class="corners-bottom"><span></span></span>
+            </div><!-- .adv-block-->
+NAVBAR;
 }
 
 // =============================================================================
@@ -235,25 +265,25 @@ function manual_notes()
     if(count($notes) > 2) {
         manual_navbar("bottom");
     }
+echo <<< MAIN_CONTENT
+            <div class="block"><span class="corners-top"><span></span></span>
+MAIN_CONTENT;
+
 
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
-        make_link($addnotelink, make_image('notes-add.gif', 'add a note', 'middle')) .
-        ' <small>' .
-        make_link($addnotelink, 'add a note') .
-        '</small>';
+        '<div class="add-note">' .
+        make_link($addnotelink, 'Add Note') .
+        '</div>';
 
     echo <<<END_USERNOTE_HEADER
 
 <div id="usernotes">
- <div class="head">
-  <span class="action">{$addnotesnippet}</span>
-  <small>User Contributed Notes</small><br />
-  <strong>{$title}</strong>
- </div>
+ {$addnotesnippet}
+  <h4>User Contributed Notes</h4>
 END_USERNOTE_HEADER;
     
     // If we have no notes, then inform the user
@@ -263,17 +293,19 @@ END_USERNOTE_HEADER;
      
     // If we have notes, print them out
     else {
-        
+		echo '<ul id="contributed-notes">';
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
             );
         }
-        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
+		echo "</ul>\n";
+        echo $addnotesnippet;
     }
     
     // End of #usernotes
     echo "</div>";
+    echo '<span class="corners-bottom"><span></span></span></div><!--.block-->';
 }
 
 // Get user notes from the appropriate text dump
@@ -311,7 +343,6 @@ function manual_note_display($date, $name, $text, $id)
     if ($name) { $name = "\n  <strong>" . htmlspecialchars($name) . "</strong><br />"; }
     $datestr = date("d-M-Y h:i", $date);
     $datestr = ($id ? "\n  <a href=\"#$id\">$datestr</a>" : "\n  $datestr");
-    $anchor  = ($id ? "<a name=\"$id\"></a>\n " : "");
     $text    = clean_note($text);
 
     // If the viewer is logged in, show admin options
@@ -344,11 +375,16 @@ function manual_note_display($date, $name, $text, $id)
     
     echo <<<USER_NOTE_TEXT
 
- {$anchor}<div class="note">{$admin}{$name}{$datestr}
-  <div class="text">
+ <li id="{$id}">
+  <div class="username">{$name}<a name="#{$id}">{$datestr}</a></div>
+  <div class="ncontent">
+   <div class="note">
+	<span class="corners-top"><span></span></span>
 {$text}
+	<span class="corners-bottom"><span></span></span>
+   </div>
   </div>
- </div>
+ </li>
 USER_NOTE_TEXT;
  
 }

@@ -1,0 +1,44 @@
+/* IE Hacks
+*******************************/
+html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+* html hr {margin: 0; /* IE6 */}
+*+html hr {margin: 0; /* IE7 */}
+
+
+#root {
+	width: expression(document.body.clientWidth < 971 ? "970px" : document.body.clientWidth > 2509 ? "2508px" : "auto");
+}
+
+.zoom,
+.download-button,
+#content-columns,
+#content-columns li { zoom:1; }
+
+.clear { display: inline-block }
+.clear { display: block }
+* html .clear{ height: 1% }
+
+.wordwrap {
+	word-wrap: break-word;
+}
+
+#contributed-notes .ncontent {
+  clear:none;
+  width:100%;
+}
+
+sub,
+sup {
+  font-size:1.0em;
+}
+
+input,
+select,
+textarea {
+	vertical-align:middle;
+}
+
+.calendar p {
+  border:1px solid #DADADA;
+}
