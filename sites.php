@@ -1,8 +1,11 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sites.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-$SIDEBAR_DATA = '
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+site_header("A Tourist's Guide");
+column_box(COLUMN_LEFT);
+?>
 <h3>PHP.net Sitemap</h3>
 <p>
  It might also be a good idea to dig deeper into
@@ -17,8 +20,10 @@ $SIDEBAR_DATA = '
  Our <a href="/links.php">links page</a> offers some start
  pages you will find interesting.
 </p>
-';
-site_header("A Tourist's Guide");
+
+<?php
+column_box();
+column_box(COLUMN_MAIN);
 ?>
 
 <h1>PHP.net: A Tourist's Guide</h1>
@@ -215,4 +220,8 @@ site_header("A Tourist's Guide");
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<?php site_footer(); ?>
+<?php
+column_box();
+
+site_footer();
+

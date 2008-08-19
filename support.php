@@ -1,17 +1,19 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'support.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
 site_header("Getting Help");
+column_box(COLUMN_MAIN);
 ?>
 
 <h1>Documentation</h1>
 
 <p>
- A good place to start is by skimming through the ever-growing list of <a
- href="/FAQ.php">frequently asked questions (with answers, of course)</a>. Then
- have a look at the rest of the online manual and other resources in the <a
- href="/docs.php">documentation</a> section.
+ A good place to start is by skimming through the ever-growing list of
+ <a href="/FAQ.php">frequently asked questions (with answers, of course)</a>.
+ Then have a look at the rest of the online manual and other resources in the
+ <a href="/docs.php">documentation</a> section.
 </p>
 
 <h1>Books</h1>
@@ -118,4 +120,8 @@ site_header("Getting Help");
  questions.
 </p>
 
-<?php site_footer(); ?>
+<?php
+column_box();
+
+site_footer();
+

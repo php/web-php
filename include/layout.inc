@@ -60,19 +60,13 @@ function commonHeader($title) { site_header($title); }
 
 function site_header($title = '', $config = array())
 {
-    global $EXPL_LANG, $SIDEBAR_DATA, $PAGE_COLUMNS, $PGI, $PRE_DATA;
+    global $EXPL_LANG, $PGI, $PRE_DATA;
     
     // Default to empty array if improper parameter passed
     if (!is_array($config)) { $config = array(); }
     
     // String defaults
-    $lang_input = $base = $meta = $layout_helper = '';
-    
-    // Count number of columns for layout. The number identifies
-    // the layout precisely, as we have no page having a right
-    // sidebar and no left sidebar
-    $PAGE_COLUMNS = 1;
-    if (!empty($SIDEBAR_DATA))  { $PAGE_COLUMNS++; }
+    $lang_input = $base = $meta = '';
     
     // Print out lang and charset headers
     if (!isset($config["lang"]))    { $config["lang"] = "en"; }
@@ -114,11 +108,6 @@ function site_header($title = '', $config = array())
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
-    }
-    
-    // Define layout helper in case we need it
-    if ($PAGE_COLUMNS > 2) {
-        $layout_helper = "<div id=\"layout_{$PAGE_COLUMNS}_helper\">";
     }
     
     // Choose name of mirror site specific CSS file
@@ -227,21 +216,11 @@ function site_header($title = '', $config = array())
     <li class="last"><a href="/my.php">My Php.net</a></li>
    </ul>
   </li><!--#main-menu-->
-
-END_HEADER;
-
-    echo $PRE_DATA;
-
-    // Print out left column
-    if ($PAGE_COLUMNS > 1) {
-echo '
+  $PRE_DATA
   <li id="content">
    <ul id="content-columns">
-    <li id="left-column">
-     ' . $SIDEBAR_DATA . '
-    </li>';
-    }
-    
+
+END_HEADER;
 }
 
 // Stats pages still need this
@@ -249,7 +228,7 @@ function commonFooter() { site_footer(); }
 
 function site_footer($config = array())
 {
-    global $LAST_UPDATED, $PAGE_COLUMNS, $RSIDEBAR_DATA;
+    global $LAST_UPDATED;
     
     $stats         = (have_stats() ? "\n <li><a href=\"/stats/\">stats</a></li>" : "");
     $rsslink       = (isset($config["rss"]) ?
@@ -269,14 +248,6 @@ function site_footer($config = array())
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
     //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
     
-    // Print out right column
-    if ($RSIDEBAR_DATA) {
-echo '
-    <li id="right-column">
-     ' . $RSIDEBAR_DATA . '
-     </li>';
-    }
-
     print <<<END_FOOTER
 
       </ul> <!-- #content-columns -->
@@ -646,7 +617,7 @@ function news_archive_sidebar()
 function print_news($news, $dog, $max = 5) {
     $count = 0;
     foreach($news as $item) {
-        $vevent = "";
+        $extra = array("hentry");
         $ok = false;
 
         // Only print entries in the provided s/dog/cat/ egory
@@ -657,7 +628,7 @@ function print_news($news, $dog, $max = 5) {
                 ++$count;
             }
             if ($category["term"] === "conferences" || $category["term"] === "cfp") {
-                $vevent = " vevent";
+              $extra[] = "vevent";
             }
         }
         if ($count > $max) {
@@ -691,18 +662,169 @@ function print_news($news, $dog, $max = 5) {
         $published = substr($item["published"], 0, 10);
         $newsdate = date("d-M-Y", strtotime($published));
 
-        echo <<< EOT
-  <div class="block"><span class="corners-top"><span></span></span>
-    <div class="info hentry{$vevent}">
+      echo block_info_start(CORNERS_TOP, $extra);
+      echo <<< EOT
       <h3 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h3>
       <p class="news-date"><abbr class="published newsdate" title="{$item["published"]}">$newsdate</abbr></p>
       <div class="newsImage">{$image}</div>
       {$item["content"]}
-    </div>
-  </div><!--.block-->
 
 EOT;
+      echo block_info_end(CORNERS_NONE);
     }
 }
+
+// {{{ Layout boxes
+define("CORNERS_NONE",         0x00); // Don't print out the rounded corners
+define("CORNERS_TOP",          0x01); // Print out rounded corners at the top
+define("CORNERS_BOTTOM",       0x02); // Print out rounded corners at the bottom
+
+define("COLUMN_LEFT",          1); // First column (left sidebar)
+define("COLUMN_MAIN"           2); // Main content column in 2 column view
+define("COLUMN_MIDDLE"         3); // Second column in 3 column view
+define("COLUMN_RIGHT"          4); // Third column (right sidebar)
+
+// I am extremely lazy and have a piss poor copy&paste skilz.
+// Better of opening/closing these layout boxes using help functions
+
+// Print a layout column (COLUMN_*)
+function column($id = "") {
+  static $columns = array(
+    COLUMN_LEFT   => "left", 
+    COLUMN_MAIN   => "main",
+    COLUMN_MIDDLE => "mid",
+    COLUMN_RIGHT  => "right",
+  );
+  if (isset($columns[$id])) {
+    $id = $columns[$id] . "-column";
+    echo <<< OPEN
+    <li id="$id">
+      <div class="content">
+
+OPEN;
+    return true;
+  }
+  if($id === false) {
+    echo <<< CLOSE
+      </div> <!-- .content -->
+    </li><!-- #id.. -->
+
+CLOSE;
+    return true;
+  }
+
+  trigger_error("Unknown column passed ($id), not printing any markup", E_USER_WARNING);
+  return false;
+
+}
+
+// Print out a box (CORNERS_*)
+// $classes can be used to add specific CSS classes to the div elements
+function box($corners = CORNERS_NONE, $classes = array()) {
+  static $defaults = array(
+    "block"   => array("block"),
+    "info"    => array("info"),
+    "corners" => array("corners-top"),
+  );
+  // Previous CORNERS_ settings
+  static $stack = array();
+  // Merge the default CSS classnames with $classes
+  $classes = array_merge_recursive($defaults, $classes);
+
+  // No args == closing column
+  $open = !(func_num_args() == 0);
+
+  if ($open) {
+    $block  = '  <div class="' .join(" ", $classes["block"]). '"><!-- .block -->';
+    $info   = '    <div class="' .join(" ", $classes["info"]). '"><!-- .info -->';
+    $top    = '    <span class="' .join(" ", $classes["corners"]). '"><span></span></span>';
+
+    $stack[] = $corners;
+    if ($corners == CORNERS_NONE) {
+      echo "$block\n$info\n";
+      return;
+    }
+    echo "$block\n$top\n$info\n";
+    return;
+  }
+
+  $corners = array_pop($stack);
+
+  $info   = '    </div><!-- .info -->';
+  $bottom = '    <span class="corners-bottom"><span></span></span>';
+  $block  = '  </div><!-- .block -->';
+
+  if ($corners == CORNERS_NONE) {
+    echo "$info\n$block\n";
+    return;
+  }
+  echo "$info\n$bottom\n$block\n";
+}
+
+// Wrapper for column(COLUMN_*); box(CORNERS_*); (and box(); column();)
+// $extra is contains for the moment only one option key, "classes", see box()
+function column_box($column = "", $corners = CORNERS_TOP, $extra = array()) {
+  static $defaults = array(
+    "classes" => array(),
+  );
+
+  $extra = array_merge_recursive($defaults, $extra);
+
+  // No args == closing column
+  $open = !(func_num_args() == 0);
+
+  if ($open) {
+    column($column);
+    box($corners, $extra["classes"]);
+  } else {
+    box();
+    column();
+  }
+}
+
+
+function block_info_start($corners = CORNERS_NONE, $classes = array()) {
+  static $defaults = array(
+    "block"   => array("block"),
+    "info"    => array("info"),
+    "corners" => array("corners-top"),
+  );
+  $classes = array_merge_recursive($defaults, $classes);
+
+  $block  = '  <div class="' .join(" ", $classes["block"]). '"><!-- .block -->';
+  $info   = '    <div class="' .join(" ", $classes["info"]). '"><!-- .info -->';
+  $top    = '    <span class="' .join(" ", $classes["corners"]). '"><span></span></span>';
+
+  if ($corners == CORNERS_NONE) {
+    return "$block\n$info\n";
+  }
+  if ($corners == CORNERS_TOP) {
+    return "$block\n$top\n$info\n";
+  }
+}
+
+function block_info_end($corners = CORNERS_NONE) {
+  $info   = '    </div><!-- .info -->';
+  $bottom = '    <span class="corners-bottom"><span></span></span>';
+  $block  = '  </div><!-- .block -->';
+
+  if ($corners == CORNERS_NONE) {
+    return "$info\n$block\n";
+  }
+  if ($corners == CORNERS_BOTTOM) {
+    return "$info\n$bottom\n$block\n";
+  }
+}
+
+// Yes. I'm seriusly _THAT_ lazy :D
+$START_BLOCK_INFO_CORNERS = block_info_start(CORNERS_TOP);
+$END_BLOCK_INFO_CORNERS   = block_info_end(CORNERS_BOTTOM);
+
+$START_BLOCK_INFO         = block_info_start(CORNERS_NONE);
+$END_BLOCK_INFO           = block_info_end(CORNERS_NONE);
+
+// }}}
+
+
 /* vim: set et ts=4 sw=4 ft=php: : */
 

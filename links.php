@@ -1,8 +1,11 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'links.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-$SIDEBAR_DATA = '
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+site_header("Links");
+column_box(COLUMN_LEFT);
+?>
 <h3>Support tips and links</h3>
 <p>
  We suggest you visit <a href="/support.php">our support page</a>
@@ -16,8 +19,10 @@ $SIDEBAR_DATA = '
  <a href="/software">list of software</a> available under
  the PHP license.
 </p>
-';
-site_header("Links");
+
+<?php
+column_box();
+column_box(COLUMN_MAIN);
 ?>
 
 <h1>PHP Related Links</h1>
@@ -48,6 +53,9 @@ site_header("Links");
   The Complete list of PHP Podcasts, Screencasts, and Video Podcasts.
  </li>
 </ul>
+
+<?php echo $END_BLOCK_INFO_CORNERS ?>
+<?php echo $START_BLOCK_INFO_CORNERS ?>
 
 <a name="magazines"></a>
 <h4>PHP Magazines</h4>
@@ -81,6 +89,9 @@ site_header("Links");
 
 </ul>
 
+<?php echo $END_BLOCK_INFO_CORNERS ?>
+<?php echo $START_BLOCK_INFO_CORNERS ?>
+
 <a name="merchandise"></a>
 <h4>PHP Merchandise</h4>
 
@@ -94,6 +105,9 @@ site_header("Links");
   A search result page with various PHP related projects' shops (not all results are necessarily PHP related!)
  </li>
 </ul>
+
+<?php echo $END_BLOCK_INFO_CORNERS ?>
+<?php echo $START_BLOCK_INFO_CORNERS ?>
 
 <a name="nonenglish"></a>
 <h4>Non-English PHP Sites</h4>
@@ -434,5 +448,7 @@ dead domain 2007/02/07	   <li>
  </li>
 </ul>
 
+<?php
+column_box();
+site_footer();
 
-<?php site_footer(); ?>

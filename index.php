@@ -1,10 +1,8 @@
-<?php // vim: et
+<?php // vim: et fdm=marker
 /*
-   If you're reading this, it isn't because you've found a security hole.
-   this is an open source website. read and learn!
-*/
-
-/* ------------------------------------------------------------------------- */
+ * No. You did not find a security hole.
+ * This is an open source website.
+ */
 
 // Modified headers {{{
 // Get the modification date of this PHP file
@@ -45,18 +43,63 @@ else {
 // }}}
 
 $_SERVER['BASE_PAGE'] = 'index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
-// This goes to the left sidebar of the front page {{{
-$SIDEBAR_DATA = '
-<div class="content">
-      <div class="block">
-    <span class="corners-top"><span></span></span>
-       <div class="info">
+// Generate conference teaser {{{
+if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
+    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
+    $teaser = '  <li id="news-line"><span class="corners-top"><span></span></span><ul>' . "\n";
+    foreach($CONF_TEASER as $k => $a) {
+        if (is_array($a) && count($a)) {
+            $teaser .= "      <li><span>" . $categories[$k] . "</span>\n";
+            $teaser .= "      <ul>";
+            $count = 0;
+            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
+            foreach($a as $url => $title) {
+                if ($count++ >= 4) {
+                    break;
+                }
+                $teaser .= '       <li class="first last"><a href="' . $url. '">' . $title. '</a></li>' . "\n";
+            }
+            $teaser .= "      </ul>\n     </li>\n";
+        } // if set
+    }
+    $teaser .= '   </ul><span class="corners-bottom"><span></span></span></li><!-- #news-line -->'."\n";
+    $PRE_DATA = $teaser;
+} // }}}
+
+// Write out common header {{{
+site_header("Hypertext Preprocessor",
+    array(
+        'onload' => 'boldEvents();',
+        'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
+        'link' => array(
+            array(
+                "rel"   => "search",
+                "type"  => "application/opensearchdescription+xml",
+                "href"  => $MYSITE . "phpnetimprovedsearch.src",
+                "title" => "Add PHP.net search"
+            ),
+            array(
+                "rel"   => "alternate",
+                "type"  => "application/atom+xml",
+                "href"  => $MYSITE . "releases.atom",
+                "title" => "PHP Release feed"
+            ),
+
+        ),
+    )
+);
+// }}}
+
+// {{{ Left sidebar ("What is PHP" & "Thanks to")
+
+column_box(COLUMN_LEFT);
+?>
 
 <h3>What is PHP?</h3>
 <p>
@@ -69,11 +112,7 @@ $SIDEBAR_DATA = '
  and the example archive sites and some of the other resources
  available in the <a href="/links.php">links section</a>.
 </p>
-</div>
-</div><!-- .block-->
-
-      <div class="block">
-       <div class="info">
+<?php echo $END_BLOCK_INFO, $START_BLOCK_INFO; ?>
 
 <h3><a href="/thanks.php">Thanks To</a></h3>
 <ul class="simple">
@@ -96,12 +135,24 @@ $SIDEBAR_DATA = '
 <p>
  You can grab our news as an <a href="/feed.atom">Atom feed</a>.
 </p>
-      </div><!--.block-->
-      <span class="corners-bottom"><span></span></span>
-     </div>
-    </div>
-';
+
+<?php
+column_box();
+
 // }}}
+
+// {{{ News (include/pregen-news.inc)
+column(COLUMN_MIDDLE);
+
+// $NEWS_ENTRIES is generated on master (scripts/pregen_news) from archive/*.xml
+print_news($NEWS_ENTRIES, "frontpage");
+echo '<p class="t-center"><a href="/archive/index.php"><strong>News Archive</strong></a></p>';
+
+column();
+// }}}
+
+// Right column (releases/events..) {{{
+column_box(COLUMN_RIGHT, true, array("classes" => array("block" => array("releases"))));
 
 $MIRROR_IMAGE = '';
 
@@ -154,129 +205,59 @@ if (count($RELEASES[5])>1) {
     list($PHP_5_RC, ) = each($RELEASES[5]);
 }
 
+?>
 
-$release_box = <<< RELEASE_DATA
-     <div class="content">
-      <div class="block releases"><span class="corners-top"><span></span></span>
-       <div class="info">
         <h3>Stable releases</h3>
-        <p class="first">Current PHP 5 Stable: <a href="/ChangeLog-5.php#$PHP_5_STABLE"><strong>$PHP_5_STABLE</strong></a></p>
+        <p class="first">Current PHP 5 Stable: <a href="/ChangeLog-5.php#<?php echo $PHP_5_STABLE ?>"><strong><?php echo $PHP_5_STABLE ?></strong></a></p>
         <p class="download-button"><a href="/downloads.php#v5"><span>Download</span></a></p>
         <p class="top-border">Historical PHP Stable: <a href="/downloads.php#v4"><strong>4.4.9</strong></a></p>
-RELEASE_DATA;
-
-if ($PHP_5_RC) {
-  $release_box .= <<< RELEASE_DATA
+<?php
+if ($PHP_5_RC):
+?>
         <h4>Release Candidates</h4>
-        <p class="top-border"><a href="http://qa.php.net/">$PHP_5_RC</a></p>
-RELEASE_DATA;
-}
-$release_box .= <<< RELEASE_DATA
+        <p class="top-border"><a href="http://qa.php.net/"><?php echo $PHP_5_RC ?></a></p>
+<?php
+endif;
+?>
         <p><a href="/downloads.php"><strong>Download area &raquo;</strong></a></p>
-       </div><!-- .info -->
-      </div><!--.block-->
-RELEASE_DATA;
+        <?php echo $END_BLOCK_INFO ?>
+<?php
 /* }}} */
 
 // Generate the event box {{{
-$upcoming_events = <<< UPCOMING_EVENTS
-      <div class="block">
-      <div class="info">
+?>
+      <?php echo $START_BLOCK_INFO ?>
        <h3 class="upcoming-events">Upcoming Events</h3>
-       <div class="calendar"><span class="corners-top"><span></span></span>
+       <div class="calendar">
+        <span class="corners-top"><span></span></span>
         <h4>Events Calendar</h4>
         <form method="get" action="/cal.php">
          <p>
           <select class="month" name="cm">
-UPCOMING_EVENTS;
-
+<?php
 $months = array(1 => "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 $current = date("m", $_SERVER["REQUEST_TIME"]);
 foreach($months as $n => $month) {
-  $upcoming_events .= "<option value='$n' ". ($n == $current ? 'selected="selected"' : '') .">$month</option>\n";
+  echo "<option value='$n' ". ($n == $current ? 'selected="selected"' : '') .">$month</option>\n";
 }
-
-$upcoming_events .= <<< UPCOMING_EVENTS
+?>
           </select>
           <span><input type="submit" class="button" value="View" /></span>
          </p>
         </form>
-        <span class="corners-bottom"><span></span></span></div>
-        <p class="add-event"><a href="/submit-event.php"><strong>Add event &raquo;</strong></a></p>
-        <div class="events">
-         $EVENTS_DATA
-        </div>
+        <span class="corners-bottom"><span></span></span>
        </div><!-- .calendar -->
-      </div><!-- .info -->
-      </div><!-- .block -->
-UPCOMING_EVENTS;
+       <p class="add-event"><a href="/submit-event.php"><strong>Add event &raquo;</strong></a></p>
+       <div class="events">
+        <?php echo $EVENTS_DATA ?>
+       </div>
+<?php
 // }}}
 
-// Prepend mirror image & latest releases to sidebar text
-$RSIDEBAR_DATA = $MIRROR_IMAGE . $release_box . $upcoming_events;
-
-// Generate conference teaser {{{
-if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
-    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
-    $teaser = '  <li id="news-line"><span class="corners-top"><span></span></span><ul>' . "\n";
-    foreach($CONF_TEASER as $k => $a) {
-        if (is_array($a) && count($a)) {
-            $teaser .= "      <li><span>" . $categories[$k] . "</span>\n";
-            $teaser .= "      <ul>";
-            $count = 0;
-            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
-            foreach($a as $url => $title) {
-                if ($count++ >= 4) {
-                    break;
-                }
-                $teaser .= '       <li class="first last"><a href="' . $url. '">' . $title. '</a></li>' . "\n";
-            }
-            $teaser .= "      </ul>\n     </li>\n";
-        } // if set
-    }
-    $teaser .= '   </ul><span class="corners-bottom"><span></span></span></li><!-- #news-line -->'."\n";
-    $PRE_DATA = $teaser;
-} // }}}
-
-// Write out common header {{{
-site_header("Hypertext Preprocessor",
-    array(
-        'onload' => 'boldEvents();',
-        'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
-        'link' => array(
-            array(
-                "rel"   => "search",
-                "type"  => "application/opensearchdescription+xml",
-                "href"  => $MYSITE . "phpnetimprovedsearch.src",
-                "title" => "Add PHP.net search"
-            ),
-            array(
-                "rel"   => "alternate",
-                "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases.atom",
-                "title" => "PHP Release feed"
-            ),
-
-        ),
-    )
-);
+column_box();
 // }}}
 
-?>
-    <li id="mid-column">
-     <div class="content">
-<?php
-/* Where the h*ll did all the news go?
- * See ./bin/createNewsEntry
- */
-print_news($NEWS_ENTRIES, "frontpage");
-?>
-      <p class="t-center"><a href="/archive/index.php"><strong>News Archive</strong></a></p>
-     </div>
-    </li><!-- #mid-column-->
 
-
-<?php
 site_footer(
     array("atom" => "/feed.atom") // Add a link to the feed at the bottom
 );

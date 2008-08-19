@@ -15,7 +15,7 @@
 */
 
 // Ensure that our environment is set up
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Set variable defaults
 $PGI = array(); $SIDEBAR_DATA = '';

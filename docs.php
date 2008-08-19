@@ -1,13 +1,17 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'docs.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA='
+
+site_header("Documentation");
+
+column_box(COLUMN_LEFT);
+?>
 <h3>FAQ</h3>
 <p>
  The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
- information and those questions that seem to be on most people\'s minds.
+ information and those questions that seem to be on most people's minds.
  If you have licensing questions, see the separate
  <a href="/license/">License FAQ</a>.
 </p>
@@ -37,10 +41,11 @@ $SIDEBAR_DATA='
  great places to find many example scripts and useful functions, organized for 
  your searching pleasure!
 </p>
-';
 
-site_header("Documentation");
+<?php
+column_box();
 
+column_box(COLUMN_MAIN);
 ?>
 
 <h1>Documentation</h1>
@@ -122,4 +127,8 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  </li>
 </ul>
 
-<?php site_footer();
+<?php
+column_box();
+
+site_footer();
+

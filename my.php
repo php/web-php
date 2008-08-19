@@ -1,7 +1,7 @@
 <?php
 // $Id$
 $_SERVER['BASE_PAGE'] = 'my.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Try to make this page non-cached
 header_nocache();
@@ -70,6 +70,8 @@ if (isset($_POST['hidesuggest'])) {
 myphpnet_save();
 
 site_header("My PHP.net");
+
+column_box(COLUMN_MAIN);
 ?>
 
 <form action="/my.php" method="post">
@@ -274,4 +276,7 @@ foreach ($mirror_sites as $murl => $mdata) {
 </p>
 </form>
 
-<?php site_footer(); ?>
+<?php
+column_box();
+site_footer();
+
