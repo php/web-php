@@ -680,9 +680,9 @@ define("CORNERS_TOP",          0x01); // Print out rounded corners at the top
 define("CORNERS_BOTTOM",       0x02); // Print out rounded corners at the bottom
 
 define("COLUMN_LEFT",          1); // First column (left sidebar)
-define("COLUMN_MAIN"           2); // Main content column in 2 column view
-define("COLUMN_MIDDLE"         3); // Second column in 3 column view
-define("COLUMN_RIGHT"          4); // Third column (right sidebar)
+define("COLUMN_MAIN",          2); // Main content column in 2 column view
+define("COLUMN_MIDDLE",        3); // Second column in 3 column view
+define("COLUMN_RIGHT",         4); // Third column (right sidebar)
 
 // I am extremely lazy and have a piss poor copy&paste skilz.
 // Better of opening/closing these layout boxes using help functions
@@ -704,7 +704,7 @@ function column($id = "") {
 OPEN;
     return true;
   }
-  if($id === false) {
+  if($id === "") {
     echo <<< CLOSE
       </div> <!-- .content -->
     </li><!-- #id.. -->
