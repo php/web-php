@@ -662,7 +662,7 @@ function print_news($news, $dog, $max = 5) {
         $published = substr($item["published"], 0, 10);
         $newsdate = date("d-M-Y", strtotime($published));
 
-      echo block_info_start(CORNERS_TOP, $extra);
+      echo block_info_start(CORNERS_TOP, array("info" => $extra));
       echo <<< EOT
       <h3 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h3>
       <p class="news-date"><abbr class="published newsdate" title="{$item["published"]}">$newsdate</abbr></p>
