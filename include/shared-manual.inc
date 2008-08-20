@@ -18,7 +18,7 @@
 include $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 // Set variable defaults
-$PGI = array(); $SIDEBAR_DATA = '';
+$PGI = array();
 
 // Set up variables important for this page
 // including HTTP header information
@@ -59,33 +59,24 @@ function manual_header()
     // Set base href for this manual page
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 
-    manual_sidebar();
     site_header("$title - Manual", array(
-		"link" => array(
-			"contents"         => $PGI["home"][0],
-			"index"            => $PGI["up"][0],
-			"prev"             => $PGI["prev"][0],
-			"next"             => $PGI["next"][0],
-			"schema.dc"        => "http://purl.org/dc/elements/1.1/",
-			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
-		),
-		"profile" => "http://purl.org/NET/erdf/profile",
-	));
-    echo <<< MAIN_CONTENT
-        <li id="main-column">
-          <div class="content">
-MAIN_CONTENT;
+      "link" => array(
+        "contents"         => $PGI["home"][0],
+        "index"            => $PGI["up"][0],
+        "prev"             => $PGI["prev"][0],
+        "next"             => $PGI["next"][0],
+        "schema.dc"        => "http://purl.org/dc/elements/1.1/",
+        "schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
+      ),
+      "profile" => "http://purl.org/NET/erdf/profile",
+    ));
+    manual_sidebar();
+    column(COLUMN_MAIN);
 
     manual_navbar();
+    box(CORNERS_TOP);
 
-echo <<< MAIN_CONTENT
-
-            <div class="block"><span class="corners-top"><span></span></span>
-              <div class="info">
-				<p class="func-date">Last updated: <span>{$PGI['lastmod']}</span></p>
-
-
-MAIN_CONTENT;
+    echo '<p class="func-date">Last updated: <span>' .$PGI['lastmod']. '</span></p>';
 
 }
 
@@ -97,17 +88,12 @@ function manual_footer()
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
     
-    echo "</div><!-- .info -->\n";
-    echo '<span class="corners-bottom"><span></span></span></div><!--.block-->';
-
+    box();
 
     manual_notes();
 
     manual_navbar("bottom");
-	echo <<< MAIN_CONTENT
-		 </div> <!-- .content -->
-        </li><!-- #main-column-->
-MAIN_CONTENT;
+    column();
 
     site_footer();
 }
@@ -116,36 +102,33 @@ MAIN_CONTENT;
 // Manual page navigation parts
 // =============================================================================
 
-// Append all the table of contents data to $SIDEBAR_DATA
+// Print the TOC
 function manual_sidebar()
 {
-    global $PGI, $SIDEBAR_DATA;
+    global $PGI;
+    column_box(COLUMN_LEFT);
 
-    // Start sidebar with its <div>
-    $BAR = <<< SIDEBAR
-          <div class="content">
-            <div class="block"><span class="corners-top"><span></span></span>
-              <div class="info">
-                <h3>PHP Manual</h3>
-                <ul id="functions-list">
+    echo <<< SIDEBAR
+      <h3>PHP Manual</h3>
+      <ul id="functions-list">
 SIDEBAR;
 
     // Link to manual home
-    $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
+    echo ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
             $PGI['home'][1] . "</a></li>\n";
 
     // Link to parents
     if (isset($PGI['parents']) && ($c = count($PGI['parents'])-1) > 0) {
         // The root parent is the "PHP Manual"
         for($i=$c-1; $i>=0; $i--) {
-            $BAR .= ' <li class="header up"><a href="' . $PGI['parents'][$i][0] . '">' .
+            echo ' <li class="header up"><a href="' . $PGI['parents'][$i][0] . '">' .
                 $PGI['parents'][$i][1] . "</a></li>\n";
         }
     }
 
     // Link to one page up if titles does not match
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
-        $BAR .= ' <li class="header up sel"><a href="' . $PGI['up'][0] . '">' .
+        echo ' <li class="header up sel"><a href="' . $PGI['up'][0] . '">' .
                 $PGI['up'][1] . "</a><ul>\n";
     }
 
@@ -157,33 +140,16 @@ SIDEBAR;
 
         // Get the proper classname to use for this <div>
         $liclass = ($url == $PGI['this'][0]) ? ' class="sel"' : "";
-        
-        // There are some very long function names, which
-        // make the TOC too wide, so enable the browser to wrap them
-        // eg: xml_set_processing_instruction_handler 
-	//     DOMElement->getElementsByTagNameNS()
-        if (preg_match("!^[a-zA-Z0-9_>()-:]+$!", $title)) {
-            $wrap = '<span class="w"> </span>';
-            $title = str_replace(array('_', '->', '::'), array("_$wrap", "->$wrap", "::$wrap"), $title);
-        }
-        
+
         // Print out the TOC item using a <div>
-        $BAR .= " <li{$liclass}>" .
+        echo " <li{$liclass}>" .
                 make_link($url, $title) . "</li>\n";
     }
 
-	$close = "";
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
-      $close = "</ul></li>";
-	}
-    // Put navigation content into sidebar, end <div>
-    $SIDEBAR_DATA = <<< SIDEBAR
-     $BAR
-                </ul>
-              </div>
-            <span class="corners-bottom"><span></span></span></div><!--.block-->
-          </div><!-- .content -->
-SIDEBAR;
+      echo "</ul></li>";
+    }
+    column_box();
 
 }
 
@@ -265,10 +231,7 @@ function manual_notes()
     if(count($notes) > 2) {
         manual_navbar("bottom");
     }
-echo <<< MAIN_CONTENT
-            <div class="block"><span class="corners-top"><span></span></span>
-MAIN_CONTENT;
-
+    box(CORNERS_TOP);
 
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
@@ -293,19 +256,18 @@ END_USERNOTE_HEADER;
      
     // If we have notes, print them out
     else {
-		echo '<ul id="contributed-notes">';
+        echo '<ul id="contributed-notes">';
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
             );
         }
-		echo "</ul>\n";
+        echo "</ul>\n";
         echo $addnotesnippet;
     }
     
-    // End of #usernotes
-    echo "</div>";
-    echo '<span class="corners-bottom"><span></span></span></div><!--.block-->';
+    echo "</div><!-- #usernotes -->\n";
+    box();
 }
 
 // Get user notes from the appropriate text dump
@@ -388,3 +350,4 @@ function manual_note_display($date, $name, $text, $id)
 USER_NOTE_TEXT;
  
 }
+

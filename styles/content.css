@@ -114,7 +114,7 @@
 #news-line,
 #main-column .adv-block {
     font-size: 1.1em;
-	 line-height:1.2;
+    line-height:1.2;
     margin-bottom: 6px;
     padding: 0 11px;
     background: none left bottom repeat-x #F6F6F6;
@@ -855,5 +855,27 @@
 #main-column .examples h3 {
   padding:0 0 1em 0;
 }
+
+/***** {{{ REMOVE ME *****/
+/*
+ * This is only during development so that users of docs.php.net can get a big
+ * fat red warning about that thei are browser developmental server.
+ */
+#main-menu {
+  margin-bottom: 0;
+}
+
+#warning {
+	background:#ffffff;
+	padding:1em;
+  margin: 0px;
+	border-bottom:1px solid #D0D0D0;
+  color:#6F0000;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: bold;
+	font-size:1.17em;
+}
+/***** }}} *****/
 
 

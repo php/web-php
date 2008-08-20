@@ -177,11 +177,11 @@ function site_header($title = '', $config = array())
     <h1><a href="/index.php">PHP: Hypertext Preprocessor</a></h1>
     <form method="post" action="/search.php" id="topsearch">
      <div id="search-box">
-      <label>Search for</label>
-      <span><input type="text" class="text" maxlength="20" name="pattern" /></span>
-      <label>in the</label>
+      <label for="searchbox">Search for</label>
+      <span><input type="text" class="text" maxlength="20" name="pattern" id="searchbox" /></span>
+      <label for="searchlist">in the</label>
       <span>
-        <select name="show">
+        <select name="show" id="searchlist">
           <option value="quickref" selected="selected">function list</option>
           <option value="all"         >all php.net sites</option>
           <option value="local"       >this mirror only</option>
@@ -216,6 +216,13 @@ function site_header($title = '', $config = array())
     <li class="last"><a href="/my.php">My Php.net</a></li>
    </ul>
   </li><!--#main-menu-->
+  <!-- {{{ FIXME: REMOVE THIS WARNING -->
+  <li id="warning">
+    <div class="warning">
+      <strong>WARNING</strong>: You are browsing a developmental server.
+    </div>
+  </li>
+  <!-- }}} -->
   $PRE_DATA
   <li id="content">
    <ul id="content-columns">
