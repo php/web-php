@@ -355,24 +355,6 @@ function news_image($URL, $image, $alt, $print = true)
     return $str;
 }
 
-// Return HTML code for a submit button image
-function make_submit($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
-                     $dir = '/images', $border = 0)
-{
-    // Get an image without size info and convert the
-    // border attribute to use CSS, as border="" is not
-    // supported on <input> elements in [X]HTML
-    $img = make_image($file, $alt, $align, $extras, $dir, 0, FALSE);
-    $img = str_replace(
-        "border=\"$border\"",
-        "style=\"border: {$border}px;\"",
-        $img
-    );
-
-    // Return with ready input image
-    return '<input type="image"' . substr($img, 4);
-}
-
 // Return a hiperlink to something within the site
 function make_link ($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 {
@@ -451,21 +433,6 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             echo ']';
         }
     }
-}
-
-function sect_to_file($string) {
-	$string = strtolower($string);
-	$string = str_replace(' ','-',$string);
-	$string = str_replace('_','-',$string);
-	$func = "function.$string.php";
-	$chap = "ref.$string.php";
-	$feat = "features.$string.php";
-	$struct = "control-structures.$string.php";
-	if(@is_file($func)) return $func;
-	else if(@is_file($chap)) return $chap;
-	else if(@is_file($feat)) return $feat;
-	else if(@is_file($struct)) return $struct;
-	else return "$string.php";
 }
 
 function clean($var) {

@@ -43,15 +43,6 @@ if (preg_match("!^bugs.php\\?(.+)$!", $URI, $array)) {
 }
 
 // ============================================================================
-// FC: handle advisories
-if (preg_match("!^security/advisories/PHPSA-(\\d+)\\.php$!", $URI, $array)) {
-    status_header(200);
-    $_GET["id"] = $array[1];
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/security/index.php';
-    exit;
-}
-
-// ============================================================================
 // Omit query string from URL and urldecode special chars
 $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
