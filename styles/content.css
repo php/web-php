@@ -260,7 +260,7 @@
 }
 
 #main-column .adv-block input {
-  background:url(../images/../img/block_sprites.gif) 0 -77px no-repeat;
+  background:url(../images/block_sprites.gif) 0 -77px no-repeat;
 	width:57px;
   height:26px;
   border:0;
@@ -645,7 +645,7 @@
 	padding:12px 0;
   line-height:1;
   font-weight:bold;
-  background:url(../images/../img/block_sprites.gif) 100% 6px no-repeat;
+  background:url(../images/block_sprites.gif) 100% 6px no-repeat;
 }
 
 .add-note a {
