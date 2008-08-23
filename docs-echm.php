@@ -276,6 +276,25 @@ command.help.subsystem.$(file.patterns.php)=4</pre>
    to display the quick help.
   </p>
  </li>
+
+ <li>
+  <p>
+   <strong><a href="http://notepad-plus.sourceforge.net/">Notepad++</a>:</strong>
+   Assuming you've put the manual into "C:\Program Files\PhpManual" you have to
+   find the file named "shortcuts.xml" in Notepad++'s folder, open it in a
+   text editor and add this line to the UserDefinedCommands section
+   (line breaks added for clarity - should be on a single line):
+  </p>
+  <pre>
+   &lt;Command name="PHP Manual" Ctrl="yes" Alt="yes" Shift="no" Key="116"&gt;
+   hh.exe "ms-its:c:/Program Files/Phpmanual/php_manual_en.chm::/function.$(CURRENT_WORD).html"
+   &lt;/Command&gt;
+  </pre>
+  <p>
+   Usage: highlight a PHP function name and either press ALT+CTRL+F5 or click the PHP Manual
+   item under the Run menu and the CHM will open at the function's page.
+  </p>
+ </li>
 </ul>
 
 <?php site_footer(); ?>
