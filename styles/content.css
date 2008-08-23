@@ -573,6 +573,7 @@
 
 #main-column .info-block,
 #main-column .warning,
+#main-column .tip,
 #main-column .notes,
 #main-column dd {
 	background:#ffffff;
@@ -583,6 +584,10 @@
 
 #main-column dt {
 	line-height:1.6;
+}
+
+#main-column .tip {
+  color:#006;
 }
 
 #main-column .warning {
@@ -828,6 +833,7 @@
 	border-bottom:1px solid #D0D0D0;
 }
 
+#main-column b.tip,
 #main-column b.warning {
 	padding: 0;
 }
@@ -854,6 +860,14 @@
 
 #main-column .examples h3 {
   padding:0 0 1em 0;
+}
+#main-column .example-contents {
+   background-color: #fff;
+   border: 1px solid #e2e2e2;
+   padding: 5px 10px;
+}
+#main-column .example-contents p {
+	margin-bottom: 0px;
 }
 
 /***** {{{ REMOVE ME *****/
