@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+<title>strpos - PHP: Hypertext Preprocessor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" media="screen" rel="stylesheet" href="css/screen.css" />
+<link type="text/css" media="print" rel="stylesheet" href="css/print.css" />
+<link type="text/css" media="handfield" rel="stylesheet" href="css/handfield.css" />
+<!--[if IE ]>
+<link type="text/css" rel="stylesheet" media="screen" href="css/ie.css" />
+<![endif]-->
+</head>
+
+<body id="func-strpos">
+ <ul id="root">
+  <li id="header">
+   <span class="side-left"></span>
+   <span class="side-right"></span>
+   <div class="content">
+    <h1><a href="index.html">PHP: Hypertext Preprocessor</a></h1>
+    <div id="search-box">
+      <label>Search for</label><span><input type="text" class="text" maxlength="20" name="q" /></span><label>in the</label><span><select><option>functions list</option></select></span><span><input type="submit" class="button" value="Search" /></span>
+    </div>
+   </div>
+  </li><!--#header-->
+  <li id="main-menu"><span class="corners-top"><span></span></span>
+   <ul><li class="first"><a href="#">Downloads</a></li><li><a href="#">Documentation</a></li><li><a href="#">Faq</a></li><li><a href="#">Getting Help</a></li><li><a href="#">Mailing Lists</a></li><li><a href="#">Reporting Bugs</a></li><li><a href="#">Php.net Sites</a></li><li><a href="#">Links</a></li><li><a href="#">Conferences</a></li><li class="last"><a href="#">My Php.net</a></li></ul>
+  <span class="corners-bottom"><span></span></span></li><!--#main-menu-->
+
+  <li id="content">
+   <ul id="content-columns">
+
+
+   <li id="left-column">
+          <div class="content">
+
+            <div class="block"><span class="corners-top"><span></span></span>
+              <div class="info">
+                <h3>PHP Manual</h3>
+                
+                <ul id="functions-list">
+                  <li><a href="#">PHP Manual</a></li>
+                  <li><a href="#">Function Reference</a></li>
+                  <li><a href="#">Text Processing</a></li>
+                  <li><a href="#">Strings</a></li>
+                  <li><a href="#">String Functions</a></li>
+                  <li class="sel"><a href="#">Functions</a>
+                    <ul>
+                      <li><a href="#">addcslashes</a></li>
+                      <li><a href="#">addslashes</a></li>
+                      <li><a href="#">bin2hex</a></li>
+                      <li><a href="#">chop</a></li>
+                      <li><a href="#">chr</a></li>
+                      <li><a href="#">chunk_ split</a></li>
+                      <li><a href="#">convert_ cyr_ string</a></li>
+                      <li><a href="#">convert_ uudecode</a></li>
+                      <li><a href="#">convert_ uuencode</a></li>
+                      <li><a href="#">count_ chars</a></li>
+                      <li class="sel"><a href="#">crc32</a></li>
+                      <li><a href="#">crypt</a></li>
+                      <li><a href="#">echo</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            <span class="corners-bottom"><span></span></span></div><!--.block-->
+
+          </div>
+        </li><!--#left-column-->
+
+        <li id="main-column">
+          <div class="content">
+            
+            <div class="adv-block"><span class="corners-top"><span></span></span>
+              <a href="#" class="prev">strbrk</a>
+              <a href="#" class="next">strbrk</a>
+              <p>View this page in <select><option>Bulgarian</option></select> <input type="submit" value="&raquo;" /></p>
+            <span class="corners-bottom"><span></span></span></div><!--.block-->
+            
+            
+            
+            <div class="block"><span class="corners-top"><span></span></span>
+              <div class="info">
+
+                <h3>strpos</h3>
+                <p class="func-ver">(PHP 4, PHP 5 )</p>
+                <dfn class="func-descr">strpos — Find position of first occurrence of a string</dfn>
+                <p class="func-date">Last updated: <span>Fri, 06 Jun 2008</span></p>
+                <hr />
+                <h4>Description</h4>
+                <div class="info-block">
+                  <span class="type">int</span>
+                  <span class="methodname"><strong>strpos</strong></span>
+                  ( <span class="methodparam"><span class="type">string</span> <tt class="parameter">$haystack</tt></span>, 
+                  <span class="methodparam"><span class="type"><a href="#" class="type mixed">mixed</a></span>
+                  <tt class="parameter">$needle</tt></span>
+                  [, <span class="methodparam"><span class="type">int</span> <tt class="parameter">$offset</tt></span>
+                  ] )    
+                </div>
+                <p>Returns the numeric position of the first occurrence of needle  in the haystack  string. Unlike the strrpos() before PHP 5, this function can take a full string as the needle  parameter and the entire string will be used.</p>
+                <h4>Parameters</h4>
+                <dl>
+                  <dt><span class="term"><em><tt class="parameter">haystack</tt></em></span></dt>
+                  <dd>The string to search in</dd>
+                  <dt><span class="term"><em><tt class="parameter">needle</tt></em></span></dt>
+                  <dd>If <em><tt class="parameter">needle </tt></em> is not a string, it is converted to an integer and applied as the ordinal value of a character.</dd>
+                  <dt><span class="term"><em><tt class="parameter">offset</tt></em></span></dt>
+                  <dd>The optional offset  parameter allows you to specify which character in haystack  to start searching. The position returned is still relative to the beginning of haystack .</dd>
+                </dl>
+                 <h4>Return Values</h4>
+                <p>Returns the position as an integer. If <em><tt class="parameter">needle</tt></em> is not found, <b>strpos()</b> will return <a href="language.types.boolean.php" class="type boolean">boolean</a> <strong><tt>FALSE</tt></strong>.</p>
+                  <div class="warning">
+                    <p><strong>Warning</strong></p>
+                    <p>This function may return Boolean <strong><tt>FALSE</tt></strong>, but may also return a non-Boolean value which
+                  evaluates to <strong><tt>FALSE</tt></strong>, such as <em>0</em> or
+                  "". Please read the section on <a href="language.types.boolean.php" class="link">Booleans</a> for more
+                  information. Use <a href="language.operators.comparison.php" class="link">the ===
+                  operator</a> for testing the return value of this
+                  function.</p></div>
+                  
+                  <h4>Examples</h4>
+                  <div class="info-block">
+                    <h4>Example #1 strpos() examples</h4>
+                    <code>
+                      <span style="color: #000000">
+                      <span style="color: #0000BB">&lt;?php<br />$mystring&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'abc'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$findme&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$pos&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">strpos</span><span style="color: #007700">(</span><span style="color: #0000BB">$mystring</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$findme</span><span style="color: #007700">);<br /><br /></span><span style="color: #FF8000">//&nbsp;Note&nbsp;our&nbsp;use&nbsp;of&nbsp;===.&nbsp;&nbsp;Simply&nbsp;==&nbsp;would&nbsp;not&nbsp;work&nbsp;as&nbsp;expected<br />//&nbsp;because&nbsp;the&nbsp;position&nbsp;of&nbsp;'a'&nbsp;was&nbsp;the&nbsp;0th&nbsp;(first)&nbsp;character.<br /></span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$pos&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">"The&nbsp;string&nbsp;'$findme'&nbsp;was&nbsp;not&nbsp;found&nbsp;in&nbsp;the&nbsp;string&nbsp;'$mystring'"</span><span style="color: #007700">;<br />}&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">"The&nbsp;string&nbsp;'$findme'&nbsp;was&nbsp;found&nbsp;in&nbsp;the&nbsp;string&nbsp;'$mystring'"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #DD0000">"&nbsp;and&nbsp;exists&nbsp;at&nbsp;position&nbsp;$pos"</span><span style="color: #007700">;<br />}<br /><br /></span><span style="color: #FF8000">//&nbsp;We&nbsp;can&nbsp;search&nbsp;for&nbsp;the&nbsp;character,&nbsp;ignoring&nbsp;anything&nbsp;before&nbsp;the&nbsp;offset<br /></span><span style="color: #0000BB">$newstring&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'abcdef&nbsp;abcdef'</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">$pos&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">strpos</span><span style="color: #007700">(</span><span style="color: #0000BB">$newstring</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">);&nbsp;</span><span style="color: #FF8000">//&nbsp;$pos&nbsp;=&nbsp;7,&nbsp;not&nbsp;0<br /></span><span style="color: #0000BB">?&gt;</span>
+                      </span>
+                    </code>
+                  </div>
+                  <h4>Notes</h4>
+                  <div class="notes"> <strong>Note:</strong> This function is binary-safe.</div>
+                  <h4>See also:</h4>
+                  <ul class="simplelist">
+                    <li><a href="function.strrpos.php" class="function" rel="rdfs-seeAlso">strrpos()</a></li>
+                    <li><a href="function.stripos.php" class="function" rel="rdfs-seeAlso">stripos()</a></li>
+                    <li><a href="function.strripos.php" class="function" rel="rdfs-seeAlso">strripos()</a></li>
+                    <li><a href="function.strrchr.php" class="function" rel="rdfs-seeAlso">strrchr()</a></li>
+                    <li><a href="function.substr.php" class="function" rel="rdfs-seeAlso">substr()</a></li>
+                    <li><a href="function.stristr.php" class="function" rel="rdfs-seeAlso">stristr()</a></li>
+                    <li><a href="function.strstr.php" class="function" rel="rdfs-seeAlso">strstr()</a></li>
+                  </ul>
+                  
+                  <hr />
+                  
+                  <div class="add-note"><a href="#">Add Note</a></div>
+                  <h4>User Contributed Notes</h4>
+                  <ul id="contributed-notes">
+                    <li>
+<div class="username"><strong>pawhox</strong><br/><a href="#83437">26-May-2008 06:19</a></div>
+<div class="ncontent">
+<div class="html phpcode note"><span class="corners-top"><span></span></span>
+<code>
+<span class="html">
+Hello! I was founding a function, which finds any occurence of a string (no: first occurence). I wasn't, so I maked this function! It may be very useful.<br />
+<br />
+<span class="default">&lt;?php<br />
+<br />
+int strnpos</span><span class="keyword">(</span><span class="default">string $haystack</span><span class="keyword">, </span><span class="default">mixed $needle</span><span class="keyword">, </span><span class="default">int $occurence</span><span class="keyword">);<br />
+<br />
+</span><span class="default">?&gt;<br />
+</span><br />
+Example:<br />
+<br />
+<span class="default">&lt;?php<br />
+<br />
+strnpos</span><span class="keyword">(</span><span class="string">"I like the bananas. You like coke. We like chocolate."</span><span class="keyword">, </span><span class="string">"like"</span><span class="keyword">, </span><span class="default">2</span><span class="keyword">); </span><span class="comment">// 24<br />
+<br />
+</span><span class="default">?&gt;<br />
+</span><br />
+Here's code of this function:<br />
+<br />
+<span class="default">&lt;?php<br />
+<br />
+</span><span class="keyword">function </span><span class="default">strnpos</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">, </span><span class="default">$n</span><span class="keyword">)<br />
+&nbsp;&nbsp;&nbsp; {&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if (</span><span class="default">$n </span><span class="keyword">&lt;= </span><span class="default">0 </span><span class="keyword">|| </span><span class="default">intval</span><span class="keyword">(</span><span class="default">$n</span><span class="keyword">) != </span><span class="default">$n </span><span class="keyword">|| </span><span class="default">substr_count</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">) &lt; </span><span class="default">$n</span><span class="keyword">)&nbsp; return </span><span class="default">FALSE</span><span class="keyword">;<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">$str </span><span class="keyword">= </span><span class="default">strval</span><span class="keyword">(</span><span class="default">$str</span><span class="keyword">);<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">$len </span><span class="keyword">= </span><span class="default">0</span><span class="keyword">;<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; for (</span><span class="default">$i</span><span class="keyword">=</span><span class="default">0 </span><span class="keyword">; </span><span class="default">$i</span><span class="keyword">&lt;</span><span class="default">$n</span><span class="keyword">-</span><span class="default">1 </span><span class="keyword">; ++</span><span class="default">$i</span><span class="keyword">)<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {<br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; if ( </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">) === </span><span class="default">FALSE </span><span class="keyword">) return </span><span class="default">FALSE</span><span class="keyword">;<br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">$len </span><span class="keyword">+= </span><span class="default">strlen</span><span class="keyword">( </span><span class="default">substr</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">0</span><span class="keyword">, </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">) + </span><span class="default">strlen</span><span class="keyword">(</span><span class="default">$str</span><span class="keyword">)) );<br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <br />
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span class="default">$base </span><span class="keyword">= </span><span class="default">substr</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">) + </span><span class="default">strlen</span><span class="keyword">(</span><span class="default">$str</span><span class="keyword">) );<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return </span><span class="default">strpos</span><span class="keyword">(</span><span class="default">$base</span><span class="keyword">, </span><span class="default">$str</span><span class="keyword">) + </span><span class="default">$len</span><span class="keyword">;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+<br />
+</span><span class="default">?&gt;</span>
+</span>
+</code>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+                    </li>
+                    <li>
+<div class="username"><strong>ilaymyhat-rem0ve at yahoo dot com</strong><br/><a href="#82229">01-Apr-2008 05:17</a></div>
+<div class="ncontent">
+<div class="html phpcode note"><span class="corners-top"><span></span></span>
+<code><span class="html">
+This might be useful.<br />
+<br />
+class String{<br />
+&nbsp;&nbsp;&nbsp; <br />
+
+&nbsp;&nbsp;&nbsp; //Look for a $needle in $haystack in any position<br />
+&nbsp;&nbsp;&nbsp; public static function contains(&amp;$haystack, &amp;$needle, &amp;$offset)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $result = strpos($haystack, $needle, $offset);<br />
+
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return $result !== FALSE;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; //intuitive implementation .. if not found returns -1.<br />
+&nbsp;&nbsp;&nbsp; public static function strpos(&amp;$haystack, &amp;$needle, &amp;$offset)<br />
+
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; $result = strpos($haystack, $needle, $offset);<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; if ($result === FALSE )<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; {<br />
+
+&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; return -1;<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; }<br />
+&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; return $result;<br />
+
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; <br />
+}//String</span>
+</code>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+                      
+                    </li>
+                  </ul>
+                </div>
+            <span class="corners-bottom"><span></span></span></div><!--.block-->
+            <div class="adv-block"><span class="corners-top"><span></span></span>
+              <a href="#" class="prev">strbrk</a>
+              <a href="#" class="next">strbrk</a>
+              <p>View this page in <select><option>Bulgarian</option></select> <input type="submit" value="&raquo;" /></p>
+            <span class="corners-bottom"><span></span></span></div><!--.block-->
+          </div>
+        </li><!--#main-column-->
+   </ul>
+  </li><!--#content-->
+  
+  <li id="footer"><span class="corners-top"><span></span></span>
+   <div class="info">
+    <div id="copyright"><a href="/copyright.php">Copyright © 2001-2008 The PHP Group</a><br />All rights reserved.</div>      
+    <div id="footer-menu">
+     <ul>  
+      <li class="first"><a href="/feed.atom">Atom</a></li>
+      <li><a href="/source.php?url=/index.php">Show source</a></li>
+      <li><a href="/credits.php">Credits</a></li>
+      <li><a href="/stats/">Stats</a></li>
+      <li><a href="/sitemap.php">Sitemap</a></li>
+      <li><a href="/contact.php">Contact</a></li>
+      <li><a href="/contact.php#ads">Advertising</a></li>
+      <li class="last"><a href="/mirrors.php">Mirror sites</a></li>
+     </ul><br/><small><a href="/mirror.php">This mirror</a> generously provided by: <a href="http://developer.yahoo.com/">Yahoo! Inc.</a> Last updated: Mon Jun  9 01:34:45 2008 PDT</small>
+    </div>
+   </div>
+  <span class="corners-bottom"><span></span></span></li><!--#footer-->
+ </ul><!--#root-->
+</body>
+</html>

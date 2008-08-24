@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb">
+<head>
+<title>PHP: Getting Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" media="screen" rel="stylesheet" href="css/screen.css" />
+<link type="text/css" media="print" rel="stylesheet" href="css/print.css" />
+<link type="text/css" media="handfield" rel="stylesheet" href="css/handfield.css" />
+<!--[if IE ]>
+<link type="text/css" rel="stylesheet" media="screen" href="css/ie.css" />
+<![endif]-->
+</head>
+
+<body id="homepage">
+ <ul id="root">
+  <li id="header">
+   <span class="side-left"></span>
+   <span class="side-right"></span>
+   <div class="content">
+    <h1><a href="index.html">PHP: Hypertext Preprocessor</a></h1>
+    <div id="search-box">
+      <label>Search for</label><span><input type="text" class="text" maxlength="20" name="q" /></span><label>in the</label><span><select><option>functions list</option></select></span><span><input type="submit" class="button" value="Search" /></span>
+    </div>
+   </div>
+  </li><!--#header-->
+  <li id="main-menu"><span class="corners-top"><span></span></span>
+   <ul><li class="first"><a href="#">Downloads</a></li><li><a href="#">Documentation</a></li><li><a href="#">Faq</a></li><li><a href="#">Getting Help</a></li><li><a href="#">Mailing Lists</a></li><li><a href="#">Reporting Bugs</a></li><li><a href="#">Php.net Sites</a></li><li><a href="#">Links</a></li><li><a href="#">Conferences</a></li><li class="last"><a href="#">My Php.net</a></li></ul>
+  <span class="corners-bottom"><span></span></span></li><!--#main-menu-->
+
+
+  <li id="content">
+    <div id="page-area">
+     <div class="content"><span class="corners-top"><span></span></span>
+				<div class="info">
+          <p>Have an upcoming PHP user group meeting? Holding a PHP training session? Submit your event here, and after it has been approved, it will be listed on the PHP.net homepage and appear in our full event listings.</p>
+
+          <ul class="errors">
+            <li>You must supply a valid email address.</li>
+            <li>You must supply a short description of the event.</li>
+            <li>You must supply a long description of the event.</li>
+            <li>You must supply a URL with more information about the event.</li>
+            <li>You must specify a country for the event.</li>
+            <li>You must specify a category for the event.</li>
+            <li>You must specify a valid start date.</li>
+          </ul>
+
+          <form action="">
+            <dl class="form">
+              <dt>Start Date</dt>
+              <dd>
+                <select name="smonth"><option></option><option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+                </select>
+                <input name="sday" size="2" maxlength="2" value="0" type="text" />
+                <input name="syear" size="4" maxlength="4" value="2008" type="text" />
+                <input id="single" name="type" value="single" checked="checked" type="radio" />
+                <label for="single">One day (no end-date required)</label>
+              </dd>
+              <dt>End Date</dt>
+              <dd>
+                <select name="emonth"><option></option><option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+                </select>
+                <input name="eday" size="2" maxlength="2" value="0" type="text" />
+                <input name="eyear" size="4" maxlength="4" value="2008" type="text" />
+                <input id="multi" name="type" value="multi" type="radio" />
+                <label for="multi">Multi-day event</label>
+              </dd>
+              
+              <dt>OR Recurring</dt>
+              <dd>
+                <select name="recur"><option></option><option value="1">First</option>
+                  <option value="2">Second</option>
+                  <option value="3">Third</option>
+                  <option value="4">Fourth</option>
+                  <option value="-1">Last</option>
+                  <option value="-2">2nd Last</option>
+                  <option value="-3">3rd Last</option>
+                </select>
+                <select name="recur_day"><option></option><option value="1">Sunday</option>
+                  <option value="2">Monday</option>
+                  <option value="3">Tuesday</option>
+                  <option value="4">Wednesday</option>
+                  <option value="5">Thursday</option>
+                  <option value="6">Friday</option>
+                  <option value="7">Saturday</option>
+                </select>
+                <input id="recur" name="type" value="recur" type="radio" />
+                <label for="recur">Recurring (every month)</label>
+              </dd>
+              <dt>Short Description</dt>
+              <dd><input name="sdesc" class="max" value="" size="32" maxlength="32" type="text" /></dd>
+              <dt>URL</dt>
+              <dd><input name="url" size="40" maxlength="128" class="max" value="" type="text" /></dd>
+              <dt>Country</dt>
+              <dd>
+                <select name="country" class="max">
+                <option value="">- Select a country -</option>
+                <option value="AFG">Afghanistan</option>
+                <option value="ALB">Albania</option>
+                <option value="DZA">Algeria</option>
+                <option value="ASM">American Samoa</option>
+                <option value="AND">Andorra</option>
+                <option value="AGO">Angola</option>
+                <option value="AIA">Anguilla</option>
+                <option value="ATG">Antigua and Barbuda</option>
+                <option value="ARG">Argentina</option>
+                <option value="ARM">Armenia</option>
+                <option value="ABW">Aruba</option>
+                <option value="AUS">Australia</option>
+                </select>
+              </dd>
+              <dt>Event category</dt>
+              <dd>
+                <select name="category" class="max">
+                <option value="0" selected="selected">- Select a category -</option>
+                <option value="1">User Group Event</option>
+                <option value="2">Conference</option>
+                <option value="3">Training</option>
+                </select>
+              </dd>
+              <dt>Email</dt>
+              <dd>
+               <input name="email" size="40" maxlength="128" class="max" value="" type="text" /><br />
+               <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
+              </dd>
+              <dt>Long description</dt>
+              <dd><textarea name="ldesc" cols="60" class="max" rows="10"></textarea></dd>
+              <dt>&nbsp;</dt>
+              <dd><input type="submit" value="Preview" /></dd>
+            </dl>
+
+            
+          </form>
+
+
+
+
+
+
+        </div>
+      <span class="corners-bottom"><span></span></span></div>
+    </div>
+  </li><!--#content-->
+  
+  <li id="footer"><span class="corners-top"><span></span></span>
+   <div class="info">
+    <div id="copyright"><a href="/copyright.php">Copyright © 2001-2008 The PHP Group</a><br />All rights reserved.</div>			
+    <div id="footer-menu">
+     <ul>  
+      <li class="first"><a href="/feed.atom">Atom</a></li>
+      <li><a href="/source.php?url=/index.php">Show source</a></li>
+      <li><a href="/credits.php">Credits</a></li>
+      <li><a href="/stats/">Stats</a></li>
+      <li><a href="/sitemap.php">Sitemap</a></li>
+      <li><a href="/contact.php">Contact</a></li>
+      <li><a href="/contact.php#ads">Advertising</a></li>
+      <li class="last"><a href="/mirrors.php">Mirror sites</a></li>
+     </ul><br/><small><a href="/mirror.php">This mirror</a> generously provided by: <a href="http://developer.yahoo.com/">Yahoo! Inc.</a> Last updated: Mon Jun  9 01:34:45 2008 PDT</small>
+    </div>
+   </div>
+  <span class="corners-bottom"><span></span></span></li><!--#footer-->
+ </ul><!--#root-->
+</body>
+</html>

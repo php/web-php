@@ -1,0 +1,89 @@
+body {
+	margin:.2in .55in;
+	padding:0;
+	font:12pt "Times New Roman", serif;
+	}
+
+/* Hide and reset blocks
+ *******************************/
+#mid-column,
+#main-column,
+#right-column,
+#header,
+#content {
+  margin:0;
+  list-style:none;
+  
+}
+
+#left-column,
+#footer,
+.adv-block,
+#main-menu,
+#search-box,
+#news-line,
+.releases,
+.calendar,
+.add-event,
+.add-note {
+  display:none;
+}
+
+/* Links decoration
+ *******************************/
+a {
+	color:black;
+	text-decoration:none;
+	}
+a img {
+	border-width:0;
+	}
+  
+/* Headings
+ *******************************/
+h1, h2, h3,h4 {
+	margin:1em 0 .5em;
+	font-family:Georgia,Serif;
+	font-weight:normal;
+	clear:both;
+	}
+	h1 {
+		margin-top:.5em;
+		font-size:180%;
+		}
+	h2 {
+		font-size:240%;
+		margin:.3em 0 0 0;
+		padding-bottom:0;
+		}
+	h3 {
+		font-size:150%;
+		margin-bottom:0;
+		}
+    
+	h4 {
+		font-size:120%;
+		margin-bottom:0;
+		}
+p{
+	margin:0 0 .6em 0;
+	}
+blockquote{
+	font-style:italic;
+	}
+h3+blockquote, h2+blockquote, p+ul, h2+ul, h3+ul{
+	margin-top:.2em;
+	}
+  
+/* Etc
+ *******************************/
+.content a[href]:after,
+.secondary a[href]:after,
+#footer a[href]:after {
+	content: " (" attr(href) ") ";
+	font-size: 90%;
+	}
+.content a[href^="/"]:after,
+.secondary a[href^="/"]:after {
+	content: " (http://php.net/" attr(href) ") ";
+	}
