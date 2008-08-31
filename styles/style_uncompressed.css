@@ -1077,6 +1077,9 @@
 #root {
   margin: 0;
 }
+#header {
+  margin-bottom: 0;
+}
 /***** }}} *****/
 /***** {{{ Additional styling, mostly for the manual *****/
 #main-column .tip {
