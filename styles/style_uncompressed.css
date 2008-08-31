@@ -1080,6 +1080,9 @@
 #header {
   margin-bottom: 0;
 }
+#main-menu {
+  text-align: center;
+}
 /***** }}} *****/
 /***** {{{ Additional styling, mostly for the manual *****/
 #main-column .tip {
