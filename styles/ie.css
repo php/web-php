@@ -7,7 +7,7 @@ html {filter: expression(document.execCommand("BackgroundImageCache", false, tru
 
 
 #root {
-	width: expression(document.body.clientWidth < 971 ? "970px" : document.body.clientWidth > 2509 ? "2508px" : "auto");
+  width: expression(document.body.clientWidth < 971 ? "970px" : document.body.clientWidth > 2509 ? "2508px" : "auto");
 }
 
 .zoom,
@@ -20,7 +20,7 @@ html {filter: expression(document.execCommand("BackgroundImageCache", false, tru
 * html .clear{ height: 1% }
 
 .wordwrap {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 #contributed-notes .ncontent {
@@ -36,9 +36,14 @@ sup {
 input,
 select,
 textarea {
-	vertical-align:middle;
+  vertical-align:middle;
 }
 
 .calendar p {
   border:1px solid #DADADA;
 }
+
+/*
+ * vim: ts=2 sw=2 et
+ */
+
