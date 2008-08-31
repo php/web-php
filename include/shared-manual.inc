@@ -149,6 +149,7 @@ SIDEBAR;
     if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
       echo "</ul></li>";
     }
+    echo "</ul>\n";
     column_box();
 
 }
