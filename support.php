@@ -7,7 +7,7 @@ site_header("Getting Help");
 column_box(COLUMN_MAIN);
 ?>
 
-<h1>Documentation</h1>
+<h2>Documentation</h2>
 
 <p>
  A good place to start is by skimming through the ever-growing list of
@@ -16,7 +16,7 @@ column_box(COLUMN_MAIN);
  <a href="/docs.php">documentation</a> section.
 </p>
 
-<h1>Books</h1>
+<h2>Books</h2>
 <p>
  Books are convenient resources to begin exploring or extend your
  PHP knowledge. There are literally thousands of books available in
@@ -29,7 +29,7 @@ column_box(COLUMN_MAIN);
  and search there.
 </p>
 
-<h1>Mailing Lists</h1>
+<h2>Mailing Lists</h2>
 
 <p>
  There are a number of mailing lists devoted to talking about PHP and related
@@ -38,7 +38,7 @@ column_box(COLUMN_MAIN);
  subscribe to the lists.
 </p>
 
-<h1>Newsgroups</h1>
+<h2>Newsgroups</h2>
 
 <p>
  The PHP language newsgroup is <tt>comp.lang.php</tt>, available on any
@@ -55,7 +55,7 @@ column_box(COLUMN_MAIN);
  that these newsgroups are only available on this server.
 </p>
 
-<h1>User Groups</h1>
+<h2>User Groups</h2>
 
 <p>
  Christopher R. Moewes-Bystrom is running a PHP user group registry at <a
@@ -67,7 +67,7 @@ column_box(COLUMN_MAIN);
  opportunity to get together.
 </p>
 
-<h1>Events &amp; Training</h1>
+<h2>Events &amp; Training</h2>
 
 <p>
  A list of upcoming events (such as user group meetings and PHP training
@@ -77,7 +77,7 @@ column_box(COLUMN_MAIN);
  href="/submit-event.php">on this page</a>.
 </p>
 
-<h1>Sample Code</h1>
+<h2>Sample Code</h2>
 
 <p>
  Looking for some more sample PHP scripts? Our <a
@@ -86,7 +86,7 @@ column_box(COLUMN_MAIN);
  your searching pleasure!
 </p>
 <!--
-<h1>Knowledge Base</h1>
+<h2>Knowledge Base</h2>
 
 <p>
  The knowledge base is a growing collection of PHP related information in
@@ -95,7 +95,7 @@ column_box(COLUMN_MAIN);
  at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
 </p>
 -->
-<h1>Instant Resource Center</h1>
+<h2>Instant Resource Center</h2>
 
 <p>
  Otherwise known as IRC or Internet Relay Chat. Here you can usually find
@@ -109,7 +109,7 @@ column_box(COLUMN_MAIN);
  <a href="http://www.freenode.net/">freenode</a>).
 </p>
 
-<h1>PHP.net webmasters</h1>
+<h2>PHP.net webmasters</h2>
 
 <p>
  If you have a problem or suggestion <em>in connection with the PHP.net
