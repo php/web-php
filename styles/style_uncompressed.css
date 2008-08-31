@@ -1051,6 +1051,44 @@
   .zoom{
     overflow:hidden;
   }
+
+/***** {{{ REMOVE ME *****/
+/*
+ * This is only during development so that users of docs.php.net can get a big
+ * fat red warning about that thei are browser developmental server.
+ */
+#main-menu {
+  margin-bottom: 0;
+}
+
+#warning {
+  background:#ffffff;
+  padding:1em;
+  margin: 0px;
+  border-bottom:1px solid #D0D0D0;
+  color:#6F0000;
+  margin-bottom: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size:1.17em;
+}
+/***** }}} *****/
+/***** {{{ Overwrite styles from AOEMedia *****/
+#root {
+  margin: 0;
+}
+/***** }}} *****/
+/***** {{{ Additional styling, mostly for the manual *****/
+#main-column .tip {
+  background:#ffffff;
+  padding:1em;
+  margin-bottom:1em;
+  border-bottom:1px solid #D0D0D0;
+  color: #000066;
+}
+
+/***** }}} *****/
+
   
 }
 
