@@ -159,9 +159,7 @@ function site_header($title = '', $config = array())
 <head{$profile}>
   <title>PHP{$title}</title>
   <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}" />
-  <link type="text/css" media="screen" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/screen.css" />
-  <link type="text/css" media="print" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/print.css" />
-  <link type="text/css" media="handfield" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/handfield.css" />
+  <link type="text/css" media="all" rel="stylesheet" href="{$_SERVER['STATIC_ROOT']}/styles/style_uncompressed.css" />
   <!--[if IE ]>
     <link type="text/css" rel="stylesheet" media="screen" href="{$_SERVER['STATIC_ROOT']}/styles/ie.css" />
   <![endif]-->
