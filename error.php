@@ -292,6 +292,9 @@ $uri_aliases = array (
     "_"            => "function.gettext",
     "cli"          => "features.commandline",
 
+    "oop4"         => "language.oop",
+    "oop"          => "language.oop5",
+
     "class"        => "language.oop5.basic",
     "new"          => "language.oop5.basic",
     "extends"      => "language.oop5.basic",
