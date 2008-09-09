@@ -327,6 +327,7 @@ $uri_aliases = array (
     "try"          => "language.exceptions",
     "catch"        => "language.exceptions",
     "lsb"          => "language.oop5.late-static-bindings",
+    "namespace"    => "language.namespaces",
     "use"          => "language.namespaces.using",
     "iterator"     => "language.oop5.iterations",
     
