@@ -3,13 +3,53 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-09-08T12:31:08+02:00</updated>
+  <updated>2008-09-10T15:08:18+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>Barcelona PHP Conference 2008</title>
+    <id>http://www.php.net/archive/2008.php#id2008-09-10-1</id>
+    <published>2008-09-10T15:08:49+02:00</published>
+    <updated>2008-09-10T15:08:49+02:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-09-27</php:finalTeaserDate>
+    <category term="conferences" label="Conference announcement"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-09-10-1" rel="alternate" type="text/html"/>
+    <php:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.es/" title="Barcelona PHP Conference">PHPBarcelonaConference003.png</php:newsImage>
+    <link href="http://phpconference.es/" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="http://phpbarcelona.org/">The PHP Barcelona User Group</a>
+        is proud to announce its first
+        <a href="http://phpconference.es/">international PHP Conference</a>.
+        It will be celebrated on <abbr class="dtstart" title="2008-09-27">Saturday,
+         September 27th</abbr>, at <span class="location">Barcelona</span>.
+       </p>
+        <p>
+        The PHP Barcelona User Group (aka PHPBarcelona) is a non-profit
+        organization aimed at spreading and interchanging knowledge among
+        the PHP developers community of Barcelona and surroundings, and
+        also evangelizing the PHP technology on universities and
+        enterprises as well.
+       </p>
+        <p>
+        This year they had celebrated another events but this one is
+        the first which will be developed completely in English. The
+        highlights of this conference will be the talks of internationally
+        recognized PHP developers, like Derick Rethans and Scott MacVicar
+        among others.
+       </p>
+        <p>
+        For more information about Barcelona PHP Conference 2008 and to
+        register, please visit
+        <a href="http://phpconference.es/" class="url">http://phpconference.es</a>
+       </p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>International PHP Conference 2008 October 27-31st Mainz, Germany</title>
     <id>http://www.php.net/archive/2008.php#id2008-09-08-1</id>
@@ -21,37 +61,40 @@
     <php:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.com/" title="International PHP Conference 2008">icp08.jpg</php:newsImage>
     <link href="http://www.phpconference.com/" rel="via" type="text/html"/>
     <content type="xhtml">
-     <div xmlns="http://www.w3.org/1999/xhtml">
-      <h3>The premiere PHP Conference – Celebrate the 14th event with us!</h3>
-      <p>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <h3>The premiere PHP Conference – Celebrate the 14th event with us!</h3>
+        <p>
        Today the ICP is <emphasis>the</emphasis> reference whenever substructures of existing technologies
        should be extended or the basis for new developments should be created. Thus, you
        do not only profit from the concentrated know-how of worldwide acknowledged,
        international PHP-experts but also from the professional transfer of knowledge
        between industry and development.
       </p>
-      <p>
+        <p>
        With its mixture of topics the International PHP Conference provides an ideal
        resource for all professionals and their successful daily routine within the whole
        PHP-spectrum. Insights into current Web 2.0 technologies, Security, Best Practices
        for tools and components, Enterprise know-how, databases, architectures and more
        are provided at the ICP 2008.
       </p>
-      <p>
+        <p>
        The International PHP Conference celebrates it's 14th Edition. Celebrate with us,
        and profit from our Celebrate 14teen offers!
       </p>
-      <ul>
-       <li>199 € / Special Price</li>
-       <li>149 €* / Special Price for Freelancer</li>
-       <li>99 €** / Student Price</li>
-      </ul>
-      <p>Offer is valid till 30th September!</p>
-      <p><a href="http://phpconference.com/">Register now!</a></p>
-      <p>
-       <small>* Confirmation with your company's letter head</small><br />
-       <small>** With Student ID. Limited seating available</small>
-      </p>
+        <ul>
+          <li>199 € / Special Price</li>
+          <li>149 €* / Special Price for Freelancer</li>
+          <li>99 €** / Student Price</li>
+        </ul>
+        <p>Offer is valid till 30th September!</p>
+        <p>
+          <a href="http://phpconference.com/">Register now!</a>
+        </p>
+        <p>
+          <small>* Confirmation with your company's letter head</small>
+          <br/>
+          <small>** With Student ID. Limited seating available</small>
+        </p>
       </div>
     </content>
   </entry>
