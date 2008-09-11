@@ -239,7 +239,7 @@ $minute = rand(0, 59);
 </p>
 
 <p>
- Change the DocumentRoot and include_path settings as appropriate,
+ Change the DocumentRoot setting as appropriate,
  specify the mirror's preferred language, and provide settings according
  to your stats setup, if your mirror is going to provide it. For the
  preferred language setting, choose one from those available as
