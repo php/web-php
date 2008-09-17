@@ -3,7 +3,7 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-09-16T10:11:42+02:00</updated>
+  <updated>2008-09-17T11:35:47+02:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
@@ -14,23 +14,27 @@
     <title>PHP Quebec 2009</title>
     <id>http://www.php.net/archive/2008.php#id2008-09-16-1</id>
     <published>2008-09-16T10:12:12+02:00</published>
-    <updated>2008-09-16T10:12:12+02:00</updated>
+    <updated>2008-09-17T11:35:47+02:00</updated>
     <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-10-19</php:finalTeaserDate>
     <category term="cfp" label="Call for Papers"/>
     <link href="http://www.php.net/conferences/index.php#id2008-09-16-1" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-09-16-1" rel="via" type="text/html"/>
     <content type="html">
-    <p>
-	PHP Québec is pleased to announce the seventh edition of the PHP Québec Conference. The Conference will take place in <span class="location">Montréal, Québec, Canada</span> between <abbr title="RFC3339-date-format" class="dtstart">March 4</abbr> and <abbr title="RFC3339.." class="dtend">6th 2009</abbr>. We are looking for speakers willing to share their expertise with Canadian and United States PHP professionals.
+      <p>
+	PHP Québec is pleased to announce the seventh edition of the PHP Québec Conference.
+    The Conference will take place in <span class="location">Montréal, Québec,
+    Canada</span> between <abbr title="2008-03-04T00:00:00+01:00" class="dtstart">March 4</abbr>
+    and <abbr title="2009-03-06T00:00:00+01:00" class="dtend">6th 2009</abbr>.
+    We are looking for speakers willing to share their expertise with Canadian and United States PHP professionals.
 	</p>
-	<p>
+      <p>
 	The Conference features technical talks and Labs dedicated to advanced software development techniques with PHP5 and PHP6, XML, web services,databases, etc., project management where speakers and visitor swill try to find solutions to actual business problems. 
 	</p>
-	<p>
+      <p>
 	Organizers will prioritize new and original topics in English or French. For more information, visit the website: 
 	<a href="http://conf.phpquebec.com/en" title="2009 PHP QuebecConference">http://conf.phpquebec.com</a>
 </p>
-</content>
+    </content>
   </entry>
   <entry>
     <title>Barcelona PHP Conference 2008</title>
