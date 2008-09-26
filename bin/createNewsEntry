@@ -1,4 +1,4 @@
-#!/usr/local/bin/php
+#!/usr/share/php
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 $BASE = "http://www.php.net";
@@ -9,7 +9,7 @@ function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to =
 	} else {
 		$n = $d->createElement($name);
 	}
-	foreach($attrs as $k => $v) {
+	foreach((array)$attrs as $k => $v) {
 		$n->setAttribute($k, $v);
 	}
 	if ($to) {
