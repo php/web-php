@@ -66,13 +66,13 @@ $SIDEBAR_DATA = '
  you might try to search for a PHP tarball on FileWatcher:
 </p>
  
-<form action="http://www.filewatcher.com/" method="get">
+<form action="http://www.filewatcher.com/_/" method="get">
  <p>
   <input type="hidden" name="min" value="500000" />
   <input type="hidden" name="af" value="1" />
   <select name="q" onchange="this.form.submit()">
    <option value="">-select version-</option>
-   <option value="php-3.0.tar.gz">3.0</option>
+   <option value="php-3.0.tar.gz">3.0.0</option>
    <option value="php-3.0.1.tar.gz">3.0.1</option>
    <option value="php-3.0.2.tar.gz">3.0.2</option>
    <option value="php-3.0.3.tar.gz">3.0.3</option>
