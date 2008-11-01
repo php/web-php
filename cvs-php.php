@@ -306,6 +306,16 @@ EOT;
 </p>
 
 <p>
+ One last thing, before you fill in the form you should also understand the principles under which PHP itself is developed. These are summarised in the next paragraph.</p>
+<p>Any code contributed to PHP will be received under the PHP (or a compatible) license. PHP will be redistributed under the PHP license (currently version 3.01, http://www.php.net/license/). This includes implementation code, test cases, utility scripts and tools - that is, all code associated with the PHP project. If you contribute code that  isn't entirely your own (for example it may be partially derived from other Open Source software) you are asked to add a comment into the source code to indicate the origin and the license of the original code. If you are unsure of the license you are asked to confirm with the owner of the code that they are happy for it to be contributed to PHP under the PHP license. Specifically regarding GPL and LGPL source code:
+<ul>
+<li>GPL or LGPL licensed code cannot be used as a basis for any derived work contributed to PHP.</li>
+<li>Extensions which link  GPL'd libraries will not be accepted.</li>
+<li>Extensions which link to LGPL libraries  will be strongly discouraged.</li>
+</ul>
+</p>
+
+<p>
  The CVS account, once granted and activated (which could take a while, so be
  patient!), gives you access to a number of things. First, and most
  importantly, it gives you access to modify those parts of the PHP CVS tree for
