@@ -172,6 +172,9 @@ div.indent {
 li {
 	padding-top: 3px;
 	padding-bottom: 3px;
+}
+/* Don't overwrite ordered lists */
+ul li {
 	list-style-type: square;
 }
 
