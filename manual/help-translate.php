@@ -25,8 +25,15 @@ The following list of languages already contain CVS modules, and will show up on
 <h3>Inactive languages already in CVS</h3>
 <ul>
 <?php
+// $none are manuals we don't even have old versions of
+$none = array('ar');
+
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
-    echo '<li>', $lang, ' : (<a href="http://docs.php.net/manual/', $cc, '">archive</a>)</li>';
+    $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';
+    if (in_array($cc, $none)) {
+        $link = 'no archive';
+    }
+    echo '<li>', $lang, ' : (', $link, ')</li>';
 }
 ?>
 </ul>
