@@ -950,6 +950,10 @@ div.classsynopsis tt.parameter,
 div.classsynopsis span.modifier_role {
 	color: rgb(0, 0, 187);
 }
+div.classsynopsis b.interfacename {
+	color: #0000BB;
+	font-weight: normal;
+}
 span.replaceable, span.initializer {
 	font-style: italic;
 }
