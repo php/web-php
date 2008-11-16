@@ -70,7 +70,6 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'he'    => 'Hebrew',
     'hu'    => 'Hungarian',
     'id'    => 'Indonesian',
-    'kr'    => 'Korean',
     'lt'    => 'Lithuanian',
     'no'    => 'Norwegian',
     'fa'    => 'Persian',
@@ -78,7 +77,6 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
     'sv'    => 'Swedish',
-    'tr'    => 'Turkish',
  );
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
