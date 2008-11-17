@@ -11,6 +11,30 @@
     <email>php-webmaster@lists.php.net</email>
   </author>
   <entry>
+    <title>Forum PHP Paris 2008</title>
+    <id>http://www.php.net/archive/2008.php#id2008-11-15-1</id>
+    <published>2008-11-15T21:56:55-07:00</published>
+    <updated>2008-11-15T21:56:55-07:00</updated>
+    <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-12-09</php:finalTeaserDate>
+    <php:newsImage link="http://www.afup.org/" title="Forum AFUP Paris 2008">afup2008.png</php:newsImage>
+    <category term="conferences" label="Conference announcement"/>
+    <link href="http://www.php.net/conferences/index.php#id2008-11-15-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-11-15-1" rel="via" type="text/html"/>
+    <content type="html">
+      <p>The 2008 edition of the French PHP users welcomes once again unique
+      speakers : Zak Greant, from Foo Associates, Laura Thompson from Mozilla, and
+      Lukas Smith, Core PHP Developper.
+          </p>
+    <p>
+	Set in Paris, on December 8th and 9th 2008, by the 
+	Association Française des Utilisateurs de PHP (French PHP User Group, 
+	<a href="http://www.afup.org/" alt="AFUP">http://www.afup.org/</a>),
+	the Forum PHP 2008 focuses on the themas of Professional Web Services,
+	and PHP large scale projects.
+    </p>
+    </content>
+  </entry>  
+  <entry>
     <title>PHPNW08 - November 22nd - Manchester, UK</title>
     <id>http://www.php.net/archive/2008.php#id2008-11-04-2</id>
     <published>2008-11-04T12:55:09+00:00</published>
@@ -85,6 +109,7 @@
    </content>
   </entry>
   <entry>
+>>>>>>> 1.66
     <title>PHP Quebec 2009</title>
     <id>http://www.php.net/archive/2008.php#id2008-09-16-1</id>
     <published>2008-09-16T10:12:12+02:00</published>
