@@ -23,6 +23,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.cp15.org/php/">RISC OS</a></li>
  <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
  <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
+ <li><a href="http://gar.svn.sourceforge.net/viewvc/gar/csw/trunk/lang/php5/">Solaris OpenCSW packages</a></li>
 </ul>
 
 <h3>Development and archive versions</h3>
