@@ -48,7 +48,9 @@ function loadSuggestCode()
     if (navigator.userAgent.toLowerCase().indexOf('mac') > 0) {
       searchEnabled = false;
     }
-    if (myphpnet = getCookie('MYPHPNET')) {
+
+    myphpnet = getCookie('MYPHPNET');
+    if (typeof(myphpnet) == "string") {
         myphpnet_parts = myphpnet.split(",");
         if (myphpnet_parts.length > 3) {
             if (myphpnet_parts[3] == '1') {
