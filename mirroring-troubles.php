@@ -128,6 +128,13 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  This test will be performed from multiple locations in the future.
 </p>
 
+<a name="outbound"></a>
+<h3>Unable to do external searches [<a href="results.php?q=curl&p=manual&l=en">?</a>]</h3>
+<p>
+ Several searches require outbound connections to www.php.net, so this is
+ a test for that. The www.php.net box then searches Yahoo.
+</p>
+
 <?php 
 site_footer();
 
