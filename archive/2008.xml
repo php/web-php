@@ -3,13 +3,34 @@
   <title>PHP.net news &amp; announcements</title>
   <link href="http://www.php.net/feed.atom" rel="self"/>
   <icon>/images/news/php-logo.gif</icon>
-  <updated>2008-11-17T18:00:32+01:00</updated>
+  <updated>2008-12-04T09:30:00-05:00</updated>
   <id>http://php.net/archive/2008.php</id>
   <author>
     <name>Webmaster</name>
     <uri>http://php.net/contact</uri>
     <email>php-webmaster@lists.php.net</email>
   </author>
+  <entry>
+    <title>PHP Advent 2008</title>
+    <id>http://www.php.net/archive/2008.php#id2008-12-04-1</id>
+    <published>2008-12-04T09:30:00-05:00</published>
+    <updated>2008-12-04T09:30:00-05:00</updated>
+    <category term="frontpage" label="PHP.net frontpage news"/>
+    <link href="http://www.php.net/index.php#id2008-12-04-1" rel="alternate" type="text/html"/>
+    <link href="http://www.php.net/archive/2008.php#id2008-12-04-1" rel="via" type="text/html"/>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>December is a busy and exciting time of the year.
+        <a href="http://phpadvent.org/">PHP Advent</a> is an attempt to capture
+        and share doses of wisdom from a few of the people in the PHP community
+        who have been kind enough to share their thoughts and tips. Please join
+        us on our daily journey by <a
+        href="http://feeds.feedburner.com/phpadvent">subscribing to our feed</a>
+        or <a href="http://twitter.com/phpadvent">following us on Twitter</a>.
+        Happy holidays.</p>
+      </div>
+    </content>
+  </entry>
   <entry>
     <title>Forum PHP Paris 2008</title>
     <id>http://www.php.net/archive/2008.php#id2008-11-15-1</id>
