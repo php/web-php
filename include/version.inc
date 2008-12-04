@@ -32,13 +32,13 @@ $PHP_5_MD5     = array(
                        "debugpack"     => "24dde2726e3e0cefbb83c0c375ea1f84"
 );
 
-$PHP_5_RC      = '5.2.7RC5';
-$PHP_5_RC_DATE = "27 November 2008";
+$PHP_5_RC      = '5.3.0alpha3';
+$PHP_5_RC_DATE = "04 December 2008";
 
-$PHP_5_WINDOWS_NOTE_MSI = "Update May 6th: Added missing XSL and IMAP extension";
-$PHP_5_WINDOWS_NOTE_ZIP = "Update May 3rd: Added missing XSL and IMAP extension";
-$PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
-$PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
+$PHP_5_WINDOWS_NOTE_MSI = "";
+$PHP_5_WINDOWS_NOTE_ZIP = "";
+$PHP_5_WINDOWS_DATE_MSI = "04 December 2008";
+$PHP_5_WINDOWS_DATE_ZIP = "04 December 2008";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.9";
