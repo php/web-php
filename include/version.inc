@@ -83,13 +83,15 @@ $RELEASES = array(
                     "date"     => $PHP_5_WINDOWS_DATE_MSI,
                     "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
-                array(
+/*                
+		array(
                     "filename" => "pecl-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Win32 binaries",
                     "md5"      => $PHP_5_MD5["pecl.zip"],
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
+*/
                 array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
@@ -118,7 +120,7 @@ $RELEASES = array(
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
-
+/*
                 array(
                     "filename" => "pecl-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PECL $PHP_5_VERSION Non-thread-safe Win32 binaries",
@@ -127,6 +129,7 @@ $RELEASES = array(
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                     //"note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_ssh2.dll, etc.)",
                 ),
+*/
             ),
         ),
         $PHP_5_RC => array(),
