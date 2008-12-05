@@ -91,7 +91,7 @@ foreach($a["source"] as $rel) {
     echo " <li>\n  ";
     download_link($rel["filename"], $rel["name"]); echo " -  {$rel["date"]}<br />\n";
     echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-    (isset($rel["note"]) ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
+    (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
     echo " </li>\n";
 }
 ?>
@@ -105,7 +105,7 @@ if(isset($a["windows"])) {
         echo " <li>\n  ";
         download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
         echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-        echo isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
+        echo isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
         echo " </li>\n";
     }
 } else {
@@ -138,7 +138,7 @@ foreach($a["source"] as $rel) {
     echo " <li>\n  ";
     download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
     echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-    (isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "");
+    (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "");
     echo " </li>\n";
 }
 ?>
@@ -171,7 +171,7 @@ if(isset($a["windows"])) {
         echo " <li>\n  ";
         download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
         echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-        echo isset($rel["note"]) ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
+        echo isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
         echo " </li>\n";
     }
 } else {
