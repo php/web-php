@@ -65,7 +65,7 @@ function run_self_tests() {
 		return array(
 			"name" => "Header weirdness. Pages named '.html.php' are returning wrong status headers",
 			"see"  => $MYSITE . "mirroring-troubles.php#content-type",
-			"got"  => var_export($ctype),
+			"got"  => var_export($ctype, true),
 		);
 	}
 
@@ -77,7 +77,7 @@ function run_self_tests() {
 		return array(
 			"name" => "MultiViews on",
 			"see"  => $MYSITE . "mirroring-troubles.php#multiviews",
-			"got"  => var_export($ctype),
+			"got"  => var_export($ctype, true),
 		);
 	}
 
@@ -87,7 +87,7 @@ function run_self_tests() {
 		return array(
 			"name" => "Var Handler",
 			"see"  => $MYSITE . "mirroring-troubles.php#var",
-			"got"  => var_export($header),
+			"got"  => var_export($header, true),
 		);
 	}
 
