@@ -34,7 +34,8 @@ $PHP_5_RC      = '5.3.0alpha3';
 $PHP_5_RC_DATE = "04 December 2008";
 
 $PHP_5_WINDOWS_NOTE_MSI = "";
-$PHP_5_WINDOWS_NOTE_ZIP = "";
+$PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release.";
 $PHP_5_WINDOWS_DATE_MSI = "04 December 2008";
 $PHP_5_WINDOWS_DATE_ZIP = "04 December 2008";
 
@@ -97,7 +98,6 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["debugpack"],
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
-                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-Win32.zip",
@@ -115,10 +115,9 @@ $RELEASES = array(
                 ),
                 array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-nts-Win32.zip",
-                    "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
+                    "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["nts.debugpack"],
                     "date"     => $PHP_5_WINDOWS_DATE_ZIP,
-                    "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
 /*
                 array(
