@@ -11,6 +11,203 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.7"></a>
+<h3>Version 5.2.7</h3>
+<b>04-December-2008</b>
+<ul>
+	<li>Security Fixes
+		<ul>
+			<li>Upgraded PCRE to version 7.8 (Fixes CVE-2008-2371) (Ilia)</li>
+			<li>Fixed missing initialization of BG(page_uid) and BG(page_gid), reported by Maksymilian Arciemowicz. (Stas)</li>		
+			<li>Fixed incorrect php_value order for Apache configuration, reported by Maksymilian Arciemowicz. (Stas)</li>
+			<li>Fixed a crash inside gd with invalid fonts (Fixes CVE-2008-3658). (Pierre)</li>
+			<li>Fixed a possible overflow inside memnstr (Fixes CVE-2008-3659). (Laurent Gaffie)</li>
+			<li>Fixed security issues detailed in CVE-2008-2665 and CVE-2008-2666. (Christian Hoffmann)</li>
+			<li><?php bugfix(45151); ?> (Crash with URI/file..php (filename contains 2 dots)).(Fixes CVE-2008-3660) (Dmitry)</li>
+			<li><?php bugfix(42862); ?> (IMAP toolkit crash: rfc822.c legacy routine buffer overflow). (Fixes CVE-2008-2829) (Dmitry)</li>
+		</ul>
+	</li>
+
+<li>Updated timezone database to version 2008.9. (Derick)</li>
+<li>Upgraded bundled libzip to 0.9.0. (Pierre)</li>
+
+<li>Added logging option for error_log to send directly to SAPI. (Stas)</li>
+<li>Added PHP_MAJOR_VERSION, PHP_MINOR_VERSION, PHP_RELEASE_VERSION,PHP_EXTRA_VERSION, PHP_VERSION_ID, PHP_ZTS and PHP_DEBUG constants. (Pierre)</li>
+<li>Added &quot;PHP_INI_SCAN_DIR&quot; environment variable which can be used to either disable or change the compile time ini scan directory (FR <?php bugfix(45114); ?>). (Jani)</li>
+
+<li>Fixed memory leak inside sqlite_create_aggregate(). (Felipe)</li>
+<li>Fixed memory leak inside PDO sqlite's sqliteCreateAggregate() method. (Felipe)</li>
+<li>Fixed memory leak inside readline_callback_handler_remove() function. (Felipe)</li>
+<li>Fixed sybase_fetch_*() to continue reading after CS_ROW_FAIL status (Timm)</li>
+<li>Fixed a bug inside dba_replace() that could cause file truncation with invalid keys. (Ilia)</li>
+<li>Fixed memory leak inside readline_callback_handler_install() function. (Ilia)</li>
+<li>Fixed memory leak inside readline_completion_function() function. (Felipe) </li>
+<li>Fixed stream_get_contents() when using $maxlength and socket is not closed. indeyets [at] php [dot] net on <?php bugfix(46049); ?>. (Arnaud)</li>
+<li>Fixed stream_get_line() to behave as documented on non-blocking streams. (Arnaud)</li>
+<li>Fixed endless loop in PDOStatement::debugDumpParams().(jonah.harris at gmail dot com)</li>
+<li>Fixed ability to use &quot;internal&quot; heaps in extensions. (Arnaud, Dmitry)</li>
+<li>Fixed weekdays adding/subtracting algorithm. (Derick)</li>
+<li>Fixed some ambiguities in the date parser. (Derick)</li>
+<li>Fixed a bug with the YYYY-MM format not resetting the day correctly. (Derick)</li>
+<li>Fixed a bug in the DateTime->modify() methods, it would not use the advanced relative time strings. (Derick)</li>
+<li>Fixed extraction of zip files or directories when the entry name is a relative path. (Pierre)</li>
+<li>Fixed read or write errors for large zip archives. (Pierre)</li>
+<li>Fixed simplexml asXML() not to lose encoding when dumping entire document to file. (Ilia)</li>
+<li>Fixed a crash inside PDO when trying instantiate PDORow manually. (Felipe)</li>
+<li>Fixed build failure of ext/mysqli with libmysql 6.0 - missing rpl functions. (Andrey)</li>
+<li>Fixed a regression when using strip_tags() and &lt; is within an attribute. (Scott)</li>
+<li>Fixed a crash on invalid method in ReflectionParameter constructor. (Christian Seiler)</li>
+<li>Reverted fix for bug <?php bugfix(44197); ?> due to behaviour change in minor version. (Felipe)</li>
+
+<li><?php bugfix(46732); ?> (mktime.year description is wrong). (Derick)</li>
+<li><?php bugfix(46696); ?> (cURL fails in upload files with specified content-type). (Ilia)</li>
+<li><?php bugfix(46673); ?> (stream_lock call with wrong parameter). (Arnaud)</li>
+<li><?php bugfix(46649); ?> (Setting array element with that same array produces inconsistent results). (Arnaud)</li>
+<li><?php bugfix(46626); ?> (mb_convert_case does not handle apostrophe correctly). (Ilia)</li>
+<li><?php bugfix(46543); ?> (ibase_trans() memory leaks when using wrong parameters). (Felipe)</li>
+<li><?php bugfix(46521); ?> (Curl ZTS OpenSSL, error in config.m4 fragment). (jd at cpanel dot net)</li>
+<li><?php bugfix(46496); ?> (wddx_serialize treats input as ISO-8859-1). (Mark Karpeles)</li>
+<li><?php bugfix(46427); ?> (SoapClient() stumbles over its &quot;stream_context&quot; parameter). (Dmitry, Herman Radtke)</li>
+<li><?php bugfix(46426); ?> (offset parameter of stream_get_contents() does not workfor &quot;0&quot;). (Felipe)</li>
+<li><?php bugfix(46406); ?> (Unregistering nodeclass throws E_FATAL). (Rob)</li>
+<li><?php bugfix(46389); ?> (NetWare needs small patch for _timezone). (patch by guenter@php.net)</li>
+<li><?php bugfix(46388); ?> (stream_notification_callback inside of object destroys object variables). (Felipe)</li>
+<li><?php bugfix(46381); ?> (wrong $this passed to internal methods causes segfault). (Tony)</li>
+<li><?php bugfix(46379); ?> (Infinite loop when parsing '#' in one line file). (Arnaud)</li>
+<li><?php bugfix(46366); ?> (bad cwd with / as pathinfo). (Dmitry)</li>
+<li><?php bugfix(46360); ?> (TCP_NODELAY constant for socket_{get,set}_option). (bugs at trick dot vanstaveren dot us)</li>
+<li><?php bugfix(46343); ?> (IPv6 address filter accepts invalid address). (Ilia)</li>
+<li><?php bugfix(46335); ?> (DOMText::splitText doesn't handle multibyte characters). (Rob)</li>
+<li><?php bugfix(46323); ?> (compilation of simplexml for NetWare breaks). (Patch by guenter@php.net)</li>
+<li><?php bugfix(46319); ?> (PHP sets default Content-Type header for HTTP 304 response code, in cgi sapi). (Ilia)</li>
+<li><?php bugfix(46313); ?> (Magic quotes broke $_FILES). (Arnaud)</li>
+<li><?php bugfix(46308); ?> (Invalid write when changing property from inside getter). (Dmitry)</li>
+<li><?php bugfix(46292); ?> (PDO::setFetchMode() shouldn't requires the 2nd arg when using FETCH_CLASSTYPE). (Felipe)</li>
+<li>Fixed bugs <?php bugl(46274); ?>, <?php bugl(46249); ?> (pdo_pgsql always fill in NULL for empty BLOB and segfaults when returned by SELECT). (Felipe)</li>
+<li><?php bugfix(46271); ?> (local_cert option is not resolved to full path). (Ilia)</li>
+<li><?php bugfix(46247); ?> (ibase_set_event_handler() is allowing to pass callback without event). (Felipe)</li>
+<li><?php bugfix(46246); ?> (difference between call_user_func(array($this, $method))and $this->$method()). (Dmitry)</li>
+<li><?php bugfix(46222); ?> (ArrayObject EG(uninitialized_var_ptr) overwrite). (Etienne)</li>
+<li><?php bugfix(46215); ?> (json_encode mutates its parameter and has some class-specific state). (Felipe)</li>
+<li><?php bugfix(46206); ?> (pg_query_params/pg_execute convert passed values to strings). (Ilia)</li>
+<li><?php bugfix(46191); ?> (BC break: DOMDocument saveXML() doesn't accept null). (Rob)</li>
+<li><?php bugfix(46164); ?> (stream_filter_remove() closes the stream). (Arnaud)</li>
+<li><?php bugfix(46157); ?> (PDOStatement::fetchObject prototype error). (Felipe)</li>
+<li><?php bugfix(46147); ?> (after stream seek, appending stream filter reads incorrect data). (Greg)</li>
+<li><?php bugfix(46139); ?> (PDOStatement->setFetchMode() forgets FETCH_PROPS_LATE). (chsc at peytz dot dk, Felipe)</li>
+<li><?php bugfix(46127); ?> (php_openssl_tcp_sockop_accept forgets to set context on accepted stream). (Mark Karpeles, Pierre)</li>
+<li><?php bugfix(46110); ?> (XMLWriter - openmemory() and openuri() leak memory on multiple calls). (Ilia)</li>
+<li><?php bugfix(46088); ?> (RegexIterator::accept - segfault). (Felipe)</li>
+<li><?php bugfix(46082); ?> (stream_set_blocking() can cause a crash in some circumstances). (Felipe)</li>
+<li><?php bugfix(46064); ?> (Exception when creating ReflectionProperty object on dynamicly created property). (Felipe)</li>
+<li><?php bugfix(46059); ?> (Compile failure under IRIX 6.5.30 building posix.c). (Arnaud)</li>
+<li><?php bugfix(46053); ?> (SplFileObject::seek - Endless loop). (Arnaud)</li>
+<li><?php bugfix(46051); ?> (SplFileInfo::openFile - memory overlap). (Arnaud)</li>
+<li><?php bugfix(46047); ?> (SimpleXML converts empty nodes into object with nested array). (Rob)</li>
+<li><?php bugfix(46031); ?> (Segfault in AppendIterator::next). (Arnaud)</li>
+<li><?php bugfix(46029); ?> (Segfault in DOMText when using with Reflection). (Rob)</li>
+<li><?php bugfix(46026); ?> (bzip2.decompress/zlib.inflate filter tries to decompress after end of stream). (Keisial at gmail dot com, Greg)</li>
+<li><?php bugfix(46024); ?> (stream_select() doesn't return the correct number).(Arnaud)</li>
+<li><?php bugfix(46010); ?> (warnings incorrectly generated for iv in ecb mode). (Felipe)</li>
+<li><?php bugfix(46003); ?> (isset on nonexisting node return unexpected results). (Rob)</li>
+<li><?php bugfix(45956); ?> (parse_ini_file() does not return false with syntax errors in parsed file). (Jani)</li>
+<li><?php bugfix(45901); ?> (wddx_serialize_value crash with SimpleXMLElement object).(Rob)</li>
+<li><?php bugfix(45862); ?> (get_class_vars is inconsistent with 'protected' and 'private' variables). (ilewis at uk dot ibm dot com, Felipe)</li>
+<li><?php bugfix(45860); ?> (header() function fails to correctly replace all Status lines). (Dmitry)</li>
+<li><?php bugfix(45805); ?> (Crash on throwing exception from error handler). (Dmitry)</li>
+<li><?php bugfix(45765); ?> (ReflectionObject with default parameters of self::xxx cause an error). (Felipe)</li>
+<li><?php bugfix(45751); ?> (Using auto_prepend_file crashes (out of scope stack address use)). (basant dot kukreja at sun dot com) </li>
+<li><?php bugfix(45722); ?> (mb_check_encoding() crashes). (Moriyoshi)</li>
+<li><?php bugfix(45705); ?> (rfc822_parse_adrlist() modifies passed address parameter). (Jani)</li>
+<li><?php bugfix(45691); ?> (Some per-dir or runtime settings may leak into other requests). (Moriyoshi)</li>
+<li><?php bugfix(45581); ?> (htmlspecialchars() double encoding &#x hex items). (Arnaud)</li>
+<li><?php bugfix(45580); ?> (levenshtein() crashes with invalid argument). (Ilia)</li>
+<li><?php bugfix(45575); ?> (Segfault with invalid non-string as event handler callback). (Christian Seiler)</li>
+<li><?php bugfix(45568); ?> (ISAPI doesn't properly clear auth_digest in header). (Patch by: navara at emclient dot com)</li>
+<li><?php bugfix(45556); ?> (Return value from callback isn't freed). (Felipe)</li>
+<li><?php bugfix(45555); ?> (Segfault with invalid non-string as register_introspection_callback). (Christian Seiler)</li>
+<li><?php bugfix(45553); ?> (Using XPath to return values for attributes with a namespace does not work). (Rob)</li>
+<li><?php bugfix(45529); ?> (new DateTimeZone() and date_create()->getTimezone() behave different). (Derick)</li>
+<li><?php bugfix(45522); ?> (FCGI_GET_VALUES request does not return supplied values). (Arnaud)</li>
+<li><?php bugfix(45486); ?> (mb_send_mail(); header 'Content-Type: text/plain; charset=' parsing incorrect). (Felipe)</li>
+<li><?php bugfix(45485); ?> (strip_tags and &lt;?XML tag). (Felipe)</li>
+<li><?php bugfix(45460); ?> (imap patch for fromlength fix in imap_headerinfo doesn't accept lengths of 1024). (Felipe, andrew at lifescale dot com)</li>
+<li><?php bugfix(45449); ?> (filesize() regression using ftp wrapper). (crrodriguez at suse dot de)</li>
+<li><?php bugfix(45423); ?> (fastcgi parent process doesn't invoke php_module_shutdown before shutdown). (basant dot kukreja at sun dot com)</li>
+<li><?php bugfix(45406); ?> (session.serialize_handler declared by shared extension fails). (Kalle, oleg dot grenrus at dynamoid dot com)</li>
+<li><?php bugfix(45405); ?> (snmp extension memory leak). (Federico Cuello, Rodrigo Campos)</li>
+<li><?php bugfix(45392); ?> (ob_start()/ob_end_clean() and memory_limit). (Arnaud)</li>
+<li><?php bugfix(45382); ?> (timeout bug in stream_socket_enable_crypto). (Ilia)</li>
+<li><?php bugfix(45373); ?> (php crash on query with errors in params). (Felipe)</li>
+<li><?php bugfix(45352); ?> (Segmentation fault because of tick function on second request). (Dmitry)</li>
+<li><?php bugfix(45312); ?> (Segmentation fault on second request for array functions). (Dmitry)</li>
+<li><?php bugfix(45303); ?> (Opening php:// wrapper in append mode results in a warning). (Arnaud)</li>
+<li><?php bugfix(45251); ?> (double free or corruption with setAttributeNode()). (Rob)</li>
+<li>Fixed bugs <?php bugl(45226); ?>, <?php bugl(18916); ?> (xmlrpc_set_type() segfaults and wrong behavior with valid ISO8601 date string). (Jeff Lawsons)</li>
+<li><?php bugfix(45220); ?> (curl_read callback returns -1 when needs to return size_t (unsigned)). (Felipe)</li>
+<li><?php bugfix(45181); ?> (chdir() should clear relative entries in stat cache). (Arnaud)</li>
+<li><?php bugfix(45178); ?> (memory corruption on assignment result of &quot;new&quot; by reference). (Dmitry)</li>
+<li><?php bugfix(45166); ?> (substr() overflow changes). (Felipe)</li>
+<li><?php bugfix(45139); ?> (ReflectionProperty returns incorrect declaring class).(Felipe)</li>
+<li><?php bugfix(45124); ?> ($_FILES['upload']['size'] sometimes return zero and sometimes the filesize). (Arnaud)</li>
+<li><?php bugfix(45028); ?> (CRC32 output endianness is different between crc32() and hash()). (Tony)</li>
+<li><?php bugfix(45004); ?> (pg_insert() does not accept 4 digit timezone format). (Ilia)</li>
+<li><?php bugfix(44991); ?> (Compile Failure With freetds0.82). (jklowden at freetds dot org, matthias at dsx dot at)</li>
+<li><?php bugfix(44938); ?> (gettext functions crash with overly long domain). (Christian Schneider, Ilia)</li>
+<li><?php bugfix(44925); ?> (preg_grep() modifies input array). (Nuno)</li>
+<li><?php bugfix(44900); ?> (OpenSSL extension fails to link with OpenSSL 0.9.6). (jd at cpanel dot net, Pierre)</li>
+<li><?php bugfix(44891); ?> Memory leak using registerPHPFunctions and XSLT Variable as function parameter. (Rob)</li>
+<li><?php bugfix(44882); ?> (SOAP extension object decoding bug). (Dmitry)</li>
+<li><?php bugfix(44830); ?> (Very minor issue with backslash in heredoc). (Matt)</li>
+<li><?php bugfix(44818); ?> (php://memory writeable when opened read only). (Arnaud)</li>
+<li><?php bugfix(44811); ?> (Improve error message when creating a new SoapClient that contains invalid data). (Markus Fischer, David C)</li>
+<li><?php bugfix(44798); ?> (Memory leak assigning value to attribute). (Ilia)</li>
+<li><?php bugfix(44716); ?> (Progress notifications incorrect). (Hannes)</li>
+<li><?php bugfix(44712); ?> (stream_context_set_params segfaults on invalid arguments). (Hannes)</li>
+<li><?php bugfix(44617); ?> (wrong HTML entity output when substitute_character=entity). (Moriyoshi)</li>
+<li><?php bugfix(44607); ?> (stream_get_line unable to correctly identify the &quot;ending&quot; in the stream content). (Arnaud)</li>
+<li><?php bugfix(44425); ?> (Extending PDO/MySQL class with a __call() function doesn'twork). (Johannes)</li>
+<li><?php bugfix(44327); ?> (PDORow::queryString property & numeric offsets / Crash). (Felipe)</li>
+<li>Fixed bugs <?php bugl(44251); ?>, <?php bugl(41125); ?> (PDO + quote() + prepare() can result in segfault). (tsteiner at nerdclub dot net)</li>
+<li><?php bugfix(44246); ?> (closedir() accepts a file resource opened by fopen()). (Dmitry, Tony)</li>
+<li><?php bugfix(44182); ?> (extract($a, EXTR_REFS) can fail to split copy-on-write references). (robin_fernandes at uk dot ibm dot com)</li>
+<li><?php bugfix(44181); ?> (extract($a, EXTR_OVERWRITE|EXTR_REFS) can fail to create references to $a). (robin_fernandes at uk dot ibm dot com)</li>
+<li><?php bugfix(44127); ?> (UNIX abstract namespace socket connect does not work). (Jani)</li>
+<li><?php bugfix(43993); ?> (mb_substr_count() behaves differently to substr_count() with overlapping needles). (Moriyoshi)</li>
+<li><?php bugfix(43958); ?> (class name added into the error message). (Dmitry)</li>
+<li><?php bugfix(43941); ?> (json_encode silently cuts non-UTF8 strings). (Stas)</li>
+<li><?php bugfix(43925); ?> (Incorrect argument counter in prepared statements with pgsql). (Felipe)</li>
+<li><?php bugfix(43731); ?> (socket_getpeername: cannot use on stdin with inetd). (Arnaud)</li>
+<li><?php bugfix(43723); ?> (SOAP not sent properly from client for <choice>). (Dmitry)</li>
+<li><?php bugfix(43668); ?> (Added odbc.default_cursortype to control the ODBCcursor model). (Patrick)</li>
+<li><?php bugfix(43666); ?> (Fixed code to use ODBC 3.52 datatypes for 64bit systems). (Patrick)</li>
+<li><?php bugfix(43540); ?> (rfc1867 handler newlength problem). (Arnaud)</li>
+<li><?php bugfix(43452); ?> (strings containing a weekday, or a number plus weekday behaved incorrect of the current day-of-week was the same as the one in the phrase).(Derick)</li>
+<li><?php bugfix(43353); ?> (wrong detection of 'data' wrapper causes notice). (gk at gknw dot de, Arnaud)</li>
+<li><?php bugfix(43053); ?> (Regression: some numbers shown in scientific notation). (int-e at gmx dot de)</li>
+<li><?php bugfix(43045); ?> (SOAP encoding violation on &quot;INF&quot; for type double/float). (Dmitry)</li>
+<li><?php bugfix(42855); ?> (dns_get_record() doesn't return all text from TXT record). (a dot u dot savchuk at gmail dot com)</li>
+<li><?php bugfix(42737); ?> (preg_split('//u') triggers a E_NOTICE with newlines). (Nuno)</li>
+<li><?php bugfix(42718); ?> (FILTER_UNSAFE_RAW not applied when configured as default filter). (Arnaud)</li>
+<li><?php bugfix(42604); ?> (&quot;make test&quot; fails with --with-config-file-scan-dir=path). (Jani)</li>
+<li><?php bugfix(42473); ?> (ob_start php://output and headers). (Arnaud)</li>
+<li><?php bugfix(42318); ?> (problem with nm on AIX, not finding object files). (Dmitry)</li>
+<li><?php bugfix(42294); ?> (Unified solution for round() based on C99 round). (Ilia)</li>
+<li><?php bugfix(42078); ?> (pg_meta_data mix tables metadata from different schemas). (Felipe)</li>
+<li><?php bugfix(41348); ?> (OCI8: allow compilation with Oracle 8.1). (Chris Jones)</li>
+<li><?php bugfix(41033); ?> (enable signing with DSA keys. (gordyf at google dot com, Pierre)</li>
+<li><?php bugfix(37100); ?> (data is returned truncated with BINARY CURSOR). (Tony)</li>
+<li><?php bugfix(30312); ?> (crash in sybase_unbuffered_query() function). (Timm)</li>
+<li><?php bugfix(24679); ?> (pg_* functions doesn't work using schema). (Felipe)</li>
+<li><?php bugfix(14962); ?> (PECL) (::extractTo 2nd argument is not really optional). (Mark van Der Velden)</li>
+<li><?php bugfix(14032); ?> (Mail() always returns false but mail is sent). (Mikko)</li>
+
+		</ul>
+	</li>
+</ul>
+
+<hr />
+
 <a name="5.2.6"></a>
 <h3>Version 5.2.6</h3>
 <b>01-May-2008</b>
