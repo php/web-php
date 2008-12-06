@@ -20,27 +20,54 @@
     <link href="http://www.php.net/index.php#id2008-12-04-3" rel="alternate" type="text/html"/>
     <link href="http://www.php.net/archive/2008.php#id2008-12-04-3" rel="via" type="text/html"/>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>The PHP development team would like to
-        announce the immediateavailability of <a href="/downloads.php#v5">PHP 5.2.7</a>.
-        This release focuses on improving the stability ofthe PHP 5.2.x branch with over
-        120 bug fixes, several of which are security related.All users of PHP are
-        encouraged to upgrade to this release.</p><p><b>Security Enhancements and Fixes in
-         PHP 5.2.7:</b></p><ul>        <li>Upgraded PCRE to version 7.8 (Fixes
-         CVE-2008-2371)</li>        <li>Fixed missing initialization of BG(page_uid) and
-         BG(page_gid), reported by Maksymilian Arciemowicz.</li>        <li>Fixed
-         incorrect php_value order for Apache configuration, reported by Maksymilian
-         Arciemowicz.</li>        <li>Fixed a crash inside gd with invalid fonts (Fixes
-         CVE-2008-3658).</li>        <li>Fixed a possible overflow inside memnstr (Fixes
-         CVE-2008-3659).</li>        <li>Fixed security issues detailed in CVE-2008-2665
-         and CVE-2008-2666.</li>        <li>Fixed bug #45151 (Crash with URI/file..php
-         (filename contains 2 dots)).(Fixes CVE-2008-3660)</li>        <li>Fixed bug
-         #42862 (IMAP toolkit crash: rfc822.c legacy routine buffer overflow). (Fixes
-         CVE-2008-2829)</li><li>Fixed extraction of zip files and directories with
-         crafted entries, reported by Stefan Esser.</li></ul><p>Further details about the
-        PHP 5.2.7 release can be found in the <a href="/releases/5_2_7.php">release
-         announcement for 5.2.7</a>, the full list of changes is available in the <a
-         href="/ChangeLog-5.php#5.2.7">ChangeLog for PHP 5</a>.</p><br
-        /><p><strong>Update (December 6th):</strong> Added missing zip security fix</p></div>
+     <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+       The PHP development team would like to
+       announce the immediateavailability of <a href="/downloads.php#v5">PHP 5.2.7</a>.
+       This release focuses on improving the stability ofthe PHP 5.2.x branch with over
+       120 bug fixes, several of which are security related.All users of PHP are
+       encouraged to upgrade to this release.
+      </p>
+      <p>
+       <b>Security Enhancements and Fixes in PHP 5.2.7:</b>
+      </p>
+      <ul>
+       <li>
+        Upgraded PCRE to version 7.8 (Fixes CVE-2008-2371)
+       </li>
+       <li>
+        Fixed missing initialization of BG(page_uid) and BG(page_gid), reported by Maksymilian Arciemowicz.
+       </li>
+       <li>
+        Fixed incorrect php_value order for Apache configuration, reported by Maksymilian Arciemowicz.
+       </li>
+       <li>
+        Fixed a crash inside gd with invalid fonts (Fixes CVE-2008-3658).
+       </li>
+       <li>
+        Fixed a possible overflow inside memnstr (Fixes CVE-2008-3659).
+       </li>
+       <li>
+        Fixed security issues detailed in CVE-2008-2665 and CVE-2008-2666.
+       </li>
+       <li>
+        Fixed bug #45151 (Crash with URI/file..php (filename contains 2 dots)).(Fixes CVE-2008-3660)
+       </li>
+       <li>
+        Fixed bug #42862 (IMAP toolkit crash: rfc822.c legacy routine buffer overflow). (Fixes CVE-2008-2829)</li>
+       <li>
+        Fixed extraction of zip files and directories with crafted entries, reported by Stefan Esser.
+       </li>
+      </ul>
+      <p>
+       Further details about the PHP 5.2.7 release can be found in the <a href="/releases/5_2_7.php">release announcement for 5.2.7</a>, the full list of changes is available in the <a href="/ChangeLog-5.php#5.2.7">ChangeLog for PHP 5</a>.
+      </p>
+      <br />
+      <p>
+       <strong>Update (December 6th):</strong>
+       Added missing zip security fix
+      </p>
+     </div>
     </content>
   </entry>
   <entry>
