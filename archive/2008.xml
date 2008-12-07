@@ -23,9 +23,9 @@
      <div xmlns="http://www.w3.org/1999/xhtml">
       <p>
        The PHP development team would like to
-       announce the immediateavailability of <a href="/downloads.php#v5">PHP 5.2.7</a>.
-       This release focuses on improving the stability ofthe PHP 5.2.x branch with over
-       120 bug fixes, several of which are security related.All users of PHP are
+       announce the immediate availability of <a href="/downloads.php#v5">PHP 5.2.7</a>.
+       This release focuses on improving the stability of the PHP 5.2.x branch with over
+       120 bug fixes, several of which are security related. All users of PHP are
        encouraged to upgrade to this release.
       </p>
       <p>
