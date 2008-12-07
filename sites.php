@@ -118,6 +118,7 @@ site_header("A Tourist's Guide");
  its sister, PEAR.
 </p>
 
+<!--
 <h2>
  <a href="http://pecl4win.php.net/">pecl4win.php.net</a>:
  The PECL Windows Repository
@@ -127,6 +128,7 @@ site_header("A Tourist's Guide");
  This site hosts a repository of PECL extensions precompiled for the Windows
  platform.
 </p>
+-->
 
 <h2><a href="http://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
 
