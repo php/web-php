@@ -83,6 +83,7 @@ site_header("Downloads",
 
 <a name="v5"></a>
 <h1>PHP <?php list($v, $a) = each($RELEASES[5]); echo $v ?></h1>
+<h2>Due to unfortunate regressions installing 5.2.7 is highly discouraged</h2>
 
 <h2>Complete Source Code</h2>
 <ul>
