@@ -84,6 +84,8 @@ site_header("Downloads",
 <a name="v5"></a>
 <h1>PHP <?php list($v, $a) = each($RELEASES[5]); echo $v ?></h1>
 <h2>Due to unfortunate regressions installing 5.2.7 is highly discouraged</h2>
+<p>For those who already have installed 5.2.7 can workaround the MQ bug by setting "filter.default_flags=0" in php.ini</p>
+<p>A new release fixing this regression is expected shortly</p>
 
 <h2>Complete Source Code</h2>
 <ul>
