@@ -17,17 +17,19 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.7";
-$PHP_5_DATE    = "04 December 2008";
+$PHP_5_VERSION = "5.2.6";
+$PHP_5_DATE    = "01 May 2008";
 $PHP_5_MD5     = array(
-                       "tar.bz2"       => "9ffc42edbb7faad965699666ddd559bc",
-                       "tar.gz"        => "f1f413a9f10ff7f38787b0a3bc299e92",
-                       "zip"           => "b57a68ca548f14e5a2b8811751c63f88",
-                       "installer"     => "a9d67f05ce3387668db1c98ceda83808",
-                       "nts.zip"       => "f54e29610fc309be99bf5ed0e5ccf5d9",
-                       "nts.installer" => "9db3efcafd3459b49e93d699f56bc4f9",
-                       "nts.debugpack" => "87d4feaa1f572a42f2e238bee68dcbab",
-                       "debugpack"     => "d2cc721696bdc0c4256183b18ab1dfb8"
+                       "tar.bz2"       => "7380ffecebd95c6edb317ef861229ebd",
+                       "tar.gz"        => "1720f95f26c506338f0dba3a51906bbd",
+                       "zip"           => "c7e5010114f58282858d7d78e6509cdc",
+                       "installer"     => "94e551037e7c9c056f90179f351c0560",
+                       "pecl.zip"      => "f0e7b245589d705eef731b51142d5def",
+                       "nts.zip"       => "1d3661a086f352ec7e318e7c2eeba4de",
+                       "pecl.nts"      => "62b102221920092dfefc08756aa3e926",
+                       "nts.installer" => "96a2326b16bda488734d3956a48201b7",
+                       "nts.debugpack" => "4c1fd96c8a78e1896d37da81467ff70d",
+                       "debugpack"     => "24dde2726e3e0cefbb83c0c375ea1f84"
 );
 
 $PHP_5_RC      = '5.3.0alpha3';
