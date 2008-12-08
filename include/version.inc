@@ -36,10 +36,9 @@ $PHP_5_RC      = '5.3.0alpha3';
 $PHP_5_RC_DATE = "04 December 2008";
 
 $PHP_5_WINDOWS_NOTE_MSI = "";
-$PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release.";
-$PHP_5_WINDOWS_DATE_MSI = "04 December 2008";
-$PHP_5_WINDOWS_DATE_ZIP = "04 December 2008";
+$PHP_5_WINDOWS_NOTE_ZIP = "Update May 6th: Added missing XSL and IMAP extension";
+$PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
+$PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.9";

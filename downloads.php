@@ -81,11 +81,12 @@ site_header("Downloads",
 );
 ?>
 
+<h1>PHP 5.2.7 note</h1>
+<p>For those few who installed PHP 5.2.7, please revert to 5.2.6 or explicitly set "filter.default_flags=0" in php.ini</p>
+<p>A new release fixing the magic_quotes_gpc regression is expected shortly</p>
+
 <a name="v5"></a>
 <h1>PHP <?php list($v, $a) = each($RELEASES[5]); echo $v ?></h1>
-<h2>Due to unfortunate regressions installing 5.2.7 is highly discouraged</h2>
-<p>For those who already have installed 5.2.7 can workaround the MQ bug by setting "filter.default_flags=0" in php.ini</p>
-<p>A new release fixing this regression is expected shortly</p>
 
 <h2>Complete Source Code</h2>
 <ul>
