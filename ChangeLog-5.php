@@ -11,6 +11,15 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.8"></a>
+<h3>Version 5.2.8</h3>
+<b>08-December-2008</b>
+<ul>
+	<li>Reverted bug fix <?php bugfix(42718); ?> that broke magic_quotes_gpc (Scott)</li>
+</ul>
+
+<hr />
+
 <a name="5.2.7"></a>
 <h3>Version 5.2.7</h3>
 <b>04-December-2008</b>
