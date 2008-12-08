@@ -34,9 +34,8 @@ $PHP_5_RC      = '5.3.0alpha3';
 $PHP_5_RC_DATE = "04 December 2008";
 
 $PHP_5_WINDOWS_NOTE_MSI = "";
-$PHP_5_WINDOWS_NOTE_ZIP = "Update May 6th: Added missing XSL and IMAP extension";
-$PHP_5_WINDOWS_DATE_MSI = "6 May 2008";
-$PHP_5_WINDOWS_DATE_ZIP = "3 May 2008";
+$PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release";
 
 /* PHP 4 Release */
 $PHP_4_VERSION = "4.4.9";
@@ -73,14 +72,14 @@ $RELEASES = array(
                     "filename" => "php-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION zip package",
                     "md5"      => $PHP_5_MD5["zip"],
-                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "date"     => $PHP_5_DATE,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION installer",
                     "md5"      => $PHP_5_MD5["installer"],
-                    "date"     => $PHP_5_WINDOWS_DATE_MSI,
+                    "date"     => $PHP_5_DATE,
                     "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
 /*                
@@ -96,27 +95,26 @@ $RELEASES = array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["debugpack"],
-                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "date"     => $PHP_5_DATE,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe zip package",
                     "md5"      => $PHP_5_MD5["nts.zip"],
-                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "date"     => $PHP_5_DATE,
                     "note"     => $PHP_5_WINDOWS_NOTE_ZIP,
                 ),
                 array(
                     "filename" => "php-$PHP_5_VERSION-nts-win32-installer.msi",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe installer",
                     "md5"      => $PHP_5_MD5["nts.installer"],
-                    "date"     => $PHP_5_WINDOWS_DATE_MSI,
-                    "note"     => $PHP_5_WINDOWS_NOTE_MSI,
+                    "date"     => $PHP_5_DATE,
                 ),
                 array(
                     "filename" => "php-debug-pack-$PHP_5_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["nts.debugpack"],
-                    "date"     => $PHP_5_WINDOWS_DATE_ZIP,
+                    "date"     => $PHP_5_DATE,
                 ),
 /*
                 array(
