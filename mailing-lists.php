@@ -237,6 +237,11 @@ if (isset($_POST['maillist'])) {
       FALSE, 'php-internals', TRUE, "php.internals"
     ),
     array (
+      'internals-win', 'Windows Internals list',
+      'A low volume list for those who want to help out with the development of PHP on Windows',
+      FALSE, FALSE, TRUE, "php.internals.win"
+    ),
+    array (
       'php-cvs', 'CVS commit list',
       'All the commits of the cvs PHP code repository are posted to this list automatically',
       TRUE, TRUE, FALSE, "php.cvs"
