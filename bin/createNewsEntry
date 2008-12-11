@@ -1,4 +1,4 @@
-#!/usr/local/bin/php
+#!/usr/bin/env php
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
 $BASE = "http://www.php.net";
