@@ -446,7 +446,7 @@ $OLDRELEASES = array (
     ),
     '5.1.3' => 
     array (
-      'date' => '12 Jan 2006',
+      'date' => '02 May 2006',
       'source' => 
       array (
         0 => 
