@@ -168,6 +168,11 @@ if (strpos($URI, "reST/") === 0) {
     include $_SERVER['DOCUMENT_ROOT'] ."/reST/index.php";
     exit;
 }
+
+// php.net/42 --> likely a bug number
+if (is_numeric($URI)) {
+    mirror_redirect("http://bugs.php.net/bug.php?id=$URI");
+}
  
 // Work with lowercased URI from now
 $URI = strtolower($URI);
