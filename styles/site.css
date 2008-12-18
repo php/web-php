@@ -578,6 +578,20 @@ table#logos td ul {
 	list-style-type: square;
 }
 
+/* PHP Manual table ------------------------------------------------------- */
+table.doctable { 
+   border: 0px; 
+}
+table.doctable td, table.doctable th, table.doctable caption { 
+   padding: 5px;
+}
+table.doctable thead th { 
+   background-color: #9999CC;
+}
+table.doctable tbody td {
+   background-color: #F0F0F0;
+}
+
 /* User notes on manual pages --------------------------------------------- */
 div#usernotes {
 	background-color: #e0e0e0;
