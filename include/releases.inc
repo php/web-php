@@ -384,15 +384,10 @@ $OLDRELEASES = array (
       array (
         0 => 
         array (
-          'filename' => 'php-5.1.5-Win32.zip',
-          'name' => 'Windows binary',
-        ),
-        1 => 
-        array (
           'filename' => 'php-5.1.5-installer.exe',
           'name' => 'Windows installer',
         ),
-        2 => 
+        1 => 
         array (
           'filename' => 'pecl-5.1.5-Win32.zip',
           'name' => 'Collection of PECL modules for PHP 5.1.5',
