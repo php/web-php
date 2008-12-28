@@ -25,7 +25,7 @@ $SIDEBAR_DATA='
   </ul>
  </li>
  <li>
-  <a href="http://chmox.sourceforge.net/">Chmox</a> caters
+  <a href="http://code.google.com/p/ichm/">iChm</a> caters
   to Mac OS X users.
  </li>
 </ul>
