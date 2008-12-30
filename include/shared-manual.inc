@@ -202,7 +202,7 @@ function manual_navbar($location = "top")
         echo "   </select>\n" .
              '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
              '/images/small_submit.gif" id="changeLangImage" ' .
-             'alt="" />' . "\n  </fieldset></form>\n";
+             'alt="Change language" />' . "\n  </fieldset></form>\n";
        
     } else {
         echo "  &nbsp;\n";
