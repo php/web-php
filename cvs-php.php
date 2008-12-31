@@ -37,7 +37,6 @@ $groups = array(
 
 // We have a form submitted, and the user have read all the comments
 if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))) {
-
     // Clean up incoming POST vars
     if (get_magic_quotes_gpc()) {
         foreach ($_POST as $k => $v) {
@@ -75,6 +74,9 @@ if (count($_POST) && (!is_array($_POST['purpose']) || !count($_POST['purpose']))
     }
     if (empty($_POST['group']) || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. ";
+    }
+    if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
+        $error .= "You did not agree to follow the contribution guidelines. ";
     }
 
     // Post the request if there is no error
@@ -306,16 +308,6 @@ EOT;
 </p>
 
 <p>
- One last thing, before you fill in the form you should also understand the principles under which PHP itself is developed. These are summarised in the next paragraph.</p>
-<p>Any code contributed to PHP will be received under the PHP (or a compatible) license. PHP will be redistributed under the PHP license (currently version 3.01, http://www.php.net/license/). This includes implementation code, test cases, utility scripts and tools - that is, all code associated with the PHP project. If you contribute code that  isn't entirely your own (for example it may be partially derived from other Open Source software) you are asked to add a comment into the source code to indicate the origin and the license of the original code. If you are unsure of the license you are asked to confirm with the owner of the code that they are happy for it to be contributed to PHP under the PHP license. Specifically regarding GPL and LGPL source code:
-<ul>
-<li>GPL or LGPL licensed code cannot be used as a basis for any derived work contributed to PHP.</li>
-<li>Extensions which link  GPL'd libraries will not be accepted.</li>
-<li>Extensions which link to LGPL libraries  will be strongly discouraged.</li>
-</ul>
-</p>
-
-<p>
  The CVS account, once granted and activated (which could take a while, so be
  patient!), gives you access to a number of things. First, and most
  importantly, it gives you access to modify those parts of the PHP CVS tree for
@@ -375,6 +367,10 @@ foreach ($purposes as $i => $p) { ?>
 <tr>
  <th class="subr">If your intended purpose is not in the list, <br />please state it here:</th>
  <td><textarea cols="50" rows="5" name="realpurpose" class="max"><?php if (isset($_POST['realpurpose'])) echo clean($_POST['realpurpose']);?></textarea></td>
+</tr>
+<tr>
+<th class="subr">Do you agree to follow the <a href="license/contrib-guidelines-code.php">contribution guidelines</a>?</th>
+<td><input type="checkbox" name="guidelines" value="1" />Check the box if you agree.</td>
 </tr>
 <tr>
  <th class="subr">User ID:<br /> <small>(single word, lower case)</small></th>

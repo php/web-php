@@ -195,6 +195,7 @@ function site_header($title = '', $config = array())
   <a href="/FAQ.php">faq</a> |
   <a href="/support.php">getting help</a> |
   <a href="/mailing-lists.php">mailing lists</a> |
+  <a href="/license">licenses</a> |
   <a href="http://wiki.php.net/">wiki</a> |
   <a href="http://bugs.php.net/">reporting bugs</a> |
   <a href="/sites.php">php.net sites</a> |
