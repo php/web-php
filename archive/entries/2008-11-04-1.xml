@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news">
+ <title>PHP UK Conference 2009 Call For Papers</title>
+ <id>http://www.php.net/archive/2008.php#id2008-11-04-1</id>
+ <published>2008-11-04T00:04:17-08:00</published>
+ <updated>2008-11-04T00:04:17-08:00</updated>
+ <php:finalTeaserDate xmlns="http://php.net/ns/news">2008-11-30</php:finalTeaserDate>
+ <category term="cfp" label="Call for Papers"/>
+ <link href="http://www.php.net/conferences/index.php#id2008-11-04-1" rel="alternate" type="text/html"/>
+ <link href="http://www.php.net/archive/2008.php#id2008-11-04-1" rel="via" type="text/html"/>
+ <content type="xhtml">
+  <div xmlns="http://www.w3.org/1999/xhtml">
+   <p>
+    PHP London are pleased to announce their 4th annual UK PHP conference,
+    building on the success of previous events and accommodating the continual
+    growth of the PHP community and PHP development industry. The event will
+    take place on Friday <abbr class="dtstart" title="2009-02-27">February 27th 2009</abbr>
+    at <span class="location">Olympia Conference Centre, London</span>.
+    Registration will commence in December 2008 and those interested in attending
+    can create an account on the PHP UK Conference website at
+    <a href="http://www.phpconference.co.uk/user/register" class="url">http://www.phpconference.co.uk/user/register</a>
+    and sign-up for notifications of updates to the website.
+   </p>
+   <p>
+    The Call For Papers is now open and finishes at the end of November 2008.
+    Speakers interested in talking at the event can submit their details at
+    <a href="http://www.phpconference.co.uk/call-for-papers">http://www.phpconference.co.uk/call-for-papers</a>
+    whilst potential sponsors can contact the conference committee using the form at
+    <a href="http://www.phpconference.co.uk/contact">http://www.phpconference.co.uk/contact</a>
+   </p>
+  </div>
+ </content>
+</entry>
+

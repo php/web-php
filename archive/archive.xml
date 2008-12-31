@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:php="http://php.net/ns/news" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>PHP.net news &amp; announcements</title>
+  <link href="http://www.php.net/feed.atom" rel="self"/>
+  <icon>http://php.net/images/news/php-logo.gif</icon>
+  <id>http://php.net/archive/index.php</id>
+  <author>
+    <name>Webmaster</name>
+    <uri>http://php.net/contact</uri>
+    <email>php-webmaster@lists.php.net</email>
+  </author>
+  <xi:include href="entries/2008-12-10-1.xml" />
+  <xi:include href="entries/2008-12-08-1.xml" />
+  <xi:include href="entries/2008-12-07-1.xml" />
+  <xi:include href="entries/2008-12-04-3.xml" />
+  <xi:include href="entries/2008-12-04-2.xml" />
+  <xi:include href="entries/2008-12-04-1.xml" />
+  <xi:include href="entries/2008-11-04-1.xml" />
+  <xi:include href="entries/2008-09-16-1.xml" />
+</feed>
+
