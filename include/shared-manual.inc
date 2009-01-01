@@ -241,7 +241,7 @@ function manual_notes()
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
     $addnotesnippet = 
-        make_link($addnotelink, make_image('notes-add.gif', 'add a note', 'middle')) .
+        make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
         ' <small>' .
         make_link($addnotelink, 'add a note') .
         '</small>';

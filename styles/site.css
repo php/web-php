@@ -50,6 +50,9 @@ input.max, textarea.max, select.max {
 img {
 	border: 0px;
 }
+img.middle {
+	vertical-align: middle;
+}
 
 /* {{{ The "latest releases" box on the top right */
 #releaseBox, #candidateBox {
