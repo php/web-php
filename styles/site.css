@@ -872,6 +872,9 @@ div.informalexample .phpcode {
 	margin: 10px;
 	border: 1px outset #000;
 }
+div.example-contents pre {
+	background-color: #e1e1e1;
+}
 
 /* Konq & Fx, for what ever reason, dislike br:before so this doesn't work at the moment...
  * This should however add line-number to examples - which will _not_ be copied to clipboard
