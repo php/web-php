@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'archive/2008.php';
+$_SERVER['BASE_PAGE'] = 'archive/2009.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 news_archive_sidebar();
@@ -10,7 +10,7 @@ site_header("News Archive - 2009");
 <h1>News Archive - 2009</h1>
 
 <p>
- Here are the most important news items we have published in 2008 on PHP.net.
+ Here are the most important news items we have published in 2009 on PHP.net.
 </p>
 
 <hr />
