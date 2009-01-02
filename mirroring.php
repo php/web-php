@@ -128,11 +128,12 @@ $minute = rand(0, 59);
 </p>
 
 <p>
- To install the SQLite PHP extension, you need to have PEAR installed, with
- which you can get SQLite: <tt>% pecl install sqlite</tt>. Ensure that your
- <tt>php.ini</tt> has an extension line to load in the SQLite extension by
- default, while starting up the web server. See also the 
- <a href="/manual/ref.sqlite">sqlite extensions</a> documentation for details.
+ The SQLite database engine itself is bundled with PHP, and the extension
+ enabled by default with recent PHP releases so there are no additional
+ requirements for mirrors other then standard PHP installation.<br />
+ Note: Some Linux distributions disable many extensions in their
+ package systems, including SQLite. Please make sure you install the
+ "php5-sqlite" package if using such package system.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>
