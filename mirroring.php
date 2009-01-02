@@ -130,7 +130,7 @@ $minute = rand(0, 59);
 <p>
  The SQLite database engine itself is bundled with PHP, and the extension
  enabled by default with recent PHP releases so there are no additional
- requirements for mirrors other then standard PHP installation.<br />
+ requirements for mirrors other than standard PHP installation.<br />
  Note: Some Linux distributions disable many extensions in their
  package systems, including SQLite. Please make sure you install the
  "php5-sqlite" package if using such package system.
