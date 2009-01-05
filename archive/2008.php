@@ -39,7 +39,7 @@ site_header("News Archive - 2008");
         <abbr class="published newsdate" title="2008-12-08T15:58:43-05:00">[08-Dec-2008]</abbr>
 
         <div>
-        <p>The PHP development team would like to announce the immediate availability of PHP 5.2.8. This release addresses a regression introduced by 5.2.7 inregard to the magic_quotes functionality, that was broken by an incorrect fix to the filter extension. All users who have upgraded to 5.2.7 are encouraged to upgrade to this release, alternatively you can apply a work-around for the bug by changing "filter.default_flags=0" in php.ini.</p>
+        <p>The PHP Development Team would like to announce the immediate availability of PHP 5.2.8. This release addresses a regression introduced by 5.2.7 in regard to the magic_quotes functionality, which was broken by an incorrect fix to the filter extension. All users who have upgraded to 5.2.7 are encouraged to upgrade to this release.  Alternatively you can apply a work-around for the bug by changing "filter.default_flags=0" in php.ini.</p>
       </div>
     
     </div>
