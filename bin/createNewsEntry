@@ -18,24 +18,23 @@ function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to =
 	return $n;
 }
 
-$y = date("Y");
-$today = date("Y-m-d");
-$file = "archive/$y.xml";
-file_exists($file) or die("Can't find $file, are you sure you are in phpweb/?\n");
+$archivefile = "archive/archive.xml";
+file_exists($archivefile) or die("Can't find $archivefile, are you sure you are in phpweb/?\n");
+
+$filename = date("Y-m-d", $_SERVER["REQUEST_TIME"]);
+$count = 0;
+do {
+  ++$count;
+  $id        = $filename. "-" . $count;
+  $basename  = $id .".xml";
+  $file      = "archive/entries/" . $basename;
+  $xincluded = "entries/" . $basename;
+  fprintf(STDOUT, "Trying $file\n");
+} while (file_exists($file));
 
 $dom = new DOMDocument("1.0", "utf-8");
 $dom->formatOutput = true;
 $dom->preserveWhiteSpace = false;
-$dom->load($file);
-
-$dom->getElementsByTagName("updated")->item(0)->nodeValue = date(DATE_ATOM);
-
-$first = $dom->getElementsByTagName("entry")->item(0);
-
-$xp = new DOMXpath($dom);
-$xp->registerNamespace("a", "http://www.w3.org/2005/Atom");
-$count = $xp->query('/a:feed/a:entry/a:id[contains(text(), "'.$today.'")]')->length + 1;
-$id = $today . '-' .$count;
 
 $item = $dom->createElementNs("http://www.w3.org/2005/Atom", "entry");
 
@@ -70,7 +69,7 @@ do {
 } while(1);
 
 
-$via = $archive = $BASE . "/archive/$y.php#id" .$id;
+$via = $archive = $BASE . "/archive/" .date("Y", $_SERVER["REQUEST_TIME"]).".php#id" .$id;
 
 ce($dom, "id", $archive, array(), $item);
 ce($dom, "published", date(DATE_ATOM), array(), $item);
@@ -155,10 +154,20 @@ if ($tdoc->loadXML('<div>'.$news.'</div>')) {
 	$content->nodeValue = $news;
 }
 
-
-$item = $first->parentNode->insertBefore($item, $first);
-
+$dom->appendChild($item);
 $dom->save($file);
+$arch = new DOMDocument("1.0", "utf-8");
+$arch->formatOutput = true;
+$arch->preserveWhiteSpace = false;
+$arch->load("archive/archive.xml");
 
-fwrite(STDOUT, "File saved. Please cvs diff $file to sanity-check the changes before committing\n");
+$first = $arch->createElementNs("http://www.w3.org/2001/XInclude", "xi:include");
+$first->setAttribute("href", $xincluded);
+
+$second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "include")->item(0);
+$arch->documentElement->insertBefore($first, $second);
+$arch->save("archive/archive.xml");
+
+fwrite(STDOUT, "File saved.\nPlease cvs diff $archivefile sanity-check the changes before committing\n");
+fwrite(STDOUT, "NOTE: Remeber to cvs add $file && cvs commit $file!!\n");
 
