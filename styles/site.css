@@ -10,7 +10,10 @@ body, input, textarea, select, option {
 	font-family: verdana, arial, helvetica, sans-serif;
 }
 code, pre, tt {
-	font-family: "Courier New", Courier, monospace;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;
+}
+tt.parameter {
+	font-style: italic;
 }
 pre {
 	background-color: #ddd;
