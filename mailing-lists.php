@@ -217,6 +217,11 @@ if (isset($_POST['maillist'])) {
       'List for the SOAP developers',
       FALSE, FALSE, FALSE, 'php.soap'
     ),
+    array (
+      'gsoc', 'PHP and GSOC',
+      'Google Summer of Code mailinglist',
+      FALSE, FALSE, TRUE, "php.gsoc"
+    ),
   
     'Non-English language mailing lists',
     array (
