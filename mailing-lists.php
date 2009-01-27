@@ -193,6 +193,11 @@ if (isset($_POST['maillist'])) {
 
     'Subject specific lists for PHP users',
     array (
+      'svn-migration', 'SVN Migration',
+      'Discussions and status updates regarding migration of the PHP project VCS to SVN',
+      FALSE, FALSE, TRUE, "svn.migration"
+    ),
+    array (
       'php-install', 'Installation issues and problems',
       'How to install PHP with partiucular configurations, and servers',
       FALSE, TRUE, TRUE, "php.install"
