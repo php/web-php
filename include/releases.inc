@@ -2,6 +2,82 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.2.8' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_8.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.8.tar.bz2',
+          'name' => 'PHP 5.2.8 (tar.bz2)',
+          'md5' => '8760a833cf10433d3e72271ab0d0eccf',
+          'date' => '08 December 2008',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.8.tar.gz',
+          'name' => 'PHP 5.2.8 (tar.gz)',
+          'md5' => 'e748cace3cfecb66fb6de9a945f98e2a',
+          'date' => '08 December 2008',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.8-Win32.zip',
+          'name' => 'PHP 5.2.8 zip package',
+          'md5' => '71511834881753ea0906f2bca91632b9',
+          'date' => '08 December 2008',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.8-win32-installer.msi',
+          'name' => 'PHP 5.2.8 installer',
+          'md5' => '159def484800411060a9eacccafd2253',
+          'date' => '08 December 2008',
+          'note' => '',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.8-Win32.zip',
+          'name' => 'PHP 5.2.8 Win32 Debug Pack',
+          'md5' => 'fabc6e79c1c66dc80320165336b5ed54',
+          'date' => '08 December 2008',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-5.2.8-nts-Win32.zip',
+          'name' => 'PHP 5.2.8 Non-thread-safe zip package',
+          'md5' => '207abb02054c5ce996bc350352224acc',
+          'date' => '08 December 2008',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.8-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.8 Non-thread-safe installer',
+          'md5' => 'd4490964818542c416644b3d67f5b350',
+          'date' => '08 December 2008',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.8-nts-Win32.zip',
+          'name' => 'PHP 5.2.8 Non-thread-safe Win32 Debug Pack',
+          'md5' => '240566ce66761ab076ae9901547b7ce2',
+          'date' => '08 December 2008',
+        ),
+      ),
+      'date' => '08 December 2008',
+      'museum' => false,
+    ),
     '5.2.6' => 
     array (
       'announcement' => 
