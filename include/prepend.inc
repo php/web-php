@@ -10,6 +10,11 @@
 header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
+// Be 100% sure the timezone is set
+if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
+    date_default_timezone_set("UTC");
+}
+
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);
