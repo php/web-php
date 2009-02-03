@@ -308,7 +308,13 @@ function fetch_header($url, $header) {
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is
 // the name of the Apache vhost.
-$MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
+
+
+if($_SERVER["SERVER_PORT"] != '80') {
+    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+} else {
+    $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
+}
 
 // If this site does not exist
 if (!isset($MIRRORS[$MYSITE])) {
@@ -316,8 +322,12 @@ if (!isset($MIRRORS[$MYSITE])) {
     // Try the hostname [without www]. In case the main name above is
     // not found, we try to find the mirror with the name provided by
     // the browser (in the Host HTTP header).
-    $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
-
+ 
+    if($_SERVER["SERVER_PORT"] != '80') {
+        $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+    } else {
+        $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
+    }
     // If the mirror is not registered with this name, provide defaults
     // (no country code, no search, no stats, English default language ...)
     if (!isset($MIRRORS[$MYSITE])) {
