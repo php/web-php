@@ -30,8 +30,8 @@ $PHP_5_MD5     = array(
                        "debugpack"     => "fabc6e79c1c66dc80320165336b5ed54"
 );
 
-$PHP_5_RC      = '5.2.9RC1';
-$PHP_5_RC_DATE = "05 February 2009";
+$PHP_5_RC      = '5.2.9RC2';
+$PHP_5_RC_DATE = "12 February 2009";
 
 $PHP_5_WINDOWS_NOTE_MSI = "";
 $PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for
