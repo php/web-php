@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>2009 PHP Quebec Conference</title>
+  <id>http://www.php.net/archive/2009.php#id2009-02-18-1</id>
+  <published>2009-02-18T02:10:11-08:00</published>
+  <updated>2009-02-18T02:10:11-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-03-04</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-02-18-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2009.php#id2009-02-18-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      The seventh edition of the PHP Quebec Conference will take place in a few days, 
+      between March 4th and 6th, 2009. It will be held in Montreal, Canada.
+     </p>
+     <p>
+      Don't miss out on this unique opportunity to learn more on latest development 
+      techniques with PHP, RIA, Frameworks and project management. Meet with PHP 
+      Community leaders such as: Zeev Suraski, Chris Shiflett, Andrei Zmievski, 
+      Sara Golemon, John Coggeshall and many more.
+     </p>
+     <p>
+      With over 55 technical talks, 35 international speakers and multiple networking 
+      activities you are guaranteed to take your career one step ahead in a friendly 
+      environment.
+     </p>
+     <p>
+      Space is limited, register online before February 28th and secure your presence. 
+      <a href="http://conf.phpquebec.com/">http://conf.phpquebec.com</a>
+     </p>
+    </div>
+  </content>
+</entry>
