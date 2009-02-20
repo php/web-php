@@ -131,7 +131,8 @@ foreach ($LANGUAGES as $langcode => $language) {
 }
 /* {{{ FIXME: Special handling for the extended html help format since it doesn't follow the "naming rules"
  * (mostly copy&paste from the loop above)
- */
+ * Feb 20, 2009: Commenting this out as we currently don't build or work on it
+
 $formats['<a href="/docs-echm.php">Extended HTML Help</a>'] = "zip"; // Add a link to the xchm docs in the table header
 $actual_file = $_SERVER['DOCUMENT_ROOT'] . "/distributions/manual/php_manual_chm.zip";
 if (file_exists($actual_file)) {
@@ -148,7 +149,7 @@ if (file_exists($actual_file)) {
         $found_formats["xchm"] = "zip";
     }
 }
-/* }}} */
+}}} */
 
 if (count($found_formats) == 0) {
     echo "<p class=\"tip\">This mirror has no documentation files for download.</p>";
