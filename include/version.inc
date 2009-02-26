@@ -17,21 +17,21 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.8";
-$PHP_5_DATE    = "08 December 2008";
+$PHP_5_VERSION = "5.2.9";
+$PHP_5_DATE    = "26 February 2009";
 $PHP_5_MD5     = array(
-                       "tar.bz2"       => "8760a833cf10433d3e72271ab0d0eccf",
-                       "tar.gz"        => "e748cace3cfecb66fb6de9a945f98e2a",
-                       "zip"           => "71511834881753ea0906f2bca91632b9",
-                       "installer"     => "159def484800411060a9eacccafd2253",
-                       "nts.zip"       => "207abb02054c5ce996bc350352224acc",
-                       "nts.installer" => "d4490964818542c416644b3d67f5b350",
-                       "nts.debugpack" => "240566ce66761ab076ae9901547b7ce2",
-                       "debugpack"     => "fabc6e79c1c66dc80320165336b5ed54"
+                       "tar.bz2"       => "280d6cda7f72a4fc6de42fda21ac2db7",
+                       "tar.gz"        => "98b647561dc664adefe296106056cf11",
+                       "zip"           => "02d9531ed7d3ed4822563de84c3a3bf4",
+                       "installer"     => "3a9b407f90c523454d2828661f8f0aec",
+                       "nts.zip"       => "32a118119d0ebfcccb08b5ba837bdecf",
+                       "nts.installer" => "102d112e3f96e1c317a8334eaed13fd4",
+                       "nts.debugpack" => "14e488e9759bb780031f104f298c0452",
+                       "debugpack"     => "63e1dda5456f63910268da03c8278f25"
 );
 
-$PHP_5_RC      = '5.2.9RC3';
-$PHP_5_RC_DATE = "19 February 2009";
+$PHP_5_RC      = '5.3.0beta1';
+$PHP_5_RC_DATE = "29 January 2009";
 
 $PHP_5_WINDOWS_NOTE_MSI = "";
 $PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for

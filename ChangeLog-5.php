@@ -11,6 +11,78 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 <hr />
 
+<a name="5.2.9"></a>
+<h3>Version 5.2.9</h3>
+<b>26-February-2009</b>
+<ul>
+	<li>Security Fixes
+		<ul>
+			<li>Fixed security issue in imagerotate(), background colour isn't validated correctly with a non truecolour image. Reported by Hamid Ebadi, APA Laboratory (Fixes CVE-2008-5498). (Scott)</li>
+			<li>Fixed a crash on extract in zip when files or directories entry names contain  a relative path. (Pierre)</li>
+			<li>Fixed explode() behavior with empty string to respect negative limit. (Shire)</li>
+			<li>Fixed a segfault when malformed string is passed to json_decode(). (Scott)</li>
+			<li>Fixed bug in xml_error_string() which resulted in messages being off by one. (Scott)</li>
+		</ul>
+	</li>
+
+	<li>Changed __call() to be invoked on private/protected method access, similar to properties and __get(). (Andrei)</li>
+	<li>Added optional sorting type flag parameter to array_unique(). Default is SORT_REGULAR. (Andrei)</li>
+	<li>Fixed zip filename property read. (Pierre)</li>
+	<li>Fixed error conditions handling in stream_filter_append(). (Arnaud)</li>
+
+        <li><?php bugfix(47422); ?> (modulus operator returns incorrect results on 64 bit linux). (Matt)</li>
+        <li><?php bugfix(47399); ?> (mb_check_encoding() returns true for some illegal SJIS characters). (for-bugs at hnw dot jp, Moriyoshi)</li>
+        <li><?php bugfix(47353); ?> (crash when creating a lot of objects in object destructor). (Tony)</li>
+        <li><?php bugfix(47322); ?> (sscanf %d doesn't work). (Felipe)</li>
+        <li><?php bugfix(47282); ?> (FILTER_VALIDATE_EMAIL is marking valid email addresses as invalid). (Ilia)</li>
+        <li><?php bugfix(47220); ?> (segfault in dom_document_parser in recovery mode). (Rob)</li>
+        <li><?php bugfix(47217); ?> (content-type is not set properly for file uploads). (Ilia)</li>
+        <li><?php bugfix(47174); ?> (base64_decode() interprets pad char in mid string as terminator). (Ilia)</li>
+        <li><?php bugfix(47165); ?> (Possible memory corruption when passing return value by reference). (Dmitry)</li>
+        <li><?php bugfix(47152); ?> (gzseek/fseek using SEEK_END produces strange results). (Felipe)</li>
+        <li><?php bugfix(47131); ?> (SOAP Extension ignores &quot;user_agent&quot; ini setting). (Ilia)</li>
+        <li><?php bugfix(47109); ?> (Memory leak on $a-&gt;{&quot;a&quot;.&quot;b&quot;} when $a is not an object). (Etienne, Dmitry)</li>
+        <li><?php bugfix(47104); ?> (Linking shared extensions fails with icc). (Jani)</li>
+        <li><?php bugfix(47049); ?> (SoapClient::__soapCall causes a segmentation fault). (Dmitry)</li>
+        <li><?php bugfix(47048); ?> (Segfault with new pg_meta_data). (Felipe)</li>
+        <li><?php bugfix(47042); ?> (PHP cgi sapi is removing SCRIPT_FILENAME for non apache). (Sriram Natarajan)</li>
+        <li><?php bugfix(47037); ?> (No error when using fopen with empty string). (Cristian Rodriguez R., Felipe)</li>
+        <li><?php bugfix(47035); ?> (dns_get_record returns a garbage byte at the end of a TXT record). (Felipe)</li>
+        <li><?php bugfix(47027); ?> (var_export doesn't show numeric indices on ArrayObject). (Derick)</li>
+        <li><?php bugfix(46985); ?> (OVERWRITE and binary mode does not work, regression introduced in 5.2.8). (Pierre)</li>
+        <li><?php bugfix(46973); ?> (IPv6 address filter rejects valid address). (Felipe)</li>
+        <li><?php bugfix(46964); ?> (Fixed pdo_mysql build with older version of MySQL). (Ilia)</li>
+        <li><?php bugfix(46959); ?> (Unable to disable PCRE). (Scott)</li>
+        <li><?php bugfix(46918); ?> (imap_rfc822_parse_adrlist host part not filled in correctly). (Felipe)</li>
+        <li><?php bugfix(46889); ?> (Memory leak in strtotime()). (Derick)</li>
+        <li><?php bugfix(46887); ?> (Invalid calls to php_error_docref()). (oeriksson at mandriva dot com, Ilia)</li>
+        <li><?php bugfix(46873); ?> (extract($foo) crashes if $foo['foo'] exists). (Arnaud)</li>
+        <li><?php bugfix(46843); ?> (CP936 euro symbol is not converted properly). (ty_c at cybozuy dot co dot jp, Moriyoshi)</li>
+        <li><?php bugfix(46798); ?> (Crash in mssql extension when retrieving a NULL value inside a binary or image column type). (Ilia)</li>
+        <li><?php bugfix(46782); ?> (fastcgi.c parse error). (Matt)</li>
+        <li><?php bugfix(46760); ?> (SoapClient doRequest fails when proxy is used). (Felipe)</li>
+        <li><?php bugfix(46748); ?> (Segfault when an SSL error has more than one error). (Scott)</li>
+        <li><?php bugfix(46739); ?> (array returned by curl_getinfo should contain content_type key). (Mikko)</li>
+        <li><?php bugfix(46699); ?> (xml_parse crash when parser is namespace aware). (Rob)</li>
+        <li><?php bugfix(46419); ?> (Elements of associative arrays with NULL value are lost). (Dmitry)</li>
+        <li><?php bugfix(46282); ?> (Corrupt DBF When Using DATE). (arne at bukkie dot nl)</li>
+        <li><?php bugfix(46026); ?> (bz2.decompress/zlib.inflate filter tries to decompress after end of stream). (Greg)</li>
+        <li><?php bugfix(46005); ?> (User not consistently logged under Apache2). (admorten at umich dot edu, Stas)</li>
+        <li><?php bugfix(45996); ?> (libxml2 2.7 causes breakage with character data in xml_parse()). (Rob)</li>
+        <li><?php bugfix(45940); ?> (MySQLI OO does not populate connect_error property on failed connect). (Johannes)</li>
+        <li><?php bugfix(45923); ?> (mb_st[r]ripos() offset not handled correctly). (Moriyoshi)</li>
+        <li><?php bugfix(45327); ?> (memory leak if offsetGet throws exception). (Greg)</li>
+        <li><?php bugfix(45239); ?> (Encoding detector hangs with mbstring.strict_detection enabled). (Moriyoshi)</li>
+        <li><?php bugfix(45161); ?> (Reusing a curl handle leaks memory). (Mark Karpeles, Jani)</li>
+        <li><?php bugfix(44336); ?> (Improve pcre UTF-8 string matching performance). (frode at coretrek dot com, Nuno)</li>
+        <li><?php bugfix(43841); ?> (mb_strrpos() offset is byte count for negative values). (Moriyoshi)</li>
+        <li><?php bugfix(37209); ?> (mssql_execute with non fatal errors). (Kalle)</li>
+        <li><?php bugfix(35975); ?> (Session cookie expires date format isn't the most compatible. Now matches that of setcookie()). (Scott)</li>
+
+</ul>
+
+<hr />
+
 <a name="5.2.8"></a>
 <h3>Version 5.2.8</h3>
 <b>08-December-2008</b>
