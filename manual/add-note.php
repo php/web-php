@@ -152,14 +152,17 @@ if ($process) {
 }
 
 // Any needed variable was missing => display instructions
-else { ?>
+else { 
+?>
+<h3>Welcome to the PHP Manual user note system</h3>
 <p>
- You can contribute your notes to the PHP  manual from the comfort of your
- browser! Just add your comment in the big field below, and, optionally,
- your email address or name in the little one. After submission, your note
- will appear under the documentation as a part of the manual.
+ You may contribute notes to the PHP manual by adding comments in the
+ form below, and, optionally your email address and/or name. And the
+ note will appear under the documentation as a part of the manual after
+ about an hour.
 </p>
 
+<h3>How to enter information</h3>
 <p>
  There is no need to obfuscate your email address, as we have a simple
  conversion in place to convert the @ signs and dots in your address. You
@@ -171,7 +174,6 @@ else { ?>
  only inform you of the removal of your note, if you use your real email
  address.
 </p>
-
 <p>
  Note that HTML tags are not allowed in the posts, but the note formatting
  is preserved. URLs will be turned into clickable links, PHP code blocks
@@ -180,64 +182,42 @@ else { ?>
  these tags. <em>(Double-check that your note appears
  as you want during the preview. That's why it is there!)</em>
 </p>
-
 <p>
- Please read the following points carefully before submitting your comment. 
- If your post falls into one of the categories mentioned there, it will be 
- rejected by one of the editors.
+ The SPAM challenge requires numbers to written out in English, so, an appropriate
+ answer may be <em>nine</em> but not <em>9</em>.
 </p>
 
+<h3>What not to enter</h3>
+<p>
+ User notes may be edited or deleted, and usually a note is deleted 
+ because of the following reasons:
+</p>
+<ul>
+ <li>
+  <strong>Bugs</strong>. Instead
+  <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">report a bug</a>
+  for this manual page to the bug database.
+ </li>
+ <li>
+  <strong>Missing documentation</strong>. Also, report that as a bug.
+ </li>
+ <li>
+  <strong>Support questions</strong>. See the <a href="/support.php">support page</a>
+  for available options. In other words, do not ask questions within the user notes.
+ </li>
+</ul>
+
+<h3>Additinal information</h3>
+<p>
+ Please note that periodically the developers go through the notes and
+ may incorporate information from them into the documentation. This means
+ that any note submitted here becomes the property of the PHP Documentation
+ Group.
+</p>
 <p>
  Your IP Address will be logged with the submitted note and made public on the
  PHP manual user notes mailing list. The IP address is logged as part of the
  notes moderation process, and won't be shown within the PHP manual itself.
-</p>
-
-<ul>
- <li>
-  If you are trying to <a href="http://bugs.php.net/">report a
-  bug</a>, or <a href="http://bugs.php.net/">request a new feature
-  or language change</a> you're in the wrong place.
- </li>
- 
- <li>
-  If you are just commenting on the fact that something is not documented, 
-  save your breath. This is where <strong>you</strong> add to the documentation,
-  not where you ask <strong>us</strong> to add the documentation. If you have
-  an addition or change request, open a Documentation Problem in 
-  <a href="http://bugs.php.net/">our bug system</a>, where your idea can be discussed.
- </li>
- 
- <li>
-  This is also not the correct place to <a href="/support.php">ask questions</a> 
-  (even if you see others have done that before, we are editing the notes slowly 
-  but surely). If you need support send email to the
-  <a href="mailto:php-general@lists.php.net">php-general list</a>, or see what
-  <a href="/support.php">other support options are available</a>.
- </li>
-</ul>
-
-<h3>If you post a note in any of the categories above, it will be edited or removed.</h3>
-
-<p>
- Just to make the point once more. The notes are being edited and support
- questions/bug reports/feature request/comments on lack of documentation, are
- being <strong>deleted</strong> from them (and you may get a <strong>rejection</strong>
- email), so if you post a question/bug/feature/complaint, it will be removed.
- (But once you get an answer/bug solution/function documentation, feel free to
- come back and add it here!)
-</p>
-<p>
- (And if you're posting an example of validating email addresses, please
- don't bother. Your example is almost certainly wrong for some small subset of
- cases. See <a href="http://examples.oreilly.com/regex/readme.html">this information
- from O'Reilly Mastering Regular Expressions book</a> for the gory details.)
-</p>
-<p>
- Please note that periodically, the developers may go through the notes and
- incorporate the information in them into the documentation. This means
- that any note submitted here becomes the property of the PHP Documentation
- Group.
 </p>
 <?php
 }
@@ -263,8 +243,8 @@ else {?>
    <td colspan="2">
     <b>
      <a href="/support.php">Click here to go to the support pages.</a><br />
-     <a href="http://bugs.php.net/">Click here to submit a bug report.</a><br />
-     <a href="http://bugs.php.net/">Click here to request a feature.</a><br />
+     <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br />
+     <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br />
      (Again, please note, if you ask a question, report a bug, or request a feature,
      your note <i>will be deleted</i>.)
     </b>
