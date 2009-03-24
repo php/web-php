@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.0RC1 Release Announcement</title>
+  <id>http://www.php.net/archive/2009.php#id2009-03-24-1</id>
+  <published>2009-03-24T21:16:11+01:00</published>
+  <updated>2009-03-24T21:16:11+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2009-03-24-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2009.php#id2009-03-24-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>The PHP development team is proud to announce the availability of the first release candidate of PHP 5.3.0 (PHP 5.3.0RC1). This release marks the final phase in a major improvement in the 5.X series, which includes a large number of new features, bug fixes and security enhancements.</p>
+      <p>The key features of the PHP 5.3 branch include:</p>
+      <ul>
+        <li>Support for namespaces</li>
+        <li>Under the hood performance improvements</li>
+        <li>Late static binding</li>
+        <li>Lambda functions and closures</li>
+        <li>Syntax additions: NOWDOC, limited GOTO, ternary short cut "?:" and __callStatic()</li>
+        <li>Optional garbage collection for cyclic references</li>
+        <li>Optional mysqlnd PHP native replacement for libmysql</li>
+        <li>Improved windows support including VC6 and VC9 binaries</li>
+        <li>More consistent float rounding</li>
+        <li>Deprecation notices are now handle via E_DEPRECATED (part of E_ALL) instead of the E_STRICT error level</li>
+        <li>Several enhancements to enable more flexiblity in php.ini (and ini parsing in general)</li>
+        <li>New bundled extensions: ext/phar, ext/intl, ext/fileinfo, ext/sqlite3, ext/enchant</li>
+        <li>Countless bug fixes and improvements to existing extensions in particular to: ext/openssl, ext/spl and ext/date</li>
+      </ul>
+      <p>This release also drops several extensions and unifies usage of internal APIs. Users should be aware of the following known backwards compatibility breaks:</p>
+      <ul>
+        <li>Parameter parsing API unification will cause some functions to behave more or less strict when it comes to type juggling</li>
+        <li>Removed the following extensions: ext/mhash (see ext/hash), ext/msql, ext/pspell (see ext/enchant), ext/sybase (see ext/sybase_ct)</li>
+        <li>Moved the following extensions to PECL: ext/ming, ext/fbsql, ext/ncurses, ext/fpdf</li>
+        <li>Removed zend.ze1_compatibility_mode</li>
+        <li>See the <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
+      </ul>
+      <p>All users of PHP, especially those using earlier PHP 5 releases are advised to test this release as the final release of PHP 5.3.0 will eventually obsolete the 5.2 branch of PHP.</p>
+      <p>For users upgrading from previous PHP 5 releases there is an upgrading guide available <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">here</a>, detailing the changes between those releases and PHP 5.3.0.</p>
+      <p>Please also note that we are aware of issues surrounding float/integer handling in some edge cases (some of which have been introduced in PHP 5.2.0), as well as a crash bug in NSAPI, that will be fixed in PHP 5.3.0RC2. These issues however do not prevent wide spread testing of PHP 5.3.0RC1 as users can now rely on the feature set and implementation decisions no longer being changed.</p>
+      <p>For a full list of changes in PHP 5.3.0, see the <a href="http://php.net/ChangeLog-5.php">ChangeLog</a>.</p>
+    </div>
+  </content>
+</entry>
