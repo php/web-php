@@ -3,7 +3,7 @@
   <title>PHP 5.3.0RC1 Release Announcement</title>
   <id>http://www.php.net/archive/2009.php#id2009-03-24-1</id>
   <published>2009-03-24T21:16:11+01:00</published>
-  <updated>2009-03-24T21:50:49+01:00</updated>
+  <updated>2009-03-25T08:43:44+01:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2009-03-24-1" rel="alternate" type="text/html"/>
@@ -63,7 +63,8 @@
       <p>All users of PHP, especially those using earlier PHP 5 releases are advised to test this release as the final release of PHP 5.3.0 will eventually obsolete the 5.2 branch of PHP.</p>
       <p>For users upgrading from previous PHP 5 releases there is an upgrading guide available <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">here</a>, detailing the changes between those releases and PHP 5.3.0.</p>
       <p>Please also note that we are aware of issues surrounding float/integer handling in some edge cases (some of which have been introduced in PHP 5.2.0), as well as a crash bug in NSAPI, that will be fixed in PHP 5.3.0RC2. These issues however do not prevent wide spread testing of PHP 5.3.0RC1 as users can now rely on the feature set and implementation decisions no longer being changed.</p>
-      <p>For a full list of changes in PHP 5.3.0, see the CVS <a href="http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=PHP_5_3">NEWS</a> file.</p>
+      <p>For a full list of changes in PHP 5.3.0, see the CVS <a
+        href="http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&amp;pathrev=PHP_5_3">NEWS</a> file.</p>
     </div>
   </content>
 </entry>
