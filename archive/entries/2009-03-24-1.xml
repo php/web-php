@@ -55,7 +55,7 @@
          <a href="http://php.net/ming">ext/ming</a>,
          <a href="http://php.net/fbsql">ext/fbsql</a>,
          <a href="http://php.net/ncurses">ext/ncurses</a>,
-         ext/fpdf
+         <a href="http://php.net/fdf">ext/fdf</a>
         </li>
         <li>Removed <a href="http://php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
         <li>See the <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
