@@ -49,13 +49,13 @@
          <a href="http://php.net/mhash">ext/mhash</a> (see <a href="http://php.net/hash">ext/hash</a>),
          <a href="http://php.net/msql">ext/msql</a>,
          <a href="http://php.net/pspell">ext/pspell</a> (see <a href="http://php.net/enchant">ext/enchant</a>),
-         <a href="http://php.net/sybase">ext/sybase</a> (see <a href="http://php.net/sybase_ct">ext/sybase_ct</a>)
+         <a href="http://php.net/sybase">ext/sybase</a> (see <a href="http://php.net/sybase">ext/sybase_ct</a>)
         </li>
         <li>Moved the following extensions to PECL:
          <a href="http://php.net/ming">ext/ming</a>,
          <a href="http://php.net/fbsql">ext/fbsql</a>,
          <a href="http://php.net/ncurses">ext/ncurses</a>,
-         <a href="http://php.net/fpdf">ext/fpdf</a>
+         ext/fpdf
         </li>
         <li>Removed <a href="http://php.net/manual/ini.core.php#ini.zend.ze1-compatibility-mode">zend.ze1_compatibility_mode</a></li>
         <li>See the <a href="http://cvs.php.net/viewvc.cgi/php-src/UPGRADING?view=markup&amp;pathrev=PHP_5_3">upgrading guide</a> for other minor changes</li>
