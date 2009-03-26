@@ -28,14 +28,10 @@ unset($LAST_UPDATED);
 // Load the My PHP.net settings before any includes
 myphpnet_load();
 
-// Put the magic quotes setting to $MQ
-if (function_exists("get_magic_quotes_gpc")) {
-    $MQ = (boolean) @get_magic_quotes_gpc();
-
-    // Turn off runtime magic quoting
+// TODO: Remove MQ dependencies from phpweb
+$MQ = get_magic_quotes_gpc();
+if (get_magic_quotes_runtime()) {
     @set_magic_quotes_runtime(0);
-} else {
-    $MQ = false;
 }
 
 // Check for APC support
