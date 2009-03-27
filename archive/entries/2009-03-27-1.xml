@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Google Summer of Code 2009</title>
+  <id>http://www.php.net/archive/2009.php#id2009-03-27-1</id>
+  <published>2009-03-27T15:34:48-07:00</published>
+  <updated>2009-03-27T15:34:48-07:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2009-03-27-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2009.php#id2009-03-27-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+       Once again we are happy to announce our involvement with the Google Summer of Code project.
+       Be sure to check <a href="http://socghop.appspot.com/org/show/google/gsoc2009/php">our program</a>
+       at this years GSoC.
+      </p>
+      <p>
+       We invite everyone to look at the <a href="http://wiki.php.net/gsoc/2009">list of ideas</a> for
+       this years GSoC, and get involved. Students are welcome to propose their own ideas, and we
+       will consider all applications that are received before the April 3rd deadline. So, thanks to
+       everyone involved and we look forward to seeing many students join us on this great adventure!
+      </p>
+    </div>
+  </content>
+</entry>
