@@ -245,7 +245,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '01 May 2008',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.5' => 
     array (
