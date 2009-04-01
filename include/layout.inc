@@ -80,6 +80,7 @@ function site_header($title = '', $config = array())
     if (!isset($config["charset"])) { $config["charset"] = "utf-8"; }
     header("Content-type: text/html;charset={$config['charset']}");
     header("Content-language: {$config['lang']}");
+    header("X-PHP-QUESTION: I wonder if anyone will ever notice this");
     
     if (!empty($title)) { $title = ": $title"; }
     
