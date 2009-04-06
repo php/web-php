@@ -14,7 +14,7 @@
      <p>
       Tickets are now on sale for The Dutch PHP Conference 2009 and we want to invite
       you to attend. This year's conference will be held from
-      <abbr title="2009-06-11">June 11</abbr>-<abbr title="2009-06-14">June13, 2009</abbr>.
+      <abbr title="2009-06-11" class="dtstart">June 11</abbr>-<abbr title="2009-06-14" class="dtend">June13, 2009</abbr>.
       DPC09, like it's predecessors, will be held in Amsterdam at the RAI Center. This
       year we have expanded the conference to two days plus the tutorial day so that we
       can deliver even more sessions, events and value for your conference budget.
