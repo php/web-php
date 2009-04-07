@@ -18,7 +18,8 @@ $filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_
 $md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_MD5["tar.bz2"]);
 
 // Does this mirror have sqlite?
-$sqlite = (int) function_exists("sqlite_open");
+// Gets all available sqlite versions for possible future sqlite wrapper
+$sqlite = get_available_sqlites();
 
 if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e5cd90e") {
 	$retval = run_self_tests();

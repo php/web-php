@@ -303,6 +303,31 @@ function fetch_header($url, $header) {
     return isset($headers[$header]) ? $headers[$header] : null;
 }
 
+function get_available_sqlites() {	
+
+	$allsqlites = array(1 => 'sqlite', 2 => 'sqlite3', 4 => 'pdo_sqlite', 8 => 'pdo_sqlite2');
+	$avail      = 0;
+
+	if (function_exists('sqlite_open')) {
+		$avail += 1;
+	}
+	if (class_exists('sqlite3')) {
+		$avail += 2;
+	}
+	if (method_exists('PDO', 'getavailabledrivers')) {
+		foreach (PDO::getavailabledrivers() as $driver) {
+			switch ($driver) {
+				case 'sqlite':
+					$avail += 4;
+					break;
+				case 'sqlite2':
+					$avail += 8;
+					break;
+			}
+		}
+	}
+	return $avail;
+}
 
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
