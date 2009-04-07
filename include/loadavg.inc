@@ -4,8 +4,7 @@
 
 /*
  Offload to the visitor's nearest mirror if the load is too high.
- The used sys_getloadavg() function is currently only available in
- the latest PHP 5.1 versions
+ We use the sys_getloadavg() function that requires PHP 5.1.3+
 */
 
 // Check load on mirror
