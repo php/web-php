@@ -19,18 +19,18 @@
 /* PHP 5 Release */
 $PHP_5_VERSION = "5.2.9";
 $PHP_5_DATE    = "26 February 2009";
-$PHP_5_WINDOWS_DATE = "10 March 2009";
-$PHP_5_WINDOWS_VERSION = "5.2.9-1";
+$PHP_5_WINDOWS_DATE = "8 April 2009";
+$PHP_5_WINDOWS_VERSION = "5.2.9-2";
 
 $PHP_5_MD5     = array(
                        "tar.bz2"       => "280d6cda7f72a4fc6de42fda21ac2db7",
                        "tar.gz"        => "98b647561dc664adefe296106056cf11",
-                       "zip"           => "2ed82c452806327d9fa50fa29d4c74f9",
-                       "installer"     => "5006e3ba05dee5a65a56d6f052e62a72",
-                       "nts.zip"       => "59d8edb7a615a8af7f5c6a92373763c3",
-                       "nts.installer" => "3b22025347e3c216667d12795547cd9d",
-                       "nts.debugpack" => "73327228073e0b944b9134a83a1421bd",
-                       "debugpack"     => "5ad7e63d2038603964be6828c4475113"
+                       "zip"           => "ff5584c195289a93cc4476196327e784",
+                       "installer"     => "c8e0a97a4d9bcede5ba67923376c9509",
+                       "nts.zip"       => "d9ead9142538e984f0e5be0bab21d772",
+                       "nts.installer" => "a347631946fe813826698f55707306c3",
+                       "nts.debugpack" => "607cfd215fad6e9529d020670cd0d0a1",
+                       "debugpack"     => "a5fda155328c3a3c05a20e6dea5a153a",
 );
 
 $PHP_5_RC      = '5.3.0RC1';
@@ -95,8 +95,7 @@ $RELEASES = array(
                 ),
 */
                 array(
-                    // The debug packs dont have its own version apparently
-                    "filename" => "php-debug-pack-$PHP_5_VERSION-Win32.zip",
+                    "filename" => "php-debug-pack-$PHP_5_WINDOWS_VERSION-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["debugpack"],
                     "date"     => $PHP_5_WINDOWS_DATE,
@@ -115,8 +114,7 @@ $RELEASES = array(
                     "date"     => $PHP_5_WINDOWS_DATE,
                 ),
                 array(
-                    // The debug packs dont have its own version apparently
-                    "filename" => "php-debug-pack-$PHP_5_VERSION-nts-Win32.zip",
+                    "filename" => "php-debug-pack-$PHP_5_WINDOWS_VERSION-nts-Win32.zip",
                     "name"     => "PHP $PHP_5_VERSION Non-thread-safe Win32 Debug Pack",
                     "md5"      => $PHP_5_MD5["nts.debugpack"],
                     "date"     => $PHP_5_WINDOWS_DATE,
