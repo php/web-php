@@ -57,11 +57,6 @@ function find_manual_page_slow($lang, $keyword)
 
     // Remove .. for security reasons
     $keyword = str_replace("..", "", $keyword);
-
-    // FIXME: Temporary hack for mysqli_ functions
-    if (strpos($keyword, "mysqli_") === 0) {
-        $keyword[6] = ".";
-    }
     
     // Try to find a manual page with the specified prefix
     foreach ($sections as $section) {
@@ -133,12 +128,15 @@ function find_manual_page($lang, $keyword)
     } else {
         
         // List a few variations, plus a metaphone version
+        // FIXME: metaphone causes too many false positives, disable for now
+        //        the similar_text() search fallback works fine (see quickref.php)
+        //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
         $keywords = array_unique(array(
             $keyword,
             str_replace(' ', '',  $keyword),
             str_replace(' ', '-', $keyword),
             str_replace('-', '',  $keyword),
-            metaphone($keyword)
+    //        metaphone($keyword)
         ));
 
         // List of all the keywords in single quotes
