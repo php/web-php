@@ -25,19 +25,20 @@ $PHP_5_WINDOWS_VERSION = "5.2.9-2";
 $PHP_5_MD5     = array(
                        "tar.bz2"       => "280d6cda7f72a4fc6de42fda21ac2db7",
                        "tar.gz"        => "98b647561dc664adefe296106056cf11",
-                       "zip"           => "ff5584c195289a93cc4476196327e784",
-                       "installer"     => "c8e0a97a4d9bcede5ba67923376c9509",
-                       "nts.zip"       => "d9ead9142538e984f0e5be0bab21d772",
-                       "nts.installer" => "a347631946fe813826698f55707306c3",
-                       "nts.debugpack" => "607cfd215fad6e9529d020670cd0d0a1",
-                       "debugpack"     => "a5fda155328c3a3c05a20e6dea5a153a",
+                       "zip"           => "316b9c81bab08e6547a730315ea2abfd",
+                       "installer"     => "e2162faa3467aed01651df4269aa6944",
+                       "nts.zip"       => "8f85777941f7722fcbfe08e7de358f7d",
+                       "nts.installer" => "4e7a1bec2b268d3d2d28cb89f629b680",
+                       "nts.debugpack" => "4b7b695a257527f2896312f98dc30fd3",
+                       "debugpack"     => "b52e9a152e105c7391c832fdfe0fa06f",
 );
 
 $PHP_5_RC      = '5.3.0RC1';
 $PHP_5_RC_DATE = "24 March 2009";
 
-$PHP_5_WINDOWS_NOTE_MSI = "";
-$PHP_5_WINDOWS_NOTE_ZIP = "The PECL package will <em>not</em> be released for
+$PHP_5_WINDOWS_NOTE_MSI = "Updated 9th of April: Added the missing oci8 DLL";
+$PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br />
+The PECL package will <em>not</em> be released for
 this version. The 5.2.6 PECL package does however work with this release";
 
 /* PHP 4 Release */
@@ -112,6 +113,7 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_WINDOWS_VERSION Non-thread-safe installer",
                     "md5"      => $PHP_5_MD5["nts.installer"],
                     "date"     => $PHP_5_WINDOWS_DATE,
+                    "note"     => $PHP_5_WINDOWS_NOTE_MSI,
                 ),
                 array(
                     "filename" => "php-debug-pack-$PHP_5_WINDOWS_VERSION-nts-Win32.zip",
