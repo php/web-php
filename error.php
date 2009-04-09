@@ -177,6 +177,13 @@ if (is_numeric($URI)) {
 // Work with lowercased URI from now
 $URI = strtolower($URI);
 
+// Redirection hack, see error.inc for detailed description
+if ($path = is_known_ini($URI)) {
+    status_header(301);
+    mirror_redirect("/manual/$LANG/$path");
+    exit;
+}
+
 // ============================================================================
 // Major manual page modifications (need to handle shortcuts and pages in all languages)
 // Used permanent HTTP redirects, so search engines will be able to pick up the correct
