@@ -146,7 +146,8 @@ function site_header($title = '', $config = array())
     // Right-to-left support
     $rtl = "";
     if (isset($PGI, $PGI['head'], $PGI['head'][1])) {
-        switch (language_convert($PGI['head'][1])) {
+        $lang = language_convert($PGI['head'][1]);
+        switch ($lang) {
             case "he":
             case "ar":
                 $rtl = ' style="direction: rtl"';
@@ -169,7 +170,7 @@ function site_header($title = '', $config = array())
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{$lang}" lang="{$lang}">
 <head{$profile}>
  <title>PHP{$title}</title>
  <style type="text/css" media="all">
