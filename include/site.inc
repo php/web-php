@@ -329,6 +329,16 @@ function get_available_sqlites() {
 	return $avail;
 }
 
+// Get all manual prefix search sections
+function get_manual_search_sections() {
+    return array(
+        "", "book.", "ref.", "function.", "class.",
+        "feature-", "control-structures.", "language.",
+        "about.", "faq.", "features.", 
+    );
+}
+
+
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case
 // it works under more then one name). SERVER_NAME is

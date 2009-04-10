@@ -60,6 +60,23 @@ function manual_header()
     // Set base href for this manual page
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
     
+    // {{{ Build rev=canonical
+    $sections = get_manual_search_sections();
+    // Kill the first entry (empty)
+    array_shift($sections);
+
+    // We can at the very least kill the .php
+    $shorturl = substr($PGI['this'][0], 0, -4);
+
+    foreach($sections as $section) {
+      // If we know this section
+      if (strpos($PGI['this'][0], $section) === 0) {
+        // We can make it even shorter
+        $shorturl = substr($PGI['this'][0], strlen($section), -4);
+      }
+    }
+    // }}}
+
     manual_sidebar();
     site_header("$title - Manual", array(
 		"link" => array(
@@ -69,6 +86,11 @@ function manual_header()
 			"next"             => $PGI["next"][0],
 			"schema.dc"        => "http://purl.org/dc/elements/1.1/",
 			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
+            array(
+                  "rev"  => "canonical",
+                  "rel"  => "self alternate shorter",
+                  "href" => "http://php.net/" . $shorturl,
+            ),
 		),
 		"profile" => "http://purl.org/NET/erdf/profile",
 	));

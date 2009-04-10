@@ -49,11 +49,7 @@ function tryprefix($lang, $keyword, $prefix)
 function find_manual_page_slow($lang, $keyword)
 {
     // Possible prefixes to test
-    $sections = array(
-        "", "book.", "ref.", "function.", "class.",
-        "feature-", "control-structures.", "language.",
-        "about.", "faq.", "features.", 
-    );
+    $sections = get_manual_search_sections();
 
     // Remove .. for security reasons
     $keyword = str_replace("..", "", $keyword);
