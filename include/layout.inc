@@ -184,6 +184,7 @@ function site_header($title = '', $config = array())
  <!--[if IE]><![endif]><![endif]-->
  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
+ <link rel="canonical" href="http://php.net/{$_SERVER['BASE_PAGE']}" />
  <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
 </head>
 <body{$onload}>
