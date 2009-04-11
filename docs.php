@@ -119,6 +119,7 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  <li>
   You can still read a copy of the original <a href="/manual/phpfi2.php">PHP/FI
   2.0 Manual</a> on our site, which we only host for historical purposes.
+  The same applies to the <a href="/manual/php3.php">PHP 3 Manual</a>.
  </li>
 </ul>
 
