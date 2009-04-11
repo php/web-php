@@ -655,7 +655,7 @@ function news_archive_sidebar()
 }
 
 // Print news
-function print_news($news, $dog, $max = 5) {
+function print_news($news, $dog, $max = 5, $onlyyear = null) {
     $count = 0;
     foreach($news as $item) {
         $vevent = "";
@@ -701,7 +701,12 @@ function print_news($news, $dog, $max = 5) {
 
         // PHP4 strtotime() doesn't support RFC3339 timestamps
         $published = substr($item["published"], 0, 10);
-        $newsdate = date("d-M-Y", strtotime($published));
+        $nixtimestamp = strtotime($published);
+        $newsdate = date("d-M-Y", $nixtimestamp);
+        if ($onlyyear && date("Y", $nixtimestamp) != $onlyyear) {
+            $count--;
+            continue;
+        }
 
         echo <<< EOT
 <div class="newsItem hentry{$vevent}">
