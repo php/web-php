@@ -103,6 +103,7 @@ site_header("Getting Help");
  (<a href="http://www.efnet.org/">EFNet</a>,
  <a href="http://www.ircnet.com/">IRCNet</a>,
  <a href="http://www.quakenet.org">QuakeNet</a>,
+ <a href="http://www.icq.com">IrCQNet</a>,
  <a href="http://www.dal.net/">DALNet</a> and
  <a href="http://www.freenode.net/">freenode</a>).
 </p>
