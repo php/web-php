@@ -207,7 +207,7 @@ else {
  </li>
 </ul>
 
-<h3>Additinal information</h3>
+<h3>Additional information</h3>
 <p>
  Please note that periodically the developers go through the notes and
  may incorporate information from them into the documentation. This means
