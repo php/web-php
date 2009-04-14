@@ -40,10 +40,6 @@ site_header("Links");
   Latest news aggregated from PHP related weblogs.
  </li>
  <li>
-  <a href="http://devzone.zend.com/public/view/tag/Weekly_Summaries">Weekly Summaries</a><br />
-  Summary of Internal PHP happenings, brought to you by Zend.com
- </li>
- <li>
   <a href="http://www.phppodcasts.com">PHP Podcasts</a><br />
   The Complete list of PHP Podcasts, Screencasts, and Video Podcasts.
  </li>
