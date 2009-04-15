@@ -65,8 +65,8 @@ if (($k = array_search($filename, $restfiles)) === false) {
 } else {
 	site_header(basename($path));
 	include $restfiles[$k];
+	manual_notes();
 }
 
-manual_notes();
 site_footer();
 
