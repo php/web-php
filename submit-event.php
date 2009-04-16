@@ -104,6 +104,11 @@ if ($process) {
         $errors[] = "You must specify a valid day of the month for a recurring event.";
     }
 
+    // Spam question
+    if ($_POST["sane"] != 3) {
+        $errors[] = "It's OK. I'm not real either";
+    }
+
     if (preg_match("/submit/i", $_POST["action"])) {
         // Submit to master.php.net
         $result = posttohost("http://master.php.net/entry/event.php", $_POST);
@@ -239,6 +244,10 @@ if ($process && count($errors) === 0) {
     <input type="submit" name="action" value="Submit" />
 <?php }?>
   </th>
+ </tr>
+ <tr>
+  <th class="subr">Are you real?</th>
+  <td><select name="sane"><?php display_options(array("I'm an robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "WTF?"); ?></select></td>
  </tr>
 </table>
 </form>
