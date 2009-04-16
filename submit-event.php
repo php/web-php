@@ -247,7 +247,7 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Are you real?</th>
-  <td><select name="sane"><?php display_options(array("I'm an robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "WTF?"); ?></select></td>
+  <td><select name="sane"><?php display_options(array("I'm an robot", "I used to be", "WTF?", "Yes", "No, but I'd still want to submit this"), "2"); ?></select></td>
  </tr>
 </table>
 </form>
