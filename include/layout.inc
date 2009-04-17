@@ -81,6 +81,11 @@ function site_header($title = '', $config = array())
     header("Content-type: text/html;charset={$config['charset']}");
     header("Content-language: {$config['lang']}");
     header("X-PHP-QUESTION: I wonder if anyone will ever notice this");
+    if (isset($config["extra_headers"]) && is_array($config["extra_headers"])) {
+        foreach($config["extra_headers"] as $key => $value) {
+            header(sprintf("%s: %s", $key, $value));
+        }
+    }
     
     if (!empty($title)) { $title = ": $title"; }
     

@@ -88,11 +88,14 @@ function manual_header()
 			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
             array(
                   "rev"  => "canonical",
-                  "rel"  => "self alternate shorter",
+                  "rel"  => "self alternate shorter shorturl",
                   "href" => "http://php.net/" . $shorturl,
             ),
 		),
 		"profile" => "http://purl.org/NET/erdf/profile",
+		"extra_headers" => array(
+			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
+		),
 	));
     manual_navbar();
 }
