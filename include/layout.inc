@@ -150,6 +150,7 @@ function site_header($title = '', $config = array())
 
     // Right-to-left support
     $rtl = "";
+    $lang = "en";
     if (isset($PGI, $PGI['head'], $PGI['head'][1])) {
         $lang = language_convert($PGI['head'][1]);
         switch ($lang) {
