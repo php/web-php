@@ -75,11 +75,18 @@ function site_header($title = '', $config = array())
     if (!empty($SIDEBAR_DATA))  { $PAGE_COLUMNS++; }
     if (!empty($RSIDEBAR_DATA)) { $PAGE_COLUMNS++; }
     
+    // Check which language we are presenting, default to english
+    $lang = "en";
+    if (isset($config["lang"])) {
+        $lang = language_convert($config["lang"]);
+    } elseif (isset($PGI, $PGI['head'], $PGI['head'][1])) {
+        $lang = language_convert($PGI['head'][1]);
+    }
+
     // Print out lang and charset headers
-    if (!isset($config["lang"]))    { $config["lang"] = "en"; }
     if (!isset($config["charset"])) { $config["charset"] = "utf-8"; }
     header("Content-type: text/html;charset={$config['charset']}");
-    header("Content-language: {$config['lang']}");
+    header("Content-language: {$lang}");
     header("X-PHP-QUESTION: I wonder if anyone will ever notice this");
     if (isset($config["extra_headers"]) && is_array($config["extra_headers"])) {
         foreach($config["extra_headers"] as $key => $value) {
@@ -150,15 +157,11 @@ function site_header($title = '', $config = array())
 
     // Right-to-left support
     $rtl = "";
-    $lang = "en";
-    if (isset($PGI, $PGI['head'], $PGI['head'][1])) {
-        $lang = language_convert($PGI['head'][1]);
-        switch ($lang) {
-            case "he":
-            case "ar":
-                $rtl = ' style="direction: rtl"';
-                break;
-        }
+    switch ($lang) {
+        case "he":
+        case "ar":
+            $rtl = ' style="direction: rtl"';
+            break;
     }
 
     $profile = "";
