@@ -217,6 +217,10 @@ Web site does not respond
     <a href="news://fr.comp.lang.php">fr.comp.lang.php</a><br />
     (was: fr.comp.infosystemes.www.auteurs.php)
    </li>
+   <li>
+     <a href="http://www.lephpfacile.com/">Le PHP Facile</a><br />
+     Website dedicated to the French PHP Community, offering various PHP tutorials and documentations in french.
+   </li>
   </ul>
  </li>
 
