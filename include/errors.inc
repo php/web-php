@@ -102,8 +102,7 @@ everything like functions, variables, constants, common search terms, etc.
 This exists today because as of PHP 5.3.0 there are over 200 links within the
 php.ini files so these create nicer urls and allow language detection to work.
 
-Initially this only contains ini settings referred to within php.ini-* and is
-ordered as such (top to bottom).
+The most commonly searched terms have also been added.
 
 TODO: Determine if we want to continue 301 -OR- make these official URLs.
 ******************************************************************************/
@@ -315,10 +314,113 @@ $inis = array(
 	'soap.wsdl-cache-ttl'			=> 'soap.configuration.php#ini.soap.wsdl-cache-ttl',
 	);
 	
-	$ini = str_replace('_', '-', strtolower(trim($ini)));
-	
-	if (isset($inis[$ini])) {
-		return $inis[$ini];
+	return isset($inis[$ini]) ? $inis[$ini] : false;
+}
+
+function is_known_variable($variable) {
+$variables = array(
+	// Variables
+	'globals'		=> 'reserved.variables.globals.php',
+	'-server'		=> 'reserved.variables.server.php',
+	'-get'			=> 'reserved.variables.get.php',
+	'-post'			=> 'reserved.variables.post.php',
+	'-files'		=> 'reserved.variables.files.php',
+	'-request'		=> 'reserved.variables.request.php',
+	'-session'		=> 'reserved.variables.session.php',
+	'-cookie'		=> 'reserved.variables.cookies.php',
+	'-env'			=> 'reserved.variables.environment.php',
+	'this'			=> 'language.oop5.basic.php',
+	'php-errormsg'	=> 'reserved.variables.phperrormsg.php',
+	'argv'			=> 'reserved.variables.argv.php',
+	'argc'			=> 'reserved.variables.argc.php',
+	'http-raw-post-data'	=> 'reserved.variables.httprawpostdata.php',
+	'http-response-header'	=> 'reserved.variables.httpresponseheader.php',
+	'http-server-vars'		=> 'reserved.variables.server.php',
+	'http-get-vars'			=> 'reserved.variables.get.php',
+	'http-post-vars'		=> 'reserved.variables.post.php',
+	'http-session-vars'		=> 'reserved.variables.session.php',
+	'http-post-files'		=> 'reserved.variables.files.php',
+	'http-cookie-vars'		=> 'reserved.variables.cookies.php',
+	'http-env-vars'			=> 'reserved.variables.env.php',
+	);
+
+	if ($variable[0] === '$') {
+		$variable = ltrim($variable, '$');
 	}
-	return false;
+
+	return isset($variables[$variable]) ? $variables[$variable] : false;
+
+}
+
+function is_known_term ($term) {
+$terms = array(
+	'<>'			=> 'language.operators.comparison.php',
+	'=='			=> 'language.operators.comparison.php',
+	'==='			=> 'language.operators.comparison.php',
+	'@'				=> 'language.operators.errorcontrol.php',
+	'apache'		=> 'install.php',
+	'array'			=> 'language.types.array.php',
+	'arrays'		=> 'language.types.array.php',
+	'case'			=> 'control-structures.switch.php',
+	'catch'			=> 'language.exceptions.php',
+	'checkbox'		=> 'faq.html.php',
+	'class'			=> 'language.oop5.basic.php',
+	'classes'		=> 'language.oop5.basic.php',
+	'cookie'		=> 'features.cookies.php',
+	'date'			=> 'function.date.php',
+	'exception'		=> 'language.exceptions.php',
+	'extends'		=> 'keyword.extends.php',
+	'file'			=> 'function.file.php',
+	'fopen'			=> 'function.fopen.php',
+	'for'			=> 'control-structures.for.php',
+	'foreach'		=> 'control-structures.foreach.php',
+	'form'			=> 'language.variables.external.php',
+	'forms'			=> 'language.variables.external.php',
+	'function'		=> 'language.functions.php',
+	'gd'			=> 'book.image.php',
+	'get'			=> 'reserved.variables.get.php',
+	'global'		=> 'language.variables.scope.php',
+	'globals'		=> 'language.variables.scope.php',
+	'header'		=> 'function.header.php',
+	'heredoc'		=> 'language.types.string.php#language.types.string.syntax.heredoc',
+	'htaccess'		=> 'configuration.file.php',
+	'if'			=> 'control-structures.if.php',
+	'include'		=> 'function.include.php',
+	'int'			=> 'language.types.integer.php',
+	'ip'			=> 'reserved.variables.server.php',
+	'location'		=> 'function.header.php',
+	'mail'			=> 'function.mail.php',
+	'modulo'		=> 'language.operators.arithmetic.php',
+	'mysql'			=> 'book.mysql.php',
+	'new'			=> 'language.oop5.basic.php#language.oop5.basic.new',
+	'null'			=> 'language.types.null.php',
+	'object'		=> 'language.types.object.php',
+	'operator'		=> 'language.operators.php',
+	'operators'		=> 'language.operators.php',
+	'or'			=> 'language.operators.logical.php',
+	'php.ini'		=> 'configuration.file.php',
+	'php-mysql.dll'	=> 'book.mysql.php',
+	'php-self'		=> 'reserved.variables.server.php',
+	'query-string'	=> 'reserved.variables.server.php',
+	'redirect'		=> 'function.header.php',
+	'reference'		=> 'index.php',
+	'referer'		=> 'reserved.variables.server.php',
+	'referrer'		=> 'reserved.variables.server.php',
+	'remote-addr'	=> 'reserved.variables.server.php',
+	'request'		=> 'reserved.variables.request.php',
+	'session'		=> 'features.sessions.php',
+	'smtp'			=> 'book.mail.php',
+	'ssl'			=> 'book.openssl.php',
+	'static'		=> 'language.oop5.static.php',
+	'stdin'			=> 'wrappers.php.php',
+	'string'		=> 'language.types.string.php',
+	'superglobal'	=> 'language.variables.superglobals.php',
+	'superglobals'	=> 'language.variables.superglobals.php',
+	'switch'		=> 'control-structures.switch.php',
+	'timestamp'		=> 'function.time.php',
+	'try'			=> 'language.exceptions.php',
+	'upload'		=> 'features.file-upload.php',
+	);
+	
+	return isset($terms[$term]) ? $terms[$term] : false;
 }

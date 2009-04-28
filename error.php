@@ -178,7 +178,20 @@ if (is_numeric($URI)) {
 $URI = strtolower($URI);
 
 // Redirection hack, see error.inc for detailed description
-if ($path = is_known_ini($URI)) {
+// These expect -foo not _foo
+$term = str_replace('_', '-', $URI);
+
+if ($path = is_known_ini($term)) {
+    status_header(301);
+    mirror_redirect("/manual/$LANG/$path");
+    exit;
+}
+if ($path = is_known_variable($term)) {
+    status_header(301);
+    mirror_redirect("/manual/$LANG/$path");
+    exit;
+}
+if ($path = is_known_term($term)) {
     status_header(301);
     mirror_redirect("/manual/$LANG/$path");
     exit;
