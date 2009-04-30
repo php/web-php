@@ -41,18 +41,6 @@ $PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br /
 The PECL package will <em>not</em> be released for
 this version. The 5.2.6 PECL package does however work with this release";
 
-/* PHP 4 Release */
-$PHP_4_VERSION = "4.4.9";
-$PHP_4_DATE    = "07 August 2008";
-$PHP_4_MD5     = array(
-                       "tar.bz2"   => "2e3b2a0e27f10cb84fd00e5ecd7a1880",
-                       "tar.gz"    => "9bcc1aba50be0dfeeea551d018375548",
-                       "zip"       => "7395068d5489a9f8abf50c6e4b48622f",
-);
-
-$PHP_4_RC      = false; //"4.4.9RC1";
-$PHP_4_RC_DATE = "22 July 2008";
-
 $RELEASES = array(
     5 => array(
         $PHP_5_VERSION => array(
@@ -135,32 +123,5 @@ $RELEASES = array(
         ),
         $PHP_5_RC => array(),
     ),
-    4 => array(
-        $PHP_4_VERSION => array(
-            "announcement" => true,
-            "source" => array(
-                array(
-                    "filename" => "php-$PHP_4_VERSION.tar.bz2",
-                    "name"     => "PHP $PHP_4_VERSION (tar.bz2)",
-                    "md5"      => $PHP_4_MD5["tar.bz2"],
-                    "date"     => $PHP_4_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_4_VERSION.tar.gz",
-                    "name"     => "PHP $PHP_4_VERSION (tar.gz)",
-                    "md5"      => $PHP_4_MD5["tar.gz"],
-                    "date"     => $PHP_4_DATE,
-                ),
-            ),
-            "windows" => array( /* Prefix the key with dot if they don't exists yet */
-                array(
-                    "filename" => "php-$PHP_4_VERSION-Win32.zip",
-                    "name"     => "PHP $PHP_4_VERSION zip package",
-                    "md5"      => $PHP_4_MD5["zip"],
-                    "date"     => $PHP_4_DATE,
-                ),
-            ),
-        ),
-        $PHP_4_RC => array(),
-    ),
 );
+

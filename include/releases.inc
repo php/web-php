@@ -854,6 +854,42 @@ this version. The 5.2.6 PECL package does however work with this release',
   ),
   4 => 
   array (
+    '4.4.9' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/4_4_9.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.9.tar.bz2',
+          'name' => 'PHP 4.4.9 (tar.bz2)',
+          'md5' => '2e3b2a0e27f10cb84fd00e5ecd7a1880',
+          'date' => '07 August 2008',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-4.4.9.tar.gz',
+          'name' => 'PHP 4.4.9 (tar.gz)',
+          'md5' => '9bcc1aba50be0dfeeea551d018375548',
+          'date' => '07 August 2008',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-4.4.9-Win32.zip',
+          'name' => 'PHP 4.4.9 zip package',
+          'md5' => '7395068d5489a9f8abf50c6e4b48622f',
+          'date' => '07 August 2008',
+        ),
+      ),
+      'date' => '07 August 2008',
+      'museum' => false,
+    ),
     '4.4.8' => 
     array (
       'announcement' => 

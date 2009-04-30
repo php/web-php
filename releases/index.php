@@ -6,6 +6,7 @@ include_once $_SERVER["DOCUMENT_ROOT"] . "/include/releases.inc";
 
 if (isset($_GET["serialize"])) {
 	include_once $_SERVER["DOCUMENT_ROOT"] . "/include/version.inc";
+	$RELEASES = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
 		$ver = (int)$_GET["version"];

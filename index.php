@@ -148,19 +148,17 @@ if (is_official_mirror()) {
  *  For RC: See the $PHP_x_RC variable
  *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
  */
-$PHP_5_STABLE = $PHP_4_STABLE = array();
-$PHP_5_RC     = $PHP_4_RC     = "";
+$PHP_5_STABLE = array();
+$PHP_5_RC     = "";
 $rel          = $rc           = "";
 
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
-list($PHP_4_STABLE, ) = each($RELEASES[4]);
 
 $rel = <<< EOT
   <div id="releaseBox">
    <h4>Stable Releases</h4>
    <ol id="releases">
     <li class="php5"><a href="/downloads.php#v5">Current PHP 5 Stable: <span class="release">$PHP_5_STABLE</span></a></li>
-    <li class="php5"><a href="/downloads.php#v4">Historical PHP 4 Stable: <span class="release">$PHP_4_STABLE</span></a></li>
    </ol>
   </div>\n
 EOT;
@@ -171,13 +169,6 @@ if (count($RELEASES[5])>1) {
 
     if (!empty($PHP_5_RC)) {
         $rc .= "    <li class=\"php5\"><a href=\"http://qa.php.net/\">Current PHP 5 RC: <span class=\"release\">$PHP_5_RC</span></a></li>\n";
-    }
-}
-if (count($RELEASES[4])>1) {
-    list($PHP_4_RC, ) = each($RELEASES[4]);
-
-    if (!empty($PHP_4_RC)) {
-        $rc .= "    <li class=\"php4\"><a href=\"http://qa.php.net/\">Current PHP 4 RC: <span class=\"release\">$PHP_4_RC</span></a></li>\n";
     }
 }
 
