@@ -39,7 +39,7 @@ function posttohost($url, $data)
 
     // Read the first line of data, only accept if 200 OK is sent
     $line = fgets($fp, 1024);
-    if (!eregi("^HTTP/1\\.. 200", $line)) { return; }
+    if (!preg_match('#^HTTP/1\\.. 200#', $line)) { return; }
 
     // Put everything, except the headers to $results 
     $results = ""; $inheader = TRUE;
