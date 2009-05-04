@@ -88,9 +88,15 @@ function manual_header()
 			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
             array(
                   "rev"  => "canonical",
-                  "rel"  => "self alternate shorter shorturl",
+                  "rel"  => "self alternate shorter shorturl shortlink",
                   "href" => "http://php.net/" . $shorturl,
             ),
+            array(
+                  "rel" => "license",
+                  "href" => "http://creativecommons.org/licenses/by/3.0/",
+                  "about" => "#content",
+            ),
+
 		),
 		"profile" => "http://purl.org/NET/erdf/profile",
 		"extra_headers" => array(
