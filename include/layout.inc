@@ -226,10 +226,10 @@ function site_header($title = '', $config = array())
    <input type="text" name="pattern" value="" size="30" accesskey="s" />
    <span>in the</span>
    <select name="show">
-    <option value="quickref" selected="selected">function list</option>
+    <option value="manual"   selected="selected">online documentation</option>
     <option value="all"      >all php.net sites</option>
     <option value="local"    >this mirror only</option>
-    <option value="manual"   >online documentation</option>
+    <option value="quickref" >function list</option>
     <option value="bugdb"    >bug database</option>
     <option value="news_archive">Site News Archive</option>
     <option value="changelogs">All Changelogs</option>
