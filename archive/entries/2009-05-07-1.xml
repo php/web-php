@@ -3,11 +3,26 @@
   <title>PHP 5.3.0RC2 Release Announcement</title>
   <id>http://www.php.net/archive/2009.php#id2009-05-07-1</id>
   <published>2009-05-07T20:20:39+02:00</published>
-  <updated>2009-05-07T20:20:39+02:00</updated>
+  <updated>2009-05-07T20:21:03+02:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <link href="http://www.php.net/index.php#id2009-05-07-1" rel="alternate" type="text/html"/>
   <link href="http://www.php.net/archive/2009.php#id2009-05-07-1" rel="via" type="text/html"/>
   <content type="xhtml">
-    <div xmlns="http://www.w3.org/1999/xhtml">The PHP development team is proud to announce the availability of the second release candidate of PHP 5.3.0 (PHP 5.3.0RC2). This second release candidate focused on bug fixes and stability improvements and we hope to only require minimal changes ahead of the next release. Many, but not all,  of the new features are already integrated in the official documentation on php.net.Please not that we are aware of minor issues including that we still want to fix (though most of them have also affected PHP 5.2) and a crash bug in affecting source files with a size of exact 8k (See <a href="http://bugs.php.net/bug.php?id=48034" target="_new">Bug #48034</a>). Expect an RC3 in 2-3 weeks time, though for most users there will not be a noticeable change meaning that now  is the time to start doing the final testing of PHP 5.3.0 before it gets released with any unnecessary incompatibilities with your project.Please download and test the <a href="http://downloads.php.net/johannes/" target="new">sources for *nix</a> and <a href="http://windows.php.net/qa/" target="_new">Windows binaries</a> and report any issues found.</div>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      The PHP development team is proud to announce the second release candidate of PHP 5.3.0 (PHP 5.3.0RC2). 
+      This RC focuses on bug fixes and stability improvements, and we hope only minimal changes are required 
+      for the next candidate (RC3).
+     </p>
+     <p>
+      Expect an RC3 in 2-3 weeks, although there will not be major changes so now is a good
+      time to start the final testing of PHP 5.3.0 before it gets released, in order to find
+      possible incompatibilities with your project.
+     </p>
+     <p>
+      Please download and test this release candidate, and report any issues found.
+      Downloads and further information is available at <a href="http://qa.php.net/">qa.php.net</a>.
+      See also the work in progress <a href="http://wiki.php.net/doc/scratchpad/upgrade/53">5.3 upgrade guide</a>.
+     </p>
   </content>
 </entry>
