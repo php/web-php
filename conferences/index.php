@@ -11,7 +11,7 @@ $layout_workaround = <<< EOT
     <div id="contact">
         <p>
             Are you planning a PHP related conference and want it listed here?
-            <a href="/contact">Let us know.</a>
+            <a href="mailto:php-webmaster@lists.php.net">Let us know.</a>
         </p>
     </div>
     $RSIDEBAR_DATA
