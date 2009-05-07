@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon 2009: Call for Papers</title>
+  <id>http://www.php.net/archive/2009.php#id2009-05-07-2</id>
+  <published>2009-05-07T21:06:20+02:00</published>
+  <updated>2009-05-07T21:06:20+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-05-31</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-05-07-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://zendcon.com/" title="ZendCon 2009">ZendCon09-logo.gif</default:newsImage>
+  <link href="http://zendcon.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+   <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+     The Call for Papers for ZendCon 2009 has gone out.  This year's
+     conference will be held <abbr title="2009-10-19" class="dtstart">October 19th</abbr>
+     - <abbr title="2009-10-23" class="dtend">22nd</abbr> at the
+     <span class="location">San Jose Convention Center.</span>
+    </p>
+    <p>
+     This year the conference has been expanded to focus on the whole
+     development team and lifecycle of your projects. Therefore not only will
+     there be sessions on 'writing PHP code', but are also emphasizing
+     production processes, frameworks, management information, and the
+     maintenance &amp; tuning of servers. Part of doing this, is to expand the
+     PHP Community to not just include the developers, but also the
+     operations people, the managers, ensure that the whole team comes away
+     from ZendCon with the knowledge to deliver better products.
+    </p>
+    <p>
+     More details on the Call for Papers, Tracks for this years conference,
+     and more can be found at: <a href="http://zendcon.com/">http://zendcon.com/</a>
+    </p>
+    <p>
+     Hurry up and submit some proposals, the CfP is only open until May 31st!
+    </p>
+   </div>
+  </content>
+</entry>
