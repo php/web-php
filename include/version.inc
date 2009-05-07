@@ -33,8 +33,8 @@ $PHP_5_MD5     = array(
                        "debugpack"     => "b52e9a152e105c7391c832fdfe0fa06f",
 );
 
-$PHP_5_RC      = '5.3.0RC1';
-$PHP_5_RC_DATE = "24 March 2009";
+$PHP_5_RC      = '5.3.0RC2';
+$PHP_5_RC_DATE = "7 May 2009";
 
 $PHP_5_WINDOWS_NOTE_MSI = "Updated 9th of April: Added the missing oci8 DLL";
 $PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br />
