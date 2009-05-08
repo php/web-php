@@ -2,8 +2,11 @@
 /* $Id$ */
 
 // Set the static content root differently on php.net
-$_SERVER['STATIC_ROOT'] = ($MYSITE == 'http://www.php.net/') ?
-                          'http://static.php.net/www.php.net' : '';
+if ($MYSITE == "http://www.php.net/") {
+    $_SERVER['STATIC_ROOT'] = 'http://static.php.net/www.php.net';
+} elseif (!isset($_SERVER['STATIC_ROOT'])) {
+    $_SERVER['STATIC_ROOT'] = "";
+}
 
 // Use class names instead of colors
 ini_set('highlight.comment', 'comment');
