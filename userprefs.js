@@ -32,7 +32,7 @@ function boldEvents()
             
             // Style every span bold which is for this country
             for (var i = 0; i < spans.length; i++) {
-                if (spans[i].className == "event_" + country) {
+                if (spans[i].className == "event_" + country + " vevent") {
                     spans[i].style.fontWeight = "bold";
                 }
             }
