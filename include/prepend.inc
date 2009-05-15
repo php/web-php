@@ -101,7 +101,7 @@ function myphpnet_urlsearch($type = FALSE)
     }
 
     // Return code or NONE
-    elseif (isset($MYPHPNET[1])) {
+    elseif (isset($MYPHPNET[1]) && !empty($MYPHPNET[1])) {
         return $MYPHPNET[1];
     } else { return MYPHPNET_URL_NONE; }
 }
