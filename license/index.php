@@ -15,6 +15,7 @@ For licensing and copyright information on the PHP project materials, please see
  <li><a href="#code-lic">PHP Codebase</a></li>
  <li><a href="#doc-lic">PHP Documentation</a></li>
  <li><a href="#web-lic">PHP Website</a></li>
+ <li><a href="#logo-lic">PHP Logo</a></li>
  <li><a href="#faq-lic">FAQ's</a></li>
  <li><a href="#other-lic">Licensing information for related projects</a></li>
 </ol>
@@ -73,6 +74,14 @@ For licensing and copyright information on the PHP project materials, please see
 
   <ul>
    <li>The Website copyright can be viewed here: <a href="/copyright.php">Website Copyright</a></li>
+  </ul>
+ </li><!-- }}} -->
+ <li><!-- {{{ logo-lic -->
+  <a name="logo-lic"></a>
+  <h2>PHP Logo</h2>
+
+  <ul>
+   <li>The Logo license terms can be viewed on the <a href="/download-logos.php">Logo and Icon Download page</a></li>
   </ul>
  </li><!-- }}} -->
  <li><!-- {{{ faq-lic -->
