@@ -353,24 +353,6 @@ function random_bgcolor($min, $max)
   </td>
  </tr>
 
- <tr>
-  <td class="logob">
-   <?php print_image("logos/zend-powered-by.gif", "Powered by Zend"); ?>
-  </td>
-  <td></td>
-  <td>
-   <ul>
-    <li>100 x 58 pixels</li>
-    <li>"Powered by Zend" logo</li>
-    <li>solid black background</li>
-    <li>
-     <a href="/images/logos/zend-powered-by.gif">GIF format</a> |
-     <a href="/images/logos/zend-powered-by.png">PNG format</a>
-    </li>
-   </ul>
-  </td>
- </tr>
-
 </table>
 </div>
 
