@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'archive/2008.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 news_archive_sidebar();
-site_header("News Archive - 2008");
+site_header("News Archive - 2008", array("generate_modified" => true));
 ?>
 
 <h1>News Archive - 2008</h1>

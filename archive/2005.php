@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'archive/2005.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 news_archive_sidebar();
-site_header("News Archive - 2005");
+site_header("News Archive - 2005", array("generate_modified" => true));
 ?>
 
 <h1>News Archive - 2005</h1>
