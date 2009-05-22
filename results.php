@@ -66,7 +66,7 @@ if ($res['ResultSet']['totalResultsAvailable'] == 0) {
 }
 
 $start_result = $s + ($s<2?0:1);
-$end_result = $s + $res['ResultSet']['totalResultsReturned'] - ($s<2?1:0);
+$end_result = $s + $res['ResultSet']['totalResultsReturned'] - ($s<2 || $res['ResultSet']['totalResultsReturned'] < 10?1:0);
 
 $results_count = ($res['ResultSet']['totalResultsAvailable'] < 100 ? $res['ResultSet']['totalResultsAvailable'] : 'more than 100');
 
