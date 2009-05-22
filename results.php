@@ -119,6 +119,11 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   if($type=='smarty') continue;
   $display_title = str_replace(array('PHP:', '&amp;'), array('', '&'), $hit['Title']);
 
+  // Fall back to the PHP logo for unknown hits
+  if (!isset($types[$type])) {
+    $type = "php";
+  }
+
   // Fix &amp;gt; double escaping
   $summary = str_replace('&amp;', '&', $hit['Summary']);
   echo <<<EOB
