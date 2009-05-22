@@ -25,7 +25,7 @@ if(isset($sites[$_REQUEST['profile']])) {
   $scope = 'all';
 }
 
-$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&site={$sites[$scope]}&language=$l&output=php";
+$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&site={$sites[$scope]}&language=$l&output=php&similar_ok=1";
 $data = @file_get_contents($request);
 list($version,$status_code,$msg) = explode(' ',$http_response_header[0], 3);
 if($status_code==200) echo $data;
