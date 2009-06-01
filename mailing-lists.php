@@ -227,6 +227,11 @@ if (isset($_POST['maillist'])) {
       'Google Summer of Code mailinglist',
       FALSE, FALSE, TRUE, "php.gsoc"
     ),
+    array (
+      'standard', 'PHP Naming Conventions',
+      'Naming Convention Standard list',
+      FALSE, FALSE, TRUE, "php.gsoc",
+    ),
   
     'Non-English language mailing lists',
     array (
