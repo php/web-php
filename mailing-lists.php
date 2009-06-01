@@ -228,9 +228,9 @@ if (isset($_POST['maillist'])) {
       FALSE, FALSE, TRUE, "php.gsoc"
     ),
     array (
-      'standard', 'PHP Naming Conventions',
+      'standards', 'PHP Naming Conventions',
       'Naming Convention Standard list',
-      FALSE, FALSE, TRUE, "php.gsoc",
+      FALSE, FALSE, TRUE, "php.standards",
     ),
   
     'Non-English language mailing lists',
