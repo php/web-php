@@ -69,7 +69,7 @@ function site_header($title = '', $config = array())
     if (!is_array($config)) { $config = array(); }
     
     // String defaults
-    $lang_input = $base = $meta = $layout_helper = '';
+    $lang_input = $canonical = $base = $meta = $layout_helper = '';
     
     // Count number of columns for layout. The number identifies
     // the layout precisely, as we have no page having a right
