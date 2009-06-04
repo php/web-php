@@ -140,7 +140,7 @@ function site_header($title = '', $config = array())
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
-        $canonical = '<link rel="canonical" href="http://php.net/' . $_SERVER['BASE_PAGE'] . ' />';
+        $canonical = '<link rel="canonical" href="http://php.net/' . $_SERVER['BASE_PAGE'] . '" />';
     }
     
     // Define layout helper in case we need it
