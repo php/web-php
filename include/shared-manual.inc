@@ -102,6 +102,9 @@ function manual_header()
 		"extra_headers" => array(
 			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
 		),
+		"headtags" => array(
+			'<meta http-equiv="Content-language" value="' . $lang . '" />',
+		),
 	));
     manual_navbar();
 }
