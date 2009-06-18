@@ -17,27 +17,25 @@
  */
 
 /* PHP 5 Release */
-$PHP_5_VERSION = "5.2.9";
-$PHP_5_DATE    = "26 February 2009";
-$PHP_5_WINDOWS_DATE = "8 April 2009";
-$PHP_5_WINDOWS_VERSION = "5.2.9-2";
+$PHP_5_VERSION = "5.2.10";
+$PHP_5_DATE    = "18 June 2009";
+$PHP_5_WINDOWS_DATE = $PHP_5_DATE;
+$PHP_5_WINDOWS_VERSION = $PHP_5_VERSION;
 
 $PHP_5_MD5     = array(
-                       "tar.bz2"       => "280d6cda7f72a4fc6de42fda21ac2db7",
-                       "tar.gz"        => "98b647561dc664adefe296106056cf11",
-                       "zip"           => "316b9c81bab08e6547a730315ea2abfd",
-                       "installer"     => "e2162faa3467aed01651df4269aa6944",
-                       "nts.zip"       => "8f85777941f7722fcbfe08e7de358f7d",
-                       "nts.installer" => "4e7a1bec2b268d3d2d28cb89f629b680",
-                       "nts.debugpack" => "4b7b695a257527f2896312f98dc30fd3",
-                       "debugpack"     => "b52e9a152e105c7391c832fdfe0fa06f",
+                       "tar.bz2"       => "15c7b5a87f57332d6fc683528e28247b",
+                       "tar.gz"        => "85753ba2909ac9fae5bca516adbda9e9",
+                       "zip"           => "95ae7ccfcd05b6c81c93aa2e9e792f9e",
+                       "installer"     => "38b65bc57f64c66ff73f6f4e2db2cbb4",
+                       "nts.zip"       => "b1c53e6f525133647e621a9c95b09e65",
+                       "nts.installer" => "e341deb2872d3f8f4589593da88bbede",
 );
 
-$PHP_5_RC      = '5.2.10RC2';
-$PHP_5_RC_DATE = "11 June 2009";
+$PHP_5_RC      = false; //'5.2.10RC2';
+$PHP_5_RC_DATE = false; //"11 June 2009";
 
 // Hack that works so 5.3.0 and 5.2.10 can have an RC party together (today)
-$RCS = array('5.2.10 RC2' => 'June 11, 2009', '5.3.0 RC4' => 'June 18, 2009');
+$RCS = array('5.3.0 RC4' => 'June 18, 2009');
 
 $PHP_5_WINDOWS_NOTE_MSI = "Updated 9th of April: Added the missing oci8 DLL";
 $PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br />

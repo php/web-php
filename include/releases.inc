@@ -2,6 +2,85 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.2.9' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_9.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.9.tar.bz2',
+          'name' => 'PHP 5.2.9 (tar.bz2)',
+          'md5' => '280d6cda7f72a4fc6de42fda21ac2db7',
+          'date' => '26 February 2009',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.9.tar.gz',
+          'name' => 'PHP 5.2.9 (tar.gz)',
+          'md5' => '98b647561dc664adefe296106056cf11',
+          'date' => '26 February 2009',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.9-2-Win32.zip',
+          'name' => 'PHP 5.2.9-2 zip package',
+          'md5' => '316b9c81bab08e6547a730315ea2abfd',
+          'date' => '8 April 2009',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL<br />
+The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.9-2-win32-installer.msi',
+          'name' => 'PHP 5.2.9-2 installer',
+          'md5' => 'e2162faa3467aed01651df4269aa6944',
+          'date' => '8 April 2009',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.9-2-Win32.zip',
+          'name' => 'PHP 5.2.9 Win32 Debug Pack',
+          'md5' => 'b52e9a152e105c7391c832fdfe0fa06f',
+          'date' => '8 April 2009',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-5.2.9-2-nts-Win32.zip',
+          'name' => 'PHP 5.2.9-2 Non-thread-safe zip package',
+          'md5' => '8f85777941f7722fcbfe08e7de358f7d',
+          'date' => '8 April 2009',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL<br />
+The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.9-2-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.9-2 Non-thread-safe installer',
+          'md5' => '4e7a1bec2b268d3d2d28cb89f629b680',
+          'date' => '8 April 2009',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.9-2-nts-Win32.zip',
+          'name' => 'PHP 5.2.9 Non-thread-safe Win32 Debug Pack',
+          'md5' => '4b7b695a257527f2896312f98dc30fd3',
+          'date' => '8 April 2009',
+        ),
+      ),
+      'date' => '26 February 2009',
+      'museum' => false,
+    ),
     '5.2.8' => 
     array (
       'announcement' => 
