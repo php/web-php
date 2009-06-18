@@ -37,7 +37,7 @@ $PHP_5_RC      = '5.2.10RC2';
 $PHP_5_RC_DATE = "11 June 2009";
 
 // Hack that works so 5.3.0 and 5.2.10 can have an RC party together (today)
-$RCS = array('5.2.10 RC2' => 'June 11, 2009', '5.3.0 RC3' => 'June 11, 2009');
+$RCS = array('5.2.10 RC2' => 'June 11, 2009', '5.3.0 RC4' => 'June 18, 2009');
 
 $PHP_5_WINDOWS_NOTE_MSI = "Updated 9th of April: Added the missing oci8 DLL";
 $PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br />
