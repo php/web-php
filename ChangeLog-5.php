@@ -35,100 +35,100 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Fixed leaks in imap when a mail_criteria is used. (Pierre)</li>
 	<li>Fixed missing erealloc() in fix for Bug #40091 in spl_autoload_register. (Greg)</li>
 
-    <li>?php bugfix(48562); ?> (Reference recursion causes segfault when used in  wddx_serialize_vars()). (Felipe)</li>
-    <li>?php bugfix(48557); ?> (Numeric string keys in Apache Hashmaps are not cast to integers). (David Zuelke)</li>
-    <li>?php bugfix(48518); ?> (curl crashes when writing into invalid file handle). (Tony)</li>
-    <li>?php bugfix(48514); ?> (cURL extension uses same resource name for simple and multi APIs). (Felipe)</li>
-    <li>?php bugfix(48469); ?> (ldap_get_entries() leaks memory on empty search results). (Patrick)</li>
-    <li>?php bugfix(48456); ?> (CPPFLAGS not restored properly in phpize.m4). (Jani, spisek at kerio dot com)</li>
-    <li>?php bugfix(48448); ?> (Compile failure under IRIX 6.5.30 building cast.c).  (Kalle)</li>
-    <li>?php bugfix(48441); ?> (ldap_search() sizelimit, timelimit and deref options  persist). (Patrick)</li>
-    <li>?php bugfix(48434); ?> (Improve memory_get_usage() accuracy). (Arnaud)</li>
-    <li>?php bugfix(48416); ?> (Force a cache limit in ereg() to stop excessive memory usage). (Scott)</li>
-    <li>?php bugfix(48409); ?> (Crash when exception is thrown while passing function  arguments). (Arnaud)</li>
-    <li>?php bugfix(48378); ?> (exif_read_data() segfaults on certain corrupted .jpeg  files). (Pierre)</li>
-    <li>?php bugfix(48359); ?> (Script hangs on snmprealwalk if OID is not increasing). (Ilia, simonov at gmail dot com)</li>
-    <li>?php bugfix(48336); ?> (ReflectionProperty::getDeclaringClass() does not work with redeclared property). (patch by Markus dot Lidel at shadowconnect dot com)</li>
-    <li>?php bugfix(48326); ?> (constant MSG_DONTWAIT not defined). (Arnaud)</li>
-    <li>?php bugfix(48313); ?> (fgetcsv() does not return null for empty rows). (Ilia)</li>
-    <li>?php bugfix(48309); ?> (stream_copy_to_stream() and fpasstru() do not update stream position of plain files). (Arnaud)</li>
-    <li>?php bugfix(48307); ?> (stream_copy_to_stream() copies 0 bytes when $source is a  socket). (Arnaud)</li>
-    <li>?php bugfix(48273); ?> (snmp*_real_walk() returns SNMP errors as values). (Ilia, lytboris at gmail dot com)</li>
-    <li>?php bugfix(48256); ?> (Crash due to double-linking of history.o). (tstarling at wikimedia dot org)</li>
-    <li>?php bugfix(48248); ?> (SIGSEGV when access to private property via &amp;__get).  (Felipe)</li>
-    <li>?php bugfix(48247); ?> (Crash on errors during startup). (Stas)</li>
-    <li>?php bugfix(48240); ?> (DBA Segmentation fault dba_nextkey). (Felipe)</li>
-    <li>?php bugfix(48224); ?> (Incorrect shuffle in array_rand). (Etienne)</li>
-    <li>?php bugfix(48221); ?> (memory leak when passing invalid xslt parameter). (Felipe)</li>
-    <li>?php bugfix(48207); ?> (CURLOPT_(FILE|WRITEHEADER options do not error out when    working with a non-writable stream). (Ilia)</li>
-    <li>?php bugfix(48206); ?> (Iterating over an invalid data structure with RecursiveIteratorIterator leads to a segfault). (Scott)</li>
-    <li>?php bugfix(48204); ?> (xmlwriter_open_uri() does not emit warnings on invalid paths). (Ilia)</li>
-    <li>?php bugfix(48203); ?> (Crash when CURLOPT_STDERR is set to regular file). (Jani)</li>
-    <li>?php bugfix(48202); ?> (Out of Memory error message when passing invalid file path) (Pierre)</li>
-    <li>?php bugfix(48156); ?> (Added support for lcov v1.7). (Ilia)</li>
-    <li>?php bugfix(48132); ?> (configure check for curl ssl support fails with --disable-rpath). (Jani)</li>
-    <li>?php bugfix(48131); ?> (Don't try to bind ipv4 addresses to ipv6 ips via bindto). (Ilia)</li>
-    <li>?php bugfix(48070); ?> (PDO_OCI: Segfault when using persistent connection). (Pierre, Matteo, jarismar dot php at gmail dot com)</li>
-    <li>?php bugfix(48058); ?> (Year formatter goes wrong with out-of-int range). (Derick)</li>
-    <li>?php bugfix(48038); ?> (odbc_execute changes variables used to form params array). (Felipe)</li>
-    <li>?php bugfix(47997); ?> (stream_copy_to_stream returns 1 on empty streams). (Arnaud)</li>
-    <li>?php bugfix(47991); ?> (SSL streams fail if error stack contains items). (Mikko)</li>
-    <li>?php bugfix(47981); ?> (error handler not called regardless). (Hannes)</li>
-    <li>?php bugfix(47969); ?> (ezmlm_hash() returns different values depend on OS). (Ilia)</li>
-    <li>?php bugfix(47946); ?> (ImageConvolution overwrites background). (Ilia)</li>
-    <li>?php bugfix(47940); ?> (memory leaks in imap_body). (Pierre, Jake Levitt)</li>
-    <li>?php bugfix(47937); ?> (system() calls sapi_flush() regardless of output buffering). (Ilia)</li>
-    <li>?php bugfix(47903); ?> (&quot;@&quot; operator does not work with string offsets). (Felipe)</li>
-    <li>?php bugfix(47893); ?> (CLI aborts on non blocking stdout). (Arnaud)</li>
-    <li>?php bugfix(47849); ?> (Non-deep import loses the namespace). (Rob)</li>
-    <li>?php bugfix(47845); ?> (PDO_Firebird omits first row from query). (Lars W)</li>
-    <li>?php bugfix(47836); ?> (array operator [] inconsistency when the array has PHP_INT_MAX index value). (Matt)</li>
-    <li>?php bugfix(47831); ?> (Compile warning for strnlen() in main/spprintf.c). (Ilia, rainer dot jung at kippdata dot de)</li>
-    <li>?php bugfix(47828); ?> (openssl_x509_parse() segfaults when a UTF-8 conversion fails). (Scott, Kees Cook, Pierre)</li>
-    <li>?php bugfix(47818); ?> (Segfault due to bound callback param). (Felipe)</li>
-    <li>?php bugfix(47801); ?> (__call() accessed via parent:: operator is provided incorrect method name). (Felipe)</li>
-    <li>?php bugfix(47769); ?> (Strange extends PDO). (Felipe)</li>
-    <li>?php bugfix(47745); ?> (FILTER_VALIDATE_INT doesn't allow minimum integer). (Dmitry)</li>
-    <li>?php bugfix(47721); ?> (Alignment issues in mbstring and sysvshm extension) (crrodriguez at opensuse dot org, Ilia)</li>
-    <li>?php bugfix(47704); ?> (PHP crashes on some &quot;bad&quot; operations with string offsets). (Dmitry)</li>
-    <li>?php bugfix(47695); ?> (build error when xmlrpc and iconv are compiled against different iconv versions). (Scott)</li>
-    <li>?php bugfix(47667); ?> (ZipArchive::OVERWRITE seems to have no effect). (Mikko, Pierre)</li>
-    <li>?php bugfix(47644); ?> (Valid integers are truncated with json_decode()). (Scott)</li>
-    <li>?php bugfix(47639); ?> (pg_copy_from() WARNING: nonstandard use of \\ in a string literal). (Ilia)</li>
-    <li>?php bugfix(47616); ?> (curl keeps crashing). (Felipe)</li>
-    <li>?php bugfix(47598); ?> (FILTER_VALIDATE_EMAIL is locale aware). (Ilia)</li>
-    <li>?php bugfix(47566); ?> (pcntl_wexitstatus() returns signed status). (patch by james at jamesreno dot com)</li>
-    <li>?php bugfix(47564); ?> (unpacking unsigned long 32bit bit endian returns wrong result). (Ilia)</li>
-    <li>?php bugfix(47487); ?> (performance degraded when reading large chunks after fix of bug #44607). (Arnaud)</li>
-    <li>?php bugfix(47468); ?> (enable cli|cgi-only extensions for embed sapi). (Jani)</li>
-    <li>?php bugfix(47435); ?> (FILTER_FLAG_NO_PRIV_RANGE does not work with ipv6 addresses in the filter extension). (Ilia)</li>
-    <li>?php bugfix(47430); ?> (Errors after writing to nodeValue parameter of an absent  previousSibling). (Rob)</li>
-    <li>?php bugfix(47365); ?> (ip2long() may allow some invalid values on certain 64bit   systems). (Ilia)</li>
-    <li>?php bugfix(47254); ?> (Wrong Reflection for extends class). (Felipe)</li>
-    <li>?php bugfix(47042); ?> (cgi sapi is incorrectly removing SCRIPT_FILENAME). (Sriram Natarajan, David Soria Parra)</li>
-    <li>?php bugfix(46882); ?> (Serialize / Unserialize misbehaviour under OS with different bit numbers). (Matt)</li>
-    <li>?php bugfix(46812); ?> (get_class_vars() does not include visible private variable looking at subclass). (Arnaud)</li>
-    <li>?php bugfix(46386); ?> (Digest authentication with SOAP module fails against MSSQL  SOAP services). (Ilia, lordelph at gmail dot com)</li>
-    <li>?php bugfix(46109); ?> (Memory leak when mysqli::init() is called multiple times). (Andrey)</li>
-    <li>?php bugfix(45997); ?> (safe_mode bypass with exec/system/passthru (windows only)). (Pierre)</li>
-    <li>?php bugfix(45877); ?> (Array key '2147483647' left as string). (Matt)</li>
-    <li>?php bugfix(45822); ?> (Near infinite-loops while parsing huge relative offsets). (Derick, Mike Sullivan)</li>
-    <li>?php bugfix(45799); ?> (imagepng() crashes on empty image). (Martin McNickle, Takeshi Abe)</li>
-    <li>?php bugfix(45622); ?> (isset($arrayObject-&gt;p) misbehaves with ArrayObject:: ARRAY_AS_PROPS set). (robin_fernandes at uk dot ibm dot com, Arnaud)</li>
-    <li>?php bugfix(45614); ?> (ArrayIterator::current(), ::key() can show 1st private prop of wrapped object). (robin_fernandes at uk dot ibm dot com, Arnaud)</li>
-    <li>?php bugfix(45540); ?> (stream_context_create creates bad http request). (Arnaud)</li>
-    <li>?php bugfix(45202); ?> (zlib.output_compression can not be set with ini_set()). (Jani)</li>
-    <li>?php bugfix(45191); ?> (error_log ignores date.timezone php.ini val when setting logging timestamps). (Derick)</li>
-    <li>?php bugfix(45092); ?> (header HTTP context option not being used when compiled using --with-curlwrappers). (Jani)</li>
-    <li>?php bugfix(44996); ?> (xmlrpc_decode() ignores time zone on iso8601.datetime). (Ilia, kawai at apache dot org) </li>
-    <li>?php bugfix(44827); ?> (define() is missing error checks for class constants). (Ilia)</li>
-    <li>?php bugfix(44214); ?> (Crash using preg_replace_callback() and global variables). (Nuno, Scott)</li>
-    <li>?php bugfix(43073); ?> (TrueType bounding box is wrong for angle&lt;&gt;0). (Martin McNickle)</li>
-    <li>?php bugfix(42663); ?> (gzinflate() try to allocate all memory with truncated data). (Arnaud)</li>
-    <li>?php bugfix(42414); ?> (some odbc_*() functions incompatible with Oracle ODBC  driver). (jhml at gmx dot net)</li>
-    <li>?php bugfix(42362); ?> (HTTP status codes 204 and 304 should not be gzipped). (Scott, Edward Z. Yang)</li>
-    <li>?php bugfix(42143); ?> (The constant NAN is reported as 0 on Windows) (Kanwaljeet Singla, Venkat Raman Don)</li>
-    <li>?php bugfix(38805); ?> (PDO truncates text from SQL Server text data type field). (Steph)</li>
+    <li><?php bugfix(48562); ?> (Reference recursion causes segfault when used in  wddx_serialize_vars()). (Felipe)</li>
+    <li><?php bugfix(48557); ?> (Numeric string keys in Apache Hashmaps are not cast to integers). (David Zuelke)</li>
+    <li><?php bugfix(48518); ?> (curl crashes when writing into invalid file handle). (Tony)</li>
+    <li><?php bugfix(48514); ?> (cURL extension uses same resource name for simple and multi APIs). (Felipe)</li>
+    <li><?php bugfix(48469); ?> (ldap_get_entries() leaks memory on empty search results). (Patrick)</li>
+    <li><?php bugfix(48456); ?> (CPPFLAGS not restored properly in phpize.m4). (Jani, spisek at kerio dot com)</li>
+    <li><?php bugfix(48448); ?> (Compile failure under IRIX 6.5.30 building cast.c).  (Kalle)</li>
+    <li><?php bugfix(48441); ?> (ldap_search() sizelimit, timelimit and deref options  persist). (Patrick)</li>
+    <li><?php bugfix(48434); ?> (Improve memory_get_usage() accuracy). (Arnaud)</li>
+    <li><?php bugfix(48416); ?> (Force a cache limit in ereg() to stop excessive memory usage). (Scott)</li>
+    <li><?php bugfix(48409); ?> (Crash when exception is thrown while passing function  arguments). (Arnaud)</li>
+    <li><?php bugfix(48378); ?> (exif_read_data() segfaults on certain corrupted .jpeg  files). (Pierre)</li>
+    <li><?php bugfix(48359); ?> (Script hangs on snmprealwalk if OID is not increasing). (Ilia, simonov at gmail dot com)</li>
+    <li><?php bugfix(48336); ?> (ReflectionProperty::getDeclaringClass() does not work with redeclared property). (patch by Markus dot Lidel at shadowconnect dot com)</li>
+    <li><?php bugfix(48326); ?> (constant MSG_DONTWAIT not defined). (Arnaud)</li>
+    <li><?php bugfix(48313); ?> (fgetcsv() does not return null for empty rows). (Ilia)</li>
+    <li><?php bugfix(48309); ?> (stream_copy_to_stream() and fpasstru() do not update stream position of plain files). (Arnaud)</li>
+    <li><?php bugfix(48307); ?> (stream_copy_to_stream() copies 0 bytes when $source is a  socket). (Arnaud)</li>
+    <li><?php bugfix(48273); ?> (snmp*_real_walk() returns SNMP errors as values). (Ilia, lytboris at gmail dot com)</li>
+    <li><?php bugfix(48256); ?> (Crash due to double-linking of history.o). (tstarling at wikimedia dot org)</li>
+    <li><?php bugfix(48248); ?> (SIGSEGV when access to private property via &amp;__get).  (Felipe)</li>
+    <li><?php bugfix(48247); ?> (Crash on errors during startup). (Stas)</li>
+    <li><?php bugfix(48240); ?> (DBA Segmentation fault dba_nextkey). (Felipe)</li>
+    <li><?php bugfix(48224); ?> (Incorrect shuffle in array_rand). (Etienne)</li>
+    <li><?php bugfix(48221); ?> (memory leak when passing invalid xslt parameter). (Felipe)</li>
+    <li><?php bugfix(48207); ?> (CURLOPT_(FILE|WRITEHEADER options do not error out when    working with a non-writable stream). (Ilia)</li>
+    <li><?php bugfix(48206); ?> (Iterating over an invalid data structure with RecursiveIteratorIterator leads to a segfault). (Scott)</li>
+    <li><?php bugfix(48204); ?> (xmlwriter_open_uri() does not emit warnings on invalid paths). (Ilia)</li>
+    <li><?php bugfix(48203); ?> (Crash when CURLOPT_STDERR is set to regular file). (Jani)</li>
+    <li><?php bugfix(48202); ?> (Out of Memory error message when passing invalid file path) (Pierre)</li>
+    <li><?php bugfix(48156); ?> (Added support for lcov v1.7). (Ilia)</li>
+    <li><?php bugfix(48132); ?> (configure check for curl ssl support fails with --disable-rpath). (Jani)</li>
+    <li><?php bugfix(48131); ?> (Don't try to bind ipv4 addresses to ipv6 ips via bindto). (Ilia)</li>
+    <li><?php bugfix(48070); ?> (PDO_OCI: Segfault when using persistent connection). (Pierre, Matteo, jarismar dot php at gmail dot com)</li>
+    <li><?php bugfix(48058); ?> (Year formatter goes wrong with out-of-int range). (Derick)</li>
+    <li><?php bugfix(48038); ?> (odbc_execute changes variables used to form params array). (Felipe)</li>
+    <li><?php bugfix(47997); ?> (stream_copy_to_stream returns 1 on empty streams). (Arnaud)</li>
+    <li><?php bugfix(47991); ?> (SSL streams fail if error stack contains items). (Mikko)</li>
+    <li><?php bugfix(47981); ?> (error handler not called regardless). (Hannes)</li>
+    <li><?php bugfix(47969); ?> (ezmlm_hash() returns different values depend on OS). (Ilia)</li>
+    <li><?php bugfix(47946); ?> (ImageConvolution overwrites background). (Ilia)</li>
+    <li><?php bugfix(47940); ?> (memory leaks in imap_body). (Pierre, Jake Levitt)</li>
+    <li><?php bugfix(47937); ?> (system() calls sapi_flush() regardless of output buffering). (Ilia)</li>
+    <li><?php bugfix(47903); ?> (&quot;@&quot; operator does not work with string offsets). (Felipe)</li>
+    <li><?php bugfix(47893); ?> (CLI aborts on non blocking stdout). (Arnaud)</li>
+    <li><?php bugfix(47849); ?> (Non-deep import loses the namespace). (Rob)</li>
+    <li><?php bugfix(47845); ?> (PDO_Firebird omits first row from query). (Lars W)</li>
+    <li><?php bugfix(47836); ?> (array operator [] inconsistency when the array has PHP_INT_MAX index value). (Matt)</li>
+    <li><?php bugfix(47831); ?> (Compile warning for strnlen() in main/spprintf.c). (Ilia, rainer dot jung at kippdata dot de)</li>
+    <li><?php bugfix(47828); ?> (openssl_x509_parse() segfaults when a UTF-8 conversion fails). (Scott, Kees Cook, Pierre)</li>
+    <li><?php bugfix(47818); ?> (Segfault due to bound callback param). (Felipe)</li>
+    <li><?php bugfix(47801); ?> (__call() accessed via parent:: operator is provided incorrect method name). (Felipe)</li>
+    <li><?php bugfix(47769); ?> (Strange extends PDO). (Felipe)</li>
+    <li><?php bugfix(47745); ?> (FILTER_VALIDATE_INT doesn't allow minimum integer). (Dmitry)</li>
+    <li><?php bugfix(47721); ?> (Alignment issues in mbstring and sysvshm extension) (crrodriguez at opensuse dot org, Ilia)</li>
+    <li><?php bugfix(47704); ?> (PHP crashes on some &quot;bad&quot; operations with string offsets). (Dmitry)</li>
+    <li><?php bugfix(47695); ?> (build error when xmlrpc and iconv are compiled against different iconv versions). (Scott)</li>
+    <li><?php bugfix(47667); ?> (ZipArchive::OVERWRITE seems to have no effect). (Mikko, Pierre)</li>
+    <li><?php bugfix(47644); ?> (Valid integers are truncated with json_decode()). (Scott)</li>
+    <li><?php bugfix(47639); ?> (pg_copy_from() WARNING: nonstandard use of \\ in a string literal). (Ilia)</li>
+    <li><?php bugfix(47616); ?> (curl keeps crashing). (Felipe)</li>
+    <li><?php bugfix(47598); ?> (FILTER_VALIDATE_EMAIL is locale aware). (Ilia)</li>
+    <li><?php bugfix(47566); ?> (pcntl_wexitstatus() returns signed status). (patch by james at jamesreno dot com)</li>
+    <li><?php bugfix(47564); ?> (unpacking unsigned long 32bit bit endian returns wrong result). (Ilia)</li>
+    <li><?php bugfix(47487); ?> (performance degraded when reading large chunks after fix of bug #44607). (Arnaud)</li>
+    <li><?php bugfix(47468); ?> (enable cli|cgi-only extensions for embed sapi). (Jani)</li>
+    <li><?php bugfix(47435); ?> (FILTER_FLAG_NO_PRIV_RANGE does not work with ipv6 addresses in the filter extension). (Ilia)</li>
+    <li><?php bugfix(47430); ?> (Errors after writing to nodeValue parameter of an absent  previousSibling). (Rob)</li>
+    <li><?php bugfix(47365); ?> (ip2long() may allow some invalid values on certain 64bit   systems). (Ilia)</li>
+    <li><?php bugfix(47254); ?> (Wrong Reflection for extends class). (Felipe)</li>
+    <li><?php bugfix(47042); ?> (cgi sapi is incorrectly removing SCRIPT_FILENAME). (Sriram Natarajan, David Soria Parra)</li>
+    <li><?php bugfix(46882); ?> (Serialize / Unserialize misbehaviour under OS with different bit numbers). (Matt)</li>
+    <li><?php bugfix(46812); ?> (get_class_vars() does not include visible private variable looking at subclass). (Arnaud)</li>
+    <li><?php bugfix(46386); ?> (Digest authentication with SOAP module fails against MSSQL  SOAP services). (Ilia, lordelph at gmail dot com)</li>
+    <li><?php bugfix(46109); ?> (Memory leak when mysqli::init() is called multiple times). (Andrey)</li>
+    <li><?php bugfix(45997); ?> (safe_mode bypass with exec/system/passthru (windows only)). (Pierre)</li>
+    <li><?php bugfix(45877); ?> (Array key '2147483647' left as string). (Matt)</li>
+    <li><?php bugfix(45822); ?> (Near infinite-loops while parsing huge relative offsets). (Derick, Mike Sullivan)</li>
+    <li><?php bugfix(45799); ?> (imagepng() crashes on empty image). (Martin McNickle, Takeshi Abe)</li>
+    <li><?php bugfix(45622); ?> (isset($arrayObject-&gt;p) misbehaves with ArrayObject:: ARRAY_AS_PROPS set). (robin_fernandes at uk dot ibm dot com, Arnaud)</li>
+    <li><?php bugfix(45614); ?> (ArrayIterator::current(), ::key() can show 1st private prop of wrapped object). (robin_fernandes at uk dot ibm dot com, Arnaud)</li>
+    <li><?php bugfix(45540); ?> (stream_context_create creates bad http request). (Arnaud)</li>
+    <li><?php bugfix(45202); ?> (zlib.output_compression can not be set with ini_set()). (Jani)</li>
+    <li><?php bugfix(45191); ?> (error_log ignores date.timezone php.ini val when setting logging timestamps). (Derick)</li>
+    <li><?php bugfix(45092); ?> (header HTTP context option not being used when compiled using --with-curlwrappers). (Jani)</li>
+    <li><?php bugfix(44996); ?> (xmlrpc_decode() ignores time zone on iso8601.datetime). (Ilia, kawai at apache dot org) </li>
+    <li><?php bugfix(44827); ?> (define() is missing error checks for class constants). (Ilia)</li>
+    <li><?php bugfix(44214); ?> (Crash using preg_replace_callback() and global variables). (Nuno, Scott)</li>
+    <li><?php bugfix(43073); ?> (TrueType bounding box is wrong for angle&lt;&gt;0). (Martin McNickle)</li>
+    <li><?php bugfix(42663); ?> (gzinflate() try to allocate all memory with truncated data). (Arnaud)</li>
+    <li><?php bugfix(42414); ?> (some odbc_*() functions incompatible with Oracle ODBC  driver). (jhml at gmx dot net)</li>
+    <li><?php bugfix(42362); ?> (HTTP status codes 204 and 304 should not be gzipped). (Scott, Edward Z. Yang)</li>
+    <li><?php bugfix(42143); ?> (The constant NAN is reported as 0 on Windows) (Kanwaljeet Singla, Venkat Raman Don)</li>
+    <li><?php bugfix(38805); ?> (PDO truncates text from SQL Server text data type field). (Steph)</li>
 </ul>
 <hr />
 
