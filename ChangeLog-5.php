@@ -322,14 +322,14 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(45722); ?> (mb_check_encoding() crashes). (Moriyoshi)</li>
 <li><?php bugfix(45705); ?> (rfc822_parse_adrlist() modifies passed address parameter). (Jani)</li>
 <li><?php bugfix(45691); ?> (Some per-dir or runtime settings may leak into other requests). (Moriyoshi)</li>
-<li><?php bugfix(45581); ?> (htmlspecialchars() double encoding &#x hex items). (Arnaud)</li>
+<li><?php bugfix(45581); ?> (htmlspecialchars() double encoding &amp;#x hex items). (Arnaud)</li>
 <li><?php bugfix(45580); ?> (levenshtein() crashes with invalid argument). (Ilia)</li>
 <li><?php bugfix(45575); ?> (Segfault with invalid non-string as event handler callback). (Christian Seiler)</li>
 <li><?php bugfix(45568); ?> (ISAPI doesn't properly clear auth_digest in header). (Patch by: navara at emclient dot com)</li>
 <li><?php bugfix(45556); ?> (Return value from callback isn't freed). (Felipe)</li>
 <li><?php bugfix(45555); ?> (Segfault with invalid non-string as register_introspection_callback). (Christian Seiler)</li>
 <li><?php bugfix(45553); ?> (Using XPath to return values for attributes with a namespace does not work). (Rob)</li>
-<li><?php bugfix(45529); ?> (new DateTimeZone() and date_create()->getTimezone() behave different). (Derick)</li>
+<li><?php bugfix(45529); ?> (new DateTimeZone() and date_create()-&gt;getTimezone() behave different). (Derick)</li>
 <li><?php bugfix(45522); ?> (FCGI_GET_VALUES request does not return supplied values). (Arnaud)</li>
 <li><?php bugfix(45486); ?> (mb_send_mail(); header 'Content-Type: text/plain; charset=' parsing incorrect). (Felipe)</li>
 <li><?php bugfix(45485); ?> (strip_tags and &lt;?XML tag). (Felipe)</li>
@@ -369,7 +369,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(44617); ?> (wrong HTML entity output when substitute_character=entity). (Moriyoshi)</li>
 <li><?php bugfix(44607); ?> (stream_get_line unable to correctly identify the &quot;ending&quot; in the stream content). (Arnaud)</li>
 <li><?php bugfix(44425); ?> (Extending PDO/MySQL class with a __call() function doesn'twork). (Johannes)</li>
-<li><?php bugfix(44327); ?> (PDORow::queryString property & numeric offsets / Crash). (Felipe)</li>
+<li><?php bugfix(44327); ?> (PDORow::queryString property &amp; numeric offsets / Crash). (Felipe)</li>
 <li>Fixed bugs <?php bugl(44251); ?>, <?php bugl(41125); ?> (PDO + quote() + prepare() can result in segfault). (tsteiner at nerdclub dot net)</li>
 <li><?php bugfix(44246); ?> (closedir() accepts a file resource opened by fopen()). (Dmitry, Tony)</li>
 <li><?php bugfix(44182); ?> (extract($a, EXTR_REFS) can fail to split copy-on-write references). (robin_fernandes at uk dot ibm dot com)</li>
@@ -380,7 +380,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(43941); ?> (json_encode silently cuts non-UTF8 strings). (Stas)</li>
 <li><?php bugfix(43925); ?> (Incorrect argument counter in prepared statements with pgsql). (Felipe)</li>
 <li><?php bugfix(43731); ?> (socket_getpeername: cannot use on stdin with inetd). (Arnaud)</li>
-<li><?php bugfix(43723); ?> (SOAP not sent properly from client for <choice>). (Dmitry)</li>
+<li><?php bugfix(43723); ?> (SOAP not sent properly from client for &lt;choice&gt;). (Dmitry)</li>
 <li><?php bugfix(43668); ?> (Added odbc.default_cursortype to control the ODBCcursor model). (Patrick)</li>
 <li><?php bugfix(43666); ?> (Fixed code to use ODBC 3.52 datatypes for 64bit systems). (Patrick)</li>
 <li><?php bugfix(43540); ?> (rfc1867 handler newlength problem). (Arnaud)</li>
@@ -404,8 +404,6 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(14962); ?> (PECL) (::extractTo 2nd argument is not really optional). (Mark van Der Velden)</li>
 <li><?php bugfix(14032); ?> (Mail() always returns false but mail is sent). (Mikko)</li>
 
-		</ul>
-	</li>
 </ul>
 
 <hr />
@@ -553,7 +551,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(41562); ?> (SimpleXML memory issue). (Rob)</li>
 <li><?php bugfix(40013); ?> (php_uname() does not return nodename on Netware (Guenter Knauf)</li>
 <li><?php bugfix(38468); ?> (Unexpected creation of cycle). (Dmitry)</li>
-<li><?php bugfix(32979); ?> (OpenSSL stream->fd casts broken in 64-bit build) (stotty at tvnet dot hu)</li>
+<li><?php bugfix(32979); ?> (OpenSSL stream-&gt;fd casts broken in 64-bit build) (stotty at tvnet dot hu)</li>
 
 </ul>
 
@@ -648,17 +646,17 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <ul>
 <li>Security Fixes
 	<ul>
-		<li>Fixed "Floating point exception" inside wordwrap(). (Mattias Bengtsson, Ilia)
-		<li>Fixed several integer overflows in ImageCreate(), ImageCreateTrueColor(), ImageCopyResampled() and ImageFilledPolygon() reported by Mattias Bengtsson. (Tony)
-		<li>Fixed size calculation in chunk_split(). (Stas)
-		<li>Fixed integer overflow in str[c]spn(). (Stas)
-		<li>Fixed money_format() not to accept multiple %i or %n tokens. (Stas, Ilia)
-		<li>Fixed zend_alter_ini_entry() memory_limit interruption vulnerability. (Ilia)
-		<li>Fixed INFILE LOCAL option handling with MySQL extensions not to be allowed when open_basedir or safe_mode is active. (Stas)
-		<li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378) (Stas, Maksymilian Arciemowicz)
-		<li>Fixed possible invalid read in glob() win32 implementation (CVE-2007-3806).  (Tony)
-		<li>Improved fix for MOPB-03-2007. (Ilia)
-		<li>Corrected fix for CVE-2007-2872. (Ilia)
+		<li>Fixed "Floating point exception" inside wordwrap(). (Mattias Bengtsson, Ilia)</li>
+		<li>Fixed several integer overflows in ImageCreate(), ImageCreateTrueColor(), ImageCopyResampled() and ImageFilledPolygon() reported by Mattias Bengtsson. (Tony)</li>
+		<li>Fixed size calculation in chunk_split(). (Stas)</li>
+		<li>Fixed integer overflow in str[c]spn(). (Stas)</li>
+		<li>Fixed money_format() not to accept multiple %i or %n tokens. (Stas, Ilia)</li>
+		<li>Fixed zend_alter_ini_entry() memory_limit interruption vulnerability. (Ilia)</li>
+		<li>Fixed INFILE LOCAL option handling with MySQL extensions not to be allowed when open_basedir or safe_mode is active. (Stas)</li>
+		<li>Fixed session.save_path and error_log values to be checked against open_basedir and safe_mode (CVE-2007-3378) (Stas, Maksymilian Arciemowicz)</li>
+		<li>Fixed possible invalid read in glob() win32 implementation (CVE-2007-3806). (Tony)</li>
+		<li>Improved fix for MOPB-03-2007. (Ilia)</li>
+		<li>Corrected fix for CVE-2007-2872. (Ilia)</li>
 	</ul>
 </li>
 
@@ -683,7 +681,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added missing open_basedir checks to CGI. (anight at eyelinkmedia dot com, Tony)</li>
 <li>Added missing format validator to unpack() function. (Ilia)</li>
 <li>Added missing error check inside bcpowmod(). (Ilia)</li>
-<li>Added CURLOPT_PRIVATE & CURLINFO_PRIVATE constants.  (Andrey A. Belashkov, Tony)</li>
+<li>Added CURLOPT_PRIVATE &amp; CURLINFO_PRIVATE constants.  (Andrey A. Belashkov, Tony)</li>
 <li>Added missing MSG_EOR and MSG_EOF constants to sockets extension. (Jani)</li>
 <li>Added PCRE_VERSION constant. (Tony)</li>
 <li>Added ReflectionExtension::info() function to print the phpinfo() block for an extension. (Johannes)</li>
@@ -808,7 +806,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed bugs <?php bugl(36796); ?>, <?php bugl(36918); ?>, <?php bugl(41371); ?> (stream_set_blocking() does not work). (Jani)</li>
 <li><?php bugfix(35981); ?> (pdo-pgsql should not use pkg-config when not present). (Jani)</li>
 <li><?php bugfix(31892); ?> (PHP_SELF incorrect without cgi.fix_pathinfo, but turning on screws up PATH_INFO). (Dmitry)</li>
-<li><?php bugfix(21197); ?> (socket_read() outputs error with PHP_NORMAL_READ). (Nuno, Jani)
+<li><?php bugfix(21197); ?> (socket_read() outputs error with PHP_NORMAL_READ). (Nuno, Jani)</li>
 
 </ul>
 
@@ -830,12 +828,12 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 </li>
 
 <li>Changed CGI install target to php-cgi and 'make install' to install CLI when CGI is selected. (Jani)</li>
-<li>Changed JSON maximum nesting depth from 20 to 128. (Rasmus)
+<li>Changed JSON maximum nesting depth from 20 to 128. (Rasmus)</li>
 
 <li>Improved compilation of heredocs and interpolated strings. (Matt, Dmitry)</li>
 <li>Optimized out a couple of per-request syscalls. (Rasmus)</li>
 <li>Optimized digest generation in md5() and sha1() functions. (Ilia)</li>
-<li>Upgraded bundled SQLite 3 to version 3.3.17. (Ilia)
+<li>Upgraded bundled SQLite 3 to version 3.3.17. (Ilia)</li>
 
 <li>Added "max_input_nesting_level" php.ini option to limit nesting level of input variables. Fix for MOPB-03-2007. (Stas)</li>
 <li>Added a 4th parameter flag to htmlspecialchars() and htmlentities() that makes the function not encode existing html entities. (Ilia)</li>
@@ -843,7 +841,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added CURLOPT_TIMEOUT_MS and CURLOPT_CONNECTTIMEOUT_MS cURL constants. (Sara)</li>
 <li>Added --ini switch to CLI that prints out configuration file names. (Marcus)</li>
 
-<li>Implemented FR <?php bugfix(41416); ?> (getColumnMeta() should also return table name). (Tony)
+<li>Implemented FR <?php bugfix(41416); ?> (getColumnMeta() should also return table name). (Tony)</li>
 
 <li>Fixed filetype() and linkinfo() processing of symlinks on ZTS systems. (Oliver Block, Tony, Dmitry)</li>
 <li>Fixed SOAP extension's handler() to work even when "always_populate_raw_post_data" is off. (Ilia)</li>
@@ -883,7 +881,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(41134); ?> (zend_ts_hash_clean not thread-safe).  (marco dot cova at gmail dot com, Tony)</li>
 <li><?php bugfix(41097); ?> (ext/soap returning associative array as indexed without using WSDL). (Dmitry)</li>
 <li><?php bugfix(41004); ?> (minOccurs="0" and null class member variable). (Dmitry)</li>
-<li><?php bugfix(39542); ?> (Behavior of require/include different to < 5.2.0). (Dmitry)</li>
+<li><?php bugfix(39542); ?> (Behavior of require/include different to &lt; 5.2.0). (Dmitry)</li>
 
 
 </ul>
@@ -911,7 +909,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Fixed a remotely trigger-able buffer overflow inside make_http_soap_request(). (Ilia)</li>
 	<li>Fixed a buffer overflow inside user_filter_factory_create(). (Ilia)</li>
 	<li>Fixed a remotely trigger-able buffer overflow inside bundled libxmlrpc library. (Stas)</li>
-	</ul>
+  </ul>
 </li>
 
 <li>Improved bundled GD
@@ -920,34 +918,35 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
   <li>Added imagegrabwindow and imagegrabscreen, capture a screen or a window using its handle (Pierre)</li>
   <li>colors allocated henceforth from the resulting image overwrite the palette colors (Rob Leslie)</li>
   <li>Improved thread safety of the gif support (Roman Nemecek, Nuno, Pierre)
-  	<ul>
-	<li>Use the dimension of the GIF frame to create the destination image (Pierre)</li>
-	<li>Load only once the local color map from a GIF data (Pierre)</li>
-	</ul>
+    <ul>
+      <li>Use the dimension of the GIF frame to create the destination image (Pierre)</li>
+      <li>Load only once the local color map from a GIF data (Pierre)</li>
+    </ul>
   </li>
-  <li>Improved thread safety of the freetype cache (Scott MacVicar, Nuno, Pierre)
-  	<ul>
-	<li>imagearc huge CPU usage with large angles, libgd bug #74 (Pierre)</li>
-	</ul>
   </ul>
-  </li>
+</li>
+<li>Improved thread safety of the freetype cache (Scott MacVicar, Nuno, Pierre)
+  <ul>
+    <li>imagearc huge CPU usage with large angles, libgd bug #74 (Pierre)</li>
+  </ul>
+</li>
 <li>Improved FastCGI SAPI to support external pipe and socket servers on win32. (Dmitry)</li>
 <li>Improved Zend Memory Manager
   <ul>
-  <li>guarantee of reasonable time for worst cases of best-fit free block searching algorithm. (Dmitry)</li>
-  <li>better cache usage and less fragmentation on erealloc() (Tony, Dmitry)</li>
+    <li>guarantee of reasonable time for worst cases of best-fit free block searching algorithm. (Dmitry)</li>
+    <li>better cache usage and less fragmentation on erealloc() (Tony, Dmitry)</li>
   </ul>
 </li>
 <li>Improved SPL (Marcus)
   <ul>
-  <li>Added SplFileInfo::getBasename(), DirectoryIterator::getBasename().</li>
-  <li>Added SplFileInfo::getLinkTarget(), SplFileInfo::getRealPath().</li>
-  <li>Made RecursiveFilterIterator::accept() abstract as stated in documentation.</li>
+    <li>Added SplFileInfo::getBasename(), DirectoryIterator::getBasename().</li>
+    <li>Added SplFileInfo::getLinkTarget(), SplFileInfo::getRealPath().</li>
+    <li>Made RecursiveFilterIterator::accept() abstract as stated in documentation.</li>
   </ul>
 </li>
 <li>Improved SOAP
   <ul>
-  <li>Added ability to encode arrays with &quot;SOAP-ENC:Array&quot; type instead of WSDL type. To activate the ability use &quot;feature&quot;=&gt;SOAP_USE_XSI_ARRAY_TYPE option in SoapClient/SoapServer constructors. (Rob, Dmitry)</li>
+    <li>Added ability to encode arrays with &quot;SOAP-ENC:Array&quot; type instead of WSDL type. To activate the ability use &quot;feature&quot;=&gt;SOAP_USE_XSI_ARRAY_TYPE option in SoapClient/SoapServer constructors. (Rob, Dmitry)</li>
   </ul>
 </li>
 <li>Added GMP_VERSION constant. (Tony)</li>
