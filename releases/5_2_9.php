@@ -38,7 +38,7 @@ All users of PHP are encouraged to upgrade to this release.
 	<li>Fixed bug #47165 (Possible memory corruption when passing return value by reference). (Dmitry)</li>
 	<li>Fixed bug #47282 (FILTER_VALIDATE_EMAIL is marking valid email addresses as invalid). (Ilia)</li>
 	<li>Fixed bug #47422 (modulus operator returns incorrect results on 64 bit linux). (Matt)</li>
-	<li>Over 50 bug fixes.</li></li>
+	<li>Over 50 bug fixes.</li>
 </ul>
 
 <p>
