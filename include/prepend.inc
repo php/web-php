@@ -63,7 +63,7 @@ function myphpnet_load()
 
     // Empty the preferences array
     $MYPHPNET = array(FALSE, FALSE, "NONE", 0);
-    
+
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
         $MYPHPNET = explode(",", $_COOKIE['MYPHPNET']);
@@ -142,12 +142,12 @@ function myphpnet_hidesuggest($hide = FALSE)
 function myphpnet_save()
 {
     global $MYPHPNET;
-    
+
     // Fill in values not specified
     for ($i = 0; $i <= 3; $i++) {
         if (!isset($MYPHPNET[$i])) { $MYPHPNET[$i] = FALSE; }
     }
-    
+
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
 }
