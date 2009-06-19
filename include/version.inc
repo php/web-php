@@ -29,6 +29,8 @@ $PHP_5_MD5     = array(
                        "installer"     => "38b65bc57f64c66ff73f6f4e2db2cbb4",
                        "nts.zip"       => "b1c53e6f525133647e621a9c95b09e65",
                        "nts.installer" => "e341deb2872d3f8f4589593da88bbede",
+                       "debugpack"     => "f6bdea0e1f71ca46f78e78c86e866062",
+                       "nts.debugpack" => "760a141c861a789f928b91c655c9d586",
 );
 
 $PHP_5_RC      = false; //'5.2.10RC2';
