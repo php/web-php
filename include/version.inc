@@ -37,8 +37,8 @@ $PHP_5_RC_DATE = false; //"11 June 2009";
 // Hack that works so 5.3.0 and 5.2.10 can have an RC party together (today)
 $RCS = array('5.3.0 RC4' => 'June 18, 2009');
 
-$PHP_5_WINDOWS_NOTE_MSI = "Updated 9th of April: Added the missing oci8 DLL";
-$PHP_5_WINDOWS_NOTE_ZIP = "Updated 9th of April: Added the missing oci8 DLL<br />
+$PHP_5_WINDOWS_NOTE_MSI = "";
+$PHP_5_WINDOWS_NOTE_ZIP = "
 The PECL package will <em>not</em> be released for
 this version. The 5.2.6 PECL package does however work with this release";
 
