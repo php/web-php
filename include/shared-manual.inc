@@ -325,7 +325,7 @@ function manual_notes_load($id)
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
             list($id, $sect, $rate, $ts, $user, $note) = explode("|", $line);
-            $notes[] = array(
+            $notes[$id] = array(
                 "id"    => $id,
                 "sect"  => $sect,
                 "rate"  => $rate,
