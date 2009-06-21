@@ -134,14 +134,14 @@ ce($dom, "link", null, array("href" => $via, "rel"  => "via", "type" => "text/ht
 $content = ce($dom, "content", null, array(), $item);
 
 fwrite(STDOUT, "And at last; paste/write your news item here.\nTo end it, hit <enter>.<enter>\n");
-$news = "";
+$news = "\n";
 while(($line = rtrim(fgets(STDIN))) != ".") {
-	$news .= $line;
+	$news .= "     $line\n";
 }
 
 $tdoc = new DOMDocument("1.0", "utf-8");
 $tdoc->formatOutput = true;
-if ($tdoc->loadXML('<div>'.$news.'</div>')) {
+if ($tdoc->loadXML('<div>'.$news.'    </div>')) {
 	$content->setAttribute("type", "xhtml");
 	$div = $content->appendChild($dom->createElement("div"));
 	$div->setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
