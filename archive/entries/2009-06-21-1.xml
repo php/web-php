@@ -3,9 +3,10 @@
   <title>PHP'n Rio conference</title>
   <id>http://www.php.net/archive/2009.php#id2009-06-21-1</id>
   <published>2009-06-21T10:45:52-07:00</published>
-  <updated>2009-06-21T10:45:52-07:00</updated>
+  <updated>2009-06-21T23:27:05+02:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-07-03</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phprio.org/phpnrio09" title="PHP Rio">phpnrio09.png</default:newsImage>
   <link href="http://www.php.net/conferences/index.php#id2009-06-21-1" rel="alternate" type="text/html"/>
   <link href="http://www.php.net/archive/2009.php#id2009-06-21-1" rel="via" type="text/html"/>
   <content type="xhtml">
