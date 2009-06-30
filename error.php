@@ -401,6 +401,7 @@ $external_redirects = array(
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
     //"blog"        => "/manual/$LANG/build.log.gz",
     "functions.js.txt" => "http://cvs.php.net/cvs.php/phpdoc/scripts/quickref",
+    "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
 );
 
 // ============================================================================
