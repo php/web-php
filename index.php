@@ -149,19 +149,18 @@ if (is_official_mirror()) {
  *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
  */
 $PHP_5_STABLE = array();
-$PHP_5_RC     = "";
+$PHP_5_RC     = array();
 $rel          = $rc           = "";
 
+$SHOW_COUNT = 2;
+for ($i=1; $i<=$SHOW_COUNT; ++$i) {
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
 
-$rel = <<< EOT
-  <div id="releaseBox">
-   <h4>Stable Releases</h4>
-   <ol id="releases">
-    <li class="php5"><a href="/downloads.php#v5">Current PHP 5 Stable: <span class="release">$PHP_5_STABLE</span></a></li>
-   </ol>
-  </div>\n
+$minor = round($PHP_5_STABLE, 1);
+$rel .= <<< EOT
+    <li class="php5"><a href="/downloads.php#v5">Current PHP $minor Stable: <span class="release">$PHP_5_STABLE</span></a></li>
 EOT;
+}
 
 /* Do we have any release candidates to brag about? */
 if (count($RCS) > 0) {
@@ -169,6 +168,15 @@ if (count($RCS) > 0) {
         $rc .= '    <li class="php5"><a href="http://qa.php.net/"><span class="release">' . "$r ($d)</span></a></li>\n";
 	}
 }
+
+$rel = <<< EOT
+  <div id="releaseBox">
+   <h4>Stable Releases</h4>
+   <ol id="releases">
+    $rel
+   </ol>
+  </div>\n
+EOT;
 
 if (!empty($rc)) {
 	$rel .= <<< EOT

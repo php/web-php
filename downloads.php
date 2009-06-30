@@ -80,9 +80,14 @@ site_header("Downloads",
     )
 );
 ?>
-
 <a name="v5"></a>
-<h1>PHP <?php list($v, $a) = each($RELEASES[5]); echo $v ?></h1>
+<?php
+$SHOW_COUNT = 2;
+for ($i=1; $i<=$SHOW_COUNT; ++$i) {
+list($v, $a) = each($RELEASES[5]); 
+
+?>
+<h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?></h1>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -109,16 +114,24 @@ if(isset($a["windows"])) {
         echo " </li>\n";
     }
 } else {
-    echo "<li>The Windows binaries and installer will follow shortly.</li>\n";
+    echo "<li>For the Windows binaries and installer, see <a href='http://windows.php.net/download/'>http://windows.php.net/download/</a>.</li>\n";
 }
 ?>
 </ul>
+<?php
+if ($i < $SHOW_COUNT) {
+  echo "<hr />\n";
+}
+} // for
+?>
 
 <p>
- We have a <a href="/manual/en/migration5.oop.php">PHP 5 / Zend Engine 2 page</a> explaining the
+ We have a <a href="/manual/en/migration5.oop.php">PHP 5 page</a> explaining the
  language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
  ChangeLog</a> details all the other changes.
 </p>
 
 
-<?php site_footer(); ?>
+<?php
+site_footer();
+
