@@ -583,7 +583,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li><?php bugfix(47021); ?> (SoapClient stumbles over WSDL delivered with
   "Transfer-Encoding: chunked"). (Dmitry)</li>
 	<li><?php bugfix(46994); ?> (OCI8: CLOB size does not update when using CLOB IN OUT param
-  in stored procedure) (Chris Jones/Oracle Corp.)
+  in stored procedure) (Chris Jones/Oracle Corp.)</li>
 	<li><?php bugfix(46979); ?> (use with non-compound name *has* effect). (Dmitry)</li>
 	<li><?php bugfix(46957); ?> (The tokenizer returns deprecated values). (Felipe)</li>
 	<li><?php bugfix(46944); ?> (UTF-8 characters outside the BMP aren't encoded correctly).
@@ -645,11 +645,11 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
   multiple calls). (Ilia)</li>
 	<li><?php bugfix(46108); ?> (DateTime - Memory leak when unserializing). (Felipe)</li>
 	<li><?php bugfix(46106); ?> (Memory leaks when using global statement). (Dmitry)</li>
-	<li><?php bugfix(46099); ?> (Xsltprocessor::setProfiling - memory leak). (Felipe, Rob).
+	<li><?php bugfix(46099); ?> (Xsltprocessor::setProfiling - memory leak). (Felipe, Rob).</li>
 	<li><?php bugfix(46087); ?> (DOMXPath - segfault on destruction of a cloned object).
   (Ilia)</li>
 	<li><?php bugfix(46048); ?> (SimpleXML top-level @attributes not part of iterator).
-  (David C.)
+  (David C.)</li>
 	<li><?php bugfix(46044); ?> (Mysqli - wrong error message). (Johannes)</li>
 	<li><?php bugfix(46042); ?> (memory leaks with reflection of mb_convert_encoding()).
   (Ilia)</li>
