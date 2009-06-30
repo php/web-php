@@ -150,3 +150,5 @@ $RELEASES = array(
     ),
 );
 
+$PHP_5_VERSION = $PHP_5_3_VERSION; // Some scripts require this set
+
