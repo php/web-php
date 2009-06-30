@@ -14,8 +14,8 @@ header("Content-type: text/plain; charset=utf-8");
 $mirror_stats = (int) (isset($_SERVER['MIRROR_STATS']) && $_SERVER['MIRROR_STATS'] == '1');
 
 // MD5 check last release file (identifies rsync setup problems)
-$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_VERSION]["source"][0]["filename"];
-$md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_MD5["tar.bz2"]);
+$filename = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $RELEASES[5][$PHP_5_3_VERSION]["source"][0]["filename"];
+$md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_3_MD5["tar.bz2"]);
 
 // Does this mirror have sqlite?
 // Gets all available sqlite versions for possible future sqlite wrapper
