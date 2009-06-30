@@ -3,7 +3,7 @@
   <title>PHP 5.3.0 Released!</title>
   <id>http://www.php.net/archive/2009.php#id2009-06-30-1</id>
   <published>2009-06-30T11:47:17+02:00</published>
-  <updated>2009-06-30T11:47:17+02:00</updated>
+  <updated>2009-06-30T13:03:02+02:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2009-06-30-1" rel="alternate" type="text/html"/>
@@ -11,9 +11,10 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
-     The PHP development team is proud to announce the immediate release of PHP
-     5.3.0. This release is a major improvement in the 5.X series, which includes a
-     large number of new features and bug fixes.
+      The PHP development team is proud to announce the immediate release of PHP
+      <a href="http://php.net/downloads.php#v5.3.0">5.3.0</a>.
+      This release is a major improvement in the 5.X series, which includes a
+      large number of new features and bug fixes.
      </p>
 
      <p>
@@ -29,14 +30,19 @@
      </p>
 
      <p>
-     For users upgrading from PHP 5.2 there is a migration guide
-     available <a href="http://php.net/migration53">here</a>, detailing
-     the changes between those releases and PHP 5.3.0.
+      For users upgrading from PHP 5.2 there is a
+      <a href="http://php.net/migration53">migration guide</a>
+      available here, detailing the changes between those
+      releases and <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a>.
      </p>
 
      <p>
-      For more details and download links for PHP 5.3.0, see the
-      <a href="http://php.net/downloads.php#v5.3.0">downloads page</a>.
+      Further details about the
+      <a href="http://php.net/downloads.php#v5.3.0">PHP 5.3.0</a> release
+      can be found in the
+      <a href="http://php.net/releases/5_3_0.php">release announcement</a>,
+      and the full list of changes are available in the
+      <a href="http://php.net/ChangeLog-5.php.php">ChangeLog</a>.
      </p>
 
     </div>
