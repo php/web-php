@@ -5,6 +5,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 5 ChangeLog");
 function bugfix($number) { echo "Fixed bug "; bugl($number); }
 function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
+function peclbugfix($number) { echo "Fixed PECL bug "; bugl($number); }
+function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?id=$number\">#$number</a>"; }
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
@@ -248,13 +250,13 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 		<li>Fixed define of SQLT_BDOUBLE and SQLT_BFLOAT constants with Oracle
     10g ORACLE_HOME builds.</li>
 		<li>Changed default value of oci8.default_prefetch from 10 to 100.</li>
-		<li>Fixed PECL Bug #16035 (OCI8: oci_connect without ORACLE_HOME defined causes
+		<li><?php peclbugfix(16035); ?> (OCI8: oci_connect without ORACLE_HOME defined causes
     segfault) (Chris Jones/Oracle Corp.)</li>
-		<li>Fixed PECL Bug #15988 (OCI8: sqlnet.ora isn't read with older Oracle
+		<li><?php peclbugfix(15988); ?> (OCI8: sqlnet.ora isn't read with older Oracle
     libraries) (Chris Jones/Oracle Corp.)</li>
-		<li>Fixed PECL Bug #14268 (Allow "pecl install oci8" command to "autodetect" an
+		<li><?php peclbugfix(14268); ?> (Allow "pecl install oci8" command to "autodetect" an
     Instant Client RPM install) (Chris Jones/Oracle Corp.)</li>
-		<li>Fixed PECL bug #12431 (OCI8 ping functionality is broken).</li>
+		<li><?php peclbugfix(12431); ?> (OCI8 ping functionality is broken).</li>
 		<li>Allow building (e.g from PECL) the PHP 5.3-based OCI8 code with
     PHP 4.3.9 onwards.</li>
 		<li>Provide separate extensions for Oracle 11g and 10g on Windows.
@@ -412,7 +414,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Added gmp_testbit() function. (Stas)</li>
 	<li>Added icon format support to getimagesize(). (Scott)</li>
 	<li>Added LDAP_OPT_NETWORK_TIMEOUT option for ldap_set_option() to allow
-  setting network timeout (FR #42837). (Jani)</li>
+  setting network timeout (FR <?php bugl(42837); ?>). (Jani)</li>
 	<li>Added optional escape character parameter to fgetcsv(). (David Soria Parra)</li>
 	<li>Added an optional parameter to strstr() and stristr() for retrieval of either
   the part of haystack before or after first occurrence of needle.
@@ -466,7 +468,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Added quoted_printable_encode() function. (Tony)</li>
 	<li>Added stream_context_set_default() function. (Davey Shafik)</li>
 	<li>Added optional "is_xhtml" parameter to nl2br() which makes the function
-  output &lt;br&gt; when false and &lt;br /&gt; when true (FR #34381). (Kalle)</li>
+  output &lt;br&gt; when false and &lt;br /&gt; when true (FR <?php bugl(34381); ?>). (Kalle)</li>
 	<li>Added PHP_MAXPATHLEN constant (maximum length of a path). (Pierre)</li>
 	<li>Added support for SSH via libssh2 in cURL. (Pierre)</li>
 	<li>Added support for gray levels PNG image with alpha in GD extension. (Pierre)</li>
@@ -484,10 +486,10 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Added pixelation support in imagefilter(). (Takeshi Abe, Kalle)</li>
 	<li>Added SplObjectStorage::addAll/removeAll. (Etienne)</li>
 
-	<li>Implemented FR #41712 (curl progress callback: CURLOPT_PROGRESSFUNCTION).
+	<li>Implemented FR <?php bugl(41712); ?> (curl progress callback: CURLOPT_PROGRESSFUNCTION).
   (sdteffen[at]gmail[dot].com, Pierre)</li>
-	<li>Implemented FR #47739 (Missing cURL option do disable IPv6). (Pierre)</li>
-	<li>Implemented FR #39637 (Missing cURL option CURLOPT_FTP_FILEMETHOD). (Pierre)</li>
+	<li>Implemented FR <?php bugl(47739); ?> (Missing cURL option do disable IPv6). (Pierre)</li>
+	<li>Implemented FR <?php bugl(39637); ?> (Missing cURL option CURLOPT_FTP_FILEMETHOD). (Pierre)</li>
 
 	<li>Fixed an issue with ReflectionProperty::setAccessible().
   (Sebastian, Roman Borschel)</li>
@@ -505,8 +507,8 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Fixed check in recode extension to allow builing of recode and mysql
   extensions when using a recent libmysql. (Johannes)</li>
 
-	<li>Fixed PECL bug #12794 (PDOStatement->nextRowset() doesn't work). (Johannes)</li>
-	<li>Fixed PECL bug #12401 (Add support for ATTR_FETCH_TABLE_NAMES). (Johannes)</li>
+	<li><?php peclbugfix(12794); ?> (PDOStatement->nextRowset() doesn't work). (Johannes)</li>
+	<li><?php peclbugfix(12401); ?> (Add support for ATTR_FETCH_TABLE_NAMES). (Johannes)</li>
 
 	<li><?php bugfix(48696); ?> (ldap_read() segfaults with invalid parameters). (Felipe)</li>
 	<li><?php bugfix(48643); ?> (String functions memory issue). (Dmitry)</li>
@@ -635,7 +637,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li><?php bugfix(46178); ?> (memory leak in ext/phar). (Greg)</li>
 	<li><?php bugfix(46160); ?> (SPL - Memory leak when exception is thrown in offsetSet).
   (Felipe)</li>
-	<li>Fixed Bug #46147 (after stream seek, appending stream filter reads incorrect
+	<li><?php bugfix(46147); ?> (after stream seek, appending stream filter reads incorrect
   data). (Greg)</li>
 	<li><?php bugfix(46127); ?> (php_openssl_tcp_sockop_accept forgets to set context on
   accepted stream) (Mark Karpeles, Pierre)</li>
@@ -731,7 +733,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <ul>
 	<li>Security Fixes
 		<ul>
-			<li>Fixed bug #48378 (exif_read_data() segfaults on certain corrupted .jpeg files). (Pierre)</li>
+			<li><?php bugfix(48378); ?> (exif_read_data() segfaults on certain corrupted .jpeg files). (Pierre)</li>
 		</ul>
 	</li>
 
@@ -739,7 +741,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 	<li>Added "ignore_errors" option to http fopen wrapper. (David Zulke, Sara)</li>
 	<li>Added new CURL options CURLOPT_REDIR_PROTOCOLS, CURLOPT_PROTOCOLS, and CURLPROTO_* for redirect fixes in CURL 7.19.4. (Yoram Bar Haim, Stas)</li>
-	<li>Added support for Sun CC (FR #46595 and FR #46513). (David Soria Parra)</li>
+	<li>Added support for Sun CC (FR <?php bugl(46595); ?> and FR <?php bugl(46513); ?>). (David Soria Parra)</li>
 
 	<li>Changed default value of array_unique()'s optional sorting type parameter back to SORT_STRING to fix backwards compatibility breakage introduced in PHP 5.2.9. (Moriyoshi)</li>
 
@@ -747,7 +749,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 	<li>Fixed memory leak in ob_get_clean/ob_get_flush. (Christian)</li>
 	<li>Fixed segfault on invalid session.save_path. (Hannes)</li>
 	<li>Fixed leaks in imap when a mail_criteria is used. (Pierre)</li>
-	<li>Fixed missing erealloc() in fix for Bug #40091 in spl_autoload_register. (Greg)</li>
+	<li>Fixed missing erealloc() in fix for bug <?php bugl(40091); ?> in spl_autoload_register. (Greg)</li>
 
     <li><?php bugfix(48562); ?> (Reference recursion causes segfault when used in  wddx_serialize_vars()). (Felipe)</li>
     <li><?php bugfix(48557); ?> (Numeric string keys in Apache Hashmaps are not cast to integers). (David Zuelke)</li>
@@ -813,7 +815,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
     <li><?php bugfix(47598); ?> (FILTER_VALIDATE_EMAIL is locale aware). (Ilia)</li>
     <li><?php bugfix(47566); ?> (pcntl_wexitstatus() returns signed status). (patch by james at jamesreno dot com)</li>
     <li><?php bugfix(47564); ?> (unpacking unsigned long 32bit bit endian returns wrong result). (Ilia)</li>
-    <li><?php bugfix(47487); ?> (performance degraded when reading large chunks after fix of bug #44607). (Arnaud)</li>
+    <li><?php bugfix(47487); ?> (performance degraded when reading large chunks after fix of bug <?php bugl(44607); ?>). (Arnaud)</li>
     <li><?php bugfix(47468); ?> (enable cli|cgi-only extensions for embed sapi). (Jani)</li>
     <li><?php bugfix(47435); ?> (FILTER_FLAG_NO_PRIV_RANGE does not work with ipv6 addresses in the filter extension). (Ilia)</li>
     <li><?php bugfix(47430); ?> (Errors after writing to nodeValue parameter of an absent  previousSibling). (Rob)</li>
@@ -1233,7 +1235,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(43295); ?> (crash because of uninitialized SG(sapi_headers).mimetype). (Dmitry)</li>
 <li><?php bugfix(43293); ?> (Multiple segfaults in getopt()). (Hannes)</li>
 <li><?php bugfix(43279); ?> (pg_send_query_params() converts all elements in 'params' to strings). (Ilia)</li>
-<li><?php bugfix(43276); ?> (Incomplete fix for bug #42739, mkdir() under safe_mode). (Ilia)</li>
+<li><?php bugfix(43276); ?> (Incomplete fix for bug <?php bugl(42739); ?>, mkdir() under safe_mode). (Ilia)</li>
 <li><?php bugfix(43248); ?> (backward compatibility break in realpath()). (Dmitry)</li>
 <li><?php bugfix(43221); ?> (SimpleXML adding default namespace in addAttribute). (Rob)</li>
 <li><?php bugfix(43216); ?> (stream_is_local() returns false on "file://"). (Dmitry)</li>
@@ -1410,8 +1412,8 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed SimpleXML's behavior when used with empty(). (Sara)</li>
 <li>Fixed crash in OpenSSL extension because of non-string passphrase. (Dmitry)</li>
 
-<li>Fixed PECL Bug #11345 (PDO_OCI crash after National language Support &quot;NLS&quot; environment initialization error). (Chris Jones)</li>
-<li>Fixed PECL bug #11216 (crash in ZipArchive::addEmptyDir when a directory already exists). (Pierre)</li>
+<li><?php peclbugfix(11345); ?> (PDO_OCI crash after National language Support &quot;NLS&quot; environment initialization error). (Chris Jones)</li>
+<li><?php peclbugfix(11216); ?> (crash in ZipArchive::addEmptyDir when a directory already exists). (Pierre)</li>
 
 <li><?php bugfix(42368); ?> (Incorrect error message displayed by pg_escape_string). (Ilia)</li>
 <li><?php bugfix(42365); ?> (glob() crashes and/or accepts way too many flags). (Jani)</li>
@@ -1498,7 +1500,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(41576); ?> (configure failure when using --without-apxs or some other SAPIs disabling options). (Jani)</li>
 <li><?php bugfix(41567); ?> (json_encode() double conversion is inconsistent with PHP). (Lucas, Ilia)</li>
 <li><?php bugfix(41566); ?> (SOAP Server not properly generating href attributes). (Dmitry)</li>
-<li><?php bugfix(41555); ?> (configure failure: regression caused by fix for #41265). (Jani)</li>
+<li><?php bugfix(41555); ?> (configure failure: regression caused by fix for <?php bugl(41265); ?>). (Jani)</li>
 <li><?php bugfix(41527); ?> (WDDX deserialize numeric string array key). (Matt, Ilia)</li>
 <li><?php bugfix(41523); ?> (strtotime('0000-00-00 00:00:00') is parsed as 1999-11-30). (Derick)</li>
 <li><?php bugfix(41518); ?> (file_exists() warns of open_basedir restriction on  non-existent file). (Tony)</li>
@@ -1535,7 +1537,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 		<li>Fixed an integer overflow inside chunk_split() (by Gerhard Wagner, CVE-2007-2872)</li>
 		<li>Fixed possible infinite loop in imagecreatefrompng. (by Xavier Roche, CVE-2007-2756)</li>
 		<li>Fixed ext/filter Email Validation Vulnerability (MOPB-45 by Stefan Esser, CVE-2007-1900)</li>
-		<li>Fixed bug #41492 (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
+		<li><?php bugfix(41492); ?> (open_basedir/safe_mode bypass inside realpath()) (by bugs dot php dot net at chsc dot dk)</li>
 		<li>Improved fix for CVE-2007-1887 to work with non-bundled sqlite2 lib.</li>
 		<li>Added mysql_set_charset() to allow runtime altering of connection encoding.</li>
 	</ul>
@@ -1555,7 +1557,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added CURLOPT_TIMEOUT_MS and CURLOPT_CONNECTTIMEOUT_MS cURL constants. (Sara)</li>
 <li>Added --ini switch to CLI that prints out configuration file names. (Marcus)</li>
 
-<li>Implemented FR <?php bugfix(41416); ?> (getColumnMeta() should also return table name). (Tony)</li>
+<li>Implemented FR <?php bugl(41416); ?> (getColumnMeta() should also return table name). (Tony)</li>
 
 <li>Fixed filetype() and linkinfo() processing of symlinks on ZTS systems. (Oliver Block, Tony, Dmitry)</li>
 <li>Fixed SOAP extension's handler() to work even when "always_populate_raw_post_data" is off. (Ilia)</li>
@@ -1794,7 +1796,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(37386); ?> (autocreating element doesn't assign value to first node). (Rob)</li>
 <li><?php bugfix(37013); ?> (server hangs when returning circular object references). (Dmitry)</li>
 <li><?php bugfix(33664); ?> Console window appears when using exec() (Richard Quadling, Stas)</li>
-<li>Fixed PECL bug #10194 (crash in Oracle client when memory limit reached in the callback). (Tony)</li>
+<li><?php peclbugfix(10194); ?> (crash in Oracle client when memory limit reached in the callback). (Tony)</li>
 </ul>
 
 <hr />
@@ -2066,7 +2068,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(33282); ?> (Re-assignment by reference does not clear the is_ref flag) (Ilia, Dmitry, Matt Wilmas)</li>
 <li><?php bugfix(30074); ?> (apparent symbol table error with  extract($blah, EXTR_REFS)) (Brian)</li>
 <li><?php bugfix(29840); ?> (is_executable() does not honor safe_mode_exec_dir  setting). (Ilia)</li>
-<li>Fixed PECL bug #7295 (ORA-01405: fetched column value is NULL on LOB fields). (Tony)</li>
+<li><?php peclbugfix(7295); ?> (ORA-01405: fetched column value is NULL on LOB fields). (Tony)</li>
 
 </ul>
 
@@ -2086,7 +2088,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added ability to make SOAP call userspace PHP&lt;-&gt;XML converters. (Dmitry)</li>
 <li>Added support for character sets in pg_escape_string() for PostgreSQL 8.1.4 and higher. (Ilia)</li>
 <li>Added support for character sets in PDO quote() method for PostgreSQL 8.1.4 and higher. (Ilia)</li>
-<li>Added DSA key generation support to openssl_pkey_new(), FR #38731 (marci at balabit dot hu, Tony)</li>
+<li>Added DSA key generation support to openssl_pkey_new(), FR <?php bugl(38731); ?> (marci at balabit dot hu, Tony)</li>
 <li>Added SoapServer::setObject() method (it is a simplified version of SoapServer::setClass() method). (Dmitry)</li>
 <li>Added support for hexadecimal entity in imagettftext() for the bundled GD. (Pierre)</li>
 <li>Added support for httpOnly flag for session extension and cookie setting functions. (Scott MacVicar, Ilia)</li>
@@ -2096,7 +2098,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added Zip Archive extension. (Pierre)</li>
 <li>Added RFC1867 fileupload processing hook. (Stefan E.)</li>
 <li>Added JSON and Filter extensions. (Derick, Rasmus, Pierre, Ilia)</li>
-<li>Added error messages to disk_free_space() and disk_total_space() functions. FR #37971 (Tony)</li>
+<li>Added error messages to disk_free_space() and disk_total_space() functions. FR <?php bugl(37971); ?> (Tony)</li>
 <li>Added PATHINFO_FILENAME option to pathinfo() to get the filename. (Toby S.  and Christian S.)</li>
 <li>Added array_fill_keys() function. (Marcus, Matt Wilmas)</li>
 <li>Added posix_initgroups() function. (Ilia)</li>
@@ -2293,7 +2295,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(38465); ?> ReflectionParameter fails if default value is an access to self::). (Johannes)</li>
 <li><?php bugfix(38464); ?> array_count_values() mishandles numeric strings).  (Matt Wilmas, Ilia)</li>
 <li><?php bugfix(38461); ?> setting private attribute with __set() produces  segfault). (Tony)</li>
-<li><?php bugfix(38458); ?> PECL bug #8944, PECL bug #7775 (error retrieving columns after long/text columns with PDO_ODBC). (Wez)</li>
+<li><?php bugfix(38458); ?> <?php peclbugfix(8944); ?>, <?php peclbugfix(7775); ?> (error retrieving columns after long/text columns with PDO_ODBC). (Wez)</li>
 <li><?php bugfix(38454); ?> warning upon disabling handler via  xml_set_element_handler). (dtorop933 at gmail dot com, Rob)</li>
 <li><?php bugfix(38451); ?> PDO_MYSQL doesn&#39;t compile on Solaris). (Tony)</li>
 <li><?php bugfix(38450); ?> constructor is not called for classes used in userspace  stream wrappers). (Tony)</li>
@@ -2439,10 +2441,10 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(33770); ?> https:// or ftps:// do not work when --with-curlwrappers  is used and ssl certificate is not verifiable). (Ilia)</li>
 <li><?php bugfix(29538); ?> number_format and problem with 0). (Matt Wilmas)</li>
 <li><?php bugfix(28382); ?> openssl_x509_parse() extensions support) (Pierre)</li>
-<li>Fixed PECL bug #9061 (oci8 might reuse wrong persistent connection). (Tony)</li>
-<li>Fixed PECL bug #8816 (issue in php_oci_statement_fetch with more than one  piecewise column) (jeff at badtz-maru dot com, Tony)</li>
-<li>Fixed PECL bug #8112 (OCI8 persistent connections misbehave when Apache  process times out). (Tony)</li>
-<li>Fixed PECL bug #7755 (error selecting DOUBLE fields with PDO_ODBC). (&quot;slaws&quot;, Wez)</li>
+<li><?php peclbugfix(9061); ?> (oci8 might reuse wrong persistent connection). (Tony)</li>
+<li><?php peclbugfix(8816); ?> (issue in php_oci_statement_fetch with more than one  piecewise column) (jeff at badtz-maru dot com, Tony)</li>
+<li><?php peclbugfix(8112); ?> (OCI8 persistent connections misbehave when Apache  process times out). (Tony)</li>
+<li><?php peclbugfix(7755); ?> (error selecting DOUBLE fields with PDO_ODBC). (&quot;slaws&quot;, Wez)</li>
 
 </ul>
 
@@ -2548,10 +2550,10 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Added support for exif date format in strtotime(). (Derick)</li>
 <li>Added a check for special characters in the session name. (Ilia)</li>
 <li>Added "consumed" stream filter. (Marcus)</li>
-<li>Added new mysqli constants for BIT and NEW_DECIMAL field types: MYSQLI_TYPE_NEWDECIMAL and MYSQLI_TYPE_BIT. FR #36007. (Georg)</li>
+<li>Added new mysqli constants for BIT and NEW_DECIMAL field types: MYSQLI_TYPE_NEWDECIMAL and MYSQLI_TYPE_BIT. FR <?php bugl(36007); ?>. (Georg)</li>
 <li>Added imap_savebody() that allows message body to be written to a file. (Mike)</li>
 <li>Added overflow checks to wordwrap() function. (Ilia)</li>
-<li>Added support for BINARY_DOUBLE and BINARY_FLOAT to PDO_OCI and OCI8 (also fixes bug #36764). (Tony)</li>
+<li>Added support for BINARY_DOUBLE and BINARY_FLOAT to PDO_OCI and OCI8 (also fixes bug <?php bugl(36764); ?>). (Tony)</li>
 <li>Eliminated run-time constant fetching for TRUE, FALSE and NULL. (Dmitry) </li>
 <li>Removed the E_STRICT deprecation notice from "var". (Ilia)</li>
 <li>Fixed reading stream filters never notified about EOF. (Mike)</li>
@@ -2789,7 +2791,7 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(35414); ?> (strtotime() no longer works with ordinal suffix). (Ilia)</li>
 <li><?php bugfix(35410); ?> (wddx_deserialize() doesn't handle large ints as keys properly). (Ilia)</li>
 <li><?php bugfix(35409); ?> (undefined reference to 'rl_completion_matches'). (Jani)</li>
-<li><?php bugfix(35399); ?> (Since fix of bug #35273 SOAP decoding of soapenc:base64binary fails). (Dmitry)</li>
+<li><?php bugfix(35399); ?> (Since fix of bug <?php bugl(35273); ?> SOAP decoding of soapenc:base64binary fails). (Dmitry)</li>
 <li><?php bugfix(35393); ?> (changing static protected members from outside the class, one more reference issue). (Dmitry)</li>
 <li><?php bugfix(35381); ?> (ssl library is not initialized properly). (Alan)</li>
 <li><?php bugfix(35377); ?> (PDO_SQLITE: undefined reference to "fdatasync"). (Nuno, Jani)</li>
