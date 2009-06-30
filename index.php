@@ -163,7 +163,7 @@ EOT;
 }
 
 /* Do we have any release candidates to brag about? */
-if (count($RCS) > 0) {
+if (isset($RCS) && count($RCS) > 0) {
 	foreach ($RCS as $r => $d) {
         $rc .= '    <li class="php5"><a href="http://qa.php.net/"><span class="release">' . "$r ($d)</span></a></li>\n";
 	}
