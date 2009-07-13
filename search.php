@@ -125,8 +125,8 @@ else {
  In case you find any bugs, <a href="http://bugs.php.net/">we are interested</a>
  in a detailed writeup, including JS error messages, operating system and browser
  information. The source code of this feature is released under the PHP License and
- is available <a href="http://cvs.php.net/cvs.php/phpdoc/scripts/quickref">from the
- PHP CVS server</a> without any support.
+ is available <a href="http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref">from the
+ PHP SVN server</a> without any support.
 </p>
 <?php
     if (FALSE) {

@@ -4,7 +4,7 @@
 
 /*
  This is a list of all manual languages hosted
- within PHP CVS modules (phpdoc-{lang})
+ within PHP SVN modules (phpdoc-{lang})
 
  Some codes, like "kr", "tw" and "hk" are not in
  conformance with the official language code standard!

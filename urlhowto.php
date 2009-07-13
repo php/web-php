@@ -162,8 +162,8 @@ function a($href) {
  before the first step (PHP page search) mentioned above. Some examples
  of shortcut aliases: <tt><?php echo $MYSITE; ?>whatisphp</tt>,
  <tt><?php echo $MYSITE; ?>php4news</tt>. The latter is an external page
- alias, as it points to a file on the CVS server, containing information
- about changes in PHP. There are also some convinient aliases, like
+ alias, as it points to a file on the SVN server, containing information
+ about changes in PHP. There are also some convenient aliases, like
  <tt><?php echo $MYSITE; ?>de/phpversion</tt> which displays the German
  manual page for the phpversion() function.
 </p>

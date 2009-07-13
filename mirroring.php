@@ -8,15 +8,17 @@ $SIDEBAR_DATA = '
  Properly working mirror sites are listed on <a href="/mirrors.php">our
  mirrors page</a>.
 </p>
-
-<h3>CVS repository mirroring</h3>
+';
+/*
+<h3>SVN repository mirroring</h3>
 <p>
  If you are interested in using a local copy of our
- CVS repository for yourself, we provide 
- <a href="/cvsup.php">CVSUp instructions</a>
+ SVN repository for yourself, we provide 
+ <a href="/svnsync.php">svnsync instructions</a>
  separately.
 </p>
 ';
+*/
 
 site_header("Mirroring The PHP Website");
 

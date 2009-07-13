@@ -7,7 +7,7 @@ site_header("License Information");
 <h2>PHP Contributor Guidelines for Code Developers</h2>
 
 <p>
-  Before you complete the form to request a CVS id, you must understand and accept the principles under which PHP 
+  Before you complete the form to request a SVN account, you must understand and accept the principles under which PHP 
   itself is developed. These are summarised in the next paragraph.
 </p>
 <p>

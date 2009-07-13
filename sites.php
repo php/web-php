@@ -163,14 +163,22 @@ site_header("A Tourist's Guide");
  process.
 </p>
 
-<h2><a href="http://cvs.php.net/viewvc.cgi/">cvs.php.net</a>: CVS Repository</h2>
+<h2><a href="http://svn.php.net/">svn.php.net</a>: SVN Repository</h2>
 
 <p>
- The PHP project is organized with a CVS server, and this website is the web
+ The PHP project is organized with a SVN server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
- href="http://cvs.php.net/viewvc.cgi/php-src/">php-src</a> module is the 
+ href="http://svn.php.net/php/php-src/">php-src</a> module is the 
  repository for the source code to the latest version of PHP itself.
+</p>
+
+<h2><a href="http://cvs.php.net/">cvs.php.net</a>: Archived CVS Repository</h2>
+
+<p>
+ The PHP project used to be organized under the CVS revision control system, but
+ migrated to Subversion (see above) in July of 2009. The old CVS repository is
+ archived here for posterity.
 </p>
 
 <h2><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
@@ -204,7 +212,7 @@ site_header("A Tourist's Guide");
 
 <p>
  This site is dedicated to automatic PHP code coverage testing. On a regular 
- basis current CVS snapshots are being build and tested on this machine. After 
+ basis current SVN snapshots are being build and tested on this machine. After 
  all tests are done the results are visualized along with a code coverage 
  analysis.  
 </p>

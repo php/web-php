@@ -386,6 +386,10 @@ $uri_aliases = array (
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // BC
+    
+    # CVS -> SVN
+    "anoncvs.php"   => "anonsvn",
+    "cvs-php.php"   => "svn-php",
 );
 
 $external_redirects = array(

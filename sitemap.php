@@ -76,12 +76,12 @@ site_header("Sitemap");
  <li><a href="/sites.php">PHP.net Sites List</a></li>
 </ul>
 
-<h2>CVS instructions</h2>
+<h2>SVN instructions</h2>
 
 <ul>
- <li><a href="/anoncvs.php">Getting PHP from CVS</a></li>
- <li><a href="/cvs-php.php">Using CVS for PHP Development</a></li>
- <li><a href="/cvsup.php">Maintaining a Local CVS Repository</a></li>
+ <li><a href="/svn.php">Getting PHP from SVN</a></li>
+ <li><a href="/svn-php.php">Using SVN for PHP Development</a></li>
+<!-- <li><a href="/svnsync.php">Maintaining a Local SVN Repository</a></li> -->
 </ul>
 
 <h2>Mirror sites</h2>
