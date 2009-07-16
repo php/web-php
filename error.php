@@ -388,7 +388,7 @@ $uri_aliases = array (
     "projects.php" => "projects", // BC
     
     # CVS -> SVN
-    "anoncvs.php"   => "anonsvn",
+    "anoncvs.php"   => "svn",
     "cvs-php.php"   => "svn-php",
 );
 

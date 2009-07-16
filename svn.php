@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'anonsvn.php';
+$_SERVER['BASE_PAGE'] = 'svn.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 $SIDEBAR_DATA = '
 <h3>What is SVN?</h3>

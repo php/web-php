@@ -34,8 +34,8 @@ $SIDEBAR_DATA = '
 </p>
 <p>
  To download the very latest development version,
- see the <a href="anoncvs.php">instructions on
- using anonymous CVS</a>
+ see the <a href="svn.php">instructions on
+ using SVN</a>
 </p>
 <div class="tip">
 <p>
