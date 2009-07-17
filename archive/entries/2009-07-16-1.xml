@@ -12,7 +12,7 @@
      <p>
       The migration from CVS to Subversion is complete.  The web interface is at
       <a href="http://svn.php.net">svn.php.net</a>.  You can read about it at
-      <a href="http://php.net/svn.php">php.net/svn.php<a>, 
+      <a href="http://php.net/svn.php">php.net/svn.php</a>, 
       <a href="http://wiki.php.net/vcs/svnfaq">wiki.php.net/vcs/svnfaq</a>.  The
       URL to feed to your svn client is http://svn.php.net/repository.  
      </p>
