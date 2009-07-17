@@ -257,18 +257,18 @@ if (isset($_POST['maillist'])) {
       FALSE, FALSE, TRUE, "php.internals.win"
     ),
     array (
-      'php-cvs', 'CVS commit list',
-      'All the commits of the cvs PHP code repository are posted to this list automatically',
+      'php-cvs', 'SVN commit list',
+      'All the commits of the SVN PHP code repository are posted to this list automatically',
       TRUE, TRUE, FALSE, "php.cvs"
     ),
     array (
-      'php-cvs-daily', 'Daily CVS commit summary',
+      'php-cvs-daily', 'Daily SVN commit summary',
       'Daily changelog and NEWS file updates',
       TRUE, FALSE, FALSE, ""
     ),
     array (
-      'zend-engine-cvs', 'Zend Engine CVS commit list',
-      'All the commits of the Zend Engine CVS modules are posted to this list automatically',
+      'zend-engine-cvs', 'Zend Engine SVN commit list',
+      'All the commits of the Zend Engine SVN tree are posted to this list automatically',
       FALSE, FALSE, TRUE, "php.zend-engine.cvs"
     ),
     array (
