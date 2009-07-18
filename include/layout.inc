@@ -90,7 +90,6 @@ function site_header($title = '', $config = array())
     if (!isset($config["charset"])) { $config["charset"] = "utf-8"; }
     header("Content-type: text/html;charset={$config['charset']}");
     header("Content-language: {$lang}");
-    header("X-PHP-QUESTION: I wonder if anyone will ever notice this");
     if (isset($config["generate_modified"]) && $config["generate_modified"]) {
         $timestamp = @filemtime($_SERVER["DOCUMENT_ROOT"] . "/" .$_SERVER["BASE_PAGE"]);
         if ($timestamp) {
