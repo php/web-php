@@ -13,11 +13,11 @@ $SIDEBAR_DATA = '
  <a href="http://subversion.tigris.org/">the official SVN site</a>.
 </p>
 
-<h3>Anonymous SVN access</h3>
+<h3>SVN access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
  hosted project data from PHP.net, you can also use 
- <a href="/svn.php">anonymous SVN</a>.
+ <a href="/svn.php">SVN</a>. No SVN account is required.
 </p>
 ';
 site_header("Using SVN for PHP Development");
