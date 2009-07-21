@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP North West Conference</title>
+  <id>http://www.php.net/archive/2009.php#id2009-07-21-1</id>
+  <published>2009-07-21T15:37:06-07:00</published>
+  <updated>2009-07-21T15:37:06-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-10-10</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-07-21-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnew.org.uk/" title="PHP NW 2009">phpnw09_blk_300x110.png</default:newsImage>
+  <link href="http://conference.phpnew.org.uk/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The <a href="http://conference.phpnw.org.uk">PHP North West
+     Conference</a> has announced its return for a second year, to be held
+     on Saturday 10th October 2009 in Manchester, UK.  This is a one-day
+     conference aimed at developers from the local region and further
+     afield, with a deliberately low ticket price to ensure everyone who
+     wants to attend can do so.  We combine experienced speakers with some
+     new local talent to bring an event that truly has something for
+     everyone and a great buzz.
+     </p>
+     <p>
+     The official conference is on the Saturday but there are social events
+     on Friday and Saturday and an informal schedule on Sunday, so come and
+     make a weekend of it with us in Manchester!  All the venues are in
+     central Manchester and walkable from mainline public transport, so do
+     join us.
+     </p>
+     <p>
+     There is a call for papers which runs until 16th August 2009 and the
+     early bird ticket prices are fixed until September 10th.  For more
+     information, to submit a paper, to buy tickets, or to contact the
+     organisers please visit the <a href="http://conference.phpnw.org.uk">conference website</a>.
+     </p>
+    </div>
+  </content>
+</entry>
