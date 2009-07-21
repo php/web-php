@@ -7,8 +7,8 @@
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-10-10</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://www.php.net/conferences/index.php#id2009-07-21-1" rel="alternate" type="text/html"/>
-  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnew.org.uk/" title="PHP NW 2009">phpnw09_blk_300x110.png</default:newsImage>
-  <link href="http://conference.phpnew.org.uk/" rel="via" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnw.org.uk/" title="PHP NW 2009">phpnw09_blk_300x110.png</default:newsImage>
+  <link href="http://conference.phpnw.org.uk/" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
