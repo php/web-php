@@ -287,7 +287,7 @@ this version. The 5.2.6 PECL package does however work with this release',
       array (
         'English' => '/releases/5_2_5.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.4' => 
     array (
@@ -326,7 +326,7 @@ this version. The 5.2.6 PECL package does however work with this release',
       array (
         'English' => '/releases/5_2_4.php',
       ),
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.3' => 
     array (
