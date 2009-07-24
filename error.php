@@ -311,6 +311,7 @@ $uri_aliases = array (
     "faq.php"      => "faq",      // BC
     "bugs.php"     => "bugs",     // BC
     "bugstats.php" => "bugstats", // BC
+    "docs-echm.php"=> "download-docs", // BC
 
     "odbc"         => "uodbc", // BC
     "oracle"       => "oci8",
