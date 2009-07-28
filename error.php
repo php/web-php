@@ -394,9 +394,9 @@ $uri_aliases = array (
 );
 
 $external_redirects = array(
-    "php4news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=PHP_4_4",
-    "php5news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=PHP_5_3",
-    "php6news"    => "http://cvs.php.net/viewvc.cgi/php-src/NEWS?view=markup&pathrev=HEAD",
+    "php4news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_4_4/NEWS?view=markup",
+    "php5news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_3/NEWS?view=markup",
+    "php6news"    => "http://svn.php.net/viewvc/php/php-src/trunk/NEWS?view=markup",
     "projects"    => "http://freshmeat.net/browse/183/",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
@@ -404,8 +404,7 @@ $external_redirects = array(
     "phpdochowto" => "http://doc.php.net/php/dochowto/",
     "getdochowto" => "http://doc.php.net/php/dochowto/howto.html.tar.gz",
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
-    //"blog"        => "/manual/$LANG/build.log.gz",
-    "functions.js.txt" => "http://cvs.php.net/cvs.php/phpdoc/scripts/quickref",
+    "functions.js.txt" => "http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
 );
 
