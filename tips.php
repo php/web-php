@@ -34,6 +34,18 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
+<?php tip_title('Quick Reference for Google Chrome', 'Søren Nielsen', '31-Jul-2009'); ?>
+
+<p>
+ Rust right-click (control-click or click-and-hold for Macintosh users)
+ on this link: <a href="javascript:q=document.getSelection();if(q == '')void(q=prompt('PHP Reference:',''));if(q)location.href='<?php echo $MYSITE?>'+escape(q)" title="PHP Quick Reference">PHP Quick Reference</a>
+ and add it to your bookmarks. With some browsers, you may need to edit
+ your bookmarks manually to give the bookmark an easy-to-remember title.
+</p>
+<p>
+ If you want the bookmark toolbar to appear simply press Ctrl+B.
+</p>
+
 <?php tip_title('Quick Reference for Opera 9', 'Mustaque Ullah', '09-Sep-2007');?>
 
 <p>
