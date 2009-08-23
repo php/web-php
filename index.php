@@ -163,10 +163,16 @@ EOT;
 }
 
 /* Do we have any release candidates to brag about? */
-if (isset($RCS) && count($RCS) > 0) {
-	foreach ($RCS as $r => $d) {
-        $rc .= '    <li class="php5"><a href="http://qa.php.net/"><span class="release">' . "$r ($d)</span></a></li>\n";
-	}
+$RCS = array(
+  $PHP_5_2_RC => $PHP_5_2_RC_DATE,
+  $PHP_5_3_RC => $PHP_5_3_RC_DATE,
+);
+if (isset($RCS)) {
+    foreach ((array)$RCS as $r => $d) {
+        if ($r) {
+            $rc .= '    <li class="php5"><a href="http://qa.php.net/"><span class="release">' . "$r ($d)</span></a></li>\n";
+        }
+    }
 }
 
 $rel = <<< EOT
