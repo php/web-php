@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ZendCon 2009!</title>
+  <id>http://www.php.net/archive/2009.php#id2009-08-26-1</id>
+  <published>2009-08-26T10:19:35+02:00</published>
+  <updated>2009-08-26T10:19:35+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-10-19</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-08-26-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://zendcon.com" title="ZendCon 2009">ZendCon09-logo.gif</default:newsImage>
+  <link href="http://zendcon.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+   <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+     The Zend PHP Conference 2009 (ZendCon) is the largest event of the PHP
+     community and a unique opportunity to meet with PHP developers, web
+     experts and IT managers.  This year's conference will be held
+     <abbr class="dtstart" title="2009-10-19">October 19</abbr>-
+     <abbr class="dtend" title="2009-10-23">22, 2009</abbr> in
+     <span class="location">San Jose, California</span>. It will bring together developers
+     and business managers from around the world for three days of
+     exceptional presentations and networking events.
+    </p>
+    <p> 
+     At ZendCon 2009, sessions will focus on creating, deploying and managing
+     applications that take advantage of the speed, scalability and
+     simplicity of PHP.  To find out more about ZendCon, see the full session
+     listing, and register, visit <a href="http://zendcon.com">http://zendcon.com/</a>.
+    </p>
+   </div>
+  </content>
+</entry>
