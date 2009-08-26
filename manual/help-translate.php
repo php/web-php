@@ -19,10 +19,10 @@ If you're interested in helping translate a specific language, then please read 
 
 <h3>Using outdated translations</h3>
 <p>
-The following list of languages already contain CVS modules, and will show up on the documentation development server. Warning: These translations are considered outdated, so content within each may be completely wrong or insecure!
+The following list of languages already contain SVN modules, and will show up on the documentation development server. Warning: These translations are considered outdated, so content within each may be completely wrong or insecure!
 </p>
 
-<h3>Inactive languages already in CVS</h3>
+<h3>Inactive languages already in SVN</h3>
 <ul>
 <?php
 // $none are manuals we don't even have old versions of
