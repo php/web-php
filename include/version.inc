@@ -29,8 +29,8 @@ $PHP_5_3_MD5     = array(
 );
 
 /* PHP 5.2 Release */
-$PHP_5_2_RC      = '5.2.11RC2';
-$PHP_5_2_RC_DATE = "03 Sep 2009";
+$PHP_5_2_RC      = '5.2.11RC3';
+$PHP_5_2_RC_DATE = "10 Sep 2009";
 
 $PHP_5_2_VERSION         = "5.2.10";
 $PHP_5_2_DATE            = "18 June 2009";
