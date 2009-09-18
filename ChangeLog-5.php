@@ -13,6 +13,96 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
+<a name="5.2.11"></a>
+<h3>Version 5.2.11</h3>
+<b>16-September-2009</b>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Fixed certificate validation inside php_openssl_apply_verification_policy. (Ryan Sleevi, Ilia)</li>
+		<li>Added missing sanity checks around exif processing. (Ilia)</li>
+		<li>Fixed sanity check for the color index in imagecolortransparent. (Pierre)</li>
+		<li><?php bugfix(44683); ?> (popen crashes when an invalid mode is passed). (Pierre)</li>
+	</ul>
+</li>
+
+<li>Updated timezone database to version 2009.13 (2009m) (Derick)</li>
+<li>Fixed zlib.deflate compress filter to actually accept level parameter. (Jani)</li>
+<li>Fixed leak on error in popen/exec (and related functions) on Windows. (Pierre)</li>
+<li>Fixed regression in cURL extension that prevented flush of data to output defined as a file handle. (Ilia)</li>
+<li>Fixed memory leak in stream_is_local(). (Felipe, Tony)</li>
+
+<li><?php bugfix(49470); ?> (FILTER_SANITIZE_EMAIL allows disallowed characters). (Ilia)</li>
+<li><?php bugfix(49447); ?> (php engine needs to correctly check for socket API return status on windows). (Sriram Natarajan)</li>
+<li><?php bugfix(49372); ?> (segfault in php_curl_option_curl). (Pierre)</li>
+<li><?php bugfix(49361); ?> (wordwrap() wraps incorrectly on end of line boundaries). (Ilia, code-it at mail dot ru)</li>
+<li><?php bugfix(49289); ?> (bcmath module doesn't compile with phpize configure). (Jani)</li>
+<li><?php bugfix(49286); ?> (php://input (php_stream_input_read) is broken). (Jani)</li>
+<li><?php bugfix(49269); ?> (Ternary operator fails on Iterator object when used inside foreach declaration). (Etienne, Dmitry)</li>
+<li><?php bugfix(49236); ?> (Missing PHP_SUBST(PDO_MYSQL_SHARED_LIBADD)). (Jani)</li>
+<li><?php bugfix(49144); ?> (Import of schema from different host transmits original authentication details). (Dmitry)</li>
+<li><?php bugfix(49132); ?> (posix_times returns false without error). (phpbugs at gunnu dot us)</li>
+<li><?php bugfix(49125); ?> (Error in dba_exists C code). (jdornan at stanford dot edu)</li>
+<li><?php bugfix(49095); ?> (proc_get_status['exitcode'] fails on win32). (Felipe)</li>
+<li><?php bugfix(49074); ?> (private class static fields can be modified by using reflection). (Jani)</li>
+<li><?php bugfix(49072); ?> (feof never returns true for damaged file in zip). (Pierre)</li>
+<li><?php bugfix(49052); ?> (context option headers freed too early when using --with-curlwrappers). (Jani)</li>
+<li><?php bugfix(49032); ?> (SplFileObject::fscanf() variables passed by reference). (Jani)</li>
+<li><?php bugfix(49026); ?> (proc_open() can bypass safe_mode_protected_env_vars restrictions). (Ilia)</li>
+<li><?php bugfix(49000); ?> (PHP CLI in Interactive mode (php -a) crashes when including files from function). (Stas)</li>
+<li><?php bugfix(48994); ?> (zlib.output_compression does not output HTTP headers when set to a string value). (Jani)</li>
+<li><?php bugfix(48980); ?> (Crash when compiling with pdo_firebird). (Felipe)</li>
+<li><?php bugfix(48962); ?> (cURL does not upload files with specified filename). (Ilia)</li>
+<li><?php bugfix(48929); ?> (Double \r\n after HTTP headers when &quot;header&quot; context option is an array). (David Zülke)</li>
+<li><?php bugfix(48913); ?> (Too long error code strings in pdo_odbc driver). (naf at altlinux dot ru, Felipe)</li>
+<li><?php bugfix(48802); ?> (printf() returns incorrect outputted length). (Jani)</li>
+<li><?php bugfix(48801); ?> (Problem with imagettfbbox). (Takeshi Abe)</li>
+<li><?php bugfix(48788); ?> (RecursiveDirectoryIterator doesn't descend into symlinked directories). (Ilia)</li>
+<li><?php bugfix(48774); ?> (SIGSEGVs when using curl_copy_handle()). (Sriram Natarajan)</li>
+<li><?php bugfix(48763); ?> (ZipArchive produces corrupt archive). (dani dot church at gmail dot com, Pierre)</li>
+<li><?php bugfix(48762); ?> (IPv6 address filter still rejects valid address). (Felipe)</li>
+<li><?php bugfix(48733); ?> (CURLOPT_WRITEHEADER|CURLOPT_FILE|CURLOPT_STDERR warns on files that have been opened with r+). (Ilia)</li>
+<li><?php bugfix(48732); ?> (TTF Bounding box wrong for letters below baseline). (Takeshi Abe)</li>
+<li><?php bugfix(48718); ?> (FILTER_VALIDATE_EMAIL does not allow numbers in domain components). (Ilia)</li>
+<li><?php bugfix(48709); ?> (metaphone and 'wh'). (brettz9 at yahoo dot com, Felipe)</li>
+<li><?php bugfix(48697); ?> (mb_internal_encoding() value gets reset by parse_str()). (Moriyoshi)</li>
+<li><?php bugfix(48696); ?> (ldap_read() segfaults with invalid parameters). (Felipe)</li>
+<li><?php bugfix(48693); ?> (Double declaration of __lambda_func when lambda wrongly formatted). (peter at lvp-media dot com, Felipe)</li>
+<li><?php bugfix(48661); ?> (phpize is broken with non-bash shells). (Jani)</li>
+<li><?php bugfix(48645); ?> (mb_convert_encoding() doesn't understand hexadecimal html-entities). (Moriyoshi)</li>
+<li><?php bugfix(48637); ?> (&quot;file&quot; fopen wrapper is overwritten when using --with-curlwrappers). (Jani)</li>
+<li><?php bugfix(48636); ?> (Error compiling of ext/date on netware). (guenter at php.net, Ilia)</li>
+<li><?php bugfix(48629); ?> (get_defined_constants() ignores categorize parameter). (Felipe)</li>
+<li><?php bugfix(48619); ?> (imap_search ALL segfaults). (Pierre)</li>
+<li><?php bugfix(48608); ?> (Invalid libreadline version not detected during configure). (Jani)</li>
+<li><?php bugfix(48555); ?> (ImageFTBBox() differs from previous versions for texts with new lines) (Takeshi Abe)</li>
+<li><?php bugfix(48539); ?> (pdo_dblib fails to connect, throws empty PDOException &quot;SQLSTATE[] (null)&quot;). (Felipe)</li>
+<li><?php bugfix(48465); ?> (sys_get_temp_dir() possibly inconsistent when using TMPDIR). (Ilia)</li>
+<li><?php bugfix(48450); ?> (Compile failure under IRIX 6.5.30 building gd.c). (Kalle)</li>
+<li><?php bugfix(48400); ?> (imap crashes when closing stream opened with OP_PROTOTYPE flag). (Jani)</li>
+<li><?php bugfix(48284); ?> (hash &quot;adler32&quot; byte order is reversed). (Scott)</li>
+<li><?php bugfix(48276); ?> (date(&quot;Y&quot;) on big endian machines produces the wrong result). (Scott)</li>
+<li><?php bugfix(48247); ?> (Infinite loop and possible crash during startup with errors when errors are logged). (Jani)</li>
+<li><?php bugfix(48182); ?> (ssl handshake fails during asynchronous socket connection). (Sriram Natarajan)</li>
+<li><?php bugfix(48116); ?> (Fixed build with Openssl 1.0). (Pierre, Al dot Smith at aeschi dot ch dot eu dot org)</li>
+<li><?php bugfix(48060); ?> (pdo_pgsql - large objects are returned as empty). (Matteo)</li>
+<li><?php bugfix(48057); ?> (Only the date fields of the first row are fetched, others are empty). (info at programmiernutte dot net)</li>
+<li><?php bugfix(47481); ?> (natcasesort() does not sort extended ASCII characters correctly). (Herman Radtke)</li>
+<li><?php bugfix(47351); ?> (Memory leak in DateTime). (Derick, Tobias John)</li>
+<li><?php bugfix(47273); ?> (Encoding bug in SoapServer->fault). (Dmitry)</li>
+<li><?php bugfix(46020); ?> (with Sun Java System Web Server 7.0 on HPUX, #define HPUX). (Uwe Schindler)</li>
+<li><?php bugfix(45905); ?> (imagefilledrectangle() clipping error). (markril at hotmail dot com, Pierre)</li>
+<li><?php bugfix(45280); ?> (Reflection of instantiated COM classes causes PHP to crash) (Paul Richards, Kalle)</li>
+<li><?php bugfix(45141); ?> (setcookie will output expires years of &gt;4 digits). (Ilia)</li>
+<li><?php bugfix(44144); ?> (spl_autoload_functions() should return object instance when appropriate). (Hannes, Etienne)</li>
+<li><?php bugfix(43510); ?> (stream_get_meta_data() does not return same mode as used in fopen). (Jani)</li>
+<li><?php bugfix(42434); ?> (ImageLine w/ antialias = 1px shorter). (wojjie at gmail dot com, Kalle)</li>
+<li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)
+	
+</ul>
+
+<hr />
+
 <a name="5.3.0"></a>
 <h3>Version 5.3.0</h3>
 <b>30-June-2009</b>

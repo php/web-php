@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.2.11 Released!</title>
+  <id>http://www.php.net/archive/2009.php#id2009-09-17-1</id>
+  <published>2009-09-17T21:45:06-04:00</published>
+  <updated>2009-09-17T21:45:06-04:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2009-09-17-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2009.php#id2009-09-17-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The PHP development team would like to announce the immediate
+     availability of PHP 5.2.11. This release focuses on improving the stability of
+     the PHP 5.2.x branch with over 75 bug fixes, some of which are security related.
+     All users of PHP 5.2 are encouraged to upgrade to this release.
+     </p>
+     <p>
+     <b>Security Enhancements and Fixes in PHP 5.2.11:</b>
+     </p>
+     <ul>
+             <li>Fixed certificate validation inside php_openssl_apply_verification_policy. (Ryan Sleevi, Ilia)</li>
+             <li>Fixed sanity check for the color index in imagecolortransparent(). (Pierre)</li>
+             <li>Added missing sanity checks around exif processing. (Ilia)</li>
+             <li>Fixed bug #44683 (popen crashes when an invalid mode is passed). (Pierre)</li>
+     </ul>
+     <p>
+     Further details about the PHP 5.2.11 release can be found in the <a href="/releases/5_2_11.php">release announcement</a>, and the full list of changes are available in the <a href="/ChangeLog-5.php#5.2.11">ChangeLog</a>.
+     </p>
+    </div>
+  </content>
+</entry>
