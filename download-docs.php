@@ -46,9 +46,8 @@ site_header("Download documentation");
 $formats = array(
     "Single HTML file" => "html.gz",
     "Many HTML files"  => "tar.gz",
-    /*"PDF"              => "pdf.bz2",
-    "PalmPilot DOC"    => "doc.pdb",
-    "PalmPilot iSilo"  => "isilo.pdb",*/
+	"Many PDF files"   => "pdf.tar.gz",
+    "PDF"              => "pdf",
     "HTML Help file"   => "chm",
 );
 ?>
