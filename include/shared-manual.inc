@@ -111,8 +111,10 @@ $(document).ready(function() {
 	$(".refsect1 .title").click(function() {
 		$(this).siblings().slideToggle("slow");
 	});
-});
-$(document).ready(function() {
+	$(".refsect1 .title").each(function() {
+        url = "http://bugs.php.net/report.php?manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
+		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
+	});
 	$("#usernotes .head").click(function() {
 		$(this).next().slideToggle("slow");
 	});

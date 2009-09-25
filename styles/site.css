@@ -997,6 +997,9 @@ div.footnote sup {
 div.footnote p {
 	text-indent: 10px;
 }
+div.reportbug {
+	float: right;
+}
 /*
  * vim: noet
  */
