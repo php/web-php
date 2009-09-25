@@ -125,13 +125,6 @@ if ($i < $SHOW_COUNT) {
 } // for
 ?>
 
-<p>
- We have a <a href="/manual/en/migration5.oop.php">PHP 5 page</a> explaining the
- language level changes introduced in PHP 5. The <a href="/ChangeLog-5.php">PHP 5
- ChangeLog</a> details all the other changes.
-</p>
-
-
 <?php
 site_footer();
 
