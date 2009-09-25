@@ -37,7 +37,7 @@ $SIDEBAR_DATA = '
  see the <a href="svn.php">instructions on
  using SVN</a>
 </p>
-<div class="tip">
+<div class="info">
 <p>
  Information about older releases and their downloads
  are available on <a href="/releases/">our releases page</a>.

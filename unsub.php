@@ -17,6 +17,7 @@ site_header("Unsubscribing");
 
 <h1>Unsubscribing From a Mailing List</h1>
 
+<div class="tip">
 <p class="tip">
  If the mailing list you would like to unsubscribe from is
  in the list on our <a href="/mailing-lists.php">mailing lists page</a>,
@@ -25,6 +26,7 @@ site_header("Unsubscribing");
  to find out what email address you used to subscribe, the instructions
  on this page can help.
 </p>
+</div>
 
 <p>
  First off, if your email address has changed since you subscribed, don't
