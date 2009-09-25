@@ -103,7 +103,24 @@ function manual_header()
 			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
 		),
 		"headtags" => array(
-			'<meta http-equiv="Content-language" value="' . $lang . '" />',
+			'<meta http-equiv="Content-language" value="' . $lang . '" />
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".refsect1 .title").click(function() {
+		$(this).siblings().slideToggle("slow");
+	});
+});
+$(document).ready(function() {
+	$("#usernotes .head").click(function() {
+		$(this).next().slideToggle("slow");
+	});
+});
+</script>
+',
+
+
 		),
 	));
     manual_navbar();
@@ -297,12 +314,14 @@ END_USERNOTE_HEADER;
      
     // If we have notes, print them out
     else {
+        echo '<div id="allnotes">';
         
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
             );
         }
+        echo "</div>\n";
         echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
     }
     
@@ -386,3 +405,6 @@ function manual_note_display($date, $name, $text, $id)
 USER_NOTE_TEXT;
  
 }
+
+/* vim: set et ts=4 sw=4: */
+
