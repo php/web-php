@@ -101,7 +101,7 @@ p.formerror, p.warn {
 }
 
 /* Manual warnings/cautions/tips */
-div.warning , div.caution, div.tip, div.info {
+div.warning , div.caution, div.tip, div.information {
 	margin: 20px;
 	padding: 20px 30px;
 	text-align: center;
@@ -111,7 +111,7 @@ div.warning, div.tip {
 	padding-left: 92px;
 	background-position: center left;
 }
-div.warning p, div.caution p, div.tip p, div.info p {
+div.warning p, div.caution p, div.tip p, div.information p {
 	text-align: justify;
 }
 div.tip {
@@ -126,7 +126,7 @@ div.warning {
 	background-color: #fee;
 	background-image: url("/images/dialog-warning.png");
 }
-div.info {
+div.information {
 	border: 1px solid #00c;
 	color: #006;
 	background-color: #eef;
@@ -136,12 +136,12 @@ div.caution {
 	color: #333;
 	background-color: #ffc;
 }
-#leftbar div.tip, #leftbar div.info {
+#leftbar div.tip, #leftbar div.information {
 	margin: 0;
 	padding: 5px;
 	text-align: left;
 }
-#leftbar div.tip p, #leftbar div.info p {
+#leftbar div.tip p, #leftbar div.information p {
 	text-align: left;
 }
 
