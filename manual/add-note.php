@@ -195,7 +195,7 @@ else {
 <ul>
  <li>
   <strong>Bugs</strong>. Instead
-  <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">report a bug</a>
+  <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&manpage=<?php echo clean($_POST['sect']); ?>">report a bug</a>
   for this manual page to the bug database.
  </li>
  <li>
@@ -243,8 +243,8 @@ else {?>
    <td colspan="2">
     <b>
      <a href="/support.php">Click here to go to the support pages.</a><br />
-     <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br />
-     <a href="http://bugs.php.net/report.php?manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br />
+     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&manpage=<?php echo clean($_POST['sect']); ?>">Click here to submit a bug report.</a><br />
+     <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&manpage=<?php echo clean($_POST['sect']); ?>">Click here to request a feature.</a><br />
      (Again, please note, if you ask a question, report a bug, or request a feature,
      your note <i>will be deleted</i>.)
     </b>
