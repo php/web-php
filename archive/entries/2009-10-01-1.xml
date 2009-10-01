@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP World Kongress</title>
+  <id>http://www.php.net/archive/2009.php#id2009-10-01-1</id>
+  <published>2009-10-01T21:19:01+02:00</published>
+  <updated>2009-10-01T21:19:01+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-11-25</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-10-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpworld-kongress.de" title="PHP World Kongress">phpworldkongress09.gif</default:newsImage>
+  <link href="http://www.phpworld-kongress.de" rel="via" type="text/html"/>
+  <content type="xhtml">
+   <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+     On 24th and 25th of November you should not miss the lectures of the top speakers of the PHP Industry on Professional Software Development with PHP at Munich Conference Center.
+    </p>
+    <p>
+     10 international speakers offer you more than 20 hours of knowledge transfer in the topics "Development", "Tools &amp; Technologies", "PHP 5 Certification", "TYPO3 Certification", "Search Engine Optimization" and "Design Patterns with PHP" on two days.
+    </p>
+    <p>
+     On November 24th, Pierre Joye from the PHP core team under Windows opens the congress with his keynote "PHP 5.3 and PHP 6". Amongst others topics include OOP, Web Application Security 2.0, SOAP in PHP and Zend Framework.
+    </p>
+    <p>
+     The 25th November is a workshop day aimed at expanding and deepening your knowledge in PHP 5 Certification, TYPO3 Certification, Search Engine Optimization and Design Patterns with PHP.
+    </p>
+   </div>
+  </content>
+</entry>
