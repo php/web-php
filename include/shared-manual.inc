@@ -112,7 +112,7 @@ $(document).ready(function() {
 		$(this).siblings().slideToggle("slow");
 	});
 	$(".refsect1 .title").each(function() {
-        url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
+        url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
 		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
 	});
 	$("#usernotes .head").click(function() {
