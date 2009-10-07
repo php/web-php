@@ -108,15 +108,34 @@ function manual_header()
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	$(".refsect1 .title").click(function() {
-		$(this).siblings().slideToggle("slow");
-	});
+	var toggleImage = function(elem) {
+		if ($(elem).hasClass("shown")) {
+			$(elem).removeClass("shown").addClass("hidden");
+			$("img", elem).attr("src", "/images/notes-add.gif");
+		}
+		else {
+			$(elem).removeClass("hidden").addClass("shown");
+			$("img", elem).attr("src", "/images/notes-reject.gif");
+		}
+	};
+
 	$(".refsect1 .title").each(function() {
         url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
 		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
+		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
 	});
-	$("#usernotes .head").click(function() {
-		$(this).next().slideToggle("slow");
+	$("#usernotes .head").each(function() {
+		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
+	});
+	$(".refsect1 .title .toggler").click(function() {
+		$(this).parent().siblings().slideToggle("slow");
+		toggleImage(this);
+		return false;
+	});
+	$("#usernotes .head .toggler").click(function() {
+		$(this).parent().next().slideToggle("slow");
+		toggleImage(this);
+		return false;
 	});
 });
 </script>

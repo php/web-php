@@ -956,6 +956,10 @@ div.refsect1 span.term b tt {
 	font-size: 0.9em;
 }
 
+div.refsect1 .title .toggler {
+	border-bottom: none;
+}
+
 div.classsynopsisinfo_comment {
 	text-indent: 30px;
 	padding-top: 2em;
