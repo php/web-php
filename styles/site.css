@@ -1014,6 +1014,7 @@ div.footnote p {
 	text-indent: 10px;
 }
 div.reportbug {
+	font-size: 80%;
 	float: right;
 }
 /*
