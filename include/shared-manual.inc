@@ -119,7 +119,7 @@ $(document).ready(function() {
 		}
 	};
 
-	$(".refsect1 .title").each(function() {
+	$(".refsect1 h3.title").each(function() {
         url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
 		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
 		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
@@ -127,7 +127,7 @@ $(document).ready(function() {
 	$("#usernotes .head").each(function() {
 		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
 	});
-	$(".refsect1 .title .toggler").click(function() {
+	$(".refsect1 h3.title .toggler").click(function() {
 		$(this).parent().siblings().slideToggle("slow");
 		toggleImage(this);
 		return false;
