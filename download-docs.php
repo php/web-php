@@ -76,13 +76,14 @@ $formats = array(
  </li>
  <li>
   <p class="warn">
-  If you are using Microsoft Internet Explorer under Windows XP SP2 or
-  later and you are going to download the documentation in CHM
-  format, you <strong>need</strong> to "unblock" the file after downloading it, by
-  right-clicking on it and selecting the properties menu item. Then click
-  on the 'Unblock' button (on Microsoft Vista this is done in the
-  "<em>security</em>" options). Failing to do this may lead to errors
-  in the visualization of the file, due to a Microsoft bug.
+  If you are using Windows XP SP2 or later and you are going to download the
+  documentation in CHM format, you <strong>need</strong> to &quot;unblock&quot;
+  the file after downloading it by right-clicking on it in Windows Explorer and
+  selecting the &quot;Properties&quot; menu item, then clicking on the
+  &quot;Unblock&quot; button (on Windows Vista this is within the
+  &quot;Security&quot; options).  Failure to unblock the documentation file may
+  result in error messages including &quot;Navigation to the webpage was
+  canceled&quot; due to Windows security restrictions.
   </p>
  </li>
 </ul>
