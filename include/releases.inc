@@ -2,30 +2,80 @@
 $OLDRELEASES = array (
   5 => 
   array (
-    '5.3.0' => 
+    '5.2.10' => 
     array (
       'announcement' => 
       array (
-        'English' => '/releases/5_3_0.php',
+        'English' => '/releases/5_2_10.php',
       ),
       'source' => 
       array (
         0 => 
         array (
-          'filename' => 'php-5.3.0.tar.bz2',
-          'name' => 'PHP 5.3.0 (tar.bz2)',
-          'md5' => '846760cd655c98dfd86d6d97c3d964b0',
-          'date' => '30 June 2009',
+          'filename' => 'php-5.2.10.tar.bz2',
+          'name' => 'PHP 5.2.10 (tar.bz2)',
+          'md5' => '15c7b5a87f57332d6fc683528e28247b',
+          'date' => '18 June 2009',
         ),
         1 => 
         array (
-          'filename' => 'php-5.3.0.tar.gz',
-          'name' => 'PHP 5.3.0 (tar.gz)',
-          'md5' => 'f4905eca4497da3f0beb5c96863196b4',
-          'date' => '30 June 2009',
+          'filename' => 'php-5.2.10.tar.gz',
+          'name' => 'PHP 5.2.10 (tar.gz)',
+          'md5' => '85753ba2909ac9fae5bca516adbda9e9',
+          'date' => '18 June 2009',
         ),
       ),
-      'date' => NULL,
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.10-Win32.zip',
+          'name' => 'PHP 5.2.10 zip package',
+          'md5' => '95ae7ccfcd05b6c81c93aa2e9e792f9e',
+          'date' => '18 June 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.10-win32-installer.msi',
+          'name' => 'PHP 5.2.10 installer',
+          'md5' => '38b65bc57f64c66ff73f6f4e2db2cbb4',
+          'date' => '18 June 2009',
+          'note' => '',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.10-Win32.zip',
+          'name' => 'PHP 5.2.10 Win32 Debug Pack',
+          'md5' => 'f6bdea0e1f71ca46f78e78c86e86606',
+          'date' => '18 June 2009',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-5.2.10-nts-Win32.zip',
+          'name' => 'PHP 5.2.10 Non-thread-safe zip package',
+          'md5' => 'b1c53e6f525133647e621a9c95b09e65',
+          'date' => '18 June 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.10-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.10 Non-thread-safe installer',
+          'md5' => 'e341deb2872d3f8f4589593da88bbede',
+          'date' => '18 June 2009',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.10-nts-Win32.zip',
+          'name' => 'PHP 5.2.10 Non-thread-safe Win32 Debug Pack',
+          'md5' => '760a141c861a789f928b91c655c9d58',
+          'date' => '18 June 2009',
+        ),
+      ),
+      'date' => '18 June 2009',
       'museum' => false,
     ),
     '5.2.9' => 
