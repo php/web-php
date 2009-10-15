@@ -203,11 +203,7 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 site_header("Hypertext Preprocessor",
     array(
         'onload' => 'boldEvents();',
-        'headtags' => array(
-            '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
-            "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
-            "okc(function(){document['phplogo'].src='".$_SERVER['STATIC_ROOT']."/images/php_konami.gif'});"
-        ),
+        'headtags' => '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
         'link' => array(
             array(
                 "rel"   => "search",
