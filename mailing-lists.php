@@ -277,6 +277,13 @@ if (isset($_POST['maillist'])) {
       FALSE, TRUE, FALSE, "php.qa"
     ),
 
+    'PHP website mailing lists',
+    array (
+      'php-webmaster', 'Webmaster discussion',
+      'List for discussing the PHP websites',
+      FALSE, TRUE, FALSE, "php.webmaster"
+    ),
+
     'PHP documentation mailing lists',
     array (
       'phpdoc', 'Documentation discussion',
