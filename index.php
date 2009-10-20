@@ -2,7 +2,6 @@
 /*
    If you're reading this, it isn't because you've found a security hole.
    this is an open source website. read and learn!
-    Learn? this code sucks. dont read and learn it, fix it!
 */
 
 /* ------------------------------------------------------------------------- */
