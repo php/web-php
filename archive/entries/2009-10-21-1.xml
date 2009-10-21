@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference</title>
+  <id>http://www.php.net/archive/2009.php#id2009-10-21-1</id>
+  <published>2009-10-21T20:15:30+02:00</published>
+  <updated>2009-10-21T20:15:30+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-11-15</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-10-21-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.com/" title="International PHP Conference">ipc09.png</default:newsImage>
+  <link href="http://www.phpconference.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>With its mixture of topics the <a href="http://www.phpconference.com">International PHP Conference</a> provides an ideal resource for all professionals and their successful daily routine within the whole PHP spectrum. Insights into current Web 2.0 technologies, Security, Best Practices for tools and components, Enterprise know-how, databases, architectures and more are presented at the International PHP Conference 2009.</p>
+     <p>More than 30 Experts explain current trends and demonstrate how to make the most of your code and your business. They will answer your questions not only in the 40+ sessions and panel discussions but also during personal meetings.</p>
+     <p>And for the very first time ever, on Sunday, 15th November, the PHP community will warm up with our free IPC Unconference. This is the place, where YOU decide about the sessions - just pick your favorite topics and get in touch with some of our speakers and other developers.</p>
+     <p>Make use of this opportunity and make yourself a part of the worldwide PHP community – at the International PHP Conference 2009.</p>
+    </div>
+  </content>
+</entry>
