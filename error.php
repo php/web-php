@@ -233,6 +233,9 @@ $manual_page_moves = array(
 
     // Replaced extensions
     'aspell'                     => 'pspell',
+
+    // Refactored
+    'regexp.reference'           => 'regexp.introduction',
 );
 
 if (isset($manual_page_moves[$URI])) {
