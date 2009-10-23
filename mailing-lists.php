@@ -281,7 +281,7 @@ if (isset($_POST['maillist'])) {
     array (
       'php-webmaster', 'Webmaster discussion',
       'List for discussing the PHP websites',
-      FALSE, TRUE, FALSE, "php.webmaster"
+      FALSE, FALSE, FALSE, "php.webmaster"
     ),
 
     'PHP documentation mailing lists',
