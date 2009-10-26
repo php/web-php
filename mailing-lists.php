@@ -258,7 +258,7 @@ if (isset($_POST['maillist'])) {
     ),
     array (
       'php-cvs', 'SVN commit list',
-      'All the commits of the SVN PHP code repository are posted to this list automatically',
+      'All commits to internals (php-src) and the Zend Engine are posted to this list automatically',
       TRUE, TRUE, FALSE, "php.cvs"
     ),
     array (
@@ -267,14 +267,14 @@ if (isset($_POST['maillist'])) {
       TRUE, FALSE, FALSE, ""
     ),
     array (
-      'zend-engine-cvs', 'Zend Engine SVN commit list',
-      'All the commits of the Zend Engine SVN tree are posted to this list automatically',
-      FALSE, FALSE, TRUE, "php.zend-engine.cvs"
-    ),
-    array (
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       FALSE, TRUE, FALSE, "php.qa"
+    ),
+    array (
+      'php-pdo', 'PDO Developmental list',
+      'Discuss the past, present and future of PDO',
+      FALSE, FALSE, TRUE, "php.pdo"
     ),
 
     'PHP website mailing lists',
