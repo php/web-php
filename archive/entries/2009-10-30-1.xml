@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP UK Conference 2010 Call For Papers</title>
+  <id>http://www.php.net/archive/2009.php#id2009-10-30-1</id>
+  <published>2009-10-30T14:19:45+01:00</published>
+  <updated>2009-10-30T14:19:45+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2009-11-01</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2009-10-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.co.uk/" title="PHP UK Conference 2010">phpukconf2010.png</default:newsImage>
+  <link href="http://www.phpconference.co.uk/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The main focus of the <a href="http://www.phpconference.co.uk">PHP UK conference</a> is obviously the talks that are given, and so we hope to attract the best PHP speakers from around the world.</p>
+     <p><a href="http://www.phpconference.co.uk/call-for-papers">We are looking for talks</a> relating to any non-basic aspect of the PHP programming language, be it mainstream, advanced, niche or non-technical.</p>
+     <p>Speakers will be invited to the pre-conference dinner, likely to be on Thursday February 25th 2010 and the post-conference social dinner after the event.</p>
+     <p>The deadline for this call for papers is the end of Saturday 31st October 2009.</p>
+    </div>
+  </content>
+</entry>
