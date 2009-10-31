@@ -678,6 +678,7 @@ function news_archive_sidebar()
 // Print news
 function print_news($news, $dog, $max = 5, $onlyyear = null) {
     $count = 0;
+    $news = $news ? $news : array(); // default to empty array (if no news)
     foreach($news as $item) {
         $vevent = "";
         $ok = false;
