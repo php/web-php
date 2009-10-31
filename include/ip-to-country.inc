@@ -89,8 +89,9 @@ function i2c_search_in_index($ip)
     $idxpart = 0; $recnum = 0;
     
     // Open the index file for reading
-    $dbidx = fopen(
-        $_SERVER['DOCUMENT_ROOT'] . "/backend/ip-to-country.idx",
+    $idxfilename = $_SERVER['DOCUMENT_ROOT'] . "/backend/ip-to-country.idx";
+    $dbidx = is_readable($idxfilename) && fopen(
+        $idxfilename,
         "r"
     );
     if (!$dbidx) { return FALSE; }
