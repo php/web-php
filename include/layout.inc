@@ -598,9 +598,9 @@ function display_event($event, $include_date = 1)
     }
 
     // Print link in case we have one
-    if ($event['url']) { echo '<a href="', htmlentities($event['url']),'" class="url">'; }
+    if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES, 'UTF-8'),'" class="url">'; }
     // Print event description
-    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'])), "</b>";
+    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES, 'UTF-8')), "</b>";
     // End link
     if ($event['url']) { echo "</a>"; }
 
@@ -642,8 +642,8 @@ function display_event($event, $include_date = 1)
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br /><br /><b>URL:</b> ',
-             '<a href="', htmlentities($event['url']), '">',
-             htmlentities($event['url']), '</a>';
+             '<a href="', htmlentities($event['url'], ENT_QUOTES, 'UTF-8'), '">',
+             htmlentities($event['url'], ENT_QUOTES, 'UTF-8'), '</a>';
     }
 ?>
  </td></tr>
