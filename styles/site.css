@@ -879,13 +879,15 @@ div.classsynopsis div.ooclass {
 
 div.example div.example-contents,
 table .phpcode,
-div.mediaobject,
 div.classsynopsis,
 div.informalexample pre,
 div.informalexample .phpcode {
 	background-color: #e1e1e1;
 	margin: 10px;
 	border: 1px outset #000;
+}
+div.mediaobject {
+	margin: 10px;
 }
 div.example-contents pre {
 	background-color: #e1e1e1;
