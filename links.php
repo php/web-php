@@ -96,6 +96,17 @@ site_header("Links");
 
 <ul>
  <li>
+  <strong>Arabic</strong>
+  <ul>
+   <li>
+    <a href="http://www.ar-php.org/">ar-PHP</a><br />
+    Provides set of classes to enhance developing professional Arabic web
+    applications and process/present Arabic text in the PHP/MySQL environment.
+   </li>
+  </ul>
+ </li>
+
+ <li>
   <strong>Bosnian</strong>
   <ul>
    <li>
