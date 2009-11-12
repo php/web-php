@@ -17,8 +17,8 @@
  */
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.1RC3';
-$PHP_5_3_RC_DATE = "03 Nov 2009";
+$PHP_5_3_RC      = '5.3.1RC4';
+$PHP_5_3_RC_DATE = "12 Nov 2009";
 
 $PHP_5_3_VERSION         = "5.3.0";
 $PHP_5_3_DATE            = "30 June 2009";
