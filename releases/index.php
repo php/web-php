@@ -155,7 +155,7 @@ $SIDEBAR_DATA = '
  </p>
 </form>
 
-<div class="tip">
+<div class="information">
  <strong>Want a PHP serialize()d list of the PHP releases?</strong><br />
  <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
  <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
