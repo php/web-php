@@ -25,7 +25,7 @@ large number of bug fixes.
 </ul>
 
 <p>
-<b>Key bug fixes in PHP 5.3.1 include:</b>
+<b>Key Bug Fixes in PHP 5.3.1 include:</b>
 </p>
 <ul>
   <li>Fixed crash in com_print_typeinfo when an invalid typelib is given.</li>
