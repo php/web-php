@@ -8,7 +8,7 @@ site_header("PHP 5.3.1 Release Announcement");
 <h1>PHP 5.3.1 Release Announcement</h1>
 <p>
 The PHP development team is proud to announce the immediate release of PHP
-5.3.1. This is a maitenance in the 5.3 series, which includes a
+5.3.1. This is a maintenance release in the 5.3 series, which includes a
 large number of bug fixes.
 </p>
 
