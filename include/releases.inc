@@ -181,7 +181,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '26 February 2009',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.8' => 
     array (
@@ -257,7 +257,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '08 December 2008',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.6' => 
     array (
@@ -1105,7 +1105,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '03 January 2008',
-      'museum' => false,
+      'museum' => true,
     ),
     '4.4.7' => 
     array (
@@ -1142,7 +1142,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '03 May 2007',
-      'museum' => false,
+      'museum' => true,
     ),
     '4.4.6' => 
     array (
