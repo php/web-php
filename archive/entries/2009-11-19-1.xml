@@ -23,7 +23,7 @@
 		    <li>Fixed a open_basedir bypass in posix_mkfifo().</li> 
 		    <li>Fixed failing safe_mode_include_dir.</li>
 	    </ul>
-	    <p>Further details about the PHP 5.3.1 release can be found in the <a href="http://www.php.net/releases/5_3_1.php">release announcement</a>, and the full list of changes are available in the <ahref="http://www.php.net/ChangeLog-5.php#5.3.1">ChangeLog</a>.</p> 
+	    <p>Further details about the PHP 5.3.1 release can be found in the <a href="http://www.php.net/releases/5_3_1.php">release announcement</a>, and the full list of changes are available in the <a href="http://www.php.net/ChangeLog-5.php#5.3.1">ChangeLog</a>.</p> 
     </div>
   </content>
 </entry>
