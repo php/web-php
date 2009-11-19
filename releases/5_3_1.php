@@ -20,7 +20,7 @@ large number of bug fixes.
   <li>Added missing sanity checks around exif processing.</li>
   <li>Fixed a safe_mode bypass in tempnam().</li>
   <li>Fixed a open_basedir bypass in posix_mkfifo().</li>
-  <li><?php bugfix(50063); ?> (safe_mode_include_dir fails).</li>
+  <li>Fixed bug #50063 (safe_mode_include_dir fails).</li>
   <li>Fixed bug #44683 (popen crashes when an invalid mode is passed).</li> 
 </ul>
 
