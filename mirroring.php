@@ -200,6 +200,9 @@ $minute = rand(0, 59);
      &lt;IfModule mod_speling.c&gt;
        CheckSpelling Off
      &lt;/IfModule&gt;
+
+     # A few recommended PHP directives
+     php_flag display_errors off
      
      # If you have Russian Apache with mod_charset installed,
      # do not forget to search for this line in your existing
