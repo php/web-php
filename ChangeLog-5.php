@@ -13,6 +13,169 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
+<a name="5.3.1"></a>
+<h3>Version 5.3.1</h3>
+<b>19-November-2009</b>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Added "max_file_uploads" INI directive, which can be set to limit the number of file uploads per-request to 20 by default, to prevent possible DOS via temporary file exhaustion. (Ilia)</li>
+		<li>Added missing sanity checks around exif processing. (Ilia)</li>
+		<li>Fixed a safe_mode bypass in tempnam(). (Rasmus)</li>  
+		<li>Fixed a open_basedir bypass in posix_mkfifo(). (Rasmus)</li> 
+		<li><?php bugfix(50063); ?> (safe_mode_include_dir fails). (Johannes, christian at elmerot dot se)</li>
+	</ul>
+</li>
+
+<li>Added error constant when json_encode() detects an invalid UTF-8 sequence. (Scott)</li>
+<li>Added support for ACL on Windows for thread safe SAPI (Apache2 for example) and fix its support on NTS. (Pierre)</li>
+
+<li>Upgraded bundled sqlite to version 3.6.19. (Scott)</li>
+<li>Updated timezone database to version 2009.17 (2009q). (Derick)</li>
+
+<li>Fixed crash in com_print_typeinfo when an invalid typelib is given. (Pierre)</li>
+<li>Fixed a safe_mode bypass in tempnam() identified by Grzegorz Stachowiak. (Rasmus)</li>
+<li>Fixed a open_basedir bypass in posix_mkfifo() identified by Grzegorz  Stachowiak. (Rasmus)</li>
+<li>Fixed certificate validation inside php_openssl_apply_verification_policy (Ryan Sleevi, Ilia)</li>
+<li>Fixed crash in SQLiteDatabase::ArrayQuery() and SQLiteDatabase::SingleQuery() when calling using Reflection. (Felipe)</li>
+<li>Fixed crash when instantiating PDORow and PDOStatement through Reflection. (Felipe)</li>
+<li>Fixed sanity check for the color index in imagecolortransparent. (Pierre)</li>
+<li>Fixed scandir/readdir when used mounted points on Windows. (Pierre)</li>
+<li>Fixed zlib.deflate compress filter to actually accept level parameter. (Jani)</li>
+<li>Fixed leak on error in popen/exec (and related functions) on Windows. (Pierre)</li>
+<li>Fixed possible bad caching of symlinked directories in the realpath cache on Windows. (Pierre)</li>
+<li>Fixed atime and mtime in stat related functions on Windows. (Pierre)</li>
+<li>Fixed spl_autoload_unregister/spl_autoload_functions wrt. Closures and Functors. (Christian Seiler)</li>
+<li>Fixed open_basedir circumvention for "mail.log" ini directive. (Maksymilian Arciemowicz, Stas)</li>
+<li>Fixed signature generation/validation for zip archives in ext/phar. (Greg)</li>
+<li>Fixed memory leak in stream_is_local(). (Felipe, Tony)</li>
+<li>Fixed BC break in mime_content_type(), removes the content encoding. (Scott) </li>
+
+<li>Changed ini file directives [PATH=](on Win32) and [HOST=](on all) to be case  insensitive (garretts)</li>
+<li>Restored shebang line check to CGI sapi (not checked by scanner anymore). (Jani)</li>
+
+<li>Improve symbolic, mounted volume and junctions support for realpath on  Windows. (Pierre)</li>
+<li>Improved readlink on Windows, suppress \??\ and use the drive syntax only. (Pierre)</li>
+<li>Improved dns_get_record() AAAA support on windows. Always available when IPv6 is support is installed, format is now the same than on unix. (Pierre)</li>
+<li>Improved the DNS functions on OSX to use newer APIs, also use Bind 9 API where available on other platforms. (Scott)</li>
+<li>Improved shared extension loading on OSX to use the standard Unix dlopen() API. (Scott)</li>
+<li><?php bugfix(50063); ?> (safe_mode_include_dir fails). (Johannes, christian at elmerot dot se)</li>
+<li><?php bugfix(50052); ?> (Different Hashes on Windows and Linux on wrong Salt size). (Pierre)</li>
+<li><?php bugfix(49910); ?> (no support for ././@LongLink for long filenames in phar tar support). (Greg)</li>
+<li><?php bugfix(49908); ?> (throwing exception in __autoload crashes when interface is not defined). (Felipe)</li>
+<li><?php bugfix(49847); ?> (exec() fails to return data inside 2nd parameter, given output lines &gt;4095 bytes). (Ilia)</li>
+<li><?php bugfix(49809); ?> (time_sleep_until() is not available on OpenSolaris). (Jani)</li>
+<li><?php bugfix(49757); ?> (long2ip() can return wrong value in a multi-threaded applications). (Ilia, Florian Anderiasch)</li>
+<li><?php bugfix(49738); ?> (calling mcrypt after mcrypt_generic_deinit crashes). (Sriram Natarajan)</li>
+<li><?php bugfix(49732); ?> (crashes when using fileinfo when timestamp conversion fails). (Pierre)</li>
+<li><?php bugfix(49698); ?> (Unexpected change in strnatcasecmp()). (Rasmus)</li>
+<li><?php bugfix(49630); ?> (imap_listscan function missing). (Felipe)</li>
+<li><?php bugfix(49572); ?> (use of C++ style comments causes build failure). (Sriram Natarajan)</li>
+<li><?php bugfix(49531); ?> (CURLOPT_INFILESIZE sometimes causes warning "CURLPROTO_FILE cannot be set"). (Felipe)</li>
+<li><?php bugfix(49517); ?> (cURL's CURLOPT_FILE prevents file from being deleted after fclose). (Ilia)</li>
+<li><?php bugfix(49470); ?> (FILTER_SANITIZE_EMAIL allows disallowed characters). (Ilia)</li>
+<li><?php bugfix(49447); ?> (php engine need to correctly check for socket API  return status on windows). (Sriram Natarajan)</li>
+<li><?php bugfix(49391); ?> (ldap.c utilizing deprecated ldap_modify_s). (Ilia)</li>
+<li><?php bugfix(49361); ?> (wordwrap() wraps incorrectly on end of line boundaries). (Ilia, code-it at mail dot ru)</li>
+<li><?php bugfix(49372); ?> (segfault in php_curl_option_curl). (Pierre)</li>
+<li><?php bugfix(49306); ?> (inside pdo_mysql default socket settings are ignored). (Ilia)</li>
+<li><?php bugfix(49289); ?> (bcmath module doesn't compile with phpize configure). (Jani)</li>
+<li><?php bugfix(49286); ?> (php://input (php_stream_input_read) is broken). (Jani)</li>
+<li><?php bugfix(49269); ?> (Ternary operator fails on Iterator object when used inside foreach declaration). (Etienne, Dmitry)</li>
+<li><?php bugfix(49236); ?> (Missing PHP_SUBST(PDO_MYSQL_SHARED_LIBADD)). (Jani)</li>
+<li><?php bugfix(49223); ?> (Inconsistency using get_defined_constants). (Garrett)</li>
+<li><?php bugfix(49193); ?> (gdJpegGetVersionString() inside gd_compact identifies wrong type in declaration). (Ilia)</li>
+<li><?php bugfix(49183); ?> (dns_get_record does not return NAPTR records). (Pierre)</li>
+<li><?php bugfix(49144); ?> (Import of schema from different host transmits original authentication details). (Dmitry)</li>
+<li><?php bugfix(49142); ?> (crash when exception thrown from __tostring()). (David Soria Parra)</li>
+<li><?php bugfix(49986); ?> (Missing ICU DLLs on windows package). (Pierre)</li>
+<li><?php bugfix(49132); ?> (posix_times returns false without error). (phpbugs at gunnu dot us)</li>
+<li><?php bugfix(49125); ?> (Error in dba_exists C code). (jdornan at stanford dot edu)</li>
+<li><?php bugfix(49122); ?> (undefined reference to mysqlnd_stmt_next_result on compile with --with-mysqli and MySQL 6.0). (Jani)</li>
+<li><?php bugfix(49108); ?> (2nd scan_dir produces segfault). (Felipe)</li>
+<li><?php bugfix(49098); ?> (mysqli segfault on error). (Rasmus)</li>
+<li><?php bugfix(49095); ?> (proc_get_status['exitcode'] fails on win32). (Felipe)</li>
+<li><?php bugfix(49092); ?> (ReflectionFunction fails to work with functions in fully qualified namespaces). (Kalle, Jani)</li>
+<li><?php bugfix(49074); ?> (private class static fields can be modified by using reflection). (Jani)</li>
+<li><?php bugfix(49072); ?> (feof never returns true for damaged file in zip). (Pierre)</li>
+<li><?php bugfix(49065); ?> ("disable_functions" php.ini option does not work on  Zend extensions). (Stas)</li>
+<li><?php bugfix(49064); ?> (--enable-session=shared does not work: undefined symbol: php_url_scanner_reset_vars). (Jani)</li>
+<li><?php bugfix(49056); ?> (parse_ini_file() regression in 5.3.0 when using non-ASCII strings as option keys). (Jani)</li>
+<li><?php bugfix(49052); ?> (context option headers freed too early when using --with-curlwrappers). (Jani)</li>
+<li><?php bugfix(49047); ?> (The function touch() fails on directories on Windows). (Pierre)</li>
+<li><?php bugfix(49032); ?> (SplFileObject::fscanf() variables passed by reference). (Jani)</li>
+<li><?php bugfix(49027); ?> (mysqli_options() doesn't work when using mysqlnd). (Andrey)</li>
+<li><?php bugfix(49026); ?> (proc_open() can bypass safe_mode_protected_env_vars restrictions). (Ilia)</li>
+<li><?php bugfix(49012); ?> (phar tar signature algorithm reports as Unknown (0) in getSignature() call). (Greg)</li>
+<li><?php bugfix(49020); ?> (phar misinterprets ustar long filename standard). (Greg)</li>
+<li><?php bugfix(49018); ?> (phar tar stores long filenames wit prefix/name reversed). (Greg)</li>
+<li><?php bugfix(49014); ?> (dechunked filter broken when serving more than 8192 bytes in a chunk). (andreas dot streichardt at globalpark dot com, Ilia)</li>
+<li><?php bugfix(49000); ?> (PHP CLI in Interactive mode (php -a) crashes  when including files from function). (Stas)</li>
+<li><?php bugfix(48994); ?> (zlib.output_compression does not output HTTP headers when set to a string value). (Jani)</li>
+<li><?php bugfix(48980); ?> (Crash when compiling with pdo_firebird). (Felipe)</li>
+<li><?php bugfix(48962); ?> (cURL does not upload files with specified filename). (Ilia)</li>
+<li><?php bugfix(48929); ?> (Double \r\n after HTTP headers when "header" context option is an array). (David Zülke)</li>
+<li><?php bugfix(48913); ?> (Too long error code strings in pdo_odbc driver). (naf at altlinux dot ru, Felipe)</li>
+<li><?php bugfix(48912); ?> (Namespace causes unexpected strict behaviour with extract()). (Dmitry)</li>
+<li><?php bugfix(48909); ?> (Segmentation fault in mysqli_stmt_execute()). (Andrey)</li>
+<li><?php bugfix(48899); ?> (is_callable returns true even if method does not exist in parent class). (Felipe)</li>
+<li><?php bugfix(48893); ?> (Problems compiling with Curl). (Felipe)</li>
+<li><?php bugfix(48872); ?> (string.c: errors: duplicate case values). (Kalle)</li>
+<li><?php bugfix(48854); ?> (array_merge_recursive modifies arrays after first one). (Felipe)</li>
+<li><?php bugfix(48805); ?> (IPv6 socket transport is not working). (Ilia)</li>
+<li><?php bugfix(48802); ?> (printf() returns incorrect outputted length). (Jani)</li>
+<li><?php bugfix(48880); ?> (Random Appearing open_basedir problem). (Rasmus, Gwynne)</li>
+<li><?php bugfix(48791); ?> (open office files always reported as corrupted). (Greg)</li>
+<li><?php bugfix(48788); ?> (RecursiveDirectoryIterator doesn't descend into symlinked directories). (Ilia)</li>
+<li><?php bugfix(48783); ?> (make install will fail saying phar file exists). (Greg)</li>
+<li><?php bugfix(48774); ?> (SIGSEGVs when using curl_copy_handle()). (Sriram Natarajan)</li>
+<li><?php bugfix(48771); ?> (rename() between volumes fails and reports no error on  Windows). (Pierre)</li>
+<li><?php bugfix(48768); ?> (parse_ini_*() crash with INI_SCANNER_RAW). (Jani)</li>
+<li><?php bugfix(48763); ?> (ZipArchive produces corrupt archive). (dani dot church at  gmail dot com, Pierre)</li>
+<li><?php bugfix(48762); ?> (IPv6 address filter still rejects valid address). (Felipe)</li>
+<li><?php bugfix(48757); ?> (ReflectionFunction::invoke() parameter issues). (Kalle)</li>
+<li><?php bugfix(48754); ?> (mysql_close() crash php when no handle specified). (Johannes, Andrey)</li>
+<li><?php bugfix(48752); ?> (Crash during date parsing with invalid date). (Pierre)</li>
+<li><?php bugfix(48746); ?> (Unable to browse directories within Junction Points). (Pierre, Kanwaljeet Singla)</li>
+<li><?php bugfix(48745); ?> (mysqlnd: mysql_num_fields returns wrong column count for mysql_list_fields). (Andrey)</li>
+<li><?php bugfix(48740); ?> (PHAR install fails when INSTALL_ROOT is not the final install location). (james dot cohen at digitalwindow dot com, Greg)</li>
+<li><?php bugfix(48733); ?> (CURLOPT_WRITEHEADER|CURLOPT_FILE|CURLOPT_STDERR warns on files that have been opened with r+). (Ilia)</li>
+<li><?php bugfix(48719); ?> (parse_ini_*(): scanner_mode parameter is not checked for sanity). (Jani)</li>
+<li><?php bugfix(48718); ?> (FILTER_VALIDATE_EMAIL does not allow numbers in domain   components). (Ilia)</li>
+<li><?php bugfix(48681); ?> (openssl signature verification for tar archives broken). (Greg)</li>
+<li><?php bugfix(48660); ?> (parse_ini_*(): dollar sign as last character of value fails). (Jani)</li>
+<li><?php bugfix(48645); ?> (mb_convert_encoding() doesn't understand hexadecimal html-entities). (Moriyoshi)</li>
+<li><?php bugfix(48637); ?> ("file" fopen wrapper is overwritten when using --with-curlwrappers). (Jani)</li>
+<li><?php bugfix(48608); ?> (Invalid libreadline version not detected during configure). (Jani)</li>
+<li><?php bugfix(48400); ?> (imap crashes when closing stream opened with OP_PROTOTYPE flag). (Jani)</li>
+<li><?php bugfix(48377); ?> (error message unclear on converting phar with existing file). (Greg)</li>
+<li><?php bugfix(48247); ?> (Infinite loop and possible crash during startup with errors when errors are logged). (Jani)</li>
+<li><?php bugfix(48198); ?> error: 'MYSQLND_LLU_SPEC' undeclared. Cause for #48780 and #46952 - both fixed too. (Andrey)</li>
+<li><?php bugfix(48189); ?> (ibase_execute error in return param). (Kalle)</li>
+<li><?php bugfix(48182); ?> (ssl handshake fails during asynchronous socket connection). (Sriram Natarajan)</li>
+<li><?php bugfix(48116); ?> (Fixed build with Openssl 1.0). (Pierre,  Al dot Smith at aeschi dot ch dot eu dot org)</li>
+<li><?php bugfix(48057); ?> (Only the date fields of the first row are fetched, others are empty). (info at programmiernutte dot net)</li>
+<li><?php bugfix(47481); ?> (natcasesort() does not sort extended ASCII characters correctly). (Herman Radtke)</li>
+<li><?php bugfix(47351); ?> (Memory leak in DateTime). (Derick, Tobias John)</li>
+<li><?php bugfix(47273); ?> (Encoding bug in SoapServer-&gt;fault). (Dmitry)</li>
+<li><?php bugfix(46682); ?> (touch() afield returns different values on windows). (Pierre)</li>
+<li><?php bugfix(46614); ?> (Extended MySQLi class gives incorrect empty() result). (Andrey)</li>
+<li><?php bugfix(46020); ?> (with Sun Java System Web Server 7.0 on HPUX, #define HPUX). (Uwe Schindler)</li>
+<li><?php bugfix(45905); ?> (imagefilledrectangle() clipping error). (markril at hotmail dot com, Pierre)</li>
+<li><?php bugfix(45554); ?> (Inconsistent behavior of the u format char). (Derick)</li>
+<li><?php bugfix(45141); ?> (setcookie will output expires years of &gt;4 digits). (Ilia)</li>
+<li><?php bugfix(44683); ?> (popen crashes when an invalid mode is passed). (Pierre)</li>
+<li><?php bugfix(43510); ?> (stream_get_meta_data() does not return same mode as used in fopen). (Jani)</li>
+<li><?php bugfix(42434); ?> (ImageLine w/ antialias = 1px shorter). (wojjie at gmail dot com, Kalle)</li>
+<li><?php bugfix(40013); ?> (php_uname() does not return nodename on Netware (Guenter Knauf)</li>
+<li><?php bugfix(38091); ?> (Mail() does not use FQDN when sending SMTP helo). (Kalle, Rick Yorgason)</li>
+<li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)</li>
+<li><?php bugfix(27051); ?> (Impersonation with FastCGI does not exec process as impersonated user). (Pierre)</li>
+<li>Fixed PECL bug #16842 (oci_error return false when NO_DATA_FOUND is raised). (Chris Jones)</li>
+
+</ul>
+<hr />
+
 <a name="5.2.11"></a>
 <h3>Version 5.2.11</h3>
 <b>16-September-2009</b>
