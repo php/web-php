@@ -33,7 +33,7 @@ large number of bug fixes.
   <li>Fixed crash when instantiating PDORow and PDOStatement through Reflection.</li>
   <li>Fixed bug #49910 (no support for ././@LongLink for long filenames in phar
   tar support).</li>
-  <li><?php bugfix(49908); ?> (throwing exception in __autoload crashes when interface is not defined).</li>
+  <li>Fixed bug #49908 (throwing exception in __autoload crashes when interface is not defined).</li>
   <li>Around 100 other bug fixes</li>
 </ul>
 
