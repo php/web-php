@@ -75,6 +75,11 @@ site_header("Thanks");
 </p>
 
 <p>
+ <a href="http://www.34sp.com/">34SP.com</a> provides the servers and bandwidth
+ used for buildbot testing.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.
