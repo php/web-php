@@ -78,26 +78,30 @@ function manual_header()
     // }}}
 
     manual_sidebar();
-    site_header("$title - Manual", array(
-		"link" => array(
-			"contents"         => $PGI["home"][0],
-			"index"            => $PGI["up"][0],
-			"prev"             => $PGI["prev"][0],
-			"next"             => $PGI["next"][0],
-			"schema.dc"        => "http://purl.org/dc/elements/1.1/",
-			"schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
-            array(
-                  "rev"  => "canonical",
-                  "rel"  => "self alternate shorter shorturl shortlink",
-                  "href" => "http://php.net/" . $shorturl,
-            ),
-            array(
-                  "rel" => "license",
-                  "href" => "http://creativecommons.org/licenses/by/3.0/",
-                  "about" => "#content",
-            ),
+    $link = array(
+        "contents"         => $PGI["home"][0],
+        "index"            => $PGI["up"][0],
+        "prev"             => $PGI["prev"][0],
+        "next"             => $PGI["next"][0],
+        "schema.dc"        => "http://purl.org/dc/elements/1.1/",
+        "schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
+        array(
+            "rev"  => "canonical",
+            "rel"  => "self alternate shorter shorturl shortlink",
+            "href" => "http://php.net/" . $shorturl,
+        ),
+        array(
+            "rel" => "license",
+            "href" => "http://creativecommons.org/licenses/by/3.0/",
+            "about" => "#content",
+        ),
+    );
+    if (isset($PGI["extra_header_links"])) {
+        $link[] = (array)$PGI["extra_header_links"];
+    }
 
-		),
+    site_header("$title - Manual", array(
+        "link" => $link,
 		"profile" => "http://purl.org/NET/erdf/profile",
 		"extra_headers" => array(
 			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
