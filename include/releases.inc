@@ -2,6 +2,82 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.2.11' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_11.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.11.tar.bz2',
+          'name' => 'PHP 5.2.11 (tar.bz2)',
+          'md5' => '286bf34630f5643c25ebcedfec5e0a09',
+          'date' => '17 September 2009',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.11.tar.gz',
+          'name' => 'PHP 5.2.11 (tar.gz)',
+          'md5' => '0223d71f0d6987c06c54b7557ff47f1d',
+          'date' => '17 September 2009',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.11-Win32.zip',
+          'name' => 'PHP 5.2.11 zip package',
+          'md5' => 'adac50ae1449b76f10ff1865bb4f94f1',
+          'date' => '17 September 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.11-win32-installer.msi',
+          'name' => 'PHP 5.2.11 installer',
+          'md5' => '3cedc71fc90f88239d629cdb735d87c0',
+          'date' => '17 September 2009',
+          'note' => '',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.11-Win32.zip',
+          'name' => 'PHP 5.2.11 Win32 Debug Pack',
+          'md5' => '38cb1b783dd08dff41f445b582d2ffed',
+          'date' => '17 September 2009',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-5.2.11-nts-Win32.zip',
+          'name' => 'PHP 5.2.11 Non-thread-safe zip package',
+          'md5' => 'b724475450a13af4cd99c518fd495340',
+          'date' => '17 September 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.11-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.11 Non-thread-safe installer',
+          'md5' => '4fe1344093e26c2a51a82094bac131ad',
+          'date' => '17 September 2009',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.11-nts-Win32.zip',
+          'name' => 'PHP 5.2.11 Non-thread-safe Win32 Debug Pack',
+          'md5' => '19d026d6e4322dc64694010ae254e978',
+          'date' => '17 September 2009',
+        ),
+      ),
+      'date' => '17 September 2009',
+      'museum' => true,
+    ),
     '5.3.0' => 
     array (
       'announcement' => 
@@ -26,7 +102,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '30 June 2009',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.10' => 
     array (
@@ -102,7 +178,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '18 June 2009',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.9' => 
     array (

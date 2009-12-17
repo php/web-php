@@ -176,6 +176,91 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <hr />
 
+<a name="5.2.12"></a>
+<h3>Version 5.2.12</h3>
+<b>17-December-2009</b>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Fixed a safe_mode bypass in tempnam() identified by Grzegorz Stachowiak. (Rasmus)</li>
+		<li>Fixed a open_basedir bypass in posix_mkfifo() identified by Grzegorz Stachowiak. (Rasmus)</li>
+		<li>Added "max_file_uploads" INI directive, which can be set to limit the number of file uploads per-request to 20 by default, to prevent possible DOS via temporary file exhaustion. (Ilia)</li>
+		<li>Added protection for $_SESSION from interrupt corruption and improved "session.save_path" check, identified by Stefan Esser. (Stas)</li>
+		<li><?php bugfix(49785); ?> (insufficient input string validation of htmlspecialchars()). (Moriyoshi, hello at iwamot dot com)</li>
+	</ul>
+</li>
+
+<li>Updated timezone database to version 2009.19 (2009s). (Derick)</li>
+
+<li>Added LIBXML_PARSEHUGE constant to overrides the maximum text size of a single text node when using libxml2.7.3+. (Kalle)</li>
+
+<li>Changed "post_max_size" php.ini directive to allow unlimited post size by setting it to 0. (Rasmus)</li>
+
+<li>Fixed error_log() to be binary safe when using message_type 3. (Jani)</li>
+<li>Fixed unnecessary invocation of setitimer when timeouts have been disabled. (Arvind Srinivasan)</li>
+<li>Fixed crash in com_print_typeinfo when an invalid typelib is given. (Pierre)</li>
+<li>Fixed crash in SQLiteDatabase::ArrayQuery() and SQLiteDatabase::SingleQuery() when calling using Reflection. (Felipe)</li>
+<li>Fixed crash when instantiating PDORow and PDOStatement through Reflection. (Felipe)</li>
+<li>Fixed memory leak in openssl_pkcs12_export_to_file(). (Felipe)</li>
+
+<li><?php bugfix(50445); ?> (PDO-ODBC stored procedure call from Solaris 64-bit causes seg fault). (davbrown4 at yahoo dot com, Felipe)</li>
+<li><?php bugfix(50345); ?> (nanosleep not detected properly on some solaris versions). (Jani)</li>
+<li><?php bugfix(50323); ?> (Allow use of ; in values via ;; in PDO DSN). (Ilia, Pierrick)</li>
+<li><?php bugfix(50285); ?> (xmlrpc does not preserve keys in encoded indexed arrays). (Felipe)</li>
+<li><?php bugfix(50282); ?> (xmlrpc_encode_request() changes object into array in calling function). (Felipe)</li>
+<li><?php bugfix(50266); ?> (conflicting types for llabs). (Jani)</li>
+<li><?php bugfix(50255); ?> (isset() and empty() silently casts array to object). (Felipe)</li>
+<li><?php bugfix(50219); ?> (soap call Segmentation fault on a redirected url). (Pierrick)</li>
+<li><?php bugfix(50209); ?> (Compiling with libedit cannot find readline.h). (tcallawa at redhat dot com)</li>
+<li><?php bugfix(50207); ?> (segmentation fault when concatenating very large strings on 64bit linux). (Ilia)</li>
+<li><?php bugfix(50195); ?> (pg_copy_to() fails when table name contains schema. (Ilia)</li>
+<li><?php bugfix(50185); ?> (ldap_get_entries() return false instead of an empty array when there is no error). (Jani)</li>
+<li><?php bugfix(50174); ?> (Incorrectly matched docComment). (Felipe)</li>
+<li><?php bugfix(50168); ?> (FastCGI fails with wrong error on HEAD request to non-existent file). (Dmitry)</li>
+<li><?php bugfix(50162); ?> (Memory leak when fetching timestamp column from Oracle database). (Felipe)</li>
+<li><?php bugfix(50158); ?> (FILTER_VALIDATE_EMAIL fails with valid addresses containing = or ?). (Pierrick)</li>
+<li><?php bugfix(50073); ?> (parse_url() incorrect when ? in fragment). (Ilia)</li>
+<li><?php bugfix(50006); ?> (Segfault caused by uksort()). (Felipe)</li>
+<li><?php bugfix(50005); ?> (Throwing through Reflection modified Exception object makes segmentation fault). (Felipe)</li>
+<li><?php bugfix(49990); ?> (SNMP3 warning message about security level printed twice). (Jani)</li>
+<li><?php bugfix(49985); ?> (pdo_pgsql prepare() re-use previous aborted transaction). (ben dot pineau at gmail dot com, Ilia, Matteo)</li>
+<li><?php bugfix(49972); ?> (AppendIterator undefined function crash). (Johannes)</li>
+<li><?php bugfix(49921); ?> (Curl post upload functions changed). (Ilia)</li>
+<li><?php bugfix(49855); ?> (import_request_variables() always returns NULL). (Ilia, sjoerd at php dot net)</li>
+<li><?php bugfix(49847); ?> (exec() fails to return data inside 2nd parameter, given output lines &gt;4095 bytes). (Ilia)</li>
+<li><?php bugfix(49809); ?> (time_sleep_until() is not available on OpenSolaris). (Jani)</li>
+<li><?php bugfix(49757); ?> (long2ip() can return wrong value in a multi-threaded applications). (Ilia, Florian Anderiasch)</li>
+<li><?php bugfix(49738); ?> (calling mcrypt() after mcrypt_generic_deinit() crashes). (Sriram Natarajan)</li>
+<li><?php bugfix(49719); ?> (ReflectionClass::hasProperty returns true for a private property in base class). (Felipe)</li>
+<li><?php bugfix(49698); ?> (Unexpected change in strnatcasecmp()). (Rasmus)</li>
+<li><?php bugfix(49677); ?> (ini parser crashes with apache2 and using ${something} ini variables). (Jani)</li>
+<li><?php bugfix(49660); ?> (libxml 2.7.3+ limits text nodes to 10MB). (Felipe)</li>
+<li><?php bugfix(49647); ?> (DOMUserData does not exist). (Rob)</li>
+<li><?php bugfix(49630); ?> (imap_listscan() function missing). (Felipe)</li>
+<li><?php bugfix(49627); ?> (error_log to specified file does not log time according to date.timezone). (Dmitry)</li>
+<li><?php bugfix(49578); ?> (make install-pear fails). (Hannes)</li>
+<li><?php bugfix(49536); ?> (mb_detect_encoding() returns incorrect results when mbstring.strict_mode is turned on). (Moriyoshi)</li>
+<li><?php bugfix(49531); ?> (CURLOPT_INFILESIZE sometimes causes warning "CURLPROTO_FILE cannot be set"). (Felipe)</li>
+<li><?php bugfix(49528); ?> (UTF-16 strings prefixed by BOMs wrongly converted). (Moriyoshi)</li>
+<li><?php bugfix(49521); ?> (PDO fetchObject sets values before calling constructor). (Pierrick)</li>
+<li><?php bugfix(49517); ?> (cURL's CURLOPT_FILE prevents file from being deleted after fclose()). (Ilia)</li>
+<li><?php bugfix(49472); ?> (Constants defined in Interfaces can be overridden). (Felipe)</li>
+<li><?php bugfix(49354); ?> (mb_strcut() cuts wrong length when offset is in the middle of a multibyte character). (Moriyoshi)</li>
+<li><?php bugfix(49332); ?> (Build error with Snow Leopard). (Scott)</li>
+<li><?php bugfix(49244); ?> (Floating point NaN cause garbage characters). (Sjoerd)</li>
+<li><?php bugfix(49174); ?> (crash when extending PDOStatement and trying to set queryString property). (Felipe)</li>
+<li><?php bugfix(49098); ?> (mysqli segfault on error). (Rasmus)</li>
+<li><?php bugfix(48805); ?> (IPv6 socket transport is not working). (Ilia)</li>
+<li><?php bugfix(48764); ?> (PDO_pgsql::query() always uses implicit prepared statements if v3 proto available). (Matteo, Mark Kirkwood)</li>
+<li><?php bugfix(47848); ?> (importNode doesn't preserve attribute namespaces). (Rob)</li>
+<li><?php bugfix(45120); ?> (PDOStatement-&gt;execute() returns true then false for same statement). (Pierrick)</li>
+<li><?php bugfix(34852); ?> (Failure in odbc_exec() using oracle-supplied odbc driver). (tim dot tassonis at trivadis dot com)</li>
+
+</li>
+
+</ul>
+<hr />
+
 <a name="5.2.11"></a>
 <h3>Version 5.2.11</h3>
 <b>16-September-2009</b>
