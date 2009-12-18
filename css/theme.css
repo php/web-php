@@ -1,0 +1,118 @@
+/**
+ *
+ *  COLORS:       | HEX     | HSB
+ * ---------------+---------+---------------
+ *  light-purple  | #c3add9 | 270, 20%, 85%
+ * ---------------+---------+---------------
+ *  medium-purple | #987db3 | 270, 30%, 70%
+ * ---------------+---------+---------------
+ *  dark-purple   | #604080 | 270, 50%, 50%
+ * ---------------+---------+---------------
+ *
+ */
+
+body * {
+	border-color: #c3add9;
+}
+
+body, input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.4;   
+    background: url('../img/sprites.png') repeat-x 0px -990px;
+}
+
+a:link,
+a:visited {
+	color: #528918;
+}
+
+a:hover {
+	color: #355c0b;
+}
+
+#headnav {
+	line-height: 1;
+	background: url('../img/sprites.png') repeat-x 0px -100px;
+}
+
+#headhome a {
+	background: url(../img/sprites.png) 0 0;
+}
+
+#headnav li.parent .children {
+    background: url('../img/shade.png');
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#headnav li.parent .children .children-1 {
+	background: #fff;
+	border-color: #604080;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#headnav li.parent a.menu-link {
+	background: url(../img/sprites.png) no-repeat 100% 7px;
+}
+
+#headnav li.parent.current a.menu-link {
+	background-position: 100% -23px;
+}
+
+#headnav a.menu-link {
+	color: #444;
+	border-color: #987db3;
+	font-weight: bold;
+}
+
+#headnav li#headsearch {
+    border-color: #987db3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#headsearch-keywords {
+	color: #666;
+	background: transparent;
+}
+
+#headsearch-keywords:focus {
+	color: #000;
+}
+
+#headsearch-submit {
+    border-color: #987db3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;    
+	background: #604080;
+	color: #fff;
+}
+
+#headnav li dl {
+	line-height: 1;
+}
+
+#headnav li dl dd:hover,
+#headnav li dl dt:hover {
+	background: #eee;
+}
+
+#headnav li.current a.menu-link,
+#headnav li a.menu-link:hover {
+	border-color: #604080;
+}
+
+#headnav li.current a.menu-link {
+	color: #000;
+}
+
+h1 {
+	font-size:  40px;
+	font-weight: normal;
+	color: #666;
+	letter-spacing: -0.04em;
+}

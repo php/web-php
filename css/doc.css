@@ -1,0 +1,40 @@
+.refentry {
+    position: relative;
+}
+
+h3.title {
+    border-top-style: solid;
+    border-top-width: 3px;
+    padding-top: 6px;
+    margin-top: 2em;
+}
+
+.methodsynopsis {
+    border-top: 3px solid #ddd;
+    background: #efefef;
+    margin: 1em 2em;
+    padding: 10px 20px;
+    color: #666;
+    font-family: monospace;
+}
+
+.methodname b {
+    color: #000;
+}
+
+.parameter {
+    color: #604080;
+    font-weight: bold;
+}
+
+.initializer {
+    color: #000;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {
+    padding: 2px 5px;
+}
