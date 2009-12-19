@@ -153,3 +153,42 @@ h1 {
 	float: left;
 	width: 730px;
 }
+
+/**
+ * Auto-complete (.ac)
+ */
+.ac_results {
+	padding: 1px 3px 3px 3px;
+	overflow: hidden;
+	z-index: 99999;
+    margin: 0 0 0 1px;
+}
+
+.ac_results ul {
+	list-style-position: outside;
+	list-style: none;
+	padding: 0 0 5px 0;
+	margin: 0;
+	border: 1px solid;
+    border-top: none;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 12px;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 16px;
+	overflow: hidden;
+}
