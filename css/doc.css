@@ -3,6 +3,7 @@
 }
 
 h3.title {
+    font-size: 1.5em;
     border-top-style: solid;
     border-top-width: 3px;
     padding-top: 6px;
@@ -12,7 +13,7 @@ h3.title {
 .methodsynopsis {
     border-top: 3px solid #ddd;
     background: #efefef;
-    margin: 1em 2em;
+    margin: 1em 2em 1.3em 2em;
     padding: 10px 20px;
     color: #666;
     font-family: monospace;
@@ -37,4 +38,20 @@ th {
 
 td, th {
     padding: 2px 5px;
+}
+
+.refentry .description p {
+    margin: 0.7em 0;
+}
+
+.refentry .parameters dt {
+    font-size: 1.2em;
+}
+
+.refentry .parameters dd {
+    margin-top: -0.7em;
+}
+
+.refentry .parameters p {
+    margin: 0.7em 0;
 }

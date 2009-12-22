@@ -44,15 +44,19 @@ a:hover {
 
 #headnav li.parent .children {
     background: url('../img/shade.png');
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
 }
 
 #headnav li.parent .children .children-1 {
     background: #fff;
     border-color: #604080;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
 }
 
 #headnav li.parent a.menu-link {
@@ -129,7 +133,7 @@ h1 {
 }
 
 .ac_results ul {
-    border-color: #987db3;
+    border-color: #604080;
     background-color: white;
     -moz-border-radius-bottomleft: 5px;
     -moz-border-radius-bottomright: 5px;

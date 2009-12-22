@@ -3,27 +3,27 @@ body, input, textarea {
 }
 
 h1 {
-	margin-bottom: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 #headnav {
-	padding: 0 25px;
+    padding: 0 25px;
     height: 72px;
 }
 
 #headmenu {
-	width: 920px;
-	margin: 0 auto;
+    width: 920px;
+    margin: 0 auto;
 }
 
 #headnav h6,
 #headnav li,
 #headsearch {
-	display: block;
-	float: left;
-	margin: 0;
-	list-style: none;
-	padding: 18px 0 0 0;
+    display: block;
+    float: left;
+    margin: 0;
+    list-style: none;
+    padding: 18px 0 0 0;
 }
 
 #headnav li#headhome {
@@ -31,164 +31,164 @@ h1 {
 
 #headnav li#headhome a,
 #headnav li#headhome a:hover {
-	width: 150px;
-	height: 16px;
-	text-indent: -2000em;
-	border: none;
+    width: 150px;
+    height: 16px;
+    text-indent: -2000em;
+    border: none;
 }
 
 #headnav li#headsearch {
-	margin: 22px 0 0 20px;
+    margin: 22px 0 0 20px;
     padding: 2px;
-	float: right;
-	border: 1px solid;
+    float: right;
+    border: 1px solid;
 }
 
 #headsearch-keywords {
-	border: 0;
-	padding: 2px;
-	width: 14em;
+    border: 0;
+    padding: 2px;
+    width: 14em;
 }
 
 #headsearch-submit {
-	border: 0;
-	margin: 1px;
-	padding: 3px 6px;
-	font-weight: bold;
+    border: 0;
+    margin: 1px;
+    padding: 3px 6px;
+    font-weight: bold;
 }
 
 #headnav a.menu-link,
 #headnav h6 a {
-	display: block;
-	padding: 10px;
-	margin: 0;
-	border-bottom: 12px solid;
+    display: block;
+    padding: 10px;
+    margin: 0;
+    border-bottom: 12px solid;
 }
 
 #headnav a.menu-link,
 #headnav li.current a.menu-link {
-	padding: 12px 15px 17px 15px;
+    padding: 12px 15px 17px 15px;
 }
 
 #headnav li.parent a.menu-link {
-	padding-right: 22px;
+    padding-right: 22px;
 }
 
 #headnav li.parent .children {
-	display: none;
-	z-index: 1000;
+    display: none;
+    z-index: 1000;
     position: absolute;
-	top: 50px;
-	left: 50%;
+    top: 71px;
+    left: 50%;
     margin-left: -470px;
-	width: 940px;
-	border-style: solid;
+    width: 940px;
 }
 
 #headnav li.parent .children .children-1 {
-    margin: 5px;
+    margin: 1px 5px 5px 5px;
     border: 2px solid;
-	line-height: 1.4;
-	padding: 10px 15px 15px 15px;
+    border-top: none;
+    line-height: 1.4;
+    padding: 10px 15px 15px 15px;
 }
 
 #headnav li.parent .children .children-2 {
-	width: 920px;
-	margin: 0 auto;
+    width: 920px;
+    margin: 0 auto;
 }
 
 .children dl {
-	float: left;
-	width: 195px;
-	padding-right: 15px;
+    float: left;
+    width: 195px;
+    padding-right: 15px;
 }
 
 .children dl a {
-	display: block;
-	padding: 4px;
+    display: block;
+    padding: 4px;
 }
 
 .children dt {
-	font-weight: bold;
-	margin-top: 1em;
-	border-top-width: 3px;
-	border-top-style: solid;
+    font-weight: bold;
+    margin-top: 1em;
+    border-top-width: 3px;
+    border-top-style: solid;
 }
 
 .children dd {
-	padding: 0 0 0 10px;
-	font-size: 11px;
+    padding: 0 0 0 10px;
+    font-size: 11px;
 }
 
 #layout {
-	padding: 25px 0;
-	width: 920px;
-	margin: 0 auto;
+    padding: 25px 0;
+    width: 920px;
+    margin: 0 auto;
 }
 
 .layout-menu {
-	float: left;
-	width: 160px;
-	padding-right: 30px;
+    float: left;
+    width: 160px;
+    padding-right: 30px;
 }
 
 .layout-menu li a {
-	display: block;
-	border-top-width: 3px;
-	border-top-style: solid;
-	padding: 4px 0;
-	margin-top: 1em;
-	font-weight: bold;
+    display: block;
+    border-top-width: 3px;
+    border-top-style: solid;
+    padding: 4px 0;
+    margin-top: 1em;
+    font-weight: bold;
 }
 
 .layout-menu li li a {
-	border: none;
-	font-size: 11px;
-	padding: 1px 0 1px 20px;
-	margin: 0;
-	font-weight: normal;
+    border: none;
+    font-size: 11px;
+    padding: 1px 0 1px 20px;
+    margin: 0;
+    font-weight: normal;
 }
 
 .layout-content {
-	float: left;
-	width: 730px;
+    float: left;
+    width: 730px;
 }
 
 /**
  * Auto-complete (.ac)
  */
 .ac_results {
-	padding: 1px 3px 3px 3px;
-	overflow: hidden;
-	z-index: 99999;
+    padding: 1px 3px 3px 3px;
+    overflow: hidden;
+    z-index: 99999;
     margin: 0 0 0 1px;
 }
 
 .ac_results ul {
-	list-style-position: outside;
-	list-style: none;
-	padding: 0 0 5px 0;
-	margin: 0;
-	border: 1px solid;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0 0 5px 0;
+    margin: 0;
+    border: 1px solid;
     border-top: none;
 }
 
 .ac_results li {
-	margin: 0px;
-	padding: 2px 5px;
-	cursor: default;
-	display: block;
-	/* 
-	if width will be 100% horizontal scrollbar will apear 
-	when scroll mode will be used
-	*/
-	/*width: 100%;*/
-	font: menu;
-	font-size: 12px;
-	/* 
-	it is very important, if line-height not setted or setted 
-	in relative units scroll will be broken in firefox
-	*/
-	line-height: 16px;
-	overflow: hidden;
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: default;
+    display: block;
+    /* 
+    if width will be 100% horizontal scrollbar will apear 
+    when scroll mode will be used
+    */
+    /*width: 100%;*/
+    font: menu;
+    font-size: 12px;
+    /* 
+    it is very important, if line-height not setted or setted 
+    in relative units scroll will be broken in firefox
+    */
+    line-height: 16px;
+    overflow: hidden;
 }

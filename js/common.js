@@ -32,7 +32,7 @@ $(document).ready(function() {
                 alert("User selected: " + item['name'] + "\n" +
                       "Direct user to: " + item['page']);
             }
-        );
+        );        
     });
 
 });
