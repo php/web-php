@@ -76,7 +76,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '17 September 2009',
-      'museum' => true,
+      'museum' => false,
     ),
     '5.3.0' => 
     array (
