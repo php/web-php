@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo Web Techno Conference</title>
+  <id>http://www.php.net/archive/2010.php#id2010-01-16-1</id>
+  <published>2010-01-16T14:25:31+01:00</published>
+  <updated>2010-01-16T14:25:31+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-03-08</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-01-16-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca/en" title="ConFoo Web Techno Conference">logo_confoo_300_95.gif</default:newsImage>
+  <link href="http://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>PHP Quebec and the ConFoo team is pleased to announce the schedule of
+     the <a href="http://confoo.ca/en">ConFoo Web Techno Conference</a>.
+     With over 130 presentations in 8 rooms, ConFoo brings you the best of
+     Web development.
+     </p>
+     <p>
+     The event will take place on March 8th to 12th in Montreal, at the
+     prestigious Hilton Bonaventure Hotel.
+     </p>
+     <p>
+     Over 100 specialists will be present at the conference to share their
+     knowledge during talks and training. Among them will be:
+     <b>Rasmus Lerdorf, Terry Chay, Chris Shiflett and Morgan Tocker</b>
+     </p>
+     <p>You would not want to miss the following presentations:
+     <b>HTML5: Where Are We Now? (Mark Pilgrim), Andrei's Regex Clinic
+     (Andrei Zmievski), Security-Centered Design (Chris Shiflett) and Welcome
+     to the Wild Wild Web (Carl Mercier)</b>
+     </p>
+     <p>
+     <a href="http://confoo.ca/en/register">Register</a> online before
+     January 22nd and save 200$!
+     <br/>
+     Looking forward to see you at the conference.
+     </p>
+    </div>
+  </content>
+</entry>
