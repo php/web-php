@@ -299,6 +299,16 @@ dead domain as 2007/02/07
  </li>
 
  <li>
+  <strong>Hebrew</strong>
+  <ul>
+   <li>
+    <a href="http://www.learnphp.co.il">http://www.learnphp.co.il</a><br />
+    Leading PHP teaching site in Israel, with dozens of papers around PHP and a security" category, teaching the basis to a valid and safe coding in PHP.
+   </li>
+  </ul>
+ </li>
+
+ <li>
   <strong>Hungarian</strong>
   <ul>
    <li>
@@ -309,16 +319,6 @@ dead domain as 2007/02/07
     <a href="http://weblabor.hu/">Weblabor</a><br />
     Fresh news, articles, links and mailing lists from the
     world of web development and PHP
-   </li>
-  </ul>
- </li>
-
- <li>
-  <strong>Israel</strong>
-  <ul>
-   <li>
-    <a href="http://www.learnphp.co.il">http://www.learnphp.co.il</a><br />
-    Leading PHP teaching site in Israel, with dozens of papers around PHP and a security" category, teaching the basis to a valid and safe coding in PHP.
    </li>
   </ul>
  </li>
