@@ -314,6 +314,16 @@ dead domain as 2007/02/07
  </li>
 
  <li>
+  <strong>Israel</strong>
+  <ul>
+   <li>
+    <a href="http://www.learnphp.co.il">http://www.learnphp.co.il</a><br />
+    Leading PHP teaching site in Israel, with dozens of papers around PHP and a security" category, teaching the basis to a valid and safe coding in PHP.
+   </li>
+  </ul>
+ </li>
+
+ <li>
   <strong>Italian</strong>
   <ul>
    <li>
