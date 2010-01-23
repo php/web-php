@@ -272,7 +272,7 @@ if (isset($_POST['maillist'])) {
       FALSE, TRUE, FALSE, "php.qa"
     ),
     array (
-      'php-pdo', 'PDO Developmental list',
+      'pdo', 'PDO Developmental list',
       'Discuss the past, present and future of PDO',
       FALSE, FALSE, TRUE, "php.pdo"
     ),
