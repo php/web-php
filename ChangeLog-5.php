@@ -171,7 +171,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(38091); ?> (Mail() does not use FQDN when sending SMTP helo). (Kalle, Rick Yorgason)</li>
 <li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)</li>
 <li><?php bugfix(27051); ?> (Impersonation with FastCGI does not exec process as impersonated user). (Pierre)</li>
-<li>Fixed PECL bug #16842 (oci_error return false when NO_DATA_FOUND is raised). (Chris Jones)</li>
+<li><?php peclbugfix(16842) ?> (oci_error return false when NO_DATA_FOUND is raised). (Chris Jones)</li>
 
 </ul>
 <hr />
@@ -1467,7 +1467,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(37100); ?> (data is returned truncated with BINARY CURSOR). (Tony)</li>
 <li><?php bugfix(30312); ?> (crash in sybase_unbuffered_query() function). (Timm)</li>
 <li><?php bugfix(24679); ?> (pg_* functions doesn't work using schema). (Felipe)</li>
-<li><?php bugfix(14962); ?> (PECL) (::extractTo 2nd argument is not really optional). (Mark van Der Velden)</li>
+<li><?php peclbugfix(14962); ?> (::extractTo 2nd argument is not really optional). (Mark van Der Velden)</li>
 <li><?php bugfix(14032); ?> (Mail() always returns false but mail is sent). (Mikko)</li>
 
 </ul>
@@ -3377,7 +3377,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed "make test" to work for phpized extensions. (Hartmut, Jani)</li>
 <li>Fixed Apache 2 regression with sub-request handling on non-linux systems. (Ilia, Tony)</li>
 <li>Fixed PDO shutdown problem (possible infinite loop running rollback on  shutdown). (Wez)</li>
-<li>Fixed PECL bug <?php bugl(3714); ?> (PDO: beginTransaction doesn't work if you're in  auto-commit mode). (Wez)</li>
+<li><?php peclbugfix(3714); ?> (PDO: beginTransaction doesn't work if you're in  auto-commit mode). (Wez)</li>
 <li>Fixed ZTS destruction. (Marcus)</li>
 <li>Fixed __get/__set to allow recursive calls for different properties. (Dmitry)</li>
 <li>Fixed a bug where stream_get_meta_data() did not return the "uri" element  for files opened with tmpname(). (Derick)</li>
