@@ -974,8 +974,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(45120); ?> (PDOStatement-&gt;execute() returns true then false for same statement). (Pierrick)</li>
 <li><?php bugfix(34852); ?> (Failure in odbc_exec() using oracle-supplied odbc driver). (tim dot tassonis at trivadis dot com)</li>
 
-</li>
-
 </ul>
 <hr />
 
@@ -1065,7 +1063,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(44144); ?> (spl_autoload_functions() should return object instance when appropriate). (Hannes, Etienne)</li>
 <li><?php bugfix(43510); ?> (stream_get_meta_data() does not return same mode as used in fopen). (Jani)</li>
 <li><?php bugfix(42434); ?> (ImageLine w/ antialias = 1px shorter). (wojjie at gmail dot com, Kalle)</li>
-<li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)
+<li><?php bugfix(28038); ?> (Sent incorrect RCPT TO commands to SMTP server) (Garrett)</li>
 	
 </ul>
 
