@@ -13,7 +13,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.3.1"></a>
+<a name="5.3.1"></a><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
 <b>19-November-2009</b>
 <ul>
@@ -176,7 +176,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <hr />
 
-<a name="5.2.12"></a>
+<!-- }}} -->
+
+<a name="5.2.12"></a><!-- {{{ 5.2.12 -->
 <h3>Version 5.2.12</h3>
 <b>17-December-2009</b>
 <ul>
@@ -261,7 +263,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <hr />
 
-<a name="5.2.11"></a>
+<!-- }}} -->
+
+<a name="5.2.11"></a><!-- {{{ 5.2.11 -->
 <h3>Version 5.2.11</h3>
 <b>16-September-2009</b>
 <ul>
@@ -351,7 +355,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.3.0"></a>
+<!-- }}} -->
+
+<a name="5.3.0"></a><!-- {{{ 5.3.0 -->
 <h3>Version 5.3.0</h3>
 <b>30-June-2009</b>
 <ul>
@@ -1065,7 +1071,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.10"></a>
+<!-- }}} -->
+
+<a name="5.2.10"></a><!-- {{{ 5.2.10 -->
 <h3>Version 5.2.10</h3>
 <b>18-June-2009</b>
 <ul>
@@ -1186,7 +1194,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <hr />
 
-<a name="5.2.9"></a>
+<!-- }}} -->
+
+<a name="5.2.9"></a><!-- {{{ 5.2.9 -->
 <h3>Version 5.2.9</h3>
 <b>26-February-2009</b>
 <ul>
@@ -1258,7 +1268,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.8"></a>
+<!-- }}} -->
+
+<a name="5.2.8"></a><!-- {{{ 5.2.8 -->
 <h3>Version 5.2.8</h3>
 <b>08-December-2008</b>
 <ul>
@@ -1267,7 +1279,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.7"></a>
+<!-- }}} -->
+
+<a name="5.2.7"></a><!-- {{{ 5.2.7 -->
 <h3>Version 5.2.7</h3>
 <b>04-December-2008</b>
 <ul>
@@ -1462,7 +1476,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.6"></a>
+<!-- }}} -->
+
+<a name="5.2.6"></a><!-- {{{ 5.2.6 -->
 <h3>Version 5.2.6</h3>
 <b>01-May-2008</b>
 <ul>
@@ -1609,7 +1625,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<a name="5.2.5"></a>
+<!-- }}} -->
+
+<a name="5.2.5"></a><!-- {{{ 5.2.5 -->
 <h3>Version 5.2.5</h3>
 <b>08-November-2007</b>
 <ul>
@@ -1694,7 +1712,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.4"></a>
+<!-- }}} -->
+
+<a name="5.2.4"></a><!-- {{{ 5.2.4 -->
 <h3>Version 5.2.4</h3>
 <b>30-August-2007</b>
 <ul>
@@ -1866,7 +1886,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.3"></a>
+<!-- }}} -->
+
+<a name="5.2.3"></a><!-- {{{ 5.2.3 -->
 <h3>Version 5.2.3</h3>
 <b>31-May-2007</b>
 <ul>
@@ -1942,7 +1964,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.2"></a>
+<!-- }}} -->
+
+<a name="5.2.2"></a><!-- {{{ 5.2.2 -->
 <h3>Version 5.2.2</h3>
 <b>03-May-2007</b>
 <ul>
@@ -2139,7 +2163,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.1"></a>
+<!-- }}} -->
+
+<a name="5.2.1"></a><!-- {{{ 5.2.1 -->
 <h3>Version 5.2.1</h3>
 <b>08-Feb-2007</b>
 <ul>
@@ -2412,7 +2438,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.2.0"></a>
+<!-- }}} -->
+
+<a name="5.2.0"></a><!-- {{{ 5.2.0 -->
 <h3>Version 5.2.0</h3>
 <b>02-Nov-2006</b>
 <ul>
@@ -2789,7 +2817,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.1.6"></a>
+<!-- }}} -->
+
+<a name="5.1.6"></a><!-- {{{ 5.1.6 -->
 <h3>Version 5.1.6</h3>
 <b>24-Aug-2006</b>
 <ul>
@@ -2797,7 +2827,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(38488); ?> (Access to "php://stdin" and family crashes PHP on win32). (Dmitry)</li>
 </ul>
 
-<a name="5.1.5"></a>
+<!-- }}} -->
+
+<a name="5.1.5"></a><!-- {{{ 5.1.5 -->
 <h3>Version 5.1.5</h3>
 <b>17-Aug-2006</b>
 <ul>
@@ -2822,7 +2854,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(37256); ?>(php-fastcgi doesn't handle connection abort). (Dmitry)</li>
 </ul>
 
-<a name="5.1.4"></a>
+<!-- }}} -->
+
+<a name="5.1.4"></a><!-- {{{ 5.1.4 -->
 <h3>Version 5.1.4</h3>
 <b>04-May-2006</b>
 <ul>
@@ -2836,7 +2870,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(35552); ?>(crash when pdo_odbc prepare fails). (Wez).</li>
 </ul>
 
-<a name="5.1.3"></a>
+<!-- }}} -->
+
+<a name="5.1.3"></a><!-- {{{ 5.1.3 -->
 <h3>Version 5.1.3</h3>
 <b>02-May-2006</b>
 <ul>
@@ -3030,7 +3066,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(29476); ?> (sqlite_fetch_column_types() locks the database forever). (Ilia)</li>
 </ul>
 
-<a name="5.1.2"></a>
+<!-- }}} -->
+
+<a name="5.1.2"></a><!-- {{{ 5.1.2 -->
 <h3>Version 5.1.2</h3>
 <b>12-Jan-2006</b>
 <ul>
@@ -3152,7 +3190,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(27678); ?> (number_format() crashes with large numbers). (Marcus)</li>
 </ul>
 
-<a name="5.1.1"></a>
+<!-- }}} -->
+
+<a name="5.1.1"></a><!-- {{{ 5.1.1 -->
 <h3>Version 5.1.1</h3>
 <b>28-Nov-2005</b>
 <ul>
@@ -3173,7 +3213,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(35170); ?> (PHP_AUTH_DIGEST differs under Apache 1.x and 2.x). (Ilia)</li>
 </ul>
 
-<a name="5.1.0"></a>
+<!-- }}} -->
+
+<a name="5.1.0"></a><!-- {{{ 5.1.0 -->
 <h3>Version 5.1.0</h3>
 <b>24-Nov-2005</b>
 <ul>
@@ -3714,7 +3756,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed bugs <?php bugl(14561); ?>, <?php bugl(20382); ?>, <?php bugl(26090); ?>, <?php bugl(26320); ?>, <?php bugl(28024); ?>, <?php bugl(30532); ?>, <?php bugl(32086); ?>, <?php bugl(32270); ?>, <?php bugl(32555); ?>, <?php bugl(32588); ?>, <?php bugl(33056); ?> (strtotime() related bugs). (Derick)</li>
 </ul>
 
-<a name="5.0.5"></a>
+<!-- }}} -->
+
+<a name="5.0.5"></a><!-- {{{ 5.0.5 -->
 <h3>Version 5.0.5</h3>
 <b>05-Sep-2005</b>
 <ul>
@@ -3950,7 +3994,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Abstract private methods are no longer allowed (Stas)</li>
 </ul>
 
-<a name="5.0.4"></a>
+<!-- }}} -->
+
+<a name="5.0.4"></a><!-- {{{ 5.0.4 -->
 <h3>Version 5.0.4</h3>
 <b>31-Mar-2005</b>
 <ul>
@@ -4137,7 +4183,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   (Jani)</li>
 </ul>
 
-<a name="5.0.3"></a>
+<!-- }}} -->
+
+<a name="5.0.3"></a><!-- {{{ 5.0.3 -->
 <h3>Version 5.0.3</h3>
 <b>15-Dec-2004</b>
 <ul>
@@ -4209,7 +4257,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(27183); ?> (Userland stream wrapper segfaults on stream_write).  (Christian) </li>
 </ul>
 
-<a name="5.0.2"></a>
+<!-- }}} -->
+
+<a name="5.0.2"></a><!-- {{{ 5.0.2 -->
 <h3>Version 5.0.2</h3>
 <b>23-Sep-2004</b>
 <ul>
@@ -4253,7 +4303,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.0.1"></a>
+<!-- }}} -->
+
+<a name="5.0.1"></a><!-- {{{ 5.0.1 -->
 <h3>Version 5.0.1</h3>
 <b>12-Aug-2004</b>
 <ul>
@@ -4302,7 +4354,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.0.0"></a>
+<!-- }}} -->
+
+<a name="5.0.0"></a><!-- {{{ 5.0.0 -->
 <h3>Version 5.0.0</h3>
 <b>13-Jul-2004</b>
 <ul>
@@ -4331,7 +4385,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.0.0RC3"></a>
+<!-- }}} -->
+
+<a name="5.0.0RC3"></a><!-- {{{ 5.0.0RC3 -->
 <h3>Version 5.0.0 Release Candidate 3</h3>
 <b>8-Jun-2004</b>
 <ul>
@@ -4367,7 +4423,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <hr />
 
 
-<a name="5.0.0RC2"></a>
+<!-- }}} -->
+
+<a name="5.0.0RC2"></a><!-- {{{ 5.0.0RC2 -->
 <h3>Version 5.0.0 Release Candidate 2</h3>
 <b>25-Apr-2004</b>
 <ul>
@@ -4459,7 +4517,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.0.0RC1"></a>
+<!-- }}} -->
+
+<a name="5.0.0RC1"></a><!-- {{{ 5.0.0RC1 -->
 <h3>Version 5.0.0 Release Candidate 1</h3>
 <b>18-Mar-2004</b>
 <ul>
@@ -4601,7 +4661,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
-<a name="5.0.0b4"></a>
+<!-- }}} -->
+
+<a name="5.0.0b4"></a><!-- {{{ 5.0.0b4 -->
 <h3>Version 5.0.0 Beta 4</h3>
 <b>12-Feb-2004</b>
 <ul>
@@ -4704,7 +4766,9 @@ exception). (Marcus)</li>
 
 <hr />
 
-<a name="5.0.0b3"></a>
+<!-- }}} -->
+
+<a name="5.0.0b3"></a><!-- {{{ 5.0.0b3 -->
 <h3>Version 5.0.0 Beta 3</h3>
 <b>21-Dec-2003</b>
 <ul>
@@ -4787,7 +4851,9 @@ segfault). (Moriyoshi)</li>
 
 <hr />
 
-<a name="5.0.0b2"></a>
+<!-- }}} -->
+
+<a name="5.0.0b2"></a><!-- {{{ 5.0.0b2 -->
 <h3>Version 5.0.0 Beta 2</h3>
 <b>30-Oct-2003</b>
 <ul>
@@ -4884,7 +4950,9 @@ fault?]).  (Sterling, Marcus)</li>
 
 <hr />
 
-<a name="5.0.0b1"></a>
+<!-- }}} -->
+
+<a name="5.0.0b1"></a><!-- {{{ 5.0.0b1 -->
 <h3>Version 5.0.0 Beta 1</h3>
 <b>29-Jun-2003</b>
 <ul>
@@ -5009,5 +5077,7 @@ html_entity_decode(). (Moriyoshi)</li>
 <li><?php bugfix(21600); ?> (Assign by reference function call changes variable
 contents). (Zeev)</li>
 </ul>
+<!-- }}} -->
 
 <?php site_footer(); ?>
+
