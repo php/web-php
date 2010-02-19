@@ -27,10 +27,5 @@ site_header("PHP Software");
  <a href="http://pecl.php.net/">pecl.php.net</a><br />
  &nbsp;The PECL project where you can find PHP extensions.<br clear="left" />
 </p>
-<p>
- <?php echo make_image("pecl-icon.png", $alt = "pecl.php.net", "left") ?>&nbsp;
- <a href="http://pecl4win.php.net/">pecl4win.php.net</a><br />
- &nbsp;PECL extensions precompiled for Windows.<br clear="left" />
-</p>
 
 <?php site_footer();
