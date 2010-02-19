@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference</title>
+  <id>http://www.php.net/archive/2010.php#id2010-02-19-1</id>
+  <published>2010-02-19T14:57:14+01:00</published>
+  <updated>2010-02-19T14:57:14+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-06-10</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-02-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.nl/" title="Dutch PHP Conference 2010">dpc10_banner.jpg</default:newsImage>
+  <link href="http://phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The Dutch PHP Conference is now in its 4th year and yet again promises
+     a varied and inspiring few days of
+     <a href="http://phpconference.nl/schedule">excellent technical content</a>
+     including Sebastian Bergmann, Kevlin Henney, Chris Shiflett, Ilia Alshanetsky
+     and many other fascinating speakers and topics.
+   </p>
+   <p>
+     The event is held in Amsterdam from
+     <abbr title="2010-06-10" class="dtstart">10th</abbr> to
+     <abbr title="2010-06-13" class="dtend">12th June 2010</abbr>,
+     for more information see the website at
+     <a href="http://phpconference.nl">http://phpconference.nl</a>
+     - we hope you can join us in Amsterdam in June!
+     </p>
+    </div>
+  </content>
+</entry>
