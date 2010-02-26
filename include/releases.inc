@@ -2,6 +2,82 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.2.12' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_12.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.12.tar.bz2',
+          'name' => 'PHP 5.2.12 (tar.bz2)',
+          'md5' => '5b7077e366c7eeab34da31dd860a1923',
+          'date' => '17 December 2009',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.11.tar.gz',
+          'name' => 'PHP 5.2.11 (tar.gz)',
+          'md5' => 'e6d6cc6570c77f60d8d4c99565d42ffd',
+          'date' => '17 December 2009',
+        ),
+      ),
+      'windows' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.12-Win32.zip',
+          'name' => 'PHP 5.2.12 zip package',
+          'md5' => 'e04f2944175dc19d7d007b5e889690b4',
+          'date' => '17 December 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.12-win32-installer.msi',
+          'name' => 'PHP 5.2.12 installer',
+          'md5' => 'df73529935bb855842e38afda8a295d7',
+          'date' => '17 December 2009',
+          'note' => '',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.12-Win32.zip',
+          'name' => 'PHP 5.2.12 Win32 Debug Pack',
+          'md5' => 'b21a5abb9e5bae4c657d0983986c4434',
+          'date' => '17 December 2009',
+        ),
+        3 => 
+        array (
+          'filename' => 'php-5.2.12-nts-Win32.zip',
+          'name' => 'PHP 5.2.12 Non-thread-safe zip package',
+          'md5' => 'ff0c67bb622c062f0820598e8d6bc12c',
+          'date' => '17 December 2009',
+          'note' => 'The PECL package will <em>not</em> be released for
+this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 => 
+        array (
+          'filename' => 'php-5.2.12-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.12 Non-thread-safe installer',
+          'md5' => '418656307a52c99f2175c748da31a9d8',
+          'date' => '17 December 2009',
+        ),
+        5 => 
+        array (
+          'filename' => 'php-debug-pack-5.2.12-nts-Win32.zip',
+          'name' => 'PHP 5.2.12 Non-thread-safe Win32 Debug Pack',
+          'md5' => 'e2620df81442ddefc0c3450be58540f9',
+          'date' => '17 December 2009',
+        ),
+      ),
+      'date' => '17 December 2009',
+      'museum' => false,
+    ),
     '5.2.11' => 
     array (
       'announcement' => 

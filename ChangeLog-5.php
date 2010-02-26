@@ -13,6 +13,71 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <hr />
 
+<a name="5.2.13"></a><!-- {{{ 5.2.13 -->
+<h3>Version 5.2.13</h3>
+<b>25-February-2010</b>
+<ul>
+<li>Security Fixes
+	<ul>
+		<li>Improved LCG entropy. (Rasmus, Samy Kamkar)</li>
+		<li>Fixed safe_mode validation inside tempnam() when the directory path does not end with a /). (Martin Jansen)</li>
+		<li>Fixed a possible open_basedir/safe_mode bypass in the session extension identified by Grzegorz Stachowiak. (Ilia)</li>
+	</ul>
+</li>
+
+<li>Updated timezone database to version 2010.2. (Derick)</li>
+<li>Upgraded bundled PCRE to version 7.9. (Ilia)</li>
+
+<li>Removed automatic file descriptor unlocking happening on shutdown and/or  stream close (on all OSes excluding Windows). (Tony, Ilia)</li>
+
+<li>Changed tidyNode class to disallow manual node creation. (Pierrick)</li>
+
+<li>Added missing host validation for HTTP urls inside FILTER_VALIDATE_URL. (Ilia)</li>
+
+<li>Fixed bug in bundled libgd causing spurious horizontal lines drawn by  gdImageFilledPolygon (libgd #100). (Takeshi Abe)</li>
+<li>Fixed build of mysqli with MySQL 5.5.0-m2. (Andrey)</li>
+
+<li><?php bugfix(50940); ?> (Custom content-length set incorrectly in Apache sapis). (Brian France, Rasmus)</li>
+<li><?php bugfix(50930); ?> (Wrong date by php_date.c patch with ancient gcc/glibc versions). (Derick)</li>
+<li><?php bugfix(50859); ?> (build fails with openssl 1.0 due to md2 deprecation). (Ilia, hanno at hboeck dot de)</li>
+<li><?php bugfix(50847); ?> (strip_tags() removes all tags greater then 1023 bytes long). (Ilia)</li>
+<li><?php bugfix(50832); ?> (HTTP fopen wrapper does not support passwordless HTTP authentication). (Jani)</li>
+<li><?php bugfix(50823); ?> (ReflectionFunction::isDeprecated producing &quot;cannot be called statically&quot; error). (Jani, Felipe)</li>
+<li><?php bugfix(50791); ?> (Compile failure: Bad logic in defining fopencookie emulation). (Jani)</li>
+<li><?php bugfix(50787); ?> (stream_set_write_buffer() has no effect on socket streams). (vnegrier at optilian dot com, Ilia)</li>
+<li><?php bugfix(50772); ?> (mysqli constructor without parameters does not return a working mysqli object). (Andrey)</li>
+<li><?php bugfix(50761); ?> (system.multiCall crashes in xmlrpc extension). (hiroaki dot kawai at gmail dot com, Ilia)</li>
+<li><?php bugfix(50732); ?> (exec() adds single byte twice to $output array). (Ilia)</li>
+<li><?php bugfix(50728); ?> (All PDOExceptions hardcode 'code' property to 0). (Joey, Ilia)</li>
+<li><?php bugfix(50727); ?> (Accessing mysqli->affected_rows on no connection causes segfault). (Andrey, Johannes)</li>
+<li><?php bugfix(50680); ?> (strtotime() does not support eighth ordinal number). (Ilia)</li>
+<li><?php bugfix(50661); ?> (DOMDocument::loadXML does not allow UTF-16). (Rob)</li>
+<li><?php bugfix(50657); ?> (copy() with an empty (zero-byte) HTTP source succeeds but returns false). (Ilia)</li>
+<li><?php bugfix(50636); ?> (MySQLi_Result sets values before calling constructor). (Pierrick)</li>
+<li><?php bugfix(50632); ?> (filter_input() does not return default value if the variable does not exist). (Ilia)</li>
+<li><?php bugfix(50576); ?> (XML_OPTION_SKIP_TAGSTART option has no effect). (Pierrick)</li>
+<li><?php bugfix(50575); ?> (PDO_PGSQL LOBs are not compatible with PostgreSQL 8.5). (Matteo)</li>
+<li><?php bugfix(50558); ?> (Broken object model when extending tidy). (Pierrick)</li>
+<li><?php bugfix(50540); ?> (Crash while running ldap_next_reference test cases). (Sriram)</li>
+<li><?php bugfix(50508); ?> (compile failure: Conflicting HEADER type declarations). (Jani)</li>
+<li><?php bugfix(50394); ?> (Reference argument converted to value in __call). (Stas)</li>
+<li><?php bugfix(49851); ?> (http wrapper breaks on 1024 char long headers). (Ilia)</li>
+<li><?php bugfix(49600); ?> (imageTTFText text shifted right). (Takeshi Abe)</li>
+<li><?php bugfix(49585); ?> (date_format buffer not long enough for >4 digit years). (Derick, Adam)</li>
+<li><?php bugfix(49463); ?> (setAttributeNS fails setting default namespace). (Rob)</li>
+<li><?php bugfix(48667); ?> (Implementing Iterator and IteratorAggregate). (Etienne)</li>
+<li><?php bugfix(48590); ?> (SoapClient does not honor max_redirects). (Sriram)</li>
+<li><?php bugfix(48190); ?> (Content-type parameter &quot;boundary&quot; is not case-insensitive in HTTP uploads). (Ilia)</li>
+<li><?php bugfix(47601); ?> (defined() requires class to exist when testing for class constants). (Ilia)</li>
+<li><?php bugfix(47409); ?> (extract() problem with array containing word &quot;this&quot;). (Ilia, chrisstocktonaz at gmail dot com)</li>
+<li><?php bugfix(47002); ?> (Field truncation when reading from dbase dbs with more then 1024 fields). (Ilia, sjoerd-php at linuxonly dot nl)</li>
+<li><?php bugfix(45599); ?> (strip_tags() truncates rest of string with invalid attribute). (Ilia, hradtke)  </li>
+<li><?php bugfix(44827); ?> (define() allows :: in constant names). (Ilia)</li>
+
+</ul>
+<hr />
+<!-- }}} -->
+
 <a name="5.3.1"></a><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
 <b>19-November-2009</b>
