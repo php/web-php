@@ -31,11 +31,13 @@
  <ul id="headmenu">
   <li id="headsearch">
     <form method="post" action="/search.php" id="topsearch">
-    <input type="text" id="headsearch-keywords" name="pattern" value="Search..." size="30" accesskey="s" />
-    <input type="submit"
+      <fieldset>
+        <input type="text" id="headsearch-keywords" name="pattern" value="Search..." size="30" accesskey="s" />
+        <input type="submit"
           value="Go"
           id="headsearch-submit"
           class="submit" />
+       </fieldset>
     </form>
   </li>
   <li id="headhome">
@@ -223,7 +225,7 @@
                     <li><a href="#">Menu item</a></li>
                 </ul>
             </li>
-        </dl>
+        </ul>
     </div>
     <div class="layout-content">
         <div id="function.mysql-pconnect" class="refentry">
@@ -491,8 +493,6 @@
          <div class="cleaner">&nbsp;</div>
         </div>
     </div>
-
-</div>
 
 <!--script type="text/javascript" src="js/search-index-en.js" id=search-index></script-->
 
