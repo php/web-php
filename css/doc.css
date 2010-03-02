@@ -10,13 +10,27 @@ h3.title {
     margin-top: 2em;
 }
 
-.methodsynopsis {
+.refentry .methodsynopsis,
+.refentry .warning,
+.refentry .note {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+}
+
+.refentry .methodsynopsis {
     border-top: 3px solid #ddd;
     background: #efefef;
-    margin: 1em 2em 1.3em 2em;
-    padding: 10px 20px;
     color: #666;
     font-family: monospace;
+}
+
+.refentry .note {
+    border-top: 3px solid #fff08a;
+    background-color: #EFEFEF;
+}
+.refentry .warning {
+    border-top: 3px solid #ff4d4d;
+    background-color: #EFEFEF;
 }
 
 .methodname b {
