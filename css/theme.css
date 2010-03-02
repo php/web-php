@@ -114,11 +114,15 @@ a:hover {
     color: #000;
 }
 
-h1 {
+h1, h1 a, h1 a:visited, h1 a:link {
     font-size:  40px;
     font-weight: normal;
     color: #666;
     letter-spacing: -0.04em;
+}
+
+h1 a:hover {
+    color: #444;
 }
 
 /**
