@@ -149,3 +149,49 @@ h1 a:hover {
     background-color: #604080;
     color: white;
 }
+
+/**
+ * User notes
+ */
+#usernotes {
+    background: #eee;
+    position: relative;
+}
+
+#usernotes .action {
+    display: block;
+    top: 1em;
+    right: 20px;
+    position: absolute;
+    text-align: right;
+}
+
+#usernotes .foot .action {
+    position: relative;
+    top: -1em;
+    margin-bottom: 1em;
+}
+
+#usernotes h3 {
+    border-color: #4d63ff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+}
+
+#usernotes .note {
+    margin: 0 20px 2em 20px;
+    border-top: 3px solid #ddd;
+}
+
+#usernotes .user, #usernotes .date {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 0.6em;
+}
+
+#usernotes .date {
+    float:right;
+    text-align: right;
+}
