@@ -48,6 +48,8 @@ a:hover {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #headnav li.parent .children .children-1 {
@@ -57,6 +59,8 @@ a:hover {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 #headnav li.parent a.menu-link {
@@ -77,6 +81,7 @@ a:hover {
     border-color: #987db3;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 
 #headsearch-keywords {
@@ -92,6 +97,8 @@ a:hover {
     border-color: #987db3;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;    
+    border-radius: 5px;
+    border: 1px solid #604080;
     background: #604080;
     color: #fff;
 }
@@ -134,6 +141,8 @@ h1 a:hover {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .ac_results ul {
@@ -143,6 +152,8 @@ h1 a:hover {
     -moz-border-radius-bottomright: 5px;
     -webkit-border-bottom-left-radius: 5px;
     -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .ac_over {
