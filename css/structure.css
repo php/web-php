@@ -121,8 +121,9 @@ h1 {
 }
 
 #layout {
-    padding: 25px 0;
-    width: 920px;
+    padding: 25px 10px;
+    max-width: 1400px;
+    min-width: 600px;
     margin: 0 auto;
 }
 
@@ -150,8 +151,7 @@ h1 {
 }
 
 .layout-content {
-    float: left;
-    width: 730px;
+    margin-left: 190px;
 }
 
 /**
