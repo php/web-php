@@ -271,10 +271,6 @@ service is gone...
     huge script-archive, free scripts, tutorials and many more
    </li>
    <li>
-    <a href="http://develnet.org/">develnet.org</a><br />
-    Some German tutorials about PHP
-   </li>
-   <li>
     <a href="http://www.selfphp.info/">SelfPHP</a><br />
     German function reference for PHP like SelfHTML for HTML
    </li>
