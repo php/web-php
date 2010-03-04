@@ -17,15 +17,15 @@
  */
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.2RC3'; /* false; */
+$PHP_5_3_RC      = false; /* '5.3.2RC3'; */
 $PHP_5_3_RC_DATE = "23 Feb 2010";
 
-$PHP_5_3_VERSION         = "5.3.1";
-$PHP_5_3_DATE            = "19 Nov 2009";
+$PHP_5_3_VERSION         = "5.3.2";
+$PHP_5_3_DATE            = "04 Mar 2010";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "63e97ad450f0f7259e785100b634c797",
-                       "tar.gz"        => "41fbb368d86acb13fc3519657d277681",
+                       "tar.bz2"       => "46f500816125202c48a458d0133254a4",
+                       "tar.gz"        => "4480d7c6d6b4a86de7b8ec8f0c2d1871",
 );
 
 /* PHP 5.2 Release */
