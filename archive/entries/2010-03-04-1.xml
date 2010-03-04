@@ -48,10 +48,17 @@
      available <a href="http://php.net/migration53">here</a>, detailing
      the changes between those releases and PHP 5.3.
      </p>
-     
+
      <p>
-      For a full list of changes in PHP 5.3.2, see the
-      <a href="/ChangeLog-5.php#5.3.2">ChangeLog</a>.
+     <b>Further information and downloads:</b>
+     </p>
+
+     <p>
+     For a full list of changes in PHP 5.3.2, see the
+     <a href="/ChangeLog-5.php#5.3.2">ChangeLog</a>. For source downloads
+     please visit our <a href="/downloads.php">downloads page</a>, Windows
+     binaries can be found on <a href="http://windows.php.net/download/">
+     windows.php.net/downloads</a>.
      </p>
      
     </div>
