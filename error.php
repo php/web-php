@@ -281,6 +281,7 @@ $uri_aliases = array (
     "magic_quotes"     => "security.magicquotes",
     "magicquotes"      => "security.magicquotes",
     "gd"               => "image",
+    "bcmath"           => "bc",
     'streams'          => 'book.stream',
 
     "callback"     => "language.pseudo-types",
