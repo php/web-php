@@ -9,7 +9,7 @@ $SIDEBAR_DATA = '
  for information about mailing lists on PHP.net and some international
  ones, as well as other support options.
 </p>
-
+ 
 <h3>PHP licensed software</h3>
 <p>
  Additionally to these links, we have a 
