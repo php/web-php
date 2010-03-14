@@ -10,6 +10,10 @@ h3.title {
     margin-top: 2em;
 }
 
+i .parameter {
+    font-style: normal;
+}
+
 .refentry .methodsynopsis,
 .refentry .warning,
 .refentry .note {
