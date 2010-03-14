@@ -97,6 +97,13 @@ h1 {
     margin: 0 auto;
 }
 
+#headnav .myphp {
+    float: left;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
 .children dl {
     float: left;
     width: 195px;
@@ -152,6 +159,16 @@ h1 {
 
 .layout-content {
     margin-left: 190px;
+}
+
+#footer .footmenu {
+    float: right;
+}
+#footer .footmenu.copyright {
+    float: left;
+}
+#footer .footmenu li {
+    display: inline;
 }
 
 /**
