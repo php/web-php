@@ -32,6 +32,10 @@ h3.title {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
+.refentry .note b, .refentry .warning b {
+    float: left;
+    margin-right: 0.8em;
+}
 
 .methodname b {
     color: #000;
