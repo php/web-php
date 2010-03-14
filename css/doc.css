@@ -36,7 +36,8 @@ i .parameter {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.refentry .note b, .refentry .warning b {
+.refentry .note h4, .refentry .warning h4 {
+    font-size: 1em;
     float: left;
     margin-right: 0.8em;
 }
