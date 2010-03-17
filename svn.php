@@ -63,6 +63,7 @@ site_header("SVN Access");
 </p>
 
 <h2>Steps for using PHP from SVN</h2>
+<p>Note to PHP.net developers: SSL is setup, so use your credentials and https://svn.php.net/ to access SVN</p>
 <ol>
 
  <li>
@@ -75,9 +76,6 @@ site_header("SVN Access");
   <br />
   <strong>PHP 5.3</strong>:
   <code>svn checkout http://svn.php.net/repository/php/php-src/branches/PHP_5_3 php-src-5.3</code>
-  <br />
-  <strong>PHP 6</strong>:
-  <code>svn checkout http://svn.php.net/repository/php/php-src/trunk php-src</code>
   <br /><br />
   The branch names can also be used for SVN diff and merge operations.
  </li>
