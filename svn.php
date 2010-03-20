@@ -111,7 +111,7 @@ site_header("SVN Access");
  <a href="http://svn.php.net/">the web-based view of the SVN
  server</a> to see what is available. For example, to checkout the
  latest english version of the PHP manual:<br />
- <code>svn checkout http://svn.php.net/repository/phpdoc/en/trunk ./phpdoc-en</code>
+ <code>svn checkout http://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
 </p>
 
 <a name="buildconf_fail"></a>
