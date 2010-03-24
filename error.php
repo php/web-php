@@ -327,6 +327,7 @@ $uri_aliases = array (
     "oop4"         => "language.oop",
     "oop"          => "language.oop5",
 
+    "const"        => "language.constants.syntax",
     "class"        => "language.oop5.basic",
     "new"          => "language.oop5.basic",
     "extends"      => "language.oop5.basic",
