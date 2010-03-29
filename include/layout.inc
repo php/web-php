@@ -324,7 +324,7 @@ function site_footer($config = array())
 
 <div id="pagefooter">
  <div id="copyright">
-  <a href="/copyright.php">Copyright &copy; 2001-2009 The PHP Group</a><br />
+  <a href="/copyright.php">Copyright &copy; 2001-2010 The PHP Group</a><br />
   All rights reserved.
  </div>
 
