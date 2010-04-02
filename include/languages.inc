@@ -58,6 +58,7 @@ $LANGUAGES = array(
 */
 $INACTIVE_ONLINE_LANGUAGES = array(
     'ar'    => 'Arabic',
+    'bg'    => 'Bulgarian',
     'zh'    => 'Chinese (Simplified)',
     'hk'    => 'Chinese (Hong Kong Cantonese)',
     'tw'    => 'Chinese (Traditional)',
@@ -71,14 +72,13 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'hu'    => 'Hungarian',
     'id'    => 'Indonesian',
     'it'    => 'Italian',
+    'kr'    => 'Korean',
     'lt'    => 'Lithuanian',
     'no'    => 'Norwegian',
-    'fa'    => 'Persian',
     'pt'    => 'Portuguese',
     'ru'    => 'Russian',
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
-    'es'    => 'Spanish',
     'sv'    => 'Swedish',
  );
 
