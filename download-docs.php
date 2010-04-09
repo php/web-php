@@ -3,6 +3,11 @@
 $_SERVER['BASE_PAGE'] = 'download-docs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+if (!empty($_GET['active_langs'])) {
+    echo serialize($ACTIVE_ONLINE_LANGUAGES);
+    exit;
+}
+
 $SIDEBAR_DATA='
 <h3>Online documentation</h3>
 <p>
