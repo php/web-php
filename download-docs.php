@@ -51,8 +51,8 @@ site_header("Download documentation");
 $formats = array(
     "Single HTML file" => "html.gz",
     "Many HTML files"  => "tar.gz",
-	"Many PDF files"   => "pdf.tar.gz",
-    "PDF"              => "pdf",
+#   "Many PDF files"   => "pdf.tar.gz",
+#   "PDF"              => "pdf",
     "HTML Help file"   => "chm",
 );
 ?>
