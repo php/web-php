@@ -864,6 +864,10 @@ div.example, div.informalexample, div.classsynopsis div.ooclass {
 	color: #000;
 }
 
+div.refsect1 div.example {
+	margin-top: 20px;
+}
+
 div.classsynopsis div.ooclass,
 div.example p {
 	margin: 0px;
