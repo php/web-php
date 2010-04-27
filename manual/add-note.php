@@ -1,6 +1,40 @@
 <?php
 // $Id$
 
+/**
+ * Before we even bother to initilize this script, let's
+ * see if this is a submission by an IP known to send SPAM.
+ * If so, admonish them and halt execution. 27-APR-2010 <danbrown>
+ */
+include dirname(__FILE__).'/include/spam-func.php';
+if (kill_spammer($_SERVER['REMOTE_ADDR']) !== false) {
+	echo "	<center>
+		h1>WHOA!</h1>
+
+		Enough is enough, pal.  All you do is make
+		our jobs and lives more difficult with your
+		constant reposting of SPAM and/or useless
+		material.  And you know what?  We're sick of
+		it!  Consider yourself blacklisted from ever
+		posting here again.<br />
+		<br />
+
+		Think this is some kind of joke?  It's not.<br />
+		<br />
+
+		Think this is some kind of mistake?  Well, if you
+		haven't been submitting junk to the site, submit
+		this as a bug at <a href=\"http://bugs.php.net/\">http://bugs.php.net/</a>
+		with the following message:<br />
+		<br />
+
+		<i>Improper Blocking: ".strrev(str_replace('.','-',$_SERVER['REMOTE_ADDR']))."</i><br />
+		<br />
+
+		Bye!
+	</center>";
+}
+
 $ip_spam_lookup_url = 'http://www.dnsbl.info/lookup.asp?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
@@ -8,6 +42,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
+include
 site_header("Add Manual Note");
 
 // Copy over "sect" and "redirect" from GET to POST
