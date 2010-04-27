@@ -42,7 +42,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/shared-manual.inc';
 include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
-include
+
 site_header("Add Manual Note");
 
 // Copy over "sect" and "redirect" from GET to POST
