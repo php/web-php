@@ -137,7 +137,7 @@ EOB;
 echo <<<EOB
 </ul>
 <span style="margin-left: 3em; margin-top: 1em; float: left;"><a href="http://developer.yahoo.net/about">
-<img src="http://us.dev1.yimg.com/us.yimg.com/i/us/nt/bdg/websrv_120_1.gif" border="0">
+<img src="http://l.yimg.com/a/i/us/nt/bdg/websrv_120_1.gif" border="0">
 </a></span>
 <div id="results_nav"><h4>Results Page:</h4>
 <ul id="results_nav_list">
