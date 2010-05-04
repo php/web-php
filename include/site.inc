@@ -177,6 +177,8 @@ function header_nocache()
 // Compatibility function to fetch data from external source
 function fetch_contents($url, $headers = false) {
 
+    $terrors_setting = ini_set('track_errors', true);
+
     if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
         $context = null;
         $opts    = array('user_agent'  => 'php.net');
@@ -198,7 +200,10 @@ function fetch_contents($url, $headers = false) {
         }
 
         if (!$data) {
-            return array("ERROR" => "Unable to find a way to retrieve data with file_get_contents");
+            return array(
+                'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
+                'ERROR_LAST' => $php_errormsg,
+            );
         }
 
         return $data;
@@ -226,7 +231,10 @@ function fetch_contents($url, $headers = false) {
             }
         }
         if (!$data) {
-            return array("ERROR" => "Unable to find a way to retrieve data with curl");
+            return array(
+                'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
+                'ERROR_LAST' => $php_errormsg,
+            );
         }
 
         return $data;
@@ -262,7 +270,10 @@ function fetch_contents($url, $headers = false) {
             return $header;
         }
         if (!$data) {
-            return array("ERROR" => "Unable to find a way to retrieve data with fsockopen");
+            return array(
+                'ERROR_NOTE' => 'Unable to find a way to retrieve data with fsockopen',
+                'ERROR_LAST' => $php_errormsg,
+            );
         }
 
         return $data;
@@ -270,7 +281,10 @@ function fetch_contents($url, $headers = false) {
 
     // TODO: Log if we get here
     // Redirect to www.php.net ?
-    return array("ERROR" => "Unable to find a way to retrieve data");
+    return array(
+        'ERROR_NOTE' => 'Unable to find a way to retrieve data',
+        'ERROR_LAST' => $php_errormsg,
+    );
 }
 
 // Compatibility function to fetch headers from external source
@@ -281,7 +295,7 @@ function fetch_header($url, $header) {
         $headers = get_headers($url, 1);
     } else {
         $data = fetch_contents($url, true);
-        if (isset($data["ERROR"])) {
+        if (isset($data["ERROR_NOTE"])) {
             return null;
         }
         foreach($data as $line) {
