@@ -203,6 +203,7 @@ function fetch_contents($url, $headers = false) {
             return array(
                 'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
                 'ERROR_LAST' => $php_errormsg,
+                'URL'        => $url,
             );
         }
 
