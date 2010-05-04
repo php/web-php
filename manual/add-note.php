@@ -35,7 +35,7 @@ if (kill_spammer($_SERVER['REMOTE_ADDR']) !== false) {
 	</center>";
 }
 
-$ip_spam_lookup_url = 'http://www.dnsbl.info/lookup.asp?IP=';
+$ip_spam_lookup_url = 'http://www.dnsbl.info/dnsbl-database-check.php?IP=';
 
 $_SERVER['BASE_PAGE'] = 'manual/add-note.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
