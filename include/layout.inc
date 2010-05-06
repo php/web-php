@@ -169,11 +169,19 @@ function site_header($title = '', $config = array())
 
     // Right-to-left support
     $rtl = "";
+    /* Does not appear to work... commenting out.
     switch ($lang) {
         case "he":
         case "ar":
             $rtl = ' style="direction: rtl"';
             break;
+    }
+    */
+
+    // RTL Hack. Edit styles/rtl.css for rtl specific CSS.
+    $import_rtl = '';
+    if (in_array($lang, array('ar', 'fa', 'he'))) {
+        $import_rtl = '@import url("' . $_SERVER['STATIC_ROOT'] . '/styles/rtl.css");';
     }
 
     $profile = "";
@@ -197,6 +205,7 @@ function site_header($title = '', $config = array())
  <style type="text/css" media="all">
   @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
   @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
+  $import_rtl
  </style>
  <!--[if IE]><![if gte IE 6]><![endif]-->
   <style type="text/css" media="print">
