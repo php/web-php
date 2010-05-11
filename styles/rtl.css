@@ -1,3 +1,23 @@
 .para {
-	direction:rtl;
+    direction:rtl; 
+}
+.function {
+    direction:ltr; 
+    unicode-bidi: bidi-override;
+}
+.refpurpose {
+    direction:rtl; 
+}
+.refnamediv {
+    direction:rtl; 
+}
+.sect1 {
+    direction:rtl;
+}
+.example {
+    text-align:right;
+}
+.phpcode {
+    direction:ltr; 
+    unicode-bidi: bidi-override;
 }
