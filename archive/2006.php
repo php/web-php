@@ -31,6 +31,29 @@ site_header("News Archive - 2006", array("generate_modified" => true));
 
 <hr />
 
+<h1>PHP 5.2.0 Released</h1>
+<p>
+ <span class="newsdate">[02-Nov-2006]</span>
+ The PHP development team is proud to announce the immediate release of PHP
+ 5.2.0. This release is a major improvement in the 5.X series, which includes a
+ large number of new features, bug fixes and security enhancements.
+ Further details about this release can be found in the release announcement
+ <a href="/releases/5_2_0.php">5.2.0</a>, the full list of changes is
+ available in the ChangeLog <a href="/ChangeLog-5.php#5.2.0">PHP 5</a>.
+</p>
+<p>
+ All users of PHP, especially those using earlier PHP 5 releases are advised
+ to upgrade to this release as soon as possible. This release also obsoletes
+ the 5.1 branch of PHP.
+</p>
+<p>
+ For users upgrading from PHP 5.0 and PHP 5.1 there is an upgrading guide 
+ available <a href="/UPDATE_5_2.txt">here</a>, detailing the changes between those releases
+ and PHP 5.2.0.
+</p>
+
+<hr />
+
 <?php news_image("http://www.afup.org/forumphp/", "afup2006.jpg", "AFUP Paris 2006"); ?>
 
 <h1>Forum PHP in Paris, France, November 9 &amp; 10th, 2006</h1>
