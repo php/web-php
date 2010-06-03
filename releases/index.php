@@ -22,6 +22,14 @@ if (isset($_GET["serialize"])) {
 				$return = array($version => $r);
 
 				$count = 1;
+
+				/* check if other $RELEASES[$ver] are there */
+				/* e.g., 5_2, 5_3, and 5_4 all exist and have a release */
+				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
+					list($version, $r) = each($z);
+					$return[$version] = $r;
+				}
+
 				foreach($OLDRELEASES[$ver] as $version => $release) {
 					if ($max <= $count++) {
 						break;
