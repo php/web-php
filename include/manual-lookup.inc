@@ -156,6 +156,12 @@ function find_manual_page($lang, $keyword)
                     continue;
                 }
 
+
+                // No idea why, but the db no longer contains /manual prefix..
+                if (strncmp($r[0], "/manual", strlen("/manual")) != 0) {
+                  $r[0] = "/manual" . $r[0];
+                }
+
                 // Match found
                 // But does the file really exist?
                 if (file_exists($_SERVER["DOCUMENT_ROOT"] . $r[0])) {
