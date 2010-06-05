@@ -150,11 +150,12 @@ function find_manual_page($lang, $keyword)
         if ($q) {
             $r = sqlite_fetch_array($q, SQLITE_NUM);
             if (isset($r[0])) {
-				if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
-					// "Match" found, but the keyword is so short
-					// its probably bogus. Skip it
-					continue;
-				}
+                if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
+                    // "Match" found, but the keyword is so short
+                    // its probably bogus. Skip it
+                    continue;
+                }
+
                 // Match found
                 // But does the file really exist?
                 if (file_exists($_SERVER["DOCUMENT_ROOT"] . $r[0])) {
@@ -169,3 +170,4 @@ function find_manual_page($lang, $keyword)
     // No match found
     return find_manual_page_slow($langs[0], $kw);
 }
+
