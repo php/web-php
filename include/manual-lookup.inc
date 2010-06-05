@@ -167,5 +167,5 @@ function find_manual_page($lang, $keyword)
     }
     
     // No match found
-    return find_manual_page_slow($lang, $kw);
+    return find_manual_page_slow($langs[0], $kw);
 }
