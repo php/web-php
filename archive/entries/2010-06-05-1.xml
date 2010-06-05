@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
-  <title> PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</title>
+  <title>PHP | OSI Days 2010: Participate at the confluence of PHP's finest!</title>
   <id>http://www.php.net/archive/2010.php#id2010-06-05-1</id>
   <published>2010-06-05T18:21:05-03:00</published>
   <updated>2010-06-05T18:21:05-03:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-06-15</default:finalTeaserDate>
   <category term="cfp" label="Call for Papers"/>
   <link href="http://www.php.net/conferences/index.php#id2010-06-05-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://osidays.com/node/add/proposal" title="PHP | OSI Days 2010">php_osi_2010.png</default:newsImage>
   <link href="http://www.php.net/archive/2010.php#id2010-06-05-1" rel="via" type="text/html"/>
   <content type="html">
    <p>PHP | OSI Days 2010 is the premier PHP conference being organised at 
