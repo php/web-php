@@ -60,7 +60,7 @@ For licensing and copyright information on the PHP project materials, please see
 
   <ul>
    <li>
-    The PHP manual text is covered by the
+    The PHP manual text and comments are covered by the
     <a href="http://creativecommons.org/licenses/by/3.0/legalcode">Creative Commons Attribution 3.0 License</a>,
     copyright (c) the PHP Documentation Group
    </li>
