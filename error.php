@@ -56,6 +56,12 @@ if (preg_match("!^security/advisories/PHPSA-(\\d+)\\.php$!", $URI, $array)) {
 $URI = urldecode(preg_replace("!(\\?.*$)!", "", $URI));
 
 // ============================================================================
+// An empty URI is useless at this point, so let's give them the search page
+if (empty($URI)) {
+    mirror_redirect("/search.php");
+}
+
+// ============================================================================
 // Perform a redirect for manual figures, other images display a 404 automatically
 if (preg_match("!^manual/(\\w+)/(print|printwn)/figures/(.+)$!", $URI, $parts)) {
     mirror_redirect("/manual/$parts[1]/figures/$parts[3]");

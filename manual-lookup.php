@@ -7,21 +7,31 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/manual-lookup.inc';
 
 // BC code, so pattern and function can both be used as
 // parameters to specify the function name
-if (empty($_GET['function']) && !empty($_GET['pattern'])) {
-    $_GET['function'] = $_GET['pattern'];
+$function = '';
+if (empty($_GET['function'])) {
+    if (!empty($_GET['pattern'])) {
+        $function = htmlspecialchars($_GET['pattern'], ENT_QUOTES, 'UTF-8');
+    }
+} else {
+    $function = htmlspecialchars($_GET['function'], ENT_QUOTES, 'UTF-8');
 }
 
 // Prepare data for search
-if ($MQ) { $_GET['function'] = stripslashes($_GET['function']); }
-$_GET['function'] = strtolower($_GET['function']);
+if ($function) {
+    if ($MQ) {
+        $function = stripslashes($function);
+    }
+    
+    $function = strtolower($function);
 
-// Try to find appropriate manual page
-if ($file = find_manual_page($LANG, $_GET['function'])) {
-    mirror_redirect($file);
+    // Try to find appropriate manual page
+    if ($file = find_manual_page($LANG, $function)) {
+        mirror_redirect($file);
+    }
 }
 
 // Fall back to a quick reference search
-$notfound = $_GET['function'];
+$notfound = $function;
 include $_SERVER['DOCUMENT_ROOT'] . '/quickref.php';
 
 ?>

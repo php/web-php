@@ -230,7 +230,7 @@ else {
 <ul>
  <li>
   <strong>Bugs</strong>. Instead
-  <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo clean($_POST['sect']); ?>">report a bug</a>
+  <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
   for this manual page to the bug database.
  </li>
  <li>

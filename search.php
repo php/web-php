@@ -34,6 +34,10 @@ if ($MQ) {
 // We received something to search for
 if (!empty($_FORM['pattern'])) {
 
+    if (empty($_FORM['show'])) {
+        $_FORM['show'] = 'all';
+    }
+
     // Never allow a comma in the show string, that would confuse our JS
     $_FORM['show'] = str_replace(",", "", $_FORM['show']);
     
