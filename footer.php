@@ -9,6 +9,7 @@
             <li><a href="<?php echo $baseUrl ?>contact.php">Contact</a></li>
             <li><a href="<?php echo $baseUrl ?>sites.php">Other PHP.net sites</a></li>
             <li><a href="<?php echo $baseUrl ?>mirrors.php">Mirror sites</a></li>
+            <li><a href="<?php echo $baseUrl ?>privacy.php">Privacy policy</a></li>
           </ul>
         </div>
   </div>
