@@ -109,7 +109,7 @@ if ($process) {
         $errors[] = "It's OK. I'm not real either";
     }
 
-    if (preg_match("/submit/i", $_POST["action"])) {
+    if (isset($_POST['action']) && $_POST['action'] === 'Submit' && empty($errors)) {
         // Submit to master.php.net
         $result = posttohost("http://master.php.net/entry/event.php", $_POST);
         if ($result) {
