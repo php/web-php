@@ -179,6 +179,38 @@ function fetch_contents($url, $headers = false) {
 
     $terrors_setting = ini_set('track_errors', true);
 
+    // A mysterious and elusive bug on us3 allows this to work, but the other methods do not
+    // So for now, use Curl first (curl++)
+    if(function_exists('curl_exec')) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+        curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
+        curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+
+        if ($headers) {
+            $array = explode("\n", $data);
+            foreach($array as $line) {
+                if (strlen($line)<=2) {
+                    return $header;
+                } else {
+                    $header[] = $line;
+                }
+            }
+        }
+        if (!$data) {
+            return array(
+                'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
+                'ERROR_LAST' => $php_errormsg,
+            );
+        }
+
+        return $data;
+    }
+
     if(function_exists('file_get_contents') && ini_get('allow_url_fopen')) {
         $context = null;
         $opts    = array('user_agent'  => 'php.net');
@@ -204,37 +236,6 @@ function fetch_contents($url, $headers = false) {
                 'ERROR_NOTE' => 'Unable to find a way to retrieve data with file_get_contents',
                 'ERROR_LAST' => $php_errormsg,
                 'URL'        => $url,
-            );
-        }
-
-        return $data;
-    }
-
-    // Let's find another way
-    if(function_exists('curl_exec')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-        curl_setopt($ch, CURLOPT_HEADER, (int)$headers);
-        curl_setopt($ch, CURLOPT_USERAGENT, "php.net");
-
-        $data = curl_exec($ch);
-        curl_close($ch);
-
-        if ($headers) {
-            $array = explode("\n", $data);
-            foreach($array as $line) {
-                if (strlen($line)<=2) {
-                    return $header;
-                } else {
-                    $header[] = $line;
-                }
-            }
-        }
-        if (!$data) {
-            return array(
-                'ERROR_NOTE' => 'Unable to find a way to retrieve data with curl',
-                'ERROR_LAST' => $php_errormsg,
             );
         }
 
