@@ -182,7 +182,7 @@ if (isset($_POST['maillist'])) {
     ),
     array (
       'php-general', 'General user list',
-      'This is a really high volume general list for PHP users',
+      'This is a high volume list for general PHP support; ask PHP questions here',
       FALSE, TRUE, TRUE, "php.general"
     ),
     array (
@@ -275,7 +275,7 @@ if (isset($_POST['maillist'])) {
     'PHP website mailing lists',
     array (
       'php-webmaster', 'Webmaster discussion',
-      'List for discussing the PHP websites',
+      'List for discussing and maintaining the php.net web infrastructure; this is not for PHP <a href="/support.php">support</a> questions',
       FALSE, FALSE, FALSE, "php.webmaster"
     ),
 
