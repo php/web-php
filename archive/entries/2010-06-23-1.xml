@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>TestFest 2010</title>
+  <id>http://www.php.net/archive/2010.php#id2010-06-23-1</id>
+  <published>2010-06-23T22:51:00-05:00</published>
+  <updated>2010-06-23T22:51:00-05:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2010-06-05-2" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2010.php#id2010-06-05-2" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        PHP is proud to announce TestFest 2010. TestFest is PHP's annual campaign
+        to increase the overall code coverage of PHP through PHPT tests. During
+        TestFest, PHP User Groups and individuals around the world organize local
+        events where new tests are written and new contributors are introduced to
+        PHP's testing suite.
+      </p>
+      <p>
+        Last year was very successful with 887 tests submitted and a code coverage
+        increase of 2.5%. This year we hope to do better.
+      </p>
+      <p>
+        TestFest's own SVN repository and reporting tools are back online for this
+        year's event. New to TestFest this year are automated test environment build
+        tools as well as screencasts showing those build tools in action.
+      </p>
+      <p>
+        Please visit the <a href="http://wiki.php.net/qa/testfest-2010">TestFest
+        2010</a> wiki page for all the details on events being organized in your area,
+        or find out how you can organize your own event.
+      </p>
+    </div>
+  </content>
+</entry>
