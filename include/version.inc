@@ -17,8 +17,8 @@
  */
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.3RC2';
-$PHP_5_3_RC_DATE = '01 July 2010';
+$PHP_5_3_RC      = '5.3.3RC3';
+$PHP_5_3_RC_DATE = '15 July 2010';
 
 $PHP_5_3_VERSION         = "5.3.2";
 $PHP_5_3_DATE            = "04 Mar 2010";
@@ -29,8 +29,8 @@ $PHP_5_3_MD5     = array(
 );
 
 /* PHP 5.2 Release */
-$PHP_5_2_RC      = '5.2.14RC2';
-$PHP_5_2_RC_DATE = "01 July 2010";
+$PHP_5_2_RC      = '5.2.14RC3';
+$PHP_5_2_RC_DATE = "15 July 2010";
 
 $PHP_5_2_VERSION         = "5.2.13";
 $PHP_5_2_DATE            = "25 February 2010";
