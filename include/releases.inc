@@ -2,6 +2,106 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.3.2' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_2.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.2.tar.bz2',
+          'name' => 'PHP 5.3.2 (tar.bz2)',
+          'md5' => '46f500816125202c48a458d0133254a4',
+          'date' => '04 Mar 2010',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.2.tar.gz',
+          'name' => 'PHP 5.3.2 (tar.gz)',
+          'md5' => '4480d7c6d6b4a86de7b8ec8f0c2d1871',
+          'date' => '04 Mar 2010',
+        ),
+      ),
+      'date' => NULL,
+      'museum' => false,
+    ),
+    '5.2.13' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_13.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.13.tar.bz2',
+          'name' => 'PHP 5.2.13 (tar.bz2)',
+          'md5' => 'eb4d0766dc4fb9667f05a68b6041e7d1',
+          'date' => '25 Feb 2010',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.13.tar.gz',
+          'name' => 'PHP 5.2.13 (tar.gz)',
+          'md5' => 'cdf95cdc1ebccccce9c96653fd593dd4',
+          'date' => '25 Feb 2010',
+        ),
+      ),
+      'windows' =>
+      array (
+        0 =>
+        array (
+          'filename' => 'php-5.2.13-Win32.zip',
+          'name' => 'PHP 5.2.13 zip package',
+          'md5' => '3074bad887d613acf992ebdfea0e4465',
+          'date' => '25 Feb 2010',
+          'note' => 'The PECL package will <em>not</em> be released for this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        1 =>
+        array (
+          'filename' => 'php-5.2.13-win32-installer.msi',
+          'name' => 'PHP 5.2.13 installer',
+          'md5' => '891e3262428851ebe71d5432a97be6d5',
+          'date' => '25 Feb 2010',
+          'note' => '',
+        ),
+        2 =>
+        array (
+          'filename' => 'php-debug-pack-5.2.13-Win32.zip',
+          'name' => 'PHP 5.2.13 Win32 Debug Pack',
+          'md5' => 'e3382d5acbb527d21b768766f563a75d',
+          'date' => '25 Feb 2010',
+        ),
+        3 =>
+        array (
+          'filename' => 'php-5.2.13-nts-Win32.zip',
+          'name' => 'PHP 5.2.13 Non-thread-safe zip package',
+          'md5' => 'a7bd052e7a1413b743c07ae37171980d',
+          'date' => '25 Feb 2010',
+          'note' => 'The PECL package will <em>not</em> be released for this version. The 5.2.6 PECL package does however work with this release',
+        ),
+        4 =>
+        array (
+          'filename' => 'php-5.2.13-nts-win32-installer.msi',
+          'name' => 'PHP 5.2.13 Non-thread-safe installer',
+          'md5' => 'd0e502db99565afde77b4f58f13fbad2',
+          'date' => '25 Feb 2010',
+        ),
+        5 =>
+        array (
+          'filename' => 'php-debug-pack-5.2.13-nts-Win32.zip',
+          'name' => 'PHP 5.2.13 Non-thread-safe Win32 Debug Pack',
+          'md5' => '3693478973cd41752e2c0a1c3cddb997',
+          'date' => '25 Feb 2010',
+        ),
+      ),
+      'date' => NULL,
+      'museum' => false,
+    ),
     '5.3.1' => 
     array (
       'announcement' => 
