@@ -16,7 +16,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <h3>Version 5.3.3</h3>
 <b>22-July-2010</b>
 <ul>
->Upgraded bundled sqlite to version 3.6.23.1. (Ilia)</li>
+<li>Upgraded bundled sqlite to version 3.6.23.1. (Ilia)</li>
 <li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
 </li>
 <li>Added support for JSON_NUMERIC_CHECK option in json_encode() that converts numeric strings to integers. (Ilia)</li>
@@ -195,7 +195,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <h3>Version 5.2.14</h3>
 <b>22-July-2010</b>
 <ul>
-22 Jul 2010, PHP 5.2.14</li>
 <li>Reverted bug fix #49521 (PDO fetchObject sets values before calling constructor). (Felipe)</li>
 </li>
 <li>Updated timezone database to version 2010.5. (Derick)</li>
