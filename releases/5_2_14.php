@@ -50,17 +50,12 @@ PHP 5.3.</p>
 	<li>Fixed bug #49267 (Linking fails for iconv on MacOS: "Undefined symbols: _libiconv").</li>
 </ul>
 
-<p>To prepare upgrading to PHP 5.3, now that PHP 5.2's support ended, mind
-the migration guide available on <http://php.net/migration53>, detailing
-the changes between PHP 5.2 and PHP 5.3.</p>
+<p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support ended, a
+migration guide available on <a
+href="/migration53">http://php.net/migration53</a>, details the changes between
+PHP 5.2 and PHP 5.3.</p>
 
-<p>For a full list of changes in PHP 5.2.14, see the ChangeLog at
+<p>For a full list of changes in PHP 5.2.14 see the ChangeLog at
 <http://www.php.net/ChangeLog-5.php#5.2.14>.</p>
-
-
-<p>To prepare for upgrading to PHP 5.3, now that PHP 5.2's support has ended, a migration guide available on <a 
-href="http://php.net/migration53">http://php.net/migration53</a>, details the changes between PHP 5.2 and PHP 5.3.</p>
- 
-<p>For a full list of changes in PHP 5.2.14 see the ChangeLog at <a href="http://www.php.net/ChangeLog-5.php#5.2.14">http://www.php.net/ChangeLog-5.php#5.2.14</a>.</p>
 
 <?php site_footer(); ?>

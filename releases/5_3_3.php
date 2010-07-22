@@ -22,7 +22,7 @@ to upgrade to this release.
 	will no longer be treated as constructor. This change doesn't affect
 	non-namespaced classes.
 
-	<?php
+	<p><?php
 	highlight_string('<?php
 namespace Foo;
 class Bar {
@@ -32,8 +32,8 @@ class Bar {
     }
 }
 ?>');
-	?>
-	There is no impact on migration from 5.2.x because namespaces were only introduced in PHP 5.3.</li>
+	?></p>
+	<p>There is no impact on migration from 5.2.x because namespaces were only introduced in PHP 5.3.</p></li>
 </ul>
 <p>
 <b>Security Enhancements and Fixes in PHP 5.3.3:</b>
