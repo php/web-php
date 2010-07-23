@@ -154,11 +154,11 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(50731); ?> (Inconsistent namespaces sent to functions registered with spl_autoload_register). (Felipe)</li>
 <li><?php bugfix(50563); ?> (removing E_WARNING from parse_url). (ralph at smashlabs dot com, Pierre)</li>
 <li><?php bugfix(50578); ?> (incorrect shebang in phar.phar). (Fedora at FamilleCollet dot com)</li>
-<li><?php bugfix(50555); ?> (DateTime::sub() allows 'relative' time modifications). (Derick)</li>
 <li><?php bugfix(50392); ?> (date_create_from_format enforces 6 digits for 'u' format character). (Derick)</li>
 <li><?php bugfix(50383); ?> (Exceptions thrown in __call / __callStatic do not include file and line in trace). (Felipe)</li>
 <li><?php bugfix(50358); ?> (Compile failure compiling ext/phar/util.lo). (Felipe)</li>
 <li><?php bugfix(50101); ?> (name clash between global and local variable). (patch by yoarvi at gmail dot com)</li>
+<li><?php bugfix(50055); ?> (DateTime::sub() allows 'relative' time modifications). (Derick)</li>
 <li><?php bugfix(51002); ?> (fix possible memory corruption with very long names). (Pierre)</li>
 <li><?php bugfix(49893); ?> (Crash while creating an instance of Zend_Mail_Storage_Pop3). (Dmitry)</li>
 <li><?php bugfix(49819); ?> (STDOUT losing data with posix_isatty()). (Mike)</li>
