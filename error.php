@@ -396,6 +396,12 @@ $uri_aliases = array (
     "update_5_2.txt"         => "migration52",      // BC
     "readme_upgrade_51.php"  => "migration51",      // BC
     "internals"              => "internals2",        // BC
+
+    # regexp. BC
+    "regexp.reference.backslash"      => "regexp.reference.escape",
+    "regexp.reference.circudollar"    => "regexp.reference.anchors",
+    "regexp.reference.squarebrackets" => "regexp.reference.character-classes",
+    "regexp.reference.verticalbar"    => "regexp.reference.alternation",
     
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
