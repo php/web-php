@@ -343,6 +343,7 @@ $uri_aliases = array (
     "public"       => "language.oop5.visibility",
     "private"      => "language.oop5.visibility",
     "protected"    => "language.oop5.visibility",
+    "var"          => "language.oop5.visibility",
     "abstract"     => "language.oop5.abstract",
     "interface"    => "language.oop5.interfaces",
     "interfaces"   => "language.oop5.interfaces",
