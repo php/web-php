@@ -170,25 +170,36 @@ site_header("A Tourist's Guide");
  interface to it. There you can browse the history (and latest versions) of the
  source code for all of the PHP projects. For example, the <a
  href="http://svn.php.net/php/php-src/">php-src</a> module is the 
- repository for the source code to the latest version of PHP itself.
+ repository for the source code to the latest version of PHP itself. Checking
+ out the source code can be done <a href="svn.php">anonymously</a>.
+</p>
+<p>
+ Using <a href="http://lxr.php.net/">OpenGrok</a> is another option to view the
+ source code, and it offers additional features like search and cross referencing.
 </p>
 
-<h2><a href="http://cvs.php.net/">cvs.php.net</a>: Archived CVS Repository</h2>
+<h2><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
 
 <p>
  The PHP project used to be organized under the CVS revision control system, but
- migrated to Subversion (see above) in July of 2009. The old CVS repository is
- archived here for posterity.
+ migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
+ The old CVS repository is archived here for posterity. It was formally named
+ cvs.php.net, but that now redirects to the SVN repository.
 </p>
 
 <h2><a href="http://lxr.php.net/">lxr.php.net</a>: Cross Reference</h2>
 
 <p>
- Cross reference for source code, based on the "Linux Cross Reference". This is
- the ultimate tool for exploring PHP code. Any time an important macro or
- function is detected within the code, it is linked to its definition, and
- all its usage locations. This will help you build your code, and understand
- the PHP source.
+ <a href="http://www.opensolaris.org/os/project/opengrok/">OpenGrok</a> allows
+ search and viewing of the PHP source code in an intelligent manner. Several branches
+ and sub-projects are listed.
+ Any time an important macro or function is detected within the code, it is linked
+ to its definition, and all its usage locations. This will help you build your code
+ and understand the PHP source.
+</p>
+<p>
+ The name "lxr" exists as it was once based on the "Linux Cross Reference", but
+ changed over to OpenGrok sometime in 2010.
 </p>
                                                                        
 <h2><a href="http://gtk.php.net/">gtk.php.net</a>: PHP-GTK</h2>
