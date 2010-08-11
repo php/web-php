@@ -119,7 +119,7 @@ $minute = rand(0, 59);
  removal of your mirror from our list.
 </p>
 
-<h2>Add SQLite Support</h2>
+<h2>Add SQLite 3 Support</h2>
 
 <p>
  <a href="http://www.sqlite.org">SQLite</a> is an embedded
@@ -130,12 +130,13 @@ $minute = rand(0, 59);
 </p>
 
 <p>
- The SQLite database engine itself is bundled with PHP, and the extension
- enabled by default with recent PHP releases so there are no additional
- requirements for mirrors other than standard PHP installation.<br />
+ There are a couple of SQLite 3 implementations in PHP. One is via the
+ PDO extension by using the SQLite driver (pdo_sqlite), which is what you
+ should be sure is installed. The other is via the SQLite3 extension.
+ These extensions are both compiled into PHP by default.
  Note: Some Linux distributions disable many extensions in their
  package systems, including SQLite. Please make sure you install the
- "php5-sqlite" package if using such package system.
+ "php5-sqlite" (or similiar) package if using such a system.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>
