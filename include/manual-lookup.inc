@@ -139,7 +139,7 @@ function find_manual_page($lang, $keyword)
         $words = "'" . implode("','", $keywords) . "'";
         
         $SQL = "SELECT name, prio FROM fs WHERE lang = 'LANG_HERE'
-                AND keyword IN (" . $words . ") ORDER BY prio LIMIT 1";
+                AND keyword IN (" . $words . ") ORDER BY keyword = '$keyword' DESC, prio LIMIT 1";
     }
 
     // Check for all the languages
