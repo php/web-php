@@ -43,6 +43,11 @@ if ($process) {
     if (!is_emailable_address($_POST['email'])) {
         $errors[] = 'You must supply a valid email address.';
     }
+
+    // Temporary lockout on one annoying poster.
+    if (strtolower($_POST['email']) == 'saradhaaa@gmail.com') {
+        $errors[] = 'Enough is enough.  Go play somewhere else.';
+    }
   
     $_POST['sdesc'] = trim($_POST['sdesc']);
     if (!$_POST['sdesc']) {
