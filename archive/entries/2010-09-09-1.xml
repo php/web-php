@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPNW10</title>
+  <id>http://www.php.net/archive/2010.php#id2010-09-09-1</id>
+  <published>2010-09-09T23:53:00+08:00</published>
+  <updated>2010-09-09T23:53:00+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-09-09</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-09-09-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpnw.org.uk/phpnw10/" title="PHP | OSI Days 2010">phpnw10_logo.png</default:newsImage>
+  <link href="http://www.php.net/archive/2010.php#id2010-09-09-1" rel="via" type="text/html"/>
+  <content type="html">
+   <p>
+    PHP North West is a PHP conference with a regional focus, bringing the best
+    of PHP speakers to the north-west of England on Saturday 9th October. A
+    full day of conference speakers over at least two tracks this should again
+    prove to be one of the best events for PHP user-led conferences in Europe.
+    We're also, as last year, having an informal half day of speakers on Sunday
+    10th October, at the Museum of Science and Industry (MOSI) nearby. With a
+    weekend packed with all things PHP and a ticket price to suit business and
+    hobbyists alike there are no reasons to miss out - see you in Manchester :)
+   </p>
+   <ul>
+    <li>
+     PHPNW10:
+     <a href="http://conference.phpnw.org.uk/phpnw10/">conference.phpnw.org.uk/phpnw10/</a>
+    </li>
+    <li>
+     Registration:
+     <a href="http://conference.phpnw.org.uk/register/">conference.phpnw.org.uk/register/</a>
+    </li>
+   </ul>
+  </content>
+</entry>
