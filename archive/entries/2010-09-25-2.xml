@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Barcelona Conference 2010</title>
+  <id>http://www.php.net/archive/2010.php#id2010-09-25-2</id>
+  <published>2010-09-25T13:30:45+02:00</published>
+  <updated>2010-09-25T13:30:45+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-10-29</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-09-25-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.es/" title="PHP Barcelona Conference 2010">barcelona2010.png</default:newsImage>
+  <link href="http://phpconference.es/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The <a href="http://phpbarcelona.org/">PHP Barcelona User Group</a> is pleased to announce the 4th edition of the <a href="http://phpconference.es/">PHP Barcelona Conference</a>. Come to the shores of the Mediterranean for two fun-packed days of cutting edge PHP, Application Scalability, High Performance, Databases, Integration, Testing, Clouds (not in the sky, we hope) and many many more topics and surprises. The event will take place from the 29th to the 30th of October and will bring together <strong>Ilia Alshanetsky</strong>, <strong>Fabien Potencier</strong>, <strong>Stefan Priebsch</strong>, <strong>Lorenzo Alberton</strong>, <strong>Enrico Zimuel</strong> and many more of the shiniest names in the industry for 48 hours of intensive PHP and fiesta!</p>
+     
+     <p>Fore more information visit <a href="http://phpconference.es/">http://phpconference.es</a> and book your spot now before tickets run out and don't lose out on one of the most appealing events on the PHP calendar :)</p>
+     
+     <p>See you in Barcelona!</p>
+    </div>
+  </content>
+</entry>
