@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Zend / PHP Conference</title>
+  <id>http://www.php.net/archive/2010.php#id2010-09-30-1</id>
+  <published>2010-09-30T15:27:22+08:00</published>
+  <updated>2010-09-30T15:27:22+08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-11-01</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-09-30-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com/" title="Zend / PHP Conference">zend_phpconf10.jpg</default:newsImage>
+  <link href="http://www.zendcon.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The 6th Annual Zend/PHP Conference will bring together PHP developers and
+         IT managers from around the world to discuss PHP best practices and explore
+         new technologies.
+     </p>
+     
+     <p>
+         At ZendCon, you'll learn from a variety of technical sessions in 9 tracks,
+         renowned speakers, in-depth tutorials, an Exhibit Hall featuring industry
+         leaders and unique networking opportunities.
+     </p>
+     
+     <ul>
+         <li>
+             Learn PHP best practices for architecture, design and development
+         </li>
+         <li>
+             Discover new advances in the PHP language and how to best harness them
+         </li>
+         <li>
+             Gain insights from peers, PHP luminaries, community members and
+             thought-leaders
+         </li>
+         <li>
+             Discover how to deploy and scale large PHP applications
+         </li>
+         <li>
+             Explore new technologies like NoSQL and Cloud Computing
+         </li>
+         <li>
+             Learn how to effectively leverage Zend Framework and the changes coming
+             in Zend Framework 2.0
+         </li>
+     </ul>
+     
+     <p>
+         Register now so you don't miss out on the most popular tutorials and
+         savings.  And join us at the 2010 Zend/PHP Conference - the largest
+         gathering of the PHP community!
+     </p>
+    </div>
+  </content>
+</entry>
