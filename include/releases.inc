@@ -25,8 +25,8 @@ $OLDRELEASES = array (
           'date' => '04 Mar 2010',
         ),
       ),
-      'date' => NULL,
-      'museum' => false,
+      'date' => '04 Mar 2010',
+      'museum' => true,
     ),
     '5.2.13' => 
     array (
@@ -99,8 +99,8 @@ $OLDRELEASES = array (
           'date' => '25 Feb 2010',
         ),
       ),
-      'date' => NULL,
-      'museum' => false,
+      'date' => '25 Feb 2010',
+      'museum' => true,
     ),
     '5.3.1' => 
     array (
@@ -125,8 +125,8 @@ $OLDRELEASES = array (
           'date' => '19 Nov 2009',
         ),
       ),
-      'date' => NULL,
-      'museum' => false,
+      'date' => '19 Nov 2009',
+      'museum' => true,
     ),
     '5.2.12' => 
     array (
@@ -202,7 +202,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '17 December 2009',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.11' => 
     array (
@@ -278,7 +278,7 @@ this version. The 5.2.6 PECL package does however work with this release',
         ),
       ),
       'date' => '17 September 2009',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.0' => 
     array (
