@@ -15,6 +15,13 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
     date_default_timezone_set("UTC");
 }
 
+// As of PHP 5.3.0 multibyte sequence errors are no longer 
+// silent. Prior to that version this bitfield does not exist
+// so define it to prevent notices on older versions
+if (!defined("ENT_IGNORE")) {
+    define("ENT_IGNORE", 0);
+}
+
 // Prevent cross site scripting problems
 unset($RSIDEBAR_DATA);
 unset($SIDEBAR_DATA);

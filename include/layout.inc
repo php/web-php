@@ -467,9 +467,9 @@ function print_link($url, $linktext = FALSE, $target = FALSE, $extras = FALSE)
 //
 function make_popup_link ($url, $linktext=false, $target=false, $windowprops="", $extras=false) {
     return sprintf("<a href=\"%s\" target=\"%s\" onclick=\"window.open('%s','%s','%s');return false;\"%s>%s</a>",
-        htmlspecialchars($url, ENT_QUOTES),
+        htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ? $target : "_new"),
-        htmlspecialchars($url, ENT_QUOTES),
+        htmlspecialchars($url, ENT_QUOTES | ENT_IGNORE),
         ($target ? $target : "_new"),
                 $windowprops,
         ($extras ? ' '.$extras : ''),
@@ -615,9 +615,9 @@ function display_event($event, $include_date = 1)
     }
 
     // Print link in case we have one
-    if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES, 'UTF-8'),'" class="url">'; }
+    if ($event['url']) { echo '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'),'" class="url">'; }
     // Print event description
-    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES, 'UTF-8')), "</b>";
+    echo "<b class='summary'>", stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), "</b>";
     // End link
     if ($event['url']) { echo "</a>"; }
 
@@ -659,8 +659,8 @@ function display_event($event, $include_date = 1)
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br /><br /><b>URL:</b> ',
-             '<a href="', htmlentities($event['url'], ENT_QUOTES, 'UTF-8'), '">',
-             htmlentities($event['url'], ENT_QUOTES, 'UTF-8'), '</a>';
+             '<a href="', htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '">',
+             htmlentities($event['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8'), '</a>';
     }
 ?>
  </td></tr>

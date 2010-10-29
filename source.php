@@ -41,7 +41,7 @@ if (!isset($_GET['url']) || (isset($_GET['url']) && !is_string($_GET['url']))) {
     exit;
 }
 
-echo "<h1>Source of: " . htmlentities($_GET['url']) . "</h1>"; 
+echo "<h1>Source of: " . htmlentities($_GET['url'], ENT_IGNORE, 'UTF-8') . "</h1>"; 
 
 // Get dirname of the specified URL part
 $dir = dirname($_GET['url']);

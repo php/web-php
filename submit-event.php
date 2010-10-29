@@ -178,8 +178,8 @@ if ($process && count($errors) === 0) {
   <th class="subr">Start Date</th>
   <td>
    <select name="smonth"><option></option><?php display_options($months, $_POST['smonth'])?></select>
-   <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES, 'UTF-8')?>" />
-   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES, 'UTF-8') : date("Y")?>" />
+   <input type="text" name="sday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['sday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" />
+   <input type="text" name="syear" size="4" maxlength="4" value="<?php echo $_POST['syear'] ? htmlentities($_POST['syear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>" />
    <input type="radio" id="single" name="type" value="single"<?php if ($_POST['type'] == 'single' || !$_POST['type']) echo ' checked="checked"';?> />
    <label for="single">One day (no end-date required)</label>
   </td>
@@ -188,8 +188,8 @@ if ($process && count($errors) === 0) {
   <th class="subr">End Date</th>
   <td>
    <select name="emonth"><option></option><?php display_options($months, $_POST['emonth'])?></select>
-   <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES, 'UTF-8')?>" />
-   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES, 'UTF-8') : date("Y")?>" />
+   <input type="text" name="eday" size="2" maxlength="2" value="<?php echo htmlentities($_POST['eday'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" />
+   <input type="text" name="eyear" size="4" maxlength="4" value="<?php echo $_POST['eyear'] ? htmlentities($_POST['eyear'], ENT_QUOTES | ENT_IGNORE, 'UTF-8') : date("Y")?>" />
    <input type="radio" id="multi" name="type" value="multi"<?php if ($_POST['type'] == 'multi') echo ' checked="checked"';?> />
    <label for="multi">Multi-day event</label>
   </td>
@@ -205,11 +205,11 @@ if ($process && count($errors) === 0) {
  </tr>
  <tr>
   <th class="subr">Short Description</th>
-  <td><input type="text" name="sdesc" class="max" value="<?php echo htmlentities($_POST['sdesc'], ENT_QUOTES, 'UTF-8')?>" size="32" maxlength="32" /></td>
+  <td><input type="text" name="sdesc" class="max" value="<?php echo htmlentities($_POST['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" size="32" maxlength="32" /></td>
  </tr>
  <tr>
   <th class="subr">URL</th>
-  <td><input type="text" name="url" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['url'], ENT_QUOTES, 'UTF-8')?>" /></td>
+  <td><input type="text" name="url" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['url'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" /></td>
  </tr>
  <tr>
   <th class="subr">Country</th>
@@ -234,13 +234,13 @@ if ($process && count($errors) === 0) {
  <tr>
   <th class="subr">Email</th>
   <td>
-   <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8')?>" /><br />
+   <input type="text" name="email" size="40" maxlength="128" class="max" value="<?php echo htmlentities($_POST['email'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')?>" /><br />
    <small>This email address is only used to contact you about the listing, it will not displayed along with the listing.</small>
   </td>
  </tr>
  <tr>
   <th class="subr">Long Description</th>
-  <td><textarea name="ldesc" cols="60" rows="10" wrap="virtual" class="max"><?php echo htmlentities($_POST['ldesc'], ENT_QUOTES, 'UTF-8');?></textarea></td>
+  <td><textarea name="ldesc" cols="60" rows="10" wrap="virtual" class="max"><?php echo htmlentities($_POST['ldesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8');?></textarea></td>
  </tr>
  <tr>
   <th colspan="2">
@@ -265,7 +265,7 @@ function display_options($options, $current)
     foreach ($options as $k => $v) {
         echo '<option value="', $k, '"',
              ($k == $current ? ' selected="selected"' : ''),
-             '>', htmlentities($v, ENT_QUOTES, 'UTF-8'), "</option>\n";
+             '>', htmlentities($v, ENT_QUOTES | ENT_IGNORE, 'UTF-8'), "</option>\n";
     }
 }
 
