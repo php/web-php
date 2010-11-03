@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP'n Rio 10</title>
+  <id>http://www.php.net/archive/2010.php#id2010-11-02-1</id>
+  <published>2010-11-02T20:05:56-02:00</published>
+  <updated>2010-11-02T20:05:56-02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2010-11-20</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2010-11-02-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phprio.org/phpnrio10" title="PHP'n Rio 10">phpnrio10.png</default:newsImage>
+  <link href="http://www.phprio.org/phpnrio10" rel="via" type="text/html"/>
+  <content type="html">
+      <p>
+          <a href="http://www.phprio.org/">The PHP Rio User Group</a>
+          is pleased to announce their second edition of
+          the <em>PHP'n Rio</em> conference. It will be held on November 20th,
+          2010, at the <a href="http://www.puc-rio.br/">PUC Rio university</a>,
+          Rio de Janeiro. It is a one day conference aimed on providing
+          experienced developers and beginners a chance to learn more about PHP
+          frameworks, web applications built in PHP, and the art of testing
+          code.
+      </p>
+
+      <p>
+          No fees or subscription required. Participation is entirely free!
+      </p>
+
+      <p>
+          Whether you live here or are around just enjoying the marvelous city,
+          come and join us :) For more information, please visit
+          <a href="http://www.phprio.org/phpnrio10">
+              http://www.phprio.org/phpnrio10
+          </a>
+          (Portuguese only).
+      </p>
+
+</content>
+</entry>
