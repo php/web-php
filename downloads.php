@@ -104,6 +104,9 @@ foreach($a["source"] as $rel) {
 </ul>
 
 <h2>Windows Binaries</h2>
+<p>
+The PECL package will not be released for this version. The 5.2.6 PECL package does however work with this release.
+</p>
 <ul>
 <?php
 if(isset($a["windows"])) {

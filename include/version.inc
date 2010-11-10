@@ -49,9 +49,7 @@ $PHP_5_2_MD5     = array(
 );
 
 $PHP_5_2_WINDOWS_NOTE_MSI = "";
-$PHP_5_2_WINDOWS_NOTE_ZIP = "
-The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release";
+$PHP_5_2_WINDOWS_NOTE_ZIP = "";
 
 $RELEASES = array(
     5 => array(

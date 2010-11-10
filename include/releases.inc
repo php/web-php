@@ -59,7 +59,7 @@ $OLDRELEASES = array (
           'name' => 'PHP 5.2.13 zip package',
           'md5' => '3074bad887d613acf992ebdfea0e4465',
           'date' => '25 Feb 2010',
-          'note' => 'The PECL package will <em>not</em> be released for this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         1 =>
         array (
@@ -82,7 +82,7 @@ $OLDRELEASES = array (
           'name' => 'PHP 5.2.13 Non-thread-safe zip package',
           'md5' => 'a7bd052e7a1413b743c07ae37171980d',
           'date' => '25 Feb 2010',
-          'note' => 'The PECL package will <em>not</em> be released for this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         4 =>
         array (
@@ -159,8 +159,7 @@ $OLDRELEASES = array (
           'name' => 'PHP 5.2.12 zip package',
           'md5' => 'e04f2944175dc19d7d007b5e889690b4',
           'date' => '17 December 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         1 => 
         array (
@@ -183,8 +182,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.12 Non-thread-safe zip package',
           'md5' => 'ff0c67bb622c062f0820598e8d6bc12c',
           'date' => '17 December 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         4 => 
         array (
@@ -235,8 +233,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.11 zip package',
           'md5' => 'adac50ae1449b76f10ff1865bb4f94f1',
           'date' => '17 September 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         1 => 
         array (
@@ -259,8 +256,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.11 Non-thread-safe zip package',
           'md5' => 'b724475450a13af4cd99c518fd495340',
           'date' => '17 September 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         4 => 
         array (
@@ -337,8 +333,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.10 zip package',
           'md5' => '95ae7ccfcd05b6c81c93aa2e9e792f9e',
           'date' => '18 June 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         1 => 
         array (
@@ -361,8 +356,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.10 Non-thread-safe zip package',
           'md5' => 'b1c53e6f525133647e621a9c95b09e65',
           'date' => '18 June 2009',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         4 => 
         array (
@@ -413,9 +407,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.9-2 zip package',
           'md5' => '316b9c81bab08e6547a730315ea2abfd',
           'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL<br />
-The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
         ),
         1 => 
         array (
@@ -438,9 +430,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.9-2 Non-thread-safe zip package',
           'md5' => '8f85777941f7722fcbfe08e7de358f7d',
           'date' => '8 April 2009',
-          'note' => 'Updated 9th of April: Added the missing oci8 DLL<br />
-The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => 'Updated 9th of April: Added the missing oci8 DLL',
         ),
         4 => 
         array (
@@ -492,8 +482,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.8 zip package',
           'md5' => '71511834881753ea0906f2bca91632b9',
           'date' => '08 December 2008',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         1 => 
         array (
@@ -516,8 +505,7 @@ this version. The 5.2.6 PECL package does however work with this release',
           'name' => 'PHP 5.2.8 Non-thread-safe zip package',
           'md5' => '207abb02054c5ce996bc350352224acc',
           'date' => '08 December 2008',
-          'note' => 'The PECL package will <em>not</em> be released for
-this version. The 5.2.6 PECL package does however work with this release',
+          'note' => '',
         ),
         4 => 
         array (
