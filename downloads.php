@@ -105,7 +105,11 @@ foreach($a["source"] as $rel) {
 
 <h2>Windows Binaries</h2>
 <p>
-The PECL package will not be released for this version. The 5.2.6 PECL package does however work with this release.
+<?php
+if(isset($a["windows"])) {
+    echo 'The PECL bundle is no longer built for the 5.2.x series. However, the 5.2.6 PECL package does work with this release.';
+}
+?>
 </p>
 <ul>
 <?php
