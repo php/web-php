@@ -92,7 +92,7 @@ site_header("Releases");
 </p>
 
 <p>
- <em>Note to Windows users: Only PHP 5.3+ versions are available as VC9 builds.
+ <em>Note to Windows users: Only PHP 5.3+ versions are available as both VC6 and VC9 builds.
  All versions prior were built using VC6.</em>
 </p>
 
