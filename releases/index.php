@@ -87,8 +87,13 @@ site_header("Releases");
  We have collected all the official information and code available for
  past PHP releases. You can find more details on the current release
  on <a href="/downloads.php">our downloads page</a>. Please note that
- <em>older releases are listed for archaeological purposes only, and
+ <em>older releases are listed for archival purposes only, and
  they are no longer supported</em>.
+</p>
+
+<p>
+ <em>Note to Windows users: Only PHP 5.3+ versions are available as VC9 builds.
+ All versions prior were built using VC6.</em>
 </p>
 
 <?php
