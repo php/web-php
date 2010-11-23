@@ -93,7 +93,7 @@ $SIDEBAR_DATA = '
 <h3>Community</h3>
 <ul class="simple">
  <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
- <li><a href="http://www.ostg.com/">OSTG</a></li>
+ <li><a href="http://ostg.com/">OSTG</a></li>
 </ul>
 
 <h3>Syndication</h3>
