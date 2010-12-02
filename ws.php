@@ -25,11 +25,40 @@ if(isset($sites[$_REQUEST['profile']])) {
   $scope = 'all';
 }
 
-$request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q&start=$s&results=$r&site={$sites[$scope]}&language=$l&output=php&similar_ok=1";
+$request =  "{$conf['svc']}$q?appid={$conf['appid']}&start=$s&count=$r&sites={$sites[$scope]}&lang=$l&format=json";
 $data = @file_get_contents($request);
 list($version,$status_code,$msg) = explode(' ',$http_response_header[0], 3);
-if($status_code==200) echo $data;
+if($status_code==200) echo ws_boss_massage($data);
 else echo serialize($http_response_header[0]);
+
+function ws_boss_massage($data) {
+    $results = json_decode($data, true);
+    $rsp = $results['ysearchresponse'];
+    $set = $rsp['resultset_web'];
+
+    $massaged = array(
+        'ResultSet' => array(
+            'totalResultsAvailable' => $rsp['totalhits'],
+            'totalResultsReturned' => $rsp['count'],
+            'firstResultPosition' => $rsp['start'],
+            'Result' => array(),
+        ),
+    );
+
+    foreach ($set as $result) {
+        $massaged['ResultSet']['Result'][] = array(
+            'Title' => $result['title'],
+            'Summary' => $result['abstract'],
+            'Url' => $result['url'],
+            'ClickUrl' => $result['clickurl'],
+            'MimeType' => NULL, // Not returned from BOSS
+            'ModificationDate' => strtotime($result['date']),
+            'Cache' => NULL, // Not returned from BOSS
+        );
+    }
+
+    return serialize($massaged);
+}
 
 $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'], array(PDO::ATTR_PERSISTENT => true,
                                                                                          PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
