@@ -11,6 +11,412 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.4"></a><!-- {{{ 5.3.4 -->
+<h3>Version 5.3.4</h3>
+<b>09-December-2010</b>
+
+<ul>
+<li>Upgraded bundled Sqlite3 to version 3.7.3. (Ilia)</li>
+<li>Upgraded bundled PCRE to version 8.10. (Ilia)</li>
+</ul>
+
+<li>Security enhancements:
+<ul>
+  <li>Fixed crash in zip extract method (possible CWE-170). 
+    (Maksymilian Arciemowicz, Pierre)</li>
+  <li>Paths with NULL in them (foo\0bar.txt) are now considered as invalid. (Rasmus)</li>
+  <li>Fixed a possible double free in imap extension (Identified by Mateusz 
+    Kocielski). (CVE-2010-4150). (Ilia)</li>
+  <li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment.
+    (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
+  <li>Fixed possible flaw in open_basedir (CVE-2010-3436). (Pierre)</li>
+  <li>Fixed MOPS-2010-24, fix string validation. (CVE-2010-2950). (Pierre)</li>
+  <li>Fixed symbolic resolution support when the target is a DFS share. (Pierre)</li>
+  <li><?php bugfix(52929); ?> (Segfault in filter_var with FILTER_VALIDATE_EMAIL with
+    large amount of data) (CVE-2010-3710). (Adam)</li>
+</ul>
+
+<li>General improvements:
+<ul>
+  <li>Added stat support for zip stream. (Pierre)</li>
+  <li>Added follow_location (enabled by default) option for the http stream 
+    support. (Pierre)</li>
+  <li>Improved support for is_link and related functions on Windows. (Pierre)</li>
+  <li>Added a 3rd parameter to get_html_translation_table. It now takes a charset
+    hint, like htmlentities et al. (Gustavo)</li>
+</ul> 
+<li>Implemented feature requests:
+<ul>
+  <li>Implemented FR <?php bugl(52348); ?>, added new constant ZEND_MULTIBYTE to detect
+    zend multibyte at runtime. (Kalle)</li>
+  <li>Implemented FR <?php bugl(52173); ?>, added functions pcntl_get_last_error() and 
+     pcntl_strerror(). (nick dot telford at gmail dot com, Arnaud)</li>
+  <li>Implemented symbolic links support for open_basedir checks. (Pierre)</li>
+  <li>Implemented FR <?php bugl(51804); ?>, SplFileInfo::getLinkTarget on Windows. (Pierre)</li>
+  <li>Implemented FR <?php bugl(50692); ?>, not uploaded files don't count towards
+    max_file_uploads limit. As a side improvement, temporary files are not opened
+    for empty uploads and, in debug mode, 0-length uploads. (Gustavo)</li>
+</ul>    
+<li>Improved MySQLnd:
+<ul>
+  <li>Added new character sets to mysqlnd, which are available in MySQL 5.5
+    (Andrey)</li>
+</ul>
+<li>Improved PHP-FPM SAPI:
+<ul>
+  <li>Added '-p/--prefix' to php-fpm to use a custom prefix and run multiple
+    instances. (fat)</li>
+  <li>Added custom process title for FPM. (fat)</li>
+  <li>Added '-t/--test' to php-fpm to check and validate FPM conf file. (fat)</li>
+  <li>Added statistics about listening socket queue length for FPM.</li>
+    (andrei dot nigmatulin at gmail dot com, fat)</li>
+</ul>    
+<li>Core:
+<ul>
+  <li>Fixed extract() to do not overwrite $GLOBALS and $this when using
+    EXTR_OVERWRITE. (jorto at redhat dot com)</li>
+  <li>Fixed bug in the Windows implementation of dns_get_record, where the two
+    last parameters wouldn't be filled unless the type were DNS_ANY (Gustavo).</li>
+  <li>Changed the $context parameter on copy() to actually have an effect. (Kalle)</li>
+  <li>Fixed htmlentities/htmlspecialchars accepting certain ill-formed UTF-8
+    sequences. (Gustavo)</li>
+  <li><?php bugfix(53409); ?> (sleep() returns NULL on Windows). (Pierre)</li>
+  <li><?php bugfix(53319); ?> (strip_tags() may strip '&lt;br /&gt;' incorrectly). (Felipe)</li>
+  <li><?php bugfix(53304); ?> (quot_print_decode does not handle lower-case hex digits).
+    (Ilia, daniel dot mueller at inexio dot net)</li>
+  <li><?php bugfix(53248); ?> (rawurlencode RFC 3986 EBCDIC support misses tilde char).
+    (Justin Martin)  </li>
+  <li><?php bugfix(53226); ?> (file_exists fails on big filenames). (Adam)</li>
+  <li><?php bugfix(53198); ?> (changing INI setting "from" with ini_set did not have any
+    effect). (Gustavo)</li>
+  <li><?php bugfix(53180); ?> (post_max_size=0 not disabling the limit when the content
+    type is application/x-www-form-urlencoded or is not registered with PHP).
+    (gm at tlink dot de, Gustavo)</li>
+  <li><?php bugfix(53141); ?> (autoload misbehaves if called from closing session).
+    (ladislav at marek dot su)</li>
+  <li><?php bugfix(53021); ?> (In html_entity_decode, failure to convert numeric entities
+    with ENT_NOQUOTES and ISO-8859-1). Fixed and extended the fix of ENT_NOQUOTES 
+    in html_entity_decode that had introduced the bug (rev #185591) to other
+    encodings. Additionaly, html_entity_decode() now doesn't decode &amp;#34; if
+    ENT_NOQUOTES is given. (Gustavo)</li>
+  <li><?php bugfix(52931); ?> (strripos not overloaded with function overloading enabled).
+    (Felipe)</li>
+  <li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of 
+    get_class_name before calling it). (Kalle, Gustavo)</li>
+  <li><?php bugfix(52534); ?> (var_export array with negative key). (Felipe)</li>
+  <li><?php bugfix(52327); ?> (base64_decode() improper handling of leading padding in
+    strict mode). (Ilia)</li>
+  <li><?php bugfix(52260); ?> (dns_get_record fails with non-existing domain on Windows).
+    (a_jelly_doughnut at phpbb dot com, Pierre)</li>
+  <li><?php bugfix(50953); ?> (socket will not connect to IPv4 address when the host has
+    both IPv4 and IPv6 addresses, on Windows). (Gustavo, Pierre)</li>
+  <li><?php bugfix(50524); ?> (proc_open on Windows does not respect cwd as it does on
+    other platforms). (Pierre)</li>
+  <li><?php bugfix(49687); ?> (utf8_decode vulnerabilities and deficiencies in the number
+    of reported malformed sequences). (CVE-2010-3870) (Gustavo)</li>
+  <li><?php bugfix(49407); ?> (get_html_translation_table doesn't handle UTF-8). (Gustavo)</li>
+  <li><?php bugfix(48831); ?> (php -i has different output to php --ini). (Richard, 
+    Pierre)</li>
+  <li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4).
+    (Felipe)</li>
+  <li><?php bugfix(47168); ?> (printf of floating point variable prints maximum of 40 
+    decimal places). (Ilia)</li>
+  <li><?php bugfix(46587); ?> (mt_rand() does not check that max is greater than min).
+    (Ilia)</li>
+  <li><?php bugfix(29085); ?> (bad default include_path on Windows). (Pierre)</li>
+  <li><?php bugfix(25927); ?> (get_html_translation_table calls the ' &amp;#39; instead of
+    &amp;#039;). (Gustavo)</li>
+</ul>    
+<li>Zend engine:
+<ul>
+  <li>Reverted fix for bug #51176 (Static calling in non-static method behaves
+    like $this-&gt;). (Felipe)</li>
+  <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED. 
+    (Kalle)</li>
+  <li>Fixed NULL dereference in lex_scan on zend multibyte builds where the script
+    had a flex incompatible encoding and there was no converter. (Gustavo)</li>
+  <li>Fixed covariance of return-by-ref constraints. (Etienne)</li>
+  <li><?php bugfix(53305); ?> (E_NOTICE when defining a constant starts with
+    __COMPILER_HALT_OFFSET__). (Felipe)</li>
+  <li><?php bugfix(52939); ?> (zend_call_function does not respect ZEND_SEND_PREFER_REF).
+    (Dmitry)</li>
+  <li><?php bugfix(52879); ?> (Objects unreferenced in __get, __set, __isset or __unset
+    can be freed too early). (mail_ben_schmidt at yahoo dot com dot au, Dmitry)</li>
+  <li><?php bugfix(52786); ?> (PHP should reset section to [PHP] after ini sections).
+    (Fedora at famillecollet dot com)</li>
+  <li><?php bugfix(52508); ?> (newline problem with parse_ini_file+INI_SCANNER_RAW).
+    (Felipe)</li>
+  <li><?php bugfix(52484); ?> (__set() ignores setting properties with empty names).
+    (Felipe)</li>
+  <li><?php bugfix(52361); ?> (Throwing an exception in a destructor causes invalid
+    catching). (Dmitry)</li>
+  <li><?php bugfix(51008); ?> (Zend/tests/bug45877.phpt fails). (Dmitry)</li>
+</ul>
+<li>Build issues:
+<ul>
+  <li><?php bugfix(52436); ?> (Compile error if systems do not have stdint.h)
+    (Sriram Natarajan)</li>
+  <li><?php bugfix(50345); ?> (nanosleep not detected properly on some solaris versions).
+    (Ulf, Tony)</li>
+  <li><?php bugfix(49215); ?> (make fails on glob_wrapper). (Felipe)</li>
+</ul>
+<li>Calendar extension:
+<ul>
+  <li><?php bugfix(52744); ?> (cal_days_in_month incorrect for December 1 BCE).
+   (gpap at internet dot gr, Adam)</li>
+</ul>
+<li>cURL extension:
+<ul>
+  <li><?php bugfix(52828); ?> (curl_setopt does not accept persistent streams).
+    (Gustavo, Ilia)</li>
+  <li><?php bugfix(52827); ?> (cURL leaks handle and causes assertion error
+    (CURLOPT_STDERR)). (Gustavo)</li>
+  <li><?php bugfix(52202); ?> (CURLOPT_PRIVATE gets corrupted). (Ilia)</li>
+  <li><?php bugfix(50410); ?> (curl extension slows down PHP on Windows). (Pierre)</li>
+</ul>
+<li>DateTime extension:
+<ul>
+  <li><?php bugfix(53297); ?> (gettimeofday implementation in php/win32/time.c can return
+    1 million microsecs). (ped at 7gods dot org)</li>
+  <li><?php bugfix(52668); ?> (Iterating over a dateperiod twice is broken). (Derick)</li>
+  <li><?php bugfix(52454); ?> (Relative dates and getTimestamp increments by one day).
+    (Derick)</li>
+  <li><?php bugfix(52430); ?> (date_parse parse 24:xx:xx as valid time). (Derick)</li>
+  <li>Added support for the ( and ) delimiters/separators to
+    DateTime::createFromFormat(). (Derick)</li>
+</ul>
+<li>DBA extension:
+<ul>
+  <li>Added Berkeley DB 5.1 support to the DBA extension. (Oracle Corp.)</li>
+</ul>
+<li>DOM extension:
+<ul>
+  <li><?php bugfix(52656); ?> (DOMCdataSection does not work with splitText). (Ilia)</li>
+</ul>
+<li>Filter extension:
+<ul>
+  <li>Fixed the filter extension accepting IPv4 octets with a leading 0 as that
+    belongs to the unsupported "dotted octal" representation. (Gustavo)</li>
+  <li><?php bugfix(53236); ?> (problems in the validation of IPv6 addresses with leading
+    and trailing :: in the filter extension). (Gustavo)</li>
+  <li><?php bugfix(50117); ?> (problems in the validation of IPv6 addresses with IPv4
+    addresses and ::). (Gustavo)</li>
+</ul>
+<li>GD extension:
+<ul>
+  <li><?php bugfix(53492); ?> (fix crash if anti-aliasing steps are invalid). (Pierre)</li>
+</ul>
+<li>GMP extension:
+<ul>
+  <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is 
+    expected). (Stas)</li>
+  <li><?php bugfix(52849); ?> (GNU MP invalid version match). (Adam)</li>
+</ul>
+<li>Hash extension:
+<ul>
+  <li><?php bugfix(51003); ?> (unaligned memory access in ext/hash/hash_tiger.c).
+    (Mike, Ilia)</li>
+</ul>
+<li>Iconv extension:
+<ul>
+  <li><?php bugfix(52941); ?> (The 'iconv_mime_decode_headers' function is skipping
+    headers). (Adam)</li>
+  <li><?php bugfix(52599); ?> (iconv output handler outputs incorrect content type
+    when flags are used). (Ilia)</li>
+  <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded 
+    words). (Ilia)</li>
+</ul>
+<li>Intl extension:
+<ul>
+  <li>Fixed crashes on invalid parameters in intl extension. (CVE-2010-4409). (Stas, Maksymilian
+    Arciemowicz)</li>
+  <li>Added support for formatting the timestamp stored in a DateTime object.
+    (Stas)</li>
+  <li><?php bugfix(50590); ?> (IntlDateFormatter::parse result is limited to the integer
+    range). (Stas)</li>
+</ul>
+<li>Mbstring extension:
+<ul>
+  <li><?php bugfix(53273); ?> (mb_strcut() returns garbage with the excessive length
+    parameter). (CVE-2010-4156) (Mateusz Kocielski, Pierre, Moriyoshi)</li>
+  <li><?php bugfix(52981); ?> (Unicode casing table was out-of-date. Updated with
+    UnicodeData-6.0.0d7.txt and included the source of the generator program with
+    the distribution) (Gustavo).</li>
+  <li><?php bugfix(52681); ?> (mb_send_mail() appends an extra MIME-Version header).
+    (Adam)</li>
+</ul>
+<li>MSSQL extension:
+<ul>
+  <li>Fixed possible crash in mssql_fetch_batch(). (Kalle)</li>
+  <li><?php bugfix(52843); ?> (Segfault when optional parameters are not passed in to
+    mssql_connect). (Felipe)</li>
+</ul>
+<li>MySQL extension:
+<ul>
+  <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int). 
+    (Kalle, rein at basefarm dot no)</li>
+</ul>
+<li>MySQLi extension:
+<ul>
+  <li><?php bugfix(52891); ?> (Wrong data inserted with mysqli/mysqlnd when using
+    mysqli_stmt_bind_param and value> PHP_INT_MAX). (Andrey)</li>
+  <li><?php bugfix(52686); ?> (mysql_stmt_attr_[gs]et argument points to incorrect type).
+    (rein at basefarm dot no)</li>
+  <li><?php bugfix(52654); ?> (mysqli doesn't install headers with structures it uses).
+    (Andrey)</li>
+  <li><?php bugfix(52433); ?> (Call to undefined method mysqli::poll() - must be static).
+    (Andrey)</li>
+  <li><?php bugfix(52417); ?> (MySQLi build failure with mysqlnd on MacOS X). (Andrey)</li>
+  <li><?php bugfix(52413); ?> (MySQLi/libmysql build failure on OS X, FreeBSD). (Andrey)</li>
+  <li><?php bugfix(52390); ?> (mysqli_report() should be per-request setting). (Kalle)</li>
+  <li><?php bugfix(52302); ?> (mysqli_fetch_all does not work with MYSQLI_USE_RESULT).
+    (Andrey)</li>
+  <li><?php bugfix(52221); ?> (Misbehaviour of magic_quotes_runtime (get/set)). (Andrey)</li>
+  <li><?php bugfix(45921); ?> (Can't initialize character set hebrew). (Andrey)</li>
+</ul>
+<li>MySQLnd:
+<ul>
+  <li><?php bugfix(52613); ?> (crash in mysqlnd after hitting memory limit). (Andrey)</li>
+</ul> 
+<li>ODBC extension:
+<ul>
+  - <?php bugfix(52512); ?> (Broken error handling in odbc_execute).</li>
+    (mkoegler at auto dot tuwien dot ac dot at)</li>
+</ul>
+<li>Openssl extension:
+<ul>
+  <li>Fixed possible blocking behavior in openssl_random_pseudo_bytes on Windows.
+    (Pierre)</li>
+  <li><?php bugfix(53136); ?> (Invalid read on openssl_csr_new()). (Felipe)</li>
+  <li><?php bugfix(52947); ?> (segfault when ssl stream option capture_peer_cert_chain
+    used). (Felipe)</li>
+</ul>
+<li>Oracle Database extension (OCI8):
+<ul>
+  <li><?php bugfix(53284); ?> (Valgrind warnings in oci_set_* functions) (Oracle Corp.)</li>
+  <li><?php bugfix(51610); ?> (Using oci_connect causes PHP to take a long time to
+    exit).  Requires Oracle 11.2.0.2 client libraries (or Oracle bug fix
+    9891199) for this patch to have an effect. (Oracle Corp.)</li>
+</ul>
+<li>PCNTL extension:
+<ul>
+  <li><?php bugfix(52784); ?> (Race condition when handling many concurrent signals).
+    (nick dot telford at gmail dot com, Arnaud)</li>
+</ul>
+<li>PCRE extension:
+<ul>
+  <li><?php bugfix(52971); ?> (PCRE-Meta-Characters not working with utf-8). (Felipe)</li>
+  <li><?php bugfix(52732); ?> (Docs say preg_match() returns FALSE on error, but it
+    returns int(0)). (slugonamission at gmail dot com)</li>
+</ul>
+<li>PHAR extension:
+<ul>
+  <li><?php bugfix(50987); ?> (unaligned memory access in phar.c).
+    (geissert at debian dot org, Ilia)</li>
+</ul>
+<li>PHP-FPM SAPI:
+<ul>
+  <li><?php bugfix(53412); ?> (segfault when using -y). (fat)</li>
+  <li>Fixed inconsistent backlog default value (-1) in FPM on many systems. (fat)</li>
+  <li><?php bugfix(52501); ?> (libevent made FPM crashed when forking - libevent has
+    been removed). (fat)</li>
+  <li><?php bugfix(52725); ?> (gcc builtin atomic functions were sometimes used when they
+    were not available). (fat)</li>
+  <li><?php bugfix(52693); ?> (configuration file errors are not logged to stderr). (fat)</li>
+  <li><?php bugfix(52674); ?> (FPM Status page returns inconsistent Content-Type headers).
+    (fat)</li>
+  <li><?php bugfix(52498); ?> (libevent was not only linked to php-fpm). (fat)</li>
+</ul>
+<li>PDO:
+<ul>
+  <li><?php bugfix(52699); ?> (PDO bindValue writes long int 32bit enum).
+    (rein at basefarm dot no) </li>
+  <li><?php bugfix(52487); ?> (PDO::FETCH_INTO leaks memory). (Felipe)</li>
+</ul>
+<li>PDO DBLib driver:
+<ul>
+  <li><?php bugfix(52546); ?> (pdo_dblib segmentation fault when iterating MONEY values).
+    (Felipe)</li>
+</ul>
+<li>PDO Firebird driver:
+<ul>
+  <li>Restored firebird support (VC9 builds only). (Pierre)</li>
+  <li><?php bugfix(53335); ?> (pdo_firebird did not implement rowCount()).
+    (preeves at ibphoenix dot com)</li>
+  <li><?php bugfix(53323); ?> (pdo_firebird getAttribute() crash).
+    (preeves at ibphoenix dot com)</li>
+</ul>
+<li>PDO MySQL driver:
+<ul>
+  <li><?php bugfix(52745); ?> (Binding params doesn't work when selecting a date inside a
+    CASE-WHEN). (Andrey)</li>
+</ul>
+<li>PostgreSQL extension:
+<ul>
+  <li><?php bugfix(47199); ?> (pg_delete() fails on NULL). (ewgraf at gmail dot com)</li>
+</ul>
+<li>Reflection extension:
+<ul>
+  <li>Fixed ReflectionProperty::isDefault() giving a wrong result for properties
+    obtained with ReflectionClass::getProperties(). (Gustavo)</li>
+  <li><?php bugfix(53366); ?> (Reflection doesnt get dynamic property value from
+    getProperty()). (Felipe)</li>
+  <li><?php bugfix(52854); ?> (ReflectionClass::newInstanceArgs does not work for classes
+    without constructors). (Johannes)</li>
+</ul>
+<li>SOAP extension:
+<ul>
+  <li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy
+    with SoapClient object). (Dmitry)</li>
+</ul>
+<li>SPL extension:
+<ul>
+  <li><?php bugfix(53362); ?> (Segmentation fault when extending SplFixedArray). (Felipe)</li>
+  <li><?php bugfix(53279); ?> (SplFileObject doesn't initialise default CSV escape
+    character). (Adam)</li>
+  <li><?php bugfix(53144); ?> (Segfault in SplObjectStorage::removeAll()). (Felipe)</li>
+  <li><?php bugfix(53071); ?> (SPLObjectStorage defeats gc_collect_cycles). (Gustavo)</li>
+  <li><?php bugfix(52573); ?> (SplFileObject::fscanf Segmentation fault). (Felipe)</li>
+  <li><?php bugfix(51763); ?> (SplFileInfo::getType() does not work symbolic link 
+    and directory). (Pierre)</li>
+  <li><?php bugfix(50481); ?> (Storing many SPLFixedArray in an array crashes). (Felipe)</li>
+  <li><?php bugfix(50579); ?> (RegexIterator::REPLACE doesn't work). (Felipe)</li>
+</ul>
+<li>SQLite3 extension:
+<ul>
+  <li><?php bugfix(53463); ?> (sqlite3 columnName() segfaults on bad column_number).
+    (Felipe)</li>
+</ul>
+<li>Streams:
+<ul>
+  <li>Fixed forward stream seeking emulation in streams that don't support seeking
+    in situations where the read operation gives back less data than requested
+    and when there was data in the buffer before the emulation started. Also made
+    more consistent its behavior -- should return failure every time less data
+    than was requested was skipped. (Gustavo)</li>
+  <li><?php bugfix(53241); ?> (stream casting that relies on fdopen/fopencookie fails
+    with streams opened with, inter alia, the 'xb' mode). (Gustavo)</li>
+  <li><?php bugfix(53006); ?> (stream_get_contents has an unpredictable behavior when the
+    underlying stream does not support seeking). (Gustavo)</li>
+  <li><?php bugfix(52944); ?> (Invalid write on second and subsequent reads with an
+    inflate filter fed invalid data). (Gustavo)</li>
+  <li><?php bugfix(52820); ?> (writes to fopencookie FILE* not commited when seeking the
+    stream). (Gustavo)</li>
+</ul>
+<li>WDDX extension:
+<ul>
+  <li><?php bugfix(52468); ?> (wddx_deserialize corrupts integer field value when left
+    empty). (Felipe)</li>
+</ul>
+<li>Zlib extension:
+<ul>
+  <li><?php bugfix(52926); ?> (zlib fopen wrapper does not use context). (Gustavo)</li>
+</ul>
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.2.15"></a><!-- {{{ 5.2.15 -->
 <h3>Version 5.2.15</h3>
 <b>08-Dec-2010</b>
