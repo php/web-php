@@ -17,35 +17,29 @@
  */
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.4RC2'; // false; 
+$PHP_5_3_RC      = false; // '5.3.4RC2'; // false; 
 $PHP_5_3_RC_DATE = '02 December 2010';
 
-$PHP_5_3_VERSION         = "5.3.3";
-$PHP_5_3_DATE            = "22 July 2010";
+$PHP_5_3_VERSION         = "5.3.4";
+$PHP_5_3_DATE            = "08 December 2010";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "21ceeeb232813c10283a5ca1b4c87b48",
-                       "tar.gz"        => "5adf1a537895c2ec933fddd48e78d8a2",
+                       "tar.bz2"       => "2c069d8f690933e3bf6a8741ed818150",
+                       "tar.gz"        => "b69b36132899c5ca3bf155efa0218676",
 );
 
 /* PHP 5.2 Release */
-$PHP_5_2_RC      = '5.2.15RC2'; // false;
+$PHP_5_2_RC      = false; // '5.2.15RC2'; // false;
 $PHP_5_2_RC_DATE = "02 December 2010";
 
-$PHP_5_2_VERSION         = "5.2.14";
-$PHP_5_2_DATE            = "22 July 2010";
+$PHP_5_2_VERSION         = "5.2.15";
+$PHP_5_2_DATE            = "08 December 2010";
 $PHP_5_2_WINDOWS_DATE    = $PHP_5_2_DATE;
 $PHP_5_2_WINDOWS_VERSION = $PHP_5_2_VERSION;
 
 $PHP_5_2_MD5     = array(
-                       "tar.bz2"       => "bfdfc0e62fe437020cc04078269d1414",
-                       "tar.gz"        => "6dff7429a1b43aa1c76a43e909215608",
-                       "zip"           => "ade390d572b2d6d16056eb5bf3577c40",
-                       "installer"     => "7040598a802d56dbda00bb8361ea5c7b",
-                       "nts.zip"       => "d0811299456ce19401ed82fbe6655627",
-                       "nts.installer" => "ba21711163904cf80cc91c83ec28318d",
-                       "debugpack"     => "9db94257f022912a1c645c91b939ab06",
-                       "nts.debugpack" => "b6cc7e0746512ab17bd889149614c930",
+                       "tar.bz2"       => "d4ccad187b12835024980a0cea362893",
+                       "tar.gz"        => "dbbb2beed6b51e05d134744f137091a9",
 );
 
 $PHP_5_2_WINDOWS_NOTE_MSI = "";

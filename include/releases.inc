@@ -2,6 +2,58 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.3.3' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_3.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.3.tar.bz2',
+          'name' => 'PHP 5.3.3 (tar.bz2)',
+          'md5' => '21ceeeb232813c10283a5ca1b4c87b48',
+          'date' => '22 July 2010',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.3.tar.gz',
+          'name' => 'PHP 5.3.3 (tar.gz)',
+          'md5' => '5adf1a537895c2ec933fddd48e78d8a2',
+          'date' => '22 July 2010',
+        ),
+      ),
+      'date' => NULL,
+      'museum' => false,
+    ),
+    '5.2.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_14.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.14.tar.bz2',
+          'name' => 'PHP 5.2.14 (tar.bz2)',
+          'md5' => '21ceeeb232813c10283a5ca1b4c87b48',
+          'date' => '22 July 2010',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.14.tar.gz',
+          'name' => 'PHP 5.2.14 (tar.gz)',
+          'md5' => '5adf1a537895c2ec933fddd48e78d8a2',
+          'date' => '22 July 2010',
+        ),
+      ),
+      'date' => '25 Feb 2010',
+      'museum' => true,
+    ),
     '5.3.2' => 
     array (
       'announcement' => 
@@ -51,9 +103,9 @@ $OLDRELEASES = array (
           'date' => '25 Feb 2010',
         ),
       ),
-      'windows' =>
+      'windows' => 
       array (
-        0 =>
+        0 => 
         array (
           'filename' => 'php-5.2.13-Win32.zip',
           'name' => 'PHP 5.2.13 zip package',
@@ -61,7 +113,7 @@ $OLDRELEASES = array (
           'date' => '25 Feb 2010',
           'note' => '',
         ),
-        1 =>
+        1 => 
         array (
           'filename' => 'php-5.2.13-win32-installer.msi',
           'name' => 'PHP 5.2.13 installer',
@@ -69,14 +121,14 @@ $OLDRELEASES = array (
           'date' => '25 Feb 2010',
           'note' => '',
         ),
-        2 =>
+        2 => 
         array (
           'filename' => 'php-debug-pack-5.2.13-Win32.zip',
           'name' => 'PHP 5.2.13 Win32 Debug Pack',
           'md5' => 'e3382d5acbb527d21b768766f563a75d',
           'date' => '25 Feb 2010',
         ),
-        3 =>
+        3 => 
         array (
           'filename' => 'php-5.2.13-nts-Win32.zip',
           'name' => 'PHP 5.2.13 Non-thread-safe zip package',
@@ -84,14 +136,14 @@ $OLDRELEASES = array (
           'date' => '25 Feb 2010',
           'note' => '',
         ),
-        4 =>
+        4 => 
         array (
           'filename' => 'php-5.2.13-nts-win32-installer.msi',
           'name' => 'PHP 5.2.13 Non-thread-safe installer',
           'md5' => 'd0e502db99565afde77b4f58f13fbad2',
           'date' => '25 Feb 2010',
         ),
-        5 =>
+        5 => 
         array (
           'filename' => 'php-debug-pack-5.2.13-nts-Win32.zip',
           'name' => 'PHP 5.2.13 Non-thread-safe Win32 Debug Pack',

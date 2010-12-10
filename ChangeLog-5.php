@@ -11,6 +11,37 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.2.15"></a><!-- {{{ 5.2.15 -->
+<h3>Version 5.2.15</h3>
+<b>08-Dec-2010</b>
+<ul>
+
+<li>Fixed extract() to do not overwrite $GLOBALS and $this when using EXTR_OVERWRITE. (jorto at redhat dot com)</li>
+<li>Fixed crash in zip extract method (possible CWE-170).  (Maksymilian Arciemowicz, Pierre)</li>
+<li>Fixed a possible double free in imap extension (Identified by Mateusz  Kocielski). (CVE-2010-4150). (Ilia)</li>
+<li>Fixed possible flaw in open_basedir (CVE-2010-3436). (Pierre)</li>
+<li>Fixed possible crash in mssql_fetch_batch(). (Kalle)</li>
+<li>Fixed NULL pointer dereference in ZipArchive::getArchiveComment. (CVE-2010-3709). (Maksymilian Arciemowicz)</li>
+
+<li><?php bugfix(53492); ?> (fix crash if anti-aliasing steps are invalid). (Pierre)</li>
+<li><?php bugfix(53323); ?> (pdo_firebird getAttribute() crash). (preeves at ibphoenix dot com)</li>
+<li><?php bugfix(52929); ?> (Segfault in filter_var with FILTER_VALIDATE_EMAIL with large amount of data). (CVE-2010-3709). (Adam)</li>
+<li><?php bugfix(52879); ?> (Objects unreferenced in __get, __set, __isset or __unset can be freed too early). (mail_ben_schmidt at yahoo dot com dot au, Dmitry)</li>
+<li><?php bugfix(52772); ?> (var_dump() doesn't check for the existence of  get_class_name before calling it). (Kalle, Gustavo)</li>
+<li><?php bugfix(52546); ?> (pdo_dblib segmentation fault when iterating MONEY values). (Felipe, Adam)</li>
+<li><?php bugfix(52436); ?> (Compile error if systems do not have stdint.h) (Sriram Natarajan)</li>
+<li><?php bugfix(52390); ?> (mysqli_report() should be per-request setting). (Kalle)</li>
+<li><?php bugfix(51008); ?> (Zend/tests/bug45877.phpt fails). (Dmitry)</li>
+<li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4). (Felipe)</li>
+<li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy with SoapClient object). (Dmitry)</li>
+
+</li>
+</ul>
+
+<hr />
+<!-- }}} -->
+
+
 <hr />
 <a name="5.3.3"></a><!-- {{{ 5.3.3 -->
 <h3>Version 5.3.3</h3>
