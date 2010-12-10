@@ -128,7 +128,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>    
 <li>Zend engine:
 <ul>
-  <li>Reverted fix for bug #51176 (Static calling in non-static method behaves
+  <li>Reverted fix for bug <?php bugl(51176); ?> (Static calling in non-static method behaves
     like $this-&gt;). (Felipe)</li>
   <li>Changed deprecated ini options on startup from E_WARNING to E_DEPRECATED. 
     (Kalle)</li>
@@ -496,7 +496,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed a possible arbitrary memory access inside sqlite extension. Reported by Mateusz Kocielski. (Ilia)</li>
 <li>Fixed string format validation inside phar extension. Reported by Stefan Esser. (Ilia)</li>
 <li>Fixed handling of session variable serialization on certain prefix characters. Reported by Stefan Esser. (Ilia)</li>
-<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug #51288). (Raphael Geissert)</li>
+<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug <?php bugl(51288); ?>). (Raphael Geissert)</li>
 <li>Fixed 64-bit integer overflow in mhash_keygen_s2k(). (Clément LECIGNE, Stas)</li>
 <li>Fixed SplObjectStorage unserialization problems (CVE-2010-2225). (Stas)</li>
 <li>Fixed the mail.log ini setting when no filename was given. (Johannes)</li>
@@ -643,7 +643,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed SplObjectStorage unserialization problems (CVE-2010-2225). (Stas)</li>
 <li>Fixed a possible stack exaustion inside fnmatch(). Reporeted by Stefan Esser (Ilia)</li>
 <li>Reset error state in PDO::beginTransaction() reset error state. (Ilia)</li>
-<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug #51288). (Raphael Geissert)</li>
+<li>Fixed a NULL pointer dereference when processing invalid XML-RPC requests (Fixes CVE-2010-0397, bug <?php bugl(51288); ?>). (Raphael Geissert)</li>
 <li>Fixed handling of session variable serialization on certain prefix characters. Reported by Stefan Esser (Ilia)</li>
 <li>Fixed a possible arbitrary memory access inside sqlite extension. Reported by Mateusz Kocielski. (Ilia)  </li>
 <li>Fixed a crash when calling an inexistent method of a class that inherits  PDOStatement if instantiated directly instead of doing by the PDO methods. (Felipe)</li>
@@ -756,7 +756,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Added support for CURLOPT_CERTINFO. FR <?php bugl(49253); ?>. (Linus Nielsen Feltzing <linus@haxx.se>)</li>
 <li>Added client-side server name indication support in openssl. (Arnaud)</li>
 
-<li>Improved fix for bug #50006 (Segfault caused by uksort()). (Stas)</li>
+<li>Improved fix for bug <?php bugl(50006); ?> (Segfault caused by uksort()). (Stas)</li>
 
 <li>Fixed mysqlnd hang when queries exactly 16777214 bytes long are sent. (Andrey)</li>
 <li>Fixed incorrect decoding of 5-byte BIT sequences in mysqlnd. (Andrey)</li>
