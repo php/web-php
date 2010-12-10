@@ -34,6 +34,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52929); ?> (Segfault in filter_var with FILTER_VALIDATE_EMAIL with
     large amount of data) (CVE-2010-3710). (Adam)</li>
 </ul>
+</li>
 
 <li>General improvements:
 <ul>
@@ -44,6 +45,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Added a 3rd parameter to get_html_translation_table. It now takes a charset
     hint, like htmlentities et al. (Gustavo)</li>
 </ul> 
+</li>
 <li>Implemented feature requests:
 <ul>
   <li>Implemented FR <?php bugl(52348); ?>, added new constant ZEND_MULTIBYTE to detect
@@ -56,20 +58,23 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     max_file_uploads limit. As a side improvement, temporary files are not opened
     for empty uploads and, in debug mode, 0-length uploads. (Gustavo)</li>
 </ul>    
+</li>
 <li>Improved MySQLnd:
 <ul>
   <li>Added new character sets to mysqlnd, which are available in MySQL 5.5
     (Andrey)</li>
 </ul>
+</li>
 <li>Improved PHP-FPM SAPI:
 <ul>
   <li>Added '-p/--prefix' to php-fpm to use a custom prefix and run multiple
     instances. (fat)</li>
   <li>Added custom process title for FPM. (fat)</li>
   <li>Added '-t/--test' to php-fpm to check and validate FPM conf file. (fat)</li>
-  <li>Added statistics about listening socket queue length for FPM.</li>
+  <li>Added statistics about listening socket queue length for FPM.
     (andrei dot nigmatulin at gmail dot com, fat)</li>
 </ul>    
+</li>
 <li>Core:
 <ul>
   <li>Fixed extract() to do not overwrite $GLOBALS and $this when using
@@ -126,6 +131,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(25927); ?> (get_html_translation_table calls the ' &amp;#39; instead of
     &amp;#039;). (Gustavo)</li>
 </ul>    
+</li>
 <li>Zend engine:
 <ul>
   <li>Reverted fix for bug <?php bugl(51176); ?> (Static calling in non-static method behaves
@@ -151,6 +157,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     catching). (Dmitry)</li>
   <li><?php bugfix(51008); ?> (Zend/tests/bug45877.phpt fails). (Dmitry)</li>
 </ul>
+</li>
 <li>Build issues:
 <ul>
   <li><?php bugfix(52436); ?> (Compile error if systems do not have stdint.h)
@@ -159,11 +166,13 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     (Ulf, Tony)</li>
   <li><?php bugfix(49215); ?> (make fails on glob_wrapper). (Felipe)</li>
 </ul>
+</li>
 <li>Calendar extension:
 <ul>
   <li><?php bugfix(52744); ?> (cal_days_in_month incorrect for December 1 BCE).
    (gpap at internet dot gr, Adam)</li>
 </ul>
+</li>
 <li>cURL extension:
 <ul>
   <li><?php bugfix(52828); ?> (curl_setopt does not accept persistent streams).
@@ -173,6 +182,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52202); ?> (CURLOPT_PRIVATE gets corrupted). (Ilia)</li>
   <li><?php bugfix(50410); ?> (curl extension slows down PHP on Windows). (Pierre)</li>
 </ul>
+</li>
 <li>DateTime extension:
 <ul>
   <li><?php bugfix(53297); ?> (gettimeofday implementation in php/win32/time.c can return
@@ -184,14 +194,17 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Added support for the ( and ) delimiters/separators to
     DateTime::createFromFormat(). (Derick)</li>
 </ul>
+</li>
 <li>DBA extension:
 <ul>
   <li>Added Berkeley DB 5.1 support to the DBA extension. (Oracle Corp.)</li>
 </ul>
+</li>
 <li>DOM extension:
 <ul>
   <li><?php bugfix(52656); ?> (DOMCdataSection does not work with splitText). (Ilia)</li>
 </ul>
+</li>
 <li>Filter extension:
 <ul>
   <li>Fixed the filter extension accepting IPv4 octets with a leading 0 as that
@@ -201,21 +214,25 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(50117); ?> (problems in the validation of IPv6 addresses with IPv4
     addresses and ::). (Gustavo)</li>
 </ul>
+</li>
 <li>GD extension:
 <ul>
   <li><?php bugfix(53492); ?> (fix crash if anti-aliasing steps are invalid). (Pierre)</li>
 </ul>
+</li>
 <li>GMP extension:
 <ul>
   <li><?php bugfix(52906); ?> (gmp_mod returns negative result when non-negative is 
     expected). (Stas)</li>
   <li><?php bugfix(52849); ?> (GNU MP invalid version match). (Adam)</li>
 </ul>
+</li>
 <li>Hash extension:
 <ul>
   <li><?php bugfix(51003); ?> (unaligned memory access in ext/hash/hash_tiger.c).
     (Mike, Ilia)</li>
 </ul>
+</li>
 <li>Iconv extension:
 <ul>
   <li><?php bugfix(52941); ?> (The 'iconv_mime_decode_headers' function is skipping
@@ -225,6 +242,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(51250); ?> (iconv_mime_decode() does not ignore malformed Q-encoded 
     words). (Ilia)</li>
 </ul>
+</li>
 <li>Intl extension:
 <ul>
   <li>Fixed crashes on invalid parameters in intl extension. (CVE-2010-4409). (Stas, Maksymilian
@@ -234,6 +252,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(50590); ?> (IntlDateFormatter::parse result is limited to the integer
     range). (Stas)</li>
 </ul>
+</li>
 <li>Mbstring extension:
 <ul>
   <li><?php bugfix(53273); ?> (mb_strcut() returns garbage with the excessive length
@@ -244,17 +263,20 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52681); ?> (mb_send_mail() appends an extra MIME-Version header).
     (Adam)</li>
 </ul>
+</li>
 <li>MSSQL extension:
 <ul>
   <li>Fixed possible crash in mssql_fetch_batch(). (Kalle)</li>
   <li><?php bugfix(52843); ?> (Segfault when optional parameters are not passed in to
     mssql_connect). (Felipe)</li>
 </ul>
+</li>
 <li>MySQL extension:
 <ul>
   <li><?php bugfix(52636); ?> (php_mysql_fetch_hash writes long value into int). 
     (Kalle, rein at basefarm dot no)</li>
 </ul>
+</li>
 <li>MySQLi extension:
 <ul>
   <li><?php bugfix(52891); ?> (Wrong data inserted with mysqli/mysqlnd when using
@@ -273,15 +295,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52221); ?> (Misbehaviour of magic_quotes_runtime (get/set)). (Andrey)</li>
   <li><?php bugfix(45921); ?> (Can't initialize character set hebrew). (Andrey)</li>
 </ul>
+</li>
 <li>MySQLnd:
 <ul>
   <li><?php bugfix(52613); ?> (crash in mysqlnd after hitting memory limit). (Andrey)</li>
 </ul> 
+</li>
 <li>ODBC extension:
 <ul>
-  - <?php bugfix(52512); ?> (Broken error handling in odbc_execute).</li>
+<li><?php bugfix(52512); ?> (Broken error handling in odbc_execute).
     (mkoegler at auto dot tuwien dot ac dot at)</li>
 </ul>
+</li>
 <li>Openssl extension:
 <ul>
   <li>Fixed possible blocking behavior in openssl_random_pseudo_bytes on Windows.
@@ -290,6 +315,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52947); ?> (segfault when ssl stream option capture_peer_cert_chain
     used). (Felipe)</li>
 </ul>
+</li>
 <li>Oracle Database extension (OCI8):
 <ul>
   <li><?php bugfix(53284); ?> (Valgrind warnings in oci_set_* functions) (Oracle Corp.)</li>
@@ -297,22 +323,26 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     exit).  Requires Oracle 11.2.0.2 client libraries (or Oracle bug fix
     9891199) for this patch to have an effect. (Oracle Corp.)</li>
 </ul>
+</li>
 <li>PCNTL extension:
 <ul>
   <li><?php bugfix(52784); ?> (Race condition when handling many concurrent signals).
     (nick dot telford at gmail dot com, Arnaud)</li>
 </ul>
+</li>
 <li>PCRE extension:
 <ul>
   <li><?php bugfix(52971); ?> (PCRE-Meta-Characters not working with utf-8). (Felipe)</li>
   <li><?php bugfix(52732); ?> (Docs say preg_match() returns FALSE on error, but it
     returns int(0)). (slugonamission at gmail dot com)</li>
 </ul>
+</li>
 <li>PHAR extension:
 <ul>
   <li><?php bugfix(50987); ?> (unaligned memory access in phar.c).
     (geissert at debian dot org, Ilia)</li>
 </ul>
+</li>
 <li>PHP-FPM SAPI:
 <ul>
   <li><?php bugfix(53412); ?> (segfault when using -y). (fat)</li>
@@ -326,17 +356,20 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     (fat)</li>
   <li><?php bugfix(52498); ?> (libevent was not only linked to php-fpm). (fat)</li>
 </ul>
+</li>
 <li>PDO:
 <ul>
   <li><?php bugfix(52699); ?> (PDO bindValue writes long int 32bit enum).
     (rein at basefarm dot no) </li>
   <li><?php bugfix(52487); ?> (PDO::FETCH_INTO leaks memory). (Felipe)</li>
 </ul>
+</li>
 <li>PDO DBLib driver:
 <ul>
   <li><?php bugfix(52546); ?> (pdo_dblib segmentation fault when iterating MONEY values).
     (Felipe)</li>
 </ul>
+</li>
 <li>PDO Firebird driver:
 <ul>
   <li>Restored firebird support (VC9 builds only). (Pierre)</li>
@@ -345,15 +378,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(53323); ?> (pdo_firebird getAttribute() crash).
     (preeves at ibphoenix dot com)</li>
 </ul>
+</li>
 <li>PDO MySQL driver:
 <ul>
   <li><?php bugfix(52745); ?> (Binding params doesn't work when selecting a date inside a
     CASE-WHEN). (Andrey)</li>
 </ul>
+</li>
 <li>PostgreSQL extension:
 <ul>
   <li><?php bugfix(47199); ?> (pg_delete() fails on NULL). (ewgraf at gmail dot com)</li>
 </ul>
+</li>
 <li>Reflection extension:
 <ul>
   <li>Fixed ReflectionProperty::isDefault() giving a wrong result for properties
@@ -363,11 +399,13 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52854); ?> (ReflectionClass::newInstanceArgs does not work for classes
     without constructors). (Johannes)</li>
 </ul>
+</li>
 <li>SOAP extension:
 <ul>
   <li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy
     with SoapClient object). (Dmitry)</li>
 </ul>
+</li>
 <li>SPL extension:
 <ul>
   <li><?php bugfix(53362); ?> (Segmentation fault when extending SplFixedArray). (Felipe)</li>
@@ -381,11 +419,13 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(50481); ?> (Storing many SPLFixedArray in an array crashes). (Felipe)</li>
   <li><?php bugfix(50579); ?> (RegexIterator::REPLACE doesn't work). (Felipe)</li>
 </ul>
+</li>
 <li>SQLite3 extension:
 <ul>
   <li><?php bugfix(53463); ?> (sqlite3 columnName() segfaults on bad column_number).
     (Felipe)</li>
 </ul>
+</li>
 <li>Streams:
 <ul>
   <li>Fixed forward stream seeking emulation in streams that don't support seeking
@@ -402,15 +442,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(52820); ?> (writes to fopencookie FILE* not commited when seeking the
     stream). (Gustavo)</li>
 </ul>
+</li>
 <li>WDDX extension:
 <ul>
   <li><?php bugfix(52468); ?> (wddx_deserialize corrupts integer field value when left
     empty). (Felipe)</li>
 </ul>
+</li>
 <li>Zlib extension:
 <ul>
   <li><?php bugfix(52926); ?> (zlib fopen wrapper does not use context). (Gustavo)</li>
 </ul>
+</li>
 </ul>
 
 <hr />
@@ -440,7 +483,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(47643); ?> (array_diff() takes over 3000 times longer than php 5.2.4). (Felipe)</li>
 <li><?php bugfix(44248); ?> (RFC2616 transgression while HTTPS request through proxy with SoapClient object). (Dmitry)</li>
 
-</li>
 </ul>
 
 <!-- }}} -->
@@ -452,13 +494,14 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Upgraded bundled sqlite to version 3.6.23.1. (Ilia)</li>
 <li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
-</li>
+</ul>
+<ul>
 <li>Added support for JSON_NUMERIC_CHECK option in json_encode() that converts numeric strings to integers. (Ilia)</li>
 <li>Added stream_set_read_buffer, allows to set the buffer for read operation. (Pierre)</li>
 <li>Added stream filter support to mcrypt extension (ported from mcrypt_filter). (Stas)</li>
 <li>Added full_special_chars filter to ext/filter. (Rasmus)</li>
 <li>Added backlog socket context option for stream_socket_server(). (Mike)</li>
-<li>Added fifth parameter to openssl_encrypt()/openssl_decrypt() (string $iv) to use non-NULL IV.</li>
+<li>Added fifth parameter to openssl_encrypt()/openssl_decrypt() (string $iv) to use non-NULL IV.
   Made implicit use of NULL IV a warning. (Sara)</li>
 <li>Added openssl_cipher_iv_length(). (Sara)</li>
 <li>Added FastCGI Process Manager (FPM) SAPI. (Tony)</li>
@@ -466,10 +509,12 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Added Berkeley DB 5 support to the DBA extension. (Johannes, Chris Jones)</li>
 <li>Added support for copy to/from array/file for pdo_pgsql extension. (Denis Gasparin, Ilia)</li>
 <li>Added inTransaction() method to PDO, with specialized support for Postgres. (Ilia, Denis Gasparin)</li>
-</li>
+</ul>
+<ul>
 <li>Changed namespaced classes so that the ctor can only be named __construct now. (Stas)</li>
 <li>Reset error state in PDO::beginTransaction() reset error state. (Ilia)</li>
-</li>
+</ul>
+<ul>
 <li>Implemented FR <?php bugl(51295); ?> (SQLite3::busyTimeout not existing). (Mark)</li>
 <li>Implemented FR <?php bugl(35638); ?> (Adding udate to imap_fetch_overview results). (Charles_Duffy at dell dot com )</li>
 <li>Rewrote var_export() to use smart_str rather than output buffering, prevents data disclosure if a fatal error occurs (CVE-2010-2531). (Scott)</li>
@@ -477,12 +522,13 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed possible buffer overflows when handling error packets in mysqlnd. Reported by Stefan Esser. (Andrey)</li>
 <li>Fixed very rare memory leak in mysqlnd, when binding thousands of columns. (Andrey)</li>
 <li>Fixed a crash when calling an inexistent method of a class that inherits PDOStatement if instantiated directly instead of doing by the PDO methods. (Felipe)</li>
-</li>
+</ul>
+<ul>
 <li>Fixed memory leak on error in mcrypt_create_iv on Windows. (Pierre)</li>
 <li>Fixed a possible crash because of recursive GC invocation. (Dmitry)</li>
 <li>Fixed a possible resource destruction issues in shm_put_var(). Reported by Stefan Esser. (Dmitry)</li>
 <li>Fixed a possible information leak because of interruption of XOR operator. Reported by Stefan Esser. (Dmitry)</li>
-<li>Fixed a possible memory corruption because of unexpected call-time pass by refernce and following memory clobbering through callbacks.</li>
+<li>Fixed a possible memory corruption because of unexpected call-time pass by refernce and following memory clobbering through callbacks.
   Reported by Stefan Esser. (Dmitry)</li>
 <li>Fixed a possible memory corruption in ArrayObject::uasort(). Reported by Stefan Esser. (Dmitry)</li>
 <li>Fixed a possible memory corruption in parse_str(). Reported by Stefan Esser. (Dmitry)</li>
@@ -498,7 +544,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed 64-bit integer overflow in mhash_keygen_s2k(). (Clément LECIGNE, Stas)</li>
 <li>Fixed SplObjectStorage unserialization problems (CVE-2010-2225). (Stas)</li>
 <li>Fixed the mail.log ini setting when no filename was given. (Johannes)</li>
-</li>
+</ul>
+<ul>
 <li><?php bugfix(52317); ?> (Segmentation fault when using mail() on a rhel 4.x (only 64 bit)). (Adam)</li>
 <li><?php bugfix(52262); ?> (json_decode() shows no errors on invalid UTF-8). (Scott)</li>
 <li><?php bugfix(52240); ?> (hash_copy() does not copy the HMAC key, causes wrong results and PHP crashes). (Felipe)</li>
@@ -630,10 +677,12 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <b>22-July-2010</b>
 <ul>
 <li>Reverted bug fix #49521 (PDO fetchObject sets values before calling constructor). (Felipe)</li>
-</li>
+</ul>
+<ul>
 <li>Updated timezone database to version 2010.5. (Derick)</li>
 <li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
-</li>
+</ul>
+<ul>
 <li>Rewrote var_export() to use smart_str rather than output buffering, revents  data disclosure if a fatal error occurs (CVE-2010-2531). (Scott)</li>
 <li>Fixed a possible interruption array leak in strrchr(). Reported by Péter Veres. (CVE-2010-2484) (Felipe)</li>
 <li>Fixed a possible interruption array leak in strchr(), strstr(), substr(), chunk_split(), strtok(), addcslashes(), str_repeat(), trim(). (Felipe)</li>
@@ -645,7 +694,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed handling of session variable serialization on certain prefix characters. Reported by Stefan Esser (Ilia)</li>
 <li>Fixed a possible arbitrary memory access inside sqlite extension. Reported by Mateusz Kocielski. (Ilia)  </li>
 <li>Fixed a crash when calling an inexistent method of a class that inherits  PDOStatement if instantiated directly instead of doing by the PDO methods. (Felipe)</li>
-</li>
+</ul>
+<ul>
 <li><?php bugfix(52317); ?> (Segmentation fault when using mail() on a rhel 4.x (only 64 bit)). (Adam)</li>
 <li><?php bugfix(52238); ?> (Crash when an Exception occured in iterator_to_array). (Johannes)</li>
 <li><?php bugfix(52237); ?> (Crash when passing the reference of the property of a non-object). (Dmitry)</li>
@@ -699,13 +749,12 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(49320); ?> (PDO returns null when SQLite connection fails). (Felipe)</li>
 <li><?php bugfix(49267); ?> (Linking fails for iconv). (Moriyosh)</li>
 <li><?php bugfix(48601); ?> (xpath() returns FALSE for legitimate query). (Rob)</li>
-<li><?php bugfix(48289); ?> (iconv_mime_encode() quoted-printable scheme is broken).</li>
+<li><?php bugfix(48289); ?> (iconv_mime_encode() quoted-printable scheme is broken).
   (Adam, patch from hiroaki dot kawai at gmail dot com).</li>
 <li><?php bugfix(43314); ?> (iconv_mime_encode(), broken Q scheme). (Rasmus)</li>
-<li><?php bugfix(33210); ?> (getimagesize() fails to detect width/height on certain </li>
+<li><?php bugfix(33210); ?> (getimagesize() fails to detect width/height on certain
   JPEGs). (Ilia)</li>
 <li><?php bugfix(23229); ?> (syslog() truncates messages). (Adam)</li>
-</li>
 </ul>
 
 <hr />
@@ -751,7 +800,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Added ReflectionMethod::setAccessible() for invoking non-public methods through the Reflection API. (Sebastian)</li>
 <li>Added Collator::getSortKey for intl extension. (Stas)</li>
 <li>Added support for CURLOPT_POSTREDIR. FR <?php bugl(49571); ?>. (Sriram Natarajan)</li>
-<li>Added support for CURLOPT_CERTINFO. FR <?php bugl(49253); ?>. (Linus Nielsen Feltzing <linus@haxx.se>)</li>
+<li>Added support for CURLOPT_CERTINFO. FR <?php bugl(49253); ?>. (Linus Nielsen Feltzing &lt;linus@haxx.se&gt;)</li>
 <li>Added client-side server name indication support in openssl. (Arnaud)</li>
 
 <li>Improved fix for bug <?php bugl(50006); ?> (Segfault caused by uksort()). (Stas)</li>
