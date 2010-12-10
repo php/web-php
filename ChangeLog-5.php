@@ -18,7 +18,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.3. (Ilia)</li>
 <li>Upgraded bundled PCRE to version 8.10. (Ilia)</li>
-</ul>
 
 <li>Security enhancements:
 <ul>
