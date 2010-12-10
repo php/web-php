@@ -80,67 +80,6 @@ $RELEASES = array(
                     "date"     => $PHP_5_2_DATE,
                 ),
             ),
-            "windows" => array( /* Prefix the key with dot if the windows stuff isn't available yet*/
-                array(
-                    "filename" => "php-$PHP_5_2_WINDOWS_VERSION-Win32.zip",
-                    "name"     => "PHP $PHP_5_2_WINDOWS_VERSION zip package",
-                    "md5"      => $PHP_5_2_MD5["zip"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_ZIP,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_2_WINDOWS_VERSION-win32-installer.msi",
-                    "name"     => "PHP $PHP_5_2_WINDOWS_VERSION installer",
-                    "md5"      => $PHP_5_2_MD5["installer"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_MSI,
-                ),
-/*
-		array(
-                    "filename" => "pecl-$PHP_5_2_WINDOWS_VERSION-Win32.zip",
-                    "name"     => "PECL $PHP_5_2_WINDOWS_VERSION Win32 binaries",
-                    "md5"      => $PHP_5_2_MD5["pecl.zip"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE_ZIP,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_ZIP,
-                ),
-*/
-                array(
-                    "filename" => "php-debug-pack-$PHP_5_2_WINDOWS_VERSION-Win32.zip",
-                    "name"     => "PHP $PHP_5_2_VERSION Win32 Debug Pack",
-                    "md5"      => $PHP_5_2_MD5["debugpack"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_2_WINDOWS_VERSION-nts-Win32.zip",
-                    "name"     => "PHP $PHP_5_2_WINDOWS_VERSION Non-thread-safe zip package",
-                    "md5"      => $PHP_5_2_MD5["nts.zip"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_ZIP,
-                ),
-                array(
-                    "filename" => "php-$PHP_5_2_WINDOWS_VERSION-nts-win32-installer.msi",
-                    "name"     => "PHP $PHP_5_2_WINDOWS_VERSION Non-thread-safe installer",
-                    "md5"      => $PHP_5_2_MD5["nts.installer"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_MSI,
-                ),
-                array(
-                    "filename" => "php-debug-pack-$PHP_5_2_WINDOWS_VERSION-nts-Win32.zip",
-                    "name"     => "PHP $PHP_5_2_VERSION Non-thread-safe Win32 Debug Pack",
-                    "md5"      => $PHP_5_2_MD5["nts.debugpack"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE,
-                ),
-/*
-                array(
-                    "filename" => "pecl-$PHP_5_2_WINDOWS_VERSION-nts-Win32.zip",
-                    "name"     => "PECL $PHP_5_2_WINDOWS_VERSION Non-thread-safe Win32 binaries",
-                    "md5"      => $PHP_5_2_MD5["pecl.nts"],
-                    "date"     => $PHP_5_2_WINDOWS_DATE_ZIP,
-                    "note"     => $PHP_5_2_WINDOWS_NOTE_ZIP,
-                    //"note"     => "(Most of these <a href='http://pecl.php.net/'>PECL</a> extension files come standard with the PHP 4 Windows binaries, but have since been moved into this separate PECL download.  Files such as php_pdf.dll, php_ssh2.dll, etc.)",
-                ),
-*/
-            ),
         ),
     ),
 );
