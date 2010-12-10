@@ -443,9 +443,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
 <!-- }}} -->
-
 
 <hr />
 <a name="5.3.3"></a><!-- {{{ 5.3.3 -->
