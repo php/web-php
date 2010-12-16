@@ -11,6 +11,19 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.2.16"></a><!-- {{{ 5.2.16 -->
+<h3>Version 5.2.16</h3>
+<b>16-Dec-2010</b>
+<ul>
+
+<li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
+<li><?php bugfix(53516); ?> (Regression in open_basedir handling). (Ilia)</li>
+
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.3.4"></a><!-- {{{ 5.3.4 -->
 <h3>Version 5.3.4</h3>
 <b>09-December-2010</b>

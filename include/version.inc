@@ -32,14 +32,20 @@ $PHP_5_3_MD5     = array(
 $PHP_5_2_RC      = false; // '5.2.15RC2'; // false;
 $PHP_5_2_RC_DATE = "02 December 2010";
 
-$PHP_5_2_VERSION         = "5.2.15";
-$PHP_5_2_DATE            = "09 December 2010";
+$PHP_5_2_VERSION         = "5.2.16";
+$PHP_5_2_DATE            = "16 December 2010";
 $PHP_5_2_WINDOWS_DATE    = $PHP_5_2_DATE;
 $PHP_5_2_WINDOWS_VERSION = $PHP_5_2_VERSION;
 
 $PHP_5_2_MD5     = array(
-                       "tar.bz2"       => "d4ccad187b12835024980a0cea362893",
-                       "tar.gz"        => "dbbb2beed6b51e05d134744f137091a9",
+                       "tar.bz2"       => "3b0bd012bd53bac9a5fefca61eccd5c6",
+                       "tar.gz"        => "68f2c92b5b33d131b1ea70ece9fc40ad",
+                       "zip"           => "49438bad72fb57ee078a8a22e5459ec4",
+                       "installer"     => "c9bc784aa00be843991030b93cb9081c",
+					   "nts.zip"       => "e738ff4c3f2d6dd109e35507bf301913",
+                       "nts.installer" => "05dce41ea1d54d4a6c45c03200ac712f",
+                       "debugpack"     => "43fac8a0ec9dd228e216fad4d05ae75c",
+                       "nts.debugpack" => "2c82f2de285933a2b9c1d3b582387307",
 );
 
 $PHP_5_2_WINDOWS_NOTE_MSI = "";
