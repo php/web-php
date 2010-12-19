@@ -19,3 +19,11 @@ ul.toc li.active {
 #layout_3_helper {
 	background-image: url(/images/rightbar.png);
 }
+
+/* Tips and warning icons, mainly used in the manual */
+div.tip {
+	background-image: url(/images/dialog-information.png);
+}
+div.warning {
+	background-image: url(/images/dialog-warning.png);
+}

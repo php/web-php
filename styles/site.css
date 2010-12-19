@@ -118,13 +118,11 @@ div.tip {
 	border: 1px solid #00c;
 	color: #006;
 	background-color: #eef;
-	background-image: url("/images/dialog-information.png");
 }
 div.warning {
 	border: 1px solid #660;
 	color: #600;
 	background-color: #fee;
-	background-image: url("/images/dialog-warning.png");
 }
 div.information {
 	border: 1px solid #00c;
