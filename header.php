@@ -141,6 +141,7 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
         <dt><a href="/manual/<?php echo $MY_LANG ?>/internals2.php">PHP at the Core</a></dt>
         <dt><a href="/manual/<?php echo $MY_LANG ?>/faq.php">Frequently Asked Questions</a></dt>
         <dt><a href="/manual/<?php echo $MY_LANG ?>/appendices.php">Appendices</a></dt>
+        <dt><a href="/quickref.php">Quick function reference</a></dt>
         </dl>
         <br style="clear: both;" />
     </div></div></div>
@@ -181,8 +182,28 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
     <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li>
-    <a href="/support.php" class="menu-link">Help</a>
+  <li class="parent">
+    <a href="/help.php" class="menu-link">Help</a>
+    <div class="children"><div class="children-1"><div class="children-2">
+    <dl style="width: 250px;">
+      <dt><a href="#">Navigation tips</a></dt>
+        <dd><a href="/sidebars.php">Search sidebars</a></dd>
+        <dd><a href="/urlhowto.php">URL Howto</a></dd>
+        <dd><a href="/tips.php">Quick Reference tips</a></dd>
+        <dd><a href="/sites.php">Other PHP sites</a></dd>
+    </dl>
+    <dl style="width: 250px;">
+      <dt><a href="/support.php">Support</a></dt>
+        <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
+    </dl>
+    <dl style="swidth: 250px";>
+      <dt><a href="http://bugs.php.net/">Bugs</a></dt>
+        <dd><a href="http://bugs.php.net/report.php">Report a bug</a></dd>
+        <dd><a href="http://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
+        <dd><a href="http://bugs.php.net/search.php">Search reported bugs</a></dd>
+    </dl>
+    <br style="clear: both;" />
+    </div></div></div>
   </li>
   
  </ul>
