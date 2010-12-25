@@ -13,7 +13,7 @@ site_header("PHP.net Search Bars");
  Here you can find setup and uninstall information for the browsers
  supported. Feel free to send in suggestions on how to implement our 
  sidebar for another browser or how to enhance it's services by sending
- an email to <a href="mailto:webmaster@php.net">the webmasters</a>.
+ an email to <a href="mailto:php-webmaster@lists.php.net">the webmasters</a>.
 </p>
 
 <h2>Mozilla, Firefox, Netscape 6+ and Sherlock for MacOSX</h2>
