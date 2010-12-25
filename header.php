@@ -144,12 +144,6 @@
         <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li>
-    <a href="<?php echo $baseUrl ?>support.php" class="menu-link">Help</a>
-  </li>
-  <li>
-    <a href="http://bugs.php.net/" class="menu-link">Bugs</a>
-  </li>
   <li class="parent">
     <a href="<?php echo $baseUrl ?>community.php" class="menu-link">Community</a>
     <div class="children"><div class="children-1"><div class="children-2">
@@ -185,6 +179,9 @@
     </dl>
     <br style="clear: both;" />
     </div></div></div>
+  </li>
+  <li>
+    <a href="<?php echo $baseUrl ?>support.php" class="menu-link">Help</a>
   </li>
   
  </ul>
