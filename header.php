@@ -1,6 +1,9 @@
 <?php 
-$MY_MIRROR = "/"; // Will be http://[foo.]php.net
+$MYSITE = "/"; // Will be http://[foo.]php.net
 $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred lang'
+if (!isset($curr)) {
+    $curr = "docs"; // Quick workaround to change the 'current' highlighting
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -26,7 +29,7 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
  <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
  <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
  <script type="text/javascript" src="js/common.js"></script>
- <base href="<?php echo $MY_MIRROR ?>" />
+ <base href="<?php echo $MYSITE ?>" />
  
 </head>
 <body>
@@ -51,7 +54,7 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
   <li>
     <a href="/downloads.php" class="menu-link">Downloads</a>
   </li>
-  <li class="parent current">
+  <li class="parent <?php echo $curr != "docs" ?: "current"?>">
     <a href="/docs.php" class="menu-link">Documentation</a>
     <div class="children"><div class="children-1"><div class="children-2">
     <dl>
@@ -146,7 +149,7 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
         <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li class="parent">
+  <li class="parent <?php echo $curr != "community" ?: "current"?>">
     <a href="/community.php" class="menu-link">Community</a>
     <div class="children"><div class="children-1"><div class="children-2">
     <dl style="width: 300px;">
@@ -182,8 +185,8 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
     <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li class="parent">
-    <a href="/help.php" class="menu-link">Help</a>
+  <li class="parent <?php echo $curr != "help" ?: "current"?>">
+    <a href="/support.php" class="menu-link">Help</a>
     <div class="children"><div class="children-1"><div class="children-2">
     <dl style="width: 250px;">
       <dt><a href="#">Navigation tips</a></dt>
@@ -193,8 +196,9 @@ $MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred l
         <dd><a href="/sites.php">Other PHP sites</a></dd>
     </dl>
     <dl style="width: 250px;">
-      <dt><a href="/support.php">Support</a></dt>
+      <dt><a href="#">Support</a></dt>
         <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
+        <dd><a href="/support.php">General resources</a></dd>
     </dl>
     <dl style="swidth: 250px";>
       <dt><a href="http://bugs.php.net/">Bugs</a></dt>
