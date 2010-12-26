@@ -82,7 +82,7 @@ $minute = rand(0, 59);
  As you have rsync, fetch the web files with the following:
 </p>
 
-<pre>
+<pre class="info">
     rsync -avzC --timeout=600 --delete --delete-after \
       --include='distributions/*.exe' \
       rsync.php.net::phpweb /your/local/path 
@@ -94,7 +94,7 @@ $minute = rand(0, 59);
  language of the manual? Add:
 </p>
 
-<pre>
+<pre class="info">
     --include='manual/en/' --include='manual/en/**' --exclude='manual/**' --exclude='distributions/manual/**'
 </pre>
 
@@ -154,7 +154,7 @@ $minute = rand(0, 59);
 </p>
 
 <a name="settings"></a>
-<pre>
+<pre class="info">
 &lt;VirtualHost *-or-your-hostname-or-your-ip-here&gt;
      &lt;Directory /www/htdocs/phpweb&gt;
           # Do not display directory listings if index is not present,
@@ -271,7 +271,7 @@ $minute = rand(0, 59);
  is up to date. Something like:
 </p>
 
-<pre>
+<pre class="info">
    <?php echo $minute; ?> * * * * rsync -avzC --timeout=600 --delete --delete-after --include='distributions/*.exe' rsync.php.net::phpweb /your/local/path
 </pre>
 

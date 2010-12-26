@@ -270,4 +270,11 @@ div.phpcode span.string {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
+pre.info {
+    font-family:"Courier New", Courier, monospace;
+    border: 1px solid #ddd;
+    margin: 1em 2em 1.3em;
+    margin-right: 0.8em;
+    background-color: #efefef;
+}
 

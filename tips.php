@@ -129,7 +129,7 @@ function tip_title($title, $author = '', $date = '')
  small modifications. The script uses the current selection, or prompts for
  a function name, and uses the default browser to show the page at php.net.
 </p>
-<pre>
+<pre class="info">
 tell application "BBEdit"
     set fu to selection of window 1 as string
     if fu = "" then
@@ -225,7 +225,7 @@ end tell
  any Opera window.
 </p>
 
-<pre>
+<pre class="info">
 [Search Engine 4]
 Name=PHP
 URL=<?php echo $MYSITE; ?>
@@ -340,10 +340,10 @@ Search Type=0
  <li>
   In that file, write the following code (substituting the path to Netscape,
   if necessary):
-  <pre>
+<pre class="info">
 #!/bin/sh
 /usr/bin/netscape <?php echo $MYSITE; ?>$1
-  </pre>
+</pre>
  </li>
  <li>Save it and type <tt>chmod +x phpfind</tt> to make it executable</li>
  <li>

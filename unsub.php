@@ -81,7 +81,7 @@ site_header("Unsubscribing");
  something like:
 </p>
 
-<pre>
+<pre class="info">
  Return-Path: &lt;php-general-return-1234-joecool=example.com@lists.php.net&gt;
 </pre>
 

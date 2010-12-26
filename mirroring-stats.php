@@ -59,9 +59,9 @@ site_header("Setting Up Local Stats");
    regularly. Something like this will be sufficient (update things
    daily at 3 am):
   </p>
-  <pre>
+<pre class="info">
       0 3 * * * (cd /your/stats/folder;/usr/bin/webalizer -c php.conf) >/dev/null 2>&amp;1
-  </pre>
+</pre>
   <p>
    Provide the path of the stats directory in the "cd".
   </p>

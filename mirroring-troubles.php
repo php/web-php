@@ -32,7 +32,7 @@ site_header("The PHP mirrors problem and troubleshooting guide");
  solution is to move the MultiViews option into a specific 
  directory and disable it from there. For example:
 </p>
-<pre>
+<pre class="info">
   &lt;VirtualHost *:80>
     &lt;Directory /path/to/phpweb>
       Options -Indexes -MultiViews
