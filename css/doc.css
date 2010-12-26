@@ -14,30 +14,34 @@ i .parameter {
     font-style: normal;
 }
 
-.refentry .methodsynopsis,
-.refentry .warning,
-.refentry .note {
+.refentry .methodsynopsis {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
-}
-
-.refentry .methodsynopsis {
     border-top: 3px solid #ddd;
     background: #efefef;
     color: #666;
     font-family: monospace;
 }
 
-.refentry .note {
+.refentry div.warning,
+.refentry .notes blockquote {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+}
+
+.refentry .notes blockquote {
     border-top: 3px solid #fff08a;
     background-color: #EFEFEF;
 }
-.refentry .warning {
+.refentry div.warning {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.refentry .note h4, .refentry .warning h4 {
+.refentry .notes blockquote, .refentry div.warning {
     font-size: 1em;
+    margin-right: 0.8em;
+}
+.refentry div.warning b.warning {
     float: left;
     margin-right: 0.8em;
 }
@@ -78,3 +82,4 @@ td, th {
 .refentry .parameters p {
     margin: 0.7em 0;
 }
+
