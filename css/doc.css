@@ -88,3 +88,15 @@ td, th {
     margin: 0.7em 0;
 }
 
+
+
+.refentry .phpcode, .refentry .screen {
+    border: 1px solid #E2E1D5;
+    background-color: #EFEFEF;
+    padding: 10px;
+}
+.refentry .example {
+    margin: 15px;
+    border-top: 1px solid #0a0;
+}
+
