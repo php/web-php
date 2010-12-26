@@ -24,6 +24,7 @@ i .parameter {
 }
 
 .refentry div.warning,
+.refentry div.tip,
 .refentry .notes blockquote {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
@@ -33,15 +34,19 @@ i .parameter {
     border-top: 3px solid #fff08a;
     background-color: #EFEFEF;
 }
+.refentry div.tip {
+    border-top: 3px solid #434343;
+    background-color: #EFEFEF;
+}
 .refentry div.warning {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.refentry .notes blockquote, .refentry div.warning {
+.refentry .notes blockquote, .refentry div.warning, .refentry div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.refentry div.warning b.warning {
+.refentry div.warning b.warning, .refentry div.tip b.tip {
     float: left;
     margin-right: 0.8em;
 }
