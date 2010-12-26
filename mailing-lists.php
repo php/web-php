@@ -1,15 +1,13 @@
 <?php
 // $Id: mailing-lists.php 300673 2010-06-22 19:30:40Z philip $
-$curr = "help";
-require "./header.php";
+$_SERVER['BASE_PAGE'] = 'mailing-lists.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 /*
-require $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-require $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
-require $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 */
-?>
 
-<aside>
+$SIDEBAR_DATA = '
 <h3>Would like to unsubscribe yourself?</h3>
 
 <p>
@@ -42,9 +40,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
  <li><a href="http://ml.php.gr.jp/">The Japanese PHP User Group\'s Mailing lists</a></li>
  <li><a href="http://br.groups.yahoo.com/group/php-pt/">Portuguese Mailing List</a></li>
 </ul>
-</aside>
+';
 
-<?php
+site_header("Mailing Lists");
+
 // Some mailing list is selected for [un]subscription
 if (isset($_POST['maillist'])) {
     
@@ -377,6 +376,4 @@ function output_lists_table($mailing_lists)
  ezmlm <a href="http://www.ezmlm.org/ezman/ezman1.html">here.</a>
 </p>
 
-<?php
-require "./footer.php";
-
+<?php site_footer(); ?>
