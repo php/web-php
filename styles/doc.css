@@ -1,0 +1,118 @@
+.refentry {
+    position: relative;
+}
+
+h3.title {
+    font-size: 1.5em;
+    border-top-style: solid;
+    border-top-width: 3px;
+    padding-top: 6px;
+    margin-top: 2em;
+}
+
+i .parameter {
+    font-style: normal;
+}
+
+.refentry .methodsynopsis {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+    border-top: 3px solid #ddd;
+    background: #efefef;
+    color: #666;
+    font-family: monospace;
+}
+
+.refentry div.warning,
+.refentry div.tip,
+.refentry .notes blockquote {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+}
+
+.refentry .notes blockquote {
+    border-top: 3px solid #fff08a;
+    background-color: #EFEFEF;
+}
+.refentry div.tip {
+    border-top: 3px solid #434343;
+    background-color: #EFEFEF;
+}
+.refentry div.warning {
+    border-top: 3px solid #ff4d4d;
+    background-color: #EFEFEF;
+}
+.refentry .notes blockquote, .refentry div.warning, .refentry div.tip {
+    font-size: 1em;
+    margin-right: 0.8em;
+}
+.refentry div.warning b.warning, .refentry div.tip b.tip {
+    float: left;
+    margin-right: 0.8em;
+}
+
+.methodname b {
+    color: #000;
+}
+
+.parameter {
+    color: #604080;
+    font-weight: bold;
+}
+
+.initializer {
+    color: #000;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {
+    padding: 2px 5px;
+}
+
+.refentry .description p {
+    margin: 0.7em 0;
+}
+
+.refentry .parameters dt {
+    font-size: 1.2em;
+}
+
+.refentry .parameters dd {
+    margin-top: -0.7em;
+}
+
+.refentry .parameters p {
+    margin: 0.7em 0;
+}
+
+
+
+.refentry .phpcode, .refentry .screen {
+    border: 1px solid #E2E1D5;
+    background-color: #EFEFEF;
+    padding: 10px;
+}
+.refentry .example {
+    margin: 15px;
+    border-top: 1px solid #0a0;
+}
+
+
+
+.refentry .changelog .doctable {
+    width: 100%;
+}
+.refentry .changelog .doctable th {
+    border-bottom: 1px solid #987db3;
+}
+.refentry .changelog .doctable td {
+    border-right: 1px solid #987db3;
+}
+.refentry .changelog .doctable td:last-child {
+    border: 0px;
+}
+
+

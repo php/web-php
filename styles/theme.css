@@ -1,0 +1,224 @@
+/**
+ *
+ *  COLORS:       | HEX     | HSB
+ * ---------------+---------+---------------
+ *  light-purple  | #c3add9 | 270, 20%, 85%
+ * ---------------+---------+---------------
+ *  medium-purple | #987db3 | 270, 30%, 70%
+ * ---------------+---------+---------------
+ *  dark-purple   | #604080 | 270, 50%, 50%
+ * ---------------+---------+---------------
+ *
+ */
+
+body * {
+    border-color: #c3add9;
+}
+
+body, input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.4;   
+    background: url('/images/sprites.png') repeat-x 0px -990px;
+}
+
+a:link,
+a:visited {
+    color: #528918;
+}
+
+a:hover {
+    color: #355c0b;
+}
+
+#headnav {
+    line-height: 1;
+    background: url('/images/sprites.png') repeat-x 0px -100px;
+}
+
+#headhome a {
+    background: url(/images/sprites.png) 0 0;
+}
+
+#headnav li.parent .children {
+    background: url('/images/shade.png');
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#headnav li.parent .children .children-1 {
+    background: #fff;
+    border-color: #604080;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#headnav li.parent a.menu-link {
+    background: url(/images/sprites.png) no-repeat 100% 7px;
+}
+
+#headnav li.parent.current a.menu-link {
+    background-position: 100% -23px;
+}
+
+#headnav a.menu-link {
+    color: #444;
+    border-color: #987db3;
+    font-weight: bold;
+}
+
+#headnav li#headsearch {
+    border-color: #987db3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#headsearch-keywords {
+    color: #666;
+    background: transparent;
+}
+
+#headsearch-keywords:focus {
+    color: #000;
+}
+
+#headsearch-submit {
+    border-color: #987db3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;    
+    border-radius: 5px;
+    border: 1px solid #604080;
+    background: #604080;
+    color: #fff;
+}
+
+#headnav li dl {
+    line-height: 1;
+}
+
+#headnav li dl dd:hover,
+#headnav li dl dt:hover {
+    background: #eee;
+}
+
+#headnav li.current a.menu-link,
+#headnav li a.menu-link:hover {
+    border-color: #604080;
+}
+
+#headnav li.current a.menu-link {
+    color: #000;
+}
+
+h1, h1 a, h1 a:visited, h1 a:link {
+    font-size:  40px;
+    font-weight: normal;
+    color: #666;
+    letter-spacing: -0.04em;
+}
+
+#footer {
+    border-top: 3px solid #c3add9;
+    padding-top: 5px;
+}
+
+#footer a {
+    color: #444;
+    border-color: #987db3;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+#footer a:hover {
+    color: #000;
+}
+
+h1 a:hover {
+    color: #444;
+}
+
+/**
+ * Auto-complete (.ac)
+ */
+.ac_results {
+    background: url('/images/shade.png');
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ac_results ul {
+    border-color: #604080;
+    background-color: white;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ac_over {
+    background-color: #604080;
+    color: white;
+}
+
+/**
+ * User notes
+ */
+#usernotes {
+    background: #eee;
+    position: relative;
+}
+
+#usernotes .action {
+    display: block;
+    top: 1em;
+    right: 20px;
+    position: absolute;
+    text-align: right;
+}
+
+#usernotes .foot .action {
+    position: relative;
+    top: -1em;
+    margin-bottom: 1em;
+}
+
+#usernotes h3 {
+    border-color: #4d63ff;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 6px;
+}
+
+#usernotes .note {
+    margin: 0 20px 2em 20px;
+    border-top: 3px solid #ddd;
+}
+
+#usernotes .user, #usernotes .date {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 0.6em;
+}
+
+#usernotes .date {
+    float:right;
+    text-align: right;
+}
