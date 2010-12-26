@@ -51,22 +51,14 @@
   <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">
     <a href="/docs.php" class="menu-link">Documentation</a>
     <div class="children"><div class="children-1"><div class="children-2">
-        <?php echo doc_toc($lang); ?>
+        <?php doc_toc($lang); ?>
         <br style="clear: both;" />
     </div></div></div>
   </li>
   <li class="parent <?php echo $curr == "community" ? "current" : ""?>">
     <a href="/community.php" class="menu-link">Community</a>
     <div class="children"><div class="children-1"><div class="children-2">
-    <dl style="width: 300px;">
-      <dt><a href="/conferences/">Conferences</a></dt>
-        <dd><a href="/conferences/">All upcoming PHP conferences</a></dd>
-        <dd><a href="/submit-event.php">Add a new conference</a></dd>
-      <dt><a href="#">News</a></dt>
-        <dd><a href="#">Recent headline 1 (Oct 6)</a></dd>
-        <dd><a href="#">Another recent headline 1 (Oct 4)</a></dd>
-        <dd><a href="#">Yet another headline with a lot of text (Oct 2)</a></dd>
-    </dl>
+    <?php news_toc() ?>
     <dl>
       <dt><a href="http://wiki.php.net/">PHP Wiki</a></dt>
         <dd><a href="http://wiki.php.net/rfc">Write a RFC</a></dd>

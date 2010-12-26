@@ -699,7 +699,8 @@ function news_archive_sidebar()
 }
 
 // Print news
-function print_news($news, $dog, $max = 5, $onlyyear = null) {
+function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
+    $retval = array();
     $count = 0;
     $news = $news ? $news : array(); // default to empty array (if no news)
     foreach($news as $item) {
@@ -753,6 +754,15 @@ function print_news($news, $dog, $max = 5, $onlyyear = null) {
             continue;
         }
 
+        if ($return) {
+            $retval[] = array(
+                "title" => $item["title"],
+                "id"    => $id,
+                "permlink" => $permlink,
+            );
+            continue;
+        }
+
         echo <<< EOT
 <div class="newsItem hentry{$vevent}">
     <div class="newsImage">{$image}</div>
@@ -767,6 +777,8 @@ function print_news($news, $dog, $max = 5, $onlyyear = null) {
 
 EOT;
     }
+
+    return $retval;
 }
 
 
@@ -815,6 +827,36 @@ function site_footer_beta($config = array())
     require dirname(__FILE__) . "/footer.inc";
 }
 
+function news_toc() {
+    include dirname(__FILE__) . "/pregen-news.inc";
+    $items = array(
+        array(
+            "title" => "News",
+            "link"  => "/",
+            "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
+        ),
+        array(
+            "title" => "Conferences",
+            "link"  => "/conferences/",
+            "children" => print_news($NEWS_ENTRIES, "conferences", 3, null, true),
+        ),
+        array(
+            "title" => "Call for Papers",
+            "link"  => "/conferences/",
+            "children" => print_news($NEWS_ENTRIES, "cfp", 3, null, true),
+        ),
+    );
+
+    echo "<dl>\n";
+    foreach($items as $menu) {
+        echo "<dt><a href='{$menu["link"]}'>{$menu["title"]}</a></dt>\n";
+        foreach($menu["children"] as $child) {
+            echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
+        }
+    }
+    echo "<dt><a href='/archive/'>News archive</a></dt>\n";
+    echo "</dl>\n";
+}
 function doc_toc($lang) {
     $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
