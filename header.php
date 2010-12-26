@@ -13,15 +13,15 @@
  <link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="http://www.php.net/feed.atom" />
  <link rel="canonical" href="http://php.net/index.php" />
  
- <link rel="stylesheet" type="text/css" href="css/reset.css" media="all" /> 
- <link rel="stylesheet" type="text/css" href="css/structure.css" media="screen" />
- <link rel="stylesheet" type="text/css" href="css/doc.css" media="screen" />
- <link rel="stylesheet" type="text/css" href="css/theme.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/reset.css" media="all" /> 
+ <link rel="stylesheet" type="text/css" href="/css/structure.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/doc.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/theme.css" media="screen" />
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
- <script type="text/javascript" src="js/jquery.hoverIntent.minified.js"></script>
- <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
- <script type="text/javascript" src="js/common.js"></script>
+ <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
+ <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
+ <script type="text/javascript" src="/js/common.js"></script>
  <base href="<?php echo $MYSITE ?>" />
  
 </head>
