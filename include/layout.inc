@@ -16,9 +16,6 @@ function site_header($title = '', $config = array())
             default:
                 $curr = "";
             break;
-            case "docpage.php":
-                $curr = "docs";
-            break;
 
             case "mailing-lists.php":
             case "sidebars.php":
@@ -29,6 +26,9 @@ function site_header($title = '', $config = array())
                 $curr = "help";
             break;
         }
+    }
+    if (empty($title)) {
+        $title = "Hypertext Preprocessor";
     }
 
     require __DIR__ ."/../header.php";
