@@ -161,7 +161,7 @@ $(document).ready(function() {
 function manual_footer()
 {
     if (myphpnet_beta()) {
-        return manual_header_beta();
+        return manual_footer_beta();
     }
     global $PGI;
 
@@ -443,6 +443,13 @@ USER_NOTE_TEXT;
 /* vim: set et ts=4 sw=4: */
 
 function manual_setup_beta($setup) {
+    global $PGI, $MYSITE;
+    $PGI = $setup;
+    // Set base href for this manual page
+    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($setup['head'][1]) . "/" . $setup['this'][0];
+    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+
+
     $siblings = array();
     foreach($setup["toc"] as $entry) {
         $siblings[] = array(
@@ -476,6 +483,11 @@ function manual_setup_beta($setup) {
 
 function manual_header_beta(){}
 function manual_footer_beta() {
+
+    echo "<br /><br />";
+    manual_notes();
+    echo "<br />";
+
     echo '</div>'; // layout-content
     site_footer();
 }
