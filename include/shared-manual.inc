@@ -15,8 +15,8 @@ function manual_setup($setup) {
         ),
     );
 
-    $_SERVER['BASE_PAGE'] = "/manual/en/function.strpos.php";
-    site_header("Manual page", array("current" => "docs", "leftmenu" => $menu));
+    $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
+    site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
     
     echo '<div class="layout-content">';
 }
