@@ -100,3 +100,19 @@ td, th {
     border-top: 1px solid #0a0;
 }
 
+
+
+.refentry .changelog .doctable {
+    width: 100%;
+}
+.refentry .changelog .doctable th {
+    border-bottom: 1px solid #987db3;
+}
+.refentry .changelog .doctable td {
+    border-right: 1px solid #987db3;
+}
+.refentry .changelog .doctable td:last-child {
+    border: 0px;
+}
+
+
