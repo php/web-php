@@ -24,6 +24,15 @@ body {
     background: url('/images/sprites.png') repeat-x 0px -990px;
 }
 
+h1    { font-size: 1.7em; line-height: 2.6em; }
+h2    { font-size: 1.6em; line-height: 2.4em; }
+h3    { font-size: 1.4em; line-height: 2.2em; }
+h4    { font-size: 1.3em; line-height: 2.0em; }
+h5    { font-size: 1.2em; line-height: 1.8em; }
+h6    { font-size: 1.1em; line-height: 1.6em; }
+small { font-size: .9em; }
+
+
 a:link,
 a:visited {
     color: #528918;
@@ -122,7 +131,6 @@ a:hover {
 }
 
 h1, h1 a, h1 a:visited, h1 a:link {
-    font-size:  40px;
     font-weight: normal;
     color: #666;
     letter-spacing: -0.04em;
@@ -258,7 +266,6 @@ div.phpcode span.string {
 .warn {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
-    font-size: 1em;
     margin-right: 0.8em;
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
