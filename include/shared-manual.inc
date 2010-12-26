@@ -171,7 +171,6 @@ function manual_footer()
     echo "<br /><br />";
     manual_notes();
     echo "<br />";
-    manual_navbar("bottom");
     site_footer();
 }
 
@@ -304,6 +303,9 @@ function manual_navbar($location = "top")
 // Print out all user notes for this manual page
 function manual_notes()
 {
+    if (myphpnet_beta()) {
+        return manual_notes_beta();
+    }
     // Get needed values
     list($filename, $title) = $GLOBALS['PGI']['this'];
     
@@ -336,7 +338,7 @@ function manual_notes()
 <div id="usernotes">
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
-  <small>User Contributed Notes</small><br />
+  <small>User Contributed Notes</small>
   <strong>{$title}</strong>
  </div>
 END_USERNOTE_HEADER;
@@ -363,6 +365,58 @@ END_USERNOTE_HEADER;
     echo "</div>";
 }
 
+function manual_notes_beta() {
+    // Get needed values
+    list($filename, $title) = $GLOBALS['PGI']['this'];
+    
+    // Drop file extension from the name
+    if (substr($filename, -4) == '.php') {
+        $filename = substr($filename, 0, -4);
+    }
+
+    // Load user note for this page
+    $notes = manual_notes_load($filename);
+
+    // Link target to add a note to the current manual page,
+    // and it's extended form with a [+] image
+    $addnotelink = '/manual/add-note.php?sect=' . $filename .
+                   '&amp;redirect=' . $_SERVER['BASE_HREF'];
+    $addnotesnippet = 
+        make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
+        ' <small>' .
+        make_link($addnotelink, 'add a note') .
+        '</small>';
+
+    echo <<<END_USERNOTE_HEADER
+
+<div id="usernotes">
+ <div class="head">
+  <span class="action">{$addnotesnippet}</span>
+  <h3 class="title">User Contributed Notes</h3>
+ </div>
+END_USERNOTE_HEADER;
+    
+    // If we have no notes, then inform the user
+    if (sizeof($notes) == 0) {
+        echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
+    }
+     
+    // If we have notes, print them out
+    else {
+        echo '<div id="allnotes">';
+        
+        foreach($notes as $note) {
+            manual_note_display(
+                $note['xwhen'], $note['user'], $note['note'], $note['id']
+            );
+        }
+        echo "</div>\n";
+        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
+    }
+    
+    // End of #usernotes
+    echo "</div>";
+}
 // Get user notes from the appropriate text dump
 function manual_notes_load($id)
 {
@@ -395,9 +449,9 @@ function manual_notes_load($id)
 // Print out one user note entry
 function manual_note_display($date, $name, $text, $id)
 {
-    if ($name) { $name = "\n  <strong>" . htmlspecialchars($name) . "</strong><br />"; }
+    if ($name) { $name = "\n  <strong class='user'>" . htmlspecialchars($name) . "</strong>"; }
     $datestr = date("d-M-Y h:i", $date);
-    $datestr = ($id ? "\n  <a href=\"#$id\">$datestr</a>" : "\n  $datestr");
+    $datestr = ($id ? "\n  <a href=\"#$id\" class=\"date\">$datestr</a>" : "\n  $datestr");
     $anchor  = ($id ? "<a name=\"$id\"></a>\n " : "");
     $text    = clean_note($text);
 
@@ -484,7 +538,6 @@ function manual_setup_beta($setup) {
 function manual_header_beta(){}
 function manual_footer_beta() {
 
-    echo "<br /><br />";
     manual_notes();
     echo "<br />";
 
