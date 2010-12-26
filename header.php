@@ -1,16 +1,9 @@
-<?php 
-$MYSITE = "/"; // Will be http://[foo.]php.net
-$MY_LANG = 'en'; // Will use lang from accept header, or last saved 'preferred lang'
-if (!isset($curr)) {
-    $curr = "docs"; // Quick workaround to change the 'current' highlighting
-}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $MY_LANG?>" lang="<?php echo $MY_LANG?>">
 <head>
  
- <title>PHP: Hypertext Preprocessor</title>
+ <title>PHP: <?php $title ?></title>
  
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  
@@ -215,3 +208,9 @@ if (!isset($curr)) {
 </div>
 
 <div id="layout">
+<?php
+if (!empty($SIDEBAR_DATA)) {
+    echo '<aside id="leftbar">', "\n$SIDEBAR_DATA\n</aside>\n";
+}
+?>
+
