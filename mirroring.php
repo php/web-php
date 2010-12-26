@@ -45,7 +45,7 @@ $minute = rand(0, 59);
  module with the settings <a href="#settings">outlined below</a>, or in
  any other Apache connected way (CGI, FastCGI, etc), considering the requested
  PHP settings outlined below in the Apache vhost instructions. The size of
- the full website is approximately 1.7 gigabyte.
+ the full website is approximately 2.1 gigabyte.
 </p>
 
 <a name="rule"></a>
