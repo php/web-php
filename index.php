@@ -1,3 +1,3 @@
 <?php
 
-header('Location: /docpage.php');
+header('Location: /manual/en/function.strpos.php');
