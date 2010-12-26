@@ -69,7 +69,7 @@ function myphpnet_load()
     global $MYPHPNET;
 
     // Empty the preferences array
-    $MYPHPNET = array(FALSE, FALSE, "NONE", 0);
+    $MYPHPNET = array(FALSE, FALSE, "NONE", 0, FALSE);
 
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
@@ -158,3 +158,19 @@ function myphpnet_save()
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
 }
+
+function myphpnet_setbeta($bool = false) {
+    global $MYPHPNET;
+
+    $MYPHPNET[4] = (bool)$bool;
+}
+function myphpnet_beta() {
+    global $MYPHPNET;
+
+    if (isset($MYPHPNET[4])) {
+        return $MYPHPNET[4];
+    }
+
+    return false;
+}
+
