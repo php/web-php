@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php
+// $Id$
+$_SERVER['BASE_PAGE'] = 'privacy.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+site_header("Privacy Policy");
+?>
 
 <h1>Privacy Policy</h1>
 
@@ -31,4 +36,6 @@
  we do not give away the information from the cookies.
 </p>
 
-<?php include 'footer.php'; ?>
+<?php
+site_footer();
+

@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php
+// $Id: tips.php 286580 2009-07-31 10:28:16Z bjori $
+$_SERVER['BASE_PAGE'] = 'docpage.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+site_header("Doc page");
+?>
     <div class="layout-menu">
         <ul>
             <li><a href="#">Menu Section</a>
@@ -296,4 +301,6 @@
          </div>
         </div>
          </div>
-<?php include 'footer.php'; ?>
+<?php
+site_footer();
+
