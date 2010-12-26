@@ -22,7 +22,7 @@
  <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
  <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
  <script type="text/javascript" src="/js/common.js"></script>
- <base href="<?php echo $MYSITE ?>" />
+ <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
  
 </head>
 <body>
@@ -211,6 +211,19 @@
 <?php
 if (!empty($SIDEBAR_DATA)) {
     echo '<aside id="leftbar">', "\n$SIDEBAR_DATA\n</aside>\n";
+}
+if (!empty($config["leftmenu"])) {
+    echo "<aside class='layout-menu'><ul>";
+    foreach($config["leftmenu"] as $section) {
+        echo "<li><a href='{$section["link"]}'>{$section["title"]}</a>\n";
+        echo "<ul>";
+        foreach($section["children"] as $item) {
+            echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+        }
+        echo "</ul>";
+        echo "</li>";
+    }
+    echo "</ul></aside>\n";
 }
 ?>
 
