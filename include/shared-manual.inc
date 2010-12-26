@@ -24,6 +24,9 @@ $PGI = array(); $SIDEBAR_DATA = '';
 // including HTTP header information
 function manual_setup($page_data)
 {
+    if (myphpnet_beta()) {
+        return manual_setup_beta($page_data);
+    }
     global $PGI;
     $PGI = array_merge($PGI, $page_data); // merge for BC reasons
     
@@ -44,6 +47,9 @@ function manual_setup($page_data)
 // TODO: replace logo with logos/php-med-trans-light.gif on print
 function manual_header()
 {
+    if (myphpnet_beta()) {
+        return manual_header_beta();
+    }
     global $PGI, $LAST_UPDATED, $MYSITE;
     
     // Get values out of the config array
@@ -154,6 +160,9 @@ $(document).ready(function() {
 // Print out manual page footer
 function manual_footer()
 {
+    if (myphpnet_beta()) {
+        return manual_header_beta();
+    }
     global $PGI;
 
     // Get vars for easy handling
@@ -432,4 +441,42 @@ USER_NOTE_TEXT;
 }
 
 /* vim: set et ts=4 sw=4: */
+
+function manual_setup_beta($setup) {
+    $siblings = array();
+    foreach($setup["toc"] as $entry) {
+        $siblings[] = array(
+            "title" => $entry[1],
+            "link"  => $entry[0],
+            "current" => $setup["this"][0] == $entry[0],
+        );
+    }
+    $menu = array();
+    foreach(array_reverse($setup["parents"]) as $parent) {
+        $menu[] = array(
+            "title" => $parent[1],
+            "link"  => $parent[0],
+            "children" => array(),
+        );
+    }
+    // The index manual page has no parent..
+    if ($setup["up"][0]) {
+        $menu[] = array(
+            "title" => $setup["up"][1],
+            "link"  => $setup["up"][0],
+            "children" => $siblings,
+        );
+    }
+
+    $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
+    site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
+    
+    echo '<div class="layout-content">';
+}
+
+function manual_header_beta(){}
+function manual_footer_beta() {
+    echo '</div>'; // layout-content
+    site_footer();
+}
 

@@ -63,6 +63,9 @@ function commonHeader($title) { site_header($title); }
 
 function site_header($title = '', $config = array())
 {
+    if (myphpnet_beta()) {
+        return site_header_beta($title, $config);
+    }
     global $EXPL_LANG, $SIDEBAR_DATA, $RSIDEBAR_DATA, $PAGE_COLUMNS, $PGI;
 
     // Default to empty array if improper parameter passed
@@ -295,6 +298,9 @@ function commonFooter() { site_footer(); }
 
 function site_footer($config = array())
 {
+    if (myphpnet_beta()) {
+        return site_footer_beta($config);
+    }
     global $LAST_UPDATED, $PAGE_COLUMNS;
 
     $stats         = (have_stats() ? "\n <a href=\"/stats/\">stats</a> |" : "");
@@ -762,5 +768,102 @@ function print_news($news, $dog, $max = 5, $onlyyear = null) {
 EOT;
     }
 }
+
+
+
+
+// BETA
+function site_header_beta($title = '', $config = array())
+{
+    global $SIDEBAR_DATA;
+    $lang = myphpnet_language();
+
+    if (isset($config["current"])) {
+        $curr = $config["current"];
+    }
+    else {
+        switch($_SERVER["BASE_PAGE"]) {
+            case "privacy.php":
+            default:
+                $curr = "";
+            break;
+
+            case "mailing-lists.php":
+            case "sidebars.php":
+            case "sites.php":
+            case "support.php":
+            case "tips.php":
+            case "urlhowto.php":
+                $curr = "help";
+            break;
+        }
+    }
+    if (empty($title)) {
+        $title = "Hypertext Preprocessor";
+    }
+
+    require __DIR__ ."/header.inc";
+}
+function site_footer_beta($config = array())
+{
+    require __DIR__ . "/footer.inc";
+}
+
+function doc_toc($lang) {
+    $file = __DIR__ . "/../manual/$lang/toc/index.inc";
+    if (!file_exists($file)) {
+        $lang = "en"; // Fallback on english if the translation doesn't exist
+        $file = __DIR__ . "/../manual/en/toc/index.inc";
+    }
+    require __DIR__ . "/../manual/$lang/toc/index.inc";
+
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "getting-started");
+    doc_toc_list($lang, $TOC, "langref");
+    echo "</dl>\n";
+
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "security");
+    doc_toc_list($lang, $TOC, "features");
+    echo "</dl>\n";
+
+    echo "<dl>\n";
+    doc_toc_list($lang, $TOC, "funcref");
+    echo "</dl>\n";
+
+    echo "<dl>\n";
+    doc_toc_title($lang, $TOC, "install");
+    doc_toc_title($lang, $TOC, "internals2");
+    doc_toc_title($lang, $TOC, "faq");
+    doc_toc_title($lang, $TOC, "appendices");
+    echo "<dt><a href='/quickref.php'>Quick function reference</a></dt>\n";
+    echo "</dl>\n";
+
+}
+function doc_toc_list($lang, $index, $file) {
+    include __DIR__ . "/../manual/$lang/toc/$file.inc";
+
+    doc_toc_title($lang, $index, $file);
+    foreach($TOC as $entry) {
+        echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
+    }
+    echo "</dt>\n";
+}
+function doc_toc_title($lang, $index, $file) {
+    foreach($index as $entry) {
+        if ($entry[0] == "$file.php") {
+            $link  = $entry[0];
+            $title = $entry[1];
+            break;
+        }
+    }
+    echo "<dt><a href='/manual/$lang/$link'>$title</a></dt>\n";
+}
+
+
+
+
+
+
 /* vim: set et ts=4 sw=4 ft=php: : */
 
