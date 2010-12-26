@@ -1,7 +1,8 @@
 <?php
-// $Id: sidebars.php 232850 2007-03-28 10:01:12Z bjori $
-$curr = "help";
-require "./header.php";
+// $Id: sidebars.php 306633 2010-12-25 19:13:25Z bjori $
+$_SERVER['BASE_PAGE'] = 'sidebars.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+site_header("PHP.net Search Bars");
 ?>
 <h1>PHP.net Search Bars</h1>
 
@@ -118,6 +119,4 @@ will install in this bar giving you direct search access to the php.net
 database directly from your Desktop.
 </p>
 
-<?php
-require "./footer.php";
-
+<?php site_footer(); ?>

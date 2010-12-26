@@ -1,15 +1,8 @@
 <?php
 // $Id: tips.php 286580 2009-07-31 10:28:16Z bjori $
-$curr = "help";
-require "./header.php";
-
-function tip_title($title, $author = '', $date = '')
-{
-    echo "<hr />\n<h2>$title<br />\n";
-    echo "<small>Submitted by $author ($date)</small></h2>\n";
-}
-?>
-<aside>
+$_SERVER['BASE_PAGE'] = 'tips.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
 <h3>About URL shortcuts</h3>
 <p>
  Most of the tips here utilize PHP.net URL shortcuts, so they allow you
@@ -23,7 +16,15 @@ function tip_title($title, $author = '', $date = '')
  by the PHP site. For more information on language selection, see
  <a href="/my.php">the My PHP.net page</a>.
 </p>
-</aside>
+';
+site_header("Quick Reference Tips");
+
+function tip_title($title, $author = '', $date = '')
+{
+    echo "<hr />\n<h2>$title<br />\n";
+    echo "<small>Submitted by $author ($date)</small></h2>\n";
+}
+?>
 
 <h1>Quick Reference Tips</h1>
 
@@ -369,6 +370,4 @@ Search Type=0
 '\1'|sed -e ': p;s/+/%2B/;t p;: s;s/\ /+/;t s;: q;s/\"/%22/;t q')</tt>
 </p>
 
-<?php
-require "./footer.php";
-
+<?php site_footer(); ?>

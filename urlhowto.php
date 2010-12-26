@@ -1,15 +1,9 @@
 <?php
 // $Id: urlhowto.php 283997 2009-07-13 08:14:46Z gwynne $
-$curr = "help";
-require "./header.php";
+$_SERVER['BASE_PAGE'] = 'urlhowto.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-function a($href) {
-    global $MYSITE;
-	echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
-}
-
-?>
-<aside>
+$SIDEBAR_DATA='
 <h3>URL examples</h3>
 <p>
  We have many kind of URL shortcuts. Here are some
@@ -35,8 +29,15 @@ function a($href) {
  your <a href="/my.php">language preferences</a>
  detected and set.
 </p>
-</aside>
+';
 
+site_header("URL Howto");
+function a($href) {
+    global $MYSITE;
+	echo '<a href="' . $MYSITE . $href . '">' . $MYSITE . $href . '</a>';
+}
+
+?>
 
 <h1>Navigation tips&tricks</h1>
 
@@ -189,6 +190,4 @@ function a($href) {
  <li><a href="/source.php?url=/search.php">search.php</a></li>
 </ul>
 
-<?php
-require "footer.php";
-
+<?php site_footer(); ?>

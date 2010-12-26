@@ -1,9 +1,8 @@
 <?php
 // $Id: sites.php 302079 2010-08-10 18:18:17Z philip $
-$curr = "help";
-require "./header.php";
-?>
-<aside>
+$_SERVER['BASE_PAGE'] = 'sites.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+$SIDEBAR_DATA = '
 <h3>PHP.net Sitemap</h3>
 <p>
  It might also be a good idea to dig deeper into
@@ -18,7 +17,9 @@ require "./header.php";
  Our <a href="/links.php">links page</a> offers some start
  pages you will find interesting.
 </p>
-</aside>
+';
+site_header("A Tourist's Guide");
+?>
 
 <h1>PHP.net: A Tourist's Guide</h1>
 
@@ -235,6 +236,4 @@ require "./header.php";
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
-<?php
-require "./footer.php";
-
+<?php site_footer(); ?>

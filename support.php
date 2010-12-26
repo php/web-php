@@ -1,7 +1,8 @@
 <?php
 // $Id: support.php 278578 2009-04-11 08:44:21Z bjori $
-$curr = "help";
-require "./header.php";
+$_SERVER['BASE_PAGE'] = 'support.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+site_header("Getting Help");
 ?>
 
 <h1>Documentation</h1>
@@ -118,6 +119,4 @@ require "./header.php";
  questions.
 </p>
 
-<?php
-require "./footer.php";
-
+<?php site_footer(); ?>
