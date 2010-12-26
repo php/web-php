@@ -776,7 +776,13 @@ EOT;
 function site_header_beta($title = '', $config = array())
 {
     global $SIDEBAR_DATA;
-    $lang = myphpnet_language();
+    global $setup;
+    if ($setup) {
+        $lang = language_convert($setup['head'][1]);
+    }
+    else {
+        $lang = myphpnet_language();
+    }
 
     if (isset($config["current"])) {
         $curr = $config["current"];
