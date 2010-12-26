@@ -71,6 +71,7 @@
     </dl>
     <dl>
       <dt><a href="/mailing-lists.php">Mailing lists</a></dt>
+        <dd><a href="/unsub.php">Unsubscribe from mailing list</a></dd>
       <dt><a href="/links.php">PHP related sites</a></dt>
       <dt><a href="#">About PHP.net</a></dt>
         <dd><a href="/sites.php">Other PHP.net sites</a></dd>
@@ -103,6 +104,10 @@
         <dd><a href="http://bugs.php.net/report.php">Report a bug</a></dd>
         <dd><a href="http://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
         <dd><a href="http://bugs.php.net/search.php">Search reported bugs</a></dd>
+      <dt><a href="/license/index.php">License information</a></dt>
+        <dd><a href="/license/contrib-guidelines-code.php">Contributor Guidelines</a></dd>
+        <dd><a href="/license/distrib-guidelines-code.php">Distribution Guidelines</a></dd>
+        <dd><a href="/software.php">Software covered by the PHP license</a></dd>
     </dl>
     <br style="clear: both;" />
     </div></div></div>
