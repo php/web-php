@@ -16,11 +16,14 @@ function manual_setup($setup) {
             "children" => array(),
         );
     }
-    $menu[] = array(
-        "title" => $setup["up"][1],
-        "link"  => $setup["up"][0],
-        "children" => $siblings,
-    );
+    // The index manual page has no parent..
+    if ($setup["up"][0]) {
+        $menu[] = array(
+            "title" => $setup["up"][1],
+            "link"  => $setup["up"][0],
+            "children" => $siblings,
+        );
+    }
 
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
     site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
