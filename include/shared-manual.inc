@@ -8,12 +8,18 @@ function manual_setup($setup) {
             "current" => $setup["this"][0] == $entry[0],
         );
     }
-    $menu = array(
-        array(
-            "title" => $setup["up"][1],
-            "link"  => $setup["up"][0],
-            "children" => $siblings,
-        ),
+    $menu = array();
+    foreach(array_reverse($setup["parents"]) as $parent) {
+        $menu[] = array(
+            "title" => $parent[1],
+            "link"  => $parent[0],
+            "children" => array(),
+        );
+    }
+    $menu[] = array(
+        "title" => $setup["up"][1],
+        "link"  => $setup["up"][0],
+        "children" => $siblings,
     );
 
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
