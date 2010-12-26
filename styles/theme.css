@@ -255,4 +255,12 @@ div.phpcode span.string {
 	background-color: transparent;
 }
 
+.warn {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+    font-size: 1em;
+    margin-right: 0.8em;
+    border-top: 3px solid #ff4d4d;
+    background-color: #EFEFEF;
+}
 
