@@ -802,20 +802,20 @@ function site_header_beta($title = '', $config = array())
         $title = "Hypertext Preprocessor";
     }
 
-    require __DIR__ ."/header.inc";
+    require dirname(__FILE__) ."/header.inc";
 }
 function site_footer_beta($config = array())
 {
-    require __DIR__ . "/footer.inc";
+    require dirname(__FILE__) . "/footer.inc";
 }
 
 function doc_toc($lang) {
-    $file = __DIR__ . "/../manual/$lang/toc/index.inc";
+    $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
     if (!file_exists($file)) {
         $lang = "en"; // Fallback on english if the translation doesn't exist
-        $file = __DIR__ . "/../manual/en/toc/index.inc";
+        $file = dirname(__FILE__) . "/../manual/en/toc/index.inc";
     }
-    require __DIR__ . "/../manual/$lang/toc/index.inc";
+    require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
 
     echo "<dl>\n";
     doc_toc_list($lang, $TOC, "getting-started");
@@ -841,7 +841,7 @@ function doc_toc($lang) {
 
 }
 function doc_toc_list($lang, $index, $file) {
-    include __DIR__ . "/../manual/$lang/toc/$file.inc";
+    include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
     foreach($TOC as $entry) {
