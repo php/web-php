@@ -87,10 +87,15 @@ function myphpnet_language($langcode = FALSE)
         $MYPHPNET[0] = $langcode;
     }
     // Return code or FALSE
-    elseif (isset($MYPHPNET[0])) {
+    elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
-    else { return FALSE; }
+    else {
+        if (myphpnet_beta()) {
+            return "en";
+        }
+        return FALSE;
+    }
 }
 
 define("MYPHPNET_URL_NONE", FALSE);
