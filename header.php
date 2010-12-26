@@ -1,3 +1,4 @@
+<?php $v = "?v=" .$_SERVER["REQUEST_TIME"]; // Disable caching, annoying while developing ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $MY_LANG?>" lang="<?php echo $MY_LANG?>">
@@ -13,15 +14,15 @@
  <link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="http://www.php.net/feed.atom" />
  <link rel="canonical" href="http://php.net/index.php" />
  
- <link rel="stylesheet" type="text/css" href="/css/reset.css" media="all" /> 
- <link rel="stylesheet" type="text/css" href="/css/structure.css" media="screen" />
- <link rel="stylesheet" type="text/css" href="/css/doc.css" media="screen" />
- <link rel="stylesheet" type="text/css" href="/css/theme.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/reset.css<?php echo $v?>" media="all" /> 
+ <link rel="stylesheet" type="text/css" href="/css/structure.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/doc.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/css/theme.css<?php echo $v?>" media="screen" />
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
  <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
  <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
- <script type="text/javascript" src="/js/common.js"></script>
+ <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
  <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
  
 </head>
