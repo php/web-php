@@ -48,14 +48,14 @@
   <li>
     <a href="/downloads.php" class="menu-link">Downloads</a>
   </li>
-  <li class="parent <?php echo $curr != "docs" ?: "current"?>">
+  <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">
     <a href="/docs.php" class="menu-link">Documentation</a>
     <div class="children"><div class="children-1"><div class="children-2">
         <?php echo doc_toc($lang); ?>
         <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li class="parent <?php echo $curr != "community" ?: "current"?>">
+  <li class="parent <?php echo $curr == "community" ? "current" : ""?>">
     <a href="/community.php" class="menu-link">Community</a>
     <div class="children"><div class="children-1"><div class="children-2">
     <dl style="width: 300px;">
@@ -91,7 +91,7 @@
     <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li class="parent <?php echo $curr != "help" ?: "current"?>">
+  <li class="parent <?php echo $curr == "help" ? "current" : ""?>">
     <a href="/support.php" class="menu-link">Help</a>
     <div class="children"><div class="children-1"><div class="children-2">
     <dl style="width: 250px;">
