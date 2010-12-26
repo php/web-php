@@ -31,6 +31,7 @@ $(document).ready(function() {
             function(event, item){
                 alert("User selected: " + item['name'] + "\n" +
                       "Direct user to: " + item['page']);
+                window.location = '/manual/' + getLanguage() + '/' + item['page'];
             }
         );        
     });
