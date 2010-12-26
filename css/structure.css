@@ -156,6 +156,9 @@ h1 {
     margin: 0;
     font-weight: normal;
 }
+.layout-menu li.current a {
+    font-weight: bold;
+}
 
 .layout-content {
     margin-left: 190px;

@@ -5,6 +5,7 @@ function manual_setup($setup) {
         $siblings[] = array(
             "title" => $entry[1],
             "link"  => $entry[0],
+            "current" => $setup["this"][0] == $entry[0],
         );
     }
     $menu = array(

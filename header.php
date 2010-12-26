@@ -131,7 +131,11 @@ if (!empty($config["leftmenu"])) {
         echo "<li><a href='{$section["link"]}'>{$section["title"]}</a>\n";
         echo "<ul>";
         foreach($section["children"] as $item) {
-            echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+            if ($item["current"]) {
+                echo "<li class='current'><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+            } else {
+                echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+            }
         }
         echo "</ul>";
         echo "</li>";
