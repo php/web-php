@@ -98,7 +98,7 @@
         <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
         <dd><a href="/support.php">General resources</a></dd>
     </dl>
-    <dl style="swidth: 250px";>
+    <dl style="width: 250px;">
       <dt><a href="http://bugs.php.net/">Bugs</a></dt>
         <dd><a href="http://bugs.php.net/report.php">Report a bug</a></dd>
         <dd><a href="http://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
