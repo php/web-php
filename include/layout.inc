@@ -895,7 +895,6 @@ function doc_toc_list($lang, $index, $file) {
     foreach($TOC as $entry) {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
-    echo "</dt>\n";
 }
 function doc_toc_title($lang, $index, $file) {
     foreach($index as $entry) {
