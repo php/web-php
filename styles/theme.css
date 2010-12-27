@@ -136,20 +136,20 @@ h1, h1 a, h1 a:visited, h1 a:link {
     letter-spacing: -0.04em;
 }
 
-#footer {
+footer {
     clear: both;
     border-top: 3px solid #c3add9;
     padding-top: 5px;
 }
 
-#footer a {
+footer a {
     color: #444;
     border-color: #987db3;
     font-weight: bold;
     margin: 0 8px;
 }
 
-#footer a:hover {
+footer a:hover {
     color: #000;
 }
 

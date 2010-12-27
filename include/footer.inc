@@ -1,6 +1,6 @@
 </section><!-- layout-content -->
          
-         <div id="footer">
+         <footer>
           <ul class="footmenu copyright">
             <li><a href="/copyright.php">Copyright © 2001-2010 The PHP Group</a></li>
           </ul>
@@ -11,7 +11,7 @@
             <li><a href="/mirrors.php">Mirror sites</a></li>
             <li><a href="/privacy.php">Privacy policy</a></li>
           </ul>
-        </div>
+        </footer>
   </div>
 <!--script type="text/javascript" src="js/search-index-en.js" id=search-index></script-->
 

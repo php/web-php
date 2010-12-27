@@ -1,12 +1,11 @@
 <?php $v = "?v=" .$_SERVER["REQUEST_TIME"]; // Disable caching, annoying while developing ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $lang?>" lang="<?php echo $lang?>">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
  
  <title>PHP: <?php echo $title ?></title>
  
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <meta charset=utf-8"/>
  
  <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
