@@ -86,7 +86,12 @@
 
 
 
-.docs .phpcode, .docs div.htmlcode, .docs .screen {
+.docs .phpcode,
+.docs div.htmlcode,
+.docs div.inicode,
+.docs div.lscode,
+.docs div.shellcode,
+.docs .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
     padding: 10px;
