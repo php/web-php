@@ -19,30 +19,30 @@
     font-family: monospace;
 }
 
-.docs .refentry div.warning,
-.docs .refentry div.tip,
-.docs .refentry .notes blockquote {
+.docs div.warning,
+.docs div.tip,
+.docs .notes blockquote {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
 }
 
-.docs .refentry .notes blockquote {
+.docs .notes blockquote {
     border-top: 3px solid #fff08a;
     background-color: #EFEFEF;
 }
-.docs .refentry div.tip {
+.docs div.tip {
     border-top: 3px solid #434343;
     background-color: #EFEFEF;
 }
-.docs .refentry div.warning {
+.docs div.warning {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.docs .refentry .notes blockquote, .docs .refentry div.warning, .docs .refentry div.tip {
+.docs .notes blockquote, .docs div.warning, .docs div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.docs .refentry div.warning b.warning, .docs .refentry div.tip b.tip {
+.docs div.warning b.warning, .docs div.tip b.tip {
     float: left;
     margin-right: 0.8em;
 }
