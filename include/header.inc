@@ -5,7 +5,7 @@
  
  <title>PHP: <?php echo $title ?></title>
  
- <meta charset=utf-8"/>
+ <meta charset="utf-8"/>
  
  <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
