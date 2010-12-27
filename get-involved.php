@@ -6,7 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("Get Involved");
 ?>
 
-<aside id="leftbar">
+<aside class="tips">
 <p style="margin: 5px; padding: 5px;">
     Ever wondered how the PHP.net project actually works and what it has to offer? 
     Who is in charge and how decisions are made? The PHP.net project has a lot of 

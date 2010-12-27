@@ -119,7 +119,7 @@
 <div id="layout">
 <?php
 if (!empty($SIDEBAR_DATA)) {
-    echo '<aside id="leftbar">', "\n$SIDEBAR_DATA\n</aside>\n";
+    echo '<aside class="tips">', "\n$SIDEBAR_DATA\n</aside>\n";
 }
 if (!empty($config["leftmenu"])) {
     echo "<aside class='layout-menu'><ul>";
