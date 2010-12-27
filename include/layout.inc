@@ -832,7 +832,7 @@ function news_toc() {
     $items = array(
         array(
             "title" => "News",
-            "link"  => "/",
+            "link"  => "/archive/",
             "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
         ),
         array(
@@ -854,7 +854,6 @@ function news_toc() {
             echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
         }
     }
-    echo "<dt><a href='/archive/'>News archive</a></dt>\n";
     echo "</dl>\n";
 }
 function doc_toc($lang) {
