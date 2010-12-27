@@ -102,13 +102,13 @@
 .docs .refentry .changelog .doctable {
     width: 100%;
 }
-.docs .refentry .changelog .doctable th {
+.docs .doctable th {
     border-bottom: 1px solid #987db3;
 }
-.docs .refentry .changelog .doctable td {
+.docs .doctable td {
     border-right: 1px solid #987db3;
 }
-.docs .refentry .changelog .doctable td:last-child {
+.docs .doctable td:last-child {
     border: 0px;
 }
 
