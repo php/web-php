@@ -99,8 +99,12 @@
 
 
 
-.docs .refentry .changelog .doctable {
+.docs .doctable {
+    margin: 3px 30px;
     width: 100%;
+}
+.docs .doctable tr:hover {
+    background-color: #EFEFEF;
 }
 .docs .doctable th {
     border-bottom: 1px solid #987db3;
