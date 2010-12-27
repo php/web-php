@@ -86,12 +86,13 @@
 
 
 
-.docs .refentry .phpcode, .docs .refentry .screen {
+.docs .phpcode, .docs div.htmlcode, .docs .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
     padding: 10px;
+    margin: 2px 0px;
 }
-.docs .refentry .example {
+.docs .example {
     margin: 15px;
     border-top: 1px solid #0a0;
 }
