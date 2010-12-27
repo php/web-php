@@ -21,12 +21,12 @@
 
 .docs div.warning,
 .docs div.tip,
-.docs .notes blockquote {
+.docs blockquote.note {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
 }
 
-.docs .notes blockquote {
+.docs blockquote.note {
     border-top: 3px solid #fff08a;
     background-color: #EFEFEF;
 }
@@ -38,7 +38,7 @@
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.docs .notes blockquote, .docs div.warning, .docs div.tip {
+.docs blockquote.note, .docs div.warning, .docs div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
@@ -91,6 +91,7 @@
 .docs div.inicode,
 .docs div.lscode,
 .docs div.shellcode,
+.docs div.HTTPcode,
 .docs .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
