@@ -139,5 +139,5 @@ if (!empty($config["leftmenu"])) {
     echo "</ul></aside>\n";
 }
 ?>
-<section class="layout-content">
+<section class="layout-content <?php echo $curr ?>">
 
