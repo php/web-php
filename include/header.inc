@@ -61,7 +61,7 @@
     <dl>
       <dt><a href="http://wiki.php.net/">PHP Wiki</a></dt>
         <dd><a href="http://wiki.php.net/rfc">Write a RFC</a></dd>
-      <dt><a href="#">Get Involved</a></dt>
+      <dt><a href="/get-involved.php">Get Involved</a></dt>
         <dd><a href="#">Report bugs</a></dd>
         <dd><a href="#">Contribute code</a></dd>
         <dd><a href="#">Organize an event</a></dd>
