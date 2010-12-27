@@ -1,4 +1,4 @@
-         <div class="cleaner">&nbsp;</div>
+</section><!-- layout-content -->
          
          <div id="footer">
           <ul class="footmenu copyright">

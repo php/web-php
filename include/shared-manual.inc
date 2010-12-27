@@ -531,8 +531,6 @@ function manual_setup_beta($setup) {
 
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
     site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
-    
-    echo '<div class="layout-content">';
 }
 
 function manual_header_beta(){}
@@ -540,8 +538,6 @@ function manual_footer_beta() {
 
     manual_notes();
     echo "<br />";
-
-    echo '</div>'; // layout-content
     site_footer();
 }
 
