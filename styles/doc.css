@@ -103,7 +103,7 @@
     margin: 3px 30px;
     width: 100%;
 }
-.docs .doctable tr:hover {
+.docs .doctable tbody tr:hover {
     background-color: #EFEFEF;
 }
 .docs .doctable th {
