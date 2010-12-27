@@ -389,7 +389,7 @@ function manual_notes_beta() {
 
     echo <<<END_USERNOTE_HEADER
 
-<div id="usernotes">
+<section id="usernotes">
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
   <h3 class="title">User Contributed Notes</h3>
@@ -414,8 +414,7 @@ END_USERNOTE_HEADER;
         echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
     }
     
-    // End of #usernotes
-    echo "</div>";
+    // #usernotes gets closed by the footer
 }
 // Get user notes from the appropriate text dump
 function manual_notes_load($id)
@@ -535,9 +534,9 @@ function manual_setup_beta($setup) {
 
 function manual_header_beta(){}
 function manual_footer_beta() {
+    echo "</section>";
 
     manual_notes();
-    echo "<br />";
     site_footer();
 }
 

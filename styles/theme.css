@@ -27,6 +27,14 @@ body {
 h1    { font-size: 1.7em; line-height: 2.6em; }
 h2    { font-size: 1.6em; line-height: 2.4em; }
 h3    { font-size: 1.4em; line-height: 2.2em; }
+h3.title {
+    font-size: 1.5em;
+    border-top-style: solid;
+    border-top-width: 3px;
+    padding-top: 6px;
+    margin-top: 2em;
+}
+
 h4    { font-size: 1.3em; line-height: 2.0em; }
 h5    { font-size: 1.2em; line-height: 1.8em; }
 h6    { font-size: 1.1em; line-height: 1.6em; }
@@ -190,6 +198,8 @@ h1 a:hover {
  * User notes
  */
 #usernotes {
+    margin: 0 0 10px 175px;
+
     background: #eee;
     position: relative;
 }
