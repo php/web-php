@@ -2,7 +2,7 @@
     position: relative;
 }
 
-h3.title {
+.docs h3.title {
     font-size: 1.5em;
     border-top-style: solid;
     border-top-width: 3px;
@@ -10,11 +10,11 @@ h3.title {
     margin-top: 2em;
 }
 
-i .parameter {
+.docs i .parameter {
     font-style: normal;
 }
 
-.refentry .methodsynopsis {
+.docs .refentry .methodsynopsis {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
     border-top: 3px solid #ddd;
@@ -23,95 +23,95 @@ i .parameter {
     font-family: monospace;
 }
 
-.refentry div.warning,
-.refentry div.tip,
-.refentry .notes blockquote {
+.docs .refentry div.warning,
+.docs .refentry div.tip,
+.docs .refentry .notes blockquote {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
 }
 
-.refentry .notes blockquote {
+.docs .refentry .notes blockquote {
     border-top: 3px solid #fff08a;
     background-color: #EFEFEF;
 }
-.refentry div.tip {
+.docs .refentry div.tip {
     border-top: 3px solid #434343;
     background-color: #EFEFEF;
 }
-.refentry div.warning {
+.docs .refentry div.warning {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.refentry .notes blockquote, .refentry div.warning, .refentry div.tip {
+.docs .refentry .notes blockquote, .docs .refentry div.warning, .docs .refentry div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.refentry div.warning b.warning, .refentry div.tip b.tip {
+.docs .refentry div.warning b.warning, .docs .refentry div.tip b.tip {
     float: left;
     margin-right: 0.8em;
 }
 
-.methodname b {
+.docs .methodname b {
     color: #000;
 }
 
-.parameter {
+.docs .parameter {
     color: #604080;
     font-weight: bold;
 }
 
-.initializer {
+.docs .initializer {
     color: #000;
 }
 
-th {
+.docs th {
     text-align: left;
 }
 
-td, th {
+.docs td, .docs th {
     padding: 2px 5px;
 }
 
-.refentry .description p {
+.docs .refentry .description p {
     margin: 0.7em 0;
 }
 
-.refentry .parameters dt {
+.docs .refentry .parameters dt {
     font-size: 1.2em;
 }
 
-.refentry .parameters dd {
+.docs .refentry .parameters dd {
     margin-top: -0.7em;
 }
 
-.refentry .parameters p {
+.docs .refentry .parameters p {
     margin: 0.7em 0;
 }
 
 
 
-.refentry .phpcode, .refentry .screen {
+.docs .refentry .phpcode, .docs .refentry .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
     padding: 10px;
 }
-.refentry .example {
+.docs .refentry .example {
     margin: 15px;
     border-top: 1px solid #0a0;
 }
 
 
 
-.refentry .changelog .doctable {
+.docs .refentry .changelog .doctable {
     width: 100%;
 }
-.refentry .changelog .doctable th {
+.docs .refentry .changelog .doctable th {
     border-bottom: 1px solid #987db3;
 }
-.refentry .changelog .doctable td {
+.docs .refentry .changelog .doctable td {
     border-right: 1px solid #987db3;
 }
-.refentry .changelog .doctable td:last-child {
+.docs .refentry .changelog .doctable td:last-child {
     border: 0px;
 }
 
