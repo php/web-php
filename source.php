@@ -32,7 +32,7 @@ $SIDEBAR_DATA = '
  <a href="http://svn.php.net/web/php/">svn.php.net</a>.
 </p>
 ';
-site_header("Show Source");
+site_header("Show Source", array("current" => "FIXME"));
 
 // No file param specified
 if (!isset($_GET['url']) || (isset($_GET['url']) && !is_string($_GET['url']))) {

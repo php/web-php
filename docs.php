@@ -39,7 +39,7 @@ $SIDEBAR_DATA='
 </p>
 ';
 
-site_header("Documentation");
+site_header("Documentation", array("current" => "docs"));
 
 ?>
 

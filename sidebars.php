@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'sidebars.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP.net Search Bars");
+site_header("PHP.net Search Bars", array("current" => "help"));
 ?>
 <h1>PHP.net Search Bars</h1>
 

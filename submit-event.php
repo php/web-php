@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'submit-event.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
-site_header("Submit an Event");
+site_header("Submit an Event", array("current" => "FIXME"));
 
 // No errors, processing depends on POST data
 $errors = array();

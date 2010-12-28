@@ -45,7 +45,7 @@
   <li id="headhome">
     <a href="/" rel="home" class="menu-link">Home</a>
   </li>
-  <li>
+  <li class="<?php echo $curr == "downloads" ? "current" : ""?>">
     <a href="/downloads.php" class="menu-link">Downloads</a>
   </li>
   <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">

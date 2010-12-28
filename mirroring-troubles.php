@@ -13,7 +13,7 @@ $SIDEBAR_DATA = '
 </p>
 ';
 
-site_header("The PHP mirrors problem and troubleshooting guide");
+site_header("The PHP mirrors problem and troubleshooting guide", array("current" => "FIXME"));
 ?>
 
 <h1>Common troubles that PHP.net mirrors face</h1>

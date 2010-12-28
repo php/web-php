@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'software.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP Software");
+site_header("PHP Software", array("current" => "help"));
 ?>
 
 <h1>PHP Software</h1>

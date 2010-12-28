@@ -26,7 +26,7 @@ $SIDEBAR_DATA = '
  Compiled snapshots for Windows users are also included.
 </p>
 ';
-site_header("SVN Access");
+site_header("SVN Access", array("current" => "community"));
 ?>
 
 <h1>SVN Access</h1>

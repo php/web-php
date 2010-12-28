@@ -54,7 +54,7 @@ if (is_array($data)) {
 $res = unserialize($data);
 
 // HTTP status line is passed on, signifies an error
-site_header('Search results', array("noindex"));
+site_header('Search results', array("noindex", "current" => "FIXME")));
 
 if (!is_array($res)) {
   exit_with_pretty_error(null, 'Internal error', 'Please try again later');

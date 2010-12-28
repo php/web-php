@@ -10,7 +10,7 @@ $SIDEBAR_DATA = '
  <a href="/license/">see our licensing information page</a>.
 </p>
 ';
-site_header("Copyright");
+site_header("Copyright", array("current" => "footer"));
 ?>
 
 <a name="copyright"></a>

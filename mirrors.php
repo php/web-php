@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'mirrors.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
-site_header("Mirror Sites");
+site_header("Mirror Sites", array("current" => "community"));
 ?>
 
 <h1>Mirror Sites</h1>

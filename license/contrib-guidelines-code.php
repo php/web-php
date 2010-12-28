@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'license/contrib-guidelines-code.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("License Information");
+site_header("License Information", array("current" => "help"));
 ?>
 <h2>PHP Contributor Guidelines for Code Developers</h2>
 

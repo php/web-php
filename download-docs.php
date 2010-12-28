@@ -45,7 +45,7 @@ $SIDEBAR_DATA='
 </p>
 ';
 
-site_header("Download documentation");
+site_header("Download documentation", array("current" => "docs"));
 
 // Format to look for
 $formats = array(

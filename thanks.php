@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'thanks.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Thanks");
+site_header("Thanks", array("current" => "FIXME"));
 ?>
 
 <h1>Thanks</h1>

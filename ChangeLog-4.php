@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4 ChangeLog");
+site_header("PHP 4 ChangeLog", array("current" => "FIXME"));
 function bugfix($number) { echo "Fixed bug "; bugl($number); }
 function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
 ?>

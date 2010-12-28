@@ -10,7 +10,7 @@
 $_SERVER['BASE_PAGE'] = 'mod.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("Email confirmation");
+site_header("Email confirmation", array("current" => "community"));
 
 // Only run on www.php.net
 if ($MYSITE != "http://www.php.net/") { 

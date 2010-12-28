@@ -73,7 +73,7 @@ if (isset($_POST['beta'])) {
 
 myphpnet_save();
 
-site_header("My PHP.net");
+site_header("My PHP.net", array("current" => "community"));
 ?>
 
 <form action="/my.php" method="post">

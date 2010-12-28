@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("Get Involved");
+site_header("Get Involved", array("current" => "community"));
 ?>
 
 <aside class="tips">

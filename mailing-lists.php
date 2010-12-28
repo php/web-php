@@ -40,7 +40,7 @@ $SIDEBAR_DATA = '
 </ul>
 ';
 
-site_header("Mailing Lists");
+site_header("Mailing Lists", array("current" => "help"));
 
 // Some mailing list is selected for [un]subscription
 if (isset($_POST['maillist'])) {

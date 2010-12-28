@@ -16,7 +16,7 @@ $SIDEBAR_DATA = '
  mirroring page</a>.
 </p>
 ';
-site_header("Information About This PHP Mirror Site");
+site_header("Information About This PHP Mirror Site", array("current" => "FIXME"));
 ?>
 
 <h1>Information About This PHP Mirror Site</h1>

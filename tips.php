@@ -17,7 +17,7 @@ $SIDEBAR_DATA = '
  <a href="/my.php">the My PHP.net page</a>.
 </p>
 ';
-site_header("Quick Reference Tips");
+site_header("Quick Reference Tips", array("current" => "help"));
 
 function tip_title($title, $author = '', $date = '')
 {

@@ -12,7 +12,7 @@ $SIDEBAR_DATA = '
  lists</a> on their own pages.
 </p> 
 ';
-site_header("Unsubscribing");
+site_header("Unsubscribing", array("current" => "community"));
 ?>
 
 <h1>Unsubscribing From a Mailing List</h1>

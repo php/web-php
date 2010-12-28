@@ -28,7 +28,7 @@ $SIDEBAR_DATA = '
  Compiled snapshots for Windows users are also included.
 </p>
 ';
-site_header("Using CVSup to maintain a local CVS repository");
+site_header("Using CVSup to maintain a local CVS repository", array("current" => "FIXME"));
 ?>
 
 <h1>Using CVSup To Maintain A Local CVS Repository</h1>

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'usage.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP Usage Stats");
+site_header("PHP Usage Stats", array("current" => "FIXME"));
 ?>
 
 <h1>Usage Stats for April 2007</h1>

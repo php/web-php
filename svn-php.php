@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
  <a href="/svn.php">SVN</a>. No SVN account is required.
 </p>
 ';
-site_header("Using SVN for PHP Development");
+site_header("Using SVN for PHP Development", array("current" => "FIXME"));
 
 $groups = array(
   "php"  => "PHP Group",

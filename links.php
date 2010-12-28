@@ -17,7 +17,7 @@ $SIDEBAR_DATA = '
  the PHP license.
 </p>
 ';
-site_header("Links");
+site_header("Links", array("current" => "community"));
 ?>
 
 <h1>PHP Related Links</h1>

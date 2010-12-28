@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirroring-stats.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Setting Up Local Stats");
+site_header("Setting Up Local Stats", array("current" => "FIXME"));
 ?>
 
 <h1>Setting Up Local Stats</h1>

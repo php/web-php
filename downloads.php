@@ -78,6 +78,7 @@ site_header("Downloads",
                 "title" => "PHP Release feed"
             ),
         ),
+        "current" => "downloads",
     )
 );
 ?>

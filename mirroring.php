@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
 ';
 */
 
-site_header("Mirroring The PHP Website");
+site_header("Mirroring The PHP Website", array("current" => "FIXME"));
 
 // Get a minute to print out for the cron example
 function make_seed()

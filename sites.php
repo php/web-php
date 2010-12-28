@@ -18,7 +18,7 @@ $SIDEBAR_DATA = '
  pages you will find interesting.
 </p>
 ';
-site_header("A Tourist's Guide");
+site_header("A Tourist's Guide", array("current" => "help"));
 ?>
 
 <h1>PHP.net: A Tourist's Guide</h1>

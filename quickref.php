@@ -125,7 +125,7 @@ if (count($temp) > 0) {
 if (count($maybe) > 0) { $head_options = array("noindex"); }
 else { $head_options = array(); }
 
-site_header("Manual Quick Reference", $head_options);
+site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
 ?>
 
 <h1>PHP Function List</h1>
