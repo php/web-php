@@ -20,7 +20,7 @@ $(document).ready(function() {
     });
 
     // load the search index and enable auto-complete.
-    jQuery.getScript("js/search-index-" + getLanguage() + ".js", function(){
+    jQuery.getScript("/js/search-index-" + getLanguage() + ".js", function(){
         $('#headsearch-keywords').autocomplete({
             delay:      50,
             minScore:   75,
