@@ -375,10 +375,16 @@ if (!isset($MIRRORS[$MYSITE])) {
     // the browser (in the Host HTTP header).
  
     if($_SERVER["SERVER_PORT"] != '80') {
-        $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
+        $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . ':' . (int)$_SERVER["SERVER_PORT"] . '/'; 
     } else {
-        $MYSITE = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
+        $tmp = 'http://' . preg_replace("!^www\\.!", "", $_SERVER["SERVER_NAME"]) . '/';
     }
+
+    // If the name without www. exists, use it
+    if (isset($MIRRORS[$tmp])) {
+        $MYSITE = $tmp;
+    }
+
     // If the mirror is not registered with this name, provide defaults
     // (no country code, no search, no stats, English default language ...)
     if (!isset($MIRRORS[$MYSITE])) {
