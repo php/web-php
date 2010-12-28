@@ -18,9 +18,9 @@
  <link rel="stylesheet" type="text/css" href="/styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="/styles/theme.css<?php echo $v?>" media="screen" />
  
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
  <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
- <script type="text/javascript" src="/js/jquery.autocomplete.js"></script>
  <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
  <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
  

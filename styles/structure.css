@@ -175,28 +175,24 @@ footer .footmenu li {
 }
 
 /**
- * Auto-complete (.ac)
+ * Auto-complete
  */
-.ac_results {
-    padding: 1px 3px 3px 3px;
-    overflow: hidden;
-    z-index: 99999;
-    margin: 0 0 0 1px;
-}
-
-.ac_results ul {
+.ui-autocomplete {
+    width: 187px;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
     list-style-position: outside;
     list-style: none;
-    padding: 0 0 5px 0;
     margin: 0;
+    padding: 0 0 5px 0;
     border: 1px solid;
-    border-top: none;
+    z-index: 99999;
 }
 
-.ac_results li {
+.ui-autocomplete li {
     margin: 0px;
-    padding: 2px 5px;
-    cursor: default;
+    cursor: pointer;
     display: block;
     /* 
     if width will be 100% horizontal scrollbar will apear 
@@ -211,6 +207,11 @@ footer .footmenu li {
     */
     line-height: 16px;
     overflow: hidden;
+}
+
+.ui-autocomplete a {
+    display: block;
+    padding: 2px 5px;
 }
 
 

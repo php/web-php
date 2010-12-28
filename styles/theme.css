@@ -166,20 +166,10 @@ h1 a:hover {
 }
 
 /**
- * Auto-complete (.ac)
+ * Auto-complete
  */
-.ac_results {
-    background: url('/images/shade.png');
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.ac_results ul {
-    border-color: #604080;
+.ui-autocomplete {
+    border-color: #987db3;
     background-color: white;
     -moz-border-radius-bottomleft: 5px;
     -moz-border-radius-bottomright: 5px;
@@ -187,9 +177,13 @@ h1 a:hover {
     -webkit-border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    border-top: 1px solid #f6f6f6;
+    box-shadow: 0px 3px 3px #ccc;
+    -webkit-box-shadow: 0px 3px 3px #ccc;
+    -moz-box-shadow: 0px 3px 3px #ccc;
 }
 
-.ac_over {
+.ui-autocomplete .ui-state-hover {
     background-color: #604080;
     color: white;
 }

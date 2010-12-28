@@ -20,20 +20,46 @@ $(document).ready(function() {
     });
 
     // load the search index and enable auto-complete.
-    jQuery.getScript("/js/search-index-" + getLanguage() + ".js", function(){
-        $('#headsearch-keywords').autocomplete(searchIndex, {
-            matchContains:  true,
-            scrollHeight:   240,
-            formatItem:     function(item) {
-                return item.name;
+    jQuery.getScript("js/search-index-" + getLanguage() + ".js", function(){
+        $('#headsearch-keywords').autocomplete({
+            delay:      50,
+            minScore:   75,
+            maxResults: 50,
+            source: function(request, response){
+                // sort the search index by similarity to the user's query
+                var term  = request.term;
+                var score = function(item){
+                    var match = item.name.search(new RegExp(term, "i"));
+                    if (match < 0) return 0;
+                    return 100 - (match * 2) - (item.name.length - term.length);
+                };
+                searchIndex.sort(function(a, b){
+                    return score(b) - score(a);
+                });
+                
+                // display the best matches
+                var results = [];
+                for (var i = 0; i < this.options.maxResults; i++){
+                    var item = searchIndex[i];
+                    if (item && score(item) > this.options.minScore){
+                        results.push({
+                            label: item.name,
+                            value: item.page
+                        });
+                    }
+                }
+                response(results);
+            },
+            focus: function(event, ui) {
+                $('#headsearch-keywords').val(ui.item.label);
+                return false;
+            },
+            select: function(event, ui){
+                $('#headsearch-keywords').val(ui.item.label);
+                if (ui.item.value)
+                    window.location = '/manual/' + getLanguage() + '/' + ui.item.value;
             }
-        }).result(
-            function(event, item){
-                alert("User selected: " + item['name'] + "\n" +
-                      "Direct user to: " + item['page']);
-                window.location = '/manual/' + getLanguage() + '/' + item['page'];
-            }
-        );        
+        });
     });
     if ($("#quicktoc").length) {
         var l = "";
