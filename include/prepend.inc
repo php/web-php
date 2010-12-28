@@ -171,10 +171,16 @@ function myphpnet_setbeta($bool = false) {
 }
 function myphpnet_beta() {
     global $MYPHPNET;
+    global $MYSITE;
 
     if (isset($_GET["beta"])) {
         return (bool)$_GET["beta"];
     }
+
+    if ($MYSITE == "http://prototype.php.net/") {
+        return true;
+    }
+
     if (isset($MYPHPNET[4]) && $MYPHPNET[4]) {
         return true;
     }
