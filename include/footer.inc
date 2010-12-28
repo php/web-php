@@ -13,7 +13,6 @@
             <li><a href="/privacy.php">Privacy policy</a></li>
           </ul>
         </footer>
-<!--script type="text/javascript" src="js/search-index-en.js" id=search-index></script-->
 
 </body>
 </html>
