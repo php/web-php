@@ -35,6 +35,18 @@ $(document).ready(function() {
             }
         );        
     });
+    if ($("#quicktoc").length) {
+        var l = "";
+        $(".refsect1 h3").each(function() {
+            var id = $(this).parent().attr("id");
+            l += "<li><a href='#" + id + "'>" + $(this).text() + "</a></li>";
+        });
+        if (l) {
+            $("#quicktoc").append("<h5>Quick TOC</h5><ul>" + l + "<li><a href='#usernotes'>User notes</a></li></ul>");
+        } else {
+            $("#quicktoc").remove();
+        }
+    }
 
 });
 
