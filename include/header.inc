@@ -17,9 +17,10 @@
  <link rel="stylesheet" type="text/css" href="/styles/structure.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="/styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="/styles/theme.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="/styles/dynamic.php<?php echo $v?>" media="screen" />
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
  <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
  <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
  <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
@@ -77,6 +78,7 @@
         <dd><a href="/my.php">My PHP.net</a></dd>
         <dd><a href="#">Contribute to the website</a></dd>
         <dd><a href="/credits.php">Who's behind this?</a></dd>
+        <dd><a href="http://people.php.net/">Developers profiles</a></dd>
         <dd><a href="/contact.php">Contact us</a></dd>
         <dd><a href="/mirrors.php">Mirror sites</a></dd>
     </dl>
