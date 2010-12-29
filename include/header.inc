@@ -21,7 +21,6 @@
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
- <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>
  <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
  <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
  
@@ -58,7 +57,8 @@
   <li class="parent <?php echo $curr == "community" ? "current" : ""?>">
     <a href="/community.php" class="menu-link">Community</a>
     <div class="children"><div class="children-1"><div class="children-2">
-    <?php news_toc() ?>
+    <?php news_toc(array('news')) ?>
+    <?php news_toc(array('conferences', 'papers')) ?>
     <dl>
       <dt><a href="http://wiki.php.net/">PHP Wiki</a></dt>
         <dd><a href="http://wiki.php.net/rfc">Write a RFC</a></dd>
@@ -88,23 +88,25 @@
   <li class="parent <?php echo $curr == "help" ? "current" : ""?>">
     <a href="/support.php" class="menu-link">Help</a>
     <div class="children"><div class="children-1"><div class="children-2">
-    <dl style="width: 250px;">
+    <dl>
       <dt><a href="#">Navigation tips</a></dt>
         <dd><a href="/sidebars.php">Search sidebars</a></dd>
         <dd><a href="/urlhowto.php">URL Howto</a></dd>
         <dd><a href="/tips.php">Quick Reference tips</a></dd>
         <dd><a href="/sites.php">Other PHP sites</a></dd>
     </dl>
-    <dl style="width: 250px;">
+    <dl>
       <dt><a href="#">Support</a></dt>
         <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
         <dd><a href="/support.php">General resources</a></dd>
     </dl>
-    <dl style="width: 250px;">
+    <dl>
       <dt><a href="http://bugs.php.net/">Bugs</a></dt>
         <dd><a href="http://bugs.php.net/report.php">Report a bug</a></dd>
         <dd><a href="http://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
         <dd><a href="http://bugs.php.net/search.php">Search reported bugs</a></dd>
+    </dl>
+    <dl>
       <dt><a href="/license/index.php">License information</a></dt>
         <dd><a href="/license/contrib-guidelines-code.php">Contributor Guidelines</a></dd>
         <dd><a href="/license/distrib-guidelines-code.php">Distribution Guidelines</a></dd>
@@ -116,6 +118,11 @@
   
  </ul>
 <br style="clear: both;" />
+</div>
+
+<div id='mega-drop-down'>
+ <div id='menu-container'>
+ </div>
 </div>
 
 <div id="layout">

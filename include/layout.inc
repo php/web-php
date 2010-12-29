@@ -827,20 +827,20 @@ function site_footer_beta($config = array())
     require dirname(__FILE__) . "/footer.inc";
 }
 
-function news_toc() {
+function news_toc($sections = null) {
     include dirname(__FILE__) . "/pregen-news.inc";
     $items = array(
-        array(
+        "news" => array(
             "title" => "News",
             "link"  => "/archive/",
             "children" => print_news($NEWS_ENTRIES, "frontpage", 3, null, true),
         ),
-        array(
+        "conferences" => array(
             "title" => "Conferences",
             "link"  => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "conferences", 3, null, true),
         ),
-        array(
+        "papers" => array(
             "title" => "Call for Papers",
             "link"  => "/conferences/",
             "children" => print_news($NEWS_ENTRIES, "cfp", 3, null, true),
@@ -848,7 +848,13 @@ function news_toc() {
     );
 
     echo "<dl>\n";
-    foreach($items as $menu) {
+    foreach($items as $section => $menu) {
+
+        // only print requested sections.
+        if (is_array($sections) && !in_array($section, $sections)) {
+            continue;
+        }
+
         echo "<dt><a href='{$menu["link"]}'>{$menu["title"]}</a></dt>\n";
         foreach($menu["children"] as $child) {
             echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";

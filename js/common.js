@@ -1,11 +1,35 @@
 $(document).ready(function() {
 
-    // fade in/out mega drop-downs.
-    $("#headmenu li:has(div.children)").hoverIntent({    
-        interval:   100,
-        timeout:    200,
-        over:       function(){$(this).find("div.children").fadeIn(250);},
-        out:        function(){$(this).find("div.children").fadeOut(250);}
+    // slide mega drop-downs up/down.
+    $("#headmenu li:has(div.children)").click(function(event) {
+        // don't follow link.
+        event.preventDefault();
+
+        var clickedMenu = $(this);
+        var activeMenu  = $('#headmenu li.current');
+        var container   = $('#mega-drop-down #menu-container');
+
+        // function to activate the clicked menu.
+        var activate = function(){
+            clickedMenu.addClass('current');
+            clickedMenu.find("div.children").appendTo(container);
+            container.find("div.children").slideUp(0).slideDown("fast");
+        };
+
+        // if there is an active menu, deactivate it first.
+        if (activeMenu.length) {
+            activeMenu.removeClass('current');
+            var children = container.find("div.children");
+            if (children) {
+                children.slideUp('fast', function(){
+                    children.appendTo(activeMenu);
+                    if (activeMenu[0] != clickedMenu[0])
+                        activate();
+                });
+            }
+        } else {
+            activate();
+        }
     });
 
     // remove default search text on focus.

@@ -59,33 +59,12 @@ a:hover {
     background: url(/images/sprites.png) 0 0;
 }
 
-#headnav li.parent .children {
-    background: url('/images/shade.png');
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-#headnav li.parent .children .children-1 {
-    background: #fff;
-    border-color: #604080;
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
 #headnav li.parent a.menu-link {
-    background: url(/images/sprites.png) no-repeat 100% 7px;
+    background: url(/images/sprites.png) no-repeat 100% 11px;
 }
 
 #headnav li.parent.current a.menu-link {
-    background-position: 100% -23px;
+    background-position: 100% -19px;
 }
 
 #headnav a.menu-link {
@@ -178,9 +157,9 @@ h1 a:hover {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top: 1px solid #f6f6f6;
-    box-shadow: 0px 3px 3px #ccc;
-    -webkit-box-shadow: 0px 3px 3px #ccc;
-    -moz-box-shadow: 0px 3px 3px #ccc;
+    box-shadow: 0px 2px 2px #555;
+    -webkit-box-shadow: 0px 2px 2px #555;
+    -moz-box-shadow: 0px 2px 2px #555;
 }
 
 .ui-autocomplete .ui-state-hover {
@@ -282,3 +261,18 @@ pre.info {
     background-color: #efefef;
 }
 
+/**
+ * Mega drop-down menu
+ */
+#mega-drop-down {
+    background-color: #222;
+    border-color: #c3add9;
+}
+
+#mega-drop-down dt a {
+    color: #eee;
+}
+
+#mega-drop-down a {
+    color: #ccc;
+}

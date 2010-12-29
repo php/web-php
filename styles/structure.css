@@ -71,30 +71,30 @@ h1 {
 }
 
 #headnav li.parent a.menu-link {
-    padding-right: 22px;
+    padding-right: 25px;
 }
 
 #headnav li.parent .children {
     display: none;
-    z-index: 1000;
-    position: absolute;
-    top: 71px;
-    left: 50%;
-    margin-left: -470px;
-    width: 940px;
 }
 
-#headnav li.parent .children .children-1 {
-    margin: 1px 5px 5px 5px;
-    border: 2px solid;
-    border-top: none;
-    line-height: 1.4;
-    padding: 10px 15px 15px 15px;
+#mega-drop-down div.children {
+    border-bottom-width: 12px;
+    border-bottom-style: solid;
+    padding-bottom: 1em;
 }
 
-#headnav li.parent .children .children-2 {
-    width: 920px;
+#mega-drop-down div.children-1 {
+    width: 960px;
     margin: 0 auto;
+}
+
+#mega-drop-down div.children dl {
+    width: 225px;
+}
+
+#mega-drop-down div.children dt {
+    border-top: none;
 }
 
 #headnav .myphp {
