@@ -72,7 +72,9 @@
     <dl>
       <dt><a href="/mailing-lists.php">Mailing lists</a></dt>
         <dd><a href="/unsub.php">Unsubscribe from mailing list</a></dd>
+        <!-- FIXME: This links.php stuff should be removed? -->
       <dt><a href="/links.php">PHP related sites</a></dt>
+        <dd><a href="http://planet-php.net">Planet PHP</a></dd>
       <dt><a href="#">About PHP.net</a></dt>
         <dd><a href="/sites.php">Other PHP.net sites</a></dd>
         <dd><a href="/my.php">My PHP.net</a></dd>
