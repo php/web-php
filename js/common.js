@@ -86,9 +86,13 @@ $(document).ready(function() {
         });
     });
     if ($("#quicktoc").length) {
-        var edit = "<li><a href='https://edit.php.net/?perm=/" + getLanguage() + "/" + $("section.docs > div").attr("id") + "&project=PHP'>Edit this page</a></li>";
-        // Add edit this page link to the footer
-        $($(".footmenu")[1]).append(edit);
+        var pageid = $("section.docs > div").attr("id");
+        var editurl = "https://edit.php.net/?perm=/" + getLanguage() + "/" + pageid + ".php&project=PHP";
+        var bugurl  = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + pageid;
+
+        // Add edit & bugreporting urls to the footer
+        $($(".footmenu")[1]).append("<li><a href='" + editurl + "'>Edit this page</a></li>");
+        $($(".footmenu")[1]).append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>");
 
         var l = "";
         $(".refsect1 h3").each(function() {
