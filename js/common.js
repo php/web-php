@@ -113,10 +113,9 @@ function getDefaultSearchText()
 
 /**
  * Determine what language to present to the user.
- * 
- * @todo    make this detect the user's language.
  */
 function getLanguage()
 {
-    return "en";
+    return document.documentElement.lang;
 }
+
