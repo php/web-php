@@ -89,13 +89,19 @@ $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
 // is needed when communicating with the outside world]
 function language_convert($langcode, $to_phpweb_format = TRUE)
 {
+    global $LANGUAGES;
     if ($to_phpweb_format) {
         switch ($langcode) {
             case 'zh_cn': return 'zh';
             case 'zh_hk': return 'hk';
             case 'zh_tw': return 'tw';
             case 'ko'   : return 'kr';
-            default:      return $langcode;
+            default:
+                if (isset($LANGUAGES[$langcode])) {
+                    return $langcode;
+                }
+                // Fallback on english if we got something wacky
+                return "en";
         }
     }
     else {
@@ -104,7 +110,12 @@ function language_convert($langcode, $to_phpweb_format = TRUE)
             case 'hk': return 'zh_hk';
             case 'tw': return 'zh_tw';
             case 'kr': return 'ko';
-            default:   return $langcode;
+            default:
+                if (isset($LANGUAGES[$langcode])) {
+                    return $langcode;
+                }
+                // Fallback on english if we got something wacky
+                return "en";
         }
     }
 }
