@@ -86,6 +86,10 @@ $(document).ready(function() {
         });
     });
     if ($("#quicktoc").length) {
+        var edit = "<li><a href='https://edit.php.net/?perm=/" + getLanguage() + "/" + $("section.docs > div").attr("id") + "&project=PHP'>Edit this page</a></li>";
+        // Add edit this page link to the footer
+        $($(".footmenu")[1]).append(edit);
+
         var l = "";
         $(".refsect1 h3").each(function() {
             var id = $(this).parent().attr("id");
