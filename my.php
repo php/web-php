@@ -274,11 +274,14 @@ foreach ($mirror_sites as $murl => $mdata) {
 </div>
 
 
-<h2>PHP.net beta</h2>
+<h2>PHP.net alpha</h2>
 
 <p>
  php.net is undergoing plastic surgery these days. If you want to see
- how the site may look in the feature, you can join our beta program.
+ how the site <strong>may</strong> look in the future, you can join our alpha program.
+ <br />
+ Comments, feedback and patches should be directed to
+ <a href="mailto:php-webmaster@lists.php.net">php-webmaster@lists.php.net</a>.
 </p>
 
 <div class="indent">
