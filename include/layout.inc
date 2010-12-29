@@ -884,13 +884,13 @@ function doc_toc($lang) {
     doc_toc_list($lang, $TOC, "funcref");
     echo "</dl>\n";
 
-    echo "<dl>\n";
-    doc_toc_title($lang, $TOC, "install");
-    doc_toc_title($lang, $TOC, "internals2");
-    doc_toc_title($lang, $TOC, "faq");
-    doc_toc_title($lang, $TOC, "appendices");
-    echo "<dt><a href='/quickref.php'>Quick function reference</a></dt>\n";
-    echo "</dl>\n";
+    echo "<ul>";
+    doc_toc_title($lang, $TOC, "install", "li");
+    doc_toc_title($lang, $TOC, "internals2", "li");
+    doc_toc_title($lang, $TOC, "faq", "li");
+    doc_toc_title($lang, $TOC, "appendices", "li");
+    echo "<li><a href='/quickref.php'>Quick function reference</a></li>\n";
+    echo "</ul>\n";
 
 }
 function doc_toc_list($lang, $index, $file) {
@@ -901,7 +901,7 @@ function doc_toc_list($lang, $index, $file) {
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
     }
 }
-function doc_toc_title($lang, $index, $file) {
+function doc_toc_title($lang, $index, $file, $elm = "dt") {
     foreach($index as $entry) {
         if ($entry[0] == "$file.php") {
             $link  = $entry[0];
@@ -909,7 +909,7 @@ function doc_toc_title($lang, $index, $file) {
             break;
         }
     }
-    echo "<dt><a href='/manual/$lang/$link'>$title</a></dt>\n";
+    echo "<$elm><a href='/manual/$lang/$link'>$title</a></$elm>\n";
 }
 
 

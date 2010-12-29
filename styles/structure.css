@@ -17,7 +17,7 @@ h1 {
 }
 
 #headnav h6,
-#headnav li,
+#headmenu li,
 #headsearch {
     display: block;
     float: left;
@@ -89,11 +89,11 @@ h1 {
     margin: 0 auto;
 }
 
-#mega-drop-down div.children dl {
+#mega-drop-down div.children dl, #mega-drop-down div.children ul {
     width: 225px;
 }
 
-#mega-drop-down div.children dt {
+#mega-drop-down div.children dt, #mega-drop-down div.children li {
     border-top: none;
 }
 
@@ -104,18 +104,18 @@ h1 {
     top: 30px;
 }
 
-.children dl {
+.children dl, .children ul {
     float: left;
     width: 195px;
     padding-right: 15px;
 }
 
-.children dl a {
+.children dl a, .children ul a {
     display: block;
     padding: 4px;
 }
 
-.children dt {
+.children dt, .children li {
     font-weight: bold;
     margin-top: 1em;
     border-top-width: 3px;

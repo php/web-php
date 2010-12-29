@@ -269,7 +269,8 @@ pre.info {
     border-color: #c3add9;
 }
 
-#mega-drop-down dt a {
+#mega-drop-down dt a,
+#mega-drop-down ul a {
     color: #eee;
 }
 
