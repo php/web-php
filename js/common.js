@@ -102,9 +102,12 @@ $(document).ready(function() {
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
                 l.delegate("a.toc_item","click keypress", function(e) {
                         // You have to escape the '.' to '\\.' so that it doesn't start doing CSS-like selectors when we refer to "lang.type.string" as an ID
-                        $.scrollTo($(this).attr('href').replace(/\./g, '\\.'), 800);
+			var scrollToElem = $(this).attr('href').replace(/\./g, '\\.');
+			if($(scrollToElem).length) {
+	                        $.scrollTo(scrollToElem, 800);
+                        }
 			e.preventDefault();
-                        return false;
+			return false;
                 });
             });
             $("#quicktoc").append("<h5>Quick TOC</h5>").append(l);
