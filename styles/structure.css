@@ -178,7 +178,7 @@ footer .footmenu li {
  * Auto-complete
  */
 .ui-autocomplete {
-    width: 187px;
+    width: 185px;
     max-height: 250px;
     overflow-y: auto;
     overflow-x: hidden;

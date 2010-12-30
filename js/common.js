@@ -32,17 +32,6 @@ $(document).ready(function() {
         }
     });
 
-    // remove default search text on focus.
-    $('#headsearch-keywords').focus(function(){
-        if ($(this).attr("value") == getDefaultSearchText()) {
-            $(this).attr("value", "");
-        }
-    }).blur(function(){
-        if (!$(this).attr("value")) {
-            $(this).attr("value", getDefaultSearchText());
-        }
-    });
-
     // load the search index and enable auto-complete.
     jQuery.getScript("/js/search-index-" + getLanguage() + ".js", function(){
         $('#headsearch-keywords').autocomplete({
@@ -110,17 +99,6 @@ $(document).ready(function() {
     });
 
 });
-
-/**
- * Get the default search text to use (e.g. 'Search...').
- */
-function getDefaultSearchText()
-{
-    switch (getLanguage()) {
-        case "en":
-            return "Search...";
-    }
-}
 
 /**
  * Determine what language to present to the user.
