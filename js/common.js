@@ -95,7 +95,7 @@ $(document).ready(function() {
         $($(".footmenu")[1]).append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>");
 
         var l = "";
-        $(".refsect1 h3").each(function() {
+        $(".refsect1 h3, .sect1 h2, .sect2 h3, .sect3 h4").each(function() {
             var id = $(this).parent().attr("id");
             l += "<li><a href='#" + id + "'>" + $(this).text() + "</a></li>";
         });
