@@ -277,3 +277,14 @@ pre.info {
 #mega-drop-down a {
     color: #ccc;
 }
+
+
+/* {{{ The anchor for section headers */
+a.genanchor {
+    color: #fff;
+}
+a.genanchor:hover {
+    color: #000;
+}
+/* }}} */
+

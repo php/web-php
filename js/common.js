@@ -105,6 +105,9 @@ $(document).ready(function() {
             $("#quicktoc").remove();
         }
     }
+    $(".docs div[id] > h1, .docs div[id] > h2, .docs div[id] > h3, .docs div[id] > h4").each(function(){
+        $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
+    });
 
 });
 
