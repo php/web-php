@@ -148,14 +148,20 @@ aside#quicktoc {
 /* }}} */
 
 /* {{{ lists */
+ul.itemizedlist,
+ul.simplelist,
+ul.chunklist {
+    padding: 0 0 2px 10px;
+    margin: 0 0 2px 10px;
+}
 ul.itemizedlist {
-    padding: 10px;
-    margin: 10px;
     list-style-type: circle;
 }
-ul.simplelist {
-    padding: 10px;
-    margin: 10px;
+ul.simplelist
+{
+    list-style-type: disc;
+}
+ul.chunklist {
     list-style-type: disc;
 }
 /* }}} */
