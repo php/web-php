@@ -33,7 +33,7 @@
   <li id="headsearch">
     <form method="post" action="/search.php" id="topsearch">
       <fieldset>
-        <input type="text" id="headsearch-keywords" name="pattern" value="Search..." size="30" accesskey="s" />
+        <input type="search" id="headsearch-keywords" name="pattern" placeholder="Search..." size="30" accesskey="s" />
         <input type="submit"
           value="Go"
           id="headsearch-submit"
