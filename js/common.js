@@ -74,6 +74,8 @@ $(document).ready(function() {
             }
         });
     });
+
+    var foundToc = false;
     if ($("#quicktoc").length) {
         var pageid = $("section.docs > div").attr("id");
         var editurl = "https://edit.php.net/?perm=/" + getLanguage() + "/" + pageid + ".php&project=PHP";
@@ -83,16 +85,32 @@ $(document).ready(function() {
         $($(".footmenu")[1]).append("<li><a href='" + editurl + "'>Edit this page</a></li>");
         $($(".footmenu")[1]).append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>");
 
-        var l = "";
+        // Make a list, start making <li>'s dynamically.
+        // we use .data() to store which element the TOC item should scrollTo()
+        var l = $('<ul id="toc_list">');
         $(".refsect1 h3, .sect1 h2, .sect2 h3, .sect3 h4").each(function() {
-            var id = $(this).parent().attr("id");
-            l += "<li><a href='#" + id + "'>" + $(this).text() + "</a></li>";
+            if(foundToc === false) {
+                foundToc = true;
+            }
+            var currItem = $(this);
+            $('<a class="toc_item" href="#">' + currItem.text() + '</a>')
+                .data('scrollObject', currItem.parent())
+                .appendTo( $('<li>') ).parent().appendTo(l);
+     
         });
-        if (l) {
-            $("#quicktoc").append("<h5>Quick TOC</h5><ul>" + l + "<li><a href='#usernotes'>User notes</a></li></ul>");
+
+        if (foundToc) {
+            jQuery.getScript("/js/jquery.scrollto.min.js", function(){
+                l.delegate("a.toc_item","click keypress", function(e) { 
+                        $.scrollTo($(this).data('scrollObject'), 800);
+                        return false;
+                });
+            });
+            $("#quicktoc").append("<h5>Quick TOC</h5>").append(l);
         } else {
             $("#quicktoc").remove();
         }
+
     }
     $(".docs div[id] > h1, .docs div[id] > h2, .docs div[id] > h3, .docs div[id] > h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
