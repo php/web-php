@@ -1,3 +1,7 @@
+/* vim: set et ts=4 sw=4 fdm=marker: : */
+
+
+/* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
     padding: 10px;
     width: 125px;
@@ -5,20 +9,35 @@ aside#quicktoc {
     position: fixed;
     right: 0px;
 }
+/* }}} */
+
+/* {{{ General styles (p, parameters, initializers, ...) */
+.docs p {
+    margin: 0.7em 0;
+}
+.docs .methodname b {
+    color: #000;
+}
+
+.docs .parameter {
+    color: #604080;
+    font-weight: bold;
+}
+
 .docs i .parameter {
     font-style: normal;
 }
 
-.docs .refentry .methodsynopsis {
-    padding: 10px 20px;
-    margin: 1em 2em 1.3em;
-    border-top: 3px solid #ddd;
-    background: #efefef;
-    color: #666;
-    font-family: monospace;
+.docs .initializer {
+    color: #000;
 }
+/* }}} */
 
+
+
+/* {{{ Warning and notes */
 .docs div.warning,
+.docs div.caution,
 .docs div.tip,
 .docs blockquote.note {
     padding: 10px 20px;
@@ -37,40 +56,33 @@ aside#quicktoc {
     border-top: 3px solid #ff4d4d;
     background-color: #EFEFEF;
 }
-.docs blockquote.note, .docs div.warning, .docs div.tip {
+.docs div.caution {
+    border-top: 3px solid #F90;
+    background-color: #EFEFEF;
+}
+.docs blockquote.note, .docs div.warning, .docs div.caution, .docs div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.docs div.warning b.warning, .docs div.tip b.tip {
+.docs div.warning b.warning, .docs div.caution b.caution, .docs div.tip b.tip {
     float: left;
     margin-right: 0.8em;
 }
+.docs blockquote.note p, .docs div.warning p, .docs div.caution p, .docs div.tip p {
+    margin: 0;
+}
+/* }}} */
 
-.docs .methodname b {
-    color: #000;
+.docs .refentry .methodsynopsis {
+    padding: 10px 20px;
+    margin: 1em 2em 1.3em;
+    border-top: 3px solid #ddd;
+    background: #efefef;
+    color: #666;
+    font-family: monospace;
 }
 
-.docs .parameter {
-    color: #604080;
-    font-weight: bold;
-}
-
-.docs .initializer {
-    color: #000;
-}
-
-.docs th {
-    text-align: left;
-}
-
-.docs td, .docs th {
-    padding: 2px 5px;
-}
-
-.docs .refentry .description p {
-    margin: 0.7em 0;
-}
-
+/* {{{ Parameter listing */
 .docs .refentry .parameters dt {
     font-size: 1.2em;
 }
@@ -82,15 +94,19 @@ aside#quicktoc {
 .docs .refentry .parameters p {
     margin: 0.7em 0;
 }
+/* }}} */
 
 
 
+/* {{{ Examples (highlighting is in theme.css) */
 .docs .phpcode,
 .docs div.htmlcode,
 .docs div.inicode,
 .docs div.lscode,
 .docs div.shellcode,
 .docs div.HTTPcode,
+.docs div.apache-confcode,
+.docs pre.synopsis,
 .docs .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
@@ -101,8 +117,17 @@ aside#quicktoc {
     margin: 15px;
     border-top: 1px solid #0a0;
 }
+/* }}} */
 
 
+/* {{{ Tables */
+.docs th {
+    text-align: left;
+}
+
+.docs td, .docs th {
+    padding: 2px 5px;
+}
 
 .docs .doctable {
     margin: 3px 30px;
@@ -120,5 +145,18 @@ aside#quicktoc {
 .docs .doctable td:last-child {
     border: 0px;
 }
+/* }}} */
 
+/* {{{ lists */
+ul.itemizedlist {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: circle;
+}
+ul.simplelist {
+    padding: 10px;
+    margin: 10px;
+    list-style-type: disc;
+}
+/* }}} */
 
