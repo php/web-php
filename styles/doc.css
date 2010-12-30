@@ -121,6 +121,7 @@ aside#quicktoc {
     background-color: #EFEFEF;
     padding: 10px;
     margin: 2px 0px;
+    font-weight: normal;
 }
 .docs .example {
     margin: 15px;
@@ -159,7 +160,8 @@ aside#quicktoc {
 /* {{{ lists */
 ul.itemizedlist,
 ul.simplelist,
-ul.chunklist {
+ul.chunklist,
+ol.qandaset_questions {
     padding: 0 0 2px 10px;
     margin: 0 0 2px 10px;
 }
@@ -172,6 +174,12 @@ ul.simplelist
 }
 ul.chunklist {
     list-style-type: disc;
+}
+ol.qandaset_questions {
+    list-style-type: decimal;
+}
+dl.qandaentry {
+    border-top: 1px solid #000;
 }
 /* }}} */
 
