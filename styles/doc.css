@@ -60,15 +60,23 @@ aside#quicktoc {
     border-top: 3px solid #F90;
     background-color: #EFEFEF;
 }
-.docs blockquote.note, .docs div.warning, .docs div.caution, .docs div.tip {
+.docs blockquote.note,
+.docs div.warning,
+.docs div.caution,
+.docs div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.docs div.warning b.warning, .docs div.caution b.caution, .docs div.tip b.tip {
+.docs div.warning b.warning,
+.docs div.caution b.caution,
+.docs div.tip b.tip {
     float: left;
     margin-right: 0.8em;
 }
-.docs blockquote.note p, .docs div.warning p, .docs div.caution p, .docs div.tip p {
+.docs blockquote.note p,
+.docs div.warning p,
+.docs div.caution p,
+.docs div.tip p {
     margin: 0;
 }
 /* }}} */
@@ -107,6 +115,7 @@ aside#quicktoc {
 .docs div.HTTPcode,
 .docs div.apache-confcode,
 .docs pre.synopsis,
+.docs pre.literallayout,
 .docs .screen {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
