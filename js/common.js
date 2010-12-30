@@ -101,8 +101,9 @@ $(document).ready(function() {
         if (foundToc) {
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
                 l.delegate("a.toc_item","click keypress", function(e) {
+			var scrollToElem = $(this).attr('href');
                         // You have to escape the '.' to '\\.' so that it doesn't start doing CSS-like selectors when we refer to "lang.type.string" as an ID
-			var scrollToElem = $(this).attr('href').replace(/\./g, '\\.');
+			scrollToElem = scrollToElem.substr(scrollToElem.indexOf('#')).replace(/\./g, '\\.');
 			if($(scrollToElem).length) {
 	                        $.scrollTo(scrollToElem, 800);
                         }
