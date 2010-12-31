@@ -122,7 +122,7 @@ $(document).ready(function() {
     });
 
     if($('.docs table.doctable').length) {
-        $('tbody tr:even').addClass("alt-row")
+        $(this).find('tbody tr:even').addClass("alt-row")
     }
 
 });
