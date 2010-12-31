@@ -33,35 +33,86 @@ $(document).ready(function() {
     });
 
     // load the search index and enable auto-complete.
-    jQuery.getScript("/js/search-index-" + getLanguage() + ".js", function(){
-        $('#headsearch-keywords').autocomplete({
+    jQuery.getScript("/search-index.php?lang=" + getLanguage(), function(){
+        var haveDesc = 0;
+        jQuery.getScript("/search-index.php?lang=" + getLanguage() + "&description=1", function(){
+            haveDesc = 1;
+        });
+        $.widget("custom.catcomplete", $.ui.autocomplete, {
+            /*
+             * Print out category headers rather then in () after the match
+            _renderMenu: function(ul, items) {
+                var self = this, currentCategory = "";
+                $.each(items, function(index, item) {
+                    var cat = self._resolveIndexName(item.category);
+                    if (cat != currentCategory) {
+                        ul.append("<li class='ui-autocomplete-category'>" + cat + "</li>");
+                        currentCategory = cat;
+                    }
+
+                    self._renderItem(ul, item);
+                });
+            },
+            */
+            _renderItem: function(ul, item) {
+                var n = $("<li></li>").data("item.autocomplete", item);
+                var cat = this._resolveIndexName(item.category);
+                if (item.desc) {
+                    n.append("<a>" + item.label + " (" + cat + ")<br>" + item.desc + "</a>");
+                }
+                else {
+                    n.append("<a>" + item.label + " (" + cat + ") </a>");
+                }
+
+                return n.appendTo(ul);
+            },
+            // Resolve the element names to human understandable things
+            _resolveIndexName: function(key) {
+                var indexes = {
+                    'phpdoc:varentry': 'Variables',
+                    'phpdoc:classref': 'Classes',
+                    'phpdoc:exceptionref': 'Exceptions',
+                    'refentry': 'Functions'
+                };
+                return indexes[key];
+            }
+        });
+        $('#headsearch-keywords').catcomplete({
             delay:      50,
-            minScore:   75,
+            minScore:   50,
             maxResults: 50,
             source: function(request, response){
-                // sort the search index by similarity to the user's query
                 var term  = request.term;
-                var score = function(item){
-                    var match = item.name.search(new RegExp(term, "i"));
-                    if (match < 0) return 0;
-                    return 100 - (match * 2) - (item.name.length - term.length);
-                };
-                searchIndex.sort(function(a, b){
-                    return score(b) - score(a);
-                });
+                var minScore = this.options.minScore;
                 
-                // display the best matches
+                // Score an possible match
+                var score = function(item){
+                    var match = item.search(new RegExp(term, "i"));
+                    if (match < 0) return 0;
+                    return 100 - (match * 2) - (item.length - term.length);
+                };
+
                 var results = [];
-                for (var i = 0; i < this.options.maxResults; i++){
-                    var item = searchIndex[i];
-                    if (item && score(item) > this.options.minScore){
+                $.each(searchIndex, function(idx, item) {
+                    var itemScore = score(item[0]);
+                    if (item && itemScore > minScore) {
                         results.push({
-                            label: item.name,
-                            value: item.page
+                            label: item[0],
+                            value: item[1],
+                            desc: haveDesc ? descriptionIndex[item[1]] : '',
+                            category: item[2],
+                            score: itemScore
                         });
                     }
-                }
-                response(results);
+                });
+
+                // Only sort the matches
+                results.sort(function(a, b){
+                    return b.score - a.score;
+                });
+
+                // Return at most maxResults
+                response(results.slice(0, this.options.maxResults));
             },
             focus: function(event, ui) {
                 $('#headsearch-keywords').val(ui.item.label);

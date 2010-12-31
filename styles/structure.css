@@ -208,11 +208,20 @@ footer .footmenu li {
     */
     line-height: 16px;
     overflow: hidden;
+    border-bottom: 1px solid #c3add9 ;
 }
 
 .ui-autocomplete a {
     display: block;
     padding: 2px 5px;
+}
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+    background-color: #987db3;
+    color: #fff;
 }
 
 
