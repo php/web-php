@@ -3,7 +3,7 @@
          
          <footer>
           <ul class="footmenu copyright">
-            <li><a href="/copyright.php">Copyright © 2001-2010 The PHP Group</a></li>
+            <li><a href="/copyright.php">Copyright &copy; 2001-2011 The PHP Group</a></li>
           </ul>
           <ul class="footmenu">
             <li><a href="/my.php">My PHP.net</a></li>
