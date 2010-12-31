@@ -44,9 +44,11 @@ if ($process) {
         $errors[] = 'You must supply a valid email address.';
     }
 
-    // Temporary lockout on one annoying poster.
-    if (strtolower($_POST['email']) == 'saradhaaa@gmail.com') {
-        $errors[] = 'Enough is enough.  Go play somewhere else.';
+    // Temporary lockout of annoying users (better solution is needed)
+    $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
+    $mosquitoes = array('saradhaaa@gmail.com', 'mg-tuzi@yahoo.com.cn');
+    if (in_array($uemail, $mosquitoes)) {
+        $errors[] = 'Sorry an error has occurred, please try again later.';
     }
   
     $_POST['sdesc'] = trim($_POST['sdesc']);
