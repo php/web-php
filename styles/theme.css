@@ -281,7 +281,8 @@ pre.info {
 
 
 /* {{{ The anchor for section headers */
-a.genanchor {
+a.genanchor:link,
+a.genanchor:visited {
     color: #fff;
 }
 a.genanchor:hover {
