@@ -111,16 +111,9 @@ aside#quicktoc {
 
 
 /* {{{ Examples (highlighting is in theme.css) */
-.docs .phpcode,
-.docs div.htmlcode,
-.docs div.inicode,
-.docs div.lscode,
-.docs div.shellcode,
-.docs div.HTTPcode,
-.docs div.apache-confcode,
-.docs pre.synopsis,
-.docs pre.literallayout,
-.docs .screen {
+.docs .cdata pre,
+.docs .example-contents div pre,
+.docs .example-contents div.phpcode {
     border: 1px solid #E2E1D5;
     background-color: #EFEFEF;
     padding: 10px;
