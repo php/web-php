@@ -23,10 +23,6 @@ aside#quicktoc {
     color: #000;
 }
 
-.docs thead th .parameter {
-    color: #FFFFFF;
-}
-
 .docs .parameter {
     color: #604080;
     font-weight: bold;
@@ -156,8 +152,7 @@ aside#quicktoc {
 }
 
 .docs .doctable th {
-    background-color: #604080;
-    color: #FFFFFF;
+    background-color: #C3ADD9;
     border-bottom: 1px solid #987db3;
     text-align: center;
 }
