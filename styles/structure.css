@@ -149,6 +149,7 @@ h1 {
 }
 
 .layout-menu li li a {
+    overflow: hidden;
     border: none;
     font-size: 11px;
     padding: 1px 0 1px 20px;
