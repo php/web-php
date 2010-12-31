@@ -145,7 +145,6 @@ aside#quicktoc {
 
 .docs .doctable {
     margin: 3px 30px;
-    width: 100%;
 }
 .docs .doctable tbody tr:hover {
     background-color: #EFEFEF;
