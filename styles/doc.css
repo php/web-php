@@ -3,9 +3,13 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
-    padding: 10px;
+
+    padding: 10px 0 10px 10px;
+    border-top: 1px solid #C3ADD9;
+    border-left: 1px solid #C3ADD9;
+    border-bottom: 1px solid #C3ADD9;
+    margin: 0 0 20px 20px;
     width: 125px;
-    border: 1px solid  #C3ADD9;
     position: fixed;
     right: 0px;
 }
