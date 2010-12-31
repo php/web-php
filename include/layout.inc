@@ -890,6 +890,7 @@ function doc_toc($lang) {
     doc_toc_title($lang, $TOC, "faq", "li");
     doc_toc_title($lang, $TOC, "appendices", "li");
     echo "<li><a href='/quickref.php'>Quick function reference</a></li>\n";
+    echo "<li><a href='/download-docs.php'>Documentation downloads</a></li>\n";
     echo "</ul>\n";
 
 }

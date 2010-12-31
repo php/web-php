@@ -68,6 +68,7 @@
         <dd><a href="#">Organize an event</a></dd>
         <dd><a href="#">Write documentation</a></dd>
         <dd><a href="#">Test PHP</a></dd>
+      <dt><a href="/cal.php">Calendar of Events</a></dt>
     </dl>
     <dl>
       <dt><a href="/mailing-lists.php">Mailing lists</a></dt>
@@ -78,11 +79,10 @@
       <dt><a href="#">About PHP.net</a></dt>
         <dd><a href="/sites.php">Other PHP.net sites</a></dd>
         <dd><a href="/my.php">My PHP.net</a></dd>
-        <dd><a href="#">Contribute to the website</a></dd>
         <dd><a href="/credits.php">Who's behind this?</a></dd>
         <dd><a href="http://people.php.net/">Developers profiles</a></dd>
         <dd><a href="/contact.php">Contact us</a></dd>
-        <dd><a href="/mirrors.php">Mirror sites</a></dd>
+        <dd><a href="/thanks.php">Thanks</a></dd>
     </dl>
     <br style="clear: both;" />
     </div></div></div>
@@ -101,6 +101,8 @@
       <dt><a href="#">Support</a></dt>
         <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
         <dd><a href="/support.php">General resources</a></dd>
+        <dd><a href="/ChangeLog-5.php">Changelog (PHP 5)</a></dd>
+        <dd><a href="/svn.php">SVN (PHP Source)</a></dd>
     </dl>
     <dl>
       <dt><a href="http://bugs.php.net/">Bugs</a></dt>
