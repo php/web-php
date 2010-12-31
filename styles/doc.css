@@ -143,11 +143,12 @@ aside#quicktoc {
     padding: 2px 5px;
 }
 
+.docs .doctable tr.alt-row {
+    background-color: #EFEFEF;    
+}
+
 .docs .doctable {
     margin: 3px 30px;
-}
-.docs .doctable tbody tr:hover {
-    background-color: #EFEFEF;
 }
 .docs .doctable th {
     border-bottom: 1px solid #987db3;

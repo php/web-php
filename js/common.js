@@ -121,6 +121,10 @@ $(document).ready(function() {
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
 
+    if($('.docs table.doctable').length) {
+        $('tbody tr:even').addClass("alt-row")
+    }
+
 });
 
 /**
