@@ -102,6 +102,7 @@ a:hover {
     border: 1px solid #604080;
     background: #604080;
     color: #fff;
+    cursor: pointer;
 }
 #changelang {
     border-color: #987db3;
