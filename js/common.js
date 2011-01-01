@@ -135,8 +135,10 @@ $(document).ready(function() {
         var bugurl  = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + pageid;
 
         // Add edit & bugreporting urls to the footer
-        $($(".footmenu")[1]).append("<li><a href='" + editurl + "'>Edit this page</a></li>");
-        $($(".footmenu")[1]).append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>");
+        $($(".footmenu")[1])
+            .append("<li><a href='" + editurl + "'>Edit this page</a></li>")
+            .append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>")
+        ;
 
         // Make a list, start making <li>'s dynamically.
         // we use .data() to store which element the TOC item should scrollTo()
@@ -154,14 +156,8 @@ $(document).ready(function() {
         if (foundToc) {
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
                 l.delegate("a.toc_item","click keypress", function(e) {
-			var scrollToElem = $(this).attr('href');
-                        // You have to escape the '.' to '\\.' so that it doesn't start doing CSS-like selectors when we refer to "lang.type.string" as an ID
-			scrollToElem = scrollToElem.substr(scrollToElem.indexOf('#')).replace(/\./g, '\\.');
-			if($(scrollToElem).length) {
-	                        $.scrollTo(scrollToElem, 800);
-                        }
-			e.preventDefault();
-			return false;
+                    // Escape dots in ids so they won't be treated as class selectors
+                    $.scrollTo($(this).attr("href").replace(".", "\\\."), 800);
                 });
             });
             $("#quicktoc").append("<h5>Quick TOC</h5>").append(l);
@@ -177,7 +173,7 @@ $(document).ready(function() {
         $(".parameters .term i > tt.parameter").each(function (idx, param) {
             if ($(param).text() == $(node).text().substring(1)) {
                 $(node).click(function() {
-                    $.scrollTo($(param), 800);
+                    $(param).scrollTo(0, 800);
                 });
             }
         });
