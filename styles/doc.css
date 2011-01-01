@@ -136,7 +136,7 @@ aside#quicktoc {
     padding: 2px 5px;
 }
 
-.docs .doctable tbody tr:nth-child(odd) {
+.docs .doctable tbody tr:nth-child(even) {
     background-color: #EFEFEF;    
 }
 
