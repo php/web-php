@@ -40,14 +40,14 @@ $(document).ready(function() {
         });
         $.widget("custom.catcomplete", $.ui.autocomplete, {
             /*
-             * Print out category headers rather then in () after the match
+             // Print out category headers rather then in () after the match
             _renderMenu: function(ul, items) {
                 var self = this, currentCategory = "";
                 $.each(items, function(index, item) {
-                    var cat = self._resolveIndexName(item.category);
-                    if (cat != currentCategory) {
+                    if (item.category != currentCategory) {
+                        var cat = self._resolveIndexName(item.category);
                         ul.append("<li class='ui-autocomplete-category'>" + cat + "</li>");
-                        currentCategory = cat;
+                        currentCategory = item.category;
                     }
 
                     self._renderItem(ul, item);
@@ -80,7 +80,7 @@ $(document).ready(function() {
         $('#headsearch-keywords').catcomplete({
             delay:      50,
             minScore:   50,
-            maxResults: 50,
+            maxResults: 20,
             source: function(request, response){
                 var term  = request.term;
                 var minScore = this.options.minScore;
