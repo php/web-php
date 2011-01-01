@@ -18,5 +18,11 @@ header("Content-Type: application/javascript");
 ob_start("ob_gzhandler");
 
 echo "$varname = ";
-readfile(dirname(__FILE__) . "/manual/$langcode/$filename.json");
+$file = dirname(__FILE__) . "/manual/$langcode/$filename.json";
+if (is_readable($file)) {
+    readfile($file);
+} else {
+    echo "[]";
+}
+
 
