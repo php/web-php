@@ -10,6 +10,15 @@ if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
     $shorturl = "http://php.net/" . $shortname;
     header("Link: <$shorturl>; rel=shorturl");
 }
+
+// For static content
+// FIXME: How does static.php.net work? Will it get the /js/ folders?
+$STATIC_ROOT = "/";
+if ($MYSITE == "http://www.php.net/") {
+    $STATIC_ROOT = "http://static.php.net/www.php.net/";
+} elseif (!empty($_SERVER["STATIC_ROOT"])) {
+    $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
@@ -19,25 +28,25 @@ if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
  
  <meta charset="utf-8"/>
  
- <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico" />
+ <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
- <link rel="alternate" type="application/atom+xml" href="http://www.php.net/releases.atom" title="PHP Release feed" />
- <link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="http://www.php.net/feed.atom" />
- <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>" />
+ <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases.atom" title="PHP Release feed" />
+ <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor" />
+ <link rel="canonical" href="http://php.net<?php echo $_SERVER['BASE_PAGE']?>" />
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>" />
 <?php endif ?>
  
- <link rel="stylesheet" type="text/css" href="/styles/reset.css<?php echo $v?>" media="all" /> 
- <link rel="stylesheet" type="text/css" href="/styles/structure.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="/styles/doc.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="/styles/theme.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="/styles/dynamic.php<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/structure.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
- <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
- <base href="<?php echo $_SERVER["BASE_PAGE"] ?>" />
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
+ <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
  
 </head>
 <body>
