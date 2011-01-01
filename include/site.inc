@@ -354,6 +354,44 @@ function get_manual_search_sections() {
     );
 }
 
+function get_shortname($page) {
+    // We can at the very least kill the .php
+    $shorturl = substr($page, 0, -4);
+
+    // If its a "root page", we can't shorten it more
+    if (strpos($shorturl, "/") === false) {
+        return $shorturl;
+    }
+
+    // Manual pages get be quite short
+    if (strpos($page, "manual/") !== false) {
+        $sections = get_manual_search_sections();
+        // Kill the first entry (empty)
+        array_shift($sections);
+
+        // We can atleast remove manual/xx/
+        $shorturl = substr($page, strrpos($page, "/")+1);
+
+        foreach($sections as $section) {
+            // If we know this section
+            if (strpos($shorturl, $section) === 0) {
+                // We can make it even shorter
+                return substr($shorturl, strlen($section), -4);
+                break;
+            }
+        }
+
+        // Didn't recognize the section, we better not shorten it at all
+        return $page;
+    }
+
+    // /conferences/index.php can be shortened to /conferences
+    if (strpos($page, "conferences/") !== false) {
+        return "conferences";
+    }
+
+    return $shorturl;
+}
 
 // Guess the current site from what Apache tells us.
 // This should be the main name of the mirror (in case

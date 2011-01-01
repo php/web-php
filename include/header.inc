@@ -4,6 +4,12 @@ $v = "?v=" .$_SERVER["REQUEST_TIME"];
 header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
 header("Pragma: no-cache");
+
+// shorturl; http://wiki.snaplog.com/short_url
+if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
+    $shorturl = "http://php.net/" . $shortname;
+    header("Link: <$shorturl>; rel=shorturl");
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
@@ -17,7 +23,10 @@ header("Pragma: no-cache");
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
  <link rel="alternate" type="application/atom+xml" href="http://www.php.net/releases.atom" title="PHP Release feed" />
  <link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="http://www.php.net/feed.atom" />
- <link rel="canonical" href="http://php.net/index.php" />
+ <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>" />
+<?php if ($shortname): ?>
+ <link rel="shorturl" href="<?php echo $shorturl ?>" />
+<?php endif ?>
  
  <link rel="stylesheet" type="text/css" href="/styles/reset.css<?php echo $v?>" media="all" /> 
  <link rel="stylesheet" type="text/css" href="/styles/structure.css<?php echo $v?>" media="screen" />

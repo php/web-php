@@ -789,6 +789,8 @@ function site_header_beta($title = '', $config = array())
 {
     global $SIDEBAR_DATA;
     global $setup;
+    global $MYSITE;
+
     if ($setup) {
         $lang = language_convert($setup['head'][1]);
     }
