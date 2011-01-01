@@ -173,7 +173,7 @@ $(document).ready(function() {
         $(".parameters .term i > tt.parameter").each(function (idx, param) {
             if ($(param).text() == $(node).text().substring(1)) {
                 $(node).click(function() {
-                    $(param).scrollTo(0, 800);
+                    $.scrollTo($(param), 800);
                 });
             }
         });
