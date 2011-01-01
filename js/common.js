@@ -119,9 +119,11 @@ $(document).ready(function() {
                 return false;
             },
             select: function(event, ui){
+                event.preventDefault();
                 $('#headsearch-keywords').val(ui.item.label);
-                if (ui.item.value)
+                if (ui.item.value) {
                     window.location = '/manual/' + getLanguage() + '/' + ui.item.value;
+                }
             }
         });
     });
