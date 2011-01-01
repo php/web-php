@@ -1,4 +1,10 @@
-<?php $v = "?v=" .$_SERVER["REQUEST_TIME"]; // Disable caching, annoying while developing ?>
+<?php
+// Disable caching, annoying while developing
+$v = "?v=" .$_SERVER["REQUEST_TIME"];
+header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
+header("Pragma: no-cache");
+?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
