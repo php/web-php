@@ -349,7 +349,7 @@ function get_available_sqlites() {
 function get_manual_search_sections() {
     return array(
         "", "book.", "ref.", "function.", "class.",
-        "feature-", "control-structures.", "language.",
+        "features.", "control-structures.", "language.",
         "about.", "faq.", "features.", 
     );
 }
