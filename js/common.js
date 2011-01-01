@@ -154,11 +154,6 @@ $(document).ready(function() {
         });
 
         if (foundToc) {
-
-            var userNotesHeader = $('#usernotes');
-            $('<a class="toc_item" href="#' + userNotesHeader.attr('id') + '">User Contributed Notes</a>')
-                .appendTo( $('<li>') ).parent().appendTo(l);
-
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
                 l.delegate("a.toc_item","click keypress", function(e) {
                     // Escape dots in ids so they won't be treated as class selectors
@@ -184,10 +179,6 @@ $(document).ready(function() {
         });
     });
 
-    if($('.docs table.doctable').length) {
-        $(this).find('tbody tr:even').addClass("alt-row")
-    }
-
 });
 
 /**
@@ -197,4 +188,3 @@ function getLanguage()
 {
     return document.documentElement.lang;
 }
-
