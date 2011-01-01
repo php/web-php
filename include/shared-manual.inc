@@ -531,6 +531,38 @@ function manual_setup_beta($setup) {
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
     site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
     echo '<aside id="quicktoc"></aside>';
+
+    manual_language_chooser($setup['head'][1], $setup['this'][0]);
+}
+function manual_language_chooser($currentlang, $currentpage) {
+    global $ACTIVE_ONLINE_LANGUAGES;
+
+        
+    $links = array();
+
+    foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
+        $links[] = array("$lang/$currentpage", $name, $lang);
+    }
+    $links[] = array('help-translate.php', 'Other');
+
+    // Print out the form with all the options
+    echo <<< FORM
+<form action="/manual/change.php" method="get" id="changelang">
+    <fieldset>
+        <select name="page" id="changelang-langs">
+FORM;
+    foreach ($links as $link) {
+        echo "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
+    }
+    echo <<< FORM
+        </select>
+        <input type="submit"
+          value="Go"
+          id="changelang-submit"
+          class="submit" />
+    </fieldset>
+</form>
+FORM;
 }
 
 function manual_header_beta(){}

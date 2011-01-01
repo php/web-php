@@ -80,7 +80,9 @@ a:hover {
     border-radius: 5px;
 }
 
-#headsearch-keywords {
+#headsearch-keywords,
+#changelang-langs
+{
     color: #666;
     background: transparent;
     -webkit-appearance: none;
@@ -90,7 +92,9 @@ a:hover {
     color: #000;
 }
 
-#headsearch-submit {
+#headsearch-submit,
+#changelang-submit
+{
     border-color: #987db3;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;    
@@ -98,6 +102,14 @@ a:hover {
     border: 1px solid #604080;
     background: #604080;
     color: #fff;
+}
+#changelang {
+    border-color: #987db3;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;    
+    border-radius: 5px;
+    border: 1px solid #604080;
+    float: right;
 }
 
 #headnav li dl {
@@ -289,4 +301,8 @@ a.genanchor:hover {
     color: #000;
 }
 /* }}} */
+
+#langform {
+    float: right;
+}
 
