@@ -543,7 +543,6 @@ function manual_language_chooser($currentlang, $currentpage) {
     foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {
         $links[] = array("$lang/$currentpage", $name, $lang);
     }
-    $links[] = array('help-translate.php', 'Other');
 
     // Print out the form with all the options
     echo <<< FORM
@@ -555,6 +554,7 @@ FORM;
         echo "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
     }
     echo <<< FORM
+        <option value="help-translate.php">Other</option>
         </select>
         <input type="submit"
           value="Go"
