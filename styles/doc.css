@@ -101,6 +101,7 @@ aside#quicktoc {
 
 .docs .refentry .parameters dd {
     margin-top: -0.7em;
+    padding-left: 20px;
 }
 
 .docs .refentry .parameters p {
