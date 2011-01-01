@@ -350,7 +350,7 @@ function get_manual_search_sections() {
     return array(
         "", "book.", "ref.", "function.", "class.",
         "features.", "control-structures.", "language.",
-        "about.", "faq.", "features.", 
+        "about.", "faq.",
     );
 }
 
