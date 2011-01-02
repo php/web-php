@@ -814,7 +814,7 @@ function site_header_beta($title = '', $config = array())
     // FIXME: How does static.php.net work? Will it get the /js/ folders?
     if (false && $MYSITE == "http://www.php.net/") {
         $STATIC_ROOT = "http://static.php.net/www.php.net/";
-    } elseif (!empty($_SERVER["STATIC_ROOT"])) {
+    } elseif (false && !empty($_SERVER["STATIC_ROOT"])) {
         $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
     } else {
         $STATIC_ROOT = "/";
