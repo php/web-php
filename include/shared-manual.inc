@@ -457,7 +457,7 @@ function manual_note_display($date, $name, $text, $id)
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['MAGIC_COOKIE']) && $id) {
     
-        $admin = "\n  <span class=\"action\">\n   " .
+        $admin = "\n  <span class=\"admin\">\n   " .
         
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
@@ -484,7 +484,7 @@ function manual_note_display($date, $name, $text, $id)
     
     echo <<<USER_NOTE_TEXT
 
- {$anchor}<div class="note">{$admin}{$name}{$datestr}
+ {$anchor}<div class="note">{$name}{$datestr}{$admin}
   <div class="text">
 {$text}
   </div>
