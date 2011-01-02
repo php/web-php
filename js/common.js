@@ -74,7 +74,7 @@ $(document).ready(function() {
                     'phpdoc:exceptionref': 'Exceptions',
                     'refentry': 'Functions'
                 };
-                return indexes[key];
+                return indexes[key] || key;
             }
         });
         $('#headsearch-keywords').catcomplete({
@@ -122,7 +122,7 @@ $(document).ready(function() {
                 event.preventDefault();
                 $('#headsearch-keywords').val(ui.item.label);
                 if (ui.item.value) {
-                    window.location = '/manual/' + getLanguage() + '/' + ui.item.value;
+                    window.location = '/manual/' + getLanguage() + '/' + ui.item.value + '.php';
                 }
             }
         });
