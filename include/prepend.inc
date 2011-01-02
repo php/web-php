@@ -177,7 +177,7 @@ function myphpnet_beta() {
         return (bool)$_GET["beta"];
     }
 
-    if ($MYSITE == "http://prototype.php.net/") {
+    if ($MYSITE == "http://prototype.php.net/" || $MYSITE == "http://docs.php.net/") {
         return true;
     }
 
