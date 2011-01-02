@@ -5,20 +5,10 @@ header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
 header("Pragma: no-cache");
 
-// shorturl; http://wiki.snaplog.com/short_url
-if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
-    $shorturl = "http://php.net/" . $shortname;
+if ($shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
 
-// For static content
-// FIXME: How does static.php.net work? Will it get the /js/ folders?
-$STATIC_ROOT = "/";
-if ($MYSITE == "http://www.php.net/") {
-    $STATIC_ROOT = "http://static.php.net/www.php.net/";
-} elseif (!empty($_SERVER["STATIC_ROOT"])) {
-    $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
-}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
@@ -32,10 +22,13 @@ if ($MYSITE == "http://www.php.net/") {
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases.atom" title="PHP Release feed" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor" />
- <link rel="canonical" href="http://php.net<?php echo $_SERVER['BASE_PAGE']?>" />
+ <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>" />
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>" />
 <?php endif ?>
+<?php foreach($config["meta-navigation"] as $rel => $page): ?>
+ <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
+<?php endforeach ?>
  
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/structure.css<?php echo $v?>" media="screen" />

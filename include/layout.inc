@@ -788,38 +788,36 @@ EOT;
 function site_header_beta($title = '', $config = array())
 {
     global $SIDEBAR_DATA;
-    global $setup;
     global $MYSITE;
 
-    if ($setup) {
-        $lang = language_convert($setup['head'][1]);
-    }
-    else {
-        $lang = myphpnet_language();
-    }
+    $defaults = array(
+        "lang" => myphpnet_language(),
+        "current" => "",
+        "meta-navigation" => array(),
+    );
 
-    if (isset($config["current"])) {
-        $curr = $config["current"];
-    }
-    else {
-        switch($_SERVER["BASE_PAGE"]) {
-            case "privacy.php":
-            default:
-                $curr = "";
-            break;
+    $config += $defaults;
 
-            case "mailing-lists.php":
-            case "sidebars.php":
-            case "sites.php":
-            case "support.php":
-            case "tips.php":
-            case "urlhowto.php":
-                $curr = "help";
-            break;
-        }
-    }
+    $lang = language_convert($config["lang"]);
+    $curr = $config["current"];
+
     if (empty($title)) {
         $title = "Hypertext Preprocessor";
+    }
+
+    // shorturl; http://wiki.snaplog.com/short_url
+    if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
+        $shorturl = "http://php.net/" . $shortname;
+    }
+
+    // For static content
+    // FIXME: How does static.php.net work? Will it get the /js/ folders?
+    if (false && $MYSITE == "http://www.php.net/") {
+        $STATIC_ROOT = "http://static.php.net/www.php.net/";
+    } elseif (!empty($_SERVER["STATIC_ROOT"])) {
+        $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
+    } else {
+        $STATIC_ROOT = "/";
     }
 
     require dirname(__FILE__) ."/header.inc";

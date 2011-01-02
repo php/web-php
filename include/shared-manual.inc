@@ -529,7 +529,19 @@ function manual_setup_beta($setup) {
     }
 
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
-    site_header($setup["this"][1] . " - Manual ", array("current" => "docs", "leftmenu" => $menu));
+
+    $config = array(
+        "current" => "docs",
+        "leftmenu" => $menu,
+        "meta-navigation" => array(
+            "contents" => $setup["home"][0],
+            "index"    => $setup["up"][0],
+            "prev"     => $setup["prev"][0],
+            "next"     => $setup["next"][0],
+        ),
+        "lang" => $setup["head"][1],
+    );
+    site_header($setup["this"][1] . " - Manual ", $config);
     echo '<aside id="quicktoc"></aside>';
 
     manual_language_chooser($setup['head'][1], $setup['this'][0]);
