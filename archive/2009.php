@@ -2,7 +2,6 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'archive/2009.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 news_archive_sidebar();
 site_header("News Archive - 2009");
 ?>
