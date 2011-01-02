@@ -72,15 +72,15 @@ if ($MYSITE == "http://www.php.net/") {
     <a href="/downloads.php" class="menu-link">Downloads</a>
   </li>
   <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">
-    <a href="/docs.php" class="menu-link">Documentation</a>
-    <div class="children"><div class="children-1"><div class="children-2">
+    <a href="#docs" class="menu-link">Documentation</a>
+    <div class="children" id="docs"><div class="children-1"><div class="children-2">
         <?php doc_toc($lang); ?>
         <br style="clear: both;" />
     </div></div></div>
   </li>
   <li class="parent <?php echo $curr == "community" ? "current" : ""?>">
-    <a href="/community.php" class="menu-link">Community</a>
-    <div class="children"><div class="children-1"><div class="children-2">
+    <a href="#community" class="menu-link">Community</a>
+    <div class="children" id="community"><div class="children-1"><div class="children-2">
     <?php news_toc(array('news')) ?>
     <?php news_toc(array('conferences', 'papers')) ?>
     <dl>
@@ -112,8 +112,8 @@ if ($MYSITE == "http://www.php.net/") {
     </div></div></div>
   </li>
   <li class="parent <?php echo $curr == "help" ? "current" : ""?>">
-    <a href="/support.php" class="menu-link">Help</a>
-    <div class="children"><div class="children-1"><div class="children-2">
+    <a href="#support" class="menu-link">Help</a>
+    <div class="children" id="support"><div class="children-1"><div class="children-2">
     <dl>
       <dt><a href="#">Navigation tips</a></dt>
         <dd><a href="/sidebars.php">Search sidebars</a></dd>
