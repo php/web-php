@@ -162,7 +162,7 @@ aside#quicktoc {
 ul.itemizedlist,
 ul.simplelist,
 ul.chunklist,
-ol.qandaset_questions {
+.docs ol {
     padding: 0 0 2px 10px;
     margin: 0 0 2px 10px;
 }
@@ -176,7 +176,7 @@ ul.simplelist
 ul.chunklist {
     list-style-type: disc;
 }
-ol.qandaset_questions {
+.docs ol {
     list-style-type: decimal;
 }
 dl.qandaentry {
