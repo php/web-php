@@ -15,6 +15,8 @@ if (isset($EXPL_LANG)) {
     $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
 } else { $lang_input = ""; }
 
+$curryear = date("Y");
+
 echo <<<SEARCHBAR_END
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -53,7 +55,7 @@ echo <<<SEARCHBAR_END
  </p>
 </form>
 <p class="copyright">
- <a href="/copyright.php"{$target}>Copyright &copy; 2002 - 2010 The PHP Group</a><br />All rights reserved.
+ <a href="/copyright.php"{$target}>Copyright &copy; 2002 - {$curryear} The PHP Group</a><br />All rights reserved.
 </p>
 </body>
 </html>
