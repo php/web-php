@@ -1,0 +1,78 @@
+/* Home Page
+
+complimentary greens: 9FB553	7B8851	61761B	C6DA82	CCDA99
+
+*/
+
+#mega-drop-down div.what-is-php {
+    color: #eee;
+    font-size: 1.5em;
+    width: 500px;
+    float: left;
+    margin: 20px 0 5px 20px;
+}
+
+#mega-drop-down div.what-is-php p {
+    margin: 10px 0px;
+    line-height: 130%;
+}
+
+#mega-drop-down div.what-is-php p.tutorial {
+    margin-top: 25px;
+    font-size: .9em;
+}
+
+#mega-drop-down div.what-is-php p.tutorial a {
+    padding: 0;
+}
+
+#mega-drop-down div.download {
+    color: #eee;
+    width: 300px;
+    display: block;
+    float: right;
+    margin: 5px 20px 15px 0;
+    padding: 10px;
+    font-size: 11px;
+}
+
+#mega-drop-down div.children.downloads {
+    padding-bottom: 0;
+}
+
+#mega-drop-down div.download a {
+    color: #eee;
+    display: block;
+    padding: 10px 0 10px 100px;
+    background-image: url('/images/sprites.png');
+    background-position: 24px -290px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-top: 1px solid #555;
+}
+
+#mega-drop-down div.download a.latest {
+    padding: 20px 0 20px 100px;
+    background-image: url('/images/sprites.png');
+    background-position: 10px -187px;
+    border: none;
+}
+
+#mega-drop-down div.download a span {
+    display: block;
+    clear: right;
+}
+
+#mega-drop-down div.download a span.version {
+    font-size: 1.5em;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+#mega-drop-down div.download a.latest span.version {
+    font-size: 2.5em;
+}
+
+#mega-drop-down div.download a span.package {
+    font-size: 1.3em;
+}
