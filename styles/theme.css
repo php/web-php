@@ -17,6 +17,7 @@ body * {
 
 body, input, textarea {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
     background: url('/images/sprites.png') repeat-x 0px -990px;
 }
 
-h1    { font-size: 1.7em; line-height: 2.6em; }
+h1    { font-size: 1.7em; line-height: 2.6em; margin-bottom: 0.2em; }
 h2    { font-size: 1.6em; line-height: 2.4em; }
 h3    { font-size: 1.4em; line-height: 2.2em; }
 h3.title {
@@ -51,16 +52,50 @@ a:hover {
 }
 
 #headnav {
+    padding: 0 25px;
+    height: 72px;
     line-height: 1;
     background: url('/images/sprites.png') repeat-x 0px -100px;
 }
 
-#headhome a {
+#headnav .myphp {
+    float: left;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+}
+
+#headmenu {
+    width: 940px;
+    margin: 0 auto;
+    padding-right: 20px;
+}
+
+#headnav h6,
+#headmenu li,
+#headsearch {
+    display: block;
+    float: left;
+    margin: 0;
+    list-style: none;
+    padding: 18px 0 0 0;
+}
+
+#headhome a,
+#headhome a:hover {
     background: url(/images/sprites.png) 0 0;
+    width: 170px;
+    height: 13px;
+    text-indent: -2000em;
 }
 
 #headnav li.parent a.menu-link {
+    padding-right: 25px;
     background: url(/images/sprites.png) no-repeat 100% 11px;
+}
+
+#headnav li.parent .children {
+    display: none;
 }
 
 #headnav li.parent.current a.menu-link {
@@ -68,21 +103,39 @@ a:hover {
 }
 
 #headnav a.menu-link {
+    display: block;
+    padding: 12px 15px 17px 15px;
+    margin: 0;
+    border-bottom: 12px solid;
     color: #444;
     border-color: #987db3;
     font-weight: bold;
 }
 
 #headnav li#headsearch {
+    margin: 22px 0 0 20px;
+    padding: 2px;
+    float: right;
+    border: 1px solid;
     border-color: #987db3;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
+#headsearch-keywords {
+    border: 0;
+    padding: 2px;
+    width: 14em;
+}
+
 #headsearch-keywords,
 #changelang-langs
 {
+    border: 0;
+    margin: 1px;
+    padding: 2px 5px;
+    font-weight: bold;
     color: #666;
     background: transparent;
     -webkit-appearance: none;
@@ -138,23 +191,6 @@ h1, h1 a, h1 a:visited, h1 a:link {
     letter-spacing: -0.04em;
 }
 
-footer {
-    clear: both;
-    border-top: 3px solid #c3add9;
-    padding-top: 5px;
-}
-
-footer a {
-    color: #444;
-    border-color: #987db3;
-    font-weight: bold;
-    margin: 0 8px;
-}
-
-footer a:hover {
-    color: #000;
-}
-
 h1 a:hover {
     color: #444;
 }
@@ -163,6 +199,16 @@ h1 a:hover {
  * Auto-complete
  */
 .ui-autocomplete {
+    width: 185px;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-position: outside;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 5px 0;
+    border: 1px solid;
+    z-index: 99999;
     border-color: #987db3;
     background-color: white;
     -moz-border-radius-bottomleft: 5px;
@@ -180,6 +226,40 @@ h1 a:hover {
 .ui-autocomplete .ui-state-hover {
     background-color: #604080;
     color: white;
+}
+
+.ui-autocomplete li {
+    margin: 0px;
+    cursor: pointer;
+    display: block;
+    /*
+    if width will be 100% horizontal scrollbar will apear
+    when scroll mode will be used
+    */
+    /*width: 100%;*/
+    font: menu;
+    font-size: 12px;
+    /*
+    it is very important, if line-height not setted or setted
+    in relative units scroll will be broken in firefox
+    */
+    line-height: 16px;
+    overflow: hidden;
+    border-bottom: 1px solid #c3add9 ;
+}
+
+.ui-autocomplete a {
+    display: block;
+    padding: 2px 5px;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+    background-color: #987db3;
+    color: #fff;
 }
 
 /**
@@ -279,18 +359,47 @@ pre.info {
 /**
  * Mega drop-down menu
  */
+
 #mega-drop-down {
     background-color: #333;
     border-color: #c3add9;
 }
 
-#mega-drop-down dt a,
-#mega-drop-down ul a {
-    color: #eee;
+#mega-drop-down div.children {
+    border-bottom-width: 12px;
+    border-bottom-style: solid;
+    padding-bottom: 1em;
+}
+
+#mega-drop-down div.children-1 {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#mega-drop-down dl, #mega-drop-down ul {
+    float: left;
+    width: 225px;
+    padding-right: 15px;
+}
+
+#mega-drop-down dt, #mega-drop-down li {
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+#mega-drop-down dd {
+    padding: 0 0 0 10px;
+    font-size: 11px;
 }
 
 #mega-drop-down a {
+    display: block;
+    padding: 4px;
     color: #ccc;
+}
+
+#mega-drop-down dt a {
+    color: #eee;
 }
 
 
@@ -307,4 +416,81 @@ a.genanchor:hover {
 #langform {
     float: right;
 }
+
+aside.tips {
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border: 1px solid  #C3ADD9;
+    width: 294px;
+}
+
+#layout {
+    padding: 25px 150px 25px 10px;
+    max-width: 1400px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.layout-menu {
+    float: left;
+    width: 160px;
+}
+
+.layout-menu li a {
+    display: block;
+    border-top-width: 3px;
+    border-top-style: solid;
+    padding: 4px 0;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.layout-menu li li a {
+    overflow: hidden;
+    border: none;
+    font-size: 11px;
+    padding: 1px 0 1px 20px;
+    margin: 0;
+    font-weight: normal;
+}
+.layout-menu li.current a {
+    font-weight: bold;
+}
+
+.layout-content {
+    margin-left: 175px;
+    padding-bottom: 12px;
+}
+
+footer .footmenu {
+    float: right;
+}
+footer .footmenu.copyright {
+    float: left;
+}
+footer .footmenu li {
+    display: inline;
+}
+
+footer {
+    clear: both;
+    border-top: 3px solid #c3add9;
+    padding-top: 5px;
+}
+
+footer a {
+    color: #444;
+    border-color: #987db3;
+    font-weight: bold;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    color: #000;
+}
+
 
