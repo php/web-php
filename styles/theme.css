@@ -123,7 +123,8 @@ a:hover {
 }
 
 #headnav li.current a.menu-link,
-#headnav li a.menu-link:hover {
+#headnav li a.menu-link:hover,
+#headnav li#headhome.current {
     border-color: #604080;
 }
 
@@ -279,7 +280,7 @@ pre.info {
  * Mega drop-down menu
  */
 #mega-drop-down {
-    background-color: #222;
+    background-color: #333;
     border-color: #c3add9;
 }
 

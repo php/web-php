@@ -12,8 +12,9 @@ h1 {
 }
 
 #headmenu {
-    width: 920px;
+    width: 940px;
     margin: 0 auto;
+    padding-right: 20px;
 }
 
 #headnav h6,
@@ -31,10 +32,9 @@ h1 {
 
 #headnav li#headhome a,
 #headnav li#headhome a:hover {
-    width: 150px;
-    height: 16px;
+    width: 170px;
+    height: 13px;
     text-indent: -2000em;
-    border: none;
 }
 
 #headnav li#headsearch {

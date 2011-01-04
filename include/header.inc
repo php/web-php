@@ -64,7 +64,7 @@ if ($shortname) {
        </fieldset>
     </form>
   </li>
-  <li id="headhome">
+  <li id="headhome" class="<?php echo $curr == "home" ? "current" : ""?>">
     <a href="/" rel="home" class="menu-link">Home</a>
   </li>
   <li class="<?php echo $curr == "downloads" ? "current" : ""?>">

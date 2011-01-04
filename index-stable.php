@@ -202,7 +202,6 @@ $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 // Write out common header
 site_header("Hypertext Preprocessor",
     array(
-        'current' => 'home',
         'onload' => 'boldEvents();',
         'headtags' => array(
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',

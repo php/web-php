@@ -199,10 +199,47 @@ EOT;
 // Prepend mirror image & latest releases to sidebar text
 $RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
 
+$DROP_DOWN = <<< EOT
+<div id='mega-drop-down'>
+ <div id='menu-container'>
+    <div class="children downloads"><div class="children-1"><div class="children-2">
+        <div class="what-is-php">
+            <p>
+                PHP is a popular general-purpose scripting language that is
+                especially suited to web development.
+            </p><p>
+                Fast, flexible and pragmatic, PHP powers everything from your
+                mother's blog to the largest social networking site in the
+                world.
+            </p>
+            <p class="tutorial"><a href="#">Introductory Tutorial &raquo</a></p>
+        </div>
+        <div class="download">
+            <dl>
+                <dd class="latest">
+                    <span class="version">PHP 5.3.4</span>
+                    <span class="package">Complete Source Code</span>
+                    <span class="file">php.5.3.4.tar.gz (13,777 KB)</span>
+                </dd>
+                <dd class="legacy">
+                    <span class="version">PHP 5.2.16</span>
+                    <span class="date">php.5.2.16.tar.gz (11,527 KB)</span>
+                </dd>
+                <dd class="windows">
+                    <span class="version">Windows Downloads</span>
+                    <span class="date">http://windows.php.net/</span>
+                </dd>
+            </dl>
+        </div>
+        <br style="clear: both;" />
+    </div></div></div>
+ </div>
+</div>
+EOT;
+
 // Write out common header
 site_header("Hypertext Preprocessor",
     array(
-        'current' => 'home',
         'onload' => 'boldEvents();',
         'headtags' => array(
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
@@ -226,6 +263,7 @@ site_header("Hypertext Preprocessor",
             ),
 
         ),
+        'dropDown' => $DROP_DOWN
     )
 );
 
