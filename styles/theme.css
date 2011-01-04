@@ -132,10 +132,6 @@ a:hover {
 #headsearch-keywords,
 #changelang-langs
 {
-    border: 0;
-    margin: 1px;
-    padding: 2px 5px;
-    font-weight: bold;
     color: #666;
     background: transparent;
     -webkit-appearance: none;
@@ -148,6 +144,10 @@ a:hover {
 #headsearch-submit,
 #changelang-submit
 {
+    border: 0;
+    margin: 1px;
+    padding: 2px 5px;
+    font-weight: bold;
     border-color: #987db3;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;    
