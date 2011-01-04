@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    // auto-expand the home menu when on the home page
+    // and remove it from other pages.
+    $("#headhome.current div.children").appendTo($('#menu-container'));
+    $("#headhome div.children").remove();
+
     // slide mega drop-downs up/down.
     $("#headmenu li:has(div.children)").click(function(event) {
         // don't follow link.

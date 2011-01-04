@@ -81,8 +81,8 @@ a:hover {
     padding: 18px 0 0 0;
 }
 
-#headhome a,
-#headhome a:hover {
+#headnav #headhome a.menu-link,
+#headnav #headhome a.menu-link:hover {
     background: url(/images/sprites.png) 0 0;
     width: 170px;
     height: 13px;

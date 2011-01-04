@@ -31,9 +31,9 @@ if ($shortname) {
 <?php endforeach ?>
  
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/structure.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -64,8 +64,37 @@ if ($shortname) {
        </fieldset>
     </form>
   </li>
-  <li id="headhome" class="<?php echo $curr == "home" ? "current" : ""?>">
+  <li id="headhome" class="parent <?php echo $curr == "home" ? "current" : ""?>">
     <a href="/" rel="home" class="menu-link">Home</a>
+    <div class="children downloads"><div class="children-1"><div class="children-2">
+        <div class="what-is-php">
+            <p>
+                PHP is a popular general-purpose scripting language that is
+                especially suited to web development.
+            </p><p>
+                Fast, flexible and pragmatic, PHP powers everything from your
+                mother's blog to the largest social networking site in the
+                world.
+            </p>
+            <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo</a></p>
+        </div>
+        <div class="download">
+            <a href="/get/php-5.3.4.tar.gz/from/a/mirror" class="latest">
+                <span class="version">PHP 5.3.4</span>
+                <span class="package">Complete Source Code</span>
+                <span class="file">php.5.3.4.tar.gz (13,777 KB)</span>
+            </a>
+            <a href="/get/php-5.2.16.tar.gz/from/a/mirror" class="legacy">
+                <span class="version">PHP 5.2.16</span>
+                <span class="date">php.5.2.16.tar.gz (11,527 KB)</span>
+            </a>
+            <a href="http://windows.php.net" class="windows">
+                <span class="version">Windows Downloads</span>
+                <span class="date">http://windows.php.net/</span>
+            </a>
+        </div>
+        <br style="clear: both;" />
+    </div></div></div>
   </li>
   <li class="<?php echo $curr == "downloads" ? "current" : ""?>">
     <a href="/downloads.php" class="menu-link">Downloads</a>
