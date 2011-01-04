@@ -6,27 +6,35 @@ $(document).ready(function() {
         event.preventDefault();
 
         var clickedMenu = $(this);
-        var activeMenu  = $('#headmenu li.current');
         var container   = $('#mega-drop-down #menu-container');
+
+        // ignore clicks if we're busy.
+        if (container.hasClass('busy')) return;
+        container.addClass('busy');
 
         // function to activate the clicked menu.
         var activate = function(){
             clickedMenu.addClass('current');
             clickedMenu.find("div.children").appendTo(container);
-            container.find("div.children").slideUp(0).slideDown("fast");
+            container.find("div.children").slideUp(0).slideDown("fast", 
+                function(){ container.removeClass('busy'); }
+            );
         };
 
         // if there is an active menu, deactivate it first.
+        var activeMenu    = $('#headmenu li.current');
+        var activeSubMenu = container.find("div.children");
         if (activeMenu.length) {
             activeMenu.removeClass('current');
-            var children = container.find("div.children");
-            if (children) {
-                children.slideUp('fast', function(){
-                    children.appendTo(activeMenu);
-                    if (activeMenu[0] != clickedMenu[0])
-                        activate();
-                });
-            }
+        }
+        if (activeSubMenu.length) {
+            activeSubMenu.slideUp('fast', function(){
+                activeSubMenu.appendTo(activeMenu);
+                if (activeMenu[0] != clickedMenu[0])
+                    activate();
+                else
+                    container.removeClass('busy');
+            });
         } else {
             activate();
         }
