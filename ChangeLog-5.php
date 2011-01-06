@@ -23,6 +23,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <hr />
 <!-- }}} -->
 
+<a name="5.2.17"></a><!-- {{{ 5.2.17 -->
+<h3>Version 5.2.17</h3>
+<b>06-Jan-2010</b>
+<ul>
+
+<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
+
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.2.16"></a><!-- {{{ 5.2.16 -->
 <h3>Version 5.2.16</h3>
 <b>16-Dec-2010</b>

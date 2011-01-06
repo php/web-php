@@ -1,14 +1,14 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'releases/5_3_5.php';
+               $_SERVER['BASE_PAGE'] = 'releases/5.2.17.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5.3.5 Release Announcement");
+site_header("PHP 5.2.17 Release Announcement");
 ?>
 
-<h1>PHP 5.3.5 Release Announcement</h1>
+<h1>PHP 5.2.17 Release Announcement</h1>
 <p>
 The PHP development team would like to announce the immediate
-availability of PHP 5.3.5.</p>
+availability of PHP 5.2.17.</p>
  
 <p>This release resolves a critical issue, reported as PHP bug #53632,
 where conversions from string to double might cause the PHP interpreter
@@ -24,7 +24,7 @@ from command line.</p>
 immediately.</p>
 
 <p>
-<b>Security Enhancements and Fixes in PHP 5.3.5:</b>
+<b>Security Enhancements and Fixes in PHP 5.2.17:</b>
 </p>
 <ul>
   <li>Fixed bug #53632 (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645)</li>
