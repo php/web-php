@@ -38,14 +38,14 @@ $PHP_5_2_WINDOWS_DATE    = $PHP_5_2_DATE;
 $PHP_5_2_WINDOWS_VERSION = $PHP_5_2_VERSION;
 
 $PHP_5_2_MD5     = array(
-                       "tar.bz2"       => "66a3e5755df257c814c42d90546bc3de",
-                       "tar.gz"        => "a8ad77d821a8e708a37b05131e8407d3",
-                       "zip"           => "f4683c473c6c6db8b0d856eb84a97cdc",
-                       "installer"     => "57f3d5fd4ff30f889cc9309c4f3bee17",
-					   "nts.zip"       => "0b214f3225ee41422c08d0a722bb0a9f",
-                       "nts.installer" => "fa6878e8f6ac124c2fde1af80347e286",
-                       "debugpack"     => "f3619fe2abc4ab33e71e5b8330cb33c9",
-                       "nts.debugpack" => "71c17dc6831349fffd79f0746eddee13",
+                       "tar.bz2"       => "1de8b6adaabf63c042929a3cd1175c33",
+                       "tar.gz"        => "0f636e17a75550f0197354cb5d7c79fb",
+                       "zip"           => "f4e290e3eb4ef6e6453fbe5fef03eb06",
+                       "installer"     => "80f5fe97b17bfafd2c0dd71e7a0779fd",
+					   "nts.zip"       => "c7bea134ed5cb618e0da5962c0fd87fd",
+                       "nts.installer" => "a6a9a897622ace5d3cb09598e87dcce8",
+                       "debugpack"     => "99d52159201dd3636e2ca8d0b7772a8b",
+                       "nts.debugpack" => "49b3a9dfed60c8746ce42eb107bb5c23",
 );
 
 $PHP_5_2_WINDOWS_NOTE_MSI = "";
