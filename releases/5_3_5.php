@@ -27,7 +27,7 @@ immediately.</p>
 <b>Security Enhancements and Fixes in PHP 5.3.4:</b>
 </p>
 <ul>
-  <li>Fixed bug #53632 (PHP hangs on numeric value 2.2250738585072011e-308)</li>
+  <li>Fixed bug #53632 (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645)</li>
 </ul>
 
 <?php site_footer(); ?>

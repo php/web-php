@@ -16,7 +16,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <b>06-Jan-2010</b>
 <ul>
 
-<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (Rasmus, Scott)</li>
+<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (CVE-2010-4645) (Rasmus, Scott)</li>
 
 </ul>
 
