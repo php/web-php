@@ -7,10 +7,10 @@ news_archive_sidebar();
 site_header("News Archive - 2011");
 ?>
 
-<h1>News Archive - 2010</h1>
+<h1>News Archive - 2011</h1>
 
 <p>
- Here are the most important news items we have published in 2010 on PHP.net.
+ Here are the most important news items we have published in 2011 on PHP.net.
 </p>
 
 <hr />
