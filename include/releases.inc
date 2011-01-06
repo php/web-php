@@ -66,14 +66,14 @@ $OLDRELEASES = array (
         array (
           'filename' => 'php-5.2.17.tar.bz2',
           'name' => 'PHP 5.2.17 (tar.bz2)',
-          'md5' => '1de8b6adaabf63c042929a3cd1175c33',
+          'md5' => 'b27947f3045220faf16e4d9158cbfe13',
           'date' => '6 January 2011',
         ),
         1 => 
         array (
           'filename' => 'php-5.2.17.tar.gz',
           'name' => 'PHP 5.2.17 (tar.gz)',
-          'md5' => '0f636e17a75550f0197354cb5d7c79fb',
+          'md5' => '04d321d5aeb9d3a051233dbd24220ef1',
           'date' => '6 January 2011',
         ),
       ),
