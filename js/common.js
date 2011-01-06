@@ -1,4 +1,29 @@
 $(document).ready(function() {
+    // Wire up the beta warning.
+    $("#beta-warning-close").click(function(event) {
+        event.preventDefault();
+        $("#head-beta-warning").slideUp("fast");
+	
+	// Hide it for a month by default.
+	var expiry = new Date();
+	expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
+
+	document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
+    });
+
+    // Ugh, cookie handling.
+    var cookies = document.cookie.split(";");
+    var showBetaWarning = true;
+    for (var i = 0; i < cookies.length; i++) {
+        if (cookies[i].indexOf("BetaWarning=") != -1) {
+            showBetaWarning = false;
+            break;
+        }
+    }
+
+    if (showBetaWarning) {
+        $("#head-beta-warning").slideDown("fast");
+    }
 
     // auto-expand the home menu when on the home page
     // and remove it from other pages.

@@ -52,6 +52,17 @@ if ($shortname) {
 </head>
 <body>
 
+<div id="head-beta-warning">
+  <div id="beta-warning">
+    <a href="#" id="beta-warning-close">X</a>
+    <span class="blurb">
+      This is a work-in-progress experimental design.
+      Things <strong>will</strong> be broken and unfinished!
+      You may prefer <a href="http://php.net/">php.net</a>.
+    </span>
+  </div>
+</div>
+
 <div id="headnav">
  
  <ul id="headmenu">
