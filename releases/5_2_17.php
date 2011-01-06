@@ -17,7 +17,7 @@ to hang on systems using x87 FPU registers.</p>
 <p>The problem is known to only affect x86 32-bit PHP processes, regardless
 of whether the system hosting PHP is 32-bit or 64-bit. You can test
 whether your system is affected by running <a href="/distributions/test_bug53632.txt">this script</a>
-from command line.</p>
+from the command line.</p>
 
 <p>All users of PHP are strongly advised to update to these versions
 immediately.</p>
