@@ -85,9 +85,7 @@ if ($shortname) {
                 PHP is a popular general-purpose scripting language that is
                 especially suited to web development.
             </p><p>
-                Fast, flexible and pragmatic, PHP powers everything from your
-                mother's blog to the largest social networking site in the
-                world.
+                Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
             </p>
             <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo</a></p>
         </div>
