@@ -90,14 +90,14 @@ if ($shortname) {
             <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo</a></p>
         </div>
         <div class="download">
-            <a href="/get/php-5.3.4.tar.gz/from/a/mirror" class="latest">
-                <span class="version">PHP 5.3.4</span>
+            <a href="/get/php-5.3.5.tar.gz/from/a/mirror" class="latest">
+                <span class="version">PHP 5.3.5</span>
                 <span class="package">Complete Source Code</span>
-                <span class="file">php.5.3.4.tar.gz (13,777 KB)</span>
+                <span class="file">php.5.3.5.tar.gz (13,775 KB)</span>
             </a>
-            <a href="/get/php-5.2.16.tar.gz/from/a/mirror" class="legacy">
-                <span class="version">PHP 5.2.16</span>
-                <span class="date">php.5.2.16.tar.gz (11,527 KB)</span>
+            <a href="/get/php-5.2.17.tar.gz/from/a/mirror" class="legacy">
+                <span class="version">PHP 5.2.17</span>
+                <span class="date">php.5.2.17.tar.gz (11,525 KB)</span>
             </a>
             <a href="http://windows.php.net" class="windows">
                 <span class="version">Windows Downloads</span>
