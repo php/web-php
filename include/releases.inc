@@ -2,32 +2,6 @@
 $OLDRELEASES = array (
   5 => 
   array (
-    '5.3.5' => 
-    array (
-      'announcement' => 
-      array (
-        'English' => '/releases/5_3_5.php',
-      ),
-      'source' => 
-      array (
-        0 => 
-        array (
-          'filename' => 'php-5.3.5.tar.bz2',
-          'name' => 'PHP 5.3.5 (tar.bz2)',
-          'md5' => '8aaf20c95e91f25c5b6a591e5d6d61b9',
-          'date' => '06 January 2010',
-        ),
-        1 => 
-        array (
-          'filename' => 'php-5.3.5.tar.gz',
-          'name' => 'PHP 5.3.5 (tar.gz)',
-          'md5' => 'fb727a3ac72bf0ce37e1a20468a7bb81',
-          'date' => '06 January 2010',
-        ),
-      ),
-      'date' => NULL,
-      'museum' => false,
-    ),
     '5.3.4' => 
     array (
       'announcement' => 
@@ -53,32 +27,6 @@ $OLDRELEASES = array (
       ),
       'date' => NULL,
       'museum' => false,
-    ),
-    '5.2.17' => 
-    array (
-      'announcement' => 
-      array (
-        'English' => '/releases/5_2_17.php',
-      ),
-      'source' => 
-      array (
-        0 => 
-        array (
-          'filename' => 'php-5.2.17.tar.bz2',
-          'name' => 'PHP 5.2.17 (tar.bz2)',
-          'md5' => 'b27947f3045220faf16e4d9158cbfe13',
-          'date' => '6 January 2011',
-        ),
-        1 => 
-        array (
-          'filename' => 'php-5.2.17.tar.gz',
-          'name' => 'PHP 5.2.17 (tar.gz)',
-          'md5' => '04d321d5aeb9d3a051233dbd24220ef1',
-          'date' => '6 January 2011',
-        ),
-      ),
-      'date' => '6 January 2011',
-      'museum' => true,
     ),
     '5.2.16' => 
     array (
