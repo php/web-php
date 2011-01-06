@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.5 and 5.2.17 Released!</title>
+  <id>http://www.php.net/archive/2011.php#id2011-01-06-1</id>
+  <published>2011-01-06T13:34:56-08:00</published>
+  <updated>2011-01-06T13:34:56-08:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2011-01-06-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2011.php#id2011-01-06-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+	<p>
+     The PHP development team would like to announce the immediate
+     availability of PHP <a href="http://www.php.net/releases/5_3_5.php">5.3.5</a> and <a href="http://www.php.net/releases/5_2_17.php">5.2.17</a>.
+    </p>
+    <p>
+     This release resolves a critical issue, reported as PHP bug #53632,
+     where conversions from string to double might cause the PHP interpreter
+     to hang on systems using x87 FPU registers.
+    </p>
+    <p>
+     The problem is known to only affect x86 32-bit PHP processes, regardless
+     of whether the system hosting PHP is 32-bit or 64-bit. You can test
+     whether your system is affected by running <a href="/distributions/test_bug53632.txt">this script</a>
+     from command line.
+    </p>
+    <p>
+     All users of PHP are strongly advised to update to these versions
+     immediately.
+    </p>
+    </div>
+  </content>
+</entry>
