@@ -1,15 +1,4 @@
 $(document).ready(function() {
-    // Wire up the beta warning.
-    $("#beta-warning-close").click(function(event) {
-        event.preventDefault();
-        $("#head-beta-warning").slideUp("fast");
-	
-	// Hide it for a month by default.
-	var expiry = new Date();
-	expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
-
-	document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
-    });
 
     // Ugh, cookie handling.
     var cookies = document.cookie.split(";");
@@ -21,10 +10,29 @@ $(document).ready(function() {
         }
     }
 
-    if (showBetaWarning) {
-        $("#head-beta-warning").slideDown("fast");
-    }
+    var $headBetaWarning = $('#head-beta-warning'); // Cache for multiple references
 
+    // Wire up the beta warning.
+    $("#beta-warning-close").click(function(event) {
+        event.preventDefault();
+        $('body').css('margin-top', 0); 
+        $headBetaWarning.slideUp("fast");
+        
+        // Hide it for a month by default.
+        var expiry = new Date();
+        expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
+
+        document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
+    });
+
+
+    if (showBetaWarning) {
+        $headBetaWarning.show();
+        $('body').css('margin-top', '25px');
+        $('#beta-warning').slideDown(300, function() {
+           $(this).find('.blurb').fadeIn('slow');
+        });
+    }	
     // auto-expand the home menu when on the home page
     // and remove it from other pages.
     $("#headhome.current div.children").appendTo($('#menu-container'));
