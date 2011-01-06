@@ -45,7 +45,9 @@ if ($shortname) {
  }
  </script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
+<?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
+<?php endif ?>
  
 </head>
 <body>
