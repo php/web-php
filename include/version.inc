@@ -38,8 +38,8 @@ $PHP_5_2_WINDOWS_DATE    = $PHP_5_2_DATE;
 $PHP_5_2_WINDOWS_VERSION = $PHP_5_2_VERSION;
 
 $PHP_5_2_MD5     = array(
-                       "tar.bz2"       => "1de8b6adaabf63c042929a3cd1175c33",
-                       "tar.gz"        => "0f636e17a75550f0197354cb5d7c79fb",
+                       "tar.bz2"       => "b27947f3045220faf16e4d9158cbfe13",
+                       "tar.gz"        => "04d321d5aeb9d3a051233dbd24220ef1",
                        "zip"           => "f4e290e3eb4ef6e6453fbe5fef03eb06",
                        "installer"     => "80f5fe97b17bfafd2c0dd71e7a0779fd",
 					   "nts.zip"       => "c7bea134ed5cb618e0da5962c0fd87fd",
