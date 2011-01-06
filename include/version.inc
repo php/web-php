@@ -20,12 +20,12 @@
 $PHP_5_3_RC      = false; // '5.3.4RC2'; // false; 
 $PHP_5_3_RC_DATE = '02 December 2010';
 
-$PHP_5_3_VERSION         = "5.3.4";
-$PHP_5_3_DATE            = "09 December 2010";
+$PHP_5_3_VERSION         = "5.3.5";
+$PHP_5_3_DATE            = "06 January 2010";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "2c069d8f690933e3bf6a8741ed818150",
-                       "tar.gz"        => "b69b36132899c5ca3bf155efa0218676",
+                       "tar.bz2"       => "8aaf20c95e91f25c5b6a591e5d6d61b9",
+                       "tar.gz"        => "fb727a3ac72bf0ce37e1a20468a7bb81",
 );
 
 /* PHP 5.2 Release */

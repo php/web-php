@@ -11,6 +11,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.5"></a><!-- {{{ 5.3.5 -->
+<h3>Version 5.3.5</h3>
+<b>06-Jan-2010</b>
+<ul>
+
+<li><?php bugfix(53632); ?> (PHP hangs on numeric value 2.2250738585072011e-308). (Rasmus, Scott)</li>
+
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.2.16"></a><!-- {{{ 5.2.16 -->
 <h3>Version 5.2.16</h3>
 <b>16-Dec-2010</b>
