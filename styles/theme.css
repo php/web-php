@@ -464,6 +464,7 @@ aside.tips {
 .layout-content {
     margin-left: 175px;
     padding-bottom: 12px;
+    display: block;
 }
 
 footer .footmenu {
