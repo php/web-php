@@ -58,7 +58,7 @@ if ($shortname) {
     <span class="blurb">
       This is a work-in-progress experimental design.
       Things <strong>will</strong> be broken and unfinished!
-      You may prefer <a href="http://php.net/">php.net</a>.
+      You may prefer <a href="http://php.net/?beta=0">php.net</a>.
     </span>
   </div>
 </div>
