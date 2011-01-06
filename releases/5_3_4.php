@@ -1,6 +1,6 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'releases/5_3_2.php';
+$_SERVER['BASE_PAGE'] = 'releases/5_3_4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 site_header("PHP 5.3.4 Release Announcement");
 ?>
@@ -8,7 +8,7 @@ site_header("PHP 5.3.4 Release Announcement");
 <h1>PHP 5.3.4 Release Announcement</h1>
 <p>
 The PHP development team is proud to announce the immediate release of PHP
-5.3.4. This is a maintenance release in the 5.4 series, which includes a
+5.3.4. This is a maintenance release in the 5.3 series, which includes a
 large number of bug fixes.
 </p>
 
