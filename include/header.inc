@@ -43,6 +43,7 @@ if (isset($shortname) && $shortname) {
   document.createElement("section");
   document.createElement("aside");
   document.createElement("footer");
+  document.createElement("nav");
  </script>
  <![endif]-->
  
@@ -79,7 +80,7 @@ if (isset($shortname) && $shortname) {
   </div>
 </div>
 
-<div id="headnav">
+<nav id="headnav">
  
  <ul id="headmenu">
   <li id="headsearch">
@@ -203,7 +204,7 @@ if (isset($shortname) && $shortname) {
   
  </ul>
 <br style="clear: both;" />
-</div>
+</nav>
 
 <div id='mega-drop-down'>
  <div id='menu-container'>

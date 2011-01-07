@@ -494,7 +494,7 @@ footer a:hover {
     color: #000;
 }
 
-section, footer, aside {
+section, footer, aside, nav {
     display: block;
 }
 
