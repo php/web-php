@@ -5,6 +5,9 @@ header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
 header("Pragma: no-cache");
 
+// Version information for the mega drop down.
+include $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+
 if ($shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
@@ -99,15 +102,16 @@ if ($shortname) {
             <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo</a></p>
         </div>
         <div class="download">
-            <a href="/get/php-5.3.5.tar.gz/from/a/mirror" class="latest">
-                <span class="version">PHP 5.3.5</span>
+<?php foreach ($RELEASES[5] as $version => $release): ?>
+            <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror">
+                <span class="version">PHP <?php echo $version ?></span>
                 <span class="package">Complete Source Code</span>
-                <span class="file">php.5.3.5.tar.gz (13,775 KB)</span>
+                <span class="file">
+                    <?php echo $release['source'][0]['filename'] ?>
+                    <!-- (size) should go here, but it's not in version.inc at present -->
+                </span>
             </a>
-            <a href="/get/php-5.2.17.tar.gz/from/a/mirror" class="legacy">
-                <span class="version">PHP 5.2.17</span>
-                <span class="date">php.5.2.17.tar.gz (11,525 KB)</span>
-            </a>
+<?php endforeach; ?>
             <a href="http://windows.php.net" class="windows">
                 <span class="version">Windows Downloads</span>
                 <span class="date">http://windows.php.net/</span>
