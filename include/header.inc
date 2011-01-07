@@ -53,6 +53,12 @@ if (isset($shortname) && $shortname) {
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
  
+ <!--[if lte IE 7]>
+ <style type="text/css">
+  #layout { background: white; }
+ </style>
+ <![endif]-->
+ 
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
  <script type="text/javascript">
