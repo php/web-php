@@ -99,7 +99,7 @@ if ($shortname) {
             </p><p>
                 Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
             </p>
-            <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo</a></p>
+            <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo;</a></p>
         </div>
         <div class="download">
 <?php foreach ($RELEASES[5] as $version => $release): ?>
@@ -145,6 +145,7 @@ if ($shortname) {
         <dd><a href="#">Write documentation</a></dd>
         <dd><a href="#">Test PHP</a></dd>
       <dt><a href="/cal.php">Calendar of Events</a></dt>
+        <dd></dd>
     </dl>
     <dl>
       <dt><a href="/mailing-lists.php">Mailing lists</a></dt>
