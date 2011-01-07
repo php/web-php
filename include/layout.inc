@@ -806,7 +806,7 @@ function site_header_beta($title = '', $config = array())
     }
 
     // shorturl; http://wiki.snaplog.com/short_url
-    if ($shortname = get_shortname($_SERVER["BASE_PAGE"])) {
+    if (isset($_SERVER['BASE_PAGE']) && $shortname = get_shortname($_SERVER["BASE_PAGE"])) {
         $shorturl = "http://php.net/" . $shortname;
     }
 

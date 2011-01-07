@@ -8,7 +8,7 @@ header("Pragma: no-cache");
 // Version information for the mega drop down.
 include $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
-if ($shortname) {
+if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
 
@@ -25,10 +25,14 @@ if ($shortname) {
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases.atom" title="PHP Release feed" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor" />
+
+<?php if (isset($_SERVER['BASE_PAGE'])): ?>
  <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>" />
 <?php if ($shortname): ?>
  <link rel="shorturl" href="<?php echo $shorturl ?>" />
 <?php endif ?>
+<?php endif ?>
+
 <?php foreach($config["meta-navigation"] as $rel => $page): ?>
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
