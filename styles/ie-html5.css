@@ -1,5 +1,0 @@
-/* Apply some default styles to the HTML5 elements we're using in IE. */
-
-section, footer, aside {
-    display: block;
-}

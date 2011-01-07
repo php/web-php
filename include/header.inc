@@ -37,8 +37,6 @@ if ($shortname) {
   document.createElement("aside");
   document.createElement("footer");
  </script>
-
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/ie-html5.css<?php echo $v ?>" media="all"/>
  <![endif]-->
  
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
