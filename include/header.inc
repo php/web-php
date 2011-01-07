@@ -30,6 +30,17 @@ if ($shortname) {
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
  
+ <!--[if IE]>
+ <script type="text/javascript">
+  // Enable HTML5 elements to be styled in IE.
+  document.createElement("section");
+  document.createElement("aside");
+  document.createElement("footer");
+ </script>
+
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/ie-html5.css<?php echo $v ?>" media="all"/>
+ <![endif]-->
+ 
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
