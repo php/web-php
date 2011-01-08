@@ -36,10 +36,62 @@ complimentary greens: 9FB553	7B8851	61761B	C6DA82	CCDA99
     font-size: 11px;
 }
 
+
 #mega-drop-down div.children.downloads {
     padding-bottom: 0;
 }
 
+
+/* We have to override these because theme.css has a generic style for 'ul' 
+   and that doesn't apply here on the downloads area
+*/
+#mega-drop-down div.download ul {
+	float: none !important;
+	width: auto !important;
+	padding: 0 !important;
+}
+
+#mega-drop-down div.download li:first-child {
+    padding: 20px 0 0px 100px;
+    background-image: url('/images/sprites.png');
+    background-position: 10px -187px;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#mega-drop-down div.download li {
+    color: #eee;
+    display: block;
+    padding: 10px 0 0px 100px;
+    background-image: url('/images/sprites.png');
+    background-position: 24px -290px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-top: 1px solid #555;
+}
+
+#mega-drop-down div.download li.windows {
+    background-image: url('/images/mega-windows.png');
+    background-position: 46px 50%;
+}
+
+#mega-drop-down div.download a {
+	padding-top: 0;
+	padding-left: 0;
+    display: block;
+    clear: right;
+    font-size: 1.0em;
+}
+
+#mega-drop-down div.download a:first-child {
+    font-size: 2.0em;
+}
+
+#mega-drop-down div.download li.windows a:first-child {
+	font-size: 1.5em;
+}
+
+/*
 #mega-drop-down div.download a {
     color: #eee;
     display: block;
@@ -63,22 +115,22 @@ complimentary greens: 9FB553	7B8851	61761B	C6DA82	CCDA99
     background-position: 46px 50%;
 }
 
-#mega-drop-down div.download a span {
+#mega-drop-down div.download a {
     display: block;
     clear: right;
 }
 
-#mega-drop-down div.download a span.version {
+#mega-drop-down div.download a.version {
     font-size: 1.5em;
     line-height: 100%;
     font-weight: bold;
 }
 
 #mega-drop-down div.download a:first-child span.version {
-    font-size: 2.5em;
+    font-size: 2.0em;
 }
 
-#mega-drop-down div.download a span.package {
+#mega-drop-down div.download a.package {
     font-size: 1.3em;
     display: none;
 }
@@ -86,6 +138,8 @@ complimentary greens: 9FB553	7B8851	61761B	C6DA82	CCDA99
 #mega-drop-down div.download a:first-child span.package {
     display: block;
 }
+
+*/
 
 #head-beta-warning {
     background: #339900;
