@@ -91,56 +91,6 @@ complimentary greens: 9FB553	7B8851	61761B	C6DA82	CCDA99
 	font-size: 1.5em;
 }
 
-/*
-#mega-drop-down div.download a {
-    color: #eee;
-    display: block;
-    padding: 10px 0 10px 100px;
-    background-image: url('/images/sprites.png');
-    background-position: 24px -290px;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    border-top: 1px solid #555;
-}
-
-#mega-drop-down div.download a:first-child {
-    padding: 20px 0 20px 100px;
-    background-image: url('/images/sprites.png');
-    background-position: 10px -187px;
-    border: none;
-}
-
-#mega-drop-down div.download a.windows {
-    background-image: url('/images/mega-windows.png');
-    background-position: 46px 50%;
-}
-
-#mega-drop-down div.download a {
-    display: block;
-    clear: right;
-}
-
-#mega-drop-down div.download a.version {
-    font-size: 1.5em;
-    line-height: 100%;
-    font-weight: bold;
-}
-
-#mega-drop-down div.download a:first-child span.version {
-    font-size: 2.0em;
-}
-
-#mega-drop-down div.download a.package {
-    font-size: 1.3em;
-    display: none;
-}
-
-#mega-drop-down div.download a:first-child span.package {
-    display: block;
-}
-
-*/
-
 #head-beta-warning {
     background: #339900;
     display: none;
