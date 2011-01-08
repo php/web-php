@@ -22,7 +22,7 @@ body, input, textarea {
 
 body {
     line-height: 1.4;   
-    background: url('/images/sprites.png') repeat-x 0px -990px;
+    background: url('/images/sprites.png') repeat-x 0px -990px #fff;
 }
 
 h1    { font-size: 1.7em; line-height: 2.6em; margin-bottom: 0.2em; }
