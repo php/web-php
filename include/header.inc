@@ -113,24 +113,24 @@ if (isset($shortname) && $shortname) {
         </div>
         <div class="download">
 <?php if(!empty($RELEASES[5])): ?>
-        	<ul>
-	<?php
-	foreach ($RELEASES[5] as $version => $release):
-		$windowsVersionLink = substr($version, 0, strrpos($version, '.'));
-	?>
-				<li>
-		            <a href="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror" class="version">PHP <?php echo $version ?></a>
-		            <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror">Download as bz2</a>
-					<a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>">Download for windows</a>
-		            <!-- (size) should go here, but it's not in version.inc at present -->
-	         	</li>
-	<?php endforeach; ?>
-	        	
-	            <li class="windows">
-	                <a href="http://windows.php.net/" title="">Download for windowss</a>
-	                <a href="http://windows.php.net/" title=>http://windows.php.net/</a>
-	            </li>        	
-	        </ul>
+            <ul>
+    <?php
+    foreach ($RELEASES[5] as $version => $release):
+        $windowsVersionLink = substr($version, 0, strrpos($version, '.'));
+    ?>
+                <li>
+                    <a href="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror" class="version">PHP <?php echo $version ?></a>
+                    <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror">Download as bz2</a>
+                    <a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>">Download for windows</a>
+                    <!-- (size) should go here, but it's not in version.inc at present -->
+                 </li>
+    <?php endforeach; ?>
+                
+                <li class="windows">
+                    <a href="http://windows.php.net/" title="">Download for windowss</a>
+                    <a href="http://windows.php.net/" title=>http://windows.php.net/</a>
+                </li>            
+            </ul>
 <?php endif; ?>
         </div>
         <br style="clear: both;" />
