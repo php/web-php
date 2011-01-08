@@ -119,16 +119,16 @@ if (isset($shortname) && $shortname) {
         $windowsVersionLink = substr($version, 0, strrpos($version, '.'));
     ?>
                 <li>
-                    <a href="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror" class="version">PHP <?php echo $version ?></a>
-                    <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror">Download as bz2</a>
-                    <a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>">Download for windows</a>
+                    <a href="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror" class="version" title="Download PHP">PHP <?php echo $version ?></a>
+                    <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror" title="Download bz2 version of PHP">Download as bz2</a>
+                    <a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>" title="Download for windows">Download for windows</a>
                     <!-- (size) should go here, but it's not in version.inc at present -->
                  </li>
     <?php endforeach; ?>
                 
                 <li class="windows">
-                    <a href="http://windows.php.net/" title="">Download for windowss</a>
-                    <a href="http://windows.php.net/" title=>http://windows.php.net/</a>
+                    <a href="http://windows.php.net/" title="Windows downloads">Windows downloads</a>
+                    <a href="http://windows.php.net/" title="http://windows.php.net/">http://windows.php.net/</a>
                 </li>            
             </ul>
 <?php endif; ?>
