@@ -91,4 +91,5 @@ $RELEASES = array(
 );
 
 $PHP_5_VERSION = $PHP_5_3_VERSION; // Some scripts require this set
+$PHP_5_RC_DATE = $PHP_5_3_RC_DATE; // Used by master
 
