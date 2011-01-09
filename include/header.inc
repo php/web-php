@@ -125,11 +125,6 @@ if (isset($shortname) && $shortname) {
                     <!-- (size) should go here, but it's not in version.inc at present -->
                  </li>
     <?php endforeach; ?>
-                
-                <li class="windows">
-                    <a href="http://windows.php.net/" title="Windows downloads">Windows downloads</a>
-                    <a href="http://windows.php.net/" title="http://windows.php.net/">http://windows.php.net/</a>
-                </li>            
             </ul>
 <?php endif; ?>
         </div>
