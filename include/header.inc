@@ -101,6 +101,7 @@ if (isset($shortname) && $shortname) {
             <p class="tutorial"><a href="/tut.php">Introductory Tutorial &raquo;</a></p>
         </div>
         <div class="download">
+            <h2>Download PHP</h2>
 <?php if(!empty($RELEASES[5])): ?>
             <ul>
     <?php
