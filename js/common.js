@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     // This is a temporary implementation so if you click on the Arrows on the Download area of the homepage
     // That it takes you to the default .gz download. Could not apply HTML5's <a> tag to wrap around the <li>
-    // Because it contains <a> tags within it and the target conflicted. Using <li refl="#...'> to workaround this
+    // Because it contains <a> tags within it and the target conflicted. Using <li ref="#...'> to workaround this
     // Until an elegant implementation is found.
     var $homeDownload = $('div.download .download-list');
     if($homeDownload.length > 0) {
