@@ -37,16 +37,6 @@ if (isset($shortname) && $shortname) {
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
  
- <!--[if IE]>
- <script type="text/javascript">
-  // Enable HTML5 elements to be styled in IE.
-  document.createElement("section");
-  document.createElement("aside");
-  document.createElement("footer");
-  document.createElement("nav");
- </script>
- <![endif]-->
- 
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
@@ -54,9 +44,7 @@ if (isset($shortname) && $shortname) {
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
  
  <!--[if lte IE 7]>
- <style type="text/css">
-  #layout { background: white; }
- </style>
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css<?php echo $v?>" media="screen" />
  <![endif]-->
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
@@ -67,6 +55,7 @@ if (isset($shortname) && $shortname) {
     document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-ui-1.8.7.min.js"><' + '/script>');
  }
  </script>
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
