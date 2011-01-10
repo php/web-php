@@ -493,8 +493,3 @@ footer a {
 footer a:hover {
     color: #000;
 }
-
-section, footer, aside, nav {
-    display: block;
-}
-

@@ -6,7 +6,12 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+section, article, aside, hgroup, header, footer,
+nav, figure, figcaption, video, audio, embed,
+mark, progress, meter, time, ruby, rt, rp, wbr,
+canvas, command, details, datalist, keygen,
+output {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -40,4 +45,9 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* Ensure HTML5 block elements are rendered so. */
+section, article, aside, header, footer, nav, figure {
+	display: block;
 }
