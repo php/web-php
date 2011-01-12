@@ -46,6 +46,10 @@ if (isset($shortname) && $shortname) {
  <!--[if lte IE 7]>
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css<?php echo $v?>" media="screen" />
  <![endif]-->
+
+ <!--[if IE]>
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
+ <![endif]-->
  
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
@@ -55,7 +59,6 @@ if (isset($shortname) && $shortname) {
     document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-ui-1.8.7.min.js"><' + '/script>');
  }
  </script>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
