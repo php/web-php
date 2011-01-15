@@ -114,7 +114,7 @@ if (isset($shortname) && $shortname) {
             <li rel="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror">
                 <a href="/get/<?php echo $release['source'][1]['filename'] ?>/from/a/mirror" class="version" title="Download PHP">PHP <?php echo $version ?></a>
                 <a href="/get/<?php echo $release['source'][0]['filename'] ?>/from/a/mirror" title="Download bz2 version of PHP">Download as bz2</a>
-                <a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>" title="Download for windows">Download for windows</a>
+                <a href="http://windows.php.net/download/#php-<?php echo $windowsVersionLink; ?>" title="Download for Windows">Download for Windows</a>
                 <!-- (size) should go here, but it's not in version.inc at present -->
              </li>
     <?php endforeach; ?>

@@ -41,11 +41,17 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #mega-drop-down div.download h2 {
-    font-size: 2.0em;
-    color: #FFF;
+    font-size: 1.4em;
+    color: #ddd;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
     line-height: 1.0em;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-shadow: #000 -1px -1px 1px;
     margin: 0;
-    padding: 0;
+    padding: 5px 0 15px 0;
 }
 
 
@@ -64,28 +70,27 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #mega-drop-down div.download li:first-child {
-    padding: 20px 0 0px 100px;
+    padding: 15px 0 15px 110px;
     background-image: url('/images/sprites.png');
-    background-position: 10px -187px;
+    background-position: 20px -195px;
     background-repeat: no-repeat;
-    border: none;
     margin-top: 0;
+}
+
+#mega-drop-down div.download li:first-child a:first-child {
+    font-size: 2em;
 }
 
 #mega-drop-down div.download li {
     color: #eee;
     display: block;
-    padding: 10px 0 0px 100px;
+    padding: 15px 0 0 110px;
     background-image: url('/images/sprites.png');
-    background-position: 24px -290px;
+    background-position: 34px -280px;
     background-repeat: no-repeat;
     cursor: pointer;
     border-top: 1px solid #555;
-}
-
-#mega-drop-down div.download li.windows {
-    background-image: url('/images/mega-windows.png');
-    background-position: 46px 50%;
+    margin: 0;
 }
 
 #mega-drop-down div.download a {
@@ -94,16 +99,13 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     display: block;
     clear: right;
     font-size: 1.0em;
+    line-height: 90%;
 }
 
 #mega-drop-down div.download a:first-child {
-    font-size: 2.0em;
+    font-size: 1.6em;
     color: #FFF;
-}
-
-#mega-drop-down div.download li.windows a:first-child {
-    font-size: 1.5em;
-    color: #FFF;   
+    line-height: 120%;
 }
 
 #head-beta-warning {
