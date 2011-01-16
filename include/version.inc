@@ -21,7 +21,7 @@ $PHP_5_3_RC      = false; // '5.3.4RC2'; // false;
 $PHP_5_3_RC_DATE = '02 December 2010';
 
 $PHP_5_3_VERSION         = "5.3.5";
-$PHP_5_3_DATE            = "06 January 2010";
+$PHP_5_3_DATE            = "06 January 2011";
 
 $PHP_5_3_MD5     = array(
                        "tar.bz2"       => "8aaf20c95e91f25c5b6a591e5d6d61b9",
@@ -33,7 +33,7 @@ $PHP_5_2_RC      = false; // '5.2.15RC2'; // false;
 $PHP_5_2_RC_DATE = "02 December 2010";
 
 $PHP_5_2_VERSION         = "5.2.17";
-$PHP_5_2_DATE            = "06 January 2010";
+$PHP_5_2_DATE            = "06 January 2011";
 $PHP_5_2_WINDOWS_DATE    = $PHP_5_2_DATE;
 $PHP_5_2_WINDOWS_VERSION = $PHP_5_2_VERSION;
 
