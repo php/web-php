@@ -32,7 +32,7 @@ function download_file($mirror, $file)
         
         // If user comes from a mirror selection page, provide a backlink
         if (isset($_SERVER['HTTP_REFERER']) && preg_match("!/from/a/mirror$!", $_SERVER['HTTP_REFERER'])) {
-            $moreinfo = ", or <a href=\"{$_SERVER['HTTP_REFERER']}\">reconsider your mirror selection</a>"; 
+            $moreinfo = ", or <a href=\"".htmlspecialchars($_SERVER['HTTP_REFERER'],ENT_QUOTES,'UTF-8')."\">reconsider your mirror selection</a>"; 
         } else { $moreinfo = ""; }
         
         // An executable was requested (temp fix for rsync change)

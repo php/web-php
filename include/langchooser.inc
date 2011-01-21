@@ -31,7 +31,7 @@
 */
 
 // Default STRIPPED_URI
-$_SERVER['STRIPPED_URI'] = $_SERVER['REQUEST_URI'];
+$_SERVER['STRIPPED_URI'] = htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8');
 
 // The code is encapsulated in a function,
 // so the variable namespace is not polluted
@@ -51,14 +51,14 @@ function language_choose_code()
     
     // Specified for the request (GET/POST parameter)
     if (!empty($_REQUEST['lang'])) {
-        $explicitly_specified = language_add($_REQUEST['lang'], $languages);
+        $explicitly_specified = language_add(htmlspecialchars($_REQUEST['lang'], ENT_QUOTES, 'UTF-8'), $languages);
 
         // Set the language in a cookie for a year
         mirror_setcookie("LAST_LANG", $explicitly_specified, 60*60*24*365);
     }
 
     // Specified in a shortcut URL (eg. /en/echo or /pt_br/echo)
-    if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", $_SERVER['REQUEST_URI'], $flang)) {
+    if (preg_match("!^/(\\w{2}(_\\w{2})?)/!", htmlspecialchars($_SERVER['REQUEST_URI'],ENT_QUOTES, 'UTF-8'), $flang)) {
         
         // Put language into preference list
         $rlang = language_add($flang[1], $languages);
@@ -70,13 +70,13 @@ function language_choose_code()
         
         // Drop out langauge specification from URL, as this is already handled
         $_SERVER['STRIPPED_URI'] = preg_replace(
-            "!^/$flang[1]/!", "/", $_SERVER['REQUEST_URI']
+            "!^/$flang[1]/!", "/", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8')
         );
     
     }
 
     // Specified in a manual URL (eg. manual/en/ or manual/pt_br/)
-    if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", $_SERVER['REQUEST_URI'], $flang)) {
+    if (preg_match("!^/manual/(\\w{2}(_\\w{2})?)(/|$)!", htmlspecialchars($_SERVER['REQUEST_URI'], ENT_QUOTES, 'UTF-8'), $flang)) {
         
         $flang = language_add($flang[1], $languages);
 
