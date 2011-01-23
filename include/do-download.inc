@@ -47,7 +47,7 @@ function download_file($mirror, $file)
         }
         else {
             $info = "<p>
- The file you requested (<strong>{$file}</strong>) is not found on
+ The file you requested (<strong> " . htmlspecialchars($file, ENT_QUOTES, "UTF-8") . " </strong>) is not found on
  this server (<strong>{$MYSITE}</strong>). If this file is a
  recent addition to our downloads, then it is possible that this
  particular server is not yet updated to host that file for download.

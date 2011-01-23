@@ -37,7 +37,7 @@ if ($file === FALSE) {
     }
     else {
         $info = "<p>
- The file you requested (<strong>{$df}</strong>) is not found on
+ The file you requested (<strong> " . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . " </strong>) is not found on
  this server (<strong>{$MYSITE}</strong>). If this file is a
  recent addition to our downloads, then it is possible that this
  particular server is not yet updated to host that file for download.
