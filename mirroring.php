@@ -35,39 +35,63 @@ $minute = rand(0, 59);
 <h1>Mirroring The PHP Website</h1>
 
 <p>
- If you would like to become an official PHP mirror, please be sure to
+ If you would like to participate in the official PHP mirrors program,
  read and follow these instructions carefully. You should have the
  consent of your hosting company (if you aren't a hosting company
- yourself), and be prepared for some reasonably significant bandwidth
- usage. A reasonable estimate as of September 2006 is 2GB/day, which
- can go up to 12GB/day for busy mirrors, like uk.php.net. The PHP website
- requires at least PHP 4.3.x, but PHP 5 is preferred. Set it up as an Apache
- module with the settings <a href="#settings">outlined below</a>, or in
- any other Apache connected way (CGI, FastCGI, etc), considering the requested
- PHP settings outlined below in the Apache vhost instructions. The size of
- the full website is approximately 2.1 gigabyte.
+ yourself), and be prepared for some potentially significant bandwidth
+ usage.  As of January 2011, the network is averaging 223GB per day spread
+ across 115 mirrors, or roughly 1.9GB per day.  This can go up to 12GB per
+ day or more for busy mirrors, such as those in the US, UK, and India.
+ Please be sure your server or hosting account is able to handle a minimum
+ of roughly 58 gigabytes of transfer each month without incurring any
+ additional costs or penalties.  In the event that such action is taken
+ against your account, remember, it is your responsibility.
+</p>
+
+<p>
+ Official mirror program participants are required to use PHP 5.1.6 or better.
+ Set it up as an Apache module with the settings
+ <a href="#settings">outlined below</a>, or in any other Apache connected
+ way (CGI, FastCGI, etc), considering the requested PHP settings outlined
+ below in the Apache vhost instructions. The size of the full website is
+ approximately 2.1 gigabytes.
+</p>
+
+<p>
+ Applications to join the official mirror program are reviewed on a
+ case-by-case basis, but we will only approve those from ISPs and web
+ hosting providers, universities and state-recognized academic institutions,
+ and PHP-centric web development firms.  Under no circumstances will we
+ permit new applications from marketing firms, website portals or
+ directories, or anything of questionable moral or legal standing.  We
+ also reserve the right, at our discretion, to refuse any application for
+ any reason.
 </p>
 
 <a name="rule"></a>
 <p class="warn">
  Please note that we are currently only accepting new official
- mirrors in countries where we don't already have two active official
- mirrors. For a list of official mirrors have a look at
+ mirrors in countries where we don't already have two official
+ mirrors. For a list of active official mirrors, have a look at
  <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
- an official mirror site, it is advisable to contact <a
- href="mailto:mirrors@php.net">mirrors@php.net</a>, and ask if you
- have chance to get your mirror site accepted.  We have this limit in
- place to avoid overloading our rsync server and monitoring infrastructure
- as well as the people who actively assist mirror sites stay up to date and
- correctly configured.  We have found that this 2 mirror limit per country
- serves our users well, so please do not ask to be the 3rd in a country that
- already has 2 unless you have a very good reason.  Please also ensure 
- that the mirror is located in the country you would like to register the 
- mirror for.
+ an official mirror site, you are advised to contact <a
+ href="mailto:mirrors@php.net">mirrors@php.net</a> and ask if your
+ application will have a chance to be accepted.  We have this limit in
+ place to avoid overloading our rsync servers and monitoring infrastructure.
+ We have found that this 2 mirror limit per country serves our users well,
+ so please do not ask to be the 3rd in a country that already has 2
+ unless you have a very good reason.  Please also be aware that the
+ mirror is required to be physically located in the country you would
+ like to serve.  If there are already two mirrors in a country for
+ which you would like to provide an official mirror, we operate an
+ official waiting list, to which you may add your name and information
+ <a href="http://php.parasane.net/mirrors/waitinglist.php">here</a>.  If
+ and when a spot becomes available, we will go through the applications
+ on the waiting list before entertaining new public applications.
 </p>
 
 <p>
- If you are not an official mirror (eg. mirror the site for your company's
+ If you are not an official mirror (e.g. you mirror the site for your company's
  internal use), you should not rsync from <tt>rsync.php.net</tt> more frequently
  than once a day, or you may find your IP blocked. Also, please make
  an effort to only mirror those parts of the site that you actually need.
@@ -78,8 +102,8 @@ $minute = rand(0, 59);
 <h2>Get Files With Rsync</h2>
 
 <p>
- First, you need to have a <a href="http://rsync.samba.org/">rsync</a> installed.
- As you have rsync, fetch the web files with the following:
+ First, you need to have a <a href="http://rsync.samba.org/">rsync</a>
+ installed.  As you have rsync, fetch the web files with the following:
 </p>
 
 <pre class="info">
@@ -87,6 +111,15 @@ $minute = rand(0, 59);
       --include='distributions/*.exe' \
       rsync.php.net::phpweb /your/local/path 
 </pre>
+
+<!--
+We will be changing the above to include the following in the coming
+days/weeks/months as we move toward a distributed network:
+
+americas.rsync.php.net
+asia.rsync.php.net
+europe.rsync.php.net
+-->
 
 <a name="exclude"></a>
 <p>
@@ -125,8 +158,8 @@ $minute = rand(0, 59);
  <a href="http://www.sqlite.org">SQLite</a> is an embedded
  SQL database implementation that has very high performance for applications
  with low write concurrency. PHP mirrors currently employ SQLite for URL
- shortcut lookups, and will use it for manual page displays and searching
- in the future.
+ shortcut lookups, and it is a requirement of all official mirrors to have
+ it installed and available to PHP.
 </p>
 
 <p>
@@ -218,9 +251,15 @@ $minute = rand(0, 59);
  mirror, if you have <a href="#rule">contacted us first</a>, and asked
  for a possible name for your mirror. The official names for PHP mirrors
  are in the convention: <tt>"xx.php.net"</tt>, where <tt>"xx"</tt> is
- replaced by the 2-letter country code of your mirror's location. If
+ replaced by the 2-letter ISO country code of your mirror's location. If
  there already is a <tt>"xx.php.net"</tt>, then you will probably get
- <tt>"xx2.php.net"</tt>.
+ <tt>"xx2.php.net"</tt>.  Do not assume that you know the code you will
+ receive until your application has been reviewed and approved, and do
+ not submit an application saying, for example, "We are applying to
+ become DE.PHP.NET," because it's possible that the mirror already
+ exists, but is experiencing issues that have it temporarily removed
+ from active rotation.  We do not want anyone to waste their time only
+ to have their application altered or rejected.
 </p>
 
 <p>
@@ -255,7 +294,7 @@ $minute = rand(0, 59);
  site should start working.
 </p>
 
-<h2>Setup Local Stats</h2>
+<h2>Setting Up Local Stats</h2>
 
 <p>
  Setting up local stats can be a plus on your mirror. We
@@ -310,7 +349,11 @@ $minute = rand(0, 59);
  And finally, don't forget to put a nice little PHP logo somewhere
  on your hosting company's site if possible. Grab one of the logos
  from the <a href="/download-logos.php">Download logos</a> page, and
- link it to your mirror.
+ link it to your mirror.  This shows the community that you are a
+ proud supporter of PHP and open source technology, and you will be
+ worshipped every hour, on the hour, by millions.  Well, okay, not
+ worshipped.... but folks will certainly appreciate your generosity
+ and support!
 </p>
 
 <h2>Mirror Setup Troubleshooting</h2>
@@ -374,7 +417,10 @@ $minute = rand(0, 59);
 
 <p>
  <em>
-  Thank you for providing a mirror!
+  Thank you for your interest in providing a mirror!  If you ever have any
+  questions or concerns, drop us a line at
+  <a href="mailto:mirrors@lists.php.net">mirrors@lists.php.net</a>
+  --- we are here to help!
  </em>
 </p>
 
