@@ -419,7 +419,7 @@ europe.rsync.php.net
  <em>
   Thank you for your interest in providing a mirror!  If you ever have any
   questions or concerns, drop us a line at
-  <a href="mailto:mirrors@lists.php.net">php-mirrors@lists.php.net</a>
+  <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>
   --- we are here to help!
  </em>
 </p>
