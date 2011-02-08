@@ -156,7 +156,7 @@ site_header("News Archive - 2010");
 <hr /> 
 <div class="newsItem hentry vevent"> 
     <div class="newsImage"><?php news_image("http://www.confoo.ca/", "logo_confoo_300_95.gif", "Confoo"); ?></div> 
-    <h1 class="summary entry-title"><a name="id2010-11-08-1" id="id2010-11-08-1" href="http://www.phprio.org/phpnrio10" rel="bookmark" class="bookmark">Confoo</a></h1> 
+    <h1 class="summary entry-title"><a name="id2010-11-08-1" id="id2010-11-08-1" href="http://confoo.ca/" rel="bookmark" class="bookmark">Confoo</a></h1> 
     <div class="entry-content description"> 
         <abbr class="published newsdate" title="2010-11-08T20:05:56-02:00">[08-Nov-2010]</abbr> 
         <p> 

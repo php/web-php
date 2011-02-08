@@ -8,7 +8,7 @@
   <category term="cfp" label="Call for Papers"/>
   <link href="http://www.php.net/conferences/index.php#id2010-11-08-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://www.confoo.ca/" title="Confoo">logo_confoo_300_95.gif</default:newsImage>
-  <link href="http://www.phprio.org/phpnrio10" rel="via" type="text/html"/>
+  <link href="http://confoo.ca/" rel="via" type="text/html"/>
   <content type="html">
       <p>
         <a href="http://www.phpquebec.org/">PHP Quebec</a> is pleased to announce the 2011 edition of the <a href="http://confoo.ca/">http://confoo.ca/</a> Conference.
