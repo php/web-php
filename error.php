@@ -396,7 +396,8 @@ $uri_aliases = array (
 
     "update_5_2.txt"         => "migration52",      // BC
     "readme_upgrade_51.php"  => "migration51",      // BC
-    "internals"              => "internals2",        // BC
+    "internals"              => "internals2",       // BC
+    "configuration.directives" => "ini.core",       // BC
 
     # regexp. BC
     "regexp.reference.backslash"      => "regexp.reference.escape",
