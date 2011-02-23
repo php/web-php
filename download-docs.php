@@ -54,6 +54,7 @@ $formats = array(
 #   "Many PDF files"   => "pdf.tar.gz",
 #   "PDF"              => "pdf",
     "HTML Help file"   => "chm",
+    "HTML Help file (with user notes)" => "chm",
 );
 ?>
 
@@ -95,6 +96,7 @@ $formats = array(
 
 <?php
 $files = array(); $found_formats = array();
+$filepath = $filename = '';
 
 // Go through all possible manual languages
 foreach ($LANGUAGES as $langcode => $language) {
@@ -105,31 +107,34 @@ foreach ($LANGUAGES as $langcode => $language) {
     // Go through all possible manual formats
     foreach ($formats as $formatname => $extension) {
     
-        // Actual filename of the file
-        $actual_file = $_SERVER['DOCUMENT_ROOT'] . 
-                       "/distributions/manual/php_manual_$langcode.$extension";
+        $filepath = $_SERVER['DOCUMENT_ROOT'] . '/distributions/manual/';
+        if ($formatname === 'HTML Help file (with user notes)') {
+            $filename = "php_enhanced_$langcode.$extension";
+        } else {
+            $filename = "php_manual_$langcode.$extension";
+        }
+        
+        $filepath .= $filename;
         
         // File named after the language and format exists
-        if (file_exists($actual_file)) {
+        if (file_exists($filepath)) {
             
             // Mirror selection download URL
-            $link_to = "/get/php_manual_$langcode.$extension/from/a/mirror";
+            $link_to = "/get/$filename/from/a/mirror";
 
             // Try to get size and changed date
-            $size    = @filesize($actual_file);
-            $changed = @filemtime($actual_file);
+            $size    = @filesize($filepath);
+            $changed = @filemtime($filepath);
             
             // Size available, collect information
             if ($size !== FALSE) {
-                $files[$langcode][$extension] = array(
+                $files[$langcode][$formatname] = array(
                     $link_to,
                     (int) ($size/1024),
                     date("j M Y", $changed),
                     $extension
                 );
-                if (!in_array($extension, array_keys($found_formats))) {
-                    $found_formats[$formatname] = $extension;
-                }
+                $found_formats[$formatname] = 1;
             }
         }
     }
@@ -165,7 +170,7 @@ if (count($found_formats) == 0) {
 
     // Print out the name of the formats
     foreach ($formats as $formatname => $extension) {
-        if (!in_array($extension, array_values($found_formats))) { continue; }
+        if (!isset($found_formats[$formatname])) { continue; }
         echo "  <th valign=\"bottom\">$formatname</th>\n";
     }
 
@@ -189,15 +194,14 @@ if (count($found_formats) == 0) {
         foreach ($formats as $formatname => $extension) {
         
             // Skip if no file found
-            if (!in_array($extension, array_values($found_formats))) { continue; }
+            if (!isset($found_formats[$formatname])) { continue; }
 
             echo "<td align=\"center\"$cellclass>";
-            
-            if (!isset($lang_files[$extension])) {
+            if (!isset($lang_files[$formatname])) {
                 echo "&nbsp;";
             } else {
                 
-                $fileinfo = $lang_files[$extension];
+                $fileinfo = $lang_files[$formatname];
                 echo "<a href=\"$fileinfo[0]\"";
 
                 // Only print out tooltip, if explicit information is not printed
