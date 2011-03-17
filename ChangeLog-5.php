@@ -11,6 +11,262 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.6"></a><!-- {{{ 5.3.6 -->
+<h3>Version 5.3.6</h3>
+<b>10-March-2010</b>
+
+<ul>
+<li>Upgraded bundled Sqlite3 to version 3.7.4. (Ilia)</li>
+<li>Upgraded bundled PCRE to version 8.11. (Ilia)</li>
+
+<li>Zend Engine:
+<ul>
+  <li>Indirect reference to $this fails to resolve if direct $this is never used in method. (Scott)</li>
+  <li>Fixed bug numerous crashes due to setlocale (crash on error, pcre, mysql etc.) on Windows in thread safe mode. (Pierre)</li>
+  <li>Added options to debug backtrace functions. (Stas)</li>
+  <li><?php bugfix(53971); ?> (isset() and empty() produce apparently spurious runtime error). (Dmitry)</li>
+  <li><?php bugfix(53958); ?> (Closures can't 'use' shared variables by value and by reference). (Dmitry)</li>
+  <li><?php bugfix(53629); ?> (memory leak inside highlight_string()). (Hannes, Ilia)</li>
+  <li><?php bugfix(51458); ?> (Lack of error context with nested exceptions). (Stas)</li>
+  <li><?php bugfix(47143); ?> (Throwing an exception in a destructor causes a fatal error). (Stas)</li>
+  <li><?php bugfix(43512); ?> (same parameter name can be used multiple times in method/function definition). (Felipe)</li>
+</ul>
+</li>
+
+<li>Core:
+<ul>
+  <li>Added ability to connect to HTTPS sites through proxy with basic authentication using stream_context/http/header/Proxy-Authorization (Dmitry)</li>
+  <li>Changed default value of ini directive serialize_precision from 100 to 17. (Gustavo)</li>
+  <li><?php bugfix(54055); ?> (buffer overrun with high values for precision ini setting). (Gustavo)</li>
+  <li><?php bugfix(53959); ?> (reflection data for fgetcsv out-of-date). (Richard)</li>
+  <li><?php bugfix(53577); ?> (Regression introduced in 5.3.4 in open_basedir with a trailing forward slash). (lekensteyn at gmail dot com, Pierre)</li>
+  <li><?php bugfix(53682); ?> (Fix compile on the VAX). (Rasmus, jklos)</li>
+  <li><?php bugfix(48484); ?> (array_product() always returns 0 for an empty array). (Ilia)</li>
+  <li><?php bugfix(48607); ?> (fwrite() doesn't check reply from ftp server before exiting). (Ilia)</li>
+</ul>
+</li>
+ 
+<li>Calendar extension:
+<ul>
+  <li><?php bugfix(53574); ?> (Integer overflow in SdnToJulian, sometimes leading to segfault). (Gustavo)</li>
+</ul>
+</li>
+
+<li>DOM extension:
+<ul>
+  <li>Implemented FR <?php bugl(39771); ?> (Made DOMDocument::saveHTML accept an optional DOMNode like DOMDocument::saveXML). (Gustavo)</li>
+</ul>
+</li>
+  
+<li>DateTime extension:
+<ul>
+  <li>Fixed a bug in DateTime-&gt;modify() where absolute date/time statements had no effect. (Derick)</li>
+  <li><?php bugfix(53729); ?> (DatePeriod fails to initialize recurrences on 64bit big-endian systems). (Derick, rein@basefarm.no)</li>
+  <li><?php bugfix(52808); ?> (Segfault when specifying interval as two dates). (Stas)</li>
+  <li><?php bugfix(52738); ?> (Can't use new properties in class extended from DateInterval). (Stas)</li>
+  <li><?php bugfix(52290); ?> (setDate, setISODate, setTime works wrong when DateTime created from timestamp). (Stas)</li>
+  <li><?php bugfix(52063); ?> (DateTime constructor's second argument doesn't have a null default value). (Gustavo, Stas)</li>
+</ul>
+</li>
+
+<li>Exif extension:
+<ul>
+  <li><?php bugfix(54002); ?> (crash on crafted tag, reported by Luca Carettoni). (Pierre) (CVE-2011-0708)</li>
+</ul>
+</li>
+
+<li>Filter extension:
+<ul>
+  <li><?php bugfix(53924); ?> (FILTER_VALIDATE_URL doesn't validate port number). (Ilia, Gustavo)</li>
+  <li><?php bugfix(53150); ?> (FILTER_FLAG_NO_RES_RANGE is missing some IP ranges). (Ilia)</li>
+  <li><?php bugfix(52209); ?> (INPUT_ENV returns NULL for set variables (CLI)). (Ilia)</li>
+  <li><?php bugfix(47435); ?> (FILTER_FLAG_NO_RES_RANGE don't work with ipv6). (Ilia, valli at icsurselva dot ch)</li>
+</ul>
+</li>
+
+<li>Fileinfo extension:
+<ul>
+  <li><?php bugfix(54016); ?> (finfo_file() Cannot determine filetype in archives). (Hannes)</li>
+</ul>
+</li>
+
+<li>Gettext
+<ul>
+  <li><?php bugfix(53837); ?> (_() crashes on Windows when no LANG or LANGUAGE environment variable are set). (Pierre)</li>
+</ul>
+</li>
+
+<li>IMAP extension:
+<ul>
+  <li>Implemented FR <?php bugl(53812); ?> (get MIME headers of the part of the email). (Stas)</li>
+  <li><?php bugfix(53377); ?> (imap_mime_header_decode() doesn't ignore \t during long MIME header unfolding). (Adam)</li>
+</ul>
+</li>
+    
+<li>Intl extension:
+<ul>
+  <li><?php bugfix(53612); ?> (Segmentation fault when using cloned several intl objects). (Gustavo)</li>
+  <li><?php bugfix(53512); ?> (NumberFormatter::setSymbol crash on bogus $attr values). (Felipe)</li>
+  <li>Implemented clone functionality for number, date &amp; message formatters. (Stas).</li>
+</ul>
+</li>
+
+<li>JSON extension:
+<ul>
+  <li><?php bugfix(53963); ?> (Ensure error_code is always set during some failed decodings). (Scott)</li>
+</ul>
+</li>
+
+<li>mysqlnd
+<ul>
+  <li>Fixed problem with always returning 0 as num_rows for unbuffered sets. (Andrey, Ulf)</li>
+</ul>
+</li>
+
+<li>MySQL Improved extension:
+<ul>
+  <li>Added 'db' and 'catalog' keys to the field fetching functions (FR <?php bugl(39847); ?>). (Kalle)</li>
+  <li>Fixed buggy counting of affected rows when using the text protocol. The collected statistics were wrong when multi_query was used with mysqlnd (Andrey)</li>
+  <li><?php bugfix(53795); ?> (Connect Error from MySqli (mysqlnd) when using SSL). (Kalle)</li>
+  <li><?php bugfix(53503); ?> (mysqli::query returns false after successful LOAD DATA query). (Kalle, Andrey)</li>
+  <li><?php bugfix(53425); ?> (mysqli_real_connect() ignores client flags when built to call libmysql). (Kalle, tre-php-net at crushedhat dot com)</li>
+</ul>
+</li>
+
+<li>OpenSSL extension:
+<ul>
+  <li>Fixed stream_socket_enable_crypto() not honoring the socket timeout in server mode. (Gustavo)</li>
+  <li><?php bugfix(54060); ?> (Memory leaks when openssl_encrypt). (Pierre)</li>
+  <li><?php bugfix(54061); ?> (Memory leaks when openssl_decrypt). (Pierre)</li>
+  <li><?php bugfix(53592); ?> (stream_socket_enable_crypto() busy-waits in client mode). (Gustavo)</li>
+  <li>Implemented FR <?php bugl(53447); ?> (Cannot disable SessionTicket extension for servers that do not support it) by adding a no_ticket SSL context option. (Adam, Tony)</li>
+</ul>
+</li>
+
+<li>PDO MySQL driver:
+<ul>
+  <li><?php bugfix(53551); ?> (PDOStatement execute segfaults for pdo_mysql driver). (Johannes)</li>
+  <li>Implemented FR <?php bugl(47802); ?> (Support for setting character sets in DSN strings). (Kalle)</li>
+</ul>
+</li>
+
+<li>PDO Oracle driver:
+<ul>
+  <li><?php bugfix(39199); ?> (Cannot load Lob data with more than 4000 bytes on ORACLE 10). (spatar at mail dot nnov dot ru)</li>
+</ul>
+</li>
+    
+<li>PDO PostgreSQL driver:
+<ul>
+  <li><?php bugfix(53517); ?> (segfault in pgsql_stmt_execute() when postgres is down). (gyp at balabit dot hu)</li>
+</ul>
+
+<li>Phar extension:
+<ul>
+  <li><?php bugfix(54247); ?> (format-string vulnerability on Phar). (Felipe) (CVE-2011-1153)</li>
+  <li><?php bugfix(53541); ?> (format string bug in ext/phar). (crrodriguez at opensuse dot org, Ilia)</li>
+  <li><?php bugfix(53898); ?> (PHAR reports invalid error message, when the directory does not exist). (Ilia)</li>
+</ul>
+</li>
+
+<li>PHP-FPM SAPI:
+<ul>
+  <li>Enforce security in the fastcgi protocol parsing. (ef-lists at email dotde)</li>
+  <li><?php bugfix(53777); ?> (php-fpm log format now match php_error log format). (fat)</li>
+  <li><?php bugfix(53527); ?> (php-fpm --test doesn't set a valuable return value). (fat)</li>
+  <li><?php bugfix(53434); ?> (php-fpm slowlog now also logs the original request). (fat)</li>
+</ul>
+</li>
+
+<li>Readline extension:
+<ul>
+  <li><?php bugfix(53630); ?> (Fixed parameter handling inside readline() function). (jo at feuersee dot de, Ilia)</li>
+</ul>
+</li>
+
+<li>Reflection extension:
+<ul>
+  <li><?php bugfix(53915); ?> (ReflectionClass::getConstant(s) emits fatal error on constants with self::). (Gustavo)</li>
+</ul>
+</li>
+
+<li>Shmop extension:
+<ul>
+  <li><?php bugfix(54193); ?> (Integer overflow in shmop_read()). (Felipe) Reported by Jose Carlos Norte (CVE-2011-1092)</li>
+</ul>
+</li>
+
+<li>SNMP extension:
+<ul>
+  <li><?php bugfix(51336); ?> (snmprealwalk (snmp v1) does not handle end of OID tree correctly). (Boris Lytochkin)</li>
+</ul>
+</li>
+
+<li>SOAP extension:
+<ul>
+  <li>Fixed possible crash introduced by the NULL poisoning patch. (Mateusz Kocielski, Pierre)</li>
+</ul>
+</li>
+
+<li>SPL extension:
+<ul>
+  <li>Fixed memory leak in DirectoryIterator::getExtension() and SplFileInfo::getExtension(). (Felipe)</li>
+  <li><?php bugfix(53914); ?> (SPL assumes HAVE_GLOB is defined). (Chris Jones)</li>
+  <li><?php bugfix(53515); ?> (property_exists incorrect on ArrayObject null and 0 values). (Felipe)</li>
+  <li>Added SplFileInfo::getExtension(). FR <?php bugl(48767); ?>. (Peter Cowburn)</li>
+</ul>
+</li>
+
+<li>SQLite3 extension:
+<ul>
+  <li>Fixed memory leaked introduced by the NULL poisoning patch. (Mateusz Kocielski, Pierre)</li>
+  <li>Fixed memory leak on SQLite3Result and SQLite3Stmt when assigning to a reference. (Felipe)</li>
+  <li>Add SQlite3_Stmt::readonly() for checking if a statement is read only. (Scott)</li>
+  <li>Implemented FR <?php bugl(53466); ?> (SQLite3Result::columnType() should return false after all of the rows have been fetched). (Scott)</li>
+</ul>
+</li>
+
+<li>Streams:
+<ul>
+  <li><?php bugfix(54092); ?> (Segmentation fault when using HTTP proxy with the FTP wrapper). (Gustavo)</li>
+  <li><?php bugfix(53913); ?> (Streams functions assume HAVE_GLOB is defined). (Chris Jones)</li>
+  <li><?php bugfix(53903); ?> (userspace stream stat callback does not separate the elements of the returned array before converting them). (Gustavo)</li>
+  <li>Implemented FR <?php bugl(26158); ?> (open arbitrary file descriptor with fopen). (Gustavo)</li>
+</ul>
+</li>
+
+<li>Tokenizer Extension
+<ul>
+  <li><?php bugfix(54089); ?> (token_get_all() does not stop after __halt_compiler). (Ilia)</li>
+</ul>
+</li>
+
+<li>XSL extension:
+<ul>
+  <li>Fixed memory leaked introduced by the NULL poisoning patch. (Mateusz Kocielski, Pierre)</li>
+</ul>
+</li>
+
+<li>Zip extension:
+<ul>
+  <li>Added the filename into the return value of stream_get_meta_data(). (Hannes)</li>
+  <li><?php bugfix(53923); ?> (Zip functions assume HAVE_GLOB is defined). (Adam)</li>
+  <li><?php bugfix(53893); ?> (Wrong return value for ZipArchive::extractTo()). (Pierre)</li>
+  <li><?php bugfix(53885); ?> (ZipArchive segfault with FL_UNCHANGED on empty archive). (Stas, Maksymilian Arciemowicz). (CVE-2011-0421)</li>
+  <li><?php bugfix(53854); ?> (Missing constants for compression type). (Richard, Adam)</li>
+  <li><?php bugfix(53603); ?> (ZipArchive should quiet stat errors). (brad dot froehle at gmail dot com, Gustavo)</li>
+  <li><?php bugfix(53579); ?> (stream_get_contents() segfaults on ziparchive streams). (Hannes)</li>
+  <li><?php bugfix(53568); ?> (swapped memset arguments in struct initialization). (crrodriguez at opensuse dot org)</li>
+  <li><?php bugfix(53166); ?> (Missing parameters in docs and reflection definition). (Richard)</li>
+  <li><?php bugfix(49072); ?> (feof never returns true for damaged file in zip). (Gustavo, Richard Quadling)</li>
+</ul>
+</li>
+
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.3.5"></a><!-- {{{ 5.3.5 -->
 <h3>Version 5.3.5</h3>
 <b>06-Jan-2011</b>
