@@ -54,6 +54,11 @@
      
      <p>All PHP users should note that the PHP 5.2 series is NOT supported anymore. All users
      are strongly encouraged to upgrade to PHP 5.3.6.</p>
+
+     <p>For a full list of changes in PHP 5.3.6, see the
+     <a href="/ChangeLog-5.php#5.3.6">ChangeLog</a>. For source downloads
+     please visit our <a href="/downloads.php">downloads page</a>, Windows
+     binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
     </div>
   </content>
 </entry>
