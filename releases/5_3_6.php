@@ -40,7 +40,7 @@ with Visual Studio C++ 6. It is impossible to maintain a high quality
 and safe build of PHP for Windows using this unmaintained compiler.</p>
 
 <p>For Apache SAPIs (php5_apache2_2.dll), be sure that you use a Visual 
-Studio C++ 9 version of Apache. We recommend the PHP builds as provided 
+Studio C++ 9 version of Apache. We recommend the Apache builds as provided 
 by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other 
 SAPI (CLI, FastCGI via mod_fcgi, FastCGI with IIS or other FastCGI capable 
 server), everything works as before. Third party extension providers 
