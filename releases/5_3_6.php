@@ -45,7 +45,7 @@ by <a href="http://www.apachelounge.com/">ApacheLounge</a>. For any other
 SAPI (CLI, FastCGI via mod_fcgi, FastCGI with IIS or other FastCGI capable 
 server), everything works as before. Third party extension providers 
 must rebuild their extensions to make them compatible and loadable with 
-the Visual Studio C++9 builds that we no longer provide.</p>
+the Visual Studio C++9 builds that we now provide.</p>
 
 <p>All PHP users should note that the PHP 5.2 series is NOT supported 
 anymore. All users are strongly encouraged to upgrade to PHP 5.3.6.</p>
