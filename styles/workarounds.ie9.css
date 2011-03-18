@@ -1,0 +1,6 @@
+#confTeaser td {
+    /* No version of IE currently available (including IE 9) supports setting
+     * the display on td elements to anything other than table-cell. The float
+     * masks the problem without really fixing it. */
+    float: left;
+}

@@ -47,6 +47,10 @@ if (isset($shortname) && $shortname) {
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css<?php echo $v?>" media="screen" />
  <![endif]-->
 
+ <!--[if lte IE 9]>
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie9.css<?php echo $v?>" media="screen" />
+ <![endif]-->
+
  <!--[if IE]>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <![endif]-->

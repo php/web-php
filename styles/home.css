@@ -161,3 +161,17 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
+
+#confTeaser {
+    margin-right: 340px;
+    border: 1px solid #c3add9;
+    padding: 12px;
+}
+
+#confTeaser td {
+    display: block;
+}
+
+#confTeaser td:first-child {
+    font-weight: bold;
+}
