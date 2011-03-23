@@ -455,7 +455,7 @@ function manual_note_display($date, $name, $text, $id)
     $text    = clean_note($text);
 
     // If the viewer is logged in, show admin options
-    if (isset($_COOKIE['MAGIC_COOKIE']) && $id) {
+    if (isset($_COOKIE['IS_DEV']) && $id) {
     
         $admin = "\n  <span class=\"admin\">\n   " .
         
