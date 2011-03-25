@@ -76,6 +76,7 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'no'    => 'Norwegian',
     'pt'    => 'Portuguese',
     'ru'    => 'Russian',
+    'sr'    => 'Serbian',
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
     'sv'    => 'Swedish',
