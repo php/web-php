@@ -13,7 +13,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.6"></a><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
-<b>10-March-2010</b>
+<b>17-March-2011</b>
 
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.4. (Ilia)</li>
