@@ -1,5 +1,5 @@
 <?php
-// $Id: mirror.php 219812 2006-09-11 21:01:19Z goba $
+// $Id$
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
@@ -19,10 +19,10 @@ site_header("Get Involved", array("current" => "community"));
 
 <h2>Contributing</h2>
 <p style="margin: 5px; padding: 5px;">
-    The PHP project is so much more then just the scripting language on which it’s
+    The PHP project is so much more than just the scripting language on which it is
     focused.  It is a vibrant community of developers scratching related itches,
     hoping their work will benefit others. PHP.net hosts a set of projects
-    focused around the "flagship product,” the PHP language, surrounding it
+    focused around the "flagship product," the PHP language, surrounding it
     with sub-projects for documentation, website maintenance, adding extra
     functionality with extensions, and so on.
 </p>
@@ -36,24 +36,24 @@ site_header("Get Involved", array("current" => "community"));
     capacities, from user-contributed notes to the manual to new killer language
     features. There is always room for new contributors though, and PHP.net really
     needs your help so it can continue the success of past years.  In this article
-    we’ll explore how the PHP.net project works and how you can contribute to it.
+    we will explore how the PHP.net project works and how you can contribute to it.
 </p>
 
 
 <p style="margin: 5px; padding: 5px;">
-    There are a lot of ways you can contribute to and influence the project;
+    There are a lot of ways in which you can contribute to and influence the project;
     participating on mailing lists, filing bug reports, and adding helpful notes
     to the manual are all examples of valuable contributions. You don't have to
-    develop a new JIT compiler to contribute, or even know the first thing of
+    develop a new JIT compiler, or even know the first thing of
     developing a language for that matter, to be able to contribute back. Whatever
     you fancy, I am sure you can find a challenging task on PHP.net to solve. Or
     are you maybe just looking for some brain-dead task on which to spend time -
-    but still want to make a difference? We have several of those too...
+    but still want to make a difference? We have several of those too!
 </p>
 
 
 <p style="margin: 5px; padding: 5px;">
-    Before we go deeper into ways you can contribute and how to do so, let’s take
+    Before we go deeper into ways you can contribute and how to do so, let's take
     a step back and look at who actually leads the development and how things are
     done within PHP.net.
 </p>
@@ -66,8 +66,8 @@ site_header("Get Involved", array("current" => "community"));
     freedom to work on exactly the things we care about and want to do.
     There is no one person in charge or policing of the project, it is a community
     effort. All decisions are made in the open after the contributors
-    participating in the discussion reach “general consensus” on the topic or - if
-    all else fails - after a vote on the subject. As within any community, there
+    participating in the discussion reach "general consensus" on the topic or - if
+    all else fails - after a vote on the subject. As within any community, there;
     are members that have earned karma and respect through contributions to the
     project, and their meaning and views usually carry more weight than a total
     stranger from whom no one has heard before. Karma, like trust, needs to be
@@ -78,7 +78,7 @@ site_header("Get Involved", array("current" => "community"));
 <p style="margin: 5px; padding: 5px;">
     To gain karma you basically need to prove to the community that you aren't
     just a nut-job and show that you can be trusted to think not only about today,
-    but tomorrow as well. Being active on the developers’ mailing lists,
+    but tomorrow as well. Being active on the developers' mailing lists,
     digging into bug reports, posting patches and unit tests, and generally
     trying to help out and contribute to the project are great ways to gain a
     lot of karma points very quickly.
@@ -90,7 +90,7 @@ site_header("Get Involved", array("current" => "community"));
     documentation, to the PHP language itself) have
     long-time members which could be considered the "leaders" of the respective
     projects by the community, but that really doesn't mean anything other than
-    "if no one knows the answer, ask him.” The "leader" isn't going to tell you to
+    "if no one knows the answer, ask him." The "leader" isn't going to tell you to
     do anything, other than maybe ask you to revert a bad commit, but anyone can
     do that. It is totally up to you to decide whether or not to work on some
     things. In the end, the final say on the matter is up to the contributor who
@@ -108,18 +108,18 @@ site_header("Get Involved", array("current" => "community"));
     to the mailing list and follow the discussions - and chime in if you have
     something to add. Please take a few moments to familiarize yourself with the
     mailing list "rules" before you go all crazy on the lists.  For the rules that
-    are generally followed on all PHP mailing lists, please see
-    [[http://php.net/reST/php-src/README.MAILINGLIST_RULES]].
+    are generally followed on all PHP mailing lists, please see the
+    <a href="http://php.net/reST/php-src/trunk_README.MAILINGLIST_RULES">Mailinglist Rules</a>.
 </p>
 
 
 <p style="margin: 5px; padding: 5px;">
     Although most of the PHP internals contributors make their living writing PHP
     applications, feedback from other users is crucial to the development of the
-    language, so your voice does matter. Keep in mind, however, that flaming
+    language; your voice does matter. Keep in mind, however, that flaming
     and/or talking down to the developers that spend most of their free time
     working on the project may not exactly be the best approach to get your point
-    across. Take a look at [[http://php.net/mailinglists]] for a list of the most
+    across. Take a look at the <a href="http://php.net/mailinglists"]]">Mailing Lists</a> for the most
     popular mailing lists and see if any of them interest you, then sign up!
 </p>
 
@@ -130,11 +130,11 @@ site_header("Get Involved", array("current" => "community"));
     features are often simply committed directly to SVN without asking or telling
     anyone. These are typically things for which a developer working on an
     external application saw a need and decided to add, in case anyone else might
-    need it in the future. PHP has a great peer-review process so it’s very hard
+    need it in the future. PHP has a great peer review process so it's very hard
     to "sneak" things in. Every commit to SVN is reviewed by quite a lot of people
     who are interested in what is going on - or who simply enjoy reading code. If
     a reviewer discovers issues with the commit, he or she will send a quick reply
-    to the commit and discuss it on the developers list. Often the peer review
+    to the commit email and discuss it on the developers list. Often the peer review
     results in extending the new feature and/or fixing unexpected behaviour, but
     it can also result in removal of the feature as a whole if the community
     doesn't see any need for it.
@@ -144,7 +144,7 @@ site_header("Get Involved", array("current" => "community"));
 <p style="margin: 5px; padding: 5px;">
     To help streamline part of the decision process and keep track of ideas,
     proposals, and TODO lists, PHP has a wiki located at
-    [[http://wiki.php.net]]. This has proven to be a valuable resource when
+    <a href="http://wiki.php.net">wiki.php.net</a>. This has proven to be a valuable resource when
     developing new features, creating RFCs, and getting approval for things
     before wasting time on a rejected feature. Discussions on controversial
     features pop up on the mailing lists regularly, but with the help of the
@@ -162,7 +162,7 @@ site_header("Get Involved", array("current" => "community"));
 
 <h3>So, how to get involved?</h3>
 <p style="margin: 5px; padding: 5px;">
-There are a lot of ways you can contribute to the project, it simply depends on what you fancy.
+    There are a lot of ways you can contribute to the project, it simply depends on what you fancy.
 </p>
 <ul>
     <li>
@@ -200,7 +200,7 @@ There are a lot of ways you can contribute to the project, it simply depends on 
     you could potentially fix, or perhaps for which you could write a unit test.
     Sending several patches to the mailing lists will quickly show that you are
     interested and serious about your desire to contribute. Eventually someone
-    will get annoyed with the amount time they must spend to commit your patches
+    will get annoyed with the amount of time they must spend to commit your patches
     for you, and will probably respond with something along the lines of, "Stop
     bothering me. Do it yourself!" and ask you to submit the SVN account form.
     Mission accomplished!
@@ -218,21 +218,21 @@ There are a lot of ways you can contribute to the project, it simply depends on 
             &lt;listname&gt;-subscribe@lists.php.net. For example if you want to register
             for the PHP internals developers discussion list, send an email to
             internals-subscribe@lists.php.net.
-            Alternatively, filling out the form at [[http://php.net/mailinglists]] will
+            Alternatively, filling out the form at <a href="http://php.net/mailinglists">php.net/mailinglists</a> will
             register you for the list (or lists) you choose. That page also lists some of
             the most popular mailing lists and describes the intention of the lists.
             Again, remember to refer to the rules prior to joining the discussion, or you
-            may be scorned for a faux-pas such as top-posting your reply to a thread.
+            may be scorned for a faux-pas such as top-posting your reply to a thread - oh the horror!
         </p>
     </li>
     <li>
     <h4>The Bug Tracker</h4>
         <p style="margin: 5px; padding: 5px;">
-            Filing a bug report is an art. It isn’t very complicated, but you do
+            Filing a bug report is an art. It isn't very complicated, but you do
             have to think about what you are reporting. Quickly looking through
             the existing reports to see if your issue has already been reported
-            will take you less then five minutes, and chances are quite good that
-            you aren’t the first one to identify the issue. However, if you are,
+            will take you less than five minutes, and the chances are quite good that
+            you aren't the first one to identify the issue. However, if you are,
             we greatly appreciate your time and effort in reporting it. If at all
             possible, provide a short example of how the issue can be reproduced,
             and mention what you expected to happen versus what actually happened.
@@ -241,9 +241,9 @@ There are a lot of ways you can contribute to the project, it simply depends on 
             there is no registration or login required to file a bug report, a
             valid email address must be provided just in case the developers need
             more information from you, as well as for you to receive status
-            updates on your report. A page explaining how to file a “report that
-            someone will want to help fix” is available on
-            [[http://bugs.php.net/how-to-report.php]]. Please read through it
+            updates on your report. A page explaining how to file a "report that
+            someone will want to help fix" is available on
+            <a href="http://bugs.php.net/how-to-report.php">bugs.php.net/how-to-report.php</a>. Please read through it
             before filing a bug report for the first time.
         </p>
     </li>
@@ -252,22 +252,22 @@ There are a lot of ways you can contribute to the project, it simply depends on 
         <p style="margin: 5px; padding: 5px;">
             Unsure which task to tackle first? Stuck on a problem? Need a
             quick brainstorming session? IRC is a very convenient way to get
-            help quickly for smaller things, such as “where was the SVN module
-            for zyx?” or if you simply want to run an idea by people to get
-            their opinions - or even just to hang out. There aren’t any
-            “official” IRC channels for the PHP project, but a good chunk of
+            help quickly for smaller things, such as "where was the SVN module
+            for zyx?" or if you simply want to run an idea by people to get
+            their opinions - or even just to hang out. There aren't any
+            "official" IRC channels for the PHP project, but a good chunk of
             contributors hang out on EFNet on the #php.pecl, #php.doc and #pear
             channels. The mailing list archives also contain a lot of information
             and are definitely worth searching for ideas and inspiration. If
             you think your question can benefit others coming after you,
-            consider asking it on the mailing list so the next person doesn’t
+            consider asking it on the mailing list so the next person doesn't
             have to ask it again.
         </p>
     </li>
     <li>
         <h4>Less Is More</h4>
         <p style="margin: 5px; padding: 5px;">
-            When you are ready to contribute to the project please don’t try
+            When you are ready to contribute to the project please don't try
             to tackle the biggest issues and expect to fix them right away.
             Start with smaller tasks and learn the ways of the project and
             participate in discussions on the mailing lists. Larger issues
@@ -287,7 +287,7 @@ There are a lot of ways you can contribute to the project, it simply depends on 
 <h3>So what kind of projects does PHP.net have?</h3>
 <ul>
     <li>PHP (the language)</li>
-    <li>PECL (various additional PHP functionality in form of extensions)</li>
+    <li>PECL (various additional PHP functionality in the form of extensions)</li>
     <li>PEAR (reusable PHP component library)</li>
     <li>Websites (www.php.net, qa.php.net, doc.php.net, edit.php.net, etc.)</li>
     <li>Documentation (PHP, PECL, PEAR, etc.)</li>
@@ -296,10 +296,10 @@ There are a lot of ways you can contribute to the project, it simply depends on 
 </ul>
 
 <p style="margin: 5px; padding: 5px;">
-If you can't find something on which to work within PHP.net, you will have a
-hard time finding it elsewhere. Introducing every project is beyond the scope
-of this article, but we’ll cover some of the projects that don’t have entry
-points that are too steep for newcomers.
+    If you can't find something on which to work within PHP.net, you will have a
+    hard time finding it elsewhere. Introducing every project is beyond the scope
+    of this article, but we'll cover some of the projects that don't have entry
+    points that are too steep for newcomers.
 </p>
 
 
@@ -326,8 +326,8 @@ points that are too steep for newcomers.
 <p style="margin: 5px; padding: 5px;">
     A web application, called "PhD Online Editor" (PhD O.E), which aims to help
     documentation editors focus on the content itself, rather than Docbook and XML
-    logistics, is under development at [[https://edit.php.net]]. It is getting
-    more and more popular, especially for newcomers who aren’t comfortable with
+    logistics, is under development at <a href="https://edit.php.net">edit.php.net</a>. It is getting
+    more and more popular, especially for newcomers who aren't comfortable with
     Docbook. It has a very rich interface and desktop application feeling to it,
     and abstracts most of the XML magic from the contributor. One of the goals
     of PhD O.E. is to get more people involved with the documentation effort,
@@ -335,7 +335,7 @@ points that are too steep for newcomers.
     application. Modification, validation, translation, creation of new files,
     and everything else you need for writing documentation is possible without
     an SVN account. When saving changes, a patch will be created and saved to
-    the "patch queue,” while pending approval by someone with SVN karma to
+    the "patch queue," while pending approval by someone with SVN karma to
     commit the changes. PhD O.E. also bundles a variety of scripts to ensure the
     docs use a consistent structure, allow the contributor to view undocumented
     functions, and check the translation status of an entry (among other things).
@@ -344,8 +344,8 @@ points that are too steep for newcomers.
 <p style="margin: 5px; padding: 5px;">
     The team is also developing a Docbook rendering engine, called "PHP-based
     Docbook Rendering" (PhD), to transform the Docbook XML into various different
-    formats, such as html, CHM, PDF, Unix manual pages, and the online format you
-    see while browsing [[http://php.net/manual]]. The application was written with
+    formats, such as HTML, CHM, PDF, Unix manual pages, and the online format you
+    see while browsing the <a href="http://php.net/manual">PHP Manual</a>. The application was written with
     performance in mind and can render the entire PHP manual in less then five
     minutes, whereas the previous tool chain would take over an hour for the same
     task. PhD has received a lot of attention from various people and projects
@@ -356,12 +356,12 @@ points that are too steep for newcomers.
 
 <p style="margin: 5px; padding: 5px;">
     Last, but not least: the team also maintains a website on
-    [[http://doc.php.net]] which aggregates translation statistics, tutorials, and
-    the documentation HOWTO.
+    <a href="http://doc.php.net">doc.php.net</a> which aggregates translation 
+    statistics, tutorials, and the documentation HOWTO.
 </p>
 
 <p style="margin: 5px; padding: 5px;">
-    The project offers much more then just documentation, and is probably the
+    The project offers much more than just documentation, and is probably the
     project to which it is easiest to start contributing. If you enjoy working
     with XML, PHP, JS, documentation, writing articles, or simply want to dig
     into the PHP internals from a different angle, this is the place to be.
@@ -370,31 +370,52 @@ points that are too steep for newcomers.
 
 <h3>The Websites</h3>
 <p style="margin: 5px; padding: 5px;">
-No surprise there, the webmaster team maintains several websites, and is
-responsible for maintaining the mirroring infrastructure and related tasks.
-The websites contain a lot of information; everything from user group meet-ups
-and conference listings, to tips &amp; tricks and documentation, and
-everything between. It is also the primary public source for release
-information, as well as the general entry point for people looking into PHP.
+    No surprise there, the webmaster team maintains several websites, and is
+    responsible for maintaining the mirroring infrastructure and related tasks.
+    The websites contain a lot of information; everything from user group meet-ups
+    and conference listings, to tips &amp; tricks and documentation, and
+    everything between. It is also the primary public source for release
+    information, as well as the general entry point for people looking into PHP.
 </p>
 
 <p style="margin: 5px; padding: 5px;">
-To get up and running is very simple: just follow the points on [[http://wiki.php.net/web/mirror]] and you are all set. Once you have poked around a little you can look into the other websites, like qa.php.net, master.php.net and pecl.php.net.
+    To get up and running is very simple: just follow the points on 
+    <a href="http://wiki.php.net/web/mirror">wiki.php.net/web/mirror</a>
+    and you are all set. Once you have poked around a little you can look 
+    into the other websites, like qa.php.net, master.php.net and pecl.php.net.
 </p>
 
 <p style="margin: 5px; padding: 5px;">
-Recently, work on redesigning the main website from the ground-up was started. Unfortunately, this effort has stalled a bit over the past several months due to a lack of contributors interested in being actively involved. The idea is simple: design a completely new layout and refactor the current content to make it more accessible.
+    Recently, work on redesigning the main website from the ground-up was started. 
+    Unfortunately, this effort has stalled a bit over the past several months 
+    due to a lack of contributors interested in being actively involved. 
+    The idea is simple: design a completely new layout and refactor the current 
+    content to make it more accessible.
 </p>
 
 <p style="margin: 5px; padding: 5px;">
-Joining the redesign effort is a great entry point for those interested in markup, CSS, and general website development. Check out [[http://wiki.php.net/web/redesign]] and contact php-webmaster@lists.php.net if you are interested in contributing. You will be welcomed with roses!
+    Joining the redesign effort is a great entry point for those interested in 
+    markup, CSS, and general website development. Check out 
+    <a href="http://wiki.php.net/web/redesign">wiki.php.net/web/redesign</a>
+    and contact php-webmaster@lists.php.net if you are interested in contributing. 
+    You will be welcomed with roses!
 </p>
 
 
 
 <h3>Conclusion</h3>
 <p style="margin: 5px; padding: 5px;">
-PHP.net has a lot of areas to which you can contribute: everything from hardcore development to managing user-contributed notes in the manual; from debugging issues in bug reports to writing articles about new features for the manual. In this article we only covered the tip of the iceberg, mentioning only a small sample of concrete projects that do a lot more than initially meets the eye, and which welcome all the help they can get. We have also touched on how to influence the direction of the project, how to participate in discussions around the project, and ways you can make a difference. I hope this article has inspired you to get involved with the project,or has at least given you some idea on how things work and what you can do if you ever do decide you want to get involved!
+    PHP.net has a lot of areas to which you can contribute: everything from 
+    hardcore development to managing user-contributed notes in the manual; 
+    from debugging issues in bug reports to writing articles about new features 
+    for the manual. In this article we only covered the tip of the iceberg, 
+    mentioning only a small sample of concrete projects that do a lot more than 
+    initially meets the eye, and which welcome all the help they can get. 
+    We have also touched on how to influence the direction of the project, 
+    how to participate in discussions around the project, and ways you can make 
+    a difference. I hope this article has inspired you to get involved with the 
+    project, or has at least given you some idea on how things work and what you 
+    can do if you ever do decide you want to get involved!
 </p>
 
 
