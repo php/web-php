@@ -13,7 +13,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.6"></a><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
-<b>17-March-2011</b>
+<b>17-Mar-2011</b>
 
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.4. (Ilia)</li>
@@ -306,7 +306,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.4"></a><!-- {{{ 5.3.4 -->
 <h3>Version 5.3.4</h3>
-<b>09-December-2010</b>
+<b>09-Dec-2010</b>
 
 <ul>
 <li>Upgraded bundled Sqlite3 to version 3.7.3. (Ilia)</li>
@@ -783,7 +783,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <hr />
 <a name="5.3.3"></a><!-- {{{ 5.3.3 -->
 <h3>Version 5.3.3</h3>
-<b>22-July-2010</b>
+<b>22-Jul-2010</b>
 <ul>
 <li>Upgraded bundled sqlite to version 3.6.23.1. (Ilia)</li>
 <li>Upgraded bundled PCRE to version 8.02. (Ilia)</li>
@@ -967,7 +967,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.14"></a><!-- {{{ 5.2.14 -->
 <h3>Version 5.2.14</h3>
-<b>22-July-2010</b>
+<b>22-Jul-2010</b>
 <ul>
 <li>Reverted bug fix #49521 (PDO fetchObject sets values before calling constructor). (Felipe)</li>
 </ul>
@@ -1055,7 +1055,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.2"></a><!-- {{{ 5.3.2 -->
 <h3>Version 5.3.2</h3>
-<b>04-March-2010</b>
+<b>04-Mar-2010</b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -1219,7 +1219,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.13"></a><!-- {{{ 5.2.13 -->
 <h3>Version 5.2.13</h3>
-<b>25-February-2010</b>
+<b>25-Feb-2010</b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -1284,7 +1284,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.1"></a><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
-<b>19-November-2009</b>
+<b>19-Nov-2009</b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -1449,7 +1449,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.3.0"></a><!-- {{{ 5.3.0 -->
 <h3>Version 5.3.0</h3>
-<b>30-June-2009</b>
+<b>30-Jun-2009</b>
 <ul>
 
 	<li>Upgraded bundled PCRE to version 7.9. (Nuno)</li>
@@ -2165,7 +2165,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.12"></a><!-- {{{ 5.2.12 -->
 <h3>Version 5.2.12</h3>
-<b>17-December-2009</b>
+<b>17-Dec-2009</b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -2250,7 +2250,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.11"></a><!-- {{{ 5.2.11 -->
 <h3>Version 5.2.11</h3>
-<b>16-September-2009</b>
+<b>16-Sep-2009</b>
 <ul>
 <li>Security Fixes
 	<ul>
@@ -2342,7 +2342,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.10"></a><!-- {{{ 5.2.10 -->
 <h3>Version 5.2.10</h3>
-<b>18-June-2009</b>
+<b>18-Jun-2009</b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -2465,7 +2465,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.9"></a><!-- {{{ 5.2.9 -->
 <h3>Version 5.2.9</h3>
-<b>26-February-2009</b>
+<b>26-Feb-2009</b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -2539,7 +2539,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.8"></a><!-- {{{ 5.2.8 -->
 <h3>Version 5.2.8</h3>
-<b>08-December-2008</b>
+<b>08-Dec-2008</b>
 <ul>
 	<li>Reverted bug fix <?php bugfix(42718); ?> that broke magic_quotes_gpc (Scott)</li>
 </ul>
@@ -2550,7 +2550,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.7"></a><!-- {{{ 5.2.7 -->
 <h3>Version 5.2.7</h3>
-<b>04-December-2008</b>
+<b>04-Dec-2008</b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -2896,7 +2896,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.5"></a><!-- {{{ 5.2.5 -->
 <h3>Version 5.2.5</h3>
-<b>08-November-2007</b>
+<b>08-Nov-2007</b>
 <ul>
 	<li>Security Fixes
 		<ul>
@@ -2983,7 +2983,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <a name="5.2.4"></a><!-- {{{ 5.2.4 -->
 <h3>Version 5.2.4</h3>
-<b>30-August-2007</b>
+<b>30-Aug-2007</b>
 <ul>
 <li>Security Fixes
 	<ul>
