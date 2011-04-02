@@ -6,11 +6,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
 // Try to make this page non-cached
 header_nocache();
-if (time() < 1301738460 && !isset($_COOKIE["done"])) {
-    setcookie("done", 1);
-    header("Location: http://rubyonrails.org/download");
-    exit;
-}
 
 $SIDEBAR_DATA = '
 <h3>Binaries for other systems</h3>
