@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Italian phpDay 2011</title>
+  <id>http://www.php.net/archive/2011.php#id2011-04-04-1</id>
+  <published>2011-04-04T17:23:04+02:00</published>
+  <updated>2011-04-04T17:23:04+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2011-05-12</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-04-04-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpday.it/" title="Italian phpDay">phpday2011.png</default:newsImage>
+  <link href="http://www.phpday.it/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The <a href="http://www.grusp.it">Italian PHP user group GrUSP</a> is pleased to
+     announce the 8th edition of the <a href="http://www.phpday.it">Italian phpDay</a>
+     conference, taking place from May 12th to 14th, 2011 in Verona. We will
+     show new development traits, best-practices and success cases related to
+     quality, revision control, test-driven development, continuous
+     integration and so on. There are also talks about design, project
+     management, agile and various php-related technologies.
+     </p>
+     
+     <p>
+     phpDay is the first historic Italian conference dedicated solely to PHP
+     development, technologies and management. It is aimed to IT managers,
+     developers and innovators. Each year it renews the opportunity to link
+     to new business partners.
+     </p>
+     
+     <p>
+     <a href="http://www.phpday.it">phpDay</a> introduces the most important
+     international PHP gurus to italian
+     and european developers. Tree tracks, three days of talks and workshops:
+     you can learn best-practices, good methodologies, case histories about
+     quality assurance, and have a broader view on development and innovation
+     with PHP.
+     </p>
+    </div>
+  </content>
+</entry>
