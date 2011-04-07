@@ -14,6 +14,7 @@
 
 // Ensure that our environment is set up
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/languages.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/loadavg.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 
@@ -78,8 +79,11 @@ if (preg_match("!(.*\\.php)3$!", $URI, $array)) {
 // ============================================================================
 // BC: handle moving english manual down into its own directory (also supports
 //     default language manual accessibilty on mirror sites through /manual/filename)
-if (preg_match("!^manual(/[^/]*)$!", $URI, $array)) {
-    mirror_redirect("/manual/$LANG$array[1]");
+// @todo do we rely on this? how about removing it...
+if (preg_match("!^manual/([^/]*)$!", $URI, $array)) {
+    if (!isset($INACTIVE_ONLINE_LANGUAGES[$array[1]])) {
+        mirror_redirect("/manual/$LANG/$array[1]");
+    }
 } elseif (preg_match("!^manual/html/([^/]+)$!", $URI, $array)) {
     $array[1] = preg_replace("!.html$!", ".php", $array[1]);
     mirror_redirect("/manual/$LANG/$array[1]");
