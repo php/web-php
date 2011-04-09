@@ -40,6 +40,7 @@ $LANGUAGES = array(
     'ro'    => 'Romanian',
     'ru'    => 'Russian',
     'fa'    => 'Persian',
+    'sr'    => 'Serbian',
     'sk'    => 'Slovak',
     'sl'    => 'Slovenian',
     'es'    => 'Spanish',
