@@ -89,7 +89,12 @@ for ($i=1; $i<=$SHOW_COUNT; ++$i) {
 list($v, $a) = each($RELEASES[5]); 
 
 ?>
-<h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?></h1>
+<?php if ($i == 1) { ?>
+    <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Current stable)</h1>
+<?php } else { ?>
+    <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Old stable)</h1>
+    <strong>This version is no longer supported by PHP.net</strong>
+<?php } ?>
 
 <h2>Complete Source Code</h2>
 <ul>
@@ -104,35 +109,14 @@ foreach($a["source"] as $rel) {
 ?>
 </ul>
 
-<h2>Windows Binaries</h2>
-<p>
+<hr />
 <?php
-if(isset($a["windows"])) {
-    echo 'The PECL bundle is no longer built for the 5.2.x series. However, the 5.2.6 PECL package does work with this release.';
-}
-?>
-</p>
-<ul>
-<?php
-if(isset($a["windows"])) {
-    foreach($a["windows"] as $rel) {
-        echo " <li>\n  ";
-        download_link($rel["filename"], $rel["name"]); echo " - {$rel["date"]}<br />\n";
-        echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-        echo isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong> {$rel["note"]}</p>": "";
-        echo " </li>\n";
-    }
-} else {
-    echo "<li>For the Windows binaries and installer, see <a href='http://windows.php.net/download/'>http://windows.php.net/download/</a>.</li>\n";
-}
-?>
-</ul>
-<?php
-if ($i < $SHOW_COUNT) {
-  echo "<hr />\n";
-}
 } // for
 ?>
+<h2>Windows Binaries</h2>
+<p>
+For the Windows binaries and installer, see <a href='http://windows.php.net/download/'>http://windows.php.net/download/</a>.
+</p>
 
 <?php
 site_footer();
