@@ -759,6 +759,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
                 "title" => $item["title"],
                 "id"    => $id,
                 "permlink" => $permlink,
+                "date"     => $newsdate,
             );
             continue;
         }
