@@ -49,60 +49,16 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
-// This goes to the left sidebar of the front page
-$SIDEBAR_DATA = '
-<h3>What is PHP?</h3>
-<p>
- <acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
- is a widely-used general-purpose scripting language that is
- especially suited for Web development and can be embedded into HTML.
- If you are new to PHP and want to get some idea
- of how it works, try the <a href="/tut.php">introductory tutorial</a>.
- After that, check out the online <a href="/docs.php">manual</a>,
- and the example archive sites and some of the other resources
- available in the <a href="/links.php">links section</a>.
-</p>
-<p>
- Ever wondered how popular PHP is? see the
- <a href="/usage.php">Netcraft Survey</a>.
-</p>
-
-<h3><a href="/thanks.php">Thanks To</a></h3>
-<ul class="simple">
- <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
- <li><a href="http://www.directi.com/">Directi</a></li>
- <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
- <li><a href="http://www.servercentral.net/">Server Central</a></li>
- <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
- <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
- <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
- <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
- <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
- <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
- <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
- <li><a href="http://www.rackspace.com/">Rackspace</a></li>
- <li><a href="http://www.eukhost.com/">EUKhost</a></li>
-</ul>
-<h3>Related sites</h3>
-<ul class="simple">
- <li><a href="http://www.apache.org/">Apache</a></li>
- <li><a href="http://www.mysql.com/">MySQL</a></li>
- <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
- <li><a href="http://www.zend.com/">Zend Technologies</a></li>
-</ul>
-<h3>Community</h3>
-<ul class="simple">
- <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
- <li><a href="http://ostg.com/">OSTG</a></li>
-</ul>
-
-<h3>Syndication</h3>
-<p>
- You can grab our news as an <a href="/feed.atom">Atom feed</a>.
-</p>';
+$news = "<ul>";
+foreach (print_news($NEWS_ENTRIES, "frontpage", 5, null, true) as $entry) {
+    $news .= <<< EOT
+<li>[{$entry["date"]}] <a href="{$entry["permlink"]}">{$entry["title"]}</a></li>
+EOT;
+}
+$news .= "</ul>";
+$news .= '<p class="center"><a href="/archive/index.php">News Archive</a></p>';
 
 $MIRROR_IMAGE = '';
-
 // Try to find a sponsor image in case this is an official mirror
 if (is_official_mirror()) {
 
@@ -114,7 +70,7 @@ if (is_official_mirror()) {
         if (file_exists("backend/mirror." . $ext)) {
 
             // Add text to rigth sidebar
-            $MIRROR_IMAGE = "<div align=\"center\"><h3>This mirror sponsored by:</h3>\n";
+            $MIRROR_IMAGE = "<h3 class=\"fat-border\">This mirror sponsored by:</h3>\n";
 
             // Create image HTML code
             $img = make_image(
@@ -135,7 +91,7 @@ if (is_official_mirror()) {
 
             // End mirror specific part
             $MIRROR_IMAGE .= '<a href="' . mirror_provider_url() . '">' .
-                             $img . "</a></div><br /><hr />\n";
+                            $img . "</a><br />\n";
 
             // We have found an image
             break;
@@ -143,30 +99,32 @@ if (is_official_mirror()) {
     }
 }
 
-/* {{{ Generate latest release info */
-/* NOTE: You are editing the wrong file, you should be in include/version.inc
- *  For RC: See the $PHP_x_RC variable
- *  For STABLE: See the $PHP_x_VERSION/_DATE/_MD5 variables
- */
-$PHP_5_STABLE = array();
-$PHP_5_RC     = array();
-$rel          = $rc           = "";
-
-$SHOW_COUNT = 2;
-for ($i=1; $i<=$SHOW_COUNT; ++$i) {
-list($PHP_5_STABLE, ) = each($RELEASES[5]);
-
-$minor = round($PHP_5_STABLE, 1);
-$rel .= <<< EOT
-    <li class="php5"><a href="/downloads.php#v5">Current PHP $minor Stable: <span class="release">$PHP_5_STABLE</span></a></li>
-EOT;
+$confs = "";
+if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
+    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
+    foreach($CONF_TEASER as $k => $a) {
+        if (is_array($a) && count($a)) {
+            $confs .= "<h4 class=\"fat-border\">" .$categories[$k]."</h4><ul>\n";
+            $count = 0;
+            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
+            foreach($a as $url => $title) {
+                if ($count++ >= 4) {
+                    break;
+                }
+                $confs .= '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
+            }
+            $confs .= "</ul>";
+        } // if set
+    }
 }
 
+/* {{{ Generate latest release info */
 /* Do we have any release candidates to brag about? */
 $RCS = array(
   $PHP_5_2_RC => $PHP_5_2_RC_DATE,
   $PHP_5_3_RC => $PHP_5_3_RC_DATE,
 );
+$rc = "";
 if (isset($RCS)) {
     foreach ((array)$RCS as $r => $d) {
         if ($r) {
@@ -175,29 +133,45 @@ if (isset($RCS)) {
     }
 }
 
-$rel = <<< EOT
-  <div id="releaseBox">
-   <h4>Stable Releases</h4>
-   <ol id="releases">
-    $rel
-   </ol>
-  </div>\n
-EOT;
-
 if (!empty($rc)) {
 	$rel .= <<< EOT
-  <div id="candidateBox">
-   <h4><a href="http://qa.php.net/rc.php">Release Candidates</a></h4>
+   <h3 class="fat-border"><a href="http://qa.php.net/rc.php">Release Candidates</a></h3>
    <ol id="candidates">
 $rc
    </ol>
-  </div>\n
 EOT;
 }
-/* }}} */
+$thanks = <<< EOT
+<h3 class="fat-border"><a href="/thanks.php">Thanks To</a></h3>
+<ul class="simple">
+ <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
+ <li><a href="http://www.directi.com/">Directi</a></li>
+ <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
+ <li><a href="http://www.servercentral.net/">Server Central</a></li>
+ <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
+ <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
+ <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
+ <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
+ <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
+ <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
+ <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
+ <li><a href="http://www.rackspace.com/">Rackspace</a></li>
+ <li><a href="http://www.eukhost.com/">EUKhost</a></li>
+</ul>
+EOT;
 
-// Prepend mirror image & latest releases to sidebar text
-$RSIDEBAR_DATA = $MIRROR_IMAGE . $rel . $RSIDEBAR_DATA;
+/* }}} */
+// This goes to the left sidebar of the front page
+$SIDEBAR_DATA = '
+<h3>Recent news</h3>
+' . $news . '
+' . $MIRROR_IMAGE . '
+' . $rel . '
+' . $confs . '
+' . $thanks . '
+';
+
+
 
 // Write out common header
 site_header("Hypertext Preprocessor",
@@ -229,37 +203,10 @@ site_header("Hypertext Preprocessor",
     )
 );
 
-if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
-    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
-    echo '  <div id="confTeaser">' . "\n";
-    echo "   <table>\n";
-    foreach($CONF_TEASER as $k => $a) {
-        if (is_array($a) && count($a)) {
-            echo "    <tr>\n     <td valign='top' style='white-space: nowrap'>".$categories[$k].":</td>\n";
-            echo "     <td valign='top'>\n";
-            echo '      <ul class="' .$k. '">' . "\n";
-            $count = 0;
-            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
-            foreach($a as $url => $title) {
-                if ($count++ >= 4) {
-                    break;
-                }
-                echo '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
-            }
-            echo "      </ul>\n     </td>\n    </tr>\n";
-        } // if set
-    }
-    echo "   </table>\n  </div>\n\n<br />\n";
-}
 
 
-/* Where the h*ll did all the news go?
- * See archives/2007.xml
- */
-print_news($NEWS_ENTRIES, "frontpage");
 ?>
 
-<p class="center"><a href="/archive/index.php">News Archive</a></p>
 
 <?php
 site_footer(
