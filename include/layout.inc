@@ -869,19 +869,19 @@ function doc_toc($lang) {
         $file = dirname(__FILE__) . "/../manual/en/toc/index.inc";
     }
     require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
+
     echo "<dl>\n";
     doc_toc_list($lang, $TOC, "getting-started");
-    doc_toc_list($lang, $TOC, "features");    
-
+    doc_toc_list($lang, $TOC, "langref");
     echo "</dl>\n";
 
     echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "langref", array('limit' => 13));
+    doc_toc_list($lang, $TOC, "security");
+    doc_toc_list($lang, $TOC, "features");
     echo "</dl>\n";
 
     echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "funcref", array('limit' => 5));
-    doc_toc_list($lang, $TOC, "security", array('limit' => 5));    
+    doc_toc_list($lang, $TOC, "funcref");
     echo "</dl>\n";
 
     echo "<ul>";
@@ -895,19 +895,12 @@ function doc_toc($lang) {
     echo "</ul>\n";
 
 }
-function doc_toc_list($lang, $index, $file, $options = null) {
+function doc_toc_list($lang, $index, $file) {
     include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
 
     doc_toc_title($lang, $index, $file);
-    $i = 0;
     foreach($TOC as $entry) {
-        // If a limit was passed in and we have exceeded that limit then stop outputting items.
-        if($options !== null && isset($options['limit']) && $i > $options['limit']) {
-            echo "\t<dd><a href='/manual/$lang/$file.php'>View more ..</a></dd>\n";
-            break;
-        }
         echo "\t<dd><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></dd>\n";
-        $i++;
     }
 }
 function doc_toc_title($lang, $index, $file, $elm = "dt") {
