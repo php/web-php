@@ -124,7 +124,7 @@ $RCS = array(
   $PHP_5_2_RC => $PHP_5_2_RC_DATE,
   $PHP_5_3_RC => $PHP_5_3_RC_DATE,
 );
-$rc = "";
+$rel = $rc = "";
 if (isset($RCS)) {
     foreach ((array)$RCS as $r => $d) {
         if ($r) {
