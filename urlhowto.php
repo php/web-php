@@ -154,6 +154,22 @@ function a($href) {
  <a href="/my.php">your own My PHP.net settings</a>.
 </p>
 
+<h2>PHP Developer shortcuts</h2>
+<ul>
+ <li>Snap downloads: <a href="http://snaps.php.net/?53">http://snaps.php.net/?53</a>
+  (ex: latest 5.3 snap. Use ?trunk or ?latest for latest trunk)
+ </li>
+ <li>Changelog information: <a href="http://php.net/changelog">http://php.net/changelog</a>
+  (ex: latest PHP changelog. php5news = latest PHP 5 NEWS, phptrunknews = latest PHP trunk NEWS)
+ </li>
+ <li>Bugs: <a href="http://php.net/42">http://php.net/42</a>
+  (any numeric value redirects to said bug # at bugs.php.net)
+ </li>
+ <li>reST based README info: <a href="http://php.net/reST/">http://php.net/reST/</a>
+ (lists several README files)
+ </li>
+</ul>
+
 <h2>Even smarter tricks</h2>
 
 <p>
