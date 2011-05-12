@@ -18,6 +18,17 @@ $SIDEBAR_DATA='
  from our <a href="/docs.php">documentation page</a>.
 </p>
 
+<h3>Other formats</h3>
+<p>
+ The manual is also available via *nix style man pages. To
+ install and use:
+</p>
+<ul class="toc">
+ <li>Install: pear install doc.php.net/pman</li>
+ <li>Upgrade: pear upgrade doc.php.net/pman</li>
+ <li>Example usage: pman strlen</li>
+</ul>
+
 <h3>HTML Help viewers</h3>
 <ul class="toc">
  <li>Microsoft Windows has a reader built in.</li>
