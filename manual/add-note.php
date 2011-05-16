@@ -240,6 +240,29 @@ else {
   <strong>Support questions</strong>. See the <a href="/support.php">support page</a>
   for available options. In other words, do not ask questions within the user notes.
  </li>
+ <li>
+  <strong>References to other notes or authors</strong>.  This is not a forum, so we
+  neither encourage nor permit discussions here.  Further, if a note is referenced
+  directly, and that note is later removed or modified, it can cause confusion.
+ </li>
+ <li>
+  <strong>Code collaboration or improvements</strong>. This is not to suggest that
+  your code modification is not good, perhaps even great, but this just isn't the
+  place to show it off.  We don't even accept all original code submissions.  Your
+  best bet is to publish it on your blog or via another medium.
+ </li>
+ <li>
+  <strong>Links to your website, blog, code, or a third-party website</strong>. We do,
+  on occasion, permit the posting of famous websites (such as faqs.org or the MySQL
+  manual), but links to other sites, no matter how well-intended, will likely be removed.
+ </li>
+ <li>
+  <strong>SPAM</strong>. This should go without saying, but apparently some folks
+  out there just don't get it.
+ </li>
+ <li>
+  <strong>Your disdain for PHP and/or its maintainers</strong>. Go learn FORTRAN instead.
+ <li>
 </ul>
 
 <h3>Additional information</h3>
