@@ -114,7 +114,7 @@ if ($process) {
     
         // Split the note by whitespace, and check length
         foreach (preg_split("/\\s+/", $note) as $chunk) {
-            if (strlen($chunk) > 70) {
+            if (strlen($chunk) > 120) {
                 $error = "Your note contains a bit of text that will result in a line that is too long, even after using wordwrap().";
                 break;
             }
