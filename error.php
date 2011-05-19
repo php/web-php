@@ -420,8 +420,9 @@ $uri_aliases = array (
 
 $external_redirects = array(
     "php4news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_4_4/NEWS?view=markup",
-    "php5news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_3/NEWS?view=markup",
-    "php6news"    => "http://svn.php.net/viewvc/php/php-src/trunk/NEWS?view=markup",
+    "php5news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_4/NEWS?view=markup", // BC
+    "php53news"   => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_3/NEWS?view=markup",
+    "php54news"   => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_4/NEWS?view=markup",
     "phptrunknews"=> "http://svn.php.net/viewvc/php/php-src/trunk/NEWS?view=markup",
     "projects"    => "http://freshmeat.net/tags/php",
     "pear"        => "http://pear.php.net/",
