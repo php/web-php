@@ -25,7 +25,7 @@ $OLDRELEASES = array (
           'date' => '06 January 2011',
         ),
       ),
-      'date' => NULL,
+      'date' => '06 January 2011',
       'museum' => false,
     ),
     '5.3.4' => 
@@ -51,7 +51,7 @@ $OLDRELEASES = array (
           'date' => '09 December 2010',
         ),
       ),
-      'date' => NULL,
+      'date' => '09 December 2010',
       'museum' => false,
     ),
     '5.2.16' => 
@@ -129,7 +129,7 @@ $OLDRELEASES = array (
           'date' => '22 July 2010',
         ),
       ),
-      'date' => NULL,
+      'date' => '22 July 2010',
       'museum' => false,
     ),
     '5.2.14' => 
