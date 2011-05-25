@@ -262,7 +262,7 @@ else {
  </li>
  <li>
   <strong>Your disdain for PHP and/or its maintainers</strong>. Go learn FORTRAN instead.
- <li>
+ </li>
 </ul>
 
 <h3>Additional information</h3>
