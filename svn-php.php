@@ -23,6 +23,7 @@ $SIDEBAR_DATA = '
 site_header("Using SVN for PHP Development", array("current" => "FIXME"));
 
 $groups = array(
+  "none" => "Choose One",
   "php"  => "PHP Group",
   "pear" => "PEAR Group",
   "pecl" => "PECL Group",
@@ -72,7 +73,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     if (empty($_POST['yesno']) || $_POST['yesno'] != 'yes') {
         $error .= "You did not fill the form out correctly. <br />";
     }
-    if (empty($_POST['group']) || !isset($groups[$_POST['group']])) {
+    if (empty($_POST['group']) || $_POST['group'] === 'none' || !isset($groups[$_POST['group']])) {
         $error .= "You did not fill out where to send the request. <br />";
     }
     if (!isset($_POST['guidelines']) || !$_POST['guidelines']) {
