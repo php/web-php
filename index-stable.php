@@ -82,6 +82,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
  <li><a href="http://www.rackspace.com/">Rackspace</a></li>
  <li><a href="http://www.eukhost.com/">EUKhost</a></li>
+ <li><a href="http://www.micfo.com/">micfo</a></li>
  <li><a href="http://www.sohosted.nl/webhosting/">SoHosted Webhosting</a></li>
 </ul>
 <h3>Related sites</h3>

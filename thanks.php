@@ -85,6 +85,11 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
+ <a href="http://www.micfo.com/">micfo</a> provides a server and bandwidth
+ for various php.net services.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.
