@@ -272,10 +272,11 @@ if (isset($_POST['maillist'])) {
       FALSE, FALSE, TRUE, "php.pdo"
     ),
 
-    'PHP website mailing lists',
+    'PHP internal website mailing lists',
     array (
-      'php-webmaster', 'Webmaster discussion',
-      'List for discussing and maintaining the php.net web infrastructure; this is not for PHP <a href="/support.php">support</a> questions',
+      'php-webmaster', 'PHP php.net internal infrastructure discussion',
+      'List for discussing and maintaining the php.net web infrastructure.<br />
+       For general PHP support questions, see "General Mailing Lists" or the <a href="/support.php">support page</a>',
       FALSE, FALSE, FALSE, "php.webmaster"
     ),
 
