@@ -257,6 +257,16 @@ else {
   manual), but links to other sites, no matter how well-intended, will likely be removed.
  </li>
  <li>
+  <strong>Complaints that your notes keep getting deleted</strong>. Sometimes the content
+  of your note may be fine, but we might just hate your face for no good reason. (More
+  likely, though, you didn't bother to read this page, and you violated one of these
+  rules.)
+ </li>
+ <li>
+  <strong>Notes in languages other than English</strong>. 不 gach duine понимает
+  el lenguaje जिसमें Sie sprechen.
+ </li>
+ <li>
   <strong>SPAM</strong>. This should go without saying, but apparently some folks
   out there just don't get it.
  </li>
