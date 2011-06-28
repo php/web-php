@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom"> 
+  <title>PHP 5.4 alpha1 released</title> 
+  <id>http://www.php.net/archive/2011.php#id2011-06-28-1</id> 
+  <published>2011-06-28T23:34:42+02:00</published> 
+  <updated>2011-06-28T23:34:42+02:00</updated> 
+  <category term="releases" label="New PHP release"/> 
+  <link href="http://www.php.net/index.php#id2011-06-28-1" rel="alternate" type="text/html"/> 
+  <link href="http://www.php.net/archive/2011.php#id2011-06-28-1" rel="via" type="text/html"/> 
+  <content type="xhtml"> 
+    <div xmlns="http://www.w3.org/1999/xhtml"> 
+     <p>
+      The PHP development team is proud to announce the first PHP 5.4 <a href="http://qa.php.net/">alpha release</a>.
+      PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
+      Read the <a href="http://svn.php.net/viewvc/php/php-src/tags/php_5_4_0alpha1/NEWS?view=markup">NEWS</a>
+      file for a complete list of changes.
+     </p>
+     <p>
+      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+     </p>
+     <p>
+      This alpha release exists to encourage users to identify bugs, and
+      to ensure that all new features and backward compatibility breaks are evaluated
+      and documented before PHP 5.4.0 is released. Please report findings to
+      the <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or
+      the <a href="http://bugs.php.net/">PHP bug tracker</a>. Windows binaries
+      can be downloaded from the <a href="http://windows.php.net/qa/">
+      Windows QA site</a>.
+     </p> 
+     <p>
+      Here is an incomplete list of changes:
+     </p>
+     <ul> 
+       <li>Added: Traits language construct</li>
+       <li>Added: Array dereferencing support</li>
+       <li>Added: DTrace support</li>
+       <li>Improved: Improved Zend Engine memory usage and performance</li>
+       <li>Moved: ext/sqlite moved to pecl (sqlite3 support is still built-in)</li>
+     </ul>
+     <p>
+      Please note that some legacy features have been removed:
+     </p>
+     <ul>
+       <li>Removed: break/continue $var syntax</li>
+       <li>Removed: register_globals, allow_call_time_pass_reference, and register_long_arrays ini options</li>
+       <li>Removed: session_is_regisitered(), session_registered(), and session_unregister()</li>
+     </ul>
+     <p>
+         This is the first release that adopts the
+         <a href="https://wiki.php.net/rfc/releaseprocess/">releaseprocess RFC</a>.
+         The next alpha will be released within four weeks. The PHP 5.4 feature
+         set and API has not been finalized.
+     </p> 
+    </div> 
+  </content> 
+</entry>
