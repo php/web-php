@@ -226,3 +226,8 @@ PHP                                                                        NEWS
     . #51336 (snmprealwalk (snmp v1) does not handle end of OID tree correctly)
     . #53862 (snmp_set_oid_output_format does not allow returning to default)
 
+## UNSORTED ##
+
+- Fixed PDO objects binary incompatibility. (Dmitry)
+- Fixed bug #52211 (iconv() returns part of string on error). (Felipe)
+
