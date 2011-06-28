@@ -774,7 +774,7 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
     </div>
 </div>
 
-<hr class="newsSep" />
+<hr />
 
 EOT;
     }
