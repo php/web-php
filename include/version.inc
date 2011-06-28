@@ -17,12 +17,8 @@
  */
 
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.0alpha1';
+$PHP_5_4_RC = '5.4.0alpha1'; // set to false when there is no RC
 $PHP_5_4_RC_DATE = "28 June 2011";
-$PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "82bbe879b5379c60a68ee0ba025326a0",
-                       "tar.gz"        => "3e448c52ad779b5af17d9622ab87ac6d",
-);
 
 
 /* PHP 5.3 Release */
@@ -36,10 +32,6 @@ $PHP_5_3_MD5     = array(
                        "tar.bz2"       => "2286f5a82a6e8397955a0025c1c2ad98",
                        "tar.gz"        => "88a2b00047bc53afbbbdf10ebe28a57e",
 );
-
-/* PHP 5.2 Release */
-$PHP_5_2_RC      = false; // '5.2.15RC2'; // false;
-$PHP_5_2_RC_DATE = "02 December 2010";
 
 $PHP_5_2_VERSION         = "5.2.17";
 $PHP_5_2_DATE            = "06 January 2011";

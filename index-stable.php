@@ -166,7 +166,7 @@ EOT;
 
 /* Do we have any release candidates to brag about? */
 $RCS = array(
-  $PHP_5_2_RC => $PHP_5_2_RC_DATE,
+  $PHP_5_4_RC => $PHP_5_4_RC_DATE,
   $PHP_5_3_RC => $PHP_5_3_RC_DATE,
 );
 if (isset($RCS)) {
