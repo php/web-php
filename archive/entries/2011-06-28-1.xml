@@ -13,7 +13,7 @@
      <p>
       The PHP development team is proud to announce the first PHP 5.4 <a href="http://qa.php.net/">alpha release</a>.
       PHP 5.4 includes new language features and removes several legacy (deprecated) behaviors.
-      Read the <a href="http://svn.php.net/viewvc/php/php-src/tags/php_5_4_0alpha1/NEWS?view=markup">NEWS</a>
+      Read the <a href="/releases/NEWS_5_4_0_alpha1.txt">NEWS</a>
       file for a complete list of changes.
      </p>
      <p>
