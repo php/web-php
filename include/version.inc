@@ -62,23 +62,6 @@ $PHP_5_2_WINDOWS_NOTE_ZIP = "";
 
 $RELEASES = array(
     5 => array(
-	    $PHP_5_4_RC => array(
-	        "announcement" => true,
-	        "source" => array(
-	           array(
-	               "filename" => "php-$PHP_5_4_RC.tar.bz2",
-	               "name"     => "PHP $PHP_5_4_RC (tar.bz2)",
-	               "md5"      => $PHP_5_4_MD5["tar.bz2"],
-	               "date"     => $PHP_5_4_DATE,
-	           ),
-	           array(
-	               "filename" => "php-$PHP_5_4_RC.tar.gz",
-	               "name"     => "PHP $PHP_5_4_RC (tar.gz)",
-	               "md5"      => $PHP_5_4_MD5["tar.gz"],
-	               "date"     => $PHP_5_4_DATE,
-	           ),
-	       ),
-	    ),
         $PHP_5_3_VERSION => array(
             "announcement" => true,
             "source" => array(
