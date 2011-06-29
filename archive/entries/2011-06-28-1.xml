@@ -3,7 +3,7 @@
   <title>PHP 5.4 alpha1 released</title> 
   <id>http://www.php.net/archive/2011.php#id2011-06-28-1</id> 
   <published>2011-06-28T23:34:42+02:00</published> 
-  <updated>2011-06-28T23:34:42+02:00</updated> 
+  <updated>2011-06-29T12:51:34-07:00</updated> 
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/> 
   <link href="http://www.php.net/index.php#id2011-06-28-1" rel="alternate" type="text/html"/> 
@@ -39,7 +39,7 @@
        <li>Moved: ext/sqlite moved to pecl (sqlite3 support is still built-in)</li>
      </ul>
      <p>
-      Please note that some legacy features have been removed:
+      Please note that some legacy features have been removed, including:
      </p>
      <ul>
        <li>Removed: break/continue $var syntax</li>
