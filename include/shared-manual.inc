@@ -254,17 +254,19 @@ function manual_navbar($location = "top")
     }
     echo " </span>\n <hr />\n";
 
-    // Provide last updated information on this page
-    echo " <span class=\"lastupdated\">Last updated: {$PGI['lastmod']}</span>\n";
+
+    // Quick access to filename
+    $filename = $PGI['this'][0];
+
+    // Provide last updated and online editor information on this page
+    $elink = '[<a href="https://edit.php.net/?project=PHP&perm=/{$PGI['head'][1]}/{$filename}">edit</a>]';
+    echo " <span class=\"lastupdated\">{$elink} Last updated: {$PGI['lastmod']}</span>\n";
 
     // Print out language switch on top of manual pages
     echo " <div class=\"langchooser\">\n";
     if ($location != 'bottom') {
         
         $links = array();
-
-        // Quick access to filename
-        $filename = $PGI['this'][0];
         
         // Disable all languages without online content        
         // Add a dropdown item for all languages left
