@@ -49,7 +49,8 @@ $minute = rand(0, 59);
 </p>
 
 <p>
- Official mirror program participants are required to use PHP 5.1.6 or better.
+ Official mirror program participants are required to use PHP 5.2.0 or greater,
+ with a preference towards PHP 5.3.
  Set it up as an Apache module with the settings
  <a href="#settings">outlined below</a>, or in any other Apache connected
  way (CGI, FastCGI, etc), considering the requested PHP settings outlined
