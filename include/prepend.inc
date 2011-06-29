@@ -177,11 +177,11 @@ function myphpnet_beta() {
         return (bool)$_GET["beta"];
     }
 
-    if ($MYSITE == "http://prototype.php.net/" || $MYSITE == "http://docs.php.net/") {
-        return true;
+    if (isset($MYPHPNET[4])) {
+        return (bool)$MYPHPNET[4];
     }
 
-    if (isset($MYPHPNET[4]) && $MYPHPNET[4]) {
+    if ($MYSITE == "http://prototype.php.net/" || $MYSITE == "http://docs.php.net/") {
         return true;
     }
 
