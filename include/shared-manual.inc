@@ -259,7 +259,7 @@ function manual_navbar($location = "top")
     $filename = $PGI['this'][0];
 
     // Provide last updated and online editor information on this page
-    $elink = '[<a href="https://edit.php.net/?project=PHP&perm=/{$PGI['head'][1]}/{$filename}">edit</a>]';
+    $elink = '[<a href="https://edit.php.net/?project=PHP&perm=' . $PGI['head'][1] . '/' . $filename. '">edit</a>]';
     echo " <span class=\"lastupdated\">{$elink} Last updated: {$PGI['lastmod']}</span>\n";
 
     // Print out language switch on top of manual pages
