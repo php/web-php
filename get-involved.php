@@ -150,6 +150,8 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
+<hr />
+
 <h2>Contributing</h2>
 <p style="margin: 5px; padding: 5px;">
     The PHP project is so much more than just the scripting language on which it is
