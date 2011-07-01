@@ -113,7 +113,7 @@ function manual_header()
 			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
 		),
 		"headtags" => array(
-			'<meta http-equiv="Content-language" value="' . $lang . '" />
+			'<meta http-equiv="Content-language" content="' . $lang . '" />
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
@@ -132,10 +132,10 @@ $(document).ready(function() {
 	$(".refsect1 h3.title").each(function() {
         url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).text();
 		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
-		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
+		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
 	});
 	$("#usernotes .head").each(function() {
-		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' /></a> ");
+		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
 	});
 	$(".refsect1 h3.title .toggler").click(function() {
 		$(this).parent().siblings().slideToggle("slow");
@@ -259,7 +259,7 @@ function manual_navbar($location = "top")
     $filename = $PGI['this'][0];
 
     // Provide last updated and online editor information on this page
-    $elink = '[<a href="https://edit.php.net/?project=PHP&perm=' . $PGI['head'][1] . '/' . $filename. '">edit</a>]';
+    $elink = '[<a href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $filename. '">edit</a>]';
     echo " <span class=\"lastupdated\">{$elink} Last updated: {$PGI['lastmod']}</span>\n";
 
     // Print out language switch on top of manual pages
