@@ -16,6 +16,108 @@ site_header("Get Involved", array("current" => "community"));
 </p>
 </aside>
 
+<h2>Improving PHP</h2>
+<p>
+    On Linux you'll need have the following
+    <ul>
+        <li>autoconf</li>
+        <li>automake</li>
+        <li>gcc</li>
+        <li>bison</li>
+        <li>flex</li>
+        <li>re2c</li>
+    </ul>
+</p>
+<p>
+Once you have those tools installed you'll need to checkout PHP from SVN, configure and build it;
+<ul>
+    <li>svn co https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php54</li>
+    <li>cd php54</li>
+    <li>./buildconf</li>
+    <li>./configure (see the <a href="#config.nice">shell script helper below)</a></li>
+    <li>make all test</li>
+</ul>
+</p>
+
+<p>While `make all test` is running we recommend you go out for a run,
+it can take a while. When you come back, submit
+the test results, but then try to track down one of the failed tests and
+figure out why it failed. The tests are very simple. In the failed test
+summary at the end a failed test shows up as:<br />
+<em>CLI php -m [sapi/cli/tests/018.phpt]</em>
+<br />
+That's a short description of the test and the filename of the test itself.
+For a failed tests, we create some files in the test dir. Go to sapi/cli/tests
+and you will find these files:
+<ul>
+    <li>018.phpt - the full test file</li>
+    <li>018.php - the php code that was run for the test</li>
+    <li>018.out - the actual output from the test</li>
+    <li>018.exp - the output that we expected</li>
+    <li>018.diff - the diff between the actual and expected</li>
+</ul>
+Once you have fixed something, you can re-run the tests for just that set of 
+tests with:
+<ul>
+    <li>make test TESTS=sapi/cli</li>
+</ul>
+</p>
+<p>
+To run more tests, run ./configure and enable as many extensions as possible.
+</p>
+<p id="config.nice">
+Here is the shell script I use on an Ubuntu box:
+<pre>
+#! /bin/sh
+'./configure' \
+'--with-apxs2=/usr/bin/apxs2' \
+'--with-curlwrappers' \
+'--with-gd' \
+'--with-jpeg-dir=/usr' \
+'--with-png-dir=/usr' \
+'--with-vpx-dir=/usr' \
+'--with-freetype-dir=/usr' \
+'--with-t1lib=/usr' \
+'--enable-gd-native-ttf' \
+'--enable-exif' \
+'--with-config-file-path=/etc/php5/apache2' \
+'--with-config-file-scan-dir=/etc/php5/apache2/conf.d' \
+'--with-mysql=/usr' \
+'--with-zlib' \
+'--with-zlib-dir=/usr' \
+'--with-gettext' \
+'--with-kerberos' \
+'--with-imap-ssl' \
+'--with-mcrypt=/usr/local' \
+'--with-iconv' \
+'--with-ldap=/usr' \
+'--enable-sockets' \
+'--with-openssl' \
+'--with-pspell' \
+'--with-pdo-mysql=/usr' \
+'--with-pdo-sqlite' \
+'--enable-soap' \
+'--enable-xmlreader' \
+'--with-xsl' \
+'--enable-ftp' \
+'--enable-cgi' \
+'--with-curl=/usr' \
+'--with-tidy' \
+'--with-xmlrpc' \
+'--enable-mbstring' \
+'--enable-sysvsem' \
+'--enable-sysvshm' \
+'--enable-shmop' \
+'--with-readline' \
+'--with-mysqli=/usr/bin/mysql_config' \
+'--prefix=/usr/local' \
+"$@"
+</pre>
+<p>
+There are also README.TESTING and README.TESTING2 text files in the root
+directory if you want to learn more about the testing mechanism.
+</p>
+
 
 <h2>Contributing</h2>
 <p style="margin: 5px; padding: 5px;">
