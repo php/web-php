@@ -48,7 +48,7 @@ To actually build PHP with ext/intl support you need to configure PHP to enable 
         <li>And for extensions wrapping external libraries use <em>--with</em>-extension-name<br />
             Example;
             <ul>
-                <li>./configure --with-m--with-pgsql</li>
+                <li>./configure --with-pgsql</li>
             </ul>
         </li>
     </ul>
