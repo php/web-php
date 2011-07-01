@@ -18,18 +18,49 @@ site_header("Get Involved", array("current" => "community"));
 
 <h2>Improving PHP</h2>
 <p>
-    On Linux you'll need have the following
-    <ul>
-        <li>autoconf</li>
-        <li>automake</li>
-        <li>gcc</li>
-        <li>bison</li>
-        <li>flex</li>
-        <li>re2c</li>
-    </ul>
+    This particular article assumes you are running <i>Ubuntu Linux</i>.
 </p>
 <p>
-Once you have those tools installed you'll need to checkout PHP from SVN, configure and build it;
+    To get a working build environment you need to run the following command;
+    <ul>
+        <li>sudo apt-get build-dep php5</li>
+    </ul>
+For any extension that requires 3rd party libraries you need to install those libraries.
+The simplest way to accomplish that is to to use <em>apt-get</em> to install the Ubuntu build dependencies for that particular extension. For example, if you want to build PHP with <a href="/manual/intl">intl</a> support you have to run;
+    <ul>
+        <li>sudo apt-get build-dep php5<em>-intl</em></li>
+    </ul>
+to install the ext/intl dependencies.
+</p>
+<p>
+To actually build PHP with ext/intl support you need to configure PHP to enable it, f.e.
+    <ul>
+        <li>./configure --enable-intl</li>
+    </ul>
+    The rule of thumb for configuring PHP is;<br />
+    <ul>
+        <li>If its a pure PHP functionality use <em>--enable</em>extension-name<br />
+            Example;
+            <ul>
+                <li>./configure --enable-soap</li>
+            </ul>
+        </li>
+        <li>And for extensions wrapping external libraries use <em>--with</em>-extension-name<br />
+            Example;
+            <ul>
+                <li>./configure --with-m--with-pgsql</li>
+            </ul>
+        </li>
+    </ul>
+    But as you saw with ext/intl, rules are meant to be broken - so you <em>should</em> check <i>./configure --help</i> first.<br />
+    When PHP encounters unknown configure argument you will be notified in the end, so you can modify your arguments and re-run ./configure before executing <em>make</em>.
+</p>
+<p>
+PHP creates a script called <em>config.nice</em> after every successful <em>./configure --some --arguments</em> so you don't have to remember all the options you passed to ./configure every time you want to rebuild PHP, running <em>./config.nice</em> will do that for you
+</p>
+    
+<p>
+Once you have the build dependencies installed you'll need to checkout PHP from SVN, configure and build it;
 <ul>
     <li>svn co https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php54</li>
     <li>cd php54</li>
