@@ -66,10 +66,14 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 // Load in the user preferences
 function myphpnet_load()
 {
-    global $MYPHPNET;
+    global $MYPHPNET, $MYSITE;
 
     // Empty the preferences array
     $MYPHPNET = array(FALSE, FALSE, "NONE", 0, FALSE);
+
+    if ($MYSITE === 'http://docs.php.net/') {
+        $MYPHPNET[4] = TRUE;
+    }
 
     // If we have a cookie, set the values in the array
     if (!empty($_COOKIE['MYPHPNET'])) {
@@ -177,12 +181,12 @@ function myphpnet_beta() {
         return (bool)$_GET["beta"];
     }
 
-    if (isset($MYPHPNET[4])) {
-        return (bool)$MYPHPNET[4];
+    if ($MYSITE === 'http://prototype.php.net/') {
+        return true;
     }
 
-    if ($MYSITE == "http://prototype.php.net/" || $MYSITE == "http://docs.php.net/") {
-        return true;
+    if (isset($MYPHPNET[4])) {
+        return (bool)$MYPHPNET[4];
     }
 
     return false;
