@@ -35,7 +35,7 @@ if(strlen($l)>2) $l = substr($l,0,2); // Just take the first 2 chars.  eg. pt_BR
 $q = urlencode($q);
 $l = urlencode($l);
 
-$s = (isset($_GET['start']) && is_numeric($_GET['start']) && $_GET['start']!=0) ? (int)$_GET['start'] : 1;
+$s = (isset($_GET['start']) && is_numeric($_GET['start'])) ? (int)$_GET['start'] : 0;
 $profile = (isset($_GET['p']) && is_string($_GET['p'])) ? $_GET['p'] : 'all';
 $per_page = 10;
 
