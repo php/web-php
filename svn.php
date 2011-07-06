@@ -49,7 +49,7 @@ site_header("SVN Access", array("current" => "community"));
 </p>
 
 <ul>
- <li><i>autoconf</i>: 2.13</li>
+ <li><i>autoconf</i>: 2.13 (2.59+ for PHP 5.4+)</li>
  <li><i>automake</i>: 1.4+</li>
  <li><i>libtool</i>: 1.4.x+ (except 1.4.2)</li>
  <li><i>bison</i>: 1.28, 1.35, 1.75, 2.0 or higher</li>
@@ -69,20 +69,18 @@ site_header("SVN Access", array("current" => "community"));
  <li>
   Obtain the latest PHP source from SVN. There is a single <i>php-src</i>
   directory that contains all PHP branches and tags. To get PHP from SVN,
-  use the <i>"svn checkout http://svn.php.net/repository/php/php-src/branches/BRANCH"</i> notation. To checkout the
+  use the <i>"svn checkout https://svn.php.net/repository/php/php-src/branches/BRANCH"</i> notation. To checkout the
   latest, consider the following SVN commands:<br /><br />
-  <strong>PHP 5.2</strong>:
-  <code>svn checkout http://svn.php.net/repository/php/php-src/branches/PHP_5_2 php-src-5.2</code>
-  <br />
   <strong>PHP 5.3</strong>:
-  <code>svn checkout http://svn.php.net/repository/php/php-src/branches/PHP_5_3 php-src-5.3</code>
+  <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_3 php-src-5.3</code>
+  <br />
+  <strong>PHP 5.4</strong>:
+  <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php-src-5.4</code>
   <br /><br />
   The branch names can also be used for SVN diff and merge operations.
  </li>
 
  <li>
-  Make sure you have autoconf 2.13 or newer, automake 1.4 or newer and libtool
-  1.4.
   <div class="tip" style="margin: 10px 0 10px 20px;">
    <p>Note that certain combinations of autoconf, automake and libtool may not
    work when used together. See <a href="#buildconf_fail">below</a> for
@@ -111,7 +109,7 @@ site_header("SVN Access", array("current" => "community"));
  <a href="http://svn.php.net/">the web-based view of the SVN
  server</a> to see what is available. For example, to checkout the
  latest english version of the PHP manual:<br />
- <code>svn checkout http://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
+ <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
 </p>
 
 <a name="buildconf_fail"></a>
@@ -125,11 +123,10 @@ site_header("SVN Access", array("current" => "community"));
  will not work.
 </p>
 
-<p>The following combinations are known to work:</p>
+<p>The following combinations are known to work with PHP 5.3 and below:</p>
 <ul>
  <li>autoconf 2.13, automake 1.4 and libtool 1.4.3</li>
  <li>autoconf 2.13, automake 1.5 and libtool 1.4.3</li>
- <li>autoconf 2.63, automake 1.11 and libtool 2.2.6 (with many warnings)</li>
 </ul>
 
 <p>
