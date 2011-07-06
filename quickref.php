@@ -126,6 +126,9 @@ if (count($maybe) > 0) { $head_options = array("noindex"); }
 else { $head_options = array(); }
 
 site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
+
+$notfound_sc  = htmlspecialchars($notfound, ENT_QUOTES, 'UTF-8');
+$notfound_enc = urlencode($notfound_sc);
 ?>
 
 <h1>PHP Function List</h1>
@@ -133,25 +136,27 @@ site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
 <?php if (!empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
- Sorry, but the function <b><?php echo htmlspecialchars($notfound); ?></b>
+ Sorry, but the function <b><?php echo $notfound_sc; ?></b>
  is not in the online manual. Perhaps you misspelled it, or it is a relatively
  new function that hasn't made it into the online documentation yet. The
  following are the <?php echo count($maybe); ?> functions which seem to be
- closest in spelling to <b><?php echo htmlspecialchars($notfound); ?></b>
+ closest in spelling to <b><?php echo $notfound_sc; ?></b>
  (really good matches are in bold). Perhaps you were looking for one of these:
 </p>
 
 <?php quickref_table($maybe, false); ?>
 
+<h1>Other forms of search</h1>
+
 <p>
- If you want to search the entire PHP website for the string
- "<b><?php echo htmlspecialchars($notfound); ?></b>", then
-<?php
-    print_link('search.php?show=wholesite&amp;pattern=' .
-               urlencode(htmlspecialchars($notfound)),
-               'click here');
-?>.
+To search the string "<b><?php echo $notfound_sc; ?></b>" using other options, try searching:
 </p>
+
+<ul>
+ <li><?php print_link('search.php?show=manual&amp;pattern=' . $notfound_enc, 'Only the documentation'); ?></li>
+ <li><?php print_link('search.php?show=local&amp;pattern=' . $notfound_enc, 'Only this mirror'); ?></li>
+ <li><?php print_link('search.php?show=wholesite&amp;pattern=' . $notfound_enc, 'The entire php.net domain'); ?></li>
+</ul>
 
 <p>
  For a quick overview over all documented PHP functions,
