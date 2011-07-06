@@ -428,6 +428,10 @@ function manual_notes_load($id)
                   substr($hash, 0, 2) . "/$hash";
                   
     // Open the note file for reading and get the data (12KB)
+    // ..if it exists
+    if (!file_exists($notes_file)) {
+        return $notes;
+    }
     if ($fp = @fopen($notes_file, "r")) {
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
