@@ -87,18 +87,26 @@ function find_manual_page($lang, $keyword)
     // open the database, fall back to normal search. Use
     // open rather than popen to avoid any chance of confusion
     // when rsync updates the database
-    if (!function_exists("sqlite_open") ||
-        !file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite') ||
-        !($s = @sqlite_open($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite'))) {
+    $dbh = FALSE;
+    if (class_exists('PDO')) {
+        if (in_array('sqlite', PDO::getAvailableDrivers())) {
+            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite')) {
+                try {
+                    $dbh = new PDO( 'sqlite:' . $_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite', '', '', array( PDO::ATTR_PERSISTENT => TRUE, PDO::ATTR_EMULATE_PREPARES => TRUE) );
+                } catch (PDOException $e) {
+                    return find_manual_page_slow($lang, $keyword);
+                }
+            }
+        }
+    }
+    if (!$dbh) {
         return find_manual_page_slow($lang, $keyword);
     }
     $kw = $keyword;
     
     // Try the preferred language first, then the
     // English one in case no page is found
-    $langs = ($lang != 'en') ?
-        array(sqlite_escape_string($lang), 'en') :
-        array('en');
+    $langs = ($lang != 'en') ? array($lang, 'en') : array('en');
     
     // Reformat keyword, drop anything in parenthesis
     $keyword = str_replace('_', '-', $keyword);
@@ -110,46 +118,39 @@ function find_manual_page($lang, $keyword)
     if (strlen($keyword) == 0) {
         return "";
     }
-
-    // NB: sqlite wants ' quoted as ''
-    $keyword = sqlite_escape_string($keyword);
     
     // If there is a dot in the $keyword, then a prefix
     // is specfied, so we need to carry that on into the SQL
     // search [eg. function.echo or function.mysql-close]
-    if (strpos($keyword, ".") > 0) {
-        $SQL = "SELECT name from fs WHERE name LIKE '%$keyword.php'
-                AND lang = 'LANG_HERE' ORDER BY prio LIMIT 1";
-    
-    // Some partially specified URL is used
-    } else {
-        
-        // List a few variations, plus a metaphone version
-        // FIXME: metaphone causes too many false positives, disable for now
-        //        the similar_text() search fallback works fine (see quickref.php)
-        //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
-        $keywords = array_unique(array(
-            $keyword,
-            str_replace(' ', '',  $keyword),
-            str_replace(' ', '-', $keyword),
-            str_replace('-', '',  $keyword),
-    //        metaphone($keyword)
-        ));
-
-        // List of all the keywords in single quotes
-        $words = "'" . implode("','", $keywords) . "'";
-        
-        $SQL = "SELECT name, prio FROM fs WHERE lang = 'LANG_HERE'
-                AND keyword IN (" . $words . ") ORDER BY keyword = '$keyword' DESC, prio LIMIT 1";
-    }
 
     // Check for all the languages
     foreach ($langs as $lang) {
-        $q = @sqlite_query($s, str_replace('LANG_HERE', $lang, $SQL));
+        
+        if (strpos($keyword, ".") > 0) {
+            $SQL = "SELECT name from fs WHERE name LIKE ? AND lang = ? ORDER BY prio LIMIT 1";
+    
+            $stm = $dbh->prepare($SQL);
+            $stm->execute(array("%{$keyword}.php", $lang));
+    
+        // Some partially specified URL is used
+        } else {
+        
+            // List a few variations, plus a metaphone version
+            // FIXME: metaphone causes too many false positives, disable for now
+            //        the similar_text() search fallback works fine (see quickref.php)
+            //        if this change remains, adjust the gen-phpweb-sqlite script accordingly
+        
+            $SQL = "SELECT name, prio FROM fs WHERE lang = :lang
+                    AND keyword IN (?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
+        
+            $stm = $dbh->prepare($SQL);
+            $stm->execute(array($lang, $keyword, str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
+        }
         
         // Successful query
-        if ($q) {
-            $r = sqlite_fetch_array($q, SQLITE_NUM);
+        if ($stm) {
+            $r = $stm->fetch(PDO::FETCH_NUM);
+            
             if (isset($r[0])) {
                 if(isset($r[1]) && $r[1] > 10 && strlen($keyword) < 4) {
                     // "Match" found, but the keyword is so short
