@@ -88,6 +88,7 @@ function find_manual_page($lang, $keyword)
     // open rather than popen to avoid any chance of confusion
     // when rsync updates the database
     if (!function_exists("sqlite_open") ||
+        !file_exists($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite') ||
         !($s = @sqlite_open($_SERVER['DOCUMENT_ROOT'] . '/backend/manual-lookup.sqlite'))) {
         return find_manual_page_slow($lang, $keyword);
     }
