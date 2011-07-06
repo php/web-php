@@ -144,7 +144,9 @@ function find_manual_page($lang, $keyword)
                     AND keyword IN (?, ?, ?, ?) ORDER BY keyword = ? DESC, prio LIMIT 1";
         
             $stm = $dbh->prepare($SQL);
-            $stm->execute(array($lang, $keyword, str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
+            if ($stm) {
+                $stm->execute(array($lang, $keyword, str_replace(' ', '', $keyword), str_replace(' ', '-', $keyword), str_replace('-', '', $keyword), $keyword));
+            }
         }
         
         // Successful query
