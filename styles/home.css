@@ -162,21 +162,113 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     -webkit-border-radius: 5px;
 }
 
-#confTeaser {
-    margin-right: 340px;
-    border: 1px solid #c3add9;
-    padding: 12px;
+/* Main content area */
+
+div.home-content {
+    width: 650px;
+    padding-top: 5px;
 }
 
-#confTeaser td {
-    display: block;
+/* Announcement Area */
+
+.home .announcements {
+    width: 600px;
+    border: 1px solid #aaa;
+    background-color: #dfd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    font-family: arial;
+    margin: 0 auto;
 }
 
-#confTeaser td:first-child {
-    font-weight: bold;
+/* 2x2 Featured Content Grid */
+
+div.featured-content {
+    margin: 30px 0 30px 0;
 }
 
-.fat-border {
-    border-top: 10px solid #C3ADD9;
-    margin-top: 30px;
+div.featured-content div.feature {
+    float: left;
+    width: 270px;
+    text-align: center;
+    padding: 10px 20px 20px 20px;
+}
+
+div.featured-content div.top-left,
+div.featured-content div.top-right {
+    padding-top: 0;
+}
+
+div.featured-content div.top-left {
+    border-right: 1px solid #c3add9;
+}
+
+div.featured-content div.bottom-left {
+    border-right: 1px solid #c3add9;
+}
+
+div.featured-content div.separator {
+    float: left;
+    width: 630px;
+    margin-left: 10px;
+    border-top: 1px solid #c3add9;
+}
+
+div.featured-content span.graphic {
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    background-image: url('../images/home-sprites.png');
+}
+
+div.featured-content div.top-left span.graphic {
+    background-position: 0 0;
+}
+
+div.featured-content div.top-right span.graphic {
+    background-position: 0px -129px;
+}
+
+div.featured-content div.bottom-left span.graphic {
+    background-position: 0px -258px;
+}
+
+div.featured-content div.bottom-right span.graphic {
+    background-position: 0px -399px;
+}
+
+div.featured-content div.feature h2 {
+    line-height: 1;
+    padding-bottom: .5em;
+}
+
+div.featured-content p {
+    font-size: 1.1em;
+}
+
+/* Right-hand sidebar */
+
+div.home-sidebar {
+    float: right;
+    width: 250px;
+    padding: 5px 30px 20px 30px;
+    margin: 0 0 20px 20px;
+}
+
+div.home-sidebar h2 {
+    border-top: 6px solid #c3add9;
+    font-size: 1.5em;
+    line-height: 100%;
+    padding: 5px 0 10px 0;
+    font-weight: normal;
+}
+
+div.home-sidebar h2:first-child {
+    margin-top: 0;
+}
+
+div.home-sidebar ul {
+    margin: 0 0 30px 0;
+    padding: 0;
 }

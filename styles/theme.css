@@ -472,6 +472,23 @@ aside.tips {
     display: block;
 }
 
+/* Footer styling */
+
+footer {
+    clear: both;
+    overflow: auto;
+    background-color: #333;
+    border-top: 12px solid #c3add9;
+    border-bottom: 12px solid #c3add9;
+    padding: 1.5em 0;
+    margin-bottom: 2em;
+}
+
+footer .footer-content {
+    width: 960px;
+    margin: 0 auto;
+}
+
 footer .footmenu {
     float: right;
 }
@@ -482,19 +499,34 @@ footer .footmenu li {
     display: inline;
 }
 
-footer {
-    clear: both;
-    border-top: 3px solid #c3add9;
-    padding-top: 5px;
-}
-
 footer a {
-    color: #444;
-    border-color: #987db3;
-    font-weight: bold;
+    color: #ccc;
     margin: 0 8px;
 }
 
-footer a:hover {
-    color: #000;
+footer a:hover,
+footer a:link,
+footer a:visited {
+    color: #ccc;
+}
+
+
+/* Elephpant photo stream */
+
+div.elephpants {
+    margin: auto;
+    overflow: hidden;
+    border-bottom: 12px solid #c3add9;
+}
+
+div.elephpants div.images {
+    height: 75px;
+    width: 3000px;
+    position: relative;
+    left: -1%;
+}
+
+div.elephpants img {
+    width: 75px;
+    height: 75px;
 }

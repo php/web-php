@@ -214,6 +214,16 @@ if (isset($shortname) && $shortname) {
  </div>
 </div>
 
+<?php
+if ($config['elephpants']) {
+    print "<div class='elephpants'><div class=images>";
+    foreach ($elephpants as $image) {
+        print "<img src='$image'>";
+    }
+    print "</div></div>";
+}
+?>
+
 <div id="layout">
 <?php
 if (!empty($SIDEBAR_DATA)) {

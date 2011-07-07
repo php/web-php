@@ -49,6 +49,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
+// Prepare news headings.
 $news = "<ul>";
 foreach (print_news($NEWS_ENTRIES, "frontpage", 5, null, true) as $entry) {
     $news .= <<< EOT
@@ -58,121 +59,112 @@ EOT;
 $news .= "</ul>";
 $news .= '<p class="center"><a href="/archive/index.php">News Archive</a></p>';
 
-$MIRROR_IMAGE = '';
-// Try to find a sponsor image in case this is an official mirror
-if (is_official_mirror()) {
+// Prepare sidebar.
+$sidebar = <<< EOT
+<div class=home-sidebar>
+    <h2>Recent News</h2>
+    <ul>
+        <li>PHP 5.3.5 and 5.2.17 Released!</li>
+        <li>PHP 5.2.16 Released!</li>
+        <li>PHP 5.3.4 Released!</li>
+    </ul>
 
-    // Iterate through possible mirror provider logo types in priority order
-    $types = array("gif", "jpg", "png");
-    while (list(,$ext) = each($types)) {
+    <h2>Conferences</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+    </ul>
 
-        // Check if file exists for this type
-        if (file_exists("backend/mirror." . $ext)) {
+    <h2>User Group Events</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+    </ul>
 
-            // Add text to rigth sidebar
-            $MIRROR_IMAGE = "<h3 class=\"fat-border\">This mirror sponsored by:</h3>\n";
-
-            // Create image HTML code
-            $img = make_image(
-                'mirror.' . $ext,
-                htmlspecialchars(mirror_provider()),
-                FALSE,
-                FALSE,
-                'backend',
-                0
-            );
-
-            // Add size information depending on mirror type
-            if (is_primary_site() || is_backup_primary()) {
-                $img = resize_image($img, 125, 125);
-            } else {
-                $img = resize_image($img, 120, 60);
-            }
-
-            // End mirror specific part
-            $MIRROR_IMAGE .= '<a href="' . mirror_provider_url() . '">' .
-                            $img . "</a><br />\n";
-
-            // We have found an image
-            break;
-        }
-    }
-}
-
-$confs = "";
-if (is_array($CONF_TEASER) && count($CONF_TEASER)) {
-    $categories = array("conference" => "Upcoming conferences", "cfp" => "Calling for papers");
-    foreach($CONF_TEASER as $k => $a) {
-        if (is_array($a) && count($a)) {
-            $confs .= "<h4 class=\"fat-border\">" .$categories[$k]."</h4><ul>\n";
-            $count = 0;
-            $a = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $a);
-            foreach($a as $url => $title) {
-                if ($count++ >= 4) {
-                    break;
-                }
-                $confs .= '       <li><a href="' . $url. '">' . $title. '</a></li>' . "\n";
-            }
-            $confs .= "</ul>";
-        } // if set
-    }
-}
-
-/* {{{ Generate latest release info */
-/* Do we have any release candidates to brag about? */
-$RCS = array(
-  $PHP_5_4_RC => $PHP_5_4_RC_DATE,
-  $PHP_5_3_RC => $PHP_5_3_RC_DATE,
-);
-$rel = $rc = "";
-if (isset($RCS)) {
-    foreach ((array)$RCS as $r => $d) {
-        if ($r) {
-            $rc .= '    <li class="php5"><a href="http://qa.php.net/"><span class="release">' . "$r ($d)</span></a></li>\n";
-        }
-    }
-}
-
-if (!empty($rc)) {
-	$rel .= <<< EOT
-   <h3 class="fat-border"><a href="http://qa.php.net/rc.php">Release Candidates</a></h3>
-   <ol id="candidates">
-$rc
-   </ol>
-EOT;
-}
-$thanks = <<< EOT
-<h3 class="fat-border"><a href="/thanks.php">Thanks To</a></h3>
-<ul class="simple">
- <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
- <li><a href="http://www.directi.com/">Directi</a></li>
- <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
- <li><a href="http://www.servercentral.net/">Server Central</a></li>
- <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
- <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
- <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
- <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
- <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
- <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
- <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
- <li><a href="http://www.rackspace.com/">Rackspace</a></li>
- <li><a href="http://www.eukhost.com/">EUKhost</a></li>
- <li><a href="http://www.micfo.com/">micfo</a></li>
-</ul>
+    <h2>Thanks To</h2>
+    <ul>
+     <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
+     <li><a href="http://www.directi.com/">Directi</a></li>
+     <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
+     <li><a href="http://www.servercentral.net/">Server Central</a></li>
+     <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
+     <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
+     <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
+     <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
+     <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
+     <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
+     <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
+     <li><a href="http://www.rackspace.com/">Rackspace</a></li>
+     <li><a href="http://www.eukhost.com/">EUKhost</a></li>
+     <li><a href="http://www.micfo.com/">micfo</a></li>
+    </ul>
+</div>
 EOT;
 
-/* }}} */
-// This goes to the left sidebar of the front page
-$SIDEBAR_DATA = '
-<h3>Recent news</h3>
-' . $news . '
-' . $MIRROR_IMAGE . '
-' . $rel . '
-' . $confs . '
-' . $thanks . '
-';
+// Prepare announcements.
+$announcements = "
+<div class='announcements'>
+Upcoming conferences: PHP North West, 2011
+</div>
+";
 
+// Prepare featured content.
+$features = "
+<div class=featured-content>
+    <div class='feature top-left'>
+        <span class=graphic></span>
+        <h2>Get Involved!</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <div class='feature top-right'>
+        <span class=graphic></span>
+        <h2>Need Help?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <div class='separator'></div>
+    <div class='feature bottom-left'>
+        <span class=graphic></span>
+        <h2>PECL + PEAR</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <div class='feature bottom-right'>
+        <span class=graphic></span>
+        <h2>Website Tips/Tricks</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+        </p>
+    </div>
+    <br style='clear: both;' />
+</div>
+";
 
+// Wrap announcements and features in a content element
+$content = "
+<div class='home-content'>
+    $announcements
+    $features
+</div>
+";
 
 // Write out common header
 site_header("Hypertext Preprocessor",
@@ -201,16 +193,15 @@ site_header("Hypertext Preprocessor",
             ),
 
         ),
+        'elephpants' => true
     )
 );
 
+// Print body of home page.
+print $sidebar;
+print $content;
 
-
-?>
-
-
-<?php
+// Print the common footer.
 site_footer(
     array("atom" => "/feed.atom") // Add a link to the feed at the bottom
 );
-
