@@ -69,7 +69,7 @@ if (isset($shortname) && $shortname) {
 <?php endif ?>
  
 </head>
-<body>
+<body class="<?php print $curr; ?>">
 
 <div id="head-beta-warning">
   <div id="beta-warning">
