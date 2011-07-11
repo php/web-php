@@ -532,12 +532,18 @@ div.elephpants img {
     width: 75px;
     height: 75px;
     opacity: 0.5
+    -moz-opacity: 0.5;
+    -webkit-opacity: 0.5;
 }
 
 div.elephpants:hover img {
     opacity: 0.75;
+    -moz-opacity: 0.75;
+    -webkit-opacity: 0.75;
 }
 
 div.elephpants img:hover {
     opacity: 1;
+    -moz-opacity: 1;
+    -webkit-opacity: 1;
 }
