@@ -525,9 +525,19 @@ div.elephpants div.images {
     width: 3000px;
     position: relative;
     left: -1%;
+    background-color: #333;
 }
 
 div.elephpants img {
     width: 75px;
     height: 75px;
+    opacity: 0.5
+}
+
+div.elephpants:hover img {
+    opacity: 0.75;
+}
+
+div.elephpants img:hover {
+    opacity: 1;
 }
