@@ -215,7 +215,7 @@ if (isset($shortname) && $shortname) {
 </div>
 
 <?php
-if ($config['elephpants']) {
+if (isset($config['elephpants'])) {
     print "<div class='elephpants'><div class=images>";
     foreach ($elephpants as $image) {
         print "<img src='$image'>";

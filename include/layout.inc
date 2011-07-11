@@ -825,7 +825,7 @@ function site_header_beta($title = '', $config = array())
     // FIXME: This needs to be dynamically generated (randomized?)
     // and delivered in a single http request (e.g. using data://
     // uri scheme).
-    if ($config['elephpants']) {
+    if (isset($config['elephpants'])) {
         $elephpants = array(
             'http://farm5.static.flickr.com/4111/5037379813_c727c94d83_s.jpg',
             'http://farm6.static.flickr.com/5046/5246051917_77bd222e31_s.jpg',
