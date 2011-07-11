@@ -117,20 +117,21 @@ $features = "
         <span class=graphic></span>
         <h2>Get Involved!</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Getting involved with PHP is easier then many think.
+            Are you interested in getting involved with one of the worlds most used
+            scripting languages? We are looking for all sort of people,
+            not only developers.
+            <a href='/get-involved.php' class='readmore'>Read more...</a>
         </p>
     </div>
     <div class='feature top-right'>
         <span class=graphic></span>
         <h2>Need Help?</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Everyone needs help every once in a while, and finding it can sometimes
+            be very hard.
+            Thankfully, PHP has one of the greatest support communities outthere.
+            <a href='/support.php' class='readmore'>Read more...</a>
         </p>
     </div>
     <div class='separator'></div>
@@ -138,20 +139,20 @@ $features = "
         <span class=graphic></span>
         <h2>PECL + PEAR</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Doesn't PHP have a feature you need out of the box?
+            No worries. PHP has a large extension library, called
+            <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net'>PECL</a></abbr>, and
+            no smaller reusable class library, called
+            <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net'>PEAR</a></abbr>.
         </p>
     </div>
     <div class='feature bottom-right'>
         <span class=graphic></span>
         <h2>Website Tips/Tricks</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Everything has `an app` these days. Even the PHP manual.
+            We also have all sorts of <a href='/tips.php'>tricks</a> available to safe few extra
+            keystrokes and shave off we seconds..
         </p>
     </div>
     <br style='clear: both;' />
