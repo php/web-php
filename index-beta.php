@@ -130,7 +130,7 @@ $features = "
         <p>
             Everyone needs help every once in a while, and finding it can sometimes
             be very hard.
-            Thankfully, PHP has one of the greatest support communities outthere.
+            Thankfully, PHP has one of the greatest support communities out there.
             <a href='/support.php' class='readmore'>Read more...</a>
         </p>
     </div>
@@ -139,11 +139,11 @@ $features = "
         <span class=graphic></span>
         <h2>PECL + PEAR</h2>
         <p>
-            Doesn't PHP have a feature you need out of the box?
-            No worries. PHP has a large extension library, called
-            <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net'>PECL</a></abbr>, and
-            no smaller reusable class library, called
-            <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net'>PEAR</a></abbr>.
+            Is PHP missing a feature you need?  No worries.
+            PHP has a large extension library called
+            <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net/'>PECL</a></abbr>,
+            and a reusable class library called
+            <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net/'>PEAR</a></abbr>.
         </p>
     </div>
     <div class='feature bottom-right'>
