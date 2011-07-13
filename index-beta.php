@@ -117,10 +117,10 @@ $features = "
         <span class=graphic></span>
         <h2>Get Involved!</h2>
         <p>
-            Getting involved with PHP is easier then many think.
-            Are you interested in getting involved with one of the worlds most used
-            scripting languages? We are looking for all sort of people,
-            not only developers.
+            Getting involved with PHP is easier than you think.
+            Are you interested in helping to improve one of the world's most 
+            widely used scripting languages? We are looking for all sorts 
+            of people, not only developers.
             <a href='/get-involved.php' class='readmore'>Read more...</a>
         </p>
     </div>
@@ -128,9 +128,9 @@ $features = "
         <span class=graphic></span>
         <h2>Need Help?</h2>
         <p>
-            Everyone needs help every once in a while, and finding it can sometimes
-            be very hard.
-            Thankfully, PHP has one of the greatest support communities out there.
+            Everyone needs a little help from time to time, and finding it 
+            isn't always easy. Thankfully, PHP has one of the best support 
+            communities out there.
             <a href='/support.php' class='readmore'>Read more...</a>
         </p>
     </div>
@@ -139,7 +139,7 @@ $features = "
         <span class=graphic></span>
         <h2>PECL + PEAR</h2>
         <p>
-            Is PHP missing a feature you need?  No worries.
+            Is PHP missing a feature you need?  No worries!
             PHP has a large extension library called
             <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net/'>PECL</a></abbr>,
             and a reusable class library called
@@ -150,9 +150,10 @@ $features = "
         <span class=graphic></span>
         <h2>Website Tips/Tricks</h2>
         <p>
-            Everything has `an app` these days. Even the PHP manual.
-            We also have all sorts of <a href='/tips.php'>tricks</a> available to safe few extra
-            keystrokes and shave off we seconds..
+            Everything has 'an app' these days, even the PHP manual.
+            We also have <a href='/tips.php'>tips and tricks</a>
+            to save you keystrokes and shave a few seconds off the next
+            time you need to look up needle/haystack argument order!
         </p>
     </div>
     <br style='clear: both;' />
