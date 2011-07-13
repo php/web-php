@@ -83,6 +83,42 @@ $INACTIVE_ONLINE_LANGUAGES = array(
     'sv'    => 'Swedish',
  );
 
+// Used for bing search
+$LANGUAGES_MAP = array(
+	'en' => 'en-us',
+	'ar' => 'ar-ae',
+	'bg' => 'bg-bg',
+	'zh' => 'zh-cn',
+	'hk' => 'zh-cn',
+	'tw' => 'zh-tw',
+	'ca' => 'ca-es',
+	'cs' => 'cs-cz',
+	'da' => 'da-dk',
+	'nl' => 'nl-nl',
+	'fi' => 'fi-fi',
+	'fr' => 'fr-fr',
+	'de' => 'de-de',
+	'el' => 'el-gr',
+	'hu' => 'hu-hu',
+	'it' => 'it-it',
+	'ja' => 'ja-jp',
+	'kr' => 'ko-kr',
+	'lt' => 'lt-lt',
+	'no' => 'no-no',
+	'pl' => 'pl-pl',
+	'pt' => 'pt-pt',
+	'pt_BR' => 'pt-pt',
+	'ro' => 'ro-ro',
+	'ru' => 'ru-ru',
+	'sk' => 'sk-sk',
+	'sl' => 'sl-si',
+	'es' => 'es-es',
+	'sv' => 'sv-se',
+	'tr' => 'tr-tr',
+	'he' => 'he-il',
+	'id' => 'in-id',
+);
+
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
 
 // Convert between language codes back and forth
