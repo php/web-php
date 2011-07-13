@@ -100,15 +100,9 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
   $cnt = $pos + $i; 
 
   $d = date('j M Y', $hit['ModificationDate']);
-  $cachelink = $size = '';
+  $cachelink = '';
   if (isset($hit['Cache'])) {
-    $cachelink = " - <a href=\"{$hit['Cache']['Url']}\">Cached</a>";
-    if ($hit['Cache']['Size'] > 1024) {
-      $size = ' - ' . sprintf("%d", $hit['Cache']['Size']/1024) . 'k';
-    }
-    else {
-      $size = " - {$hit['Cache']['Size']} bytes";
-    }
+    $cachelink = " - <a href=\"{$hit['Cache']}\">Cached</a>";
   }
 
   // rewrite mirrors urls (\w\w\d? or www, but not qa, doc, gtk and ~/user)
@@ -131,7 +125,7 @@ foreach($res['ResultSet']['Result'] as $i => $hit) {
 <li>
  <p class="result">{$types[$type]}<a href="{$real_url}">{$display_title}</a></p>
  <p class="summary">{$summary}</p>
- <p class="meta">{$displayurl} - {$d}{$size}{$cachelink}</p>
+ <p class="meta">{$displayurl} - {$d} {$cachelink}</p>
 </li>
 EOB;
 }
