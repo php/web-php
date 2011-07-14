@@ -81,12 +81,12 @@ if (!empty($_FORM['pattern'])) {
 
         case "news_archive":
             $p = urlencode($_FORM['show']);
-            mirror_redirect($MYSITE . "results.php?q=title:news%2Barchive+{$ucp}&p=local");
+            mirror_redirect($MYSITE . "results.php?q=intitle:news%2Barchive+{$ucp}&p=local");
             break;
 
         case "changelogs":
             $p = urlencode($_FORM['show']);
-            mirror_redirect($MYSITE . "results.php?q=title:changelog%2Barchive+{$ucp}&p=all");
+            mirror_redirect($MYSITE . "results.php?q=intitle:ChangeLog+{$ucp}&p=local");
             break;
  
         // Covers the rest
