@@ -71,9 +71,10 @@ $end_result = $s + $res['ResultSet']['totalResultsReturned'] - ($s<2 || $res['Re
 
 $results_count = ($res['ResultSet']['totalResultsAvailable'] < 100 ? $res['ResultSet']['totalResultsAvailable'] : 'more than 100');
 
-
+$disp_start_result = $start_result + 1;
+$disp_end_result = $end_result + 1;
 echo <<<EOB
-<h2>Showing results $start_result to $end_result of $results_count</h2>
+<h2>Showing results $disp_start_result to $disp_end_result of $results_count</h2>
 <ul id="search-results">
 EOB;
 $pos = $res['ResultSet']['firstResultPosition'];
@@ -131,9 +132,8 @@ EOB;
 }
 echo <<<EOB
 </ul>
-<span style="margin-left: 3em; margin-top: 1em; float: left;"><a href="http://developer.yahoo.net/about">
-<img src="http://l.yimg.com/a/i/us/nt/bdg/websrv_120_1.gif" border="0">
-</a></span>
+<span style="margin-left: 3em; margin-top: 1em; float: left; font-family: Verdana, Tahoma, Helvetica, Arial;
+font-size: 11px; color:#555;">Results by <img src="/images/bing.png"/></span>
 <div id="results_nav"><h4>Results Page:</h4>
 <ul id="results_nav_list">
 EOB;
