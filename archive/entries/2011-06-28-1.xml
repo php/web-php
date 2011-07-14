@@ -44,7 +44,7 @@
      <ul>
        <li>Removed: break/continue $var syntax</li>
        <li>Removed: register_globals, allow_call_time_pass_reference, and register_long_arrays ini options</li>
-       <li>Removed: session_is_regisitered(), session_registered(), and session_unregister()</li>
+       <li>Removed: session_is_registered(), session_registered(), and session_unregister()</li>
      </ul>
      <p>
          This is the first release that adopts the
