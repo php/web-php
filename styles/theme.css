@@ -540,6 +540,7 @@ footer .footer-content {
 
 footer .footmenu {
     float: right;
+    margin: 0;
 }
 footer .footmenu.copyright {
     float: left;
