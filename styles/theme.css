@@ -601,3 +601,31 @@ div.elephpants img:hover {
     -moz-opacity: 1;
     -webkit-opacity: 1;
 }
+
+
+/* Standard Tables */
+
+table.standard {
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+table.standard td, table.standard th {
+    border: 1px solid #c3add9;
+}
+
+table.standard tr:nth-child(even) td {
+    background-color: #fcfcfc;
+}
+
+table.standard th {
+    font-size: 1.1em;
+    padding: 20px 10px 5px 10px;
+    color: #777;
+    font-weight: normal;
+}
+
+table.standard td {
+    padding: 5px 10px;
+    vertical-align: middle;
+}
