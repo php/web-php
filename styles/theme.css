@@ -424,15 +424,42 @@ a.genanchor:hover {
 }
 
 aside.tips {
-    padding-left: 12px;
-    padding-bottom: 12px;
-    padding-right: 12px;
+    background-color: #f9f9f9;
+    border-bottom: 12px solid #c3add9;
     float: right;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 1px solid  #C3ADD9;
+    margin: 10px 0 30px 30px;
     width: 294px;
 }
+
+aside.tips div.border {
+    float: left;
+    width: 98px;
+    border-top: 12px solid #604080;
+}
+
+aside.tips div.border.second {
+    border-color: #987db3;
+}
+
+aside.tips div.border.third {
+    border-color: #c3add9;
+}
+
+aside.tips div.inner {
+    clear: both;
+    padding: 5px 20px 15px 20px;
+}
+
+aside.tips h3 {
+    line-height: 1;
+    margin: 20px 0 10px 0;
+}
+
+aside.tips p,
+aside.tips ul {
+    margin: 10px 0;
+}
+
 
 #layout {
     padding: 25px 150px 25px 10px;

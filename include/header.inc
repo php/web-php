@@ -227,7 +227,13 @@ if (isset($config['elephpants'])) {
 <div id="layout">
 <?php
 if (!empty($SIDEBAR_DATA)) {
-    echo '<aside class="tips">', "\n$SIDEBAR_DATA\n</aside>\n";
+    echo '<aside class="tips">',
+         '<div class="border first"></div>',
+         '<div class="border second"></div>',
+         '<div class="border third"></div>',
+         '<div class="inner">',
+         $SIDEBAR_DATA,
+         '</div></aside>';
 }
 if (!empty($config["leftmenu"])) {
     echo "<aside class='layout-menu'><ul>";
