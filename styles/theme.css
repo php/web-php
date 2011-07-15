@@ -25,9 +25,35 @@ body {
     background: url('/images/sprites.png') repeat-x 0px -990px #fff;
 }
 
-h1    { font-size: 1.7em; line-height: 2.6em; margin-bottom: 0.2em; }
-h2    { font-size: 1.6em; line-height: 2.4em; }
-h3    { font-size: 1.4em; line-height: 2.2em; }
+h1 {
+    font-size: 2.5em;
+    margin: 1.2em 0 0.6em 0;
+    line-height: 1;
+}
+
+h1:first-child {
+    margin-top: 0.3em;
+}
+
+h1, h1 a, h1 a:visited, h1 a:link {
+    font-weight: normal;
+    color: #666;
+}
+
+h1 a:hover {
+    color: #444;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin: 1.4em 0 0.7em 0;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1.4em;
+    line-height: 2.2em;
+}
 h3.title {
     font-size: 1.5em;
     border-top-style: solid;
@@ -185,15 +211,6 @@ a:hover {
     color: #000;
 }
 
-h1, h1 a, h1 a:visited, h1 a:link {
-    font-weight: normal;
-    color: #666;
-    letter-spacing: -0.04em;
-}
-
-h1 a:hover {
-    color: #444;
-}
 
 /**
  * Auto-complete
