@@ -77,6 +77,11 @@ a:hover {
     color: #355c0b;
 }
 
+ul {
+    list-style-type: disc;
+    margin: 10px 25px;
+}
+
 #headnav {
     padding: 0 25px;
     height: 72px;
@@ -472,8 +477,7 @@ aside.tips h3 {
     margin: 20px 0 10px 0;
 }
 
-aside.tips p,
-aside.tips ul {
+aside.tips p {
     margin: 10px 0;
 }
 
