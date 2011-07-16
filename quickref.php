@@ -19,6 +19,7 @@
 $_SERVER['BASE_PAGE'] = 'quickref.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
+include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 
 // Constant values for the display
 define("COLUMNS",    3);
@@ -146,6 +147,22 @@ $notfound_enc = urlencode($notfound_sc);
 
 <?php quickref_table($maybe, false); ?>
 
+<?php
+if(strlen($notfound) > 2):
+$srch_rqst = "/ws.php?profile=local&q=".urlencode($notfound)."&lang=$LANG&results=5&start=0&mirror=".trim(substr($MYSITE,7),'/');
+$url = "http://www.php.net".$srch_rqst;
+$data = fetch_contents($url);
+if(!is_array($data)) {
+	$res = unserialize($data);
+	if(is_array($res) && $res['ResultSet']['totalResultsAvailable'] > 0) {
+		// Ok, we got some results from the search backend	
+		echo "<br /><h1>Site Search Results</h1>\n";
+		search_results($res, $notfound, 'local', 10, 0, $LANG, false, false, false);
+		echo '<br clear="left"/>';
+	}
+}
+endif;
+?>
 <h1>Other forms of search</h1>
 
 <p>
