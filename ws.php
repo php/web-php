@@ -71,7 +71,7 @@ function ws_bing_massage($data) {
     return serialize($massaged);
 }
 
-if($scope!='mirrortest'):
+if($raw!='mirrortest'):
 $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'], array(PDO::ATTR_PERSISTENT => true,
                                                                                          PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
