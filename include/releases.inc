@@ -26,7 +26,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '06 January 2011',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.4' => 
     array (
@@ -52,7 +52,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '09 December 2010',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.16' => 
     array (
@@ -78,7 +78,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '16 December 2010',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.15' => 
     array (
@@ -104,7 +104,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '09 December 2010',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.3' => 
     array (
@@ -130,7 +130,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '22 July 2010',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.2.14' => 
     array (
