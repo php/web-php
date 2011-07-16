@@ -12,6 +12,7 @@ $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang'], ENT_QUOTES) 
 $m = isset($_REQUEST['mirror']) ? htmlspecialchars($_REQUEST['mirror'], ENT_QUOTES) : '';
 $sites = array( 'all'=>'php.net',
                 'local'=>'www.php.net',
+                '404'=>'www.php.net',
                 'manual'=>"www.php.net/manual/$l",
                 'news'=>'news.php.net',
                 'bugs'=>'bugs.php.net',
