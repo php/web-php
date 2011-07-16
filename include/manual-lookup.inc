@@ -126,11 +126,30 @@ function find_manual_page($lang, $keyword)
     // Check for all the languages
     foreach ($langs as $lang) {
         
+        // @todo consider alternative schemas for this data
+        // @todo utilize phd to generate this data, instead of the current systems/gen-phpweb-sqlite-db.php
+
+        /* Example data:
+           lang    = en
+           name    = /manual/en/function.str-replace.php
+           keyword = str-replace
+           prefix  = function.
+           prio    = 2
+
+           Therefore, the query below matches: str-replace, function.str-replace and function.str-replace.php
+           This also applies to other sections like book.foo, language.foo, example.foo, etc.
+           Note: $keyword replaces _ with - above, so _ variants also work
+        */
         if (strpos($keyword, ".") > 0) {
-            $SQL = "SELECT name from fs WHERE name LIKE ? AND lang = ? ORDER BY prio LIMIT 1";
-    
+            $SQL = "SELECT name from fs WHERE lang = ? AND (name = ? OR keyword = ?) ORDER BY prio LIMIT 1";
+
+            $_keyword = $keyword;
+            if (pathinfo($keyword, PATHINFO_EXTENSION) !== 'php') {
+                $_keyword .= '.php';
+            }
+
             $stm = $dbh->prepare($SQL);
-            $stm->execute(array("%{$keyword}.php", $lang));
+            $stm->execute(array($lang, "/manual/{$lang}/{$_keyword}", $keyword));
     
         // Some partially specified URL is used
         } else {
@@ -163,6 +182,8 @@ function find_manual_page($lang, $keyword)
 
                 // Match found
                 // But does the file really exist?
+                // @todo consider redirecting here, instead of including content within the 404
+                // @todo considering the file path is generated from the manual build, we can probably remove this file_exists() check
                 if (file_exists($_SERVER["DOCUMENT_ROOT"] . $r[0])) {
                     return $r[0];
                 }
@@ -173,6 +194,9 @@ function find_manual_page($lang, $keyword)
     }
     
     // No match found
+    // @todo refactor. find_manual_page_slow() performs many of the same searches already performed above,
+    //       but uses file_exists() instead of sqlite. In other words, if sqlite was used, don't perform
+    //       all of the slow and unnecessary checks.
     return find_manual_page_slow($langs[0], $kw);
 }
 
