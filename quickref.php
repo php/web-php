@@ -1,5 +1,4 @@
 <?php
-
 // $Id$
 
 /*
@@ -28,6 +27,10 @@ define("SHOW_CLOSE", 20);
 // Set empty $notfound if called directly
 if (!isset($notfound)) {
     $notfound = '';
+}
+
+if (!isset($scope)) {
+	$scope = '';
 }
 
 // Print out the table of found (or all) functions. The HTML comments are
@@ -149,7 +152,7 @@ $notfound_enc = urlencode($notfound_sc);
 
 <?php
 if(strlen($notfound) > 2):
-$srch_rqst = "/ws.php?profile=local&q=".urlencode($notfound)."&lang=$LANG&results=5&start=0&mirror=".trim(substr($MYSITE,7),'/');
+$srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=5&start=0&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://www.php.net".$srch_rqst;
 $data = fetch_contents($url);
 if(!is_array($data)) {

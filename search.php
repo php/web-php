@@ -49,8 +49,9 @@ if (!empty($_FORM['pattern'])) {
     switch ($_FORM['show']) {
 
         case "quickref" :
+        case "404quickref" :
             $langparam = (isset($EXPL_LANG) ? "&lang=$EXPL_LANG" : "");
-            mirror_redirect("/manual-lookup.php?pattern={$ucp}{$langparam}");
+            mirror_redirect("/manual-lookup.php?pattern={$ucp}{$langparam}&scope={$_FORM['show']}");
 
         case "maillist" :
             mirror_redirect("{$ml_url}l=php-general&s={$ucp}");
@@ -76,7 +77,8 @@ if (!empty($_FORM['pattern'])) {
             }
 
         case "manual":
-            mirror_redirect($MYSITE . "results.php?q={$ucp}&p=manual&l=$LANG");
+        case "404manual":
+            mirror_redirect($MYSITE . "results.php?q={$ucp}&p={$_FORM['show']}&l=$LANG");
             break;
 
         case "news_archive":

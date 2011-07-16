@@ -12,8 +12,10 @@ $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang'], ENT_QUOTES) 
 $m = isset($_REQUEST['mirror']) ? htmlspecialchars($_REQUEST['mirror'], ENT_QUOTES) : '';
 $sites = array( 'all'=>'php.net',
                 'local'=>'www.php.net',
-                '404'=>'www.php.net',
+                'quickref'=>'www.php.net',
+                '404quickref'=>'www.php.net',
                 'manual'=>"www.php.net/manual/$l",
+                '404manual'=>"www.php.net/manual/$l",
                 'news'=>'news.php.net',
                 'bugs'=>'bugs.php.net',
                 'pear'=>'pear.php.net',
@@ -69,6 +71,7 @@ function ws_bing_massage($data) {
     return serialize($massaged);
 }
 
+if($scope!='mirrortest'):
 $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'], array(PDO::ATTR_PERSISTENT => true,
                                                                                          PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -78,4 +81,5 @@ try {
 } catch (PDOException $e) {
    
 }
+endif;
 ?>

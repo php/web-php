@@ -495,7 +495,7 @@ if (strpos($URI, "manual/") === 0) {
 // ============================================================================
 // If no match was found till this point, the last action is to start a
 // search with the URI the user typed in
-$fallback = (myphpnet_urlsearch() === MYPHPNET_URL_MANUAL ? "manual" : "quickref");
+$fallback = (myphpnet_urlsearch() === MYPHPNET_URL_MANUAL ? "404manual" : "404quickref");
 mirror_redirect(
     '/search.php?show=' . $fallback . '&lang=' . urlencode($LANG) .
     '&pattern=' . urlencode(substr($_SERVER['REQUEST_URI'], 1))
