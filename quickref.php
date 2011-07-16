@@ -156,7 +156,7 @@ if(!is_array($data)) {
 	if(is_array($res) && $res['ResultSet']['totalResultsAvailable'] > 0) {
 		// Ok, we got some results from the search backend	
 		echo "<br /><h1>Site Search Results</h1>\n";
-		search_results($res, $notfound, 'local', 10, 0, $LANG, false, false, false);
+		search_results($res, $notfound, 'local', 10, 0, $LANG, false, false, true);
 		echo '<br clear="left"/>';
 	}
 }
