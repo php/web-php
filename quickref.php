@@ -21,7 +21,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 
 // Constant values for the display
-define("COLUMNS",    3);
+define("COLUMNS",    4);
 define("SHOW_CLOSE", 20);
 
 // Set empty $notfound if called directly
@@ -140,12 +140,7 @@ $notfound_enc = urlencode($notfound_sc);
 <?php if (!empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
- Sorry, but the function <b><?php echo $notfound_sc; ?></b>
- is not in the online manual. Perhaps you misspelled it, or it is a relatively
- new function that hasn't made it into the online documentation yet. The
- following are the <?php echo count($maybe); ?> functions which seem to be
- closest in spelling to <b><?php echo $notfound_sc; ?></b>
- (really good matches are in bold). Perhaps you were looking for one of these:
+ <b><?php echo $notfound_sc; ?></b> doesn't exist. Closest matches:
 </p>
 
 <?php quickref_table($maybe, false); ?>
@@ -153,7 +148,7 @@ $notfound_enc = urlencode($notfound_sc);
 <?php
 // Don't do a web search if the search term contains tp:// since we are seeing a lot of proxy attempts through the 404 handler
 if(strlen($notfound) > 2 && !strstr($notfound,'tp://')):
-$srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=5&start=0&mirror=".trim(substr($MYSITE,7),'/');
+$srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=10&start=0&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://www.php.net".$srch_rqst;
 $data = fetch_contents($url);
 if(!is_array($data)) {
