@@ -8,6 +8,7 @@ if (isset($_GET["serialize"])) {
 	include_once $_SERVER["DOCUMENT_ROOT"] . "/include/version.inc";
 
 	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
+	$RELEASES[5][$PHP_5_2_VERSION]["date"] = $PHP_5_2_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
@@ -27,8 +28,7 @@ if (isset($_GET["serialize"])) {
 				/* check if other $RELEASES[$ver] are there */
 				/* e.g., 5_2, 5_3, and 5_4 all exist and have a release */
 				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
-					list($version, $r) = each($z);
-					$return[$version] = $r;
+					$return[$z[0]] = $z[1];
 				}
 
 				foreach($OLDRELEASES[$ver] as $version => $release) {
