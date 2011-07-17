@@ -146,8 +146,10 @@ $notfound_enc = urlencode($notfound_sc);
 <?php quickref_table($maybe, false); ?>
 
 <?php
-// Don't do a web search if the search term contains tp:// since we are seeing a lot of proxy attempts through the 404 handler
-if(strlen($notfound) > 2 && !strstr($notfound,'tp://')):
+// Don't do a web search if the search term contains:
+//  tp://   since we are seeing a lot of proxy attempts through the 404 handler
+//  admin/  since these tend to be script-kiddie hack attempts
+if(strlen($notfound) > 2 && !strstr($notfound,'tp://') && !strstr($notfound,'admin/')):
 $srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=10&start=0&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://www.php.net".$srch_rqst;
 $data = fetch_contents($url);

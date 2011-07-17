@@ -36,11 +36,47 @@ if(isset($sites[$_REQUEST['profile']])) {
     $scope = 'all';
 }
 
+// mtime is stored on the first line of the result file to
+// avoid needing to call clearstatcache()
+function limited_intermediate_result_cache($url,$ttl=1800, &$error=NULL) {
+	$cfile = '/var/tmp/bing_'.md5($url).'.json';
+	$mtime = 0;
+	$data = '';
+
+	$fp = @fopen($cfile, 'r');  
+	if($fp) {
+		$mtime = (int)fgets($fp);
+		$data = trim(stream_get_contents($fp));	
+		fclose($fp);
+	}
+	if(!$mtime || ($time_out && ($mtime < ($_SERVER['REQUEST_TIME']-$time_out)))) {
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+		$tmp = curl_exec($ch); 
+		$status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		if($status_code!=200) {
+			$error = array('status_code'=>$status_code,'body'=>$data);
+			fclose($fp);
+			if(strlen($data)) return $data;
+			else return false;
+		} else $data = $tmp;
+		$fp = fopen($cfile, 'w');
+		fputs($fp, $_SERVER['REQUEST_TIME']."\n");	
+		fputs($fp, $data);
+		fflush($fp);
+		fclose($fp);
+	}
+	return $data;
+}
+
 $request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q%20site:{$sites[$scope]}&version=2.2&Sources=Web&web.offset=$s&web.count=$r&market=$market";
-$data = @file_get_contents($request);
-list($version,$status_code,$msg) = explode(' ',$http_response_header[0], 3);
-if($status_code==200) echo ws_bing_massage($data);
-else echo serialize($http_response_header[0]);
+$error = '';
+$data = limited_intermediate_result_cache($request, $error);
+if($data) echo ws_bing_massage($data);
+else echo serialize($error);
 
 function ws_bing_massage($data) {
     $results = json_decode($data, true);
