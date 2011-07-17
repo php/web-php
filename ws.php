@@ -49,7 +49,7 @@ function limited_intermediate_result_cache($url,$ttl=1800, &$error=NULL) {
 		$data = trim(stream_get_contents($fp));	
 		fclose($fp);
 	}
-	if(!$mtime || ($time_out && ($mtime < ($_SERVER['REQUEST_TIME']-$time_out)))) {
+	if(!$mtime || ($time_out && ($mtime < ($_SERVER['REQUEST_TIME']-$ttl)))) {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_URL, $url);
