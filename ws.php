@@ -49,6 +49,7 @@ function limited_intermediate_result_cache($url,$ttl=1800, &$error=NULL) {
 		$mtime = (int)fgets($fp);
 		$data = trim(stream_get_contents($fp));	
 		fclose($fp);
+		$cached = 1;
 	}
 	if(!$mtime || ($ttl && ($mtime < ($_SERVER['REQUEST_TIME']-$ttl)))) {
 		$ch = curl_init();
@@ -63,8 +64,9 @@ function limited_intermediate_result_cache($url,$ttl=1800, &$error=NULL) {
 			fclose($fp);
 			if(strlen($data)) return $data;
 			else return false;
-		} else $data = $tmp;
-		$cached = 1;
+		}
+		$data = $tmp;
+		$cached = 0;
 		$fp = fopen($cfile, 'w');
 		fputs($fp, $_SERVER['REQUEST_TIME']."\n");	
 		fputs($fp, $data);
