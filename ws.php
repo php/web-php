@@ -74,7 +74,7 @@ function limited_intermediate_result_cache($url,$ttl=1800, &$error=NULL) {
 
 $request =  "{$conf['svc']}?appid={$conf['appid']}&query=$q%20site:{$sites[$scope]}&version=2.2&Sources=Web&web.offset=$s&web.count=$r&market=$market";
 $error = '';
-$data = limited_intermediate_result_cache($request, $error);
+$data = limited_intermediate_result_cache($request, 1800, $error);
 if($data) echo ws_bing_massage($data);
 else echo serialize($error);
 
