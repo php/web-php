@@ -416,6 +416,10 @@ $uri_aliases = array (
     # CVS -> SVN
     "anoncvs.php"   => "svn",
     "cvs-php.php"   => "svn-php",
+
+    # Things that are annoying, and cluttering up our 404 logs
+    # Feel free to find a better approach to these
+    "labels.rdf"    => "license",
 );
 
 $external_redirects = array(
