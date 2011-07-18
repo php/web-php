@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:label="http://www.w3.org/2004/12/q/contentlabel#"
+  xmlns:icra="http://www.icra.org/rdfs/vocabularyv03#">
+
+  <rdf:Description rdf:about="">
+    <dc:creator rdf:resource="http://www.icra.org" />
+    <dcterms:issued>2008-12-19</dcterms:issued>
+    <label:authorityFor>http://www.icra.org/rdfs/vocabularyv03#</label:authorityFor>
+  </rdf:Description>
+
+  <label:Ruleset>
+    <label:hasHostRestrictions>
+      <label:Hosts>
+        <label:hostRestriction>php.net</label:hostRestriction>
+      </label:Hosts>
+    </label:hasHostRestrictions>
+    <label:hasDefaultLabel rdf:resource="#label_1" />
+  </label:Ruleset>
+
+  <label:ContentLabel rdf:ID="label_1">
+    <rdfs:comment>Label for all php.net sites</rdfs:comment>
+    <icra:nz>1</icra:nz>
+    <icra:sz>1</icra:sz>
+    <icra:vz>1</icra:vz>
+    <icra:lz>1</icra:lz>
+    <icra:oz>1</icra:oz>
+    <icra:cz>1</icra:cz>
+    <rdfs:label>No nudity; No sexual material; No violence; No potentially offensive language; No potentially harmful activities; </rdfs:label>
+  </label:ContentLabel>
+
+</rdf:RDF>
