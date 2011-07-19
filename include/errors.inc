@@ -427,3 +427,48 @@ $terms = array(
 	
 	return isset($terms[$term]) ? $terms[$term] : false;
 }
+
+/*
+Search snippet provider: A dirty proof-of-concept: 
+	This will probably live in sqlite one day, and be more intelligent (tagging?)
+	This is a 100% hack currently, and let's hope temporary does not become permanent (Hello year 2014!)
+	And this is English only today... the manual/en links need to be fixed, and later add translations of said text
+	
+	This really is a proof-of-concept, where the choices below are the most popular searched terms at php.net
+	It should also take into account vague searches, such as 'global' and 'str'. The search works well enough for,
+	most terms, so something like $_SERVER isn't really needed but it's defined below anyways...
+*/
+function is_known_snippet($term) {
+$snippets = array(
+	'global'	=> '
+		The <b>global</b> keyword is used to manipulate <a href="/manual/en/language.variables.scope.php">variable scope</a>, and
+		there is also the concept of <a href="/manual/en/language.variables.superglobals.php">super globals</a> in PHP,
+		which are special variables with a global scope.',
+	'string'	=> '
+		There is the <a href="/manual/en/language.types.string.php">string type</a>, which is a scalar, 
+		and also many <a href="/manual/en/ref.strings.php">string functions.</a>',
+	'str'		=> '
+		Many <a href="/manual/en/ref.strings.php">string functions</a> begin with <b>str</b>, 
+		and there is also the <a href="/manual/en/language.types.string.php">string type</a>.',
+	'_server'	=> '
+		<a href="/manual/en/reserved.variables.server.php">$_SERVER</a> 
+		is a <a href="/manual/en/language.variables.superglobals.php">super global</a>, 
+		and is home to many predefined variables that are typically provided by a web server',
+	'class'		=> '
+		A <a href="/manual/en/language.oop5.php">class</a> is an OOP (Object Oriented Programming) concept,
+		and PHP is both a procedural and OOP friendly language.',
+	'function'	=> '
+		PHP contains thousands of functions. You might be interested in how a
+		<a href="/manual/en/language.functions.php">function is defined</a>, or
+		<a href="/manual/en/about.prototypes.php">how to read a function prototype</a>.
+		See also the list of <a href="/manual/en/extensions.php">PHP extensions</a>',
+	);
+
+	$term = strtolower(trim($term));
+	if ($term[0] === '$') {
+		$term = ltrim($term, '$');
+	}
+
+	return isset($snippets[$term]) ? $snippets[$term] : false;
+
+}

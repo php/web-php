@@ -133,6 +133,11 @@ site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
 
 $notfound_sc  = htmlspecialchars($notfound, ENT_QUOTES, 'UTF-8');
 $notfound_enc = urlencode($notfound_sc);
+
+if ($snippet = is_known_snippet($notfound)) {
+	echo "<h1>Related snippet found for '{$notfound_sc}'</h1>";
+	echo "<p>{$snippet}</p>";
+}
 ?>
 
 <h1>PHP Function List</h1>
