@@ -118,6 +118,17 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 }
 
 // ============================================================================
+// If someone is looking for something in distributions/* and it isn't there,
+// send them to the /releases page since that is likely to be most helpful.
+if (preg_match("!^distributions/.*!", $URI, $array)) {
+	// Debug: Logging referrers on www.php.net temporarily
+	if($_SERVER['SERVER_NAME']=='www.php.net' && !empty($_SERVER['HTTP_REFERER'])) {
+		file_put_contents("/var/tmp/refer.txt","$URI from {$_SERVER['HTTP_REFERER']}\n",FILE_APPEND);
+	}
+	mirror_redirect("/releases/");
+}
+
+// ============================================================================
 // The trailing slash only causes problems from now on
 $URI = preg_replace('!/+$!', '', $URI);
 
