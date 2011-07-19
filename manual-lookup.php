@@ -18,7 +18,9 @@ if (empty($_GET['function'])) {
 
 if(!empty($_GET['scope'])) {
 	$scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
-} else $scope = '';
+} else {
+	$scope = '';
+}
 
 // Prepare data for search
 if ($function) {
