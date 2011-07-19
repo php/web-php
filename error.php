@@ -123,7 +123,7 @@ if (preg_match("!^manual/(\\w+)/(print|printwn|html)((/.+)|$)!", $URI, $array)) 
 if (preg_match("!^distributions/.*!", $URI, $array)) {
 	// Debug: Logging referrers to www.php.net temporarily
 	if(!empty($_SERVER['HTTP_REFERER'])) {
-		echo file_get_contents("http://www.php.net/track_ref.php?url=".$_SERVER['SERVER_NAME'].'/'.urlencode($URI).'&ref='.urlencode($_SERVER['HTTP_REFERER']));
+		file_get_contents("http://www.php.net/track_ref.php?url=".$_SERVER['SERVER_NAME'].'/'.urlencode($URI).'&ref='.urlencode($_SERVER['HTTP_REFERER']));
 	}
 	mirror_redirect("/releases/");
 }
