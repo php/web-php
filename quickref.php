@@ -131,11 +131,11 @@ else { $head_options = array(); }
 
 site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
 
-$notfound_sc  = htmlspecialchars($notfound, ENT_QUOTES, 'UTF-8');
-$notfound_enc = urlencode($notfound_sc);
+// Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
+$notfound_enc = urlencode($notfound);
 
 if ($snippet = is_known_snippet($notfound)) {
-	echo "<h1>Related snippet found for '{$notfound_sc}'</h1>";
+	echo "<h1>Related snippet found for '{$notfound}'</h1>";
 	echo "<p>{$snippet}</p>";
 }
 ?>
@@ -145,7 +145,7 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php if (!empty($notfound) && count($maybe) > 0) { ?>
 
 <p>
- <b><?php echo $notfound_sc; ?></b> doesn't exist. Closest matches:
+ <b><?php echo $notfound; ?></b> doesn't exist. Closest matches:
 </p>
 
 <?php quickref_table($maybe, false); ?>
@@ -172,7 +172,7 @@ endif;
 <h1>Other forms of search</h1>
 
 <p>
-To search the string "<b><?php echo $notfound_sc; ?></b>" using other options, try searching:
+To search the string "<b><?php echo $notfound; ?></b>" using other options, try searching:
 </p>
 
 <ul>
