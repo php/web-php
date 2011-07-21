@@ -40,9 +40,7 @@ function quickref_table($functions, $sort = true)
     global $LANG;
 
     echo "<!-- result list start -->\n";
-    echo "<table border=\"0\" cellpadding=\"5\" cellspacing=\"0\" width=\"100%\">\n";
-    echo "<tr valign=\"top\"><td>\n";
-    
+    echo "<ul id=\"quickref_functions\">\n";
     // Prepare the data
     $i = 0;
     $limit = ceil(count($functions) / COLUMNS);
@@ -52,15 +50,9 @@ function quickref_table($functions, $sort = true)
     
     // Print out all rows
     foreach ($functions as $file => $name) {
-    
-        // Start a new column
-        if ($i > 0 && $i % $limit==0) {
-            echo "</td><td>\n";
-        }
-        echo "<a href=\"/manual/$LANG/$file\">$name</a><br />\n";
-        $i++;
+        echo "<li><a href=\"/manual/$LANG/$file\">$name</a></li>\n";
     }
-    echo "</td></tr></table>\n";
+    echo "</ul>\n";
     echo "<!-- result list end -->\n";
 }
 
@@ -149,6 +141,7 @@ if ($snippet = is_known_snippet($notfound)) {
 </p>
 
 <?php quickref_table($maybe, false); ?>
+<br clear="left"/>
 
 <?php
 // Don't do a web search if the search term contains:
@@ -175,12 +168,18 @@ endif;
 To search the string "<b><?php echo $notfound; ?></b>" using other options, try searching:
 </p>
 
-<ul>
+<ul id="quickref_other">
  <li><?php print_link('search.php?show=manual&amp;pattern=' . $notfound_enc, 'Only the documentation'); ?></li>
  <li><?php print_link('search.php?show=local&amp;pattern=' . $notfound_enc, 'Only this mirror'); ?></li>
  <li><?php print_link('search.php?show=wholesite&amp;pattern=' . $notfound_enc, 'The entire php.net domain'); ?></li>
+ <li><?php print_link('search.php?show=pear&amp;pattern=' . $notfound_enc, 'pear.php.net'); ?></li>
+ <li><?php print_link('search.php?show=pecl&amp;pattern=' . $notfound_enc, 'pecl.php.net'); ?></li>
+ <li><?php print_link('http://bugs.php.net/search.php?cmd=Display+Bugs&status=All&bug_type=Any&search_for=' . $notfound_enc, 'The Bug DB');?></li>
+ <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=php-general&s=' . $notfound_enc, 'php-general mailing list');?></li>
+ <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=php-internals&s=' . $notfound_enc, 'Internals mailing list');?></li>
+ <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=phpdoc&s=' . $notfound_enc, 'Documentation mailing list');?></li>
 </ul>
-
+<br clear="left"/>
 <p>
  For a quick overview over all documented PHP functions,
  <?php print_link('quickref.php', 'click here'); ?>.

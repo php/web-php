@@ -747,7 +747,7 @@ div#results_nav {
 }
 
 ul#results_nav_list {
-        margin-top: -1em;
+	margin-top: -1em;
 	text-align: center;
 	padding: 0px;
 }
@@ -755,6 +755,32 @@ ul#results_nav_list li {
 	display: inline;
 	margin-right: 0.4em;
 	list-style-type: none;
+}
+
+ul#quickref_functions {
+	display: inline;
+	margin-right: 0.4em;
+}
+
+ul#quickref_functions li {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	float:left;
+	width:30%;
+}
+
+ul#quickref_other {
+	display: inline;
+	margin-right: 0.4em;
+}
+
+ul#quickref_other li {
+	list-style-type: none;
+	margin:0;
+	padding:0;
+	float:left;
+	width:30%;
 }
 
 /* Definition lists used on eg. the unsub page */
