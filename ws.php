@@ -23,7 +23,7 @@ $sites = array( 'all'=>'php.net',
                 'talks'=>'talks.php.net',
               );
 
-$market = 'en-us';
+$market = 'en-ca';
 if(!empty($LANGUAGES_MAP[$l])) $market = $LANGUAGES_MAP[$l];
 
 if(isset($sites[$_REQUEST['profile']])) {

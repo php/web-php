@@ -85,14 +85,15 @@ $INACTIVE_ONLINE_LANGUAGES = array(
 
 // Used for bing search
 // Details: http://msdn.microsoft.com/en-us/library/dd251064.aspx
+// Note: Bing bug with en-us currently (limited results), so we're using en-ca
 $LANGUAGES_MAP = array(
-	'en' => 'en-us',
+	'en' => 'en-ca',
 	'ar' => 'ar-xa',
 	'bg' => 'bg-bg',
 	'zh' => 'zh-cn',
 	'hk' => 'zh-hk',
 	'tw' => 'zh-tw',
-	'ca' => 'en-us', // ? ca Catalan, ca-es not available (yet)
+	'ca' => 'en-ca', // ? ca Catalan, ca-es not available (yet)
 	'cs' => 'cs-cz',
 	'da' => 'da-dk',
 	'nl' => 'nl-nl',
@@ -106,7 +107,7 @@ $LANGUAGES_MAP = array(
 	'kr' => 'ko-kr',
 	'lt' => 'lt-lt',
 	'no' => 'nb-no',
-	'fa' => 'en-us', // ? fa Persian, fa-fa not available (yet)
+	'fa' => 'en-ca', // ? fa Persian, fa-fa not available (yet)
 	'pl' => 'pl-pl',
 	'pt' => 'pt-pt',
 	'pt_BR' => 'pt-br',
@@ -114,12 +115,12 @@ $LANGUAGES_MAP = array(
 	'ru' => 'ru-ru',
 	'sk' => 'sk-sk',
 	'sl' => 'sl-sl',
-	'sr' => 'en-us', // ? sr Serbian, sr-sr not available (yet)
+	'sr' => 'en-ca', // ? sr Serbian, sr-sr not available (yet)
 	'es' => 'es-es', // ? es-xl?
 	'sv' => 'sv-se',
 	'tr' => 'tr-tr',
 	'he' => 'he-il',
-	'id' => 'en-us', // ? id Indonesian, in-id not available (yet)
+	'id' => 'en-ca', // ? id Indonesian, in-id not available (yet)
 );
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
