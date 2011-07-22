@@ -90,6 +90,14 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
+ <a href="http://www.redpill-linpro.com">Redpill Linpro</a> provides managed servers and bandwidth for various php.net services.
+</p>
+
+<p>
+ <a href="http://facebook.com">Facebook</a> provides us with SSL certificates.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.

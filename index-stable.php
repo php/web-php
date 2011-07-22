@@ -84,6 +84,8 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.eukhost.com/">EUKhost</a></li>
  <li><a href="http://www.micfo.com/">micfo</a></li>
  <li><a href="http://www.sohosted.nl/webhosting/">SoHosted Webhosting</a></li>
+ <li><a href="http://www.redpill-linpro.com">Redpill Linpro</a></li>
+ <li><a href="http://www.facebook.com">Facebook</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">
