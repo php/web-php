@@ -68,7 +68,7 @@ site_header("SVN Access", array("current" => "community"));
 
  <li>
   The <em>recommended</em> way is to make a sparse checkout of the php-src directory only, then grab
-  the parts that you need. This enables a single commit to span mulitple branches.
+  the parts that you need. This enables a single commit to span multiple branches.
   <br /><br />
   <code>svn checkout https://svn.php.net/repository/php/php-src --depth immediates php-src</code><br />
   <code>cd php-src</code><br />
