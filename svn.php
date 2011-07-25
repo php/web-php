@@ -7,7 +7,7 @@ $SIDEBAR_DATA = '
 <p>
  You can find more information about SVN, and
  download clients for most major platforms, at
- <a href="http://subversion.tigris.org">the official SVN site</a>.
+ <a href="http://subversion.apache.org">the official SVN site</a>.
 </p>
 
 
@@ -63,19 +63,27 @@ site_header("SVN Access", array("current" => "community"));
 </p>
 
 <h2>Steps for using PHP from SVN</h2>
-<p>Note to PHP.net developers: SSL is setup, so use your credentials and https://svn.php.net/ to access SVN</p>
+<p>Note to PHP.net developers: SSL is set up, so use your credentials and https://svn.php.net/ to access SVN.</p>
 <ol>
 
  <li>
-  Obtain the latest PHP source from SVN. There is a single <i>php-src</i>
-  directory that contains all PHP branches and tags. To get PHP from SVN,
-  use the <i>"svn checkout https://svn.php.net/repository/php/php-src/branches/BRANCH"</i> notation. To checkout the
-  latest, consider the following SVN commands:<br /><br />
+  The <em>recommended</em> way is to make a sparse checkout of the php-src directory only, then grab
+  the parts that you need. This enables a single commit to span mulitple branches.
+  <br /><br />
+  <code>svn checkout https://svn.php.net/repository/php/php-src --depth immediates php-src</code><br />
+  <code>cd php-src</code><br />
+  <code>svn update branches tags --set-depth immediates</code><br />
+  <code>svn update trunk branches/PHP_5_4 branches/PHP_5_3 --set-depth infinity</code><br /><br />
+
+  Or alternatively, you can fetch the current PHP source code and the active branches:<br /><br />
   <strong>PHP 5.3</strong>:
   <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_3 php-src-5.3</code>
   <br />
   <strong>PHP 5.4</strong>:
   <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php-src-5.4</code>
+  <br />
+  <strong>PHP HEAD</strong>:
+  <code>svn checkout https://svn.php.net/repository/php/php-src/trunk php-src-trunk</code>
   <br /><br />
   The branch names can also be used for SVN diff and merge operations.
  </li>
@@ -110,6 +118,8 @@ site_header("SVN Access", array("current" => "community"));
  server</a> to see what is available. For example, to checkout the
  latest english version of the PHP manual:<br />
  <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
+ <br /><br />
+ You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
 </p>
 
 <a name="buildconf_fail"></a>
