@@ -34,6 +34,23 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
+<?php tip_title('PHPDevBar for Firefox', 'Felipe Nascimento de Moura', '26-Jul-2011'); ?>
+<p>
+ PHPDevBar is an addon for Firefox. This toolbar uses the official documentation
+ from PhD and quickly retrieves method and function definitions.
+ You can also use it to search in PHP Web sites.
+</p>
+<p>
+ Besides that, PHP Developer Toolbar has a huge list of user groups and server and client tools/links.
+ The addon also contains <q>PHPClassGen</q>, which allows you to easily generate
+ a class and its HTML Form just by filling out a form.
+</p>
+<p>
+ The Firefox addon is available at
+ <a href="https://addons.mozilla.org/pt-BR/firefox/addon/php-developer-toolbar/">https://addons.mozilla.org/pt-BR/firefox/addon/php-developer-toolbar/</a>.
+ See the projects website for more details at <a href="http://phpdevbar.org">http://phpdevbar.org</a>
+</p>
+
 <?php tip_title('Quick Reference for Google Chrome', 'Søren Nielsen', '31-Jul-2009'); ?>
 
 <p>
