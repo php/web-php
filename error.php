@@ -391,6 +391,9 @@ $uri_aliases = array (
     
     "factory"      => "language.oop5.patterns",
     "singleton"    => "language.oop5.patterns",
+
+    "trait"        => "language.oop5.traits",
+    "traits"       => "language.oop5.traits",
     
     "news.php"                     => "archive/index", // BC
     "readme.mirror"                => "mirroring", // BC
