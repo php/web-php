@@ -86,10 +86,6 @@ aside#quicktoc {
 /* }}} */
 
 .docs .refentry .methodsynopsis {
-    padding: 10px 20px;
-    margin: 1em 2em 1.3em;
-    border-top: 3px solid #ddd;
-    background: #efefef;
     color: #666;
     font-family: monospace;
 }
@@ -112,19 +108,24 @@ aside#quicktoc {
 
 
 /* {{{ Examples (highlighting is in theme.css) */
+.docs blockquote.note,
+.docs div.warning,
+.docs div.caution,
+.docs div.tip
 .docs .cdata pre,
 .docs .example-contents div pre,
-.docs .example-contents div.phpcode {
-    border: 1px solid #E2E1D5;
-    background-color: #EFEFEF;
-    padding: 10px;
+.docs .example-contents div.phpcode,
+.docs .refentry .methodsynopsis  {
+    border-top: 1px solid #9f8a8a;
+    border-bottom: 1px solid #9f8a8a;
+    border-left: 0;
+    border-right: 0;
+    background-color: #fcfcfc;
     margin: 2px 0px;
     font-weight: normal;
+    padding: .5em .2em .5em .2em;
 }
-.docs .example {
-    margin: 15px;
-    border-top: 1px solid #0a0;
-}
+
 /* }}} */
 
 
@@ -183,4 +184,56 @@ dl.qandaentry {
     border-top: 1px solid #000;
 }
 /* }}} */
+
+.docs div.refnamediv {
+    border-bottom: 4px solid #81939f;
+    position: relative;
+}
+
+.docs p.verinfo {
+    position: absolute;
+    right:0px;
+    top: 0;
+    color: #b3b3b3;
+}
+
+.docs h1.refname {
+    font-family: sans-serif,Arial,Helvetica;
+    font-size: 20px;
+    font-weight: bold;
+    color: #454e55;
+}
+
+.docs p.refpurpose {
+    color: #454e55;
+}
+
+.docs  div.refsect1 h3.title {
+    border: 0;
+    color: #4d3737;
+    position: absolute;
+    padding: 0;
+    margin:0;
+    line-height: 1em;
+    top:-23px;
+    left: 0;
+}
+
+.docs div.refsect1 {
+    position: relative;
+    background-color: #f5f5f5;
+    border: 1px solid #cacaca;
+    margin-top: 50px;
+    padding: 15px 10px;
+    border-radius: 3px;
+}
+
+.docs .para {
+    margin:0;
+}
+
+#changelang {
+    display: none; /* Temporarly removed until we do not find a suitable place for the element */
+}
+
 
