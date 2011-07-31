@@ -143,19 +143,21 @@ aside#quicktoc {
 }
 
 .docs .doctable {
-    margin: 3px 30px;
+    border-top: 1px solid #9F8A8A;
+    border-bottom: 1px solid #9F8A8A;   
+    width: 100%;
 }
 
 .docs .doctable th {
-    background-color: #C3ADD9;
-    border-bottom: 1px solid #987db3;
+    background-color: #FCFCFC;
     text-align: center;
+    border-bottom: 1px solid #9F8A8A; 
 }
-.docs .doctable td {
-    border-right: 1px solid #987db3;
+.docs .doctable td, .docs .doctable th {
+    border-right: 1px solid #9F8A8A ;
 }
-.docs .doctable td:last-child {
-    border: 0px;
+.docs .doctable td:last-child, .docs .doctable th:last-child {
+    border-right: 0px;
 }
 /* }}} */
 
@@ -186,7 +188,7 @@ dl.qandaentry {
 /* }}} */
 
 .docs div.refnamediv {
-    border-bottom: 4px solid #81939f;
+    border-bottom: 3px solid #81939f;
     position: relative;
 }
 
@@ -210,13 +212,14 @@ dl.qandaentry {
 
 .docs  div.refsect1 h3.title {
     border: 0;
-    color: #4d3737;
+    color: #636363;
     position: absolute;
     padding: 0;
     margin:0;
     line-height: 1em;
-    top:-23px;
+    top:-22px;
     left: 0;
+    font-size: 1.4em;
 }
 
 .docs div.refsect1 {
@@ -226,6 +229,7 @@ dl.qandaentry {
     margin-top: 50px;
     padding: 15px 10px;
     border-radius: 3px;
+    color: #454e55;
 }
 
 .docs .para {
