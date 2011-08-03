@@ -240,4 +240,72 @@ dl.qandaentry {
     display: none; /* Temporarly removed until we do not find a suitable place for the element */
 }
 
+/* - Side Menu - */
+.docs .layout-menu {
+    width: 240px;
+    border: 1px solid #CACACA;
+    background-image:url('/images/bg_pattern.png');
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
+    
+}
+
+.docs .layout-menu ul ul {
+}
+
+.docs .layout-menu ul:first-child {
+    width: 100%;
+    list-style: none;
+    list-style-position:inside;
+    margin: auto;
+    padding: 5px;
+    width: 228px;
+}
+
+.docs .layout-menu ul:first-child li {
+    line-height: 1.5em;
+    margin-bottom: 1px;
+    opacity:0.8;filter:alpha(opacity=80);
+
+}
+
+.docs .layout-menu ul:first-child a {
+    background-color: #81939F;
+    color: white;
+    padding-left: 5px;
+    border-left: 10px solid #2b3135;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.docs .layout-menu ul:first-child ul a {
+    background-color: transparent;
+    text-shadow: none;
+    border-left: 0px solid #2b3135;
+    color: black;  
+    line-height: 1.6em; 
+}
+
+.docs .layout-menu ul a {
+    border: 0;
+    margin-top: auto; /* FIXME: Overriden from theme.css */
+    padding: 0;
+    font-size: 10px;
+}
+
+.docs .layout-menu ul ul a {
+    font-size: 10px;
+ 
+}
+
+.docs #layout {
+    padding: 25px 165px 25px 10px; /* FIXME: Overriden from theme.css */
+    max-width: none; /* FIXME: Overriden from theme.css */
+}
+
+.docs .layout-content {
+    margin-left: 272px;
+}
+
+
 
