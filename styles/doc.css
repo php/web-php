@@ -229,6 +229,8 @@ dl.qandaentry {
     margin-top: 50px;
     padding: 15px 10px;
     border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     color: #454e55;
 }
 
