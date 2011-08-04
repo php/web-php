@@ -303,7 +303,7 @@ dl.qandaentry {
     max-width: none; /* FIXME: Overriden from theme.css */
 }
 
-.docs .layout-content {
+.docs .layout-content, .docs #usernotes {
     margin-left: 272px;
 }
 
