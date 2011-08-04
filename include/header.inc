@@ -236,18 +236,20 @@ if (!empty($SIDEBAR_DATA)) {
          '</div></aside>';
 }
 if (!empty($config["leftmenu"])) {
-    echo "<aside class='layout-menu'><ul>";
+    echo "<aside class='layout-menu'><ul class='parent-menu-list'>";
     foreach($config["leftmenu"] as $section) {
         echo "<li><a href='{$section["link"]}'>{$section["title"]}</a>\n";
-        echo "<ul>";
-        foreach($section["children"] as $item) {
-            if ($item["current"]) {
-                echo "<li class='current'><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
-            } else {
-                echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+        if ($section["children"]) {
+            echo "<ul class='child-menu-list'>";
+            foreach($section["children"] as $item) {
+                if ($item["current"]) {
+                    echo "<li class='current'><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+                } else {
+                    echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
+                }
             }
+            echo "</ul>";
         }
-        echo "</ul>";
         echo "</li>";
     }
     echo "</ul></aside>\n";
