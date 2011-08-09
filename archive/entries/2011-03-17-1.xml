@@ -49,7 +49,7 @@
      FastCGI via mod_fcgi, FastCGI with IIS or other FastCGI capable
      server), everything works as before. Third party extension providers
      must rebuild their extensions to make them compatible and loadable with
-     the Visual Studio C++9 builds that we now provide.
+     the Visual Studio C++ 9 builds that we now provide.
      </p>
      
      <p>All PHP users should note that the PHP 5.2 series is NOT supported anymore. All users
