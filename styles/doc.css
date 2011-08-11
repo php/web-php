@@ -242,66 +242,75 @@ dl.qandaentry {
     display: none; /* Temporarly removed until we do not find a suitable place for the element */
 }
 
+
 /* - Side Menu - */
 .docs .layout-menu {
     width: 240px;
-    border: 1px solid #CACACA;
-    background-image:url('/images/bg_pattern.png');
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
-    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
-    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.10);
-    
 }
 
-.docs .layout-menu ul ul {
-}
-
-.docs .layout-menu ul:first-child {
-    width: 100%;
+.docs .layout-menu ul.parent-menu-list {
     list-style: none;
-    list-style-position:inside;
-    margin: auto;
-    padding: 5px;
-    width: 228px;
-}
-
-.docs .layout-menu ul:first-child li {
-    line-height: 1.5em;
-    margin-bottom: 1px;
-    opacity:0.8;filter:alpha(opacity=80);
-
-}
-
-.docs .layout-menu ul:first-child a {
-    background-color: #81939F;
-    color: white;
-    padding-left: 5px;
-    border-left: 10px solid #2b3135;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-.docs .layout-menu ul:first-child ul a {
-    background-color: transparent;
-    text-shadow: none;
-    border-left: 0px solid #2b3135;
-    color: black;  
-    line-height: 1.6em; 
-}
-
-.docs .layout-menu ul a {
-    border: 0;
-    margin-top: auto; /* FIXME: Overriden from theme.css */
+    margin: 0;
     padding: 0;
-    font-size: 10px;
 }
 
-.docs .layout-menu ul ul a {
-    font-size: 10px;
- 
+.docs .layout-menu ul.parent-menu-list li {
+    padding: 3px 6px;
+    margin: 3px 0;
+    background-color: #f3f3f3;
 }
+
+.docs .layout-menu ul.parent-menu-list a {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0;
+    padding: 3px 7px;
+    border: 0;
+    border-left: 12px solid #987db3;
+}
+
+.docs .layout-menu ul.parent-menu-list a:hover,
+.docs .layout-menu ul.parent-menu-list li:last-child a {
+    color: #000;
+    border-left: 12px solid #604080;
+}
+
+.docs .layout-menu ul.child-menu-list {
+    margin: 0;
+    padding: 10px 5px 10px 12px;
+    border-top: 3px solid #fff;
+    border: 0;
+}
+
+.docs .layout-menu ul.child-menu-list li {
+    font-size: 14px;
+    list-style-type: none;
+    margin: 0;
+    padding: 4px 8px;
+    border: 0;
+    border-bottom: 1px dotted #aaa;
+    background-color: transparent;
+}
+
+.docs .layout-menu ul.child-menu-list a {
+    font-size: 13px;
+    border: 0;
+    color: black;  
+    line-height: 1; 
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+}
+
+.docs .layout-menu ul.child-menu-list a:hover,
+.docs .layout-menu ul.parent-menu-list li:last-child ul.child-menu-list a {
+    border-left: 0;
+}
+
 
 .docs #layout {
-    padding: 25px 165px 25px 10px; /* FIXME: Overriden from theme.css */
+    padding: 25px 165px 25px 25px; /* FIXME: Overriden from theme.css */
     max-width: none; /* FIXME: Overriden from theme.css */
 }
 
