@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2012</title>
+  <id>http://www.php.net/archive/2011.php#id2011-08-11-1</id>
+  <published>2011-08-11T18:10:12+02:00</published>
+  <updated>2011-08-11T18:10:12+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2011-09-02</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-08-11-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca/en" title="ConFoo 2012">confoo2012.gif</default:newsImage>
+  <link href="http://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We just launched ConFoo 2012 edition and are presently calling for papers.
+     We are looking for the best speakers willing to share their skills and
+     experience with developers and managers. ConFoo is a community driven
+     conference dedicated to Web technologies.</p>
+     
+     <p>The conference will be held in Montreal from February 29th to March 2nd,
+     2012 at the prestigious Hotel Hilton Bonaventure. We will also have two days
+     of private training. The topics will be revealed later this year.</p>
+     
+     <p>Talk proposals must received by September 2nd and may be written in English
+     or French.</p>
+     
+     <p>For more information and updates, visit our Website:
+     <a href="http://confoo.ca/en">http://confoo.ca/en</a>.</p>
+    </div>
+  </content>
+</entry>
