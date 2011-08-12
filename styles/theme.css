@@ -410,6 +410,7 @@ pre.info {
 }
 
 #mega-drop-down dt, #mega-drop-down li {
+    color: #eee;
     font-weight: bold;
     margin-top: 1em;
 }
