@@ -903,15 +903,16 @@ function doc_toc($lang) {
     doc_toc_list($lang, $TOC, "funcref");
     echo "</dl>\n";
 
-    echo "<ul>";
-    doc_toc_title($lang, $TOC, "install", "li");
-    doc_toc_title($lang, $TOC, "internals2", "li");
-    doc_toc_title($lang, $TOC, "faq", "li");
-    doc_toc_title($lang, $TOC, "appendices", "li");
-    echo "<li><a href='/quickref.php'>Quick function reference</a></li>\n";
-    echo "<li><a href='/docs.php'>Translations</a></li>\n";
-    echo "<li><a href='/download-docs.php'>Documentation downloads</a></li>\n";
-    echo "</ul>\n";
+    echo "<dl>\n";
+    echo "<dt>Miscellaneous</dt>";
+    doc_toc_title($lang, $TOC, "install", "dd");
+    doc_toc_title($lang, $TOC, "internals2", "dd");
+    doc_toc_title($lang, $TOC, "faq", "dd");
+    doc_toc_title($lang, $TOC, "appendices", "dd");
+    echo "<dd><a href='/quickref.php'>Quick Function Reference</a></dd>\n";
+    echo "<dd><a href='/docs.php'>Translations</a></dd>\n";
+    echo "<dd><a href='/download-docs.php'>Documentation Downloads</a></dd>\n";
+    echo "</dl>\n";
 
 }
 function doc_toc_list($lang, $index, $file) {
