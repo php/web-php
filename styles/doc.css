@@ -314,7 +314,8 @@ dl.qandaentry {
     max-width: none; /* FIXME: Overriden from theme.css */
 }
 
-.docs .layout-content, .docs #usernotes {
+/* #layout needed, see http://news.php.net/php.webmaster/11884 */
+.docs #layout .layout-content, .docs #layout #usernotes {
     margin-left: 272px;
 }
 
