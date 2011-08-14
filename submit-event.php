@@ -46,7 +46,7 @@ if ($process) {
 
     // Temporary lockout of annoying users (better solution is needed)
     $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
-    $mosquitoes = array('saradhaaa@gmail.com', 'mg-tuzi@yahoo.com.cn');
+    $mosquitoes = array('saradhaaa@gmail.com', 'mg-tuzi@yahoo.com.cn', 'ruby@bitlifesciences.com');
     if (in_array($uemail, $mosquitoes)) {
         $errors[] = 'Sorry an error has occurred, please try again later.';
     }
