@@ -55,6 +55,7 @@ function search_results($res, $q, $profile='all', $per_page=10, $s=0, $l='en', $
 
 		// Fix &amp;gt; double escaping
 		$summary = str_replace('&amp;', '&', $hit['Summary']);
+		$summary = htmlspecialchars($summary, ENT_QUOTES, 'UTF-8');
 		echo <<<EOB
 <li>
  <p class="result">{$types[$type]}<a href="{$real_url}">{$display_title}</a></p>
