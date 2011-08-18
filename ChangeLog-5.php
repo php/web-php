@@ -36,7 +36,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </li>
 
-<li>Core
+<li>Core:
+<ul>
   <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer)</li>
   <li>Removed warning when argument of is_a() or is_subclass_of() is not  a known class. (Stas)</li>
   <li>Fixed crash in error_log(). (Felipe) Reported by Mateusz Kocielski.</li>
