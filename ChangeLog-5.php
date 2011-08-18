@@ -11,6 +11,323 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.7"></a><!-- {{{ 5.3.7 -->
+<h3>Version 5.3.7</h3>
+<b>18-Aug-2011</b>
+
+<ul>
+<li>Upgraded bundled SQLite to version 3.7.7.1. (Scott)</li>
+<li>Upgraded bundled PCRE to version 8.12. (Scott)</li>
+
+<li>Zend Engine:
+<ul>
+  <li><?php bugfix(55156); ?> (ReflectionClass::getDocComment() returns comment even though the class has none). (Felipe)</li>
+  <li><?php bugfix(55007); ?> (compiler fail after previous fail). (Felipe)</li>
+  <li><?php bugfix(54910); ?> (Crash when calling call_user_func with unknown function name). (Dmitry)</li>
+  <li><?php bugfix(54804); ?> (__halt_compiler and imported namespaces). (Pierrick, Felipe)</li>
+  <li><?php bugfix(54624); ?> (class_alias and type hint). (Felipe)</li>
+  <li><?php bugfix(54585); ?> (track_errors causes segfault). (Dmitry)</li>
+  <li><?php bugfix(54423); ?> (classes from dl()'ed extensions are not destroyed).  (Tony, Dmitry)</li>
+  <li><?php bugfix(54372); ?> (Crash accessing global object itself returned from its __get() handle). (Dmitry)</li>
+  <li><?php bugfix(54367); ?> (Use of closure causes problem in ArrayAccess). (Dmitry)</li>
+  <li><?php bugfix(54358); ?> (Closure, use and reference). (Dmitry)</li>
+  <li><?php bugfix(54262); ?> (Crash when assigning value to a dimension in a non-array). (Dmitry)</li>
+  <li><?php bugfix(54039); ?> (use() of static variables in lambda functions can break staticness). (Dmitry)</li>
+</ul>
+</li>
+
+<li>Core
+  <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer)</li>
+  <li>Removed warning when argument of is_a() or is_subclass_of() is not  a known class. (Stas)</li>
+  <li>Fixed crash in error_log(). (Felipe) Reported by Mateusz Kocielski.</li>
+  <li>Added PHP_MANDIR constant telling where the manpages were installed into, and an --man-dir argument to php-config. (Hannes)</li>
+  <li>Fixed a crash inside dtor for error handling. (Ilia)</li>
+  <li>Fixed buffer overflow on overlog salt in crypt(). (Clément LECIGNE, Stas</li>
+  <li>Implemented FR <?php bugfix(54459); ?> (Range function accuracy). (Adam)</li>
+
+  <li><?php bugfix(55399); ?> (parse_url() incorrectly treats ':' as a valid path). (Ilia)</li>
+  <li><?php bugfix(55339); ?> (Segfault with allow_call_time_pass_reference = Off). (Dmitry)</li>
+  <li><?php bugfix(55295); ?> [NEW]: popen_ex on windows, fixed possible heap overflow (Pierre)</li>
+  <li><?php bugfix(55258); ?> (Windows Version Detecting Error).  ( xiaomao5 at live dot com, Pierre)</li>
+  <li><?php bugfix(55187); ?> (readlink returns weird characters when false result). (Pierre)</li>
+  <li><?php bugfix(55082); ?> (var_export() doesn't escape properties properly). (Gustavo)</li>
+  <li><?php bugfix(55014); ?> (Compile failure due to improper use of ctime_r()). (Ilia)</li>
+  <li><?php bugfix(54939); ?> (File path injection vulnerability in RFC1867 File upload filename). (Felipe) Reported by Krzysztof Kotowicz. (CVE-2011-2202)</li>
+  <li><?php bugfix(54935); ?> php_win_err can lead to crash. (Pierre)</li>
+  <li><?php bugfix(54924); ?> (assert.* is not being reset upon request shutdown). (Ilia)</li>
+  <li><?php bugfix(54895); ?> (Fix compiling with older gcc version without need for membar_producer macro). (mhei at heimpold dot de)</li>
+  <li><?php bugfix(54866); ?> (incorrect accounting for realpath_cache_size). (Dustin Ward)</li>
+  <li><?php bugfix(54723); ?> (getimagesize() doesn't check the full ico signature). (Scott)</li>
+  <li><?php bugfix(54721); ?> (Different Hashes on Windows, BSD and Linux on wrong Salt size). (Pierre, os at irj dot ru)</li>
+  <li><?php bugfix(54580); ?> (get_browser() segmentation fault when browscap ini directive is set through php_admin_value). (Gustavo)</li>
+  <li><?php bugfix(54332); ?> (Crash in zend_mm_check_ptr // Heap corruption). (Dmitry)</li>
+  <li><?php bugfix(54305); ?> (Crash in gc_remove_zval_from_buffer). (Dmitry)</li>
+  <li><?php bugfix(54238); ?> (use-after-free in substr_replace()). (Stas) (CVE-2011-1148)</li>
+  <li><?php bugfix(54204); ?> (Can't set a value with a PATH section in php.ini). (Pierre)</li>
+  <li><?php bugfix(54180); ?> (parse_url() incorrectly parses path when ? in fragment). (tomas dot brastavicius at quantum dot lt, Pierrick)</li>
+  <li><?php bugfix(54137); ?> (file_get_contents POST request sends additional line break). (maurice-php at mertinkat dot net, Ilia)</li>
+  <li><?php bugfix(53848); ?> (fgetcsv() ignores spaces at beginnings of fields). (Ilia)</li>
+  <li>Alternative fix for bug <?php bugfix(52550); ?>, as applied to the round() function (signed overflow), as the old fix impacted the algorithm for numbers with magnitude smaller than 0. (Gustavo)</li>
+  <li><?php bugfix(53727); ?> (Inconsistent behavior of is_subclass_of with interfaces) (Ralph Schindler, Dmitry)</li>
+  <li><?php bugfix(52935); ?> (call exit in user_error_handler cause stream relate core). (Gustavo)</li>
+  <li><?php bugfix(51997); ?> (SEEK_CUR with 0 value, returns a warning). (Ilia)</li>
+  <li><?php bugfix(50816); ?> (Using class constants in array definition fails). (Pierrick, Dmitry)</li>
+  <li><?php bugfix(50363); ?> (Invalid parsing in convert.quoted-printable-decode filter). (slusarz at curecanti dot org)</li>
+  <li><?php bugfix(48465); ?> (sys_get_temp_dir() possibly inconsistent when using  TMPDIR on Windows). (Pierre)</li>
+</ul>
+</li>
+
+<li>Apache2 Handler SAPI:
+<ul>
+  <li><?php bugfix(54529); ?> (SAPI crashes on apache_config.c:197). (hebergement at riastudio dot fr)</li>
+</ul>
+</li>
+
+<li>CLI SAPI:
+<ul>
+  <li><?php bugfix(52496); ?> (Zero exit code on option parsing failure). (Ilia)</li>
+</ul>
+</li>
+
+<li>cURL extension:
+<ul>
+  <li>Added ini option curl.cainfo (support for custom cert db). (Pierre)</li>
+  <li>Added CURLINFO_REDIRECT_URL support. (Daniel Stenberg, Pierre)</li>
+  <li>Added support for CURLOPT_MAX_RECV_SPEED_LARGE and  CURLOPT_MAX_SEND_SPEED_LARGE. FR <?php bugfix(51815); ?>. (Pierrick)</li>
+</ul>
+</li>
+
+<li>DateTime extension:
+<ul>
+  <li>Fixed bug where the DateTime object got changed while using date_diff(). (Derick)</li>
+  <li><?php bugfix(54340); ?> (DateTime::add() method bug). (Adam)</li>
+  <li><?php bugfix(54316); ?> (DateTime::createFromFormat does not handle trailing '|' correctly). (Adam)</li>
+  <li><?php bugfix(54283); ?> (new DatePeriod(NULL) causes crash). (Felipe)</li>
+  <li><?php bugfix(51819); ?> (Case discrepancy in timezone names cause Uncaught exception and fatal error). (Hannes)</li>
+</ul>
+</li>
+
+<li>DBA extension:
+<ul>
+  <li>Supress warning on non-existent file open with Berkeley DB 5.2 (Chris Jones)</li>
+  <li><?php bugfix(54242); ?> (dba_insert returns true if key already exists). (Felipe)</li>
+</ul>
+</li>
+
+<li>Exif extesion:
+<ul>
+  <li><?php bugfix(54121); ?> (error message format string typo). (Ilia)</li>
+</ul>
+</li>
+
+<li>Fileinfo extension:
+<ul>
+  <li><?php bugfix(54934); ?> (Unresolved symbol strtoull in HP-UX 11.11). (Felipe)</li>
+</ul>
+</li>
+
+<li>Filter extension:
+<ul>
+  <li>Added 3rd parameter to filter_var_array() and filter_input_array() functions that allows disabling addition of empty elements. (Ilia)</li>
+  <li><?php bugfix(53037); ?> (FILTER_FLAG_EMPTY_STRING_NULL is not implemented). (Ilia)</li>
+</ul>
+</li>
+  
+<li>Interbase extension:
+<ul>
+  <li><?php bugfix(54269); ?> (Short exception message buffer causes crash). (Felipe)</li>
+</ul>
+</li>
+  
+<li>intl extension:
+<ul>
+  <li>Implemented FR <?php bugfix(54561); ?> (Expose ICU version info). (David Zuelke, Ilia)</li>
+  <li>Implemented FR <?php bugfix(54540); ?> (Allow loading of arbitrary resource bundles when fallback is disabled). (David Zuelke, Stas)</li>
+</ul>
+</li>
+
+<li>Imap extension:
+<ul>
+  <li><?php bugfix(55313); ?> (Number of retries not set when params specified). (kevin at kevinlocke dot name)</li>
+</ul>
+</li>
+
+<li>json extension:
+<ul>
+  <li><?php bugfix(54484); ?> (Empty string in json_decode doesn't reset  json_last_error()). (Ilia)</li>
+</ul>
+</li>
+
+<li>LDAP extension:
+<ul>
+  <li><?php bugfix(53339); ?> (Fails to build when compilng with gcc 4.5 and DSO libraries). (Clint Byrum, Raphael)</li>
+</ul>
+</li>
+
+<li>libxml extension:
+<ul>
+  <li><?php bugfix(54601); ?> (Removing the doctype node segfaults). (Hannes)</li>
+  <li><?php bugfix(54440); ?> (libxml extension ignores default context). (Gustavo)</li>
+</ul>
+</li>
+
+<li>mbstring extension:
+<ul>
+  <li><?php bugfix(54494); ?> (mb_substr() mishandles UTF-32LE and UCS-2LE). (Gustavo)</li>
+</ul>
+</li>
+
+<li>MCrypt extension:
+<ul>
+  <li>Change E_ERROR to E_WARNING in mcrypt_create_iv when not enough data has been fetched (Windows). (Pierre)</li>
+  <li><?php bugfix(55169); ?> (mcrypt_create_iv always fails to gather sufficient random  data on Windows). (Pierre)</li>
+</ul>
+</li>
+
+<li>MySQL Improved extension:
+<ul>
+  <li>Fixed Bug <?php bugfix(54221); ?> (mysqli::get_warnings segfault when used in multi queries). (Andrey)</li>
+</ul>
+</li>
+
+<li>mysqlnd
+<ul>
+  <li>Fixed crash when using more than 28,000 bound parameters. Workaround is to set mysqlnd.net_cmd_buffer_size to at least 9000. (Andrey)</li>
+  <li><?php bugfix(54674); ?> mysqlnd valid_sjis_(head|tail) is using invalid operator and range). (nihen at megabbs dot com, Andrey)</li>
+</ul>
+</li>
+
+<li>MySQLi extension:
+<ul>
+  <li><?php bugfix(55283); ?> (SSL options set by mysqli_ssl_set ignored for MySQLi persistent connections). (Andrey)</li>
+</ul>
+</li>
+
+<li>OpenSSL extension:
+<ul>
+  <li>openssl_encrypt()/openssl_decrypt() truncated keys of variable length ciphers to the OpenSSL default for the algorithm. (Scott)</li>
+  <li>On blocking SSL sockets respect the timeout option where possible. (Scott)</li>
+  <li><?php bugfix(54992); ?> (Stream not closed and error not returned when SSL CN_match fails). (Gustavo, laird_ngrps at dodo dot com dot au)</li>
+</ul>
+</li>
+
+<li>Oracle Database extension (OCI8):
+<ul>
+  <li>Added oci_client_version() returning the runtime Oracle client library version (Chris Jones)</li>
+</ul>
+</li>
+
+. PCRE extension:
+<ul>
+  <li>Increased the backtrack limit from 100000 to 1000000 (Rasmus)</li>
+</ul>
+</li>
+
+<li>PDO extension:
+<ul>
+  <li><?php bugfix(54929); ?> (Parse error with single quote in sql comment). (Felipe)</li>
+  <li><?php bugfix(52104); ?> (bindColumn creates Warning regardless of ATTR_ERRMODE  settings). (Ilia)</li>
+</ul>
+</li>
+
+<li>PDO DBlib driver:
+<ul>
+  <li><?php bugfix(54329); ?> (MSSql extension memory leak). (dotslashpok at gmail dot com)</li>
+  <li><?php bugfix(54167); ?> (PDO_DBLIB returns null on SQLUNIQUE field). (mjh at hodginsmedia dot com, Felipe)</li>
+</ul>
+</li>
+
+<li>PDO ODBC driver:
+<ul>
+  <li>Fixed data type usage in 64bit. (leocsilva at gmail dot com)</li>
+</ul>
+</li>
+
+<li>PDO MySQL driver:
+<ul>
+  <li><?php bugfix(54644); ?> (wrong pathes in php_pdo_mysql_int.h). (Tony, Johannes)</li>
+  <li><?php bugfix(53782); ?> (foreach throws irrelevant exception). (Johannes, Andrey)</li>
+  <li>Implemented FR <?php bugfix(48587); ?> (MySQL PDO driver doesn't support SSL connections). (Rob)</li>
+</ul>
+</li>
+
+<li>PDO PostgreSQL driver:
+<ul>
+  <li><?php bugfix(54318); ?> (Non-portable grep option used in PDO pgsql configuration). (bwalton at artsci dot utoronto dot ca)</li>
+</ul>
+</li>
+
+<li>PDO Oracle driver:
+<ul>
+  <li><?php bugfix(44989); ?> (64bit Oracle RPMs still not supported by pdo-oci). (jbnance at tresgeek dot net)</li>
+</ul>
+</li>
+
+<li>Phar extension:
+<ul>
+  <li><?php bugfix(54395); ?> (Phar::mount() crashes when calling with wrong parameters). (Felipe)</li>
+</ul>
+</li>
+
+<li>PHP-FPM SAPI:
+<ul>
+  <li>Implemented FR <?php bugfix(54499); ?> (FPM ping and status_path should handle HEAD request). (fat)</li>
+  <li>Implemented FR <?php bugfix(54172); ?> (Overriding the pid file location of php-fpm). (fat)</li>
+  <li>Fixed missing Expires and Cache-Control headers for ping and status pages. (fat)</li>
+  <li>Fixed memory leak. (fat) Reported and fixed by Giovanni Giacobbi.
+  <li>Fixed wrong value of log_level when invoking fpm with -tt. (fat)</li>
+  <li>Added xml format to the status page. (fat)</li>
+  <li>Removed timestamp in logs written by children processes. (fat)</li>
+  <li>Fixed exit at FPM startup on fpm_resources_prepare() errors. (fat)</li>
+  <li>Added master rlimit_files and rlimit_core in the global configuration settings. (fat)</li>
+  <li>Removed pid in debug logs written by chrildren processes. (fat)</li>
+  <li>Added custom access log (also added per request %CPU and memory mesurement). (fat)</li>
+  <li>Added a real scoreboard and several improvements to the status page. (fat)</li>
+</ul>
+</li>
+
+<li>Reflection extension:
+<ul>
+  <li><?php bugfix(54347); ?> (reflection_extension does not lowercase module function name). (Felipe, laruence at yahoo dot com dot cn)</li>
+</ul>
+</li>
+
+<li>SOAP extension:
+<ul>
+  <li><?php bugfix(55323); ?> (SoapClient segmentation fault when XSD_TYPEKIND_EXTENSION contains itself). (Dmitry)</li>
+  <li><?php bugfix(54312); ?> (soap_version logic bug). (tom at samplonius dot org)</li>
+</ul>
+</li>
+
+<li>Sockets extension:
+<ul>
+  <li>Fixed stack buffer overflow in socket_connect(). (CVE-2011-1938) Found by Mateusz Kocielski, Marek Kroemeke and Filip Palian. (Felipe)</li>
+  <li>Changed socket_set_block() and socket_set_nonblock() so they emit warnings on error. (Gustavo)</li>
+  <li><?php bugfix(51958); ?> (socket_accept() fails on IPv6 server sockets). (Gustavo)</li>
+</ul>
+</li>
+
+<li>SPL extension:
+<ul>
+  <li><?php bugfix(54971); ?> (Wrong result when using iterator_to_array with use_keys on true). (Pierrick)</li>
+  <li><?php bugfix(54970); ?> (SplFixedArray::setSize() isn't resizing). (Felipe)</li>
+  <li><?php bugfix(54609); ?> (Certain implementation(s) of SplFixedArray cause hard crash). (Felipe)</li>
+  <li><?php bugfix(54384); ?> (Dual iterators, GlobIterator, SplFileObject and SplTempFileObject crash when user-space classes don't call the paren constructor). (Gustavo)</li>
+  <li><?php bugfix(54292); ?> (Wrong parameter causes crash in SplFileObject::__construct()). (Felipe)</li>
+  <li><?php bugfix(54291); ?> (Crash iterating DirectoryIterator for dir name starting with \0). (Gustavo)</li>
+  <li><?php bugfix(54281); ?> (Crash in non-initialized RecursiveIteratorIterator). (Felipe)</li>
+</ul>
+</li>
+
+<li>Streams:
+<ul>
+  <li><?php bugfix(54946); ?> (stream_get_contents infinite loop). (Hannes)</li>
+  <li><?php bugfix(54623); ?> (Segfault when writing to a persistent socket after closing a copy of the socket). (Gustavo)</li>
+  <li><?php bugfix(54681); ?> (addGlob() crashes on invalid flags). (Felipe)</li>
+</ul>
+</li>
+</ul>
+
 <a name="5.3.6"></a><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
 <b>17-Mar-2011</b>
