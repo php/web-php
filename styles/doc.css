@@ -192,10 +192,14 @@ dl.qandaentry {
     position: relative;
 }
 
+.docs div.sect1 {
+    position: relative;
+}
+
 .docs p.verinfo {
     position: absolute;
     right:0px;
-    top: 0;
+    top: 0px
     color: #b3b3b3;
 }
 
