@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Zend PHP Conference 2011 (ZendCon)</title>
+  <id>http://www.php.net/archive/2011.php#id2011-08-19-1</id>
+  <published>2011-08-19T12:04:13+02:00</published>
+  <updated>2011-08-19T12:04:13+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2011-10-17</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-08-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.zendcon.com/" title="ZendCon 2011">zendcon_Logo_2011_225wide.jpg</default:newsImage>
+  <link href="http://www.zendcon.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The Zend PHP Conference (ZendCon) is the largest gathering of the PHP Community and brings together PHP developers and IT managers from around the world to discuss PHP best practices and explore new technologies.
+     </p>
+     
+     <p>This year’s conference will be held on October 17-20, 2011 at the Convention Center in Santa Clara, California. The conference will include a variety of technical sessions and in-depth tutorials in the following areas:
+     <ul>
+     <li>Cloud Computing - build applications, not infrastructure.<br/>Learn about the latest developments in PHP Cloud infrastructure, management and application services</li>
+     <li>Mobile and User Experience - go beyond the browser<br/>Learn how to build engaging mobile apps with the latest PHP technologies and tools</li>
+     <li>Enterprise and Professional PHP - master your craft<br/>Explore PHP best practices, new technologies and practical tips with industry experts</li>
+     </ul>
+     </p>
+     <p>
+     For more details and to register for ZendCon, visit the website at: http://www.zendcon.com/
+     </p>
+    </div>
+  </content>
+</entry>
