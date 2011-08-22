@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>5.3.7 upgrade warning</title>
+  <id>http://www.php.net/archive/2011.php#id2011-08-22-1</id>
+  <published>2011-08-22T10:02:44+02:00</published>
+  <updated>2011-08-22T10:02:44+02:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2011-08-22-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2011.php#id2011-08-22-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+	     Due to unfortunate issues with 5.3.7 (see <a href="https://bugs.php.net/bug.php?id=55439">bug#55439</a>)
+	     users should wait with upgrading until 5.3.8 will be released (expected in few days).
+     </p>
+    </div>
+  </content>
+</entry>
