@@ -30,3 +30,24 @@ function is_emailable_address($email)
     }
 }
 
+/**
+ * Basic blacklisting.
+ * Add email addresses, domains, or partial-match patterns
+ * to $mosquitoes array to blacklist.
+ * CAUTION: Be sure anything you add here won't partially
+ * match legitimate email addresses!  For example:
+ *     spamsend
+ * .... will match:
+ *     real_person@thisispamsendoftheweb.example.com
+ */
+function blacklisted($email) {
+    $mosquitoes = array(
+        'saradhaaa@gmail.com',
+        'mg-tuzi@yahoo.com.cn',
+        'bitlifesciences',
+        'bitconferences',
+    );
+    foreach ($mosquitoes as $m) {
+        if (preg_match('/'.$m.'/i',$email)) return true;
+    }
+}

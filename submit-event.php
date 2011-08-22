@@ -44,11 +44,14 @@ if ($process) {
         $errors[] = 'You must supply a valid email address.';
     }
 
-    // Temporary lockout of annoying users (better solution is needed)
+    /**
+     * Lockout of addresses and domains known to SPAM us.
+     * Add, edit, or remove blacklisted users or domains
+     * in include/email-validation.inc :: blacklisted().
+     */
     $uemail     = isset($_POST['email']) ? strtolower($_POST['email']) : '';
-    $mosquitoes = array('saradhaaa@gmail.com', 'mg-tuzi@yahoo.com.cn', 'ruby@bitlifesciences.com');
-    if (in_array($uemail, $mosquitoes)) {
-        $errors[] = 'Sorry an error has occurred, please try again later.';
+    if (blacklisted($uemail)) {
+        $errors[] = 'An expected error has been encountered.  Please don\'t try again later.';
     }
   
     $_POST['sdesc'] = trim($_POST['sdesc']);
