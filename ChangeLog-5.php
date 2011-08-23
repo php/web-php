@@ -11,6 +11,29 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.8"></a><!-- {{{ 5.3.8 -->
+<h3>Version 5.3.8</h3>
+<b>23-Aug-2011</b>
+
+<ul>
+<li>Core:
+<ul>
+  <li><?php bugfix(55439); ?> (crypt() returns only the salt for MD5). (Stas)</li>
+</ul>
+</li>
+<li>OpenSSL:
+<ul>
+  <li>Reverted a change in timeout handling restoring PHP 5.3.6 behavior,
+    as the new behavior caused mysqlnd SSL connections to hang (
+    <a href="http://bugs.php.net/55283">Bug #55283</a>).
+    (Pierre, Andrey, Johannes)</li>
+</ul>
+</li>
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.3.7"></a><!-- {{{ 5.3.7 -->
 <h3>Version 5.3.7</h3>
 <b>18-Aug-2011</b>
@@ -328,6 +351,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </li>
 </ul>
+
+<hr />
+<!-- }}} -->
 
 <a name="5.3.6"></a><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
