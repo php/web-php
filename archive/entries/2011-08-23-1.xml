@@ -3,7 +3,7 @@
   <title>PHP 5.3.8 Released!</title>
   <id>http://www.php.net/archive/2011.php#id2011-08-23-1</id>
   <published>2011-08-23T17:08:45+02:00</published>
-  <updated>2011-08-23T17:08:45+02:00</updated>
+  <updated>2011-08-23T21:48:14+02:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2011-08-23-1" rel="alternate" type="text/html"/>
@@ -27,6 +27,9 @@
         href="/ChangeLog-5.php#5.3.8">ChangeLog</a>. For source downloads please
         visit our <a href="/downloads.php">downloads page</a>, Windows binaries
 	can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+    <p>
+         <strong>For more details on the crypt() blowfish security issue in pre 5.3.6 see <a href="http://php.net/security/crypt_blowfish">the crypt blowfish page</a></strong>
+	</p>
     </div>
   </content>
 </entry>
