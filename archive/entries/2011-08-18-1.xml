@@ -3,7 +3,7 @@
   <title>PHP 5.3.7 Released!</title>
   <id>http://www.php.net/archive/2011.php#id2011-08-18-1</id>
   <published>2011-08-18T10:02:24-04:00</published>
-  <updated>2011-08-18T10:02:24-04:00</updated>
+  <updated>2011-08-23T11:27:41+02:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2011-08-18-1" rel="alternate" type="text/html"/>
@@ -17,7 +17,7 @@
      
      <p><b>Security Enhancements and Fixes in PHP 5.3.7:</b></p>
      <ul>
-         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483)</li>
+         <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) <a href="http://php.net/security/crypt">(more info)</a></li>
          <li>Fixed crash in error_log(). Reported by Mateusz Kocielski</li>
          <li>Fixed buffer overflow on overlog salt in crypt().</li>
          <li>Fixed bug #54939 (File path injection vulnerability in RFC1867 File upload filename). Reported by Krzysztof Kotowicz. (CVE-2011-2202)</li>

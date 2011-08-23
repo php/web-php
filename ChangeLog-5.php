@@ -38,7 +38,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <li>Core:
 <ul>
-  <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer)</li>
+  <li>Updated crypt_blowfish to 1.2. (CVE-2011-2483) (Solar Designer) <a href="http://php.net/security/crypt">(more info)</a></li>
   <li>Removed warning when argument of is_a() or is_subclass_of() is not  a known class. (Stas)</li>
   <li>Fixed crash in error_log(). (Felipe) Reported by Mateusz Kocielski.</li>
   <li>Added PHP_MANDIR constant telling where the manpages were installed into, and an --man-dir argument to php-config. (Hannes)</li>
