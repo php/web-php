@@ -3,7 +3,7 @@
 $_SERVER['BASE_PAGE'] = 'security/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-site_header("crypt() security fix");
+site_header("CRYPT_BLOWFISH security fix details");
 ?>
 
 <h1>crypt() security fix details</h1>
@@ -40,13 +40,6 @@ purposes, it does not really matter if you use $2a$ or $2y$ for newly set
 passwords, as the countermeasure is only triggered on some obscure passwords
 (not even valid UTF-8) that are unlikely to be seen outside of a deliberate
 attack (trying to match hashes produced by buggy pre-5.3.7 code).
-</p>
-
-<p>
-BTW, PHP 5.3.7+ has been updated to crypt_blowfish 1.2, not the intermediate
-1.1 release referenced in the previous comment.  The differences between 1.1
-and 1.2 include introduction of the countermeasure for $2a$ mentioned above and
-the $2y$ prefix.
 </p>
 
 <p>

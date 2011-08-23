@@ -430,6 +430,7 @@ $uri_aliases = array (
     # CVS -> SVN
     "anoncvs.php"   => "svn",
     "cvs-php.php"   => "svn-php",
+    "security/crypt" => "security/crypt_blowfish",
 );
 
 $external_redirects = array(
