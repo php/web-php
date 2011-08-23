@@ -232,6 +232,7 @@ $inis = array(
 	'mysql.trace-mode'				=> 'mysql.configuration.php#ini.mysql.trace-mode',
 	'mysqli.allow-local-infile'              => 'mysqli.configuration.php#ini.mysqli.allow-local-infile',
 	'mysqli.max-links'				=> 'mysqli.configuration.php#ini.mysqli.max-links',
+	'mysqli.allow-persistent'		=> 'mysqli.configuration.php#ini.mysql.allow-persistent',
 	'mysqli.default-port'			=> 'mysqli.configuration.php#ini.mysqli.default-port',
 	'mysqli.default-socket'			=> 'mysqli.configuration.php#ini.mysqli.default-socket',
 	'mysqli.default-host'			=> 'mysqli.configuration.php#ini.mysqli.default-host',
