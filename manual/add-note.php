@@ -155,6 +155,18 @@ if ($process) {
 // Any needed variable was missing => display instructions
 else { 
 ?>
+<p>
+ <center>
+  <h2>Pay Attention Now!</h2>
+  <img src="http://imgs.xkcd.com/comics/freedom.png" alt="This is how we feel sometimes when obvious violations take place here!"/><br/>
+  <b>NOTE:</b> Due to the overwhelming lack of folks who seem to notice
+  that there are guidelines for what should <i>not</i> be posted here,
+  resulting in the need for us to moderate thousands of submissions,
+  consider this our form of grabbing your attention.  BEFORE YOU POST,
+  <a href="#whatnottoenter">READ THIS SECTION</a>, PLEASE!
+ </center>
+</p>
+
 <h3>Welcome to the PHP Manual user note system</h3>
 <p>
  You may contribute notes to the PHP manual by adding comments in the
@@ -188,6 +200,7 @@ else {
  answer may be <em>nine</em> but not <em>9</em>.
 </p>
 
+<a name"whatnottoenter"></a>
 <h3>What not to enter</h3>
 <p>
  User notes may be edited or deleted, and usually a note is deleted 
