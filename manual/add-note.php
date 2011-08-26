@@ -158,7 +158,7 @@ else {
 <p>
  <center>
   <h2>Pay Attention Now!</h2>
-  <img src="http://imgs.xkcd.com/comics/freedom.png" alt="This is how we feel sometimes when obvious violations take place here!"/><br/>
+  <img src="http://imgs.xkcd.com/comics/freedom.png" title="This is how we feel sometimes when obvious violations take place here!"/><br/>
   <b>NOTE:</b> Due to the overwhelming lack of folks who seem to notice
   that there are guidelines for what should <i>not</i> be posted here,
   resulting in the need for us to moderate thousands of submissions,
@@ -200,8 +200,7 @@ else {
  answer may be <em>nine</em> but not <em>9</em>.
 </p>
 
-<a name"whatnottoenter"></a>
-<h3>What not to enter</h3>
+<a name"whatnottoenter"><h3>What not to enter</h3></a>
 <p>
  User notes may be edited or deleted, and usually a note is deleted 
  because of the following reasons:
