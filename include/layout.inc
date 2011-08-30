@@ -350,8 +350,8 @@ function site_footer($config = array())
  </div>
 </div>
 <!--[if IE 6]>
-<script type="text/javascript"> 
-    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+<script type="text/javascript">
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; }
     var IE6UPDATE_OPTIONS = {
         icons_path: "/ie6update/images/"
     }
@@ -672,6 +672,25 @@ function display_event($event, $include_date = 1)
  </td></tr>
 </table>
 <?php
+}
+
+/**
+ * Print a view
+ *
+ * @param string $templateName
+ * @param array $params
+ * @return void
+ */
+function print_view($templateName, array $params = array()) {
+    $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
+    if(file_exists($path)) {
+        if(!empty($params)) {
+        foreach($params as $key => $param) {
+            $$key = $param;
+            }
+        }
+        include_once $path;
+    }
 }
 
 // Print news links for archives

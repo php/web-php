@@ -60,7 +60,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 
-/* We have to override these because theme.css has a generic style for 'ul' 
+/* We have to override these because theme.css has a generic style for 'ul'
    and that doesn't apply here on the downloads area
 */
 #mega-drop-down div.download ul {
@@ -268,12 +268,12 @@ div.home-sidebar {
 }
 
 div.home-sidebar h2 {
-    border-top: 6px solid #c3add9;
+    border-bottom: 6px solid #c3add9;
     font-size: 1.5em;
     line-height: 100%;
-    padding: 5px 0 10px 0;
+    padding: 5px 0 5px 0;
     font-weight: normal;
-    margin: 0;
+    margin: 20px 0 5px 0;
 }
 
 div.home-sidebar h2:first-child {
@@ -281,7 +281,7 @@ div.home-sidebar h2:first-child {
 }
 
 div.home-sidebar ul {
-    margin: 0 0 30px 0;
+    margin: 0 0 0 0;
     list-style-type: none;
     padding: 0;
 }

@@ -49,62 +49,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
-// Prepare news headings.
-$news = "<ul>";
-foreach (print_news($NEWS_ENTRIES, "frontpage", 5, null, true) as $entry) {
-    $news .= <<< EOT
-<li>[{$entry["date"]}] <a href="{$entry["permlink"]}">{$entry["title"]}</a></li>
-EOT;
-}
-$news .= "</ul>";
-$news .= '<p class="center"><a href="/archive/index.php">News Archive</a></p>';
-
-// Prepare sidebar.
-$sidebar = <<< EOT
-<div class=home-sidebar>
-    <h2>Recent News</h2>
-    <ul>
-        <li>PHP 5.3.5 and 5.2.17 Released!</li>
-        <li>PHP 5.2.16 Released!</li>
-        <li>PHP 5.3.4 Released!</li>
-    </ul>
-
-    <h2>Conferences</h2>
-    <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Lorem ipsum dolor sit amet</li>
-    </ul>
-
-    <h2>User Group Events</h2>
-    <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Lorem ipsum dolor sit amet</li>
-    </ul>
-
-    <h2>Thanks To</h2>
-    <ul>
-     <li><a href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
-     <li><a href="http://www.directi.com/">Directi</a></li>
-     <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
-     <li><a href="http://www.servercentral.net/">Server Central</a></li>
-     <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
-     <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
-     <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
-     <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
-     <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
-     <li><a href="http://www.binarysec.com/">BinarySEC</a></li>
-     <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
-     <li><a href="http://www.rackspace.com/">Rackspace</a></li>
-     <li><a href="http://www.eukhost.com/">EUKhost</a></li>
-     <li><a href="http://www.micfo.com/">micfo</a></li>
-     <li><a href="http://www.redpill-linpro.com">Redpill Linpro</a></li>
-     <li><a href="http://www.facebook.com">Facebook</a></li>
-    </ul>
-</div>
-EOT;
-
 // Prepare announcements.
 $announcements = "
 <div class='announcements'>
@@ -120,8 +64,8 @@ $features = "
         <h2>Get Involved!</h2>
         <p>
             Getting involved with PHP is easier than you think.
-            Are you interested in helping to improve one of the world's most 
-            widely used scripting languages? We are looking for all sorts 
+            Are you interested in helping to improve one of the world's most
+            widely used scripting languages? We are looking for all sorts
             of people, not only developers.
             <a href='/get-involved.php' class='readmore'>Read more...</a>
         </p>
@@ -130,8 +74,8 @@ $features = "
         <span class=graphic></span>
         <h2>Need Help?</h2>
         <p>
-            Everyone needs a little help from time to time, and finding it 
-            isn't always easy. Thankfully, PHP has one of the best support 
+            Everyone needs a little help from time to time, and finding it
+            isn't always easy. Thankfully, PHP has one of the best support
             communities out there.
             <a href='/support.php' class='readmore'>Read more...</a>
         </p>
@@ -177,7 +121,7 @@ site_header("Hypertext Preprocessor",
         'onload' => 'boldEvents();',
         'headtags' => array(
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
-            '<script type="text/javascript">', 
+            '<script type="text/javascript">',
             "function okc(f){var c=[38,38,40,40,37,39,37,39,66,65,13],x=function(){x.c=x.c||Array.apply({},c);x.r=function(){x.c=null};return x.c},h=function(e){if(x()[0]==(e||window.event).keyCode){x().shift();if(!x().length){x.r();f()}}else{x.r()}};window.addEventListener?window.addEventListener('keydown',h,false):document.attachEvent('onkeydown',h)}",
             "okc(function(){if(document.getElementById){i=document.getElementById('phplogo');i.src='".$_SERVER['STATIC_ROOT']."/images/php_konami.gif'}});",
             '</script>'
@@ -202,7 +146,7 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
-print $sidebar;
+print_view('homepage/sidebar.php', array('news' => $NEWS_ENTRIES));
 print $content;
 
 // Print the common footer.
