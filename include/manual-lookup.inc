@@ -149,6 +149,9 @@ function find_manual_page($lang, $keyword)
             }
 
             $stm = $dbh->prepare($SQL);
+            if (!$stm) {
+                    return find_manual_page_slow($lang, $keyword);
+            }
             $stm->execute(array($lang, "/manual/{$lang}/{$_keyword}", $keyword));
     
         // Some partially specified URL is used
