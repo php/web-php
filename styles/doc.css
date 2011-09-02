@@ -38,9 +38,7 @@ aside#quicktoc {
 /* }}} */
 
 
-
 /* {{{ Warning and notes */
-.docs div.warning,
 .docs div.caution,
 .docs div.tip,
 .docs blockquote.note {
@@ -56,22 +54,26 @@ aside#quicktoc {
     border-top: 3px solid #434343;
     background-color: #EFEFEF;
 }
-.docs div.warning {
-    border-top: 3px solid #ff4d4d;
-    background-color: #EFEFEF;
-}
+
 .docs div.caution {
     border-top: 3px solid #F90;
     background-color: #EFEFEF;
 }
 .docs blockquote.note,
-.docs div.warning,
 .docs div.caution,
 .docs div.tip {
     font-size: 1em;
     margin-right: 0.8em;
 }
-.docs div.warning b.warning,
+.docs div.warning b.warning {
+    font-size: 1.7em;
+}
+
+.docs div.warning p {
+    padding-left: 60px;
+    text-align: justify;
+}
+
 .docs div.caution b.caution,
 .docs div.tip b.tip {
     float: left;
@@ -82,6 +84,21 @@ aside#quicktoc {
 .docs div.caution p,
 .docs div.tip p {
     margin: 0;
+}
+
+.docs div.warning {
+    text-align: center;
+    background: #f2e5f4 url('/images/docs-warning.png') left center no-repeat;
+    margin: 20px 2% 20px 2%;
+    padding: 5px 15px 5px 19px;
+    border-top: 3px solid #9f8a8a;
+    border-bottom: 1px solid #9f8a8a;
+    min-height: 100px;
+    background-position: 16px;
+}
+
+.docs div.warning h1{
+    font-size: 1.4em;
 }
 /* }}} */
 
@@ -109,7 +126,6 @@ aside#quicktoc {
 
 /* {{{ Examples (highlighting is in theme.css) */
 .docs blockquote.note,
-.docs div.warning,
 .docs div.caution,
 .docs div.tip
 .docs .cdata pre,
@@ -139,19 +155,19 @@ aside#quicktoc {
 }
 
 .docs .doctable tbody tr:nth-child(even) {
-    background-color: #EFEFEF;    
+    background-color: #EFEFEF;
 }
 
 .docs .doctable {
     border-top: 1px solid #9F8A8A;
-    border-bottom: 1px solid #9F8A8A;   
+    border-bottom: 1px solid #9F8A8A;
     width: 100%;
 }
 
 .docs .doctable th {
     background-color: #FCFCFC;
     text-align: center;
-    border-bottom: 1px solid #9F8A8A; 
+    border-bottom: 1px solid #9F8A8A;
 }
 .docs .doctable td, .docs .doctable th {
     border-right: 1px solid #9F8A8A ;
@@ -300,8 +316,8 @@ dl.qandaentry {
 .docs .layout-menu ul.child-menu-list a {
     font-size: 13px;
     border: 0;
-    color: black;  
-    line-height: 1; 
+    color: black;
+    line-height: 1;
     overflow: visible;
     margin: 0;
     padding: 0;
@@ -322,6 +338,3 @@ dl.qandaentry {
 .docs #layout .layout-content, .docs #layout #usernotes {
     margin-left: 272px;
 }
-
-
-
