@@ -11,7 +11,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
 	     Due to unfortunate issues with 5.3.7 (see <a href="https://bugs.php.net/bug.php?id=55439">bug#55439</a>)
-	     users should wait with upgrading until 5.3.8 will be released (expected in few days).
+	     users should postpone upgrading until 5.3.8 is released (expected in a few days).
      </p>
     </div>
   </content>
