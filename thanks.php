@@ -98,6 +98,11 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
+ <a href="http://www.krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
+ for build testing and various PHP testing and quality assurance services.
+</p>
+
+<p>
  And special thanks to all the companies who donate server space and
  bandwidth to host our international array of 
  <a href="/mirrors.php">mirror sites</a>.
