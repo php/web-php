@@ -76,7 +76,8 @@ $minute = rand(0, 59);
  mirrors. For a list of active official mirrors, have a look at
  <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
  an official mirror site, you are advised to contact <a
- href="mailto:mirrors@php.net">mirrors@php.net</a> and ask if your
+ href="mailto:mirrors@php.net">mirrors@php.net</a> (a publicly-available
+ mailing list, publicly archived around the web) and ask if your
  application will have a chance to be accepted.  We have this limit in
  place to avoid overloading our rsync servers and monitoring infrastructure.
  We have found that this 2 mirror limit per country serves our users well,
