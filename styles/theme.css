@@ -431,6 +431,9 @@ pre.info {
     color: #eee;
 }
 
+#mega-drop-down a:hover {
+    color: #999;
+}
 
 /* {{{ The anchor for section headers */
 a.genanchor:link,
@@ -555,10 +558,13 @@ footer a {
     margin: 0 8px;
 }
 
-footer a:hover,
 footer a:link,
 footer a:visited {
     color: #ccc;
+}
+
+footer a:hover {
+    color: #888;
 }
 
 
