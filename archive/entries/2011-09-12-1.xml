@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux 2012</title>
+  <id>http://www.php.net/archive/2011.php#id2011-09-12-1</id>
+  <published>2011-09-12T11:52:55+02:00</published>
+  <updated>2011-09-12T11:52:55+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2011-10-15</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-09-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpbenelux.eu/2012/" title="PHPBenelux 2012">phpbnl2012.png</default:newsImage>
+  <link href="http://conference.phpbenelux.eu/2012/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHPBenelux Conference is ready for its third edition and takes place
+     January 27th &amp; 28th in Antwerp (Belgium). We're
+     <a href="http://conference.phpbenelux.eu/2012/call-for-papers/">calling for papers</a>
+     until October 15th and we're very much looking forward to your submissions.
+     </p>
+     <p>
+     These are the topics we're aiming for:
+     </p>
+     
+     <ul>
+     <li>Content Management Systems</li>
+     <li>Cloud</li>
+     <li>NoSQL</li>
+     <li>Analytics</li>
+     <li>Frameworks</li>
+     <li>Best practises</li>
+     <li>General and in depth programming skills</li>
+     <li>HTML5 &amp; co (with a PHP twist)</li>
+     </ul>
+     
+     <p>
+     All information about the conference and the CFP can be found on our
+     <a href="http://conference.phpbenelux.eu/2012">conference website</a>.
+     Schedule and ticket information will be announced early November
+     </p>
+     
+    </div>
+  </content>
+</entry>
