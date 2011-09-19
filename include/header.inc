@@ -1,4 +1,5 @@
 <?php
+/* $Id$ */
 // Disable caching, annoying while developing
 $v = "?v=" .$_SERVER["REQUEST_TIME"];
 header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
@@ -144,8 +145,8 @@ if (isset($shortname) && $shortname) {
     <?php news_toc(array('news')) ?>
     <?php news_toc(array('conferences', 'papers')) ?>
     <dl>
-      <dt><a href="http://wiki.php.net/">PHP Wiki</a></dt>
-        <dd><a href="http://wiki.php.net/rfc">Write a RFC</a></dd>
+      <dt><a href="https://wiki.php.net/">PHP Wiki</a></dt>
+        <dd><a href="https://wiki.php.net/rfc">Write a RFC</a></dd>
       <dt><a href="/get-involved.php">Get Involved</a></dt>
         <dd><a href="#">Report bugs</a></dd>
         <dd><a href="#">Contribute code</a></dd>
@@ -190,10 +191,10 @@ if (isset($shortname) && $shortname) {
         <dd><a href="/svn.php">SVN (PHP Source)</a></dd>
     </dl>
     <dl>
-      <dt><a href="http://bugs.php.net/">Bugs</a></dt>
-        <dd><a href="http://bugs.php.net/report.php">Report a bug</a></dd>
-        <dd><a href="http://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
-        <dd><a href="http://bugs.php.net/search.php">Search reported bugs</a></dd>
+      <dt><a href="https://bugs.php.net/">Bugs</a></dt>
+        <dd><a href="https://bugs.php.net/report.php">Report a bug</a></dd>
+        <dd><a href="https://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
+        <dd><a href="https://bugs.php.net/search.php">Search reported bugs</a></dd>
     </dl>
     <dl>
       <dt><a href="/license/index.php">License information</a></dt>

@@ -232,8 +232,8 @@ function site_header($title = '', $config = array())
   <a href="/support.php">getting help</a> |
   <a href="/mailing-lists.php">mailing lists</a> |
   <a href="/license">licenses</a> |
-  <a href="http://wiki.php.net/">wiki</a> |
-  <a href="http://bugs.php.net/">reporting bugs</a> |
+  <a href="https://wiki.php.net/">wiki</a> |
+  <a href="https://bugs.php.net/">reporting bugs</a> |
   <a href="/sites.php">php.net sites</a> |
   <a href="/links.php">links</a> |
   <a href="/conferences/">conferences</a> |
