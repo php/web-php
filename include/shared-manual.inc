@@ -130,7 +130,7 @@ $(document).ready(function() {
 	};
 
 	$(".refsect1 h3.title").each(function() {
-        url = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "#" + $(this).parent().attr("id");
+        url = "https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).parent().attr("id");
 		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
 		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
 	});
