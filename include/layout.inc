@@ -840,24 +840,6 @@ function site_header_beta($title = '', $config = array())
         $STATIC_ROOT = "/";
     }
 
-    // Prepare elephpant photo-stream.
-    // FIXME: This needs to be dynamically generated (randomized?)
-    // and delivered in a single http request (e.g. using data://
-    // uri scheme).
-    if (isset($config['elephpants'])) {
-        $elephpants = array(
-            'http://farm5.static.flickr.com/4111/5037379813_c727c94d83_s.jpg',
-            'http://farm6.static.flickr.com/5046/5246051917_77bd222e31_s.jpg',
-            'http://farm5.static.flickr.com/4116/4856848556_b8f64c1699_s.jpg',
-            'http://farm5.static.flickr.com/4114/4934705762_e67cc7a5a3_s.jpg',
-            'http://farm5.static.flickr.com/4081/4934704224_8f6d16ef1c_s.jpg',
-            'http://farm5.static.flickr.com/4097/4795284575_16f7692c31_s.jpg',
-            'http://farm5.static.flickr.com/4139/4795926308_4fa1038908_s.jpg',
-            'http://farm5.static.flickr.com/4135/4795285595_ec6c565c10_s.jpg'
-        );
-        $elephpants = array_merge($elephpants, $elephpants, $elephpants, $elephpants, $elephpants, $elephpants);
-    }
-
     require dirname(__FILE__) ."/header.inc";
 }
 function site_footer_beta($config = array())

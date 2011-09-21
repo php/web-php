@@ -237,6 +237,58 @@ $(document).ready(function() {
         });
     });
 
+    // load the elephpant images if elephpants div is in the dom.
+    $(".elephpants .images").first().each(function (idx, node) {
+        
+        // function to fetch and insert images.
+        var fetchImages = function() {
+        
+            // determine how many elephpants are required to fill the
+            // viewport and subtract for any images we already have.
+            var count = Math.ceil($(document).width() / 75)
+                      - $(".elephpants .images img").length;
+            
+            // early exit if we don't need any images.
+            if (count < 1) {
+                return;
+            }
+            
+            // do the fetch.
+            $.ajax({
+                url:      '/images/elephpants.php?count=' + count,
+                dataType: 'json', 
+                success:  function(data) {
+                    var photo, image;
+                    for (photo in data) {
+                        photo = data[photo];
+                        link  = $('<a>');
+                        link.attr('href',    photo.url);
+                        link.attr('title',   photo.title);
+                        image = $('<img>');
+                        image.attr('src',    'data:Image;base64,' + photo.data);
+                        $(node).append(link.append(image));
+                    }
+                },
+                error:    function() {
+                    $(".elephpants").hide();
+                }
+            });
+        
+        }
+        
+        // begin by fetching the images we need now.
+        fetchImages();
+                
+        // fetch more if viewport gets larger.
+        var deferred = null;
+        $(window).resize(function() {
+            window.clearTimeout(deferred);
+            deferred = window.setTimeout(function(){
+                fetchImages();
+            }, 250);
+        });
+    });
+
 });
 
 /**

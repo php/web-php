@@ -216,12 +216,10 @@ if (isset($shortname) && $shortname) {
 </div>
 
 <?php
+// if elephpants enabled, insert placeholder nodes
+// to be populated with images via javascript.
 if (isset($config['elephpants'])) {
-    print "<div class='elephpants'><div class=images>";
-    foreach ($elephpants as $image) {
-        print "<img src='$image'>";
-    }
-    print "</div></div>";
+    print "<div class='elephpants'><div class=images></div></div>";
 }
 ?>
 

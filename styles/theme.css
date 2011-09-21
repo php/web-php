@@ -578,10 +578,9 @@ div.elephpants {
 
 div.elephpants div.images {
     height: 75px;
-    width: 3000px;
-    position: relative;
-    left: -1%;
     background-color: #333;
+    text-align: center;
+    white-space: nowrap;
 }
 
 div.elephpants img {
@@ -590,15 +589,15 @@ div.elephpants img {
     opacity: 0.5
     -moz-opacity: 0.5;
     -webkit-opacity: 0.5;
-    transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
 }
 
 div.elephpants:hover img {
-    opacity: 0.75;
-    -moz-opacity: 0.75;
-    -webkit-opacity: 0.75;
+    opacity: 0.6;
+    -moz-opacity: 0.6;
+    -webkit-opacity: 0.6;
     transition: all 0.25s ease-in-out;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
