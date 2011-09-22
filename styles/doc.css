@@ -208,7 +208,7 @@ dl.qandaentry {
     position: relative;
 }
 
-.docs div.sect1 {
+.docs div.sect1, .docs div.partintro {
     position: relative;
 }
 
