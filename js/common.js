@@ -265,7 +265,7 @@ $(document).ready(function() {
                         link.attr('href',    photo.url);
                         link.attr('title',   photo.title);
                         image = $('<img>');
-                        image.attr('src',    'data:Image;base64,' + photo.data);
+                        image.attr('src',    'data:image/jpeg;base64,' + photo.data);
                         $(node).append(link.append(image));
                     }
                 },
