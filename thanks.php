@@ -98,7 +98,7 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
- <a href="http://www.krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
+ <a href="http://krystal.co.uk">Krystal.co.uk</a> provides a server and bandwidth
  for build testing and various PHP testing and quality assurance services.
 </p>
 
