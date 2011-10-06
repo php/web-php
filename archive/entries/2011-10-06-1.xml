@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP'n Rio 11</title>
+  <id>http://www.php.net/archive/2011.php#id2011-10-06-1</id>
+  <published>2011-10-06T16:40:59+02:00</published>
+  <updated>2011-10-06T16:40:59+02:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2011-11-05</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-10-06-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phprio.org/phpnrio11" title="PHP'n Rio 11">phpnrio11.png</default:newsImage>
+  <link href="http://www.phprio.org/phpnrio11" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+               <a href="http://www.phprio.org/">The PHP Rio User Group</a>
+               is pleased to announce their third edition of
+               the <em>PHP'n Rio</em> conference. It will be held on November 05th,
+               2011, at the <a href="http://portal.cefet-rj.br/">CEFET-RJ university</a>,
+               Rio de Janeiro. It is a one day conference aimed on providing
+               experienced developers and beginners a chance to learn more about PHP
+               frameworks, web applications built in PHP, and the art of testing
+               code.
+           </p>
+     
+           <p>
+               Whether you live here or are around just enjoying the marvelous city,
+               come and join us :) For more information, please visit
+               <a href="http://www.phprio.org/phpnrio11">
+                   http://www.phprio.org/phpnrio11
+               </a>
+               (Portuguese only).
+           </p>
+    </div>
+  </content>
+</entry>
