@@ -34,6 +34,18 @@ function tip_title($title, $author = '', $date = '')
  Send your suggestions for tips to <a href="/contact.php">the webmasters</a>.
 </p>
 
+<?php tip_title('PHP Docs-to-go for Google Chrome', 'Richard Wagener', '07-Oct-2011'); ?>
+<p>
+This is the complete php manual including user notes that works 100% OFFLINE. 
+It allows for searching, and quick access by using the Omnibox Feature.
+To use the omnibox type &gth; Ctlr+T &gt; Type "OP" &gt; Press (Tab) &gt; Enter the function name
+</p>
+<p>
+For more info, see
+<a href="https://chrome.google.com/webstore/detail/mlilmganaobieaclflbciblffhaagnip">https://chrome.google.com/webstore/detail/mlilmganaobieaclflbciblffhaagnip</a>
+</p>
+
+
 <?php tip_title('PHPDevBar for Firefox', 'Felipe Nascimento de Moura', '26-Jul-2011'); ?>
 <p>
  PHPDevBar is an addon for Firefox. This toolbar uses the official documentation
