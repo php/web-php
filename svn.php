@@ -15,7 +15,7 @@ $SIDEBAR_DATA = '
 <p>
  If you would like to join PHP development or would like to
  contribute to the PHP documentation, contact the relevant
- group. You will need <a href="/svn-php.php">your own SVN account</a>
+ group. You may want <a href="/svn-php.php">your own SVN account</a>
  to contribute.
 </p>
 
