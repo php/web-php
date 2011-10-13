@@ -87,6 +87,7 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.redpill-linpro.com">Redpill Linpro</a></li>
  <li><a href="http://www.facebook.com">Facebook</a></li>
  <li><a href="http://krystal.co.uk">Krystal.co.uk</a></li>
+ <li><a href="http://servergrove.com/">ServerGrove</a></li>
 </ul>
 <h3>Related sites</h3>
 <ul class="simple">
