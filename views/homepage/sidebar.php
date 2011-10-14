@@ -19,7 +19,7 @@
         <li>Conference 1</li>
         <li>Conference 2</li>
         <li>Conference 3</li>
-	</ul>
+    </ul>
 
     <h2>User Group Events</h2>
     <ul>
@@ -47,8 +47,8 @@
         <li><a target="_blank" href="http://www.sohosted.nl/webhosting/" title="Sohosted">Sohosted</a></li>
         <li><a target="_blank" href="http://www.redpill-linpro.com" title="Redpill Linpro">Redpill Linpro</a></li>
         <li><a target="_blank" href="http://www.facebook.com" title="Facebook">Facebook</a></li>
-		<li><a target="_blank" href="http://krystal.co.uk" title="Krystal.co.uk">Krystal.co.uk</a></li>
-		<li><a target="_blank" href="http://servergrove.com/" title="ServerGrove">ServerGrove</a></li>
+        <li><a target="_blank" href="http://krystal.co.uk" title="Krystal.co.uk">Krystal.co.uk</a></li>
+        <li><a target="_blank" href="http://servergrove.com/" title="ServerGrove">ServerGrove</a></li>
     </ul>
 
 </div>
