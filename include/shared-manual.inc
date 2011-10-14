@@ -8,10 +8,10 @@
  and therefore is the entering point for all manual pages
  to the website function collection. These functions display
  the manual pages with headers and navigation.
- 
+
  The $PGI global variable is used to store all page related
  information, including HTTP header related data.
- 
+
 */
 
 // Ensure that our environment is set up
@@ -29,10 +29,10 @@ function manual_setup($page_data)
     }
     global $PGI;
     $PGI = array_merge($PGI, $page_data); // merge for BC reasons
-    
+
     // Set base page for this manual page
     $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($PGI['head'][1]) . "/" . $PGI['this'][0];
- 
+
     // Set last modification time on the current manual page
     if (($time = @filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE'])) != false) {
         $PGI['lastmod'] = gmdate("D, d M Y", $time);
@@ -51,21 +51,21 @@ function manual_header()
         return manual_header_beta();
     }
     global $PGI, $LAST_UPDATED, $MYSITE;
-    
+
     // Get values out of the config array
     $title = $PGI['this'][1];
     list($encoding, $lang)  = $PGI['head'];
-    
+
     header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
     //header("Cache-Control: public, max-age=600");
     header("Vary: Cookie");
     //header("Content-type: text/html;charset=$encoding");
     header("Content-type: text/html;charset=utf-8");
     header("Content-language: $lang");
-   
+
     // Set base href for this manual page
     $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-    
+
     // {{{ Build rev=canonical
     $sections = get_manual_search_sections();
     // Kill the first entry (empty)
@@ -167,7 +167,7 @@ function manual_footer()
 
     // Get vars for easy handling
     list($filename, $title) = $PGI['this'];
-    
+
     echo "<br /><br />";
     manual_notes();
     echo "<br />";
@@ -207,22 +207,22 @@ function manual_sidebar()
 
     // Print out one link for all siblings of this page
     foreach($PGI['toc'] as $tocitem) {
-    
+
         // Get URL and title component
         list($url, $title) = $tocitem;
 
         // Get the proper classname to use for this <div>
         $liclass = ($url == $PGI['this'][0]) ? ' class="active"' : "";
-        
+
         // There are some very long function names, which
         // make the TOC too wide, so enable the browser to wrap them
-        // eg: xml_set_processing_instruction_handler 
+        // eg: xml_set_processing_instruction_handler
 	//     DOMElement->getElementsByTagNameNS()
         if (preg_match("!^[a-zA-Z0-9_>():&;-]+$!", $title)) {
             $wrap = '<span class="w"> </span>';
             $title = str_replace(array('_', '->', '::', '-&gt;'), array("_$wrap", "->$wrap", "::$wrap", "-&gt;$wrap"), $title);
         }
-        
+
         // Print out the TOC item using a <div>
         $BAR .= " <li{$liclass}>" .
                 make_link($url, $title) . "</li>\n";
@@ -236,7 +236,7 @@ function manual_navbar($location = "top")
 {
     global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $ACTIVE_ONLINE_LANGUAGES;
 
-    // Start navbar with 
+    // Start navbar with
     echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
     if (isset($PGI['next']) && isset($PGI['next'][1])) {
         echo "  <a href=\"{$PGI['next'][0]}\">" .
@@ -246,7 +246,7 @@ function manual_navbar($location = "top")
     }
     echo " </span>\n <span class=\"prev\">\n";
     if (isset($PGI['prev']) && isset($PGI['prev'][1])) {
-        echo "  <a href=\"{$PGI['prev'][0]}\">" . 
+        echo "  <a href=\"{$PGI['prev'][0]}\">" .
              make_image('caret-l.gif', '&lt;') .
              $PGI['prev'][1] . "</a>\n";
     } else {
@@ -265,10 +265,10 @@ function manual_navbar($location = "top")
     // Print out language switch on top of manual pages
     echo " <div class=\"langchooser\">\n";
     if ($location != 'bottom') {
-        
+
         $links = array();
-        
-        // Disable all languages without online content        
+
+        // Disable all languages without online content
         // Add a dropdown item for all languages left
         foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $name) {
             if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
@@ -289,7 +289,7 @@ function manual_navbar($location = "top")
              '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
              '/images/small_submit.gif" id="changeLangImage" ' .
              'alt="Change language" />' . "\n  </fieldset></form>\n";
-       
+
     } else {
         echo "  &nbsp;\n";
     }
@@ -310,7 +310,7 @@ function manual_notes()
     }
     // Get needed values
     list($filename, $title) = $GLOBALS['PGI']['this'];
-    
+
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
         $filename = substr($filename, 0, -4);
@@ -329,7 +329,7 @@ function manual_notes()
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
-    $addnotesnippet = 
+    $addnotesnippet =
         make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
         ' <small>' .
         make_link($addnotelink, 'add a note') .
@@ -344,16 +344,16 @@ function manual_notes()
   <strong>{$title}</strong>
  </div>
 END_USERNOTE_HEADER;
-    
+
     // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
         echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
     }
-     
+
     // If we have notes, print them out
     else {
         echo '<div id="allnotes">';
-        
+
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
@@ -362,7 +362,7 @@ END_USERNOTE_HEADER;
         echo "</div>\n";
         echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
     }
-    
+
     // End of #usernotes
     echo "</div>";
 }
@@ -370,7 +370,7 @@ END_USERNOTE_HEADER;
 function manual_notes_beta() {
     // Get needed values
     list($filename, $title) = $GLOBALS['PGI']['this'];
-    
+
     // Drop file extension from the name
     if (substr($filename, -4) == '.php') {
         $filename = substr($filename, 0, -4);
@@ -383,7 +383,7 @@ function manual_notes_beta() {
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
-    $addnotesnippet = 
+    $addnotesnippet =
         make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
         ' <small>' .
         make_link($addnotelink, 'add a note') .
@@ -397,16 +397,16 @@ function manual_notes_beta() {
   <h3 class="title">User Contributed Notes</h3>
  </div>
 END_USERNOTE_HEADER;
-    
+
     // If we have no notes, then inform the user
     if (sizeof($notes) == 0) {
         echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
     }
-     
+
     // If we have notes, print them out
     else {
         echo '<div id="allnotes">';
-        
+
         foreach($notes as $note) {
             manual_note_display(
                 $note['xwhen'], $note['user'], $note['note'], $note['id']
@@ -415,7 +415,7 @@ END_USERNOTE_HEADER;
         echo "</div>\n";
         echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
     }
-    
+
     // #usernotes gets closed by the footer
 }
 // Get user notes from the appropriate text dump
@@ -426,7 +426,7 @@ function manual_notes_load($id)
     $hash = substr(md5($id), 0, 16);
     $notes_file = $_SERVER['DOCUMENT_ROOT'] . "/backend/notes/" .
                   substr($hash, 0, 2) . "/$hash";
-                  
+
     // Open the note file for reading and get the data (12KB)
     // ..if it exists
     if (!file_exists($notes_file)) {
@@ -462,32 +462,32 @@ function manual_note_display($date, $name, $text, $id)
 
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['IS_DEV']) && $id) {
-    
+
         $admin = "\n  <span class=\"admin\">\n   " .
-        
+
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
             make_image('notes-edit.gif', 'edit note'),
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
-    
+
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=reject+' . $id,
             make_image('notes-reject.gif', 'reject note'),
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
-    
+
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=delete+' . $id,
             make_image('notes-delete.gif', 'delete note'),
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n  </span>";
-        
+
     } else { $admin = ''; }
-    
+
     echo <<<USER_NOTE_TEXT
 
  {$anchor}<div class="note">{$name}{$datestr}{$admin}
@@ -496,7 +496,7 @@ function manual_note_display($date, $name, $text, $id)
   </div>
  </div>
 USER_NOTE_TEXT;
- 
+
 }
 
 /* vim: set et ts=4 sw=4: */
@@ -548,14 +548,21 @@ function manual_setup_beta($setup) {
         "lang" => $setup["head"][1],
     );
     site_header($setup["this"][1] . " - Manual ", $config);
-    echo '<aside id="quicktoc"></aside>';
+    echo '
+    <aside id="quicktoc">
+        <div class="content"></div>
+        <div class="links">
+            <a title="Report a bug" href="#">Report a bug</a>
+            <a title="Edit this page" href="#">Edit this page</a>
+        </div>
+    </aside>';
 
     manual_language_chooser($setup['head'][1], $setup['this'][0]);
 }
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
-        
+
     $links = array();
 
     foreach ($ACTIVE_ONLINE_LANGUAGES as $lang => $name) {

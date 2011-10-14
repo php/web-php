@@ -15,9 +15,9 @@ $(document).ready(function() {
     // Wire up the beta warning.
     $("#beta-warning-close").click(function(event) {
         event.preventDefault();
-        $('body').css('margin-top', 0); 
+        $('body').css('margin-top', 0);
         $headBetaWarning.slideUp("fast");
-        
+
         // Hide it for a month by default.
         var expiry = new Date();
         expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
@@ -35,7 +35,7 @@ $(document).ready(function() {
             window.location.href = $(this).attr('rel').replace('#', '');
         });
     }
-    
+
 
 
     if (showBetaWarning) {
@@ -44,7 +44,7 @@ $(document).ready(function() {
         $('#beta-warning').slideDown(300, function() {
            $(this).find('.blurb').fadeIn('slow');
         });
-    }	
+    }
     // auto-expand the home menu when on the home page
     // and remove it from other pages.
     $("#headhome.current div.children").appendTo($('#menu-container'));
@@ -66,7 +66,7 @@ $(document).ready(function() {
         var activate = function(){
             clickedMenu.addClass('current');
             clickedMenu.find("div.children").appendTo(container);
-            container.find("div.children").slideUp(0).slideDown("fast", 
+            container.find("div.children").slideUp(0).slideDown("fast",
                 function(){ container.removeClass('busy'); }
             );
         };
@@ -142,7 +142,7 @@ $(document).ready(function() {
             source: function(request, response){
                 var term  = request.term;
                 var minScore = this.options.minScore;
-                
+
                 // Score an possible match
                 var score = function(item){
                     var match = item.search(new RegExp(term, "i"));
@@ -208,7 +208,7 @@ $(document).ready(function() {
             var currItem = $(this);
             $('<a class="toc_item" href="#' + currItem.parent().attr('id') + '">' + currItem.text() + '</a>')
                 .appendTo( $('<li>') ).parent().appendTo(l);
-     
+
         });
 
         if (foundToc) {
@@ -218,7 +218,10 @@ $(document).ready(function() {
                     $.scrollTo($(this).attr("href").replace(".", "\\\."), 800);
                 });
             });
-            $("#quicktoc").append("<h5>Quick TOC</h5>").append(l);
+
+            $("#quicktoc .content").append("<h5>Quick TOC</h5>").append(l);
+            $('#quicktoc').find('.links, .content').show();
+
         } else {
             $("#quicktoc").remove();
         }
@@ -239,24 +242,24 @@ $(document).ready(function() {
 
     // load the elephpant images if elephpants div is in the dom.
     $(".elephpants .images").first().each(function (idx, node) {
-        
+
         // function to fetch and insert images.
         var fetchImages = function() {
-        
+
             // determine how many elephpants are required to fill the
             // viewport and subtract for any images we already have.
             var count = Math.ceil($(document).width() / 75)
                       - $(".elephpants .images img").length;
-            
+
             // early exit if we don't need any images.
             if (count < 1) {
                 return;
             }
-            
+
             // do the fetch.
             $.ajax({
                 url:      '/images/elephpants.php?count=' + count,
-                dataType: 'json', 
+                dataType: 'json',
                 success:  function(data) {
                     var photo, image;
                     for (photo in data) {
@@ -273,12 +276,12 @@ $(document).ready(function() {
                     $(".elephpants").hide();
                 }
             });
-        
+
         }
-        
+
         // begin by fetching the images we need now.
         fetchImages();
-                
+
         // fetch more if viewport gets larger.
         var deferred = null;
         $(window).resize(function() {

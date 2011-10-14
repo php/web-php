@@ -3,16 +3,40 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
-
-    padding: 10px 0 10px 10px;
     border-top: 1px solid #C3ADD9;
     border-left: 1px solid #C3ADD9;
-    border-bottom: 1px solid #C3ADD9;
+    border-bottom: none;
     margin: 0 0 20px 20px;
-    width: 125px;
+    width: 160px;
+    background: white;
     position: fixed;
     right: 0px;
 }
+
+#quicktoc .content {
+    padding: 10px 0 10px 10px;
+}
+
+#quicktoc .links, #quicktoc .content {
+    display: none;
+}
+
+#quicktoc .links a:first-child {
+    border-top: 1px solid #9F8A8A;
+}
+
+#quicktoc .links a {
+    display: block;
+    color: black;
+    padding-left: 5px;
+    border-bottom: 1px solid #9F8A8A;
+    background-color: #F3F3F3;
+}
+
+#quicktoc .links a:hover {
+    background-color: #F2E5F4;
+}
+
 /* }}} */
 
 /* {{{ General styles (p, parameters, initializers, ...) */
