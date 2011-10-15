@@ -108,52 +108,52 @@ function manual_header()
 
     site_header("$title - Manual", array(
         "link" => $link,
-		"profile" => "http://purl.org/NET/erdf/profile",
-		"extra_headers" => array(
-			"Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
-		),
-		"headtags" => array(
-			'<meta http-equiv="Content-language" content="' . $lang . '" />
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+        "profile" => "http://purl.org/NET/erdf/profile",
+        "extra_headers" => array(
+            "Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
+        ),
+        "headtags" => array(
+            '<meta http-equiv="Content-language" content="' . $lang . '" />
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	var toggleImage = function(elem) {
-		if ($(elem).hasClass("shown")) {
-			$(elem).removeClass("shown").addClass("hidden");
-			$("img", elem).attr("src", "/images/notes-add.gif");
-		}
-		else {
-			$(elem).removeClass("hidden").addClass("shown");
-			$("img", elem).attr("src", "/images/notes-reject.gif");
-		}
-	};
+    var toggleImage = function(elem) {
+        if ($(elem).hasClass("shown")) {
+            $(elem).removeClass("shown").addClass("hidden");
+            $("img", elem).attr("src", "/images/notes-add.gif");
+        }
+        else {
+            $(elem).removeClass("hidden").addClass("shown");
+            $("img", elem).attr("src", "/images/notes-reject.gif");
+        }
+    };
 
-	$(".refsect1 h3.title").each(function() {
+    $(".refsect1 h3.title").each(function() {
         url = "https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).parent().attr("id");
-		$(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
-		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
-	});
-	$("#usernotes .head").each(function() {
-		$(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
-	});
-	$(".refsect1 h3.title .toggler").click(function() {
-		$(this).parent().siblings().slideToggle("slow");
-		toggleImage(this);
-		return false;
-	});
-	$("#usernotes .head .toggler").click(function() {
-		$(this).parent().next().slideToggle("slow");
-		toggleImage(this);
-		return false;
-	});
+        $(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
+        $(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
+    });
+    $("#usernotes .head").each(function() {
+        $(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
+    });
+    $(".refsect1 h3.title .toggler").click(function() {
+        $(this).parent().siblings().slideToggle("slow");
+        toggleImage(this);
+        return false;
+    });
+    $("#usernotes .head .toggler").click(function() {
+        $(this).parent().next().slideToggle("slow");
+        toggleImage(this);
+        return false;
+    });
 });
 </script>
 ',
 
 
-		),
-	));
+        ),
+    ));
     manual_navbar();
 }
 
@@ -217,7 +217,7 @@ function manual_sidebar()
         // There are some very long function names, which
         // make the TOC too wide, so enable the browser to wrap them
         // eg: xml_set_processing_instruction_handler
-	//     DOMElement->getElementsByTagNameNS()
+    //     DOMElement->getElementsByTagNameNS()
         if (preg_match("!^[a-zA-Z0-9_>():&;-]+$!", $title)) {
             $wrap = '<span class="w"> </span>';
             $title = str_replace(array('_', '->', '::', '-&gt;'), array("_$wrap", "->$wrap", "::$wrap", "-&gt;$wrap"), $title);
@@ -552,8 +552,8 @@ function manual_setup_beta($setup) {
     <aside id="quicktoc">
         <div class="content"></div>
         <div class="links">
-            <a title="Report a bug" href="#">Report a bug</a>
-            <a title="Edit this page" href="#">Edit this page</a>
+            <a title="Report a bug" href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=' . $PGI['this'][0] . '">Report a bug</a>
+            <a title="Edit this page" href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $PGI['this'][0] . '">Edit this page</a>
         </div>
     </aside>';
 
