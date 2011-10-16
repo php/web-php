@@ -1,29 +1,64 @@
-/* TOC elements on manual pages ------------------------------------------- */
-ul.toc li {
-	background-image: url(/images/box-0.gif);
-}
-ul.toc li.up {
-	background-image: url(/images/caret-u.gif);
-}
-ul.toc li.home {
-	background-image: url(/images/caret-t.gif);
-}
-ul.toc li.active {
-	background-image: url(/images/box-1.gif);
+#mirrors-container {
+
 }
 
-/* Sidebar backgrounds ---------------------------------------------------- */
-#layout_2, #layout_3 {
-	background-image: url(/images/leftbar.png);
-}
-#layout_3_helper {
-	background-image: url(/images/rightbar.png);
+#mirrors-container h1.title {
+    font-size: 1.7em;
 }
 
-/* Tips and warning icons, mainly used in the manual */
-div.tip {
-	background-image: url(/images/dialog-information.png);
+#mirrors-container .mirrors-header {
+
 }
-div.warning {
-	background-image: url(/images/dialog-warning.png);
+
+#mirrors-container .mirrors-header p {
+    margin-bottom: 12px;
+}
+
+#mirrors-container .mirrors-list {
+    border: 1px solid #CCC;
+    border-right: none;
+    border-top: none;
+}
+
+#mirrors-container .mirrors-list .mirror:first-child {
+    margin-left: 0;
+}
+
+#mirrors-container .mirrors-list .mirror {
+    /*margin-left: 12px;*/
+    width: 270px;
+    min-height: 150px;
+    padding: 10px;
+    float: left;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    position: relative;
+}
+
+#mirrors-container .mirrors-list .mirror .title {
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+#mirrors-container .mirrors-list .mirror .flag {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+}
+
+#mirrors-container .mirrors-list .mirror .entry:last-child {
+    margin-bottom: 0;
+}
+
+#mirrors-container .mirrors-list .mirror .entry {
+    margin-bottom: 12px;
+}
+
+.mirrors-list .mirror .entry .url {
+    float: left;
+}
+
+.mirrors-list .mirror .entry .provider {
+    float: left;
+    margin-left: 10px;
 }

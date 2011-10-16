@@ -51,3 +51,26 @@ table {
 section, article, aside, header, footer, nav, figure {
 	display: block;
 }
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+    overflow: visible;
+}
+

@@ -2,6 +2,16 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirrors.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+// If Beta, load the new beta mirrors page.
+if(myphpnet_beta()) {
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/include/layout.inc';
+    print_view('mirrors/main.php');
+    exit;
+}
+
+
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/mirrortable.inc';
 site_header("Mirror Sites", array("current" => "community"));
 ?>
