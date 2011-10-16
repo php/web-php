@@ -550,14 +550,14 @@ function manual_setup_beta($setup) {
     site_header($setup["this"][1] . " - Manual ", $config);
     echo '
     <aside id="quicktoc">
+        <div class="language">'.manual_language_chooser($setup['head'][1], $setup['this'][0]).'</div>
         <div class="content"></div>
         <div class="links">
             <a title="Report a bug" href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=' . $PGI['this'][0] . '">Report a bug</a>
             <a title="Edit this page" href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $PGI['this'][0] . '">Edit this page</a>
         </div>
     </aside>';
-
-    manual_language_chooser($setup['head'][1], $setup['this'][0]);
+    echo '</aside>';
 }
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
@@ -570,24 +570,18 @@ function manual_language_chooser($currentlang, $currentpage) {
     }
 
     // Print out the form with all the options
-    echo <<< FORM
-<form action="/manual/change.php" method="get" id="changelang">
-    <fieldset>
-        <select name="page" id="changelang-langs">
-FORM;
+    $rt = '<h5>Language</h5>'.
+          '<form action="/manual/change.php" method="get" id="changelang" name="changelang">'.
+    	  '<fieldset>'.
+	  '<select onchange="document.changelang.submit()" name="page" id="changelang-langs">';
     foreach ($links as $link) {
-        echo "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
+        $rt.= "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
     }
-    echo <<< FORM
-        <option value="help-translate.php">Other</option>
-        </select>
-        <input type="submit"
-          value="Go"
-          id="changelang-submit"
-          class="submit" />
-    </fieldset>
-</form>
-FORM;
+	$rt.= '<option value="help-translate.php">Other</option>'.
+	      '</select>'.
+              '</fieldset>'.
+              '</form>';
+	return $rt;
 }
 
 function manual_header_beta(){}

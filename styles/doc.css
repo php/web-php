@@ -13,7 +13,7 @@ aside#quicktoc {
     right: 0px;
 }
 
-#quicktoc .content {
+#quicktoc .content, #quicktoc .language {
     padding: 10px 0 10px 10px;
 }
 
@@ -283,7 +283,7 @@ dl.qandaentry {
 }
 
 #changelang {
-    display: none; /* Temporarly removed until we do not find a suitable place for the element */
+    border: 0;
 }
 
 
@@ -361,4 +361,9 @@ dl.qandaentry {
 /* #layout needed, see http://news.php.net/php.webmaster/11884 */
 .docs #layout .layout-content, .docs #layout #usernotes {
     margin-left: 272px;
+}
+#changelang-langs {
+    width:120px; 
+    font-size:12px;
+    margin-right: 6px;
 }
