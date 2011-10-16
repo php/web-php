@@ -17,11 +17,11 @@ if (isset($shortname) && $shortname) {
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
- 
+
  <title>PHP: <?php echo $title ?></title>
- 
+
  <meta charset="utf-8"/>
- 
+
  <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://www.php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases.atom" title="PHP Release feed" />
@@ -37,13 +37,23 @@ if (isset($shortname) && $shortname) {
 <?php foreach($config["meta-navigation"] as $rel => $page): ?>
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
- 
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" /> 
+
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
- 
+
+ <?php
+ if(isset($config['css']) && is_array($config['css'])):
+     foreach($config['css'] as $file):
+ ?>
+      <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/<?= $file; ?>" media="screen" />
+ <?php
+     endforeach;
+ endif;
+ ?>
+
  <!--[if lte IE 7]>
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css<?php echo $v?>" media="screen" />
  <![endif]-->
@@ -55,7 +65,7 @@ if (isset($shortname) && $shortname) {
  <!--[if IE]>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <![endif]-->
- 
+
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
  <script type="text/javascript">
@@ -68,7 +78,7 @@ if (isset($shortname) && $shortname) {
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
 <?php endif ?>
- 
+
 </head>
 <body class="<?php print $curr; ?>">
 
@@ -83,7 +93,7 @@ if (isset($shortname) && $shortname) {
   </div>
 </div>
 <nav id="headnav">
- 
+
  <ul id="headmenu">
   <li id="headsearch">
     <form method="post" action="/search.php" id="topsearch">
@@ -205,7 +215,7 @@ if (isset($shortname) && $shortname) {
     <br style="clear: both;" />
     </div></div></div>
   </li>
-  
+
  </ul>
 <br style="clear: both;" />
 </nav>
