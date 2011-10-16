@@ -42,9 +42,10 @@ foreach($grouped_mirrors as $country) {
         <div class="mirror">
             <div class="title"><?php echo $mirror['title']; ?></div>
             <div class="flag">
-                <?php
-                print_image('flags/new/' . strtolower($mirror['country_code']) . '.png', $mirror['title']);
-                ?>
+                <img alt="<?php echo $mirror['title']; ?>"
+                     height="25"
+                     width="45"
+                     src="<?php echo $STATIC_ROOT . '/images/flags/beta/' . strtolower($mirror['country_code']) . '.png'; ?>">
             </div>
             <?php
             $first = false;

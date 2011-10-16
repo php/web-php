@@ -42,8 +42,8 @@
 
 #mirrors-container .mirrors-list .mirror .flag {
     position: absolute;
-    top: 3px;
-    right: 8px;
+    top: 5px;
+    right: 5px;
 }
 
 #mirrors-container .mirrors-list .mirror .entry:last-child {
