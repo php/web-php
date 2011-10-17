@@ -152,9 +152,9 @@ aside#quicktoc {
 .docs blockquote.note,
 .docs div.caution,
 .docs div.tip
-.docs .cdata pre,
 .docs .example-contents div pre,
 .docs .example-contents div.phpcode,
+.docs .example-contents.screen,
 .docs .refentry .methodsynopsis  {
     border-top: 1px solid #9f8a8a;
     border-bottom: 1px solid #9f8a8a;
@@ -276,10 +276,6 @@ dl.qandaentry {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     color: #454e55;
-}
-
-.docs .para {
-    margin:0;
 }
 
 #changelang {
