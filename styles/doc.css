@@ -64,7 +64,6 @@ aside#quicktoc {
 
 /* {{{ Warning and notes */
 .docs div.caution,
-.docs div.tip,
 .docs blockquote.note {
     padding: 10px 20px;
     margin: 1em 2em 1.3em;
@@ -84,22 +83,22 @@ aside#quicktoc {
     background-color: #EFEFEF;
 }
 .docs blockquote.note,
-.docs div.caution,
-.docs div.tip {
+.docs div.caution {
     font-size: 1em;
     margin-right: 0.8em;
 }
+.docs div.tip b.tip,
 .docs div.warning b.warning {
     font-size: 1.7em;
 }
 
+.docs div.tip p,
 .docs div.warning p {
     padding-left: 60px;
     text-align: justify;
 }
 
-.docs div.caution b.caution,
-.docs div.tip b.tip {
+.docs div.caution b.caution {
     float: left;
     margin-right: 0.8em;
 }
@@ -110,15 +109,21 @@ aside#quicktoc {
     margin: 0;
 }
 
+.docs div.tip,
 .docs div.warning {
     text-align: center;
-    background: #f2e5f4 url('/images/docs-warning.png') left center no-repeat;
     margin: 20px 2% 20px 2%;
-    padding: 5px 15px 5px 19px;
+    padding: 5px 15px 5px 45px;
     border-top: 3px solid #9f8a8a;
     border-bottom: 1px solid #9f8a8a;
     min-height: 100px;
     background-position: 16px;
+}
+.docs div.warning {
+    background: #f2e5f4 url('/images/dialog-warning.png') left center no-repeat;
+}
+.docs div.tip {
+    background: #efefef url('/images/dialog-information.png') left center no-repeat;
 }
 
 .docs div.warning h1{
