@@ -17,9 +17,8 @@
  */
 
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.0beta2'; // set to false when there is no RC
-$PHP_5_4_RC_DATE = "20 October 2011";
-
+$PHP_5_4_RC = '5.4.0RC1'; // set to false when there is no RC
+$PHP_5_4_RC_DATE = "10 November 2011";
 
 /* PHP 5.3 Release */
 $PHP_5_3_RC      = '5.3.9RC1';
