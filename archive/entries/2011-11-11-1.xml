@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.4 RC1 released</title>
+  <id>http://www.php.net/archive/2011.php#id2011-11-11-1</id>
+  <published>2011-11-11T00:01:11+00:00</published>
+  <updated>2011-11-11T00:01:11+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2011-11-11-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2011.php#id2011-11-11-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      The PHP development team is proud to announce the first 
+      <a href="http://qa.php.net/">release candidate</a> of PHP 5.4. 
+      PHP 5.4 includes new language features and removes several legacy 
+      (deprecated) behaviours. Windows binaries can be downloaded from the 
+      <a href="http://windows.php.net/qa/">Windows QA site</a>.
+     </p>
+     <p>
+      <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>
+     </p>
+     <p>
+      This is the first release candidate. No new features will be included 
+      before the final version of PHP 5.4.0. The release candidate phase is 
+      intended as a period of bug fixing prior to the stable release.
+     </p>
+     <p>
+       <strong>Changes since the last beta version include:</strong>
+      </p>
+      <ul>
+        <li>Added class member access on instantiation (e.g. (new Foo)->bar()).</li>
+        <li>Changed silent conversion of array to string to produce a notice.</li>
+        <li>Numerous bug fixes and improvements in the Core and other extensions.</li>
+      </ul>
+     <p>
+      Please help us to identify bugs in order to ensure that the release is solid and 
+      all things behave as expected.  Please test this release cendidate against your 
+      code base and report any problems that you encounter to the 
+      <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or the 
+      <a href="https://bugs.php.net/">PHP bug tracker</a>.
+     </p>
+     <p>
+      Read the <a href="/releases/NEWS_5_4_0_RC1.txt">NEWS</a> file for a 
+      complete list of changes in this release.
+     </p>
+    </div>
+  </content>
+</entry>
