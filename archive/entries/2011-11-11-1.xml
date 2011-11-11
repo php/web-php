@@ -35,7 +35,7 @@
       </ul>
      <p>
       Please help us to identify bugs in order to ensure that the release is solid and 
-      all things behave as expected.  Please test this release cendidate against your 
+      all things behave as expected.  Please test this release candidate against your 
       code base and report any problems that you encounter to the 
       <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or the 
       <a href="https://bugs.php.net/">PHP bug tracker</a>.
