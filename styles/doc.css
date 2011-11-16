@@ -98,6 +98,10 @@ aside#quicktoc {
     text-align: justify;
 }
 
+.docs div.warning div.example-contents {
+    padding-left: 60px;
+}
+
 .docs div.caution b.caution {
     float: left;
     margin-right: 0.8em;
