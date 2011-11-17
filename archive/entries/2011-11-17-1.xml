@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Italian phpDay 2012</title>
+  <id>http://www.php.net/archive/2011.php#id2011-11-17-1</id>
+  <published>2011-11-17T11:05:04+01:00</published>
+  <updated>2011-11-17T11:05:04+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-02-28</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-11-17-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpday.it/" title="Italian phpDay">phpday2012.png</default:newsImage>
+  <link href="http://www.phpday.it/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The <a href="http://www.grusp.it">Italian PHP user group GrUSP</a> is pleased to
+         announce the 9th edition of the <a href="http://www.phpday.it">Italian phpDay conference</a>, taking place
+         on May 18th and 19th, 2012 in Verona. We will show new development
+         traits, best-practices and success cases related to quality, revision
+         control, test-driven development, continuous integration and so on.
+         There are also talks about design, project management, agile and various
+         php-related technologies.
+     </p>
+     <p>
+         phpDay is the first historic Italian conference dedicated solely to PHP
+         development, technologies and management. It is aimed to IT managers,
+         developers and innovators. Each year it renews the opportunity to link
+         to new business partners.
+     </p>
+     <p>
+         The call for papers is open and will run until Feb 28th 2012. For more
+         information, please visit our website: <a href="http://www.phpday.it">http://www.phpday.it</a>
+     </p>
+    </div>
+  </content>
+</entry>
