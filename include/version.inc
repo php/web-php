@@ -17,12 +17,12 @@
  */
 
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.0RC2'; // set to false when there is no RC
-$PHP_5_4_RC_DATE = "24 November 2011";
+$PHP_5_4_RC = '5.4.0RC3'; // set to false when there is no RC
+$PHP_5_4_RC_DATE = "08 December 2011";
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.9RC2';
-$PHP_5_3_RC_DATE = '24 November 2011';
+$PHP_5_3_RC      = '5.3.9RC3';
+$PHP_5_3_RC_DATE = '08 December 2011';
 
 $PHP_5_3_VERSION         = "5.3.8";
 $PHP_5_3_DATE            = "23 August 2011";
