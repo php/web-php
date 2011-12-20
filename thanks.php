@@ -65,11 +65,6 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
- <a href="http://www.binarysec.com/">BinarySEC</a> provides a server and bandwidth
- for various php.net services.
-</p>
-
-<p>
  <a href="http://www.eukhost.com/">EUKhost</a> provides a server and bandwidth
  for various php.net services.
 </p>
@@ -82,11 +77,6 @@ site_header("Thanks", array("current" => "FIXME"));
 <p>
  <a href="http://www.sohosted.nl/webhosting/">SoHosted Webhosting</a> provides the 
  servers and bandwidth used for buildbot testing and various windows based servers.
-</p>
-
-<p>
- <a href="http://www.micfo.com/">micfo</a> provides a server and bandwidth
- for various php.net services.
 </p>
 
 <p>
@@ -104,6 +94,11 @@ site_header("Thanks", array("current" => "FIXME"));
 
 <p>
  <a href="http://servergrove.com/">ServerGrove</a> provides managed servers and bandwidth for various php.net services.
+</p>
+
+<p>
+ <a href="http://www.bauer-kirch.de/">Bauer + Kirch GmbH</a> provides a server and bandwidth
+ for the php.net monitoring infrastructure.
 </p>
 
 <p>
