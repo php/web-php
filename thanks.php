@@ -23,12 +23,6 @@ site_header("Thanks", array("current" => "FIXME"));
 </p>
 
 <p>
- <a href="http://ez.no/">eZ systems</a> together with
- <a href="http://www.hit.no">HiT</a> provide a server and bandwidth for various
- php.net services.
-</p>
-
-<p>
  <a href="http://www.rackspace.com/">Rackspace</a> provides
  the server and bandwidth for various php.net services.
 </p>

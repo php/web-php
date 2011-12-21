@@ -75,7 +75,6 @@ $SIDEBAR_DATA = '
  <li><a href="http://www.servercentral.net/">Server Central</a></li>
  <li><a href="http://www.hostedsolutions.com/">Hosted Solutions</a></li>
  <li><a href="http://www.spry.com/">Spry VPS Hosting</a></li>
- <li><a href="http://ez.no/">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
  <li><a href="http://www.osuosl.org">OSU Open Source Lab</a></li>
  <li><a href="http://www.yahoo.com/">Yahoo! Inc.</a></li>
  <li><a href="http://www.nexcess.net/">NEXCESS.NET</a></li>
