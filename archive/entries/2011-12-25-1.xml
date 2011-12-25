@@ -3,7 +3,9 @@
   <title>PHP 5.4.0 RC4 released</title>
   <id>http://www.php.net/archive/2011.php#id2011-12-25-1</id>
   <published>2011-12-25T01:14:52+01:00</published>
-  <updated>2011-12-25T01:14:52+01:00</updated>
+  <updated>2011-12-25T04:31:52+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2011-12-25-1" rel="alternate" type="text/html"/>
   <link href="http://www.php.net/archive/2011.php#id2011-12-25-1" rel="via" type="text/html"/>
   <content type="xhtml">
@@ -19,7 +21,7 @@
        <strong>THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!</strong>.
      </p>
      <p>
-       This is the third release candidate. The release candidate phase is intended as
+       This is the 4th release candidate. The release candidate phase is intended as
        a period of bug fixing prior to the stable release. No new features should
        be included before the final version of PHP 5.4.0.
      </p>
