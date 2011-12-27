@@ -17,7 +17,8 @@ $SIDEBAR_DATA = '
 </p>
 <ul class="toc">
  <li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
- <li><a href="http://www.entropy.ch/software/macosx/php/">Mac OS X</a></li>
+ <li><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
+ <li><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
  <li><a href="http://developer.novell.com/wiki/index.php/PHP_for_NetWare">Novell NetWare</a></li>
  <li><a href="http://os2ports.smedley.info/index.php?page=php-5">OS/2</a></li>
  <li><a href="http://www.cp15.org/php/">RISC OS</a></li>
