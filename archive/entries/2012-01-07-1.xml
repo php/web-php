@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux 2012</title>
+  <id>http://www.php.net/archive/2012.php#id2012-01-07-1</id>
+  <published>2012-01-07T14:47:25+01:00</published>
+  <updated>2012-01-07T14:47:25+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-01-27</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-01-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpbenelux.eu/2012" title="PHPBenelux 2012">phpbnl2012.png</default:newsImage>
+  <link href="http://conference.phpbenelux.eu/2012" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The PHPBenelux Conference is ready for its third edition and takes place
+     January 27th &amp; 28th in Antwerp (Belgium).
+     </p>
+     <p>We're very proud to have a great
+     lineup this year and some awesome social events. All information about the
+     conference  can be found on our conference website
+     <a href="http://conference.phpbenelux.eu/2012">http://conference.phpbenelux.eu/2012</a>.
+     </p>
+     <p>
+     There are some tickets still available, get them at <a href="http://shop.phpbenelux.eu">http://shop.phpbenelux.eu</a>.
+     </p>
+    </div>
+  </content>
+</entry>
