@@ -49,6 +49,7 @@ function blacklisted($email) {
 	'grandeurhk',
 	'legaladvantagellc',
 	'sanath7285',
+	'omicsgroup',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
