@@ -881,7 +881,7 @@ h4.eventmonth {
 /* }}} */
 
 /* {{{ phpdoc examples */
-div.example, div.informalexample, div.classsynopsis div.ooclass {
+div.example, div.informalexample {
 	background-color: #fff;
 	border: 1px solid #000;
 	text-align: left;
@@ -892,17 +892,11 @@ div.refsect1 div.example {
 	margin-top: 20px;
 }
 
-div.classsynopsis div.ooclass,
 div.example p {
 	margin: 0px;
 	padding: 0.2em;
 	text-indent: 1em;
 	border-bottom: 1px dotted #000;
-}
-div.classsynopsis div.ooclass {
-	border: 1px solid #000;
-	padding: 10px;
-	margin: 0 0 10px 0;
 }
 
 div.example div.example-contents,
