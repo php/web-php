@@ -21,15 +21,15 @@ $PHP_5_4_RC = '5.4.0RC5'; // set to false when there is no RC
 $PHP_5_4_RC_DATE = "5 January 2012";
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.9RC4';
+$PHP_5_3_RC      = false; // '5.3.9RC4';
 $PHP_5_3_RC_DATE = '23 December 2011';
 
-$PHP_5_3_VERSION         = "5.3.8";
-$PHP_5_3_DATE            = "23 August 2011";
+$PHP_5_3_VERSION         = "5.3.9";
+$PHP_5_3_DATE            = "10 January 2012";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "704cd414a0565d905e1074ffdc1fadfb",
-                       "tar.gz"        => "f4ce40d5d156ca66a996dbb8a0e7666a",
+                       "tar.bz2"       => "dd3288ed5c08cd61ac5bf619cb357521",
+                       "tar.gz"        => "c79e374c61423beb64a69da1eb5526b7",
 );
 
 $PHP_5_2_VERSION         = "5.2.17";

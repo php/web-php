@@ -11,6 +11,339 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.9"></a><!-- {{{ 5.3.9 -->
+<h3>Version 5.3.9</h3>
+<b>10-Jan-2012</b>
+
+<ul>
+<li>Core:
+<ul>
+  <li>Added max_input_vars directive to prevent attacks based on hash collisions
+    (Dmitry).</li>
+  <li><?php bugfix(60205); ?> (possible integer overflow in content_length). (Laruence)</li>
+  <li><?php bugfix(60139); ?> (Anonymous functions create cycles not detected by the
+    GC). (Dmitry)</li>
+  <li><?php bugfix(60138); ?> (GC crash with referenced array in RecursiveArrayIterator)
+    (Dmitry).</li>
+  <li><?php bugfix(60120); ?> (proc_open's streams may hang with stdin/out/err when
+    the data exceeds or is equal to 2048 bytes). (Pierre, Pascal Borreli)</li>
+  <li><?php bugfix(60099); ?> (__halt_compiler() works in braced namespaces). (Felipe)</li>
+  <li><?php bugfix(60019); ?> (Function time_nanosleep() is undefined on OS X). (Ilia)</li>
+  <li><?php bugfix(55874); ?> (GCC does not provide __sync_fetch_and_add on some archs).
+    (klightspeed at netspace dot net dot au)</li>
+  <li><?php bugfix(55798); ?> (serialize followed by unserialize with numeric object
+    prop. gives integer prop). (Gustavo)</li>
+  <li><?php bugfix(55749); ?> (TOCTOU issue in getenv() on Windows builds). (Pierre)</li>
+  <li><?php bugfix(55707); ?> (undefined reference to `__sync_fetch_and_add_4' on Linux
+    parisc). (Felipe)</li>
+  <li><?php bugfix(55674); ?> (fgetcsv &amp; str_getcsv skip empty fields in some
+    tab-separated records). (Laruence)</li>
+  <li><?php bugfix(55649); ?> (Undefined function Bug()). (Laruence)</li>
+  <li><?php bugfix(55622); ?> (memory corruption in parse_ini_string). (Pierre)</li>
+  <li><?php bugfix(55576); ?> (Cannot conditionally move uploaded file without race
+    condition). (Gustavo)</li>
+  <li><?php bugfix(55510); ?>: $_FILES 'name' missing first character after upload.
+    (Arpad)</li>
+  <li><?php bugfix(55509); ?> (segfault on x86_64 using more than 2G memory). (Laruence)</li>
+  <li><?php bugfix(55504); ?> (Content-Type header is not parsed correctly on
+    HTTP POST request). (Hannes)</li>
+  <li><?php bugfix(55475); ?> (is_a() triggers autoloader, new optional 3rd argument to
+    is_a and is_subclass_of). (alan_k)</li>
+  <li><?php bugfix(52461); ?> (Incomplete doctype and missing xmlns).
+    (virsacer at web dot de, Pierre)</li>
+  <li><?php bugfix(55366); ?> (keys lost when using substr_replace an array). (Arpad)</li>
+  <li><?php bugfix(55273); ?> (base64_decode() with strict rejects whitespace after
+    pad). (Ilia)</li>
+  <li><?php bugfix(52624); ?> (tempnam() by-pass open_basedir with nonnexistent
+    directory). (Felipe)</li>
+  <li><?php bugfix(50982); ?> (incorrect assumption of PAGE_SIZE size). (Dmitry)</li>
+  <li>Fixed invalid free in call_user_method() function. (Felipe)</li>
+  <li><?php bugfix(43200); ?> (Interface implementation / inheritence not possible in
+    abstract classes). (Felipe)</li>
+</ul>
+</li>
+<li>BCmath:
+<ul>
+  <li><?php bugfix(60377); ?> (bcscale related crashes on 64bits platforms). (shm)</li>
+</ul>
+</li>
+<li>Calendar:
+<ul>
+  <li><?php bugfix(55797); ?> (Integer overflow in SdnToGregorian leads to segfault (in
+    optimized builds). (Gustavo)</li>
+</ul>
+</li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(60439); ?> (curl_copy_handle segfault when used with
+    CURLOPT_PROGRESSFUNCTION). (Pierrick)</li>
+  <li><?php bugfix(54798); ?> (Segfault when CURLOPT_STDERR file pointer is closed
+    before calling curl_exec). (Hannes)</li>
+  <li>Fixed issues were curl_copy_handle() would sometimes lose copied
+    preferences. (Hannes)</li>
+</ul>
+</li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(60373); ?> (Startup errors with log_errors on cause segfault).
+    (Derick)</li>
+  <li><?php bugfix(60236); ?> (TLA timezone dates are not converted properly from
+    timestamp). (Derick)</li>
+  <li><?php bugfix(55253); ?> (DateTime::add() and sub() result -1 hour on objects with
+    time zone type 2). (Derick)</li>
+  <li><?php bugfix(54851); ?> (DateTime::createFromFormat() doesn't interpret "D").
+    (Derick)</li>
+  <li><?php bugfix(53502); ?> (strtotime with timezone memory leak). (Derick)</li>
+  <li><?php bugfix(52062); ?> (large timestamps with DateTime::getTimestamp and
+    DateTime::setTimestamp). (Derick)</li>
+  <li><?php bugfix(51994); ?> (date_parse_from_format is parsing invalid date using 'yz'
+    format). (Derick)</li>
+  <li><?php bugfix(52113); ?> (Seg fault while creating (by unserialization)
+    DatePeriod). (Derick)</li>
+  <li><?php bugfix(48476); ?> (cloning extended DateTime class without calling
+    parent::__constr crashed PHP). (Hannes)</li>
+</ul>
+</li>
+<li>EXIF:
+<ul>
+  <li><?php bugfix(60150); ?> (Integer overflow during the parsing of invalid exif
+    header). (Stas, flolechaud at gmail dot com)</li>
+</ul>
+</li>
+<li>Fileinfo:
+<ul>
+  <li><?php bugfix(60094); ?> (C++ comment fails in c89). (Laruence)</li>
+  <li>Fixed possible memory leak in finfo_open(). (Felipe)</li>
+  <li>Fixed memory leak when calling the Finfo constructor twice. (Felipe)</li>
+</ul>
+</li>
+<li>Filter:
+<ul>
+  <li>Fixed Bug #55478 (FILTER_VALIDATE_EMAIL fails with internationalized
+    domain name addresses containing &gt;1 -). (Ilia)</li>
+</ul>
+</li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(60183); ?> (out of sync ftp responses). (bram at ebskamp dot me,
+    rasmus)</li>
+</ul>
+</li>
+<li>Gd:
+<ul>
+  <li><?php bugfix(60160); ?> (imagefill() doesn't work correctly
+    for small images). (Florian)</li>
+</ul>
+</li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(60192); ?> (SegFault when Collator not constructed
+    properly). (Florian)</li>
+  <li>Fixed memory leak in several Intl locale functions. (Felipe)</li>
+</ul>
+</li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(55543); ?> (json_encode() with JSON_NUMERIC_CHECK fails on objects
+    with numeric string properties). (Ilia, dchurch at sciencelogic dot com)</li>
+</ul>
+</li>
+<li>mbstring:
+<ul>
+  <li>Fixed possible crash in mb_ereg_search_init() using empty pattern. (Felipe)</li>
+</ul>
+</li>
+<li>MS SQL:
+<ul>
+  <li><?php bugfix(60267); ?> (Compile failure with freetds 0.91). (Felipe)</li>
+</ul>
+</li>
+<li>MySQL:
+<ul>
+  <li><?php bugfix(55550); ?> (mysql.trace_mode miscounts result sets). (Johannes)</li>
+</ul>
+</li>
+<li>MySQLi extension:
+<ul>
+  <li><?php bugfix(55859); ?> (mysqli-&gt;stat property access gives error). (Andrey)</li>
+  <li><?php bugfix(55582); ?> (mysqli_num_rows() returns always 0 for unbuffered, when
+    mysqlnd is used). (Andrey)</li>
+  <li><?php bugfix(55703); ?> (PHP crash when calling mysqli_fetch_fields).
+    (eran at zend dot com, Laruence)</li>
+</ul>
+</li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(55609); ?> (mysqlnd cannot be built shared). (Johannes)</li>
+  <li><?php bugfix(55067); ?> (MySQL doesn't support compression - wrong config option).
+    (Andrey)</li>
+</ul>
+</li>
+<li>NSAPI SAPI:
+<ul>
+  <li>Don't set $_SERVER['HTTPS'] on unsecure connection (bug #55403). (Uwe
+    Schindler)</li>
+</ul>
+</li>
+<li>OpenSSL:
+<ul>
+  <li><?php bugfix(60279); ?> (Fixed NULL pointer dereference in
+    stream_socket_enable_crypto, case when ssl_handle of session_stream is not
+    initialized.) (shm)</li>
+  <li>Fix segfault with older versions of OpenSSL. (Scott)</li>
+</ul>
+</li>
+<li>Oracle Database extension (OCI8):
+<ul>
+  <li><?php bugfix(59985); ?> (show normal warning text for OCI_NO_DATA).
+    (Chris Jones)</li>
+  <li>Increased maximum Oracle error message buffer length for new 11.2.0.3 size.
+    (Chris Jones)</li>
+  <li>Improve internal initalization failure error messages. (Chris Jones)</li>
+</ul>
+</li>
+<li>PDO
+<ul>
+  <li><?php bugfix(55776); ?> (PDORow to session bug). (Johannes)</li>
+</ul>
+</li>
+<li>PDO Firebird:
+<ul>
+  <li><?php bugfix(48877); ?> ("bindValue" and "bindParam" do not work for PDO Firebird).
+    (Mariuz)</li>
+  <li><?php bugfix(47415); ?> (PDO_Firebird segfaults when passing lowercased column name to bindColumn).</li>
+  <li><?php bugfix(53280); ?> (PDO_Firebird segfaults if query column count less than param count).
+    (Mariuz)</li>
+</ul>
+</li>
+<li>PDO MySQL driver:
+<ul>
+  <li><?php bugfix(60155); ?> (pdo_mysql.default_socket ignored). (Johannes)</li>
+  <li><?php bugfix(55870); ?> (PDO ignores all SSL parameters when used with mysql
+    native driver). (Pierre)</li>
+  <li><?php bugfix(54158); ?> (MYSQLND+PDO MySQL requires #define
+    MYSQL_OPT_LOCAL_INFILE). (Andrey)</li>
+</ul>
+</li>
+<li>PDO OCI driver:
+<ul>
+  <li><?php bugfix(55768); ?> (PDO_OCI can't resume Oracle session after it's been
+    killed). (mikhail dot v dot gavrilov at gmail dot com, Chris Jones, Tony)</li>
+</ul>
+</li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(60261); ?> (NULL pointer dereference in phar). (Felipe)</li>
+  <li><?php bugfix(60164); ?> (Stubs of a specific length break phar_open_from_fp</li>
+  <li><?php bugfix(53872); ?> (internal corruption of phar). (Hannes)</li>
+  <li><?php bugfix(52013); ?> (Unable to decompress files in a compressed phar). (Hannes)</li>
+    scanning for __HALT_COMPILER). (Ralph Schindler)</li>
+</ul>
+</li>
+<li>PHP-FPM SAPI:
+<ul>
+  <li><?php bugfix(60659); ?> (FPM does not clear auth_user on request accept).
+    (bonbons at linux-vserver dot org)</li>
+  <li><?php bugfix(60629); ?> (memory corruption when web server closed the fcgi fd).
+    (fat)</li>
+  <li><?php bugfix(60179); ?> (php_flag and php_value does not work properly). (fat)</li>
+  <li><?php bugfix(55526); ?> (Heartbeat causes a lot of unnecessary events). (fat)</li>
+  <li><?php bugfix(55533); ?> (The -d parameter doesn't work). (fat)</li>
+  <li>Implemented FR <?php bugl(52569); ?> (Add the "ondemand" process-manager
+    to allow zero children). (fat)</li>
+  <li><?php bugfix(55486); ?> (status show BIG processes number). (fat)</li>
+  <li><?php bugfix(55577); ?> (status.html does not install). (fat)</li>
+  <li>Backported from 5.4 branch (Dropped restriction of not setting the same
+    value multiple times, the last one holds).
+    (giovanni at giacobbi dot net, fat)</li>
+  <li>Backported FR <?php bugl(55166); ?> from 5.4 branch (Added process.max to control
+    the number of process FPM can fork). (fat)</li>
+  <li>Backported FR <?php bugl(55181); ?> from 5.4 branch (Enhance security by limiting access
+    to user defined extensions). (fat)</li>
+  <li>Backported FR <?php bugl(54098); ?> from 5.4 branch (Lowered process manager
+    default value). (fat)</li>
+  <li>Backported FR <?php bugl(52052); ?> from 5.4 branch (Added partial syslog support). (fat)</li>
+  <li>Implemented FR <?php bugl(54577); ?> (Enhanced status page with full status and details
+    about each processes. Also provide a web page (status.html) for
+    real-time FPM status. (fat)</li>
+  <li>Enhance error log when the primary script can't be open. FR <?php bugl(60199); ?>. (fat)</li>
+  <li>Added .phar to default authorized extensions. (fat)</li>
+</ul>
+</li>
+<li>Postgres:
+<ul>
+  <li><?php bugfix(60244); ?> (pg_fetch_* functions do not validate that row param
+    is &gt;0). (Ilia)</li>
+</ul>
+</li>
+<li>Reflection:
+<ul>
+  <li><?php bugfix(60367); ?> (Reflection and Late Static Binding). (Laruence)</li>
+</ul>
+</li>
+<li>Session:
+<ul>
+  <li><?php bugfix(55267); ?> (session_regenerate_id fails after header sent). (Hannes)</li>
+</ul>
+</li>
+<li>SimpleXML:
+<ul>
+  <li>Reverted the SimpleXML-&gt;query() behaviour to returning empty arrays
+    instead of false when no nodes are found as it was since 5.3.3
+    (bug #48601). (chregu, rrichards)</li>
+</ul>
+</li>
+<li>SOAP
+<ul>
+  <li><?php bugfix(54911); ?> (Access to a undefined member in inherit SoapClient may
+    cause Segmentation Fault). (Dmitry)</li>
+  <li><?php bugfix(48216); ?> (PHP Fatal error: SOAP-ERROR: Parsing WSDL:
+    Extra content at the end of the doc, when server uses chunked transfer
+    encoding with spaces after chunk size). (Dmitry)</li>
+  <li><?php bugfix(44686); ?> (SOAP-ERROR: Parsing WSDL with references). (Dmitry)</li>
+</ul>
+</li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(60048); ?> (sa_len a #define on IRIX). (china at thewrittenword dot
+    com)</li>
+</ul>
+</li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(60082); ?> (Crash in ArrayObject() when using recursive references).
+    (Tony)</li>
+  <li><?php bugfix(55807); ?> (Wrong value for splFileObject::SKIP_EMPTY).
+    (jgotti at modedemploi dot fr, Hannes)</li>
+  <li><?php bugfix(54304); ?> (RegexIterator::accept() doesn't work with scalar values).
+    (Hannes)</li>
+</ul>
+</li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(60455); ?> (stream_get_line misbehaves if EOF is not detected together
+    with the last read). (Gustavo)</li>
+</ul>
+</li>
+<li>Tidy:
+<ul>
+  <li><?php bugfix(54682); ?> (Tidy::diagnose() NULL pointer dereference).
+    (Maksymilian Arciemowicz, Felipe)</li>
+</ul>
+</li>
+<li>XSL:
+<ul>
+  <li>Added xsl.security_prefs ini option to define forbidden operations within
+    XSLT stylesheets, default is not to enable write operations. This option
+    won't be in 5.4, since there's a new method. Fixes Bug <?php bugl(54446); ?>. (Chregu,
+    Nicolas Gregoire)</li>
+</ul>
+</li>
+</ul>
+
+<hr />
+<!-- }}} -->
+
 <a name="5.3.8"></a><!-- {{{ 5.3.8 -->
 <h3>Version 5.3.8</h3>
 <b>23-Aug-2011</b>

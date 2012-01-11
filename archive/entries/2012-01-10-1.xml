@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.9 Released!</title>
+  <id>http://www.php.net/archive/2012.php#id2012-01-10-1</id>
+  <published>2012-01-10T22:29:58+01:00</published>
+  <updated>2012-01-10T22:29:58+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2012-01-11-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-01-11-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team would like to announce the immediate
+     availability of PHP 5.3.9. This release focuses on improving the
+     stability of the PHP 5.3.x branch with over 90 bug fixes, some of
+     which are security related.</p>
+     
+     <p>Security Enhancements and Fixes in PHP 5.3.9:</p>
+     
+     <ul>
+       <li>Added max_input_vars directive to prevent attacks based on hash collisions. (CVE-2011-4885)</li>
+       <li>Fixed bug #60150 (Integer overflow during the parsing of invalid exif
+         header). (CVE-2011-4566)</li>
+     </ul>
+     
+     <p>Key enhancements in PHP 5.3.9 include:</p>
+     
+     <ul>
+       <li>Fixed bug #55475 (is_a() triggers autoloader, new optional 3rd argument to
+         is_a and is_subclass_of).</li>
+       <li>Fixed bug #55609 (mysqlnd cannot be built shared)</li>
+       <li>Many changes to the FPM SAPI module</li>
+     </ul>
+     
+     <p>All users are strongly encouraged to upgrade to PHP 5.3.9.</p>
+     
+    </div>
+  </content>
+</entry>
