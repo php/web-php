@@ -234,10 +234,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Phar:
 <ul>
   <li><?php bugfix(60261); ?> (NULL pointer dereference in phar). (Felipe)</li>
-  <li><?php bugfix(60164); ?> (Stubs of a specific length break phar_open_from_fp</li>
+  <li><?php bugfix(60164); ?> (Stubs of a specific length break phar_open_from_fp
+    scanning for __HALT_COMPILER). (Ralph Schindler)</li>
   <li><?php bugfix(53872); ?> (internal corruption of phar). (Hannes)</li>
   <li><?php bugfix(52013); ?> (Unable to decompress files in a compressed phar). (Hannes)</li>
-    scanning for __HALT_COMPILER). (Ralph Schindler)</li>
 </ul>
 </li>
 <li>PHP-FPM SAPI:
