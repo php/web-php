@@ -322,6 +322,9 @@ function site_footer($config = array())
     $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
     //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
 
+    // Automate the Copyright year
+    $current_year = date('Y');
+
     print <<<END_FOOTER
 
  </div>
@@ -339,7 +342,7 @@ function site_footer($config = array())
 
 <div id="pagefooter">
  <div id="copyright">
-  <a href="/copyright.php">Copyright &copy; 2001-2011 The PHP Group</a><br />
+  <a href="/copyright.php">Copyright &copy; 2001-{$current_year} The PHP Group</a><br />
   All rights reserved.
  </div>
 

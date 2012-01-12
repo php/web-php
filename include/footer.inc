@@ -4,7 +4,7 @@
   <footer>
     <div class="footer-content">
       <ul class="footmenu copyright">
-        <li><a href="/copyright.php">Copyright &copy; 2001-2011 The PHP Group</a></li>
+        <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
       </ul>
       <ul class="footmenu">
         <li><a href="/my.php">My PHP.net</a></li>
