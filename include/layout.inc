@@ -199,6 +199,14 @@ function site_header($title = '', $config = array())
     }
 
 
+    $ts = time();
+    // Hardcode 1pm Jan.18 UTC to 1am Jan.19 UTC time window
+    if($ts>=1295355600 && $ts<1295398800) {
+        $sopa_bar = <<<EOBAR
+<div style="width:100%;height:50px;vertical-align:middle;text-align:center;background-color:#000;color:#ffffff; position:absolute;z-index:5555;top:8px;left:0px;background:#000000;"><p style="margin-top:15px;">Stop SOPA/PIPA <a href="http://americancensorship.org">[americancensorship.org]</a></p></div>
+EOBAR;
+    } else $sopa_bar = '';
+
     print <<<END_HEADER
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -223,6 +231,7 @@ function site_header($title = '', $config = array())
 <body{$onload}>
 
 <div id="headnav">
+ $sopa_bar
  <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php_snow_2008.gif"
  alt="PHP" width="120" height="67" id="phplogo" /></a>
  <div id="headmenu">
