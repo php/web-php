@@ -20,6 +20,9 @@ if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"]) &&
 }
 // Inform the user agent what is our last modification date
 else {
+    header('HTTP/1.1 503 Stop SOPA/PIPA');
+    header('Status: 503 Stop SOPA/PIPA');
+    header('Retry-After: 7200');
     header("Last-Modified: " . $tsstring);
 }
 ?>
@@ -29,7 +32,7 @@ else {
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="robots" content="noindex, nofollow">
-<title>STOP SOPA/PIPA!</title>
+<title>Stop SOPA/PIPA!</title>
 <style type="text/css" media="all">
 html,
 body {
