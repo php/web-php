@@ -57,7 +57,7 @@ a:hover {
 <body>
    <h2>503: Stop SOPA/PIPA</h2> 
    <p>
-   The <a href="">SOPA</a>/<a href="">PIPA</a> bills threaten the open nature of the Web and thus threaten Open Source
+   The <a href="http://www.opencongress.org/bill/112-h3261/show">SOPA</a>/<a href="http://www.opencongress.org/bill/112-s968/show">PIPA</a> bills threaten the open nature of the Web and thus threaten Open Source
    projects like ours. If you have the ability to vote in the United States, help us out and contact your representatives.
    If you are not able to vote in the United States, you can help by petitioning the U.S. state department. Bills like these
    have a habit of spreading to other countries if we don't stop them at their source.
