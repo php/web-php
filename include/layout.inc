@@ -232,7 +232,7 @@ EOBAR;
 
 <div id="headnav">
  $sopa_bar
- <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php_snow_2008.gif"
+ <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
  alt="PHP" width="120" height="67" id="phplogo" /></a>
  <div id="headmenu">
   <a href="/downloads.php">downloads</a> |
