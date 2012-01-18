@@ -200,8 +200,8 @@ function site_header($title = '', $config = array())
 
 
     $ts = time();
-    // Hardcode 1pm Jan.18 UTC to 1am Jan.19 UTC time window
-    if($ts>=1295355600 && $ts<1295398800) {
+    // Hardcode 11am Jan.18 UTC to 5am Jan.19 UTC time window
+    if($ts>=1326884400 && $ts<1326949200) {
         $sopa_bar = <<<EOBAR
 <div style="width:100%;height:50px;vertical-align:middle;text-align:center;background-color:#000;color:#ffffff; position:absolute;z-index:5555;top:8px;left:0px;background:#000000;"><p style="margin-top:15px;">Stop SOPA/PIPA <a href="http://americancensorship.org">[americancensorship.org]</a></p></div>
 EOBAR;
