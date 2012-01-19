@@ -673,7 +673,7 @@ function display_event($event, $include_date = 1)
 <?php
 
     // Print long description
-    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim($event['ldesc']));
+    echo preg_replace("/\r?\n\r?\n/", "<br /><br />", trim(htmlentities($event['ldesc'],ENT_QUOTES | ENT_IGNORE, 'UTF-8')));
     // If we have an URL, print it out
     if ($event['url']) {
         echo '<br /><br /><b>URL:</b> ',
