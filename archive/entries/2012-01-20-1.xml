@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2012</title>
+  <id>http://www.php.net/archive/2012.php#id2012-01-20-1</id>
+  <published>2012-01-20T05:20:52+00:00</published>
+  <updated>2012-01-20T05:20:52+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-03-02</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-01-20-1" rel="alternate" type="text/html"/>
+  <link href="http://confoo.ca/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      ConFoo 2012 in Montreal, Canada on Feb 29 - Mar 02
+     </p>
+     <p>
+      ConFoo is the unique web conference in Canada gathering different
+      tech communities in one place.
+     </p>
+     <ul>
+      <li>find working solutions for your day to day challenges;</li>
+      <li>discover new tools that increase your productivity;</li>
+      <li>network with people from some of the world’s biggest companies;</li>
+      <li>160 presentations focusing on core competencies improvement;</li>
+     </ul>
+     <p>
+      Don't miss this great opportunity and <a href="http://confoo.ca/en/register">register today</a>! 
+      Also check out our two <a href="http://confoo.ca/en/2012/training">training days</a>
+      around PHP, HTML5, Symfony2 and security topics right before the
+      conference.
+     </p>
+    </div>
+  </content>
+</entry>
