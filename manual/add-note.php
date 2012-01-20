@@ -97,7 +97,7 @@ if ($process) {
         // Post the variables to the central user note script
         // ($MQ is defined in prepend.inc)
         $result = posttohost(
-            "http://master.php.net/entry/user-note.php",
+            "http://master2.php.net/entry/user-note.php",
             array(
                 'user'    => ($MQ ? stripslashes($user) : $user),
                 'note'    => ($MQ ? stripslashes($note) : $note),

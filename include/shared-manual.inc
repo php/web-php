@@ -466,21 +466,21 @@ function manual_note_display($date, $name, $text, $id)
         $admin = "\n  <span class=\"admin\">\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
+            'https://master2.php.net/manage/user-notes.php?action=edit+' . $id,
             make_image('notes-edit.gif', 'edit note'),
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=reject+' . $id,
+            'https://master2.php.net/manage/user-notes.php?action=reject+' . $id,
             make_image('notes-reject.gif', 'reject note'),
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
 
         make_popup_link(
-            'https://master.php.net/manage/user-notes.php?action=delete+' . $id,
+            'https://master2.php.net/manage/user-notes.php?action=delete+' . $id,
             make_image('notes-delete.gif', 'delete note'),
             'admin',
             'scrollbars=no,width=300,height=200'
