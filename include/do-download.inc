@@ -89,7 +89,7 @@ function download_log($mirror, $file)
     $referer = (isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '-');
     
     // String to pass on as a query to the remote log
-    $log_file = "http://master2.php.net/log_download.php" .
+    $log_file = "https://master.php.net/log_download.php" .
                 "?download_file=" . urlencode($file) .
                 "&mirror=" .        urlencode($mirror) .
                 "&user_referer=" .  urlencode($referer) .
