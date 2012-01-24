@@ -168,6 +168,6 @@ $second = $arch->getElementsByTagNameNs("http://www.w3.org/2001/XInclude", "incl
 $arch->documentElement->insertBefore($first, $second);
 $arch->save("archive/archive.xml");
 
-fwrite(STDOUT, "File saved.\nPlease svn diff $archivefile sanity-check the changes before committing\n");
-fwrite(STDOUT, "NOTE: Remeber to svn add $file && svn commit $file!!\n");
+fwrite(STDOUT, "File saved.\nPlease git diff $archivefile sanity-check the changes before committing\n");
+fwrite(STDOUT, "NOTE: Remeber to git add $file && git commit $file && git push!!\n");
 
