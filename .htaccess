@@ -1,3 +1,4 @@
 <FilesMatch "\.(inc|sql)$">
   Order allow,deny
+  Deny from all
 </FilesMatch>
