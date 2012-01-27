@@ -83,7 +83,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
     // Post the request if there is no error
     if (!$error) {
         $error = posttohost(
-            "http://master2.php.net/entry/svn-account.php",
+            "http://master.php.net/entry/svn-account.php",
             array(
                 "username" => $cleaned['id'],
                 "name"     => $cleaned['fullname'],
