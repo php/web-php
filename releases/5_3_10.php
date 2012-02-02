@@ -11,7 +11,7 @@ site_header("PHP 5.3.10 Release Announcement");
 availability of PHP 5.3.10. This release delivers a critical security
 fix.</p>
 
-<p>Security Fixe in PHP 5.3.10:</p>
+<p>Security Fixes in PHP 5.3.10:</p>
 
 <ul>
   <li>Fixed arbitrary remote code execution vulnerability reported by Stefan 
