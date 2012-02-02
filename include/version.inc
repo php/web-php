@@ -24,12 +24,12 @@ $PHP_5_4_RC_DATE = "19 January 2012";
 $PHP_5_3_RC      = false; // '5.3.9RC4';
 $PHP_5_3_RC_DATE = '23 December 2011';
 
-$PHP_5_3_VERSION         = "5.3.9";
-$PHP_5_3_DATE            = "10 January 2012";
+$PHP_5_3_VERSION         = "5.3.10";
+$PHP_5_3_DATE            = "02 February 2012";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "dd3288ed5c08cd61ac5bf619cb357521",
-                       "tar.gz"        => "c79e374c61423beb64a69da1eb5526b7",
+                       "tar.bz2"       => "816259e5ca7d0a7e943e56a3bb32b17f",
+                       "tar.gz"        => "2b3d2d0ff22175685978fb6a5cbcdc13",
 );
 
 $PHP_5_2_VERSION         = "5.2.17";

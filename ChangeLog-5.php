@@ -11,6 +11,22 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.10"></a><!-- {{{ 5.3.10 -->
+<h3>Version 5.3.10</h3>
+<b>02-Feb-2012</b>
+
+<ul>
+<li>Core:
+<ul>
+  <li>Fixed arbitrary remote code execution vulnerability reported by Stefan 
+    Esser, CVE-2012-0830.</li>
+</ul>
+</li>
+</ul>
+
+</hr>
+<!-- }}} -->
+
 <a name="5.3.9"></a><!-- {{{ 5.3.9 -->
 <h3>Version 5.3.9</h3>
 <b>10-Jan-2012</b>
