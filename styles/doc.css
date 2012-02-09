@@ -43,7 +43,7 @@ aside#quicktoc {
 .docs p {
     margin: 0.7em 0;
 }
-.docs .methodname b {
+.docs .methodname b, .docs .methodname strong {
     color: #000;
 }
 
@@ -52,7 +52,7 @@ aside#quicktoc {
     font-weight: bold;
 }
 
-.docs i .parameter {
+.docs i .parameter, .docs em .parameter {
     font-style: normal;
 }
 
@@ -88,7 +88,9 @@ aside#quicktoc {
     margin-right: 0.8em;
 }
 .docs div.tip b.tip,
-.docs div.warning b.warning {
+.docs div.warning b.warning,
+.docs div.tip strong.tip,
+.docs div.warning strong.warning {
     font-size: 1.7em;
 }
 
@@ -102,7 +104,7 @@ aside#quicktoc {
     padding-left: 60px;
 }
 
-.docs div.caution b.caution {
+.docs div.caution b.caution, .docs div.caution strong.caution {
     float: left;
     margin-right: 0.8em;
 }

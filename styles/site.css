@@ -12,7 +12,7 @@ body, input, textarea, select, option {
 code, pre, tt {
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",  Monaco, "Courier New", Courier, monospace;
 }
-tt.parameter {
+tt.parameter, code.parameter {
 	font-style: italic;
 }
 pre {
@@ -976,7 +976,7 @@ div.section dt {
 	border-bottom: 1px solid #CCC;
 }
 
-div.refsect1 span.term b tt {
+div.refsect1 span.term b tt, div.refsect1 span.term strong code {
 	font-size: 0.9em;
 }
 
@@ -1006,15 +1006,17 @@ div.classsynopsis {
 	color: rgb(0, 119, 0);
 }
 div.classsynopsis b.classname,
+div.classsynopsis strong.classname,
 div.classsynopsis span.interfacename,
 div.classsynopsis div.fieldsynopsis var,
 div.classsynopsis div.classsynopsisinfo var,
 div.classsynopsis span.methodname,
 div.classsynopsis tt.parameter,
+div.classsynopsis code.parameter,
 div.classsynopsis span.modifier_role {
 	color: rgb(0, 0, 187);
 }
-div.classsynopsis b.interfacename {
+div.classsynopsis b.interfacename, div.classsynopsis strong.interfacename {
 	color: #0000BB;
 	font-weight: normal;
 }
