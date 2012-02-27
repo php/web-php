@@ -47,6 +47,10 @@ aside#quicktoc {
     color: #000;
 }
 
+.docs .methodparam .parameter {
+    cursor:pointer;
+}
+
 .docs .parameter {
     color: #604080;
     font-weight: bold;
@@ -144,7 +148,7 @@ aside#quicktoc {
 
 /* {{{ Parameter listing */
 .docs .refentry .parameters dt {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .docs .refentry .parameters dd {
@@ -167,14 +171,11 @@ aside#quicktoc {
 .docs .example-contents div.phpcode,
 .docs .example-contents.screen,
 .docs .refentry .methodsynopsis  {
-    border-top: 1px solid #9f8a8a;
-    border-bottom: 1px solid #9f8a8a;
-    border-left: 0;
-    border-right: 0;
-    background-color: #fcfcfc;
+    border: 1px solid #9f8a8a;
+    background-color: #fff;
     margin: 2px 0px;
     font-weight: normal;
-    padding: .5em .2em .5em .2em;
+    padding: .5em;
 }
 
 /* }}} */
@@ -267,7 +268,7 @@ dl.qandaentry {
 
 .docs  div.refsect1 h3.title {
     border: 0;
-    color: #636363;
+    color: #3f438d;
     position: absolute;
     padding: 0;
     margin:0;
@@ -282,10 +283,7 @@ dl.qandaentry {
     background-color: #f5f5f5;
     border: 1px solid #cacaca;
     margin-top: 50px;
-    padding: 15px 10px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    padding: 10px;
     color: #454e55;
 }
 
@@ -308,7 +306,6 @@ dl.qandaentry {
 .docs .layout-menu ul.parent-menu-list li {
     padding: 3px 6px;
     margin: 3px 0;
-    background-color: #f3f3f3;
 }
 
 .docs .layout-menu ul.parent-menu-list a {
@@ -318,13 +315,13 @@ dl.qandaentry {
     margin: 0;
     padding: 3px 7px;
     border: 0;
-    border-left: 12px solid #987db3;
+    border-left: 6px solid #987db3;
 }
 
 .docs .layout-menu ul.parent-menu-list a:hover,
 .docs .layout-menu ul.parent-menu-list li:last-child a {
     color: #000;
-    border-left: 12px solid #604080;
+    border-left: 6px solid #604080;
 }
 
 .docs .layout-menu ul.child-menu-list {
@@ -361,13 +358,13 @@ dl.qandaentry {
 
 
 .docs #layout {
-    padding: 25px 165px 25px 25px; /* FIXME: Overriden from theme.css */
+    padding: 25px 175px 25px 25px; /* FIXME: Overriden from theme.css */
     max-width: none; /* FIXME: Overriden from theme.css */
 }
 
 /* #layout needed, see http://news.php.net/php.webmaster/11884 */
 .docs #layout .layout-content, .docs #layout #usernotes {
-    margin-left: 272px;
+    margin-left: 250px;
 }
 #changelang-langs {
     width:120px; 

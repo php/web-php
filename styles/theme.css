@@ -149,9 +149,6 @@ ul {
     float: right;
     border: 1px solid;
     border-color: #987db3;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
 }
 
 #headsearch-keywords {
@@ -180,9 +177,6 @@ ul {
     padding: 2px 5px;
     font-weight: bold;
     border-color: #987db3;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;    
-    border-radius: 5px;
     border: 1px solid #604080;
     background: #604080;
     color: #fff;
@@ -289,15 +283,13 @@ ul {
  */
 #usernotes {
     margin: 0 0 10px 175px;
-
-    background: #eee;
     position: relative;
 }
 
 #usernotes .action {
     display: block;
     top: 1em;
-    right: 20px;
+    right: 0;
     position: absolute;
     text-align: right;
 }
@@ -309,15 +301,16 @@ ul {
 }
 
 #usernotes h3 {
-    border-color: #4d63ff;
-    padding-left: 20px;
     padding-right: 20px;
+    border-color: #3f438d;
     padding-bottom: 6px;
 }
 
 #usernotes .note {
-    margin: 0 20px 2em 20px;
+    margin: .5em 0;
     border-top: 3px solid #ddd;
+    padding: .5em;
+    background-color: #f5f5f5;
 }
 
 #usernotes .user, #usernotes .date, #usernotes .admin {
