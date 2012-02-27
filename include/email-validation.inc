@@ -51,6 +51,8 @@ function blacklisted($email) {
 	'sanath7285',
 	'omicsgroup',
 	'@sina.com',
+	'omicsonline',
+	'bit-ibio',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
