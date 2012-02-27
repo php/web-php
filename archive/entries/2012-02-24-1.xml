@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.4.0 RC8 released</title>
+  <id>http://www.php.net/archive/2012.php#id2012-02-24-1</id>
+  <published>2012-02-24T12:18:18+01:00</published>
+  <updated>2012-02-24T12:18:18+01:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2012-02-24-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-02-24-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+       The PHP development team would like to announce the 8th
+       <a href="http://qa.php.net">release candidate</a> of PHP 5.4.
+       PHP 5.4 includes new language features and removes several legacy
+       (deprecated) behaviours. Windows binaries can be downloaded from the
+       <a href="http://windows.php.net/qa/">Windows QA site</a>.
+     </p>
+     <p>
+       <strong>
+         THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!
+       </strong>.
+     </p>
+     <p>
+       This is the 8th release candidate. The release candidate phase is
+       intended as a period of bug fixing prior to the stable release. No new
+       features should be included before the final version of PHP 5.4.0.
+     </p>
+     <p>
+       The 7th and 8th release candidates focus on fixing critical bugs and
+       security vulnerabilities, including:
+     </p>
+     <ul>
+       <li>
+         A buffer overflow in htmlspecialchars() and htmlentities()
+         (<a href="https://bugs.php.net/60965">bug #60965</a>).
+       </li>
+       <li>
+         Improving the max_input_vars configuration directive to check nested
+         variables.
+       </li>
+     </ul>
+     <p>
+       A complete list of changes since the last release candidate can be
+       found in the
+       <a href="https://svn.php.net/repository/php/php-src/tags/php_5_4_0RC8/NEWS">NEWS</a>
+       file.
+     </p>
+     <p>
+       We've received a lot of feedback that has helped to improve the
+       upcoming release of PHP 5.4.0. Please continue to help us to identify
+       bugs in order to ensure that the release is solid and all things behave
+       as expected by taking the time to test this release candidate against
+       your code base and reporting any problems that you encounter to
+       the <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or
+       the <a href="https://bugs.php.net/">PHP bug tracker</a>.
+     </p>
+     <p>
+       The next release candidate will be released on
+       March 1.
+     </p>
+    </div>
+  </content>
+</entry>
