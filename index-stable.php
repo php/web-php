@@ -63,7 +63,7 @@ $SIDEBAR_DATA = '
  available in the <a href="/links.php">links section</a>.
 </p>
 <p>
- Ever wondered how popular PHP is? see the
+ Ever wondered how popular PHP is? See the
  <a href="/usage.php">Netcraft Survey</a>.
 </p>
 
