@@ -1,0 +1,3 @@
+[submodule "distributions"]
+	path = distributions
+	url = https://git.php.net/repository/web/php-distributions.git
