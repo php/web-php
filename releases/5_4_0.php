@@ -35,7 +35,7 @@ and includes a large number of new features and bug fixes.
   <li><a href="http://www.php.net/manual/security.globals.php">Register globals</a>, <a href="http://www.php.net/manual/security.magicquotes.php">magic quotes</a> and <a href="http://www.php.net/manual/features.safe-mode.php">safe mode</a> were removed</li>
   <li>The <a href="http://php.net/manual/control-structures.break.php">break</a>/<a href="http://php.net/manual/control-structures.continue.php">continue</a> $var syntax was removed</li>
   <li>The ini option <a href="http://www.php.net/manual/ini.core.php#ini.allow-call-time-pass-reference">allow_call_time_pass_reference</a> was removed</li>
-  <li>The PHP <a href="http://www.php.net/manual/ini.core.php#ini.default-charset">default_charset</a> is now "UTF-8"</li>
+  <li>The PHP <a href="http://www.php.net/manual/ini.core.php#ini.default-charset">default_charset</a> is now "UTF-8" within the distributed php.ini files, but still defaults to ""</li>
 </ul>
 
 <p>
