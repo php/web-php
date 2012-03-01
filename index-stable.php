@@ -156,7 +156,7 @@ $PHP_5_STABLE = array();
 $PHP_5_RC     = array();
 $rel          = $rc           = "";
 
-$SHOW_COUNT = 1;
+$SHOW_COUNT = 2;
 for ($i=1; $i<=$SHOW_COUNT; ++$i) {
 list($PHP_5_STABLE, ) = each($RELEASES[5]);
 
