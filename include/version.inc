@@ -17,8 +17,16 @@
  */
 
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.0RC8'; // set to false when there is no RC
-$PHP_5_4_RC_DATE = "16 February 2012";
+$PHP_5_4_RC = false; // set to false when there is no RC
+$PHP_5_4_RC_DATE = "01 March 2012";
+
+$PHP_5_4_VERSION         = "5.4.0";
+$PHP_5_4_DATE            = "01 March 2012";
+
+$PHP_5_4_MD5     = array(
+                       "tar.bz2"       => "04bb6f9d71ea86ba05685439d50db074",
+                       "tar.gz"        => "46b72e274c6ea7e775245ffdb81c9ce5",
+);
 
 /* PHP 5.3 Release */
 $PHP_5_3_RC      = false; // '5.3.9RC4';
@@ -53,6 +61,23 @@ $PHP_5_2_WINDOWS_NOTE_ZIP = "";
 
 $RELEASES = array(
     5 => array(
+        $PHP_5_4_VERSION => array(
+            "announcement" => true,
+            "source" => array(
+                array(
+                    "filename" => "php-$PHP_5_4_VERSION.tar.bz2",
+                    "name"     => "PHP $PHP_5_4_VERSION (tar.bz2)",
+                    "md5"      => $PHP_5_4_MD5["tar.bz2"],
+                    "date"     => $PHP_5_4_DATE,
+                ),
+                array(
+                    "filename" => "php-$PHP_5_4_VERSION.tar.gz",
+                    "name"     => "PHP $PHP_5_4_VERSION (tar.gz)",
+                    "md5"      => $PHP_5_4_MD5["tar.gz"],
+                    "date"     => $PHP_5_4_DATE,
+                ),
+            ),
+        ),
         $PHP_5_3_VERSION => array(
             "announcement" => true,
             "source" => array(
@@ -90,6 +115,7 @@ $RELEASES = array(
     ),
 );
 
-$PHP_5_VERSION = $PHP_5_3_VERSION; // Some scripts require this set
-$PHP_5_RC_DATE = $PHP_5_3_RC_DATE; // Used by master
+$PHP_5_VERSION = $PHP_5_4_VERSION; // Some scripts require this set
+$PHP_5_DATE    = $PHP_5_4_DATE; // Used by buumpRelease script
+$PHP_5_RC_DATE = $PHP_5_4_RC_DATE; // Used by master
 
