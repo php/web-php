@@ -10,7 +10,7 @@ site_header("PHP 5.4.0 Release Announcement");
 The PHP development team is proud to announce the immediate availability
 of PHP <a href="http://php.net/downloads.php#v5.4.0">5.4.0</a>.
 This release is a major leap forward in the 5.x series,
-which includes a large number of new features and bug fixes.
+and includes a large number of new features and bug fixes.
 </p>
 
 <p>
