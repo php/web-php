@@ -94,7 +94,6 @@ list($v, $a) = each($RELEASES[5]);
     <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Current stable)</h1>
 <?php } else { ?>
     <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Old stable)</h1>
-    <strong>This version is no longer supported by PHP.net</strong>
 <?php } ?>
 
 <h2>Complete Source Code</h2>
