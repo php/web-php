@@ -46,15 +46,15 @@ which includes a large number of new features and bug fixes.
 </ul>
 
 <p>
-PHP 5.4 series will be the last versions to support Windows XP and
-Windows 2003. We will not provide binary packages for these Windows
-versions anymore after PHP 5.4.
+PHP 5.4 will be the last series to support Windows XP and Windows
+2003. We will not provide binary packages for these Windows versions
+after PHP 5.4.
 </p>
 
 <p>
 For users upgrading from PHP 5.3 there is a migration guide available
 <a href="http://php.net/migration54">here</a>, detailing the changes between
-those releases and PHP 5.4.0.
+PHP 5.3 and PHP 5.4.0.
 </p>
 
 <p>
