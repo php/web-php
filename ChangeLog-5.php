@@ -11,6 +11,634 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.0"></a><!-- {{{ 5.3.10 -->
+<h3>Version 5.4.0</h3>
+<b>01-Mar-2012</b>
+
+<ul>
+<li>autoconf 2.59+ is now supported (and required) for generating the
+  configure script with ./buildconf. Autoconf 2.60+ is desirable
+  otherwise the configure help order may be incorrect.</li>
+</ul>
+<ul>
+<li>Removed legacy features</li>
+<ul>
+  <li>break/continue $var syntax.</li>
+  <li>Safe mode and all related ini options.</li>
+  <li>register_globals and register_long_arrays ini options.</li>
+  <li>import_request_variables().</li>
+  <li>allow_call_time_pass_reference.</li>
+  <li>define_syslog_variables ini option and its associated function.</li>
+  <li>highlight.bg ini option.</li>
+  <li>Session bug compatibility mode (session.bug_compat_42 and
+    session.bug_compat_warn ini options).</li>
+  <li>session_is_registered(), session_register() and session_unregister()
+    functions.</li>
+  <li>y2k_compliance ini option.</li>
+  <li>magic_quotes_gpc, magic_quotes_runtime and magic_quotes_sybase
+    ini options. get_magic_quotes_gpc, get_magic_quotes_runtime are kept
+    but always return false, set_magic_quotes_runtime raises an
+    E_CORE_ERROR.</li>
+  <li>Removed support for putenv("TZ=..") for setting the timezone.</li>
+  <li>Removed the timezone guessing algorithm in case the timezone isn't set with
+    date.timezone or date_default_timezone_set(). Instead of a guessed
+    timezone, "UTC" is now used instead.</li>
+</ul>
+</ul>
+<ul>
+<li>Moved extensions to PECL</li>
+<ul>
+  <li>ext/sqlite.  (Note: the ext/sqlite3 and ext/pdo_sqlite extensions are
+    not affected)</li>
+</ul>
+</ul>
+<ul>
+<li>General improvements</li>
+<ul>
+  <li>Added short array syntax support ([1,2,3]), see UPGRADING guide for full
+    details.</li>
+  <li>Added binary numbers format (0b001010).</li>
+  <li>Added support for Class::{expr}() syntax.</li>
+  <li>Added multibyte support by default. Previously php had to be compiled
+    with --enable-zend-multibyte. Now it can be enabled or disabled through
+    zend.multibyte directive in php.ini.</li>
+  <li>Removed compile time dependency from ext/mbstring.</li>
+  <li>Added support for Traits.</li>
+  <li>Added closure $this support back.</li>
+  <li>Added array dereferencing support.</li>
+  <li>Added callable typehint.</li>
+  <li>Added indirect method call through array. <?php bugl(47160); ?>.</li>
+  <li>Added DTrace support.</li>
+  <li>Added class member access on instantiation (e.g. (new foo)-&gt;bar()) support.</li>
+  <li>&lt;?= is now always available regardless of the short_open_tag setting.</li>
+  <li>Implemented Zend Signal Handling (configurable option --enable-zend-signals, 
+    off by default).</li>
+  <li>Improved output layer, see README.NEW-OUTPUT-API for internals.</li>
+  <li>Improved unix build system to allow building multiple PHP binary SAPIs and
+    one SAPI module the same time. <?php bugl(53271); ?>, <?php bugl(52419); ?>.</li>
+  <li>Implemented closure rebinding as parameter to bindTo.</li>
+  <li>Improved the warning message of incompatible arguments.</li>
+  <li>Improved ternary operator performance when returning arrays.
+  <li>Changed error handlers to only generate docref links when the docref_root 
+    INI setting is not empty.</li>
+  <li>Changed silent conversion of array to string to produce a notice.</li>
+  <li>Changed default value of "default_charset" php.ini option from ISO-8859-1 to
+	UTF-8.</li>
+  <li>Changed silent casting of null/''/false into an Object when adding
+	a property into a warning.</li>
+  <li>Changed E_ALL to include E_STRICT.</li>
+  <li>Disabled windows CRT warning by default, can be enabled again using the ini
+    directive windows_show_crt_warnings.</li>
+  <li><?php bugfix(55378); ?>: Binary number literal returns float number though its
+    value is small enough.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Zend Engine memory usage</li>
+<ul>
+  <li>Improved parse error messages.</li>
+  <li>Replaced zend_function.pass_rest_by_reference by
+    ZEND_ACC_PASS_REST_BY_REFERENCE in zend_function.fn_flags.</li>
+  <li>Replaced zend_function.return_reference by ZEND_ACC_RETURN_REFERENCE
+    in zend_function.fn_flags.</li>
+  <li>Removed zend_arg_info.required_num_args as it was only needed for internal
+    functions. Now the first arg_info for internal functions (which has special
+    meaning) is represented by zend_internal_function_info structure.</li>
+  <li>Moved zend_op_array.size, size_var, size_literal, current_brk_cont,
+    backpatch_count into CG(context) as they are used only during compilation.</li>
+  <li>Moved zend_op_array.start_op into EG(start_op) as it's used only for
+    'interactive' execution of single top-level op-array.</li>
+  <li>Replaced zend_op_array.done_pass_two by ZEND_ACC_DONE_PASS_TWO in
+    zend_op_array.fn_flags.</li>
+  <li>op_array.vars array is trimmed (reallocated) during pass_two.
+  <li>Replaced zend_class_entry.constants_updated by ZEND_ACC_CONSTANTS_UPDATED
+    in zend_class_entry.ce_flags.</li>
+  <li>Reduced the size of zend_class_entry by sharing the same memory space
+    by different information for internal and user classes.
+    See zend_class_entry.info union.</li>
+  <li>Reduced size of temp_variable.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Zend Engine, performance tweaks and optimizations</li>
+<ul>
+  <li>Inlined most probable code-paths for arithmetic operations directly into
+    executor.</li>
+  <li>Eliminated unnecessary iterations during request startup/shutdown.</li>
+  <li>Changed $GLOBALS into a JIT autoglobal, so it's initialized only if used.
+    (this may affect opcode caches!)</li>
+  <li>Improved performance of @ (silence) operator.</li>
+  <li>Simplified string offset reading. $str[1][0] is now a legal construct.</li>
+  <li>Added caches to eliminate repeatable run-time bindings of functions,
+    classes, constants, methods and properties.</li>
+  <li>Added concept of interned strings. All strings constants known at compile
+    time are allocated in a single copy and never changed.</li>
+  <li>ZEND_RECV now always has IS_CV as its result.</li>
+  <li>ZEND_CATCH now has to be used only with constant class names.</li>
+  <li>ZEND_FETCH_DIM_? may fetch array and dimension operands in different order.</li>
+  <li>Simplified ZEND_FETCH_*_R operations. They can't be used with the
+    EXT_TYPE_UNUSED flag any more. This is a very rare and useless case.
+    ZEND_FREE might be required after them instead.</li>
+  <li>Split ZEND_RETURN into two new instructions ZEND_RETURN and
+    ZEND_RETURN_BY_REF.</li>
+  <li>Optimized access to global constants using values with pre-calculated
+    hash_values from the literals table.</li>
+  <li>Optimized access to static properties using executor specialization.
+    A constant class name may be used as a direct operand of ZEND_FETCH_*
+    instruction without previous ZEND_FETCH_CLASS.</li>
+  <li>zend_stack and zend_ptr_stack allocation is delayed until actual usage.</li>
+</ul>
+</ul>
+<ul>
+<li>Other improvements to Zend Engine</li>
+<ul>
+  <li>Added an optimization which saves memory and emalloc/efree calls for empty
+    HashTables.</li>
+  <li>Added ability to reset user opcode handlers.</li>
+  <li>Changed the structure of op_array.opcodes. The constant values are moved from
+    opcode operands into a separate literal table.</li>
+  <li>Fixed (disabled) inline-caching for ZEND_OVERLOADED_FUNCTION methods.</li>
+  <li><?php bugfix(43200); ?> (Interface implementation / inheritence not possible in
+    abstract classes).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved core functions</li>
+<ul>
+  <li>Added optional argument to debug_backtrace() and debug_print_backtrace()
+    to limit the amount of stack frames returned.</li>
+  <li>Added hex2bin() function.</li>
+  <li>number_format() no longer truncates multibyte decimal points and thousand
+    separators to the first byte. <?php bugl(53457); ?>.</li>
+  <li>Added support for object references in recursive serialize() calls.
+    <?php bugl(36424); ?>.</li>
+  <li>Added support for SORT_NATURAL and SORT_FLAG_CASE in array
+    sort functions (sort, rsort, ksort, krsort, asort, arsort and
+    array_multisort). <?php bugl(55158); ?>.</li>
+  <li>Added stream metadata API support and stream_metadata() stream class
+    handler.</li>
+  <li>User wrappers can now define a stream_truncate() method that responds
+    to truncation, e.g. through ftruncate(). <?php bugl(53888); ?>.</li>
+  <li>Improved unserialize() performance.</li>
+  <li>Changed array_combine() to return empty array instead of FALSE when both
+    parameter arrays are empty. <?php bugl(34857); ?>.</li>
+  <li>Fixed invalid free in call_user_method() function.</li>
+  <li>Fixed crypt_blowfish handling of 8-bit characters. (CVE-2011-2483).</li>
+  <li><?php bugfix(61095); ?> (Incorect lexing of 0x00*+&lt;NUM&gt;).</li>
+  <li><?php bugfix(60965); ?> (Buffer overflow on htmlspecialchars/entities with
+    $double=false).</li>
+  <li><?php bugfix(60895); ?> (Possible invalid handler usage in windows random
+    functions).</li>
+  <li><?php bugfix(60879); ?> (unserialize() Does not invoke __wakeup() on object).</li>
+  <li><?php bugfix(60825); ?> (Segfault when running symfony 2 tests).</li>
+  <li><?php bugfix(60809); ?> (TRAITS - PHPDoc Comment Style Bug).</li>
+  <li><?php bugfix(60627); ?> (httpd.worker segfault on startup with php_value).</li>
+  <li><?php bugfix(60613); ?> (Segmentation fault with $cls-&gt;{expr}() syntax).</li>
+  <li><?php bugfix(60611); ?> (Segmentation fault with Cls::{expr}() syntax).</li>
+  <li><?php bugfix(60558); ?> (Invalid read and writes).</li>
+  <li><?php bugfix(60536); ?> (Traits Segfault).</li>
+  <li><?php bugfix(60444); ?> (Segmentation fault with include &amp; class extending).</li>
+  <li><?php bugfix(60362); ?> (non-existent sub-sub keys should not have values).</li>
+  <li><?php bugfix(60350); ?> (No string escape code for ESC (ascii 27), normally \e).</li>
+  <li><?php bugfix(60321); ?> (ob_get_status(true) no longer returns an array when
+    buffer is empty).</li>
+  <li><?php bugfix(60282); ?> (Segfault when using ob_gzhandler() with open buffers).</li>
+  <li><?php bugfix(60240); ?> (invalid read/writes when unserializing specially crafted
+    strings).</li>
+  <li><?php bugfix(60227); ?> (header() cannot detect the multi-line header with
+     CR(0x0D)).</li>
+  <li><?php bugfix(60174); ?> (Notice when array in method prototype error).</li>
+  <li><?php bugfix(60169); ?> (Conjunction of ternary and list crashes PHP).</li>
+  <li><?php bugfix(60120); ?> (proc_open's streams may hang with stdin/out/err when</li>
+    the data exceeds or is equal to 2048 bytes).
+  <li><?php bugfix(60099); ?> (__halt_compiler() works in braced namespaces).</li>
+  <li><?php bugfix(60038); ?> (SIGALRM cause segfault in php_error_cb).</li>
+  <li><?php bugfix(55874); ?> (GCC does not provide __sync_fetch_and_add on some archs).</li>
+  <li><?php bugfix(55871); ?> (Interruption in substr_replace()).</li>
+  <li><?php bugfix(55825); ?> (Missing initial value of static locals in trait methods).</li>
+  <li><?php bugfix(55801); ?> (Behavior of unserialize has changed).</li>
+  <li><?php bugfix(55622); ?> (memory corruption in parse_ini_string).</li>
+  <li><?php bugfix(55758); ?> (Digest Authenticate missed in 5.4) .</li>
+  <li><?php bugfix(55748); ?> (multiple NULL Pointer Dereference with zend_strndup())
+    (CVE-2011-4153).</li>
+  <li><?php bugfix(55749); ?> (TOCTOU issue in getenv() on Windows builds).</li>
+  <li><?php bugfix(55707); ?> (undefined reference to `__sync_fetch_and_add_4' on Linux
+    parisc).</li>
+  <li><?php bugfix(55705); ?> (Omitting a callable typehinted argument causes a segfault).</li>
+  <li><?php bugfix(55475); ?> (is_a() triggers autoloader, new optional 3rd argument to
+    is_a and is_subclass_of).</li>
+  <li><?php bugfix(55471); ?> (ZTS build broken with dtrace).</li>
+  <li><?php bugfix(55124); ?> (recursive mkdir fails with current (dot) directory in path).</li>
+  <li><?php bugfix(55084); ?> (Function registered by header_register_callback is
+    called only once per process).</li>
+  <li>Implement <?php bugl(54514); ?> (Get php binary path during script execution).</li>
+  <li><?php bugfix(52624); ?> (tempnam() by-pass open_basedir with nonexistent
+    directory).</li>
+  <li><?php bugfix(52211); ?> (iconv() returns part of string on error).</li>
+  <li><?php bugfix(51860); ?> (Include fails with toplevel symlink to /).</li>
+</ul>
+
+<li>Improved generic SAPI support</li>
+<ul>
+  <li>Added $_SERVER['REQUEST_TIME_FLOAT'] to include microsecond precision.</li>
+  <li>Added max_input_vars directive to prevent attacks based on hash collisions.</li>
+  <li>Added header_register_callback() which is invoked immediately
+    prior to the sending of headers and after default headers have
+    been added.</li>
+  <li>Added http_response_code() function. <?php bugl(52555); ?>.</li>
+  <li><?php bugfix(55500); ?> (Corrupted $_FILES indices lead to security concern).</li>
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
+    corrupted $_FILES indices).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Apache SAPI</li>
+<ul>
+  <li><?php bugfix(60205); ?> (possible integer overflow in content_length).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved CLI SAPI</li>
+<ul>
+  <li>Added friendly log messages. <?php bugl(55109); ?>.</li>
+  <li>Added built-in web server that is intended for testing purpose.</li>
+  <li>Added command line option --rz &lt;name&gt; which shows information of the
+    named Zend extension.</li>
+  <li>Interactive readline shell improvements</li>
+  <ul>
+    <li>Added "cli.pager" php.ini setting to set a pager for output.
+    <li>Added "cli.prompt" php.ini setting to configure the shell prompt.
+    <li>Added shortcut #inisetting=value to change ini settings at run-time.
+    <li>Changed shell not to terminate on fatal errors.
+    <li>Interactive shell works with shared readline extension. <?php bugl(53878); ?>.
+  </ul>
+  <li><?php bugfix(60591); ?> (Memory leak when access a non-exists file).</li>
+  <li><?php bugfix(60523); ?> (PHP Errors are not reported in browsers using built-in
+    SAPI).</li>
+  <li><?php bugfix(60477); ?> (Segfault after two multipart/form-data POST requests,
+    one 200 RQ and one 404).</li>
+  <li>Implement <?php bugl(60390); ?> (Missing $_SERVER['SERVER_PORT']).</li>
+  <li><?php bugfix(60180); ?> ($_SERVER["PHP_SELF"] incorrect).</li>
+  <li><?php bugfix(60159); ?> (Router returns false, but POST is not passed to requested
+    resource).</li>
+  <li><?php bugfix(60146); ?> (Last 2 lines of page not being output).</li>
+  <li><?php bugfix(60115); ?> (memory definitely lost in cli server).</li>
+  <li><?php bugfix(60112); ?> (If URI does not contain a file, index.php is not served).</li>
+  <li><?php bugfix(55759); ?> (memory leak when using built-in server).</li>
+  <li><?php bugfix(55755); ?> (SegFault when outputting header WWW-Authenticate).</li>
+  <li><?php bugfix(55747); ?> (request headers missed in $_SERVER).</li>
+  <li><?php bugfix(55726); ?> (Changing the working directory makes router script
+    inaccessible).</li>
+  <li><?php bugfix(55463); ?> (cli-server missing _SERVER[REMOTE_ADDR]).</li>
+  <li><?php bugfix(55450); ?> (Built in web server not accepting file uploads).</li>
+  <li><?php bugfix(55423); ?> (cli-server could not output correctly in some case).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved CGI/FastCGI SAPI</li>
+<ul>
+  <li>Added apache compatible functions: apache_child_terminate(),
+    getallheaders(), apache_request_headers() and apache_response_headers().</li>
+  <li>Improved performance of FastCGI request parsing.</li>
+  <li>Fixed reinitialization of SAPI callbacks after php_module_startup().</li>
+</ul>
+</ul>
+<ul>
+<li>Improved PHP-FPM SAPI</li>
+<ul>
+  <li>Added partial syslog support (on error_log only). <?php bugl(52052); ?>.</li>
+  <li>Added .phar to default authorized extensions.</li>
+  <li>Added process.max to control the number of process FPM can fork. <?php bugl(55166); ?>.</li>
+  <li>Dropped restriction of not setting the same value multiple times, the last
+    one holds.</li>
+  <li>Lowered default value for Process Manager. <?php bugl(54098); ?>.</li>
+  <li>Enhanced security by limiting access to user defined extensions.
+    <?php bugl(55181); ?>.</li>
+  <li>Enhanced error log when the primary script can't be open. <?php bugl(60199); ?>.</li>
+  <li>Removed EXPERIMENTAL flag.</li>
+  <li><?php bugfix(60659); ?> (FPM does not clear auth_user on request accept).</li>
+  <li><?php bugfix(60629); ?> (memory corruption when web server closed the fcgi fd).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Litespeed SAPI</li>
+<ul>
+  <li><?php bugfix(55769); ?> (Make Fails with "Missing Separator" error).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved BCmath extension</li>
+<ul>
+   <li><?php bugfix(60377); ?> (bcscale related crashes on 64bits platforms).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved CURL extension</li>
+<ul>
+  <li>Added support for CURLOPT_MAX_RECV_SPEED_LARGE and
+    CURLOPT_MAX_SEND_SPEED_LARGE. <?php bugl(51815); ?>.</li>
+  <li><?php bugfix(60439); ?> (curl_copy_handle segfault when used with
+    CURLOPT_PROGRESSFUNCTION).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Date extension</li>
+<ul>
+  <li>Added the + modifier to parseFromFormat to allow trailing text in the
+    string to parse without throwing an error.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved DBA extension</li>
+<ul>
+  <li>Added Tokyo Cabinet abstract DB support.</li>
+  <li>Added Berkeley DB 5 support.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved DOM extension</li>
+<ul>
+  <li>Added the ability to pass options to loadHTML.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved filesystem functions</li>
+<ul>
+  <li>scandir() now accepts SCANDIR_SORT_NONE as a possible sorting_order value.
+    <?php bugl(53407); ?>.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved fileinfo extension</li>
+<ul>
+  <li>Fixed possible memory leak in finfo_open().</li>
+  <li>Fixed memory leak when calling the Finfo constructor twice.</li>
+  <li><?php bugfix(60094); ?> (C++ comment fails in c89).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved HASH extension</li>
+<ul>
+  <li>Added Jenkins's one-at-a-time hash support.</li>
+  <li>Added FNV-1 hash support.</li>
+  <li>Made Adler32 algorithm faster. <?php bugl(53213); ?>.</li>
+  <li>Removed Salsa10/Salsa20, which are actually stream ciphers.</li>
+  <li><?php bugfix(60221); ?> (Tiger hash output byte order).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved intl extension</li>
+<ul>
+  <li>Added Spoofchecker class, allows checking for visibly confusable characters and
+    other security issues.</li>
+  <li>Added Transliterator class, allowing transliteration of strings. </li>
+  <li>Added support for UTS #46.</li>
+  <li>Fixed memory leak in several Intl locale functions.</li>
+  <li>Fixed build on Fedora 15 / Ubuntu 11.</li>
+  <li><?php bugfix(55562); ?> (grapheme_substr() returns false on big length).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved JSON extension</li>
+<ul>
+  <li>Added new json_encode() option JSON_UNESCAPED_UNICODE. <?php bugl(53946); ?>.</li>
+  <li>Added JsonSerializable interface.</li>
+  <li>Added JSON_BIGINT_AS_STRING, extended json_decode() sig with $options.</li>
+  <li>Added support for JSON_NUMERIC_CHECK option in json_encode() that converts
+    numeric strings to integers.</li>
+  <li>Added new json_encode() option JSON_UNESCAPED_SLASHES. <?php bugl(49366); ?>.</li>
+  <li>Added new json_encode() option JSON_PRETTY_PRINT. <?php bugl(44331); ?>.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved LDAP extension</li>
+<ul>
+  <li>Added paged results support. <?php bugl(42060); ?>.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved mbstring extension</li>
+<ul>
+  <li>Added Shift_JIS/UTF-8 Emoji (pictograms) support.</li>
+  <li>Added JIS X0213:2004 (Shift_JIS-2004, EUC-JP-2004, ISO-2022-JP-2004)
+    support.</li>
+  <li>Ill-formed UTF-8 check for security enhancements.</li>
+  <li>Added MacJapanese (Shift_JIS) and gb18030 encoding support.</li>
+  <li>Added encode/decode in hex format to mb_[en|de]code_numericentity().</li>
+  <li>Added user JIS X0213:2004 (Shift_JIS-2004, EUC-JP-2004, ISO-2022-JP-2004)
+    support.</li>
+  <li>Added the user defined area for CP936 and CP950.</li>
+  <li>Fixed possible crash in mb_ereg_search_init() using empty pattern.</li>
+  <li><?php bugfix(60306); ?> (Characters lost while converting from cp936 to utf8).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved MS SQL extension</li>
+<ul>
+  <li><?php bugfix(60267); ?> (Compile failure with freetds 0.91).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved MySQL extensions</li>
+<ul>
+  <li>MySQL: Deprecated mysql_list_dbs(). <?php bugl(50667); ?>.</li>
+  <li>mysqlnd: Added named pipes support. <?php bugl(48082); ?>.</li>
+  <li>MySQLi: Added iterator support in MySQLi. mysqli_result implements
+    Traversable.</li>
+  <li>PDO_mysql: Removed support for linking with MySQL client libraries older
+    than 4.1.</li>
+  <li>ext/mysql, mysqli and pdo_mysql now use mysqlnd by default.</li>
+  <li><?php bugfix(55473); ?> (mysql_pconnect leaks file descriptors on reconnect). </li>
+  <li><?php bugfix(55653); ?> (PS crash with libmysql when binding same variable as 
+    param and out).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved OpenSSL extension</li>
+<ul>
+  <li>Added AES support. <?php bugl(48632); ?>.</li>
+  <li>Added a "no_ticket" SSL context option to disable the SessionTicket TLS
+    extension. <?php bugl(53447); ?>.</li>
+  <li>Added no padding option to openssl_encrypt()/openssl_decrypt().</li>
+  <li>Use php's implementation for Windows Crypto API in
+    openssl_random_pseudo_bytes.</li>
+  <li>On error in openssl_random_pseudo_bytes() made sure we set strong result
+    to false.</li>
+  <li>Fixed segfault with older versions of OpenSSL.</li>
+  <li>Fixed possible attack in SSL sockets with SSL 3.0 / TLS 1.0.
+    CVE-2011-3389.</li>
+  <li><?php bugfix(61124); ?> (Crash when decoding an invalid base64 encoded string).</li>
+  <li><?php bugfix(60279); ?> (Fixed NULL pointer dereference in
+    stream_socket_enable_crypto, case when ssl_handle of session_stream is not
+    initialized.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Oracle Database extension (OCI8)</li>
+<ul>
+  <li>Increased maximum Oracle error message buffer length for new 11.2.0.3 size.</li>
+  <li>Improved internal initalization failure error messages.</li>
+  <li><?php bugfix(59985); ?> (show normal warning text for OCI_NO_DATA).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved PDO</li>
+<ul>
+  <li>Fixed PDO objects binary incompatibility.</li>
+</ul>
+</ul>
+<ul>
+<li>PDO DBlib driver</li>
+<ul>
+  <li>Added nextRowset support.</li>
+  <li><?php bugfix(60033); ?> (Incorrectly merged PDO dblib patches break
+    uniqueidentifier column type).</li>
+  <li><?php bugfix(50755); ?> (PDO DBLIB Fails with OOM).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Pdo Firebird driver</li>
+<ul>
+  <li><?php bugfix(53280); ?> (segfaults if query column count less than param count). </li>
+  <li><?php bugfix(48877); ?> ("bindValue" and "bindParam" do not work for PDO Firebird).</li>
+  <li><?php bugfix(47415); ?> (segfaults when passing lowercased column name to 
+    bindColumn).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved PostgreSQL extension</li>
+<ul>
+  <li>Added support for "extra" parameter for PGNotify().</li>
+</ul>
+</ul>
+<ul>
+<li>Improved preg extension</li>
+<ul>
+  <li>Changed third parameter of preg_match_all() to optional. <?php bugl(53238); ?>.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved readline extension</li>
+<ul>
+  <li><?php bugfix(54450); ?> (Enable callback support when built against libedit).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Reflection extension</li>
+<ul>
+  <li>Added ReflectionClass::newInstanceWithoutConstructor() to create a new
+    instance of a class without invoking its constructor. <?php bugl(55490); ?>.</li>
+  <li>Added ReflectionExtension::isTemporary() and
+    ReflectionExtension::isPersistent() methods.</li>
+  <li>Added ReflectionZendExtension class.</li>
+  <li>Added ReflectionClass::isCloneable().</li>
+  <li><?php bugfix(60367); ?> (Reflection and Late Static Binding).</li>
+  <li><?php bugfix(60357); ?> (__toString() method triggers E_NOTICE "Array to string
+    conversion").</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Session extension</li>
+<ul>
+  <li>Expose session status via new function, session_status. <?php bugl(52982); ?>.</li>
+  <li>Added support for object-oriented session handlers.</li>
+  <li>Added support for storing upload progress feedback in session data.</li>
+  <li>Changed session.entropy_file to default to /dev/urandom or /dev/arandom if
+    either is present at compile time.</li>
+  <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
+    dumps).</li>
+  <li>Implement <?php bugl(60551); ?> (session_set_save_handler should support a core's
+    session handler interface).</li>
+  <li><?php bugfix(60640); ?> (invalid return values).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved SNMP extension</li>
+<ul>
+  <li>Added OO API. <?php bugl(53594); ?> (php-snmp rewrite).</li>
+  <li>Sanitized return values of existing functions. Now it returns FALSE on
+    failure.</li>
+  <li>Allow ~infinite OIDs in GET/GETNEXT/SET queries. Autochunk them to max_oids
+    upon request.</li>
+  <li>Introducing unit tests for extension with ~full coverage.
+    IPv6 support. (<?php bugl(42918); ?>)</li>
+  <li>Way of representing OID value can now be changed when SNMP_VALUE_OBJECT
+    is used for value output mode. Use or'ed SNMP_VALUE_LIBRARY(default if
+    not specified) or SNMP_VALUE_PLAIN. (<?php bugl(54502); ?>)</li>
+  <li><?php bugfix(60749); ?> (SNMP module should not strip non-standard SNMP port
+    from hostname).</li>
+  <li><?php bugfix(60585); ?> (php build fails with USE flag snmp when IPv6 support
+    is disabled).</li>
+  <li><?php bugfix(53862); ?> (snmp_set_oid_output_format does not allow returning to default).</li>
+  <li><?php bugfix(51336); ?> (snmprealwalk (snmp v1) does not handle end of OID tree correctly).</li>
+  <li><?php bugfix(46065); ?> (snmp_set_quick_print() persists between requests).</li>
+  <li><?php bugfix(45893); ?> (Snmp buffer limited to 2048 char).</li>
+  <li><?php bugfix(44193); ?> (snmp v3 noAuthNoPriv doesn't work).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved SOAP extension</li>
+<ul>
+  <li>Added new SoapClient option "keep_alive". <?php bugl(60329); ?>.</li>
+  <li>Fixed basic HTTP authentication for WSDL sub requests.</li>
+</ul>
+</ul>
+<ul>
+<li>Improved SPL extension</li>
+<ul>
+  <li>Added RegexIterator::getRegex() method.</li>
+  <li>Added SplObjectStorage::getHash() hook.</li>
+  <li>Added CallbackFilterIterator and RecursiveCallbackFilterIterator.</li>
+  <li>Added missing class_uses(..) as pointed out by #55266.</li>
+  <li>Immediately reject wrong usages of directories under Spl(Temp)FileObject
+    and friends.</li>
+  <li>FilesystemIterator, GlobIterator and (Recursive)DirectoryIterator now use
+    the default stream context.</li>
+  <li><?php bugfix(60201); ?> (SplFileObject::setCsvControl does not expose third
+    argument via Reflection).</li>
+  <li><?php bugfix(55807); ?> (Wrong value for splFileObject::SKIP_EMPTY).</li>
+  <li><?php bugfix(55287); ?> (spl_classes() not includes CallbackFilter classes)</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Sysvshm extension</li>
+<ul>
+  <li><?php bugfix(55750); ?> (memory copy issue in sysvshm extension).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Tidy extension</li>
+<ul>
+  <li><?php bugfix(54682); ?> (Tidy::diagnose() NULL pointer dereference).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved Tokenizer extension</li>
+<ul>
+  <li><?php bugfix(54089); ?> (token_get_all with regards to __halt_compiler is
+    not binary safe).</li>
+</ul>
+</ul>
+<ul>
+<li>Improved XSL extension</li>
+<ul>
+  <li>Added XsltProcessor::setSecurityPrefs($options) and getSecurityPrefs() to
+    define forbidden operations within XSLT stylesheets, default is not to
+    enable write operations from XSLT. <?php bugfix(54446); ?>.</li>
+  <li>XSL doesn't stop transformation anymore, if a PHP function can't be called</li>
+</ul>
+</ul>
+<ul>
+<li>Improved ZLIB extension</li>
+<ul>
+  <li>Re-implemented non-file related functionality.</li>
+  <li><?php bugfix(55544); ?> (ob_gzhandler always conflicts with zlib.output_compression).</li>
+</ul>
+</ul>
+
+</hr>
+<!-- }}} -->
+
 <a name="5.3.10"></a><!-- {{{ 5.3.10 -->
 <h3>Version 5.3.10</h3>
 <b>02-Feb-2012</b>
