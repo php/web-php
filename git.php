@@ -68,16 +68,17 @@ site_header("Git Access", array("current" => "community"));
 
 <ol>
  <li>
-  You can retrieve the PHP source code from
+  You can retrieve the PHP source code from our
+  <a href="https://github.com/php/php-src.git">GitHub mirror</a> with this
+  command:
+  <br /><br />
+  <code>git clone https://github.com/php/php-src.git</code>
+  <br /><br />
+
+  Alternatively, you can retrieve the source code from
   <a href="http://git.php.net/">git.php.net</a> with this command:
   <br /><br />
   <code>git clone http://git.php.net/repository/php-src.git</code>
-  <br /><br />
-
-  Or from the <a href="https://github.com/php/php-src">GitHub mirror</a>, which
-  you may want to use if you plan to create pull requests:
-  <br /><br />
-  <code>git clone https://github.com/php/php-src.git</code>
   <br /><br />
  </li>
 
