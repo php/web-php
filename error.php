@@ -428,17 +428,23 @@ $uri_aliases = array (
     "projects.php" => "projects", // BC
     
     # CVS -> SVN
-    "anoncvs.php"   => "svn",
-    "cvs-php.php"   => "svn-php",
+    "anoncvs.php"   => "git",
+    "cvs-php.php"   => "git-php",
+
+    # SVN -> Git
+    "svn"       => "git",
+    "svn-php"   => "git-php",
+
+    # Other items
     "security/crypt" => "security/crypt_blowfish",
 );
 
 $external_redirects = array(
-    "php4news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_4_4/NEWS?view=markup",
-    "php5news"    => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_4/NEWS?view=markup", // BC
-    "php53news"   => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_3/NEWS?view=markup",
-    "php54news"   => "http://svn.php.net/viewvc/php/php-src/branches/PHP_5_4/NEWS?view=markup",
-    "phptrunknews"=> "http://svn.php.net/viewvc/php/php-src/trunk/NEWS?view=markup",
+    "php4news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-4.4",
+    "php5news"    => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
+    "php53news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.3",
+    "php54news"   => "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/PHP-5.4",
+    "phptrunknews"=> "https://git.php.net/?p=php-src.git;a=blob_plain;f=NEWS;hb=refs/heads/master",
     "projects"    => "http://freshmeat.net/tags/php",
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",

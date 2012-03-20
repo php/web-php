@@ -163,19 +163,32 @@ site_header("A Tourist's Guide", array("current" => "help"));
  process.
 </p>
 
-<h2><a href="http://svn.php.net/">svn.php.net</a>: SVN Repository</h2>
+<h2><a href="http://git.php.net/">git.php.net</a>: Git Repository</h2>
 
 <p>
- The PHP project is organized with a SVN server, and this website is the web
+ The PHP project is organized with a Git server, and this website is the web
  interface to it. There you can browse the history (and latest versions) of the
- source code for all of the PHP projects. For example, the <a
- href="http://svn.php.net/php/php-src/">php-src</a> module is the 
- repository for the source code to the latest version of PHP itself. Checking
- out the source code can be done <a href="svn.php">anonymously</a>.
+ source code for all of the PHP projects. For example, the
+ <a href="http://git.php.net/?p=php-src.git;a=summary">php-src</a> module is
+ the repository for the source code to the latest version of PHP itself.
+ Checking out the source code can be done <a href="git.php">anonymously</a>.
+</p>
+<p>
+ The Git repository is also mirrored on
+ <a href="https://github.com/php/php-src">GitHub</a>, for those who would
+ prefer to use GitHub's interface.
 </p>
 <p>
  Using <a href="http://lxr.php.net/">OpenGrok</a> is another option to view the
  source code, and it offers additional features like search and cross referencing.
+</p>
+
+<h2><a href="http://svn.php.net/">svn.php.net</a>: Archived SVN Repository</h2>
+
+<p>
+ The PHP project used to be organized under the SVN revision control system, but
+ migrated to <a href="http://git.php.net/">Git</a> (see above) in March 2012.
+ The old SVN repository is archived here for posterity.
 </p>
 
 <h2><a href="http://cvsold.php.net/">cvsold.php.net</a>: Archived CVS Repository</h2>
@@ -183,7 +196,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <p>
  The PHP project used to be organized under the CVS revision control system, but
  migrated to <a href="http://svn.php.net/">Subversion</a> (see above) in July of 2009.
- The old CVS repository is archived here for posterity. It was formally named
+ The old CVS repository is archived here for posterity. It was formerly named
  cvs.php.net, but that now redirects to the SVN repository.
 </p>
 
@@ -223,7 +236,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
 
 <p>
  This site is dedicated to automatic PHP code coverage testing. On a regular 
- basis current SVN snapshots are being build and tested on this machine. After 
+ basis current Git snapshots are being build and tested on this machine. After 
  all tests are done the results are visualized along with a code coverage 
  analysis.  
 </p>

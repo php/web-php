@@ -76,11 +76,11 @@ site_header("Sitemap", array("current" => "help"));
  <li><a href="/sites.php">PHP.net Sites List</a></li>
 </ul>
 
-<h2>SVN instructions</h2>
+<h2>Git instructions</h2>
 
 <ul>
- <li><a href="/svn.php">Getting PHP from SVN</a></li>
- <li><a href="/svn-php.php">Using SVN for PHP Development</a></li>
+ <li><a href="/git.php">Getting PHP from Git</a></li>
+ <li><a href="/git-php.php">Using Git for PHP Development</a></li>
 <!-- <li><a href="/svnsync.php">Maintaining a Local SVN Repository</a></li> -->
 </ul>
 

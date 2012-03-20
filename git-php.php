@@ -1,26 +1,25 @@
 <?php
 // $Id$ 
-$_SERVER['BASE_PAGE'] = 'svn-php.php';
+$_SERVER['BASE_PAGE'] = 'git-php.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 
 $SIDEBAR_DATA = '
-<h3>More about SVN</h3>
+<h3>More about Git</h3>
 <p>
- You can find more information about SVN, and
- download clients for most major platforms, at
- <a href="http://subversion.tigris.org/">the official SVN site</a>.
+ You can find more information about Git and download clients for most major
+ platforms at <a href="http://git-scm.com/">the official Git site</a>.
 </p>
 
-<h3>SVN access</h3>
+<h3>Git access</h3>
 <p>
  If you would like to grab PHP sources or other PHP.net
  hosted project data from PHP.net, you can also use 
- <a href="/svn.php">SVN</a>. No SVN account is required.
+ <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using SVN for PHP Development", array("current" => "FIXME"));
+site_header("Using Git for PHP Development", array("current" => "FIXME"));
 
 $groups = array(
   "none" => "Choose One",
@@ -32,7 +31,7 @@ $groups = array(
 
 ?>
 
-<h1>Using SVN for PHP Development</h1>
+<h1>Using Git for PHP Development</h1>
 
 <?php
 
@@ -53,7 +52,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
 
     // Check for errors
     if (empty($_POST['id'])) {
-        $error .= "You must supply a desired SVN user id. <br />";
+        $error .= "You must supply a desired Git user id. <br />";
     } elseif(!preg_match('!^[a-z]\w+$!', $_POST['id'])) {
         $error .= "Your user id must be >1 char long, start with ".
                   "a letter and contain nothing but a-z, 0-9, and _ <br />";
@@ -62,7 +61,7 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
         $error .= "You must supply your real name. <br />";
     }
     if (empty($_POST['realpurpose'])) {
-        $error .= "You must supply a reason for requesting the SVN account. <br />";
+        $error .= "You must supply a reason for requesting the Git account. <br />";
     }
     if (empty($_POST['password'])) {
         $error .= "You must supply a desired password. <br />";
@@ -123,58 +122,40 @@ if (count($_POST) && (!isset($_POST['purpose']) || !is_array($_POST['purpose']) 
  forgotten you, but you haven't forgotten us! It happens. There's several of
  us, and sometimes we think that someone else has taken care of your request,
  and they think that we took care of it. Sorry. You can also speed up the
- process by having an existing SVN account holder who works in the area you are
+ process by having an existing Git account holder who works in the area you are
  interested in mail us to vouch for you.
 </p>
 
 <p>
- If you are not familiar with SVN, you should have a look at the various
- documentation resources available in <a
- href="http://subversion.tigris.org/">the official SVN site</a>. This is
- also where to get the most recent version of the SVN client.
+ If you are not familiar with Git, you should have a look at the various
+ documentation resources available at
+ <a href="http://git-scm.com/">the official Git site</a>.  This is also where
+ to get the most recent version of the Git client.
 </p>
 
 <p>
- All SVN commit messages to the PHP sources get sent to the php-svn mailing lists.
+ All Git commit messages to the PHP sources get sent to the php-git mailing lists.
  You should subscribe yourself to one or more of these mailing lists. Instructions
  for subscribing are on the <a href="/mailing-lists.php">Mailing Lists</a> page.
 </p>
 
 <p>
- SVN itself is quite easy to use. You can follow the steps listed on the
- <a href="/svn.php">anonymous SVN</a> page for checking out your tree.
- Please note that you do not have to log in to check out your tree; you will
- not be asked for your username and password until you attempt to commit changes.
+ Git itself is quite easy to use. You can follow the steps listed on the
+ <a href="/git.php">Git</a> page for checking out your tree.  Please note that
+ you do not have to log in to check out your tree; you will not be asked for
+ your username and password until you attempt to commit changes.
 </p>
 
 <p>
- Next, once you have your SVN tree you need to know the following commands.
- They should all be executed from within the checked out tree. eg.
- <tt>cd php-src</tt>.
+ The <a href="https://wiki.php.net/vcs/gitworkflow">Git workflow</a> and
+ <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a> pages on the Wiki are
+ good starting points to learn how we use Git to develop PHP. Beyond that, you
+ can familiarise yourself with Git in general via the
+ <a href="http://git-scm.com/documentation">Git documentation</a> and the
+ <a href="http://progit.org/">Pro Git</a> book.  They should all be executed
+ from within the checked out tree. eg.  <code>cd php-src</code>.
 </p>
 
-<dl>
- <dt><strong><tt>svn update</tt></strong></dt>
- <dd>
-  This fetches all updates made by others and brings your tree up to date.
-  Before starting to edit anything in the tree you should do this. Generally
-  you would do this whenever you see a SVN commit message on the php-SVN
-  mailing list.</dd>
- <dt><strong><tt>svn diff</tt></strong></dt>
- <dd>
-  This displays all changes you have made anywhere in the tree in
-  <a href="http://en.wikipedia.org/wiki/Unified_diff">unified diff</a> format.
-  This is a very good (and strongly recommended) way to review your changes
-  before you decide to commit them.
- </dd>
- <dt><strong><tt>svn commit</tt></strong></dt>
- <dd>
-  This commits any changes you have made anywhere in the tree. A text
-  editor will pop up and you will need to describe the changes you made.
-  Please provide a good description here as it may help people in the
-  future when looking at your code changes.
- </dd>
-</dl>
 <?php
         site_footer();
         exit;
@@ -194,15 +175,15 @@ EOT;
 
 <p>
  All PHP development is done through a distributed revision control system
- called SVN. This helps us track changes and it makes it possible for people
+ called Git. This helps us track changes and it makes it possible for people
  located in all corners of the world to collaborate on a project without
  having to worry about stepping on each others' toes.
 </p>
 
 <p>
- Please note that you do <strong>not</strong> need a SVN account to <a
- href="/svn.php"><strong>access</strong> the SVN tree</a>, to use PHP,
- or to write PHP scripts. You only need a SVN account if you will be a
+ Please note that you do <strong>not</strong> need a Git account to <a
+ href="/git.php"><strong>access</strong> the Git tree</a>, to use PHP,
+ or to write PHP scripts. You only need a Git account if you will be a
  regular contributor to the development of PHP itself.
 </p>
 
@@ -212,8 +193,8 @@ EOT;
 
 <table border="0" cellpadding="3" class="standard">
  <tr>
-  <th>Does Not Require SVN Account</th>
-  <th>Requires SVN Account</th>
+  <th>Does Not Require Git Account</th>
+  <th>Requires Git Account</th>
  </tr>
  <tr>
   <td class="sub">Learning PHP</td>
@@ -255,10 +236,16 @@ EOT;
 
 <p>
  If you are contributing a patch, a small fix, or another minor change you do
- not need to ask for a SVN account before submitting it. Just send your patch to
- <a href="mailto:internals@lists.php.net">the internals mailing list</a>. You
- should <a href="mailto:internals-subscribe@lists.php.net">subscribe to that
- list</a> to participate in any discussion your patch generates! Your patch may
+ not need to ask for a Git account before submitting it. Fork our
+ <a href="https://github.com/php/php-src">GitHub repository</a> and create a
+ <a href="http://help.github.com/send-pull-requests/">pull request</a>, attach
+ a patch to a
+ <a href="https://bugs.php.net/">bug report or feature request</a>,
+ or send your patch to
+ <a href="mailto:internals@lists.php.net">the Internals mailing list</a>. If
+ you send the patch to Internals, you should
+ <a href="mailto:internals-subscribe@lists.php.net">subscribe to that list</a>
+ to participate in any discussion your patch generates! Your patch may
  not get noticed the first time. Make sure that when you send your patch, you
  explain what it does. Make sure you use a clear subject when sending your
  patch (you might even want to prefix it with <tt>"[PATCH]"</tt>). If nobody
@@ -268,8 +255,8 @@ EOT;
 </p>
 
 <p>
- Submitting patches and participating in the discussion on the 'internals' list
- <strong>before</strong> requesting full SVN access is strongly suggested, so
+ Submitting patches and participating in the discussion on the Internals list
+ <strong>before</strong> requesting full Git access is strongly suggested, so
  the PHP development team can get to know you and what you'll be contributing.
  It is suggested that all PHP developers (<strong>people developing PHP
  itself</strong>, not people developing in PHP) subscribe to this list.
@@ -283,9 +270,9 @@ EOT;
  If you wish to contribute to the documentation please contact the translation
  team for the language you wish to help with. If you have trouble finding the
  team, ask on the phpdoc mailing list. Once you have made contact you may
- apply for a SVN account here by including the name of one or more people from
- the existing translation team that referred you and of course the language
- you wish to translate to.
+ apply for a Git/SVN account here by including the name of one or more people
+ from the existing translation team that referred you and of course the
+ language you wish to translate to.
 </p>
 
 <p>
@@ -297,42 +284,42 @@ EOT;
  <br />
  Once your PEAR package has been approved, or you get the sense that
  people generally agree that your PECL contribution is worthwhile, you
- may apply for a SVN account here. Specify the name of your PEAR package
- or PECL contribution (single word SVN module name) and also reference an
+ may apply for a Git account here. Specify the name of your PEAR package
+ or PECL contribution (single word Git module name) and also reference an
  existing account holder who can vouch for your contribution, or provide
  a link to your PEAR proposal.
 </p>
 
 <p>
- Okay, if you are still reading, then you may actually need a SVN account.
+ Okay, if you are still reading, then you may actually need a Git account.
  This is <strong>not</strong> an automatic process. Fill in the form below to
  request an account. In the box next to "Purpose", describe what it is that
- you intend to do with SVN access. If it isn't clear from what you've
- described already, tell us what parts of the SVN repository you need access
+ you intend to do with Git access. If it isn't clear from what you've
+ described already, tell us what parts of the Git repository you need access
  to (for example, "phpdoc" is the documentation tree, "php-src/ext/readline"
  is the PHP readline extension). If someone told you to fill out the form
  here, make sure to mention them here!
 </p>
 
 <p>
- The SVN account, once granted and activated (which could take a while, so be
+ The Git account, once granted and activated (which could take a while, so be
  patient!), gives you access to a number of things. First, and most
- importantly, it gives you access to modify those parts of the PHP SVN tree for
+ importantly, it gives you access to modify those parts of the PHP Git tree for
  which you have requested and been granted access. It also allows you to comment
  on and close bugs in our <a href="http://bugs.php.net/">bug database</a>, and
  allows you to modify the documentation notes in the <a href="/manual/">annotated
- manual</a>. Your SVN account also translates into a foo@php.net forwarding email
- address where <strong>foo</strong> is your SVN user id. Feel free to use it!
+ manual</a>. Your Git account also translates into a foo@php.net forwarding email
+ address where <strong>foo</strong> is your Git user id. Feel free to use it!
 </p>
 
-<h2>Request a SVN account</h2>
+<h2>Request a Git account</h2>
 
 <p class="warn">
- Please note that you do <em>NOT</em> need a SVN account to study PHP. You do
- <em>NOT</em> need a SVN account to learn PHP, to use PHP or to in any way do
+ Please note that you do <em>NOT</em> need a Git account to study PHP. You do
+ <em>NOT</em> need a Git account to learn PHP, to use PHP or to in any way do
  anything at all with PHP. If you are sitting there wondering if you need a
- SVN account, then you don't! If an existing SVN account holder suggested you
- request an account, please mention their SVN id in the request.
+ Git account, then you don't! If an existing Git account holder suggested you
+ request an account, please mention their Git id in the request.
 </p>
 <p class="warn">
  Also note that information provided here will be sent to a public
@@ -343,7 +330,7 @@ EOT;
 } // endif: no data submitted
 
 ?>
-<form action="/svn-php.php" method="post">
+<form action="/git-php.php" method="post">
 <table border="0" class="standard" style="width: 80%;">
 <tr>
  <th class="subr">Full Name:</th>
@@ -356,7 +343,7 @@ EOT;
       class="max" value="<?php if (isset($_POST['email'])) echo clean($_POST['email']);?>" /></td>
 </tr>
 <tr>
- <th class="subr">For what purpose do you require a SVN account:<br />
+ <th class="subr">For what purpose do you require a Git account:<br />
  (check all that apply)</th>
  <td>
 <?php 

@@ -36,8 +36,7 @@ $SIDEBAR_DATA = '
 </p>
 <p>
  To download the very latest development version,
- see the <a href="svn.php">instructions on
- using SVN</a>
+ see the <a href="git.php">instructions on using Git</a>.
 </p>
 <div class="information">
 <p>

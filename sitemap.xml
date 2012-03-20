@@ -50,6 +50,12 @@
   <loc>http://php.net/get-involved.php</loc>
  </url>
  <url>
+  <loc>http://php.net/git-php.php</loc>
+ </url>
+ <url>
+  <loc>http://php.net/git.php</loc>
+ </url>
+ <url>
   <loc>http://php.net/license/</loc>
  </url>
  <url>
@@ -117,12 +123,6 @@
  </url>
  <url>
   <loc>http://php.net/support.php</loc>
- </url>
- <url>
-  <loc>http://php.net/svn-php.php</loc>
- </url>
- <url>
-  <loc>http://php.net/svn.php</loc>
  </url>
  <url>
   <loc>http://php.net/thanks.php</loc>

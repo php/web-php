@@ -50,7 +50,7 @@ site_header("Thanks", array("current" => "FIXME"));
 
 <p>
  <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and 
- hardware for www.php.net and cvs.php.net.
+ hardware for www.php.net and git.php.net.
 </p>
 
 <p>

@@ -60,10 +60,10 @@ PHP creates a script called <em>config.nice</em> after every successful <em>./co
 </p>
     
 <p>
-Once you have the build dependencies installed you'll need to checkout PHP from SVN, configure and build it;
+Once you have the build dependencies installed you'll need to checkout PHP from Git, configure and build it;
 <ul>
-    <li>svn co https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php54</li>
-    <li>cd php54</li>
+    <li>git clone -b PHP-5.4 http://git.php.net/repository/php-src.git php-5.4</li>
+    <li>cd php-5.4</li>
     <li>./buildconf</li>
     <li>./configure (see the <a href="#config.nice">shell script helper below)</a></li>
     <li>make all test</li>
@@ -262,11 +262,11 @@ directory if you want to learn more about the testing mechanism.
 <p style="margin: 5px; padding: 5px;">
     Even though most of the mailing lists are very active, not everything that is
     contributed to PHP needs to be approved there first. For example, minor
-    features are often simply committed directly to SVN without asking or telling
+    features are often simply committed directly to Git without asking or telling
     anyone. These are typically things for which a developer working on an
     external application saw a need and decided to add, in case anyone else might
     need it in the future. PHP has a great peer review process so it's very hard
-    to "sneak" things in. Every commit to SVN is reviewed by quite a lot of people
+    to "sneak" things in. Every commit to Git is reviewed by quite a lot of people
     who are interested in what is going on - or who simply enjoy reading code. If
     a reviewer discovers issues with the commit, he or she will send a quick reply
     to the commit email and discuss it on the developers list. Often the peer review
@@ -325,20 +325,20 @@ directory if you want to learn more about the testing mechanism.
 
 <p style="margin: 5px; padding: 5px;">
     Getting involved is a lot easier than most people think - and chances are that
-    you are already involved in one way or another. You don't need an SVN account
-    and commit access to get started - SVN accounts need to be earned. Registering
+    you are already involved in one way or another. You don't need an Git account
+    and commit access to get started - Git accounts need to be earned. Registering
     on the mailing lists related to the topic in which you are interested - and
     actively participating in the discussions - is a good start toward getting
-    your request for an SVN account granted. Browse the wiki to see if there are
+    your request for an Git account granted. Browse the wiki to see if there are
     outstanding TODO items you can help to clear, for example. Another great way
     to get involved and really help out is by reviewing the bug tracker for bugs
     you could potentially fix, or perhaps for which you could write a unit test.
-    Sending several patches to the mailing lists will quickly show that you are
-    interested and serious about your desire to contribute. Eventually someone
-    will get annoyed with the amount of time they must spend to commit your patches
-    for you, and will probably respond with something along the lines of, "Stop
-    bothering me. Do it yourself!" and ask you to submit the SVN account form.
-    Mission accomplished!
+	Sending several pull requests, or attaching patches to bug reports will
+	quickly show that you are interested and serious about your desire to
+	contribute. Eventually someone will get annoyed with the amount of time
+	they must spend to commit your patches for you, and will probably respond
+	with something along the lines of, "Stop bothering me. Do it yourself!" and
+	ask you to submit the Git account form.  Mission accomplished!
 </p>
 
 
@@ -387,7 +387,7 @@ directory if you want to learn more about the testing mechanism.
         <p style="margin: 5px; padding: 5px;">
             Unsure which task to tackle first? Stuck on a problem? Need a
             quick brainstorming session? IRC is a very convenient way to get
-            help quickly for smaller things, such as "where was the SVN module
+            help quickly for smaller things, such as "where was the Git module
             for zyx?" or if you simply want to run an idea by people to get
             their opinions - or even just to hang out. There aren't any
             "official" IRC channels for the PHP project, but a good chunk of
@@ -469,8 +469,8 @@ directory if you want to learn more about the testing mechanism.
     and therefore it will allow anonymous users to "login" and use the
     application. Modification, validation, translation, creation of new files,
     and everything else you need for writing documentation is possible without
-    an SVN account. When saving changes, a patch will be created and saved to
-    the "patch queue," while pending approval by someone with SVN karma to
+    an Git account. When saving changes, a patch will be created and saved to
+    the "patch queue," while pending approval by someone with Git karma to
     commit the changes. PhD O.E. also bundles a variety of scripts to ensure the
     docs use a consistent structure, allow the contributor to view undocumented
     functions, and check the translation status of an entry (among other things).

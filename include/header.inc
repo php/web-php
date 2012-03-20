@@ -198,7 +198,7 @@ if (isset($shortname) && $shortname) {
         <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
         <dd><a href="/support.php">General resources</a></dd>
         <dd><a href="/ChangeLog-5.php">Changelog (PHP 5)</a></dd>
-        <dd><a href="/svn.php">SVN (PHP Source)</a></dd>
+        <dd><a href="/git.php">Git (PHP Source)</a></dd>
     </dl>
     <dl>
       <dt><a href="https://bugs.php.net/">Bugs</a></dt>

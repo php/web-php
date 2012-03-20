@@ -28,8 +28,8 @@ $SIDEBAR_DATA = '
 <p>
  Of course, if you want to see the <a href="/source.php?url=/source.php">source
  of this page</a>, we have it available.
- You can also browse the SVN repository for this website on
- <a href="http://svn.php.net/web/php/">svn.php.net</a>.
+ You can also browse the Git repository for this website on
+ <a href="http://git.php.net/?p=web/php.git;a=summary">git.php.net</a>.
 </p>
 ';
 site_header("Show Source", array("current" => "FIXME"));

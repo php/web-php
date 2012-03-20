@@ -1,13 +1,16 @@
 <?php
 // $Id$
-$_SERVER['BASE_PAGE'] = 'svn.php';
+$_SERVER['BASE_PAGE'] = 'git.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 $SIDEBAR_DATA = '
-<h3>What is SVN?</h3>
+<h3>What is Git?</h3>
 <p>
- You can find more information about SVN, and
- download clients for most major platforms, at
- <a href="http://subversion.apache.org">the official SVN site</a>.
+ You can find more information about Git and download clients for most major
+ platforms at <a href="http://git-scm.com/">the official Git site</a>.
+</p>
+
+<p>
+ The <a href="http://progit.org/">Pro Git book</a> may also be useful.
 </p>
 
 
@@ -15,7 +18,7 @@ $SIDEBAR_DATA = '
 <p>
  If you would like to join PHP development or would like to
  contribute to the PHP documentation, contact the relevant
- group. You may want <a href="/svn-php.php">your own SVN account</a>
+ group. You may want <a href="/git-php.php">your own Git account</a>
  to contribute.
 </p>
 
@@ -26,18 +29,17 @@ $SIDEBAR_DATA = '
  Compiled snapshots for Windows users are also included.
 </p>
 ';
-site_header("SVN Access", array("current" => "community"));
+site_header("Git Access", array("current" => "community"));
 ?>
 
-<h1>SVN Access</h1>
+<h1>Git Access</h1>
 
 <p>
- If you wish to get the latest PHP source tree, you can obtain it
- through SVN. You should be warned that the SVN version
- is a development version, and as such, is often unstable, and may
- not even compile properly. The advantage of using SVN, though,
- is that you can get the latest fixes and updates, without having
- to wait for the official releases.
+ If you wish to get the latest PHP source tree, you can obtain it through Git.
+ You should be warned that the Git version is a development version, and as
+ such, is often unstable, and may not even compile properly. The advantage of
+ using Git, though, is that you can get the latest fixes and updates, without
+ having to wait for the official releases.
 </p>
 
 <p>
@@ -62,30 +64,42 @@ site_header("SVN Access", array("current" => "community"));
  <a href="#buildconf_fail">buildconf failures</a>.
 </p>
 
-<h2>Steps for using PHP from SVN</h2>
-<p>Note to PHP.net developers: SSL is set up, so use your credentials and https://svn.php.net/ to access SVN.</p>
+<h2>Steps for using PHP from Git</h2>
+
 <ol>
+ <li>
+  You can retrieve the PHP source code from
+  <a href="http://git.php.net/">git.php.net</a> with this command:
+  <br /><br />
+  <code>git clone http://git.php.net/repository/php-src.git</code>
+  <br /><br />
+
+  Or from the <a href="https://github.com/php/php-src">GitHub mirror</a>, which
+  you may want to use if you plan to create pull requests:
+  <br /><br />
+  <code>git clone https://github.com/php/php-src.git</code>
+  <br /><br />
+ </li>
 
  <li>
-  The <em>recommended</em> way is to make a sparse checkout of the php-src directory only, then grab
-  the parts that you need. This enables a single commit to span multiple branches.
+  Make sure you're in the right directory to work on PHP:
   <br /><br />
-  <code>svn checkout https://svn.php.net/repository/php/php-src --depth immediates php-src</code><br />
-  <code>cd php-src</code><br />
-  <code>svn update branches tags --set-depth immediates</code><br />
-  <code>svn update trunk branches/PHP_5_4 branches/PHP_5_3 --set-depth infinity</code><br /><br />
+  <code>cd php-src</code>
+  <br /><br />
+ </li>
 
-  Or alternatively, you can fetch the current PHP source code and the active branches:<br /><br />
+ <li>
+  You can then check out the branch you want to build:
+  <br /><br />
   <strong>PHP 5.3</strong>:
-  <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_3 php-src-5.3</code>
+  <code>git checkout PHP-5.3</code>
   <br />
   <strong>PHP 5.4</strong>:
-  <code>svn checkout https://svn.php.net/repository/php/php-src/branches/PHP_5_4 php-src-5.4</code>
+  <code>git checkout PHP-5.4</code>
   <br />
   <strong>PHP HEAD</strong>:
-  <code>svn checkout https://svn.php.net/repository/php/php-src/trunk php-src-trunk</code>
+  <code>git checkout master</code>
   <br /><br />
-  The branch names can also be used for SVN diff and merge operations.
  </li>
 
  <li>
@@ -107,16 +121,32 @@ site_header("SVN Access", array("current" => "community"));
   the official packages with one main difference &ndash; you may need bison 1.28 or later
   and flex 2.5.4 (PHP 5.2 and earlier) or re2c 0.13.4+ or later (PHP 5.3 and later) to
   compile, because the pre-generated scanner and parser files may not
-  be included in SVN.
+  be included in Git.
  </li>
 </ol>
 
 <p>
  There are many other things, such as the XML source code
- for the documentation, available via SVN. See
- <a href="http://svn.php.net/">the web-based view of the SVN
- server</a> to see what is available. For example, to checkout the
- latest english version of the PHP manual:<br />
+ for the documentation, available via Git. See
+ <a href="http://git.php.net/">the web-based view of the Git
+ server</a> to see what is available.
+</p>
+
+<p>
+ The PHP Wiki has a useful
+ <a href="https://wiki.php.net/vcs/gitfaq">Git FAQ</a>, which provides useful
+ tips and cheatsheets for using the PHP Git repository, and if you want to
+ become involved in developing PHP, the
+ <a href="https://wiki.php.net/vcs/gitworkflow">Git Workflow</a> page is also
+ likely to be of interest.
+</p>
+
+<h2>PHP manual</h2>
+
+<p>
+ The PHP manual is still currently hosted on SVN, although it will be migrated
+ to Git in the near future. To checkout the latest English version of the PHP
+ manual:<br />
  <code>svn checkout https://svn.php.net/repository/phpdoc/modules/doc-en ./phpdoc-en</code>
  <br /><br />
  You can also check the <a href="https://wiki.php.net/vcs/svnfaq">SVN FAQ on the wiki</a>.
