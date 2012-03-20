@@ -432,8 +432,10 @@ $uri_aliases = array (
     "cvs-php.php"   => "git-php",
 
     # SVN -> Git
-    "svn"       => "git",
-    "svn-php"   => "git-php",
+    "svn"           => "git",
+    "svn.php"       => "git",
+    "svn-php"       => "git-php",
+    "svn-php.php"   => "git-php",
 
     # Other items
     "security/crypt" => "security/crypt_blowfish",
