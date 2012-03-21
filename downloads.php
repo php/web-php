@@ -126,16 +126,16 @@ to verify the tags:
 </p>
 <h2>PHP 5.4</h2>
 <pre>
-pub   2048D/5DA04B5D 2012-03-19 Stanislav Malyshev (PHP key) <stas@php.net>
+pub   2048D/5DA04B5D 2012-03-19 Stanislav Malyshev (PHP key) &lt;stas@php.net&gt;
  Primary key fingerprint: F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
 </pre>
 <pre>
-pub   4096R/7267B52D 2012-03-20 David Soria Parra <dsp@php.net>
+pub   4096R/7267B52D 2012-03-20 David Soria Parra &lt;dsp@php.net&gt;
  Primary key fingerprint: 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
 </pre>
 <h2>PHP 5.3</h2>
 <pre>
-pub   2048R/FC9C83D7 2012-03-18 Johannes Schlüter <johannes@schlueters.de>
+pub   2048R/FC9C83D7 2012-03-18 Johannes Schlüter &lt;johannes@schlueters.de&gt;
  Primary key fingerprint: 0A95 E9A0 2654 2D53 835E  3F3A 7DEC 4E69 FC9C 83D7
 </pre>
 <?php
