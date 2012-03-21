@@ -116,7 +116,28 @@ foreach($a["source"] as $rel) {
 <p>
 For the Windows binaries and installer, see <a href='http://windows.php.net/download/'>http://windows.php.net/download/</a>.
 </p>
+<hr />
 
+<h1>GPG Keys</h1>
+<p>
+The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.
+The follwing official GnuPG keys of the current PHP Release Manager can be used
+to verify the tags:
+</p>
+<h2>PHP 5.4</h2>
+<pre>
+pub   2048D/5DA04B5D 2012-03-19 Stanislav Malyshev (PHP key) <stas@php.net>
+ Primary key fingerprint: F382 5282 6ACD 957E F380  D39F 2F79 56BC 5DA0 4B5D
+</pre>
+<pre>
+pub   4096R/7267B52D 2012-03-20 David Soria Parra <dsp@php.net>
+ Primary key fingerprint: 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
+</pre>
+<h2>PHP 5.3</h2>
+<pre>
+pub   2048R/FC9C83D7 2012-03-18 Johannes Schlüter <johannes@schlueters.de>
+ Primary key fingerprint: 0A95 E9A0 2654 2D53 835E  3F3A 7DEC 4E69 FC9C 83D7
+</pre>
 <?php
 site_footer();
 
