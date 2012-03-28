@@ -347,6 +347,14 @@ div.phpcode span.comment, div.classsynopsisinfo_comment {
 }
 div.classsynopsisinfo_comment {
 	font-weight: bold;
+	margin-top:1em;
+}
+.classsynopsisinfo_comment,
+.classsynopsis .constructorsynopsis,
+.classsynopsis .methodsynopsis,
+.classsynopsis .destructorsynopsis
+.classsynopsis .fieldsynopsis {
+	margin-left:2em;
 }
 div.phpcode span.default {
 	color: #0000BB;
