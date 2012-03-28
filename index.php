@@ -5,11 +5,5 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 if (myphpnet_beta()) {
     include $_SERVER['DOCUMENT_ROOT'] . '/index-beta.php';
 } else {
-    $ts = time();
-    // Hardcode 11am Jan.18 UTC to 5am Jan.19 UTC time window
-    if($ts>=1326884400 && $ts<1326949200) {
-        include $_SERVER['DOCUMENT_ROOT'] . '/index-sopa.php';
-    } else {
-        include $_SERVER['DOCUMENT_ROOT'] . '/index-stable.php';
-    }
+    include $_SERVER['DOCUMENT_ROOT'] . '/index-stable.php';
 }
