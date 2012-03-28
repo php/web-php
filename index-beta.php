@@ -50,11 +50,30 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
 // Prepare announcements.
-$announcements = "
-<div class='announcements'>
-Upcoming conferences: PHP North West, 2011
-</div>
-";
+if (is_array($CONF_TEASER) && $CONF_TEASER) {
+    $teaser_categories = array(
+        'conference' => 'Upcoming conferences',
+        'cfp'        => 'Calling for papers',
+    );
+
+    $announcements = '<ul class="announcements">';
+
+    foreach ($CONF_TEASER as $category => $events) {
+        if (is_array($events) && $events) {
+            $announcements .= '<li><span class="category">'.$teaser_categories[$category].':</span><ul>';
+            $links = array();
+            foreach (array_slice($events, 0, 4) as $url => $title) {
+                $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
+                $announcements .= "<li><a href='$url'>$title</a></li>";
+            }
+            $announcements .= '</ul>';
+        }
+    }
+
+    $announcements .= '</ul>';
+} else {
+    $announcements = '';
+}
 
 // Prepare featured content.
 $features = "

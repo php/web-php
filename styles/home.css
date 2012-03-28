@@ -182,7 +182,8 @@ div.home-content {
 /* Announcement Area */
 
 .home .announcements {
-    width: 600px;
+    display: table;
+    width: 598px;
     border: 1px solid #aaa;
     background-color: #dfd;
     border-radius: 5px;
@@ -190,6 +191,31 @@ div.home-content {
     text-align: center;
     margin: 0 auto;
     font-size: 1.2em;
+    list-style: none;
+}
+
+.home .announcements > li {
+    display: table-row;
+}
+
+.home .announcements .category, .home .announcements ul {
+    display: table-cell;
+}
+
+.home .announcements .category {
+    text-align: right;
+    padding: 1em 0.5em 0;
+}
+
+.home .announcements > li:first-child .category {
+    padding-top: 0;
+}
+
+.home .announcements ul, .home .announcements ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 /* 2x2 Featured Content Grid */
