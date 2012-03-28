@@ -158,6 +158,32 @@ $OLDRELEASES = array (
       'date' => '09 December 2010',
       'museum' => true,
     ),
+    '5.2.17' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_2_17.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.2.17.tar.bz2',
+          'name' => 'PHP 5.2.17 (tar.bz2)',
+          'md5' => 'b27947f3045220faf16e4d9158cbfe13',
+          'date' => '06 January 2011',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.2.17.tar.gz',
+          'name' => 'PHP 5.2.17 (tar.gz)',
+          'md5' => '04d321d5aeb9d3a051233dbd24220ef1',
+          'date' => '06 January 2011',
+        ),
+      ),
+      'date' => '06 January 2011',
+      'museum' => true,
+    ),
     '5.2.16' => 
     array (
       'announcement' => 
