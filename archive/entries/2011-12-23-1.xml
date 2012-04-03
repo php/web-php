@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Dutch PHP Conference 2012</title>
+  <id>http://www.php.net/archive/2011.php#id2011-12-23-1</id>
+  <published>2011-12-23T11:11:49+01:00</published>
+  <updated>2011-12-23T11:11:49+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-06-09</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2011-12-23-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpconference.nl/" title="Dutch PHP Conference 2012">dpc_2012.png</default:newsImage>
+  <link href="http://www.phpconference.nl/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Ibuildings is proud to organise the sixth Dutch PHP Conference on June 8 and 9, plus a pre-conference tutorial day on June 7. Both programs will be completely in English so the only Dutch thing about it is the location. Keywords for these days: Know-how, Technology, Best Practices, Networking, Tips &amp; Tricks.
+     </p>
+     <p>
+         Website: <a href="http://www.phpconference.nl/">http://www.phpconference.nl/</a>
+     </p>
+    </div>
+  </content>
+</entry>
