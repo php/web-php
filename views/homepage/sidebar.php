@@ -43,7 +43,6 @@
         <li><a target="_blank" href="http://www.nexcess.net/" title="NEXCESS.NET">NEXCESS.NET</a></li>
         <li><a target="_blank" href="http://www.rackspace.com/" title="Rackspace">Rackspace</a></li>
         <li><a target="_blank" href="http://www.eukhost.com/" title="EUKhost">EUKhost</a></li>
-        <li><a target="_blank" href="http://www.micfo.com/" title="micfo">micfo</a></li>
         <li><a target="_blank" href="http://www.sohosted.nl/webhosting/" title="Sohosted">Sohosted</a></li>
         <li><a target="_blank" href="http://www.redpill-linpro.com" title="Redpill Linpro">Redpill Linpro</a></li>
         <li><a target="_blank" href="http://www.facebook.com" title="Facebook">Facebook</a></li>
