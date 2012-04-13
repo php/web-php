@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.4.1RC2 Released for Testing</title>
+  <id>http://www.php.net/archive/2012.php#id2012-04-13-1</id>
+  <published>2012-04-13T13:37:44+02:00</published>
+  <updated>2012-04-13T13:37:44+02:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2012-04-13-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-04-13-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        The PHP development team would like to announce the 2th
+        <a href="http://qa.php.net">release candidate</a> of PHP 5.4.1.
+         Windows binaries can be downloaded from the
+        <a href="http://windows.php.net/qa/">Windows QA site</a>.
+      </p>
+      <p>
+        <strong>
+          THIS IS A RELEASE CANDIDATE - DO NOT USE IT IN PRODUCTION!
+        </strong>
+      </p>
+      <p>
+        This is the 2th release candidate. The release candidate phase is
+        intended as a period of bug fixing prior to the stable release.
+        The release candidate fixes a critical issue when using the internal
+        classe in multiple threads.
+      </p>
+      <p>
+        A complete list of changes since the last release candidate can be
+        found in the
+        <a href="http://git.php.net/?p=php-src.git;a=blob;f=NEWS;h=d647f8de7cf080b599a73e092d683273fbf744e8;hb=fa1437b144683eae4d253473c35e375f7b743811">NEWS</a>
+        file.
+      </p>
+      <p>
+        Please to help us to identify
+        bugs in order to ensure that the release is solid and all things behave
+        as expected by taking the time to test this release candidate against
+        your code base and reporting any problems that you encounter to
+        the <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or
+        the <a href="https://bugs.php.net/">PHP bug tracker</a>.
+      </p>
+      <p>
+        PHP 5.4.1 final will be released on April 26.
+      </p>
+    </div>
+  </content>
+</entry>
