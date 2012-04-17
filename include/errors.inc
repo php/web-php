@@ -475,7 +475,7 @@ $snippets = array(
 	);
 
 	$term = strtolower(trim($term));
-	if ($term[0] === '$') {
+	if (isset($term[0]) && $term[0] === '$') {
 		$term = ltrim($term, '$');
 	}
 
