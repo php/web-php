@@ -8,15 +8,13 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/manual-lookup.inc';
 // BC code, so pattern and function can both be used as
 // parameters to specify the function name
 $function = '';
-if (empty($_GET['function'])) {
-    if (!empty($_GET['pattern'])) {
-        $function = htmlspecialchars($_GET['pattern'], ENT_QUOTES, 'UTF-8');
-    }
-} else {
+if (!empty($_GET['function']) && is_string($_GET['function'])) {
     $function = htmlspecialchars($_GET['function'], ENT_QUOTES, 'UTF-8');
+} elseif (!empty($_GET['pattern']) && is_string($_GET['pattern'])) {
+    $function = htmlspecialchars($_GET['pattern'], ENT_QUOTES, 'UTF-8');
 }
 
-if(!empty($_GET['scope'])) {
+if(!empty($_GET['scope']) && is_string($_GET['scope'])) {
 	$scope = htmlspecialchars($_GET['scope'], ENT_QUOTES, 'UTF-8');
 } else {
 	$scope = '';
