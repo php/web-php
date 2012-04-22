@@ -251,6 +251,11 @@ if (isset($_POST['maillist'])) {
       TRUE, FALSE, FALSE, ""
     ),
     array (
+      'git-pulls', 'Git pull requests',
+      'Pull requests from Github',
+      FALSE, 'php-git-pulls', FALSE, "php.git.pulls"
+    ),
+    array (
       'php-qa', 'Quality Assurance list',
       'List for the members of the PHP-QA Team',
       FALSE, TRUE, FALSE, "php.qa"
