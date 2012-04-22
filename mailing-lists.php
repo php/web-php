@@ -253,7 +253,7 @@ if (isset($_POST['maillist'])) {
     array (
       'git-pulls', 'Git pull requests',
       'Pull requests from Github',
-      FALSE, 'php-git-pulls', FALSE, "php.git.pulls"
+      FALSE, FALSE, FALSE, "php.git-pulls"
     ),
     array (
       'php-qa', 'Quality Assurance list',
