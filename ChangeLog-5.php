@@ -205,7 +205,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61423); ?> (gzip compression fails).</li>
   <li><?php bugfix(60887); ?> (SoapClient ignores user_agent option and sends no
     User-Agent header).</li>
-    <li><?php bugfix(60842); ?>, <?php buigfix(51775); ?> (Chunked response parsing error when 
+    <li><?php bugfix(60842); ?>, <?php bugfix(51775); ?> (Chunked response parsing error when 
     chunksize length line is &gt; 10 bytes).</li>
   <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
 </ul>
