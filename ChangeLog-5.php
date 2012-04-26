@@ -15,13 +15,16 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <h3>Version 5.4.1</h3>
 <b>26-Apr-2012</b>
 
+<ul>
 <li>CLI Server</li>
 <ul>
   <li><?php bugfix(61461); ?> (missing checks around malloc() calls).</li>
   <li>Implemented <?php bugl(60850); ?> (Built in web server does not set 
     $_SERVER['SCRIPT_FILENAME'] when using router).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Core</li>
 <ul>
   <li>Fixed crash in ZTS using same class in many threads.</li>
@@ -38,27 +41,37 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     error).</li>
   <li><?php bugfix(60573); ?> (type hinting with "self" keyword causes weird errors).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Fileinfo</li>
 <ul>
   <li>Fix fileinfo test problems.</li>
 </ul>
+</ul>
 
+<ul>
 <li>Intl</li>
 <ul>
   <li><?php bugfix(61487); ?> (Incorrent bounds checking in grapheme_strpos).</li>
 </ul>
+</ul>
 
+<ul>
 <li>mbstring</li>
 <ul>
   <li>MFH mb_ereg_replace_callback() for security enhancements.</li>
 </ul>
+</ul>
 
+<ul>
 <li>mysqlnd</li>
 <ul>
   <li><?php bugfix(60948); ?> (mysqlnd FTBFS when -Wformat-security is enabled).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Standard</li>
 <ul>
   <li>Fixed memory leak in substr_replace.</li>
@@ -68,11 +81,13 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix socket
     paths).</li>
 </ul>
+</ul>
 
 <a name="5.3.11"></a><!-- {{{ 5.3.11 -->
 <h3>Version 5.3.11</h3>
 <b>26-Apr-2012</b>
 
+<ul>
 <li>Core</li>
 <ul>
   <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables
@@ -101,18 +116,24 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Improve performance of set_exception_handler while doing reset.</li>
   <li><?php bugfix(51860); ?> (Include fails with toplevel symlink to /).</li>
 </ul>
+</ul>
 
+<ul>
 <li>DOM</li>
 <ul>
   <li>Added debug info handler to DOM objects.</li>
 </ul>
+</ul>
 
+<ul>
 <li>FPM</li>
 <ul>
   <li><?php bugfix(61430); ?> (Transposed memset() params in sapi/fpm/fpm/fpm_shm.)</li>
   <li><?php bugfix(60811); ?> (php-fpm compilation problem).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Fileinfo</li>
 <ul>
   <li>Upgraded libmagic to 5.</li>
@@ -122,67 +143,91 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     under windows in cdf_read().</li>
   <li><?php bugfix(61173); ?> (Unable to detect error from finfo constructor).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Firebird Database extension (ibase)</li>
 <ul>
   <li><?php bugfix(60802); ?> (ibase_trans() gives segfault when passing params).
 </ul>
+</ul>
 
+<ul>
 <li>Ibase</li>
 <ul>
   <li><?php bugfix(60947); ?> (Segmentation fault while executing ibase_db_info).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Installation</li>
 <ul>
   <li><?php bugfix(61172); ?> (Add Apache 2.4 support).</li>
 </ul>
+</ul>
 
+<ul>
 <li>mysqli</li>
 <ul>
   <li><?php bugfix(61003); ?> (mysql_stat() require a valid connection).</li>
 </ul>
+</ul>
 
+<ul>
 <li>PDO_mysql</li>
 <ul>
   <li><?php bugfix(61207); ?> (PDO::nextRowset() after a multi-statement query doesn't
     always work).</li>
   <li><?php bugfix(61194); ?> (PDO should export compression flag with myslqnd).</ul>
 </ul>
+</ul>
 
+<ul>
 <li>PDO_odbc</li>
 <ul>
   <li><?php bugfix(61212); ?> (PDO ODBC Segfaults on SQL_SUCESS_WITH_INFO).</li>
 </ul>
+</ul>
 
+<ul>
 <li>PDO_pgsql</li>
 <ul>
   <li><?php bugfix(61267); ?> (pdo_pgsql's PDO::exec() returns the number of SELECTed
     rows on postgresql &gt;= 9).</li>
 </ul>
+</ul>
 
+<ul>
 <li>PDO_Sqlite extension</li>
 <ul>
   <li>Add createCollation support.</li>
 </ul>
+</ul>
 
+<ul>
 <li>pgsql</li>
 <ul>
   <li><?php bugfix(60718); ?> (Compile problem with libpq (PostgreSQL 7.3 or less).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Phar</li>
 <ul>
   <li><?php bugfix(61184); ?> (Phar::webPhar() generates headers with trailing NUL
     bytes).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Readline</li>
 <ul>
   <li><?php bugfix(61088); ?> (Memory leak in readline_callback_handler_install).</li>
   <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
 </ul>
+</ul>
 
+<ul>
 <li>Reflection</li>
 <ul>
   <li><?php bugfix(61388); ?> (ReflectionObject:getProperties() issues invalid reads
@@ -191,7 +236,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(60968); ?> (Late static binding doesn't work with 
     ReflectionMethod::invokeArgs()).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Session</li>
 <ul>
   <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
@@ -199,7 +246,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in 
     SessionHandler::write()).</li>
 </ul>
+</ul>
 
+<ul>
 <li>SOAP</li>
 <ul>
   <li><?php bugfix(61423); ?> (gzip compression fails).</li>
@@ -209,7 +258,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     chunksize length line is &gt; 10 bytes).</li>
   <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
 </ul>
+</ul>
 
+<ul>
 <li>SPL</li>
 <ul>
   <li>Fixed memory leak when calling SplFileInfo's constructor twice.</li>
@@ -219,12 +270,16 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61347); ?> (inconsistent isset behavior of Arrayobject).</li>
   <li><?php bugfix(61326); ?> (ArrayObject comparison).</li>
 </ul>
+</ul>
 
+<ul>
 <li>SQLite3 extension</li>
 <ul>
   <li>Add createCollation() method.</li>
 </ul>
+</ul>
 
+<ul>
 <li>Streams</li>
 <ul>
   <li><?php bugfix(61371); ?> (stream_context_create() causes memory leaks on use
@@ -240,24 +295,31 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix
     socket paths).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Tidy</li>
 <ul>
   <li><?php bugfix(54682); ?> (tidy null pointer dereference).</li>
 </ul>
+</ul>
 
+<ul>
 <li>XMLRPC</li>
 <ul>
   <li><?php bugfix(61264); ?> (xmlrpc_parse_method_descriptions leaks temporary
     variable).</li>
   <li><?php bugfix(61097); ?> (Memory leak in xmlrpc functions copying zvals).</li>
 </ul>
+</ul>
 
+<ul>
 <li>Zlib</li>
 <ul>
   <li><?php bugfix(61306); ?> (initialization of global inappropriate for ZTS).</li>
   <li><?php bugfix(61287); ?> (A particular string fails to decompress).</li>
   <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
+</ul>
 </ul>
 
 <a name="5.4.0"></a><!-- {{{ 5.3.10 -->
