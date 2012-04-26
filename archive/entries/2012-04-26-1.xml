@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.11 And PHP 5.4.1 Released!</title>
+  <id>http://www.php.net/archive/2012.php#id2012-04-26-1</id>
+  <published>2012-04-26T10:50:38+00:00</published>
+  <updated>2012-04-26T10:50:38+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2012-04-26-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-04-26-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>The PHP development team announces the immediate availability of PHP 5.3.11 and PHP 5.4.1. These releases focuses on improving the stability of the current PHP branches with over 60 bug fixes, some of which are security related.</p>
+     
+     <p>Security Enhancements for both PHP 5.3.11 and PHP 5.4.1:</p>
+     
+     <ul>
+     <li>Fixed bug #54374 (Insufficient validating of upload name leading to corrupted $_FILES indices). (CVE-2012-1172).</li>
+     <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
+     </ul>
+     
+     <p>Security Enhancement affecting PHP 5.3.11 only:</p>
+     
+     <ul>
+     <li>Fixed bug #61043 (Regression in magic_quotes_gpc fix for CVE-2012-0831).</li>
+     </ul>
+     
+     <p>Key enhancements in these releases include:</p>
+     
+     <ul>
+     <li>Added debug info handler to DOM objects.</li>
+     <li>Fixed bug #61172 (Add Apache 2.4 support).</li>
+     </ul>
+     
+     <p>For a full list of changes in PHP 5.3.11 and PHP 5.4.1, see the <a href="/ChangeLog-5.php">ChangeLog</a>. For source downloads please visit
+     our <a href="/downloads.php">downloads page</a>, Windows binaries can be found
+     on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
+     
+     <p>All users of PHP are strongly encouraged to upgrade to PHP 5.3.11 or PHP 5.4.1.</p>
+    </div>
+  </content>
+</entry>
