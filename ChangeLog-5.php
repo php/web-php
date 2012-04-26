@@ -11,6 +11,255 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.1"></a><!-- {{{ 5.4.1 -->
+<h3>Version 5.3.11</h3>
+<b>26-Apr-2012</b>
+
+<li>CLI Server</li>
+<ul>
+  <li><?php bugfix(61461); ?> (missing checks around malloc() calls).</li>
+  <li>Implemented <?php bugl(60850); ?> (Built in web server does not set 
+    $_SERVER['SCRIPT_FILENAME'] when using router).</li>
+</ul>
+
+<li>Core</li>
+<ul>
+  <li>Fixed crash in ZTS using same class in many threads.</li>
+  <li><?php bugfix(61374); ?> (html_entity_decode tries to decode code points that don't
+    exist in ISO-8859-1).</li>
+  <li><?php bugfix(61225); ?> (Incorrect lexing of 0b00*+&lt;NUM&gt;).</li>
+  <li><?php bugfix(61106); ?> (Segfault when using header_register_callback).</li>
+  <li><?php bugfix(61052); ?> (Missing error check in trait 'insteadof' clause).</li>
+  <li><?php bugfix(61011); ?> (Crash when an exception is thrown by __autoload
+    accessing a static property).</li>
+  <li><?php bugfix(60978); ?> (exit code incorrect).</li>
+  <li><?php bugfix(60911); ?> (Confusing error message when extending traits).</li>
+  <li><?php bugfix(60717); ?> (Order of traits in use statement can cause a fatal
+    error).</li>
+  <li><?php bugfix(60573); ?> (type hinting with "self" keyword causes weird errors).</li>
+</ul>
+
+<li>Fileinfo</li>
+<ul>
+  <li>Fix fileinfo test problems.</li>
+</ul>
+
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(61487); ?> (Incorrent bounds checking in grapheme_strpos).</li>
+</ul>
+
+<li>mbstring</li>
+<ul>
+  <li>MFH mb_ereg_replace_callback() for security enhancements.</li>
+</ul>
+
+<li>mysqlnd</li>
+<ul>
+  <li><?php bugfix(60948); ?> (mysqlnd FTBFS when -Wformat-security is enabled).</li>
+</ul>
+
+<li>Standard</li>
+<ul>
+  <li>Fixed memory leak in substr_replace.</li>
+  <li>Make max_file_uploads ini directive settable outside of php.</li>
+  <li><?php bugfix(61409); ?> (Bad formatting on phpinfo()).</li>
+  <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
+  <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix socket
+    paths).</li>
+</ul>
+
+<a name="5.3.11"></a><!-- {{{ 5.3.11 -->
+<h3>Version 5.3.11</h3>
+<b>26-Apr-2012</b>
+
+<li>Core</li>
+<ul>
+  <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables
+    (without apache2)).</li>
+  <li><?php bugfix(61273); ?> (call_user_func_array with more than 16333 arguments 
+    leaks / crashes).</li>
+  <li><?php bugfix(61165); ?> (Segfault - strip_tags()).</li>
+  <li><?php bugfix(61095); ?> (Incorect lexing of 0x00*+&lt;NUM&gt;).</li>
+  <li><?php bugfix(61087); ?> (Memory leak in parse_ini_file when specifying
+    invalid scanner mode).</li>
+  <li><?php bugfix(61072); ?> (Memory leak when restoring an exception handler).</li>
+  <li><?php bugfix(61058); ?> (array_fill leaks if start index is PHP_INT_MAX).</li>
+  <li><?php bugfix(61000); ?> (Exceeding max nesting level doesn't delete numerical 
+    vars).</li>
+  <li><?php bugfix(60895); ?> (Possible invalid handler usage in windows random
+    functions).</li>
+  <li><?php bugfix(60825); ?> (Segfault when running symfony 2 tests).</li>
+  <li><?php bugfix(60801); ?> (strpbrk() mishandles NUL byte).</li>
+  <li><?php bugfix(60569); ?> (Nullbyte truncates Exception $message).</li>
+  <li><?php bugfix(60227); ?> (header() cannot detect the multi-line header with CR).</li>
+  <li><?php bugfix(60222); ?> (time_nanosleep() does validate input params).</li>
+  <li><?php bugfix(54374); ?> (Insufficient validating of upload name leading to 
+    corrupted $_FILES indices). (CVE-2012-1172).</li>
+  <li><?php bugfix(52719); ?> (array_walk_recursive crashes if third param of the
+    function is by reference).</li>
+  <li>Improve performance of set_exception_handler while doing reset.</li>
+  <li><?php bugfix(51860); ?> (Include fails with toplevel symlink to /).</li>
+</ul>
+
+<li>DOM</li>
+<ul>
+  <li>Added debug info handler to DOM objects.</li>
+</ul>
+
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(61430); ?> (Transposed memset() params in sapi/fpm/fpm/fpm_shm.)</li>
+  <li><?php bugfix(60811); ?> (php-fpm compilation problem).</li>
+</ul>
+
+<li>Fileinfo</li>
+<ul>
+  <li>Upgraded libmagic to 5.</li>
+  <li><?php bugfix(61565); ?> where php_stream_open_wrapper_ex tries to open a
+    directory descriptor under windows.</li>
+  <li><?php bugfix(61566); ?> failure caused by the posix lseek and read versions
+    under windows in cdf_read().</li>
+  <li><?php bugfix(61173); ?> (Unable to detect error from finfo constructor).</li>
+</ul>
+
+<li>Firebird Database extension (ibase)</li>
+<ul>
+  <li><?php bugfix(60802); ?> (ibase_trans() gives segfault when passing params).
+</ul>
+
+<li>Ibase</li>
+<ul>
+  <li><?php bugfix(60947); ?> (Segmentation fault while executing ibase_db_info).</li>
+</ul>
+
+<li>Installation</li>
+<ul>
+  <li><?php bugfix(61172); ?> (Add Apache 2.4 support).</li>
+</ul>
+
+<li>mysqli</li>
+<ul>
+  <li><?php bugfix(61003); ?> (mysql_stat() require a valid connection).</li>
+</ul>
+
+<li>PDO_mysql</li>
+<ul>
+  <li><?php bugfix(61207); ?> (PDO::nextRowset() after a multi-statement query doesn't
+    always work).</li>
+  <li><?php bugfix(61194); ?> (PDO should export compression flag with myslqnd).</ul>
+</ul>
+
+<li>PDO_odbc</li>
+<ul>
+  <li><?php bugfix(61212); ?> (PDO ODBC Segfaults on SQL_SUCESS_WITH_INFO).</li>
+</ul>
+
+<li>PDO_pgsql</li>
+<ul>
+  <li><?php bugfix(61267); ?> (pdo_pgsql's PDO::exec() returns the number of SELECTed
+    rows on postgresql &gt;= 9).</li>
+</ul>
+
+<li>PDO_Sqlite extension</li>
+<ul>
+  <li>Add createCollation support.</li>
+</ul>
+
+<li>pgsql</li>
+<ul>
+  <li><?php bugfix(60718); ?> (Compile problem with libpq (PostgreSQL 7.3 or less).</li>
+</ul>
+
+<li>Phar</li>
+<ul>
+  <li><?php bugfix(61184); ?> (Phar::webPhar() generates headers with trailing NUL
+    bytes).</li>
+</ul>
+
+<li>Readline</li>
+<ul>
+  <li><?php bugfix(61088); ?> (Memory leak in readline_callback_handler_install).</li>
+  <li>Add open_basedir checks to readline_write_history and readline_read_history.</li>
+</ul>
+
+<li>Reflection</li>
+<ul>
+  <li><?php bugfix(61388); ?> (ReflectionObject:getProperties() issues invalid reads
+    when get_properties returns a hash table with (inaccessible) dynamic
+    numeric properties).</li>
+  <li><?php bugfix(60968); ?> (Late static binding doesn't work with 
+    ReflectionMethod::invokeArgs()).</li>
+</ul>
+
+<li>Session</li>
+<ul>
+  <li><?php bugfix(60860); ?> (session.save_handler=user without defined function core
+    dumps).</li>
+  <li><?php bugfix(60634); ?> (Segmentation fault when trying to die() in 
+    SessionHandler::write()).</li>
+</ul>
+
+<li>SOAP</li>
+<ul>
+  <li><?php bugfix(61423); ?> (gzip compression fails).</li>
+  <li><?php bugfix(60887); ?> (SoapClient ignores user_agent option and sends no
+    User-Agent header).</li>
+    <li><?php bugfix(60842); ?>, <?php buigfix(51775); ?> (Chunked response parsing error when 
+    chunksize length line is &gt; 10 bytes).</li>
+  <li><?php bugfix(49853); ?> (Soap Client stream context header option ignored).</li>
+</ul>
+
+<li>SPL</li>
+<ul>
+  <li>Fixed memory leak when calling SplFileInfo's constructor twice.</li>
+  <li><?php bugfix(61418); ?> (Segmentation fault when DirectoryIterator's or
+    FilesystemIterator's iterators are requested more than once without
+    having had its dtor callback called in between).</li>
+  <li><?php bugfix(61347); ?> (inconsistent isset behavior of Arrayobject).</li>
+  <li><?php bugfix(61326); ?> (ArrayObject comparison).</li>
+</ul>
+
+<li>SQLite3 extension</li>
+<ul>
+  <li>Add createCollation() method.</li>
+</ul>
+
+<li>Streams</li>
+<ul>
+  <li><?php bugfix(61371); ?> (stream_context_create() causes memory leaks on use
+    streams_socket_create).</li>
+  <li><?php bugfix(61253); ?> (Wrappers opened with errors concurrency problem on ZTS).</li>
+  <li><?php bugfix(61115); ?> (stream related segfault on fatal error in
+    php_stream_context_link).</li>
+  <li><?php bugfix(60817); ?> (stream_get_line() reads from stream even when there is
+    already sufficient data buffered). stream_get_line() now behaves more like
+    fgets(), as is documented.</li>
+  <li>Further fix for bug <?php bugfix(60455); ?> (stream_get_line misbehaves if EOF is not
+    detected together with the last read).</li>
+  <li><?php bugfix(60106); ?> (stream_socket_server silently truncates long unix
+    socket paths).</li>
+</ul>
+
+<li>Tidy</li>
+<ul>
+  <li><?php bugfix(54682); ?> (tidy null pointer dereference).</li>
+</ul>
+
+<li>XMLRPC</li>
+<ul>
+  <li><?php bugfix(61264); ?> (xmlrpc_parse_method_descriptions leaks temporary
+    variable).</li>
+  <li><?php bugfix(61097); ?> (Memory leak in xmlrpc functions copying zvals).</li>
+</ul>
+
+<li>Zlib</li>
+<ul>
+  <li><?php bugfix(61306); ?> (initialization of global inappropriate for ZTS).</li>
+  <li><?php bugfix(61287); ?> (A particular string fails to decompress).</li>
+  <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
+</ul>
+
 <a name="5.4.0"></a><!-- {{{ 5.3.10 -->
 <h3>Version 5.4.0</h3>
 <b>01-Mar-2012</b>
