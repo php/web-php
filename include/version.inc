@@ -17,27 +17,27 @@
  */
 
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.1RC1'; // set to false when there is no RC
+$PHP_5_4_RC = false; // set to false when there is no RC
 $PHP_5_4_RC_DATE = "29 March 2012";
 
-$PHP_5_4_VERSION         = "5.4.0";
-$PHP_5_4_DATE            = "01 March 2012";
+$PHP_5_4_VERSION         = "5.4.1";
+$PHP_5_4_DATE            = "26 April 2012";
 
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "04bb6f9d71ea86ba05685439d50db074",
-                       "tar.gz"        => "46b72e274c6ea7e775245ffdb81c9ce5",
+                       "tar.bz2"       => "5b9529ed89dbc48c498e9693d1af3caf",
+                       "tar.gz"        => "acd566dbd70f855c19d17fc3c0e876a2",
 );
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.11RC2';
+$PHP_5_3_RC      = false;
 $PHP_5_3_RC_DATE = '12 April 2012';
 
-$PHP_5_3_VERSION         = "5.3.10";
-$PHP_5_3_DATE            = "02 February 2012";
+$PHP_5_3_VERSION         = "5.3.11";
+$PHP_5_3_DATE            = "26 April 2012";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "816259e5ca7d0a7e943e56a3bb32b17f",
-                       "tar.gz"        => "2b3d2d0ff22175685978fb6a5cbcdc13",
+                       "tar.bz2"       => "94709f6e7c920cbe26e19fa991d9975d",
+                       "tar.gz"        => "4f83556853ec997af837ad144d9fd156",
 );
 
 $RELEASES = array(
