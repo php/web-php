@@ -12,7 +12,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <h1>PHP 5 ChangeLog</h1>
 
 <a name="5.4.1"></a><!-- {{{ 5.4.1 -->
-<h3>Version 5.3.11</h3>
+<h3>Version 5.4.1</h3>
 <b>26-Apr-2012</b>
 
 <li>CLI Server</li>
