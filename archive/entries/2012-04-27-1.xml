@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>DevConf 2012</title>
+  <id>http://www.php.net/archive/2012.php#id2012-04-27-1</id>
+  <published>2012-04-27T05:20:52+00:00</published>
+  <updated>2012-04-27T05:20:52+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-06-10</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-01-20-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://devconf.ru" title="DevConf 2012">devconfru2012.png</default:newsImage>
+  <link href="http://devconf.ru" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      DevConf 2012 in Moscow, Russia on Jun 9 - Jun 10
+     </p>
+	 <p>
+      DevConf is the ultimate meeting place for russian-speaking web-developers, 
+      combining several language-specific conferences under one roof.  
+     </p>
+	 <p>
+      This year DevConf will include the following sections:
+     </p>
+     <ul>
+      <li>DevConf::PHP();</li>
+      <li>DevConf::Perl();</li>
+      <li>DevConf::RoR();</li>
+      <li>DevConf::Python();</li>
+      <li>DevConf::Javascript();</li>
+     </ul>
+     <p>
+       Each section will feature several talks from the active contributors/authors of the language. 
+       Among the invited speakers are Derick Rethans (<a href="http://xdebug.org">XDebug</a> creator), 
+	   David Soria Parra (active PHP contributor), Andrey Aksyonov (author of <a href="http://sphinxsearch.com">Sphinx</a>), 
+	   Alexander Makarov (one of the main contributors to <a href="http://www.yiiframework.com">Yii</a>), 
+	   Sergey Petrunya (of <a href="http://mariadb.org">MariaDB</a> fame), Ilya Alekseev (<a href="http://openstack.org">OpenStack</a> Nova contributor) 
+	   and many others, see more details on <a href="http://devconf.ru">the official website</a>.
+     </p>
+    </div>
+  </content>
+</entry>
