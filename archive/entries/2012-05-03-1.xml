@@ -11,8 +11,8 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      
-     <p>There is a vulnerability in certain CGI-based setups that has gone
-     unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
+     <p>There is a vulnerability in certain CGI-based setups <b>(Apache+mod_php and nginc+php-fpm are not affected)</b>
+     that has gone unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
      7 of the CGI spec</a> states:</p>
      
      <cite>
