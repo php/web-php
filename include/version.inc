@@ -24,8 +24,8 @@ $PHP_5_4_VERSION         = "5.4.2";
 $PHP_5_4_DATE            = "03 May 2012";
 
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "",
-                       "tar.gz"        => "",
+                       "tar.bz2"       => "252a6546db3a26260b419a883c875615",
+                       "tar.gz"        => "4b62935cbea385a23335f17d64d716c7",
 );
 
 /* PHP 5.3 Release */
