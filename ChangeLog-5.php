@@ -11,6 +11,24 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.2"></a><!-- {{{ 5.4.2 -->
+<h3>Version 5.4.2</h3>
+<b>03-May-2012</b>
+
+<ul>
+  <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.12"></a><!-- {{{ 5.3.12 -->
+<h3>Version 5.3.12</h3>
+<b>03-May-2012</b>
+
+<ul>
+  <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.1"></a><!-- {{{ 5.4.1 -->
 <h3>Version 5.4.1</h3>
 <b>26-Apr-2012</b>
@@ -82,6 +100,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     paths).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.11"></a><!-- {{{ 5.3.11 -->
 <h3>Version 5.3.11</h3>
@@ -321,8 +340,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
-<a name="5.4.0"></a><!-- {{{ 5.3.10 -->
+<a name="5.4.0"></a><!-- {{{ 5.4.0 -->
 <h3>Version 5.4.0</h3>
 <b>01-Mar-2012</b>
 

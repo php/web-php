@@ -2,6 +2,32 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.1.tar.bz2',
+          'name' => 'PHP 5.4.1 (tar.bz2)',
+          'md5' => '5b9529ed89dbc48c498e9693d1af3caf',
+          'date' => '26 April 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.1.tar.gz',
+          'name' => 'PHP 5.4.1 (tar.gz)',
+          'md5' => 'acd566dbd70f855c19d17fc3c0e876a2',
+          'date' => '26 April 2012',
+        ),
+      ),
+      'date' => '26 April 2012',
+      'museum' => false,
+    ),
     '5.4.0' => 
     array (
       'announcement' => 
@@ -26,6 +52,58 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '01 March 2012',
+      'museum' => false,
+    ),
+    '5.3.11' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_11.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.11.tar.bz2',
+          'name' => 'PHP 5.3.11 (tar.bz2)',
+          'md5' => '5b9529ed89dbc48c498e9693d1af3caf',
+          'date' => '26 April 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.11.tar.gz',
+          'name' => 'PHP 5.3.11 (tar.gz)',
+          'md5' => 'acd566dbd70f855c19d17fc3c0e876a2',
+          'date' => '26 April 2012',
+        ),
+      ),
+      'date' => '26 April 2012',
+      'museum' => false,
+    ),
+    '5.3.10' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_10.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.10.tar.bz2',
+          'name' => 'PHP 5.3.10 (tar.bz2)',
+          'md5' => '816259e5ca7d0a7e943e56a3bb32b17f',
+          'date' => '02 February 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.9.tar.gz',
+          'name' => 'PHP 5.3.9 (tar.gz)',
+          'md5' => '2b3d2d0ff22175685978fb6a5cbcdc13',
+          'date' => '02 February 2012',
+        ),
+      ),
+      'date' => '02 February 2012',
       'museum' => false,
     ),
     '5.3.9' => 
