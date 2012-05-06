@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.12 and 5.4.2 releases about CGI flaw ( CVE-2012-1823)</title>
+  <id>http://www.php.net/archive/2012.php#id2012-05-06-1</id>
+  <published>2012-05-06T23:00:36+02:00</published>
+  <updated>2012-05-06T23:00:36+02:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2012-05-03-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>PHP 5.3.12/5.4.2 do not fix all variations of the CGI issues described
+    in CVE-2012-1823. It has also come to our attention that some sites use
+    an insecure cgiwrapper script to run PHP. These scripts will use $*
+    instead of "$@" to pass parameters to php-cgi which causes a number of
+    issues.
+
+    <p>Another set of releases is planed for Tuesday, May, 8th. These
+    releases will fix the CGI flaw and another issue in
+    apache_request_header (5.4 only).</p>
+
+    <p>However, we recommend to anyone affected with the CGI flaw to migrate
+    to FastCGI and FPM (or another SAPI like mod_php). CGI is a very old
+    technology and is really not aimed to be used in today's production
+    server.</p>
+
+    <p>We apologize for the inconvenience created with these releases and the
+    (lack of) communications around them.</p>
+    </div>
+  </content>
+</entry>
