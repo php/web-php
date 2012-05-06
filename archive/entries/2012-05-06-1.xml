@@ -16,17 +16,17 @@
     issues. Again, people using mod_php or php-fpm are not affected.</p>
 
     <p>
-    One way to address these CGI issues is to throw away the query parameters if they
-    contain a '-' and no '='. It can be done using Apache's mod_rewrite like this:
+    One way to address these CGI issues is to reject the request if the query string
+    contains a '-' and no '='. It can be done using Apache's mod_rewrite like this:
 
     <pre>
-    RewriteCond %{QUERY_STRING} ^.*(%2d|-)[^=]+$ [NC]
-    RewriteRule ^(.*) $1? [L]
+    RewriteCond %{QUERY_STRING} ^[^=]*$
+    RewriteCond %{QUERY_STRING} %2d|\- [NC]
+    RewriteRule .? - [F,L]
     </pre>
 
     Note that this will block otherwise safe requests like ?top-40 so if you
-    are using mod_cgi and have query parameters that look like that, adjust your
-    regex accordingly.</p>
+    have query parameters that look like that, adjust your regex accordingly.</p>
     
     <p>Another set of releases are planned for Tuesday, May, 8th. These
     releases will fix the CGI flaw and another CGI-related issue in
