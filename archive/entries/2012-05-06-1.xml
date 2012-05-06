@@ -13,16 +13,24 @@
     in CVE-2012-1823. It has also come to our attention that some sites use
     an insecure cgiwrapper script to run PHP. These scripts will use $*
     instead of "$@" to pass parameters to php-cgi which causes a number of
-    issues.
+    issues. Again, people using mod_php or php-fpm are not affected.</p>
 
-    <p>Another set of releases is planed for Tuesday, May, 8th. These
-    releases will fix the CGI flaw and another issue in
+    <p>
+    One way to address these CGI issues is to throw away the query parameters if they
+    contain a '-' and no '='. It can be done using Apache's mod_rewrite like this:
+
+    <pre>
+    RewriteCond %{QUERY_STRING} ^.*(%2d|-)[^=]+$ [NC]
+    RewriteRule ^(.*) $1? [L]
+    </pre>
+
+    Note that this will block otherwise safe requests like ?top-40 so if you
+    are using mod_cgi and have query parameters that look like that, adjust your
+    regex accordingly.</p>
+    
+    <p>Another set of releases are planned for Tuesday, May, 8th. These
+    releases will fix the CGI flaw and another CGI-related issue in
     apache_request_header (5.4 only).</p>
-
-    <p>However, we recommend to anyone affected with the CGI flaw to migrate
-    to FastCGI and FPM (or another SAPI like mod_php). CGI is a very old
-    technology and is really not aimed to be used in today's production
-    server.</p>
 
     <p>We apologize for the inconvenience created with these releases and the
     (lack of) communications around them.</p>
