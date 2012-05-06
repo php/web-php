@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.3.12 and 5.4.2 releases about CGI flaw ( CVE-2012-1823)</title>
+  <title>PHP 5.3.12 and 5.4.2 releases about CGI flaw (CVE-2012-1823)</title>
   <id>http://www.php.net/archive/2012.php#id2012-05-06-1</id>
   <published>2012-05-06T23:00:36+02:00</published>
   <updated>2012-05-06T23:00:36+02:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
-  <link href="http://www.php.net/index.php#id2012-05-03-1" rel="alternate" type="text/html"/>
-  <link href="http://www.php.net/archive/2012.php#id2012-05-03-1" rel="via" type="text/html"/>
+  <link href="http://www.php.net/index.php#id2012-05-06-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="via" type="text/html"/>
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
     <p>PHP 5.3.12/5.4.2 do not fix all variations of the CGI issues described
     in CVE-2012-1823. It has also come to our attention that some sites use
-    an insecure cgiwrapper script to run PHP. These scripts will use $*
-    instead of "$@" to pass parameters to php-cgi which causes a number of
+    an insecure cgiwrapper script to run PHP. These scripts will use <strong>$*</strong>
+    instead of <strong>"$@"</strong> to pass parameters to php-cgi which causes a number of
     issues. Again, people using mod_php or php-fpm are not affected.</p>
 
     <p>
