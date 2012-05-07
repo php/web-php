@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.3.12 and 5.4.2 releases about CGI flaw (CVE-2012-1823)</title>
+  <title>PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</title>
   <id>http://www.php.net/archive/2012.php#id2012-05-06-1</id>
   <published>2012-05-06T23:00:36+02:00</published>
   <updated>2012-05-06T23:00:36+02:00</updated>
