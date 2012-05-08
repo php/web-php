@@ -15,8 +15,8 @@ All users of PHP 5.3 are encouraged to upgrade to this release</p>
 (CVE-2012-2311). Note: mod_php and php-fpm are not vulnerable to this
 attack.</p>
 
-For source downloads of PHP 5.3.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
+<p>For source downloads of PHP 5.3.13 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
-The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.13">ChangeLog</a>.
+The list of changes are recorded in the <a href="http://www.php.net/ChangeLog-5.php#5.3.13">ChangeLog</a>.</p>
 
 <?php site_footer(); ?>
