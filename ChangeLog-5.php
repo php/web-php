@@ -11,6 +11,25 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.3"></a><!-- {{{ 5.4.3 -->
+<h3>Version 5.4.3</h3>
+<b>08-May-2012</b>
+
+<ul>
+  <li><?php bugfix(61807); ?> Buffer Overflow in apache_request_headers, CVE-2012-2329.</li>
+  <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.13"></a><!-- {{{ 5.3.13 -->
+<h3>Version 5.3.13</h3>
+<b>08-May-2012</b>
+
+<ul>
+  <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.2"></a><!-- {{{ 5.4.2 -->
 <h3>Version 5.4.2</h3>
 <b>03-May-2012</b>
