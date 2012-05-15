@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.3.12 and 5.4.2 and the CGI flaw (CVE-2012-1823)</title>
+  <id>http://www.php.net/archive/2012.php#id2012-05-06-1</id>
+  <published>2012-05-06T23:00:36+02:00</published>
+  <updated>2012-05-06T23:00:36+02:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://www.php.net/index.php#id2012-05-06-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-05-06-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>PHP 5.3.12/5.4.2 do not fix all variations of the CGI issues described
+    in CVE-2012-1823. It has also come to our attention that some sites use
+    an insecure cgiwrapper script to run PHP. These scripts will use <strong>$*</strong>
+    instead of <strong>"$@"</strong> to pass parameters to php-cgi which causes a number of
+    issues. Again, people using mod_php or php-fpm are not affected.</p>
+
+    <p>
+    One way to address these CGI issues is to reject the request if the query string
+    contains a '-' and no '='. It can be done using Apache's mod_rewrite like this:
+
+    <pre>
+    RewriteCond %{QUERY_STRING} ^[^=]*$
+    RewriteCond %{QUERY_STRING} %2d|\- [NC]
+    RewriteRule .? - [F,L]
+    </pre>
+
+    Note that this will block otherwise safe requests like ?top-40 so if you
+    have query parameters that look like that, adjust your regex accordingly.</p>
+    
+    <p>Another set of releases are planned for Tuesday, May, 8th. These
+    releases will fix the CGI flaw and another CGI-related issue in
+    apache_request_header (5.4 only).</p>
+
+    <p>We apologize for the inconvenience created with these releases and the
+    (lack of) communication around them.</p>
+    </div>
+  </content>
+</entry>

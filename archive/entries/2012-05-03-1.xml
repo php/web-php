@@ -3,7 +3,7 @@
   <title>PHP 5.3.12 and PHP 5.4.2 Released!</title>
   <id>http://www.php.net/archive/2012.php#id2012-05-03-1</id>
   <published>2012-05-03T18:00:36+02:00</published>
-  <updated>2012-05-03T18:00:36+02:00</updated>
+  <updated>2012-05-03T22:58:36+01:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2012-05-03-1" rel="alternate" type="text/html"/>
@@ -11,8 +11,8 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      
-     <p>There is a vulnerability in certain CGI-based setups that has gone
-     unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
+     <p>There is a vulnerability in certain CGI-based setups <b>(Apache+mod_php and nginx+php-fpm are not affected)</b>
+     that has gone unnoticed for at least 8 years. <a href="http://tools.ietf.org/html/draft-robinson-www-interface-00#section-7">Section
      7 of the CGI spec</a> states:</p>
      
      <cite>
@@ -22,7 +22,7 @@
         string not containing any unencoded "=" characters.
      </cite>
      
-     <p>So requests that do not have a "=" in the query string are treated
+     <p>So, requests that do not have a "=" in the query string are treated
      differently from those who do in some CGI implementations. For PHP this
      means that a request containing ?-s may dump the PHP source code for the
      page, but a request that has ?-s&amp;=1 is fine.</p>
@@ -33,13 +33,13 @@
      be vulnerable.</p>
      
      <p>If you are using Apache mod_cgi to run PHP you may be vulnerable. To see
-     if you are just add ?-s to the end of any of your URLs. If you see your
+     if you are, just add ?-s to the end of any of your URLs. If you see your
      source code, you are vulnerable. If your site renders normally, you are not.</p>
      
-     <p>To fix this update to PHP 5.3.12 or PHP 5.4.2. </p>
+     <p>To fix this, update to PHP 5.3.12 or PHP 5.4.2. </p>
      
-     <p>We recognize that since CGI is a rather outdated way to run PHP it may not be feasible to
-     upgrade these sites to a modern version of PHP, so an alternative is to
+     <p>We recognize that since CGI is a rather outdated way to run PHP, it may not be feasible to
+     upgrade these sites to a modern version of PHP. An alternative is to
      configure your web server to not let these types of requests with query
      strings starting with a "-" and not containing a "=" through. Adding a
      rule like this should not break any sites. For Apache using mod_rewrite
