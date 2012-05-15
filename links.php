@@ -9,10 +9,10 @@ $SIDEBAR_DATA = '
  for information about mailing lists on PHP.net and some international
  ones, as well as other support options.
 </p>
- 
+
 <h3>PHP licensed software</h3>
 <p>
- Additionally to these links, we have a 
+ Additionally to these links, we have a
  <a href="/software">list of software</a> available under
  the PHP license.
 </p>
@@ -53,26 +53,6 @@ site_header("Links", array("current" => "community"));
  <li>
   <a href="http://www.phparch.com/">php|architect</a><br />
   The first monthly English magazine about PHP, distributed in PDF format
- </li>
-
- <li>
-  <a href="http://phpmagazin.de/">PHP Magazin</a><br />
-  The Software &amp; Support Verlag, based in Frankfurt,
-  Germany, has now published a magazine on PHP as a 
-  tribute to the steadily growing German PHP community (in German).
- </li>
-
- <li>
-  <a href="http://www.php-mag.net/">PHP Magazine</a><br />
-  An English edition of the magazine mentioned above. The PHP Magazine
-  is published bimonthly and aimed at professional PHP users.
- </li>
-
- <li>
-  <a href="http://www.phptunisie.net/formation/home/1/1/">PHP Tunisie Magazine</a><br />
-  PHP Tunisie Magazine is a monthly French speaking magazine, distributed in PDF format
-  and dedicated to PHP and its related technologies. It's edited by the Tunisian PHP
-  users group.
  </li>
 
 </ul>
@@ -193,7 +173,7 @@ site_header("Links", array("current" => "community"));
     Apprendre le PHP par l'exemple, facilement et simplement.
     R&eacute;serv&eacute; d'abord aux d&eacute;butants.
    </li>
-<!-- 
+<!--
 Web site does not respond
    <li>
     <a href="http://www.phpfr.org/">phpfr</a><br />
@@ -285,7 +265,7 @@ service is gone...
     answers nearly all your question
    </li>
 <!--
-dead domain as 2007/02/07 
+dead domain as 2007/02/07
 <li>
     <a href="http://www.phpreferenz.de/workshops.html">www.phpreferenz.de</a><br />
     Free printable workshops for PHP newcomers
@@ -351,7 +331,7 @@ dead domain as 2007/02/07
   <ul>
    <li>
     PHP@sindrem.com (<a href="http://www.sindrem.com">http://www.sindrem.com</a>)<br />
-    Norwegian site for newbies and intermediates. Installation help 
+    Norwegian site for newbies and intermediates. Installation help
     and scripts.
    </li>
   </ul>
