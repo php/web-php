@@ -227,16 +227,10 @@ ul {
     z-index: 99999;
     border-color: #987db3;
     background-color: white;
-    -moz-border-radius-bottomleft: 5px;
-    -moz-border-radius-bottomright: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     border-top: 1px solid #f6f6f6;
-    box-shadow: 0px 2px 2px #555;
-    -webkit-box-shadow: 0px 2px 2px #555;
-    -moz-box-shadow: 0px 2px 2px #555;
+    -webkit-box-shadow: 0px .25em .5em rgba(0,0,0,.33);
+    -moz-box-shadow: 0px .25em .5em rgba(0,0,0,.33);
+    box-shadow: 0px .25em .5em rgba(0,0,0,.33);
 }
 
 .ui-autocomplete .ui-state-hover {
@@ -267,6 +261,25 @@ ul {
 .ui-autocomplete a {
     display: block;
     padding: 2px 5px;
+}
+.ui-autocomplete a .search-item-description,
+.ui-autocomplete a .search-item-label {
+    display:block;
+}
+
+.ui-autocomplete a .search-item-description {
+    color:#666;
+}
+
+.ui-autocomplete .ui-state-hover .search-item-description {
+    color:#ccc;
+}
+
+.ui-autocomplete a .search-item-label {
+    font-weight:bold;
+}
+.ui-autocomplete a .search-item-category {
+    font-weight:normal;
 }
 
 .ui-autocomplete-category {

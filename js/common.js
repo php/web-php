@@ -117,7 +117,7 @@ $(document).ready(function() {
                 var n = $("<li></li>").data("item.autocomplete", item);
                 var cat = this._resolveIndexName(item.category);
                 if (item.desc) {
-                    n.append("<a>" + item.label + " (" + cat + ")<br>" + item.desc + "</a>");
+                    n.append("<a><span class='search-item-label'>" + item.label + " <span class='search-item-category'>(" + cat + ")</span></span><span class='search-item-description'>" + item.desc + "</span></a>");
                 }
                 else {
                     n.append("<a>" + item.label + " (" + cat + ") </a>");
