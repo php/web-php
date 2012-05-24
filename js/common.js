@@ -67,7 +67,7 @@ $(document).ready(function() {
         var activate = function(){
             clickedMenu.addClass('current');
             clickedMenu.find("div.children").appendTo(container);
-            container.find("div.children").slideUp(0).slideDown("fast",
+            container.find("div.children").slideUp(0).slideDown(100,
                 function(){ container.removeClass('busy'); }
             );
         };
@@ -79,7 +79,7 @@ $(document).ready(function() {
             activeMenu.removeClass('current');
         }
         if (activeSubMenu.length) {
-            activeSubMenu.slideUp('fast', function(){
+            activeSubMenu.slideUp(100, function(){
                 activeSubMenu.appendTo(activeMenu);
                 if (activeMenu[0] != clickedMenu[0])
                     activate();
