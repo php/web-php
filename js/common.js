@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
     // Ugh, cookie handling.
     var cookies = document.cookie.split(";");
     var showBetaWarning = true;
@@ -187,7 +188,8 @@ $(document).ready(function() {
     });
 
     var foundToc = false;
-    if ($("#quicktoc").length) {
+    var $quicktoc = $("#quicktoc");
+    if ($quicktoc.length) {
         var pageid = $("section.docs > div").attr("id");
         var editurl = "https://edit.php.net/?perm=/" + getLanguage() + "/" + pageid + ".php&project=PHP";
         var bugurl  = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + pageid;
@@ -219,18 +221,21 @@ $(document).ready(function() {
                 });
             });
 
-            $("#quicktoc .content").append("<h5>Quick TOC</h5>").append(l);
-            $('#quicktoc').find('.links, .content').show();
+            $quicktoc.find(".content").append("<h5>Quick TOC</h5>").append(l);
+            $quicktoc.find('.links, .content').show();
 
         } else {
-            $("#quicktoc").remove();
+            $quicktoc.remove();
         }
 
     }
-    $(".docs div[id] > h1, .docs div[id] > h2, .docs div[id] > h3, .docs div[id] > h4").each(function(){
+
+    var $docs = $('.docs');
+    var $docsDivWithId = $docs.find('div[id]');
+    $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    $(".docs .methodparam .parameter").click(function () {
+    $docs.find(".methodparam .parameter").click(function () {
         var $node = $(this);
         $(".parameters .term .parameter").each(function (idx, param) {
             var $param = $(param);
@@ -242,8 +247,10 @@ $(document).ready(function() {
         });
     });
 
+    var $elephpants = $(".elephpants");
+    var $elephpantsImages = $elephpants.find('.images');
     // load the elephpant images if elephpants div is in the dom.
-    $(".elephpants .images").first().each(function (idx, node) {
+    $elephpantsImages.first().each(function (idx, node) {
 
         // function to fetch and insert images.
         var fetchImages = function() {
@@ -251,7 +258,7 @@ $(document).ready(function() {
             // determine how many elephpants are required to fill the
             // viewport and subtract for any images we already have.
             var count = Math.ceil($(document).width() / 75)
-                      - $(".elephpants .images img").length;
+                      - $elephpantsImages.find("img").length;
 
             // early exit if we don't need any images.
             if (count < 1) {
@@ -275,7 +282,7 @@ $(document).ready(function() {
                     }
                 },
                 error:    function() {
-                    $(".elephpants").hide();
+                    $elephpants.hide();
                 }
             });
 
