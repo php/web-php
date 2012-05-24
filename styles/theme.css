@@ -539,6 +539,33 @@ aside.tips p {
     display: block;
 }
 
+#search-results {
+    margin:10px 40px;
+}
+
+#search-results li {
+    padding:1em 0;
+    list-style: none;
+}
+
+#search-results li .result {
+    font-size: 1.2em
+}
+
+#results_nav_list {
+    margin:0;
+    padding:1em 0;
+}
+#results_nav_list li {
+    list-style: none;
+    display:inline-block;
+}
+#results_nav_list li a {
+    padding:.5em .66em;
+}
+#results_nav_list li.current {
+    font-weight: bold;
+}
 /* Footer styling */
 
 footer {

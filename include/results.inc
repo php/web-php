@@ -81,7 +81,13 @@ EOB;
 		if($start > $res['ResultSet']['totalResultsAvailable']) {
 			break;
 		}
-		printf('<li><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', urlencode($q), $start, $profile, urlencode($l), $z);
+
+        $class = '';
+        if ($start == $start_result) {
+            $class = 'current';
+        }
+
+		printf('<li class="%s"><a href="/results.php?q=%s&start=%d&p=%s&l=%s">%d</a></li>', $class, urlencode($q), $start, $profile, urlencode($l), $z);
 		$start += $per_page;
 	}
 	echo '</ul></div>';
