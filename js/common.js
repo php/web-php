@@ -230,11 +230,13 @@ $(document).ready(function() {
     $(".docs div[id] > h1, .docs div[id] > h2, .docs div[id] > h3, .docs div[id] > h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    $(".docs .methodparam .parameter").each(function (idx, node) {
-        $(".parameters .term i > tt.parameter").each(function (idx, param) {
-            if ($(param).text() == $(node).text().substring(1)) {
-                $(node).click(function() {
-                    $.scrollTo($(param), 800);
+    $(".docs .methodparam .parameter").click(function () {
+        var $node = $(this);
+        $(".parameters .term .parameter").each(function (idx, param) {
+            var $param = $(param);
+            if ($param.text() == $node.text().substring(1)) {
+                $node.click(function() {
+                    $.scrollTo($param, 800);
                 });
             }
         });
