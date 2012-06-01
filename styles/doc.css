@@ -371,3 +371,31 @@ dl.qandaentry {
     font-size:12px;
     margin-right: 6px;
 }
+
+/* Soft-deprecation Notices */
+div.soft-deprecation-notice h1.title {
+    border: 0;
+    color: #3f438d;
+    position: absolute;
+    padding: 0;
+    margin:0;
+    line-height: 1em;
+    top:-22px;
+    left: 0;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+div.soft-deprecation-notice {
+    position: relative;
+    margin-top: 50px;
+    border: 1px solid #AA6666;
+    color: #fff;
+    background-color: #ffeeee;
+    z-index: 100;
+}
+div.soft-deprecation-notice blockquote.sidebar {
+    padding: 10px;
+    margin: 0px;
+    border: 0px solid #666600;
+    color: #660000;
+}

@@ -1043,6 +1043,30 @@ div.reportbug {
 	font-size: 80%;
 	float: right;
 }
+
+/* Soft-deprecation Notices */
+div.soft-deprecation-notice {
+	margin: 1em;
+	padding: 1em;
+	position: relative;
+	border: 2px solid #AA6666;
+	color: #660000;
+	background-color: #ffeeee;
+}
+div.soft-deprecation-notice h1.title {
+	font-size: 110%;
+	border-bottom: dashed 1px white;
+}
+div.soft-deprecation-notice .title .toggler {
+	border-bottom: none;
+}
+div.soft-deprecation-notice blockquote.sidebar {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
 /*
  * vim: noet
  */
