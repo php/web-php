@@ -341,6 +341,10 @@ dead domain as 2007/02/07
   <strong>Persian</strong>
   <ul>
    <li>
+    <a href="http://forum.iranphp.org/">Iranian PHP Organization</a><br />
+    A PHP forum for Iranians.
+   </li>
+   <li>
     <a href="http://www.iranphp.net/">IranPHP.net</a><br />
     A site about PHP for Iranians, with news and forums.
    </li>
