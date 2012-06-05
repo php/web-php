@@ -12,7 +12,7 @@
  */
 
 body * {
-    border-color: #c3add9;
+    border-color: #9999CC;
 }
 
 body, input, textarea {
@@ -70,11 +70,11 @@ small { font-size: .9em; }
 
 a:link,
 a:visited {
-    color: #528918;
+    color: #000099;
 }
 
 a:hover {
-    color: #355c0b;
+    color: #000099;
 }
 
 ul {
@@ -139,7 +139,7 @@ ul {
     margin: 0;
     border-bottom: 12px solid;
     color: #444;
-    border-color: #987db3;
+    border-color: #7F7FB2;
     font-weight: bold;
 }
 
@@ -148,7 +148,7 @@ ul {
     padding: 2px;
     float: right;
     border: 1px solid;
-    border-color: #987db3;
+    border-color: #7F7FB2;
 }
 
 #headsearch-keywords {
@@ -176,18 +176,18 @@ ul {
     margin: 1px;
     padding: 2px 5px;
     font-weight: bold;
-    border-color: #987db3;
-    border: 1px solid #604080;
-    background: #604080;
+    border-color: #7F7FB2;
+    border: 1px solid #666699;
+    background: #666699;
     color: #fff;
     cursor: pointer;
 }
 #changelang {
-    border-color: #987db3;
+    border-color: #7F7FB2;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;    
     border-radius: 5px;
-    border: 1px solid #604080;
+    border: 1px solid #666699;
     float: right;
 }
 
@@ -203,7 +203,7 @@ ul {
 #headnav li.current a.menu-link,
 #headnav li a.menu-link:hover,
 #headnav li#headhome.current {
-    border-color: #604080;
+    border-color: #666699;
 }
 
 #headnav li.current a.menu-link {
@@ -225,7 +225,7 @@ ul {
     padding: 0 0 5px 0;
     border: 1px solid;
     z-index: 99999;
-    border-color: #987db3;
+    border-color: #7F7FB2;
     background-color: white;
     border-top: 1px solid #f6f6f6;
     -webkit-box-shadow: 0px .25em .5em rgba(0,0,0,.33);
@@ -234,7 +234,7 @@ ul {
 }
 
 .ui-autocomplete .ui-state-hover {
-    background-color: #604080;
+    background-color: #666699;
     color: white;
 }
 
@@ -255,7 +255,7 @@ ul {
     */
     line-height: 16px;
     overflow: hidden;
-    border-bottom: 1px solid #c3add9 ;
+    border-bottom: 1px solid #9999CC;
 }
 
 .ui-autocomplete a {
@@ -287,7 +287,7 @@ ul {
     padding: .2em .4em;
     margin: .8em 0 .2em;
     line-height: 1.5;
-    background-color: #987db3;
+    background-color: #7F7FB2;
     color: #fff;
 }
 
@@ -315,7 +315,7 @@ ul {
 
 #usernotes h3 {
     padding-right: 20px;
-    border-color: #3f438d;
+    border-color: #666699;
     padding-bottom: 6px;
 }
 
@@ -403,7 +403,7 @@ pre.info {
 
 #mega-drop-down {
     background-color: #333;
-    border-color: #c3add9;
+    border-color: #9999CC;
 }
 
 #mega-drop-down div.children {
@@ -465,7 +465,7 @@ a.genanchor:hover {
 
 aside.tips {
     background-color: #f9f9f9;
-    border-bottom: 12px solid #c3add9;
+    border-bottom: 12px solid #9999CC;
     float: right;
     margin: 10px 0 30px 30px;
     width: 294px;
@@ -474,15 +474,15 @@ aside.tips {
 aside.tips div.border {
     float: left;
     width: 98px;
-    border-top: 12px solid #604080;
+    border-top: 12px solid #9999CC;
 }
 
 aside.tips div.border.second {
-    border-color: #987db3;
+    border-color: #7F7FB2;
 }
 
 aside.tips div.border.third {
-    border-color: #c3add9;
+    border-color: #9999CC;
 }
 
 aside.tips div.inner {
@@ -572,8 +572,8 @@ footer {
     clear: both;
     overflow: auto;
     background-color: #333;
-    border-top: 12px solid #c3add9;
-    border-bottom: 12px solid #c3add9;
+    border-top: 12px solid #9999CC;
+    border-bottom: 12px solid #9999CC;
     padding: 1.5em 0;
     margin-bottom: 2em;
 }
@@ -614,7 +614,7 @@ footer a:hover {
 div.elephpants {
     margin: auto;
     overflow: hidden;
-    border-bottom: 12px solid #c3add9;
+    border-bottom: 12px solid #9999CC;
 }
 
 div.elephpants div.images {
@@ -659,7 +659,7 @@ table.standard {
 }
 
 table.standard td, table.standard th {
-    border: 1px solid #c3add9;
+    border: 1px solid #efefef;
 }
 
 table.standard tr:nth-child(even) td {

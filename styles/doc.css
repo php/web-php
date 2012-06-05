@@ -3,8 +3,8 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
-    border-top: 1px solid #C3ADD9;
-    border-left: 1px solid #C3ADD9;
+    border-top: 1px solid #9999CC;
+    border-left: 1px solid #9999CC;
     border-bottom: none;
     margin: 0 0 20px 20px;
     width: 160px;
@@ -52,7 +52,7 @@ aside#quicktoc {
 }
 
 .docs .parameter {
-    color: #604080;
+    color: #666699;
     font-weight: bold;
 }
 
@@ -74,16 +74,16 @@ aside#quicktoc {
 }
 
 .docs blockquote.note {
-    border-top: 3px solid #fff08a;
+    border-top: 3px solid #9999CC;
     background-color: #EFEFEF;
 }
 .docs div.tip {
-    border-top: 3px solid #434343;
+    border-top: 3px solid #9999EE;
     background-color: #EFEFEF;
 }
 
 .docs div.caution {
-    border-top: 3px solid #F90;
+    border-top: 3px solid #FFFFCC;
     background-color: #EFEFEF;
 }
 .docs blockquote.note,
@@ -124,15 +124,17 @@ aside#quicktoc {
     text-align: center;
     margin: 20px 2% 20px 2%;
     padding: 5px 15px 5px 45px;
-    border-top: 3px solid #9f8a8a;
-    border-bottom: 1px solid #9f8a8a;
     min-height: 100px;
     background-position: 16px;
 }
 .docs div.warning {
+    border-top: 3px solid #9f8a8a;
+    border-bottom: 1px solid #9f8a8a;
     background: #f2e5f4 url('/images/dialog-warning.png') left center no-repeat;
 }
 .docs div.tip {
+    border-top: 3px solid #9999EE;
+    border-bottom: 1px solid #9999EE;
     background: #efefef url('/images/dialog-information.png') left center no-repeat;
 }
 
@@ -164,14 +166,14 @@ aside#quicktoc {
 
 
 /* {{{ Examples (highlighting is in theme.css) */
-.docs blockquote.note,
+/*.docs blockquote.note,
 .docs div.caution,
 .docs div.tip
-.docs .example-contents div pre,
+.docs .example-contents div pre,*/
 .docs .example-contents div.phpcode,
 .docs .example-contents.screen,
 .docs .refentry .methodsynopsis  {
-    border: 1px solid #9f8a8a;
+    border: 1px solid #CCCCCC;
     background-color: #fff;
     margin: 2px 0px;
     font-weight: normal;
@@ -195,18 +197,18 @@ aside#quicktoc {
 }
 
 .docs .doctable {
-    border-top: 1px solid #9F8A8A;
-    border-bottom: 1px solid #9F8A8A;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
     width: 100%;
 }
 
 .docs .doctable th {
     background-color: #FCFCFC;
     text-align: center;
-    border-bottom: 1px solid #9F8A8A;
+    border-bottom: 1px solid #CCCCCC;
 }
 .docs .doctable td, .docs .doctable th {
-    border-right: 1px solid #9F8A8A ;
+    border-right: 1px solid #CCCCCC;
 }
 .docs .doctable td:last-child, .docs .doctable th:last-child {
     border-right: 0px;
@@ -315,13 +317,13 @@ dl.qandaentry {
     margin: 0;
     padding: 3px 7px;
     border: 0;
-    border-left: 6px solid #987db3;
+    border-left: 6px solid #7F7FB2;
 }
 
 .docs .layout-menu ul.parent-menu-list a:hover,
 .docs .layout-menu ul.parent-menu-list li:last-child a {
     color: #000;
-    border-left: 6px solid #604080;
+    border-left: 6px solid #666699;
 }
 
 .docs .layout-menu ul.child-menu-list {
