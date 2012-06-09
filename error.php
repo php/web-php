@@ -105,7 +105,7 @@ if (preg_match("!^release_([^\\.]+)(\\.php$|$)!", $URI, $array)) {
 // BC: handle documentation howto moved to the doc.php.net server
 // (redirect to index page)
 if (preg_match("!^manual/howto/!", $URI, $array)) {
-    mirror_redirect("http://doc.php.net/php/dochowto/");
+    mirror_redirect("https://wiki.php.net/doc/howto");
 }
 
 // ============================================================================
@@ -139,8 +139,6 @@ if (preg_match("!^get/([^/]+)$!", $URI, $what)) {
         case "php"           : $URI = "downloads"; break;
         case "docs"          : // intentional
         case "documentation" : $URI = "download-docs"; break;
-        case "dochowto"      : // intentional
-        case "phpdochowto"   : $URI = "getdochowto"; break;
     }
 }
 
@@ -451,8 +449,7 @@ $external_redirects = array(
     "pear"        => "http://pear.php.net/",
     "bugs"        => "http://bugs.php.net/",
     "bugstats"    => "http://bugs.php.net/bugstats.php",
-    "phpdochowto" => "http://doc.php.net/php/dochowto/",
-    "getdochowto" => "http://doc.php.net/php/dochowto/howto.html.tar.gz",
+    "phpdochowto" => "https://wiki.php.net/doc/howto",
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
     "functions.js.txt" => "http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo

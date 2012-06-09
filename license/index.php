@@ -65,7 +65,7 @@ For licensing and copyright information on the PHP project materials, please see
     copyright (c) the PHP Documentation Group
    </li>
    <li><a href="http://creativecommons.org/licenses/by/3.0/">Summary</a> in human-readable form</li>
-   <li>Practical Information: <a href="http://doc.php.net/php/dochowto/">Documentation HOWTO</a></li>
+   <li>Practical Information: <a href="https://wiki.php.net/doc/howto">Documentation HOWTO</a></li>
   </ul>
  </li><!-- }}} -->
  <li><!-- {{{ web-lic -->
