@@ -70,11 +70,13 @@ small { font-size: .9em; }
 
 a:link,
 a:visited {
-    color: #000099;
+    color: #3F438D;
+    border-bottom: 1px solid #c5c3e3;
 }
 
 a:hover {
-    color: #000099;
+    color: #3F438D;
+    border-bottom: 1px solid #3F438D;
 }
 
 ul {
@@ -336,6 +338,7 @@ ul {
 #usernotes .date, #usernotes .admin {
     float:right;
     text-align: right;
+    border-bottom: none;
 }
 
 /* Definition lists used on eg. the unsub page */
@@ -439,6 +442,7 @@ pre.info {
     display: block;
     padding: 2px;
     color: #ccc;
+    border-bottom: none;
 }
 
 #mega-drop-down dt a {
@@ -446,16 +450,19 @@ pre.info {
 }
 
 #mega-drop-down a:hover {
-    color: #999;
+    color: #FFF;
+    border-bottom: none;
 }
 
 /* {{{ The anchor for section headers */
 a.genanchor:link,
 a.genanchor:visited {
     color: #fff;
+    border-bottom: none;
 }
 a.genanchor:hover {
     color: #000;
+    border-bottom: none;
 }
 /* }}} */
 
@@ -602,10 +609,12 @@ footer a {
 footer a:link,
 footer a:visited {
     color: #ccc;
+    border-bottom: none;
 }
 
 footer a:hover {
     color: #888;
+    border-bottom: none;
 }
 
 

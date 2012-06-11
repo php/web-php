@@ -270,7 +270,7 @@ dl.qandaentry {
 
 .docs  div.refsect1 h3.title {
     border: 0;
-    color: #3f438d;
+    color: #454e55;
     position: absolute;
     padding: 0;
     margin:0;
@@ -377,7 +377,7 @@ dl.qandaentry {
 /* Soft-deprecation Notices */
 div.soft-deprecation-notice h1.title {
     border: 0;
-    color: #3f438d;
+    color: #454e55;
     position: absolute;
     padding: 0;
     margin:0;
