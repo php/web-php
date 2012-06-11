@@ -313,6 +313,11 @@ div.home-sidebar ul {
     list-style-type: none;
     padding: 0;
 }
-div.home-sidebar a {
-    border-bottom:0;
+
+div.home-sidebar a:link,
+div.home-sidebar a:visited {
+    border-bottom-color: transparent;
+}
+div.home-sidebar a:hover {
+    border-bottom-color: #3F438D;
 }
