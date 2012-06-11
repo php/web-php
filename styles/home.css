@@ -313,3 +313,6 @@ div.home-sidebar ul {
     list-style-type: none;
     padding: 0;
 }
+div.home-sidebar a {
+    border-bottom:0;
+}
