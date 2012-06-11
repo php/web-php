@@ -17,7 +17,7 @@ body * {
 
 body, input, textarea {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 body {
@@ -116,7 +116,7 @@ ul {
 #headnav #headhome a.menu-link:hover {
     background: url(/images/sprites.png) 0 0;
     width: 170px;
-    height: 13px;
+    height: 14px;
     text-indent: -2000em;
 }
 
@@ -135,7 +135,7 @@ ul {
 
 #headnav a.menu-link {
     display: block;
-    padding: 12px 15px 17px 15px;
+    padding: 12px 15px 16px 15px;
     margin: 0;
     border-bottom: 12px solid;
     color: #444;
