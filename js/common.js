@@ -219,7 +219,7 @@ $(document).ready(function() {
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
                 l.delegate("a.toc_item","click keypress", function(e) {
                     // Escape dots in ids so they won't be treated as class selectors
-                    $.scrollTo($(this).attr("href").replace(".", "\\\."), 800);
+                    $.scrollTo($(this).attr("href").replace(".", "\\\."), 400);
                 });
             });
 
