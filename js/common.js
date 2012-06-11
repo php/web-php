@@ -195,10 +195,12 @@ $(document).ready(function() {
         var bugurl  = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + pageid;
 
         // Add edit & bugreporting urls to the footer
-        $($(".footmenu")[1])
-            .append("<li><a href='" + editurl + "'>Edit this page</a></li>")
-            .append("<li><a href='" + bugurl + "'>Report bug on this page</a></li>")
-        ;
+        $($(".footmenu")[1]).after(
+              "<ul class='footmenu pagetools'>"
+            + "<li><a href='" + editurl + "'>Edit this page</a></li>"
+            + "<li><a href='" + bugurl + "'>Report bug on this page</a></li>"
+            + "</ul>"
+        );
 
         // Make a list, start making <li>'s dynamically.
         // we use .data() to store which element the TOC item should scrollTo()

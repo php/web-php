@@ -594,6 +594,9 @@ footer .footmenu {
     float: right;
     margin: 0;
 }
+footer .footmenu.pagetools {
+    clear: right;
+}
 footer .footmenu.copyright {
     float: left;
 }
