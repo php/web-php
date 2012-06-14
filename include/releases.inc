@@ -2,6 +2,32 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.3' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_3.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.3.tar.bz2',
+          'name' => 'PHP 5.4.3 (tar.bz2)',
+          'md5' => '51f9488bf8682399b802c48656315cac',
+          'date' => '08 May 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.3.tar.gz',
+          'name' => 'PHP 5.4.3 (tar.gz)',
+          'md5' => 'c9dccc89cc89d39e84f6e6f0cf1c8a65',
+          'date' => '08 May 2012',
+        ),
+      ),
+      'date' => '08 May 2012',
+      'museum' => false,
+    ),
     '5.4.2' => 
     array (
       'announcement' => 
@@ -78,6 +104,32 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '01 March 2012',
+      'museum' => false,
+    ),
+    '5.3.13' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_13.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.13.tar.bz2',
+          'name' => 'PHP 5.3.13 (tar.bz2)',
+          'md5' => '370be99c5cdc2e756c82c44d774933c8',
+          'date' => '08 May 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.13.tar.gz',
+          'name' => 'PHP 5.3.13 (tar.gz)',
+          'md5' => '179c67ce347680f468edbfc3c425476a',
+          'date' => '08 May 2012',
+        ),
+      ),
+      'date' => '08 May 2012',
       'museum' => false,
     ),
     '5.3.12' => 

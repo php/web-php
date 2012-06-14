@@ -11,6 +11,221 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.4"></a><!-- {{{ 5.4.4 -->
+<h3>Version 5.4.4</h3>
+<b>06-June-2012</b>
+<ul>
+<li>CLI SAPI</li>
+<ul>
+  <li>Implemented FR <?php bugl(61977); ?> (Need CLI web-server support for files with .htm &amp; svg extensions)</li>
+  <li>Improved performance while sending error page, this also fixed bug <?php bugfix(61785); ?>
+  (Memory leak when access a non-exists file without router)</li>
+  <li><?php bugfix(61546); ?> (functions related to current script failed when chdir() in cli sapi)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core</li>
+<ul>
+  <li>Fixed missing bound check in iptcparse()</li>
+  <li>Fixed CVE-2012-2143</li>
+  <li><?php bugfix(62097); ?> (fix for for bug #54547)</li>
+  <li><?php bugfix(62005); ?> (unexpected behavior when incrementally assigning to a member of a null object)</li>
+  <li><?php bugfix(61978); ?> (Object recursion not detected for classes that implement JsonSerializable)</li>
+  <li><?php bugfix(61991); ?> (long overflow in realpath_cache_get())</li>
+  <li><?php bugfix(61922); ?> (ZTS build doesn't accept zend.script_encoding config)</li>
+  <li><?php bugfix(61827); ?> (incorrect \e processing on Windows)</li>
+  <li><?php bugfix(61782); ?> (__clone/__destruct do not match other methods when checking access controls)</li>
+  <li><?php bugfix(61761); ?> ('Overriding' a private static method with a different signature causes crash)</li>
+  <li><?php bugfix(61730); ?> (Segfault from array_walk modifying an array passed by reference)</li>
+  <li><?php bugfix(61728); ?> (PHP crash when calling ob_start in request_shutdown phase)</li>
+  <li><?php bugfix(61660); ?> (bin2hex(hex2bin($data)) != $data)</li>
+  <li><?php bugfix(61650); ?> (ini parser crashes when using ${xxxx} ini variables (without apache2))</li>
+  <li><?php bugfix(61605); ?> (header_remove() does not remove all headers)</li>
+  <li><?php bugfix(54547); ?> (wrong equality of string numbers)</li>
+  <li><?php bugfix(54197); ?> ([PATH=] sections incompatibility with user_ini.filename set to null)</li>
+  <li>Changed php://fd to be available only for CLI</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+  <li><?php bugfix(61948); ?> (CURLOPT_COOKIEFILE '' raises open_basedir restriction)</li>
+</ul>
+</ul>
+
+<ul>
+<li>COM</li>
+<ul>
+  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo</li>
+<ul>
+  <li><?php bugfix(61812); ?> (Uninitialised value used in libmagic)</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(61812); ?> (Uninitialised value used in libmagic)</li>
+  <li><?php bugfix(61565); ?> where php_stream_open_wrapper_ex tries to open a directory descriptor under windows</li>
+  <li><?php bugfix(61566); ?> failure caused by the posix lseek and read versions under windows in cdf_read()</li>
+</ul>
+</ul>
+
+<ul>
+<li>Iconv</li>
+<ul>
+  <li>Fixed a bug that iconv extension fails to link to the correct library when another extension makes use of a library that links to the iconv library. See <a href="https://bugs.gentoo.org/show_bug.cgi?id=364139">https://bugs.gentoo.org/show_bug.cgi?id=364139</a> for detail</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(62082); ?> (Memory corruption in internal function get_icu_disp_value_src_php()</li>
+</ul>
+</ul>
+
+<ul>
+<li>JSON</li>
+<ul>
+  <li><?php bugfix(61537); ?> (json_encode() incorrectly truncates/discards information)</li>
+</ul>
+</ul>
+
+<ul>
+<li>LibXML</li>
+<ul>
+  <li><?php bugfix(61617); ?> (Libxml tests failed(ht is already destroyed))</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO</li>
+<ul>
+  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar</li>
+<ul>
+<li><?php bugfix(61065); ?> (Secunia SA44335)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams</li>
+<ul>
+  <li><?php bugfix(61961); ?> (file_get_contents leaks when access empty file with maxlen set)</li>
+</ul>
+</ul>
+
+<ul>
+<li>zlib</li>
+<ul>
+  <li><?php bugfix(61820); ?> (using ob_gzhandler will complain about headers already sent when no compression)</li>
+  <li><?php bugfix(61443); ?> (can't change zlib.output_compression on the fly)</li>
+  <li><?php bugfix(60761); ?> (zlib.output_compression fails on refresh)</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.14"></a><!-- {{{ 5.3.14 -->
+<h3>Version 5.3.14</h3>
+<b>06-June-2012</b>
+<ul>
+<li>CLI SAPI</li>
+<ul>
+  <li><?php bugfix(61546); ?> (functions related to current script failed when chdir() in cli sapi)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core</li>
+<ul>
+  <li>Fixed CVE-2012-2143</li>
+  <li><?php bugfix(62005); ?> (unexpected behavior when incrementally assigning to a member of a null object)</li>
+  <li><?php bugfix(61730); ?> (Segfault from array_walk modifying an array passed by reference)</li>
+  <li>Fixed missing bound check in iptcparse()</li>
+  <li><?php bugfix(61764); ?> ('I' unpacks n as signed if n &gt; 2^31-1 on LP64)</li>
+  <li><?php bugfix(54197); ?> ([PATH=] sections incompatibility with user_ini.filename set to null)</li>
+  <li><?php bugfix(61713); ?> (Logic error in charset detection for htmlentities)</li>
+  <li><?php bugfix(61991); ?> (long overflow in realpath_cache_get())</li>
+  <li>Changed php://fd to be available only for CLI.</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+  <li><?php bugfix(61948); ?> (CURLOPT_COOKIEFILE '' raises open_basedir restriction)</li>
+</ul>
+</ul>
+
+<ul>
+<li>COM</li>
+<ul>
+  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo</li>
+<ul>
+  <li><?php bugfix(61812); ?> (Uninitialised value used in libmagic)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Iconv</li>
+<ul>
+  <li>Fixed a bug that iconv extension fails to link to the correct library when another extension makes use of a library that links to the iconv library. See <a href="https://bugs.gentoo.org/show_bug.cgi?id=364139">https://bugs.gentoo.org/show_bug.cgi?id=364139</a> for detail</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(62082); ?> (Memory corruption in internal function get_icu_disp_value_src_php()</li>
+</ul>
+</ul>
+
+<ul>
+<li>JSON</li>
+<ul>
+  <li><?php bugfix(61537); ?> (json_encode() incorrectly truncates/discards information)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO</li>
+<ul>
+  <li><?php bugfix(61755); ?> (A parsing bug in the prepared statements can lead to access violations)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar</li>
+<ul>
+<li><?php bugfix(61065); ?> (Secunia SA44335)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams</li>
+<ul>
+  <li><?php bugfix(61961); ?> (file_get_contents leaks when access empty file with maxlen set)</li>
+</ul>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.3"></a><!-- {{{ 5.4.3 -->
 <h3>Version 5.4.3</h3>
 <b>08-May-2012</b>
