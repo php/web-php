@@ -116,7 +116,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Phar</li>
 <ul>
-<li><?php bugfix(61065); ?> (Secunia SA44335)</li>
+<li><?php bugfix(61065); ?> (Secunia SA44335) (CVE-2012-2386)</li>
 </ul>
 </ul>
 
