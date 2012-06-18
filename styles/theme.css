@@ -368,7 +368,7 @@ div.classsynopsisinfo_comment {
 .classsynopsisinfo_comment,
 .classsynopsis .constructorsynopsis,
 .classsynopsis .methodsynopsis,
-.classsynopsis .destructorsynopsis
+.classsynopsis .destructorsynopsis,
 .classsynopsis .fieldsynopsis {
 	margin-left:2em;
 }

@@ -281,10 +281,13 @@ dl.qandaentry {
 }
 
 .docs div.refsect1 {
+    margin-top: 50px;
+}
+.docs .classsynopsis,
+.docs div.refsect1 {
     position: relative;
     background-color: #f5f5f5;
     border: 1px solid #cacaca;
-    margin-top: 50px;
     padding: 10px;
     color: #454e55;
 }
