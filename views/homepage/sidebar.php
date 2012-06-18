@@ -1,6 +1,7 @@
 <div class=home-sidebar>
 
     <h2>Recent News</h2>
+    <?php echo $announcements; ?>
     <ul>
         <?php
         $i = 0;

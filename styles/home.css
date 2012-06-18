@@ -185,27 +185,17 @@ div.home-content {
 
 .home .announcements {
     display: table;
-    width: 598px;
-    border: 1px solid #aaa;
-    background-color: #e5f7da;
-    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #99c;
+    background-color: #bfbfff;
     padding: 15px;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto .25em;
     font-size: 1.2em;
     list-style: none;
 }
 
-.home .announcements > li {
-    display: table-row;
-}
-
-.home .announcements .category, .home .announcements ul {
-    display: table-cell;
-}
-
 .home .announcements .category {
-    text-align: right;
     padding: 1em 0.5em 0;
 }
 
@@ -221,10 +211,6 @@ div.home-content {
 }
 
 /* 2x2 Featured Content Grid */
-
-div.featured-content {
-    margin: 30px 0 30px 0;
-}
 
 div.featured-content div.feature {
     float: left;

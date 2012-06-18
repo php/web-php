@@ -128,7 +128,6 @@ $features = "
 // Wrap announcements and features in a content element
 $content = "
 <div class='home-content'>
-    $announcements
     $features
 </div>
 ";
@@ -165,7 +164,10 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
-print_view('homepage/sidebar.php', array('news' => $NEWS_ENTRIES));
+print_view('homepage/sidebar.php', array(
+    'news' => $NEWS_ENTRIES,
+    'announcements' => $announcements
+));
 print $content;
 
 // Print the common footer.
