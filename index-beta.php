@@ -82,21 +82,16 @@ $features = "
         <span class=graphic></span>
         <h2>Get Involved!</h2>
         <p>
-            Getting involved with PHP is easier than you think.
-            Are you interested in helping to improve one of the world's most
-            widely used scripting languages? We are looking for all sorts
-            of people, not only developers.
-            <a href='/get-involved.php' class='readmore'>Read more...</a>
+            We are looking for people with all sorts of talents, not only developers.
+            <a href='/get-involved.php' class='readmore'>See how you can contribute.</a>
         </p>
     </div>
     <div class='feature top-right'>
         <span class=graphic></span>
         <h2>Need Help?</h2>
         <p>
-            Everyone needs a little help from time to time, and finding it
-            isn't always easy. Thankfully, PHP has one of the best support
-            communities out there.
-            <a href='/support.php' class='readmore'>Read more...</a>
+            Thankfully, PHP has one of the best support communities out there.
+            <a href='/support.php' class='readmore'>View support options.</a>
         </p>
     </div>
     <div class='separator'></div>
@@ -117,8 +112,7 @@ $features = "
         <p>
             Everything has 'an app' these days, even the PHP manual.
             We also have <a href='/tips.php'>tips and tricks</a>
-            to save you keystrokes and shave a few seconds off the next
-            time you need to look up needle/haystack argument order!
+            to save you keystrokes.
         </p>
     </div>
     <br style='clear: both;' />
