@@ -1,7 +1,13 @@
 <div class=home-sidebar>
 
+    <?php
+    if (!empty($announcements)) :
+        echo "<h2>Announcements</h2>\n";
+        echo $announcements;
+    endif;
+    ?>
+    
     <h2>Recent News</h2>
-    <?php echo $announcements; ?>
     <ul>
         <?php
         $i = 0;
