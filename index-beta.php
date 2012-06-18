@@ -79,24 +79,23 @@ if (is_array($CONF_TEASER) && $CONF_TEASER) {
 $features = "
 <div class=featured-content>
     <div class='feature top-left'>
-        <span class=graphic></span>
+        <span class='graphic'></span>
         <h2>Get Involved!</h2>
         <p>
-            We are looking for people with all sorts of talents, not only developers.
+            We are looking for people with talents of various kinds, not just developers. <br/>
             <a href='/get-involved.php' class='readmore'>See how you can contribute.</a>
         </p>
     </div>
     <div class='feature top-right'>
-        <span class=graphic></span>
+        <span class='graphic'></span>
         <h2>Need Help?</h2>
         <p>
-            Thankfully, PHP has one of the best support communities out there.
+            Thankfully, PHP has one of the best support communities in existence. <br/>
             <a href='/support.php' class='readmore'>View support options.</a>
         </p>
     </div>
-    <div class='separator'></div>
     <div class='feature bottom-left'>
-        <span class=graphic></span>
+        <span class='graphic'></span>
         <h2>PECL + PEAR</h2>
         <p>
             Is PHP missing a feature you need?  No worries!
@@ -107,7 +106,7 @@ $features = "
         </p>
     </div>
     <div class='feature bottom-right'>
-        <span class=graphic></span>
+        <span class='graphic'></span>
         <h2>Website Tips/Tricks</h2>
         <p>
             Everything has 'an app' these days, even the PHP manual.

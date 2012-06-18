@@ -215,7 +215,6 @@ div.home-content {
 div.featured-content div.feature {
     float: left;
     width: 270px;
-    text-align: center;
     padding: 10px 20px 20px 20px;
 }
 
@@ -224,25 +223,11 @@ div.featured-content div.top-right {
     padding-top: 0;
 }
 
-div.featured-content div.top-left {
-    border-right: 1px solid #99c;
-}
-
-div.featured-content div.bottom-left {
-    border-right: 1px solid #99c;
-}
-
-div.featured-content div.separator {
-    float: left;
-    width: 620px;
-    margin-left: 10px;
-    border-top: 1px solid #99c;
-}
-
 div.featured-content span.graphic {
-    display: inline-block;
+    display: block;
     width: 128px;
     height: 128px;
+    margin:0 auto;
     background-image: url('../images/home-sprites.png');
 }
 
@@ -266,6 +251,7 @@ div.featured-content div.feature h2 {
     line-height: 1;
     padding-bottom: .5em;
     margin: 0;
+    text-align: center
 }
 
 div.featured-content p {
