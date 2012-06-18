@@ -1,12 +1,7 @@
 <div class=home-sidebar>
 
-    <?php
-    if (!empty($announcements)) :
-        echo "<h2>Announcements</h2>\n";
-        echo $announcements;
-    endif;
-    ?>
-    
+    <?php echo $announcements; ?>
+
     <h2>Recent News</h2>
     <ul>
         <?php
