@@ -357,20 +357,13 @@ div.phpcode span.html {
 	color: black;
 	background-color: transparent;
 }
-div.phpcode span.comment, div.classsynopsisinfo_comment {
+div.phpcode span.comment {
 	color: #FF8000;
 	background-color: transparent;
 }
 div.classsynopsisinfo_comment {
 	font-weight: bold;
 	margin-top:1em;
-}
-.classsynopsisinfo_comment,
-.classsynopsis .constructorsynopsis,
-.classsynopsis .methodsynopsis,
-.classsynopsis .destructorsynopsis,
-.classsynopsis .fieldsynopsis {
-	margin-left:2em;
 }
 div.phpcode span.default {
 	color: #0000BB;

@@ -47,7 +47,7 @@ aside#quicktoc {
     color: #000;
 }
 
-.docs .methodparam .parameter {
+.docs .refsect1 .methodparam .parameter {
     cursor:pointer;
 }
 
@@ -60,9 +60,6 @@ aside#quicktoc {
     font-style: normal;
 }
 
-.docs .initializer {
-    color: #000;
-}
 /* }}} */
 
 
@@ -282,14 +279,52 @@ dl.qandaentry {
 
 .docs div.refsect1 {
     margin-top: 50px;
+    color: #454e55;
 }
+
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
     background-color: #f5f5f5;
     border: 1px solid #cacaca;
     padding: 10px;
+}
+
+.docs .classsynopsis {
     color: #454e55;
+}
+.docs .fieldsynopsis .type,
+.docs .methodsynopsis .type,
+.docs .constructorsynopsis .type {
+    color:#606;
+}
+.docs .classsynopsis .classname,
+.docs .fieldsynopsis .modifier,
+.docs .methodsynopsis .modifier,
+.docs .constructorsynopsis .modifier {
+    color:#0000ae;
+}
+
+.docs .classsynopsis .initializer {
+    font-style:italic;
+}
+.docs .classsynopsisinfo_comment {
+    color:#999;
+    font-weight:normal;
+}
+
+.classsynopsisinfo_comment,
+.classsynopsis .constructorsynopsis,
+.classsynopsis .methodsynopsis,
+.classsynopsis .destructorsynopsis,
+.classsynopsis .fieldsynopsis {
+    margin-left:2em;
+}
+.docs .classsynopsis a,
+.docs .fieldsynopsis a,
+.docs .methodsynopsis a,
+.docs .constructorsynopsis a {
+    color:#267B0C;
 }
 
 #changelang {
