@@ -80,7 +80,7 @@ $features = "
 <div class=featured-content>
     <div class='feature top-left'>
         <span class='graphic'></span>
-        <h2>Get Involved!</h2>
+        <h2>Get Involved</h2>
         <p>
             We are looking for people with talents of various kinds, not just developers. <br/>
             <a href='/get-involved.php' class='readmore'>See how you can contribute.</a>
@@ -96,7 +96,7 @@ $features = "
     </div>
     <div class='feature bottom-left'>
         <span class='graphic'></span>
-        <h2>PECL + PEAR</h2>
+        <h2>PECL &amp; PEAR</h2>
         <p>
             Is PHP missing a feature you need?  No worries!
             PHP has a large extension library called
@@ -107,7 +107,7 @@ $features = "
     </div>
     <div class='feature bottom-right'>
         <span class='graphic'></span>
-        <h2>Website Tips/Tricks</h2>
+        <h2>Website Tips</h2>
         <p>
             Everything has 'an app' these days, even the PHP manual.
             We also have <a href='/tips.php'>tips and tricks</a>
