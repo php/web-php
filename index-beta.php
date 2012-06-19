@@ -43,11 +43,11 @@ else {
 }
 
 $_SERVER['BASE_PAGE'] = 'index.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-confs.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
+include_once __DIR__ . '/include/prepend.inc';
+include_once __DIR__ . '/include/pregen-events.inc';
+include_once __DIR__ . '/include/pregen-confs.inc';
+include_once __DIR__ . '/include/pregen-news.inc';
+include_once __DIR__ . '/include/version.inc';
 
 // Prepare announcements.
 if (is_array($CONF_TEASER) && $CONF_TEASER) {
@@ -117,16 +117,22 @@ $features = "
     <br style='clear: left;' />
 ";
 
-$_SERVER['BASE_PAGE'] = 'archive/2012.php';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
-ob_start();
-echo "<div class='recentNewsEntries'>
-    <h1>Recent News</h1>
-    <a class='newsArchiveLink' href='/archive/'>(News Archive)</a>";
+require_once './Gateway/NewsFileSystemGateway.php';
 
-print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage"), 5, 2012);
-echo "</div>\n";
+$NewsGateway = new NewsFileSystemGateway();
+$RecentNews = $NewsGateway->getArticlesForCategories(new ArrayIterator(array(
+    "conferences",
+    "cfp",
+    "frontpage"
+)));
+
+ob_start();
+
+require_once './View/HomepageNewsView.php';
+$RecentNewsView = new HomepageNewsView($RecentNews);
+
+echo $RecentNewsView->render();
+
 $news = ob_get_clean();
 
 // Wrap announcements and features in a content element
@@ -169,7 +175,6 @@ site_header("Hypertext Preprocessor",
 
 // Print body of home page.
 print_view('homepage/sidebar.php', array(
-    'news' => $NEWS_ENTRIES,
     'announcements' => $announcements
 ));
 print $content;
