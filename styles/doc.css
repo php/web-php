@@ -53,6 +53,9 @@ aside#quicktoc {
     font-weight: bold;
     font-size:1em;
 }
+.docs .classsynopsis .parameter {
+    font-size:1.167em;
+}
 
 .docs i .parameter, .docs em .parameter {
     font-style: normal;
