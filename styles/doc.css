@@ -140,6 +140,7 @@ aside#quicktoc {
 .docs .refentry .methodsynopsis {
     color: #666;
     font-family: monospace;
+    font-size:1.167em; /* bumps it back up to the rest of the fonts because monospace is smaller */
 }
 
 /* {{{ Parameter listing */
