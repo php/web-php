@@ -373,6 +373,10 @@ dl dd p {
 
 
 /* PHP source code highlighting ------------------------------------------- */
+code {
+    font-family: monospace;
+    font-size:1.167em; /* bumps it back up to the rest of the fonts because monospace is smaller */
+}
 .phpcode, div.classsynopsis {
 	padding: 0.5em;
 	text-align: left;
