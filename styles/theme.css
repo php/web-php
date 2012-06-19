@@ -17,55 +17,76 @@ body * {
 
 body, input, textarea {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+}
+
+input {
+    font-size:100%;
 }
 
 body {
-    line-height: 1.4;   
+    font-size: 0.9em;
+    line-height: 1.4em;
     background: url('/images/sprites.png') repeat-x 0px -990px #fff;
 }
-
 h1 {
-    font-size: 2.5em;
-    margin: 1.2em 0 0.6em 0;
-    line-height: 1;
+    font-size: 2.374em;
+    line-height: 1.179em;
+    margin:0;
 }
-
-h1:first-child {
-    margin-top: 0.3em;
+h2 {
+    font-size: 1.78em;
+    line-height: 1.573em;
+    margin:0;
+}
+h3 {
+    font-size: 1.334em;
+    line-height: 1.049em;
+    margin: 0;
+}
+p, ul {
+    margin-top: 0;
+    margin-bottom: 1.4em;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+small {
+    font-size: 0.75em;
 }
 
 h1, h1 a, h1 a:visited, h1 a:link {
     font-weight: normal;
     color: #666;
+    border-color:#666;
 }
-
-h1 a:hover {
+h1 a:hover,
+h1 a:focus {
     color: #444;
+    border-color:#444;
 }
 
-h2 {
-    font-size: 1.6em;
-    margin: 1.4em 0 0.7em 0;
-    line-height: 1;
+h2, h2 a, h2 a:visited, h2 a:link {
+    font-weight: normal;
+    color: #222;
+    border-color:#222;
 }
 
-h3 {
-    font-size: 1.4em;
-    line-height: 2.2em;
+h2 a:hover,
+h2 a:focus {
+    color: #000;
+    border-color:#000;
 }
+
 h3.title {
     font-size: 1.5em;
-    border-top-style: solid;
-    border-top-width: 3px;
+    border-top: 3px solid;
     padding-top: 6px;
     margin-top: 2em;
 }
 
-h4    { font-size: 1.3em; line-height: 2.0em; }
-h5    { font-size: 1.2em; line-height: 1.8em; }
-h6    { font-size: 1.1em; line-height: 1.6em; }
-small { font-size: .9em; }
+h4    { font-size: 1.3em;}
+h5    { font-size: 1.2em;}
+h6    { font-size: 1.1em;}
 
 
 a:link,
@@ -316,9 +337,8 @@ ul {
 }
 
 #usernotes h3 {
-    padding-right: 20px;
-    border-color: #666699;
-    padding-bottom: 6px;
+    border-color: #669;
+    padding:.8em 20px .5em 0;
 }
 
 #usernotes .note {
@@ -345,6 +365,10 @@ ul {
 dl dd {
 	margin: 0.5em 0 0.5em 2em;
 	padding: 0.5em;
+}
+dl dd p {
+    margin-bottom:0;
+    padding:0;
 }
 
 
@@ -682,7 +706,11 @@ table.standard td {
     vertical-align: middle;
 }
 
+.newsItem {
+    margin:2em 0;
+}
 .newsItem .published {
     display:block;
     margin:.5em 0;
+    color:#666;
 }

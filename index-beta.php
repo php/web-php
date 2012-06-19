@@ -80,7 +80,7 @@ $features = "
 <div class=featured-content>
     <div class='feature top-left'>
         <span class='graphic'></span>
-        <h2>Get Involved</h2>
+        <h3>Get Involved</h3>
         <p>
             We are looking for people with talents of various kinds, not just developers. <br/>
             <a href='/get-involved.php' class='readmore'>See how you can contribute.</a>
@@ -88,7 +88,7 @@ $features = "
     </div>
     <div class='feature top-right'>
         <span class='graphic'></span>
-        <h2>Need Help?</h2>
+        <h3>Need Help?</h3>
         <p>
             Thankfully, PHP has one of the best support communities in existence. <br/>
             <a href='/support.php' class='readmore'>View support options.</a>
@@ -96,10 +96,9 @@ $features = "
     </div>
     <div class='feature bottom-left'>
         <span class='graphic'></span>
-        <h2>PECL &amp; PEAR</h2>
+        <h3>PECL &amp; PEAR</h3>
         <p>
-            Is PHP missing a feature you need?  No worries!
-            PHP has a large extension library called
+            Is PHP missing a feature you need? PHP has a large extension library called
             <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net/'>PECL</a></abbr>,
             and a reusable class library called
             <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net/'>PEAR</a></abbr>.
@@ -107,7 +106,7 @@ $features = "
     </div>
     <div class='feature bottom-right'>
         <span class='graphic'></span>
-        <h2>Website Tips</h2>
+        <h3>Website Tips</h3>
         <p>
             Everything has 'an app' these days, even the PHP manual.
             We also have <a href='/tips.php'>tips and tricks</a>

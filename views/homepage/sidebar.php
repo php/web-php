@@ -2,21 +2,21 @@
 
     <?php echo $announcements; ?>
 
-    <h2>Conferences</h2>
+    <h3>Conferences</h3>
     <ul>
         <li>Conference 1</li>
         <li>Conference 2</li>
         <li>Conference 3</li>
     </ul>
 
-    <h2>User Group Events</h2>
+    <h3>User Group Events</h3>
     <ul>
         <li>Event 1</li>
         <li>Event 2</li>
         <li>Event 3</li>
     </ul>
 
-    <h2>Thanks To</h2>
+    <h3>Thanks To</h3>
     <ul>
         <li><a target="_blank" href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
         <li><a target="_blank" href="http://www.directi.com/" title="Directi">Directi</a></li>

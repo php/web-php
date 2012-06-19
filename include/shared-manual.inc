@@ -597,6 +597,6 @@ function manual_footer_beta() {
     echo "</section>";
 
     manual_notes();
-    site_footer();
+    site_footer(array('elephpants' => true));
 }
 

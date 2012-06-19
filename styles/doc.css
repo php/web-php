@@ -40,9 +40,6 @@ aside#quicktoc {
 /* }}} */
 
 /* {{{ General styles (p, parameters, initializers, ...) */
-.docs p {
-    margin: 0.7em 0;
-}
 .docs .methodname b, .docs .methodname strong {
     color: #000;
 }
@@ -146,17 +143,16 @@ aside#quicktoc {
 }
 
 /* {{{ Parameter listing */
+.docs .refentry .parameters dl {
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
 .docs .refentry .parameters dt {
-    font-size: 1.1em;
+    font-size: 1.167em;
 }
 
-.docs .refentry .parameters dd {
-    margin-top: -0.7em;
-    padding-left: 20px;
-}
-
-.docs .refentry .parameters p {
-    margin: 0.7em 0;
+.docs .refentry .parameters p:empty {
+    background:#f00;
 }
 /* }}} */
 
@@ -255,10 +251,11 @@ dl.qandaentry {
 }
 
 .docs h1.refname {
-    font-family: sans-serif,Arial,Helvetica;
-    font-size: 20px;
-    font-weight: bold;
-    color: #454e55;
+    font-size: 1.334em;
+    line-height: 1.049em;
+    margin-bottom:1.4em;
+    color:#444;
+    font-weight:bold;
 }
 
 .docs p.refpurpose {
@@ -272,7 +269,7 @@ dl.qandaentry {
     padding: 0;
     margin:0;
     line-height: 1em;
-    top:-22px;
+    top:-1.4em;
     left: 0;
     font-size: 1.4em;
 }
