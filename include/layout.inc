@@ -789,14 +789,12 @@ function print_news($news, $dog, $max = 5, $onlyyear = null, $return = false) {
         echo <<< EOT
 <div class="newsItem hentry{$vevent}">
     <div class="newsImage">{$image}</div>
-    <h1 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h1>
+    <h2 class="summary entry-title"><a name="{$id}" id="{$id}" href="{$permlink}" rel="bookmark" class="bookmark">{$item["title"]}</a></h2>
     <div class="entry-content description">
-        <abbr class="published newsdate" title="{$item["published"]}">[{$newsdate}]</abbr>
+        <abbr class="published newsdate" title="{$item["published"]}">{$newsdate}</abbr>
         {$item["content"]}
     </div>
 </div>
-
-<hr />
 
 EOT;
     }

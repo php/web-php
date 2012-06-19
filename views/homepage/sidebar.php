@@ -2,20 +2,6 @@
 
     <?php echo $announcements; ?>
 
-    <h2>Recent News</h2>
-    <ul>
-        <?php
-        $i = 0;
-        foreach (print_news($news, "frontpage", 5, null, true) as $entry):
-            $escaped_title = htmlentities($entry['title'], ENT_QUOTES, 'UTF-8');
-        ?>
-        <li><a target="_blank" title="<?php echo $escaped_title; ?>" href="<?php echo $entry['permlink']; ?>"><?php echo $escaped_title; ?></a></li>
-        <?php
-        endforeach;
-        ?>
-    </ul>
-    <p class="center"><a href="/archive/index.php" title="News Archive">News Archive</a></p>
-
     <h2>Conferences</h2>
     <ul>
         <li>Conference 1</li>

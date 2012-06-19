@@ -681,3 +681,8 @@ table.standard td {
     padding: 5px 10px;
     vertical-align: middle;
 }
+
+.newsItem .published {
+    display:block;
+    margin:.5em 0;
+}

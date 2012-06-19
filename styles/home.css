@@ -293,3 +293,24 @@ div.home-sidebar a:visited {
 div.home-sidebar a:hover {
     border-bottom-color: #3F438D;
 }
+
+.home-content .recentNewsEntries {
+    position: relative;
+    margin-top:3em;
+}
+.home-content .recentNewsEntries h1 {
+    border-bottom:1px solid #000;
+    color:#000;
+}
+.home-content a.newsArchiveLink {
+    position: absolute;
+    top:.5em;
+    right:0;
+    font-style:italic;
+    border-bottom: 1px solid transparent;
+    color:#666;
+}
+.home-content a.newsArchiveLink:hover,
+.home-content a.newsArchiveLink:focus {
+    border-bottom: 1px solid #666;
+}

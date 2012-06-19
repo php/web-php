@@ -114,14 +114,27 @@ $features = "
             to save you keystrokes.
         </p>
     </div>
-    <br style='clear: both;' />
 </div>
+    <br style='clear: left;' />
 ";
+
+$_SERVER['BASE_PAGE'] = 'archive/2012.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
+ob_start();
+echo "<div class='recentNewsEntries'>
+    <h1>Recent News</h1>
+    <a class='newsArchiveLink' href='/archive/'>(News Archive)</a>";
+
+print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage"), 5, 2012);
+echo "</div>\n";
+$news = ob_get_clean();
 
 // Wrap announcements and features in a content element
 $content = "
 <div class='home-content'>
     $features
+    $news
 </div>
 ";
 
