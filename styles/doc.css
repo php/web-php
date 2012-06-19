@@ -49,8 +49,9 @@ aside#quicktoc {
 }
 
 .docs .parameter {
-    color: #666699;
+    color: #336;
     font-weight: bold;
+    font-size:1em;
 }
 
 .docs i .parameter, .docs em .parameter {
