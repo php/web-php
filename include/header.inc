@@ -225,14 +225,6 @@ if (isset($shortname) && $shortname) {
  </div>
 </div>
 
-<?php
-// if elephpants enabled, insert placeholder nodes
-// to be populated with images via javascript.
-if (isset($config['elephpants'])) {
-    print "<div class='elephpants'><div class=images></div></div>";
-}
-?>
-
 <div id="layout">
 <?php
 if (!empty($SIDEBAR_DATA)) {

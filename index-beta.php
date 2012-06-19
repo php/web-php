@@ -151,8 +151,7 @@ site_header("Hypertext Preprocessor",
                 "title" => "PHP Release feed"
             ),
 
-        ),
-        'elephpants' => true
+        )
     )
 );
 
@@ -165,5 +164,8 @@ print $content;
 
 // Print the common footer.
 site_footer(
-    array("atom" => "/feed.atom") // Add a link to the feed at the bottom
+    array(
+        "atom" => "/feed.atom", // Add a link to the feed at the bottom
+        'elephpants' => true
+    )
 );

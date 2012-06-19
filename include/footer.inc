@@ -16,6 +16,16 @@
     </div>
   </footer>
 
+    <?php
+    // if elephpants enabled, insert placeholder nodes
+    // to be populated with images via javascript.
+    if (isset($config['elephpants'])) {
+        print "<div class='elephpants'><div class=images></div></div>";
+    }
+    ?>
+
+
+
 </body>
 </html>
 
