@@ -28,12 +28,12 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    padding: .25em 2em;
+    padding: 0 2em .1em;
     display: block;
     border: 1px solid rgba(0,0,0,.9);
     border-bottom-width:3px;
     text-align: center;
-    font:1em bold;
+    font:1em bold inherit;
     color: #fff;
     color: rgba(255,255,255,.8);
     text-shadow: 0 -1px 0 rgba(0,0,0,.3);
@@ -210,7 +210,7 @@ div.home-content {
     background-color: #bfbfff;
     padding: 15px;
     text-align: center;
-    margin: 0 auto .25em;
+    margin: 0 auto;
     font-size: 1.2em;
     list-style: none;
 }
@@ -237,6 +237,10 @@ div.featured-content div.feature {
     width: 270px;
     padding:0 20px;
     text-align: center;
+}
+div.featured-content div.top-left,
+div.featured-content div.top-right {
+    margin-top:-24px; /* This aligns the top of the images with the sidebar */
 }
 div.featured-content div.bottom-left,
 div.featured-content div.bottom-right {
@@ -277,14 +281,14 @@ div.featured-content div.bottom-right span.graphic {
 div.home-sidebar {
     float: right;
     width: 250px;
-    padding: 5px 30px 20px 30px;
+    padding: 0 30px 20px 30px;
     margin: 0 0 20px 20px;
 }
 
 div.home-sidebar h3 {
     border-bottom: 6px solid #99c;
     font-weight: normal;
-    margin: .5em 0;
+    margin: 1em 0 .5em;
     padding:.25em 0;
 }
 
