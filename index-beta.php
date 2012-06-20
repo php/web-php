@@ -114,7 +114,8 @@ $features = "
         </p>
     </div>
 </div>
-    <br style='clear: left;' />
+    <br class='clear-left' />
+    <div class='separator'></div>
 ";
 
 require_once './Gateway/NewsFileSystemGateway.php';
