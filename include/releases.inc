@@ -201,8 +201,8 @@ $OLDRELEASES = array (
         ),
         1 => 
         array (
-          'filename' => 'php-5.3.9.tar.gz',
-          'name' => 'PHP 5.3.9 (tar.gz)',
+          'filename' => 'php-5.3.10.tar.gz',
+          'name' => 'PHP 5.3.10 (tar.gz)',
           'md5' => '2b3d2d0ff22175685978fb6a5cbcdc13',
           'date' => '02 February 2012',
         ),
