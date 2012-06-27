@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Northeast PHP Conference</title>
+  <id>http://www.php.net/archive/2012.php#id2012-06-27-1</id>
+  <published>2012-06-27T16:20:12+01:00</published>
+  <updated>2012-06-27T16:20:12+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-08-11</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-06-27-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.northeastphp.org/" title="Northeast PHP Conference">NENA_logo.png</default:newsImage>
+  <link href="http://www.northeastphp.org/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         The Northeast PHP conference is a two day event coordinated by three PHP user groups in the northeast region:
+         Boston PHP, Atlantic Canada PHP, and Vermont PHP. The entire event is being organized organized by community
+         volunteers and members just like you. We are completely non profit, and open source.
+     </p>
+     <p>
+         There will be nothing quite like it. With two fun-filled days full of great topics from over 40 experts, it's like three years of Meetups jam packed into two days!
+     </p>
+     <p>
+         Check out the <a href="http://www.northeastphp.org/">Northeast PHP website</a> for a listing of the talks and speakers lined up.
+     </p>
+     <p>
+         <ul>
+             <li><strong>What:</strong> Northeast PHP Conference</li>
+             <li><strong>When:</strong> Sat-Sun August 11-12, 2012 8am-5pm</li>
+             <li><strong>*Where:</strong> Microsoft NERD</li>
+             <li><strong>*Tickets:</strong> Tickets go on sale June 28th!</li>
+         </ul>
+     </p>
+    </div>
+  </content>
+</entry>
