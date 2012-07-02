@@ -96,12 +96,15 @@ $features = "
     </div>
     <div class='feature bottom-left'>
         <span class='graphic'></span>
-        <h3>PECL &amp; PEAR</h3>
+        <h3>
+            <abbr title='The PHP Extension Community Library'>PECL</abbr> &amp;
+            <abbr title='The PHP Extension and Application Repository'>PEAR</abbr>
+         </h3>
         <p>
             PHP has a large extension library called
-            <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net/'>PECL</a></abbr>,
+            <a href='http://pecl.php.net/' title='Homepage for the PECL project'>PECL</a>,
             and a reusable class library called
-            <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net/'>PEAR</a></abbr>.
+            <a href='http://pear.php.net/' title='Homepage for the PEAR project'>PEAR</a>.
         </p>
     </div>
     <div class='feature bottom-right'>

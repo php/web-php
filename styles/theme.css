@@ -52,6 +52,11 @@ small {
     font-size: 0.75em;
 }
 
+abbr {
+    border-bottom:1px dotted #999;
+    cursor: help;
+}
+
 h1, h1 a, h1 a:visited, h1 a:link {
     color: #666;
     border-color:#666;

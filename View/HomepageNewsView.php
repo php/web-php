@@ -19,7 +19,7 @@ class HomepageNewsView {
         ob_start();
         ?>
         <div class='recentNewsEntries'>
-            <h1><a href="/archive/">Recent News</a></h1>
+            <h1><a href="/archive/" title='Recent News / Archived News'>Recent News</a></h1>
 
             <?php
             foreach ($this->articles as $article) :
