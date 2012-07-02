@@ -415,7 +415,7 @@ div.phpcode span.comment {
 }
 div.classsynopsisinfo_comment {
 	font-weight: bold;
-	margin-top:1em;
+	margin-top:1.5em;
 }
 div.phpcode span.default {
 	color: #0000BB;

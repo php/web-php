@@ -170,6 +170,7 @@ aside#quicktoc {
     color: #666;
     font-family: monospace;
     font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
+    margin:-1px 0;
 }
 
 /* {{{ Parameter listing */
@@ -177,7 +178,7 @@ aside#quicktoc {
     margin-bottom:0;
 }
 
-.docs .refentry .parameters dl dd + dt {
+.docs dl dd + dt {
     margin-top:1.5em;
 }
 
@@ -284,7 +285,7 @@ dl.qandaentry {
     position: absolute;
     right:0px;
     top: 0px;
-    color: #999;
+    color: #777;
 }
 
 .docs h1.refname,
