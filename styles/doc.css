@@ -39,6 +39,16 @@ aside#quicktoc {
 
 /* }}} */
 
+.docs .classsynopsis:before,
+.docs div.refsect1:before,
+.docs div.warning:before {
+    content:" ";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
 /* {{{ General styles (p, parameters, initializers, ...) */
 .docs .methodname b, .docs .methodname strong {
     color: #000;
@@ -46,6 +56,10 @@ aside#quicktoc {
 
 .docs .refsect1 .methodparam .parameter {
     cursor:pointer;
+}
+.docs .refsect1 dt,
+.docs .refsect1 p {
+    height:1.5em;
 }
 
 .docs .parameter {
@@ -93,13 +107,16 @@ aside#quicktoc {
 .docs div.warning b.warning,
 .docs div.tip strong.tip,
 .docs div.warning strong.warning {
-    font-size: 1.7em;
+    font-size: 1.5em;
+    line-height: 2;
+    display:block;
+    text-align: center;
 }
 
 .docs div.tip p,
 .docs div.warning p {
-    padding-left: 60px;
-    text-align: justify;
+    padding-left: 1em;
+    text-align: left;
 }
 
 .docs div.warning div.example-contents {
@@ -119,21 +136,30 @@ aside#quicktoc {
 
 .docs div.tip,
 .docs div.warning {
-    text-align: center;
-    margin: 20px 2% 20px 2%;
-    padding: 5px 15px 5px 45px;
-    min-height: 100px;
+    position: relative;
+    z-index:10;
+    margin: 1.5em;
+    padding: 1.5em 1.5em 1.5em 92px;
+    min-height: 96px;
     background-position: 16px;
 }
+.docs div.tip:before,
+.docs div.warning:before {
+    z-index:-1;
+    top:-.25em;
+    border-top:.25em solid;
+}
 .docs div.warning {
-    border-top: 3px solid #9f8a8a;
-    border-bottom: 1px solid #9f8a8a;
     background: #f2e5f4 url('/images/dialog-warning.png') left center no-repeat;
 }
+.docs div.warning:before {
+    border-color:#9f8a8a;
+}
 .docs div.tip {
-    border-top: 3px solid #9999EE;
-    border-bottom: 1px solid #9999EE;
     background: #efefef url('/images/dialog-information.png') left center no-repeat;
+}
+.docs div.tip:before {
+    border-color:#99e;
 }
 
 .docs div.warning h1{
@@ -144,34 +170,47 @@ aside#quicktoc {
 .docs .refentry .methodsynopsis {
     color: #666;
     font-family: monospace;
-    font-size:1.167em; /* bumps it back up to the rest of the fonts because monospace is smaller */
+    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
 }
 
 /* {{{ Parameter listing */
 .docs .refentry .parameters dl {
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-bottom:0;
 }
-.docs .refentry .parameters dt {
-    font-size: 1.167em;
+
+.docs .refentry .parameters dl dd + dt {
+    margin-top:1.5em;
+}
+
+.docs .refentry .parameters dl dt code.parameter {
+    font-size:1.23076em;
+}
+.docs .refentry .parameters dl,
+.docs .refsect1.examples .title + p.para + * {
+    margin-top:-4.5em; /* there's a p tag that has whitespace (not :empty). This simply covers it up */
+}
+.docs .refsect1.returnvalues .title + p.para {
+    margin-top:0;
 }
 /* }}} */
 
 
 
 /* {{{ Examples (highlighting is in theme.css) */
-/*.docs blockquote.note,
-.docs div.caution,
-.docs div.tip
-.docs .example-contents div pre,*/
-.docs .example-contents div.phpcode,
+.docs .example-contents .phpcode code,
+.docs .refentry .methodsynopsis,
 .docs .example-contents.screen,
-.docs .refentry .methodsynopsis  {
-    border: 1px solid #CCCCCC;
+.docs .refentry .methodsynopsis {
+    border: 1px solid #ccc;
     background-color: #fff;
-    margin: 2px 0px;
-    font-weight: normal;
-    padding: .5em;
+    padding: 1.5em;
+}
+.docs .example-contents .phpcode code {
+    font-size:.923em;
+    line-height: 2;
+    display: block;
+    margin:-1px 0;
+    padding:2em;
 }
 
 /* }}} */
@@ -235,11 +274,6 @@ dl.qandaentry {
 }
 /* }}} */
 
-.docs div.refnamediv {
-    border-bottom: 3px solid #81939f;
-    position: relative;
-}
-
 .docs div.sect1, .docs div.partintro {
     position: relative;
 }
@@ -251,43 +285,42 @@ dl.qandaentry {
     color: #999;
 }
 
-.docs h1.refname {
-    font-size: 1.334em;
-    line-height: 1.049em;
-    margin-bottom:1.4em;
-    color:#444;
-    font-weight:bold;
-}
-
+.docs h1.refname,
 .docs p.refpurpose {
-    color: #454e55;
+    color: #444;
 }
 
-.docs  div.refsect1 h3.title {
-    border: 0;
-    color: #454e55;
+.docs div.refsect1 h3.title {
+    color: #444;
     position: absolute;
-    padding: 0;
-    margin:0;
-    line-height: 1em;
-    top:-1.4em;
+    top:-2em;
     left: 0;
-    font-size: 1.4em;
 }
 
-.docs div.refsect1 {
-    margin-top: 50px;
-    color: #454e55;
+.docs .refsect1 {
+    margin-top: 4.5em;
+    color: #444;
+}
+
+.docs .refsect1 > p:last-child,
+.docs .refsect1 > .warning:last-child,
+.docs .refsect1 > .tip:last-child {
+    margin-bottom:0;
 }
 
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
     background-color: #f5f5f5;
-    border: 1px solid #cacaca;
-    padding: 10px;
+    padding: 1.5em .75em;
 }
 
+.docs .classsynopsis:before,
+.docs div.refsect1:before {
+    top:-.25em;
+    border-top: .25em solid #cacaca;
+    z-index: -1;
+}
 .docs .classsynopsis {
     color: #454e55;
 }
@@ -342,51 +375,50 @@ dl.qandaentry {
 }
 
 .docs .layout-menu ul.parent-menu-list li {
-    padding: 3px 6px;
-    margin: 3px 0;
+    padding: 0 .5em;
+    margin: 1.5em 0;
 }
 
+.docs .layout-menu ul.parent-menu-list > li:first-child {
+    margin-top:0;
+}
 .docs .layout-menu ul.parent-menu-list a {
-    font-size: 14px;
-    line-height: 1.5;
     color: #444;
     margin: 0;
-    padding: 3px 7px;
+    padding:0 .5em;
     border: 0;
-    border-left: 6px solid #7F7FB2;
+    border-left: .25em solid #7F7FB2;
 }
 
 .docs .layout-menu ul.parent-menu-list a:hover,
 .docs .layout-menu ul.parent-menu-list li:last-child a {
     color: #000;
-    border-left: 6px solid #666699;
+    border-left: .25em solid #666699;
 }
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding: 10px 5px 10px 12px;
-    border-top: 3px solid #fff;
+    padding:1.5em 0 1.5em .25em;
     border: 0;
 }
 
 .docs .layout-menu ul.child-menu-list li {
-    font-size: 14px;
     list-style-type: none;
-    margin: 0;
-    padding: 4px 8px;
+    margin: 0 .5em -1px;
+    padding:0;
     border: 0;
     border-bottom: 1px dotted #aaa;
-    background-color: transparent;
 }
 
 .docs .layout-menu ul.child-menu-list a {
-    font-size: 13px;
-    border: 0;
+    font-size: .75em;
+    line-height: 2;
     color: black;
-    line-height: 1;
     overflow: visible;
-    margin: 0;
-    padding: 0;
+}
+
+.docs .layout-menu ul.child-menu-list .current a:before {
+    content:"\bb \20";
 }
 
 .docs .layout-menu ul.child-menu-list a:hover,

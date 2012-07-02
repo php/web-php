@@ -6,19 +6,20 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #mega-drop-down div.what-is-php {
     color: #eee;
-    font-size: 1.334em;
-    line-height: 1.573em;
+    font-size: 1.125em;
+    line-height: 1.333em;
     width: 500px;
     float: left;
-    padding:1em 0 0;
 }
 
-#mega-drop-down .what-is-php p {
-    margin-bottom: 1em;
+#mega-drop-down div.what-is-php p {
+    margin:1.333em 0;
 }
-
 #mega-drop-down .what-is-php .tutorial {
     text-align: center;
+    font-size: 1.111em;
+    line-height: 1.2;
+    margin:1.2em 0;
 }
 #mega-drop-down .what-is-php .tutorial a {
     background: #669;
@@ -28,7 +29,8 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
-    padding: 0 2em .1em;
+    padding: .6em 1.2em;
+    margin-bottom:-3px;
     display: block;
     border: 1px solid rgba(0,0,0,.9);
     border-bottom-width:3px;
@@ -48,33 +50,23 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     border-bottom-width:1px;
     margin-top:2px;
 }
-#mega-drop-down .what-is-php .tutorial a:hover,
-#mega-drop-down .what-is-php .tutorial a:focus,
-#mega-drop-down .what-is-php .tutorial a:hover:active {
-}
 
 #mega-drop-down div.download {
     color: #eee;
     width: 300px;
     display: block;
     float: right;
-    margin: 5px 20px 10px 0;
-    padding: 10px;
-    font-size: 11px;
 }
 
 #mega-drop-down div.download h2 {
-    font-size: 1.4em;
+    font-size:1em;
+    line-height: 3;
     color: #ddd;
     text-align: center;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    line-height: 1.0em;
+    letter-spacing: .2em;
+    word-spacing: .4em;
     text-transform: uppercase;
-    font-weight: normal;
     text-shadow: #000 -1px -1px 1px;
-    margin: 0;
-    padding: 5px 0 10px 0;
 }
 
 
@@ -94,27 +86,21 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #mega-drop-down div.download li:first-child {
-    padding: 15px 0 15px 120px;
-    background-image: url('/images/sprites.png');
-    background-position: 30px -195px;
-    background-repeat: no-repeat;
+    padding: 1em 0 1em 120px;
+    background: url('/images/sprites.png') no-repeat 10px -195px;
     margin-top: 0;
-}
-
-#mega-drop-down div.download li:first-child a:first-child {
-    font-size: 2em;
 }
 
 #mega-drop-down div.download li {
     color: #eee;
     display: block;
-    padding: 15px 0 0 120px;
-    background-image: url('/images/sprites.png');
-    background-position: 44px -280px;
-    background-repeat: no-repeat;
+    padding: 1em 0 0 120px;
+    background: url('/images/sprites.png') no-repeat 24px -273px;
     cursor: pointer;
     border-top: 1px solid #555;
     margin: 0;
+    font-size:.75em;
+    line-height: 1;
 }
 
 #mega-drop-down div.download a {
@@ -122,17 +108,18 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     padding-left: 0;
     display: block;
     clear: right;
-    font-size: 1.0em;
-    line-height: 90%;
     font-weight: normal;
-    border-bottom: none;
 }
-
+#mega-drop-down div.download  li:first-child a:first-child {
+    font-size: 1.5em;
+    line-height: 1;
+}
 #mega-drop-down div.download a:first-child {
-    font-size: 1.6em;
+    font-size: 1.25em;
+    line-height: 1.2;
     font-weight: bold;
-    color: #FFF;
-    line-height: 120%;
+    color: #fff;
+    text-shadow:0 .1em .1em rgba(0,0,0,.666);
 }
 
 #head-beta-warning {
@@ -208,21 +195,14 @@ div.home-content {
     display: table;
     width: 100%;
     background-color: #bfbfff;
-    padding: 15px;
+    padding: 1.5em;
     text-align: center;
     margin: 0 auto;
-    font-size: 1.2em;
     list-style: none;
 }
-
-.home .announcements .category {
-    padding: 1em 0.5em 0;
+.home .announcements li + li {
+    margin-top:1.5em;
 }
-
-.home .announcements > li:first-child .category {
-    padding-top: 0;
-}
-
 .home .announcements ul, .home .announcements ul li {
     list-style: none;
     margin: 0;
@@ -231,20 +211,19 @@ div.home-content {
 }
 
 /* 2x2 Featured Content Grid */
-
+div.featured-content div.top-left,
+div.featured-content div.top-right {
+    margin-top:-1.5em;
+}
 div.featured-content div.feature {
     float: left;
     width: 270px;
     padding:0 20px;
     text-align: center;
 }
-div.featured-content div.top-left,
-div.featured-content div.top-right {
-    margin-top:-24px; /* This aligns the top of the images with the sidebar */
-}
 div.featured-content div.bottom-left,
 div.featured-content div.bottom-right {
-    padding-top:5px;
+    padding-top:1.5em;
 }
 
 div.featured-content span.graphic {
@@ -252,15 +231,16 @@ div.featured-content span.graphic {
     width: 128px;
     height: 128px;
     margin:0 auto;
+    padding:8px 0;
     background-image: url('../images/home-sprites.png');
 }
 
 div.featured-content div.top-left span.graphic {
-    background-position: 0 0;
+    background-position: 0 8px;
 }
 
 div.featured-content div.top-right span.graphic {
-    background-position: 0px -129px;
+    background-position: 0px -121px;
 }
 
 div.featured-content div.bottom-left span.graphic {
@@ -272,8 +252,13 @@ div.featured-content div.bottom-right span.graphic {
 }
 
 .featured-content .feature h3 {
-    padding-bottom: .5em;
     text-align: center;
+    color:#000;
+    font-weight:bold;
+}
+.featured-content .feature p {
+    margin:1.5em 0 0;
+    color:#333;
 }
 
 /* Right-hand sidebar */
@@ -286,10 +271,9 @@ div.home-sidebar {
 }
 
 div.home-sidebar h3 {
-    border-bottom: 6px solid #99c;
-    font-weight: normal;
-    margin: 1em 0 .5em;
-    padding:.25em 0;
+    border-bottom: .25em solid #99c;
+    margin: 1.2em 0 .95em;
+    padding:0;
 }
 
 div.home-sidebar h3:first-child {
@@ -314,28 +298,14 @@ div.home-sidebar a:hover {
     position: relative;
     margin-top:3em;
 }
-.home-content .recentNewsEntries h1 {
-    color:#000;
-}
-.home-content a.newsArchiveLink {
-    position: absolute;
-    top:.5em;
-    right:0;
-    font-style:italic;
-    border-bottom: 1px solid transparent;
-    color:#666;
-}
-.home-content a.newsArchiveLink:hover,
-.home-content a.newsArchiveLink:focus {
-    border-bottom: 1px solid #666;
-}
 
 .clear-left {
     clear:left
 }
 .home-content .separator {
     clear: left;
-    height:3px;
+    height:.25em;
     margin-top:3em;
+    margin-bottom:-.25em;
     background:#669;
 }
