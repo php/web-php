@@ -155,10 +155,6 @@ aside#quicktoc {
 .docs .refentry .parameters dt {
     font-size: 1.167em;
 }
-
-.docs .refentry .parameters p:empty {
-    background:#f00;
-}
 /* }}} */
 
 
