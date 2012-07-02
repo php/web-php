@@ -321,8 +321,19 @@ ul {
  * User notes
  */
 #usernotes {
-    margin: 0 0 10px 175px;
+    margin: 0 0 1.5em 175px;
     position: relative;
+}
+
+#usernotes .note:before {
+    content:" ";
+    position:absolute;
+    top:-.25em;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    border-top:.25em solid #ddd;
 }
 
 #usernotes .action {
@@ -340,21 +351,27 @@ ul {
 }
 
 #usernotes h3 {
-    border-top: 3px solid #669;
+    border-top: .2em solid #669;
+    padding-top: .801em;
 }
 
 #usernotes .note {
-    margin: .5em 0;
-    border-top: 3px solid #ddd;
-    padding: .5em;
+    margin: 1.5em 0;
+    padding: 1.5em .75em;
     background-color: #f5f5f5;
+    position: relative;
 }
 
-#usernotes .user, #usernotes .date, #usernotes .admin {
+#usernotes .user,
+#usernotes .date,
+#usernotes .admin {
     display: block;
     width: 50%;
     float: left;
-    margin-bottom: 0.6em;
+    margin-top:-.25em;
+}
+#usernotes .text {
+    padding-top:1.5em;
 }
 
 #usernotes .date, #usernotes .admin {
@@ -563,7 +580,7 @@ aside.tips p {
 
 .layout-content {
     margin-left: 175px;
-    padding-bottom: 12px;
+    padding-bottom: 1.5em;
     display: block;
 }
 
