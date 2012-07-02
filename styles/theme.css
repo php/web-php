@@ -105,7 +105,14 @@ a:hover {
 
 ul {
     list-style-type: disc;
-    margin: 10px 25px;
+    margin: 1.5em;
+}
+
+hr {
+    margin:1.5em 0 1.25em;
+    border:0;
+    height:0;
+    border-top:.25em solid #99c;
 }
 
 #headnav {
@@ -510,16 +517,16 @@ a.genanchor:hover {
 
 aside.tips {
     background-color: #f9f9f9;
-    border-bottom: 12px solid #9999CC;
+    border-bottom: .5em solid #9999CC;
     float: right;
-    margin: 10px 0 30px 30px;
+    margin:0 0 1.5em 1em;
     width: 294px;
 }
 
 aside.tips div.border {
     float: left;
     width: 98px;
-    border-top: 12px solid #9999CC;
+    border-top: .5em solid #9999CC;
 }
 
 aside.tips div.border.second {
@@ -532,16 +539,7 @@ aside.tips div.border.third {
 
 aside.tips div.inner {
     clear: both;
-    padding: 5px 20px 15px 20px;
-}
-
-aside.tips h3 {
-    line-height: 1;
-    margin: 20px 0 10px 0;
-}
-
-aside.tips p {
-    margin: 10px 0;
+    padding: 1em 1em 0;
 }
 
 
