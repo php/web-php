@@ -729,8 +729,11 @@ table.standard td {
     margin:1.5em 0;
 }
 .newsItem .published {
-    display:block;
+    display:inline-block;
     color:#666;
     font-size:.75em;
     line-height: 2;
+}
+.newsItem abbr.published {
+    margin-bottom:-1px;
 }
