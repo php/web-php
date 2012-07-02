@@ -116,7 +116,7 @@ if (isset($shortname) && $shortname) {
             </p><p>
                 Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
             </p>
-            <p class="tutorial"><a href="/tut.php">Begin Tutorial &raquo;</a></p>
+            <p class="tutorial"><a href="/tut.php">&raquo; Begin Tutorial</a></p>
         </div>
         <div class="download">
             <h2>Download PHP</h2>

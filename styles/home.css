@@ -8,7 +8,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     color: #eee;
     font-size: 1.125em;
     line-height: 1.333em;
-    width: 500px;
+    width: 650px;
     float: left;
 }
 
@@ -53,9 +53,12 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #mega-drop-down div.download {
     color: #eee;
-    width: 300px;
+    width: 250px;
+    margin:0 30px;
     display: block;
     float: right;
+    min-height:240px;
+    background:#4f4f4f;
 }
 
 #mega-drop-down div.download h2 {
@@ -86,18 +89,18 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #mega-drop-down div.download li:first-child {
-    padding: 1em 0 1em 120px;
-    background: url('/images/sprites.png') no-repeat 10px -195px;
+    padding: 1em 0 1em 100px;
+    background: url('/images/sprites.png') no-repeat 0px -195px;
     margin-top: 0;
 }
 
 #mega-drop-down div.download li {
     color: #eee;
     display: block;
-    padding: 1em 0 0 120px;
-    background: url('/images/sprites.png') no-repeat 24px -273px;
+    padding: 1em 0 0 100px;
+    background: url('/images/sprites.png') no-repeat 14px -273px;
     cursor: pointer;
-    border-top: 1px solid #555;
+    border-top: 1px solid #6f6f6f;
     margin: 0;
     font-size:.75em;
     line-height: 1;
