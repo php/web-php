@@ -98,7 +98,7 @@ $features = "
         <span class='graphic'></span>
         <h3>PECL &amp; PEAR</h3>
         <p>
-            Is PHP missing a feature you need? PHP has a large extension library called
+            PHP has a large extension library called
             <abbr title='The PHP Extension Community Library'><a href='http://pecl.php.net/'>PECL</a></abbr>,
             and a reusable class library called
             <abbr title='The PHP Extension and Application Repository'><a href='http://pear.php.net/'>PEAR</a></abbr>.
