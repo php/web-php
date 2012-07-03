@@ -1,4 +1,12 @@
     </section><!-- layout-content -->
+    <?php
+    if (!empty($config['spanning-content'])) {
+        print "<div class='spanning-content'>";
+        print $config['spanning-content'];
+        print "</div>";
+    }
+
+    ?>
   </div><!-- layout -->
          
   <footer>

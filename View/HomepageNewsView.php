@@ -18,9 +18,7 @@ class HomepageNewsView {
 
         ob_start();
         ?>
-        <div class='recentNewsEntries'>
-            <h1><a href="/archive/" title='Recent News / Archived News'>Recent News</a></h1>
-
+        <div id='recentNewsEntries'>
             <?php
             foreach ($this->articles as $article) :
                 /**
@@ -33,7 +31,7 @@ class HomepageNewsView {
                 $publishedDate = $article->getPublishedString();
                 $newsDate = $article->getPublishedDate()->format('d-M-Y');
 
-                $content = $article->getContent();
+                $contentRaw = $article->getContent();
 
                 $permanentLink = "#" .$id;
                 foreach($article->getLink() as $link) {
@@ -41,6 +39,31 @@ class HomepageNewsView {
                         $permanentLink = $link["href"];
                         break;
                     }
+                }
+
+                $dom = new DOMDocument();
+                @$dom->loadHTML($contentRaw);
+
+                $xpath = new DomXPath($dom);
+                $nodes = $xpath->query('//body/div/*');
+
+                if ($nodes !== FALSE) {
+                    $content = '<div>';
+
+                    $count = 0;
+                    foreach ($nodes as $node) {
+                        if ($count++ < 2) {
+                            $content .= $dom->saveXML($node);
+                        }
+                    }
+
+                    if ($count > 2) {
+                        $content .= "<p class='fullArticleLink'><a href='$permanentLink' class>&hellip; read full article</a></p>";
+                    }
+
+                    $content .= '</div>';
+                } else {
+                    $content = $contentRaw;
                 }
 
                 $image = "";
@@ -65,6 +88,8 @@ class HomepageNewsView {
                 </div>";
             endforeach;
             ?>
+
+            <p class='newsArchive'><a href='/archive/'>More news &raquo;</a></p>
 
         </div>
 

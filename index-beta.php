@@ -75,60 +75,13 @@ if (is_array($CONF_TEASER) && $CONF_TEASER) {
     $announcements = '';
 }
 
-// Prepare featured content.
-$features = "
-<div class=featured-content>
-    <div class='feature top-left'>
-        <span class='graphic'></span>
-        <h3>Get Involved</h3>
-        <p>
-            We are looking for people with talents of various kinds, not just developers. <br/>
-            <a href='/get-involved.php' class='readmore'>See how you can contribute.</a>
-        </p>
-    </div>
-    <div class='feature top-right'>
-        <span class='graphic'></span>
-        <h3>Need Help?</h3>
-        <p>
-            Thankfully, PHP has one of the best support communities in existence. <br/>
-            <a href='/support.php' class='readmore'>View support options.</a>
-        </p>
-    </div>
-    <div class='feature bottom-left'>
-        <span class='graphic'></span>
-        <h3>
-            <abbr title='The PHP Extension Community Library'>PECL</abbr> &amp;
-            <abbr title='The PHP Extension and Application Repository'>PEAR</abbr>
-         </h3>
-        <p>
-            PHP has a large extension library called
-            <a href='http://pecl.php.net/' title='Homepage for the PECL project'>PECL</a>,
-            and a reusable class library called
-            <a href='http://pear.php.net/' title='Homepage for the PEAR project'>PEAR</a>.
-        </p>
-    </div>
-    <div class='feature bottom-right'>
-        <span class='graphic'></span>
-        <h3>Website Tips</h3>
-        <p>
-            Everything has 'an app' these days, even the PHP manual.
-            We also have <a href='/tips.php'>tips and tricks</a>
-            to save you keystrokes.
-        </p>
-    </div>
-</div>
-    <br class='clear-left' />
-    <div class='separator'></div>
-";
 
 require_once './Gateway/NewsFileSystemGateway.php';
 
 $NewsGateway = new NewsFileSystemGateway();
 $RecentNews = $NewsGateway->getArticlesForCategories(new ArrayIterator(array(
-    "conferences",
-    "cfp",
     "frontpage"
-)));
+)), 2);
 
 ob_start();
 
@@ -142,7 +95,6 @@ $news = ob_get_clean();
 // Wrap announcements and features in a content element
 $content = "
 <div class='home-content'>
-    $features
     $news
 </div>
 ";
@@ -183,10 +135,37 @@ print_view('homepage/sidebar.php', array(
 ));
 print $content;
 
+$thanksTo = <<<THANKS
+<section id='thanks-to'>
+    <h3>Thanks To</h3>
+    <ul>
+        <li><a target="_blank" href="http://www.easydns.com/?V=698570efeb62a6e2" title="DNS Hosting provided by easyDNS">easyDNS</a></li>
+        <li><a target="_blank" href="http://www.directi.com/" title="Directi">Directi</a></li>
+        <li><a target="_blank" href="http://promote.pair.com/direct.pl?php.net" title="pair Networks">pair Networks</a></li>
+        <li><a target="_blank" href="http://www.servercentral.net/" title="Server Central">Server Central</a></li>
+        <li><a target="_blank" href="http://www.hostedsolutions.com/" title="Hosted Solutions">Hosted Solutions</a></li>
+        <li><a target="_blank" href="http://www.spry.com/" title="Spry VPS Hosting">Spry VPS Hosting</a></li>
+        <li><a target="_blank" href="http://ez.no/" title="eZ Systems">eZ Systems</a> / <a href="http://www.hit.no/">HiT</a></li>
+        <li><a target="_blank" href="http://www.osuosl.org" title="OSU Open Source Lab">OSU Open Source Lab</a></li>
+        <li><a target="_blank" href="http://www.yahoo.com/" title="Yahoo! Inc.">Yahoo! Inc.</a></li>
+        <li><a target="_blank" href="http://www.binarysec.com/" title="BinarySEC">BinarySEC</a></li>
+        <li><a target="_blank" href="http://www.nexcess.net/" title="NEXCESS.NET">NEXCESS.NET</a></li>
+        <li><a target="_blank" href="http://www.rackspace.com/" title="Rackspace">Rackspace</a></li>
+        <li><a target="_blank" href="http://www.eukhost.com/" title="EUKhost">EUKhost</a></li>
+        <li><a target="_blank" href="http://www.sohosted.nl/webhosting/" title="Sohosted">Sohosted</a></li>
+        <li><a target="_blank" href="http://www.redpill-linpro.com" title="Redpill Linpro">Redpill Linpro</a></li>
+        <li><a target="_blank" href="http://www.facebook.com" title="Facebook">Facebook</a></li>
+        <li><a target="_blank" href="http://krystal.co.uk" title="Krystal.co.uk">Krystal.co.uk</a></li>
+        <li><a target="_blank" href="http://servergrove.com/" title="ServerGrove">ServerGrove</a></li>
+    </ul>
+</section>
+THANKS;
+
 // Print the common footer.
 site_footer(
     array(
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
-        'elephpants' => true
+        'elephpants' => true,
+        'spanning-content' => $thanksTo
     )
 );

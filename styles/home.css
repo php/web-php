@@ -6,7 +6,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #mega-drop-down div.what-is-php {
     color: #eee;
-    width: 650px;
+    width: 648px;
     float: left;
 }
 
@@ -50,10 +50,10 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #mega-drop-down div.download {
     color: #eee;
-    width: 250px;
-    margin:0 30px;
+    width: 264px;
+    margin:0 0 0 20px;
     display: block;
-    float: right;
+    float: left;
     min-height:240px;
     background:#4f4f4f;
 }
@@ -183,7 +183,7 @@ section.layout-content.home {
 }
 
 div.home-content {
-    width: 650px;
+    width: 648px;
 }
 
 /* Announcement Area */
@@ -191,9 +191,9 @@ div.home-content {
 .home .announcements {
     display: table;
     width: 100%;
-    background-color: #bfbfff;
+    background-color: #cce;
     padding: 1.5em;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     list-style: none;
 }
@@ -262,9 +262,9 @@ div.featured-content div.bottom-right span.graphic {
 
 div.home-sidebar {
     float: right;
-    width: 250px;
-    padding: 0 30px 20px 30px;
-    margin: 0 0 20px 20px;
+    width: 264px;
+    padding: 0 0 1.5em;
+    margin: 0 0 0 20px;
 }
 
 div.home-sidebar h3 {
@@ -275,6 +275,26 @@ div.home-sidebar h3 {
 
 div.home-sidebar h3:first-child {
     margin-top: 0;
+}
+div.home-sidebar h3.panel {
+    line-height: 1.2em;
+    border:0;
+    margin:1.2em 0;
+}
+div.home-sidebar h3.panel a {
+    background:#ddd;
+    color:#333;
+    border:0;
+    display: block;
+    padding:.6em 1em;
+}
+div.home-sidebar h3.panel a::after {
+    float:right;
+    content:"»";
+}
+div.home-sidebar h3.panel a:hover,
+div.home-sidebar h3.panel a:focus {
+    background:#eee;
 }
 
 div.home-sidebar ul {
@@ -287,13 +307,13 @@ div.home-sidebar a:link,
 div.home-sidebar a:visited {
     border-bottom-color: transparent;
 }
-div.home-sidebar a:hover {
+div.home-sidebar a:hover,
+div.home-sidebar a:focus {
     border-bottom-color: #3F438D;
 }
 
-.home-content .recentNewsEntries {
+.home-content #recentNewsEntries {
     position: relative;
-    margin-top:3em;
 }
 
 .clear-left {
@@ -305,4 +325,34 @@ div.home-sidebar a:hover {
     margin-top:3em;
     margin-bottom:-.25em;
     background:#669;
+}
+#thanks-to {
+    border-top:.25em solid #669;
+    padding-top:1.25em;
+}
+.newsItem:first-child {
+    margin-top:0;
+}
+
+.newsItem h2 a {
+    border-bottom-width:0;
+}
+.newsItem h2 a:hover,
+.newsItem h2 a:focus {
+    border-bottom-width:1px;
+}
+.fullArticleLink a {
+    color:#666;
+    border-color:transparent;
+    font-size:.75em;
+    line-height: 2;
+    display: inline-block;
+}
+.fullArticleLink a:hover,
+.fullArticleLink a:focus {
+    color:#333;
+    border-bottom-color:#333;
+}
+.newsArchive {
+    text-align: right;
 }

@@ -214,7 +214,7 @@ $(document).ready(function() {
 
         if (foundToc) {
             jQuery.getScript("/js/jquery.scrollto.min.js", function(){
-                l.delegate("a.toc_item","click keypress", function(e) {
+                l.delegate("a.toc_item","click keypress", function() {
                     // Escape dots in ids so they won't be treated as class selectors
                     $.scrollTo($(this).attr("href").replace(".", "\\\."), 400);
                 });
@@ -244,6 +244,12 @@ $(document).ready(function() {
                 });
             }
         });
+    });
+
+    var $headingsWithIds = $('h1 a[id], h2 a[id], h3 a[id], h4 a[id]');
+    $headingsWithIds.each(function(){
+        var $this = $(this);
+        $this.after("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>")
     });
 
     var $elephpants = $(".elephpants");
