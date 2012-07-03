@@ -26,14 +26,11 @@ $(document).ready(function() {
         document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
     });
 
-    // This is a temporary implementation so if you click on the Arrows on the Download area of the homepage
-    // That it takes you to the default .gz download. Could not apply HTML5's <a> tag to wrap around the <li>
-    // Because it contains <a> tags within it and the target conflicted. Using <li ref="#...'> to workaround this
-    // Until an elegant implementation is found.
+    // This is a temporary implementation for clicking on the arrows for the Downloading PHP
     var $homeDownload = $('div.download .download-list');
     if($homeDownload.length > 0) {
         $homeDownload.find('li').bind('click', function() {
-            window.location.href = $(this).attr('rel').replace('#', '');
+            window.location.href = $(this).attr('rel');
         });
     }
 

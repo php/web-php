@@ -100,9 +100,16 @@ list($v, $a) = each($RELEASES[5]);
 <?php
 foreach($a["source"] as $rel) {
     echo " <li>\n  ";
-    download_link($rel["filename"], $rel["name"]); echo " -  {$rel["date"]}<br />\n";
-    echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-    (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
+
+    if (!empty($rel['link'])) {
+        $link = $rel['link'];
+        $name = $rel['name'];
+        echo "<a href='$link'>$name</a>";
+    } else {
+        download_link($rel["filename"], $rel["name"]); echo " -  {$rel["date"]}<br />\n";
+        echo "  <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
+        (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
+    }
     echo " </li>\n";
 }
 ?>
@@ -112,11 +119,6 @@ foreach($a["source"] as $rel) {
 <?php
 } // for
 ?>
-<h2>Windows Binaries</h2>
-<p>
-For the Windows binaries and installer, see <a href='http://windows.php.net/download/'>http://windows.php.net/download/</a>.
-</p>
-<hr />
 
 <h1>GPG Keys</h1>
 <p>
