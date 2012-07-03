@@ -292,7 +292,9 @@ dl.qandaentry {
 .docs p.refpurpose {
     color: #444;
 }
-
+.docs .refnamediv {
+    position:relative;
+}
 .docs div.refsect1 h3.title {
     color: #444;
     position: absolute;
