@@ -148,7 +148,7 @@ hr {
 #headnav #headhome a.menu-link,
 #headnav #headhome a.menu-link:hover {
     background: url(/images/sprites.png) 0 0;
-    width: 130px;
+    width: 120px;
     height: 16px;
     text-indent: -2000em;
 }
