@@ -120,6 +120,7 @@ hr {
     height: 70px;
     line-height: 1;
     background: url('/images/sprites.png') repeat-x 0px -100px;
+    margin-top:.75em;
 }
 
 #headnav .myphp {
@@ -130,9 +131,9 @@ hr {
 }
 
 #headmenu {
-    width: 940px;
+    width: 930px;
     margin: 0 auto;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 #headnav h6,
@@ -175,19 +176,21 @@ hr {
     border-color: #7F7FB2;
     font-weight: bold;
 }
-
+#headsearch {
+    width:244px;
+}
 #headnav li#headsearch {
     margin: 22px 0 0 20px;
     padding: 2px;
     float: right;
-    border: 1px solid;
-    border-color: #7F7FB2;
+    border: 1px solid #7F7FB2;
 }
 
 #headsearch-keywords {
     border: 0;
     padding: 2px;
-    width: 14em;
+    width: 208px;
+    float: left;
 }
 
 #headsearch-keywords,
