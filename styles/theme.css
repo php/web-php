@@ -117,11 +117,11 @@ hr {
 }
 
 #headnav {
-    padding: 0 25px;
     height: 70px;
     line-height: 1;
     background: url('/images/sprites.png') repeat-x 0px -100px;
     margin-top:.75em;
+    min-width:960px;
 }
 
 #headnav .myphp {
@@ -188,7 +188,8 @@ hr {
 #headsearch-keywords {
     border: 0;
     padding: 2px;
-    width: 220px;
+    width: 210px;
+    height:26px;
     float: left;
 }
 
@@ -336,8 +337,9 @@ hr {
  * User notes
  */
 #usernotes {
-    margin: 0 0 1.5em 175px;
+    margin: 0 0 1.5em 216px;
     position: relative;
+    max-width: 75em;
 }
 
 #usernotes .note:before {
@@ -554,15 +556,13 @@ aside.tips div.inner {
 
 
 #layout {
-    padding: 25px 150px 25px 10px;
-    max-width: 1400px;
-    min-width: 600px;
+    min-width: 960px;
     margin: 0 auto;
+    padding:1.5em 0;
 }
 
 .layout-menu {
     float: left;
-    width: 160px;
 }
 
 .layout-menu li a {
@@ -587,9 +587,9 @@ aside.tips div.inner {
 }
 
 .layout-content {
-    margin-left: 175px;
-    padding-bottom: 1.5em;
     display: block;
+    max-width: 75em;
+    margin: 0 auto;
 }
 
 #search-results {
@@ -625,9 +625,10 @@ footer {
     clear: both;
     overflow: auto;
     background-color: #333;
-    border-top: 12px solid #9999CC;
-    border-bottom: 12px solid #9999CC;
+    border-top: .5em solid #9999CC;
+    border-bottom: .5em solid #9999CC;
     padding: 1.5em 0;
+    min-width:960px;
 }
 
 footer .footer-content {
@@ -651,7 +652,7 @@ footer .footmenu li {
 
 footer a {
     color: #ccc;
-    margin: 0 8px;
+    margin: 0 .5em;
 }
 
 footer a:link,
@@ -672,7 +673,8 @@ footer a:focus {
 div.elephpants {
     margin: auto;
     overflow: hidden;
-    border-bottom: 12px solid #9999CC;
+    border-bottom: .5em solid #9999CC;
+    min-width:960px;
 }
 
 div.elephpants div.images {

@@ -380,7 +380,7 @@ dl.qandaentry {
 }
 
 .docs .layout-menu ul.parent-menu-list li {
-    padding: 0 .5em;
+    padding: 0 0 0 .5em;
     margin: 1.5em 0;
 }
 
@@ -390,7 +390,7 @@ dl.qandaentry {
 .docs .layout-menu ul.parent-menu-list a {
     color: #444;
     margin: 0;
-    padding:0 .5em;
+    padding:0 0 0 .5em;
     border: 0;
     border-left: .25em solid #7F7FB2;
 }
@@ -409,7 +409,7 @@ dl.qandaentry {
 
 .docs .layout-menu ul.child-menu-list li {
     list-style-type: none;
-    margin: 0 .5em -1px;
+    margin: 0 0 -1px .5em;
     padding:0;
     border: 0;
     border-bottom: 1px dotted #aaa;
@@ -431,15 +431,10 @@ dl.qandaentry {
     border-left: 0;
 }
 
-
-.docs #layout {
-    padding: 25px 175px 25px 25px; /* FIXME: Overriden from theme.css */
-    max-width: none; /* FIXME: Overriden from theme.css */
-}
-
 /* #layout needed, see http://news.php.net/php.webmaster/11884 */
-.docs #layout .layout-content, .docs #layout #usernotes {
-    margin-left: 250px;
+.docs #layout .layout-content,
+.docs #layout #usernotes {
+    margin-left: 264px;
 }
 #changelang-langs {
     width:120px; 

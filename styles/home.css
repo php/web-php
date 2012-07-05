@@ -189,8 +189,7 @@ div.home-content {
 /* Announcement Area */
 
 .home .announcements {
-    display: table;
-    width: 100%;
+    display: block;
     background-color: #cce;
     padding: 1.5em;
     text-align: left;
