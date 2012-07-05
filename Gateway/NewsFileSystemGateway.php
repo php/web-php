@@ -28,7 +28,8 @@ class NewsFileSystemGateway implements NewsGateway {
                 $article['category'],
                 $article['link'],
                 $article['content'],
-                isset($article['newsImage']) ? $article['newsImage'] : NULL
+                isset($article['newsImage']) ? $article['newsImage'] : NULL,
+                isset($article['intro']) ? $article['intro'] : $article['content']
             );
         }
 

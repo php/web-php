@@ -25,13 +25,11 @@ class HomepageNewsView {
                  * @var NewsItem $article
                  */
 
-                $id = parse_url($article->getId(), PHP_URL_FRAGMENT);
+                $id = $article->getId();
                 $title = $article->getTitle();
 
                 $publishedDate = $article->getPublishedString();
                 $newsDate = $article->getPublishedDate()->format('d-M-Y');
-
-                $contentRaw = $article->getContent();
 
                 $permanentLink = "#" .$id;
                 foreach($article->getLink() as $link) {
@@ -41,38 +39,13 @@ class HomepageNewsView {
                     }
                 }
 
-                $dom = new DOMDocument();
-                @$dom->loadHTML($contentRaw);
-
-                $xpath = new DomXPath($dom);
-                $nodes = $xpath->query('//body/div/*');
-
-                if ($nodes !== FALSE) {
-                    $content = '<div>';
-
-                    $count = 0;
-                    foreach ($nodes as $node) {
-                        if ($count++ < 2) {
-                            $content .= $dom->saveXML($node);
-                        }
-                    }
-
-                    if ($count > 2) {
-                        $content .= "<p class='fullArticleLink'><a href='$permanentLink' class>&hellip; read full article</a></p>";
-                    }
-
-                    $content .= '</div>';
-                } else {
-                    $content = $contentRaw;
-                }
+                $content = $article->getIntroduction();
 
                 $image = "";
                 $newsImage = $article->getNewsImage();
                 if(isset($newsImage["link"]) && $newsImage["content"]) {
                     $image = "<a href=\"{$newsImage["link"]}\">" . $this->renderImage($newsImage) . "</a>";
                 }
-
-                $itemCategories = $article->getCategories();
 
                 $event = '';
                 if ($article->hasCategory('conferences') || $article->hasCategory('cfp')) {

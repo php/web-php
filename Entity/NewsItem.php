@@ -3,9 +3,9 @@
 class NewsItem {
 
     /**
-     * @var int
+     * @var string
      */
-    protected $id;
+    protected $permanentUrl;
 
     /**
      * @var string
@@ -42,26 +42,33 @@ class NewsItem {
      */
     protected $newsImage;
 
+    /**
+     * @var string
+     */
+    protected $intro  = '';
+
 
     /**
      * @param string $title
-     * @param int $id
+     * @param string $permanentUrl
      * @param string $published
      * @param string $updated
      * @param array $category
      * @param array $link
      * @param string $content
      * @param string $newsImage
+     * @param string $intro
      */
-    function __construct($title, $id, $published, $updated, $category, $link, $content, $newsImage = NULL) {
+    function __construct($title, $permanentUrl, $published, $updated, $category, $link, $content, $newsImage = NULL, $intro = '') {
         $this->title = $title;
-        $this->id = $id;
+        $this->permanentUrl = $permanentUrl;
         $this->published = $published;
         $this->updated = new DateTime($updated);
         $this->category = $category;
         $this->link = $link;
         $this->content = $content;
         $this->newsImage = $newsImage;
+        $this->intro = $intro;
     }
 
     /**
@@ -79,10 +86,17 @@ class NewsItem {
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId() {
-        return $this->id;
+        return parse_url($this->getPermanentUrl(), PHP_URL_FRAGMENT);
+    }
+
+    /**
+     * @return string
+     */
+    public function getPermanentUrl() {
+        return $this->permanentUrl;
     }
 
     /**
@@ -135,6 +149,10 @@ class NewsItem {
             }
         }
         return false;
+    }
+
+    public function getIntroduction() {
+        return $this->intro;
     }
 
 }
