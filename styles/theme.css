@@ -529,13 +529,13 @@ aside.tips {
     background-color: #f9f9f9;
     border-bottom: .5em solid #9999CC;
     float: right;
-    margin:0 0 1.5em 1em;
-    width: 294px;
+    margin:0 0 1em 1.5em;
+    width: 288px;
 }
 
 aside.tips div.border {
     float: left;
-    width: 98px;
+    width: 96px;
     border-top: .5em solid #9999CC;
 }
 
@@ -549,7 +549,7 @@ aside.tips div.border.third {
 
 aside.tips div.inner {
     clear: both;
-    padding: 1em 1em 0;
+    margin: 1.5em 1.5em;
 }
 
 
