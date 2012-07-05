@@ -556,9 +556,9 @@ aside.tips div.inner {
 
 
 #layout {
+    max-width: 92em;
     min-width: 960px;
-    margin: 0 auto;
-    padding:1.5em 0;
+    margin: 1.5em auto;
 }
 
 .layout-menu {
@@ -588,7 +588,6 @@ aside.tips div.inner {
 
 .layout-content {
     display: block;
-    max-width: 75em;
     margin: 0 auto;
 }
 

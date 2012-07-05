@@ -267,14 +267,13 @@ div.home-sidebar h3 {
     margin: 1.2em 0 .95em;
     padding:0;
 }
-
-div.home-sidebar h3:first-child {
-    margin-top: 0;
-}
 div.home-sidebar h3.panel {
     line-height: 1.2em;
     border:0;
     margin:1.2em 0;
+}
+div.home-sidebar h3:first-child {
+    margin-top: 0;
 }
 div.home-sidebar h3.panel a {
     background:#ddd;
@@ -324,9 +323,6 @@ div.home-sidebar a:focus {
 #thanks-to {
     border-top:.25em solid #669;
     padding-top:1.25em;
-}
-.newsItem:first-child {
-    margin-top:0;
 }
 
 .newsItem h2 a {
