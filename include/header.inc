@@ -93,7 +93,7 @@ if (isset($shortname) && $shortname) {
   </div>
 </div>
 <nav id="headnav">
-<div class='headnav-container'>
+
  <ul id="headmenu">
   <li id="headsearch">
     <form method="post" action="/search.php" id="topsearch">
@@ -214,8 +214,6 @@ if (isset($shortname) && $shortname) {
 
  </ul>
 <br style="clear: both;" />
-
-</div>
 </nav>
 
 <div id='mega-drop-down'>
