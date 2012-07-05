@@ -339,6 +339,9 @@ $uri_aliases = array (
     "docs-echm.php"=> "download-docs", // BC
 
     "odbc"         => "uodbc", // BC
+
+    "links"        => "support.php", // BC
+    "links.php"    => "support.php", // BC
     "oracle"       => "oci8",
     "_"            => "function.gettext",
     "cli"          => "features.commandline",

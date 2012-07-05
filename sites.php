@@ -10,13 +10,6 @@ $SIDEBAR_DATA = '
  helps you find your way around the site.
 </p>
 
-<h3>More PHP related sites</h3>
-<p>
- Of course there are a lot more sites connected to PHP
- somehow, which are not part of the PHP.net site family.
- Our <a href="/links.php">links page</a> offers some start
- pages you will find interesting.
-</p>
 ';
 site_header("A Tourist's Guide", array("current" => "help"));
 ?>

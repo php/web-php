@@ -62,9 +62,9 @@ function a($href) {
 <h2>Page shortcuts</h2>
 
 <p>
- If you write in a PHP.net URL, like <tt><?php echo $MYSITE; ?>links</tt>,
+ If you write in a PHP.net URL, like <tt><?php echo $MYSITE; ?>get-involved</tt>,
  first this URL is matched against the PHP.net pages. If there is
- a page named <tt>links.php</tt>, then you'll get that page
+ a page named <tt>get-involved.php</tt>, then you'll get that page
  immediately. This type of shortcut makes easy to type in a link
  in an IRC conversation or mailing list message. If the script
  finds no page with this name, it tries to find a manual page.
