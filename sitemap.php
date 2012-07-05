@@ -50,7 +50,6 @@ site_header("Sitemap", array("current" => "help"));
     <ul>
      <li><a href="/mailing-lists.php">Mailing Lists</a>, <a href="/unsub.php">Unsubscribe</a></li>
      <li><a href="/cal.php">Events</a></li>
-     <li><a href="/links.php">Links</a></li>
     </ul>
    </li>
   </ul>

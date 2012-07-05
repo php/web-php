@@ -58,9 +58,7 @@ $SIDEBAR_DATA = '
  especially suited for Web development and can be embedded into HTML.
  If you are new to PHP and want to get some idea
  of how it works, try the <a href="/tut.php">introductory tutorial</a>.
- After that, check out the online <a href="/docs.php">manual</a>,
- and the example archive sites and some of the other resources
- available in the <a href="/links.php">links section</a>.
+ After that, check out the online <a href="/docs.php">manual</a>.
 </p>
 <p>
  Ever wondered how popular PHP is? See the

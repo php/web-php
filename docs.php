@@ -30,13 +30,6 @@ $SIDEBAR_DATA='
  and search there.
 </p>
 
-<h3>Sample Code</h3>
-<p>
- Looking for some more sample PHP scripts? Our <a
- href="/links.php">links page</a> lists some archives of sample PHP code - 
- great places to find many example scripts and useful functions, organized for 
- your searching pleasure!
-</p>
 ';
 
 site_header("Documentation", array("current" => "docs"));

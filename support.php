@@ -77,22 +77,6 @@ site_header("Getting Help", array("current" => "help"));
 
 <h1>Sample Code</h1>
 
-<p>
- Looking for some more sample PHP scripts? Our <a
- href="/links.php">links page</a> lists some archives of sample PHP code - 
- great places to find many example scripts and useful functions, organized for 
- your searching pleasure!
-</p>
-<!--
-<h1>Knowledge Base</h1>
-
-<p>
- The knowledge base is a growing collection of PHP related information in
- a searchable question and answer format. Anyone can contribute, and
- everyone is encouraged to do so. You can visit the Knowledge Base
- at <a href="http://php.faqts.com/">http://php.faqts.com/</a>.
-</p>
--->
 <h1>Instant Resource Center</h1>
 
 <p>
