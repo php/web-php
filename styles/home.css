@@ -332,12 +332,13 @@ div.home-sidebar a:focus {
 .newsItem h2 a:focus {
     border-bottom-width:1px;
 }
+.fullArticleLink {
+    font-size:.75em;
+    line-height: 2;
+}
 .fullArticleLink a {
     color:#666;
     border-color:transparent;
-    font-size:.75em;
-    line-height: 2;
-    display: inline-block;
 }
 .fullArticleLink a:hover,
 .fullArticleLink a:focus {
