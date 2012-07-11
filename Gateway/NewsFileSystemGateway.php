@@ -1,7 +1,7 @@
 <?php
 
-require_once '/../Entity/NewsItem.php';
-require_once '/NewsGateway.php';
+require_once 'Entity/NewsItem.php';
+require_once 'NewsGateway.php';
 
 class NewsFileSystemGateway implements NewsGateway {
 
