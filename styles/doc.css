@@ -39,6 +39,17 @@ aside#quicktoc {
 
 /* }}} */
 
+
+.docs .refsect1 > p:last-child,
+.docs .refsect1 > .warning:last-child,
+.docs .refsect1 > .tip:last-child {
+    margin-bottom:0;
+}
+
+.docs .refsect1 > .title + * {
+    margin-top:0;
+}
+
 .docs .classsynopsis:before,
 .docs div.refsect1:before,
 .docs div.warning:before {
@@ -166,6 +177,7 @@ aside#quicktoc {
 }
 /* }}} */
 
+.docs .refentry .constructorsynopsis,
 .docs .refentry .methodsynopsis {
     color: #666;
     font-family: monospace;
@@ -185,13 +197,10 @@ aside#quicktoc {
 .docs .refentry .parameters dl dt code.parameter {
     font-size:1.23076em;
 }
-.docs .refentry .parameters dl,
+.docs .refentry .parameters .title + p.para + dl,
 .docs .refsect1.examples .title + p.para + *,
 .docs .refsect1.seealso .title + p.para + * {
     margin-top:-1.5em; /* there's a p tag that has whitespace (not :empty). This simply covers it up */
-}
-.docs .refsect1.returnvalues .title + p.para {
-    margin-top:0;
 }
 /* }}} */
 
@@ -201,7 +210,8 @@ aside#quicktoc {
 .docs .example-contents .phpcode code,
 .docs .refentry .methodsynopsis,
 .docs .example-contents.screen,
-.docs .refentry .methodsynopsis {
+.docs .refentry .methodsynopsis,
+.docs .refentry .constructorsynopsis {
     border: 1px solid #ccc;
     background-color: #fff;
     padding: 1.5em;
@@ -305,12 +315,6 @@ dl.qandaentry {
 .docs .refsect1 {
     margin-top: 4.5em;
     color: #444;
-}
-
-.docs .refsect1 > p:last-child,
-.docs .refsect1 > .warning:last-child,
-.docs .refsect1 > .tip:last-child {
-    margin-bottom:0;
 }
 
 .docs .classsynopsis,
