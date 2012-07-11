@@ -43,11 +43,11 @@ else {
 }
 
 $_SERVER['BASE_PAGE'] = 'index.php';
-include_once __DIR__ . '/include/prepend.inc';
-include_once __DIR__ . '/include/pregen-events.inc';
-include_once __DIR__ . '/include/pregen-confs.inc';
-include_once __DIR__ . '/include/pregen-news.inc';
-include_once __DIR__ . '/include/version.inc';
+include_once '/include/prepend.inc';
+include_once '/include/pregen-events.inc';
+include_once '/include/pregen-confs.inc';
+include_once '/include/pregen-news.inc';
+include_once '/include/version.inc';
 
 // Prepare announcements.
 if (is_array($CONF_TEASER) && $CONF_TEASER) {
