@@ -262,13 +262,6 @@ aside#quicktoc {
 /* }}} */
 
 /* {{{ lists */
-ul.itemizedlist,
-ul.simplelist,
-ul.chunklist,
-.docs ol {
-    padding: 0 0 2px 10px;
-    margin: 0 0 2px 10px;
-}
 ul.itemizedlist {
     list-style-type: circle;
 }
@@ -284,6 +277,10 @@ ul.chunklist {
 }
 dl.qandaentry {
     border-top: 1px solid #000;
+}
+
+ul.chunklist_children {
+    margin-top:0;
 }
 /* }}} */
 

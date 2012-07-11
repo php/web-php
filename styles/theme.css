@@ -755,3 +755,8 @@ table.standard td {
     margin: 0 auto;
     clear:both;
 }
+
+p code {
+    font-family: Verdana, Arial, sans-serif;
+    font-size:100%;
+}
