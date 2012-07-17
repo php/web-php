@@ -11,6 +11,7 @@ aside#quicktoc {
     background: white;
     position: fixed;
     right: 0px;
+    z-index: 100;
 }
 
 #quicktoc .content, #quicktoc .language {
