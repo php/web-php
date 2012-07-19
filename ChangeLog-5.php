@@ -11,6 +11,238 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.5"></a><!-- {{{ 5.4.5 -->
+<h3>Version 5.4.5</h3>
+<b>19-July-2012</b>
+<ul>
+<li>Core</li>
+<ul>
+  <li><?php bugfix(62443); ?> (Crypt SHA256/512 Segfaults With Malformed Salt)</li>
+  <li><?php bugfix(62432); ?> (ReflectionMethod random corrupt memory on high concurrent)</li>
+  <li><?php bugfix(62373); ?> (serialize() generates wrong reference to the object).</li>
+  <li><?php bugfix(62357); ?> (compile failure: (S) Arguments missing for built-in function __memcmp)</li>
+  <li><?php bugfix(61998); ?> (Using traits with method aliases appears to result in crash during execution)</li>
+  <li><?php bugfix(51094); ?> (parse_ini_file() with INI_SCANNER_RAW cuts a value that includes a semi-colon)</li>
+  <li>Fixed potential overflow in _php_stream_scandir (CVE-2012-2688)</li>
+</ul>
+</ul>
+
+<ul>
+<li>EXIF</li>
+<ul>
+  <li>Fixed information leak in ext exi</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(62205); ?> (php-fpm segfaults (null passed to strstr)</li>
+  <li><?php bugfix(62160); ?> (Add process.priority to set nice(2) priorities)</li>
+  <li><?php bugfix(62153); ?> (when using unix sockets, multiples FPM instances)</li>
+  <li><?php bugfix(62033); ?> (php-fpm exits with status 0 on some failures to start)</li>
+  <li><?php bugfix(61839); ?> (Unable to cross-compile PHP with --enable-fpm)</li>
+  <li><?php bugfix(61835); ?> (php-fpm is not allowed to run as root)</li>
+  <li><?php bugfix(61295); ?> (php-fpm should not fail with commented 'user'</li>
+  <li><?php bugfix(61218); ?> (FPM drops connection while receiving some binary values in FastCGI requests)</li>
+  <li><?php bugfix(61045); ?> (fpm don't send error log to fastcgi clients). (fat) for non-root start)</li>
+  <li><?php bugfix(61026); ?> (FPM pools can listen on the same address). (fat) can be launched without errors)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Iconv</li>
+<ul>
+<li><?php bugfix(55042); ?> (Erealloc in iconv.c unsafe)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(62083); ?> (grapheme_extract() memory leaks)</li>
+  <li><?php bugfix(62081); ?> (IntlDateFormatter constructor leaks memory when called twice)</li>
+  <li><?php bugfix(62070); ?> (Collator::getSortKey() returns garbage)</li>
+  <li><?php bugfix(62017); ?> (datefmt_create with incorrectly encoded timezone leaks pattern)</li>
+  <li><?php bugfix(60785); ?> (memory leak in IntlDateFormatter constructor)</li>
+  <li>ResourceBundle constructor now accepts NULL for the first two arguments</li>
+</ul>
+</ul>
+
+<ul>
+<li>JSON</li>
+<ul>
+  <li><?php bugfix(61359); ?> (json_encode() calls too many reallocs)</li>
+</ul>
+</ul>
+
+<ul>
+<li>libxml</li>
+<ul>
+  <li><?php bugfix(62266); ?> (Custom extension segfaults during xmlParseFile with FPM SAPI)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar</li>
+<ul>
+  <li><?php bugfix(62227); ?> (Invalid phar stream path causes crash)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Readline</li>
+<ul>
+  <li><?php bugfix(62186); ?> (readline fails to compile - void function should not return a value)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection</li>
+<ul>
+  <li><?php bugfix(62384); ?> (Attempting to invoke a Closure more than once causes segfault)</li>
+  <li><?php bugfix(62202); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Sockets</li>
+<ul>
+  <li><?php bugfix(62025); ?> (__ss_family was changed on AIX 5.3)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li><?php bugfix(62433); ?> (Inconsistent behavior of RecursiveDirectoryIterator to dot files)</li>
+  <li><?php bugfix(62262); ?> (RecursiveArrayIterator does not implement Countable)</li>
+</ul>
+</ul>
+
+<ul>
+<li>XML Writer</li>
+<ul>
+  <li><?php bugfix(62064); ?> (memory leak in the XML Writer module)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Zip</li>
+<ul>
+  <li>Upgraded libzip to 0.10.</li>
+</ul>
+</ul>
+
+<a name="5.3.15"></a><!-- {{{ 5.3.15 -->
+<h3>Version 5.3.15</h3>
+<b>19-July-2012</b>
+<ul>
+<li>Zend Engine</li>
+<ul>
+  <li><?php bugfix(51094); ?> (parse_ini_file() with INI_SCANNER_RAW cuts a value that includes a semi-colon)</li>
+</ul>
+</ul>
+
+<ul>
+<li>COM</li>
+<ul>
+  <li><?php bugfix(62146); ?> com_dotnet cannot be built shared</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core</li>
+<ul>
+  <li>Fixed potential overflow in _php_stream_scandir, CVE-2012-2688</li>
+  <li><?php bugfix(62432); ?> (ReflectionMethod random corrupt memory on high concurrent)</li>
+  <li><?php bugfix(62443); ?> (Crypt SHA256/512 Segfaults With Malformed Salt)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo</li>
+<ul>
+  <li>Fixed magic file regex support</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(61045); ?> (fpm don't send error log to fastcgi clients)</li>
+  <li><?php bugfix(61835); ?> (php-fpm is not allowed to run as root)</li>
+  <li><?php bugfix(61295); ?> (php-fpm should not fail with commented 'user' for non-root start)</li>
+  <li><?php bugfix(61026); ?> (FPM pools can listen on the same address)</li>
+  <li><?php bugfix(62033); ?> (php-fpm exits with status 0 on some failures to start)</li>
+  <li><?php bugfix(62153); ?> (when using unix sockets, multiples FPM instances can be launched without errors)</li>
+  <li><?php bugfix(62160); ?> (Add process.priority to set nice(2) priorities)</li>
+  <li><?php bugfix(61218); ?> (FPM drops connection while receiving some binary values in FastCGI requests)</li>
+  <li><?php bugfix(62205); ?> (php-fpm segfaults (null passed to strstr))</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(62083); ?> (grapheme_extract() memory leaks)</li>
+  <li><?php bugfix(62081); ?> (IntlDateFormatter constructor leaks memory when called twice)</li>
+  <li><?php bugfix(62070); ?> (Collator::getSortKey() returns garbage)</li>
+  <li><?php bugfix(62017); ?> (datefmt_create with incorrectly encoded timezone leaks pattern)</li>
+  <li><?php bugfix(60785); ?> (memory leak in IntlDateFormatter constructor)</li>
+</ul>
+</ul>
+
+<ul>
+<li>JSON</li>
+<ul>
+  <li>Reverted fix for bug #61537</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar</li>
+<ul>
+  <li><?php bugfix(62227); ?> (Invalid phar stream path causes crash)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection</li>
+<ul>
+  <li><?php bugfix(62384); ?> (Attempting to invoke a Closure more than once causes segfault)</li>
+  <li><?php bugfix(62202); ?> (ReflectionParameter::getDefaultValue() memory leaks with constant)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li><?php bugfix(62262); ?> (RecursiveArrayIterator does not implement Countable)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SQLite</li>
+<ul>
+  <li>Fixed open_basedir bypass, CVE-2012-3365</li>
+</ul>
+</ul>
+
+<ul>
+<li>XML Write</li>
+<ul>
+  <li><?php bugfix(62064); ?> (memory leak in the XML Writer module)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Zip</li>
+<ul>
+  <li>Upgraded libzip to 0.10</li>
+</ul>
+</ul>
+
 <a name="5.4.4"></a><!-- {{{ 5.4.4 -->
 <h3>Version 5.4.4</h3>
 <b>06-June-2012</b>
