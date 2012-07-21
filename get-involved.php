@@ -244,7 +244,7 @@ directory if you want to learn more about the testing mechanism.
     something to add. Please take a few moments to familiarize yourself with the
     mailing list "rules" before you go all crazy on the lists.  For the rules that
     are generally followed on all PHP mailing lists, please see the
-    <a href="http://php.net/reST/php-src/trunk_README.MAILINGLIST_RULES">Mailinglist Rules</a>.
+    <a href="http://php.net/reST/README.MAILINGLIST_RULES">Mailinglist Rules</a>.
 </p>
 
 

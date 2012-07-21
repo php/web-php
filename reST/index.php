@@ -19,24 +19,12 @@ $SIDEBAR_DATA = '<h3>File list</h3>
 
 $restfiles = glob($rest_dir. "/*");
 
-$list = $lastdir = "";
+//$list = $lastdir = "";
+$list = "";
 foreach($restfiles as $filename) {
 	$link = basename($filename, ".rest");
 
-	// Separate the dirname from the filename
-	list($dir, $filename) = explode("_", $link, 2);
-
-	// Create a tree-like-structure
-	if ($dir != $lastdir) {
-		if ($lastdir) {
-			$list .= "</ul>\n";
-		}
-		$list .= "<li><h4>$dir</h4><li>\n<ul class=\"simple\">\n";
-		$lastdir = $dir;
-	}
-
-	// Replace the first - with a directory seperator
-	$link[strpos($link, "_")] = "/";
+	$filename = basename($link);
 
 	// Only use the "last part" of the filename (i.e. README.FOOBAR => FOOBAR)
 	if (strpos($filename, ".") !== false) {
