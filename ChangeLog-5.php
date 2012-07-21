@@ -30,7 +30,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>EXIF</li>
 <ul>
-  <li>Fixed information leak in ext exi</li>
+  <li>Fixed information leak in ext exif</li>
 </ul>
 </ul>
 
