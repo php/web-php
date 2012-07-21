@@ -340,8 +340,8 @@ $uri_aliases = array (
 
     "odbc"         => "uodbc", // BC
 
-    "links"        => "support.php", // BC
-    "links.php"    => "support.php", // BC
+    "links"        => "support", // BC
+    "links.php"    => "support", // BC
     "oracle"       => "oci8",
     "_"            => "function.gettext",
     "cli"          => "features.commandline",
