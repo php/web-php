@@ -4,7 +4,8 @@
   <id>http://www.php.net/archive/2012.php#id2012-07-27-1</id>
   <published>2012-07-27T17:15:23+01:00</published>
   <updated>2012-07-27T17:15:23+01:00</updated>
-  <category term="frontpage" label="PHP.net frontpage news"/>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-11-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
   <link href="http://www.php.net/index.php#id2012-07-27-1" rel="alternate" type="text/html"/>
   <link href="http://www.php.net/archive/2012.php#id2012-07-27-1" rel="via" type="text/html"/>
   <content type="xhtml">
