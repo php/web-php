@@ -6,7 +6,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/branches.inc';
 
 // Notes for specific branches can be added here, and will appear in the table.
 $BRANCH_NOTES = array(
-	'4.4' => 'Has known remote code execution vulnerabilities.',
+	'5.3' => '<a href="/migration54">A guide is available for migrating from PHP 5.3 to 5.4.</a>',
+	'5.2' => '<a href="/migration53">A guide is available for migrating from PHP 5.2 to 5.3.</a>',
+	'5.1' => '<a href="/migration52">A guide is available for migrating from PHP 5.1 to 5.2.</a>',
+	'5.0' => '<a href="/migration51">A guide is available for migrating from PHP 5.0 to 5.1.</a>',
+	'4.4' => '<a href="/migration5">A guide is available for migrating from PHP 4 to PHP 5.0.</a><br />Has known remote code execution vulnerabilities.',
 );
 
 site_header('Unsupported Branches');
