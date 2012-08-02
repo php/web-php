@@ -295,7 +295,7 @@ if (isset($_POST['maillist'])) {
 // Print out a table for a given list array
 function output_lists_table($mailing_lists)
 {
-    echo '<table cellpadding="5" border="0" class="standard">', "\n";
+    echo '<table cellpadding="5" border="0" class="standard mailing-lists">', "\n";
     while ( list(, $listinfo) = each($mailing_lists)) {
         if (!is_array($listinfo)) {
             echo "<tr><th>{$listinfo}</th><th>Moderated</th><th>Archive</th>" .

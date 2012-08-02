@@ -470,6 +470,7 @@ div.xmlcode span.string {
 table.standard td {
 	background-color: #eeeeee;
 	color: inherit;
+	vertical-align: top;
 }
 table.standard th {
 	background-color: #cccccc;
@@ -491,6 +492,11 @@ table.standard th.subr {
 table.standard th.subl {
 	text-align: left;
 	vertical-align: top;
+}
+
+/* Mailing lists tables --------------------------------------------------- */
+table.mailing-lists td {
+	vertical-align: middle;
 }
 
 /* Mirror listing tables -------------------------------------------------- */
