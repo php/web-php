@@ -63,6 +63,8 @@ if (!is_array($res)) {
 
 // No results for query
 if ($res['ResultSet']['totalResultsAvailable'] == 0) {
+  echo '<h1>Perform an alternative search instead</h1>';
+  include './include/google-cse.inc';
   exit_with_pretty_error(null, 'No matches', 'No pages matched your query');
   exit;  
 }

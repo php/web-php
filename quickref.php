@@ -132,6 +132,9 @@ if ($snippet = is_known_snippet($notfound)) {
 }
 ?>
 
+<h1>Perform an alternative search here</h1>
+<?php include './include/google-cse.inc'; ?>
+
 <h1>PHP Function List</h1>
 
 <?php if (!empty($notfound) && count($maybe) > 0) { ?>
