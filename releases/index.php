@@ -123,9 +123,13 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		echo "<ul>\n";
 		foreach(array_merge($source, $windows) as $src) {
 			echo " <li>\n";
-			download_link($src["filename"], $src["name"]); echo "<br />\n";
-			if (isset($src["md5"])) {
-				echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
+			if (isset($src['filename'])) {
+				download_link($src["filename"], $src["name"]); echo "<br />\n";
+				if (isset($src["md5"])) {
+					echo '<span class="md5sum">md5: ' .$src["md5"]. "</span>\n";
+				}
+			} else {
+				echo '<a href="'.$src['link'].'">'.$src['name'].'</a>';
 			}
 			echo " </li>\n";
 		}
