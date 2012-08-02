@@ -133,7 +133,7 @@ if ($snippet = is_known_snippet($notfound)) {
 ?>
 
 <h1>Perform an alternative search here</h1>
-<?php include './include/google-cse.inc'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/google-cse.inc'; ?>
 
 <h1>PHP Function List</h1>
 
