@@ -2,11 +2,9 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'releases/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER["DOCUMENT_ROOT"] . "/include/releases.inc";
+include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"])) {
-	include_once $_SERVER["DOCUMENT_ROOT"] . "/include/version.inc";
-
 	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
 	$RELEASES[5][$PHP_5_2_VERSION]["date"] = $PHP_5_2_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
@@ -62,7 +60,31 @@ if (isset($_GET["serialize"])) {
 
 // Tarball list generated with:
 // cvs status -v php[34]/INSTALL |grep 'php_'|awk '{print $1}'|grep -Ev '(RC[0-9]*|rc[_0-9]*|REL|[ab][a0-9-]+|b..rc.|b.pl.|bazaar|pre|[ab])$'|sed -e 's,php_,,' -e 's,_,.,g'|sort -n|while read ver; do echo "        <option value=\"php-${ver}.tar.gz\">$ver</option>"; done
+
+// Show the two most recent EOLed branches.
+$eol = array();
+foreach (get_eol_branches() as $major => $branches) {
+	foreach ($branches as $branch => $detail) {
+		$eol[$detail['date']] = sprintf('<li>%s: %s</li>', $branch, date('j M Y', $detail['date']));
+	}
+}
+krsort($eol);
+$eol = implode('', array_slice($eol, 0, 2));
+
 $SIDEBAR_DATA = '
+<h3>End of Life Dates</h3>
+
+<p>
+ The most recent branches to reach end of life status are:
+</p>
+
+<ul>'.$eol.'</ul>
+
+<p>
+ You can also view a
+ <a href="/eol.php">list of end of life dates for all branches</a>.
+</p>
+
 <h3>Other PHP Releases</h3>
 <p>
  Release candidates and beta versions are not listed here.
