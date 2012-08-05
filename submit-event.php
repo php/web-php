@@ -121,7 +121,7 @@ if ($process) {
 
     if (isset($_POST['action']) && $_POST['action'] === 'Submit' && empty($errors)) {
         // Submit to master.php.net
-        $result = posttohost("https://master.php.net/entry/event.php", $_POST);
+        $result = posttohost("http://master.php.net/entry/event.php", $_POST);
         if ($result) {
             $errors[] = "There was an error processing your submission: $result";
         }
