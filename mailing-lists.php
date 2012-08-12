@@ -362,11 +362,11 @@ function output_lists_table($mailing_lists)
 <p>
  All of the mailing lists hosted at <a
  href="http://lists.php.net/">lists.php.net</a> are managed using the <a
- href="http://www.ezmlm.org/">ezmlm-idx</a> mailing list software.
+ href="http://untroubled.org/ezmlm/">ezmlm-idx</a> mailing list software.
  There are a variety of commands you can use to modify your subscription.
  Either send a message to <code>php-whatever-help@lists.php.net</code> (as in,
  <code>php-general-help@lists.php.net</code>) or you can view the commands for
- ezmlm <a href="http://www.ezmlm.org/ezman/ezman1.html">here.</a>
+ ezmlm <a href="http://untroubled.org/ezmlm/ezman/ezman1.html">here.</a>
 </p>
 
 <?php site_footer(); ?>
