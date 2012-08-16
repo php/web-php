@@ -64,7 +64,10 @@ if (!is_array($res)) {
 // No results for query
 if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   echo '<h1>Perform an alternative search instead</h1>';
-  include $_SERVER['DOCUMENT_ROOT'] . '/include/google-cse.inc';
+
+  // TODO Research possible encoding issues
+  google_cse($q); 
+
   exit_with_pretty_error(null, 'No matches', 'No pages matched your query');
   exit;  
 }

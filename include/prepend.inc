@@ -192,3 +192,29 @@ function myphpnet_beta() {
     return false;
 }
 
+// Default: Default search.
+// Lang: Not yet implemented (TODO: Compare google lang codes with ours. We did this for bing already, so maybe it's an easy fix)
+// TODO: Possible $default escaping issues
+function google_cse($default = '', $lang = 'en') {
+?>
+<div id="cse" style="width: 100%;">Loading</div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript"> 
+  google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
+  google.setOnLoadCallback(function() {
+    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+      '011570197911755000456:fip9wopfz_u', customSearchOptions);
+    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+    var options = new google.search.DrawOptions();
+    options.setAutoComplete(true);
+    customSearchControl.draw('cse', options);
+<?php
+    if ($default) {
+        echo "    customSearchControl.execute(" . json_encode($default) . ");";
+    }
+?>
+  }, true);
+</script>
+<?php
+}
+

@@ -133,7 +133,11 @@ if ($snippet = is_known_snippet($notfound)) {
 ?>
 
 <h1>Perform an alternative search here</h1>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/include/google-cse.inc'; ?>
+<?php
+  // TODO Fix encoding issues. We encode this earlier. Using _decode for now.
+  // We allow users to search for tags like <foo>
+  google_cse(htmlspecialchars_decode($notfound, ENT_QUOTES)); 
+?>
 
 <h1>PHP Function List</h1>
 
