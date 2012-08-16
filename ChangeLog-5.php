@@ -11,6 +11,142 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.6"></a><!-- {{{ 5.4.6 -->
+<h3>Version 5.4.6</h3>
+<b>16-August-2012</b>
+<ul>
+<li>CLI Server</li>
+<ul>
+    <li>Implemented FR <?php bugl(62700); ?> (have the console output 'Listening on http://localhost:8000').</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core</li>
+<ul>
+  <li><?php bugfix(62661); ?> (Interactive php-cli crashes if include() is used in auto_prepend_file).</li>
+  <li><?php bugfix(62653); ?>: (unset($array[$float]) causes a crash).</li>
+  <li><?php bugfix(62565); ?> (Crashes due non-initialized internal properties_table).</li>
+  <li><?php bugfix(60194); ?> (--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).  (r.hampartsumyan@gmail.</li>
+</ul>
+</ul>
+
+<ul>
+<li>DateTime</li>
+<ul>
+  <li><?php bugfix(62500); ?> (Segfault in DateInterval class when extended).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo</li>
+<ul>
+  <li><?php bugfix(61964); ?> (finfo_open with directory causes invalid free).  (reeze.xia@gmail.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li><?php bugfix(62564); ?> (Extending MessageFormatter and adding property causes crash).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQLnd</li>
+<ul>
+  <li><?php bugfix(62594); ?> (segfault in mysqlnd_res_meta::set_mode).</li>
+</ul>
+</ul>
+
+<ul>
+<li>readline</li>
+<ul>
+  <li><?php bugfix(62612); ?> (readline extension compilation fails with sapi/cli/cli.h: No such file).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection</li>
+<ul>
+  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value)<li>(reeze.xia@gmail.</li>
+</ul>
+</ul>
+
+<ul>
+<li>SimpleXML</li>
+<ul>
+  <li>Implemented FR <?php bugl(55218); ?> Get namespaces from current node.</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
+  <li><?php bugfix(61527); ?> (ArrayIterator gives misleading notice on next() when moved to the end). (reeze.xia@gmail.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams</li>
+<ul>
+  <li><?php bugfix(62597); ?> (segfault in php_stream_wrapper_log_error with ZTS build).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Zlib</li>
+<ul>
+  <li><?php bugfix(55544); ?> (ob_gzhandler always conflicts with zlib.output_compression).</li>
+</ul>
+</ul>
+
+<a name="5.3.16"></a><!-- {{{ 5.3.16 -->
+<h3>Version 5.3.16</h3>
+<b>16-August-2012</b>
+<ul>
+<li>Core</li>
+<ul>
+  <li><?php bugfix(60194); ?> (--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).  (r.hampartsumyan@gmail.</li>
+</ul>
+</ul>
+
+<ul>
+<li>DateTime</li>
+<ul>
+  <li><?php bugfix(62500); ?> (Segfault in DateInterval class when extended).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection</li>
+<ul>
+  <li><?php bugfix(62715); ?> (ReflectionParameter::isDefaultValueAvailable() wrong result).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
+</ul>
+</ul>
+
 <a name="5.4.5"></a><!-- {{{ 5.4.5 -->
 <h3>Version 5.4.5</h3>
 <b>19-July-2012</b>
