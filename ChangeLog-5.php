@@ -76,14 +76,14 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Reflection</li>
 <ul>
-  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value)</li>
+  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value).</li>
 </ul>
 </ul>
 
 <ul>
 <li>SimpleXML</li>
 <ul>
-  <li>Implemented FR <?php bugl(55218); ?> Get namespaces from current node.</li>
+  <li>Implemented FR <?php bugl(55218); ?> (Get namespaces from current node).</li>
 </ul>
 </ul>
 
