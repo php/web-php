@@ -34,7 +34,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>CURL</li>
 <ul>
-  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).  (r.hampartsumyan@gmail.</li>
+  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).</li>
 </ul>
 </ul>
 
@@ -48,7 +48,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Fileinfo</li>
 <ul>
-  <li><?php bugfix(61964); ?> (finfo_open with directory causes invalid free).  (reeze.xia@gmail.</li>
+  <li><?php bugfix(61964); ?> (finfo_open with directory causes invalid free).</li>
 </ul>
 </ul>
 
@@ -76,7 +76,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Reflection</li>
 <ul>
-  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value)<li>(reeze.xia@gmail.</li>
+  <li>Implemented FR <?php bugl(61602); ?> (Allow access to name of constant used as default value)</li>
 </ul>
 </ul>
 
@@ -91,7 +91,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>SPL</li>
 <ul>
   <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
-  <li><?php bugfix(61527); ?> (ArrayIterator gives misleading notice on next() when moved to the end). (reeze.xia@gmail.</li>
+  <li><?php bugfix(61527); ?> (ArrayIterator gives misleading notice on next() when moved to the end).</li>
 </ul>
 </ul>
 
@@ -115,6 +115,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Core</li>
 <ul>
+  <li><?php bugfix(62763); ?> (register_shutdown_function and extending class).</li>
+  <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class).</li>
+  <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length).</li>
+  <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM).</li>
   <li><?php bugfix(60194); ?> (--with-zend-multibyte and --enable-debug reports LEAK with run-test.php).</li>
 </ul>
 </ul>
@@ -122,7 +126,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>CURL</li>
 <ul>
-  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).  (r.hampartsumyan@gmail.</li>
+  <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE).</li>
+  <li><?php bugfix(62499); ?> (curl_setopt($ch, CURLOPT_COOKIEFILE, "") returns false).</li>
 </ul>
 </ul>
 
@@ -134,9 +139,30 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 
 <ul>
+<li>Enchant</li>
+<ul>
+  <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO</li>
+<ul>
+  <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction()).</li>
+</ul>
+</ul>
+
+<ul>
 <li>Reflection</li>
 <ul>
   <li><?php bugfix(62715); ?> (ReflectionParameter::isDefaultValueAvailable() wrong result).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Session</li>
+<ul>
+  <li>Fixed bug (segfault due to retval is not initialized).</li>
 </ul>
 </ul>
 
