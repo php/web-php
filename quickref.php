@@ -73,7 +73,7 @@ while (($entry = readdir($dirh)) !== FALSE) {
     if (substr($entry, 0, 1) == ".") { continue; }
     
     // For function and class pages, get the name out
-    if (preg_match('!(function|class)\.(.+)\.php!', $entry, $parts)) {
+    if (preg_match('!^(function|class)\.(.+)\.php$!', $entry, $parts)) {
         $funcname = str_replace('-', '_', $parts[2]);
         $functions[$entry] = $funcname;
 
