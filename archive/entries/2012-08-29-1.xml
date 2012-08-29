@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2013 - Call for Papers is Now Open!</title>
+  <id>http://www.php.net/archive/2012.php#id2012-08-29-1</id>
+  <published>2012-08-29T14:50:10+00:00</published>
+  <updated>2012-08-29T14:50:10+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-09-23</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-08-29-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca/en" title="ConFoo Web Techno Conference. February 25 - March  1, 2013 | Montreal, Canada">confoo-2013-php.jpg</default:newsImage>
+  <link href="http://confoo.ca/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>ConFoo is one of the most important developer-oriented conferences loaded with PHP content. ConFoo 2013 will be held on February 25 through March 1 in Montreal, Canada.</p>
+     
+     <p>The team just opened its call for papers. Candidates can submit proposals <b>until September 23</b>. Consult the <a href="http://confoo.ca/en/call-for-papers">call for papers</a> page for details and to start submitting. That page also explains what expenses ConFoo can cover for speakers. You can even get <a href="http://confoo.ca/en/call-for-papers/guidelines">advice</a> on how to write proposals.</p>
+     
+     <p>The call for papers is public, meaning that all proposals get published on the website for others to vote and comment on. This approach allows the organizers to pick subjects that have most interest in the community. The comments are only visible to speakers and organizers to avoid influencing the votes.</p>
+     
+     <p>To stay in touch via Twitter, follow <a href="http://twitter.com/confooca">@confooca</a> and use the <a href="http://twitter.com/#!/search/%23confoo">#confoo</a> tag. You can also help promote the event with these cool <a href="http://confoo.ca/en/propaganda">badges</a> for your site.</p>
+     
+    </div>
+  </content>
+</entry>
