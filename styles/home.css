@@ -347,8 +347,54 @@ div.home-sidebar a:focus {
     border: 0;
     color: #333;
     padding: 0.6em 1em;
+    line-height: 1.25em;
     text-decoration: none;
     display: block;
+}
+
+#thanks-to .thanks-two {
+    position: relative;
+    overflow: hidden;
+    height: 2.4em;
+}
+#thanks-to .thanks-two a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 0;
+    background: transparent;
+}
+#thanks-to .thanks-two a:hover {
+    background: transparent;
+}
+#thanks-to .thanks-two a:first-child {
+    border-top: 2.45em solid #eee;
+    border-right: 1em solid transparent;
+    width: 55%;
+}
+#thanks-to .thanks-two a:first-child:hover {
+    border-top: 2.45em solid #ddd;
+}
+#thanks-to .thanks-two a:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 57%;
+    border-bottom: 2.45em solid #eee;
+    border-left: 1em solid transparent;
+}
+#thanks-to .thanks-two a:last-child:hover {
+    border-bottom: 2.45em solid #ddd;
+}
+#thanks-to .thanks-two span {
+    display: block;
+    position: absolute;
+    top: -1.85em;
+    left: 1em;
+}
+#thanks-to .thanks-two a:last-child span {
+    top: 0.6em;
 }
 
 .home .newsItem {

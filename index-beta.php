@@ -145,8 +145,14 @@ $thanksTo = <<<THANKS
         <li><a target="_blank" href="http://www.servercentral.net/" title="Server Central">Server Central</a></li>
         <li><a target="_blank" href="http://www.hostedsolutions.com/" title="Hosted Solutions">Hosted Solutions</a></li>
         <li><a target="_blank" href="http://www.spry.com/" title="Spry VPS Hosting">Spry VPS Hosting</a></li>
-        <li><a target="_blank" href="http://ez.no/" title="eZ Systems">eZ Systems</a></li>
-        <li><a target="_blank" href="http://www.hit.no/">HiT</a></li>
+        <li class="thanks-two">
+            <a target="_blank" href="http://ez.no/" title="eZ Systems">
+                <span>eZ Systems</span>
+            </a>
+            <a target="_blank" href="http://www.hit.no/">
+                <span>HiT</span>
+            </a>
+        </li>
         <li><a target="_blank" href="http://www.osuosl.org" title="OSU Open Source Lab">OSU Open Source Lab</a></li>
         <li><a target="_blank" href="http://www.yahoo.com/" title="Yahoo! Inc.">Yahoo! Inc.</a></li>
         <li><a target="_blank" href="http://www.binarysec.com/" title="BinarySEC">BinarySEC</a></li>
