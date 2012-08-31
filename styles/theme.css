@@ -745,6 +745,10 @@ table.standard td {
 
 .newsItem {
     margin:1.5em 0;
+    border-bottom: solid 0.25em #99c;
+}
+.newsItem:last-child {
+    border-bottom: 0;
 }
 .newsItem .published {
     display:inline-block;

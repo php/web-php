@@ -351,6 +351,9 @@ div.home-sidebar a:focus {
     display: block;
 }
 
+.home .newsItem {
+    border-bottom: 0;
+}
 .newsItem h2 a {
     border-bottom-width:0;
 }
