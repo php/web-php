@@ -438,6 +438,24 @@ ul.chunklist_children {
 .docs #layout #usernotes {
     margin-left: 264px;
 }
+
+/* Default rule for non-@media supporting browsers (IE<9, basically). */
+.docs #layout .layout-content {
+    margin-right: 160px;
+}
+
+@media screen and (max-width: 1199px) {
+    .docs #layout .layout-content {
+        margin-right: 160px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1365px) {
+    .docs #layout .layout-content {
+        margin-right: 80px;
+    }
+}
+
 #changelang-langs {
     width:120px; 
     font-size:12px;
