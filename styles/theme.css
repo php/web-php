@@ -556,9 +556,14 @@ aside.tips div.inner {
 
 
 #layout {
-    max-width: 92em;
-    min-width: 960px;
+    width: 960px;
     margin: 1.5em auto;
+}
+
+@media screen and (min-width: 1280px) {
+    #layout {
+        width: 75%;
+    }
 }
 
 .layout-menu {
