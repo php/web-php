@@ -320,9 +320,34 @@ div.home-sidebar a:focus {
     margin-bottom:-.25em;
     background:#669;
 }
+
 #thanks-to {
     border-top:.25em solid #669;
     padding-top:1.25em;
+}
+#thanks-to ul, #thanks-to li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#thanks-to ul {
+    width: 976px;
+}
+#thanks-to li {
+    float: left;
+    width: 228px;
+    margin: 0.6em 16px 0.6em 0;
+}
+#thanks-to li a:hover {
+    background: #ddd;
+}
+#thanks-to li a {
+    background: #eee;
+    border: 0;
+    color: #333;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    display: block;
 }
 
 .newsItem h2 a {
