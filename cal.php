@@ -3,6 +3,11 @@
 $_SERVER['BASE_PAGE'] = 'cal.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+$site_header_config = array(
+    "current" => "calendar",
+    "css" => array('calendar.css'),
+);
+
 /*
  This script serves three different forms of the calendar data:
     a monthly view ($cm, $cy)
@@ -30,7 +35,7 @@ if ($cy != 0 && !valid_year($cy)) {
 if ($id) {
     // Try to load event by ID and display header and info for that event
     if ($event = load_event($id)) {
-        site_header("Event: " . stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), array("current" => "FIXME"));
+        site_header("Event: " . stripslashes(htmlentities($event['sdesc'], ENT_QUOTES | ENT_IGNORE, 'UTF-8')), $site_header_config);
         display_event($event, 0);
         $begun = TRUE;
     }
@@ -51,7 +56,8 @@ elseif ($cy && $cm && $cd) {
         
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
-            site_header("Events: ".date("F j, Y", $date), array("current" => "FIXME"));
+            $site_header_config = array('current' => 'calendar calendar-day') + $site_header_config;
+            site_header("Events: ".date("F j, Y", $date), $site_header_config);
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
                 display_event($event, 0);
@@ -87,7 +93,7 @@ if (!isset($cy) || $cy == 0) { $cy = date("Y"); }
 $date = mktime(0, 0, 1, $cm, 1, $cy);
 
 if (!$begun) {
-  site_header("Events: ".date("F Y", $date), array("current" => "FIXME"));
+  site_header("Events: ".date("F Y", $date), $site_header_config);
 ?>
 <div class="tip">
  <p>
