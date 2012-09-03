@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHPBenelux Conference 2013</title>
+  <id>http://www.php.net/archive/2012.php#id2012-09-03-1</id>
+  <published>2012-09-03T11:52:26+01:00</published>
+  <updated>2012-09-03T11:52:26+01:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-01-26</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-09-03-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpbenelux.eu/2013/" title="PHPBenelux Conference 2013">phpbenelux_conference_logo-01-e1344277762627.png</default:newsImage>
+  <link href="http://conference.phpbenelux.eu/2013/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     After a very successful 2012 edition, we are proud to announce
+     <a href="http://conference.phpbenelux.eu/2013/">PHPBenelux Conference 2013</a>.
+     This event will take place on Friday January 25th and
+     Saturday January 26th 2013 in Antwerp, Belgium.
+     </p>
+     
+     <p>
+     The venue is the same, the concept is the same and we hope to have an equally
+     awesome speaker lineup. To succeed in that, we need your talk submissions.
+     <a href="http://conference.phpbenelux.eu/2013/">Our CFP is officially open</a>,
+     send in your papers and we hope to welcome you in January.
+     </p>
+    </div>
+  </content>
+</entry>
