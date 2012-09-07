@@ -925,3 +925,9 @@ table.standard th.subr {
     background: #3f438d;
     color: white;
 }
+
+#layout .cse .gs-no-results-result .gs-snippet,
+#layout .gs-no-results-result .gs-snippet {
+    background: white;
+    border: 0;
+}
