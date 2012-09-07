@@ -109,6 +109,11 @@ ul {
     margin: 1.5em;
 }
 
+ol {
+    list-style-type: decimal;
+    margin: 1.5em;
+}
+
 hr {
     margin:1.5em 0 1.25em;
     border:0;
