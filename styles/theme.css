@@ -791,3 +791,137 @@ table.standard th.subr {
     margin: 0 auto;
     clear:both;
 }
+
+/* Search results. */
+#layout .cse table.gsc-search-box,
+#layout table.gsc-search-box {
+    border: solid 1px #99c;
+}
+
+#layout .cse input.gsc-input,
+#layout input.gsc-input {
+    border: 0;
+}
+
+#layout .cse table.gsc-search-box td,
+#layout table.gsc-search-box td {
+    padding: 2px;
+}
+
+#layout .cse input.gsc-search-button,
+#layout input.gsc-search-button {
+    background: #669;
+    border: solid 1px #669;
+    border-radius: 0;
+    color: white;
+    font-size: 100%;
+}
+
+#layout .cse .gsc-clear-button,
+#layout .gsc-clear-button {
+    display: none;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive,
+#layout .gsc-tabHeader.gsc-tabhActive,
+#layout .cse .gsc-tabHeader.gsc-tabhInactive,
+#layout .gsc-tabHeader.gsc-tabhInactive {
+    border: 0;
+    background-color: white;
+    font-size: 100%;
+    font-weight: bold;
+    margin-right: 0;
+    padding: 0 26px 0 13px;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive,
+#layout .gsc-tabHeader.gsc-tabhActive {
+    background: white url(../images/sprites.png) no-repeat scroll 100% -25px;
+    border-bottom: solid 0.25em #669;
+    color: black;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhInactive,
+#layout .gsc-tabHeader.gsc-tabhInactive {
+    background: white url(../images/sprites.png) no-repeat scroll 100% 5px;
+    border-bottom: solid 0.25em #99c;
+    color: #777;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhInactive:hover,
+#layout .gsc-tabHeader.gsc-tabhInactive:hover {
+    border-bottom: solid 0.25em #669;
+    color: #444;
+}
+
+#layout .cse .gsc-tabsArea .gs-spacer {
+    display: none;
+}
+
+#layout .cse .gsc-tabsArea,
+#layout .gsc-tabsArea {
+    border-bottom: 0;
+}
+
+#layout .cse .gsc-above-wrapper-area,
+#layout .gsc-above-wrapper-area {
+    border-bottom: solid 0.25em #cacaca;
+}
+
+#layout .cse .gsc-webResult.gsc-result:hover,
+#layout .gsc-webResult.gsc-result:hover {
+    background: #efefef;
+    border-left: solid 1px white;
+}
+
+#layout .cse .gsc-result-info,
+#layout .gsc-result-info,
+#layout .cse .gs-webResult .gs-visibleUrl,
+#layout .gs-webResult .gs-visibleUrl,
+#layout .cse .gs-webResult .gs-visibleUrl-short,
+#layout .gs-webResult .gs-visibleUrl-short {
+    color: #666;
+    font-weight: normal;
+}
+
+#layout .cse .gs-result .gs-title,
+#layout .gs-result .gs-title {
+    text-decoration: none;
+}
+
+#layout .cse .gs-webResult.gs-result a,
+#layout .gs-webResult.gs-result a,
+#layout .cse .gs-webResult.gs-result a b,
+#layout .gs-webResult.gs-result a b {
+    color: #3f438d;
+    text-decoration: none;
+}
+
+#layout .cse .gs-webResult.gs-result a:focus,
+#layout .gs-webResult.gs-result a:focus,
+#layout .cse .gs-webResult.gs-result a:hover,
+#layout .gs-webResult.gs-result a:hover,
+#layout .cse .gs-webResult.gs-result a:focus b,
+#layout .gs-webResult.gs-result a:focus b,
+#layout .cse .gs-webResult.gs-result a:hover b,
+#layout .gs-webResult.gs-result a:hover b {
+    color: #015;
+}
+
+#layout .cse .gsc-cursor-box,
+#layout .gsc-cursor-box {
+    border-top: solid 0.25em #cacaca;
+}
+
+#layout .cse .gsc-cursor-box .gsc-cursor-page,
+#layout .gsc-cursor-box .gsc-cursor-page {
+    color: #3f438d;
+    font-size: 100%;
+    text-decoration: none;
+}
+
+#layout .cse .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page,
+#layout .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
+    background: #3f438d;
+    color: white;
+}
