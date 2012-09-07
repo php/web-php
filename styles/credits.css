@@ -1,5 +1,10 @@
 /* Overrides for the default phpcredits() styling in credits.php. */
 
+section.layout-content {
+    margin: 0 auto;
+    width: 960px;
+}
+
 h1 {
     margin-bottom: 0.7em;
 }
