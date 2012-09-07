@@ -743,6 +743,10 @@ table.standard td {
     vertical-align: middle;
 }
 
+.newsImage img {
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
 .newsItem {
     margin:1.5em 0;
     border-bottom: solid 0.25em #99c;
