@@ -729,7 +729,7 @@ table.standard {
 }
 
 table.standard td, table.standard th {
-    border: 1px solid #efefef;
+    border: 1px solid #ddd;
 }
 
 table.standard tr:nth-child(even) td {
@@ -748,24 +748,19 @@ table.standard td {
     vertical-align: middle;
 }
 
-/* Shims for the pages that relied on the old .sub behaviour for highlighting. */
-.table-sub-highlight table.standard td, .table-sub-highlight table.standard th {
-    border: 1px solid #ddd;
-}
-
-.table-sub-highlight tr:nth-child(even) td.subr,
-.table-sub-highlight tr:nth-child(even) th.subr,
-.table-sub-highlight tr td.subr,
-.table-sub-highlight tr th.subr,
-.table-sub-highlight tr:nth-child(even) td.sub,
-.table-sub-highlight tr:nth-child(even) th.sub,
-.table-sub-highlight tr td.sub,
-.table-sub-highlight tr th.sub {
+table.standard tr:nth-child(even) td.subr,
+table.standard tr:nth-child(even) th.subr,
+table.standard tr td.subr,
+table.standard tr th.subr,
+table.standard tr:nth-child(even) td.sub,
+table.standard tr:nth-child(even) th.sub,
+table.standard tr td.sub,
+table.standard tr th.sub {
     background: #eee;
 }
 
-.table-sub-highlight td.subr,
-.table-sub-highlight th.subr {
+table.standard td.subr,
+table.standard th.subr {
     text-align: right;
 }
 
