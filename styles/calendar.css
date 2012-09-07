@@ -104,36 +104,36 @@
 }
 
 /* Single day view: let's try putting the events into columns. */
-section.calendar-day .vevent {
+.calendar-day .vevent {
     float: left;
     width: 33%;
     margin-bottom: 1.5em;
 }
 
-section.calendar-day .vevent:nth-child(3n+2) {
+.calendar-day .vevent:nth-child(3n+2) {
     clear: left;
 }
 
-section.calendar-day .vevent td {
+.calendar-day .vevent td {
     background: #eee;
     border-right: solid 2.5em white;
     padding: 0.4em;
 }
 
-section.calendar-day .vevent .url {
+.calendar-day .vevent .url {
     border-bottom: solid 1px #99c;
     color: #3f438d;
     font-size: 1em;
 }
 
-section.calendar-day .vevent .url b {
+.calendar-day .vevent .url b {
     font-weight: bold;
 }
 
-section.calendar-day .vevent tr.description td {
+.calendar-day .vevent tr.description td {
     padding-top: 1.5em;
 }
 
-section.calendar-day > br {
+.calendar-day section > br {
     display: none;
 }

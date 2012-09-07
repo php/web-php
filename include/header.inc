@@ -80,7 +80,7 @@ if (isset($shortname) && $shortname) {
 <?php endif ?>
 
 </head>
-<body class="<?php print $curr; ?>">
+<body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
 <div id="head-beta-warning">
   <div id="beta-warning">

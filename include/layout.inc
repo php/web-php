@@ -814,12 +814,14 @@ function site_header_beta($title = '', $config = array())
         "lang" => myphpnet_language(),
         "current" => "",
         "meta-navigation" => array(),
+        'classes' => '',
     );
 
     $config += $defaults;
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
+    $classes = $config['classes'];
 
     if (empty($title)) {
         $title = "Hypertext Preprocessor";

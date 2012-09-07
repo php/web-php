@@ -4,7 +4,7 @@ $_SERVER['BASE_PAGE'] = 'cal.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 $site_header_config = array(
-    "current" => "calendar",
+    "current" => "community",
     "css" => array('calendar.css'),
 );
 
@@ -56,7 +56,7 @@ elseif ($cy && $cm && $cd) {
         
         // Try to load events for that day, and display them all
         if ($events = load_events($date)) {
-            $site_header_config = array('current' => 'calendar calendar-day') + $site_header_config;
+            $site_header_config = array('classes' => 'calendar calendar-day') + $site_header_config;
             site_header("Events: ".date("F j, Y", $date), $site_header_config);
             echo "<h2>", date("F j, Y", $date), "</h2>\n";
             foreach ($events as $event) {
