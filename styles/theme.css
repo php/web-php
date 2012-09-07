@@ -792,11 +792,6 @@ table.standard th.subr {
     clear:both;
 }
 
-p code {
-    font-family: Verdana, Arial, sans-serif;
-    font-size:100%;
-}
-
 /* Changelog pages. */
 .changelog h3 {
     /* Fake the <hr> above headings that we used to have before rejigging the
