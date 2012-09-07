@@ -453,7 +453,8 @@ div.phpcode span.string {
     background-color: #EFEFEF;
 }
 pre.info {
-    font-family:"Courier New", Courier, monospace;
+    font-family: monospace;
+    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
     border: 1px solid #ddd;
     margin: 1em 2em 1.3em;
     margin-right: 0.8em;
