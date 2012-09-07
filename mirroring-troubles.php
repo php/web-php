@@ -13,7 +13,7 @@ $SIDEBAR_DATA = '
 </p>
 ';
 
-site_header("The PHP mirrors problem and troubleshooting guide", array("current" => "FIXME"));
+site_header("The PHP mirrors problem and troubleshooting guide", array("current" => "help"));
 ?>
 
 <h1>Common troubles that PHP.net mirrors face</h1>
@@ -33,15 +33,15 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
  directory and disable it from there. For example:
 </p>
 <pre class="info">
-  &lt;VirtualHost *:80>
-    &lt;Directory /path/to/phpweb>
+  &lt;VirtualHost *:80&gt;
+    &lt;Directory /path/to/phpweb&gt;
       Options -Indexes -MultiViews
-    &lt;/Directory>
+    &lt;/Directory&gt;
    
     DocumentRoot /path/to/phpweb
     ServerName ....
     ....
-  &lt;/VirtualHost> 
+  &lt;/VirtualHost&gt; 
 </pre>
 <p>
  The <a href="mirroring.php#settings">mirror settings</a> example also 
@@ -53,9 +53,9 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <a name="content-type"></a>
 <h3>Improper Content-Type [<a href="/manual/en/faq.html.php">?</a>]</h3>
 <p>
- Some pages are returning incorrect <em>Content-Type</em> headers. For example,
- xx.php.net/manual/en/faq.html.php should be returning <em>text/html</em> 
- instead of <em>application/x-httpd-php</em>. See also the Apache 
+ Some pages are returning incorrect <code>Content-Type</code> headers. For example,
+ xx.php.net/manual/en/faq.html.php should be returning <code>text/html</code> 
+ instead of <code>application/x-httpd-php</code>. See also the Apache 
  documentation describing 
  <a href="http://httpd.apache.org/docs/content-negotiation.html">Content 
  Negotiation</a>. This problem might be specific to 
@@ -65,7 +65,7 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <a name="manual-redirect"></a>
 <h3>Manual redirects [<a href="/manual/">?</a>]</h3>
 <p>
- By default, Apache inserts an alias for <em>/manual/</em> in the configuration 
+ By default, Apache inserts an alias for <code>/manual/</code> in the configuration 
  and this causes problems for mirrors. So for example if you find that 
  the manuals are listed on the documentation page but all of the links 
  open up a search page, you probably suffer from this problem and must
@@ -76,7 +76,7 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <h3>Broken manual shortcuts [<a href="/echo">?</a>]</h3>
 <p>
  If the shortcut features [e.g. xx.php.net/echo] are not working, be sure 
- the manual files are really under <em>DOCUMENT_ROOT</em> and that the English 
+ the manual files are really under <code>DOCUMENT_ROOT</code> and that the English 
  manual files are present. Also make sure that you have a correct 
  ErrorDocument setting.
 </p>
@@ -94,7 +94,7 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
 <p>
  The <a href="mirroring.php">mirroring guidelines</a> mention that Apache2
  enables a 'var' handler by default and this may be disabled by using
- <em>RemoveHandler var</em> in the configuration file.
+ <code>RemoveHandler var</code> in the configuration file.
 </p>
 
 <a name="msi"></a>
@@ -104,7 +104,7 @@ site_header("The PHP mirrors problem and troubleshooting guide", array("current"
  when attempting to download the PHP Installer (a .msi file). Your web 
  server configuration should be adjusted to force .msi files as 
  'application/octet-stream'. In Apache this may be done by using: 
- <em>AddType application/octet-stream .msi</em>
+ <code>AddType application/octet-stream .msi</code>
 </p>
 
 <a name="unlisted"></a>

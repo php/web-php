@@ -109,7 +109,7 @@ else {
         "href"  => $MYSITE . "phpnetimprovedsearch.src",
         "title" => "Add PHP.net search"
     );
-    site_header("Search", array("link" => array($link), "current" => "FIXME"));
+    site_header("Search", array("link" => array($link), "current" => "docs"));
 ?>
 <p>
  The autocompleting search feature is accessible via the form elements at the top

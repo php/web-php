@@ -20,7 +20,7 @@ $SIDEBAR_DATA = '
 ';
 */
 
-site_header("Mirroring The PHP Website", array("current" => "FIXME"));
+site_header("Mirroring The PHP Website", array("current" => "community"));
 
 // Get a minute to print out for the cron example
 function make_seed()
@@ -94,7 +94,7 @@ $minute = rand(0, 59);
 
 <p>
  If you are not an official mirror (e.g. you mirror the site for your company's
- internal use), you should not rsync from <tt>rsync.php.net</tt> more frequently
+ internal use), you should not rsync from <code>rsync.php.net</code> more frequently
  than once a day, or you may find your IP blocked. Also, please make
  an effort to only mirror those parts of the site that you actually need.
  (For example, <a href="#exclude">exclude the manual in all languages that you
@@ -134,22 +134,22 @@ europe.rsync.php.net
 </pre>
 
 <p>
- after <tt>"--delete-after"</tt> in the command line above (substituting your
- prefered language code in place of <tt>'en'</tt>). You can also exclude the
+ after <code>"--delete-after"</code> in the command line above (substituting your
+ prefered language code in place of <code>'en'</code>). You can also exclude the
  whole distributions directory (and the related extra folder) by replacing
- <tt>"--exclude='distributions/manual/**'"</tt> with
- <tt>"--exclude='distributions/**' --exclude='extra/**'"</tt>.
+ <code>"--exclude='distributions/manual/**'"</code> with
+ <code>"--exclude='distributions/**' --exclude='extra/**'"</code>.
 </p>
 
 <p>
- If <tt>/your/local/path</tt> isn't in your web document tree (why isn't it?),
- then symlink the <tt>phpweb/</tt> directory to the correct place on your
+ If <code>/your/local/path</code> isn't in your web document tree (why isn't it?),
+ then symlink the <code>phpweb/</code> directory to the correct place on your
  server.
 </p>
 
 <p>
  Official PHP mirror sites should provide the exact content coming from
- <tt>rsync.php.net</tt>, and should not be altered in any way not described
+ <code>rsync.php.net</code>, and should not be altered in any way not described
  in the mirroring guidelines. Failing to do so can result in immediate
  removal of your mirror from our list.
 </p>
@@ -177,7 +177,7 @@ europe.rsync.php.net
 <h2>Setup Apache VirtualHost</h2>
 
 <p>
- Make sure your web server is set up to serve up <tt>.php</tt> files
+ Make sure your web server is set up to serve up <code>.php</code> files
  as PHP parsed files. If it isn't, add the mime-type to your config.
 </p>
 <p class="warn">
@@ -252,10 +252,10 @@ europe.rsync.php.net
  You should only start to set up an Apache virtualhost for an official
  mirror, if you have <a href="#rule">contacted us first</a>, and asked
  for a possible name for your mirror. The official names for PHP mirrors
- are in the convention: <tt>"xx.php.net"</tt>, where <tt>"xx"</tt> is
+ are in the convention: <code>"xx.php.net"</code>, where <code>"xx"</code> is
  replaced by the 2-letter ISO country code of your mirror's location. If
- there already is a <tt>"xx.php.net"</tt>, then you will probably get
- <tt>"xx2.php.net"</tt>.  Do not assume that you know the code you will
+ there already is a <code>"xx.php.net"</code>, then you will probably get
+ <code>"xx2.php.net"</code>.  Do not assume that you know the code you will
  receive until your application has been reviewed and approved, and do
  not submit an application saying, for example, "We are applying to
  become DE.PHP.NET," because it's possible that the mirror already
@@ -267,10 +267,10 @@ europe.rsync.php.net
 <p>
  Before adding new official mirrors to our DNS, we require the maintainers
  to set up the mirrors with an address we can use as a CNAME in the DNS.
- This subdomain (<tt>the.cname.you.set.up.example.com</tt> in the above
+ This subdomain (<code>the.cname.you.set.up.example.com</code> in the above
  example) will be checked by mirror admins before the mirror is added.
  Therefore it is important that the mirror is capable of serving requests
- for this name and the <tt>(www.)xx.php.net</tt> address provided by the
+ for this name and the <code>(www.)xx.php.net</code> address provided by the
  mirror administrators.
 </p>
 
@@ -281,7 +281,7 @@ europe.rsync.php.net
  or just a specific hostname/IP address. Consult
  <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
  documentation</a> for the differences of the two methods. It is very
- important to use your <tt>xx.php.net</tt> address as the ServerName, so
+ important to use your <code>xx.php.net</code> address as the ServerName, so
  URL redirections will keep the requests in the php.net domain, ensuring
  that the My PHP.net service will work.
 </p>
@@ -319,7 +319,7 @@ europe.rsync.php.net
 <p>
  Remember to specify the same rsync parameters you used to get
  the phpweb files. You should try to stagger your times a bit from the
- example to help spread the load on the <tt>rsync.php.net</tt> server.
+ example to help spread the load on the <code>rsync.php.net</code> server.
 </p>
 
 <h2>Sponsor Logo</h2>
@@ -332,7 +332,7 @@ europe.rsync.php.net
 
 <ul>
  <li>Create a 120 x 60 pixel sized logo button.</li>
- <li>Copy it to your <tt>/www/htdocs/phpweb/backend</tt> folder as <tt>mirror.gif</tt>, <tt>mirror.jpg</tt> or <tt>mirror.png</tt>.</li>
+ <li>Copy it to your <code>/www/htdocs/phpweb/backend</code> folder as <code>mirror.gif</code>, <code>mirror.jpg</code> or <code>mirror.png</code>.</li>
  <li>Go visit your mirror URL and check if it is there.</li>
 </ul>
 
@@ -389,7 +389,7 @@ europe.rsync.php.net
  </li>
  <li>
   A hostname that we can use as a CNAME for the country-code-based
-  name of the mirror (<tt>the.cname.you.set.up.example.com</tt> in the
+  name of the mirror (<code>the.cname.you.set.up.example.com</code> in the
   above setup example). Using a name means you can move the mirror to
   another IP address without coordinating with us at all.
  </li>
@@ -407,8 +407,8 @@ europe.rsync.php.net
 </ul>
 
 <p>
- There is a mailing list named <tt>"php-mirrors"</tt> at
- <tt>lists.php.net</tt> which we would appreciate if you could sign up to.
+ There is a mailing list named <code>"php-mirrors"</code> at
+ <code>lists.php.net</code> which we would appreciate if you could sign up to.
  This mailing list is extremly low traffic and only used for communication
  between mirror maintainers and the php.net webmasters.
 </p>

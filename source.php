@@ -32,7 +32,7 @@ $SIDEBAR_DATA = '
  <a href="http://git.php.net/?p=web/php.git;a=summary">git.php.net</a>.
 </p>
 ';
-site_header("Show Source", array("current" => "FIXME"));
+site_header("Show Source", array("current" => "community"));
 
 // No file param specified
 if (!isset($_GET['url']) || (isset($_GET['url']) && !is_string($_GET['url']))) {

@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'mirroring-stats.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Setting Up Local Stats", array("current" => "FIXME"));
+site_header("Setting Up Local Stats", array("current" => "community"));
 ?>
 
 <h1>Setting Up Local Stats</h1>
@@ -26,15 +26,15 @@ site_header("Setting Up Local Stats", array("current" => "FIXME"));
  <li>
   <p>
    Install The Webalizer<br /><br />
-   There is a <tt>configure</tt> file in the distribution now, and other setup options
-   are also available. Consult the <tt>INSTALL</tt> file included in the package.
-   Copy the executable to somewhere accessible, eg. <tt>/usr/bin</tt>.
+   There is a <code>configure</code> file in the distribution now, and other setup options
+   are also available. Consult the <code>INSTALL</code> file included in the package.
+   Copy the executable to somewhere accessible, eg. <code>/usr/bin</code>.
   </p>
  </li>
  <li>
   <p>
    Grab <a href="/mirrorkit.tgz">mirrorkit.tgz</a>, extract
-   <tt>stats/php.conf</tt> and edit the file.<br /><br />
+   <code>stats/php.conf</code> and edit the file.<br /><br />
    This is the main conf file for The Webalizer. Specifically, you will want to 
    change the lines which define where your log file sits, where the output
    should go, and the name of your host machine. Look for these settings:
@@ -47,7 +47,7 @@ site_header("Setting Up Local Stats", array("current" => "FIXME"));
   <p>
    Give it a test<br /><br />
    From the command line in the stats directory, type:
-   <tt>webalizer -c php.conf</tt> You should get an index
+   <code>webalizer -c php.conf</code> You should get an index
    file, a usage file for the current month, some images,
    and a history file.
   </p>

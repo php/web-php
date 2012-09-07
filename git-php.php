@@ -19,7 +19,7 @@ $SIDEBAR_DATA = '
  <a href="/git.php">Git</a>. No Git account is required.
 </p>
 ';
-site_header("Using Git for PHP Development", array("current" => "FIXME"));
+site_header("Using Git for PHP Development", array("current" => "community"));
 
 $groups = array(
   "none" => "Choose One",
@@ -281,7 +281,9 @@ EOT;
  <a href="http://pear.php.net/">the PEAR website</a>. If you have a new PECL
  extension you wish to contribute, bring it up on the appropriate
  <a href="http://pecl.php.net/support.php">PECL mailing list</a> first. 
- <br />
+</p>
+
+<p>
  Once your PEAR package has been approved, or you get the sense that
  people generally agree that your PECL contribution is worthwhile, you
  may apply for a Git account here. Specify the name of your PEAR package
@@ -381,7 +383,7 @@ foreach ($purposes as $i => $p) { ?>
  <td><input type="text" size="10" name="yesno" class="max" value="no" /></td>
 </tr>
 <tr>
- <th>Type of initial karma (who to send this request to):</th>
+ <th class="subr">Type of initial karma (who to send this request to):</th>
  <td>
   <select name="group">
 <?php

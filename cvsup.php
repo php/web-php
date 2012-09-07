@@ -28,7 +28,7 @@ $SIDEBAR_DATA = '
  Compiled snapshots for Windows users are also included.
 </p>
 ';
-site_header("Using CVSup to maintain a local CVS repository", array("current" => "FIXME"));
+site_header("Using CVSup to maintain a local CVS repository", array("current" => "help"));
 ?>
 
 <h1>Using CVSup To Maintain A Local CVS Repository</h1>
@@ -50,29 +50,27 @@ site_header("Using CVSup to maintain a local CVS repository", array("current" =>
  </li>
  <li>
   Create a php.cvsup file containing the following content:
-  <pre>
-*default host=CVSup.php.net
+<pre class="info">*default host=CVSup.php.net
 *default base=/usr/src/php
 *default release=cvs
 *default compress
 *default tag=.
 *default delete use-rel-suffix
-php-src
-  </pre>
-  This will cause the php-src tree to be stored in <tt>/usr/src/php</tt>
+php-src</pre>
+  This will cause the php-src tree to be stored in <code>/usr/src/php</code>
   (you need to create that directory manually).
  </li>
  <li>
   At a command prompt, simply type:
-  <pre>cvsup php.cvsup</pre>
+  <code>cvsup php.cvsup</code>
  </li>
  <li>
   If you are behind a firewall, you might need to use:
-  <pre>cvsup -P - php.cvsup</pre>
+  <code>cvsup -P - php.cvsup</code>
  </li>
  <li>
   To build PHP, you need to install a few utilities (GNU autoconf,
-  libtool, bison). Cd into <tt>php-src</tt> and run
+  libtool, bison). Cd into <code>php-src</code> and run
   <code>./buildconf</code>.
  </li>
 </ol>
