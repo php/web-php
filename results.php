@@ -68,7 +68,7 @@ if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   // TODO Research possible encoding issues
   google_cse($q); 
 
-  exit_with_pretty_error(null, 'No matches', 'No pages matched your query');
+  site_footer();
   exit;  
 }
 
