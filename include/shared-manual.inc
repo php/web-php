@@ -712,7 +712,7 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 	    }
 	    $rredir_filename = urlencode($redir_filename);
 	    $flag = "<div class=\"features\">
-	    <a href=\"/manual/flag-note.php?id={$id}&page={$rredir_filename}\" id=\"$id\" class=\"usernotes-flag\" title=\"Flag this user note...\">flag</a>
+	    <a href=\"/manual/flag-note.php?id={$id}&page={$rredir_filename}\" id=\"$id\" class=\"usernotes-flag\" title=\"Report a problem...\">flag</a>
 	    </div>";
 	    $votediv = <<<EOL
   <div class="votes">
