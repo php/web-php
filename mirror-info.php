@@ -21,6 +21,8 @@ $md5_ok = (int) (file_exists($filename) && md5_file($filename) == $PHP_5_3_MD5["
 // Gets all available sqlite versions for possible future sqlite wrapper
 $sqlite = get_available_sqlites();
 
+$exts = join(get_loaded_extensions(), ',');
+
 if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e5cd90e") {
 	$retval = run_self_tests();
 	$output = isset($_GET["output"]) ? $_GET["output"] : "php";
@@ -45,6 +47,7 @@ echo join('|', array(
     default_language(), // 5: Mirror language
     'manual-noalias',   // 6: /manual alias check is done elsewhere now
     $md5_ok,            // 7: Rsync setup problems
+    $exts,              // 8: List of php extensions separated by comma
 ));
 
 function run_self_tests() {
