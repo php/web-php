@@ -2,6 +2,37 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_6.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.6.tar.bz2',
+          'name' => 'PHP 5.4.6 (tar.bz2)',
+          'md5' => 'c9aa0f4996d1b91ee9e45afcfaeb5d2e',
+          'date' => '16 Aug 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.6.tar.gz',
+          'name' => 'PHP 5.4.6 (tar.gz)',
+          'md5' => 'efe59afb73190c9bd6d50614998ffceb',
+          'date' => '16 Aug 2012',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.6 binaries and source',
+        ),
+      ),
+      'date' => '16 Aug 2012',
+      'museum' => false,
+    ),
     '5.4.5' => 
     array (
       'announcement' => 
@@ -140,6 +171,37 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '26 April 2012',
+      'museum' => false,
+    ),
+    '5.3.16' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_16.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.16.tar.bz2',
+          'name' => 'PHP 5.3.16 (tar.bz2)',
+          'md5' => '99cfd78531643027f60c900e792d21be',
+          'date' => '16 Aug 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.16.tar.gz',
+          'name' => 'PHP 5.3.16 (tar.gz)',
+          'md5' => '59b776edeac2897ebe3712dcc94b6706',
+          'date' => '16 Aug 2012',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.16 binaries and source',
+        ),
+      ),
+      'date' => '16 Aug 2012',
       'museum' => false,
     ),
     '5.3.15' => 
