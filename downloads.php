@@ -25,7 +25,8 @@ $SIDEBAR_DATA = '
  <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
  <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
  <li><a href="http://www.opencsw.org/packages/php5">Solaris OpenCSW packages</a></li>
- <li><a href="http://iuscommunity.org/">Redhat/CentOS Binaries</a></li>
+ <li><a href="http://iuscommunity.org/">Redhat/CentOS Binaries (IUS)</a></li>
+ <li><a href="http://rpms.famillecollet.com/">Fedora/Redhat/CentOS Binaries (Remi)</a></li>
 </ul>
 
 <h3>Development and archive versions</h3>
