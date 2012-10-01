@@ -559,13 +559,12 @@ function manual_setup_beta($setup) {
     echo '
     <aside id="quicktoc">
         <div class="language">'.manual_language_chooser($setup['head'][1], $setup['this'][0]).'</div>
-        <div class="content"></div>
         <div class="links">
             <a title="Report a bug" href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=' . $PGI['this'][0] . '">Report a bug</a>
             <a title="Edit this page" href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $PGI['this'][0] . '">Edit this page</a>
         </div>
+        <div class="content"></div>
     </aside>';
-    echo '</aside>';
 }
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
