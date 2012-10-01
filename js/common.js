@@ -190,6 +190,9 @@ $(document).ready(function() {
         var pageid = $("section.docs > div").attr("id");
         var editurl = "https://edit.php.net/?perm=/" + getLanguage() + "/" + pageid + ".php&project=PHP";
         var bugurl  = "http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + pageid;
+        
+        //ids to check against scroll position (can't easly cache positions themselves due to dynamic menus and such)
+        var quicktocItems = [];
 
         // Add edit & bugreporting urls to the footer
         $($(".footmenu")[1]).after(
@@ -207,7 +210,9 @@ $(document).ready(function() {
                 foundToc = true;
             }
             var currItem = $(this);
-            $('<a class="toc_item" href="#' + currItem.parent().attr('id') + '">' + currItem.text() + '</a>')
+            var currItemParentId = currItem.parent().attr('id');
+            quicktocItems.push(currItemParentId.replace(".", "\\\."));
+            $('<a class="toc_item' + ((window.location.hash == currItemParentId) ? ' toc_item_curr' : '') + '" id="toc_item_' + currItemParentId + '" href="#' + currItemParentId + '">' + currItem.text() + '</a>')
                 .appendTo( $('<li>') ).parent().appendTo(l);
 
         });
@@ -222,6 +227,41 @@ $(document).ready(function() {
 
             $quicktoc.find(".content").append("<h5>Quick TOC</h5>").append(l);
             $quicktoc.find('.links, .content').show();
+            
+            //set an explicit width from static pos for the fixed pos
+            $quicktoc.css("width", "" + $quicktoc.width() + "px");
+            var quicktocFixedState = false, quicktocResetOffset = $quicktoc.offset().top;
+            if($(document).scrollTop() > quicktocResetOffset) {
+                $quicktoc.addClass("quicktoc-fixed");
+                quicktocFixedState = true;
+            }
+
+            $(document).scroll(function() {
+                //set the current section in quick toc based on scroll pos
+                var scrollTop = $(document).scrollTop();
+                if(quicktocFixedState && scrollTop <= quicktocResetOffset) {
+                    //reset to static position
+                    $("a.toc_itme").removeClass("toc_item_curr");
+                    $quicktoc.removeClass("quicktoc-fixed");
+                    quicktocFixedState = false;
+                }
+                else if(quicktocFixedState || scrollTop > $quicktoc.offset().top) {
+                    if(!quicktocFixedState) {
+                        quicktocResetOffset = $quicktoc.offset().top;
+                        $quicktoc.addClass("quicktoc-fixed");
+                        quicktocFixedState = true;
+                    }
+                    for(var i = quicktocItems.length - 1; i >= 0; i --) {
+                        if(scrollTop + $quicktoc.height() + 20 > $("#" + quicktocItems[i]).offset().top) {
+                            $("a.toc_item").removeClass("toc_item_curr");
+                            $("#toc_item_" + quicktocItems[i]).addClass("toc_item_curr");
+                            break;
+                        }
+                    }
+                    if(i == -1)
+                        $("a.toc_item").removeClass("toc_item_curr");
+                }
+            });
 
         } else {
             $quicktoc.remove();

@@ -3,33 +3,55 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
-    border-top: 1px solid #9999CC;
-    border-left: 1px solid #9999CC;
-    border-bottom: none;
-    margin: 0 0 20px 20px;
-    width: 160px;
+    border: 1px solid #9999CC;
+    margin: 0;
+    width: auto;
     background: white;
-    position: fixed;
-    right: 0px;
     z-index: 100;
+}
+
+aside.quicktoc-fixed {
+    position: fixed;
+    top: 0;
+    border-top: 0 !important;
+    box-shadow: 0 0 5px #222;
 }
 
 #quicktoc .content, #quicktoc .language {
     padding: 10px 0 10px 10px;
 }
 
+#quicktoc .language {
+    float: left;
+}
+
 #quicktoc .links, #quicktoc .content {
     display: none;
 }
 
-#quicktoc .links a:first-child {
-    border-top: 1px solid #9F8A8A;
+#quicktoc .content ul {
+    margin: 0;
+    list-style: none;
+}
+
+#quicktoc .content li {
+    display: inline;
+    padding: 0 5px;
+}
+
+#quicktoc .toc_item_curr {
+    color: #001155;
+    border-bottom: 1px solid #3F438D;
+}
+
+#quicktoc .links {
+    float: right;
 }
 
 #quicktoc .links a {
-    display: block;
     color: black;
     padding-left: 5px;
+    border-top: 1px solid #9F8A8A;
     border-bottom: 1px solid #9F8A8A;
     background-color: #F3F3F3;
 }
@@ -440,6 +462,7 @@ ul.chunklist_children {
 }
 
 /* Default rule for non-@media supporting browsers (IE<9, basically). */
+/* TODO - ok to remove this entirely to make use of more horizontal space?
 .docs #layout .layout-content {
     margin-right: 160px;
 }
@@ -455,6 +478,7 @@ ul.chunklist_children {
         margin-right: 80px;
     }
 }
+*/
 
 #changelang-langs {
     width:120px; 
