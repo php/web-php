@@ -402,6 +402,114 @@ hr {
     border-bottom: none;
 }
 
+/* User notes new features */
+#usernotes a {
+	text-decoration: none;
+	color: #222222;
+}
+#usernotes a:hover {
+	text-decoration: underline;
+	color: #111111;
+}
+#usernotes div.features {
+	padding-right: 8px;
+	float: left;
+}
+#usernotes div.blockbkg {
+	background-color: black;
+	opacity: 50%;
+	filter:alpha(opacity=50);
+	background-color: rgba(0,0,0,0.50);
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	float: absolute;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	z-index: 1;
+}
+#usernotes div.container {
+	background-color: white;
+	color: black;
+	font-size: 16px;
+	border: 1px solid gray;
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 640px;
+	height: 480px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow:  4px 4px 2px 2px rgba(0, 0, 0, .5);
+	box-shadow:  4px 4px 2px 2px rgba(0, 0, 0, .5);
+	z-index: 2;
+}
+#usernotes div.container p {
+	font-size: 14px;
+}
+#usernotes div.closebtn {
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	margin: 2px;
+	float: right;
+	top: 0;
+	background-image: url("/images/notes-close.png");
+	background-repeat: no-repeat;
+	background-position:center;
+}
+#usernotes div.closebtn:hover {
+	cursor: pointer;
+}
+#usernotes div.votes {
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	padding-right: 8px;
+}
+#usernotes a.usernotes-voteu {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(/images/vote-up.png) bottom;
+	text-indent: -99999px;
+}
+#usernotes a.usernotes-voted {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(/images/vote-down.png) bottom;
+	text-indent: -99999px;
+}
+#usernotes a.usernotes-voteu:hover {
+	background: url(/images/vote-uph.png);
+}
+#usernotes a.usernotes-voted:hover {
+	background: url(/images/vote-downh.png);
+}
+#usernotes a.usernotes-flag {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(/images/notes-flag.png) bottom;
+	text-indent: -99999px;
+}
+#usernotes a.usernotes-flag:hover {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(/images/notes-flagh.png) bottom;
+	text-indent: -99999px;
+}
+#usernotes div.features {
+	float: left;
+	display: block;
+}
+
 /* Definition lists used on eg. the unsub page */
 dl dd {
 	margin:0;

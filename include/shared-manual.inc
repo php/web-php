@@ -114,7 +114,7 @@ function manual_header()
         ),
         "headtags" => array(
             '<meta http-equiv="Content-language" content="' . $lang . '" />
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -157,6 +157,7 @@ $(document).ready(function() {
     });
 });
 </script>
+            <script type="text/javascript" src="/js/usernotes.js"></script>
 ',
 
 
@@ -326,6 +327,7 @@ function manual_notes()
 
     // Load user note for this page
     $notes = manual_notes_load($filename);
+    uasort($notes, "manual_notes_sort");
 
     // If there are few comments, provide the quick 'prevous'/'next' navigation
     // above the comments
@@ -342,14 +344,80 @@ function manual_notes()
         ' <small>' .
         make_link($addnotelink, 'add a note') .
         '</small>';
+    
+    $num_notes = count($notes);
+
+	// Flag note snippet
+	list($redir_filename) = $GLOBALS['PGI']['this'];
+    if (substr($redir_filename, -4) == '.php') {
+      $redir_filename = substr($redir_filename, 0, -4);
+    }
+	$flagnotesnippet = <<<USER_NOTE_FLAG
+ <div class="blockbkg" id="opq-background" style="display: none;"></div>
+ <div class="container" id="notes-dialog" style="display: none;">
+  <div class="closebtn" title="Close" id="notes-close"></div>
+  <h1>Flag User Note</h1>
+  <p>
+    Please help us improve our user contributed notes by letting us know when something is wrong.
+    If you believe this note should be brought to our attention for some reason please fill out
+    and submit the following information. If you'd like us to contact you about your concern regarding this note
+    check the appropriate box to be contacted and provide a valid email address
+    (<em>your email may be seen publically if you provide it</em>).
+  </p>
+  <div style="background-color: #f5f5ff; border: 1px solid black; padding: 8px;">
+   <form action="/manual/flag-note.php" method="post">
+    <div id="flag-fields1">
+    <p>Flag user note for: 
+    <select name="flagreason" id="flagreason">
+     <option value="Select a reason..." selected="selected">Select a reason...</option>
+     <option value="Spam">Spam</option>
+     <option value="Offensive or abusive language">Offensive or abusive language</option>
+     <option value="This should be a bug report">This should be a bug report</option>
+     <option value="Note on wrong/unrelated page">Note on wrong/unrelated page</option>
+     <option value="Invalid or harmful code">Invalid or harmful code</option>
+     <option value="Duplicate note">Duplicate note</option>
+     <option value="This is my note and I want it deleted">This is my note and I want it deleted</option>
+     <option value="Other">Other</option>
+    </select>
+    </p>
+    </div>
+    <div id="flag-fields2">
+    <p>If other please tell us the reason: <input type="text" name="flagotherreason" id="flagotherreason" / ></p>
+    </div>
+    <div id="flag-fields3">
+    <p>Your Email: <input type="text" name="flagemail" id="flagemail"></p>
+    </div>
+    <div id="flag-fields4">
+    <p><input type="checkbox" name="flagcontactallowed" id="flagcontactallowed" /> I would like to be contacted concerning this note.</p>
+    </div>
+    <div id="flag-fields5">
+      <div id="notes-challenge">
+        <p>Spam challenge <span id="spam-q"><strong></strong></span>: <input type="text" name="challenge" id="flagchallenge" /></p>
+        <input type="hidden" name="func" id="notes-func" />
+        <input type="hidden" name="arga" id="notes-arga" />
+        <input type="hidden" name="argb" id="notes-argb" />
+      </div>
+    <p><input type="submit" value="Flag" name="flagnote" id="notes-submit" /></p>
+    <div id="notes-working" style="display: none;">
+      <p><img src="/images/working.gif" border="0" />Working on request! Please wait...</p>
+    </div>
+    </div>
+    <input type="hidden" id="notes-flagid" />
+    <input type="hidden" id="notes-pageid" value="{$redir_filename}" />
+   </form>
+  </div>
+  <div id="flagsuccess" style="padding: 15px; margin: 10px; color: gray; font-style: strong;"></div>
+ </div>
+USER_NOTE_FLAG;
 
     echo <<<END_USERNOTE_HEADER
 
 <div id="usernotes">
+ $flagnotesnippet
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
   <small>User Contributed Notes</small>
-  <strong>{$title}</strong>
+  <strong>{$title}</strong> - <span style="color: darkgray;"><em>{$num_notes} Notes</em></span>
  </div>
 END_USERNOTE_HEADER;
 
@@ -364,7 +432,7 @@ END_USERNOTE_HEADER;
 
         foreach($notes as $note) {
             manual_note_display(
-                $note['xwhen'], $note['user'], $note['note'], $note['id']
+                $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
         }
         echo "</div>\n";
@@ -444,14 +512,15 @@ function manual_notes_load($id)
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
-            list($id, $sect, $rate, $ts, $user, $note) = explode("|", $line);
+            @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
             $notes[$id] = array(
                 "id"    => $id,
                 "sect"  => $sect,
                 "rate"  => $rate,
                 "xwhen" => $ts,
                 "user"  => $user,
-                "note"  => base64_decode($note)
+                "note"  => base64_decode($note),
+                "votes"  => array("up"=> (int)$up, "down"=> (int)$down)
             );
         }
         fclose($fp);
@@ -460,13 +529,51 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id)
+// Print out one user note entry
+function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'down'=>0), $flagoption = true)
 {
-    if ($name) { $name = "\n  <strong class='user'>" . htmlspecialchars($name) . "</strong>"; }
-    $datestr = date("d-M-Y h:i", $date);
-    $datestr = ($id ? "\n  <a href=\"#$id\" class=\"date\">$datestr</a>" : "\n  $datestr");
-    $anchor  = ($id ? "<a name=\"$id\"></a>\n " : "");
+    if ($name) {
+        $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
+    } else {
+        $name = "<strong class=\"user\"><em>Anonymous</em></strong>";
+    }
+    $name = ($id ? "\n  <a href=\"#$id\" class=\"date\">$name</a>" : "\n  $name");
+    //$datestr = date("d-M-Y h:i", $date);
+    // New date style will be relative time
+    $datestr = reltime(time() - $date);
+    $fdatestr = date("Y-m-d h:i", $date);
     $text    = clean_note($text);
+    
+    // Calculate note rating by up/down votes
+    $vote = $votes['up'] - $votes['down'];
+    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ? $votes['up'] + $votes['down'] : 1)) * 100);
+    $rate = !$p && !($votes['up'] + $votes['down']) ? "no votes..." : "$p% like this...";
+
+    // Flag user note option
+    if ($flagoption) {
+	    list($redir_filename) = $GLOBALS['PGI']['this'];
+	    if (substr($redir_filename, -4) == '.php') {
+	        $redir_filename = substr($redir_filename, 0, -4);
+	    }
+	    $rredir_filename = urlencode($redir_filename);
+	    $flag = "<div class=\"features\">
+	    <a href=\"/manual/flag-note.php?id={$id}&page={$rredir_filename}\" id=\"$id\" class=\"usernotes-flag\" title=\"Report a problem...\">flag</a>
+	    </div>";
+	    $votediv = <<<EOL
+  <div class="votes">
+    <div id="Vu{$id}" style="float: left;">
+    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd{$id}" style="float: left;">
+    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div id="V{$id}" style="float: left; padding: 4px; color: #323232; font-weight: strong; font-size: 19px; margin-top: -6px;" title="{$rate}">{$vote}</div>
+  </div>
+EOL;
+	} else {
+	  $flag = null;
+	  $votediv = null;
+	}
 
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['IS_DEV']) && $id) {
@@ -494,12 +601,14 @@ function manual_note_display($date, $name, $text, $id)
             'scrollbars=no,width=300,height=200'
         ) . "\n  </span>";
 
-    } else { $admin = ''; }
+    } else {
+        $admin = '';
+    }
 
     echo <<<USER_NOTE_TEXT
 
- {$anchor}<div class="note">{$name}{$datestr}{$admin}
-  <div class="text">
+ <a name="$id"></a><div class="note">{$votediv}{$flag}{$name}{$admin}<div style="float: right; right-padding: 4px; color: #999997;" title="$fdatestr"><strong>{$datestr}</strong></div>
+  <div class="text" id="Hcom{$id}">
 {$text}
   </div>
  </div>
@@ -598,5 +707,77 @@ function manual_footer_beta() {
 
     manual_notes();
     site_footer(array('elephpants' => true));
+}
+
+// Provide a diff in seconds and get back relative textual time string
+function reltime($t) {
+    $units = array(
+    		"year" => 60*60*24*365,
+    		"month" => 60*60*24*30,
+    		"day" => 60*60*24,
+    		"hour" => 60*60,
+    		"minute" => 60,
+    		"second" => 1,
+    	);
+    $r = array();
+	foreach ($units as $unit => $amt) {
+		if ($x = floor($t / $amt)) {
+			$r[$unit . ($x == 1 ? '' : 's')] = $x;
+			$t -= $r[$unit . ($x == 1 ? '' : 's')] * $amt;
+		}
+	}
+	if (empty($r)) return "now";
+	if ((key(array_slice($r,0,1)) == 'month' || key(array_slice($r,0,1)) == 'months') && count($r) > 1 && (key(array_slice($r,1,1)) == 'day' || key(array_slice($r,1,1)) == 'days')) {
+		$r = current(array_slice($r,0,1)) . " " . key(array_slice($r,0,1)) . ", " . current(array_slice($r,1,1)) . " " . key(array_slice($r,1,1)) . " ago";
+	}
+	else {
+		$r = current(array_slice($r,0,1)) . " " . key(array_slice($r,0,1)) . " ago";
+	}
+	return $r;
+}
+
+// Sort notes by rating and group by date
+function manual_notes_sort($a, $b)
+{
+    if ($a['votes']['up'] + $a['votes']['down'] < 1) {
+      $c = 1;
+    } else {
+      $c = $a['votes']['up'] + $a['votes']['down'];
+    }
+    if ($b['votes']['up'] + $b['votes']['down'] < 1) {
+      $d = 1;
+    } else {
+      $d = $b['votes']['up'] + $b['votes']['down'];
+    }
+	$voteA = $a['votes']['up'] / $c;
+	$voteB = $b['votes']['up'] / $d;
+	// Lower voted notes go to the bottom regardless of date
+	if ($voteA > $voteB) {
+		// Exception to the rule for today's notes
+		if ($b['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteB > -1) return 1;
+		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+		if ($voteB === 0 && $d === 1 && $voteA <= 0.30 && $c >= 4) return 1;
+		return -1;
+	}
+	// Higher voted notes go to the top regardless of date
+	elseif ($voteA < $voteB) {
+		// Exception to the rule for today's notes
+		if ($a['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteA > -1) return -1;
+		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+		if ($voteA === 0 && $c === 1 && $voteB <= 0.30 && $d >= 4) return -1;
+		return 1;
+	}
+	// Votes of equal amounts are sorted in descending order by date
+	else {
+		if ($a['xwhen'] > $b['xwhen']) {
+			return -1;
+		}
+		elseif ($a['xwhen'] < $b['xwhen']) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
 }
 
