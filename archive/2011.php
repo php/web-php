@@ -853,7 +853,7 @@ site_header("News Archive - 2011");
 <hr />
 <div class="newsItem hentry">
     <div class="newsImage"></div>
-    <h1 class="summary entry-title"><a name="id2011-03-19-1" id="id2011-03-19-1" href="#id2011-03-19-2" rel="bookmark" class="bookmark">php.net security notice</a></h1>
+    <h1 class="summary entry-title"><a name="id2011-03-19-1" id="id2011-03-19-1" href="#id2011-03-19-1" rel="bookmark" class="bookmark">php.net security notice</a></h1>
     <div class="entry-content description">
         <abbr class="published newsdate" title="2011-03-19T11:20:04-07:00">[19-Mar-2011]</abbr>
         <div>

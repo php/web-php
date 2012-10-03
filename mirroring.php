@@ -200,6 +200,7 @@ europe.rsync.php.net
      ServerName xx.php.net
      ServerAlias the.cname.you.set.up.example.com www.xx.php.net
      ServerAdmin yourname@example.com
+     UseCanonicalName On
      
      # Webroot of PHP mirror site
      DocumentRoot /www/htdocs/phpweb

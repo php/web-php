@@ -11,6 +11,181 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.7"></a><!-- {{{ 5.4.7 -->
+<h3>Version 5.4.7</h3>
+<b>13-September-2012</b>
+<ul>
+<li>Core</li>
+<ul>
+    <li>Fixed bug (segfault while build with zts and GOTO vm-kind)</li>
+    <li><?php bugfix(62955); ?> (Only one directive is loaded from "Per Directory Values" Windows registry)</li>
+    <li><?php bugfix(62844); ?> (parse_url() does not recognize //)</li>
+    <li><?php bugfix(62829); ?> (stdint.h included on platform where HAVE_STDINT_H is not set)</li>
+    <li><?php bugfix(62763); ?> (register_shutdown_function and extending class)</li>
+    <li><?php bugfix(62725); ?> (Calling exit() in a shutdown function does not return the exit value)</li>
+    <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class)</li>
+    <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length)</li>
+    <li><?php bugfix(62358); ?> (Segfault when using traits a lot)</li>
+    <li><?php bugfix(62328); ?> (implementing __toString and a cast to string fails)</li>
+    <li><?php bugfix(51363); ?> (Fatal error raised by var_export() not caught by error handler)</li>
+    <li><?php bugfix(40459); ?> (Stat and Dir stream wrapper methods do not call constructor)</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+    <li><?php bugfix(62912); ?> (CURLINFO_PRIMARY_* AND CURLINFO_LOCAL_* not exposed)</li>
+    <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE)</li>
+</ul>
+</ul>
+
+<ul>
+<li>DateTime</li>
+<ul>
+    <li><?php bugfix(62852); ?> (Unserialize invalid DateTime causes crash)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+    <li>Fixed Spoofchecker not being registered on ICU 49.1</li>
+    <li>Fix bug #62933 (ext/intl compilation error on icu 3.4.1)</li>
+    <li>Fix bug #62915 (defective cloning in several intl classes)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Installation</li>
+<ul>
+    <li><?php bugfix(62460); ?> (php binaries installed as binary.dSYM)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PCRE</li>
+<ul>
+    <li><?php bugfix(55856); ?> (preg_replace should fail on trailing garbage)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO</li>
+<ul>
+    <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction())</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection</li>
+<ul>
+    <li><?php bugfix(62892); ?> (ReflectionClass::getTraitAliases crashes on importing trait methods as private)</li>
+    <li><?php bugfix(62715); ?> (ReflectionParameter::isDefaultValueAvailable() wrong result)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Session</li>
+<ul>
+    <li>Fixed bug (segfault due to retval is not initialized)</li>
+    <li>Fixed bug (segfault due to PS(mod_user_implemented) not be reseted when close handler call exit)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+    <li><?php bugfix(62904); ?> (Crash when cloning an object which inherits SplFixedArray)</li>
+    <li>Implemented FR <?php bugl(62840); ?> (Add sort flag to ArrayObject::ksort)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Standard</li>
+<ul>
+    <li><?php bugfix(62836); ?> (Seg fault or broken object references on unserialize())</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+    <li>Merged PR 121 by minitux to add support for slow request counting on PHP FPM status page</li>
+</ul>
+</ul>
+
+<a name="5.3.17"></a><!-- {{{ 5.3.17 -->
+<h3>Version 5.3.17</h3>
+<b>13-September-2012</b>
+<ul>
+<li>Core</li>
+<ul>
+    <li>Fixed bug (segfault while build with zts and GOTO vm-kind)</li>
+    <li><?php bugfix(62955); ?> (Only one directive is loaded from "Per Directory Values" Windows registry)</li>
+    <li><?php bugfix(62763); ?> (register_shutdown_function and extending class)</li>
+    <li><?php bugfix(62744); ?> (dangling pointers made by zend_disable_class)</li>
+    <li><?php bugfix(62716); ?> (munmap() is called with the incorrect length)</li>
+    <li>Fixed bug ##62460 (php binaries installed as binary.dSYM)</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL</li>
+<ul>
+    <li><?php bugfix(62839); ?> (curl_copy_handle segfault with CURLOPT_FILE)</li>
+</ul>
+</ul>
+
+<ul>
+<li>DateTime</li>
+<ul>
+    <li><?php bugfix(62852); ?> (Unserialize invalid DateTime causes crash)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+    <li>Fix null pointer dereferences in some classes of ext/intl</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQLnd</li>
+<ul>
+    <li><?php bugfix(62885); ?> (mysqli_poll - Segmentation fault)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO</li>
+<ul>
+    <li><?php bugfix(62685); ?> (Wrong return datatype in PDO::inTransaction())</li>
+</ul>
+</ul>
+
+<ul>
+<li>Session</li>
+<ul>
+    <li>Fixed bug (segfault due to retval is not initialized)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+    <?php bugfix(62904); ?> (Crash when cloning an object which inherits SplFixedArray)
+</ul>
+</ul>
+
+<ul>
+<li>Enchant</li>
+<ul>
+    <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it)</li>
+</ul>
+</ul>
+
 <a name="5.4.6"></a><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
 <b>16-August-2012</b>

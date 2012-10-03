@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.4.7 and PHP 5.3.17 released!</title>
+  <id>http://www.php.net/archive/2012.php#id2012-09-13-1</id>
+  <published>2012-09-13T15:29:37+00:00</published>
+  <updated>2012-09-13T15:29:37+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://www.php.net/index.php#id2012-09-13-1" rel="alternate" type="text/html"/>
+  <link href="http://www.php.net/archive/2012.php#id2012-09-13-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+      The PHP development team announces the immediate availability of 
+      PHP 5.4.7 and PHP 5.3.17. These releases fix over 20 bugs. 
+      All users of PHP are encouraged to upgrade to PHP 5.4.7, 
+      or at least 5.3.17.
+     </p>
+     
+     <p>
+      Key enhancements in these releases include:
+     </p>
+     
+     <ul>
+       <li>Fixed bug #62955 (Only one directive is loaded from "Per Directory Values" Windows registry).</li>
+       <li>Fixed bug #62460 (php binaries installed as binary.dSYM).</li>
+     </ul>
+     
+     <p>The full list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
+     
+     <p>
+      For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit 
+      our <a href="/downloads.php">downloads page</a>, Windows binaries 
+      can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     </p>
+     
+     <p>
+      The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
+     </p>
+    </div>
+  </content>
+</entry>

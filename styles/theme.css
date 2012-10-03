@@ -518,6 +518,9 @@ dl dd {
 dl dd p {
     margin:0;
 }
+dl dd p + p {
+    margin-top: 1.5em;
+}
 
 
 /* PHP source code highlighting ------------------------------------------- */
