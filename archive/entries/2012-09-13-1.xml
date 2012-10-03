@@ -26,8 +26,6 @@
        <li>Fixed bug #62460 (php binaries installed as binary.dSYM).</li>
      </ul>
      
-     <p>The full list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
-     
      <p>
       For source downloads of PHP 5.4.7 and PHP 5.3.17 please visit 
       our <a href="/downloads.php">downloads page</a>, Windows binaries 
