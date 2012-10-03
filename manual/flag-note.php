@@ -195,7 +195,7 @@ EOL;
     If you believe this note should be brought to our attention for some reason please fill out
     and submit the following information. If you'd like us to contact you about your concern regarding this note
     check the appropriate box to be contacted and provide a valid email address
-    (<em>your email will not be shared publically</em>).
+    (<em>your email may be seen publically if you provide it</em>).
   </p>
   <div style="width: 90%; margin: auto;"><h1>Reason For Flagging The Note</h1></div>
   <div style="background-color: #f5f5ff; border: 1px solid black; padding: 15px; width: 90%; margin: auto;">
