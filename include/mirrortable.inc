@@ -73,9 +73,9 @@ function mirror_table($df = '', $cmatch = '', $cnomatch = '') {
     $MURLS = array_keys($MIRRORS);
     foreach ($MURLS as $murl) {
 
-        // If the mirror is not all right or it is virtual (not an official mirror), skip it
+        // If the mirror is not all right or it is virtual (not an official mirror), or if this is an IP, skip it
         if (mirror_status($murl) != MIRROR_OK ||
-            (!$cnf['virtual'] && mirror_type($murl) == MIRROR_VIRTUAL)) { continue; }
+            (!$cnf['virtual'] && mirror_type($murl) == MIRROR_VIRTUAL) || preg_match('/^\d/',$murl)) { continue; }
 
         // Get the country code and check if it is
         // matching the country provided (or does not
