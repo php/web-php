@@ -48,6 +48,7 @@ echo join('|', array(
     'manual-noalias',   // 6: /manual alias check is done elsewhere now
     $md5_ok,            // 7: Rsync setup problems
     $exts,              // 8: List of php extensions separated by comma
+    gethostname(),	// 9: The configured hostname of the local system
 ));
 
 function run_self_tests() {
