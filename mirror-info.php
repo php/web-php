@@ -39,16 +39,17 @@ if (isset($_GET["token"]) && md5($_GET["token"]) === "19a3ec370affe2d899755f005e
 }
 
 echo join('|', array(
-    $MYSITE,            // 0: ServerName problems
-    phpversion(),       // 1: PHP version overview
-    $LAST_UPDATED,      // 2: Update problems
-    $sqlite,            // 3: SQLite support?
-    $mirror_stats,      // 4: Optional local stats support
-    default_language(), // 5: Mirror language
-    'manual-noalias',   // 6: /manual alias check is done elsewhere now
-    $md5_ok,            // 7: Rsync setup problems
-    $exts,              // 8: List of php extensions separated by comma
-    gethostname(),	// 9: The configured hostname of the local system
+    $MYSITE,            	// 0 : CNAME for mirror as accessed (CC, CC1, etc.)
+    phpversion(),       	// 1 : PHP version overview
+    $LAST_UPDATED,      	// 2 : Update problems
+    $sqlite,            	// 3 : SQLite support?
+    $mirror_stats,      	// 4 : Optional local stats support
+    default_language(), 	// 5 : Mirror language
+    'manual-noalias',   	// 6 : /manual alias check is done elsewhere now
+    $md5_ok,            	// 7 : Rsync setup problems
+    $exts,              	// 8 : List of php extensions separated by comma
+    gethostname(),		// 9 : The configured hostname of the local system
+    $_SERVER['SERVER_ADDR'],	// 10: The IP address under which we're running
 ));
 
 function run_self_tests() {
