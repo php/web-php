@@ -433,12 +433,14 @@ if($_SERVER["SERVER_PORT"] != '80') {
     $MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/'; 
 }
 
-// If this site does not exist
+// If this site does not exist - it is most likely because
+// CC.php.net isn't in this array anymore.
 if (!isset($MIRRORS[$MYSITE])) {
 
     // Check if the IP address exists (a fix for the round-robin introduction)
     if (isset($MIRRORS[$_SERVER['SERVER_ADDR']])) {
-        $MYSITE = $_SERVER['SERVER_ADDR'];
+	// Since it does, we know the servername is fine
+	$MYSITE = 'http://' . $_SERVER["SERVER_NAME"] . '/';
     } else {
 
         // Try the hostname [without www]. In case the main name above is
