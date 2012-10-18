@@ -11,6 +11,166 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.8"></a><!-- {{{ 5.4.8 -->
+<h3>Version 5.4.8</h3>
+<b>18-October-2012</b>
+<ul>
+<li>CLI server</li>
+<ul>
+  <li>Changed response to unknown HTTP method to 501 according to RFC.</li>
+  <li>Support HTTP PATCH method.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core</li>
+<ul>
+  <li>Added optional second argument for assert() to specify custom message.</li>
+  <li>Support building PHP with the native client toolchain.</li>
+  <li>Added --offline option for tests.</li>
+  <li><?php bugfix(63162); ?> (parse_url does not match password component).</li>
+  <li><?php bugfix(63111); ?> (is_callable() lies for abstract static method).</li>
+  <li><?php bugfix(63093); ?> (Segfault while load extension failed in zts-build).</li>
+  <li><?php bugfix(62976); ?> (Notice: could not be converted to int when comparing some builtin classes).</li>
+  <li><?php bugfix(62955); ?> (Only one directive is loaded from "Per Directory Values" Windows registry).</li>
+  <li><?php bugfix(62907); ?> (Double free when use traits).</li>
+  <li><?php bugfix(61767); ?> (Shutdown functions not called in certain error situation).</li>
+  <li><?php bugfix(60909); ?> (custom error handler throwing Exception + fatal error = no shutdown function).</li>
+  <li><?php bugfix(60723); ?> (error_log error time has changed to UTC ignoring default timezone).</li>
+</ul>
+</ul>
+
+<ul>
+<li>cURL</li>
+<ul>
+  <li><?php bugfix(62085); ?> (file_get_contents a remote file by Curl wrapper will cause cpu Soaring).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Date</li>
+<ul>
+  <li><?php bugfix(62896); ?> ("DateTime-&gt;modify('+0 days')" modifies DateTime object)</li>
+  <li><?php bugfix(62561); ?> (DateTime add 'P1D' adds 25 hours).</li>
+</ul>
+</ul>
+
+<ul>
+<li>DOM</li>
+<ul>
+  <li><?php bugfix(63015); ?> (Incorrect arginfo for DOMErrorHandler).</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(62954); ?> (startup problems fpm / php-fpm).</li>
+  <li><?php bugfix(62886); ?> (PHP-FPM may segfault/hang on startup).</li>
+  <li><?php bugfix(63085); ?> (Systemd integration and daemonize).</li>
+  <li><?php bugfix(62947); ?> (Unneccesary warnings on FPM).</li>
+  <li><?php bugfix(62887); ?> (Only /status?plain&amp;full gives "last request cpu").</li>
+  <li><?php bugfix(62216); ?> (Add PID to php-fpm init.d script).</li>
+</ul>
+</ul>
+
+<ul>
+<li>OpenSSL</li>
+<ul>
+  <li>Implemented FR <?php bugl(61421); ?> (OpenSSL signature verification missing RMD160, SHA224, SHA256, SHA384, SHA512).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SOA</li>
+<ul>
+  <li><?php bugfix(50997); ?> (SOAP Error when trying to submit 2nd Element of a choice).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
+</ul>
+</ul>
+
+<ul>
+<li>mbstring</li>
+<ul>
+  <li>Allow passing null as a default value to mb_substr() and mb_strcut(). Patch by Alexander Moskaliov via GitHub PR #133.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Filter extension</li>
+<ul>
+  <li>Bug #49510: Boolean validation fails with FILTER_NULL_ON_FAILURE with empty string or false.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Socket</li>
+<ul>
+  <li><?php bugfix(63000); ?> (MCAST_JOIN_GROUP on OSX is broken, merge of PR 185 by Igor Wiedler).</li>
+</ul>
+</ul>
+
+<a name="5.3.18"></a><!-- {{{ 5.3.18 -->
+<h3>Version 5.3.18</h3>
+<b>18-October-2012</b>
+<ul>
+<li>Core</li>
+<ul>
+  <li><?php bugfix(63111); ?> (is_callable() lies for abstract static method).</li>
+  <li><?php bugfix(63093); ?> (Segfault while load extension failed in zts-build).</li>
+  <li><?php bugfix(62976); ?> (Notice: could not be converted to int when comparing some builtin classes).</li>
+  <li><?php bugfix(61767); ?> (Shutdown functions not called in certain error situation).</li>
+  <li><?php bugfix(61442); ?> (exception threw in __autoload can not be catched).</li>
+  <li><?php bugfix(60909); ?> (custom error handler throwing Exception + fatal error = no shutdown function).</li>
+</ul>
+</ul>
+
+<ul>
+<li>cURL</li>
+<ul>
+  <li><?php bugfix(62085); ?> (file_get_contents a remote file by Curl wrapper will cause cpu Soaring).</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM</li>
+<ul>
+  <li><?php bugfix(62954); ?> (startup problems fpm / php-fpm).</li>
+  <li><?php bugfix(62886); ?> (PHP-FPM may segfault/hang on startup).</li>
+  <li><?php bugfix(63085); ?> (Systemd integration and daemonize).</li>
+  <li><?php bugfix(62947); ?> (Unneccesary warnings on FPM).</li>
+  <li><?php bugfix(62887); ?> (Only /status?plain&amp;full gives "last request cpu").</li>
+  <li><?php bugfix(62216); ?> (Add PID to php-fpm init.d script).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Intl</li>
+<ul>
+  <li>Fix bug #62915 (defective cloning in several intl classes).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SOA</li>
+<ul>
+  <li><?php bugfix(50997); ?> (SOAP Error when trying to submit 2nd Element of a choice).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL</li>
+<ul>
+  <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
+</ul>
+</ul>
+
 <a name="5.4.7"></a><!-- {{{ 5.4.7 -->
 <h3>Version 5.4.7</h3>
 <b>13-September-2012</b>
