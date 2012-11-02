@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP UK Conference</title>
+  <id>http://www.php.net/archive/2012.php#id2012-11-02-1</id>
+  <published>2012-11-02T09:39:14-07:00</published>
+  <updated>2012-11-02T09:39:14-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-02-23</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://www.php.net/conferences/index.php#id2012-11-02-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.co.uk/" title="PHP UK 2013">phpuk2013.jpeg</default:newsImage>
+  <link href="http://phpconference.co.uk/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+         <a href="http://phplondon.org">PHP London</a> are pleased to announce the 8th Annual PHP UK conference;
+         a 2-day event with 4 great tracks held at at The Brewery in the heart of the City of London on February 22nd- 23rd 2013.
+     </p>
+     <p>
+         With over 600 delegates, speakers, and sponsors, PHP UK conference aims to deliver fantastic up to date content about
+         PHP and related web technologies in a comfortable and professional setting. There are countless networking opportunities
+         to engage with international speakers and delegates, which makes the event one you won't want to miss.
+     </p>
+     <p>
+         Our call for papers is open until November the 22nd and we would love to hear from you!
+     </p>
+    </div>
+  </content>
+</entry>
