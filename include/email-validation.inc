@@ -66,6 +66,10 @@ function blacklisted($email) {
 	'medifest@gmail.com',
 	'@sina.cn',
 	'wcc-congress',
+	'albanezi',
+	'supercoderarticle',
+	'somebody@hotmail.com',
+	'bit-cloudcon',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
