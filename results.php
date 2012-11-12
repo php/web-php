@@ -16,7 +16,7 @@ function exit_with_pretty_error($title, $header, $msg) {
 }
 
 if (!isset($_GET['q']) || (!is_string($_GET['q']) || strlen($_GET['q']) < 3)) {
-  exit_with_pretty_error("Search results", "Empty query", "You need to specify what you want to search for, 3chars at least");
+  exit_with_pretty_error("Search results", "Empty query", "Please provide at least 3 characters to search for.");
 }
 if (!isset($_GET['l']) || !is_string($_GET['l'])) {
   $_GET['l'] = null;
