@@ -6350,7 +6350,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Added PATHINFO_FILENAME option to pathinfo() to get the filename. (Toby S.  and Christian S.)</li>
 <li>Added array_fill_keys() function. (Marcus, Matt Wilmas)</li>
 <li>Added posix_initgroups() function. (Ilia)</li>
-<li>Added an optional parameter to parse_url() to allow retrieval of distinct URL components. (Ilia)</li>
 <li>Added optional parameter to http_build_query() to allow specification of string separator. (Ilia)</li>
 <li>Added image_type_to_extension() function. (Hannes, Ilia)</li>
 <li>Added allow_url_include ini directive to complement allow_url_fopen. (Rasmus)</li>
@@ -6982,6 +6981,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   </ul></li>
 <li>Upgraded pear to version 1.4.6. (Greg)</li>
 <li>Added constants for libxslt and libexslt versions: LIBXSLT_VERSION, LIBXSLT_DOTTED_VERSION, LIBEXSLT_VERSION and LIBEXSLT_DOTTED_VERSION. (Pierre)</li>
+<li>Added an optional parameter to parse_url() to allow retrieval of distinct URL components. (Ilia)</li>
 <li>Fixed possible crash in apache_getenv()/apache_setenv() on invalid parameters. (Ilia)</li>
 <li>Changed errors to warnings in imagecolormatch(). (Pierre)</li>
 <li>Fixed segfault/leak in imagecolormatch(). (Pierre)</li>
