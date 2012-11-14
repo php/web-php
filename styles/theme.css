@@ -79,8 +79,20 @@ h2 a:focus {
 }
 
 h3.title {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 2;
+}
+
+h4.title {
+    font-size: 1.2em;
+}
+
+h5.title {
+    font-size: 1.15em;
+}
+
+h6.title {
+    font-size: 1.1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
