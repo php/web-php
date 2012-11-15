@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP5.5.0alpha1 released</title>
+  <title>PHP 5.5.0 Alpha1 released</title>
   <id>http://www.php.net/archive/2012.php#id2012-11-15-1</id>
   <published>2012-11-15T14:10:06+00:00</published>
   <updated>2012-11-15T14:10:06+00:00</updated>
@@ -20,7 +20,7 @@
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
 
      <p>
-      PHP5.5.0alpha1 comes with new features such as (incomplete list) :
+      PHP 5.5.0 Alpha 1 comes with new features such as (incomplete list) :
      </p>
      <ul>
         <li>support for Generators,</li>
@@ -38,7 +38,7 @@
      </p>
 
      <p>
-      For source downloads of PHP 5.5.0alpha1 please visit
+      For source downloads of PHP 5.5.0 Alpha 1 please visit
       the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
