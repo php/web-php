@@ -23,12 +23,12 @@
       PHP5.5.0alpha1 comes with new features such as (incomplete list) :
      </p>
      <ul>
-        <li>generators,</li>
+        <li>support for Generators,</li>
         <li>a new password hashing API,</li>
-        <li>the finally keyword,</li>
-        <li>array/string dereferencing,</li>
-        <li>ext/intl improvement,</li>
-        <li>support for list() in foreach.</li>
+        <li>support for finally in try/catch blocks</li>
+        <li>support for list() in foreach,</li>
+        <li>constant array/string dereferencing,</li>
+        <li>ext/intl improvement.</li>
      </ul>
      <p>We also dropped support for Windows XP and 2003.</p>
 
