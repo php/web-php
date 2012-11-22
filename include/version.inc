@@ -32,7 +32,7 @@ $PHP_5_4_MD5     = array(
 $PHP_5_3_RC      = false; // '5.3.19RC1'; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_3_RC_DATE = '08 Nov 2012';
 
-$PHP_5_3_VERSION         = "5.3.18";
+$PHP_5_3_VERSION         = "5.3.19";
 $PHP_5_3_DATE            = "22 Nov 2012";
 
 $PHP_5_3_MD5     = array(
