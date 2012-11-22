@@ -11,6 +11,176 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.9"></a><!-- {{{ 5.4.9 -->
+<h3>Version 5.4.9</h3>
+<b>22-November-2012</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63305); ?> (zend_mm_heap corrupted with traits).</li>
+  <li><?php bugfix(63369); ?> ((un)serialize() leaves dangling pointers, causes crashes).</li>
+  <li><?php bugfix(63241); ?> (PHP fails to open Windows deduplicated files).</li>
+  <li><?php bugfix(62444); ?> (Handle leak in is_readable on windows). </li>
+</ul>
+</ul>
+
+<ul>
+<li>Curl:</li>
+<ul>
+  <li><?php bugfix(63363); ?> (Curl silently accepts boolean true for SSL_VERIFYHOST).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo:</li>
+<ul>
+  <li><?php bugfix(63248); ?> (Load multiple magic files from a directory under Windows).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Libxml</li>
+<ul>
+  <li><?php bugfix(63389); ?> (Missing context check on libxml_set_streams_context()
+    causes memleak).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Mbstring:</li>
+<ul>
+  <li><?php bugfix(63447); ?> (max_input_vars doesn't filter variables when
+    mbstring.encoding_translation = On).</li>
+</ul>
+</ul>
+
+<ul>
+<li>OCI8:</li>
+<ul>
+  <li><?php bugfix(63265); ?> (Add ORA-00028 to the PHP_OCI_HANDLE_ERROR macro)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PCRE:</li>
+<ul>
+  <li><?php bugfix(63180); ?> (Corruption of hash tables).</li>
+  <li><?php bugfix(63055); ?> (Segfault in zend_gc with SF2 testsuite).</li>
+  <li><?php bugfix(63284); ?> (Upgrade PCRE to 8.31).
+</ul>
+</ul>
+
+<ul>
+<li>PDO:</li>
+<ul>
+  <li><?php bugfix(63235); ?> (buffer overflow in use of SQLGetDiagRec).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_pgsql:</li>
+<ul>
+  <li><?php bugfix(62593); ?> (Emulate prepares behave strangely with PARAM_BOOL).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar:</li>
+<ul>
+  <li><?php bugfix(63297); ?> (Phar fails to write an openssl based signature).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams:</li>
+<ul>
+  <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection:</li>
+<ul>
+  <li><?php bugfix(63399); ?>  (ReflectionClass::getTraitAliases() incorrectly resolves traitnames).</li>
+</ul>
+</ul>
+
+<a name="5.3.19"></a><!-- {{{ 5.3.19 -->
+<h3>Version 5.3.19</h3>
+<b>22-November-2012</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63241); ?> (PHP fails to open Windows deduplicated files).</li>
+  <li><?php bugfix(62444); ?> (Handle leak in is_readable on windows).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Libxml:</li>
+<ul>
+  <li><?php bugfix(63389); ?> (Missing context check on libxml_set_streams_context() causes memleak).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Mbstring:</li>
+<ul>
+  <li><?php bugfix(63447); ?> (max_input_vars doesn't filter variables when
+    mbstring.encoding_translation = On).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQL:</li>
+<ul>
+  <li>Fixed compilation failure on mixed 32/64 bit systems.</li>
+</ul>
+</ul>
+
+<ul>
+<li>OCI8:</li>
+<ul>
+  <li><?php bugfix(63265); ?> (Add ORA-00028 to the PHP_OCI_HANDLE_ERROR macro)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PCRE:</li>
+<ul>
+  <li><?php bugfix(63055); ?> (Segfault in zend_gc with SF2 testsuite).</li>
+  <li><?php bugfix(63284); ?> (Upgrade PCRE to 8.31).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO:</li>
+<ul>
+  <li><?php bugfix(63235); ?> (buffer overflow in use of SQLGetDiagRec).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_pgsql:</li>
+<ul>
+  <li><?php bugfix(62593); ?> (Emulate prepares behave strangely with PARAM_BOOL).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar:</li>
+<ul>
+  <li><?php bugfix(63297); ?> (Phar fails to write an openssl based signature).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams:</li>
+<ul>
+  <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
+</ul>
+</ul>
+
 <a name="5.4.8"></a><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
 <b>18-October-2012</b>

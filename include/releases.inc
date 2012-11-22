@@ -2,6 +2,37 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.8' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_8.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.8.tar.bz2',
+          'name' => 'PHP 5.4.8 (tar.bz2)',
+          'md5' => 'bb8c816a9299be8995255ef70c63b800',
+          'date' => '18 Oct 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.8.tar.gz',
+          'name' => 'PHP 5.4.8 (tar.gz)',
+          'md5' => 'b25b735f342efbfdcdaf00b83189f183',
+          'date' => '18 Oct 2012',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.8 binaries and source',
+        ),
+      ),
+      'date' => '18 Oct 2012',
+      'museum' => false,
+    ),
     '5.4.7' => 
     array (
       'announcement' => 
@@ -202,6 +233,37 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '26 April 2012',
+      'museum' => false,
+    ),
+    '5.3.18' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_18.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.18.tar.bz2',
+          'name' => 'PHP 5.3.18 (tar.bz2)',
+          'md5' => '52539c19d0f261560af3c030143dfa8f',
+          'date' => '18 Oct 2012',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.18.tar.gz',
+          'name' => 'PHP 5.3.18 (tar.gz)',
+          'md5' => 'ff2009aadc7c4d1444f6cd8e45f39a41',
+          'date' => '18 Oct 2012',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.18 binaries and source',
+        ),
+      ),
+      'date' => '18 Oct 2012',
       'museum' => false,
     ),
     '5.3.17' => 
