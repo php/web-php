@@ -36,8 +36,8 @@ $PHP_5_3_VERSION         = "5.3.19";
 $PHP_5_3_DATE            = "22 Nov 2012";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "52539c19d0f261560af3c030143dfa8f",
-                       "tar.gz"        => "ff2009aadc7c4d1444f6cd8e45f39a41",
+                       "tar.bz2"       => "e1d2a3ec7849d4b3032bd1abf1916aa4",
+                       "tar.gz"        => "e1bcda4f14bb39ba041297abbf18f8d1",
 );
 
 $RELEASES = array(
