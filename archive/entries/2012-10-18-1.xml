@@ -3,7 +3,7 @@
   <title>PHP 5.4.8 and PHP 5.3.18 released!</title>
   <id>http://www.php.net/archive/2012.php#id2012-10-18-1</id>
   <published>2012-10-18T17:35:45+00:00</published>
-  <updated>2012-10-18T17:35:45+00:00</updated>
+  <updated>2012-11-25T14:28:12+00:00</updated>
   <category term="frontpage" label="PHP.net frontpage news"/>
   <category term="releases" label="New PHP release"/>
   <link href="http://www.php.net/index.php#id2012-10-18-1" rel="alternate" type="text/html"/>
@@ -23,7 +23,7 @@
      
      <ul>
          <li>Fixed bug #63111 (is_callable() lies for abstract static method)</li>
-       <li>Fixed bug #61442 (exception threw in __autoload can not be catched</li>
+       <li>Fixed bug #61442 (exception threw in __autoload can not be catched)</li>
      </ul>
      
      <p>
