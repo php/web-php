@@ -4,6 +4,8 @@
 // Set the static content root differently on php.net
 if ($MYSITE == "http://www.php.net/") {
     $_SERVER['STATIC_ROOT'] = 'http://static.php.net/www.php.net';
+} elseif ($MYSITE == 'https://www.php.net/') {
+    $_SERVER['STATIC_ROOT'] = 'https://static.php.net/www.php.net';
 } elseif (!isset($_SERVER['STATIC_ROOT'])) {
     $_SERVER['STATIC_ROOT'] = "";
 }
@@ -142,7 +144,7 @@ function site_header($title = '', $config = array())
     // Base href setting for URL shortcuts to work
     if (!empty($_SERVER['BASE_HREF'])) {
         $base = "\n <base href=\"{$_SERVER['BASE_HREF']}\" />";
-        $canonical = '<link rel="canonical" href="http://php.net/' . $_SERVER['BASE_PAGE'] . '" />';
+        $canonical = '<link rel="canonical" href="//php.net/' . $_SERVER['BASE_PAGE'] . '" />';
     }
 
     // Define layout helper in case we need it
@@ -353,7 +355,7 @@ function site_footer($config = array())
 </div>
 <!--[if IE 6]>
 <script type="text/javascript">
-    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; }
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; }
     var IE6UPDATE_OPTIONS = {
         icons_path: "/ie6update/images/"
     }
