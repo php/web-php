@@ -28,7 +28,7 @@ function load_check()
     // Adhere to user preferences if valid
     $user_mirror = myphpnet_mirror();
     if (isset($MIRRORS[$user_mirror]) && $MIRRORS[$user_mirror][7] == MIRROR_OK
-        && $user_mirror != "http://php.net/") {
+        && $user_mirror != "http://php.net/" && $user_mirror != 'http://www.php.net/') {
         header("Location: $user_mirror" . substr($_SERVER['REQUEST_URI'], 1));
         exit;
     }
@@ -38,7 +38,7 @@ function load_check()
 
     // Find potential close mirrors 
     foreach ($MIRRORS as $murl => $mirror) {
-        if ($murl != 'http://php.net/' && $mirror[7] == MIRROR_OK && $mirror[4] != MIRROR_SPECIAL) {
+        if ($murl != 'http://php.net/' && $murl != 'http://www.php.net/' && $mirror[7] == MIRROR_OK && $mirror[4] != MIRROR_SPECIAL) {
             if ($mirror[0] == $COUNTRY) {
                 $close_mirrors[] = $murl;
             } else {
