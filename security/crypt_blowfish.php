@@ -57,6 +57,11 @@ in PHP app code after database queries, and using $2y$ on newly set passwords
 them).
 </p>
 
+<p>
+See also the <a href="http://www.openwall.com/lists/announce/2011/06/21/1">openwall
+announcement</a> for more information.
+</p>
+
 
 <?php
 site_footer();
