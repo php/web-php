@@ -214,7 +214,7 @@ EOT;
  </tr>
  <tr>
   <td class="sub">Creating experimental PHP extensions</td>
-  <td>Maintaining www.php.net</td>
+  <td>Maintaining php.net</td>
  </tr>
  <tr>
   <td class="sub">Submitting a patch to PHP</td>

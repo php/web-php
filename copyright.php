@@ -48,7 +48,7 @@ site_header("Copyright", array("current" => "footer"));
 
 <p>
  For more information on the PHP Group and the PHP project, please see 
- <a href="http://www.php.net/">the PHP homepage</a>.
+ <a href="http://php.net/">the PHP homepage</a>.
 </p>
 
 <?php site_footer();

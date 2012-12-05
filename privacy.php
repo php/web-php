@@ -8,7 +8,7 @@ site_header("Privacy Policy", array("current" => "footer"));
 <h1>Privacy Policy</h1>
 
 <p>
- This privacy policy covers www.php.net and its associated mirrors.
+ This privacy policy covers php.net and its associated mirrors.
 </p>
 
 <h2>Email</h2>

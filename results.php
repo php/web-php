@@ -42,7 +42,7 @@ $per_page = 10;
 
 $valid_profiles = array('all', 'local', 'manual', 'news', 'bugs', 'pear', 'pecl', 'talks');
 $scope = in_array($profile, $valid_profiles) ? $profile : 'all';
-$srch_host = "www.php.net";
+$srch_host = "php.net";
 $srch_rqst = "/ws.php?profile=$scope&q=$uq&lang=$ul&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://".$srch_host.$srch_rqst;
 

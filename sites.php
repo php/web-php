@@ -17,13 +17,13 @@ site_header("A Tourist's Guide", array("current" => "help"));
 <h1>PHP.net: A Tourist's Guide</h1>
 
 <p>
- Everyone knows the <code>www.php.net</code> site. All of us went there sooner or later,
+ Everyone knows the <code>php.net</code> site. All of us went there sooner or later,
  and will keep going back there. This is the central reference point for PHP
  users, and there is a wealth of information there. Not all of it is obvious.
  Come with me, I'll show you.
 </p>
 
-<h2><a href="http://www.php.net/">www.php.net</a>: Main Website</h2>
+<h2><a href="http://php.net/">php.net</a>: Main Website</h2>
 
 <p>
  This is the primary web site. The front page is where major news is published:

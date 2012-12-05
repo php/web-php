@@ -33,7 +33,7 @@ function random_bgcolor($min, $max)
 <p>
  Right click on one of the images and select "Save Image As" to save the
  logo (except where otherwise indicated). Then, link it to the main PHP
- site at <code>www.php.net</code>. 
+ site at <code>php.net</code>. 
 </p>
 
 <p>

@@ -2,9 +2,9 @@
 /* $Id$ */
 
 // Set the static content root differently on php.net
-if ($MYSITE == "http://www.php.net/") {
+if ($MYSITE == "http://www.php.net/" || $MYSITE == 'http://php.net/') {
     $_SERVER['STATIC_ROOT'] = 'http://static.php.net/www.php.net';
-} elseif ($MYSITE == 'https://www.php.net/') {
+} elseif ($MYSITE == 'https://www.php.net/' || $MYSITE == 'https://php.net/') {
     $_SERVER['STATIC_ROOT'] = 'https://static.php.net/www.php.net';
 } elseif (!isset($_SERVER['STATIC_ROOT'])) {
     $_SERVER['STATIC_ROOT'] = "";
@@ -836,7 +836,7 @@ function site_header_beta($title = '', $config = array())
 
     // For static content
     // FIXME: How does static.php.net work? Will it get the /js/ folders?
-    if (false && $MYSITE == "http://www.php.net/") {
+    if (false && ($MYSITE == "http://www.php.net/" || $MYSITE == 'http://php.net/')) {
         $STATIC_ROOT = "http://static.php.net/www.php.net/";
     } elseif (false && !empty($_SERVER["STATIC_ROOT"])) {
         $STATIC_ROOT = $_SERVER["STATIC_ROOT"];

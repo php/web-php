@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 PHP_SAPI == 'cli' or die("Please run this script using the cli sapi");
-$BASE = "http://www.php.net";
+$BASE = "http://php.net";
 
 function ce(DOMDocument $d, $name, $value, array $attrs = array(), DOMNode $to = null) {
 	if ($value) {

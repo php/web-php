@@ -227,7 +227,7 @@ echo (myphpnet_hidesuggest() ? ' checked="checked"' : '');
 <h2>Mirror site redirection</h2>
 
 <p>
- The www.php.net site redirects users to mirror sites in several cases
+ The php.net site redirects users to mirror sites in several cases
  automatically. It tries to find a close mirror first (a mirror in the
  user's country), and if no such mirror is found, it selects one mirror
  randomly. Here you can set one preferred mirror site for yourself in
@@ -249,7 +249,7 @@ foreach ($mirror_sites as $murl => $mdata) {
     
     // Skip inactive mirrors
     if (mirror_status($murl) != MIRROR_OK ||
-        $murl == "http://www.php.net/") { continue; }
+        $murl == "http://www.php.net/" || $murl == 'http://php.net/') { continue; }
     
     // Compute user friendly mirror name
     if ($murl == "NONE") {

@@ -11,11 +11,11 @@ $s = isset($_REQUEST['start']) ? (int)$_REQUEST['start'] : 1;
 $l = isset($_REQUEST['lang']) ? htmlspecialchars($_REQUEST['lang'], ENT_QUOTES) : 'en';
 $m = isset($_REQUEST['mirror']) ? htmlspecialchars($_REQUEST['mirror'], ENT_QUOTES) : '';
 $sites = array( 'all'=>'php.net',
-                'local'=>'www.php.net',
-                'quickref'=>'www.php.net',
-                '404quickref'=>'www.php.net',
-                'manual'=>"www.php.net/manual/$l",
-                '404manual'=>"www.php.net/manual/$l",
+                'local'=>'php.net',
+                'quickref'=>'php.net',
+                '404quickref'=>'php.net',
+                'manual'=>"php.net/manual/$l",
+                '404manual'=>"php.net/manual/$l",
                 'news'=>'news.php.net',
                 'bugs'=>'bugs.php.net',
                 'pear'=>'pear.php.net',
@@ -30,7 +30,7 @@ if(isset($sites[$_REQUEST['profile']])) {
     $scope = htmlspecialchars($_REQUEST['profile'], ENT_QUOTES);
     // If they are doing a manual search in a language we don't have a translation for, default to English
     if($scope == 'manual' && empty($ACTIVE_ONLINE_LANGUAGES[$l])) {
-        $sites['manual'] = "www.php.net/manual/en";
+        $sites['manual'] = "php.net/manual/en";
     }
 } else { 
     $scope = 'all';

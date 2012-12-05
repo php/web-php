@@ -156,7 +156,7 @@ if ($snippet = is_known_snippet($notfound)) {
 //  admin/  since these tend to be script-kiddie hack attempts
 if(strlen($notfound) > 2 && !strstr($notfound,'tp://') && !strstr($notfound,'admin/')):
 $srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=10&start=0&mirror=".trim(substr($MYSITE,7),'/');
-$url = "http://www.php.net".$srch_rqst;
+$url = "http://php.net".$srch_rqst;
 $data = fetch_contents($url);
 if(!is_array($data)) {
 	$res = unserialize($data);

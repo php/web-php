@@ -85,7 +85,7 @@ For more info, see
 <ul>
  <li>Name: PHP</li>
  <li>Keyword: p</li>
- <li>Address: http://www.php.net/search.php</li>
+ <li>Address: http://php.net/search.php</li>
  <li>Query string: pattern=%s&amp;show=quickref</li>
 </ul>
 <p class="note">

@@ -424,7 +424,7 @@ directory if you want to learn more about the testing mechanism.
     <li>PHP (the language)</li>
     <li>PECL (various additional PHP functionality in the form of extensions)</li>
     <li>PEAR (reusable PHP component library)</li>
-    <li>Websites (www.php.net, qa.php.net, doc.php.net, edit.php.net, etc.)</li>
+    <li>Websites (php.net, qa.php.net, doc.php.net, edit.php.net, etc.)</li>
     <li>Documentation (PHP, PECL, PEAR, etc.)</li>
     <li>System administration (mail servers, web servers, build-boxes, monitoring, etc.)</li>
     <li>Etc., etc., (etc.)</li>
