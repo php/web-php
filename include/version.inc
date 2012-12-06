@@ -13,12 +13,10 @@
  *             "announcement" => "bool, release announcement exists in releases/?"
  *         ),
  *     ),
- * );
- */
-
+ * );6 Dec
 /* PHP 5.4 Release */
-$PHP_5_4_RC = false; //'5.4.9RC1'; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_4_RC_DATE = '08 Nov 2012';
+$PHP_5_4_RC = '5.4.10RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC_DATE = '06 Dec 2012';
 
 $PHP_5_4_VERSION         = "5.4.9";
 $PHP_5_4_DATE            = "22 Nov 2012";
@@ -29,8 +27,8 @@ $PHP_5_4_MD5     = array(
 );
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = false; // '5.3.19RC1'; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_3_RC_DATE = '08 Nov 2012';
+$PHP_5_3_RC      = '5.3.20RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_3_RC_DATE = '06 Dec 2012';
 
 $PHP_5_3_VERSION         = "5.3.19";
 $PHP_5_3_DATE            = "22 Nov 2012";
