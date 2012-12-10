@@ -86,8 +86,9 @@ site_header("Downloads",
 <a name="v5"></a>
 <?php
 $SHOW_COUNT = 2;
+$MAJOR = 5;
 for ($i=1; $i<=$SHOW_COUNT; ++$i) {
-list($v, $a) = each($RELEASES[5]); 
+list($v, $a) = each($RELEASES[$MAJOR]);
 
 ?>
 <?php if ($i == 1) { ?>
@@ -114,6 +115,9 @@ foreach($a["source"] as $rel) {
     echo " </li>\n";
 }
 ?>
+<li>
+    <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>">Changelog for PHP <?php echo $v; ?></a>
+</li>
 </ul>
 
 <hr />
