@@ -102,7 +102,7 @@ For more info, see
 
 <p>
  There are some options for
- <a href="http://www.apple.com/macosx/features/dashboard/">Apple Dashboard</a> users:
+ <a href="http://support.apple.com/kb/HT2492">Apple Dashboard</a> users:
 </p>
 <ul>
  <li>
