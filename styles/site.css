@@ -111,7 +111,9 @@ div.warning, div.tip {
 	padding-left: 92px;
 	background-position: center left;
 }
-div.warning p, div.caution p, div.tip p, div.information p {
+div.warning p, div.caution p, div.tip p, div.information p,
+div.warning ul, div.caution ul, div.tip ul, div.information ul,
+div.warning ol, div.caution ol, div.tip ol, div.information ol {
 	text-align: justify;
 }
 div.tip {
