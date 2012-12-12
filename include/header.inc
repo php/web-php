@@ -66,15 +66,16 @@ if (isset($shortname) && $shortname) {
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <![endif]-->
 
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
  <script type="text/javascript">
  if (typeof jQuery == 'undefined') {
-    document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-1.4.4.min.js"><' + '/script>');
+    document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-1.7.2.min.js"><' + '/script>');
     document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-ui-1.8.7.min.js"><' + '/script>');
  }
  </script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/usernotes.js"></script>
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
 <?php endif ?>

@@ -408,6 +408,55 @@ hr {
     padding-top:1.5em;
 }
 
+/* User notes new features */
+#usernotes a {
+	text-decoration: none;
+	color: #222222;
+}
+#usernotes a:hover {
+	text-decoration: underline;
+	color: #111111;
+}
+#usernotes div.features {
+	padding-right: 8px;
+	float: left;
+}
+#usernotes div.votes {
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	padding-right: 8px;
+}
+#usernotes a.usernotes-voteu {
+	display: block;
+	width: 16px;
+	height: 16px;
+    background-image: url(/images/notes-features.png);
+    background-position:0px 0px;
+	text-indent: -99999px;
+}
+#usernotes a.usernotes-voted {
+	display: block;
+	width: 16px;
+	height: 16px;
+    background-image: url(/images/notes-features.png);
+    background-position:0px 16px;
+	text-indent: -99999px;
+}
+#usernotes a.usernotes-voteu:hover {
+    background-image: url(/images/notes-features.png);
+    background-position:-16px 0px;
+}
+#usernotes a.usernotes-voted:hover {
+    background-image: url(/images/notes-features.png);
+    background-position:-16px 16px;
+}
+#usernotes div.features {
+	float: left;
+	display: block;
+}
+
 #usernotes .date, #usernotes .admin {
     float:right;
     text-align: right;

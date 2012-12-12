@@ -114,7 +114,7 @@ function manual_header()
         ),
         "headtags" => array(
             '<meta http-equiv="Content-language" content="' . $lang . '" />
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -157,6 +157,7 @@ $(document).ready(function() {
     });
 });
 </script>
+<script type="text/javascript" src="/js/usernotes.js"></script>
 ',
 
 
@@ -326,6 +327,7 @@ function manual_notes()
 
     // Load user note for this page
     $notes = manual_notes_load($filename);
+    uasort($notes, "manual_notes_sort");
 
     // If there are few comments, provide the quick 'prevous'/'next' navigation
     // above the comments
@@ -342,6 +344,14 @@ function manual_notes()
         ' <small>' .
         make_link($addnotelink, 'add a note') .
         '</small>';
+    
+    $num_notes = count($notes);
+
+	// note snippet
+	list($redir_filename) = $GLOBALS['PGI']['this'];
+    if (substr($redir_filename, -4) == '.php') {
+      $redir_filename = substr($redir_filename, 0, -4);
+    }
 
     echo <<<END_USERNOTE_HEADER
 
@@ -349,7 +359,7 @@ function manual_notes()
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
   <small>User Contributed Notes</small>
-  <strong>{$title}</strong>
+  <strong>{$title}</strong> - [<em>{$num_notes}</em> notes]
  </div>
 END_USERNOTE_HEADER;
 
@@ -364,7 +374,7 @@ END_USERNOTE_HEADER;
 
         foreach($notes as $note) {
             manual_note_display(
-                $note['xwhen'], $note['user'], $note['note'], $note['id']
+                $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
         }
         echo "</div>\n";
@@ -444,14 +454,15 @@ function manual_notes_load($id)
         while (!feof($fp)) {
             $line = chop(fgets($fp, 12288));
             if ($line == "") { continue; }
-            list($id, $sect, $rate, $ts, $user, $note) = explode("|", $line);
+            @list($id, $sect, $rate, $ts, $user, $note, $up, $down) = explode("|", $line);
             $notes[$id] = array(
                 "id"    => $id,
                 "sect"  => $sect,
                 "rate"  => $rate,
                 "xwhen" => $ts,
                 "user"  => $user,
-                "note"  => base64_decode($note)
+                "note"  => base64_decode($note),
+                "votes"  => array("up"=> (int)$up, "down"=> (int)$down)
             );
         }
         fclose($fp);
@@ -460,13 +471,48 @@ function manual_notes_load($id)
 }
 
 // Print out one user note entry
-function manual_note_display($date, $name, $text, $id)
+function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'down'=>0), $voteOption = true)
 {
-    if ($name) { $name = "\n  <strong class='user'>" . htmlspecialchars($name) . "</strong>"; }
-    $datestr = date("d-M-Y h:i", $date);
-    $datestr = ($id ? "\n  <a href=\"#$id\" class=\"date\">$datestr</a>" : "\n  $datestr");
-    $anchor  = ($id ? "<a name=\"$id\"></a>\n " : "");
+    if ($name) {
+        $name = "\n  <strong class=\"user\"><em>" . htmlspecialchars($name) . "</em></strong>";
+    } else {
+        $name = "<strong class=\"user\"><em>Anonymous</em></strong>";
+    }
+    $name = ($id ? "\n  <a href=\"#$id\" class=\"date\">$name</a>" : "\n  $name");
+
+    // New date style will be relative time
+    $datestr = relTime(new DateTime("@{$date}"));
+    $fdatestr = date("Y-m-d h:i", $date);
     $text    = clean_note($text);
+    
+    // Calculate note rating by up/down votes
+    $vote = $votes['up'] - $votes['down'];
+    $p = floor(($votes['up'] / (($votes['up'] + $votes['down']) ? $votes['up'] + $votes['down'] : 1)) * 100);
+    $rate = !$p && !($votes['up'] + $votes['down']) ? "no votes..." : "$p% like this...";
+
+    // Vote User Notes Div
+    if ($voteOption) {
+	    list($redir_filename) = $GLOBALS['PGI']['this'];
+	    if (substr($redir_filename, -4) == '.php') {
+	        $redir_filename = substr($redir_filename, 0, -4);
+	    }
+	    $rredir_filename = urlencode($redir_filename);
+	    $votediv = <<<VOTEDIV
+  <div class="votes">
+    <div id="Vu{$id}" style="float: left;">
+    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    </div>
+    <div id="Vd{$id}" style="float: left;">
+    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    </div>
+    <div id="V{$id}" style="float: left; padding: 4px; color: #323232; font-weight: strong; font-size: 19px; margin-top: -6px;" title="{$rate}">
+    {$vote}
+    </div>
+  </div>
+VOTEDIV;
+	} else {
+		$votediv = null;
+	}
 
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['IS_DEV']) && $id) {
@@ -494,12 +540,14 @@ function manual_note_display($date, $name, $text, $id)
             'scrollbars=no,width=300,height=200'
         ) . "\n  </span>";
 
-    } else { $admin = ''; }
+    } else {
+        $admin = '';
+    }
 
     echo <<<USER_NOTE_TEXT
 
- {$anchor}<div class="note">{$name}{$datestr}{$admin}
-  <div class="text">
+ <a name="$id"></a><div class="note">{$votediv}{$name}{$admin}<div style="float: right; right-padding: 4px; color: #999997;" title="$fdatestr"><strong>{$datestr}</strong></div>
+  <div class="text" id="Hcom{$id}">
 {$text}
   </div>
  </div>
@@ -598,5 +646,72 @@ function manual_footer_beta() {
 
     manual_notes();
     site_footer(array('elephpants' => true));
+}
+
+// This function takes a DateTime object and returns a formated string of the time difference relative to now
+function relTime(DateTime $date) {
+    $current = new DateTime;
+    $diff = $current->diff($date);
+    $units = array("year" => $diff->format("%y"),
+                   "month" => $diff->format("%m"),
+                   "day" => $diff->format("%m"),
+                   "hour" => $diff->format("%m"),
+                   "minute" => $diff->format("%m"),
+                   "second" => $diff->format("%m"),
+                  );
+    $out = "just now...";
+    foreach ($units as $unit => $amount) {
+        if (empty($amount)) {
+            continue;
+        }
+        $out = $amount . " " . ($amount == 1 ? $unit : $unit . "s") . " ago";
+        break;
+    }
+    return $out;
+}
+
+// Sort notes by rating and group by date
+function manual_notes_sort($a, $b)
+{
+    if ($a['votes']['up'] + $a['votes']['down'] < 1) {
+      $c = 1;
+    } else {
+      $c = $a['votes']['up'] + $a['votes']['down'];
+    }
+    if ($b['votes']['up'] + $b['votes']['down'] < 1) {
+      $d = 1;
+    } else {
+      $d = $b['votes']['up'] + $b['votes']['down'];
+    }
+	$voteA = $a['votes']['up'] / $c;
+	$voteB = $b['votes']['up'] / $d;
+	// Lower voted notes go to the bottom regardless of date
+	if ($voteA > $voteB) {
+		// Exception to the rule for today's notes
+		if ($b['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteB > -1) return 1;
+		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+		if ($voteB === 0 && $d === 1 && $voteA <= 0.30 && $c >= 4) return 1;
+		return -1;
+	}
+	// Higher voted notes go to the top regardless of date
+	elseif ($voteA < $voteB) {
+		// Exception to the rule for today's notes
+		if ($a['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteA > -1) return -1;
+		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+		if ($voteA === 0 && $c === 1 && $voteB <= 0.30 && $d >= 4) return -1;
+		return 1;
+	}
+	// Votes of equal amounts are sorted in descending order by date
+	else {
+		if ($a['xwhen'] > $b['xwhen']) {
+			return -1;
+		}
+		elseif ($a['xwhen'] < $b['xwhen']) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
 }
 

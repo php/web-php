@@ -647,6 +647,84 @@ div#usernotes div.text {
 	margin-top: 4px;
 }
 
+/* User notes on manual pages --------------------------------------------- */
+div#usernotes {
+	background-color: #e0e0e0;
+	color: inherit;
+}
+div#usernotes div.head, div#usernotes div.foot {
+	background-color: #d0d0d0;
+	color: inherit;
+	padding: 4px;
+}
+div#usernotes div.foot {
+	text-align: right;
+}
+div#usernotes div.foot a, div#usernotes div.head a {
+	color: black;
+	background-color: transparent;
+}
+div#usernotes span.action {
+	float: right;
+}
+div#usernotes div.note {
+	padding: 4px;
+}
+div#usernotes div.text {
+	background-color: #f0f0f0;
+	color: inherit;
+	padding: 2px;
+	margin-top: 4px;
+}
+/* User notes new features */
+div#usernotes a {
+	text-decoration: none;
+	color: #222222;
+}
+div#usernotes a:hover {
+	text-decoration: underline;
+	color: #111111;
+}
+div#usernotes div.features {
+	padding-right: 8px;
+	float: left;
+}
+div#usernotes div.votes {
+	float: left;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	padding-right: 8px;
+}
+div#usernotes a.usernotes-voteu {
+	display: block;
+	width: 16px;
+	height: 16px;
+    background-image: url(/images/notes-features.png);
+    background-position:0px 0px;
+	text-indent: -99999px;
+}
+div#usernotes a.usernotes-voted {
+	display: block;
+	width: 16px;
+	height: 16px;
+    background-image: url(/images/notes-features.png);
+    background-position:0px 16px;
+	text-indent: -99999px;
+}
+div#usernotes a.usernotes-voteu:hover {
+    background-image: url(/images/notes-features.png);
+    background-position:-16px 0px;
+}
+div#usernotes a.usernotes-voted:hover {
+    background-image: url(/images/notes-features.png);
+    background-position:-16px 16px;
+}
+div#usernotes div.features {
+	float: left;
+	display: block;
+}
+
 /* Left sidebar TOC on manual pages --------------------------------------- */
 ul.toc {
 	margin: 0px 5px 5px 5px;
