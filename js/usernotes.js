@@ -23,8 +23,8 @@ $(document).ready(function() {
             }
             else {
               var responsedata = "Error :(";
-              if (data.message != null) {
-                responsedata = data.message;
+              if (data.msg != null) {
+                responsedata = data.msg;
               }
               $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"" + responsedata + "\"></div>");
             }

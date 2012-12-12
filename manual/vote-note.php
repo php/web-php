@@ -36,16 +36,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       );
       if (($r = posttohost($master_url, $data)) === null || strpos($r,"failed to open socket to") !== false) {
         $response["success"] = false;
-        $response["msg"] = "Invalid request.";
+        $response["msg"] = "Could not process your request at this time. Please try again later...";
       }
       else {
         $r = json_decode($r);
         if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
+        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r-status) && isset($r->message) && $r->status == false) {
+          $response["success"] = false;
+          $response["msg"] = $r->message;
         } else {
           $response["success"] = false;
-          $response["msg"] = "Response unrecognized.";
+          $response["msg"] = "The server did not respond properly. Please try again later...";
         }
       }
     }
