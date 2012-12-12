@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (json_last_error() == JSON_ERROR_NONE && isset($r->status) && $r->status && isset($r->votes)) {
           $response["success"] = true;
           $response["update"] = (int)$r->votes;
-        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r-status) && isset($r->message) && $r->status == false) {
+        } elseif (json_last_error() == JSON_ERROR_NONE && isset($r->status) && isset($r->message) && $r->status == false) {
           $response["success"] = false;
           $response["msg"] = $r->message;
         } else {
