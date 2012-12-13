@@ -10,6 +10,7 @@ include      $_SERVER['DOCUMENT_ROOT'] . '/manual/spam_challenge.php';
 // Initialize global variables
 $error = false;
 $thankyou = false;
+$headerset = false;
 $BACKpage = htmlspecialchars(isset($_REQUEST['page']) ? $_REQUEST['page'] : '');
 $BACKid = htmlspecialchars(isset($_REQUEST['id']) ? $_REQUEST['id'] : '');
 $link = "/{$BACKpage}#{$BACKid}";
@@ -100,12 +101,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
   }
   else {
-    $error = "Invalid request.3";
+    $error = "Invalid request.";
   }
 }
 else {
   // Site header
   site_header("Vote On User Notes");
+  $headerset = true;
 
   if (!empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
 ?>
@@ -156,7 +158,10 @@ if ($error) {
         </p>
       </div>
 EOL;
-if (!headers_sent()) site_header("Error - Voting");
+if (!$headerset) {
+  site_header("Error - Voting");
+  $headerset = true;
+}
 ?>
  <div class="container" id="notes-dialog" style="width: 100%; padding-bottom: 15px; margin: auto;">
   <div style="width: 100%; margin: auto;"><h1>Voting</h1></div>
@@ -194,6 +199,7 @@ if (!headers_sent()) site_header("Error - Voting");
 }
 if ($thankyou) {
   site_header("Thank you for voting!");
+  $headerset = true;
 ?>
  <div class="container" id="notes-dialog" style="width: 100%; padding: 15px; margin: auto;">
   <h1>Thanks for voting!</h1>
