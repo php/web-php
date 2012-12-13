@@ -654,10 +654,10 @@ function relTime(DateTime $date) {
     $diff = $current->diff($date);
     $units = array("year" => $diff->format("%y"),
                    "month" => $diff->format("%m"),
-                   "day" => $diff->format("%m"),
-                   "hour" => $diff->format("%m"),
-                   "minute" => $diff->format("%m"),
-                   "second" => $diff->format("%m"),
+                   "day" => $diff->format("%d"),
+                   "hour" => $diff->format("%h"),
+                   "minute" => $diff->format("%i"),
+                   "second" => $diff->format("%s"),
                   );
     $out = "just now...";
     foreach ($units as $unit => $amount) {
