@@ -432,7 +432,6 @@ hr {
 	display: block;
 	width: 16px;
 	height: 16px;
-    background-image: url(/images/notes-features.png);
     background-position:0px 0px;
 	text-indent: -99999px;
 }
@@ -440,16 +439,13 @@ hr {
 	display: block;
 	width: 16px;
 	height: 16px;
-    background-image: url(/images/notes-features.png);
     background-position:0px 16px;
 	text-indent: -99999px;
 }
 #usernotes a.usernotes-voteu:hover {
-    background-image: url(/images/notes-features.png);
     background-position:-16px 0px;
 }
 #usernotes a.usernotes-voted:hover {
-    background-image: url(/images/notes-features.png);
     background-position:-16px 16px;
 }
 #usernotes div.features {

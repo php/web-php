@@ -700,7 +700,6 @@ div#usernotes a.usernotes-voteu {
 	display: block;
 	width: 16px;
 	height: 16px;
-    background-image: url(/images/notes-features.png);
     background-position:0px 0px;
 	text-indent: -99999px;
 }
@@ -708,16 +707,13 @@ div#usernotes a.usernotes-voted {
 	display: block;
 	width: 16px;
 	height: 16px;
-    background-image: url(/images/notes-features.png);
     background-position:0px 16px;
 	text-indent: -99999px;
 }
 div#usernotes a.usernotes-voteu:hover {
-    background-image: url(/images/notes-features.png);
     background-position:-16px 0px;
 }
 div#usernotes a.usernotes-voted:hover {
-    background-image: url(/images/notes-features.png);
     background-position:-16px 16px;
 }
 div#usernotes div.features {

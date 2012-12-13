@@ -28,6 +28,13 @@ div.warning {
     background-image: url(/images/dialog-warning.png);
 }
 
+/* Voting images ---------------------------------------------------------- */
+div#usernotes a.usernotes-voteu,
+div#usernotes a.usernotes-voted,
+div#usernotes a.usernotes-voteu:hover,
+div#usernotes a.usernotes-voted:hover {
+    background-image: url(/images/notes-features.png);
+}
 
 
 #mirrors-container {
