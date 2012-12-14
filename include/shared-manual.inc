@@ -701,16 +701,24 @@ function manual_notes_sort($a, $b)
 		if ($voteA === 0 && $c === 1 && $voteB <= 0.30 && $d >= 4) return -1;
 		return 1;
 	}
-	// Votes of equal amounts are sorted in descending order by date
+	// Votes of equal amounts are sorted based on the overall rating and in descending order by date
 	else {
-		if ($a['xwhen'] > $b['xwhen']) {
-			return -1;
+		if ($c > $d) {
+		  return -1;
 		}
-		elseif ($a['xwhen'] < $b['xwhen']) {
-			return 1;
+		elseif ($c < $d) {
+		  return 1;
 		}
 		else {
-			return 0;
+			if ($a['xwhen'] > $b['xwhen']) {
+				return -1;
+			}
+			elseif ($a['xwhen'] < $b['xwhen']) {
+				return 1;
+			}
+			else {
+				return 0;
+			}
 		}
 	}
 }
