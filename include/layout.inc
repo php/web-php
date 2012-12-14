@@ -208,7 +208,7 @@ function site_header($title = '', $config = array())
 <head{$profile}>
  <title>PHP{$title}</title>
  <style type="text/css" media="all">
-  @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css?r=1");
+  @import url("{$_SERVER['STATIC_ROOT']}/styles/site.css");
   @import url("{$_SERVER['STATIC_ROOT']}/styles/{$mirror_specific_style}.css");
   $import_rtl
  </style>
