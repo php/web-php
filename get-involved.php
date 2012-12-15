@@ -254,7 +254,7 @@ directory if you want to learn more about the testing mechanism.
     language; your voice does matter. Keep in mind, however, that flaming
     and/or talking down to the developers that spend most of their free time
     working on the project may not exactly be the best approach to get your point
-    across. Take a look at the <a href="http://php.net/mailinglists"]]">Mailing Lists</a> for the most
+    across. Take a look at the <a href="http://php.net/mailinglists">Mailing Lists</a> for the most
     popular mailing lists and see if any of them interest you, then sign up!
 </p>
 
