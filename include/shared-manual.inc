@@ -685,6 +685,8 @@ function manual_notes_sort($a, $b)
     }
 	$voteA = $a['votes']['up'] / $c;
 	$voteB = $b['votes']['up'] / $d;
+	$rateA = $a['votes']['up'] - $a['votes']['down'];
+	$rateB = $b['votes']['up'] - $b['votes']['down'];
 	// Lower voted notes go to the bottom regardless of date
 	if ($voteA > $voteB) {
 		// Exception to the rule for today's notes
@@ -703,10 +705,10 @@ function manual_notes_sort($a, $b)
 	}
 	// Votes of equal amounts are sorted based on the overall rating and in descending order by date
 	else {
-		if ($c > $d) {
+		if ($rateA > $rateB) {
 		  return -1;
 		}
-		elseif ($c < $d) {
+		elseif ($rateA < $rateB) {
 		  return 1;
 		}
 		else {
