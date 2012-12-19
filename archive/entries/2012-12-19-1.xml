@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>php[tek] 2013 Conference</title>
+  <id>http://php.net/archive/2012.php#id2012-12-19-1</id>
+  <published>2012-12-19T14:57:57-08:00</published>
+  <updated>2012-12-19T14:57:57-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-01-15</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2012-12-19-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://tek13.phparch.com/" title="php[tek] 2013">tek13_badge.png</default:newsImage>
+  <link href="http://tek13.phparch.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are pleased to announce that <a href="http://tek13.phparch.com/">tek13</a> will be taking place this
+     year again at it's traditional location in Chicago, IL.  This year's
+     dates are from May 14th - 17th, 2013.  It will again be a 3-track
+     conference with a focus on the community.</p>
+     
+     <p>The <a href="http://tek13.phparch.com/call-for-papers/">Call for
+     Papers</a> has been announced and will be running until January 15th,
+     2013.   Conference registration will open on January 1st.  We look
+     forward to seeing many of you there this year!</p>
+    </div>
+  </content>
+</entry>
