@@ -104,6 +104,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63399); ?>  (ReflectionClass::getTraitAliases() incorrectly resolves traitnames).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.19"></a><!-- {{{ 5.3.19 -->
 <h3>Version 5.3.19</h3>
@@ -180,6 +181,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.4.8"></a><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
@@ -285,6 +287,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63000); ?> (MCAST_JOIN_GROUP on OSX is broken, merge of PR 185 by Igor Wiedler).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.18"></a><!-- {{{ 5.3.18 -->
 <h3>Version 5.3.18</h3>
@@ -340,6 +343,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.4.7"></a><!-- {{{ 5.4.7 -->
 <h3>Version 5.4.7</h3>
@@ -444,6 +448,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     <li>Merged PR 121 by minitux to add support for slow request counting on PHP FPM status page</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.17"></a><!-- {{{ 5.3.17 -->
 <h3>Version 5.3.17</h3>
@@ -515,6 +520,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it)</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.4.6"></a><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
@@ -613,6 +619,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(55544); ?> (ob_gzhandler always conflicts with zlib.output_compression).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.16"></a><!-- {{{ 5.3.16 -->
 <h3>Version 5.3.16</h3>
@@ -677,6 +684,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.4.5"></a><!-- {{{ 5.4.5 -->
 <h3>Version 5.4.5</h3>
@@ -800,6 +808,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Upgraded libzip to 0.10.</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.3.15"></a><!-- {{{ 5.3.15 -->
 <h3>Version 5.3.15</h3>
@@ -909,6 +918,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Upgraded libzip to 0.10</li>
 </ul>
 </ul>
+<!-- }}} -->
 
 <a name="5.4.4"></a><!-- {{{ 5.4.4 -->
 <h3>Version 5.4.4</h3>
