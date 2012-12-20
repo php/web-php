@@ -11,6 +11,188 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+
+<a name="5.4.10"></a><!-- {{{ 5.4.10 -->
+<h3>Version 5.4.10</h3>
+<b>20-December-2012</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63635); ?> (Segfault in gc_collect_cycles).</li>
+  <li><?php bugfix(63512); ?> (parse_ini_file() with INI_SCANNER_RAW removes quotes from value).</li>
+  <li><?php bugfix(63468); ?> (wrong called method as callback with inheritance).</li>
+  <li><?php bugfix(63451); ?> (config.guess file does not have AIX 7 defined, shared objects are not created).</li>
+  <li><?php bugfix(61557); ?> (Crasher in tt-rss backend.php).</li>
+  <li><?php bugfix(61272); ?> (ob_start callback gets passed empty string).</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>Date:</li>
+<ul>
+  <li><?php bugfix(63666); ?> (Poor date() performance).</li>
+  <li><?php bugfix(63435); ?> (Datetime::format('u') sometimes wrong by 1 microsecond).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Imap:</li>
+<ul>
+  <li><?php bugfix(63126); ?> (DISABLE_AUTHENTICATOR ignores array).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Json:</li>
+<ul>
+  <li><?php bugfix(63588); ?> (use php_next_utf8_char and remove duplicate implementation).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQLi:</li>
+<ul>
+  <li><?php bugfix(63361); ?> (missing header).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQLnd:</li>
+<ul>
+  <li><?php bugfix(63398); ?> (Segfault when polling closed link).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo:</li>
+<ul>
+  <li><?php bugfix(63590); ?> (Different results in TS and NTS under Windows).</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM:</li>
+<ul>
+  <li><?php bugfix(63581); ?> Possible null dereference and buffer overflow.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Pdo_sqlite:</li>
+<ul>
+  <li><?php bugfix(63149); ?> getColumnMeta should return the table name when system SQLite used.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Apache2 Handler SAPI:</li>
+<ul>
+  <li>Enabled Apache 2.4 configure option for Windows.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection:</li>
+<ul>
+  <li><?php bugfix(63614); ?> (Fatal error on Reflection).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SOAP:</li>
+<ul>
+  <li><?php bugfix(63271); ?> (SOAP wsdl cache is not enabled after initial requests).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Sockets:</li>
+<ul>
+  <li><?php bugfix(49341); ?> (Add SO_REUSEPORT support for socket_set_option()).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.20"></a><!-- {{{ 5.3.20 -->
+<h3>Version 5.3.20</h3>
+<b>20-December-2012</b>
+<ul>
+<li>Zend Engine:</li>
+<ul>
+  <li><?php bugfix(63635); ?> (Segfault in gc_collect_cycles).</li>
+  <li><?php bugfix(63512); ?> (parse_ini_file() with INI_SCANNER_RAW removes quotes from value).</li>
+  <li><?php bugfix(63468); ?> (wrong called method as callback with inheritance).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63451); ?> (config.guess file does not have AIX 7 defined, shared objects are not created).</li>
+  <li><?php bugfix(63377); ?> (Segfault on output buffer).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Apache2 Handler SAPI:</li>
+<ul>
+  <li>Enabled Apache 2.4 configure option for Windows.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Date:</li>
+<ul>
+  <li><?php bugfix(63435); ?> (Datetime::format('u') sometimes wrong by 1 microsecond).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo:</li>
+<ul>
+  <li><?php bugfix(63248); ?> (Load multiple magic files from a directory under Windows).</li>
+  <li><?php bugfix(63590); ?> (Different results in TS and NTS under Windows).</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM:</li>
+<ul>
+  <li><?php bugfix(63581); ?> (Possible null dereference and buffer overflow).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Imap:</li>
+<ul>
+  <li><?php bugfix(63126); ?> (DISABLE_AUTHENTICATOR ignores array).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MySQLnd:</li>
+<ul>
+  <li><?php bugfix(63398); ?> (Segfault when polling closed link).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection:</li>
+<ul>
+  <li><?php bugfix(63614); ?> (Fatal error on Reflection).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SOAP</li>
+<ul>
+  <li><?php bugfix(63271); ?> (SOAP wsdl cache is not enabled after initial requests).</li>
+</ul>
+</ul>
+
+<!-- }}} -->
+
+
 <a name="5.4.9"></a><!-- {{{ 5.4.9 -->
 <h3>Version 5.4.9</h3>
 <b>22-November-2012</b>
