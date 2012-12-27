@@ -696,7 +696,6 @@ footer {
     overflow: auto;
     background-color: #333;
     border-top: .5em solid #9999CC;
-    border-bottom: .5em solid #9999CC;
     padding: 1.5em 0;
     min-width:960px;
 }
