@@ -761,7 +761,6 @@ footer a:focus {
 div.elephpants {
     margin: auto;
     overflow: hidden;
-    border-bottom: .5em solid #9999CC;
     min-width:960px;
 }
 
