@@ -871,7 +871,6 @@ function news_toc($sections = null) {
         ),
     );
 
-    echo "<dl>\n";
     foreach($items as $section => $menu) {
 
         // only print requested sections.
@@ -884,7 +883,6 @@ function news_toc($sections = null) {
             echo "<dd><a href='{$child["permlink"]}'>{$child["title"]}</a></dd>\n";
         }
     }
-    echo "</dl>\n";
 }
 function doc_toc($lang) {
     $file = dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
@@ -894,31 +892,53 @@ function doc_toc($lang) {
     }
     require dirname(__FILE__) . "/../manual/$lang/toc/index.inc";
 
-    echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "getting-started");
-    doc_toc_list($lang, $TOC, "langref");
-    echo "</dl>\n";
+?>
+    <dl>
+        <dt><a href="/manual/">PHP Manual</a></dt>
+        <?php doc_toc_list($lang, $TOC, 'getting-started'); ?>
+        <?php doc_toc_title($lang, $TOC, 'install', 'dd'); ?>
+    </dl>
 
-    echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "security");
-    doc_toc_list($lang, $TOC, "features");
-    echo "</dl>\n";
+    <dl>
+        <?php doc_toc_title($lang, $TOC, 'langref'); ?>
+        <?php doc_sub_entry($lang, 'langref', 'language.basic-syntax'); ?>
+        <?php doc_sub_entry($lang, 'langref', 'language.variables'); ?>
+        <?php doc_sub_entry($lang, 'langref', 'language.operators'); ?>
+        <?php doc_sub_entry($lang, 'langref', 'language.functions'); ?>
+        <?php doc_sub_entry($lang, 'langref', 'language.oop5'); ?>
+    </dl>
 
-    echo "<dl>\n";
-    doc_toc_list($lang, $TOC, "funcref");
-    echo "</dl>\n";
+    <dl>
+        <?php doc_toc_title($lang, $TOC, 'funcref'); ?>
+        <?php doc_sub_entry($lang, 'refs.basic.vartype', 'book.array'); ?>
+        <?php doc_sub_entry($lang, 'refs.calendar', 'book.datetime'); ?>
+        <?php doc_sub_entry($lang, 'refs.basic.text', 'book.strings'); ?>
+        <?php doc_toc_title($lang, $TOC, 'faq'); ?>
+    </dl>
 
-    echo "<dl>\n";
-    echo "<dt>Miscellaneous</dt>";
-    doc_toc_title($lang, $TOC, "install", "dd");
-    doc_toc_title($lang, $TOC, "internals2", "dd");
-    doc_toc_title($lang, $TOC, "faq", "dd");
-    doc_toc_title($lang, $TOC, "appendices", "dd");
-    echo "<dd><a href='/quickref.php'>Quick Function Reference</a></dd>\n";
-    echo "<dd><a href='/docs.php'>Translations</a></dd>\n";
-    echo "<dd><a href='/download-docs.php'>Documentation Downloads</a></dd>\n";
-    echo "</dl>\n";
+    <dl>
+        <?php doc_toc_title($lang, $TOC, 'security'); ?>
+        <?php doc_sub_entry($lang, 'security', 'security.database'); ?>
+        <?php doc_sub_entry($lang, 'security', 'security.variables'); ?>
+        <?php doc_sub_entry($lang, 'faq', 'faq.passwords'); ?>
+        <?php doc_toc_title($lang, $TOC, 'appendices'); ?>
+    </dl>
+<?php
+}
+function doc_sub_entry($lang, $file, $subfile, $elm = "dd") {
+    static $cache = array();
 
+    if (isset($cache["$lang.$file"])) {
+        $TOC = $cache["$lang.$file"];
+    } else {
+        include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
+    }
+
+    foreach($TOC as $entry) {
+        if (substr($entry[0], 0, strlen($subfile)) == $subfile) {
+            echo "\t<$elm><a href='/manual/$lang/{$entry[0]}'>{$entry[1]}</a></$elm>\n";
+        }
+    }
 }
 function doc_toc_list($lang, $index, $file) {
     include dirname(__FILE__) . "/../manual/$lang/toc/$file.inc";
