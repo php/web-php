@@ -359,17 +359,13 @@ hr {
     max-width: 75em;
 }
 
-#usernotes .note:before {
-    content:" ";
-    position:absolute;
-    top:-.25em;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index: -1;
-    border-top:.25em solid #ddd;
+/* User contributed notes heading. */
+#usernotes h3 {
+    border-top: .2em solid #669;
+    padding-top: .801em;
 }
 
+/* Add a note buttons. */
 #usernotes .action {
     display: block;
     top: 1em;
@@ -378,85 +374,108 @@ hr {
     text-align: right;
 }
 
-#usernotes .foot .action {
-    position: relative;
-    top: -1em;
+#usernotes .foot {
+    text-align: right;
     margin-bottom: 1em;
 }
 
-#usernotes h3 {
-    border-top: .2em solid #669;
-    padding-top: .801em;
-}
-
+/* Notes themselves. */
 #usernotes .note {
     margin: 1.5em 0;
-    padding: 1.5em .75em;
-    background-color: #f5f5f5;
     position: relative;
 }
 
-#usernotes .user,
-#usernotes .date,
-#usernotes .admin {
-    display: block;
-    width: 50%;
+#usernotes .note .votes {
     float: left;
-    margin-top:-.25em;
-}
-#usernotes .text {
-    padding-top:1.5em;
 }
 
-/* User notes new features */
-#usernotes a {
-	text-decoration: none;
-	color: #222222;
-}
-#usernotes a:hover {
-	text-decoration: underline;
-	color: #111111;
-}
-#usernotes div.features {
-	padding-right: 8px;
-	float: left;
-}
-#usernotes div.votes {
-	float: left;
-	font-size: 16px;
-	text-align: center;
-	vertical-align: middle;
-	padding-right: 8px;
-}
-#usernotes a.usernotes-voteu {
-	display: block;
-	width: 16px;
-	height: 16px;
-    background-position:0px 0px;
-	text-indent: -99999px;
-}
-#usernotes a.usernotes-voted {
-	display: block;
-	width: 16px;
-	height: 16px;
-    background-position:0px 16px;
-	text-indent: -99999px;
-}
-#usernotes a.usernotes-voteu:hover {
-    background-position:-16px 0px;
-}
-#usernotes a.usernotes-voted:hover {
-    background-position:-16px 16px;
-}
-#usernotes div.features {
-	float: left;
-	display: block;
+#usernotes .note .name {
+    border-bottom: 0;
+    color: #444;
+    margin-left: 1em;
 }
 
-#usernotes .date, #usernotes .admin {
-    float:right;
+#usernotes .note .name em {
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#usernotes .note .name:hover + .genanchor {
+    color: black;
+}
+
+#usernotes .note .date {
+    color: #666;
+    float: right;
     text-align: right;
-    border-bottom: none;
+}
+
+#usernotes .note .date strong {
+    font-weight: normal;
+}
+
+#usernotes .note .admin {
+    float: left;
+    padding-left: 1em;
+}
+
+#usernotes .note .admin a {
+    border-bottom: 0;
+}
+
+#usernotes .note .text {
+    background-color: #f5f5f5;
+    border-top: 0.25em solid #ddd;
+    clear: both;
+    padding: 1.5em .75em;
+}
+
+/* Vote arrow styles. */
+#usernotes .note .votes > div:first-child {
+    float: left;
+}
+
+#usernotes .note .votes > div {
+    float: right;
+}
+
+#usernotes .note .votes a {
+    display: block;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    margin: 8px 0 0 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 0;
+
+    -webkit-transition: border 0.4s;
+    -moz-transition: border 0.4s;
+    -o-transition: border 0.4s;
+    -ms-transition: border 0.4s;
+    transition: border 0.4s;
+}
+
+#usernotes .note .votes .usernotes-voteu {
+    border-bottom: 10px solid #999;
+}
+
+#usernotes .note .votes .usernotes-voted {
+    border-top: 10px solid #999;
+}
+
+#usernotes .note .votes .usernotes-voteu:hover {
+    border-bottom: 10px solid #015;
+}
+
+#usernotes .note .votes .usernotes-voted:hover {
+    border-top: 10px solid #015;
+}
+
+#usernotes .note .votes .tally {
+    color: #333;
+    padding: 0 0.3em;
 }
 
 /* Definition lists used on eg. the unsub page */

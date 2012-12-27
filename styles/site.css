@@ -646,6 +646,9 @@ div#usernotes div.text {
 	padding: 2px;
 	margin-top: 4px;
 }
+div#usernotes .genanchor {
+	display: none;
+}
 
 /* User notes on manual pages --------------------------------------------- */
 div#usernotes {
@@ -676,6 +679,11 @@ div#usernotes div.text {
 	padding: 2px;
 	margin-top: 4px;
 }
+div#usernotes div.date {
+	float: right;
+	padding-right: 4px;
+	color: #999997;
+}
 /* User notes new features */
 div#usernotes a {
 	text-decoration: none;
@@ -696,6 +704,9 @@ div#usernotes div.votes {
 	vertical-align: middle;
 	padding-right: 8px;
 }
+div#usernotes div.votes > div {
+	float: left;
+}
 div#usernotes a.usernotes-voteu {
 	display: block;
 	width: 16px;
@@ -715,6 +726,13 @@ div#usernotes a.usernotes-voteu:hover {
 }
 div#usernotes a.usernotes-voted:hover {
     background-position:-16px 16px;
+}
+div#usernotes div.votes .tally {
+	float: left;
+	padding: 4px;
+	color: #323232;
+	font-size: 19px;
+	margin-top: -6px;
 }
 div#usernotes div.features {
 	float: left;

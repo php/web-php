@@ -396,6 +396,7 @@ function manual_notes_beta() {
 
     // Load user note for this page
     $notes = manual_notes_load($filename);
+    uasort($notes, "manual_notes_sort");
 
     // Link target to add a note to the current manual page,
     // and it's extended form with a [+] image
@@ -427,7 +428,7 @@ END_USERNOTE_HEADER;
 
         foreach($notes as $note) {
             manual_note_display(
-                $note['xwhen'], $note['user'], $note['note'], $note['id']
+                $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
             );
         }
         echo "</div>\n";
@@ -478,7 +479,7 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
     } else {
         $name = "<strong class=\"user\"><em>Anonymous</em></strong>";
     }
-    $name = ($id ? "\n  <a href=\"#$id\" class=\"date\">$name</a>" : "\n  $name");
+    $name = ($id ? "\n  <a href=\"#$id\" class=\"name\">$name</a><a class=\"genanchor\" href=\"#$id\"> &para;</a>" : "\n  $name");
 
     // New date style will be relative time
     $datestr = relTime(new DateTime("@{$date}"));
@@ -499,13 +500,13 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 	    $rredir_filename = urlencode($redir_filename);
 	    $votediv = <<<VOTEDIV
   <div class="votes">
-    <div id="Vu{$id}" style="float: left;">
+    <div id="Vu{$id}">
     <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=up" title="Vote up!" class="usernotes-voteu">up</a>
     </div>
-    <div id="Vd{$id}" style="float: left;">
+    <div id="Vd{$id}">
     <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=down" title="Vote down!" class="usernotes-voted">down</a>
     </div>
-    <div id="V{$id}" style="float: left; padding: 4px; color: #323232; font-weight: strong; font-size: 19px; margin-top: -6px;" title="{$rate}">
+    <div class="tally" id="V{$id}" title="{$rate}">
     {$vote}
     </div>
   </div>
@@ -546,7 +547,7 @@ VOTEDIV;
 
     echo <<<USER_NOTE_TEXT
 
- <a name="$id"></a><div class="note">{$votediv}{$name}{$admin}<div style="float: right; right-padding: 4px; color: #999997;" title="$fdatestr"><strong>{$datestr}</strong></div>
+ <a name="$id"></a><div class="note">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
   <div class="text" id="Hcom{$id}">
 {$text}
   </div>
