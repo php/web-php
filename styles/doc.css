@@ -431,7 +431,7 @@ ul.chunklist_children {
 .docs #layout {
     width:auto;
     max-width:80em;
-    padding:0 1em;
+    padding:0 1.5em;
 }
 
 .docs .layout-menu ul.child-menu-list a:hover,
