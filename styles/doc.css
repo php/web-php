@@ -93,8 +93,14 @@ aside#quicktoc {
 /* {{{ Warning and notes */
 .docs div.caution,
 .docs blockquote.note {
-    padding: 10px 20px;
-    margin: 1em 2em 1.3em;
+    padding: .75em 1.5em;
+    margin: .75em 0;
+}
+
+.docs .refsect1 div.caution,
+.docs .refsect1 blockquote.note {
+    margin-left:0;
+    margin-right:0;
 }
 
 .docs blockquote.note {
@@ -150,8 +156,8 @@ aside#quicktoc {
 .docs div.warning {
     position: relative;
     z-index:10;
-    margin: 1.5em;
-    padding: 1.5em 1.5em 1.5em 92px;
+    margin: 1.5em 0;
+    padding: 0 .75em .75em 92px;
     min-height: 96px;
     background-position: 16px;
 }
@@ -216,10 +222,10 @@ aside#quicktoc {
 .docs .refentry .constructorsynopsis {
     border: 1px solid #ccc;
     background-color: #fff;
-    padding: 1.5em;
+    padding: .75em;
 }
 .docs .example-contents .phpcode code {
-    padding:2em;
+    padding:1em;
 }
 .docs .phpcode code {
     font-size:.923em;
@@ -320,7 +326,7 @@ ul.chunklist_children {
 .docs div.refsect1 {
     position: relative;
     background-color: #f5f5f5;
-    padding: 1.5em .75em;
+    padding: .75em;
 }
 
 .docs .classsynopsis:before,
