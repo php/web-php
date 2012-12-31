@@ -44,6 +44,7 @@ aside#quicktoc {
 
 .docs .refsect1 > p:last-child,
 .docs .refsect1 > .warning:last-child,
+.docs .refsect1 > .note:last-child,
 .docs .refsect1 > .tip:last-child {
     margin-bottom:0;
 }
