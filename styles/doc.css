@@ -3,6 +3,7 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
+    display:none;
     border-top: 1px solid #9999CC;
     border-left: 1px solid #9999CC;
     border-bottom: none;
@@ -372,7 +373,7 @@ ul.chunklist_children {
 
 /* - Side Menu - */
 .docs .layout-menu {
-    width: 240px;
+    width: 17em;
 }
 
 .docs .layout-menu ul.parent-menu-list {
@@ -382,7 +383,6 @@ ul.chunklist_children {
 }
 
 .docs .layout-menu ul.parent-menu-list li {
-    padding: 0 0 0 .5em;
     margin: 1.5em 0;
 }
 
@@ -428,6 +428,12 @@ ul.chunklist_children {
     content:"\bb \20";
 }
 
+.docs #layout {
+    width:auto;
+    max-width:80em;
+    padding:0 1em;
+}
+
 .docs .layout-menu ul.child-menu-list a:hover,
 .docs .layout-menu ul.parent-menu-list li:last-child ul.child-menu-list a {
     border-left: 0;
@@ -436,25 +442,12 @@ ul.chunklist_children {
 /* #layout needed, see http://news.php.net/php.webmaster/11884 */
 .docs #layout .layout-content,
 .docs #layout #usernotes {
-    margin-left: 264px;
+    margin-left: 19em;
+}
+.docs #usernotes {
+    margin-top:2em;
 }
 
-/* Default rule for non-@media supporting browsers (IE<9, basically). */
-.docs #layout .layout-content {
-    margin-right: 160px;
-}
-
-@media screen and (max-width: 1199px) {
-    .docs #layout .layout-content {
-        margin-right: 160px;
-    }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1365px) {
-    .docs #layout .layout-content {
-        margin-right: 80px;
-    }
-}
 
 #changelang-langs {
     width:120px; 
