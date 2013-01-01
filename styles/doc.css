@@ -390,7 +390,7 @@ ul.chunklist_children {
 }
 
 .docs .layout-menu ul.parent-menu-list li {
-    margin: 1.5em 0;
+    margin: .75em 0;
 }
 
 .docs .layout-menu ul.parent-menu-list > li:first-child {
@@ -412,7 +412,7 @@ ul.chunklist_children {
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding:1.5em 0 1.5em .25em;
+    padding:.75em 0 .75em .25em;
     border: 0;
 }
 
