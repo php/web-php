@@ -427,7 +427,6 @@ hr {
 #usernotes .note .text {
     background-color: #f5f5f5;
     border-top: 0.25em solid #ddd;
-    clear: both;
     padding: 1.5em .75em;
 }
 
