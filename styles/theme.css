@@ -365,6 +365,17 @@ hr {
     padding-top: .801em;
 }
 
+#usernotes .count {
+    background-color: #7F7FB2;
+    color: white;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 0.4em;
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+
 /* Add a note buttons. */
 #usernotes .action {
     display: block;

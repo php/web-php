@@ -408,12 +408,19 @@ function manual_notes_beta() {
         make_link($addnotelink, 'add a note') .
         '</small>';
 
+    $num_notes = count($notes);
+    if ($num_notes) {
+        $num_notes = "<span class=\"count\"><strong>$num_notes note" . ($num_notes == 1 ? '' : 's') . "</strong></span>";
+    } else {
+        $num_notes = null;
+    }
+
     echo <<<END_USERNOTE_HEADER
 
 <section id="usernotes">
  <div class="head">
   <span class="action">{$addnotesnippet}</span>
-  <h3 class="title">User Contributed Notes</h3>
+  <h3 class="title">User Contributed Notes {$num_notes}</h3>
  </div>
 END_USERNOTE_HEADER;
 
