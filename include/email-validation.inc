@@ -70,6 +70,9 @@ function blacklisted($email) {
 	'supercoderarticle',
 	'somebody@hotmail.com',
 	'bit-cloudcon',
+	'eclinicalcentral',
+	'iddst.com',
+	'achromicpoint.com',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
