@@ -121,7 +121,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #head-beta-warning {
-    background: #339900;
+    background-color: #99C;
     display: none;
     position: fixed;
     top: 0px;
@@ -138,8 +138,8 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #beta-warning .blurb {
-    font-size: 1.3em;
-    line-height: 1.65em;
+    font-size: 1.1em;
+    line-height: 1.0em;
     vertical-align: middle;
     color: #EEE;
     display: none;
@@ -156,11 +156,11 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 #beta-warning-close {
     display: block;
     float: right;
-    background: #333;
+    background-color: #333;
     color: #EEE;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 0.24em;
+    margin-top: 0;
     height: 1.2em;
     line-height: 1.2em;
     vertical-align: middle;
