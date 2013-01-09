@@ -575,18 +575,12 @@ function manual_setup_beta($setup) {
 
     $siblings = array();
     foreach($setup["toc"] as $entry) {
-        // We strip out any class prefix here, we only want method names
-        $methodname = $entry[1];
-        if(strpos($entry[1], '::') !== false) {
-            list($classname, $methodname) = explode('::', $entry[1]);
-        }
         $siblings[] = array(
-            "title" => $methodname,
+            "title" => $entry[1],
             "link"  => $entry[0],
             "current" => $setup["this"][0] == $entry[0],
         );
     }
-    
     $menu = array();
     foreach(array_reverse($setup["parents"]) as $parent) {
         $menu[] = array(
@@ -603,7 +597,7 @@ function manual_setup_beta($setup) {
             "children" => $siblings,
         );
     }
-    
+
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
 
     $config = array(
