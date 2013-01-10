@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5.0 Alpha3 released</title>
+  <id>http://php.net/archive/2013.php#id2013-01-10-1</id>
+  <published>2013-01-10T14:42:37+00:00</published>
+  <updated>2013-01-10T14:42:37+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-01-10-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-01-10-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        The PHP development team announces the release of PHP 5.5.0alpha3.
+        This release adds few features and fix some bugs from alpha2.
+        All users of PHP are encouraged to test this version carefully,
+        and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0 Alpha 3 comes with new features and improvements such as (incomplete list) :
+     </p>
+     <ul>
+        <li>Generator::throw() method,
+        </li>
+        <li>New cURL functions and options such as curl_escape(), curl_multi_setopt(), curl_multi_strerror(),
+            curl_pause(), curl_reset()...
+        </li>
+        <li>Max-Age attribute support in setcookie(),
+        </li>
+        <li>Few bug fixes in mysqlnd and core
+        </li>
+     </ul>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0alpha3/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0 Alpha 3 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+        Thank you for supporting PHP.
+     </p>
+    </div>
+  </content>
+</entry>
