@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo: Last Chance to Save $145</title>
+  <id>http://www.php.net/archive/2013.php#id2013-01-11-1</id>
+  <published>2013-01-11T21:31:28+00:00</published>
+  <updated>2013-01-11T21:31:28+00:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-02-25</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://www.php.net/conferences/index.php#id2013-01-11-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca" title="ConFoo 2013">confoo-2013-php.jpg</default:newsImage>
+  <link href="http://confoo.ca" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Save $145 on ConFoo tickets by purchasing before January 20th. <a href="http://confoo.ca/en/register">Register online</a> without delay. ConFoo 2013 will be held on February 27th through March 1st in Montreal, Canada and is loaded with PHP content.</p>
+     
+     <p>We gathered 100 speakers from around the world to talk about all aspects of web programming. The conference is preceeded by two training days. Places are very limited. Choose from 4 training topics:</p>
+     
+     <ul>
+     	<li>Advanced PHP Training (Sebastian Bergmann, Arne Blankerts and Stefan Priebsch)</li>
+     	<li>PHP Web Security: From Exploitation to Correction (Jonathan Marcil)</li>
+     	<li>Practical Symfony2 (Hugo Hamon)</li>
+     	<li>JavaScript Training (Laurent Villeneuve)</li>
+     </ul>
+    </div>
+  </content>
+</entry>
