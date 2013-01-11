@@ -227,35 +227,42 @@ if (isset($shortname) && $shortname) {
 </div>
 
 <div id="layout">
-<?php
-if (!empty($SIDEBAR_DATA)) {
-    echo '<aside class="tips">',
-         '<div class="border first"></div>',
-         '<div class="border second"></div>',
-         '<div class="border third"></div>',
-         '<div class="inner">',
-         $SIDEBAR_DATA,
-         '</div></aside>';
-}
-if (!empty($config["leftmenu"])) {
-    echo "<aside class='layout-menu'><ul class='parent-menu-list'>";
-    foreach($config["leftmenu"] as $section) {
-        echo "<li><a href='{$section["link"]}'>{$section["title"]}</a>\n";
-        if ($section["children"]) {
-            echo "<ul class='child-menu-list'>";
-            foreach($section["children"] as $item) {
-                if ($item["current"]) {
-                    echo "<li class='current'><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
-                } else {
-                    echo "<li><a href='{$item["link"]}'>{$item["title"]}</a></li>\n";
-                }
-            }
-            echo "</ul>";
-        }
-        echo "</li>";
-    }
-    echo "</ul></aside>\n";
-}
-?>
+<?php if (!empty($SIDEBAR_DATA)): ?>
+    <aside class="tips">
+        <div class="border first"></div>
+        <div class="border second"></div>
+        <div class="border third"></div>
+        <div class="inner"><?php echo $SIDEBAR_DATA; ?></div>
+    </aside>
+<?php endif; ?>
+    
+<?php if (!empty($config["leftmenu"])): ?>
+    <aside class='layout-menu'>
+        
+        <ul class='parent-menu-list'>
+            <?php foreach($config['leftmenu'] as $section): ?>
+            <li>
+                <a href="<?php echo $section['link']; ?>"><?php echo $section['title']; ?></a>
+                
+                <?php if ($section['children']): ?>
+                    <ul class='child-menu-list'>
+                        
+                        <?php
+                        foreach($section['children'] as $item):
+                            $cleanTitle = $item['title'];
+                        ?>
+                        <li class="<?php echo ($item['current']) ? 'current' : ''; ?>">
+                            <a href="<?php echo $item['link']; ?>" title="<?php echo $cleanTitle; ?>"><?php echo $cleanTitle; ?></a>
+                        </li>
+                        <?php endforeach; ?>
+                        
+                    </ul>
+                <?php endif; ?>
+                
+            </li>
+            <?php endforeach; ?>
+        </ul>
+    </aside>
+<?php endif; ?>
 <section class="layout-content <?php echo $curr ?>">
 
