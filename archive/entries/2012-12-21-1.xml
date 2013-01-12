@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5.0 Alpha2 released</title>
+  <id>http://php.net/archive/2012.php#id2012-12-21-1</id>
+  <published>2012-12-21T16:19:14+00:00</published>
+  <updated>2012-12-21T16:19:14+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2012-12-21-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2012.php#id2012-12-21-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+    <p>
+        The PHP development team announces the immediate availability of
+        PHP 5.5.0alpha2. This release adds new features and fix some bugs from alpha1.
+        All users of PHP are encouraged to test this version carefully,
+        and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0 Alpha 2 comes with new features and improvements such as (incomplete list) :
+     </p>
+     <ul>
+        <li>Support for using empty() on the result of function calls and
+            other expressions,
+        </li>
+        <li>Systemtap support by enabling systemtap compatible dtrace probes on
+            linux,
+        </li>
+        <li>Optimized access to temporary and compiled VM variables.
+            8% less memory reads.
+        </li>
+     </ul>
+     <p>
+      Please, note that this alpha version also introduces the ext/mysql depreciation.
+     </p>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0alpha2/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0 Alpha 2 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+        Thank you for helping us making PHP better.
+     </p>
+    </div>
+  </content>
+</entry>
