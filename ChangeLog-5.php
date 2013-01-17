@@ -51,7 +51,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63859); ?> (Memory leak when reusing curl-handle).</li>
   <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
   <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
-  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
+  <li><?php bugfix(55438); ?> (Curl wrapper is not sending http header randomly).</li>
 </ul>
 </ul>
 <!-- }}} -->
@@ -72,7 +72,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Fixed bug (segfault due to libcurl connection caching).</li>
   <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
   <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
-  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
+  <li><?php bugfix(55438); ?> (Curl wrapper is not sending http header randomly).</li>
 </ul>
 </ul>
 <!-- }}} -->
