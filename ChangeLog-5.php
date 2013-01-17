@@ -11,6 +11,73 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.11"></a><!-- {{{ 5.4.11 -->
+<h3>Version 5.4.11</h3>
+<b>17-January-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63762); ?> (Sigsegv when Exception::$trace is changed by user).</li>
+  <li><?php bugfix(43177); ?> (Errors in eval()'ed code produce status code 500).</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>Filter:</li>
+<ul>
+  <li><?php bugfix(63757); ?> (getenv() produces memory leak with CGI SAPI).</li>
+  <li><?php bugfix(54096); ?> (FILTER_VALIDATE_INT does not accept +0 and -0).</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>JSON:</li>
+<ul>
+  <li><?php bugfix(63737); ?> (json_decode does not properly decode with options parameter).</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>CLI server:</li>
+<ul>
+  <li>Update list of common mime types. Added webm, ogv, ogg.</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>cURL extension:</li>
+<ul>
+  <li>Fixed bug (segfault due to libcurl connection caching).</li>
+  <li><?php bugfix(63859); ?> (Memory leak when reusing curl-handle).</li>
+  <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
+  <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
+  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.21"></a><!-- {{{ 5.3.21 -->
+<h3>Version 5.3.21</h3>
+<b>17-January-2013</b>
+<ul>
+<li>Zend Engine:</li>
+<ul>
+  <li><?php bugfix(63762); ?> (Sigsegv when Exception::$trace is changed by user).</li>
+</ul>
+</ul>
+ 
+<ul>
+<li>cURL extension:</li>
+<ul>
+  <li>Fixed bug (segfault due to libcurl connection caching).</li>
+  <li><?php bugfix(63795); ?> (CURL &gt;= 7.28.0 no longer support value 1 for CURLOPT_SSL_VERIFYHOST).</li>
+  <li><?php bugfix(63352); ?> (Can't enable hostname validation when using curl stream wrappers).</li>
+  <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+
 
 <a name="5.4.10"></a><!-- {{{ 5.4.10 -->
 <h3>Version 5.4.10</h3>
