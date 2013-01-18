@@ -73,6 +73,7 @@ function blacklisted($email) {
 	'eclinicalcentral',
 	'iddst.com',
 	'achromicpoint.com',
+	'wcgg-bit',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
