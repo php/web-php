@@ -5,7 +5,7 @@
   <published>2012-11-03T13:04:07-07:00</published>
   <updated>2012-11-03T13:04:07-07:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-12-01</default:finalTeaserDate>
-  <category term="cfp" label="Call for Papers"/>
+  <category term="conferences" label="Conference announcement"/>
   <link href="http://www.php.net/conferences/index.php#id2012-11-03-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com/" title="SunshinePHP Developer Conference">sunshine2013.png</default:newsImage>
   <link href="http://sunshinephp.com/" rel="via" type="text/html"/>
@@ -21,11 +21,6 @@
       <p>
          In February when the rest of the world is cold and snowy, it is sunny and beautiful in
          Florida. Come join us for some sun and learning.
-      </p>
-      <p>
-         Our call for papers runs until December 1st, 2012, so please get those talks in!  We will
-         be announcing the sessions and speakers around mid-December after our board has a chance to
-         consider each submission.
       </p>
     </div>
   </content>
