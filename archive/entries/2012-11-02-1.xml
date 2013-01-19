@@ -3,9 +3,9 @@
   <title>PHP UK Conference</title>
   <id>http://www.php.net/archive/2012.php#id2012-11-02-1</id>
   <published>2012-11-02T09:39:14-07:00</published>
-  <updated>2012-11-02T09:39:14-07:00</updated>
+  <updated>2013-01-19T14:02:30+00:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-02-23</default:finalTeaserDate>
-  <category term="cfp" label="Call for Papers"/>
+  <category term="conferences" label="Conference announcement"/>
   <link href="http://www.php.net/conferences/index.php#id2012-11-02-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.co.uk/" title="PHP UK 2013">phpuk2013.jpeg</default:newsImage>
   <link href="http://phpconference.co.uk/" rel="via" type="text/html"/>
