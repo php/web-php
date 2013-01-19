@@ -4,7 +4,7 @@
   <id>http://www.php.net/archive/2012.php#id2012-11-03-1</id>
   <published>2012-11-03T13:04:07-07:00</published>
   <updated>2013-01-19T08:18:26-05:00</updated>
-  <default:finalTeaserDate xmlns="http://php.net/ns/news">2012-12-01</default:finalTeaserDate>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-02-08</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://www.php.net/conferences/index.php#id2012-11-03-1" rel="alternate" type="text/html"/>
   <default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com/" title="SunshinePHP Developer Conference">sunshine2013.png</default:newsImage>
