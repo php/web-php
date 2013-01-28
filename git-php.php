@@ -5,6 +5,12 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/email-validation.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/posttohost.inc';
 
+// Force the account requests to www.php.net
+if ($MYSITE != "http://www.php.net/" && $MYSITE != 'http://php.net/') {
+    header('Location: http://www.php.net/'.$_SERVER['BASE_PAGE']);
+    exit;
+}
+
 $SIDEBAR_DATA = '
 <h3>More about Git</h3>
 <p>
