@@ -923,14 +923,14 @@ table.standard th.subr {
 
 #layout .cse .gsc-tabHeader.gsc-tabhActive,
 #layout .gsc-tabHeader.gsc-tabhActive {
-    background: white url(../images/sprites.png) no-repeat scroll 100% -25px;
+    background: white url(/images/sprites.png) no-repeat scroll 100% -25px;
     border-bottom: solid 0.25em #669;
     color: black;
 }
 
 #layout .cse .gsc-tabHeader.gsc-tabhInactive,
 #layout .gsc-tabHeader.gsc-tabhInactive {
-    background: white url(../images/sprites.png) no-repeat scroll 100% 5px;
+    background: white url(/images/sprites.png) no-repeat scroll 100% 5px;
     border-bottom: solid 0.25em #99c;
     color: #777;
 }
