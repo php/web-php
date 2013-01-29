@@ -335,7 +335,7 @@ $OLDRELEASES = array (
         array (
           'filename' => 'php-5.3.20.tar.bz2',
           'name' => 'PHP 5.3.20 (tar.bz2)',
-          'md5' => 'c00241b9e89e93adf3baac32c56211e4e',
+          'md5' => '00241b9e89e93adf3baac32c56211e4e',
           'date' => '20 Dec 2012',
         ),
         1 => 
