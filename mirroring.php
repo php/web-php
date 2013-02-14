@@ -197,8 +197,8 @@ europe.rsync.php.net
           Options -Indexes -MultiViews
      &lt;/Directory&gt;
 
-     ServerName xx.php.net
-     ServerAlias the.cname.you.set.up.example.com www.xx.php.net
+     ServerName ccx.php.net
+     ServerAlias cc.php.net www.ccx.php.net www.cc.php.net the.cname.you.set.up.example.com
      ServerAdmin yourname@example.com
      UseCanonicalName On
      
@@ -253,16 +253,20 @@ europe.rsync.php.net
  You should only start to set up an Apache virtualhost for an official
  mirror, if you have <a href="#rule">contacted us first</a>, and asked
  for a possible name for your mirror. The official names for PHP mirrors
- are in the convention: <code>"xx.php.net"</code>, where <code>"xx"</code> is
- replaced by the 2-letter ISO country code of your mirror's location. If
- there already is a <code>"xx.php.net"</code>, then you will probably get
- <code>"xx2.php.net"</code>.  Do not assume that you know the code you will
- receive until your application has been reviewed and approved, and do
- not submit an application saying, for example, "We are applying to
- become DE.PHP.NET," because it's possible that the mirror already
- exists, but is experiencing issues that have it temporarily removed
- from active rotation.  We do not want anyone to waste their time only
- to have their application altered or rejected.
+ are in the convention: <code>"ccx.php.net"</code>, where <code>"cc"</code>
+ stands for the 2-letter ISO country code of your mirror's location and
+ <code>"x"</code> is an incremental identifier for the mirrors of that country.
+ Do not assume that you know the code you will receive until your
+ application has been reviewed and approved, and do not submit an application
+ saying, for example, "We are applying to become DE1.PHP.NET," because it's
+ possible that the mirror already exists, but is experiencing issues that
+ have it temporarily removed from active rotation.
+ We do not want anyone to waste their time only to have their application
+ altered or rejected.
+ The mirrors should also listen for the <code>"cc.php.net"</code> hostname
+ as we have <a href="http://en.wikipedia.org/wiki/Round-robin_DNS">round robin
+ dns</a> configured for the those records, so any active mirror can receive
+ traffic for their respective <code>"cc.php.net"</code> hostname.
 </p>
 
 <p>
@@ -271,7 +275,7 @@ europe.rsync.php.net
  This subdomain (<code>the.cname.you.set.up.example.com</code> in the above
  example) will be checked by mirror admins before the mirror is added.
  Therefore it is important that the mirror is capable of serving requests
- for this name and the <code>(www.)xx.php.net</code> address provided by the
+ for this name and the <code>(www.)cc(x).php.net</code> address provided by the
  mirror administrators.
 </p>
 
@@ -282,9 +286,10 @@ europe.rsync.php.net
  or just a specific hostname/IP address. Consult
  <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
  documentation</a> for the differences of the two methods. It is very
- important to use your <code>xx.php.net</code> address as the ServerName, so
+ important to use your <code>ccx.php.net</code> address as the ServerName, so
  URL redirections will keep the requests in the php.net domain, ensuring
- that the My PHP.net service will work.
+ that the My PHP.net service will work, plus it will cause the mirror to show
+ up as an unofficial mirror.
 </p>
 
 <p>
@@ -382,7 +387,7 @@ europe.rsync.php.net
   Your country.
  </li>
  <li>
-  The xx.php.net address you used to set up the mirror site, which
+  The ccx.php.net address you used to set up the mirror site, which
   you obtained previously in a conversation with the mirror admins.
  </li>
  <li>
