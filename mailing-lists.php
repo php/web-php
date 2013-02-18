@@ -265,6 +265,11 @@ if (isset($_POST['maillist'])) {
       'Discuss the past, present and future of PDO',
       FALSE, FALSE, TRUE, "php.pdo"
     ),
+    array (
+      'php-bugs', 'General bugs',
+      'General bug activity are posted here',
+      FALSE, FALSE, FALSE, "php.bugs"
+    ),
 
     'PHP internal website mailing lists',
     array (
