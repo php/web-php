@@ -2,6 +2,37 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.11' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_11.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.11.tar.bz2',
+          'name' => 'PHP 5.4.11 (tar.bz2)',
+          'md5' => '9975e68c22b86b013b934743ad2d2276',
+          'date' => '17 Jan 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.11.tar.gz',
+          'name' => 'PHP 5.4.11 (tar.gz)',
+          'md5' => '32fa16b3abd5527316c3c076b3395914',
+          'date' => '17 Jan 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.11 binaries and source',
+        ),
+      ),
+      'date' => '17 Jan 2013',
+      'museum' => false,
+    ),
     '5.4.10' => 
     array (
       'announcement' => 
@@ -321,6 +352,37 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '01 March 2012',
+      'museum' => false,
+    ),
+    '5.3.21' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_21.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.21.tar.bz2',
+          'name' => 'PHP 5.3.21 (tar.bz2)',
+          'md5' => '1b214fc19bb5f5c0902ba27c74d5f4a2',
+          'date' => '17 Jan 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.21.tar.gz',
+          'name' => 'PHP 5.3.21 (tar.gz)',
+          'md5' => 'f47fbe3407520e5d9d895168950aa683',
+          'date' => '17 Jan 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.21 binaries and source',
+        ),
+      ),
+      'date' => '17 Jan 2013',
       'museum' => false,
     ),
     '5.3.20' => 

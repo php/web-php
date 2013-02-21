@@ -10,6 +10,104 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.4.12"></a><!-- {{{ 5.4.12 -->
+<h3>Version 5.4.12</h3>
+<b>21-February-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(64099); ?> (Wrong TSRM usage in zend_register_class alias).</li>
+  <li><?php bugfix(64011); ?> (get_html_translation_table() output incomplete with HTML_ENTITIES and ISO-8859-1).</li>
+  <li><?php bugfix(63982); ?> (isset() inconsistently produces a fatal error on protected property).</li>
+  <li><?php bugfix(63943); ?> (Bad warning text from strpos() on empty needle).</li>
+  <li><?php bugfix(63899); ?> (Use after scope error in zend_compile).</li>
+  <li><?php bugfix(63893); ?> (Poor efficiency of strtr() using array with keys of very different length).</li>
+  <li><?php bugfix(63882); ?> (zend_std_compare_objects crash on recursion).</li>
+  <li><?php bugfix(63462); ?> (Magic methods called twice for unset protected properties).</li>
+  <li><?php bugfix(62524); ?> (fopen follows redirects for non-3xx statuses).</li>
+  <li>Support BITMAPV5HEADER in getimagesize().</li>
+</ul>
+</ul>
+
+<ul>
+<li>Date:
+  <li><?php bugfix(63699); ?> (Performance improvements for various ext/date functions).</li>
+  <li><?php bugfix(55397); ?> Comparsion of incomplete DateTime causes SIGSEGV.</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM:
+  <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Litespeed:
+  <li><?php bugfix(63228); ?> (-Werror=format-security error in lsapi code).</li>
+</ul>
+</ul>
+
+<ul>
+<li>sqlite3:
+  <li><?php bugfix(63921); ?> (sqlite3::bindvalue and relative PHP functions aren't using sqlite3_*_int64 API).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_OCI
+  <li><?php bugfix(57702); ?> (Multi-row BLOB fetches).</li>
+  <li><?php bugfix(52958); ?> (Segfault in PDO_OCI on cleanup after running a long testsuite).</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_sqlite:
+  <li><?php bugfix(63916); ?> (PDO::PARAM_INT casts to 32bit int internally even on 64bit builds in pdo_sqlite).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.22"></a><!-- {{{ 5.3.22 -->
+<h3>Version 5.3.22</h3>
+<b>21-February-2013</b>
+<ul>
+<li>Zend Engine:</li>
+<ul>
+  <li><?php bugfix(64099); ?> (Wrong TSRM usage in zend_Register_class alias).</li>
+  <li><?php bugfix(63899); ?> (Use after scope error in zend_compile).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core:</li>
+<ul>
+  <li><?php bugfix(63943); ?> (Bad warning text from strpos() on empty needle).</li>
+</ul>
+</ul>
+
+<ul>
+<li>Date:</li>
+<ul>
+  <li><?php bugfix(55397); ?> (comparsion of incomplete DateTime causes SIGSEGV).</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM:</li>
+<ul>
+  <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11).</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL:</li>
+<ul>
+  <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
+</ul>
+</ul> 
+</ul>
+<!-- }}} -->
 
 <a name="5.4.11"></a><!-- {{{ 5.4.11 -->
 <h3>Version 5.4.11</h3>
