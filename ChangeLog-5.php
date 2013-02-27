@@ -30,39 +30,45 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 
 <ul>
-<li>Date:
+<li>Date:</li>
+<ul>
   <li><?php bugfix(63699); ?> (Performance improvements for various ext/date functions).</li>
   <li><?php bugfix(55397); ?> Comparsion of incomplete DateTime causes SIGSEGV.</li>
 </ul>
 </ul>
 
 <ul>
-<li>FPM:
+<li>FPM:</li>
+<ul>
   <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11).</li>
 </ul>
 </ul>
 
 <ul>
-<li>Litespeed:
+<li>Litespeed:</li>
+<ul>
   <li><?php bugfix(63228); ?> (-Werror=format-security error in lsapi code).</li>
 </ul>
 </ul>
 
 <ul>
-<li>sqlite3:
+<li>sqlite3:</li>
+<ul>
   <li><?php bugfix(63921); ?> (sqlite3::bindvalue and relative PHP functions aren't using sqlite3_*_int64 API).</li>
 </ul>
 </ul>
 
 <ul>
-<li>PDO_OCI
+<li>PDO_OCI</li>
+<ul>
   <li><?php bugfix(57702); ?> (Multi-row BLOB fetches).</li>
   <li><?php bugfix(52958); ?> (Segfault in PDO_OCI on cleanup after running a long testsuite).</li>
 </ul>
 </ul>
 
 <ul>
-<li>PDO_sqlite:
+<li>PDO_sqlite:</li>
+<ul>
   <li><?php bugfix(63916); ?> (PDO::PARAM_INT casts to 32bit int internally even on 64bit builds in pdo_sqlite).</li>
 </ul>
 </ul>
