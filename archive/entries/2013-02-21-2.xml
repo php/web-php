@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5.0 Alpha5 released</title>
+  <title>PHP 5.5.0alpha5 released</title>
   <id>http://php.net/archive/2013.php#id2013-02-21-2</id>
   <published>2013-02-21T13:33:25+00:00</published>
   <updated>2013-02-21T13:33:25+00:00</updated>
@@ -12,7 +12,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
         The PHP development team announces the release of PHP 5.5.0alpha5.
-        This release fixe some bugs from alpha4 and add some new features.
+        This release fixes some bugs from alpha4 and adds some new features.
         All users of PHP are encouraged to test this version carefully,
         and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
@@ -20,17 +20,17 @@
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
 
      <p>
-      PHP 5.5.0 Alpha 5 is shipped with new features and improvements. Here is an incomplete list :
+      PHP 5.5.0alpha5 is shipped with new features and improvements. Here is an incomplete list:
      </p>
      <ul>
         <li>Added the ability to change the tmp dir PHP will use during runtime, using a new php.ini
-        entry ,
+        entry,
         </li>
         <li>Added mysqli_begin_transaction()/mysqli::begin_transaction(). Implemented all
             options, per MySQL 5.6, which can be used with START TRANSACTION, COMMIT
             and ROLLBACK through options to mysqli_commit()/mysqli_rollback() and their
             respective OO counterparts.
-            These changes are reflected in the mysqlnd API as well ,
+            These changes are reflected in the mysqlnd API as well,
         </li>
         <li>
             Added recvmsg() and sendmsg() wrappers for ext/sockets
@@ -43,13 +43,13 @@
      </p>
 
      <p>
-      For source downloads of PHP 5.5.0 Alpha 5 please visit
+      For source downloads of PHP 5.5.0alpha5 please visit
       the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
 
      <p>
-      Alpha5 is the last alpha for PHP5.5. There has been a delay in alpha releases due to late coming new features.
+      Alpha5 is the last alpha for PHP 5.5. There has been a delay in alpha releases due to late coming new features.
       We are now beginning the betas, and the first beta
       is expected for March 7th. Betas won't add any new features, except the first one, but consolidate the source
       code and fix found bugs.

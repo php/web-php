@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-  <title>PHP 5.5.0 Alpha6 released</title>
+  <title>PHP 5.5.0alpha6 released</title>
   <id>http://php.net/archive/2013.php#id2013-03-07-1</id>
   <published>2013-03-07T13:26:26+00:00</published>
   <updated>2013-03-07T13:26:26+00:00</updated>
@@ -12,7 +12,7 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
         The PHP development team announces the release of PHP 5.5.0alpha6.
-        This release fixe some bugs from alpha5. It also serves as a delay for our next beta 1
+        This release fixes some bugs from alpha5. It also serves as a delay for our next release, beta1,
         integrating ZendOptimizer+ OPCode cache which is not ready yet to be merged.
         All users of PHP are encouraged to test this version carefully,
         and report any bugs in <a href="https://bugs.php.net">the bug tracking system</a>.
@@ -21,7 +21,7 @@
      <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
 
      <p>
-      PHP 5.5.0 Alpha 6 is shipped with improvements. Here is an incomplete list :
+      PHP 5.5.0alpha6 is shipped with improvements. Here is an incomplete list:
      </p>
      <ul>
         <li>Fixed a bug where uninitialized ++$foo->bar; does not cause a notice,</li>
@@ -35,7 +35,7 @@
      </p>
 
      <p>
-      For source downloads of PHP 5.5.0 Alpha 6 please visit
+      For source downloads of PHP 5.5.0alpha6 please visit
       the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
       can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
      </p>
