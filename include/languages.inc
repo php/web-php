@@ -120,7 +120,7 @@ $LANGUAGES_MAP = array(
 	'sv' => 'sv-se',
 	'tr' => 'tr-tr',
 	'he' => 'he-il',
-	'id' => 'en-ca', // ? id Indonesian, in-id not available (yet)
+	'id' => 'en-id', // ? id Indonesian, in-id not available (yet)
 );
 
 $ACTIVE_ONLINE_LANGUAGES = array_diff($LANGUAGES, $INACTIVE_ONLINE_LANGUAGES);
