@@ -26,6 +26,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li><?php bugfix(64128); ?> (buit-in web server is broken on ppc64).</li>
 </ul>
 <li>Mbstring:</li>
+<ul>
  <li>mb_split() can now handle empty matches like preg_split() does.</li>
 </ul>
 <li>OpenSSL:</li>
