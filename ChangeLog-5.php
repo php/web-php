@@ -10,6 +10,81 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.4.13"></a><!-- {{{ 5.4.13 -->
+<h3>Version 5.4.13</h3>
+<b>14-March-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+ <li><?php bugfix(64235); ?> (Insteadof not work for class method in 5.4.11).</li>
+ <li>Implemented FR <?php bugl(64175); ?> (Added HTTP codes as of RFC 6585).</li>
+ <li><?php bugfix(64142); ?> (dval to lval different behavior on ppc64). </li>
+ <li><?php bugfix(64070); ?> (Inheritance with Traits failed with error).</li>
+</ul>
+<li>CLI server:</li>
+<ul>
+ <li><?php bugfix(64128); ?> (buit-in web server is broken on ppc64).</li>
+</ul>
+<li>Mbstring:</li>
+ <li>mb_split() can now handle empty matches like preg_split() does.</li>
+</ul>
+<li>OpenSSL:</li>
+<ul>
+ <li><?php bugfix(61930); ?> (openssl corrupts ssl key resource when using
+    openssl_get_publickey()). </li>
+</ul>
+<li>PDO_mysql:</li>
+<ul>
+ <li><?php bugfix(60840); ?> (undefined symbol: mysqlnd_debug_std_no_trace_funcs).</li>
+</ul>
+<li>Phar:</li>
+<ul>
+ <li>Fixed timestamp update on Phar contents modification.</li>
+</ul>
+<li>SOAP</li>
+<ul>
+ <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
+    (CVE-2013-1635). </li>
+ <li>Disabled external entities loading (CVE-2013-1643).</li>
+</ul>
+<li>SPL:</li>
+<ul>
+ <li><?php bugfix(64264); ?> (SPLFixedArray toArray problem). </li>
+ <li><?php bugfix(64228); ?> (RecursiveDirectoryIterator always assumes SKIP_DOTS).</li>
+ <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
+ <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays).</li>
+</ul>
+<li>SNMP:</li>
+<ul>
+ <li><?php bugfix(64124); ?> (IPv6 malformed).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.23"></a><!-- {{{ 5.3.23 -->
+<h3>Version 5.3.23</h3>
+<b>14-March-2013</b>
+<ul>
+<li>Phar:</li>
+<ul>
+ <li>Fixed timestamp update on Phar contents modification.</li>
+</ul>
+<li>SOAP</li>
+<ul>
+ <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
+    (CVE-2013-1635). </li>
+ <li>Disabled external entities loading (CVE-2013-1643).</li>
+</ul>
+<li>SPL:</li>
+<ul>
+ <li><?php bugfix(64264); ?> (SPLFixedArray toArray problem). </li>
+ <li><?php bugfix(64228); ?> (RecursiveDirectoryIterator always assumes SKIP_DOTS).</li>
+ <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
+ <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.12"></a><!-- {{{ 5.4.12 -->
 <h3>Version 5.4.12</h3>
 <b>21-February-2013</b>
