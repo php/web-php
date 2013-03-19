@@ -1,8 +1,10 @@
 <?php
 include 'include/languages.inc';
-if(!$conf=apc_fetch('ws2_config')) {
+if(false && !$conf=apc_fetch('ws2_config')) {
   include '/local/Web/ws2.conf';
   apc_store('ws2_config',$conf);
+} else {
+  include '/local/Web/ws2.conf';
 }
 $raw = filter_input(INPUT_GET, 'q', FILTER_UNSAFE_RAW);
 $q = urlencode($raw);
