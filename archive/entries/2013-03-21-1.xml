@@ -12,11 +12,9 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>
         The PHP development team announces the release of the first beta of PHP 5.5.0.
-        This release fixes some bugs from alphas and add new features.
-        One important feature is Zend OPCache, from which you can find more info
-        <a href="https://wiki.php.net/rfc/optimizerplus">on our wiki webpage</a>.
-        All users of PHP are encouraged to test this version carefully, having the Zend OPCache
-        activated, against several different applications, and report any bug in
+        This release is the first to include the <a href="https://wiki.php.net/rfc/optimizerplus">Zend OPCache</a>.
+        Please help our efforts to provide a stable PHP version and test this version carefully
+        against several different applications, with Zend OPCache enabled and report any bug in
         <a href="https://bugs.php.net">the bug tracking system</a>.
      </p>
 
@@ -45,9 +43,10 @@
      </p>
 
      <p>
-      This beta begins feature freeze and stability period. We won't add any new feature to PHP5.5
-      starting from now. Please, test and help us roll a stable release out. Our next beta is planned
-      for April 4th.
+         This beta marks the beginning of the feature freeze. No new
+         features will be added to PHP 5.5 after this point.  Please,
+         test and help us to roll out a stable release. Our next beta is
+         planned for April 4th.
      </p>
 
      <p>
