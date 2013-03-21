@@ -46,7 +46,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
  <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
     (CVE-2013-1635). </li>
- <li>Disabled external entities loading (CVE-2013-1643).</li>
+ <li>Disabled external entities loading (CVE-2013-1643, CVE-2013-1824).</li>
 </ul>
 <li>SPL:</li>
 <ul>
@@ -74,7 +74,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
  <li>Added check that soap.wsdl_cache_dir conforms to open_basedir
     (CVE-2013-1635). </li>
- <li>Disabled external entities loading (CVE-2013-1643).</li>
+ <li>Disabled external entities loading (CVE-2013-1643, CVE-2013-1824).</li>
 </ul>
 <li>SPL:</li>
 <ul>
