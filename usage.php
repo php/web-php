@@ -9,7 +9,7 @@ site_header("PHP Usage Stats", array("current" => "community"));
 
 <p>
 PHP: 244M sites, 2.1M IP addresses<br />
-Source: <a href="http://news.netcraft.com/wp-content/uploads/2013/01/php-trend.png">Netcraft</a><br />
+Source: <a href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html">Netcraft</a><br />
 </p>
 
 <p>
