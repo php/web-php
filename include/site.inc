@@ -17,7 +17,7 @@ function is_primary_site($site = FALSE)
 {
     global $MYSITE;
     if (!$site) { $site = $MYSITE; }
-    return $site == "http://php.net/";
+    return ($site == "http://www.php.net/" || $site == "http://php.net/" );
 }
 
 // Returns true if the current (or specified)
