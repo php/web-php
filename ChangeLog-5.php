@@ -10,6 +10,72 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<a name="5.4.14"></a><!-- {{{ 5.4.14 -->
+<h3>Version 5.4.14</h3>
+<b>11-April-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+ <li><?php bugfix(64529); ?> (Ran out of opcode space).</li>
+ <li><?php bugfix(64515); ?> (Memoryleak when using the same variablename two times in function declaration).</li>
+ <li><?php bugfix(64432); ?> (more empty delimiter warning in strX methods).</li>
+ <li><?php bugfix(64417); ?> (ArrayAccess::&amp;offsetGet() in a trait causes fatal error).</li>
+ <li><?php bugfix(64370); ?> (microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT']).</li>
+ <li><?php bugfix(64239); ?> (Debug backtrace changed behavior since 5.4.10 or 5.4.11).</li>
+ <li><?php bugfix(63976); ?> (Parent class incorrectly using child constant in class property).</li>
+ <li><?php bugfix(63914); ?> (zend_do_fcall_common_helper_SPEC does not handle exceptions properly).</li>
+ <li><?php bugfix(62343); ?> (Show class_alias In get_declared_classes()).</li>
+</ul>
+
+<li>PCRE:</li>
+<ul>
+ <li>Merged PCRE 8.32.</li>
+</ul>
+
+<li>SNMP:</li>
+<ul>
+ <li><?php bugfix(61981); ?> (OO API, walk: $suffix_as_key is not working correctly).
+</ul>
+
+<li>Zip:</li>
+<ul>
+ <li><?php bugfix(64452); ?> (Zip crash intermittently). (Anatol)
+</ul>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.24"></a><!-- {{{ 5.3.24 -->
+<h3>Version 5.3.24</h3>
+<b>11-April-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+ <li><?php bugfix(64370); ?> (microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT']).</li>
+ <li><?php bugfix(63914); ?> (zend_do_fcall_common_helper_SPEC does not handle exceptions properly).</li>
+ <li><?php bugfix(62343); ?> (Show class_alias In get_declared_classes()).</li>
+</ul>
+
+<li>PCRE:</li>
+<ul>
+ <li>Merged PCRE 8.32.</li>
+</ul>
+
+<li>mysqlnd:</li>
+<ul>
+ <li><?php bugfix(63530); ?> (mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc for stmt->param_bind).</li>
+</ul>
+
+<li>DateTime:</li>
+<ul>
+ <li><?php bugfix(62852); ?> (Unserialize Invalid Date causes crash).</li>
+</ul>
+
+<li>Zip:</li>
+<ul>
+ <li><?php bugfix(64452); ?> (Zip crash intermittently).</li>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.13"></a><!-- {{{ 5.4.13 -->
 <h3>Version 5.4.13</h3>
 <b>14-March-2013</b>

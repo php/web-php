@@ -15,22 +15,22 @@
  *     ),
  * );6 Dec
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.14RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC = false; //'5.4.14RC1'; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_4_RC_DATE = '28 Mar 2013';
 
-$PHP_5_4_VERSION         = "5.4.13";
-$PHP_5_4_DATE            = "14 Mar 2013";
+$PHP_5_4_VERSION         = "5.4.14";
+$PHP_5_4_DATE            = "11 Apr 2013";
 $PHP_5_4_MD5     = array(
                        "tar.bz2"       => "cacd308e978b7cf9ba4993196612ccf7",
-                       "tar.gz"        => "445025340677d5bfe22eb670d6db6795",
+                       "tar.gz"        => "cfdc044be2c582991a1fe0967898fa38",
 );
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = '5.3.24RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_3_RC      = false; //'5.3.24RC1'; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_3_RC_DATE = '28 Mar 2013';
 
-$PHP_5_3_VERSION         = "5.3.23";
-$PHP_5_3_DATE            = "14 Mar 2013";
+$PHP_5_3_VERSION         = "5.3.24";
+$PHP_5_3_DATE            = "11 Apr 2013";
 
 $PHP_5_3_MD5     = array(
                        "tar.bz2"       => "ab7bd1dd3bbc8364cb9fcaa2d79fb502",
