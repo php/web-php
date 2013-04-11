@@ -21,8 +21,8 @@ $PHP_5_4_RC_DATE = '28 Mar 2013';
 $PHP_5_4_VERSION         = "5.4.14";
 $PHP_5_4_DATE            = "11 Apr 2013";
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "cacd308e978b7cf9ba4993196612ccf7",
-                       "tar.gz"        => "cfdc044be2c582991a1fe0967898fa38",
+                       "tar.bz2"       => "cfdc044be2c582991a1fe0967898fa38",
+                       "tar.gz"        => "08df8196af12bc850409a7bff13bf8f0",
 );
 
 /* PHP 5.3 Release */
@@ -33,8 +33,8 @@ $PHP_5_3_VERSION         = "5.3.24";
 $PHP_5_3_DATE            = "11 Apr 2013";
 
 $PHP_5_3_MD5     = array(
-                       "tar.bz2"       => "ab7bd1dd3bbc8364cb9fcaa2d79fb502",
-                       "tar.gz"        => "9cd92b0de2b51dcd372f46fa623984f4",
+                       "tar.bz2"       => "9820604df98c648297dcd31ffb8214e8",
+                       "tar.gz"        => "cb0311a6a5ed6ffff8f41f713f9d8e84",
 );
 
 $RELEASES = array(
