@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5 beta3 is available</title>
+  <id>http://php.net/archive/2013.php#id2013-04-11-1</id>
+  <published>2013-04-11T08:32:44+00:00</published>
+  <updated>2013-04-11T08:32:44+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-04-11-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-04-11-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+        The PHP development team announces the release of the 3rd beta of PHP 5.5.0.
+        This release fixes some bugs against beta 2.
+     </p>
+
+     <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+
+     <p>
+      PHP 5.5.0beta3 is shipped with some bug fixes and improvements. Here is an incomplete list:
+     </p>
+     <ul>
+        <li>Drop support for bison &lt; 2.4 when building PHP from GIT source.</li>
+        <li>Fixed bug #54567 (DateTimeZone serialize/unserialize)</li>
+        <li>Fixed bug #64555 (foreach no longer copies keys if they are interned)</li>
+        <li>Fixed bug #64578 (debug_backtrace in set_error_handler corrupts zend heap)</li>
+     </ul>
+
+     <p>You can read the full list of changes in the
+      <a href="https://github.com/php/php-src/blob/php-5.5.0beta3/NEWS">NEWS file</a> contained
+      in the release archive.
+     </p>
+
+     <p>
+      For source downloads of PHP 5.5.0beta3 please visit
+      the <a href="http://downloads.php.net/dsp">download page</a>, Windows binaries
+      can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+     </p>
+
+     <p>
+      Our next beta is expected for April 25th. RC should follow.
+     </p>
+
+     <p>
+        Thank you for supporting PHP.
+     </p>
+    </div>
+  </content>
+</entry>
