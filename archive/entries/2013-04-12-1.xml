@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP South Africa 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-04-12-1</id>
+  <published>2013-04-12T05:59:41-07:00</published>
+  <updated>2013-04-12T05:59:41-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-05</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-04-12-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpsouthafrica.com/" title="PHP South Africa">phpsafrica.png</default:newsImage>
+  <link href="http://www.phpsouthafrica.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>
+            <a href="http://www.phpsouthafrica.com/">PHPSouthAfrica</a> is a 2
+            day conference (October 4th &amp; 5th) to be hosted in the most
+            beautiful city in the world, Cape Town South Africa.  It is aimed
+            at proficient developers, new developers and people who care about
+            developers.
+        </p>
+        <p>
+            PHP is one of the most popular web programming languages used today
+            to power most websites. As the language continues to grow stronger,
+            PHP has now been linked with mobile powered applications. We are
+            noticing a migration from mobile language applications to web based
+            technologies (JavaScript, HTML5,CSS).
+        </p>
+        <p>
+            PHPSouthAfrica has been a long time coming. With the increased
+            demand for PHP programmers, not only locally but also
+            internationally, our vision is to marry the latest technologies
+            with international speakers. We are creating a conference that
+            will hone established developers, but also assist up and coming
+            programmers develop and learn new skills.With the conference
+            based in Cape Town, it gives us the opportunity to showcase
+            “The Mother City,” voted one of the top 10 places to visit and
+            home of Table Mountain- one of the New7Wonders of Nature.
+        </p>
+        <p>Come and experience our great wine, food, beaches and people.</p>
+        <p>We would like to welcome you.</p>
+    </div>
+  </content>
+</entry>
