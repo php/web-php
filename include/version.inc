@@ -15,8 +15,8 @@
  *     ),
  * );6 Dec
 /* PHP 5.4 Release */
-$PHP_5_4_RC = false; //'5.4.14RC1'; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_4_RC_DATE = '28 Mar 2013';
+$PHP_5_4_RC = '5.4.15RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC_DATE = '25 Apr 2013';
 
 $PHP_5_4_VERSION         = "5.4.14";
 $PHP_5_4_DATE            = "11 Apr 2013";
@@ -26,8 +26,8 @@ $PHP_5_4_MD5     = array(
 );
 
 /* PHP 5.3 Release */
-$PHP_5_3_RC      = false; //'5.3.24RC1'; // Current RC version (e.g., '5.6.7RC1') or false
-$PHP_5_3_RC_DATE = '28 Mar 2013';
+$PHP_5_3_RC      = '5.3.25RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_3_RC_DATE = '25 Apr 2013';
 
 $PHP_5_3_VERSION         = "5.3.24";
 $PHP_5_3_DATE            = "11 Apr 2013";
