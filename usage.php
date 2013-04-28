@@ -13,7 +13,7 @@ Source: <a href="http://news.netcraft.com/archives/2013/01/31/php-just-grows-gro
 </p>
 
 <p>
-<?php echo print_image("stats/php-trend-201301-netcraft.png", "Graph"); ?>
+<?php print_image("stats/php-trend-201301-netcraft.png", "Graph"); ?>
 </p>
 
 <p>

@@ -416,7 +416,6 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
         $align,
         ($extras ? ' ' . $extras              : '')
     );
-    return $image;
 }
 
 // Print an <img /> tag out for a given file
