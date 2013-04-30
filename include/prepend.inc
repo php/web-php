@@ -202,8 +202,10 @@ function google_cse($default = '', $lang = 'en') {
 <script type="text/javascript"> 
   google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
   google.setOnLoadCallback(function() {
-    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+    var customSearchOptions = {};
+    var customSearchControl = new google.search.CustomSearchControl(
       '011570197911755000456:fip9wopfz_u', customSearchOptions);
+    customSearchControl.setLinkTarget(google.search.Search.LINK_TARGET_SELF);
     customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
     var options = new google.search.DrawOptions();
     options.setAutoComplete(true);
