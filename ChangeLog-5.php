@@ -10,6 +10,58 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+
+<a name="5.4.15"></a><!-- {{{ 5.4.15 -->
+<h3>Version 5.4.15</h3>
+<b>09-May-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li> <?php bugfix(64578); ?> (debug_backtrace in set_error_handler corrupts zend heap: segfault). </li>
+  <li> <?php bugfix(64458); ?> (dns_get_record result with string of length -1). </li>
+  <li> <?php bugfix(64433); ?> (follow_location parameter of context is ignored for most response codes). </li>
+  <li> <?php bugfix(47675); ?> (fd leak on Solaris).</li>
+  <li> <?php bugfix(64577); ?> (fd leak on Solaris).</li>
+</ul>
+<li>Fileinfo:</li>
+<ul>
+  <li> Upgraded libmagic to 5.14. </li>
+</ul>
+<li>Streams:</li>
+<ul>
+  <li> Fixed Windows x64 version of stream_socket_pair() and improved error handling.</li>
+</ul>
+<li>Zip:</li>
+<ul>
+  <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+
+<a name="5.3.25"></a><!-- {{{ 5.3.25 -->
+<h3>Version 5.3.25</h3>
+<b>09-May-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+  <li> <?php bugfix(64578); ?> (debug_backtrace in set_error_handler corrupts zend heap: segfault). </li>
+  <li> <?php bugfix(64458); ?> (dns_get_record result with string of length -1). </li>
+  <li> <?php bugfix(47675); ?> (fd leak on Solaris).</li>
+  <li> <?php bugfix(64577); ?> (fd leak on Solaris).</li>
+</ul>
+<li>Streams:</li>
+<ul>
+  <li> Fixed Windows x64 version of stream_socket_pair() and improved error handling.</li>
+</ul>
+<li>Zip:</li>
+<ul>
+  <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
+</ul>
+</ul>
+<!-- }}} -->
+
+
 <a name="5.4.14"></a><!-- {{{ 5.4.14 -->
 <h3>Version 5.4.14</h3>
 <b>11-April-2013</b>

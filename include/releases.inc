@@ -2,6 +2,37 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.4.14' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_14.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.14.tar.bz2',
+          'name' => 'PHP 5.4.14 (tar.bz2)',
+          'md5' => 'cfdc044be2c582991a1fe0967898fa38',
+          'date' => '11 Apr 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.14.tar.gz',
+          'name' => 'PHP 5.4.14 (tar.gz)',
+          'md5' => '08df8196af12bc850409a7bff13bf8f0',
+          'date' => '11 Apr 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.14 binaries and source',
+        ),
+      ),
+      'date' => '11 Apr 2013',
+      'museum' => false,
+    ),
     '5.4.13' => 
     array (
       'announcement' => 
