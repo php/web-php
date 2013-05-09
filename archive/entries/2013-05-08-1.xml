@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>PHP 5.5.0RC1 is available</title>
+  <id>http://php.net/archive/2013.php#id2013-05-08-1</id>
+  <published>2013-05-08T19:12:44+00:00</published>
+  <updated>2013-05-08T19:12:44+00:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-05-08-1" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-05-08-1" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The PHP development team announces the availability of the first release candidate of PHP 5.5.
+     This release fixes some bugs as well as some possible leaks from our last beta.
+     </p>
+    <strong>THIS IS A DEVELOPMENT PREVIEW - DO NOT USE IT IN PRODUCTION!</strong>
+    <p>
+    You can find an incomplete changelog of PHP 5.5.0RC1 here :
+    </p>
+    <ul>
+     <li>Ignore QUERY_STRING when sent in SCRIPT_FILENAME in FPM SAPI.</li>
+     <li>Fix build with system libgd >= 2.1 which is now the minimal
+         version required (as build with previous version is broken).
+         No change when bundled libgd is used.</li>
+    <li> Fixed some bugs in SNMP</li>
+    <li> Fixed bug where stream_select() fails with pipes returned by proc_open()
+         on Windows x64).</li>
+    </ul>
+    <p>
+    To get the full changelog, please, check the <a href="https://github.com/php/php-src/blob/php-5.5.0RC1/NEWS">NEWS file</a> attached to the archive.
+    For source downloads of PHP 5.5.0RC1 please visit <a href="http://downloads.php.net/dsp">the download page</a>,
+    Windows binaries can be found on <a href="http://windows.php.net/qa/">windows.php.net/qa/</a>.
+    </p>
+    <p>
+    Note that our release candidate cycle is only meant to bug fixes, no more features will be added to PHP 5.5 from now.
+    </p>     
+    <p>
+     Please help us to identify bugs in order to ensure that the release is solid and all things behave as expected.
+     Please test this release candidate against your code base and report any problems that you encounter to the
+     <a href="mailto:php-qa@lists.php.net">QA mailing list</a> and/or the <a href="https://bugs.php.net">PHP bug tracker</a>.
+    </p>
+    <p>
+     We would like to thank all people helping us making PHP better by testing it and reporting problems, as well as all its
+     contributors for their great work on this 5.5 version of PHP.
+    </p>
+    </div>
+  </content>
+</entry>
