@@ -12,9 +12,9 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP development team announces the immediate availability of PHP 5.4.15 and PHP 5.3.25. These releases fix about 10 bugs aswell as upgrading the bundled libmagic library. All users of PHP are encouraged to upgrade to PHP 5.4.15.</p>
      
-     For source downloads of PHP 5.4.15 and PHP 5.3.25 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
+     <p>For source downloads of PHP 5.4.15 and PHP 5.3.25 please visit our <a href="/downloads.php">downloads page</a>, Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.</p>
      
-     The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.
+     <p>The list of changes are recorded in the <a href="/ChangeLog-5.php">ChangeLog</a>.</p>
     </div>
   </content>
 </entry>
