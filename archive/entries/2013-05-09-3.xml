@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>Seriously: PHP 5.4.15 and PHP 5.3.25 really were released!</title>
+  <id>http://php.net/archive/2013.php#id2013-05-09-3</id>
+  <published>2013-05-09T13:14:43-05:00</published>
+  <updated>2013-05-09T13:14:43-05:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <category term="releases" label="New PHP release"/>
+  <link href="http://php.net/index.php#id2013-05-09-3" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-05-09-3" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+
+     <p>We weren't trying to pull an April Fool's Day joke in May.  A temporary glitch caused the latest distributions of PHP to not properly propagate to the mirror servers.  This has been fixed at the root level, and it's now being distributed to all of the mirrors.  We'll take some bacon to go with the egg on my faces, please!</p>
+
+     <p>If you continue to experience issues with downloading these versions after 21:00 UTC on 9 May, 2013, please drop us a line at <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>, telling us from which mirror you're trying to download, and we'll get it resolved.</p>
+
+     <p>We apologize for the delays and confusion this may have caused, and thank you for using PHP.</p>
+
+    </div>
+  </content>
+</entry>
