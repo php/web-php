@@ -11,7 +11,7 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
 
-     <p>We weren't trying to pull an April Fool's Day joke in May.  A temporary glitch caused the latest distributions of PHP to not properly propagate to the mirror servers.  This has been fixed at the root level, and it's now being distributed to all of the mirrors.  We'll take some bacon to go with the egg on my faces, please!</p>
+     <p>We weren't trying to pull an April Fool's Day joke in May.  A temporary glitch caused the latest distributions of PHP to not properly propagate to the mirror servers.  This has been fixed at the root level, and it's now being distributed to all of the mirrors.  We'll take some bacon to go with the egg on our faces, please!</p>
 
      <p>If you continue to experience issues with downloading these versions after 21:00 UTC on 9 May, 2013, please drop us a line at <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>, telling us from which mirror you're trying to download, and we'll get it resolved.</p>
 
