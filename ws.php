@@ -1,11 +1,7 @@
 <?php
 include 'include/languages.inc';
-if(false && !$conf=apc_fetch('ws2_config')) {
-  include '/local/Web/ws2.conf';
-  apc_store('ws2_config',$conf);
-} else {
-  include '/local/Web/ws2.conf';
-}
+include '/local/this-box/ws2.conf';
+
 $raw = filter_input(INPUT_GET, 'q', FILTER_UNSAFE_RAW);
 $q = urlencode($raw);
 $r = isset($_REQUEST['results']) ? (int)$_REQUEST['results'] : 10;
