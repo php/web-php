@@ -95,7 +95,7 @@ function ws_bing_massage($data) {
         ),
     );
 
-    foreach ($set as $result) {
+    foreach ((array)$set as $result) {
         $massaged['ResultSet']['Result'][] = array(
             'Title' => $result['Title'],
             'Summary' => $result['Description'],
