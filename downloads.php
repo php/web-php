@@ -128,7 +128,7 @@ foreach($a["source"] as $rel) {
 <h1>GPG Keys</h1>
 <p>
 The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.
-The follwing official GnuPG keys of the current PHP Release Manager can be used
+The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 <h2>PHP 5.4</h2>
