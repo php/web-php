@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Shanghai PHP conference 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-06-04-1</id>
+  <published>2013-06-04T10:56:01-07:00</published>
+  <updated>2013-06-04T10:56:01-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-06-30</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-06-04-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://php.thinkinlamp.com/2013" title="Shanghai PHP conference 2013">thinklamp2013.jpg</default:newsImage>
+  <link href="http://php.thinkinlamp.com/2013" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="http://php.thinkinlamp.com/2013">ThinkInLAMP</a> is pleased to announce the first Shanghai PHP conference 2013.
+     This event will be held on Sunday June 30th 2013 in Shanghai, China. A
+     community oriented conference which is organized by an excellent line up
+     and socials.</p>
+     <p>This event will concentrate on PHP languages and web based technologies
+     used today; extension, latest dynamics and new applications within the
+     increased demand for developers and everyone who is interested in PHP
+     language.</p>
+     <p>There will be more than 500 developers owned over 3 year’s
+     experiences andsenior technical persons come for learning and networking.
+     Register soon as the Early Bird discount rate expires on May 30.</p>
+     <p>Go to <a href="http://php.thinkinlamp.com/2013">http://php.thinkinlamp.com/2013</a> for more information, we are looking
+     forward to seeing you in June!
+     </p>
+    </div>
+  </content>
+</entry>
