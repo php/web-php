@@ -76,6 +76,12 @@ function blacklisted($email) {
 	'wcgg-bit',
 	'@163.com',
 	'a-hassani2011@live.fr',
+	'analytix-congress',
+	'nexus-irc',
+	'bramyao23',
+	'dbmall27@gmail.com',
+	'robinsonm750@gmail.com',
+	'enu.kz',
     );
     foreach ($mosquitoes as $m) {
         if (preg_match('/'.$m.'/i',$email)) return true;
