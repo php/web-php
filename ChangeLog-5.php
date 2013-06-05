@@ -9566,7 +9566,7 @@ fault?]).  (Sterling, Marcus)</li>
 <b>29-Jun-2003</b>
 <ul>
 <li>Switch to using Zend Engine 2, which includes numerous engine level improvements.
-A full list is available at <a href="http://www.php.net/zend-engine-2.php">http://www.php.net/zend-engine-2.php</a>.
+A full overview may be downloaded from <a href="http://www.zend.com/engine2/ZendEngine-2.0.pdf">http://www.zend.com/engine2/ZendEngine-2.0.pdf</a> (PDF).
 </li>
 <li>The SQLite (<a href="http://www.hwaci.com/sw/sqlite/">http://www.hwaci.com/sw/sqlite/</a>) extension is now bundled and
 enabled by default. (Wez, Marcus, Tal)</li>
