@@ -440,6 +440,10 @@ $uri_aliases = array (
 
     # Other items
     "security/crypt" => "security/crypt_blowfish",
+
+    # Bugfixes
+    "array_sort"    => "sort", // #64743
+    "array-sort"    => "sort", // #64743
 );
 
 $external_redirects = array(
