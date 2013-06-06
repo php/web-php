@@ -11,6 +11,110 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.16"></a><!-- {{{ 5.4.16 -->
+<h3>Version 5.4.16</h3>
+<b>06-Jun-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+ <li><?php bugfix(64879); ?> (Heap based buffer overflow in quoted_printable_encode, CVE-2013-2110).</li>
+ <li><?php bugfix(64853); ?> (Use of no longer available ini directives causes crash on TS build).</li>
+ <li><?php bugfix(64729); ?> (compilation failure on x32). </li>
+ <li><?php bugfix(64720); ?> (SegFault on zend_deactivate). </li>
+ <li><?php bugfix(64660); ?> (Segfault on memory exhaustion within function definition).</li>
+</ul>
+</li>
+<li>Calendar:</li>
+<ul>
+ <li><?php bugfix(64895); ?> (Integer overflow in SndToJewish).</li>
+</ul>
+</li>
+<li>Fileinfo:</li>
+<ul>
+ <li><?php bugfix(64830); ?> (mimetype detection segfaults on mp3 file).</li>
+</ul>
+</li>
+<li>FPM:</li>
+<ul>
+ <li>Ignore QUERY_STRING when sent in SCRIPT_FILENAME.</li>
+ <li>Fixed some possible memory or resource leaks and possible null dereference detected by code coverity scan.</li>
+ <li>Log a warning when a syscall fails.</li>
+ <li>Add --with-fpm-systemd option to report health to systemd, and systemd_interval option to configure this. The service can now use Type=notify in the systemd unit file.</li>
+</ul>
+</li>
+<li>MySQLi</li>
+<ul>
+  <li><?php bugfix(64726); ?> (Segfault when calling fetch_object on a use_result and DB pointer has closed).</li>
+</ul>
+</li>
+<li>Phar</li>
+<ul>
+ <li><?php bugfix(64214); ?> (PHAR PHPTs intermittently crash when run on DFS, SMB or with non std tmp dir).</li>
+</ul>
+</li>
+<li>SNMP:</li>
+<ul>
+ <li><?php bugfix(64765); ?> (Some IPv6 addresses get interpreted wrong).</li>
+ <li><?php bugfix(64159); ?> (Truncated snmpget).</li>
+</ul>
+</li>
+<li>Streams:</li>
+<ul>
+ <li><?php bugfix(64770); ?> (stream_select() fails with pipes returned by proc_open() on Windows x64).</li>
+</ul>
+</li>
+<li>Zend Engine:</li>
+<ul>
+ <li><?php bugfix(64821); ?> (Custom Exceptions crash when internal properties overridden).</li>
+</ul>
+</li>
+</ul>
+<!-- }}} -->
+
+<a name="5.3.26"></a><!-- {{{ 5.3.26 -->
+<h3>Version 5.3.26</h3>
+<b>06-Jun-2013</b>
+<ul>
+<li>Core:</li>
+<ul>
+ <li><?php bugfix(64879); ?> (Heap based buffer overflow in quoted_printable_encode, CVE-2013-2110).</li>
+</ul>
+</li>
+<li>Calendar:</li>
+<ul>
+ <li><?php bugfix(64895); ?> (Integer overflow in SndToJewish).</li>
+</ul>
+</li>
+<li>FPM:</li>
+<ul>
+ <li>Fixed some possible memory or resource leaks and possible null dereference detected by code coverity scan.</li>
+ <li>Log a warning when a syscall fails.</li>
+</ul>
+</li>
+<li>MySQLi:</li>
+<ul>
+ <li><?php bugfix(64726); ?> (Segfault when calling fetch_object on a use_result and DB pointer has closed).</li>
+</ul>
+</li>
+<li>Phar</li>
+<ul>
+ <li><?php bugfix(64214); ?> (PHAR PHPTs intermittently crash when run on DFS, SMB or with non std tmp dir).</li>
+</ul>
+</li>
+<li>Streams:</li>
+<ul>
+ <li><?php bugfix(64770); ?> (stream_select() fails with pipes returned by proc_open() on Windows x64).</li>
+</ul>
+</li>
+<li>Zend Engine:</li>
+<ul>
+ <li><?php bugfix(64821); ?> (Custom Exception crash when internal properties overridden).</li>
+</ul>
+</li>
+</ul>
+<!-- }}} -->
+
+
 <a name="5.4.15"></a><!-- {{{ 5.4.15 -->
 <h3>Version 5.4.15</h3>
 <b>09-May-2013</b>
