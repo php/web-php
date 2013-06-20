@@ -20,7 +20,7 @@ This release includes a large number of new features and bug fixes.
  <li>Added <a href="http://www.php.net/exceptions">"finally"</a> keyword. </li>
  <li>Added <a href="http://www.php.net/password">simplified password hashing API</a>.</li>
  <li>Added support for constant array/string dereferencing.</li>
- <li>Added Class Name Resolution As Scalar Via <a href="https://wiki.php.net/rfc/class_name_scalars">"class" Keyword</a></li>
+ <li>Added scalar class name resolution via <a href="http://www.php.net/oop5.basic#language.oop5.basic.class.class">::class</a>.</li>
  <li>Added <a href="http://www.php.net/migration55.new-features#migration55.new-features.empty">support for using empty() on the result of function calls and other expressions</a></li>
  <li>Added support for <a href="https://wiki.php.net/rfc/foreach-non-scalar-keys">non-scalar Iterator keys in foreach</a></li>
  <li>Added support for <a href="http://www.php.net/foreach#control-structures.foreach.list">list in foreach</a></li>
