@@ -131,6 +131,12 @@ The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</
 The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
+<h2>PHP 5.5</h2>
+<pre>
+pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
+      Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
+uid                  David Soria Parra &lt;dsp@php.net&gt;
+</pre>
 <h2>PHP 5.4</h2>
 <pre>
 pub   2048D/5DA04B5D 2012-03-19
