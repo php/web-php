@@ -35,7 +35,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>General improvement:</li>
 <ul>
- <li>Added generators and coroutines (https://wiki.php.net/rfc/generators).</li>
+ <li>Added generators and coroutines.</li>
  <li>Added "finally" keyword. </li>
  <li>Added simplified password hashing API.</li>
  <li>Added support for constant array/string dereferencing.</li>
