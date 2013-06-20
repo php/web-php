@@ -20,11 +20,11 @@ This release includes a large number of new features and bug fixes.
  <li>Added <a href="http://www.php.net/exceptions">"finally"</a> keyword. </li>
  <li>Added <a href="http://www.php.net/password">simplified password hashing API</a>.</li>
  <li>Added support for constant array/string dereferencing.</li>
- <li>Added Class Name Resolution As Scalar Via "class" Keyword</li>
- <li>Added support for using empty() on the result of function calls and other expressions</li>
- <li>Added support for non-scalar Iterator keys in foreach</li>
- <li>Added support for list in foreach</li>
- <li>Added Zend Opcache extension and enable building it by default (OPCode cache)</li>
+ <li>Added Class Name Resolution As Scalar Via <a href="https://wiki.php.net/rfc/class_name_scalars">"class" Keyword</a></li>
+ <li>Added <a href="https://wiki.php.net/rfc/empty_isset_exprs">support for using empty() on the result of function calls and other expressions</a></li>
+ <li>Added support for <a href="https://wiki.php.net/rfc/foreach-non-scalar-keys">non-scalar Iterator keys in foreach</a></li>
+ <li>Added support for <a href="https://wiki.php.net/rfc/foreachlist">list in foreach</a></li>
+ <li>Added Zend Opcache extension and enable building it by default</li>
  <li>A lot more improvements and fixes</li>
 </ul>
 
@@ -32,7 +32,7 @@ This release includes a large number of new features and bug fixes.
 <b>Changes that affect compatibility:</b>
 </p>
 <ul>
-  <li><a href="http://www.php.net/php-logo-guid">PHP logo GUIDs removed</a> have been removed</li>
+  <li><a href="http://www.php.net/php-logo-guid">PHP logo GUIDs</a> have been removed</li>
   <li>Windows XP and 2003 support dropped</li>
   <li>Case insensitivity is no longer locale specific. All case insensitive matching for function, class and constant names is now performed in a locale independent manner according to ASCII rules</li>
 </ul>

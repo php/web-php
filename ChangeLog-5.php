@@ -231,6 +231,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li>Fix build with system libgd &gt;= 2.1 which is now the minimal
     version required (as build with previous version is broken).
     No change when bundled libgd is used</li>
+ <li>Upgraded libgd to 2.1</li>
 </ul>
 </ul>
 
