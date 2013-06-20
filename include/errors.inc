@@ -30,7 +30,7 @@ function error_404_manual()
          "<p>The manual page you are looking for (<strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong>) is not available on this server right now. " .
-         "Please check back later, or if the problem persist, " .
+         "Please check back later, or if the problem persists, " .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
@@ -45,7 +45,7 @@ function error_noservice()
          "<p>The service you tried to access with <strong>" .
          htmlspecialchars(substr($MYSITE, 0, -1) . $_SERVER['REQUEST_URI']) .
          "</strong> is not available on this server right now. " .
-         "Please check back later, or if the problem persist, " .
+         "Please check back later, or if the problem persists, " .
          "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
     site_footer();
     exit;
@@ -57,7 +57,7 @@ function error_nomirror($mirror) {
 	echo "<h1>No such mirror</h1>\n<p>The mirror you tried to access (" .
 		 htmlspecialchars($mirror) .
 		 ") is not registered php.net mirror. Please check back later," .
-		 " or if the problem persist, " .
+		 " or if the problem persists, " .
 		 "<a href=\"/contact.php\">contact the webmasters</a>.</p>\n";
 	site_footer();
 	exit;
