@@ -11,6 +11,514 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.5.0"></a><!-- {{{ 5.5.0 -->
+<h3>Version 5.5.0</h3>
+<b>20-Jun-2013</b>
+<ul>
+<li>Drop support for bison &lt; 2.4 when building PHP from GIT source</li>
+</ul>
+
+<ul>
+<li>Improved Zend Engine:</li>
+<ul>
+ <li>Added ARMv7/v8 versions of various Zend arithmetic functions that are implemented using inline assembler</li>
+ <li>Added systemtap support by enabling systemtap compatible dtrace probes on linux</li>
+ <li>Optimized access to temporary and compiled VM variables. 8% less memory reads</li>
+ <li>The VM stacks for passing function arguments and syntaticaly nested calls
+    were merged into a single stack. The stack size needed for op_array
+    execution is calculated at compile time and preallocated at once. As result
+    all the stack push operations don't require checks for stack overflow
+    any more</li>
+</ul>
+</ul>
+
+<ul>
+<li>General improvement:</li>
+<ul>
+ <li>Added generators and coroutines (https://wiki.php.net/rfc/generators).</li>
+ <li>Added "finally" keyword. </li>
+ <li>Added simplified password hashing API.</li>
+ <li>Added support for constant array/string dereferencing.</li>
+ <li>Added Class Name Resolution As Scalar Via "class" Keyword</li>
+ <li>Added support for using empty() on the result of function calls and other expressions</li>
+ <li>Added support for non-scalar Iterator keys in foreach</li>
+ <li>Added support for list in foreach</li>
+</ul>
+</ul>
+
+<ul>
+<li>Core:</li>
+<ul>
+ <li>Added Zend Opcache extension and enable building it by default.</li>
+ <li>Added array_column function which returns a column in a multidimensional array</li>
+ <li>Added boolval()</li>
+ <li>Added "Z" option to pack/unpack</li>
+ <li>Added optional second argument for assert() to specify custom message</li>
+ <li>Added support for changing the process's title in CLI/CLI-Server SAPIs. The implementation is more robust that the proctitle PECL module</li>
+ <li>Improve set_exception_handler while doing reset</li>
+ <li>Return previous handler when passing NULL to set_error_handler and set_exception_handler</li>
+ <li>Implemented <?php bugl(64175); ?> (Added HTTP codes as of RFC 6585)</li>
+ <li>Implemented <?php bugl(60738); ?> (Allow 'set_error_handler' to handle NULL)</li>
+ <li>Implemented <?php bugl(60524); ?> (specify temp dir by php.ini)</li>
+ <li>Implemented <?php bugl(46487); ?> (Dereferencing process-handles no longer waits on those processes)</li>
+ <li><?php bugfix(65051); ?> (count() off by one inside unset())</li>
+ <li><?php bugfix(64988); ?> (Class loading order affects E_STRICT warning)</li>
+ <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC)</li>
+ <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root)</li>
+ <li><?php bugfix(64936); ?> (doc comments picked up from previous scanner run)</li>
+ <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser())</li>
+ <li><?php bugfix(64879); ?> (Heap based buffer overflow in quoted_printable_encode, CVE 2013-2110)</li>
+ <li><?php bugfix(64853); ?> (Use of no longer available ini directives causes crash on TS build)</li>
+ <li><?php bugfix(64821); ?> (Custom Exceptions crash when internal properties overridden)</li>
+ <li><?php bugfix(64720); ?> (SegFault on zend_deactivate).</li>
+ <li><?php bugfix(64677); ?> (execution operator `` stealing surrounding arguments)</li>
+ <li><?php bugfix(64660); ?> (Segfault on memory exhaustion within function definition)</li>
+ <li><?php bugfix(64578); ?> (debug_backtrace in set_error_handler corrupts zend heap: segfault)</li>
+ <li><?php bugfix(64565); ?> (copy doesn't report failure on partial copy)</li>
+ <li><?php bugfix(64555); ?> (foreach no longer copies keys if they are interned)</li>
+ <li><?php bugfix(47675); ?> and <?php bugfix(64577); ?> (fd leak on Solaris)</li>
+ <li><?php bugfix(64544); ?> (Valgrind warnings after using putenv)</li>
+ <li><?php bugfix(64515); ?> (Memoryleak when using the same variablename 2times in function declaration)</li>
+ <li><?php bugfix(64503); ?> (Compilation fails with error: conflicting types for 'zendparse')</li>
+ <li><?php bugfix(64239); ?> (Debug backtrace changed behavior since 5.4.10 or 5.4.11)</li>
+ <li><?php bugfix(64523); ?> allow XOR in php.ini</li>
+ <li><?php bugfix(64354); ?> (Unserialize array of objects whose class can't be autoloaded fail)</li>
+ <li><?php bugfix(64370); ?> (microtime(true) less than $_SERVER['REQUEST_TIME_FLOAT'])</li>
+ <li><?php bugfix(64166); ?> (quoted-printable-encode stream filter incorrectly discarding whitespace)</li>
+ <li><?php bugfix(64142); ?> (dval to lval different behavior on ppc64)</li>
+ <li><?php bugfix(64135); ?> (Exceptions from set_error_handler are not always propagated)</li>
+ <li><?php bugfix(63980); ?> (object members get trimmed by zero bytes)</li>
+ <li><?php bugfix(63874); ?> (Segfault if php_strip_whitespace has heredoc)</li>
+ <li><?php bugfix(63830); ?> (Segfault on undefined function call in nested generator)</li>
+ <li><?php bugfix(63822); ?> (Crash when using closures with ArrayAccess)</li>
+ <li><?php bugfix(61681); ?> (Malformed grammar)</li>
+ <li><?php bugfix(61038); ?> (unpack("a5", "str\0\0") does not work as expected)</li>
+ <li><?php bugfix(61025); ?> (__invoke() visibility not honored)</li>
+ <li><?php bugfix(60833); ?> (self, parent, static behave inconsistently case-sensitive)</li>
+ <li><?php bugfix(52126); ?> timestamp for mail.log</li>
+ <li><?php bugfix(49348); ?> (Uninitialized ++$foo->bar; does not cause a notice)</li>
+ <li><?php bugfix(23955); ?> allow specifying Max-Age attribute in setcookie()</li>
+ <li><?php bugfix(18556); ?> (Engine uses locale rules to handle class names)</li>
+ <li>Fix undefined behavior when converting double variables to integers. The double is now always rounded towards zero, the remainder of its division by 2^32 or 2^64 (depending on sizeof(long)) is calculated and it's made signed assuming a two's complement representation</li>
+</ul>
+</ul>
+
+<ul>
+<li>Removed legacy features:</li>
+<ul>
+ <li>Remove php_logo_guid(), php_egg_logo_guid(), php_real_logo_guid(), zend_logo_guid()</li>
+ <li>Drop Windows XP and 2003 support</li>
+</ul>
+</ul>
+
+<ul>
+<li>Apache2 Handler SAPI:</li>
+<ul>
+ <li>Enabled Apache 2.4 configure option for Windows.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Calendar:</li>
+<ul>
+ <li><?php bugfix(64895); ?> (Integer overflow in SndToJewish).</li>
+ <li><?php bugfix(54254); ?> (cal_from_jd returns month = 6 when there is only one Adar).</li>
+</ul>
+</ul>
+
+<ul>
+<li>CLI server:</li>
+<ul>
+  <li><?php bugfix(64128); ?> (buit-in web server is broken on ppc64).</li>
+</ul>
+</ul>
+
+<ul>
+<li>CURL:</li>
+<ul>
+ <li>Remove curl stream wrappers.</li>
+ <li>Implemented <?php bugl(46439); ?> - added CURLFile for safer file uploads</li>
+ <li>Added support for CURLOPT_FTP_RESPONSE_TIMEOUT, CURLOPT_APPEND,
+    CURLOPT_DIRLISTONLY, CURLOPT_NEW_DIRECTORY_PERMS, CURLOPT_NEW_FILE_PERMS,
+    CURLOPT_NETRC_FILE, CURLOPT_PREQUOTE, CURLOPT_KRBLEVEL, CURLOPT_MAXFILESIZE,
+    CURLOPT_FTP_ACCOUNT, CURLOPT_COOKIELIST, CURLOPT_IGNORE_CONTENT_LENGTH,
+    CURLOPT_CONNECT_ONLY, CURLOPT_LOCALPORT, CURLOPT_LOCALPORTRANGE,
+    CURLOPT_FTP_ALTERNATIVE_TO_USER, CURLOPT_SSL_SESSIONID_CACHE,
+    CURLOPT_FTP_SSL_CCC, CURLOPT_HTTP_CONTENT_DECODING,
+    CURLOPT_HTTP_TRANSFER_DECODING, CURLOPT_PROXY_TRANSFER_MODE,
+    CURLOPT_ADDRESS_SCOPE, CURLOPT_CRLFILE, CURLOPT_ISSUERCERT,
+    CURLOPT_USERNAME, CURLOPT_PASSWORD, CURLOPT_PROXYUSERNAME,
+    CURLOPT_PROXYPASSWORD, CURLOPT_NOPROXY, CURLOPT_SOCKS5_GSSAPI_NEC,
+    CURLOPT_SOCKS5_GSSAPI_SERVICE, CURLOPT_TFTP_BLKSIZE,
+    CURLOPT_SSH_KNOWNHOSTS, CURLOPT_FTP_USE_PRET, CURLOPT_MAIL_FROM,
+    CURLOPT_MAIL_RCPT, CURLOPT_RTSP_CLIENT_CSEQ, CURLOPT_RTSP_SERVER_CSEQ,
+    CURLOPT_RTSP_SESSION_ID, CURLOPT_RTSP_STREAM_URI, CURLOPT_RTSP_TRANSPORT,
+    CURLOPT_RTSP_REQUEST, CURLOPT_RESOLVE, CURLOPT_ACCEPT_ENCODING,
+    CURLOPT_TRANSFER_ENCODING, CURLOPT_DNS_SERVERS and CURLOPT_USE_SSL</li>
+ <li><?php bugfix(55635); ?> (CURLOPT_BINARYTRANSFER no longer used. The constant
+    still exists for backward compatibility but is doing nothing)</li>
+ <li><?php bugfix(54995); ?> (Missing CURLINFO_RESPONSE_CODE support)</li>
+ <li>Added new functions curl_escape, curl_multi_setopt, curl_multi_strerror
+    curl_pause, curl_reset, curl_share_close, curl_share_init,
+    curl_share_setopt curl_strerror and curl_unescape</li>
+ <li>Addes new curl options CURLOPT_TELNETOPTIONS, CURLOPT_GSSAPI_DELEGATION,
+    CURLOPT_ACCEPTTIMEOUT_MS, CURLOPT_SSL_OPTIONS, CURLOPT_TCP_KEEPALIVE,
+    CURLOPT_TCP_KEEPIDLE and CURLOPT_TCP_KEEPINTVL</li>
+</ul>
+</ul>
+
+<ul>
+<li>DateTime:</li>
+<ul>
+ <li>Added DateTimeImmutable - a variant of DateTime that only returns the
+    modified state instead of changing itself.</li>
+ <li><?php bugfix(64825); ?> (Invalid free when unserializing DateTimeZone).</li>
+ <li><?php bugfix(64359); ?> (strftime crash with VS2012)</li>
+ <li><?php bugfix(62852); ?> (Unserialize Invalid Date causes crash)</li>
+ <li><?php bugfix(61642); ?> (modify("+5 weekdays") returns Sunday)</li>
+ <li><?php bugfix(60774); ?> (DateInterval::format("%a") is always zero when an
+    interval is created using the createFromDateString method)</li>
+ <li><?php bugfix(54567); ?> (DateTimeZone serialize/unserialize)</li>
+ <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance)</li>
+</ul>
+</ul>
+
+<ul>
+<li>dba:</li>
+<ul>
+ <li><?php bugfix(62489); ?> (dba_insert not working as expected)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Filter:</li>
+<ul>
+ <li>Implemented <?php bugl(49180); ?> added MAC address validation.</li>
+</ul>
+</ul>
+
+<ul>
+<li>Fileinfo:</li>
+<ul>
+ <li>Upgraded libmagic to 5.14.</li>
+ <li><?php bugfix(64830); ?> (mimetype detection segfaults on mp3 file)</li>
+ <li><?php bugfix(63590); ?> (Different results in TS and NTS under Windows)</li>
+ <li><?php bugfix(63248); ?> (Load multiple magic files from a directory under Windows)</li>
+</ul>
+</ul>
+
+<ul>
+<li>FPM:</li>
+<ul>
+ <li>Add --with-fpm-systemd option to report health to systemd, and
+    systemd_interval option to configure this. The service can now use
+    Type=notify in the systemd unit file.</li>
+ <li>Ignore QUERY_STRING when sent in SCRIPT_FILENAME</li>
+ <li>Log a warning when a syscall fails</li>
+ <li>Implemented <?php bugl(64764); ?> (add support for FPM init.d script)</li>
+ <li><?php bugfix(64915); ?> (error_log ignored when daemonize=0)</li>
+ <li><?php bugfix(63999); ?> (php with fpm fails to build on Solaris 10 or 11)</li>
+ <li>Fixed some possible memory or resource leaks and possible null dereference
+    detected by code coverity scan</li>
+</ul>
+</ul>
+
+<ul>
+<li>GD:</li>
+<ul>
+ <li><?php bugfix(64962); ?> (imagerotate produces corrupted image).</li>
+ <li><?php bugfix(64961); ?> (segfault in imagesetinterpolation)</li>
+ <li>Fix build with system libgd &gt;= 2.1 which is now the minimal
+    version required (as build with previous version is broken).
+    No change when bundled libgd is used</li>
+</ul>
+</ul>
+
+<ul>
+<li>hash:</li>
+<ul>
+ <li>Added support for PBKDF2 via hash_pbkdf2().</li>
+ <li><?php bugfix(64745); ?> (hash_pbkdf2() truncates data when using default length
+    and hex output)</li>
+</ul>
+</ul>
+
+<ul>
+<li>intl:</li>
+<ul>
+ <li>Added UConverter wrapper.</li>
+ <li>The intl extension now requires ICU 4.0+</li>
+ <li>Added intl.use_exceptions INI directive, which controls what happens when
+    global errors are set together with intl.error_level</li>
+ <li>MessageFormatter::format() and related functions now accepted named
+    arguments and mixed numeric/named arguments in ICU 4.8+</li>
+ <li>MessageFormatter::format() and related functions now don't error out when
+    an insufficient argument count is provided. Instead, the placeholders will
+    remain unsubstituted</li>
+ <li>MessageFormatter::parse() and MessageFormat::format() (and their static
+    equivalents) don't throw away better than second precision in the arguments</li>
+ <li>IntlDateFormatter::__construct and datefmt_create() now accept for the
+    $timezone argument time zone identifiers, IntlTimeZone objects, DateTimeZone
+    objects and NULL</li>
+ <li>IntlDateFormatter::__construct and datefmt_create() no longer accept invalid
+    timezone identifiers or empty strings</li>
+ <li>The default time zone used in IntlDateFormatter::__construct and
+    datefmt_create() (when the corresponding argument is not passed or NULL is
+    passed) is now the one given by date_default_timezone_get(), not the
+    default ICU time zone</li>
+ <li>The time zone passed to the IntlDateFormatter is ignored if it is NULL and
+    if the calendar passed is an IntlCalendar object -- in this case, the
+    IntlCalendar's time zone will be used instead. Otherwise, the time zone
+    specified in the $timezone argument is used instead. This does not affect
+    old code, as IntlCalendar was introduced in this version</li>
+ <li>IntlDateFormatter::__construct and datefmt_create() now accept for the
+    $calendar argument also IntlCalendar objects</li>
+ <li>IntlDateFormatter::getCalendar() and datefmt_get_calendar() return false
+    if the IntlDateFormatter was set up with an IntlCalendar instead of the
+    constants IntlDateFormatter::GREGORIAN/TRADITIONAL. IntlCalendar did not
+    exist before this version</li>
+ <li>IntlDateFormatter::setCalendar() and datefmt_set_calendar() now also accept
+    an IntlCalendar object, in which case its time zone is taken. Passing a
+    constant is still allowed, and still keeps the time zone</li>
+ <li>IntlDateFormatter::setTimeZoneID() and datefmt_set_timezone_id() are
+    deprecated. Use IntlDateFormatter::setTimeZone() or datefmt_set_timezone()
+    instead</li>
+ <li>IntlDateFormatter::format() and datefmt_format() now also accept an
+    IntlCalendar object for formatting</li>
+ <li>Added the classes: IntlCalendar, IntlGregorianCalendar, IntlTimeZone,
+    IntlBreakIterator, IntlRuleBasedBreakIterator and
+    IntlCodePointBreakIterator</li>
+ <li>Added the functions: intlcal_get_keyword_values_for_locale(),
+    intlcal_get_now(), intlcal_get_available_locales(), intlcal_get(),
+    intlcal_get_time(), intlcal_set_time(), intlcal_add(),
+    intlcal_set_time_zone(), intlcal_after(), intlcal_before(), intlcal_set(),
+    intlcal_roll(), intlcal_clear(), intlcal_field_difference(),
+    intlcal_get_actual_maximum(), intlcal_get_actual_minimum(),
+    intlcal_get_day_of_week_type(), intlcal_get_first_day_of_week(),
+    intlcal_get_greatest_minimum(), intlcal_get_least_maximum(),
+    intlcal_get_locale(), intlcal_get_maximum(),
+    intlcal_get_minimal_days_in_first_week(), intlcal_get_minimum(),
+    intlcal_get_time_zone(), intlcal_get_type(),
+    intlcal_get_weekend_transition(), intlcal_in_daylight_time(),
+    intlcal_is_equivalent_to(), intlcal_is_lenient(), intlcal_is_set(),
+    intlcal_is_weekend(), intlcal_set_first_day_of_week(),
+    intlcal_set_lenient(), intlcal_equals(),
+    intlcal_get_repeated_wall_time_option(),
+    intlcal_get_skipped_wall_time_option(),
+    intlcal_set_repeated_wall_time_option(),
+    intlcal_set_skipped_wall_time_option(), intlcal_from_date_time(),
+    intlcal_to_date_time(), intlcal_get_error_code(),
+    intlcal_get_error_message(), intlgregcal_create_instance(),
+    intlgregcal_set_gregorian_change(), intlgregcal_get_gregorian_change() and
+    intlgregcal_is_leap_year()</li>
+ <li>Added the functions: intltz_create_time_zone(), intltz_create_default(),
+    intltz_get_id(), intltz_get_gmt(), intltz_get_unknown(),
+    intltz_create_enumeration(), intltz_count_equivalent_ids(),
+    intltz_create_time_zone_id_enumeration(), intltz_get_canonical_id(),
+    intltz_get_region(), intltz_get_tz_data_version(),
+    intltz_get_equivalent_id(), intltz_use_daylight_time(), intltz_get_offset(),
+    intltz_get_raw_offset(), intltz_has_same_rules(), intltz_get_display_name(),
+    intltz_get_dst_savings(), intltz_from_date_time_zone(),
+    intltz_to_date_time_zone(), intltz_get_error_code(),
+    intltz_get_error_message()</li>
+ <li>Added the methods: IntlDateFormatter::formatObject(),
+    IntlDateFormatter::getCalendarObject(), IntlDateFormatter::getTimeZone(),
+    IntlDateFormatter::setTimeZone()</li>
+ <li>Added the functions: datefmt_format_object(), datefmt_get_calendar_object(),
+    datefmt_get_timezone(), datefmt_set_timezone(),
+    datefmt_get_calendar_object(), intlcal_create_instance()</li>
+</ul>
+</ul>
+
+<ul>
+<li>mbstring:</li>
+<ul>
+ <li><?php bugfix(64769); ?> (mbstring PHPTs crash on Windows x64).</li>
+</ul>
+</ul>
+
+<ul>
+<li>MCrypt:</li>
+<ul>
+ <li>mcrypt_ecb(), mcrypt_cbc(), mcrypt_cfb() and mcrypt_ofb() now throw E_DEPRECATED.</li>
+</ul>
+</ul>
+
+<ul>
+<li>mysql:</li>
+<ul>
+ <li>This extension is now deprecated, and deprecation warnings will be generated
+    when connections are established to databases via mysql_connect(),
+    mysql_pconnect(), or through implicit connection: use MySQLi or PDO_MySQL
+    instead</li>
+ <li>Dropped support for LOAD DATA LOCAL INFILE handlers when using libmysql.
+    Known for stability problems</li>
+ <li>Added support for SHA256 authentication available with MySQL 5.6.6+</li>
+</ul>
+</ul>
+
+<ul>
+<li>mysqli:</li>
+<ul>
+ <li>Added mysqli_begin_transaction()/mysqli::begin_transaction(). Implemented
+    all options, per MySQL 5.6, which can be used with START TRANSACTION, COMMIT
+    and ROLLBACK through options to mysqli_commit()/mysqli_rollback() and their
+    respective OO counterparts. They work in libmysql and mysqlnd mode</li>
+ <li>Added mysqli_savepoint(), mysqli_release_savepoint()</li>
+ <li><?php bugfix(64726); ?> (Segfault when calling fetch_object on a use_result and DB
+    pointer has closed)</li>
+ <li><?php bugfix(64394); ?> (MYSQL_OPT_CAN_HANDLE_EXPIRED_PASSWORDS undeclared when
+    using Connector/C)</li>
+</ul>
+</ul>
+
+<ul>
+<li>mysqlnd:</li>
+<ul>
+ <li>Add new begin_transaction() call to the connection object. Implemented all
+    options, per MySQL 5.6, which can be used with START TRANSACTION, COMMIT
+    and ROLLBACK</li>
+ <li>Added mysqlnd_savepoint(), mysqlnd_release_savepoint()</li>
+ <li><?php bugfix(63530); ?> (mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc
+    for stmt->param_bind)</li>
+ <li>Fixed return value of mysqli_stmt_affected_rows() in the time after
+    prepare() and before execute()</li>
+</ul>
+</ul>
+
+<ul>
+<li>PCRE:</li>
+<ul>
+ <li>Merged PCRE 8.32</li>
+ <li>Deprecated the /e modifier</li>
+ <li><?php bugfix(63284); ?> (Upgrade PCRE to 8.31)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO:</li>
+<ul>
+ <li><?php bugfix(63176); ?> (Segmentation fault when instantiate 2 persistent PDO to the same db server)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_DBlib:</li>
+<ul>
+ <li><?php bugfix(63638); ?> (Cannot connect to SQL Server 2008 with PDO dblib)</li>
+ <li><?php bugfix(64338); ?> (pdo_dblib can't connect to Azure SQL)</li>
+ <li><?php bugfix(64808); ?> (FreeTDS PDO getColumnMeta on a prepared but not executed statement crashes)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_pgsql:</li>
+<ul>
+ <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error)</li>
+</ul>
+</ul>
+
+<ul>
+<li>PDO_mysql:</li>
+<ul>
+ <li><?php bugfix(48724); ?> (getColumnMeta() doesn't return native_type for BIT, TINYINT and YEAR)</li>
+</ul>
+</ul>
+
+<ul>
+<li>pgsql:</li>
+<ul>
+ <li>Added pg_escape_literal() and pg_escape_identifier()</li>
+ <li><?php bugfix(46408); ?> Locale number format settings can cause pg_query_params to break with numerics</li>
+</ul>
+</ul>
+
+<ul>
+<li>Phar:</li>
+<ul>
+ <li>Fixed timestamp update on Phar contents modification</li>
+</ul>
+</ul>
+
+<ul>
+<li>readline:</li>
+<ul>
+ <li><?php bugfix(55694); ?> (Expose additional readline variable to prevent default filename completion)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Reflection:</li>
+<ul>
+ <li><?php bugfix(64007); ?> (There is an ability to create instance of Generator by hand)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Sockets:</li>
+<ul>
+ <li>Added recvmsg() and sendmsg() wrappers</li>
+ <li><?php bugfix(64508); ?> (Fails to build with --disable-ipv6)</li>
+ <li><?php bugfix(64287); ?> (sendmsg/recvmsg shutdown handler causes segfault)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SPL:</li>
+<ul>
+ <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems)</li>
+ <li><?php bugfix(64264); ?> (SPLFixedArray toArray problem)</li>
+ <li><?php bugfix(64228); ?> (RecursiveDirectoryIterator always assumes SKIP_DOTS)</li>
+ <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended)</li>
+ <li><?php bugfix(60560); ?> (SplFixedArray un-/serialize, getSize(), count() return 0, keys are strings)</li>
+ <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays)</li>
+ <li>Implement <?php bugl(48358); ?> (Add SplDoublyLinkedList::add() to insert an element at a given offset)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SNMP:</li>
+<ul>
+ <li><?php bugfix(64765); ?> (Some IPv6 addresses get interpreted wrong)</li>
+ <li><?php bugfix(64159); ?> (Truncated snmpget)</li>
+ <li><?php bugfix(64124); ?> (IPv6 malformed)</li>
+ <li><?php bugfix(61981); ?> (OO API, walk: $suffix_as_key is not working correctly)</li>
+</ul>
+</ul>
+
+<ul>
+<li>SOAP:</li>
+<ul>
+ <li>Added SoapClient constructor option 'ssl_method' to specify ssl method</li>
+</ul>
+</ul>
+
+<ul>
+<li>Streams:</li>
+<ul>
+ <li><?php bugfix(64770); ?> (stream_select() fails with pipes returned by proc_open() on Windows x64)</li>
+ <li>Fixed Windows x64 version of stream_socket_pair() and improved error handling</li>
+</ul>
+</ul>
+
+<ul>
+<li>Tokenizer:</li>
+<ul>
+ <li><?php bugfix(60097); ?> (token_get_all fails to lex nested heredoc)</li>
+</ul>
+</ul>
+
+<ul>
+<li>Zip:</li>
+<ul>
+ <li>Upgraded libzip to 0.10.1</li>
+ <li><?php bugfix(64452); ?> (Zip crash intermittently)</li>
+ <li><?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence)</li>
+</ul>
+</ul>
+
+<!-- }}} -->
+
 <a name="5.4.16"></a><!-- {{{ 5.4.16 -->
 <h3>Version 5.4.16</h3>
 <b>06-Jun-2013</b>
