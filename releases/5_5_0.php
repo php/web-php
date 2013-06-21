@@ -22,9 +22,9 @@ This release includes a large number of new features and bug fixes.
  <li>Added <a href="http://php.net/migration55.new-features#migration55.new-features.const-dereferencing">support for constant array/string dereferencing</a>.</li>
  <li>Added scalar class name resolution via <a href="http://php.net/oop5.basic#language.oop5.basic.class.class">::class</a>.</li>
  <li>Added <a href="http://php.net/migration55.new-features#migration55.new-features.empty">support for using empty() on the result of function calls and other expressions</a>.</li>
- <li>Added support for <a href="https://wiki.php.net/rfc/foreach-non-scalar-keys">non-scalar Iterator keys in foreach</a></li>
+ <li>Added <a href="http://php.net/migration55.new-features#migration55.new-features.non-scalar-iterator-keys">support for non-scalar Iterator keys in foreach</a>.</li>
  <li>Added <a href="http://php.net/foreach#control-structures.foreach.list">support for list() constructs in foreach statements</a>.</li>
- <li>Added Zend Opcache extension and enable building it by default</li>
+ <li>Added the <a href="http://php.net/opcache">Zend OPcache</a> extension for opcode caching.</li>
  <li>The GD library has been upgraded to version 2.1 adding new functions and improving existing functionality.</li>
  <li>A lot more improvements and fixes.</li>
 </ul>
