@@ -39,7 +39,7 @@ class HomepageNewsView {
                     }
                 }
 
-                $content = $article->getIntroduction();
+                $content = $article->getContent();
 
                 $image = "";
                 $newsImage = $article->getNewsImage();
