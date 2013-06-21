@@ -16,36 +16,37 @@ This release includes a large number of new features and bug fixes.
 <b>The key features of PHP 5.5.0 include:</b>
 </p>
 <ul>
- <li>Added <a href="http://www.php.net/generators">generators</a> and coroutines.</li>
- <li>Added <a href="http://www.php.net/exceptions">"finally"</a> keyword. </li>
- <li>Added <a href="http://www.php.net/password">simplified password hashing API</a>.</li>
- <li>Added support for constant array/string dereferencing.</li>
- <li>Added scalar class name resolution via <a href="http://www.php.net/oop5.basic#language.oop5.basic.class.class">::class</a>.</li>
- <li>Added <a href="http://www.php.net/migration55.new-features#migration55.new-features.empty">support for using empty() on the result of function calls and other expressions</a></li>
+ <li>Added <a href="http://php.net/generators">generators</a> and coroutines.</li>
+ <li>Added the <a href="http://php.net/exceptions">finally</a> keyword.</li>
+ <li>Added a <a href="http://php.net/password">simplified password hashing API</a>.</li>
+ <li>Added <a href="http://php.net/migration55.new-features#migration55.new-features.const-dereferencing">support for constant array/string dereferencing</a>.</li>
+ <li>Added scalar class name resolution via <a href="http://php.net/oop5.basic#language.oop5.basic.class.class">::class</a>.</li>
+ <li>Added <a href="http://php.net/migration55.new-features#migration55.new-features.empty">support for using empty() on the result of function calls and other expressions</a>.</li>
  <li>Added support for <a href="https://wiki.php.net/rfc/foreach-non-scalar-keys">non-scalar Iterator keys in foreach</a></li>
- <li>Added support for <a href="http://www.php.net/foreach#control-structures.foreach.list">list in foreach</a></li>
+ <li>Added <a href="http://php.net/foreach#control-structures.foreach.list">support for list() constructs in foreach statements</a>.</li>
  <li>Added Zend Opcache extension and enable building it by default</li>
- <li>A lot more improvements and fixes</li>
+ <li>The GD library has been upgraded to version 2.1 adding new functions and improving existing functionality.</li>
+ <li>A lot more improvements and fixes.</li>
 </ul>
 
 <p>
 <b>Changes that affect compatibility:</b>
 </p>
 <ul>
-  <li><a href="http://www.php.net/php-logo-guid">PHP logo GUIDs</a> have been removed</li>
-  <li>Windows XP and 2003 support dropped</li>
-  <li>Case insensitivity is no longer locale specific. All case insensitive matching for function, class and constant names is now performed in a locale independent manner according to ASCII rules</li>
+  <li><a href="http://php.net/php_logo_guid">PHP logo GUIDs</a> have been removed.</li>
+  <li>Windows XP and 2003 support dropped.</li>
+  <li>Case insensitivity is no longer locale specific. All case insensitive matching for function, class and constant names is now performed in a locale independent manner according to ASCII rules.</li>
 </ul>
 
 <p>
-For users upgrading from PHP 5.4 there is a migration guide available
-<a href="http://php.net/migration55">here</a>, detailing the changes between
-PHP 5.4 and PHP 5.5.0.
+For users upgrading from PHP 5.4,
+<a href="http://php.net/migration55">a migration guide is available</a>
+detailing the changes between 5.4 and 5.5.0.
 </p>
 
 <p>
  For a full list of changes in PHP 5.5.0, see the
- <a href="/ChangeLog-5.php#5.5.0">ChangeLog</a>.
+ <a href="http://php.net/ChangeLog-5.php#5.5.0">ChangeLog</a>.
 </p>
 
 <?php site_footer(); ?>
