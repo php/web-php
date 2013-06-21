@@ -83,16 +83,6 @@ if (isset($shortname) && $shortname) {
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
-<div id="head-beta-warning">
-  <div id="beta-warning">
-    <a href="#" id="beta-warning-close">X</a>
-    <span class="blurb">
-      This is a work-in-progress experimental design.
-      Things <strong>will</strong> be broken and unfinished!
-      You may prefer <a href="http://php.net/?beta=0">php.net</a>
-    </span>
-  </div>
-</div>
 <nav id="headnav">
 
  <ul id="headmenu">
