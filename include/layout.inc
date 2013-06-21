@@ -226,7 +226,7 @@ function site_header($title = '', $config = array())
 
 <div id="head-beta-warning">
   <a id="beta-warning" href="?beta=1">
-    <span class="dismiss" href="#">dismiss</span>
+    <span class="dismiss">dismiss</span>
     <span class="blurb">Step into the future! Click here to switch to the beta php.net site</span>
   </a>
 </div>
@@ -361,7 +361,7 @@ function site_footer($config = array())
  </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
     function showBetaWarning() {
