@@ -63,6 +63,16 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
+// SETBETA Setting for temporary banners
+if(isset($_GET['setbeta']) && !headers_sent()) {
+    global $MYSITE;
+    myphpnet_setbeta( (bool) $_GET['setbeta']);
+    myphpnet_save();
+    header("Location: " . $MYSITE);
+    exit;
+}
+
+
 // Load in the user preferences
 function myphpnet_load()
 {
@@ -166,12 +176,22 @@ function myphpnet_save()
 
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
+
 }
 
 function myphpnet_setbeta($bool = false) {
     global $MYPHPNET;
 
-    $MYPHPNET[4] = (bool)$bool;
+    $bool = (bool) $bool;
+
+    // Session check, this is set when the users are clicking the temporary banners
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+
+    $_SESSION['beta_enabled'] = $bool;
+
+    $MYPHPNET[4] = (bool) $bool;
 }
 function myphpnet_beta() {
     global $MYPHPNET;
@@ -184,6 +204,15 @@ function myphpnet_beta() {
     if ($MYSITE === 'http://prototype.php.net/') {
         return true;
     }
+
+    // Session check, this is set when the users are clicking the temporary banners
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+
+    if(isset($_SESSION['beta_enabled'])) {
+        return $_SESSION['beta_enabled'];
+    }   
 
     if (isset($MYPHPNET[4])) {
         return (bool)$MYPHPNET[4];
