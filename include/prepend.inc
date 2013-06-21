@@ -184,13 +184,6 @@ function myphpnet_setbeta($bool = false) {
 
     $bool = (bool) $bool;
 
-    // Session check, this is set when the users are clicking the temporary banners
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-
-    $_SESSION['beta_enabled'] = $bool;
-
     $MYPHPNET[4] = (bool) $bool;
 }
 function myphpnet_beta() {
@@ -204,15 +197,6 @@ function myphpnet_beta() {
     if ($MYSITE === 'http://prototype.php.net/') {
         return true;
     }
-
-    // Session check, this is set when the users are clicking the temporary banners
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-
-    if(isset($_SESSION['beta_enabled'])) {
-        return $_SESSION['beta_enabled'];
-    }   
 
     if (isset($MYPHPNET[4])) {
         return (bool)$MYPHPNET[4];
