@@ -85,7 +85,7 @@ site_header("Downloads",
 ?>
 <a name="v5"></a>
 <?php
-$SHOW_COUNT = 2;
+$SHOW_COUNT = 3;
 $MAJOR = 5;
 for ($i=1; $i<=$SHOW_COUNT; ++$i) {
 list($v, $a) = each($RELEASES[$MAJOR]);
