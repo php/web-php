@@ -225,7 +225,7 @@ function site_header($title = '', $config = array())
 <body{$onload}>
 
 <div id="head-beta-warning">
-  <a id="beta-warning" href="?beta=1">
+  <a id="beta-warning" href="?setbeta=1">
     <span class="dismiss">dismiss</span>
     <span class="blurb">Step into the future! Click here to switch to the beta php.net site</span>
   </a>
