@@ -1018,3 +1018,7 @@ table.standard th.subr {
     background: white;
     border: 0;
 }
+
+div.informalexample {
+    margin-bottom: 1.5em;
+}
