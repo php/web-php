@@ -228,6 +228,11 @@ aside#quicktoc {
 .docs .example-contents .phpcode code {
     padding:1em;
 }
+
+.docs .note .phpcode code {
+    font-size: 1.0em !important;
+}
+
 .docs .phpcode code {
     font-size:.923em;
     line-height: 2;
