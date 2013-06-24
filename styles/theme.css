@@ -513,11 +513,6 @@ code {
     font-family: monospace;
 }
 
-.phpcode span {
-    line-height: 0.5em;
-}
-
-
 .phpcode, div.classsynopsis {
 	text-align: left;
 }
