@@ -1023,3 +1023,9 @@ table.standard th.subr {
 div.informalexample {
     margin-bottom: 1.5em;
 }
+
+em, strong {
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
