@@ -267,5 +267,8 @@ if (isset($shortname) && $shortname) {
         </ul>
     </aside>
 <?php endif; ?>
+
+<?php include 'uservoice.inc' ?>
+
 <section class="layout-content <?php echo $curr ?>">
 
