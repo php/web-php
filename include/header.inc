@@ -109,15 +109,6 @@ if (isset($shortname) && $shortname) {
   <li id="headhome" class="parent <?php echo $curr == "home" ? "current" : ""?>">
     <a href="/" rel="home" class="menu-link">Home</a>
     <div class="children downloads"><div class="children-1"><div class="children-2">
-        <div class="what-is-php">
-            <p>
-                PHP is a popular general-purpose scripting language that is
-                especially suited to web development.
-            </p><p>
-                Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
-            </p>
-            <p class="tutorial"><a href="/tut.php">Begin Tutorial &raquo;</a></p>
-        </div>
         <div class="download">
             <h2>Download PHP</h2>
 <?php if(!empty($RELEASES[5])): ?>
@@ -134,6 +125,19 @@ if (isset($shortname) && $shortname) {
     <?php endforeach; ?>
             </ul>
 <?php endif; ?>
+        </div>
+        <div class="children-left">
+            <div class="what-is-php-container">
+                <div class="what-is-php downloads-<?php count($RELEASES[5]); ?>">
+                    <p>
+                        PHP is a popular general-purpose scripting language that is
+                        especially suited to web development.
+                    </p><p>
+                        Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
+                    </p>
+                    <p class="tutorial"><a href="/tut.php">Begin Tutorial &raquo;</a></p>
+                </div>
+            </div>
         </div>
         <br style="clear: both;" />
     </div></div></div>
