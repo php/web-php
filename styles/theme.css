@@ -1019,6 +1019,10 @@ div.informalexample {
     margin-bottom: 1.5em;
 }
 
+.count strong {
+    color: white;
+}
+
 em, strong {
     font-weight: bold;
     font-style: italic;
