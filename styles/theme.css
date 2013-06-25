@@ -34,14 +34,15 @@ h1 {
 }
 h2 {
     font-size: 1.5em;
-    line-height: 2em;
+    line-height: 1em;
+    margin:1em 0;
 }
 h3 {
     font-size: 1.25em;
     line-height: 1.2em;
 }
 p {
-    margin: 0.75em 0;
+    margin: 1.5em 0;
 }
 ul {
     margin:1.5em 0;
