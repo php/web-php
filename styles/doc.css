@@ -3,7 +3,7 @@
 
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
-    display:none;
+    display: block;
     border-top: 1px solid #9999CC;
     border-left: 1px solid #9999CC;
     border-bottom: none;
@@ -20,7 +20,6 @@ aside#quicktoc {
 }
 
 #quicktoc .links, #quicktoc .content {
-    display: none;
 }
 
 #quicktoc .links a:first-child {
@@ -479,6 +478,28 @@ body.docs #layout {
 
 .docs .sect2 {
     margin-top: 12px;
+}
+
+.docs .manualnavbar {
+    display: block;
+    background-color: #f5f5f5;
+    padding: 12px;
+    margin-bottom: 12px;
+    text-decoration: none;
+}
+
+.docs .manualnavbar .prev {
+    float: left;
+    display: block;
+    font-size: 1.3em;
+    border-bottom: none;
+}
+
+.docs .manualnavbar .next {
+    float: right;
+    display: block;
+    font-size: 1.3em;
+    border-bottom: none;
 }
 
 /* Soft-deprecation Notices */

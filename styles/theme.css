@@ -214,12 +214,6 @@ hr {
 }
 
 #headsearch-keywords,
-#changelang-langs
-{
-    color: #666;
-    background: transparent;
-    -webkit-appearance: none;
-}
 
 #headsearch-keywords:focus {
     color: #000;
@@ -228,8 +222,7 @@ hr {
 #headsearch-submit {
     float:right;
 }
-#headsearch-submit,
-#changelang-submit
+#headsearch-submit
 {
     border: 0;
     margin: 1px;
@@ -241,13 +234,13 @@ hr {
     color: #fff;
     cursor: pointer;
 }
-#changelang {
-    border-color: #7F7FB2;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;    
-    border-radius: 5px;
-    border: 1px solid #666699;
-    float: right;
+
+.change-language .select {
+    border-radius: 0;
+}
+
+.prevnext-container {
+    height: 25px;
 }
 
 #headnav li dl {
