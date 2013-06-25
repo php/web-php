@@ -255,7 +255,7 @@ function site_header($title = '', $config = array())
    <span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)">
     <span class="shortkey">s</span>earch for
    </span>
-   <input type="text" name="pattern" value="" size="30" accesskey="s" />
+   <input type="text" name="pattern" value="" size="30" accesskey="s" title="Search"/>
    <span>in the</span>
    <select name="show">
     <option value="all"      >all php.net sites</option>
