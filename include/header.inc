@@ -298,12 +298,6 @@ if (isset($shortname) && $shortname) {
     </aside>
 <?php endif; ?>
 
-<?php if(!empty($config["thispage"])): ?>
-<div class="change-language">
-    <?php echo manual_language_chooser($config["lang"], $config["thispage"]); ?>
-</div>
-<?php endif; ?>
-
 <?php include 'uservoice.inc' ?>
 
 

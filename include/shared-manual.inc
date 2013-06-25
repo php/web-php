@@ -621,7 +621,7 @@ function manual_setup_beta($setup) {
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
-
+    echo '<div class="change-language">' . manual_language_chooser($config["lang"], $config["thispage"]) . '</div>';
 
 
 }

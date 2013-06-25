@@ -186,6 +186,10 @@ aside#quicktoc {
 }
 /* }}} */
 
+.docs .refentry {
+    padding-top: 25px;
+}
+
 .docs .refentry .constructorsynopsis,
 .docs .refentry .methodsynopsis {
     color: #666;
