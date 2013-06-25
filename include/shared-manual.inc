@@ -595,6 +595,7 @@ function manual_setup_beta($setup) {
             "children" => array(),
         );
     }
+
     // The index manual page has no parent..
     if ($setup["up"][0]) {
         $menu[] = array(
@@ -618,16 +619,36 @@ function manual_setup_beta($setup) {
         "lang" => $setup["head"][1],
     );
     site_header($setup["this"][1] . " - Manual ", $config);
-    echo '
-    <aside id="quicktoc">
-        <div class="language">'.manual_language_chooser($setup['head'][1], $setup['this'][0]).'</div>
-        <div class="content"></div>
-        <div class="links">
-            <a title="Report a bug" href="http://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=' . $PGI['this'][0] . '">Report a bug</a>
-            <a title="Edit this page" href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $PGI['this'][0] . '">Edit this page</a>
-        </div>
-    </aside>';
-    echo '</aside>';
+    
+    echo '<div class="manualnavbar">';
+
+    if(isset($setup['prev']) || isset($setup['next'])) {
+
+
+        $prevNextHtml = '<div class="prevnext-container">';
+        if(isset($setup['prev'])) {
+            $prevNextHtml .= sprintf('<a href="%s" title="%s" class="prev">&laquo; %s</a>',
+                $setup['prev'][0], $setup['prev'][1], $setup['prev'][1]
+            );
+        }
+        if(isset($setup['next'])) {
+            $prevNextHtml .= sprintf('<a href="%s" title="%s" class="next">%s &raquo;</a>',
+                $setup['next'][0], $setup['next'][1], $setup['next'][1]
+            );
+        }
+        $prevNextHtml .= '</div>';
+        echo $prevNextHtml;
+    }
+
+    echo '<div class="change-language">' . 
+            manual_language_chooser($setup['head'][1], $setup['this'][0]).
+        '</p></div>';
+
+    echo '</div> <!-- /.manualnavbar -->';
+
+
+
+
 }
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
@@ -640,15 +661,16 @@ function manual_language_chooser($currentlang, $currentpage) {
     }
 
     // Print out the form with all the options
-    $rt = '<h5>Language</h5>'.
-          '<form action="/manual/change.php" method="get" id="changelang" name="changelang">'.
+    $rt = '<form action="/manual/change.php" method="get" id="changelang" name="changelang">'.
     	  '<fieldset>'.
-	  '<select onchange="document.changelang.submit()" name="page" id="changelang-langs">';
-    foreach ($links as $link) {
-        $rt.= "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
-    }
-	$rt.= '<option value="help-translate.php">Other</option>'.
-	      '</select>'.
+    	  '
+          <p>Change language: 
+          <select onchange="document.changelang.submit()" name="page" id="changelang-langs">';
+                foreach ($links as $link) {
+                    $rt.= "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
+                }
+    	$rt.= '<option value="help-translate.php">Other</option>'.
+	      '</select></p>'.
               '</fieldset>'.
               '</form>';
 	return $rt;
