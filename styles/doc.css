@@ -216,7 +216,9 @@ aside#quicktoc {
 
 /* }}} */
 
-
+.docs .example {
+    margin: 1.5em 0;
+}
 
 /* {{{ Examples (highlighting is in theme.css) */
 .docs .example-contents .phpcode code,
