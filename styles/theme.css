@@ -236,6 +236,10 @@ hr {
     cursor: pointer;
 }
 
+.change-language {
+    float: right;
+    margin: -25px -10px;
+}
 .change-language .select {
     border-radius: 0;
 }
