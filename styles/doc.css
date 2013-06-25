@@ -468,8 +468,9 @@ body.docs #layout {
 .docs #layout #usernotes {
     margin-left: 19em;
 }
+
 .docs #usernotes {
-    margin-top:2em;
+    margin-top:1.5em;
 }
 
 #changelang-langs {

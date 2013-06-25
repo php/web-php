@@ -357,10 +357,9 @@ hr {
     position: relative;
 }
 
-/* User contributed notes heading. */
 #usernotes h3 {
-    border-top: .2em solid #669;
-    padding-top: .801em;
+    border-bottom: .2em solid #669;
+    margin-bottom: -.2em;
 }
 
 #usernotes .count {
@@ -433,10 +432,13 @@ hr {
     border-bottom: 0;
 }
 
+#usernotes .note:first-of-type .text {
+    border-color: #dde;
+}
 #usernotes .note .text {
     background-color: #f5f5f5;
-    border-top: 0.2em solid #669;
-    padding: 1.5em .75em;
+    border-top: 0.125em solid #669;
+    padding: 1.375em .75em 1.5em;
 }
 
 /* Vote arrow styles. */
