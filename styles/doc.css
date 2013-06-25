@@ -105,7 +105,6 @@ aside#quicktoc {
 }
 
 .docs blockquote.note {
-    border-top: 3px solid #9999CC;
     background-color: #EFEFEF;
 }
 .docs div.tip {
@@ -211,6 +210,11 @@ aside#quicktoc {
 .docs .refsect1.seealso .title + p.para + * {
     margin-top:-1.5em; /* there's a p tag that has whitespace (not :empty). This simply covers it up */
 }
+
+.docs .rdfs-comment .parameter {
+    font-size: 1.3em;
+}
+
 /* }}} */
 
 
@@ -238,6 +242,10 @@ aside#quicktoc {
     line-height: 2;
     display: block;
     margin:-1px 0;
+}
+
+.docs .refsect1.examples {
+    border-top: 0.2em solid #669;
 }
 
 /* }}} */
@@ -326,6 +334,7 @@ ul.chunklist_children {
 .docs .refsect1 {
     margin-top: 3em;
     color: #444;
+    border-top: 0.2em solid #669;
 }
 
 .docs .classsynopsis,
@@ -465,6 +474,10 @@ body.docs #layout {
     width:120px; 
     font-size:12px;
     margin-right: 6px;
+}
+
+.docs .sect2 {
+    margin-top: 12px;
 }
 
 /* Soft-deprecation Notices */
