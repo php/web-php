@@ -149,7 +149,7 @@ if (isset($shortname) && $shortname) {
         <div class="children-2">
 
           <dl>
-            <dt>Current Releases</dt>
+            <dt><a href="/downloads.php" title="Current Releases">Current Releases</a></dt>
             <dd><a href="http://php.net/downloads.php#5.5" title="PHP 5.5">PHP 5.5</a></dd>
             <dd><a href="http://php.net/downloads.php#5.4" title="PHP 5.4">PHP 5.4</a></dd>
             <dd><a href="http://php.net/downloads.php#5.3" title="PHP 5.3">PHP 5.3</a></dd>
