@@ -91,6 +91,12 @@ aside#quicktoc {
 
 
 /* {{{ Warning and notes */
+
+.docs .notes blockquote.note {
+    padding:0;
+    background:transparent;
+}
+
 .docs div.caution,
 .docs blockquote.note {
     padding: .75em 1em;
@@ -112,8 +118,8 @@ aside#quicktoc {
 }
 
 .docs div.caution {
-    border-top: 3px solid #FFFFCC;
-    background-color: #EFEFEF;
+    border-top: 3px solid #FFFFBB;
+    background-color: #FFFFDD;
 }
 
 .docs div.tip b.tip,
