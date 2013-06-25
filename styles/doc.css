@@ -187,7 +187,7 @@ aside#quicktoc {
 /* }}} */
 
 .docs .refentry {
-    padding-top: 25px;
+    padding-top: 1.5em;
 }
 
 .docs .refentry .constructorsynopsis,
