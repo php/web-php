@@ -40,7 +40,10 @@ h3 {
     font-size: 1.25em;
     line-height: 1.2em;
 }
-p, ul {
+p {
+    margin: 0.5em;
+}
+ul {
     margin:1.5em 0;
 }
 p:empty {
