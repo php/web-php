@@ -440,10 +440,10 @@ ul.chunklist_children {
     content:"\bb \20";
 }
 
-.docs #layout {
+body.docs #layout {
+    min-width:45em;
     width:auto;
-    max-width:80em;
-    padding:0 1.5em;
+    padding:0 3em 0 1.5em;
 }
 
 .docs .layout-menu ul.child-menu-list a:hover,

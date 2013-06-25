@@ -356,7 +356,6 @@ hr {
 #usernotes {
     margin: 0 0 1.5em 216px;
     position: relative;
-    max-width: 75em;
 }
 
 /* User contributed notes heading. */
@@ -653,13 +652,9 @@ aside.tips div.inner {
 
 #layout {
     width: 960px;
-    margin: 1.5em auto;
 }
-
-@media screen and (min-width: 1280px) {
-    #layout {
-        width: 75%;
-    }
+#layout {
+    margin: 1.5em auto;
 }
 
 .layout-menu {
