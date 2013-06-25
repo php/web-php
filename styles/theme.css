@@ -590,6 +590,7 @@ pre.info {
 }
 
 #mega-drop-down a {
+    font-size: 1.2em;
     display: block;
     padding: 2px;
     color: #ccc;

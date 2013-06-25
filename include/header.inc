@@ -142,8 +142,38 @@ if (isset($shortname) && $shortname) {
         <br style="clear: both;" />
     </div></div></div>
   </li>
-  <li class="<?php echo $curr == "downloads" ? "current" : ""?>">
-    <a href="/downloads.php" class="menu-link">Downloads</a>
+  <li class="parent <?php echo $curr == "downloads" ? "current" : ""?>">
+    <a href="#downloads" class="menu-link">Downloads</a>
+    <div class="children" id="downloads">
+      <div class="children-1">
+        <div class="children-2">
+
+          <dl>
+            <dt>Current Releases</dt>
+            <dd><a href="http://php.net/downloads.php#5.5" title="PHP 5.5">PHP 5.5</a></dd>
+            <dd><a href="http://php.net/downloads.php#5.4" title="PHP 5.4">PHP 5.4</a></dd>
+            <dd><a href="http://php.net/downloads.php#5.3" title="PHP 5.3">PHP 5.3</a></dd>
+          </dl>
+
+          <dl>
+            <dt>Development Releases</dt>
+            <dd><a href="http://www.php.net/git.php" title="Git">Git</a></dd>
+            <dd><a href="https://github.com/php/php-src/" title="Github">Github</a></dd>
+            <dd><a href="http://snaps.php.net/" title="Snaps">Snaps</a></dd>
+          </dl>
+
+          <dl>
+            <dt>Other Downloads</dt>
+            <dd><a href="http://www.php.net/releases/" title="Archived Versions">Archived Versions</a></dd>
+            <dd><a href="http://pecl.php.net/packages.php" title="PECL">PECL</a></dd>
+            <dd><a href="http://pear.php.net/packages.php" title="PEAR">PEAR</a></dd>
+            <dd><a href="http://php.net/downloads.php" title="Non-core systems">Non-core systems</a></dd>
+          </dl>
+          <br style="clear: both;" />
+
+        </div>
+      </div>
+    </div>
   </li>
   <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">
     <a href="#docs" class="menu-link">Documentation</a>
