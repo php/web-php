@@ -238,7 +238,9 @@ hr {
 
 .change-language {
     float: right;
-    margin: -25px -10px;
+}
+.change-language p {
+    margin:0;
 }
 .change-language .select {
     border-radius: 0;
