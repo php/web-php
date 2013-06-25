@@ -458,7 +458,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
 <li>Sockets:</li>
 <ul>
- <li>Added recvmsg() and sendmsg() wrappers</li>
+ <li>Added socket_cmsg_space(), socket_sendmsg(), and socket_readmsg() functions</li>
  <li><?php bugfix(64508); ?> (Fails to build with --disable-ipv6)</li>
  <li><?php bugfix(64287); ?> (sendmsg/recvmsg shutdown handler causes segfault)</li>
 </ul>
