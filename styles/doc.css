@@ -271,8 +271,9 @@ aside#quicktoc {
 }
 
 .docs .doctable th {
-    background-color: #FCFCFC;
+    background-color: #99C;
     text-align: center;
+    color: #333;
     border-bottom: 1px solid #CCCCCC;
 }
 .docs .doctable td, .docs .doctable th {
