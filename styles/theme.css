@@ -41,7 +41,7 @@ h3 {
     line-height: 1.2em;
 }
 p {
-    margin: 0.5em 0;
+    margin: 0.75em 0;
 }
 ul {
     margin:1.5em 0;
@@ -237,10 +237,6 @@ hr {
 
 .change-language .select {
     border-radius: 0;
-}
-
-.prevnext-container {
-    height: 25px;
 }
 
 #headnav li dl {

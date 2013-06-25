@@ -93,7 +93,7 @@ aside#quicktoc {
 /* {{{ Warning and notes */
 .docs div.caution,
 .docs blockquote.note {
-    padding: .75em 1.5em;
+    padding: .75em 1em;
     margin: .75em 0;
 }
 
@@ -471,35 +471,43 @@ body.docs #layout {
 
 
 #changelang-langs {
-    width:120px; 
-    font-size:12px;
-    margin-right: 6px;
+    width:12em; 
+    font-size:.75em;
+    margin: 0 .75em;
 }
 
 .docs .sect2 {
-    margin-top: 12px;
+    margin-top: .75em;
 }
 
 .docs .manualnavbar {
     display: block;
     background-color: #f5f5f5;
-    padding: 12px;
-    margin-bottom: 12px;
+    padding: .75em;
     text-decoration: none;
+    margin-bottom:.75em;
 }
 
+.docs .manualnavbar p:last-child {
+    margin-bottom:0;
+}
+
+.docs .manualnavbar .prevnext-container {
+    font-size: 1.25em;
+    line-height:1.2;
+    height:1.2em; 
+}
+
+.docs .manualnavbar .prevnext-container a {
+    display:block;
+    border-bottom:none;
+}
 .docs .manualnavbar .prev {
     float: left;
-    display: block;
-    font-size: 1.3em;
-    border-bottom: none;
 }
 
 .docs .manualnavbar .next {
     float: right;
-    display: block;
-    font-size: 1.3em;
-    border-bottom: none;
 }
 
 /* Soft-deprecation Notices */
