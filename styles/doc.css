@@ -311,10 +311,9 @@ ul.chunklist_children {
 }
 
 .docs p.verinfo {
-    position: absolute;
-    right:0;
-    top: 1.5em;
+    float:right;
     color: #777;
+    margin:0 0 0 1.5em;
 }
 
 .docs h1.refname,
