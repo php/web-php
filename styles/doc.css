@@ -115,11 +115,7 @@ aside#quicktoc {
     border-top: 3px solid #FFFFCC;
     background-color: #EFEFEF;
 }
-.docs blockquote.note,
-.docs div.caution {
-    font-size: 1em;
-    margin-right: 0.8em;
-}
+
 .docs div.tip b.tip,
 .docs div.warning b.warning,
 .docs div.tip strong.tip,
