@@ -577,7 +577,7 @@ function manual_setup_beta($setup) {
     foreach($setup["toc"] as $entry) {
         // We strip out any class prefix here, we only want method names
         $methodname = $entry[1];
-        if(strpos($entry[1], '::') !== false) {
+        if(strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
             list($classname, $methodname) = explode('::', $entry[1]);
         }
         $siblings[] = array(
