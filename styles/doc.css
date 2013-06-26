@@ -52,16 +52,6 @@ aside#quicktoc {
     margin-top:0;
 }
 
-.docs .classsynopsis:before,
-.docs div.refsect1:before,
-.docs div.warning:before {
-    content:" ";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-}
 /* {{{ General styles (p, parameters, initializers, ...) */
 .docs .methodname b, .docs .methodname strong {
     color: #000;
@@ -91,7 +81,6 @@ aside#quicktoc {
 
 
 /* {{{ Warning and notes */
-
 .docs .notes blockquote.note {
     padding:0;
     background:transparent;
@@ -100,7 +89,7 @@ aside#quicktoc {
 .docs div.caution,
 .docs blockquote.note {
     padding: .75em 1em;
-    margin: .75em 0;
+    margin: 1.5em 0;
 }
 
 .docs .refsect1 div.caution,
@@ -118,8 +107,7 @@ aside#quicktoc {
 }
 
 .docs div.caution {
-    border-top: 3px solid #FFFFBB;
-    background-color: #FFFFDD;
+    background-color: #ffc;
 }
 
 .docs div.tip b.tip,
@@ -155,21 +143,13 @@ aside#quicktoc {
 
 .docs div.tip,
 .docs div.warning {
-    position: relative;
-    z-index:10;
     margin: 1.5em 0;
     padding: 0 .75em .75em 92px;
     min-height: 96px;
     background-position: 16px;
 }
-.docs div.tip:before,
-.docs div.warning:before {
-    z-index:-1;
-    top:-.25em;
-    border-top:.25em solid;
-}
 .docs div.warning {
-    background: #f2e5f4 url('/images/dialog-warning.png') left center no-repeat;
+    background: #F2E5F4 url('/images/dialog-warning.png') left center no-repeat;
 }
 .docs div.warning:before {
     border-color:#9f8a8a;
@@ -237,16 +217,10 @@ aside#quicktoc {
     padding: .75em;
 }
 .docs .example-contents .phpcode code {
-    padding:1em;
-}
-
-.docs .note .phpcode code {
-    font-size: 1.0em !important;
+    padding: .75em 1em;
 }
 
 .docs .phpcode code {
-    font-size:.923em;
-    line-height: 2;
     display: block;
     margin:-1px 0;
 }
@@ -334,7 +308,7 @@ ul.chunklist_children {
 .docs div.refsect1 h3.title {
     color: #444;
     position: absolute;
-    top:-2em;
+    top:-2.5em;
     left: 0;
 }
 

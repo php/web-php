@@ -25,7 +25,7 @@ input {
 
 body {
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.5;
     background: url('/images/sprites.png') repeat-x 0px -990px #fff;
 }
 h1 {
@@ -83,8 +83,8 @@ h2 a:focus {
 }
 
 h3.title {
-    font-size: 1.3em;
-    line-height: 2;
+    font-size: 1.25em;
+    line-height: 2.4;
 }
 
 h4.title {
@@ -503,8 +503,8 @@ dl dd p + p {
 
 /* PHP source code highlighting ------------------------------------------- */
 code {
-    font-family: monospace;
-    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
+    font: 12px / 18px monospace;
+    /* we were setting this in ems but the monospace seemed to be having problems */
 }
 
 .phpcode, div.classsynopsis {
