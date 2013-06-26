@@ -212,10 +212,10 @@ hr {
     width: 210px;
     height:26px;
     float: left;
+    -webkit-appearance: none;
 }
 
 #headsearch-keywords,
-
 #headsearch-keywords:focus {
     color: #000;
 }
