@@ -141,7 +141,6 @@ hr {
     height: 70px;
     line-height: 1;
     background: url('/images/sprites.png') repeat-x 0px -100px;
-    margin-top:.75em;
     min-width:960px;
 }
 
@@ -252,7 +251,7 @@ hr {
 
 #headnav li dl dd:hover,
 #headnav li dl dt:hover {
-    background: #eee;
+    background: #eef;
 }
 
 #headnav li.current a.menu-link,
@@ -433,10 +432,10 @@ hr {
 }
 
 #usernotes .note:first-of-type .text {
-    border-color: #dde;
+    border-color: #ccd;
 }
 #usernotes .note .text {
-    background-color: #f5f5f5;
+    background-color: #eef;
     border-top: 0.125em solid #669;
     padding: 1.375em .75em 1.5em;
 }
@@ -654,13 +653,14 @@ aside.tips div.inner {
 
 #layout {
     width: 960px;
-}
-#layout {
-    margin: 1.5em auto;
+    margin: .75em auto 1.5em;
 }
 
 .layout-menu {
     float: left;
+    padding:.75em;
+    margin-top:-.75em;
+    background-color:#eef;
 }
 
 .layout-menu li a {
@@ -842,7 +842,7 @@ table.standard tr:nth-child(even) td.sub,
 table.standard tr:nth-child(even) th.sub,
 table.standard tr td.sub,
 table.standard tr th.sub {
-    background: #eee;
+    background: #eef;
 }
 
 table.standard td.subr,

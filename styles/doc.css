@@ -321,7 +321,7 @@ ul.chunklist_children {
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
-    background-color: #f5f5f5;
+    background-color: #eef;
     padding: .75em;
 }
 
@@ -375,7 +375,7 @@ ul.chunklist_children {
 
 /* - Side Menu - */
 .docs .layout-menu {
-    width: 17em;
+    width: 16.5em;
 }
 
 .docs .layout-menu ul.parent-menu-list {
@@ -433,7 +433,7 @@ ul.chunklist_children {
 body.docs #layout {
     min-width:45em;
     width:auto;
-    padding:0 3em 0 1.5em;
+    padding:0 3em 0 0;
 }
 
 .docs .layout-menu ul.child-menu-list a:hover,
