@@ -251,7 +251,7 @@ hr {
 
 #headnav li dl dd:hover,
 #headnav li dl dt:hover {
-    background: #eef;
+    background: #eeeef6;
 }
 
 #headnav li.current a.menu-link,
@@ -435,7 +435,7 @@ hr {
     border-color: #ccd;
 }
 #usernotes .note .text {
-    background-color: #eef;
+    background-color: #eeeef6;
     border-top: 0.125em solid #669;
     padding: 1.375em .75em 1.5em;
 }
@@ -660,7 +660,7 @@ aside.tips div.inner {
     float: left;
     padding:.75em;
     margin-top:-.75em;
-    background-color:#eef;
+    background-color:#eeeef6;
 }
 
 .layout-menu li a {
@@ -842,7 +842,7 @@ table.standard tr:nth-child(even) td.sub,
 table.standard tr:nth-child(even) th.sub,
 table.standard tr td.sub,
 table.standard tr th.sub {
-    background: #eef;
+    background: #eeeef6;
 }
 
 table.standard td.subr,
