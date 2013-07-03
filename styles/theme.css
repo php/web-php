@@ -16,7 +16,7 @@ body * {
 }
 
 body, input, textarea {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 input {
@@ -654,6 +654,7 @@ aside.tips div.inner {
 #layout {
     width: 960px;
     margin: .75em auto 1.5em;
+    clear:both;
 }
 
 .layout-menu {
