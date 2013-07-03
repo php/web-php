@@ -166,10 +166,6 @@ aside#quicktoc {
 }
 /* }}} */
 
-.docs .refentry {
-    padding-top: 1.5em;
-}
-
 .docs .refentry .constructorsynopsis,
 .docs .refentry .methodsynopsis {
     color: #666;
@@ -375,7 +371,7 @@ ul.chunklist_children {
 
 /* - Side Menu - */
 .docs .layout-menu {
-    width: 16.5em;
+    width: 16.25em;
 }
 
 .docs .layout-menu ul.parent-menu-list {
