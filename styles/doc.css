@@ -186,11 +186,6 @@ aside#quicktoc {
 .docs .refentry .parameters dl dt code.parameter {
     font-size:1.23076em;
 }
-.docs .refentry .parameters .title + p.para + dl,
-.docs .refsect1.examples .title + p.para + *,
-.docs .refsect1.seealso .title + p.para + * {
-    margin-top:-1.5em; /* there's a p tag that has whitespace (not :empty). This simply covers it up */
-}
 
 .docs .rdfs-comment .parameter {
     font-size: 1.3em;

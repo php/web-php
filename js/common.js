@@ -260,7 +260,14 @@ $(document).ready(function() {
             }, 250);
         });
     });
-
+    
+    // We have <p> tags generated with nothing in them and it requires a PHD change, meanwhile this fixes it.
+    $('.docs .refentry .parameters p, .docs .refsect1.examples p, .docs .refsect1.seealso p').each(function() {
+        var $this = $(this), html = $this.html();
+        if(html !== null && html.replace(/\s|&nbsp;/g, '').length == 0) {
+            $this.remove();
+        }
+    });
 });
 
 /**
