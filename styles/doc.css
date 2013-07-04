@@ -99,7 +99,7 @@ aside#quicktoc {
 }
 
 .docs blockquote.note {
-    background-color: #EFEFEF;
+    background-color: #eee;
 }
 
 .docs div.caution {
@@ -128,18 +128,18 @@ aside#quicktoc {
 }
 
 .docs div.tip {
-    background:#ddf;
-    border-top: 3px solid #9999EE;
+    background:#eeeef6;
+    border-top: 0.1875em solid #99c;
     margin:1.5em 0;
-    padding:.75em 1.5em;
+    padding:0.5625em 1.5em .75em;
 }
 .docs .refsect1.notes div.tip {
-    border-top:0;
+    background:#e8e8e8;
+    border-top-color:#d8d8d8;
+    padding:.75em;
 }
 .docs div.tip p {
     margin:0;
-}
-.docs div.tip strong.tip {
 }
 
 .docs div.warning {
@@ -213,23 +213,23 @@ aside#quicktoc {
 }
 
 .docs .doctable tbody tr:nth-child(even) {
-    background-color: #EFEFEF;
+    background-color: #eeeef6;
 }
 
 .docs .doctable {
-    border-top: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     width: 100%;
 }
 
 .docs .doctable th {
-    background-color: #99C;
+    background-color: #bbd;
     text-align: center;
     color: #333;
-    border-bottom: 1px solid #CCCCCC;
+    border-bottom: 1px solid #ccc;
 }
 .docs .doctable td, .docs .doctable th {
-    border-right: 1px solid #CCCCCC;
+    border-right: 1px solid #ccc;
 }
 .docs .doctable td:last-child, .docs .doctable th:last-child {
     border-right: 0px;
