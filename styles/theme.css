@@ -34,17 +34,19 @@ body {
     background: url('/images/sprites.png') repeat-x 0px -990px #fff;
 }
 h1 {
-    font-size: 2em;
-    line-height: 1.5;
-}
-h2 {
     font-size: 1.5em;
     line-height: 1;
-    margin:1em 0;
+    margin:0 0 1em;
 }
-h3 {
+h2 {
     font-size: 1.25em;
     line-height: 1.2;
+    margin:0 0 1.2em;
+}
+h3 {
+    font-size: 1.125em;
+    line-height: 1.333333333;
+    margin:0 0 1.333333333em;
 }
 p {
     margin: 1.5em 0;
@@ -59,6 +61,7 @@ p:empty {
 }
 small {
     font-size: 0.75em;
+    line-height: 2;
 }
 
 abbr {
@@ -67,8 +70,8 @@ abbr {
 }
 
 h1, h1 a, h1 a:visited, h1 a:link {
-    color: #666;
-    border-color:#666;
+    color: #222;
+    border-color:#222;
 }
 h1 a:hover,
 h1 a:focus {
@@ -87,31 +90,14 @@ h2 a:focus {
     border-color:#000;
 }
 
-h3.title {
-    font-size: 1.25em;
-    line-height: 2.4;
-}
-
-h4.title {
-    font-size: 1.2em;
-}
-
-h5.title {
-    font-size: 1.15em;
-}
-
-h6.title {
-    font-size: 1.1em;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-weight:normal;
 }
-h4, h5, h6 {
-    font-size:1em;
-    color:#000;
-}
 
+h4, h5, h6 {
+    font-size:1.125em;
+    line-height: 1.333333333;
+}
 
 a:link,
 a:visited {
@@ -363,19 +349,21 @@ hr {
     position: relative;
 }
 
-#usernotes h3 {
-    border-bottom: .2em solid #669;
-    margin-bottom: -.2em;
+#usernotes h3.title {
+    border-bottom: 0.166666667em solid #669;
+    margin-bottom: -0.166666667.em;
+    line-height:2.666666667;
 }
 
 #usernotes .count {
     background-color: #7F7FB2;
     color: white;
-    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     border-radius: 5px;
-    padding: 0.4em;
-    font-size: 0.6em;
+    padding: 0.333333333em .5em;
+    font-size: 0.666666667em;
+    line-height:2;
     vertical-align: middle;
 }
 
@@ -407,10 +395,11 @@ hr {
     border-bottom: 0;
     color: #444;
     margin-left: 1em;
+    font-size: 1.125em;
+    line-height:1.333333333;
 }
 
 #usernotes .note .name em {
-    font-size: 1.2em;
     font-style: normal;
     font-weight: normal;
 }
@@ -592,13 +581,12 @@ pre.info {
 #mega-drop-down dd {
     padding: 0 0 0 10px;
     margin: 0;
-    font-size: 11px;
+    font-size:.875em;
+    line-height:1.714285714;
 }
 
 #mega-drop-down a {
-    font-size: 1.2em;
     display: block;
-    padding: 2px;
     color: #ccc;
     border-bottom: none;
 }
@@ -707,7 +695,8 @@ aside.tips div.inner {
 }
 
 #search-results li .result {
-    font-size: 1.2em
+    font-size: 1.25em;
+    line-height:1.2;
 }
 
 #results_nav_list {
@@ -831,7 +820,8 @@ table.standard tr:nth-child(even) td {
 }
 
 table.standard th {
-    font-size: 1.1em;
+    font-size: 1.125em;
+    line-height: 1.333333333;
     padding: 20px 10px 5px 10px;
     color: #777;
     font-weight: normal;

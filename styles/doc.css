@@ -101,33 +101,24 @@ aside#quicktoc {
 .docs blockquote.note {
     background-color: #EFEFEF;
 }
-.docs div.tip {
-    border-top: 3px solid #9999EE;
-    background-color: #EFEFEF;
-}
 
 .docs div.caution {
     background-color: #ffc;
 }
 
-.docs div.tip b.tip,
-.docs div.warning b.warning,
-.docs div.tip strong.tip,
 .docs div.warning strong.warning {
     font-size: 1.5em;
-    line-height: 2;
+    line-height: 1;
     display:block;
     text-align: center;
 }
 
-.docs div.tip p,
-.docs div.warning p {
-    padding-left: 1em;
-    text-align: left;
-}
-
 .docs div.warning div.example-contents {
-    padding-left: 60px;
+    padding-left: 1em;
+}
+.docs div.tip *:last-child,
+.docs div.warning *:last-child {
+    margin-bottom:0;
 }
 
 .docs div.caution b.caution, .docs div.caution strong.caution {
@@ -135,35 +126,31 @@ aside#quicktoc {
     margin-right: 0.8em;
 }
 .docs blockquote.note p,
-.docs div.warning p,
-.docs div.caution p,
-.docs div.tip p {
+.docs div.caution p {
     margin: 0;
 }
 
-.docs div.tip,
-.docs div.warning {
-    margin: 1.5em 0;
-    padding: 0 .75em .75em 92px;
-    min-height: 96px;
-    background-position: 16px;
-}
-.docs div.warning {
-    background: #F2E5F4 url('/images/dialog-warning.png') left center no-repeat;
-}
-.docs div.warning:before {
-    border-color:#9f8a8a;
-}
 .docs div.tip {
-    background: #efefef url('/images/dialog-information.png') left center no-repeat;
+    background:#ddf;
+    border-top: 3px solid #9999EE;
+    margin:1.5em 0;
+    padding:.75em 1.5em;
 }
-.docs div.tip:before {
-    border-color:#99e;
+.docs .refsect1.notes div.tip {
+    border-top:0;
+}
+.docs div.tip p {
+    margin:0;
+}
+.docs div.tip strong.tip {
 }
 
-.docs div.warning h1{
-    font-size: 1.4em;
+.docs div.warning {
+    background: #fcc;
+    margin: 1.5em 0;
+    padding: 1.5em;
 }
+
 /* }}} */
 
 .docs .refentry .constructorsynopsis,
@@ -185,10 +172,6 @@ aside#quicktoc {
 
 .docs .refentry .parameters dl dt code.parameter {
     font-size:1.23076em;
-}
-
-.docs .rdfs-comment .parameter {
-    font-size: 1.3em;
 }
 
 /* }}} */
@@ -285,7 +268,6 @@ ul.chunklist_children {
 
 .docs p.verinfo {
     float:right;
-    color: #777;
     margin:0 0 0 1.5em;
 }
 
@@ -299,7 +281,7 @@ ul.chunklist_children {
 .docs div.refsect1 h3.title {
     color: #444;
     position: absolute;
-    top:-2.5em;
+    top:-2.1em;
     left: 0;
 }
 
@@ -316,12 +298,6 @@ ul.chunklist_children {
     padding: .75em;
 }
 
-.docs .classsynopsis:before,
-.docs div.refsect1:before {
-    top:-.25em;
-    border-top: .25em solid #cacaca;
-    z-index: -1;
-}
 .docs .classsynopsis {
     color: #454e55;
 }
@@ -445,6 +421,7 @@ body.docs #layout {
 #changelang-langs {
     width:12em; 
     font-size:.75em;
+    line-height:2;
     margin: 0 0 0 .75em;
 }
 
@@ -459,10 +436,8 @@ div.soft-deprecation-notice h1.title {
     position: absolute;
     padding: 0;
     margin:0;
-    line-height: 1;
     top:-22px;
     left: 0;
-    font-size: 1.4em;
     font-weight: bold;
 }
 div.soft-deprecation-notice {
