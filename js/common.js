@@ -268,6 +268,9 @@ $(document).ready(function() {
             $this.remove();
         }
     });
+    
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    
 });
 
 /**

@@ -74,6 +74,7 @@ if (isset($shortname) && $shortname) {
     document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-ui-1.8.7.min.js"><' + '/script>');
  }
  </script>
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery.ui.totop.js"></script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/usernotes.js"></script>
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>

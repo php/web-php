@@ -1038,3 +1038,31 @@ em, strong {
     font-style: italic;
     color: #333;
 }
+
+
+
+#toTop {
+	display:none;
+	text-decoration:none;
+	position:fixed;
+	bottom:12px;
+	right:50px;
+	overflow:hidden;
+	width:43px;
+	height:43px;
+	border:none;
+	z-index:100;
+	text-indent:-999px;
+	background:url(../images/to-top.png) no-repeat;
+	opacity:0.5;
+}
+
+#toTopHover {
+	display:block;
+	overflow:hidden;
+	float:left;
+}
+
+#toTop:active,#toTop:focus {
+	outline:none;
+}
