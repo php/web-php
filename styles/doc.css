@@ -371,7 +371,7 @@ ul.chunklist_children {
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding:1.5em 0 1.5em .25em;
+    padding:0 0 1.5em .25em;
     border: 0;
 }
 
