@@ -197,10 +197,10 @@ if (isset($shortname) && $shortname) {
         <dd><a href="https://wiki.php.net/rfc">Write an RFC</a></dd>
       <dt><a href="/get-involved.php">Get Involved</a></dt>
         <dd><a href="https://bugs.php.net/how-to-report.php">Report bugs</a></dd>
-<!--        <dd><a href="#">Contribute code</a></dd>-->
+        <dd><a href="https://github.com/php/php-src/blob/master/README.SUBMITTING_PATCH" target="_blank">Contribute code</a></dd>
 <!--        <dd><a href="#">Organize an event</a></dd>-->
-<!--        <dd><a href="#">Write documentation</a></dd>-->
-<!--        <dd><a href="#">Test PHP</a></dd>-->
+        <dd><a href="https://wiki.php.net/doc/howto">Write documentation</a></dd>
+        <dd><a href="http://qa.php.net">Test PHP</a></dd>
         <dd></dd>
     </dl>
     <dl>
