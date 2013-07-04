@@ -13,7 +13,7 @@
 
 
 html {
-	background-color: #333;
+    background-color: #333;
 }
 
 body * {
@@ -496,8 +496,8 @@ hr {
 
 /* Definition lists used on eg. the unsub page */
 dl dd {
-	margin:0;
-	padding:0 1.5em;
+    margin:0;
+    padding:0 1.5em;
 }
 dl dd p {
     margin:0;
@@ -514,31 +514,31 @@ code {
 }
 
 .phpcode, div.classsynopsis {
-	text-align: left;
+    text-align: left;
 }
 div.phpcode span.html {
-	color: black;
-	background-color: transparent;
+    color: black;
+    background-color: transparent;
 }
 div.phpcode span.comment {
-	color: #FF8000;
-	background-color: transparent;
+    color: #FF8000;
+    background-color: transparent;
 }
 div.classsynopsisinfo_comment {
-	font-weight: bold;
-	margin-top:1.5em;
+    font-weight: bold;
+    margin-top:1.5em;
 }
 div.phpcode span.default {
-	color: #0000BB;
-	background-color: transparent;
+    color: #0000BB;
+    background-color: transparent;
 }
 div.phpcode span.keyword {
-	color: #007700;
-	background-color: transparent;
+    color: #007700;
+    background-color: transparent;
 }
 div.phpcode span.string {
-	color: #DD0000;
-	background-color: transparent;
+    color: #DD0000;
+    background-color: transparent;
 }
 
 .warn {
@@ -1042,27 +1042,27 @@ em, strong {
 
 
 #toTop {
-	display:none;
-	text-decoration:none;
-	position:fixed;
-	bottom:12px;
-	right:50px;
-	overflow:hidden;
-	width:43px;
-	height:43px;
-	border:none;
-	z-index:100;
-	text-indent:-999px;
-	background:url(../images/to-top.png) no-repeat;
-	opacity:0.5;
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:12px;
+    right:50px;
+    overflow:hidden;
+    width:43px;
+    height:43px;
+    border:none;
+    z-index:100;
+    text-indent:-999px;
+    background:url(../images/to-top.png) no-repeat;
+    opacity:0.5;
 }
 
 #toTopHover {
-	display:block;
-	overflow:hidden;
-	float:left;
+    display:block;
+    overflow:hidden;
+    float:left;
 }
 
 #toTop:active,#toTop:focus {
-	outline:none;
+    outline:none;
 }
