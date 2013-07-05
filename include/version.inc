@@ -26,14 +26,14 @@ $PHP_5_5_MD5     = array(
                        "tar.xz"        => "c7df0cb28cfff4e277fd9cd9b73cebfb",
 );
 /* PHP 5.4 Release */
-$PHP_5_4_RC = '5.4.17RC1'; // Current RC version (e.g., '5.6.7RC1') or false
+$PHP_5_4_RC = false; // Current RC version (e.g., '5.6.7RC1') or false
 $PHP_5_4_RC_DATE = '20 Jun 2013';
 
-$PHP_5_4_VERSION         = "5.4.16";
-$PHP_5_4_DATE            = "06 Jun 2013";
+$PHP_5_4_VERSION         = "5.4.17";
+$PHP_5_4_DATE            = "04 Jul 2013";
 $PHP_5_4_MD5     = array(
-                       "tar.bz2"       => "3d2c694d28861d707b2622c3cc941cff",
-                       "tar.gz"        => "3940a5295872964495f9c56596272d68",
+                       "tar.bz2"       => "1e027e99e2a874310fd518e87e3947af",
+                       "tar.gz"        => "cc698032dcdcb9ad158edcc90fe798d6",
 );
 
 /* PHP 5.3 Release */
