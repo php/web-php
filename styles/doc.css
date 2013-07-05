@@ -208,31 +208,32 @@ aside#quicktoc {
     text-align: left;
 }
 
-.docs td, .docs th {
-    padding: 2px 5px;
+.docs td,
+.docs th {
+    padding: .25em .5em;
 }
 
+.docs .doctable tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
 .docs .doctable tbody tr:nth-child(even) {
     background-color: #eeeef6;
 }
 
 .docs .doctable {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #ccc;
     width: 100%;
+    margin:1.5em 0;
 }
 
 .docs .doctable th {
     background-color: #bbd;
     text-align: center;
     color: #333;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #99c;
 }
-.docs .doctable td, .docs .doctable th {
-    border-right: 1px solid #ccc;
-}
-.docs .doctable td:last-child, .docs .doctable th:last-child {
-    border-right: 0px;
+.docs .doctable tr {
+    border-bottom:1px solid #ccc;
 }
 /* }}} */
 
