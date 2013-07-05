@@ -226,11 +226,13 @@ aside#quicktoc {
     margin:1.5em 0;
 }
 
+.docs .doctable thead tr {
+    border:1px solid #99c;
+}
 .docs .doctable th {
     background-color: #bbd;
     text-align: center;
     color: #333;
-    border-bottom: 1px solid #99c;
 }
 .docs .doctable tr {
     border-bottom:1px solid #ccc;
