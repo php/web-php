@@ -427,12 +427,9 @@ hr {
     border-bottom: 0;
 }
 
-#usernotes .note:first-of-type .text {
-    border-color: #ccd;
-}
 #usernotes .note .text {
-    background-color: #eeeef6;
-    border-top: 0.125em solid #669;
+    background-color: #eee;
+    border-top: 0.125em solid #ccc;
     padding: 1.375em .75em 1.5em;
 }
 
