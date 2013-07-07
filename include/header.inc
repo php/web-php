@@ -38,7 +38,8 @@ if (isset($shortname) && $shortname) {
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
 
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/bootstrap.css<?php echo $v?>" media="all" />
+ <!--<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" />-->
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
@@ -91,166 +92,20 @@ if (isset($shortname) && $shortname) {
   </p>
 </div>
 
-<nav id="headnav">
-
- <ul id="headmenu">
-  <li id="headsearch">
-    <form method="post" action="/search.php" id="topsearch">
-      <fieldset>
-        <input type="search" id="headsearch-keywords" name="pattern" placeholder="Search..." size="30" accesskey="s" />
-        <input type="submit"
-          value="Go"
-          id="headsearch-submit"
-          class="submit" />
-       </fieldset>
-    </form>
-  </li>
-  <li id="headhome" class="parent <?php echo $curr == "home" ? "current" : ""?>">
-    <a href="/" rel="home" class="menu-link">Home</a>
-    <div class="children downloads"><div class="children-1"><div class="children-2">
-        <div class="download">
-            <h2>Download PHP</h2>
-<?php if(!empty($RELEASES[5])): ?>
-            <ul class="download-list">
-<?php
-    foreach ($RELEASES[5] as $version => $release):
-        $windowsVersionLink = substr($version, 0, strrpos($version, '.'));
-?>
-            <li rel="/downloads.php#v<?php echo $version ?>">
-                <a href="/downloads.php#v<?php echo $version ?>" class="version" title="Download PHP">PHP <?php echo $version ?></a>
-                <a href="/ChangeLog-5.php#<?php echo $version ?>" title="Release Notes for <?php echo $version ?>">Release Notes</a>
-                <!-- (size) should go here, but it's not in version.inc at present -->
-             </li>
-    <?php endforeach; ?>
-            </ul>
-<?php endif; ?>
-        </div>
-        <div class="children-left">
-            <div class="what-is-php-container">
-                <div class="what-is-php downloads-<?php count($RELEASES[5]); ?>">
-                    <p>
-                        PHP is a popular general-purpose scripting language that is
-                        especially suited to web development.
-                    </p><p>
-                        Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.
-                    </p>
-                    <p class="tutorial"><a href="/tut.php">Begin Tutorial &raquo;</a></p>
-                </div>
-            </div>
-        </div>
-        <br style="clear: both;" />
-    </div></div></div>
-  </li>
-  <li class="parent <?php echo $curr == "downloads" ? "current" : ""?>">
-    <a href="#downloads" class="menu-link">Downloads</a>
-    <div class="children" id="downloads">
-      <div class="children-1">
-        <div class="children-2">
-
-          <dl>
-            <dt><a href="/downloads.php" title="Current Releases">Current Releases</a></dt>
-            <dd><a href="http://php.net/downloads.php#5.5" title="PHP 5.5">PHP 5.5</a></dd>
-            <dd><a href="http://php.net/downloads.php#5.4" title="PHP 5.4">PHP 5.4</a></dd>
-            <dd><a href="http://php.net/downloads.php#5.3" title="PHP 5.3">PHP 5.3</a></dd>
-          </dl>
-
-          <dl>
-            <dt>Development Releases</dt>
-            <dd><a href="http://www.php.net/git.php" title="Git">Git</a></dd>
-            <dd><a href="https://github.com/php/php-src/" title="Github">Github</a></dd>
-            <dd><a href="http://snaps.php.net/" title="Snaps">Snaps</a></dd>
-          </dl>
-
-          <dl>
-            <dt>Other Downloads</dt>
-            <dd><a href="http://www.php.net/releases/" title="Archived Versions">Archived Versions</a></dd>
-            <dd><a href="http://pecl.php.net/packages.php" title="PECL">PECL</a></dd>
-            <dd><a href="http://pear.php.net/packages.php" title="PEAR">PEAR</a></dd>
-            <dd><a href="http://php.net/downloads.php" title="Non-core systems">Non-core systems</a></dd>
-          </dl>
-          <br style="clear: both;" />
-
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="/" class="brand">php.net</a>
+      <div clas="nav-collapse collapse">
+        <ul class="nav">
+          <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
+          <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/manual/">Documentation</a></li>
+          <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
+          <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+        </ul>
       </div>
     </div>
-  </li>
-  <li class="parent <?php echo $curr == "docs" ? "current" : ""?>">
-    <a href="#docs" class="menu-link">Documentation</a>
-    <div class="children" id="docs"><div class="children-1"><div class="children-2">
-        <?php doc_toc($lang); ?>
-        <br style="clear: both;" />
-    </div></div></div>
-  </li>
-  <li class="parent <?php echo $curr == "community" ? "current" : ""?>">
-    <a href="#community" class="menu-link">Community</a>
-    <div class="children" id="community"><div class="children-1"><div class="children-2">
-    <dl>
-      <?php news_toc(array('news')) ?>
-      <dt><a href="/cal.php">Calendar of Events</a></dt>
-    </dl>
-    <dl>
-      <?php news_toc(array('conferences', 'papers')) ?>
-    </dl>
-    <dl>
-      <dt><a href="https://wiki.php.net/">PHP Wiki</a></dt>
-        <dd><a href="https://wiki.php.net/rfc">Write an RFC</a></dd>
-      <dt><a href="/get-involved.php">Get Involved</a></dt>
-        <dd><a href="https://bugs.php.net/how-to-report.php">Report bugs</a></dd>
-        <dd><a href="https://github.com/php/php-src/blob/master/README.SUBMITTING_PATCH" target="_blank">Contribute code</a></dd>
-<!--        <dd><a href="#">Organize an event</a></dd>-->
-        <dd><a href="https://wiki.php.net/doc/howto">Write documentation</a></dd>
-        <dd><a href="http://qa.php.net">Test PHP</a></dd>
-        <dd></dd>
-    </dl>
-    <dl>
-      <dt><a href="/mailing-lists.php">Mailing lists</a></dt>
-        <dd><a href="/unsub.php">Unsubscribe from mailing list</a></dd>
-      <dt><a href="#">About PHP.net</a></dt>
-        <dd><a href="/sites.php">Other PHP.net sites</a></dd>
-        <dd><a href="/my.php">My PHP.net</a></dd>
-        <dd><a href="/credits.php">Who's behind this?</a></dd>
-        <dd><a href="http://people.php.net/">Developers profiles</a></dd>
-        <dd><a href="/contact.php">Contact us</a></dd>
-        <dd><a href="/thanks.php">Thanks</a></dd>
-    </dl>
-    <br style="clear: both;" />
-    </div></div></div>
-  </li>
-  <li class="parent <?php echo $curr == "help" ? "current" : ""?>">
-    <a href="#support" class="menu-link">Help</a>
-    <div class="children" id="support"><div class="children-1"><div class="children-2">
-    <dl>
-      <dt><a href="#">Navigation tips</a></dt>
-        <dd><a href="/sidebars.php">Search sidebars</a></dd>
-        <dd><a href="/urlhowto.php">URL Howto</a></dd>
-        <dd><a href="/tips.php">Quick Reference tips</a></dd>
-        <dd><a href="/sites.php">Other PHP sites</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="#">Support</a></dt>
-        <dd><a href="/mailing-lists.php">Mailing lists</a></dd>
-        <dd><a href="/support.php">General resources</a></dd>
-        <dd><a href="/ChangeLog-5.php">Changelog (PHP 5)</a></dd>
-        <dd><a href="/git.php">Git (PHP Source)</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="https://bugs.php.net/">Bugs</a></dt>
-        <dd><a href="https://bugs.php.net/report.php">Report a bug</a></dd>
-        <dd><a href="https://bugs.php.net/how-to-report.php">How to file a bug report</a></dd>
-        <dd><a href="https://bugs.php.net/search.php">Search reported bugs</a></dd>
-    </dl>
-    <dl>
-      <dt><a href="/license/index.php">License information</a></dt>
-        <dd><a href="/license/contrib-guidelines-code.php">Contributor Guidelines</a></dd>
-        <dd><a href="/license/distrib-guidelines-code.php">Distribution Guidelines</a></dd>
-        <dd><a href="/software.php">Software covered by the PHP license</a></dd>
-    </dl>
-    <br style="clear: both;" />
-    </div></div></div>
-  </li>
-
- </ul>
-<br style="clear: both;" />
+  </div>
 </nav>
 
 <div id='mega-drop-down'>
@@ -258,18 +113,27 @@ if (isset($shortname) && $shortname) {
  </div>
 </div>
 
-<div id="layout">
-<?php if (!empty($SIDEBAR_DATA)): ?>
-    <aside class="tips">
-        <div class="border first"></div>
-        <div class="border second"></div>
-        <div class="border third"></div>
-        <div class="inner"><?php echo $SIDEBAR_DATA; ?></div>
-    </aside>
+<?php include 'uservoice.inc' ?>
+
+<div id="layout" class="container">
+<?php if (!empty($config['breadcrumbs'])): ?>
+  <div id="breadcrumbs" class="row-fluid">
+    <ul>
+      <?php
+          $breadcrumbs = $config['breadcrumbs'];
+          $last = array_pop($breadcrumbs);
+          foreach ($breadcrumbs as $crumb) {
+              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a> <span class='divider'>/</span></li>";
+          }
+          echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
+      ?>
+    </ul>
+  </div>
 <?php endif; ?>
-    
+
+  <div class="row-fluid">
 <?php if (!empty($config["leftmenu"])): ?>
-    <aside class='layout-menu'>
+    <aside class='layout-menu span3'>
         
         <ul class='parent-menu-list'>
             <?php foreach($config['leftmenu'] as $section): ?>
@@ -297,8 +161,5 @@ if (isset($shortname) && $shortname) {
     </aside>
 <?php endif; ?>
 
-<?php include 'uservoice.inc' ?>
-
-
-<section class="layout-content <?php echo $curr ?>">
-
+<section id="layout-content" class="<?php echo $curr ?> span9">
+    

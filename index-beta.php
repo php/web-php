@@ -130,16 +130,20 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
+print $content;
+
+ob_start();
 print_view('homepage/sidebar.php', array(
     'announcements' => $announcements
 ));
-print $content;
+$sidebar = ob_get_clean();
 
 // Print the common footer.
 site_footer(
     array(
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
-        'spanning-content' => $thanksTo
+        'spanning-content' => $thanksTo,
+        'sidebar' => $sidebar
     )
 );

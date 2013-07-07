@@ -208,12 +208,20 @@ section.layout-content.home {
     margin: 0 auto;
 }
 
-div.home-content {
-    width: 648px;
-}
-
 /* Announcement Area */
 
+.home aside.tips {
+    background:transparent;
+    padding:0;
+    border:0;
+}
+.home aside.tips .border {
+    border:0;
+}
+.home aside.tips div.inner {
+    margin:0;
+    clear:none;
+}
 .home .announcements {
     display: block;
     background-color: #cce;
@@ -232,107 +240,44 @@ div.home-content {
     text-align: left;
 }
 
-/* 2x2 Featured Content Grid */
-div.featured-content div.top-left,
-div.featured-content div.top-right {
-    margin-top:-1.5em;
-}
-div.featured-content div.feature {
-    float: left;
-    width: 270px;
-    padding:0 20px;
-    text-align: center;
-}
-div.featured-content div.bottom-left,
-div.featured-content div.bottom-right {
-    padding-top:1.5em;
-}
-
-div.featured-content span.graphic {
-    display: block;
-    width: 128px;
-    height: 128px;
-    margin:0 auto;
-    padding:8px 0;
-    background-image: url('../images/home-sprites.png');
-}
-
-div.featured-content div.top-left span.graphic {
-    background-position: 0 8px;
-}
-
-div.featured-content div.top-right span.graphic {
-    background-position: 0px -121px;
-}
-
-div.featured-content div.bottom-left span.graphic {
-    background-position: 0px -258px;
-}
-
-div.featured-content div.bottom-right span.graphic {
-    background-position: 0px -399px;
-}
-
-.featured-content .feature h3 {
-    text-align: center;
-    color:#000;
-    font-weight:bold;
-}
-.featured-content .feature p {
-    margin:1.5em 0 0;
-    color:#333;
-}
 
 /* Right-hand sidebar */
 
-div.home-sidebar {
-    float: right;
-    width: 264px;
-    padding: 0 0 1.5em;
-    margin: 0 0 0 20px;
-}
-
-div.home-sidebar h3 {
+.home aside h3 {
     border-bottom: .25em solid #99c;
     margin: 1.2em 0 .95em;
     padding:0;
 }
-div.home-sidebar h3.panel {
+.home aside.tips h3.panel {
     line-height: 1.2em;
     border:0;
     margin:1.2em 0;
 }
-div.home-sidebar h3:first-child {
+.home aside.tips h3:first-child {
     margin-top: 0;
 }
-div.home-sidebar h3.panel a {
+.home aside.tips h3.panel a {
     background:#ddd;
     color:#333;
     border:0;
     display: block;
     padding:.6em 1em;
 }
-div.home-sidebar h3.panel a::after {
+.home aside.tips h3.panel a::after {
     float:right;
     content:"»";
 }
-div.home-sidebar h3.panel a:hover,
-div.home-sidebar h3.panel a:focus {
+.home aside.tips h3.panel a:hover,
+.home aside.tips h3.panel a:focus {
     background:#eee;
 }
 
-div.home-sidebar ul {
-    margin: 0 0 0 0;
-    list-style-type: none;
-    padding: 0;
-}
-
-div.home-sidebar a:link,
-div.home-sidebar a:visited {
+.home aside.tips a:link,
+.home aside.tips a:visited {
     border-bottom-color: transparent;
 }
-div.home-sidebar a:hover,
-div.home-sidebar a:focus {
+.home aside.tips a:hover,
+.home aside.tips a:focus {
     border-bottom-color: #3F438D;
 }
 
@@ -428,6 +373,10 @@ div.home-sidebar a:focus {
 
 .home .newsItem {
     border-bottom: 0;
+}
+.home .newsItem + .newsItem {
+    border-top: 1px dotted #999;
+    padding-top:.75em;
 }
 .newsItem h2 a {
     border-bottom-width:0;

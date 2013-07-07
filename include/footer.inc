@@ -7,20 +7,30 @@
     }
 
     ?>
+<?php if (!empty($config['sidebar'])): ?>
+    <aside class="tips span3">
+        <div class="border first"></div>
+        <div class="border second"></div>
+        <div class="border third"></div>
+        <div class="inner"><?php echo $config['sidebar']; ?></div>
+    </aside>
+<?php endif; ?>
+
   </div><!-- layout -->
+  </div>
          
   <footer>
-    <div class="footer-content">
-      <ul class="footmenu copyright">
-        <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
-      </ul>
+    <div class="container footer-content">
+      <div class="row-fluid">
       <ul class="footmenu">
+        <li><a href="/copyright.php">Copyright &copy; 2001-<?php echo date('Y'); ?> The PHP Group</a></li>
         <li><a href="/my.php">My PHP.net</a></li>
         <li><a href="/contact.php">Contact</a></li>
         <li><a href="/sites.php">Other PHP.net sites</a></li>
         <li><a href="/mirrors.php">Mirror sites</a></li>
         <li><a href="/privacy.php">Privacy policy</a></li>
       </ul>
+      </div>
     </div>
   </footer>
 

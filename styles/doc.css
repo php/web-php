@@ -1,6 +1,5 @@
 /* vim: set et ts=4 sw=4 fdm=marker: : */
 
-
 /* {{{ The Quick TOC reference top on man pages */
 aside#quicktoc {
     display: block;
@@ -89,7 +88,7 @@ aside#quicktoc {
 .docs div.caution,
 .docs blockquote.note {
     padding: .75em 1em;
-    margin: 1.5em 0;
+    margin: .75em 0;
 }
 
 .docs .refsect1 div.caution,
@@ -130,8 +129,8 @@ aside#quicktoc {
 .docs div.tip {
     background:#eeeef6;
     border-top: 0.1875em solid #99c;
-    margin:1.5em 0;
-    padding:0.5625em 1.5em .75em;
+    margin:.75em 0;
+    padding:0.5625em .75em .75em;
 }
 .docs .refsect1.notes div.tip {
     background:#e8e8e8;
@@ -144,8 +143,8 @@ aside#quicktoc {
 
 .docs div.warning {
     background: #f2e5f4;
-    margin: 1.5em 0;
-    padding: 1.5em;
+    margin: .75em 0;
+    padding: .75em;
 }
 
 /* }}} */
@@ -164,7 +163,7 @@ aside#quicktoc {
 }
 
 .docs dl dd + dt {
-    margin-top:1.5em;
+    margin-top:.75em;
 }
 
 .docs .refentry .parameters dl dt code.parameter {
@@ -174,7 +173,7 @@ aside#quicktoc {
 /* }}} */
 
 .docs .example {
-    margin: 1.5em 0;
+    margin: .75em 0;
 }
 
 /* {{{ Examples (highlighting is in theme.css) */
@@ -223,7 +222,7 @@ aside#quicktoc {
 .docs .doctable {
     border: 1px solid #ccc;
     width: 100%;
-    margin:1.5em 0;
+    margin:.75em 0;
 }
 
 .docs .doctable thead tr {
@@ -266,9 +265,10 @@ ul.chunklist_children {
     position: relative;
 }
 
-.docs p.verinfo {
-    float:right;
-    margin:0 0 0 1.5em;
+.docs .refnamediv p.verinfo {
+    margin:1em 0;
+    font-size: .75em;
+    line-height:2;
 }
 
 .docs h1.refname,
@@ -278,6 +278,7 @@ ul.chunklist_children {
 .docs .refnamediv {
     position:relative;
 }
+
 .docs div.refsect1 h3.title {
     color: #444;
     position: absolute;
@@ -342,7 +343,7 @@ ul.chunklist_children {
 
 /* - Side Menu - */
 .docs .layout-menu {
-    width: 16.25em;
+    background-color:#eee;
 }
 
 .docs .layout-menu ul.parent-menu-list {
@@ -352,70 +353,53 @@ ul.chunklist_children {
 }
 
 .docs .layout-menu ul.parent-menu-list li {
-    margin: 1.5em 0;
+    margin: .75em 0;
 }
 
-.docs .layout-menu ul.parent-menu-list > li:first-child {
+.docs .layout-menu ul.parent-menu-list > li {
     margin-top:0;
+    margin-bottom:0;
+    
+}
+.docs .layout-menu ul.parent-menu-list > li > a {
+    color:#000;
+    border:0;
 }
 .docs .layout-menu ul.parent-menu-list a {
     color: #444;
-    margin: 0;
-    padding:0 0 0 .5em;
-    border: 0;
-    border-left: .25em solid #7F7FB2;
 }
 
-.docs .layout-menu ul.parent-menu-list a:hover,
-.docs .layout-menu ul.parent-menu-list li:last-child a {
+.docs .layout-menu ul.parent-menu-list a:hover {
     color: #000;
-    border-left: .25em solid #666699;
+    border-color: #669;
 }
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding:0 0 1.5em .25em;
-    border: 0;
+    padding:0 0 0 .25em;
 }
 
 .docs .layout-menu ul.child-menu-list li {
     list-style-type: none;
-    margin: 0 0 -1px .5em;
-    padding:0;
-    border: 0;
-    border-bottom: 1px dotted #aaa;
+    margin: 0 0 -1px;
 }
 
 .docs .layout-menu ul.child-menu-list a {
     font-size: .75em;
     line-height: 2;
-    color: black;
-    overflow: visible;
+    border-bottom: 1px dotted #aaa;
+    display:block;
+    padding-left:.5em;
 }
 
+.docs .layout-menu ul.child-menu-list .current {
+    font-weight:700;
+}
+.docs .layout-menu ul.child-menu-list .current a {
+    color:#000;
+}
 .docs .layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
-}
-
-body.docs #layout {
-    min-width:45em;
-    width:auto;
-    padding:0 3em 0 0;
-}
-
-.docs .layout-menu ul.child-menu-list a:hover,
-.docs .layout-menu ul.parent-menu-list li:last-child ul.child-menu-list a {
-    border-left: 0;
-}
-
-/* #layout needed, see http://news.php.net/php.webmaster/11884 */
-.docs #layout .layout-content,
-.docs #layout #usernotes {
-    margin-left: 19em;
-}
-
-.docs #usernotes {
-    margin-top:1.5em;
 }
 
 #changelang-langs {
@@ -453,4 +437,27 @@ div.soft-deprecation-notice blockquote.sidebar {
     margin: 0px;
     border: 0px solid #666600;
     color: #660000;
+}
+
+
+#breadcrumbs {
+    background:#f3f3f3;
+    padding:.5em .75em;
+    margin:0 0 .75em;
+}
+#breadcrumbs ul {
+    padding:0;
+    margin:0;
+}
+#breadcrumbs li {
+    display:inline-block;
+}
+#breadcrumbs .divider {
+    padding:0 .25em;
+}
+#breadcrumbs a {
+    border:0;
+}
+#breadcrumbs li:last-child a {
+    color:#222;
 }

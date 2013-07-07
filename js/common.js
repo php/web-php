@@ -206,6 +206,10 @@ $(document).ready(function() {
         var $this = $(this);
         $this.after("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>")
     });
+    $('h1[id], h2[id], h3[id], h4[id]').each(function() {
+        var $this = $(this);
+        $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
+    });
 
     var $elephpants = $(".elephpants");
     var $elephpantsImages = $elephpants.find('.images');

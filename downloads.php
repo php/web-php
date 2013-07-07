@@ -158,5 +158,5 @@ uid                  Johannes Schlüter &lt;johannes@schlueters.de&gt;
 uid                  Johannes Schlüter &lt;johannes@php.net&gt;
 </pre>
 <?php
-site_footer();
+site_footer(array('sidebar' => $SIDEBAR_DATA));
 

@@ -730,9 +730,7 @@ function print_view($templateName, array $params = array()) {
     $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
     if(file_exists($path)) {
         if(!empty($params)) {
-        foreach($params as $key => $param) {
-            $$key = $param;
-            }
+            extract($params);
         }
         include_once $path;
     }

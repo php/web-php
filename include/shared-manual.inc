@@ -554,7 +554,7 @@ VOTEDIV;
 
     echo <<<USER_NOTE_TEXT
 
- <a name="$id"></a><div class="note">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
+  <div class="note" id="$id">{$votediv}{$name}{$admin}<div class="date" title="$fdatestr"><strong>{$datestr}</strong></div>
   <div class="text" id="Hcom{$id}">
 {$text}
   </div>
@@ -592,24 +592,25 @@ function manual_setup_beta($setup) {
         $menu[] = array(
             "title" => $parent[1],
             "link"  => $parent[0],
-            "children" => array(),
         );
     }
 
     // The index manual page has no parent..
     if ($setup["up"][0]) {
-        $menu[] = array(
+        $last_item = array(
             "title" => $setup["up"][1],
             "link"  => $setup["up"][0],
-            "children" => $siblings,
         );
+        $siblings = array(array_merge($last_item, array("children" => $siblings)));
+        $menu[] = $last_item;
     }
     
     $_SERVER["BASE_PAGE"] = "/manual/" . $setup["head"][1] . "/" . $setup["this"][0];
 
     $config = array(
         "current" => "docs",
-        "leftmenu" => $menu,
+        "leftmenu" => $siblings,
+        "breadcrumbs" => $menu,
         "meta-navigation" => array(
             "contents" => $setup["home"][0],
             "index"    => $setup["up"][0],
@@ -653,9 +654,9 @@ function manual_language_chooser($currentlang, $currentpage) {
 
 function manual_header_beta(){}
 function manual_footer_beta() {
-    echo "</section>";
 
     manual_notes();
+    echo "</section>";
     site_footer(array('elephpants' => true));
 }
 
