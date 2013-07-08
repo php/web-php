@@ -189,13 +189,15 @@ $(document).ready(function() {
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
+    var scrollHeightOfHeadnav = - document.getElementById('headnav').scrollHeight;
+    scrollHeightOfHeadnav -= 12; //some margin
     $docs.find(".methodparam .parameter").each(function () {
         var $node = $(this);
         $(".parameters .term .parameter").each(function (idx, param) {
             var $param = $(param);
             if ($param.text() == $node.text().substring(1)) {
                 $node.click(function() {
-                    $.scrollTo($param, 800);
+                    $.scrollTo($param, 600, {'offset':{'top':scrollHeightOfHeadnav}});
                 });
             }
         });

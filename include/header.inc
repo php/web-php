@@ -92,7 +92,7 @@ if (isset($shortname) && $shortname) {
   </p>
 </div>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav id="headnav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
       <a href="/" class="brand">php.net</a>

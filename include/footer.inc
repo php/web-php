@@ -42,6 +42,7 @@
     }
     ?>
 
+  <script type="text/javascript" src="/js/jquery.scrollto.min.js"></script>
 
 
 </body>

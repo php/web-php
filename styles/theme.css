@@ -154,27 +154,6 @@ hr {
     border-radius: 0;
 }
 
-#headnav li dl {
-    line-height: 1;
-}
-
-#headnav li dl dd:hover,
-#headnav li dl dt:hover {
-    background: #eeeef6;
-}
-
-#headnav li.current a.menu-link,
-#headnav li a.menu-link:hover,
-#headnav li a.menu-link:focus,
-#headnav li#headhome.current {
-    border-color: #666699;
-}
-
-#headnav li.current a.menu-link {
-    color: #fff;
-}
-
-
 /**
  * Auto-complete
  */
