@@ -264,10 +264,13 @@ hr {
 /* Add a note buttons. */
 #usernotes .action {
     display: block;
-    top: 5em;
+    top: 1em;
     right: 0;
     position: absolute;
     text-align: right;
+}
+#usernotes:target .action {
+    top:4.5em;
 }
 
 #usernotes .foot {
@@ -550,11 +553,12 @@ aside.tips div.inner {
 }
 
 
+/*#layout .refsect1[id]:before,*/
 #layout *[id]:target:before {
     display:block;
     content:" ";
-    margin-top:-4em;
-    height:4em;
+    margin-top:-56px;
+    height:56px;
 }
 
 #search-results {
@@ -881,7 +885,7 @@ table.standard th.subr {
 }
 
 div.informalexample {
-    margin-bottom: .75em;
+    margin: .75em 0;
 }
 
 .count strong {
