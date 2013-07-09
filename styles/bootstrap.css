@@ -850,12 +850,11 @@ textarea {
   margin-right: -1px;
 }
 .navbar-inverse .navbar-inner {
-  background-color: #333;
-  border-color: #333;
+  background-color: #99c;
 }
 .navbar-inverse .brand,
 .navbar-inverse .nav > li > a {
-  color: #999999;
+  color: #eef;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .navbar-inverse .brand:hover,
@@ -865,7 +864,7 @@ textarea {
   color: #ffffff;
 }
 .navbar-inverse .brand {
-  color: #999999;
+  color: #eef;
 }
 .navbar-inverse .navbar-text {
   color: #999999;
@@ -879,7 +878,7 @@ textarea {
 .navbar-inverse .nav .active > a:hover,
 .navbar-inverse .nav .active > a:focus {
   color: #ffffff;
-  background-color: #111111;
+  background-color: #669;
 }
 .navbar-inverse .navbar-link {
   color: #999999;

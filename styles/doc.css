@@ -289,13 +289,15 @@ ul.chunklist_children {
 .docs .refsect1 {
     margin-top: 3em;
     color: #444;
-    border-top: 0.2em solid #669;
+    border-top: 0.125em solid #669;
 }
 
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
     background-color: #eeeef6;
+    -moz-border-radius:0 0 2px 2px;
+    border-radius:0 0 2px 2px;
     padding: .75em;
 }
 
@@ -441,9 +443,11 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 #breadcrumbs {
-    background:#f3f3f3;
+    background:#eee;
     padding:.5em .75em;
     margin:0 0 .75em;
+    -moz-border-radius:2px;
+    border-radius:2px;
 }
 #breadcrumbs ul {
     padding:0;

@@ -139,7 +139,7 @@ hr {
 }
 
 .navbar {
-    border-bottom:.25em solid #99c;
+    border-bottom:.25em solid #669;
 }
 
 .change-language {
@@ -325,6 +325,8 @@ hr {
     background-color: #eee;
     border-top: 0.125em solid #ccc;
     padding: .375em .75em .75em;
+    -moz-border-radius:0 0 2px 2px;
+    border-radius:0 0 2px 2px;
 }
 
 /* Vote arrow styles. */
@@ -544,6 +546,7 @@ aside.tips div.inner {
     float: left;
     padding:.75em;
     background-color:#eeeef6;
+    border-radius:2px;
 }
 
 
