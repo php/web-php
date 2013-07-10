@@ -2022,13 +2022,18 @@ textarea {
   body {
     padding-top:3.25em;
   }
+  #topsearch.navbar-search {
+    margin-right: 1.5em;
+  }
 }
 @media (min-width: 1500px) {
   body.docs .container,
   body.docs .navbar-static-top .container,
   body.docs .navbar-fixed-top .container,
   body.docs .navbar-fixed-bottom .container {
-    width: 1480px;
-    padding-left:.75em;
+    width: 1440px;
+  }
+  #topsearch.navbar-search {
+    margin-right: 0;
   }
 }

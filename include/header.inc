@@ -119,6 +119,7 @@ if (isset($shortname) && $shortname) {
 <div id="layout" class="container">
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs" class="row-fluid">
+    <div class="breadcrumbs-inner">
     <ul>
       <?php
           $breadcrumbs = $config['breadcrumbs'];
@@ -129,6 +130,7 @@ if (isset($shortname) && $shortname) {
           echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
       ?>
     </ul>
+    </div>
   </div>
 <?php endif; ?>
 

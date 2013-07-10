@@ -969,3 +969,8 @@ fieldset {
     margin-left:1%;
   }
 }
+@media (min-width:1548px) {
+  #layout {
+    padding-right:0;
+  }
+}

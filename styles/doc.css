@@ -466,10 +466,12 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #breadcrumbs {
     background:#eee;
-    padding:.5em .75em;
     margin:0 0 .75em;
     -moz-border-radius:2px;
     border-radius:2px;
+}
+#breadcrumbs .breadcrumbs-inner {
+    padding:.5em .75em;
 }
 #breadcrumbs ul {
     padding:0;
