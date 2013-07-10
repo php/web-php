@@ -2022,9 +2022,6 @@ textarea {
   body {
     padding-top:3.25em;
   }
-  #topsearch.navbar-search {
-    margin-right: 1.5em;
-  }
 }
 @media (min-width: 1500px) {
   body.docs .container,

@@ -215,53 +215,39 @@ section.layout-content.home {
     padding:0;
     border:0;
 }
-.home aside.tips .border {
-    border:0;
-}
 .home aside.tips div.inner {
     margin:0;
     clear:none;
 }
 .home .announcements {
     display: block;
-    background-color: #cce;
-    padding: 1.5em;
-    text-align: left;
-    margin: 0 auto;
+    background-color: #eeeef6;
+    padding: 1em;
+    margin: 0;
     list-style: none;
 }
 .home .announcements li + li {
-    margin-top:1.5em;
+    margin-top:.75em;
 }
 .home .announcements ul, .home .announcements ul li {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: left;
 }
 
 
 /* Right-hand sidebar */
 
-.home aside h3 {
-    border-bottom: .25em solid #99c;
-    margin: 1.2em 0 .95em;
-    padding:0;
-}
 .home aside.tips h3.panel {
-    line-height: 1.2em;
-    border:0;
-    margin:1.2em 0;
+    margin:0.66666666666667em 0;
 }
-.home aside.tips h3:first-child {
-    margin-top: 0;
-}
+
 .home aside.tips h3.panel a {
-    background:#ddd;
+    background:#eee;
     color:#333;
     border:0;
     display: block;
-    padding:.6em 1em;
+    padding: .625em 0.88888888888889em;
 }
 .home aside.tips h3.panel a::after {
     float:right;

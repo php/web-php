@@ -150,6 +150,9 @@ hr {
     border-top:.25em solid #99c;
 }
 
+.navbar .brand {
+    margin-right:.75em;
+}
 .navbar .brand img {
     padding:3px 0;
 }
@@ -547,7 +550,7 @@ aside.tips div.border {
 }
 
 aside.tips div.border.second {
-    border-color: #7F7FB2;
+    border-color: #669;
 }
 
 aside.tips div.border.third {
@@ -562,7 +565,6 @@ aside.tips div.inner {
 
 #layout {
     margin: .75em auto;
-    padding-right:3em;
     clear:both;
 }
 
@@ -744,7 +746,7 @@ table.standard th.subr {
     margin-bottom: .75em;
 }
 .newsItem {
-    margin:.75em 0;
+    margin:0 0 .75em;
     border-bottom: solid 0.25em #99c;
 }
 .newsItem:last-child {
