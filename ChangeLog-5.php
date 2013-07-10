@@ -381,7 +381,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     and ROLLBACK</li>
  <li>Added mysqlnd_savepoint(), mysqlnd_release_savepoint()</li>
  <li><?php bugfix(63530); ?> (mysqlnd_stmt::bind_one_parameter crashes, uses wrong alloc
-    for stmt->param_bind)</li>
+    for stmt-&gt;param_bind)</li>
  <li>Fixed return value of mysqli_stmt_affected_rows() in the time after
     prepare() and before execute()</li>
 </ul>
