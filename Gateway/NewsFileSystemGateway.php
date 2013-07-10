@@ -37,18 +37,18 @@ class NewsFileSystemGateway implements NewsGateway {
 
     /**
      * @param int $max [optional]
-     * @return Traversable
+     * @return array
      */
     public function getLatestArticles($max = 5) {
-        return new ArrayIterator(array_slice($this->articles, 0, $max));
+        return array_slice($this->articles, 0, $max);
     }
 
     /**
-     * @param Traversable $categories
+     * @param array $categories
      * @param int $limit
-     * @return Traversable
+     * @return array
      */
-    public function getArticlesForCategories(Traversable $categories, $limit = 5) {
+    public function getArticlesForCategories(array $categories, $limit = 5) {
         $result = array();
 
         foreach ($this->articles as $item) {
@@ -65,7 +65,7 @@ class NewsFileSystemGateway implements NewsGateway {
 
         }
 
-        return new ArrayIterator(array_slice($result, 0 , $limit));
+        return array_slice($result, 0 , $limit);
 
     }
 

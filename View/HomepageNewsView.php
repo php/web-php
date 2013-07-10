@@ -3,14 +3,14 @@
 class HomepageNewsView {
 
     /**
-     * @var Traversable
+     * @var array
      */
     protected $articles;
 
     /**
-     * @param Traversable $articles
+     * @param array $articles
      */
-    public function __construct(Traversable $articles) {
+    public function __construct(array $articles) {
         $this->articles = $articles;
     }
 

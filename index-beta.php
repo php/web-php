@@ -79,9 +79,9 @@ if (is_array($CONF_TEASER) && $CONF_TEASER) {
 require_once './Gateway/NewsFileSystemGateway.php';
 
 $NewsGateway = new NewsFileSystemGateway();
-$RecentNews = $NewsGateway->getArticlesForCategories(new ArrayIterator(array(
+$RecentNews = $NewsGateway->getArticlesForCategories(array(
     "frontpage"
-)), 2);
+), 4);
 
 ob_start();
 
