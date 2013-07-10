@@ -95,7 +95,7 @@ if (isset($shortname) && $shortname) {
 <nav id="headnav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a href="/" class="brand">php.net</a>
+      <a href="/" class="brand"><img src="/images/logos/php-logo.png" width="54" height="26" alt="php"/></a>
       <ul class="nav">
         <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
         <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/manual/">Documentation</a></li>

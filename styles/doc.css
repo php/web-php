@@ -96,7 +96,7 @@ aside#quicktoc {
     margin-left:0;
     margin-right:0;
     box-shadow:inset 0 1px 2px rgba(0,0,0,.25);
-    background-color:#d5d5dd;
+    background-color:#fafafc;
 }
 
 .docs blockquote.note {
@@ -193,7 +193,7 @@ aside#quicktoc {
     border:1px solid #ccc;
 }
 .docs .refsect1 .dc-description {
-    background-color: #fff;
+    background-color: #fafafc;
     padding: .625em .75em;
     box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
     margin-bottom: .75em;

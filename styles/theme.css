@@ -150,6 +150,9 @@ hr {
     border-top:.25em solid #99c;
 }
 
+.navbar .brand img {
+    padding:3px 0;
+}
 .navbar a {
     border:0;
 }
