@@ -52,8 +52,12 @@ aside#quicktoc {
 }
 
 /* {{{ General styles (p, parameters, initializers, ...) */
-.docs .methodname b, .docs .methodname strong {
-    color: #000;
+.docs .methodname b,
+.docs .methodname strong,
+.docs .methodname a,
+.docs .classsynopsis .classname {
+    color: #458;
+    border-color:#458;
 }
 
 .docs .refsect1 .methodparam .parameter {
@@ -64,9 +68,18 @@ aside#quicktoc {
 }
 
 .docs .parameter {
-    color: #336;
-    font-weight: bold;
-    font-size:1em;
+    color: #447;
+    font-style:italic;
+}
+.docs .refsect1 code.parameter {
+    font-size:16px;
+}
+.docs .methodname strong {
+    font-style:normal;
+}
+.docs .initializer {
+    font-style:italic;
+    color:#b14;
 }
 .docs .classsynopsis .parameter {
     font-size:1.167em;
@@ -154,9 +167,8 @@ aside#quicktoc {
 .docs .refentry .constructorsynopsis,
 .docs .refentry .methodsynopsis {
     color: #666;
-    font-family: monospace;
-    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
-    margin:-1px 0;
+    font:normal 16px / 24px monospace;
+    margin:0;
 }
 
 /* {{{ Parameter listing */
@@ -288,9 +300,8 @@ ul.chunklist_children {
     margin-top:0;
 }
 
-.docs h1.refname,
-.docs p.refpurpose {
-    color: #444;
+.docs h1.refname {
+    color: #336;
 }
 .docs .refnamediv {
     position:relative;
@@ -319,25 +330,23 @@ ul.chunklist_children {
 }
 
 .docs .classsynopsis {
-    color: #454e55;
+    color: #666;
 }
 .docs .fieldsynopsis .type,
 .docs .methodsynopsis .type,
 .docs .constructorsynopsis .type {
-    color:#606;
+    color:#092;
+    border-color:#092;
 }
-.docs .classsynopsis .classname,
+
 .docs .fieldsynopsis .modifier,
 .docs .methodsynopsis .modifier,
 .docs .constructorsynopsis .modifier {
-    color:#0000ae;
+    color:#444;
 }
 
-.docs .classsynopsis .initializer {
-    font-style:italic;
-}
 .docs .classsynopsisinfo_comment {
-    color:#999;
+    color:#f80;
     font-weight:normal;
 }
 
@@ -347,12 +356,6 @@ ul.chunklist_children {
 .classsynopsis .destructorsynopsis,
 .classsynopsis .fieldsynopsis {
     margin-left:2em;
-}
-.docs .classsynopsis a,
-.docs .fieldsynopsis a,
-.docs .methodsynopsis a,
-.docs .constructorsynopsis a {
-    color:#267B0C;
 }
 
 #changelang {
