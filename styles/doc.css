@@ -179,6 +179,13 @@ aside#quicktoc {
 }
 
 /* {{{ Examples (highlighting is in theme.css) */
+
+.docs .example-contents {
+    margin-bottom:.75em;
+}
+.docs .example-contents pre {
+    margin:0;
+}
 .docs .example-contents .phpcode code,
 .docs .example-contents.screen {
     background-color: #fff;
@@ -187,9 +194,9 @@ aside#quicktoc {
 }
 .docs .refsect1 .dc-description {
     background-color: #fff;
-    padding: .75em .625em;
+    padding: .625em .75em;
     box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
-
+    margin-bottom: .75em;
 }
 .docs .example-contents .phpcode code {
     padding: .75em 1em;
@@ -271,9 +278,14 @@ ul.chunklist_children {
 }
 
 .docs .refnamediv p.verinfo {
-    margin:1em 0;
     font-size: .75em;
     line-height:2;
+}
+.docs .refnamediv p {
+    margin:0;
+}
+.docs .refsect1 p {
+    margin-top:0;
 }
 
 .docs h1.refname,
@@ -287,7 +299,7 @@ ul.chunklist_children {
 .docs div.refsect1 h3.title {
     color: #444;
     position: absolute;
-    top:-2.1em;
+    top:-2em;
     left: 0;
 }
 

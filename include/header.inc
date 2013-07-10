@@ -96,14 +96,15 @@ if (isset($shortname) && $shortname) {
   <div class="navbar-inner">
     <div class="container">
       <a href="/" class="brand">php.net</a>
-      <div clas="nav-collapse collapse">
-        <ul class="nav">
-          <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
-          <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/manual/">Documentation</a></li>
-          <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
-          <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
-        </ul>
-      </div>
+      <ul class="nav">
+        <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
+        <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/manual/">Documentation</a></li>
+        <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
+        <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+      </ul>
+      <form class="navbar-search" id="topsearch" action="/search.php">
+          <input type="search" name="pattern" class="search-query" placeholder="Search"/>
+      </form>
     </div>
   </div>
 </nav>

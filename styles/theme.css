@@ -24,10 +24,6 @@ body, input, textarea {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-input {
-    font-size:100%;
-}
-
 body {
     font-size: 1em;
     line-height: 1.5;
@@ -37,6 +33,26 @@ body {
     padding-bottom:0;
     margin:0;
 }
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
 h1 {
     font-size: 1.5em;
     line-height: 1;
@@ -241,6 +257,7 @@ hr {
  */
 #usernotes {
     position: relative;
+    margin-top:1.5em;
 }
 
 #usernotes h3.title {
@@ -327,7 +344,8 @@ hr {
 #usernotes .note .text {
     background-color: #eee;
     border-top: 0.125em solid #ccc;
-    padding: .375em .75em .75em;
+    padding: .375em .625em .75em;
+    margin-top:.25em;
     -moz-border-radius:0 0 2px 2px;
     border-radius:0 0 2px 2px;
 }
@@ -547,7 +565,7 @@ aside.tips div.inner {
 
 .layout-menu {
     float: left;
-    padding:.75em;
+    padding:.5em .75em 1.5em;
     background-color:#eeeef6;
     border-radius:2px;
 }
@@ -935,6 +953,9 @@ fieldset {
 }
 .navbar a {
     display:inline-block;
+}
+#topsearch {
+    float:right;
 }
 @media (min-width:1200px) {
   body.docs .row-fluid .layout-menu.span3 {
