@@ -163,6 +163,5 @@ if (isset($shortname) && $shortname) {
         </ul>
     </aside>
 <?php endif; ?>
-
-<section id="layout-content" class="<?php echo $curr ?> span9">
+<section id="layout-content" class="<?php echo $curr; ?> span<?php echo $config['layout_span']; ?>">
     

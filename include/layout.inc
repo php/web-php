@@ -856,9 +856,10 @@ function site_header_beta($title = '', $config = array())
         "current" => "",
         "meta-navigation" => array(),
         'classes' => '',
+        'layout_span' => 9,
     );
 
-    $config += $defaults;
+    $config = array_merge($defaults, $config);
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];
