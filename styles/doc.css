@@ -331,7 +331,9 @@ ul.chunklist_children {
 
 .docs .classsynopsis {
     color: #666;
+    margin-bottom:.75em;
 }
+.docs .interfacename a,
 .docs .fieldsynopsis .type,
 .docs .methodsynopsis .type,
 .docs .constructorsynopsis .type {
