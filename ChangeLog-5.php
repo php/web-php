@@ -11,6 +11,44 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.3.27"></a><!-- {{{ 5.3.27 -->
+<h3>Version 5.3.27</h3>
+<b>11-Jul-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64966); ?> (segfault in zend_do_fcall_common_helper_SPEC).</li>
+  <li><?php bugfix(64960); ?> (Segfault in gc_zval_possible_root).</li>
+  <li><?php bugfix(64934); ?> (Apache2 TS crash with get_browser()).</li>
+  <li><?php bugfix(63186); ?> (compile failure on netbsd).</li>
+</ul></li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(53437); ?> (Crash when using unserialized DatePeriod instance).</li>
+</ul></li>
+<li>PDO_firebird:
+<ul>
+  <li><?php bugfix(64037); ?> (Firebird return wrong value for numeric field).</li>
+  <li><?php bugfix(62024); ?> (Cannot insert second row with null using parametrized query).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li><?php bugfix(64949); ?> (Buffer overflow in _pdo_pgsql_error).</li>
+</ul></li>
+<li>pgsql:
+<ul>
+  <li><?php bugfix(64609); ?> (pg_convert enum type support).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
 <a name="5.5.0"></a><!-- {{{ 5.5.0 -->
 <h3>Version 5.5.0</h3>
 <b>20-Jun-2013</b>
