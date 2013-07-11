@@ -167,7 +167,7 @@ aside#quicktoc {
 .docs .refentry .constructorsynopsis,
 .docs .refentry .methodsynopsis {
     color: #666;
-    font:normal 16px / 24px monospace;
+    font:normal 16px / 24px "Source Code Pro", monospace;
     margin:0;
 }
 
@@ -178,10 +178,6 @@ aside#quicktoc {
 
 .docs dl dd + dt {
     margin-top:.75em;
-}
-
-.docs .refentry .parameters dl dt code.parameter {
-    font-size:1.23076em;
 }
 
 /* }}} */
@@ -466,7 +462,9 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #breadcrumbs {
     background:#eee;
-    margin:0 0 .75em;
+    margin:0 0 0.85714285714286em;
+    font-size:.875em;
+    line-height:1.71428571428571;
     -moz-border-radius:2px;
     border-radius:2px;
 }

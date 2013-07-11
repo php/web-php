@@ -21,7 +21,17 @@ body * {
 }
 
 body, input, textarea {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+.docs .refentry .constructorsynopsis,
+.docs .refentry .methodsynopsis,
+code,
+pre.info {
+    font: 400 .75em / 1.5 "Source Code Pro", monospace; 
+}
+
+#head-beta-warning + #head-nav {
+    top:2em;
 }
 
 body {
@@ -416,12 +426,6 @@ dl dd p + p {
 }
 
 
-/* PHP source code highlighting ------------------------------------------- */
-code {
-    font: 12px / 18px monospace;
-    /* we were setting this in ems but the monospace seemed to be having problems */
-}
-
 .phpcode, div.classsynopsis {
     text-align: left;
 }
@@ -458,8 +462,6 @@ div.phpcode span.string {
     background-color: #EFEFEF;
 }
 pre.info {
-    font-family: monospace;
-    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
     border: 1px solid #ddd;
     margin: 1em 2em 1.3em;
     margin-right: 0.8em;

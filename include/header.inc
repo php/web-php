@@ -38,8 +38,8 @@ if (isset($shortname) && $shortname) {
  <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
 <?php endforeach ?>
 
+ <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/bootstrap.css<?php echo $v?>" media="all" />
- <!--<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/reset.css<?php echo $v?>" media="all" />-->
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
@@ -85,24 +85,26 @@ if (isset($shortname) && $shortname) {
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
+<?php if (!isset($_COOKIE['BetaWarning']) || filter_var($_COOKIE['BetaWarning'],FILTER_VALIDATE_BOOLEAN) == TRUE): ?>
 <div id="head-beta-warning">
   <p id="beta-warning">
     <span class="blurb">Welcome to the php.net beta site. If you want to revert back, <a href="?setbeta=0">click here</a></span>
     <a href="#" id="beta-warning-close">X</a>
   </p>
 </div>
+<?php endif;?>
 
-<nav id="headnav" class="navbar navbar-inverse navbar-fixed-top">
+<nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a href="/" class="brand"><img src="/images/logos/php-logo.png" width="54" height="26" alt="php"/></a>
+      <a href="/" class="brand"><img src="/images/logos/php-logo.png" width="52" height="26" alt="php"/></a>
       <ul class="nav">
         <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
         <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/manual/">Documentation</a></li>
         <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
         <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
       </ul>
-      <form class="navbar-search" id="topsearch" action="/search.php">
+      <form class="navbar-search span3" id="topsearch" action="/search.php">
           <input type="search" name="pattern" class="search-query" placeholder="Search"/>
       </form>
     </div>

@@ -17,7 +17,7 @@ $(document).ready(function() {
     $("#beta-warning-close").click(function(event) {
         event.preventDefault();
         $('body').css('margin-top', 0);
-        $headBetaWarning.slideUp("fast");
+        $headBetaWarning.slideUp("fast", function(){$(this).remove()});
 
         // Hide it for a month by default.
         var expiry = new Date();
@@ -38,8 +38,8 @@ $(document).ready(function() {
 
     if (showBetaWarning) {
         $headBetaWarning.show();
-        $('body').css('margin-top', '25px');
-        $('#beta-warning').slideDown(300, function() {
+        $('body').css('margin-top', $headBetaWarning.outerHeight()+12);
+        $headBetaWarning.slideDown(300, function() {
            $(this).find('.blurb').fadeIn('slow');
         });
     }

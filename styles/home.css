@@ -154,8 +154,9 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 #head-beta-warning {
+    padding:.25em 0;
+    border:0;
     background-color: #99C;
-    display: none;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -165,14 +166,10 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #beta-warning {
     margin: 0 auto;
-    padding: 0.3em;
     text-align: center;
 }
 
 #beta-warning .blurb {
-    font-size: 1.1em;
-    line-height: 1.0em;
-    vertical-align: middle;
     color: #EEE;
 }
 
@@ -190,15 +187,13 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     font-weight: bold;
     text-decoration: none;
     margin: 0 0 0 1em;
-    height: 1.2em;
-    line-height: 1.2em;
-    vertical-align: middle;
     width: 1.2em;
-    padding: 0.2em 0.5em 0.2em 0.5em;
+    height: 1.2em;
+    padding: 0 0.375em;
     text-align: center;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border:0;
 }
 
 /* Main content area */
@@ -280,81 +275,6 @@ section.layout-content.home {
     margin-top:3em;
     margin-bottom:-.25em;
     background:#669;
-}
-
-#thanks-to {
-    border-top:.25em solid #669;
-    padding-top:1.25em;
-}
-#thanks-to ul, #thanks-to li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-#thanks-to ul {
-    width: 976px;
-}
-#thanks-to li {
-    float: left;
-    width: 228px;
-    margin: 0.6em 16px 0.6em 0;
-}
-#thanks-to li a:hover {
-    background: #ddd;
-}
-#thanks-to li a {
-    background: #eee;
-    border: 0;
-    color: #333;
-    padding: 0.6em 1em;
-    line-height: 1.25em;
-    text-decoration: none;
-    display: block;
-}
-
-#thanks-to .thanks-two {
-    position: relative;
-    overflow: hidden;
-    height: 2.4em;
-}
-#thanks-to .thanks-two a {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    height: 0;
-    background: transparent;
-}
-#thanks-to .thanks-two a:hover {
-    background: transparent;
-}
-#thanks-to .thanks-two a:first-child {
-    border-top: 2.45em solid #eee;
-    border-right: 1em solid transparent;
-    width: 55%;
-}
-#thanks-to .thanks-two a:first-child:hover {
-    border-top: 2.45em solid #ddd;
-}
-#thanks-to .thanks-two a:last-child {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 57%;
-    border-bottom: 2.45em solid #eee;
-    border-left: 1em solid transparent;
-}
-#thanks-to .thanks-two a:last-child:hover {
-    border-bottom: 2.45em solid #ddd;
-}
-#thanks-to .thanks-two span {
-    display: block;
-    position: absolute;
-    top: -1.85em;
-    left: 1em;
-}
-#thanks-to .thanks-two a:last-child span {
-    top: 0.6em;
 }
 
 .home .newsItem {
