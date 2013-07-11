@@ -9,7 +9,7 @@ site_header("PHP 5.3.27 Release Announcement");
 
 <p>The PHP development team announces the immediate availability of PHP 5.3.27. About 10 bugs were fixed, including a security fix in the XML parser (Bug #65236).</p>
 
-<p><b>Please Note:</b> This release of PHP 5.3.27 is the last regular release ofthe PHP 5.3 series. All users of PHP are encouraged to upgrade to PHP 5.4 or PHP 5.5. The PHP 5.3 series will receive only security fixes forthe next year.</p>
+<p><b>Please Note:</b> This will be the last regular release of the PHP 5.3 series. All users of PHP are encouraged to upgrade to PHP 5.4 or PHP 5.5. The PHP 5.3 series will receive only security fixes for the next year.</p>
 
 <p>For source downloads of PHP 5.3.27 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
 Windows binaries can be found on <a href="http://windows.php.net/download/">windows.php.net/download/</a>.
