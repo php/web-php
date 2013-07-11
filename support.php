@@ -75,8 +75,6 @@ site_header("Getting Help", array("current" => "help"));
  href="/submit-event.php">on this page</a>.
 </p>
 
-<h1>Sample Code</h1>
-
 <h1>Instant Resource Center</h1>
 
 <p>
