@@ -189,7 +189,7 @@ $(document).ready(function() {
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    var scrollHeightOfHeadnav = - document.getElementById('headnav').scrollHeight;
+    var scrollHeightOfHeadnav = - document.getElementById('head-nav').scrollHeight;
     scrollHeightOfHeadnav -= 12; //some margin
     $docs.find(".methodparam .parameter").each(function () {
         var $node = $(this);
