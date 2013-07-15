@@ -60,7 +60,7 @@ aside#quicktoc {
     border-color:#458;
 }
 
-.docs .refsect1 .methodparam .parameter {
+.docs .refsect1 .parameter {
     cursor:pointer;
 }
 .docs .refsect1 dt {
@@ -73,22 +73,16 @@ aside#quicktoc {
 }
 .docs .refsect1 code.parameter {
     font-size:16px;
+    font-weight:bold;
 }
 .docs .methodname strong {
     font-style:normal;
 }
-.docs .initializer {
-    font-style:italic;
+.docs .initializer,
+.docs .initializer code {
+    font-style:italic !important;
     color:#b14;
 }
-.docs .classsynopsis .parameter {
-    font-size:1.167em;
-}
-
-.docs i .parameter, .docs em .parameter {
-    font-style: normal;
-}
-
 /* }}} */
 
 
@@ -164,11 +158,17 @@ aside#quicktoc {
 
 /* }}} */
 
-.docs .refentry .constructorsynopsis,
-.docs .refentry .methodsynopsis {
-    color: #666;
-    font:normal 16px / 24px "Source Code Pro", monospace;
+.docs .dc-description,
+.docs .dc-description code {
+    font-weight:400;
+    font-size:16px;
+    font-family:"Source Code Pro", monospace;
+    letter-spacing:-.0625em;
+    word-spacing:-.125em;
     margin:0;
+}
+.docs .dc-description {
+    color:#666;
 }
 
 /* {{{ Parameter listing */
@@ -200,7 +200,7 @@ aside#quicktoc {
     padding: .75em .625em;
     border:1px solid #ccc;
 }
-.docs .refsect1 .dc-description {
+.docs .dc-description {
     background-color: #fafafc;
     padding: .625em .75em;
     box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);

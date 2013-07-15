@@ -191,12 +191,18 @@ $(document).ready(function() {
     });
     var scrollHeightOfHeadnav = - document.getElementById('head-nav').scrollHeight;
     scrollHeightOfHeadnav -= 12; //some margin
-    $docs.find(".methodparam .parameter").each(function () {
+    $parameters = $(".parameters .term .parameter");
+    $docs.find(".refsect1 .parameter").each(function () {
         var $node = $(this);
-        $(".parameters .term .parameter").each(function (idx, param) {
+        var $nodeText = $node.text();
+        if ($nodeText[0].charAt(0) === '$') {
+            $nodeText = $nodeText.substring(1);
+        }
+        $parameters.each(function (idx, param) {
             var $param = $(param);
-            if ($param.text() == $node.text().substring(1)) {
+            if ($param.text() == $nodeText) {
                 $node.click(function() {
+                    console.log("Clicked parameter");
                     $.scrollTo($param, 600, {'offset':{'top':scrollHeightOfHeadnav}});
                 });
             }
