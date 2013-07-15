@@ -202,7 +202,6 @@ $(document).ready(function() {
             var $param = $(param);
             if ($param.text() == $nodeText) {
                 $node.click(function() {
-                    console.log("Clicked parameter");
                     $.scrollTo($param, 600, {'offset':{'top':scrollHeightOfHeadnav}});
                 });
             }
