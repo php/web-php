@@ -11,6 +11,88 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.5.1"></a><!-- {{{ 5.5.1 -->
+<h3>Version 5.5.1</h3>
+<b>18-Jul-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65254); ?> (Exception not catchable when exception thrown in autoload with a namespace).</li>
+  <li><?php bugfix(65088); ?> (Generated configure script is malformed on OpenBSD).</li>
+  <li><?php bugfix(65108); ?> (is_callable() triggers Fatal Error).</li>
+  <li><?php bugfix(65035); ?> (yield / exit segfault).</li>
+  <li><?php bugfix(65161); ?> (Generator + autoload + syntax error = segfault).</li>
+  <li><?php bugfix(65226); ?> (chroot() does not get enabled).</li>
+  <li>hex2bin() raises E_WARNING for invalid hex string.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li><?php bugfix(64827); ?> (Segfault in zval_mark_grey (zend_gc.c)).</li>
+  <li>OPcache is now compatible with LiteSpeed SAPI.</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(65143); ?> (Missing php-cgi man page).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65066); ?> (Cli server not responsive when responding with 422 http status code).</li>
+</ul></li>
+<li>DateTime:
+<ul>
+  <li><?php bugfix(65184); ?> (strftime() returns insufficient-length string under multibyte locales).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li><?php bugfix(65070); ?> (bgcolor does not use the same format as the input image with imagerotate).</li>
+  <li><?php bugfix(65060); ?> (imagecreatefrom... crashes with user streams).</li>
+  <li><?php bugfix(65084); ?> (imagecreatefromjpeg fails with URL).</li>
+  <li>Fix gdImageCreateFromWebpCtx and use same logic to load WebP image that other formats.</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li>Add IntlCalendar::setMinimalDaysInFirstWeek()/intlcal_set_minimal_days_in_first_week().</li>
+  <li>Fixed trailing space in name of constant IntlCalendar::FIELD_FIELD_COUNT.</li>
+  <li><?php bugfix(62759); ?> (Buggy grapheme_substr() on edge case).</li>
+  <li><?php bugfix(61860); ?> (Offsets may be wrong for grapheme_stri* functions).</li>
+</ul></li>
+<li>OCI8:
+<ul>
+  <li>Bump PECL package info version check to allow PECL installs with PHP 5.5+.</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li>pg_unescape_bytea() raises E_WARNING for invalid inputs.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65142); ?> (Missing phar man page).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li>Added optional create_sid() argument to session_set_save_handler(), SessionHandler and new SessionIdInterface.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugl(63472); ?>Setting SO_BINDTODEVICE with socket_set_option.</li>
+  <li>Allowed specifying paths in the abstract namespace for the functions socket_bind(), socket_connect() and socket_sendmsg().</li>
+  <li><?php bugfix(65260); ?>sendmsg() ancillary data construction for SCM_RIGHTS is faulty.</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65136); ?>RecursiveDirectoryIterator segfault.</li>
+  <li><?php bugfix(61828); ?>Memleak when calling Directory(Recursive)Iterator/Spl(Temp)FileObject ctor twice.</li>
+</ul></li>
+<li>CGI/FastCGI SAPI:
+<ul>
+  <li>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
 <a name="5.3.27"></a><!-- {{{ 5.3.27 -->
 <h3>Version 5.3.27</h3>
 <b>11-Jul-2013</b>
