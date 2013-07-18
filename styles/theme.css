@@ -23,16 +23,62 @@ body * {
 body, input, textarea {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
-.docs .refentry .constructorsynopsis,
-.docs .refentry .methodsynopsis,
 code,
 pre.info {
     font: 400 .75em / 1.5 "Source Code Pro", monospace; 
+}
+    
+.docs .classsynopsis,
+.docs .classsynopsis code {
+    font: 400 1em / 1.5 "Source Code Pro", monospace; 
 }
 
 #head-beta-warning + #head-nav {
     top:2em;
 }
+#head-beta-warning {
+    padding:.25em 0;
+    border:0;
+    background-color: #99C;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+}
+
+#beta-warning {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#beta-warning .blurb {
+    color: #EEE;
+}
+
+#beta-warning .blurb a {
+    color: #333;
+}
+
+#beta-warning .blurb strong {
+    color: #333;
+}
+
+#beta-warning-close {
+    background-color: #333;
+    color: #EEE;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 0 0 1em;
+    width: 1.2em;
+    height: 1.2em;
+    padding: 0 0.375em;
+    text-align: center;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border:0;
+}
+
 
 body {
     font-size: 1em;
@@ -94,6 +140,9 @@ small {
     font-size: 0.75em;
     line-height: 2;
 }
+blockquote {
+    margin: .75em 0 .75em .75em;
+}
 
 abbr {
     border-bottom:1px dotted #999;
@@ -135,14 +184,16 @@ h4, h5, h6 {
 
 a:link,
 a:visited {
-    color: #3F438D;
-    border-bottom: 1px solid #c5c3e3;
+    color: rgb(63, 67, 141);
+    border-bottom: 1px solid rgb(63, 67, 141);
+    border-bottom: 1px solid rgba(63, 67, 141, 0.5);
 }
 
 a:hover,
 a:focus {
-    color: #015;
-    border-bottom: 1px solid #3F438D;
+    color: rgb(0, 17, 85);
+    border-bottom-color:rgb(0, 17, 85);
+    border-bottom-color:rgba(0, 17, 85, 0.5);
 }
 
 ul {
@@ -359,7 +410,7 @@ hr {
 
 #usernotes .note .text {
     background-color: #eee;
-    border-top: 0.125em solid #ccc;
+    border-top: .125em solid #d4d4d4;
     padding: .375em .625em .75em;
     margin-top:.25em;
     -moz-border-radius:0 0 2px 2px;
@@ -566,7 +617,7 @@ aside.tips div.inner {
 
 
 #layout {
-    margin: .75em auto;
+    margin: 1.5em auto;
     clear:both;
 }
 
@@ -574,6 +625,7 @@ aside.tips div.inner {
     float: left;
     padding:.5em .75em 1.5em;
     background-color:#eeeef6;
+    border: 1px solid #d5d5d5; 
     border-radius:2px;
 }
 
@@ -964,10 +1016,75 @@ fieldset {
 .navbar a {
     display:inline-block;
 }
-#topsearch {
+@media (max-width:767px) {
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width:auto;
+  }
+  .navbar-search {
+    float:none;
+  }
+}
+@media (min-width:768px) {
+  #intro .download-php h2 {
+    text-align:center;
+  }
+  #intro .background {
+    display:block;
+    background:rgba(255,255,255,.1);
+    position:absolute;
+    top:0;
+    right:0;
+    height:100%;
+  }
+  #topsearch {
     float:right;
+  }
+  .navbar-search .search-query {
+    width:100%;
+  }
+  #intro .container > .row-fluid:before,
+  #intro .container > .row-fluid:after {
+     display:none;
+     content:none;
+  }
+  #intro .notes {
+    padding-left:1.65em;
+  }
+  #intro .container {
+    position:relative;
+  }
+  #intro .container > .row-fluid {
+    display:table-row;
+  }
+  #intro .container > .row-fluid > div[class*=span] {
+    display:table-cell;
+    float:none;
+  }
+  #intro .container > .row-fluid > .span9 {
+    vertical-align:middle;
+  }
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  #intro .download-php .row-fluid .span6 {
+    width:100%;
+    margin:0;
+  }
+  #intro .download-php a.btn-pop {
+    padding-right:.375em;
+  }
+}
+@media (min-width:980px) {
+  #intro .download-php .row-fluid {
+    margin-bottom:1em;
+  }
 }
 @media (min-width:1200px) {
+  #intro p {
+    line-height:1.2;
+    margin:0 0 1.2em;
+  }
   body.docs .row-fluid .layout-menu.span3 {
     width:18%;
   }

@@ -42,7 +42,6 @@ if (isset($shortname) && $shortname) {
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/bootstrap.css<?php echo $v?>" media="all" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/home.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
 
  <?php
@@ -117,6 +116,14 @@ if (isset($shortname) && $shortname) {
 </div>
 
 <?php include 'uservoice.inc' ?>
+
+<?php if (!empty($config['intro'])):?>
+<div id="intro">
+  <div class="container">
+    <?php echo $config['intro'];?>
+  </div>
+</div>
+<?php endif;?>
 
 <div id="layout" class="container">
 <?php if (!empty($config['breadcrumbs'])): ?>

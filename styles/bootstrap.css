@@ -1877,18 +1877,11 @@ textarea {
   .navbar-fixed-bottom {
     position: static;
   }
-  .navbar-fixed-top {
-    margin-bottom: 20px;
-  }
-  .navbar-fixed-bottom {
-    margin-top: 20px;
-  }
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
     padding: 5px;
   }
   .navbar .container {
-    width: auto;
     padding: 0;
   }
   .navbar .brand {

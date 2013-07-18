@@ -1,44 +1,8 @@
 /* vim: set et ts=4 sw=4 fdm=marker: : */
 
-/* {{{ The Quick TOC reference top on man pages */
-aside#quicktoc {
-    display: block;
-    border-top: 1px solid #9999CC;
-    border-left: 1px solid #9999CC;
-    border-bottom: none;
-    margin: 0 0 20px 20px;
-    width: 160px;
-    background: white;
-    position: fixed;
-    right: 0px;
-    z-index: 100;
+body.docs #layout {
+   margin-top:.75em;
 }
-
-#quicktoc .content, #quicktoc .language {
-    padding: 10px 0 10px 10px;
-}
-
-#quicktoc .links, #quicktoc .content {
-}
-
-#quicktoc .links a:first-child {
-    border-top: 1px solid #9F8A8A;
-}
-
-#quicktoc .links a {
-    display: block;
-    color: black;
-    padding-left: 5px;
-    border-bottom: 1px solid #9F8A8A;
-    background-color: #F3F3F3;
-}
-
-#quicktoc .links a:hover {
-    background-color: #F2E5F4;
-}
-
-/* }}} */
-
 
 .docs .refsect1 > p:last-child,
 .docs .refsect1 > .warning:last-child,
@@ -87,79 +51,81 @@ aside#quicktoc {
 
 
 /* {{{ Warning and notes */
-.docs .notes blockquote.note {
-    padding:0;
-    background:transparent;
-}
 
+.docs div.tip,
+.docs div.warning,
 .docs div.caution,
 .docs blockquote.note {
-    padding: .75em 1em;
-    margin: .75em 0;
-}
-
-.docs .refsect1 div.caution,
-.docs .refsect1 blockquote.note {
-    margin-left:0;
-    margin-right:0;
-    box-shadow:inset 0 1px 2px rgba(0,0,0,.25);
-    background-color:#fafafc;
+    padding:.375em .5em;
+    position:relative;
+    margin-top:.75em;
+    margin-bottom:.75em;
 }
 
 .docs blockquote.note {
     background-color: #eee;
+    border:1px solid #d5d5d5;
 }
 
 .docs div.caution {
-    background-color: #ffc;
+    background:#fcfce9;
+    border:1px solid #e2e2d1;
 }
 
-.docs div.warning strong.warning {
-    font-size: 1.5em;
-    line-height: 1;
-    display:block;
-    text-align: center;
+.docs .refsect1 blockquote.note {
+    margin-left:0;
 }
 
-.docs div.tip *:last-child,
-.docs div.warning *:last-child {
-    margin-bottom:0;
-}
-
-.docs div.caution b.caution, .docs div.caution strong.caution {
-    float: left;
-    margin-right: 0.8em;
-}
-.docs blockquote.note p,
-.docs div.caution p {
-    margin: 0;
-}
-
+.docs .refsect1 blockquote.note,
 .docs div.tip {
-    background:#eeeef6;
-    border-top: 0.1875em solid #99c;
-    margin:.75em 0;
-    padding:0.5625em .75em .75em;
-}
-.docs .refsect1.notes div.tip {
-    background:#e8e8e8;
-    border-top-color:#d8d8d8;
-    padding:.75em .625em;
-}
-.docs div.tip p {
-    margin:0;
+    background:#f8f8fb;
+    border: 1px solid #e5e6e9;
 }
 
 .docs div.warning {
     background: #f2e5f4;
-    margin: .75em 0;
-    padding: .75em .625em;
+    border:1px solid #d9cddb;
+}
+
+.docs div.warning strong.warning {
+    font-size: 1.5em;
+    display:block;
+    text-align: center;
+}
+
+.docs div.tip b.tip,
+.docs div.tip strong.tip,
+.docs div.caution b.caution,
+.docs div.caution strong.caution {
+    float: left;
+    margin-right: 0.675em;
+}
+.docs blockquote.note p,
+.docs div.caution p,
+.docs div.warning p,
+.docs div.tip p {
+    margin: 0;
+}
+
+.docs div.tip:before,
+.docs div.caution:before,
+.docs blockquote.note:before,
+.docs div.warning:before {
+    border-top:1px solid rgba(255,255,255,0.5);
+    content:"";
+    display:block;
+    top:0;
+    left:0;
+    width:100%;
+    position:absolute;
 }
 
 /* }}} */
 
-.docs .dc-description,
-.docs .dc-description code {
+.docs .refsect1 .dc-description,
+.docs .refsect1 .dc-description code,
+.docs .sect1 .dc-description,
+.docs .sect1 .dc-description code {
     font-weight:400;
     font-size:16px;
     font-family:"Source Code Pro", monospace;
@@ -200,10 +166,13 @@ aside#quicktoc {
     padding: .75em .625em;
     border:1px solid #ccc;
 }
-.docs .dc-description {
-    background-color: #fafafc;
+.docs .refsect1 .dc-description,
+.docs .sect1 .dc-description {
+    background:#f8f8fb;
     padding: .625em .75em;
+    -moz-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
     box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
+    border:-bottom 1px solid #e5e6e9;
     margin-bottom: .75em;
 }
 .docs .example-contents .phpcode code {
@@ -213,10 +182,6 @@ aside#quicktoc {
 .docs .phpcode code {
     display: block;
     margin:-1px 0;
-}
-
-.docs .refsect1.examples {
-    border-top: 0.2em solid #669;
 }
 
 /* }}} */
@@ -462,6 +427,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #breadcrumbs {
     background:#eee;
+    border:1px solid #d5d5d5;
     margin:0 0 0.85714285714286em;
     font-size:.875em;
     line-height:1.71428571428571;
