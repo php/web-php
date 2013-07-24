@@ -4,10 +4,10 @@ body.docs #layout {
    margin-top:.75em;
 }
 
-.docs .refsect1 > p:last-child,
-.docs .refsect1 > .warning:last-child,
-.docs .refsect1 > .note:last-child,
-.docs .refsect1 > .tip:last-child {
+.docs .refsect1 > *:last-child {
+    margin-bottom:0;
+}
+.docs .refsect1 > *:last-child *:last-child {
     margin-bottom:0;
 }
 
@@ -36,11 +36,14 @@ body.docs #layout {
     font-style:italic;
 }
 .docs .refsect1 code.parameter {
-    font-size:16px;
     font-weight:bold;
+}
+.docs code.parameter {
+    font-size:1em;
 }
 .docs .methodname strong {
     font-style:normal;
+    font-weight:normal;
 }
 .docs .initializer,
 .docs .initializer code {
@@ -160,23 +163,24 @@ body.docs #layout {
 .docs .example-contents pre {
     margin:0;
 }
-.docs .example-contents .phpcode code,
+.docs .example-contents > [class$="code"],
 .docs .example-contents.screen {
     background-color: #fff;
     padding: .75em .625em;
-    border:1px solid #ccc;
+    border:1px solid #dcdcdc;
+}
+.docs .refsect1 .example-contents > [class$="code"],
+.docs .refsect1 .example-contents.screen {
+    border-top-color: #cdcdcd;
 }
 .docs .refsect1 .dc-description,
 .docs .sect1 .dc-description {
-    background:#f8f8fb;
+    background:#fcfcfe;
     padding: .625em .75em;
     -moz-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
     box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
     border:-bottom 1px solid #e5e6e9;
     margin-bottom: .75em;
-}
-.docs .example-contents .phpcode code {
-    padding: .75em 1em;
 }
 
 .docs .phpcode code {
@@ -263,13 +267,14 @@ ul.chunklist_children {
 
 .docs h1.refname {
     color: #336;
+    font-weight:bolder
 }
 .docs .refnamediv {
     position:relative;
 }
 
-.docs div.refsect1 h3.title {
-    color: #444;
+.docs .refsect1 h3.title {
+    color: #333;
     position: absolute;
     top:-2em;
     left: 0;
@@ -277,8 +282,12 @@ ul.chunklist_children {
 
 .docs .refsect1 {
     margin-top: 3em;
-    color: #444;
-    border-top: 0.125em solid #669;
+    color: #333;
+    border-top:0.125em solid #669;
+    border-bottom:1px solid #d6d6dd;
+    box-shadow:
+        inset 2px 0 2px -2px #d6d6dd,
+        inset -2px 0 2px -2px #d6d6dd;
 }
 
 .docs .classsynopsis,
@@ -327,18 +336,10 @@ ul.chunklist_children {
 
 
 /* - Side Menu - */
-.docs .layout-menu {
-    background-color:#eee;
-}
-
 .docs .layout-menu ul.parent-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.docs .layout-menu ul.parent-menu-list li {
-    margin: .75em 0;
 }
 
 .docs .layout-menu ul.parent-menu-list > li {
@@ -351,12 +352,13 @@ ul.chunklist_children {
     border:0;
 }
 .docs .layout-menu ul.parent-menu-list a {
-    color: #444;
+    color: #333;
 }
 
 .docs .layout-menu ul.parent-menu-list a:hover {
-    color: #000;
+    color: #336;
     border-color: #669;
+    text-shadow:0 0 .25em #fff;
 }
 
 .docs .layout-menu ul.child-menu-list {
@@ -366,13 +368,13 @@ ul.chunklist_children {
 
 .docs .layout-menu ul.child-menu-list li {
     list-style-type: none;
-    margin: 0 0 -1px;
+    margin: 0;
 }
 
 .docs .layout-menu ul.child-menu-list a {
-    font-size: .75em;
-    line-height: 2;
-    border-bottom: 1px dotted #aaa;
+    font-size: .875em;
+    line-height: 1.714285714;
+    border-bottom: 1px dotted #c1c1c1;
     display:block;
     padding-left:.5em;
 }
@@ -426,8 +428,9 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 #breadcrumbs {
-    background:#eee;
-    border:1px solid #d5d5d5;
+    background:#f2f2f2;
+    border:1px solid #e6e6e6;
+    border-bottom-color:#dcdcdc;
     margin:0 0 0.85714285714286em;
     font-size:.875em;
     line-height:1.71428571428571;
