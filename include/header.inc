@@ -42,7 +42,6 @@ if (isset($shortname) && $shortname) {
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/bootstrap.css<?php echo $v?>" media="all" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/dynamic.php<?php echo $v?>" media="screen" />
 
  <?php
  if(isset($config['css']) && is_array($config['css'])):
@@ -66,17 +65,6 @@ if (isset($shortname) && $shortname) {
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
  <![endif]-->
 
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.min.js"></script>
- <script type="text/javascript">
- if (typeof jQuery == 'undefined') {
-    document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-1.7.2.min.js"><' + '/script>');
-    document.write('<script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery-ui-1.8.7.min.js"><' + '/script>');
- }
- </script>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/jquery.ui.totop.js"></script>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/common.js<?php echo $v?>"></script>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/usernotes.js"></script>
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
 <?php endif ?>
@@ -109,13 +97,6 @@ if (isset($shortname) && $shortname) {
     </div>
   </div>
 </nav>
-
-<div id='mega-drop-down'>
- <div id='menu-container'>
- </div>
-</div>
-
-<?php include 'uservoice.inc' ?>
 
 <?php if (!empty($config['intro'])):?>
 <div id="intro">
