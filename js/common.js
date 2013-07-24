@@ -26,16 +26,6 @@ $(document).ready(function() {
         document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
     });
 
-    // This is a temporary implementation for clicking on the arrows for the Downloading PHP
-    var $homeDownload = $('div.download .download-list');
-    if($homeDownload.length > 0) {
-        $homeDownload.find('li').bind('click', function() {
-            window.location.href = $(this).attr('rel');
-        });
-    }
-
-
-
     if (showBetaWarning) {
         $headBetaWarning.show();
         $('body').css('margin-top', $headBetaWarning.outerHeight()+12);
@@ -43,50 +33,6 @@ $(document).ready(function() {
            $(this).find('.blurb').fadeIn('slow');
         });
     }
-    // auto-expand the home menu when on the home page
-    // and remove it from other pages.
-    $("#headhome.current div.children").appendTo($('#menu-container'));
-    $("#headhome div.children").remove();
-
-    // slide mega drop-downs up/down.
-    $("#headmenu li:has(div.children)").click(function(event) {
-        // don't follow link.
-        event.preventDefault();
-
-        var clickedMenu = $(this);
-        var container   = $('#mega-drop-down #menu-container');
-
-        // ignore clicks if we're busy.
-        if (container.hasClass('busy')) return;
-        container.addClass('busy');
-
-        // function to activate the clicked menu.
-        var activate = function(){
-            clickedMenu.addClass('current');
-            clickedMenu.find("div.children").appendTo(container);
-            container.find("div.children").slideUp(0).slideDown(100,
-                function(){ container.removeClass('busy'); }
-            );
-        };
-
-        // if there is an active menu, deactivate it first.
-        var activeMenu    = $('#headmenu li.current');
-        var activeSubMenu = container.find("div.children");
-        if (activeMenu.length) {
-            activeMenu.removeClass('current');
-        }
-        if (activeSubMenu.length) {
-            activeSubMenu.slideUp(100, function(){
-                activeSubMenu.appendTo(activeMenu);
-                if (activeMenu[0] != clickedMenu[0])
-                    activate();
-                else
-                    container.removeClass('busy');
-            });
-        } else {
-            activate();
-        }
-    });
 
     // load the search index and enable auto-complete.
     jQuery.getScript("/search-index.php?lang=" + getLanguage(), function(){
