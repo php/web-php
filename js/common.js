@@ -131,14 +131,15 @@ $(document).ready(function() {
     });
 
     var $docs = $('.docs');
+    var $refsect1 = $docs.find('.refentry .refsect1');
     var $docsDivWithId = $docs.find('div[id]');
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
     var scrollHeightOfHeadnav = - document.getElementById('head-nav').scrollHeight;
     scrollHeightOfHeadnav -= 12; //some margin
-    $parameters = $(".parameters .term .parameter");
-    $docs.find(".refsect1 .parameter").each(function () {
+    $parameters = $refsect1.filter(".parameters").find(".term .parameter");
+    $refsect1.find(".parameter").each(function () {
         var $node = $(this);
         var $nodeText = $node.text();
         if ($nodeText[0].charAt(0) === '$') {
@@ -219,7 +220,7 @@ $(document).ready(function() {
     });
     
     // We have <p> tags generated with nothing in them and it requires a PHD change, meanwhile this fixes it.
-    $('.docs .refentry .parameters p, .docs .refsect1.examples p, .docs .refsect1.seealso p').each(function() {
+    $refsect1.find('p').each(function() {
         var $this = $(this), html = $this.html();
         if(html !== null && html.replace(/\s|&nbsp;/g, '').length == 0) {
             $this.remove();
