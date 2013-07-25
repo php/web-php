@@ -402,11 +402,10 @@ function manual_notes_beta() {
     // and it's extended form with a [+] image
     $addnotelink = '/manual/add-note.php?sect=' . $filename .
                    '&amp;redirect=' . $_SERVER['BASE_HREF'];
-    $addnotesnippet =
-        make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
-        ' <small>' .
-        make_link($addnotelink, 'add a note') .
-        '</small>';
+    $addnotesnippet = make_link(
+        $addnotelink,
+        "<img src='/images/notes-add@2x.png' alt='add a note' width='12' height='12' /> <small>add a note</small>"
+    );
 
     $num_notes = count($notes);
     if ($num_notes) {
@@ -529,21 +528,21 @@ VOTEDIV;
 
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=edit+' . $id,
-            make_image('notes-edit.gif', 'edit note'),
+            '<img src="/images/notes-edit@2x.png" height="12" width="12" alt="edit note" />',
             'admin',
             'scrollbars=yes,width=650,height=400'
         ) . "\n   " .
 
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=reject+' . $id,
-            make_image('notes-reject.gif', 'reject note'),
+            '<img src="/images/notes-reject@2x.png" height="12" width="12" alt="reject note" />',
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n   " .
 
         make_popup_link(
             'https://master.php.net/manage/user-notes.php?action=delete+' . $id,
-            make_image('notes-delete.gif', 'delete note'),
+            '<img src="/images/notes-delete@2x.png" height="12" width="12" alt="delete note" />',
             'admin',
             'scrollbars=no,width=300,height=200'
         ) . "\n  </span>";

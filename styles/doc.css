@@ -280,14 +280,18 @@ ul.chunklist_children {
     left: 0;
 }
 
+.docs .classsynopsis,
 .docs .refsect1 {
-    margin-top: 3em;
     color: #333;
     border-top:0.125em solid #669;
     border-bottom:1px solid #d6d6dd;
     box-shadow:
         inset 2px 0 2px -2px #d6d6dd,
         inset -2px 0 2px -2px #d6d6dd;
+}
+
+.docs .refsect1 {
+    margin-top: 3em;
 }
 
 .docs .classsynopsis,

@@ -216,7 +216,7 @@ hr {
     margin-right:.75em;
 }
 .navbar .brand img {
-    padding:1px 0;
+    padding:4px 0 2px;
 }
 .navbar a {
     border:0;
@@ -998,9 +998,6 @@ em, strong {
     height:43px;
     border:none;
     z-index:100;
-    text-indent:-999px;
-    background:url(../images/to-top.png) no-repeat;
-    opacity:0.5;
 }
 
 #toTopHover {

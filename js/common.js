@@ -159,7 +159,7 @@ $(document).ready(function() {
         var containerIDhash = '#' + settings.containerID;
         var containerHoverIDHash = '#'+settings.containerHoverID;
 
-        $('body').append('<a href="#" id="'+settings.containerID+'" onclick="return false;">'+settings.text+'</a>');
+        $('body').append('<a href="#" id="'+settings.containerID+'" onclick="return false;"><img src="/images/to-top@2x.png" width="40" hieght="40" alt="'+settings.text+'"/></a>');
         $(containerIDhash).hide().click(function(){
             $('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
             $('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
