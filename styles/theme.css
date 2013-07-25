@@ -1053,9 +1053,6 @@ fieldset {
      display:none;
      content:none;
   }
-  #intro .notes {
-    padding-left:1.65em;
-  }
   #intro .container {
     position:relative;
   }
