@@ -217,6 +217,7 @@ hr {
 }
 .navbar .brand img {
     padding:4px 0 2px;
+    opacity:.75;
 }
 .navbar a {
     border:0;
