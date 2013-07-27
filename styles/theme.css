@@ -1014,6 +1014,12 @@ fieldset {
 .navbar a {
     display:inline-block;
 }
+
+body.downloads #layout .span6 {
+    word-wrap: break-word;
+    margin-bottom:.75em;
+}
+
 @media (max-width:767px) {
   .navbar-static-top .container,
   .navbar-fixed-top .container,

@@ -84,22 +84,25 @@ site_header("Downloads",
     )
 );
 ?>
-<a name="v5"></a>
+<a id="v5"></a>
 <?php
 $SHOW_COUNT = 3;
 $MAJOR = 5;
-for ($i=1; $i<=$SHOW_COUNT; ++$i) {
-list($v, $a) = each($RELEASES[$MAJOR]);
 
+$releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
+$rows = array_chunk($releases, 2, $preserve_keys = true);
+
+$i = 0;
+foreach ($rows as $row) {
+   echo "<div class='row-fluid'>\n";
+   foreach ($row as $v => $a) {
+       $stable = $i++ === 0 ? "(Current Stable)" : "(Old Stable)";
 ?>
-<?php if ($i == 1) { ?>
-    <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Current stable)</h1>
-<?php } else { ?>
-    <h1 id="v<?php echo $v; ?>">PHP <?php echo $v ?> (Old stable)</h1>
-<?php } ?>
+<div class="span6">
+  <h1 id="v<?php echo $v; ?>">PHP <?php echo "$v $stable"; ?></h1>
 
-<h2>Complete Source Code</h2>
-<ul>
+  <h2>Complete Source Code</h2>
+  <ul>
 <?php
 foreach($a["source"] as $rel) {
     echo " <li>\n  ";
@@ -116,15 +119,18 @@ foreach($a["source"] as $rel) {
     echo " </li>\n";
 }
 ?>
-<li>
-    <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>">Changelog for PHP <?php echo $v; ?></a>
-</li>
-</ul>
-
-<hr />
+    <li>
+      <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>">Changelog for PHP <?php echo $v; ?></a>
+    </li>
+  </ul>
+</div>
 <?php
+    }
+    echo "</div>\n";
 } // for
 ?>
+
+<hr/>
 
 <h1>GPG Keys</h1>
 <p>
