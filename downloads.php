@@ -101,7 +101,7 @@ foreach ($rows as $row) {
 <div class="span6">
   <h1 id="v<?php echo $v; ?>">PHP <?php echo "$v $stable"; ?></h1>
 
-  <h2>Complete Source Code</h2>
+  <h4>Complete Source Code:</h4>
   <ul>
 <?php
 foreach($a["source"] as $rel) {
