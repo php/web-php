@@ -599,27 +599,20 @@ a.genanchor:focus {
 }
 
 aside.tips {
-    background-color: #eeeef6;
-    border-bottom: .25em solid #9999CC;
-}
-
-aside.tips div.border {
-    float: left;
-    width: 33.33333333%;
     border-top: .25em solid #9999CC;
 }
 
-aside.tips div.border.second {
-    border-color: #669;
-}
-
-aside.tips div.border.third {
-    border-color: #9999CC;
+aside.tips div.border {
+    display:none;
 }
 
 aside.tips div.inner {
-    clear: both;
-    margin: .75em;
+    padding: .75em;
+    background:#eeeef6;
+    border-left:1px solid #e6e6e6;
+    border-right:1px solid #e6e6e6;
+    border-bottom:1px solid #d6d6dd;
+    border-radius: 0 0 2px 2px;
 }
 
 
