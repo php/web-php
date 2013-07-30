@@ -36,6 +36,9 @@ pre.info {
 #head-beta-warning + #head-nav {
     top:2em;
 }
+body #head-beta-warning + #head-nav + #layout {
+    margin-top:2.75em;
+}
 #head-beta-warning {
     padding:.25em 0;
     border:0;
