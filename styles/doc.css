@@ -143,9 +143,10 @@ aside#quicktoc {
 }
 
 .docs div.warning {
-    background: #f2e5f4;
+    background: #FFE8E8;
     margin: 1.5em 0;
     padding: 1.5em;
+    border: 1px solid #D8BBBB;
 }
 
 /* }}} */
