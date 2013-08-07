@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>International PHP Conference 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-08-07-1</id>
+  <published>2013-08-07T16:54:24-07:00</published>
+  <updated>2013-08-07T16:54:24-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-30</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-08-07-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://phpconference.com/2013/en" title="IPC 2013">ipc-2013.jpg</default:newsImage>
+  <link href="http://phpconference.com/2013/en" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>Once again, the <a href="http://phpconference.com/2013/en">International PHP Conference</a>
+     will explore key topics and core technologies for PHP developers, webworkers,
+     IT managers and everyone interested in web technology in more than
+     <a href="http://phpconference.com/2013/sessions">75 sessions,
+     workshops and keynotes</a>.
+     </p>
+     <p>
+     We'll show you how to scale your applications, explain
+     the details of Continuous Integration or evaluate different approaches to
+     NoSQL. Attendees will have the opportunity to meet with speakers, core
+     developers and consultants, and there are often opportunities to evaluate your
+     code. Community and enterprise projects profit from our international
+     reputation and impulses given from the developer community..
+     </p>
+     <p>
+     <a href="http://phpconference.com">http://phpconference.com</a>.
+     </p>
+    </div>
+  </content>
+</entry>
