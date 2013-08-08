@@ -65,10 +65,11 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
 // SETBETA Setting for temporary banners
 if(isset($_GET['setbeta']) && !headers_sent()) {
-    global $MYSITE;
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     myphpnet_setbeta( (bool) $_GET['setbeta']);
     myphpnet_save();
-    header("Location: " . $MYSITE);
+    list($path, $query) = explode('?', $_SERVER['REQUEST_URI'], 2);
+    mirror_redirect($path);
     exit;
 }
 
