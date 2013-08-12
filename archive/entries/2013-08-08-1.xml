@@ -3,7 +3,7 @@
   <title>Web &amp; PHP Conference</title>
   <id>http://php.net/archive/2013.php#id2013-08-08-1</id>
   <published>2013-08-08T10:37:33-07:00</published>
-  <updated>2013-08-08T10:37:33-07:00</updated>
+  <updated>2013-08-12T13:07:33-07:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-09-18</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2013-08-08-1" rel="alternate" type="text/html"/>
@@ -28,6 +28,13 @@
      cloud, HTML5, CSS3, responsive design, UX, mobile web or web-based mobile apps,
      our final program of sessions, workshops and keynote presentations will have
      something for you....
+     </p>
+     <p>
+     There will also be a pre-conference day with hands-on workshops and
+     deep-dive tutorials, allowing you to work with and learn from some of
+     the leading experts in their field. With this special discount code:
+     <strong>WPC13PN</strong> you can access the Workshops Day for the
+     special price of $159 instead of $199.
      </p>
     </div>
   </content>
