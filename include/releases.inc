@@ -2,6 +2,75 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.1' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_1.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.1.tar.bz2',
+          'name' => 'PHP 5.5.1 (tar.bz2)',
+          'md5' => 'e6520ba8f86e03451f1e9226ca2be681',
+          'date' => '18 Jul 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.1.tar.gz',
+          'name' => 'PHP 5.5.1 (tar.gz)',
+          'md5' => 'a7d9598c0e60b47960b8e803e51c4309',
+          'date' => '18 Jul 2013',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.1.tar.xz',
+          'name' => 'PHP 5.5.1 (tar.xz)',
+          'md5' => '365403c216d22255c3aa57fe54944f8e',
+          'date' => '18 Jul 2013',
+        ),
+        3 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.5',
+          'name' => 'Windows 5.5.1 binaries and source',
+        ),
+      ),
+      'date' => '18 Jul 2013',
+      'museum' => false,
+    ),
+    '5.4.17' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_17.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.17.tar.bz2',
+          'name' => 'PHP 5.4.17 (tar.bz2)',
+          'md5' => '1e027e99e2a874310fd518e87e3947af',
+          'date' => '04 Jul 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.17.tar.gz',
+          'name' => 'PHP 5.4.17 (tar.gz)',
+          'md5' => 'cc698032dcdcb9ad158edcc90fe798d6',
+          'date' => '04 Jul 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.17 binaries and source',
+        ),
+      ),
+      'date' => '04 Jul 2013',
+      'museum' => false,
+    ),
     '5.4.16' => 
     array (
       'announcement' => 

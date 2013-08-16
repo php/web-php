@@ -11,6 +11,106 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.4.18"></a><!-- {{{ 5.4.18 -->
+<h3>Version 5.4.18</h3>
+<b>15-Aug-2013</b>
+<ul><li>Core:
+<ul>
+  <li>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value).</li>
+  <li><?php bugfix(65254); ?> (Exception not catchable when exception thrown in autoload with a namespace).</li>
+  <li><?php bugfix(65108); ?> (is_callable() triggers Fatal Error).</li>
+  <li><?php bugfix(65088); ?> (Generated configure script is malformed on OpenBSD).</li>
+  <li><?php bugfix(62964); ?> (Possible XSS on "Registered stream filters" info).</li>
+  <li><?php bugfix(62672); ?> (Error on serialize of ArrayObject).</li>
+  <li><?php bugfix(62475); ?> (variant_* functions causes crash when null given as an argument).</li>
+  <li><?php bugfix(60732); ?> (php_error_docref links to invalid pages).</li>
+  <li><?php bugfix(65226); ?> (chroot() does not get enabled).</li>
+</ul></li>
+<li>CGI:
+<ul>
+  <li><?php bugfix(65143); ?> (Missing php-cgi man page).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65066); ?> (Cli server not responsive when responding with 422 http status code).</li>
+</ul></li>
+<li>CURL:
+<ul>
+  <li><?php bugfix(62665); ?> (curl.cainfo doesn't appear in php.ini).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li><?php bugfix(63983); ?> (enabling FPM borks compile on FreeBSD).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(65228); ?> (FTPs memory leak with SSL).</li>
+</ul></li>
+<li>GMP:
+<ul>
+  <li><?php bugfix(65227); ?> (Memory leak in gmp_cmp second parameter).</li>
+</ul></li>
+<li>Imap:
+<ul>
+  <li><?php bugfix(64467); ?> (Segmentation fault after imap_reopen failure).</li>
+</ul></li>
+<li>Intl:
+<ul>
+  <li><?php bugfix(62759); ?> (Buggy grapheme_substr() on edge case).</li>
+  <li><?php bugfix(61860); ?> (Offsets may be wrong for grapheme_stri* functions).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li>Fixed segfault in mysqlnd when doing long prepare. </li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(61387); ?> (NULL valued anonymous column causes segfault in odbc_fetch_array).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4073).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li>Allowed PDO_OCI to compile with Oracle Database 12c client libraries.</li>
+</ul></li>
+<li>PDO_dblib:
+<ul>
+  <li><?php bugfix(65219); ?> (PDO/dblib not working anymore ("use dbName" not sent)).</li>
+</ul></li>
+<li>PDO_pgsql:
+<ul>
+  <li>Fixed meta data retrieve when OID is larger than 2^31.</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65142); ?> (Missing phar man page).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(62535); ?> ($_SESSION[$key]["cancel_upload"] doesn't work as documented).</li>
+  <li><?php bugfix(35703); ?> (when session_name("123") consist only digits, should warning).</li>
+  <li><?php bugfix(49175); ?> (mod_files.sh does not support hash bits).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li>Implemented FR <?php bugl(63472); ?> (Setting SO_BINDTODEVICE with socket_set_option).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65136); ?> (RecursiveDirectoryIterator segfault).</li>
+  <li><?php bugfix(61828); ?> (Memleak when calling Directory(Recursive)Iterator /Spl(Temp)FileObject ctor twice).</li>
+  <li><?php bugfix(60560); ?> (SplFixedArray un-/serialize, getSize(), count() return 0, keys are strings).</li>
+</ul></li>
+<li>XML:
+<ul>
+  <li><?php bugfix(65236); ?> (heap corruption in xml parser, CVE-2013-4113).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
+
 <a name="5.5.1"></a><!-- {{{ 5.5.1 -->
 <h3>Version 5.5.1</h3>
 <b>18-Jul-2013</b>
