@@ -11,6 +11,69 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.5.2"></a><!-- {{{ 5.5.2 -->
+<h3>Version 5.5.2</h3>
+<b>15-Aug-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
+  <li>Fixed value of FILTER_SANITIZE_FULL_SPECIAL_CHARS constant (previously was erroneously set to FILTER_SANITIZE_SPECIAL_CHARS value). </li>
+  <li><?php bugfix(65304); ?> (Use of max int in array_sum).</li>
+  <li><?php bugfix(65291); ?> (get_defined_constants() causes PHP to crash in a very limited case).</li>
+  <li><?php bugfix(62691); ?> (solaris sed has no -i switch).</li>
+  <li><?php bugfix(61345); ?> (CGI mode - make install don't work).</li>
+  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d).</li>
+</ul></li>
+<li>DOM:
+<ul>
+  <li>Added flags option to DOMDocument::schemaValidate() and DOMDocument::schemaValidateSource(). Added LIBXML_SCHEMA_CREATE flag.</li>
+</ul></li>
+<li>OPcache:
+<ul>
+  <li>Added opcache.restrict_api configuration directive that may limit usage of OPcahce API functions only to patricular script(s).</li>
+  <li>Added support for glob symbols in blacklist entries (?, *, **).</li>
+  <li><?php bugfix(65338); ?> (Enabling both php_opcache and php_wincache AVs on shutdown).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
+</ul></li>
+<li>PDO_mysql:
+<ul>
+  <li><?php bugfix(65299); ?> (pdo mysql parsing errors).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65028); ?> (Phar::buildFromDirectory creates corrupt archives for some specific contents).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(62978); ?> (Disallow possible SQL injections with pg_select()/pg_update() /pg_delete()/pg_insert()).</li>
+  <li><?php bugfix(65336); ?> (pg_escape_literal/identifier() silently returns false).</li>
+</ul></li>
+<li>Sessions:
+<ul>
+  <li>Implemented strict sessions RFC (https://wiki.php.net/rfc/strict_sessions) which protects against session fixation attacks and session collisions.</li>
+  <li>Fixed possible buffer overflow under Windows. Note: Not a security fix.</li>
+  <li>Changed session.auto_start to PHP_INI_PERDIR.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(65018); ?> (SoapHeader problems with SoapServer).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65328); ?> (Segfault when getting SplStack object Value).</li>
+  <li>Added RecursiveTreeIterator setPostfix and getPostifx methods.</li>
+  <li><?php bugfix(61697); ?> (spl_autoload_functions returns lambda functions incorrectly).</li>
+</ul></li>
+<li>Streams:
+<ul>
+  <li><?php bugfix(65268); ?> (select() implementation uses outdated tick API).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
 <a name="5.4.18"></a><!-- {{{ 5.4.18 -->
 <h3>Version 5.4.18</h3>
 <b>15-Aug-2013</b>

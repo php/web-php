@@ -11,7 +11,7 @@
   <content type="xhtml">
     <div xmlns="http://www.w3.org/1999/xhtml">
      <p>The PHP development team announces the immediate availability of PHP
-     5.4.18. About 30 bugs were fixed, including security issues CVE-2013-4113 and CVE-2013-4073.
+     5.4.18. About 30 bugs were fixed, including security issues CVE-2013-4113 and CVE-2013-4248.
      All users of PHP are encouraged to upgrade to this release.</p>
      
      <p>For source downloads of PHP 5.4.18 please visit our <a href="http://www.php.net/downloads.php">downloads page</a>,
