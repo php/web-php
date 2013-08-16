@@ -69,7 +69,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 <li>Openssl:
 <ul>
-  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4073).</li>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4248).</li>
 </ul></li>
 <li>PDO:
 <ul>
