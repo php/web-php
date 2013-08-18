@@ -53,7 +53,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 <li>Sessions:
 <ul>
-  <li>Implemented strict sessions RFC (https://wiki.php.net/rfc/strict_sessions) which protects against session fixation attacks and session collisions.</li>
+  <li>Implemented strict sessions RFC (https://wiki.php.net/rfc/strict_sessions) which protects against session fixation attacks and session collisions (CVE-2011-4718).</li>
   <li>Fixed possible buffer overflow under Windows. Note: Not a security fix.</li>
   <li>Changed session.auto_start to PHP_INI_PERDIR.</li>
 </ul></li>
