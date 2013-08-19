@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>CodeConnexx 2013</title>
+  <id>http://php.net/archive/2013.php#id2013-08-19-2</id>
+  <published>2013-08-19T12:57:55-07:00</published>
+  <updated>2013-08-19T12:57:55-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-11-09</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-08-19-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://codeconnexx.com/" title="CodeConnexx 2013">codeconnexx_logo_2013.png</default:newsImage>
+  <link href="http://codeconnexx.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     <a href="http://codeconnexx.com/">CodeConnexx</a> is a two-day, one track conference that aims to bring together everyone interested in talking about code.
+     </p>
+     <p>
+     As we know, choosing a career as a coder comes with its own set of life
+     challenges, and we want to talk about those too. In short, this conference is a
+     different kind of conference, as it connects those two pieces of the puzzle
+     together in one event.
+     </p>
+     
+     <p>
+     Every technical talk will be followed by a talk about life skills and work/life
+     balance. There will also be plenty of social opportunities to get to know the
+     other attendees. Not only do we want to help you bridge the gap between work
+     and life, we want to help you connect with each other as well.
+     </p>
+     
+     <p>
+     CodeConnexx, hosted by <a href="http://www.zendcon.com/">PHPWomen</a>, will
+     take <a href="http://codeconnexx.com/location/">place</a> in Maastricht,
+     Netherlands on November 8th &amp; 9th 2013. We sincerely hope you are able to
+     join us!
+     </p>
+    </div>
+  </content>
+</entry>
