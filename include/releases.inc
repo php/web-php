@@ -2,6 +2,44 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.2' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_2.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.2.tar.bz2',
+          'name' => 'PHP 5.5.2 (tar.bz2)',
+          'md5' => 'caf7f4d86514a568fb3c8021b096a9f0',
+          'date' => '15 Aug 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.2.tar.gz',
+          'name' => 'PHP 5.5.2 (tar.gz)',
+          'md5' => '2a90884749f97868071538098b3debc1',
+          'date' => '15 Aug 2013',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.2.tar.xz',
+          'name' => 'PHP 5.5.2 (tar.xz)',
+          'md5' => '95c6d7a4c36c475b10447954dea056a5',
+          'date' => '15 Aug 2013',
+        ),
+        3 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.5',
+          'name' => 'Windows 5.5.2 binaries and source',
+        ),
+      ),
+      'date' => '15 Aug 2013',
+      'museum' => false,
+    ),
     '5.5.1' => 
     array (
       'announcement' => 
@@ -38,6 +76,37 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '18 Jul 2013',
+      'museum' => false,
+    ),
+    '5.4.18' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_18.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.18.tar.bz2',
+          'name' => 'PHP 5.4.18 (tar.bz2)',
+          'md5' => 'b2e185b46b22a48a385cf21a0dc76e65',
+          'date' => '15 Aug 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.18.tar.gz',
+          'name' => 'PHP 5.4.18 (tar.gz)',
+          'md5' => 'd0a3f55deceaec921f45f76d7b4e764b',
+          'date' => '15 Aug 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.18 binaries and source',
+        ),
+      ),
+      'date' => '04 Jul 2013',
       'museum' => false,
     ),
     '5.4.17' => 

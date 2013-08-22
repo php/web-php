@@ -11,6 +11,30 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.5.3"></a><!-- {{{ 5.5.3 -->
+<h3>Version 5.5.3</h3>
+<b>22-Aug-2013</b>
+<ul><li>Openssl:
+<ul>
+  <li>Fixed UMR in fix for CVE-2013-4248.</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
+<a name="5.4.19"></a><!-- {{{ 5.4.19 -->
+<h3>Version 5.4.19</h3>
+<b>22-Aug-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64503); ?> (Compilation fails with error: conflicting types for 'zendparse').</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed UMR in fix for CVE-2013-4248.</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
 <a name="5.5.2"></a><!-- {{{ 5.5.2 -->
 <h3>Version 5.5.2</h3>
 <b>15-Aug-2013</b>
