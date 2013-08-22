@@ -9,7 +9,7 @@ site_header("PHP 5.5.2 Release Announcement");
 
 <p>The PHP development team announces the immediate availability of PHP
 5.5.2. About 20 bugs were fixed, including security issue in OpenSSL module (CVE-2013-4248) and session fixation problem (CVE-2011-4718).
-All users of PHP are encouraged to upgrade to this release.</p>
+</p>
 
 <p><b>NOTE:</b> Please do not use this release, due to the bug in the fix for CVE-2013-4248. This bug is fixed in 
 PHP 5.5.3.</p>
