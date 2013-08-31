@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>SunshinePHP 2014</title>
+  <id>http://php.net/archive/2013.php#id2013-08-31-1</id>
+  <published>2013-08-31T11:57:28-07:00</published>
+  <updated>2013-08-31T11:57:28-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-15</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-08-31-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://sunshinephp.com/" title="SunshinePHP">sunshinephp_logo.png</default:newsImage>
+  <link href="http://sunshinephp.com/" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     The <a href="http://sunshinephp.com">SunshinePHP</a> Developer Conference from
+     February 6th - 8th, 2014 is being brought to you by the (SoFloPHP) <a href="http://soflophp.org">South Florida PHP User Group</a>. The conference
+     will have a full tutorial day followed by a 2 day conferenece in Miami, Florida
+     at the Embassy Suites Miami International.  Our call for papers will run until
+     October 15th at <a href="http://cfp.sunshinephp.com">http://cfp.sunshinephp.com</a>.
+     </p>
+     
+     <p>
+     So when it is cold everywhere else, come down to Florida where it is sunny and
+     warm to enjoy some PHP, learning, community, and fun.  For more information,
+     visit <a href="http://sunshinephp.com">http://sunshinephp.com</a>.
+     </p>
+    </div>
+  </content>
+</entry>
