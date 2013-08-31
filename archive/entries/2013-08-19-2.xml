@@ -3,7 +3,7 @@
   <title>CodeConnexx 2013</title>
   <id>http://php.net/archive/2013.php#id2013-08-19-2</id>
   <published>2013-08-19T12:57:55-07:00</published>
-  <updated>2013-08-19T12:57:55-07:00</updated>
+  <updated>2013-08-31T12:57:55-07:00</updated>
   <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-11-09</default:finalTeaserDate>
   <category term="conferences" label="Conference announcement"/>
   <link href="http://php.net/conferences/index.php#id2013-08-19-2" rel="alternate" type="text/html"/>
@@ -29,7 +29,7 @@
      </p>
      
      <p>
-     CodeConnexx, hosted by <a href="http://www.zendcon.com/">PHPWomen</a>, will
+         CodeConnexx, hosted by <a href="http://phpwomen.org/">PHPWomen</a>, will
      take <a href="http://codeconnexx.com/location/">place</a> in Maastricht,
      Netherlands on November 8th &amp; 9th 2013. We sincerely hope you are able to
      join us!
