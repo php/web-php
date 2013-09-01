@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>ConFoo 2014 wants you to be a speaker</title>
+  <id>http://php.net/archive/2013.php#id2013-09-01-1</id>
+  <published>2013-09-01T11:57:28-07:00</published>
+  <updated>2013-09-01T11:57:28-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-15</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-09-01-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://confoo.ca" title="ConFoo 2014 in Montreal">confoo-2014-php.gif</default:newsImage>
+  <link href="http://confoo.ca" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>We are looking for PHP professionals to share their skills and experience at the next ConFoo.
+        <a href="http://confoo.ca/en/call-for-papers">Submit your proposals</a> until <b>September 22nd.</b>
+      </p>
+
+      <p>ConFoo is a conference for developers that has built a reputation as a prime destination for exploring new technologies, diving deeper into familiar topics, and experiencing the best of community and culture.</p>
+
+      <ul>
+        <li>ConFoo 2014 will be hosted on February 26-28 in Montreal, at the Hilton Bonaventure Hotel.</li>
+        <li>We take good care of our speakers by covering most expenses including travel, accommodation, lunch, full conference ticket, etc.</li>
+        <li>Presentations are 45 minutes including questions, and may be delivered in English or French.</li>
+        <li>ConFoo is an open environment where everyone is welcome to submit. We are simply looking for quality proposals by skilled and friendly people.</li>
+      </ul>
+
+      <p>If you would prefer to attend the conference, we have a <a href="http://confoo.ca/en/register">$230 discount</a> until October 16th.</p>
+    </div>
+  </content>
+</entry>
