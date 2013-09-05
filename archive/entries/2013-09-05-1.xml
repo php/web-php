@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title> PHPBenelux Conference 2014</title>
+  <id>http://php.net/archive/2013.php#id2013-09-05-1</id>
+  <published>2013-09-05T14:44:36-07:00</published>
+  <updated>2013-09-05T14:44:36-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-10-06</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-09-05-1" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://conference.phpbenelux.eu/2014" title="PHPBenelux Conference 2014">phpbenelux_conference_logo-2014-e1377030913837.png</default:newsImage>
+  <link href="http://conference.phpbenelux.eu/2014" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     It's that time of the year again! The call for proposals is here, this is your
+     chance to grab the microphone on stage, hook up your laptop and teach the
+     world how to make better PHP sites and applications! Did anything new lately
+     which gave you a lot of cool insights? Do you feel like an expert on a certain
+     topic? Why not share it with other developers? We now have opened up our
+     <a href="http://conference.phpbenelux.eu/2014/call-for-proposals/">Call
+     for Proposals (CfP)</a> for you to start submitting your talks.
+     </p>
+     <p>
+     We accept proposals up to October 6, 2013 23:59 and we have no limit on how
+     many talks you submit. So, don't wait until the latest moment and start
+     submitting your talks.
+     </p>
+     <p>
+     What's in it for the speakers?
+     </p>
+     <p>
+     When you get selected there is more than eternal fame and glory at the venue
+     and beyond, we also offer;
+     </p>
+     <ul>
+     <li>pick-up service from Brussels Airport (Zaventem)/train to the hotel</li>
+     <li>three hotel nights (from Thursday afternoon until Sunday morning)</li>
+     <li>full access to the conference</li>
+     <li>an invitation to our 5th celebration very special speakers dinner on Thursday the 23rd of January</li>
+     <li>up to 300 euro of reimbursement for travel expenses</li>
+     </ul>
+     
+     <p>
+     More information can be found on <a href="http://conference.phpbenelux.eu/2014">our website</a>
+     or follow <a href="http://www.twitter.com/phpbenelux">PHPBenelux on Twitter</a>.
+     </p>
+    </div>
+  </content>
+</entry>
