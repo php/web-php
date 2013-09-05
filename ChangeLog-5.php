@@ -1105,6 +1105,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
  <li><?php bugfix(64452); ?> (Zip crash intermittently).</li>
 </ul>
+</ul>
 <!-- }}} -->
 
 <a name="5.4.13"></a><!-- {{{ 5.4.13 -->
@@ -1284,7 +1285,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
   <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
 </ul>
-</ul> 
 </ul>
 <!-- }}} -->
 
