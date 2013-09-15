@@ -729,9 +729,7 @@ function print_view($templateName, array $params = array()) {
     $path = $_SERVER['DOCUMENT_ROOT'] . '/views/' . $templateName;
     if(file_exists($path)) {
         if(!empty($params)) {
-        foreach($params as $key => $param) {
-            $$key = $param;
-            }
+            extract($params);
         }
         include_once $path;
     }
@@ -857,9 +855,10 @@ function site_header_beta($title = '', $config = array())
         "current" => "",
         "meta-navigation" => array(),
         'classes' => '',
+        'layout_span' => 9,
     );
 
-    $config += $defaults;
+    $config = array_merge($defaults, $config);
 
     $lang = language_convert($config["lang"]);
     $curr = $config["current"];

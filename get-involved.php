@@ -3,19 +3,19 @@
 $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
+$SIDEBAR_DATA ='
+    <p>
+      Ever wondered how the PHP.net project actually works and what it has to offer? 
+      Who is in charge and how decisions are made? The PHP.net project has a lot of 
+      things in the works and is always looking for new talent to join the project, 
+      share new ideas, discuss improvements, fix broken features, look after the
+      websites, documentation, and so on and on...
+    </p>
+';
+
 site_header("Get Involved", array("current" => "community"));
+
 ?>
-
-<aside class="tips">
-<p style="margin: 5px; padding: 5px;">
-    Ever wondered how the PHP.net project actually works and what it has to offer? 
-    Who is in charge and how decisions are made? The PHP.net project has a lot of 
-    things in the works and is always looking for new talent to join the project, 
-    share new ideas, discuss improvements, fix broken features, look after the
-    websites, documentation, and so on and on...
-</p>
-</aside>
-
 <h2>Improving PHP</h2>
 <p>
     This particular article assumes you are running <i>Ubuntu Linux</i>.
@@ -153,7 +153,7 @@ directory if you want to learn more about the testing mechanism.
 <hr />
 
 <h2>Contributing</h2>
-<p style="margin: 5px; padding: 5px;">
+<p>
     The PHP project is so much more than just the scripting language on which it is
     focused.  It is a vibrant community of developers scratching related itches,
     hoping their work will benefit others. PHP.net hosts a set of projects
@@ -163,7 +163,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     The PHP community is without a doubt, in my opinion, one of the greatest
     communities in the world. It has a lot to offer besides good friends and a fun
     working environment. It is a community where things can happen very fast, with
@@ -175,7 +175,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     There are a lot of ways in which you can contribute to and influence the project;
     participating on mailing lists, filing bug reports, and adding helpful notes
     to the manual are all examples of valuable contributions. You don't have to
@@ -187,14 +187,14 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Before we go deeper into ways you can contribute and how to do so, let's take
     a step back and look at who actually leads the development and how things are
     done within PHP.net.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     One of things I love most about working with Open Source Software like PHP is
     the freedom. If I have an itch, I scratch it! If I want to work on new
     features or document all the kinks and quirks of PHP, I can. We have the
@@ -210,7 +210,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     To gain karma you basically need to prove to the community that you aren't
     just a nut-job and show that you can be trusted to think not only about today,
     but tomorrow as well. Being active on the developers' mailing lists,
@@ -220,7 +220,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     All of the PHP.net projects (from PEAR, to PECL, to websites and
     documentation, to the PHP language itself) have
     long-time members which could be considered the "leaders" of the respective
@@ -233,7 +233,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     The PHP.net project has mailing lists for most aspects of the project where
     all important decisions are made. For example discussions and decisions about
     the language happen on the internals@lists.php.net mailing list
@@ -248,7 +248,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Although most of the PHP internals contributors make their living writing PHP
     applications, feedback from other users is crucial to the development of the
     language; your voice does matter. Keep in mind, however, that flaming
@@ -259,7 +259,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Even though most of the mailing lists are very active, not everything that is
     contributed to PHP needs to be approved there first. For example, minor
     features are often simply committed directly to Git without asking or telling
@@ -276,7 +276,7 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     To help streamline part of the decision process and keep track of ideas,
     proposals, and TODO lists, PHP has a wiki located at
     <a href="http://wiki.php.net">wiki.php.net</a>. This has proven to be a valuable resource when
@@ -296,7 +296,7 @@ directory if you want to learn more about the testing mechanism.
 
 
 <h3>So, how to get involved?</h3>
-<p style="margin: 5px; padding: 5px;">
+<p>
     There are a lot of ways you can contribute to the project, it simply depends on what you fancy.
 </p>
 <ul>
@@ -322,8 +322,7 @@ directory if you want to learn more about the testing mechanism.
     </li>
 </ul>
 
-
-<p style="margin: 5px; padding: 5px;">
+<p>
     Getting involved is a lot easier than most people think - and chances are that
     you are already involved in one way or another. You don't need an Git account
     and commit access to get started - Git accounts need to be earned. Registering
@@ -348,7 +347,7 @@ directory if you want to learn more about the testing mechanism.
 <ul>
     <li>
         <h4>Mailing Lists</h4>
-        <p style="margin: 5px; padding: 5px;">
+        <p>
             To register with any PHP mailing list, just send a blank email to
             &lt;listname&gt;-subscribe@lists.php.net. For example if you want to register
             for the PHP internals developers discussion list, send an email to
@@ -362,7 +361,7 @@ directory if you want to learn more about the testing mechanism.
     </li>
     <li>
     <h4>The Bug Tracker</h4>
-        <p style="margin: 5px; padding: 5px;">
+        <p>
             Filing a bug report is an art. It isn't very complicated, but you do
             have to think about what you are reporting. Quickly looking through
             the existing reports to see if your issue has already been reported
@@ -384,7 +383,7 @@ directory if you want to learn more about the testing mechanism.
     </li>
     <li>
         <h4>Getting Started With Contributing</h4>
-        <p style="margin: 5px; padding: 5px;">
+        <p>
             Unsure which task to tackle first? Stuck on a problem? Need a
             quick brainstorming session? IRC is a very convenient way to get
             help quickly for smaller things, such as "where was the Git module
@@ -401,7 +400,7 @@ directory if you want to learn more about the testing mechanism.
     </li>
     <li>
         <h4>Less Is More</h4>
-        <p style="margin: 5px; padding: 5px;">
+        <p>
             When you are ready to contribute to the project please don't try
             to tackle the biggest issues and expect to fix them right away.
             Start with smaller tasks and learn the ways of the project and
@@ -430,7 +429,7 @@ directory if you want to learn more about the testing mechanism.
     <li>Etc., etc., (etc.)</li>
 </ul>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     If you can't find something on which to work within PHP.net, you will have a
     hard time finding it elsewhere. Introducing every project is beyond the scope
     of this article, but we'll cover some of the projects that don't have entry
@@ -440,7 +439,7 @@ directory if you want to learn more about the testing mechanism.
 
 
 <h3>The Documentation Project</h3>
-<p style="margin: 5px; padding: 5px;">
+<p>
     The main focus of the documentation project (phpdoc) is to document the PHP
     language (and PECL extensions) with usage examples, FAQs, and tracking changes
     in behaviour. The documentation is written in XML using the Docbook format
@@ -458,7 +457,7 @@ directory if you want to learn more about the testing mechanism.
     the French translation list.
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     A web application, called "PhD Online Editor" (PhD O.E), which aims to help
     documentation editors focus on the content itself, rather than Docbook and XML
     logistics, is under development at <a href="https://edit.php.net">edit.php.net</a>. It is getting
@@ -476,7 +475,7 @@ directory if you want to learn more about the testing mechanism.
     functions, and check the translation status of an entry (among other things).
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     The team is also developing a Docbook rendering engine, called "PHP-based
     Docbook Rendering" (PhD), to transform the Docbook XML into various different
     formats, such as HTML, CHM, PDF, Unix manual pages, and the online format you
@@ -489,13 +488,13 @@ directory if you want to learn more about the testing mechanism.
 </p>
 
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Last, but not least: the team also maintains a website on
     <a href="http://doc.php.net">doc.php.net</a> which aggregates translation 
     statistics, tutorials, and the documentation HOWTO.
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     The project offers much more than just documentation, and is probably the
     project to which it is easiest to start contributing. If you enjoy working
     with XML, PHP, JS, documentation, writing articles, or simply want to dig
@@ -504,7 +503,7 @@ directory if you want to learn more about the testing mechanism.
 
 
 <h3>The Websites</h3>
-<p style="margin: 5px; padding: 5px;">
+<p>
     No surprise there, the webmaster team maintains several websites, and is
     responsible for maintaining the mirroring infrastructure and related tasks.
     The websites contain a lot of information; everything from user group meet-ups
@@ -513,14 +512,14 @@ directory if you want to learn more about the testing mechanism.
     information, as well as the general entry point for people looking into PHP.
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     To get up and running is very simple: just follow the points on 
     <a href="http://wiki.php.net/web/mirror">wiki.php.net/web/mirror</a>
     and you are all set. Once you have poked around a little you can look 
     into the other websites, like qa.php.net, master.php.net and pecl.php.net.
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Recently, work on redesigning the main website from the ground-up was started. 
     Unfortunately, this effort has stalled a bit over the past several months 
     due to a lack of contributors interested in being actively involved. 
@@ -528,7 +527,7 @@ directory if you want to learn more about the testing mechanism.
     content to make it more accessible.
 </p>
 
-<p style="margin: 5px; padding: 5px;">
+<p>
     Joining the redesign effort is a great entry point for those interested in 
     markup, CSS, and general website development. Check out 
     <a href="http://wiki.php.net/web/redesign">wiki.php.net/web/redesign</a>
@@ -539,7 +538,7 @@ directory if you want to learn more about the testing mechanism.
 
 
 <h3>Conclusion</h3>
-<p style="margin: 5px; padding: 5px;">
+<p>
     PHP.net has a lot of areas to which you can contribute: everything from 
     hardcore development to managing user-contributed notes in the manual; 
     from debugging issues in bug reports to writing articles about new features 
@@ -555,7 +554,7 @@ directory if you want to learn more about the testing mechanism.
 
 
 <?php
-site_footer();
+site_footer(array('sidebar'=>$SIDEBAR_DATA));
 
 /* vim: set et ts=4 sw=4 ft=php: : */
 

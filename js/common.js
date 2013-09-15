@@ -1,5 +1,18 @@
-$(document).ready(function() {
+/* Plugins, etc, are on top. */
 
+/** {{{
+ * jQuery.ScrollTo - Easy element scrolling using jQuery.
+ * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Dual licensed under MIT and GPL.
+ * Date: 5/25/2009
+ * @author Ariel Flesler
+ * @version 1.4.2
+ *
+ * http://flesler.blogspot.com/2007/10/jqueryscrollto.html
+ */
+;(function(d){var k=d.scrollTo=function(a,i,e){d(window).scrollTo(a,i,e)};k.defaults={axis:'xy',duration:parseFloat(d.fn.jquery)>=1.3?0:1};k.window=function(a){return d(window)._scrollable()};d.fn._scrollable=function(){return this.map(function(){var a=this,i=!a.nodeName||d.inArray(a.nodeName.toLowerCase(),['iframe','#document','html','body'])!=-1;if(!i)return a;var e=(a.contentWindow||a).document||a.ownerDocument||a;return d.browser.safari||e.compatMode=='BackCompat'?e.body:e.documentElement})};d.fn.scrollTo=function(n,j,b){if(typeof j=='object'){b=j;j=0}if(typeof b=='function')b={onAfter:b};if(n=='max')n=9e9;b=d.extend({},k.defaults,b);j=j||b.speed||b.duration;b.queue=b.queue&&b.axis.length>1;if(b.queue)j/=2;b.offset=p(b.offset);b.over=p(b.over);return this._scrollable().each(function(){var q=this,r=d(q),f=n,s,g={},u=r.is('html,body');switch(typeof f){case'number':case'string':if(/^([+-]=)?\d+(\.\d+)?(px|%)?$/.test(f)){f=p(f);break}f=d(f,this);case'object':if(f.is||f.style)s=(f=d(f)).offset()}d.each(b.axis.split(''),function(a,i){var e=i=='x'?'Left':'Top',h=e.toLowerCase(),c='scroll'+e,l=q[c],m=k.max(q,i);if(s){g[c]=s[h]+(u?0:l-r.offset()[h]);if(b.margin){g[c]-=parseInt(f.css('margin'+e))||0;g[c]-=parseInt(f.css('border'+e+'Width'))||0}g[c]+=b.offset[h]||0;if(b.over[h])g[c]+=f[i=='x'?'width':'height']()*b.over[h]}else{var o=f[h];g[c]=o.slice&&o.slice(-1)=='%'?parseFloat(o)/100*m:o}if(/^\d+$/.test(g[c]))g[c]=g[c]<=0?0:Math.min(g[c],m);if(!a&&b.queue){if(l!=g[c])t(b.onAfterFirst);delete g[c]}});t(b.onAfter);function t(a){r.animate(g,j,b.easing,a&&function(){a.call(this,n,b)})}}).end()};k.max=function(a,i){var e=i=='x'?'Width':'Height',h='scroll'+e;if(!d(a).is('html,body'))return a[h]-d(a)[e.toLowerCase()]();var c='client'+e,l=a.ownerDocument.documentElement,m=a.ownerDocument.body;return Math.max(l[h],m[h])-Math.min(l[c],m[c])};function p(a){return typeof a=='object'?a:{top:a,left:a}}})(jQuery);
+/*}}}*/
+$(document).ready(function() {
 
     // Ugh, cookie handling.
     var cookies = document.cookie.split(";");
@@ -17,7 +30,7 @@ $(document).ready(function() {
     $("#beta-warning-close").click(function(event) {
         event.preventDefault();
         $('body').css('margin-top', 0);
-        $headBetaWarning.slideUp("fast");
+        $headBetaWarning.slideUp("fast", function(){$(this).remove()});
 
         // Hide it for a month by default.
         var expiry = new Date();
@@ -26,176 +39,34 @@ $(document).ready(function() {
         document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
     });
 
-    // This is a temporary implementation for clicking on the arrows for the Downloading PHP
-    var $homeDownload = $('div.download .download-list');
-    if($homeDownload.length > 0) {
-        $homeDownload.find('li').bind('click', function() {
-            window.location.href = $(this).attr('rel');
-        });
-    }
-
-
-
     if (showBetaWarning) {
         $headBetaWarning.show();
-        $('body').css('margin-top', '25px');
-        $('#beta-warning').slideDown(300, function() {
+        $('body').css('margin-top', $headBetaWarning.outerHeight()+12);
+        $headBetaWarning.slideDown(300, function() {
            $(this).find('.blurb').fadeIn('slow');
         });
     }
-    // auto-expand the home menu when on the home page
-    // and remove it from other pages.
-    $("#headhome.current div.children").appendTo($('#menu-container'));
-    $("#headhome div.children").remove();
-
-    // slide mega drop-downs up/down.
-    $("#headmenu li:has(div.children)").click(function(event) {
-        // don't follow link.
-        event.preventDefault();
-
-        var clickedMenu = $(this);
-        var container   = $('#mega-drop-down #menu-container');
-
-        // ignore clicks if we're busy.
-        if (container.hasClass('busy')) return;
-        container.addClass('busy');
-
-        // function to activate the clicked menu.
-        var activate = function(){
-            clickedMenu.addClass('current');
-            clickedMenu.find("div.children").appendTo(container);
-            container.find("div.children").slideUp(0).slideDown(100,
-                function(){ container.removeClass('busy'); }
-            );
-        };
-
-        // if there is an active menu, deactivate it first.
-        var activeMenu    = $('#headmenu li.current');
-        var activeSubMenu = container.find("div.children");
-        if (activeMenu.length) {
-            activeMenu.removeClass('current');
-        }
-        if (activeSubMenu.length) {
-            activeSubMenu.slideUp(100, function(){
-                activeSubMenu.appendTo(activeMenu);
-                if (activeMenu[0] != clickedMenu[0])
-                    activate();
-                else
-                    container.removeClass('busy');
-            });
-        } else {
-            activate();
-        }
-    });
-
-    // load the search index and enable auto-complete.
-    jQuery.getScript("/search-index.php?lang=" + getLanguage(), function(){
-        var haveDesc = 0;
-        jQuery.getScript("/search-index.php?lang=" + getLanguage() + "&description=1", function(){
-            haveDesc = 1;
-        });
-        $.widget("custom.catcomplete", $.ui.autocomplete, {
-            /*
-             // Print out category headers rather then in () after the match
-            _renderMenu: function(ul, items) {
-                var self = this, currentCategory = "";
-                $.each(items, function(index, item) {
-                    if (item.category != currentCategory) {
-                        var cat = self._resolveIndexName(item.category);
-                        ul.append("<li class='ui-autocomplete-category'>" + cat + "</li>");
-                        currentCategory = item.category;
-                    }
-
-                    self._renderItem(ul, item);
-                });
-            },
-            */
-            _renderItem: function(ul, item) {
-                var n = $("<li></li>").data("item.autocomplete", item);
-                var cat = this._resolveIndexName(item.category);
-                if (item.desc) {
-                    n.append("<a><span class='search-item-label'>" + item.label + " <span class='search-item-category'>(" + cat + ")</span></span><span class='search-item-description'>" + item.desc + "</span></a>");
-                }
-                else {
-                    n.append("<a>" + item.label + " (" + cat + ") </a>");
-                }
-
-                return n.appendTo(ul);
-            },
-            // Resolve the element names to human understandable things
-            _resolveIndexName: function(key) {
-                var indexes = {
-                    'phpdoc:varentry': 'Variables',
-                    'phpdoc:classref': 'Classes',
-                    'phpdoc:exceptionref': 'Exceptions',
-                    'refentry': 'Functions'
-                };
-                return indexes[key] || key;
-            }
-        });
-        $('#headsearch-keywords').catcomplete({
-            delay:      50,
-            minScore:   50,
-            maxResults: 20,
-            source: function(request, response){
-                var term  = request.term;
-                var minScore = this.options.minScore;
-
-                // Score an possible match
-                var score = function(item){
-                    var match = item.search(new RegExp(term, "i"));
-                    if (match < 0) return 0;
-                    return 100 - (match * 2) - (item.length - term.length);
-                };
-
-                var results = [];
-                $.each(searchIndex, function(idx, item) {
-                    var itemScore = score(item[0]);
-                    if (item && itemScore > minScore) {
-                        results.push({
-                            label: item[0],
-                            value: item[1],
-                            desc: haveDesc ? descriptionIndex[item[1]] : '',
-                            category: item[2],
-                            score: itemScore
-                        });
-                    }
-                });
-
-                // Only sort the matches
-                results.sort(function(a, b){
-                    return b.score - a.score;
-                });
-
-                // Return at most maxResults
-                response(results.slice(0, this.options.maxResults));
-            },
-            focus: function(event, ui) {
-                $('#headsearch-keywords').val(ui.item.label);
-                return false;
-            },
-            select: function(event, ui){
-                event.preventDefault();
-                $('#headsearch-keywords').val(ui.item.label);
-                if (ui.item.value) {
-                    window.location = '/manual/' + getLanguage() + '/' + ui.item.value + '.php';
-                }
-            }
-        });
-    });
 
     var $docs = $('.docs');
+    var $refsect1 = $docs.find('.refentry .refsect1');
     var $docsDivWithId = $docs.find('div[id]');
     $docsDivWithId.children("h1, h2, h3, h4").each(function(){
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
-    $docs.find(".methodparam .parameter").each(function () {
+    var scrollHeightOfHeadnav = - document.getElementById('head-nav').scrollHeight;
+    scrollHeightOfHeadnav -= 12; //some margin
+    $parameters = $refsect1.filter(".parameters").find(".term .parameter");
+    $refsect1.find(".parameter").each(function () {
         var $node = $(this);
-        $(".parameters .term .parameter").each(function (idx, param) {
+        var $nodeText = $node.text();
+        if ($nodeText[0].charAt(0) === '$') {
+            $nodeText = $nodeText.substring(1);
+        }
+        $parameters.each(function (idx, param) {
             var $param = $(param);
-            if ($param.text() == $node.text().substring(1)) {
+            if ($param.text() == $nodeText) {
                 $node.click(function() {
-                    $.scrollTo($param, 800);
+                    $.scrollTo($param, 600, {'offset':{'top':scrollHeightOfHeadnav}});
                 });
             }
         });
@@ -205,6 +76,10 @@ $(document).ready(function() {
     $headingsWithIds.each(function(){
         var $this = $(this);
         $this.after("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>")
+    });
+    $('h1[id], h2[id], h3[id], h4[id]').each(function() {
+        var $this = $(this);
+        $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
     });
 
     var $elephpants = $(".elephpants");
@@ -262,15 +137,108 @@ $(document).ready(function() {
     });
     
     // We have <p> tags generated with nothing in them and it requires a PHD change, meanwhile this fixes it.
-    $('.docs .refentry .parameters p, .docs .refsect1.examples p, .docs .refsect1.seealso p').each(function() {
+    $refsect1.find('p').each(function() {
         var $this = $(this), html = $this.html();
         if(html !== null && html.replace(/\s|&nbsp;/g, '').length == 0) {
             $this.remove();
         }
     });
-    
-    $().UItoTop({ easingType: 'easeOutQuart' });
-    
+
+/*{{{ Scroll to top */
+    (function() {
+        var settings = {
+            text: 'To Top',
+            min: 200,
+            inDelay:600,
+            outDelay:400,
+            containerID: 'toTop',
+            containerHoverID: 'toTopHover',
+            scrollSpeed: 400,
+            easingType: 'linear'
+        };
+        var containerIDhash = '#' + settings.containerID;
+        var containerHoverIDHash = '#'+settings.containerHoverID;
+
+        $('body').append('<a href="#" id="'+settings.containerID+'" onclick="return false;"><img src="/images/to-top@2x.png" width="40" hieght="40" alt="'+settings.text+'"/></a>');
+        $(containerIDhash).hide().click(function(){
+            $('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
+            $('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
+            return false;
+        })
+        .prepend('<span id="'+settings.containerHoverID+'"></span>')
+        .hover(function() {
+            $(containerHoverIDHash, this).stop().animate({
+                'opacity': 1
+            }, 600, 'linear');
+        }, function() {
+            $(containerHoverIDHash, this).stop().animate({
+                'opacity': 0
+            }, 700, 'linear');
+        });
+
+        $(window).scroll(function() {
+            var sd = $(window).scrollTop();
+            if (typeof document.body.style.maxHeight === "undefined") {
+                $(containerIDhash).css({
+                    'position': 'absolute',
+                    'top': $(window).scrollTop() + $(window).height() - 50
+                });
+            }
+            if ( sd > settings.min ) {
+                $(containerIDhash).fadeIn(settings.inDelay);
+            } else {
+                $(containerIDhash).fadeOut(settings.outDelay);
+            }
+        });    
+
+    })();
+/*}}}*/
+
+/*{{{User Notes*/
+    $("#usernotes a.usernotes-voteu, #usernotes a.usernotes-voted").each(
+    function () {
+      $(this).click(
+        function (event) {
+          event.preventDefault();
+          var url = $(this).attr("href");
+          var id = url.match(/\?id=(\d+)/)[1];
+          var request = $.ajax({
+            type: "POST",
+            url: url,
+            dataType: "json",
+            headers: {"X-Json": "On" },
+            beforeSend: function() {
+              $("#Vu"+id).hide();
+              $("#Vd"+id).hide();
+              $("#V"+id).html("<img src=\"/images/working.gif\" alt=\"Working...\" border=\"0\" title=\"Working...\" />");
+            }
+          });
+          request.done(function(data) {
+            if(data.success != null && data.success == true) {
+              $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 16px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"success\" title=\"Thank you for voting!\"></div>" + data.update);
+            }
+            else {
+              var responsedata = "Error :(";
+              if (data.msg != null) {
+                responsedata = data.msg;
+              }
+              $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"" + responsedata + "\"></div>");
+            }
+          });
+          request.fail(function(jqXHR, textStatus) {
+            $("#Vu"+id).show();
+            $("#Vd"+id).show();
+            $("#V"+id).html("<div style=\"float: left; width: 16px; height: 16px; background-image: url(/images/notes-features.png); background-position:-32px 0px; margin-right: 8px; overflow: hidden;\" border=\"0\" alt=\"fail\" title=\"Error :(\"></div>");
+          });
+          request.always(function(data) {
+            $("#V"+id).fadeIn(500, "linear");
+          });
+        }
+      );
+    }
+    );
+/*}}}*/
+
 });
 
 /**

@@ -1,50 +1,13 @@
 /* vim: set et ts=4 sw=4 fdm=marker: : */
 
-
-/* {{{ The Quick TOC reference top on man pages */
-aside#quicktoc {
-    display: block;
-    border-top: 1px solid #9999CC;
-    border-left: 1px solid #9999CC;
-    border-bottom: none;
-    margin: 0 0 20px 20px;
-    width: 160px;
-    background: white;
-    position: fixed;
-    right: 0px;
-    z-index: 100;
+body.docs #layout {
+   margin-top:.75em;
 }
 
-#quicktoc .content, #quicktoc .language {
-    padding: 10px 0 10px 10px;
+.docs .refsect1 > *:last-child {
+    margin-bottom:0;
 }
-
-#quicktoc .links, #quicktoc .content {
-}
-
-#quicktoc .links a:first-child {
-    border-top: 1px solid #9F8A8A;
-}
-
-#quicktoc .links a {
-    display: block;
-    color: black;
-    padding-left: 5px;
-    border-bottom: 1px solid #9F8A8A;
-    background-color: #F3F3F3;
-}
-
-#quicktoc .links a:hover {
-    background-color: #F2E5F4;
-}
-
-/* }}} */
-
-
-.docs .refsect1 > p:last-child,
-.docs .refsect1 > .warning:last-child,
-.docs .refsect1 > .note:last-child,
-.docs .refsect1 > .tip:last-child {
+.docs .refsect1 > *:last-child *:last-child {
     margin-bottom:0;
 }
 
@@ -53,11 +16,15 @@ aside#quicktoc {
 }
 
 /* {{{ General styles (p, parameters, initializers, ...) */
-.docs .methodname b, .docs .methodname strong {
-    color: #000;
+.docs .methodname b,
+.docs .methodname strong,
+.docs .methodname a,
+.docs .classsynopsis .classname {
+    color: #458;
+    border-color:#458;
 }
 
-.docs .refsect1 .methodparam .parameter {
+.docs .refsect1 .parameter {
     cursor:pointer;
 }
 .docs .refsect1 dt {
@@ -65,98 +32,112 @@ aside#quicktoc {
 }
 
 .docs .parameter {
-    color: #336;
-    font-weight: bold;
+    color: #447;
+    font-style:italic;
+}
+.docs .refsect1 code.parameter {
+    font-weight:bold;
+}
+.docs code.parameter {
     font-size:1em;
 }
-.docs .classsynopsis .parameter {
-    font-size:1.167em;
+.docs .methodname strong {
+    font-style:normal;
+    font-weight:normal;
 }
-
-.docs i .parameter, .docs em .parameter {
-    font-style: normal;
+.docs .initializer,
+.docs .initializer code {
+    font-style:italic !important;
+    color:#b14;
 }
-
 /* }}} */
 
 
 /* {{{ Warning and notes */
-.docs .notes blockquote.note {
-    padding:0;
-    background:transparent;
-}
 
+.docs div.tip,
+.docs div.warning,
 .docs div.caution,
 .docs blockquote.note {
-    padding: .75em 1em;
-    margin: 1.5em 0;
-}
-
-.docs .refsect1 div.caution,
-.docs .refsect1 blockquote.note {
-    margin-left:0;
-    margin-right:0;
+    padding:.375em .5em;
+    position:relative;
+    margin-top:.75em;
+    margin-bottom:.75em;
 }
 
 .docs blockquote.note {
     background-color: #eee;
+    border:1px solid #d5d5d5;
 }
 
 .docs div.caution {
-    background-color: #ffc;
+    background:#fcfce9;
+    border:1px solid #e2e2d1;
+}
+
+.docs .refsect1 blockquote.note {
+    margin-left:0;
+}
+
+.docs .refsect1 blockquote.note,
+.docs div.tip {
+    background:#f8f8fb;
+    border: 1px solid #e5e6e9;
+}
+
+.docs div.warning {
+    background: #f2e5f4;
+    border:1px solid #d9cddb;
 }
 
 .docs div.warning strong.warning {
     font-size: 1.5em;
-    line-height: 1;
     display:block;
     text-align: center;
 }
 
-.docs div.tip *:last-child,
-.docs div.warning *:last-child {
-    margin-bottom:0;
-}
-
-.docs div.caution b.caution, .docs div.caution strong.caution {
+.docs div.tip b.tip,
+.docs div.tip strong.tip,
+.docs div.caution b.caution,
+.docs div.caution strong.caution {
     float: left;
-    margin-right: 0.8em;
+    margin-right: 0.675em;
 }
 .docs blockquote.note p,
-.docs div.caution p {
+.docs div.caution p,
+.docs div.warning p,
+.docs div.tip p {
     margin: 0;
 }
 
-.docs div.tip {
-    background:#eeeef6;
-    border-top: 0.1875em solid #99c;
-    margin:1.5em 0;
-    padding:0.5625em 1.5em .75em;
-}
-.docs .refsect1.notes div.tip {
-    background:#e8e8e8;
-    border-top-color:#d8d8d8;
-    padding:.75em;
-}
-.docs div.tip p {
-    margin:0;
-}
-
-.docs div.warning {
-    background: #FFE8E8;
-    margin: 1.5em 0;
-    padding: 1.5em;
-    border: 1px solid #D8BBBB;
+.docs div.tip:before,
+.docs div.caution:before,
+.docs blockquote.note:before,
+.docs div.warning:before {
+    border-top:1px solid rgba(255,255,255,0.5);
+    content:"";
+    display:block;
+    top:0;
+    left:0;
+    width:100%;
+    position:absolute;
 }
 
 /* }}} */
 
-.docs .refentry .constructorsynopsis,
-.docs .refentry .methodsynopsis {
-    color: #666;
-    font-family: monospace;
-    font-size:1.230769em; /* bumps it back up to the rest of the fonts because monospace is smaller */
-    margin:-1px 0;
+.docs .refsect1 .dc-description,
+.docs .refsect1 .dc-description code,
+.docs .sect1 .dc-description,
+.docs .sect1 .dc-description code {
+    font-weight:400;
+    font-size:16px;
+    font-family:"Source Code Pro", monospace;
+    letter-spacing:-.0625em;
+    word-spacing:-.125em;
+    margin:0;
+}
+.docs .dc-description {
+    color:#666;
 }
 
 /* {{{ Parameter listing */
@@ -165,40 +146,46 @@ aside#quicktoc {
 }
 
 .docs dl dd + dt {
-    margin-top:1.5em;
-}
-
-.docs .refentry .parameters dl dt code.parameter {
-    font-size:1.23076em;
+    margin-top:.75em;
 }
 
 /* }}} */
 
 .docs .example {
-    margin: 1.5em 0;
+    margin: .75em 0;
 }
 
 /* {{{ Examples (highlighting is in theme.css) */
-.docs .example-contents .phpcode code,
-.docs .refentry .methodsynopsis,
-.docs .example-contents.screen,
-.docs .refentry .methodsynopsis,
-.docs .refentry .constructorsynopsis {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    padding: .75em;
+
+.docs .example-contents {
+    margin-bottom:.75em;
 }
-.docs .example-contents .phpcode code {
-    padding: .75em 1em;
+.docs .example-contents pre {
+    margin:0;
+}
+.docs .example-contents > [class$="code"],
+.docs .example-contents.screen {
+    background-color: #fff;
+    padding: .75em .625em;
+    border:1px solid #dcdcdc;
+}
+.docs .refsect1 .example-contents > [class$="code"],
+.docs .refsect1 .example-contents.screen {
+    border-top-color: #cdcdcd;
+}
+.docs .refsect1 .dc-description,
+.docs .sect1 .dc-description {
+    background:#fcfcfe;
+    padding: .625em .75em;
+    -moz-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
+    box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.25);
+    border:-bottom 1px solid #e5e6e9;
+    margin-bottom: .75em;
 }
 
 .docs .phpcode code {
     display: block;
     margin:-1px 0;
-}
-
-.docs .refsect1.examples {
-    border-top: 0.2em solid #669;
 }
 
 /* }}} */
@@ -224,7 +211,7 @@ aside#quicktoc {
 .docs .doctable {
     border: 1px solid #ccc;
     width: 100%;
-    margin:1.5em 0;
+    margin:.75em 0;
 }
 
 .docs .doctable thead tr {
@@ -267,58 +254,75 @@ ul.chunklist_children {
     position: relative;
 }
 
-.docs p.verinfo {
-    float:right;
-    margin:0 0 0 1.5em;
+.docs .refnamediv p.verinfo {
+    font-size: .75em;
+    line-height:2;
+}
+.docs .refnamediv p {
+    margin:0;
+}
+.docs .refsect1 p {
+    margin-top:0;
 }
 
-.docs h1.refname,
-.docs p.refpurpose {
-    color: #444;
+.docs h1.refname {
+    color: #336;
+    font-weight:bolder
 }
 .docs .refnamediv {
     position:relative;
 }
-.docs div.refsect1 h3.title {
-    color: #444;
+
+.docs .refsect1 h3.title {
+    color: #333;
     position: absolute;
-    top:-2.1em;
+    top:-2em;
     left: 0;
+}
+
+.docs .classsynopsis,
+.docs .refsect1 {
+    color: #333;
+    border-top:0.125em solid #669;
+    border-bottom:1px solid #d6d6dd;
+    box-shadow:
+        inset 2px 0 2px -2px #d6d6dd,
+        inset -2px 0 2px -2px #d6d6dd;
 }
 
 .docs .refsect1 {
     margin-top: 3em;
-    color: #444;
-    border-top: 0.2em solid #669;
 }
 
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
     background-color: #eeeef6;
-    padding: .75em;
+    -moz-border-radius:0 0 2px 2px;
+    border-radius:0 0 2px 2px;
+    padding: .75em .625em;
 }
 
 .docs .classsynopsis {
-    color: #454e55;
+    color: #666;
+    margin-bottom:.75em;
 }
+.docs .interfacename a,
 .docs .fieldsynopsis .type,
 .docs .methodsynopsis .type,
 .docs .constructorsynopsis .type {
-    color:#606;
+    color:#092;
+    border-color:#092;
 }
-.docs .classsynopsis .classname,
+
 .docs .fieldsynopsis .modifier,
 .docs .methodsynopsis .modifier,
 .docs .constructorsynopsis .modifier {
-    color:#0000ae;
+    color:#444;
 }
 
-.docs .classsynopsis .initializer {
-    font-style:italic;
-}
 .docs .classsynopsisinfo_comment {
-    color:#999;
+    color:#f80;
     font-weight:normal;
 }
 
@@ -329,12 +333,6 @@ ul.chunklist_children {
 .classsynopsis .fieldsynopsis {
     margin-left:2em;
 }
-.docs .classsynopsis a,
-.docs .fieldsynopsis a,
-.docs .methodsynopsis a,
-.docs .constructorsynopsis a {
-    color:#267B0C;
-}
 
 #changelang {
     border: 0;
@@ -342,81 +340,57 @@ ul.chunklist_children {
 
 
 /* - Side Menu - */
-.docs .layout-menu {
-    width: 16.25em;
-}
-
 .docs .layout-menu ul.parent-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.docs .layout-menu ul.parent-menu-list li {
-    margin: 1.5em 0;
-}
-
-.docs .layout-menu ul.parent-menu-list > li:first-child {
+.docs .layout-menu ul.parent-menu-list > li {
     margin-top:0;
+    margin-bottom:0;
+    
+}
+.docs .layout-menu ul.parent-menu-list > li > a {
+    color:#000;
+    border:0;
 }
 .docs .layout-menu ul.parent-menu-list a {
-    color: #444;
-    margin: 0;
-    padding:0 0 0 .5em;
-    border: 0;
-    border-left: .25em solid #7F7FB2;
+    color: #333;
 }
 
-.docs .layout-menu ul.parent-menu-list a:hover,
-.docs .layout-menu ul.parent-menu-list li:last-child a {
-    color: #000;
-    border-left: .25em solid #666699;
+.docs .layout-menu ul.parent-menu-list a:hover {
+    color: #336;
+    border-color: #669;
+    text-shadow:0 0 .25em #fff;
 }
 
 .docs .layout-menu ul.child-menu-list {
     margin: 0;
-    padding:0 0 1.5em .25em;
-    border: 0;
+    padding:0 0 0 .25em;
 }
 
 .docs .layout-menu ul.child-menu-list li {
     list-style-type: none;
-    margin: 0 0 -1px .5em;
-    padding:0;
-    border: 0;
-    border-bottom: 1px dotted #aaa;
+    margin: 0;
 }
 
 .docs .layout-menu ul.child-menu-list a {
-    font-size: .75em;
-    line-height: 2;
-    color: black;
-    overflow: visible;
+    font-size: .875em;
+    line-height: 1.714285714;
+    border-bottom: 1px dotted #c1c1c1;
+    display:block;
+    padding-left:.5em;
 }
 
+.docs .layout-menu ul.child-menu-list .current {
+    font-weight:700;
+}
+.docs .layout-menu ul.child-menu-list .current a {
+    color:#000;
+}
 .docs .layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
-}
-
-body.docs #layout {
-    min-width:45em;
-    width:auto;
-    padding:0 3em 0 0;
-}
-
-.docs .layout-menu ul.child-menu-list a:hover,
-.docs .layout-menu ul.parent-menu-list li:last-child ul.child-menu-list a {
-    border-left: 0;
-}
-
-/* #layout needed, see http://news.php.net/php.webmaster/11884 */
-.docs #layout .layout-content,
-.docs #layout #usernotes {
-    margin-left: 19em;
-}
-
-.docs #usernotes {
-    margin-top:1.5em;
 }
 
 #changelang-langs {
@@ -454,4 +428,35 @@ div.soft-deprecation-notice blockquote.sidebar {
     margin: 0px;
     border: 0px solid #666600;
     color: #660000;
+}
+
+
+#breadcrumbs {
+    background:#f2f2f2;
+    border:1px solid #e6e6e6;
+    border-bottom-color:#dcdcdc;
+    margin:0 0 0.85714285714286em;
+    font-size:.875em;
+    line-height:1.71428571428571;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+#breadcrumbs .breadcrumbs-inner {
+    padding:.5em .75em;
+}
+#breadcrumbs ul {
+    padding:0;
+    margin:0;
+}
+#breadcrumbs li {
+    display:inline-block;
+}
+#breadcrumbs .divider {
+    padding:0 .25em;
+}
+#breadcrumbs a {
+    border:0;
+}
+#breadcrumbs li:last-child a {
+    color:#222;
 }

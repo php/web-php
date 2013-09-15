@@ -79,9 +79,9 @@ if (is_array($CONF_TEASER) && $CONF_TEASER) {
 require_once './Gateway/NewsFileSystemGateway.php';
 
 $NewsGateway = new NewsFileSystemGateway();
-$RecentNews = $NewsGateway->getArticlesForCategories(new ArrayIterator(array(
+$RecentNews = $NewsGateway->getArticlesForCategories(array(
     "frontpage"
-)), 2);
+), 4);
 
 ob_start();
 
@@ -98,6 +98,43 @@ $content = "
     $news
 </div>
 ";
+
+$intro = <<<EOF
+  <div class="row-fluid">
+    <div class="span9 blurb">
+      <p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
+      <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.</p>
+    </div>
+    <div class="background span3"></div>
+    <div class="span3">
+      <div class="download-php">
+        <h2>Download PHP</h2>
+
+EOF;
+if(!empty($RELEASES[5])) {
+    $releases = array_chunk($RELEASES[5], 2, $preserve_keys = TRUE);
+    foreach ($releases as $row) {
+        $intro .= "
+        <div class='row-fluid'>
+";
+        foreach ($row as $version => $release) {
+            $intro .= "
+          <div class='span6'>
+            <p><a class='download-link' href='/downloads.php#v$version'>$version</a></p>
+            <p class='notes'><a href='/ChangeLog-5.php#$version'>Release Notes</a></p>
+          </div>
+";
+        }
+        $intro .="
+        </div>
+";
+    }
+}
+$intro .= <<<EOF
+      </div>
+    </div>
+  </div>
+EOF;
 
 // Write out common header
 site_header("Hypertext Preprocessor",
@@ -125,21 +162,27 @@ site_header("Hypertext Preprocessor",
                 "title" => "PHP Release feed"
             ),
 
-        )
+        ),
+        'css' => array('home.css'),
+        'intro' => $intro
     )
 );
 
 // Print body of home page.
+print $content;
+
+ob_start();
 print_view('homepage/sidebar.php', array(
     'announcements' => $announcements
 ));
-print $content;
+$sidebar = ob_get_clean();
 
 // Print the common footer.
 site_footer(
     array(
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
-        'spanning-content' => $thanksTo
+        'spanning-content' => $thanksTo,
+        'sidebar' => $sidebar
     )
 );

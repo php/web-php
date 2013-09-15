@@ -3,14 +3,14 @@
 class HomepageNewsView {
 
     /**
-     * @var Traversable
+     * @var array
      */
     protected $articles;
 
     /**
-     * @param Traversable $articles
+     * @param array $articles
      */
-    public function __construct(Traversable $articles) {
+    public function __construct(array $articles) {
         $this->articles = $articles;
     }
 
@@ -51,9 +51,9 @@ class HomepageNewsView {
                 if ($article->hasCategory('conferences') || $article->hasCategory('cfp')) {
                     $event = " vevent";
                 }
-                echo "<div class='newsItem hentry{$event}''>
+                echo "<div class='newsItem hentry{$event}'>
                     <div class='newsImage'>{$image}</div>
-                    <h2 class='summary entry-title'><a name='{$id}' id='{$id}' href='{$permanentLink}' rel='bookmark' class='bookmark'>{$title}</a></h2>
+                    <h2 class='summary entry-title' id='$id'><a name='{$id}' href='{$permanentLink}' rel='bookmark' class='bookmark'>{$title}</a></h2>
                     <div class='entry-content description'>
                         <abbr class='published newsdate' title='{$publishedDate}''>{$newsDate}</abbr>
                         {$content}

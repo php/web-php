@@ -6,6 +6,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 $site_header_config = array(
     "current" => "community",
     "css" => array('calendar.css'),
+    "layout_span" => 12,
 );
 
 /*
