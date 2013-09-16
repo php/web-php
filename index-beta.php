@@ -182,7 +182,6 @@ site_footer(
     array(
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
-        'spanning-content' => $thanksTo,
         'sidebar' => $sidebar
     )
 );

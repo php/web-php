@@ -1,3 +1,7 @@
+<?php
+// Disable caching, annoying while developing
+$v = "?v=" .$_SERVER["REQUEST_TIME"];
+?>
     </section><!-- layout-content -->
     <?php
     if (!empty($config['spanning-content'])) {
