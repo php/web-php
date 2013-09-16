@@ -72,15 +72,6 @@ if (isset($shortname) && $shortname) {
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
-<?php if (!isset($_COOKIE['BetaWarning']) || filter_var($_COOKIE['BetaWarning'],FILTER_VALIDATE_BOOLEAN) == TRUE): ?>
-<div id="head-beta-warning">
-  <p id="beta-warning">
-    <span class="blurb">Welcome to the php.net beta site. If you want to revert back, <a href="?setbeta=0">click here</a></span>
-    <a href="#" id="beta-warning-close">X</a>
-  </p>
-</div>
-<?php endif;?>
-
 <nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
@@ -97,6 +88,15 @@ if (isset($shortname) && $shortname) {
     </div>
   </div>
 </nav>
+
+<?php if (!isset($_COOKIE['BetaWarning']) || filter_var($_COOKIE['BetaWarning'],FILTER_VALIDATE_BOOLEAN) == TRUE): ?>
+<div id="head-beta-warning">
+  <p id="beta-warning">
+    <span class="blurb">Welcome to the php.net beta site. If you want to revert back, <a href="?setbeta=0">click here</a></span>
+    <a href="#" id="beta-warning-close">X</a>
+  </p>
+</div>
+<?php endif;?>
 
 <?php if (!empty($config['intro'])):?>
 <div id="intro">

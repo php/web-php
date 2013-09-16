@@ -33,21 +33,12 @@ pre.info {
     font: 400 1em / 1.5 "Source Code Pro", monospace; 
 }
 
-#head-beta-warning + #head-nav {
-    top:2em;
-}
-body #head-beta-warning + #head-nav + #layout {
-    margin-top:2.75em;
-}
 #head-beta-warning {
     padding:.25em 0;
-    border:0;
-    background-color: #99C;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 999;
+    height:1.5em;
+    border-bottom:.125em solid #696;
+    background-color: #9c9;
+    color:#fff;
 }
 
 #beta-warning {
@@ -55,26 +46,21 @@ body #head-beta-warning + #head-nav + #layout {
     text-align: center;
 }
 
-#beta-warning .blurb {
-    color: #EEE;
-}
-
-#beta-warning .blurb a {
-    color: #333;
-}
-
+#beta-warning .blurb a,
 #beta-warning .blurb strong {
-    color: #333;
+    color: #fff;
+    border-color:#fff;
 }
 
 #beta-warning-close {
-    background-color: #333;
-    color: #EEE;
+    background-color: #696;
+    color: #fff;
     font-weight: bold;
     text-decoration: none;
-    margin: 0 0 0 1em;
+    margin: 0 0 0 .25em;
     width: 1.2em;
     height: 1.2em;
+    line-height:1.2em;
     padding: 0 0.375em;
     text-align: center;
     -moz-border-radius: 2px;
@@ -188,16 +174,14 @@ h4, h5, h6 {
 
 a:link,
 a:visited {
-    color: rgb(63, 67, 141);
-    border-bottom: 1px solid rgb(63, 67, 141);
-    border-bottom: 1px solid rgba(63, 67, 141, 0.5);
+    color: #369;
+    border-bottom: 1px solid #369;
 }
 
 a:hover,
 a:focus {
-    color: rgb(0, 17, 85);
-    border-bottom-color:rgb(0, 17, 85);
-    border-bottom-color:rgba(0, 17, 85, 0.5);
+    color: #693;
+    border-bottom-color:#693;
 }
 
 ul {
@@ -340,11 +324,10 @@ hr {
 }
 
 #usernotes .count {
-    background-color: #7F7FB2;
+    background-color: #669;
     color: white;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
     padding: 0.333333333em .5em;
     font-size: 0.666666667em;
     line-height:2;
@@ -415,16 +398,16 @@ hr {
 }
 
 #usernotes .note .text {
-    background-color: #f2f2f2;
-    border-top: .125em solid #dcdcdc;
+    background-color: #f0f0f0;
+    border-top: .125em solid #d6d6d6;
     padding: .625em .75em .75em;
     margin-top:.25em;
     -moz-border-radius:0 0 2px 2px;
     border-radius:0 0 2px 2px;
-    border-bottom:1px solid #e6e6e6;
+    border-bottom:1px solid #e3e3e3;
     box-shadow:
-        inset 2px 0 2px -2px #e6e6e6,
-        inset -2px 0 2px -2px #e6e6e6;
+        inset 2px 0 2px -2px #e3e3e3,
+        inset -2px 0 2px -2px #e3e3e3;
 }
 
 /* Vote arrow styles. */
@@ -612,8 +595,8 @@ aside.tips div.border {
 aside.tips div.inner {
     padding: .75em;
     background:#eeeef6;
-    border-left:1px solid #e6e6e6;
-    border-right:1px solid #e6e6e6;
+    border-left:1px solid #e3e3e3;
+    border-right:1px solid #e3e3e3;
     border-bottom:1px solid #d6d6dd;
     border-radius: 0 0 2px 2px;
 }
@@ -627,9 +610,9 @@ aside.tips div.inner {
 .layout-menu {
     float: left;
     padding:.5em .75em 1.5em;
-    background-color:#f2f2f2;
-    border: 1px solid #e6e6e6;
-    border-bottom-color:#dcdcdc;
+    background-color:#f0f0f0;
+    border: 1px solid #e3e3e3;
+    border-bottom-color:#d6d6d6;
     border-radius:2px;
 }
 

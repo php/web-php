@@ -16,21 +16,11 @@ $(document).ready(function() {
 
     // Ugh, cookie handling.
     var cookies = document.cookie.split(";");
-    var showBetaWarning = true;
-    for (var i = 0; i < cookies.length; i++) {
-        if (cookies[i].indexOf("BetaWarning=") != -1) {
-            showBetaWarning = false;
-            break;
-        }
-    }
-
-    var $headBetaWarning = $('#head-beta-warning'); // Cache for multiple references
 
     // Wire up the beta warning.
     $("#beta-warning-close").click(function(event) {
         event.preventDefault();
-        $('body').css('margin-top', 0);
-        $headBetaWarning.slideUp("fast", function(){$(this).remove()});
+        $('#head-beta-warning').slideUp("fast", function(){$(this).remove()});
 
         // Hide it for a month by default.
         var expiry = new Date();
@@ -38,14 +28,6 @@ $(document).ready(function() {
 
         document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
     });
-
-    if (showBetaWarning) {
-        $headBetaWarning.show();
-        $('body').css('margin-top', $headBetaWarning.outerHeight()+12);
-        $headBetaWarning.slideDown(300, function() {
-           $(this).find('.blurb').fadeIn('slow');
-        });
-    }
 
     var $docs = $('.docs');
     var $refsect1 = $docs.find('.refentry .refsect1');

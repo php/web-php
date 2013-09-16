@@ -20,8 +20,8 @@ body.docs #layout {
 .docs .methodname strong,
 .docs .methodname a,
 .docs .classsynopsis .classname {
-    color: #458;
-    border-color:#458;
+    color: #369;
+    border-color:#369;
 }
 
 .docs .refsect1 .parameter {
@@ -32,8 +32,7 @@ body.docs #layout {
 }
 
 .docs .parameter {
-    color: #447;
-    font-style:italic;
+    color: #369;
 }
 .docs .refsect1 code.parameter {
     font-weight:bold;
@@ -48,7 +47,7 @@ body.docs #layout {
 .docs .initializer,
 .docs .initializer code {
     font-style:italic !important;
-    color:#b14;
+    color:#936;
 }
 /* }}} */
 
@@ -137,7 +136,7 @@ body.docs #layout {
     margin:0;
 }
 .docs .dc-description {
-    color:#666;
+    color:#808080;
 }
 
 /* {{{ Parameter listing */
@@ -167,7 +166,7 @@ body.docs #layout {
 .docs .example-contents.screen {
     background-color: #fff;
     padding: .75em .625em;
-    border:1px solid #dcdcdc;
+    border:1px solid #d6d6d6;
 }
 .docs .refsect1 .example-contents > [class$="code"],
 .docs .refsect1 .example-contents.screen {
@@ -205,7 +204,7 @@ body.docs #layout {
     background-color: #ffffff;
 }
 .docs .doctable tbody tr:nth-child(even) {
-    background-color: #eeeef6;
+    background-color: #ebebf4;
 }
 
 .docs .doctable {
@@ -266,11 +265,23 @@ ul.chunklist_children {
 }
 
 .docs h1.refname {
-    color: #336;
+    color: #669;
     font-weight:bolder
 }
 .docs .refnamediv {
     position:relative;
+}
+
+.docs .refentry .refpurpose {
+    display:none;
+    border-radius:0 0 2px 2px;
+    padding: .75em .625em;
+    background-color:#F0F0F0;
+    border-top:.125em solid #808080;
+    border-bottom:1px solid #D6D6D6;
+    box-shadow:
+        inset 2px 0 2px -2px #D6D6D6,
+        inset -2px 0 2px -2px #D6D6D6;
 }
 
 .docs .refsect1 h3.title {
@@ -284,10 +295,10 @@ ul.chunklist_children {
 .docs .refsect1 {
     color: #333;
     border-top:0.125em solid #669;
-    border-bottom:1px solid #d6d6dd;
+    border-bottom:1px solid #CACAE2;
     box-shadow:
-        inset 2px 0 2px -2px #d6d6dd,
-        inset -2px 0 2px -2px #d6d6dd;
+        inset 2px 0 2px -2px #CACAE2,
+        inset -2px 0 2px -2px #CACAE2;
 }
 
 .docs .refsect1 {
@@ -297,7 +308,7 @@ ul.chunklist_children {
 .docs .classsynopsis,
 .docs div.refsect1 {
     position: relative;
-    background-color: #eeeef6;
+    background-color: #ebebf4;
     -moz-border-radius:0 0 2px 2px;
     border-radius:0 0 2px 2px;
     padding: .75em .625em;
@@ -311,8 +322,8 @@ ul.chunklist_children {
 .docs .fieldsynopsis .type,
 .docs .methodsynopsis .type,
 .docs .constructorsynopsis .type {
-    color:#092;
-    border-color:#092;
+    color:#693;
+    border-color:#693;
 }
 
 .docs .fieldsynopsis .modifier,
@@ -360,8 +371,8 @@ ul.chunklist_children {
 }
 
 .docs .layout-menu ul.parent-menu-list a:hover {
-    color: #336;
-    border-color: #669;
+    color: #693;
+    border-color: #693;
     text-shadow:0 0 .25em #fff;
 }
 
@@ -375,22 +386,28 @@ ul.chunklist_children {
     margin: 0;
 }
 
+.docs .layout-menu ul.child-menu-list .current a {
+    color:#669;
+    border-color:#669;
+}
 .docs .layout-menu ul.child-menu-list a {
     font-size: .875em;
     line-height: 1.714285714;
-    border-bottom: 1px dotted #c1c1c1;
+    border-bottom: 1px dotted #BDBDBD;
     display:block;
-    padding-left:.5em;
+    padding-left:.125em;
 }
 
 .docs .layout-menu ul.child-menu-list .current {
-    font-weight:700;
+    font-weight:bolder;
 }
-.docs .layout-menu ul.child-menu-list .current a {
-    color:#000;
+.docs .layout-menu ul.child-menu-list .current {
+    position:relative;
 }
 .docs .layout-menu ul.child-menu-list .current a:before {
     content:"\bb \20";
+    position:absolute;
+    left:-.675em;
 }
 
 #changelang-langs {
@@ -432,9 +449,10 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 #breadcrumbs {
-    background:#f2f2f2;
-    border:1px solid #e6e6e6;
-    border-bottom-color:#dcdcdc;
+    color:#888;
+    background:#f0f0f0;
+    border:1px solid #e3e3e3;
+    border-bottom-color:#d6d6d6;
     margin:0 0 0.85714285714286em;
     font-size:.875em;
     line-height:1.71428571428571;
@@ -454,9 +472,20 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs .divider {
     padding:0 .25em;
 }
-#breadcrumbs a {
-    border:0;
+#breadcrumbs a:link,
+#breadcrumbs a:visited {
+    color:#369;
+    border-width:0;
+    border-color:#369;
 }
 #breadcrumbs li:last-child a {
-    color:#222;
+    color:#666;
+    border-color:#999;
+}
+#breadcrumbs li:last-child a:hover,
+#breadcrumbs li:last-child a:focus,
+#breadcrumbs a:hover,
+#breadcrumbs a:focus {
+    color:#693;
+    border-color:#693;
 }
