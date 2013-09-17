@@ -94,35 +94,34 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 
 
-/* Right-hand sidebar */
-
-.home aside.tips h3.panel {
+/* {{{ Right-hand sidebar */
+.home aside.tips p.panel {
     margin:0.66666666666667em 0;
 }
 
-.home aside.tips h3.panel a {
+.home aside.tips p.panel a {
     background:#f0f0f0;
     color:#333;
     border:1px solid #e3e3e3;
     border-bottom-color:#d6d6d6;
     border-radius:2px;
     display: block;
-    padding: .625em 0.88888888888889em;
+    padding: .75em 1em;
 }
-.home aside.tips h3.panel a::after {
+.home aside.tips p.panel a::after {
     float:right;
     content:"»";
     color:#666;
 }
-.home aside.tips h3.panel a:hover,
-.home aside.tips h3.panel a:focus {
+.home aside.tips p.panel a:hover,
+.home aside.tips p.panel a:focus {
     background:#ebebf4;
     border-color:#dbdbeb;
     border-bottom-color:#cacae2;
     color:#000;
 }
-.home aside.tips h3.panel a:hover::after,
-.home aside.tips h3.panel a:focus::after {
+.home aside.tips p.panel a:hover::after,
+.home aside.tips p.panel a:focus::after {
     color:#333;
 }
 
@@ -136,6 +135,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     color:#f25050;
     border-bottom-color: #f25050;
 }
+/* }}} */
 
 .home-content #recentNewsEntries {
     position: relative;
