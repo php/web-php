@@ -20,7 +20,13 @@ $SIDEBAR_DATA = '
 ';
 */
 
-site_header("Mirroring The PHP Website", array("current" => "community"));
+site_header(
+    'Mirroring The PHP Website',
+    array(
+        'current' => 'community',
+        'layout_span' => 12,
+    )
+);
 
 // Get a minute to print out for the cron example
 function make_seed()

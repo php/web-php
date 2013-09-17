@@ -2,7 +2,13 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("Getting Help", array("current" => "help"));
+site_header(
+    'Getting Help',
+    array(
+        'current' => 'help',
+        'layout_span' => 12,
+    )
+);
 ?>
 
 <h1>Documentation</h1>

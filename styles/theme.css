@@ -1020,7 +1020,7 @@ body.downloads #layout .span6 {
   body.docs .row-fluid .layout-menu.span3 {
     width:18%;
   }
-  body.docs .row-fluid #layout-content {
+  body.docs .row-fluid #layout-content.span9 {
     width:81%;
     margin-left:1%;
   }

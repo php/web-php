@@ -7,7 +7,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 
 function exit_with_pretty_error($title, $header, $msg) {
   if ($title) {
-    site_header($title, array("noindex"));
+    site_header($title, array("noindex", 'layout_span' => 12));
   }
   echo '<h2>' .$header. '</h2>';
   echo '<p>' .$msg. '</p>';
@@ -55,7 +55,14 @@ if (is_array($data)) {
 $res = unserialize($data);
 
 // HTTP status line is passed on, signifies an error
-site_header('Search results', array("noindex", "current" => "docs"));
+site_header(
+    'Search results',
+    array(
+        'noindex',
+        'current' => 'docs',
+        'layout_span' => 12,
+    )
+);
 
 if (!is_array($res)) {
   exit_with_pretty_error(null, 'Internal error', 'Please try again later');
