@@ -1,9 +1,5 @@
 /* vim: set et ts=4 sw=4 fdm=marker: : */
 
-body.docs #layout {
-   margin-top:.75em;
-}
-
 .docs .refsect1 > *:last-child {
     margin-bottom:0;
 }
