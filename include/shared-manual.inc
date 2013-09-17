@@ -579,6 +579,8 @@ function manual_setup_beta($setup) {
         if(strpos($entry[1], '::') !== false && strpos($entry[1], ' ') === false) {
             list($classname, $methodname) = explode('::', $entry[1]);
         }
+        //add zero-width spaces to allow line-breaks at various characters
+        $methodname = str_replace(array('-','_'), array('-&#8203;','_&#8203;'), $methodname);
         $siblings[] = array(
             "title" => $methodname,
             "link"  => $entry[0],
