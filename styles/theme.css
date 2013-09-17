@@ -499,72 +499,17 @@ div.phpcode span.string {
 }
 
 .warn {
-    padding: 10px 20px;
-    margin: 1em 2em 1.3em;
-    margin-right: 0.8em;
-    border-top: 3px solid #ff4d4d;
-    background-color: #EFEFEF;
+    padding: .75em 1em;
+    margin: 1.5em 0 1.5em 1.5em;
+    border-top: .1875em solid #669;
+    background-color: #f0f0f0;
+    border-radius: 0 0 2px 2px;
 }
 pre.info {
     border: 1px solid #ddd;
     margin: 1em 2em 1.3em;
     margin-right: 0.8em;
     background-color: #efefef;
-}
-
-/**
- * Mega drop-down menu
- */
-
-#mega-drop-down {
-    background-image: url("/images/tweed.png");
-    border-color: #9999CC;
-}
-
-#mega-drop-down div.children {
-    border-bottom-width: .5em;
-    border-bottom-style: solid;
-    padding-bottom: 1em;
-}
-
-#mega-drop-down div.children-1 {
-    width: 960px;
-    margin: 0 auto;
-}
-
-#mega-drop-down dl, #mega-drop-down ul {
-    float: left;
-    width: 225px;
-    padding-right: 15px;
-}
-
-#mega-drop-down dt, #mega-drop-down li {
-    color: #eee;
-    font-weight: bold;
-    margin-top: 1em;
-}
-
-#mega-drop-down dd {
-    padding: 0 0 0 10px;
-    margin: 0;
-    font-size:.875em;
-    line-height:1.714285714;
-}
-
-#mega-drop-down a {
-    display: block;
-    color: #ccc;
-    border-bottom: none;
-}
-
-#mega-drop-down dt a {
-    color: #eee;
-}
-
-#mega-drop-down a:hover,
-#mega-drop-down a:focus {
-    color: #FFF;
-    border-bottom: none;
 }
 
 /* {{{ The anchor for section headers */
@@ -971,8 +916,8 @@ em, strong {
     display:none;
     text-decoration:none;
     position:fixed;
-    bottom:12px;
-    right:50px;
+    bottom:.75em;
+    right:.75em;
     overflow:hidden;
     width:43px;
     height:43px;
