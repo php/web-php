@@ -206,7 +206,8 @@ function i2c_realip()
         for ($i = 0; $i < count($ips); $i++) {
             // Skip RFC 1918 IP's 10.0.0.0/8, 172.16.0.0/12 and
             // 192.168.0.0/16
-            if (!preg_match('/^(?:10|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i])) {
+            // Also skip RFC 6598 IP's
+            if (!preg_match('/^(?:10|100\.(?:6[4-9]|[7-9]\d|1[01]\d|12[0-7])|172\.(?:1[6-9]|2\d|3[01])|192\.168)\./', $ips[$i])) {
                 if (version_compare(phpversion(), "5.0.0", ">=")) {
                     if (ip2long($ips[$i]) != false) {
                         $ip = $ips[$i];
