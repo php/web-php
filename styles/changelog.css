@@ -1,21 +1,15 @@
 /* Changelog pages. */
-h3 {
-    /* Fake the <hr> above headings that we used to have before rejigging the
-     * NEWS format. */
-    border-top: solid 0.2em #99C;
-    line-height: 2em;
-    margin-top: 1.5em;
-    padding-top: 1.25em;
+section.version {
+    border-top: solid 0.1875em #99C;
+    margin: .75em 0;
+    padding: .75em 0;
 }
 
-hr + a[name] + h3 {
-    /* Remove the fake <hr> border if we actually have a <hr>. */
-    border-top: 0;
-    margin-top: 0;
-    padding-top: 0;
+section.version > :last-child {
+    margin-bottom:0;
 }
 
-b {
+section.version b {
     /* Not entirely clear how <b> became the enclosing element for dates, but
      * whatever. We'll use the same styling as dates in the news archive,
      * except without the dotted border (since they're not actual <abbr>

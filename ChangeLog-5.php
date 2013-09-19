@@ -2,7 +2,7 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-5.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 5 ChangeLog", array("current" => "docs", 'css' => array('changelog.css')));
+site_header("PHP 5 ChangeLog", array("current" => "docs", 'css' => array('changelog.css'), 'layout_span' => 12));
 function bugfix($number) { echo "Fixed bug "; bugl($number); }
 function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
 function peclbugfix($number) { echo "Fixed PECL bug "; bugl($number); }
@@ -11,7 +11,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
-<a name="5.5.4"></a><!-- {{{ 5.5.4 -->
+<section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
 <b>19-Sep-2013</b>
 <ul><li>Core:
@@ -54,9 +54,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li> Fix issue with return types of password API helper functions. Found via static analysis by cjones. (Anthony Ferrara) </li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.5.3"></a><!-- {{{ 5.5.3 -->
+<section class="version" id="5.5.3"><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>
 <b>22-Aug-2013</b>
 <ul><li>Openssl:
@@ -64,9 +64,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Fixed UMR in fix for CVE-2013-4248.</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.19"></a><!-- {{{ 5.4.19 -->
+<section class="version" id="5.4.19"><!-- {{{ 5.4.19 -->
 <h3>Version 5.4.19</h3>
 <b>22-Aug-2013</b>
 <ul><li>Core:
@@ -78,9 +78,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Fixed UMR in fix for CVE-2013-4248.</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.5.2"></a><!-- {{{ 5.5.2 -->
+<section class="version" id="5.5.2"><!-- {{{ 5.5.2 -->
 <h3>Version 5.5.2</h3>
 <b>15-Aug-2013</b>
 <ul><li>Core:
@@ -141,9 +141,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(65268); ?> (select() implementation uses outdated tick API).</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.18"></a><!-- {{{ 5.4.18 -->
+<section class="version" id="5.4.18"><!-- {{{ 5.4.18 -->
 <h3>Version 5.4.18</h3>
 <b>15-Aug-2013</b>
 <ul><li>Core:
@@ -240,10 +240,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(65236); ?> (heap corruption in xml parser, CVE-2013-4113).</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 
-<a name="5.5.1"></a><!-- {{{ 5.5.1 -->
+<section class="version" id="5.5.1"><!-- {{{ 5.5.1 -->
 <h3>Version 5.5.1</h3>
 <b>18-Jul-2013</b>
 <ul><li>Core:
@@ -323,9 +323,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.27"></a><!-- {{{ 5.3.27 -->
+<section class="version" id="5.3.27"><!-- {{{ 5.3.27 -->
 <h3>Version 5.3.27</h3>
 <b>11-Jul-2013</b>
 <ul><li>Core:
@@ -361,9 +361,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(65236); ?> (heap corruption in xml parser).</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.5.0"></a><!-- {{{ 5.5.0 -->
+<section class="version" id="5.5.0"><!-- {{{ 5.5.0 -->
 <h3>Version 5.5.0</h3>
 <b>20-Jun-2013</b>
 <ul>
@@ -870,9 +870,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.17"></a><!-- {{{ 5.4.17 -->
+<section class="version" id="5.4.17"><!-- {{{ 5.4.17 -->
 <h3>Version 5.4.17</h3>
 <b>04-Jul-2013</b>
 <ul><li>Core:
@@ -929,9 +929,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(64997); ?> (Segfault while using RecursiveIteratorIterator on 64-bits systems).</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.16"></a><!-- {{{ 5.4.16 -->
+<section class="version" id="5.4.16"><!-- {{{ 5.4.16 -->
 <h3>Version 5.4.16</h3>
 <b>06-Jun-2013</b>
 <ul>
@@ -989,9 +989,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.26"></a><!-- {{{ 5.3.26 -->
+<section class="version" id="5.3.26"><!-- {{{ 5.3.26 -->
 <h3>Version 5.3.26</h3>
 <b>06-Jun-2013</b>
 <ul>
@@ -1032,10 +1032,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 
-<a name="5.4.15"></a><!-- {{{ 5.4.15 -->
+<section class="version" id="5.4.15"><!-- {{{ 5.4.15 -->
 <h3>Version 5.4.15</h3>
 <b>09-May-2013</b>
 <ul>
@@ -1060,10 +1060,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 
-<a name="5.3.25"></a><!-- {{{ 5.3.25 -->
+<section class="version" id="5.3.25"><!-- {{{ 5.3.25 -->
 <h3>Version 5.3.25</h3>
 <b>09-May-2013</b>
 <ul>
@@ -1083,10 +1083,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li> <?php bugfix(64342); ?> (ZipArchive::addFile() has to check for file existence).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 
-<a name="5.4.14"></a><!-- {{{ 5.4.14 -->
+<section class="version" id="5.4.14"><!-- {{{ 5.4.14 -->
 <h3>Version 5.4.14</h3>
 <b>11-April-2013</b>
 <ul>
@@ -1118,9 +1118,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li><?php bugfix(64452); ?> (Zip crash intermittently). (Anatol)
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.24"></a><!-- {{{ 5.3.24 -->
+<section class="version" id="5.3.24"><!-- {{{ 5.3.24 -->
 <h3>Version 5.3.24</h3>
 <b>11-April-2013</b>
 <ul>
@@ -1151,9 +1151,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li><?php bugfix(64452); ?> (Zip crash intermittently).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.13"></a><!-- {{{ 5.4.13 -->
+<section class="version" id="5.4.13"><!-- {{{ 5.4.13 -->
 <h3>Version 5.4.13</h3>
 <b>14-March-2013</b>
 <ul>
@@ -1203,9 +1203,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li><?php bugfix(64124); ?> (IPv6 malformed).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.23"></a><!-- {{{ 5.3.23 -->
+<section class="version" id="5.3.23"><!-- {{{ 5.3.23 -->
 <h3>Version 5.3.23</h3>
 <b>14-March-2013</b>
 <ul>
@@ -1227,9 +1227,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
  <li><?php bugfix(52861); ?> (unset fails with ArrayObject and deep arrays).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.12"></a><!-- {{{ 5.4.12 -->
+<section class="version" id="5.4.12"><!-- {{{ 5.4.12 -->
 <h3>Version 5.4.12</h3>
 <b>21-February-2013</b>
 <ul>
@@ -1291,9 +1291,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63916); ?> (PDO::PARAM_INT casts to 32bit int internally even on 64bit builds in pdo_sqlite).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.22"></a><!-- {{{ 5.3.22 -->
+<section class="version" id="5.3.22"><!-- {{{ 5.3.22 -->
 <h3>Version 5.3.22</h3>
 <b>21-February-2013</b>
 <ul>
@@ -1331,9 +1331,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(64106); ?> (Segfault on SplFixedArray[][x] = y when extended). </li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.11"></a><!-- {{{ 5.4.11 -->
+<section class="version" id="5.4.11"><!-- {{{ 5.4.11 -->
 <h3>Version 5.4.11</h3>
 <b>17-January-2013</b>
 <ul>
@@ -1376,9 +1376,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.21"></a><!-- {{{ 5.3.21 -->
+<section class="version" id="5.3.21"><!-- {{{ 5.3.21 -->
 <h3>Version 5.3.21</h3>
 <b>17-January-2013</b>
 <ul>
@@ -1397,11 +1397,11 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(55438); ?> (Curlwapper is not sending http header randomly).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 
 
-<a name="5.4.10"></a><!-- {{{ 5.4.10 -->
+<section class="version" id="5.4.10"><!-- {{{ 5.4.10 -->
 <h3>Version 5.4.10</h3>
 <b>20-December-2012</b>
 <ul>
@@ -1500,9 +1500,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(49341); ?> (Add SO_REUSEPORT support for socket_set_option()).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.20"></a><!-- {{{ 5.3.20 -->
+<section class="version" id="5.3.20"><!-- {{{ 5.3.20 -->
 <h3>Version 5.3.20</h3>
 <b>20-December-2012</b>
 <ul>
@@ -1579,10 +1579,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
 
-<a name="5.4.9"></a><!-- {{{ 5.4.9 -->
+<section class="version" id="5.4.9"><!-- {{{ 5.4.9 -->
 <h3>Version 5.4.9</h3>
 <b>22-November-2012</b>
 <ul>
@@ -1675,9 +1675,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63399); ?>  (ReflectionClass::getTraitAliases() incorrectly resolves traitnames).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.19"></a><!-- {{{ 5.3.19 -->
+<section class="version" id="5.3.19"><!-- {{{ 5.3.19 -->
 <h3>Version 5.3.19</h3>
 <b>22-November-2012</b>
 <ul>
@@ -1752,9 +1752,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63240); ?> (stream_get_line() return contains delimiter string).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.8"></a><!-- {{{ 5.4.8 -->
+<section class="version" id="5.4.8"><!-- {{{ 5.4.8 -->
 <h3>Version 5.4.8</h3>
 <b>18-October-2012</b>
 <ul>
@@ -1858,9 +1858,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(63000); ?> (MCAST_JOIN_GROUP on OSX is broken, merge of PR 185 by Igor Wiedler).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.18"></a><!-- {{{ 5.3.18 -->
+<section class="version" id="5.3.18"><!-- {{{ 5.3.18 -->
 <h3>Version 5.3.18</h3>
 <b>18-October-2012</b>
 <ul>
@@ -1914,9 +1914,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Bug #62987 (Assigning to ArrayObject[null][something] overrides all undefined variables).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.7"></a><!-- {{{ 5.4.7 -->
+<section class="version" id="5.4.7"><!-- {{{ 5.4.7 -->
 <h3>Version 5.4.7</h3>
 <b>13-September-2012</b>
 <ul>
@@ -2019,9 +2019,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     <li>Merged PR 121 by minitux to add support for slow request counting on PHP FPM status page</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.17"></a><!-- {{{ 5.3.17 -->
+<section class="version" id="5.3.17"><!-- {{{ 5.3.17 -->
 <h3>Version 5.3.17</h3>
 <b>13-September-2012</b>
 <ul>
@@ -2091,9 +2091,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     <li><?php bugfix(62838); ?> (enchant_dict_quick_check() destroys zval, but fails to initialize it)</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.6"></a><!-- {{{ 5.4.6 -->
+<section class="version" id="5.4.6"><!-- {{{ 5.4.6 -->
 <h3>Version 5.4.6</h3>
 <b>16-August-2012</b>
 <ul>
@@ -2190,9 +2190,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(55544); ?> (ob_gzhandler always conflicts with zlib.output_compression).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.16"></a><!-- {{{ 5.3.16 -->
+<section class="version" id="5.3.16"><!-- {{{ 5.3.16 -->
 <h3>Version 5.3.16</h3>
 <b>16-August-2012</b>
 <ul>
@@ -2255,9 +2255,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(62616); ?> (ArrayIterator::count() from IteratorIterator instance gives Segmentation fault).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.5"></a><!-- {{{ 5.4.5 -->
+<section class="version" id="5.4.5"><!-- {{{ 5.4.5 -->
 <h3>Version 5.4.5</h3>
 <b>19-July-2012</b>
 <ul>
@@ -2379,9 +2379,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Upgraded libzip to 0.10.</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.15"></a><!-- {{{ 5.3.15 -->
+<section class="version" id="5.3.15"><!-- {{{ 5.3.15 -->
 <h3>Version 5.3.15</h3>
 <b>19-July-2012</b>
 <ul>
@@ -2489,9 +2489,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li>Upgraded libzip to 0.10</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.4"></a><!-- {{{ 5.4.4 -->
+<section class="version" id="5.4.4"><!-- {{{ 5.4.4 -->
 <h3>Version 5.4.4</h3>
 <b>06-June-2012</b>
 <ul>
@@ -2615,9 +2615,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(60761); ?> (zlib.output_compression fails on refresh)</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.14"></a><!-- {{{ 5.3.14 -->
+<section class="version" id="5.3.14"><!-- {{{ 5.3.14 -->
 <h3>Version 5.3.14</h3>
 <b>06-June-2012</b>
 <ul>
@@ -2704,9 +2704,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61961); ?> (file_get_contents leaks when access empty file with maxlen set)</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.3"></a><!-- {{{ 5.4.3 -->
+<section class="version" id="5.4.3"><!-- {{{ 5.4.3 -->
 <h3>Version 5.4.3</h3>
 <b>08-May-2012</b>
 
@@ -2714,36 +2714,36 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61807); ?> Buffer Overflow in apache_request_headers, CVE-2012-2329.</li>
   <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.13"></a><!-- {{{ 5.3.13 -->
+<section class="version" id="5.3.13"><!-- {{{ 5.3.13 -->
 <h3>Version 5.3.13</h3>
 <b>08-May-2012</b>
 
 <ul>
   <li><?php bugfix(61910); ?> Improve fix for PHP-CGI query string parameter vulnerability, CVE-2012-2311.</li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.2"></a><!-- {{{ 5.4.2 -->
+<section class="version" id="5.4.2"><!-- {{{ 5.4.2 -->
 <h3>Version 5.4.2</h3>
 <b>03-May-2012</b>
 
 <ul>
   <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.12"></a><!-- {{{ 5.3.12 -->
+<section class="version" id="5.3.12"><!-- {{{ 5.3.12 -->
 <h3>Version 5.3.12</h3>
 <b>03-May-2012</b>
 
 <ul>
   <li><?php bugfix(61910); ?> Fix PHP-CGI query string parameter vulnerability, CVE-2012-1823.</li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.1"></a><!-- {{{ 5.4.1 -->
+<section class="version" id="5.4.1"><!-- {{{ 5.4.1 -->
 <h3>Version 5.4.1</h3>
 <b>26-Apr-2012</b>
 
@@ -2814,9 +2814,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     paths).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.11"></a><!-- {{{ 5.3.11 -->
+<section class="version" id="5.3.11"><!-- {{{ 5.3.11 -->
 <h3>Version 5.3.11</h3>
 <b>26-Apr-2012</b>
 
@@ -3054,9 +3054,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61139); ?> (gzopen leaks when specifying invalid mode).</li>
 </ul>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.4.0"></a><!-- {{{ 5.4.0 -->
+<section class="version" id="5.4.0"><!-- {{{ 5.4.0 -->
 <h3>Version 5.4.0</h3>
 <b>01-Mar-2012</b>
 
@@ -3682,9 +3682,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 
 </hr>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.10"></a><!-- {{{ 5.3.10 -->
+<section class="version" id="5.3.10"><!-- {{{ 5.3.10 -->
 <h3>Version 5.3.10</h3>
 <b>02-Feb-2012</b>
 
@@ -3698,9 +3698,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 
 </hr>
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.9"></a><!-- {{{ 5.3.9 -->
+<section class="version" id="5.3.9"><!-- {{{ 5.3.9 -->
 <h3>Version 5.3.9</h3>
 <b>10-Jan-2012</b>
 
@@ -4030,10 +4030,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.8"></a><!-- {{{ 5.3.8 -->
+<section class="version" id="5.3.8"><!-- {{{ 5.3.8 -->
 <h3>Version 5.3.8</h3>
 <b>23-Aug-2011</b>
 
@@ -4053,10 +4052,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.7"></a><!-- {{{ 5.3.7 -->
+<section class="version" id="5.3.7"><!-- {{{ 5.3.7 -->
 <h3>Version 5.3.7</h3>
 <b>18-Aug-2011</b>
 
@@ -4374,10 +4372,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.6"></a><!-- {{{ 5.3.6 -->
+<section class="version" id="5.3.6"><!-- {{{ 5.3.6 -->
 <h3>Version 5.3.6</h3>
 <b>17-Mar-2011</b>
 
@@ -4630,10 +4627,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.5"></a><!-- {{{ 5.3.5 -->
+<section class="version" id="5.3.5"><!-- {{{ 5.3.5 -->
 <h3>Version 5.3.5</h3>
 <b>06-Jan-2011</b>
 <ul>
@@ -4642,10 +4638,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.17"></a><!-- {{{ 5.2.17 -->
+<section class="version" id="5.2.17"><!-- {{{ 5.2.17 -->
 <h3>Version 5.2.17</h3>
 <b>06-Jan-2011</b>
 <ul>
@@ -4654,10 +4649,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.16"></a><!-- {{{ 5.2.16 -->
+<section class="version" id="5.2.16"><!-- {{{ 5.2.16 -->
 <h3>Version 5.2.16</h3>
 <b>16-Dec-2010</b>
 <ul>
@@ -4667,10 +4661,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.4"></a><!-- {{{ 5.3.4 -->
+<section class="version" id="5.3.4"><!-- {{{ 5.3.4 -->
 <h3>Version 5.3.4</h3>
 <b>09-Dec-2010</b>
 
@@ -5115,10 +5108,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.15"></a><!-- {{{ 5.2.15 -->
+<section class="version" id="5.2.15"><!-- {{{ 5.2.15 -->
 <h3>Version 5.2.15</h3>
 <b>08-Dec-2010</b>
 <ul>
@@ -5144,10 +5136,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<hr />
-<a name="5.3.3"></a><!-- {{{ 5.3.3 -->
+<section class="version" id="5.3.3"><!-- {{{ 5.3.3 -->
 <h3>Version 5.3.3</h3>
 <b>22-Jul-2010</b>
 <ul>
@@ -5328,10 +5319,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(33210); ?> (getimagesize() fails to detect width/height on certain JPEGs). (Ilia)</li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.14"></a><!-- {{{ 5.2.14 -->
+<section class="version" id="5.2.14"><!-- {{{ 5.2.14 -->
 <h3>Version 5.2.14</h3>
 <b>22-Jul-2010</b>
 <ul>
@@ -5416,10 +5406,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(23229); ?> (syslog() truncates messages). (Adam)</li>
 </ul>
 
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.2"></a><!-- {{{ 5.3.2 -->
+<section class="version" id="5.3.2"><!-- {{{ 5.3.2 -->
 <h3>Version 5.3.2</h3>
 <b>04-Mar-2010</b>
 <ul>
@@ -5580,10 +5569,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(44098); ?> (imap_utf8() returns only capital letters). (steffen at dislabs dot de, Pierre)</li>
 <li><?php bugfix(34852); ?> (Failure in odbc_exec() using oracle-supplied odbc driver). (tim dot tassonis at trivadis dot com)</li>
 </ul>
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.13"></a><!-- {{{ 5.2.13 -->
+<section class="version" id="5.2.13"><!-- {{{ 5.2.13 -->
 <h3>Version 5.2.13</h3>
 <b>25-Feb-2010</b>
 <ul>
@@ -5645,10 +5633,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(44827); ?> (define() allows :: in constant names). (Ilia)</li>
 
 </ul>
-<hr />
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.3.1"></a><!-- {{{ 5.3.1 -->
+<section class="version" id="5.3.1"><!-- {{{ 5.3.1 -->
 <h3>Version 5.3.1</h3>
 <b>19-Nov-2009</b>
 <ul>
@@ -5809,11 +5796,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php peclbugfix(16842) ?> (oci_error return false when NO_DATA_FOUND is raised). (Chris Jones)</li>
 
 </ul>
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.3.0"></a><!-- {{{ 5.3.0 -->
+<section class="version" id="5.3.0"><!-- {{{ 5.3.0 -->
 <h3>Version 5.3.0</h3>
 <b>30-Jun-2009</b>
 <ul>
@@ -6525,11 +6510,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.12"></a><!-- {{{ 5.2.12 -->
+<section class="version" id="5.2.12"><!-- {{{ 5.2.12 -->
 <h3>Version 5.2.12</h3>
 <b>17-Dec-2009</b>
 <ul>
@@ -6610,11 +6593,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(34852); ?> (Failure in odbc_exec() using oracle-supplied odbc driver). (tim dot tassonis at trivadis dot com)</li>
 
 </ul>
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.11"></a><!-- {{{ 5.2.11 -->
+<section class="version" id="5.2.11"><!-- {{{ 5.2.11 -->
 <h3>Version 5.2.11</h3>
 <b>16-Sep-2009</b>
 <ul>
@@ -6702,11 +6683,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.10"></a><!-- {{{ 5.2.10 -->
+<section class="version" id="5.2.10"><!-- {{{ 5.2.10 -->
 <h3>Version 5.2.10</h3>
 <b>18-Jun-2009</b>
 <ul>
@@ -6825,11 +6804,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
     <li><?php bugfix(42143); ?> (The constant NAN is reported as 0 on Windows) (Kanwaljeet Singla, Venkat Raman Don)</li>
     <li><?php bugfix(38805); ?> (PDO truncates text from SQL Server text data type field). (Steph)</li>
 </ul>
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.9"></a><!-- {{{ 5.2.9 -->
+<section class="version" id="5.2.9"><!-- {{{ 5.2.9 -->
 <h3>Version 5.2.9</h3>
 <b>26-Feb-2009</b>
 <ul>
@@ -6899,22 +6876,18 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.8"></a><!-- {{{ 5.2.8 -->
+<section class="version" id="5.2.8"><!-- {{{ 5.2.8 -->
 <h3>Version 5.2.8</h3>
 <b>08-Dec-2008</b>
 <ul>
 	<li>Reverted bug fix <?php bugfix(42718); ?> that broke magic_quotes_gpc (Scott)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.7"></a><!-- {{{ 5.2.7 -->
+<section class="version" id="5.2.7"><!-- {{{ 5.2.7 -->
 <h3>Version 5.2.7</h3>
 <b>04-Dec-2008</b>
 <ul>
@@ -7107,11 +7080,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.6"></a><!-- {{{ 5.2.6 -->
+<section class="version" id="5.2.6"><!-- {{{ 5.2.6 -->
 <h3>Version 5.2.6</h3>
 <b>01-May-2008</b>
 <ul>
@@ -7258,9 +7229,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.2.5"></a><!-- {{{ 5.2.5 -->
+<section class="version" id="5.2.5"><!-- {{{ 5.2.5 -->
 <h3>Version 5.2.5</h3>
 <b>08-Nov-2007</b>
 <ul>
@@ -7343,11 +7314,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.4"></a><!-- {{{ 5.2.4 -->
+<section class="version" id="5.2.4"><!-- {{{ 5.2.4 -->
 <h3>Version 5.2.4</h3>
 <b>30-Aug-2007</b>
 <ul>
@@ -7517,11 +7486,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.3"></a><!-- {{{ 5.2.3 -->
+<section class="version" id="5.2.3"><!-- {{{ 5.2.3 -->
 <h3>Version 5.2.3</h3>
 <b>31-May-2007</b>
 <ul>
@@ -7595,11 +7562,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.2"></a><!-- {{{ 5.2.2 -->
+<section class="version" id="5.2.2"><!-- {{{ 5.2.2 -->
 <h3>Version 5.2.2</h3>
 <b>03-May-2007</b>
 <ul>
@@ -7794,11 +7759,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php peclbugfix(10194); ?> (crash in Oracle client when memory limit reached in the callback). (Tony)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.1"></a><!-- {{{ 5.2.1 -->
+<section class="version" id="5.2.1"><!-- {{{ 5.2.1 -->
 <h3>Version 5.2.1</h3>
 <b>08-Feb-2007</b>
 <ul>
@@ -8069,11 +8032,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.2.0"></a><!-- {{{ 5.2.0 -->
+<section class="version" id="5.2.0"><!-- {{{ 5.2.0 -->
 <h3>Version 5.2.0</h3>
 <b>02-Nov-2006</b>
 <ul>
@@ -8447,11 +8408,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.1.6"></a><!-- {{{ 5.1.6 -->
+<section class="version" id="5.1.6"><!-- {{{ 5.1.6 -->
 <h3>Version 5.1.6</h3>
 <b>24-Aug-2006</b>
 <ul>
@@ -8459,9 +8418,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(38488); ?> (Access to "php://stdin" and family crashes PHP on win32). (Dmitry)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.5"></a><!-- {{{ 5.1.5 -->
+<section class="version" id="5.1.5"><!-- {{{ 5.1.5 -->
 <h3>Version 5.1.5</h3>
 <b>17-Aug-2006</b>
 <ul>
@@ -8486,9 +8445,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(37256); ?>(php-fastcgi doesn't handle connection abort). (Dmitry)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.4"></a><!-- {{{ 5.1.4 -->
+<section class="version" id="5.1.4"><!-- {{{ 5.1.4 -->
 <h3>Version 5.1.4</h3>
 <b>04-May-2006</b>
 <ul>
@@ -8502,9 +8461,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 	<li><?php bugfix(35552); ?>(crash when pdo_odbc prepare fails). (Wez).</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.3"></a><!-- {{{ 5.1.3 -->
+<section class="version" id="5.1.3"><!-- {{{ 5.1.3 -->
 <h3>Version 5.1.3</h3>
 <b>02-May-2006</b>
 <ul>
@@ -8698,9 +8657,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(29476); ?> (sqlite_fetch_column_types() locks the database forever). (Ilia)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.2"></a><!-- {{{ 5.1.2 -->
+<section class="version" id="5.1.2"><!-- {{{ 5.1.2 -->
 <h3>Version 5.1.2</h3>
 <b>12-Jan-2006</b>
 <ul>
@@ -8823,9 +8782,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(27678); ?> (number_format() crashes with large numbers). (Marcus)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.1"></a><!-- {{{ 5.1.1 -->
+<section class="version" id="5.1.1"><!-- {{{ 5.1.1 -->
 <h3>Version 5.1.1</h3>
 <b>28-Nov-2005</b>
 <ul>
@@ -8846,9 +8805,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(35170); ?> (PHP_AUTH_DIGEST differs under Apache 1.x and 2.x). (Ilia)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.1.0"></a><!-- {{{ 5.1.0 -->
+<section class="version" id="5.1.0"><!-- {{{ 5.1.0 -->
 <h3>Version 5.1.0</h3>
 <b>24-Nov-2005</b>
 <ul>
@@ -9389,9 +9348,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Fixed bugs <?php bugl(14561); ?>, <?php bugl(20382); ?>, <?php bugl(26090); ?>, <?php bugl(26320); ?>, <?php bugl(28024); ?>, <?php bugl(30532); ?>, <?php bugl(32086); ?>, <?php bugl(32270); ?>, <?php bugl(32555); ?>, <?php bugl(32588); ?>, <?php bugl(33056); ?> (strtotime() related bugs). (Derick)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.0.5"></a><!-- {{{ 5.0.5 -->
+<section class="version" id="5.0.5"><!-- {{{ 5.0.5 -->
 <h3>Version 5.0.5</h3>
 <b>05-Sep-2005</b>
 <ul>
@@ -9627,9 +9586,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>Abstract private methods are no longer allowed (Stas)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.0.4"></a><!-- {{{ 5.0.4 -->
+<section class="version" id="5.0.4"><!-- {{{ 5.0.4 -->
 <h3>Version 5.0.4</h3>
 <b>31-Mar-2005</b>
 <ul>
@@ -9816,9 +9775,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   (Jani)</li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.0.3"></a><!-- {{{ 5.0.3 -->
+<section class="version" id="5.0.3"><!-- {{{ 5.0.3 -->
 <h3>Version 5.0.3</h3>
 <b>15-Dec-2004</b>
 <ul>
@@ -9890,9 +9849,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(27183); ?> (Userland stream wrapper segfaults on stream_write).  (Christian) </li>
 </ul>
 
-<!-- }}} -->
+<!-- }}} --></section>
 
-<a name="5.0.2"></a><!-- {{{ 5.0.2 -->
+<section class="version" id="5.0.2"><!-- {{{ 5.0.2 -->
 <h3>Version 5.0.2</h3>
 <b>23-Sep-2004</b>
 <ul>
@@ -9934,11 +9893,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li> <?php bugfix(26737); ?> (private/protected properties not serialized when user declared method __sleep() exists). E_NOTICE thrown when __sleep() returns name of non-existing member. (Andrey, Curt)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.1"></a><!-- {{{ 5.0.1 -->
+<section class="version" id="5.0.1"><!-- {{{ 5.0.1 -->
 <h3>Version 5.0.1</h3>
 <b>12-Aug-2004</b>
 <ul>
@@ -9985,11 +9942,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(28464); ?> (catch() does not catch exceptions by interfaces). (Marcus) </li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0"></a><!-- {{{ 5.0.0 -->
+<section class="version" id="5.0.0"><!-- {{{ 5.0.0 -->
 <h3>Version 5.0.0</h3>
 <b>13-Jul-2004</b>
 <ul>
@@ -10016,11 +9971,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(28325); ?> (Circular references not properly serialised). (Moriyoshi)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0RC3"></a><!-- {{{ 5.0.0RC3 -->
+<section class="version" id="5.0.0RC3"><!-- {{{ 5.0.0RC3 -->
 <h3>Version 5.0.0 Release Candidate 3</h3>
 <b>8-Jun-2004</b>
 <ul>
@@ -10053,12 +10006,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li><?php bugfix(27063); ?> (SPL: ArrayObject does not handle PPP correctly). (Marcus)</li>
 </ul>
 
-<hr />
 
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0RC2"></a><!-- {{{ 5.0.0RC2 -->
+<section class="version" id="5.0.0RC2"><!-- {{{ 5.0.0RC2 -->
 <h3>Version 5.0.0 Release Candidate 2</h3>
 <b>25-Apr-2004</b>
 <ul>
@@ -10148,11 +10099,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0RC1"></a><!-- {{{ 5.0.0RC1 -->
+<section class="version" id="5.0.0RC1"><!-- {{{ 5.0.0RC1 -->
 <h3>Version 5.0.0 Release Candidate 1</h3>
 <b>18-Mar-2004</b>
 <ul>
@@ -10292,11 +10241,9 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0b4"></a><!-- {{{ 5.0.0b4 -->
+<section class="version" id="5.0.0b4"><!-- {{{ 5.0.0b4 -->
 <h3>Version 5.0.0 Beta 4</h3>
 <b>12-Feb-2004</b>
 <ul>
@@ -10397,11 +10344,9 @@ exception). (Marcus)</li>
 <li><?php bugfix(24243); ?> (enabling browscap causes segfault). (Wez)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0b3"></a><!-- {{{ 5.0.0b3 -->
+<section class="version" id="5.0.0b3"><!-- {{{ 5.0.0b3 -->
 <h3>Version 5.0.0 Beta 3</h3>
 <b>21-Dec-2003</b>
 <ul>
@@ -10482,11 +10427,9 @@ enabled/disabled from inside the script). (Ilia)</li>
 segfault). (Moriyoshi)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0b2"></a><!-- {{{ 5.0.0b2 -->
+<section class="version" id="5.0.0b2"><!-- {{{ 5.0.0b2 -->
 <h3>Version 5.0.0 Beta 2</h3>
 <b>30-Oct-2003</b>
 <ul>
@@ -10581,11 +10524,9 @@ fault?]).  (Sterling, Marcus)</li>
 (Derick)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<!-- }}} -->
-
-<a name="5.0.0b1"></a><!-- {{{ 5.0.0b1 -->
+<section class="version" id="5.0.0b1"><!-- {{{ 5.0.0b1 -->
 <h3>Version 5.0.0 Beta 1</h3>
 <b>29-Jun-2003</b>
 <ul>
@@ -10710,7 +10651,7 @@ html_entity_decode(). (Moriyoshi)</li>
 <li><?php bugfix(21600); ?> (Assign by reference function call changes variable
 contents). (Zeev)</li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 <?php site_footer(); ?>
 

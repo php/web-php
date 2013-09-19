@@ -2,16 +2,14 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'ChangeLog-4.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-site_header("PHP 4 ChangeLog", array("current" => "docs", 'css' => array('changelog.css')));
+site_header("PHP 4 ChangeLog", array("current" => "docs", 'css' => array('changelog.css'), 'layout_span' => 12));
 function bugfix($number) { echo "Fixed bug "; bugl($number); }
 function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$number</a>"; }
 ?>
 
 <h1>PHP 4 ChangeLog</h1>
 
-<hr/>
-
-<a name="4.4.9"></a>
+<section class="version" id="4.4.9"><!-- {{{ 4.4.9 -->
 <h3>Version 4.4.9</h3>
 <b>07-Aug-2008</b>
 <ul>
@@ -22,9 +20,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(27421); ?> (mbstring.func_overload set in .htaccess becomes global).</li>
 </ul>
 
-<hr/>
+<!-- }}} --></section>
 
-<a name="4.4.8"></a>
+<section class="version" id="4.4.8"><!-- {{{ 4.4.8 -->
 <h3>Version 4.4.8</h3>
 <b>03-Jan-2008</b>
 <ul>
@@ -43,9 +41,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(38798); ?> (OpenSSL init corrected in php5 but not in php4).</li>
 </ul>
 
-<hr/>
+<!-- }}} --></section>
 
-<a name="4.4.7"></a>
+<section class="version" id="4.4.7"><!-- {{{ 4.4.7 -->
 <h3>Version 4.4.7</h3>
 <b>03-May-2007</b>
 <ul>
@@ -68,9 +66,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li>Fixed CRLF injection inside ftp_putcmd().</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.6"></a>
+<section class="version" id="4.4.6"><!-- {{{ 4.4.6 -->
 <h3>Version 4.4.6</h3>
 <b>01-Mar-2007</b>
 <ul>
@@ -83,9 +81,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 <li><?php bugfix(40286); ?> (PHP fastcgi with PHP_FCGI_CHILDREN don't kill children when parent is killed).</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.5"></a>
+<section class="version" id="4.4.5"><!-- {{{ 4.4.5 -->
 <h3>Version 4.4.5</h3>
 <b>14-Feb-2007</b>
 <ul>
@@ -120,9 +118,9 @@ function bugl($number)   { echo "<a href=\"http://bugs.php.net/$number\">#$numbe
 
 There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.4"></a>
+<section class="version" id="4.4.4"><!-- {{{ 4.4.4 -->
 <h3>Version 4.4.4</h3>
 <b>17-Aug-2006</b>
 <ul>
@@ -143,9 +141,9 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 
 There is a <a href="release_4_4_4.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.3"></a>
+<section class="version" id="4.4.3"><!-- {{{ 4.4.3 -->
 <h3>Version 4.4.3</h3>
 <b>03-Aug-2006</b>
 <ul>
@@ -179,9 +177,9 @@ There is a <a href="release_4_4_4.php">separate announcement</a> available for t
 
 There is a <a href="release_4_4_3.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.2"></a>
+<section class="version" id="4.4.2"><!-- {{{ 4.4.2 -->
 <h3>Version 4.4.2</h3>
 <b>11-Jan-2006</b>
 <ul>
@@ -228,9 +226,9 @@ There is a <a href="release_4_4_3.php">separate announcement</a> available for t
 
 There is a <a href="release_4_4_2.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.1"></a>
+<section class="version" id="4.4.1"><!-- {{{ 4.4.1 -->
 <h3>Version 4.4.1</h3>
 <b>31-Oct-2005</b>
 <ul>
@@ -282,9 +280,9 @@ There is a <a href="release_4_4_2.php">separate announcement</a> available for t
 
 There is a <a href="release_4_4_1.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.4.0"></a>
+<section class="version" id="4.4.0"><!-- {{{ 4.4.0 -->
 <h3>Version 4.4.0</h3>
 <b>11-Jul-2005</b>
 <ul>
@@ -347,9 +345,9 @@ There is a <a href="release_4_4_1.php">separate announcement</a> available for t
 
 There is a <a href="release_4_4_0.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.11"></a>
+<section class="version" id="4.3.11"><!-- {{{ 4.3.11 -->
 <h3>Version 4.3.11</h3>
 <b>31-Mar-2005</b>
 <ul>
@@ -432,9 +430,9 @@ There is a <a href="release_4_4_0.php">separate announcement</a> available for t
 
 There is a <a href="release_4_3_11.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.10"></a>
+<section class="version" id="4.3.10"><!-- {{{ 4.3.10 -->
 <h3>Version 4.3.10</h3>
 <b>14-Dec-2004</b>
 <ul>
@@ -477,9 +475,9 @@ There is a <a href="release_4_3_11.php">separate announcement</a> available for 
 
 There is a <a href="release_4_3_10.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.9"></a>
+<section class="version" id="4.3.9"><!-- {{{ 4.3.9 -->
 <h3>Version 4.3.9</h3>
 <b>22-Sep-2004</b>
 <ul>
@@ -537,9 +535,9 @@ There is a <a href="release_4_3_10.php">separate announcement</a> available for 
 </ul>
 There is a <a href="release_4_3_9.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.8"></a>
+<section class="version" id="4.3.8"><!-- {{{ 4.3.8 -->
 <h3>Version 4.3.8</h3>
 <b>13-Jul-2004</b>
 <ul>
@@ -552,9 +550,9 @@ There is a <a href="release_4_3_9.php">separate announcement</a> available for t
 </ul>
 
 There is a <a href="release_4_3_8.php">separate announcement</a> available for this release.<br />
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.7"></a>
+<section class="version" id="4.3.7"><!-- {{{ 4.3.7 -->
 <h3>Version 4.3.7</h3>
 <b>03-Jun-2004</b>
 <ul>
@@ -595,9 +593,9 @@ There is a <a href="release_4_3_8.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_3_7.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.6"></a>
+<section class="version" id="4.3.6"><!-- {{{ 4.3.6 -->
 <h3>Version 4.3.6</h3>
 <b>15-Apr-2004</b>
 <ul>
@@ -630,9 +628,9 @@ There is a <a href="release_4_3_7.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_3_6.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.5"></a>
+<section class="version" id="4.3.5"><!-- {{{ 4.3.5 -->
 <h3>Version 4.3.5</h3>
 <b>26-Mar-2004</b>
 <ul>
@@ -799,9 +797,9 @@ There is a <a href="release_4_3_6.php">separate announcement</a> available for t
 There is a <a href="release_4_3_5.php">separate announcement</a> available for this release.<br />
 
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.4"></a>
+<section class="version" id="4.3.4"><!-- {{{ 4.3.4 -->
 <h3>Version 4.3.4</h3>
 <b>03-Nov-2003</b>
 <ul>
@@ -885,9 +883,9 @@ There is a <a href="release_4_3_5.php">separate announcement</a> available for t
 </ul>
 There is a <a href="release_4_3_4.php">separate announcement</a> available for this release.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.3"></a>
+<section class="version" id="4.3.3"><!-- {{{ 4.3.3 -->
 <h3>Version 4.3.3</h3>
 <b>25-Aug-2003</b>
 <ul>
@@ -1039,9 +1037,9 @@ There is a <a href="release_4_3_4.php">separate announcement</a> available for t
 </ul>
 More information on this release on <a href="/releases.php#4.3.3">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.2"></a>
+<section class="version" id="4.3.2"><!-- {{{ 4.3.2 -->
 <h3>Version 4.3.2</h3>
 <b>29-May-2003</b>
 <ul>
@@ -1230,9 +1228,9 @@ More information on this release on <a href="/releases.php#4.3.3">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.3.2">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.1"></a>
+<section class="version" id="4.3.1"><!-- {{{ 4.3.1 -->
 <h3>Version 4.3.1</h3>
 <b>17-Feb-2003</b>
 <ul>
@@ -1240,9 +1238,9 @@ More information on this release on <a href="/releases.php#4.3.2">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.3.1">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.3.0"></a>
+<section class="version" id="4.3.0"><!-- {{{ 4.3.0 -->
 <h3>Version 4.3.0</h3>
 <b>27-Dec-2002</b>
 <ul>
@@ -1753,9 +1751,9 @@ More information on this release on <a href="/releases.php#4.3.1">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.3.0">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.2.3"></a>
+<section class="version" id="4.2.3"><!-- {{{ 4.2.3 -->
 <h3>Version 4.2.3</h3>
 <b>06-Sep-2002</b>
 <ul>
@@ -1792,9 +1790,9 @@ More information on this release on <a href="/releases.php#4.3.0">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.2.3">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.2.2"></a>
+<section class="version" id="4.2.2"><!-- {{{ 4.2.2 -->
 <h3>Version 4.2.2</h3>
 <b>22-Jul-2002</b>
 <ul>
@@ -1802,9 +1800,9 @@ More information on this release on <a href="/releases.php#4.2.3">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.2.2">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.2.1"></a>
+<section class="version" id="4.2.1"><!-- {{{ 4.2.1 -->
 <h3>Version 4.2.1</h3>
 <b>13-May-2002</b>
 <ul>
@@ -1859,9 +1857,9 @@ More information on this release on <a href="/releases.php#4.2.2">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.2.1">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.2.0"></a>
+<section class="version" id="4.2.0"><!-- {{{ 4.2.0 -->
 <h3>Version 4.2.0</h3>
 <b>22-Apr-2002</b>
 <ul>
@@ -2073,9 +2071,9 @@ or entries for the specified extension. (Jani)</li>
 </ul>
 More information on this release on <a href="/releases.php#4.2.0">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.1.2"></a>
+<section class="version" id="4.1.2"><!-- {{{ 4.1.2 -->
 <h3>Version 4.1.2</h3>
 <b>27-Feb-2002</b>
 <ul>
@@ -2090,9 +2088,9 @@ More information on this release on <a href="/releases.php#4.2.0">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.1.2">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.1.1"></a>
+<section class="version" id="4.1.1"><!-- {{{ 4.1.1 -->
 <h3>Version 4.1.1</h3>
 <b>26-Dec-2001</b>
 <ul>
@@ -2117,9 +2115,9 @@ More information on this release on <a href="/releases.php#4.1.2">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.1.1">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.1.0"></a>
+<section class="version" id="4.1.0"><!-- {{{ 4.1.0 -->
 <h3>Version 4.1.0</h3>
 <b>10-Dec-2001</b>
 <ul>
@@ -2322,9 +2320,9 @@ More information on this release on <a href="/releases.php#4.1.1">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.1.0">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.6"></a>
+<section class="version" id="4.0.6"><!-- {{{ 4.0.6 -->
 <h3>Version 4.0.6</h3>
 <b>23-Jun-2001</b>
 <ul>
@@ -2438,9 +2436,9 @@ More information on this release on <a href="/releases.php#4.1.0">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.6">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.5"></a>
+<section class="version" id="4.0.5"><!-- {{{ 4.0.5 -->
 <h3>Version 4.0.5</h3>
 <b>30-Apr-2001</b>
 <ul>
@@ -2585,9 +2583,9 @@ More information on this release on <a href="/releases.php#4.0.6">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.5">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.4"></a>
+<section class="version" id="4.0.4"><!-- {{{ 4.0.4 -->
 <h3>Version 4.0.4</h3>
 <b>19-Dec-2000</b>
 <ul>
@@ -2741,9 +2739,9 @@ More information on this release on <a href="/releases.php#4.0.5">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.4">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.3"></a>
+<section class="version" id="4.0.3"><!-- {{{ 4.0.3 -->
 <h3>Version 4.0.3</h3>
 <b>11-Oct-2000</b>
 <ul>
@@ -2824,9 +2822,9 @@ More information on this release on <a href="/releases.php#4.0.4">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.3">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.2"></a>
+<section class="version" id="4.0.2"><!-- {{{ 4.0.2 -->
 <h3>Version 4.0.2</h3>
 <b>29-Aug-2000</b>
 <ul>
@@ -2995,9 +2993,9 @@ More information on this release on <a href="/releases.php#4.0.3">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.2">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.1"></a>
+<section class="version" id="4.0.1"><!-- {{{ 4.0.1 -->
 <h3>Version 4.0.1</h3>
 <b>28-Jun-2000</b>
 <ul>
@@ -3159,9 +3157,9 @@ More information on this release on <a href="/releases.php#4.0.2">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.1">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
-<a name="4.0.0"></a>
+<section class="version" id="4.0.0"><!-- {{{ 4.0.0 -->
 <h3>Version 4.0.0 Release</h3>
 <b>22-May-2000</b>
 <ul>
@@ -3182,8 +3180,9 @@ More information on this release on <a href="/releases.php#4.0.1">our Releases p
 </ul>
 More information on this release on <a href="/releases.php#4.0.0">our Releases page</a>.<br />
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0RC2">
 <h3>Version 4.0, Release Candidate 2</h3>
 <b>08-May-2000</b>
 <ul>
@@ -3278,8 +3277,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added !== operator support. (Torben, Zend Engine)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0RC1">
 <h3>Version 4.0, Release Candidate 1</h3>
 <b>27-Mar-2000</b>
 <ul>
@@ -3366,8 +3366,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed OCI8 crash when returning cursors from stored-procedures. (Thies)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0b4l1">
 <h3>Version 4.0, Beta 4 Patch Level 1</h3>
 <b>21-Feb-2000</b>
 <ul>
@@ -3375,8 +3376,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Support for pdflib 2.30 (Uwe)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0b4">
 <h3>Version 4.0, Beta 4</h3>
 <b>20-Feb-2000</b>
 <ul>
@@ -3549,8 +3551,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Added substr_replace() function (Andrei)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0b3">
 <h3>Version 4.0 Beta 3</h3>
 <b>16-Nov-1999</b>
 <ul>
@@ -3774,8 +3777,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Fixed Sybase CT build process (Zeev)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0b2">
 <h3>Version 4.0 Beta 2</h3>
 <b>09-Aug-1999</b>
 <ul>
@@ -3856,8 +3860,9 @@ More information on this release on <a href="/releases.php#4.0.0">our Releases p
 <li>Gave PHP 4.0's SNMP extension all the functionality of PHP 3.0.12 (SteveL)</li>
 </ul>
 
-<hr />
+<!-- }}} --></section>
 
+<section class="version" id="4.0b1">
 <h3>Version 4.0 Beta 1</h3>
 <b>19-Jul-1999</b>
 <ul>

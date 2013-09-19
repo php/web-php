@@ -1217,6 +1217,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     color: #99C;
 }
 
+section.version {
+    border-top: 1px solid #000;
+    margin:12px 0;
+}
 
 /*
  * vim: noet
