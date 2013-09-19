@@ -2,6 +2,44 @@
 $OLDRELEASES = array (
   5 => 
   array (
+    '5.5.3' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_3.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.3.tar.bz2',
+          'name' => 'PHP 5.5.3 (tar.bz2)',
+          'md5' => '886b08ee6865d654911a6bb02ae98ee8',
+          'date' => '22 Aug 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.3.tar.gz',
+          'name' => 'PHP 5.5.3 (tar.gz)',
+          'md5' => 'a5dfdd41ccf539942db966310f7429da',
+          'date' => '22 Aug 2013',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.3.tar.xz',
+          'name' => 'PHP 5.5.3 (tar.xz)',
+          'md5' => '437e98144ef014dfab0922a9eed36853',
+          'date' => '22 Aug 2013',
+        ),
+        3 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.5',
+          'name' => 'Windows 5.5.3 binaries and source',
+        ),
+      ),
+      'date' => '22 Aug 2013',
+      'museum' => false,
+    ),
     '5.5.2' => 
     array (
       'announcement' => 

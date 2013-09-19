@@ -11,6 +11,51 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 
 <h1>PHP 5 ChangeLog</h1>
 
+<a name="5.5.4"></a><!-- {{{ 5.5.4 -->
+<h3>Version 5.5.4</h3>
+<b>19-Sep-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation). (Laruence).</li>
+  <li>Improved fputcsv() to allow specifying escape character.</li>
+  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces). (Michael M Slusarz)</li>
+  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace). (Chris Jones, Kris Van Hees)</li>
+  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*). (Chris Jones)</li>
+  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set). (Patrick Allaert)</li>
+  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace). (Chris Jones, Kris Van Hees)</li>
+  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes). (Julien)</li>
+  <li><?php bugfix(46311); ?> (Pointer aliasing issue results in miscompile on gcc4.4). (Nikita Popov)</li>
+</ul></li>
+<ul><li>cURL:
+<ul>
+  <li><?php bugfix(65458); ?> (curl memory leak). (Adam)</li>
+</ul></li>
+<ul><li>Datetime:
+<ul>
+  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters). (Valentin Logvinskiy, Stas).</li>
+  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer). (Remi).</li>
+</ul></li>
+<ul><li>OPCache:
+<ul>
+  <li><?php bugfix(65561); ?> (Zend Opcache on Solaris 11 x86 needs ZEND_MM_ALIGNMENT=4). (Terry Ellison)</li>
+</ul></li>
+<ul><li>Openssl:
+<ul>
+  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases). (Mark Jones).</li>
+</ul></li>
+<ul><li>Session:
+<ul>
+  <li><?php bugfix(65475); ?> (Session ID is not initialized properly when strict session is enabled). (Yasuo).</li>
+  <li><?php bugfix(51127);bugfix(65359); ?> Request #25630/#43980/#54383 (Added php_serialize session serialize handler that uses plain serialize()). (Yasuo)
+.</li>
+</ul></li>
+<ul><li>Standard:
+<ul>
+  <li> Fix issue with return types of password API helper functions. Found via static analysis by cjones. (Anthony Ferrara) </li>
+</ul></li>
+</ul>
+<!-- }}} -->
+
 <a name="5.5.3"></a><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>
 <b>22-Aug-2013</b>
