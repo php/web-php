@@ -26,30 +26,30 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes). (Julien)</li>
   <li><?php bugfix(46311); ?> (Pointer aliasing issue results in miscompile on gcc4.4). (Nikita Popov)</li>
 </ul></li>
-<ul><li>cURL:
+<li>cURL:
 <ul>
   <li><?php bugfix(65458); ?> (curl memory leak). (Adam)</li>
 </ul></li>
-<ul><li>Datetime:
+<li>Datetime:
 <ul>
   <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters). (Valentin Logvinskiy, Stas).</li>
   <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer). (Remi).</li>
 </ul></li>
-<ul><li>OPCache:
+<li>OPCache:
 <ul>
   <li><?php bugfix(65561); ?> (Zend Opcache on Solaris 11 x86 needs ZEND_MM_ALIGNMENT=4). (Terry Ellison)</li>
 </ul></li>
-<ul><li>Openssl:
+<li>Openssl:
 <ul>
   <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases). (Mark Jones).</li>
 </ul></li>
-<ul><li>Session:
+<li>Session:
 <ul>
   <li><?php bugfix(65475); ?> (Session ID is not initialized properly when strict session is enabled). (Yasuo).</li>
   <li><?php bugfix(51127);bugfix(65359); ?> Request #25630/#43980/#54383 (Added php_serialize session serialize handler that uses plain serialize()). (Yasuo)
 .</li>
 </ul></li>
-<ul><li>Standard:
+<li>Standard:
 <ul>
   <li> Fix issue with return types of password API helper functions. Found via static analysis by cjones. (Anthony Ferrara) </li>
 </ul></li>
