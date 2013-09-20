@@ -507,10 +507,10 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 	    $votediv = <<<VOTEDIV
   <div class="votes">
     <div id="Vu{$id}">
-    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=up" title="Vote up!" class="usernotes-voteu">up</a>
+    <a href="/manual/vote-note.php?id={$id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
     </div>
     <div id="Vd{$id}">
-    <a href="/manual/vote-note.php?id={$id}&page={$rredir_filename}&vote=down" title="Vote down!" class="usernotes-voted">down</a>
+    <a href="/manual/vote-note.php?id={$id}&amp;page={$rredir_filename}&amp;vote=down" title="Vote down!" class="usernotes-voted">down</a>
     </div>
     <div class="tally" id="V{$id}" title="{$rate}">
     {$vote}
