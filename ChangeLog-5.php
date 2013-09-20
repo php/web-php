@@ -54,8 +54,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
-<section class="version" id="5.4.20"><!-- {{{ 5.5.4 -->
-<a name="5.4.20"></a><!-- {{{ 5.4.20 -->
+<section class="version" id="5.4.20"><!-- {{{ 5.4.20 -->
+<a name="5.4.20"></a>
 <h3>Version 5.4.20</h3>
 <b>19-Sep-2013</b>
 <ul><li>Core:
@@ -64,7 +64,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(65579); ?> (Using traits with get_class_methods causes segfault).</li>
   <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*).</li>
   <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces).</li>
-  <li><?php bugfix(65481); ?> (shutdown segfault due to serialize) (Mike)</li>
+  <li><?php bugfix(65481); ?> (shutdown segfault due to serialize).</li>
   <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace).</li>
   <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
   <li><?php bugfix(65304); ?> (Use of max int in array_sum).</li>
@@ -74,8 +74,8 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(62692); ?> (PHP fails to build with DTrace).</li>
   <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes).</li>
   <li><?php bugfix(61345); ?> (CGI mode - make install don't work).</li>
-  <li>Cherry-picked some DTrace build commits (allowing builds on Linux, bug #62691, and bug #63706) from PHP 5.5 branch</li>
-  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d) (Chris Jones)</li>
+  <li>Cherry-picked some DTrace build commits (allowing builds on Linux, bug <?php bugl(62691); ?> and bug <?php bugl(63706); ?>) from PHP 5.5 branch.</li>
+  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d)</li>
 </ul></li>
 <li>cURL:
 <ul>
