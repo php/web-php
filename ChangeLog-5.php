@@ -10,51 +10,119 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
-
 <section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
 <b>19-Sep-2013</b>
 <ul><li>Core:
 <ul>
-  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation). (Laruence).</li>
+  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
   <li>Improved fputcsv() to allow specifying escape character.</li>
-  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces). (Michael M Slusarz)</li>
-  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace). (Chris Jones, Kris Van Hees)</li>
-  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*). (Chris Jones)</li>
-  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set). (Patrick Allaert)</li>
-  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace). (Chris Jones, Kris Van Hees)</li>
-  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes). (Julien)</li>
-  <li><?php bugfix(46311); ?> (Pointer aliasing issue results in miscompile on gcc4.4). (Nikita Popov)</li>
+  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces).</li>
+  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace).</li>
+  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*).</li>
+  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set).</li>
+  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace). </li>
+  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes). </li>
+  <li><?php bugfix(46311); ?> (Pointer aliasing issue results in miscompile on gcc4.4). </li>
 </ul></li>
 <li>cURL:
 <ul>
-  <li><?php bugfix(65458); ?> (curl memory leak). (Adam)</li>
+  <li><?php bugfix(65458); ?> (curl memory leak).</li>
 </ul></li>
 <li>Datetime:
 <ul>
-  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters). (Valentin Logvinskiy, Stas).</li>
-  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer). (Remi).</li>
+  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters).</li>
+  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer).</li>
 </ul></li>
 <li>OPCache:
 <ul>
-  <li><?php bugfix(65561); ?> (Zend Opcache on Solaris 11 x86 needs ZEND_MM_ALIGNMENT=4). (Terry Ellison)</li>
+  <li><?php bugfix(65561); ?> (Zend Opcache on Solaris 11 x86 needs ZEND_MM_ALIGNMENT=4).</li>
 </ul></li>
 <li>Openssl:
 <ul>
-  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases). (Mark Jones).</li>
+  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases).</li>
 </ul></li>
 <li>Session:
 <ul>
-  <li><?php bugfix(65475); ?> (Session ID is not initialized properly when strict session is enabled). (Yasuo).</li>
-  <li><?php bugfix(51127);bugfix(65359); ?> Request #25630/#43980/#54383 (Added php_serialize session serialize handler that uses plain serialize()). (Yasuo)
-.</li>
+  <li><?php bugfix(65475); ?> (Session ID is not initialized properly when strict session is enabled).</li>
+  <li><?php bugfix(51127); ?> and <?php bugl(65359); ?>, FR <?php bugl(25630); ?>/<?php bugl(43980); ?>/<?php bugl(54383); ?> (Added php_serialize session serialize handler that uses plain serialize())</li>
 </ul></li>
 <li>Standard:
 <ul>
-  <li> Fix issue with return types of password API helper functions. Found via static analysis by cjones. (Anthony Ferrara) </li>
+  <li> Fix issue with return types of password API helper functions. Found via static analysis by cjones.</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
+
+<a name="5.4.20"></a><!-- {{{ 5.4.20 -->
+<h3>Version 5.4.20</h3>
+<b>19-Sep-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(60598); ?> (cli/apache sapi segfault on objects manipulation).</li>
+  <li><?php bugfix(65579); ?> (Using traits with get_class_methods causes segfault).</li>
+  <li><?php bugfix(65490); ?> (Duplicate calls to get lineno &amp; filename for DTRACE_FUNCTION_*).</li>
+  <li><?php bugfix(65483); ?> (quoted-printable encode stream filter incorrectly encoding spaces).</li>
+  <li><?php bugfix(65481); ?> (shutdown segfault due to serialize) (Mike)</li>
+  <li><?php bugfix(65470); ?> (Segmentation fault in zend_error() with --enable-dtrace).</li>
+  <li><?php bugfix(65372); ?> (Segfault in gc_zval_possible_root when return reference fails).</li>
+  <li><?php bugfix(65304); ?> (Use of max int in array_sum).</li>
+  <li><?php bugfix(65291); ?> (get_defined_constants() causes PHP to crash in a very limited case).</li>
+  <li><?php bugfix(65225); ?> (PHP_BINARY incorrectly set).</li>
+  <li>Improved fix for bug <?php bugl(63186); ?> (compile failure on netbsd).</li>
+  <li><?php bugfix(62692); ?> (PHP fails to build with DTrace).</li>
+  <li><?php bugfix(61759); ?> (class_alias() should accept classes with leading backslashes).</li>
+  <li><?php bugfix(61345); ?> (CGI mode - make install don't work).</li>
+  <li>Cherry-picked some DTrace build commits (allowing builds on Linux, bug #62691, and bug #63706) from PHP 5.5 branch</li>
+  <li><?php bugfix(61268); ?> (--enable-dtrace leads make to clobber Zend/zend_dtrace.d) (Chris Jones)</li>
+</ul></li>
+<li>cURL:
+<ul>
+  <li><?php bugfix(65458); ?> (curl memory leak).</li>
+</ul></li>
+<li>Datetime:
+<ul>
+  <li><?php bugfix(65554); ?> (createFromFormat broken when weekday name is followed by some delimiters)</li>
+  <li><?php bugfix(65564); ?> (stack-buffer-overflow in DateTimeZone stuff caught by AddressSanitizer)</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li><?php bugfix(64802); ?> (openssl_x509_parse fails to parse subject properly in some cases).</li>
+</ul></li>
+<li>Session:
+<ul>
+  <li><?php bugfix(62129); ?> (rfc1867 crashes php even though turned off).</li>
+  <li><?php bugfix(50308); ?> (session id not appended properly for empty anchor tags).</li>
+  <li>Fixed possible buffer overflow under Windows. Note: Not a security fix.</li>
+  <li>Changed session.auto_start to PHP_INI_PERDIR.</li>
+</ul></li>
+<li>SOAP:
+<ul>
+  <li><?php bugfix(65018); ?> (SoapHeader problems with SoapServer).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(65328); ?> (Segfault when getting SplStack object Value).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(64953); ?> (Postgres prepared statement positional parameter casting).</li>
+</ul></li>
+<li>Phar:
+<ul>
+  <li><?php bugfix(65028); ?> (Phar::buildFromDirectory creates corrupt archives for some specific contents).</li>
+</ul></li>
+<li>Pgsql:
+<ul>
+  <li><?php bugfix(65336); ?> (pg_escape_literal/identifier() silently returns false).</li>
+  <li><?php bugfix(62978); ?> (Disallow possible SQL injections with pg_select()/pg_update() /pg_delete()/pg_insert()).</li>
+</ul></li>
+<li>Zlib:
+<ul>
+  <li><?php bugfix(65391); ?> (Unable to send vary header user-agent when ob_start('ob_gzhandler') is called).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
 
 <section class="version" id="5.5.3"><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>

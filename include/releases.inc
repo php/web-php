@@ -116,6 +116,37 @@ $OLDRELEASES = array (
       'date' => '18 Jul 2013',
       'museum' => false,
     ),
+    '5.4.19' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_19.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.19.tar.bz2',
+          'name' => 'PHP 5.4.19 (tar.bz2)',
+          'md5' => 'f06f99b9872b503758adab5ba7a7e755',
+          'date' => '22 Aug 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.19.tar.gz',
+          'name' => 'PHP 5.4.19 (tar.gz)',
+          'md5' => '9e7ad2494ba3de519328f74267de8342',
+          'date' => '22 Aug 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.19 binaries and source',
+        ),
+      ),
+      'date' => '22 Aug 2013',
+      'museum' => false,
+    ),
     '5.4.18' => 
     array (
       'announcement' => 
