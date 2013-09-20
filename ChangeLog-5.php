@@ -55,7 +55,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <!-- }}} --></section>
 
 <section class="version" id="5.4.20"><!-- {{{ 5.4.20 -->
-<a name="5.4.20"></a>
 <h3>Version 5.4.20</h3>
 <b>19-Sep-2013</b>
 <ul><li>Core:
@@ -3763,7 +3762,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul></li>
 </ul>
 
-</hr>
 <!-- }}} --></section>
 
 <section class="version" id="5.3.10"><!-- {{{ 5.3.10 -->
@@ -3779,7 +3777,6 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </li>
 </ul>
 
-</hr>
 <!-- }}} --></section>
 
 <section class="version" id="5.3.9"><!-- {{{ 5.3.9 -->
@@ -4346,7 +4343,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>PCRE extension:
 <ul>
   <li>Increased the backtrack limit from 100000 to 1000000 (Rasmus)</li>
-</ul></li>
+</ul>
 </li>
 
 <li>PDO extension:
