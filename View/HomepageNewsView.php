@@ -53,9 +53,9 @@ class HomepageNewsView {
                 }
                 echo "<div class='newsItem hentry{$event}'>
                     <div class='newsImage'>{$image}</div>
-                    <h2 class='summary entry-title' id='$id'><a name='{$id}' href='{$permanentLink}' rel='bookmark' class='bookmark'>{$title}</a></h2>
+                    <h2 class='summary entry-title' id='$id'><a href='{$permanentLink}' rel='bookmark' class='bookmark'>{$title}</a></h2>
                     <div class='entry-content description'>
-                        <abbr class='published newsdate' title='{$publishedDate}''>{$newsDate}</abbr>
+                        <abbr class='published newsdate' title='{$publishedDate}'>{$newsDate}</abbr>
                         {$content}
                     </div>
                 </div>";
