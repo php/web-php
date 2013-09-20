@@ -54,6 +54,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.20"><!-- {{{ 5.5.4 -->
 <a name="5.4.20"></a><!-- {{{ 5.4.20 -->
 <h3>Version 5.4.20</h3>
 <b>19-Sep-2013</b>
@@ -122,7 +123,7 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
   <li><?php bugfix(65391); ?> (Unable to send vary header user-agent when ob_start('ob_gzhandler') is called).</li>
 </ul></li>
 </ul>
-<!-- }}} -->
+<!-- }}} --></section>
 
 <section class="version" id="5.5.3"><!-- {{{ 5.5.3 -->
 <h3>Version 5.5.3</h3>
