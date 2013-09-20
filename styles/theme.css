@@ -13,11 +13,7 @@
 
 
 html {
-    background-color: #333;
-}
-
-body * {
-    border-color: #9999CC;
+    background-color: #262626;
 }
 
 body, input, textarea {
@@ -142,23 +138,19 @@ a {
 }
 h1, h1 a, h1 a:visited, h1 a:link {
     color: #336;
-    border-color:#336;
 }
 h1 a:hover,
 h1 a:focus {
     color: #000;
-    border-color:#000;
 }
 
 h2, h2 a, h2 a:visited, h2 a:link {
-    color: #333;
-    border-color:#333;
+    color: #262626;
 }
 
 h2 a:hover,
 h2 a:focus {
     color: #000;
-    border-color:#000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -175,7 +167,7 @@ h4, h5, h6 {
 a:link,
 a:visited {
     color: #369;
-    border-bottom: 1px solid #369;
+    border-bottom: 1px solid;
 }
 
 a:hover,
@@ -227,88 +219,6 @@ hr {
 }
 
 /**
- * Auto-complete
- */
-.ui-autocomplete {
-    width: 185px;
-    max-height: 250px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    list-style-position: outside;
-    list-style: none;
-    margin: 0;
-    padding: 0 0 5px 0;
-    border: 1px solid;
-    z-index: 99999;
-    border-color: #7F7FB2;
-    background-color: white;
-    border-top: 1px solid #f6f6f6;
-    -webkit-box-shadow: 0px .25em .5em rgba(0,0,0,.33);
-    -moz-box-shadow: 0px .25em .5em rgba(0,0,0,.33);
-    box-shadow: 0px .25em .5em rgba(0,0,0,.33);
-}
-
-.ui-autocomplete .ui-state-hover,
-.ui-autocomplete .ui-state-focus {
-    background-color: #666699;
-    color: white;
-}
-
-.ui-autocomplete li {
-    margin: 0px;
-    cursor: pointer;
-    display: block;
-    /*
-    if width will be 100% horizontal scrollbar will apear
-    when scroll mode will be used
-    */
-    /*width: 100%;*/
-    font: menu;
-    font-size: 12px;
-    /*
-    it is very important, if line-height not setted or setted
-    in relative units scroll will be broken in firefox
-    */
-    line-height: 16px;
-    overflow: hidden;
-    border-bottom: 1px solid #9999CC;
-}
-
-.ui-autocomplete a {
-    display: block;
-    padding: 2px 5px;
-}
-.ui-autocomplete a .search-item-description,
-.ui-autocomplete a .search-item-label {
-    display:block;
-}
-
-.ui-autocomplete a .search-item-description {
-    color:#666;
-}
-
-.ui-autocomplete .ui-state-hover .search-item-description,
-.ui-autocomplete .ui-state-focus .search-item-description {
-    color:#ccc;
-}
-
-.ui-autocomplete a .search-item-label {
-    font-weight:bold;
-}
-.ui-autocomplete a .search-item-category {
-    font-weight:normal;
-}
-
-.ui-autocomplete-category {
-    font-weight: bold;
-    padding: .2em .4em;
-    margin: .8em 0 .2em;
-    line-height: 1.5;
-    background-color: #7F7FB2;
-    color: #fff;
-}
-
-/**
  * User notes
  */
 #usernotes {
@@ -320,7 +230,7 @@ hr {
     border-bottom: 0.166666667em solid #669;
     margin-bottom: -0.166666667.em;
     line-height:2.666666667;
-    color:#333;
+    color:#262626;
 }
 
 #usernotes .count {
@@ -398,16 +308,16 @@ hr {
 }
 
 #usernotes .note .text {
-    background-color: #f0f0f0;
-    border-top: .125em solid #d6d6d6;
+    background-color: #f2f2f2;
+    border-top: .125em solid #d9d9d9;
     padding: .625em .75em .75em;
     margin-top:.25em;
     -moz-border-radius:0 0 2px 2px;
     border-radius:0 0 2px 2px;
-    border-bottom:1px solid #e3e3e3;
+    border-bottom:1px solid #d9d9d9;
     box-shadow:
-        inset 2px 0 2px -2px #e3e3e3,
-        inset -2px 0 2px -2px #e3e3e3;
+        inset 2px 0 2px -2px #e0e0e0,
+        inset -2px 0 2px -2px #e0e0e0;
 }
 
 /* Vote arrow styles. */
@@ -453,7 +363,7 @@ hr {
 }
 
 #usernotes .note .votes .tally {
-    color: #333;
+    color: #262626;
     padding: 0 0.3em;
 }
 
@@ -502,7 +412,7 @@ div.phpcode span.string {
     padding: .75em 1em;
     margin: 1.5em 0 1.5em 1.5em;
     border-top: .1875em solid #669;
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
     border-radius: 0 0 2px 2px;
 }
 pre.info {
@@ -540,8 +450,8 @@ aside.tips div.border {
 aside.tips div.inner {
     padding: .75em;
     background:#eeeef6;
-    border-left:1px solid #e3e3e3;
-    border-right:1px solid #e3e3e3;
+    border-left:1px solid #e0e0e0;
+    border-right:1px solid #e0e0e0;
     border-bottom:1px solid #d6d6dd;
     border-radius: 0 0 2px 2px;
 }
@@ -555,9 +465,9 @@ aside.tips div.inner {
 .layout-menu {
     float: left;
     padding:.5em .75em 1.5em;
-    background-color:#f0f0f0;
-    border: 1px solid #e3e3e3;
-    border-bottom-color:#d6d6d6;
+    background-color:#f2f2f2;
+    border: 1px solid #e0e0e0;
+    border-bottom-color:#d9d9d9;
     border-radius:2px;
 }
 
@@ -603,7 +513,7 @@ aside.tips div.inner {
 footer {
     clear: both;
     overflow: auto;
-    background-color: #333;
+    background-color: #262626;
     border-top: .25em solid #9999CC;
     padding: .75em 0;
 }
@@ -644,7 +554,7 @@ div.elephpants {
 
 div.elephpants div.images {
     height: 75px;
-    background-color: #333;
+    background-color: #262626;
     text-align: center;
     white-space: nowrap;
 }
@@ -907,7 +817,7 @@ div.informalexample {
 em, strong {
     font-weight: bold;
     font-style: italic;
-    color: #333;
+    color: #262626;
 }
 
 
