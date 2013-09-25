@@ -28,80 +28,90 @@ site_header(
     )
 );
 
-// Get a minute to print out for the cron example
-function make_seed()
-{
-    list($usec, $sec) = explode(' ', microtime());
-    return (float) $sec + ((float) $usec * 100000);
-}
-srand(make_seed());
-$minute = rand(0, 59);
 ?>
-
 <h1>Mirroring The PHP Website</h1>
 
 <p>
  If you would like to participate in the official PHP mirrors program,
- read and follow these instructions carefully. You should have the
- consent of your hosting company (if you aren't a hosting company
+ please read and follow these instructions carefully. You should have
+ the consent of your hosting company (if you aren't a hosting company
  yourself), and be prepared for some potentially significant bandwidth
- usage.  As of January 2011, the network is averaging 223GB per day spread
- across 115 mirrors, or roughly 1.9GB per day.  This can go up to 12GB per
+ usage. As of 25 September, 2013, the network of mirrors is averaging
+ 251GB per day (about 7.52TB per month). At the time of the updating
+ of this page, this load was spread across 90 active mirrors, indicating
+ an overall average of 2.9GB per mirror.  This can go up to 12GB per
  day or more for busy mirrors, such as those in the US, UK, and India.
+ And immediately following new releases of PHP, the traffic spikes even
+ higher (as should be expected) due to a surge in the number of downloads.
  Please be sure your server or hosting account is able to handle a minimum
- of roughly 58 gigabytes of transfer each month without incurring any
- additional costs or penalties.  In the event that such action is taken
- against your account, remember, it is your responsibility.
+ of roughly 42 gigabytes of transfer each month without incurring any
+ additional costs or penalties, as the mirrors with the fewest requests
+ per month are still averaging this amount of bandwidth usage per month.
+ In the event that such action is taken against your account, remember:
+ it is your responsibility.
 </p>
 
 <p>
- Official mirror program participants are required to use PHP 5.2.0 or greater,
- with a preference towards PHP 5.3.
- Set it up as an Apache module with the settings
- <a href="#settings">outlined below</a>, or in any other Apache connected
- way (CGI, FastCGI, etc), considering the requested PHP settings outlined
- below in the Apache vhost instructions. The size of the full website is
- approximately 2.1 gigabytes.
+ Official mirror program participants are required to use PHP 5.3.21 or
+ greater, but please note that we encourage maintainers to always use the
+ latest stable versions of actively-developed branches.  Please note that
+ we do, somewhat regularly (about once per year) require existing
+ maintainers to upgrade their PHP versions to a new minimum, so always
+ being proactive in upgrades will ensure that your mirror remains in
+ compliance with the official mirrors program. Set it up as an Apache
+ module with the settings <a href="#settings">outlined below</a>, or in
+ any other Apache connected way (CGI, FastCGI, etc), considering the
+ requested PHP settings outlined below in the Apache vhost instructions.
+ The size of the full website is approximately 4.7 gigabytes.
+</p>
+
+<p>
+ <b>NOTE:</b> Some of our maintainers prefer to use web servers other
+ than Apache, such as <a href="http://wiki.nginx.org/Main" target="_blank">Nginx</a>.
+ While this is permitted (as long as everything ultimately works as
+ directed), we do not officially support these setups at this time.
+ If you would like to learn how to set up an alternative environment,
+ feel free to post a question to current mirror maintainers on the
+ mailing list at <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>.
 </p>
 
 <p>
  Applications to join the official mirror program are reviewed on a
  case-by-case basis, but we will only approve those from ISPs and web
- hosting providers, universities and state-recognized academic institutions,
- and PHP-centric web development firms.  Under no circumstances will we
- permit new applications from marketing firms, website portals or
- directories, or anything of questionable moral or legal standing.  We
- also reserve the right, at our discretion, to refuse any application for
- any reason.
+ hosting providers; universities and state-recognized academic institutions;
+ PHP-centric web development firms; and PHP user groups and individual
+ enthusiasts.  Under no circumstances will we even review applications from
+ marketing firms, website portals or directories, or anything of
+ questionable moral or legal standing.  We also reserve the right, at our
+ discretion, and without warning, to refuse any application for any reason,
+ or to suspend or expell any active mirrors if it is discovered that any
+ information on the application was false or otherwise incorrect, or if
+ the mirrors fails to remain in compliance with the official mirrors program.
 </p>
 
 <a name="rule"></a>
 <p class="warn">
- Please note that we are currently only accepting new official
- mirrors in countries where we don't already have two official
- mirrors. For a list of active official mirrors, have a look at
- <a href="/mirrors.php">mirrors.php</a>. Before you start to set up
- an official mirror site, you are advised to contact <a
- href="mailto:mirrors@php.net">mirrors@php.net</a> (a publicly-available
- mailing list, publicly archived around the web) and ask if your
- application will have a chance to be accepted.  We have this limit in
- place to avoid overloading our rsync servers and monitoring infrastructure.
- We have found that this 2 mirror limit per country serves our users well,
- so please do not ask to be the 3rd in a country that already has 2
- unless you have a very good reason.  Please also be aware that the
- mirror is required to be physically located in the country you would
- like to serve.  If there are already two mirrors in a country for
- which you would like to provide an official mirror, we operate an
- official waiting list, to which you may add your name and information
- <a href="http://php.parasane.net/mirrors/waitinglist.php">here</a>.  If
- and when a spot becomes available, we will go through the applications
- on the waiting list before entertaining new public applications.
+ Please note that we are currently only accepting new applications for
+ countries in which we don't already have two official mirror presences.
+ For a list of active official mirrors, see <a href="/mirrors.php">mirrors.php</a>.
+ Prior to attempting to set up an official mirror site, you are advised to contact <a
+ href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a> (a public
+ mailing list, archived in numerous places on the Internet) to inquire as to
+ whether or not your application may be accepted. We have found that this limit
+ serves our users well, so please do not ask to provide a third mirror for a country
+ that already has two.  Please also be aware that the mirror is required to be
+ physically located in the country you would like to serve.  If there are already
+ two mirrors in a country for which you would like to provide an official mirror,
+ you may add your information to the official waiting list, which can be found
+ <a href="http://php.parasane.net/mirrors/waitinglist.php">here</a>.  If and when
+ a vacancy becomes available, we will go through the applications on the waiting
+ list before entertaining new public applications.
 </p>
 
 <p>
  If you are not an official mirror (e.g. you mirror the site for your company's
- internal use), you should not rsync from <code>rsync.php.net</code> more frequently
- than once a day, or you may find your IP blocked. Also, please make
+ internal use), you should not synchronize from our network more frequently
+ than once every six hours, or you may find your IP blocked. Also, please make
  an effort to only mirror those parts of the site that you actually need.
  (For example, <a href="#exclude">exclude the manual in all languages that you
  will not be using and exclude the distributions directory</a>.)
@@ -111,23 +121,30 @@ $minute = rand(0, 59);
 
 <p>
  First, you need to have a <a href="http://rsync.samba.org/">rsync</a>
- installed.  As you have rsync, fetch the web files with the following:
+ installed.  To better serve our official mirror providers and maintainers,
+ we switched to a geographically-decentralized distribution architecture.  By
+ switching from a single United States-based master server to three Regional
+ Rsync Nodes (RRNs), we're able to reduce the amount of latency and time to
+ transfer data between an RRN and a mirror, serve more requests per hour
+ (allowing for a closer to real-time network update globally), and provide
+ redundancy in the event of an outage of a sync server.
+</p>
+
+<p>
+ To synchronize your server with the appropriate RRN, first view the <a
+ href="/images/oidk.net-rsync-distribution-plan-may2012.png">coverage map</a>
+ and identify which RRN your mirror should be using.  Next, modify the
+ following code for use with your mirror.  Replace <code>YOUR_RRN_HOSTNAME</code>
+ with your RRN's hostname as indicated by the coverage map and be sure to
+ change <code>/your/local/path</code> with the path to where your php.net
+ mirror will reside on the filesystem.
 </p>
 
 <pre class="info">
     rsync -avzC --timeout=600 --delete --delete-after \
       --include='distributions/*.exe' \
-      rsync.php.net::phpweb /your/local/path 
+      YOUR_RRN_HOSTNAME::phpweb /your/local/path 
 </pre>
-
-<!--
-We will be changing the above to include the following in the coming
-days/weeks/months as we move toward a distributed network:
-
-americas.rsync.php.net
-asia.rsync.php.net
-europe.rsync.php.net
--->
 
 <a name="exclude"></a>
 <p>
@@ -148,16 +165,10 @@ europe.rsync.php.net
 </p>
 
 <p>
- If <code>/your/local/path</code> isn't in your web document tree (why isn't it?),
- then symlink the <code>phpweb/</code> directory to the correct place on your
- server.
-</p>
-
-<p>
- Official PHP mirror sites should provide the exact content coming from
- <code>rsync.php.net</code>, and should not be altered in any way not described
- in the mirroring guidelines. Failing to do so can result in immediate
- removal of your mirror from our list.
+ Official PHP mirror sites should provide the exact content coming from our servers,
+ and must not be altered in any way unless explicitly stated in the mirroring
+ guidelines. Failing to do will result in immediate termination and permanent
+ expulsion of your participation in the program.
 </p>
 
 <h2>Add SQLite 3 Support</h2>
@@ -172,26 +183,25 @@ europe.rsync.php.net
 
 <p>
  There are a couple of SQLite 3 implementations in PHP. One is via the
- PDO extension by using the SQLite driver (pdo_sqlite), which is what you
- should be sure is installed. The other is via the SQLite3 extension.
- These extensions are both compiled into PHP by default.
- Note: Some Linux distributions disable many extensions in their
- package systems, including SQLite. Please make sure you install the
+ PDO extension by using the SQLite driver (pdo_sqlite, which is required).
+ The other is via the SQLite3 extension. These extensions are both compiled
+ into PHP by default. Note: Some Linux distributions disable many extensions
+ in their package systems, including SQLite. Please make sure you install the
  "php5-sqlite" (or similiar) package if using such a system.
 </p>
 
 <h2>Setup Apache VirtualHost</h2>
 
 <p>
- Make sure your web server is set up to serve up <code>.php</code> files
- as PHP parsed files. If it isn't, add the mime-type to your config.
+ Make sure your web server is set up to serve <code>.php</code> files as PHP
+ parsed files. If it isn't, add the MIME type to your config.
 </p>
 <p class="warn">
- Please make sure you have turned off output compression for binary files
+ Please make sure you have turned off output compression for binary files.
 </p>
 
 <p>
- Create a virtualhost which looks something like:
+ Create a VirtualHost entry, which looks something like:
 </p>
 
 <a name="settings"></a>
@@ -256,23 +266,24 @@ europe.rsync.php.net
 </pre>
    
 <p>
- You should only start to set up an Apache virtualhost for an official
- mirror, if you have <a href="#rule">contacted us first</a>, and asked
- for a possible name for your mirror. The official names for PHP mirrors
- are in the convention: <code>"ccx.php.net"</code>, where <code>"cc"</code>
+ You should only start to set up an Apache VirtualHost for an official
+ mirror if you have <a href="#rule">contacted us first</a> and received
+ the permanent names for your mirror. The names for all official PHP mirrors
+ are in the convention: <code>ccx.php.net</code>, where <code>cc</code>
  stands for the 2-letter ISO country code of your mirror's location and
- <code>"x"</code> is an incremental identifier for the mirrors of that country.
- Do not assume that you know the code you will receive until your
- application has been reviewed and approved, and do not submit an application
- saying, for example, "We are applying to become DE1.PHP.NET," because it's
- possible that the mirror already exists, but is experiencing issues that
- have it temporarily removed from active rotation.
- We do not want anyone to waste their time only to have their application
- altered or rejected.
- The mirrors should also listen for the <code>"cc.php.net"</code> hostname
- as we have <a href="http://en.wikipedia.org/wiki/Round-robin_DNS">round robin
- dns</a> configured for the those records, so any active mirror can receive
- traffic for their respective <code>"cc.php.net"</code> hostname.
+ <code>x</code> is an incremental identifier for the mirrors of that country.
+ Do not assume that you know the code you will receive until your application
+ has been reviewed and approved, and do not submit an application saying, for
+ example, "We are applying to become DE1.PHP.NET."  It's possible that the
+ mirror already exists, but is experiencing issues that have it temporarily
+ removed from active rotation, and delisted from the roster of mirrors. We do
+ not want anyone to waste their time only to have their application altered
+ or rejected. The mirrors should also listen for the <code>cc.php.net</code>
+ hostname, as we moved to providing a simple load-balancing solution:
+ <a href="http://en.wikipedia.org/wiki/Round-robin_DNS">round-robin DNS</a>.
+ All mirrors are required to be configured for both CC and CCX, so any active
+ mirror can receive traffic for their respective <code>cc.php.net</code>
+ hostname, thus providing redundancy and improved uptime for visitors.
 </p>
 
 <p>
@@ -285,23 +296,32 @@ europe.rsync.php.net
  mirror administrators.
 </p>
 
+<p class="warn">
+ The hostname you provide to us must be a configured hostname to be entered
+ into our DNS as a CNAME, not an IP address to be used as an A record. Your
+ local DNS information may then translate into both IPv4 and IPv6, should
+ you so desire and have the capabilities, but may not exclude IPv4 from the
+ record until further notice.
+</p>
+
 <p>
- When setting up the vhost, provide an asterisk, a hostname or an IP
- address in the VirtualHost container's header depending on whether
+ When setting up the vhost, provide an asterisk, a hostname, or an IP
+ address in the VirtualHost container's header (depending on whether
  you would like to make the vhost work for all IPs handled by Apache,
- or just a specific hostname/IP address. Consult
+ or just a specific hostname/IP address). Consult
  <a href="http://httpd.apache.org/docs/vhosts/index.html">the Apache
  documentation</a> for the differences of the two methods. It is very
  important to use your <code>ccx.php.net</code> address as the ServerName, so
  URL redirections will keep the requests in the php.net domain, ensuring
- that the My PHP.net service will work, plus it will cause the mirror to show
- up as an unofficial mirror.
+ that the My PHP.net service will work.  Failure to do so will also cause
+ your mirror to show up as an unofficial mirror, and to be removed from the
+ roster page.
 </p>
 
 <p>
  Change the DocumentRoot setting as appropriate,
  specify the mirror's preferred language, and provide settings according
- to your stats setup, if your mirror is going to provide it. For the
+ to your stats setup, if your mirror is going to provide stats. For the
  preferred language setting, choose one from those available as
  manual translations. If you provide something else, your default
  language will be English. After you restart Apache, your mirror
@@ -319,19 +339,23 @@ europe.rsync.php.net
 <h2>Setup Regular Updates</h2>
 
 <p>
- You must also set up a cron job that periodically does an rsync
- to refresh your web directory. This will ensure that your web site
- is up to date. Something like:
+ You must also set up a cron job that periodically does an rsync to
+ refresh your web directory. We prefer that all mirrors update from
+ the appropriate RRN from the coverage map every five minutes, to
+ speed up the distribution of updates to the site and available packages.
+ Something like:
 </p>
 
 <pre class="info">
-   <?php echo $minute; ?> * * * * rsync -avzC --timeout=600 --delete --delete-after --include='distributions/*.exe' rsync.php.net::phpweb /your/local/path
+   */5 * * * * rsync -avzC --timeout=600 --delete --delete-after --include='distributions/*.exe' YOUR_RRN_HOSTNAME::phpweb /your/local/path
 </pre>
 
 <p>
- Remember to specify the same rsync parameters you used to get
- the phpweb files. You should try to stagger your times a bit from the
- example to help spread the load on the <code>rsync.php.net</code> server.
+ Remember to specify the same rsync parameters you used to get the
+ <code>phpweb</code> files as explained near the top of this page.
+ If you're unable to synchronize every five minutes, you may pick
+ your own update frequency, provided it does not exceed fifteen
+ minutes.
 </p>
 
 <h2>Sponsor Logo</h2>
@@ -349,8 +373,8 @@ europe.rsync.php.net
 </ul>
 
 <p>
- The PHP Group do reserve the right to refuse images based on content, but
- most things should be fine.
+ The PHP Group and the Network Infrastructure Manager reserve the
+ right to refuse images based on content, but most things should be fine.
 </p>
 
 <p>
@@ -362,12 +386,13 @@ europe.rsync.php.net
 <p>
  And finally, don't forget to put a nice little PHP logo somewhere
  on your hosting company's site if possible. Grab one of the logos
- from the <a href="/download-logos.php">Download logos</a> page, and
+ from the <a href="/download-logos.php">logos download</a> page, and
  link it to your mirror.  This shows the community that you are a
  proud supporter of PHP and open source technology, and you will be
- worshipped every hour, on the hour, by millions.  Well, okay, not
- worshipped.... but folks will certainly appreciate your generosity
- and support!
+ worshipped every hour, on the hour, in song and dance, by millions of
+ <a href="http://en.wikipedia.org/wiki/Proboscis_monkey" target="_blank">proboscis monkeys</a>
+ the world over.  Well, okay, perhaps not.... but folks will certainly
+ appreciate your generosity and support!
 </p>
 
 <h2>Mirror Setup Troubleshooting</h2>
@@ -382,10 +407,10 @@ europe.rsync.php.net
 <h2>Data Registered About Official Mirrors</h2>
 
 <p>
- Once you have done the above and your site appears to work, send
- a message to <a href="mailto:mirrors@php.net">mirrors@php.net</a>
- with the following information, and appropriate steps will be taken
- to integrate your mirror site:
+ Once you have done the above and your site appears to work, send a message
+ to <a href="mailto:php-mirrors@lists.php.net">php-mirrors@lists.php.net</a>
+ with the following information, and appropriate steps will be taken to
+ integrate your mirror site:
 </p>
 
 <ul>
@@ -403,30 +428,42 @@ europe.rsync.php.net
   A hostname that we can use as a CNAME for the country-code-based
   name of the mirror (<code>the.cname.you.set.up.example.com</code> in the
   above setup example). Using a name means you can move the mirror to
-  another IP address without coordinating with us at all.
+  another IP address without coordinating with us at all (though, obviously,
+  it must still be in the country you intend to serve).
  </li>
  <li>
   Whether or not you've installed local stats support on your mirror.
  </li>
  <li>
-  The name of the hosting company.
+  The name of the sponsor approved previously by mirror program staff.
  </li>
  <li>
-  The URL of the hosting company. This link is provided with the
-  company's name at the bottom of pages, with the sponsor image on
-  the frontpage and in the mirror listing.
+  The URL of the sponsor. This link is provided with the sponsor's name
+  at the bottom of pages, with the sponsor image on the front page and
+  in the mirror listing.
  </li>
 </ul>
 
 <p>
  There is a mailing list named <code>"php-mirrors"</code> at
- <code>lists.php.net</code> which we would appreciate if you could sign up to.
- This mailing list is extremly low traffic and only used for communication
- between mirror maintainers and the php.net webmasters.
+ <code>lists.php.net</code>, to which you are required to subscribe.
+ This mailing list is very low-traffic and only used for communication
+ between mirror maintainers and php.net webmasters, and to provide
+ automatic information on mirror outages and other issues.
 </p>
 <p>
  To subscribe send an empty message
  to: <a href="mailto:php-mirrors-subscribe@lists.php.net">php-mirrors-subscribe@lists.php.net</a>
+</p>
+
+<p>
+ We also operate an EFNet channel, and encourage you to join us there.
+ If you are interested, please join us at <code>#php.mirrors</code>.
+ Many maintainers and staff members idle in the room around the clock,
+ and are available to address questions, concerns, or issues in
+ real-time (keeping in mind that the mailing list is the official
+ support channel, and this is just a convenient additional method of
+ communication between teams).
 </p>
 
 <p>
