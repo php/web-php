@@ -195,7 +195,8 @@ hr {
     margin-right:.75em;
 }
 .navbar .brand img {
-    padding:4px 0 2px;
+    padding:4px 0 0;
+    margin-bottom:-1px;
     opacity:.75;
 }
 .navbar a {
