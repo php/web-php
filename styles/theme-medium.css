@@ -239,7 +239,7 @@ div.warning:before {
 #usernotes .note .text {
   background-color: #f2f2f2;
   border-top-color: #d9d9d9;
-  border-bottom-color #d9d9d9;
+  border-bottom-color: #d9d9d9;
   box-shadow:
     inset 2px 0 2px -2px #e0e0e0,
     inset -2px 0 2px -2px #e0e0e0;
