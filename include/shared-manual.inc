@@ -409,7 +409,7 @@ function manual_notes_beta() {
 
     $num_notes = count($notes);
     if ($num_notes) {
-        $num_notes = "<span class=\"count\"><strong>$num_notes note" . ($num_notes == 1 ? '' : 's') . "</strong></span>";
+        $num_notes = "<span class=\"count\">$num_notes note" . ($num_notes == 1 ? '' : 's') . "</span>";
     } else {
         $num_notes = null;
     }

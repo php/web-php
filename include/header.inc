@@ -39,9 +39,8 @@ if (isset($shortname) && $shortname) {
 <?php endforeach ?>
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/bootstrap.css<?php echo $v?>" media="all" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/doc.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-base.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-medium.css<?php echo $v?>" media="screen" />
 
  <?php
  if(isset($config['css']) && is_array($config['css'])):
