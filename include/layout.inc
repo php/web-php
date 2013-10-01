@@ -638,7 +638,7 @@ function display_event($event, $include_date = 1)
 
     // Weekday names array
     for ($i = 1; $i <= 7; $i++) {
-        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i, 2001));
+        $days[$i] = strftime('%A', mktime(12, 0, 0, 4, $i));
     }
 
     // Recurring possibilities
@@ -652,8 +652,17 @@ function display_event($event, $include_date = 1)
         -3 => '3rd Last'
     );
 
-    $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
-    $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
+    if (!isset($event['start']) && isset($event['sday'])) {
+        $sday = mktime(12,0,0,$event['smonth'],$event['sday'],$event['syear']);
+    } else {
+        $sday = (isset($event['start']) && !empty($event['start'])) ? strtotime($event['start']) : 0;
+    }
+
+    if (!isset($event['end']) && isset($event['eday'])) {
+        $eday = mktime(12,0,0,$event['emonth'],$event['eday'],$event['eyear']);
+    } else {
+        $eday = (isset($event['end']) && !empty($event['end'])) ? strtotime($event['end']) : 0;
+    }
 ?>
 <table border="0" cellspacing="0" cellpadding="3" width="100%" class="vevent">
  <tr bgcolor="#dddddd"><td>
