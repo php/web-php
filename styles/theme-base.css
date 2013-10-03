@@ -2015,12 +2015,12 @@ body, input, textarea {
 }
 code,
 pre.info {
-    font: 400 .875em / 1.5 "Source Code Pro", monospace; 
+    font: normal 14px / 1.46 "Source Code Pro", monospace; 
 }
     
 .docs .classsynopsis,
 .docs .classsynopsis code {
-    font: 400 1em / 1.5 "Source Code Pro", monospace; 
+    font: normal 14px / 1.46 "Source Code Pro", monospace; 
 }
 
 #head-beta-warning {
