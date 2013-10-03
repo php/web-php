@@ -2722,10 +2722,6 @@ body.downloads #layout .span6 {
     font-style:normal;
     font-weight:normal;
 }
-.docs .initializer,
-.docs .initializer code {
-    font-style:italic !important;
-}
 /* }}} */
 
 
