@@ -2025,7 +2025,7 @@ pre.info {
 
 #head-beta-warning {
     padding:.25em 0;
-    height:1.5em;
+    min-height:1.5em;
     border-bottom:.125em solid}
 
 #beta-warning {
@@ -3045,9 +3045,35 @@ div.soft-deprecation-notice blockquote.sidebar {
     width:auto;
   }
   .navbar-search {
-    float:none;
+    float:left;
+    clear: both;
+    margin-top: 0;
+  }
+  .navbar .nav {
+    margin-right: 0;
   }
 }
+
+@media (max-width:465px) {
+  .navbar .brand {
+    float: none;
+    margin-bottom: 0.5em;
+  }
+
+  .navbar-search {
+    margin-top: 0;
+  }
+
+  .navbar .brand img {
+    display: block;
+    margin: 0 auto;
+  }
+  .navbar .nav > li {
+    width: 50%;
+    text-align: center;
+  }
+}
+
 @media (min-width:768px) {
   #intro .download-php h2 {
     text-align:center;
@@ -3085,6 +3111,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     vertical-align:middle;
   }
 }
+
 @media (max-width: 979px) and (min-width: 768px) {
   #intro .download-php .row-fluid .span6 {
     width:100%;
