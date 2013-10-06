@@ -18,9 +18,11 @@ if (isset($shortname) && $shortname) {
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
 
- <title>PHP: <?php echo $title ?></title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
- <meta charset="utf-8"/>
+  <title>PHP: <?php echo $title ?></title>
 
  <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
