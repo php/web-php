@@ -3072,6 +3072,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     width: 50%;
     text-align: center;
   }
+  /* Hiding UserVoice sticky bar when in smartphone mode */
+  #uvTabLabel {
+    display: none !important;
+  }
 }
 
 @media (min-width:768px) {
