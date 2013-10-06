@@ -77,6 +77,7 @@ if (isset($shortname) && $shortname) {
   <div class="navbar-inner">
     <div class="container">
       <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
+      <a href="#" id="mainmenu-toggle"></a>
       <ul class="nav">
         <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
         <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
@@ -89,6 +90,8 @@ if (isset($shortname) && $shortname) {
     </div>
   </div>
 </nav>
+
+
 
 <?php if (!isset($_COOKIE['BetaWarning']) || filter_var($_COOKIE['BetaWarning'],FILTER_VALIDATE_BOOLEAN) == TRUE): ?>
 <div id="head-beta-warning">

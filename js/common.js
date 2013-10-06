@@ -221,6 +221,11 @@ $(document).ready(function() {
     );
 /*}}}*/
 
+    // Responsive menu javascript
+    jQuery('#mainmenu-toggle').on('click', function(e) { 
+        $('.navbar .nav').stop().slideToggle();  
+    });
+
 });
 
 /**

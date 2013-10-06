@@ -3037,6 +3037,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     border-width:0;
 }
 
+#mainmenu-toggle {
+    display: none;
+}
+
 
 @media (max-width:767px) {
   .navbar-static-top .container,
@@ -3054,9 +3058,26 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 }
 
+/* Smartphones */
 @media (max-width:465px) {
+
+  #mainmenu-toggle {
+      background: #669 url(../images/mobile-menu.png) no-repeat center center;
+      display: inline-block;
+      height: 32px;
+      width: 34px;
+      color: #fff!important;
+      line-height: 32px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      margin-right: 10px;
+      border-radius: 5px;
+      float: right;
+      border-bottom: 0 none;
+  }
+
   .navbar .brand {
-    float: none;
+    float: left;
     margin-bottom: 0.5em;
   }
 
@@ -3066,12 +3087,23 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar .brand img {
     display: block;
-    margin: 0 auto;
+    margin-left: 12px;
+  }
+  .navbar .nav {
+    clear: both;
+    float: none;
+    display: none;
   }
   .navbar .nav > li {
-    width: 50%;
+    float: none;
+    display: block;
     text-align: center;
   }
+  .navbar .nav > li a {
+    width: 100%;
+    display: block;
+  }
+
   /* Hiding UserVoice sticky bar when in smartphone mode */
   #uvTabLabel {
     display: none !important;
