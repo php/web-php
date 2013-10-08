@@ -382,6 +382,7 @@ $terms = array(
 	'exception'		=> 'language.exceptions.php',
 	'extends'		=> 'keyword.extends.php',
 	'file'			=> 'function.file.php',
+	'finally'		=> 'language.exceptions.php#example-268',
 	'fopen'			=> 'function.fopen.php',
 	'for'			=> 'control-structures.for.php',
 	'foreach'		=> 'control-structures.foreach.php',
