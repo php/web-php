@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>Ski PHP 2014</title>
+  <id>http://php.net/archive/2013.php#id2013-10-10-2</id>
+  <published>2013-10-10T13:00:14-07:00</published>
+  <updated>2013-10-10T13:00:14-07:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2014-01-18</default:finalTeaserDate>
+  <category term="conferences" label="Conference announcement"/>
+  <link href="http://php.net/conferences/index.php#id2013-10-10-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="https://www.skiphp.com" title="Ski PHP 2014">ski-php.png</default:newsImage>
+  <link href="https://www.skiphp.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     <a href="https://www.skiphp.com/">Ski PHP 2014</a> has announced the
+     <a href="https://www.skiphp.com/attend/schedule">schedule for their upcoming
+     conference</a>, which will be on January 17-18, 2014 in Salt Lake City, Utah,
+     USA.  Our schedule is anchored by keynotes from Jared Smith, Laura Thomson, and
+     Chris Hartjes, and also includes talks from Julien Pauli, Ed Finkler, John
+     Coggeshall, Elizabeth Naramore, and many more.
+     </p>
+     
+     <p>
+     Our Early Bird registration rate of just $129 is available until October 15th.
+     Hotel group rate information is available at our site.
+     </p>
+    </div>
+  </content>
+</entry>
