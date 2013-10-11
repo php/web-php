@@ -25,13 +25,13 @@ The following list of languages already contain SVN modules, and will show up on
 <h3>Inactive languages already in SVN</h3>
 <ul>
 <?php
-// $none are manuals we don't even have old versions of
-$none = array('ar');
+// $archived are manuals we have old versions of
+$archived = array('da', 'kr');
 
 foreach ($INACTIVE_ONLINE_LANGUAGES as $cc => $lang) {
-    $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';
-    if (in_array($cc, $none)) {
-        $link = 'no archive';
+    $link = 'no archive';
+    if (in_array($cc, $archived)) {
+        $link = '<a href="http://docs.php.net/manual/'. $cc .'">archive</a>';
     }
     echo '<li>', $lang, ' : (', $link, ')</li>';
 }
