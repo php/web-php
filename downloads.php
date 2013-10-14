@@ -140,6 +140,10 @@ to verify the tags:
 </p>
 <h2>PHP 5.5</h2>
 <pre>
+pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
+      Key fingerprint = 0BD7 8B5F 9750 0D45 0838  F95D FE85 7D9A 90D9 0EC1
+uid                  Julien Pauli &lt;jpauli@php.net&gt;
+
 pub   4096R/7267B52D 2012-03-20 [expires: 2016-03-19]
       Key fingerprint = 0B96 609E 270F 565C 1329  2B24 C13C 70B8 7267 B52D
 uid                  David Soria Parra &lt;dsp@php.net&gt;
