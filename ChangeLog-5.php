@@ -10,6 +10,82 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.5"><!-- {{{ 5.5.5 -->
+<h3>Version 5.5.5</h3>
+<b>17-Oct-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(64979); ?> (Wrong behavior of static variables in closure generators).</li>
+  <li><?php bugfix(65322); ?> (compile time errors won't trigger auto loading).</li>
+  <li><?php bugfix(65821); ?> (By-ref foreach on property access of string offset segfaults).</li>
+</ul></li>
+<li>CLI Server:
+<ul>
+  <li><?php bugfix(65633); ?> (built-in server treat some http headers as case-sensitive).</li>
+  <li><?php bugfix(65818); ?> (Segfault with built-in webserver and chunked transfer encoding).</li>
+  <li>Added application/pdf to PHP CLI Web Server mime types</li>
+</ul></li>
+<li>Datetime:
+<ul>
+  <li><?php bugfix(64157); ?> (DateTime::createFromFormat() reports confusing error message).</li>
+  <li><?php bugfix(65502); ?> (DateTimeImmutable::createFromFormat returns DateTime).</li>
+  <li><?php bugfix(65548); ?> (Comparison for DateTimeImmutable doesn't work).</li>
+</ul></li>
+<li>DBA:
+<ul>
+  <li><?php bugfix(65708); ?> (dba functions cast $key param to string in-place, bypassing copy on write).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Add RFC 6598 IPs to reserved addresses.</li>
+  <li><?php bugfix(64441); ?> (FILTER_VALIDATE_URL rejects fully qualified domain names).</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(65667); ?> (ftp_nb_continue produces segfault).</li>
+</ul></li>
+<li>GD:
+<ul>
+  <li>Ensure that the defined interpolation method is used with the generic scaling methods.</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(65721); ?> (configure script broken in 5.5.4 and 5.4.20 when enabling imap).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li><?php bugfix(65845); ?> (Error when Zend Opcache Optimizer is fully enabled).</li>
+  <li><?php bugfix(65665); ?> (Exception not properly caught when opcache enabled).</li>
+  <li><?php bugfix(65510); ?> (5.5.2 crashes in _get_zval_ptr_ptr_var).</li>
+  <li>Fixed issue #135 (segfault in interned strings if initial memory is too low).</li>
+  <li>Added function opcache_compile_file() to load PHP scripts into cache without execution.</li>
+  <li>Added support for GNU Hurd.</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(65808); ?> (the socket_connect() won't work with IPv6 address).</li>
+</ul></li>
+<li>SPL:
+<ul>
+  <li><?php bugfix(64782); ?> (SplFileObject constructor make $context optional / give it a default value).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(61548); ?> content-type must appear at the end of headers for 201 Location to work in http.</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(51936); ?> Crash with clone XMLReader.</li>
+  <li><?php bugfix(64230); ?> XMLReader does not suppress errors.</li>
+</ul></li>
+<li>Build system:
+<ul>
+  <li><?php bugfix(51076); ?> Race condition in shtool's mkdir -p implementation.</li>
+  <li><?php bugfix(62396); ?> 'make test' crashes starting with 5.3.14 (missing gzencode()).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
 <b>19-Sep-2013</b>
