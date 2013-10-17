@@ -44,7 +44,7 @@ while(($ln = fgets($fp)) !== false) {
 	}
 }
 echo <<<HEAD
-<a name="$version"></a><!-- {{{ $version -->
+<section class="version" id="$version"><!-- {{{ $version -->
 <h3>Version $version</h3>
 <b>$date</b>
 <ul>
@@ -67,4 +67,4 @@ foreach($entries as $module => $items) {
 	}
 	echo "</ul></li>\n";
 }
-echo "</ul>\n<!-- }}} -->\n\n";
+echo "</ul>\n<!-- }}} --></section>\n\n";

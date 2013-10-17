@@ -86,6 +86,46 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.21"><!-- {{{ 5.4.21 -->
+<h3>Version 5.4.21</h3>
+<b>17-Oct-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65322); ?> (compile time errors won't trigger auto loading).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65633); ?> (built-in server treat some http headers as case-sensitive).</li>
+</ul></li>
+<li>Datetime:
+<ul>
+  <li><?php bugfix(64157); ?> (DateTime::createFromFormat() reports confusing error message).</li>
+</ul></li>
+<li>DBA extension:
+<ul>
+  <li><?php bugfix(65708); ?> (dba functions cast $key param to string in-place, bypassing copy on write).</li>
+</ul></li>
+<li>Filter:
+<ul>
+  <li>Add RFC 6598 IPs to reserved addresses.</li>
+  <li><?php bugfix(64441); ?> (FILTER_VALIDATE_URL rejects fully qualified domain names).</li>
+</ul></li>
+<li>IMAP:
+<ul>
+  <li><?php bugfix(65721); ?> (configure script broken in 5.5.4 and 5.4.20 when enabling imap).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(61548); ?> (content-type must appear at the end of headers for 201 Location to work in http).</li>
+</ul></li>
+<li>Build system:
+<ul>
+  <li><?php bugfix(62396); ?> ('make test' crashes starting with 5.3.14 (missing gzencode())).</li>
+</ul></li>
+</ul>
+<!-- }}} -->
+</section>
+
 <section class="version" id="5.5.4"><!-- {{{ 5.5.4 -->
 <h3>Version 5.5.4</h3>
 <b>19-Sep-2013</b>
