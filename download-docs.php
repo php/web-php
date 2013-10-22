@@ -64,8 +64,8 @@ $formats = array(
     "Many HTML files"  => "tar.gz",
 #   "Many PDF files"   => "pdf.tar.gz",
 #   "PDF"              => "pdf",
-#    "HTML Help file"   => "chm", // Bug #64842
-#    "HTML Help file (with user notes)" => "chm", // Bug #64842
+    "HTML Help file"   => "chm",
+    "HTML Help file (with user notes)" => "chm",
 );
 ?>
 
@@ -92,9 +92,6 @@ $formats = array(
   tool you use does otherwise.
  </li>
  <li>
-  The CHM builds are offline but will be fixed in the future. We are 
-  sorry for the inconvenience.
-  <!--
   <p class="warn">
   If you are using Windows XP SP2 or later and you are going to download the
   documentation in CHM format, you <strong>need</strong> to &quot;unblock&quot;
@@ -105,7 +102,6 @@ $formats = array(
   result in error messages including &quot;Navigation to the webpage was
   canceled&quot; due to Windows security restrictions.
   </p>
-  -->
  </li>
 </ul>
 
