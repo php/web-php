@@ -197,6 +197,7 @@ ul li {
 }
 
 em {
+	font-weight:bolder;
 	font-style: italic;
 }
 
