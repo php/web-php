@@ -7,7 +7,7 @@ site_header("PHP 5.5.5 Release Announcement");
 
 <h1>PHP 5.5.5 Release Announcement</h1>
 
-<p>The PHP development team announces the immediate availability of PHP 5.5.5.
+<p>The PHP Development Team announces the immediate availability of PHP 5.5.5.
 This release fixes about twenty bugs against PHP 5.5.4, some of them regarding the build system.</p>
 
 <p>All PHP users are encouraged to upgrade to this new version.</p>
