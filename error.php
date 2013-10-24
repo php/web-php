@@ -458,7 +458,6 @@ $external_redirects = array(
     "bugstats"    => "http://bugs.php.net/bugstats.php",
     "phpdochowto" => "https://wiki.php.net/doc/howto",
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
-    "functions.js.txt" => "http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
 );

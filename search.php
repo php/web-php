@@ -111,29 +111,7 @@ else {
     );
     site_header("Search", array("link" => array($link), "current" => "docs"));
 ?>
-<p>
- The autocompleting search feature is accessible via the form elements at the top
- right of php.net pages. You should be able to use this feature in a reasonably modern
- browser by selecting the 'function list' search option and typing in some letters
- into the searchbox. Features:
-</p>
-<ul>
- <li>Dynamically changing list of function names starting with the substring you typed</li>
- <li>Navigate in the list with up and down keys</li>
- <li>Autocomplete with pressing the space key</li>
- <li>Go to a function by clicking on its name with your mouse</li>
-</ul>
-<p>
- If you are not interested in this feature, you can turn it
- off for yourself on the <a href="/my.php">My PHP.net</a> page.
-</p>
-<p>
- In case you find any bugs, <a href="http://bugs.php.net/">we are interested</a>
- in a detailed writeup, including JS error messages, operating system and browser
- information. The source code of this feature is released under the PHP License and
- is available <a href="http://svn.php.net/phpdoc/doc-base/trunk/scripts/quickref">from the
- PHP SVN server</a> without any support.
-</p>
+This page is no longer functioning, and will be removed shortly.
 <?php
     if (FALSE) {
     if (isset($EXPL_LANG)) {
@@ -181,6 +159,5 @@ foreach ($searchoptions as $key => $value) {
 </form>
 <?php
     }
-    echo '<script type="text/javascript">loadSuggestCode();</script>';
-    site_footer(array("functionsjs"));
+    site_footer();
 }

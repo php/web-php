@@ -328,7 +328,6 @@ function site_footer($config = array())
         "<a href=\"/mirror.php\">This unofficial mirror</a> is operated at:");
     $last_updated  = strftime("%c %Z", $LAST_UPDATED);
     $layout_helper = ($PAGE_COLUMNS > 2 ? "</div>" : "");
-    //$functionsjs   = (in_array("functionsjs", $config) ? "\n<script src=\"" . $_SERVER['STATIC_ROOT'] . '/functions.js" type="text/javascript"></script>' : '');
 
     // Automate the Copyright year
     $current_year = date('Y');

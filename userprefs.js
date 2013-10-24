@@ -40,39 +40,3 @@ function boldEvents()
     }
 }
 
-// Load function name suggestion code (for search box)
-function loadSuggestCode()
-{
-    searchEnabled = true;
-    // Force default turnoff for buggy Mac browsers
-    if (navigator.userAgent.toLowerCase().indexOf('mac') > 0) {
-      searchEnabled = false;
-    }
-
-    myphpnet = getCookie('MYPHPNET');
-    if (typeof(myphpnet) == "string") {
-        myphpnet_parts = myphpnet.split(",");
-        if (myphpnet_parts.length > 3) {
-            if (myphpnet_parts[3] == '1') {
-                searchEnabled = false;
-            }
-            // Enable if user explicity wanted to enable it
-            // Important for Mac users, who get disabled by default
-            else if (myphpnet_parts[3] == '0') {
-                searchEnabled = true;
-            }
-        }
-    }
-    if (searchEnabled && document.getElementsByTagName && document.createElement) {
-        var elems = document.getElementsByTagName("*");
-        for (var i = 0; i < elems.length; i++) {
-            if (elems[i].tagName.toLowerCase() == 'head') {
-                var scriptElem = document.createElement('script');
-                scriptElem.setAttribute('type', 'text/javascript');
-                scriptElem.setAttribute('src', '/functions.js');
-                elems[i].appendChild(scriptElem);
-                break;
-            }
-        }
-    }
-}
