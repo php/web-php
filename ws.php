@@ -111,6 +111,7 @@ function ws_bing_massage($data) {
 }
 
 # temporarily disable the rest of the script
+#
 return;
 
 if($raw!='mirrortest'):
