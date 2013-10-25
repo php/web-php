@@ -110,6 +110,7 @@ function ws_bing_massage($data) {
     return serialize($massaged);
 }
 
+# temporarily disable the rest of the script
 return;
 
 if($raw!='mirrortest'):
