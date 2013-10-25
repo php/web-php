@@ -110,6 +110,8 @@ function ws_bing_massage($data) {
     return serialize($massaged);
 }
 
+return;
+
 if($raw!='mirrortest'):
 $dbh = new PDO('mysql:host=localhost;dbname=ws', $conf['db_user'], $conf['db_pw'], array(PDO::ATTR_PERSISTENT => true,
                                                                                          PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true));
