@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+  <title>A further update on php.net</title>
+  <id>http://php.net/archive/2013.php#id2013-10-24-2</id>
+  <published>2013-10-24T18:57:54-07:00</published>
+  <updated>2013-10-24T18:57:54-07:00</updated>
+  <category term="frontpage" label="PHP.net frontpage news"/>
+  <link href="http://php.net/index.php#id2013-10-24-2" rel="alternate" type="text/html"/>
+  <link href="http://php.net/archive/2013.php#id2013-10-24-2" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>We are continuing to work through the repercussions of the php.net malware issue described in a news post earlier today. As part of this, the php.net systems team have audited every server operated by php.net, and have found that two servers were compromised: the server which hosted the www.php.net, static.php.net and git.php.net domains, and was previously suspected based on the JavaScript malware, and the server hosting bugs.php.net. The method by which these servers were compromised is unknown at this time.</p>
+     
+     <p>All affected services have been migrated off those servers. We have verified that our Git repository was not compromised, and it remains in read only mode as services are brought back up in full.</p>
+     
+     <p>As it's possible that the attackers may have accessed the private key of the php.net SSL certificate, we have revoked it immediately. We are in the process of getting a new certificate, and expect to restore access to php.net sites that require SSL (including bugs.php.net and wiki.php.net) in the next few hours.</p>
+     
+     <p>To summarise, the situation right now is that:</p>
+     
+     <ul>
+       <li>JavaScript malware was served to a small percentage of php.net users from the 22nd to the 24th of October 2013.</li>
+       <li>Neither the source tarball downloads nor the Git repository were modified or compromised.</li>
+       <li>Two php.net servers were compromised, and have been removed from service. All services have been migrated to new, secure servers.</li>
+       <li>SSL access to php.net Web sites is temporarily unavailable until a new SSL certificate is issued and installed on the servers that need it.</li>
+     </ul>
+     
+     <p>Over the next few days, we will be taking further action:</p>
+     
+     <ul>
+       <li>php.net users will have their passwords reset. Note that users of PHP are unaffected by this: this is solely for people committing code to projects hosted on svn.php.net or git.php.net.</li>
+     </ul>
+     
+     <p>We will provide a full post mortem in due course, most likely next week. You can also get updates from the official php.net Twitter: <a href="https://twitter.com/official_php">@official_php</a>.</p>
+    </div>
+  </content>
+</entry>
