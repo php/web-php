@@ -43,7 +43,6 @@ site_header("Sitemap", array("current" => "help"));
      <li><a href="/docs.php">Online Documentation</a></li>
      <li><a href="/faq.php">Frequently Asked Questions</a></li>
      <li><a href="/download-docs.php">Download documentation</a></li>
-     <li><a href="/reST">Internal documentations for developers</a></li>
     </ul>
    </li>
    <li>Other support pages

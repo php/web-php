@@ -167,7 +167,7 @@ if (isset($_POST['maillist'])) {
 </ul>
 <p>
  And make sure you have read our
- <a href="/reST/README.MAILINGLIST_RULES">Mailinglist Rules</a>.
+ <a href="//git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD">Mailinglist Rules</a>.
 </p>
 <?php
 

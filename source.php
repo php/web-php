@@ -50,7 +50,7 @@ $dir = dirname($_GET['url']);
 if (!empty($dir) && !preg_match("!^(\\.|/)$!", $dir)) {
 
     // Check if the specified dir is valid
-    $legal_dirs = array("/manual", "/include", "/stats", "/error", "/license", "/conferences", "/archive", "/releases", "/security", "/reST");
+    $legal_dirs = array("/manual", "/include", "/stats", "/error", "/license", "/conferences", "/archive", "/releases", "/security");
     if ((preg_match("!^/manual/!", $dir) || in_array($dir, $legal_dirs)) &&
         strpos($dir, "..") === FALSE) {
         $page_name = $_SERVER['DOCUMENT_ROOT'] . $_GET['url'];
