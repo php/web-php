@@ -33,8 +33,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  </li>
  <li>
   <p>
-   Grab <a href="/mirrorkit.tgz">mirrorkit.tgz</a>, extract
-   <code>stats/php.conf</code> and edit the file.<br /><br />
+   Grab <a href="/mirror-stats.conf">mirror-stats.conf</a> and edit the file.<br /><br />
    This is the main conf file for The Webalizer. Specifically, you will want to 
    change the lines which define where your log file sits, where the output
    should go, and the name of your host machine. Look for these settings:
@@ -47,7 +46,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
   <p>
    Give it a test<br /><br />
    From the command line in the stats directory, type:
-   <code>webalizer -c php.conf</code> You should get an index
+   <code>webalizer -c mirror-stats.conf</code> You should get an index
    file, a usage file for the current month, some images,
    and a history file.
   </p>
@@ -60,7 +59,7 @@ site_header("Setting Up Local Stats", array("current" => "community"));
    daily at 3 am):
   </p>
 <pre class="info">
-      0 3 * * * (cd /your/stats/folder;/usr/bin/webalizer -c php.conf) >/dev/null 2>&amp;1
+      0 3 * * * (cd /your/stats/folder;/usr/bin/webalizer -c mirror-stats.conf) >/dev/null 2>&amp;1
 </pre>
   <p>
    Provide the path of the stats directory in the "cd".
