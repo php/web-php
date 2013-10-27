@@ -73,8 +73,4 @@ site_header("Setting Up Local Stats", array("current" => "community"));
  that we can solve your problem, of course, but it is worth a try.
 </p>
 
-<p>
- Originally written by Colin Viebrock in 1998 --- Last updated: 2003-Jan-18
-</p>
-
 <?php site_footer(); ?>
