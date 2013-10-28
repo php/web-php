@@ -114,7 +114,6 @@ function manual_header()
         ),
         "headtags" => array(
             '<meta http-equiv="Content-language" content="' . $lang . '" />
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
