@@ -93,7 +93,7 @@ if (isset($shortname) && $shortname) {
 
 
 
-<?php if (!isset($_COOKIE['BetaWarning']) || filter_var($_COOKIE['BetaWarning'],FILTER_VALIDATE_BOOLEAN) == TRUE): ?>
+<?php if (!isset($_COOKIE['BetaWarning']) || $_COOKIE['BetaWarning'] == TRUE): ?>
 <div id="head-beta-warning">
   <p id="beta-warning">
     <span class="blurb">Welcome to the php.net beta site. If you want to revert back, <a href="?setbeta=0">click here</a></span>
