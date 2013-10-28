@@ -120,7 +120,14 @@ if (isset($_POST['maillist'])) {
  <a href="http://marc.info/">Marc</a>.
 </p>
 
-<h2>Posting guidelines</h2>
+<h2>Twitter</h2>
+<p>
+ The PHP team maintains an official PHP.net account on twitter,
+<a href="https://twitter.com/official_php">@official_php</a>, for those interested
+in following various information about the PHP project.
+</p>
+
+<h2>Mailing List Posting guidelines</h2>
 
 <p>
  When posting to mailing lists or newsgroups, please keep the following in mind:
