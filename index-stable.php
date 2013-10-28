@@ -224,7 +224,7 @@ site_header("Hypertext Preprocessor",
             array(
                 "rel"   => "alternate",
                 "type"  => "application/atom+xml",
-                "href"  => $MYSITE . "releases.atom",
+                "href"  => $MYSITE . "releases/feed.php",
                 "title" => "PHP Release feed"
             ),
 

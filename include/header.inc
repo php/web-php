@@ -26,7 +26,7 @@ if (isset($shortname) && $shortname) {
 
  <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico" />
  <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
- <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases.atom" title="PHP Release feed" />
+ <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed" />
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor" />
 
 <?php if (isset($_SERVER['BASE_PAGE'])): ?>

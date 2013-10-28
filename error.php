@@ -419,6 +419,7 @@ $uri_aliases = array (
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // BC
+    "releases.atom" => "releases/feed.php", // BC, No need to pre-generate it
     
     # CVS -> SVN
     "anoncvs.php"   => "git",
