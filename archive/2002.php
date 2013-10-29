@@ -89,7 +89,7 @@ site_header("News Archive - 2002", array("generate_modified" => true));
 <p>
  <span class="newsdate">[01-Dec-2002]</span>
  The news of PHP.net is available now in RSS 1.0 format via our
- new <a href="/news.rss">news.rss file</a>. You can
+ new news.rss file. You can
  add this file to any news reader or portal site to get the latest
  official PHP news. We strongly recommend you to cache the contents
  locally on your side, as the newsfeed is updated daily. The RSS
