@@ -419,7 +419,6 @@ $uri_aliases = array (
     # external shortcut aliases ;)
     "dochowto"     => "phpdochowto",
     "projects.php" => "projects", // BC
-    "releases.atom" => "releases/feed.php", // BC, No need to pre-generate it
     
     # CVS -> SVN
     "anoncvs.php"   => "git",
@@ -453,11 +452,12 @@ $external_redirects = array(
     "rev"         => "http://doc.php.net/php/$LANG/revcheck.php",
     "release/5_3_0.php" => "/releases/5_3_0.php", // PHP 5.3.0 release announcement had a typo
     "ideas.php"   => "http://wiki.php.net/ideas", // BC
+    "releases.atom" => "/releases/feed.php", // BC, No need to pre-generate it
     // We used to do reST rendering of README files
-    "reST/README.RELEASE_PROCESS"   => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.RELEASE_PROCESS;hb=HEAD",
-    "reST/README.MAILINGLIST_RULES" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
-    "reST/README.GIT-RULES"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
-    "reST/CODING_STANDARDS"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
+    "rest/readme.release_process"   => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.RELEASE_PROCESS;hb=HEAD",
+    "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
+    "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
+    "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
 );
 
 // ============================================================================
