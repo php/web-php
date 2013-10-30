@@ -46,13 +46,13 @@ $srch_host = "php.net";
 $srch_rqst = "/ws.php?profile=$scope&q=$uq&lang=$ul&results=$per_page&start=$s&mirror=".trim(substr($MYSITE,7),'/');
 $url = "http://".$srch_host.$srch_rqst;
 
-$data = fetch_contents($url);
-if (is_array($data)) {
-  // FIXME: if (is_authenticated()) ...
-  $comment = '<!-- ' .print_r($data, true). '-->';
-  exit_with_pretty_error("Search error", "Internal error", "This mirror does not support searches, please report this error to <a href='/contact'>our webmasters</a>" . $comment);
-}
-$res = unserialize($data);
+#$data = fetch_contents($url);
+#if (is_array($data)) {
+#  // FIXME: if (is_authenticated()) ...
+#  $comment = '<!-- ' .print_r($data, true). '-->';
+#  exit_with_pretty_error("Search error", "Internal error", "This mirror does not support searches, please report this error to <a href='/contact'>our webmasters</a>" . $comment);
+#}
+#$res = unserialize($data);
 
 // HTTP status line is passed on, signifies an error
 site_header(
@@ -64,22 +64,20 @@ site_header(
     )
 );
 
-if (!is_array($res)) {
-  exit_with_pretty_error(null, 'Internal error', 'Please try again later');
-}
+#if (!is_array($res)) {
+#  exit_with_pretty_error(null, 'Internal error', 'Please try again later');
+#}
 
 // No results for query
-if ($res['ResultSet']['totalResultsAvailable'] == 0) {
-  echo '<h1>Perform an alternative search instead</h1>';
-
+#if ($res['ResultSet']['totalResultsAvailable'] == 0) {
   // TODO Research possible encoding issues
   google_cse($q); 
 
   site_footer();
   exit;  
-}
+#}
 
-search_results($res, $q, $scope, $per_page, $s, $l);
+#search_results($res, $q, $scope, $per_page, $s, $l);
 
-site_footer();
+#site_footer();
 ?>
