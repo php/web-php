@@ -5,8 +5,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER["DOCUMENT_ROOT"] . "/include/branches.inc";
 
 if (isset($_GET["serialize"])) {
+	$RELEASES[5][$PHP_5_4_VERSION]["date"] = $PHP_5_4_DATE;
 	$RELEASES[5][$PHP_5_3_VERSION]["date"] = $PHP_5_3_DATE;
-	$RELEASES[5][$PHP_5_2_VERSION]["date"] = $PHP_5_2_DATE;
 	$RELEASES                              = $RELEASES + $OLDRELEASES;
 
 	if (isset($_GET["version"])) {
@@ -24,7 +24,7 @@ if (isset($_GET["serialize"])) {
 				$count = 1;
 
 				/* check if other $RELEASES[$ver] are there */
-				/* e.g., 5_2, 5_3, and 5_4 all exist and have a release */
+				/* e.g., 5_3, 5_4, and 5_5 all exist and have a release */
 				while(($z = each($RELEASES[$ver])) && $count++ < $max) {
 					$return[$z[0]] = $z[1];
 				}
