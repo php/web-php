@@ -220,8 +220,9 @@ function site_header($title = '', $config = array())
  <meta http-equiv="Content-Type" content="text/html; charset={$config['charset']}"/>
  <link rel="shortcut icon" href="{$_SERVER['STATIC_ROOT']}/favicon.ico" />{$link}
  $canonical
- <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}{$moreheadtags}
+ <script type="text/javascript" src="{$_SERVER['STATIC_ROOT']}/userprefs.js"></script>{$base}{$meta}
  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ {$moreheadtags}
 </head>
 <body{$onload}>
 
