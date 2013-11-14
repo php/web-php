@@ -25,6 +25,10 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <ul>
   <li>Changed default listen() backlog to 65535.</li>
 </ul></li>
+<li>JSON:
+<ul>
+  <li><?php bugfix(64874); ?> (json_decode handles whitespace incorrectly).</li>
+</ul></li>
 <li>MySQLi:
 <ul>
   <li><?php bugfix(66043); ?> (Segfault calling bind_param() on mysqli).</li>
