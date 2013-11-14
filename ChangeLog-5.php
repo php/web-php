@@ -10,6 +10,47 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.6"><!-- {{{ 5.5.6 -->
+<h3>Version 5.5.6</h3>
+<b>14-Nov-2013</b>
+<ul><li>Core:
+<ul>
+  <li>Improved performance of array_merge() and func_get_args() by eliminating useless copying.</li>
+  <li><?php bugfix(65947); ?> (basename is no more working after fgetcsv in certain situation).</li>
+  <li><?php bugfix(65939); ?> (Space before ";" breaks php.ini parsing).</li>
+  <li><?php bugfix(65911); ?> (scope resolution operator - strange behavior with $this).</li>
+  <li><?php bugfix(65936); ?> (dangling context pointer causes crash).</li>
+</ul></li>
+<li>FPM:
+<ul>
+  <li>Changed default listen() backlog to 65535.</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66043); ?> (Segfault calling bind_param() on mysqli).</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li>Increased limit for opcache.max_accelerated_files to 1,000,000.</li>
+  <li>Fixed issue #115 (path issue when using phar).</li>
+  <li>Fixed issue #149 (Phar mount points not working with OPcache enabled).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(65950); ?> (Field name truncation if the field name is bigger than 32 characters).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(66033); ?> (Segmentation Fault when constructor of PDO statement throws an exception).</li>
+  <li><?php bugfix(65946); ?> (sql_parser permanently converts values bound to strings).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(64760); ?> (var_export() does not use full precision for floating-point numbers).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.5"><!-- {{{ 5.5.5 -->
 <h3>Version 5.5.5</h3>
 <b>17-Oct-2013</b>
