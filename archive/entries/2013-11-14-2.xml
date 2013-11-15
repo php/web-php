@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:default="http://php.net/ns/news">
+  <title>PHP Johannesburg 2014</title>
+  <id>http://php.net/archive/2013.php#id2013-11-14-2</id>
+  <published>2013-11-14T18:22:25-08:00</published>
+  <updated>2013-11-14T18:22:25-08:00</updated>
+  <default:finalTeaserDate xmlns="http://php.net/ns/news">2013-12-01</default:finalTeaserDate>
+  <category term="cfp" label="Call for Papers"/>
+  <link href="http://php.net/conferences/index.php#id2013-11-14-2" rel="alternate" type="text/html"/>
+  <default:newsImage xmlns="http://php.net/ns/news" link="http://www.phpsouthafrica.com" title="PHP Johannesburg 2014">phpjohannesburg2014.png</default:newsImage>
+  <link href="http://www.phpsouthafrica.com" rel="via" type="text/html"/>
+  <content type="xhtml">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+     <p>
+     Following from a very successful 1st PHP Conference in Cape Town, we are now breaking
+     ground for Johannesburg`s inaugural conference.  Johannesburg will be host to
+     <strong>Africa`s Biggest PHP Conference on the continent April 4th&amp;5th 2014</strong>. With
+     over 200 delegates attending, the two day event is hosting some of the Continents most
+     influential people in their field. With delegates flying in from as far afield as
+     Ethiopia, Nigeria, Kenya and ROW.
+     </p>
+     
+     <p>
+     <strong>Call for Papers : Closes 30th Novermber 2013</strong>
+     </p>
+     
+     <p>
+     Our event will run over 2 days, come join us for a few days of sharing, networking,
+     learning and some fun.  <strong>What will make this Conference very special is our Keynote
+     Speaker - For PHPJohannesburg we have Rasmus Lerdorf who will be opening Africa`s Biggest
+     PHP Conference</strong>.
+     </p>
+     
+     <p>
+     We look forward to seeing you.
+     <a href="http://www.phpsouthafrica.com">www.phpsouthafrica.com</a>
+     </p>
+    </div>
+  </content>
+</entry>
