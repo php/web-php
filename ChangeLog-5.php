@@ -55,6 +55,46 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.22"><!-- {{{ 5.4.22 -->
+<h3>Version 5.4.22</h3>
+<b>14-Nov-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(65911); ?> (scope resolution operator - strange behavior with $this).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li><?php bugfix(65818); ?> (Segfault with built-in webserver and chunked transfer encoding).</li>
+</ul></li>
+<li>Exif:
+<ul>
+  <li>Fixed crash on unknown encoding.</li>
+</ul></li>
+<li>FTP:
+<ul>
+  <li><?php bugfix(65667); ?> (ftp_nb_continue produces segfault).</li>
+</ul></li>
+<li>ODBC:
+<ul>
+  <li><?php bugfix(65950); ?> (Field name truncation if the field name is bigger than 32 characters).</li>
+</ul></li>
+<li>Sockets:
+<ul>
+  <li><?php bugfix(65808); ?> (the socket_connect() won't work with IPv6 address).</li>
+</ul></li>
+<li>Standard:
+<ul>
+  <li><?php bugfix(64760); ?> (var_export() does not use full precision for floating-point numbers).</li>
+</ul></li>
+<li>XMLReader:
+<ul>
+  <li><?php bugfix(51936); ?> (Crash with clone XMLReader).</li>
+  <li><?php bugfix(64230); ?> (XMLReader does not suppress errors).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+
 <section class="version" id="5.5.5"><!-- {{{ 5.5.5 -->
 <h3>Version 5.5.5</h3>
 <b>17-Oct-2013</b>
