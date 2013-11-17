@@ -561,7 +561,13 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
 
         if(@file_exists($local_file.".asc")) {
             echo " ";
-            print_link($download_link.".asc", "(sig)");
+            $sig_link = "get/$file.asc/from/a/mirror";
+            if ($mirror != '') {
+                $sig_link = $mirror . $sig_link;
+            } else {
+                $sig_link = "/" . $sig_link;
+            }
+            print_link($sig_link, "(sig)");
         }
 
         // Try to get the size of the file
