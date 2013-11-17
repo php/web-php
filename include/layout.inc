@@ -559,6 +559,11 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             $local_file = "distributions/$file";
         }
 
+        if(@file_exists($local_file.".asc")) {
+            echo " ";
+            print_link($download_link.".asc", "(sig)");
+        }
+
         // Try to get the size of the file
         $size = @filesize($local_file);
 
@@ -573,6 +578,7 @@ function download_link($file, $title, $showsize = TRUE, $mirror = '')
             }
             echo ']';
         }
+        
     }
 }
 
