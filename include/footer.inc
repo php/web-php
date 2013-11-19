@@ -60,8 +60,11 @@
   })(window);
 </script>
 
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
- <script type="text/javascript" src="/js/common.js"></script>
+ <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script type="text/javascript" src="/js/ext/hogan-2.0.0.min.js"></script>
+ <script type="text/javascript" src="/js/ext/typeahead.min.js"></script>
+ <script type="text/javascript" src="/js/search.js<?php echo $v?>"></script>
+ <script type="text/javascript" src="/js/common.js<?php echo $v?>"></script>
  <?php include 'uservoice.inc' ?>
 
 </body>
