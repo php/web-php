@@ -15,6 +15,12 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
     date_default_timezone_set("UTC");
 }
 
+
+/* Compatability with the PHP webserver.. */
+if (!isset($_SERVER["SERVER_ADDR"])) {
+    $_SERVER["SERVER_ADDR"] = "127.0.0.1";
+}
+
 // As of PHP 5.3.0 multibyte sequence errors are no longer 
 // silent. Prior to that version this bitfield does not exist
 // so define it to prevent notices on older versions
