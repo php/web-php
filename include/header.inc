@@ -9,7 +9,8 @@ if (isset($config['css'])) {
     $cssfiles += (array) $config['css'];
 }
 foreach($cssfiles as $filename) {
-    $CSS[$filename] = @filemtime("styles/$filename");
+    $path = dirname(dirname(__FILE__)).'/styles/'.$filename;
+    $CSS[$filename] = @filemtime($path);
 }
 
 
