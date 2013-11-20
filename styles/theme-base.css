@@ -3116,6 +3116,10 @@ div.soft-deprecation-notice blockquote.sidebar {
     border-width:0;
 }
 
+#prevnext-container .next {
+    float: right;
+}
+
 #mainmenu-toggle {
     display: none;
 }

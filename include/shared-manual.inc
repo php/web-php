@@ -617,13 +617,14 @@ function manual_setup_beta($setup) {
             "prev"     => $setup["prev"][0],
             "next"     => $setup["next"][0],
         ),
-        "lang"         => $setup["head"][1],
-        "thispage"     => $setup["this"][0],
+        "lang" => $setup["head"][1],
+        "thispage" => $setup["this"][0],
+        "prev" => $setup["prev"],
+        "next" => $setup["next"],
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
     echo '<div class="change-language">' . manual_language_chooser($config["lang"], $config["thispage"]) . '</div>';
-
 
 }
 function manual_language_chooser($currentlang, $currentpage) {

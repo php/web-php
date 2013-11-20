@@ -111,8 +111,19 @@ if (isset($shortname) && $shortname) {
               echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a> <span class='divider'>/</span></li>";
           }
           echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
+
       ?>
     </ul>
+      <div id="prevnext-container">
+        <?php
+          if (isset($config['prev'])) {
+            echo "<a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a>";
+          }
+          if (isset($config['next'])) {
+            echo "<a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a>";
+          }
+        ?>
+      </div>
     </div>
   </div>
 <?php endif; ?>
@@ -146,5 +157,5 @@ if (isset($shortname) && $shortname) {
         </ul>
     </aside>
 <?php endif; ?>
-<section id="layout-content" class="<?php echo $curr; ?> span<?php echo $config['layout_span']; ?>">
-    
+
+<section id="layout-content" class="<?php echo $curr ?> span<?php echo $config['layout_span']; ?>">
