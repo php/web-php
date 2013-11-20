@@ -64,7 +64,7 @@
  <script type="text/javascript" src="/js/ext/hogan-2.0.0.min.js"></script>
  <script type="text/javascript" src="/js/ext/typeahead.min.js"></script>
  <script type="text/javascript" src="/js/search.js?t=20131120"></script>
- <script type="text/javascript" src="/js/common.js?t=20131120"></script>
+ <script type="text/javascript" src="/js/common.js?t=20131120a"></script>
  <?php include 'uservoice.inc' ?>
 
 </body>
