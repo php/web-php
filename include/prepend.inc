@@ -189,16 +189,7 @@ function myphpnet_beta() {
     if (isset($_GET["beta"])) {
         return (bool)$_GET["beta"];
     }
-
-    if ($MYSITE === 'http://prototype.php.net/') {
-        return true;
-    }
-
-    if (isset($MYPHPNET[4])) {
-        return (bool)$MYPHPNET[4];
-    }
-
-    return false;
+    return true;
 }
 
 // Default: Default search.
