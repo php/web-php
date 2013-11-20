@@ -55,6 +55,11 @@ div#usernotes a.usernotes-voted:hover {
 	padding: 20px;
 	margin: 5px;
 }
+#mirrors-container .mirrors-list .homecountry {
+	display: block;
+	margin: 5px auto;
+	height: 100%;
+}
 
 #mirrors-container .mirrors-list .mirror:hover {
 	background-color: #EEE;
