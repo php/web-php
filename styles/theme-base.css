@@ -2676,9 +2676,16 @@ fieldset {
 }
 
 .tt-dropdown-menu {
-    background:#444449;
-    box-shadow:inset 0 0 2em rgba(0,0,0,.375);
+    background: rgb(102, 102, 153);
+    background: rgba(102, 102, 153, 0.98);
     color:#fff;
+    width: 100%;
+    -webkit-border-bottom-right-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
 }
 
 .tt-dropdown-menu h3 {
@@ -2693,11 +2700,17 @@ fieldset {
     padding: 0.3em;
 }
 
+.tt-dropdown-menu .result-count {
+    display: block;
+    float: right;
+    opacity: 0.5;
+    text-align: right;
+}
+
 .tt-suggestions {
     color: #ccc;
 }
 
-.tt-dropdown-menu .more,
 .tt-dropdown-menu .search {
     border: none;
     color: white;
@@ -2716,15 +2729,39 @@ fieldset {
     line-height: 1.3;
 }
 
-.tt-suggestion .description {
+/* Class and other matches descriptions tend to be useless. */
+.tt-dataset-0 .tt-suggestion .description {
     display: block;
     font-size: 0.8em;
     line-height: 1.3;
+    max-height: 1.3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tt-suggestion .description {
+    display: none;
 }
 
 /* Selected items. */
 .tt-is-under-cursor {
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* We need to crunch down the dropdown on smaller displays. Firstly we'll drop
+ * the descriptions, then classes (since they're two clicks away if you have
+ * matching functions). */
+@media screen and (max-height: 580px) {
+    .tt-dataset-0 .tt-suggestion .description {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .tt-dataset-1 {
+        /* Overriding an unfortunate element style. */
+        display: none !important;
+    }
 }
 /* }}} */
 

@@ -286,7 +286,7 @@
          */
         var enableSearchTypeahead = function (backends) {
             var template = "<h4>{{ name }}</h4>" +
-                           "<span class='description'>{{ description }}</span>";
+                           "<span title='{{ description }}' class='description'>{{ description }}</span>";
 
             // Build the typeahead options array.
             var typeaheadOptions = $.map(backends, function (backend, name) {
@@ -331,26 +331,13 @@
                     // Grab what the user entered.
                     var pattern = $(element).val();
 
-                    // Add "n more results" entries to each section.
+                    // Add result totals to each section heading.
                     $.each(results, function (name, numResults) {
                         var container = $(".tt-dataset-" + name, $(element).parent());
-                        var more = numResults - options.limit;
-                        var plural = (more == 1 ? "" : "s");
-                        var url = "/search.php?pattern=" + escape(pattern) + "&show=manual";
+                        var results = $("<span class='result-count' />").text(numResults);
 
-                        // Class lookups can be done pretty specifically.
-                        if (name == "class") {
-                            url = "/search.php?pattern=" + escape(pattern + " inurl:class.") + "&show=manual";
-                        }
-
-                        $(".more", container).remove();
-                        if (pattern.length > 2 && more > 0) {
-                            $(container).append(moreTemplate.render({
-                                num: more,
-                                plural: plural,
-                                url: url
-                            }));
-                        }
+                        $("h3 .result-count", container).remove();
+                        $("h3", container).append(results);
                     });
 
                     /* Add a global search option. Note that, as above, the
