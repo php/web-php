@@ -2124,16 +2124,29 @@ hr {
     border-bottom:.25em solid;
 }
 
-.change-language {
+.page-tools {
     float: right;
     position:relative;
+    text-align: right;
     z-index:100;
+}
+.change-language {
+    margin-bottom: 0.75em;
 }
 .change-language p {
     margin:0;
 }
 .change-language .select {
     border-radius: 0;
+}
+.edit-bug {
+    line-height: 2;
+    font-size: 0.75em;
+}
+.edit-bug a:link,
+.edit-bug a:visited {
+    border: 0;
+    padding-left: 1em;
 }
 
 /**

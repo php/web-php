@@ -624,9 +624,20 @@ function manual_setup_beta($setup) {
     );
     site_header($setup["this"][1] . " - Manual ", $config);
     
-    echo '<div class="change-language">' . manual_language_chooser($config["lang"], $config["thispage"]) . '</div>';
-
+    $id = substr($setup['this'][0], 0, -4);
+    ?>
+      <div class="page-tools">
+        <div class="change-language">
+          <?php echo manual_language_chooser($config['lang'], $config['thispage']); ?>
+        </div>
+        <div class="edit-bug">
+          <a href="https://edit.php.net/?project=PHP&amp;perm=<?php echo $config['lang']; ?>/<?php echo $config['thispage']; ?>">Edit</a>
+          <a href="https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=<?php echo $id; ?>">Report a Bug</a>
+        </div>
+      </div>
+    <?php
 }
+
 function manual_language_chooser($currentlang, $currentpage) {
     global $ACTIVE_ONLINE_LANGUAGES;
 
