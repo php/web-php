@@ -45,59 +45,38 @@ div#usernotes a.usernotes-voted:hover {
     font-size: 1.7em;
 }
 
-#mirrors-container .mirrors-header {
-
-}
-
-#mirrors-container .mirrors-header p {
-    margin-bottom: 12px;
-}
-
-#mirrors-container .mirrors-list {
-    border: 1px solid #CCC;
-    border-right: none;
-    border-top: none;
-}
-
-#mirrors-container .mirrors-list .mirror:first-child {
-    margin-left: 0;
-}
 
 #mirrors-container .mirrors-list .mirror {
-    /*margin-left: 12px;*/
-    width: 270px;
-    min-height: 150px;
-    padding: 10px;
-    float: left;
-    border-top: 1px solid #CCC;
-    border-right: 1px solid #CCC;
-    position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 375px;
+    height: 150px;
+    border: 1px solid #CCC;
+	padding: 20px;
+	margin: 5px;
+}
+
+#mirrors-container .mirrors-list .mirror:hover {
+	background-color: #EEE;
+}
+
+#mirrors-container .mirrors-list .mirror .url {
+	display: inline-block;
+}
+
+#mirrors-container .mirrors-list .mirror .provider {
+	display: inline-block;
+	text-indent: 10px;
 }
 
 #mirrors-container .mirrors-list .mirror .title {
-    margin-bottom: 20px;
     font-size: 1.4em;
+	position: relative;
 }
 
-#mirrors-container .mirrors-list .mirror .flag {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+#mirrors-container .mirrors-list img {
+	position: absolute;
+	right: 0px;
 }
 
-#mirrors-container .mirrors-list .mirror .entry:last-child {
-    margin-bottom: 0;
-}
 
-#mirrors-container .mirrors-list .mirror .entry {
-    margin-bottom: 12px;
-}
-
-.mirrors-list .mirror .entry .url {
-    float: left;
-}
-
-.mirrors-list .mirror .entry .provider {
-    float: left;
-    margin-left: 10px;
-}

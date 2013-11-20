@@ -140,7 +140,6 @@ EOF;
 site_header("Hypertext Preprocessor",
     array(
         'current' => 'home',
-        'onload' => 'boldEvents();',
         'headtags' => array(
             '<link rel="alternate" type="application/atom+xml" title="PHP: Hypertext Preprocessor" href="' . $MYSITE . 'feed.atom" />',
             '<script type="text/javascript">',
@@ -169,19 +168,24 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
-print $content;
+echo $content;
 
-ob_start();
-print_view('homepage/sidebar.php', array(
-    'announcements' => $announcements
-));
-$sidebar = ob_get_clean();
+$SIDEBAR = <<< SIDEBAR_DATA
+
+$announcements
+    <p class='panel'><a href='/tips.php'>Tips and Tricks</a></p>
+    <p class='panel'><a href='/conferences/'>Conferences</a></p>
+    <p class='panel'><a href='/cal.php'>User Group Events</a></p>
+    <p class='panel'><a href='/thanks.php'>Special Thanks</a></p>
+
+SIDEBAR_DATA;
 
 // Print the common footer.
 site_footer(
     array(
         "atom" => "/feed.atom", // Add a link to the feed at the bottom
         'elephpants' => true,
-        'sidebar' => $sidebar
+        'sidebar' => $SIDEBAR
     )
 );
+
