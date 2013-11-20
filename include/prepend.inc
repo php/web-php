@@ -183,12 +183,14 @@ function myphpnet_setbeta($bool = false) {
     $MYPHPNET[4] = (bool) $bool;
 }
 function myphpnet_beta() {
+/*
     global $MYPHPNET;
     global $MYSITE;
 
     if (isset($_GET["beta"])) {
         return (bool)$_GET["beta"];
     }
+*/
     return true;
 }
 

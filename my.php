@@ -67,10 +67,6 @@ if (isset($_POST['hidesuggest'])) {
     myphpnet_hidesuggest($_POST['hidesuggest']);
 }
 
-if (isset($_POST['beta'])) {
-    myphpnet_setbeta($_POST['beta']);
-}
-
 myphpnet_save();
 
 site_header("My PHP.net", array("current" => "community"));
@@ -270,24 +266,6 @@ foreach ($mirror_sites as $murl => $mdata) {
     );
 }
 ?>
- </select>
-</div>
-
-
-<h2>PHP.net beta</h2>
-
-<p>
- php.net is undergoing plastic surgery these days. If you want to see
- how the site <strong>may</strong> look in the future, you can join our beta program.
- <br />
- Comments, feedback and patches should be directed to
- <a href="mailto:php-webmaster@lists.php.net">php-webmaster@lists.php.net</a>.
-</p>
-
-<div class="indent">
- <select name="beta">
-    <option value="0" <?php echo myphpnet_beta() ? "" : "selected" ?>>Disable</option>
-    <option value="1" <?php echo myphpnet_beta() ? "selected" : "" ?>>Enable</option>
  </select>
 </div>
 
