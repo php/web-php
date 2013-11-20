@@ -58,7 +58,7 @@ div#usernotes a.usernotes-voted:hover {
 #mirrors-container .mirrors-list .mirror {
 	display: inline-block;
 	vertical-align: middle;
-	width: 375px;
+	width: 300px;
     height: 150px;
     border: 1px solid #CCC;
 	padding: 20px;
