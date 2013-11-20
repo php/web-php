@@ -26,16 +26,6 @@ foreach ($possible_files as $name) {
 if ($file === FALSE) {
     site_header("Download not found");
     
-    // An executable was requested (temp fix for rsync change)
-    if (preg_match("!\\.exe$!", $name)) {
-        $info = "<p>
- This mirror site is improperly setup, and thus has
- no copy of the executable file you requested. Please
- <a href=\"/mirrors\">select a different mirror site</a>
- to get the file, until this site gets fixed.
-</p>";
-    }
-    else {
         $info = "<p>
  The file you requested (<strong> " . htmlspecialchars($df, ENT_QUOTES, "UTF-8") . " </strong>) is not found on
  this server (<strong>{$MYSITE}</strong>). If this file is a
@@ -44,7 +34,6 @@ if ($file === FALSE) {
  Please come back to this server later, or start the download from
  another mirror site.
 </p>";
-    }
     
     echo <<<EOT
 <h1>Download not found</h1>
