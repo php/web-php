@@ -86,6 +86,7 @@ if (isset($shortname) && $shortname) {
           <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
         </ul>
         <form class="navbar-search span3" id="topsearch" action="/search.php">
+            <input type="hidden" name="show" value="quickref">
             <input type="search" name="pattern" class="search-query" placeholder="Search"/>
         </form>
       </div>
