@@ -45,6 +45,15 @@ div#usernotes a.usernotes-voted:hover {
     font-size: 1.7em;
 }
 
+#mirrors-container .filename {
+	display: block;
+	padding: 20px;
+	border: 1px;
+	font-size: 1.4em;
+	background-color: #EEE;
+	text-align: center;
+}
+
 
 #mirrors-container .mirrors-list .mirror {
 	display: inline-block;
@@ -59,10 +68,12 @@ div#usernotes a.usernotes-voted:hover {
 	display: block;
 	margin: 5px auto;
 	height: 100%;
+	background-color: #9C9;
+	padding: 20px 20px 40px 20px;
 }
 
 #mirrors-container .mirrors-list .mirror:hover {
-	background-color: #EEE;
+	background-color: #9C9;
 }
 
 #mirrors-container .mirrors-list .mirror .url {

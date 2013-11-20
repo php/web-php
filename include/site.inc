@@ -189,6 +189,72 @@ function mirror_setcookie($name, $content, $exptime)
     }
 }
 
+function organise_mirrors($mirrors) {
+    // Lets group the mirrors by country code, for easy output on the page.
+    $retval = array();
+    foreach($mirrors as $key => $mirror) {
+
+        // If the mirror is not all right or it is virtual (not an official mirror), skip it
+        if (mirror_status($key) != MIRROR_OK || mirror_type($key) == MIRROR_VIRTUAL) { continue; }
+
+        if(!isset($grouped_mirrors[$mirror[0]])) {
+            $grouped_mirrors[$mirror[0]] = array();
+        }
+
+        $retval[$mirror[0]][] = array(
+            'url'            => $key,
+            'country_code'   => $mirror[0],
+            'provider_title' => $mirror[1],
+            'provider_url'   => $mirror[3]
+        );
+
+    }
+    return $retval;
+}
+function print_full_mirror_list($download_file = null) {
+    global $COUNTRIES, $COUNTRY, $MIRRORS;
+
+    $groupped = organise_mirrors($MIRRORS);
+    $close = count_mirrors($COUNTRY);
+    if ($close) {
+        $mnum = (($close > 1) ? "mirrors" : "mirror");
+        echo "<p>We have automatically detected the following $mnum to be close to you</p>";
+
+        if (isset($groupped[$COUNTRY])) {
+            print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, true);
+            echo "<br />";
+        }
+    }
+    foreach($groupped as $mirrorcode => $country) {
+        print_mirror_box($COUNTRIES[$mirrorcode], $mirrorcode, $country, $download_file, false);
+    }
+}
+
+function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $homecountry = false) {
+?>
+    <div class="mirror <?php echo $homecountry ? "homecountry" : ""?>">
+            <div class="title"><?php echo $countryname; ?>
+                <img alt="<?php echo $countrycode; ?>"
+                     height="25"
+                     width="45"
+                     src="<?php echo $_SERVER['STATIC_ROOT'] . '/images/flags/beta/' . strtolower($countrycode) . '.png'; ?>">
+            </div>
+            <?php foreach($mirrors as $mirror): ?>
+<?php
+    $url = substr($mirror["url"], strpos($mirror["url"], '//') + 2, -1);
+    if ($file) {
+        $url = "/get/$file/from/$url/mirror";
+    }
+?>
+            <div class="entry">
+                <div class="url"><a href="<?php echo $url; ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($mirror['url']); ?></a></div>
+                <div class="provider"><a href="<?php echo $mirror['provider_url']; ?>" title="<?php echo clean($mirror['provider_title']); ?>"><?php echo clean($mirror['provider_title']); ?></a></div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+<?php
+}
+
 // Use this function to write out proper headers on
 // pages where the content should not be publicly cached
 function header_nocache()
