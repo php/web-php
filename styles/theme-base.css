@@ -1999,14 +1999,17 @@ textarea {
   }
 }
 @media (min-width: 1500px) {
-  body.docs .container,
-  body.docs .navbar-static-top .container,
-  body.docs .navbar-fixed-top .container,
-  body.docs .navbar-fixed-bottom .container {
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
     width: 1440px;
   }
   #topsearch.navbar-search {
     margin-right: 0;
+  }
+  #intro .blurb {
+    width: 1170px;
   }
 }
 

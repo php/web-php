@@ -74,18 +74,20 @@ if (isset($shortname) && $shortname) {
 <nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
-      <div id="mainmenu-toggle-overlay"></div>
-      <input type="checkbox" id="mainmenu-toggle"></input>
-      <ul class="nav">
-        <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
-        <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
-        <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
-        <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
-      </ul>
-      <form class="navbar-search span3" id="topsearch" action="/search.php">
-          <input type="search" name="pattern" class="search-query" placeholder="Search"/>
-      </form>
+      <div class="row-fluid">
+        <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
+        <div id="mainmenu-toggle-overlay"></div>
+        <input type="checkbox" id="mainmenu-toggle"></input>
+        <ul class="nav">
+          <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
+          <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
+          <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
+          <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+        </ul>
+        <form class="navbar-search span3" id="topsearch" action="/search.php">
+            <input type="search" name="pattern" class="search-query" placeholder="Search"/>
+        </form>
+      </div>
     </div>
   </div>
 </nav>
