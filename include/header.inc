@@ -4,6 +4,12 @@ header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
 header("Pragma: no-cache");
 
+$cssfiles = array(200 => "theme-base.css", "theme-medium.css")+(array)$config["css"];
+foreach($cssfiles as $filename) {
+    $CSS[$filename] = @filemtime("styles/$filename");
+}
+
+
 // Version information for the mega drop down.
 include $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 
@@ -39,18 +45,9 @@ if (isset($shortname) && $shortname) {
 <?php endforeach ?>
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-base.css?t=20131120b" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-medium.css?t=20131120" media="screen" />
-
- <?php
- if(isset($config['css']) && is_array($config['css'])):
-     foreach($config['css'] as $file):
- ?>
-      <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/<?= $file; ?>" media="screen" />
- <?php
-     endforeach;
- endif;
- ?>
+<?php foreach($CSS as $filename => $modified): ?>
+<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/<?php echo $filename?>?t=<?php echo $modified?>" media="screen" />
+<?php endforeach ?>
 
  <!--[if lte IE 7]>
  <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css" media="screen" />
