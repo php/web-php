@@ -195,28 +195,6 @@ div.warning:before {
 /* }}} */
 
 
-/* {{{ Beta Warning */
-#head-beta-warning {
-  border-color: #696;
-  background-color: #9c9;
-  color:#fff;
-}
-
-#beta-warning .blurb a,
-#beta-warning .blurb strong {
-  color: #fff;
-  border-color:#fff;
-}
-
-#beta-warning-close {
-  background-color: #696;
-  color: #fff;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-/* }}} */
-
-
 /* {{{ User notes */
 #usernotes h3.title {
   border-color:#669;

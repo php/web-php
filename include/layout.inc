@@ -226,13 +226,6 @@ function site_header($title = '', $config = array())
 </head>
 <body{$onload}>
 
-<div id="head-beta-warning">
-  <a id="beta-warning" href="?setbeta=1&amp;beta=1">
-    <span class="dismiss">dismiss</span>
-    <span class="blurb">Step into the future! Click here to switch to the beta php.net site</span>
-  </a>
-</div>
-
 <div id="headnav">
  <a href="/" rel="home"><img src="{$_SERVER['STATIC_ROOT']}/images/php.gif"
  alt="PHP" width="120" height="67" id="phplogo" /></a>
@@ -361,39 +354,6 @@ function site_footer($config = array())
   Last updated: {$last_updated}
  </div>
 </div>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-    function showBetaWarning() {
-        return document.cookie.indexOf("BetaWarning=") == -1;
-    }
-
-    // ----- BETA WARNING CODE -----
-    var headBetaWarning = $('#head-beta-warning');
-
-    // Wire up the beta warning.
-    headBetaWarning.find('.dismiss').click(function(e) {
-        e.preventDefault();
-        $('body').css('margin-top', 0);
-        headBetaWarning.slideUp("fast");
-
-        // Hide it for a month by default.
-        var expiry = new Date();
-        expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
-
-        document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
-    });
-
-    if (showBetaWarning()) {
-        headBetaWarning.show();
-        $('body').css('margin-top', '25px');
-        $('#beta-warning').slideDown(300, function() {
-           $(this).find('.blurb').fadeIn('slow');
-        });
-    }
-
-});
-</script>
 
 <!--[if IE 6]>
 <script type="text/javascript">

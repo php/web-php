@@ -17,17 +17,6 @@ $(document).ready(function() {
     // Ugh, cookie handling.
     var cookies = document.cookie.split(";");
 
-    // Wire up the beta warning.
-    $("#beta-warning-close").click(function(event) {
-        event.preventDefault();
-        $('#head-beta-warning').slideUp("fast", function(){$(this).remove()});
-
-        // Hide it for a month by default.
-        var expiry = new Date();
-        expiry.setTime(expiry.getTime() + (30 * 24 * 60 * 60 * 1000));
-
-        document.cookie = "BetaWarning=off; expires=" + expiry.toGMTString() + "; path=/";
-    });
 
     var $docs = $('.docs');
     var $refsect1 = $docs.find('.refentry .refsect1');

@@ -69,16 +69,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/last_updated.inc';
 
 // -----------------------------------------------------------------------------
 
-// SETBETA Setting for temporary banners
-if(isset($_GET['setbeta']) && !headers_sent()) {
-    myphpnet_setbeta( (bool) $_GET['setbeta']);
-    myphpnet_save();
-    list($path, $query) = explode('?', $_SERVER['REQUEST_URI'], 2);
-    mirror_redirect($path);
-    exit;
-}
-
-
 // Load in the user preferences
 function myphpnet_load()
 {

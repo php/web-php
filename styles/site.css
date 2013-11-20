@@ -1169,53 +1169,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 /* Temporary BETA notice */
 
-#beta-warning-close {
-	background-color: #99C;
-}
-
-#head-beta-warning {
-    background-color: #333;
-    display: none;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 100;
-}
-
-#beta-warning {
-    margin: 0 auto;
-    padding: 0.3em;
-    width: 65%;
-    display: none;
-    text-decoration: none;
-}
-
-#head-beta-warning .dismiss {
-	font-size: 0.8em;
-	color: #9999CC;
-}
-
-#beta-warning .blurb {
-    font-size: 1.1em;
-    line-height: 1.0em;
-    vertical-align: middle;
-    color: #EEE;
-    display: none;
-    margin-left: 12px;
-}
-
-#beta-warning .blurb:hover {
-	color: #9999CC;
-}
-
-#beta-warning .blurb a {
-    color: #99C;
-}
-
-#beta-warning .blurb strong {
-    color: #99C;
-}
 
 section.version {
     border-top: 1px solid #000;
