@@ -2108,6 +2108,9 @@ hr {
     border-top:.25em solid #99c;
 }
 
+.navbar * {
+  -moz-box-sizing: border-box;
+}
 .navbar .brand {
     margin-right:.75em;
 }
@@ -2115,6 +2118,7 @@ hr {
     padding:4px 0 0;
     margin-bottom:-2px;
     opacity:.75;
+    border: 0;
 }
 .navbar a {
     border:0;
