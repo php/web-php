@@ -1,7 +1,5 @@
 <?php
 /* $Id$ */
-// Disable caching, annoying while developing
-$v = "?v=" .$_SERVER["REQUEST_TIME"];
 header("Expires: Thu, 19 Nov 1981 08:52:00 GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
 header("Pragma: no-cache");
@@ -41,8 +39,8 @@ if (isset($shortname) && $shortname) {
 <?php endforeach ?>
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-base.css<?php echo $v?>" media="screen" />
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-medium.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-base.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/theme-medium.css" media="screen" />
 
  <?php
  if(isset($config['css']) && is_array($config['css'])):
@@ -55,15 +53,15 @@ if (isset($shortname) && $shortname) {
  ?>
 
  <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css" media="screen" />
  <![endif]-->
 
  <!--[if lte IE 9]>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie9.css<?php echo $v?>" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie9.css" media="screen" />
  <![endif]-->
 
  <!--[if IE]>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js<?php echo $v?>"></script>
+ <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js"></script>
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
