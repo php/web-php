@@ -60,12 +60,21 @@
   })(window);
 </script>
 
+ <!-- External and third party libraries. -->
  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
  <script type="text/javascript" src="/js/ext/hogan-2.0.0.min.js"></script>
  <script type="text/javascript" src="/js/ext/typeahead.min.js"></script>
- <script type="text/javascript" src="/js/search.js?t=20131120"></script>
- <script type="text/javascript" src="/js/common.js?t=20131120a"></script>
- <?php include 'uservoice.inc' ?>
+
+ <?php
+ // Nick bjori's last modified code for our own JS files.
+ $jsfiles = array('search.js', 'common.js');
+ foreach ($jsfiles as $filename) {
+   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
+   echo '<script type="text/javascript" src="/js/'.$filename.'?t='.@filemtime($path).'"></script>';
+ }
+
+ include 'uservoice.inc';
+ ?>
 
 </body>
 </html>
