@@ -75,7 +75,8 @@ if (isset($shortname) && $shortname) {
   <div class="navbar-inner">
     <div class="container">
       <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
-      <a href="#" id="mainmenu-toggle"></a>
+      <div id="mainmenu-toggle-overlay"></div>
+      <input type="checkbox" id="mainmenu-toggle"></input>
       <ul class="nav">
         <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
         <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>

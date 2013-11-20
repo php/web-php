@@ -3120,7 +3120,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     float: right;
 }
 
-#mainmenu-toggle {
+#mainmenu-toggle-overlay, #mainmenu-toggle {
     display: none;
 }
 
@@ -3144,19 +3144,27 @@ div.soft-deprecation-notice blockquote.sidebar {
 /* Smartphones */
 @media (max-width:465px) {
 
+  #mainmenu-toggle-overlay {
+    background: #669 url(../images/mobile-menu.png) no-repeat center center;
+    float: right;
+    display: block;
+    height: 32px;
+    width: 34px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
   #mainmenu-toggle {
-      background: #669 url(../images/mobile-menu.png) no-repeat center center;
-      display: inline-block;
-      height: 32px;
-      width: 34px;
-      color: #fff!important;
-      line-height: 32px;
-      text-transform: uppercase;
-      margin-top: 10px;
-      margin-right: 10px;
-      border-radius: 5px;
-      float: right;
-      border-bottom: 0 none;
+    height: 32px;
+    width: 34px;
+    line-height: 32px;
+    margin-top: 10px;
+    margin-right: -34px;
+    float: right;
+    border-bottom: 0 none;
+    display: inline-block;
+    opacity: 0;
   }
 
   .navbar .brand {
@@ -3175,7 +3183,13 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar .nav {
     clear: both;
     float: none;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    -moz-transition: max-height 400ms;
+    -webkit-transition: max-height 400ms;
+    -o-transition: max-height 400ms;
+    -ms-transition: max-height 400ms;
+    transition: max-height 400ms;
   }
   .navbar .nav > li {
     float: none;
@@ -3185,6 +3199,11 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar .nav > li a {
     width: 100%;
     display: block;
+  }
+
+  #mainmenu-toggle:checked + .nav {
+    /* This just has to be big enough to cover whatever's in .nav. */
+    max-height: 50em;
   }
 
   /* Hiding UserVoice sticky bar when in smartphone mode */

@@ -210,11 +210,6 @@ $(document).ready(function() {
     );
 /*}}}*/
 
-    // Responsive menu javascript
-    jQuery('#mainmenu-toggle').on('click', function(e) { 
-        $('.navbar .nav').stop().slideToggle();  
-    });
-
     // Search box autocomplete.
     jQuery("#topsearch .search-query").search({
         language: getLanguage(),
