@@ -103,7 +103,7 @@ $intro = <<<EOF
   <div class="row-fluid">
     <div class="span9 blurb">
       <p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
-      <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the largest social networking site in the world.</p>
+      <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     </div>
     <div class="background span3"></div>
     <div class="span3">
