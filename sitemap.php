@@ -66,8 +66,6 @@ site_header("Sitemap", array("current" => "help"));
 
 <ul>
  <li><a href="/my.php">My PHP.net</a></li>
- <li><a href="/search.php">Search</a></li>
- <li><a href="/sidebars.php">Search Bars</a></li>
  <li><a href="/urlhowto.php">URL Shortcuts</a></li>
  <li><a href="/quickref.php">Quick Function Reference</a></li>
  <li><a href="/tips.php">Quick Reference Tips</a></li>

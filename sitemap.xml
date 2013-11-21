@@ -95,16 +95,10 @@
   <loc>http://php.net/releases/</loc>
  </url>
  <url>
-  <loc>http://php.net/search.php</loc>
- </url>
- <url>
   <loc>http://php.net/security/</loc>
  </url>
  <url>
   <loc>http://php.net/security-note.php</loc>
- </url>
- <url>
-  <loc>http://php.net/sidebars.php</loc>
  </url>
  <url>
   <loc>http://php.net/sitemap.php</loc>
