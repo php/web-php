@@ -113,51 +113,5 @@ else {
 ?>
 This page is no longer functioning, and will be removed shortly.
 <?php
-    if (FALSE) {
-    if (isset($EXPL_LANG)) {
-        $lang_input = "  <input type=\"hidden\" name=\"lang\" value=\"{$EXPL_LANG}\" />\n";
-    } else {
-        $lang_input = "\n";
-    }
-
-?>
-<h1>Search</h1>
-<form action="/search.php" method="post">
- <p><?php echo $lang_input ?>
-  Search for:
-  <input type="text" name="pattern" value="" size="30" />
-  in the
-  <select name="show">
-<?php
-if (empty($_FORM['show'])) { $_FORM['show'] = 'quickref'; }
-$searchoptions = array(
-    "quickref" => "function list",
-    "all"      => "all php.net sites",
-    "local"    => "this mirror only",
-    "manual"   => "online documentation [en]",
-    "bugdb"    => "bug database",
-    "news_archive" => "Site News Archive",
-    "changelogs"   => "All Changelogs",
-    "pear"     => "just pear.php.net",
-    "pecl"     => "just pecl.php.net",
-    "talks"    => "just talks.php.net",
-    "maillist" => "general mailing list",
-    "devlist"  => "developer mailing list",
-    "phpdoc"   => "documentation mailing list",
-);
-
-// Print out an <option> for all search options
-foreach ($searchoptions as $key => $value) {
-    echo '   <option value="' . $key . '"' . 
-         ($key == $_FORM['show'] ? ' selected="selected"' : '') .
-         '>' . $value . "</option>\n";
-}
-?>
-  </select>
-  <input type="submit" value=" Search " />
- </p>
-</form>
-<?php
-    }
     site_footer();
 }
