@@ -327,13 +327,6 @@ aside.tips {
 aside.tips div.border {
     display:none;
 }
-aside.tips div.inner {
-  background:#eeeef6;
-  border-left-color:1px solid #e0e0e0;
-  border-right-color:1px solid #e0e0e0;
-  border-bottom-color:1px solid #d6d6dd;
-  border-radius: 0 0 2px 2px;
-}
 
 .soft-deprecation-notice {
   color: #262626;

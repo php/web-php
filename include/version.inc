@@ -71,10 +71,6 @@ $RELEASES = array(
                     "md5"      => $PHP_5_5_MD5["tar.xz"],
                     "date"     => $PHP_5_5_DATE,
                 ),
-                array(
-                    "link"  => 'http://windows.php.net/download/#php-5.5',
-                    "name"  => "Windows $PHP_5_5_VERSION binaries and source",
-                ),
             ),
         ),
         $PHP_5_4_VERSION => array(
@@ -92,10 +88,6 @@ $RELEASES = array(
                     "md5"      => $PHP_5_4_MD5["tar.gz"],
                     "date"     => $PHP_5_4_DATE,
                 ),
-                array(
-                    "link"  => 'http://windows.php.net/download/#php-5.4',
-                    "name"  => "Windows $PHP_5_4_VERSION binaries and source",
-                ),
             ),
         ),
         $PHP_5_3_VERSION => array(
@@ -112,10 +104,6 @@ $RELEASES = array(
                     "name"     => "PHP $PHP_5_3_VERSION (tar.gz)",
                     "md5"      => $PHP_5_3_MD5["tar.gz"],
                     "date"     => $PHP_5_3_DATE,
-                ),
-                array(
-                    "link"  => 'http://windows.php.net/download/#php-5.3',
-                    "name"  => "Windows $PHP_5_3_VERSION binaries and source",
                 ),
             ),
         ),
