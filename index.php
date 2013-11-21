@@ -50,28 +50,35 @@ include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
 
 
-require_once './Gateway/NewsFileSystemGateway.php';
-
-$NewsGateway = new NewsFileSystemGateway();
-$RecentNews = $NewsGateway->getArticlesForCategories(array(
-    "frontpage"
-), 4);
-
-ob_start();
-
-require_once './View/HomepageNewsView.php';
-$RecentNewsView = new HomepageNewsView($RecentNews);
-
-echo $RecentNewsView->render();
-
-$news = ob_get_clean();
-
-// Wrap announcements and features in a content element
-$content = "
-<div class='home-content'>
-    $news
-</div>
-";
+$content = "<div class='home-content'>";
+$releasenews = 0;
+$frontpage = array();
+foreach($NEWS_ENTRIES as $entry) {
+    $maybe = false;
+    foreach($entry["category"] as $category) {
+        if ($category["term"] == "releases") {
+            if ($releasenews++ > 5) {
+                continue 2;
+            }
+        }
+        if ($category["term"] == "frontpage") {
+            $maybe = $entry;
+        }
+    }
+    if ($maybe) {
+        $frontpage[] = $maybe;
+    }
+}
+foreach($frontpage as $entry) {
+    $link = substr($entry["id"], 15); // Strip http://php.net/
+    $content .= '<div class="newsentry">';
+    $content .= '<div class="newstitle"><a href="'. $MYSITE.$link .'">' . $entry["title"] . '</a></div>';
+    $content .= '<div class="newscontent">';
+    $content .= $entry["content"];
+    $content .= '</div>';
+    $content .= '</div>';
+}
+$content .= "</div>";
 
 $intro = <<<EOF
   <div class="row-fluid">
