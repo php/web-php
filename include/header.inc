@@ -78,7 +78,7 @@ if (isset($shortname) && $shortname) {
       <div class="row-fluid">
         <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
         <div id="mainmenu-toggle-overlay"></div>
-        <input type="checkbox" id="mainmenu-toggle"></input>
+        <input type="checkbox" id="mainmenu-toggle">
         <ul class="nav">
           <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
           <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
@@ -87,7 +87,7 @@ if (isset($shortname) && $shortname) {
         </ul>
         <form class="navbar-search span3" id="topsearch" action="/search.php">
             <input type="hidden" name="show" value="quickref">
-            <input type="search" name="pattern" class="search-query" placeholder="Search"/>
+            <input type="search" name="pattern" class="search-query" placeholder="Search">
         </form>
       </div>
     </div>
