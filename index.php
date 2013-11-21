@@ -71,8 +71,10 @@ foreach($NEWS_ENTRIES as $entry) {
 }
 foreach($frontpage as $entry) {
     $link = substr($entry["id"], 15); // Strip http://php.net/
+    $date = date_format(date_create($entry["updated"]), 'Y-m-d');
     $content .= '<div class="newsentry">';
     $content .= '<div class="newstitle"><a href="'. $MYSITE.$link .'">' . $entry["title"] . '</a></div>';
+    $content .= '<div class="newstime">' . $date . '</div>';
     $content .= '<div class="newscontent">';
     $content .= $entry["content"];
     $content .= '</div>';
