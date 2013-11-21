@@ -211,7 +211,7 @@ function organise_mirrors($mirrors) {
     }
     return $retval;
 }
-function print_full_mirror_list($download_file = null) {
+function print_full_mirror_list($download_file = null, $direct_download = false) {
     global $COUNTRIES, $COUNTRY, $MIRRORS;
 
     $groupped = organise_mirrors($MIRRORS);
@@ -221,16 +221,16 @@ function print_full_mirror_list($download_file = null) {
         echo "<p>We have automatically detected the following $mnum to be close to you</p>";
 
         if (isset($groupped[$COUNTRY])) {
-            print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, true);
+            print_mirror_box($COUNTRIES[$COUNTRY], $COUNTRY, $groupped[$COUNTRY], $download_file, $direct_download, true);
             echo "<br />";
         }
     }
     foreach($groupped as $mirrorcode => $country) {
-        print_mirror_box($COUNTRIES[$mirrorcode], $mirrorcode, $country, $download_file, false);
+        print_mirror_box($COUNTRIES[$mirrorcode], $mirrorcode, $country, $download_file, $direct_download, false);
     }
 }
 
-function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $homecountry = false) {
+function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $direct_download = false, $homecountry = false) {
 ?>
     <div class="mirror <?php echo $homecountry ? "homecountry" : ""?>">
             <div class="title"><?php echo $countryname; ?>
@@ -243,7 +243,8 @@ function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $h
 <?php
     $url = substr($mirror["url"], strpos($mirror["url"], '//') + 2, -1);
     if ($file) {
-        $url = "/get/$file/from/$url/mirror";
+        $what = $direct_download ? "this" : "a";
+        $url = $mirror["url"] . "get/$file/from/$what/mirror";
     }
 ?>
             <div class="entry">

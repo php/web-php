@@ -45,13 +45,19 @@ div#usernotes a.usernotes-voted:hover {
     font-size: 1.7em;
 }
 
-#mirrors-container .filename {
+#mirrors-container .download-file small {
+	text-align: right;
+	padding-left: 25px;
+	font-size: 0.7em;
+}
+#mirrors-container .download-file {
 	display: block;
 	padding: 20px;
 	border: 1px;
 	font-size: 1.4em;
 	background-color: #EEE;
 	text-align: center;
+	margin: 0;
 }
 
 
