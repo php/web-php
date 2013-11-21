@@ -553,7 +553,6 @@ if (isset($_SERVER['MIRROR_STATS'])) {
 // Provide base href information to make relative links on
 // shortcut URL accessed pages work without redirection
 if (isset($_SERVER['BASE_PAGE'])) {
-    $dirname = dirname($_SERVER['BASE_PAGE']);
-    $_SERVER['BASE_HREF'] = $MYSITE . $dirname . "/";
+    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
 } else { unset($_SERVER['BASE_HREF']); }
 
