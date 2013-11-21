@@ -16,15 +16,9 @@ $SIDEBAR_DATA = '
  download site. Binaries available on external servers:
 </p>
 <ul class="toc">
- <li><a href="http://publib-b.boulder.ibm.com/Redbooks.nsf/RedpieceAbstracts/redp3639.html">AS/400</a></li>
  <li><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
  <li><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
  <li>BitNami (<a href="http://bitnami.com/stack/wamp">Windows</a>, <a href="http://bitnami.com/stack/mamp">MacOSX</a>, <a href="http://bitnami.com/stack/lamp">Linux</a>)</li>
- <li><a href="http://developer.novell.com/wiki/index.php/PHP_for_NetWare">Novell NetWare</a></li>
- <li><a href="http://os2ports.smedley.info/index.php?page=php-5">OS/2</a></li>
- <li><a href="http://www.cp15.org/php/">RISC OS</a></li>
- <li><a href="http://freeware.sgi.com/index-by-alpha.html#php">SGI IRIX 6.5.x</a></li>
- <li>Solaris (<a href="http://sunfreeware.com/programlistsparc10.html#php">SPARC</a>, <a href="http://sunfreeware.com/programlistintel10.html#php">INTEL</a>)</li>
  <li><a href="http://www.opencsw.org/packages/php5">Solaris OpenCSW packages</a></li>
  <li><a href="http://iuscommunity.org/">Redhat/CentOS Binaries (IUS)</a></li>
  <li><a href="http://rpms.famillecollet.com/">Fedora/Redhat/CentOS Binaries (Remi)</a></li>
