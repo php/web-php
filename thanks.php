@@ -96,7 +96,7 @@ site_header("Thanks", array("current" => "community"));
 </p>
 
 <p>
- <a target="_blank" href="http://www.gosquared.com">GoSquared</a> provides us with their premium package for high quality real-time 
+ <a target="_blank" href="http://www.gosquared.com">GoSquared</a> provides us with their premium package for high qualiy real-time 
  analytics for the php.net website.
 </p>
 
