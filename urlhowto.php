@@ -181,26 +181,5 @@ function a($href) {
  manual page for the phpversion() function.
 </p>
 
-<h1>Get it on your site</h1>
-
-<p>
- What enables PHP.net to have this feature is a combination of some
- ErrorDocument Apache settings, redirecting the browser to another page
- in case of an "Error 401/3/4" and a little search script that looks up
- page names or functions names in the manual corresponding to what
- you searched for in <tt><?php echo $MYSITE; ?>search_for_this</tt>.
- We also have a general language selection method.
-</p>
-
-<p>
- Everything behind this feature is available here:
-</p>
-<ul>
- <li><a href="/mirroring.php">Mirroring instructions</a> (see the three ErrorDocument settings)</li>
- <li><a href="/source.php?url=/include/langchooser.inc">include/langchooser.inc</a></li>
- <li><a href="/source.php?url=/error.php">error.php</a></li>
- <li><a href="/source.php?url=/include/manual-lookup.inc">include/manual-lookup.inc</a></li>
- <li><a href="/source.php?url=/search.php">search.php</a></li>
-</ul>
 
 <?php site_footer(); ?>
