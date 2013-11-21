@@ -3,35 +3,6 @@
 $_SERVER['BASE_PAGE'] = 'docs.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
-$SIDEBAR_DATA='
-<h3>FAQ</h3>
-<p>
- The <a href="/FAQ.php">PHP FAQ</a> is your first stop for general
- information and those questions that seem to be on most people\'s minds.
- If you have licensing questions, see the separate
- <a href="/license/">License FAQ</a>.
-</p>
-
-<h3>Changelog</h3>
-<p>
- You can also find the <a href="/ChangeLog-4.php">PHP 4 Changelog</a> or
- the <a href="/ChangeLog-5.php">PHP 5 Changelog</a> useful,
- if you would like to look up changes between various versions of PHP.
-</p>
-
-<h3>Books</h3>
-<p>
- There are literally thousands of books available in
- English and numerous other languages. You can easily search at
- <a href="http://www.amazon.com/exec/obidos/external-search?mode=books&amp;keyword=PHP&amp;tag=wwwphpnet">Amazon.com</a>, or 
- go directly to
- <a href="http://www.amazon.de/exec/obidos/redirect-home/wwwphpnet07">Amazon.de</a>
- or <a href="http://www.amazon.fr/exec/obidos/redirect-home/wwwphpnet0f">Amazon.fr</a>
- and search there.
-</p>
-
-';
-
 site_header("Documentation", array("current" => "docs"));
 
 ?>
