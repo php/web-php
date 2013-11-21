@@ -139,22 +139,6 @@ function myphpnet_mirror($murl = FALSE)
     } else { return "NONE"; }
 }
 
-// Set suggestion hiding preference
-function myphpnet_hidesuggest($hide = FALSE)
-{
-    global $MYPHPNET;
-
-    // Set hiding preference, or return with value
-    if (is_numeric($hide)) {
-        $MYPHPNET[3] = $hide;
-    }
-    elseif (isset($MYPHPNET[3])) {
-        return $MYPHPNET[3];
-    } else {
-        return 0;
-    }
-}
-
 // Save user settings in cookie
 function myphpnet_save()
 {

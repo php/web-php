@@ -62,11 +62,6 @@ if (isset($_POST['mirror'])) {
 $mirror_sites = $MIRRORS;
 $mirror_sites["NONE"] = array(7 => MIRROR_OK);
 
-// Save suggestion hiding settings
-if (isset($_POST['hidesuggest'])) {
-    myphpnet_hidesuggest($_POST['hidesuggest']);
-}
-
 myphpnet_save();
 
 site_header("My PHP.net", array("current" => "community"));
@@ -197,27 +192,6 @@ if ($type === MYPHPNET_URL_MANUAL) {
 }
 ?>
  /> PHP Documentation search
-</div>
-
-<h2>Search field suggestions</h2>
-
-<p>
- Whenever you start a search on a PHP.net page, a list of suggested function
- names starting with the letters you typed in are suggested. If your browser
- has problems with this functionality or you are not interested in these
- suggestions, you can turn them off here. <strong>Note that this feature is
- currently only available on the <a href="/search">search page itself</a>,
- not on any of the other pages.</strong>
-</p>
-
-<div class="indent">
- Your setting: <input type="radio" name="hidesuggest" value="0"
-<?php
-echo (myphpnet_hidesuggest() ? '' : ' checked="checked"');
-echo ' /> Show suggestions <input type="radio" name="hidesuggest" value="1"';
-echo (myphpnet_hidesuggest() ? ' checked="checked"' : '');
-?>
- /> Hide suggestions
 </div>
 
 <h2>Mirror site redirection</h2>
