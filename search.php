@@ -110,8 +110,7 @@ else {
         "title" => "Add PHP.net search"
     );
     site_header("Search", array("link" => array($link), "current" => "docs"));
-?>
-This page is no longer functioning, and will be removed shortly.
-<?php
+
+    google_cse();
     site_footer();
 }
