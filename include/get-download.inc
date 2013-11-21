@@ -45,7 +45,7 @@ EOT;
     // Set local file name
     $local_file = $_SERVER['DOCUMENT_ROOT'] . '/distributions/' . $file;
     // Try to get filesize to display
-    $size = @filesize($local_file)+11;
+    $size = @filesize($local_file);
 
 
 ?>
