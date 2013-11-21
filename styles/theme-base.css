@@ -1043,6 +1043,7 @@ textarea {
   }
   .container {
     width: auto;
+    padding: 0px 10px 0px 10px;
   }
   .row-fluid {
     width: 100%;
@@ -1165,6 +1166,7 @@ textarea {
   .carousel-caption {
     position: static;
   }
+  #intro .download-php { margin: 0; }
 }
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
@@ -3250,9 +3252,13 @@ div.soft-deprecation-notice blockquote.sidebar {
     float:left;
     clear: both;
     margin-top: 0;
+    padding: 0px 10px 10px 10px;
   }
   .navbar .nav {
     margin-right: 0;
+  }
+  #intro .download-php { 
+    margin: 0 !important; 
   }
 }
 
@@ -3289,6 +3295,7 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar-search {
     margin-top: 0;
+    padding: 0px 10px 10px;
   }
 
   .navbar .brand img {
@@ -3314,6 +3321,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   .navbar .nav > li a {
     width: 100%;
     display: block;
+    padding-left: 0;
   }
 
   #mainmenu-toggle:checked + .nav {
@@ -3325,6 +3333,8 @@ div.soft-deprecation-notice blockquote.sidebar {
   #uvTabLabel {
     display: none !important;
   }
+
+  #intro .download-php { margin: 0 !important; }
 }
 
 @media (min-width:768px) {
@@ -3421,10 +3431,10 @@ aside.tips .panel span {
     padding: .75em 1em;
 }
 aside.tips .panel .announcements a {
-	padding: 0;
-	border: 0;
-	margin: 0;
-	line-height: 1;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  line-height: 1;
 }
 aside.tips .panel a::after {
     float:right;
@@ -3444,9 +3454,9 @@ aside.tips .panel a:focus::after {
 }
 aside.tips div.headline a.headline,
 aside.tips div.headline a.headline:hover {
-	background-color: #f0f0f0;
-	line-height: 1;
-	border: 0px;
+  background-color: #f0f0f0;
+  line-height: 1;
+  border: 0px;
 }
 
 aside.tips a:link,
