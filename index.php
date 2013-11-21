@@ -142,7 +142,7 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
-//echo $content;
+echo $content;
 
 // Prepare announcements.
 if (is_array($CONF_TEASER)) {
