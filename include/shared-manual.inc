@@ -335,8 +335,9 @@ function manual_setup($setup) {
     global $PGI, $MYSITE;
     $PGI = $setup;
     // Set base href for this manual page
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($setup['head'][1]) . "/" . $setup['this'][0];
-    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
+    $dirname = 'manual/' . language_convert($setup['head'][1]);
+    $_SERVER['BASE_PAGE'] = $dirname . "/" . $setup['this'][0];
+    $_SERVER['BASE_HREF'] = $MYSITE . $dirname . "/";
 
 
     $siblings = array();
