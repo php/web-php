@@ -159,9 +159,14 @@ function myphpnet_save()
 // TODO: Possible $default escaping issues
 function google_cse($default = '', $lang = 'en') {
 ?>
-<div id="cse" style="width: 100%;">Loading</div>
+<noscript>
+  php.net's search functionality requires JavaScript to operate. Please enable
+  JavaScript and reload to continue.
+</noscript>
+<div id="cse" style="width: 100%;"></div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript"> 
+  document.getElementById("cse").innerHTML = "Loading...";
   google.load('search', '1', {language : '<?php echo $lang; ?>', style : google.loader.themes.MINIMALIST});
   google.setOnLoadCallback(function() {
     var customSearchOptions = {};
