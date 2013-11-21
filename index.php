@@ -49,32 +49,6 @@ include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
 
-// Prepare announcements.
-if (is_array($CONF_TEASER) && $CONF_TEASER) {
-    $teaser_categories = array(
-        'conference' => 'Upcoming conferences',
-        'cfp'        => 'Calling for papers',
-    );
-
-    $announcements = '<ul class="announcements">';
-
-    foreach ($CONF_TEASER as $category => $events) {
-        if (is_array($events) && $events) {
-            $announcements .= '<li><span class="category">'.$teaser_categories[$category].':</span><ul>';
-            $links = array();
-            foreach (array_slice($events, 0, 4) as $url => $title) {
-                $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
-                $announcements .= "<li><a href='$url'>$title</a></li>";
-            }
-            $announcements .= '</ul>';
-        }
-    }
-
-    $announcements .= '</ul>';
-} else {
-    $announcements = '';
-}
-
 
 require_once './Gateway/NewsFileSystemGateway.php';
 
@@ -168,10 +142,34 @@ site_header("Hypertext Preprocessor",
 );
 
 // Print body of home page.
-echo $content;
+//echo $content;
+
+// Prepare announcements.
+if (is_array($CONF_TEASER)) {
+    $conftype = array(
+        'conference' => 'Upcoming conferences',
+        'cfp'        => 'Conferences Calling for papers',
+    );
+    $announcements = "";
+    foreach($CONF_TEASER as $category => $entries) {
+        if ($entries) {
+            $announcements .= '<div class="panel conferences">';
+            $announcements .= '<span>' . $conftype[$category] .'</span><ul class="announcements">';
+            foreach (array_slice($entries, 0, 4) as $url => $title) {
+                $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
+                $announcements .= "<li><a href='$url'>$title</a></li>";
+            }
+            $announcements .= '</ul>';
+            $announcements .= '</div>';
+        }
+    }
+} else {
+    $announcements = '';
+}
 
 $SIDEBAR = <<< SIDEBAR_DATA
 
+    <p class='panel'><a href='/migration55'>Upgrading to PHP5.5</a></p>
 $announcements
     <p class='panel'><a href='/tips.php'>Tips and Tricks</a></p>
     <p class='panel'><a href='/conferences/'>Conferences</a></p>
