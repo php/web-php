@@ -430,6 +430,9 @@ $uri_aliases = array (
     "svn-php"       => "git-php",
     "svn-php.php"   => "git-php",
 
+    # CVSUp -> Nada
+    "cvsup"         => "mirroring",
+
     # Other items
     "security/crypt" => "security/crypt_blowfish",
 
