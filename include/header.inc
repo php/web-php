@@ -26,31 +26,31 @@ if (isset($shortname) && $shortname) {
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $lang?>">
 <head>
 
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <title>PHP: <?php echo $title ?></title>
 
- <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico" />
- <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search" />
- <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed" />
- <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor" />
+ <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico">
+ <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
+ <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
+ <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
 
 <?php if (isset($_SERVER['BASE_PAGE'])): ?>
- <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>" />
+ <link rel="canonical" href="http://php.net/<?php echo $_SERVER['BASE_PAGE']?>">
 <?php if ($shortname): ?>
- <link rel="shorturl" href="<?php echo $shorturl ?>" />
+ <link rel="shorturl" href="<?php echo $shorturl ?>">
 <?php endif ?>
 <?php endif ?>
 
 <?php foreach($config["meta-navigation"] as $rel => $page): ?>
- <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>" />
+ <link rel="<?php echo $rel ?>" href="<?php echo $MYSITE ?><?php echo $page ?>">
 <?php endforeach ?>
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/<?php echo $filename?>?t=<?php echo $modified?>" media="screen" />
+<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/<?php echo $filename?>?t=<?php echo $modified?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
@@ -66,7 +66,7 @@ if (isset($shortname) && $shortname) {
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>" />
+ <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
 </head>
@@ -76,7 +76,7 @@ if (isset($shortname) && $shortname) {
   <div class="navbar-inner">
     <div class="container">
       <div class="row-fluid">
-        <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"/></a>
+        <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"></a>
         <div id="mainmenu-toggle-overlay"></div>
         <input type="checkbox" id="mainmenu-toggle">
         <ul class="nav">
