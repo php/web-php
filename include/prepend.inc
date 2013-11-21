@@ -100,12 +100,7 @@ function myphpnet_language($langcode = FALSE)
     elseif (isset($MYPHPNET[0]) && $MYPHPNET[0]) {
         return $MYPHPNET[0];
     }
-    else {
-        if (myphpnet_beta()) {
-            return "en";
-        }
-        return FALSE;
-    }
+    return false;
 }
 
 define("MYPHPNET_URL_NONE", FALSE);
@@ -173,25 +168,6 @@ function myphpnet_save()
     // Set all the preferred values for a year
     mirror_setcookie("MYPHPNET", join(",", $MYPHPNET), 60*60*24*365);
 
-}
-
-function myphpnet_setbeta($bool = false) {
-    global $MYPHPNET;
-
-    $bool = (bool) $bool;
-
-    $MYPHPNET[4] = (bool) $bool;
-}
-function myphpnet_beta() {
-/*
-    global $MYPHPNET;
-    global $MYSITE;
-
-    if (isset($_GET["beta"])) {
-        return (bool)$_GET["beta"];
-    }
-*/
-    return true;
 }
 
 // Default: Default search.

@@ -20,167 +20,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 // Set variable defaults
 $PGI = array(); $SIDEBAR_DATA = '';
 
-// Set up variables important for this page
-// including HTTP header information
-function manual_setup($page_data)
-{
-    if (myphpnet_beta()) {
-        return manual_setup_beta($page_data);
-    }
-    global $PGI;
-    $PGI = array_merge($PGI, $page_data); // merge for BC reasons
-
-    // Set base page for this manual page
-    $_SERVER['BASE_PAGE'] = 'manual/' . language_convert($PGI['head'][1]) . "/" . $PGI['this'][0];
-
-    // Set last modification time on the current manual page
-    if (($time = @filemtime($_SERVER['DOCUMENT_ROOT'] ."/". $_SERVER['BASE_PAGE'])) != false) {
-        $PGI['lastmod'] = gmdate("D, d M Y", $time);
-    } else {
-        $PGI['lastmod'] = "Unkown";
-    }
-}
-
-// Print out HTTP headers and the HTML header
-// for this manual page, according to details
-// already set up
-// TODO: replace logo with logos/php-med-trans-light.gif on print
-function manual_header()
-{
-    if (myphpnet_beta()) {
-        return manual_header_beta();
-    }
-    global $PGI, $LAST_UPDATED, $MYSITE;
-
-    // Get values out of the config array
-    $title = $PGI['this'][1];
-    list($encoding, $lang)  = $PGI['head'];
-
-    header("Last-Modified: " . gmdate("D, d M Y H:i:s ", $LAST_UPDATED) . "GMT");
-    //header("Cache-Control: public, max-age=600");
-    header("Vary: Cookie");
-    //header("Content-type: text/html;charset=$encoding");
-    header("Content-type: text/html;charset=utf-8");
-    header("Content-language: $lang");
-
-    // Set base href for this manual page
-    $_SERVER['BASE_HREF'] = $MYSITE . $_SERVER['BASE_PAGE'];
-
-    // {{{ Build rev=canonical
-    $sections = get_manual_search_sections();
-    // Kill the first entry (empty)
-    array_shift($sections);
-
-    // We can at the very least kill the .php
-    $shorturl = substr($PGI['this'][0], 0, -4);
-
-    foreach($sections as $section) {
-      // If we know this section
-      if (strpos($PGI['this'][0], $section) === 0) {
-        // We can make it even shorter
-        $shorturl = substr($PGI['this'][0], strlen($section), -4);
-      }
-    }
-    // }}}
-
-    manual_sidebar();
-    $link = array(
-        "contents"         => $PGI["home"][0],
-        "index"            => $PGI["up"][0],
-        "prev"             => $PGI["prev"][0],
-        "next"             => $PGI["next"][0],
-        "schema.dc"        => "http://purl.org/dc/elements/1.1/",
-        "schema.rdfs"      => "http://www.w3.org/2000/01/rdf-schema#",
-        array(
-            "rev"  => "canonical",
-            "rel"  => "self alternate shorter shorturl shortlink",
-            "href" => "http://php.net/" . $shorturl,
-        ),
-        array(
-            "rel" => "license",
-            "href" => "http://creativecommons.org/licenses/by/3.0/",
-            "about" => "#content",
-        ),
-    );
-    if (isset($PGI["extra_header_links"])) {
-        $link[] = (array)$PGI["extra_header_links"];
-    }
-
-    site_header("$title - Manual", array(
-        "link" => $link,
-        "profile" => "http://purl.org/NET/erdf/profile",
-        "extra_headers" => array(
-            "Link" => "<http://php.net/" . $shorturl . ">; rel=shorturl",
-        ),
-        "headtags" => array(
-            '<meta http-equiv="Content-language" content="' . $lang . '" />
-            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    var toggleImage = function(elem) {
-        if ($(elem).hasClass("shown")) {
-            $(elem).removeClass("shown").addClass("hidden");
-            $("img", elem).attr("src", "/images/notes-add.gif");
-        }
-        else {
-            $(elem).removeClass("hidden").addClass("shown");
-            $("img", elem).attr("src", "/images/notes-reject.gif");
-        }
-    };
-
-    $(".soft-deprecation-notice h1.title").each(function() {
-        $(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'minimize\' /></a> ");
-    });
-    $(".refsect1 h3.title").each(function() {
-        url = "https://bugs.php.net/report.php?bug_type=Documentation+problem&amp;manpage=" + $(this).parent().parent().attr("id") + "%23" + $(this).parent().attr("id");
-        $(this).parent().prepend("<div class=\'reportbug\'><a href=\'" + url + "\'>Report a bug</a></div>");
-        $(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
-    });
-    $("#usernotes .head").each(function() {
-        $(this).prepend("<a class=\'toggler shown\' href=\'#\'><img src=\'/images/notes-reject.gif\' alt=\'reject note\' /></a> ");
-    });
-    $(".soft-deprecation-notice h1.title .toggler").click(function() {
-        $(this).parent().siblings().slideToggle("slow");
-        toggleImage(this);
-        return false;
-    });
-    $(".refsect1 h3.title .toggler").click(function() {
-        $(this).parent().siblings().slideToggle("slow");
-        toggleImage(this);
-        return false;
-    });
-    $("#usernotes .head .toggler").click(function() {
-        $(this).parent().next().slideToggle("slow");
-        toggleImage(this);
-        return false;
-    });
-});
-</script>
-<script type="text/javascript" src="/js/usernotes.js"></script>
-',
-
-
-        ),
-    ));
-    manual_navbar();
-}
-
-// Print out manual page footer
-function manual_footer()
-{
-    if (myphpnet_beta()) {
-        return manual_footer_beta();
-    }
-    global $PGI;
-
-    // Get vars for easy handling
-    list($filename, $title) = $PGI['this'];
-
-    echo "<br /><br />";
-    manual_notes();
-    echo "<br />";
-    site_footer();
-}
 
 // =============================================================================
 // Manual page navigation parts
@@ -311,80 +150,7 @@ function manual_navbar($location = "top")
 // =============================================================================
 
 // Print out all user notes for this manual page
-function manual_notes()
-{
-    if (myphpnet_beta()) {
-        return manual_notes_beta();
-    }
-    // Get needed values
-    list($filename, $title) = $GLOBALS['PGI']['this'];
-
-    // Drop file extension from the name
-    if (substr($filename, -4) == '.php') {
-        $filename = substr($filename, 0, -4);
-    }
-
-    // Load user note for this page
-    $notes = manual_notes_load($filename);
-    uasort($notes, "manual_notes_sort");
-
-    // If there are few comments, provide the quick 'prevous'/'next' navigation
-    // above the comments
-    if(count($notes) > 2) {
-        manual_navbar("bottom");
-    }
-
-    // Link target to add a note to the current manual page,
-    // and it's extended form with a [+] image
-    $addnotelink = '/manual/add-note.php?sect=' . $filename .
-                   '&amp;redirect=' . $_SERVER['BASE_HREF'];
-    $addnotesnippet =
-        make_link($addnotelink, make_image('notes-add.gif', 'add a note', FALSE, 'class="middle"')) .
-        ' <small>' .
-        make_link($addnotelink, 'add a note') .
-        '</small>';
-    
-    $num_notes = count($notes);
-
-	// note snippet
-	list($redir_filename) = $GLOBALS['PGI']['this'];
-    if (substr($redir_filename, -4) == '.php') {
-      $redir_filename = substr($redir_filename, 0, -4);
-    }
-
-    echo <<<END_USERNOTE_HEADER
-
-<div id="usernotes">
- <div class="head">
-  <span class="action">{$addnotesnippet}</span>
-  <small>User Contributed Notes</small>
-  <strong>{$title}</strong> - [<em>{$num_notes}</em> notes]
- </div>
-END_USERNOTE_HEADER;
-
-    // If we have no notes, then inform the user
-    if (sizeof($notes) == 0) {
-        echo "\n <div class=\"note\">There are no user contributed notes for this page.</div>";
-    }
-
-    // If we have notes, print them out
-    else {
-        echo '<div id="allnotes">';
-
-        foreach($notes as $note) {
-            manual_note_display(
-                $note['xwhen'], $note['user'], $note['note'], $note['id'], $note['votes']
-            );
-        }
-        echo "</div>\n";
-        echo "\n <div class=\"foot\">$addnotesnippet</div>\n";
-    }
-
-    // End of #usernotes
-    echo "</div>";
-}
-
-function manual_notes_beta() {
+function manual_notes() {
     // Get needed values
     list($filename, $title) = $GLOBALS['PGI']['this'];
 
@@ -563,7 +329,9 @@ USER_NOTE_TEXT;
 
 /* vim: set et ts=4 sw=4: */
 
-function manual_setup_beta($setup) {
+// Set up variables important for this page
+// including HTTP header information
+function manual_setup($setup) {
     global $PGI, $MYSITE;
     $PGI = $setup;
     // Set base href for this manual page
@@ -664,8 +432,8 @@ function manual_language_chooser($currentlang, $currentpage) {
 	return $rt;
 }
 
-function manual_header_beta(){}
-function manual_footer_beta() {
+function manual_header(){}
+function manual_footer() {
 
     manual_notes();
     echo "</section>";
