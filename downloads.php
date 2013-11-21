@@ -107,8 +107,8 @@ foreach($a["source"] as $rel) {
     echo " <li>\n  ";
 
         download_link($rel["filename"], $rel["name"]);
-        echo " <span class=\"md5sum\">md5: {$rel["md5"]}</span>\n";
-        echo " <span class='releasedate'>({$rel["date"]})</span><br />\n";
+        echo " <span class='releasedate'>({$rel["date"]})</span>\n";
+        echo " <span class=\"md5sum\">md5: {$rel["md5"]}</span><br />\n";
         (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
     echo " </li>\n";
 }

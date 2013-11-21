@@ -2868,9 +2868,9 @@ section.downloads {
 }
 .download-box .md5sum {
     font-size: 0.9em;
-    position: absolute;
-    left: 230px;
     font: normal 14px / 1.46 "Source Code Pro", monospace;
+    padding-right: 20%;
+    float: right;
 }
 .download-box .releasedate {
     float: right;
