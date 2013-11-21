@@ -24,13 +24,8 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 define("COLUMNS",    4);
 define("SHOW_CLOSE", 20);
 
-// Set empty $notfound if called directly
-if (!isset($notfound)) {
-    $notfound = '';
-}
-
-if (!isset($scope)) {
-	$scope = '';
+if (empty($notfound)) {
+    mirror_redirect("/search.php");
 }
 
 // Print out the table of found (or all) functions. The HTML comments are
@@ -126,16 +121,12 @@ site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
 
-if ($snippet = is_known_snippet($notfound)) {
-	echo "<h1>Related snippet found for '{$notfound}'</h1>";
-	echo "<p>{$snippet}</p>";
-}
-?>
 
-<?php
-  // TODO Fix encoding issues. We encode this earlier. Using _decode for now.
-  // We allow users to search for tags like <foo>
-  google_cse(htmlspecialchars_decode($notfound, ENT_QUOTES)); 
+if ($snippet = is_known_snippet($notfound)) {
+    echo "<h1>Related snippet found for '{$notfound}'</h1>";
+    echo "<p>{$snippet}</p>";
+}
+
 ?>
 
 <h1>PHP Function List</h1>
@@ -149,26 +140,6 @@ if ($snippet = is_known_snippet($notfound)) {
 <?php quickref_table($maybe, false); ?>
 <br clear="left"/>
 
-<?php
-// Don't do a web search if the search term contains:
-//  tp://   since we are seeing a lot of proxy attempts through the 404 handler
-//  admin/  since these tend to be script-kiddie hack attempts
-#if(strlen($notfound) > 2 && !strstr($notfound,'tp://') && !strstr($notfound,'admin/')):
-if(0): // Turn of API search for now since Bing is no longer free
-$srch_rqst = "/ws.php?profile=$scope&q=".urlencode($notfound)."&lang=$LANG&results=10&start=0&mirror=".trim(substr($MYSITE,7),'/');
-$url = "http://php.net".$srch_rqst;
-$data = fetch_contents($url);
-if(!is_array($data)) {
-	$res = unserialize($data);
-	if(is_array($res) && $res['ResultSet']['totalResultsAvailable'] > 0) {
-		// Ok, we got some results from the search backend	
-		echo "<br /><h1>Site Search Results</h1>\n";
-		search_results($res, $notfound, 'local', 10, 0, $LANG, false, false, true);
-		echo '<br clear="left"/>';
-	}
-}
-endif;
-?>
 <h1>Other forms of search</h1>
 
 <p>
@@ -177,9 +148,7 @@ To search the string "<b><?php echo $notfound; ?></b>" using other options, try 
 
 <ul id="quickref_other">
  <li><?php print_link('search.php?show=manual&amp;pattern=' . $notfound_enc, 'Only the documentation'); ?></li>
- <li><?php print_link('search.php?show=local&amp;pattern=' . $notfound_enc, 'Only this mirror'); ?></li>
  <li><?php print_link('search.php?show=wholesite&amp;pattern=' . $notfound_enc, 'The entire php.net domain'); ?></li>
- <li><?php print_link('search.php?show=pear&amp;pattern=' . $notfound_enc, 'pear.php.net'); ?></li>
  <li><?php print_link('search.php?show=pecl&amp;pattern=' . $notfound_enc, 'pecl.php.net'); ?></li>
  <li><?php print_link('http://bugs.php.net/search.php?cmd=Display+Bugs&status=All&bug_type=Any&search_for=' . $notfound_enc, 'The Bug DB');?></li>
  <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=php-general&s=' . $notfound_enc, 'php-general mailing list');?></li>
@@ -188,10 +157,6 @@ To search the string "<b><?php echo $notfound; ?></b>" using other options, try 
 </ul>
 <br clear="left"/>
 <p>
- For a quick overview over all documented PHP functions,
- <?php print_link('quickref.php', 'click here'); ?>.
-</p>
-
 <?php
     site_footer();
     exit;
@@ -205,6 +170,5 @@ To search the string "<b><?php echo $notfound; ?></b>" using other options, try 
 </p>
 
 <?php
-quickref_table($functions);
 site_footer();
 ?>
