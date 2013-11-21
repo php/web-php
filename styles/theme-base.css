@@ -2503,9 +2503,31 @@ table.standard th.subr {
 }
 
 /* {{{ Search results. */
+
+/* Undo a whole bunch of default styles. */
+#layout .cse .gsc-control-cse,
+#layout .gsc-control-cse,
+#layout .gsc-control-cse .gsc-table-result {
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Override the search box styling. */
+#layout .cse form.gsc-search-box,
+#layout form.gsc-search-box {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
 #layout .cse table.gsc-search-box,
 #layout table.gsc-search-box {
     border: solid 1px #99c;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
 }
 
 #layout .cse input.gsc-input,
@@ -2515,95 +2537,147 @@ table.standard th.subr {
 
 #layout .cse table.gsc-search-box td,
 #layout table.gsc-search-box td {
-    padding: 2px;
+    padding: 0;
 }
 
 #layout .cse input.gsc-search-button,
 #layout input.gsc-search-button {
-    background: #669;
-    border: solid 1px #669;
+    background: #99c;
+    border: solid 1px #99c;
     border-radius: 0;
-    color: white;
+    color: rgb(238, 238, 255);
     font-size: 100%;
 }
 
+#layout .cse input.gsc-search-button:hover,
+#layout input.gsc-search-button:hover {
+    color: white;
+}
+
+/* We don't need a clear button. */
 #layout .cse .gsc-clear-button,
 #layout .gsc-clear-button {
     display: none;
+}
+
+/* Style the "tabs", and reformat them as a sidebar item. */
+#layout .cse div.gsc-results-wrapper-visible,
+#layout div.gsc-results-wrapper-visible {
+    position: relative;
+    min-height: 11em;
+}
+
+#layout .cse .gsc-tabsArea,
+#layout .gsc-tabsArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23.404%;
+    margin-right: 2.762%;
+    padding:.5em .75em;
+    border: 1px solid;
+    background-color:#f2f2f2;
+    border-color: #e0e0e0;
+    border-bottom-color:#d9d9d9;
+    border-radius:2px;
+    margin-top: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 #layout .cse .gsc-tabHeader.gsc-tabhActive,
 #layout .gsc-tabHeader.gsc-tabhActive,
 #layout .cse .gsc-tabHeader.gsc-tabhInactive,
 #layout .gsc-tabHeader.gsc-tabhInactive {
+    background: transparent;
+    color: rgb(38, 38, 38);
     border: 0;
-    background-color: white;
+    display: block;
     font-size: 100%;
-    font-weight: bold;
-    margin-right: 0;
-    padding: 0 26px 0 13px;
+    font-weight: normal;
+    border-top: dotted 1px rgb(189, 189, 189);
+    padding: 0;
+}
+
+#layout .cse .gsc-tabHeader.gsc-tabhActive:first-child,
+#layout .gsc-tabHeader.gsc-tabhActive:first-child,
+#layout .cse .gsc-tabHeader.gsc-tabhInactive:first-child,
+#layout .gsc-tabHeader.gsc-tabhInactive:first-child {
+    border: 0;
 }
 
 #layout .cse .gsc-tabHeader.gsc-tabhActive,
 #layout .gsc-tabHeader.gsc-tabhActive {
-    background: white url(/images/sprites.png) no-repeat scroll 100% -25px;
-    border-bottom: solid 0.25em #669;
     color: black;
 }
 
-#layout .cse .gsc-tabHeader.gsc-tabhInactive,
-#layout .gsc-tabHeader.gsc-tabhInactive {
-    background: white url(/images/sprites.png) no-repeat scroll 100% 5px;
-    border-bottom: solid 0.25em #99c;
-    color: #777;
+#layout .cse .gsc-tabHeader.gsc-tabhActive:after,
+#layout .gsc-tabHeader.gsc-tabhActive:after {
+    content: "»";
+    color: black;
+    float: right;
+    text-align: right;
 }
 
 #layout .cse .gsc-tabHeader.gsc-tabhInactive:hover,
 #layout .gsc-tabHeader.gsc-tabhInactive:hover {
-    border-bottom: solid 0.25em #669;
-    color: #444;
+    color: #693;
 }
 
-#layout .cse .gsc-tabsArea .gs-spacer {
-    display: none;
-}
-
-#layout .cse .gsc-tabsArea,
-#layout .gsc-tabsArea {
-    border-bottom: 0;
-}
-
+/* Format the results in the right place. */
 #layout .cse .gsc-above-wrapper-area,
 #layout .gsc-above-wrapper-area {
-    border-bottom: solid 0.25em #cacaca;
+    border: 0;
+    margin: 0;
+    padding: 0 0 1em 26.166%;
+    width: 73.834%;
 }
 
-#layout .cse .gsc-webResult.gsc-result:hover,
-#layout .gsc-webResult.gsc-result:hover {
-    background: #efefef;
-    border-left: solid 1px white;
+#layout .cse .gsc-above-wrapper-area-container,
+#layout .gsc-above-wrapper-area-container {
+    width: auto;
+}
+
+#layout .cse .gsc-result-info-container,
+#layout .gsc-result-info-container {
+    padding: 0;
+    margin: 0;
 }
 
 #layout .cse .gsc-result-info,
-#layout .gsc-result-info,
-#layout .cse .gs-webResult .gs-visibleUrl,
-#layout .gs-webResult .gs-visibleUrl,
-#layout .cse .gs-webResult .gs-visibleUrl-short,
-#layout .gs-webResult .gs-visibleUrl-short {
-    color: #666;
-    font-weight: normal;
+#layout .gsc-result-info {
+    color: #333;
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
 }
 
-#layout .cse .gs-result .gs-title,
-#layout .gs-result .gs-title {
-    text-decoration: none;
+#layout .cse .gsc-results,
+#layout .gsc-results {
+    margin: 0;
+    padding: 0 0 0 26.166%;
+    width: 73.834%;
+}
+
+#layout .cse .gsc-resultsHeader,
+#layout .gsc-resultsHeader {
+    display: none;
+}
+
+#layout .cse .gsc-webResult.gsc-result,
+#layout .gsc-webResult.gsc-result {
+    margin: 0 0 1em 0;
+    padding: 0;
+    border: 0;
 }
 
 #layout .cse .gs-webResult.gs-result a,
 #layout .gs-webResult.gs-result a,
 #layout .cse .gs-webResult.gs-result a b,
 #layout .gs-webResult.gs-result a b {
-    color: #3f438d;
+    border-bottom: solid 1px rgb(51, 102, 153);
+    color: rgb(51, 102, 153);
     text-decoration: none;
 }
 
@@ -2615,31 +2689,24 @@ table.standard th.subr {
 #layout .gs-webResult.gs-result a:focus b,
 #layout .cse .gs-webResult.gs-result a:hover b,
 #layout .gs-webResult.gs-result a:hover b {
-    color: #015;
+    border-bottom-color: rgb(51, 102, 153);
+    color: rgb(102, 153, 51);
 }
 
-#layout .cse .gsc-cursor-box,
-#layout .gsc-cursor-box {
-    border-top: solid 0.25em #cacaca;
+#layout .gs-webResult.gs-result .gs-visibleUrl {
+    font-weight: normal;
 }
 
-#layout .cse .gsc-cursor-box .gsc-cursor-page,
-#layout .gsc-cursor-box .gsc-cursor-page {
-    color: #3f438d;
-    font-size: 100%;
-    text-decoration: none;
-}
-
-#layout .cse .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page,
-#layout .gsc-cursor-box .gsc-cursor-page.gsc-cursor-current-page {
-    background: #3f438d;
-    color: white;
-}
-
-#layout .cse .gs-no-results-result .gs-snippet,
+/* Handle no results tabs. */
 #layout .gs-no-results-result .gs-snippet {
-    background: white;
     border: 0;
+    background: transparent;
+}
+
+/* Override docs table styling we don't want. */
+.docs #cse th,
+.docs #cse td {
+    padding: 0;
 }
 /* }}} */
 

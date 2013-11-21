@@ -64,6 +64,8 @@ site_header(
     )
 );
 
+echo '<h1>Search results</h1>';
+
 #if (!is_array($res)) {
 #  exit_with_pretty_error(null, 'Internal error', 'Please try again later');
 #}
