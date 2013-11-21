@@ -677,7 +677,6 @@ textarea {
 .navbar .nav > li > a {
   float: none;
   padding: .75em;
-  padding-left: 0;
   color: #777777;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
@@ -1044,7 +1043,6 @@ textarea {
   }
   .container {
     width: auto;
-    padding: 0px 10px 0px 10px;
   }
   .row-fluid {
     width: 100%;
@@ -1116,9 +1114,6 @@ textarea {
   .modal.fade.in {
     top: 20px;
   }
-  #intro .download-php {
-    margin: 0;
-  }
 }
 @media (max-width: 480px) {
   .nav-collapse {
@@ -1169,9 +1164,6 @@ textarea {
   }
   .carousel-caption {
     position: static;
-  }
-  #intro .download-php {
-    margin: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -3236,7 +3228,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     float:left;
     clear: both;
     margin-top: 0;
-    padding: 0px 10px 10px 10px;
   }
   .navbar .nav {
     margin-right: 0;
@@ -3276,7 +3267,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 
   .navbar-search {
     margin-top: 0;
-    padding: 0px 10px 10px 10px;
   }
 
   .navbar .brand img {
