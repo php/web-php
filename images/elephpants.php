@@ -46,10 +46,10 @@ if (!$photos || !is_array($photos)) {
 // prepare requested number of elephpants at random.
 shuffle($photos);
 $elephpants = array();
-foreach ($photos as $photo) {
+foreach ($photos as $n => $photo) {
 
     // stop when we have the requested number of photos.
-    if (count($elephpants) == $count) {
+    if ($n == $count || $n > 20) {
         break;
     }
 
