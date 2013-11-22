@@ -345,19 +345,19 @@ aside.tips div.border {
 /* {{{ Breadcrumbs */
 #breadcrumbs {
     color: #669;
-    background-color: #669;
+    background-color: rgb(153, 153, 204);
     border-bottom-color: #d9d9d9;
 	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	border-color: rgb(153, 153, 204);
-	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 10px 0px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 10px 0px;
 	border-top: 0px;
 }
 #breadcrumbs li ul {
 }
-#breadcrumbs li.prev a,
-#breadcrumbs li.next a,
-#breadcrumbs li:last-child a {
+#breadcrumbs a.prev,
+#breadcrumbs a.next,
+#breadcrumbs .breadcrumbs-container li:last-child a {
     color:#fff;
 	background-color: rgb(102, 102, 153);
 }
@@ -365,8 +365,8 @@ aside.tips div.border {
 #breadcrumbs a:visited {
   color:#eff;
 }
-#breadcrumbs li.prev,
-#breadcrumbs li.next,
+#breadcrumbs a.prev,
+#breadcrumbs a.next,
 #breadcrumbs li:last-child a:hover,
 #breadcrumbs li:last-child a:focus,
 #breadcrumbs a:hover,

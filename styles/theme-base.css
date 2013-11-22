@@ -2134,6 +2134,13 @@ hr {
     border-bottom:.25em solid;
 }
 
+.manual-header a:link,
+.manual-header a:visited,
+.manual-header a:active,
+.manual-header a:hover {
+    color: #669;
+    border: 0;
+}
 .page-tools {
     float: right;
     position:relative;
@@ -3268,6 +3275,44 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 #breadcrumbs .next {
     float: right;
+}
+#breadcrumbs .breadcrumbs-container {
+    /* Prevent the breadcrumbs from wrapping around the previous link. */
+    overflow: hidden;
+}
+#breadcrumbs .breadcrumbs-container li:first-child {
+    display: none;
+}
+@media (max-width:767px) {
+    #breadcrumbs {
+        display: none;
+    }
+}
+
+/* Re-layout the breadcrumbs using flexbox if it's available. */
+.flexbox #breadcrumbs .breadcrumbs-container,
+.flexboxlegacy #breadcrumbs .breadcrumbs-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0 0.625em;
+}
+.flexbox #breadcrumbs .breadcrumbs-container li:last-child,
+.flexboxlegacy #breadcrumbs .breadcrumbs-container li:last-child {
+    -moz-box-flex: 1 0 auto;
+    -webkit-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    margin-left: 0.625em;
+}
+.flexbox #breadcrumbs .breadcrumbs-container li,
+.flexboxlegacy #breadcrumbs .breadcrumbs-container li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #mainmenu-toggle-overlay, #mainmenu-toggle {

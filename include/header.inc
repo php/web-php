@@ -69,6 +69,13 @@ if (isset($shortname) && $shortname) {
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
+<?php
+ $jsfiles = array('ext/modernizr.js');
+ foreach ($jsfiles as $filename) {
+   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
+   echo '<script type="text/javascript" src="/js/'.$filename.'?t='.@filemtime($path).'"></script>';
+ }
+?>
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
@@ -96,29 +103,26 @@ if (isset($shortname) && $shortname) {
 
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs" class="container">
-<ul>
 <?php
       if (isset($config['prev'])) {
-        echo "<li class='prev'><a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a></li>";
+        echo "<a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a>";
+      }
+      if (isset($config['next'])) {
+          echo "<a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a>";
       }
 ?>
-    <li><ul>
+    <ul class="breadcrumbs-container">
       <?php
           $breadcrumbs = $config['breadcrumbs'];
           $last = array_pop($breadcrumbs);
           foreach ($breadcrumbs as $crumb) {
-              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a> <span class='divider'></span></li>";
+              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a></li>";
           }
           echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
 
       ?>
-    </ul></li>
-<?php
-      if (isset($config['next'])) {
-          echo "<li class='next'><a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a></li>";
-      }
-?>
-  </ul></div>
+    </ul>
+  </div>
 <?php endif; ?>
 
 

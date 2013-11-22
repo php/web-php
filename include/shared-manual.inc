@@ -394,6 +394,10 @@ function manual_setup($setup) {
     
     $id = substr($setup['this'][0], 0, -4);
     ?>
+      <h1 class="manual-header refname">
+        <a href="<?php echo $menu[0]['link']; ?>">PHP Manual</a>
+      </h1>
+
       <div class="page-tools">
         <div class="change-language">
           <?php echo manual_language_chooser($config['lang'], $config['thispage']); ?>
