@@ -113,7 +113,7 @@ if (isset($shortname) && $shortname) {
     <?php if (isset($config['next'])): ?>
       <div class="next">
         <a href="<?php echo $config['next'][0]; ?>">
-          &laquo; <?php echo $config['next'][1]; ?>
+          <?php echo $config['next'][1]; ?> &raquo;
         </a>
       </div>
     <?php endif; ?>
