@@ -2134,13 +2134,6 @@ hr {
     border-bottom:.25em solid;
 }
 
-.manual-header a:link,
-.manual-header a:visited,
-.manual-header a:active,
-.manual-header a:hover {
-    color: #669;
-    border: 0;
-}
 .page-tools {
     float: right;
     position:relative;
@@ -3279,9 +3272,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs .breadcrumbs-container {
     /* Prevent the breadcrumbs from wrapping around the previous link. */
     overflow: hidden;
-}
-#breadcrumbs .breadcrumbs-container li:first-child {
-    display: none;
 }
 @media (max-width:767px) {
     #breadcrumbs {
