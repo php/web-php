@@ -241,14 +241,15 @@ function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $d
             </div>
             <?php foreach($mirrors as $mirror): ?>
 <?php
-    $url = substr($mirror["url"], strpos($mirror["url"], '//') + 2, -1);
+    $url = $mirror["url"];
+    $urltitle = substr($url, strpos($url, '//') + 2, -1);
     if ($file) {
         $what = $direct_download ? "this" : "a";
         $url = $mirror["url"] . "get/$file/from/$what/mirror";
     }
 ?>
             <div class="entry">
-                <div class="url"><a href="<?php echo $url; ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($mirror['url']); ?></a></div>
+                <div class="url"><a href="<?php echo $url; ?>" title="<?php echo clean($mirror['url']); ?>"><?php echo clean($urltitle); ?></a></div>
                 <div class="provider"><a href="<?php echo $mirror['provider_url']; ?>" title="<?php echo clean($mirror['provider_title']); ?>"><?php echo clean($mirror['provider_title']); ?></a></div>
             </div>
             <?php endforeach; ?>
