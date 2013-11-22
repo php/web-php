@@ -2468,26 +2468,6 @@ table.standard th.subr {
     text-align: right;
 }
 
-/* News styles. */
-.newsImage img {
-    margin-left: 1.5em;
-    margin-bottom: .75em;
-}
-.newsItem {
-    margin:0 0 .75em;
-    border-bottom: solid 0.25em;
-}
-.newsItem:last-child {
-    border-bottom: 0;
-}
-.newsItem .published {
-    display:inline-block;
-    font-size:.75em;
-    line-height: 2;
-}
-.newsItem abbr.published {
-    margin-bottom:-1px;
-}
 .spanning-content {
     width:960px;
     margin: 0 auto;

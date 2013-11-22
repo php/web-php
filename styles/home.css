@@ -64,15 +64,39 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 
 .newsentry {
-    margin:0.66666666666667em 0;
+    margin: 3em 0 4em;
+    position: relative;
+    background-color: rgb(238, 238, 246);
+    display: block;
+    float: none;
+    border-top: solid 0.125em rgb(102, 102, 153);
+    border-bottom: solid 1px rgb(202, 202, 227);
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;
+    padding: 0.75em 0.625em;
+    box-shadow: 2px 0 2px -2px rgb(212, 212, 232) inset, -2px 0 2px -2px rgb(212, 212, 232) inset;
 }
-.newsentry .newstitle a {
-    background-color: #ebebf4;
-    color:#333;
-    padding: .75em 1em;
+.newsentry h3 {
+    color: #333;
+    font-size: 1.125em;
+    line-height: 1.33;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -2em;
+    left: 0;
+    right: 0;
+}
+.newsentry h3 .release-state {
+    float: right;
+    opacity: 0.8;
+}
+.newsentry h3 a {
+	color: #000;
+	text-decoration: none;
+    padding: .35em 0em;
     display: block;
 }
-
 .newsentry .newstitle a::after  {
     float:right;
     content:"»";
