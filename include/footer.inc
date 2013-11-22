@@ -37,7 +37,7 @@
     <?php
     // if elephpants enabled, insert placeholder nodes
     // to be populated with images via javascript.
-    if (isset($config['elephpants']) && $_SERVER['REQUEST_URI'] == '/') {
+    if (isset($config['elephpants'])) {
         print "<div class='elephpants'><div class=images></div></div>";
     }
     ?>
