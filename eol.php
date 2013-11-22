@@ -68,8 +68,6 @@ site_header('Unsupported Branches');
 															$times
 														)
 												) . " ago";
-						} else {
-							$eolPeriod = 'uknown...';
 						}
 					} catch(Exception $e) {
 						$eolPeriod = 'uknown...';
