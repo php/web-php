@@ -355,8 +355,8 @@ aside.tips div.border {
 }
 #breadcrumbs li ul {
 }
-#breadcrumbs a.prev,
-#breadcrumbs a.next,
+#breadcrumbs .prev a,
+#breadcrumbs .next a,
 #breadcrumbs .breadcrumbs-container li:last-child a {
     color:#fff;
 	background-color: rgb(102, 102, 153);
@@ -365,8 +365,8 @@ aside.tips div.border {
 #breadcrumbs a:visited {
   color:#eff;
 }
-#breadcrumbs a.prev,
-#breadcrumbs a.next,
+#breadcrumbs .prev a,
+#breadcrumbs .next a,
 #breadcrumbs li:last-child a:hover,
 #breadcrumbs li:last-child a:focus,
 #breadcrumbs a:hover,

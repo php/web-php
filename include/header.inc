@@ -103,14 +103,20 @@ if (isset($shortname) && $shortname) {
 
 <?php if (!empty($config['breadcrumbs'])): ?>
   <div id="breadcrumbs" class="container">
-<?php
-      if (isset($config['prev'])) {
-        echo "<a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a>";
-      }
-      if (isset($config['next'])) {
-          echo "<a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a>";
-      }
-?>
+    <?php if (isset($config['prev'])): ?>
+      <div class="prev">
+        <a href="<?php echo $config['prev'][0]; ?>">
+          &laquo; <?php echo $config['prev'][1]; ?>
+        </a>
+      </div>
+    <?php endif; ?>
+    <?php if (isset($config['next'])): ?>
+      <div class="next">
+        <a href="<?php echo $config['next'][0]; ?>">
+          &laquo; <?php echo $config['next'][1]; ?>
+        </a>
+      </div>
+    <?php endif; ?>
     <ul class="breadcrumbs-container">
       <?php
           $breadcrumbs = $config['breadcrumbs'];

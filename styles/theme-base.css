@@ -3228,6 +3228,9 @@ div.soft-deprecation-notice blockquote.sidebar {
 #breadcrumbs li {
     display:inline-block;
 }
+#breadcrumbs li:first-child a {
+    padding-left: 0;
+}
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
@@ -3241,6 +3244,9 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #breadcrumbs .prev {
     float: left;
+    min-width: 23.4043%;
+    margin-right: 2.1276%;
+    box-sizing: border-box;
 }
 #breadcrumbs .next {
     float: right;
@@ -3254,6 +3260,18 @@ div.soft-deprecation-notice blockquote.sidebar {
         display: none;
     }
 }
+@media (min-width: 768px) and (max-width: 979px) {
+    #breadcrumbs .prev {
+        min-width: 22.9282%;
+        margin-right: 2.7624%;
+    }
+}
+@media (min-width: 1200px) {
+    #breadcrumbs .prev {
+        min-width: 18%;
+        margin-right: 1%;
+    }
+}
 
 /* Re-layout the breadcrumbs using flexbox if it's available. */
 .flexbox #breadcrumbs .breadcrumbs-container,
@@ -3263,7 +3281,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    padding: 0 0.625em;
+    padding: 0 0.625em 0 0;
 }
 .flexbox #breadcrumbs .breadcrumbs-container li:last-child,
 .flexboxlegacy #breadcrumbs .breadcrumbs-container li:last-child {
