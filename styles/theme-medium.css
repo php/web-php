@@ -344,25 +344,34 @@ aside.tips div.border {
 
 /* {{{ Breadcrumbs */
 #breadcrumbs {
-    color: #737373;
-    background:#f2f2f2;
-    border-color: #e0e0e0;
+    color: #669;
+    background-color: #669;
     border-bottom-color: #d9d9d9;
-    -moz-border-radius:2px;
-    border-radius:2px;
+	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgb(153, 153, 204);
+	box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 10px 0px;
+	border-top: 0px;
 }
+#breadcrumbs li ul {
+}
+#breadcrumbs li.prev a,
+#breadcrumbs li.next a,
 #breadcrumbs li:last-child a {
-    color:#4D4D4D;
+    color:#fff;
+	background-color: rgb(102, 102, 153);
 }
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
-  color:#369;
+  color:#eff;
 }
+#breadcrumbs li.prev,
+#breadcrumbs li.next,
 #breadcrumbs li:last-child a:hover,
 #breadcrumbs li:last-child a:focus,
 #breadcrumbs a:hover,
 #breadcrumbs a:focus {
-  color:#693;
+  color:#fff;
 }
 /* }}} */
 

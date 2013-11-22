@@ -94,6 +94,33 @@ if (isset($shortname) && $shortname) {
   </div>
 </nav>
 
+<?php if (!empty($config['breadcrumbs'])): ?>
+  <div id="breadcrumbs" class="container">
+<ul>
+<?php
+      if (isset($config['prev'])) {
+        echo "<li class='prev'><a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a></li>";
+      }
+?>
+    <li><ul>
+      <?php
+          $breadcrumbs = $config['breadcrumbs'];
+          $last = array_pop($breadcrumbs);
+          foreach ($breadcrumbs as $crumb) {
+              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a> <span class='divider'></span></li>";
+          }
+          echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
+
+      ?>
+    </ul></li>
+<?php
+      if (isset($config['next'])) {
+          echo "<li class='next'><a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a></li>";
+      }
+?>
+  </ul></div>
+<?php endif; ?>
+
 
 
 <?php if (!empty($config['intro'])):?>
@@ -105,33 +132,6 @@ if (isset($shortname) && $shortname) {
 <?php endif;?>
 
 <div id="layout" class="container">
-<?php if (!empty($config['breadcrumbs'])): ?>
-  <div id="breadcrumbs" class="row-fluid">
-    <div class="breadcrumbs-inner">
-    <ul>
-      <?php
-          $breadcrumbs = $config['breadcrumbs'];
-          $last = array_pop($breadcrumbs);
-          foreach ($breadcrumbs as $crumb) {
-              echo "      <li><a href='{$crumb['link']}'>{$crumb['title']}</a> <span class='divider'>/</span></li>";
-          }
-          echo "      <li><a href='{$last['link']}'>{$last['title']}</a></li>";
-
-      ?>
-    </ul>
-      <div id="prevnext-container">
-        <?php
-          if (isset($config['prev'])) {
-            echo "<a class='prev' href='{$config['prev'][0]}'>&laquo; {$config['prev'][1]}</a>";
-          }
-          if (isset($config['next'])) {
-            echo "<a class='next' href='{$config['next'][0]}'>{$config['next'][1]} &raquo;</a>";
-          }
-        ?>
-      </div>
-    </div>
-  </div>
-<?php endif; ?>
 
   <div class="row-fluid">
 <?php if (!empty($config["leftmenu"])): ?>

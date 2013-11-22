@@ -3240,29 +3240,33 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 #breadcrumbs {
     border:1px solid;
-    margin:0 0 0.85714285714286em;
+    margin:0 auto;
     font-size:.875em;
     line-height:1.71428571428571;
-}
-#breadcrumbs .breadcrumbs-inner {
-    padding:.5em .75em;
 }
 #breadcrumbs ul {
     padding:0;
     margin:0;
+    background-color: rgb(153, 153, 204);
 }
 #breadcrumbs li {
     display:inline-block;
 }
-#breadcrumbs .divider {
-    padding:0 .25em;
-}
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
+    color: #fff;
+}
+#breadcrumbs a {
+    padding: .25em 1em;
+    display: inline-block;
+    background-color: rgb(153, 153, 204);
 }
 
-#prevnext-container .next {
+#breadcrumbs .prev {
+    float: left;
+}
+#breadcrumbs .next {
     float: right;
 }
 
@@ -3531,3 +3535,4 @@ aside.tips div.inner {
 }
 
 /* }}} */
+
