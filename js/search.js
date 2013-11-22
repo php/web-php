@@ -272,10 +272,10 @@
 
                             success(backends);
                         },
-                        url: "/manual/" + language + "/search-description.json"
+                        url: "/cached.php?f=/manual/" + language + "/search-description.json"
                     });
                 },
-                url: "/manual/" + language + "/search-index.json"
+                url: "/cached.php?f=/manual/" + language + "/search-index.json"
             });
         };
 
