@@ -50,7 +50,7 @@ if (isset($shortname) && $shortname) {
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>cached.php?f=styles/<?php echo $filename?>&t=<?php echo $modified?>fda" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>cached.php?f=styles/<?php echo $filename?>&t=<?php echo $modified?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
