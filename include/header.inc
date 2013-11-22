@@ -94,7 +94,7 @@ if (isset($shortname) && $shortname) {
         </ul>
         <form class="navbar-search span3" id="topsearch" action="/search.php">
             <input type="hidden" name="show" value="quickref">
-            <input type="search" name="pattern" class="search-query" placeholder="Search">
+            <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
         </form>
       </div>
     </div>
