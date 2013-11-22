@@ -463,6 +463,7 @@ $external_redirects = array(
     "rest/readme.mailinglist_rules" => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.MAILINGLIST_RULES;hb=HEAD",
     "rest/readme.git-rules"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=README.GIT-RULES;hb=HEAD",
     "rest/coding_standards"         => "http://git.php.net/?p=php-src.git;a=blob_plain;f=CODING_STANDARDS;hb=HEAD",
+    "sunglasses"  => "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Temporary easiter egg for bug#66144
 );
 
 // ============================================================================
