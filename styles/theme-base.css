@@ -2857,6 +2857,9 @@ section.downloads {
     border-top: 2px solid #e3e3e3;
     margin: 0px;
     padding: 0px;
+    overflow: scroll; 
+    width: 100%;
+    margin-top: 15px;
 }
 .download-box {
     margin: 0.66666666666667em 25px 55px;
@@ -3335,7 +3338,14 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   #intro .download-php { margin: 0 !important; }
-}
+  .md5sum {
+    float: right;
+    padding-left: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    word-break: break-all;
+  }
 
 @media (min-width:768px) {
   #intro .download-php h2 {
