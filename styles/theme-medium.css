@@ -440,3 +440,17 @@ div.elephpants img:focus {
 /* }}} */
 
 
+.mirror {
+	position: relative;
+	border: 1px solid #CCC;
+	padding: 20px;
+	margin: 5px;
+}
+.mirror .title img {
+	position: absolute;
+	right: 0px;
+}
+.mirror .title {
+	font-size: 1.4em;
+	position: relative;
+}
