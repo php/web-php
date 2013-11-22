@@ -36,27 +36,63 @@ site_header('Unsupported Branches');
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (get_eol_branches() as $major => $branches): ?>
-			<?php foreach ($branches as $branch => $detail): ?>
-				<tr>
-					<td><?php echo htmlspecialchars($branch); ?></td>
-					<td>
-						<?php echo date('j M Y', $detail['date']); ?>
-					</td>
-					<td>
-						<?php echo number_format($ago = floor((time() - $detail['date']) / 86400)); ?>
-						day<?php echo ($ago != 1 ? 's' : ''); ?> ago
-					</td>
-					<td>
-						<a href="/releases/#<?php echo htmlspecialchars($detail['version']); ?>">
-							<?php echo htmlspecialchars($detail['version']); ?>
-						</a>
-					</td>
-					<td>
-						<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
+		<?php foreach (get_eol_branches() as $major => $branches):
+
+				foreach ($branches as $branch => $detail) {
+					try {
+						$now  = new DateTime;
+						$then = new DateTime($detail['date']);
+						$diff = $now->diff($then);
+						$times = array();
+						if ($diff->y) {
+							$times[] = array($diff->y,'year');
+							if ($diff->m) {
+    							$times[] = array($diff->m,'month');
+							}
+						} elseif ($diff->m) {
+							$times[] = array($diff->m,'year');
+						} elseif ($diff->d) {
+							$times[] = array($diff->d,'year');
+						} else {
+							$eolPeriod = 'moments ago...';
+						}
+						if ($times) {
+							$eolPeriod = implode(', ', 
+														array_map(
+															function($t) {
+																foreach ($t as $T) {
+																	return "$t[0] $t[1]" .
+																			($t[1] != 1 ? 's' : '');
+																}
+															},
+															$times
+														)
+												) . " ago";
+						} else {
+							$eolPeriod = 'uknown...';
+						}
+					} catch(Exception $e) {
+						$eolPeriod = 'uknown...';
+					}
+		?>
+					<tr>
+						<td><?php echo htmlspecialchars($branch); ?></td>
+						<td>
+							<?php echo date('j M Y', $detail['date']); ?>
+						</td>
+						<td>
+							<em><?php echo $eolPeriod ?></em>
+						</td>
+						<td>
+							<a href="/releases/#<?php echo htmlspecialchars($detail['version']); ?>">
+								<?php echo htmlspecialchars($detail['version']); ?>
+							</a>
+						</td>
+						<td>
+							<?php echo isset($BRANCH_NOTES[$branch]) ? $BRANCH_NOTES[$branch] : ''; ?>
 					</td>
 				</tr>
-			<?php endforeach; ?>
+			    <?php } ?>
 		<?php endforeach; ?>
 	</tbody>
 </table>
