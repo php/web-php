@@ -3212,33 +3212,30 @@ div.soft-deprecation-notice blockquote.sidebar {
     border: 0px solid;
 }
 
-
 #breadcrumbs {
     border:1px solid;
+    border-top:0;
     margin:0 auto;
     font-size:.875em;
     line-height:1.71428571428571;
 }
 #breadcrumbs ul {
-    padding:0;
-    margin:0;
-    background-color: rgb(153, 153, 204);
+    padding:.5em .75em;
+    margin:.5em 0;
+}
+#breadcrumbs div {
+    padding:.5em .75em;
 }
 #breadcrumbs li {
     display:inline-block;
 }
-#breadcrumbs li:first-child a {
-    padding-left: 0;
+#breadcrumbs li+li:before {
+    padding:0 .5em 0;
+    content:"\203A";
 }
 #breadcrumbs a:link,
 #breadcrumbs a:visited {
     border-width:0;
-    color: #fff;
-}
-#breadcrumbs a {
-    padding: .25em 1em;
-    display: inline-block;
-    background-color: rgb(153, 153, 204);
 }
 
 #breadcrumbs .prev {
@@ -3289,7 +3286,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     -webkit-flex: 1 0 auto;
     -ms-flex: 1 0 auto;
     flex: 1 0 auto;
-    margin-left: 0.625em;
 }
 .flexbox #breadcrumbs .breadcrumbs-container li,
 .flexboxlegacy #breadcrumbs .breadcrumbs-container li {
@@ -3497,21 +3493,12 @@ aside.tips .panel .announcements a {
   margin: 0;
   line-height: 1;
 }
-aside.tips .panel a::after {
-    float:right;
-    content:"»";
-    color:#666;
-}
 aside.tips .panel a:hover,
 aside.tips .panel a:focus {
+    color:#369;
     background:#ebebf4;
     border-color:#dbdbeb;
     border-bottom-color:#cacae2;
-    color:#000;
-}
-aside.tips .panel a:hover::after,
-aside.tips .panel a:focus::after {
-    color:#333;
 }
 aside.tips div.headline a.headline,
 aside.tips div.headline a.headline:hover {
@@ -3520,15 +3507,8 @@ aside.tips div.headline a.headline:hover {
   border: 0px;
 }
 
-aside.tips a:link,
-aside.tips a:visited {
-    color:#369;
-    border-bottom-color: transparent;
-}
-aside.tips a:hover,
-aside.tips a:focus {
-    color:#f25050;
-    border-bottom-color: #f25050;
+aside.tips a {
+    border-bottom:0;
 }
 /* Announcement Area */
 
@@ -3546,7 +3526,7 @@ aside.tips div.inner {
 .announcements {
     display: block;
     background-color: #ebebf4;
-    border:1px solid #dbdbeb;
+    border-top:1px solid #dbdbeb;
     border-bottom-color:#cacae2;
     border-radius: 0 0 2px 2px;
     padding: 1em;
