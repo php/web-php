@@ -20,10 +20,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/errors.inc';
 include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 
-// Constant values for the display
-define("COLUMNS",    4);
-define("SHOW_CLOSE", 20);
-
 if (empty($notfound)) {
     mirror_redirect("/search.php");
 }
@@ -37,8 +33,6 @@ function quickref_table($functions, $sort = true)
     echo "<!-- result list start -->\n";
     echo "<ul id=\"quickref_functions\">\n";
     // Prepare the data
-    $i = 0;
-    $limit = ceil(count($functions) / COLUMNS);
     if ($sort) {
         asort($functions);
     }
@@ -97,7 +91,7 @@ if (count($temp) > 0) {
     foreach ($temp as $file => $p) {
         
         // Stop, if we found enough matches
-        if (count($maybe) >= SHOW_CLOSE) { break; }
+        if (count($maybe) >= 30) { break; }
         
         // If the two are more then 70% similar or $notfound is a substring
         // of $funcname, then the match is a very similar one
@@ -116,7 +110,7 @@ if (count($temp) > 0) {
 if (count($maybe) > 0) { $head_options = array("noindex"); }
 else { $head_options = array(); }
 
-site_header("Manual Quick Reference", $head_options+array("current" => "docs"));
+site_header("Manual Quick Reference", $head_options+array("current" => "help"));
 
 // Note: $notfound is defined (with htmlspecialchars) inside manual-lookup.php
 $notfound_enc = urlencode($notfound);
@@ -137,38 +131,13 @@ if ($snippet = is_known_snippet($notfound)) {
  <b><?php echo $notfound; ?></b> doesn't exist. Closest matches:
 </p>
 
-<?php quickref_table($maybe, false); ?>
-<br clear="left"/>
-
-<h1>Other forms of search</h1>
-
-<p>
-To search the string "<b><?php echo $notfound; ?></b>" using other options, try searching:
-</p>
-
-<ul id="quickref_other">
- <li><?php print_link('search.php?show=manual&amp;pattern=' . $notfound_enc, 'Only the documentation'); ?></li>
- <li><?php print_link('search.php?show=wholesite&amp;pattern=' . $notfound_enc, 'The entire php.net domain'); ?></li>
- <li><?php print_link('search.php?show=pecl&amp;pattern=' . $notfound_enc, 'pecl.php.net'); ?></li>
- <li><?php print_link('http://bugs.php.net/search.php?cmd=Display+Bugs&status=All&bug_type=Any&search_for=' . $notfound_enc, 'The Bug DB');?></li>
- <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=php-general&s=' . $notfound_enc, 'php-general mailing list');?></li>
- <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=php-internals&s=' . $notfound_enc, 'Internals mailing list');?></li>
- <li><?php print_link('http://marc.info/?r=1&w=2&q=b&l=phpdoc&s=' . $notfound_enc, 'Documentation mailing list');?></li>
-</ul>
-<br clear="left"/>
-<p>
 <?php
-    site_footer();
-    exit;
+quickref_table($maybe, false);
+
+$config = array(
+    "sidebar" => '<p class="panel"><a href="/search.php?show=all&amp;pattern=' . $notfound_enc . '">Full website search</a>',
+);
+
+site_footer($config);
 } 
-?>
 
-<p>
- Here is a list of all the documented PHP functions.
- Click on any one of them to jump to that page in the
- manual.
-</p>
-
-<?php
-site_footer();
-?>
