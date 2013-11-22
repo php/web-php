@@ -7,7 +7,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/include/results.inc';
 
 function exit_with_pretty_error($title, $header, $msg) {
   if ($title) {
-    site_header($title, array("noindex", 'layout_span' => 12));
+    site_header($title, array("noindex", 'layout_span' => 12, "current" => "help"));
   }
   echo '<h2>' .$header. '</h2>';
   echo '<p>' .$msg. '</p>';
@@ -59,7 +59,7 @@ site_header(
     'Search results',
     array(
         'noindex',
-        'current' => 'docs',
+        'current' => 'help',
         'layout_span' => 12,
     )
 );
