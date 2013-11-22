@@ -173,6 +173,11 @@ div.warning a:link,
 div.warning a:visited {
   color:#936;
 }
+div.warning a:hover,
+div.warning a:focus {
+  color:#693;
+  border-color:#693;
+}
 div.tip:before,
 div.caution:before,
 blockquote.note:before,
