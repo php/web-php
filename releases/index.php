@@ -72,28 +72,29 @@ krsort($eol);
 $eol = implode('', array_slice($eol, 0, 2));
 
 $SIDEBAR_DATA = '
-<h3>End of Life Dates</h3>
 
-<p>
+<div class="announcements">
+<h3>End of Life Dates</h3>
  The most recent branches to reach end of life status are:
-</p>
 
 <ul>'.$eol.'</ul>
+</div>
 
-<p>
- You can also view a
- <a href="/eol.php">list of end of life dates for all branches</a>.
+<p class="panel">
+ <a href="/eol.php">End Of Life dates</a>
+</p>
+<p class="panel">
+ <a href="/ChangeLog-5.php">PHP 5 ChangeLog</a>
+</p>
+<p class="panel">
+ <a href="/ChangeLog-4.php">PHP 4 ChangeLog</a>
 </p>
 
-<h3>Other PHP Releases</h3>
-<p>
- Release candidates and beta versions are not listed here.
- You will be able to find those as well as even PHP 3 and
- PHP 2 releases in the <a href="http://museum.php.net/">PHP
- Museum</a>.
-</p>
+<div class="panel">
+ <a href="http://museum.php.net/">PHP Museum</a>
+</div>
 
-<div class="information">
+<div class="announcements">
  <strong>Want a PHP serialize()d list of the PHP releases?</strong><br />
  <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
  <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
@@ -101,7 +102,7 @@ $SIDEBAR_DATA = '
 </div>
 ';
 
-site_header("Releases");
+site_header("Releases", array("current" => "downloads"));
 ?>
 
 <h1>Unsupported Historical Releases</h1>
@@ -194,5 +195,5 @@ foreach($OLDRELEASES as $major => $a) {
 	}
 }
 
-site_footer();
+site_footer(array("sidebar" => $SIDEBAR_DATA));
 
