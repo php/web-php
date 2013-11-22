@@ -6,11 +6,12 @@ if (!isset($_GET["f"])) {
     header("Location: http://php.net/");
     exit;
 }
-$abs = $_SERVER["DOCUMENT_ROOT"]. "/" .(string)$_GET["f"];
+$pwd = realpath($_SERVER["DOCUMENT_ROOT"]);
+$abs = $pwd. "/" .(string)$_GET["f"];
 $abs = realpath($abs);
 
-if (strncmp($abs, $_SERVER["DOCUMENT_ROOT"], strlen($_SERVER["DOCUMENT_ROOT"])) != 0) {
-    header("Location: http://php.net");
+if (strncmp($abs, $pwd, strlen($pwd)) != 0) {
+    header("Location: http://php.net/$abs");
     exit;
 }
 
