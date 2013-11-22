@@ -525,7 +525,8 @@ textarea {
 .navbar .brand {
   float: left;
   display: block;
-  padding: .5em;
+  height: 1.5em;
+  padding: .75em;
   color: #fff;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -2113,16 +2114,11 @@ hr {
     border-top:.25em solid #99c;
 }
 
-.navbar * {
-  -moz-box-sizing: border-box;
-}
 .navbar .brand {
     margin-right:.75em;
 }
 .navbar .brand img {
     padding:0;
-    margin-top: 4px;
-    margin-bottom:-2px;
     opacity:.75;
     border: 0;
 }
