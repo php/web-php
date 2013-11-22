@@ -7,6 +7,11 @@ include_once $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
 // Try to make this page non-cached
 header_nocache();
 
+$SHOW_COUNT = 3;
+$MAJOR = 5;
+
+$releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
+
 $gpg = array(
     "5.5" => <<< GPG
 pub   2048R/90D90EC1 2013-07-18 [expire : 2016-07-17]
@@ -84,55 +89,52 @@ site_header("Downloads",
 );
 ?>
 <a id="v5"></a>
-<?php
-$SHOW_COUNT = 3;
-$MAJOR = 5;
+<?php $i = 0; foreach ($releases as $v => $a): ?>
+  <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
+  <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
-$releases = array_slice($RELEASES[$MAJOR], 0, $SHOW_COUNT);
-$rows = array_chunk($releases, 2, $preserve_keys = true);
+  <div class="download-box">
+    <h3 id="v<?php echo $v; ?>">
+      <span class="release-state"><?php echo $stable; ?></span>
+      PHP <?php echo $v; ?>
+      (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
+    </h3>
 
-$i = 0;
-foreach ($rows as $row) {
-   echo "<div class='row-fluid'>\n";
-   foreach ($row as $v => $a) {
-       $stable = $i++ === 0 ? "" : "(Old Stable)";
-       $mver = substr($v, 0, strrpos($v, "."));
-?>
-<div class="download-box">
-  <h1 id="v<?php echo $v; ?>">PHP <?php echo "$mver $stable"; ?></h1>
+    <ul>
+      <?php foreach ($a['source'] as $rel): ?>
+        <li>
+          <?php download_link($rel['filename'], $rel['filename']); ?>
+          <span class="releasedate"><?php echo $rel['date']; ?></span>
+          <span class="md5sum"><?php echo $rel['md5']; ?></span>
+          <?php if (isset($rel['note']) && $rel['note']): ?>
+            <p>
+              <strong>Note:</strong>
+              <?php echo $rel['note']; ?>
+            </p>
+          <?php endif; ?>
+        </li>
+      <?php endforeach; ?>
+    </ul>
 
-  <ul>
-<?php
-foreach($a["source"] as $rel) {
-    echo " <li>\n  ";
-
-        download_link($rel["filename"], $rel["name"]);
-        echo " <span class='releasedate'>({$rel["date"]})</span>\n";
-        echo " <span class=\"md5sum\">md5: {$rel["md5"]}</span><br />\n";
-        (isset($rel["note"]) && $rel["note"] ? "<p><strong>Note:</strong>{$rel["note"]}</p>": "");
-    echo " </li>\n";
-}
-?>
-  </ul>
-      <a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog for PHP <?php echo $v; ?></a>
-GPG Keys
-<pre class="gpg">
-<?php echo $gpg[$mver]; ?>
-</pre>
-</div>
-
-<?php
-    }
-    echo "</div>\n";
-} // for
-?>
+    <a href="#gpg-<?php echo $mver; ?>">GPG Keys for PHP <?php echo $mver; ?></a>
+  </div>
+<?php endforeach; ?>
 
 <hr/>
-<h1>GPG Keys & Signatures</h1>
+<h2>GPG Keys</h2>
 <p>
-Each release is tagged and signed in the <a href='git.php'>PHP Git Repository</a>,
-and the signatures for individual archive is also available as .asc file.<br>
+The releases are tagged and signed in the <a href='git.php'>PHP Git Repository</a>.
+The following official GnuPG keys of the current PHP Release Manager can be used
+to verify the tags:
 </p>
+<?php foreach ($gpg as $branch => $data): ?>
+  <div class="download-box">
+  <h3 id="gpg-<?php echo $branch; ?>">PHP <?php echo $branch; ?></h3>
+  <pre>
+<?php echo $data; ?>
+  </pre>
+</div>
+<?php endforeach; ?>
+
 <?php
 site_footer(array('sidebar' => $SIDEBAR_DATA));
-
