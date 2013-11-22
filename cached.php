@@ -11,7 +11,7 @@ $abs = $pwd. "/" .(string)$_GET["f"];
 $abs = realpath($abs);
 
 if (strncmp($abs, $pwd, strlen($pwd)) != 0) {
-    header("Location: http://php.net/$abs");
+    header("Location: http://php.net/" . $_GET["f"]);
     exit;
 }
 
