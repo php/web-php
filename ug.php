@@ -30,7 +30,7 @@ function format_event_date($starts, $ends, $usually) {
         $starts = date_format(date_create($starts), 'Y-m-d');
         return $starts;
     }
-    $days = array(1 => "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+    $days = array(1 => "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
     $recur = array(
         -3 => "third last",
         -2 => "second last",
@@ -75,7 +75,7 @@ foreach($groupped as $country => $events) {
         $entry .= "<div class='newstime'>$date</div>";
         $entry .= '</a>'.'</h3>';
         $entry .= '<div class="newscontent">';
-        $entry .= $event["ldesc"];
+        $entry .= nl2br($event["ldesc"]);
         $entry .= '</div>';
         $entry .= '</div>';
     }
