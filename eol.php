@@ -70,7 +70,7 @@ site_header('Unsupported Branches');
 												) . " ago";
 						}
 					} catch(Exception $e) {
-						$eolPeriod = 'uknown...';
+						$eolPeriod = 'unknown...';
 					}
 		?>
 					<tr>
