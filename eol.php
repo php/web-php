@@ -50,9 +50,9 @@ site_header('Unsupported Branches');
     							$times[] = array($diff->m,'month');
 							}
 						} elseif ($diff->m) {
-							$times[] = array($diff->m,'year');
+							$times[] = array($diff->m,'month');
 						} elseif ($diff->d) {
-							$times[] = array($diff->d,'year');
+							$times[] = array($diff->d,'day');
 						} else {
 							$eolPeriod = 'moments ago...';
 						}
