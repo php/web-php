@@ -2333,12 +2333,14 @@ pre.info {
 
 
 /*#layout .refsect1[id]:before,*/
+/**
 #layout *[id]:target:before {
     display:block;
     content:" ";
     margin-top:-56px;
     height:56px;
 }
+*/
 
 #search-results {
     margin:10px 40px;

@@ -1,5 +1,10 @@
 /* Plugins, etc, are on top. */
 
+String.prototype.escapeSelector = function()
+{
+  return this.replace(/(.|#)([ #;&,.+*~\':"!^$\[\]\(\)=>|\/])/g, '$1' + '\\\\$2');
+}
+
 /** {{{
  * jQuery.ScrollTo - Easy element scrolling using jQuery.
  * Copyright (c) 2007-2009 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
@@ -220,17 +225,22 @@ $(document).ready(function() {
     var jHtmlBody = $('html, body');
     function scroll(target, interval)
     {
-      if ( ! interval && interval !== 0)
+      if ( ! interval)
         interval = 400;
+
+      target = $('[id="' + target.substring(1) + '"]');
       
+      var top = 52;
+
       jHtmlBody.animate({
-        scrollTop: $(target).offset().top - 52
+        scrollTop: target.offset().top - top
       }, interval);
-      return false;
+      
+      return true;
     }
     
     if (window.location.hash)
-      scroll(window.location.hash, 0)
+      scroll(window.location.hash, 1)
     
     $('a[href^=#]').click(function(e){
       e.preventDefault();
