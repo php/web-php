@@ -215,6 +215,30 @@ $(document).ready(function() {
         language: getLanguage(),
         limit: 3
     });
+    
+    // Hash scroll    
+    var jHtmlBody = $('html, body');
+    function scroll(target, interval)
+    {
+      if ( ! interval && interval !== 0)
+        interval = 400;
+      
+      jHtmlBody.animate({
+        scrollTop: $(target).offset().top - 52
+      }, interval);
+      return false;
+    }
+    
+    if (window.location.hash)
+      scroll(window.location.hash, 0)
+    
+    $('a[href^=#]').click(function(e){
+      e.preventDefault();
+      var hash = $.attr(this, 'href');
+      scroll(hash);
+      window.location.hash = hash;
+    });      
+  
 });
 
 /**
