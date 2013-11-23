@@ -41,7 +41,7 @@ site_header('Unsupported Branches');
 				foreach ($branches as $branch => $detail) {
 					try {
 						$now  = new DateTime;
-						$then = new DateTime($detail['date']);
+						$then = new DateTime('@'.$detail['date']);
 						$diff = $now->diff($then);
 						$times = array();
 						if ($diff->y) {
