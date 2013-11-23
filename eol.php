@@ -60,10 +60,8 @@ site_header('Unsupported Branches');
 							$eolPeriod = implode(', ', 
 														array_map(
 															function($t) {
-																foreach ($t as $T) {
-																	return "$t[0] $t[1]" .
-																			($t[1] != 1 ? 's' : '');
-																}
+																return "$t[0] $t[1]" .
+																		($t[0] != 1 ? 's' : '');
 															},
 															$times
 														)
