@@ -268,9 +268,13 @@ div.warning:before {
 /* {{{ Syntax highlighting */
 .example-contents > [class$="code"],
 .example-contents.screen {
-  background-color: #fff;
+  background-color: #f2f2f2;
   border-color: #d6d6d6 !important;
   border-top-color: #cdcdcd !important;
+}
+.refsect1 .example-contents > [class$="code"],
+.refsect1 .example-contents.screen {
+  background-color: #fff;
 }
 .refsect1 .dc-description,
 .docs .sect1 .dc-description {
