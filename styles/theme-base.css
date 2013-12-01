@@ -3028,20 +3028,17 @@ div.tip p {
     padding: .25em .5em;
 }
 
-.docs .doctable {
+.doctable {
     width: 100%;
     margin:.75em 0;
 }
-
-.docs .doctable thead tr {
+.doctable thead tr {
     border:1px solid;
 }
-.docs .doctable th {
-    text-align: center;
+.doctable tr {
+    border:1px solid;
 }
-.docs .doctable tr {
-    border-bottom: 1px solid;
-}
+.
 /* }}} */
 
 /* {{{ lists */
