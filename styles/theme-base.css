@@ -645,6 +645,9 @@ textarea {
 }
 .navbar-fixed-top {
   top: 0;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
 }
 .navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
