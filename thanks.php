@@ -11,7 +11,7 @@ site_header("Thanks", array("current" => "community"));
 <li>
  <a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a>
  provides DNS services for the PHP domains.
-</li<
+</li>
 
 <li>
  <a href="http://www.directi.com/">Directi</a> provides

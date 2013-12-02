@@ -229,7 +229,7 @@ hr {
 
 #usernotes h3.title {
     border-bottom: 0.166666667em solid #669;
-    margin-bottom: -0.166666667.em;
+    margin-bottom: -0.166666667em;
     line-height:2.666666667;
     color:#262626;
 }
@@ -563,7 +563,7 @@ div.elephpants div.images {
 div.elephpants img {
     width: 75px;
     height: 75px;
-    opacity: 0.5
+    opacity: 0.5;
     -moz-opacity: 0.5;
     -webkit-opacity: 0.5;
     transition: all 0.25s ease-in-out;
