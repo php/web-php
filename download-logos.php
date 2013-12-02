@@ -85,7 +85,7 @@ function random_bgcolor($min, $max)
    <ul>
     <li>scaleable vector image</li>
     <li>
-     <a href="/images/logos/php-logo.eps">EPS format</a> | 
+     <a href="/images/logos/php-logo.svg">SVG format</a> | <a href="/images/logos/php-logo.eps">EPS format</a> | 
      <a href="/images/logos/php-logo.ai">AI (Adobe Illustrator) format</a>
     </li>
    </ul>

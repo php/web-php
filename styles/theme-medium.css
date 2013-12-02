@@ -83,7 +83,7 @@ h1.refname {
 .refentry .refpurpose {
   background-color:#F0F0F0;
   border-top-color: #737373;
-  border-bottom-color:1px solid #D6D6D6;
+  border-bottom:1px solid #D6D6D6;
   border-radius:0 0 2px 2px;
   box-shadow:
     inset 2px 0 2px -2px #D6D6D6,
@@ -420,7 +420,7 @@ div.elephpants div.images {
   background-color: #262626;
 }
 div.elephpants img {
-  opacity: 0.5
+  opacity: 0.5;
   -moz-opacity: 0.5;
   -webkit-opacity: 0.5;
   transition: all 0.25s ease-in-out;
