@@ -1,4 +1,9 @@
 <FilesMatch "\.(inc|sql)$">
-  Order allow,deny
-  Deny from all
+    Order allow,deny
+    Deny from all
 </FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^php.net [NC]
+    RewriteRule ^(.*)$ http://www.php.net/$1 [R=301,L]
+</IfModule>
