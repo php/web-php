@@ -2335,14 +2335,13 @@ pre.info {
     border: 1px solid;
 }
 
+/**
 #layout .refentry div[id], #layout .sect1 div[id], #usernotes div.note[id]
 {
   padding-top: 52px !important;
   margin-top: -52px !important;
 }
 
-/*#layout .refsect1[id]:before,*/
-/**
 #layout *[id]:target:before {
     display:block;
     content:" ";
