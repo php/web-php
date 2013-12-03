@@ -14,6 +14,11 @@ site_header("Thanks", array("current" => "community"));
 </li>
 
 <li>
+ <a href="https://myracloud.com/de/ddos-schutz/">DDoS protection by myracloud</a>, along with hosting
+ www.php.net, git.php.net and svn.php.net for us.
+</li>
+
+<li>
  <a href="http://www.directi.com/">Directi</a> provides
  IP address to country lookup information.
 </li>
@@ -41,11 +46,6 @@ site_header("Thanks", array("current" => "community"));
 <li>
  <a href="http://www.osuosl.org/">OSU Open Source Lab</a> provides a server and
  bandwidth for various php.net services.
-</li>
-
-<li>
- <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provides bandwidth and 
- hardware for www.php.net and git.php.net.
 </li>
 
 <li>
@@ -88,6 +88,12 @@ site_header("Thanks", array("current" => "community"));
 <li>
  Special 'legacy' thanks go to the people and companies who have helped
  us in our past.
+</li>
+
+<li>
+ <a href="http://www.yahoo.com/">Yahoo! Inc.</a> provided us with many many
+ terabytes of bandwidth and hosting for www.php.net, and svn.php.net and git.php.net
+ for many years.
 </li>
 
 <li>
