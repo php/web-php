@@ -19,5 +19,6 @@ site_header("News Archive - 2013");
 
 print_news($NEWS_ENTRIES, array("conferences", "cfp", "frontpage"), 50, 2013);
 
-site_footer();
+/* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
+site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
 

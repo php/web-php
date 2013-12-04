@@ -796,4 +796,4 @@ site_header("News Archive - 2003", array("generate_modified" => true));
  of beta-quality.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

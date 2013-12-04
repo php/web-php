@@ -1067,7 +1067,4 @@ site_header("News Archive - 2012");
     </div>
 </div>
 
-<?php
-
-site_footer();
-
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

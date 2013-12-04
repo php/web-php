@@ -674,6 +674,5 @@ This year, the conference once again promises to be an excellent event for PHP d
 </p>
 </div>
 </div>
-<?php
-site_footer();
 
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

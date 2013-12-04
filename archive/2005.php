@@ -537,4 +537,4 @@ For changes in PHP 4.4.0 since PHP 4.3.11, please consult the
  Congratulations to us all!
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

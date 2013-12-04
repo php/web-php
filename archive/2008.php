@@ -952,7 +952,4 @@ releases to address security issues could be made until 2008-08-08.
     </div>
 </div>
 
-<?php
-
-site_footer();
-
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

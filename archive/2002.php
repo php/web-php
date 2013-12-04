@@ -602,4 +602,4 @@ site_header("News Archive - 2002", array("generate_modified" => true));
  <li><a href="http://www.phpconference.de/2001/images/PHP_Konferenz/">Conference photos</a></li>
 </ul>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

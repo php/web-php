@@ -315,4 +315,4 @@ site_header("News Archive - 2001", array("generate_modified" => true));
  were discovered in PHP 4.0.4.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

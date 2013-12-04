@@ -964,8 +964,7 @@ site_header("News Archive - 2009");
   
     </div> 
 </div>
-<?php
 
-/* %s/<a href="\(.*\)"><img src="\/images\/news\/\(.*\)" alt="\(.*\)" width.*><\/a>/<?php news_image("\1", "\2", "\3"); ?>/g */
-site_footer();
+
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
 

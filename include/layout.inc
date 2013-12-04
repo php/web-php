@@ -420,23 +420,14 @@ function news_archive_sidebar()
 {
     global $SIDEBAR_DATA;
     $SIDEBAR_DATA = '
-<h3>Latest news</h3>
+<h3 class="announcements">Archives by year</h3>
 
-<p>
- For the latest news, <a href="/index.php" rel="home">check the homepage</a>,
- or <a href="/feed.atom">our Atom feed</a>.
-</p>
-
-<h3>Archives by year</h3>
-
-<ul class="toc">
 ';
     for ($i = date("Y"); $i >= 1998; $i--) {
         $pagename = "archive/$i.php";
-        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? ' class="active"' : '');
-        $SIDEBAR_DATA .= "<li{$classname}><a href=\"/{$pagename}\">{$i}</a></li>\n";
+        $classname = ($pagename == $_SERVER['BASE_PAGE'] ? " active" : '');
+        $SIDEBAR_DATA .= "<p class='panel{$classname}'><a href=\"/{$pagename}\">{$i}</a></p>\n";
     }
-    $SIDEBAR_DATA .= '</ul>';
 }
 
 // Print news

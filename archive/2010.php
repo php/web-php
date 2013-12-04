@@ -765,7 +765,5 @@ class Bar {<br/>
   
     </div> 
 </div>
-<?php
 
-site_footer();
-
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

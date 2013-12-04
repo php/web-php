@@ -655,4 +655,4 @@ site_header("News Archive - 2004", array("generate_modified" => true));
  one of a kind conference!
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));

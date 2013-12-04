@@ -467,4 +467,4 @@ Further details about this release can be found in the <a href="/release_5_1_2.p
 and the full list of changes is available in the <a href="/ChangeLog-5.php#5.1.2">PHP 5 ChangeLog</a>.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('elephpants' => true, 'sidebar' => $SIDEBAR_DATA));
