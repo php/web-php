@@ -50,7 +50,7 @@ if (isset($shortname) && $shortname) {
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?f=styles/<?php echo $filename?>&t=<?php echo $modified?>" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?f=styles/<?php echo $filename?>&amp;t=<?php echo $modified?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
@@ -73,7 +73,7 @@ if (isset($shortname) && $shortname) {
  $jsfiles = array('ext/modernizr.js');
  foreach ($jsfiles as $filename) {
    $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="' . $MYSITE . 'cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
+   echo '<script type="text/javascript" src="' . $MYSITE . 'cached.php?f=/js/'.$filename.'&amp;t='.@filemtime($path).'"></script>';
  }
 ?>
 </head>

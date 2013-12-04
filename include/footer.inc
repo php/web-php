@@ -62,15 +62,15 @@
 
  <!-- External and third party libraries. -->
  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
- <script type="text/javascript" src="/cached.php?f=/js/ext/hogan-2.0.0.min.js&t=2"></script>
- <script type="text/javascript" src="/cached.php?f=/js/ext/typeahead.min.js&t=2"></script>
+ <script type="text/javascript" src="/cached.php?f=/js/ext/hogan-2.0.0.min.js&amp;t=2"></script>
+ <script type="text/javascript" src="/cached.php?f=/js/ext/typeahead.min.js&amp;t=2"></script>
 
  <?php
  // Nick bjori's last modified code for our own JS files.
  $jsfiles = array('search.js', 'common.js');
  foreach ($jsfiles as $filename) {
    $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
+   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&amp;t='.@filemtime($path).'"></script>', PHP_EOL;
  }
 
  include 'uservoice.inc';
