@@ -1,11 +1,4 @@
 <?php // vim: et
-/*
-   If you're reading this, it isn't because you've found a security hole.
-   this is an open source website. read and learn!
-*/
-
-/* ------------------------------------------------------------------------- */
-
 // Get the modification date of this PHP file
 $timestamps = array(@getlastmod());
 
@@ -14,13 +7,11 @@ $timestamps = array(@getlastmod());
    included files. Please touch it if you modify any
    other include file (and the modification affects
    the display of the index page). The cost of stat'ing
-   them all is prohibitive. Also note the file path,
-   we aren't using the include path here.
+   them all is prohibitive. 
 */
 $timestamps[] = @filemtime("include/prepend.inc");
 
-// Calendar, conference teasers & latest releaes box are the only "dynamic" features on this page
-$timestamps[] = @filemtime("include/pregen-events.inc");
+// These are the only dynamic parts of the frontpage
 $timestamps[] = @filemtime("include/pregen-confs.inc");
 $timestamps[] = @filemtime("include/pregen-news.inc");
 $timestamps[] = @filemtime("include/version.inc");
@@ -44,7 +35,6 @@ else {
 
 $_SERVER['BASE_PAGE'] = 'index.php';
 include_once 'include/prepend.inc';
-include_once 'include/pregen-events.inc';
 include_once 'include/pregen-confs.inc';
 include_once 'include/pregen-news.inc';
 include_once 'include/version.inc';
