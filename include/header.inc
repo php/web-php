@@ -65,9 +65,7 @@ if (isset($shortname) && $shortname) {
  <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js"></script>
  <![endif]-->
 
-<?php if (!empty($_SERVER["BASE_HREF"])): ?>
- <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
-<?php endif ?>
+ <base href="http://<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["SCRIPT_NAME"] ?>">
 
 <?php
  $jsfiles = array('ext/modernizr.js');
