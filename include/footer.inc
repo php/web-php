@@ -42,6 +42,21 @@
     }
     ?>
 
+ <!-- External and third party libraries. -->
+ <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script type="text/javascript" src="/cached.php?f=/js/ext/hogan-2.0.0.min.js&amp;t=2"></script>
+ <script type="text/javascript" src="/cached.php?f=/js/ext/typeahead.min.js&amp;t=2"></script>
+
+ <?php
+ // Nick bjori's last modified code for our own JS files.
+ $jsfiles = array('search.js', 'common.js');
+ foreach ($jsfiles as $filename) {
+   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
+   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&amp;t='.@filemtime($path).'"></script>', PHP_EOL;
+ }
+ ?>
+
+<!-- GoSquared stats -->
 <script type="text/javascript">
   var GoSquared = {};
   GoSquared.acct = "GSN-094556-T";
@@ -60,21 +75,24 @@
   })(window);
 </script>
 
- <!-- External and third party libraries. -->
- <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
- <script type="text/javascript" src="/cached.php?f=/js/ext/hogan-2.0.0.min.js&amp;t=2"></script>
- <script type="text/javascript" src="/cached.php?f=/js/ext/typeahead.min.js&amp;t=2"></script>
+<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/zDo1PI3X0lzE9SaQxC3LQ.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
 
- <?php
- // Nick bjori's last modified code for our own JS files.
- $jsfiles = array('search.js', 'common.js');
- foreach ($jsfiles as $filename) {
-   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&amp;t='.@filemtime($path).'"></script>', PHP_EOL;
- }
-
- include 'uservoice.inc';
- ?>
+<!-- A tab to launch the Classic Widget -->
+<script>
+UserVoice = window.UserVoice || [];
+UserVoice.push(['showTab', 'classic_widget', {
+  mode: 'feedback',
+  primary_color: '#9999cc',
+  link_color: '#3f438d',
+  forum_id: 211823,
+  feedback_tab_name: 'Give feedback',
+  tab_label: 'Feedback & Ideas',
+  tab_color: '#666699',
+  tab_position: 'middle-right',
+  tab_inverted: false
+}]);
+</script>
 
 </body>
 </html>
