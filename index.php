@@ -83,6 +83,7 @@ foreach($frontpage as $entry) {
 </div>
 NEWSENTRY;
 }
+$content .= '<div align="right"><p><a href="/archive/">Older News Entries</a></p></div>';
 $content .= "</div>";
 
 $intro = <<<EOF
