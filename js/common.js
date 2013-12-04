@@ -291,14 +291,21 @@ $(document).ready(function() {
 /* {{{ Negative user notes fade-out */
   if (!!document.getElementById('usernotes'))
   {
-    $('.note .tally:contains("-")').each(function(){
+    // Default: -5+ votes will have opacity: 0.1
+    // Scale: 0-10
+    var settings = {minFade: 5, maxFade: 9}; 
+    $('.note .tally:contains("-")').each(function()
+    {
       var id = this.id.replace('V', '');
       
-      var v = this.innerHTML.toInt();
-      v += 6;
-      v = v <= 2 ? 2 : v;
-      
-      $('#' + id).css('opacity', '0.' + v);
+      // get negative votes value and make it positive
+      var v = this.innerHTML.toInt() * -1;
+      // determine fade level based on votes (step=1)
+      var f = (settings.minFade - 1) + v;
+      // set back to maxFade if level is above max
+      f = f > settings.maxFade ? settings.maxFade : f;
+
+      $('#' + id).css('opacity', '0.' + (10 - f));
     });
   }
 /* }}} */
