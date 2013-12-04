@@ -22,130 +22,6 @@ $PGI = array(); $SIDEBAR_DATA = '';
 
 
 // =============================================================================
-// Manual page navigation parts
-// =============================================================================
-
-// Append all the table of contents data to $SIDEBAR_DATA
-function manual_sidebar()
-{
-    global $PGI, $SIDEBAR_DATA;
-
-    // Start sidebar with its <div>
-    $BAR = "<!--UdmComment-->\n<ul class=\"toc\">\n";
-
-    // Link to manual home
-    $BAR .= ' <li class="header home"><a href="' . $PGI['home'][0] . '">' .
-            $PGI['home'][1] . "</a></li>\n";
-
-    // Link to parents
-    if (isset($PGI['parents']) && ($c = count($PGI['parents'])-1) > 0) {
-        // The root parent is the "PHP Manual"
-        for($i=$c-1; $i>=0; $i--) {
-            $BAR .= ' <li class="header up"><a href="' . $PGI['parents'][$i][0] . '">' .
-                $PGI['parents'][$i][1] . "</a></li>\n";
-        }
-    }
-
-    // Link to one page up if titles does not match
-    if (($PGI['home'][1] !== $PGI['up'][1]) && $PGI['up'][1]) {
-        $BAR .= ' <li class="header up"><a href="' . $PGI['up'][0] . '">' .
-                $PGI['up'][1] . "</a></li>\n";
-    }
-
-    // Print out one link for all siblings of this page
-    foreach($PGI['toc'] as $tocitem) {
-
-        // Get URL and title component
-        list($url, $title) = $tocitem;
-
-        // Get the proper classname to use for this <div>
-        $liclass = ($url == $PGI['this'][0]) ? ' class="active"' : "";
-
-        // There are some very long function names, which
-        // make the TOC too wide, so enable the browser to wrap them
-        // eg: xml_set_processing_instruction_handler
-    //     DOMElement->getElementsByTagNameNS()
-        if (preg_match("!^[a-zA-Z0-9_>():&;-]+$!", $title)) {
-            $wrap = '<span class="w"> </span>';
-            $title = str_replace(array('_', '->', '::', '-&gt;'), array("_$wrap", "->$wrap", "::$wrap", "-&gt;$wrap"), $title);
-        }
-
-        // Print out the TOC item using a <div>
-        $BAR .= " <li{$liclass}>" .
-                make_link($url, $title) . "</li>\n";
-    }
-
-    // Put navigation content into sidebar, end <div>
-    $SIDEBAR_DATA = "$BAR</ul><!--/UdmComment-->\n";
-}
-
-function manual_navbar($location = "top")
-{
-    global $PGI, $LANG, $LANGUAGES, $INACTIVE_ONLINE_LANGUAGES, $ACTIVE_ONLINE_LANGUAGES;
-
-    // Start navbar with
-    echo "<!--UdmComment-->\n<div class=\"manualnavbar manualnavbar_$location\">\n <span class=\"next\">\n";
-    if (isset($PGI['next']) && isset($PGI['next'][1])) {
-        echo "  <a href=\"{$PGI['next'][0]}\">" .
-             $PGI['next'][1] .
-             make_image('caret-r.gif', '&gt;') .
-             "</a>\n";
-    }
-    echo " </span>\n <span class=\"prev\">\n";
-    if (isset($PGI['prev']) && isset($PGI['prev'][1])) {
-        echo "  <a href=\"{$PGI['prev'][0]}\">" .
-             make_image('caret-l.gif', '&lt;') .
-             $PGI['prev'][1] . "</a>\n";
-    } else {
-        echo "  &nbsp;\n";
-    }
-    echo " </span>\n <hr />\n";
-
-
-    // Quick access to filename
-    $filename = $PGI['this'][0];
-
-    // Provide last updated and online editor information on this page
-    $elink = '[<a href="https://edit.php.net/?project=PHP&amp;perm=' . $PGI['head'][1] . '/' . $filename. '">edit</a>]';
-    echo " <span class=\"lastupdated\">{$elink} Last updated: {$PGI['lastmod']}</span>\n";
-
-    // Print out language switch on top of manual pages
-    echo " <div class=\"langchooser\">\n";
-    if ($location != 'bottom') {
-
-        $links = array();
-
-        // Disable all languages without online content
-        // Add a dropdown item for all languages left
-        foreach ($ACTIVE_ONLINE_LANGUAGES as $code => $name) {
-            if (!preg_match("!/$code/!", $_SERVER['BASE_PAGE'])
-                // && file_exists($_SERVER['DOCUMENT_ROOT'] . "/$code/$filename")
-               ) {
-                $links[] = array("$code/$filename", $name);
-            }
-        }
-        $links[] = array('help-translate.php', 'Other');
-
-        // Print out the form with all the options
-        echo '  <form action="/manual/change.php" method="get">' . "\n" .
-             '   <p>view this page in </p><fieldset><select name="page">'. "\n";
-        foreach ($links as $link) {
-            echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
-        }
-        echo "   </select>\n" .
-             '   <input type="image" src="' . $_SERVER['MYSITE'] .
-             'images/small_submit.gif" id="changeLangImage" ' .
-             'alt="Change language" />' . "\n  </fieldset></form>\n";
-
-    } else {
-        echo "  &nbsp;\n";
-    }
-    echo " </div>\n";
-
-    echo "</div>\n<!--/UdmComment-->\n\n";
-}
-
-// =============================================================================
 // User note display functions
 // =============================================================================
 
@@ -326,8 +202,6 @@ VOTEDIV;
 USER_NOTE_TEXT;
 
 }
-
-/* vim: set et ts=4 sw=4: */
 
 // Set up variables important for this page
 // including HTTP header information
@@ -516,4 +390,6 @@ function manual_notes_sort($a, $b)
 		}
 	}
 }
+
+/* vim: set et ts=4 sw=4: */
 
