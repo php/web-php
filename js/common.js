@@ -287,7 +287,22 @@ $(document).ready(function() {
         language: getLanguage(),
         limit: 3
     });
-    
+
+/* {{{ Negative user notes fade-out */
+  if (!!document.getElementById('usernotes'))
+  {
+    $('.note .tally:contains("-")').each(function(){
+      var id = this.id.replace('V', '');
+      
+      var v = this.innerHTML.toInt();
+      v += 6;
+      v = v <= 2 ? 2 : v;
+      
+      $('#' + id).css('opacity', '0.' + v);
+    });
+  }
+/* }}} */
+
 });
 
 /**
