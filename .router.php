@@ -8,6 +8,8 @@ $len = strlen($_SERVER["DOCUMENT_ROOT"]);
 
 if (strncmp($_SERVER["DOCUMENT_ROOT"], $afilename, $len) == 0) {
     if (file_exists($afilename)) {
+        /* This could be an image or whatever, so don't try to compress it */
+        ini_set("zlib.output_compression", 0);
         return false;
     }
 }
