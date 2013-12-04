@@ -32,7 +32,7 @@ if (isset($shortname) && $shortname) {
 
   <title>PHP: <?php echo $title ?></title>
 
- <link rel="shortcut icon" href="<?php echo $STATIC_ROOT ?>favicon.ico">
+ <link rel="shortcut icon" href="<?php echo $MYSITE ?>favicon.ico">
  <link rel="search" type="application/opensearchdescription+xml" href="http://php.net/phpnetimprovedsearch.src" title="Add PHP.net search">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>releases/feed.php" title="PHP Release feed">
  <link rel="alternate" type="application/atom+xml" href="<?php echo $MYSITE ?>feed.atom" title="PHP: Hypertext Preprocessor">
@@ -50,19 +50,19 @@ if (isset($shortname) && $shortname) {
 
  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic|Source+Code+Pro&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <?php foreach($CSS as $filename => $modified): ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>cached.php?f=styles/<?php echo $filename?>&t=<?php echo $modified?>" media="screen">
+<link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>cached.php?f=styles/<?php echo $filename?>&t=<?php echo $modified?>" media="screen">
 <?php endforeach ?>
 
  <!--[if lte IE 7]>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie7.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie7.css" media="screen" />
  <![endif]-->
 
  <!--[if lte IE 9]>
- <link rel="stylesheet" type="text/css" href="<?php echo $STATIC_ROOT ?>styles/workarounds.ie9.css" media="screen" />
+ <link rel="stylesheet" type="text/css" href="<?php echo $MYSITE ?>styles/workarounds.ie9.css" media="screen" />
  <![endif]-->
 
  <!--[if IE]>
- <script type="text/javascript" src="<?php echo $STATIC_ROOT ?>js/ext/html5.js"></script>
+ <script type="text/javascript" src="<?php echo $MYSITE ?>js/ext/html5.js"></script>
  <![endif]-->
 
 <?php if (!empty($_SERVER["BASE_HREF"])): ?>
@@ -73,7 +73,7 @@ if (isset($shortname) && $shortname) {
  $jsfiles = array('ext/modernizr.js');
  foreach ($jsfiles as $filename) {
    $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
+   echo '<script type="text/javascript" src="' . $MYSITE . 'cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
  }
 ?>
 </head>

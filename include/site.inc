@@ -237,7 +237,7 @@ function print_mirror_box($countryname, $countrycode, $mirrors, $file = null, $d
                 <img alt="<?php echo $countrycode; ?>"
                      height="25"
                      width="45"
-                     src="<?php echo $_SERVER['STATIC_ROOT'] . '/images/flags/beta/' . strtolower($countrycode) . '.png'; ?>">
+                     src="<?php echo $_SERVER['MYSITE'] . '/images/flags/beta/' . strtolower($countrycode) . '.png'; ?>">
             </div>
             <?php foreach($mirrors as $mirror): ?>
 <?php

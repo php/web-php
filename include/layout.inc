@@ -1,14 +1,8 @@
 <?php
 /* $Id$ */
 
-// Set the static content root differently on php.net
-if ($MYSITE == "http://www.php.net/" || $MYSITE == 'http://php.net/') {
-    $_SERVER['STATIC_ROOT'] = 'http://static.php.net/www.php.net';
-} elseif ($MYSITE == 'https://www.php.net/' || $MYSITE == 'https://php.net/') {
-    $_SERVER['STATIC_ROOT'] = 'https://static.php.net/www.php.net';
-} elseif (!isset($_SERVER['STATIC_ROOT'])) {
-    $_SERVER['STATIC_ROOT'] = "";
-}
+$_SERVER['STATIC_ROOT'] = $MYSITE;
+$_SERVER['MYSITE'] = $MYSITE;
 
 // Use class names instead of colors
 ini_set('highlight.comment', 'comment');
@@ -88,7 +82,7 @@ function make_image($file, $alt = FALSE, $align = FALSE, $extras = FALSE,
                     $dir = '/images', $border = 0, $addsize = TRUE)
 {
     // If no / was provided at the start of $dir, add it
-    $webdir = $_SERVER['STATIC_ROOT'] . ($dir{0} == '/' ? '' : '/') . $dir;
+    $webdir = $_SERVER['MYSITE'] . ($dir{0} == '/' ? '' : '/') . $dir;
 
     // Get width and height values if possible
     if ($addsize && ($size = @getimagesize($_SERVER['DOCUMENT_ROOT'] . "$dir/$file"))) {
@@ -544,20 +538,11 @@ function site_header($title = '', $config = array())
         $shorturl = "http://php.net/" . $shortname;
     }
 
-    // For static content
-    // FIXME: How does static.php.net work? Will it get the /js/ folders?
-    if (false && ($MYSITE == "http://www.php.net/" || $MYSITE == 'http://php.net/')) {
-        $STATIC_ROOT = "http://static.php.net/www.php.net/";
-    } elseif (false && !empty($_SERVER["STATIC_ROOT"])) {
-        $STATIC_ROOT = $_SERVER["STATIC_ROOT"];
-    } else {
-        $STATIC_ROOT = "/";
-    }
-
     require dirname(__FILE__) ."/header.inc";
 }
 function site_footer($config = array())
 {
+    global $MYSITE;
     require dirname(__FILE__) . "/footer.inc";
 }
 

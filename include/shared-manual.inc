@@ -133,8 +133,8 @@ function manual_navbar($location = "top")
             echo '    <option value="' . $link[0] . '">' . $link[1] . "</option>\n";
         }
         echo "   </select>\n" .
-             '   <input type="image" src="' . $_SERVER['STATIC_ROOT'] .
-             '/images/small_submit.gif" id="changeLangImage" ' .
+             '   <input type="image" src="' . $_SERVER['MYSITE'] .
+             'images/small_submit.gif" id="changeLangImage" ' .
              'alt="Change language" />' . "\n  </fieldset></form>\n";
 
     } else {
