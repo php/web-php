@@ -62,13 +62,6 @@ if (isset($shortname) && $shortname) {
  <base href="<?php echo $_SERVER["BASE_HREF"] ?>">
 <?php endif ?>
 
-<?php
- $jsfiles = array('ext/modernizr.js');
- foreach ($jsfiles as $filename) {
-   $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="' . $MYSITE . 'cached.php?f=/js/'.$filename.'&amp;t='.@filemtime($path).'"></script>';
- }
-?>
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
