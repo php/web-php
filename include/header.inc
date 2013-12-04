@@ -10,9 +10,6 @@ foreach($cssfiles as $filename) {
 }
 
 
-// Version information for the mega drop down.
-include $_SERVER['DOCUMENT_ROOT'] . '/include/version.inc';
-
 if (isset($shortname) && $shortname) {
     header("Link: <$shorturl>; rel=shorturl");
 }
