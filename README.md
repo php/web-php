@@ -9,7 +9,7 @@ To setup a local mirror of the website:
 	$ php -S localhost:8080 .router.php
 
 
-This repo does include most (generated) files that are required for normal
+This repo includes most (generated) files that are required for normal
 operation of this website, such as
 
  - News & events data
