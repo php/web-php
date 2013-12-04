@@ -2,7 +2,6 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'conferences/index.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
-include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-events.inc';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/pregen-news.inc';
 
 
