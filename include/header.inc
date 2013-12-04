@@ -73,7 +73,7 @@ if (isset($shortname) && $shortname) {
  $jsfiles = array('ext/modernizr.js');
  foreach ($jsfiles as $filename) {
    $path = dirname(dirname(__FILE__)).'/js/'.$filename;
-   echo '<script type="text/javascript" src="cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
+   echo '<script type="text/javascript" src="/cached.php?f=/js/'.$filename.'&t='.@filemtime($path).'"></script>';
  }
 ?>
 </head>
