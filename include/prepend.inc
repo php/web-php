@@ -12,6 +12,24 @@ ini_set("zlib.output_compression", 1);
 header("Content-language: en");
 header("Content-type: text/html; charset=utf-8");
 
+/* Fix Silly Same Origin Policies */
+if (isset($_SERVER["HTTP_ORIGIN"])) {
+    $host = parse_url($_SERVER["HTTP_ORIGIN"]);
+    if (strncmp(strrev($host["host"]), strrev("php.net"), strlen("php.net")) != 0) {
+        exit(10);
+    }
+    if (isset($host["port"])) {
+        $hostname = $host["host"] . ":" . $host["port"];
+    }
+
+    header("Access-Control-Allow-Origin: http://$hostname");
+    if (isset($_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"])) {
+        $headers = $_SERVER["HTTP_ACCESS_CONTROL_REQUEST_HEADERS"];
+        $headers = str_replace(array("\r", "\n", "\0"), "", $headers);
+        header("Access-Control-Allow-Headers: $headers");
+    }
+}
+
 // Be 100% sure the timezone is set
 if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
     date_default_timezone_set("UTC");

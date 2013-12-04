@@ -1,5 +1,5 @@
 <?php
-
+include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 /*
 
  Simple script to serve elephpant images in json format.
