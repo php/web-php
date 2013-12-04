@@ -1,4 +1,6 @@
 <?php // -*- C++ -*-
+// Compress all pages, if ext/zlib is available on the mirror
+ini_set("zlib.output_compression", 1);
 
 // $Id$
 

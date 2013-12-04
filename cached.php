@@ -37,12 +37,6 @@ if (substr($abs, -3) == ".js" || substr($abs, -5) == ".json") {
     header("Content-Type: text/css");
 }
 
-if (function_exists("ob_gzhandler")) {
-    ob_start("ob_gzhandler");
-    readfile($abs);
-    ob_end_flush();
-} else {
-    readfile($abs);
-}
+readfile($abs);
 
 
