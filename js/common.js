@@ -285,16 +285,20 @@ $(document).ready(function() {
             return (value - this.domain.min) * multiplier + this.range.min;
         };
     };
-    $(usernotes).find('.note .tally:contains("-")').each(function() {
-      var id = this.id.replace('V', '');
-      var v = mapper.normalize(this.innerHTML.toInt());
-      var onNoteOver = function() {
-          $(this).fadeTo('fast', 1);
-      };
-      var onNoteOut = function() {
-          $(this).fadeTo('normal', v);
-      };
-      $('#' + id).css('opacity', v).hover(onNoteOver, onNoteOut);
+    $(usernotes).on('mouseenter mouseleave', '.note',  function(event) {
+      var opacity = 1;
+      var $note = $(this);
+      if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) { 
+        opacity = $note.data('opacity');
+      }
+      $note.fadeTo('fast', opacity);
+    }).find('.note').each(function() {
+      var $note = $(this);
+      $note.find('.tally:contains("-")').each(function(){
+        var id = this.id.replace('V', '');
+        var v = mapper.normalize(this.innerHTML.toInt());
+        $note.fadeTo(0, v).data("opacity", v);
+      });
     });
   }
 /* }}} */
