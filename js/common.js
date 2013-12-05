@@ -288,7 +288,13 @@ $(document).ready(function() {
     $(usernotes).find('.note .tally:contains("-")').each(function() {
       var id = this.id.replace('V', '');
       var v = mapper.normalize(this.innerHTML.toInt());
-      $('#' + id).css('opacity', v);
+      var onNoteOver = function() {
+          $(this).fadeTo('fast', 1);
+      };
+      var onNoteOut = function() {
+          $(this).fadeTo('normal', v);
+      };
+      $('#' + id).css('opacity', v).hover(onNoteOver, onNoteOut);
     });
   }
 /* }}} */
