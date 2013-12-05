@@ -272,7 +272,7 @@ $(document).ready(function() {
         };
         this.range = {
             "max": .75,
-            "min": .25
+            "min": .35
         };
   
         // This is a generic normalizaion algorithm:
