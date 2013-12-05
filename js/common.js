@@ -263,23 +263,32 @@ $(document).ready(function() {
     });
 
 /* {{{ Negative user notes fade-out */
-  if (!!document.getElementById('usernotes'))
-  {
-    // Default: -5+ votes will have opacity: 0.1
-    // Scale: 0-10
-    var settings = {minFade: 5, maxFade: 9}; 
-    $('.note .tally:contains("-")').each(function()
-    {
+  var usernotes = document.getElementById('usernotes');
+  if (usernotes != null) {
+    var mapper = new function() {
+        this.domain = {
+            "max": -1,
+            "min": -5
+        };
+        this.range = {
+            "max": .75,
+            "min": .25
+        };
+  
+        // This is a generic normalizaion algorithm:
+        //   range.min + (value - domain.min)(range.max - range.min)/(domain.max-domain.min)
+        // Note that some of this computation is not dependent on the input value, so we 
+        // compute it at object creation time.
+        var multiplier = (this.range.max - this.range.min)/(this.domain.max - this.domain.min);
+        this.normalize = function(value) {
+            value = Math.max(value, this.domain.min);
+            return (value - this.domain.min) * multiplier + this.range.min;
+        };
+    };
+    $(usernotes).find('.note .tally:contains("-")').each(function() {
       var id = this.id.replace('V', '');
-      
-      // get negative votes value and make it positive
-      var v = this.innerHTML.toInt() * -1;
-      // determine fade level based on votes (step=1)
-      var f = (settings.minFade - 1) + v;
-      // set back to maxFade if level is above max
-      f = f > settings.maxFade ? settings.maxFade : f;
-
-      $('#' + id).css('opacity', '0.' + (10 - f));
+      var v = mapper.normalize(this.innerHTML.toInt());
+      $('#' + id).css('opacity', v);
     });
   }
 /* }}} */
