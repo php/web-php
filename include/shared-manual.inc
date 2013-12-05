@@ -140,12 +140,12 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
 
     // Vote User Notes Div
     if ($voteOption) {
-	    list($redir_filename) = $GLOBALS['PGI']['this'];
-	    if (substr($redir_filename, -4) == '.php') {
-	        $redir_filename = substr($redir_filename, 0, -4);
-	    }
-	    $rredir_filename = urlencode($redir_filename);
-	    $votediv = <<<VOTEDIV
+        list($redir_filename) = $GLOBALS['PGI']['this'];
+        if (substr($redir_filename, -4) == '.php') {
+            $redir_filename = substr($redir_filename, 0, -4);
+        }
+        $rredir_filename = urlencode($redir_filename);
+        $votediv = <<<VOTEDIV
   <div class="votes">
     <div id="Vu{$id}">
     <a href="/manual/vote-note.php?id={$id}&amp;page={$rredir_filename}&amp;vote=up" title="Vote up!" class="usernotes-voteu">up</a>
@@ -158,9 +158,9 @@ function manual_note_display($date, $name, $text, $id, $votes = array('up'=>0,'d
     </div>
   </div>
 VOTEDIV;
-	} else {
-		$votediv = null;
-	}
+    } else {
+        $votediv = null;
+    }
 
     // If the viewer is logged in, show admin options
     if (isset($_COOKIE['IS_DEV']) && $id) {
@@ -292,18 +292,18 @@ function manual_language_chooser($currentlang, $currentpage) {
 
     // Print out the form with all the options
     $rt = '<form action="/manual/change.php" method="get" id="changelang" name="changelang">'.
-    	  '<fieldset>'.
-    	  '
+          '<fieldset>'.
+          '
           <p>Change language: 
           <select onchange="document.changelang.submit()" name="page" id="changelang-langs">';
                 foreach ($links as $link) {
                     $rt.= "<option value='{$link[0]}' " .($link[2] == $currentlang ? "selected" : ""). ">{$link[1]}</option>\n";
                 }
-    	$rt.= '<option value="help-translate.php">Other</option>'.
-	      '</select></p>'.
+        $rt.= '<option value="help-translate.php">Other</option>'.
+          '</select></p>'.
               '</fieldset>'.
               '</form>';
-	return $rt;
+    return $rt;
 }
 
 function manual_header(){}
@@ -340,55 +340,55 @@ function relTime(DateTime $date) {
 function manual_notes_sort($a, $b)
 {
     if ($a['votes']['up'] + $a['votes']['down'] < 1) {
-      $c = 1;
+        $c = 1;
     } else {
-      $c = $a['votes']['up'] + $a['votes']['down'];
+        $c = $a['votes']['up'] + $a['votes']['down'];
     }
     if ($b['votes']['up'] + $b['votes']['down'] < 1) {
-      $d = 1;
+        $d = 1;
     } else {
-      $d = $b['votes']['up'] + $b['votes']['down'];
+        $d = $b['votes']['up'] + $b['votes']['down'];
     }
-	$voteA = $a['votes']['up'] / $c;
-	$voteB = $b['votes']['up'] / $d;
-	$rateA = $a['votes']['up'] - $a['votes']['down'];
-	$rateB = $b['votes']['up'] - $b['votes']['down'];
-	// Lower voted notes go to the bottom regardless of date
-	if ($voteA > $voteB) {
-		// Exception to the rule for today's notes
-		if ($b['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteB > -1) return 1;
-		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
-		if ($voteB === 0 && $d === 1 && $voteA <= 0.30 && $c >= 4) return 1;
-		return -1;
-	}
-	// Higher voted notes go to the top regardless of date
-	elseif ($voteA < $voteB) {
-		// Exception to the rule for today's notes
-		if ($a['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteA > -1) return -1;
-		// Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
-		if ($voteA === 0 && $c === 1 && $voteB <= 0.30 && $d >= 4) return -1;
-		return 1;
-	}
-	// Votes of equal amounts are sorted based on the overall rating and in descending order by date
-	else {
-		if ($rateA > $rateB) {
-		  return -1;
-		}
-		elseif ($rateA < $rateB) {
-		  return 1;
-		}
-		else {
-			if ($a['xwhen'] > $b['xwhen']) {
-				return -1;
-			}
-			elseif ($a['xwhen'] < $b['xwhen']) {
-				return 1;
-			}
-			else {
-				return 0;
-			}
-		}
-	}
+    $voteA = $a['votes']['up'] / $c;
+    $voteB = $b['votes']['up'] / $d;
+    $rateA = $a['votes']['up'] - $a['votes']['down'];
+    $rateB = $b['votes']['up'] - $b['votes']['down'];
+    // Lower voted notes go to the bottom regardless of date
+    if ($voteA > $voteB) {
+        // Exception to the rule for today's notes
+        if ($b['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteB > -1) return 1;
+        // Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+        if ($voteB === 0 && $d === 1 && $voteA <= 0.30 && $c >= 4) return 1;
+        return -1;
+    }
+    // Higher voted notes go to the top regardless of date
+    elseif ($voteA < $voteB) {
+        // Exception to the rule for today's notes
+        if ($a['xwhen'] >= mktime(0,0,0,date('n'),date('j'),date('Y')) && $voteA > -1) return -1;
+        // Another exception for notes with no votes compared to notes with more than 4 votes and 30% or less rating
+        if ($voteA === 0 && $c === 1 && $voteB <= 0.30 && $d >= 4) return -1;
+        return 1;
+    }
+    // Votes of equal amounts are sorted based on the overall rating and in descending order by date
+    else {
+        if ($rateA > $rateB) {
+          return -1;
+        }
+        elseif ($rateA < $rateB) {
+          return 1;
+        }
+        else {
+            if ($a['xwhen'] > $b['xwhen']) {
+                return -1;
+            }
+            elseif ($a['xwhen'] < $b['xwhen']) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+    }
 }
 
 /* vim: set et ts=4 sw=4: */
