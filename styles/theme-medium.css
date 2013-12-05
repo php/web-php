@@ -110,7 +110,7 @@ h1.refname {
   color:#693;
 }
 
-fieldsynopsis .modifier,
+.fieldsynopsis .modifier,
 .methodsynopsis .modifier,
 .constructorsynopsis .modifier {
   color:#444;
