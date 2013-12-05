@@ -75,27 +75,6 @@ $(document).ready(function() {
         $(this).append("<a class='genanchor' href='#" + $(this).parent().attr("id") + "'> ¶</a>");
     });
     
-    /**
-    var scrollHeightOfHeadnav = - document.getElementById('head-nav').scrollHeight;
-    scrollHeightOfHeadnav -= 12; //some margin
-    $parameters = $refsect1.filter(".parameters").find(".term .parameter");
-    $refsect1.find(".parameter").each(function () {
-        var $node = $(this);
-        var $nodeText = $node.text();
-        if ($nodeText[0].charAt(0) === '$') {
-            $nodeText = $nodeText.substring(1);
-        }
-        $parameters.each(function (idx, param) {
-            var $param = $(param);
-            if ($param.text() == $nodeText) {
-                $node.click(function() {
-                    $.scrollTo($param, 600, {'offset':{'top':scrollHeightOfHeadnav}});
-                });
-            }
-        });
-    });
-    */
-
     $('.refentry code.parameter').click(function(event)
     {
       var id = $(this).text().replace(/^[&$]{0,2}/g, '');
@@ -103,11 +82,6 @@ $(document).ready(function() {
       $.scrollTo({top: offsetTop, left: 0}, 400);
     });
 
-    var $headingsWithIds = $('h1 a[id], h2 a[id], h3 a[id], h4 a[id]');
-    $headingsWithIds.each(function(){
-        var $this = $(this);
-        $this.after("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>")
-    });
     $('h1[id], h2[id], h3[id], h4[id]').each(function() {
         var $this = $(this);
         $this.append("<a class='genanchor' href='#" + $this.attr('id') + "'> ¶</a>");
