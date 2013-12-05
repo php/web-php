@@ -114,7 +114,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '22 Aug 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.5.2' => 
     array (
@@ -152,7 +152,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '15 Aug 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.5.1' => 
     array (
@@ -190,7 +190,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '18 Jul 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.5.0' => 
     array (
@@ -228,7 +228,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '20 Jun 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.21' => 
     array (
@@ -290,7 +290,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '19 Sep 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.19' => 
     array (
@@ -321,7 +321,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '22 Aug 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.18' => 
     array (
@@ -352,7 +352,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '04 Jul 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.17' => 
     array (
@@ -383,7 +383,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '04 Jul 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.16' => 
     array (
@@ -414,7 +414,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '09 May 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.15' => 
     array (
@@ -445,7 +445,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '09 May 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.14' => 
     array (
@@ -476,7 +476,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '11 Apr 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.13' => 
     array (
@@ -507,7 +507,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '14 Mar 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.12' => 
     array (
@@ -538,7 +538,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '21 Feb 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.11' => 
     array (
@@ -569,7 +569,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '17 Jan 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.10' => 
     array (
@@ -600,7 +600,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '20 Dec 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.9' => 
     array (
@@ -631,7 +631,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '22 Nov 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.8' => 
     array (
@@ -662,7 +662,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '18 Oct 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.7' => 
     array (
@@ -693,7 +693,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '13 Sep 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.6' => 
     array (
@@ -724,7 +724,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '16 Aug 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.5' => 
     array (
@@ -755,7 +755,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '19 July 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.4' => 
     array (
@@ -786,7 +786,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '14 June 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.3' => 
     array (
@@ -812,7 +812,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '08 May 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.2' => 
     array (
@@ -838,7 +838,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '03 May 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.1' => 
     array (
@@ -864,7 +864,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '26 April 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.4.0' => 
     array (
@@ -890,7 +890,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '01 March 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.25' => 
     array (
@@ -952,7 +952,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '11 Apr 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.23' => 
     array (
@@ -983,7 +983,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '14 Mar 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.22' => 
     array (
@@ -1014,7 +1014,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '21 Feb 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.21' => 
     array (
@@ -1045,7 +1045,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '17 Jan 2013',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.20' => 
     array (
@@ -1076,7 +1076,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '20 Dec 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.19' => 
     array (
@@ -1107,7 +1107,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '22 Nov 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.18' => 
     array (
@@ -1138,7 +1138,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '18 Oct 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.17' => 
     array (
@@ -1169,7 +1169,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '13 Sep 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.16' => 
     array (
@@ -1200,7 +1200,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '16 Aug 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.15' => 
     array (
@@ -1231,7 +1231,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '19 July 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.14' => 
     array (
@@ -1262,7 +1262,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '14 June 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.13' => 
     array (
@@ -1288,7 +1288,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '08 May 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.12' => 
     array (
@@ -1314,7 +1314,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '03 May 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.11' => 
     array (
@@ -1340,7 +1340,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '26 April 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.10' => 
     array (
@@ -1366,7 +1366,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '02 February 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.9' => 
     array (
@@ -1392,7 +1392,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '10 January 2012',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.8' => 
     array (
@@ -1418,7 +1418,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '23 August 2011',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.7' => 
     array (
@@ -1444,7 +1444,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '18 August 2011',
-      'museum' => false,
+      'museum' => true,
     ),
     '5.3.6' => 
     array (
@@ -2987,7 +2987,7 @@ $OLDRELEASES = array (
         ),
       ),
       'date' => '07 August 2008',
-      'museum' => false,
+      'museum' => true,
     ),
     '4.4.8' => 
     array (

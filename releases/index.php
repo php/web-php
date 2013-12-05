@@ -159,6 +159,9 @@ function mk_rel($major, $ver, $date, $announcement, $source, $windows, $museum) 
 		echo "</ul>\n";
 	} else {
 		foreach($source as $src) {
+			if (!isset($src["filename"])) {
+				continue;
+			}
 			printf('<a href="http://museum.php.net/php%d/%s">%s</a>'."\n", $major, $src["filename"], $src["name"]);
 		}
 		foreach($windows as $src) {
