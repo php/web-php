@@ -108,4 +108,6 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 	padding: 10px;
 }
 
-
+p.archive {
+	text-align: right;
+}
