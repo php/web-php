@@ -287,17 +287,16 @@ $(document).ready(function() {
     };
     $(usernotes).on('mouseenter mouseleave', '.note',  function(event) {
       var opacity = 1;
-      var $note = $(this);
+      var $note = $(this).find('.text');
       if (event.type === 'mouseleave' && $note.data('opacity') !== undefined) { 
         opacity = $note.data('opacity');
       }
       $note.fadeTo('fast', opacity);
     }).find('.note').each(function() {
-      var $note = $(this);
-      $note.find('.tally:contains("-")').each(function(){
-        var id = this.id.replace('V', '');
+      $(this).find('.tally:contains("-")').each(function(){
+        var id = this.id.replace('V', 'Hcom');
         var v = mapper.normalize(this.innerHTML.toInt());
-        $note.fadeTo(0, v).data("opacity", v);
+        $('#' + id).fadeTo(0, v).data("opacity", v);
       });
     });
   }
