@@ -47,8 +47,8 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="download-docs.php">Documentation download</a></p>
 <p class="panel"><a href="download-logos.php">PHP logos</a></p>
 
-<p class="panel"><a href="http://snaps.php.net/">Development Snapshots</a></a>
-<p class="panel"><a href="/git.php">Development sources (git)</a></a>
+<p class="panel"><a href="http://snaps.php.net/">Development Snapshots</a></p>
+<p class="panel"><a href="/git.php">Development sources (git)</a></p>
 <p class="panel"><a href="/releases/">Old archives</a></p>
 
 <div class="otherbins">
