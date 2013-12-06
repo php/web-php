@@ -2187,9 +2187,6 @@ hr {
     position: absolute;
     text-align: right;
 }
-#usernotes:target .action {
-    top:4.5em;
-}
 
 #usernotes .foot {
     text-align: right;
