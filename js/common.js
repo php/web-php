@@ -78,7 +78,9 @@ $(document).ready(function() {
     $('.refentry code.parameter').click(function(event)
     {
       var id = $(this).text().replace(/^[&$]{0,2}/g, '');
-      var offsetTop = $('.parameters .parameter:contains("' + id + '")').offset().top - 52;
+      var offsetTop = $(
+        '.parameters .parameter:contains("' + id + '"), .options .parameter:contains("' + id + '")'
+      ).offset().top - 52;
       $.scrollTo({top: offsetTop, left: 0}, 400);
     });
 
@@ -300,6 +302,11 @@ $(document).ready(function() {
       });
     });
   }
+/* }}} */
+
+/* {{{ Remove "inline code" style from .parameter */
+  // CSS3 can't traverse up the DOM tree
+  $('code.parameter').closest('em').addClass('reset');
 /* }}} */
 
 });

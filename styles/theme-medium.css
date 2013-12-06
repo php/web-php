@@ -303,10 +303,11 @@ div.phpcode span.string {
   background-color: transparent;
 }
 
-.para em, 
+.para em:not(.emphasis), 
 .para var,
-.simpara em,
-.simpara var
+.simpara em:not(.emphasis),
+.simpara var,
+.tbody em:not(.emphasis)
 {
   background-color: #F9F2F4;
   border-radius: 4px;
@@ -316,6 +317,13 @@ div.phpcode span.string {
   white-space: nowrap;
   font-style: normal;
   font: normal 14px / 1.46 "Source Code Pro", monospace; 
+}
+
+em.reset, var.reset
+{
+  background: none !important;
+  padding: 0 !important;
+  font-size: 1em !important;
 }
 /* }}} */
 
