@@ -69,7 +69,7 @@ if (isset($shortname) && $shortname) {
   <div class="navbar-inner">
     <div class="container">
       <div class="row-fluid">
-        <a href="/" class="brand"><img src="/images/logos/php-logo@2x.png" width="48" height="24" alt="php"></a>
+        <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
         <div id="mainmenu-toggle-overlay"></div>
         <input type="checkbox" id="mainmenu-toggle">
         <ul class="nav">
