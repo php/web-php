@@ -302,6 +302,21 @@ div.phpcode span.string {
   color: #c33;
   background-color: transparent;
 }
+
+.para em, 
+.para var,
+.simpara em,
+.simpara var
+{
+  background-color: #F9F2F4;
+  border-radius: 4px;
+  color: #C7254E;
+  font-size: 90%;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-style: normal;
+  font: normal 14px / 1.46 "Source Code Pro", monospace; 
+}
 /* }}} */
 
 
