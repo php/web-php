@@ -1,5 +1,21 @@
 <?php
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+$now = $_SERVER["REQUEST_TIME"];
+if (isset($_SERVER["HTTP_IF_MODIFIED_SINCE"])) {
+    $last = strtotime($_SERVER["HTTP_IF_MODIFIED_SINCE"]);
+
+    /* Use the same logo for a day */
+    if (strtotime("+1 day", $last) > $now) {
+        header("HTTP/1.1 304 Not Modified");
+        exit;
+    }
+}
+$future = strtotime("+1 day", $now);
+$tsstring = gmdate("D, d M Y H:i:s ", $now) . "GMT";
+header("Last-Modified: " . $tsstring);
+header("Expires: " . date(DATE_RSS, $future));
+
 /*
 
  Simple script to serve elephpant images in json format.
