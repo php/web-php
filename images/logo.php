@@ -19,6 +19,11 @@ function imgheader($filename) {
     header("Content-Type: " . $hdr);
 }
 
+// Be 100% sure the timezone is set
+if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_set")) {
+    date_default_timezone_set("UTC");
+}
+
 $now = $_SERVER["REQUEST_TIME"];
 $logos = array(
     "./logos/php-logo@2x.png",
