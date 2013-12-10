@@ -33,6 +33,8 @@ $logos = array(
 $day = date("z", $_SERVER["REQUEST_TIME"]) - date("L", $now);
 if ($day < 7 || 365-$day < 32) {
     $logos[] = "./php_snow_2008.gif";
+    $logos[] = "./logos/php-xmas-2013.png";
+    $logos[] = "./logos/php-xmas-2013.png";
 }
 
 /* Every 60seconds.. give the elephpant a chance */
