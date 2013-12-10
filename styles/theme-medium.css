@@ -43,7 +43,7 @@ h2 a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight:normal;
+  font-weight:bolder;
   color:#336
 }
 
@@ -168,6 +168,10 @@ div.caution {
 div.warning {
   background:#f9ecf2;
   border-color: #eecdde;
+}
+div.warning h2,
+div.warning h3 {
+  color:#936;
 }
 div.warning a:link,
 div.warning a:visited {

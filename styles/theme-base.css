@@ -2688,9 +2688,13 @@ div.informalexample {
     margin: .75em 0;
 }
 
-em, strong {
-    font-weight: bold;
-    font-style: italic;
+em {
+    font-weight:normal;
+    font-style:italic;
+}
+strong {
+    font-weight:bold;
+    font-style:normal;
 }
 
 #toTop {
@@ -2931,6 +2935,9 @@ fieldset {
 }
 /* }}} */
 
+.center {
+    text-align:center;
+}
 
 /* {{{ Warning and notes */
 

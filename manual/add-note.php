@@ -155,103 +155,74 @@ if ($process) {
 // Any needed variable was missing => display instructions
 else { 
 ?>
-<p>
- <center>
-  <h2>Pay Attention Now!</h2>
-  <img src="http://imgs.xkcd.com/comics/freedom.png" title="This is how we feel sometimes when obvious violations take place here!"/><br/>
-  <b>NOTE:</b> Due to the overwhelming lack of folks who seem to notice
-  that there are guidelines for what should <i>not</i> be posted here,
-  resulting in the need for us to moderate thousands of submissions,
-  consider this our form of grabbing your attention.  BEFORE YOU POST,
-  <a href="#whatnottoenter">READ THIS SECTION</a>, PLEASE!
- </center>
-</p>
+<div class='warning'>
+  <h2>Pay Attention!</h2>
+  <p class='center'><img src="http://imgs.xkcd.com/comics/freedom.png" title="This is how we feel sometimes when obvious violations take place here!"/></p>
+  <p>
+    Please read <a href="#whatnottoenter">What not to enter</a>;
+    we have many comments to moderate and there is an overwhelming number of
+    users ignoring this important section.
+  </p>
+</div>
 
-<h3>Welcome to the PHP Manual user note system</h3>
-<p>
- You may contribute notes to the PHP manual by adding comments in the
- form below, and, optionally your email address and/or name. And the
- note will appear under the documentation as a part of the manual after
- about an hour.
-</p>
-
-<h3>How to enter information</h3>
-<p>
- There is no need to obfuscate your email address, as we have a simple
- conversion in place to convert the @ signs and dots in your address. You
- may still want to include a part in the email address only understandable
- by humans, to make it spam protected, as our conversion can be performed
- the other way too. You may submit your email address as
- <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
- as <tt>user at NOSPAM dot example dot com</tt>. Although note that we can
- only inform you of the removal of your note, if you use your real email
- address.
-</p>
-<p>
- Note that HTML tags are not allowed in the posts, but the note formatting
- is preserved. URLs will be turned into clickable links, PHP code blocks
- enclosed in the PHP tags &lt;?php and ?&gt; will
- be source highlighted automatically. So always enclose PHP snippets in
- these tags. <em>(Double-check that your note appears
- as you want during the preview. That's why it is there!)</em>
-</p>
-<p>
- The SPAM challenge requires numbers to written out in English, so, an appropriate
- answer may be <em>nine</em> but not <em>9</em>.
-</p>
+<h1>Adding a note to the manual</h1>
 
 <a id="whatnottoenter"><h3>What not to enter</h3></a>
-<p>
- User notes may be edited or deleted, and usually a note is deleted 
- because of the following reasons:
-</p>
 <ul>
  <li>
-  <strong>Bugs</strong>. Instead
+  <strong>Bug reports</strong>. Instead
   <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
   for this manual page to the bug database.
  </li>
  <li>
-  <strong>Missing documentation</strong>. Also, report that as a bug.
+  <strong>Missing documentation</strong>. Also report that as a bug.
  </li>
  <li>
   <strong>Support questions</strong>. See the <a href="/support.php">support page</a>
   for available options. In other words, do not ask questions within the user notes.
  </li>
  <li>
-  <strong>References to other notes or authors</strong>.  This is not a forum, so we
-  neither encourage nor permit discussions here.  Further, if a note is referenced
-  directly, and that note is later removed or modified, it can cause confusion.
+  <strong>References to other notes or authors</strong>.  This is not a forum;
+  we do not encourage nor permit discussions here.  Further, if a note is
+  referenced directly and is later removed or modified it causes confusion.
  </li>
  <li>
   <strong>Code collaboration or improvements</strong>. This is not to suggest that
-  your code modification is not good, perhaps even great, but this just isn't the
-  place to show it off.  We don't even accept all original code submissions.  Your
-  best bet is to publish it on your blog or via another medium.
+  your code snippet is bad; this is simply not the place to show it off.  You
+  should publish elsewhere (perhaps on your blog).
  </li>
  <li>
-  <strong>Links to your website, blog, code, or a third-party website</strong>. We do,
-  on occasion, permit the posting of famous websites (such as faqs.org or the MySQL
-  manual), but links to other sites, no matter how well-intended, will likely be removed.
+  <strong>Links to your website, blog, code, or a third-party website</strong>.
+  On occasion we permit the posting of websites such as faqs.org or the MySQL
+  manual, but links to other sites will be removed, no matter how well-intended.
  </li>
  <li>
-  <strong>Complaints that your notes keep getting deleted</strong>. Sometimes the content
-  of your note may be fine, but we might just hate your face for no good reason. (More
-  likely, though, you didn't bother to read this page, and you violated one of these
-  rules.)
+  <strong>Complaints that your notes keep getting deleted</strong>. Most likely
+  you didn't bother to read this page and you violated one of these rules.
  </li>
  <li>
   <strong>Notes in languages other than English</strong>. 不 gach duine понимает
   el lenguaje जिसमें Sie sprechen.
  </li>
  <li>
-  <strong>SPAM</strong>. This should go without saying, but apparently some folks
-  out there just don't get it.
+  <strong>Spam</strong>. This goes without saying but some folks still don't get it.
  </li>
  <li>
   <strong>Your disdain for PHP and/or its maintainers</strong>. Go learn FORTRAN instead.
  </li>
 </ul>
+<p>User notes may be edited or deleted for any reason, whether in the list above or not</p>
+
+<h3>Email address conversion</h3>
+<p>
+ We have a simple conversion in place to convert the @ signs and dots in your 
+ address. You may still want to include a part in the email address
+ that is understandable only by humans as our conversion can be performed in
+ the opposite direction. You may submit your email address as
+ <tt>user@NOSPAM.example.com</tt> for example (which will be displayed
+ as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
+ only send an email if you use your real email address.
+</p>
 
 <h3>Additional information</h3>
 <p>
@@ -265,6 +236,21 @@ else {
  PHP manual user notes mailing list. The IP address is logged as part of the
  notes moderation process, and won't be shown within the PHP manual itself.
 </p>
+<p>It may take up to an hour for your note to appear in the documentation.</p>
+<p>
+ The SPAM challenge requires numbers to written out in English, so, an appropriate
+ answer may be <em>nine</em> but not <em>9</em>.
+</p>
+<h4>Formatting</h4>
+<p>
+ Note that HTML tags are not allowed in the posts, but the note formatting
+ is preserved. URLs will be turned into clickable links, PHP code blocks
+ enclosed in the PHP tags &lt;?php and ?&gt; will
+ be source highlighted automatically. So always enclose PHP snippets in
+ these tags. <em>(Double-check that your note appears
+ as you want during the preview. That's why it is there!)</em>
+</p>
+
 <?php
 }
 
