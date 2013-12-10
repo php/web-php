@@ -200,7 +200,7 @@ else {
  answer may be <em>nine</em> but not <em>9</em>.
 </p>
 
-<a name="whatnottoenter"><h3>What not to enter</h3></a>
+<a id="whatnottoenter"><h3>What not to enter</h3></a>
 <p>
  User notes may be edited or deleted, and usually a note is deleted 
  because of the following reasons:
