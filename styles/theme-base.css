@@ -2862,11 +2862,23 @@ fieldset {
 .content-header .changelog {
     color:#369;
 }
-.content-box ul, .content-box li {
+.content-box ul {
     list-style: none;
     display: block;
+}
+.content-box ul,
+.content-box li {
     margin: 0;
     padding: 0;
+}
+ul.listed,
+ol.listed {
+    list-style: disc;
+    display: block;
+}
+ul.listed,
+ol.listed li {
+    margin: 10px 30px;
 }
 .content-box li {
     margin-bottom: 0.75em;

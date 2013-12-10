@@ -13,7 +13,8 @@ $SIDEBAR_DATA ='
 site_header("Get Involved", array("current" => "community"));
 
 ?>
-<h2>Operating System Preparation</h2>
+<h2 id="os-prep" class="content-header">Operating System Preparation</h2>
+<div class="content-box">
 <p>
     Improving PHP requires a working build environment to test changes, the following section deals with setting up a working build environment.
 </p>
@@ -25,17 +26,17 @@ site_header("Get Involved", array("current" => "community"));
     For most *nix like operating systems, some external dependencies may be required to bring a build to completion; 
         if a build fails because of missing headers or libraries, issuing a variant of the following command should resolve those dependencies, allowing the build to continue:
     <ul>
-        <li>[sudo] yum|apt-get|ports install package[-dev[el]]</li>
+        <li><pre>[sudo] yum|apt-get|ports install package[-dev[el]]</pre></li>
     </ul>
 </p>
 <p>
     For those working in <i>Ubuntu Linux</i>, you can run the following command to automate the installation of dependencies:
     <ul>
-        <li>sudo apt-get build-dep php5</li>
+        <li><pre>sudo apt-get build-dep php5</pre></li>
     </ul>
     If the compilation of <i>an extension</i> should fail because of missing dependencies, <i>Ubuntu Linux</i> can attempt to automate the resolution of those dependencies by issuing:
     <ul>
-        <li>sudo apt-get build-dep php5-<i>extname</i></li>
+        <li><pre>sudo apt-get build-dep php5-<i>extname</i></pre></li>
     </ul>
 </p>
 <p>
@@ -82,8 +83,10 @@ site_header("Get Involved", array("current" => "community"));
 </tr>
 </table>
 <p><b>Note:</b>&nbsp;If a Windows SDK is required, it is advised to install the SDK <i>before</i> Visual Studio.</p>
+</div>
 
-<h2>Workspace Preparation</h2>
+<h2 id="workspace-prep" class="content-header">Workspace Preparation</h2>
+<div class="content-box">
 <p>
     Windows users should now download and unzip the PHP SDK to their workspace and execute the following commands in an appropriate Visual Studio Console:
 </p>
@@ -103,20 +106,24 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     The next step for everyone is to obtain the versioned PHP sources via git:
     <ul>
-        <li>git clone -b BRANCH https://github.com/php/php-src .</li>
+        <li><pre>git clone -b BRANCH https://github.com/php/php-src .</pre></li>
     </ul>
     BRANCH should be replaced with an appropriate branch name, for example <i>PHP-5.5</i>.
 </p>
 <p>
     At this point you have a working build environment and the vanilla sources for your chosen branch of PHP, it is a good idea, before you change anything at all, to create a new branch and switch to it, in preparation for your awesome changes to come:
     <ul>
-        <li>git checkout -b my-awesome-changes</li>
+        <li><pre>git checkout -b my-awesome-changes</pre></li>
     </ul>
 </p>
-<h2>Building Your Development PHP</h2>
+</div>
+
+
+<h2 id="build-dev" class="content-header">Building Your Development PHP</h2>
+<div class="content-box">
 <p>
     All operating systems now converge on (near as makes no difference) the same solutions for the rest of the build process:
-    <ul>
+    <ul class="listed">
         <li>buildconf: generates the configure script for PHP</li>
         <li>configure: configures the build of PHP and creates Makefile</li>
         <li>make: builds PHP</li>
@@ -126,7 +133,7 @@ site_header("Get Involved", array("current" => "community"));
 </p>
 <p>
     For Microsoft Windows operating systems, those commands looks like this:
-    <ul>
+    <ul class="listed">
         <li>buildconf</li>
         <li>configure --with-prefix=C:\my-awesome-php</li>
         <li>nmake</li>
@@ -136,7 +143,7 @@ site_header("Get Involved", array("current" => "community"));
 </p>
 <p>
     While for the rest of us, those commands look like this:
-    <ul>
+    <ul class="listed">
         <li>./buildconf</li>
         <li>./configure --prefix=/opt/my-awesome-php</li>
         <li>make</li>
@@ -160,6 +167,7 @@ site_header("Get Involved", array("current" => "community"));
         <li>[n]make test TESTS=sapi/cli</li>
     </ul>
 </p>
+</div>
 <?php
 site_footer(array('sidebar'=>$SIDEBAR_DATA));
 
