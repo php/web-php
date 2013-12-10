@@ -2836,9 +2836,8 @@ fieldset {
 }
 /* }}} */
 
-.download-box {
-    margin: 3em 0 4em;
-    position: relative;
+.content-box {
+    margin: .25em 0 2em;
     background-color: rgb(238, 238, 246);
     display: block;
     float: none;
@@ -2849,46 +2848,42 @@ fieldset {
     padding: 0.75em 0.625em;
     box-shadow: 2px 0 2px -2px rgb(212, 212, 232) inset, -2px 0 2px -2px rgb(212, 212, 232) inset;
 }
-.download-box h3 {
+.content-header {
     color: #333;
     font-size: 1.125em;
     line-height: 1.33;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: -2em;
-    left: 0;
-    right: 0;
 }
-.download-box h3 .release-state {
+.content-header .release-state {
     float: right;
     opacity: 0.8;
 }
-.download-box h3 .changelog {
+.content-header .changelog {
     color:#369;
 }
-.download-box ul, .download-box li {
+.content-box ul, .content-box li {
     list-style: none;
     display: block;
     margin: 0;
     padding: 0;
 }
-.download-box li {
+.content-box li {
     margin-bottom: 0.75em;
 }
-.download-box .md5sum {
+.content-box .md5sum {
     display: block;
     font: normal 14px / 1.46 "Source Code Pro", monospace;
 }
-.download-box .md5sum:before {
+.content-box .md5sum:before {
     content: "md5: ";
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
-.download-box .releasedate {
+.content-box .releasedate {
     float: right;
     font-size: 0.9em;
 }
-.download-box pre {
+.content-box pre {
     background: white;
     border: solid 1px rgb(214, 214, 214);
     margin: 0px;
@@ -2897,7 +2892,7 @@ fieldset {
     font: normal 14px / 1.46 "Source Code Pro", monospace;
 }
 @media (max-width: 465px) {
-    .download-box h3 .release-state {
+    .content-box h3 .release-state {
         display: none;
     }
 }

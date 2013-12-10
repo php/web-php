@@ -93,12 +93,12 @@ site_header("Downloads",
   <?php $mver = substr($v, 0, strrpos($v, '.')); ?>
   <?php $stable = $i++ === 0 ? "Current Stable" : "Old Stable"; ?>
 
-  <div class="download-box">
-    <h3 id="v<?php echo $v; ?>">
-      <span class="release-state"><?php echo $stable; ?></span>
-      PHP <?php echo $v; ?>
-      (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
-    </h3>
+  <h3 id="v<?php echo $v; ?>" class="content-header">
+    <span class="release-state"><?php echo $stable; ?></span>
+    PHP <?php echo $v; ?>
+    (<a href="/ChangeLog-<?php echo $MAJOR; ?>.php#<?php echo urlencode($v); ?>" class="changelog">Changelog</a>)
+  </h3>
+  <div class="content-box">
 
     <ul>
       <?php foreach ($a['source'] as $rel): ?>
@@ -128,8 +128,8 @@ The following official GnuPG keys of the current PHP Release Manager can be used
 to verify the tags:
 </p>
 <?php foreach ($gpg as $branch => $data): ?>
-  <div class="download-box">
-  <h3 id="gpg-<?php echo $branch; ?>">PHP <?php echo $branch; ?></h3>
+  <h3 id="gpg-<?php echo $branch; ?>" class="content-header">PHP <?php echo $branch; ?></h3>
+  <div class="content-box">
   <pre>
 <?php echo $data; ?>
   </pre>
