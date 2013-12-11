@@ -84,6 +84,10 @@ sup {
 sub {
   bottom: -0.25em;
 }
+pre,
+blockquote {
+  white-space:pre-wrap;
+}
 #map_canvas img,
 .google-maps img {
   max-width: none;
