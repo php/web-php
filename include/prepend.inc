@@ -20,6 +20,8 @@ if (isset($_SERVER["HTTP_ORIGIN"])) {
     }
     if (isset($host["port"])) {
         $hostname = $host["host"] . ":" . $host["port"];
+    } else {
+        $hostname = $host["host"];
     }
 
     header("Access-Control-Allow-Origin: http://$hostname");
