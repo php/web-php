@@ -31,7 +31,6 @@ header("Expires: " . date(DATE_RSS, $future));
  },{
      ...
  }]
- 
 */
 
 // determine how many images to serve.
