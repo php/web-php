@@ -84,8 +84,7 @@ sup {
 sub {
   bottom: -0.25em;
 }
-pre,
-blockquote {
+pre {
   white-space:pre-wrap;
 }
 #map_canvas img,
