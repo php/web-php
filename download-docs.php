@@ -86,12 +86,6 @@ $formats = array(
   are not complete, and contain English parts. 
  </li>
  <li>
-  The packaged HTML version of the manual (tar.gz) doesn't contain
-  any directories, so all of the files will be dumped into your
-  current working directory when you expand the archive unless the
-  tool you use does otherwise.
- </li>
- <li>
   <p class="warn">
   If you are using Windows XP SP2 or later and you are going to download the
   documentation in CHM format, you <strong>need</strong> to &quot;unblock&quot;
