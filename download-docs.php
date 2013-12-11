@@ -85,8 +85,9 @@ $formats = array(
   translations are based on that version. Most of the translations
   are not complete, and contain English parts. 
  </li>
- <li>
-  <p class="warn">
+</ul>
+
+<p class="warn">
   If you are using Windows XP SP2 or later and you are going to download the
   documentation in CHM format, you <strong>need</strong> to &quot;unblock&quot;
   the file after downloading it by right-clicking on it in Windows Explorer and
@@ -95,9 +96,7 @@ $formats = array(
   &quot;Security&quot; options).  Failure to unblock the documentation file may
   result in error messages including &quot;Navigation to the webpage was
   canceled&quot; due to Windows security restrictions.
-  </p>
- </li>
-</ul>
+</p>
 
 <?php
 $files = array(); $found_formats = array();
