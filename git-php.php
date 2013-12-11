@@ -37,7 +37,7 @@ $groups = array(
 
 ?>
 
-<h1>Using Git for PHP Development</h1>
+<h1 class="content-header">Using Git for PHP Development</h1>
 
 <?php
 
@@ -179,6 +179,7 @@ EOT;
     }
 ?>
 
+<div class="content-box">
 <p>
  All PHP development is done through a distributed revision control system
  called Git. This helps us track changes and it makes it possible for people
@@ -196,6 +197,7 @@ EOT;
 <p>
  And once again, since people just don't seem to understand this point:
 </p>
+</div>
 
 <table border="0" cellpadding="3" class="standard">
  <tr>
@@ -240,7 +242,8 @@ EOT;
  </tr>
 </table>
 
-<p>
+<h3 class="content-header">Contributing patches</h3>
+<p class="content-box">
  If you are contributing a patch, a small fix, or another minor change you do
  not need to ask for a Git account before submitting it. Fork our
  <a href="https://github.com/php/php-src">GitHub repository</a> and create a

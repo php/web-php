@@ -7,7 +7,8 @@ site_header("Documentation", array("current" => "docs"));
 
 ?>
 
-<h1>Documentation</h1>
+<h1 class="content-header">Documentation</h1>
+<div class="content-box">
 
 <p>
  The PHP Manual is available online in a selection of languages.
@@ -27,8 +28,9 @@ site_header("Documentation", array("current" => "docs"));
  parts might be outdated. The translation teams are open to
  contributions. 
 </p>
+</div>
 
-<table border="0" cellpadding="3" cellspacing="2" class="standard">
+<table class="standard">
  <tr>
   <th>Formats</th>
   <th>Destinations</th>
@@ -66,8 +68,8 @@ foreach ($ACTIVE_ONLINE_LANGUAGES as $langcode => $langname) {
  </tr>
 </table>
 
-<h2>More documentation</h2>
-<ul>
+<h2 class="content-header">More documentation</h2>
+<ul class="content-box listed">
  <li>
   If you are interested in how the documentation is edited and translated,
   you should read the <a href="https://wiki.php.net/doc/howto">Documentation HOWTO</a>.
