@@ -19,14 +19,6 @@ $master_url = "http://master.php.net/entry/user-notes-vote.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_SERVER['HTTP_X_JSON']) && $_SERVER['HTTP_X_JSON'] == 'On' && !empty($_REQUEST['id']) && !empty($_REQUEST['page']) && ($N = manual_notes_load($_REQUEST['page'])) && array_key_exists($_REQUEST['id'], $N) && !empty($_REQUEST['vote']) && ($_REQUEST['vote'] === 'up' || $_REQUEST['vote'] === 'down')) {
-    // Set Access-Control-Allow-Origin response headers here
-    $accessAllowed = array('http://php.net','http://www.php.net','https://www.php.net'); // include the default php.net hosts
-    if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] !== 'php.net' && $_SERVER['HTTP_HOST'] !== 'www.php.net') {
-        // include the current host requested in case we're using a mirror
-        $accessAllowed[] = 'http://' . $_SERVER['HTTP_HOST'];
-    }
-    header('Access-Control-Allow-Origin: ' . implode(',',$accessAllowed));
-    
     $response = array();
     $update = $N[$_REQUEST['id']]['votes']['up'] - $N[$_REQUEST['id']]['votes']['down'];
     $hash = substr(md5($_REQUEST['page']), 0, 16);
