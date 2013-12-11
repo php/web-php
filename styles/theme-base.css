@@ -2871,13 +2871,11 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-ul.listed,
-ol.listed {
+.listed {
     list-style: disc;
     display: block;
 }
-ul.listed,
-ol.listed li {
+.listed li {
     margin: 10px 30px;
 }
 .content-box li {
