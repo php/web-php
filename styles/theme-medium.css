@@ -310,13 +310,11 @@ div.phpcode span.string {
 .para em:not(.emphasis), 
 .para var,
 .simpara em:not(.emphasis),
-.simpara var,
-.tbody em:not(.emphasis)
+.simpara var
 {
-  background-color: #F9F2F4;
-  border-radius: 4px;
-  color: #C7254E;
-  font-size: 90%;
+  background-color: #f2f2f2;
+  border-radius: 2px;
+  color: #474747;
   padding: 2px 4px;
   white-space: nowrap;
   font-style: normal;
