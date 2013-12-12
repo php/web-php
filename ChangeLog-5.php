@@ -86,6 +86,38 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 </ul>
 <!-- }}} --></section>
 
+<section class="version" id="5.4.23"><!-- {{{ 5.4.23 -->
+<h3>Version 5.4.23</h3>
+<b>12-Dec-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
+  <li><?php bugfix(65947); ?> (basename is no more working after fgetcsv in certain situation).</li>
+</ul></li>
+<li>JSON:
+<ul>
+  <li>Fixed whitespace part of <?php bugl(64874); ?> ("json_decode handles whitespace and case-sensitivity incorrectly").</li>
+</ul></li>
+<li>MySQLi:
+<ul>
+  <li><?php bugfix(66043); ?> (Segfault calling bind_param() on mysqli).</li>
+</ul></li>
+<li>mysqlnd:
+<ul>
+  <li><?php bugfix(66124); ?> (mysqli under mysqlnd loses precision when bind_param with 'i').</li>
+  <li><?php bugfix(66141); ?> (mysqlnd quote function is wrong with NO_BACKSLASH_ESCAPES after failed query).</li>
+</ul></li>
+<li>OpenSSL:
+<ul>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
+</ul></li>
+<li>PDO:
+<ul>
+  <li><?php bugfix(65946); ?> (sql_parser permanently converts values bound to strings).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.4.22"><!-- {{{ 5.4.22 -->
 <h3>Version 5.4.22</h3>
 <b>14-Nov-2013</b>
@@ -621,6 +653,17 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 <li>CGI/FastCGI SAPI:
 <ul>
   <li>Added PHP_FCGI_BACKLOG, overrides the default listen backlog.</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
+<section class="version" id="5.3.28"><!-- {{{ 5.3.28 -->
+<h3>Version 5.3.28</h3>
+<b>12-Dec-2013</b>
+<ul><li>Openssl:
+<ul>
+  <li>Fixed handling null bytes in subjectAltName (CVE-2013-4073).</li>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420). (Stefan Esser).</li>
 </ul></li>
 </ul>
 <!-- }}} --></section>
