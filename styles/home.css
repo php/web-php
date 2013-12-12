@@ -15,7 +15,8 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     line-height:1.2;
     margin-bottom:1.2em;
 }   
-#intro .row > div {
+#intro .row .blurb,
+#intro .row .download {
   display:table-cell;
   float:none;
 }
@@ -36,6 +37,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     text-transform:uppercase;
     letter-spacing:3px;
     word-spacing:6px;
+    text-align:center;
 }
 #intro .row {
   position:relative;
@@ -44,6 +46,11 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 #intro .background {
   display:none;
+  background:rgba(255,255,255,.1);
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
 }
 @media (min-width: 758px) {
   #intro .background {

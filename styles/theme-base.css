@@ -659,6 +659,7 @@ textarea {
 
 #intro .container {
   margin:0 auto;
+  display:table;
 }
 
 @media (max-width: 480px) {
@@ -2069,17 +2070,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 }
 
 @media (min-width:768px) {
-  #intro .download-php h2 {
-    text-align:center;
-  }
-  #intro .background {
-    display:block;
-    background:rgba(255,255,255,.1);
-    position:absolute;
-    top:0;
-    right:0;
-    height:100%;
-  }
   #topsearch {
     float:right;
   }
