@@ -1943,19 +1943,6 @@ div.soft-deprecation-notice blockquote.sidebar {
   #layout {
     width:1170px;
   }
-  #breadcrumbs .prev,
-  .navbar-search,
-  #intro .download,
-  #intro .background,
-  aside.tips,
-  .layout-menu {
-    width: 20%;
-  }
-
-  #intro .blurb,
-  #layout-content {
-    width:80%;
-  }
 }
 @media (min-width: 1500px) {
   #intro .container,
