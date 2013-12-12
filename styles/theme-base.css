@@ -2089,10 +2089,6 @@ div.soft-deprecation-notice blockquote.sidebar {
 @media (min-width:980px) {
 }
 @media (min-width:1200px) {
-  #intro p {
-    line-height:1.2;
-    margin:0 0 1.2em;
-  }
 }
 @media (min-width:1548px) {
   #layout {

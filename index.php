@@ -82,9 +82,7 @@ $intro = <<<EOF
       <p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
       <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     </div>
-    <div class="background"></div>
     <div class="download">
-      <div class="download-php">
         <h2>Download PHP</h2>
 
 EOF;
@@ -97,8 +95,7 @@ if(!empty($RELEASES[5])) {
         foreach ($row as $version => $release) {
             $intro .= "
           <div class='span6'>
-            <p><a class='download-link' href='/downloads.php#v$version'>$version</a></p>
-            <p class='notes'><a href='/ChangeLog-5.php#$version'>Release Notes</a></p>
+            <p><a class='download-link' href='/downloads.php#v$version'>$version</a> <a class='notes' href='/ChangeLog-5.php#$version'>Release Notes</a></p>
           </div>
 ";
         }
@@ -108,7 +105,6 @@ if(!empty($RELEASES[5])) {
     }
 }
 $intro .= <<<EOF
-      </div>
     </div>
   </div>
 EOF;
