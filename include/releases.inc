@@ -268,6 +268,37 @@ $OLDRELEASES = array (
       'date' => '20 Jun 2013',
       'museum' => true,
     ),
+    '5.4.22' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_4_22.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.4.22.tar.bz2',
+          'name' => 'PHP 5.4.22 (tar.bz2)',
+          'md5' => '0a7400d1d7f1f55b2b36285bf1a00762',
+          'date' => '14 Nov 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.4.22.tar.gz',
+          'name' => 'PHP 5.4.22 (tar.gz)',
+          'md5' => 'a23fead825db383f6b364dd3c825b729',
+          'date' => '14 Nov 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.4',
+          'name' => 'Windows 5.4.22 binaries and source',
+        ),
+      ),
+      'date' => '14 Nov 2013,
+      'museum' => false,
+    ),
     '5.4.21' => 
     array (
       'announcement' => 
@@ -929,6 +960,37 @@ $OLDRELEASES = array (
       ),
       'date' => '01 March 2012',
       'museum' => true,
+    ),
+    '5.3.27' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_3_27.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.3.27.tar.bz2',
+          'name' => 'PHP 5.3.27 (tar.bz2)',
+          'md5' => '25ae23a5b9615fe8d33de5b63e1bb788',
+          'date' => '11 Jul 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.3.27.tar.gz',
+          'name' => 'PHP 5.3.27 (tar.gz)',
+          'md5' => 'bd03bfa9e7db40b6f2950fcbcf6a8276',
+          'date' => '11 Jul 2013',
+        ),
+        2 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.3',
+          'name' => 'Windows 5.3.27 binaries and source',
+        ),
+      ),
+      'date' => '09 May 2013',
+      'museum' => false,
     ),
     '5.3.25' => 
     array (
