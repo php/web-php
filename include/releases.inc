@@ -2,7 +2,45 @@
 $OLDRELEASES = array (
   5 => 
   array (
-  '5.5.5' => 
+    '5.5.6' => 
+    array (
+      'announcement' => 
+      array (
+        'English' => '/releases/5_5_6.php',
+      ),
+      'source' => 
+      array (
+        0 => 
+        array (
+          'filename' => 'php-5.5.6.tar.bz2',
+          'name' => 'PHP 5.5.6 (tar.bz2)',
+          'md5' => '1472b1f968a2a4ae8b26f3134a116011',
+          'date' => '14 Nov 2013',
+        ),
+        1 => 
+        array (
+          'filename' => 'php-5.5.6.tar.gz',
+          'name' => 'PHP 5.5.6 (tar.gz)',
+          'md5' => '82968eac50c523ecf7a05855cb5c3d0a',
+          'date' => '14 Nov 2013',
+        ),
+        2 => 
+        array (
+          'filename' => 'php-5.5.6.tar.xz',
+          'name' => 'PHP 5.5.6 (tar.xz)',
+          'md5' => '77ad90035931aacb95d11318b09c12ca',
+          'date' => '14 Nov 2013',
+        ),
+        3 => 
+        array (
+          'link' => 'http://windows.php.net/download/#php-5.5',
+          'name' => 'Windows 5.5.6 binaries and source',
+        ),
+      ),
+      'date' => '14 Nov 2013',
+      'museum' => false,
+    ),
+    '5.5.5' => 
     array (
       'announcement' => 
       array (

@@ -10,6 +10,37 @@ function peclbugl($number)   { echo "<a href=\"http://pecl.php.net/bugs/bug.php?
 ?>
 
 <h1>PHP 5 ChangeLog</h1>
+<section class="version" id="5.5.7"><!-- {{{ 5.5.7 -->
+<h3>Version 5.5.7</h3>
+<b>12-Dec-2013</b>
+<ul><li>Core:
+<ul>
+  <li><?php bugfix(66094); ?> (unregister_tick_function tries to cast a Closure to a string).</li>
+  <li><?php bugfix(65969); ?> (Chain assignment with T_LIST failure).</li>
+</ul></li>
+<li>CLI server:
+<ul>
+  <li>Added some MIME types to the CLI web server.</li>
+  <li>Implemented FR #65917 (getallheaders() is not supported by the built-in web
+    server) - also implements apache_response_headers()</li>
+</ul></li>
+<li>OPCache:
+<ul>
+  <li><?php bugfix(66176); ?> (Invalid constant substitution).</li>
+  <li><?php bugfix(65915); ?> (Inconsistent results with require return value).</li>
+  <li><?php bugfix(65559); ?> (Opcache: cache not cleared if changes occur while running).</li>
+</ul></li>
+<li>readline:
+<ul>
+  <li><?php bugfix(65714); ?> (PHP cli forces the tty to cooked mode).</li>
+</ul></li>
+<li>Openssl:
+<ul>
+  <li>Fixed memory corruption in openssl_x509_parse() (CVE-2013-6420).</li>
+</ul></li>
+</ul>
+<!-- }}} --></section>
+
 <section class="version" id="5.5.6"><!-- {{{ 5.5.6 -->
 <h3>Version 5.5.6</h3>
 <b>14-Nov-2013</b>
