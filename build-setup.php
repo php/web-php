@@ -163,7 +163,7 @@ site_header("Get Involved", array("current" => "community"));
 </p>
 <p>
     It is also possible to run a set (directory) of tests in the following way:
-    <ul>
+    <ul class="listed">
         <li>[n]make test TESTS=sapi/cli</li>
     </ul>
 </p>
