@@ -112,7 +112,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  its sister, PEAR.
 </p>
 
-<h2 id="bugs" class="content-header"><a href="http://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
+<h2 id="bugs" class="content-header"><a href="https://bugs.php.net/">bugs.php.net</a>: Bug Database</h2>
 
 <p class="content-box">
  The bug database is where you can bring problems with PHP to the attention of
@@ -227,7 +227,7 @@ site_header("A Tourist's Guide", array("current" => "help"));
  analysis.  
 </p>
 
-<h2 id="wiki" class="content-header"><a href="http://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
+<h2 id="wiki" class="content-header"><a href="https://wiki.php.net/">wiki.php.net</a>: The PHP Wiki</h2>
 
 <p class="content-box">
  Home of the official PHP wiki, this site contains information related to php.net like
