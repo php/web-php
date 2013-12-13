@@ -93,13 +93,13 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     Visual Studio 2008:
     <ul>
-        <li>setenv /xp /Release /x86</li>
+        <li><pre>setenv /xp /Release /x86</pre></li>
     </ul>
     Visual Studio 2008 and 2012:
     <ul>
-        <li>cd C:\path-to-workspace</li>
-        <li>bin\phpsdk_setvars.bat</li>
-        <li>bin\phpsdk_buildtree.bat phpdev</li>
+        <li><pre>cd C:\path-to-workspace</pre></li>
+        <li><pre>bin\phpsdk_setvars.bat</pre></li>
+        <li><pre>bin\phpsdk_buildtree.bat phpdev</pre></li>
     </ul>
     Windows should now change to the directory C:\path-to-workspace\phpdev\<i>VCXX</i>\<i>XARCH</i>, and consider it the root of the workspace for the current build.
 </p>
@@ -124,31 +124,31 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     All operating systems now converge on (near as makes no difference) the same solutions for the rest of the build process:
     <ul class="listed">
-        <li>buildconf: generates the configure script for PHP</li>
-        <li>configure: configures the build of PHP and creates Makefile</li>
-        <li>make: builds PHP</li>
-        <li>make test: runs testsuite</li>
-        <li>make install: installs PHP</li>
+        <li><pre>buildconf: generates the configure script for PHP</pre></li>
+        <li><pre>configure: configures the build of PHP and creates Makefile</pre></li>
+        <li><pre>make: builds PHP</pre></li>
+        <li><pre>make test: runs testsuite</pre></li>
+        <li><pre>make install: installs PHP</pre></li>
     </ul>
 </p>
 <p>
     For Microsoft Windows operating systems, those commands looks like this:
     <ul class="listed">
-        <li>buildconf</li>
-        <li>configure --with-prefix=C:\my-awesome-php</li>
-        <li>nmake</li>
-        <li>nmake test</li>
-        <li>nmake install</li>
+        <li><pre>buildconf</pre></li>
+        <li><pre>configure --with-prefix=C:\my-awesome-php</pre></li>
+        <li><pre>nmake</pre></li>
+        <li><pre>nmake test</pre></li>
+        <li><pre>nmake install</pre></li>
     </ul>
 </p>
 <p>
     While for the rest of us, those commands look like this:
     <ul class="listed">
-        <li>./buildconf</li>
-        <li>./configure --prefix=/opt/my-awesome-php</li>
-        <li>make</li>
-        <li>make test</li>
-        <li>make install</li>
+        <li><pre>./buildconf</pre></li>
+        <li><pre>./configure --prefix=/opt/my-awesome-php</pre></li>
+        <li><pre>make</pre></li>
+        <li><pre>make test</pre></li>
+        <li><pre>make install</pre></li>
     </ul>
 </p>
 <p>
@@ -164,7 +164,7 @@ site_header("Get Involved", array("current" => "community"));
 <p>
     It is also possible to run a set (directory) of tests in the following way:
     <ul>
-        <li>[n]make test TESTS=sapi/cli</li>
+        <li><pre>[n]make test TESTS=sapi/cli</pre></li>
     </ul>
 </p>
 </div>
@@ -172,4 +172,3 @@ site_header("Get Involved", array("current" => "community"));
 site_footer(array('sidebar'=>$SIDEBAR_DATA));
 
 /* vim: set et ts=4 sw=4 ft=php: : */
-
