@@ -235,6 +235,12 @@ site_header("A Tourist's Guide", array("current" => "help"));
  has a wiki section and everyone is able to apply for wiki commit access.
 </p>
 
+<h2 id="people" class="content-header"><a href="http://people.php.net/">people.php.net</a>: The PHP Developers Profiles</h2>
+
+<p class="content-box">
+ A list of the developers behind PHP along with quick profiles for each of them.
+</p>
+
 <?php
 $SIDEBAR = <<< SIDEBAR_DATA
 
@@ -255,6 +261,7 @@ $SIDEBAR = <<< SIDEBAR_DATA
 <p class='panel'><a href="#snaps">Daily PHP Snapshots</a></p>
 <p class='panel'><a href="#gcov">Test and Code Coverage analysis</a></p>
 <p class='panel'><a href="#wiki">The PHP Wiki</a></h2>
+<p class='panel'><a href="#people">The PHP Developers Profiles</a></h2>
 
 SIDEBAR_DATA;
 
