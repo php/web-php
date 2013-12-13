@@ -296,7 +296,7 @@ $OLDRELEASES = array (
           'name' => 'Windows 5.4.22 binaries and source',
         ),
       ),
-      'date' => '14 Nov 2013,
+      'date' => '14 Nov 2013',
       'museum' => false,
     ),
     '5.4.21' => 
