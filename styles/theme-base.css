@@ -3406,7 +3406,7 @@ div.soft-deprecation-notice blockquote.sidebar {
   }
 
   /* Hiding UserVoice sticky bar when in smartphone mode */
-  #uvTabLabel {
+  #uvTab {
     display: none !important;
   }
 
