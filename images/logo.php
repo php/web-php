@@ -25,9 +25,18 @@ if (ini_get("date.timezone") === "" && function_exists("date_default_timezone_se
 }
 
 $now = $_SERVER["REQUEST_TIME"];
-$logos = array(
-    "./logos/php-logo@2x.png",
-);
+switch($_SERVER["QUERY_STRING"]) {
+    case "QA":
+    case "qa":
+        $logos = array(
+            "./logos/qa.jpg",
+        );
+        break;
+    default:
+        $logos = array(
+            "./logos/php-logo@2x.png",
+        );
+}
 
 /* xmas season, december and the first week of January */
 $day = date("z", $_SERVER["REQUEST_TIME"]) - date("L", $now);
