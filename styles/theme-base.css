@@ -3389,12 +3389,12 @@ div.soft-deprecation-notice blockquote.sidebar {
     -ms-transition: max-height 400ms;
     transition: max-height 400ms;
   }
-  .navbar .nav > li {
+  .navbar .nav > li, .footmenu > li {
     float: none;
     display: block;
     text-align: center;
   }
-  .navbar .nav > li a {
+  .navbar .nav > li a, .footmenu > li > a {
     width: 100%;
     display: block;
     padding-left: 0;
@@ -3410,7 +3410,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: none !important;
   }
 
-  #intro .download-php { margin: 0 !important; }
+  #intro .download-php { margin: 0 !important; } 
 }
 
 @media (min-width:768px) {
