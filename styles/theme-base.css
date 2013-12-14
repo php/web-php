@@ -3319,30 +3319,30 @@ div.soft-deprecation-notice blockquote.sidebar {
 
 
 @media (max-width:767px) {
+  
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width:auto;
   }
+  
   .navbar-search {
     float:left;
     clear: both;
     margin-top: 0;
     padding: 0px 10px 10px 10px;
   }
+  
   .navbar .nav {
     margin-right: 0;
   }
+  
   #intro .download-php { 
     margin: 0 !important; 
   }
-}
-
-/* Smartphones */
-@media (max-width:465px) {
 
   #mainmenu-toggle-overlay {
-    background: #669 url(../images/mobile-menu.png) no-repeat center center;
+    background: #669 url(/images/mobile-menu.png) no-repeat center center;
     float: right;
     display: block;
     height: 32px;
@@ -3378,6 +3378,7 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: block;
     margin-left: 12px;
   }
+  
   .navbar .nav {
     clear: both;
     float: none;
@@ -3389,11 +3390,14 @@ div.soft-deprecation-notice blockquote.sidebar {
     -ms-transition: max-height 400ms;
     transition: max-height 400ms;
   }
+  
   .navbar .nav > li, .footmenu > li {
     float: none;
     display: block;
     text-align: center;
+  
   }
+  
   .navbar .nav > li a, .footmenu > li > a {
     width: 100%;
     display: block;
@@ -3410,7 +3414,6 @@ div.soft-deprecation-notice blockquote.sidebar {
     display: none !important;
   }
 
-  #intro .download-php { margin: 0 !important; } 
 }
 
 @media (min-width:768px) {
