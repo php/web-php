@@ -19,6 +19,7 @@ html {
 body {
   background:#fff;
   color: black;
+  overflow-x: hidden;
 }
 
 abbr {
