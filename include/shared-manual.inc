@@ -425,7 +425,8 @@ function manual_footer() {
 
     manual_notes();
     echo "</section>";
-    site_footer(array('elephpants' => true));
+    $config = array();
+    site_footer($config);
 }
 
 // This function takes a DateTime object and returns a formated string of the time difference relative to now
