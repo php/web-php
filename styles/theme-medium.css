@@ -227,12 +227,11 @@ div.warning:before {
   color: black;
 }
 #usernotes .note .text {
-  background-color: #f2f2f2;
-  border-top-color: #d9d9d9;
-  border-bottom-color: #d9d9d9;
+  background-color: #F2F2F2;
+  border-color: #CCC;
   box-shadow:
-    inset 2px 0 2px -2px #d9d9d9,
-    inset -2px 0 2px -2px #d9d9d9;
+    inset 2px 0 2px -2px #CCC,
+    inset -2px 0 2px -2px #CCC;
 }
 #usernotes .note .votes .tally {
   color: #262626;
