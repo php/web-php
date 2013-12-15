@@ -1073,7 +1073,7 @@ table.standard tr:nth-child(even) td.sub,
 table.standard tr:nth-child(even) th.sub,
 table.standard tr td.sub,
 table.standard tr th.sub {
-    background: #eeeef6;
+    background: #E3E3F1;
 }
 
 table.standard td.subr,
@@ -1481,12 +1481,8 @@ fieldset {
 .downloads .content-header,
 .refsect1 h3.title {
   padding:0.333333333em 0.444444444em;
-  border-radius:0 0 2px 2px;
   border-top:2px solid #669;
-  border-bottom:1px solid #D2D2D9;
-  box-shadow:
-    inset 2px 0 2px -2px #D2D2D9,
-    inset -2px 0 2px -2px #D2D2D9;
+  border-bottom:1px solid;
 }
 .refsect1 > *:last-child {
     margin-bottom:0;
@@ -2117,74 +2113,24 @@ aside.tips div.inner {
 /* {{{ Flash message */
 #flash-message {
   height: auto;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   margin-top: 4px;
   position: fixed;
   width: 100%;
-  z-index: 9999999;
-  cursor: pointer;
+  z-index: 95;
   text-align: center;
-  opacity: 0.9;
-}
-
-#flash-message > div{
-  display: none;
-}
-
-#flash-message > div[id] {
-  display: block;
-}
-
-#flash-message .message:last-child {
   box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.1);
-  z-index: -1;
 }
 
 #flash-message .message {
-  margin: 0;
-  padding: 0;
+  cursor: pointer;
   text-align: center;
   position: relative;
-  font-weight: 700;
-  font-size: 1.125em;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-bottom:1px solid;
+  padding:.25em;
 }
 
 #flash-message .message a {
-  color:#fff;
-  text-decoration: none;
-  border-bottom: 1px dotted #fff;
-  font-weight: bold;
-}
-
-#flash-message .success {
-  background-color: #DFF0D8;
-  border-color: #D6E9C6;
-  color: #3C763D;
-}
-
-#flash-message .error {
-  background-color: #F2DEDE;
-  border-color: #EBCCD1;
-  color: #A94442;
-}
-
-#flash-message .warning {
-  background-color: #FCF8E3;
-  border-color: #FAEBCC;
-  color: #8A6D3B;
-}
-#flash-message .warning a {
-  color: #826200 !important;
-  border-bottom: 1px dotted #826200;
-}
-
-#flash-message .info {
-  background-color: #D9EDF7;
-  border-color: #BCE8F1;
-  color: #31708F;
+  border-style: dotted;
+  font-weight: bolder;
 }
 /* }}} */

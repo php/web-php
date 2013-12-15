@@ -2,7 +2,7 @@
  *
  *  COLORS:       | HEX     |
  * ---------------+---------+
- *  light-purple  | #ebebf2 |
+ *  light-purple  | #E3E3F1 |
  * ---------------+---------+
  *  medium-purple | #9999cc |
  * ---------------+---------+
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  background:#ebebf2;
+  background:#E3E3F1;
   color: #262626;
 }
 #layout-content {
@@ -111,7 +111,13 @@ h1.refname {
 .downloads .content-header,
 .refsect1 h3.title {
   color: #446;
-  background: #ebebf2;
+  background: #E3E3F1;
+  border-radius:0 0 2px 2px;
+  border-color:#C6C6E2;
+  border-top-color:#669;
+  box-shadow:
+    inset 2px 0 2px -2px #C6C6E2,
+    inset -2px 0 2px -2px #C6C6E2
 }
 
 .methodname b,
@@ -133,14 +139,19 @@ h1.refname {
 
 
 /* {{{ Warnings, Tips and Notes */
+#flash-message .success {
+  background:#E6F2D9;
+  border-color: #CCE6B3;
+}
+#flash-message .info,
 div.tip {
-  background:#ECF2F9;
-  border-color: #CDDEEE;
-  border-bottom-color:#C6D9EC;
+  background:#D9E6F2;
+  border-color: #B3CCE6;
+  border-bottom-color:#9FBFDF;
 }
 blockquote.note {
-  background-color: #eee;
-  border-color: #d5d5d5;
+  background-color: #F2F2F2;
+  border-color: #CCC;
 }
 div.caution {
   background: #fcfce9;
@@ -151,18 +162,21 @@ div.caution {
   background:#fff;
   border-color: #e5e6e9;
 }
+#flash-message .error,
 div.warning {
-  background:#f9ecf2;
-  border-color: #eecdde;
+  background:#F4DFDF;
+  border-color: #EABFBF;
 }
+#flash-message .error a,
+div.warning a:link,
+div.warning a:visited,
 div.warning h2,
 div.warning h3 {
   color:#936;
 }
-div.warning a:link,
-div.warning a:visited {
-  color:#936;
-}
+#flash-message .success a,
+#flash-message a:hover,
+#flash-message a:focus,
 div.warning a:hover,
 div.warning a:focus {
   color:#693;
@@ -251,7 +265,7 @@ div.warning:before {
   background-color: #ffffff;
 }
 .doctable tbody tr:nth-child(even) {
-  background-color: #ebebf2;
+  background-color: #E3E3F1;
 }
 /* }}} */
 
