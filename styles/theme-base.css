@@ -3566,3 +3566,56 @@ aside.tips div.inner {
 
 /* }}} */
 
+/* {{{ Adjustments for add-note.php animations */
+#add-note-usernotes
+{
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+#add-note-usernotes .shadow
+{
+  box-shadow: inset -10px 0 5px -5px rgba(0, 0, 0, 0.1);
+  width:3%;
+  height: 100%;
+  position:absolute;
+  float:right;
+  z-index:1;
+  left: 97%;
+}
+
+#add-note-usernotes li
+{
+  margin-bottom: 1em;
+}
+
+#add-note-usernotes #usernotes {
+  position: relative;
+  margin: 1em 0 1em 100px;
+}
+
+#whatnottoenter strong
+{
+  display: block;
+  text-align: left;
+}
+
+#whatnottoenter div, #add-note-usernotes li
+{
+  text-align: justify;
+}
+
+#whatnottoenter div.row-fluid
+{
+  margin-bottom: 1em;
+}
+
+#whatnottoenter strong:before{
+  color: #333366;
+  content: '•';
+  position: absolute;
+  font-size: 2em;
+  margin: -0.5em 0 0 -0.5em;
+}
+/* }}} */

@@ -311,6 +311,65 @@ $(document).ready(function() {
 
 });
 
+/* {{{ add-user.php animations */
+$(function() {
+
+  if ( ! document.getElementById('add-note-usernotes'))
+    return;
+  
+  $('#usernotes').animate({marginLeft: 0}, 1000);
+  
+  $('#usernotes .note').removeAttr('style');
+    
+  var times = [3, 7, 10];
+  for (i in times)
+    times[i] = times[i] * 1000;
+  
+  var notes = [];
+  notes[0] = $('#usernotes .bad');
+  notes[1] = $('#usernotes .good');
+  notes[2] = $('#usernotes .spam');
+
+  setTimeout(function()
+  {
+    notes[0].find('.usernotes-voted').css('border-top-color', '#001155');
+    notes[1].find('.usernotes-voteu').css('border-bottom-color', '#001155');
+    
+    var t = 1000;
+    var i = 1;
+    var timer = setInterval(function()
+    {
+      if (i * t > times[1] - times[0])
+      {
+        clearTimeout(timer);
+        return;
+      }
+      
+      notes[0].find('.tally').html( notes[0].find('.tally').html().toInt() - 1);
+      notes[1].find('.tally').html( notes[1].find('.tally').html().toInt() + 1);
+      
+      i++;
+    }, t);
+    
+    notes[0].find('.text').animate({opacity: 0.3}, (times[1] - times[0]));
+    
+  }, times[0]);
+  
+  setTimeout(function()
+  {
+    notes[2].find('.text').html("@BJORI DOESN'T LIKE SPAM").css('background-color', '#F9ECF2');
+  }, times[1]);
+  
+  setTimeout(function()
+  {
+    notes[0].fadeOut();
+    notes[2].fadeOut();
+    $('#usernotes .count').html('1 note');
+  }, times[2]);
+
+});
+/* }}} */
+
 /**
  * Determine what language to present to the user.
  */

@@ -155,64 +155,183 @@ if ($process) {
 // Any needed variable was missing => display instructions
 else { 
 ?>
-<div class='warning'>
-  <h2>Pay Attention!</h2>
-  <p class='center'><img src="http://imgs.xkcd.com/comics/freedom.png" title="This is how we feel sometimes when obvious violations take place here!"/></p>
-  <p>
-    Please read <a href="#whatnottoenter">What not to enter</a>;
-    we have many comments to moderate and there is an overwhelming number of
-    users ignoring this important section.
-  </p>
+
+<div id="add-note-usernotes" class="row-fluid">
+<div class="span4">
+
+  <h1>Adding a note to the manual</h1>
+
+  <ul>
+    <li>
+      Please read <a href="#whatnottoenter">What not to enter</a>
+      we have many comments to moderate and there is an overwhelming number of
+      users ignoring this important section.
+    </li>
+    <li>
+      Good notes (high score) are voted up and <strong>rise to top</strong> 
+      so they are easy to find.
+    </li>
+    <li>
+      Low score (negative) notes are faded out to discourage usage and
+      after certain threshold are removed.
+    </li>
+    <li>
+      Any form of spam is removed immediately. Some folks still don't get it.
+    </li>
+  </ul>
+
+</div>
+<div class="span8">
+<div class="shadow"></div>
+<div id="usernotes">
+
+<h3 class="title">User Contributed Notes <span class="count">3 notes</span></h3>
+
+<div class="note bad">
+  <div class="votes">
+    <div>
+      <a class="usernotes-voteu" title="Vote up!">up</a>
+    </div>
+    <div>
+      <a class="usernotes-voted" title="Vote down!">down</a>
+    </div>
+    <div title="" class="tally">
+      3
+    </div>
+  </div>
+  <a class="name"><strong class="user"><em>Anonymous</em></strong></a>
+  <a class="genanchor" href="#"> ¶</a>
+  <div class="date">
+    <strong>
+      1 year ago
+    </strong>
+  </div>
+  <div class="text">
+    <div class="phpcode">
+      <code>
+        <span class="html">
+        <p>eval() is the best for all sorts of things</p>
+        </span>
+      </code>
+    </div>
+  </div>
 </div>
 
-<h1>Adding a note to the manual</h1>
+<div class="note good">
+  <div class="votes">
+    <div>
+      <a class="usernotes-voteu" title="Vote up!">up</a>
+    </div>
+    <div>
+      <a class="usernotes-voted" title="Vote down!">down</a>
+    </div>
+    <div title="" class="tally">
+      1
+    </div>
+  </div>
+  <a class="name"><strong class="user"><em>rasmus () lerdorf ! com</em></strong></a>
+  <a class="genanchor" href="#"> ¶</a>
+  <div class="date">
+    <strong>
+      2 days ago
+    </strong>
+  </div>
+  <div class="text">
+    <div class="phpcode">
+      <code>
+        <span class="html">
+        <p>If eval() is the answer, you're almost certainly asking the wrong question.</p>
+        </span>
+      </code>
+    </div>
+  </div>
+</div>
 
-<a id="whatnottoenter"><h3>What not to enter</h3></a>
-<ul>
- <li>
-  <strong>Bug reports</strong>. Instead
+<div class="note spam">
+  <div class="votes">
+    <div>
+      <a class="usernotes-voteu" title="Vote up!">up</a>
+    </div>
+    <div>
+      <a class="usernotes-voted" title="Vote down!">down</a>
+    </div>
+    <div title="" class="tally">
+      0
+    </div>
+  </div>
+  <a class="name"><strong class="user"><em>spam () spam ! spam</em></strong></a>
+  <a class="genanchor" href="#"> ¶</a>
+  <div class="date">
+    <strong>
+      1 hour ago
+    </strong>
+  </div>
+  <div class="text">
+    <div class="phpcode">
+      <code>
+        <span class="html">
+        <p>egg bacon sausage spam spam spam spam baked beans spam spam spam and spam</p>
+        </span>
+      </code>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<div id="whatnottoenter">
+<h3>Thou shall not enter! <small>(No, really, don't)</small></h3>
+
+<div class="row-fluid">
+  <div class="span3">
+  <strong>Bug reports &amp; Missing documentation</strong> Instead
   <a href="http://bugs.php.net/report.php?bug_type=Documentation+problem<?php echo isset($_POST['sect']) ? '&amp;manpage=' . clean($_POST['sect']) : ''; ?>">report a bug</a>
   for this manual page to the bug database.
- </li>
- <li>
-  <strong>Missing documentation</strong>. Also report that as a bug.
- </li>
- <li>
-  <strong>Support questions</strong>. See the <a href="/support.php">support page</a>
-  for available options. In other words, do not ask questions within the user notes.
- </li>
- <li>
-  <strong>References to other notes or authors</strong>.  This is not a forum;
-  we do not encourage nor permit discussions here.  Further, if a note is
-  referenced directly and is later removed or modified it causes confusion.
- </li>
- <li>
-  <strong>Code collaboration or improvements</strong>. This is not to suggest that
-  your code snippet is bad; this is simply not the place to show it off.  You
-  should publish elsewhere (perhaps on your blog).
- </li>
- <li>
-  <strong>Links to your website, blog, code, or a third-party website</strong>.
-  On occasion we permit the posting of websites such as faqs.org or the MySQL
-  manual, but links to other sites will be removed, no matter how well-intended.
- </li>
- <li>
-  <strong>Complaints that your notes keep getting deleted</strong>. Most likely
-  you didn't bother to read this page and you violated one of these rules.
- </li>
- <li>
-  <strong>Notes in languages other than English</strong>. 不 gach duine понимает
-  el lenguaje जिसमें Sie sprechen.
- </li>
- <li>
-  <strong>Spam</strong>. This goes without saying but some folks still don't get it.
- </li>
- <li>
-  <strong>Your disdain for PHP and/or its maintainers</strong>. Go learn FORTRAN instead.
- </li>
-</ul>
-<p>User notes may be edited or deleted for any reason, whether in the list above or not</p>
+  </div>
+  <div class="span3">
+    <strong>Support questions or request for help</strong> See the <a href="/support.php">support page</a>
+    for available options. In other words, do not ask questions within the user notes.
+  </div>
+  <div class="span3">
+    <strong>References to other notes or authors</strong>  This is not a forum;
+    we do not encourage nor permit discussions here.  Further, if a note is
+    referenced directly and is later removed or modified it causes confusion.
+  </div>
+  <div class="span3">
+    <strong>Code collaboration or improvements</strong> This is not to suggest that
+    your code snippet is bad; this is simply not the place to show it off.  You
+    should publish elsewhere (perhaps on your blog).
+  </div>
+</div>
+<div class="row-fluid">
+  <div class="span3">
+    <strong>Links to your website, blog, code, or a third-party website</strong>
+    On occasion we permit the posting of websites such as faqs.org or the MySQL
+    manual, but links to other sites will be removed, no matter how well-intended.
+  </div>
+  <div class="span3">
+    <strong>Complaints that your notes keep getting deleted</strong> Most likely
+    you didn't bother to read this page and you violated one of these rules.  
+  </div>
+  <div class="span3">
+    <strong>Notes in languages other than English</strong> 不 gach duine понимает
+    el lenguaje जिसमें Sie sprechen.
+  </div>
+  <div class="span3">
+    <strong>Your disdain for PHP and/or its maintainers</strong> Go learn FORTRAN instead.
+  </div>
+</div>
+<p>User notes may be edited or deleted for any reason, whether in the list above or not!</p>
+</div>
 
+
+<div class="row-fluid">
+
+<div class="span6">
 <h3>Email address conversion</h3>
 <p>
  We have a simple conversion in place to convert the @ signs and dots in your 
@@ -223,7 +342,24 @@ else {
  as <tt>user at NOSPAM dot example dot com</tt>. If we remove your note we can
  only send an email if you use your real email address.
 </p>
+</div>
 
+<div class="span6">
+<h3>Formatting</h3>
+<p>
+ Note that HTML tags are not allowed in the posts, but the note formatting
+ is preserved. URLs will be turned into clickable links, PHP code blocks
+ enclosed in the PHP tags &lt;?php and ?&gt; will
+ be source highlighted automatically. So always enclose PHP snippets in
+ these tags. <em>(Double-check that your note appears
+ as you want during the preview. That's why it is there!)</em>
+</p>
+</div>
+
+</div>
+
+<div class="row-fluid">
+<div class="span12">
 <h3>Additional information</h3>
 <p>
  Please note that periodically the developers go through the notes and
@@ -241,15 +377,8 @@ else {
  The SPAM challenge requires numbers to written out in English, so, an appropriate
  answer may be <em>nine</em> but not <em>9</em>.
 </p>
-<h4>Formatting</h4>
-<p>
- Note that HTML tags are not allowed in the posts, but the note formatting
- is preserved. URLs will be turned into clickable links, PHP code blocks
- enclosed in the PHP tags &lt;?php and ?&gt; will
- be source highlighted automatically. So always enclose PHP snippets in
- these tags. <em>(Double-check that your note appears
- as you want during the preview. That's why it is there!)</em>
-</p>
+</div>
+</div>
 
 <?php
 }
