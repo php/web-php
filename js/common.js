@@ -308,13 +308,7 @@ $(document).ready(function() {
 /* {{{ Init template generated flash messages */
   $('#flash-message .message').each(function()
   {
-    var alertType = $(this).data('type') || 'success';
-    var timeout = $(this).data('timeout') || 6000;
-  	var n = flashMessage({
-  		text: $(this).html(),
-  		type: alertType,
-      timeout: timeout
-  	});
+ 	  flashMessage($(this));
   });
 /* }}} */
 
@@ -380,7 +374,7 @@ $(function() {
 /* }}} */
 
 /* {{{ Flash Messenger */
-function flashMessage(options)
+function flashMessage(o)
 {
   var defaults = { 
     timeout: 6000,
@@ -389,13 +383,29 @@ function flashMessage(options)
     parent: '#flash-message',
   };
   
-  var options = $.extend(defaults, options); 
+  // Options are passed, set defaults and generate message
+  if ( ! o.jquery)
+  {
+    var options = $.extend(defaults, o); 
   
-  var id = 'id_' + Math.random().toString().replace('0.', '');
-  var message = $('<div />').addClass('message ' + options.type).data('type', options.type).attr('id', id).html(options.text);
-  $(options.parent).append(message);
+    var id = 'id_' + Math.random().toString().replace('0.', '');
 
-  var o = $('#' + id);
+    var message = $('<div />')
+                  .addClass('message ' + options.type)
+                  .data('type', options.type)
+                  .attr('id', id)
+                  .html(options.text);
+
+    $(options.parent).append(message);
+    
+    var o = $('#' + id);
+  }
+  // jQuery object is passed, that means the message is pre-generated
+  // Only timeout is adjustable via data-timeout=""
+  else
+  {
+    var options = {timeout: o.data('timeout')};
+  }
 
   var remove = function(o) {
     o.slideUp(400, function() {
