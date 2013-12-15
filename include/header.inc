@@ -81,10 +81,7 @@ if (isset($shortname) && $shortname) {
       <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
     </form>
   </div>
-  <div id="flash-message">
-    <div data-type="success" class="message">Hello there</div>
-    <div data-type="error" class="message">Naughty!</div>
-  </div>
+  <div id="flash-message"></div>
 </nav>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
