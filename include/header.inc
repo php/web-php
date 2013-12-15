@@ -65,7 +65,7 @@ if (isset($shortname) && $shortname) {
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
-<nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
+<nav id="head-nav" class="navbar navbar-fixed-top clearfix">
   <div class="navbar-inner">
       <div class="row">
         <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
