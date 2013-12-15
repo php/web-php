@@ -65,26 +65,23 @@ if (isset($shortname) && $shortname) {
 </head>
 <body class="<?php print $curr; ?> <?php echo $classes; ?>">
 
-<nav id="head-nav" class="navbar navbar-fixed-top clearfix">
-  <div class="navbar-inner">
-      <div class="row">
-        <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
-        <div id="mainmenu-toggle-overlay"></div>
-        <input type="checkbox" id="mainmenu-toggle">
-        <ul class="nav">
-          <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
-          <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
-          <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
-          <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
-        </ul>
-        <form class="navbar-search" id="topsearch" action="/search.php">
-            <input type="hidden" name="show" value="quickref">
-            <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
-        </form>
-      </div>
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle" />
+    <ul class="nav">
+      <li class="<?php echo $curr == "downloads" ? "active" : ""?>"><a href="/downloads">Downloads</a></li>
+      <li class="<?php echo $curr == "docs" ? "active" : ""?>"><a href="/docs.php">Documentation</a></li>
+      <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
+      <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="hidden" name="show" value="quickref">
+      <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
+    </form>
   </div>
-<div id="flash-message">
-</div>
+  <div id="flash-message"></div>
 </nav>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
