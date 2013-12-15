@@ -321,7 +321,6 @@ $(document).ready(function() {
 });
 
 /* {{{ add-user.php animations */
-// @author dm@php.net
 $(function() {
 
   if ( ! document.getElementById('add-note-usernotes'))
@@ -381,7 +380,6 @@ $(function() {
 /* }}} */
 
 /* {{{ Flash Messenger */
-// @author dm@php.net
 function flashMessage(options)
 {
   var defaults = { 
