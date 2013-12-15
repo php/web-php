@@ -165,50 +165,40 @@ $(document).ready(function() {
 
 /*{{{ Scroll to top */
     (function() {
-        var settings = {
-            text: 'To Top',
-            min: 200,
-            inDelay:600,
-            outDelay:400,
-            containerID: 'toTop',
-            containerHoverID: 'toTopHover',
-            scrollSpeed: 400,
-            easingType: 'linear'
-        };
-        var containerIDhash = '#' + settings.containerID;
-        var containerHoverIDHash = '#'+settings.containerHoverID;
 
-        $('body').append('<a href="#" id="'+settings.containerID+'" onclick="return false;"><img src="/images/to-top@2x.png" width="40" height="40" alt="'+settings.text+'"/></a>');
-        $(containerIDhash).hide().click(function(){
-            $('html, body').animate({scrollTop:0}, settings.scrollSpeed, settings.easingType);
-            $('#'+settings.containerHoverID, this).stop().animate({'opacity': 0 }, settings.inDelay, settings.easingType);
-            return false;
-        })
-        .prepend('<span id="'+settings.containerHoverID+'"></span>')
-        .hover(function() {
-            $(containerHoverIDHash, this).stop().animate({
-                'opacity': 1
-            }, 600, 'linear');
-        }, function() {
-            $(containerHoverIDHash, this).stop().animate({
-                'opacity': 0
-            }, 700, 'linear');
-        });
-
-        $(window).scroll(function() {
-            var sd = $(window).scrollTop();
-            if (typeof document.body.style.maxHeight === "undefined") {
-                $(containerIDhash).css({
-                    'position': 'absolute',
-                    'top': $(window).scrollTop() + $(window).height() - 50
-                });
-            }
-            if ( sd > settings.min ) {
-                $(containerIDhash).fadeIn(settings.inDelay);
-            } else {
-                $(containerIDhash).fadeOut(settings.outDelay);
-            }
-        });    
+      var settings = {
+        text: 'To Top',
+        min: 200,
+        inDelay: 600,
+        outDelay: 400,
+        containerID: 'toTop',
+        containerHoverID: 'toTopHover',
+        scrollSpeed: 400,
+        easingType: 'linear'
+      };
+      
+      var toTopHidden = true;
+      var toTop = $('#' + settings.containerID);
+      
+      toTop.click(function(e) {
+        e.preventDefault();
+        $.scrollTo(0, settings.scrollSpeed, {easing: settings.easingType});
+      });
+      
+      var toTopHidden = true;
+      $(window).scroll(function() {
+        var sd = $(this).scrollTop();
+        if (sd > settings.min && toTopHidden)
+        {
+          toTop.fadeIn(settings.inDelay);
+          toTopHidden = false;
+        }
+        else if(sd <= settings.min && ! toTopHidden)
+        {
+          toTop.fadeOut(settings.outDelay);
+          toTopHidden = true;
+        }
+      });   
 
     })();
 /*}}}*/
