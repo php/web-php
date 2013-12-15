@@ -116,8 +116,8 @@ h1.refname {
   border-color:#C6C6E2;
   border-top-color:#669;
   box-shadow:
-    inset 2px 0 2px -2px #C6C6E2,
-    inset -2px 0 2px -2px #C6C6E2
+    inset 1px 0 1px -1px #C6C6E2,
+    inset -1px 0 1px -1px #C6C6E2
 }
 
 .methodname b,
@@ -230,8 +230,8 @@ div.warning:before {
   background-color: #F2F2F2;
   border-color: #CCC;
   box-shadow:
-    inset 2px 0 2px -2px #CCC,
-    inset -2px 0 2px -2px #CCC;
+    inset 1px 0 1px -1px #CCC,
+    inset -1px 0 1px -1px #CCC;
 }
 #usernotes .note .votes .tally {
   color: #262626;
