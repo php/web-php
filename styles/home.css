@@ -15,6 +15,13 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     line-height:1.2;
     margin-bottom:1.2em;
 }   
+#intro .row > div {
+  display:table-cell;
+  float:none;
+}
+#intro .blurb {
+  vertical-align: middle;
+}
 #intro .blurb p {
     line-height:1.8;
 } 
@@ -30,11 +37,18 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
     letter-spacing:3px;
     word-spacing:6px;
 }
-#intro .row-fluid {
-    position:relative;
+#intro .row {
+  position:relative;
+  display:table-row;
 }
+
 #intro .background {
   display:none;
+}
+@media (min-width: 758px) {
+  #intro .background {
+    display:block;
+  }
 }
 #intro .download-php {
     text-align:left;
@@ -64,25 +78,11 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 
 
 .newsentry {
-    margin: 1em 0;
+    margin: 0 0 2.25em;
     position: relative;
 }
-.newscontent {
-    padding: 0 0.75em;
-    border-top: solid 0.125em rgb(102, 102, 153);
-    border-bottom: solid 1px rgb(202, 202, 227);
-    background-color: rgb(238, 238, 246);
-    -moz-border-radius: 0 0 2px 2px;
-    border-radius: 0 0 2px 2px;
-    box-shadow: 2px 0 2px -2px rgb(212, 212, 232) inset, -2px 0 2px -2px rgb(212, 212, 232) inset;
-}
 .newsentry h3 {
-    color: #333;
-    font-size: 1.125em;
-    line-height: 1.33;
-    margin: 0;
-    padding: 0;
-    font-weight:normal;
+  font-weight:normal;
 }
 .newsentry h3 .release-state {
     float: right;
@@ -90,8 +90,6 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 }
 .newsentry h3 a {
     color: #000;
-    padding: .35em 0em;
-    display: block;
     border:0;
 }
 .newsentry .newstitle a::after  {
@@ -101,6 +99,7 @@ complimentary greens: 9FB553    7B8851    61761B    C6DA82    CCDA99
 .newsentry .newstime {
     float:right;
     margin-top:.5em;
+    margin-right:.444444444em;
 }
 
 .newsentry .newsimage a {

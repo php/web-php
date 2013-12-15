@@ -2,16 +2,34 @@
 // $Id$
 $_SERVER['BASE_PAGE'] = 'support.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
+
+$SIDEBAR_DATA ='
+<div class="panel" style="position:fixed">
+  <div class="headline">Table of Contents</div>
+  <div class="body">
+    <ul>
+      <li><a href="#documentation">Documentation</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#mailing-lists">Mailing Lists</a></li>
+      <li><a href="#newsgroups">Newsgroups</a></li>
+      <li><a href="#user-groups">User Groups</a></li>
+      <li><a href="#events-training">Events &amp; Training</a></li>
+      <li><a href="#irc">IRC</a></li>
+      <!-- Purposefully no link to the webmasters -->
+    </ul>
+  </div>
+</div>
+';
+
 site_header(
     'Getting Help',
     array(
         'current' => 'help',
-        'layout_span' => 12,
     )
 );
 ?>
 
-<h1>Documentation</h1>
+<h2 id="documentation">Documentation</h2>
 
 <p>
  A good place to start is by skimming through the ever-growing list of <a
@@ -20,7 +38,7 @@ site_header(
  href="/docs.php">documentation</a> section.
 </p>
 
-<h1>Books</h1>
+<h2 id="books">Books</h2>
 <p>
  Books are convenient resources to begin exploring or extend your
  PHP knowledge. There are literally thousands of books available in
@@ -33,7 +51,7 @@ site_header(
  and search there.
 </p>
 
-<h1>Mailing Lists</h1>
+<h2 id="mailing-lists">Mailing Lists</h2>
 
 <p>
  There are a number of mailing lists devoted to talking about PHP and related
@@ -42,7 +60,7 @@ site_header(
  subscribe to the lists.
 </p>
 
-<h1>Newsgroups</h1>
+<h2 id="newsgroups">Newsgroups</h2>
 
 <p>
  The PHP language newsgroup is <tt>comp.lang.php</tt>, available on any
@@ -59,7 +77,7 @@ site_header(
  that these newsgroups are only available on this server.
 </p>
 
-<h1>User Groups</h1>
+<h2 id="user-groups">User Groups</h2>
 
 <p>
  Christopher R. Moewes-Bystrom is running a PHP user group registry at <a
@@ -71,7 +89,7 @@ site_header(
  opportunity to get together.
 </p>
 
-<h1>Events &amp; Training</h1>
+<h2 id="events-training">Events &amp; Training</h2>
 
 <p>
  A list of upcoming events (such as user group meetings and PHP training
@@ -81,7 +99,7 @@ site_header(
  href="/submit-event.php">on this page</a>.
 </p>
 
-<h1>Instant Resource Center</h1>
+<h2 id="irc">Instant Resource Center</h2>
 
 <p>
  Otherwise known as IRC or Internet Relay Chat. Here you can usually find
@@ -96,7 +114,7 @@ site_header(
  <a href="http://www.freenode.net/">freenode</a>).
 </p>
 
-<h1>PHP.net webmasters</h1>
+<h2 id="webmasters">PHP.net webmasters</h2>
 
 <p>
  If you have a problem or suggestion <em>in connection with the PHP.net
@@ -107,4 +125,4 @@ site_header(
  questions.
 </p>
 
-<?php site_footer(); ?>
+<?php site_footer(array('sidebar' => $SIDEBAR_DATA)); ?>

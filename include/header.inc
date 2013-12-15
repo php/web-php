@@ -67,8 +67,7 @@ if (isset($shortname) && $shortname) {
 
 <nav id="head-nav" class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
-    <div class="container">
-      <div class="row-fluid">
+      <div class="row">
         <a href="/" class="brand"><img src="/images/logo.php" width="48" height="24" alt="php"></a>
         <div id="mainmenu-toggle-overlay"></div>
         <input type="checkbox" id="mainmenu-toggle">
@@ -78,19 +77,18 @@ if (isset($shortname) && $shortname) {
           <li class="<?php echo $curr == "community" ? "active" : ""?>"><a href="/get-involved" >Get Involved</a></li>
           <li class="<?php echo $curr == "help" ? "active" : ""?>"><a href="/support">Help</a></li>
         </ul>
-        <form class="navbar-search span3" id="topsearch" action="/search.php">
+        <form class="navbar-search" id="topsearch" action="/search.php">
             <input type="hidden" name="show" value="quickref">
             <input type="search" name="pattern" class="search-query" placeholder="Search" accesskey="s">
         </form>
       </div>
-    </div>
   </div>
 <div id="flash-message">
 </div>
 </nav>
 
 <?php if (!empty($config['breadcrumbs'])): ?>
-  <div id="breadcrumbs" class="container">
+  <div id="breadcrumbs">
     <?php if (isset($config['prev'])): ?>
       <div class="prev">
         <a href="<?php echo $config['prev'][0]; ?>">
@@ -120,20 +118,19 @@ if (isset($shortname) && $shortname) {
 <?php endif; ?>
 
 
-
 <?php if (!empty($config['intro'])):?>
-<div id="intro">
+<div id="intro" class="clearfix">
   <div class="container">
     <?php echo $config['intro'];?>
   </div>
 </div>
 <?php endif;?>
 
-<div id="layout" class="container">
 
-  <div class="row-fluid">
+<div id="layout">
+
 <?php if (!empty($config["leftmenu"])): ?>
-    <aside class='layout-menu span3'>
+    <aside class='layout-menu'>
         
         <ul class='parent-menu-list'>
             <?php foreach($config['leftmenu'] as $section): ?>
@@ -161,4 +158,4 @@ if (isset($shortname) && $shortname) {
     </aside>
 <?php endif; ?>
 
-<section id="layout-content" class="<?php echo $curr ?> span<?php echo $config['layout_span']; ?>">
+<section id="layout-content">

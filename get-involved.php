@@ -55,16 +55,20 @@ site_header("Get Involved", array("current" => "community"));
 
 <?php
 $SIDEBAR_DATA ='
-    <p class="panel"><a href="build-setup.php">Developer Setup Help</a></p>
-<h3 class="announcements">Useful links for developers:</h3>
-  <ul class="content-box">
-   <li><a href="http://lxr.php.net">lxr</a> - an online interface to the
+<div class="panel"><a href="build-setup.php">Developer Setup Help</a></div>
+<div class="panel">
+  <div class="headline">Useful links for developers:</div>
+  <div class="body">
+    <ul>
+     <li><a href="http://lxr.php.net">lxr</a> - an online interface to the
        PHP source, providing search facilities useful for programmers and researchers</li>
-   <li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
+     <li><a href="https://wiki.php.net/rfc/howto">The RFC process</a> - the process
        by which developers can suggest and discuss new ideas with the community</li>
-   <li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
+     <li><a href="/build-setup.php">Developer Setup Help</a> - some helpful information
        regarding setting up a development environment for PHP</li>
-  </ul>
+    </ul>
+  </div>
+</div>
 ';
 
 site_footer(array('sidebar'=>$SIDEBAR_DATA));

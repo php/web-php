@@ -73,16 +73,14 @@ $eol = implode('', array_slice($eol, 0, 2));
 
 $SIDEBAR_DATA = '
 
-<div class="announcements">
-<h3>End of Life Dates</h3>
- The most recent branches to reach end of life status are:
-
-<ul>'.$eol.'</ul>
+<div class="panel">
+  <a class="headline" href="/eol.php">End of Life Dates</a>
+  <div class="body">
+    <p>The most recent branches to reach end of life status are:</p>
+    <ul>'.$eol.'</ul>
+  </div>
 </div>
 
-<p class="panel">
- <a href="/eol.php">End Of Life dates</a>
-</p>
 <p class="panel">
  <a href="/ChangeLog-5.php">PHP 5 ChangeLog</a>
 </p>
@@ -94,11 +92,13 @@ $SIDEBAR_DATA = '
  <a href="http://museum.php.net/">PHP Museum</a>
 </div>
 
-<div class="announcements">
- <strong>Want a PHP serialize()d list of the PHP releases?</strong><br />
- <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
- <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
- <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+<div class="panel">
+  <div class="headline">Want a PHP serialize()d list of the PHP releases?</div>
+  <div class="body">
+    <p>Add <a href="?serialize=1">?serialize=1</a> to the url</p>
+    <p>Only want PHP 5 releases? <a href="?serialize=1&version=5">&version=5</a></p>
+    <p>The last 3? <a href="?serialize=1&version=5&max=3">&max=3</a></p>
+  </div>
 </div>
 ';
 

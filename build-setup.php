@@ -4,10 +4,14 @@ $_SERVER['BASE_PAGE'] = 'get-involved.php';
 include_once $_SERVER['DOCUMENT_ROOT'] . '/include/prepend.inc';
 
 $SIDEBAR_DATA ='
+<div class="panel">
+  <div class="body">
     <p>
       This page is intended to help setup a development environment for PHP, if mistakes are found
       please <a href="http://bugs.php.net">report</a> them.
     </p>
+  </div>
+</div>
 ';
 
 site_header("Get Involved", array("current" => "community"));

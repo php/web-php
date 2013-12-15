@@ -7,7 +7,7 @@ site_header("Documentation", array("current" => "docs"));
 
 ?>
 
-<h1 class="content-header">Documentation</h1>
+<h1>Documentation</h1>
 <div class="content-box">
 
 <p>

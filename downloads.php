@@ -51,24 +51,26 @@ $SIDEBAR_DATA = '
 <p class="panel"><a href="/git.php">Development sources (git)</a></p>
 <p class="panel"><a href="/releases/">Old archives</a></p>
 
-<div class="otherbins">
-<p class="announcements">
- We do not distribute UNIX/Linux binaries. Most Linux
- distributions come with PHP these days, so if you do
- not want to compile your own, go to your distribution\'s
- download site. Binaries available on external servers:
-</p>
-<p class="panel"><a href="http://windows.php.net">Windows Binaries</a></p>
-<ul class="toc">
- <li class="panel"><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
- <li class="panel"><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
- <li class="panel"><a href="http://bitnami.com/stack/mamp">Mac OS X (BitNami)</a></li>
- <li class="panel"><a href="http://bitnami.com/stack/wamp">Windows (BitNami)</a></li>
- <li class="panel"><a href="http://bitnami.com/stack/lamp">Linux (BitNami)</a></li>
- <li class="panel"><a href="http://www.opencsw.org/packages/php5">Solaris OpenCSW packages</a></li>
- <li class="panel"><a href="http://iuscommunity.org/">Redhat/CentOS Binaries (IUS)</a></li>
- <li class="panel"><a href="http://rpms.famillecollet.com/">Fedora/Redhat/CentOS Binaries (Remi)</a></li>
-</ul>
+<div class="panel">
+  <p class="headline">Binaries</p>
+  <div class="body">
+    <p>
+     We do not distribute UNIX/Linux binaries. Most Linux
+     distributions come with PHP these days, so if you do
+     not want to compile your own, go to your distribution\'s
+     download site. Binaries available on external servers:
+    </p>
+    <ul>
+      <li><a href="http://www.ampps.com/">Mac OS X (AMPPS)</a></li>
+      <li><a href="http://www.mamp.info/">Mac OS X (MAMP)</a></li>
+      <li><a href="http://bitnami.com/stack/mamp">Mac OS X (BitNami)</a></li>
+      <li><a href="http://bitnami.com/stack/wamp">Windows (BitNami)</a></li>
+      <li><a href="http://bitnami.com/stack/lamp">Linux (BitNami)</a></li>
+      <li><a href="http://www.opencsw.org/packages/php5">Solaris OpenCSW packages</a></li>
+      <li><a href="http://iuscommunity.org/">Redhat/CentOS Binaries (IUS)</a></li>
+      <li><a href="http://rpms.famillecollet.com/">Fedora/Redhat/CentOS Binaries (Remi)</a></li>
+    </ul>
+  </div>
 </div>
 
 

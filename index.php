@@ -77,13 +77,13 @@ $content .= '<p class="archive"><a href="/archive/">Older News Entries</a></p>';
 $content .= "</div>";
 
 $intro = <<<EOF
-  <div class="row-fluid">
-    <div class="span9 blurb">
+  <div class="row clearfix">
+    <div class="blurb">
       <p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
       <p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
     </div>
-    <div class="background span3"></div>
-    <div class="span3">
+    <div class="background"></div>
+    <div class="download">
       <div class="download-php">
         <h2>Download PHP</h2>
 
@@ -155,14 +155,15 @@ if (is_array($CONF_TEASER)) {
     );
     $announcements = "";
     foreach($CONF_TEASER as $category => $entries) {
-        if ($entries) {
-            $announcements .= '<div class="panel headline">';
-            $announcements .= '<a href="/conferences" class="headline">' . $conftype[$category] .'</a><ul class="announcements">';
+		if ($entries) {
+            $announcements .= '<div class="panel">';
+            $announcements .= '  <a href="/conferences" class="headline">' . $conftype[$category] .'</a>';
+            $announcements .= '<div class="body"><ul>';
             foreach (array_slice($entries, 0, 4) as $url => $title) {
                 $title = preg_replace("'([A-Za-z0-9])([\s\:\-\,]*?)call for(.*?)$'i", "$1", $title);
                 $announcements .= "<li><a href='$url'>$title</a></li>";
             }
-            $announcements .= '</ul>';
+            $announcements .= '</ul></div>';
             $announcements .= '</div>';
         }
     }

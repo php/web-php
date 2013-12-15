@@ -17,7 +17,6 @@
 <?php endif; ?>
 
   </div><!-- layout -->
-  </div>
          
   <footer>
     <div class="container footer-content">
